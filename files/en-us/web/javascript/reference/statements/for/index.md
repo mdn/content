@@ -2,13 +2,6 @@
 title: for
 slug: Web/JavaScript/Reference/Statements/for
 page-type: javascript-statement
-tags:
-  - JavaScript
-  - Language feature
-  - Loop
-  - Reference
-  - Statement
-  - for
 browser-compat: javascript.statements.for
 ---
 

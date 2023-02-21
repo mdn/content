@@ -2,16 +2,6 @@
 title: Using the Fetch API
 slug: Web/API/Fetch_API/Using_Fetch
 page-type: guide
-tags:
-  - API
-  - BODY
-  - Fetch
-  - Guide
-  - HTTP
-  - Promise
-  - Response
-  - fetch POST & string body
-  - request
 browser-compat: api.fetch
 ---
 

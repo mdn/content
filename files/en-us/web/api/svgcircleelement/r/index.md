@@ -2,13 +2,6 @@
 title: SVGCircleElement.r
 slug: Web/API/SVGCircleElement/r
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - SVG
-  - SVGCircleElement
-  - r
 browser-compat: api.SVGCircleElement.r
 ---
 

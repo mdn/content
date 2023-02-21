@@ -2,15 +2,8 @@
 title: XRHitTestSource.cancel()
 slug: Web/API/XRHitTestSource/cancel
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - AR
-  - VR
-  - XR
-  - WebXR
-  - Experimental
+status:
+  - experimental
 browser-compat: api.XRHitTestSource.cancel
 ---
 

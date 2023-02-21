@@ -2,16 +2,6 @@
 title: delete operator
 slug: Web/JavaScript/Reference/Operators/delete
 page-type: javascript-operator
-tags:
-  - JavaScript
-  - Language feature
-  - Memory Management
-  - Object
-  - Operator
-  - Reference
-  - Release
-  - Unary
-  - delete
 browser-compat: javascript.operators.delete
 ---
 

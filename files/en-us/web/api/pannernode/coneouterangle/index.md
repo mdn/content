@@ -2,13 +2,6 @@
 title: PannerNode.coneOuterAngle
 slug: Web/API/PannerNode/coneOuterAngle
 page-type: web-api-instance-property
-tags:
-  - API
-  - PannerNode
-  - Property
-  - Reference
-  - Web Audio API
-  - coneOuterAngle
 browser-compat: api.PannerNode.coneOuterAngle
 ---
 

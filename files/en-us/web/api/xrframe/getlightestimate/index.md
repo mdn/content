@@ -2,14 +2,8 @@
 title: XRFrame.getLightEstimate()
 slug: Web/API/XRFrame/getLightEstimate
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - AR
-  - XR
-  - WebXR
-  - Experimental
+status:
+  - experimental
 browser-compat: api.XRFrame.getLightEstimate
 ---
 

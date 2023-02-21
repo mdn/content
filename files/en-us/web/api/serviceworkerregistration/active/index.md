@@ -2,13 +2,6 @@
 title: ServiceWorkerRegistration.active
 slug: Web/API/ServiceWorkerRegistration/active
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - Service Workers
-  - ServiceWorkerRegistration
-  - active
 browser-compat: api.ServiceWorkerRegistration.active
 ---
 

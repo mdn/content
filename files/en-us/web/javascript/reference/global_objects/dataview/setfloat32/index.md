@@ -2,12 +2,6 @@
 title: DataView.prototype.setFloat32()
 slug: Web/JavaScript/Reference/Global_Objects/DataView/setFloat32
 page-type: javascript-instance-method
-tags:
-  - DataView
-  - JavaScript
-  - Method
-  - Prototype
-  - TypedArrays
 browser-compat: javascript.builtins.DataView.setFloat32
 ---
 

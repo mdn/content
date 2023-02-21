@@ -2,14 +2,6 @@
 title: Document.getElementsByTagNameNS()
 slug: Web/API/Document/getElementsByTagNameNS
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - Method
-  - NeedsMarkupWork
-  - NeedsSpecTable
-  - Reference
-  - getElementsByTagNameNS
 browser-compat: api.Document.getElementsByTagNameNS
 ---
 

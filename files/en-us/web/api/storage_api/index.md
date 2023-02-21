@@ -2,15 +2,6 @@
 title: Storage API
 slug: Web/API/Storage_API
 page-type: web-api-overview
-tags:
-  - API
-  - Overview
-  - Quotas
-  - Reference
-  - Secure context
-  - Storage
-  - Storage API
-  - Usage
 browser-compat: api.StorageManager
 ---
 

@@ -2,13 +2,6 @@
 title: Window.resizeBy()
 slug: Web/API/Window/resizeBy
 page-type: web-api-instance-method
-tags:
-  - API
-  - CSSOM View
-  - Method
-  - NeedsMarkupWork
-  - Reference
-  - Window
 browser-compat: api.Window.resizeBy
 ---
 

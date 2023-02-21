@@ -2,14 +2,8 @@
 title: WebTransportError.source
 slug: Web/API/WebTransportError/source
 page-type: web-api-instance-property
-tags:
-  - API
-  - Experimental
-  - Property
-  - Reference
-  - source
-  - WebTransportError
-  - WebTransport API
+status:
+  - experimental
 browser-compat: api.WebTransportError.source
 ---
 

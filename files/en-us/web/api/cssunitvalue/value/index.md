@@ -2,15 +2,8 @@
 title: CSSUnitValue.value
 slug: Web/API/CSSUnitValue/value
 page-type: web-api-instance-property
-tags:
-  - API
-  - CSS Typed Object Model API
-  - CSSUnitValue
-  - Experimental
-  - Houdini
-  - Property
-  - Reference
-  - value
+status:
+  - experimental
 browser-compat: api.CSSUnitValue.value
 ---
 

@@ -2,15 +2,8 @@
 title: "::-moz-focus-inner"
 slug: Web/CSS/::-moz-focus-inner
 page-type: css-pseudo-element
-tags:
-  - CSS
-  - CSS:Mozilla Extensions
-  - Firefox
-  - Mozilla
-  - Non-standard
-  - Pseudo-element
-  - Reference
-  - Selector
+status:
+  - non-standard
 browser-compat: css.selectors.-moz-focus-inner
 ---
 

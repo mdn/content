@@ -2,15 +2,6 @@
 title: Animation.cancel()
 slug: Web/API/Animation/cancel
 page-type: web-api-instance-method
-tags:
-  - API
-  - Animation
-  - Method
-  - Reference
-  - Web Animations
-  - cancel
-  - waapi
-  - web animations api
 browser-compat: api.Animation.cancel
 ---
 

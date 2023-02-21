@@ -82,22 +82,6 @@ If possible avoid icon web fonts and use compressed SVGs. To further optimize in
 - Download everything
 - Use uncompressed media files
 
-## In this module
-
-- [The "why" of web performance](/en-US/docs/Learn/Performance/why_web_performance)
-- [What is web performance?](/en-US/docs/Learn/Performance/What_is_web_performance)
-- [How do users perceive performance?](/en-US/docs/Learn/Performance/Perceived_performance)
-- [Measuring performance](/en-US/docs/Learn/Performance/Measuring_performance)
-- [Multimedia: images](/en-US/docs/Learn/Performance/Multimedia)
-- [Multimedia: video](/en-US/docs/Learn/Performance/video)
-- [JavaScript performance](/en-US/docs/Learn/Performance/JavaScript)
-- [HTML performance features](/en-US/docs/Learn/Performance/HTML)
-- [CSS performance features](/en-US/docs/Learn/Performance/CSS)
-- [Fonts and performance](/en-US/docs/Learn/Performance/Fonts)
-- [Mobile performance](/en-US/docs/Learn/Performance/Mobile)
-- [The business case for web performance](/en-US/docs/Learn/Performance/business_case_for_performance)
-- [Web performance resources](/en-US/docs/Learn/Performance/Web_Performance_Basics)
-
 ## See also
 
 - <https://github.com/filamentgroup/loadCSS>

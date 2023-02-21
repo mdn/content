@@ -2,13 +2,6 @@
 title: Animation.persist()
 slug: Web/API/Animation/persist
 page-type: web-api-instance-method
-tags:
-  - API
-  - Animation
-  - Method
-  - Reference
-  - persist
-  - web animations api
 browser-compat: api.Animation.persist
 ---
 

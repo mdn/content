@@ -2,13 +2,8 @@
 title: DeprecationReportBody.toJSON()
 slug: Web/API/DeprecationReportBody/toJSON
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - Experimental
-  - toJSON
-  - DeprecationReportBody
+status:
+  - experimental
 browser-compat: api.DeprecationReportBody.toJSON
 ---
 
@@ -36,9 +31,9 @@ In this example we create a new {{domxref("ReportingObserver")}} to observe depr
 
 ```js
 let options = {
-  types: ['deprecation'],
-  buffered: true
-}
+  types: ["deprecation"],
+  buffered: true,
+};
 
 let observer = new ReportingObserver((reports, observer) => {
   let firstReport = reports[0];

@@ -743,17 +743,6 @@ Elements in HTML have **attributes**; these are additional values that configure
     </tr>
     <tr>
       <td>
-        <code><a href="/en-US/docs/Web/HTML/Attributes/importance">importance</a></code>
-        {{experimental_inline}}
-      </td>
-      <td>
-        {{ HTMLElement("iframe") }}, {{ HTMLElement("img") }},
-        {{ HTMLElement("link") }}, {{ HTMLElement("script") }}
-      </td>
-      <td>Indicates the relative fetch priority for the resource.</td>
-    </tr>
-    <tr>
-      <td>
         <code><a href="/en-US/docs/Web/Security/Subresource_Integrity">integrity</a></code>
       </td>
       <td>

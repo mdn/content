@@ -1,6 +1,7 @@
 ---
 title: sidebarAction
 slug: Mozilla/Add-ons/WebExtensions/API/sidebarAction
+page-type: webextension-api
 tags:
   - API
   - Extensions

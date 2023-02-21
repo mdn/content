@@ -2,12 +2,8 @@
 title: NDEFReader.write()
 slug: Web/API/NDEFReader/write
 page-type: web-api-instance-method
-tags:
-  - NDEF
-  - Reference
-  - Web NFC
-  - Method
-  - Experimental
+status:
+  - experimental
 browser-compat: api.NDEFReader.write
 ---
 

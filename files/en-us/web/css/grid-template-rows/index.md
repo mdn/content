@@ -2,18 +2,12 @@
 title: grid-template-rows
 slug: Web/CSS/grid-template-rows
 page-type: css-property
-tags:
-  - CSS
-  - CSS Grid
-  - CSS Property
-  - Reference
-  - recipe:css-property
 browser-compat: css.properties.grid-template-rows
 ---
 
 {{CSSRef}}
 
-The **`grid-template-rows`** CSS property defines the line names and track sizing functions of the {{glossary("grid rows", "grid rows")}}.
+The **`grid-template-rows`** CSS property defines the line names and track sizing functions of the {{glossary("grid_row", "grid rows")}}.
 
 {{EmbedInteractiveExample("pages/css/grid-template-rows.html")}}
 

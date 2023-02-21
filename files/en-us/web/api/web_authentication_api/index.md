@@ -2,14 +2,6 @@
 title: Web Authentication API
 slug: Web/API/Web_Authentication_API
 page-type: web-api-overview
-tags:
-  - 2FA
-  - API
-  - Authentication
-  - Landing
-  - Reference
-  - Web Authentication API
-  - WebAuthn
 browser-compat:
   - api.Credential
   - api.CredentialsContainer

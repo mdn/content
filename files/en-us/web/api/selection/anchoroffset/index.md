@@ -2,13 +2,6 @@
 title: Selection.anchorOffset
 slug: Web/API/Selection/anchorOffset
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTML Editing
-  - Property
-  - Read-only
-  - Reference
-  - Selection
 browser-compat: api.Selection.anchorOffset
 ---
 

@@ -2,13 +2,6 @@
 title: SharedWorker
 slug: Web/API/SharedWorker
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Reference
-  - SharedWorker
-  - Web Workers
-  - Workers
 browser-compat: api.SharedWorker
 ---
 

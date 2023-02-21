@@ -2,15 +2,6 @@
 title: SpeechSynthesis.pending
 slug: Web/API/SpeechSynthesis/pending
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - SpeechSynthesis
-  - Web Speech API
-  - pending
-  - speech
-  - synthesis
 browser-compat: api.SpeechSynthesis.pending
 ---
 

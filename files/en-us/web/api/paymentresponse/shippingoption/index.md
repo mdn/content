@@ -2,17 +2,9 @@
 title: PaymentResponse.shippingOption
 slug: Web/API/PaymentResponse/shippingOption
 page-type: web-api-instance-property
-tags:
-  - API
-  - Payment Request
-  - PaymentResponse
-  - Property
-  - Reference
-  - Request Payment API
-  - Secure context
-  - shippingOption
-  - Deprecated
-  - Non-standard
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.PaymentResponse.shippingOption
 ---
 

@@ -2,12 +2,6 @@
 title: writing-mode
 slug: Web/CSS/writing-mode
 page-type: css-property
-tags:
-  - CSS
-  - CSS Property
-  - Layout
-  - Reference
-  - recipe:css-property
 browser-compat: css.properties.writing-mode
 ---
 

@@ -2,11 +2,6 @@
 title: Range.selectNode()
 slug: Web/API/Range/selectNode
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - Method
-  - Range
 browser-compat: api.Range.selectNode
 ---
 

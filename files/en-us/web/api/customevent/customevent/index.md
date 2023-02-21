@@ -2,9 +2,6 @@
 title: CustomEvent()
 slug: Web/API/CustomEvent/CustomEvent
 page-type: web-api-constructor
-tags:
-  - Constructor
-  - Reference
 browser-compat: api.CustomEvent.CustomEvent
 ---
 

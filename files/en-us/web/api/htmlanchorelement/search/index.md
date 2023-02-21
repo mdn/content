@@ -2,11 +2,6 @@
 title: HTMLAnchorElement.search
 slug: Web/API/HTMLAnchorElement/search
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTMLAnchorElement
-  - Property
-  - Reference
 browser-compat: api.HTMLAnchorElement.search
 ---
 

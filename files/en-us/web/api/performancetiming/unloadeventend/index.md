@@ -2,15 +2,8 @@
 title: PerformanceTiming.unloadEventEnd
 slug: Web/API/PerformanceTiming/unloadEventEnd
 page-type: web-api-instance-property
-tags:
-  - API
-  - Backwards compatibility
-  - Deprecated
-  - Navigation Timing
-  - PerformanceTiming
-  - Property
-  - Read-only
-  - legacy
+status:
+  - deprecated
 browser-compat: api.PerformanceTiming.unloadEventEnd
 ---
 

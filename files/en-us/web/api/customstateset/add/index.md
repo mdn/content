@@ -2,13 +2,8 @@
 title: CustomStateSet.add()
 slug: Web/API/CustomStateSet/add
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - add
-  - CustomStateSet
-  - Experimental
+status:
+  - experimental
 browser-compat: api.CustomStateSet.add
 ---
 

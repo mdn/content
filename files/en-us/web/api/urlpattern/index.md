@@ -2,15 +2,8 @@
 title: URLPattern
 slug: Web/API/URLPattern
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Reference
-  - URLPattern
-  - URL Pattern API
-  - Web
-  - Polyfill
-  - Experimental
+status:
+  - experimental
 browser-compat: api.URLPattern
 ---
 

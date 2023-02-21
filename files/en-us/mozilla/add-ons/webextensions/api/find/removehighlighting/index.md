@@ -1,6 +1,7 @@
 ---
 title: find.removeHighlighting()
 slug: Mozilla/Add-ons/WebExtensions/API/find/removeHighlighting
+page-type: webextension-api-function
 tags:
   - API
   - Add-ons

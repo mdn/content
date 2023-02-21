@@ -2,13 +2,6 @@
 title: clip-path
 slug: Web/CSS/clip-path
 page-type: css-property
-tags:
-  - CSS
-  - CSS Masking
-  - CSS Property
-  - Reference
-  - Web
-  - recipe:css-property
 browser-compat: css.properties.clip-path
 ---
 

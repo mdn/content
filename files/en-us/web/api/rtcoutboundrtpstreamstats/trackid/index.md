@@ -2,25 +2,6 @@
 title: RTCOutboundRtpStreamStats.trackId
 slug: Web/API/RTCOutboundRtpStreamStats/trackId
 page-type: web-api-instance-property
-tags:
-  - API
-  - Audio
-  - Media
-  - MediaStreamTrack
-  - Property
-  - RTCOutboundRtpStreamStats
-  - RTCRtpSender
-  - RTP
-  - Reference
-  - Statistics
-  - Stats
-  - Video
-  - WebRTC
-  - WebRTC API
-  - id
-  - stream
-  - track
-  - trackId
 browser-compat: api.RTCOutboundRtpStreamStats.trackId
 ---
 

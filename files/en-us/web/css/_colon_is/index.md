@@ -2,14 +2,6 @@
 title: ":is()"
 slug: Web/CSS/:is
 page-type: css-pseudo-class
-tags:
-  - ":is"
-  - CSS
-  - Pseudo-class
-  - Reference
-  - Selector
-  - Selectors
-  - Web
 browser-compat: css.selectors.is
 ---
 

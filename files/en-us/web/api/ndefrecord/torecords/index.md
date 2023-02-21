@@ -2,11 +2,8 @@
 title: NDEFRecord.toRecords()
 slug: Web/API/NDEFRecord/toRecords
 page-type: web-api-instance-method
-tags:
-  - NDEF
-  - Reference
-  - Web NFC
-  - Experimental
+status:
+  - experimental
 browser-compat: api.NDEFRecord.toRecords
 ---
 

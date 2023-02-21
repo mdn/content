@@ -2,12 +2,6 @@
 title: CSSRule.parentRule
 slug: Web/API/CSSRule/parentRule
 page-type: web-api-instance-property
-tags:
-  - API
-  - CSSOM
-  - CSSRule
-  - Property
-  - Reference
 browser-compat: api.CSSRule.parentRule
 ---
 

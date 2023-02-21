@@ -2,14 +2,8 @@
 title: WebTransportBidirectionalStream.writable
 slug: Web/API/WebTransportBidirectionalStream/writable
 page-type: web-api-instance-property
-tags:
-  - API
-  - Experimental
-  - Property
-  - Reference
-  - WebTransport
-  - WebTransport API
-  - writable
+status:
+  - experimental
 browser-compat: api.WebTransportBidirectionalStream.writable
 ---
 

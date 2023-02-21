@@ -2,18 +2,6 @@
 title: Picture-in-Picture API
 slug: Web/API/Picture-in-Picture_API
 page-type: web-api-overview
-tags:
-  - API
-  - DOM
-  - Graphics
-  - Guide
-  - Overview
-  - Picture-in-Picture
-  - Picture-in-Picture API
-  - Reference
-  - Video
-  - View
-  - pip
 browser-compat: api.PictureInPictureWindow
 ---
 

@@ -2,15 +2,6 @@
 title: ServiceWorkerContainer.register()
 slug: Web/API/ServiceWorkerContainer/register
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - Service Workers
-  - Service worker API
-  - ServiceWorker
-  - ServiceWorkerContainer
-  - register
 browser-compat: api.ServiceWorkerContainer.register
 ---
 

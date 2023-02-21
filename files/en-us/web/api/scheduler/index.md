@@ -2,10 +2,6 @@
 title: Scheduler
 slug: Web/API/Scheduler
 page-type: web-api-interface
-tags:
-  - Interface
-  - Reference
-  - Scheduler
 browser-compat: api.Scheduler
 ---
 

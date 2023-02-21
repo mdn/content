@@ -2,13 +2,6 @@
 title: HTMLElement.tabIndex
 slug: Web/API/HTMLElement/tabIndex
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTML DOM
-  - HTMLElement
-  - Property
-  - Reference
-  - tabIndex
 browser-compat: api.HTMLElement.tabIndex
 ---
 

@@ -2,11 +2,6 @@
 title: MutationRecord.removedNodes
 slug: Web/API/MutationRecord/removedNodes
 page-type: web-api-instance-property
-tags:
-  - removedNodes
-  - MutationRecord
-  - Property
-  - Reference
 browser-compat: api.MutationRecord.removedNodes
 ---
 

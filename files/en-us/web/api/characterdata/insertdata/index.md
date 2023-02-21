@@ -2,9 +2,6 @@
 title: CharacterData.insertData()
 slug: Web/API/CharacterData/insertData
 page-type: web-api-instance-method
-tags:
-  - Method
-  - Reference
 browser-compat: api.CharacterData.insertData
 ---
 

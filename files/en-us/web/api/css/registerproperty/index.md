@@ -2,11 +2,8 @@
 title: CSS.registerProperty()
 slug: Web/API/CSS/RegisterProperty
 page-type: web-api-static-method
-tags:
-  - CSS
-  - Houdini
-  - Reference
-  - Experimental
+status:
+  - experimental
 browser-compat: api.CSS.registerProperty
 ---
 

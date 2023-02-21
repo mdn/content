@@ -2,18 +2,6 @@
 title: RTCPeerConnection.addTransceiver()
 slug: Web/API/RTCPeerConnection/addTransceiver
 page-type: web-api-instance-method
-tags:
-  - API
-  - Audio
-  - Media
-  - RTCPeerConnection
-  - RTCRtpTransceiver
-  - RTP
-  - Reference
-  - Transceivers
-  - Video
-  - addTransceiver
-  - Method
 browser-compat: api.RTCPeerConnection.addTransceiver
 ---
 

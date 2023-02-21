@@ -2,6 +2,7 @@
 title: devtools.panels.ExtensionSidebarPane.setObject()
 slug: >-
   Mozilla/Add-ons/WebExtensions/API/devtools/panels/ExtensionSidebarPane/setObject
+page-type: webextension-api-function
 tags:
   - API
   - Add-ons

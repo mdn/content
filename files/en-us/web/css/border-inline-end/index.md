@@ -2,17 +2,6 @@
 title: border-inline-end
 slug: Web/CSS/border-inline-end
 page-type: css-shorthand-property
-tags:
-  - CSS
-  - CSS Logical Property
-  - CSS Property
-  - Reference
-  - border-inline
-  - border-inline-end
-  - border-inline-end-color
-  - border-inline-end-style
-  - border-inline-end-width
-  - recipe:css-shorthand-property
 browser-compat: css.properties.border-inline-end
 ---
 

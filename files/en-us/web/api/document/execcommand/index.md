@@ -2,14 +2,8 @@
 title: Document.execCommand()
 slug: Web/API/Document/execCommand
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - Method
-  - NeedsExample
-  - Reference
-  - editor
-  - Deprecated
+status:
+  - deprecated
 browser-compat: api.Document.execCommand
 ---
 

@@ -2,12 +2,6 @@
 title: Selection.collapseToEnd()
 slug: Web/API/Selection/collapseToEnd
 page-type: web-api-instance-method
-tags:
-  - API
-  - HTML Editing
-  - Method
-  - Reference
-  - Selection
 browser-compat: api.Selection.collapseToEnd
 ---
 

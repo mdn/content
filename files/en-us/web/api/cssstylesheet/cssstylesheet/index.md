@@ -2,11 +2,6 @@
 title: CSSStyleSheet()
 slug: Web/API/CSSStyleSheet/CSSStyleSheet
 page-type: web-api-constructor
-tags:
-  - API
-  - Constructor
-  - Reference
-  - CSSStyleSheet
 browser-compat: api.CSSStyleSheet.CSSStyleSheet
 ---
 

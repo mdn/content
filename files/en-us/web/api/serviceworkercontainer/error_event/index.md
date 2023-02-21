@@ -2,16 +2,9 @@
 title: 'ServiceWorkerContainer: error event'
 slug: Web/API/ServiceWorkerContainer/error_event
 page-type: web-api-event
-tags:
-  - API
-  - Event
-  - Reference
-  - Service Workers
-  - ServiceWorker
-  - ServiceWorkerContainer
-  - error
-  - Deprecated
-  - Non-standard
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.ServiceWorkerContainer.error_event
 ---
 

@@ -2,15 +2,8 @@
 title: Navigator.keyboard
 slug: Web/API/Navigator/keyboard
 page-type: web-api-instance-property
-tags:
-  - API
-  - Experimental
-  - Keyboard API
-  - Keyboard Map
-  - Navigator
-  - Property
-  - Reference
-  - keyboard
+status:
+  - experimental
 browser-compat: api.Navigator.keyboard
 ---
 

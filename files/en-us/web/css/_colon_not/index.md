@@ -2,15 +2,6 @@
 title: ":not()"
 slug: Web/CSS/:not
 page-type: css-pseudo-class
-tags:
-  - ":not()"
-  - CSS
-  - Layout
-  - Negation
-  - Pseudo-class
-  - Reference
-  - Selector
-  - Web
 browser-compat: css.selectors.not
 ---
 
