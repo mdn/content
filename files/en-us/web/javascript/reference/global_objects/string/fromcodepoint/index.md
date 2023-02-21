@@ -2,15 +2,6 @@
 title: String.fromCodePoint()
 slug: Web/JavaScript/Reference/Global_Objects/String/fromCodePoint
 page-type: javascript-static-method
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Reference
-  - String
-  - UTF-32
-  - Unicode
-  - Polyfill
 browser-compat: javascript.builtins.String.fromCodePoint
 ---
 

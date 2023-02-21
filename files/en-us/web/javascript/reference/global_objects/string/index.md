@@ -2,12 +2,6 @@
 title: String
 slug: Web/JavaScript/Reference/Global_Objects/String
 page-type: javascript-class
-tags:
-  - Class
-  - ECMAScript 2015
-  - JavaScript
-  - Reference
-  - String
 browser-compat: javascript.builtins.String
 ---
 
