@@ -2,13 +2,6 @@
 title: ":nth-last-child()"
 slug: Web/CSS/:nth-last-child
 page-type: css-pseudo-class
-tags:
-  - CSS
-  - Layout
-  - Pseudo-class
-  - Reference
-  - Selector
-  - Web
 browser-compat: css.selectors.nth-last-child
 ---
 

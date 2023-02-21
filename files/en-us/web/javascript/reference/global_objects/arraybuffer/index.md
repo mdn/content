@@ -32,10 +32,14 @@ The [`ArrayBuffer()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayB
 
 ## Instance properties
 
-- `ArrayBuffer.prototype[@@toStringTag]`
-  - : The initial value of the [`@@toStringTag`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) property is the string `"ArrayBuffer"`. This property is used in {{jsxref("Object.prototype.toString()")}}.
+These properties are defined on `ArrayBuffer.prototype` and shared by all `ArrayBuffer` instances.
+
 - {{jsxref("ArrayBuffer.prototype.byteLength")}}
   - : The read-only size, in bytes, of the `ArrayBuffer`. This is established when the array is constructed and cannot be changed.
+- {{jsxref("Object/constructor", "ArrayBuffer.prototype.constructor")}}
+  - : The constructor function that created the instance object. For `ArrayBuffer` instances, the initial value is the {{jsxref("ArrayBuffer/ArrayBuffer", "ArrayBuffer")}} constructor.
+- `ArrayBuffer.prototype[@@toStringTag]`
+  - : The initial value of the [`@@toStringTag`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) property is the string `"ArrayBuffer"`. This property is used in {{jsxref("Object.prototype.toString()")}}.
 
 ## Instance methods
 

@@ -28,10 +28,14 @@ const AsyncGeneratorFunction = async function* () {}.constructor;
 
 _Also inherits instance properties from its parent {{jsxref("Function")}}_.
 
+These properties are defined on `AsyncGeneratorFunction.prototype` and shared by all `AsyncGeneratorFunction` instances.
+
+- {{jsxref("Object/constructor", "AsyncGeneratorFunction.prototype.constructor")}}
+  - : The constructor function that created the instance object. For `AsyncGeneratorFunction` instances, the initial value is the {{jsxref("AsyncGeneratorFunction/AsyncGeneratorFunction", "AsyncGeneratorFunction")}} constructor.
+- `AsyncGeneratorFunction.prototype.prototype`
+  - : All async generator functions share the same [`prototype`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/prototype) property, which is [`AsyncGenerator.prototype`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/AsyncGenerator). Each async generator function instance also has its own `prototype` property. When the async generator function is called, the returned async generator object inherits from the async generator function's `prototype` property, which in turn inherits from `AsyncGeneratorFunction.prototype.prototype`.
 - `AsyncGeneratorFunction.prototype[@@toStringTag]`
   - : The initial value of the [`@@toStringTag`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) property is the string `"AsyncGeneratorFunction"`. This property is used in {{jsxref("Object.prototype.toString()")}}.
-- `AsyncGeneratorFunction.prototype.prototype`
-  - : All async generator functions share the same [`prototype`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/prototype) property, which is [`AsyncGenerator.prototype`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/AsyncGenerator). When the function is called, this object becomes the prototype of the returned async generator object. An async generator function instance can also create its own `prototype` property, which will be used instead of `AsyncGeneratorFunction.prototype.prototype`.
 
 ## Instance methods
 

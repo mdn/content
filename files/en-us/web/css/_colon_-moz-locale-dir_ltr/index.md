@@ -2,15 +2,8 @@
 title: ":-moz-locale-dir(ltr)"
 slug: Web/CSS/:-moz-locale-dir_ltr
 page-type: css-pseudo-class
-tags:
-  - CSS
-  - CSS:Mozilla Extensions
-  - Localization
-  - NeedsCompatTable
-  - Non-standard
-  - Pseudo-class
-  - Reference
-  - Selector
+status:
+  - non-standard
 ---
 
 {{CSSRef}}{{Non-standard_header}}

@@ -65,4 +65,3 @@ When you customize scrollbars, consider they have enough contrast and that their
 ## See also
 
 - {{CSSxRef("::-webkit-scrollbar")}}
-- {{CSSxRef("-ms-overflow-style")}}

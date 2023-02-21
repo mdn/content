@@ -2,15 +2,6 @@
 title: <blend-mode>
 slug: Web/CSS/blend-mode
 page-type: css-type
-tags:
-  - Blend modes
-  - CSS
-  - CSS Data Type
-  - Compositing
-  - Compositing and Blending
-  - Data Type
-  - Reference
-  - color
 browser-compat: css.types.blend-mode
 ---
 

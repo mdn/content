@@ -328,13 +328,3 @@ That's it for object articles — all that remains now is for you to test your s
 - [2D breakout game using Phaser](/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser) — explains the basics of building a 2D game using a JavaScript game library.
 
 {{PreviousMenuNext("Learn/JavaScript/Objects/JSON", "Learn/JavaScript/Objects/Adding_bouncing_balls_features", "Learn/JavaScript/Objects")}}
-
-## In this module
-
-- [Object basics](/en-US/docs/Learn/JavaScript/Objects/Basics)
-- [Object prototypes](/en-US/docs/Learn/JavaScript/Objects/Object_prototypes)
-- [Object-oriented programming concepts](/en-US/docs/Learn/JavaScript/Objects/Object-oriented_programming)
-- [Classes in JavaScript](/en-US/docs/Learn/JavaScript/Objects/Classes_in_JavaScript)
-- [Working with JSON data](/en-US/docs/Learn/JavaScript/Objects/JSON)
-- **Object building practice**
-- [Adding features to our bouncing balls demo](/en-US/docs/Learn/JavaScript/Objects/Adding_bouncing_balls_features)

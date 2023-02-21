@@ -113,5 +113,4 @@ WCAG criterion 2.1.1 (Keyboard) has been in place for a long time to advise on b
 
 ## See also
 
-- {{CSSxRef("-ms-overflow-style")}}
 - {{CSSxRef("::-webkit-scrollbar")}}
