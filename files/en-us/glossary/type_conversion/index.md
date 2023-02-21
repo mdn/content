@@ -2,10 +2,6 @@
 title: Type conversion
 slug: Glossary/Type_Conversion
 page-type: glossary-definition
-tags:
-  - CodingScripting
-  - Type casting
-  - Type conversion
 ---
 
 Type conversion (or typecasting) means transfer of data from one data type to another. _Implicit conversion_ happens when the compiler (for compiled languages) or runtime (for script languages like {{glossary("JavaScript")}}) automatically converts data types. The source code can also _explicitly_ require a conversion to take place.

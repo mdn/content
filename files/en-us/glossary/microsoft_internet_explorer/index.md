@@ -2,15 +2,6 @@
 title: Microsoft Internet Explorer
 slug: Glossary/Microsoft_Internet_Explorer
 page-type: glossary-definition
-tags:
-  - Browser
-  - Internet Explorer
-  - Microsoft
-  - Microsoft Internet Explorer
-  - Navigation
-  - Web Browser
-  - Windows
-  - Windows Operating System
 ---
 
 Internet Explorer (or IE) was a free graphical {{glossary("browser")}} maintained by Microsoft for legacy enterprise uses. {{glossary("Microsoft Edge")}} is currently the default Windows browser.
