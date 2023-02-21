@@ -334,7 +334,7 @@ an extended quotation.&#x3C;/blockquote></pre
     <tr>
       <td>Text Heading</td>
       <td>
-        {{HTMLElement("Heading_Elements", "&lt;h1&gt;-&lt;h6&gt;")}}
+        {{HTMLElement("Heading_elements", "&lt;h1&gt;-&lt;h6&gt;")}}
       </td>
       <td id="h1-h6-example">
         <pre class="brush: html">

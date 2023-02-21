@@ -23,12 +23,12 @@ The following is a list of elements you **can** attach a shadow root to:
 - {{htmlelement("body")}}
 - {{htmlelement("div")}}
 - {{htmlelement("footer")}}
-- {{htmlelement("heading_elements", "h1")}}
-- {{htmlelement("heading_elements", "h2")}}
-- {{htmlelement("heading_elements", "h3")}}
-- {{htmlelement("heading_elements", "h4")}}
-- {{htmlelement("heading_elements", "h5")}}
-- {{htmlelement("heading_elements", "h6")}}
+- {{htmlelement("Heading_elements", "h1")}}
+- {{htmlelement("Heading_elements", "h2")}}
+- {{htmlelement("Heading_elements", "h3")}}
+- {{htmlelement("Heading_elements", "h4")}}
+- {{htmlelement("Heading_elements", "h5")}}
+- {{htmlelement("Heading_elements", "h6")}}
 - {{htmlelement("header")}}
 - {{htmlelement("main")}}
 - {{htmlelement("nav")}}

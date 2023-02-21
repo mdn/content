@@ -137,6 +137,6 @@ Prior to the release of Safari 13, the `contentinfo` [landmark role](/en-US/docs
 
 ## See also
 
-- Other section-related elements: {{HTMLElement("body")}}, {{HTMLElement("nav")}}, {{HTMLElement("article")}}, {{HTMLElement("aside")}}, {{HTMLElement("Heading_Elements", "h1")}}, {{HTMLElement("Heading_Elements", "h2")}}, {{HTMLElement("Heading_Elements", "h3")}}, {{HTMLElement("Heading_Elements", "h4")}}, {{HTMLElement("Heading_Elements", "h5")}}, {{HTMLElement("Heading_Elements", "h6")}}, {{HTMLElement("hgroup")}}, {{HTMLElement("header")}}, {{HTMLElement("section")}}, {{HTMLElement("address")}};
+- Other section-related elements: {{HTMLElement("body")}}, {{HTMLElement("nav")}}, {{HTMLElement("article")}}, {{HTMLElement("aside")}}, {{HTMLElement("Heading_elements", "h1")}}, {{HTMLElement("Heading_elements", "h2")}}, {{HTMLElement("Heading_elements", "h3")}}, {{HTMLElement("Heading_elements", "h4")}}, {{HTMLElement("Heading_elements", "h5")}}, {{HTMLElement("Heading_elements", "h6")}}, {{HTMLElement("hgroup")}}, {{HTMLElement("header")}}, {{HTMLElement("section")}}, {{HTMLElement("address")}};
 - [Using HTML sections and outlines](/en-US/docs/Web/HTML/Element/Heading_Elements)
 - [ARIA: Contentinfo role](/en-US/docs/Web/Accessibility/ARIA/Roles/contentinfo_role)
