@@ -22,6 +22,8 @@ _Also inherits instance properties from its parent {{jsxref("Error")}}_.
 
 These properties are defined on `AggregateError.prototype` and shared by all `AggregateError` instances.
 
+- {{jsxref("Object/constructor", "AggregateError.prototype.constructor")}}
+  - : The constructor function that created the instance object. For `AggregateError` instances, the initial value is the {{jsxref("AggregateError/AggregateError", "AggregateError")}} constructor.
 - {{jsxref("Error/name", "AggregateError.prototype.name")}}
   - : Represents the name for the type of error. For `AggregateError.prototype.name`, the initial value is `"AggregateError"`.
 

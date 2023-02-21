@@ -33,8 +33,12 @@ _Inherits static methods from its parent {{jsxref("TypedArray")}}_.
 
 _Also inherits instance properties from its parent {{jsxref("TypedArray")}}_.
 
+These properties are defined on `Uint8ClampedArray.prototype` and shared by all `Uint8ClampedArray` instances.
+
 - {{jsxref("TypedArray.BYTES_PER_ELEMENT", "Uint8ClampedArray.prototype.BYTES_PER_ELEMENT")}}
   - : Returns a number value of the element size. `1` in the case of a `Uint8ClampedArray`.
+- {{jsxref("Object/constructor", "Uint8ClampedArray.prototype.constructor")}}
+  - : The constructor function that created the instance object. For `Uint8ClampedArray` instances, the initial value is the {{jsxref("Uint8ClampedArray/Uint8ClampedArray", "Uint8ClampedArray")}} constructor.
 
 ## Instance methods
 

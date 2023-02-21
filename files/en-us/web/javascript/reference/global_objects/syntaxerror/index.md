@@ -24,6 +24,8 @@ _Also inherits instance properties from its parent {{jsxref("Error")}}_.
 
 These properties are defined on `SyntaxError.prototype` and shared by all `SyntaxError` instances.
 
+- {{jsxref("Object/constructor", "SyntaxError.prototype.constructor")}}
+  - : The constructor function that created the instance object. For `SyntaxError` instances, the initial value is the {{jsxref("SyntaxError/SyntaxError", "SyntaxError")}} constructor.
 - {{jsxref("Error/name", "SyntaxError.prototype.name")}}
   - : Represents the name for the type of error. For `SyntaxError.prototype.name`, the initial value is `"SyntaxError"`.
 

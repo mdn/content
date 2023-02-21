@@ -209,6 +209,10 @@ Note that JavaScript is [single-threaded](/en-US/docs/Glossary/Thread) by nature
 
 ## Instance properties
 
+These properties are defined on `Promise.prototype` and shared by all `Promise` instances.
+
+- {{jsxref("Object/constructor", "Promise.prototype.constructor")}}
+  - : The constructor function that created the instance object. For `Promise` instances, the initial value is the {{jsxref("Promise/Promise", "Promise")}} constructor.
 - `Promise.prototype[@@toStringTag]`
   - : The initial value of the [`@@toStringTag`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) property is the string `"Promise"`. This property is used in {{jsxref("Object.prototype.toString()")}}.
 
