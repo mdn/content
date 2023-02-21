@@ -28,11 +28,18 @@ getStats(selector, successCallback, failureCallback) // deprecated
     `null` (the default value), statistics will be gathered for the entire
     {{domxref("RTCPeerConnection")}}.
 
-### Return value
+### Deprecated parameters
 
-A {{jsxref("Promise")}} which resolves with an {{domxref("RTCStatsReport")}} object
-providing connection statistics. The contents of the report depend on the
-`selector` as well as other details of the connection.
+In older code and documentation, you may see a callback-based version of this function.
+This has been deprecated and its use is **strongly** discouraged. You
+should update any existing code to use the {{jsxref("Promise")}}-based version of
+`getStats()` instead. The parameters for the older form of
+`getStats()` are described below, to aid in updating existing code.
+
+- `successCallback` {{deprecated_inline}}
+  - : A [callback function](/en-US/docs/Glossary/Callback_function) called once the report has been successfully generated.
+- `failureCallback` {{deprecated_inline}}
+  - : A [callback function](/en-US/docs/Glossary/Callback_function) called once the report has failed to be generated.
 
 ### Exceptions
 
@@ -44,36 +51,11 @@ one of the following errors:
     `track` matches the specified `selector`, or
     `selector` matches more than one sender or receiver.
 
-### Obsolete syntax
+### Return value
 
-Previously, `getStats()` used success and failure callbacks to report the
-results to you, instead of using a promise.
-
-This version of `getStats()` is obsolete; in addition, the data it returns
-is entirely different from the current specification, and the form of that data was
-never documented. This form of `getStats()` has been or will soon be removed
-from most browsers; you _should not use it, and should update existing code to use
-the new promise-based version_. Check the [Browser compatibility](#browser_compatibility) table
-to verify the state of this method.
-
-```js
-promise = rtcPeerConnection.getStats(selector, successCallback, failureCallback) // deprecated
-```
-
-#### Parameters
-
-- `selector` {{optional_inline}}
-  - : A {{domxref("MediaStreamTrack")}} for which to gather statistics. If this is
-    `null` (the default value), statistics will be gathered for the entire
-    {{domxref("RTCPeerConnection")}}.
-- `successCallback`
-  - : A callback function to call when the stats have been retrieved. The function
-    receives as input a single parameter: an {{domxref("RTCStatsReport")}} with the
-    collected statistics. No output is expected from the function.
-- `failureCallback`
-  - : A function to call when an error occurs while attempting to collect statistics. The
-    callback receives as input the exception (a {{domxref("DOMException")}} object
-    describing the error which occurred. No return value is expected from the callback.
+A {{jsxref("Promise")}} which resolves with an {{domxref("RTCStatsReport")}} object
+providing connection statistics. The contents of the report depend on the
+`selector` as well as other details of the connection.
 
 ## Examples
 
