@@ -86,10 +86,9 @@ Microsoft applications such as Edge and Internet Explorer support a number of sp
 ## CSS-related DOM APIs
 
 - `msContentZoomFactor`
-- {{DOMxRef("msGetPropertyEnabled")}}
-- {{DOMxRef("msGetRegionContent")}}
-- {{DOMxRef("MSRangeCollection")}}
-- {{DOMxRef("msRegionOverflow")}}
+- {{DOMxRef("CSSStyleDeclaration.msGetPropertyEnabled")}}
+- {{DOMxRef("Element.msGetRegionContent")}}
+- {{DOMxRef("Element.msRegionOverflow")}}
 
 ## See also
 
