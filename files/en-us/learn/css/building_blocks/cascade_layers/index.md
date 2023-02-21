@@ -338,7 +338,7 @@ The above code creates two named layers and one unnamed layer. Let us assume tha
 9. inline important styles
 10. transitioning styles
 
-Normal styles declared inside layers receive the lowest priority and are sorted by the order in which the layers were created. The first created layer has lowest precedence, and the layer created last has highest precedence amongst layers. Normal styles declared within `firstLayer` will be overridden by any subsequent stylings on the list if any conflicts exist.
+Normal styles declared inside layers receive the lowest priority and are sorted by the order in which the layers were created. Normal styles in the first created layer have the lowest precedence, and normal styles in the layer created last have the highest precedence among the layers. In other words, normal styles declared within `firstLayer` will be overridden by any subsequent stylings on the list if any conflicts exist.
 
 Next up are any stylings declared outside of layers. The stylings in `C.css` were not imported to a layer and will override any conflicting styles from `firstLayer` and `secondLayer`.
 
