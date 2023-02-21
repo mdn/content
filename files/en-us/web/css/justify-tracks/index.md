@@ -2,14 +2,8 @@
 title: justify-tracks
 slug: Web/CSS/justify-tracks
 page-type: css-property
-tags:
-  - CSS
-  - Experimental
-  - CSS Property
-  - Reference
-  - grid
-  - justify-tracks
-  - masonry
+status:
+  - experimental
 browser-compat: css.properties.justify-tracks
 ---
 
