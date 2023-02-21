@@ -1,6 +1,7 @@
 ---
 title: style
 slug: Web/HTML/Global_attributes/style
+page-type: html-attribute
 tags:
   - Global attributes
   - HTML

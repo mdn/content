@@ -1,6 +1,7 @@
 ---
 title: Synchronous
 slug: Glossary/Synchronous
+page-type: glossary-definition
 tags:
   - Web
   - WebMechanics

@@ -1,6 +1,7 @@
 ---
 title: Block (CSS)
 slug: Glossary/Block/CSS
+page-type: glossary-definition
 tags:
   - CSS
   - CodingScripting

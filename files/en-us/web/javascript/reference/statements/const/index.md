@@ -2,13 +2,6 @@
 title: const
 slug: Web/JavaScript/Reference/Statements/const
 page-type: javascript-statement
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Language feature
-  - Reference
-  - Statement
-  - constants
 browser-compat: javascript.statements.const
 ---
 
@@ -23,7 +16,9 @@ keyword. The value of a constant can't be changed through reassignment (i.e. by 
 ## Syntax
 
 ```js-nolint
-const name1 = value1 [, name2 = value2 [, ... [, nameN = valueN]]]
+const name1 = value1;
+const name1 = value1, name2 = value2;
+const name1 = value1, name2 = value2, /* …, */ nameN = valueN;
 ```
 
 - `nameN`
@@ -58,6 +53,8 @@ All the considerations about the
 apply to both {{jsxref("Statements/let", "let")}} and `const`. For this reason, `const` declarations are commonly regarded as [non-hoisted](/en-US/docs/Glossary/Hoisting).
 
 A constant cannot share its name with a function or a variable in the same scope.
+
+If you're experimenting in a REPL, such as the Firefox web console (**Tools** > **Web Developer** > **Web Console**), and you run two `const` declarations with the same name in two separate inputs, you may get a syntax error due to re-declaration. See further discussion of this issue in {{bug(1580891)}}. The Chrome console allows `const` re-declarations between different REPL inputs.
 
 Unlike `var`, `const` begins [_declarations_, not _statements_](/en-US/docs/Web/JavaScript/Reference/Statements#difference_between_statements_and_declarations). That means you cannot use a lone `const` declaration as the body of a block (which makes sense, since there's no way to access the variable).
 

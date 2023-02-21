@@ -1,6 +1,7 @@
 ---
 title: <main>
 slug: Web/HTML/Element/main
+page-type: html-element
 tags:
   - Element
   - HTML

@@ -38,8 +38,8 @@ caret-color: currentcolor;
 /* <color> values */
 caret-color: red;
 caret-color: #5729e9;
-caret-color: rgb(0, 200, 0);
-caret-color: hsla(228, 4%, 24%, 0.8);
+caret-color: rgb(0 200 0);
+caret-color: hsl(228deg 4% 24% / 0.8);
 
 /* Global values */
 caret-color: inherit;

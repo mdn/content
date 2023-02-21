@@ -1,6 +1,7 @@
 ---
 title: TURN
 slug: Glossary/TURN
+page-type: glossary-definition
 tags:
   - Infrastructure
   - TURN

@@ -1,6 +1,7 @@
 ---
 title: Stylesheet
 slug: Glossary/Stylesheet
+page-type: glossary-definition
 tags:
   - StyleSheet
 ---

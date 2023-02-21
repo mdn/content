@@ -1,5 +1,5 @@
 ---
-title: 'Permissions-Policy: usb'
+title: "Permissions-Policy: usb"
 slug: Web/HTTP/Headers/Permissions-Policy/usb
 tags:
   - Directive

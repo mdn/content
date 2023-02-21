@@ -1,6 +1,7 @@
 ---
 title: virtualkeyboardpolicy
 slug: Web/HTML/Global_attributes/virtualkeyboardpolicy
+page-type: html-attribute
 tags:
   - Editing
   - Global attributes

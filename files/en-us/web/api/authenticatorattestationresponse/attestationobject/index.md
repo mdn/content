@@ -2,13 +2,6 @@
 title: AuthenticatorAttestationResponse.attestationObject
 slug: Web/API/AuthenticatorAttestationResponse/attestationObject
 page-type: web-api-instance-property
-tags:
-  - API
-  - AuthenticatorAttestationResponse
-  - Property
-  - Reference
-  - Web Authentication API
-  - WebAuthn
 browser-compat: api.AuthenticatorAttestationResponse.attestationObject
 ---
 
@@ -28,7 +21,7 @@ ecosystems (for example, Android or TPM attestations).
 
 ## Value
 
-After decoding the [CBOR](https://datatracker.ietf.org/doc/html/rfc7049) encoded
+After decoding the [CBOR](https://datatracker.ietf.org/doc/html/rfc8949) encoded
 `ArrayBuffer`, the resulting JavaScript object will contain the following
 properties:
 
@@ -38,7 +31,7 @@ properties:
     that in {{domxref("AuthenticatorAssertionResponse")}}, the
     `authenticatorData` is exposed as a property in a JavaScript object while
     in {{domxref("AuthenticatorAttestationResponse")}}, the `authenticatorData`
-    is a property in a [CBOR](https://datatracker.ietf.org/doc/html/rfc7049) map.
+    is a property in a [CBOR](https://datatracker.ietf.org/doc/html/rfc8949) map.
 
     The same {{domxref("AuthenticatorAssertionResponse.authenticatorData")}} field is
     used by both `AuthenticatorAttestationResponse` and by
@@ -110,7 +103,6 @@ navigator.credentials
 
 ## See also
 
-- {{domxref("PublicKeyCredentialCreationOptions.challenge")}}: the cryptographic
-  challenge which signature by the authenticator is contained in `attStmt`
-- {{domxref("PublicKeyCredentialCreationOptions.attestation")}}: the attestation
-  statement transport option specified for the creation
+- {{domxref("CredentialsContainer.create()")}}: the method used to create a statement with
+  acryptographic `challenge` which signature by the authenticator is contained in `attStmt`,
+  with the specified `attestation` transport option.

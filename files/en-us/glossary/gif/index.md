@@ -1,6 +1,7 @@
 ---
 title: GIF
 slug: Glossary/GIF
+page-type: glossary-definition
 tags:
   - Composing
 ---

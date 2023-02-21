@@ -1,6 +1,7 @@
 ---
 title: Latency
 slug: Glossary/Latency
+page-type: glossary-definition
 tags:
   - Audio
   - Media

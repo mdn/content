@@ -2,15 +2,6 @@
 title: IDBCursor.direction
 slug: Web/API/IDBCursor/direction
 page-type: web-api-instance-property
-tags:
-  - API
-  - Database
-  - IDBCursor
-  - IndexedDB
-  - Property
-  - Reference
-  - Storage
-  - direction
 browser-compat: api.IDBCursor.direction
 ---
 
@@ -31,7 +22,7 @@ Possible values are:
 
 - `next`
   - : This direction causes the cursor to be opened at the start of the source.
-- `nextunique``
+- `nextunique`
   - : This direction causes the cursor to be opened at the start of the source.
     For every key with duplicate values, only the first record is yielded.
 - `prev`

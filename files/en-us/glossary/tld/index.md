@@ -1,6 +1,7 @@
 ---
 title: TLD
 slug: Glossary/TLD
+page-type: glossary-definition
 tags:
   - Web
   - WebMechanics

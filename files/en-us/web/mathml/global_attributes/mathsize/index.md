@@ -17,7 +17,7 @@ The **`mathsize`** [global attribute](/en-US/docs/Web/MathML/Global_attributes) 
 
 ## Syntax
 
-```html
+```html-nolint
 <!-- <length> values -->
 <math mathsize="12px">
 <math mathsize="0.8em">

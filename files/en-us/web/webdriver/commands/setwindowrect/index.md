@@ -40,9 +40,7 @@ The input is a [`WindowRect`](/en-US/docs/Web/WebDriver/WindowRect) object:
 
 - `x`
 
-  - : Horizontal position of the [`window`](/en-US/docs/Web/API/Window), which equivalent to [`Window.screenX`](/en-US/docs/Web/API/Window/screenX). Must be a number in the −(2^31
-
-    <!--) to 2^31 − 1 range, null, or undefined.</dd-->
+  - : Horizontal position of the [`window`](/en-US/docs/Web/API/Window), which equivalent to [`Window.screenX`](/en-US/docs/Web/API/Window/screenX). Must be a number in the −(2^31) to 2^31 − 1 range, null, or undefined.
 
 - `y`
   - : Vertical position of the [`window`](/en-US/docs/Web/API/Window), which is equivalent to [`Window.screenY`](/en-US/docs/Web/API/Window/screenY). Must be a number in the −(2^31) to 2^31 − 1 range, null, or undefined.

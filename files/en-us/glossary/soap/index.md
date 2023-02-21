@@ -1,6 +1,7 @@
 ---
 title: SOAP
 slug: Glossary/SOAP
+page-type: glossary-definition
 tags:
   - Infrastructure
   - SOAP

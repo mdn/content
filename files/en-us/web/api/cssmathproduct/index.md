@@ -2,15 +2,8 @@
 title: CSSMathProduct
 slug: Web/API/CSSMathProduct
 page-type: web-api-interface
-tags:
-  - API
-  - CSS Typed Object Model API
-  - CSSMathProduct
-  - CSSUnparsedValue
-  - Experimental
-  - Houdini
-  - Interface
-  - Reference
+status:
+  - experimental
 browser-compat: api.CSSMathProduct
 ---
 

@@ -1,6 +1,7 @@
 ---
 title: RIL
 slug: Glossary/RIL
+page-type: glossary-definition
 tags:
   - B2G
   - Firefox OS

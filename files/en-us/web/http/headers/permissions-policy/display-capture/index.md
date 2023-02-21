@@ -1,5 +1,5 @@
 ---
-title: 'Permissions-Policy: display-capture'
+title: "Permissions-Policy: display-capture"
 slug: Web/HTTP/Headers/Permissions-Policy/display-capture
 tags:
   - Directive

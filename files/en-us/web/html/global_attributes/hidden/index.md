@@ -1,6 +1,7 @@
 ---
 title: hidden
 slug: Web/HTML/Global_attributes/hidden
+page-type: html-attribute
 tags:
   - Global attributes
   - HTML
@@ -166,5 +167,5 @@ To run the example again, click "Reset".
 
 - {{DOMxRef("HTMLElement.hidden")}}
 - All [global attributes](/en-US/docs/Web/HTML/Global_attributes)
-- [`aria-hidden` attribute](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-hidden)
-- The [`beforematch](/en-US/docs/Web/API/Element/beforematch_event) event
+- The [`aria-hidden`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-hidden) attribute
+- The [`beforematch`](/en-US/docs/Web/API/Element/beforematch_event) event

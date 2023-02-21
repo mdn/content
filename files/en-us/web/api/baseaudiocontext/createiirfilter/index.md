@@ -2,16 +2,6 @@
 title: BaseAudioContext.createIIRFilter()
 slug: Web/API/BaseAudioContext/createIIRFilter
 page-type: web-api-instance-method
-tags:
-  - API
-  - Audio
-  - AudioContext
-  - BaseAudioContext
-  - CreateIIRFilter
-  - Method
-  - Reference
-  - Web Audio API
-  - filter
 browser-compat: api.BaseAudioContext.createIIRFilter
 ---
 

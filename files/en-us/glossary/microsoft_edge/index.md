@@ -1,6 +1,7 @@
 ---
 title: Microsoft Edge
 slug: Glossary/Microsoft_Edge
+page-type: glossary-definition
 tags:
   - Browser
   - Infrastructure

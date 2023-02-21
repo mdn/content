@@ -1,6 +1,7 @@
 ---
 title: CSRF
 slug: Glossary/CSRF
+page-type: glossary-definition
 tags:
   - Security
 ---

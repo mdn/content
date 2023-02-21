@@ -2,12 +2,6 @@
 title: Symbol
 slug: Web/JavaScript/Reference/Global_Objects/Symbol
 page-type: javascript-class
-tags:
-  - Class
-  - ECMAScript 2015
-  - JavaScript
-  - Symbol
-  - Polyfill
 browser-compat: javascript.builtins.Symbol
 ---
 

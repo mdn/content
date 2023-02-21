@@ -1,6 +1,7 @@
 ---
 title: Time to first byte
 slug: Glossary/Time_to_first_byte
+page-type: glossary-definition
 tags:
   - Performance
   - Reference

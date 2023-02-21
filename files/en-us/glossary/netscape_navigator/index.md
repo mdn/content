@@ -1,6 +1,7 @@
 ---
 title: Netscape Navigator
 slug: Glossary/Netscape_Navigator
+page-type: glossary-definition
 tags:
   - Browser
   - Navigation

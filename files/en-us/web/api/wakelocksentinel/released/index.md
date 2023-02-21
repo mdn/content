@@ -2,12 +2,8 @@
 title: WakeLockSentinel.released
 slug: Web/API/WakeLockSentinel/released
 page-type: web-api-instance-property
-tags:
-  - Property
-  - Read-only
-  - Screen Wake Lock API
-  - WakeLockSentinel
-  - Experimental
+status:
+  - experimental
 browser-compat: api.WakeLockSentinel.released
 ---
 

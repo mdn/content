@@ -2,14 +2,6 @@
 title: "HTMLInputElement: invalid event"
 slug: Web/API/HTMLInputElement/invalid_event
 page-type: web-api-event
-tags:
-  - API
-  - Constraint Validation API
-  - Constraint validation
-  - Event
-  - Forms
-  - Reference
-  - invalid
 browser-compat: api.HTMLInputElement.invalid_event
 ---
 

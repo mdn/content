@@ -2,18 +2,6 @@
 title: HTMLImageElement.sizes
 slug: Web/API/HTMLImageElement/sizes
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTML
-  - HTML DOM
-  - HTMLImageElement
-  - Property
-  - Reference
-  - Responsive Design
-  - Responsive Images
-  - size
-  - sizes
-  - width
 browser-compat: api.HTMLImageElement.sizes
 ---
 
@@ -43,7 +31,7 @@ Each source size descriptor consists of a media condition as defined by the medi
 queries standard. Because a source size descriptor is used to specify the width to use
 for the image during layout of the page, the media condition is typically (but not
 necessarily) based entirely on width information. See
-{{SectionOnPage("/en-US/docs/Web/CSS/Media_Queries/Using_media_queries", "Syntax")}} for
+[Using media queries, Syntax](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#syntax) for
 details on how to construct a media condition.
 
 ### Source size values
@@ -63,7 +51,7 @@ unit, which lets you specify the width as a percentage of the viewport width
 
 ### Selecting an image to fit window width
 
-In this example, a blog-like layout is created, displaying some text and an image which
+In this example, a blog-like layout is created, displaying some text and an image
 for which three size points are specified, depending on the width of the window. Three
 versions of the image are also available, with their widths specified. The browser takes
 all of this information and selects an image and width that best meets the specified

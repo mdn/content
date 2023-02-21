@@ -2,15 +2,6 @@
 title: MediaSession.playbackState
 slug: Web/API/MediaSession/playbackState
 page-type: web-api-instance-property
-tags:
-  - Audio
-  - Media
-  - Media Session API
-  - MediaSession
-  - Property
-  - Reference
-  - Video
-  - playbackState
 browser-compat: api.MediaSession.playbackState
 ---
 

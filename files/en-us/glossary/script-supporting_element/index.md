@@ -1,6 +1,7 @@
 ---
 title: Script-supporting element
 slug: Glossary/Script-supporting_element
+page-type: glossary-definition
 tags:
   - HTML
   - HTML Content Categories
@@ -15,4 +16,4 @@ There are only two script-supporting elements: {{HTMLElement("script")}} and {{H
 
 ## See also
 
-{{SectionOnPage("/en-US/docs/Web/HTML/Kinds_of_HTML_content", "Script-supporting elements")}}
+[Script-supporting elements](/en-US/docs/Web/HTML/Kinds_of_HTML_content#script-supporting_elements)

@@ -2,19 +2,8 @@
 title: Navigation.canGoBack
 slug: Web/API/Navigation/canGoBack
 page-type: web-api-instance-property
-tags:
-  - API
-  - canGoBack
-  - Experimental
-  - History
-  - Navigate
-  - Navigation
-  - Navigation API
-  - Property
-  - Read-only
-  - Reference
-  - Scroll
-  - Traversal
+status:
+  - experimental
 browser-compat: api.Navigation.canGoBack
 ---
 
@@ -35,7 +24,7 @@ A boolean value: `true` if it is possible to navigate backwards in the navigatio
 
 ```js
 async function backHandler() {
-  if(navigation.canGoBack) {
+  if (navigation.canGoBack) {
     await navigation.back().finished;
     // Handle any required clean-up after
     // navigation has finished
@@ -45,7 +34,7 @@ async function backHandler() {
 }
 
 async function forwardHandler() {
-  if(navigation.canGoForward) {
+  if (navigation.canGoForward) {
     await navigation.forward().finished;
     // Handle any required clean-up after
     // navigation has finished

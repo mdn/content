@@ -1,6 +1,7 @@
 ---
 title: HTTPS
 slug: Glossary/HTTPS
+page-type: glossary-definition
 tags:
   - HTTPS
   - Infrastructure

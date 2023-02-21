@@ -1,6 +1,7 @@
 ---
 title: Code point
 slug: Glossary/Code_point
+page-type: glossary-definition
 tags:
 ---
 

@@ -1,6 +1,7 @@
 ---
 title: Firewall
 slug: Glossary/Firewall
+page-type: glossary-definition
 tags:
   - DDoS
   - Firewall

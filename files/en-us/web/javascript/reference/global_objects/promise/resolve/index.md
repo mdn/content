@@ -45,7 +45,7 @@ A {{jsxref("Promise")}} that is resolved with the given value, or the promise pa
 The bulk of the resolving logic is actually implemented by the [resolver function](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/Promise#resolver_function) passed by the `Promise()` constructor. In summary:
 
 - If a non-[thenable](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise#thenables) value is passed, the returned promise is already fulfilled with that value.
-- If a thenable is passed, the returned promise will adopt the state of that thenable by calling the `then` method and passing a pair of resolving functions as arguments. (But because native promises directly pass through `Promise.resolve()` without creating a wrapper, the `then` method is not called on native promises.) If the resolver function receives another thenable object, it will be resolved agin, so that the eventual fulfillment value of the promise will never be thenable.
+- If a thenable is passed, the returned promise will adopt the state of that thenable by calling the `then` method and passing a pair of resolving functions as arguments. (But because native promises directly pass through `Promise.resolve()` without creating a wrapper, the `then` method is not called on native promises.) If the resolver function receives another thenable object, it will be resolved again, so that the eventual fulfillment value of the promise will never be thenable.
 
 ## Examples
 

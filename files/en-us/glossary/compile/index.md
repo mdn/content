@@ -1,6 +1,7 @@
 ---
 title: Compile
 slug: Glossary/Compile
+page-type: glossary-definition
 tags:
   - CodingScripting
 ---

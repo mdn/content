@@ -2,21 +2,6 @@
 title: HTMLImageElement.x
 slug: Web/API/HTMLImageElement/x
 page-type: web-api-instance-property
-tags:
-  - API
-  - CSSOM
-  - CSSOM View
-  - Coordinate
-  - Edge
-  - HTML
-  - HTML DOM
-  - HTMLImageElement
-  - Position
-  - Reference
-  - border
-  - left
-  - x
-  - Property
 browser-compat: api.HTMLImageElement.x
 ---
 
@@ -79,7 +64,7 @@ including their user ID, their full name, and their avatar image.
   <tr>
     <td>12345678</td>
     <td>Johnny Rocket</td>
-    <td><img src="https://interactive-examples.mdn.mozilla.net/media/examples/grapefruit-slice-332-332.jpg"</td>
+    <td><img src="https://interactive-examples.mdn.mozilla.net/media/examples/grapefruit-slice-332-332.jpg"></td>
   </th>
 </table>
 <pre id="log">

@@ -1,6 +1,7 @@
 ---
-title: '<area>: The Image Map Area element'
+title: "<area>: The Image Map Area element"
 slug: Web/HTML/Element/area
+page-type: html-element
 tags:
   - Content
   - Element
@@ -63,7 +64,7 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
 
     - `no-referrer`: The {{HTTPHeader("Referer")}} header will not be sent.
     - `no-referrer-when-downgrade`: The {{HTTPHeader("Referer")}} header will not be sent to {{Glossary("origin")}}s without {{Glossary("TLS")}} ({{Glossary("HTTPS")}}).
-    - `origin`: The sent referrer will be limited to the origin of the referring page: its [scheme](/en-US/docs/Learn/Common_questions/What_is_a_URL), {{Glossary("host")}}, and {{Glossary("port")}}.
+    - `origin`: The sent referrer will be limited to the origin of the referring page: its [scheme](/en-US/docs/Learn/Common_questions/Web_mechanics/What_is_a_URL), {{Glossary("host")}}, and {{Glossary("port")}}.
     - `origin-when-cross-origin`: The referrer sent to other origins will be limited to the scheme, the host, and the port. Navigations on the same origin will still include the path.
     - `same-origin`: A referrer will be sent for {{Glossary("Same-origin policy", "same origin")}}, but cross-origin requests will contain no referrer information.
     - `strict-origin`: Only send the origin of the document as the referrer when the protocol security level stays the same (HTTPS→HTTPS), but don't send it to a less secure destination (HTTPS→HTTP).
@@ -73,7 +74,7 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
 
 - {{htmlattrdef("rel")}}
   - : For anchors containing the {{htmlattrxref("href", "area")}} attribute, this attribute specifies the relationship of the target object to the link object.
-    The value is a space-separated list of [link types values](/en-US/docs/Web/HTML/Link_types).
+    The value is a space-separated list of link types.
     The values and their semantics will be registered by some authority that might have meaning to the document author.
     The default relationship, if no other is given, is void. Use this attribute only if the {{htmlattrxref("href", "area")}} attribute is present.
 - {{htmlattrdef("shape")}}
@@ -92,7 +93,7 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
 
     Use this attribute only if the {{htmlattrxref("href", "area")}} attribute is present.
 
-    > **Note:** Setting `target="_blank"` on `<area>` elements implicitly provides the same `rel` behavior as setting [`rel="noopener"`](/en-US/docs/Web/HTML/Link_types/noopener) which does not set `window.opener`. See [browser compatibility](#browser_compatibility) for support status.
+    > **Note:** Setting `target="_blank"` on `<area>` elements implicitly provides the same `rel` behavior as setting [`rel="noopener"`](/en-US/docs/Web/HTML/Attributes/rel/noopener) which does not set `window.opener`. See [browser compatibility](#browser_compatibility) for support status.
 
 ### Deprecated attributes
 
@@ -132,7 +133,7 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
 
 {{ EmbedLiveSample('Examples', 360, 160) }}
 
-## Technical Summary
+## Technical summary
 
 <table class="properties">
   <tbody>
@@ -162,7 +163,7 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
     <tr>
       <th scope="row">Implicit ARIA role</th>
       <td>
-        {{ARIARole("link")}} when {{htmlattrxref("href", "area")}} attribute is present, otherwise <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role">no corresponding role</a>
+        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/link_role"><code>link</code></a> when {{htmlattrxref("href", "area")}} attribute is present, otherwise <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role">no corresponding role</a>
       </td>
     </tr>
     <tr>

@@ -2,14 +2,9 @@
 title: RTCPeerConnection.addStream()
 slug: Web/API/RTCPeerConnection/addStream
 page-type: web-api-instance-method
-tags:
-  - Deprecated
-  - Method
-  - RTCPeerConnection
-  - Reference
-  - WebRTC
-  - addStream
-  - Non-standard
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.RTCPeerConnection.addStream
 ---
 

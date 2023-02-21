@@ -1,6 +1,7 @@
 ---
 title: '<form>: The Form element'
 slug: Web/HTML/Element/form
+page-type: html-element
 tags:
   - Element
   - Form Element
@@ -77,8 +78,8 @@ The following attributes control behavior during form submission.
   - : The [HTTP](/en-US/docs/Web/HTTP) method to submit the form with.
     The only allowed methods/values are (case insensitive):
 
-    - `post`: The [POST method](https://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html#sec9.5); form data sent as the [request body](/en-US/docs/Web/API/Request/body).
-    - `get` (default): The [GET method](https://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html#sec9.3); form data appended to the `action` URL with a `?` separator. Use this method when the form [has no side effects](/en-US/docs/Glossary/Idempotent).
+    - `post`: The {{HTTPMethod("POST")}} method; form data sent as the [request body](/en-US/docs/Web/API/Request/body).
+    - `get` (default): The {{HTTPMethod("GET")}}; form data appended to the `action` URL with a `?` separator. Use this method when the form [has no side effects](/en-US/docs/Glossary/Idempotent).
     - `dialog`: When the form is inside a {{HTMLElement("dialog")}}, closes the dialog and throws a submit event on submission without submitting data or clearing the form.
 
     This value is overridden by {{htmlattrxref("formmethod", "button")}} attributes on {{HTMLElement("button")}}, [`<input type="submit">`](/en-US/docs/Web/HTML/Element/input/submit), or [`<input type="image">`](/en-US/docs/Web/HTML/Element/input/image) elements.
@@ -97,8 +98,6 @@ The following attributes control behavior during form submission.
     This value can be overridden by a {{htmlattrxref("formtarget", "button")}} attribute on a {{HTMLElement("button")}}, [`<input type="submit">`](/en-US/docs/Web/HTML/Element/input/submit), or [`<input type="image">`](/en-US/docs/Web/HTML/Element/input/image) element.
 
 ## Examples
-
-### HTML
 
 ```html
 <!-- Form which will send a GET request to the current URL -->
@@ -127,9 +126,7 @@ The following attributes control behavior during form submission.
 </form>
 ```
 
-{{ EmbedLiveSample('Examples', '100%', 110) }}
-
-## Technical Summary
+## Technical summary
 
 <table class="properties">
   <tbody>
@@ -192,7 +189,7 @@ The following attributes control behavior during form submission.
           ><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/search_role"
             >search</a
           ></code
-        >, {{ARIARole("none")}} or {{ARIARole("presentation")}}
+        >, <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/none_role"><code>none</code></a> or <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/presentation_role"><code>presentation</code></a>
       </td>
     </tr>
     <tr>

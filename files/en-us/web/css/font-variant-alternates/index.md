@@ -84,8 +84,8 @@ This property may take one of two forms:
 #### HTML
 
 ```html
-<p> A Fancy Swash</p>
-<p class="variant"> A Fancy Swash</p>
+<p>A Fancy Swash</p>
+<p class="variant">A Fancy Swash</p>
 ```
 
 #### CSS

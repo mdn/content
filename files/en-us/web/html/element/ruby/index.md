@@ -1,6 +1,7 @@
 ---
 title: '<ruby>: The Ruby Annotation element'
 slug: Web/HTML/Element/ruby
+page-type: html-element
 tags:
   - Element
   - HTML

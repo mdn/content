@@ -13,7 +13,7 @@ browser-compat: javascript.builtins.Number.MAX_SAFE_INTEGER
 
 {{JSRef}}
 
-The **`Number.MAX_SAFE_INTEGER`** constant represents the maximum safe integer in JavaScript (2<sup>53</sup> – 1).
+The **`Number.MAX_SAFE_INTEGER`** static data property represents the maximum safe integer in JavaScript (2<sup>53</sup> – 1).
 
 For larger integers, consider using {{jsxref("BigInt")}}.
 

@@ -1,6 +1,7 @@
 ---
 title: Whitespace
 slug: Glossary/Whitespace
+page-type: glossary-definition
 tags:
   - Lexical Grammar
   - whitespace

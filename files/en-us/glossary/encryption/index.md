@@ -1,6 +1,7 @@
 ---
 title: Encryption
 slug: Glossary/Encryption
+page-type: glossary-definition
 tags:
   - Cryptography
   - Privacy

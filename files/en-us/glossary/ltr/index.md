@@ -1,6 +1,7 @@
 ---
 title: LTR (Left To Right)
 slug: Glossary/LTR
+page-type: glossary-definition
 tags:
   - Composing
   - Localization

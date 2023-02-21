@@ -1,6 +1,7 @@
 ---
 title: WebM
 slug: Glossary/WebM
+page-type: glossary-definition
 tags:
   - Composing
   - Infrastructure

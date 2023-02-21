@@ -2,23 +2,15 @@
 title: IDBIndex.isAutoLocale
 slug: Web/API/IDBIndex/isAutoLocale
 page-type: web-api-instance-property
-tags:
-  - API
-  - Database
-  - Experimental
-  - IDBIndex
-  - IndexedDB
-  - Property
-  - Reference
-  - Storage
-  - isAutoLocale
-  - Non-standard
+status:
+  - experimental
+  - non-standard
 browser-compat: api.IDBIndex.isAutoLocale
 ---
 
 {{APIRef("IndexedDB")}}{{SeeCompatTable}}{{Non-standard_Header}}
 
-The **`isAutoLocale`** read-only property of the {{domxref("IDBIndex")}} interface returns a boolean value indicating whether the index had a `locale` value of `auto` specified upon its creation (see [`createIndex()`'s optionalParameters](/en-US/docs/Web/API/IDBObjectStore/createIndex#parameters).)
+The **`isAutoLocale`** read-only property of the {{domxref("IDBIndex")}} interface returns a boolean value indicating whether the index had a `locale` value of `auto` specified upon its creation (see the [`options`](/en-US/docs/Web/API/IDBObjectStore/createIndex#options) parameter to [`IDBObjectStore.createIndex()`](/en-US/docs/Web/API/IDBObjectStore/createIndex).)
 
 ## Value
 

@@ -1,6 +1,7 @@
 ---
 title: '<picture>: The Picture element'
 slug: Web/HTML/Element/picture
+page-type: html-element
 tags:
   - Element
   - Graphics

@@ -1,6 +1,7 @@
 ---
 title: '<q>: The Inline Quotation element'
 slug: Web/HTML/Element/q
+page-type: html-element
 tags:
   - Citation
   - Cite
@@ -40,7 +41,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
 {{EmbedLiveSample('Example')}}
 
-## Technical Summary
+## Technical summary
 
 <table class="properties">
   <tbody>

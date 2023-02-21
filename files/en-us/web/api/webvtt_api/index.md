@@ -2,19 +2,6 @@
 title: Web Video Text Tracks Format (WebVTT)
 slug: Web/API/WebVTT_API
 page-type: web-api-overview
-tags:
-  - API
-  - Intermediate
-  - Media
-  - NeedsMarkupWork
-  - NeedsUpdate
-  - Reference
-  - Video
-  - Web Video Text Tracks
-  - WebVTT
-  - captions
-  - subtitles
-  - text tracks
 browser-compat:
   - api.VTTCue
   - api.TextTrack

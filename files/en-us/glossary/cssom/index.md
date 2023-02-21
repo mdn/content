@@ -1,6 +1,7 @@
 ---
 title: CSS Object Model (CSSOM)
 slug: Glossary/CSSOM
+page-type: glossary-definition
 tags:
   - CSS
   - CSSOM

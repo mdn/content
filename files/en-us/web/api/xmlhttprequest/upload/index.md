@@ -2,21 +2,6 @@
 title: XMLHttpRequest.upload
 slug: Web/API/XMLHttpRequest/upload
 page-type: web-api-instance-property
-tags:
-  - AJAX
-  - API
-  - Monitoring XMLHttpRequest
-  - Property
-  - Read-only
-  - Reference
-  - Sending Files
-  - Uploading
-  - XHR
-  - XHR Uploads
-  - XMLHttpRequest
-  - XMLHttpRequest Uploads
-  - XMLHttpRequestUpload
-  - upload
 browser-compat: api.XMLHttpRequest.upload
 ---
 

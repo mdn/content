@@ -2,12 +2,6 @@
 title: Navigator.share()
 slug: Web/API/Navigator/share
 page-type: web-api-instance-method
-tags:
-  - Method
-  - Navigator
-  - Reference
-  - Share
-  - Web
 browser-compat: api.Navigator.share
 ---
 

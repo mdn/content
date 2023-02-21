@@ -2,17 +2,6 @@
 title: 'Element: touchend event'
 slug: Web/API/Element/touchend_event
 page-type: web-api-event
-tags:
-  - API
-  - Element
-  - Event
-  - Touch Events
-  - TouchEvent
-  - UI
-  - UI Events
-  - UX
-  - touch
-  - touchstart
 browser-compat: api.Element.touchend_event
 ---
 

@@ -26,8 +26,10 @@ Styles defined by the `:active` pseudo-class will be overridden by any subsequen
 
 ## Syntax
 
-```
-:active
+```css
+:active {
+  /* ... */
+}
 ```
 
 ## Examples

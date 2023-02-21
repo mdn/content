@@ -1,6 +1,7 @@
 ---
 title: WebGL
 slug: Glossary/WebGL
+page-type: glossary-definition
 tags:
   - Advanced
   - CodingScripting

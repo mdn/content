@@ -2,16 +2,6 @@
 title: MediaSource.readyState
 slug: Web/API/MediaSource/readyState
 page-type: web-api-instance-property
-tags:
-  - API
-  - Audio
-  - MSE
-  - Media Source Extensions
-  - MediaSource
-  - Property
-  - Reference
-  - Video
-  - readyState
 browser-compat: api.MediaSource.readyState
 ---
 

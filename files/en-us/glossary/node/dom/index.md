@@ -1,6 +1,7 @@
 ---
 title: Node (DOM)
 slug: Glossary/Node/DOM
+page-type: glossary-definition
 tags:
   - CodingScripting
 ---

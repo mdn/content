@@ -1,6 +1,7 @@
 ---
 title: Beacon
 slug: Glossary/Beacon
+page-type: glossary-definition
 tags:
   - Beacon
   - Reference

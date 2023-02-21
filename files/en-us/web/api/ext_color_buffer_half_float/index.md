@@ -2,11 +2,6 @@
 title: EXT_color_buffer_half_float
 slug: Web/API/EXT_color_buffer_half_float
 page-type: webgl-extension
-tags:
-  - API
-  - Reference
-  - WebGL
-  - WebGL extension
 browser-compat: api.EXT_color_buffer_half_float
 ---
 

@@ -1,6 +1,7 @@
 ---
 title: HTTP header
 slug: Glossary/HTTP_header
+page-type: glossary-definition
 tags:
   - HTTP Header
   - WebMechanics

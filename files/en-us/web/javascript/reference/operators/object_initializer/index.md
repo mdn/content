@@ -2,18 +2,6 @@
 title: Object initializer
 slug: Web/JavaScript/Reference/Operators/Object_initializer
 page-type: javascript-language-feature
-tags:
-  - ECMAScript 2015
-  - JSON
-  - JavaScript
-  - Language feature
-  - Literal
-  - Methods
-  - Object
-  - Primary Expression
-  - computed
-  - mutation
-  - properties
 browser-compat: javascript.operators.object_initializer
 ---
 
@@ -26,34 +14,27 @@ An **object initializer** is a comma-delimited list of zero or more pairs of pro
 ## Syntax
 
 ```js-nolint
-o = {};
-o = {a: 'foo', b: 42, c: {}};
-
-const a = 'foo';
-const b = 42;
-const c = {};
-o = { a: a, b: b, c: c };
-
 o = {
+  a: "foo",
+  b: 42,
+  c: {},
+  1: "number literal property",
+  "foo:bar": "string literal property",
+
+  shorthandProperty,
+
+  method(parameters) {
+    // …
+  },
+
   get property() {},
   set property(value) {},
-};
 
-o = { __proto__: prototype };
+  [expression]: "computed property",
 
-// Shorthand property names
-o = { a, b, c };
+  __proto__: prototype,
 
-// Shorthand method names
-o = {
-  property(parameters) {},
-};
-
-// Computed property names
-const prop = 'foo';
-o = {
-  [prop]: 'hey',
-  ['b' + 'ar']: 'there',
+  ...spreadProperty,
 };
 ```
 
@@ -95,7 +76,7 @@ The following code creates an object with three properties and the keys are `"fo
 
 ```js
 const object = {
-  foo: 'bar',
+  foo: "bar",
   age: 42,
   baz: { myProp: 12 },
 };
@@ -106,10 +87,10 @@ const object = {
 Once you have created an object, you might want to read or change them. Object properties can be accessed by using the dot notation or the bracket notation. (See [property accessors](/en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors) for detailed information.)
 
 ```js
-object.foo // "bar"
-object['age'] // 42
-object.baz          // {myProp: 12}
-object.baz.myProp   //12
+object.foo; // "bar"
+object["age"]; // 42
+object.baz; // {myProp: 12}
+object.baz.myProp; //12
 ```
 
 ### Property definitions
@@ -117,7 +98,7 @@ object.baz.myProp   //12
 We have already learned how to notate properties using the initializer syntax. Oftentimes, there are variables in your code that you would like to put into an object. You will see code like this:
 
 ```js
-const a = 'foo';
+const a = "foo";
 const b = 42;
 const c = {};
 
@@ -131,7 +112,7 @@ const o = {
 There is a shorter notation available to achieve the same:
 
 ```js
-const a = 'foo';
+const a = "foo";
 const b = 42;
 const c = {};
 
@@ -151,22 +132,7 @@ const a = { x: 1, x: 2 };
 console.log(a); // {x: 2}
 ```
 
-In ECMAScript 5 strict mode code, duplicate property names were considered a {{jsxref("SyntaxError")}}. With the introduction of computed property names making duplication possible at runtime, ECMAScript 2015 has removed this restriction.
-
-```js
-function haveES2015DuplicatePropertySemantics() {
-  'use strict';
-  try {
-    ({ prop: 1, prop: 2 });
-
-    // No error thrown, duplicate property names allowed in strict mode
-    return true;
-  } catch (e) {
-    // Error thrown, duplicates prohibited in strict mode
-    return false;
-  }
-}
-```
+After ES2015, duplicate property names are allowed everywhere, including [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode#duplicate_property_names). You can also have duplicate property names in [classes](/en-US/docs/Web/JavaScript/Reference/Classes). The only exception is [private properties](/en-US/docs/Web/JavaScript/Reference/Classes/Private_class_fields), which must be unique in the class body.
 
 ### Method definitions
 
@@ -237,7 +203,7 @@ const obj = {
 console.log(obj); // A,B,C: "Hello"
 console.log(obj["A,B,C"]); // "Hello"
 
-const param = 'size';
+const param = "size";
 const config = {
   [param]: 12,
   [`mobile${param.charAt(0).toUpperCase()}${param.slice(1)}`]: 4,
@@ -253,8 +219,8 @@ Object literals support the [spread syntax](/en-US/docs/Web/JavaScript/Reference
 Shallow-cloning (excluding `prototype`) or merging objects is now possible using a shorter syntax than {{jsxref("Object.assign()")}}.
 
 ```js
-const obj1 = { foo: 'bar', x: 42 };
-const obj2 = { foo: 'baz', y: 13 };
+const obj1 = { foo: "bar", x: 42 };
+const obj2 = { foo: "baz", y: 13 };
 
 const clonedObj = { ...obj1 };
 // { foo: "bar", x: 42 }
@@ -305,7 +271,7 @@ console.log(obj2.__proto__()); // "hello"
 const obj3 = { ["__proto__"]: 17 };
 console.log(obj3.__proto__); // 17
 
-// Mixing prototype setter with normal own properties with "__proto__" key 
+// Mixing prototype setter with normal own properties with "__proto__" key
 const obj4 = { ["__proto__"]: 17, __proto__: {} }; // {__proto__: 17} (with {} as prototype)
 const obj5 = {
   ["__proto__"]: 17,

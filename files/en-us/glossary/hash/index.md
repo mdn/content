@@ -1,6 +1,7 @@
 ---
 title: Hash
 slug: Glossary/Hash
+page-type: glossary-definition
 tags:
   - CodingScripting
   - Cryptography

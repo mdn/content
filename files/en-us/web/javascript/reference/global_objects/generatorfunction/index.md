@@ -2,25 +2,22 @@
 title: GeneratorFunction
 slug: Web/JavaScript/Reference/Global_Objects/GeneratorFunction
 page-type: javascript-class
-tags:
-  - Constructor
-  - ECMAScript 2015
-  - GeneratorFunction
-  - Iterator
-  - JavaScript
-  - Reference
 browser-compat: javascript.builtins.GeneratorFunction
 ---
 
 {{JSRef}}
 
-In JavaScript, every generator function is actually a `GeneratorFunction` object. There is no global object with the name `GeneratorFunction`, but you can create a `GeneratorFunction()` constructor using the following code:
+The **`GeneratorFunction`** object provides methods for [generator functions](/en-US/docs/Web/JavaScript/Reference/Statements/function*). In JavaScript, every generator function is actually a `GeneratorFunction` object.
+
+Note that `GeneratorFunction` is _not_ a global object. It can be obtained with the following code:
 
 ```js
 const GeneratorFunction = function* () {}.constructor;
 ```
 
-{{EmbedInteractiveExample("pages/js/functionasterisk-function.html")}}
+`GeneratorFunction` is a subclass of {{jsxref("Function")}}.
+
+{{EmbedInteractiveExample("pages/js/functionasterisk-function.html", "taller")}}
 
 ## Constructor
 

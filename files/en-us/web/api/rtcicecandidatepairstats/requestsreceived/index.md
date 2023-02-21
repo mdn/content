@@ -2,19 +2,6 @@
 title: RTCIceCandidatePairStats.requestsReceived
 slug: Web/API/RTCIceCandidatePairStats/requestsReceived
 page-type: web-api-instance-property
-tags:
-  - API
-  - ICE
-  - Networking
-  - Property
-  - RTCIceCandidatePairStats
-  - Reference
-  - Statistics
-  - Stats
-  - WebRTC
-  - WebRTC API
-  - request
-  - requestsReceived
 browser-compat: api.RTCIceCandidatePairStats.requestsReceived
 ---
 

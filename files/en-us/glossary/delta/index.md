@@ -1,6 +1,7 @@
 ---
 title: Delta
 slug: Glossary/Delta
+page-type: glossary-definition
 tags:
   - Delta
   - difference

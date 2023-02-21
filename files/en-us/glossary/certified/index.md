@@ -1,6 +1,7 @@
 ---
 title: Certified
 slug: Glossary/Certified
+page-type: glossary-definition
 tags:
   - Apps
   - B2G

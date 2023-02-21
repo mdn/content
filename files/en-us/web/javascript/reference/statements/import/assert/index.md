@@ -2,8 +2,8 @@
 title: Import assertion
 slug: Web/JavaScript/Reference/Statements/import/assert
 page-type: javascript-language-feature
-tags:
-  - Experimental
+status:
+  - experimental
 browser-compat: javascript.statements.import.import_assertions
 ---
 

@@ -1,6 +1,7 @@
 ---
 title: Accessibility tree
 slug: Glossary/Accessibility_tree
+page-type: glossary-definition
 tags:
   - AOM
   - Accessibility

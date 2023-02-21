@@ -1,6 +1,7 @@
 ---
 title: Trident
 slug: Glossary/Trident
+page-type: glossary-definition
 tags:
   - Browser
   - Infrastructure

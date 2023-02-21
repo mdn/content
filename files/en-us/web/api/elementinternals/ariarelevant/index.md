@@ -2,15 +2,8 @@
 title: ElementInternals.ariaRelevant
 slug: Web/API/ElementInternals/ariaRelevant
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - ariaRelevant
-  - AriaAttributes
-  - AriaMixin
-  - ElementInternals
-  - Non-standard
+status:
+  - non-standard
 browser-compat: api.ElementInternals.ariaRelevant
 ---
 

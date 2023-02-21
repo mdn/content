@@ -23,14 +23,11 @@ browser-compat: path.to.feature.NameOfTheElement
 > ---
 > title: "<NameOfTheElement>: The NameOfTheElement element"
 > slug: Web/HTML/Element/NameOfTheElement
-> tags:
->   - NameOfTheElement
->   - HTML
->   - Element
->   - Reference
->   - Experimental
->   - Deprecated
->   - Non-standard
+> page-type: html-element
+> status:
+>   - experimental
+>   - deprecated
+>   - non-standard
 > browser-compat: html.elements.NameOfTheElement
 > ---
 > ```
@@ -43,16 +40,10 @@ browser-compat: path.to.feature.NameOfTheElement
 >   - : The end of the URL path after `https://developer.mozilla.org/en-US/docs/`).
 >     This will be formatted like `Web/HTML/Element/NameOfTheElement`, where the element name is in _lower case_.
 >     For example, the [`<video>`](/en-US/docs/Web/HTML/Element/video) element has a _slug_ of `Web/HTML/Element/video`.
-> - **tags**
->
->   - : Always include the following tags: **HTML**, **Element**, **Reference**, the _NameOfTheElement_ (e.g. **video**).
->
->     Include the following tags as appropriate:
->
->     - Technology status: **Experimental** (if the technology is [experimental](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#experimental)), **Deprecated** (if it is [deprecated](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#deprecated_and_obsolete)), **Non-standard** (if it isn't on a standards track).
->     - Any other tags that represent possible search terms for the element.
->       For example, the [`<video>`](/en-US/docs/Web/HTML/Element/video) element includes the tags: **HTML Video**, **Multimedia**, **Media Player**, **Movie Playback**, etc.
->
+> - **page-type**
+>   - : Always `html-element`.
+> - **status**
+>   - : Include (appropriate) technology status keys: [**experimental**](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#experimental), [**deprecated**](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#deprecated_and_obsolete), **non-standard** (if not on a standards track).
 > - **browser-compat**
 >
 >   - : Replace the placeholder value `html.elements.NameOfTheElement` with the query string for the element in the [Browser compat data repo](https://github.com/mdn/browser-compat-data).
@@ -188,9 +179,8 @@ Optionally, warn of any potential accessibility concerns that exist with using t
     <tr>
       <th scope="row">Permitted ARIA roles</th>
       <td>
-        Fill in a list of ARIA roles that can be set on the element, inside
-        \{{ARIARole("nameOfRole")}} macro calls. For example
-        {{ARIARole("directory")}}.
+        Fill in a list of ARIA roles that can be set on the element; for example
+        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/directory_role"><code>directory</code></a>.
       </td>
     </tr>
     <tr>

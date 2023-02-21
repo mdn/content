@@ -1,6 +1,7 @@
 ---
 title: Constant
 slug: Glossary/Constant
+page-type: glossary-definition
 tags:
   - CodingScripting
   - Constant

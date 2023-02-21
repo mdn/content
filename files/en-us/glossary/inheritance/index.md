@@ -1,6 +1,7 @@
 ---
 title: Inheritance
 slug: Glossary/Inheritance
+page-type: glossary-definition
 tags:
   - CodingScripting
   - Inheritance

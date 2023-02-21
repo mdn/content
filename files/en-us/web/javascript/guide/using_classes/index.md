@@ -2,11 +2,6 @@
 title: Using classes
 slug: Web/JavaScript/Guide/Using_Classes
 page-type: guide
-tags:
-  - Guide
-  - Intermediate
-  - JavaScript
-  - Object
 ---
 
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Working_with_Objects", "Web/JavaScript/Guide/Using_promises")}}
@@ -701,7 +696,7 @@ class ColorWithAlpha extends Color {
 }
 ```
 
-A class can only extend from one class. This prevents problems in multiple inheritance like the [diamond problem](https://en.wikipedia.org/wiki/Multiple_inheritance#The_diamond_problem). However, due to the dynamic nature of JavaScript, it's still possible to achieve the effect of multiple inheritance through class composition and [mixins](/en-US/docs/Web/JavaScript/Reference/Classes#mix-ins).
+A class can only extend from one class. This prevents problems in multiple inheritance like the [diamond problem](https://en.wikipedia.org/wiki/Multiple_inheritance#The_diamond_problem). However, due to the dynamic nature of JavaScript, it's still possible to achieve the effect of multiple inheritance through class composition and [mixins](/en-US/docs/Web/JavaScript/Reference/Classes/extends#mix-ins).
 
 Instances of derived classes are also [instances of](/en-US/docs/Web/JavaScript/Reference/Operators/instanceof) the base class.
 

@@ -2,15 +2,9 @@
 title: IDBFileRequest.lockedFile
 slug: Web/API/IDBFileRequest/lockedFile
 page-type: web-api-instance-property
-tags:
-  - API
-  - DOM
-  - Files
-  - Property
-  - Reference
-  - WebAPI
-  - Non-standard
-  - Deprecated
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.IDBFileRequest.lockedFile
 ---
 

@@ -24,13 +24,10 @@ browser-compat: css.selectors.NameOfTheSelector
 > title: :NameOfTheSelector
 > slug: Web/CSS/:NameOfTheSelector
 > page-type: css-selector OR css-pseudo-class OR css-pseudo-element OR css-combinator
-> tags:
->   - CSS
->   - Reference
->   - Selector
->   - NameOfTheSelector
->   - Experimental
->   - Deprecated
+> status:
+>   - experimental
+>   - deprecated
+>   - non-standard
 > browser-compat: css.selectors.NameOfTheSelector
 > ---
 > ```
@@ -43,16 +40,8 @@ browser-compat: css.selectors.NameOfTheSelector
 >     For example, the [`:hover`](/en-US/docs/Web/CSS/:hover) selector slug is `Web/CSS/:hover`.
 > - **page-type**
 >   - : The `page-type` key for CSS properties is one of `css-selector`, `css-pseudo-class`, or `css-pseudo-element`, depending on whether the selector is a [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes), a [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements), a [combinator](/en-US/docs/Web/CSS/CSS_Selectors#combinators), or a [basic selector](/en-US/docs/Web/CSS/CSS_Selectors#basic_selectors).
-> - **tags**
->
->   - : Always include the following tags: **CSS**, **Reference**, _NameOfTheSelector_ (e.g. **:hover**).
->
->     Include the following tags as appropriate:
->
->     - Type of selector: **Layout**, **Basic Selectors**, **Combinators**, **Pseudo-classes**, **Pseudo-elements**
->     - Technology status: **Experimental** (if the technology is [experimental](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#experimental)), **Deprecated** (if it is [deprecated](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#deprecated_and_obsolete)).
->     - Any other tags that represent terms people might search for related to the technology.
->
+> - **status**
+>   - : Include (appropriate) technology status keys: [**experimental**](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#experimental), [**deprecated**](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#deprecated_and_obsolete), **non-standard** (if not on a standards track).
 > - **browser-compat**
 >
 >   - : Replace the placeholder value <code>css.selectors.NameOfTheSelector</code> with the query string for the selector in the [Browser compat data repo](https://github.com/mdn/browser-compat-data).

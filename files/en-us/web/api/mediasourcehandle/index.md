@@ -2,14 +2,8 @@
 title: MediaSourceHandle
 slug: Web/API/MediaSourceHandle
 page-type: web-api-interface
-tags:
-  - API
-  - Experimental
-  - Interface
-  - MSE
-  - MediaSource
-  - MediaSource Extensions
-  - Reference
+status:
+  - experimental
 browser-compat: api.MediaSourceHandle
 ---
 

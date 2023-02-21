@@ -1,6 +1,7 @@
 ---
 title: RGB
 slug: Glossary/RGB
+page-type: glossary-definition
 tags:
   - Beginner
   - CSS

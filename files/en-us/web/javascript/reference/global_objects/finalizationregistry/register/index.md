@@ -2,18 +2,12 @@
 title: FinalizationRegistry.prototype.register()
 slug: Web/JavaScript/Reference/Global_Objects/FinalizationRegistry/register
 page-type: javascript-instance-method
-tags:
-  - FinalizationRegistry
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
 browser-compat: javascript.builtins.FinalizationRegistry.register
 ---
 
 {{JSRef}}
 
-The `register()` method registers an object with a
+The **`register()`** method registers an object with a
 {{jsxref("FinalizationRegistry")}} instance so that if the object is garbage-collected,
 the registry's callback may get called.
 

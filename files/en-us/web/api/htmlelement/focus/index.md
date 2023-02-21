@@ -2,16 +2,6 @@
 title: HTMLElement.focus()
 slug: Web/API/HTMLElement/focus
 page-type: web-api-instance-method
-tags:
-  - API
-  - Focus
-  - HTML DOM
-  - HTMLElement
-  - Method
-  - Reference
-  - Scroll
-  - View
-  - activate
 browser-compat: api.HTMLElement.focus
 ---
 
@@ -169,7 +159,7 @@ Selecting the second button set's the focus, but scrolling is disabled.
 ## Notes
 
 - If you call `HTMLElement.focus()` from a mousedown event handler, you must call `event.preventDefault()` to keep the focus from leaving the `HTMLElement`
-- Behavior of the focus in relation to different HTML features like [`tabindex`](/en-US/docs/Web/HTML/Global_attributes/tabindex) or {{Glossary("shadow tree", "shadow dom")}}, which previously remained under-specified, were updated in October 2019).
+- Behavior of the focus in relation to different HTML features like [`tabindex`](/en-US/docs/Web/HTML/Global_attributes/tabindex) or {{Glossary("shadow tree", "shadow dom")}}, which previously remained under-specified, were updated in October 2019.
   See the [WHATWG blog](https://blog.whatwg.org/focusing-on-focus) for more information.
 
 ## Browser compatibility

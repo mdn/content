@@ -2,15 +2,6 @@
 title: GamepadHapticActuator
 slug: Web/API/GamepadHapticActuator
 page-type: web-api-interface
-tags:
-  - API
-  - Gamepad
-  - GamepadHapticActuator
-  - Interface
-  - Reference
-  - VR
-  - Virtual Reality
-  - WebVR
 browser-compat: api.GamepadHapticActuator
 ---
 

@@ -2,14 +2,6 @@
 title: HTMLFormElement.encoding
 slug: Web/API/HTMLFormElement/encoding
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTML DOM
-  - HTMLFormElement
-  - NeedsContent
-  - NeedsSpecTable
-  - Property
-  - Reference
 browser-compat: api.HTMLFormElement.encoding
 ---
 

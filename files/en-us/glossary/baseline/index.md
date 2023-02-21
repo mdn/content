@@ -1,6 +1,7 @@
 ---
 title: Baseline
 slug: Glossary/Baseline
+page-type: glossary-definition
 tags:
   - CSS
   - SVG

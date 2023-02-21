@@ -1,6 +1,7 @@
 ---
 title: contextmenu
 slug: Web/HTML/Global_attributes/contextmenu
+page-type: html-attribute
 tags:
   - Deprecated
   - Global attributes

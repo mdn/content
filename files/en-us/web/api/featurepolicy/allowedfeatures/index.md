@@ -2,14 +2,8 @@
 title: FeaturePolicy.allowedFeatures()
 slug: Web/API/FeaturePolicy/allowedFeatures
 page-type: web-api-instance-method
-tags:
-  - API
-  - Directive
-  - Feature Policy
-  - FeaturePolicy
-  - Permissions-Policy
-  - Reference
-  - Experimental
+status:
+  - experimental
 browser-compat: api.FeaturePolicy.allowedFeatures
 ---
 

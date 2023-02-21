@@ -2,12 +2,6 @@
 title: 'XMLHttpRequest: readystatechange event'
 slug: Web/API/XMLHttpRequest/readystatechange_event
 page-type: web-api-event
-tags:
-  - API
-  - Event
-  - Reference
-  - XHR
-  - XMLHttpRequest
 browser-compat: api.XMLHttpRequest.readystatechange_event
 ---
 

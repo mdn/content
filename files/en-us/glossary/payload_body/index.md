@@ -1,6 +1,7 @@
 ---
 title: Payload body
 slug: Glossary/Payload_body
+page-type: glossary-definition
 tags:
   - HTTP
   - HTTP Header

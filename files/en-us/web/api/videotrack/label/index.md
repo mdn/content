@@ -2,19 +2,6 @@
 title: VideoTrack.label
 slug: Web/API/VideoTrack/label
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTML DOM
-  - Media
-  - Property
-  - Read-only
-  - Reference
-  - Video
-  - Video Track
-  - VideoTrack
-  - label
-  - metadata
-  - track
 browser-compat: api.VideoTrack.label
 ---
 

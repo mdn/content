@@ -2,17 +2,6 @@
 title: WebGL best practices
 slug: Web/API/WebGL_API/WebGL_best_practices
 page-type: guide
-tags:
-  - 2D
-  - 3D
-  - Advanced
-  - Best practices
-  - Drawing
-  - GL
-  - Graphics
-  - Guide
-  - OpenGL
-  - WebGL
 ---
 
 {{DefaultAPISidebar("WebGL")}}
@@ -465,7 +454,7 @@ Behind the scenes in the browser:
     drawArrays()
     bindTexture(webgl_texture)
     -texImage2D(HTMLVideoElement):
-        +useProgram(_internal_tex_tranform_prog)
+        +useProgram(_internal_tex_transform_prog)
 <pipeline flush>
         +bindFramebuffer(webgl_texture._internal_framebuffer)
         +bindTexture(HTMLVideoElement._internal_video_tex)
@@ -501,7 +490,7 @@ Behind the scenes in the browser:
     …
     bindTexture(webgl_texture)
     -texImage2D(HTMLVideoElement):
-        +useProgram(_internal_tex_tranform_prog)
+        +useProgram(_internal_tex_transform_prog)
 <pipeline flush>
         +bindFramebuffer(webgl_texture._internal_framebuffer)
         +bindTexture(HTMLVideoElement._internal_video_tex)

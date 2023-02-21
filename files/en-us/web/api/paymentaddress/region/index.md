@@ -2,24 +2,9 @@
 title: PaymentAddress.region
 slug: Web/API/PaymentAddress/region
 page-type: web-api-instance-property
-tags:
-  - API
-  - Address
-  - County
-  - Oblast
-  - Payment Request
-  - Payment Request API
-  - Prefecture
-  - Property
-  - Province
-  - Read-only
-  - Reference
-  - payment
-  - paymentAddress
-  - region
-  - state
-  - Deprecated
-  - Non-standard
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.PaymentAddress.region
 ---
 

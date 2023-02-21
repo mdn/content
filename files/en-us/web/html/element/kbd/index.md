@@ -1,6 +1,7 @@
 ---
 title: '<kbd>: The Keyboard Input element'
 slug: Web/HTML/Element/kbd
+page-type: html-element
 tags:
   - Displaying Input
   - Displaying Keys
@@ -156,7 +157,7 @@ This does some interesting nesting. For the menu option description, the entire 
 
 {{EmbedLiveSample("Representing_onscreen_input_options", 650, 120)}}
 
-## Technical Summary
+## Technical summary
 
 <table class="properties">
   <tbody>

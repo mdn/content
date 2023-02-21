@@ -1,6 +1,7 @@
 ---
 title: '<noscript>: The Noscript element'
 slug: Web/HTML/Element/noscript
+page-type: html-element
 tags:
   - Element
   - HTML

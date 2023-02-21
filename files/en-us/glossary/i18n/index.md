@@ -1,6 +1,7 @@
 ---
 title: I18N
 slug: Glossary/I18N
+page-type: glossary-definition
 tags:
   - Beginner
   - Credibility

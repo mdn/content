@@ -2,12 +2,8 @@
 title: WorkerNavigator.product
 slug: Web/API/WorkerNavigator/product
 page-type: web-api-instance-property
-tags:
-  - API
-  - Deprecated
-  - WorkerNavigator
-  - Property
-  - Reference
+status:
+  - deprecated
 browser-compat: api.WorkerNavigator.product
 ---
 

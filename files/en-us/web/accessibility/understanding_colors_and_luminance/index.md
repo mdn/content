@@ -282,9 +282,9 @@ Saturation is the "Colorfulness of an area judged in proportion to its brightnes
 
 Chroma is the "Colorfulness of an area judged as a proportion of the brightness of a similarly illuminated area that appears white or highly transmitting." (CIE 17-139). A color exhibits approximately constant chroma for all levels of illuminance in normal day viewing conditions (except when the brightness is very high). If the luminance is increased, the chroma usually increases in the same circumstances.
 
-Here is an example of high chroma vs no chroma. On the right, each of the three sRGB primaries are at maximum. On the left, there is no chroma, also known as "achromatic."
+Here is an example of high chroma vs. no chroma. On the right, each of the three sRGB primaries are at maximum. On the left, there is no chroma, also known as "achromatic."
 
-![0 to 100 Chroma Ramps, an example of high chroma vs no chroma.](chroma-ramps.svg)
+![0 to 100 Chroma Ramps, an example of high chroma vs. no chroma.](chroma-ramps.svg)
 
 A good resource with many more detailed examples is at [the Munsell color site](https://munsell.com/color-blog/difference-chroma-saturation/).
 

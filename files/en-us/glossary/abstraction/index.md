@@ -1,6 +1,7 @@
 ---
 title: Abstraction
 slug: Glossary/Abstraction
+page-type: glossary-definition
 tags:
   - Abstraction
   - Coding

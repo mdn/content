@@ -2,12 +2,8 @@
 title: "HID: disconnect event"
 slug: Web/API/HID/disconnect_event
 page-type: web-api-event
-tags:
-  - API
-  - Reference
-  - Event
-  - HID
-  - Experimental
+status:
+  - experimental
 browser-compat: api.HID.disconnect_event
 ---
 
@@ -43,8 +39,8 @@ _In addition to the properties listed below, properties from the parent interfac
 In the following example an event listener is registered to listen for the disconnection of a device. The name of the device is then printed to the console using {{domxref("HIDDevice.productName")}}.
 
 ```js
-navigator.hid.addEventListener('connect', ({device}) => {
-  console.log(`HID connected: ${device.productName}`);
+navigator.hid.addEventListener('disconnect', ({device}) => {
+  console.log(`HID disconnected: ${device.productName}`);
 });
 ```
 

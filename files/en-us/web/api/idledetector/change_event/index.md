@@ -2,13 +2,8 @@
 title: 'IdleDetector: change event'
 slug: Web/API/IdleDetector/change_event
 page-type: web-api-event
-tags:
-  - API
-  - Event
-  - Reference
-  - onchange
-  - IdleDetector
-  - Experimental
+status:
+  - experimental
 browser-compat: api.IdleDetector.change_event
 ---
 

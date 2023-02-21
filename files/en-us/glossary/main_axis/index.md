@@ -1,6 +1,7 @@
 ---
 title: Main Axis
 slug: Glossary/Main_Axis
+page-type: glossary-definition
 tags:
   - CSS
   - Main axis

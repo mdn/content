@@ -2,14 +2,8 @@
 title: BluetoothDevice
 slug: Web/API/BluetoothDevice
 page-type: web-api-interface
-tags:
-  - API
-  - Bluetooth
-  - BluetoothDevice
-  - Experimental
-  - Interface
-  - Reference
-  - Web Bluetooth API
+status:
+  - experimental
 browser-compat: api.BluetoothDevice
 ---
 

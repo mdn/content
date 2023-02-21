@@ -1,6 +1,7 @@
 ---
 title: RSS
 slug: Glossary/RSS
+page-type: glossary-definition
 tags:
   - OpenPractices
   - RSS

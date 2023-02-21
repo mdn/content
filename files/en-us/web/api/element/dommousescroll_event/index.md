@@ -2,18 +2,9 @@
 title: 'Element: DOMMouseScroll event'
 slug: Web/API/Element/DOMMouseScroll_event
 page-type: web-api-event
-tags:
-  - API
-  - DOM
-  - DOMMouseScroll
-  - Deprecated
-  - Element
-  - Event
-  - Input
-  - Non-standard
-  - Reference
-  - mouse
-  - scrolling
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.Element.DOMMouseScroll_event
 ---
 

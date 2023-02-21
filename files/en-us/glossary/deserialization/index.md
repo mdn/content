@@ -1,6 +1,7 @@
 ---
 title: Deserialization
 slug: Glossary/Deserialization
+page-type: glossary-definition
 tags:
   - Deserialization
   - Deserialize

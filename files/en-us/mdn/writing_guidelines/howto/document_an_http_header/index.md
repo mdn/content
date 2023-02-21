@@ -18,7 +18,7 @@ You will need to know or be able to dive into some [HTTP](/en-US/docs/Web/HTTP).
 - There are many HTTP headers defined in various IETF standards.
 - IANA maintains a [registry of headers](https://www.iana.org/assignments/message-headers/message-headers.xhtml) and Wikipedia lists the [known header fields](https://en.wikipedia.org/wiki/List_of_HTTP_header_fields), but not all are relevant to web developers or are part of an official standard.
 - If there are any **red links** on the current [HTTP headers reference overview page](/en-US/docs/Web/HTTP/Headers), these headers are a good choice to document.
-- If in doubt, ask the [MDN Web Docs team](https://github.com/mdn/mdn-community/discussions) whether or not it makes sense to write about the header you have chosen.
+- If in doubt, [ask the MDN Web Docs team](/en-US/docs/MDN/Community/Communication_channels) whether or not it makes sense to write about the header you have chosen.
 
 ## Step 2 – Check the existing HTTP header pages
 

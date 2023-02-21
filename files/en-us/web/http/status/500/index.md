@@ -30,4 +30,4 @@ This error response is a generic "catch-all" response. Usually, this indicates t
 
 ## See also
 
-- [HTTP/1.1: Status Code Definitions](https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html)
+- [HTTP Status Code Definitions](https://httpwg.org/specs/rfc9110.html#status.500)

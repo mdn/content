@@ -1,9 +1,9 @@
 ---
-title: '::cue'
+title: "::cue"
 slug: Web/CSS/::cue
 page-type: css-pseudo-element
 tags:
-  - '::cue'
+  - "::cue"
   - CSS
   - Media
   - Pseudo-element
@@ -17,7 +17,7 @@ browser-compat: css.selectors.cue
 
 {{CSSRef}}
 
-The **`::cue`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) matches [WebVTT](/en-US/docs/Web/API/WebVTT_API) cues within a selected element. This can be used to [style captions and other cues](/en-US/docs/Web/API/WebVTT_API#styling_webtt_cues) in media with VTT tracks.
+The **`::cue`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) matches [WebVTT](/en-US/docs/Web/API/WebVTT_API) cues within a selected element. This can be used to [style captions and other cues](/en-US/docs/Web/API/WebVTT_API#styling_webvtt_cues) in media with VTT tracks.
 
 {{EmbedInteractiveExample("pages/tabbed/pseudo-element-cue.html", "tabbed-shorter")}}
 
@@ -25,8 +25,10 @@ The properties are applied to the entire set of cues as if they were a single un
 
 ## Syntax
 
-```
-::cue | ::cue( <selector> )
+```css-nolint
+::cue | ::cue(<selector>) {
+  /* ... */
+}
 ```
 
 ## Permitted properties

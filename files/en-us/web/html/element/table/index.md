@@ -1,6 +1,7 @@
 ---
-title: '<table>: The Table element'
+title: "<table>: The Table element"
 slug: Web/HTML/Element/table
+page-type: html-element
 tags:
   - Element
   - HTML
@@ -99,7 +100,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
 - {{htmlattrdef("bgcolor")}} {{Deprecated_inline}}
 
-  - : The background color of the table. It is a [6-digit hexadecimal RGB code](/en-US/docs/Web/CSS/color_value#rgb_colors), prefixed by a '`#`'. One of the predefined [color keywords](/en-US/docs/Web/CSS/color_value#color_keywords) can also be used.
+  - : The background color of the table. It is a [6-digit hexadecimal RGB code](/en-US/docs/Web/CSS/hex-color), prefixed by a '`#`'. One of the predefined [color keywords](/en-US/docs/Web/CSS/named-color) can also be used.
 
     To achieve a similar effect, use the CSS {{cssxref("background-color")}} property.
 
@@ -134,7 +135,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
     - `none`, which indicates that no rules will be displayed; it is the default value;
     - `groups`, which will cause the rules to be displayed between row groups (defined by the {{HTMLElement("thead")}}, {{HTMLElement("tbody")}} and {{HTMLElement("tfoot")}} elements) and between column groups (defined by the {{HTMLElement("col")}} and {{HTMLElement("colgroup")}} elements) only;
     - `rows`, which will cause the rules to be displayed between rows;
-    - `columns`, which will cause the rules to be displayed between columns;
+    - `cols`, which will cause the rules to be displayed between columns;
     - `all`, which will cause the rules to be displayed between rows and columns.
 
     To achieve a similar effect, apply the {{cssxref("border")}} property to the appropriate {{HTMLElement("thead")}}, {{HTMLElement("tbody")}}, {{HTMLElement("tfoot")}}, {{HTMLElement("col")}}, or {{HTMLElement("colgroup")}} elements.
@@ -644,14 +645,14 @@ The {{htmlattrxref("scope", "th")}} attribute on header elements is redundant in
     <tr>
       <th scope="row">Teal</th>
       <td><code>#51F6F6</code></td>
-      <td><code>hsla(180, 90%, 64%, 1)</code></td>
-      <td><code>rgba(81, 246, 246, 1)</code></td>
+      <td><code>hsl(180 90% 64% / 1)</code></td>
+      <td><code>rgb(81 246 246 / 1)</code></td>
     </tr>
     <tr>
       <th scope="row">Goldenrod</th>
       <td><code>#F6BC57</code></td>
-      <td><code>hsla(38, 90%, 65%, 1)</code></td>
-      <td><code>rgba(246, 188, 87, 1)</code></td>
+      <td><code>hsl(38 90% 65% / 1)</code></td>
+      <td><code>rgba(246 188 87 / 1)</code></td>
     </tr>
   </tbody>
 </table>

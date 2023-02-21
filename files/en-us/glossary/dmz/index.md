@@ -1,6 +1,7 @@
 ---
 title: DMZ
 slug: Glossary/DMZ
+page-type: glossary-definition
 tags:
   - Networking
   - Security

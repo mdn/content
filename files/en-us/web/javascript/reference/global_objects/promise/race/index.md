@@ -75,7 +75,7 @@ Promise.race([p3, p4]).then(
   },
   (error) => {
     // Not called
-  }
+  },
 );
 
 const p5 = sleep(500, "five", "fulfill");
@@ -88,7 +88,7 @@ Promise.race([p5, p6]).then(
   (error) => {
     console.error(error.message); // "six"
     // p6 is faster, so it rejects
-  }
+  },
 );
 ```
 

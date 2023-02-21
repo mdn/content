@@ -2,15 +2,6 @@
 title: 'FileReader: error event'
 slug: Web/API/FileReader/error_event
 page-type: web-api-event
-tags:
-  - API
-  - Error
-  - Event
-  - FileReader
-  - ProgressEvent
-  - Reference
-  - Web
-  - onerror
 browser-compat: api.FileReader.error_event
 ---
 
@@ -62,7 +53,7 @@ function handleSelected(e) {
         });
 
         reader.addEventListener('load', () => {
-            console.error(`File: ${selectedFile.name} read successfully`);
+            console.log(`File: ${selectedFile.name} read successfully`);
         });
 
         reader.readAsDataURL(selectedFile);

@@ -2,17 +2,6 @@
 title: HTMLSelectElement.selectedOptions
 slug: Web/API/HTMLSelectElement/selectedOptions
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTML DOM
-  - HTMLSelectElement
-  - Options
-  - Property
-  - Read-only
-  - Reference
-  - Select
-  - Web
-  - selectedOptions
 browser-compat: api.HTMLSelectElement.selectedOptions
 ---
 
@@ -128,4 +117,4 @@ The resulting content looks like this in action:
 
 ## See also
 
-- {{SectionOnPage("/en-US/docs/Learn/Forms/Other_form_controls", "Drop-down controls")}}
+- [Drop-down controls](/en-US/docs/Learn/Forms/Other_form_controls#drop-down_controls)

@@ -1,6 +1,7 @@
 ---
 title: Reflow
 slug: Glossary/Reflow
+page-type: glossary-definition
 tags:
   - WebMechanics
 ---

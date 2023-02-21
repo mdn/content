@@ -2,12 +2,6 @@
 title: Introduction
 slug: Web/JavaScript/Guide/Introduction
 page-type: guide
-tags:
-  - Beginner
-  - Guide
-  - Introduction
-  - JavaScript
-  - "l10n:priority"
 ---
 
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide", "Web/JavaScript/Guide/Grammar_and_types")}}
@@ -96,7 +90,7 @@ The Web Console appears at the bottom of the browser window. Along the bottom of
 The console works the exact same way as `eval`: the last expression entered is returned. For the sake of simplicity, it can be imagined that every time something is entered into the console, it is actually surrounded by `console.log` around `eval`, like so:
 
 ```js
-console.log(eval('3 + 5'))
+console.log(eval("3 + 5"));
 ```
 
 ### Multi-line input in the Web Console
@@ -108,14 +102,14 @@ The single-line input mode of the Web Console is great for quick testing of Java
 To get started with writing JavaScript, open the Web Console in multi-line mode, and write your first "Hello world" JavaScript code:
 
 ```js
-(function(){
+(function () {
   "use strict";
   /* Start of your code */
   function greetMe(yourName) {
     alert(`Hello ${yourName}`);
   }
 
-  greetMe('World');
+  greetMe("World");
   /* End of your code */
 })();
 ```

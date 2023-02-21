@@ -1,6 +1,7 @@
 ---
 title: Cacheable
 slug: Glossary/Cacheable
+page-type: glossary-definition
 tags:
   - WebMechanics
 ---

@@ -1,6 +1,7 @@
 ---
 title: Keyword
 slug: Glossary/Keyword
+page-type: glossary-definition
 tags:
   - Keyword
   - Search

@@ -2,12 +2,6 @@
 title: URLSearchParams()
 slug: Web/API/URLSearchParams/URLSearchParams
 page-type: web-api-constructor
-tags:
-  - API
-  - Constructor
-  - Reference
-  - URL API
-  - URLSearchParams
 browser-compat: api.URLSearchParams.URLSearchParams
 ---
 
@@ -47,7 +41,7 @@ various inputs.
 const url = new URL('https://example.com?foo=1&bar=2');
 const params1 = new URLSearchParams(url.search);
 
-// Get the URLSearchParams object directly from an URL object
+// Get the URLSearchParams object directly from a URL object
 const params1a = url.searchParams
 
 // Pass in a string literal

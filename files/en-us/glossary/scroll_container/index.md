@@ -1,6 +1,7 @@
 ---
 title: Scroll container
 slug: Glossary/Scroll_container
+page-type: glossary-definition
 tags:
   - scroll container
 ---

@@ -1,6 +1,7 @@
 ---
 title: SQL
 slug: Glossary/SQL
+page-type: glossary-definition
 tags:
   - CodingScripting
   - Database

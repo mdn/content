@@ -2,10 +2,8 @@
 title: 'Element: gesturechange event'
 slug: Web/API/Element/gesturechange_event
 page-type: web-api-event
-tags:
-  - Event
-  - Non-standard
-  - Reference
+status:
+  - non-standard
 browser-compat: api.Element.gesturechange_event
 ---
 

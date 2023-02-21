@@ -2,19 +2,13 @@
 title: HTMLMediaElement.muted
 slug: Web/API/HTMLMediaElement/muted
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTML DOM
-  - HTMLMediaElement
-  - Property
-  - Web
 browser-compat: api.HTMLMediaElement.muted
 ---
 
 {{APIRef("HTML DOM")}}
 
-The **`HTMLMediaElement.muted`** indicates whether the media
-element muted.
+The **`HTMLMediaElement.muted`** property indicates whether the media
+element is muted.
 
 ## Value
 

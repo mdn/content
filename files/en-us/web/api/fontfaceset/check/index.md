@@ -2,13 +2,6 @@
 title: FontFaceSet.check()
 slug: Web/API/FontFaceSet/check
 page-type: web-api-instance-method
-tags:
-  - API
-  - CSS Font Loading API
-  - CSSOM
-  - FontFaceSet
-  - Method
-  - Reference
 browser-compat: api.FontFaceSet.check
 ---
 
@@ -47,11 +40,11 @@ console.log(document.fonts.check("12px courier"));
 console.log(document.fonts.check("12px MyFont", "ß"));
 ```
 
-If the font given in the font specification does not exist, this function returns `true`:
+If the font given in the font specification does not exist, this function returns `false`:
 
 ```js
 console.log(document.fonts.check("12px NonExistingFont"));
-// true
+// false
 ```
 
 ## Specifications

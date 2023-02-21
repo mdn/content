@@ -2,16 +2,12 @@
 title: Function
 slug: Web/JavaScript/Reference/Global_Objects/Function
 page-type: javascript-class
-tags:
-  - Class
-  - Function
-  - JavaScript
 browser-compat: javascript.builtins.Function
 ---
 
 {{JSRef}}
 
-Every JavaScript function is actually a `Function` object. This can be seen with the code `(function () {}).constructor === Function`, which returns true.
+The **`Function`** object provides methods for [functions](/en-US/docs/Web/JavaScript/Reference/Functions). In JavaScript, every function is actually a `Function` object.
 
 ## Constructor
 
@@ -20,17 +16,22 @@ Every JavaScript function is actually a `Function` object. This can be seen with
 
 ## Instance properties
 
+These properties are defined on `Function.prototype` and shared by all `Function` instances.
+
 - {{jsxref("Function.prototype.arguments")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : Represents the arguments passed to this function. For [strict](/en-US/docs/Web/JavaScript/Reference/Strict_mode), arrow, async, and generator functions, accessing the `arguments` property throws a {{jsxref("TypeError")}}. Use the {{jsxref("Functions/arguments", "arguments")}} object inside function closures instead.
 - {{jsxref("Function.prototype.caller")}} {{Non-standard_Inline}} {{Deprecated_Inline}}
   - : Represents the function that invoked this function. For [strict](/en-US/docs/Web/JavaScript/Reference/Strict_mode), arrow, async, and generator functions, accessing the `caller` property throws a {{jsxref("TypeError")}}.
-- {{jsxref("Function.prototype.displayName")}} {{Non-standard_Inline}} {{Optional_Inline}}
+
+These properties are own properties of each `Function` instance.
+
+- {{jsxref("Function/displayName", "displayName")}} {{Non-standard_Inline}} {{Optional_Inline}}
   - : The display name of the function.
-- {{jsxref("Function.prototype.length")}}
+- {{jsxref("Function/length", "length")}}
   - : Specifies the number of arguments expected by the function.
-- {{jsxref("Function.prototype.name")}}
+- {{jsxref("Function/name", "name")}}
   - : The name of the function.
-- {{jsxref("Function.prototype.prototype")}}
+- {{jsxref("Function/prototype", "prototype")}}
   - : Used when the function is used as a constructor with the [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new) operator. It will become the new object's prototype.
 
 ## Instance methods

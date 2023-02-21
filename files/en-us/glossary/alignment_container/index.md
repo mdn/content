@@ -1,6 +1,7 @@
 ---
 title: Alignment container
 slug: Glossary/Alignment_Container
+page-type: glossary-definition
 tags:
   - Alignment container
   - CSS

@@ -2,11 +2,6 @@
 title: NodeIterator.previousNode()
 slug: Web/API/NodeIterator/previousNode
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - Method
-  - NodeIterator
 browser-compat: api.NodeIterator.previousNode
 ---
 

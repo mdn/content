@@ -1,22 +1,7 @@
 ---
 title: "<video>: The Video Embed element"
 slug: Web/HTML/Element/video
-tags:
-  - Element
-  - HTML
-  - HTML Video
-  - HTML Video Player
-  - HTML embedded content
-  - Media
-  - Movie Playback
-  - Movies
-  - Multimedia
-  - Playing Movies
-  - Playing Video
-  - Reference
-  - Showing Video
-  - Video
-  - Web
+page-type: html-element
 browser-compat: html.elements.video
 ---
 
@@ -525,7 +510,7 @@ Captions should not obstruct the main subject of the video. They can be position
     </tr>
     <tr>
       <th scope="row">Permitted ARIA roles</th>
-      <td>{{ARIARole("application")}}</td>
+      <td><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/application_role"><code>application</code></a></td>
     </tr>
     <tr>
       <th scope="row">DOM interface</th>

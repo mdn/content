@@ -2,15 +2,6 @@
 title: IDBRequest.readyState
 slug: Web/API/IDBRequest/readyState
 page-type: web-api-instance-property
-tags:
-  - API
-  - Database
-  - IDBRequest
-  - IndexedDB
-  - Property
-  - Reference
-  - Storage
-  - readyState
 browser-compat: api.IDBRequest.readyState
 ---
 
@@ -65,7 +56,7 @@ objectStoreTitleRequest.onsuccess = () => {
   // back into the database
   const updateTitleRequest = objectStore.put(data);
 
-  // Log the source of this request
+  // Log the readyState of this request
   console.log(`The readyState of this request is ${updateTitleRequest.readyState}`);
 
   // When this new request succeeds, run the displayData()

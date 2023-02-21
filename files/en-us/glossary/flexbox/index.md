@@ -1,6 +1,7 @@
 ---
 title: Flexbox
 slug: Glossary/Flexbox
+page-type: glossary-definition
 tags:
   - CSS
   - Intro

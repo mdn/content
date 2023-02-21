@@ -1,6 +1,7 @@
 ---
 title: '<u>: The Unarticulated Annotation (Underline) element'
 slug: Web/HTML/Element/u
+page-type: html-element
 tags:
   - Annotation
   - Element
@@ -144,7 +145,7 @@ cite {
 
 {{EmbedLiveSample("Styling_the_cite_element", 650, 80)}}
 
-## Technical Summary
+## Technical summary
 
 <table class="properties">
   <tbody>

@@ -2,15 +2,8 @@
 title: CSSUnparsedValue
 slug: Web/API/CSSUnparsedValue
 page-type: web-api-interface
-tags:
-  - API
-  - CSS Typed Object Model API
-  - CSSUnparsedValue
-  - Experimental
-  - Houdini
-  - Interface
-  - NeedsExample
-  - Reference
+status:
+  - experimental
 browser-compat: api.CSSUnparsedValue
 ---
 
@@ -18,7 +11,7 @@ browser-compat: api.CSSUnparsedValue
 
 The **`CSSUnparsedValue`** interface of the {{domxref('CSS_Object_Model#css_typed_object_model','','',' ')}} represents property values that reference [custom properties](/en-US/docs/Web/CSS/CSS_Variables). It consists of a list of string fragments and variable references.
 
-Custom properties are represented by `CSSUnparsedValue` and {{cssxref('var()')}} references are represented using {{domxref('CSSVariableReferenceValue')}}.
+Custom properties are represented by `CSSUnparsedValue` and {{cssxref("var", "var()")}} references are represented using {{domxref('CSSVariableReferenceValue')}}.
 
 {{InheritanceDiagram}}
 

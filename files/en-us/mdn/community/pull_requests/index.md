@@ -35,7 +35,7 @@ The content changes go through the following stages before they are published on
 We want MDN Web Docs to be a welcoming, friendly community that we can all be proud of.
 All participants must follow our [Code of Conduct](https://github.com/mdn/content/blob/main/CODE_OF_CONDUCT.md) which means adhering to [Mozilla's Community Participation Guidelines](https://www.mozilla.org/en-US/about/governance/policies/participation/).
 Be polite and constructive when opening pull requests, writing review comments, interacting with the pull request author or other community members.
-If anyone has engaged in behavior that is potentially illegal or makes you or someone else feel unsafe, unwelcome, or uncomfortable, you are encouraged to [report it](https://www.mozilla.org/en-US/about/governance/policies/participation/reporting/).
+If you or someone else has experienced behavior that is potentially illegal or makes you feel unsafe, unwelcome, or uncomfortable, we encourage you to [report it](https://www.mozilla.org/en-US/about/governance/policies/participation/reporting/).
 
 ### Before you start
 
@@ -54,11 +54,9 @@ When looking to contribute to the MDN project, you will find yourself in one of 
   **Issues need a response from maintainers before you start working** so that you know a problem addressed by a pull request is valid and that your pull request will be accepted.
   More information on issues can be found on our [Community pages for GitHub issues](https://github.com/mdn/mdn/issues/new?assignees=schalkneethling&labels=proposal%2Cneeds+triage&template=content-or-feature-suggestion.yml&title=Enter+your+proposal+here).
 
-- **If want to suggest new content or a new feature**, submit a proposal through the 'New content or feature suggestion' [GitHub issue template](https://github.com/mdn/mdn/issues/new/choose).
+- **If you want to suggest new content or a new feature**, submit a proposal through the 'New content or feature suggestion' [GitHub issue template](https://github.com/mdn/mdn/issues/new/choose).
 
-<!-- TODO: when we have Discord:
-If you're not sure where to start, reach out to us on [Discord]() and ask for feedback.
--->
+If you're not sure where to start, reach out to us on [the Discord server](/en-US/docs/MDN/Community/Communication_channels#discord_server) and ask for feedback.
 
 ### Open a pull request
 

@@ -2,15 +2,6 @@
 title: Intl.NumberFormat.prototype.formatRange()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/formatRange
 page-type: javascript-instance-method
-tags:
-  - Internationalization
-  - Intl
-  - JavaScript
-  - Localization
-  - Method
-  - NumberFormat
-  - Prototype
-  - Reference
 browser-compat: javascript.builtins.Intl.NumberFormat.formatRange
 ---
 

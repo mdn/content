@@ -1,6 +1,7 @@
 ---
 title: Array
 slug: Glossary/Array
+page-type: glossary-definition
 tags:
   - Array
   - CodingScripting

@@ -1,6 +1,7 @@
 ---
 title: Domain
 slug: Glossary/Domain
+page-type: glossary-definition
 tags:
   - Browser
   - Domain

@@ -1,6 +1,7 @@
 ---
 title: Head
 slug: Glossary/Head
+page-type: glossary-definition
 tags:
   - CodingScripting
   - HTML

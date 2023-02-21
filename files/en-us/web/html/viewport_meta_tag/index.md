@@ -1,6 +1,7 @@
 ---
 title: Viewport meta tag
 slug: Web/HTML/Viewport_meta_tag
+page-type: guide
 tags:
   - Layout
   - Responsiveness

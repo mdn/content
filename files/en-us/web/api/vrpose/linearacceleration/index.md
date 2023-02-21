@@ -2,17 +2,9 @@
 title: VRPose.linearAcceleration
 slug: Web/API/VRPose/linearAcceleration
 page-type: web-api-instance-property
-tags:
-  - API
-  - Deprecated
-  - Property
-  - Reference
-  - VR
-  - VRPose
-  - Virtual Reality
-  - WebVR
-  - linearAcceleration
-  - Non-standard
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.VRPose.linearAcceleration
 ---
 

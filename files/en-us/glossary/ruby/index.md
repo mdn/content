@@ -1,6 +1,7 @@
 ---
 title: Ruby
 slug: Glossary/Ruby
+page-type: glossary-definition
 tags:
   - CodingScripting
   - Ruby

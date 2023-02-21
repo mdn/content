@@ -2,18 +2,6 @@
 title: WebVR concepts
 slug: Web/API/WebVR_API/Concepts
 page-type: guide
-tags:
-  - Acceleration
-  - Apps
-  - FOV
-  - Guide
-  - Orientation
-  - Position
-  - VR
-  - Virtual Reality
-  - WebVR
-  - concepts
-  - velocity
 ---
 
 {{APIRef("WebVR API")}}{{deprecated_header}}
@@ -138,7 +126,7 @@ If developers do not take utmost care, VR apps can actually cause their users to
 To avoid bringing on motion sickness in our users (or at least minimize the effects), we need to:
 
 - Always maintain head tracking (this is the most important of all, especially if it occurs in middle of the experience.)
-- Use constant velocity; avoid acceleration or deceleration camera movements (use linear acceleration, and avoid vs easing if you can.)
+- Use constant velocity; avoid acceleration or deceleration camera movements (use linear acceleration, and avoid easing if you can.)
 - Keep the frame rate up (less than 30fps is uncomfortable.)
 - Avoid sharp and/or unexpected camera rotations.
 - Add fixed points of reference for fixed objects (otherwise the user will believe they are on the move.)

@@ -2,13 +2,6 @@
 title: DedicatedWorkerGlobalScope
 slug: Web/API/DedicatedWorkerGlobalScope
 page-type: web-api-interface
-tags:
-  - API
-  - DedicatedWorkerGlobalScope
-  - Interface
-  - Reference
-  - Web Workers
-  - Workers
 browser-compat: api.DedicatedWorkerGlobalScope
 ---
 
@@ -68,6 +61,10 @@ _This interface inherits methods from the {{domxref("WorkerGlobalScope")}} inter
   - : Schedules the execution of a function every X milliseconds.
 - {{domxref("setTimeout")}}
   - : Sets a delay for executing a function.
+- {{domxref("Window/requestAnimationFrame", "requestAnimationFrame")}}
+  - : Requests the browser to execute a callback function before painting the next frame.
+- {{domxref("Window/cancelAnimationFrame", "cancelAnimationFrame")}}
+  - : Cancels a callback scheduled by requestAnimationFrame.
 
 ## Events
 

@@ -1,6 +1,7 @@
 ---
 title: Cross-site scripting (XSS)
 slug: Glossary/Cross-site_scripting
+page-type: glossary-definition
 tags:
   - Cross Site Scripting
   - DOM
@@ -19,4 +20,3 @@ These attacks succeed if the Web app does not employ enough validation or encodi
 - [Cross-site scripting](https://en.wikipedia.org/wiki/Cross-site_scripting) on Wikipedia
 - [Cross-site scripting on OWASP](https://owasp.org/www-community/attacks/xss/)
 - [Another article about Cross-site scripting](https://www.acunetix.com/blog/articles/dom-xss-explained/)
-- [XSS Attack – Exploit & Protection](https://secure.wphackedhelp.com/blog/wordpress-xss-attack/)

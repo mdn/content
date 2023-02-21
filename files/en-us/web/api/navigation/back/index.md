@@ -2,19 +2,8 @@
 title: Navigation.back()
 slug: Web/API/Navigation/back
 page-type: web-api-instance-method
-tags:
-  - API
-  - Experimental
-  - back
-  - History
-  - Method
-  - Navigate
-  - Navigation
-  - Navigation API
-  - Reference
-  - Scroll
-  - transition
-  - Traversal
+status:
+  - experimental
 browser-compat: api.Navigation.back
 ---
 
@@ -56,7 +45,7 @@ Either one of these promises rejects if the navigation has failed for some reaso
 
 ```js
 async function backHandler() {
-  if(navigation.canGoBack) {
+  if (navigation.canGoBack) {
     await navigation.back().finished;
     // Handle any required clean-up after
     // navigation has finished
@@ -66,7 +55,7 @@ async function backHandler() {
 }
 
 async function forwardHandler() {
-  if(navigation.canGoForward) {
+  if (navigation.canGoForward) {
     await navigation.forward().finished;
     // Handle any required clean-up after
     // navigation has finished

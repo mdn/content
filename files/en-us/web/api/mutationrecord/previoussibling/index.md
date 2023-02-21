@@ -2,11 +2,6 @@
 title: MutationRecord.previousSibling
 slug: Web/API/MutationRecord/previousSibling
 page-type: web-api-instance-property
-tags:
-  - previousSibling
-  - MutationRecord
-  - Property
-  - Reference
 browser-compat: api.MutationRecord.previousSibling
 ---
 

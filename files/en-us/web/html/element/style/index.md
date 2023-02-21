@@ -1,6 +1,7 @@
 ---
 title: '<style>: The Style Information element'
 slug: Web/HTML/Element/style
+page-type: html-element
 tags:
   - CSS
   - Element

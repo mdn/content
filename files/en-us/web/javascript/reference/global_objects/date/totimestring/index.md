@@ -2,12 +2,6 @@
 title: Date.prototype.toTimeString()
 slug: Web/JavaScript/Reference/Global_Objects/Date/toTimeString
 page-type: javascript-instance-method
-tags:
-  - Date
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
 browser-compat: javascript.builtins.Date.toTimeString
 ---
 
@@ -25,7 +19,7 @@ toTimeString()
 
 ### Return value
 
-A string representing the time portion of the given date in human readable form in English.
+A string representing the time portion of the given date in human-readable form in English.
 
 ## Description
 

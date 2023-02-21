@@ -2,13 +2,6 @@
 title: 'Window: storage event'
 slug: Web/API/Window/storage_event
 page-type: web-api-event
-tags:
-  - API
-  - Event
-  - Reference
-  - Storage
-  - Web Storage
-  - Window
 browser-compat: api.Window.storage_event
 ---
 

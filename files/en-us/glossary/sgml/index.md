@@ -1,6 +1,7 @@
 ---
 title: SGML
 slug: Glossary/SGML
+page-type: glossary-definition
 tags:
   - CodingScripting
   - Composing

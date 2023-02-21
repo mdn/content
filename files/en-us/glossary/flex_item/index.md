@@ -1,6 +1,7 @@
 ---
 title: Flex Item
 slug: Glossary/Flex_Item
+page-type: glossary-definition
 tags:
   - CSS
   - flex item

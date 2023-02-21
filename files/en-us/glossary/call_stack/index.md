@@ -1,6 +1,7 @@
 ---
 title: Call stack
 slug: Glossary/Call_stack
+page-type: glossary-definition
 tags:
   - Call Stack
   - CodingScripting

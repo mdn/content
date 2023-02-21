@@ -12,7 +12,7 @@ browser-compat: javascript.builtins.Number.MAX_VALUE
 
 {{JSRef}}
 
-The **`Number.MAX_VALUE`** property represents the maximum numeric value representable in JavaScript.
+The **`Number.MAX_VALUE`** static data property represents the maximum numeric value representable in JavaScript.
 
 {{EmbedInteractiveExample("pages/js/number-maxvalue.html")}}
 

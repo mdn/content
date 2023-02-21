@@ -2,13 +2,6 @@
 title: Touch.target
 slug: Web/API/Touch/target
 page-type: web-api-instance-property
-tags:
-  - API
-  - DOM
-  - EventTarget
-  - Mobile
-  - Property
-  - touch
 browser-compat: api.Touch.target
 ---
 

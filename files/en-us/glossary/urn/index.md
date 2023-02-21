@@ -1,6 +1,7 @@
 ---
 title: URN
 slug: Glossary/URN
+page-type: glossary-definition
 tags:
   - Intro
   - Navigation

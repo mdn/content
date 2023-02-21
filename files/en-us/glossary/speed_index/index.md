@@ -1,6 +1,7 @@
 ---
 title: Speed index
 slug: Glossary/Speed_index
+page-type: glossary-definition
 tags:
   - Performance
   - Reference

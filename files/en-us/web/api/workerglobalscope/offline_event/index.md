@@ -2,13 +2,6 @@
 title: 'WorkerGlobalScope: offline event'
 slug: Web/API/WorkerGlobalScope/offline_event
 page-type: web-api-instance-event
-tags:
-  - API
-  - Event
-  - Reference
-  - Web Workers
-  - WorkerGlobalScope
-  - offline
 browser-compat: api.WorkerGlobalScope.offline_event
 ---
 

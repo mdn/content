@@ -2,14 +2,6 @@
 title: Introduction to the DOM
 slug: Web/API/Document_Object_Model/Introduction
 page-type: guide
-tags:
-  - Beginner
-  - DOM
-  - Document
-  - Guide
-  - HTML DOM
-  - Introduction
-  - Tutorial
 spec-urls: https://dom.spec.whatwg.org/
 ---
 

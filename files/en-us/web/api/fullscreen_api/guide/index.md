@@ -2,18 +2,6 @@
 title: Guide to the Fullscreen API
 slug: Web/API/Fullscreen_API/Guide
 page-type: guide
-tags:
-  - API
-  - Drawing
-  - Full
-  - Fullscreen API
-  - Games
-  - Graphics
-  - Guide
-  - display
-  - full screen
-  - fullscreen
-  - screen
 browser-compat:
   - api.Document.fullscreen
   - api.Document.fullscreenEnabled
@@ -82,6 +70,10 @@ The {{DOMxRef("Document")}} provides some additional information that can be use
   - : The `fullscreenElement` property tells you the {{DOMxRef("Element")}} that's currently being displayed fullscreen. If this is non-null, the document (or shadow DOM) is in fullscreen mode. If this is null, the document (or shadow DOM) is not in fullscreen mode.
 - {{DOMxRef("Document.fullscreenEnabled")}}
   - : The `fullscreenEnabled` property tells you whether or not the document is currently in a state that would allow fullscreen mode to be requested.
+
+### Viewport scaling in mobile browsers
+
+Some mobile browsers while in fullscreen mode ignore viewport meta-tag settings and block user scaling; for example: a "pinch to zoom" gesture may not work on a page presented in fullscreen mode — even if, when not in fullscreen mode, the page can be scaled using pinch to zoom.
 
 ## Things your users want to know
 

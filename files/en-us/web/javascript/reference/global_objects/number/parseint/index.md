@@ -47,7 +47,7 @@ If the `radix` is smaller than `2` or bigger than
 
 ## Examples
 
-### Number.parseInt vs parseInt
+### Number.parseInt vs. parseInt
 
 This method has the same functionality as the global {{jsxref("parseInt",
   "parseInt()")}} function:

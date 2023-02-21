@@ -2,14 +2,8 @@
 title: InkPresenter.updateInkTrailStartPoint()
 slug: Web/API/InkPresenter/updateInkTrailStartPoint
 page-type: web-api-instance-method
-tags:
-  - API
-  - Experimental
-  - Ink
-  - Inking
-  - Latency
-  - Method
-  - updateInkTrailStartPoint
+status:
+  - experimental
 browser-compat: api.InkPresenter.updateInkTrailStartPoint
 ---
 
@@ -73,7 +67,7 @@ canvas.addEventListener("pointermove", evt => {
   const pointSize = 10;
   ctx.fillStyle = "#000000";
   ctx.fillRect(evt.pageX, evt.pageY, pointSize, pointSize);
-  if(move_cnt == 50) {
+  if (move_cnt == 50) {
       let r = getRandomInt(0,255);
       let g = getRandomInt(0,255);
       let b = getRandomInt(0,255);

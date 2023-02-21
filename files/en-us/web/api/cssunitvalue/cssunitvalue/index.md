@@ -2,14 +2,8 @@
 title: CSSUnitValue()
 slug: Web/API/CSSUnitValue/CSSUnitValue
 page-type: web-api-constructor
-tags:
-  - API
-  - CSS Typed Object Model API
-  - CSSUnitValue
-  - Constructor
-  - Experimental
-  - Houdini
-  - Reference
+status:
+  - experimental
 browser-compat: api.CSSUnitValue.CSSUnitValue
 ---
 
@@ -40,8 +34,9 @@ individual `CSSUnitValue` constructors.
 
 ```js
 let pos = new CSSPositionValue(
-    new CSSUnitValue(5, "px"),
-    new CSSUnitValue(10, "px"));
+  new CSSUnitValue(5, "px"),
+  new CSSUnitValue(10, "px")
+);
 ```
 
 ## Specifications

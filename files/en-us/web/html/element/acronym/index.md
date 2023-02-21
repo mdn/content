@@ -1,6 +1,7 @@
 ---
 title: <acronym>
 slug: Web/HTML/Element/acronym
+page-type: html-element
 tags:
   - Element
   - HTML

@@ -1,6 +1,7 @@
 ---
 title: First contentful paint
 slug: Glossary/First_contentful_paint
+page-type: glossary-definition
 tags:
   - Performance
   - Reference

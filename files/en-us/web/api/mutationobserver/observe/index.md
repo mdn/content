@@ -2,21 +2,6 @@
 title: MutationObserver.observe()
 slug: Web/API/MutationObserver/observe
 page-type: web-api-instance-method
-tags:
-  - API
-  - Attribute Changes
-  - Changes
-  - DOM
-  - DOM Changes
-  - DOM WHATWG
-  - Element Changes
-  - Method
-  - Mutation Observer
-  - Mutation Observer API
-  - MutationObserver
-  - Node Changes
-  - Reference
-  - observe
 browser-compat: api.MutationObserver.observe
 ---
 
@@ -61,7 +46,7 @@ observe(target, options)
         If this property isn't included, changes to all attributes cause mutation notifications.
     - `attributeOldValue` {{optional_inline}}
       - : Set to `true` to record the previous value of any attribute that changes when monitoring the node or nodes for attribute changes;
-        see {{SectionOnPage("/en-US/docs/Web/API/MutationObserver", "Monitoring attribute values")}} for details on watching for attribute changes and value recording.
+        See [Monitoring attribute values](/en-US/docs/Web/API/MutationObserver#monitoring_attribute_values) for details on watching for attribute changes and value recording.
         The default value is `false`.
     - `characterData` {{optional_inline}}
       - : Set to `true` to monitor the specified target node (and, if `subtree` is `true`, its descendants) for changes to the character data contained within the node or nodes.

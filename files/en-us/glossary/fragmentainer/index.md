@@ -1,6 +1,7 @@
 ---
 title: Fragmentainer
 slug: Glossary/Fragmentainer
+page-type: glossary-definition
 tags:
   - CSS
   - CSS Fragmentation Specification

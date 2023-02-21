@@ -2,16 +2,9 @@
 title: FileSystemFileEntry.createWriter()
 slug: Web/API/FileSystemFileEntry/createWriter
 page-type: web-api-instance-method
-tags:
-  - API
-  - File and Directory Entries API
-  - FileSystemFileEntry
-  - Files
-  - Method
-  - Non-standard
-  - Reference
-  - createWriter
-  - Deprecated
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.FileSystemFileEntry.createWriter
 ---
 

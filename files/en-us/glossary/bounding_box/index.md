@@ -1,6 +1,7 @@
 ---
 title: Bounding Box
 slug: Glossary/Bounding_box
+page-type: glossary-definition
 tags:
   - Bounding Box
   - CodingScripting

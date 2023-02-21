@@ -2,20 +2,6 @@
 title: Using the Screen Capture API
 slug: Web/API/Screen_Capture_API/Using_Screen_Capture
 page-type: guide
-tags:
-  - API
-  - Capture
-  - Conference
-  - Guide
-  - Media
-  - Screen Capture
-  - Screen Capture API
-  - Sharing
-  - Video
-  - WebRTC
-  - display
-  - getDisplayMedia
-  - screen
 browser-compat: api.MediaDevices.getDisplayMedia
 ---
 
@@ -65,7 +51,7 @@ See [Options and constraints](#options_and_constraints), below, for more on both
 
 You can then use the captured stream, `captureStream`, for anything that accepts a stream as input. The [examples](#examples) below show a few ways to make use of the stream.
 
-### Visible vs logical display surfaces
+### Visible vs. logical display surfaces
 
 For the purposes of the Screen Capture API, a **display surface** is any content object that can be selected by the API for sharing purposes. Sharing surfaces include the contents of a browser tab, a complete window, and a monitor (or group of monitors combined together into one surface).
 
@@ -93,7 +79,7 @@ While display capture is in effect, the machine which is sharing screen contents
 
 {{domxref("MediaDevices.getDisplayMedia", "getDisplayMedia()")}} is most commonly used to capture video of a user's screen (or parts thereof). However, {{Glossary("user agent", "user agents")}} may allow the capture of audio along with the video content. The source of this audio might be the selected window, the entire computer's audio system, or the user's microphone (or a combination of all of the above).
 
-Before starting a project that will require sharing of audio, be sure to check the {{SectionOnPage("/en-US/docs/Web/API/MediaDevices/getDisplayMedia", "Browser compatibility", "code")}} to see if the browsers you wish compatibility with have support for audio in captured screen streams.
+Before starting a project that will require sharing of audio, be sure to check the [browser compatibility](/en-US/docs/Web/API/MediaDevices/getDisplayMedia#browser_compatibility) for `getDisplayMedia()` to see if the browsers you wish compatibility with have support for audio in captured screen streams.
 
 To request that the screen be shared with included audio, the options passed into `getDisplayMedia()` might look like this:
 

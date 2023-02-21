@@ -1,6 +1,7 @@
 ---
 title: Recursion
 slug: Glossary/Recursion
+page-type: glossary-definition
 tags:
   - CodingScripting
 ---

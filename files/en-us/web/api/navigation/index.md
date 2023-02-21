@@ -2,18 +2,8 @@
 title: Navigation
 slug: Web/API/Navigation
 page-type: web-api-interface
-tags:
-  - API
-  - Experimental
-  - History
-  - Interface
-  - Landing
-  - Navigate
-  - Navigation
-  - Navigation API
-  - Reference
-  - Scroll
-  - Traversal
+status:
+  - experimental
 browser-compat: api.Navigation
 ---
 
@@ -83,7 +73,7 @@ _Inherits methods from its parent, {{DOMxRef("EventTarget")}}._
 
 ```js
 async function backHandler() {
-  if(navigation.canGoBack) {
+  if (navigation.canGoBack) {
     await navigation.back().finished;
     // Handle any required clean-up after
     // navigation has finished
@@ -93,7 +83,7 @@ async function backHandler() {
 }
 
 async function forwardHandler() {
-  if(navigation.canGoForward) {
+  if (navigation.canGoForward) {
     await navigation.forward().finished;
     // Handle any required clean-up after
     // navigation has finished

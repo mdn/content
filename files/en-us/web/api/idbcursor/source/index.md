@@ -2,15 +2,6 @@
 title: IDBCursor.source
 slug: Web/API/IDBCursor/source
 page-type: web-api-instance-property
-tags:
-  - API
-  - Database
-  - IDBCursor
-  - IndexedDB
-  - Property
-  - Reference
-  - Storage
-  - source
 browser-compat: api.IDBCursor.source
 ---
 
@@ -33,7 +24,7 @@ iterating over.
 
 In this simple fragment we create a transaction, retrieve an object store, then use a
 cursor to iterate through all the records in the object store. Within each iteration we
-log the source of the cursor, which will log our {{domxref("IDBobjectStore")}} object to
+log the source of the cursor, which will log our {{domxref("IDBObjectStore")}} object to
 the console, something like this:
 
 ```json

@@ -2,11 +2,6 @@
 title: HTMLAreaElement.hash
 slug: Web/API/HTMLAreaElement/hash
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTMLAreaElement
-  - Property
-  - Reference
 browser-compat: api.HTMLAreaElement.hash
 ---
 

@@ -87,9 +87,7 @@ Finally, you can also use dashed line types on a stroke by specifying the `strok
 </svg>
 ```
 
-The `stroke-dasharray` attribute takes a series of comma-separated numbers as its argument.
-
-> **Note:** Unlike {{SVGElement("path")}} elements, these numbers **must** be comma-separated (whitespace is ignored).
+The `stroke-dasharray` attribute can take a series of comma and/or whitespace separated numbers as its argument.
 
 The first number specifies a distance for the filled area, and the second a distance for the unfilled area. So in the above example, the second path fills 5 pixel units, with 5 blank units until the next dash of 5 units. You can specify more numbers if you would like a more complicated dash pattern. The first example specifies three numbers, in which case the renderer loops the numbers twice to create an even pattern. So the first path renders 5 filled, 10 empty, 5 filled, and then loops back to create 5 empty, 10 filled, 5 empty. The pattern then repeats.
 

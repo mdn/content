@@ -12,7 +12,7 @@ browser-compat: javascript.builtins.Math.LN10
 
 {{JSRef}}
 
-The **`Math.LN10`** property represents the natural logarithm of 10, approximately 2.302.
+The **`Math.LN10`** static data property represents the natural logarithm of 10, approximately 2.302.
 
 {{EmbedInteractiveExample("pages/js/math-ln10.html","shorter")}}
 

@@ -34,8 +34,6 @@ This article provides information about the changes in Firefox 103 that will aff
 - Support has been added for the {{CSSxRef(":modal")}} pseudo class. It selects all elements that are in a state in which they exclude all interaction with other elements until the interaction has been dismissed ({{bug(1768535)}}).
 - The [`style`](/en-US/docs/Web/CSS/contain#style) value for the `contain` property is now supported. You can use this value for properties that can have effects on more than just an element and its descendants for effects don't escape the containing element. For more information, see ({{bug(1463600)}}).
 
-#### Removals
-
 ### JavaScript
 
 - Native Error types can now be serialized using the [structured clone algorithm](/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm).
@@ -44,19 +42,17 @@ This article provides information about the changes in Firefox 103 that will aff
   For {{JSxRef("AggregateError")}} the `message`, `name`, `cause` and `errors` properties are serialized.
   See {{bug(1556604)}} for more details.
 
-#### Removals
-
 ### HTTP
 
-#### Removals
+No notable changes.
 
 ### Security
 
-#### Removals
+No notable changes.
 
 ### APIs
 
-- [`ReadableStream`](/en-US/docs/Web/API/ReadableStream), [`WritableStream`](/en-US/docs/Web/API/WritableStream), [`TransformStream`](/en-US/docs/Web/API/TransformStream) are now [Transferable objects](/en-US/docs/Glossary/Transferable_objects), which means that ownership can be transferred when sharing the objects between a window and workers using `postMessage`, or when using [structuredClone()](/en-US/docs/Web/API/structuredClone) to copy an object.
+- [`ReadableStream`](/en-US/docs/Web/API/ReadableStream), [`WritableStream`](/en-US/docs/Web/API/WritableStream), [`TransformStream`](/en-US/docs/Web/API/TransformStream) are now [Transferable objects](/en-US/docs/Web/API/Web_Workers_API/Transferable_objects), which means that ownership can be transferred when sharing the objects between a window and workers using `postMessage`, or when using [structuredClone()](/en-US/docs/Web/API/structuredClone) to copy an object.
   After transferring, the original object cannot be used.
   See {{bug(1659025)}} for more details.
 
@@ -64,15 +60,9 @@ This article provides information about the changes in Firefox 103 that will aff
   Previously `cache` would return a `CacheStorage` that would throw an exception if used outside of a secure context.
   See {{bug(1112134)}} for more details.
 
-#### DOM
-
-#### Media, WebRTC, and Web Audio
-
-#### Removals
-
 ### WebAssembly
 
-#### Removals
+No notable changes.
 
 ### WebDriver conformance (WebDriver BiDi, Marionette)
 
@@ -92,9 +82,7 @@ This article provides information about the changes in Firefox 103 that will aff
 
 ### Removals
 
-- Removed the ServiceWorker API in WebExtensions (`'serviceWorker' in navigator` now returns false when run inside an extension). ({{bug(1593931)}})
-
-### Other
+- Removed the ServiceWorker API in WebExtensions (`'serviceWorker' in navigator` now returns `false` when run inside an extension) ({{bug(1593931)}}).
 
 ## Older versions
 

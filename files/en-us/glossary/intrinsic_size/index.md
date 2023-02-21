@@ -1,6 +1,7 @@
 ---
 title: Intrinsic size
 slug: Glossary/Intrinsic_Size
+page-type: glossary-definition
 tags:
   - CSS
   - Intrinsic size

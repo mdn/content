@@ -1,5 +1,5 @@
 ---
-title: 'Permissions-Policy: serial'
+title: "Permissions-Policy: serial"
 slug: Web/HTTP/Headers/Permissions-Policy/serial
 tags:
   - Directive

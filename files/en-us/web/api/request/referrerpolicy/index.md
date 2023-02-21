@@ -2,13 +2,6 @@
 title: Request.referrerPolicy
 slug: Web/API/Request/referrerPolicy
 page-type: web-api-instance-property
-tags:
-  - API
-  - Fetch
-  - Property
-  - Reference
-  - referrerPolicy
-  - request
 browser-compat: api.Request.referrerPolicy
 ---
 
