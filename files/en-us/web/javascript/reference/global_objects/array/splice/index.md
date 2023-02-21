@@ -2,15 +2,6 @@
 title: Array.prototype.splice()
 slug: Web/JavaScript/Reference/Global_Objects/Array/splice
 page-type: javascript-instance-method
-tags:
-  - Array
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - remove
-  - replace
-  - splice
 browser-compat: javascript.builtins.Array.splice
 ---
 

@@ -2,12 +2,6 @@
 title: await
 slug: Web/JavaScript/Reference/Operators/await
 page-type: javascript-operator
-tags:
-  - Function
-  - JavaScript
-  - Language feature
-  - Operator
-  - Primary Expression
 browser-compat: javascript.operators.await
 ---
 

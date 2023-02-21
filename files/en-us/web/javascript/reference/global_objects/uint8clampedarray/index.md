@@ -2,13 +2,6 @@
 title: Uint8ClampedArray
 slug: Web/JavaScript/Reference/Global_Objects/Uint8ClampedArray
 page-type: javascript-class
-tags:
-  - Class
-  - Uint8ClampedArray
-  - JavaScript
-  - TypedArray
-  - TypedArrays
-  - Polyfill
 browser-compat: javascript.builtins.Uint8ClampedArray
 ---
 

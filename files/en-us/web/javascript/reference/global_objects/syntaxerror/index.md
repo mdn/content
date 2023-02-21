@@ -2,12 +2,6 @@
 title: SyntaxError
 slug: Web/JavaScript/Reference/Global_Objects/SyntaxError
 page-type: javascript-class
-tags:
-  - Class
-  - JavaScript
-  - Object
-  - Reference
-  - SyntaxError
 browser-compat: javascript.builtins.SyntaxError
 ---
 

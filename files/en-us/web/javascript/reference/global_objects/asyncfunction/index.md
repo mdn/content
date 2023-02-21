@@ -2,10 +2,6 @@
 title: AsyncFunction
 slug: Web/JavaScript/Reference/Global_Objects/AsyncFunction
 page-type: javascript-class
-tags:
-  - Constructor
-  - JavaScript
-  - Reference
 browser-compat: javascript.builtins.AsyncFunction
 ---
 

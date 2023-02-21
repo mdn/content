@@ -2,11 +2,6 @@
 title: SyntaxError() constructor
 slug: Web/JavaScript/Reference/Global_Objects/SyntaxError/SyntaxError
 page-type: javascript-constructor
-tags:
-  - Constructor
-  - JavaScript
-  - Reference
-  - SyntaxError
 browser-compat: javascript.builtins.SyntaxError.SyntaxError
 ---
 
