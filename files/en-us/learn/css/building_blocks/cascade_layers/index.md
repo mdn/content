@@ -346,7 +346,7 @@ Inline styles are declared using the [`style` attribute](/en-US/docs/Web/HTML/Gl
 
 Animating styles have higher precedence than all normal styles, including inline normal styles.
 
-Important styles (`!important`) take precedence over any styles previously mentioned on our list. They are sorted inversely from normal styles. Any unlayered important styles have less precedence those declared within the layers. Important styles found within layers are, again, sorted in order of creation. For important styles, the last created layer has lowest precedence, and the first created layer has highest precedence amongst layers.
+Important styles (`!important`) take precedence over any styles previously mentioned on our list. They are sorted in reverse order of normal styles. Any important styles declared outside of a layer have less precedence than those declared within a layer. Important styles found within layers are also sorted in order of layer creation. For important styles, the last created layer has the lowest precedence, and the first created layer has the highest precedence among declared. layers.
 
 Inline important styles again have higher precedence than important styles declared elsewhere, and transitioning styles have the highest precedence.
 
