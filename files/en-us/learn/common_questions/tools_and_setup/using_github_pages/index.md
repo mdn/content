@@ -93,6 +93,9 @@ This may seem a bit scary at first, but don't worry — you'll soon get the hang
 5. Go to the GitHub Pages section again, and you should see a line of the form "Your site is ready to be published at `https://xxxxxx`."
 6. If you click on this URL, you should go to a live version of your example, provided the home page is called `index.html` — it goes to this entry point by default. If your site's entry point is called something else, for example `myPage.html`, you'll need to go to `https://xxxxxx/myPage.html`.
 
+### Github pages forms
+[create github pages contact form](https://fabform.io/a/create-a-static-website-with-contact-form-on-github-pages)
+
 ### Further GitHub knowledge
 
 If you want to make more changes to your test site and upload those to GitHub, you need to make the change to your files just like you did before. Then, you need to enter the following commands (pressing Enter after each one) to push those changes to GitHub:
