@@ -65,9 +65,7 @@ function handleOrientationChange(evt) {
 }
 ```
 
-Above, we define the parameter as `evt` — an event object. This makes sense because [newer implementations of `MediaQueryList`](/en-US/docs/Web/API/MediaQueryList#browser_compatibility) handle event listeners in a standard way. They no longer use the unusual {{domxref("MediaQueryListListener")}} mechanism, but a standard event listener setup, passing an [event object](/en-US/docs/Web/API/Event) of type {{domxref("MediaQueryListEvent")}} as the argument to the callback function.
-
-This event object also includes the {{domxref("MediaQueryListEvent.media","media")}} and {{domxref("MediaQueryListEvent.matches","matches")}} properties, so you can query these features of the `MediaQueryList` by directly accessing it, or accessing the event object.
+Above, we define the parameter as `evt` — an event object of type {{domxref("MediaQueryListEvent")}} that also includes the {{domxref("MediaQueryListEvent.media","media")}} and {{domxref("MediaQueryListEvent.matches","matches")}} properties, so you can query these features of the `MediaQueryList` by directly accessing it, or accessing the event object.
 
 ## Ending query notifications
 
