@@ -130,7 +130,7 @@ The math functions allow CSS numeric values to be written as mathematical expres
 
 ### Exponential functions
 
-- {{CSSxRef("pow", pow()")}} {{Experimental_Inline}}
+- {{CSSxRef("pow", "pow()")}} {{Experimental_Inline}}
   - : Calculates the base raised to the power of a number.
 - {{CSSxRef("sqrt", "sqrt()")}} {{Experimental_Inline}}
   - : Calculates the square root of a number.
