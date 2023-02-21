@@ -15,7 +15,7 @@ browser-compat: webextensions.api.search
 
 {{AddonSidebar}}
 
-Retrieves search engines and executes a search with a specific search engine.
+Use the search API to retrieve the installed search engines and execute searches.
 
 To use this API you need to have the `"search"` [permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions).
 
@@ -23,11 +23,13 @@ To use this API you need to have the `"search"` [permission](/en-US/docs/Mozilla
 
 - {{WebExtAPIRef("search.get()")}}
   - : Retrieve all search engines.
+- {{WebExtAPIRef("search.query()")}}
+  - : Search using the browser's default search engine.
 - {{WebExtAPIRef("search.search()")}}
-  - : Search using the specified search engine.
-
-## Browser compatibility
+  - : Search using a specified search engine.
 
 {{WebExtExamples("h2")}}
+
+## Browser compatibility
 
 {{Compat}}

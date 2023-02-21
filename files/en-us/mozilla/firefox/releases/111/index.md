@@ -69,7 +69,8 @@ This article provides information about the changes in Firefox 111 that affect d
 
 ## Changes for add-on developers
 
-- `matchDiacritics` has been added to the {{WebExtAPIRef("Find.find")}} API. This option enables searches to distinguish between accented letters and their base letters. For example, when set to `true`, searching for "résumé" does not find a match for "resume" ({{bug(1680606)}})
+- `matchDiacritics` has been added to the {{WebExtAPIRef("Find.find")}} API. This option enables searches to distinguish between accented letters and their base letters. For example, when set to `true`, searching for "résumé" does not find a match for "resume" ({{bug(1680606)}}).
+- {{WebExtAPIRef("search.search")}} has been added, providing search API compatibility with Chromeum-based browsers, and the `disposition` property added to {{WebExtAPIRef("search.query")}} enabling results to be displayed in a new tab or window ({{bug(1680606)}}).
 
 ### Removals
 
