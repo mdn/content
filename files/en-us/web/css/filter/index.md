@@ -52,7 +52,7 @@ With a function, use the following:
 filter: <filter-function> [<filter-function>]* | none;
 ```
 
-You can user `url()` to reference an [SVG filter element](/en-US/docs/Web/SVG/Element/filter). For a reference to an SVG {{SVGElement("filter")}} element, use the following:
+You can use `url()` to reference an [SVG filter element](/en-US/docs/Web/SVG/Element/filter). For a reference to an SVG {{SVGElement("filter")}} element, use the following syntax:
 
 ```css
 filter: url(file.svg#filter-element-id);
