@@ -86,7 +86,7 @@ Values of this type are objects. They contain the following properties:
 
 - `usedDelegatedCredentials` {{optional_inline}}
   - : `Boolean`. `true` if the connection used Delegated Credentials, `false` otherwise.
-  
+
 - `usedEch` {{optional_inline}}
   - : `Boolean`. `true` if the connection used ECH (Encrypted Client Hello), `false` otherwise.
 
