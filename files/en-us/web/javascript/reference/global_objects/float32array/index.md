@@ -2,13 +2,6 @@
 title: Float32Array
 slug: Web/JavaScript/Reference/Global_Objects/Float32Array
 page-type: javascript-class
-tags:
-  - Class
-  - Float32Array
-  - JavaScript
-  - TypedArray
-  - TypedArrays
-  - Polyfill
 browser-compat: javascript.builtins.Float32Array
 ---
 

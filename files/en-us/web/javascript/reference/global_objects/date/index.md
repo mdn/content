@@ -2,14 +2,6 @@
 title: Date
 slug: Web/JavaScript/Reference/Global_Objects/Date
 page-type: javascript-class
-tags:
-  - Class
-  - Date
-  - Epoch
-  - JavaScript
-  - Time
-  - Unix Epoch
-  - timeStamp
 browser-compat: javascript.builtins.Date
 ---
 

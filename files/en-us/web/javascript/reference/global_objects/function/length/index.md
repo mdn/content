@@ -2,10 +2,6 @@
 title: "Function: length"
 slug: Web/JavaScript/Reference/Global_Objects/Function/length
 page-type: javascript-instance-data-property
-tags:
-  - Function
-  - JavaScript
-  - Property
 browser-compat: javascript.builtins.Function.length
 ---
 

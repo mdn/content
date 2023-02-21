@@ -2,13 +2,6 @@
 title: Int32Array
 slug: Web/JavaScript/Reference/Global_Objects/Int32Array
 page-type: javascript-class
-tags:
-  - Class
-  - Int32Array
-  - JavaScript
-  - TypedArray
-  - TypedArrays
-  - Polyfill
 browser-compat: javascript.builtins.Int32Array
 ---
 

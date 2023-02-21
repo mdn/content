@@ -2,13 +2,6 @@
 title: Float64Array
 slug: Web/JavaScript/Reference/Global_Objects/Float64Array
 page-type: javascript-class
-tags:
-  - Class
-  - Float64Array
-  - JavaScript
-  - TypedArray
-  - TypedArrays
-  - Polyfill
 browser-compat: javascript.builtins.Float64Array
 ---
 

@@ -2,13 +2,6 @@
 title: Intl.Locale
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale
 page-type: javascript-class
-tags:
-  - Class
-  - Internationalization
-  - Intl
-  - JavaScript
-  - Locale
-  - Reference
 browser-compat: javascript.builtins.Intl.Locale
 ---
 

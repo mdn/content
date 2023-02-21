@@ -2,13 +2,6 @@
 title: GeneratorFunction
 slug: Web/JavaScript/Reference/Global_Objects/GeneratorFunction
 page-type: javascript-class
-tags:
-  - Constructor
-  - ECMAScript 2015
-  - GeneratorFunction
-  - Iterator
-  - JavaScript
-  - Reference
 browser-compat: javascript.builtins.GeneratorFunction
 ---
 
