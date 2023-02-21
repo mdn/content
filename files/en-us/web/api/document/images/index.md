@@ -2,13 +2,6 @@
 title: Document.images
 slug: Web/API/Document/images
 page-type: web-api-instance-property
-tags:
-  - API
-  - Document
-  - HTML DOM
-  - Images
-  - Property
-  - Reference
 browser-compat: api.Document.images
 ---
 
@@ -42,7 +35,7 @@ This example looks through the list of images and finds one whose name is
 
 ```js
 for (const image of document.images) {
-  if (image.src === 'banner.gif') {
+  if (image.src === "banner.gif") {
     console.log("Found the banner");
   }
 }
