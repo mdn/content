@@ -463,11 +463,11 @@ You can find more information about WebGPU error handling in the explainer — s
 ## Interfaces
 
 - {{domxref("GPU")}}
-  - : xxx
+  - : The starting point for using WebGPU. It can be used to return a `GPUAdapter`.
 - {{domxref("GPUAdapter")}}
-  - : xxx
+  - : Represents a GPU adapter. From this you can request a {{domxref("GPUDevice")}} to start using functionality of a device GPU and return adapter info, features, and limits.
 - {{domxref("GPUAdapterInfo")}}
-  - : xxx
+  - : Represents a {{domxref("GPUAdapterInfo")}} object containing identifying information about an adapter.
 - {{domxref("GPUBindGroup")}}
   - : xxx
 - {{domxref("GPUBindGroupLayout")}}
@@ -521,9 +521,9 @@ You can find more information about WebGPU error handling in the explainer — s
 - {{domxref("GPUShaderModule")}}
   - : xxx
 - {{domxref("GPUSupportedFeatures")}}
-  - : xxx
+  - : A [setlike](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set) object that describes additional functionality supported by a {{domxref("GPUAdapter")}}.
 - {{domxref("GPUSupportedLimits")}}
-  - : xxx
+  - : Describes the limits supported by a {{domxref("GPUAdapter")}}.
 - {{domxref("GPUTexture")}}
   - : xxx
 - {{domxref("GPUTextureView")}}

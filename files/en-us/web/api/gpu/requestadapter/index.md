@@ -10,7 +10,7 @@ browser-compat: api.GPU.requestAdapter
 {{APIRef("WebGPU API")}}{{SeeCompatTable}}
 
 The **`requestAdapter()`** method of the
-{{domxref("GPU")}} interface returns a {{jsxref("Promise")}} that fulfills with a {{domxref("GPUAdapter")}} object instance. From this you can request a {{domxref("GPUDevice")}} to start using functionality of a device GPU, and other things besides.
+{{domxref("GPU")}} interface returns a {{jsxref("Promise")}} that fulfills with a {{domxref("GPUAdapter")}} object instance. From this you can request a {{domxref("GPUDevice")}} to start using functionality of a device GPU and return adapter info, features, and limits.
 
 Note that the user agent chooses whether to return an adapter. If so, it chooses according to the provided options. If no options are provided, the device will provide access to the default adapter, which is usually good enough for most purposes.
 
@@ -39,7 +39,11 @@ requestAdapter(options)
         - If set to `true`, a fallback adapter will be returned unless one is not available, in which case `requestAdapter()` will resolve to `null`.
         - If set to `false` or not specified, a fallback adapter will not be returned unless no other more appropriate adapter is available.
 
-> **Note:** A fallback adapter generally has significant performance caveats in exchange for some combination of wider compatibility, more predictable behavior, or improved privacy. A fallback adapter will not be available on every system. If you wish to prevent your apps from running on fallback adapters, you should check the {{domxref("GPUAdapter.isFallbackAdapter")}} attribute prior to requesting a {{domxref("GPUDevice")}}.
+### Fallback adapters
+
+A fallback adapter generally has significant performance caveats in exchange for some combination of wider compatibility, more predictable behavior, or improved privacy. A fallback adapter will not be available on every system.
+
+If you wish to prevent your apps from running on fallback adapters, you should check the {{domxref("GPUAdapter.isFallbackAdapter")}} attribute prior to requesting a {{domxref("GPUDevice")}}.
 
 ### Return value
 

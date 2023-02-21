@@ -9,7 +9,7 @@ browser-compat: api.GPU
 
 {{APIRef("WebGPU API")}}{{SeeCompatTable}}
 
-The **`GPU`** interface of the {{domxref("WebGPU API", "WebGPU API", "", "nocode")}} is your starting point for using WebGPU. It can be used to return a {{domxref("GPUAdapter")}} from which you can request devices, configure features and limits, and more.
+The **`GPU`** interface of the {{domxref("WebGPU API", "WebGPU API", "", "nocode")}} is the starting point for using WebGPU. It can be used to return a {{domxref("GPUAdapter")}} from which you can request devices, configure features and limits, and more.
 
 The `GPU` object for the current context is accessed via the {{domxref("Navigator.gpu")}} or {{domxref("WorkerNavigator.gpu")}} properties.
 
@@ -53,7 +53,8 @@ const context = canvas.getContext('webgpu');
 context.configure({
   device: device,
   format: navigator.gpu.getPreferredCanvasFormat(),
-  alphaMode: 'premultiplied'
+  alphaMode: 'premultiplied',
+  usage: GPUTextureUsage.COPY_SRC | GPUTextureUsage.RENDER_ATTACHMENT
 });
 ```
 

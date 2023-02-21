@@ -41,7 +41,8 @@ const context = canvas.getContext('webgpu');
 context.configure({
   device: device,
   format: navigator.gpu.getPreferredCanvasFormat(),
-  alphaMode: 'premultiplied'
+  alphaMode: 'premultiplied',
+  usage: GPUTextureUsage.COPY_SRC | GPUTextureUsage.RENDER_ATTACHMENT
 });
 ```
 

@@ -15,7 +15,7 @@ The **`GPUCanvasContext`** interface of the {{domxref("WebGPU API", "WebGPU API"
 
 ## Instance properties
 
-- {{domxref("GPUCanvasContext.canvas", "canvas")}} {{Experimental_Inline}}
+- {{domxref("GPUCanvasContext.canvas", "canvas")}} {{Experimental_Inline}} {{readonlyinline}}
   - : Returns a reference to the canvas that the context was created from.
 
 ## Instance methods
@@ -36,7 +36,8 @@ const context = canvas.getContext('webgpu');
 context.configure({
   device: device,
   format: navigator.gpu.getPreferredCanvasFormat(),
-  alphaMode: 'premultiplied'
+  alphaMode: 'premultiplied',
+  usage: GPUTextureUsage.COPY_SRC | GPUTextureUsage.RENDER_ATTACHMENT
 });
 ```
 

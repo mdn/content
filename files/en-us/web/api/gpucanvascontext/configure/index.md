@@ -44,7 +44,7 @@ configure(configuration)
         Note that multiple possible usages can be specified by separating values with pipe symbols, for example:
 
         ```js
-        usage: GPUTextureUsage.RENDER_ATTACHMENT | GPUTextureUsage.COPY_SRC
+        usage: GPUTextureUsage.COPY_SRC | GPUTextureUsage.RENDER_ATTACHMENT
         ```
 
     - `viewFormats` {{optional_inline}}
@@ -63,7 +63,8 @@ const context = canvas.getContext('webgpu');
 context.configure({
   device: device,
   format: navigator.gpu.getPreferredCanvasFormat(),
-  alphaMode: 'premultiplied'
+  alphaMode: 'premultiplied',
+  usage: GPUTextureUsage.COPY_SRC | GPUTextureUsage.RENDER_ATTACHMENT
 });
 ```
 
