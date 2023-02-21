@@ -348,7 +348,9 @@ Animating styles have higher precedence than all normal styles, including inline
 
 Important styles (`!important`) take precedence over any styles previously mentioned on our list. They are sorted in reverse order of normal styles. Any important styles declared outside of a layer have less precedence than those declared within a layer. Important styles found within layers are also sorted in order of layer creation. For important styles, the last created layer has the lowest precedence, and the first created layer has the highest precedence among declared. layers.
 
-Inline important styles again have higher precedence than important styles declared elsewhere, and transitioning styles have the highest precedence.
+Inline important styles again have higher precedence than important styles declared elsewhere. 
+
+Transitioning styles have the highest precedence. When a normal property value is being transitioned, it takes precedence over all other property value declarations, even inline important styles; but only while transitioning.
 
 {{EmbedGHLiveSample("css-examples/learn/layers/layer-precedence.html", '100%', 500)}}
 
