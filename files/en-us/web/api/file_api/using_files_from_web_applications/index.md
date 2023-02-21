@@ -55,7 +55,13 @@ for (let i = 0, numFiles = fileList.length; i < numFiles; i++) {
 }
 ```
 
-This loop iterates over all the files in the file list.
+The above loop iterates over all the files in the file list. You can also iterate over all files using an equivalent but more compact for...of statement:
+
+```js
+for (const file of fileList) {
+  // …
+}
+```
 
 There are three attributes provided by the {{DOMxRef("File")}} object that contain useful information about the file.
 
