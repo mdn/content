@@ -2,11 +2,6 @@
 title: var
 slug: Web/JavaScript/Reference/Statements/var
 page-type: javascript-statement
-tags:
-  - JavaScript
-  - Language feature
-  - Reference
-  - Statement
 browser-compat: javascript.statements.var
 ---
 

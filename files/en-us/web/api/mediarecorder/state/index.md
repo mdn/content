@@ -2,12 +2,6 @@
 title: MediaRecorder.state
 slug: Web/API/MediaRecorder/state
 page-type: web-api-instance-property
-tags:
-  - API
-  - MediaRecording
-  - Property
-  - Reference
-  - state
 browser-compat: api.MediaRecorder.state
 ---
 

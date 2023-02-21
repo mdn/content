@@ -2,8 +2,8 @@
 title: ArrayBuffer.prototype.resize()
 slug: Web/JavaScript/Reference/Global_Objects/ArrayBuffer/resize
 page-type: javascript-instance-method
-tags:
-  - Experimental
+status:
+  - experimental
 browser-compat: javascript.builtins.ArrayBuffer.resize
 ---
 

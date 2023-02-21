@@ -2,14 +2,6 @@
 title: HTMLObjectElement.useMap
 slug: Web/API/HTMLObjectElement/useMap
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTML DOM
-  - HTMLObjectElement
-  - NeedsExample
-  - Property
-  - Reference
-  - useMap
 browser-compat: api.HTMLObjectElement.useMap
 ---
 

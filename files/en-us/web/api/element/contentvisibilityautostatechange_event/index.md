@@ -2,9 +2,6 @@
 title: 'Element: contentvisibilityautostatechange event'
 slug: Web/API/Element/contentvisibilityautostatechange_event
 page-type: web-api-event
-tags:
-  - Event
-  - Reference
 browser-compat: api.Element.contentvisibilityautostatechange_event
 ---
 

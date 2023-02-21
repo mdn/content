@@ -2,14 +2,6 @@
 title: BlobEvent.data
 slug: Web/API/BlobEvent/data
 page-type: web-api-instance-property
-tags:
-  - API
-  - BlobEvent
-  - DOM
-  - DOM Reference
-  - Media Recorder API
-  - Property
-  - Reference
 browser-compat: api.BlobEvent.data
 ---
 

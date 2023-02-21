@@ -2,14 +2,6 @@
 title: Window.scrollX
 slug: Web/API/Window/scrollX
 page-type: web-api-instance-property
-tags:
-  - API
-  - CSSOM View
-  - NeedsBrowserCompatibility
-  - NeedsMarkupWork
-  - NeedsMobileBrowserCompatibility
-  - Property
-  - Reference
 browser-compat: api.Window.scrollX
 ---
 

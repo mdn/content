@@ -2,13 +2,6 @@
 title: RTCDataChannel.readyState
 slug: Web/API/RTCDataChannel/readyState
 page-type: web-api-instance-property
-tags:
-  - Property
-  - RTCDataChannel
-  - Read-only
-  - Reference
-  - WebRTC
-  - readyState
 browser-compat: api.RTCDataChannel.readyState
 ---
 

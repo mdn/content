@@ -2,14 +2,6 @@
 title: Classes
 slug: Web/JavaScript/Reference/Classes
 page-type: guide
-tags:
-  - Classes
-  - Constructors
-  - ECMAScript 2015
-  - Guide
-  - Inheritance
-  - Intermediate
-  - JavaScript
 browser-compat: javascript.classes
 ---
 

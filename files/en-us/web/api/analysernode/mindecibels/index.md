@@ -2,13 +2,6 @@
 title: AnalyserNode.minDecibels
 slug: Web/API/AnalyserNode/minDecibels
 page-type: web-api-instance-property
-tags:
-  - API
-  - AnalyserNode
-  - Property
-  - Reference
-  - Web Audio API
-  - minDecibels
 browser-compat: api.AnalyserNode.minDecibels
 ---
 

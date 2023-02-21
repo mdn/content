@@ -2,14 +2,6 @@
 title: CacheStorage.delete()
 slug: Web/API/CacheStorage/delete
 page-type: web-api-instance-method
-tags:
-  - API
-  - CacheStorage
-  - Method
-  - Reference
-  - Service Workers
-  - ServiceWorker
-  - delete
 browser-compat: api.CacheStorage.delete
 ---
 

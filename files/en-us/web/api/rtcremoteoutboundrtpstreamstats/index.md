@@ -2,23 +2,6 @@
 title: RTCRemoteOutboundRtpStreamStats
 slug: Web/API/RTCRemoteOutboundRtpStreamStats
 page-type: web-api-interface
-tags:
-  - API
-  - Dictionary
-  - Identifiers
-  - Media
-  - RTCRemoteOutboundRtpStreamStats
-  - RTCStats
-  - RTCStatsReport
-  - RTP
-  - Reference
-  - Remote
-  - Statistics
-  - Stats
-  - WebRTC
-  - WebRTC API
-  - WebRTC Device API
-  - stream
 browser-compat: api.RTCRemoteOutboundRtpStreamStats
 ---
 

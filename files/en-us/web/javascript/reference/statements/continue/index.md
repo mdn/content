@@ -2,10 +2,6 @@
 title: continue
 slug: Web/JavaScript/Reference/Statements/continue
 page-type: javascript-statement
-tags:
-  - JavaScript
-  - Language feature
-  - Statement
 browser-compat: javascript.statements.continue
 ---
 

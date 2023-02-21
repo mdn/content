@@ -2,12 +2,6 @@
 title: WebGLTransformFeedback
 slug: Web/API/WebGLTransformFeedback
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Reference
-  - WebGL
-  - WebGL2
 browser-compat: api.WebGLTransformFeedback
 ---
 

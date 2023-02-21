@@ -2,12 +2,6 @@
 title: MIDIPort.open()
 slug: Web/API/MIDIPort/open
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - open
-  - MIDIPort
 browser-compat: api.MIDIPort.open
 ---
 

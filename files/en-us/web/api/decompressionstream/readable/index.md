@@ -2,12 +2,6 @@
 title: DecompressionStream.readable
 slug: Web/API/DecompressionStream/readable
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - readable
-  - DecompressionStream
 browser-compat: api.DecompressionStream.readable
 ---
 
@@ -24,7 +18,7 @@ A {{domxref("ReadableStream")}}.
 The following example returns a {{domxref("ReadableStream")}} from a `DecompressionStream`.
 
 ```js
-let stream = new DecompressionStream('gzip');
+let stream = new DecompressionStream("gzip");
 console.log(stream.readable); //a ReadableStream
 ```
 

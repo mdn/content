@@ -2,12 +2,6 @@
 title: SharedArrayBuffer
 slug: Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer
 page-type: javascript-class
-tags:
-  - Class
-  - JavaScript
-  - Shared Memory
-  - SharedArrayBuffer
-  - TypedArrays
 browser-compat: javascript.builtins.SharedArrayBuffer
 ---
 

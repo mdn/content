@@ -2,19 +2,9 @@
 title: SourceBuffer.removeAsync()
 slug: Web/API/SourceBuffer/removeAsync
 page-type: web-api-instance-method
-tags:
-  - API
-  - Audio
-  - MSE
-  - Media
-  - Media Source Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - SourceBuffer
-  - Video
-  - removeAsync
-  - Experimental
+status:
+  - experimental
+  - non-standard
 browser-compat: api.SourceBuffer.removeAsync
 ---
 

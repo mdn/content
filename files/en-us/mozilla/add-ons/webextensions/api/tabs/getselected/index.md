@@ -1,6 +1,7 @@
 ---
 title: tabs.getSelected()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/getSelected
+page-type: webextension-api-function
 tags:
   - API
   - Add-ons

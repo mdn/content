@@ -2,9 +2,6 @@
 title: EventTarget.addEventListener()
 slug: Web/API/EventTarget/addEventListener
 page-type: web-api-instance-method
-tags:
-  - Method
-  - Reference
 browser-compat: api.EventTarget.addEventListener
 ---
 

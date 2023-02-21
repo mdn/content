@@ -2,12 +2,6 @@
 title: JavaScript modules
 slug: Web/JavaScript/Guide/Modules
 page-type: guide
-tags:
-  - Guide
-  - JavaScript
-  - Modules
-  - export
-  - import
 browser-compat:
   - javascript.statements.import
   - javascript.statements.export

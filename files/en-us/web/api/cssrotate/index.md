@@ -2,15 +2,8 @@
 title: CSSRotate
 slug: Web/API/CSSRotate
 page-type: web-api-interface
-tags:
-  - API
-  - CSS
-  - CSS Typed Object Model
-  - CSSRotate
-  - Experimental
-  - Houdini
-  - Interface
-  - Reference
+status:
+  - experimental
 browser-compat: api.CSSRotate
 ---
 

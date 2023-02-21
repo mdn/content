@@ -2,13 +2,6 @@
 title: OES_vertex_array_object.bindVertexArrayOES()
 slug: Web/API/OES_vertex_array_object/bindVertexArrayOES
 page-type: webgl-extension-method
-tags:
-  - API
-  - Method
-  - Reference
-  - VAO
-  - WebGL
-  - WebGL extension
 browser-compat: api.OES_vertex_array_object.bindVertexArrayOES
 ---
 

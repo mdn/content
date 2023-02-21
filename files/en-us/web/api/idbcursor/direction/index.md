@@ -2,15 +2,6 @@
 title: IDBCursor.direction
 slug: Web/API/IDBCursor/direction
 page-type: web-api-instance-property
-tags:
-  - API
-  - Database
-  - IDBCursor
-  - IndexedDB
-  - Property
-  - Reference
-  - Storage
-  - direction
 browser-compat: api.IDBCursor.direction
 ---
 

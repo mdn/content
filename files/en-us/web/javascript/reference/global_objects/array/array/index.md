@@ -2,11 +2,6 @@
 title: Array() constructor
 slug: Web/JavaScript/Reference/Global_Objects/Array/Array
 page-type: javascript-constructor
-tags:
-  - Array
-  - Constructor
-  - JavaScript
-  - Reference
 browser-compat: javascript.builtins.Array.Array
 ---
 

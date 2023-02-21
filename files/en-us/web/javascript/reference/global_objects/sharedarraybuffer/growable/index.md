@@ -2,8 +2,8 @@
 title: SharedArrayBuffer.prototype.growable
 slug: Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer/growable
 page-type: javascript-instance-accessor-property
-tags:
-  - Experimental
+status:
+  - experimental
 browser-compat: javascript.builtins.SharedArrayBuffer.growable
 ---
 

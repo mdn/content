@@ -1,6 +1,7 @@
 ---
 title: Notifications
 slug: Mozilla/Add-ons/WebExtensions/user_interface/Notifications
+page-type: guide
 tags:
   - WebExtensions
 ---

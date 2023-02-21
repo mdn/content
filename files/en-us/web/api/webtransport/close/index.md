@@ -2,14 +2,8 @@
 title: WebTransport.close()
 slug: Web/API/WebTransport/close
 page-type: web-api-instance-method
-tags:
-  - API
-  - close
-  - Experimental
-  - Property
-  - Reference
-  - WebTransport
-  - WebTransport API
+status:
+  - experimental
 browser-compat: api.WebTransport.close
 ---
 

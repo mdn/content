@@ -2,13 +2,6 @@
 title: HTMLElement.enterKeyHint
 slug: Web/API/HTMLElement/enterKeyHint
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTML DOM
-  - HTMLElement
-  - Property
-  - Reference
-  - Keyboard
 browser-compat: api.HTMLElement.enterKeyHint
 ---
 

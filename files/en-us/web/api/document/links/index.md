@@ -2,12 +2,6 @@
 title: Document.links
 slug: Web/API/Document/links
 page-type: web-api-instance-property
-tags:
-  - API
-  - Document
-  - HTML DOM
-  - Property
-  - Reference
 browser-compat: api.Document.links
 ---
 

@@ -2,12 +2,6 @@
 title: ValidityState.valueMissing
 slug: Web/API/ValidityState/valueMissing
 page-type: web-api-instance-property
-tags:
-  - API
-  - Constraint Validation API
-  - DOM
-  - Property
-  - Reference
 browser-compat: api.ValidityState.valueMissing
 ---
 

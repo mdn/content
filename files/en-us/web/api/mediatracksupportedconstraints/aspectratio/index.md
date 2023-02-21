@@ -2,18 +2,6 @@
 title: MediaTrackSupportedConstraints.aspectRatio
 slug: Web/API/MediaTrackSupportedConstraints/aspectRatio
 page-type: web-api-instance-property
-tags:
-  - API
-  - Constraints
-  - Media
-  - Media Capture and Streams API
-  - Media Streams API
-  - MediaTrackSupportedConstraints
-  - Property
-  - Reference
-  - Web
-  - WebRTC
-  - aspectRatio
 browser-compat: api.MediaTrackSupportedConstraints.aspectRatio
 ---
 

@@ -2,12 +2,6 @@
 title: Selection.removeAllRanges()
 slug: Web/API/Selection/removeAllRanges
 page-type: web-api-instance-method
-tags:
-  - API
-  - HTML Editing
-  - Method
-  - Reference
-  - Selection
 browser-compat: api.Selection.removeAllRanges
 ---
 

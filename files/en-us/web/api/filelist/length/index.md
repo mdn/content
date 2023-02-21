@@ -2,12 +2,6 @@
 title: FileList.length
 slug: Web/API/FileList/length
 page-type: web-api-instance-property
-tags:
-  - API
-  - File API
-  - Files
-  - Property
-  - Reference
 browser-compat: api.FileList.length
 ---
 

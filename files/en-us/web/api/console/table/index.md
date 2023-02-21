@@ -2,13 +2,6 @@
 title: console.table()
 slug: Web/API/console/table
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - Debugging
-  - Method
-  - Web Development
-  - web console
 browser-compat: api.console.table
 ---
 

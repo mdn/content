@@ -2,16 +2,6 @@
 title: MediaRecorder.isTypeSupported()
 slug: Web/API/MediaRecorder/isTypeSupported
 page-type: web-api-static-method
-tags:
-  - API
-  - Audio
-  - Media
-  - Media Capture
-  - MediaRecorder
-  - Method
-  - Reference
-  - Video
-  - canRecordMimeType
 browser-compat: api.MediaRecorder.isTypeSupported
 ---
 

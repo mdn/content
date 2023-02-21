@@ -2,13 +2,8 @@
 title: Document.domain
 slug: Web/API/Document/domain
 page-type: web-api-instance-property
-tags:
-  - API
-  - Document
-  - HTML DOM
-  - Property
-  - Reference
-  - Deprecated
+status:
+  - deprecated
 browser-compat: api.Document.domain
 ---
 
@@ -65,7 +60,7 @@ Other alternatives that provide slightly different information are
 ### Setting the domain
 
 ```js
-document.domain = domainString
+document.domain = domainString;
 ```
 
 The setter for this property can be used to _change_ a page's

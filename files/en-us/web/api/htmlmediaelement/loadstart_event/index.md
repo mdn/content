@@ -2,13 +2,6 @@
 title: "HTMLMediaElement: loadstart event"
 slug: Web/API/HTMLMediaElement/loadstart_event
 page-type: web-api-event
-tags:
-  - API
-  - Event
-  - HTMLMediaElement
-  - Reference
-  - Web
-  - loadstart
 browser-compat: api.HTMLMediaElement.loadstart_event
 ---
 

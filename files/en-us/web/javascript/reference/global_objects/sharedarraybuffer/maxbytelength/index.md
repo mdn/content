@@ -2,8 +2,8 @@
 title: SharedArrayBuffer.prototype.maxByteLength
 slug: Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer/maxByteLength
 page-type: javascript-instance-accessor-property
-tags:
-  - Experimental
+status:
+  - experimental
 browser-compat: javascript.builtins.SharedArrayBuffer.maxByteLength
 ---
 

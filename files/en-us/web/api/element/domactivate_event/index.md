@@ -2,18 +2,8 @@
 title: 'Element: DOMActivate event'
 slug: Web/API/Element/DOMActivate_event
 page-type: web-api-event
-tags:
-  - API
-  - DOM
-  - Deprecated
-  - Element
-  - Event
-  - Input
-  - Mouse Events
-  - MouseEvent
-  - Reference
-  - activate event
-  - onactivate
+status:
+  - deprecated
 browser-compat: api.Element.DOMActivate_event
 ---
 

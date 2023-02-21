@@ -2,17 +2,6 @@
 title: Using the Resource Timing API
 slug: Web/API/Resource_Timing_API/Using_the_Resource_Timing_API
 page-type: guide
-tags:
-  - API
-  - Guide
-  - NeedsExample
-  - Performance
-  - Resource Timing
-  - Resource Timing API
-  - Timing
-  - Web
-  - Web Development
-  - Web Performance
 ---
 
 {{DefaultAPISidebar("Performance API")}}

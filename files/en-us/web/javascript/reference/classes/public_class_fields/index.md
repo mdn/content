@@ -2,10 +2,6 @@
 title: Public class fields
 slug: Web/JavaScript/Reference/Classes/Public_class_fields
 page-type: javascript-language-feature
-tags:
-  - Classes
-  - JavaScript
-  - Language feature
 browser-compat: javascript.classes.public_class_fields
 ---
 

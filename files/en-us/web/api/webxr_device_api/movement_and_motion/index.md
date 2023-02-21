@@ -2,22 +2,6 @@
 title: 'Movement, orientation, and motion: A WebXR example'
 slug: Web/API/WebXR_Device_API/Movement_and_motion
 page-type: guide
-tags:
-  - 3D
-  - API
-  - AR
-  - Example
-  - Guide
-  - Reality
-  - Tutorial
-  - VR
-  - Virtual
-  - WebXR
-  - WebXR API
-  - WebXR Device API
-  - XR
-  - augmented
-  - rendering
 ---
 
 {{DefaultAPISidebar("WebXR Device API")}}
