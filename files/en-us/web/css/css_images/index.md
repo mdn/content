@@ -24,12 +24,12 @@ spec-urls:
 
 ### Functions
 
-- {{CSSxRef("image/linear-gradient", "linear-gradient()")}}
-- {{CSSxRef("image/radial-gradient", "radial-gradient()")}}
-- {{CSSxRef("image/repeating-linear-gradient", "repeating-linear-gradient()")}}
-- {{CSSxRef("image/repeating-radial-gradient", "repeating-radial-gradient()")}}
-- {{CSSxRef("image/conic-gradient", "conic-gradient()")}}
-- {{CSSxRef("image/repeating-conic-gradient", "repeating-conic-gradient()")}}
+- {{CSSxRef("gradient/linear-gradient", "linear-gradient()")}}
+- {{CSSxRef("gradient/radial-gradient", "radial-gradient()")}}
+- {{CSSxRef("gradient/repeating-linear-gradient", "repeating-linear-gradient()")}}
+- {{CSSxRef("gradient/repeating-radial-gradient", "repeating-radial-gradient()")}}
+- {{CSSxRef("gradient/conic-gradient", "conic-gradient()")}}
+- {{CSSxRef("gradient/repeating-conic-gradient", "repeating-conic-gradient()")}}
 - {{CSSxRef("url", "url()")}}
 - {{CSSxRef("element", "element()")}}
 - {{CSSxRef("image/image", "image()")}}
