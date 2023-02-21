@@ -23,7 +23,8 @@ This is covered in more detail in the articles [WebRTC connectivity](/en-US/docs
 
 ```js-nolint
 addIceCandidate(candidate)
-addIceCandidate(candidate, successCallback)
+
+addIceCandidate(candidate, successCallback) // deprecated
 addIceCandidate(candidate, successCallback, failureCallback) // deprecated
 ```
 

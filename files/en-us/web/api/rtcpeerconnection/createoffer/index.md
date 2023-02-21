@@ -30,8 +30,8 @@ offer.
 createOffer()
 createOffer(options)
 
-createOffer(successCallback, failureCallback)
-createOffer(successCallback, failureCallback, options)
+createOffer(successCallback, failureCallback) // deprecated
+createOffer(successCallback, failureCallback, options) // deprecated
 ```
 
 ### Parameters

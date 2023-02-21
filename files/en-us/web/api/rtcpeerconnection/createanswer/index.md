@@ -22,8 +22,8 @@ the negotiation process.
 createAnswer()
 createAnswer(options)
 
-createAnswer(successCallback, failureCallback)
-createAnswer(successCallback, failureCallback, options)
+createAnswer(successCallback, failureCallback) // deprecated
+createAnswer(successCallback, failureCallback, options) // deprecated
 ```
 
 ### Parameters

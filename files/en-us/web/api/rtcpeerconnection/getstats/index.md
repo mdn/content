@@ -17,6 +17,8 @@ providing statistics about either the overall connection or about the specified
 ```js-nolint
 getStats()
 getStats(selector)
+
+getStats(selector, successCallback, failureCallback) // deprecated
 ```
 
 ### Parameters
