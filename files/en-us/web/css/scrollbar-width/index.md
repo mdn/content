@@ -2,13 +2,6 @@
 title: scrollbar-width
 slug: Web/CSS/scrollbar-width
 page-type: css-property
-tags:
-  - CSS
-  - CSS Property
-  - Reference
-  - CSS scrollbars
-  - recipe:css-property
-  - scrollbar-width
 browser-compat: css.properties.scrollbar-width
 ---
 

@@ -2,13 +2,6 @@
 title: Pseudo-classes
 slug: Web/CSS/Pseudo-classes
 page-type: landing-page
-tags:
-  - CSS
-  - Guide
-  - Overview
-  - Pseudo-class
-  - Reference
-  - Selectors
 spec-urls:
   - https://html.spec.whatwg.org/multipage/#pseudo-classes
   - https://drafts.csswg.org/selectors/

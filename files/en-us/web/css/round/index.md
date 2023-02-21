@@ -2,15 +2,8 @@
 title: round()
 slug: Web/CSS/round
 page-type: css-function
-tags:
-  - CSS
-  - CSS Function
-  - Function
-  - Math
-  - Reference
-  - Web
-  - round
-  - Experimental
+status:
+  - experimental
 browser-compat: css.types.round
 ---
 
