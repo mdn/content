@@ -2,15 +2,6 @@
 title: SVGImageElement
 slug: Web/API/SVGImageElement
 page-type: web-api-interface
-tags:
-  - API
-  - Image
-  - Interface
-  - NeedsExample
-  - Reference
-  - SVG
-  - SVG DOM
-  - SVGImageElement
 browser-compat: api.SVGImageElement
 ---
 

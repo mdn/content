@@ -2,20 +2,6 @@
 title: Crypto.getRandomValues()
 slug: Web/API/Crypto/getRandomValues
 page-type: web-api-instance-method
-tags:
-  - API
-  - Crypto
-  - Cryptography
-  - Encryption
-  - Integers
-  - Method
-  - Numbers
-  - Pseudorandom
-  - Pseudorandom Numbers
-  - Random Numbers
-  - Reference
-  - Web Crypto API
-  - getRandomValues
 browser-compat: api.Crypto.getRandomValues
 ---
 

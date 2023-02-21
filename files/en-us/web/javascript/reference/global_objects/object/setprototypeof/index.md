@@ -19,6 +19,8 @@ The **`Object.setPrototypeOf()`** method sets the prototype (i.e., the internal 
 >
 > Because this feature is a part of the language, it is still the burden on engine developers to implement that feature performantly (ideally). Until engine developers address this issue, if you are concerned about performance, you should avoid setting the `[[Prototype]]` of an object. Instead, create a new object with the desired `[[Prototype]]` using {{jsxref("Object.create()")}}.
 
+{{EmbedInteractiveExample("pages/js/object-setprototypeof.html")}}
+
 ## Syntax
 
 ```js-nolint

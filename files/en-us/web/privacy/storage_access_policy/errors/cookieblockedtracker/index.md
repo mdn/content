@@ -1,5 +1,5 @@
 ---
-title: 'Blocked: Storage access requests from trackers'
+title: "Blocked: Storage access requests from trackers"
 slug: Web/Privacy/Storage_access_policy/Errors/CookieBlockedTracker
 tags:
   - Cookies

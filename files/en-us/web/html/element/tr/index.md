@@ -54,7 +54,7 @@ The following attributes may still be implemented in browsers but are no longer 
 
 - {{HTMLAttrDef("bgcolor")}} {{deprecated_inline}}
 
-  - : A string specifying a color to apply to the backgrounds of each of the row's cells. This can be either a [hexadecimal `#RRGGBB` or `#RGB` value](/en-US/docs/Web/CSS/color_value/rgb) or a [color keyword](/en-US/docs/Web/CSS/color_value#color_keywords). Omitting the attribute or setting it to `null` in JavaScript causes the row's cells to inherit the row's parent element's background color.
+  - : A string specifying a color to apply to the backgrounds of each of the row's cells. This can be either a [hexadecimal `#RRGGBB` or `#RGB` value](/en-US/docs/Web/CSS/color_value/rgb) or a [color keyword](/en-US/docs/Web/CSS/named-color). Omitting the attribute or setting it to `null` in JavaScript causes the row's cells to inherit the row's parent element's background color.
 
     > **Note:** The {{HTMLElement("tr")}} element should be styled using [CSS](/en-US/docs/Web/CSS). To give a similar effect as the `bgcolor` attribute, use the CSS property {{CSSxRef("background-color")}}.
 

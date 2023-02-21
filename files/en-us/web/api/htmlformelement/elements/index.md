@@ -2,14 +2,6 @@
 title: HTMLFormElement.elements
 slug: Web/API/HTMLFormElement/elements
 page-type: web-api-instance-property
-tags:
-  - API
-  - Elements
-  - HTML DOM
-  - HTMLFormControlsCollection
-  - HTMLFormElement
-  - Property
-  - Reference
 browser-compat: api.HTMLFormElement.elements
 ---
 

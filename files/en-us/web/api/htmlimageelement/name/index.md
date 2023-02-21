@@ -2,17 +2,8 @@
 title: HTMLImageElement.name
 slug: Web/API/HTMLImageElement/name
 page-type: web-api-instance-property
-tags:
-  - API
-  - Deprecated
-  - HTML
-  - HTML DOM
-  - HTMLImageElement
-  - Image
-  - Property
-  - Reference
-  - img
-  - name
+status:
+  - deprecated
 browser-compat: api.HTMLImageElement.name
 ---
 

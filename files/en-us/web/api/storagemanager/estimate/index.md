@@ -2,17 +2,6 @@
 title: StorageManager.estimate()
 slug: Web/API/StorageManager/estimate
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Quota
-  - Reference
-  - Secure context
-  - Storage
-  - Storage API
-  - StorageManager
-  - Usage
-  - estimate
 browser-compat: api.StorageManager.estimate
 ---
 

@@ -2,12 +2,6 @@
 title: StorageManager.persist()
 slug: Web/API/StorageManager/persist
 page-type: web-api-instance-method
-tags:
-  - Method
-  - Reference
-  - Secure context
-  - Storage API
-  - persist()
 browser-compat: api.StorageManager.persist
 ---
 

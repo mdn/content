@@ -2,12 +2,6 @@
 title: HTMLLabelElement
 slug: Web/API/HTMLLabelElement
 page-type: web-api-interface
-tags:
-  - API
-  - HTML DOM
-  - HTMLLabelElement
-  - Interface
-  - Reference
 browser-compat: api.HTMLLabelElement
 ---
 

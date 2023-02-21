@@ -74,7 +74,7 @@ const p = new Proxy(
       console.log(`called: ${prop}`);
       return true;
     },
-  }
+  },
 );
 
 console.log("a" in p);

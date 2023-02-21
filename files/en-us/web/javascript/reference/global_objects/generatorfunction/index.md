@@ -2,13 +2,6 @@
 title: GeneratorFunction
 slug: Web/JavaScript/Reference/Global_Objects/GeneratorFunction
 page-type: javascript-class
-tags:
-  - Constructor
-  - ECMAScript 2015
-  - GeneratorFunction
-  - Iterator
-  - JavaScript
-  - Reference
 browser-compat: javascript.builtins.GeneratorFunction
 ---
 
@@ -22,7 +15,9 @@ Note that `GeneratorFunction` is _not_ a global object. It can be obtained with 
 const GeneratorFunction = function* () {}.constructor;
 ```
 
-{{EmbedInteractiveExample("pages/js/functionasterisk-function.html")}}
+`GeneratorFunction` is a subclass of {{jsxref("Function")}}.
+
+{{EmbedInteractiveExample("pages/js/functionasterisk-function.html", "taller")}}
 
 ## Constructor
 

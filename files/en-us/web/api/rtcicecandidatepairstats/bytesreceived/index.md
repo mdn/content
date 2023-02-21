@@ -2,21 +2,6 @@
 title: RTCIceCandidatePairStats.bytesReceived
 slug: Web/API/RTCIceCandidatePairStats/bytesReceived
 page-type: web-api-instance-property
-tags:
-  - API
-  - Candidate
-  - Candidate Pair
-  - ICE
-  - Network
-  - Networking
-  - Property
-  - RTCIceCandidatePairStats
-  - Statistics
-  - Stats
-  - WebRTC
-  - WebRTC API
-  - bytesReceived
-  - data
 browser-compat: api.RTCIceCandidatePairStats.bytesReceived
 ---
 

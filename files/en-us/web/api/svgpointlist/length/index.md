@@ -2,12 +2,6 @@
 title: SVGPointList.length
 slug: Web/API/SVGPointList/length
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - length
-  - SVGPointList
 browser-compat: api.SVGPointList.length
 ---
 

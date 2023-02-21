@@ -2,11 +2,6 @@
 title: TreeWalker.root
 slug: Web/API/TreeWalker/root
 page-type: web-api-instance-property
-tags:
-  - API
-  - DOM
-  - Property
-  - TreeWalker
 browser-compat: api.TreeWalker.root
 ---
 

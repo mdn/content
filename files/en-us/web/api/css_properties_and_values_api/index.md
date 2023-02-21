@@ -2,9 +2,8 @@
 title: CSS Properties and Values API
 slug: Web/API/CSS_Properties_and_Values_API
 page-type: web-api-overview
-tags:
-  - Houdini
-  - Experimental
+status:
+  - experimental
 browser-compat: api.CSS.registerProperty
 ---
 
@@ -25,10 +24,10 @@ The following uses {{domxref('CSS.registerProperty')}} in [JavaScript](/en-US/do
 
 ```js
 window.CSS.registerProperty({
-  name: '--my-color',
-  syntax: '<color>',
+  name: "--my-color",
+  syntax: "<color>",
   inherits: false,
-  initialValue: '#c0ffee',
+  initialValue: "#c0ffee",
 });
 ```
 

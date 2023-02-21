@@ -2,15 +2,6 @@
 title: PaymentRequest()
 slug: Web/API/PaymentRequest/PaymentRequest
 page-type: web-api-constructor
-tags:
-  - API
-  - Constructor
-  - Payment Request
-  - Payment Request API
-  - PaymentRequest
-  - Reference
-  - Secure context
-  - payment
 browser-compat: api.PaymentRequest.PaymentRequest
 ---
 

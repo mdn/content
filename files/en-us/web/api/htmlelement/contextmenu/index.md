@@ -2,16 +2,9 @@
 title: HTMLElement.contextMenu
 slug: Web/API/HTMLElement/contextMenu
 page-type: web-api-instance-property
-tags:
-  - API
-  - Deprecated
-  - Element
-  - HTML
-  - HTML DOM
-  - Property
-  - Reference
-  - UX
-  - Non-standard
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.HTMLElement.contextMenu
 ---
 

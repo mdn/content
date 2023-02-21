@@ -2,11 +2,6 @@
 title: Range.insertNode()
 slug: Web/API/Range/insertNode
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - Method
-  - Range
 browser-compat: api.Range.insertNode
 ---
 

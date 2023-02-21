@@ -2,15 +2,6 @@
 title: 'ServiceWorker: error event'
 slug: Web/API/ServiceWorker/error_event
 page-type: web-api-event
-tags:
-  - API
-  - ServiceWorker
-  - EventHandler
-  - Reference
-  - Web Workers
-  - Workers
-  - onerror
-  - Event
 browser-compat: api.ServiceWorker.error_event
 ---
 

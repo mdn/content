@@ -2,16 +2,8 @@
 title: 'XRLightProbe: reflectionchange event'
 slug: Web/API/XRLightProbe/reflectionchange_event
 page-type: web-api-event
-tags:
-  - API
-  - AR
-  - Augmented Reality
-  - Experimental
-  - Event
-  - Reference
-  - VR
-  - WebXR
-  - WebXR Device API
+status:
+  - experimental
 browser-compat: api.XRLightProbe.reflectionchange_event
 ---
 

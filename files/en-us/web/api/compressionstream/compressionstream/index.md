@@ -2,11 +2,6 @@
 title: CompressionStream()
 slug: Web/API/CompressionStream/CompressionStream
 page-type: web-api-constructor
-tags:
-  - API
-  - Constructor
-  - Reference
-  - CompressionStream
 browser-compat: api.CompressionStream.CompressionStream
 ---
 

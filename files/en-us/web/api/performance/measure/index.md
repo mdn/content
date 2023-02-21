@@ -2,12 +2,6 @@
 title: performance.measure()
 slug: Web/API/Performance/measure
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - Web Performance
-  - Web Workers
 browser-compat: api.Performance.measure
 ---
 
@@ -144,7 +138,7 @@ performance.measure("login-click", {
 });
 ```
 
-### Proving additional measurement details
+### Providing additional measurement details
 
 You can use the `details` property to provide additional information of any type. Maybe you want to record which HTML element was clicked, for example.
 

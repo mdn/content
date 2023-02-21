@@ -2,13 +2,6 @@
 title: HTMLDialogElement.close()
 slug: Web/API/HTMLDialogElement/close
 page-type: web-api-instance-method
-tags:
-  - API
-  - HTML DOM
-  - HTMLDialogElement
-  - Method
-  - Reference
-  - close
 browser-compat: api.HTMLDialogElement.close
 ---
 

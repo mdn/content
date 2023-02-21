@@ -2,13 +2,6 @@
 title: Arrow function expressions
 slug: Web/JavaScript/Reference/Functions/Arrow_functions
 page-type: javascript-language-feature
-tags:
-  - ECMAScript 2015
-  - Functions
-  - Intermediate
-  - JavaScript
-  - Language feature
-  - Reference
 browser-compat: javascript.functions.arrow_functions
 ---
 
@@ -64,7 +57,7 @@ Let's decompose a traditional anonymous function down to the simplest arrow func
 
 > **Note:** Traditional function expressions and arrow functions have more differences than their syntax. We will introduce their behavior differences in more detail in the next few subsections.
 
-```js
+```js-nolint
 // Traditional anonymous function
 (function (a) {
   return a + 100;

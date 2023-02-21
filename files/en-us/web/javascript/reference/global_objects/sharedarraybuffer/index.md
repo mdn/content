@@ -2,12 +2,6 @@
 title: SharedArrayBuffer
 slug: Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer
 page-type: javascript-class
-tags:
-  - Class
-  - JavaScript
-  - Shared Memory
-  - SharedArrayBuffer
-  - TypedArrays
 browser-compat: javascript.builtins.SharedArrayBuffer
 ---
 
@@ -53,7 +47,7 @@ Cross-Origin-Embedder-Policy: require-corp
 To check if cross origin isolation has been successful, you can test against the [`crossOriginIsolated`](/en-US/docs/Web/API/crossOriginIsolated) property available to window and worker contexts:
 
 ```js
-const myWorker = new Worker('worker.js');
+const myWorker = new Worker("worker.js");
 
 if (crossOriginIsolated) {
   const buffer = new SharedArrayBuffer(16);

@@ -2,14 +2,6 @@
 title: Generator
 slug: Web/JavaScript/Reference/Global_Objects/Generator
 page-type: javascript-class
-tags:
-  - Class
-  - ECMAScript 2015
-  - Generator
-  - JavaScript
-  - Legacy Generator
-  - Legacy Iterator
-  - Reference
 browser-compat: javascript.builtins.Generator
 ---
 

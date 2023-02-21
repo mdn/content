@@ -158,10 +158,17 @@
       "events": ["ServiceWorkerGlobalScope: contentdelete"]
     },
     "CSS Containment": {
-      "interfaces": ["ContentVisibilityAutoStateChangedEvent"],
+      "interfaces": ["ContentVisibilityAutoStateChangeEvent"],
       "methods": [],
       "properties": [],
-      "events": ["Element: contentvisibilityautostatechanged"]
+      "events": ["Element: contentvisibilityautostatechange"]
+    },
+    "CSS Custom Highlight API": {
+      "overview": ["CSS Custom Highlight API"],
+      "interfaces": ["Highlight", "HighlightRegistry"],
+      "methods": [],
+      "properties": ["CSS.highlights"],
+      "events": []
     },
     "Console API": {
       "overview": ["Console API"],
@@ -259,11 +266,11 @@
         "/docs/Web/API/CSS_Object_Model/Using_dynamic_styling_information"
       ],
       "interfaces": [
-        "AnimationEvent",
         "CaretPosition",
         "CSS",
         "CSSConditionRule",
         "CSSGroupingRule",
+        "CSSImportRule",
         "CSSKeyframeRule",
         "CSSKeyframesRule",
         "CSSMediaRule",
@@ -275,11 +282,11 @@
         "CSSStyleRule",
         "CSSStyleSheet",
         "CSSSupportsRule",
+        "MediaList",
         "MediaQueryList",
         "Screen",
         "StyleSheet",
-        "StyleSheetList",
-        "TransitionEvent"
+        "StyleSheetList"
       ],
       "dictionaries": ["ScrollToOptions"],
       "methods": [],
@@ -821,7 +828,6 @@
         "MediaStream",
         "MediaStreamTrack",
         "MediaStreamTrackEvent",
-        "MediaTrackCapabilities",
         "MediaTrackConstraints",
         "MediaTrackSettings",
         "MediaTrackSupportedConstraints"
@@ -1352,7 +1358,6 @@
         "SVGLinearGradientElement",
         "SVGLineElement",
         "SVGMaskElement",
-        "SVGMatrix",
         "SVGMetadataElement",
         "SVGMissingGlyphElement",
         "SVGMPathElement",

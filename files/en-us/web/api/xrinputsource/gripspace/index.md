@@ -2,18 +2,6 @@
 title: XRInputSource.gripSpace
 slug: Web/API/XRInputSource/gripSpace
 page-type: web-api-instance-property
-tags:
-  - API
-  - AR
-  - Augmented Reality
-  - Property
-  - Reference
-  - VR
-  - Virtual Reality
-  - WebXR
-  - WebXR Device API
-  - XRInputSession
-  - gripSpace
 browser-compat: api.XRInputSource.gripSpace
 ---
 

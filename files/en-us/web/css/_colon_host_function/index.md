@@ -31,8 +31,10 @@ The most obvious use of this is to put a class name only on certain custom eleme
 
 ## Syntax
 
-```
-:host( <compound-selector> )
+```css-nolint
+:host(<compound-selector>) {
+  /* ... */
+}
 ```
 
 ## Examples

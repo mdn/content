@@ -2,14 +2,6 @@
 title: HTMLInputElement.multiple
 slug: Web/API/HTMLInputElement/multiple
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTML DOM
-  - HTMLInputElement
-  - NeedsMarkupWork
-  - NeedsSpecTable
-  - Property
-  - Reference
 browser-compat: api.HTMLInputElement.multiple
 ---
 

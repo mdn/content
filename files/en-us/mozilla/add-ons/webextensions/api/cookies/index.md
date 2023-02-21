@@ -1,6 +1,7 @@
 ---
 title: cookies
 slug: Mozilla/Add-ons/WebExtensions/API/cookies
+page-type: webextension-api
 tags:
   - API
   - Add-ons

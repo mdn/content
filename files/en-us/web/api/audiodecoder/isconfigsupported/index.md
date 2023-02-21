@@ -2,13 +2,8 @@
 title: AudioDecoder.isConfigSupported()
 slug: Web/API/AudioDecoder/isConfigSupported
 page-type: web-api-static-method
-tags:
-  - API
-  - Method
-  - Reference
-  - isConfigSupported
-  - AudioDecoder
-  - Experimental
+status:
+  - experimental
 browser-compat: api.AudioDecoder.isConfigSupported
 ---
 
@@ -46,19 +41,23 @@ A {{jsxref("Promise")}} that resolves with an object containing the following me
 The following example tests if the browser supports several audio codecs.
 
 ```js
-const codecs = ['mp4a.40.2', 'mp3', 'alaw', 'ulaw'];
+const codecs = ["mp4a.40.2", "mp3", "alaw", "ulaw"];
 const configs = [];
 for (const codec of codecs) {
   configs.push({
-      codec,
-      sampleRate: 48000,
-      numberOfChannels: 1,
-      not_supported_field: 123
+    codec,
+    sampleRate: 48000,
+    numberOfChannels: 1,
+    not_supported_field: 123,
   });
 }
 for (const config of configs) {
   const support = await AudioDecoder.isConfigSupported(config);
-  console.log(`AudioDecoder's config ${JSON.stringify(support.config)} support: ${support.supported}`);
+  console.log(
+    `AudioDecoder's config ${JSON.stringify(support.config)} support: ${
+      support.supported
+    }`
+  );
 }
 ```
 

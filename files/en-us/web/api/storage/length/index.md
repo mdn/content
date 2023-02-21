@@ -2,13 +2,6 @@
 title: Storage.length
 slug: Web/API/Storage/length
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Read-only
-  - Reference
-  - Storage
-  - Web Storage
 browser-compat: api.Storage.length
 ---
 

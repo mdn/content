@@ -2,12 +2,6 @@
 title: TextTrackCue.startTime
 slug: Web/API/TextTrackCue/startTime
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - startTime
-  - TextTrackCue
 browser-compat: api.TextTrackCue.startTime
 ---
 

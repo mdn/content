@@ -30,13 +30,13 @@ svg {
 ```
 
 ```html
-<svg viewBox="0 0 140 50" xmlns="http://www.w3.org/2000/svg">
-  <text y="20" xml:space="default">Default spacing</text>
-  <text y="40" xml:space="preserve">Preserved spacing</text>
+<svg viewBox="0 0 160 50" xmlns="http://www.w3.org/2000/svg">
+  <text y="20" xml:space="default">    Default    spacing</text>
+  <text y="40" xml:space="preserve">    Preserved    spacing</text>
 </svg>
 ```
 
-{{EmbedLiveSample("Example", "120", "50")}}
+{{EmbedLiveSample("Example", "160", "50")}}
 
 ## Usage notes
 

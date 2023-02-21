@@ -94,7 +94,7 @@ console.log(
   Reflect.getPrototypeOf(p) === Array.prototype, // true
   p.__proto__ === Array.prototype, // true
   Array.prototype.isPrototypeOf(p), // true
-  p instanceof Array // true
+  p instanceof Array, // true
 );
 ```
 

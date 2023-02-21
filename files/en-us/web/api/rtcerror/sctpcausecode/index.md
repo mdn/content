@@ -2,19 +2,6 @@
 title: RTCError.sctpCauseCode
 slug: Web/API/RTCError/sctpCauseCode
 page-type: web-api-instance-property
-tags:
-  - API
-  - Error
-  - Networking
-  - Property
-  - RTCError
-  - Read-only
-  - Reference
-  - SCTP
-  - WebRTC
-  - WebRTC API
-  - WebRTC Device API
-  - sctpCauseCode
 browser-compat: api.RTCError.sctpCauseCode
 ---
 

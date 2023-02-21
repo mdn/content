@@ -1,12 +1,6 @@
 ---
 title: 'Element: pointerout event'
 slug: Web/API/Element/pointerout_event
-tags:
-  - Event
-  - HTML DOM
-  - Element
-  - PointerEvent
-  - Reference
 browser-compat: api.Element.pointerout_event
 page-type: web-api-event
 ---

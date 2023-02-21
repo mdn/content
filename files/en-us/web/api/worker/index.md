@@ -2,15 +2,6 @@
 title: Worker
 slug: Web/API/Worker
 page-type: web-api-interface
-tags:
-  - API
-  - DOM
-  - Interface
-  - JavaScript
-  - Reference
-  - Web Workers
-  - Worker
-  - Workers
 browser-compat: api.Worker
 ---
 

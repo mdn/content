@@ -2,15 +2,6 @@
 title: IntersectionObserverEntry.target
 slug: Web/API/IntersectionObserverEntry/target
 page-type: web-api-instance-property
-tags:
-  - API
-  - Element
-  - Intersection Observer
-  - Intersection Observer API
-  - IntersectionObserver
-  - Property
-  - Reference
-  - target
 browser-compat: api.IntersectionObserverEntry.target
 ---
 

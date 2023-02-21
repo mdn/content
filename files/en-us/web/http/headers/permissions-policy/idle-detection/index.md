@@ -1,5 +1,5 @@
 ---
-title: 'Permissions-Policy: idle-detection'
+title: "Permissions-Policy: idle-detection"
 slug: Web/HTTP/Headers/Permissions-Policy/idle-detection
 tags:
   - Directive

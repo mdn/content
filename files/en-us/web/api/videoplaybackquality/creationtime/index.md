@@ -2,17 +2,6 @@
 title: VideoPlaybackQuality.creationTime
 slug: Web/API/VideoPlaybackQuality/creationTime
 page-type: web-api-instance-property
-tags:
-  - API
-  - Media
-  - Media Playback Quality
-  - Media Playback Quality API
-  - Property
-  - Quality
-  - Reference
-  - Video
-  - VideoPlaybackQuality
-  - creationTime
 browser-compat: api.VideoPlaybackQuality.creationTime
 ---
 

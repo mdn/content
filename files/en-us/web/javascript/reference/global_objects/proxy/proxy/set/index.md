@@ -95,7 +95,7 @@ const p = new Proxy(
       console.log(`property set: ${prop} = ${value}`);
       return true;
     },
-  }
+  },
 );
 
 console.log("a" in p); // false

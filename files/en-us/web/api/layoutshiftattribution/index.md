@@ -2,16 +2,8 @@
 title: LayoutShiftAttribution
 slug: Web/API/LayoutShiftAttribution
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Layout Instability API
-  - LayoutShiftAttribution
-  - NeedsExample
-  - Performance
-  - Reference
-  - Web Performance
-  - Experimental
+status:
+  - experimental
 browser-compat: api.LayoutShiftAttribution
 ---
 

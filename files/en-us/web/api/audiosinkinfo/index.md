@@ -2,13 +2,8 @@
 title: AudioSinkInfo
 slug: Web/API/AudioSinkInfo
 page-type: web-api-interface
-tags:
-  - API
-  - AudioSinkInfo
-  - Experimental
-  - Interface
-  - Landing
-  - Reference
+status:
+  - experimental
 browser-compat: api.AudioSinkInfo
 ---
 
@@ -29,10 +24,10 @@ If a new {{domxref("AudioContext")}} is created with a `sinkId` value of `{ type
 
 ```js
 audioCtx = new window.AudioContext({
-  sinkId: { type: 'none' }
+  sinkId: { type: "none" },
 });
 
-  // ...
+// ...
 
 audioCtx.sinkId;
 ```

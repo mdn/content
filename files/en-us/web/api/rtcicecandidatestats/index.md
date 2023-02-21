@@ -2,19 +2,6 @@
 title: RTCIceCandidateStats
 slug: Web/API/RTCIceCandidateStats
 page-type: web-api-interface
-tags:
-  - API
-  - Candidate
-  - Dictionary
-  - ICE
-  - Ice Candidate
-  - RTCIceCandidate
-  - RTCIceCandidateStats
-  - Reference
-  - Statistics
-  - Stats
-  - WebRTC
-  - WebRTC API
 browser-compat: api.RTCIceCandidateStats
 ---
 

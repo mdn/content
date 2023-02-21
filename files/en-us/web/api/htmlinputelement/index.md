@@ -2,16 +2,6 @@
 title: HTMLInputElement
 slug: Web/API/HTMLInputElement
 page-type: web-api-interface
-tags:
-  - API
-  - DOM
-  - HTML DOM
-  - HTMLInputElement
-  - Input
-  - Interface
-  - NeedsContent
-  - NeedsMarkupWork
-  - Reference
 browser-compat: api.HTMLInputElement
 ---
 

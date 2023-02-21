@@ -37,7 +37,7 @@ The IE version has additional properties not required in the new specification o
 If you are still supporting Internet Explorer, the popular tool _[Autoprefixer](https://github.com/postcss/autoprefixer)_ has been updated to support the `-ms-` grid version. By default, grid prefixes are disabled, but you can enable it with `grid: true` option.
 
 ```js
-autoprefixer({ grid: 'autoplace' })
+autoprefixer({ grid: "autoplace" });
 ```
 
 Grid prefixes are disabled by default because some properties can't be prefixed.
@@ -57,36 +57,38 @@ It is worth noting that you do not have to use grid in an _all or nothing_ way. 
 The {{cssxref("float")}} no longer applies, and I can use the CSS Box Alignment property {{cssxref("align-self")}} to align my content to the end of the container:
 
 ```css
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 img {
-    max-width: 100%;
-    display: block;
+  max-width: 100%;
+  display: block;
 }
 .media {
-    border: 2px solid #f76707;
-    border-radius: 5px;
-    background-color: #fff4e6;
-    max-width: 400px;
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    grid-template-areas: "img content";
-    margin-bottom: 1em;
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
+  max-width: 400px;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-areas: "img content";
+  margin-bottom: 1em;
 }
 .media::after {
-    content: "";
-    display: block;
-    clear: both;
+  content: "";
+  display: block;
+  clear: both;
 }
 .media .text {
-    padding: 10px;
-    align-self: end;
+  padding: 10px;
+  align-self: end;
 }
 
 /* old code we can't remove */
 .media .image {
-    float: left;
-    width: 150px;
-    margin-right: 20px;
+  float: left;
+  width: 150px;
+  margin-right: 20px;
 }
 ```
 

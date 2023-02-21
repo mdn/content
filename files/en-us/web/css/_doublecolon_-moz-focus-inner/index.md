@@ -1,5 +1,5 @@
 ---
-title: '::-moz-focus-inner'
+title: "::-moz-focus-inner"
 slug: Web/CSS/::-moz-focus-inner
 page-type: css-pseudo-element
 tags:
@@ -22,8 +22,10 @@ The **`::-moz-focus-inner`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/
 
 ## Syntax
 
-```
-::-moz-focus-inner
+```css
+::-moz-focus-inner {
+  /* ... */
+}
 ```
 
 ## Example

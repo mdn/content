@@ -2,10 +2,6 @@
 title: "Warning: String.x is deprecated; use String.prototype.x instead"
 slug: Web/JavaScript/Reference/Errors/Deprecated_String_generics
 page-type: javascript-error
-tags:
-  - Error
-  - JavaScript
-  - Warning
 ---
 
 {{jsSidebar("Errors")}}

@@ -1,9 +1,9 @@
 ---
-title: '::cue-region'
+title: "::cue-region"
 slug: Web/CSS/::cue-region
 page-type: css-pseudo-element
 tags:
-  - '::cue-region'
+  - "::cue-region"
   - CSS
   - Media
   - Pseudo-element
@@ -29,8 +29,10 @@ The properties are applied to the entire set of cues as if they were a single un
 
 ## Syntax
 
-```
-::cue-region | ::cue-region( <selector> )
+```css-nolint
+::cue-region | ::cue-region(<selector>) {
+  /* ... */
+}
 ```
 
 ## Permitted properties

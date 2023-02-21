@@ -55,14 +55,3 @@ The following looks like a scary list, but fortunately, you can get started in w
 - More tools besides!
 
 {{NextMenu("Learn/Getting_started_with_the_web/What_will_your_website_look_like", "Learn/Getting_started_with_the_web")}}
-
-## In this module
-
-- [Installing basic software](/en-US/docs/Learn/Getting_started_with_the_web/Installing_basic_software)
-- [What will your website look like?](/en-US/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like)
-- [Dealing with files](/en-US/docs/Learn/Getting_started_with_the_web/Dealing_with_files)
-- [HTML basics](/en-US/docs/Learn/Getting_started_with_the_web/HTML_basics)
-- [CSS basics](/en-US/docs/Learn/Getting_started_with_the_web/CSS_basics)
-- [JavaScript basics](/en-US/docs/Learn/Getting_started_with_the_web/JavaScript_basics)
-- [Publishing your website](/en-US/docs/Learn/Getting_started_with_the_web/Publishing_your_website)
-- [How the web works](/en-US/docs/Learn/Getting_started_with_the_web/How_the_Web_works)

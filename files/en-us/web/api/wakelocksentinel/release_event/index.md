@@ -2,15 +2,8 @@
 title: 'WakeLockSentinel: release event'
 slug: Web/API/WakeLockSentinel/release_event
 page-type: web-api-event
-tags:
-  - Event Handler
-  - Property
-  - Screen Wake Lock API
-  - Wake Lock
-  - WakeLockSentinel
-  - screen
-  - screen wake lock
-  - Experimental
+status:
+  - experimental
 browser-compat: api.WakeLockSentinel.release_event
 ---
 

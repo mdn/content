@@ -2,15 +2,6 @@
 title: EventSource
 slug: Web/API/EventSource
 page-type: web-api-interface
-tags:
-  - API
-  - Communications
-  - EventSource
-  - Interface
-  - Reference
-  - Server Sent Events
-  - Server-sent events
-  - messaging
 browser-compat: api.EventSource
 ---
 

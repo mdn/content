@@ -254,7 +254,7 @@ There are two levels of content validation available for `url` inputs. First, th
 
 Browsers that support the `url` input type automatically provide validation to ensure that only text that matches the standard format for URLs is entered into the input box.
 
-The syntax of a URL is fairly intricate. It's defined by WHATWG's [URL Living Standard](https://url.spec.whatwg.org/) and is described for newcomers in our article [What is a URL?](/en-US/docs/Learn/Common_questions/What_is_a_URL)
+The syntax of a URL is fairly intricate. It's defined by WHATWG's [URL Living Standard](https://url.spec.whatwg.org/) and is described for newcomers in our article [What is a URL?](/en-US/docs/Learn/Common_questions/Web_mechanics/What_is_a_URL)
 
 ### Making a URL required
 

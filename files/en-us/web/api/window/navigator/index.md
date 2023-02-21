@@ -2,13 +2,6 @@
 title: Window.navigator
 slug: Web/API/Window/navigator
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTML DOM
-  - Property
-  - Read-only
-  - Reference
-  - Window
 browser-compat: api.Window.navigator
 ---
 

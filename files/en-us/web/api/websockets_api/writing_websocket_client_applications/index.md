@@ -2,15 +2,6 @@
 title: Writing WebSocket client applications
 slug: Web/API/WebSockets_API/Writing_WebSocket_client_applications
 page-type: guide
-tags:
-  - Client
-  - Example
-  - Guide
-  - Networking
-  - Web Sockets API
-  - WebSocket
-  - WebSocket API
-  - WebSockets
 ---
 
 {{APIRef("Websockets API")}}

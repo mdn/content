@@ -2,14 +2,6 @@
 title: SharedWorkerGlobalScope.close()
 slug: Web/API/SharedWorkerGlobalScope/close
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - Method
-  - Reference
-  - SharedWorkerGlobalScope
-  - Web Workers
-  - close
 browser-compat: api.SharedWorkerGlobalScope.close
 ---
 

@@ -45,7 +45,7 @@ The new roles and objects related to [ARIA annotations](/en-US/docs/Web/Accessib
 
 ### JavaScript
 
-- [Public static class fields](/en-US/docs/Web/JavaScript/Reference/Classes/Public_class_fields#public_static_fields) are now supported ({{bug(1535804)}}).
+- [Public static class fields](/en-US/docs/Web/JavaScript/Reference/Classes/static) are now supported ({{bug(1535804)}}).
 - The [`Intl.Locale`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale) class is now supported ({{bug(1613713)}}).
 - The [`Function.caller`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/caller) property has been updated to be aligned with the latest [ECMAScript spec proposal](https://github.com/claudepache/es-legacy-function-reflection). Previously throwing a `TypeError`, it now returns `null` if the caller is a strict, async, or generator function ({{bug(1610206)}}).
 

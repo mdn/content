@@ -2,14 +2,8 @@
 title: Gamepad.pose
 slug: Web/API/Gamepad/pose
 page-type: web-api-instance-property
-tags:
-  - API
-  - Experimental
-  - Gamepad
-  - Gamepad API
-  - Property
-  - Reference
-  - pose
+status:
+  - experimental
 browser-compat: api.Gamepad.pose
 ---
 

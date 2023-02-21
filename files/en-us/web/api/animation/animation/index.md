@@ -2,13 +2,6 @@
 title: Animation()
 slug: Web/API/Animation/Animation
 page-type: web-api-constructor
-tags:
-  - API
-  - Animation
-  - Animations
-  - Constructor
-  - Reference
-  - web animations api
 browser-compat: api.Animation.Animation
 ---
 

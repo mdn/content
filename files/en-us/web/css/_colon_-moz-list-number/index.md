@@ -19,7 +19,9 @@ The **`::-moz-list-number`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/
 ## Syntax
 
 ```css
-li::-moz-list-number
+li::-moz-list-number {
+  /* ... */
+}
 ```
 
 ## Examples

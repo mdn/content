@@ -1,12 +1,6 @@
 ---
 title: 'Element: pointerup event'
 slug: Web/API/Element/pointerup_event
-tags:
-  - Event
-  - HTML DOM
-  - Element
-  - PointerEvent
-  - Reference
 browser-compat: api.Element.pointerup_event
 page-type: web-api-event
 ---

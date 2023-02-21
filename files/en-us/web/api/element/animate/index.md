@@ -2,13 +2,6 @@
 title: Element.animate()
 slug: Web/API/Element/animate
 page-type: web-api-instance-method
-tags:
-  - API
-  - Animation
-  - Element
-  - Method
-  - Reference
-  - Web Animations
 browser-compat: api.Element.animate
 ---
 
@@ -41,6 +34,8 @@ animate(keyframes, options)
     - `id` {{optional_inline}}
       - : A property unique to `animate()`: a string
         with which to reference the animation.
+    - `timeline` {{optional_inline}}
+      - : A property unique to `animate()`: the {{domxref("AnimationTimeline")}} to associate with the animation. Defaults to {{domxref("Document.timeline")}}.
 
 ### Return value
 

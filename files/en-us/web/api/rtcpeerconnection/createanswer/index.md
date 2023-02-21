@@ -2,16 +2,6 @@
 title: RTCPeerConnection.createAnswer()
 slug: Web/API/RTCPeerConnection/createAnswer
 page-type: web-api-instance-method
-tags:
-  - API
-  - Media
-  - Method
-  - RTCPeerConnection
-  - Reference
-  - Video
-  - Web
-  - WebRTC
-  - createAnswer
 browser-compat: api.RTCPeerConnection.createAnswer
 ---
 

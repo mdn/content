@@ -2,14 +2,6 @@
 title: 'Element: auxclick event'
 slug: Web/API/Element/auxclick_event
 page-type: web-api-event
-tags:
-  - Element
-  - Event
-  - MouseEvent
-  - Reference
-  - UI
-  - auxclick
-  - mouse
 browser-compat: api.Element.auxclick_event
 ---
 

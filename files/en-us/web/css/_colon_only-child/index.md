@@ -22,8 +22,10 @@ The **`:only-child`** CSS [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) rep
 
 ## Syntax
 
-```
-:only-child
+```css
+:only-child {
+  /* ... */
+}
 ```
 
 ## Examples

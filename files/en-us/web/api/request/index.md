@@ -2,14 +2,6 @@
 title: Request
 slug: Web/API/Request
 page-type: web-api-interface
-tags:
-  - API
-  - Fetch
-  - Fetch API
-  - Interface
-  - Networking
-  - Reference
-  - request
 browser-compat: api.Request
 ---
 
@@ -44,14 +36,14 @@ You can create a new `Request` object using the {{domxref("Request.Request","Req
   - : Contains the request's method (`GET`, `POST`, etc.)
 - {{domxref("Request.mode")}} {{ReadOnlyInline}}
   - : Contains the mode of the request (e.g., `cors`, `no-cors`, `same-origin`, `navigate`.)
-- {{domxref("Request.priority")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - : Contains the request's priority hint (e.g., `high`, `low`, `auto`).
 - {{domxref("Request.redirect")}} {{ReadOnlyInline}}
   - : Contains the mode for how redirects are handled. It may be one of `follow`, `error`, or `manual`.
 - {{domxref("Request.referrer")}} {{ReadOnlyInline}}
   - : Contains the referrer of the request (e.g., `client`).
 - {{domxref("Request.referrerPolicy")}} {{ReadOnlyInline}}
   - : Contains the referrer policy of the request (e.g., `no-referrer`).
+- {{domxref("Request.signal")}} {{ReadOnlyInline}}
+  - : Returns the {{domxref("AbortSignal")}} associated with the request
 - {{domxref("Request.url")}} {{ReadOnlyInline}}
   - : Contains the URL of the request.
 

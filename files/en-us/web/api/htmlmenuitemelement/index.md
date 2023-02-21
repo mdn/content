@@ -2,14 +2,9 @@
 title: HTMLMenuItemElement
 slug: Web/API/HTMLMenuItemElement
 page-type: web-api-interface
-tags:
-  - API
-  - Deprecated
-  - Draft
-  - HTMLMenuItemElement
-  - Interface
-  - Reference
-  - Non-standard
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.HTMLMenuItemElement
 ---
 

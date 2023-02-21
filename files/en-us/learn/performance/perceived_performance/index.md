@@ -96,17 +96,3 @@ Making a content request on `keydown` rather than waiting for `keyup` can shave 
 By reducing the time that a user has to wait for _useful_ content, and keeping the site responsive and engaging, the users will feel like the site performs better — even the actual time to load resources stays the same.
 
 {{PreviousMenuNext("Learn/Performance/what_is_web_performance", "Learn/Performance/Measuring_performance", "Learn/Performance")}}
-
-## In this module
-
-- [The "why" of web performance](/en-US/docs/Learn/Performance/why_web_performance)
-- [What is web performance?](/en-US/docs/Learn/Performance/What_is_web_performance)
-- [How do users perceive performance?](/en-US/docs/Learn/Performance/Perceived_performance)
-- [Measuring performance](/en-US/docs/Learn/Performance/Measuring_performance)
-- [Multimedia: images](/en-US/docs/Learn/Performance/Multimedia)
-- [Multimedia: video](/en-US/docs/Learn/Performance/video)
-- [JavaScript performance](/en-US/docs/Learn/Performance/JavaScript)
-- [HTML performance features](/en-US/docs/Learn/Performance/HTML)
-- [CSS performance features](/en-US/docs/Learn/Performance/CSS)
-- [The business case for web performance](/en-US/docs/Learn/Performance/business_case_for_performance)
-- [Web performance resources](/en-US/docs/Learn/Performance/Web_Performance_Basics)

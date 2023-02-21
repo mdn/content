@@ -2,16 +2,6 @@
 title: "MediaRecorder: dataavailable event"
 slug: Web/API/MediaRecorder/dataavailable_event
 page-type: web-api-event
-tags:
-  - API
-  - Audio
-  - Media Capture
-  - MediaRecorder
-  - MediaStream Recording API
-  - Event
-  - Reference
-  - Video
-  - dataavailable
 browser-compat: api.MediaRecorder.dataavailable_event
 ---
 

@@ -2,13 +2,8 @@
 title: ImageTrackList.length
 slug: Web/API/ImageTrackList/length
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - length
-  - ImageTrackList
-  - Experimental
+status:
+  - experimental
 browser-compat: api.ImageTrackList.length
 ---
 

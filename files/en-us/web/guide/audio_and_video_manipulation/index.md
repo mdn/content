@@ -80,11 +80,15 @@ const processor = {
     this.c1 = document.getElementById("my-canvas");
     this.ctx1 = this.c1.getContext("2d");
 
-    this.video.addEventListener("play", () => {
-      this.width = this.video.width;
-      this.height = this.video.height;
-      this.timerCallback();
-    }, false);
+    this.video.addEventListener(
+      "play",
+      () => {
+        this.width = this.video.width;
+        this.height = this.video.height;
+        this.timerCallback();
+      },
+      false
+    );
   },
 
   computeFrame() {
@@ -93,7 +97,11 @@ const processor = {
     const l = frame.data.length / 4;
 
     for (let i = 0; i < l; i++) {
-      const grey = (frame.data[i * 4 + 0] + frame.data[i * 4 + 1] + frame.data[i * 4 + 2]) / 3;
+      const grey =
+        (frame.data[i * 4 + 0] +
+          frame.data[i * 4 + 1] +
+          frame.data[i * 4 + 2]) /
+        3;
 
       frame.data[i * 4 + 0] = grey;
       frame.data[i * 4 + 1] = grey;
@@ -102,14 +110,14 @@ const processor = {
     this.ctx1.putImageData(frame, 0, 0);
 
     return;
-  }
+  },
 };
 ```
 
 Once the page has loaded you can call
 
 ```js
-processor.doLoad()
+processor.doLoad();
 ```
 
 #### Result
@@ -148,7 +156,7 @@ Note that the `playbackRate` property works with both `<audio>` and `<video>`, b
 #### JavaScript
 
 ```js
-const myVideo = document.getElementById('my-video');
+const myVideo = document.getElementById("my-video");
 myVideo.playbackRate = 2;
 ```
 
@@ -174,26 +182,26 @@ myVideo.playbackRate = 2;</textarea
 ```
 
 ```js hidden
-const textarea = document.getElementById('code');
-const reset = document.getElementById('reset');
-const edit = document.getElementById('edit');
+const textarea = document.getElementById("code");
+const reset = document.getElementById("reset");
+const edit = document.getElementById("edit");
 const code = textarea.value;
 
 function setPlaybackRate() {
   eval(textarea.value);
 }
 
-reset.addEventListener('click', () => {
+reset.addEventListener("click", () => {
   textarea.value = code;
   setPlaybackRate();
 });
 
-edit.addEventListener('click', () => {
+edit.addEventListener("click", () => {
   textarea.focus();
-})
+});
 
-textarea.addEventListener('input', setPlaybackRate);
-window.addEventListener('load', setPlaybackRate);
+textarea.addEventListener("input", setPlaybackRate);
+window.addEventListener("load", setPlaybackRate);
 ```
 
 {{ EmbedLiveSample('Editable_example', 700, 450) }}
@@ -229,7 +237,9 @@ The Web Audio API has a lot of different filter/effects that can be applied to a
 
 ```js
 const context = new AudioContext();
-const audioSource = context.createMediaElementSource(document.getElementById("my-video"));
+const audioSource = context.createMediaElementSource(
+  document.getElementById("my-video")
+);
 const filter = context.createBiquadFilter();
 audioSource.connect(filter);
 filter.connect(context.destination);
@@ -269,31 +279,33 @@ filter.gain.value = 25;
 
 ```js hidden
 const context = new AudioContext();
-const audioSource = context.createMediaElementSource(document.getElementById("my-video"));
-const filter  = context.createBiquadFilter();
+const audioSource = context.createMediaElementSource(
+  document.getElementById("my-video")
+);
+const filter = context.createBiquadFilter();
 audioSource.connect(filter);
 filter.connect(context.destination);
 
-const textarea = document.getElementById('code');
-const reset = document.getElementById('reset');
-const edit = document.getElementById('edit');
+const textarea = document.getElementById("code");
+const reset = document.getElementById("reset");
+const edit = document.getElementById("edit");
 const code = textarea.value;
 
 function setFilter() {
   eval(textarea.value);
 }
 
-reset.addEventListener('click', () => {
+reset.addEventListener("click", () => {
   textarea.value = code;
   setFilter();
 });
 
-edit.addEventListener('click', () => {
+edit.addEventListener("click", () => {
   textarea.focus();
-})
+});
 
-textarea.addEventListener('input', setFilter);
-window.addEventListener('load', setFilter);
+textarea.addEventListener("input", setFilter);
+window.addEventListener("load", setFilter);
 ```
 
 {{ EmbedLiveSample('Editable_example_2', 700, 450) }}

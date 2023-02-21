@@ -2,19 +2,8 @@
 title: HTMLImageElement.align
 slug: Web/API/HTMLImageElement/align
 page-type: web-api-instance-property
-tags:
-  - API
-  - Align
-  - HTML
-  - HTML DOM
-  - HTMLImageElement
-  - Image
-  - Property
-  - Reference
-  - alignment
-  - float
-  - img
-  - Deprecated
+status:
+  - deprecated
 browser-compat: api.HTMLImageElement.align
 ---
 

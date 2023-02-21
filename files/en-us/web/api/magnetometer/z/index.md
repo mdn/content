@@ -2,17 +2,8 @@
 title: Magnetometer.z
 slug: Web/API/Magnetometer/z
 page-type: web-api-instance-property
-tags:
-  - API
-  - Generic Sensor API
-  - Magnetometer
-  - Property
-  - Reference
-  - Sensor
-  - Sensor APIs
-  - Sensors
-  - z
-  - Experimental
+status:
+  - experimental
 browser-compat: api.Magnetometer.z
 ---
 

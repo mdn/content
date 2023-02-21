@@ -2,11 +2,8 @@
 title: Navigator.wakeLock
 slug: Web/API/Navigator/wakeLock
 page-type: web-api-instance-property
-tags:
-  - API
-  - Reference
-  - Screen Wake Lock API
-  - Experimental
+status:
+  - experimental
 browser-compat: api.Navigator.wakeLock
 ---
 

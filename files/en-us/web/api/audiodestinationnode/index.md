@@ -2,12 +2,6 @@
 title: AudioDestinationNode
 slug: Web/API/AudioDestinationNode
 page-type: web-api-interface
-tags:
-  - API
-  - AudioDestinationNode
-  - Interface
-  - Reference
-  - Web Audio API
 browser-compat: api.AudioDestinationNode
 ---
 

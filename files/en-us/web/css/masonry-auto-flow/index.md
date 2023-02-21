@@ -118,7 +118,7 @@ This property may take one of two forms:
 ```
 
 ```js
-const selectElem = document.querySelector('select');
+const selectElem = document.querySelector("select");
 
 function changeMasonryFlow() {
   const grid = document.getElementById("grid");
@@ -128,7 +128,7 @@ function changeMasonryFlow() {
   grid.style.masonryAutoFlow = masonryAutoFlow;
 }
 
-selectElem.addEventListener('change', changeMasonryFlow);
+selectElem.addEventListener("change", changeMasonryFlow);
 ```
 
 #### Result

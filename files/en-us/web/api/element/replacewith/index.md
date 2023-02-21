@@ -2,12 +2,6 @@
 title: Element.replaceWith()
 slug: Web/API/Element/replaceWith
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - Method
-  - Element
-  - Reference
 browser-compat: api.Element.replaceWith
 ---
 

@@ -121,7 +121,7 @@ allowlist examples:
 
 The general syntax looks like this:
 
-``` http
+```http
 Permissions-Policy: <directive>=<allowlist>
 ```
 
@@ -156,19 +156,21 @@ For an `<iframe>` to have a feature enabled its allowed origin must also be in t
 The general syntax looks like this:
 
 ```html
-<iframe src="<origin>" allow="<directive> <allowlist>">
+<iframe src="<origin>" allow="<directive> <allowlist>"></iframe>
 ```
 
 So for example to block all access to geolocation, you would do this:
 
 ```html
-<iframe src="https://example.com" allow="geolocation 'none'">
+<iframe src="https://example.com" allow="geolocation 'none'"></iframe>
 ```
 
 To apply a policy to the current origin and others, you'd do this:
 
 ```html
-<iframe src="https://example.com" allow="geolocation 'self' https://a.example.com https://b.example.com">
+<iframe
+  src="https://example.com"
+  allow="geolocation 'self' https://a.example.com https://b.example.com"></iframe>
 ```
 
 This is important: By default, if an `<iframe>` navigates to another origin, the policy is not applied to the origin that the `<iframe>` navigates to. By listing the origin that the `<iframe>` navigates to in the `allow` attribute, the Permissions Policy that was applied to the original `<iframe>` will be applied to the origin the `<iframe>` navigates to.
@@ -176,15 +178,17 @@ This is important: By default, if an `<iframe>` navigates to another origin, the
 Several features can be controlled at the same time by including a semi-colon-separated list of policy directives inside the `allow` attribute.
 
 ```html
-<iframe src="https://example.com" allow="geolocation 'self' https://a.example.com https://b.example.com; fullscreen 'none'">
+<iframe
+  src="https://example.com"
+  allow="geolocation 'self' https://a.example.com https://b.example.com; fullscreen 'none'"></iframe>
 ```
 
 It is worth giving the `src` value a special mention. We mentioned above that using this allowlist value will mean that the associated feature will be allowed in this `<iframe>`, as long as the document loaded into it comes from the same origin as the URL in its {{HTMLElement('iframe','src','#Attributes')}} attribute. This value is the _default_ `allowlist` value for features listed in `allow`, so the following are equivalent:
 
 ```html
 <iframe src="https://example.com" allow="geolocation 'src'">
-
-<iframe src="https://example.com" allow="geolocation">
+  <iframe src="https://example.com" allow="geolocation"></iframe
+></iframe>
 ```
 
 > **Note:** As you'll have noticed, the syntax for `<iframe>` policies is a bit different to the syntax for `Permissions-Policy` headers. The former still uses the same syntax as the older Feature Policy specification, which was superseded by Permissions Policy.
@@ -210,13 +214,13 @@ Permissions-Policy: geolocation=(self https://trusted-ad-network.com)
 Over in our ad `<iframe>`s, we could set access to the `https://trusted-ad-network.com` origin like this:
 
 ```html
-<iframe src="https://trusted-ad-network.com" allow="geolocation">
+<iframe src="https://trusted-ad-network.com" allow="geolocation"></iframe>
 ```
 
 If a different origin ended up getting loaded into `<iframe>`, it would not have access to geolocation:
 
 ```html
-<iframe src="https://rogue-origin-example.com" allow="geolocation">
+<iframe src="https://rogue-origin-example.com" allow="geolocation"></iframe>
 ```
 
 ## Specifications

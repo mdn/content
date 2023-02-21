@@ -1,5 +1,5 @@
 ---
-title: 'Permissions-Policy: execution-while-out-of-viewport'
+title: "Permissions-Policy: execution-while-out-of-viewport"
 slug: Web/HTTP/Headers/Permissions-Policy/execution-while-out-of-viewport
 tags:
   - Directive
