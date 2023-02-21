@@ -2,19 +2,6 @@
 title: HTMLImageElement.useMap
 slug: Web/API/HTMLImageElement/useMap
 page-type: web-api-instance-property
-tags:
-  - API
-  - DOM
-  - HTML
-  - HTML DOM
-  - HTML WHATWG
-  - HTMLImageElement
-  - Image maps
-  - Links
-  - Property
-  - Reference
-  - interactive
-  - useMap
 browser-compat: api.HTMLImageElement.useMap
 ---
 

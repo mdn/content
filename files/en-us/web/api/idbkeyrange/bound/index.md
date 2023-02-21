@@ -2,15 +2,6 @@
 title: IDBKeyRange.bound()
 slug: Web/API/IDBKeyRange/bound
 page-type: web-api-static-method
-tags:
-  - API
-  - Database
-  - IDBKeyRange
-  - IndexedDB
-  - Method
-  - Reference
-  - Storage
-  - bound
 browser-compat: api.IDBKeyRange.bound
 ---
 

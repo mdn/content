@@ -2,17 +2,9 @@
 title: VRPose.position
 slug: Web/API/VRPose/position
 page-type: web-api-instance-property
-tags:
-  - API
-  - Deprecated
-  - Position
-  - Property
-  - Reference
-  - VR
-  - VRPose
-  - Virtual Reality
-  - WebVR
-  - Non-standard
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.VRPose.position
 ---
 

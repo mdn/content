@@ -2,16 +2,8 @@
 title: ":blank"
 slug: Web/CSS/:blank
 page-type: css-pseudo-class
-tags:
-  - ":blank"
-  - CSS
-  - CSS Selectors
-  - Draft
-  - Experimental
-  - NeedsContent
-  - NeedsExample
-  - Pseudo-class
-  - Selector
+status:
+  - experimental
 browser-compat: css.selectors.blank
 ---
 

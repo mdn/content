@@ -2,11 +2,6 @@
 title: TextEncoderStream()
 slug: Web/API/TextEncoderStream/TextEncoderStream
 page-type: web-api-constructor
-tags:
-  - API
-  - Constructor
-  - Reference
-  - TextEncoderStream
 browser-compat: api.TextEncoderStream.TextEncoderStream
 ---
 

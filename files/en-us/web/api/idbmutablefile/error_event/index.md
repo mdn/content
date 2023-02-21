@@ -2,14 +2,9 @@
 title: 'IDBMutableFile: error event'
 slug: Web/API/IDBMutableFile/error_event
 page-type: web-api-event
-tags:
-  - API
-  - Files
-  - Event
-  - Reference
-  - WebAPI
-  - Non-standard
-  - Deprecated
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.IDBMutableFile.error_event
 ---
 

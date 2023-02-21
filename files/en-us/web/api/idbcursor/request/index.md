@@ -2,15 +2,6 @@
 title: IDBCursor.request
 slug: Web/API/IDBCursor/request
 page-type: web-api-instance-property
-tags:
-  - API
-  - Database
-  - IDBCursor
-  - IndexedDB
-  - Property
-  - Reference
-  - Storage
-  - request
 browser-compat: api.IDBCursor.request
 ---
 

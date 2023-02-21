@@ -1,6 +1,7 @@
 ---
 title: contextualIdentities.onRemoved
 slug: Mozilla/Add-ons/WebExtensions/API/contextualIdentities/onRemoved
+page-type: webextension-api-event
 tags:
   - API
   - Add-ons

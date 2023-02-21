@@ -5,7 +5,7 @@ page-type: web-api-instance-property
 browser-compat: api.Element.elementTiming
 ---
 
-{{DefaultAPISidebar("DOM")}}
+{{APIRef("DOM")}}{{SeeCompatTable}}
 
 The **`elementTiming`** property of the {{domxref("Element")}} interface identifies elements for observation in the {{domxref("PerformanceElementTiming")}} API. The `elementTiming` property reflects the value of the [`elementtiming`](/en-US/docs/Web/HTML/Attributes/elementtiming) attribute.
 

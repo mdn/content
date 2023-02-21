@@ -2,14 +2,6 @@
 title: console.timeEnd()
 slug: Web/API/console/timeEnd
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - Debugging
-  - Method
-  - Web Development
-  - console
-  - web console
 browser-compat: api.console.timeEnd
 ---
 

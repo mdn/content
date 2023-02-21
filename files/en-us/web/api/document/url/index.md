@@ -2,12 +2,6 @@
 title: Document.URL
 slug: Web/API/Document/URL
 page-type: web-api-instance-property
-tags:
-  - API
-  - DOM
-  - Document
-  - Property
-  - Reference
 browser-compat: api.Document.URL
 ---
 

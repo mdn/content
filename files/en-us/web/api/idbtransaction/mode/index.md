@@ -2,15 +2,6 @@
 title: IDBTransaction.mode
 slug: Web/API/IDBTransaction/mode
 page-type: web-api-instance-property
-tags:
-  - API
-  - Database
-  - IDBTransaction
-  - IndexedDB
-  - Property
-  - Reference
-  - Storage
-  - mode
 browser-compat: api.IDBTransaction.mode
 ---
 

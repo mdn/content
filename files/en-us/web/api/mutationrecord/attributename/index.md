@@ -2,11 +2,6 @@
 title: MutationRecord.attributeName
 slug: Web/API/MutationRecord/attributeName
 page-type: web-api-instance-property
-tags:
-  - attributeName
-  - MutationRecord
-  - Property
-  - Reference
 browser-compat: api.MutationRecord.attributeName
 ---
 

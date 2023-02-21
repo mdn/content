@@ -2,14 +2,6 @@
 title: Document.hasStorageAccess()
 slug: Web/API/Document/hasStorageAccess
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - Document
-  - Method
-  - Reference
-  - Storage Access API
-  - hasStorageAccess
 browser-compat: api.Document.hasStorageAccess
 ---
 

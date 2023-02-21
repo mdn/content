@@ -99,13 +99,13 @@ Using `content-visibility: hidden;` instead of `display: none;` preserves the re
 
 ```html
 <div class="hidden">
-  <button class="toggle">Click me</button>
+  <button class="toggle">Show</button>
   <p>
     This content is initially hidden and can be shown by clicking the button.
   </p>
 </div>
 <div class="visible">
-  <button class="toggle">Click me</button>
+  <button class="toggle">Hide</button>
   <p>
     This content is initially visible and can be hidden by clicking the button.
   </p>
@@ -114,7 +114,7 @@ Using `content-visibility: hidden;` instead of `display: none;` preserves the re
 
 #### CSS
 
-The `content-visibility` property is set on the paragraph in the containing `div` element. This means that the content in the paragraphs will be either hidden or visible depending on the class of the parent `div` element.
+The `content-visibility` property is set on paragraphs that are direct children of elements with the `visible` and `hidden` classes. In our example, we can show and hide content in paragraphs depending on the CSS class of parent div elements.
 
 The `contain-intrinsic-size` property is included to represent the content size. This helps to reduce layout shift when content is hidden.
 

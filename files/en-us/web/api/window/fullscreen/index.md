@@ -2,14 +2,8 @@
 title: Window.fullScreen
 slug: Web/API/Window/fullScreen
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTML DOM
-  - NeedsMarkupWork
-  - Non-standard
-  - Property
-  - Reference
-  - Window
+status:
+  - non-standard
 browser-compat: api.Window.fullScreen
 ---
 

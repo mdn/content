@@ -2,18 +2,6 @@
 title: Element.outerHTML
 slug: Web/API/Element/outerHTML
 page-type: web-api-instance-property
-tags:
-  - API
-  - DOM
-  - DOM Parsing
-  - Element
-  - NeedsMobileBrowserCompatibility
-  - Parsing
-  - Property
-  - Reference
-  - Serialization
-  - Serializing
-  - outerHTML
 browser-compat: api.Element.outerHTML
 ---
 

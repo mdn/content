@@ -2,12 +2,6 @@
 title: 'HTMLMediaElement: loadeddata event'
 slug: Web/API/HTMLMediaElement/loadeddata_event
 page-type: web-api-event
-tags:
-  - Audio
-  - Event
-  - HTMLMediaElement
-  - Reference
-  - Video
 browser-compat: api.HTMLMediaElement.loadeddata_event
 ---
 

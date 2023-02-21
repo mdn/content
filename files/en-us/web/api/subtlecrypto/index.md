@@ -2,15 +2,6 @@
 title: SubtleCrypto
 slug: Web/API/SubtleCrypto
 page-type: web-api-interface
-tags:
-  - API
-  - Advanced
-  - Cryptography
-  - Encryption
-  - Interface
-  - Reference
-  - SubtleCrypto
-  - Web Crypto API
 browser-compat: api.SubtleCrypto
 ---
 

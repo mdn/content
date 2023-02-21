@@ -2,15 +2,8 @@
 title: USBConfiguration
 slug: Web/API/USBConfiguration
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Reference
-  - USB
-  - USBConfiguration
-  - WebUSB
-  - WebUSB API
-  - Experimental
+status:
+  - experimental
 browser-compat: api.USBConfiguration
 ---
 

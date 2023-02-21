@@ -2,13 +2,9 @@
 title: Function.prototype.arguments
 slug: Web/JavaScript/Reference/Global_Objects/Function/arguments
 page-type: javascript-instance-accessor-property
-tags:
-  - Deprecated
-  - Function
-  - JavaScript
-  - Property
-  - arguments
-  - Non-standard
+status:
+  - deprecated
+  - non-standard
 browser-compat: javascript.builtins.Function.arguments
 ---
 

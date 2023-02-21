@@ -2,16 +2,8 @@
 title: SpeechGrammarList.length
 slug: Web/API/SpeechGrammarList/length
 page-type: web-api-instance-property
-tags:
-  - API
-  - Experimental
-  - Property
-  - Reference
-  - SpeechGrammarList
-  - Web Speech API
-  - length
-  - recognition
-  - speech
+status:
+  - experimental
 browser-compat: api.SpeechGrammarList.length
 ---
 

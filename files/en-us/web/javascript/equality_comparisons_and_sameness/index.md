@@ -2,17 +2,6 @@
 title: Equality comparisons and sameness
 slug: Web/JavaScript/Equality_comparisons_and_sameness
 page-type: guide
-tags:
-  - Comparison
-  - Equality
-  - Guide
-  - Intermediate
-  - JS
-  - JavaScript
-  - NaN
-  - SameValue
-  - SameValueZero
-  - Sameness
 ---
 
 {{jsSidebar("Intermediate")}}

@@ -2,13 +2,6 @@
 title: Clearing with colors
 slug: Web/API/WebGL_API/By_example/Clearing_with_colors
 page-type: guide
-tags:
-  - Beginner
-  - Example
-  - Graphics
-  - Learn
-  - Tutorial
-  - WebGL
 ---
 
 {{PreviousNext("Learn/WebGL/By_example/Detect_WebGL","Learn/WebGL/By_example/Clearing_by_clicking")}}

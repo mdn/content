@@ -2,13 +2,8 @@
 title: VideoEncoder.configure()
 slug: Web/API/VideoEncoder/configure
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - configure
-  - VideoEncoder
-  - Experimental
+status:
+  - experimental
 browser-compat: api.VideoEncoder.configure
 ---
 

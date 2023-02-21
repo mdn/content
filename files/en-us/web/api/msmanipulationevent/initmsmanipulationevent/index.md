@@ -2,14 +2,9 @@
 title: MSManipulationEvent.initMSManipulationEvent()
 slug: Web/API/MSManipulationEvent/initMSManipulationEvent
 page-type: web-api-instance-method
-tags:
-  - API
-  - API:Microsoft Extensions
-  - Deprecated
-  - Method
-  - Non-standard
-  - Reference
-  - initMSManipulationEvent
+status:
+  - deprecated
+  - non-standard
 ---
 
 {{APIRef("UI Events")}}{{Non-standard_Header}}{{Deprecated_Header}}

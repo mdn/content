@@ -2,14 +2,6 @@
 title: Window.opener
 slug: Web/API/Window/opener
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTML DOM
-  - NeedsExample
-  - Property
-  - Reference
-  - Window
-  - opener
 browser-compat: api.Window.opener
 ---
 

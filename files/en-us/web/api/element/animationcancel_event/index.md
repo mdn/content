@@ -1,15 +1,6 @@
 ---
 title: "Element: animationcancel event"
 slug: Web/API/Element/animationcancel_event
-tags:
-  - API
-  - Animation
-  - AnimationEvent
-  - CSS Animations
-  - Event
-  - Element
-  - Reference
-  - animationcancel
 browser-compat: api.Element.animationcancel_event
 page-type: web-api-event
 ---

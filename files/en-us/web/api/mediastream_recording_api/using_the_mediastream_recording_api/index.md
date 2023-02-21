@@ -2,14 +2,6 @@
 title: Using the MediaStream Recording API
 slug: Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recording_API
 page-type: guide
-tags:
-  - API
-  - Example
-  - Guide
-  - MediaRecorder
-  - MediaStream Recording API
-  - NeedsUpdate
-  - Tutorial
 browser-compat: api.MediaRecorder
 ---
 

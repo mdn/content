@@ -2,11 +2,6 @@
 title: DocumentType.remove()
 slug: Web/API/DocumentType/remove
 page-type: web-api-instance-method
-tags:
-  - API
-  - DocumentType
-  - DOM
-  - Method
 browser-compat: api.DocumentType.remove
 ---
 

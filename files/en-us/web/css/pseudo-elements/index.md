@@ -2,13 +2,6 @@
 title: Pseudo-elements
 slug: Web/CSS/Pseudo-elements
 page-type: landing-page
-tags:
-  - CSS
-  - Guide
-  - Overview
-  - Pseudo-element
-  - Reference
-  - Selectors
 spec-urls: https://www.w3.org/TR/CSS22/selector.html#pseudo-element-selectors
 ---
 

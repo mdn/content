@@ -2,10 +2,6 @@
 title: GeneratorFunction() constructor
 slug: Web/JavaScript/Reference/Global_Objects/GeneratorFunction/GeneratorFunction
 page-type: javascript-constructor
-tags:
-  - Constructor
-  - JavaScript
-  - Reference
 browser-compat: javascript.builtins.GeneratorFunction.GeneratorFunction
 ---
 

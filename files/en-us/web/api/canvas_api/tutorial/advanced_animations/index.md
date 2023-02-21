@@ -2,10 +2,6 @@
 title: Advanced animations
 slug: Web/API/Canvas_API/Tutorial/Advanced_animations
 page-type: guide
-tags:
-  - Canvas
-  - Graphics
-  - Tutorial
 ---
 
 {{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Basic_animations", "Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas")}}

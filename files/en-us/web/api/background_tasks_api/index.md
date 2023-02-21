@@ -2,14 +2,6 @@
 title: Background Tasks API
 slug: Web/API/Background_Tasks_API
 page-type: web-api-overview
-tags:
-  - API
-  - Background Tasks API
-  - Guide
-  - IdleDeadline
-  - Overview
-  - cancelIdleCallback
-  - requestIdleCallback
 browser-compat: api.Window.requestIdleCallback
 ---
 

@@ -2,13 +2,8 @@
 title: CanvasRenderingContext2D.wordSpacing
 slug: Web/API/CanvasRenderingContext2D/wordSpacing
 page-type: web-api-instance-property
-tags:
-  - API
-  - Canvas
-  - CanvasRenderingContext2D
-  - Property
-  - Reference
-  - Experimental
+status:
+  - experimental
 browser-compat: api.CanvasRenderingContext2D.wordSpacing
 ---
 

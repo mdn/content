@@ -2,12 +2,6 @@
 title: background-attachment
 slug: Web/CSS/background-attachment
 page-type: css-property
-tags:
-  - CSS
-  - CSS Background
-  - CSS Property
-  - Reference
-  - recipe:css-property
 browser-compat: css.properties.background-attachment
 ---
 

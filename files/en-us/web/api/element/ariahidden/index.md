@@ -2,14 +2,6 @@
 title: Element.ariaHidden
 slug: Web/API/Element/ariaHidden
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - ariaHidden
-  - AriaAttributes
-  - AriaMixin
-  - Element
 browser-compat: api.Element.ariaHidden
 ---
 

@@ -2,11 +2,6 @@
 title: Writing a WebSocket server in C#
 slug: Web/API/WebSockets_API/Writing_WebSocket_server
 page-type: guide
-tags:
-  - HTML
-  - NeedsMarkupWork
-  - Tutorial
-  - WebSockets
 ---
 
 {{DefaultAPISidebar("Websockets API")}}

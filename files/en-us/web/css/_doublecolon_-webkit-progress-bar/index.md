@@ -2,12 +2,8 @@
 title: "::-webkit-progress-bar"
 slug: Web/CSS/::-webkit-progress-bar
 page-type: css-pseudo-element
-tags:
-  - CSS
-  - Non-standard
-  - Pseudo-element
-  - Reference
-  - Selector
+status:
+  - non-standard
 browser-compat: css.selectors.-webkit-progress-bar
 ---
 

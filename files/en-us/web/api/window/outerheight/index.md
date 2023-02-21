@@ -2,12 +2,6 @@
 title: Window.outerHeight
 slug: Web/API/Window/outerHeight
 page-type: web-api-instance-property
-tags:
-  - API
-  - CSSOM View
-  - NeedsContent
-  - Property
-  - Reference
 browser-compat: api.Window.outerHeight
 ---
 

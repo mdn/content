@@ -2,14 +2,6 @@
 title: indexedDB
 slug: Web/API/indexedDB
 page-type: web-api-global-property
-tags:
-  - API
-  - Database
-  - IndexedDB
-  - Property
-  - Read-only
-  - Reference
-  - Storage
 browser-compat: api.indexedDB
 ---
 

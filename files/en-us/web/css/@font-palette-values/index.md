@@ -2,11 +2,6 @@
 title: "@font-palette-values"
 slug: Web/CSS/@font-palette-values
 page-type: css-at-rule
-tags:
-  - CSS
-  - CSS Fonts
-  - Color Fonts
-  - Reference
 browser-compat: css.at-rules.font-palette-values
 ---
 

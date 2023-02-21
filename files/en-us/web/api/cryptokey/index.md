@@ -2,18 +2,6 @@
 title: CryptoKey
 slug: Web/API/CryptoKey
 page-type: web-api-interface
-tags:
-  - API
-  - Code
-  - CryptoKey
-  - Cryptography
-  - Encoding
-  - Encryption
-  - Interface
-  - Privacy
-  - Reference
-  - Security
-  - Web Crypto API
 browser-compat: api.CryptoKey
 ---
 

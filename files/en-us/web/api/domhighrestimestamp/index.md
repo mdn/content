@@ -1,17 +1,6 @@
 ---
 title: DOMHighResTimeStamp
 slug: Web/API/DOMHighResTimeStamp
-tags:
-  - API
-  - DOMHighResTimeStamp
-  - High Resolution Time
-  - Milliseconds
-  - Performance
-  - Reference
-  - Time
-  - Type
-  - speed
-  - timeStamp
 browser-compat: api.DOMHighResTimestamp
 ---
 
@@ -31,7 +20,7 @@ To offer protection against timing attacks and fingerprinting, the precision of 
 
 ```js
 // reduced time precision (2ms) in Firefox 60
-event.timeStamp
+event.timeStamp;
 // 1519211809934
 // 1519211810362
 // 1519211811670

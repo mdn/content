@@ -2,11 +2,6 @@
 title: TypedArray.name
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/name
 page-type: javascript-static-data-property
-tags:
-  - JavaScript
-  - Property
-  - TypedArray
-  - TypedArrays
 browser-compat: javascript.builtins.TypedArray.name
 ---
 

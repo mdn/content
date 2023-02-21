@@ -2,16 +2,8 @@
 title: USBDevice.configuration
 slug: Web/API/USBDevice/configuration
 page-type: web-api-instance-property
-tags:
-  - API
-  - Configuration
-  - Property
-  - Reference
-  - USB
-  - USBDevice
-  - WebUSB
-  - WebUSB API
-  - Experimental
+status:
+  - experimental
 browser-compat: api.USBDevice.configuration
 ---
 

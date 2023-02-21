@@ -2,14 +2,6 @@
 title: IDBTransaction
 slug: Web/API/IDBTransaction
 page-type: web-api-interface
-tags:
-  - API
-  - Database
-  - IDBTransaction
-  - IndexedDB
-  - Interface
-  - Reference
-  - Storage
 browser-compat: api.IDBTransaction
 ---
 

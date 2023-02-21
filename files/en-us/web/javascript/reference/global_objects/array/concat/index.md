@@ -2,15 +2,6 @@
 title: Array.prototype.concat()
 slug: Web/JavaScript/Reference/Global_Objects/Array/concat
 page-type: javascript-instance-method
-tags:
-  - Array
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - array.concat
-  - concat
-  - Polyfill
 browser-compat: javascript.builtins.Array.concat
 ---
 
