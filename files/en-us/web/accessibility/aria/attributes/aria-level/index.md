@@ -31,7 +31,7 @@ The `aria-level` attribute is a required attribute of the [`heading`](/en-US/doc
 <div role="heading" aria-level="3">Heading for this sub section</div>
 ```
 
-Opt for using the {{htmlelement('h1')}} thru {{htmlelement('h6')}} elements instead.
+Opt for using the {{htmlelement("heading_elements", "h1")}} thru {{htmlelement("heading_elements", "h6")}} elements instead.
 
 ### Within `treegrid` role
 
@@ -66,7 +66,7 @@ Used in roles:
 
 ## See Also
 
-- [`<h1>` thru `<h6>`: The HTML Section Heading elements](/en-US/docs/Web/HTML/Element/Heading_Elements) ({{htmlelement('h1')}}, {{htmlelement('h2')}}, {{htmlelement('h3')}}, {{htmlelement('h4')}}, {{htmlelement('h5')}}, and {{htmlelement('h6')}})
+- [`<h1>` thru `<h6>`: The HTML Section Heading elements](/en-US/docs/Web/HTML/Element/Heading_Elements) ({{htmlelement("heading_elements", "h1")}}, {{htmlelement("heading_elements", "h2")}}, {{htmlelement("heading_elements", "h3")}}, {{htmlelement("heading_elements", "h4")}}, {{htmlelement("heading_elements", "h5")}}, and {{htmlelement("heading_elements", "h6")}})
 
 <section id="Quick_links">
 <strong><a href="/en-US/docs/Web/Accessibility/ARIA/Attributes">WAI-ARIA states and properties</a></strong>
