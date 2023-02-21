@@ -2,12 +2,6 @@
 title: font-kerning
 slug: Web/CSS/font-kerning
 page-type: css-property
-tags:
-  - CSS
-  - CSS Fonts
-  - CSS Property
-  - Reference
-  - recipe:css-property
 browser-compat: css.properties.font-kerning
 ---
 

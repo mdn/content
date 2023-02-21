@@ -2,17 +2,6 @@
 title: cursor
 slug: Web/CSS/cursor
 page-type: css-property
-tags:
-  - Arrow
-  - CSS
-  - CSS Property
-  - Cursor
-  - Custom Cursor
-  - Reference
-  - UI
-  - mouse
-  - pointer
-  - recipe:css-property
 browser-compat: css.properties.cursor
 ---
 

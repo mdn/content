@@ -2,13 +2,7 @@
 title: CSS filter effects
 slug: Web/CSS/Filter_Effects
 page-type: css-module
-tags:
-  - CSS
-  - Filter Effects
-  - Guide
-  - Overview
-  - Reference
-spec-urls: 
+spec-urls:
   - https://drafts.fxtf.org/filter-effects-2/
   - https://drafts.fxtf.org/filter-effects-1/
 ---
