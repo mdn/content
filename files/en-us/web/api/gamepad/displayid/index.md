@@ -12,7 +12,7 @@ browser-compat: api.Gamepad.displayId
 
 The **`displayId`** read-only property of the {{domxref("Gamepad")}} interface _returns the {{domxref("VRDisplay.displayId")}} of the associated {{domxref("VRDisplay")}} — the `VRDisplay` that the gamepad is controlling the displayed scene of._
 
-A Gamepad is considered to be associated with a {{domxref("VRDisplay")}} if it reports a pose that is in the same space as the {{domxref("VRDisplay.pose")}}.
+A Gamepad is considered to be associated with a {{domxref("VRDisplay")}} if it reports a pose that is in the same space as the display's pose, see {{domxref("VRDisplay.getPose()")}}.
 
 > **Note:** This property was part of the old [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/#gamepad-getvrdisplays-attribute). It has been superseded by the [WebXR Gamepads Module](https://immersive-web.github.io/webxr-gamepads-module/).
 >
