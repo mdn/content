@@ -2,12 +2,6 @@
 title: Memory management
 slug: Web/JavaScript/Memory_Management
 page-type: guide
-tags:
-  - Garbage collection
-  - Guide
-  - JavaScript
-  - Performance
-  - memory
 ---
 
 {{JsSidebar("Advanced")}}

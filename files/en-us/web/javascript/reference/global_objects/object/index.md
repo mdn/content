@@ -2,10 +2,6 @@
 title: Object
 slug: Web/JavaScript/Reference/Global_Objects/Object
 page-type: javascript-class
-tags:
-  - Class
-  - JavaScript
-  - Object
 browser-compat: javascript.builtins.Object
 ---
 

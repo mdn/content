@@ -137,16 +137,28 @@ In supporting browsers, information on the text fragments matched in the current
 Try running the following in a supporting browser's devtools, in a tab with one or more matched text fragments:
 
 ```js
-document.fragmentDirective
+document.fragmentDirective;
 ```
 
 You should get a {{domxref("FragmentDirective")}} object instance returned with a structure similar to the following:
 
 ```js
 items: [
-  {prefix: '', textStart: 'Module Workers', textEnd: '', suffix: 'support', type: 'text'},
-  {prefix: 'feedback on', textStart: 'usability', textEnd: '', suffix: '', type: 'text'}
-]
+  {
+    prefix: "",
+    textStart: "Module Workers",
+    textEnd: "",
+    suffix: "support",
+    type: "text",
+  },
+  {
+    prefix: "feedback on",
+    textStart: "usability",
+    textEnd: "",
+    suffix: "",
+    type: "text",
+  },
+];
 ```
 
 This functionality is mainly intended for feature detection at present, but in future, it could be expanded to include other information such as translation hints.

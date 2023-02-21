@@ -2,13 +2,6 @@
 title: Array.prototype.lastIndexOf()
 slug: Web/JavaScript/Reference/Global_Objects/Array/lastIndexOf
 page-type: javascript-instance-method
-tags:
-  - Array
-  - ECMAScript 5
-  - JavaScript
-  - Method
-  - Prototype
-  - Polyfill
 browser-compat: javascript.builtins.Array.lastIndexOf
 ---
 

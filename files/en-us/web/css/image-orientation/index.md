@@ -2,12 +2,6 @@
 title: image-orientation
 slug: Web/CSS/image-orientation
 page-type: css-property
-tags:
-  - CSS
-  - CSS Property
-  - Reference
-  - image-orientation
-  - recipe:css-property
 browser-compat: css.properties.image-orientation
 ---
 

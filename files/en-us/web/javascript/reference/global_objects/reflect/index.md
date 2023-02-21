@@ -2,12 +2,6 @@
 title: Reflect
 slug: Web/JavaScript/Reference/Global_Objects/Reflect
 page-type: javascript-namespace
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Namespace
-  - Overview
-  - Reflect
 browser-compat: javascript.builtins.Reflect
 ---
 

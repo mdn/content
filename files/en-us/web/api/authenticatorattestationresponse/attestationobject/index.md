@@ -104,5 +104,5 @@ navigator.credentials
 ## See also
 
 - {{domxref("CredentialsContainer.create()")}}: the method used to create a statement with
-  acryptographic `challenge` which signature by the authenticator is contained in `attStmt`,
+  a cryptographic `challenge` which signature by the authenticator is contained in `attStmt`,
   with the specified `attestation` transport option.

@@ -2,12 +2,6 @@
 title: Bitwise OR (|)
 slug: Web/JavaScript/Reference/Operators/Bitwise_OR
 page-type: javascript-operator
-tags:
-  - Bitwise operator
-  - JavaScript
-  - Language feature
-  - Operator
-  - Reference
 browser-compat: javascript.operators.bitwise_or
 ---
 

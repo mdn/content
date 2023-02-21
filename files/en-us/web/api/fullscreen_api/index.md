@@ -120,7 +120,6 @@ If fullscreen mode is already active (`fullscreenElement` is not `null`), we cal
 
 ## See also
 
-- [Using fullscreen mode](/en-US/docs/Web/API/Fullscreen_API)
 - {{DOMxRef("Element.requestFullscreen()")}}
 - {{DOMxRef("Document.exitFullscreen()")}}
 - {{DOMxRef("Document.fullscreen")}}

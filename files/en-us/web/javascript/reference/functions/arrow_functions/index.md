@@ -2,13 +2,6 @@
 title: Arrow function expressions
 slug: Web/JavaScript/Reference/Functions/Arrow_functions
 page-type: javascript-language-feature
-tags:
-  - ECMAScript 2015
-  - Functions
-  - Intermediate
-  - JavaScript
-  - Language feature
-  - Reference
 browser-compat: javascript.functions.arrow_functions
 ---
 

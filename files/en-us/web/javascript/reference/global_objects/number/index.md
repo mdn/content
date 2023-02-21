@@ -2,12 +2,6 @@
 title: Number
 slug: Web/JavaScript/Reference/Global_Objects/Number
 page-type: javascript-class
-tags:
-  - Class
-  - JavaScript
-  - Number
-  - Reference
-  - Polyfill
 browser-compat: javascript.builtins.Number
 ---
 

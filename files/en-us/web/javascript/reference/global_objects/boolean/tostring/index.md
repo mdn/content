@@ -2,12 +2,6 @@
 title: Boolean.prototype.toString()
 slug: Web/JavaScript/Reference/Global_Objects/Boolean/toString
 page-type: javascript-instance-method
-tags:
-  - Boolean
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
 browser-compat: javascript.builtins.Boolean.toString
 ---
 

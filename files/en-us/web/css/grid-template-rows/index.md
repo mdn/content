@@ -2,12 +2,6 @@
 title: grid-template-rows
 slug: Web/CSS/grid-template-rows
 page-type: css-property
-tags:
-  - CSS
-  - CSS Grid
-  - CSS Property
-  - Reference
-  - recipe:css-property
 browser-compat: css.properties.grid-template-rows
 ---
 

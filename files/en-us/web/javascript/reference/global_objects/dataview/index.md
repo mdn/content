@@ -2,12 +2,6 @@
 title: DataView
 slug: Web/JavaScript/Reference/Global_Objects/DataView
 page-type: javascript-class
-tags:
-  - Class
-  - DataView
-  - JavaScript
-  - TypedArrays
-  - Polyfill
 browser-compat: javascript.builtins.DataView
 ---
 
