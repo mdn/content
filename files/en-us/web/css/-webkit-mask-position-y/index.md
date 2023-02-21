@@ -2,13 +2,8 @@
 title: "-webkit-mask-position-y"
 slug: Web/CSS/-webkit-mask-position-y
 page-type: css-property
-tags:
-  - CSS
-  - CSS Masking
-  - CSS Property
-  - Non-standard
-  - Reference
-  - recipe:css-property
+status:
+  - non-standard
 browser-compat: css.properties.-webkit-mask-position-y
 ---
 

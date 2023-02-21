@@ -224,6 +224,10 @@ Note that built-in operations expecting BigInts often truncate the BigInt to a f
 
 ## Instance properties
 
+These properties are defined on `BigInt.prototype` and shared by all `BigInt` instances.
+
+- {{jsxref("Object/constructor", "BigInt.prototype.constructor")}}
+  - : The constructor function that created the instance object. For `BigInt` instances, the initial value is the {{jsxref("BigInt/BigInt", "BigInt")}} constructor.
 - `BigInt.prototype[@@toStringTag]`
   - : The initial value of the [`@@toStringTag`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) property is the string `"BigInt"`. This property is used in {{jsxref("Object.prototype.toString()")}}. However, because `BigInt` also has its own [`toString()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt/toString) method, this property is not used unless you call [`Object.prototype.toString.call()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/call) with a BigInt as `thisArg`.
 

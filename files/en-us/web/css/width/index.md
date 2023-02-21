@@ -2,15 +2,6 @@
 title: width
 slug: Web/CSS/width
 page-type: css-property
-tags:
-  - CSS
-  - CSS Property
-  - Layout
-  - Reference
-  - dimensions
-  - recipe:css-property
-  - size
-  - width
 browser-compat: css.properties.width
 ---
 

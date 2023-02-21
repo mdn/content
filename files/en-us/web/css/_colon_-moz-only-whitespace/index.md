@@ -2,13 +2,8 @@
 title: ":-moz-only-whitespace"
 slug: Web/CSS/:-moz-only-whitespace
 page-type: css-pseudo-class
-tags:
-  - ":-moz-only-whitespace"
-  - CSS
-  - Non-standard
-  - Pseudo-class
-  - Reference
-  - Selector
+status:
+  - non-standard
 browser-compat: css.selectors.-moz-only-whitespace
 ---
 

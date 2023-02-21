@@ -33,8 +33,12 @@ _Inherits static methods from its parent {{jsxref("TypedArray")}}_.
 
 _Also inherits instance properties from its parent {{jsxref("TypedArray")}}_.
 
+These properties are defined on `Float32Array.prototype` and shared by all `Float32Array` instances.
+
 - {{jsxref("TypedArray.BYTES_PER_ELEMENT", "Float32Array.prototype.BYTES_PER_ELEMENT")}}
   - : Returns a number value of the element size. `4` in the case of a `Float32Array`.
+- {{jsxref("Object/constructor", "Float32Array.prototype.constructor")}}
+  - : The constructor function that created the instance object. For `Float32Array` instances, the initial value is the {{jsxref("Float32Array/Float32Array", "Float32Array")}} constructor.
 
 ## Instance methods
 

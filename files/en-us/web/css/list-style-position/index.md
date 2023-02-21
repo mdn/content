@@ -2,12 +2,6 @@
 title: list-style-position
 slug: Web/CSS/list-style-position
 page-type: css-property
-tags:
-  - CSS
-  - CSS Lists
-  - CSS Property
-  - Reference
-  - recipe:css-property
 browser-compat: css.properties.list-style-position
 ---
 

@@ -2,16 +2,6 @@
 title: <easing-function>
 slug: Web/CSS/easing-function
 page-type: css-type
-tags:
-  - API
-  - CSS
-  - CSS Animations
-  - CSS Data Type
-  - CSS Transitions
-  - Data Type
-  - Layout
-  - Reference
-  - easing-function
 browser-compat: css.types.easing-function
 ---
 

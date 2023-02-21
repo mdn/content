@@ -111,10 +111,14 @@ The static properties are all well-known Symbols. In these Symbols' descriptions
 
 ## Instance properties
 
-- `Symbol.prototype[@@toStringTag]`
-  - : The initial value of the [`@@toStringTag`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) property is the string `"Symbol"`. This property is used in {{jsxref("Object.prototype.toString()")}}. However, because `Symbol` also has its own [`toString()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toString) method, this property is not used unless you call [`Object.prototype.toString.call()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/call) with a symbol as `thisArg`.
+These properties are defined on `Symbol.prototype` and shared by all `Symbol` instances.
+
+- {{jsxref("Object/constructor", "Symbol.prototype.constructor")}}
+  - : The constructor function that created the instance object. For `Symbol` instances, the initial value is the {{jsxref("Symbol/Symbol", "Symbol")}} constructor.
 - {{jsxref("Symbol.prototype.description")}}
   - : A read-only string containing the description of the Symbol.
+- `Symbol.prototype[@@toStringTag]`
+  - : The initial value of the [`@@toStringTag`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) property is the string `"Symbol"`. This property is used in {{jsxref("Object.prototype.toString()")}}. However, because `Symbol` also has its own [`toString()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toString) method, this property is not used unless you call [`Object.prototype.toString.call()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/call) with a symbol as `thisArg`.
 
 ## Instance methods
 

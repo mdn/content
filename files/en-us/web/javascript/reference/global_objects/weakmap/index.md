@@ -42,6 +42,10 @@ But because a `WeakMap` doesn't allow observing the liveness of its keys, its ke
 
 ## Instance properties
 
+These properties are defined on `WeakMap.prototype` and shared by all `WeakMap` instances.
+
+- {{jsxref("Object/constructor", "WeakMap.prototype.constructor")}}
+  - : The constructor function that created the instance object. For `WeakMap` instances, the initial value is the {{jsxref("WeakMap/WeakMap", "WeakMap")}} constructor.
 - `WeakMap.prototype[@@toStringTag]`
   - : The initial value of the [`@@toStringTag`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) property is the string `"WeakMap"`. This property is used in {{jsxref("Object.prototype.toString()")}}.
 

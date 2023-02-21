@@ -2,15 +2,9 @@
 title: "-moz-float-edge"
 slug: Web/CSS/-moz-float-edge
 page-type: css-property
-tags:
-  - CSS
-  - CSS Property
-  - CSS:Mozilla Extensions
-  - Layout
-  - NeedsCompatTable
-  - Non-standard
-  - recipe:css-property
-  - Deprecated
+status:
+  - deprecated
+  - non-standard
 browser-compat: css.properties.-moz-float-edge
 ---
 
