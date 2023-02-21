@@ -32,7 +32,7 @@ Where the parameters are:
 - The URL template, used as the handler. The "%s" is replaced with the `href` of the link and a GET is executed on the resultant URL.
 - The user friendly name for the protocol handler.
 
-When a browser executes this code, it should let the user choose how to handle the protocol. The browser could prompt the user for registration immediately or wait until the user clicks on a link that uses the protocol. Firefox displays a prompt in the notification bar area:
+When a browser executes this code, it should let the user choose how to handle the protocol. The browser could prompt the user for registration immediately, or wait until the user clicks on a link that uses the protocol. Firefox displays a prompt in the notification bar area:
 
 ![Screenshot of a prompt that reads: Add Burger handler (google.co.uk) as an application for burger links. An Add Application button is next to the text.](protocolregister.png)
 
