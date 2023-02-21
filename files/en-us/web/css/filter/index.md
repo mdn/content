@@ -79,7 +79,7 @@ filter: brightness(2);
 ```
 
 - {{cssxref("filter-function/contrast", "contrast()")}}
-  - : Adjusts the contrast of the input image. A value of `0%` makes the image grey, `100%` has no effect, and values over `100%` creates a contrast.
+  - : Adjusts the contrast of the input image. A value of `0%` makes the image grey, `100%` has no effect, and values over `100%` create a contrast.
 
 ```css
 filter: contrast(200%);
