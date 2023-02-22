@@ -181,9 +181,9 @@ ctx.stroke();
 ### Live demo
 
 More sophisticated demo of the method. You can play around with the arc radius to see how
-the path changes. The path is drawn from the starting point P0 using arcTo() with control points
-P1 and P2 and a radius that varies from 0 to the maximum radius selected with the slider.
-Then a lineTo() call completes the path to P2.
+the path changes. The path is drawn from the starting point _p0_ using `arcTo()` with control points
+_p1_ and _p2_ and a radius that varies from 0 to the maximum radius selected with the slider.
+Then a `lineTo()` call completes the path to _p2_.
 
 #### HTML
 
@@ -226,7 +226,7 @@ function labelPoint(p, offset, i = 0) {
 
 function drawPoints(points) {
   points.forEach((p, i) => {
-    labelPoint(p, { x: 0, y: -20 }, i);
+    labelPoint(p, { x: 0, y: -20 }, `p${i}`);
   });
 }
 
