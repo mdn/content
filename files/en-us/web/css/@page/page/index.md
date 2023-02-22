@@ -7,7 +7,7 @@ browser-compat: css.at-rules.page.page
 
 {{CSSRef}}
 
-The **`page`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/At-rule) property, used with the {{cssxref("@page")}} at-rule. It is used to use a particular type of page called a **named page** that has been declared on a `@page` at-rule.
+The **`page`** [CSS](/en-US/docs/Web/CSS) property is used to specify the named page, a specific type of page defined by the {{cssxref("@page")}}  [at-rule](/en-US/docs/Web/CSS/At-rule).
 
 If there are multiple selectors that are using a named page consecutively then a forced page break using [`break-after`](/en-US/docs/Web/CSS/break-after) is needed.
 
