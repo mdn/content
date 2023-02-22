@@ -24,7 +24,7 @@ The **`:-moz-locale-dir(ltr)`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US
 
 ## Examples
 
-This example doesn't work if you're not using Firefox, and may not work even in Firefox due to an issue with the selector not working properly with HTML content. It was designed for use with [XUL](/en-US/docs/Archive/Mozilla/XUL).
+This example doesn't work if you're not using Firefox, and may not work even in Firefox due to an issue with the selector not working properly with HTML content. It was designed for use with `XUL`.
 
 ### HTML
 
