@@ -2,13 +2,6 @@
 title: Transcoding assets for Media Source Extensions
 slug: Web/API/Media_Source_Extensions_API/Transcoding_assets_for_MSE
 page-type: guide
-tags:
-  - DASH
-  - Dynamic Adaptive Streaming over HTTP
-  - Encoding
-  - MSE
-  - Media Source Extensions
-  - adaptive
 ---
 
 {{DefaultAPISidebar("Media Source Extensions")}}

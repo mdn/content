@@ -2,15 +2,6 @@
 title: AnimationTimeline
 slug: Web/API/AnimationTimeline
 page-type: web-api-interface
-tags:
-  - API
-  - Animation
-  - AnimationTimeline
-  - Interface
-  - Reference
-  - Web Animations
-  - waapi
-  - web animations api
 browser-compat: api.AnimationTimeline
 ---
 

@@ -22,7 +22,7 @@ There are three types of content categories:
 
 > **Note:** A more detailed discussion of these content categories and their comparative functionalities is beyond the scope of this article; for that, you may wish to read the [relevant portions of the HTML specification](https://html.spec.whatwg.org/multipage/dom.html#kinds-of-content).
 
-[![A Venn diagram showing how the various content categories interrelate. The following sections explain these relationships in text.](content_categories_venn.png)](/en-US/docs/Web/Guide/HTML/Content_categories/content_categories_venn.png)
+[![A Venn diagram showing how the various content categories interrelate. The following sections explain these relationships in text.](content_categories_venn.png)](/en-US/docs/Web/HTML/Content_categories/content_categories_venn.png)
 
 ## Main content categories
 
@@ -67,12 +67,12 @@ The flow elements are:
 - {{HTMLElement("figure")}}
 - {{HTMLElement("footer")}}
 - {{HTMLElement("form")}}
-- {{HTMLElement("h1")}}
-- {{HTMLElement("h2")}}
-- {{HTMLElement("h3")}}
-- {{HTMLElement("h4")}}
-- {{HTMLElement("h5")}}
-- {{HTMLElement("h6")}}
+- {{HTMLElement("Heading_Elements", "h1")}}
+- {{HTMLElement("Heading_Elements", "h2")}}
+- {{HTMLElement("Heading_Elements", "h3")}}
+- {{HTMLElement("Heading_Elements", "h4")}}
+- {{HTMLElement("Heading_Elements", "h5")}}
+- {{HTMLElement("Heading_Elements", "h6")}}
 - {{HTMLElement("header")}}
 - {{HTMLElement("hgroup")}}
 - {{HTMLElement("hr")}}
@@ -139,7 +139,7 @@ Elements belonging to this category are {{HTMLElement("article")}}, {{HTMLElemen
 
 Heading content is a subset of flow content, which defines the title of a section, whether marked by an explicit [sectioning content](#sectioning_content) element, or implicitly defined by the heading content itself. Heading content can be used everywhere flow content is expected.
 
-Elements belonging to this category are {{HTMLElement("h1")}}, {{HTMLElement("h2")}}, {{HTMLElement("h3")}}, {{HTMLElement("h4")}}, {{HTMLElement("h5")}}, {{HTMLElement("h6")}} and {{HTMLElement("hgroup")}}.
+Elements belonging to this category are {{HTMLElement("Heading_Elements", "h1")}}, {{HTMLElement("Heading_Elements", "h2")}}, {{HTMLElement("Heading_Elements", "h3")}}, {{HTMLElement("Heading_Elements", "h4")}}, {{HTMLElement("Heading_Elements", "h5")}}, {{HTMLElement("Heading_Elements", "h6")}} and {{HTMLElement("hgroup")}}.
 
 > **Note:** Though likely to contain heading content, the {{HTMLElement("header")}} is not heading content itself.
 

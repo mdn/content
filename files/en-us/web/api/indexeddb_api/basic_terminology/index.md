@@ -2,10 +2,6 @@
 title: IndexedDB key characteristics and basic terminology
 slug: Web/API/IndexedDB_API/Basic_Terminology
 page-type: guide
-tags:
-  - Advanced
-  - IndexedDB
-  - terminology
 ---
 
 {{DefaultAPISidebar("IndexedDB")}}

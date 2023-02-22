@@ -2,12 +2,6 @@
 title: CSSAnimation.animationName
 slug: Web/API/CSSAnimation/animationName
 page-type: web-api-instance-property
-tags:
-  - API
-  - Animation
-  - CSSAnimation
-  - Property
-  - Reference
 browser-compat: api.CSSAnimation.animationName
 ---
 

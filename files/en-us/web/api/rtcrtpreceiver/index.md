@@ -2,15 +2,6 @@
 title: RTCRtpReceiver
 slug: Web/API/RTCRtpReceiver
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Media
-  - RTCRtpReceiver
-  - Reference
-  - WebRTC
-  - WebRTC Statistics
-  - WebRTC Statistics API
 browser-compat: api.RTCRtpReceiver
 ---
 

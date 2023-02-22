@@ -2,11 +2,6 @@
 title: PerformanceEntry.startTime
 slug: Web/API/PerformanceEntry/startTime
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - Web Performance
 browser-compat: api.PerformanceEntry.startTime
 ---
 

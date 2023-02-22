@@ -2,15 +2,8 @@
 title: FileSystemWritableFileStream.write()
 slug: Web/API/FileSystemWritableFileStream/write
 page-type: web-api-instance-method
-tags:
-  - File
-  - File System Access API
-  - FileSystemWritableFileStream
-  - Method
-  - stream
-  - working with files
-  - write
-  - Experimental
+status:
+  - experimental
 browser-compat: api.FileSystemWritableFileStream.write
 ---
 

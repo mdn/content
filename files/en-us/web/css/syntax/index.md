@@ -2,11 +2,6 @@
 title: Syntax
 slug: Web/CSS/Syntax
 page-type: guide
-tags:
-  - CSS
-  - Guide
-  - Reference
-  - Web
 ---
 
 {{CSSRef}}

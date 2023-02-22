@@ -1,12 +1,6 @@
 ---
-title: 'Element: pointermove event'
+title: "Element: pointermove event"
 slug: Web/API/Element/pointermove_event
-tags:
-  - Event
-  - HTML DOM
-  - Element
-  - PointerEvent
-  - Reference
 browser-compat: api.Element.pointermove_event
 page-type: web-api-event
 ---
@@ -20,9 +14,9 @@ The `pointermove` event is fired when a pointer changes coordinates, and the poi
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('pointermove', (event) => {});
+addEventListener("pointermove", (event) => {});
 
-onpointermove = (event) => { };
+onpointermove = (event) => {};
 ```
 
 ## Event type
@@ -65,20 +59,20 @@ The event, which is of type {{domxref("PointerEvent")}}, provides all the inform
 To add a handler for `pointermove` events using {{domxref("EventTarget.addEventListener", "addEventListener()")}}:
 
 ```js
-const para = document.querySelector('p');
+const para = document.querySelector("p");
 
-para.addEventListener('pointermove', (event) => {
-  console.log('Pointer moved');
+para.addEventListener("pointermove", (event) => {
+  console.log("Pointer moved");
 });
 ```
 
 You can also use the `onpointermove` event handler property:
 
 ```js
-const para = document.querySelector('p');
+const para = document.querySelector("p");
 
 para.onpointermove = (event) => {
-  console.log('Pointer moved');
+  console.log("Pointer moved");
 };
 ```
 

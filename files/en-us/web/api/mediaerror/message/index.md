@@ -2,16 +2,6 @@
 title: MediaError.message
 slug: Web/API/MediaError/message
 page-type: web-api-instance-property
-tags:
-  - API
-  - Audio
-  - Errors
-  - HTML DOM
-  - Media
-  - MediaError
-  - Property
-  - Video
-  - message
 browser-compat: api.MediaError.message
 ---
 

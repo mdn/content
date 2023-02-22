@@ -2,10 +2,6 @@
 title: Pinch zoom gestures
 slug: Web/API/Pointer_events/Pinch_zoom_gestures
 page-type: guide
-tags:
-  - Guide
-  - PointerEvent
-  - touch
 ---
 
 {{DefaultAPISidebar("Pointer Events")}}

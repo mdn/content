@@ -2,16 +2,6 @@
 title: MediaDevices.getSupportedConstraints()
 slug: Web/API/MediaDevices/getSupportedConstraints
 page-type: web-api-instance-method
-tags:
-  - API
-  - Media
-  - Media Capture and Streams API
-  - Media Streams API
-  - MediaDevices
-  - Method
-  - Reference
-  - WebRTC
-  - getSupportedConstraints
 browser-compat: api.MediaDevices.getSupportedConstraints
 ---
 

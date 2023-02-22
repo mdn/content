@@ -2,11 +2,6 @@
 title: CSS at-rule functions
 slug: Web/CSS/At-rule-functions
 page-type: guide
-tags:
-  - CSS
-  - Guide
-  - Functions
-  - Reference
 ---
 
 {{CSSRef}}

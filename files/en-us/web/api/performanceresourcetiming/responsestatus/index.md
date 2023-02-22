@@ -2,12 +2,8 @@
 title: PerformanceResourceTiming.responseStatus
 slug: Web/API/PerformanceResourceTiming/responseStatus
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - Web Performance
-  - Experimental
+status:
+  - experimental
 browser-compat: api.PerformanceResourceTiming.responseStatus
 ---
 

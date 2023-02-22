@@ -2,12 +2,6 @@
 title: "::first-line"
 slug: Web/CSS/::first-line
 page-type: css-pseudo-element
-tags:
-  - CSS
-  - Layout
-  - Pseudo-element
-  - Reference
-  - Selector
 browser-compat: css.selectors.first-line
 ---
 

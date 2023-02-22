@@ -2,18 +2,8 @@
 title: Navigation.navigate()
 slug: Web/API/Navigation/navigate
 page-type: web-api-instance-method
-tags:
-  - API
-  - Experimental
-  - History
-  - Method
-  - Navigate
-  - Navigation
-  - Navigation API
-  - Reference
-  - Scroll
-  - transition
-  - Traversal
+status:
+  - experimental
 browser-compat: api.Navigation.navigate
 ---
 

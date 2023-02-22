@@ -2,12 +2,6 @@
 title: A simple RTCDataChannel sample
 slug: Web/API/WebRTC_API/Simple_RTCDataChannel_sample
 page-type: guide
-tags:
-  - API
-  - Communication
-  - Example
-  - Tutorial
-  - WebRTC
 ---
 
 {{DefaultAPISidebar("WebRTC")}}

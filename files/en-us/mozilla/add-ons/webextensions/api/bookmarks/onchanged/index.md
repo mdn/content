@@ -1,6 +1,7 @@
 ---
 title: bookmarks.onChanged
 slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/onChanged
+page-type: webextension-api-event
 tags:
   - API
   - Add-ons

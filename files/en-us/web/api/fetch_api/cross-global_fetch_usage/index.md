@@ -2,11 +2,6 @@
 title: Cross-global fetch usage
 slug: Web/API/Fetch_API/Cross-global_fetch_usage
 page-type: guide
-tags:
-  - Cross global
-  - Fetch
-  - edge case
-  - relative URL
 ---
 
 {{DefaultAPISidebar("Fetch API")}}

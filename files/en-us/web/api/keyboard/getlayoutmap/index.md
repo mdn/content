@@ -2,16 +2,8 @@
 title: Keyboard.getLayoutMap()
 slug: Web/API/Keyboard/getLayoutMap
 page-type: web-api-instance-method
-tags:
-  - API
-  - Keyboard API
-  - Keyboard Lock
-  - Keyboard Map
-  - Method
-  - Reference
-  - getLayoutMap()
-  - keyboard
-  - Experimental
+status:
+  - experimental
 browser-compat: api.Keyboard.getLayoutMap
 ---
 

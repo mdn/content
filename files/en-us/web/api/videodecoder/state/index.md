@@ -2,13 +2,8 @@
 title: VideoDecoder.state
 slug: Web/API/VideoDecoder/state
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - state
-  - VideoDecoder
-  - Experimental
+status:
+  - experimental
 browser-compat: api.VideoDecoder.state
 ---
 

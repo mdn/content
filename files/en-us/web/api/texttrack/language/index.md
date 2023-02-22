@@ -2,12 +2,6 @@
 title: TextTrack.language
 slug: Web/API/TextTrack/language
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - language
-  - TextTrack
 browser-compat: api.TextTrack.language
 ---
 

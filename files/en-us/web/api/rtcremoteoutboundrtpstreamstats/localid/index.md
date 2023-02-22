@@ -2,23 +2,6 @@
 title: RTCRemoteOutboundRtpStreamStats.localId
 slug: Web/API/RTCRemoteOutboundRtpStreamStats/localId
 page-type: web-api-instance-property
-tags:
-  - API
-  - Media
-  - Outbound
-  - Property
-  - RTCRemoteOutboundRtpStreamStats
-  - RTP
-  - Reference
-  - Remote
-  - Statistics
-  - Stats
-  - Streams
-  - WebRTC
-  - WebRTC API
-  - WebRTC Device API
-  - id
-  - localId
 browser-compat: api.RTCRemoteOutboundRtpStreamStats.localId
 ---
 

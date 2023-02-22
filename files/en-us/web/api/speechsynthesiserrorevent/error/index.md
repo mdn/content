@@ -2,15 +2,6 @@
 title: SpeechSynthesisErrorEvent.error
 slug: Web/API/SpeechSynthesisErrorEvent/error
 page-type: web-api-instance-property
-tags:
-  - API
-  - Error
-  - Property
-  - Reference
-  - SpeechSynthesisErrorEvent
-  - Web Speech API
-  - speech
-  - synthesis
 browser-compat: api.SpeechSynthesisErrorEvent.error
 ---
 

@@ -2,15 +2,6 @@
 title: Resource Timing API
 slug: Web/API/Resource_Timing_API
 page-type: web-api-overview
-tags:
-  - API
-  - Guide
-  - HTTP
-  - Overview
-  - Performance
-  - Resource Timing API
-  - Timing
-  - Web Performance
 spec-urls: https://w3c.github.io/resource-timing/
 ---
 

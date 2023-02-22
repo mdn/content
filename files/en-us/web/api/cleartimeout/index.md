@@ -2,12 +2,6 @@
 title: clearTimeout()
 slug: Web/API/clearTimeout
 page-type: web-api-global-function
-tags:
-  - API
-  - HTML DOM
-  - Method
-  - Reference
-  - clearTimeout
 browser-compat: api.clearTimeout
 ---
 

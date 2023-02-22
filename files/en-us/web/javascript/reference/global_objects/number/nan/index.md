@@ -2,10 +2,6 @@
 title: Number.NaN
 slug: Web/JavaScript/Reference/Global_Objects/Number/NaN
 page-type: javascript-static-data-property
-tags:
-  - JavaScript
-  - Number
-  - Property
 browser-compat: javascript.builtins.Number.NaN
 ---
 

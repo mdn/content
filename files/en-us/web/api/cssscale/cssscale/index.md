@@ -2,15 +2,8 @@
 title: CSSScale()
 slug: Web/API/CSSScale/CSSScale
 page-type: web-api-constructor
-tags:
-  - API
-  - CSS Typed Object Model API
-  - CSSScale
-  - CSSTransformComponent
-  - CSSTransformValue
-  - Constructor
-  - Experimental
-  - Houdini
+status:
+  - experimental
 browser-compat: api.CSSScale.CSSScale
 ---
 

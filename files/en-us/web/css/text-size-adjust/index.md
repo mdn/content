@@ -2,14 +2,8 @@
 title: text-size-adjust
 slug: Web/CSS/text-size-adjust
 page-type: css-property
-tags:
-  - CSS
-  - CSS Mobile Text Size Adjustment
-  - CSS Property
-  - Experimental
-  - NeedsExample
-  - Reference
-  - recipe:css-property
+status:
+  - experimental
 browser-compat: css.properties.text-size-adjust
 ---
 

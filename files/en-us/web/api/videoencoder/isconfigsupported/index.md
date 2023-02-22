@@ -2,13 +2,8 @@
 title: VideoEncoder.isConfigSupported()
 slug: Web/API/VideoEncoder/isConfigSupported
 page-type: web-api-static-method
-tags:
-  - API
-  - Method
-  - Reference
-  - isConfigSupported
-  - VideoEncoder
-  - Experimental
+status:
+  - experimental
 browser-compat: api.VideoEncoder.isConfigSupported
 ---
 

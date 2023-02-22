@@ -2,11 +2,6 @@
 title: Forbidden header name
 slug: Glossary/Forbidden_header_name
 page-type: glossary-definition
-tags:
-  - Fetch
-  - HTTP
-  - Headers
-  - forbidden
 ---
 
 A **forbidden header name** is the name of any [HTTP header](/en-US/docs/Web/HTTP/Headers) that cannot be modified programmatically; specifically, an HTTP **request** header name (in contrast with a {{Glossary("Forbidden response header name")}}).

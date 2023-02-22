@@ -2,11 +2,8 @@
 title: ime-mode
 slug: Web/CSS/ime-mode
 page-type: css-property
-tags:
-  - CSS
-  - CSS Property
-  - Deprecated
-  - recipe:css-property
+status:
+  - deprecated
 browser-compat: css.properties.ime-mode
 ---
 

@@ -119,7 +119,7 @@ Getting the most important images in front of visitors sooner than the less impo
 
 The first thing to check is that your content images use `<img>` or `<picture>` elements and your background images are defined in CSS with `background-image` — images referenced in `<img>` elements are assigned a higher loading priority than background images.
 
-Secondly, with the adoption of Priority Hints, you can control the priority further by adding an `importance` attribute to your image tags. An example use case for priority hints on images are carousels where the first image is a higher priority than the subsequent images.
+Secondly, with the adoption of Priority Hints, you can control the priority further by adding a `fetchPriority` attribute to your image tags. An example use case for priority hints on images are carousels where the first image is a higher priority than the subsequent images.
 
 ### Rendering strategy: preventing jank when loading images
 

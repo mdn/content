@@ -2,12 +2,6 @@
 title: WebGLRenderingContext.isShader()
 slug: Web/API/WebGLRenderingContext/isShader
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.isShader
 ---
 

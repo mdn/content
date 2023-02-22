@@ -2,13 +2,8 @@
 title: 'USB: disconnect event'
 slug: Web/API/USB/disconnect_event
 page-type: web-api-event
-tags:
-  - API
-  - Event
-  - Reference
-  - USB
-  - WebUSB
-  - Experimental
+status:
+  - experimental
 browser-compat: api.USB.disconnect_event
 ---
 

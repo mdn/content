@@ -2,13 +2,6 @@
 title: PaymentResponse
 slug: Web/API/PaymentResponse
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Payment Request
-  - PaymentResponse
-  - Reference
-  - Secure context
 browser-compat: api.PaymentResponse
 ---
 

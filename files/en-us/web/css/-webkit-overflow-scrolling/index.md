@@ -2,12 +2,8 @@
 title: "-webkit-overflow-scrolling"
 slug: Web/CSS/-webkit-overflow-scrolling
 page-type: css-property
-tags:
-  - CSS
-  - CSS Property
-  - Non-standard
-  - Reference
-  - recipe:css-property
+status:
+  - non-standard
 browser-compat: css.properties.-webkit-overflow-scrolling
 ---
 

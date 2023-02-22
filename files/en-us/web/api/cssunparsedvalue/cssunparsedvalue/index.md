@@ -2,15 +2,8 @@
 title: CSSUnparsedValue()
 slug: Web/API/CSSUnparsedValue/CSSUnparsedValue
 page-type: web-api-constructor
-tags:
-  - API
-  - CSS Typed Object Model API
-  - CSSUnparsedValue
-  - Constructor
-  - Experimental
-  - Houdini
-  - NeedsExample
-  - Reference
+status:
+  - experimental
 browser-compat: api.CSSUnparsedValue.CSSUnparsedValue
 ---
 

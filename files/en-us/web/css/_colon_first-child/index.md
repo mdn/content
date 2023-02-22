@@ -2,13 +2,6 @@
 title: ":first-child"
 slug: Web/CSS/:first-child
 page-type: css-pseudo-class
-tags:
-  - CSS
-  - Layout
-  - Pseudo-class
-  - Reference
-  - Selector
-  - Web
 browser-compat: css.selectors.first-child
 ---
 

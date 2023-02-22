@@ -2,14 +2,8 @@
 title: ":-moz-broken"
 slug: Web/CSS/:-moz-broken
 page-type: css-pseudo-class
-tags:
-  - CSS
-  - CSS:Mozilla Extensions
-  - NeedsCompatTable
-  - Non-standard
-  - Pseudo-class
-  - Reference
-  - Selector
+status:
+  - non-standard
 browser-compat: css.selectors.-moz-broken
 ---
 

@@ -2,25 +2,8 @@
 title: XRWebGLLayer.ignoreDepthValues
 slug: Web/API/XRWebGLLayer/ignoreDepthValues
 page-type: web-api-instance-property
-tags:
-  - 3D
-  - API
-  - AR
-  - Depth
-  - Property
-  - Read-only
-  - Reality
-  - Reference
-  - VR
-  - Virtual
-  - WebGL
-  - WebGL API
-  - WebGL Device API
-  - XR
-  - XRWebGLLayer
-  - augmented
-  - ignoreDepthValues
-  - Experimental
+status:
+  - experimental
 browser-compat: api.XRWebGLLayer.ignoreDepthValues
 ---
 
@@ -33,7 +16,7 @@ buffer while rendering the scene. If the depth buffer is being used to determine
 position of vertices, this property is `false`.
 
 The value of `ignoreDepthValues` can only be set when the
-{{domxref("XRWebGLLayer")}} is instantiated, by setting the corresponding value in the [constructor's](/en-US/docs/Web/API/XRWebGLLayer/XRWebGLLayer) `layerInit` parameter.
+{{domxref("XRWebGLLayer")}} is instantiated, by setting the corresponding value in the [constructor's](/en-US/docs/Web/API/XRWebGLLayer/XRWebGLLayer) `options` parameter.
 
 ## Value
 
@@ -90,6 +73,5 @@ let glLayer = new XRWebGLLayer(xrSession, gl, glLayerOptions);
 ## See also
 
 - [WebXR Device API](/en-US/docs/Web/API/WebXR_Device_API)
-- {{domxref("WebGLLayerInit")}}
 - WebGL depth buffer related methods: {{domxref("WebGLRenderingContext.depthFunc",
     "depthFunc()")}}, {{domxref("WebGLRenderingContext.clearDepth", "clearDepth()")}}

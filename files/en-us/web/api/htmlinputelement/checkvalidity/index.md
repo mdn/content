@@ -2,15 +2,6 @@
 title: HTMLInputElement.checkValidity()
 slug: Web/API/HTMLInputElement/checkValidity
 page-type: web-api-instance-method
-tags:
-  - API
-  - HTML DOM
-  - HTMLInputElement
-  - Method
-  - NeedsExample
-  - Reference
-  - checkValidity
-  - checkValidity()
 browser-compat: api.HTMLObjectElement.checkValidity
 ---
 

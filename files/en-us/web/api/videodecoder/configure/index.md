@@ -2,13 +2,8 @@
 title: VideoDecoder.configure()
 slug: Web/API/VideoDecoder/configure
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - configure
-  - VideoDecoder
-  - Experimental
+status:
+  - experimental
 browser-compat: api.VideoDecoder.configure
 ---
 

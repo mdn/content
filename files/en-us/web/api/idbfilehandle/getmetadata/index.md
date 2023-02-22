@@ -2,14 +2,9 @@
 title: IDBFileHandle.getMetadata()
 slug: Web/API/IDBFileHandle/getMetaData
 page-type: web-api-instance-method
-tags:
-  - API
-  - Files
-  - Method
-  - Reference
-  - WebAPI
-  - Non-standard
-  - Deprecated
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.IDBFileHandle.getMetadata
 ---
 

@@ -96,7 +96,7 @@ The following is a complete list of all HTML "block-level" elements (although "b
   - : Section or page footer.
 - {{ HTMLElement("form") }}
   - : Input form.
-- {{ HTMLElement("h1") }}, {{ HTMLElement("h2") }}, {{ HTMLElement("h3") }}, {{ HTMLElement("h4") }}, {{ HTMLElement("h5") }}, {{ HTMLElement("h6") }}
+- {{ HTMLElement("Heading_Elements", "h1")}}, {{ HTMLElement("Heading_Elements", "h2")}}, {{ HTMLElement("Heading_Elements", "h3")}}, {{ HTMLElement("Heading_Elements", "h4")}}, {{ HTMLElement("Heading_Elements", "h5")}}, {{ HTMLElement("Heading_Elements", "h6")}}
   - : Heading levels 1-6.
 - {{ HTMLElement("header") }}
   - : Section or page header.

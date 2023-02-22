@@ -2,14 +2,6 @@
 title: PerformanceObserver
 slug: Web/API/PerformanceObserver
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Performance Observer API
-  - PerformanceObserver
-  - Reference
-  - Web Performance
-  - observers
 browser-compat: api.PerformanceObserver
 ---
 

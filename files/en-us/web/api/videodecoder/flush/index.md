@@ -2,13 +2,8 @@
 title: VideoDecoder.flush()
 slug: Web/API/VideoDecoder/flush
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - flush
-  - VideoDecoder
-  - Experimental
+status:
+  - experimental
 browser-compat: api.VideoDecoder.flush
 ---
 

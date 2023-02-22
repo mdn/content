@@ -2,15 +2,8 @@
 title: CSSMathValue.operator
 slug: Web/API/CSSMathValue/operator
 page-type: web-api-instance-property
-tags:
-  - API
-  - CSS Typed Object Model API
-  - CSSMathValue
-  - Experimental
-  - Houdini
-  - Operator
-  - Property
-  - Reference
+status:
+  - experimental
 browser-compat: api.CSSMathValue.operator
 ---
 

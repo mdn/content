@@ -1,6 +1,7 @@
 ---
 title: webRequest.StreamFilter.ondata
 slug: Mozilla/Add-ons/WebExtensions/API/webRequest/StreamFilter/ondata
+page-type: webextension-api-event
 tags:
   - API
   - Add-ons

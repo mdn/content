@@ -2,14 +2,6 @@
 title: CanvasRenderingContext2D.globalCompositeOperation
 slug: Web/API/CanvasRenderingContext2D/globalCompositeOperation
 page-type: web-api-instance-property
-tags:
-  - API
-  - Blending
-  - Canvas
-  - CanvasRenderingContext2D
-  - Compositing
-  - Property
-  - Reference
 browser-compat: api.CanvasRenderingContext2D.globalCompositeOperation
 ---
 

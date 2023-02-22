@@ -2,13 +2,6 @@
 title: prefers-color-scheme
 slug: Web/CSS/@media/prefers-color-scheme
 page-type: css-media-feature
-tags:
-  - "@media"
-  - CSS
-  - Reference
-  - Web
-  - media feature
-  - prefers-color-scheme
 browser-compat: css.at-rules.media.prefers-color-scheme
 ---
 

@@ -2,12 +2,6 @@
 title: MIDIAccess.outputs
 slug: Web/API/MIDIAccess/outputs
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - outputs
-  - MIDIAccess
 browser-compat: api.MIDIAccess.outputs
 ---
 

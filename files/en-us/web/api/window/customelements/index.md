@@ -2,15 +2,6 @@
 title: Window.customElements
 slug: Web/API/Window/customElements
 page-type: web-api-instance-property
-tags:
-  - API
-  - CustomElementRegistry
-  - Property
-  - Reference
-  - Web Components
-  - Window
-  - custom elements
-  - customElements
 browser-compat: api.Window.customElements
 ---
 

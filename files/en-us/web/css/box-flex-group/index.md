@@ -2,13 +2,9 @@
 title: box-flex-group
 slug: Web/CSS/box-flex-group
 page-type: css-property
-tags:
-  - CSS
-  - CSS Property
-  - Non-standard
-  - Reference
-  - recipe:css-property
-  - Deprecated
+status:
+  - deprecated
+  - non-standard
 browser-compat: css.properties.box-flex-group
 ---
 

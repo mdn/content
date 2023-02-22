@@ -2,16 +2,8 @@
 title: GamepadPose.linearVelocity
 slug: Web/API/GamepadPose/linearVelocity
 page-type: web-api-instance-property
-tags:
-  - API
-  - Experimental
-  - Gamepad API
-  - GamepadPose
-  - Property
-  - Reference
-  - Virtual Reality
-  - WebVR
-  - linearVelocity
+status:
+  - experimental
 browser-compat: api.GamepadPose.linearVelocity
 ---
 

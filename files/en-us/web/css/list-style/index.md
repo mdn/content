@@ -2,12 +2,6 @@
 title: list-style
 slug: Web/CSS/list-style
 page-type: css-shorthand-property
-tags:
-  - CSS
-  - CSS Lists
-  - CSS Property
-  - Reference
-  - recipe:css-shorthand-property
 browser-compat: css.properties.list-style
 ---
 

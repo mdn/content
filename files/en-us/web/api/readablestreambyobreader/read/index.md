@@ -2,13 +2,6 @@
 title: ReadableStreamBYOBReader.read()
 slug: Web/API/ReadableStreamBYOBReader/read
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - ReadableStreamBYOBReader
-  - Reference
-  - Streams
-  - read
 browser-compat: api.ReadableStreamBYOBReader.read
 ---
 

@@ -2,18 +2,11 @@
 title: IntersectionObserver.observe()
 slug: Web/API/IntersectionObserver/observe
 page-type: web-api-instance-method
-tags:
-  - API
-  - Intersection Observer
-  - Intersection Observer API
-  - IntersectionObserver
-  - Method
-  - Reference
-  - observe
 browser-compat: api.IntersectionObserver.observe
 ---
 
 {{APIRef("Intersection Observer API")}}
+
 The {{domxref("IntersectionObserver")}} method
 **`observe()`** adds an element to the set of target elements
 being watched by the `IntersectionObserver`. One observer has one set of

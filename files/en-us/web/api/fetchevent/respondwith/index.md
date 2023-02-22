@@ -2,15 +2,6 @@
 title: FetchEvent.respondWith()
 slug: Web/API/FetchEvent/respondWith
 page-type: web-api-instance-method
-tags:
-  - API
-  - FetchEvent
-  - Method
-  - Offline
-  - Reference
-  - Service Workers
-  - Workers
-  - respondWith
 browser-compat: api.FetchEvent.respondWith
 ---
 

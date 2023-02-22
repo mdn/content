@@ -2,14 +2,6 @@
 title: CustomElementRegistry.get()
 slug: Web/API/CustomElementRegistry/get
 page-type: web-api-instance-method
-tags:
-  - API
-  - CustomElementRegistry
-  - Method
-  - Reference
-  - Web Components
-  - custom elements
-  - get
 browser-compat: api.CustomElementRegistry.get
 ---
 

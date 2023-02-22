@@ -2,14 +2,6 @@
 title: PublicKeyCredential
 slug: Web/API/PublicKeyCredential
 page-type: web-api-interface
-tags:
-  - API
-  - Authentication
-  - Interface
-  - PublicKeyCredential
-  - Reference
-  - Web Authentication API
-  - WebAuthn
 browser-compat: api.PublicKeyCredential
 ---
 

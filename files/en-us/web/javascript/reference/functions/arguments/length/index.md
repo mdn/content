@@ -2,11 +2,6 @@
 title: arguments.length
 slug: Web/JavaScript/Reference/Functions/arguments/length
 page-type: javascript-instance-data-property
-tags:
-  - Functions
-  - JavaScript
-  - Property
-  - arguments
 browser-compat: javascript.functions.arguments.length
 ---
 

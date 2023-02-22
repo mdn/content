@@ -2,15 +2,6 @@
 title: Set
 slug: Web/JavaScript/Reference/Global_Objects/Set
 page-type: javascript-class
-tags:
-  - Class
-  - ECMAScript 2015
-  - Global Objects
-  - JavaScript
-  - Object
-  - Reference
-  - set
-  - Polyfill
 browser-compat: javascript.builtins.Set
 ---
 
@@ -44,10 +35,14 @@ The `Set` [`has`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/has) m
 
 ## Instance properties
 
-- `Set.prototype[@@toStringTag]`
-  - : The initial value of the [`@@toStringTag`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) property is the string `"Set"`. This property is used in {{jsxref("Object.prototype.toString()")}}.
+These properties are defined on `Set.prototype` and shared by all `Set` instances.
+
+- {{jsxref("Object/constructor", "Set.prototype.constructor")}}
+  - : The constructor function that created the instance object. For `Set` instances, the initial value is the {{jsxref("Set/Set", "Set")}} constructor.
 - {{jsxref("Set.prototype.size")}}
   - : Returns the number of values in the `Set` object.
+- `Set.prototype[@@toStringTag]`
+  - : The initial value of the [`@@toStringTag`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) property is the string `"Set"`. This property is used in {{jsxref("Object.prototype.toString()")}}.
 
 ## Instance methods
 

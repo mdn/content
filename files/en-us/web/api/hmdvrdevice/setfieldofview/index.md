@@ -2,16 +2,9 @@
 title: HMDVRDevice.setFieldOfView()
 slug: Web/API/HMDVRDevice/setFieldOfView
 page-type: web-api-instance-method
-tags:
-  - API
-  - HMDVRDevice
-  - Method
-  - Reference
-  - VR
-  - Virtual Reality
-  - WebVR
-  - Deprecated
-  - Non-standard
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.HMDVRDevice.setFieldOfView
 ---
 

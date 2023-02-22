@@ -2,16 +2,6 @@
 title: border-block-end
 slug: Web/CSS/border-block-end
 page-type: css-shorthand-property
-tags:
-  - CSS
-  - CSS Logical Property
-  - CSS Property
-  - Reference
-  - border-block
-  - border-block-end-color
-  - border-block-end-style
-  - border-block-end-width
-  - recipe:css-shorthand-property
 browser-compat: css.properties.border-block-end
 ---
 

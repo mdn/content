@@ -2,14 +2,6 @@
 title: import()
 slug: Web/JavaScript/Reference/Operators/import
 page-type: javascript-operator
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Language feature
-  - Modules
-  - Reference
-  - dynamic import
-  - import
 browser-compat: javascript.operators.import
 ---
 

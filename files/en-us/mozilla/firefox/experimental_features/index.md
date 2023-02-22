@@ -986,7 +986,7 @@ This new API provides low-level support for performing computation and graphics 
 
 #### MediaDevices.selectAudioOutput()
 
-{{domxref("MediaDevices.selectAudioOutput()")}} displays a prompt from which users can select their desired audio output. See {{bug(1699026)}}.
+{{domxref("MediaDevices.selectAudioOutput()")}} displays a prompt on desktop systems, from which users can select their desired audio output. See {{bug(1699026)}}.
 
 <table>
   <thead>
@@ -999,8 +999,8 @@ This new API provides low-level support for performing computation and graphics 
   <tbody>
     <tr>
       <th>Nightly</th>
-      <td>88</td>
-      <td>No</td>
+      <td>111</td>
+      <td>Yes</td>
     </tr>
     <tr>
       <th>Developer Edition</th>
@@ -1603,7 +1603,7 @@ The `GeometryUtils` methods `convertPointFromNode()`, `convertRectFromNode()`, a
     </tr>
     <tr>
       <th>Preference name</th>
-      <td colspan="2"><code>layout.css.getBoxQuads.enabled</code></td>
+      <td colspan="2"><code>layout.css.convertFromNode.enable</code></td>
     </tr>
   </tbody>
 </table>
@@ -1643,7 +1643,7 @@ The `GeometryUtils` method `getBoxQuads()` returns the CSS boxes for a {{domxref
     </tr>
     <tr>
       <th>Preference name</th>
-      <td colspan="2"><code>layout.css.convertFromNode.enable</code></td>
+      <td colspan="2"><code>layout.css.getBoxQuads.enabled</code></td>
     </tr>
   </tbody>
 </table>

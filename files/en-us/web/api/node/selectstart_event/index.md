@@ -2,13 +2,6 @@
 title: "Node: selectstart event"
 slug: Web/API/Node/selectstart_event
 page-type: web-api-event
-tags:
-  - Document
-  - Event
-  - Reference
-  - Selection
-  - Selection API
-  - selectstart
 browser-compat: api.Node.selectstart_event
 ---
 

@@ -2,13 +2,6 @@
 title: Document.prepend()
 slug: Web/API/Document/prepend
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - Method
-  - Node
-  - Document
-  - Reference
 browser-compat: api.Document.prepend
 ---
 

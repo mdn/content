@@ -2,15 +2,6 @@
 title: HTMLTableCellElement
 slug: Web/API/HTMLTableCellElement
 page-type: web-api-interface
-tags:
-  - API
-  - Cells
-  - HTML DOM
-  - HTMLTableCellElement
-  - Interface
-  - Reference
-  - Table Cells
-  - Tables
 browser-compat: api.HTMLTableCellElement
 ---
 

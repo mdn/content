@@ -2,18 +2,6 @@
 title: border-color
 slug: Web/CSS/border-color
 page-type: css-shorthand-property
-tags:
-  - CSS
-  - CSS Borders
-  - CSS Property
-  - CSS Styles
-  - HTML Colors
-  - Reference
-  - Styling HTML
-  - border-color
-  - borders
-  - colors
-  - recipe:css-shorthand-property
 browser-compat: css.properties.border-color
 ---
 

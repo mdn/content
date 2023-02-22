@@ -2,12 +2,6 @@
 title: void operator
 slug: Web/JavaScript/Reference/Operators/void
 page-type: javascript-operator
-tags:
-  - JavaScript
-  - Language feature
-  - Operator
-  - Reference
-  - Unary
 browser-compat: javascript.operators.void
 ---
 

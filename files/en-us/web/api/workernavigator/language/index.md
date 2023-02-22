@@ -2,13 +2,6 @@
 title: WorkerNavigator.language
 slug: Web/API/WorkerNavigator/language
 page-type: web-api-instance-property
-tags:
-  - API
-  - Language
-  - WorkerNavigator
-  - Property
-  - Read-only
-  - Reference
 browser-compat: api.WorkerNavigator.language
 ---
 

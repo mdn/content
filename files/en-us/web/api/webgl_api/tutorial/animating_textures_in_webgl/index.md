@@ -2,11 +2,6 @@
 title: Animating textures in WebGL
 slug: Web/API/WebGL_API/Tutorial/Animating_textures_in_WebGL
 page-type: guide
-tags:
-  - Media
-  - Tutorial
-  - Video
-  - WebGL
 ---
 
 {{DefaultAPISidebar("WebGL")}} {{Previous("Web/API/WebGL_API/Tutorial/Lighting_in_WebGL")}}
