@@ -26,8 +26,8 @@ log(msg, subst1, /* …, */ substN)
 
 - `obj1` … `objN`
   - : A list of JavaScript objects to output.
-    Objects are outputted in the order listed. Please be warned that if
-    you log objects in the latest versions of Chrome and Firefox what you get logged on
+    Objects are output in the order listed. Please be warned that if
+    you log objects in the latest versions of Chrome and Firefox, what you get logged on
     the console is a _reference to the object_, which is not necessarily the
     'value' of the object at the moment in time you call `console.log()`, but
     it is the value of the object at the moment you open the console.
