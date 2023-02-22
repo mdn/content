@@ -18,11 +18,17 @@ An **arrow function expression** is a compact alternative to a traditional [func
 ## Syntax
 
 ```js-nolint
+() => expression
+
 param => expression
 
 (param) => expression
 
 (param1, paramN) => expression
+
+() => {
+  statements
+}
 
 param => {
   statements
