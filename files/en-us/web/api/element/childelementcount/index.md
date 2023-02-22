@@ -13,7 +13,7 @@ returns the number of child elements of this element.
 ## Examples
 
 ```js
-let sidebar = document.getElementById('sidebar');
+let sidebar = document.getElementById("sidebar");
 if (sidebar.childElementCount > 0) {
   // Do something
 }

@@ -27,9 +27,9 @@ In this example the `aria-description` attribute on the element with an ID of `c
 ```
 
 ```js
-let el = document.getElementById('close-button');
+let el = document.getElementById("close-button");
 console.log(el.ariaDescription); // "A longer description of the function of this element"
-el.ariaDescription = "A different description"
+el.ariaDescription = "A different description";
 console.log(el.ariaDescription); // "A different description"
 ```
 

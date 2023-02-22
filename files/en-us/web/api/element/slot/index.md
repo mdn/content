@@ -37,7 +37,7 @@ In our JavaScript file we get a reference to the {{htmlelement("span")}} shown a
 then log a reference to the name of the corresponding `<slot>` element.
 
 ```js
-let slottedSpan = document.querySelector('my-paragraph span')
+let slottedSpan = document.querySelector("my-paragraph span");
 console.log(slottedSpan.slot); // logs 'my-text'
 ```
 

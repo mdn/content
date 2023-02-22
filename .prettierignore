@@ -14,4 +14,4 @@ build/
 
 # The /web/api folder is so large, it has been divided into multiple parts
 /files/en-us/web/api/**/*.md
-!/files/en-us/web/api/[a-d]*/**/*.md
+!/files/en-us/web/api/[a-e]*/**/*.md

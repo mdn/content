@@ -34,7 +34,6 @@ class CustomCheckbox extends HTMLElement {
   }
 
   // …
-
 }
 
 window.customElements.define("custom-checkbox", CustomCheckbox);

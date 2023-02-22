@@ -1,5 +1,5 @@
 ---
-title: 'Element: keypress event'
+title: "Element: keypress event"
 slug: Web/API/Element/keypress_event
 page-type: web-api-event
 status:
@@ -20,9 +20,9 @@ Examples of keys that produce a character value are alphabetic, numeric, and pun
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('keypress', (event) => {});
+addEventListener("keypress", (event) => {});
 
-onkeypress = (event) => { };
+onkeypress = (event) => {};
 ```
 
 ## Event type
@@ -86,10 +86,10 @@ This example logs the {{domxref("KeyboardEvent.code")}} value whenever you press
 ```
 
 ```js
-const log = document.getElementById('log');
-const input = document.querySelector('input');
+const log = document.getElementById("log");
+const input = document.querySelector("input");
 
-input.addEventListener('keypress', logKey);
+input.addEventListener("keypress", logKey);
 
 function logKey(e) {
   log.textContent += ` ${e.code}`;

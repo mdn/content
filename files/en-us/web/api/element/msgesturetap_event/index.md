@@ -1,5 +1,5 @@
 ---
-title: 'Element: MSGestureTap event'
+title: "Element: MSGestureTap event"
 slug: Web/API/Element/MSGestureTap_event
 page-type: web-api-event
 status:

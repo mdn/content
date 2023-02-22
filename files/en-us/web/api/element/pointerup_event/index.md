@@ -1,5 +1,5 @@
 ---
-title: 'Element: pointerup event'
+title: "Element: pointerup event"
 slug: Web/API/Element/pointerup_event
 browser-compat: api.Element.pointerup_event
 page-type: web-api-event
@@ -14,9 +14,9 @@ The `pointerup` event is fired when a pointer is no longer active.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('pointerup', (event) => {});
+addEventListener("pointerup", (event) => {});
 
-onpointerup = (event) => { };
+onpointerup = (event) => {};
 ```
 
 ## Event type
@@ -55,20 +55,20 @@ _This interface inherits properties from {{domxref("MouseEvent")}} and {{domxref
 Using `addEventListener()`:
 
 ```js
-const para = document.querySelector('p');
+const para = document.querySelector("p");
 
-para.addEventListener('pointerup', (event) => {
-  console.log('Pointer up');
+para.addEventListener("pointerup", (event) => {
+  console.log("Pointer up");
 });
 ```
 
 Using the `onpointerup` event handler property:
 
 ```js
-const para = document.querySelector('p');
+const para = document.querySelector("p");
 
 para.onpointerup = (event) => {
-  console.log('Pointer up');
+  console.log("Pointer up");
 };
 ```
 
