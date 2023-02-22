@@ -2,18 +2,6 @@
 title: HTMLMediaElement.textTracks
 slug: Web/API/HTMLMediaElement/textTracks
 page-type: web-api-instance-property
-tags:
-  - API
-  - Audio
-  - HTML DOM
-  - HTMLMediaElement
-  - Media
-  - Property
-  - Reference
-  - Tracks
-  - Video
-  - Web
-  - textTracks
 browser-compat: api.HTMLMediaElement.textTracks
 ---
 

@@ -2,18 +2,6 @@
 title: 'Element: mouseover event'
 slug: Web/API/Element/mouseover_event
 page-type: web-api-event
-tags:
-  - API
-  - Cursor
-  - DOM
-  - Event
-  - Interface
-  - MouseEvent
-  - Reference
-  - mouse
-  - mouseover
-  - move
-  - pointer
 browser-compat: api.Element.mouseover_event
 ---
 

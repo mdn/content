@@ -2,13 +2,6 @@
 title: SubtleCrypto.verify()
 slug: Web/API/SubtleCrypto/verify
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - SubtleCrypto
-  - Web Crypto API
-  - verify
 browser-compat: api.SubtleCrypto.verify
 ---
 

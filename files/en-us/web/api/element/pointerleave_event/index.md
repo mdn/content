@@ -1,12 +1,6 @@
 ---
 title: 'Element: pointerleave event'
 slug: Web/API/Element/pointerleave_event
-tags:
-  - Event
-  - HTML DOM
-  - Element
-  - PointerEvent
-  - Reference
 browser-compat: api.Element.pointerleave_event
 page-type: web-api-event
 ---

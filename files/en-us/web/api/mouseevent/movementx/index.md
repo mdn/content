@@ -2,17 +2,6 @@
 title: MouseEvent.movementX
 slug: Web/API/MouseEvent/movementX
 page-type: web-api-instance-property
-tags:
-  - API
-  - DOM
-  - DOM Events
-  - MouseEvent
-  - MovementX
-  - Property
-  - Read-only
-  - Reference
-  - mouse lock
-  - pointer lock
 browser-compat: api.MouseEvent.movementX
 ---
 

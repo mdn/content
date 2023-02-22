@@ -2,19 +2,8 @@
 title: PresentationConnection.binaryType
 slug: Web/API/PresentationConnection/binaryType
 page-type: web-api-instance-property
-tags:
-  - API
-  - NeedsBrowserCompatibility
-  - NeedsContent
-  - NeedsExample
-  - NeedsMarkupWork
-  - Presentation
-  - Presentation API
-  - PresentationConnection
-  - Property
-  - Reference
-  - binaryType
-  - Experimental
+status:
+  - experimental
 browser-compat: api.PresentationConnection.binaryType
 ---
 

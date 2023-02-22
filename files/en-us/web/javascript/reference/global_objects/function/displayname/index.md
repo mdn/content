@@ -1,12 +1,9 @@
 ---
-title: Function.prototype.displayName
+title: "Function: displayName"
 slug: Web/JavaScript/Reference/Global_Objects/Function/displayName
 page-type: javascript-instance-data-property
-tags:
-  - Function
-  - JavaScript
-  - Non-standard
-  - Property
+status:
+  - non-standard
 browser-compat: javascript.builtins.Function.displayName
 ---
 

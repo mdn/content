@@ -2,14 +2,6 @@
 title: String.prototype.search()
 slug: Web/JavaScript/Reference/Global_Objects/String/search
 page-type: javascript-instance-method
-tags:
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - Regular Expressions
-  - String
-  - Polyfill
 browser-compat: javascript.builtins.String.search
 ---
 

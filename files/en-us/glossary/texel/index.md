@@ -2,12 +2,6 @@
 title: Texel
 slug: Glossary/Texel
 page-type: glossary-definition
-tags:
-  - 3D
-  - Drawing
-  - Graphics
-  - Texel
-  - Texture
 ---
 
 In 3D graphics, a **texel** is a single pixel within a texture. _Textures_ are images presented on a polygon's surface within a 3D rendered image. A texture is characterized by a collection of texels, similar to how an image is characterized by a collection of pixels.

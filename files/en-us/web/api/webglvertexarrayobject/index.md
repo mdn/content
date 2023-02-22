@@ -2,11 +2,6 @@
 title: WebGLVertexArrayObject
 slug: Web/API/WebGLVertexArrayObject
 page-type: web-api-interface
-tags:
-  - API
-  - Reference
-  - WebGL
-  - WebGL2
 browser-compat: api.WebGLVertexArrayObject
 ---
 

@@ -2,19 +2,6 @@
 title: VideoPlaybackQuality
 slug: Web/API/VideoPlaybackQuality
 page-type: web-api-interface
-tags:
-  - API
-  - Frames
-  - HTML DOM
-  - Interface
-  - Media
-  - Media Playback Quality
-  - Media Playback Quality API
-  - Playback
-  - Quality
-  - Reference
-  - Video
-  - VideoPlaybackQuality
 browser-compat: api.VideoPlaybackQuality
 ---
 

@@ -2,21 +2,6 @@
 title: HTMLImageElement.x
 slug: Web/API/HTMLImageElement/x
 page-type: web-api-instance-property
-tags:
-  - API
-  - CSSOM
-  - CSSOM View
-  - Coordinate
-  - Edge
-  - HTML
-  - HTML DOM
-  - HTMLImageElement
-  - Position
-  - Reference
-  - border
-  - left
-  - x
-  - Property
 browser-compat: api.HTMLImageElement.x
 ---
 

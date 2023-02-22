@@ -1,6 +1,7 @@
 ---
 title: runtime
 slug: Mozilla/Add-ons/WebExtensions/API/runtime
+page-type: webextension-api
 tags:
   - API
   - Add-ons

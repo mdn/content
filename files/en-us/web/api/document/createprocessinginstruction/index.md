@@ -2,13 +2,6 @@
 title: Document.createProcessingInstruction()
 slug: Web/API/Document/createProcessingInstruction
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - Document
-  - Method
-  - Reference
-  - createProcessInstruction
 browser-compat: api.Document.createProcessingInstruction
 ---
 
@@ -46,8 +39,11 @@ None ({{jsxref("undefined")}}).
 ## Examples
 
 ```js
-const doc = new DOMParser().parseFromString('<foo />', 'application/xml');
-const pi = doc.createProcessingInstruction('xml-stylesheet', 'href="mycss.css"');
+const doc = new DOMParser().parseFromString("<foo />", "application/xml");
+const pi = doc.createProcessingInstruction(
+  "xml-stylesheet",
+  'href="mycss.css"'
+);
 
 doc.insertBefore(pi, doc.firstChild);
 

@@ -2,13 +2,6 @@
 title: Geolocation.watchPosition()
 slug: Web/API/Geolocation/watchPosition
 page-type: web-api-instance-method
-tags:
-  - API
-  - Geolocation
-  - Geolocation API
-  - Method
-  - Reference
-  - Secure context
 browser-compat: api.Geolocation.watchPosition
 ---
 

@@ -2,16 +2,6 @@
 title: Window.devicePixelRatio
 slug: Web/API/Window/devicePixelRatio
 page-type: web-api-instance-property
-tags:
-  - API
-  - Adaptive Design
-  - Property
-  - Read-only
-  - Reference
-  - Window
-  - devicePixelRatio
-  - ratio
-  - resolution
 browser-compat: api.Window.devicePixelRatio
 ---
 

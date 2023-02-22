@@ -2,15 +2,8 @@
 title: PerformanceTiming.connectEnd
 slug: Web/API/PerformanceTiming/connectEnd
 page-type: web-api-instance-property
-tags:
-  - API
-  - Backwards compatibility
-  - Deprecated
-  - Navigation Timing
-  - PerformanceTiming
-  - Property
-  - Read-only
-  - legacy
+status:
+  - deprecated
 browser-compat: api.PerformanceTiming.connectEnd
 ---
 

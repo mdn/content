@@ -2,18 +2,6 @@
 title: "WebGL: 2D and 3D graphics for the web"
 slug: Web/API/WebGL_API
 page-type: web-api-overview
-tags:
-  - 3D
-  - 3D Graphics
-  - API
-  - Advanced
-  - Graphics
-  - JavaScript
-  - Media
-  - Overview
-  - Reference
-  - WebGL
-  - WebGL API
 browser-compat:
   - api.WebGLRenderingContext
   - api.WebGL2RenderingContext
@@ -67,6 +55,7 @@ The {{HTMLElement("canvas")}} element is also used by the [Canvas API](/en-US/do
 - {{domxref("EXT_texture_filter_anisotropic")}}
 - {{domxref("EXT_texture_norm16")}}
 - {{domxref("KHR_parallel_shader_compile")}}
+- {{domxref("OES_draw_buffers_indexed")}}
 - {{domxref("OES_element_index_uint")}}
 - {{domxref("OES_fbo_render_mipmap")}}
 - {{domxref("OES_standard_derivatives")}}

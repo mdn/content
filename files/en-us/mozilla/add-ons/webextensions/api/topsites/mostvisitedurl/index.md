@@ -1,6 +1,7 @@
 ---
 title: topSites.MostVisitedURL
 slug: Mozilla/Add-ons/WebExtensions/API/topSites/MostVisitedURL
+page-type: webextension-api-type
 tags:
   - API
   - Add-ons

@@ -48,4 +48,4 @@ As all files are served from the same scheme and domain (`localhost`) they all h
 
 - [CORS errors](/en-US/docs/Web/HTTP/CORS/Errors)
 - [CORS introduction](/en-US/docs/Web/HTTP/CORS)
-- [What is a URL?](/en-US/docs/Learn/Common_questions/What_is_a_URL)
+- [What is a URL?](/en-US/docs/Learn/Common_questions/Web_mechanics/What_is_a_URL)

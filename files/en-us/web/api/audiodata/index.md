@@ -2,12 +2,8 @@
 title: AudioData
 slug: Web/API/AudioData
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Reference
-  - AudioData
-  - Experimental
+status:
+  - experimental
 browser-compat: api.AudioData
 ---
 

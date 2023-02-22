@@ -2,14 +2,6 @@
 title: XRHand
 slug: Web/API/XRHand
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Reference
-  - WebXR
-  - XR
-  - AR
-  - VR
 browser-compat: api.XRHand
 ---
 

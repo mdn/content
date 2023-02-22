@@ -2,13 +2,6 @@
 title: Document.open()
 slug: Web/API/Document/open
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - Document
-  - Method
-  - Reference
-  - open
 browser-compat: api.Document.open
 ---
 
@@ -69,7 +62,7 @@ This call, for example opens github.com in a new window, with its opener set to
 `null`:
 
 ```js
-document.open('https://www.github.com','', 'noopener=true')
+document.open("https://www.github.com", "", "noopener=true");
 ```
 
 ## Two-argument document.open()
@@ -78,7 +71,7 @@ Browsers used to support a two-argument `document.open()`, with the
 following signature:
 
 ```js
-document.open(type, replace)
+document.open(type, replace);
 ```
 
 Where `type` specified the MIME type of the data you are writing (e.g.

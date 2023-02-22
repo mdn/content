@@ -2,14 +2,6 @@
 title: <length>
 slug: Web/CSS/length
 page-type: css-type
-tags:
-  - CSS
-  - CSS Data Type
-  - Data Type
-  - Layout
-  - Reference
-  - Web
-  - length
 browser-compat: css.types.length
 ---
 

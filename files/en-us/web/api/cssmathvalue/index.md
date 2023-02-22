@@ -2,14 +2,8 @@
 title: CSSMathValue
 slug: Web/API/CSSMathValue
 page-type: web-api-interface
-tags:
-  - API
-  - CSS Typed Object Model API
-  - CSSMathValue
-  - Experimental
-  - Houdini
-  - Interface
-  - Reference
+status:
+  - experimental
 browser-compat: api.CSSMathValue
 ---
 

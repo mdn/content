@@ -2,16 +2,6 @@
 title: MediaQueryList
 slug: Web/API/MediaQueryList
 page-type: web-api-interface
-tags:
-  - API
-  - Adaptive Design
-  - CSSOM View
-  - DOM
-  - Interface
-  - Media Queries
-  - MediaQueryList
-  - Reference
-  - query
 browser-compat: api.MediaQueryList
 ---
 

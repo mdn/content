@@ -2,13 +2,6 @@
 title: Element.attachShadow()
 slug: Web/API/Element/attachShadow
 page-type: web-api-instance-method
-tags:
-  - API
-  - Element
-  - Method
-  - Reference
-  - attachShadow
-  - shadow DOM
 browser-compat: api.Element.attachShadow
 ---
 
@@ -30,12 +23,12 @@ The following is a list of elements you **can** attach a shadow root to:
 - {{htmlelement("body")}}
 - {{htmlelement("div")}}
 - {{htmlelement("footer")}}
-- {{htmlelement("h1")}}
-- {{htmlelement("h2")}}
-- {{htmlelement("h3")}}
-- {{htmlelement("h4")}}
-- {{htmlelement("h5")}}
-- {{htmlelement("h6")}}
+- {{htmlelement("Heading_Elements", "h1")}}
+- {{htmlelement("Heading_Elements", "h2")}}
+- {{htmlelement("Heading_Elements", "h3")}}
+- {{htmlelement("Heading_Elements", "h4")}}
+- {{htmlelement("Heading_Elements", "h5")}}
+- {{htmlelement("Heading_Elements", "h6")}}
 - {{htmlelement("header")}}
 - {{htmlelement("main")}}
 - {{htmlelement("nav")}}

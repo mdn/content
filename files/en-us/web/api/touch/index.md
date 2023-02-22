@@ -2,13 +2,6 @@
 title: Touch
 slug: Web/API/Touch
 page-type: web-api-interface
-tags:
-  - API
-  - DOM
-  - Interface
-  - Reference
-  - TouchEvent
-  - touch
 browser-compat: api.Touch
 ---
 

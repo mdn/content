@@ -2,13 +2,8 @@
 title: "ServiceWorkerGlobalScope: paymentrequest event"
 slug: Web/API/ServiceWorkerGlobalScope/paymentrequest_event
 page-type: web-api-event
-tags:
-  - API
-  - paymentrequest
-  - Event
-  - Experimental
-  - Property
-  - Reference
+status:
+  - experimental
 browser-compat: api.ServiceWorkerGlobalScope.paymentrequest_event
 ---
 

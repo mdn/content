@@ -2,12 +2,6 @@
 title: padding
 slug: Web/CSS/padding
 page-type: css-shorthand-property
-tags:
-  - CSS
-  - CSS Padding
-  - CSS Property
-  - Reference
-  - recipe:css-shorthand-property
 browser-compat: css.properties.padding
 ---
 

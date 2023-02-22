@@ -2,17 +2,8 @@
 title: Background Synchronization API
 slug: Web/API/Background_Synchronization_API
 page-type: web-api-overview
-tags:
-  - API
-  - Background
-  - Landing
-  - Offline
-  - Overview
-  - PWA
-  - Service Workers
-  - Sync
-  - Web Background Synchronization API
-  - Experimental
+status:
+  - experimental
 browser-compat: api.SyncManager
 ---
 

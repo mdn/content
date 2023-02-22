@@ -2,16 +2,8 @@
 title: SyncEvent
 slug: Web/API/SyncEvent
 page-type: web-api-interface
-tags:
-  - API
-  - Background Sync
-  - Interface
-  - Offline
-  - Reference
-  - ServiceWorker
-  - SyncEvent
-  - Workers
-  - Experimental
+status:
+  - experimental
 browser-compat: api.SyncEvent
 ---
 

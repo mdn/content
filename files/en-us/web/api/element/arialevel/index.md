@@ -2,14 +2,6 @@
 title: Element.ariaLevel
 slug: Web/API/Element/ariaLevel
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - ariaLevel
-  - AriaAttributes
-  - AriaMixin
-  - Element
 browser-compat: api.Element.ariaLevel
 ---
 
@@ -17,7 +9,7 @@ browser-compat: api.Element.ariaLevel
 
 The **`ariaLevel`** property of the {{domxref("Element")}} interface reflects the value of the `aria-level` attribute, which defines the hierarchical level of an element within a structure.
 
-> **Note:** Where possible use an HTML {{htmlelement("h1")}} or other correct heading level as these have built in semantics and do not require ARIA attributes.
+> **Note:** Where possible use an HTML {{htmlelement("Heading_Elements", "h1")}} or other correct heading level as these have built in semantics and do not require ARIA attributes.
 
 ## Value
 

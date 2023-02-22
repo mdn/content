@@ -2,14 +2,6 @@
 title: Element.ariaValueMin
 slug: Web/API/Element/ariaValueMin
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - ariaValueMin
-  - AriaAttributes
-  - AriaMixin
-  - Element
 browser-compat: api.Element.ariaValueMin
 ---
 

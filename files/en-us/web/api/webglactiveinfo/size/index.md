@@ -2,11 +2,6 @@
 title: WebGLActiveInfo.size
 slug: Web/API/WebGLActiveInfo/size
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - WebGL
 browser-compat: api.WebGLActiveInfo.size
 ---
 

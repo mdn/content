@@ -2,15 +2,8 @@
 title: SyncEvent.lastChance
 slug: Web/API/SyncEvent/lastChance
 page-type: web-api-instance-property
-tags:
-  - API
-  - Background Sync
-  - Experimental
-  - Property
-  - Reference
-  - ServiceWorker
-  - SyncEvent
-  - lastChance
+status:
+  - experimental
 browser-compat: api.SyncEvent.lastChance
 ---
 

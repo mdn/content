@@ -2,13 +2,8 @@
 title: CookieStoreManager.subscribe()
 slug: Web/API/CookieStoreManager/subscribe
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - subscribe
-  - CookieStoreManager
-  - Experimental
+status:
+  - experimental
 browser-compat: api.CookieStoreManager.subscribe
 ---
 

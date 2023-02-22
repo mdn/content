@@ -2,16 +2,6 @@
 title: Template literals (Template strings)
 slug: Web/JavaScript/Reference/Template_literals
 page-type: javascript-language-feature
-tags:
-  - ECMAScript 2015
-  - Guide
-  - JavaScript
-  - React
-  - String
-  - Template Strings
-  - Template literals
-  - Template string
-  - strings
 browser-compat: javascript.grammar.template_literals
 ---
 

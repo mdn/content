@@ -2,12 +2,6 @@
 title: overflow-clip-margin
 slug: Web/CSS/overflow-clip-margin
 page-type: css-property
-tags:
-  - CSS
-  - CSS Overflow
-  - CSS Property
-  - Reference
-  - recipe:css-property
 browser-compat: css.properties.overflow-clip-margin
 ---
 

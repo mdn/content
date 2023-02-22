@@ -2,12 +2,6 @@
 title: FileSystemDirectoryHandle.removeEntry()
 slug: Web/API/FileSystemDirectoryHandle/removeEntry
 page-type: web-api-instance-method
-tags:
-  - Directory
-  - File
-  - File System Access API
-  - FileSystemDirectoryHandle
-  - Method
 browser-compat: api.FileSystemDirectoryHandle.removeEntry
 ---
 

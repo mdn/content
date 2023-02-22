@@ -2,11 +2,6 @@
 title: CSSStyleDeclaration.getPropertyPriority()
 slug: Web/API/CSSStyleDeclaration/getPropertyPriority
 page-type: web-api-instance-method
-tags:
-  - API
-  - CSSOM
-  - Method
-  - Reference
 browser-compat: api.CSSStyleDeclaration.getPropertyPriority
 ---
 

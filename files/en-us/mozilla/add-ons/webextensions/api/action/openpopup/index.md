@@ -1,6 +1,7 @@
 ---
 title: action.openPopup()
 slug: Mozilla/Add-ons/WebExtensions/API/action/openPopup
+page-type: webextension-api-function
 tags:
   - API
   - Add-ons

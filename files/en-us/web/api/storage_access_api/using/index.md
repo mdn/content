@@ -2,13 +2,6 @@
 title: Using the Storage Access API
 slug: Web/API/Storage_Access_API/Using
 page-type: guide
-tags:
-  - API
-  - DOM
-  - Guide
-  - Reference
-  - Storage
-  - Storage Access API
 ---
 
 {{DefaultAPISidebar("Storage Access API")}}

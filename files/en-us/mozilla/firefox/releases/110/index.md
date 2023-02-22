@@ -66,6 +66,7 @@ No notable changes.
 
 ## Changes for add-on developers
 
+- Added the `"webRequestFilterResponse"`[API permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions). This permission provides access to {{WebExtAPIRef("webRequest.filterResponseData")}}. This permission can be provided as an optional permission. See {{WebExtAPIRef("webRequest.filterResponseData")}} for more information on using this permission ({{bug(1809235)}}).
 - The `defaultZoomFactor` property of {{WebExtAPIRef("tabs.ZoomSettings")}} now returns the value of the default zoom factor setting ({{bug(1772166)}})
 
 ## Older versions

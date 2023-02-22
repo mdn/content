@@ -2,13 +2,8 @@
 title: BackgroundFetchRegistration.id
 slug: Web/API/BackgroundFetchRegistration/id
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - id
-  - BackgroundFetchRegistration
-  - Experimental
+status:
+  - experimental
 browser-compat: api.BackgroundFetchRegistration.id
 ---
 

@@ -2,17 +2,6 @@
 title: MouseEvent.movementY
 slug: Web/API/MouseEvent/movementY
 page-type: web-api-instance-property
-tags:
-  - API
-  - DOM
-  - DOM Events
-  - MouseEvent
-  - MovementY
-  - Property
-  - Read-only
-  - Reference
-  - mouse lock
-  - pointer lock
 browser-compat: api.MouseEvent.movementY
 ---
 

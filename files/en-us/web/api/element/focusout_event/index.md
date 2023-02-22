@@ -2,15 +2,6 @@
 title: 'Element: focusout event'
 slug: Web/API/Element/focusout_event
 page-type: web-api-event
-tags:
-  - API
-  - DOM
-  - Element
-  - Event
-  - FocusEvent
-  - Reference
-  - focusout
-  - onfocusout
 browser-compat: api.Element.focusout_event
 ---
 

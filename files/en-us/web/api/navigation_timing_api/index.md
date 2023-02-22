@@ -2,16 +2,6 @@
 title: Navigation Timing API
 slug: Web/API/Navigation_timing_API
 page-type: web-api-overview
-tags:
-  - API
-  - Navigation Timing
-  - Navigation Timing API
-  - Optimization
-  - Overview
-  - Performance
-  - Timing
-  - Web
-  - Web Performance
 browser-compat:
   - api.PerformanceNavigationTiming
 ---

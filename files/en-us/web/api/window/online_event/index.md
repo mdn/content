@@ -2,12 +2,6 @@
 title: 'Window: online event'
 slug: Web/API/Window/online_event
 page-type: web-api-event
-tags:
-  - API
-  - Event
-  - Online
-  - Reference
-  - Window
 browser-compat: api.Window.online_event
 ---
 

@@ -2,12 +2,6 @@
 title: EcKeyGenParams
 slug: Web/API/EcKeyGenParams
 page-type: web-api-interface
-tags:
-  - API
-  - Dictionary
-  - EcKeyGenParams
-  - Reference
-  - Web Crypto API
 spec-urls: https://w3c.github.io/webcrypto/#dfn-EcKeyGenParams
 ---
 

@@ -2,14 +2,6 @@
 title: 'Notification: show event'
 slug: Web/API/Notification/show_event
 page-type: web-api-event
-tags:
-  - API
-  - Notification
-  - Notifications
-  - Notifications API
-  - Event
-  - Reference
-  - show
 browser-compat: api.Notification.show_event
 ---
 

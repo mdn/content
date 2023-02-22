@@ -2,15 +2,8 @@
 title: PaymentRequestEvent.paymentRequestOrigin
 slug: Web/API/PaymentRequestEvent/paymentRequestOrigin
 page-type: web-api-instance-property
-tags:
-  - API
-  - Payment Request API
-  - PaymentRequestEvent
-  - Property
-  - Reference
-  - payment
-  - paymentRequestOrigin
-  - Experimental
+status:
+  - experimental
 browser-compat: api.PaymentRequestEvent.paymentRequestOrigin
 ---
 

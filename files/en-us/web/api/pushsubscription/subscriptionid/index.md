@@ -2,16 +2,8 @@
 title: PushSubscription.subscriptionId
 slug: Web/API/PushSubscription/subscriptionId
 page-type: web-api-instance-property
-tags:
-  - API
-  - Deprecated
-  - Property
-  - Push
-  - Push API
-  - PushSubscription
-  - Reference
-  - Service Workers
-  - subscriptionId
+status:
+  - deprecated
 browser-compat: api.PushSubscription.subscriptionId
 ---
 

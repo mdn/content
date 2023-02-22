@@ -2,12 +2,6 @@
 title: Logical NOT (!)
 slug: Web/JavaScript/Reference/Operators/Logical_NOT
 page-type: javascript-operator
-tags:
-  - JavaScript
-  - Language feature
-  - Logical Operator
-  - Operator
-  - Reference
 browser-compat: javascript.operators.logical_not
 ---
 

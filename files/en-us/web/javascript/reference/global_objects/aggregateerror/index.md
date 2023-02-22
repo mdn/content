@@ -2,18 +2,14 @@
 title: AggregateError
 slug: Web/JavaScript/Reference/Global_Objects/AggregateError
 page-type: javascript-class
-tags:
-  - AggregateError
-  - Class
-  - Interface
-  - JavaScript
-  - Polyfill
 browser-compat: javascript.builtins.AggregateError
 ---
 
 {{JSRef}}
 
 The **`AggregateError`** object represents an error when several errors need to be wrapped in a single error. It is thrown when multiple errors need to be reported by an operation, for example by {{JSxRef("Promise.any()")}}, when all promises passed to it reject.
+
+`AggregateError` is a subclass of {{jsxref("Error")}}.
 
 ## Constructor
 
@@ -22,14 +18,23 @@ The **`AggregateError`** object represents an error when several errors need to 
 
 ## Instance properties
 
-- {{JSxRef("Error.prototype.message", "AggregateError.prototype.message")}}
-  - : Error message. Inherited from {{jsxref("Error")}}.
-- {{JSxRef("Error.prototype.name", "AggregateError.prototype.name")}}
-  - : Error name. Inherited from {{jsxref("Error")}}.
-- {{jsxref("Error.prototype.cause", "AggregateError.prototype.cause")}}
-  - : Error cause. Inherited from {{jsxref("Error")}}.
-- `AggregateError.prototype.errors`
+_Also inherits instance properties from its parent {{jsxref("Error")}}_.
+
+These properties are defined on `AggregateError.prototype` and shared by all `AggregateError` instances.
+
+- {{jsxref("Object/constructor", "AggregateError.prototype.constructor")}}
+  - : The constructor function that created the instance object. For `AggregateError` instances, the initial value is the {{jsxref("AggregateError/AggregateError", "AggregateError")}} constructor.
+- {{jsxref("Error/name", "AggregateError.prototype.name")}}
+  - : Represents the name for the type of error. For `AggregateError.prototype.name`, the initial value is `"AggregateError"`.
+
+These properties are own properties of each `AggregateError` instance.
+
+- `errors`
   - : An array that essentially reflects the iterable with which the `AggregateError` was instantiated; for example, if the `AggregateError` was created using the {{JSxRef("AggregateError/AggregateError", "AggregateError()")}} constructor, an array produced from whatever iterable was passed to the constructor as its first argument.
+
+## Instance methods
+
+_Inherits instance methods from its parent {{jsxref("Error")}}_.
 
 ## Examples
 

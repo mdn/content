@@ -2,15 +2,6 @@
 title: IDBIndex.openCursor()
 slug: Web/API/IDBIndex/openCursor
 page-type: web-api-instance-method
-tags:
-  - API
-  - Database
-  - IDBIndex
-  - IndexedDB
-  - Method
-  - Reference
-  - Storage
-  - openCursor
 browser-compat: api.IDBIndex.openCursor
 ---
 

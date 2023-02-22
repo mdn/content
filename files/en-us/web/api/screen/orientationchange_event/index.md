@@ -2,14 +2,9 @@
 title: 'Screen: orientationchange event'
 slug: Web/API/Screen/orientationchange_event
 page-type: web-api-event
-tags:
-  - API
-  - CSSOM View
-  - Deprecated
-  - Event Handler
-  - Property
-  - Screen Orientation
-  - Non-standard
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.Screen.orientationchange_event
 ---
 

@@ -2,11 +2,6 @@
 title: SVGTransform
 slug: Web/API/SVGTransform
 page-type: web-api-interface
-tags:
-  - API
-  - Reference
-  - SVG
-  - SVG DOM
 browser-compat: api.SVGTransform
 ---
 

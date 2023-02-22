@@ -2,14 +2,6 @@
 title: 'MediaQueryList: change event'
 slug: Web/API/MediaQueryList/change_event
 page-type: web-api-event
-tags:
-  - API
-  - CSSOM View
-  - Event Handler
-  - MediaQueryList
-  - Event
-  - Reference
-  - onchange
 browser-compat: api.MediaQueryList.change_event
 ---
 

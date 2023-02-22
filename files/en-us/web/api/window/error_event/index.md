@@ -2,11 +2,6 @@
 title: "Window: error event"
 slug: Web/API/Window/error_event
 page-type: web-api-event
-tags:
-  - API
-  - Event
-  - UI Events
-  - Window
 browser-compat: api.Window.error_event
 ---
 

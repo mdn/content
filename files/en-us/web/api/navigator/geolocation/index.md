@@ -2,13 +2,6 @@
 title: Navigator.geolocation
 slug: Web/API/Navigator/geolocation
 page-type: web-api-instance-property
-tags:
-  - API
-  - Geolocation API
-  - Navigator
-  - Property
-  - Reference
-  - Secure context
 browser-compat: api.Navigator.geolocation
 ---
 

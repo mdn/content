@@ -2,12 +2,6 @@
 title: get Array[@@species]
 slug: Web/JavaScript/Reference/Global_Objects/Array/@@species
 page-type: javascript-static-accessor-property
-tags:
-  - Array
-  - JavaScript
-  - Property
-  - Prototype
-  - Polyfill
 browser-compat: javascript.builtins.Array.@@species
 ---
 

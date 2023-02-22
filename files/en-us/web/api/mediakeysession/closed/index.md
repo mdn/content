@@ -2,14 +2,6 @@
 title: MediaKeySession.closed
 slug: Web/API/MediaKeySession/closed
 page-type: web-api-instance-property
-tags:
-  - API
-  - EncryptedMediaExtensions
-  - MediaKeySession
-  - NeedsExample
-  - Property
-  - Reference
-  - closed
 browser-compat: api.MediaKeySession.closed
 ---
 

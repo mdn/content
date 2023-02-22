@@ -2,13 +2,9 @@
 title: "-moz-force-broken-image-icon"
 slug: Web/CSS/-moz-force-broken-image-icon
 page-type: css-property
-tags:
-  - CSS
-  - NeedsCompatTable
-  - Non-standard
-  - Reference
-  - recipe:css-property
-  - Deprecated
+status:
+  - deprecated
+  - non-standard
 browser-compat: css.properties.-moz-force-broken-image-icon
 ---
 

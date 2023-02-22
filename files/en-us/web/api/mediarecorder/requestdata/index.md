@@ -2,17 +2,6 @@
 title: MediaRecorder.requestData()
 slug: Web/API/MediaRecorder/requestData
 page-type: web-api-instance-method
-tags:
-  - API
-  - Audio
-  - Media
-  - Media Capture
-  - MediaRecorder
-  - MediaStream Recording
-  - Method
-  - Reference
-  - Video
-  - requestData
 browser-compat: api.MediaRecorder.requestData
 ---
 

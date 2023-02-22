@@ -2,16 +2,6 @@
 title: SourceBuffer.abort()
 slug: Web/API/SourceBuffer/abort
 page-type: web-api-instance-method
-tags:
-  - API
-  - Audio
-  - MSE
-  - Media Source Extensions
-  - Method
-  - Reference
-  - SourceBuffer
-  - Video
-  - abort
 browser-compat: api.SourceBuffer.abort
 ---
 

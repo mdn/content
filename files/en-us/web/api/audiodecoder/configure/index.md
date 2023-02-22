@@ -2,13 +2,8 @@
 title: AudioDecoder.configure()
 slug: Web/API/AudioDecoder/configure
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - configure
-  - AudioDecoder
-  - Experimental
+status:
+  - experimental
 browser-compat: api.AudioDecoder.configure
 ---
 

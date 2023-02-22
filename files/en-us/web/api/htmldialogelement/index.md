@@ -2,12 +2,6 @@
 title: HTMLDialogElement
 slug: Web/API/HTMLDialogElement
 page-type: web-api-interface
-tags:
-  - API
-  - HTML DOM
-  - HTMLDialogElement
-  - Interface
-  - Reference
 browser-compat: api.HTMLDialogElement
 ---
 

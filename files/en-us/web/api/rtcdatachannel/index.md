@@ -2,17 +2,6 @@
 title: RTCDataChannel
 slug: Web/API/RTCDataChannel
 page-type: web-api-interface
-tags:
-  - API
-  - Communication
-  - Data Transfer
-  - Interface
-  - Media
-  - Networking
-  - RTCDataChannel
-  - Reference
-  - WebRTC
-  - WebRTC API
 browser-compat: api.RTCDataChannel
 ---
 
