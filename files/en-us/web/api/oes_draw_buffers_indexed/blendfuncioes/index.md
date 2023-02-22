@@ -7,7 +7,7 @@ browser-compat: api.OES_draw_buffers_indexed.blendFunciOES
 
 {{APIRef("WebGL")}}
 
-The `blendFunciOES()` method of the `OES_draw_buffers_indexed` WebGL extension defines which function is used when blending pixels for a particular draw buffer.
+The `blendFunciOES()` method of the {{DOMxRef("OES_draw_buffers_indexed")}} WebGL extension defines which function is used when blending pixels for a particular draw buffer.
 
 See {{DOMxRef("OES_draw_buffers_indexed.blendFuncSeparateiOES()")}} for setting RGB and alpha components separately and {{DOMxRef("WebGLRenderingContext.blendFunc()")}} for the WebGL 1 version of this method.
 

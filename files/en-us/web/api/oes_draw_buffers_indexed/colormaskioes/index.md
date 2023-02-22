@@ -7,7 +7,7 @@ browser-compat: api.OES_draw_buffers_indexed.colorMaskiOES
 
 {{APIRef("WebGL")}}
 
-The `colorMaskiOES()` method of the `OES_draw_buffers_indexed` WebGL extension sets which color components to enable or to disable when drawing or rendering for a particular draw buffer. It's the indexed version of WebGL 1's {{domxref("WebGLRenderingContext.colorMask()")}} method.
+The `colorMaskiOES()` method of the {{DOMxRef("OES_draw_buffers_indexed")}} WebGL extension sets which color components to enable or to disable when drawing or rendering for a particular draw buffer. It's the indexed version of WebGL 1's {{domxref("WebGLRenderingContext.colorMask()")}} method.
 
 ## Syntax
 

@@ -7,7 +7,7 @@ browser-compat: api.OES_draw_buffers_indexed.disableiOES
 
 {{APIRef("WebGL")}}
 
-The `disableiOES()` method of the `OES_draw_buffers_indexed` WebGL extension enables blending for a particular draw buffer.
+The `disableiOES()` method of the {{DOMxRef("OES_draw_buffers_indexed")}} WebGL extension enables blending for a particular draw buffer.
 
 ## Syntax
 

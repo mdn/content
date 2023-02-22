@@ -7,7 +7,7 @@ browser-compat: api.OES_draw_buffers_indexed.blendEquationiOES
 
 {{APIRef("WebGL")}}
 
-The `blendEquationiOES()` method of the `OES_draw_buffers_indexed` WebGL extension sets both the RGB blend equation and alpha blend equation for a particular draw buffer.
+The `blendEquationiOES()` method of the `OES_draw_buffers_indexed` WebGL extension sets both the RGB blend and alpha blend equations for a particular draw buffer.
 
 See {{DOMxRef("OES_draw_buffers_indexed.blendEquationSeparateiOES()")}} for setting RGB and alpha separately and {{DOMxRef("WebGLRenderingContext.blendEquation()")}} for the WebGL 1 version of this method.
 

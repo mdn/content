@@ -6,7 +6,7 @@ browser-compat: api.OES_draw_buffers_indexed
 ---
 {{APIRef("WebGL")}}
 
-The **`OES_draw_buffers_indexed`** extension is part of the [WebGL API](/en-US/docs/Web/API/WebGL_API) and enables use of different blend options when writing to multiple color buffers simultaneously.
+The **`OES_draw_buffers_indexed`** extension is part of the [WebGL API](/en-US/docs/Web/API/WebGL_API) and enables the use of different blend options when writing to multiple color buffers simultaneously.
 
 WebGL extensions are available using the {{domxref("WebGLRenderingContext.getExtension()")}} method. For more information, see also [Using Extensions](/en-US/docs/Web/API/WebGL_API/Using_Extensions) in the [WebGL tutorial](/en-US/docs/Web/API/WebGL_API/Tutorial).
 
@@ -15,9 +15,9 @@ WebGL extensions are available using the {{domxref("WebGLRenderingContext.getExt
 ## Instance methods
 
 - {{DOMxRef("OES_draw_buffers_indexed.blendEquationiOES()")}}
-  - : Sets both the RGB blend equation and alpha blend equation for a particular draw buffer.
+  - : Sets both the RGB and alpha blend equations for a particular draw buffer.
 - {{DOMxRef("OES_draw_buffers_indexed.blendEquationSeparateiOES()")}}
-  - : Sets the RGB blend equation and alpha blend equation separately for a particular draw buffer.
+  - : Sets the RGB and alpha blend equations separately for a particular draw buffer.
 - {{DOMxRef("OES_draw_buffers_indexed.blendFunciOES()")}}
   - : Defines which function is used when blending pixels for a particular draw buffer.
 - {{DOMxRef("OES_draw_buffers_indexed.blendFuncSeparateiOES()")}}
