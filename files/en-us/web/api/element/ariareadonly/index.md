@@ -36,9 +36,9 @@ In this example the `aria-readonly` attribute on the element with an ID of `txtB
 ```
 
 ```js
-let el = document.getElementById('txtBoxInput');
+let el = document.getElementById("txtBoxInput");
 console.log(el.ariaReadOnly); // "true"
-el.ariaReadOnly = "false"
+el.ariaReadOnly = "false";
 console.log(el.ariaReadOnly); // "false"
 ```
 

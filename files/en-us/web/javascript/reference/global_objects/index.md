@@ -2,11 +2,6 @@
 title: Standard built-in objects
 slug: Web/JavaScript/Reference/Global_Objects
 page-type: landing-page
-tags:
-  - JavaScript
-  - Landing page
-  - Overview
-  - Reference
 ---
 
 {{JSSidebar("Objects")}}

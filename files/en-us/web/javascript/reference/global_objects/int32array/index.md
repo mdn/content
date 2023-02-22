@@ -2,19 +2,14 @@
 title: Int32Array
 slug: Web/JavaScript/Reference/Global_Objects/Int32Array
 page-type: javascript-class
-tags:
-  - Class
-  - Int32Array
-  - JavaScript
-  - TypedArray
-  - TypedArrays
-  - Polyfill
 browser-compat: javascript.builtins.Int32Array
 ---
 
 {{JSRef}}
 
 The **`Int32Array`** typed array represents an array of twos-complement 32-bit signed integers in the platform byte order. If control over byte order is needed, use {{jsxref("DataView")}} instead. The contents are initialized to `0`. Once established, you can reference elements in the array using the object's methods, or using standard array index syntax (that is, using bracket notation).
+
+`Int32Array` is a subclass of the hidden {{jsxref("TypedArray")}} class.
 
 ## Constructor
 
@@ -38,8 +33,12 @@ _Inherits static methods from its parent {{jsxref("TypedArray")}}_.
 
 _Also inherits instance properties from its parent {{jsxref("TypedArray")}}_.
 
+These properties are defined on `Int32Array.prototype` and shared by all `Int32Array` instances.
+
 - {{jsxref("TypedArray.BYTES_PER_ELEMENT", "Int32Array.prototype.BYTES_PER_ELEMENT")}}
   - : Returns a number value of the element size. `4` in the case of a `Int32Array`.
+- {{jsxref("Object/constructor", "Int32Array.prototype.constructor")}}
+  - : The constructor function that created the instance object. For `Int32Array` instances, the initial value is the {{jsxref("Int32Array/Int32Array", "Int32Array")}} constructor.
 
 ## Instance methods
 

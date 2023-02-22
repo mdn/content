@@ -1,5 +1,5 @@
 ---
-title: 'Element: MSManipulationStateChanged event'
+title: "Element: MSManipulationStateChanged event"
 slug: Web/API/Element/MSManipulationStateChanged_event
 page-type: web-api-event
 status:
@@ -46,12 +46,14 @@ Get manipulation states using the `lastState` and `currentState` properties.
 
 ```js
 // Listen for panning state change events
-outerScroller.addEventListener("MSManipulationStateChanged", function(e) {
-    // Check to see if they lifted while pulled to the top
-    if (e.currentState === MS_MANIPULATION_STATE_INERTIA &&
-        outerScroller.scrollTop === 0) {
-        refreshItemsAsync();
-    }
+outerScroller.addEventListener("MSManipulationStateChanged", function (e) {
+  // Check to see if they lifted while pulled to the top
+  if (
+    e.currentState === MS_MANIPULATION_STATE_INERTIA &&
+    outerScroller.scrollTop === 0
+  ) {
+    refreshItemsAsync();
+  }
 });
 ```
 

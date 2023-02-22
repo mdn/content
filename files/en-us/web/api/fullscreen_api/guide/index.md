@@ -3,8 +3,8 @@ title: Guide to the Fullscreen API
 slug: Web/API/Fullscreen_API/Guide
 page-type: guide
 browser-compat:
-  - api.Document.fullscreen
   - api.Document.fullscreenEnabled
+  - api.Document.fullscreen 
 ---
 
 {{DefaultAPISidebar("Fullscreen API")}}

@@ -4,10 +4,11 @@ slug: Web/API/Window/webkitConvertPointFromPageToNode
 page-type: web-api-instance-method
 status:
   - non-standard
+  - deprecated
 browser-compat: api.Window.webkitConvertPointFromPageToNode
 ---
 
-{{APIRef}}
+{{APIRef}}{{Deprecated_Header}}{{Non-standard_header}}
 
 {{Non-standard_header}}
 

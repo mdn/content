@@ -2,14 +2,9 @@
 title: "-moz-outline-radius"
 slug: Web/CSS/-moz-outline-radius
 page-type: css-shorthand-property
-tags:
-  - CSS
-  - CSS Property
-  - CSS:Mozilla Extensions
-  - Non-standard
-  - Reference
-  - recipe:css-shorthand-property
-  - Deprecated
+status:
+  - deprecated
+  - non-standard
 browser-compat: css.properties.-moz-outline-radius
 ---
 

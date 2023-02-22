@@ -2,11 +2,6 @@
 title: Atomics.store()
 slug: Web/JavaScript/Reference/Global_Objects/Atomics/store
 page-type: javascript-static-method
-tags:
-  - Atomics
-  - JavaScript
-  - Method
-  - Shared Memory
 browser-compat: javascript.builtins.Atomics.store
 ---
 

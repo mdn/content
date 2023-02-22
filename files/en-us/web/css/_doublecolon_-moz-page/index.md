@@ -2,15 +2,8 @@
 title: "::-moz-page"
 slug: Web/CSS/::-moz-page
 page-type: css-pseudo-element
-tags:
-  - CSS
-  - CSS:Mozilla Extensions
-  - NeedsContent
-  - NeedsExample
-  - Non-standard
-  - Pseudo-element
-  - Reference
-  - Selector
+status:
+  - non-standard
 browser-compat: css.selectors.-moz-page
 ---
 

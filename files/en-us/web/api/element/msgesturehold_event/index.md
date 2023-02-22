@@ -1,5 +1,5 @@
 ---
-title: 'Element: MSGestureHold event'
+title: "Element: MSGestureHold event"
 slug: Web/API/Element/MSGestureHold_event
 page-type: web-api-event
 status:

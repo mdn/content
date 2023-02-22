@@ -107,7 +107,9 @@ From the HTML point of view, the app shell is everything outside the content sec
         <a href="https://js13kgames.com/aframe">A-Frame category</a> in the
         <a href="https://2017.js13kgames.com">js13kGames 2017</a> competition.
         You can
-        <a href="https://github.com/mdn/pwa-examples/blob/master/js13kpwa">fork js13kPWA on GitHub</a>
+        <a href="https://github.com/mdn/pwa-examples/blob/master/js13kpwa"
+          >fork js13kPWA on GitHub</a
+        >
         to check its source code.
       </p>
       <button id="notifications">Request dummy notifications</button>
@@ -148,36 +150,37 @@ const template = `<article>
   <li><span>More:</span> <a href='http://js13kgames.com/entries/SLUG'>js13kgames.com/entries/SLUG</a></li>
   </ul>
 </article>`;
-let content = '';
+let content = "";
 for (let i = 0; i < games.length; i++) {
-  let entry = template.replace(/POS/g, (i + 1))
+  let entry = template
+    .replace(/POS/g, i + 1)
     .replace(/SLUG/g, games[i].slug)
     .replace(/NAME/g, games[i].name)
     .replace(/AUTHOR/g, games[i].author)
     .replace(/TWITTER/g, games[i].twitter)
     .replace(/WEBSITE/g, games[i].website)
     .replace(/GITHUB/g, games[i].github);
-  entry = entry.replace('<a href=\'http:///\'></a>', '-');
+  entry = entry.replace("<a href='http:///'></a>", "-");
   content += entry;
 }
-document.getElementById('content').innerHTML = content;
+document.getElementById("content").innerHTML = content;
 ```
 
 Next, it registers a service worker:
 
 ```js
-if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('/pwa-examples/js13kpwa/sw.js');
+if ("serviceWorker" in navigator) {
+  navigator.serviceWorker.register("/pwa-examples/js13kpwa/sw.js");
 }
 ```
 
 The next code block requests permission for notifications when a button is clicked:
 
 ```js
-const button = document.getElementById('notifications');
-button.addEventListener('click', () => {
+const button = document.getElementById("notifications");
+button.addEventListener("click", () => {
   Notification.requestPermission().then((result) => {
-    if (result === 'granted') {
+    if (result === "granted") {
       randomNotification();
     }
   });
@@ -206,32 +209,32 @@ function randomNotification() {
 The last file we will quickly look at is the service worker: sw\.js — it first imports data from the games.js file:
 
 ```js
-self.importScripts('data/games.js');
+self.importScripts("data/games.js");
 ```
 
 Next, it creates a list of all the files to be cached, both from the app shell and the content:
 
 ```js
-const cacheName = 'js13kPWA-v1';
+const cacheName = "js13kPWA-v1";
 const appShellFiles = [
-  '/pwa-examples/js13kpwa/',
-  '/pwa-examples/js13kpwa/index.html',
-  '/pwa-examples/js13kpwa/app.js',
-  '/pwa-examples/js13kpwa/style.css',
-  '/pwa-examples/js13kpwa/fonts/graduate.eot',
-  '/pwa-examples/js13kpwa/fonts/graduate.ttf',
-  '/pwa-examples/js13kpwa/fonts/graduate.woff',
-  '/pwa-examples/js13kpwa/favicon.ico',
-  '/pwa-examples/js13kpwa/img/js13kgames.png',
-  '/pwa-examples/js13kpwa/img/bg.png',
-  '/pwa-examples/js13kpwa/icons/icon-32.png',
-  '/pwa-examples/js13kpwa/icons/icon-64.png',
-  '/pwa-examples/js13kpwa/icons/icon-96.png',
-  '/pwa-examples/js13kpwa/icons/icon-128.png',
-  '/pwa-examples/js13kpwa/icons/icon-168.png',
-  '/pwa-examples/js13kpwa/icons/icon-192.png',
-  '/pwa-examples/js13kpwa/icons/icon-256.png',
-  '/pwa-examples/js13kpwa/icons/icon-512.png',
+  "/pwa-examples/js13kpwa/",
+  "/pwa-examples/js13kpwa/index.html",
+  "/pwa-examples/js13kpwa/app.js",
+  "/pwa-examples/js13kpwa/style.css",
+  "/pwa-examples/js13kpwa/fonts/graduate.eot",
+  "/pwa-examples/js13kpwa/fonts/graduate.ttf",
+  "/pwa-examples/js13kpwa/fonts/graduate.woff",
+  "/pwa-examples/js13kpwa/favicon.ico",
+  "/pwa-examples/js13kpwa/img/js13kgames.png",
+  "/pwa-examples/js13kpwa/img/bg.png",
+  "/pwa-examples/js13kpwa/icons/icon-32.png",
+  "/pwa-examples/js13kpwa/icons/icon-64.png",
+  "/pwa-examples/js13kpwa/icons/icon-96.png",
+  "/pwa-examples/js13kpwa/icons/icon-128.png",
+  "/pwa-examples/js13kpwa/icons/icon-168.png",
+  "/pwa-examples/js13kpwa/icons/icon-192.png",
+  "/pwa-examples/js13kpwa/icons/icon-256.png",
+  "/pwa-examples/js13kpwa/icons/icon-512.png",
 ];
 const gamesImages = [];
 for (let i = 0; i < games.length; i++) {
@@ -243,30 +246,36 @@ const contentToCache = appShellFiles.concat(gamesImages);
 The next block installs the service worker, which then actually caches all the files contained in the above list:
 
 ```js
-self.addEventListener('install', (e) => {
-  console.log('[Service Worker] Install');
-  e.waitUntil((async () => {
-    const cache = await caches.open(cacheName);
-    console.log('[Service Worker] Caching all: app shell and content');
-    await cache.addAll(contentToCache);
-  })());
+self.addEventListener("install", (e) => {
+  console.log("[Service Worker] Install");
+  e.waitUntil(
+    (async () => {
+      const cache = await caches.open(cacheName);
+      console.log("[Service Worker] Caching all: app shell and content");
+      await cache.addAll(contentToCache);
+    })()
+  );
 });
 ```
 
 Last of all, the service worker fetches content from the cache if it is available there, providing offline functionality:
 
 ```js
-self.addEventListener('fetch', (e) => {
-  e.respondWith((async () => {
-    const r = await caches.match(e.request);
-    console.log(`[Service Worker] Fetching resource: ${e.request.url}`);
-    if (r) { return r; }
-    const response = await fetch(e.request);
-    const cache = await caches.open(cacheName);
-    console.log(`[Service Worker] Caching new resource: ${e.request.url}`);
-    cache.put(e.request, response.clone());
-    return response;
-  })());
+self.addEventListener("fetch", (e) => {
+  e.respondWith(
+    (async () => {
+      const r = await caches.match(e.request);
+      console.log(`[Service Worker] Fetching resource: ${e.request.url}`);
+      if (r) {
+        return r;
+      }
+      const response = await fetch(e.request);
+      const cache = await caches.open(cacheName);
+      console.log(`[Service Worker] Caching new resource: ${e.request.url}`);
+      cache.put(e.request, response.clone());
+      return response;
+    })()
+  );
 });
 ```
 
@@ -277,30 +286,30 @@ The games data is present in the data folder in a form of a JavaScript object ([
 ```js
 const games = [
   {
-    slug: 'lost-in-cyberspace',
-    name: 'Lost in Cyberspace',
-    author: 'Zosia and Bartek',
-    twitter: 'bartaz',
-    website: '',
-    github: 'github.com/bartaz/lost-in-cyberspace'
+    slug: "lost-in-cyberspace",
+    name: "Lost in Cyberspace",
+    author: "Zosia and Bartek",
+    twitter: "bartaz",
+    website: "",
+    github: "github.com/bartaz/lost-in-cyberspace",
   },
   {
-    slug: 'vernissage',
-    name: 'Vernissage',
-    author: 'Platane',
-    twitter: 'platane_',
-    website: 'github.com/Platane',
-    github: 'github.com/Platane/js13k-2017'
+    slug: "vernissage",
+    name: "Vernissage",
+    author: "Platane",
+    twitter: "platane_",
+    website: "github.com/Platane",
+    github: "github.com/Platane/js13k-2017",
   },
   // ...
   {
-    slug: 'emma-3d',
-    name: 'Emma-3D',
-    author: 'Prateek Roushan',
-    twitter: '',
-    website: '',
-    github: 'github.com/coderprateek/Emma-3D'
-  }
+    slug: "emma-3d",
+    name: "Emma-3D",
+    author: "Prateek Roushan",
+    twitter: "",
+    website: "",
+    github: "github.com/coderprateek/Emma-3D",
+  },
 ];
 ```
 

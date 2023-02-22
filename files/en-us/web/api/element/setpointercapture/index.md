@@ -88,7 +88,7 @@ function slide(e) {
   slider.style.transform = `translate(${e.clientX - 70}px)`;
 }
 
-const slider = document.getElementById('slider');
+const slider = document.getElementById("slider");
 
 slider.onpointerdown = beginSliding;
 slider.onpointerup = stopSliding;

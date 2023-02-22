@@ -2,11 +2,6 @@
 title: "RangeError: precision is out of range"
 slug: Web/JavaScript/Reference/Errors/Precision_range
 page-type: javascript-error
-tags:
-  - Error
-  - Errors
-  - JavaScript
-  - RangeError
 ---
 
 {{jsSidebar("Errors")}}

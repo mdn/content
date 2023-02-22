@@ -2,10 +2,6 @@
 title: Cryptography
 slug: Glossary/Cryptography
 page-type: glossary-definition
-tags:
-  - Cryptography
-  - Privacy
-  - Security
 ---
 
 **Cryptography**, or cryptology, is the science that studies how to encode and transmit messages securely. Cryptography designs and studies algorithms used to encode and decode messages in an insecure environment, and their applications.

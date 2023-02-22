@@ -2,15 +2,9 @@
 title: user-modify
 slug: Web/CSS/user-modify
 page-type: css-property
-tags:
-  - CSS
-  - CSS Property
-  - CSS:Mozilla Extensions
-  - CSS:WebKit Extensions
-  - Deprecated
-  - Non-standard
-  - Reference
-  - recipe:css-property
+status:
+  - deprecated
+  - non-standard
 browser-compat: css.properties.user-modify
 ---
 

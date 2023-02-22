@@ -2,13 +2,6 @@
 title: color()
 slug: Web/CSS/color_value/color
 page-type: css-function
-tags:
-  - CSS
-  - CSS Data Type
-  - Data Type
-  - Reference
-  - Web
-  - color
 browser-compat: css.types.color.color
 ---
 

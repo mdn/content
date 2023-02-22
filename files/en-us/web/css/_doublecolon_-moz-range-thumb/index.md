@@ -2,13 +2,8 @@
 title: "::-moz-range-thumb"
 slug: Web/CSS/::-moz-range-thumb
 page-type: css-pseudo-element
-tags:
-  - CSS
-  - CSS:Mozilla Extensions
-  - Non-standard
-  - Pseudo-element
-  - Reference
-  - Selector
+status:
+  - non-standard
 browser-compat: css.selectors.-moz-range-thumb
 ---
 

@@ -25,7 +25,7 @@ If an activation has been triggered, the user agent differentiates between two t
 
 {{Glossary("Transient activation")}} is a window state that indicates a user has recently pressed a button, moved a mouse, used a menu, or performed some other user interaction. Transient activation expires after a timeout (if not renewed by further interaction) and may also be consumed by some APIs (like {{domxref("Window.open()")}}).
 
-Example APIs that require transient activation:
+APIs that require transient activation (list is not exhaustive):
 
 - [`beforeunload` event](/en-US/docs/Web/API/Window/beforeunload_event)
 - {{domxref("Clipboard.read()")}}
@@ -61,11 +61,11 @@ Example APIs that require transient activation:
 
 {{Glossary("Sticky activation")}} is a window state that indicates a user has pressed a button, moved a mouse, used a menu, or performed some other user interaction. It is not reset after it has been set initially (unlike transient activation).
 
-Examples APIs that require sticky activation:
+APIs that require sticky activation (not exhaustive):
 
 - {{domxref("Navigator.vibrate()")}}
-- `navigator.getAutoplayPolicy()`
 - `navigator.virtualKeyboard.show()`
+- Autoplay of [Media and Web Audio APIs](/en-US/docs/Web/Media/Autoplay_guide) (in particular for [`AudioContexts`](/en-US/docs/Web/API/AudioContext)).
 
 ## UserActivation API
 

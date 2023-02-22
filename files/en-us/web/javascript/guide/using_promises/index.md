@@ -2,14 +2,6 @@
 title: Using promises
 slug: Web/JavaScript/Guide/Using_promises
 page-type: guide
-tags:
-  - Guide
-  - Intermediate
-  - JavaScript
-  - Promise
-  - Promises
-  - asynchronous
-  - "l10n:priority"
 ---
 
 {{jsSidebar("JavaScript Guide")}}{{PreviousNext("Web/JavaScript/Guide/Using_Classes", "Web/JavaScript/Guide/Iterators_and_Generators")}}

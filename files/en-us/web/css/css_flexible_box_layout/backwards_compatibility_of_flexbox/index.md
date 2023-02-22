@@ -2,17 +2,6 @@
 title: Backwards compatibility of flexbox
 slug: Web/CSS/CSS_Flexible_Box_Layout/Backwards_Compatibility_of_Flexbox
 page-type: guide
-tags:
-  - "@supports"
-  - CSS
-  - CSS Tables
-  - Flexible Boxes
-  - Floats
-  - Guide
-  - fallbacks
-  - feature queries
-  - flexbox
-  - inline-block
 ---
 
 {{CSSRef}}

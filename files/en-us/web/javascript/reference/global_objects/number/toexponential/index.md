@@ -2,12 +2,6 @@
 title: Number.prototype.toExponential()
 slug: Web/JavaScript/Reference/Global_Objects/Number/toExponential
 page-type: javascript-instance-method
-tags:
-  - JavaScript
-  - Method
-  - Number
-  - Prototype
-  - Polyfill
 browser-compat: javascript.builtins.Number.toExponential
 ---
 

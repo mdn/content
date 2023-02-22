@@ -2,13 +2,6 @@
 title: <custom-ident>
 slug: Web/CSS/custom-ident
 page-type: css-type
-tags:
-  - CSS
-  - CSS Data Type
-  - Data Type
-  - Layout
-  - Reference
-  - Web
 spec-urls:
   - https://drafts.csswg.org/css-values/#custom-idents
   - https://drafts.csswg.org/css-will-change/#valdef-will-change-custom-ident

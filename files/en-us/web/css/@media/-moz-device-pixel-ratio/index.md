@@ -2,12 +2,9 @@
 title: "-moz-device-pixel-ratio"
 slug: Web/CSS/@media/-moz-device-pixel-ratio
 page-type: css-media-feature
-tags:
-  - "@media"
-  - CSS
-  - Deprecated
-  - Non-standard
-  - media feature
+status:
+  - deprecated
+  - non-standard
 browser-compat: css.at-rules.media.-moz-device-pixel-ratio
 ---
 

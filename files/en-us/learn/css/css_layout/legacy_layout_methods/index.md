@@ -101,7 +101,7 @@ body {
 }
 ```
 
-The body will be 90% of the viewport wide until it gets to 900px wide, in which case it will stay fixed at this width and center itself in the viewport. By default, its children (the {{htmlelement("h1")}} and the two {{htmlelement("div")}}s) will span 100% of the width of the body. If we want the two {{htmlelement("div")}}s to be floated alongside one another, we need to set their widths to total 100% of the width of their parent element or smaller so they can fit alongside one another. Add the following to the bottom of your CSS:
+The body will be 90% of the viewport wide until it gets to 900px wide, in which case it will stay fixed at this width and center itself in the viewport. By default, its children (the {{htmlelement("Heading_Elements", "h1")}} and the two {{htmlelement("div")}}s) will span 100% of the width of the body. If we want the two {{htmlelement("div")}}s to be floated alongside one another, we need to set their widths to total 100% of the width of their parent element or smaller so they can fit alongside one another. Add the following to the bottom of your CSS:
 
 ```css
 div:nth-of-type(1) {
