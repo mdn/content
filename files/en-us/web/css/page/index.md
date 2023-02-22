@@ -7,7 +7,7 @@ browser-compat: css.at-rules.page.page
 
 {{CSSRef}}
 
-The **`page`** [CSS](/en-US/docs/Web/CSS) property is used to specify the named page, a specific type of page defined by the {{cssxref("@page")}}  [at-rule](/en-US/docs/Web/CSS/At-rule).
+The **`page`** [CSS](/en-US/docs/Web/CSS) property is used to specify the named page, a specific type of page defined by the {{cssxref("@page")}} [at-rule](/en-US/docs/Web/CSS/At-rule).
 
 If there are multiple selectors that are using a named page consecutively then a forced page break using [`break-after`](/en-US/docs/Web/CSS/break-after) may be needed.
 
@@ -32,11 +32,12 @@ page: unset;
 ### Values
 
 - `auto`
-  - : Default setting for the property.
-- {{cssxref("<custom-ident>")}}
+  - : Default value.
+  - : Default value. Use the value of the nearest ancestor with a non-`auto` value. If no ancestor has a named page value set, the empty string.
+- {{cssxref("custom-ident")}}
   - : Case-sensitive name defined in a [`@page`](/en-US/docs/Web/CSS/@page) at-rule.
 
-> **Note:** The page property does not inherit. However, if the page value on an element is auto, then its used value is the value specified on its nearest ancestor with a non-auto value. When specified on the root element, the used value for auto is the empty string.
+> **Note:** The `page` property does not inherit. However, if the `page` value on an element is `auto`, then its used value is the value specified on its nearest ancestor with a non-`auto` value. When specified on the root element, the used value for auto is the empty string.
 
 ## Formal definition
 

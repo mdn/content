@@ -61,7 +61,7 @@ The `@page` at-rule can be accessed via the CSS object model interface {{domxref
 
 The `@page` at-rule, allows the user to assign a name to the rule, which is then called in a selector using the `page` property.
 
-- [`page`](/en-US/docs/Web/CSS/@page/page)
+- {{Cssxref("page")}}
   - : Allows a selector to use a user defined **named page**
 
 ## Formal syntax
@@ -300,9 +300,9 @@ The page-margin properties are the set of CSS properties can be set in any indiv
 
 Named pages allow web pages to perform per-page layout and add page-breaks in a declarative manner when printing.
 
-Named pages can be applied using the [`page`](/en-US/docs/Web/CSS/@page/page) property. This allows the user to create different page configurations for use in print layouts.
+Named pages can be applied using the {{Cssxref("page")}} property. This allows the user to create different page configurations for use in print layouts.
 
-An example of this can be found on the [`page`](/en-US/docs/Web/CSS/@page/page#examples) examples.
+An example of this can be found on the [`page`](/en-US/docs/Web/CSS/page#examples) examples.
 
 ## Examples
 
@@ -441,5 +441,5 @@ Please refer to the various [pseudo-classes](/en-US/docs/Web/CSS/Pseudo-classes)
 ## See also
 
 - [`size`](/en-US/docs/Web/CSS/@page/size)
-- [`page`](/en-US/docs/Web/CSS/@page/page)
+- {{Cssxref("page")}}
 - See the [\[META\] CSS Paged Media Module Level 3](https://bugzilla.mozilla.org/show_bug.cgi?id=286443) ticket in Bugzilla for tracking progress on the subject (page-based counters, etc.)
