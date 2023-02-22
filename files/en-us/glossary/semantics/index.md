@@ -16,13 +16,13 @@ In CSS, consider styling a list with `li` elements representing different types 
 
 ## Semantics in HTML
 
-In HTML, for example, the {{htmlelement("h1")}} element is a semantic element, which gives the text it wraps around the role (or meaning) of "a top level heading on your page."
+In HTML, for example, the {{htmlelement("Heading_Elements", "h1")}} element is a semantic element, which gives the text it wraps around the role (or meaning) of "a top level heading on your page."
 
 ```html
 <h1>This is a top level heading</h1>
 ```
 
-By default, most browser's [user agent stylesheet](/en-US/docs/Web/CSS/Cascade#user-agent_stylesheets) will style an {{htmlelement("h1")}} with a large font size to make it _look_ like a heading (although you could style it to look like anything you wanted).
+By default, most browser's [user agent stylesheet](/en-US/docs/Web/CSS/Cascade#user-agent_stylesheets) will style an {{htmlelement("Heading_Elements", "h1")}} with a large font size to make it _look_ like a heading (although you could style it to look like anything you wanted).
 
 On the other hand, you could make any element _look_ like a top level heading. Consider the following:
 

@@ -59,7 +59,7 @@ Each heading has to be wrapped in a heading element:
 <h1>I am the title of the story.</h1>
 ```
 
-There are six heading elements: {{htmlelement("h1")}}, {{htmlelement("h2")}}, {{htmlelement("h3")}}, {{htmlelement("h4")}}, {{htmlelement("h5")}}, and {{htmlelement("h6")}}. Each element represents a different level of content in the document; `<h1>` represents the main heading, `<h2>` represents subheadings, `<h3>` represents sub-subheadings, and so on.
+There are six heading elements: {{htmlelement("Heading_Elements", "h1")}}, {{htmlelement("Heading_Elements", "h2")}}, {{htmlelement("Heading_Elements", "h3")}}, {{htmlelement("Heading_Elements", "h4")}}, {{htmlelement("Heading_Elements", "h5")}}, and {{htmlelement("Heading_Elements", "h6")}}. Each element represents a different level of content in the document; `<h1>` represents the main heading, `<h2>` represents subheadings, `<h3>` represents sub-subheadings, and so on.
 
 ### Implementing structural hierarchy
 
@@ -252,7 +252,7 @@ textarea.onkeyup = function(){
 
 Semantics are relied on everywhere around us—we rely on previous experience to tell us what the function of an everyday object is; when we see something, we know what its function will be. So, for example, we expect a red traffic light to mean "stop," and a green traffic light to mean "go." Things can get tricky very quickly if the wrong semantics are applied. (Do any countries use red to mean "go"? We hope not.)
 
-In a similar way, we need to make sure we are using the correct elements, giving our content the correct meaning, function, or appearance. In this context, the {{htmlelement("h1")}} element is also a semantic element, which gives the text it wraps around the role (or meaning) of "a top level heading on your page."
+In a similar way, we need to make sure we are using the correct elements, giving our content the correct meaning, function, or appearance. In this context, the {{htmlelement("Heading_Elements", "h1")}} element is also a semantic element, which gives the text it wraps around the role (or meaning) of "a top level heading on your page."
 
 ```html
 <h1>This is a top level heading</h1>

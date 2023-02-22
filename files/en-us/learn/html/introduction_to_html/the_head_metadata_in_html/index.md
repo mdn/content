@@ -68,9 +68,9 @@ In larger pages however, the head can get quite large. Try going to some of your
 
 ## Adding a title
 
-We've already seen the {{htmlelement("title")}} element in action — this can be used to add a title to the document. This however can get confused with the {{htmlelement("h1")}} element, which is used to add a top level heading to your body content — this is also sometimes referred to as the page title. But they are different things!
+We've already seen the {{htmlelement("title")}} element in action — this can be used to add a title to the document. This however can get confused with the {{htmlelement("Heading_Elements", "h1")}} element, which is used to add a top level heading to your body content — this is also sometimes referred to as the page title. But they are different things!
 
-- The {{htmlelement("h1")}} element appears on the page when loaded in the browser — generally this should be used once per page, to mark up the title of your page content (the story title, or news headline, or whatever is appropriate to your usage.)
+- The {{htmlelement("Heading_Elements", "h1")}} element appears on the page when loaded in the browser — generally this should be used once per page, to mark up the title of your page content (the story title, or news headline, or whatever is appropriate to your usage.)
 - The {{htmlelement("title")}} element is metadata that represents the title of the overall HTML document (not the document's content.)
 
 ### Active learning: Inspecting a simple example

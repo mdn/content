@@ -110,7 +110,7 @@ You can see a comparison between physical and logical properties below.
 
 **If you change the writing mode of the boxes by switching the `writing-mode` property on `.box` to `vertical-rl`, you will see how the physical properties stay tied to their physical direction, whereas the logical properties switch with the writing mode.**
 
-**You can also see that the {{htmlelement("h2")}} has a black `border-bottom`. Can you work out how to make that bottom border always go below the text in both writing modes?**
+**You can also see that the {{htmlelement("Heading_Elements", "h2")}} has a black `border-bottom`. Can you work out how to make that bottom border always go below the text in both writing modes?**
 
 {{EmbedGHLiveSample("css-examples/learn/writing-modes/logical-mbp.html", '100%', 1300)}}
 

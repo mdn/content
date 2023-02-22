@@ -31,7 +31,7 @@ Historically, one of the web's key features has always been its ability to provi
 - You can link to a specific section of a document by linking to its URL plus the _document fragment_ (ID) of that section, for example:
   - [https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a#browser_compatibility](/en-US/docs/Web/HTML/Element/a#browser_compatibility).
 
-The issue with linking to specific document fragments is that the author of the linked page needs to put an anchor in place to _actually_ link to. The second example above links to an {{htmlelement("h2")}} element with an ID of `browser_compatibility`:
+The issue with linking to specific document fragments is that the author of the linked page needs to put an anchor in place to _actually_ link to. The second example above links to an {{htmlelement("Heading_Elements", "h2")}} element with an ID of `browser_compatibility`:
 
 ```html
 <h2 id="browser_compatibility">
