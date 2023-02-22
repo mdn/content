@@ -44,6 +44,7 @@ should update any existing code to use the {{jsxref("Promise")}}-based version o
 A {{jsxref("Promise")}} which resolves with an {{domxref("RTCStatsReport")}} object
 providing connection statistics. The report's contents depend on the
 `selector` and other details of the connection.
+
 ### Exceptions
 
 This method does not throw exceptions; instead, it rejects the returned promise with
