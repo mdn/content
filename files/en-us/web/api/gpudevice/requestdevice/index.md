@@ -24,7 +24,7 @@ requestDevice(descriptor)
 - `descriptor` {{optional_inline}}
   - : An object containing the following properties:
     - `defaultQueue` {{optional_inline}}
-      - : An object that provides information for the device's default {{domxref("GPUQueue")}} (as returned by {{domxref("GPUDevice.queue")}}). This object has a single property — `label` — which provides the default queue with a {{domxref("GPUQueue.label", "label")}} value. If no value is provided, this defaults to an empty object, and the default queue's label will be an empty string.
+      - : An object that describes the default {{domxref("GPUQueue")}} for the device. This defaults to an empty object if no value is provided.
     - `label` {{optional_inline}}
       - : A string providing an identifying label that can be used to identify the object, for example in {{domxref("GPUError")}} messages or console warnings.
     - `requiredFeatures` {{optional_inline}}
@@ -72,8 +72,8 @@ async function init() {
 In the following code we:
 
 1. Check whether a {{domxref("GPUAdapter")}} has the `texture-compression-astc` feature available. If so, we push it into the array of `requiredFeatures`.
-2. Query the {{domxref("GPUAdapter.limits")}} values of `maxTextureDimension3D` and `maxBindGroups` and add those maximum limits to the `requiredLimits` object.
-3. Request a device with those feature and limit requirements, plus a `defaultQueue` object.
+2. Query the `GPUAdapter.limits` values of `maxTextureDimension3D` and `maxBindGroups` and add those maximum limits to the `requiredLimits` object.
+3. Request a device with those feature and limit requirements.
 
 ```js
 async function init() {
@@ -98,9 +98,6 @@ async function init() {
   requiredLimits.maxBindGroups = adapter.limits.maxBindGroups;
 
   const device = await adapter.requestDevice({
-    defaultQueue: {
-      label: "myqueue"
-    },
     requiredFeatures,
     requiredLimits
   });

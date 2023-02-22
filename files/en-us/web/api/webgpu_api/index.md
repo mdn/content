@@ -456,7 +456,7 @@ WebGL provides a {{domxref("WebGLRenderingContext.getError", "getError()")}} met
 
 WebGPU improves on this with an asynchronous approach. Each {{domxref("GPUDevice")}} instance maintains its own error scope stack. This stack is initially empty, but you can start pushing an error scope to the stack by invoking {{domxref("GPUDevice.pushErrorScope()")}} to capture errors of a particular type.
 
-Once you are done capturing errors, you can end capture by invoking {{domxref("GPUDevice.popErrorScope()")}}. This pops the scope from the stack and returns a {{jsxref("Promise")}} that resolves to an object instance ({{domxref("GPUValidationError")}} or {{domxref("GPUOutOfMemoryError")}}) describing the first error captured in the scope, or `null` if no errors were captured.
+Once you are done capturing errors, you can end capture by invoking {{domxref("GPUDevice.popErrorScope()")}}. This pops the scope from the stack and returns a {{jsxref("Promise")}} that resolves to an object ({{domxref("GPUValidationError")}} or {{domxref("GPUOutOfMemoryError")}}) describing the first error captured in the scope, or `null` if no errors were captured.
 
 You can find more information about WebGPU error handling in the explainer — see [Object validity and destroyed-ness](https://gpuweb.github.io/gpuweb/explainer/#invalid-and-destroyed) and [Errors](https://gpuweb.github.io/gpuweb/explainer/#errors)
 
@@ -489,7 +489,7 @@ You can find more information about WebGPU error handling in the explainer — s
 - {{domxref("GPUComputePipeline")}}
   - : xxx
 - {{domxref("GPUDevice")}}
-  - : xxx
+  - : Represents a logical GPU device. This is the main interface through which the majority of WebGPU functionality is accessed.
 - {{domxref("GPUDeviceLostInfo")}}
   - : xxx
 - {{domxref("GPUError")}}

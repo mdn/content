@@ -4,7 +4,7 @@ slug: Web/API/GPUAdapterInfo
 page-type: web-api-interface
 status:
   - experimental
-browser-compat: api.AdapterInfo
+browser-compat: api.GPUAdapterInfo
 ---
 
 {{APIRef("WebGPU API")}}{{SeeCompatTable}}
