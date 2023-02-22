@@ -2,11 +2,6 @@
 title: Greater than or equal (>=)
 slug: Web/JavaScript/Reference/Operators/Greater_than_or_equal
 page-type: javascript-operator
-tags:
-  - JavaScript
-  - Language feature
-  - Operator
-  - Reference
 browser-compat: javascript.operators.greater_than_or_equal
 ---
 

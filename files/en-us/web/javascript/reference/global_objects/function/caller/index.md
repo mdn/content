@@ -2,12 +2,9 @@
 title: Function.prototype.caller
 slug: Web/JavaScript/Reference/Global_Objects/Function/caller
 page-type: javascript-instance-accessor-property
-tags:
-  - Function
-  - JavaScript
-  - Property
-  - Non-standard
-  - Deprecated
+status:
+  - deprecated
+  - non-standard
 browser-compat: javascript.builtins.Function.caller
 ---
 

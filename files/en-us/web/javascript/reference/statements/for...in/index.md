@@ -2,10 +2,6 @@
 title: for...in
 slug: Web/JavaScript/Reference/Statements/for...in
 page-type: javascript-statement
-tags:
-  - JavaScript
-  - Language feature
-  - Statement
 browser-compat: javascript.statements.for_in
 ---
 

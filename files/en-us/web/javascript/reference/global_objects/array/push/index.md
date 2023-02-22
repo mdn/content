@@ -2,13 +2,6 @@
 title: Array.prototype.push()
 slug: Web/JavaScript/Reference/Global_Objects/Array/push
 page-type: javascript-instance-method
-tags:
-  - Array
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - Polyfill
 browser-compat: javascript.builtins.Array.push
 ---
 

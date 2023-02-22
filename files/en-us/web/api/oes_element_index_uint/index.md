@@ -2,11 +2,6 @@
 title: OES_element_index_uint
 slug: Web/API/OES_element_index_uint
 page-type: webgl-extension
-tags:
-  - API
-  - Reference
-  - WebGL
-  - WebGL extension
 browser-compat: api.OES_element_index_uint
 ---
 

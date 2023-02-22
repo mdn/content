@@ -2,14 +2,8 @@
 title: "::-moz-progress-bar"
 slug: Web/CSS/::-moz-progress-bar
 page-type: css-pseudo-element
-tags:
-  - CSS
-  - CSS:Mozilla Extensions
-  - NeedsCompatTable
-  - Non-standard
-  - Pseudo-element
-  - Reference
-  - Selector
+status:
+  - non-standard
 ---
 
 {{CSSRef}}{{Non-standard_header}}

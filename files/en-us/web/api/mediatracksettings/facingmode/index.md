@@ -2,18 +2,6 @@
 title: MediaTrackSettings.facingMode
 slug: Web/API/MediaTrackSettings/facingMode
 page-type: web-api-instance-property
-tags:
-  - API
-  - Media
-  - Media Capture and Streams API
-  - Media Streams API
-  - MediaTrackSettings
-  - Property
-  - Reference
-  - Settings
-  - Video
-  - WebRTC
-  - facingMode
 browser-compat: api.MediaTrackSettings.facingMode
 ---
 

@@ -2,14 +2,6 @@
 title: Document.visibilityState
 slug: Web/API/Document/visibilityState
 page-type: web-api-instance-property
-tags:
-  - DOM
-  - Document
-  - Page Visibility API
-  - Property
-  - Read-only
-  - Reference
-  - Web
 browser-compat: api.Document.visibilityState
 ---
 
@@ -51,7 +43,7 @@ document.visibilityState
 document.addEventListener("visibilitychange", () => {
   console.log(document.visibilityState);
   // Modify behavior…
-})
+});
 ```
 
 ## Specifications

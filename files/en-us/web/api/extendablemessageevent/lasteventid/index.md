@@ -2,13 +2,6 @@
 title: ExtendableMessageEvent.lastEventId
 slug: Web/API/ExtendableMessageEvent/lastEventId
 page-type: web-api-instance-property
-tags:
-  - API
-  - ExtendableMessageEvent
-  - Property
-  - Reference
-  - Service Workers
-  - lastEventID
 browser-compat: api.ExtendableMessageEvent.lastEventId
 ---
 

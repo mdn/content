@@ -2,14 +2,6 @@
 title: Element.ariaCurrent
 slug: Web/API/Element/ariaCurrent
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - ariaCurrent
-  - AriaAttributes
-  - AriaMixin
-  - Element
 browser-compat: api.Element.ariaCurrent
 ---
 

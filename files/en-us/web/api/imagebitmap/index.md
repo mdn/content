@@ -2,12 +2,6 @@
 title: ImageBitmap
 slug: Web/API/ImageBitmap
 page-type: web-api-interface
-tags:
-  - API
-  - Canvas
-  - ImageBitmap
-  - Interface
-  - Reference
 browser-compat: api.ImageBitmap
 ---
 

@@ -2,12 +2,6 @@
 title: override-colors
 slug: Web/CSS/@font-palette-values/override-colors
 page-type: css-at-rule-descriptor
-tags:
-  - CSS
-  - CSS Fonts
-  - Color Fonts
-  - CSS Descriptor
-  - Reference
 browser-compat: css.at-rules.font-palette-values.override-colors
 ---
 

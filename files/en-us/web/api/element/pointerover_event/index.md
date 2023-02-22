@@ -1,9 +1,6 @@
 ---
 title: 'Element: pointerover event'
 slug: Web/API/Element/pointerover_event
-tags:
-  - Event
-  - PointerEvent
 browser-compat: api.Element.pointerover_event
 page-type: web-api-event
 ---

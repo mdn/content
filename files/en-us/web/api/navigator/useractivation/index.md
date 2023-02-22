@@ -2,11 +2,8 @@
 title: Navigator.userActivation
 slug: Web/API/Navigator/userActivation
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - Experimental
+status:
+  - experimental
 browser-compat: api.Navigator.userActivation
 ---
 

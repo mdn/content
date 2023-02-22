@@ -2,11 +2,6 @@
 title: HTMLTimeElement
 slug: Web/API/HTMLTimeElement
 page-type: web-api-interface
-tags:
-  - API
-  - HTML DOM
-  - Interface
-  - Reference
 browser-compat: api.HTMLTimeElement
 ---
 

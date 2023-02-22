@@ -2,11 +2,6 @@
 title: Rest parameters
 slug: Web/JavaScript/Reference/Functions/rest_parameters
 page-type: javascript-language-feature
-tags:
-  - Functions
-  - JavaScript
-  - Language feature
-  - Reference
 browser-compat: javascript.functions.rest_parameters
 ---
 

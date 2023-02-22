@@ -2,12 +2,6 @@
 title: transition-duration
 slug: Web/CSS/transition-duration
 page-type: css-property
-tags:
-  - CSS
-  - CSS Property
-  - CSS Transitions
-  - Reference
-  - recipe:css-property
 browser-compat: css.properties.transition-duration
 ---
 

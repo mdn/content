@@ -2,12 +2,6 @@
 title: get TypedArray[@@species]
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/@@species
 page-type: javascript-static-accessor-property
-tags:
-  - JavaScript
-  - Property
-  - Prototype
-  - TypedArray
-  - TypedArrays
 browser-compat: javascript.builtins.TypedArray.@@species
 ---
 

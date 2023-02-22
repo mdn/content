@@ -2,13 +2,6 @@
 title: scrollbar-width
 slug: Web/CSS/scrollbar-width
 page-type: css-property
-tags:
-  - CSS
-  - CSS Property
-  - Reference
-  - CSS scrollbars
-  - recipe:css-property
-  - scrollbar-width
 browser-compat: css.properties.scrollbar-width
 ---
 
@@ -120,5 +113,4 @@ WCAG criterion 2.1.1 (Keyboard) has been in place for a long time to advise on b
 
 ## See also
 
-- {{CSSxRef("-ms-overflow-style")}}
 - {{CSSxRef("::-webkit-scrollbar")}}

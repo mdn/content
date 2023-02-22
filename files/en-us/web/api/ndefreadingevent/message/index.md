@@ -2,13 +2,8 @@
 title: NDEFReadingEvent.message
 slug: Web/API/NDEFReadingEvent/message
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - Experimental
-  - message
-  - NDEFReadingEvent
+status:
+  - experimental
 browser-compat: api.NDEFReadingEvent.message
 ---
 

@@ -2,10 +2,8 @@
 title: 'Element: MSInertiaStart event'
 slug: Web/API/Element/MSInertiaStart_event
 page-type: web-api-event
-tags:
-  - Event
-  - Non-standard
-  - Reference
+status:
+  - non-standard
 browser-compat: api.Element.MSInertiaStart_event
 ---
 

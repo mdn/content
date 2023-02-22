@@ -2,15 +2,6 @@
 title: KeyframeEffect
 slug: Web/API/KeyframeEffect
 page-type: web-api-interface
-tags:
-  - API
-  - Animation
-  - Animations
-  - Interface
-  - KeyframeEffect
-  - Reference
-  - Web Animations
-  - web animations api
 browser-compat: api.KeyframeEffect
 ---
 

@@ -2,13 +2,6 @@
 title: MessagePort.postMessage()
 slug: Web/API/MessagePort/postMessage
 page-type: web-api-instance-method
-tags:
-  - API
-  - Channel messaging
-  - MessagePort
-  - Method
-  - Reference
-  - postMessage
 browser-compat: api.MessagePort.postMessage
 ---
 

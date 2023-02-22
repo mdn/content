@@ -2,11 +2,6 @@
 title: HTMLPreElement
 slug: Web/API/HTMLPreElement
 page-type: web-api-interface
-tags:
-  - API
-  - HTML DOM
-  - Interface
-  - Reference
 browser-compat: api.HTMLPreElement
 ---
 

@@ -2,12 +2,6 @@
 title: CSS Paged Media
 slug: Web/CSS/CSS_Pages
 page-type: css-module
-tags:
-  - CSS
-  - CSS Paged Media
-  - Guide
-  - Overview
-  - Reference
 spec-urls:
   - https://drafts.csswg.org/css-page/
   - https://drafts.csswg.org/css-break/

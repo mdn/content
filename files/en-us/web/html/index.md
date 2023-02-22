@@ -2,11 +2,6 @@
 title: "HTML: HyperText Markup Language"
 slug: Web/HTML
 page-type: landing-page
-tags:
-  - HTML
-  - Landing
-  - Web
-  - "l10n:priority"
 ---
 
 {{HTMLSidebar}}

@@ -2,13 +2,8 @@
 title: ":-moz-focusring"
 slug: Web/CSS/:-moz-focusring
 page-type: css-pseudo-class
-tags:
-  - CSS
-  - CSS:Mozilla Extensions
-  - Non-standard
-  - Pseudo-class
-  - Reference
-  - Selector
+status:
+  - non-standard
 browser-compat: css.selectors.-moz-focusring
 ---
 

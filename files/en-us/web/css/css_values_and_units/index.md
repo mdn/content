@@ -2,11 +2,6 @@
 title: CSS values and units
 slug: Web/CSS/CSS_Values_and_Units
 page-type: guide
-tags:
-  - CSS
-  - Guide
-  - Reference
-  - values and units
 spec-urls:
   - https://drafts.csswg.org/css-values/
   - https://drafts.csswg.org/css-color/

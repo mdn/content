@@ -2,23 +2,6 @@
 title: MediaTrackConstraints.displaySurface
 slug: Web/API/MediaTrackConstraints/displaySurface
 page-type: web-api-instance-property
-tags:
-  - API
-  - Capture
-  - Constraints
-  - Media
-  - Media Capture and Streams
-  - Media Capture and Streams API
-  - MediaTrackConstraints
-  - Property
-  - Reference
-  - Screen Capture
-  - Screen Capture API
-  - Sharing
-  - Video
-  - display
-  - displaySurface
-  - screen
 browser-compat: api.MediaTrackConstraints.displaySurface
 ---
 

@@ -2,16 +2,6 @@
 title: ":any-link"
 slug: Web/CSS/:any-link
 page-type: css-pseudo-class
-tags:
-  - ":any-link"
-  - CSS
-  - Layout
-  - Links
-  - Pseudo-class
-  - Reference
-  - Selector
-  - Web
-  - hyperlinks
 browser-compat: css.selectors.any-link
 ---
 

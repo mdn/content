@@ -2,14 +2,6 @@
 title: Element.ariaRequired
 slug: Web/API/Element/ariaRequired
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - ariaRequired
-  - AriaAttributes
-  - AriaMixin
-  - Element
 browser-compat: api.Element.ariaRequired
 ---
 

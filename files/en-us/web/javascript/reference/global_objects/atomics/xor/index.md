@@ -2,11 +2,6 @@
 title: Atomics.xor()
 slug: Web/JavaScript/Reference/Global_Objects/Atomics/xor
 page-type: javascript-static-method
-tags:
-  - Atomics
-  - JavaScript
-  - Method
-  - Shared Memory
 browser-compat: javascript.builtins.Atomics.xor
 ---
 

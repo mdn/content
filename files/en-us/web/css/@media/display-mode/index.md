@@ -2,15 +2,6 @@
 title: display-mode
 slug: Web/CSS/@media/display-mode
 page-type: css-media-feature
-tags:
-  - "@media"
-  - CSS
-  - Media Queries
-  - Reference
-  - display
-  - display-mode
-  - media feature
-  - web app manifest
 browser-compat: css.at-rules.media.display-mode
 ---
 

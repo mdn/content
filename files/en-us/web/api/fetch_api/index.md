@@ -2,14 +2,6 @@
 title: Fetch API
 slug: Web/API/Fetch_API
 page-type: web-api-overview
-tags:
-  - API
-  - Fetch
-  - Landing
-  - Reference
-  - Response
-  - XMLHttpRequest
-  - request
 browser-compat: api.fetch
 ---
 

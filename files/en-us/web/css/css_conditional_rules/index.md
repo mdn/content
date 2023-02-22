@@ -2,17 +2,11 @@
 title: CSS Conditional Rules
 slug: Web/CSS/CSS_Conditional_Rules
 page-type: css-module
-tags:
-  - CSS
-  - CSS Conditional Rules
-  - Guide
-  - Overview
-  - Reference
 browser-compat:
-  - css.at-rules.document
   - css.at-rules.import
   - css.at-rules.media
   - css.at-rules.supports
+  - css.at-rules.document
 ---
 
 {{CSSRef}}

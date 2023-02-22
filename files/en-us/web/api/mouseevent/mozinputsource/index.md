@@ -2,12 +2,8 @@
 title: MouseEvent.mozInputSource
 slug: Web/API/MouseEvent/mozInputSource
 page-type: web-api-instance-property
-tags:
-  - API
-  - NeedsCompatTable
-  - Non-standard
-  - Property
-  - Read-only
+status:
+  - non-standard
 ---
 
 {{APIRef("UI Events")}} {{ Non-standard_header() }}

@@ -2,13 +2,6 @@
 title: HTMLMediaElement.controlsList
 slug: Web/API/HTMLMediaElement/controlsList
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTML DOM
-  - HTMLMediaElement
-  - Media
-  - Property
-  - Reference
 browser-compat: api.HTMLMediaElement.controlsList
 ---
 

@@ -2,13 +2,6 @@
 title: HTMLElement
 slug: Web/API/HTMLElement
 page-type: web-api-interface
-tags:
-  - API
-  - HTML DOM
-  - HTMLElement
-  - Interface
-  - NeedsNewLayout
-  - Reference
 browser-compat: api.HTMLElement
 ---
 
