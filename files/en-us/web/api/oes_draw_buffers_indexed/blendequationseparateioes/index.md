@@ -9,7 +9,7 @@ browser-compat: api.OES_draw_buffers_indexed.blendEquationSeparateiOES
 
 The `blendEquationSeparateiOES()` method of the `OES_draw_buffers_indexed` WebGL extension sets the RGB blend equation and alpha blend equation separately for a particular draw buffer.
 
-See {{DOMxRef("OES_draw_buffers_indexed.blendEquationiOES()")}} for setting RBG and alpha together and {{DOMxRef("WebGLRenderingContext.blendEquationSeparate()")}} for the WebGL 1 version of this method.
+See {{DOMxRef("OES_draw_buffers_indexed.blendEquationiOES()")}} for setting RGB and alpha together and {{DOMxRef("WebGLRenderingContext.blendEquationSeparate()")}} for the WebGL 1 version of this method.
 
 ## Syntax
 
