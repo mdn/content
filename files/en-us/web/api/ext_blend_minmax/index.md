@@ -25,7 +25,7 @@ This extension adds two new constants, which can be used in {{domxref("WebGLRend
 ## Examples
 
 ```js
-const ext = gl.getExtension('EXT_blend_minmax');
+const ext = gl.getExtension("EXT_blend_minmax");
 
 gl.blendEquation(ext.MIN_EXT);
 gl.blendEquation(ext.MAX_EXT);

@@ -2,12 +2,6 @@
 title: max-content
 slug: Web/CSS/max-content
 page-type: css-keyword
-tags:
-  - CSS
-  - CSS Grid
-  - Reference
-  - max-content
-  - sizing
 browser-compat: css.properties.width.max-content
 ---
 

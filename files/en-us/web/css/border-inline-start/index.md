@@ -2,17 +2,6 @@
 title: border-inline-start
 slug: Web/CSS/border-inline-start
 page-type: css-shorthand-property
-tags:
-  - CSS
-  - CSS Logical Property
-  - CSS Property
-  - Reference
-  - border-inline
-  - border-inline-start
-  - border-inline-start-color
-  - border-inline-start-style
-  - border-inline-start-width
-  - recipe:css-shorthand-property
 browser-compat: css.properties.border-inline-start
 ---
 

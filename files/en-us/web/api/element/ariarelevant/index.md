@@ -38,9 +38,9 @@ In this example the [`aria-relevant`](/en-US/docs/Web/Accessibility/ARIA/Attribu
 ```
 
 ```js
-let el = document.getElementById('clock');
+let el = document.getElementById("clock");
 console.log(el.ariaRelevant); // all
-el.ariaRelevant = "text"
+el.ariaRelevant = "text";
 console.log(el.ariaRelevant); // text
 ```
 

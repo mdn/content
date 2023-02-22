@@ -2,13 +2,8 @@
 title: "::-moz-range-progress"
 slug: Web/CSS/::-moz-range-progress
 page-type: css-pseudo-element
-tags:
-  - CSS
-  - CSS:Mozilla Extensions
-  - Non-standard
-  - Pseudo-element
-  - Reference
-  - Selector
+status:
+  - non-standard
 browser-compat: css.selectors.-moz-range-progress
 ---
 

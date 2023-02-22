@@ -2,15 +2,8 @@
 title: mod()
 slug: Web/CSS/mod
 page-type: css-function
-tags:
-  - CSS
-  - CSS Function
-  - Function
-  - Math
-  - Reference
-  - Web
-  - mod
-  - Experimental
+status:
+  - experimental
 browser-compat: css.types.mod
 ---
 

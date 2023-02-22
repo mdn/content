@@ -1,5 +1,5 @@
 ---
-title: 'Element: compositionupdate event'
+title: "Element: compositionupdate event"
 slug: Web/API/Element/compositionupdate_event
 page-type: web-api-event
 browser-compat: api.Element.compositionupdate_event
@@ -16,9 +16,9 @@ For example, this event could be fired while a user enters a Chinese character u
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('compositionupdate', (event) => {});
+addEventListener("compositionupdate", (event) => {});
 
-oncompositionupdate = (event) => { };
+oncompositionupdate = (event) => {};
 ```
 
 ## Event type
@@ -41,7 +41,7 @@ _This interface also inherits properties of its parent, {{domxref("UIEvent")}}, 
 ```js
 const inputElement = document.querySelector('input[type="text"]');
 
-inputElement.addEventListener('compositionupdate', (event) => {
+inputElement.addEventListener("compositionupdate", (event) => {
   console.log(`generated characters were: ${event.data}`);
 });
 ```
@@ -113,20 +113,20 @@ kbd {
 
 ```js
 const inputElement = document.querySelector('input[type="text"]');
-const log = document.querySelector('.event-log-contents');
-const clearLog = document.querySelector('.clear-log');
+const log = document.querySelector(".event-log-contents");
+const clearLog = document.querySelector(".clear-log");
 
-clearLog.addEventListener('click', () => {
-    log.textContent = '';
+clearLog.addEventListener("click", () => {
+  log.textContent = "";
 });
 
 function handleEvent(event) {
-    log.textContent += `${event.type}: ${event.data}\n`;
+  log.textContent += `${event.type}: ${event.data}\n`;
 }
 
-inputElement.addEventListener('compositionstart', handleEvent);
-inputElement.addEventListener('compositionupdate', handleEvent);
-inputElement.addEventListener('compositionend', handleEvent);
+inputElement.addEventListener("compositionstart", handleEvent);
+inputElement.addEventListener("compositionupdate", handleEvent);
+inputElement.addEventListener("compositionend", handleEvent);
 ```
 
 #### Result

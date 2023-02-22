@@ -1,5 +1,5 @@
 ---
-title: 'Element: keydown event'
+title: "Element: keydown event"
 slug: Web/API/Element/keydown_event
 page-type: web-api-event
 browser-compat: api.Element.keydown_event
@@ -31,9 +31,9 @@ eventTarget.addEventListener("keydown", (event) => {
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('keydown', (event) => {});
+addEventListener("keydown", (event) => {});
 
-onkeydown = (event) => { };
+onkeydown = (event) => {};
 ```
 
 ## Event type
@@ -94,10 +94,10 @@ This example logs the {{domxref("KeyboardEvent.code")}} value whenever you press
 ```
 
 ```js
-const input = document.querySelector('input');
-const log = document.getElementById('log');
+const input = document.querySelector("input");
+const log = document.getElementById("log");
 
-input.addEventListener('keydown', logKey);
+input.addEventListener("keydown", logKey);
 
 function logKey(e) {
   log.textContent += ` ${e.code}`;

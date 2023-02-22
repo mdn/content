@@ -53,14 +53,10 @@ None ({{jsxref("undefined")}}).
 Using `waitUntil()` within a service worker's `install` event:
 
 ```js
-addEventListener('install', (event) => {
+addEventListener("install", (event) => {
   const preCache = async () => {
-    const cache = await caches.open('static-v1');
-    return cache.addAll([
-      '/',
-      '/about/',
-      '/static/styles.css'
-    ]);
+    const cache = await caches.open("static-v1");
+    return cache.addAll(["/", "/about/", "/static/styles.css"]);
   };
   event.waitUntil(preCache());
 });

@@ -85,10 +85,10 @@ Although it renders text with the same default styling as the {{HTMLElement("i")
         <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
           >Flow content</a
         >, but with no nested <code>&#x3C;address></code> element, no heading
-        content ({{HTMLElement("hgroup")}}, {{HTMLElement("h1")}},
-        {{HTMLElement("h2")}}, {{HTMLElement("h3")}},
-        {{HTMLElement("h4")}}, {{HTMLElement("h5")}},
-        {{HTMLElement("h6")}}), no sectioning content
+        content ({{HTMLElement("hgroup")}}, {{HTMLElement("Heading_Elements", "h1")}},
+        {{HTMLElement("Heading_Elements", "h2")}}, {{HTMLElement("Heading_Elements", "h3")}},
+        {{HTMLElement("Heading_Elements", "h4")}}, {{HTMLElement("Heading_Elements", "h5")}},
+        {{HTMLElement("Heading_Elements", "h6")}}), no sectioning content
         ({{HTMLElement("article")}}, {{HTMLElement("aside")}},
         {{HTMLElement("section")}}, {{HTMLElement("nav")}}), and
         no {{HTMLElement("header")}} or {{HTMLElement("footer")}}
@@ -146,5 +146,5 @@ Although it renders text with the same default styling as the {{HTMLElement("i")
 
 ## See also
 
-- Others section-related elements: {{HTMLElement("body")}}, {{HTMLElement("nav")}}, {{HTMLElement("article")}}, {{HTMLElement("aside")}}, {{HTMLElement("h1")}}, {{HTMLElement("h2")}}, {{HTMLElement("h3")}}, {{HTMLElement("h4")}}, {{HTMLElement("h5")}}, {{HTMLElement("h6")}}, {{HTMLElement("hgroup")}}, {{HTMLElement("footer")}}, {{HTMLElement("section")}}, {{HTMLElement("header")}};
+- Others section-related elements: {{HTMLElement("body")}}, {{HTMLElement("nav")}}, {{HTMLElement("article")}}, {{HTMLElement("aside")}}, {{HTMLElement("Heading_Elements", "h1")}}, {{HTMLElement("Heading_Elements", "h2")}}, {{HTMLElement("Heading_Elements", "h3")}}, {{HTMLElement("Heading_Elements", "h4")}}, {{HTMLElement("Heading_Elements", "h5")}}, {{HTMLElement("Heading_Elements", "h6")}}, {{HTMLElement("hgroup")}}, {{HTMLElement("footer")}}, {{HTMLElement("section")}}, {{HTMLElement("header")}};
 - [Sections and outlines of an HTML document](/en-US/docs/Web/HTML/Element/Heading_Elements).

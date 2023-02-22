@@ -34,7 +34,7 @@ None ({{jsxref("undefined")}}).
 ```
 
 ```js
-const element = document.getElementById('div-02');
+const element = document.getElementById("div-02");
 element.remove(); // Removes the div with the 'div-02' id
 ```
 
@@ -44,7 +44,7 @@ The `remove()` method is not scoped into the `with` statement.
 See {{jsxref("Symbol.unscopables")}} for more information.
 
 ```js
-with(node) {
+with (node) {
   remove();
 }
 // ReferenceError: remove is not defined

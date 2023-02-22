@@ -2,11 +2,6 @@
 title: URIError() constructor
 slug: Web/JavaScript/Reference/Global_Objects/URIError/URIError
 page-type: javascript-constructor
-tags:
-  - Constructor
-  - JavaScript
-  - Reference
-  - URIError
 browser-compat: javascript.builtins.URIError.URIError
 ---
 

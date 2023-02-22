@@ -35,7 +35,7 @@ This extension extends {{domxref("WebGLRenderingContext.renderbufferStorage()")}
 ## Examples
 
 ```js
-const ext = gl.getExtension('EXT_color_buffer_half_float');
+const ext = gl.getExtension("EXT_color_buffer_half_float");
 
 gl.renderbufferStorage(gl.RENDERBUFFER, ext.RBGA16F_EXT, 256, 256);
 ```

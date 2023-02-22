@@ -2,12 +2,6 @@
 title: forced-colors
 slug: Web/CSS/@media/forced-colors
 page-type: css-media-feature
-tags:
-  - CSS
-  - Reference
-  - color
-  - forced-colors
-  - media feature
 browser-compat: css.at-rules.media.forced-colors
 ---
 

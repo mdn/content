@@ -51,7 +51,7 @@ Using `options`:
 element.scrollTo({
   top: 100,
   left: 100,
-  behavior: 'smooth'
+  behavior: "smooth",
 });
 ```
 

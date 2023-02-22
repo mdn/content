@@ -2,10 +2,6 @@
 title: Inheritance
 slug: Glossary/Inheritance
 page-type: glossary-definition
-tags:
-  - CodingScripting
-  - Inheritance
-  - Programming Language
 ---
 
 Inheritance is a major feature of {{glossary("OOP","object-oriented programming")}}. Data abstraction can be carried up several levels, that is, {{glossary("class","classes")}} can have superclasses and subclasses.

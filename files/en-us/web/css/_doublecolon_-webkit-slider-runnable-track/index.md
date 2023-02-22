@@ -2,17 +2,8 @@
 title: "::-webkit-slider-runnable-track"
 slug: Web/CSS/::-webkit-slider-runnable-track
 page-type: css-pseudo-element
-tags:
-  - CSS
-  - CSS:WebKit Extensions
-  - NeedsBrowserCompatibility
-  - NeedsCompatTable
-  - NeedsExample
-  - NeedsMobileBrowserCompatibility
-  - Non-standard
-  - Pseudo-element
-  - Reference
-  - Selector
+status:
+  - non-standard
 browser-compat: css.selectors.-webkit-slider-runnable-track
 ---
 

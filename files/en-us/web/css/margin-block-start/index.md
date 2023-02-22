@@ -2,15 +2,6 @@
 title: margin-block-start
 slug: Web/CSS/margin-block-start
 page-type: css-property
-tags:
-  - CSS
-  - CSS Logical Property
-  - CSS Property
-  - NeedsContent
-  - Reference
-  - margin-block
-  - margin-block-start
-  - recipe:css-property
 browser-compat: css.properties.margin-block-start
 ---
 

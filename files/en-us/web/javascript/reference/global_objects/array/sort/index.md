@@ -2,14 +2,6 @@
 title: Array.prototype.sort()
 slug: Web/JavaScript/Reference/Global_Objects/Array/sort
 page-type: javascript-instance-method
-tags:
-  - Array
-  - Array method
-  - JavaScript
-  - Method
-  - Prototype
-  - Sorting
-  - Polyfill
 browser-compat: javascript.builtins.Array.sort
 ---
 

@@ -30,13 +30,13 @@ None ({{jsxref("undefined")}}).
 ## Examples
 
 ```js
-const button = document.querySelector('button');
-const evtSource = new EventSource('sse.php');
+const button = document.querySelector("button");
+const evtSource = new EventSource("sse.php");
 
 button.onclick = () => {
-  console.log('Connection closed');
+  console.log("Connection closed");
   evtSource.close();
-}
+};
 ```
 
 > **Note:** You can find a full example on GitHub — see [Simple SSE demo using PHP](https://github.com/mdn/dom-examples/tree/main/server-sent-events).

@@ -2,12 +2,6 @@
 title: Bitwise AND (&)
 slug: Web/JavaScript/Reference/Operators/Bitwise_AND
 page-type: javascript-operator
-tags:
-  - Bitwise operator
-  - JavaScript
-  - Language feature
-  - Operator
-  - Reference
 browser-compat: javascript.operators.bitwise_and
 ---
 
