@@ -14,10 +14,19 @@ If there are multiple selectors that are using a named page consecutively then a
 ## Syntax
 
 ```css
-/* default values */
-page: auto;
-/* named page value using <custom-ident> */
+/* set a named page */
 page: exampleName;
+page: chapterIntro;
+
+/* Use ancestors named page */
+page: auto; /* default value */
+
+/* Global values */
+page: inherit;
+page: initial;
+page: revert;
+page: revert-layer;
+page: unset;
 ```
 
 ### Values
