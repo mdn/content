@@ -51,7 +51,7 @@ html::view-transition-new(*) {
 }
 ```
 
-`<pt-name-selector>` can take one of the following values:
+`<pt-name-selector>` can be one of the following values:
 
 - `*`
   - : Causes the pseudo-element to match all view transition groups.
