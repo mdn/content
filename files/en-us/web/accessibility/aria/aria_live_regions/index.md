@@ -268,7 +268,7 @@ As an example, consider a chat site that wants to display a list of users curren
 
 ```html
 <ul id="roster" aria-live="polite" aria-relevant="additions removals">
-  <!-- use JavaScript to add remove users here-->
+  <!-- use JavaScript to add and remove users here -->
 </ul>
 ```
 
