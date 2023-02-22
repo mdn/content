@@ -61,6 +61,7 @@ These are _some_ of the roughly 100 semantic [elements](/en-US/docs/Web/HTML/Ele
 - {{htmlelement("section")}}
 - {{htmlelement("summary")}}
 - {{htmlelement("time")}}
+-  {{htmlelement("form")}}
 
 ## See also
 
@@ -86,3 +87,4 @@ These are _some_ of the roughly 100 semantic [elements](/en-US/docs/Web/HTML/Ele
   - {{htmlelement("section")}}
   - {{htmlelement("summary")}}
   - {{htmlelement("time")}}
+  - {{htmlelement("form")}}
