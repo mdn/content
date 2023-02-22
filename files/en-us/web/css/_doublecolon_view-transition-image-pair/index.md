@@ -34,8 +34,8 @@ During a view transition, `::view-transition-image-pair` has {{cssxref("isolatio
 
 ## Syntax
 
-```css
-::view-transition-image-pair(<pt-name-selector >) {
+```css-nolint
+::view-transition-image-pair(<pt-name-selector>) {
   /* ... */
 }
 ```

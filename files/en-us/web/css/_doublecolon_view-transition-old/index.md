@@ -45,8 +45,8 @@ html::view-transition-old(*) {
 
 ## Syntax
 
-```css
-::view-transition-old(<pt-name-selector >) {
+```css-nolint
+::view-transition-old(<pt-name-selector>) {
   /* ... */
 }
 ```

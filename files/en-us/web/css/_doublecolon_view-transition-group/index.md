@@ -41,8 +41,8 @@ In addition, the element's transform is animated from the "old" view state's scr
 
 ## Syntax
 
-```css
-::view-transition-group(<pt-name-selector >) {
+```css-nolint
+::view-transition-group(<pt-name-selector>) {
   /* ... */
 }
 ```
