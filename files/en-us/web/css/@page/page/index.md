@@ -2,14 +2,6 @@
 title: page
 slug: Web/CSS/@page/page
 page-type: css-at-rule-property
-tags:
-  - "@page"
-  - At-rule property
-  - CSS
-  - CSS Property
-  - NeedsBrowserCompatibility
-  - Reference
-  - Web
 browser-compat: css.at-rules.page.page
 ---
 
