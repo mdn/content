@@ -2,8 +2,6 @@
 title: Streams API
 slug: Web/API/Streams_API
 page-type: web-api-overview
-status:
-  - experimental
 browser-compat:
   - api.ReadableStream
   - api.WritableStream
