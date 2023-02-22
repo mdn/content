@@ -104,9 +104,9 @@ This example shows the use of `:not()` with invalid selectors and how to prevent
 #### HTML
 
 ```html
-<p>Hello World</p>
-<p class="foo">Hello World with .foo</p>
-<p class="bar">Hello World with .bar</p>
+<div>I am a div</div>
+<p class="foo">I am a paragraph with .foo</p>
+<p class="bar">I am a paragraph with .bar</p>
 ```
 
 #### CSS
@@ -115,6 +115,7 @@ This example shows the use of `:not()` with invalid selectors and how to prevent
 /* Invalid rule, does nothing */
 :not(.foo, :invalid-pseudo-class) {
   color: red;
+  font-style: italic;
 }
 
 /* Select all elements without the `foo` class, may include <html> and <body> elements */
@@ -125,6 +126,7 @@ This example shows the use of `:not()` with invalid selectors and how to prevent
 /* Select all <p> elements without the `foo` class */
 p:is(:not(.foo), :not(:invalid-pseudo-class)) {
   color: green;
+  border-top: dotted thin currentcolor;
 }
 ```
 
