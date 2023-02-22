@@ -3,11 +3,11 @@ title: Fullscreen API
 slug: Web/API/Fullscreen_API
 page-type: web-api-overview
 browser-compat:
-  - api.Document.fullscreen
   - api.Document.fullscreenElement
   - api.Document.fullscreenEnabled
   - api.Document.exitFullscreen
   - api.Element.requestFullscreen
+  - api.Document.fullscreen 
 ---
 
 {{DefaultAPISidebar("Fullscreen API")}}

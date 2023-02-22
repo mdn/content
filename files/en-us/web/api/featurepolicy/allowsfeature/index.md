@@ -2,6 +2,8 @@
 title: FeaturePolicy.allowsFeature()
 slug: Web/API/FeaturePolicy/allowsFeature
 page-type: web-api-instance-method
+status:
+  - experimental
 browser-compat: api.FeaturePolicy.allowsFeature
 ---
 
