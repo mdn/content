@@ -26,9 +26,9 @@ In this example the `aria-level` attribute on the element with an ID of `main-he
 ```
 
 ```js
-let el = document.getElementById('main-heading');
+let el = document.getElementById("main-heading");
 console.log(el.ariaLevel); // "1"
-el.ariaLevel = "2"
+el.ariaLevel = "2";
 console.log(el.ariaLevel); // "2"
 ```
 

@@ -43,7 +43,7 @@ In this example the `aria-expanded` attribute on the element with an ID of `anim
 ```
 
 ```js
-let el = document.getElementById('animal');
+let el = document.getElementById("animal");
 console.log(el.ariaExpanded); // false
 el.ariaExpanded = "true";
 console.log(el.ariaExpanded); // true

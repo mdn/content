@@ -1,5 +1,5 @@
 ---
-title: 'Element: webkitmouseforceup event'
+title: "Element: webkitmouseforceup event"
 slug: Web/API/Element/webkitmouseforceup_event
 page-type: web-api-event
 status:
@@ -18,9 +18,9 @@ The non-standard **`webkitmouseforceup`** event is fired by Safari at an {{domxr
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('webkitmouseforceup', (event) => {});
+addEventListener("webkitmouseforceup", (event) => {});
 
-onwebkitmouseforceup = (event) => { };
+onwebkitmouseforceup = (event) => {};
 ```
 
 ## Event type
