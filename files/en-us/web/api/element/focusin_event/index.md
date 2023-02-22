@@ -42,12 +42,12 @@ _This interface also inherits properties from its parent {{domxref("UIEvent")}},
 
 ```html
 <form id="form">
-  <label
-    >Some text:
+  <label>
+    Some text:
     <input type="text" placeholder="text input" />
   </label>
-  <label
-    >Password:
+  <label>
+    Password:
     <input type="password" placeholder="password" />
   </label>
 </form>
