@@ -39,6 +39,52 @@ When creating an instance of a `TypedArray` subclass (e.g. `Int8Array`), an arra
 | {{jsxref("BigInt64Array")}}     | -2<sup>63</sup> to 2<sup>63</sup> - 1                           | 8             | 64-bit two's complement signed integer                                             | `bigint`              | `int64_t (signed long long)`    |
 | {{jsxref("BigUint64Array")}}    | 0 to 2<sup>64</sup> - 1                                         | 8             | 64-bit unsigned integer                                                            | `bigint`              | `uint64_t (unsigned long long)` |
 
+### Behavior of TypedArrays when used as a view of a resizable buffer
+
+When a `TypedArray` is created as a view of a resizable buffer (see [Resizing ArrayBuffers](/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer#resizing_arraybuffers)), growing the underlying buffer will modify the size of the `TypedArray`, unless the `TypedArray` has been created with a specific size.
+
+For example, in this case `float32` grows to contain `array` as it is grown:
+
+```js
+const buffer = new ArrayBuffer(8, { maxByteLength: 16 });
+const float32 = new Float32Array(buffer);
+
+console.log(float32.byteLength) // Returns 8
+console.log(float32.length) // Returns 2
+
+buffer.resize(12);
+
+console.log(float32.byteLength) // Returns 12
+console.log(float32.length) // Returns 3
+```
+
+In this case however, `float32` is created with a specific size, and therefore won't grow to contain `array` as it is grown:
+
+```js
+const buffer = new ArrayBuffer(8, { maxByteLength: 16 });
+const float32 = new Float32Array(buffer, 0, 2);
+
+console.log(float32.byteLength) // Returns 8
+console.log(float32.length) // Returns 2
+console.log(float32[0]) // Returns initialized value of 0
+
+buffer.resize(12);
+
+console.log(float32.byteLength) // Returns 8
+console.log(float32.length) // Returns 2
+console.log(float32[0]) // Returns initialized value of 0
+```
+
+It can still be shrunk, however, in which case previously-available indices are then out of bounds:
+
+```js
+buffer.resize(0);
+
+console.log(float32.byteLength) // Returns 0
+console.log(float32.length) // Returns 0
+console.log(float32[0]) // Returns undefined
+```
+
 ## Constructor
 
 This object cannot be instantiated directly — attempting to construct it with `new` throws a {{jsxref("TypeError")}}.

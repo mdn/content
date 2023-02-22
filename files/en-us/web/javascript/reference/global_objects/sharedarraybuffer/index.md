@@ -78,6 +78,14 @@ Depending on whether the above security measures are taken, the various memory-s
 
 The WebAssembly Threads proposal also defines a new set of [atomic](https://github.com/WebAssembly/threads/blob/master/proposals/threads/Overview.md#atomic-memory-accesses) instructions. Just as `SharedArrayBuffer` and its methods are unconditionally enabled (and only sharing between threads is gated on the new headers), the WebAssembly atomic instructions are also unconditionally allowed.
 
+### Growing SharedArrayBuffers
+
+`SharedArrayBuffer`s can be made growable by including the `maxByteLength` option when calling the {{jsxref("SharedArrayBuffer.SharedArrayBuffer", "constructor", "", "nocode")}}. You can query whether an `ArrayBuffer` is growable and what its maximum size is by accessing its {{jsxref("SharedArrayBuffer.prototype.growable", "growable")}} and {{jsxref("SharedArrayBuffer.prototype.maxByteLength", "maxByteLength")}} properties, respectively. You can assign a new size to a growable `SharedArrayBuffer` with a {{jsxref("SharedArrayBuffer.prototype.grow()", "grow()")}} call.
+
+These additions have made growing `SharedArrayBuffer`s more efficient — previously you had to make a copy with a new size. It also gives JavaScript parity with WebAssembly in this regard (WASM linear memory can be resized with [`WebAssembly.Memory.prototype.grow()`](/en-US/docs/WebAssembly/JavaScript_interface/Memory/grow)).
+
+For security reasons, `SharedArrayBuffer`s cannot be reduced in size, only grown.
+
 ## Constructor
 
 - [`SharedArrayBuffer()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer/SharedArrayBuffer)

@@ -15,6 +15,12 @@ The [`ArrayBuffer()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayB
 
 `ArrayBuffer` is a [transferable object](/en-US/docs/Web/API/Web_Workers_API/Transferable_objects).
 
+### Resizing ArrayBuffers
+
+`ArrayBuffer`s can be made resizable by including the `maxByteLength` option when calling the {{jsxref("ArrayBuffer.ArrayBuffer", "constructor", "", "nocode")}}. You can query whether an `ArrayBuffer` is resizable and what its maximum size is by accessing its {{jsxref("ArrayBuffer.prototype.resizable", "resizable")}} and {{jsxref("ArrayBuffer.prototype.maxByteLength", "maxByteLength")}} properties, respectively. You can assign a new size to a resizable `ArrayBuffer` with a {{jsxref("ArrayBuffer.prototype.resize()", "resize()")}} call.
+
+These additions have made resizing `ArrayBuffer`s more efficient — previously you had to make a copy with a new size. It also gives JavaScript parity with WebAssembly in this regard (WASM linear memory can be resized with [`WebAssembly.Memory.prototype.grow()`](/en-US/docs/WebAssembly/JavaScript_interface/Memory/grow)).
+
 ## Constructor
 
 - {{jsxref("ArrayBuffer.ArrayBuffer", "ArrayBuffer()")}}
