@@ -45,7 +45,7 @@ For most document structure roles, semantic HTML equivalent elements are availab
 - [document](/en-US/docs/Web/Accessibility/ARIA/Roles/document_role)
 - [figure](/en-US/docs/Web/Accessibility/ARIA/Roles/figure_role) (use {{HTMLElement('figure')}} instead)
 - [group](/en-US/docs/Web/Accessibility/ARIA/Roles/group_role)
-- [heading](/en-US/docs/Web/Accessibility/ARIA/Roles/heading_role) (use {{HTMLElement('h1')}} thru {{HTMLElement('h6')}})
+- [heading](/en-US/docs/Web/Accessibility/ARIA/Roles/heading_role) (use {{HTMLElement("Heading_Elements", "h1")}} thru {{HTMLElement("Heading_Elements", "h6")}})
 - [img](/en-US/docs/Web/Accessibility/ARIA/Roles/img_role) (use {{HTMLElement('img')}} or {{HTMLElement('picture')}} instead)
 - [list](/en-US/docs/Web/Accessibility/ARIA/Roles/list_role) (use either {{HTMLElement('ul')}} or {{HTMLElement('ol')}} instead)
 - [listitem](/en-US/docs/Web/Accessibility/ARIA/Roles/listitem_role) (use {{HTMLElement('li')}} instead)

@@ -2,8 +2,6 @@
 title: Quality values
 slug: Glossary/Quality_values
 page-type: glossary-definition
-tags:
-  - WebMechanics
 ---
 
 **Quality values**, or _q-values_ and _q-factors_, are used to describe the order of priority of values in a comma-separated list. It is a special syntax allowed in some [HTTP headers](/en-US/docs/Web/HTTP/Headers) and in HTML.

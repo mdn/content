@@ -2,9 +2,6 @@
 title: Dynamic typing
 slug: Glossary/Dynamic_typing
 page-type: glossary-definition
-tags:
-  - CodingScripting
-  - ProgrammingLanguage
 ---
 
 **Dynamically-typed languages** are those (like {{glossary("JavaScript")}}) where the interpreter assigns {{glossary("variable","variables")}} a {{glossary("type")}} at runtime based on the variable's {{glossary("value")}} at the time.
