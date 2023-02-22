@@ -51,10 +51,10 @@
   resolved "https://registry.yarnpkg.com/@mdn/browser-compat-data/-/browser-compat-data-5.2.24.tgz#45c85391411987d12519d214d80c324c5100bcbc"
   integrity sha512-KZJKMObObkYFUgEWEbIJ7voJ0iGm3XqhJLkS5jyRLSMoSL7PnmCjes+CttpSzgyLu7DwJsFWsRvKBgYFxb5e7A==
 
-"@mdn/yari@2.2.10":
-  version "2.2.10"
-  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-2.2.10.tgz#155d669bd4d2ce27ccf23b0ba21cc9e4305cdbfd"
-  integrity sha512-78kkrY3w2R6xU0++EPmcrQslPkzKBFvlaeq925wYS4g5J1a2Hbc92DUjTGUM/AEIhFYqzpU78Lepv1pm/5K9Rg==
+"@mdn/yari@2.2.11":
+  version "2.2.11"
+  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-2.2.11.tgz#c6c41e990511f32abc97dbf80e64b3ddeeff7721"
+  integrity sha512-utgFNy8OcLrnxteregcNf753vmyu2jyT8NeRKPt+J+f6Xnirtn7d675ZzR8m3vaCvt4cNmafzl9QI9kwCB8Tcg==
   dependencies:
     "@caporal/core" "^2.0.2"
     "@fast-csv/parse" "^4.3.6"
@@ -100,7 +100,7 @@
     mdast-util-from-markdown "^1.3.0"
     mdast-util-phrasing "^3.0.1"
     mdn-data "^2.0.31"
-    open "^8.4.1"
+    open "^8.4.2"
     open-editor "^4.0.0"
     prism-svelte "^0.5.0"
     prismjs "^1.29.0"
@@ -119,7 +119,7 @@
     unified "^10.1.2"
     unist-builder "^3.0.1"
     unist-util-visit "^4.1.2"
-    web-specs "^2.49.0"
+    web-specs "^2.50.0"
 
 "@mozilla/glean@1.3.0":
   version "1.3.0"
@@ -3897,10 +3897,10 @@ open-editor@^4.0.0:
     line-column-path "^3.0.0"
     open "^8.4.0"
 
-open@^8.4.0, open@^8.4.1:
-  version "8.4.1"
-  resolved "https://registry.yarnpkg.com/open/-/open-8.4.1.tgz#2ab3754c07f5d1f99a7a8d6a82737c95e3101cff"
-  integrity sha512-/4b7qZNhv6Uhd7jjnREh1NjnPxlTq+XNWPG88Ydkj5AILcA5m3ajvcg57pB24EQjKv0dK62XnDqk9c/hkIG5Kg==
+open@^8.4.0, open@^8.4.2:
+  version "8.4.2"
+  resolved "https://registry.yarnpkg.com/open/-/open-8.4.2.tgz#5b5ffe2a8f793dcd2aad73e550cb87b59cb084f9"
+  integrity sha512-7x81NCL719oNbsq/3mh+hVrAWmFuEYUqrq/Iw3kUzH8ReypT9QQ0BLoJS7/G9k6N81XjW4qHWtjWwe/9eLy1EQ==
   dependencies:
     define-lazy-prop "^2.0.0"
     is-docker "^2.1.1"
@@ -5507,10 +5507,10 @@ web-namespaces@^2.0.0:
   resolved "https://registry.yarnpkg.com/web-namespaces/-/web-namespaces-2.0.1.tgz#1010ff7c650eccb2592cebeeaf9a1b253fd40692"
   integrity sha512-bKr1DkiNa2krS7qxNtdrtHAmzuYGFQLiQ13TsorsdT6ULTkPLKuu5+GsFpDlg6JFjUTwX2DyhMPG2be8uPrqsQ==
 
-web-specs@^2.49.0:
-  version "2.49.0"
-  resolved "https://registry.yarnpkg.com/web-specs/-/web-specs-2.49.0.tgz#7ab8a3e1a5ac5c5a983cb8c2c3ece13dd6142287"
-  integrity sha512-FbgiLujLY+hjWL2yW2mxUDM7yZaBrNJtSmprPzvjsRHRFvgsWy2DEosJyz23PpeT+zlCNBhn6w48AHDkYDJkqA==
+web-specs@^2.50.0:
+  version "2.50.0"
+  resolved "https://registry.yarnpkg.com/web-specs/-/web-specs-2.50.0.tgz#8f19097a977920c4aef43905651e29fe0751859f"
+  integrity sha512-IlzosEoCs2Kn4w0QKC6xrRy9Ca7HwpdoC54ilzbUGdaeyyXFuSuszZIkChM0pO8YSX4swxFfBoixRZJnCxTYDQ==
 
 which@^1.2.9:
   version "1.3.1"
