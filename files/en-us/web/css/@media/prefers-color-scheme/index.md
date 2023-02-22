@@ -45,11 +45,11 @@ This example shows both options: Theme A uses light colors, but can be overridde
 
 ```html
 <div class="box theme-a">Theme A (initial)</div>
-<div class="box theme-a adaptive">Theme A (adaptive)</div>
+<div class="box theme-a adaptive">Theme A (changed if dark preferred)</div>
 <br />
 
 <div class="box theme-b">Theme B (initial)</div>
-<div class="box theme-b adaptive">Theme B (adaptive)</div>
+<div class="box theme-b adaptive">Theme B (changed if light preferred)</div>
 ```
 
 #### CSS
@@ -70,11 +70,13 @@ Theme A (brown) uses a light color scheme by default, but will switch to a dark 
 .theme-a {
     background: #dca;
     color: #731;
+    outline: 5px solid #000;
 }
 @media (prefers-color-scheme: dark) {
   .theme-a.adaptive {
       background: #753;
       color: #dcb;
+      outline: 5px double currentcolor;
   }
 }
 ```
@@ -85,18 +87,20 @@ Theme B (blue) uses a dark color scheme by default, but will switch to a light s
 .theme-b {
     background: #447;
     color: #bbd;
+    outline: 5px solid #000;
 }
 @media (prefers-color-scheme: light) {
   .theme-b.adaptive {
       background: #bcd;
       color: #334;
+      outline: 5px dotted currentcolor;
   }
 }
 ```
 
 #### Result
 
-The left boxes shows Theme A and Theme B as they would appear without the `prefers-color-scheme` media query. The right boxes show the same themes, but one of them will be changed to a darker or lighter variant based on the user's active color scheme.
+The left boxes shows Theme A and Theme B as they would appear without the `prefers-color-scheme` media query. The right boxes show the same themes, but one of them will be changed to a darker or lighter variant based on the user's active color scheme. The outline of one box will be doubled or dotted based on your browser or operating systems settings.
 
 {{EmbedLiveSample("Detecting_a_dark_or_light_theme")}}
 
