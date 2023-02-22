@@ -57,7 +57,6 @@ one of the following errors:
     `track` matches the specified `selector`, or
     `selector` matches more than one sender or receiver.
 
-
 ## Examples
 
 This example creates a periodic function using
