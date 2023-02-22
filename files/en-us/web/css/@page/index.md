@@ -308,7 +308,7 @@ An example of this can be found on the [`page`](/en-US/docs/Web/CSS/@page/page#e
 
 ### Using the size property to change the page orientation
 
-This example show how you can split the `section`s into individual pages in `landscape` format and each page has a 20% margin when printed.
+This example shows how to split the `<section>`s into individual pages in `landscape` format with each page having a 20% margin when printed.
 
 #### HTML
 
