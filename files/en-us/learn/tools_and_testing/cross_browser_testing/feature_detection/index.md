@@ -146,35 +146,33 @@ Bear in mind though that some features, however, are known to be undetectable â€
 
 Common patterns for detectable features include:
 
-#### If member in object
+- member in object
+  - : Check whether a particular method or property (typically an entry point into using the API or other feature you are detecting) exists in its parent `Object`.
 
-Check whether a certain method or property (typically an entry point into using the API or other feature you are detecting for) exists in its parent `Object`.
+  Our earlier example used this pattern to detect [Geolocation](/en-US/docs/Web/API/Geolocation_API) support by testing the [`navigator`](/en-US/docs/Web/API/Navigator) object for a `geolocation` member:
 
-Our earlier example used this pattern to detect [Geolocation](/en-US/docs/Web/API/Geolocation_API) support by testing the [`navigator`](/en-US/docs/Web/API/Navigator) object for a `geolocation` member:
+  ```js
+  if ("geolocation" in navigator) {
+    // Access navigator.geolocation APIs
+  }
+  ```
 
-```js
-if ("geolocation" in navigator) {
-  // Access navigator.geolocation APIs
-}
-```
+- Property on element
+- : Create an element in memory using {{domxref("Document.createElement()")}} and then check if a property exists on it.
 
-#### Property on element
+  This example shows a way of detecting <a href="/en-US/docs/Web/API/Canvas_API">Canvas</a> support:
 
-Create an element in memory using {{domxref("Document.createElement()")}} and then check if a property exists on it.
+  ```js
+  function supports_canvas() {
+    return !!document.createElement('canvas').getContext;
+  }
 
-This example shows a way of detecting <a href="/en-US/docs/Web/API/Canvas_API">Canvas</a> support:
+  if (supports_canvas()) {
+    // Create and draw on canvas elements
+  }
+  ```
 
-```js
-function supports_canvas() {
-  return !!document.createElement('canvas').getContext;
-}
-
-if (supports_canvas()) {
-  // Create and draw on canvas elements
-}
-```
-
-> **Note:** The double `NOT` in the above example (`!!`) is a way to force a return value to become a "proper" boolean value, rather than a {{glossary("Truthy")}}/{{glossary("Falsy")}} value that may skew the results.
+  > **Note:** The double `NOT` in the above example (`!!`) is a way to force a return value to become a "proper" boolean value, rather than a {{glossary("Truthy")}}/{{glossary("Falsy")}} value that may skew the results.
 
 #### Method on element return value
 
