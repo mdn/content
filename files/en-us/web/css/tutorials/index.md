@@ -15,7 +15,7 @@ They are grouped by complexity so that you can choose the most appropriate for y
 
 ## Beginner-level CSS tutorials
 
-- [CSS basics](en-US/docs/Learn/Getting_started_with_the_web/CSS_basics)
+- [CSS basics](/en-US/docs/Learn/Getting_started_with_the_web/CSS_basics)
   - : This guide is aimed at complete beginners: You haven't written one single line of CSS? — this is for you.
     It explains the fundamental concepts of the language and guides you in writing basic stylesheets.
 - [Using multiple backgrounds](/en-US/docs/Web/CSS/CSS_Backgrounds_and_Borders/Using_multiple_backgrounds)
