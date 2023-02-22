@@ -52,4 +52,3 @@ Not part of any standard.
 
 - {{CSSxRef(":dir", ":dir(…)")}}
 - {{CSSxRef(":-moz-locale-dir_ltr", ":-moz-locale-dir(ltr)")}}
-- [Making sure your theme works with RTL locales](/en-US/docs/Making_Sure_Your_Theme_Works_with_RTL_Locales)
