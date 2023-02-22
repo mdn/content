@@ -140,9 +140,11 @@ This is more convenient than the previous example — we can do all of our featu
 
 ### JavaScript
 
-We already saw an example of a JavaScript feature detection test earlier on. Generally, such tests are done via one of the following common patterns:
+We already saw an example of a JavaScript feature detection test earlier on. Generally, such tests are done via one of a few common patterns.
 
-#### Common feature detection patterns
+Bear in mind though that some features, however, are known to be undetectable — see Modernizr's list of [Undetectables](https://github.com/Modernizr/Modernizr/wiki/Undetectables) from 2016.
+
+Common patterns for detectable features include:
 
 #### If member in object
 
@@ -181,8 +183,6 @@ Create an element in memory using {{domxref("Document.createElement()")}} and th
 #### Property on element retains value
 
 Create an element in memory using {{domxref("Document.createElement()")}}, set a property to a certain value, then check to see if the value is retained. See the feature test in <a href="https://diveinto.html5doctor.com/detect.html#input-types">Dive into HTML <code>&#x3C;input></code> type detection</a> for an example of this pattern.
-
-Bear in mind though that some features, however, are known to be undetectable — see Modernizr's list of [Undetectables](https://github.com/Modernizr/Modernizr/wiki/Undetectables) from 2016.
 
 #### matchMedia
 
