@@ -160,7 +160,7 @@ Common patterns for detectable features include:
 - Properties of an element
   - : Create an element in memory using {{domxref("Document.createElement()")}} and then check if a property exists on it.
 
-    This example shows a way of detecting [Canvas API](en-US/docs/Web/API/Canvas_API) support:
+    This example shows a way of detecting [Canvas API](/en-US/docs/Web/API/Canvas_API) support:
 
     ```js
     function supports_canvas() {
