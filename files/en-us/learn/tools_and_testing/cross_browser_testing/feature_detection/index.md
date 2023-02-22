@@ -174,13 +174,13 @@ Common patterns for detectable features include:
 
   > **Note:** The double `NOT` in the above example (`!!`) is a way to force a return value to become a "proper" boolean value, rather than a {{glossary("Truthy")}}/{{glossary("Falsy")}} value that may skew the results.
 
-#### Method on element return value
+- Method on element return value
 
-Create an element in memory using {{domxref("Document.createElement()")}} and then check if a method exists on it. If it does, check what value it returns. See the feature test in <a href="https://diveinto.html5doctor.com/detect.html#video-formats">Dive into HTML Video Format detection</a> for an example of this pattern.
+  - : Create an element in memory using {{domxref("Document.createElement()")}} and then check if a method exists on it. If it does, check what value it returns. See the feature test in [Dive into HTML Video Format detection](https://diveinto.html5doctor.com/detect.html#video-formats) for an example of this pattern.
 
 #### Property on element retains value
 
-Create an element in memory using {{domxref("Document.createElement()")}}, set a property to a certain value, then check to see if the value is retained. See the feature test in <a href="https://diveinto.html5doctor.com/detect.html#input-types">Dive into HTML <code>&#x3C;input></code> type detection</a> for an example of this pattern.
+Create an element in memory using {{domxref("Document.createElement()")}}, set a property to a specific value, then check to see if the value is retained. See the feature test in [Dive into HTML \<input> type detection](https://diveinto.html5doctor.com/detect.html#input-types) for an example of this pattern.
 
 #### matchMedia
 
