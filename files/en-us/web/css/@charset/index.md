@@ -61,5 +61,5 @@ As there are several ways to define the character encoding of a style sheet, the
 
 ## See also
 
-- [Character set](/en-US/docs/Glossary/character_set) glossary entry
+- [Character set](/en-US/docs/Glossary/Character_set) glossary entry
 - [Unicode](/en-US/docs/Glossary/Unicode) glossary entry
