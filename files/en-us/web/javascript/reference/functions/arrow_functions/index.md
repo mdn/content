@@ -102,7 +102,7 @@ const b = 2;
   return a + b + 100;
 });
 
-// Arrow function (no arguments)
+// Arrow function (no parameters)
 () => a + b + 100;
 ```
 
