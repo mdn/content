@@ -113,7 +113,7 @@ CSS 2.0 defined only _computed value_ as the last step in a property's calculati
   - Values
     - [Initial values](/en-US/docs/Web/CSS/initial_value)
     - [Computed values](/en-US/docs/Web/CSS/computed_value)
-    - **Used values**](/en-US/docs/Web/CSS/used_value)\*\*
+    - **Used values**
     - [Actual values](/en-US/docs/Web/CSS/actual_value)
   - [Value definition syntax](/en-US/docs/Web/CSS/Value_definition_syntax)
   - [Shorthand properties](/en-US/docs/Web/CSS/Shorthand_properties)
