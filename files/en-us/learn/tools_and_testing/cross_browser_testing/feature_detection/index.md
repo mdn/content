@@ -146,7 +146,7 @@ Bear in mind though that some features, however, are known to be undetectable â€
 
 Common patterns for detectable features include:
 
-- member in object
+- Members of an object
   - : Check whether a particular method or property (typically an entry point into using the API or other feature you are detecting) exists in its parent `Object`.
 
     Our earlier example used this pattern to detect [Geolocation](/en-US/docs/Web/API/Geolocation_API) support by testing the [`navigator`](/en-US/docs/Web/API/Navigator) object for a `geolocation` member:
@@ -157,10 +157,10 @@ Common patterns for detectable features include:
     }
     ```
 
-- Property on element
+- Properties of an element
   - : Create an element in memory using {{domxref("Document.createElement()")}} and then check if a property exists on it.
 
-    This example shows a way of detecting <a href="/en-US/docs/Web/API/Canvas_API">Canvas</a> support:
+    This example shows a way of detecting [Canvas API](en-US/docs/Web/API/Canvas_API) support:
 
     ```js
     function supports_canvas() {
@@ -174,7 +174,7 @@ Common patterns for detectable features include:
 
     > **Note:** The double `NOT` in the above example (`!!`) is a way to force a return value to become a "proper" boolean value, rather than a {{glossary("Truthy")}}/{{glossary("Falsy")}} value that may skew the results.
 
-- Method on element return value
+- Specific return values of a method on an element
 
   - : Create an element in memory using {{domxref("Document.createElement()")}} and then check if a method exists on it. If it does, check what value it returns. See the feature test in [Dive into HTML Video Format detection](https://diveinto.html5doctor.com/detect.html#video-formats) for an example of this pattern.
 
