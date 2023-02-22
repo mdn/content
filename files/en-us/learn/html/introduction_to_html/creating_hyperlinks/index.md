@@ -78,7 +78,7 @@ I'm creating a link to [the Mozilla homepage](https://www.mozilla.org/en-US/).
 ### Block level links
 
 As mentioned before, almost any content can be made into a link, even [block-level elements](/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started#block_versus_inline_elements).
-If you want to make a heading elemnt a link then wrap it in an anchor(`<a>`) element as shown in following code snippet:
+If you want to make a heading element a link then wrap it in an anchor (`<a>`) element as shown in the following code snippet:
 
 ```html
 <a href="https://developer.mozilla.org/en-US/">
