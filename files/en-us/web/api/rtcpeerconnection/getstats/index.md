@@ -40,7 +40,9 @@ should update any existing code to use the {{jsxref("Promise")}}-based version o
   - : A [callback function](/en-US/docs/Glossary/Callback_function) called once the report has been successfully generated.
 - `failureCallback` {{deprecated_inline}}
   - : A [callback function](/en-US/docs/Glossary/Callback_function) called once the report has failed to be generated.
+
 ### Return value
+
 A {{jsxref("Promise")}} which resolves with an {{domxref("RTCStatsReport")}} object
 providing connection statistics. The report's contents depend on the
 `selector` and other details of the connection.
