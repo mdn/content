@@ -38,14 +38,18 @@ These additions have made resizing `ArrayBuffer`s more efficient — previously 
 
 ## Instance properties
 
-- `ArrayBuffer.prototype[@@toStringTag]`
-  - : The initial value of the [`@@toStringTag`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) property is the string `"ArrayBuffer"`. This property is used in {{jsxref("Object.prototype.toString()")}}.
+These properties are defined on `ArrayBuffer.prototype` and shared by all `ArrayBuffer` instances.
+
 - {{jsxref("ArrayBuffer.prototype.byteLength")}}
   - : The size, in bytes, of the `ArrayBuffer`. This is established when the array is constructed and can be changed using the {{jsxref("ArrayBuffer.prototype.resize()")}} method.
 - {{jsxref("ArrayBuffer.prototype.maxByteLength")}} {{experimental_inline}}
   - : The read-only maximum length, in bytes, that the `ArrayBuffer` can be resized to. This is established when the array is constructed and cannot be changed.
 - {{jsxref("ArrayBuffer.prototype.resizable")}} {{experimental_inline}}
   - : Read-only. Returns `true` if the `ArrayBuffer` can be resized, or `false` if not.
+- {{jsxref("Object/constructor", "ArrayBuffer.prototype.constructor")}}
+  - : The constructor function that created the instance object. For `ArrayBuffer` instances, the initial value is the {{jsxref("ArrayBuffer/ArrayBuffer", "ArrayBuffer")}} constructor.
+- `ArrayBuffer.prototype[@@toStringTag]`
+  - : The initial value of the [`@@toStringTag`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) property is the string `"ArrayBuffer"`. This property is used in {{jsxref("Object.prototype.toString()")}}.
 
 ## Instance methods
 
