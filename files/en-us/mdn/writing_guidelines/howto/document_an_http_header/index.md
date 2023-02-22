@@ -48,7 +48,7 @@ You will need to know or be able to dive into some [HTTP](/en-US/docs/Web/HTTP).
 
 ## Step 5 – Add browser compatibility information
 
-- If you have looked at other HTTP header pages, you will see that there is a `{{Compat}}` macro that will fill in a browser table for you.
+- If you have looked at other HTTP header pages, you will see that there is a `\{{Compat}}` macro that will fill in a browser table for you.
 - The compatibility table page is generated from structured data. If you'd like to contribute to the data, please check out the instructions at <https://github.com/mdn/browser-compat-data/blob/main/README.md> and send us a pull request.
 
 ## Step 6 – Update the HTTP headers list
