@@ -150,7 +150,7 @@ Common patterns for detectable features include:
 
 Check whether a certain method or property (typically an entry point into using the API or other feature you are detecting for) exists in its parent `Object`.
 
-For example, we could test for support of the `geolocation` API by testing the `navigator` object:
+Our earlier example used this pattern to detect [Geolocation](/en-US/docs/Web/API/Geolocation_API) support by testing the [`navigator`](/en-US/docs/Web/API/Navigator) object for a `geolocation` member:
 
 ```js
 if ("geolocation" in navigator) {
