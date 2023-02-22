@@ -1,10 +1,10 @@
 ---
 title: size
 slug: Web/CSS/@page/page-orientation
-page-type: css-at-rule-property
+page-type: css-at-rule-descriptor
 tags:
   - "@page"
-  - At-rule property
+  - At-rule descriptor
   - CSS
   - CSS Property
   - NeedsBrowserCompatibility
