@@ -149,38 +149,38 @@ Common patterns for detectable features include:
 - member in object
   - : Check whether a particular method or property (typically an entry point into using the API or other feature you are detecting) exists in its parent `Object`.
 
-  Our earlier example used this pattern to detect [Geolocation](/en-US/docs/Web/API/Geolocation_API) support by testing the [`navigator`](/en-US/docs/Web/API/Navigator) object for a `geolocation` member:
+    Our earlier example used this pattern to detect [Geolocation](/en-US/docs/Web/API/Geolocation_API) support by testing the [`navigator`](/en-US/docs/Web/API/Navigator) object for a `geolocation` member:
 
-  ```js
-  if ("geolocation" in navigator) {
-    // Access navigator.geolocation APIs
-  }
-  ```
+    ```js
+    if ("geolocation" in navigator) {
+      // Access navigator.geolocation APIs
+    }
+    ```
 
 - Property on element
-- : Create an element in memory using {{domxref("Document.createElement()")}} and then check if a property exists on it.
+  - : Create an element in memory using {{domxref("Document.createElement()")}} and then check if a property exists on it.
 
-  This example shows a way of detecting <a href="/en-US/docs/Web/API/Canvas_API">Canvas</a> support:
+    This example shows a way of detecting <a href="/en-US/docs/Web/API/Canvas_API">Canvas</a> support:
 
-  ```js
-  function supports_canvas() {
-    return !!document.createElement('canvas').getContext;
-  }
+    ```js
+    function supports_canvas() {
+      return !!document.createElement('canvas').getContext;
+    }
 
-  if (supports_canvas()) {
-    // Create and draw on canvas elements
-  }
-  ```
+    if (supports_canvas()) {
+      // Create and draw on canvas elements
+    }
+    ```
 
-  > **Note:** The double `NOT` in the above example (`!!`) is a way to force a return value to become a "proper" boolean value, rather than a {{glossary("Truthy")}}/{{glossary("Falsy")}} value that may skew the results.
+    > **Note:** The double `NOT` in the above example (`!!`) is a way to force a return value to become a "proper" boolean value, rather than a {{glossary("Truthy")}}/{{glossary("Falsy")}} value that may skew the results.
 
 - Method on element return value
 
   - : Create an element in memory using {{domxref("Document.createElement()")}} and then check if a method exists on it. If it does, check what value it returns. See the feature test in [Dive into HTML Video Format detection](https://diveinto.html5doctor.com/detect.html#video-formats) for an example of this pattern.
 
-#### Property on element retains value
+- Property on element retains value
 
-Create an element in memory using {{domxref("Document.createElement()")}}, set a property to a specific value, then check to see if the value is retained. See the feature test in [Dive into HTML \<input> type detection](https://diveinto.html5doctor.com/detect.html#input-types) for an example of this pattern.
+  - : Create an element in memory using {{domxref("Document.createElement()")}}, set a property to a specific value, then check to see if the value is retained. See the feature test in [Dive into HTML \<input> type detection](https://diveinto.html5doctor.com/detect.html#input-types) for an example of this pattern.
 
 #### matchMedia
 
