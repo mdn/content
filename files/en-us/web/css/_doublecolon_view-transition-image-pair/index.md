@@ -16,7 +16,7 @@ browser-compat: css.selectors.view-transition-image-pair
 
 The **`::view-transition-image-pair`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) represents a container for a [view transition's](/en-US/docs/Web/API/View_Transitions_API) "old" and "new" view states — before and after the transition.
 
-During a view transition, `::view-transition-image-pair` is included in the associated pseudo-element tree as explained in [The view transition process](/en-US/docs/Web/API/View_Transitions_API#the_view_transition_process). It is only ever a child of a {{cssxref("::view-transition-group")}}, and has a {{cssxref("::view-transition-new")}} and a {{cssxref("::view-transition-old")}} as children, or just {{cssxref("::view-transition-new")}} if there is no "old" view state to represent.
+During a view transition, `::view-transition-image-pair` is included in the associated pseudo-element tree as explained in [The view transition process](/en-US/docs/Web/API/View_Transitions_API#the_view_transition_process). It is only ever a child of a {{cssxref("::view-transition-group")}}. In terms of children, it can have a {{cssxref("::view-transition-new")}} or a {{cssxref("::view-transition-old")}}, or both.
 
 `::view-transition-image-pair` is given the following default styling in the UA stylesheet:
 
@@ -44,6 +44,8 @@ During a view transition, `::view-transition-image-pair` has {{cssxref("isolatio
 
 - `*`
   - : Causes the pseudo-element to match all view transition groups.
+- `root`
+  - : Causes the pseudo-element to match the default `root` view transition group created by the user agent to contain the view transition for the overall page, meaning any element not assigned to its own specific view transition group via the {{cssxref("view-transition-name")}} property.
 - {{cssxref("custom-ident")}}
   - : Causes the pseudo-element to match a specific view transition group created by assigning the given {{cssxref("custom-ident")}} to an element via the {{cssxref("view-transition-name")}} property.
 

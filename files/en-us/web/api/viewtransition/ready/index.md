@@ -9,9 +9,9 @@ browser-compat: api.ViewTransition.ready
 {{APIRef("View Transitions API")}}{{SeeCompatTable}}
 
 The **`ready`** read-only property of the
-{{domxref("ViewTransition")}} interface returns a {{jsxref("Promise")}} that fulfills once the pseudo-element tree is created and the transition animation is about to start.
+{{domxref("ViewTransition")}} interface is a {{jsxref("Promise")}} that fulfills once the pseudo-element tree is created and the transition animation is about to start.
 
-`ready` will reject if the transition cannot begin. This can be due to misconfiguration, for example duplicate {{cssxref("view-transition-name")}}s, or if {{domxref("Document.startViewTransition()")}}'s callback returns a rejected promise.
+`ready` will reject if the transition cannot begin. This can be due to misconfiguration, for example duplicate {{cssxref("view-transition-name")}}s, or if the callback passed to {{domxref("Document.startViewTransition()")}} throws or returns a promise that rejects.
 
 ## Value
 
@@ -65,6 +65,21 @@ function spaNavigate(data) {
       }
     );
   });
+}
+```
+
+This animation also requires the following CSS, to turn off the default CSS animation and stop the old and new view states from blending in any way (the new state "wipes" right over the top of the old state, rather than transitioning in):
+
+```css
+::view-transition-image-pair(root) {
+  isolation: auto;
+}
+
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation: none;
+  mix-blend-mode: normal;
+  display: block;
 }
 ```
 

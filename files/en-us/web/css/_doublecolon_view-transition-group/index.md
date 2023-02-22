@@ -14,7 +14,7 @@ browser-compat: css.selectors.view-transition-group
 
 {{CSSRef}}{{seecompattable}}
 
-The **`::view-transition-group`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) represents the root of a single [view transition](/en-US/docs/Web/API/View_Transitions_API).
+The **`::view-transition-group`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) represents a single view transition group.
 
 During a view transition, `::view-transition-group` is included in the associated pseudo-element tree as explained in [The view transition process](/en-US/docs/Web/API/View_Transitions_API#the_view_transition_process). It is only ever a child of {{cssxref("::view-transition")}}, and has a {{cssxref("::view-transition-image-pair")}} as a child.
 
@@ -51,6 +51,8 @@ In addition, the element's transform is animated from the "old" view state's scr
 
 - `*`
   - : Causes the pseudo-element to match all view transition groups.
+- `root`
+  - : Causes the pseudo-element to match the default `root` view transition group created by the user agent to contain the view transition for the overall page, meaning any element not assigned to its own specific view transition group via the {{cssxref("view-transition-name")}} property.
 - {{cssxref("custom-ident")}}
   - : Causes the pseudo-element to match a specific view transition group created by assigning the given {{cssxref("custom-ident")}} to an element via the {{cssxref("view-transition-name")}} property.
 

@@ -9,7 +9,7 @@ browser-compat: api.ViewTransition.updateCallbackDone
 {{APIRef("View Transitions API")}}{{SeeCompatTable}}
 
 The **`updateCallbackDone`** read-only property of the
-{{domxref("ViewTransition")}} interface returns a {{jsxref("Promise")}} that fulfills when the promise returned by the {{domxref("Document.startViewTransition()")}}'s callback fulfills, or rejects when it rejects.
+{{domxref("ViewTransition")}} interface is a {{jsxref("Promise")}} that fulfills when the promise returned by the {{domxref("Document.startViewTransition()", "document.startViewTransition()")}}'s callback fulfills, or rejects when it rejects.
 
 `updateCallbackDone` is useful when you don't care about the success/failure of the transition animation, and just want to know if and when the DOM is updated.
 

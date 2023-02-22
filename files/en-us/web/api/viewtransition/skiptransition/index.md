@@ -9,7 +9,7 @@ browser-compat: api.ViewTransition.skipTransition
 {{APIRef("View Transitions API")}}{{SeeCompatTable}}
 
 The **`skipTransition()`** method of the
-{{domxref("ViewTransition")}} interface Skips the animation part of the view transition, but doesn't skip running the {{domxref("Document.startViewTransition()")}} callback that updates the DOM.
+{{domxref("ViewTransition")}} interface skips the animation part of the view transition, but doesn't skip running the {{domxref("Document.startViewTransition()", "document.startViewTransition()")}} callback that updates the DOM.
 
 ## Syntax
 

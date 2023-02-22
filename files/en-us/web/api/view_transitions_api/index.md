@@ -33,7 +33,21 @@ The View Transitions API provides a much easier way of handling the required DOM
 An SPA will include functionality to fetch new content and update the DOM in response to an event of some kind, such as a navigation link being clicked or an update being pushed from the server. In our [Basic View Transitions demo](https://basic-view-transitions-api.glitch.me/) we've simplified this to a `displayNewImage()` function that shows a new full-size image based on the thumbnail that was clicked. We've encapsulated this inside an `updateView()` function that handles both browsers that do and don't support the View Transitions API:
 
 ```js
-function updateView(e) {
+function updateView(event) {
+  // Handle the difference in whether the event is fired on the <a> or the <img>
+  let targetIdentifier;
+  if (event.target.firstChild === null) {
+    targetIdentifier = event.target;
+  } else {
+    targetIdentifier = event.target.firstChild;
+  }
+
+  const displayNewImage = () => {
+    const mainSrc = `${targetIdentifier.src.split("_th.jpg")[0]}.jpg`;
+    galleryImg.src = mainSrc;
+    galleryCaption.textContent = targetIdentifier.alt;
+  };
+
   // Fallback for browsers that don't support View Transitions:
   if (!document.startViewTransition) {
     displayNewImage();
@@ -42,31 +56,25 @@ function updateView(e) {
 
   // With View Transitions:
   const transition = document.startViewTransition(() => displayNewImage());
-
-  function displayNewImage() {
-    const mainSrc = `${e.target.src.split('_th.jpg')[0]}.jpg`;
-    galleryImg.src = mainSrc;
-    galleryCaption.textContent = e.target.alt;
-  }
 }
 ```
 
 And that's it. This code is enough to handle the transition between displayed images. Supporting browsers will show the change from old to new images and captions as a smooth cross-fade (the default view transition), and it will still work in non-supporting browsers but without the nice animation.
 
-It is also worth mentioning that `startViewTransition()` returns a {{domxref("ViewTransition")}} instance, which contains several properties that return promises, allowing you to run code in response to different parts of the view transition process being reached.
+It is also worth mentioning that `startViewTransition()` returns a {{domxref("ViewTransition")}} instance, which includes several promises, allowing you to run code in response to different parts of the view transition process being reached.
 
 ### The view transition process
 
 Let's walk through how this works:
 
-1. When {{domxref("Document.startViewTransition()")}} is called, the API takes a screenshot of the current page.
-2. Next, the `startViewTransition()` callback is invoked, in this case `displayNewImage()`, which causes the DOM to change.
+1. When {{domxref("Document.startViewTransition()", "document.startViewTransition()")}} is called, the API takes a screenshot of the current page.
+2. Next, the callback passed to `startViewTransition()` is invoked, in this case `displayNewImage`, which causes the DOM to change.
 
    When the callback has run successfully, the {{domxref("ViewTransition.updateCallbackDone")}} promise fulfills, allowing you to respond to the DOM updating.
 3. The API captures the new state of the page as a live representation.
 4. The API constructs a pseudo-element tree with the following structure:
 
-   ```js
+   ```
    ::view-transition
    └─ ::view-transition-group(root)
       └─ ::view-transition-image-pair(root)
@@ -79,7 +87,7 @@ Let's walk through how this works:
 
    When the transition animation is about to run, the {{domxref("ViewTransition.ready")}} promise fulfills, allowing you to respond by running a custom JavaScript animation instead of the default, for example.
 5. The old page view animates from {{cssxref("opacity")}} 1 to 0, while the new view animates from `opacity` 0 to 1, which is what creates the default cross-fade.
-6. When the transition animation has successfully completed, the {{domxref("ViewTransition.finished")}} promise fulfills, allowing you to respond.
+6. When the transition animation has reached its end state, the {{domxref("ViewTransition.finished")}} promise fulfills, allowing you to respond.
 
 ### Different transitions for different elements
 
@@ -87,25 +95,24 @@ At the moment, all of the different elements that change when then DOM updates a
 
 ```css
 figcaption {
-  view-transition-name: figcaption;
-  contain: layout;
+  view-transition-name: figure-caption;
 }
 ```
 
-We've given the {{htmlelement("figcaption")}} element a `view-transition-name` of `figcaption` to separate it from the rest of the page in terms of view transitions. It also needs a suitable {{cssxref("contain")}} value applied to it so that its animation doesn't interfere with adjacent DOM elements.
+We've given the {{htmlelement("figcaption")}} element a `view-transition-name` of `figure-caption` to separate it from the rest of the page in terms of view transitions.
 
 With this CSS applied, the pseudo-element tree will now look like this:
 
-```js
+```
 ::view-transition
-└─ ::view-transition-group(root)
-  └─ ::view-transition-image-pair(root)
-      ├─ ::view-transition-old(root)
-      └─ ::view-transition-new(root)
-└─ ::view-transition-group(figcaption)
-  └─ ::view-transition-image-pair(figcaption)
-      ├─ ::view-transition-old(figcaption)
-      └─ ::view-transition-new(figcaption)
+├─ ::view-transition-group(root)
+│ └─ ::view-transition-image-pair(root)
+│     ├─ ::view-transition-old(root)
+│     └─ ::view-transition-new(root)
+└─ ::view-transition-group(figure-caption)
+  └─ ::view-transition-image-pair(figure-caption)
+      ├─ ::view-transition-old(figure-caption)
+      └─ ::view-transition-new(figure-caption)
 ```
 
 The existence of the second set of pseudo-elements allows separate view transition styling to be applied just to the `<figcaption>`. The different old and new page view captures are handled completely separate from one another.
@@ -130,7 +137,7 @@ For example, to change the speed of it:
 Let's look at something more interesting — a custom animation for the `<figcaption>`:
 
 ```css
- @keyframes grow-x {
+@keyframes grow-x {
   from { transform: scaleX(0); }
   to { transform: scaleX(1); }
 }
@@ -140,38 +147,34 @@ Let's look at something more interesting — a custom animation for the `<figcap
   to { transform: scaleX(0); }
 }
 
-::view-transition-old(figcaption),
-::view-transition-new(figcaption) {
-  width: auto;
+::view-transition-old(figure-caption),
+::view-transition-new(figure-caption) {
   height: auto;
-  position: absolute;
-  top: 0;
   right: 0;
   left: auto;
   transform-origin: right center;
 }
 
-::view-transition-old(figcaption) {
+::view-transition-old(figure-caption) {
   animation: 0.25s linear both shrink-x;
 }
 
-::view-transition-new(figcaption) {
+::view-transition-new(figure-caption) {
   animation: 0.25s 0.25s linear both grow-x;
 } 
 ```
 
-Here we've created a custom CSS animation and applied it to the `::view-transition-old(figcaption)` and `::view-transition-new(figcaption)` pseudo-elements, plus we've also added a number of other styles to both to keep them in the same place and stop the default styling from interfering with our custom animations.
+Here we've created a custom CSS animation and applied it to the `::view-transition-old(figure-caption)` and `::view-transition-new(figure-caption)` pseudo-elements, plus we've also added a number of other styles to both to keep them in the same place and stop the default styling from interfering with our custom animations.
 
 Note that we also discovered another transition option that is simpler and produced a nicer result than the above. Our final `<figcaption>` view transition ended up looking like this:
 
 ```css
 figcaption {
-  view-transition-name: figcaption;
-  contain: layout;
+  view-transition-name: figure-caption;
 }
 
-::view-transition-old(figcaption),
-::view-transition-new(figcaption) {
+::view-transition-old(figure-caption),
+::view-transition-new(figure-caption) {
   height: 100%;
 }
 ```
@@ -182,7 +185,7 @@ This works because by default, `::view-transition-group` transitions width and h
 
 ### Controlling animations with JavaScript
 
-The {{domxref("Document.startViewTransition()")}} method returns a {{domxref("ViewTransition")}} object instance, which contains several properties that returns promises allowing you to run JavaScript in response to different states of the transition being reached. For example, {{domxref("ViewTransition.ready")}} fulfills once the pseudo-element tree is created and the animation is about to start, whereas {{domxref("ViewTransition.finished")}} fulfills once the the animation is finished, and the new page view is visible and interactive to the user.
+The {{domxref("Document.startViewTransition()", "document.startViewTransition()")}} method returns a {{domxref("ViewTransition")}} object instance, which contains several promise members allowing you to run JavaScript in response to different states of the transition being reached. For example, {{domxref("ViewTransition.ready")}} fulfills once the pseudo-element tree is created and the animation is about to start, whereas {{domxref("ViewTransition.finished")}} fulfills once the the animation is finished, and the new page view is visible and interactive to the user.
 
 For example, the following JavaScript could be used to create a circular reveal view transition eminating from the position of the user's cursor on click, with animation provided by the {{domxref("Web Animations API", "Web Animations API", "", "nocode")}}.
 
@@ -233,7 +236,7 @@ function spaNavigate(data) {
 }
 ```
 
-The above example would also require the "old" and "new" states to layer on top of one another without the default blending, and the default cross-fade animation to be disabled:
+This animation also requires the following CSS, to turn off the default CSS animation and stop the old and new view states from blending in any way (the new state "wipes" right over the top of the old state, rather than transitioning in):
 
 ```css
 ::view-transition-image-pair(root) {
@@ -244,6 +247,7 @@ The above example would also require the "old" and "new" states to layer on top 
 ::view-transition-new(root) {
   animation: none;
   mix-blend-mode: normal;
+  display: block;
 }
 ```
 
@@ -255,7 +259,7 @@ The above example would also require the "old" and "new" states to layer on top 
 ## Extensions to other interfaces
 
 - {{domxref("Document.startViewTransition()")}}
-  - : Starts a new view transition.
+  - : Starts a new view transition and returns a {{domxref("ViewTransition")}} object to represent it.
 
 ## CSS additions
 

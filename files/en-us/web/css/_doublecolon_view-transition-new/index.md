@@ -55,6 +55,8 @@ html::view-transition-new(*) {
 
 - `*`
   - : Causes the pseudo-element to match all view transition groups.
+- `root`
+  - : Causes the pseudo-element to match the default `root` view transition group created by the user agent to contain the view transition for the overall page, meaning any element not assigned to its own specific view transition group via the {{cssxref("view-transition-name")}} property.
 - {{cssxref("custom-ident")}}
   - : Causes the pseudo-element to match a specific view transition group created by assigning the given {{cssxref("custom-ident")}} to an element via the {{cssxref("view-transition-name")}} property.
 
@@ -62,8 +64,7 @@ html::view-transition-new(*) {
 
 ```css
 figcaption {
-  view-transition-name: figcaption;
-  contain: layout;
+  view-transition-name: figure-caption;
 }
 
 @keyframes grow-x {
@@ -84,22 +85,19 @@ figcaption {
   }
 }
 
-::view-transition-old(figcaption),
-::view-transition-new(figcaption) {
-  width: auto;
+::view-transition-old(figure-caption),
+::view-transition-new(figure-caption) {
   height: auto;
-  position: absolute;
-  top: 0;
   right: 0;
   left: auto;
   transform-origin: right center;
 }
 
-::view-transition-old(figcaption) {
+::view-transition-old(figure-caption) {
   animation: 0.25s linear both shrink-x;
 }
 
-::view-transition-new(figcaption) {
+::view-transition-new(figure-caption) {
   animation: 0.25s 0.25s linear both grow-x;
 }
 ```

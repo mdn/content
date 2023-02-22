@@ -20,7 +20,7 @@ The **`view-transition-name`** [CSS](/en-US/docs/Web/CSS) property provides the 
 ```css
 /* <custom-ident> value examples */
 view-transition-name: header;
-view-transition-name: figcaption;
+view-transition-name: figure-caption;
 
 /* Keyword value */
 view-transition-name: none;
@@ -45,8 +45,7 @@ view-transition-name: none;
 
 ```css
 figcaption {
-  view-transition-name: figcaption;
-  contain: layout;
+  view-transition-name: figure-caption;
 }
 ```
 
