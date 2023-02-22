@@ -21,12 +21,16 @@ _Inherits properties from its parent, {{DOMxRef("EventTarget")}}._
 
 - {{domxref("GPUDevice.features", "features")}} {{Experimental_Inline}} {{readonlyinline}}
   - : A {{domxref("GPUSupportedFeatures")}} object that describes additional functionality supported by the device.
+
 - {{domxref("GPUDevice.label", "label")}} {{Experimental_Inline}}
   - : A string providing an identifying label that can be used to identify the object, for example in {{domxref("GPUError")}} messages or console warnings.
+
 - {{domxref("GPUDevice.limits", "limits")}} {{Experimental_Inline}} {{readonlyinline}}
   - : A {{domxref("GPUSupportedLimits")}} object that describes the limits supported by the device.
+
 - {{domxref("GPUDevice.lost", "lost")}} {{Experimental_Inline}} {{readonlyinline}}
   - : Contains a {{domxref("Promise")}} that remains pending throughout the device's lifetime and resolves with a {{domxref("GPUDeviceLostInfo")}} object when the device is lost.
+
 - {{domxref("GPUDevice.queue", "queue")}} {{Experimental_Inline}} {{readonlyinline}}
   - : Returns the primary {{domxref("GPUQueue")}} for the device.
 
@@ -59,7 +63,7 @@ _Inherits methods from its parent, {{DOMxRef("EventTarget")}}._
   - : Creates a {{domxref("GPUQuerySet")}} that can be used to record occlusion and timestamp queries on passes.
 
 - {{domxref("GPUDevice.createRenderBundleEncoder", "createRenderBundleEncoder()")}} {{Experimental_Inline}}
-  - : Creates a {{domxref("GPURenderBundleEncoder")}}, used to directly encode render commands to be issued to the GPU.
+  - : Creates a {{domxref("GPURenderBundleEncoder")}} that can be used to pre-record bundles of commands. These can be reused in {{domxref("GPURenderPassEncoder")}}s via the {{domxref("GPURenderPassEncoder.executeBundles", "executeBundles()")}} method, as many times as required.
 
 - {{domxref("GPUDevice.createRenderPipeline", "createRenderPipeline()")}} {{Experimental_Inline}}
   - : Creates a {{domxref("GPURenderPipeline")}} that can control the vertex and fragment shader stages and be used in a {{domxref("GPURenderPassEncoder")}} or {{domxref("GPURenderBundleEncoder")}}.
