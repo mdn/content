@@ -24,7 +24,7 @@ page: exampleName;
 
 - `auto`
   - : Default setting for the property.
-- `name`
+- {{cssxref("<custom-ident>")}}
   - : A value defined by a user on that is applied on the [`@page`](/en-US/docs/Web/CSS/@page) at-rule, this is case-sensitive and follows the syntax of [`<custom-ident>`](/en-US/docs/Web/CSS/custom-ident).
 
 > **Note:** The page property does not inherit. However, if the page value on an element is auto, then its used value is the value specified on its nearest ancestor with a non-auto value. When specified on the root element, the used value for auto is the empty string.
