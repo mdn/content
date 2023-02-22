@@ -1,7 +1,7 @@
 ---
 title: page
-slug: Web/CSS/@page/page
-page-type: css-at-rule-property
+slug: Web/CSS/page
+page-type: css-property
 browser-compat: css.at-rules.page.page
 ---
 
