@@ -51,4 +51,4 @@ Not part of any standard.
 ## See also
 
 - {{CSSxRef(":dir", ":dir(…)")}}
-- {{CSSxRef(":-moz-locale-dir(rtl)")}}
+- {{CSSxRef(":-moz-locale-dir_rtl", ":-moz-locale-dir(rtl)")}}
