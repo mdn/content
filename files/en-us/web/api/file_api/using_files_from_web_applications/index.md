@@ -46,22 +46,7 @@ The {{DOMxRef("FileList")}} object provided by the DOM lists all of the files se
 const numFiles = fileList.length;
 ```
 
-Individual {{DOMxRef("File")}} objects can be retrieved by accessing the list as an array:
-
-```js
-for (let i = 0, numFiles = fileList.length; i < numFiles; i++) {
-  const file = fileList[i];
-  // …
-}
-```
-
-The above loop iterates over all the files in the file list. You can also iterate over all files using an equivalent but more compact for...of statement:
-
-```js
-for (const file of fileList) {
-  // …
-}
-```
+Individual {{DOMxRef("File")}} objects can be retrieved by accessing the list as an array.
 
 There are three attributes provided by the {{DOMxRef("File")}} object that contain useful information about the file.
 
