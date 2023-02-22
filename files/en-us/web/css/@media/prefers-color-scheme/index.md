@@ -58,7 +58,9 @@ This example shows both options: Theme A uses light colors, but can be overridde
 div.box {
   display: inline-block;
   padding: 1em;
-  width: 7em;
+  margin: 6px;
+  outline: 2px solid #000;
+  width: 12em;
   height: 2em;
   vertical-align: middle;
 }
@@ -70,7 +72,6 @@ Theme A (brown) uses a light color scheme by default, but will switch to a dark 
 .theme-a {
     background: #dca;
     color: #731;
-    outline: 5px solid #000;
 }
 @media (prefers-color-scheme: dark) {
   .theme-a.adaptive {
@@ -87,7 +88,6 @@ Theme B (blue) uses a dark color scheme by default, but will switch to a light s
 .theme-b {
     background: #447;
     color: #bbd;
-    outline: 5px solid #000;
 }
 @media (prefers-color-scheme: light) {
   .theme-b.adaptive {
