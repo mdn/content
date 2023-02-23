@@ -2,9 +2,6 @@
 title: How to tag pages
 slug: MDN/Writing_guidelines/Howto/Tag
 page-type: mdn-writing-guide
-tags:
-  - meta
-  - writing-guide
 ---
 
 {{MDNSidebar}}

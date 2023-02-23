@@ -1,15 +1,6 @@
 ---
 title: What's New in Deer Park Alpha
 slug: Mozilla/Firefox/Releases/1.5/What_s_new_in_1.5_alpha
-tags:
-  - API
-  - CSS
-  - DOM
-  - Extensions
-  - Graphics
-  - HTML
-  - JavaScript
-  - SVG
 ---
 
 {{FirefoxSidebar}}

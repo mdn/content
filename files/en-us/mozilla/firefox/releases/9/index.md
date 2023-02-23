@@ -1,10 +1,6 @@
 ---
 title: Firefox 9 for developers
 slug: Mozilla/Firefox/Releases/9
-tags:
-  - Firefox
-  - Firefox 9
-  - Gecko 9
 ---
 
 {{FirefoxSidebar}}

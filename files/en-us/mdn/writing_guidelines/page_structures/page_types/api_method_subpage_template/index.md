@@ -2,9 +2,6 @@
 title: API method subpage template
 slug: MDN/Writing_guidelines/Page_structures/Page_types/API_method_subpage_template
 page-type: mdn-writing-guide
-tags:
-  - meta
-  - writing-guide
 browser-compat: path.to.feature.NameOfTheMethod
 ---
 

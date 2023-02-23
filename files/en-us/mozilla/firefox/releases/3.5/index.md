@@ -1,16 +1,6 @@
 ---
 title: Firefox 3.5 for developers
 slug: Mozilla/Firefox/Releases/3.5
-tags:
-  - CSS
-  - Firefox
-  - Firefox 3.5
-  - Gecko
-  - Gecko 1.9.1
-  - HTML
-  - JavaScript
-  - Storage
-  - XUL
 ---
 
 {{FirefoxSidebar}}
