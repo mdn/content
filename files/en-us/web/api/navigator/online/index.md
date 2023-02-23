@@ -26,7 +26,7 @@ is running a virtualization software that has virtual ethernet adapters that are
 browser, you should develop additional means for checking.
 
 In Firefox, switching the browser to offline mode sends a `false` value. Until Firefox
-41, all other conditions return a `true` value; testing actual behavior on Nightly 68 on
+41, all other conditions returned a `true` value; testing actual behavior on Nightly 68 on
 Windows shows that it only looks for LAN connection like Chrome and Safari giving false
 positives.
 
