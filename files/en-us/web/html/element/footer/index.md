@@ -12,7 +12,7 @@ browser-compat: html.elements.footer
 
 {{HTMLSidebar}}
 
-The **`<footer>`** [HTML](/en-US/docs/Web/HTML) element represents a footer for its nearest ancestor [sectioning content](/en-US/docs/Web/Guide/HTML/Content_categories#sectioning_content) or [sectioning root](/en-US/docs/Web/HTML/Element/Heading_Elements#sectioning_root) element. A `<footer>` typically contains information about the author of the section, copyright data or links to related documents.
+The **`<footer>`** [HTML](/en-US/docs/Web/HTML) element represents a footer for its nearest ancestor [sectioning content](/en-US/docs/Web/HTML/Content_categories#sectioning_content) or [sectioning root](/en-US/docs/Web/HTML/Element/Heading_Elements#sectioning_root) element. A `<footer>` typically contains information about the author of the section, copyright data or links to related documents.
 
 {{EmbedInteractiveExample("pages/tabbed/footer.html", "tabbed-standard")}}
 
@@ -20,12 +20,12 @@ The **`<footer>`** [HTML](/en-US/docs/Web/HTML) element represents a footer for 
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories"
+        <a href="/en-US/docs/Web/HTML/Content_categories"
           >Content categories</a
         >
       </th>
       <td>
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
           >Flow content</a
         >, palpable content.
       </td>
@@ -33,7 +33,7 @@ The **`<footer>`** [HTML](/en-US/docs/Web/HTML) element represents a footer for 
     <tr>
       <th scope="row">Permitted content</th>
       <td>
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
           >Flow content</a
         >, but with no <code>&#x3C;footer></code> or
         {{HTMLElement("header")}} descendants.
@@ -47,7 +47,7 @@ The **`<footer>`** [HTML](/en-US/docs/Web/HTML) element represents a footer for 
       <th scope="row">Permitted parents</th>
       <td>
         Any element that accepts
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
           >flow content</a
         >. Note that a <code>&#x3C;footer></code> element must not be a
         descendant of an {{HTMLElement("address")}},

@@ -83,18 +83,18 @@ button {
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories"
+        <a href="/en-US/docs/Web/HTML/Content_categories"
           >Content categories</a
         >
       </th>
       <td>
         <p>
-          <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+          <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
             >Flow content</a
           >. If the element's children include at least one
           {{HTMLElement("li")}} element:
           <a
-            href="/en-US/docs/Web/Guide/HTML/Content_categories#palpable_content"
+            href="/en-US/docs/Web/HTML/Content_categories#palpable_content"
             >Palpable content</a
           >.
         </p>
@@ -118,7 +118,7 @@ button {
       <th scope="row">Permitted parents</th>
       <td>
         Any element that accepts
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
           >flow content</a
         >.
       </td>

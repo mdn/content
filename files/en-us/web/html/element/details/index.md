@@ -211,12 +211,12 @@ This CSS creates a look similar to a tabbed interface, where activating the tab 
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories"
+        <a href="/en-US/docs/Web/HTML/Content_categories"
           >Content categories</a
         >
       </th>
       <td>
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
           >Flow content</a
         >, sectioning root, interactive content, palpable content.
       </td>
@@ -225,7 +225,7 @@ This CSS creates a look similar to a tabbed interface, where activating the tab 
       <th scope="row">Permitted content</th>
       <td>
         One {{HTMLElement("summary")}} element followed by
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
           >flow content</a
         >.
       </td>
@@ -238,7 +238,7 @@ This CSS creates a look similar to a tabbed interface, where activating the tab 
       <th scope="row">Permitted parents</th>
       <td>
         Any element that accepts
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
           >flow content</a
         >.
       </td>

@@ -69,12 +69,12 @@ Although it renders text with the same default styling as the {{HTMLElement("i")
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories"
+        <a href="/en-US/docs/Web/HTML/Content_categories"
           >Content categories</a
         >
       </th>
       <td>
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
           >Flow content</a
         >, palpable content.
       </td>
@@ -82,7 +82,7 @@ Although it renders text with the same default styling as the {{HTMLElement("i")
     <tr>
       <th scope="row">Permitted content</th>
       <td>
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
           >Flow content</a
         >, but with no nested <code>&#x3C;address></code> element, no heading
         content ({{HTMLElement("hgroup")}}, {{HTMLElement("Heading_Elements", "h1")}},
@@ -103,7 +103,7 @@ Although it renders text with the same default styling as the {{HTMLElement("i")
       <th scope="row">Permitted parents</th>
       <td>
         Any element that accepts
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
           >flow content</a
         >, but always excluding <code>&#x3C;address></code> elements (according
         to the logical principle of symmetry, if
