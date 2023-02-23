@@ -1,13 +1,6 @@
 ---
 title: "ARIA: link role"
 slug: Web/Accessibility/ARIA/Roles/link_role
-tags:
-  - ARIA
-  - ARIA Role
-  - Reference
-  - Link role
-  - ARIA link
-  - Accessibility
 spec-urls: https://w3c.github.io/aria/#link
 ---
 

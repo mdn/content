@@ -1,14 +1,6 @@
 ---
 title: aria-grabbed
 slug: Web/Accessibility/ARIA/Attributes/aria-grabbed
-tags:
-  - Accessibility
-  - ARIA
-  - ARIA attribute
-  - ARIA property
-  - aria-grabbed
-  - Reference
-  - deprecated
 spec-urls: https://w3c.github.io/aria/#aria-grabbed
 ---
 

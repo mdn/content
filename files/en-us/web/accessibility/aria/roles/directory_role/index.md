@@ -1,14 +1,6 @@
 ---
 title: "ARIA: directory role"
 slug: Web/Accessibility/ARIA/Roles/directory_role
-tags:
-  - Accessibility
-  - ARIA
-  - roles
-  - Reference
-  - ARIA roles
-  - document structure role
-  - deprecated
 spec-urls: https://w3c.github.io/aria/#directory
 ---
 

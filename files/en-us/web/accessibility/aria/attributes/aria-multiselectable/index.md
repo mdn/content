@@ -1,13 +1,6 @@
 ---
-title: "aria-multiselectable"
+title: aria-multiselectable
 slug: Web/Accessibility/ARIA/Attributes/aria-multiselectable
-tags:
-  - Accessibility
-  - ARIA
-  - ARIA attribute
-  - ARIA property
-  - aria-multiselectable
-  - Reference
 spec-urls: https://w3c.github.io/aria/#aria-multiselectable
 ---
 

@@ -1,15 +1,6 @@
 ---
 title: "ARIA: log role"
 slug: Web/Accessibility/ARIA/Roles/log_role
-tags:
-  - Accessibility
-  - ARIA
-  - roles
-  - Reference
-  - ARIA roles
-  - log
-  - log role
-  - ARIA log
 spec-urls: https://w3c.github.io/aria/#log
 ---
 

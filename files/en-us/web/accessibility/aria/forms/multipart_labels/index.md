@@ -1,22 +1,6 @@
 ---
 title: "Multipart labels: Using ARIA for labels with embedded fields inside them"
 slug: Web/Accessibility/ARIA/forms/Multipart_labels
-tags:
-  - ARIA
-  - Accessibility
-  - Ben Millard
-  - Firefox
-  - Guide
-  - HELP
-  - HTML
-  - HTML 4
-  - JAWS
-  - NeedsContent
-  - aria-labelledby
-  - label
-  - solution
-  - trouble shoot
-  - troubleshoot
 ---
 
 <section id="Quick_links">
