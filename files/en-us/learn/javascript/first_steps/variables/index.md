@@ -207,7 +207,7 @@ myName = 'Bob';
 
 Again, this is a sensible language decision. There is no reason to redeclare variables — it just makes things more confusing.
 
-For these reasons and more, we recommend that you use `let` in your code, rather than `var`. There is no longer any reason to use `var`, as it has been supported since Internet Explorer 11.
+For these reasons and more, we recommend that you use `let` in your code, rather than `var`. Unless you are explicitly writing support for ancient browsers, there is no longer any reason to use `var` as all modern browsers have supported `let` since 2015.
 
 > **Note:** If you are trying this code in your browser's console, prefer to copy & paste each of the code blocks here as a whole. There's a [feature in Chrome's console](https://goo.gle/devtools-const-repl) where variable re-declarations with `let` and `const` are allowed:
 >

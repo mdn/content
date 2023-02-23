@@ -13132,12 +13132,10 @@
 /en-US/docs/XSLT_in_Gecko	/en-US/docs/Web/API/XSLTProcessor
 /en-US/docs/XSLT_in_Gecko/Basic_Example	/en-US/docs/Web/API/XSLTProcessor/Basic_Example
 /en-US/docs/XSLT_in_Gecko/Basic_Example-redirect-1	/en-US/docs/Web/API/XSLTProcessor/Basic_Example
-/en-US/docs/XSLT_in_Gecko/Browser_Differences	/en-US/docs/Web/API/XSLTProcessor/Browser_Differences
 /en-US/docs/XSLT_in_Gecko/Generating_HTML	/en-US/docs/Web/API/XSLTProcessor/Generating_HTML
 /en-US/docs/XSLT_in_Gecko/Introduction	/en-US/docs/Web/API/XSLTProcessor/Introduction
 /en-US/docs/XSLT_in_Gecko/Resources	/en-US/docs/Web/API/XSLTProcessor/Resources
 /en-US/docs/XSLT_in_Gecko:Basic_Example	/en-US/docs/Web/API/XSLTProcessor/Basic_Example
-/en-US/docs/XSLT_in_Gecko:Browser_Differences	/en-US/docs/Web/API/XSLTProcessor/Browser_Differences
 /en-US/docs/XSLT_in_Gecko:Generating_HTML	/en-US/docs/Web/API/XSLTProcessor/Generating_HTML
 /en-US/docs/XSLT_in_Gecko:Introduction	/en-US/docs/Web/API/XSLTProcessor/Introduction
 /en-US/docs/XSLT_in_Gecko:Resources	/en-US/docs/Web/API/XSLTProcessor/Resources

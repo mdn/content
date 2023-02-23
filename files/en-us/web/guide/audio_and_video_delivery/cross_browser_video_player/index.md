@@ -235,7 +235,7 @@ video.addEventListener("timeupdate", () => {
 });
 ```
 
-As the `timeupdate` event is raised, the `progress` element's `value` attribute is set to the video's `currentTime`. The {{ htmlelement("span") }} element mentioned earlier, for browsers that do not support the {{ htmlelement("progress") }} element (e.g. Internet Explorer 9), is also updated at this time, setting its width to be a percentage of the total time played. This span has a solid CSS background color, which helps it provide the same visual feedback as a {{ htmlelement("progress") }} element.
+As the `timeupdate` event is raised, the `progress` element's `value` attribute is set to the video's `currentTime`. The {{ htmlelement("span") }} element mentioned earlier, for browsers that do not support the {{ htmlelement("progress") }} element, is also updated at this time, setting its width to be a percentage of the total time played. This span has a solid CSS background color, which helps it provide the same visual feedback as a {{ htmlelement("progress") }} element.
 
 Coming back to the `video.duration` problem mentioned above, when the `timeupdate` event is raised, in most mobile browsers the video's `duration` attribute should now have the correct value. This can be taken advantage of to set the `progress` element's `max` attribute if it is currently not set:
 

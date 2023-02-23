@@ -79,8 +79,6 @@ body {
 
 … you are telling the browser that whatever happens, the font size must be 16 pixels. Modern browsers get around this rule by pretending that you're asking for "16 pixels when the user sets a zoom factor of 100%".
 
-Yet, for many years Internet Explorer adamantly displayed 16 pixels as 16 pixels. In this case, zooming did nothing, even as late as Internet Explorer 8, which we still have to cater to because it's still around.
-
 #### Relative units
 
 Also called _proportional units,_ relative units are computed relative to a parent element. Relative units are friendlier to accessibility because they respect the settings on the user's system.
@@ -167,7 +165,7 @@ span.subheading {
 }
 ```
 
-Easier, isn't it? This works as of [Internet Explorer 9 and in every other current browser](https://caniuse.com/#search=rem), so please feel free to use this unit.
+Easier, isn't it? This works as of [every current browser](https://caniuse.com/#search=rem), so please feel free to use this unit.
 
 > **Note:** You may notice Opera Mini does not support font sizing in rem. It will end up setting its own font size, so don't bother feeding it font units.
 

@@ -196,8 +196,6 @@ html {
 
 To understand the underlying idea, you can read [the CSS Tricks article on box-sizing](https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/).
 
-> **Note:** An interesting bit of history — Internet Explorer used to default to the alternative box model, with no mechanism available to switch.
-
 ## Playing with box models
 
 In the example below, you can see two boxes. Both have a class of `.box`, which gives them the same `width`, `height`, `margin`, `border`, and `padding`. The only difference is that the second box has been set to use the alternative box model.

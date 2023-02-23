@@ -71571,10 +71571,6 @@
     "modified": "2019-03-23T23:49:54.758Z",
     "contributors": ["teoli", "ethertank", "Mgjbot", "Sebuls", "JdeValk"]
   },
-  "Web/API/XSLTProcessor/Browser_Differences": {
-    "modified": "2019-03-23T23:49:55.117Z",
-    "contributors": ["SphinxKnight", "teoli", "Mgjbot", "Sebuls", "JdeValk"]
-  },
   "Web/API/XSLTProcessor/Generating_HTML": {
     "modified": "2019-03-23T23:49:48.545Z",
     "contributors": [

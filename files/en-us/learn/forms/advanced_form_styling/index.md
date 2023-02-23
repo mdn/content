@@ -251,8 +251,6 @@ We've also created a couple of other examples to give you more ideas:
 
 If you view these checkboxes in a browser that doesn't support {{cssxref("appearance")}}, your custom design will be lost, but they will still look like checkboxes and be usable.
 
-> **Note:** While Internet Explorer doesn't support any version of `appearance`, the `input[type=checkbox]::-ms-check` enables the targeting of checkboxes in IE only. This technique works for radio buttons too, despite the name `-ms-check`.
-
 ## What can be done about the "ugly" elements?
 
 Now let's turn our attention to the "ugly" controls — the ones that are really hard to thoroughly style. In short, these are drop-down boxes, complex control types like [`color`](/en-US/docs/Web/HTML/Element/input/color) and [`datetime-local`](/en-US/docs/Web/HTML/Element/input/datetime-local), and feedback—oriented controls like {{HTMLElement("progress")}} and {{HTMLElement("meter")}}.

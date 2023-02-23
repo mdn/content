@@ -51,7 +51,7 @@ You should also define your document's characterset like so:
 <meta charset="utf-8" />
 ```
 
-Use UTF-8 unless you have a very good reason not to; it will cover all character needs pretty much regardless of what language you are using in your document. In addition, you should always specify the characterset as early as possible within your HTML's {{HTMLElement("head")}} block (within the first kilobyte), as it protects against a rather [nasty Internet Explorer security vulnerability](https://docs.microsoft.com/troubleshoot/developer/browsers/development-website/wrong-character-set-for-html-page).
+Use UTF-8 unless you have a very good reason not to; it will cover all character needs pretty much regardless of what language you are using in your document.
 
 ### Viewport meta tag
 
