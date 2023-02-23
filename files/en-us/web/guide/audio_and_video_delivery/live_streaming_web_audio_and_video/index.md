@@ -92,7 +92,7 @@ DASH stands for Dynamic Adaptive Streaming over HTTP. It is supported via Media 
 
 HLS or HTTP Live Streaming is a protocol invented by Apple Inc and supported on iOS, Safari and the latest versions of Android browser / Chrome. HLS is also adaptive.
 
-HLS can also be decoded using JavaScript, which means we can support the latest versions of Firefox, Chrome and Internet Explorer 10+. See this [HTTP Live Streaming JavaScript player](https://github.com/dailymotion/hls.js).
+HLS can also be decoded using JavaScript, which means we can support the latest versions of Firefox, Chrome and Safari. See this [HTTP Live Streaming JavaScript player](https://github.com/dailymotion/hls.js).
 
 At the start of the streaming session, an [extended M3U (m3u8) playlist](https://en.wikipedia.org/wiki/M3U8#Extended_M3U_directives) is downloaded. This contains the metadata for the various sub-streams that are provided.
 

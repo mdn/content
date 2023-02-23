@@ -146,8 +146,6 @@ If you want to be able to print an external page without opening it, you can uti
 </html>
 ```
 
-> **Note:** Older versions of Internet Explorer cannot print the contents of a hidden {{HTMLElement("iframe")}}.
-
 ## See also
 
 - [`window.print`](/en-US/docs/Web/API/Window/print)
