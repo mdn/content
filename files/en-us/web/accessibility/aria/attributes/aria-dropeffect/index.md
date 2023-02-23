@@ -1,6 +1,8 @@
 ---
 title: aria-dropeffect
 slug: Web/Accessibility/ARIA/Attributes/aria-dropeffect
+status:
+  - deprecated
 spec-urls: https://w3c.github.io/aria/#aria-dropeffect
 ---
 
