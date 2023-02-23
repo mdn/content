@@ -64,7 +64,7 @@ To aid tabbing, you can supply a [skip link](/en-US/docs/Web/HTML/Element/a#skip
 
 ## Alt attribute for image
 
-Every image should have an [`alt`](/en-US/docs/Web/HTML/Element/img#attr-alt) attribute. If the image is purely decoration and adds no meaning to the content or context of the document, the `alt` attribute should be present, but empty. You can optionally also add [`role="presentation"`](/en-US/docs/Web/Accessibility/ARIA/Roles/presentation_role). All other images should include an `alt` attribute providing [alternative text describing the image](/en-US/docs/Web/API/HTMLImageElement/alt#usage_notes) in a way that is helpful to users who can read the rest of the content but can't see the image. Think about how you would describe the image to someone who can't load your image: that's the information you should include as the value of the `alt` attribute.
+Every image should have an [`alt`](/en-US/docs/Web/HTML/Element/img#alt) attribute. If the image is purely decoration and adds no meaning to the content or context of the document, the `alt` attribute should be present, but empty. You can optionally also add [`role="presentation"`](/en-US/docs/Web/Accessibility/ARIA/Roles/presentation_role). All other images should include an `alt` attribute providing [alternative text describing the image](/en-US/docs/Web/API/HTMLImageElement/alt#usage_notes) in a way that is helpful to users who can read the rest of the content but can't see the image. Think about how you would describe the image to someone who can't load your image: that's the information you should include as the value of the `alt` attribute.
 
 ```html
 <!-- decorative image -->
