@@ -7,7 +7,6 @@ tags:
   - Background Sound
   - Element
   - HTML
-  - Internet Explorer
   - Deprecated
   - Reference
   - Web

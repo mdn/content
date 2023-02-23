@@ -32,8 +32,8 @@ That is, check if `navigator.platform` starts with `"Mac"` or else is an exact m
 
 ## Usage notes
 
-Most browsers, including Chrome, Edge, and Firefox 63 and later, return `"Win32"` even if running on a 64-bit version of Windows.
-Internet Explorer and versions of Firefox prior to version 63 still report `"Win64"`.
+Most browsers, including Chrome, Edge, and Firefox 63 and later, return `"Win32"` even if running on a 64-bit version of Windows. Versions of Firefox prior to version 63 still
+report `"Win64"`.
 
 ## Specifications
 
