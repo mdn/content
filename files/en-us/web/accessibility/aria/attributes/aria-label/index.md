@@ -38,7 +38,7 @@ In cases where an interactive element has no accessible name, or an accessible n
 
 Most content has an accessible name generated from its immediate wrapping element's text content. Accessible names can also be created by certain attributes or associated elements.
 
-By default, a button's accessible name is the content between the opening and closing {{HTMLElement('button')}} tags, an image's accessible name is the content of its [`alt`](/en-US/docs/Web/HTML/Element/img#attr-alt) attribute, and a form input's accessible name is the content of the associated {{HTMLElement('label')}} element.
+By default, a button's accessible name is the content between the opening and closing {{HTMLElement('button')}} tags, an image's accessible name is the content of its [`alt`](/en-US/docs/Web/HTML/Element/img#alt) attribute, and a form input's accessible name is the content of the associated {{HTMLElement('label')}} element.
 
 If none of these options are available, or if the default accessible name is not appropriate, use the `aria-label` attribute to define the accessible name of an element.
 

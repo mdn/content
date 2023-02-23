@@ -67,12 +67,6 @@ It is important to consider the following scenarios:
   - Any variable declared with {{jsxref("Statements/var", "var")}} cannot be deleted from the global scope or from a function's scope, because while they may be attached to the [global object](/en-US/docs/Glossary/Global_object), they are not configurable.
   - Any variable declared with {{jsxref("Statements/let","let")}} or {{jsxref("Statements/const","const")}} cannot be deleted from the scope within which they were defined, because they are not attached to an object.
 
-### Cross-browser notes
-
-As of modern ECMAScript specification, the traversal order of object properties is well-defined and stable across implementations. However, in the case of Internet Explorer, when one uses `delete` on a property, some confusing behavior results, preventing other browsers from using simple objects like object literals as ordered associative arrays. In Explorer, while the property _value_ is indeed set to `undefined`, if one later adds back a property with the same name, the property will be iterated in its _old_ position — not at the end of the iteration sequence as one might expect after having deleted the property and then added it back.
-
-If you want to use an ordered associative array with support of old runtimes, use a {{jsxref("Map")}} object if available (through a polyfill, for example), or simulate this structure with two separate arrays (one for the keys and the other for the values), or build an array of single-property objects, etc.
-
 ## Examples
 
 ### Using delete

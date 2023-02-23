@@ -90,7 +90,7 @@ WebGL doesn't have a SwapBuffers call by default, so a flush can help fill the g
 
 ### Use `webgl.flush()` when not using requestAnimationFrame
 
-When not using RAF, (such as when using RPAF; see below) use `webgl.flush()` to encourage eager execution of enqueued commands.
+When not using RAF, use `webgl.flush()` to encourage eager execution of enqueued commands.
 
 Because RAF is directly followed by the frame boundary, an explicit `webgl.flush()` isn't really needed with RAF.
 

@@ -30,8 +30,8 @@ offer.
 createOffer()
 createOffer(options)
 
-createOffer(successCallback, failureCallback)
-createOffer(successCallback, failureCallback, options)
+createOffer(successCallback, failureCallback) // deprecated
+createOffer(successCallback, failureCallback, options) // deprecated
 ```
 
 ### Parameters
@@ -56,7 +56,7 @@ createOffer(successCallback, failureCallback, options)
 In older code and documentation, you may see a callback-based version of this function.
 This has been deprecated and its use is **strongly** discouraged. You
 should update any existing code to use the {{jsxref("Promise")}}-based version of
-`createOffer()` instead. The parameters for this form of
+`createOffer()` instead. The parameters for the older form of
 `createOffer()` are described below, to aid in updating existing code.
 
 - `successCallback` {{deprecated_inline}}

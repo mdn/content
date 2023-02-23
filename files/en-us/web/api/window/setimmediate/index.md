@@ -11,10 +11,8 @@ This method is used to break up long running operations and run a callback funct
 immediately after the browser has completed other operations such as events and display
 updates.
 
-> **Note:** This method is not expected to become standard, and is only implemented
-> by recent builds of Internet Explorer and Node.js 0.10+. It meets resistance both from
-> [Gecko](https://bugzilla.mozilla.org/show_bug.cgi?id=686201) (Firefox) and [Webkit](https://bugs.chromium.org/p/chromium/issues/detail?id=146172)
-> (Google/Apple).
+> **Note:** This method is not expected to become standard, and is nowadays only implemented
+> by Node.js 0.10+. It meets resistance both from [Gecko](https://bugzilla.mozilla.org/show_bug.cgi?id=686201) (Firefox) and [Chromium/WebKit](https://bugs.chromium.org/p/chromium/issues/detail?id=146172) (Chrome/Safari).
 
 ## Syntax
 

@@ -1,8 +1,6 @@
 ---
 title: Common XSLT Errors
 slug: Web/XSLT/Common_errors
-tags:
-  - XSLT
 ---
 
 ### MIME types

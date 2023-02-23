@@ -83,7 +83,7 @@ Elements in HTML have **attributes**; these are additional values that configure
     </tr>
     <tr>
       <td>
-        <code><a href="/en-US/docs/Web/HTML/Element/iframe#attr-allow">allow</a></code>
+        <code><a href="/en-US/docs/Web/HTML/Element/iframe#allow">allow</a></code>
       </td>
       <td>{{ HTMLElement("iframe") }}</td>
       <td>Specifies a feature-policy for the iframe.</td>
@@ -431,7 +431,7 @@ Elements in HTML have **attributes**; these are additional values that configure
     </tr>
     <tr>
       <td>
-        <code><a href="/en-US/docs/Web/HTML/Element/img#attr-decoding">decoding</a></code>
+        <code><a href="/en-US/docs/Web/HTML/Element/img#decoding">decoding</a></code>
       </td>
       <td>{{ HTMLElement("img") }}</td>
       <td>Indicates the preferred method to decode the image.</td>
@@ -758,7 +758,7 @@ Elements in HTML have **attributes**; these are additional values that configure
     </tr>
     <tr>
       <td>
-        <a href="/en-US/docs/Web/HTML/Element/img#attr-intrinsicsize"><code>intrinsicsize</code></a>
+        <a href="/en-US/docs/Web/HTML/Element/img#intrinsicsize"><code>intrinsicsize</code></a>
         {{deprecated_inline}}
       </td>
       <td>{{ HTMLElement("img") }}</td>
@@ -785,7 +785,7 @@ Elements in HTML have **attributes**; these are additional values that configure
     </tr>
     <tr>
       <td>
-        <code><a href="/en-US/docs/Web/HTML/Element/img#attr-ismap">ismap</a></code>
+        <code><a href="/en-US/docs/Web/HTML/Element/img#ismap">ismap</a></code>
       </td>
       <td>{{ HTMLElement("img") }}</td>
       <td>Indicates that the image is part of a server-side image map.</td>
@@ -1183,7 +1183,7 @@ Elements in HTML have **attributes**; these are additional values that configure
     </tr>
     <tr>
       <td>
-        <code><a href="/en-US/docs/Web/HTML/Element/iframe#attr-sandbox">sandbox</a></code>
+        <code><a href="/en-US/docs/Web/HTML/Element/iframe#sandbox">sandbox</a></code>
       </td>
       <td>{{ HTMLElement("iframe") }}</td>
       <td>
@@ -1293,7 +1293,7 @@ Elements in HTML have **attributes**; these are additional values that configure
     </tr>
     <tr>
       <td>
-        <code><a href="/en-US/docs/Web/HTML/Element/iframe#attr-srcdoc">srcdoc</a></code>
+        <code><a href="/en-US/docs/Web/HTML/Element/iframe#srcdoc">srcdoc</a></code>
       </td>
       <td>{{ HTMLElement("iframe") }}</td>
       <td></td>

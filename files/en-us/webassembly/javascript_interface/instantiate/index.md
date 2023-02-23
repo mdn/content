@@ -1,14 +1,6 @@
 ---
 title: WebAssembly.instantiate()
 slug: WebAssembly/JavaScript_interface/instantiate
-tags:
-  - API
-  - JavaScript
-  - Method
-  - Object
-  - Reference
-  - WebAssembly
-  - instantiate
 browser-compat: javascript.builtins.WebAssembly.instantiate
 ---
 
