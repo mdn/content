@@ -1,11 +1,6 @@
 ---
 title: Global attributes
 slug: Web/MathML/Global_attributes
-tags:
-  - Attribute
-  - MathML
-  - Reference
-  - Web
 browser-compat: mathml.global_attributes
 ---
 
