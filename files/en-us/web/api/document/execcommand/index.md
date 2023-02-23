@@ -3,10 +3,8 @@ title: Document.execCommand()
 slug: Web/API/Document/execCommand
 page-type: web-api-instance-method
 status:
-
-- deprecated
-  browser-compat: api.Document.execCommand
-
+  - deprecated
+browser-compat: api.Document.execCommand
 ---
 
 {{ApiRef("DOM")}}{{deprecated_header}}
