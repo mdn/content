@@ -30418,43 +30418,6 @@
       "Ruby"
     ]
   },
-  "Web/API/Document_object_model/Using_the_Document_Object_Model": {
-    "modified": "2020-12-09T01:05:18.504Z",
-    "contributors": [
-      "skkiennhtg2327",
-      "mfuji09",
-      "klu22",
-      "wbamberg",
-      "chrisdavidmills",
-      "AndreDea",
-      "teoli",
-      "jswisher",
-      "hectorsan68",
-      "jvns",
-      "ethertank",
-      "Vaibs",
-      "fferracioli",
-      "x746e",
-      "Sheppy",
-      "Nickolay",
-      "Mgjbot",
-      "BenoitL",
-      "NickolayBot",
-      "Andreas Wuest",
-      "Gor1"
-    ]
-  },
-  "Web/API/Document_object_model/Using_the_Document_Object_Model/Example": {
-    "modified": "2019-03-23T23:40:45.010Z",
-    "contributors": [
-      "mk7087",
-      "teoli",
-      "NickolayBot",
-      "Andreas Wuest",
-      "Nickolay",
-      "Gor1"
-    ]
-  },
   "Web/API/Document_Object_Model/Whitespace": {
     "modified": "2020-03-27T15:25:12.263Z",
     "contributors": [
@@ -30516,6 +30479,43 @@
       "Philip Chee",
       "mcsi",
       "asadotzler"
+    ]
+  },
+  "Web/API/Document_object_model/Using_the_Document_Object_Model": {
+    "modified": "2020-12-09T01:05:18.504Z",
+    "contributors": [
+      "skkiennhtg2327",
+      "mfuji09",
+      "klu22",
+      "wbamberg",
+      "chrisdavidmills",
+      "AndreDea",
+      "teoli",
+      "jswisher",
+      "hectorsan68",
+      "jvns",
+      "ethertank",
+      "Vaibs",
+      "fferracioli",
+      "x746e",
+      "Sheppy",
+      "Nickolay",
+      "Mgjbot",
+      "BenoitL",
+      "NickolayBot",
+      "Andreas Wuest",
+      "Gor1"
+    ]
+  },
+  "Web/API/Document_object_model/Using_the_Document_Object_Model/Example": {
+    "modified": "2019-03-23T23:40:45.010Z",
+    "contributors": [
+      "mk7087",
+      "teoli",
+      "NickolayBot",
+      "Andreas Wuest",
+      "Nickolay",
+      "Gor1"
     ]
   },
   "Web/API/DragEvent": {
