@@ -1,8 +1,6 @@
 ---
 title: Web-related technologies
 slug: Related
-tags:
-  - Related
 ---
 
 This section of the site is a home for documentation on web-related technologies that aren't central to the MDN's remit (i.e. they aren't web standards technologies), but are nonetheless related to the web and of interest to web developers.

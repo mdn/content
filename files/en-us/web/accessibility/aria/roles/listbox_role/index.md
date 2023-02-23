@@ -1,14 +1,6 @@
 ---
 title: "ARIA: listbox role"
 slug: Web/Accessibility/ARIA/Roles/listbox_role
-tags:
-  - ARIA
-  - ARIA role
-  - Accessibility
-  - Reference
-  - listbox role
-  - composite widget role
-  - NeedsContent
 spec-urls:
   - https://w3c.github.io/aria/#listbox
   - https://w3c.github.io/aria-practices/#Listbox

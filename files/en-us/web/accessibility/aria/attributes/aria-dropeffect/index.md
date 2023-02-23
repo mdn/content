@@ -1,13 +1,7 @@
 ---
-title: "aria-dropeffect"
+title: aria-dropeffect
 slug: Web/Accessibility/ARIA/Attributes/aria-dropeffect
-tags:
-  - Accessibility
-  - ARIA
-  - ARIA attribute
-  - ARIA property
-  - aria-dropeffect
-  - drag and drop
+status:
   - deprecated
 spec-urls: https://w3c.github.io/aria/#aria-dropeffect
 ---
