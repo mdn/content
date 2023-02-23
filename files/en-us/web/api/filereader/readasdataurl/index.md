@@ -105,10 +105,6 @@ function previewFiles() {
 }
 ```
 
-> **Note:** The [`FileReader()`](/en-US/docs/Web/API/FileReader) constructor was
-> not supported by Internet Explorer for versions before 10. For a full compatibility code
-> you can see our [crossbrowser possible solution for image preview](https://media.prod.mdn.mozit.cloud/attachments/2012/07/09/3699/2c8cb1e94f0ee05b22c1c30a3790c70d/crossbrowser_image_preview.html). See also [this more powerful example](https://media.prod.mdn.mozit.cloud/attachments/2012/07/09/3698/391aef19653595a663cc601c42a67116/image_upload_preview.html).
-
 ## Specifications
 
 {{Specifications}}
