@@ -60,7 +60,7 @@ console.log(str.startsWith("not to be", 10)); // true
 
 ## See also
 
-- [Polyfill of `String.prototype.startsWith` in `core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
+- [Polyfill of `String.prototype.startsWith` in **The Vanilla JS Toolkit**](https://vanillajstoolkit.com/polyfills/stringstartswith/)
 - {{jsxref("String.prototype.endsWith()")}}
 - {{jsxref("String.prototype.includes()")}}
 - {{jsxref("String.prototype.indexOf()")}}
