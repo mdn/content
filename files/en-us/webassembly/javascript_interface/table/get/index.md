@@ -1,14 +1,6 @@
 ---
 title: WebAssembly.Table.prototype.get()
 slug: WebAssembly/JavaScript_interface/Table/get
-tags:
-  - API
-  - JavaScript
-  - Method
-  - Reference
-  - WebAssembly
-  - get
-  - table
 browser-compat: javascript.builtins.WebAssembly.Table.get
 ---
 

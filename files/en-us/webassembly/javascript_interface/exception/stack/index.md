@@ -1,15 +1,6 @@
 ---
 title: WebAssembly.Exception.prototype.stack
 slug: WebAssembly/JavaScript_interface/Exception/stack
-tags:
-  - API
-  - JavaScript
-  - Property
-  - Reference
-  - WebAssembly
-  - stack
-  - Exception
-  - Non-standard
 browser-compat: javascript.builtins.WebAssembly.Exception.stack
 ---
 

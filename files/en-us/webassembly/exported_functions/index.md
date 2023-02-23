@@ -1,14 +1,6 @@
 ---
 title: Exported WebAssembly functions
 slug: WebAssembly/Exported_functions
-tags:
-  - Guide
-  - JavaScript
-  - WebAssembly
-  - export
-  - exported functions
-  - exported wasm functions
-  - wasm
 ---
 
 {{WebAssemblySidebar}}

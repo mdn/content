@@ -1,10 +1,6 @@
 ---
 title: WebAssembly
 slug: WebAssembly
-tags:
-  - Landing
-  - WebAssembly
-  - wasm
 browser-compat: javascript.builtins.WebAssembly
 ---
 
