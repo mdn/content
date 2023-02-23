@@ -33,7 +33,7 @@ A string.
 
 ```js
 const url = new URL("blob:https://mozilla.org:443/")
-console.log(url.origin); // Logs 'https://mozilla.org'
+console.log(url.origin); // Logs 'https://mozilla.org:443'
 ```
 
 ## Specifications
