@@ -1,11 +1,6 @@
 ---
 title: WebAssembly.Global
 slug: WebAssembly/JavaScript_interface/Global
-tags:
-  - Class
-  - JavaScript
-  - Reference
-  - WebAssembly
 browser-compat: javascript.builtins.WebAssembly.Global
 ---
 
