@@ -1,6 +1,8 @@
 ---
 title: aria-grabbed
 slug: Web/Accessibility/ARIA/Attributes/aria-grabbed
+status:
+  - deprecated
 spec-urls: https://w3c.github.io/aria/#aria-grabbed
 ---
 
