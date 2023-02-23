@@ -26,11 +26,9 @@ The devtools live inside your browser in a subwindow that looks roughly like thi
 
 How do you pull it up? Three ways:
 
-- **_Keyboard:_** _<kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>I</kbd>_, except
+- **_Keyboard:_**
 
-  - **Internet Explorer and Edge:**
-
-    <kbd>F12</kbd>
+  - **Windows:** _<kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>I</kbd>_ or <kbd>F12</kbd>
 
   - **macOS:** _<kbd>⌘</kbd> + <kbd>⌥</kbd> + <kbd>I</kbd>_
 
@@ -54,16 +52,6 @@ The developer tools usually open by default to the inspector, which looks someth
 If you _don't_ see the inspector,
 
 - Tap/click the _Inspector_ tab.
-- In Internet Explorer, tap/click _DOM Explorer,_ or press
-
-  <kbd>Ctrl</kbd>
-
-  \+
-
-  <kbd>1</kbd>
-
-  .
-
 - In Microsoft Edge, or Opera, tap/click Elements.
 - In Safari, the controls are not so clearly presented, but you should see the HTML if you haven't selected something else to appear in the window. Press the _Style_ button to see the CSS.
 
@@ -125,8 +113,6 @@ To get to the debugger:
 **Firefox**: Select ![Firefox menu icon that has more options to customize and control Firefox.](2014-01-10-13-08-08-f52b8c.png) ➤ _Web Developer_ ➤ _Debugger_ or press <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>S</kbd> to open the JavaScript Debugger. If the tools are already displayed, click on the **Debugger** tab.
 
 **Chrome**: Open the Developer tools and then select the **Sources** tab. (Opera works the same way.)
-
-**Edge and Internet Explorer 11**: Press <kbd>F12</kbd> and then, <kbd>Ctrl</kbd> + <kbd>3</kbd>, or if the tools are already displayed, click on the Debugger tab.
 
 **Safari**: Open the Developer Tools and then select the Debugger tab.
 

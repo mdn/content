@@ -34,7 +34,7 @@ elem.dispatchEvent(event);
 
 The above code example uses the [EventTarget.dispatchEvent()](/en-US/docs/Web/API/EventTarget/dispatchEvent) method.
 
-This constructor is supported in most modern browsers (with Internet Explorer being the exception). For a more verbose approach (which works with Internet Explorer), see [the old-fashioned way](#the_old-fashioned_way) below.
+This constructor is supported in most modern browsers. For a more verbose approach, see [the old-fashioned way](#the_old-fashioned_way) below.
 
 ### Adding custom data – CustomEvent()
 

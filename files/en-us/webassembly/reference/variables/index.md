@@ -1,12 +1,6 @@
 ---
 title: WebAssembly variable instructions
 slug: WebAssembly/Reference/Variables
-tags:
-  - WebAssembly
-  - wasm
-  - Landing page
-  - Reference
-  - Variable
 ---
 
 {{WebAssemblySidebar}}

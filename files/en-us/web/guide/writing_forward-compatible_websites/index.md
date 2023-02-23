@@ -58,7 +58,7 @@ Suggest to the developers of your favorite libraries that they follow these guid
 
 ### Sniff for specific features
 
-If you plan to use some feature, use object-detection to sniff for that exact feature, if possible. As a simple example, don't assume that any browser in which `"filter" in body.style` tests true must be Microsoft Internet Explorer and therefore e.g. will have a `window.event` object available in event handlers. Don't assume that browsers with support for a given DOM feature must also have some other, especially nonstandard, DOM feature. Or, conversely, that they _don't_ have support for some other feature (e.g., don't assume that a browser that supports `onload` on script elements will never support `onreadystatechange` on them). As browsers converge behavior, they both add features and remove them. They also fix bugs. All three of these have happened in the past and will happen again.
+If you plan to use some feature, use object-detection to sniff for that exact feature, if possible. As a simple example, don't assume that any browser in which `"filter" in body.style` tests true must be Opera and therefore e.g. will have a `window.event` object available in event handlers. Don't assume that browsers with support for a given DOM feature must also have some other, especially nonstandard, DOM feature. Or, conversely, that they _don't_ have support for some other feature (e.g., don't assume that a browser that supports `onload` on script elements will never support `onreadystatechange` on them). As browsers converge behavior, they both add features and remove them. They also fix bugs. All three of these have happened in the past and will happen again.
 
 So don't sniff for one feature or object and then assume that, because it exists or doesn't exist, some other feature or object must also exist or not exist.
 
@@ -80,7 +80,7 @@ Don't go out of your way to run different code based on either object detection 
 
 ### Test with all major engines
 
-Test your code at least in Firefox, Chrome, Safari, Opera, and Internet Explorer. If you are following the advice given above so that you have a single code path for all current and unknown browsers, testing that this single code path works in all the major engines makes it extremely probable that your code won't break in the future.
+Test your code at least in Firefox, Chrome and Safari. If you are following the advice given above so that you have a single code path for all current and unknown browsers, testing that this single code path works in all the major engines makes it extremely probable that your code won't break in the future.
 
 Sometimes browsers implement a given feature slightly differently. If you have a single code path that works in all the top engines, it means that you are either using features where browser behavior has already converged or, if the behavior hasn't quite converged yet, your code works regardless of which engine's behavior standards turn out to uphold.
 

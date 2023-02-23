@@ -44,9 +44,6 @@ For each property there are two possible renderings:
 * {
   /* Turn off the native look and feel */
   appearance: none;
-
-  /* for Internet Explorer */
-  background: none;
 }
 ```
 

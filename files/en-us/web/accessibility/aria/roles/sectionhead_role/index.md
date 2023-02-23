@@ -1,14 +1,6 @@
 ---
 title: "ARIA: sectionhead role"
 slug: Web/Accessibility/ARIA/Roles/sectionhead_role
-tags:
-  - Accessibility
-  - ARIA
-  - roles
-  - Reference
-  - ARIA roles
-  - sectionhead
-  - sectionhead role
 spec-urls: https://w3c.github.io/aria/#sectionhead
 ---
 

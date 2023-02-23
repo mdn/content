@@ -1,7 +1,6 @@
 ---
 title: Adding captions and subtitles to HTML video
-slug: >-
-  Web/Guide/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video
+slug: Web/Guide/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video
 tags:
   - HTML
   - Media
@@ -312,15 +311,9 @@ Then this specific 'voice' will be stylable like so:
 
 [Browser support for WebVTT and the `<track>` element](https://caniuse.com/webvtt) is fairly good, although some browsers differ slightly in their implementation.
 
-### Internet Explorer
-
-Internet Explorer 10+ subtitles are enabled by default, and the default controls contain a button and a menu that offers the same functionality as the menu we just built. The `default` attribute is also supported.
-
-> **Note:** IE will completely ignore WebVTT files unless you define the MIME type. This can easily be done by adding an `.htaccess` file to an appropriate directory that contains `AddType text/vtt .vtt`.
-
 ### Safari
 
-Safari 6.1+ has similar support to Internet Explorer 10+, displaying a menu with the different available options, with the addition of an "Auto" option, which allows the browser to choose.
+In Safari 6.1+, subtitles are enabled by default, and the default controls contain a button and a menu that offers the same functionality as the menu we just built, along with an "Auto" option which allows the browser to choose. The `default` attribute is also supported.
 
 ### Chrome and Opera
 

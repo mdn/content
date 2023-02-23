@@ -1,13 +1,6 @@
 ---
-title: "aria-labelledby"
+title: aria-labelledby
 slug: Web/Accessibility/ARIA/Attributes/aria-labelledby
-tags:
-  - Accessibility
-  - ARIA
-  - ARIA attribute
-  - ARIA property
-  - aria-labelledby
-  - Reference
 spec-urls: https://w3c.github.io/aria/#aria-labelledby
 ---
 
