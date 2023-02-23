@@ -1,15 +1,6 @@
 ---
 title: The box model
 slug: Learn/CSS/Building_blocks/The_box_model
-tags:
-  - Beginner
-  - CSS
-  - Learn
-  - border
-  - box model
-  - display
-  - margin
-  - padding
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Cascade_layers", "Learn/CSS/Building_blocks/Backgrounds_and_borders", "Learn/CSS/Building_blocks")}}

@@ -1,14 +1,6 @@
 ---
 title: Tips for authoring fast-loading HTML pages
 slug: Learn/HTML/Howto/Author_fast-loading_HTML_pages
-tags:
-  - Advanced
-  - Guide
-  - HTML
-  - NeedsUpdate
-  - Performance
-  - Web
-  - Web Performance
 ---
 
 {{QuickLinksWithSubpages("/en-US/docs/Learn/HTML/Howto")}}

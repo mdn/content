@@ -1,19 +1,6 @@
 ---
 title: CSS values and units
 slug: Learn/CSS/Building_blocks/Values_and_units
-tags:
-  - Beginner
-  - CSS
-  - Function
-  - Image
-  - Learn
-  - Number
-  - Position
-  - color
-  - length
-  - percentage
-  - units
-  - values
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Overflowing_content", "Learn/CSS/Building_blocks/Sizing_items_in_CSS", "Learn/CSS/Building_blocks")}}

@@ -1,15 +1,6 @@
 ---
 title: How do you upload your files to a web server?
 slug: Learn/Common_questions/Tools_and_setup/Upload_files_to_a_web_server
-tags:
-  - Beginner
-  - FTP
-  - GitHub
-  - Uploading
-  - WebMechanics
-  - hosting
-  - rsync
-  - SFTP
 ---
 
 {{QuicklinksWithSubPages("Learn/Common_questions")}}
