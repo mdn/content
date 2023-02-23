@@ -1,12 +1,6 @@
 ---
 title: WebAssembly.Table
 slug: WebAssembly/JavaScript_interface/Table
-tags:
-  - Class
-  - JavaScript
-  - Reference
-  - WebAssembly
-  - table
 browser-compat: javascript.builtins.WebAssembly.Table
 ---
 

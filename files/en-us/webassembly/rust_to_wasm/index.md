@@ -1,11 +1,6 @@
 ---
 title: Compiling from Rust to WebAssembly
 slug: WebAssembly/Rust_to_wasm
-tags:
-  - Compiling
-  - WebAssembly
-  - rust
-  - wasm
 ---
 
 {{WebAssemblySidebar}}
