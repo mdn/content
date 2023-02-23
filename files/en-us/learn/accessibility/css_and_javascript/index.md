@@ -1,18 +1,6 @@
 ---
 title: CSS and JavaScript accessibility best practices
 slug: Learn/Accessibility/CSS_and_JavaScript
-tags:
-  - Accessibility
-  - Article
-  - CSS
-  - CodingScripting
-  - Guide
-  - JavaScript
-  - Learn
-  - color
-  - contrast
-  - hiding
-  - unobtrusive
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Accessibility/HTML","Learn/Accessibility/WAI-ARIA_basics", "Learn/Accessibility")}}

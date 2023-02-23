@@ -1,16 +1,6 @@
 ---
 title: UI pseudo-classes
 slug: Learn/Forms/UI_pseudo-classes
-tags:
-  - Beginner
-  - CSS
-  - Example
-  - Forms
-  - Guide
-  - HTML
-  - Pseudo-classes
-  - Styling
-  - Web
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Forms/Advanced_form_styling", "Learn/Forms/Form_validation", "Learn/Forms")}}

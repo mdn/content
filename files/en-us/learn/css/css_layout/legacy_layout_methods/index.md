@@ -1,15 +1,6 @@
 ---
 title: Legacy layout methods
 slug: Learn/CSS/CSS_layout/Legacy_Layout_Methods
-tags:
-  - Beginner
-  - CSS
-  - Floats
-  - Guide
-  - Layout
-  - Learn
-  - grid system
-  - legacy
 ---
 
 {{LearnSidebar}}

@@ -1,19 +1,6 @@
 ---
 title: Making decisions in your code — conditionals
 slug: Learn/JavaScript/Building_blocks/conditionals
-tags:
-  - Article
-  - Beginner
-  - CodingScripting
-  - Conditionals
-  - JavaScript
-  - Learn
-  - Switch
-  - conditions
-  - else
-  - if
-  - "l10n:priority"
-  - ternary
 ---
 
 {{LearnSidebar}}{{NextMenu("Learn/JavaScript/Building_blocks/Looping_code", "Learn/JavaScript/Building_blocks")}}

@@ -1,13 +1,6 @@
 ---
 title: CSS FAQ
 slug: Learn/CSS/Howto/CSS_FAQ
-tags:
-  - CSS
-  - Example
-  - FAQ
-  - Guide
-  - Web
-  - questions
 ---
 
 {{LearnSidebar}}

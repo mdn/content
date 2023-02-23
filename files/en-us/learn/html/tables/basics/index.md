@@ -1,21 +1,6 @@
 ---
 title: HTML table basics
 slug: Learn/HTML/Tables/Basics
-tags:
-  - Article
-  - Beginner
-  - CodingScripting
-  - HTML
-  - Learn
-  - Tables
-  - basics
-  - cell
-  - col
-  - colgroup
-  - colspan
-  - header
-  - row
-  - rowspan
 ---
 
 {{LearnSidebar}}{{NextMenu("Learn/HTML/Tables/Advanced", "Learn/HTML/Tables")}}

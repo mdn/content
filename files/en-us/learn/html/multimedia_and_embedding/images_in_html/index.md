@@ -1,20 +1,6 @@
 ---
 title: Images in HTML
 slug: Learn/HTML/Multimedia_and_embedding/Images_in_HTML
-tags:
-  - Article
-  - Beginner
-  - Guide
-  - HTML
-  - Image
-  - JPEG
-  - PNG
-  - alt text
-  - captions
-  - figcaption
-  - figure
-  - img
-  - scr
 ---
 
 {{LearnSidebar}}{{NextMenu("Learn/HTML/Multimedia_and_embedding/Video_and_audio_content", "Learn/HTML/Multimedia_and_embedding")}}
