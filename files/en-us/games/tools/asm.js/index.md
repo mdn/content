@@ -1,6 +1,8 @@
 ---
 title: asm.js
 slug: Games/Tools/asm.js
+status:
+  - deprecated
 ---
 
 {{GamesSidebar}}
