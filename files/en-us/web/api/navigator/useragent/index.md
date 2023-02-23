@@ -29,8 +29,6 @@ string is user configurable. For example:
   the HTTP header that gets sent and that is returned by `navigator.userAgent`.
   There might be other methods that utilize JavaScript code to identify the browser.
 - Opera 6+ allows users to set the browser identification string via a menu.
-- Safari and iCab allow users to change the browser user agent string to predefined
-  Internet Explorer or Netscape strings via a menu.
 
 ## Value
 
