@@ -164,7 +164,7 @@ verseChoose.value = 'Verse 1';
 
 Modern browsers will not run HTTP requests if you just run the example from a local file. This is because of security restrictions (for more on web security, read [Website security](/en-US/docs/Learn/Server-side/First_steps/Website_security)).
 
-To get around this, we need to test the example by running it through a local web server. To find out how to do this, read [our guide to setting up a local testing server](/en-US/docs/Learn/Common_questions/set_up_a_local_testing_server).
+To get around this, we need to test the example by running it through a local web server. To find out how to do this, read [our guide to setting up a local testing server](/en-US/docs/Learn/Common_questions/Tools_and_setup/set_up_a_local_testing_server).
 
 ### The can store
 
