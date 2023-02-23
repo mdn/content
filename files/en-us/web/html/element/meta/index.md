@@ -24,18 +24,18 @@ The **`<meta>`** [HTML](/en-US/docs/Web/HTML) element represents {{Glossary("Met
   <tbody>
     <tr>
       <th>
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories"
+        <a href="/en-US/docs/Web/HTML/Content_categories"
           >Content categories</a
         >
       </th>
       <td>
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#metadata_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#metadata_content"
           >Metadata content</a
         >. If the <a href="/en-US/docs/Web/HTML/Global_attributes/itemprop"><code>itemprop</code></a> attribute is present:
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
           >flow content</a
         >,
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content"
           >phrasing content</a
         >.
       </td>
@@ -67,18 +67,18 @@ The **`<meta>`** [HTML](/en-US/docs/Web/HTML) element represents {{Glossary("Met
           <li>
             <code>&#x3C;meta name></code>: any element that accepts
             <a
-              href="/en-US/docs/Web/Guide/HTML/Content_categories#metadata_content"
+              href="/en-US/docs/Web/HTML/Content_categories#metadata_content"
               >metadata content</a
             >.
           </li>
           <li>
             <code>&#x3C;meta itemprop></code>: any element that accepts
             <a
-              href="/en-US/docs/Web/Guide/HTML/Content_categories#metadata_content"
+              href="/en-US/docs/Web/HTML/Content_categories#metadata_content"
               >metadata content</a
             >
             or
-            <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+            <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
               >flow content</a
             >.
           </li>

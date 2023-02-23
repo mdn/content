@@ -11908,7 +11908,7 @@
 /en-US/docs/Web/Guide/HTML/Canvas_tutorial/Using_images	/en-US/docs/Web/API/Canvas_API/Tutorial/Using_images
 /en-US/docs/Web/Guide/HTML/Constraint_validation	/en-US/docs/Web/HTML/Constraint_validation
 /en-US/docs/Web/Guide/HTML/Content_Editable	/en-US/docs/Web/HTML/Global_attributes/contenteditable
-/en-US/docs/Web/Guide/HTML/Content_categories	/en-US/docs/Web/HTML/Content_categories
+/en-US/docs/Web/HTML/Content_categories	/en-US/docs/Web/HTML/Content_categories
 /en-US/docs/Web/Guide/HTML/Drag_and_drop	/en-US/docs/Web/API/HTML_Drag_and_Drop_API
 /en-US/docs/Web/Guide/HTML/Drag_operations	/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations
 /en-US/docs/Web/Guide/HTML/Editable_content	/en-US/docs/Web/HTML/Global_attributes/contenteditable

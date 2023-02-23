@@ -111,11 +111,11 @@ This example adds some semantics to the `<summary>` element to indicate the labe
     <tr>
       <th scope="row">Permitted content</th>
       <td>
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content"
           >Phrasing content</a
         >
         or one element of
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#heading_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#heading_content"
           >Heading content</a
         >
       </td>

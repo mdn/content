@@ -70,23 +70,23 @@ Note that a `type` field is normally specified, but is not needed for Youtube vi
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories">Content categories</a>
+        <a href="/en-US/docs/Web/HTML/Content_categories">Content categories</a>
       </th>
       <td>
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content">Flow content</a>;
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content">phrasing content</a>;
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#embedded_content">embedded content</a>, palpable content; if the element has a
-        {{htmlattrxref("usemap","object")}} attribute, <a href="/en-US/docs/Web/Guide/HTML/Content_categories#interactive_content">interactive content</a>;
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#form_listed">listed</a>,
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#form_submittable">submittable</a>
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#form-associated_content">form-associated</a> element.
+        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content">Flow content</a>;
+        <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content">phrasing content</a>;
+        <a href="/en-US/docs/Web/HTML/Content_categories#embedded_content">embedded content</a>, palpable content; if the element has a
+        {{htmlattrxref("usemap","object")}} attribute, <a href="/en-US/docs/Web/HTML/Content_categories#interactive_content">interactive content</a>;
+        <a href="/en-US/docs/Web/HTML/Content_categories#form_listed">listed</a>,
+        <a href="/en-US/docs/Web/HTML/Content_categories#form_submittable">submittable</a>
+        <a href="/en-US/docs/Web/HTML/Content_categories#form-associated_content">form-associated</a> element.
       </td>
     </tr>
     <tr>
       <th scope="row">Permitted content</th>
       <td>
         zero or more {{HTMLElement("param")}} elements, then
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#transparent_content_model">transparent</a>.
+        <a href="/en-US/docs/Web/HTML/Content_categories#transparent_content_model">transparent</a>.
       </td>
     </tr>
     <tr>
@@ -96,7 +96,7 @@ Note that a `type` field is normally specified, but is not needed for Youtube vi
     <tr>
       <th scope="row">Permitted parents</th>
       <td>
-        Any element that accepts <a href="/en-US/docs/Web/Guide/HTML/Content_categories#embedded_content">embedded content</a>.
+        Any element that accepts <a href="/en-US/docs/Web/HTML/Content_categories#embedded_content">embedded content</a>.
       </td>
     </tr>
     <tr>
