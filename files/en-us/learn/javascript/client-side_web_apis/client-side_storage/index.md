@@ -1,16 +1,6 @@
 ---
 title: Client-side storage
 slug: Learn/JavaScript/Client-side_web_APIs/Client-side_storage
-tags:
-  - API
-  - Article
-  - Beginner
-  - CodingScripting
-  - Guide
-  - IndexedDB
-  - JavaScript
-  - Learn
-  - Storage
 ---
 
 {{LearnSidebar}}

@@ -1,22 +1,6 @@
 ---
 title: Fetching data from the server
 slug: Learn/JavaScript/Client-side_web_APIs/Fetching_data
-tags:
-  - API
-  - Article
-  - Beginner
-  - CodingScripting
-  - Fetch
-  - JSON
-  - JavaScript
-  - Learn
-  - Promises
-  - Server
-  - XHR
-  - XML
-  - XMLHttpRequest
-  - data
-  - request
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Client-side_web_APIs/Manipulating_documents", "Learn/JavaScript/Client-side_web_APIs/Third_party_APIs", "Learn/JavaScript/Client-side_web_APIs")}}
