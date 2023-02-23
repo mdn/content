@@ -35,7 +35,7 @@ const url = new URL("blob:https://mozilla.org:443/")
 console.log(url.origin); // Logs 'https://mozilla.org'
 
 const url = new URL("http://localhost:80/")
-console.log(url.origin); // Logs 'http:/localhost'
+console.log(url.origin); // Logs 'http://localhost'
 
 const url = new URL("https://mozilla.org:8080/")
 console.log(url.origin); // Logs 'https://mozilla.org:8080'
