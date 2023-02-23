@@ -1,16 +1,6 @@
 ---
 title: Introduction to using XPath in JavaScript
 slug: Web/XPath/Introduction_to_using_XPath_in_JavaScript
-tags:
-  - Add-ons
-  - DOM
-  - Extensions
-  - JavaScript
-  - Transforming_XML_with_XSLT
-  - Web Development
-  - XML
-  - XPath
-  - XSLT
 ---
 
 <section id="Quick_links">

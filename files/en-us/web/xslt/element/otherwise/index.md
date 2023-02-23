@@ -1,11 +1,6 @@
 ---
 title: <xsl:otherwise>
 slug: Web/XSLT/Element/otherwise
-tags:
-  - Element
-  - Reference
-  - XSLT
-  - otherwise
 ---
 
 {{ XsltRef() }}
