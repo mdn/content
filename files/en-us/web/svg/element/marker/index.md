@@ -131,7 +131,7 @@ svg {
 
 ### Using context fill and stroke
 
-The following example shows how to use the `context-fill` and `context-stroke` keywords to make a marker use the same fill and stroke as the shape it is attached to.
+The following example shows how to use the `context-fill` and `context-stroke` values to make a marker use the same fill and stroke as the shape it is attached to.
 
 ```html
 <svg viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
