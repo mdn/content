@@ -2,17 +2,6 @@
 title: <input type="range">
 slug: Web/HTML/Element/input/range
 page-type: html-element
-tags:
-  - Element
-  - Forms
-  - HTML
-  - HTML forms
-  - HTML input tag
-  - Input
-  - Range
-  - Reference
-  - Web
-  - slider
 browser-compat: html.elements.input.type_range
 ---
 

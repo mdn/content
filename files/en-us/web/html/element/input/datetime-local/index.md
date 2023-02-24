@@ -2,19 +2,6 @@
 title: <input type="datetime-local">
 slug: Web/HTML/Element/input/datetime-local
 page-type: html-element
-tags:
-  - Date
-  - Date and Time
-  - Element
-  - Form input
-  - HTML
-  - HTML forms
-  - Input
-  - Input Element
-  - Input Type
-  - Reference
-  - Time
-  - datetime-local
 browser-compat: html.elements.input.type_datetime-local
 ---
 

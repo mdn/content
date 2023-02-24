@@ -2,14 +2,6 @@
 title: '<textarea>: The Textarea element'
 slug: Web/HTML/Element/textarea
 page-type: html-element
-tags:
-  - Element
-  - Forms
-  - HTML
-  - HTML forms
-  - Reference
-  - Web
-  - textarea
 browser-compat: html.elements.textarea
 ---
 

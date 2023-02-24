@@ -2,18 +2,6 @@
 title: <input type="tel">
 slug: Web/HTML/Element/input/tel
 page-type: html-element
-tags:
-  - Element
-  - Form Inputs
-  - Forms
-  - HTML
-  - HTML forms
-  - HTML input
-  - Input
-  - Input Element
-  - Input Type
-  - Phone Numbers
-  - Reference
 browser-compat: html.elements.input.type_tel
 ---
 

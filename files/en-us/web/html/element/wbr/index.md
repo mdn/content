@@ -2,12 +2,6 @@
 title: '<wbr>: The Line Break Opportunity element'
 slug: Web/HTML/Element/wbr
 page-type: html-element
-tags:
-  - Element
-  - HTML
-  - HTML text-level semantics
-  - Reference
-  - Web
 browser-compat: html.elements.wbr
 ---
 

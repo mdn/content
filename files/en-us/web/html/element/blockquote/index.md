@@ -2,17 +2,6 @@
 title: '<blockquote>: The Block Quotation element'
 slug: Web/HTML/Element/blockquote
 page-type: html-element
-tags:
-  - Blockquote
-  - Element
-  - HTML
-  - HTML grouping content
-  - HTML:Flow content
-  - HTML:Palpable Content
-  - HTML:Sectioning root
-  - Quotations
-  - Reference
-  - Web
 browser-compat: html.elements.blockquote
 ---
 

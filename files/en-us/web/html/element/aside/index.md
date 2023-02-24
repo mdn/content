@@ -2,15 +2,6 @@
 title: '<aside>: The Aside element'
 slug: Web/HTML/Element/aside
 page-type: html-element
-tags:
-  - Element
-  - HTML
-  - HTML sections
-  - HTML:Flow content
-  - HTML:Palpable Content
-  - HTML:Sectioning content
-  - Reference
-  - Web
 browser-compat: html.elements.aside
 ---
 

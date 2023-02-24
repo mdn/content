@@ -2,13 +2,6 @@
 title: '<body>: The Document Body element'
 slug: Web/HTML/Element/body
 page-type: html-element
-tags:
-  - Element
-  - HTML
-  - Reference
-  - Sectioning Root Element
-  - Sections
-  - Web
 browser-compat: html.elements.body
 ---
 

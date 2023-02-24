@@ -2,17 +2,6 @@
 title: '<dd>: The Description Details element'
 slug: Web/HTML/Element/dd
 page-type: html-element
-tags:
-  - Definition
-  - Description Details
-  - Description list
-  - Element
-  - HTML
-  - HTML grouping content
-  - Reference
-  - Web
-  - dd
-  - details
 browser-compat: html.elements.dd
 ---
 

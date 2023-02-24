@@ -2,17 +2,9 @@
 title: '<shadow>: The Shadow Root element'
 slug: Web/HTML/Element/shadow
 page-type: html-element
-tags:
-  - Deprecated
-  - Element
-  - HTML
-  - HTML Web Components
-  - Reference
-  - Shadow Root
-  - Web Components
-  - shadow
-  - shadow dom
-  - Non-standard
+status:
+  - deprecated
+  - non-standard
 browser-compat: html.elements.shadow
 ---
 

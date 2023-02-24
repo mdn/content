@@ -2,14 +2,6 @@
 title: <input type="search">
 slug: Web/HTML/Element/input/search
 page-type: html-element
-tags:
-  - Form input
-  - Forms
-  - HTML
-  - HTML forms
-  - Input Type
-  - Reference
-  - Search
 browser-compat: html.elements.input.type_search
 ---
 

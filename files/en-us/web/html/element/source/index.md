@@ -2,14 +2,6 @@
 title: '<source>: The Media or Image Source element'
 slug: Web/HTML/Element/source
 page-type: html-element
-tags:
-  - Element
-  - HTML
-  - HTML embedded content
-  - Media
-  - Reference
-  - Web
-  - Web Performance
 browser-compat: html.elements.source
 ---
 

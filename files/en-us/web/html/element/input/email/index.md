@@ -2,13 +2,6 @@
 title: <input type="email">
 slug: Web/HTML/Element/input/email
 page-type: html-element
-tags:
-  - Email
-  - Forms
-  - HTML
-  - HTML forms
-  - Input Type
-  - Reference
 browser-compat: html.elements.input.type_email
 ---
 

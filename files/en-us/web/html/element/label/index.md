@@ -2,13 +2,6 @@
 title: '<label>: The Label element'
 slug: Web/HTML/Element/label
 page-type: html-element
-tags:
-  - Element
-  - Forms
-  - HTML
-  - HTML forms
-  - Reference
-  - Web
 browser-compat: html.elements.label
 ---
 

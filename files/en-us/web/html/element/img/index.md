@@ -2,24 +2,6 @@
 title: "<img>: The Image Embed element"
 slug: Web/HTML/Element/img
 page-type: html-element
-tags:
-  - Content
-  - Element
-  - Graphics
-  - HTML
-  - HTML Graphics
-  - HTML Images
-  - HTML Photos
-  - HTML Pictures
-  - HTML embedded content
-  - Image
-  - Image Element
-  - Media
-  - Multimedia
-  - Photos
-  - Pictures
-  - Reference
-  - Web
 browser-compat: html.elements.img
 ---
 

@@ -2,18 +2,6 @@
 title: '<dt>: The Description Term element'
 slug: Web/HTML/Element/dt
 page-type: html-element
-tags:
-  - Definition
-  - Description list
-  - Definition Term
-  - Description Term
-  - Element
-  - HTML
-  - HTML grouping content
-  - Reference
-  - Term
-  - Web
-  - dt
 browser-compat: html.elements.dt
 ---
 

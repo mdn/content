@@ -2,13 +2,6 @@
 title: '<small>: the side comment element'
 slug: Web/HTML/Element/small
 page-type: html-element
-tags:
-  - Element
-  - HTML
-  - HTML text-level semantics
-  - Reference
-  - Web
-  - font-size
 browser-compat: html.elements.small
 ---
 

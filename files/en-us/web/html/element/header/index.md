@@ -2,11 +2,6 @@
 title: <header>
 slug: Web/HTML/Element/header
 page-type: html-element
-tags:
-  - Element
-  - HTML
-  - HTML sections
-  - Reference
 browser-compat: html.elements.header
 ---
 

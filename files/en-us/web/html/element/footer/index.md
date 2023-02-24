@@ -2,11 +2,6 @@
 title: <footer>
 slug: Web/HTML/Element/footer
 page-type: html-element
-tags:
-  - Element
-  - HTML
-  - HTML sections
-  - Reference
 browser-compat: html.elements.footer
 ---
 

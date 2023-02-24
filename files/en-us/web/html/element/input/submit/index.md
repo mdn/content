@@ -2,20 +2,6 @@
 title: <input type="submit">
 slug: Web/HTML/Element/input/submit
 page-type: html-element
-tags:
-  - Element
-  - Form Button
-  - Form input
-  - HTML
-  - HTML forms
-  - Input
-  - Input Types
-  - Reference
-  - Submit Form
-  - button
-  - form
-  - submit
-  - submit button
 browser-compat: html.elements.input.type_submit
 ---
 

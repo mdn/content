@@ -2,12 +2,6 @@
 title: 'HTML attribute: pattern'
 slug: Web/HTML/Attributes/pattern
 page-type: html-attribute
-tags:
-  - Attribute
-  - Attributes
-  - Constraint Validation API
-  - HTML
-  - Reference
 browser-compat: html.elements.input.pattern
 ---
 

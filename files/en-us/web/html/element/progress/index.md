@@ -2,12 +2,6 @@
 title: '<progress>: The Progress Indicator element'
 slug: Web/HTML/Element/progress
 page-type: html-element
-tags:
-  - Element
-  - HTML
-  - HTML forms
-  - Reference
-  - Web
 browser-compat: html.elements.progress
 ---
 

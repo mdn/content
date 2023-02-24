@@ -2,15 +2,6 @@
 title: "<link>: The External Resource Link element"
 slug: Web/HTML/Element/link
 page-type: html-element
-tags:
-  - Element
-  - HTML
-  - HTML document metadata
-  - Link
-  - Reference
-  - Web
-  - Web Performance
-  - metadata
 browser-compat: html.elements.link
 ---
 

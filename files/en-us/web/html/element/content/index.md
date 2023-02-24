@@ -2,19 +2,9 @@
 title: '<content>: The Shadow DOM Content Placeholder element'
 slug: Web/HTML/Element/content
 page-type: html-element
-tags:
-  - Content
-  - DOM
-  - Deprecated
-  - Element
-  - HTML
-  - HTML Web Components
-  - Placeholder
-  - Reference
-  - Web
-  - Web Components
-  - shadow dom
-  - Non-standard
+status:
+  - deprecated
+  - non-standard
 browser-compat: html.elements.content
 ---
 

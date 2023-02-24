@@ -2,15 +2,6 @@
 title: '<time>: The (Date) Time element'
 slug: Web/HTML/Element/time
 page-type: html-element
-tags:
-  - Element
-  - HTML
-  - HTML text-level semantics
-  - HTML:Flow content
-  - HTML:Palpable Content
-  - HTML:Phrasing content
-  - Reference
-  - Web
 browser-compat: html.elements.time
 ---
 

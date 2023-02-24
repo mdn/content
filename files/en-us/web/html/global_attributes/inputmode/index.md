@@ -2,20 +2,6 @@
 title: inputmode
 slug: Web/HTML/Global_attributes/inputmode
 page-type: html-attribute
-tags:
-  - Attribute
-  - Editing
-  - Forms
-  - Global attributes
-  - HTML
-  - Input
-  - Reference
-  - Text
-  - Web
-  - contenteditable
-  - global
-  - inputmode
-  - text input
 browser-compat: html.global_attributes.inputmode
 ---
 

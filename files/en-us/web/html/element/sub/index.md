@@ -2,19 +2,6 @@
 title: '<sub>: The Subscript element'
 slug: Web/HTML/Element/sub
 page-type: html-element
-tags:
-  - Baseline
-  - Element
-  - Footnotes
-  - HTML
-  - HTML text-level semantics
-  - HTML:Flow content
-  - HTML:Palpable Content
-  - HTML:Phrasing content
-  - Reference
-  - Subscript
-  - Web
-  - sub
 browser-compat: html.elements.sub
 ---
 

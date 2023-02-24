@@ -2,12 +2,6 @@
 title: '<menu>: The Menu element'
 slug: Web/HTML/Element/menu
 page-type: html-element
-tags:
-  - Element
-  - HTML
-  - HTML grouping content
-  - Reference
-  - Web
 browser-compat: html.elements.menu
 ---
 

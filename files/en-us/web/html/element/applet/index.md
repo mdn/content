@@ -2,14 +2,8 @@
 title: '<applet>: The Embed Java Applet element'
 slug: Web/HTML/Element/applet
 page-type: html-element
-tags:
-  - Element
-  - HTML
-  - Java
-  - Deprecated
-  - Reference
-  - Web
-  - applet
+status:
+  - deprecated
 browser-compat: html.elements.applet
 ---
 

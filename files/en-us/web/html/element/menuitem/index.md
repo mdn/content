@@ -2,20 +2,9 @@
 title: <menuitem>
 slug: Web/HTML/Element/menuitem
 page-type: html-element
-tags:
-  - Deprecated
-  - Element
-  - HTML
-  - Navigation
-  - Navigation Menus
-  - Reference
-  - UI
-  - UX
-  - User Interface
-  - User experience
-  - Web
-  - menuitem
-  - Non-standard
+status:
+  - deprecated
+  - non-standard
 browser-compat: html.elements.menuitem
 ---
 

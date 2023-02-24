@@ -2,18 +2,6 @@
 title: '<q>: The Inline Quotation element'
 slug: Web/HTML/Element/q
 page-type: html-element
-tags:
-  - Citation
-  - Cite
-  - Element
-  - HTML
-  - HTML text-level semantics
-  - Q
-  - Quotation
-  - Quotation Marks
-  - Reference
-  - Web
-  - quote
 browser-compat: html.elements.q
 ---
 

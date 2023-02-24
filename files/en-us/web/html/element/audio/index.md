@@ -2,19 +2,6 @@
 title: '<audio>: The Embed Audio element'
 slug: Web/HTML/Element/audio
 page-type: html-element
-tags:
-  - Audio
-  - Element
-  - HTML
-  - HTML embedded content
-  - HTML:Embedded content
-  - HTML:Flow content
-  - HTML:Phrasing content
-  - Media
-  - Multimedia
-  - Reference
-  - Web
-  - sound
 browser-compat: html.elements.audio
 ---
 

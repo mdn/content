@@ -2,24 +2,6 @@
 title: '<bdo>: The Bidirectional Text Override element'
 slug: Web/HTML/Element/bdo
 page-type: html-element
-tags:
-  - BiDi
-  - Bidirectional Text
-  - Element
-  - HTML
-  - HTML text-level semantics
-  - HTML:Flow content
-  - HTML:Palpable Content
-  - HTML:Phrasing content
-  - Left to Right
-  - Reference
-  - Right to Left
-  - Text
-  - Text Direction
-  - Text Rendering
-  - Web
-  - ltr
-  - rtl
 browser-compat: html.elements.bdo
 ---
 

@@ -2,13 +2,8 @@
 title: <keygen>
 slug: Web/HTML/Element/keygen
 page-type: html-element
-tags:
-  - Deprecated
-  - Element
-  - HTML
-  - Deprecated
-  - Reference
-  - Web
+status:
+  - deprecated
 browser-compat: html.elements.keygen
 ---
 

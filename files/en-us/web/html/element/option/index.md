@@ -2,13 +2,6 @@
 title: '<option>: The HTML Option element'
 slug: Web/HTML/Element/option
 page-type: html-element
-tags:
-  - Element
-  - Forms
-  - HTML
-  - HTML forms
-  - Reference
-  - Select
 browser-compat: html.elements.option
 ---
 

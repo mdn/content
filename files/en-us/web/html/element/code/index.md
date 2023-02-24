@@ -2,14 +2,6 @@
 title: '<code>: The Inline Code element'
 slug: Web/HTML/Element/code
 page-type: html-element
-tags:
-  - Code
-  - Element
-  - HTML
-  - HTML text-level semantics
-  - Inline Code
-  - Reference
-  - Web
 browser-compat: html.elements.code
 ---
 

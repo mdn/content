@@ -2,14 +2,6 @@
 title: Inline elements
 slug: Web/HTML/Inline_elements
 page-type: guide
-tags:
-  - Beginner
-  - Elements
-  - HTML
-  - HTML Elements
-  - HTML:Element Reference
-  - Layout
-  - Reference
 ---
 
 {{HTMLSidebar}}

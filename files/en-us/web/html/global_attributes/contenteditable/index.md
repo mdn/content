@@ -2,15 +2,6 @@
 title: contenteditable
 slug: Web/HTML/Global_attributes/contenteditable
 page-type: html-attribute
-tags:
-  - Editing
-  - Global attributes
-  - HTML
-  - Reference
-  - Text Editing
-  - contenteditable
-  - text entry
-  - text input
 browser-compat: html.global_attributes.contenteditable
 ---
 

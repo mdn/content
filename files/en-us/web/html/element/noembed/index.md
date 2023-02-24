@@ -2,14 +2,8 @@
 title: '<noembed>: The Embed Fallback element'
 slug: Web/HTML/Element/noembed
 page-type: html-element
-tags:
-  - Element
-  - Embedded content
-  - Embedding
-  - HTML
-  - Deprecated
-  - Reference
-  - noembed
+status:
+  - deprecated
 browser-compat: html.elements.noembed
 ---
 

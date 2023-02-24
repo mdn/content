@@ -2,19 +2,8 @@
 title: '<tt>: The Teletype Text element'
 slug: Web/HTML/Element/tt
 page-type: html-element
-tags:
-  - Element
-  - HTML
-  - Monospace
-  - Monotype
-  - Non-proportional Type
-  - Deprecated
-  - Reference
-  - Teletype
-  - Teletype Text
-  - Web
-  - font-family
-  - tt
+status:
+  - deprecated
 browser-compat: html.elements.tt
 ---
 

@@ -2,17 +2,6 @@
 title: <input type="date">
 slug: Web/HTML/Element/input/date
 page-type: html-element
-tags:
-  - Date
-  - Date picker
-  - Element
-  - Form Inputs
-  - HTML
-  - HTML forms
-  - Input
-  - Input Element
-  - Input Type
-  - Reference
 browser-compat: html.elements.input.type_date
 ---
 

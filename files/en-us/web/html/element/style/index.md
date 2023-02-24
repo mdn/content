@@ -2,14 +2,6 @@
 title: '<style>: The Style Information element'
 slug: Web/HTML/Element/style
 page-type: html-element
-tags:
-  - CSS
-  - Element
-  - HTML
-  - HTML document metadata
-  - Reference
-  - Style
-  - Web
 browser-compat: html.elements.style
 ---
 

@@ -2,15 +2,6 @@
 title: '<details>: The Details disclosure element'
 slug: Web/HTML/Element/details
 page-type: html-element
-tags:
-  - Disclosure Box
-  - Disclosure Widget
-  - Element
-  - HTML
-  - HTML interactive elements
-  - Reference
-  - Web
-  - details
 browser-compat: html.elements.details
 ---
 

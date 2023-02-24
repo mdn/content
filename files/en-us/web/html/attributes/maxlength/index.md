@@ -2,15 +2,6 @@
 title: "HTML attribute: maxlength"
 slug: Web/HTML/Attributes/maxlength
 page-type: html-attribute
-tags:
-  - Attribute
-  - Attributes
-  - Constraint validation
-  - HTML
-  - Input
-  - Reference
-  - maxlength
-  - textarea
 browser-compat:
   - html.elements.input.maxlength
   - html.elements.textarea.maxlength

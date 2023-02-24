@@ -2,20 +2,6 @@
 title: <input type="url">
 slug: Web/HTML/Element/input/url
 page-type: html-element
-tags:
-  - Element
-  - Form Control
-  - Form Inputs
-  - Forms
-  - HTML
-  - HTML Input Types
-  - HTML forms
-  - Input
-  - Input Type
-  - Reference
-  - Text
-  - URL
-  - control
 browser-compat: html.elements.input.type_url
 ---
 

@@ -2,12 +2,6 @@
 title: '<datalist>: The HTML Data List element'
 slug: Web/HTML/Element/datalist
 page-type: html-element
-tags:
-  - Element
-  - HTML
-  - HTML forms
-  - Reference
-  - Web
 browser-compat: html.elements.datalist
 ---
 

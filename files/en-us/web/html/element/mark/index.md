@@ -2,16 +2,6 @@
 title: '<mark>: The Mark Text element'
 slug: Web/HTML/Element/mark
 page-type: html-element
-tags:
-  - Element
-  - HTML
-  - HTML text-level semantics
-  - Highlighting
-  - Highlighting Text
-  - Marking Text
-  - Reference
-  - Web
-  - mark
 browser-compat: html.elements.mark
 ---
 

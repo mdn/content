@@ -2,16 +2,6 @@
 title: '<nav>: The Navigation Section element'
 slug: Web/HTML/Element/nav
 page-type: html-element
-tags:
-  - Element
-  - HTML
-  - HTML sections
-  - Links
-  - Navigation
-  - Reference
-  - Sections
-  - Web
-  - nav
 browser-compat: html.elements.nav
 ---
 

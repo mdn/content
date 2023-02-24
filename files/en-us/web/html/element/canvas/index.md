@@ -2,13 +2,6 @@
 title: '<canvas>: The Graphics Canvas element'
 slug: Web/HTML/Element/canvas
 page-type: html-element
-tags:
-  - Canvas
-  - Element
-  - HTML
-  - HTML scripting
-  - Reference
-  - Web
 browser-compat: html.elements.canvas
 ---
 

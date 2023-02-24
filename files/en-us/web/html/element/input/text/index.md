@@ -2,17 +2,6 @@
 title: <input type="text">
 slug: Web/HTML/Element/input/text
 page-type: html-element
-tags:
-  - Form input
-  - Forms
-  - HTML
-  - HTML forms
-  - Input
-  - Input Type
-  - Reference
-  - Text
-  - text entry
-  - text input
 browser-compat: html.elements.input.type_text
 ---
 

@@ -2,12 +2,6 @@
 title: '<article>: The Article Contents element'
 slug: Web/HTML/Element/article
 page-type: html-element
-tags:
-  - Element
-  - HTML
-  - HTML sections
-  - Reference
-  - Web
 browser-compat: html.elements.article
 ---
 

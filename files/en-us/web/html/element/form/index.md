@@ -2,15 +2,6 @@
 title: '<form>: The Form element'
 slug: Web/HTML/Element/form
 page-type: html-element
-tags:
-  - Element
-  - Form Element
-  - Forms
-  - HTML
-  - HTML Form Element
-  - HTML forms
-  - Reference
-  - Web
 browser-compat: html.elements.form
 ---
 

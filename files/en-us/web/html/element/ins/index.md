@@ -2,15 +2,6 @@
 title: <ins>
 slug: Web/HTML/Element/ins
 page-type: html-element
-tags:
-  - Element
-  - HTML
-  - HTML edits
-  - Inserted Text
-  - Insertion
-  - Reference
-  - Web
-  - ins
 browser-compat: html.elements.ins
 ---
 

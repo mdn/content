@@ -2,16 +2,6 @@
 title: '<dfn>: The Definition element'
 slug: Web/HTML/Element/dfn
 page-type: html-element
-tags:
-  - Definition
-  - Definitions
-  - Element
-  - HTML
-  - HTML text-level semantics
-  - Reference
-  - Semantic Markup
-  - Web
-  - dfn
 browser-compat: html.elements.dfn
 ---
 

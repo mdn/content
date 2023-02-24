@@ -2,18 +2,6 @@
 title: '<u>: The Unarticulated Annotation (Underline) element'
 slug: Web/HTML/Element/u
 page-type: html-element
-tags:
-  - Annotation
-  - Element
-  - HTML
-  - HTML text-level semantics
-  - HTML:Flow content
-  - HTML:Palpable Content
-  - HTML:Phrasing content
-  - Reference
-  - Unarticulated Annotation
-  - Underline
-  - Web
 browser-compat: html.elements.u
 ---
 

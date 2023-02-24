@@ -2,12 +2,8 @@
 title: <xmp>
 slug: Web/HTML/Element/xmp
 page-type: html-element
-tags:
-  - Element
-  - HTML
-  - Deprecated
-  - Reference
-  - Web
+status:
+  - deprecated
 browser-compat: html.elements.xmp
 ---
 

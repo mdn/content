@@ -2,17 +2,6 @@
 title: "<input>: The Input (Form Input) element"
 slug: Web/HTML/Element/input
 page-type: html-element
-tags:
-  - Data entry
-  - Element
-  - Forms
-  - HTML
-  - HTML forms
-  - HTML input tag
-  - Input
-  - MakeBrowserAgnostic
-  - Reference
-  - Web
 browser-compat: html.elements.input
 ---
 

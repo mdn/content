@@ -2,12 +2,6 @@
 title: <main>
 slug: Web/HTML/Element/main
 page-type: html-element
-tags:
-  - Element
-  - HTML
-  - HTML sections
-  - Reference
-  - main
 browser-compat: html.elements.main
 ---
 

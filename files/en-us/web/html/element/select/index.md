@@ -2,13 +2,6 @@
 title: '<select>: The HTML Select element'
 slug: Web/HTML/Element/select
 page-type: html-element
-tags:
-  - Element
-  - Forms
-  - HTML
-  - HTML forms
-  - Reference
-  - Web
 browser-compat: html.elements.select
 ---
 

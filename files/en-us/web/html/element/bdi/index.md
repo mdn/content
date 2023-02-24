@@ -2,26 +2,6 @@
 title: '<bdi>: The Bidirectional Isolate element'
 slug: Web/HTML/Element/bdi
 page-type: html-element
-tags:
-  - BDI
-  - BiDi
-  - Directionality
-  - Element
-  - HTML
-  - HTML text-level semantics
-  - HTML:Flow content
-  - HTML:Palpable Content
-  - HTML:Phrasing content
-  - Internationalization
-  - Left-to-Right
-  - Reference
-  - Right-to-left
-  - Text
-  - Web
-  - direction
-  - i18n
-  - ltr
-  - rtl
 browser-compat: html.elements.bdi
 ---
 

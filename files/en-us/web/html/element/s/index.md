@@ -2,13 +2,6 @@
 title: '<s>: The Strikethrough element'
 slug: Web/HTML/Element/s
 page-type: html-element
-tags:
-  - Element
-  - HTML
-  - HTML text-level semantics
-  - Reference
-  - Web
-  - text-decoration
 browser-compat: html.elements.s
 ---
 
