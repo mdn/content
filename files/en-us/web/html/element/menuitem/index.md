@@ -2,20 +2,9 @@
 title: <menuitem>
 slug: Web/HTML/Element/menuitem
 page-type: html-element
-tags:
-  - Deprecated
-  - Element
-  - HTML
-  - Navigation
-  - Navigation Menus
-  - Reference
-  - UI
-  - UX
-  - User Interface
-  - User experience
-  - Web
-  - menuitem
-  - Non-standard
+status:
+  - deprecated
+  - non-standard
 browser-compat: html.elements.menuitem
 ---
 
@@ -100,7 +89,7 @@ div {
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories"
+        <a href="/en-US/docs/Web/HTML/Content_categories"
           >Content categories</a
         >
       </th>

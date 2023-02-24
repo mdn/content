@@ -1,14 +1,6 @@
 ---
 title: Images, media, and form elements
 slug: Learn/CSS/Building_blocks/Images_media_form_elements
-tags:
-  - Beginner
-  - CSS
-  - Forms
-  - Images
-  - Learn
-  - Media
-  - replaced content
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Sizing_items_in_CSS", "Learn/CSS/Building_blocks/Styling_tables", "Learn/CSS/Building_blocks")}}

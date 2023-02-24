@@ -1,20 +1,6 @@
 ---
 title: Web fonts
 slug: Learn/CSS/Styling_text/Web_fonts
-tags:
-  - '@font-face'
-  - Article
-  - Beginner
-  - CSS
-  - CSS Fonts
-  - Fonts
-  - Guide
-  - Learn
-  - Web Development
-  - Web Fonts Article
-  - Web fonts documentation
-  - font-family
-  - web fonts
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Styling_text/Styling_links", "Learn/CSS/Styling_text/Typesetting_a_homepage", "Learn/CSS/Styling_text")}}

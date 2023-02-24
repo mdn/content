@@ -1,18 +1,6 @@
 ---
 title: "Express Tutorial Part 3: Using a Database (with Mongoose)"
 slug: Learn/Server-side/Express_Nodejs/mongoose
-tags:
-  - Beginner
-  - CodingScripting
-  - Database
-  - Express
-  - Learn
-  - Node
-  - ODM
-  - mongoose
-  - nodejs
-  - orm
-  - server-side
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Express_Nodejs/skeleton_website", "Learn/Server-side/Express_Nodejs/routes", "Learn/Server-side/Express_Nodejs")}}

@@ -1,12 +1,6 @@
 ---
 title: Firefox 42 for developers
 slug: Mozilla/Firefox/Releases/42
-tags:
-  - "42"
-  - Firefox
-  - Mozilla
-  - Release
-  - Release Notes
 ---
 
 {{FirefoxSidebar}}

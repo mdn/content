@@ -1,11 +1,6 @@
 ---
 title: Creating a cross-browser video player
 slug: Web/Guide/Audio_and_video_delivery/cross_browser_video_player
-tags:
-  - Apps
-  - HTML
-  - Video
-  - full screen
 ---
 
 {{QuickLinksWithSubPages("/en-US/docs/Web/Guide/Audio_and_video_delivery")}}

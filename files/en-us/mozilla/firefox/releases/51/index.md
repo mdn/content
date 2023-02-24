@@ -1,10 +1,6 @@
 ---
 title: Firefox 51 for developers
 slug: Mozilla/Firefox/Releases/51
-tags:
-  - Firefox
-  - Mozilla
-  - Release Notes
 ---
 
 {{FirefoxSidebar}}

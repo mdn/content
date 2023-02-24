@@ -1,13 +1,6 @@
 ---
 title: Mozilla
 slug: Mozilla
-tags:
-  - Add-ons
-  - Advanced
-  - Apps
-  - CodingScripting
-  - Landing
-  - Mozilla
 ---
 
 {{FirefoxSidebar}}

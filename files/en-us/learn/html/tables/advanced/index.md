@@ -1,23 +1,6 @@
 ---
 title: HTML table advanced features and accessibility
 slug: Learn/HTML/Tables/Advanced
-tags:
-  - Accessibility
-  - Advanced
-  - Article
-  - Beginner
-  - CodingScripting
-  - HTML
-  - Headers
-  - Learn
-  - caption
-  - nesting
-  - scope
-  - summary
-  - table
-  - tbody
-  - tfoot
-  - thead
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Tables/Basics", "Learn/HTML/Tables/Structuring_planet_data", "Learn/HTML/Tables")}}

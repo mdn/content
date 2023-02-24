@@ -1,10 +1,6 @@
 ---
 title: Firefox 60 for developers
 slug: Mozilla/Firefox/Releases/60
-tags:
-  - "60"
-  - Firefox
-  - Release Notes
 ---
 
 {{FirefoxSidebar}}

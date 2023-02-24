@@ -1,8 +1,6 @@
 ---
 title: Firefox 27 for developers
 slug: Mozilla/Firefox/Releases/27
-tags:
-  - Firefox
 ---
 
 {{FirefoxSidebar}}
