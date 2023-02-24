@@ -67,6 +67,6 @@ input:autofill {
 ## See also
 
 - [Chromium issue 46543: Auto-filled input text box yellow background highlight cannot be turned off](https://bugs.chromium.org/p/chromium/issues/detail?id=46543)
-- [WebKit bug 66032: Allow site authors to override autofilled fields' colors.](https://bugs.webkit.org/show_bug.cgi?id=66032)
+- [WebKit bug 66032: Allow site authors to override autofilled fields' colors.](https://webkit.org/b/66032)
 - [Mozilla bug 740979: implement `:-moz-autofill` pseudo-class on input elements with an autofilled value](https://bugzil.la/740979)
 - [User Interface Module Level 4: more selectors](https://wiki.csswg.org/spec/css4-ui#more-selectors)
