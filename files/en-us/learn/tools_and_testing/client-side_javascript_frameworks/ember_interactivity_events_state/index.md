@@ -1,18 +1,7 @@
 ---
-title: 'Ember interactivity: Events, classes and state'
+title: "Ember interactivity: Events, classes and state"
 slug: >-
   Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_interactivity_events_state
-tags:
-  - Beginner
-  - Classes
-  - Ember
-  - Frameworks
-  - JavaScript
-  - Learn
-  - Services
-  - client-side
-  - decorators
-  - events
 ---
 
 {{LearnSidebar}}

@@ -1,15 +1,6 @@
 ---
 title: Server-side website programming
 slug: Learn/Server-side
-tags:
-  - Beginner
-  - CodingScripting
-  - Intro
-  - Landing
-  - Learn
-  - Server
-  - Server-side programming
-  - Topic
 ---
 
 {{LearnSidebar}}

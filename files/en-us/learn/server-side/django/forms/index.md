@@ -1,16 +1,6 @@
 ---
-title: 'Django Tutorial Part 9: Working with forms'
+title: "Django Tutorial Part 9: Working with forms"
 slug: Learn/Server-side/Django/Forms
-tags:
-  - Beginner
-  - CodingScripting
-  - Django Forms
-  - Forms
-  - HTML forms
-  - Learn
-  - Tutorial
-  - django
-  - server side
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/authentication_and_sessions", "Learn/Server-side/Django/Testing", "Learn/Server-side/Django")}}

@@ -1,21 +1,6 @@
 ---
 title: Working with JSON
 slug: Learn/JavaScript/Objects/JSON
-tags:
-  - Article
-  - Beginner
-  - CodingScripting
-  - Guide
-  - JSON
-  - JSON API
-  - JSON Arrays
-  - JSON parsing
-  - JSON structure
-  - JavaScript
-  - Learn
-  - Objects
-  - Tutorial
-  - "l10n:priority"
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Objects/Classes_in_JavaScript", "Learn/JavaScript/Objects/Object_building_practice", "Learn/JavaScript/Objects")}}
