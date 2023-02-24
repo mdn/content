@@ -19,12 +19,12 @@ However, there are significant differences between Chrome, Firefox, and Edge. In
 - JavaScript APIs:
 
   - **In Firefox and Edge:** JavaScript APIs are accessed under the `browser` namespace.
-  - **In Chrome:** JavaScript APIs are accessed under the `chrome` namespace. (cf. [Chrome bug 798169](https://bugs.chromium.org/p/chromium/issues/detail?id=798169))
+  - **In Chrome:** JavaScript APIs are accessed under the `chrome` namespace. (cf. [Chrome bug 798169](https://crbug.com/798169))
 
 - Asynchronous APIs:
 
   - **In Firefox:** Asynchronous APIs are implemented using promises.
-  - **In Chrome and Edge:** Asynchronous APIs are implemented using callbacks. (cf. [Chrome bug 328932](https://bugs.chromium.org/p/chromium/issues/detail?id=328932))
+  - **In Chrome and Edge:** Asynchronous APIs are implemented using callbacks. (cf. [Chrome bug 328932](https://crbug.com/328932))
 
 The rest of this page summarizes these and other incompatibilities.
 
@@ -262,7 +262,7 @@ These tables are generated from compatibility data stored as [JSON files in GitH
 Some extension APIs allow an extension to send data from one part of the extension to another, such as {{WebExtAPIRef("runtime.sendMessage()")}}, {{WebExtAPIRef("tabs.sendMessage()")}}, {{WebExtAPIRef("runtime.onMessage")}}, the `postMessage()` method of {{WebExtAPIRef("runtime.port")}}, and {{WebExtAPIRef("tabs.executeScript()")}}.
 
 - **In Firefox:** The [Structured clone algorithm](/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm) is used.
-- **In Chrome:** The [JSON serialization algorithm](/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify#description) is used. It may switch to structured cloning in the future ([issue 248548](https://bugs.chromium.org/p/chromium/issues/detail?id=248548)).
+- **In Chrome:** The [JSON serialization algorithm](/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify#description) is used. It may switch to structured cloning in the future ([issue 248548](https://crbug.com/248548)).
 
 The Structured clone algorithm supports more types than the JSON serialization algorithm. A notable exception are (DOM) objects with a `toJSON` method. DOM objects are not cloneable nor JSON-serializable by default, but with a `toJSON()` method, these can be JSON-serialized (but still not cloned with the structured cloning algorithm). Examples of JSON-serializable objects that are not structured cloneable include instances of {{domxref("URL")}} and {{domxref("PerformanceEntry")}}.
 

@@ -136,4 +136,4 @@ As of Manifest V3, content scripts share the default CSP as extensions. It is cu
 
 The extent to which the CSP controls loads from content scripts varies by browser.
 In Firefox, JavaScript features such as eval are restricted by the extension CSP. Generally, most DOM-based APIs are subjected to the CSP of the web page.
-In Chrome, many DOM APIs are covered by the extension CSP instead of the web page's CSP ([crbug 896041](https://bugs.chromium.org/p/chromium/issues/detail?id=896041)).
+In Chrome, many DOM APIs are covered by the extension CSP instead of the web page's CSP ([crbug 896041](https://crbug.com/896041)).
