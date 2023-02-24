@@ -35,13 +35,13 @@ The values of the list attribute is the {{domxref("Element.id", "id")}} of a {{H
 
 ### `max`
 
-The maximum value to accept for this input. If the {{htmlattrxref("value", "input")}} entered into the element exceeds this, the element fails [constraint validation](/en-US/docs/Web/Guide/HTML/Constraint_validation). If the value of the `max` attribute isn't a number, then the element has no maximum value.
+The maximum value to accept for this input. If the {{htmlattrxref("value", "input")}} entered into the element exceeds this, the element fails [constraint validation](/en-US/docs/Web/HTML/Constraint_validation). If the value of the `max` attribute isn't a number, then the element has no maximum value.
 
 This value must be greater than or equal to the value of the `min` attribute.
 
 ### `min`
 
-The minimum value to accept for this input. If the {{htmlattrxref("value", "input")}} of the element is less than this, the element fails [constraint validation](/en-US/docs/Web/Guide/HTML/Constraint_validation). If a value is specified for `min` that isn't a valid number, the input has no minimum value.
+The minimum value to accept for this input. If the {{htmlattrxref("value", "input")}} of the element is less than this, the element fails [constraint validation](/en-US/docs/Web/HTML/Constraint_validation). If a value is specified for `min` that isn't a valid number, the input has no minimum value.
 
 This value must be less than or equal to the value of the `max` attribute.
 

@@ -49,13 +49,13 @@ In addition to the attributes common to {{HTMLElement("input")}} elements, week 
 
 ### max
 
-The latest (time-wise) year and week number, in the string format discussed in the [Value](#value) section above, to accept. If the {{htmlattrxref("value", "input")}} entered into the element exceeds this, the element fails [constraint validation](/en-US/docs/Web/Guide/HTML/Constraint_validation). If the value of the `max` attribute isn't a valid week string, then the element has no maximum value.
+The latest (time-wise) year and week number, in the string format discussed in the [Value](#value) section above, to accept. If the {{htmlattrxref("value", "input")}} entered into the element exceeds this, the element fails [constraint validation](/en-US/docs/Web/HTML/Constraint_validation). If the value of the `max` attribute isn't a valid week string, then the element has no maximum value.
 
 This value must be greater than or equal to the year and week specified by the `min` attribute.
 
 ### min
 
-The earliest year and week to accept. If the {{htmlattrxref("value", "input")}} of the element is less than this, the element fails [constraint validation](/en-US/docs/Web/Guide/HTML/Constraint_validation). If a value is specified for `min` that isn't a valid week string, the input has no minimum value.
+The earliest year and week to accept. If the {{htmlattrxref("value", "input")}} of the element is less than this, the element fails [constraint validation](/en-US/docs/Web/HTML/Constraint_validation). If a value is specified for `min` that isn't a valid week string, the input has no minimum value.
 
 This value must be less than or equal to the value of the `max` attribute.
 

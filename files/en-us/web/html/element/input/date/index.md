@@ -46,13 +46,13 @@ The attributes common to all {{HTMLElement("input")}} elements apply to the `dat
 
 ### max
 
-The latest date to accept. If the {{htmlattrxref("value", "input")}} entered into the element occurs afterward, the element fails [constraint validation](/en-US/docs/Web/Guide/HTML/Constraint_validation). If the value of the `max` attribute isn't a possible date string in the format `yyyy-mm-dd`, then the element has no maximum date value.
+The latest date to accept. If the {{htmlattrxref("value", "input")}} entered into the element occurs afterward, the element fails [constraint validation](/en-US/docs/Web/HTML/Constraint_validation). If the value of the `max` attribute isn't a possible date string in the format `yyyy-mm-dd`, then the element has no maximum date value.
 
 If both the `max` and `min` attributes are set, this value must be a date string **later than or equal to** the one in the `min` attribute.
 
 ### min
 
-The earliest date to accept. If the {{htmlattrxref("value", "input")}} entered into the element occurs beforehand, the element fails [constraint validation](/en-US/docs/Web/Guide/HTML/Constraint_validation). If the value of the `min` attribute isn't a possible date string in the format `yyyy-mm-dd`, then the element has no minimum date value.
+The earliest date to accept. If the {{htmlattrxref("value", "input")}} entered into the element occurs beforehand, the element fails [constraint validation](/en-US/docs/Web/HTML/Constraint_validation). If the value of the `min` attribute isn't a possible date string in the format `yyyy-mm-dd`, then the element has no minimum date value.
 
 If both the `max` and `min` attributes are set, this value must be a date string **earlier than or equal to** the one in the `max` attribute.
 

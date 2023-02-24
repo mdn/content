@@ -7,7 +7,7 @@ browser-compat: api.ElementInternals.reportValidity
 
 {{DefaultAPISidebar("DOM")}}
 
-The **`reportValidity()`** method of the {{domxref("ElementInternals")}} interface checks if the element meets any [constraint validation](/en-US/docs/Web/Guide/HTML/Constraint_validation) rules applied to it.
+The **`reportValidity()`** method of the {{domxref("ElementInternals")}} interface checks if the element meets any [constraint validation](/en-US/docs/Web/HTML/Constraint_validation) rules applied to it.
 
 If `reportValidity` returns `false` then a cancelable [invalid event](/en-US/docs/Web/API/HTMLInputElement/invalid_event) is fired on the element.
 

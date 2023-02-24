@@ -15,7 +15,7 @@ The **`pattern`** attribute specifies a [regular expression](/en-US/docs/Web/Jav
 
 The `pattern` attribute is an attribute of the {{HTMLElement("input/text", "text")}}, {{HTMLElement("input/tel", "tel")}}, {{HTMLElement("input/email", "email")}}, {{HTMLElement("input/url", "url")}}, {{HTMLElement("input/password", "password")}}, and {{HTMLElement("input/search", "search")}} input types.
 
-The `pattern` attribute, when specified, is a regular expression which the input's {{htmlattrxref("value")}} must match in order for the value to pass [constraint validation](/en-US/docs/Web/Guide/HTML/Constraint_validation). It must be a valid JavaScript regular expression, as used by the {{jsxref("RegExp")}} type, and as documented in our [guide on regular expressions](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions); the `'u'` flag is specified when compiling the regular expression, so that the pattern is treated as a sequence of Unicode code points, instead of as ASCII. No forward slashes should be specified around the pattern text.
+The `pattern` attribute, when specified, is a regular expression which the input's {{htmlattrxref("value")}} must match in order for the value to pass [constraint validation](/en-US/docs/Web/HTML/Constraint_validation). It must be a valid JavaScript regular expression, as used by the {{jsxref("RegExp")}} type, and as documented in our [guide on regular expressions](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions); the `'u'` flag is specified when compiling the regular expression, so that the pattern is treated as a sequence of Unicode code points, instead of as ASCII. No forward slashes should be specified around the pattern text.
 
 If the specified pattern is not specified or is invalid, no regular expression is applied and this attribute is ignored.
 
@@ -158,6 +158,6 @@ While `title`s are used by some browsers to populate error messaging, because br
 
 ## See also
 
-- [Constraint validation](/en-US/docs/Web/Guide/HTML/Constraint_validation)
+- [Constraint validation](/en-US/docs/Web/HTML/Constraint_validation)
 - [Forms: Data form validation](/en-US/docs/Learn/Forms/Form_validation)
 - [Regular Expressions](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions)
