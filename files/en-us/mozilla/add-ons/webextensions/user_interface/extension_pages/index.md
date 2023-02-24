@@ -38,7 +38,7 @@ Using `windows.create()`, for example, you can open an HTML page into a detached
 ```js
 let createData = {
   type: "detached_panel",
-  url: "panel.html",
+  url: "/my-page.html",
   width: 250,
   height: 100
 };
