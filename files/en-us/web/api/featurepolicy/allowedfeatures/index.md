@@ -39,13 +39,13 @@ grant the corresponding permission yet.
 
 ```js
 // First, get the Permissions Policy object
-const featurePolicy = document.featurePolicy
+const featurePolicy = document.featurePolicy;
 
 // Then query feature for specific
-const allowed = featurePolicy.allowedFeatures()
+const allowed = featurePolicy.allowedFeatures();
 
-for (const directive of allowed){
-  console.log(directive)
+for (const directive of allowed) {
+  console.log(directive);
 }
 ```
 

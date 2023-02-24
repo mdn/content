@@ -51,7 +51,7 @@ function readFile(entry, successCallback, errorCallback) {
 
     reader.onerror = () => {
       errorCallback(reader.error);
-    }
+    };
 
     reader.readAsText(file);
   }, errorCallback);
