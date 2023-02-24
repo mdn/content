@@ -1,16 +1,6 @@
 ---
 title: Mobile first
 slug: Web/Progressive_web_apps/Responsive/Mobile_first
-tags:
-  - Apps
-  - CSS
-  - Development
-  - HTML
-  - Java
-  - JavaScript
-  - Mobile
-  - Mobile Development
-  - Mobile first
 ---
 
 This article provides a guide to implementing a website layout that follows the principle of **mobile first**. This means creating a layout where the default configuration is for narrow screen/mobile devices, and layout features for wider viewports are then layered on top of that default.

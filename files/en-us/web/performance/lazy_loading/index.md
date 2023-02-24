@@ -1,16 +1,6 @@
 ---
 title: Lazy loading
 slug: Web/Performance/Lazy_loading
-tags:
-  - Content
-  - Images
-  - Layout
-  - Lazy
-  - Lazy-loading
-  - Loading
-  - Performance
-  - Web Performance
-  - rendering
 spec-urls: https://html.spec.whatwg.org/multipage/#lazy-loading-attributes
 ---
 

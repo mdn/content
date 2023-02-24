@@ -1,11 +1,6 @@
 ---
 title: Redirect tracking protection
 slug: Web/Privacy/Redirect_tracking_protection
-tags:
-  - Firefox
-  - Mozilla
-  - Privacy
-  - redirect tracking protection
 ---
 
 {{QuicklinksWithSubPages("Web/Privacy")}}

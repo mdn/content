@@ -1,13 +1,6 @@
 ---
 title: Getting started
 slug: Web/Guide/AJAX/Getting_Started
-tags:
-  - AJAX
-  - API
-  - Advanced
-  - JavaScript
-  - WebMechanics
-  - XMLHttpRequest
 ---
 
 {{QuickLinksWithSubpages("/en-US/docs/Web/Guide/AJAX")}}

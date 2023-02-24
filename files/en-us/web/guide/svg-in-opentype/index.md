@@ -1,11 +1,6 @@
 ---
 title: SVG-in-OpenType
 slug: Web/Guide/SVG-in-OpenType
-tags:
-  - Draft
-  - Fonts
-  - Guide
-  - NeedsContent
 ---
 
 <section id="Quick_links">

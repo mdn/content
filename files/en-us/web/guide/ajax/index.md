@@ -1,13 +1,6 @@
 ---
 title: Ajax
 slug: Web/Guide/AJAX
-tags:
-  - AJAX
-  - DOM
-  - JSON
-  - JavaScript
-  - References
-  - XMLHttpRequest
 ---
 
 <section id="Quick_links">

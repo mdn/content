@@ -1,9 +1,6 @@
 ---
 title: Livestreaming web audio and video
 slug: Web/Guide/Audio_and_video_delivery/Live_streaming_web_audio_and_video
-tags:
-  - Guide
-  - adaptive streaming
 ---
 
 {{QuickLinksWithSubPages("/en-US/docs/Web/Guide/Audio_and_video_delivery")}}
