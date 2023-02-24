@@ -47,5 +47,4 @@ The accelerator key combination. For example:
 ## See also
 
 - [The global `accesskey` attribute](/en-US/docs/Web/HTML/Global_attributes/accesskey)
-- [The `-ms-accelerator` CSS property](/en-US/docs/Web/CSS/-ms-accelerator)
 - [Microsoft API extensions](/en-US/docs/Web/API/Microsoft_Extensions)
