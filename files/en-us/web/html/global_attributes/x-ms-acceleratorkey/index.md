@@ -2,13 +2,8 @@
 title: x-ms-acceleratorkey
 slug: Web/HTML/Global_attributes/x-ms-acceleratorkey
 page-type: html-attribute
-tags:
-  - Attribute
-  - HTML
-  - HTML:Microsoft Extensions
-  - Non-standard
-  - Reference
-  - x-ms-acceleratorkey
+status:
+  - non-standard
 ---
 
 {{HTMLSidebar("Global_attributes")}}{{Non-standard_Header}}

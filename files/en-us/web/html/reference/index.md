@@ -2,11 +2,6 @@
 title: HTML reference
 slug: Web/HTML/Reference
 page-type: landing-page
-tags:
-  - HTML
-  - Landing
-  - Reference
-  - Web
 ---
 
 {{HTMLSidebar}}

@@ -2,14 +2,6 @@
 title: '<dialog>: The Dialog element'
 slug: Web/HTML/Element/dialog
 page-type: html-element
-tags:
-  - Dialog
-  - Element
-  - HTML
-  - HTML interactive elements
-  - Reference
-  - Web
-  - polyfill
 browser-compat: html.elements.dialog
 ---
 

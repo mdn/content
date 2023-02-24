@@ -2,15 +2,6 @@
 title: "HTML attribute: minlength"
 slug: Web/HTML/Attributes/minlength
 page-type: html-attribute
-tags:
-  - Attribute
-  - Attributes
-  - Constraint validation
-  - HTML
-  - Input
-  - Reference
-  - minlength
-  - textarea
 browser-compat:
   - html.elements.input.minlength
   - html.elements.textarea.minlength

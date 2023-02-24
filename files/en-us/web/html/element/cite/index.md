@@ -2,17 +2,6 @@
 title: '<cite>: The Citation element'
 slug: Web/HTML/Element/cite
 page-type: html-element
-tags:
-  - Attribution
-  - Citation
-  - Citing References
-  - Citing Works
-  - Element
-  - HTML
-  - HTML text-level semantics
-  - Quotations
-  - Reference
-  - Web
 browser-compat: html.elements.cite
 ---
 

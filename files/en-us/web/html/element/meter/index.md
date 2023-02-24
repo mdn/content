@@ -2,12 +2,6 @@
 title: '<meter>: The HTML Meter element'
 slug: Web/HTML/Element/meter
 page-type: html-element
-tags:
-  - Element
-  - HTML
-  - HTML forms
-  - Reference
-  - Web
 browser-compat: html.elements.meter
 ---
 

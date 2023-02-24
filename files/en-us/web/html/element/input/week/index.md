@@ -2,20 +2,6 @@
 title: <input type="week">
 slug: Web/HTML/Element/input/week
 page-type: html-element
-tags:
-  - Element
-  - Forms
-  - HTML
-  - HTML Input Types
-  - HTML forms
-  - HTML input
-  - Input
-  - Input Element
-  - Input Type
-  - Input Types
-  - Reference
-  - Week
-  - Weeks
 browser-compat: html.elements.input.type_week
 ---
 

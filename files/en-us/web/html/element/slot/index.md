@@ -2,14 +2,6 @@
 title: '<slot>: The Web Component Slot element'
 slug: Web/HTML/Element/slot
 page-type: html-element
-tags:
-  - Element
-  - HTML
-  - HTML Web Components
-  - Reference
-  - Web Components
-  - shadow dom
-  - slot
 browser-compat: html.elements.slot
 ---
 

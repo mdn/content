@@ -2,11 +2,6 @@
 title: '<figcaption>: The Figure Caption element'
 slug: Web/HTML/Element/figcaption
 page-type: html-element
-tags:
-  - Element
-  - HTML
-  - HTML grouping content
-  - Reference
 browser-compat: html.elements.figcaption
 ---
 

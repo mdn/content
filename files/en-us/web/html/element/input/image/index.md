@@ -2,19 +2,6 @@
 title: <input type="image">
 slug: Web/HTML/Element/input/image
 page-type: html-element
-tags:
-  - Element
-  - Form Image
-  - Form Image Button
-  - Forms
-  - HTML
-  - HTML Image Button
-  - HTML forms
-  - Image Button
-  - Input
-  - Input Type
-  - Number
-  - Reference
 browser-compat: html.elements.input.type_image
 ---
 

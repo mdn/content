@@ -2,12 +2,6 @@
 title: '<p>: The Paragraph element'
 slug: Web/HTML/Element/p
 page-type: html-element
-tags:
-  - Element
-  - HTML
-  - HTML grouping content
-  - Reference
-  - Web
 browser-compat: html.elements.p
 ---
 

@@ -2,13 +2,8 @@
 title: '<marquee>: The Marquee element'
 slug: Web/HTML/Element/marquee
 page-type: html-element
-tags:
-  - Element
-  - HTML
-  - Deprecated
-  - Reference
-  - Web
-  - marquee
+status:
+  - deprecated
 browser-compat: html.elements.marquee
 ---
 

@@ -2,11 +2,6 @@
 title: '<hr>: The Thematic Break (Horizontal Rule) element'
 slug: Web/HTML/Element/hr
 page-type: html-element
-tags:
-  - Element
-  - HTML
-  - HTML grouping content
-  - Reference
 browser-compat: html.elements.hr
 ---
 

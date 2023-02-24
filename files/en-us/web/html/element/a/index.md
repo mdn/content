@@ -2,18 +2,6 @@
 title: "<a>: The Anchor element"
 slug: Web/HTML/Element/a
 page-type: html-element
-tags:
-  - Content
-  - Element
-  - HTML
-  - HTML text-level semantics
-  - HTML:Flow content
-  - HTML:Interactive content
-  - HTML:Palpable Content
-  - HTML:Phrasing content
-  - Inline element
-  - Reference
-  - Web
 browser-compat: html.elements.a
 ---
 

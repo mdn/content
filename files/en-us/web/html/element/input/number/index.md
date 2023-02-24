@@ -2,16 +2,6 @@
 title: <input type="number">
 slug: Web/HTML/Element/input/number
 page-type: html-element
-tags:
-  - Element
-  - Forms
-  - HTML
-  - HTML forms
-  - Input
-  - Input Element
-  - Input Type
-  - Number
-  - Reference
 browser-compat: html.elements.input.type_number
 ---
 

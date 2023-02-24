@@ -2,20 +2,6 @@
 title: '<td>: The Table Data Cell element'
 slug: Web/HTML/Element/td
 page-type: html-element
-tags:
-  - Cells
-  - Data Cell
-  - Element
-  - HTML
-  - HTML tabular data
-  - Reference
-  - Table Cell
-  - Table Data
-  - Tables
-  - Web
-  - cell
-  - data
-  - td
 browser-compat: html.elements.td
 ---
 

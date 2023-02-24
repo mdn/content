@@ -2,13 +2,6 @@
 title: '<span>: The Content Span element'
 slug: Web/HTML/Element/span
 page-type: html-element
-tags:
-  - Element
-  - HTML
-  - HTML text-level semantics
-  - HTML:Flow content
-  - Reference
-  - Web
 browser-compat: html.elements.span
 ---
 

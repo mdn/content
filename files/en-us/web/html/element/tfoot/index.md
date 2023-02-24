@@ -2,13 +2,6 @@
 title: '<tfoot>: The Table Foot element'
 slug: Web/HTML/Element/tfoot
 page-type: html-element
-tags:
-  - Element
-  - HTML
-  - HTML tabular data
-  - Reference
-  - Tables
-  - Web
 browser-compat: html.elements.tfoot
 ---
 

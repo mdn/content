@@ -2,18 +2,6 @@
 title: '<strong>: The Strong Importance element'
 slug: Web/HTML/Element/strong
 page-type: html-element
-tags:
-  - Element
-  - HTML
-  - HTML text-level semantics
-  - HTML:Flow content
-  - HTML:Palpable Content
-  - HTML:Phrasing content
-  - Reference
-  - Strong Importance
-  - Urgency
-  - Web
-  - strong
 browser-compat: html.elements.strong
 ---
 

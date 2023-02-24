@@ -2,19 +2,6 @@
 title: <input type="password">
 slug: Web/HTML/Element/input/password
 page-type: html-element
-tags:
-  - Element
-  - Forms
-  - HTML
-  - HTML Input Types
-  - HTML Inputs
-  - HTML Password Input
-  - HTML forms
-  - HTML input tag
-  - Input Types
-  - Reference
-  - Web
-  - password
 browser-compat: html.elements.input.type_password
 ---
 

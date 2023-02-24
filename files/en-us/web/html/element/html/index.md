@@ -2,12 +2,6 @@
 title: '<html>: The HTML Document / Root element'
 slug: Web/HTML/Element/html
 page-type: html-element
-tags:
-  - Element
-  - HTML
-  - HTML Root Element
-  - Reference
-  - Web
 browser-compat: html.elements.html
 ---
 

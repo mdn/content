@@ -2,12 +2,6 @@
 title: '<ol>: The Ordered List element'
 slug: Web/HTML/Element/ol
 page-type: html-element
-tags:
-  - Element
-  - HTML
-  - HTML grouping content
-  - HTML:Flow content
-  - Reference
 browser-compat: html.elements.ol
 ---
 

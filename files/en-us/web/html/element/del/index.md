@@ -2,14 +2,6 @@
 title: '<del>: The Deleted Text element'
 slug: Web/HTML/Element/del
 page-type: html-element
-tags:
-  - Deleted Text
-  - Element
-  - HTML
-  - HTML edits
-  - Reference
-  - Web
-  - del
 browser-compat: html.elements.del
 ---
 

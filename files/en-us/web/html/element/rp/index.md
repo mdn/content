@@ -2,14 +2,6 @@
 title: '<rp>: The Ruby Fallback Parenthesis element'
 slug: Web/HTML/Element/rp
 page-type: html-element
-tags:
-  - Element
-  - HTML
-  - HTML text-level semantics
-  - Reference
-  - Ruby
-  - Text
-  - Web
 browser-compat: html.elements.rp
 ---
 

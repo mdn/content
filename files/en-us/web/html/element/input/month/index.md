@@ -2,20 +2,6 @@
 title: <input type="month">
 slug: Web/HTML/Element/input/month
 page-type: html-element
-tags:
-  - Date picker
-  - Element
-  - Form input
-  - Forms
-  - HTML
-  - HTML forms
-  - HTML input
-  - Input
-  - Input Element
-  - Input Type
-  - Number
-  - Reference
-  - month
 browser-compat: html.elements.input.type_month
 ---
 

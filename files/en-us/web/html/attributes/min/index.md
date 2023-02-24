@@ -2,13 +2,6 @@
 title: "HTML attribute: min"
 slug: Web/HTML/Attributes/min
 page-type: html-attribute
-tags:
-  - Attribute
-  - Attributes
-  - Constraint validation
-  - HTML
-  - min
-  - Reference
 browser-compat:
   - html.elements.input.min
   - html.elements.meter.min

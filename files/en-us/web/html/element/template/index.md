@@ -2,18 +2,6 @@
 title: '<template>: The Content Template element'
 slug: Web/HTML/Element/template
 page-type: html-element
-tags:
-  - Element
-  - HTML
-  - HTML Web Components
-  - HTML:Flow content
-  - HTML:Metadata content
-  - HTML:Phrasing content
-  - HTML:Script-supporting element
-  - Reference
-  - Template
-  - Web
-  - Web Components
 browser-compat: html.elements.template
 ---
 

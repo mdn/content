@@ -2,20 +2,6 @@
 title: '<abbr>: The Abbreviation element'
 slug: Web/HTML/Element/abbr
 page-type: html-element
-tags:
-  - Acronym
-  - Definitions
-  - Element
-  - HTML
-  - HTML text-level semantics
-  - HTML:Flow content
-  - HTML:Palpable Content
-  - HTML:Phrasing content
-  - Reference
-  - Web
-  - abbr
-  - abbreviation
-  - semantics
 browser-compat: html.elements.abbr
 ---
 

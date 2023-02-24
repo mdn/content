@@ -2,20 +2,6 @@
 title: '<title>: The Document Title element'
 slug: Web/HTML/Element/title
 page-type: html-element
-tags:
-  - Element
-  - HTML
-  - HTML document metadata
-  - HTML:Metadata content
-  - Page Name
-  - Page Title
-  - Reference
-  - Tab Name
-  - Tab Title
-  - Title
-  - Web
-  - Window Name
-  - Window Title
 browser-compat: html.elements.title
 ---
 

@@ -2,11 +2,6 @@
 title: '<ul>: The Unordered List element'
 slug: Web/HTML/Element/ul
 page-type: html-element
-tags:
-  - Element
-  - HTML
-  - HTML grouping content
-  - Reference
 browser-compat: html.elements.ul
 ---
 

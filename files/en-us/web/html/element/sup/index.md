@@ -2,15 +2,6 @@
 title: '<sup>: The Superscript element'
 slug: Web/HTML/Element/sup
 page-type: html-element
-tags:
-  - Element
-  - HTML
-  - HTML text-level semantics
-  - HTML:Flow content
-  - HTML:Palpable Content
-  - HTML:Phrasing content
-  - Reference
-  - Web
 browser-compat: html.elements.sup
 ---
 

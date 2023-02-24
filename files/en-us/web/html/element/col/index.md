@@ -2,13 +2,6 @@
 title: '<col>: The Table Column element'
 slug: Web/HTML/Element/col
 page-type: html-element
-tags:
-  - Element
-  - HTML
-  - HTML tabular data
-  - Reference
-  - Tables
-  - Web
 browser-compat: html.elements.col
 ---
 

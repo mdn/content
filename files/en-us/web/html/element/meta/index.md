@@ -2,17 +2,6 @@
 title: '<meta>: The metadata element'
 slug: Web/HTML/Element/meta
 page-type: html-element
-tags:
-  - Document
-  - Element
-  - HTML
-  - HTML charset
-  - HTML document metadata
-  - Reference
-  - Web
-  - charset
-  - http-equiv
-  - metadata
 browser-compat: html.elements.meta
 ---
 

@@ -2,16 +2,6 @@
 title: '<tr>: The Table Row element'
 slug: Web/HTML/Element/tr
 page-type: html-element
-tags:
-  - Element
-  - HTML
-  - HTML tabular data
-  - Reference
-  - Tables
-  - Web
-  - tag
-  - tr
-  - tr tag
 browser-compat: html.elements.tr
 ---
 

@@ -2,16 +2,6 @@
 title: "<tbody>: The Table Body element"
 slug: Web/HTML/Element/tbody
 page-type: html-element
-tags:
-  - Element
-  - HTML
-  - HTML tabular data
-  - Reference
-  - Table Body
-  - Table Contents
-  - Tables
-  - Web
-  - tbody
 browser-compat: html.elements.tbody
 ---
 

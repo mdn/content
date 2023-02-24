@@ -2,16 +2,6 @@
 title: '<b>: The Bring Attention To element'
 slug: Web/HTML/Element/b
 page-type: html-element
-tags:
-  - Attention
-  - Element
-  - HTML
-  - HTML text-level semantics
-  - HTML:Flow content
-  - HTML:Palpable Content
-  - HTML:Phrasing content
-  - Reference
-  - Web
 browser-compat: html.elements.b
 ---
 

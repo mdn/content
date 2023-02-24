@@ -2,13 +2,6 @@
 title: "HTML attribute: rel"
 slug: Web/HTML/Attributes/rel
 page-type: html-attribute
-tags:
-  - Attribute
-  - Attributes
-  - Constraint validation
-  - Link
-  - form
-  - rel
 browser-compat:
   - html.elements.link.rel
   - html.elements.a.rel

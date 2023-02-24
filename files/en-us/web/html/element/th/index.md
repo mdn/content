@@ -2,20 +2,6 @@
 title: '<th>: The Table Header element'
 slug: Web/HTML/Element/th
 page-type: html-element
-tags:
-  - Element
-  - HTML
-  - HTML tabular data
-  - Heading Cell
-  - Reference
-  - Table Cell
-  - Table Head
-  - Table Header
-  - Table Heading
-  - Table Heading Cell
-  - Tables
-  - Web
-  - cell
 browser-compat: html.elements.th
 ---
 

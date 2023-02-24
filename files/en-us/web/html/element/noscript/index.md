@@ -2,12 +2,6 @@
 title: '<noscript>: The Noscript element'
 slug: Web/HTML/Element/noscript
 page-type: html-element
-tags:
-  - Element
-  - HTML
-  - HTML scripting
-  - Reference
-  - Web
 browser-compat: html.elements.noscript
 ---
 

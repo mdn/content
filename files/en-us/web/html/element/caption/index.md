@@ -2,17 +2,6 @@
 title: '<caption>: The Table Caption element'
 slug: Web/HTML/Element/caption
 page-type: html-element
-tags:
-  - Element
-  - HTML
-  - HTML Tables
-  - HTML tabular data
-  - Reference
-  - Table Captions
-  - Table Titles
-  - Tables
-  - Web
-  - caption
 browser-compat: html.elements.caption
 ---
 

@@ -2,15 +2,6 @@
 title: <input type="checkbox">
 slug: Web/HTML/Element/input/checkbox
 page-type: html-element
-tags:
-  - Element
-  - HTML
-  - HTML forms
-  - Input
-  - Input Types
-  - Reference
-  - checkbox
-  - form
 browser-compat: html.elements.input.type_checkbox
 ---
 

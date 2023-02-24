@@ -2,13 +2,6 @@
 title: '<output>: The Output element'
 slug: Web/HTML/Element/output
 page-type: html-element
-tags:
-  - Element
-  - HTML
-  - HTML forms
-  - HTML:Flow content
-  - Reference
-  - Web
 browser-compat: html.elements.output
 ---
 

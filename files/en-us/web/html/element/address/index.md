@@ -2,20 +2,6 @@
 title: '<address>: The Contact Address element'
 slug: Web/HTML/Element/address
 page-type: html-element
-tags:
-  - Address
-  - Author
-  - Contact
-  - Contact Information
-  - Element
-  - Email
-  - Email Address
-  - HTML
-  - HTML sections
-  - HTML:Flow content
-  - HTML:Palpable Content
-  - Reference
-  - Web
 browser-compat: html.elements.address
 ---
 

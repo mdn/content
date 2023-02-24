@@ -2,12 +2,6 @@
 title: '<object>: The External Object element'
 slug: Web/HTML/Element/object
 page-type: html-element
-tags:
-  - Element
-  - HTML
-  - HTML embedded content
-  - Reference
-  - Web
 browser-compat: html.elements.object
 ---
 

@@ -2,13 +2,6 @@
 title: '<fieldset>: The Field Set element'
 slug: Web/HTML/Element/fieldset
 page-type: html-element
-tags:
-  - Element
-  - Forms
-  - HTML
-  - HTML forms
-  - Reference
-  - Web
 browser-compat: html.elements.fieldset
 ---
 

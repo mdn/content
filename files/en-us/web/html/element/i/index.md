@@ -2,13 +2,6 @@
 title: '<i>: The Idiomatic Text element'
 slug: Web/HTML/Element/i
 page-type: html-element
-tags:
-  - Element
-  - HTML
-  - HTML text-level semantics
-  - Reference
-  - Web
-  - em
 browser-compat: html.elements.i
 ---
 

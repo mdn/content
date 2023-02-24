@@ -2,13 +2,6 @@
 title: '<legend>: The Field Set Legend element'
 slug: Web/HTML/Element/legend
 page-type: html-element
-tags:
-  - Element
-  - Forms
-  - HTML
-  - HTML forms
-  - Reference
-  - Web
 browser-compat: html.elements.legend
 ---
 

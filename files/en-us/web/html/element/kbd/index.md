@@ -2,20 +2,6 @@
 title: '<kbd>: The Keyboard Input element'
 slug: Web/HTML/Element/kbd
 page-type: html-element
-tags:
-  - Displaying Input
-  - Displaying Keys
-  - Displaying Keystrokes
-  - Displaying User Input
-  - Element
-  - HTML
-  - HTML text-level semantics
-  - Keyboard Input
-  - Keystroke
-  - Reference
-  - Web
-  - keyboard
-  - user input
 browser-compat: html.elements.kbd
 ---
 

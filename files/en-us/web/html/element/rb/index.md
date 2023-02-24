@@ -2,14 +2,8 @@
 title: '<rb>: The Ruby Base element'
 slug: Web/HTML/Element/rb
 page-type: html-element
-tags:
-  - Deprecated
-  - Element
-  - HTML
-  - Reference
-  - Ruby
-  - Text
-  - Web
+status:
+  - deprecated
 browser-compat: html.elements.rb
 ---
 

@@ -2,16 +2,6 @@
 title: '<div>: The Content Division element'
 slug: Web/HTML/Element/div
 page-type: html-element
-tags:
-  - Content Division
-  - Element
-  - HTML
-  - HTML grouping content
-  - HTML:Flow content
-  - Layout
-  - Reference
-  - Web
-  - div
 browser-compat: html.elements.div
 ---
 

@@ -2,12 +2,6 @@
 title: '<h1>–<h6>: The HTML Section Heading elements'
 slug: Web/HTML/Element/Heading_Elements
 page-type: html-element
-tags:
-  - Element
-  - HTML
-  - HTML sections
-  - Reference
-  - Web
 browser-compat: html.elements.h1
 ---
 

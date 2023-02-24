@@ -2,16 +2,6 @@
 title: '<picture>: The Picture element'
 slug: Web/HTML/Element/picture
 page-type: html-element
-tags:
-  - Element
-  - Graphics
-  - HTML
-  - HTML embedded content
-  - Images
-  - Reference
-  - Web
-  - WebP
-  - picture
 browser-compat: html.elements.picture
 ---
 

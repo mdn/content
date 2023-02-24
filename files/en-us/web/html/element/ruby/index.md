@@ -2,12 +2,6 @@
 title: '<ruby>: The Ruby Annotation element'
 slug: Web/HTML/Element/ruby
 page-type: html-element
-tags:
-  - Element
-  - HTML
-  - HTML text-level semantics
-  - Reference
-  - Web
 browser-compat: html.elements.ruby
 ---
 

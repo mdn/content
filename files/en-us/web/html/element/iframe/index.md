@@ -2,19 +2,6 @@
 title: '<iframe>: The Inline Frame element'
 slug: Web/HTML/Element/iframe
 page-type: html-element
-tags:
-  - Content
-  - Element
-  - Embedded content
-  - Embedding
-  - Frames
-  - HTML
-  - HTML embedded content
-  - Inline Frames
-  - Reference
-  - Web
-  - embedded
-  - iframe
 browser-compat: html.elements.iframe
 ---
 

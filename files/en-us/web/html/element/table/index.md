@@ -2,15 +2,6 @@
 title: "<table>: The Table element"
 slug: Web/HTML/Element/table
 page-type: html-element
-tags:
-  - Element
-  - HTML
-  - HTML tabular data
-  - NeedsLiveSample
-  - Reference
-  - Sorting
-  - Tables
-  - Web
 browser-compat: html.elements.table
 ---
 

@@ -2,13 +2,6 @@
 title: '<button>: The Button element'
 slug: Web/HTML/Element/button
 page-type: html-element
-tags:
-  - Element
-  - Forms
-  - HTML
-  - HTML forms
-  - Reference
-  - Web
 browser-compat: html.elements.button
 ---
 

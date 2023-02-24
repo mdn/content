@@ -2,13 +2,6 @@
 title: "HTML attribute: max"
 slug: Web/HTML/Attributes/max
 page-type: html-attribute
-tags:
-  - Attribute
-  - Attributes
-  - Constraint validation
-  - HTML
-  - max
-  - Reference
 browser-compat:
   - html.elements.input.max
   - html.elements.meter.max

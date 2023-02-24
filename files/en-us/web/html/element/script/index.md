@@ -2,18 +2,6 @@
 title: '<script>: The Script element'
 slug: Web/HTML/Element/script
 page-type: html-element
-tags:
-  - Element
-  - HTML
-  - HTML scripting
-  - HTML:Flow content
-  - HTML:Metadata content
-  - HTML:Phrasing content
-  - HTML:Script-supporting element
-  - Reference
-  - Script
-  - Web
-  - tag
 browser-compat: html.elements.script
 ---
 
