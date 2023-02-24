@@ -36,7 +36,7 @@ the direction given by `counterclockwise` (defaulting to clockwise).
 - `rotation`
   - : The rotation of the ellipse, expressed in radians.
 - `startAngle`
-  - : The eccentric angle at which the ellipse starts, measured clockwise from the positive x-axis
+  - : The [eccentric angle](https://www.simply.science/index.php/math/geometry/conic-sections/ellipse/10022-eccentric-angle-and-parametric-equations-of-an-ellipse) at which the ellipse starts, measured clockwise from the positive x-axis
     and expressed in radians.
 - `endAngle`
   - : The eccentric angle at which the ellipse ends, measured clockwise from the positive x-axis and
