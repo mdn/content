@@ -166,7 +166,7 @@ function updateDisplay() {
 
 ## Validation
 
-Checkboxes do support [validation](/en-US/docs/Web/Guide/HTML/Constraint_validation) (offered to all {{HTMLElement("input")}}s). However, most of the {{domxref("ValidityState")}}s will always be `false`. If the checkbox has the {{htmlattrxref("required", "input")}} attribute, but is not checked, then {{domxref("ValidityState.valueMissing")}} will be `true`.
+Checkboxes do support [validation](/en-US/docs/Web/HTML/Constraint_validation) (offered to all {{HTMLElement("input")}}s). However, most of the {{domxref("ValidityState")}}s will always be `false`. If the checkbox has the {{htmlattrxref("required", "input")}} attribute, but is not checked, then {{domxref("ValidityState.valueMissing")}} will be `true`.
 
 ## Examples
 

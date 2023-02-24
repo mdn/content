@@ -81,7 +81,7 @@ If the value exceeds the max value allowed, the {{domxref('validityState.rangeOv
 
 > **Note:** When the data entered by the user doesn't adhere to the maximum value set, the value is considered invalid in constraint validation and will match the {{cssxref(':invalid')}} and {{cssxref(':out-of-range')}} pseudo-classes.
 
-See [Client-side validation](/en-US/docs/Web/Guide/HTML/Constraint_validation) and {{domxref("ValidityState.rangeOverflow", "rangeOverflow")}} for more information.
+See [Client-side validation](/en-US/docs/Web/HTML/Constraint_validation) and {{domxref("ValidityState.rangeOverflow", "rangeOverflow")}} for more information.
 
 For the {{htmlelement('progress')}} element, the `max` attribute describes how much work the task indicated by the `progress` element requires. If present, must have a value greater than zero and be a valid floating point number. For the {{htmlelement('meter')}} element, the `max` attribute defines the upper numeric bound of the measured range. This must be greater than the minimum value ([`min`](/en-US/docs/Web/HTML/Attributes/min) attribute), if specified. In both cases, if omitted, the value defaults to 1.
 
@@ -139,7 +139,7 @@ Provide instructions to help users understand how to complete the form and use i
 - [`step`](/en-US/docs/Web/HTML/Attributes/step)
 - [`min`](/en-US/docs/Web/HTML/Attributes/min)
 - other meter attributes: [`low`](/en-US/docs/Web/HTML/Attributes/low), [`high`](/en-US/docs/Web/HTML/Attributes/high), [`optimum`](/en-US/docs/Web/HTML/Attributes/optimum)
-- [Constraint validation](/en-US/docs/Web/Guide/HTML/Constraint_validation)
+- [Constraint validation](/en-US/docs/Web/HTML/Constraint_validation)
 - [Form validation](/en-US/docs/Learn/Forms/Form_validation)
 - {{domxref('validityState.rangeOverflow')}}
 - {{cssxref(':out-of-range')}}

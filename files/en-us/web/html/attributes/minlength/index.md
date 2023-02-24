@@ -53,6 +53,6 @@ input:invalid:focus {
 - [`maxlength`](/en-US/docs/Web/HTML/Attributes/maxlength)
 - [`size`](/en-US/docs/Web/HTML/Attributes/size)
 - [`pattern`](/en-US/docs/Web/HTML/Attributes/pattern)
-- [Constraint validation](/en-US/docs/Web/Guide/HTML/Constraint_validation)
+- [Constraint validation](/en-US/docs/Web/HTML/Constraint_validation)
 - [Form validation](/en-US/docs/Learn/Forms/Form_validation)
 - {{htmlelement('input')}}
