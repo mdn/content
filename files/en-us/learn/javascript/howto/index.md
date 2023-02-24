@@ -1,10 +1,6 @@
 ---
 title: Solve common problems in your JavaScript code
 slug: Learn/JavaScript/Howto
-tags:
-  - Beginner
-  - JavaScript
-  - Learn
 ---
 
 {{LearnSidebar}}

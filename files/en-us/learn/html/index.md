@@ -1,13 +1,6 @@
 ---
 title: Structuring the web with HTML
 slug: Learn/HTML
-tags:
-  - Beginner
-  - Guide
-  - HTML
-  - Intro
-  - Learn
-  - Topic
 ---
 
 {{LearnSidebar}}

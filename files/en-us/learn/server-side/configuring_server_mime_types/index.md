@@ -1,12 +1,6 @@
 ---
 title: Properly configuring server MIME types
 slug: Learn/Server-side/Configuring_server_MIME_types
-tags:
-  - Apache
-  - HTTP
-  - MIME Types
-  - nginx
-  - server-side
 ---
 
 {{LearnSidebar}}

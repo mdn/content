@@ -1,16 +1,6 @@
 ---
 title: Structuring a page of content
 slug: Learn/HTML/Introduction_to_HTML/Structuring_a_page_of_content
-tags:
-  - Assessment
-  - Beginner
-  - CodingScripting
-  - Design
-  - HTML
-  - Layout
-  - Learn
-  - Structure
-  - semantics
 ---
 
 {{LearnSidebar}}{{PreviousMenu("Learn/HTML/Introduction_to_HTML/Marking_up_a_letter", "Learn/HTML/Introduction_to_HTML")}}

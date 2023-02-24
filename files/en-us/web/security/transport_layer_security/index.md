@@ -1,15 +1,6 @@
 ---
 title: Transport Layer Security
 slug: Web/Security/Transport_Layer_Security
-tags:
-  - Authentication
-  - Cryptography
-  - Data Integrity
-  - Encryption
-  - Guide
-  - SSL
-  - Security
-  - TLS
 ---
 
 {{QuickLinksWithSubpages("/en-US/docs/Web/Security")}}

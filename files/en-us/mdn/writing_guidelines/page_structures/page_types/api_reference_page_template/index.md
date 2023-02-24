@@ -2,9 +2,6 @@
 title: API reference page template
 slug: MDN/Writing_guidelines/Page_structures/Page_types/API_reference_page_template
 page-type: mdn-writing-guide
-tags:
-  - meta
-  - writing-guide
 browser-compat: path.to.feature.NameOfTheInterface
 ---
 

@@ -1,21 +1,6 @@
 ---
 title: Tools and testing
 slug: Learn/Tools_and_testing
-tags:
-  - Accessibility
-  - Automation
-  - Beginner
-  - CSS
-  - CodingScripting
-  - HTML
-  - JavaScript
-  - Landing
-  - Learn
-  - Testing
-  - Tools
-  - Topic
-  - cross browser
-  - user testing
 ---
 
 {{LearnSidebar}}

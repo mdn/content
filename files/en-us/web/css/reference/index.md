@@ -159,7 +159,6 @@ Combinators are selectors that establish a relationship between two or more simp
 
 - [Mozilla CSS extensions](/en-US/docs/Web/CSS/Mozilla_Extensions) (prefixed with `-moz-`)
 - [WebKit CSS extensions](/en-US/docs/Web/CSS/WebKit_Extensions) (mostly prefixed with `-webkit-`)
-- [Microsoft CSS extensions](/en-US/docs/Web/CSS/Microsoft_Extensions) (prefixed with `-ms-`)
 
 ## External Links
 

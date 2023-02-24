@@ -573,5 +573,4 @@ Properties: {{CSSxRef("width")}}, {{CSSxRef("min-width")}}, and {{CSSxRef("max-w
 ## See also
 
 - [Chrome-only CSS reference](/en-US/docs/Mozilla/Gecko/Chrome/CSS)
-- [Microsoft CSS extensions](/en-US/docs/Web/CSS/Microsoft_Extensions)
 - [WebKit CSS extensions](/en-US/docs/Web/CSS/WebKit_Extensions)

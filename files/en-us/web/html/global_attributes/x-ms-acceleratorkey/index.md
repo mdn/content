@@ -2,13 +2,8 @@
 title: x-ms-acceleratorkey
 slug: Web/HTML/Global_attributes/x-ms-acceleratorkey
 page-type: html-attribute
-tags:
-  - Attribute
-  - HTML
-  - HTML:Microsoft Extensions
-  - Non-standard
-  - Reference
-  - x-ms-acceleratorkey
+status:
+  - non-standard
 ---
 
 {{HTMLSidebar("Global_attributes")}}{{Non-standard_Header}}
@@ -52,5 +47,4 @@ The accelerator key combination. For example:
 ## See also
 
 - [The global `accesskey` attribute](/en-US/docs/Web/HTML/Global_attributes/accesskey)
-- [The `-ms-accelerator` CSS property](/en-US/docs/Web/CSS/-ms-accelerator)
 - [Microsoft API extensions](/en-US/docs/Web/API/Microsoft_Extensions)

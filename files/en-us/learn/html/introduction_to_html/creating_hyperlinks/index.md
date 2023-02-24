@@ -1,20 +1,6 @@
 ---
 title: Creating hyperlinks
 slug: Learn/HTML/Introduction_to_HTML/Creating_hyperlinks
-tags:
-  - Beginner
-  - CodingScripting
-  - Guide
-  - HTML
-  - HTTP
-  - Learn
-  - Links
-  - Title
-  - absolute
-  - href
-  - hyperlinks
-  - relative
-  - urls
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals", "Learn/HTML/Introduction_to_HTML/Advanced_text_formatting", "Learn/HTML/Introduction_to_HTML")}}

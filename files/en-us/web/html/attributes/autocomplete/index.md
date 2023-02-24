@@ -2,22 +2,6 @@
 title: 'HTML attribute: autocomplete'
 slug: Web/HTML/Attributes/autocomplete
 page-type: html-attribute
-tags:
-  - Addresses
-  - Attribute
-  - Email addresses
-  - Forms
-  - HTML
-  - Input
-  - Phone Numbers
-  - Reference
-  - Select
-  - Text
-  - Usernames
-  - autocomplete
-  - form
-  - passwords
-  - textarea
 browser-compat: html.global_attributes.autocomplete
 ---
 

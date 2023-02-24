@@ -1,20 +1,6 @@
 ---
 title: Basic math in JavaScript — numbers and operators
 slug: Learn/JavaScript/First_steps/Math
-tags:
-  - Article
-  - Beginner
-  - CodingScripting
-  - Guide
-  - JavaScript
-  - Learn
-  - Math
-  - Operators
-  - augmented
-  - increment
-  - "l10n:priority"
-  - maths
-  - modulo
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/First_steps/Variables", "Learn/JavaScript/First_steps/Strings", "Learn/JavaScript/First_steps")}}

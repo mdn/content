@@ -1,12 +1,6 @@
 ---
 title: Graphic design for responsive sites
 slug: Web/Progressive_web_apps/Responsive/Graphics_for_responsive_sites
-tags:
-  - CSS
-  - Graphics
-  - JavaScript
-  - SVG
-  - WebGL
 ---
 
 In 1996, many people involved in building the Web would have laughed at you if you had told them that less than 20 years in the future we would be developing websites that worked well on mobile phones, tablets, TVs, even cars and home lighting. But today it is very much a reality. This article provides a high level discussion aimed at helping you to choose the best option for your graphical needs.

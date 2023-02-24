@@ -1,11 +1,6 @@
 ---
 title: How do I start to design my website?
 slug: Learn/Common_questions/Design_and_accessibility/Thinking_before_coding
-tags:
-  - Beginner
-  - Composing
-  - NeedsActiveLearning
-  - needsSchema
 ---
 
 {{QuicklinksWithSubPages("Learn/Common_questions")}}

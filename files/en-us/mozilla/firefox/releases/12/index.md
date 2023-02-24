@@ -1,11 +1,6 @@
 ---
 title: Firefox 12 for developers
 slug: Mozilla/Firefox/Releases/12
-tags:
-  - Firefox
-  - Firefox 12
-  - Gecko 12
-  - Web Development
 ---
 
 {{FirefoxSidebar}}

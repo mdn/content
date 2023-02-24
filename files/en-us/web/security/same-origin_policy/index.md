@@ -1,15 +1,6 @@
 ---
 title: Same-origin policy
 slug: Web/Security/Same-origin_policy
-tags:
-  - CORS
-  - Host
-  - JavaScript
-  - Same-origin policy
-  - Security
-  - URL
-  - origin
-  - secure
 ---
 
 {{QuickLinksWithSubpages("/en-US/docs/Web/Security")}}
@@ -138,7 +129,7 @@ The following cross-origin access to `Location` properties is allowed:
 
 | Attributes                   |             |
 | ---------------------------- | ----------- |
-| {{domxref("URLUtils.href")}} | Write-only. |
+| {{domxref("location.href")}} | Write-only. |
 
 Some browsers allow access to more properties than the above.
 

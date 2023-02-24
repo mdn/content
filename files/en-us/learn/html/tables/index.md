@@ -1,18 +1,6 @@
 ---
 title: HTML tables
 slug: Learn/HTML/Tables
-tags:
-  - <td>
-  - <th>
-  - <tr>
-  - Article
-  - Beginner
-  - CodingScripting
-  - Guide
-  - HTML
-  - Landing
-  - Module
-  - Tables
 ---
 
 {{LearnSidebar}}

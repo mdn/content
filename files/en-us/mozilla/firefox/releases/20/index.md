@@ -1,11 +1,6 @@
 ---
 title: Firefox 20 for developers
 slug: Mozilla/Firefox/Releases/20
-tags:
-  - Firefox
-  - Firefox 20
-  - Gecko
-  - Mozilla
 ---
 
 {{FirefoxSidebar}}

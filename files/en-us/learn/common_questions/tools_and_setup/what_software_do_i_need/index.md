@@ -1,10 +1,6 @@
 ---
 title: What software do I need to build a website?
 slug: Learn/Common_questions/Tools_and_setup/What_software_do_I_need
-tags:
-  - Beginner
-  - NeedsActiveLearning
-  - WebMechanics
 ---
 
 {{QuicklinksWithSubPages("Learn/Common_questions")}}

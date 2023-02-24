@@ -1,11 +1,6 @@
 ---
 title: Firefox 109 for developers
 slug: Mozilla/Firefox/Releases/109
-tags:
-  - "109"
-  - Firefox
-  - Mozilla
-  - Release
 ---
 
 {{FirefoxSidebar}}

@@ -1,20 +1,6 @@
 ---
 title: Useful string methods
 slug: Learn/JavaScript/First_steps/Useful_string_methods
-tags:
-  - Article
-  - Beginner
-  - CodingScripting
-  - JavaScript
-  - Learn
-  - case
-  - indexOf
-  - "l10n:priority"
-  - length
-  - lower
-  - replace
-  - split
-  - upper
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/First_steps/Strings", "Learn/JavaScript/First_steps/Arrays", "Learn/JavaScript/First_steps")}}

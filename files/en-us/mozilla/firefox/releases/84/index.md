@@ -1,11 +1,6 @@
 ---
 title: Firefox 84 for developers
 slug: Mozilla/Firefox/Releases/84
-tags:
-  - "84"
-  - Firefox
-  - Mozilla
-  - Release
 ---
 
 {{FirefoxSidebar}}

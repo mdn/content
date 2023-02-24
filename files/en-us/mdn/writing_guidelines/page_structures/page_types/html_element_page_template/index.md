@@ -2,9 +2,6 @@
 title: HTML element page template
 slug: MDN/Writing_guidelines/Page_structures/Page_types/HTML_element_page_template
 page-type: mdn-writing-guide
-tags:
-  - meta
-  - writing-guide
 browser-compat: path.to.feature.NameOfTheElement
 ---
 
@@ -148,7 +145,7 @@ Optionally, warn of any potential accessibility concerns that exist with using t
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories"
+        <a href="/en-US/docs/Web/HTML/Content_categories"
           >Content categories</a
         >
       </th>
@@ -171,7 +168,7 @@ Optionally, warn of any potential accessibility concerns that exist with using t
       <td>
         What parent elements can the element be a child of? For example "Any
         element that accepts
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
           >flow content</a
         >."
       </td>
