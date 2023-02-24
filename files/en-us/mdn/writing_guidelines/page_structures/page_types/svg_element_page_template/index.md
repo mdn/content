@@ -2,9 +2,6 @@
 title: SVG element page template
 slug: MDN/Writing_guidelines/Page_structures/Page_types/SVG_element_page_template
 page-type: mdn-writing-guide
-tags:
-  - meta
-  - writing-guide
 browser-compat: path.to.feature.NameOfTheElement
 ---
 

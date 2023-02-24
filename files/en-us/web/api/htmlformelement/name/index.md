@@ -12,8 +12,6 @@ the current {{HtmlElement("form")}} element as a string.
 
 If your {{HTMLElement("Form")}} element contains an element named _name_ then
 that element overrides the `form.name` property, so that you can't access it.
-Internet Explorer (IE) does not allow the name attribute of an element created using
-`createElement()` to be set or modified using the `name` property.
 
 ## Value
 

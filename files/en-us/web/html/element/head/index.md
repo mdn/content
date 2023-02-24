@@ -2,13 +2,6 @@
 title: '<head>: The Document Metadata (Header) element'
 slug: Web/HTML/Element/head
 page-type: html-element
-tags:
-  - Element
-  - HTML
-  - HTML document metadata
-  - HTML:Metadata content
-  - Reference
-  - Web
 browser-compat: html.elements.head
 ---
 
@@ -44,7 +37,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories"
+        <a href="/en-US/docs/Web/HTML/Content_categories"
           >Content categories</a
         >
       </th>

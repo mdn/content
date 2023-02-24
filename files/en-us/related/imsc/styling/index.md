@@ -1,12 +1,6 @@
 ---
 title: Styling IMSC documents
 slug: Related/IMSC/Styling
-tags:
-  - Guide
-  - IMSC
-  - Styling
-  - captions
-  - subtitles
 ---
 
 IMSC offers many options for styling documents, and most of the IMSC styling properties have direct CSS equivalents, making them familiar to web developers. In this guide you'll learn a bit more about IMSC styling including the difference between inline and referential styling, and efficient styling using inheritance and region styling.

@@ -1,12 +1,6 @@
 ---
 title: Progressive loading
 slug: Web/Progressive_web_apps/Loading
-tags:
-  - Loading
-  - PWAs
-  - Progressive web apps
-  - js13kGames
-  - progressive
 ---
 
 {{PreviousMenu("Web/Progressive_web_apps/Re-engageable_Notifications_Push", "Web/Progressive_web_apps")}}

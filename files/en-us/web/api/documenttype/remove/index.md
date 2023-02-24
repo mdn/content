@@ -9,12 +9,6 @@ browser-compat: api.DocumentType.remove
 
 The **`DocumentType.remove()`** method removes a document's `doctype`.
 
-> **Note:** Removing the document's doctype will set the rendering mode to
-> [quirks mode](/en-US/docs/Web/HTML/Quirks_Mode_and_Standards_Mode)!
-> Please don't do this. Willfully designing for quirks mode is not going to help you.
-> If you need to work around issues with old Internet Explorer browsers, you might want to look into using
-> [conditional comments](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS#ie_conditional_comments), or other workarounds.
-
 ## Syntax
 
 ```js-nolint

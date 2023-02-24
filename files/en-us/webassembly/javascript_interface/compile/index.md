@@ -1,14 +1,6 @@
 ---
 title: WebAssembly.compile()
 slug: WebAssembly/JavaScript_interface/compile
-tags:
-  - API
-  - JavaScript
-  - Method
-  - Object
-  - Reference
-  - WebAssembly
-  - compile
 browser-compat: javascript.builtins.WebAssembly.compile
 ---
 

@@ -1,10 +1,6 @@
 ---
 title: Firefox 5 for developers
 slug: Mozilla/Firefox/Releases/5
-tags:
-  - Firefox
-  - Firefox 5
-  - Gecko 5.0
 ---
 
 {{FirefoxSidebar}}

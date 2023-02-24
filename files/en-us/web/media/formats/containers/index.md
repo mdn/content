@@ -1,17 +1,6 @@
 ---
 title: Media container formats (file types)
 slug: Web/Media/Formats/Containers
-tags:
-  - Audio
-  - Containers
-  - File
-  - Filetypes
-  - Guide
-  - MIME Types
-  - MIMETypes
-  - Media
-  - Video
-  - formats
 ---
 
 {{QuickLinksWithSubpages("/en-US/docs/Web/Media")}}

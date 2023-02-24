@@ -1,9 +1,6 @@
 ---
 title: substring-before
 slug: Web/XPath/Functions/substring-before
-tags:
-  - XSLT
-  - XSLT_Reference
 ---
 
 {{ XsltRef() }}

@@ -2,18 +2,6 @@
 title: "<a>: The Anchor element"
 slug: Web/HTML/Element/a
 page-type: html-element
-tags:
-  - Content
-  - Element
-  - HTML
-  - HTML text-level semantics
-  - HTML:Flow content
-  - HTML:Interactive content
-  - HTML:Palpable Content
-  - HTML:Phrasing content
-  - Inline element
-  - Reference
-  - Web
 browser-compat: html.elements.a
 ---
 
@@ -398,19 +386,19 @@ Spacing may be created using CSS properties like {{CSSxRef("margin")}}.
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories"
+        <a href="/en-US/docs/Web/HTML/Content_categories"
           >Content categories</a
         >
       </th>
       <td>
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
           >Flow content</a
         >,
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content"
           >phrasing content</a
         >,
         <a
-          href="/en-US/docs/Web/Guide/HTML/Content_categories#interactive_content"
+          href="/en-US/docs/Web/HTML/Content_categories#interactive_content"
           >interactive content</a
         >, palpable content.
       </td>
@@ -419,11 +407,11 @@ Spacing may be created using CSS properties like {{CSSxRef("margin")}}.
       <th scope="row">Permitted content</th>
       <td>
         <a
-          href="/en-US/docs/Web/Guide/HTML/Content_categories#transparent_content_model"
+          href="/en-US/docs/Web/HTML/Content_categories#transparent_content_model"
           >Transparent</a
         >, except that no descendant may be
         <a
-          href="/en-US/docs/Web/Guide/HTML/Content_categories#interactive_content"
+          href="/en-US/docs/Web/HTML/Content_categories#interactive_content"
           >interactive content</a
         > or an
         <a href="/en-US/docs/Web/HTML/Element/a"
@@ -443,10 +431,10 @@ Spacing may be created using CSS properties like {{CSSxRef("margin")}}.
       <th scope="row">Permitted parents</th>
       <td>
         Any element that accepts
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content"
           >phrasing content</a
         >, or any element that accepts
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
           >flow content</a
         >, but not other <code>&#x3C;a></code> elements.
       </td>

@@ -53,12 +53,6 @@ important differences:
     {{glossary("reflow")}} to ensure up-to-date computed styles. (Reflows can
     be computationally expensive, and thus should be avoided when possible.)
 
-- Both `textContent` and `innerText` remove child nodes when altered,
-  but altering `innerText` in Internet Explorer (version 11 and below) also
-  _permanently destroys_ all descendant text nodes. It is impossible to
-  insert the nodes again into any other element or into the same element after doing
-  so.
-
 ### Differences from innerHTML
 
 {{domxref("Element.innerHTML")}} returns HTML, as its name indicates. Sometimes people

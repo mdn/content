@@ -1,15 +1,6 @@
 ---
 title: The box model
 slug: Learn/CSS/Building_blocks/The_box_model
-tags:
-  - Beginner
-  - CSS
-  - Learn
-  - border
-  - box model
-  - display
-  - margin
-  - padding
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Cascade_layers", "Learn/CSS/Building_blocks/Backgrounds_and_borders", "Learn/CSS/Building_blocks")}}
@@ -195,8 +186,6 @@ html {
 ```
 
 To understand the underlying idea, you can read [the CSS Tricks article on box-sizing](https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/).
-
-> **Note:** An interesting bit of history — Internet Explorer used to default to the alternative box model, with no mechanism available to switch.
 
 ## Playing with box models
 

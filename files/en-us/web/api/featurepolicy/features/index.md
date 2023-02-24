@@ -36,14 +36,14 @@ The following example logs all the supported directives in the console.
 
 ```js
 // Get the FeaturePolicy object
-const featurePolicy = document.featurePolicy
+const featurePolicy = document.featurePolicy;
 
 // Retrieve the list of all supported Permissions Policy directives
-const supportedDirectives = featurePolicy.features()
+const supportedDirectives = featurePolicy.features();
 
 // Print out each directive into the console
-for (const directive of supportedDirectives){
-  console.log(directive)
+for (const directive of supportedDirectives) {
+  console.log(directive);
 }
 ```
 

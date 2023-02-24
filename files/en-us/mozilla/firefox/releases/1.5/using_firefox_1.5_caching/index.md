@@ -1,13 +1,6 @@
 ---
 title: Using Firefox 1.5 caching
 slug: Mozilla/Firefox/Releases/1.5/Using_Firefox_1.5_caching
-tags:
-  - Add-ons
-  - DOM
-  - Extensions
-  - HTML
-  - JavaScript
-  - Web Development
 ---
 
 {{FirefoxSidebar}}

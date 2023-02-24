@@ -1,16 +1,6 @@
 ---
 title: Your first form
 slug: Learn/Forms/Your_first_form
-tags:
-  - Beginner
-  - CSS
-  - CodingScripting
-  - Example
-  - Forms
-  - Guide
-  - HTML
-  - Learn
-  - Web
 ---
 
 {{LearnSidebar}}{{NextMenu("Learn/Forms/How_to_structure_a_web_form", "Learn/Forms")}}

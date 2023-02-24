@@ -1,15 +1,6 @@
 ---
 title: "ARIA: menubar role"
 slug: Web/Accessibility/ARIA/Roles/menubar_role
-tags:
-  - Accessibility
-  - ARIA
-  - roles
-  - Reference
-  - ARIA roles
-  - menubar role
-  - composite widget role
-  - menubar
 spec-urls:
   - https://w3c.github.io/aria/#menubar
   - https://w3c.github.io/aria-practices/#menu

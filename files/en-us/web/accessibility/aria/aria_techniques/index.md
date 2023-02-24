@@ -1,11 +1,6 @@
 ---
 title: "Using ARIA: Roles, states, and properties"
 slug: Web/Accessibility/ARIA/ARIA_Techniques
-tags:
-  - ARIA
-  - Accessibility
-  - Overview
-  - Reference
 ---
 
 <section id="Quick_links">

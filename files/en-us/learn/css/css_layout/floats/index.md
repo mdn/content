@@ -1,17 +1,6 @@
 ---
 title: Floats
 slug: Learn/CSS/CSS_layout/Floats
-tags:
-  - Article
-  - Beginner
-  - CSS
-  - Clearing
-  - CodingScripting
-  - Floats
-  - Guide
-  - Layout
-  - columns
-  - multi-column
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/CSS_layout/Grids", "Learn/CSS/CSS_layout/Positioning", "Learn/CSS/CSS_layout")}}

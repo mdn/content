@@ -1,18 +1,6 @@
 ---
 title: Understanding WebAssembly text format
 slug: WebAssembly/Understanding_the_text_format
-tags:
-  - Functions
-  - JavaScript
-  - S-expressions
-  - WebAssembly
-  - calls
-  - memory
-  - shared address
-  - table
-  - text format
-  - was
-  - wasm
 ---
 
 {{WebAssemblySidebar}}

@@ -1,18 +1,6 @@
 ---
-title: 'Django Tutorial Part 7: Sessions framework'
+title: "Django Tutorial Part 7: Sessions framework"
 slug: Learn/Server-side/Django/Sessions
-tags:
-  - Article
-  - Beginner
-  - CodingScripting
-  - Learn
-  - Python
-  - Server
-  - Tutorial
-  - django
-  - django sessions
-  - server-side
-  - sessions
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Generic_views", "Learn/Server-side/Django/authentication_and_sessions", "Learn/Server-side/Django")}}

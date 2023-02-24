@@ -1,11 +1,6 @@
 ---
 title: Firefox 90 for developers
 slug: Mozilla/Firefox/Releases/90
-tags:
-  - "90"
-  - Firefox
-  - Mozilla
-  - Release
 ---
 
 {{FirefoxSidebar}}

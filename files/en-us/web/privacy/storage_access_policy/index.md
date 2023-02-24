@@ -1,10 +1,6 @@
 ---
 title: "Storage access policy: Block cookies from trackers"
 slug: Web/Privacy/Storage_Access_Policy
-tags:
-  - Privacy
-  - storage access policy
-  - tracking protection
 ---
 
 {{QuicklinksWithSubPages("Web/Privacy")}}

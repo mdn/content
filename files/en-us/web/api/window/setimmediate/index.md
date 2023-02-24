@@ -48,8 +48,6 @@ This method can be used instead of the `setTimeout(fn, 0)` method to execute
 The feature can be emulated in a few different ways:
 
 - {{DOMxRef("Window.postMessage", "postMessage")}} can be used to trigger an immediate but yielding callback.
-  Do note that Internet Explorer 8 includes a synchronous version of
-  `postMessage`, which means it cannot be used as a fallback.
 - {{DOMxRef("MessageChannel")}} can be used reliably inside of Web Workers whereas the
   semantics of postMessage mean it cannot be used there.
 - `setTimeout(fn, 0)` _can_ potentially be used, however as it is

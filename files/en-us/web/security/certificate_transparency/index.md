@@ -1,9 +1,6 @@
 ---
 title: Certificate Transparency
 slug: Web/Security/Certificate_Transparency
-tags:
-  - Security
-  - Web
 ---
 
 {{QuickLinksWithSubpages("/en-US/docs/Web/Security")}}

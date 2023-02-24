@@ -61,7 +61,7 @@ curl -X OPTIONS https://example.org -i
 The response then contains an {{HTTPHeader("Allow")}} header that holds the allowed methods:
 
 ```http
-HTTP/1.1 200 No Content
+HTTP/1.1 204 No Content
 Allow: OPTIONS, GET, HEAD, POST
 Cache-Control: max-age=604800
 Date: Thu, 13 Oct 2016 11:45:00 GMT

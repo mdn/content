@@ -1,19 +1,6 @@
 ---
 title: A first splash into JavaScript
 slug: Learn/JavaScript/First_steps/A_first_splash
-tags:
-  - Article
-  - Beginner
-  - CodingScripting
-  - Conditionals
-  - Functions
-  - JavaScript
-  - Learn
-  - Objects
-  - Operators
-  - Variables
-  - events
-  - "l10n:priority"
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/First_steps/What_is_JavaScript", "Learn/JavaScript/First_steps/What_went_wrong", "Learn/JavaScript/First_steps")}}

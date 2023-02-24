@@ -1,13 +1,6 @@
 ---
-title: "aria-label"
+title: aria-label
 slug: Web/Accessibility/ARIA/Attributes/aria-label
-tags:
-  - Accessibility
-  - ARIA
-  - ARIA attribute
-  - ARIA property
-  - aria-label
-  - Reference
 spec-urls: https://w3c.github.io/aria/#aria-label
 ---
 

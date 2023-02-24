@@ -1,20 +1,6 @@
 ---
 title: Operable
 slug: Web/Accessibility/Understanding_WCAG/Operable
-tags:
-  - Accessibility
-  - Focus
-  - Navigation
-  - Principle 2
-  - Timing
-  - WCAG
-  - Web Content Accessibility Guidelines
-  - headings
-  - keyboard
-  - keyboard trap
-  - labels
-  - operable
-  - seizures
 ---
 
 {{QuicklinksWithSubPages("Web/Accessibility/Understanding_WCAG")}}

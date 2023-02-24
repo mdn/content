@@ -1,12 +1,6 @@
 ---
 title: Navigation and resource timings
 slug: Web/Performance/Navigation_and_resource_timings
-tags:
-  - Navigation Timing
-  - Resource Timing
-  - Timings
-  - Web Performance
-  - performance APIs
 ---
 
 {{QuickLinksWithSubPages("Web/Performance")}}

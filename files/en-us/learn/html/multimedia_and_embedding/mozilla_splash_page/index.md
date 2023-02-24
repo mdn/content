@@ -1,24 +1,6 @@
 ---
 title: Mozilla splash page
 slug: Learn/HTML/Multimedia_and_embedding/Mozilla_splash_page
-tags:
-  - Assessment
-  - Beginner
-  - CodingScripting
-  - Embedding
-  - HTML
-  - Images
-  - JPEG
-  - Multimedia
-  - PNG
-  - Video
-  - iframe
-  - img
-  - picture
-  - responsive
-  - sizes
-  - src
-  - srcset
 ---
 
 {{LearnSidebar}}{{PreviousMenu("Learn/HTML/Multimedia_and_embedding/Responsive_images", "Learn/HTML/Multimedia_and_embedding")}}

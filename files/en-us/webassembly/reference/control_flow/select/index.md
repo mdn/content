@@ -1,11 +1,6 @@
 ---
 title: Select
 slug: WebAssembly/Reference/Control_flow/Select
-tags:
-  - WebAssembly
-  - wasm
-  - Reference
-  - Control flow
 ---
 
 {{WebAssemblySidebar}}

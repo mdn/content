@@ -2,13 +2,6 @@
 title: '<colgroup>: The Table Column Group element'
 slug: Web/HTML/Element/colgroup
 page-type: html-element
-tags:
-  - Element
-  - HTML
-  - HTML tabular data
-  - Reference
-  - Tables
-  - Web
 browser-compat: html.elements.colgroup
 ---
 
@@ -85,7 +78,7 @@ Please see the {{HTMLElement("table")}} page for examples on `<colgroup>`.
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories"
+        <a href="/en-US/docs/Web/HTML/Content_categories"
           >Content categories</a
         >
       </th>

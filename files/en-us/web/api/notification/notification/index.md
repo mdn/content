@@ -115,12 +115,6 @@ Chrome for Android will throw a {{jsxref("TypeError")}} when calling the
 notifications from a service worker. See the
 [Chromium issue tracker](https://bugs.chromium.org/p/chromium/issues/detail?id=481856) for more details.
 
-### Internet Explorer notes
-
-Version 38.14352 and higher of MS Edge Notification API is supported. [Wikipedia - MS Edge](https://en.wikipedia.org/wiki/Microsoft_Edge#Release_history)
-
-IE 11 and lower isn't supported.
-
 ## See also
 
 - [Using the Notifications API](/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API)

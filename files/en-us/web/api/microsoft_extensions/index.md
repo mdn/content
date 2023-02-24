@@ -60,8 +60,6 @@ Microsoft browsers (Internet Explorer, and in a few cases, Microsoft Edge) suppo
 ## Other APIs
 
 - [`x-ms-aria-flowfrom`](/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/x-ms-aria-flowfrom)
-- [`x-ms-acceleratorkey`](/en-US/docs/Web/HTML/Global_attributes/x-ms-acceleratorkey)
-- [`x-ms-format-detection`](/en-US/docs/Web/HTML/Global_attributes/x-ms-format-detection)
 - {{DOMxRef("msCaching")}}
 - {{DOMxRef("msCachingEnabled")}}
 - {{DOMxRef("msCapsLockWarningOff")}}

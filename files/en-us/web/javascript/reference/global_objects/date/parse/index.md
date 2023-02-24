@@ -213,10 +213,9 @@ provided.
 
 ### Compatibility notes
 
-- Firefox 49 changed the parsing of 2-digit years to be aligned with the Google Chrome
-  browser instead of Internet Explorer. Now, 2-digit years that are less than
-  `50` are parsed as 21st century years. For example,
-  `04/16/17`, previously parsed as April 16, 1917, will be April 16, 2017
+- Firefox 49 changed the parsing of 2-digit years to be aligned with Google Chrome.
+  Now, 2-digit years that are less than `50` are parsed as 21st century years. For
+  example, `04/16/17`, previously parsed as April 16, 1917, will be April 16, 2017
   now. To avoid any interoperability issues or ambiguous years, it is recommended to use
   the ISO 8601 format like `"2017-04-16"` ([bug 1265136](https://bugzilla.mozilla.org/show_bug.cgi?id=1265136)).
 - Google Chrome will accept a numerical string as a valid
