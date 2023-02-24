@@ -1,10 +1,6 @@
 ---
 title: Event reference
 slug: Web/Events
-tags:
-  - Event
-  - Overview
-  - Reference
 spec-urls: https://html.spec.whatwg.org/multipage/indices.html#events-2
 ---
 

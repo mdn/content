@@ -1,15 +1,6 @@
 ---
 title: Codecs used by WebRTC
 slug: Web/Media/Formats/WebRTC_codecs
-tags:
-  - Audio
-  - Codecs
-  - Guide
-  - Intermediate
-  - Media
-  - Video
-  - WebRTC
-  - WebRTC API
 ---
 
 {{QuickLinksWithSubpages("/en-US/docs/Web/Media")}}

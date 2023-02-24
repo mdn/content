@@ -1,10 +1,6 @@
 ---
 title: Web security
 slug: Web/Security
-tags:
-  - Landing
-  - Security
-  - Web
 ---
 
 {{QuickLinksWithSubpages}}

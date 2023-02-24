@@ -1,9 +1,6 @@
 ---
 title: Mobile Web Development
 slug: Web/Guide/Mobile
-tags:
-  - Intermediate
-  - NeedsExample
 ---
 
 <section id="Quick_links">
