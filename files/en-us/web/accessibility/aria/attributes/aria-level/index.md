@@ -1,13 +1,6 @@
 ---
-title: "aria-level"
+title: aria-level
 slug: Web/Accessibility/ARIA/Attributes/aria-level
-tags:
-  - Accessibility
-  - ARIA
-  - ARIA attribute
-  - ARIA property
-  - aria-level
-  - Reference
 spec-urls: https://w3c.github.io/aria/#aria-level
 ---
 

@@ -1,13 +1,6 @@
 ---
 title: "ARIA: roletype role"
 slug: Web/Accessibility/ARIA/Roles/roletype_role
-tags:
-  - roletype
-  - Accessibility
-  - ARIA
-  - roles
-  - Reference
-  - ARIA roles
 spec-urls: https://w3c.github.io/aria/#roletype
 ---
 

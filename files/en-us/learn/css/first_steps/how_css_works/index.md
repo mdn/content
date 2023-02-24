@@ -1,11 +1,6 @@
 ---
 title: How CSS works
 slug: Learn/CSS/First_steps/How_CSS_works
-tags:
-  - Beginner
-  - CSS
-  - DOM
-  - Learn
 ---
 
 {{LearnSidebar}}

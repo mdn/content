@@ -1,15 +1,6 @@
 ---
 title: Firefox 3.6 for developers
 slug: Mozilla/Firefox/Releases/3.6
-tags:
-  - CSS
-  - Firefox
-  - Gecko
-  - Gecko 1.9.2
-  - HTML
-  - JavaScript
-  - Namoroka
-  - XUL
 ---
 
 {{FirefoxSidebar}}

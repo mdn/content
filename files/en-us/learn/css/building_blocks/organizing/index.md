@@ -1,18 +1,6 @@
 ---
 title: Organizing your CSS
 slug: Learn/CSS/Building_blocks/Organizing
-tags:
-  - Beginner
-  - CSS
-  - CodingScripting
-  - Learn
-  - comments
-  - formatting
-  - methodologies
-  - organizing
-  - post-processor
-  - pre-processor
-  - styleguide
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Debugging_CSS", "Learn/CSS/Building_blocks/Fundamental_CSS_comprehension", "Learn/CSS/Building_blocks")}}

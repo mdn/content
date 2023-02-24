@@ -31,7 +31,7 @@ getElementsByTagNameNS(namespace, name)
 A live {{DOMxRef("NodeList")}} (but see the note below) of
 found elements in the order they appear in the tree.
 
-> **Note:** While the W3C specification says returned value is a `NodeList`, this method returns a {{DOMxRef("HTMLCollection")}} both in Gecko and Internet Explorer.
+> **Note:** While the W3C specification says returned value is a `NodeList`, this method returns a {{DOMxRef("HTMLCollection")}} in Firefox.
 > Opera returns a `NodeList`, but with a `namedItem` method implemented, which makes it similar to a `HTMLCollection`. As of January 2012, only in WebKit browsers is the returned value a pure `NodeList`.
 > See [bug 14869](https://bugzilla.mozilla.org/show_bug.cgi?id=14869) for details.
 

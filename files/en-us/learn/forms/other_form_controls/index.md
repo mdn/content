@@ -1,15 +1,6 @@
 ---
 title: Other form controls
 slug: Learn/Forms/Other_form_controls
-tags:
-  - Beginner
-  - Controls
-  - Example
-  - Forms
-  - Guide
-  - HTML
-  - Web
-  - Widgets
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Forms/HTML5_input_types","Learn/Forms/Styling_web_forms", "Learn/Forms")}}
@@ -302,7 +293,7 @@ Such a bar is created by using the {{HTMLElement("meter")}} element. This is for
 
 The content inside the {{HTMLElement("meter")}} element is a fallback for browsers that don't support the element and for assistive technologies to vocalize it.
 
-Support for {{HTMLElement("progress")}} and {{HTMLElement("meter")}} is fairly good — there is no support in Internet Explorer, but other browsers support it well.
+Support for {{HTMLElement("progress")}} and {{HTMLElement("meter")}} is available in all modern browsers.
 
 ## Test your skills!
 

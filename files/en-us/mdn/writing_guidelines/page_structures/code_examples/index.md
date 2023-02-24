@@ -2,9 +2,6 @@
 title: Code examples
 slug: MDN/Writing_guidelines/Page_structures/Code_examples
 page-type: mdn-writing-guide
-tags:
-  - meta
-  - writing-guide
 ---
 
 {{MDNSidebar}}

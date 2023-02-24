@@ -1,18 +1,6 @@
 ---
 title: Privacy, permissions, and information security
 slug: Web/Privacy
-tags:
-  - Information
-  - Permissions
-  - Personalize
-  - Privacy
-  - Protection
-  - Web
-  - allow
-  - allowlist
-  - data
-  - permission
-  - personal
 ---
 
 {{QuicklinksWithSubPages}}

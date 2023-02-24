@@ -1,12 +1,6 @@
 ---
 title: "ARIA: heading role"
 slug: Web/Accessibility/ARIA/Roles/heading_role
-tags:
-  - ARIA
-  - ARIA Role
-  - ARIA heading
-  - document structure role
-  - Reference
 spec-urls:
   - https://w3c.github.io/aria/#heading
   - https://w3c.github.io/aria-practices/#heading

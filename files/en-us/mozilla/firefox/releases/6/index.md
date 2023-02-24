@@ -1,10 +1,6 @@
 ---
 title: Firefox 6 for developers
 slug: Mozilla/Firefox/Releases/6
-tags:
-  - Firefox
-  - Firefox 6
-  - Gecko 6.0
 ---
 
 {{FirefoxSidebar}}

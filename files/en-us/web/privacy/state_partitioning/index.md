@@ -1,12 +1,6 @@
 ---
 title: State Partitioning
 slug: Web/Privacy/State_Partitioning
-tags:
-  - Firefox
-  - Privacy
-  - Mozilla
-  - Storage
-  - tracking
 ---
 
 {{QuicklinksWithSubPages("Web/Privacy")}}

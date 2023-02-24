@@ -2,12 +2,8 @@
 title: <font>
 slug: Web/HTML/Element/font
 page-type: html-element
-tags:
-  - Element
-  - HTML
-  - Deprecated
-  - Reference
-  - Web
+status:
+  - deprecated
 browser-compat: html.elements.font
 ---
 

@@ -1,9 +1,6 @@
 ---
 title: Firefox 39 for developers
 slug: Mozilla/Firefox/Releases/39
-tags:
-  - Firefox
-  - Releases
 ---
 
 {{FirefoxSidebar}}

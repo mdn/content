@@ -1,10 +1,6 @@
 ---
 title: Updating extensions for Firefox 3.6
 slug: Mozilla/Firefox/Releases/3.6/Updating_extensions
-tags:
-  - Extensions
-  - Firefox
-  - Firefox 3.6
 ---
 
 {{FirefoxSidebar}}

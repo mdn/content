@@ -1,12 +1,6 @@
 ---
-title: "aria-keyshortcuts"
+title: aria-keyshortcuts
 slug: Web/Accessibility/ARIA/Attributes/aria-keyshortcuts
-tags:
-  - Accessibility
-  - ARIA
-  - ARIA attribute
-  - ARIA property
-  - aria-keyshortcuts
 spec-urls:
   - https://w3c.github.io/aria/#aria-keyshortcuts
   - https://w3c.github.io/aria-practices/#kbd_shortcuts

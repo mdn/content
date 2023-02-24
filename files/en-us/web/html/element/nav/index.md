@@ -2,16 +2,6 @@
 title: '<nav>: The Navigation Section element'
 slug: Web/HTML/Element/nav
 page-type: html-element
-tags:
-  - Element
-  - HTML
-  - HTML sections
-  - Links
-  - Navigation
-  - Reference
-  - Sections
-  - Web
-  - nav
 browser-compat: html.elements.nav
 ---
 
@@ -25,16 +15,16 @@ The **`<nav>`** [HTML](/en-US/docs/Web/HTML) element represents a section of a p
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories"
+        <a href="/en-US/docs/Web/HTML/Content_categories"
           >Content categories</a
         >
       </th>
       <td>
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
           >Flow content</a
         >,
         <a
-          href="/en-US/docs/Web/Guide/HTML/Content_categories#sectioning_content"
+          href="/en-US/docs/Web/HTML/Content_categories#sectioning_content"
           >sectioning content</a
         >, palpable content.
       </td>
@@ -42,7 +32,7 @@ The **`<nav>`** [HTML](/en-US/docs/Web/HTML) element represents a section of a p
     <tr>
       <th scope="row">Permitted content</th>
       <td>
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
           >Flow content</a
         >.
       </td>
@@ -55,7 +45,7 @@ The **`<nav>`** [HTML](/en-US/docs/Web/HTML) element represents a section of a p
       <th scope="row">Permitted parents</th>
       <td>
         Any element that accepts
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
           >flow content</a
         >.
       </td>

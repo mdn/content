@@ -1,13 +1,6 @@
 ---
 title: "ARIA: menuitemradio role"
 slug: Web/Accessibility/ARIA/Roles/menuitemradio_role
-tags:
-  - Accessibility
-  - ARIA
-  - roles
-  - Reference
-  - ARIA roles
-  - menuitemradio
 spec-urls:
   - https://w3c.github.io/aria/#menuitemradio
   - https://w3c.github.io/aria-practices/#menu

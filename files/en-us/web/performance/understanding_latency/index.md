@@ -1,11 +1,6 @@
 ---
 title: Understanding latency
 slug: Web/Performance/Understanding_latency
-tags:
-  - Connection
-  - Network
-  - Web Performance
-  - latency
 ---
 
 {{QuickLinksWithSubPages("Web/Performance")}}

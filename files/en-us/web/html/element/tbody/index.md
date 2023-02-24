@@ -2,16 +2,6 @@
 title: "<tbody>: The Table Body element"
 slug: Web/HTML/Element/tbody
 page-type: html-element
-tags:
-  - Element
-  - HTML
-  - HTML tabular data
-  - Reference
-  - Table Body
-  - Table Contents
-  - Tables
-  - Web
-  - tbody
 browser-compat: html.elements.tbody
 ---
 
@@ -27,7 +17,7 @@ The `<tbody>` element, along with its related {{HTMLElement("thead")}} and {{HTM
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories"
+        <a href="/en-US/docs/Web/HTML/Content_categories"
           >Content categories</a
         >
       </th>
