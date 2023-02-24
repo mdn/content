@@ -2,9 +2,6 @@
 title: Commonly-used macros
 slug: MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros
 page-type: mdn-writing-guide
-tags:
-  - meta
-  - writing-guide
 ---
 
 {{MDNSidebar}}

@@ -1,9 +1,6 @@
 ---
 title: Firefox 40 for developers
 slug: Mozilla/Firefox/Releases/40
-tags:
-  - Firefox
-  - Releases
 ---
 
 {{FirefoxSidebar}}

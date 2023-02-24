@@ -1,9 +1,6 @@
 ---
 title: Firefox 8 for developers
 slug: Mozilla/Firefox/Releases/8
-tags:
-  - Firefox
-  - Firefox 8
 ---
 
 {{FirefoxSidebar}}

@@ -1,11 +1,6 @@
 ---
 title: Firefox 100 for developers
 slug: Mozilla/Firefox/Releases/100
-tags:
-  - "100"
-  - Firefox
-  - Mozilla
-  - Release
 ---
 
 {{FirefoxSidebar}}

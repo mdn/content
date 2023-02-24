@@ -2,10 +2,6 @@
 title: Guidelines to open and work on issues
 slug: MDN/Community/Issues
 page-type: mdn-community-guide
-tags:
-  - meta
-  - community-guidelines
-  - governance
 ---
 
 {{MDNSidebar}}
