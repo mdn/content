@@ -1,14 +1,6 @@
 ---
 title: Introduction to the server side
 slug: Learn/Server-side/First_steps/Introduction
-tags:
-  - Beginner
-  - CodingScripting
-  - Guide
-  - Intro
-  - Learn
-  - Server
-  - Server-side programming
 ---
 
 {{LearnSidebar}}{{NextMenu("Learn/Server-side/First_steps/Client-Server_overview", "Learn/Server-side/First_steps")}}

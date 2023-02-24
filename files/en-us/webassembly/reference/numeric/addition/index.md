@@ -1,12 +1,6 @@
 ---
 title: Addition
 slug: WebAssembly/Reference/Numeric/Addition
-tags:
-  - WebAssembly
-  - wasm
-  - Reference
-  - Numeric
-  - Arithmetic
 ---
 
 {{WebAssemblySidebar}}

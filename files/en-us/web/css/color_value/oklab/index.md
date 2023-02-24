@@ -2,13 +2,8 @@
 title: oklab()
 slug: Web/CSS/color_value/oklab
 page-type: css-function
-tags:
-  - CSS
-  - Data Type
-  - Reference
-  - color
-  - oklab
-  - Experimental
+status:
+  - experimental
 browser-compat: css.types.color.oklab
 ---
 

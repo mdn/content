@@ -2,15 +2,8 @@
 title: hypot()
 slug: Web/CSS/hypot
 page-type: css-function
-tags:
-  - CSS
-  - CSS Function
-  - Function
-  - Layout
-  - Reference
-  - Web
-  - hypot
-  - Experimental
+status:
+  - experimental
 browser-compat: css.types.hypot
 ---
 

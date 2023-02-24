@@ -2,14 +2,9 @@
 title: "-moz-user-input"
 slug: Web/CSS/-moz-user-input
 page-type: css-property
-tags:
-  - CSS
-  - CSS Property
-  - CSS:Mozilla Extensions
-  - Deprecated
-  - Non-standard
-  - Reference
-  - recipe:css-property
+status:
+  - deprecated
+  - non-standard
 browser-compat: css.properties.-moz-user-input
 ---
 

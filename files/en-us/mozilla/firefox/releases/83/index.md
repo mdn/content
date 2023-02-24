@@ -1,11 +1,6 @@
 ---
 title: Firefox 83 for developers
 slug: Mozilla/Firefox/Releases/83
-tags:
-  - "83"
-  - Firefox
-  - Mozilla
-  - Release
 ---
 
 {{FirefoxSidebar}}

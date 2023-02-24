@@ -1,18 +1,6 @@
 ---
 title: "Populating the page: how browsers work"
 slug: Web/Performance/How_browsers_work
-tags:
-  - Browsers
-  - Compositing
-  - Critical rendering path
-  - DNS Lookup
-  - Navigation
-  - Page load
-  - Painting
-  - SSL/TLS Handshake
-  - TCP handshake
-  - Web Performance
-  - render
 ---
 
 {{QuickLinksWithSubPages("Web/Performance")}}

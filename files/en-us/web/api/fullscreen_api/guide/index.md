@@ -3,8 +3,8 @@ title: Guide to the Fullscreen API
 slug: Web/API/Fullscreen_API/Guide
 page-type: guide
 browser-compat:
-  - api.Document.fullscreen
   - api.Document.fullscreenEnabled
+  - api.Document.fullscreen
 ---
 
 {{DefaultAPISidebar("Fullscreen API")}}
@@ -92,11 +92,15 @@ In this example, a video is presented in a web page. Pressing the <kbd>Return</k
 When the page is loaded, this code is run to set up an event listener to watch for the <kbd>Enter</kbd> key.
 
 ```js
-document.addEventListener("keydown", (e) => {
-  if (e.keyCode === 13) {
-    toggleFullScreen();
-  }
-}, false);
+document.addEventListener(
+  "keydown",
+  (e) => {
+    if (e.keyCode === 13) {
+      toggleFullScreen();
+    }
+  },
+  false
+);
 ```
 
 ### Toggling fullscreen mode

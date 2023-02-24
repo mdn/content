@@ -1,5 +1,5 @@
 ---
-title: 'Element: gestureend event'
+title: "Element: gestureend event"
 slug: Web/API/Element/gestureend_event
 page-type: web-api-event
 status:
@@ -18,9 +18,9 @@ It is a proprietary event specific to WebKit.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('gestureend', (event) => {});
+addEventListener("gestureend", (event) => {});
 
-ongestureend = (event) => { };
+ongestureend = (event) => {};
 ```
 
 ## Event type

@@ -1,10 +1,6 @@
 ---
 title: How does the Internet work?
 slug: Learn/Common_questions/Web_mechanics/How_does_the_Internet_work
-tags:
-  - Beginner
-  - Tutorial
-  - WebMechanics
 ---
 
 {{QuicklinksWithSubPages("Learn/Common_questions")}}

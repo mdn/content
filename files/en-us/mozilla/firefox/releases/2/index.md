@@ -1,9 +1,6 @@
 ---
 title: Firefox 2 for developers
 slug: Mozilla/Firefox/Releases/2
-tags:
-  - Firefox
-  - Firefox 2
 ---
 
 {{FirefoxSidebar}}

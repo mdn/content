@@ -2,13 +2,8 @@
 title: x-ms-format-detection
 slug: Web/HTML/Global_attributes/x-ms-format-detection
 page-type: html-attribute
-tags:
-  - Attribute
-  - HTML
-  - HTML:Microsoft Extensions
-  - Non-standard
-  - Reference
-  - x-ms-format-detection
+status:
+  - non-standard
 ---
 
 {{HTMLSidebar("Global_attributes")}}{{Non-standard_Header}}

@@ -58,15 +58,15 @@ Additionally, the event source itself may send messages with an event field, whi
 In this basic example, an `EventSource` is created to receive unnamed events from the server; a page with the name `sse.php` is responsible for generating the events.
 
 ```js
-const evtSource = new EventSource('sse.php');
-const eventList = document.querySelector('ul');
+const evtSource = new EventSource("sse.php");
+const eventList = document.querySelector("ul");
 
 evtSource.onmessage = (e) => {
   const newElement = document.createElement("li");
 
   newElement.textContent = `message: ${e.data}`;
   eventList.appendChild(newElement);
-}
+};
 ```
 
 Each received event causes our `EventSource` object's `onmessage` event handler to be run. It, in turn, creates a new {{HTMLElement("li")}} element and writes the message's data into it, then appends the new element to the list element already in the document.
@@ -76,7 +76,7 @@ Each received event causes our `EventSource` object's `onmessage` event handler 
 To listen to named events, you'll require a listener for each type of event sent.
 
 ```js
-const sse = new EventSource('/api/v1/sse');
+const sse = new EventSource("/api/v1/sse");
 
 /*
  * This will listen only for events
@@ -87,16 +87,16 @@ const sse = new EventSource('/api/v1/sse');
  * id: someid
  */
 sse.addEventListener("notice", (e) => {
-  console.log(e.data)
-})
+  console.log(e.data);
+});
 
 /*
  * Similarly, this will listen for events
  * with the field `event: update`
  */
 sse.addEventListener("update", (e) => {
-  console.log(e.data)
-})
+  console.log(e.data);
+});
 
 /*
  * The event "message" is a special case, as it
@@ -106,7 +106,7 @@ sse.addEventListener("update", (e) => {
  * other event type.
  */
 sse.addEventListener("message", (e) => {
-  console.log(e.data)
+  console.log(e.data);
 });
 ```
 

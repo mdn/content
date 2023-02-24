@@ -41,7 +41,7 @@ then log a reference to the original `<slot>` element the
 `<span>` was inserted in.
 
 ```js
-let slottedSpan = document.querySelector('my-paragraph span')
+let slottedSpan = document.querySelector("my-paragraph span");
 console.log(slottedSpan.assignedSlot); // logs '<slot name="my-text">'
 ```
 

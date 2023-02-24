@@ -2,14 +2,9 @@
 title: scroll-snap-points-x
 slug: Web/CSS/scroll-snap-points-x
 page-type: css-property
-tags:
-  - CSS
-  - CSS Property
-  - CSS Scroll Snap
-  - Deprecated
-  - Reference
-  - recipe:css-property
-  - Non-standard
+status:
+  - deprecated
+  - non-standard
 browser-compat: css.properties.scroll-snap-points-x
 ---
 

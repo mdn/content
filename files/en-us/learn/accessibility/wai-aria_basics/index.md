@@ -1,18 +1,6 @@
 ---
 title: WAI-ARIA basics
 slug: Learn/Accessibility/WAI-ARIA_basics
-tags:
-  - ARIA
-  - Accessibility
-  - Article
-  - Beginner
-  - CodingScripting
-  - Guide
-  - HTML
-  - JavaScript
-  - Learn
-  - WAI-ARIA
-  - semantics
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Accessibility/CSS_and_JavaScript","Learn/Accessibility/Multimedia", "Learn/Accessibility")}}

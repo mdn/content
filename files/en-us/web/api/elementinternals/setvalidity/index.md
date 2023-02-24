@@ -75,7 +75,7 @@ this.internals_.setValidity({});
 In the following example `setValidity` is called with the flag `valueMissing` set to `true`. A `message` parameter must then also be passed containing a message.
 
 ```js
-this.internals_.setValidity({'valueMissing':true},"my message");
+this.internals_.setValidity({ valueMissing: true }, "my message");
 ```
 
 ## Specifications

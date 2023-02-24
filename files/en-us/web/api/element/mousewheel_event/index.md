@@ -1,5 +1,5 @@
 ---
-title: 'Element: mousewheel event'
+title: "Element: mousewheel event"
 slug: Web/API/Element/mousewheel_event
 page-type: web-api-event
 status:
@@ -19,9 +19,9 @@ The _obsolete_ and _non-standard_ **`mousewheel`** event is fired asynchronously
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('mousewheel', (event) => {});
+addEventListener("mousewheel", (event) => {});
 
-onmousewheel = (event) => { };
+onmousewheel = (event) => {};
 ```
 
 ## Event type

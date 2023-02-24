@@ -2,12 +2,9 @@
 title: "@document"
 slug: Web/CSS/@document
 page-type: css-at-rule
-tags:
-  - At-rule
-  - CSS
-  - Reference
-  - Deprecated
-  - Non-standard
+status:
+  - deprecated
+  - non-standard
 browser-compat: css.at-rules.document
 ---
 

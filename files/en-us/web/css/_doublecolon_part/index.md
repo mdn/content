@@ -2,14 +2,6 @@
 title: "::part()"
 slug: Web/CSS/::part
 page-type: css-pseudo-element
-tags:
-  - "::part"
-  - CSS
-  - Draft
-  - NeedsExample
-  - Pseudo-element
-  - Reference
-  - Selector
 browser-compat: css.selectors.part
 ---
 

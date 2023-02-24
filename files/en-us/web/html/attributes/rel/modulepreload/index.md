@@ -2,12 +2,6 @@
 title: rel=modulepreload
 slug: Web/HTML/Attributes/rel/modulepreload
 page-type: html-attribute-value
-tags:
-  - Attribute
-  - HTML
-  - Link
-  - Link types
-  - Reference
 browser-compat: html.elements.link.rel.modulepreload
 ---
 

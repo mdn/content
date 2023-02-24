@@ -1,5 +1,5 @@
 ---
-title: 'Element: touchcancel event'
+title: "Element: touchcancel event"
 slug: Web/API/Element/touchcancel_event
 page-type: web-api-event
 browser-compat: api.Element.touchcancel_event
@@ -14,9 +14,9 @@ The `touchcancel` event is fired when one or more touch points have been disrupt
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('touchcancel', (event) => {});
+addEventListener("touchcancel", (event) => {});
 
-ontouchcancel = (event) => { };
+ontouchcancel = (event) => {};
 ```
 
 ## Event type

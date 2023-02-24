@@ -1,11 +1,6 @@
 ---
 title: Firefox 85 for developers
 slug: Mozilla/Firefox/Releases/85
-tags:
-  - "85"
-  - Firefox
-  - Mozilla
-  - Release
 ---
 
 {{FirefoxSidebar}}

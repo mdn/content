@@ -34,9 +34,9 @@ A new {{domxref("FormDataEvent")}} object.
 
 ```js
 const fd = new FormData();
-fd.append('test', 'test');
+fd.append("test", "test");
 
-const fdEv = new FormDataEvent('formdata', { formData: fd });
+const fdEv = new FormDataEvent("formdata", { formData: fd });
 
 for (const value of fdEv.formData.values()) {
   console.log(value);

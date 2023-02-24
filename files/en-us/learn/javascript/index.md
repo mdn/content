@@ -1,15 +1,6 @@
 ---
 title: JavaScript — Dynamic client-side scripting
 slug: Learn/JavaScript
-tags:
-  - Beginner
-  - CodingScripting
-  - JavaScript
-  - JavaScripting beginner
-  - Landing
-  - Module
-  - Topic
-  - "l10n:priority"
 ---
 
 {{LearnSidebar}}

@@ -2,12 +2,6 @@
 title: Left shift (<<)
 slug: Web/JavaScript/Reference/Operators/Left_shift
 page-type: javascript-operator
-tags:
-  - Bitwise operator
-  - JavaScript
-  - Language feature
-  - Operator
-  - Reference
 browser-compat: javascript.operators.left_shift
 ---
 

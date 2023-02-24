@@ -43,9 +43,9 @@ Named inputs are added to their owner form instance as properties, and can overw
 _This interface also inherits methods from its parent, {{domxref("HTMLElement")}}._
 
 - {{domxref("HTMLFormElement.checkValidity", "checkValidity()")}}
-  - : Returns `true` if the element's child controls are subject to [constraint validation](/en-US/docs/Web/Guide/HTML/Constraint_validation) and satisfy those constraints; returns `false` if some controls do not satisfy their constraints. Fires an event named {{domxref("HTMLInputElement/invalid_event", "invalid")}} at any control that does not satisfy its constraints; such controls are considered invalid if the event is not canceled. It is up to the programmer to decide how to respond to `false`.
+  - : Returns `true` if the element's child controls are subject to [constraint validation](/en-US/docs/Web/HTML/Constraint_validation) and satisfy those constraints; returns `false` if some controls do not satisfy their constraints. Fires an event named {{domxref("HTMLInputElement/invalid_event", "invalid")}} at any control that does not satisfy its constraints; such controls are considered invalid if the event is not canceled. It is up to the programmer to decide how to respond to `false`.
 - {{domxref("HTMLFormElement.reportValidity", "reportValidity()")}}
-  - : Returns `true` if the element's child controls satisfy their [validation constraints](/en-US/docs/Web/Guide/HTML/Constraint_validation). When `false` is returned, cancelable {{domxref("HTMLInputElement/invalid_event", "invalid")}} events are fired for each invalid child and validation problems are reported to the user.
+  - : Returns `true` if the element's child controls satisfy their [validation constraints](/en-US/docs/Web/HTML/Constraint_validation). When `false` is returned, cancelable {{domxref("HTMLInputElement/invalid_event", "invalid")}} events are fired for each invalid child and validation problems are reported to the user.
 - {{domxref("HTMLFormElement.requestSubmit", "requestSubmit()")}}
   - : Requests that the form be submitted using the specified submit button and its corresponding configuration.
 - {{domxref("HTMLFormElement.reset", "reset()")}}

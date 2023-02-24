@@ -2,12 +2,6 @@
 title: Function expression
 slug: Web/JavaScript/Reference/Operators/function
 page-type: javascript-operator
-tags:
-  - Function
-  - JavaScript
-  - Language feature
-  - Operator
-  - Primary Expressions
 browser-compat: javascript.operators.function
 ---
 

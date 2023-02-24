@@ -26,14 +26,14 @@ data:[<mediatype>][;base64],<data>
 
 The `mediatype` is a [MIME type](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types) string, such as `'image/jpeg'` for a JPEG image file. If omitted, defaults to `text/plain;charset=US-ASCII`
 
-If the data contains [characters defined in RFC 3986 as reserved characters](https://datatracker.ietf.org/doc/html/rfc3986#section-2.2), or contains space characters, newline characters, or other non-printing characters, those characters must be [percent-encoded](/en-US/docs/Glossary/percent-encoding) (_aka_ "URL-encoded").
+If the data contains [characters defined in RFC 3986 as reserved characters](https://datatracker.ietf.org/doc/html/rfc3986#section-2.2), or contains space characters, newline characters, or other non-printing characters, those characters must be [URL encoded](https://en.wikipedia.org/wiki/URL_encoding) (_aka_ "URL encoded").
 
 If the data is textual, you can embed the text (using the appropriate entities or escapes based on the enclosing document's type). Otherwise, you can specify `base64` to embed base64-encoded binary data. You can find more info on MIME types [here](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types) and [here](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types).
 
 A few examples:
 
 - `data:,Hello%2C%20World%21`
-  - : The text/plain data `Hello, World!`. Note how the comma is [percent-encoded](/en-US/docs/Glossary/percent-encoding) as `%2C`, and the space character as `%20`.
+  - : The text/plain data `Hello, World!`. Note how the comma is [URl encoded](https://en.wikipedia.org/wiki/URL_encoding) as `%2C`, and the space character as `%20`.
 - `data:text/plain;base64,SGVsbG8sIFdvcmxkIQ==`
   - : base64-encoded version of the above
 - `data:text/html,%3Ch1%3EHello%2C%20World%21%3C%2Fh1%3E`
@@ -120,7 +120,7 @@ lots of text…
 ## See also
 
 - [Base64](/en-US/docs/Glossary/Base64)
-- [Percent encoding](/en-US/docs/Glossary/percent-encoding)
+- [URL encoding](https://en.wikipedia.org/wiki/URL_encoding)
 - {{domxref("atob","atob()")}}
 - {{domxref("btoa","btoa()")}}
 - [CSS `url()`](/en-US/docs/Web/CSS/url)

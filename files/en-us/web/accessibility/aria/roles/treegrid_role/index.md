@@ -1,15 +1,6 @@
 ---
 title: "ARIA: treegrid role"
 slug: Web/Accessibility/ARIA/Roles/treegrid_role
-tags:
-  - Accessibility
-  - ARIA
-  - roles
-  - Reference
-  - ARIA roles
-  - Treegrid role
-  - composite widget role
-  - treegrid
 spec-urls:
   - https://w3c.github.io/aria/#treegrid
   - https://w3c.github.io/aria-practices/#treegrid
