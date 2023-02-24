@@ -2,14 +2,8 @@
 title: TaskAttributionTiming.containerName
 slug: Web/API/TaskAttributionTiming/containerName
 page-type: web-api-instance-property
-tags:
-  - API
-  - Long Tasks API
-  - Performance
-  - Property
-  - Reference
-  - TaskAttributionTiming
-  - Experimental
+status:
+  - experimental
 browser-compat: api.TaskAttributionTiming.containerName
 ---
 
@@ -20,7 +14,7 @@ attribute. A container is the iframe, embed or object etc. that is being implica
 
 ## Value
 
-A string containing the container's `name` HTML content attribute (e.g. [`<iframe name="myIframe"`](/en-US/docs/Web/HTML/Element/iframe#attr-name) or [`<object name="myObject"`](/en-US/docs/Web/HTML/Element/object#attr-name)).
+A string containing the container's `name` HTML content attribute (e.g. [`<iframe name="myIframe"`](/en-US/docs/Web/HTML/Element/iframe#name) or [`<object name="myObject"`](/en-US/docs/Web/HTML/Element/object#attr-name)).
 
 ## Specifications
 

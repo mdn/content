@@ -1,8 +1,6 @@
 ---
 title: Updating extensions for Firefox 3.5
 slug: Mozilla/Firefox/Releases/3.5/Updating_extensions
-tags:
-  - Extensions
 ---
 
 {{FirefoxSidebar}}

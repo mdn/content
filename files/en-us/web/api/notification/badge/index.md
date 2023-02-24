@@ -2,15 +2,8 @@
 title: Notification.badge
 slug: Web/API/Notification/badge
 page-type: web-api-instance-property
-tags:
-  - API
-  - Notification
-  - Notifications
-  - Notifications API
-  - Property
-  - Reference
-  - badge
-  - Experimental
+status:
+  - experimental
 browser-compat: api.Notification.badge
 ---
 

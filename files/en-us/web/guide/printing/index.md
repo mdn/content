@@ -1,12 +1,6 @@
 ---
 title: Printing
 slug: Web/Guide/Printing
-tags:
-  - DOM
-  - Guide
-  - NeedsContent
-  - NeedsRelocation
-  - printing
 ---
 
 <section id="Quick_links">
@@ -145,8 +139,6 @@ If you want to be able to print an external page without opening it, you can uti
   </body>
 </html>
 ```
-
-> **Note:** Older versions of Internet Explorer cannot print the contents of a hidden {{HTMLElement("iframe")}}.
 
 ## See also
 

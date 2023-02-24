@@ -2,14 +2,9 @@
 title: IDBFileHandle.fileHandle
 slug: Web/API/IDBFileHandle/fileHandle
 page-type: web-api-instance-property
-tags:
-  - API
-  - Files
-  - Property
-  - Reference
-  - WebAPI
-  - Non-standard
-  - Deprecated
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.IDBFileHandle.fileHandle
 ---
 

@@ -2,16 +2,8 @@
 title: ContentIndex.add()
 slug: Web/API/ContentIndex/add
 page-type: web-api-instance-method
-tags:
-  - Content
-  - Content Index API
-  - Index
-  - Interface
-  - Method
-  - PWA
-  - content index
-  - content indexing
-  - Experimental
+status:
+  - experimental
 browser-compat: api.ContentIndex.add
 ---
 

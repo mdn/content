@@ -1,14 +1,6 @@
 ---
 title: Setting up adaptive streaming media sources
 slug: Web/Guide/Audio_and_video_delivery/Setting_up_adaptive_streaming_media_sources
-tags:
-  - Audio
-  - HLS
-  - HTML
-  - HTTP Live Streaming
-  - MPEG-DASH
-  - Video
-  - adaptive streaming
 ---
 
 {{QuickLinksWithSubPages("/en-US/docs/Web/Guide/Audio_and_video_delivery")}}

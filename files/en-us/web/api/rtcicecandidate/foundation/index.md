@@ -2,19 +2,6 @@
 title: RTCIceCandidate.foundation
 slug: Web/API/RTCIceCandidate/foundation
 page-type: web-api-instance-property
-tags:
-  - API
-  - Candidate
-  - ICE
-  - Property
-  - RTCIceCandidate
-  - Read-only
-  - Reference
-  - SDP
-  - Transport
-  - WebRTC
-  - WebRTC API
-  - foundation
 browser-compat: api.RTCIceCandidate.foundation
 ---
 

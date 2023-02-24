@@ -2,15 +2,6 @@
 title: IDBTransaction.error
 slug: Web/API/IDBTransaction/error
 page-type: web-api-instance-property
-tags:
-  - API
-  - Database
-  - Error
-  - IDBTransaction
-  - IndexedDB
-  - Property
-  - Reference
-  - Storage
 browser-compat: api.IDBTransaction.error
 ---
 

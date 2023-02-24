@@ -2,18 +2,6 @@
 title: MediaError.code
 slug: Web/API/MediaError/code
 page-type: web-api-instance-property
-tags:
-  - API
-  - Audio
-  - Code
-  - Errors
-  - HTML DOM
-  - Media
-  - MediaError
-  - Property
-  - Read-only
-  - Reference
-  - Video
 browser-compat: api.MediaError.code
 ---
 

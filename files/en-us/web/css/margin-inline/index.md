@@ -2,13 +2,6 @@
 title: margin-inline
 slug: Web/CSS/margin-inline
 page-type: css-shorthand-property
-tags:
-  - CSS
-  - CSS Logical Property
-  - CSS Property
-  - Reference
-  - margin-inline
-  - recipe:css-shorthand-property
 browser-compat: css.properties.margin-inline
 ---
 

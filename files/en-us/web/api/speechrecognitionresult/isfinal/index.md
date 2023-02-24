@@ -2,15 +2,6 @@
 title: SpeechRecognitionResult.isFinal
 slug: Web/API/SpeechRecognitionResult/isFinal
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - SpeechRecognitionResult
-  - Web Speech API
-  - isFinal
-  - recognition
-  - speech
 browser-compat: api.SpeechRecognitionResult.isFinal
 ---
 

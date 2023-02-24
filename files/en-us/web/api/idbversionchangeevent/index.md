@@ -2,16 +2,6 @@
 title: IDBVersionChangeEvent
 slug: Web/API/IDBVersionChangeEvent
 page-type: web-api-interface
-tags:
-  - API
-  - DOM
-  - Database
-  - IDBVersionChangeEvent
-  - IndexedDB
-  - Interface
-  - JavaScript
-  - Reference
-  - Storage
 browser-compat: api.IDBVersionChangeEvent
 ---
 

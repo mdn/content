@@ -2,12 +2,6 @@
 title: HTMLMeterElement.labels
 slug: Web/API/HTMLMeterElement/labels
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTML DOM
-  - HTMLMeterElement
-  - Property
-  - Reference
 browser-compat: api.HTMLMeterElement.labels
 ---
 

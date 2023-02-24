@@ -2,14 +2,6 @@
 title: Navigator.requestMIDIAccess()
 slug: Web/API/Navigator/requestMIDIAccess
 page-type: web-api-instance-method
-tags:
-  - API
-  - Web MIDI
-  - Reference
-  - Method
-  - Navigator
-  - Secure context
-  - requestMIDIAccess
 browser-compat: api.Navigator.requestMIDIAccess
 ---
 

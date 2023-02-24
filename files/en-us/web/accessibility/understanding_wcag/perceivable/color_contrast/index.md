@@ -1,11 +1,6 @@
 ---
 title: Color contrast
 slug: Web/Accessibility/Understanding_WCAG/Perceivable/Color_contrast
-tags:
-  - Accessibility
-  - WCAG
-  - contrast
-  - perceivable
 ---
 
 {{QuicklinksWithSubPages("Web/Accessibility/Understanding_WCAG")}}

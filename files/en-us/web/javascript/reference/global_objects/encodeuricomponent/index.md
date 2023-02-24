@@ -2,11 +2,6 @@
 title: encodeURIComponent()
 slug: Web/JavaScript/Reference/Global_Objects/encodeURIComponent
 page-type: javascript-function
-tags:
-  - JavaScript
-  - Method
-  - Reference
-  - URI
 browser-compat: javascript.builtins.encodeURIComponent
 ---
 

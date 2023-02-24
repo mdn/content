@@ -2,13 +2,6 @@
 title: const
 slug: Web/JavaScript/Reference/Statements/const
 page-type: javascript-statement
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Language feature
-  - Reference
-  - Statement
-  - constants
 browser-compat: javascript.statements.const
 ---
 

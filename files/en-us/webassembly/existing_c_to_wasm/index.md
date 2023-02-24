@@ -1,12 +1,6 @@
 ---
 title: Compiling an Existing C Module to WebAssembly
 slug: WebAssembly/existing_C_to_wasm
-tags:
-  - C++
-  - Compiling
-  - Emscripten
-  - WebAssembly
-  - wasm
 ---
 
 {{WebAssemblySidebar}}

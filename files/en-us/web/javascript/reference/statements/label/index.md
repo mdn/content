@@ -2,10 +2,6 @@
 title: label
 slug: Web/JavaScript/Reference/Statements/label
 page-type: javascript-statement
-tags:
-  - JavaScript
-  - Language feature
-  - Statement
 browser-compat: javascript.statements.label
 ---
 

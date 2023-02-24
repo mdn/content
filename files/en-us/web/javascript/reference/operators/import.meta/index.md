@@ -2,14 +2,6 @@
 title: import.meta
 slug: Web/JavaScript/Reference/Operators/import.meta
 page-type: javascript-language-feature
-tags:
-  - JavaScript
-  - Language feature
-  - Modules
-  - Reference
-  - Operator
-  - import
-  - import.meta
 browser-compat: javascript.operators.import_meta
 ---
 

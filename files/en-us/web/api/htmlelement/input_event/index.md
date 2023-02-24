@@ -2,19 +2,6 @@
 title: 'HTMLElement: input event'
 slug: Web/API/HTMLElement/input_event
 page-type: web-api-event
-tags:
-  - Content
-  - Edit
-  - Event
-  - Forms
-  - HTML DOM
-  - HTMLElement
-  - Input
-  - InputEvent
-  - NeedsMobileBrowserCompatibility
-  - Reference
-  - data
-  - value
 browser-compat: api.HTMLElement.input_event
 ---
 

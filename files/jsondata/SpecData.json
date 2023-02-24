@@ -1339,11 +1339,6 @@
     "url": "https://w3c.github.io/presentation-api/",
     "status": "CR"
   },
-  "Priority Hints": {
-    "name": "Priority Hints",
-    "url": "https://wicg.github.io/priority-hints/",
-    "status": "Draft"
-  },
   "Promise.any": {
     "name": "Promise.any",
     "url": "https://tc39.es/proposal-promise-any/",

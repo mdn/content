@@ -2,11 +2,6 @@
 title: Math.exp()
 slug: Web/JavaScript/Reference/Global_Objects/Math/exp
 page-type: javascript-static-method
-tags:
-  - JavaScript
-  - Math
-  - Method
-  - Reference
 browser-compat: javascript.builtins.Math.exp
 ---
 

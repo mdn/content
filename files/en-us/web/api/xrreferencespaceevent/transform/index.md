@@ -29,7 +29,7 @@ system. Alternatively, you can just discard any cached positional information an
 recompute from scratch. The approach you take will depend on your needs.
 
 For details on what causes a `reset` event and how to respond, see the
-{{domxref("XRReferenceSpaceEvent.reset_event", "reset")}} event's documentation.
+{{domxref("XRReferenceSpace.reset_event", "reset")}} event's documentation.
 
 ## Examples
 

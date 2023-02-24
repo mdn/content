@@ -2,14 +2,6 @@
 title: 'Sensor: reading event'
 slug: Web/API/Sensor/reading_event
 page-type: web-api-event
-tags:
-  - API
-  - Generic Sensor API
-  - Reference
-  - Sensor
-  - Sensor APIs
-  - Sensors
-  - Event
 browser-compat: api.Sensor.reading_event
 ---
 

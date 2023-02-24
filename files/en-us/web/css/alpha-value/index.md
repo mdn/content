@@ -2,16 +2,6 @@
 title: <alpha-value>
 slug: Web/CSS/alpha-value
 page-type: css-type
-tags:
-  - Alpha
-  - Alpha-value
-  - CSS
-  - CSS Data Type
-  - CSS Reference
-  - Data Type
-  - Example
-  - Reference
-  - color
 spec-urls: https://drafts.csswg.org/css-color/#type-def-alpha-value
 ---
 

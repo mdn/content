@@ -2,15 +2,8 @@
 title: CSSMathMin.values
 slug: Web/API/CSSMathMin/values
 page-type: web-api-instance-property
-tags:
-  - API
-  - CSS Typed Object Model API
-  - CSSMathMin
-  - CSSNumericValue
-  - Experimental
-  - Houdini
-  - Property
-  - Read-only
+status:
+  - experimental
 browser-compat: api.CSSMathMin.values
 ---
 

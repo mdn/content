@@ -2,18 +2,6 @@
 title: MediaSource.isTypeSupported()
 slug: Web/API/MediaSource/isTypeSupported
 page-type: web-api-static-method
-tags:
-  - API
-  - Audio
-  - MSE
-  - Media Source Extensions
-  - MediaSource
-  - Method
-  - Reference
-  - Static
-  - Static Method
-  - Video
-  - isTypeSupported
 browser-compat: api.MediaSource.isTypeSupported
 ---
 

@@ -2,12 +2,6 @@
 title: ValidityState.valueMissing
 slug: Web/API/ValidityState/valueMissing
 page-type: web-api-instance-property
-tags:
-  - API
-  - Constraint Validation API
-  - DOM
-  - Property
-  - Reference
 browser-compat: api.ValidityState.valueMissing
 ---
 
@@ -27,6 +21,6 @@ If the `required` attribute is set, and no {{HTMLElement("option")}} is selected
 
 ## See also
 
-- [Constraint validation](/en-US/docs/Web/Guide/HTML/Constraint_validation)
+- [Constraint validation](/en-US/docs/Web/HTML/Constraint_validation)
 - [Forms: Data form validation](/en-US/docs/Learn/Forms/Form_validation)
 - [Regular Expressions](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions)

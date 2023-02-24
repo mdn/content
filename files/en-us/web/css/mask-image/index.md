@@ -2,12 +2,6 @@
 title: mask-image
 slug: Web/CSS/mask-image
 page-type: css-property
-tags:
-  - CSS
-  - CSS Masking
-  - CSS Property
-  - Reference
-  - recipe:css-property
 browser-compat: css.properties.mask-image
 ---
 

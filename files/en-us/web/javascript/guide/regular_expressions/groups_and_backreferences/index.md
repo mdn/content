@@ -2,15 +2,6 @@
 title: Groups and backreferences
 slug: Web/JavaScript/Guide/Regular_Expressions/Groups_and_Backreferences
 page-type: guide
-tags:
-  - Guide
-  - JavaScript
-  - Reference
-  - Polyfill
-  - Regular Expressions
-  - groups
-  - backreferences
-  - regex
 ---
 
 {{jsSidebar("JavaScript Guide")}}

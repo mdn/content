@@ -2,10 +2,6 @@
 title: lang
 slug: Web/HTML/Global_attributes/lang
 page-type: html-attribute
-tags:
-  - Global attributes
-  - HTML
-  - Reference
 browser-compat: html.global_attributes.lang
 ---
 

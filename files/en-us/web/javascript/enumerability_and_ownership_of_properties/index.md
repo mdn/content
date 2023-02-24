@@ -2,9 +2,6 @@
 title: Enumerability and ownership of properties
 slug: Web/JavaScript/Enumerability_and_ownership_of_properties
 page-type: guide
-tags:
-  - Guide
-  - JavaScript
 ---
 
 {{JsSidebar("More")}}

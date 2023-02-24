@@ -2,12 +2,6 @@
 title: Document.head
 slug: Web/API/Document/head
 page-type: web-api-instance-property
-tags:
-  - API
-  - Document
-  - HTML DOM
-  - Property
-  - Reference
 browser-compat: api.Document.head
 ---
 

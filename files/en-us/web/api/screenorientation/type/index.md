@@ -2,14 +2,6 @@
 title: ScreenOrientation.type
 slug: Web/API/ScreenOrientation/type
 page-type: web-api-instance-property
-tags:
-  - API
-  - Orientation
-  - Property
-  - Reference
-  - Screen Orientation API
-  - ScreenOrientation
-  - Type
 browser-compat: api.ScreenOrientation.type
 ---
 

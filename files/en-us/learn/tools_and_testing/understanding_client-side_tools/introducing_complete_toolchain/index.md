@@ -2,14 +2,6 @@
 title: Introducing a complete toolchain
 slug: >-
   Learn/Tools_and_testing/Understanding_client-side_tools/Introducing_complete_toolchain
-tags:
-  - Beginner
-  - Complete toolchain
-  - Development environment
-  - Learn
-  - Tools
-  - Transformation
-  - case study
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Understanding_client-side_tools/Package_management","Learn/Tools_and_testing/Understanding_client-side_tools/Deployment", "Learn/Tools_and_testing/Understanding_client-side_tools")}}

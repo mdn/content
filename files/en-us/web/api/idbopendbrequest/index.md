@@ -2,15 +2,6 @@
 title: IDBOpenDBRequest
 slug: Web/API/IDBOpenDBRequest
 page-type: web-api-interface
-tags:
-  - API
-  - DOM Reference
-  - Database
-  - IDBOpenDBRequest
-  - IndexedDB
-  - Interface
-  - Reference
-  - Storage
 browser-compat: api.IDBOpenDBRequest
 ---
 

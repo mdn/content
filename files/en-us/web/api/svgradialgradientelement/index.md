@@ -2,11 +2,6 @@
 title: SVGRadialGradientElement
 slug: Web/API/SVGRadialGradientElement
 page-type: web-api-interface
-tags:
-  - API
-  - Reference
-  - SVG
-  - SVG DOM
 browser-compat: api.SVGRadialGradientElement
 ---
 

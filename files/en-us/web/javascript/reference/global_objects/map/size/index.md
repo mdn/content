@@ -2,11 +2,6 @@
 title: Map.prototype.size
 slug: Web/JavaScript/Reference/Global_Objects/Map/size
 page-type: javascript-instance-accessor-property
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Map
-  - Property
 browser-compat: javascript.builtins.Map.size
 ---
 

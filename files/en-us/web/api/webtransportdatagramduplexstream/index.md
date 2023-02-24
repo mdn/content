@@ -2,13 +2,8 @@
 title: WebTransportDatagramDuplexStream
 slug: Web/API/WebTransportDatagramDuplexStream
 page-type: web-api-interface
-tags:
-  - API
-  - Experimental
-  - Interface
-  - Reference
-  - WebTransport API
-  - WebTransportDatagramDuplexStream
+status:
+  - experimental
 browser-compat: api.WebTransportDatagramDuplexStream
 ---
 

@@ -2,12 +2,6 @@
 title: HTMLInputElement.showPicker()
 slug: Web/API/HTMLInputElement/showPicker
 page-type: web-api-instance-method
-tags:
-  - API
-  - HTML DOM
-  - HTMLInputElement
-  - Method
-  - Reference
 browser-compat: api.HTMLInputElement.showPicker
 ---
 
@@ -115,7 +109,6 @@ First we define a `<datalist>` in HTML consisting of a number of internet browse
 <datalist id="browsers">
   <option value="Chrome"></option>
   <option value="Firefox"></option>
-  <option value="Internet Explorer"></option>
   <option value="Opera"></option>
   <option value="Safari"></option>
   <option value="Microsoft Edge"></option>

@@ -2,12 +2,6 @@
 title: Document.hasFocus()
 slug: Web/API/Document/hasFocus
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - Focus
-  - Method
-  - Reference
 browser-compat: api.Document.hasFocus
 ---
 

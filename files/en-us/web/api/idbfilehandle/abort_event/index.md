@@ -2,14 +2,9 @@
 title: 'IDFileHandle: abort event'
 slug: Web/API/IDBFileHandle/abort_event
 page-type: web-api-event
-tags:
-  - API
-  - Files
-  - Event
-  - Reference
-  - WebAPI
-  - Non-standard
-  - Deprecated
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.IDBFileHandle.abort_event
 ---
 

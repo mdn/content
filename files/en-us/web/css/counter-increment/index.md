@@ -2,13 +2,6 @@
 title: counter-increment
 slug: Web/CSS/counter-increment
 page-type: css-property
-tags:
-  - CSS
-  - CSS Counter
-  - CSS Lists
-  - CSS Property
-  - Reference
-  - recipe:css-property
 browser-compat: css.properties.counter-increment
 ---
 

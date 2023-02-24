@@ -1,14 +1,6 @@
 ---
 title: Server-side website programming first steps
 slug: Learn/Server-side/First_steps
-tags:
-  - Beginner
-  - CodingScripting
-  - Guide
-  - Intro
-  - Landing
-  - Learn
-  - Server-side programming
 ---
 
 {{LearnSidebar}}

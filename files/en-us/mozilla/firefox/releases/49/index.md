@@ -1,9 +1,6 @@
 ---
 title: Firefox 49 for developers
 slug: Mozilla/Firefox/Releases/49
-tags:
-  - Firefox
-  - Release Notes
 ---
 
 {{FirefoxSidebar}}

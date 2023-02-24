@@ -2,14 +2,8 @@
 title: navigator.platform
 slug: Web/API/Navigator/platform
 page-type: web-api-instance-property
-tags:
-  - API
-  - Deprecated
-  - HTML DOM
-  - Navigator
-  - Property
-  - Reference
-  - platform
+status:
+  - deprecated
 browser-compat: api.Navigator.platform
 ---
 
@@ -38,8 +32,7 @@ That is, check if `navigator.platform` starts with `"Mac"` or else is an exact m
 
 ## Usage notes
 
-Most browsers, including Chrome, Edge, and Firefox 63 and later, return `"Win32"` even if running on a 64-bit version of Windows.
-Internet Explorer and versions of Firefox prior to version 63 still report `"Win64"`.
+On Windows, modern browsers return `"Win32"` even if running on a 64-bit version of Windows.
 
 ## Specifications
 

@@ -1,11 +1,9 @@
 ---
-title: 'Element: MSGestureEnd event'
+title: "Element: MSGestureEnd event"
 slug: Web/API/Element/MSGestureEnd_event
 page-type: web-api-event
-tags:
-  - Event
-  - Non-standard
-  - Reference
+status:
+  - non-standard
 browser-compat: api.Element.MSGestureEnd_event
 ---
 

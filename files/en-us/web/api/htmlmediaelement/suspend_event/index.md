@@ -2,13 +2,6 @@
 title: 'HTMLMediaElement: suspend event'
 slug: Web/API/HTMLMediaElement/suspend_event
 page-type: web-api-event
-tags:
-  - API
-  - Audio
-  - Event
-  - HTMLMediaElement
-  - Reference
-  - Video
 browser-compat: api.HTMLMediaElement.suspend_event
 ---
 

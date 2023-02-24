@@ -2,14 +2,6 @@
 title: ElementInternals.ariaMultiSelectable
 slug: Web/API/ElementInternals/ariaMultiSelectable
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - ariaMultiSelectable
-  - AriaAttributes
-  - AriaMixin
-  - ElementInternals
 browser-compat: api.ElementInternals.ariaMultiSelectable
 ---
 

@@ -2,12 +2,6 @@
 title: Location
 slug: Web/API/Location
 page-type: web-api-interface
-tags:
-  - API
-  - HTML DOM
-  - Interface
-  - Location
-  - Reference
 browser-compat: api.Location
 ---
 

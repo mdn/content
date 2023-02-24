@@ -1,16 +1,6 @@
 ---
 title: Accessibility in React
 slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_accessibility
-tags:
-  - Accessibility
-  - Beginner
-  - Frameworks
-  - JavaScript
-  - Learn
-  - React
-  - client-side
-  - focus management
-  - keyboard
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_filtering_conditional_rendering","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_resources", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
@@ -43,9 +33,9 @@ In our final tutorial article, we'll focus on (pun intended) accessibility, incl
 
 ## Including keyboard users
 
-At this point, we've accomplished all of the features we set out to implement. A user can add a new task, check and uncheck tasks, delete tasks, or edit task names. And they can filter their task list by all, active, or completed tasks.
+At this point, we've accomplished all of the features we set out to implement. A user can add a new task, check and uncheck tasks, delete tasks, or edit task names. Also, they can filter their task list by all, active, or completed tasks.
 
-Or, at least: they can do all of these things with a mouse. Unfortunately, these features are not very accessible to keyboard-only users. Let's explore this now.
+Or, at least, they can do all of these things with a mouse. Unfortunately, these features are not very accessible to keyboard-only users. Let's explore this now.
 
 ## Exploring the keyboard usability problem
 

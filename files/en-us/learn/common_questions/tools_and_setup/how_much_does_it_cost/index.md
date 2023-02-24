@@ -1,12 +1,6 @@
 ---
 title: How much does it cost to do something on the Web?
 slug: Learn/Common_questions/Tools_and_setup/How_much_does_it_cost
-tags:
-  - Beginner
-  - WebMechanics
-  - cost
-  - hosting
-  - web development tools
 ---
 
 {{QuicklinksWithSubPages("Learn/Common_questions")}}

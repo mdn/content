@@ -2,14 +2,8 @@
 title: FileSystemWritableFileStream
 slug: Web/API/FileSystemWritableFileStream
 page-type: web-api-interface
-tags:
-  - File
-  - File System Access API
-  - FileSystemWritableFileStream
-  - Interface
-  - stream
-  - write file
-  - Experimental
+status:
+  - experimental
 browser-compat: api.FileSystemWritableFileStream
 ---
 
@@ -42,7 +36,6 @@ A user defined {{domxref('Blob')}} is then written to the stream which is subseq
 
 ```js
 async function saveFile() {
-
   // create a new handle
   const newHandle = await window.showSaveFilePicker();
 

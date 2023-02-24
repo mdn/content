@@ -2,14 +2,6 @@
 title: FetchEvent
 slug: Web/API/FetchEvent
 page-type: web-api-interface
-tags:
-  - API
-  - FetchEvent
-  - Interface
-  - Offline
-  - Reference
-  - Service Workers
-  - Workers
 browser-compat: api.FetchEvent
 ---
 

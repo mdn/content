@@ -2,13 +2,8 @@
 title: EncodedVideoChunk.byteLength
 slug: Web/API/EncodedVideoChunk/byteLength
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - byteLength
-  - EncodedVideoChunk
-  - Experimental
+status:
+  - experimental
 browser-compat: api.EncodedVideoChunk.byteLength
 ---
 
@@ -26,10 +21,10 @@ In the following example the `byteLength` is printed to the console.
 
 ```js
 const init = {
-  type: 'key',
+  type: "key",
   data: videoBuffer,
   timestamp: 23000000,
-  duration: 2000000
+  duration: 2000000,
 };
 chunk = EncodedVideoChunk(init);
 

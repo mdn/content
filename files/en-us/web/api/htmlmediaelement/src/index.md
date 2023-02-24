@@ -2,13 +2,6 @@
 title: HTMLMediaElement.src
 slug: Web/API/HTMLMediaElement/src
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTML DOM
-  - HTMLMediaElement
-  - Property
-  - Reference
-  - src
 browser-compat: api.HTMLMediaElement.src
 ---
 

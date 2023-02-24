@@ -2,14 +2,6 @@
 title: TouchEvent.ctrlKey
 slug: Web/API/TouchEvent/ctrlKey
 page-type: web-api-instance-property
-tags:
-  - API
-  - DOM
-  - Mobile
-  - Property
-  - TouchEvent
-  - touch
-  - Read-only
 browser-compat: api.TouchEvent.ctrlKey
 ---
 

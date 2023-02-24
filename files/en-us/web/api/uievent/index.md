@@ -2,14 +2,6 @@
 title: UIEvent
 slug: Web/API/UIEvent
 page-type: web-api-interface
-tags:
-  - API
-  - DOM
-  - Event
-  - Interface
-  - Reference
-  - UIEvent
-  - events
 browser-compat: api.UIEvent
 ---
 

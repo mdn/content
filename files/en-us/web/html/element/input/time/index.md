@@ -2,18 +2,6 @@
 title: <input type="time">
 slug: Web/HTML/Element/input/time
 page-type: html-element
-tags:
-  - Element
-  - Forms
-  - HTML
-  - HTML Input Types
-  - HTML forms
-  - HTML input
-  - Input
-  - Input Element
-  - Input Type
-  - Reference
-  - Time
 browser-compat: html.elements.input.type_time
 ---
 

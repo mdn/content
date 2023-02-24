@@ -2,13 +2,8 @@
 title: LargestContentfulPaint.loadTime
 slug: Web/API/LargestContentfulPaint/loadTime
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - loadTime
-  - LargestContentfulPaint
-  - Experimental
+status:
+  - experimental
 browser-compat: api.LargestContentfulPaint.loadTime
 ---
 

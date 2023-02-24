@@ -1,12 +1,6 @@
 ---
 title: Web media technologies
 slug: Web/Media
-tags:
-  - Audio
-  - Landing
-  - Media
-  - Video
-  - Web
 ---
 
 {{QuickLinksWithSubpages("/en-US/docs/Web/Media")}}

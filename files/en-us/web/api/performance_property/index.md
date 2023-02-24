@@ -2,11 +2,6 @@
 title: self.performance
 slug: Web/API/performance_property
 page-type: web-api-global-property
-tags:
-  - API
-  - Performance
-  - Property
-  - Reference
 browser-compat: api.performance
 ---
 

@@ -2,15 +2,6 @@
 title: IDBRequest.source
 slug: Web/API/IDBRequest/source
 page-type: web-api-instance-property
-tags:
-  - API
-  - Database
-  - IDBRequest
-  - IndexedDB
-  - Property
-  - Reference
-  - Storage
-  - source
 browser-compat: api.IDBRequest.source
 ---
 
