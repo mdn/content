@@ -25,7 +25,7 @@ subsequent requests to the same server to be done.
 > Firefox ignore them in HTTP/2 responses, but Safari conforms to the HTTP/2
 > spec requirements and does not load any response that contains them.
 
-All hop-by-hop headers used by the message - including standard hop-by-hop headers ({{HTTPHeader("Keep-Alive")}},
+All [hop-by-hop headers](/en-US/docs/Web/HTTP/Compression#hop-by-hop_compression) used by the message - including standard hop-by-hop headers ({{HTTPHeader("Keep-Alive")}},
 {{HTTPHeader("Transfer-Encoding")}}, {{HTTPHeader("TE")}}, {{HTTPHeader("Connection")}},
 {{HTTPHeader("Trailer")}}, {{HTTPHeader("Upgrade")}},
 {{HTTPHeader("Proxy-Authorization")}} and {{HTTPHeader("Proxy-Authenticate")}}) - must be listed in the `Connection`
