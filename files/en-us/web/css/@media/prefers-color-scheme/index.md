@@ -77,7 +77,7 @@ Theme A (brown) uses a light color scheme by default, but will switch to a dark 
   .theme-a.adaptive {
       background: #753;
       color: #dcb;
-      outline: 5px double currentcolor;
+      outline: 5px dashed #000;
   }
 }
 ```
@@ -93,14 +93,14 @@ Theme B (blue) uses a dark color scheme by default, but will switch to a light s
   .theme-b.adaptive {
       background: #bcd;
       color: #334;
-      outline: 5px dotted currentcolor;
+      outline: 5px dotted #000;
   }
 }
 ```
 
 #### Result
 
-The left boxes shows Theme A and Theme B as they would appear without the `prefers-color-scheme` media query. The right boxes show the same themes, but one of them will be changed to a darker or lighter variant based on the user's active color scheme. The outline of one box will be doubled or dotted based on your browser or operating systems settings.
+The left boxes shows Theme A and Theme B as they would appear without the `prefers-color-scheme` media query. The right boxes show the same themes, but one of them will be changed to a darker or lighter variant based on the user's active color scheme. The outline of one box will be dashed or dotted if it was changed based on your browser or operating systems settings.
 
 {{EmbedLiveSample("Detecting_a_dark_or_light_theme")}}
 
