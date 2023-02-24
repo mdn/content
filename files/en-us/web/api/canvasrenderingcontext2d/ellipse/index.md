@@ -36,10 +36,10 @@ the direction given by `counterclockwise` (defaulting to clockwise).
 - `rotation`
   - : The rotation of the ellipse, expressed in radians.
 - `startAngle`
-  - : The angle at which the ellipse starts, measured clockwise from the positive x-axis
+  - : The eccentric angle at which the ellipse starts, measured clockwise from the positive x-axis
     and expressed in radians.
 - `endAngle`
-  - : The angle at which the ellipse ends, measured clockwise from the positive x-axis and
+  - : The eccentric angle at which the ellipse ends, measured clockwise from the positive x-axis and
     expressed in radians.
 - `counterclockwise` {{optional_inline}}
   - : An optional boolean value which, if `true`, draws the ellipse
