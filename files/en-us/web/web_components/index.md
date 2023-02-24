@@ -164,3 +164,4 @@ We are building up a number of examples in our [web-components-examples](https:/
 - [Slim.js](https://github.com/slimjs/slim.js) — Open source web components library — a high-performant library for rapid and easy component authoring; extensible and pluggable and cross-framework compatible.
 - [Stencil](https://stenciljs.com/) — Toolchain for building reusable, scalable design systems in web components.
 - [omi](https://tencent.github.io/omi/) - Front End Cross-Frameworks Framework
+- [redgin](https://github.com/josnin/redgin) - ~5.3kb Simplified library for building Web Components, works on Vanilla JS / all JS framework
