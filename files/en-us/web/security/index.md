@@ -10,7 +10,7 @@ Ensuring that your website or open web application is secure is critical. Even s
 ## Content security
 
 - [Content security policy (CSP)](/en-US/docs/Web/HTTP/CSP)
-  - : **Content Security Policy** ({{Glossary("CSP")}}) is an added layer of security that helps to detect and mitigate certain types of attacks, including Cross-Site Scripting ({{Glossary("XSS")}}) and data injection attacks. These attacks are used for everything from data theft to site defacement to the distribution of malware.
+  - : **Content Security Policy** ({{Glossary("CSP")}}) is an added layer of security that helps to detect and mitigate certain types of attacks, including Cross-Site Scripting ({{Glossary("Cross-site_scripting", "XSS")}}) and data injection attacks. These attacks are used for everything from data theft to site defacement to the distribution of malware.
 
 ## Connection security
 
