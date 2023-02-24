@@ -200,7 +200,7 @@ When calling `tabs.remove()`:
 
 #### Content script environment
 
-- **In Firefox:** The global scope of the [content script environment](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#content_script_environment) is not strictly equal to `window` ({{bug(1208775)}}). More specifically, the global scope (`globalThis`) is composed of standard JavaScript features as usual, plus `window` as the prototype of the global scope. Most DOM APIs are inherit from the page through `window`, through [Xray vision](/en-US/docs/Mozilla/Add-ons/WebExtensions/Sharing_objects_with_page_scripts#xray_vision_in_firefox) to shield the content script from modifications by the web page. Content scripts may encounter JavaScript objects from its own global scope or Xray-wrapped versions from the web page.
+- **In Firefox:** The global scope of the [content script environment](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#content_script_environment) is not strictly equal to `window` ([Firefox bug 1208775](https://bugzilla.mozilla.org/show_bug.cgi?id=1208775)). More specifically, the global scope (`globalThis`) is composed of standard JavaScript features as usual, plus `window` as the prototype of the global scope. Most DOM APIs are inherit from the page through `window`, through [Xray vision](/en-US/docs/Mozilla/Add-ons/WebExtensions/Sharing_objects_with_page_scripts#xray_vision_in_firefox) to shield the content script from modifications by the web page. Content scripts may encounter JavaScript objects from its own global scope or Xray-wrapped versions from the web page.
 - **In Chrome:** The global scope is `window` and the available DOM APIs are generally independent of the web page (other than sharing the underlying DOM). Content scripts cannot directly access JavaScript objects from the web page.
 
 #### Executing code in web page from content script
@@ -210,11 +210,11 @@ When calling `tabs.remove()`:
 
 #### Sharing variables between content scripts
 
-- **In Firefox:** You cannot share variables between content scripts by assigning them to `this.{variableName}` in one script and then attempting to access them using `window.{variableName}` in another. This is a limitation created by the sandbox environment in Firefox. This limitation may be removed, see {{bug(1208775)}}.
+- **In Firefox:** You cannot share variables between content scripts by assigning them to `this.{variableName}` in one script and then attempting to access them using `window.{variableName}` in another. This is a limitation created by the sandbox environment in Firefox. This limitation may be removed, see [Firefox bug 1208775](https://bugzilla.mozilla.org/show_bug.cgi?id=1208775).
 
 #### Content script lifecycle during navigation
 
-- **In Firefox:** Content scripts remain injected in a web page after the user has navigated away, however, window object properties are destroyed. For example, if a content script sets `window.prop1 = "prop"` and the user then navigates away and returns to the page `window.prop1` is undefined. This issue is tracked in {{bug(1525400)}}.
+- **In Firefox:** Content scripts remain injected in a web page after the user has navigated away, however, window object properties are destroyed. For example, if a content script sets `window.prop1 = "prop"` and the user then navigates away and returns to the page `window.prop1` is undefined. This issue is tracked in [Firefox bug 1525400](https://bugzilla.mozilla.org/show_bug.cgi?id=1525400).
 
   To mimic the behavior of Chrome, listen for the [pageshow](/en-US/docs/Web/API/Window/pageshow_event) and [pagehide](/en-US/docs/Web/API/Window/pagehide_event) events. Then simulate the injection or destruction of the content script.
 

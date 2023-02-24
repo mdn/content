@@ -41,7 +41,7 @@ For other products based on Gecko, the string can take one of two forms, where t
 - `appname/appversion` indicates the application name and version. For instance, this could be "`Camino/2.1.1`", or "`SeaMonkey/2.7.1`".
 - `Firefox/firefoxversion` is an optional compatibility token that some Gecko-based browsers may choose to incorporate, to achieve maximum compatibility with websites that expect Firefox. `firefoxversion` will generally represent the equivalent Firefox release corresponding to the given Gecko version. Some Gecko-based browsers may not opt into using this token; for this reason, sniffers should be looking for Gecko — not Firefox!
 
-Prior to Firefox 4 and Gecko 2.0, it was possible for extensions and plug-ins to add user agent parts, but that has not been possible since {{ Bug(581008) }}.
+Prior to Firefox 4 and Gecko 2.0, it was possible for extensions and plug-ins to add user agent parts, but that has not been possible since [Webkit bug 581008](https://bugzilla.mozilla.org/show_bug.cgi?id=581008).
 
 ## Mobile and Tablet indicators
 

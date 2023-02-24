@@ -20,7 +20,7 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
 - {{htmlattrdef("autofocus")}}
   - : This Boolean attribute specifies that the button should have input [focus](/en-US/docs/Web/API/HTMLElement/focus) when the page loads. **Only one element in a document can have this attribute.**
 - {{htmlattrdef("autocomplete")}} {{non-standard_inline}}
-  - : This attribute on a {{HTMLElement("button")}} is nonstandard and Firefox-specific. Unlike other browsers, [Firefox persists the dynamic disabled state](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing) of a {{HTMLElement("button")}} across page loads. Setting `autocomplete="off"` on the button disables this feature; see {{bug(654072)}}.
+  - : This attribute on a {{HTMLElement("button")}} is nonstandard and Firefox-specific. Unlike other browsers, [Firefox persists the dynamic disabled state](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing) of a {{HTMLElement("button")}} across page loads. Setting `autocomplete="off"` on the button disables this feature; see [Firefox bug 654072](https://bugzilla.mozilla.org/show_bug.cgi?id=654072).
 - {{htmlattrdef("disabled")}}
 
   - : This Boolean attribute prevents the user from interacting with the button: it cannot be pressed or focused.

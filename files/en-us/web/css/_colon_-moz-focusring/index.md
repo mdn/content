@@ -63,4 +63,4 @@ Not part of any standard.
 ## See also
 
 - {{cssxref(":focus-visible")}}
-- {{bug("418521")}}
+- [Firefox bug 418521](https://bugzilla.mozilla.org/show_bug.cgi?id=418521)
