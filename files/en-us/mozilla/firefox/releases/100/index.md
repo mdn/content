@@ -54,6 +54,7 @@ No notable changes.
 
 - The `color_scheme` and `content_color_scheme` properties are added to [theme](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/theme) manifest key and available in the {{WebExtAPIRef("theme")}} API. These properties enable a theme to override whether a light or dark color scheme is automatically applied to the chrome or content ({{bug(1708105)}}).
 - You can now create a muted tab using {{WebExtAPIRef("tabs.create()")}} with the new `muted` property in the `createProperties` object ({{bug(1372100)}}).
+- Support added for {{WebExtAPIRef("runtime.onSuspend")}} and {{WebExtAPIRef("runtime.onSuspendCanceled")}} improving support for event page features ({{bug(1753850)}}).
 
 ## Older versions
 
