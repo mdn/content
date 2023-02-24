@@ -731,7 +731,6 @@
 /en-US/docs/CSS/image()	/en-US/docs/Web/CSS/image/image
 /en-US/docs/CSS/image-orientation	/en-US/docs/Web/CSS/image-orientation
 /en-US/docs/CSS/image-rendering	/en-US/docs/Web/CSS/image-rendering
-/en-US/docs/CSS/ime-mode	/en-US/docs/Web/CSS/ime-mode
 /en-US/docs/CSS/inherit	/en-US/docs/Web/CSS/inherit
 /en-US/docs/CSS/inheritance	/en-US/docs/Web/CSS/inheritance
 /en-US/docs/CSS/inherited_and_non-inherited_properties	/en-US/docs/Web/CSS/inheritance
@@ -1040,7 +1039,6 @@
 /en-US/docs/CSS:font-weight	/en-US/docs/Web/CSS/font-weight
 /en-US/docs/CSS:height	/en-US/docs/Web/CSS/height
 /en-US/docs/CSS:hidden	/en-US/docs/Web/CSS/visibility
-/en-US/docs/CSS:ime-mode	/en-US/docs/Web/CSS/ime-mode
 /en-US/docs/CSS:inherit	/en-US/docs/Web/CSS/inherit
 /en-US/docs/CSS:inheritance	/en-US/docs/Web/CSS/inheritance
 /en-US/docs/CSS:inherited_and_non-inherited_properties	/en-US/docs/Web/CSS/inheritance
@@ -11103,7 +11101,6 @@
 /en-US/docs/Web/CSS/-moz-zoom-out	/en-US/docs/Web/CSS/cursor
 /en-US/docs/Web/CSS/-ms-grid-columns	/en-US/docs/Web/CSS/grid-template-columns
 /en-US/docs/Web/CSS/-ms-grid-rows	/en-US/docs/Web/CSS/grid-template-rows
-/en-US/docs/Web/CSS/-ms-high-contrast	/en-US/docs/Web/CSS/@media/-ms-high-contrast
 /en-US/docs/Web/CSS/-ms-scroll-snap-type	/en-US/docs/Web/CSS/scroll-snap-type
 /en-US/docs/Web/CSS/-ms-text-size-adjust	/en-US/docs/Web/CSS/text-size-adjust
 /en-US/docs/Web/CSS/-ms-user-select	/en-US/docs/Web/CSS/user-select
@@ -11312,7 +11309,6 @@
 /en-US/docs/Web/CSS/Interactive	/en-US/docs/Web/CSS/@media
 /en-US/docs/Web/CSS/Layout_cookbook/Recipe:_Media_Objects	/en-US/docs/Web/CSS/Layout_cookbook/Media_objects
 /en-US/docs/Web/CSS/List_of_Proprietary_CSS_Features	/en-US/docs/Web/CSS/Reference
-/en-US/docs/Web/CSS/Microsoft_CSS_extensions	/en-US/docs/Web/CSS/Microsoft_extensions
 /en-US/docs/Web/CSS/Motion_Path	/en-US/docs/Web/CSS/CSS_Motion_Path
 /en-US/docs/Web/CSS/Other_Resources	/en-US/docs/Web/CSS
 /en-US/docs/Web/CSS/Reference/Mozilla_Extensions	/en-US/docs/Web/CSS/Mozilla_Extensions

@@ -76922,21 +76922,6 @@
       "connorshea"
     ]
   },
-  "Web/CSS/@media/-ms-high-contrast": {
-    "modified": "2020-12-14T10:53:35.458Z",
-    "contributors": [
-      "rachelandrew",
-      "sideshowbarker",
-      "pankajpurke05",
-      "wbamberg",
-      "mfuji09",
-      "ericwbailey",
-      "WebMechanic",
-      "ExE-Boss",
-      "mfluehr",
-      "jameshkramer"
-    ]
-  },
   "Web/CSS/@media/-webkit-animation": {
     "modified": "2020-10-15T21:36:40.513Z",
     "contributors": [
@@ -79836,18 +79821,6 @@
       "Waldo",
       "Kris.shannon",
       "BenoitL"
-    ]
-  },
-  "Web/CSS/Microsoft_Extensions": {
-    "modified": "2020-07-16T08:38:36.303Z",
-    "contributors": [
-      "wbamberg",
-      "mfuji09",
-      "ExE-Boss",
-      "erikadoyle",
-      "jameshkramer",
-      "jswisher",
-      "mfluehr"
     ]
   },
   "Web/CSS/Mozilla_Extensions": {
@@ -86913,30 +86886,6 @@
       "wbamberg",
       "mfuji09",
       "estelle"
-    ]
-  },
-  "Web/CSS/ime-mode": {
-    "modified": "2020-10-15T21:06:19.171Z",
-    "contributors": [
-      "wbamberg",
-      "Sheppy",
-      "fscholz",
-      "mfluehr",
-      "momdo",
-      "erikadoyle",
-      "Tigt",
-      "LouisLazaris",
-      "Sebastianz",
-      "RahulKapuriya12692",
-      "kscarfone",
-      "teoli",
-      "ethertank",
-      "myakura",
-      "grendel",
-      "Jürgen Jeka",
-      "Mgjbot",
-      "BobChao",
-      "BijuGC"
     ]
   },
   "Web/CSS/inherit": {
