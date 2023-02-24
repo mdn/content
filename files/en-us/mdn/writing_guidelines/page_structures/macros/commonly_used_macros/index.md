@@ -165,8 +165,8 @@ Most macros will also take a second argument allowing you to change the display 
 
 - Bugs
 
-  - [`bug`](https://github.com/mdn/yari/blob/main/kumascript/macros/bug.ejs) allows you to link to a bug on bugzilla.mozilla.org easily using this syntax: `\[Webkit bug 123456](https://bugzilla.mozilla.org/show_bug.cgi?id=123456)`.
-    This gives you: [Webkit bug 123456](https://bugzilla.mozilla.org/show_bug.cgi?id=123456).
+  - [`bug`](https://github.com/mdn/yari/blob/main/kumascript/macros/bug.ejs) allows you to link to a bug on bugzilla.mozilla.org easily using this syntax: `\[Webkit bug 123456](https://bugzil.la/123456)`.
+    This gives you: [Webkit bug 123456](https://bugzil.la/123456).
   - [`WebkitBug`](https://github.com/mdn/yari/blob/main/kumascript/macros/WebkitBug.ejs) inserts a link to a bug in the WebKit bug database.
     For example, `\[Webkit bug 31277](https://webkit.org/b/31277)` inserts [Webkit bug 31277](https://webkit.org/b/31277).
 

@@ -48,13 +48,13 @@ In all cases, the server may prefer returning a {{HTTPStatus("404")}} `Not Found
 ### Authentication of cross-origin images
 
 A potential security hole (that has since been fixed in browsers) was authentication of cross-site images.
-From [Firefox 59](/en-US/docs/Mozilla/Firefox/Releases/59) onwards, image resources loaded from different origins to the current document are no longer able to trigger HTTP authentication dialogs ([Firefox bug 1423146](https://bugzilla.mozilla.org/show_bug.cgi?id=1423146)), preventing user credentials being stolen if attackers were able to embed an arbitrary image into a third-party page.
+From [Firefox 59](/en-US/docs/Mozilla/Firefox/Releases/59) onwards, image resources loaded from different origins to the current document are no longer able to trigger HTTP authentication dialogs ([Firefox bug 1423146](https://bugzil.la/1423146)), preventing user credentials being stolen if attackers were able to embed an arbitrary image into a third-party page.
 
 ### Character encoding of HTTP authentication
 
 Browsers use `utf-8` encoding for usernames and passwords.
 
-Firefox once used `ISO-8859-1`, but changed to `utf-8` for parity with other browsers and to avoid potential problems as described in [Firefox bug 1419658](https://bugzilla.mozilla.org/show_bug.cgi?id=1419658).
+Firefox once used `ISO-8859-1`, but changed to `utf-8` for parity with other browsers and to avoid potential problems as described in [Firefox bug 1419658](https://bugzil.la/1419658).
 
 ### WWW-Authenticate and Proxy-Authenticate headers
 

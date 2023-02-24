@@ -68,4 +68,4 @@ Not part of any standard.
 
 ## See also
 
-- [Webkit bug 58646](https://bugzilla.mozilla.org/show_bug.cgi?id=58646)
+- [Webkit bug 58646](https://bugzil.la/58646)

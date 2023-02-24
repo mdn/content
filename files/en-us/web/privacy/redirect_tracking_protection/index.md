@@ -17,7 +17,7 @@ Redirect trackers work by forcing you to make an imperceptible and momentary sto
 
 ## Redirect tracking protection explained
 
-To protect against redirect tracking Firefox periodically clears cookies and site data from trackers. We only clear this data from storage if the user is [blocking tracking cookies](/en-US/docs/Web/Privacy/Storage_Access_Policy) (i.e., the `network.cookie.cookieBehavior` pref is set to `4`). Support for other cookie policies is tracked by [Bug 1643045](https://bugzilla.mozilla.org/show_bug.cgi?id=1643045).
+To protect against redirect tracking Firefox periodically clears cookies and site data from trackers. We only clear this data from storage if the user is [blocking tracking cookies](/en-US/docs/Web/Privacy/Storage_Access_Policy) (i.e., the `network.cookie.cookieBehavior` pref is set to `4`). Support for other cookie policies is tracked by [Bug 1643045](https://bugzil.la/1643045).
 
 ### What origins are cleared?
 
