@@ -1,22 +1,6 @@
 ---
 title: "HTML: A good basis for accessibility"
 slug: Learn/Accessibility/HTML
-tags:
-  - AT
-  - Accessibility
-  - Article
-  - Beginner
-  - Buttons
-  - CodingScripting
-  - Forms
-  - HTML
-  - Learn
-  - Links
-  - a11y
-  - assistive technology
-  - keyboard
-  - screenreader
-  - semantics
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Accessibility/What_is_Accessibility","Learn/Accessibility/CSS_and_JavaScript", "Learn/Accessibility")}}

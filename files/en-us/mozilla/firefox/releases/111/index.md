@@ -18,6 +18,9 @@ This article provides information about the changes in Firefox 111 that affect d
 
 ### HTML
 
+- The [`autocapitalize`](/en-US/docs/Web/HTML/Global_attributes/autocapitalize) global attribute is now supported by default. The default value for the attribute is `none`, so no capitalization occurs ({{bug(1692007)}}).
+- The [`translate`](/en-US/docs/Web/HTML/Global_attributes/translate) global attribute is now supported ({{bug(1418449)}}).
+
 #### Removals
 
 ### CSS

@@ -1,12 +1,6 @@
 ---
 title: Design and accessibility
 slug: Learn/Common_questions/Design_and_accessibility
-tags:
-  - CodingScripting
-  - Infrastructure
-  - Learn
-  - Web
-  - WebMechanics
 ---
 
 {{LearnSidebar}}

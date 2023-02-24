@@ -2,12 +2,8 @@
 title: "-ms-high-contrast"
 slug: Web/CSS/@media/-ms-high-contrast
 page-type: css-media-feature
-tags:
-  - "@media"
-  - CSS
-  - Non-standard
-  - Reference
-  - media feature
+status:
+  - non-standard
 ---
 
 {{CSSRef}}{{Non-standard_header}}
@@ -92,7 +88,7 @@ Not part of any standard.
 
 As of Microsoft Edge 18, `-ms-high-contrast: none` is no longer supported. Microsoft Edge versions 18 and higher will be using the [`forced-colors` media feature](/en-US/docs/Web/CSS/@media/forced-colors) instead, but the `forced-colors` media feature specification is still being actively worked on.
 
-The `-ms-high-contrast` media feature works with the {{CSSxRef("-ms-high-contrast-adjust")}} property.
+The `-ms-high-contrast` media feature works with the `-ms-high-contrast-adjust` property.
 
 ## See also
 

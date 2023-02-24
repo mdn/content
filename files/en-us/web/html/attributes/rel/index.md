@@ -156,7 +156,7 @@ The `rel` attribute has no default value. If the attribute is omitted or if none
 
     > **Note:** Although recognized, the synonym `copyright` is incorrect and must be avoided.
 
-- {{htmlattrdef("manifest")}}
+- {{htmlattrdef("manifest")}} {{Experimental_Inline}}
   - : [Web app manifest](/en-US/docs/Web/Manifest). Requires the use of the CORS protocol for cross-origin fetching.
 - {{htmlattrdef("modulepreload")}}
   - : Useful for improved performance, and relevant to the {{htmlelement('link')}} anywhere in the document, setting `rel="modulepreload"` tells the browser to preemptively fetch the script (and dependencies) and store it in the document's module map for later evaluation. `modulepreload` links can ensure network fetching is done with the module ready (but not evaluated) in the module map before it is necessarily needed. See also [`modulepreload`](/en-US/docs/Web/HTML/Attributes/rel/modulepreload).
@@ -182,7 +182,7 @@ The `rel` attribute has no default value. If the attribute is omitted or if none
   - : Specifies that the user agent should preemptively fetch and cache the target resource as it is likely to be required for a followup navigation. The [Link Prefetch FAQ](/en-US/docs/Web/HTTP/Link_prefetching_FAQ) has details on which links can be prefetched and on alternative methods.
 - {{htmlattrdef("preload")}}
   - : Specifies that the user agent must preemptively fetch and cache the target resource for current navigation according to the potential destination given by the [`as`](/en-US/docs/Web/HTML/Element/link#attr-as) attribute (and the priority associated with the corresponding destination). See the page for the [`preload`](/en-US/docs/Web/HTML/Attributes/rel/preload) value.
-- {{htmlattrdef("prerender")}}
+- {{htmlattrdef("prerender")}} {{Experimental_Inline}}
   - : Specifies that the user agent should preemptively fetch the target resource and process it in a way that helps deliver a faster response in the future, for example by fetching its subresources or performing some rendering.
 - {{htmlattrdef("prev")}}
 
@@ -194,7 +194,7 @@ The `rel` attribute has no default value. If the attribute is omitted or if none
 
   - : Relevant to {{htmlelement('form')}}, {{htmlelement('link')}}, {{htmlelement('a')}}, and {{htmlelement('area')}} elements, the `search` keywords indicates that the hyperlink references a document whose interface is specially designed for searching in the current document, site, and related resources, providing a link to a resource that can be used to search.
 
-    If the [`type`](/en-US/docs/Web/HTML/Element/link#attr-type) attribute is set to `application/opensearchdescription+xml` the resource is an [OpenSearch](/en-US/docs/Web/OpenSearch) plugin that can be easily added to the interface of some browsers like Firefox or Internet Explorer.
+    If the [`type`](/en-US/docs/Web/HTML/Element/link#attr-type) attribute is set to `application/opensearchdescription+xml` the resource is an [OpenSearch](/en-US/docs/Web/OpenSearch) plugin that can be easily added to the interface of Firefox.
 
 - {{htmlattrdef("stylesheet")}}
 

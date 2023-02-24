@@ -2,14 +2,6 @@
 title: size
 slug: Web/CSS/@page/size
 page-type: css-at-rule-descriptor
-tags:
-  - "@page"
-  - At-rule descriptor
-  - CSS
-  - CSS Descriptor
-  - NeedsBrowserCompatibility
-  - Reference
-  - Web
 browser-compat: css.at-rules.page.size
 ---
 

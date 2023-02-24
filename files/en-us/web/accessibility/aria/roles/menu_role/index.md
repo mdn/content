@@ -1,14 +1,6 @@
 ---
 title: "ARIA: menu role"
 slug: Web/Accessibility/ARIA/Roles/menu_role
-tags:
-  - Accessibility
-  - ARIA
-  - roles
-  - Reference
-  - ARIA roles
-  - Menu role
-  - composite widget role
 spec-urls:
   - https://w3c.github.io/aria/#menu
   - https://w3c.github.io/aria-practices/#menu

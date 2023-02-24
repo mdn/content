@@ -2,13 +2,6 @@
 title: align-self
 slug: Web/CSS/align-self
 page-type: css-property
-tags:
-  - CSS
-  - CSS Box Alignment
-  - CSS Flexible Boxes
-  - CSS Property
-  - Reference
-  - recipe:css-property
 browser-compat: css.properties.align-self
 ---
 

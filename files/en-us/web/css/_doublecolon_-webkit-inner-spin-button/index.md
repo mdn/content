@@ -2,14 +2,8 @@
 title: "::-webkit-inner-spin-button"
 slug: Web/CSS/::-webkit-inner-spin-button
 page-type: css-pseudo-element
-tags:
-  - CSS
-  - NeedsBrowserCompatibility
-  - NeedsMobileBrowserCompatibility
-  - Non-standard
-  - Pseudo-element
-  - Reference
-  - Selector
+status:
+  - non-standard
 browser-compat: css.selectors.-webkit-inner-spin-button
 ---
 

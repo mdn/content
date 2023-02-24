@@ -2,6 +2,8 @@
 title: Element.elementTiming
 slug: Web/API/Element/elementTiming
 page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.Element.elementTiming
 ---
 

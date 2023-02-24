@@ -1,18 +1,6 @@
 ---
 title: How do you set up a local testing server?
 slug: Learn/Common_questions/Tools_and_setup/set_up_a_local_testing_server
-tags:
-  - Beginner
-  - Express
-  - Flask
-  - Learn
-  - Node
-  - PHP
-  - Python
-  - django
-  - lamp
-  - server-side
-  - servers
 ---
 
 {{QuicklinksWithSubPages("Learn/Common_questions")}}

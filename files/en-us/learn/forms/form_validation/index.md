@@ -1,16 +1,6 @@
 ---
 title: Client-side form validation
 slug: Learn/Forms/Form_validation
-tags:
-  - Beginner
-  - Example
-  - Forms
-  - Guide
-  - HTML
-  - JavaScript
-  - Learn
-  - Web
-  - regex
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Forms/UI_pseudo-classes", "Learn/Forms/Sending_and_retrieving_form_data", "Learn/HTML/Forms")}}
@@ -694,7 +684,7 @@ The HTML is almost the same; we just removed the HTML validation features.
 </form>
 ```
 
-Similarly, the CSS doesn't need to change very much; we've just turned the {{cssxref(":invalid")}} CSS pseudo-class into a real class and avoided using the attribute selector that doesn't work on Internet Explorer 6.
+Similarly, the CSS doesn't need to change very much; we've just turned the {{cssxref(":invalid")}} CSS pseudo-class into a real class and avoided using the attribute selector.
 
 ```css
 body {

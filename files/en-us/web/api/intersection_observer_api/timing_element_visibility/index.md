@@ -450,7 +450,7 @@ function createArticle(contents) {
 }
 ```
 
-First, the `<article>` element is created and its ID is set to the unique value `nextArticleID` (which starts at 1 and goes up for each article). Then we create and append an {{HTMLElement("h2")}} element for the article title and then we append the HTML from `contents` to that. Finally, `nextArticleID` is incremented (so that the next element gets a new unique ID) and we return the new `<article>` element to the caller.
+First, the `<article>` element is created and its ID is set to the unique value `nextArticleID` (which starts at 1 and goes up for each article). Then we create and append an {{HTMLElement("Heading_Elements", "h2")}} element for the article title and then we append the HTML from `contents` to that. Finally, `nextArticleID` is incremented (so that the next element gets a new unique ID) and we return the new `<article>` element to the caller.
 
 #### Creating an ad
 
@@ -529,7 +529,7 @@ Then we define several variables:
 - `adBox`
   - : This will be set to the element that represents the ad. For new ads being appended to the page, this is created using {{domxref("Document.createElement()")}}. When replacing an existing ad, this is set to the specified ad element (`replaceBox`).
 - `title`
-  - : Will hold the {{HTMLElement("h2")}} element representing the ad's title.
+  - : Will hold the {{HTMLElement("Heading_Elements", "h2")}} element representing the ad's title.
 - `body`
   - : Will hold the {{HTMLElement("p")}} representing the ad's body text.
 - `timerElem`
@@ -539,7 +539,7 @@ A random ad is selected by computing `Math.floor(Math.random() * ads.length)`; t
 
 If a value is specified for `replaceBox`, we use that as the ad element. To do so, we begin by ending observation of the element by calling {{domxref("IntersectionObserver.unobserve()")}}. Then the local variables for each of the elements that comprise an ad: the ad box itself, the title, the body, and the timer box, are all set to the corresponding elements in the existing ad.
 
-If no value is specified for replaceBox, we create a new ad element. The ad's new {{HTMLElement("div")}} element is created and its properties established by setting its class name to `"ad"`. Next, the ad title element is created, along with the body and the visibility timer; these are an {{HTMLElement("h2")}}, a {{HTMLElement("p")}}, and a {{HTMLElement("div")}} element, respectively. These elements are appended to the `adBox` element.
+If no value is specified for replaceBox, we create a new ad element. The ad's new {{HTMLElement("div")}} element is created and its properties established by setting its class name to `"ad"`. Next, the ad title element is created, along with the body and the visibility timer; these are an {{HTMLElement("Heading_Elements", "h2")}}, a {{HTMLElement("p")}}, and a {{HTMLElement("div")}} element, respectively. These elements are appended to the `adBox` element.
 
 After that, the code paths converge once again. The ad's background color is set to the value specified in the new ad's record, and elements' classes and contents are set appropriately as well.
 

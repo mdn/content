@@ -39,7 +39,6 @@ Typically the right side of a control will also have an arrow pointing to the pr
 <datalist id="browsers">
   <option value="Chrome"></option>
   <option value="Firefox"></option>
-  <option value="Internet Explorer"></option>
   <option value="Opera"></option>
   <option value="Safari"></option>
   <option value="Microsoft Edge"></option>

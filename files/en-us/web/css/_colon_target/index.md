@@ -2,13 +2,6 @@
 title: ":target"
 slug: Web/CSS/:target
 page-type: css-pseudo-class
-tags:
-  - CSS
-  - Layout
-  - Pseudo-class
-  - Reference
-  - Selector
-  - Web
 browser-compat: css.selectors.target
 ---
 

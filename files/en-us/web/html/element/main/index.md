@@ -88,7 +88,7 @@ This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_a
 
 The content of a `<main>` element should be unique to the document. Content that is repeated across a set of documents or document sections such as sidebars, navigation links, copyright information, site logos, and search forms shouldn't be included unless the search form is the main function of the page.
 
-`<main>` doesn't contribute to the document's outline; that is, unlike elements such as {{HTMLElement("body")}}, headings such as {{HTMLElement("h2")}}, and such, `<main>` doesn't affect the {{glossary("DOM", "DOM's")}} concept of the structure of the page. It's strictly informative.
+`<main>` doesn't contribute to the document's outline; that is, unlike elements such as {{HTMLElement("body")}}, headings such as {{HTMLElement("Heading_Elements", "h2")}}, and such, `<main>` doesn't affect the {{glossary("DOM", "DOM's")}} concept of the structure of the page. It's strictly informative.
 
 ## Example
 

@@ -2,6 +2,8 @@
 title: SVGAltGlyphElement.format
 slug: Web/API/SVGAltGlyphElement/format
 page-type: web-api-instance-property
+status:
+  - deprecated
 browser-compat: api.SVGAltGlyphElement.format
 ---
 

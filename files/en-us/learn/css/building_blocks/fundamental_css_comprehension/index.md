@@ -1,17 +1,6 @@
 ---
 title: Fundamental CSS comprehension
 slug: Learn/CSS/Building_blocks/Fundamental_CSS_comprehension
-tags:
-  - Assessment
-  - Beginner
-  - CSS
-  - CodingScripting
-  - Selectors
-  - Style
-  - Syntax
-  - box model
-  - comments
-  - rules
 ---
 
 {{LearnSidebar}}

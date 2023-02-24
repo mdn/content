@@ -2,12 +2,6 @@
 title: ":placeholder-shown"
 slug: Web/CSS/:placeholder-shown
 page-type: css-pseudo-class
-tags:
-  - ":placeholder-shown"
-  - CSS
-  - Pseudo-class
-  - Reference
-  - Selector
 browser-compat: css.selectors.placeholder-shown
 ---
 

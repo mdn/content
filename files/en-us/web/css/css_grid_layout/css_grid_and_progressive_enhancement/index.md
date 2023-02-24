@@ -10,7 +10,7 @@ In Spring of 2017, we saw for the first time a major specification like Grid bei
 
 ## The supporting browsers
 
-Other than in Internet Explorer, CSS Grid Layout is unprefixed in Safari, Chrome, Opera, Firefox and Edge. Support for all the properties and values detailed in these guides is interoperable across browsers. This means that if you write some Grid Layout code in Firefox, it should work in the same way in Chrome. This is no longer an experimental specification, and you are safe to use it in production.
+CSS Grid Layout is unprefixed in all modern browsers. Support for all the properties and values detailed in these guides is interoperable across browsers. This means that if you write some Grid Layout code in Firefox, it should work in the same way in Chrome. This is no longer an experimental specification, and you are safe to use it in production.
 
 ## The Internet Explorer and Edge situation
 

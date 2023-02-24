@@ -2,12 +2,6 @@
 title: ":in-range"
 slug: Web/CSS/:in-range
 page-type: css-pseudo-class
-tags:
-  - CSS
-  - Pseudo-class
-  - Reference
-  - Selector
-  - Web
 browser-compat: css.selectors.in-range
 ---
 

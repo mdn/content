@@ -1,13 +1,6 @@
 ---
 title: What is a Domain Name?
 slug: Learn/Common_questions/Web_mechanics/What_is_a_domain_name
-tags:
-  - Beginner
-  - Domain names
-  - Infrastructure
-  - Intro
-  - NeedsActiveLearning
-  - Web
 ---
 
 {{QuicklinksWithSubPages("Learn/Common_questions")}}

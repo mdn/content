@@ -149,7 +149,7 @@ The example below shows a three-column track grid with new rows created at a min
   - [Grid area](/en-US/docs/Glossary/Grid_Areas)
   - [Gutters](/en-US/docs/Glossary/Gutters)
   - [Grid axis](/en-US/docs/Glossary/Grid_Axis)
-  - [Grid row](/en-US/docs/Glossary/Grid_Rows)
+  - [Grid row](/en-US/docs/Glossary/Grid_Row)
   - [Grid column](/en-US/docs/Glossary/Grid_Column)
 - [Grid by Example](https://gridbyexample.com/) - A collection of usage examples and video tutorials
 - [CSS Grid Reference - Codrops](https://tympanus.net/codrops/css_reference/grid/)

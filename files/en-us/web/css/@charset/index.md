@@ -2,12 +2,6 @@
 title: "@charset"
 slug: Web/CSS/@charset
 page-type: css-at-rule
-tags:
-  - At-rule
-  - CSS
-  - Layout
-  - Reference
-  - Web
 browser-compat: css.at-rules.charset
 ---
 
@@ -67,5 +61,5 @@ As there are several ways to define the character encoding of a style sheet, the
 
 ## See also
 
-- [Character set](/en-US/docs/Glossary/character_set) glossary entry
+- [Character set](/en-US/docs/Glossary/Character_set) glossary entry
 - [Unicode](/en-US/docs/Glossary/Unicode) glossary entry

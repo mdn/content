@@ -1,15 +1,6 @@
 ---
 title: Server-side web frameworks
 slug: Learn/Server-side/First_steps/Web_frameworks
-tags:
-  - Beginner
-  - CodingScripting
-  - Guide
-  - Intro
-  - Learn
-  - Server
-  - Server-side programming
-  - Web frameworks
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/First_steps/Client-Server_overview", "Learn/Server-side/First_steps/Website_security", "Learn/Server-side/First_steps")}}

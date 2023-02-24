@@ -2,8 +2,6 @@
 title: Garbage collection
 slug: Glossary/Garbage_collection
 page-type: glossary-definition
-tags:
-  - CodingScripting
 ---
 
 **[Garbage collection](/en-US/docs/Web/JavaScript/Memory_Management#garbage_collection)** is a term used in {{Glossary("computer programming")}} to describe the process of finding and deleting {{Glossary("object", "objects")}} which are no longer being {{Glossary("object reference", "referenced")}} by other objects.

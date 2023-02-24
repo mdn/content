@@ -2,12 +2,6 @@
 title: border-inline-style
 slug: Web/CSS/border-inline-style
 page-type: css-property
-tags:
-  - CSS
-  - CSS Logical Property
-  - CSS Property
-  - Reference
-  - recipe:css-property
 browser-compat: css.properties.border-inline-style
 ---
 

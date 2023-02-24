@@ -1,12 +1,6 @@
 ---
 title: loop
 slug: WebAssembly/Reference/Control_flow/loop
-tags:
-  - WebAssembly
-  - wasm
-  - Landing page
-  - Reference
-  - Control flow
 ---
 
 {{WebAssemblySidebar}}

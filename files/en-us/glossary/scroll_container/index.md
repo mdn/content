@@ -2,8 +2,6 @@
 title: Scroll container
 slug: Glossary/Scroll_container
 page-type: glossary-definition
-tags:
-  - scroll container
 ---
 
 A **scroll container** is created by applying `overflow: scroll` to a container, or `overflow: auto` when there is enough content to cause overflow.

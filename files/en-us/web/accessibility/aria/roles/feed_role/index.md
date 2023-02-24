@@ -1,12 +1,6 @@
 ---
 title: "ARIA: feed role"
 slug: Web/Accessibility/ARIA/Roles/feed_role
-tags:
-  - ARIA
-  - ARIA Role
-  - Reference
-  - feed
-  - document structure role
 spec-urls: https://w3c.github.io/aria/#feed
 ---
 

@@ -1,11 +1,6 @@
 ---
 title: create fancy boxes
 slug: Learn/CSS/Howto/create_fancy_boxes
-tags:
-  - Beginner
-  - CSS
-  - CodingScripting
-  - Learn
 ---
 
 {{LearnSidebar}}

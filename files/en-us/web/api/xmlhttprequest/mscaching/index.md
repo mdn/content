@@ -1,14 +1,12 @@
 ---
 title: XMLHttpRequest.msCaching
 slug: Web/API/XMLHttpRequest/msCaching
-page-type: api-instance-property
+page-type: web-api-instance-property
 status:
   - non-standard
 ---
 
-{{APIRef("XMLHttpRequest")}}
-
-{{Non-standard_header()}}
+{{APIRef("XMLHttpRequest")}}{{Non-standard_header}}
 
 **`msCaching`** is a read/write property which specifies whether stream data downloaded using [XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest) is cached to disk or not. In compatible browsers, if `msCaching` is not `disabled`, then `XMLHttpRequest` instances will be cached to disk regardless of whether [cache-control](/en-US/docs/Web/HTTP/Headers/Cache-Control) is set to `no-cache`.
 

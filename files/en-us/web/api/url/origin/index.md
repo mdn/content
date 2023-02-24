@@ -16,8 +16,7 @@ varies depending on the type of URL:
 
 - For `http` or `https` URLs, the scheme followed by
   `'://'`, followed by the domain, followed by `':'`, followed by
-  the port (the default port, `80` and `443` respectively, if
-  explicitly specified).
+  the port (if explicitly specified, unless it is the default port - `80` and `443` respectively).
 - For `file:` URLs, the value is browser dependent.
 - for `blob:` URLs, the origin of the URL following `blob:` will
   be used. For example, `"blob:https://mozilla.org"` will be returned as
@@ -34,6 +33,12 @@ A string.
 ```js
 const url = new URL("blob:https://mozilla.org:443/")
 console.log(url.origin); // Logs 'https://mozilla.org'
+
+const url = new URL("http://localhost:80/")
+console.log(url.origin); // Logs 'http://localhost'
+
+const url = new URL("https://mozilla.org:8080/")
+console.log(url.origin); // Logs 'https://mozilla.org:8080'
 ```
 
 ## Specifications

@@ -1,16 +1,6 @@
 ---
 title: Basic native form controls
 slug: Learn/Forms/Basic_native_form_controls
-tags:
-  - Beginner
-  - Controls
-  - Example
-  - Forms
-  - Guide
-  - HTML
-  - Input
-  - Web
-  - Widgets
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Forms/How_to_structure_a_web_form", "Learn/Forms/HTML5_input_types", "Learn/Forms")}}

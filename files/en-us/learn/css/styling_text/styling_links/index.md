@@ -1,19 +1,6 @@
 ---
 title: Styling links
 slug: Learn/CSS/Styling_text/Styling_links
-tags:
-  - Article
-  - Beginner
-  - CSS
-  - Focus
-  - Guide
-  - Learn
-  - Links
-  - Pseudo-class
-  - hover
-  - hyperlinks
-  - menus
-  - tabs
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Styling_text/Styling_lists", "Learn/CSS/Styling_text/Web_fonts", "Learn/CSS/Styling_text")}}

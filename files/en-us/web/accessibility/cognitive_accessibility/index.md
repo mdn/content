@@ -1,12 +1,6 @@
 ---
 title: Cognitive accessibility
 slug: Web/Accessibility/Cognitive_accessibility
-tags:
-  - Accessibility
-  - Best practices
-  - Forms
-  - WCAG
-  - cognitive accessibility
 ---
 
 <section id="Quick_links">
