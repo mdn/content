@@ -24,7 +24,7 @@ There are three types of content categories:
 
 Elements belonging to the _metadata content_ category modify the presentation or the behavior of the rest of the document, set up links to other documents, or convey other _out-of-band_ information.
 
-Elements belonging to this category are {{HTMLElement("base")}}, {{HTMLElement("command")}} {{deprecated_inline}}, {{HTMLElement("link")}}, {{HTMLElement("meta")}}, {{HTMLElement("noscript")}}, {{HTMLElement("script")}}, {{HTMLElement("style")}} and {{HTMLElement("title")}}.
+Elements belonging to this category are {{HTMLElement("base")}}, {{HTMLElement("link")}}, {{HTMLElement("meta")}}, {{HTMLElement("noscript")}}, {{HTMLElement("script")}}, {{HTMLElement("style")}} and {{HTMLElement("title")}}.
 
 ### Flow content
 
@@ -47,7 +47,6 @@ The flow elements are:
 - {{HTMLElement("canvas")}}
 - {{HTMLElement("cite")}}
 - {{HTMLElement("code")}}
-- {{HTMLElement("command")}} {{deprecated_inline}}
 - {{HTMLElement("data")}}
 - {{HTMLElement("datalist")}}
 - {{HTMLElement("del")}}
@@ -154,7 +153,6 @@ Elements belonging to this category are:
 - {{HTMLElement("canvas")}}
 - {{HTMLElement("cite")}}
 - {{HTMLElement("code")}}
-- {{HTMLElement("command")}} {{deprecated_inline}}
 - {{HTMLElement("data")}}
 - {{HTMLElement("datalist")}}
 - {{HTMLElement("dfn")}}
