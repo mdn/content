@@ -2,12 +2,6 @@
 title: flex-basis
 slug: Web/CSS/flex-basis
 page-type: css-property
-tags:
-  - CSS
-  - CSS Flexible Boxes
-  - CSS Property
-  - Reference
-  - recipe:css-property
 browser-compat: css.properties.flex-basis
 ---
 
@@ -57,6 +51,7 @@ The `flex-basis` property is specified as either the keyword `content` or a `<'w
 ### Values
 
 - `<'width'>`
+
   - : Any of the following units:
     - {{cssxref("&lt;length&gt;")}} sets an absolute value
     - {{cssxref("&lt;percentage&gt;")}} sets a percentage of the width or height of a containing block's content area

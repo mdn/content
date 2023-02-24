@@ -2,26 +2,6 @@
 title: 'HTMLTrackElement: cuechange event'
 slug: Web/API/HTMLTrackElement/cuechange_event
 page-type: web-api-event
-tags:
-  - API
-  - Accessibility
-  - Audio
-  - Chapters
-  - Descriptions
-  - HTMLTextTrack
-  - Media
-  - Reference
-  - Text
-  - TextTrack
-  - Video
-  - WebVTT
-  - a11y
-  - captions
-  - cuechange
-  - events
-  - oncuechange
-  - track
-  - vtt
 browser-compat: api.HTMLTrackElement.cuechange_event
 ---
 

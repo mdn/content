@@ -2,11 +2,6 @@
 title: Promise.all()
 slug: Web/JavaScript/Reference/Global_Objects/Promise/all
 page-type: javascript-static-method
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Promise
 browser-compat: javascript.builtins.Promise.all
 ---
 
@@ -273,7 +268,7 @@ Promise.all([p1.catch((error) => error), p2.catch((error) => error)]).then(
   (values) => {
     console.log(values[0]); // "p1_delayed_resolution"
     console.error(values[1]); // "Error: p2_immediate_rejection"
-  }
+  },
 );
 ```
 

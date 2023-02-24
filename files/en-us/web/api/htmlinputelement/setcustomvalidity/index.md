@@ -2,15 +2,6 @@
 title: HTMLInputElement.setCustomValidity()
 slug: Web/API/HTMLInputElement/setCustomValidity
 page-type: web-api-instance-method
-tags:
-  - API
-  - HTML DOM
-  - HTMLInputElement
-  - Method
-  - NeedsExample
-  - Reference
-  - setCustomValidity
-  - setCustomValidity()
 browser-compat: api.HTMLObjectElement.setCustomValidity
 ---
 
@@ -54,7 +45,7 @@ function validate(inputID) {
   } else if (validityState.rangeUnderflow) {
     input.setCustomValidity("We need a higher number!");
   } else if (validityState.rangeOverflow) {
-    input.setCustomValidity("Thats too high!");
+    input.setCustomValidity("That's too high!");
   } else {
     input.setCustomValidity("");
   }

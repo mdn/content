@@ -1,13 +1,6 @@
 ---
 title: "ARIA: term role"
 slug: Web/Accessibility/ARIA/Roles/term_role
-tags:
-  - Accessibility
-  - ARIA
-  - roles
-  - Reference
-  - ARIA roles
-  - document structure role
 spec-urls: https://w3c.github.io/aria/#term
 ---
 

@@ -1,6 +1,7 @@
 ---
 title: userScripts.onBeforeScript
 slug: Mozilla/Add-ons/WebExtensions/API/userScripts/onBeforeScript
+page-type: webextension-api-event
 tags:
   - Add-ons
   - Addons

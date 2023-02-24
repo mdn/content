@@ -25,12 +25,12 @@ The **`<dl>`** [HTML](/en-US/docs/Web/HTML) element represents a description lis
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories"
+        <a href="/en-US/docs/Web/HTML/Content_categories"
           >Content categories</a
         >
       </th>
       <td>
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
           >Flow content</a
         >, and if the <code>&#x3C;dl></code> element's children include one
         name-value group, palpable content.
@@ -60,7 +60,7 @@ The **`<dl>`** [HTML](/en-US/docs/Web/HTML) element represents a description lis
       <th scope="row">Permitted parents</th>
       <td>
         Any element that accepts
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
           >flow content</a
         >.
       </td>

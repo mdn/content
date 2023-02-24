@@ -1,6 +1,7 @@
 ---
 title: devtools
 slug: Mozilla/Add-ons/WebExtensions/API/devtools
+page-type: webextension-api
 tags:
   - API
   - Add-ons

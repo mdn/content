@@ -2,11 +2,6 @@
 title: Network throttling
 slug: Glossary/Network_throttling
 page-type: glossary-definition
-tags:
-  - RUM
-  - Reference
-  - Synthetic monitoring
-  - Web Performance
 ---
 
 **Network throttling** is an intentional slowing down of internet speed. In web performance, network throttling, or network condition emulation, it is used to emulate low bandwidth conditions experienced by likely a large segment of a site's target user base.

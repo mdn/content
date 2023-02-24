@@ -2,20 +2,6 @@
 title: 'Window: rejectionhandled event'
 slug: Web/API/Window/rejectionhandled_event
 page-type: web-api-event
-tags:
-  - API
-  - Event
-  - HTML DOM
-  - JavaScript
-  - Promise
-  - Promises
-  - Reference
-  - Window
-  - Worker
-  - events
-  - global
-  - onrejectionhandled
-  - rejectionhandled
 browser-compat: api.Window.rejectionhandled_event
 ---
 

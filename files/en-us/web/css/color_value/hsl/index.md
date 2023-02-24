@@ -2,14 +2,6 @@
 title: hsl()
 slug: Web/CSS/color_value/hsl
 page-type: css-function
-tags:
-  - CSS
-  - CSS Data Type
-  - Data Type
-  - Reference
-  - Web
-  - color
-  - hsl
 browser-compat: css.types.color.hsl
 ---
 

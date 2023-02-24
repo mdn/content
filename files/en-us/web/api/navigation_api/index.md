@@ -2,18 +2,8 @@
 title: Navigation API
 slug: Web/API/Navigation_API
 page-type: web-api-overview
-tags:
-  - API
-  - Experimental
-  - History
-  - Landing
-  - Navigate
-  - Navigation
-  - Navigation API
-  - Overview
-  - Reference
-  - Scroll
-  - Traversal
+status:
+  - experimental
 browser-compat:
   - api.Navigation
   - api.NavigateEvent
@@ -38,7 +28,7 @@ The `NavigationEvent` object also provides two methods:
 - {{domxref("NavigateEvent.intercept", "intercept()")}} takes as an argument a callback handler function returning a promise. It allows you to control what happens when the navigation is initiated. For example, in the case of an SPA, it can be used to load relevant new content into the UI based on the path of the URL navigated to.
 - {{domxref("NavigateEvent.scroll", "scroll()")}} allows you to manually initiate the browser's scroll behavior (e.g. to a fragment identifier in the URL), if it makes sense for your code, rather than waiting for the browser to handle it automatically.
 
-Once a navigation is initiated, and your `intercept()` handler is called, a {{domxref("NavigationTransition")}} object instance is created (accessible via {{domxref("Navigation.transition")}}), which can be used used to track the process of the ongoing navigation.
+Once a navigation is initiated, and your `intercept()` handler is called, a {{domxref("NavigationTransition")}} object instance is created (accessible via {{domxref("Navigation.transition")}}), which can be used to track the process of the ongoing navigation.
 
 > **Note:** In this context "transition" refers to the transition between one history entry and another. It isn't related to CSS transitions.
 
@@ -56,11 +46,16 @@ As the user navigates through your application, each new location navigated to r
 
 The `Navigation` object contains all the methods you'll need to update and traverse through the navigation history:
 
-- {{domxref("Navigation.navigate", "navigate()")}} navigates to a new URL, creating a new navigation history entry.
-- {{domxref("Navigation.reload", "reload()")}} reloads the current navigation history entry.
-- {{domxref("Navigation.back", "back()")}} navigates to the previous navigation history entry, if that is possible.
-- {{domxref("Navigation.forward", "forward()")}} navigates to the next navigation history entry, if that is possible.
-- {{domxref("Navigation.traverseTo", "traverseTo()")}} navigates to a specific navigation history entry identified by its key value, which is obtained via the relevant entry's {{domxref("NavigationHistoryEntry.key")}} property.
+- {{domxref("Navigation.navigate", "navigate()")}} {{Experimental_Inline}}
+  - : Navigates to a new URL, creating a new navigation history entry.
+- {{domxref("Navigation.reload", "reload()")}} {{Experimental_Inline}}
+  - : Reloads the current navigation history entry.
+- {{domxref("Navigation.back", "back()")}} {{Experimental_Inline}}
+  - : Navigates to the previous navigation history entry, if that is possible.
+- {{domxref("Navigation.forward", "forward()")}} {{Experimental_Inline}}
+  - : Navigates to the next navigation history entry, if that is possible.
+- {{domxref("Navigation.traverseTo", "traverseTo()")}} {{Experimental_Inline}}
+  - : Navigates to a specific navigation history entry identified by its key value, which is obtained via the relevant entry's {{domxref("NavigationHistoryEntry.key")}} property.
 
 Each one of the above methods returns an object containing two promises — `{ committed, finished }`. This allows the invoking function to wait on taking further action until:
 

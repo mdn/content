@@ -2,14 +2,6 @@
 title: Math.fround()
 slug: Web/JavaScript/Reference/Global_Objects/Math/fround
 page-type: javascript-static-method
-tags:
-  - ES6
-  - JavaScript
-  - Math
-  - Method
-  - Reference
-  - fround
-  - Polyfill
 browser-compat: javascript.builtins.Math.fround
 ---
 

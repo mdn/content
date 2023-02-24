@@ -2,21 +2,6 @@
 title: RTCIceTransport.component
 slug: Web/API/RTCIceTransport/component
 page-type: web-api-instance-property
-tags:
-  - API
-  - ICE
-  - Media
-  - Property
-  - RTCIceTransport
-  - RTCP
-  - RTP
-  - Read-only
-  - Reference
-  - Transport
-  - Video
-  - WebRTC
-  - WebRTC API
-  - component
 browser-compat: api.RTCIceTransport.component
 ---
 

@@ -1,14 +1,6 @@
 ---
 title: Unconventional controls
 slug: Games/Techniques/Control_mechanisms/Other
-tags:
-  - Controls
-  - Doppler
-  - Games
-  - JavaScript
-  - Makey Makey
-  - TV Leap Motion
-  - Voice
 ---
 
 {{GamesSidebar}}

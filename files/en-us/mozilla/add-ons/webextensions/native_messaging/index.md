@@ -1,6 +1,7 @@
 ---
 title: Native messaging
 slug: Mozilla/Add-ons/WebExtensions/Native_messaging
+page-type: guide
 tags:
   - WebExtensions
 ---

@@ -2,19 +2,12 @@
 title: HTMLSelectElement.selectedIndex
 slug: Web/API/HTMLSelectElement/selectedIndex
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTML DOM
-  - HTML forms
-  - HTMLSelectElement
-  - Property
-  - Reference
 browser-compat: api.HTMLSelectElement.selectedIndex
 ---
 
 {{APIRef("HTML DOM")}}
 
-The **`HTMLSelectElement.selectedIndex`** is a
+The **`HTMLSelectElement.selectedIndex`** property is a
 `long` that reflects the index of the first or last selected
 {{HTMLElement("option")}} element, depending on the value of `multiple`. The
 value `-1` indicates that no element is selected.

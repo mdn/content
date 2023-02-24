@@ -2,13 +2,6 @@
 title: PermissionStatus
 slug: Web/API/PermissionStatus
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - PermissionStatus
-  - Permissions
-  - Permissions API
-  - Reference
 browser-compat: api.PermissionStatus
 ---
 

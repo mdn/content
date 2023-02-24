@@ -2,11 +2,6 @@
 title: ":autofill"
 slug: Web/CSS/:autofill
 page-type: css-pseudo-class
-tags:
-  - CSS
-  - Pseudo-class
-  - Reference
-  - Selector
 browser-compat: css.selectors.autofill
 ---
 
@@ -28,8 +23,10 @@ The **`:autofill`** CSS [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) match
 
 ## Syntax
 
-```
-:autofill
+```css
+:autofill {
+  /* ... */
+}
 ```
 
 ## Examples

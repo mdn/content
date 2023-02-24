@@ -1,13 +1,6 @@
 ---
-title: "aria-pressed"
+title: aria-pressed
 slug: Web/Accessibility/ARIA/Attributes/aria-pressed
-tags:
-  - Accessibility
-  - ARIA
-  - ARIA attribute
-  - ARIA property
-  - aria-pressed
-  - Reference
 spec-urls: https://w3c.github.io/aria/#aria-pressed
 ---
 

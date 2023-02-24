@@ -1,13 +1,6 @@
 ---
 title: aria-describedby
 slug: Web/Accessibility/ARIA/Attributes/aria-describedby
-tags:
-  - Accessibility
-  - ARIA
-  - ARIA attribute
-  - ARIA property
-  - aria-describedby
-  - Reference
 spec-urls:
   - https://w3c.github.io/aria/#aria-describedby
   - https://w3c.github.io/aria-practices/#describing_with_aria-describedby

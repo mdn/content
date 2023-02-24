@@ -2,12 +2,6 @@
 title: ":dir()"
 slug: Web/CSS/:dir
 page-type: css-pseudo-class
-tags:
-  - BiDi
-  - CSS
-  - Pseudo-class
-  - Reference
-  - Selector
 browser-compat: css.selectors.dir
 ---
 
@@ -32,8 +26,10 @@ The `:dir()` pseudo-class uses only the _semantic_ value of the directionality, 
 
 The `:dir()` pseudo-class requires one parameter, representing the text directionality you want to target.
 
-```
-:dir( [ ltr | rtl ] )
+```css-nolint
+:dir([ltr | rtl]) {
+  /* ... */
+}
 ```
 
 ### Parameters

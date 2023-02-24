@@ -37,11 +37,13 @@ You can use the CSS {{cssxref("@media")}} at-rule to set a different appearance 
 Add this at the end of your stylesheet. Note that specificity and precedence rules still apply:
 
 ```css
-@media print { 
+@media print {
   /* All your print styles go here */
-  #header, #footer, #nav {
+  #header,
+  #footer,
+  #nav {
     display: none !important;
-  } 
+  }
 }
 ```
 
@@ -143,8 +145,6 @@ If you want to be able to print an external page without opening it, you can uti
   </body>
 </html>
 ```
-
-> **Note:** Older versions of Internet Explorer cannot print the contents of a hidden {{HTMLElement("iframe")}}.
 
 ## See also
 

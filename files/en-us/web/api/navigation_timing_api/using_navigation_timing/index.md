@@ -2,12 +2,6 @@
 title: Using Navigation Timing
 slug: Web/API/Navigation_timing_API/Using_Navigation_Timing
 page-type: guide
-tags:
-  - Guide
-  - Navigation Timing
-  - Navigation Timing API
-  - Optimization
-  - Performance
 ---
 
 {{DefaultAPISidebar("Performance API")}}
@@ -18,7 +12,7 @@ Unlike other tools or libraries, the [Navigation Timing API](/en-US/docs/Web/API
 
 ## Collecting timing information
 
-Using the API is as simple as obtaining the {{domxref("Performance")}} object using {{domxref("window.performance")}} and looking up what you need within the object returned. For example, to measure the perceived loading time for a page:
+Using the API is as simple as obtaining the {{domxref("Performance")}} object using {{domxref("performance_property", "window.performance")}} and looking up what you need within the object returned. For example, to measure the perceived loading time for a page:
 
 ```js
 window.addEventListener("load", () => {
@@ -48,7 +42,7 @@ In tandem with appropriate HTML and CSS, the result is:
 
 The values listed are for the {{HTMLElement("iframe")}} in which the sample is presented above.
 
-For a list of the available timing values you can look for in {{domxref("PerformanceTiming")}}, see the {{domxref("PerformanceTiming")}} interface's [Properties](/en-US/docs/Web/API/PerformanceTiming#properties) section.
+For a list of the available timing values you can look for in {{domxref("PerformanceTiming")}}, see the {{domxref("PerformanceTiming")}} interface's [Properties](/en-US/docs/Web/API/PerformanceTiming#instance_properties) section.
 
 ## Determining navigation type
 
@@ -112,5 +106,5 @@ The values listed are for the {{HTMLElement("iframe")}} in which the sample is p
 ## See also
 
 - [Navigation Timing API](/en-US/docs/Web/API/Navigation_timing_API)
-- {{domxref("window.performance")}}
+- {{domxref("performance_property", "window.performance")}}
 - {{domxref("Performance")}}, {{domxref("PerformanceTiming")}}, and {{domxref("PerformanceNavigation")}}

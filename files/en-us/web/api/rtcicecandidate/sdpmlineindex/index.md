@@ -2,20 +2,6 @@
 title: RTCIceCandidate.sdpMLineIndex
 slug: Web/API/RTCIceCandidate/sdpMLineIndex
 page-type: web-api-instance-property
-tags:
-  - API
-  - Candidate
-  - Media Description
-  - NeedsExample
-  - Property
-  - RTCIceCandidate
-  - Read-only
-  - Reference
-  - SDP
-  - WebRTC
-  - WebRTC API
-  - m-line
-  - sdpMLineIndex
 browser-compat: api.RTCIceCandidate.sdpMLineIndex
 ---
 

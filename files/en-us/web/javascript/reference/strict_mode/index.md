@@ -2,11 +2,6 @@
 title: Strict mode
 slug: Web/JavaScript/Reference/Strict_mode
 page-type: guide
-tags:
-  - ECMAScript 5
-  - Guide
-  - JavaScript
-  - Strict Mode
 ---
 
 {{JsSidebar("More")}}
@@ -76,7 +71,7 @@ export default myStrictFunction;
 
 ### Strict mode for classes
 
-All parts of a [class](/en-US/docs/Web/JavaScript/Reference/Classes)'s body are strict mode code, including both [class declarations](/en-US/docs/Web/JavaScript/Reference/Classes#class_declarations) and [class expressions](/en-US/docs/Web/JavaScript/Reference/Classes#class_expressions).
+All parts of a [class](/en-US/docs/Web/JavaScript/Reference/Classes)'s body are strict mode code, including both [class declarations](/en-US/docs/Web/JavaScript/Reference/Statements/class) and [class expressions](/en-US/docs/Web/JavaScript/Reference/Operators/class).
 
 ```js
 class C1 {
@@ -137,8 +132,8 @@ For example, [`NaN`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN) is
 "use strict";
 
 // Assignment to a non-writable global
-var undefined = 5; // TypeError
-var Infinity = 5; // TypeError
+undefined = 5; // TypeError
+Infinity = 5; // TypeError
 
 // Assignment to a non-writable property
 const obj1 = {};

@@ -1,6 +1,7 @@
 ---
 title: webRequest.StreamFilter
 slug: Mozilla/Add-ons/WebExtensions/API/webRequest/StreamFilter
+page-type: webextension-api-type
 tags:
   - API
   - Add-ons

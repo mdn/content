@@ -1,10 +1,6 @@
 ---
 title: Firefox 28 for developers
 slug: Mozilla/Firefox/Releases/28
-tags:
-  - Compatibility
-  - Firefox
-  - Mozilla
 ---
 
 {{FirefoxSidebar}}

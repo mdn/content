@@ -21,36 +21,36 @@ which are by convention italic, no special classes are used by default.
 
 ```html
 <math>
-<!-- a normal "A" -->
-<mtext>A</mtext>
+  <!-- a normal "A" -->
+  <mtext>A</mtext>
 
-<!-- an italic "A" i.e. "𝐴" -->
-<mtext mathvariant="italic">A</mtext>
+  <!-- an italic "A" i.e. "𝐴" -->
+  <mtext mathvariant="italic">A</mtext>
 
-<!-- an italic "A" i.e. "𝐴"
+  <!-- an italic "A" i.e. "𝐴"
      (automatic italicization for 'mi' elements with one character) -->
-<mi>A</mi>
+  <mi>A</mi>
 
-<!-- a normal "A" -->
-<mi mathvariant="normal">A</mi>
+  <!-- a normal "A" -->
+  <mi mathvariant="normal">A</mi>
 
-<!-- a normal "cos" -->
-<mi>cos</mi>
+  <!-- a normal "cos" -->
+  <mi>cos</mi>
 
-<!-- a bold "cos" i.e. "𝐜𝐨𝐬" -->
-<mi mathvariant="bold">cos</mi>
+  <!-- a bold "cos" i.e. "𝐜𝐨𝐬" -->
+  <mi mathvariant="bold">cos</mi>
 
-<!-- a double-struck "A" i.e. "𝔸" -->
-<mi mathvariant="double-struck">A</mi>
+  <!-- a double-struck "A" i.e. "𝔸" -->
+  <mi mathvariant="double-struck">A</mi>
 
-<!-- a fraktur "A" i.e. "𝔄" -->
-<mi mathvariant="fraktur">A</mi>
+  <!-- a fraktur "A" i.e. "𝔄" -->
+  <mi mathvariant="fraktur">A</mi>
 
-<!-- a looped "ب" i.e. "𞺁" -->
-<mi mathvariant="looped">ب</mi>
+  <!-- a looped "ب" i.e. "𞺁" -->
+  <mi mathvariant="looped">ب</mi>
 
-<!-- a stretched "ب" i.e. "𞹡" -->
-<mi mathvariant="stretched">ب</mi>
+  <!-- a stretched "ب" i.e. "𞹡" -->
+  <mi mathvariant="stretched">ب</mi>
 </math>
 ```
 

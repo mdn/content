@@ -2,12 +2,6 @@
 title: ElementInternals.reportValidity()
 slug: Web/API/ElementInternals/reportValidity
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - reportValidity
-  - ElementInternals
 browser-compat: api.ElementInternals.reportValidity
 ---
 
@@ -46,7 +40,7 @@ After calling `setValidity` again, this time indicating that all rules are marke
 
 ```js
 let element = document.getElementById("join-checkbox");
-element.internals_.setValidity({'valueMissing':true},"my message");
+element.internals_.setValidity({ valueMissing: true }, "my message");
 console.log(element.internals_.reportValidity()); // false
 element.internals_.setValidity({});
 console.log(element.internals_.reportValidity()); // true

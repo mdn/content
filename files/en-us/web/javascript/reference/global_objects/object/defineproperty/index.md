@@ -2,12 +2,6 @@
 title: Object.defineProperty()
 slug: Web/JavaScript/Reference/Global_Objects/Object/defineProperty
 page-type: javascript-static-method
-tags:
-  - ECMAScript 5
-  - JavaScript
-  - JavaScript 1.8.5
-  - Method
-  - Object
 browser-compat: javascript.builtins.Object.defineProperty
 ---
 
@@ -350,7 +344,7 @@ Object.defineProperty(o, "b", {
 });
 Object.defineProperty(o, "b", {
   value: 1,
-}); // TypeError: the property cannot be modified because it is neither writable nor configurable, 
+}); // TypeError: the property cannot be modified because it is neither writable nor configurable.
 ```
 
 ### Adding properties and default values

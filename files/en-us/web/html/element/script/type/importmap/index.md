@@ -167,7 +167,7 @@ The import map must be a valid JSON object that can define at most two optional 
 
       - : A "module specifier map" is a valid JSON object where the _keys_ are text that may be present in the module specifier when importing a module, and the corresponding _values_ are the URLs or paths that will replace this text when the module specifier is resolved to an address.
 
-        The modifier specifier map JSON object has the following requirements:
+        The module specifier map JSON object has the following requirements:
 
         - None of the keys may be empty.
         - All of the values must be strings, defining either a valid absolute URL or a valid URL string that starts with `/`, `./`, or `../`.
@@ -182,7 +182,7 @@ The import map must be a valid JSON object that can define at most two optional 
     The scopes object is a valid JSON object where each property is a `<scope key>`, which is an URL path, with a corresponding value that is a `<module specifier map>`.
 
     If the URL of a script importing a module matches a `<scope key>` path, then the `<module specifier map>` value associated with the key is checked for matching specifiers first.
-    If there are multiple matching scope keys, then the value associated with the most specific/nested scope paths are checked for matching modifier specifiers first.
+    If there are multiple matching scope keys, then the value associated with the most specific/nested scope paths are checked for matching module specifiers first.
     The fallback module specifier map in `imports` is used if there are no matching module specifier keys in any of the matching scoped module specifier maps.
 
     Note that the scope does not change how an address is resolved; relative addresses are always resolved to the import map base URL.

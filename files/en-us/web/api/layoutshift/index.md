@@ -2,15 +2,8 @@
 title: LayoutShift
 slug: Web/API/LayoutShift
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Layout Instability API
-  - LayoutShift
-  - Performance
-  - Reference
-  - Web Performance
-  - Experimental
+status:
+  - experimental
 browser-compat: api.LayoutShift
 ---
 

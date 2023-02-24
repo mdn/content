@@ -1,11 +1,6 @@
 ---
 title: Firefox 95 for developers
 slug: Mozilla/Firefox/Releases/95
-tags:
-  - "95"
-  - Firefox
-  - Mozilla
-  - Release
 ---
 
 {{FirefoxSidebar}}
@@ -47,6 +42,8 @@ No notable changes
 - Added `overrideContentColorScheme` in {{WebExtAPIRef("browserSettings")}} to provide the ability to control the preference `layout.css.prefers-color-scheme.content-override` and set pages' preferred color scheme (light or dark) independently of the browser theme ({{bug(1733461)}}).
 
 - Added `globalPrivacyControl` in {{WebExtAPIRef("privacy.network")}} to provide visibility into whether the user has enabled Global Privacy Control inside the browser. ({{bug(1670058)}}).
+
+- Added the `"webRequestFilterResponse.serviceWorkerScript"` [API permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions). This permission provides access to {{WebExtAPIRef("webRequest.filterResponseData")}} for requests originated for service worker scripts. This permission can be provided as an optional permission. See {{WebExtAPIRef("webRequest.filterResponseData")}} for more information on using these permissions ({{bug(1636629)}}).
 
 ## Older versions
 

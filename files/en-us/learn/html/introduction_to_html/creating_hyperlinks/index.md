@@ -1,20 +1,6 @@
 ---
 title: Creating hyperlinks
 slug: Learn/HTML/Introduction_to_HTML/Creating_hyperlinks
-tags:
-  - Beginner
-  - CodingScripting
-  - Guide
-  - HTML
-  - HTTP
-  - Learn
-  - Links
-  - Title
-  - absolute
-  - href
-  - hyperlinks
-  - relative
-  - urls
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals", "Learn/HTML/Introduction_to_HTML/Advanced_text_formatting", "Learn/HTML/Introduction_to_HTML")}}
@@ -63,7 +49,7 @@ For example, the BBC homepage contains many links that point not only to multipl
 
 ## Anatomy of a link
 
-A basic link is created by wrapping the text or other content, see [Block level links](#block_level_links), inside an {{htmlelement("a")}} element and using the {{htmlattrxref("href", "a")}} attribute, also known as a **Hypertext Reference**, or **target**, that contains the web address.
+A basic link is created by wrapping the text or other content inside an {{htmlelement("a")}} element and using the {{htmlattrxref("href", "a")}} attribute, also known as a **Hypertext Reference**, or **target**, that contains the web address.
 
 ```html
 <p>
@@ -72,9 +58,46 @@ A basic link is created by wrapping the text or other content, see [Block level 
 </p>
 ```
 
-This gives us the following result:
-
+This gives us the following result:\
 I'm creating a link to [the Mozilla homepage](https://www.mozilla.org/en-US/).
+
+### Block level links
+
+As mentioned before, almost any content can be made into a link, even [block-level elements](/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started#block_versus_inline_elements).
+If you want to make a heading element a link then wrap it in an anchor (`<a>`) element as shown in the following code snippet:
+
+```html
+<a href="https://developer.mozilla.org/en-US/">
+  <h1>MDN Web Docs</h1>
+</a>
+<p>Documenting web technologies, including CSS, HTML, and JavaScript, since 2005.</p>
+```
+
+This turns the heading into a link:
+{{EmbedLiveSample('Block level links', '100%', 150)}}
+
+### Image links
+
+If you have an image you want to make into a link, use the {{htmlelement("a")}} element to wrap the image file referenced with the {{htmlelement("img")}} element.
+
+```css hidden
+img {
+  height: 100px;
+  width: 150px;
+  border: 1px solid gray;
+}
+```
+
+```html
+<a href="https://developer.mozilla.org/en-US/">
+  <img src="mdn_logo.svg" alt="MDN Web Docs homepage" />
+</a>
+```
+
+This makes the MDN logo a link:
+{{EmbedLiveSample('Image links', '100%', 150)}}
+
+> **Note:** You'll find out more about using images on the Web in a future article.
 
 ### Adding supporting information with the title attribute
 
@@ -93,7 +116,7 @@ The title contains additional information about the link, such as which kind of 
 
 This gives us the following result and hovering over the link displays the title as a tooltip:
 
-I'm creating a link to <a href="https://www.mozilla.org/en-US/" title="The best place to find more information about Mozilla's mission and how to contribute">the Mozilla homepage</a>.
+{{EmbedLiveSample('Adding supporting information with the title attribute', '100%', 150)}}
 
 > **Note:** A link title is only revealed on mouse hover, which means that people relying on keyboard controls or touchscreens to navigate web pages will have difficulty accessing title information.
 > If a title's information is truly important to the usability of the page, then you should present it in a manner that will be accessible to all users, for example by putting it in the regular text.
@@ -105,19 +128,6 @@ Create an HTML document using your local code editor and our [getting started te
 - Inside the HTML body, add one or more paragraphs or other types of content you already know about.
 - Change some of the content into links.
 - Include title attributes.
-
-### Block level links
-
-As mentioned before, almost any content can be made into a link, even [block-level elements](/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started#block_versus_inline_elements).
-If you have an image you want to make into a link, use the {{htmlelement("a")}} element and reference the image file with the {{htmlelement("img")}} element.
-
-```html
-<a href="https://www.mozilla.org/en-US/">
-  <img src="mozilla-image.png" alt="Mozilla homepage" />
-</a>
-```
-
-> **Note:** You'll find out more about using images on the Web in a future article.
 
 ## A quick primer on URLs and paths
 
@@ -357,15 +367,3 @@ You've reached the end of this article, but can you remember the most important 
 That's it for links, for now anyway! You'll return to links later on in the course when you start to look at styling them. Next up for HTML, we'll return to text semantics and look at some more advanced/unusual features that you'll find useful — [Advanced text formatting](/en-US/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting) is your next stop.
 
 {{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals", "Learn/HTML/Introduction_to_HTML/Advanced_text_formatting", "Learn/HTML/Introduction_to_HTML")}}
-
-## In this module
-
-- [Getting started with HTML](/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started)
-- [What's in the head? Metadata in HTML](/en-US/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML)
-- [HTML text fundamentals](/en-US/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals)
-- [Creating hyperlinks](/en-US/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks)
-- [Advanced text formatting](/en-US/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting)
-- [Document and website structure](/en-US/docs/Learn/HTML/Introduction_to_HTML/Document_and_website_structure)
-- [Debugging HTML](/en-US/docs/Learn/HTML/Introduction_to_HTML/Debugging_HTML)
-- [Marking up a letter](/en-US/docs/Learn/HTML/Introduction_to_HTML/Marking_up_a_letter)
-- [Structuring a page of content](/en-US/docs/Learn/HTML/Introduction_to_HTML/Structuring_a_page_of_content)

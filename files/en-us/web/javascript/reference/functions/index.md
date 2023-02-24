@@ -2,13 +2,6 @@
 title: Functions
 slug: Web/JavaScript/Reference/Functions
 page-type: guide
-tags:
-  - Function
-  - Functions
-  - Guide
-  - JavaScript
-  - Parameter
-  - parameters
 browser-compat: javascript.functions
 ---
 
@@ -219,7 +212,7 @@ function foo() {
 
 Instead, start the expression statement with something else, so that the `function` keyword unambiguously starts a function expression. Common options include [grouping](/en-US/docs/Web/JavaScript/Reference/Operators/Grouping) and using [`void`](/en-US/docs/Web/JavaScript/Reference/Operators/void).
 
-```js example-good
+```js-nolint example-good
 (function () {
   console.log("FOO!");
 })();

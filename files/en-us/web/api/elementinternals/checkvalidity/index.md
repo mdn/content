@@ -2,12 +2,6 @@
 title: ElementInternals.checkValidity()
 slug: Web/API/ElementInternals/checkValidity
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - checkValidity
-  - ElementInternals
 browser-compat: api.ElementInternals.checkValidity
 ---
 
@@ -42,7 +36,7 @@ In the following example {{domxref("ElementInternals.setValidity()")}} is used t
 
 ```js
 let element = document.getElementById("join-checkbox");
-element.internals_.setValidity({'valueMissing':true},"my message");
+element.internals_.setValidity({ valueMissing: true }, "my message");
 console.log(element.internals_.checkValidity()); // false
 element.internals_.setValidity({});
 console.log(element.internals_.checkValidity()); // true

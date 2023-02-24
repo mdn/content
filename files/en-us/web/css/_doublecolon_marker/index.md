@@ -1,14 +1,7 @@
 ---
-title: '::marker'
+title: "::marker"
 slug: Web/CSS/::marker
 page-type: css-pseudo-element
-tags:
-  - CSS
-  - CSS Lists
-  - Layout
-  - Pseudo-element
-  - Reference
-  - Selector
 browser-compat: css.selectors.marker
 ---
 
@@ -27,14 +20,16 @@ Only certain CSS properties can be used in a rule with `::marker` as a selector:
 - {{CSSxRef("color")}}
 - {{CSSxRef("text-combine-upright")}}, {{CSSxRef("unicode-bidi")}} and {{CSSxRef("direction")}} properties
 - The {{CSSxRef("content")}} property
-- All [animation](/en-US/docs/Web/CSS/CSS_Animations#css_properties) and [transition](/en-US/docs/Web/CSS/CSS_Transitions#properties) properties
+- All [animation](/en-US/docs/Web/CSS/CSS_Animations#properties) and [transition](/en-US/docs/Web/CSS/CSS_Transitions#properties) properties
 
 > **Note:** The specification states that additional CSS properties may be supported in future.
 
 ## Syntax
 
-```
-::marker
+```css
+::marker {
+  /* ... */
+}
 ```
 
 ## Examples

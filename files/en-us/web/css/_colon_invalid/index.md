@@ -2,13 +2,6 @@
 title: ":invalid"
 slug: Web/CSS/:invalid
 page-type: css-pseudo-class
-tags:
-  - CSS
-  - Layout
-  - Pseudo-class
-  - Reference
-  - Selector
-  - Web
 browser-compat: css.selectors.invalid
 ---
 
@@ -22,8 +15,10 @@ This pseudo-class is useful for highlighting field errors for the user.
 
 ## Syntax
 
-```
-:invalid
+```css
+:invalid {
+  /* ... */
+}
 ```
 
 ## Examples

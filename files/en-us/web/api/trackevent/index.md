@@ -2,15 +2,6 @@
 title: TrackEvent
 slug: Web/API/TrackEvent
 page-type: web-api-interface
-tags:
-  - API
-  - Audio
-  - HTML DOM
-  - Interface
-  - Media
-  - Reference
-  - TrackEvent
-  - Video
 browser-compat: api.TrackEvent
 ---
 

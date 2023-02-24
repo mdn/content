@@ -2,16 +2,6 @@
 title: File System Access API
 slug: Web/API/File_System_Access_API
 page-type: web-api-overview
-tags:
-  - API
-  - Directory
-  - File
-  - File Access
-  - File System Access
-  - File System Access API
-  - Landing
-  - Overview
-  - working with files
 browser-compat:
   - api.FileSystemHandle
   - api.FileSystemFileHandle

@@ -2,15 +2,6 @@
 title: IDBRequest.result
 slug: Web/API/IDBRequest/result
 page-type: web-api-instance-property
-tags:
-  - API
-  - Database
-  - IDBRequest
-  - IndexedDB
-  - Property
-  - Reference
-  - Storage
-  - result
 browser-compat: api.IDBRequest.result
 ---
 

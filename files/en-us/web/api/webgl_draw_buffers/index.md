@@ -2,11 +2,6 @@
 title: WEBGL_draw_buffers
 slug: Web/API/WEBGL_draw_buffers
 page-type: webgl-extension
-tags:
-  - API
-  - Reference
-  - WebGL
-  - WebGL extension
 browser-compat: api.WEBGL_draw_buffers
 ---
 

@@ -2,16 +2,8 @@
 title: ImageCapture
 slug: Web/API/ImageCapture
 page-type: web-api-interface
-tags:
-  - API
-  - Experimental
-  - Image
-  - Image Capture
-  - ImageCapture
-  - Interface
-  - Media
-  - MediaStream Image Capture API
-  - Reference
+status:
+  - experimental
 browser-compat: api.ImageCapture
 ---
 

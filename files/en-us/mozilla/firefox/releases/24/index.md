@@ -1,9 +1,6 @@
 ---
 title: Firefox 24 for developers
 slug: Mozilla/Firefox/Releases/24
-tags:
-  - Firefox
-  - Firefox 24
 ---
 
 {{FirefoxSidebar}}

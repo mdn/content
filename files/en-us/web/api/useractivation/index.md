@@ -2,11 +2,8 @@
 title: UserActivation
 slug: Web/API/UserActivation
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Reference
-  - Experimental
+status:
+  - experimental
 browser-compat: api.UserActivation
 ---
 

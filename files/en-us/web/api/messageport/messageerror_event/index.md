@@ -2,8 +2,6 @@
 title: 'MessagePort: messageerror event'
 slug: Web/API/MessagePort/messageerror_event
 page-type: web-api-event
-tags:
-  - Event
 browser-compat: api.MessagePort.messageerror_event
 ---
 

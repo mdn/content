@@ -2,13 +2,8 @@
 title: EncodedVideoChunk.timestamp
 slug: Web/API/EncodedVideoChunk/timestamp
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - timestamp
-  - EncodedVideoChunk
-  - Experimental
+status:
+  - experimental
 browser-compat: api.EncodedVideoChunk.timestamp
 ---
 
@@ -26,10 +21,10 @@ In the following example the `timestamp` is printed to the console.
 
 ```js
 const init = {
-  type: 'key',
+  type: "key",
   data: videoBuffer,
   timestamp: 23000000,
-  duration: 2000000
+  duration: 2000000,
 };
 chunk = EncodedVideoChunk(init);
 console.log(chunk.timestamp); //23000000

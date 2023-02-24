@@ -2,14 +2,6 @@
 title: Using Web Workers
 slug: Web/API/Web_Workers_API/Using_web_workers
 page-type: guide
-tags:
-  - Advanced
-  - Firefox
-  - Guide
-  - HTML
-  - JavaScript
-  - WebWorkers
-  - Workers
 spec-urls: https://html.spec.whatwg.org/multipage/#workers
 ---
 
@@ -588,7 +580,7 @@ It is possible to switch the content of each mainpage -> worker and worker -> ma
 
 ### Passing data by transferring ownership (transferable objects)
 
-Modern browsers contain an additional way to pass certain types of objects to or from a worker with high performance. {{Glossary("Transferable Objects")}} are transferred from one context to another with a zero-copy operation, which results in a vast performance improvement when sending large data sets.
+Modern browsers contain an additional way to pass certain types of objects to or from a worker with high performance. [Transferable objects](/en-US/docs/Web/API/Web_Workers_API/Transferable_objects) are transferred from one context to another with a zero-copy operation, which results in a vast performance improvement when sending large data sets.
 
 For example, when transferring an {{jsxref("ArrayBuffer")}} from your main app to a worker script, the original {{jsxref("ArrayBuffer")}} is cleared and no longer usable. Its content is (quite literally) transferred to the worker context.
 
@@ -699,7 +691,7 @@ function fibonacci(num){
 }
 ```
 
-The worker sets the property `onmessage` to a function which will receive messages sent when the worker object's `postMessage()` is called (note that this differs from defining a global _variable_ of that name, or defining a _function_ with that name. `var onmessage`, `let onmessage` and `function onmessage` will define global properties with those names, but they will not register the function to receive messages sent by the web page that created the worker). This starts the recursion, spawning new copies of itself to handle each iteration of the calculation.
+The worker sets the property `onmessage` to a function which will receive messages sent when the worker object's `postMessage()` is called (note that this differs from defining a _function_ with that name. `var onmessage`, `let onmessage` and `function onmessage` will define global properties with those names, but they will not register the function to receive messages sent by the web page that created the worker). This performs the math and eventually returns the result back to the main thread.
 
 #### The HTML code
 

@@ -2,13 +2,6 @@
 title: HTMLDetailsElement.open
 slug: Web/API/HTMLDetailsElement/open
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTML DOM
-  - HTMLDetailsElement
-  - Property
-  - Reference
-  - open
 browser-compat: api.HTMLDetailsElement.open
 ---
 

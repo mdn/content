@@ -2,16 +2,9 @@
 title: VRDisplayEvent()
 slug: Web/API/VRDisplayEvent/VRDisplayEvent
 page-type: web-api-constructor
-tags:
-  - API
-  - Constructor
-  - Deprecated
-  - Reference
-  - VR
-  - VRDisplayEvent
-  - Virtual Reality
-  - WebVR
-  - Non-standard
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.VRDisplayEvent.VRDisplayEvent
 ---
 

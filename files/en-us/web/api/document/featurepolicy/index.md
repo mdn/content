@@ -2,14 +2,8 @@
 title: Document.featurePolicy
 slug: Web/API/Document/featurePolicy
 page-type: web-api-instance-property
-tags:
-  - API
-  - Document
-  - Feature Policy
-  - Permissions-Policy
-  - Reference
-  - Property
-  - Experimental
+status:
+  - experimental
 browser-compat: api.Document.featurePolicy
 ---
 

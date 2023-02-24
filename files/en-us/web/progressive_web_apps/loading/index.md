@@ -128,7 +128,7 @@ This problem can be solved by loading the images only when needed: this is calle
 
 ### The loading attribute on \<img>
 
-The easiest way to tell the browser to load lazily doesn't involve JavaScript. You add the [`loading`](/en-US/docs/Web/HTML/Element/img#attr-loading) attribute to an {{HTMLElement("img")}} element with the value `lazy`, and the browser will know to load this image only when needed.
+The easiest way to tell the browser to load lazily doesn't involve JavaScript. You add the [`loading`](/en-US/docs/Web/HTML/Element/img#loading) attribute to an {{HTMLElement("img")}} element with the value `lazy`, and the browser will know to load this image only when needed.
 
 ```html
 <img
@@ -178,7 +178,7 @@ We could rewrite the loading process to load not only the images, but the comple
 
 ## Conclusion
 
-Less files to load initially, smaller files split into modules, use of placeholders, and loading more content on demand — this will help achieve faster initial load times, which brings benefits to the app creator and offers a smoother experience to the user.
+Fewer files to load initially, smaller files split into modules, use of placeholders, and loading more content on demand — this will help achieve faster initial load times, which brings benefits to the app creator and offers a smoother experience to the user.
 
 Remember about the progressive enhancement approach — offer a usable product no matter the device or platform, but be sure to enrich the experience to those using modern browsers.
 

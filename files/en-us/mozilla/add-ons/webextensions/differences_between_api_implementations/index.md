@@ -1,6 +1,7 @@
 ---
 title: Differences between API implementations
 slug: Mozilla/Add-ons/WebExtensions/Differences_between_API_implementations
+page-type: guide
 tags:
   - Guide
   - WebExtensions

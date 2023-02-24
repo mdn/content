@@ -40,17 +40,6 @@ For example, `about:blank` is often used as a URL of new, empty popup windows in
 
 `data:` URLs get a new, empty, security context.
 
-### Exceptions in Internet Explorer
-
-Internet Explorer has two major exceptions to the same-origin policy:
-
-- Trust Zones
-  - : If both domains are in the _highly trusted zone_ (e.g. corporate intranet domains), then the same-origin limitations are not applied.
-- Port
-  - : IE doesn't include port into same-origin checks. Therefore, `https://company.com:81/index.html` and `https://company.com/index.html` are considered the same origin and no restrictions are applied.
-
-These exceptions are nonstandard and unsupported in any other browser.
-
 ### File origins
 
 Modern browsers usually treat the origin of files loaded using the `file:///` schema as _opaque origins_.
@@ -157,7 +146,7 @@ Some browsers allow access to more properties than the above.
 
 Access to data stored in the browser such as [Web Storage](/en-US/docs/Web/API/Web_Storage_API) and [IndexedDB](/en-US/docs/Web/API/IndexedDB_API) are separated by origin. Each origin gets its own separate storage, and JavaScript in one origin cannot read from or write to the storage belonging to another origin.
 
-{{glossary("Cookie", "Cookies")}} use a separate definition of origins. A page can set a cookie for its own domain or any parent domain, as long as the parent domain is not a public suffix. Firefox and Chrome use the [Public Suffix List](https://publicsuffix.org/) to determine if a domain is a public suffix. Internet Explorer uses its own internal method to determine if a domain is a public suffix. The browser will make a cookie available to the given domain including any sub-domains, no matter which protocol (HTTP/HTTPS) or port is used. When you set a cookie, you can limit its availability using the `Domain`, `Path`, `Secure`, and `HttpOnly` flags. When you read a cookie, you cannot see from where it was set. Even if you use only secure https connections, any cookie you see may have been set using an insecure connection.
+{{glossary("Cookie", "Cookies")}} use a separate definition of origins. A page can set a cookie for its own domain or any parent domain, as long as the parent domain is not a public suffix. Firefox and Chrome use the [Public Suffix List](https://publicsuffix.org/) to determine if a domain is a public suffix. When you set a cookie, you can limit its availability using the `Domain`, `Path`, `Secure`, and `HttpOnly` flags. When you read a cookie, you cannot see from where it was set. Even if you use only secure https connections, any cookie you see may have been set using an insecure connection.
 
 ## See also
 

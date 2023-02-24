@@ -2,15 +2,8 @@
 title: BluetoothRemoteGATTCharacteristic.writeValueWithoutResponse()
 slug: Web/API/BluetoothRemoteGATTCharacteristic/writeValueWithoutResponse
 page-type: web-api-instance-method
-tags:
-  - API
-  - Bluetooth
-  - BluetoothRemoteGATTCharacteristic
-  - Experimental
-  - Method
-  - Reference
-  - Web Bluetooth API
-  - writeValueWithoutResponse
+status:
+  - experimental
 browser-compat: api.BluetoothRemoteGATTCharacteristic.writeValueWithoutResponse
 ---
 

@@ -2,15 +2,6 @@
 title: Client.frameType
 slug: Web/API/Client/frameType
 page-type: web-api-instance-property
-tags:
-  - API
-  - Client
-  - NeedsExample
-  - Property
-  - Reference
-  - Service Workers
-  - ServiceWorker
-  - frameType
 browser-compat: api.Client.frameType
 ---
 

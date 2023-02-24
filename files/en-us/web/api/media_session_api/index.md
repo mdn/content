@@ -2,15 +2,6 @@
 title: Media Session API
 slug: Web/API/Media_Session_API
 page-type: web-api-overview
-tags:
-  - Audio
-  - Media
-  - Media Session API
-  - MediaMetadata
-  - MediaSession
-  - Overview
-  - Reference
-  - Video
 browser-compat: api.MediaSession
 ---
 

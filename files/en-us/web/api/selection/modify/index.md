@@ -2,14 +2,6 @@
 title: Selection.modify()
 slug: Web/API/Selection/modify
 page-type: web-api-instance-method
-tags:
-  - API
-  - API:Mozilla Extensions
-  - API:WebKit Extensions
-  - HTML Editing
-  - Method
-  - Reference
-  - Selection
 browser-compat: api.Selection.modify
 ---
 

@@ -2,22 +2,6 @@
 title: 'RTCDataChannel: open event'
 slug: Web/API/RTCDataChannel/open_event
 page-type: web-api-event
-tags:
-  - API
-  - Connectivity
-  - Connection
-  - Data Channel
-  - Networking
-  - RTCDataChannel
-  - Reference
-  - WebRTC
-  - WebRTC API
-  - channel
-  - close
-  - data
-  - events
-  - Event
-  - rtc
 browser-compat: api.RTCDataChannel.open_event
 ---
 

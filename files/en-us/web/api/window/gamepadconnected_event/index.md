@@ -2,13 +2,6 @@
 title: 'Window: gamepadconnected event'
 slug: Web/API/Window/gamepadconnected_event
 page-type: web-api-event
-tags:
-  - API
-  - Event
-  - Reference
-  - Gamepad API
-  - Window
-  - gamepadconnected
 browser-compat: api.Window.gamepadconnected_event
 ---
 

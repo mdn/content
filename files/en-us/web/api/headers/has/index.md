@@ -2,12 +2,6 @@
 title: Headers.has()
 slug: Web/API/Headers/has
 page-type: web-api-instance-method
-tags:
-  - API
-  - Fetch
-  - Method
-  - Reference
-  - has
 browser-compat: api.Headers.has
 ---
 

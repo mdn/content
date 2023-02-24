@@ -1,11 +1,6 @@
 ---
 title: Firefox 104 for developers
 slug: Mozilla/Firefox/Releases/104
-tags:
-  - "104"
-  - Firefox
-  - Mozilla
-  - Release
 ---
 
 {{FirefoxSidebar}}
@@ -19,6 +14,8 @@ This article provides information about the changes in Firefox 104 that will aff
 No notable changes.
 
 ### CSS
+
+No notable changes.
 
 ### JavaScript
 
@@ -50,8 +47,6 @@ No notable changes.
 
 - The `fontKerning` property is now supported on [`CanvasRenderingContext2D`](/en-US/docs/Web/API/CanvasRenderingContext2D/fontKerning) and [`OffscreenCanvasRenderingContext2D`](/en-US/docs/Web/API/OffscreenCanvasRenderingContext2D), enabling developers to specify how kerning is used when text is drawn to a canvas or an offscreen canvas ({{bug(1778908)}}).
 
-#### Media, WebRTC, and Web Audio
-
 #### SVG
 
 - The [`SVGStyleElement.disabled`](/en-US/docs/Web/API/SVGStyleElement/disabled) property can now be used to disable or enable an SVG style element, or to check its disabled state.
@@ -67,7 +62,7 @@ No notable changes.
 
 ### WebAssembly
 
-#### Removals
+No notable changes.
 
 ### WebDriver conformance (WebDriver BiDi, Marionette)
 
@@ -83,9 +78,7 @@ No notable changes.
 
 ## Changes for add-on developers
 
-### Removals
-
-### Other
+No notable changes.
 
 ## Older versions
 

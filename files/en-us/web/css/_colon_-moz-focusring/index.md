@@ -1,14 +1,9 @@
 ---
-title: ':-moz-focusring'
+title: ":-moz-focusring"
 slug: Web/CSS/:-moz-focusring
 page-type: css-pseudo-class
-tags:
-  - CSS
-  - CSS:Mozilla Extensions
-  - Non-standard
-  - Pseudo-class
-  - Reference
-  - Selector
+status:
+  - non-standard
 browser-compat: css.selectors.-moz-focusring
 ---
 
@@ -27,7 +22,9 @@ The working group previously [intended to add this feature to CSS Selectors 4 or
 ## Syntax
 
 ```css
-:-moz-focusring
+:-moz-focusring {
+  /* ... */
+}
 ```
 
 ## Example

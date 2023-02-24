@@ -2,15 +2,6 @@
 title: console.dir()
 slug: Web/API/console/dir
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - Debugging
-  - Method
-  - Reference
-  - Web Development
-  - console
-  - web console
 browser-compat: api.console.dir
 ---
 

@@ -2,14 +2,8 @@
 title: ":-moz-broken"
 slug: Web/CSS/:-moz-broken
 page-type: css-pseudo-class
-tags:
-  - CSS
-  - CSS:Mozilla Extensions
-  - NeedsCompatTable
-  - Non-standard
-  - Pseudo-class
-  - Reference
-  - Selector
+status:
+  - non-standard
 browser-compat: css.selectors.-moz-broken
 ---
 
@@ -22,7 +16,9 @@ The **`:-moz-broken`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web
 ## Syntax
 
 ```css
-:-moz-broken
+:-moz-broken {
+  /* ... */
+}
 ```
 
 ## Examples

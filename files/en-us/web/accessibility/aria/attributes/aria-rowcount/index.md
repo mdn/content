@@ -1,13 +1,6 @@
 ---
-title: "aria-rowcount"
+title: aria-rowcount
 slug: Web/Accessibility/ARIA/Attributes/aria-rowcount
-tags:
-  - Accessibility
-  - ARIA
-  - ARIA attribute
-  - ARIA property
-  - aria-rowcount
-  - Reference
 spec-urls: https://w3c.github.io/aria/#aria-rowcount
 ---
 

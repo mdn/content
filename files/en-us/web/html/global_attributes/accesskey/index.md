@@ -44,14 +44,6 @@ The way to activate the accesskey depends on the browser and its platform:
       </td>
     </tr>
     <tr>
-      <th>Internet Explorer</th>
-      <td rowspan="3">
-        <kbd>Alt</kbd> + <kbd><em>key</em></kbd
-        ><br /><kbd>Alt</kbd> + <kbd>Shift</kbd> + <kbd><em>key</em></kbd>
-      </td>
-      <td colspan="2">N/A</td>
-    </tr>
-    <tr>
       <th>Edge</th>
       <td>N/A</td>
       <td rowspan="3">

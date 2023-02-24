@@ -2,13 +2,6 @@
 title: ":valid"
 slug: Web/CSS/:valid
 page-type: css-pseudo-class
-tags:
-  - CSS
-  - Layout
-  - Pseudo-class
-  - Reference
-  - Selector
-  - Web
 browser-compat: css.selectors.valid
 ---
 
@@ -22,8 +15,10 @@ This pseudo-class is useful for highlighting correct fields for the user.
 
 ## Syntax
 
-```
-:valid
+```css
+:valid {
+  /* ... */
+}
 ```
 
 ## Examples

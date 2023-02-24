@@ -2,14 +2,8 @@
 title: CSSUnitValue
 slug: Web/API/CSSUnitValue
 page-type: web-api-interface
-tags:
-  - API
-  - CSS Typed Object Model API
-  - CSSUnitValue
-  - Experimental
-  - Houdini
-  - Interface
-  - Reference
+status:
+  - experimental
 browser-compat: api.CSSUnitValue
 ---
 
@@ -49,8 +43,9 @@ The following shows a method of creating a {{domxref('CSSPositionValue')}} from 
 
 ```js
 let pos = new CSSPositionValue(
-    new CSSUnitValue(5, "px"),
-    new CSSUnitValue(10, "px"));
+  new CSSUnitValue(5, "px"),
+  new CSSUnitValue(10, "px")
+);
 ```
 
 ## Specifications

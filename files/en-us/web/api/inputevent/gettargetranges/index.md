@@ -2,15 +2,6 @@
 title: InputEvent.getTargetRanges()
 slug: Web/API/InputEvent/getTargetRanges
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM Events
-  - Input
-  - InputEvent
-  - Method
-  - Reference
-  - events
-  - getTargetRanges()
 browser-compat: api.InputEvent.getTargetRanges
 ---
 

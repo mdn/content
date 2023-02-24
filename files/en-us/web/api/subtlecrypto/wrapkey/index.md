@@ -2,13 +2,6 @@
 title: SubtleCrypto.wrapKey()
 slug: Web/API/SubtleCrypto/wrapKey
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - SubtleCrypto
-  - Web Crypto API
-  - wrapKey
 browser-compat: api.SubtleCrypto.wrapKey
 ---
 

@@ -2,10 +2,6 @@
 title: 'SpeechRecognition: start event'
 slug: Web/API/SpeechRecognition/start_event
 page-type: web-api-event
-tags:
-  - Event
-  - Reference
-  - Web Speech API
 browser-compat: api.SpeechRecognition.start_event
 ---
 

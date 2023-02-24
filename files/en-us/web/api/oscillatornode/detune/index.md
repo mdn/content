@@ -2,13 +2,6 @@
 title: OscillatorNode.detune
 slug: Web/API/OscillatorNode/detune
 page-type: web-api-instance-property
-tags:
-  - API
-  - OscillatorNode
-  - Property
-  - Reference
-  - Web Audio API
-  - detune
 browser-compat: api.OscillatorNode.detune
 ---
 

@@ -2,13 +2,6 @@
 title: ReadableStream.pipeTo()
 slug: Web/API/ReadableStream/pipeTo
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - ReadableStream
-  - Reference
-  - Streams
-  - pipeTo
 browser-compat: api.ReadableStream.pipeTo
 ---
 

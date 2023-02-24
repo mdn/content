@@ -2,15 +2,6 @@
 title: Crypto.randomUUID()
 slug: Web/API/Crypto/randomUUID
 page-type: web-api-instance-method
-tags:
-  - API
-  - Crypto
-  - Method
-  - Pseudorandom
-  - Reference
-  - UUID
-  - Web Crypto API
-  - randomUUID
 browser-compat: api.Crypto.randomUUID
 ---
 

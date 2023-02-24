@@ -2,17 +2,12 @@
 title: NodeIterator.referenceNode
 slug: Web/API/NodeIterator/referenceNode
 page-type: web-api-instance-property
-tags:
-  - API
-  - DOM
-  - NodeIterator
-  - Property
 browser-compat: api.NodeIterator.referenceNode
 ---
 
 {{APIRef("DOM")}}
 
-The **`NodeIterator.referenceNode`** read-only returns the
+The **`NodeIterator.referenceNode`** read-only property returns the
 {{domxref("Node")}} to which the iterator is anchored; as new nodes are inserted, the
 iterator remains anchored to the reference node as specified by this property.
 

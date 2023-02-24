@@ -2,13 +2,6 @@
 title: "::before"
 slug: Web/CSS/::before
 page-type: css-pseudo-element
-tags:
-  - CSS
-  - Layout
-  - Pseudo-element
-  - Reference
-  - Selector
-  - Web
 browser-compat: css.selectors.before
 ---
 
@@ -22,8 +15,10 @@ In CSS, **`::before`** creates a [pseudo-element](/en-US/docs/Web/CSS/Pseudo-ele
 
 ## Syntax
 
-```
-::before
+```css
+::before {
+  /* ... */
+}
 ```
 
 > **Note:** [Selectors Level 3](https://drafts.csswg.org/selectors-3/#gen-content) introduced the double-colon notation `::before` to distinguish [pseudo-classes](/en-US/docs/Web/CSS/Pseudo-classes) from [pseudo-elements](/en-US/docs/Web/CSS/Pseudo-elements). Browsers also accept single-colon notation`:before`, introduced in CSS2.

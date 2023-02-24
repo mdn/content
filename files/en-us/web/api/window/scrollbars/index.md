@@ -2,13 +2,6 @@
 title: Window.scrollbars
 slug: Web/API/Window/scrollbars
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTML DOM
-  - NeedsExample
-  - Property
-  - Reference
-  - Window
 browser-compat: api.Window.scrollbars
 ---
 

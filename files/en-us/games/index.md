@@ -1,14 +1,6 @@
 ---
 title: Game development
 slug: Games
-tags:
-  - Apps
-  - Game Development
-  - Gamedev
-  - Games
-  - HTML Games
-  - JavaScript Games
-  - Web
 ---
 
 {{GamesSidebar}}

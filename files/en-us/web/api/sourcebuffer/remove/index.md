@@ -2,16 +2,6 @@
 title: SourceBuffer.remove()
 slug: Web/API/SourceBuffer/remove
 page-type: web-api-instance-method
-tags:
-  - API
-  - Audio
-  - MSE
-  - Media Source Extensions
-  - Method
-  - Reference
-  - SourceBuffer
-  - Video
-  - remove
 browser-compat: api.SourceBuffer.remove
 ---
 

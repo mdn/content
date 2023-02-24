@@ -2,12 +2,6 @@
 title: RTCDataChannel.binaryType
 slug: Web/API/RTCDataChannel/binaryType
 page-type: web-api-instance-property
-tags:
-  - Property
-  - RTCDataChannel
-  - Reference
-  - WebRTC
-  - binaryType
 browser-compat: api.RTCDataChannel.binaryType
 ---
 

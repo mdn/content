@@ -2,13 +2,6 @@
 title: RTCPeerConnection.localDescription
 slug: Web/API/RTCPeerConnection/localDescription
 page-type: web-api-instance-property
-tags:
-  - Property
-  - RTCPeerConnection
-  - Read-only
-  - Reference
-  - WebRTC
-  - localDescription
 browser-compat: api.RTCPeerConnection.localDescription
 ---
 

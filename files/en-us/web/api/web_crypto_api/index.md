@@ -2,11 +2,6 @@
 title: Web Crypto API
 slug: Web/API/Web_Crypto_API
 page-type: web-api-overview
-tags:
-  - API
-  - Overview
-  - Reference
-  - Web Crypto API
 browser-compat: api.Crypto
 ---
 

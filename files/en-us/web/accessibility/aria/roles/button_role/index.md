@@ -1,13 +1,6 @@
 ---
 title: "ARIA: button role"
 slug: Web/Accessibility/ARIA/Roles/button_role
-tags:
-  - ARIA
-  - ARIA Role
-  - ARIA button
-  - Accessibility
-  - Button Role
-  - Reference
 spec-urls:
   - https://w3c.github.io/aria/#button
   - https://w3c.github.io/aria-practices/#button

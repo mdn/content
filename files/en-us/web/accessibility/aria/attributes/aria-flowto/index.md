@@ -1,13 +1,6 @@
 ---
-title: "aria-flowto"
+title: aria-flowto
 slug: Web/Accessibility/ARIA/Attributes/aria-flowto
-tags:
-  - Accessibility
-  - ARIA
-  - ARIA attribute
-  - ARIA property
-  - aria-flowto
-  - Reference
 spec-urls: https://w3c.github.io/aria/#aria-flowto
 ---
 
