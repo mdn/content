@@ -1,13 +1,6 @@
 ---
 title: Writing forward-compatible websites
 slug: Web/Guide/Writing_forward-compatible_websites
-tags:
-  - CSS
-  - Compatibility
-  - DOM
-  - HTML
-  - JavaScript
-  - Web Development
 ---
 
 <section id="Quick_links">

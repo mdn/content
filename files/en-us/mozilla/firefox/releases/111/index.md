@@ -1,11 +1,6 @@
 ---
 title: Firefox 111 for developers
 slug: Mozilla/Firefox/Releases/111
-tags:
-  - "111"
-  - Firefox
-  - Mozilla
-  - Release
 ---
 
 {{FirefoxSidebar}}

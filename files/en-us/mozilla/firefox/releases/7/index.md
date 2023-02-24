@@ -1,10 +1,6 @@
 ---
 title: Firefox 7 for developers
 slug: Mozilla/Firefox/Releases/7
-tags:
-  - Firefox
-  - Firefox 7
-  - Gecko 7
 ---
 
 {{FirefoxSidebar}}

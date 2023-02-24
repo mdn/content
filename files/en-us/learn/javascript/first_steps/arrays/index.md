@@ -1,20 +1,6 @@
 ---
 title: Arrays
 slug: Learn/JavaScript/First_steps/Arrays
-tags:
-  - Arrays
-  - Article
-  - Beginner
-  - CodingScripting
-  - JavaScript
-  - Join
-  - Learn
-  - Pop
-  - Push
-  - "l10n:priority"
-  - shift
-  - split
-  - unshift
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/First_steps/Useful_string_methods", "Learn/JavaScript/First_steps/Silly_story_generator", "Learn/JavaScript/First_steps")}}

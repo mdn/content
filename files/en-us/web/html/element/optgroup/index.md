@@ -2,13 +2,6 @@
 title: '<optgroup>: The Option Group element'
 slug: Web/HTML/Element/optgroup
 page-type: html-element
-tags:
-  - Element
-  - Forms
-  - HTML
-  - HTML forms
-  - Reference
-  - Web
 browser-compat: html.elements.optgroup
 ---
 
@@ -58,7 +51,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories"
+        <a href="/en-US/docs/Web/HTML/Content_categories"
           >Content categories</a
         >
       </th>

@@ -2,11 +2,6 @@
 title: What HTML features promote accessibility?
 slug: >-
   Learn/Common_questions/Design_and_accessibility/HTML_features_for_accessibility
-tags:
-  - Accessibility
-  - Beginner
-  - HTML
-  - Learn
 ---
 
 {{QuicklinksWithSubPages("Learn/Common_questions")}}

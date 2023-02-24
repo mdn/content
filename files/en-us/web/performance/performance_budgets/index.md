@@ -1,11 +1,6 @@
 ---
 title: Performance budgets
 slug: Web/Performance/Performance_budgets
-tags:
-  - Budget
-  - Performance
-  - Performance Budget
-  - Web Performance
 ---
 
 {{QuickLinksWithSubPages("Web/Performance")}}

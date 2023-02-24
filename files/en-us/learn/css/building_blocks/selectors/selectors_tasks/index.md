@@ -1,12 +1,6 @@
 ---
-title: 'Test your skills: Selectors'
+title: "Test your skills: Selectors"
 slug: Learn/CSS/Building_blocks/Selectors/Selectors_Tasks
-tags:
-  - Beginner
-  - CSS
-  - Learn
-  - Selectors
-  - test your skills
 ---
 
 {{LearnSidebar}}

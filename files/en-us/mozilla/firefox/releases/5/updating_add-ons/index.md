@@ -1,10 +1,6 @@
 ---
 title: Updating add-ons for Firefox 5
 slug: Mozilla/Firefox/Releases/5/Updating_add-ons
-tags:
-  - Add-ons
-  - Extensions
-  - Firefox 5
 ---
 
 {{FirefoxSidebar}}

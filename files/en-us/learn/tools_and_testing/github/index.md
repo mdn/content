@@ -1,12 +1,6 @@
 ---
 title: Git and GitHub
 slug: Learn/Tools_and_testing/GitHub
-tags:
-  - Beginner
-  - GitHub
-  - Learn
-  - Web
-  - git
 ---
 
 {{LearnSidebar}}

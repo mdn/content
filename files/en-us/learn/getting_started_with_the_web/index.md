@@ -1,16 +1,6 @@
 ---
 title: Getting started with the web
 slug: Learn/Getting_started_with_the_web
-tags:
-  - Beginner
-  - CSS
-  - Design
-  - Guide
-  - HTML
-  - Index
-  - "l10n:priority"
-  - publishing
-  - theory
 ---
 
 {{LearnSidebar}}

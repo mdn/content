@@ -1,9 +1,6 @@
 ---
 title: How to implement a promise-based API
 slug: Learn/JavaScript/Asynchronous/Implementing_a_promise-based_API
-tags:
-  - JavaScript
-  - Learn
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Asynchronous/Promises", "Learn/JavaScript/Asynchronous/Introducing_workers", "Learn/JavaScript/Asynchronous")}}

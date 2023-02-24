@@ -1,17 +1,6 @@
 ---
 title: Publishing your website
 slug: Learn/Getting_started_with_the_web/Publishing_your_website
-tags:
-  - Beginner
-  - CodingScripting
-  - FTP
-  - GitHub
-  - Google App Engine
-  - Learn
-  - Web
-  - "l10n:priority"
-  - publishing
-  - web server
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Getting_started_with_the_web/JavaScript_basics", "Learn/Getting_started_with_the_web/How_the_Web_works", "Learn/Getting_started_with_the_web")}}

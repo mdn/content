@@ -1,11 +1,6 @@
 ---
 title: Firefox 106 for developers
 slug: Mozilla/Firefox/Releases/106
-tags:
-  - "106"
-  - Firefox
-  - Mozilla
-  - Release
 ---
 
 {{FirefoxSidebar}}

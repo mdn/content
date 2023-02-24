@@ -2,11 +2,6 @@
 title: accesskey
 slug: Web/HTML/Global_attributes/accesskey
 page-type: html-attribute
-tags:
-  - Global attributes
-  - HTML
-  - Reference
-  - accesskey
 browser-compat: html.global_attributes.accesskey
 ---
 

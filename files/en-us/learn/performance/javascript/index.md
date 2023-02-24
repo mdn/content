@@ -1,12 +1,6 @@
 ---
 title: JavaScript performance
 slug: Learn/Performance/JavaScript
-tags:
-  - Images
-  - Media
-  - Performance
-  - Video
-  - Web Performance
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Performance/video", "Learn/Performance/HTML", "Learn/Performance")}}

@@ -2,12 +2,6 @@
 title: "HTML attribute: disabled"
 slug: Web/HTML/Attributes/disabled
 page-type: html-attribute
-tags:
-  - Attribute
-  - Attributes
-  - Constraint validation
-  - Forms
-  - required
 browser-compat:
   - html.elements.button.disabled
   - html.elements.fieldset.disabled

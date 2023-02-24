@@ -1,16 +1,6 @@
 ---
 title: Firefox 4 for developers
 slug: Mozilla/Firefox/Releases/4
-tags:
-  - CSS
-  - Firefox
-  - Firefox 4
-  - Gecko
-  - Gecko 2.0
-  - HTML
-  - JavaScript
-  - XPCOM
-  - XUL
 ---
 
 {{FirefoxSidebar}}

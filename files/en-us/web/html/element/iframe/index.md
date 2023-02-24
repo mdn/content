@@ -2,19 +2,6 @@
 title: '<iframe>: The Inline Frame element'
 slug: Web/HTML/Element/iframe
 page-type: html-element
-tags:
-  - Content
-  - Element
-  - Embedded content
-  - Embedding
-  - Frames
-  - HTML
-  - HTML embedded content
-  - Inline Frames
-  - Reference
-  - Web
-  - embedded
-  - iframe
 browser-compat: html.elements.iframe
 ---
 
@@ -189,15 +176,15 @@ Without this title, they have to navigate into the `<iframe>` to determine what 
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories"
+        <a href="/en-US/docs/Web/HTML/Content_categories"
           >Content categories</a
         >
       </th>
       <td>
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
           >Flow content</a
         >,
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content"
           >phrasing content</a
         >, embedded content, interactive content, palpable content.
       </td>

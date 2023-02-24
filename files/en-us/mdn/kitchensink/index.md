@@ -1,9 +1,6 @@
 ---
 title: The MDN Content Kitchensink
 slug: MDN/Kitchensink
-tags:
-  - Kitchensink
-  - MDN Meta
 browser-compat: html.elements.video
 ---
 

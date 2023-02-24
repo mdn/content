@@ -2,14 +2,8 @@
 title: '<plaintext>: The Plain Text element (Deprecated)'
 slug: Web/HTML/Element/plaintext
 page-type: html-element
-tags:
-  - Element
-  - HTML
-  - Deprecated
-  - Plain text
-  - Reference
-  - Web
-  - plaintext
+status:
+  - deprecated
 browser-compat: html.elements.plaintext
 ---
 

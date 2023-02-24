@@ -1,10 +1,6 @@
 ---
 title: Firefox 19 for developers
 slug: Mozilla/Firefox/Releases/19
-tags:
-  - Firefox
-  - Firefox 19
-  - NeedsContent
 ---
 
 {{FirefoxSidebar}}

@@ -1,14 +1,6 @@
 ---
 title: Setting up a Django development environment
 slug: Learn/Server-side/Django/development_environment
-tags:
-  - Beginner
-  - Development environment
-  - Installing
-  - Intro
-  - Learn
-  - Python
-  - django
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Introduction", "Learn/Server-side/Django/Tutorial_local_library_website", "Learn/Server-side/Django")}}
