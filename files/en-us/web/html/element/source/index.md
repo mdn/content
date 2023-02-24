@@ -23,7 +23,7 @@ The **`<source>`** [HTML](/en-US/docs/Web/HTML) element specifies multiple media
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories"
+        <a href="/en-US/docs/Web/HTML/Content_categories"
           >Content categories</a
         >
       </th>
@@ -43,7 +43,7 @@ The **`<source>`** [HTML](/en-US/docs/Web/HTML) element specifies multiple media
         <div>
           A media element—{{HTMLElement("audio")}} or
           {{HTMLElement("video")}}—and it must be placed before any
-          <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+          <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
             >flow content</a
           >
           or {{HTMLElement("track")}} element.

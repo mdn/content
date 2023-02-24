@@ -142,15 +142,15 @@ In this example we build on the previous one, including a `media` attribute on t
   <tbody>
     <tr>
       <th>
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories"
+        <a href="/en-US/docs/Web/HTML/Content_categories"
           >Content categories</a
         >
       </th>
       <td>
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#metadata_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#metadata_content"
           >Metadata content</a
         >, and if the <code>scoped</code> attribute is present:
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
           >flow content</a
         >.
       </td>
@@ -170,7 +170,7 @@ In this example we build on the previous one, including a `media` attribute on t
       <th>Permitted parents</th>
       <td>
         Any element that accepts
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#metadata_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#metadata_content"
           >metadata content</a
         >.
       </td>

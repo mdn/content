@@ -520,7 +520,7 @@ This just sets the CSS {{CSSxRef("text-align")}} property for the last {{HTMLEle
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories"
+        <a href="/en-US/docs/Web/HTML/Content_categories"
           >Content categories</a
         >
       </th>

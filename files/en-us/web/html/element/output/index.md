@@ -57,28 +57,28 @@ Many browsers implement this element as an [`aria-live`](/en-US/docs/Web/Accessi
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories"
+        <a href="/en-US/docs/Web/HTML/Content_categories"
           >Content categories</a
         >
       </th>
       <td>
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
           >Flow content</a
         >,
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content"
           >phrasing content</a
         >,
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#form_listed"
+        <a href="/en-US/docs/Web/HTML/Content_categories#form_listed"
           >listed</a
         >,
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#form_labelable"
+        <a href="/en-US/docs/Web/HTML/Content_categories#form_labelable"
           >labelable</a
         >,
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#form_resettable"
+        <a href="/en-US/docs/Web/HTML/Content_categories#form_resettable"
           >resettable</a
         >
         <a
-          href="/en-US/docs/Web/Guide/HTML/Content_categories#form-associated_content"
+          href="/en-US/docs/Web/HTML/Content_categories#form-associated_content"
           >form-associated element</a
         >, palpable content.
       </td>
@@ -86,7 +86,7 @@ Many browsers implement this element as an [`aria-live`](/en-US/docs/Web/Accessi
     <tr>
       <th scope="row">Permitted content</th>
       <td>
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content"
           >Phrasing content</a
         >.
       </td>
@@ -99,7 +99,7 @@ Many browsers implement this element as an [`aria-live`](/en-US/docs/Web/Accessi
       <th scope="row">Permitted parents</th>
       <td>
         Any element that accepts
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content"
           >phrasing content</a
         >.
       </td>
