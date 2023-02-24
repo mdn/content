@@ -40,4 +40,4 @@ This element implements the {{domxref('HTMLElement')}} interface.
 ## See also
 
 - The {{HTMLElement("pre")}} and {{HTMLElement("code")}} elements to be used instead.
-- The {{HTMLElement("plaintext")}} and {{HTMLElement("listing")}} elements, similar to {{HTMLElement("xmp")}} but also obsolete.
+- The {{HTMLElement("plaintext")}} element, similar to {{HTMLElement("xmp")}} but also obsolete.
