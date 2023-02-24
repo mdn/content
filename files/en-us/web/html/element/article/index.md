@@ -137,6 +137,10 @@ This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_a
 </article>
 ```
 
+## Result
+
+{{EmbedLiveSample('Examples')}}
+  
 ## Specifications
 
 {{Specifications}}
