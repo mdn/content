@@ -68,8 +68,8 @@ body :not(p) {
   text-decoration: underline;
 }
 
-/* Elements that are not <div> and not <span> elements */
-body :not(div):not(span) {
+/* Elements that are not <div>s or `.fancy` */
+body :not(div):not(.fancy) {
   font-weight: bold;
 }
 
