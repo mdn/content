@@ -24,6 +24,11 @@ updateTiming(timing)
 
 None ({{jsxref("undefined")}}).
 
+### Exceptions
+
+- {{jsxref("TypeError")}}
+  - : Thrown if invalid values are provided for any of the timing properties.
+
 ## Specifications
 
 {{Specifications}}
