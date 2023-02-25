@@ -1,9 +1,6 @@
 ---
 title: The business case for web performance
 slug: Learn/Performance/business_case_for_performance
-tags:
-  - Web Development
-  - Web Performance
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Performance/CSS", "Learn/Performance/Web_Performance_Basics", "Learn/Performance")}}

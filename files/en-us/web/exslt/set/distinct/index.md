@@ -1,10 +1,6 @@
 ---
 title: set:distinct()
 slug: Web/EXSLT/set/distinct
-tags:
-  - EXSLT
-  - NeedsSpecTable
-  - Reference
 ---
 
 {{XSLTRef}}{{QuickLinksWithSubpages("/en-US/docs/Web/EXSLT")}}

@@ -1,11 +1,6 @@
 ---
 title: Experimental features in Firefox
 slug: Mozilla/Firefox/Experimental_features
-tags:
-  - Experimental
-  - Firefox
-  - Preferences
-  - features
 ---
 
 {{FirefoxSidebar}}
@@ -1603,7 +1598,7 @@ The `GeometryUtils` methods `convertPointFromNode()`, `convertRectFromNode()`, a
     </tr>
     <tr>
       <th>Preference name</th>
-      <td colspan="2"><code>layout.css.getBoxQuads.enabled</code></td>
+      <td colspan="2"><code>layout.css.convertFromNode.enable</code></td>
     </tr>
   </tbody>
 </table>
@@ -1643,7 +1638,7 @@ The `GeometryUtils` method `getBoxQuads()` returns the CSS boxes for a {{domxref
     </tr>
     <tr>
       <th>Preference name</th>
-      <td colspan="2"><code>layout.css.convertFromNode.enable</code></td>
+      <td colspan="2"><code>layout.css.getBoxQuads.enabled</code></td>
     </tr>
   </tbody>
 </table>

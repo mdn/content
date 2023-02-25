@@ -2,18 +2,6 @@
 title: MediaTrackSettings.frameRate
 slug: Web/API/MediaTrackSettings/frameRate
 page-type: web-api-instance-property
-tags:
-  - API
-  - Media
-  - Media Capture and Streams API
-  - Media Streams API
-  - MediaTrackSettings
-  - Property
-  - Reference
-  - Settings
-  - Video
-  - WebRTC
-  - frameRate
 browser-compat: api.MediaTrackSettings.frameRate
 ---
 

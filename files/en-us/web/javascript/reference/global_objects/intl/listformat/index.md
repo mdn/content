@@ -2,13 +2,6 @@
 title: Intl.ListFormat
 slug: Web/JavaScript/Reference/Global_Objects/Intl/ListFormat
 page-type: javascript-class
-tags:
-  - Class
-  - Internationalization
-  - Intl
-  - JavaScript
-  - ListFormat
-  - Reference
 browser-compat: javascript.builtins.Intl.ListFormat
 ---
 

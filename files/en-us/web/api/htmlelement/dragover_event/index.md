@@ -2,15 +2,6 @@
 title: 'HTMLElement: dragover event'
 slug: Web/API/HTMLElement/dragover_event
 page-type: web-api-event
-tags:
-  - API
-  - DOM
-  - HTMLElement
-  - DragEvent
-  - Event
-  - Reference
-  - Web
-  - drag and drop
 browser-compat: api.HTMLElement.dragover_event
 ---
 

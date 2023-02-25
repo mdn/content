@@ -1,11 +1,6 @@
 ---
 title: Firefox 111 for developers
 slug: Mozilla/Firefox/Releases/111
-tags:
-  - "111"
-  - Firefox
-  - Mozilla
-  - Release
 ---
 
 {{FirefoxSidebar}}
@@ -18,6 +13,9 @@ This article provides information about the changes in Firefox 111 that affect d
 
 ### HTML
 
+- The [`autocapitalize`](/en-US/docs/Web/HTML/Global_attributes/autocapitalize) global attribute is now supported by default. The default value for the attribute is `none`, so no capitalization occurs ({{bug(1692007)}}).
+- The [`translate`](/en-US/docs/Web/HTML/Global_attributes/translate) global attribute is now supported ({{bug(1418449)}}).
+
 #### Removals
 
 ### CSS
@@ -29,6 +27,9 @@ This article provides information about the changes in Firefox 111 that affect d
 #### Removals
 
 ### SVG
+
+- The `context-stroke` and `context-fill` values are now supported inside `<marker>` elements.
+  For more information on using these values with `fill` and `stroke` properties, see the [`<marker>`](/en-US/docs/Web/SVG/Element/marker) documentation ({{bug(752638)}}).
 
 #### Removals
 

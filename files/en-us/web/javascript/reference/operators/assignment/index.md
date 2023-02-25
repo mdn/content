@@ -2,12 +2,6 @@
 title: Assignment (=)
 slug: Web/JavaScript/Reference/Operators/Assignment
 page-type: javascript-operator
-tags:
-  - Assignment operator
-  - JavaScript
-  - Language feature
-  - Operator
-  - Reference
 browser-compat: javascript.operators.assignment
 ---
 

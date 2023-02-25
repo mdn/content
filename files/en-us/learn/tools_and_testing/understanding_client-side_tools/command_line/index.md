@@ -1,15 +1,6 @@
 ---
 title: Command line crash course
 slug: Learn/Tools_and_testing/Understanding_client-side_tools/Command_line
-tags:
-  - Beginner
-  - CLI
-  - Command Line
-  - Learn
-  - Terminal
-  - Tools
-  - client-side
-  - npm
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Understanding_client-side_tools/Overview","Learn/Tools_and_testing/Understanding_client-side_tools/Package_management", "Learn/Tools_and_testing/Understanding_client-side_tools")}}

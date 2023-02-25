@@ -2,15 +2,8 @@
 title: NetworkInformation.saveData
 slug: Web/API/NetworkInformation/saveData
 page-type: web-api-instance-property
-tags:
-  - API
-  - Experimental
-  - Network Information API
-  - NetworkInformation
-  - Property
-  - Read-only
-  - Reference
-  - saveData
+status:
+  - experimental
 browser-compat: api.NetworkInformation.saveData
 ---
 

@@ -2,13 +2,8 @@
 title: Navigator.doNotTrack
 slug: Web/API/Navigator/doNotTrack
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTML DOM
-  - Navigator
-  - Property
-  - Reference
-  - Deprecated
+status:
+  - deprecated
 browser-compat: api.Navigator.doNotTrack
 ---
 

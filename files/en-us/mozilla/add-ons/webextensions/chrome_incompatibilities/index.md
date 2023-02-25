@@ -18,8 +18,8 @@ However, there are significant differences between Chrome, Firefox, and Edge. In
 - Support for `manifest.json` keys differs across browsers. See the ["Browser compatibility" section](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json#browser_compatibility) in the [`manifest.json`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json) page for more details.
 - JavaScript APIs:
 
-  - **In Firefox and Edge:** JavaScript APIs are accessed under the `browser` namespace.
-  - **In Chrome:** JavaScript APIs are accessed under the `chrome` namespace. (cf. [Chrome bug 798169](https://bugs.chromium.org/p/chromium/issues/detail?id=798169))
+  - **In Firefox:** JavaScript APIs are accessed under the `browser` namespace.
+  - **In Chrome and Edge:** JavaScript APIs are accessed under the `chrome` namespace. (cf. [Chrome bug 798169](https://bugs.chromium.org/p/chromium/issues/detail?id=798169))
 
 - Asynchronous APIs:
 

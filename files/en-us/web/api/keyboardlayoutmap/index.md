@@ -2,15 +2,8 @@
 title: KeyboardLayoutMap
 slug: Web/API/KeyboardLayoutMap
 page-type: web-api-interface
-tags:
-  - API
-  - Experimental
-  - Interface
-  - Keyboard API
-  - Keyboard Map
-  - KeyboardLayoutMap
-  - Reference
-  - keyboard
+status:
+  - experimental
 browser-compat: api.KeyboardLayoutMap
 ---
 

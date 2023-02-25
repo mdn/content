@@ -1,11 +1,6 @@
 ---
 title: HTML Cheat Sheet
 slug: Learn/HTML/Cheatsheet
-tags:
-  - Beginner
-  - Draft
-  - Guide
-  - HTML
 ---
 
 {{LearnSidebar}}

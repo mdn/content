@@ -2,12 +2,6 @@
 title: Navigator.mediaCapabilities
 slug: Web/API/Navigator/mediaCapabilities
 page-type: web-api-instance-property
-tags:
-  - API
-  - Media
-  - Media Capabilities API
-  - MediaCapabilities
-  - Navigator
 browser-compat: api.Navigator.mediaCapabilities
 ---
 

@@ -2,12 +2,8 @@
 title: HIDConnectionEvent
 slug: Web/API/HIDConnectionEvent
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Reference
-  - HIDConnectionEvent
-  - Experimental
+status:
+  - experimental
 browser-compat: api.HIDConnectionEvent
 ---
 

@@ -2,11 +2,6 @@
 title: HTMLBaseElement
 slug: Web/API/HTMLBaseElement
 page-type: web-api-interface
-tags:
-  - API
-  - HTML DOM
-  - Interface
-  - Reference
 browser-compat: api.HTMLBaseElement
 ---
 

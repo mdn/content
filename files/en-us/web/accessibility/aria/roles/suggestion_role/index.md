@@ -1,12 +1,6 @@
 ---
 title: "ARIA: suggestion role"
 slug: Web/Accessibility/ARIA/Roles/suggestion_role
-tags:
-  - ARIA
-  - ARIA Role
-  - Reference
-  - annotations
-  - suggestion
 ---
 
 The `suggestion` role semantically denotes a single proposed change to an editable document. This should be used on an element that wraps an element with an `insertion` role, and one with a `deletion` role.

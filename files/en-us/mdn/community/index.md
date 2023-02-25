@@ -2,10 +2,6 @@
 title: Community guidelines
 slug: MDN/Community
 page-type: mdn-community-guide
-tags:
-  - meta
-  - community-guidelines
-  - governance
 ---
 
 {{MDNSidebar}}

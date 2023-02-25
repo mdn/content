@@ -1,16 +1,6 @@
 ---
-title: 'Assessment: Accessibility troubleshooting'
+title: "Assessment: Accessibility troubleshooting"
 slug: Learn/Accessibility/Accessibility_troubleshooting
-tags:
-  - Accessibility
-  - Assessment
-  - Beginner
-  - CSS
-  - CodingScripting
-  - HTML
-  - JavaScript
-  - Learn
-  - WAI-ARIA
 ---
 
 {{LearnSidebar}}{{PreviousMenu("Learn/Accessibility/Mobile", "Learn/Accessibility")}}

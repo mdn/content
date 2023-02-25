@@ -2,11 +2,6 @@
 title: 'IDBRequest: error event'
 slug: Web/API/IDBRequest/error_event
 page-type: web-api-event
-tags:
-  - Error
-  - Event
-  - IDBRequest
-  - Reference
 browser-compat: api.IDBRequest.error_event
 ---
 

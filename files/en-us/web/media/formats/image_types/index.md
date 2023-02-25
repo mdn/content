@@ -1,30 +1,6 @@
 ---
 title: Image file type and format guide
 slug: Web/Media/Formats/Image_types
-tags:
-  - APNG
-  - BMP
-  - Bitmap
-  - Diagrams
-  - File
-  - File Types
-  - Filetype
-  - Graphics
-  - Guide
-  - ICO
-  - Icons
-  - Image
-  - Images
-  - JPEG
-  - JPG
-  - Media
-  - PNG
-  - Photos
-  - SVG
-  - WebP
-  - AVIF
-  - gif
-  - icon
 ---
 
 {{QuickLinksWithSubpages("/en-US/docs/Web/Media")}}

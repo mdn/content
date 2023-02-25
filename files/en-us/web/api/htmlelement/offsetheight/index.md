@@ -2,13 +2,6 @@
 title: HTMLElement.offsetHeight
 slug: Web/API/HTMLElement/offsetHeight
 page-type: web-api-instance-property
-tags:
-  - API
-  - CSSOM View
-  - NeedsMarkupWork
-  - NeedsNonDHMLImage
-  - Property
-  - Reference
 browser-compat: api.HTMLElement.offsetHeight
 ---
 

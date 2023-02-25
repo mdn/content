@@ -2,13 +2,9 @@
 title: contextmenu
 slug: Web/HTML/Global_attributes/contextmenu
 page-type: html-attribute
-tags:
-  - Deprecated
-  - Global attributes
-  - HTML
-  - Reference
-  - contextmenu
-  - Non-standard
+status:
+  - deprecated
+  - non-standard
 browser-compat: html.global_attributes.contextmenu
 ---
 

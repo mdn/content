@@ -2,17 +2,6 @@
 title: Control flow and error handling
 slug: Web/JavaScript/Guide/Control_flow_and_error_handling
 page-type: guide
-tags:
-  - Beginner
-  - Decision making
-  - Error Handling
-  - Flow control
-  - Guide
-  - JavaScript
-  - Logic
-  - control
-  - "l10n:priority"
-  - statements
 ---
 
 {{jsSidebar("JavaScript Guide")}}

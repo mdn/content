@@ -1,12 +1,6 @@
 ---
 title: What is accessibility?
 slug: Learn/Common_questions/Design_and_accessibility/What_is_accessibility
-tags:
-  - Accessibility
-  - Beginner
-  - Intro
-  - NeedsActiveLearning
-  - Web
 ---
 
 {{QuicklinksWithSubPages("Learn/Common_questions")}}

@@ -1,10 +1,6 @@
 ---
 title: Firefox 61 for developers
 slug: Mozilla/Firefox/Releases/61
-tags:
-  - "61"
-  - Firefox
-  - Release
 ---
 
 {{FirefoxSidebar}}

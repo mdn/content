@@ -2,12 +2,6 @@
 title: Gamepad
 slug: Web/API/Gamepad
 page-type: web-api-interface
-tags:
-  - API
-  - Gamepad API
-  - Games
-  - Interface
-  - Reference
 browser-compat: api.Gamepad
 ---
 
@@ -48,9 +42,13 @@ A Gamepad object can be returned in one of two ways: via the `gamepad` property 
 
 ```js
 window.addEventListener("gamepadconnected", (e) => {
-  console.log("Gamepad connected at index %d: %s. %d buttons, %d axes.",
-  e.gamepad.index, e.gamepad.id,
-  e.gamepad.buttons.length, e.gamepad.axes.length);
+  console.log(
+    "Gamepad connected at index %d: %s. %d buttons, %d axes.",
+    e.gamepad.index,
+    e.gamepad.id,
+    e.gamepad.buttons.length,
+    e.gamepad.axes.length
+  );
 });
 ```
 

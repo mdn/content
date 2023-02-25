@@ -2,14 +2,6 @@
 title: Element.ariaBusy
 slug: Web/API/Element/ariaBusy
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - ariaBusy
-  - AriaAttributes
-  - AriaMixin
-  - Element
 browser-compat: api.Element.ariaBusy
 ---
 
@@ -40,9 +32,9 @@ In this example the `aria-busy` attribute on the element with an ID of `clock` i
 ```
 
 ```js
-let el = document.getElementById('clock');
+let el = document.getElementById("clock");
 console.log(el.ariaBusy); // false
-el.ariaBusy = "true"
+el.ariaBusy = "true";
 console.log(el.ariaBusy); // true
 ```
 

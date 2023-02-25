@@ -2,13 +2,8 @@
 title: scroll-timeline-name
 slug: Web/CSS/scroll-timeline-name
 page-type: css-property
-tags:
-  - CSS
-  - CSS Animations
-  - CSS Property
-  - Reference
-  - recipe:css-property
-  - Experimental
+status:
+  - experimental
 browser-compat: css.properties.scroll-timeline-name
 ---
 

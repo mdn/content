@@ -2,11 +2,6 @@
 title: Date.UTC()
 slug: Web/JavaScript/Reference/Global_Objects/Date/UTC
 page-type: javascript-static-method
-tags:
-  - Date
-  - JavaScript
-  - Method
-  - Reference
 browser-compat: javascript.builtins.Date.UTC
 ---
 

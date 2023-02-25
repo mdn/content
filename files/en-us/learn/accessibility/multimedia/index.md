@@ -1,21 +1,6 @@
 ---
 title: Accessible multimedia
 slug: Learn/Accessibility/Multimedia
-tags:
-  - Accessibility
-  - Article
-  - Audio
-  - Beginner
-  - CodingScripting
-  - HTML
-  - Images
-  - JavaScript
-  - Learn
-  - Multimedia
-  - Video
-  - captions
-  - subtitles
-  - text tracks
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Accessibility/WAI-ARIA_basics","Learn/Accessibility/Mobile", "Learn/Accessibility")}}

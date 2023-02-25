@@ -1,12 +1,6 @@
 ---
 title: Navigation and resource timings
 slug: Web/Performance/Navigation_and_resource_timings
-tags:
-  - Navigation Timing
-  - Resource Timing
-  - Timings
-  - Web Performance
-  - performance APIs
 ---
 
 {{QuickLinksWithSubPages("Web/Performance")}}
@@ -340,7 +334,7 @@ const tcp = time.connectEnd - time.connectStart;
 
 ### SSL negotiation
 
-[`secureConnectionStart`](/en-US/docs/Web/API/PerformanceResourceTiming/secureConnectionStart) will be `undefined` if not available, `0` if [https](/en-US/docs/Glossary/https) in not used, or a timestamp if available, and used. In other words, if a secure connection was used, `secureConnectionStart` will be [truthy](/en-US/docs/Glossary/Truthy), and the time between `secureConnectionStart` and `requestStart` will greater than 0.
+[`secureConnectionStart`](/en-US/docs/Web/API/PerformanceResourceTiming/secureConnectionStart) will be `undefined` if not available, `0` if [HTTPS](/en-US/docs/Glossary/HTTPS) in not used, or a timestamp if available, and used. In other words, if a secure connection was used, `secureConnectionStart` will be [truthy](/en-US/docs/Glossary/Truthy), and the time between `secureConnectionStart` and `requestStart` will greater than 0.
 
 ```js
 const ssl = time.requestStart - time.secureConnectionStart;

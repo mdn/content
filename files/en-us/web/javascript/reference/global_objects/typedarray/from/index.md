@@ -2,14 +2,6 @@
 title: TypedArray.from()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/from
 page-type: javascript-static-method
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - TypedArray
-  - TypedArrays
-  - from
-  - Polyfill
 browser-compat: javascript.builtins.TypedArray.from
 ---
 

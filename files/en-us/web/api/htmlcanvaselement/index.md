@@ -2,12 +2,6 @@
 title: HTMLCanvasElement
 slug: Web/API/HTMLCanvasElement
 page-type: web-api-interface
-tags:
-  - API
-  - Canvas
-  - HTML DOM
-  - Interface
-  - Reference
 browser-compat: api.HTMLCanvasElement
 ---
 

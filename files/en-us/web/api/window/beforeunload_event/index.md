@@ -105,9 +105,6 @@ string. For example:
   leave - data you have entered may not be saved." (see {{bug("588292")}}).
 - Chrome displays the string, "Do you want to leave the site? Changes you made may not be saved." (see [Chrome Platform Status](https://chromestatus.com/feature/5349061406228480)).
 
-Internet Explorer does not respect the `null` return value and will display
-this to users as "null" text. You have to use `undefined` to skip the prompt.
-
 In some browsers, calls to {{domxref("window.alert()")}},
 {{domxref("window.confirm()")}}, and {{domxref("window.prompt()")}} may be ignored
 during this event. See the [HTML specification](https://html.spec.whatwg.org/multipage/webappapis.html#user-prompts)

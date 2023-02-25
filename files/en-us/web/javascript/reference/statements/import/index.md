@@ -2,15 +2,6 @@
 title: import
 slug: Web/JavaScript/Reference/Statements/import
 page-type: javascript-statement
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Language feature
-  - Modules
-  - Reference
-  - Statement
-  - dynamic import
-  - import
 browser-compat: javascript.statements.import
 ---
 

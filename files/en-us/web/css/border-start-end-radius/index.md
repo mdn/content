@@ -2,14 +2,6 @@
 title: border-start-end-radius
 slug: Web/CSS/border-start-end-radius
 page-type: css-property
-tags:
-  - CSS
-  - CSS Logical Property
-  - CSS Property
-  - Reference
-  - border-start-end-radius
-  - recipe:css-property
-  - writing modes
 browser-compat: css.properties.border-start-end-radius
 ---
 

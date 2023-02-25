@@ -222,7 +222,7 @@ async function receiveBidirectional() {
 
 ## Interfaces
 
-- {{domxref("WebTransport")}}
+- {{domxref("WebTransport")}} {{Experimental_Inline}}
   - : Provides functionality to enable a user agent to connect to an HTTP/3 server, initiate reliable and unreliable transport in either or both directions, and close the connection once it is no longer needed.
 - {{domxref("WebTransportBidirectionalStream")}}
   - : Represents a bidirectional stream created by a server or a client that can be used for reliable transport. Provides access to a {{domxref("ReadableStream")}} for reading incoming data, and a {{domxref("WritableStream")}} for writing outgoing data.

@@ -2,13 +2,8 @@
 title: Highlight.delete()
 slug: Web/API/Highlight/delete
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - CSS Custom Highlight API
-  - Reference
-  - delete
-  - Experimental
+status:
+  - experimental
 browser-compat: api.Highlight.delete
 spec-urls: https://tc39.es/ecma262/multipage/keyed-collections.html#sec-set.prototype.delete
 ---

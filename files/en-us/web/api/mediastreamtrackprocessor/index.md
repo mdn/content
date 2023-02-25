@@ -2,12 +2,8 @@
 title: MediaStreamTrackProcessor
 slug: Web/API/MediaStreamTrackProcessor
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Reference
-  - MediaStreamTrackProcessor
-  - Experimental
+status:
+  - experimental
 browser-compat: api.MediaStreamTrackProcessor
 ---
 

@@ -2,16 +2,6 @@
 title: HTMLImageElement.width
 slug: Web/API/HTMLImageElement/width
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTML
-  - HTML DOM
-  - HTMLImageElement
-  - Image
-  - Property
-  - Reference
-  - size
-  - width
 browser-compat: api.HTMLImageElement.width
 ---
 

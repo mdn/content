@@ -2,13 +2,8 @@
 title: HighlightRegistry.values()
 slug: Web/API/HighlightRegistry/values
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - CSS Custom Highlight API
-  - Reference
-  - values
-  - Experimental
+status:
+  - experimental
 browser-compat: api.HighlightRegistry.values
 spec-urls: https://tc39.es/ecma262/multipage/keyed-collections.html#sec-map.prototype.values
 ---

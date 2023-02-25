@@ -2,12 +2,6 @@
 title: Loops and iteration
 slug: Web/JavaScript/Guide/Loops_and_iteration
 page-type: guide
-tags:
-  - Guide
-  - JavaScript
-  - Loop
-  - Syntax
-  - "l10n:priority"
 ---
 
 {{jsSidebar("JavaScript Guide")}}

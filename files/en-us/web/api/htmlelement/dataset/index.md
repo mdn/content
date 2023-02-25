@@ -2,14 +2,6 @@
 title: HTMLElement.dataset
 slug: Web/API/HTMLElement/dataset
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTML DOM
-  - HTMLElement
-  - Property
-  - Read-only
-  - Reference
-  - dataset
 browser-compat: api.HTMLElement.dataset
 ---
 

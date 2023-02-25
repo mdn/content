@@ -1,10 +1,6 @@
 ---
 title: Firefox 10 for developers
 slug: Mozilla/Firefox/Releases/10
-tags:
-  - Firefox
-  - Firefox 10
-  - Gecko 10
 ---
 
 {{FirefoxSidebar}}

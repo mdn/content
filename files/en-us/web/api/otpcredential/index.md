@@ -2,12 +2,8 @@
 title: OTPCredential
 slug: Web/API/OTPCredential
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Reference
-  - OTPCredential
-  - Experimental
+status:
+  - experimental
 browser-compat: api.OTPCredential
 ---
 
