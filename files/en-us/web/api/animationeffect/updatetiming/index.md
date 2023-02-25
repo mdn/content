@@ -18,7 +18,7 @@ updateTiming(timing)
 ### Parameters
 
 - `timing`
-  - : An object containing the timing properties to update.
+  - : An object containing zero or more of the properties from the return value of {{domxref("AnimationEffect.getTiming()")}}, representing the timing properties to update.
 
 ### Return value
 
