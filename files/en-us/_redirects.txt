@@ -11955,6 +11955,7 @@
 /en-US/docs/Web/Guide/Prefixes	/en-US/docs/Glossary/Vendor_Prefix
 /en-US/docs/Web/Guide/Responsive_design	/en-US/docs/Web/Progressive_web_apps
 /en-US/docs/Web/Guide/Responsive_design/Responsive_design_references	/en-US/docs/Web/Progressive_web_apps
+/en-US/docs/Web/Guide/SVG-in-OpenType	/en-US/docs/Web/Guide
 /en-US/docs/Web/Guide/Terminology	/en-US/docs/Glossary
 /en-US/docs/Web/Guide/Touch_events	/en-US/docs/Web/API/Touch_events
 /en-US/docs/Web/Guide/User_experience/Using_the_Page_Visibility_API	/en-US/docs/Web/API/Page_Visibility_API
