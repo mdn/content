@@ -57,7 +57,7 @@ const foo = 'Tom\'s bar';
 ### Declaring properties with keyword
 
 You **cannot** declare properties of an object or array with a
-`let`, `const` or `var` declaration.
+`let`, `const`, or `var` declaration.
 
 ```js example-bad
 const obj = {};
@@ -67,7 +67,7 @@ const array = [];
 const array[0] = "there"; // SyntaxError missing ; before statement
 ```
 
-Instead, omit the `let`, `const` or `var` keyword:
+Instead, omit the keyword:
 
 ```js example-good
 const obj = {};
