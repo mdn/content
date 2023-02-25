@@ -2,14 +2,8 @@
 title: WebTransportDatagramDuplexStream.outgoingHighWaterMark
 slug: Web/API/WebTransportDatagramDuplexStream/outgoingHighWaterMark
 page-type: web-api-instance-property
-tags:
-  - API
-  - Experimental
-  - outgoingHighWaterMark
-  - Property
-  - Reference
-  - WebTransport
-  - WebTransport API
+status:
+  - experimental
 browser-compat: api.WebTransportDatagramDuplexStream.outgoingHighWaterMark
 ---
 

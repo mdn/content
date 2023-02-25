@@ -2,16 +2,8 @@
 title: SpeechGrammar.weight
 slug: Web/API/SpeechGrammar/weight
 page-type: web-api-instance-property
-tags:
-  - API
-  - Experimental
-  - Property
-  - Reference
-  - SpeechGrammar
-  - Web Speech API
-  - recognition
-  - speech
-  - weight
+status:
+  - experimental
 browser-compat: api.SpeechGrammar.weight
 ---
 

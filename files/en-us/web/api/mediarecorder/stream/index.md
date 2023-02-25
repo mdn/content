@@ -2,12 +2,6 @@
 title: MediaRecorder.stream
 slug: Web/API/MediaRecorder/stream
 page-type: web-api-instance-property
-tags:
-  - API
-  - MediaRecorder
-  - Property
-  - Reference
-  - stream
 browser-compat: api.MediaRecorder.stream
 ---
 

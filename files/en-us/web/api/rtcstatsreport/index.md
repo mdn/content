@@ -2,16 +2,6 @@
 title: RTCStatsReport
 slug: Web/API/RTCStatsReport
 page-type: web-api-interface
-tags:
-  - API
-  - Dictionary
-  - Draft
-  - Interface
-  - Media
-  - NeedsContent
-  - RTCStatsReport
-  - Reference
-  - WebRTC
 browser-compat: api.RTCStatsReport
 ---
 

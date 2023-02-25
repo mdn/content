@@ -2,19 +2,8 @@
 title: NavigationTransition.from
 slug: Web/API/NavigationTransition/from
 page-type: web-api-instance-property
-tags:
-  - API
-  - Experimental
-  - from
-  - History
-  - Navigate
-  - Navigation
-  - Navigation API
-  - Property
-  - Read-only
-  - Reference
-  - Scroll
-  - Traversal
+status:
+  - experimental
 browser-compat: api.NavigationTransition.from
 ---
 

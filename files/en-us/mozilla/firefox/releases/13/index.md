@@ -1,9 +1,6 @@
 ---
 title: Firefox 13 for developers
 slug: Mozilla/Firefox/Releases/13
-tags:
-  - Firefox
-  - Gecko
 ---
 
 {{FirefoxSidebar}}

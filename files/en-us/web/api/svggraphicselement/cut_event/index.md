@@ -2,13 +2,6 @@
 title: 'SVGGraphicsElement: cut event'
 slug: Web/API/SVGGraphicsElement/cut_event
 page-type: web-api-event
-tags:
-  - API
-  - Event
-  - NeedsExample
-  - Reference
-  - SVG
-  - SVG OM
 browser-compat: api.Element.cut_event
 ---
 

@@ -2,11 +2,6 @@
 title: Pixel manipulation with canvas
 slug: Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas
 page-type: guide
-tags:
-  - Canvas
-  - Graphics
-  - Intermediate
-  - Tutorial
 ---
 
 {{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Advanced_animations", "Web/API/Canvas_API/Tutorial/Optimizing_canvas")}}

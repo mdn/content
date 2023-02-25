@@ -2,20 +2,6 @@
 title: RTCIceCandidate.component
 slug: Web/API/RTCIceCandidate/component
 page-type: web-api-instance-property
-tags:
-  - API
-  - ICE
-  - Property
-  - RTCIceCandidate
-  - RTCP
-  - RTP
-  - Read-only
-  - Reference
-  - SDP
-  - Transport
-  - WebRTC
-  - WebRTC API
-  - component
 browser-compat: api.RTCIceCandidate.component
 ---
 

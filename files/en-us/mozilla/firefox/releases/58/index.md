@@ -1,10 +1,6 @@
 ---
 title: Firefox 58 for developers
 slug: Mozilla/Firefox/Releases/58
-tags:
-  - "58"
-  - Firefox
-  - Release Notes
 ---
 
 {{FirefoxSidebar}}

@@ -2,12 +2,8 @@
 title: EncodedVideoChunk()
 slug: Web/API/EncodedVideoChunk/EncodedVideoChunk
 page-type: web-api-constructor
-tags:
-  - API
-  - Constructor
-  - Reference
-  - EncodedVideoChunk
-  - Experimental
+status:
+  - experimental
 browser-compat: api.EncodedVideoChunk.EncodedVideoChunk
 ---
 
@@ -44,10 +40,10 @@ In the following example a new `EncodedVideoChunk` is created.
 
 ```js
 const init = {
-  type: 'key',
+  type: "key",
   data: videoBuffer,
   timestamp: 23000000,
-  duration: 2000000
+  duration: 2000000,
 };
 chunk = EncodedVideoChunk(init);
 ```

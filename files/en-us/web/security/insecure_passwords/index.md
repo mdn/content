@@ -1,13 +1,6 @@
 ---
 title: Insecure passwords
 slug: Web/Security/Insecure_passwords
-tags:
-  - Insecure
-  - Intermediate
-  - Security
-  - Web
-  - password
-  - passwords
 ---
 
 {{QuickLinksWithSubpages("/en-US/docs/Web/Security")}}

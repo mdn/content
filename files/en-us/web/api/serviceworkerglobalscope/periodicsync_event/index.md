@@ -2,13 +2,8 @@
 title: 'ServiceWorkerGlobalScope: periodicsync event'
 slug: Web/API/ServiceWorkerGlobalScope/periodicsync_event
 page-type: web-api-event
-tags:
-  - Offline
-  - PWA
-  - Periodic Background Synchronization
-  - ServiceWorkerGlobalScope
-  - events
-  - Experimental
+status:
+  - experimental
 browser-compat: api.ServiceWorkerGlobalScope.periodicsync_event
 ---
 

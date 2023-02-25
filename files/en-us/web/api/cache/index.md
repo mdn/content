@@ -2,16 +2,6 @@
 title: Cache
 slug: Web/API/Cache
 page-type: web-api-interface
-tags:
-  - API
-  - Cache
-  - Cache API
-  - Interface
-  - Offline
-  - Reference
-  - Service Workers
-  - Service worker API
-  - Storage
 browser-compat: api.Cache
 ---
 

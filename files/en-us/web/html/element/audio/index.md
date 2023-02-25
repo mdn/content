@@ -2,19 +2,6 @@
 title: "<audio>: The Embed Audio element"
 slug: Web/HTML/Element/audio
 page-type: html-element
-tags:
-  - Audio
-  - Element
-  - HTML
-  - HTML embedded content
-  - HTML:Embedded content
-  - HTML:Flow content
-  - HTML:Phrasing content
-  - Media
-  - Multimedia
-  - Reference
-  - Web
-  - sound
 browser-compat: html.elements.audio
 ---
 
@@ -400,12 +387,12 @@ Also it's a good practice to provide some content (such as the direct download l
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories"
+        <a href="/en-US/docs/Web/HTML/Content_categories"
           >Content categories</a
         >
       </th>
       <td>
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
           >Flow content</a
         >, phrasing content, embedded content. If it has a
         {{htmlattrxref("controls", "audio")}} attribute: interactive

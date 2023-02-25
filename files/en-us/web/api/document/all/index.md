@@ -2,15 +2,8 @@
 title: Document.all
 slug: Web/API/Document/all
 page-type: web-api-instance-property
-tags:
-  - API
-  - Deprecated
-  - Document
-  - HTML DOM
-  - HTMLAllCollection
-  - Property
-  - Reference
-  - all
+status:
+  - deprecated
 browser-compat: api.Document.all
 ---
 

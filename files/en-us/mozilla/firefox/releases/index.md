@@ -1,11 +1,6 @@
 ---
 title: Firefox release notes for developers
 slug: Mozilla/Firefox/Releases
-tags:
-  - Firefox
-  - Landing
-  - Mozilla
-  - Release
 ---
 
 {{FirefoxSidebar}}

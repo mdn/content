@@ -2,10 +2,6 @@
 title: SGML
 slug: Glossary/SGML
 page-type: glossary-definition
-tags:
-  - CodingScripting
-  - Composing
-  - SGML
 ---
 
 The _Standard Generalized Markup Language_ (**SGML**) is an {{Glossary("ISO")}} specification for defining declarative markup languages.

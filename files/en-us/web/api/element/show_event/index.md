@@ -1,14 +1,10 @@
 ---
-title: 'Element: show event'
+title: "Element: show event"
 slug: Web/API/Element/show_event
 page-type: web-api-event
-tags:
-  - API
-  - Deprecated
-  - Event
-  - Reference
-  - show
-  - Non-standard
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.Element.show_event
 ---
 
@@ -23,9 +19,9 @@ This event is not cancelable and does not bubble.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('show', (event) => {});
+addEventListener("show", (event) => {});
 
-onshow = (event) => { };
+onshow = (event) => {};
 ```
 
 ## Event type

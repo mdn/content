@@ -2,14 +2,8 @@
 title: Array.prototype.groupToMap()
 slug: Web/JavaScript/Reference/Global_Objects/Array/groupToMap
 page-type: javascript-instance-method
-tags:
-  - Array
-  - groupToMap
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - Experimental
+status:
+  - experimental
 browser-compat: javascript.builtins.Array.groupToMap
 ---
 

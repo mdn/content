@@ -2,12 +2,6 @@
 title: fit-content
 slug: Web/CSS/fit-content
 page-type: css-keyword
-tags:
-  - CSS
-  - Keyword
-  - Reference
-  - Web
-  - fit-content
 browser-compat: css.properties.width.fit-content
 ---
 

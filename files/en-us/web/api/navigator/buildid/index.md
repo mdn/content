@@ -2,13 +2,8 @@
 title: Navigator.buildID
 slug: Web/API/Navigator/buildID
 page-type: web-api-instance-property
-tags:
-  - API
-  - Gecko
-  - HTML DOM
-  - Navigator
-  - Property
-  - Non-standard
+status:
+  - non-standard
 browser-compat: api.Navigator.buildID
 ---
 

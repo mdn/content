@@ -2,16 +2,6 @@
 title: Array.prototype.values()
 slug: Web/JavaScript/Reference/Global_Objects/Array/values
 page-type: javascript-instance-method
-tags:
-  - Array
-  - Beginner
-  - ECMAScript 2015
-  - Iterator
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - Polyfill
 browser-compat: javascript.builtins.Array.values
 ---
 

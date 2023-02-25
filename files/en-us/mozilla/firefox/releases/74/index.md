@@ -1,11 +1,6 @@
 ---
 title: Firefox 74 for developers
 slug: Mozilla/Firefox/Releases/74
-tags:
-  - "74"
-  - Firefox
-  - Mozilla
-  - Release
 ---
 
 {{FirefoxSidebar}}

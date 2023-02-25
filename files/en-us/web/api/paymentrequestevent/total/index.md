@@ -2,15 +2,8 @@
 title: PaymentRequestEvent.total
 slug: Web/API/PaymentRequestEvent/total
 page-type: web-api-instance-property
-tags:
-  - API
-  - Payment Request API
-  - PaymentRequestEvent
-  - Property
-  - Reference
-  - payment
-  - total
-  - Experimental
+status:
+  - experimental
 browser-compat: api.PaymentRequestEvent.total
 ---
 

@@ -2,12 +2,8 @@
 title: MediaStreamTrackProcessor()
 slug: Web/API/MediaStreamTrackProcessor/MediaStreamTrackProcessor
 page-type: web-api-constructor
-tags:
-  - API
-  - Constructor
-  - Reference
-  - MediaStreamTrackProcessor
-  - Experimental
+status:
+  - experimental
 browser-compat: api.MediaStreamTrackProcessor.MediaStreamTrackProcessor
 ---
 

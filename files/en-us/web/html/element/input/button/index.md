@@ -2,16 +2,6 @@
 title: <input type="button">
 slug: Web/HTML/Element/input/button
 page-type: html-element
-tags:
-  - Element
-  - Forms
-  - HTML
-  - HTML forms
-  - Input
-  - Input Element
-  - Input Type
-  - Reference
-  - button
 browser-compat: html.elements.input.type_button
 ---
 

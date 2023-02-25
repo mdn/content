@@ -2,13 +2,8 @@
 title: PaymentRequestEvent
 slug: Web/API/PaymentRequestEvent
 page-type: web-api-interface
-tags:
-  - API
-  - Experimental
-  - Interface
-  - Payment Request API
-  - PaymentRequestEvent
-  - Reference
+status:
+  - experimental
 browser-compat: api.PaymentRequestEvent
 ---
 

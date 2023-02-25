@@ -2,19 +2,6 @@
 title: RTCIceCandidateStats.candidateType
 slug: Web/API/RTCIceCandidateStats/candidateType
 page-type: web-api-instance-property
-tags:
-  - API
-  - Candidate
-  - ICE
-  - Networking
-  - RTCIceCandidateStats
-  - Reference
-  - Statistics
-  - Stats
-  - WebRTC
-  - WebRTC API
-  - candidateType
-  - rtc
 browser-compat: api.RTCIceCandidateStats.candidateType
 ---
 

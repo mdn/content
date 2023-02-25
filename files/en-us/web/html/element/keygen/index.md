@@ -2,13 +2,8 @@
 title: <keygen>
 slug: Web/HTML/Element/keygen
 page-type: html-element
-tags:
-  - Deprecated
-  - Element
-  - HTML
-  - Deprecated
-  - Reference
-  - Web
+status:
+  - deprecated
 browser-compat: html.elements.keygen
 ---
 
@@ -20,31 +15,31 @@ The **`<keygen>`** [HTML](/en-US/docs/Web/HTML) element exists to facilitate gen
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories"
+        <a href="/en-US/docs/Web/HTML/Content_categories"
           >Content categories</a
         >
       </th>
       <td>
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
           >Flow content</a
         >,
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content"
           >phrasing content</a
         >, interactive content,
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#form_listed"
+        <a href="/en-US/docs/Web/HTML/Content_categories#form_listed"
           >listed</a
         >,
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#form_labelable"
+        <a href="/en-US/docs/Web/HTML/Content_categories#form_labelable"
           >labelable</a
         >,
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#form_submittable"
+        <a href="/en-US/docs/Web/HTML/Content_categories#form_submittable"
           >submittable</a
         >,
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#form_resettable"
+        <a href="/en-US/docs/Web/HTML/Content_categories#form_resettable"
           >resettable</a
         >
         <a
-          href="/en-US/docs/Web/Guide/HTML/Content_categories#form-associated_content"
+          href="/en-US/docs/Web/HTML/Content_categories#form-associated_content"
           >form-associated element</a
         >, palpable content.
       </td>
@@ -61,7 +56,7 @@ The **`<keygen>`** [HTML](/en-US/docs/Web/HTML) element exists to facilitate gen
       <th scope="row">Permitted parents</th>
       <td>
         Any element that accepts
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content"
           >phrasing content</a
         >.
       </td>

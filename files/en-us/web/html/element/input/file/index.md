@@ -2,17 +2,6 @@
 title: <input type="file">
 slug: Web/HTML/Element/input/file
 page-type: html-element
-tags:
-  - Directory Picker
-  - File
-  - File Picker
-  - Files
-  - Form input
-  - HTML
-  - HTML forms
-  - Input Type
-  - Reference
-  - Type
 browser-compat: html.elements.input.type_file
 ---
 

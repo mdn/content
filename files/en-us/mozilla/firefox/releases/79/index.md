@@ -1,11 +1,6 @@
 ---
 title: Firefox 79 for developers
 slug: Mozilla/Firefox/Releases/79
-tags:
-  - "79"
-  - Firefox
-  - Mozilla
-  - Release
 ---
 
 {{FirefoxSidebar}}

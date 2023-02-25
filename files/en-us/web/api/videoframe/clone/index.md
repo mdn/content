@@ -2,13 +2,8 @@
 title: VideoFrame.clone()
 slug: Web/API/VideoFrame/clone
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - clone
-  - VideoFrame
-  - Experimental
+status:
+  - experimental
 browser-compat: api.VideoFrame.clone
 ---
 
@@ -33,7 +28,7 @@ The cloned {{domxref("VideoData")}} object.
 ### Exceptions
 
 - `InvalidStateError` {{domxref("DOMException")}}
-  - : Thrown if the `VideoFrame` object has been {{Glossary("Transferable Objects","transferred")}}.
+  - : Thrown if the `VideoFrame` object has been [transferred](/en-US/docs/Web/API/Web_Workers_API/Transferable_objects).
 
 ## Examples
 

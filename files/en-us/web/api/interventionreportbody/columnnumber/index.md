@@ -2,13 +2,8 @@
 title: InterventionReportBody.columnNumber
 slug: Web/API/InterventionReportBody/columnNumber
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - Experimental
-  - columnNumber
-  - InterventionReportBody
+status:
+  - experimental
 browser-compat: api.InterventionReportBody.columnNumber
 ---
 

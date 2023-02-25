@@ -2,16 +2,9 @@
 title: InstallEvent.activeWorker
 slug: Web/API/InstallEvent/activeWorker
 page-type: web-api-instance-property
-tags:
-  - API
-  - InstallEvent
-  - Property
-  - Reference
-  - Service Workers
-  - ServiceWorker
-  - activeWorker
-  - Deprecated
-  - Non-standard
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.InstallEvent.activeWorker
 ---
 

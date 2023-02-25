@@ -2,18 +2,6 @@
 title: 'RTCPeerConnection: track event'
 slug: Web/API/RTCPeerConnection/track_event
 page-type: web-api-event
-tags:
-  - DOM
-  - DOM Event Reference
-  - Event Reference
-  - Media
-  - MediaStreamTrack
-  - Reference
-  - WebRTC
-  - WebRTC API
-  - events
-  - Event
-  - track
 browser-compat: api.RTCPeerConnection.track_event
 ---
 

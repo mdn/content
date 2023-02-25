@@ -2,11 +2,6 @@
 title: 'TextTrackList: change event'
 slug: Web/API/TextTrackList/change_event
 page-type: web-api-event
-tags:
-  - Event
-  - TextTrack
-  - TextTrackList
-  - change event
 browser-compat: api.TextTrackList.change_event
 ---
 

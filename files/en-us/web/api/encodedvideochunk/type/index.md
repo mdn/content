@@ -2,13 +2,8 @@
 title: EncodedVideoChunk.type
 slug: Web/API/EncodedVideoChunk/type
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - type
-  - EncodedVideoChunk
-  - Experimental
+status:
+  - experimental
 browser-compat: api.EncodedVideoChunk.type
 ---
 
@@ -31,10 +26,10 @@ In the following example the `type` is printed to the console.
 
 ```js
 const init = {
-  type: 'key',
+  type: "key",
   data: videoBuffer,
   timestamp: 23000000,
-  duration: 2000000
+  duration: 2000000,
 };
 chunk = EncodedVideoChunk(init);
 

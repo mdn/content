@@ -2,12 +2,6 @@
 title: HTMLAreaElement.referrerPolicy
 slug: Web/API/HTMLAreaElement/referrerPolicy
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTMLAreaElement
-  - Property
-  - Reference
-  - Referrer Policy
 browser-compat: api.HTMLAreaElement.referrerPolicy
 ---
 

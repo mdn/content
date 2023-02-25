@@ -2,12 +2,6 @@
 title: performance.measure()
 slug: Web/API/Performance/measure
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - Web Performance
-  - Web Workers
 browser-compat: api.Performance.measure
 ---
 

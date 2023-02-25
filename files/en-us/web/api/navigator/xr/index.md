@@ -2,20 +2,8 @@
 title: Navigator.xr
 slug: Web/API/Navigator/xr
 page-type: web-api-instance-property
-tags:
-  - API
-  - AR
-  - Augmented Reality
-  - Getter
-  - Graphics
-  - Navigator
-  - Property
-  - Reference
-  - VR
-  - Virtual Reality
-  - WebXR
-  - XR
-  - Experimental
+status:
+  - experimental
 browser-compat: api.Navigator.xr
 ---
 

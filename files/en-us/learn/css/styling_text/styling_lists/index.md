@@ -1,15 +1,6 @@
 ---
 title: Styling lists
 slug: Learn/CSS/Styling_text/Styling_lists
-tags:
-  - Article
-  - Beginner
-  - CSS
-  - Guide
-  - Styling
-  - Text
-  - bullets
-  - lists
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Styling_text/Fundamentals", "Learn/CSS/Styling_text/Styling_links", "Learn/CSS/Styling_text")}}
@@ -446,11 +437,3 @@ CSS counters provide advanced tools for customizing list counting and styling, b
 - {{cssxref("counter-reset")}}
 
 {{PreviousMenuNext("Learn/CSS/Styling_text/Fundamentals", "Learn/CSS/Styling_text/Styling_links", "Learn/CSS/Styling_text")}}
-
-## In this module
-
-- [Fundamental text and font styling](/en-US/docs/Learn/CSS/Styling_text/Fundamentals)
-- [Styling lists](/en-US/docs/Learn/CSS/Styling_text/Styling_lists)
-- [Styling links](/en-US/docs/Learn/CSS/Styling_text/Styling_links)
-- [Web fonts](/en-US/docs/Learn/CSS/Styling_text/Web_fonts)
-- [Typesetting a community school homepage](/en-US/docs/Learn/CSS/Styling_text/Typesetting_a_homepage)

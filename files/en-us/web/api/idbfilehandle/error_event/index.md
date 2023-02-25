@@ -2,14 +2,9 @@
 title: 'IDBFileHandle: error_event'
 slug: Web/API/IDBFileHandle/error_event
 page-type: web-api-event
-tags:
-  - API
-  - Files
-  - Event
-  - Reference
-  - WebAPI
-  - Non-standard
-  - Deprecated
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.IDBFileHandle.error_event
 ---
 

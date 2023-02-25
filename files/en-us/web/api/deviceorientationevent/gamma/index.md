@@ -2,15 +2,6 @@
 title: DeviceOrientationEvent.gamma
 slug: Web/API/DeviceOrientationEvent/gamma
 page-type: web-api-instance-property
-tags:
-  - API
-  - Device Orientation API
-  - DeviceOrientationEvent
-  - NeedsBetterSpecLink
-  - NeedsExample
-  - NeedsMarkupWork
-  - Property
-  - Reference
 browser-compat: api.DeviceOrientationEvent.gamma
 ---
 

@@ -2,12 +2,6 @@
 title: "<base>: The Document Base URL element"
 slug: Web/HTML/Element/base
 page-type: html-element
-tags:
-  - Element
-  - HTML
-  - HTML document metadata
-  - HTML:Metadata content
-  - Reference
 browser-compat: html.elements.base
 ---
 
@@ -21,7 +15,7 @@ A document's used base URL can be accessed by scripts with {{domxref('Node.baseU
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories"
+        <a href="/en-US/docs/Web/HTML/Content_categories"
           >Content categories</a
         >
       </th>

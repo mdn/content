@@ -2,13 +2,8 @@
 title: image-resolution
 slug: Web/CSS/image-resolution
 page-type: css-property
-tags:
-  - CSS
-  - CSS Images
-  - CSS Property
-  - Experimental
-  - Reference
-  - image-resolution
+status:
+  - experimental
 spec-urls: https://drafts.csswg.org/css-images-4/#the-image-resolution
 ---
 

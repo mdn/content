@@ -2,19 +2,8 @@
 title: NavigationDestination.url
 slug: Web/API/NavigationDestination/url
 page-type: web-api-instance-property
-tags:
-  - API
-  - Experimental
-  - History
-  - Navigate
-  - Navigation
-  - Navigation API
-  - Property
-  - Read-only
-  - Reference
-  - Scroll
-  - Traversal
-  - url
+status:
+  - experimental
 browser-compat: api.NavigationDestination.url
 ---
 

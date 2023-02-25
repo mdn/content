@@ -2,14 +2,6 @@
 title: Document.requestStorageAccess()
 slug: Web/API/Document/requestStorageAccess
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - Document
-  - Method
-  - Reference
-  - Storage Access API
-  - requestStorageAccess
 browser-compat: api.Document.requestStorageAccess
 ---
 
@@ -42,8 +34,12 @@ When the promise gets resolved, the resolve handler will run as if a user gestur
 
 ```js
 document.requestStorageAccess().then(
-  () => { console.log('access granted') },
-  () => { console.log('access denied') }
+  () => {
+    console.log("access granted");
+  },
+  () => {
+    console.log("access denied");
+  }
 );
 ```
 

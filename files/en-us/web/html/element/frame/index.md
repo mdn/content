@@ -2,12 +2,8 @@
 title: <frame>
 slug: Web/HTML/Element/frame
 page-type: html-element
-tags:
-  - Deprecated
-  - Element
-  - HTML
-  - Reference
-  - Web
+status:
+  - deprecated
 browser-compat: html.elements.frame
 ---
 

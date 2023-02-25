@@ -2,17 +2,8 @@
 title: Magnetometer.y
 slug: Web/API/Magnetometer/y
 page-type: web-api-instance-property
-tags:
-  - API
-  - Generic Sensor API
-  - Magnetometer
-  - Property
-  - Reference
-  - Sensor
-  - Sensor APIs
-  - Sensors
-  - 'y'
-  - Experimental
+status:
+  - experimental
 browser-compat: api.Magnetometer.y
 ---
 

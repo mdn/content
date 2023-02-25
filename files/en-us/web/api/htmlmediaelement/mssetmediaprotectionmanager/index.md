@@ -2,10 +2,8 @@
 title: HTMLMediaElement.msSetMediaProtectionManager()
 slug: Web/API/HTMLMediaElement/msSetMediaProtectionManager
 page-type: web-api-instance-method
-tags:
-  - msSetMediaProtectionManager
-  - Non-standard
-  - Method
+status:
+  - non-standard
 ---
 
 {{APIRef("HTML DOM")}}

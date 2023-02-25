@@ -2,16 +2,8 @@
 title: CSSMatrixComponent.matrix
 slug: Web/API/CSSMatrixComponent/matrix
 page-type: web-api-instance-property
-tags:
-  - API
-  - CSS Typed Object Model API
-  - CSSMatrixComponent
-  - CSSTransformComponent
-  - CSSTransformValue
-  - Experimental
-  - Houdini
-  - Property
-  - matrix
+status:
+  - experimental
 browser-compat: api.CSSMatrixComponent.matrix
 ---
 

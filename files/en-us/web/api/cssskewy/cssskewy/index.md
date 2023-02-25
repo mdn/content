@@ -2,15 +2,8 @@
 title: CSSSkewY()
 slug: Web/API/CSSSkewY/CSSSkewY
 page-type: web-api-constructor
-tags:
-  - API
-  - CSS Typed Object Model API
-  - CSSSkewY
-  - CSSTransformComponent
-  - CSSTransformValue
-  - Constructor
-  - Experimental
-  - Houdini
+status:
+  - experimental
 browser-compat: api.CSSSkewY.CSSSkewY
 ---
 

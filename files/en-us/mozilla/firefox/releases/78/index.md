@@ -1,11 +1,6 @@
 ---
 title: Firefox 78 for developers
 slug: Mozilla/Firefox/Releases/78
-tags:
-  - "78"
-  - Firefox
-  - Mozilla
-  - Releases
 ---
 
 {{FirefoxSidebar}}

@@ -2,12 +2,6 @@
 title: Round Trip Time (RTT)
 slug: Glossary/Round_Trip_Time
 page-type: glossary-definition
-tags:
-  - Beginner
-  - Performance
-  - Resource
-  - Round Trip Time
-  - Web Performance
 ---
 
 **Round Trip Time (RTT)** is the length time it takes for a data packet to be sent to a destination plus the time it takes for an acknowledgment of that packet to be received back at the origin. The RTT between a network and server can be determined by using the `ping` command.
@@ -29,5 +23,5 @@ In the above example, the average round trip time is shown on the final line as 
 
 ## See also
 
-- [Time to First Byte (TTFB)](/en-US/docs/Glossary/time_to_first_byte)
+- [Time to First Byte (TTFB)](/en-US/docs/Glossary/Time_to_first_byte)
 - [Latency](/en-US/docs/Glossary/Latency)

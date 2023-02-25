@@ -2,14 +2,6 @@
 title: "<figure>: The Figure with Optional Caption element"
 slug: Web/HTML/Element/figure
 page-type: html-element
-tags:
-  - Element
-  - HTML
-  - HTML grouping content
-  - Information
-  - Presentation
-  - Reference
-  - figure
 browser-compat: html.elements.figure
 ---
 
@@ -105,15 +97,15 @@ function NavigatorExample() {
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories"
+        <a href="/en-US/docs/Web/HTML/Content_categories"
           >Content categories</a
         >
       </th>
       <td>
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
           >Flow content</a
         >,
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#palpable_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#palpable_content"
           >palpable content</a
         >.
       </td>
@@ -122,7 +114,7 @@ function NavigatorExample() {
       <th scope="row">Permitted content</th>
       <td>
         A {{HTMLElement("figcaption")}} element, followed by
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
           >flow content</a
         >; or flow content followed by a
         {{HTMLElement("figcaption")}} element; or flow content.
@@ -136,7 +128,7 @@ function NavigatorExample() {
       <th scope="row">Permitted parents</th>
       <td>
         Any element that accepts
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
           >Flow content</a
         >.
       </td>

@@ -2,14 +2,6 @@
 title: "<dialog>: The Dialog element"
 slug: Web/HTML/Element/dialog
 page-type: html-element
-tags:
-  - Dialog
-  - Element
-  - HTML
-  - HTML interactive elements
-  - Reference
-  - Web
-  - polyfill
 browser-compat: html.elements.dialog
 ---
 
@@ -131,12 +123,12 @@ It is important to provide a mechanism to close a dialog within the `dialog` ele
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories"
+        <a href="/en-US/docs/Web/HTML/Content_categories"
           >Content categories</a
         >
       </th>
       <td>
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
           >Flow content</a
         >,
         <a href="/en-US/docs/Web/HTML/Element/Heading_Elements#sectioning_roots"
@@ -147,7 +139,7 @@ It is important to provide a mechanism to close a dialog within the `dialog` ele
     <tr>
       <th scope="row">Permitted content</th>
       <td>
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
           >Flow content</a
         >
       </td>
@@ -160,7 +152,7 @@ It is important to provide a mechanism to close a dialog within the `dialog` ele
       <th scope="row">Permitted parents</th>
       <td>
         Any element that accepts
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
           >flow content</a
         >
       </td>

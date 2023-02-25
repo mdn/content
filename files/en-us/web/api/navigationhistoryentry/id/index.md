@@ -2,19 +2,8 @@
 title: NavigationHistoryEntry.id
 slug: Web/API/NavigationHistoryEntry/id
 page-type: web-api-instance-property
-tags:
-  - API
-  - Experimental
-  - History
-  - id
-  - Navigate
-  - Navigation
-  - Navigation API
-  - Property
-  - Read-only
-  - Reference
-  - Scroll
-  - Traversal
+status:
+  - experimental
 browser-compat: api.NavigationHistoryEntry.id
 ---
 

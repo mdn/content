@@ -2,12 +2,6 @@
 title: border-block
 slug: Web/CSS/border-block
 page-type: css-shorthand-property
-tags:
-  - CSS
-  - CSS Logical Property
-  - CSS Property
-  - Reference
-  - recipe:css-shorthand-property
 browser-compat: css.properties.border-block
 ---
 

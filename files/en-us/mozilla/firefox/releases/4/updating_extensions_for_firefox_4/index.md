@@ -1,15 +1,6 @@
 ---
 title: Updating extensions for Firefox 4
 slug: Mozilla/Firefox/Releases/4/Updating_extensions_for_Firefox_4
-tags:
-  - "4"
-  - Add-ons
-  - Extensions
-  - Firefox
-  - Firefox 4
-  - Gecko 2.0
-  - Mozilla
-  - Release
 ---
 
 {{FirefoxSidebar}}

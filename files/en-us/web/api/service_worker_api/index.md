@@ -2,14 +2,6 @@
 title: Service Worker API
 slug: Web/API/Service_Worker_API
 page-type: web-api-overview
-tags:
-  - API
-  - Landing
-  - Offline
-  - Overview
-  - Reference
-  - Service Workers
-  - Workers
 spec-urls: https://w3c.github.io/ServiceWorker/
 ---
 

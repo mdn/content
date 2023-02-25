@@ -2,17 +2,6 @@
 title: Conditional (ternary) operator
 slug: Web/JavaScript/Reference/Operators/Conditional_Operator
 page-type: javascript-operator
-tags:
-  - Conditional
-  - Decision
-  - JS
-  - JavaScript
-  - Language feature
-  - Operator
-  - Reference
-  - else
-  - if
-  - ternary
 browser-compat: javascript.operators.conditional
 ---
 

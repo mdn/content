@@ -2,14 +2,6 @@
 title: MouseEvent.relatedTarget
 slug: Web/API/MouseEvent/relatedTarget
 page-type: web-api-instance-property
-tags:
-  - API
-  - DOM
-  - DOM Events
-  - MouseEvent
-  - Property
-  - Read-only
-  - Reference
 browser-compat: api.MouseEvent.relatedTarget
 ---
 

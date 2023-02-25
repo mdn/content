@@ -1,8 +1,6 @@
 ---
 title: Firefox 46 for developers
 slug: Mozilla/Firefox/Releases/46
-tags:
-  - Firefox
 ---
 
 {{FirefoxSidebar}}

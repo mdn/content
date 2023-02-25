@@ -2,12 +2,6 @@
 title: "<html>: The HTML Document / Root element"
 slug: Web/HTML/Element/html
 page-type: html-element
-tags:
-  - Element
-  - HTML
-  - HTML Root Element
-  - Reference
-  - Web
 browser-compat: html.elements.html
 ---
 
@@ -19,7 +13,7 @@ The **`<html>`** [HTML](/en-US/docs/Web/HTML) element represents the root (top-l
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories"
+        <a href="/en-US/docs/Web/HTML/Content_categories"
           >Content categories</a
         >
       </th>

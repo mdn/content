@@ -2,16 +2,6 @@
 title: "<dfn>: The Definition element"
 slug: Web/HTML/Element/dfn
 page-type: html-element
-tags:
-  - Definition
-  - Definitions
-  - Element
-  - HTML
-  - HTML text-level semantics
-  - Reference
-  - Semantic Markup
-  - Web
-  - dfn
 browser-compat: html.elements.dfn
 ---
 
@@ -154,15 +144,15 @@ The output of the above code looks like this:
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories"
+        <a href="/en-US/docs/Web/HTML/Content_categories"
           >Content categories</a
         >
       </th>
       <td>
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
           >Flow content</a
         >,
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content"
           >phrasing content</a
         >, palpable content.
       </td>
@@ -170,7 +160,7 @@ The output of the above code looks like this:
     <tr>
       <th scope="row">Permitted content</th>
       <td>
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content"
           >Phrasing content</a
         >, but no {{HTMLElement("dfn")}} element must be a descendant.
       </td>
@@ -183,7 +173,7 @@ The output of the above code looks like this:
       <th scope="row">Permitted parents</th>
       <td>
         Any element that accepts
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content"
           >phrasing content</a
         >.
       </td>

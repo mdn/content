@@ -2,14 +2,6 @@
 title: SpeechRecognitionEvent
 slug: Web/API/SpeechRecognitionEvent
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Reference
-  - SpeechRecognitionEvent
-  - Web Speech API
-  - recognition
-  - speech
 browser-compat: api.SpeechRecognitionEvent
 ---
 

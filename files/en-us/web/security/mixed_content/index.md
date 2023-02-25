@@ -1,12 +1,6 @@
 ---
 title: Mixed content
 slug: Web/Security/Mixed_content
-tags:
-  - HTTP
-  - HTTPS
-  - Security
-  - Web
-  - console
 ---
 
 {{QuickLinksWithSubpages("/en-US/docs/Web/Security")}}

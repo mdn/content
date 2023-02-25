@@ -2,13 +2,6 @@
 title: MediaStream
 slug: Web/API/MediaStream
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Media Streams API
-  - MediaStream
-  - Reference
-  - WebRTC
 browser-compat: api.MediaStream
 ---
 

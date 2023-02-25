@@ -2,11 +2,6 @@
 title: Global attributes
 slug: Web/HTML/Global_attributes
 page-type: landing-page
-tags:
-  - Attribute
-  - HTML
-  - Reference
-  - Web
 browser-compat: html.global_attributes
 ---
 

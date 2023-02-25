@@ -1,11 +1,9 @@
 ---
-title: 'Element: gesturestart event'
+title: "Element: gesturestart event"
 slug: Web/API/Element/gesturestart_event
 page-type: web-api-event
-tags:
-  - Event
-  - Non-standard
-  - Reference
+status:
+  - non-standard
 browser-compat: api.Element.gesturestart_event
 ---
 
@@ -20,7 +18,7 @@ It is a proprietary event specific to WebKit.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('gesturestart', (event) => {});
+addEventListener("gesturestart", (event) => {});
 
 ongesturestart = (event) => {};
 ```

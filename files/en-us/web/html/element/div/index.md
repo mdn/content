@@ -2,16 +2,6 @@
 title: "<div>: The Content Division element"
 slug: Web/HTML/Element/div
 page-type: html-element
-tags:
-  - Content Division
-  - Element
-  - HTML
-  - HTML grouping content
-  - HTML:Flow content
-  - Layout
-  - Reference
-  - Web
-  - div
 browser-compat: html.elements.div
 ---
 
@@ -87,20 +77,20 @@ This example creates a shadowed box by applying a style to the `<div>` using CSS
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories"
+        <a href="/en-US/docs/Web/HTML/Content_categories"
           >Content categories</a
         >
       </th>
       <td>
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
           >Flow content</a
-        >, <a href="/en-US/docs/Web/Guide/HTML/Content_categories#palpable_content">palpable content</a>.
+        >, <a href="/en-US/docs/Web/HTML/Content_categories#palpable_content">palpable content</a>.
       </td>
     </tr>
     <tr>
       <th scope="row">Permitted content</th>
       <td>
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
           >Flow content</a
         >.<br />Or (in {{glossary("WHATWG")}} HTML): If the parent is a
         {{HTMLElement("dl")}} element: one or more
@@ -118,7 +108,7 @@ This example creates a shadowed box by applying a style to the `<div>` using CSS
       <th scope="row">Permitted parents</th>
       <td>
         Any element that accepts
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
           >flow content</a
         >.<br />Or (in {{glossary("WHATWG")}} HTML):
         {{HTMLElement("dl")}} element.
