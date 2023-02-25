@@ -69,7 +69,7 @@ f(); // [1, undefined]
 f(2); // [2, undefined]
 ```
 
-> **Note:** Parameters after the first default parameter will not contribute to the function's [`length`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/length).
+> **Note:** The first default parameter and all parameters after it will not contribute to the function's [`length`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/length).
 
 The default parameter initializers live in their own scope, which is a parent of the scope created for the function body.
 

@@ -10814,9 +10814,7 @@
 /en-US/docs/Web/API/window.window	/en-US/docs/Web/API/Window/window
 /en-US/docs/Web/API/window/onscroll	/en-US/docs/Web/API/Element/scroll_event
 /en-US/docs/Web/API/window/onscroll-temp	/en-US/docs/Web/API/Element/scroll_event
-/en-US/docs/Web/API/x-ms-acceleratorkey	/en-US/docs/Web/HTML/Global_attributes/x-ms-acceleratorkey
 /en-US/docs/Web/API/x-ms-aria-flowfrom	/en-US/docs/Web/Accessibility/ARIA
-/en-US/docs/Web/API/x-ms-format-detection	/en-US/docs/Web/HTML/Global_attributes/x-ms-format-detection
 /en-US/docs/Web/APIWwindow.sidebar	/en-US/docs/Web/API/Window/sidebar
 /en-US/docs/Web/APIr	/en-US/docs/Web/API/Document/dir
 /en-US/docs/Web/Accessibility/ARIA/ARIA_Examples	/en-US/docs/Web/Accessibility/ARIA
@@ -10855,9 +10853,7 @@
 /en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_switch_role	/en-US/docs/Web/Accessibility/ARIA/Roles/Switch_role
 /en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_textbox_role	/en-US/docs/Web/Accessibility/ARIA/Roles/textbox_role
 /en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_toolbar_role	/en-US/docs/Web/Accessibility/ARIA/Roles/toolbar_role
-/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/x-ms-acceleratorkey	/en-US/docs/Web/HTML/Global_attributes/x-ms-acceleratorkey
 /en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/x-ms-aria-flowfrom	/en-US/docs/Web/Accessibility/ARIA
-/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/x-ms-format-detection	/en-US/docs/Web/HTML/Global_attributes/x-ms-format-detection
 /en-US/docs/Web/Accessibility/ARIA/ARIA_Test_Cases	/en-US/docs/Web/Accessibility/ARIA
 /en-US/docs/Web/Accessibility/ARIA/Basic_form_hints	/en-US/docs/Web/Accessibility/ARIA
 /en-US/docs/Web/Accessibility/ARIA/Roles/ARIA:_tabpanel_role	/en-US/docs/Web/Accessibility/ARIA/Roles/Tabpanel_Role

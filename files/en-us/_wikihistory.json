@@ -100493,14 +100493,6 @@
       "linfestus"
     ]
   },
-  "Web/HTML/Global_attributes/x-ms-acceleratorkey": {
-    "modified": "2019-08-03T19:48:54.971Z",
-    "contributors": ["Tigt", "ExE-Boss", "mattwojo"]
-  },
-  "Web/HTML/Global_attributes/x-ms-format-detection": {
-    "modified": "2020-08-19T07:01:13.351Z",
-    "contributors": ["mfuji09", "Malvoz", "Tigt", "ExE-Boss", "mattwojo"]
-  },
   "Web/HTML/Inline_elements": {
     "modified": "2020-06-11T07:42:16.601Z",
     "contributors": [
