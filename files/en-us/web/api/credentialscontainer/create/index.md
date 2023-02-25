@@ -67,7 +67,7 @@ create(options)
           - : An object describing the user account for which the credential is generated. It can contain the following properties:
             - `id`: A unique user id of type {{jsxref("BufferSource")}}. This value cannot exceed 64 bytes.
             - `name`: A user handle (ex: `john34`).
-            - `displayName`: A human-friendly user display name (ex: `John Doe`).
+            - `displayName`: A human-friendly user display name (example: `John Doe`).
         - `challenge`
           - : An {{jsxref("ArrayBuffer")}}, a {{jsxref("TypedArray")}}, or a {{jsxref("DataView")}}
             emitted by the relying party's server and used as a [cryptographic challenge](https://en.wikipedia.org/wiki/Challenge%E2%80%93response_authentication). This value will be signed by the authenticator and the signature will be sent back as part of {{domxref("AuthenticatorAttestationResponse.attestationObject")}}.
