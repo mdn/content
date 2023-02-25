@@ -28,6 +28,9 @@ This article provides information about the changes in Firefox 111 that affect d
 
 ### SVG
 
+- The `context-stroke` and `context-fill` values are now supported inside `<marker>` elements.
+  For more information on using these values with `fill` and `stroke` properties, see the [`<marker>`](/en-US/docs/Web/SVG/Element/marker) documentation ({{bug(752638)}}).
+
 #### Removals
 
 ### HTTP
