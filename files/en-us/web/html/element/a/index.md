@@ -162,6 +162,9 @@ a {
 <!-- Heading to link to -->
 <h2 id="Section_further_down">Section further down</h2>
 ```
+#### Result
+{{EmbedLiveSample('Linking to an email address')}}
+
 
 > **Note:** You can use `href="#top"` or the empty fragment (`href="#"`) to link to the top of the current page, [as defined in the HTML specification](https://html.spec.whatwg.org/multipage/browsing-the-web.html#scroll-to-the-fragment-identifier).
 
@@ -173,6 +176,9 @@ To create links that open in the user's email program to let them send a new mes
 <a href="mailto:nowhere@mozilla.org">Send email to nowhere</a>
 ```
 
+#### Result
+{{EmbedLiveSample('Linking to an email address')}}
+
 For details about `mailto:` URLs, such as including a subject or body, see [Email links](/en-US/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks#email_links) or {{RFC(6068)}}.
 
 ### Linking to telephone numbers
@@ -181,6 +187,9 @@ For details about `mailto:` URLs, such as including a subject or body, see [Emai
 <a href="tel:+49.157.0156">+49 157 0156</a>
 <a href="tel:+1(800)555-0123">(800) 555-0123</a>
 ```
+#### Result
+
+{{EmbedLiveSample('Linking to telephone numbers')}}
 
 `tel:` link behavior varies with device capabilities:
 
@@ -256,7 +265,7 @@ document
   );
 ```
 
-##### Result
+#### Result
 
 {{EmbedLiveSample('Example_painting_app_with_save_link', '100%', '400')}}
 
@@ -287,6 +296,7 @@ Luckily, this is an easy fix, and it's actually shorter than the inaccessible ve
 ```html example-good
 <p>Learn more <a href="/products">about our products</a>.</p>
 ```
+{{EmbedLiveSample('Strong link text')}}
 
 Assistive software has shortcuts to list all links on a page. However, strong link text benefits all users — the "list all links" shortcut emulates how sighted users quickly scan pages.
 
@@ -311,6 +321,10 @@ People experiencing low vision conditions, navigating with the aid of screen rea
   Wikipedia (opens in new tab)
 </a>
 ```
+#### Result
+
+{{EmbedLiveSample('Link that opens a new tab/window')}}
+
 
 #### Link to a non-HTML resource
 
@@ -331,6 +345,9 @@ If an icon is used to signify link behavior, make sure it has {{HTMLAttrxRef("al
   <img alt="(PowerPoint file)" src="ppt-icon.svg" />
 </a>
 ```
+#### Result
+{{EmbedLiveSample('Link to a non-HTML resource')}}
+
 
 - [WebAIM: Links and Hypertext - Hypertext Links](https://webaim.org/techniques/hypertext/hypertext_links)
 - [MDN / Understanding WCAG, Guideline 3.2](/en-US/docs/Web/Accessibility/Understanding_WCAG/Understandable#guideline_3.2_—_predictable_make_web_pages_appear_and_operate_in_predictable_ways)
@@ -362,6 +379,8 @@ A **skip link** is a link placed as early as possible in {{HTMLElement("body")}}
   top: 0;
 }
 ```
+#### Result
+{{EmbedLiveSample('Skip links')}}
 
 Skip links let keyboard users bypass content repeated throughout multiple pages, such as header navigation.
 
@@ -489,6 +508,7 @@ Spacing may be created using CSS properties like {{CSSxRef("margin")}}.
     </tr>
   </tbody>
 </table>
+
 
 ## Specifications
 
