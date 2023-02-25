@@ -2,14 +2,8 @@
 title: ContactsManager.getProperties()
 slug: Web/API/ContactsManager/getProperties
 page-type: web-api-instance-method
-tags:
-  - Contact Picker API
-  - Contacts
-  - ContactsManager
-  - Method
-  - PWA
-  - contact picker
-  - Experimental
+status:
+  - experimental
 browser-compat: api.ContactsManager.getProperties
 ---
 

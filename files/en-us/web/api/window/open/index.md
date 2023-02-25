@@ -2,13 +2,6 @@
 title: Window.open()
 slug: Web/API/Window/open
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - Method
-  - Reference
-  - Window
-  - open
 browser-compat: api.Window.open
 ---
 

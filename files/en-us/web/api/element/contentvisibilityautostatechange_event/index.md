@@ -1,11 +1,9 @@
 ---
-title: 'Element: contentvisibilityautostatechange event'
+title: "Element: contentvisibilityautostatechange event"
 slug: Web/API/Element/contentvisibilityautostatechange_event
 page-type: web-api-event
-tags:
-  - Event
-  - Reference
-  - Experimental
+status:
+  - experimental
 browser-compat: api.Element.contentvisibilityautostatechange_event
 ---
 
@@ -32,9 +30,9 @@ contentvisibilityautostatechange = (event) => {};
 ## Examples
 
 ```js
-const canvasElem = document.querySelector('canvas');
+const canvasElem = document.querySelector("canvas");
 
-canvasElem.addEventListener('contentvisibilityautostatechange', stateChanged);
+canvasElem.addEventListener("contentvisibilityautostatechange", stateChanged);
 canvasElem.style.contentVisibility = "auto";
 
 function stateChanged(event) {
@@ -47,7 +45,7 @@ function stateChanged(event) {
 
 // Call this when the canvas updates need to start.
 function startCanvasUpdates(canvas) {
-  // … 
+  // …
 }
 
 // Call this when the canvas updates need to stop.

@@ -2,14 +2,8 @@
 title: "-webkit-border-before"
 slug: Web/CSS/-webkit-border-before
 page-type: css-shorthand-property
-tags:
-  - "-webkit-border-before"
-  - CSS
-  - CSS Property
-  - CSS:WebKit Extensions
-  - Non-standard
-  - Reference
-  - recipe:css-property
+status:
+  - non-standard
 browser-compat: css.properties.-webkit-border-before
 ---
 

@@ -1,16 +1,7 @@
 ---
-title: 'Element: blur event'
+title: "Element: blur event"
 slug: Web/API/Element/blur_event
 page-type: web-api-event
-tags:
-  - API
-  - DOM
-  - Element
-  - Event
-  - FocusEvent
-  - Reference
-  - blur
-  - onblur
 browser-compat: api.Element.blur_event
 ---
 
@@ -27,9 +18,9 @@ The `blur` event is not cancelable.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('blur', (event) => { });
+addEventListener("blur", (event) => {});
 
-onblur = (event) => { };
+onblur = (event) => {};
 ```
 
 ## Event type
@@ -53,10 +44,12 @@ _This interface also inherits properties from its parent {{domxref("UIEvent")}},
 
 ```html
 <form id="form">
-  <label>Some text:
+  <label>
+    Some text:
     <input type="text" placeholder="text input" />
   </label>
-  <label>Password:
+  <label>
+    Password:
     <input type="password" placeholder="password" />
   </label>
 </form>
@@ -67,12 +60,12 @@ _This interface also inherits properties from its parent {{domxref("UIEvent")}},
 ```js
 const password = document.querySelector('input[type="password"]');
 
-password.addEventListener('focus', (event) => {
-  event.target.style.background = 'pink';
+password.addEventListener("focus", (event) => {
+  event.target.style.background = "pink";
 });
 
-password.addEventListener('blur', (event) => {
-  event.target.style.background = '';
+password.addEventListener("blur", (event) => {
+  event.target.style.background = "";
 });
 ```
 
@@ -88,10 +81,12 @@ There are two ways of implementing event delegation for this event: by using the
 
 ```html
 <form id="form">
-  <label>Some text:
+  <label>
+    Some text:
     <input type="text" placeholder="text input" />
   </label>
-  <label>Password:
+  <label>
+    Password:
     <input type="password" placeholder="password" />
   </label>
 </form>
@@ -100,15 +95,23 @@ There are two ways of implementing event delegation for this event: by using the
 #### JavaScript
 
 ```js
-const form = document.getElementById('form');
+const form = document.getElementById("form");
 
-form.addEventListener('focus', (event) => {
-  event.target.style.background = 'pink';
-}, true);
+form.addEventListener(
+  "focus",
+  (event) => {
+    event.target.style.background = "pink";
+  },
+  true
+);
 
-form.addEventListener('blur', (event) => {
-  event.target.style.background = '';
-}, true);
+form.addEventListener(
+  "blur",
+  (event) => {
+    event.target.style.background = "";
+  },
+  true
+);
 ```
 
 #### Result

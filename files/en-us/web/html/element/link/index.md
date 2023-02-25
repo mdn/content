@@ -2,15 +2,6 @@
 title: "<link>: The External Resource Link element"
 slug: Web/HTML/Element/link
 page-type: html-element
-tags:
-  - Element
-  - HTML
-  - HTML document metadata
-  - Link
-  - Reference
-  - Web
-  - Web Performance
-  - metadata
 browser-compat: html.elements.link
 ---
 
@@ -407,13 +398,13 @@ the rendering of the page will be blocked till the resource is fetched. For exam
   <tbody>
     <tr>
       <th>
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories">Content categories</a>
+        <a href="/en-US/docs/Web/HTML/Content_categories">Content categories</a>
       </th>
       <td>
         Metadata content.
         If <code><a href="/en-US/docs/Web/HTML/Global_attributes/itemprop">itemprop</a></code> is present:
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content">Flow content</a> and
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content">phrasing content</a>.
+        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content">Flow content</a> and
+        <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content">phrasing content</a>.
       </td>
     </tr>
     <tr>
@@ -431,7 +422,7 @@ the rendering of the page will be blocked till the resource is fetched. For exam
       <td>
         Any element that accepts metadata elements.
         If <a href="/en-US/docs/Web/HTML/Global_attributes/itemprop">itemprop</a> is present: any element that accepts
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content">phrasing content</a>.
+        <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content">phrasing content</a>.
       </td>
     </tr>
     <tr>

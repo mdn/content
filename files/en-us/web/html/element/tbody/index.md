@@ -2,16 +2,6 @@
 title: "<tbody>: The Table Body element"
 slug: Web/HTML/Element/tbody
 page-type: html-element
-tags:
-  - Element
-  - HTML
-  - HTML tabular data
-  - Reference
-  - Table Body
-  - Table Contents
-  - Tables
-  - Web
-  - tbody
 browser-compat: html.elements.tbody
 ---
 
@@ -27,7 +17,7 @@ The `<tbody>` element, along with its related {{HTMLElement("thead")}} and {{HTM
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories"
+        <a href="/en-US/docs/Web/HTML/Content_categories"
           >Content categories</a
         >
       </th>
@@ -99,7 +89,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
 - {{htmlattrdef("bgcolor")}} {{Deprecated_inline}}
 
-  - : The background color of the table. It is a [6-digit hexadecimal RGB code](/en-US/docs/Web/CSS/color_value#rgb_colors), prefixed by a '`#`'. One of the predefined [color keywords](/en-US/docs/Web/CSS/color_value#color_keywords) can also be used.
+  - : The background color of the table. It is a [6-digit hexadecimal RGB code](/en-US/docs/Web/CSS/hex-color), prefixed by a '`#`'. One of the predefined [color keywords](/en-US/docs/Web/CSS/named-color) can also be used.
 
     As this attribute is deprecated, use the CSS {{cssxref("background-color")}} property instead.
 

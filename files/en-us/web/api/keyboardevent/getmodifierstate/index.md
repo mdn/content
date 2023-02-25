@@ -2,13 +2,6 @@
 title: KeyboardEvent.getModifierState()
 slug: Web/API/KeyboardEvent/getModifierState
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - KeyboardEvent
-  - Method
-  - Reference
-  - getModifierState
 browser-compat: api.KeyboardEvent.getModifierState
 ---
 
@@ -34,11 +27,6 @@ getModifierState(key)
 ### Return value
 
 A boolean.
-
-## Modifier keys on Internet Explorer
-
-IE9 uses `"Scroll"` for `"ScrollLock"` and `"Win"` for
-`"OS"`.
 
 ## Modifier keys on Gecko
 

@@ -2,18 +2,6 @@
 title: MutationObserver
 slug: Web/API/MutationObserver
 page-type: web-api-interface
-tags:
-  - API
-  - DOM
-  - DOM Reference
-  - Interface
-  - MutationObserver
-  - NeedsContent
-  - NeedsUpdate
-  - Reference
-  - mutation
-  - observers
-  - resize
 browser-compat: api.MutationObserver
 ---
 

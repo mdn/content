@@ -2,10 +2,6 @@
 title: JavaScript
 slug: Glossary/JavaScript
 page-type: glossary-definition
-tags:
-  - CodingScripting
-  - JavaScript
-  - "l10n:priority"
 ---
 
 JavaScript (or "JS") is a programming language used most often for dynamic client-side scripts on webpages, but it is also often used on the {{Glossary("Server","server")}}-side, using a runtime such as [Node.js](https://nodejs.org/).

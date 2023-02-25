@@ -2,20 +2,6 @@
 title: WebGLRenderingContext.enableVertexAttribArray()
 slug: Web/API/WebGLRenderingContext/enableVertexAttribArray
 page-type: web-api-instance-method
-tags:
-  - 3D
-  - API
-  - Attribute Array
-  - Graphics
-  - Method
-  - Reference
-  - Vertex Attributes
-  - WebGL
-  - WebGL API
-  - WebGLRenderingContext
-  - enableVertexAttribArray
-  - vertex
-  - vertex shader
 browser-compat: api.WebGLRenderingContext.enableVertexAttribArray
 ---
 

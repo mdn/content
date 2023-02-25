@@ -2,24 +2,6 @@
 title: XRSessionEvent
 slug: Web/API/XRSessionEvent
 page-type: web-api-interface
-tags:
-  - API
-  - AR
-  - Event
-  - Interface
-  - Mixed
-  - Reality
-  - Reference
-  - Session
-  - VR
-  - Virtual
-  - WebXR
-  - WebXR API
-  - WebXR Device API
-  - XR
-  - XRSession
-  - XRSessionEvent
-  - augmented
 browser-compat: api.XRSessionEvent
 ---
 

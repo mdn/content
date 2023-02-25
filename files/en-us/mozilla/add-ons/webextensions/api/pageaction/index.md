@@ -1,6 +1,7 @@
 ---
 title: pageAction
 slug: Mozilla/Add-ons/WebExtensions/API/pageAction
+page-type: webextension-api
 tags:
   - API
   - Add-ons

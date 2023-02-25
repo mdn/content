@@ -2,22 +2,6 @@
 title: 'RTCDataChannel: error event'
 slug: Web/API/RTCDataChannel/error_event
 page-type: web-api-event
-tags:
-  - API
-  - Connectivity
-  - Data Channel
-  - Error
-  - Error Handling
-  - Networking
-  - RTCDataChannel
-  - Reference
-  - WebRTC
-  - WebRTC API
-  - channel
-  - data
-  - events
-  - Event
-  - rtc
 browser-compat: api.RTCDataChannel.error_event
 ---
 

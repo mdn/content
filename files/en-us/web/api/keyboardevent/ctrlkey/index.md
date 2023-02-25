@@ -2,13 +2,6 @@
 title: KeyboardEvent.ctrlKey
 slug: Web/API/KeyboardEvent/ctrlKey
 page-type: web-api-instance-property
-tags:
-  - API
-  - DOM
-  - KeyboardEvent
-  - Property
-  - Read-only
-  - Reference
 browser-compat: api.KeyboardEvent.ctrlKey
 ---
 

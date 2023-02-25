@@ -2,14 +2,6 @@
 title: Element
 slug: Web/API/Element
 page-type: web-api-interface
-tags:
-  - API
-  - DOM
-  - DOM Reference
-  - Element
-  - Interface
-  - Reference
-  - Web API
 browser-compat: api.Element
 ---
 

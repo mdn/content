@@ -2,13 +2,8 @@
 title: scroll-timeline
 slug: Web/CSS/scroll-timeline
 page-type: css-shorthand-property
-tags:
-  - CSS
-  - CSS Animations
-  - CSS Property
-  - Reference
-  - recipe:css-property
-  - Experimental
+status:
+  - experimental
 browser-compat: css.properties.scroll-timeline
 ---
 

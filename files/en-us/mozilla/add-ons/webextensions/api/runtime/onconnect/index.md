@@ -1,6 +1,7 @@
 ---
 title: runtime.onConnect
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/onConnect
+page-type: webextension-api-event
 tags:
   - API
   - Add-ons

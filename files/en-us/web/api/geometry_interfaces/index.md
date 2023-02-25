@@ -2,13 +2,6 @@
 title: Geometry interfaces
 slug: Web/API/Geometry_interfaces
 page-type: web-api-overview
-tags:
-  - API
-  - CSS
-  - Geometry Interfaces
-  - Landing
-  - Reference
-  - Overview
 browser-compat:
   - api.DOMMatrix
   - api.DOMMatrixReadOnly

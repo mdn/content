@@ -2,12 +2,8 @@
 title: HTMLParamElement
 slug: Web/API/HTMLParamElement
 page-type: web-api-interface
-tags:
-  - API
-  - HTML DOM
-  - Interface
-  - Reference
-  - Deprecated
+status:
+  - deprecated
 browser-compat: api.HTMLParamElement
 ---
 

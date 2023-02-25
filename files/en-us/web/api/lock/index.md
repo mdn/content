@@ -2,12 +2,6 @@
 title: Lock
 slug: Web/API/Lock
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Reference
-  - Web Locks API
-  - lock
 browser-compat: api.Lock
 ---
 

@@ -2,14 +2,8 @@
 title: WebTransportDatagramDuplexStream.incomingMaxAge
 slug: Web/API/WebTransportDatagramDuplexStream/incomingMaxAge
 page-type: web-api-instance-property
-tags:
-  - API
-  - Experimental
-  - incomingMaxAge
-  - Property
-  - Reference
-  - WebTransport
-  - WebTransport API
+status:
+  - experimental
 browser-compat: api.WebTransportDatagramDuplexStream.incomingMaxAge
 ---
 

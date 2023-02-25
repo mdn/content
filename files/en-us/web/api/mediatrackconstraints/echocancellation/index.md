@@ -2,17 +2,6 @@
 title: MediaTrackConstraints.echoCancellation
 slug: Web/API/MediaTrackConstraints/echoCancellation
 page-type: web-api-instance-property
-tags:
-  - API
-  - Constraints
-  - Media
-  - Media Capture and Streams API
-  - Media Streams API
-  - MediaTrackConstraints
-  - Property
-  - Reference
-  - WebRTC
-  - echoCancellation
 browser-compat: api.MediaTrackConstraints.echoCancellation
 ---
 

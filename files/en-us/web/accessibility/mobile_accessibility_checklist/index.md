@@ -1,12 +1,6 @@
 ---
 title: Mobile accessibility checklist
 slug: Web/Accessibility/Mobile_accessibility_checklist
-tags:
-  - Accessibility
-  - Firefox OS
-  - Guidelines
-  - Mobile
-  - checklist
 ---
 
 <section id="Quick_links">

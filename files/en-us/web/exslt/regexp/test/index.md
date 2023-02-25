@@ -1,10 +1,6 @@
 ---
 title: regexp:test()
 slug: Web/EXSLT/regexp/test
-tags:
-  - EXSLT
-  - NeedsSpecTable
-  - Reference
 ---
 
 {{XSLTRef}}{{QuickLinksWithSubpages("/en-US/docs/Web/EXSLT")}}

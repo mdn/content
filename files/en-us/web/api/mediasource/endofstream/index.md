@@ -2,16 +2,6 @@
 title: MediaSource.endOfStream()
 slug: Web/API/MediaSource/endOfStream
 page-type: web-api-instance-method
-tags:
-  - API
-  - Audio
-  - MSE
-  - Media Source Extensions
-  - MediaSource
-  - Method
-  - Reference
-  - Video
-  - endOfStream
 browser-compat: api.MediaSource.endOfStream
 ---
 

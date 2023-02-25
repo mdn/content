@@ -2,13 +2,8 @@
 title: EncodedAudioChunk.byteLength
 slug: Web/API/EncodedAudioChunk/byteLength
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - byteLength
-  - EncodedAudioChunk
-  - Experimental
+status:
+  - experimental
 browser-compat: api.EncodedAudioChunk.byteLength
 ---
 
@@ -26,10 +21,10 @@ In the following example the `byteLength` is printed to the console.
 
 ```js
 const init = {
-  type: 'key',
+  type: "key",
   data: audioBuffer,
   timestamp: 23000000,
-  duration: 2000000
+  duration: 2000000,
 };
 chunk = EncodedAudioChunk(init);
 

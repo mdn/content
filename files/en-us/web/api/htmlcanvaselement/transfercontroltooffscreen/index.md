@@ -2,12 +2,6 @@
 title: HTMLCanvasElement.transferControlToOffscreen()
 slug: Web/API/HTMLCanvasElement/transferControlToOffscreen
 page-type: web-api-instance-method
-tags:
-  - API
-  - HTMLCanvasElement
-  - Method
-  - OffscreenCanvas
-  - Reference
 browser-compat: api.HTMLCanvasElement.transferControlToOffscreen
 ---
 

@@ -1,6 +1,7 @@
 ---
 title: incognito
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/incognito
+page-type: webextension-manifest-key
 tags:
   - Add-ons
   - WebExtensions

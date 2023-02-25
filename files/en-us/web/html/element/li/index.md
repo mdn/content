@@ -2,11 +2,6 @@
 title: '<li>: The List Item element'
 slug: Web/HTML/Element/li
 page-type: html-element
-tags:
-  - Element
-  - HTML
-  - HTML grouping content
-  - Reference
 browser-compat: html.elements.li
 ---
 
@@ -82,7 +77,7 @@ For more detailed examples, see the {{htmlelement("ol")}} and {{htmlelement("ul"
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories"
+        <a href="/en-US/docs/Web/HTML/Content_categories"
           >Content categories</a
         >
       </th>
@@ -91,7 +86,7 @@ For more detailed examples, see the {{htmlelement("ol")}} and {{htmlelement("ul"
     <tr>
       <th scope="row">Permitted content</th>
       <td>
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
           >Flow content</a
         >.
       </td>

@@ -2,10 +2,6 @@
 title: WebGLBuffer
 slug: Web/API/WebGLBuffer
 page-type: web-api-interface
-tags:
-  - API
-  - Reference
-  - WebGL
 browser-compat: api.WebGLBuffer
 ---
 

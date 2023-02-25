@@ -1,11 +1,9 @@
 ---
-title: 'Element: gesturestart event'
+title: "Element: gesturestart event"
 slug: Web/API/Element/gesturestart_event
 page-type: web-api-event
-tags:
-  - Event
-  - Non-standard
-  - Reference
+status:
+  - non-standard
 browser-compat: api.Element.gesturestart_event
 ---
 

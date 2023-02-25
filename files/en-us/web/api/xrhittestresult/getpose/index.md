@@ -2,15 +2,8 @@
 title: XRHitTestResult.getPose()
 slug: Web/API/XRHitTestResult/getPose
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - AR
-  - VR
-  - XR
-  - WebXR
-  - Experimental
+status:
+  - experimental
 browser-compat: api.XRHitTestResult.getPose
 ---
 

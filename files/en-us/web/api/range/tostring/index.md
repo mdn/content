@@ -2,12 +2,6 @@
 title: Range.toString()
 slug: Web/API/Range/toString
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - Method
-  - Range
-  - Stringifier
 browser-compat: api.Range.toString
 ---
 

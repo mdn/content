@@ -1,13 +1,6 @@
 ---
 title: Block formatting context
 slug: Web/Guide/CSS/Block_formatting_context
-tags:
-  - CSS
-  - Guide
-  - NeedsBeginnerUpdate
-  - NeedsExample
-  - Reference
-  - Web
 spec-urls: https://drafts.csswg.org/css-display/#block-formatting-context
 ---
 

@@ -2,13 +2,6 @@
 title: Arrow function expressions
 slug: Web/JavaScript/Reference/Functions/Arrow_functions
 page-type: javascript-language-feature
-tags:
-  - ECMAScript 2015
-  - Functions
-  - Intermediate
-  - JavaScript
-  - Language feature
-  - Reference
 browser-compat: javascript.functions.arrow_functions
 ---
 
@@ -25,11 +18,17 @@ An **arrow function expression** is a compact alternative to a traditional [func
 ## Syntax
 
 ```js-nolint
+() => expression
+
 param => expression
 
 (param) => expression
 
 (param1, paramN) => expression
+
+() => {
+  statements
+}
 
 param => {
   statements
@@ -103,7 +102,7 @@ const b = 2;
   return a + b + 100;
 });
 
-// Arrow function (no arguments)
+// Arrow function (no parameters)
 () => a + b + 100;
 ```
 

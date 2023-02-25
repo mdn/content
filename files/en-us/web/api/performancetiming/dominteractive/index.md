@@ -2,16 +2,8 @@
 title: PerformanceTiming.domInteractive
 slug: Web/API/PerformanceTiming/domInteractive
 page-type: web-api-instance-property
-tags:
-  - API
-  - Backwards compatibility
-  - Deprecated
-  - Navigation Timing
-  - PerformanceTiming
-  - Property
-  - Read-only
-  - domInteractive
-  - legacy
+status:
+  - deprecated
 browser-compat: api.PerformanceTiming.domInteractive
 ---
 

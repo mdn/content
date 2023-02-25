@@ -30481,7 +30481,7 @@
       "asadotzler"
     ]
   },
-  "Web/API/Document_object_model/Using_the_W3C_DOM_Level_1_Core": {
+  "Web/API/Document_object_model/Using_the_Document_Object_Model": {
     "modified": "2020-12-09T01:05:18.504Z",
     "contributors": [
       "skkiennhtg2327",
@@ -30507,7 +30507,7 @@
       "Gor1"
     ]
   },
-  "Web/API/Document_object_model/Using_the_W3C_DOM_Level_1_Core/Example": {
+  "Web/API/Document_object_model/Using_the_Document_Object_Model/Example": {
     "modified": "2019-03-23T23:40:45.010Z",
     "contributors": [
       "mk7087",
@@ -55579,14 +55579,6 @@
     "modified": "2020-10-15T22:12:43.838Z",
     "contributors": ["Sheppy"]
   },
-  "Web/API/RTCRtpParameters": {
-    "modified": "2020-10-15T22:33:13.990Z",
-    "contributors": ["Sheppy"]
-  },
-  "Web/API/RTCRtpReceiveParameters": {
-    "modified": "2020-10-15T22:33:12.333Z",
-    "contributors": ["Sheppy"]
-  },
   "Web/API/RTCRtpReceiver": {
     "modified": "2020-10-15T21:55:37.122Z",
     "contributors": ["Sheppy", "krosylight", "fscholz", "jpmedley"]
@@ -55618,14 +55610,6 @@
   "Web/API/RTCRtpReceiver/transport": {
     "modified": "2020-10-15T22:33:11.162Z",
     "contributors": ["Sheppy"]
-  },
-  "Web/API/RTCRtpSendParameters": {
-    "modified": "2020-10-15T22:12:44.245Z",
-    "contributors": ["Sheppy"]
-  },
-  "Web/API/RTCRtpSendParameters/encodings": {
-    "modified": "2020-10-15T22:12:43.902Z",
-    "contributors": ["Sheppy", "sideshowbarker"]
   },
   "Web/API/RTCRtpSender": {
     "modified": "2020-10-15T21:51:54.198Z",
@@ -57909,21 +57893,6 @@
       "mattwojo",
       "kscarfone",
       "Sheppy",
-      "Jeremie"
-    ]
-  },
-  "Web/API/SVGMatrix": {
-    "modified": "2020-10-15T21:09:34.463Z",
-    "contributors": [
-      "fscholz",
-      "zbjornson",
-      "Sebastianz",
-      "mattwojo",
-      "jwhitlock",
-      "jhartz",
-      "kscarfone",
-      "Sheppy",
-      "Yukoba",
       "Jeremie"
     ]
   },
@@ -71586,10 +71555,6 @@
     "modified": "2019-03-23T23:49:54.758Z",
     "contributors": ["teoli", "ethertank", "Mgjbot", "Sebuls", "JdeValk"]
   },
-  "Web/API/XSLTProcessor/Browser_Differences": {
-    "modified": "2019-03-23T23:49:55.117Z",
-    "contributors": ["SphinxKnight", "teoli", "Mgjbot", "Sebuls", "JdeValk"]
-  },
   "Web/API/XSLTProcessor/Generating_HTML": {
     "modified": "2019-03-23T23:49:48.545Z",
     "contributors": [
@@ -76941,21 +76906,6 @@
       "connorshea"
     ]
   },
-  "Web/CSS/@media/-ms-high-contrast": {
-    "modified": "2020-12-14T10:53:35.458Z",
-    "contributors": [
-      "rachelandrew",
-      "sideshowbarker",
-      "pankajpurke05",
-      "wbamberg",
-      "mfuji09",
-      "ericwbailey",
-      "WebMechanic",
-      "ExE-Boss",
-      "mfluehr",
-      "jameshkramer"
-    ]
-  },
   "Web/CSS/@media/-webkit-animation": {
     "modified": "2020-10-15T21:36:40.513Z",
     "contributors": [
@@ -79855,18 +79805,6 @@
       "Waldo",
       "Kris.shannon",
       "BenoitL"
-    ]
-  },
-  "Web/CSS/Microsoft_Extensions": {
-    "modified": "2020-07-16T08:38:36.303Z",
-    "contributors": [
-      "wbamberg",
-      "mfuji09",
-      "ExE-Boss",
-      "erikadoyle",
-      "jameshkramer",
-      "jswisher",
-      "mfluehr"
     ]
   },
   "Web/CSS/Mozilla_Extensions": {
@@ -84824,7 +84762,7 @@
       "chrisdavidmills"
     ]
   },
-  "Web/CSS/display/two-value_syntax_of_display": {
+  "Web/CSS/display/multi-keyword_syntax_of_display": {
     "modified": "2020-10-15T22:26:04.121Z",
     "contributors": [
       "ExE-Boss",
@@ -86932,30 +86870,6 @@
       "wbamberg",
       "mfuji09",
       "estelle"
-    ]
-  },
-  "Web/CSS/ime-mode": {
-    "modified": "2020-10-15T21:06:19.171Z",
-    "contributors": [
-      "wbamberg",
-      "Sheppy",
-      "fscholz",
-      "mfluehr",
-      "momdo",
-      "erikadoyle",
-      "Tigt",
-      "LouisLazaris",
-      "Sebastianz",
-      "RahulKapuriya12692",
-      "kscarfone",
-      "teoli",
-      "ethertank",
-      "myakura",
-      "grendel",
-      "Jürgen Jeka",
-      "Mgjbot",
-      "BobChao",
-      "BijuGC"
     ]
   },
   "Web/CSS/inherit": {
@@ -100578,14 +100492,6 @@
       "kscarfone",
       "linfestus"
     ]
-  },
-  "Web/HTML/Global_attributes/x-ms-acceleratorkey": {
-    "modified": "2019-08-03T19:48:54.971Z",
-    "contributors": ["Tigt", "ExE-Boss", "mattwojo"]
-  },
-  "Web/HTML/Global_attributes/x-ms-format-detection": {
-    "modified": "2020-08-19T07:01:13.351Z",
-    "contributors": ["mfuji09", "Malvoz", "Tigt", "ExE-Boss", "mattwojo"]
   },
   "Web/HTML/Inline_elements": {
     "modified": "2020-06-11T07:42:16.601Z",

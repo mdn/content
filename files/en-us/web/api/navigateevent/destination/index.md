@@ -2,20 +2,8 @@
 title: NavigateEvent.destination
 slug: Web/API/NavigateEvent/destination
 page-type: web-api-instance-property
-tags:
-  - API
-  - destination
-  - Experimental
-  - History
-  - Navigate
-  - NavigateEvent
-  - Navigation
-  - Navigation API
-  - Property
-  - Read-only
-  - Reference
-  - Scroll
-  - Traversal
+status:
+  - experimental
 browser-compat: api.NavigateEvent.destination
 ---
 

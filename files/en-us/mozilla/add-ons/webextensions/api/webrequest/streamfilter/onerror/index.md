@@ -1,6 +1,7 @@
 ---
 title: webRequest.StreamFilter.onerror
 slug: Mozilla/Add-ons/WebExtensions/API/webRequest/StreamFilter/onerror
+page-type: webextension-api-event
 tags:
   - API
   - Add-ons

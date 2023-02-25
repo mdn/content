@@ -2,15 +2,6 @@
 title: IDBKeyRange.only()
 slug: Web/API/IDBKeyRange/only
 page-type: web-api-static-method
-tags:
-  - API
-  - Database
-  - IDBKeyRange
-  - IndexedDB
-  - Method
-  - Reference
-  - Storage
-  - only
 browser-compat: api.IDBKeyRange.only
 ---
 

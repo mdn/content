@@ -1,12 +1,6 @@
 ---
 title: The building blocks of responsive design
 slug: Web/Progressive_web_apps/Responsive/responsive_design_building_blocks
-tags:
-  - Apps
-  - CSS
-  - HTML
-  - Mobile
-  - Responsive Design
 ---
 
 In this article we will discuss the main essential components of responsive design, with some links to further information where necessary.

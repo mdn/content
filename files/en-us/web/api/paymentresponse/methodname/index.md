@@ -2,16 +2,6 @@
 title: PaymentResponse.methodName
 slug: Web/API/PaymentResponse/methodName
 page-type: web-api-instance-property
-tags:
-  - API
-  - Commerce
-  - Payment Request
-  - Payment Request API
-  - PaymentResponse
-  - Property
-  - Reference
-  - Secure context
-  - methodName
 browser-compat: api.PaymentResponse.methodName
 ---
 

@@ -2,11 +2,6 @@
 title: Range.endOffset
 slug: Web/API/Range/endOffset
 page-type: web-api-instance-property
-tags:
-  - API
-  - DOM
-  - Property
-  - Range
 browser-compat: api.Range.endOffset
 ---
 

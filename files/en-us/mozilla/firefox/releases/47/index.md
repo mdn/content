@@ -1,9 +1,6 @@
 ---
 title: Firefox 47 for developers
 slug: Mozilla/Firefox/Releases/47
-tags:
-  - Firefox
-  - Release Notes
 ---
 
 {{FirefoxSidebar}}

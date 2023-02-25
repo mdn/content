@@ -2,13 +2,6 @@
 title: OscillatorNode.type
 slug: Web/API/OscillatorNode/type
 page-type: web-api-instance-property
-tags:
-  - API
-  - OscillatorNode
-  - Property
-  - Reference
-  - Type
-  - Web Audio API
 browser-compat: api.OscillatorNode.type
 ---
 

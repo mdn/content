@@ -1,13 +1,6 @@
 ---
 title: 'HTMLTextAreaElement: select event'
 slug: Web/API/HTMLTextAreaElement/select_event
-tags:
-  - Element
-  - Event
-  - Event Handler
-  - NeedsCompatTable
-  - Reference
-  - UIEvent
 browser-compat: api.HTMLTextAreaElement.select_event
 page-type: web-api-event
 ---

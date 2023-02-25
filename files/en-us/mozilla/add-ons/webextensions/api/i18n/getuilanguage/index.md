@@ -1,6 +1,7 @@
 ---
 title: i18n.getUILanguage()
 slug: Mozilla/Add-ons/WebExtensions/API/i18n/getUILanguage
+page-type: webextension-api-function
 tags:
   - API
   - Add-ons

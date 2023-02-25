@@ -2,14 +2,6 @@
 title: class
 slug: Web/JavaScript/Reference/Statements/class
 page-type: javascript-statement
-tags:
-  - Classes
-  - Declaration
-  - ECMAScript 2015
-  - JavaScript
-  - Language feature
-  - Reference
-  - Statement
 browser-compat: javascript.statements.class
 ---
 

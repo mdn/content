@@ -2,15 +2,6 @@
 title: 'Window: focus event'
 slug: Web/API/Window/focus_event
 page-type: web-api-event
-tags:
-  - API
-  - Event
-  - Focus
-  - FocusEvent
-  - Reference
-  - Web
-  - Window
-  - onfocus
 browser-compat: api.Window.focus_event
 ---
 

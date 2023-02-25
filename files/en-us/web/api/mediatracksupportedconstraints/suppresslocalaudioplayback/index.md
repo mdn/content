@@ -2,12 +2,8 @@
 title: MediaTrackSupportedConstraints.suppressLocalAudioPlayback
 slug: Web/API/MediaTrackSupportedConstraints/suppressLocalAudioPlayback
 page-type: web-api-instance-property
-tags:
-  - API
-  - Experimental
-  - Property
-  - Reference
-  - suppressLocalAudioPlayback
+status:
+  - experimental
 browser-compat: api.MediaTrackSupportedConstraints.suppressLocalAudioPlayback
 ---
 

@@ -2,14 +2,6 @@
 title: Internet
 slug: Glossary/Internet
 page-type: glossary-definition
-tags:
-  - Beginner
-  - Guide
-  - Intro
-  - NeedsContent
-  - Tutorial
-  - Web
-  - WebMechanics
 ---
 
 The Internet is a worldwide network of networks that uses the Internet protocol suite (also named {{glossary("TCP")}}/{{glossary("IPv6","IP")}} from its two most important {{glossary("protocol","protocols")}}).

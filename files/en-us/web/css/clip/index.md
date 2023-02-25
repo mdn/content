@@ -2,8 +2,8 @@
 title: clip
 slug: Web/CSS/clip
 page-type: css-property
-tags:
-  - Deprecated
+status:
+  - deprecated
 browser-compat: css.properties.clip
 ---
 

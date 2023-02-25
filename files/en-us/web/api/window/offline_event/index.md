@@ -2,12 +2,6 @@
 title: 'Window: offline event'
 slug: Web/API/Window/offline_event
 page-type: web-api-event
-tags:
-  - API
-  - Event
-  - Offline
-  - Reference
-  - Window
 browser-compat: api.Window.offline_event
 ---
 

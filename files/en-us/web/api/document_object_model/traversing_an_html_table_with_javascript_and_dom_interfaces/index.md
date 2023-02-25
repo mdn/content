@@ -3,12 +3,6 @@ title: Traversing an HTML table with JavaScript and DOM Interfaces
 slug: >-
   Web/API/Document_Object_Model/Traversing_an_HTML_table_with_JavaScript_and_DOM_Interfaces
 page-type: guide
-tags:
-  - API
-  - DOM
-  - Guide
-  - HTML
-  - JavaScript
 ---
 
 {{DefaultAPISidebar("DOM")}}

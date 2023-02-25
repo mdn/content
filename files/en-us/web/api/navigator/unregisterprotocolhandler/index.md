@@ -2,14 +2,6 @@
 title: Navigator.unregisterProtocolHandler()
 slug: Web/API/Navigator/unregisterProtocolHandler
 page-type: web-api-instance-method
-tags:
-  - API
-  - HTML DOM
-  - Method
-  - Navigator
-  - Reference
-  - Web-Based Protocol Handlers
-  - unregisterProtocolHandler
 browser-compat: api.Navigator.unregisterProtocolHandler
 ---
 

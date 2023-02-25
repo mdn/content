@@ -2,17 +2,6 @@
 title: XMLHttpRequest()
 slug: Web/API/XMLHttpRequest/XMLHttpRequest
 page-type: web-api-constructor
-tags:
-  - API
-  - Constructor
-  - Creating an XMLHttpRequest
-  - Fetching Data
-  - Loading Data
-  - Reading Data
-  - Reference
-  - Server Access
-  - XHR
-  - XMLHttpRequest
 browser-compat: api.XMLHttpRequest.XMLHttpRequest
 ---
 

@@ -2,13 +2,6 @@
 title: 'PermissionStatus: change event'
 slug: Web/API/PermissionStatus/change_event
 page-type: web-api-event
-tags:
-  - API
-  - Event
-  - PermissionStatus
-  - Permissions
-  - Reference
-  - change
 browser-compat: api.PermissionStatus.change_event
 ---
 

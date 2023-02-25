@@ -2,16 +2,6 @@
 title: File System Access API
 slug: Web/API/File_System_Access_API
 page-type: web-api-overview
-tags:
-  - API
-  - Directory
-  - File
-  - File Access
-  - File System Access
-  - File System Access API
-  - Landing
-  - Overview
-  - working with files
 browser-compat:
   - api.FileSystemHandle
   - api.FileSystemFileHandle
@@ -94,12 +84,11 @@ async function getFile() {
   // open file picker
   [fileHandle] = await window.showOpenFilePicker();
 
-  if (fileHandle.kind === 'file') {
+  if (fileHandle.kind === "file") {
     // run file code
-  } else if (fileHandle.kind === 'directory') {
+  } else if (fileHandle.kind === "directory") {
     // run directory code
   }
-
 }
 ```
 
@@ -109,14 +98,14 @@ The following asynchronous function presents a file picker and once a file is ch
 const pickerOpts = {
   types: [
     {
-      description: 'Images',
+      description: "Images",
       accept: {
-        'image/*': ['.png', '.gif', '.jpeg', '.jpg']
-      }
+        "image/*": [".png", ".gif", ".jpeg", ".jpg"],
+      },
     },
   ],
   excludeAcceptAllOption: true,
-  multiple: false
+  multiple: false,
 };
 
 async function getTheFile() {
@@ -133,17 +122,16 @@ async function getTheFile() {
 The following example returns a directory handle with the specified name. If the directory does not exist, it is created.
 
 ```js
-const dirName = 'directoryToGetName';
+const dirName = "directoryToGetName";
 
 // assuming we have a directory handle: 'currentDirHandle'
-const subDir = currentDirHandle.getDirectoryHandle(dirName, {create: true});
+const subDir = currentDirHandle.getDirectoryHandle(dirName, { create: true });
 ```
 
 The following asynchronous function uses `resolve()` to find the path to a chosen file, relative to a specified directory handle.
 
 ```js
 async function returnPathDirectories(directoryHandle) {
-
   // Get a file handle by showing a file picker:
   const [handle] = await self.showOpenFilePicker();
   if (!handle) {
@@ -175,7 +163,6 @@ A user defined {{domxref('Blob')}} is then written to the stream which is subseq
 
 ```js
 async function saveFile() {
-
   // create a new handle
   const newHandle = await window.showSaveFilePicker();
 
@@ -225,7 +212,7 @@ onmessage = async (e) => {
 
   // Get handle to draft file in OPFS
   const root = await navigator.storage.getDirectory();
-  const draftHandle = await root.getFileHandle('draft.txt', { create: true });
+  const draftHandle = await root.getFileHandle("draft.txt", { create: true });
   // Get sync access handle
   const accessHandle = await draftHandle.createSyncAccessHandle();
 
@@ -245,7 +232,7 @@ onmessage = async (e) => {
 
   // Always close FileSystemSyncAccessHandle if done.
   accessHandle.close();
-}
+};
 ```
 
 > **Note:** In earlier versions of the spec, {{domxref("FileSystemSyncAccessHandle.close()", "close()")}}, {{domxref("FileSystemSyncAccessHandle.flush()", "flush()")}}, {{domxref("FileSystemSyncAccessHandle.getSize()", "getSize()")}}, and {{domxref("FileSystemSyncAccessHandle.truncate()", "truncate()")}} were wrongly specified as asynchronous methods. This has now been [amended](https://github.com/whatwg/fs/issues/7), but some browsers still support the asynchronous versions.

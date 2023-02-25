@@ -2,14 +2,6 @@
 title: '<source>: The Media or Image Source element'
 slug: Web/HTML/Element/source
 page-type: html-element
-tags:
-  - Element
-  - HTML
-  - HTML embedded content
-  - Media
-  - Reference
-  - Web
-  - Web Performance
 browser-compat: html.elements.source
 ---
 
@@ -23,7 +15,7 @@ The **`<source>`** [HTML](/en-US/docs/Web/HTML) element specifies multiple media
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories"
+        <a href="/en-US/docs/Web/HTML/Content_categories"
           >Content categories</a
         >
       </th>
@@ -43,7 +35,7 @@ The **`<source>`** [HTML](/en-US/docs/Web/HTML) element specifies multiple media
         <div>
           A media element—{{HTMLElement("audio")}} or
           {{HTMLElement("video")}}—and it must be placed before any
-          <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+          <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
             >flow content</a
           >
           or {{HTMLElement("track")}} element.
@@ -97,7 +89,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
     2. A width descriptor, which consists of a string containing a positive integer directly followed by `"w"`, such as `300w`. The default value, if missing, is the infinity.
     3. A pixel density descriptor, that is a positive floating number directly followed by `"x"`. The default value, if missing, is `1x`.
 
-    Each string in the list must have at least a width descriptor or a pixel density descriptor to be valid. Among the list, there must be only one string containing the same tuple of width descriptor and pixel density descriptor. The browser chooses the most adequate image to display at a given point of time. If width descriptors are used, the `sizes` attribute must also be present, or the `srcset` value will be ignored.
+    Each string in the list must have at least a width descriptor or a pixel density descriptor to be valid. The two types of descriptors should not be mixed together and only one should be used consistently throughout the list. Among the list, the value of each descriptor must be unique. The browser chooses the most adequate image to display at a given point of time. If the `sizes` attribute is present, then a width descriptor must be specified for each string. If the browser does not support `srcset`, then `src` will be used for the default source.
 
 - {{htmlattrdef("sizes")}}
 

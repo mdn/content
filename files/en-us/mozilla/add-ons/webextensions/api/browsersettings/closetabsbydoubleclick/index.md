@@ -1,6 +1,7 @@
 ---
 title: browserSettings.closeTabsByDoubleClick
 slug: Mozilla/Add-ons/WebExtensions/API/browserSettings/closeTabsByDoubleClick
+page-type: webextension-api-property
 tags:
   - API
   - Add-ons

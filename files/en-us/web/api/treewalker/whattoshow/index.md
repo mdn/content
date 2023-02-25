@@ -2,11 +2,6 @@
 title: TreeWalker.whatToShow
 slug: Web/API/TreeWalker/whatToShow
 page-type: web-api-instance-property
-tags:
-  - API
-  - DOM
-  - Property
-  - TreeWalker
 browser-compat: api.TreeWalker.whatToShow
 ---
 

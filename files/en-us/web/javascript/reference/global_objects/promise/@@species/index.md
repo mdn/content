@@ -2,12 +2,6 @@
 title: get Promise[@@species]
 slug: Web/JavaScript/Reference/Global_Objects/Promise/@@species
 page-type: javascript-static-accessor-property
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Property
-  - Promise
-  - Reference
 browser-compat: javascript.builtins.Promise.@@species
 ---
 

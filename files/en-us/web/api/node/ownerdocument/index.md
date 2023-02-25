@@ -2,10 +2,6 @@
 title: Node.ownerDocument
 slug: Web/API/Node/ownerDocument
 page-type: web-api-instance-property
-tags:
-  - Property
-  - Reference
-  - Read-only
 browser-compat: api.Node.ownerDocument
 ---
 

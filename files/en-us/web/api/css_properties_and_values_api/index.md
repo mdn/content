@@ -2,9 +2,8 @@
 title: CSS Properties and Values API
 slug: Web/API/CSS_Properties_and_Values_API
 page-type: web-api-overview
-tags:
-  - Houdini
-  - Experimental
+status:
+  - experimental
 browser-compat: api.CSS.registerProperty
 ---
 

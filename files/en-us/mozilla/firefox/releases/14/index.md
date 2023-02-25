@@ -1,11 +1,6 @@
 ---
 title: Firefox 14 for developers
 slug: Mozilla/Firefox/Releases/14
-tags:
-  - Firefox
-  - Firefox 14
-  - Gecko
-  - Gecko 14
 ---
 
 {{FirefoxSidebar}}
