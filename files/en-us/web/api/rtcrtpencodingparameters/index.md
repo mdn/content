@@ -9,7 +9,7 @@ browser-compat: api.RTCRtpEncodingParameters
 
 An instance of the [WebRTC](/en-US/docs/Web/API/WebRTC_API) API's **`RTCRtpEncodingParameters`** dictionary describes a single configuration of a {{Glossary("codec")}} for an {{domxref("RTCRtpSender")}}.
 
-This dictionary is used in the {{domxref("RTCRtpSendParameters")}} describing the configuration of an RTP sender's {{domxref("RTCRtpSendParameters.encodings", "encodings")}}.
+This dictionary is used to describe the configuration of an RTP sender's `encodings` when calling {{domxref("RTCRtpSender.getParameters()")}} or {{domxref("RTCRtpSender.setParameters()")}}.
 
 ## Instance properties
 
@@ -39,6 +39,6 @@ This dictionary is used in the {{domxref("RTCRtpSendParameters")}} describing th
 
 ## See also
 
-- {{domxref("RTCRtpDecodingParameters")}} is used to describe the configuration of an RTP receiver's {{domxref("RTCRtpReceiveParameters", "encodings")}}
+- {{domxref("RTCRtpDecodingParameters")}} is used to describe the configuration of an RTP receiver's encodings.
 - [Introduction to the Real-time Transport Protocol (RTP)](/en-US/docs/Web/API/WebRTC_API/Intro_to_RTP)
 - {{domxref("RTCRtpSender")}}, {{domxref("RTCRtpReceiver")}}, and {{domxref("RTCRtpTransceiver")}}

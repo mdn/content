@@ -36,4 +36,4 @@ None ({{jsxref("undefined")}}).
 
 ## See also
 
-- [Form validation](/en-US/docs/Web/Guide/HTML/Constraint_validation).
+- [Form validation](/en-US/docs/Web/HTML/Constraint_validation).

@@ -2,10 +2,6 @@
 title: draggable
 slug: Web/HTML/Global_attributes/draggable
 page-type: html-attribute
-tags:
-  - Global attributes
-  - HTML
-  - Reference
 browser-compat: html.global_attributes.draggable
 ---
 

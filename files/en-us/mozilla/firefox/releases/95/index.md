@@ -1,11 +1,6 @@
 ---
 title: Firefox 95 for developers
 slug: Mozilla/Firefox/Releases/95
-tags:
-  - "95"
-  - Firefox
-  - Mozilla
-  - Release
 ---
 
 {{FirefoxSidebar}}

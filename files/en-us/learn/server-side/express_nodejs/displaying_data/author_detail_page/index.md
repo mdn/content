@@ -1,12 +1,6 @@
 ---
 title: Author detail page
 slug: Learn/Server-side/Express_Nodejs/Displaying_data/Author_detail_page
-tags:
-  - Express
-  - Node
-  - displaying data
-  - part 5
-  - server-side
 ---
 
 The author detail page needs to display the information about the specified `Author`, identified using their (automatically generated) `_id` field value, along with a list of all the `Book` objects associated with that `Author`.

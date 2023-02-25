@@ -58,11 +58,16 @@ None ({{jsxref("undefined")}}).
 This example deletes a temporary work file.
 
 ```js
-workingDirectory.getFile("tmp/workfile.json", {}, (fileEntry) => {
-  fileEntry.remove(() => {
-    /* the file was removed successfully */
-  });
-}, handleError);
+workingDirectory.getFile(
+  "tmp/workfile.json",
+  {},
+  (fileEntry) => {
+    fileEntry.remove(() => {
+      /* the file was removed successfully */
+    });
+  },
+  handleError
+);
 ```
 
 ## Browser compatibility

@@ -1,12 +1,6 @@
 ---
 title: Measuring performance
 slug: Learn/Performance/Measuring_performance
-tags:
-  - API
-  - Beginner
-  - Guide
-  - Tools
-  - Web
 ---
 
 {{LearnSidebar}} {{PreviousMenuNext("Learn/Performance/Perceived_performance", "Learn/Performance/Multimedia", "Learn/Performance")}}

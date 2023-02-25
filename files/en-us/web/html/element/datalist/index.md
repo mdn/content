@@ -2,12 +2,6 @@
 title: '<datalist>: The HTML Data List element'
 slug: Web/HTML/Element/datalist
 page-type: html-element
-tags:
-  - Element
-  - HTML
-  - HTML forms
-  - Reference
-  - Web
 browser-compat: html.elements.datalist
 ---
 
@@ -119,15 +113,15 @@ The specification allows linking `<datalist>` with a {{HTMLElement("input/passwo
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories"
+        <a href="/en-US/docs/Web/HTML/Content_categories"
           >Content categories</a
         >
       </th>
       <td>
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
           >Flow content</a
         >,
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content"
           >phrasing content</a
         >.
       </td>
@@ -136,7 +130,7 @@ The specification allows linking `<datalist>` with a {{HTMLElement("input/passwo
       <th scope="row">Permitted content</th>
       <td>
         Either
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content"
           >phrasing content</a
         >
         or zero or more {{HTMLElement("option")}} elements.
@@ -150,7 +144,7 @@ The specification allows linking `<datalist>` with a {{HTMLElement("input/passwo
       <th scope="row">Permitted parents</th>
       <td>
         Any element that accepts
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content"
           >phrasing content</a
         >.
       </td>

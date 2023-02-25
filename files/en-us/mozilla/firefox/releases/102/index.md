@@ -1,11 +1,6 @@
 ---
 title: Firefox 102 for developers
 slug: Mozilla/Firefox/Releases/102
-tags:
-  - "102"
-  - Firefox
-  - Mozilla
-  - Release
 ---
 
 {{FirefoxSidebar}}

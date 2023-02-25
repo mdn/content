@@ -1,12 +1,6 @@
 ---
 title: Printing
 slug: Web/Guide/Printing
-tags:
-  - DOM
-  - Guide
-  - NeedsContent
-  - NeedsRelocation
-  - printing
 ---
 
 <section id="Quick_links">

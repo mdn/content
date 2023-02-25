@@ -1,11 +1,6 @@
 ---
 title: Firefox 86 for developers
 slug: Mozilla/Firefox/Releases/86
-tags:
-  - "86"
-  - Firefox
-  - Mozilla
-  - Release
 ---
 
 {{FirefoxSidebar}}

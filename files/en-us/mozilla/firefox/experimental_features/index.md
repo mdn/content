@@ -1,11 +1,6 @@
 ---
 title: Experimental features in Firefox
 slug: Mozilla/Firefox/Experimental_features
-tags:
-  - Experimental
-  - Firefox
-  - Preferences
-  - features
 ---
 
 {{FirefoxSidebar}}

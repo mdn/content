@@ -1,11 +1,6 @@
 ---
 title: Firefox 88 for developers
 slug: Mozilla/Firefox/Releases/88
-tags:
-  - "88"
-  - Firefox
-  - Mozilla
-  - Release
 ---
 
 {{FirefoxSidebar}}

@@ -1,18 +1,6 @@
 ---
 title: How CSS is structured
 slug: Learn/CSS/First_steps/How_CSS_is_structured
-tags:
-  - Beginner
-  - CSS
-  - HTML
-  - Learn
-  - Selectors
-  - Structure
-  - comments
-  - properties
-  - shorthand
-  - values
-  - whitespace
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/First_steps/Getting_started", "Learn/CSS/First_steps/How_CSS_works", "Learn/CSS/First_steps")}}

@@ -1,17 +1,6 @@
 ---
 title: Sending form data
 slug: Learn/Forms/Sending_and_retrieving_form_data
-tags:
-  - Beginner
-  - CodingScripting
-  - Files
-  - Forms
-  - Guide
-  - HTML
-  - HTTP
-  - Headers
-  - Security
-  - Web
 ---
 
 {{LearnSidebar}}{{PreviousMenu("Learn/Forms/Form_validation", "Learn/Forms")}}

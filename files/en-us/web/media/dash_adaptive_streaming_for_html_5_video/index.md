@@ -1,9 +1,6 @@
 ---
 title: DASH Adaptive Streaming for HTML 5 Video
 slug: Web/Media/DASH_Adaptive_Streaming_for_HTML_5_Video
-tags:
-  - Guide
-  - HTML
 ---
 
 {{QuickLinksWithSubpages("/en-US/docs/Web/Media")}}

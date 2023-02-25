@@ -1,9 +1,6 @@
 ---
 title: Firefox 35 for developers
 slug: Mozilla/Firefox/Releases/35
-tags:
-  - Firefox
-  - Releases
 ---
 
 {{FirefoxSidebar}}

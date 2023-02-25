@@ -2,12 +2,6 @@
 title: '<progress>: The Progress Indicator element'
 slug: Web/HTML/Element/progress
 page-type: html-element
-tags:
-  - Element
-  - HTML
-  - HTML forms
-  - Reference
-  - Web
 browser-compat: html.elements.progress
 ---
 
@@ -21,15 +15,15 @@ The **`<progress>`** [HTML](/en-US/docs/Web/HTML) element displays an indicator 
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories"
+        <a href="/en-US/docs/Web/HTML/Content_categories"
           >Content categories</a
         >
       </th>
       <td>
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
           >Flow content</a
         >,
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content"
           >phrasing content</a
         >, labelable content,
         <a href="/en-US/docs/Web/HTML/Content_categories#palpable_content"
@@ -40,7 +34,7 @@ The **`<progress>`** [HTML](/en-US/docs/Web/HTML) element displays an indicator 
     <tr>
       <th scope="row">Permitted content</th>
       <td>
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content"
           >Phrasing content</a
         >, but there must be no <code>&#x3C;progress></code> element among its
         descendants.
@@ -54,7 +48,7 @@ The **`<progress>`** [HTML](/en-US/docs/Web/HTML) element displays an indicator 
       <th scope="row">Permitted parents</th>
       <td>
         Any element that accepts
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content"
           >phrasing content</a
         >.
       </td>

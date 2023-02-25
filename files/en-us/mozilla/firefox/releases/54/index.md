@@ -1,10 +1,6 @@
 ---
 title: Firefox 54 for developers
 slug: Mozilla/Firefox/Releases/54
-tags:
-  - "54"
-  - Firefox
-  - Release Notes
 ---
 
 {{FirefoxSidebar}}

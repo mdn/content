@@ -1,11 +1,6 @@
 ---
 title: Firefox 93 for developers
 slug: Mozilla/Firefox/Releases/93
-tags:
-  - "93"
-  - Firefox
-  - Mozilla
-  - Release
 ---
 
 {{FirefoxSidebar}}

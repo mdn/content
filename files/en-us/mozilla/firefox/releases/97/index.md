@@ -1,11 +1,6 @@
 ---
 title: Firefox 97 for developers
 slug: Mozilla/Firefox/Releases/97
-tags:
-  - "97"
-  - Firefox
-  - Mozilla
-  - Release
 ---
 
 {{FirefoxSidebar}}

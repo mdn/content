@@ -2,14 +2,6 @@
 title: 'HTML attribute: crossorigin'
 slug: Web/HTML/Attributes/crossorigin
 page-type: html-attribute
-tags:
-  - Advanced
-  - Attribute
-  - CORS
-  - HTML
-  - NeedsContent
-  - Reference
-  - Security
 spec-urls: https://html.spec.whatwg.org/multipage/urls-and-fetching.html#cors-settings-attributes
 browser-compat:
   - html.elements.img.crossorigin

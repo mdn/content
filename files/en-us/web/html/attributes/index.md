@@ -2,17 +2,6 @@
 title: HTML attribute reference
 slug: Web/HTML/Attributes
 page-type: landing-page
-tags:
-  - Attribute
-  - Attributes
-  - Beginner
-  - Configuring
-  - Element Attributes
-  - Elements
-  - HTML
-  - Reference
-  - Settings
-  - Web
 ---
 
 {{HTMLSidebar("Attributes")}}

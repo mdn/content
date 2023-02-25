@@ -1,10 +1,6 @@
 ---
 title: Full page zoom
 slug: Mozilla/Firefox/Releases/3/Full_page_zoom
-tags:
-  - Extensions
-  - Firefox 3
-  - XUL
 ---
 
 {{FirefoxSidebar}}

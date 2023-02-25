@@ -1,16 +1,6 @@
 ---
-title: 'Django Tutorial Part 4: Django admin site'
+title: "Django Tutorial Part 4: Django admin site"
 slug: Learn/Server-side/Django/Admin_site
-tags:
-  - Article
-  - Beginner
-  - CodingScripting
-  - Learn
-  - Python
-  - Tutorial
-  - django
-  - django_admin
-  - server-side
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Models", "Learn/Server-side/Django/Home_page", "Learn/Server-side/Django")}}
