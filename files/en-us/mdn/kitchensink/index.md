@@ -372,5 +372,4 @@ The [`AvailableInWorkers`](https://github.com/mdn/yari/blob/main/kumascript/macr
   - : Information about a particular alarm.
 
 {{Non-standard_Header}}
-{{Deprecated_Header}}
 [![Iceberg pic](iceberg.jpg)](iceberg.jpg)
