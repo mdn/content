@@ -294,7 +294,14 @@ SVG makes use of a number of data types. This article lists these types along wi
 
 - \<paint>
 
-  - : The values for properties {{SVGAttr("fill")}} and {{SVGAttr("stroke")}} are specifications of the type of paint to use when filling or stroking a given graphics element. The available options and syntax for \<paint> are described in [Specifying paint](https://www.w3.org/TR/SVG/painting.html#SpecifyingPaint).
+  - : The values for properties {{SVGAttr("fill")}} and {{SVGAttr("stroke")}} define the type of paint to use when filling or stroking a given graphics element.
+    The available options and syntax for \<paint> are:
+
+    ```plain
+    paint ::= none | <color> | <url> [none | <color>]? | context-fill | context-stroke
+    ```
+
+    The `context-fill` and `context-stroke` values allow for inheriting values in [marker](/en-US/docs/Web/SVG/Element/marker) and [use](/en-US/docs/Web/SVG/Element/use) elements.
 
     Within the SVG DOM, \<paint> values are represented using {{domxref("SVGPaint")}} objects.
 
