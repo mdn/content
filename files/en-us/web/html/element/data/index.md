@@ -94,6 +94,9 @@ The following example displays product names but also associates each name with 
 </ul>
 ```
 
+{{EmbedLiveSample('Examples')}}
+
+
 ## Specifications
 
 {{Specifications}}
