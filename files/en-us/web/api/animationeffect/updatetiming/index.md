@@ -56,3 +56,5 @@ console.log(animation.playState); // running
 - [Web Animations API](/en-US/docs/Web/API/Web_Animations_API)
 - {{domxref("AnimationEffect")}}
 - {{domxref("Animation")}}
+- {{domxref("AnimationEffect.getTiming()")}}
+- {{domxref("AnimationEffect.getComputedTiming()")}}
