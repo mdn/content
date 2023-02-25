@@ -54,7 +54,7 @@ const foo = "Tom's bar";
 const foo = 'Tom\'s bar';
 ```
 
-### Declaring properties with var
+### Declaring properties with keyword
 
 You **cannot** declare properties of an object or array with a
 `let`, `const` or `var` declaration.
