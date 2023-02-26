@@ -41,6 +41,8 @@ _In addition to the properties listed below, properties from the parent interfac
 
 ```js
 const button = document.querySelector("button");
+let created = 0;
+let removed = 0;
 
 button.addEventListener("click", () => {
   document.body.addEventListener("mousemove", (event) => {
@@ -48,13 +50,21 @@ button.addEventListener("click", () => {
       { transform: `translate(${event.clientX}px, ${event.clientY}px)` },
       { duration: 500, fill: "forwards" }
     );
+    created++;
+    showCounts();
 
     // the remove event fires after the animation is removed
     animation.addEventListener("remove", () => {
-      console.log("Animation removed");
+      removed++;
+      showCounts();
     });
   });
 });
+
+function showCounts() {
+  document.getElementById("count-created").textContent = created;
+  document.getElementById("count-removed").textContent = removed;
+}
 ```
 
 #### HTML
@@ -65,6 +75,8 @@ button.addEventListener("click", () => {
   Click the button to start the animation (disabled by default to protect those
   who suffer migraines when experiencing such animations).
 </p>
+<p>Animations created: <span id="count-created">0</span></p>
+<p>Animations removed: <span id="count-removed">0</span></p>
 ```
 
 #### CSS
@@ -77,6 +89,8 @@ body {
   height: 100%;
 }
 ```
+
+#### Result
 
 {{embedlivesample("Removing_indefinite_animations")}}
 
