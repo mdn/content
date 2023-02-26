@@ -310,7 +310,7 @@ Starting with Firefox 34, in the case of a capturing group with quantifiers prev
 // group: undefined
 ```
 
-Note that due to web compatibility, `RegExp.$N` will still return an empty string instead of `undefined` ([bug 1053944](https://bugzilla.mozilla.org/show_bug.cgi?id=1053944)).
+Note that due to web compatibility, `RegExp.$N` will still return an empty string instead of `undefined` ([bug 1053944](https://bugzil.la/1053944)).
 
 ## See also
 

@@ -29,7 +29,7 @@ This is not a problem as such. It is just that different APIs that exhibit this 
 
 ## The solution
 
-In Firefox 60 onwards, Mozilla resolves the relative URL against the global that owns the `fetch()` function being used (see {{bug(1432272)}}). So in the case described above, it is resolved against the iframe's location:
+In Firefox 60 onwards, Mozilla resolves the relative URL against the global that owns the `fetch()` function being used (see [Firefox bug 1432272](https://bugzil.la/1432272)). So in the case described above, it is resolved against the iframe's location:
 
 ```js
 let absolute = new URL(relative, frame.contentWindow.location.href);

@@ -113,7 +113,7 @@ Starting in Chrome 49, notifications don't work in incognito mode.
 Chrome for Android will throw a {{jsxref("TypeError")}} when calling the
 `Notification` constructor. It only supports creating
 notifications from a service worker. See the
-[Chromium issue tracker](https://bugs.chromium.org/p/chromium/issues/detail?id=481856) for more details.
+[Chromium issue tracker](https://crbug.com/481856) for more details.
 
 ## See also
 

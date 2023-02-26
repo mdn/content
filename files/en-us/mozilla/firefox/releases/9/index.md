@@ -64,7 +64,7 @@ _No change._
 ### MathML
 
 - The non-standard `restyle` value for the `actiontype` attribute on {{ MathMLElement("maction") }} elements has been removed.
-- While still unsupported, using the `mlabeledtr` element no longer breaks rendering completely. See {{ bug(689641) }} for progress on actual support of this element.
+- While still unsupported, using the `mlabeledtr` element no longer breaks rendering completely. See [Firefox bug 689641](https://bugzil.la/689641) for progress on actual support of this element.
 
 ### Networking
 
@@ -97,7 +97,7 @@ See [Updating add-ons for Firefox 9](/en-US/docs/Mozilla/Firefox/Updating_add-on
 
 ### Service changes
 
-- The content preference service now [handles private mode browsing](/en-US/docs/Using_content_preferences#private-browsing) (see {{ bug("679784") }}).
+- The content preference service now [handles private mode browsing](/en-US/docs/Using_content_preferences#private-browsing) (see [Firefox bug 679784](https://bugzil.la/679784)).
 
 ### NSPR
 
