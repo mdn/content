@@ -112,3 +112,5 @@ All but one of the animations should eventually be removed.
 
 - [Web Animations API](/en-US/docs/Web/API/Web_Animations_API)
 - {{domxref("Animation")}}, {{domxref("AnimationPlaybackEvent")}}
+- {{domxref("Animation.replaceState")}}, to check whether an animation has been removed
+- {{domxref("Animation.persist()")}}, to prevent removal of an animation
