@@ -119,9 +119,9 @@ _No change._
 
 #### Highlights
 
-- The [`sdk/test/httpd`](/en-US/Add-ons/SDK/Low-Level_APIs/test_httpd) module was removed in [Firefox 36](/en-US/docs/Mozilla/Firefox/Releases/36), please use the [addon-httpd](https://www.npmjs.com/package/addon-httpd) npm module instead.
-- Add badges to [`sdk/ui`](/en-US/Add-ons/SDK/High-Level_APIs/ui) buttons ([Firefox bug 994280](https://bugzil.la/994280)).
-- Implemented global `require` function to access sdk modules anywhere ([Firefox bug 1070927](https://bugzil.la/1070927)), using:
+- The [`sdk/test/httpd`](/en-US/Add-ons/SDK/Low-Level_APIs/test_httpd) module was removed, use the [addon-httpd](https://www.npmjs.com/package/addon-httpd) npm module instead.
+- Add badges to [`sdk/ui`](/en-US/Add-ons/SDK/High-Level_APIs/ui) buttons ({{bug(994280)}}).
+- Implemented global `require` function to access sdk modules anywhere ({{bug(1070927)}}), using:
 
   ```js
   var { require } = Cu.import(
