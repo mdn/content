@@ -38319,17 +38319,6 @@
       "McGurk"
     ]
   },
-  "Web/API/HTMLElement/contextMenu": {
-    "modified": "2020-10-15T21:49:31.390Z",
-    "contributors": [
-      "ExE-Boss",
-      "sideshowbarker",
-      "fscholz",
-      "valtlai",
-      "Sheppy",
-      "Sebastianz"
-    ]
-  },
   "Web/API/HTMLElement/copy_event": {
     "modified": "2020-10-15T21:03:53.270Z",
     "contributors": [
