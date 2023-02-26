@@ -155,7 +155,6 @@ a {
 
 {{EmbedLiveSample('Linking to an element on the same page')}}
 
-
 > **Note:** You can use `href="#top"` or the empty fragment (`href="#"`) to link to the top of the current page, [as defined in the HTML specification](https://html.spec.whatwg.org/multipage/browsing-the-web.html#scroll-to-the-fragment-identifier).
 
 ### Linking to an email address
@@ -182,7 +181,6 @@ For details about `mailto:` URLs, such as including a subject or body, see [Emai
 #### Result
 
 {{EmbedLiveSample('Linking to telephone numbers')}}
-
 
 `tel:` link behavior varies with device capabilities:
 
