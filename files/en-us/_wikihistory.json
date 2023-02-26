@@ -33613,20 +33613,6 @@
       "markg"
     ]
   },
-  "Web/API/Element/show_event": {
-    "modified": "2020-10-15T21:19:11.193Z",
-    "contributors": [
-      "mfuji09",
-      "chrisdavidmills",
-      "irenesmith",
-      "mfluehr",
-      "fscholz",
-      "teoli",
-      "Sheppy",
-      "ethertank",
-      "louisremi"
-    ]
-  },
   "Web/API/Element/slot": {
     "modified": "2020-10-15T21:49:24.629Z",
     "contributors": [

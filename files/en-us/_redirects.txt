@@ -1506,7 +1506,6 @@
 /en-US/docs/DOM/Mozilla_event_reference/seeked	/en-US/docs/Web/API/HTMLMediaElement/seeked_event
 /en-US/docs/DOM/Mozilla_event_reference/seeking	/en-US/docs/Web/API/HTMLMediaElement/seeking_event
 /en-US/docs/DOM/Mozilla_event_reference/select	/en-US/docs/Web/API/HTMLInputElement/select_event
-/en-US/docs/DOM/Mozilla_event_reference/show	/en-US/docs/Web/API/Element/show_event
 /en-US/docs/DOM/Mozilla_event_reference/stalled	/en-US/docs/Web/API/HTMLMediaElement/stalled_event
 /en-US/docs/DOM/Mozilla_event_reference/storage	/en-US/docs/Web/API/Window/storage_event
 /en-US/docs/DOM/Mozilla_event_reference/submit	/en-US/docs/Web/API/HTMLFormElement/submit_event
@@ -6313,7 +6312,6 @@
 /en-US/docs/Mozilla_event_reference/seeked	/en-US/docs/Web/API/HTMLMediaElement/seeked_event
 /en-US/docs/Mozilla_event_reference/seeking	/en-US/docs/Web/API/HTMLMediaElement/seeking_event
 /en-US/docs/Mozilla_event_reference/select	/en-US/docs/Web/API/HTMLInputElement/select_event
-/en-US/docs/Mozilla_event_reference/show	/en-US/docs/Web/API/Element/show_event
 /en-US/docs/Mozilla_event_reference/stalled	/en-US/docs/Web/API/HTMLMediaElement/stalled_event
 /en-US/docs/Mozilla_event_reference/storage	/en-US/docs/Web/API/Window/storage_event
 /en-US/docs/Mozilla_event_reference/submit	/en-US/docs/Web/API/HTMLFormElement/submit_event
@@ -11732,7 +11730,6 @@
 /en-US/docs/Web/Events/selectstart	/en-US/docs/Web/API/Node/selectstart_event
 /en-US/docs/Web/Events/shippingaddresschange	/en-US/docs/Web/API/PaymentRequest/shippingaddresschange_event
 /en-US/docs/Web/Events/shippingoptionchange	/en-US/docs/Web/API/PaymentRequest/shippingoptionchange_event
-/en-US/docs/Web/Events/show	/en-US/docs/Web/API/Element/show_event
 /en-US/docs/Web/Events/signalingstatechange	/en-US/docs/Web/API/RTCPeerConnection/signalingstatechange_event
 /en-US/docs/Web/Events/slotchange	/en-US/docs/Web/API/HTMLSlotElement/slotchange_event
 /en-US/docs/Web/Events/soundend	/en-US/docs/Web/API/SpeechRecognition/soundend_event
@@ -12651,7 +12648,6 @@
 /en-US/docs/Web/Reference/Events/seeked	/en-US/docs/Web/API/HTMLMediaElement/seeked_event
 /en-US/docs/Web/Reference/Events/seeking	/en-US/docs/Web/API/HTMLMediaElement/seeking_event
 /en-US/docs/Web/Reference/Events/select	/en-US/docs/Web/API/HTMLInputElement/select_event
-/en-US/docs/Web/Reference/Events/show	/en-US/docs/Web/API/Element/show_event
 /en-US/docs/Web/Reference/Events/stalled	/en-US/docs/Web/API/HTMLMediaElement/stalled_event
 /en-US/docs/Web/Reference/Events/statechange	/en-US/docs/Web/API/RTCIceTransport/statechange_event
 /en-US/docs/Web/Reference/Events/storage	/en-US/docs/Web/API/Window/storage_event
