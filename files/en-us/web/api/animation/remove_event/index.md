@@ -61,10 +61,6 @@ function startAnimation() {
     anim.onremove = function () {
       console.log("Animation removed");
     };
-
-    // replaceState allows you to query an element to see what its replace state is
-    // It will be active by default, or persisted if persist() was invoked
-    console.log(anim.replaceState);
   });
 }
 ```
