@@ -6,7 +6,7 @@ slug: >-
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Understanding_client-side_tools/Package_management","Learn/Tools_and_testing/Understanding_client-side_tools/Deployment", "Learn/Tools_and_testing/Understanding_client-side_tools")}}
 
-In a final couple of articles in the series, we will solidify your tooling knowledge by walking you through the process of building up a sample case study toolchain. We'll go all the way from setting up a sensible development environment and putting transformation tools in place to actually deploying your app on Netlify. In this article, we'll introduce the case study, set up our development environment, and set up our code transformation tools.
+In the final couple of articles in the series, we will solidify your tooling knowledge by walking you through the process of building up a sample case study toolchain. We'll go all the way from setting up a sensible development environment and putting transformation tools in place to actually deploying your app on Netlify. In this article, we'll introduce the case study, set up our development environment, and set up our code transformation tools.
 
 <table>
   <tbody>
