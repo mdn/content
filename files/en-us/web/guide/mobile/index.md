@@ -17,7 +17,7 @@ slug: Web/Guide/Mobile
   </ol>
 </section>
 
-This page provides an overview of some of the main techniques needed to design websites that work well on mobile devices. If you're looking for information on Mozilla's Firefox OS project, see the [Firefox OS](/en-US/docs/Mozilla/Firefox_OS) page. Or you might be interested in details about [Firefox for Android](/en-US/docs/Mozilla/Firefox_for_Android).
+This page provides an overview of some of the main techniques needed to design websites that work well on mobile devices.
 
 We've organized it into two sections, [designing for mobile devices](#designing_for_mobile_devices) and [cross-browser compatibility](#cross-browser_development). Also see Jason Grlicky's guide to [mobile-friendliness](/en-US/docs/Web/Guide/Mobile/Mobile-friendliness) for web developers.
 
