@@ -45,7 +45,3 @@ _`HTMLMenuElement` doesn't implement specific methods._
 ## Browser compatibility
 
 {{Compat}}
-
-## See also
-
-- {{DOMxRef("HTMLMenuItemElement")}}
