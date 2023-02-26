@@ -50,11 +50,10 @@ function startAnimation() {
       { transform: `translate(${evt.clientX}px, ${evt.clientY}px)` },
       { duration: 500, fill: "forwards" }
     );
-    // onremove allows you to run an event handler that fires when the animation
-    // was removed
-    anim.onremove = function () {
+    // the remove event fires after the animation is removed
+    anim.addEventListener("remove", () => {
       console.log("Animation removed");
-    };
+    });
   });
 }
 ```
