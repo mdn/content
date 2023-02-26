@@ -64,3 +64,5 @@ You can see the [`replaceState`](/en-US/docs/Web/API/Animation/replaceState) of 
 
 - [Web Animations API](/en-US/docs/Web/API/Web_Animations_API)
 - {{domxref("Animation")}} for other methods and properties you can use to control web page animation.
+- {{domxref("Animation.replaceState")}}
+- {{domxref("Animation.remove_event","remove")}} event
