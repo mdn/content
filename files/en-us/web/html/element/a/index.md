@@ -153,7 +153,7 @@ a {
 
 #### Result
 
-{{EmbedLiveSample('inking to an element on the same page')}}
+{{EmbedLiveSample('Linking to an element on the same page')}}
 
 
 > **Note:** You can use `href="#top"` or the empty fragment (`href="#"`) to link to the top of the current page, [as defined in the HTML specification](https://html.spec.whatwg.org/multipage/browsing-the-web.html#scroll-to-the-fragment-identifier).
