@@ -42,20 +42,19 @@ _In addition to the properties listed below, properties from the parent interfac
 ```js
 const button = document.querySelector("button");
 
-document.addEventListener("click", startAnimation);
-
-function startAnimation() {
-  document.body.addEventListener("mousemove", (evt) => {
-    let anim = button.animate(
-      { transform: `translate(${evt.clientX}px, ${evt.clientY}px)` },
+button.addEventListener("click", () => {
+  document.body.addEventListener("mousemove", (event) => {
+    const animation = button.animate(
+      { transform: `translate(${event.clientX}px, ${event.clientY}px)` },
       { duration: 500, fill: "forwards" }
     );
+
     // the remove event fires after the animation is removed
-    anim.addEventListener("remove", () => {
+    animation.addEventListener("remove", () => {
       console.log("Animation removed");
     });
   });
-}
+});
 ```
 
 #### HTML
