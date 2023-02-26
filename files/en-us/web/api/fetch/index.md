@@ -269,9 +269,9 @@ handled properly, then create an Object URL of it and display it in an
 {{htmlelement("img")}} element.
 
 ```js
-const myImage = document.querySelector('img');
+const myImage = document.querySelector("img");
 
-const myRequest = new Request('flowers.jpg');
+const myRequest = new Request("flowers.jpg");
 
 fetch(myRequest)
   .then((response) => {
@@ -290,31 +290,30 @@ In the [Fetch with init then Request example](https://github.com/mdn/dom-example
 `init` object when we invoke `fetch()`:
 
 ```js
-const myImage = document.querySelector('img');
+const myImage = document.querySelector("img");
 
 const myHeaders = new Headers();
-myHeaders.append('Accept', 'image/jpeg');
+myHeaders.append("Accept", "image/jpeg");
 
 const myInit = {
-  method: 'GET',
+  method: "GET",
   headers: myHeaders,
-  mode: 'cors',
-  cache: 'default',
+  mode: "cors",
+  cache: "default",
 };
 
-const myRequest = new Request('flowers.jpg');
+const myRequest = new Request("flowers.jpg");
 
-fetch(myRequest, myInit)
-  .then((response) => {
-    // …
-  });
+fetch(myRequest, myInit).then((response) => {
+  // …
+});
 ```
 
 You could also pass the `init` object in with the
 `Request` constructor to get the same effect:
 
 ```js
-const myRequest = new Request('flowers.jpg', myInit);
+const myRequest = new Request("flowers.jpg", myInit);
 ```
 
 You can also use an object literal as `headers` in
@@ -322,15 +321,15 @@ You can also use an object literal as `headers` in
 
 ```js
 const myInit = {
-  method: 'GET',
+  method: "GET",
   headers: {
-    'Accept': 'image/jpeg',
+    Accept: "image/jpeg",
   },
-  mode: 'cors',
-  cache: 'default',
+  mode: "cors",
+  cache: "default",
 };
 
-const myRequest = new Request('flowers.jpg', myInit);
+const myRequest = new Request("flowers.jpg", myInit);
 ```
 
 ## Specifications

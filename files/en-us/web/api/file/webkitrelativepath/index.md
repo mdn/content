@@ -40,10 +40,10 @@ output {
 ### JavaScript
 
 ```js
-const output = document.getElementById('output');
-const filepicker = document.getElementById('filepicker');
+const output = document.getElementById("output");
+const filepicker = document.getElementById("filepicker");
 
-filepicker.addEventListener('change', (event) => {
+filepicker.addEventListener("change", (event) => {
   const files = event.target.files;
 
   for (const file of files) {

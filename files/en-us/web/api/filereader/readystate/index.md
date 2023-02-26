@@ -26,13 +26,13 @@ The {{domxref("FileReader")}} **`readyState`** property provides the current sta
 
 ```js
 const reader = new FileReader();
-console.log('EMPTY', reader.readyState); // readyState will be 0
+console.log("EMPTY", reader.readyState); // readyState will be 0
 
 reader.readAsText(blob);
-console.log('LOADING', reader.readyState); // readyState will be 1
+console.log("LOADING", reader.readyState); // readyState will be 1
 
 reader.onloadend = () => {
-  console.log('DONE', reader.readyState); // readyState will be 2
+  console.log("DONE", reader.readyState); // readyState will be 2
 };
 ```
 

@@ -129,7 +129,7 @@ The following cross-origin access to `Location` properties is allowed:
 
 | Attributes                   |             |
 | ---------------------------- | ----------- |
-| {{domxref("URLUtils.href")}} | Write-only. |
+| {{domxref("location.href")}} | Write-only. |
 
 Some browsers allow access to more properties than the above.
 

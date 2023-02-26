@@ -19,7 +19,7 @@ browser-compat: webextensions.api.storage.session
 
 Represents the `session` storage area. Items in `session` storage are stored in memory and are not persisted to disk.
 
-The browser may restrict the amount of data that an extension can store in the session storage area. For example, in Chrome, an extension is limited to storing 1MB of data in this storage area.
+The browser may restrict the amount of data that an extension can store in the session storage area. For example, in Chrome 112, an extension is limited to storing 10MB of data in this storage area.
 
 When the browser stops, all session storage is cleared. When the extension is uninstalled, its associated session storage is cleared.
 

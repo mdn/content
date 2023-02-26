@@ -69,7 +69,7 @@ Given the following:
 </p>
 ```
 
-Here we have 3 sections for a north American phone number with an implicit label encompassing all three components of the phone number, expecting 3-digits, 3-digits and 4-digits respectively, as defined by the [`pattern`](/en-US/docs/Web/HTML/Attributes/pattern) attribute set on each.
+Here we have 3 sections for a north American phone number with an implicit label encompassing all three components of the phone number, expecting 3-digits, 3-digits and 4-digits respectively, as defined by the `pattern` attribute set on each.
 
 If the values are too long or too short, or contain characters that aren't digits, the patternMismatch will be true. When `true`, the element matches the {{cssxref(":invalid")}} CSS pseudo-classes.
 
