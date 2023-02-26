@@ -40,7 +40,7 @@ _In addition to the properties listed below, properties from the parent interfac
 #### Javascript
 
 ```js
-const divElem = document.querySelector("div");
+const button = document.querySelector("button");
 
 document.addEventListener("keypress", function (e) {
   if (e.key === " ") {
@@ -52,7 +52,7 @@ document.addEventListener("click", startAnimation);
 
 function startAnimation() {
   document.body.addEventListener("mousemove", (evt) => {
-    let anim = divElem.animate(
+    let anim = button.animate(
       { transform: `translate(${evt.clientX}px, ${evt.clientY}px)` },
       { duration: 500, fill: "forwards" }
     );
@@ -69,10 +69,10 @@ function startAnimation() {
 
 ```html
 <p>
-  Click, tap, or press the space bar to start the animation (disabled by default
-  to protect those who suffer migraines when experiencing such animations).
+  Click the button to start the animation (disabled by default to protect those
+  who suffer migraines when experiencing such animations).
 </p>
-<div></div>
+<button>Click to drag</button>
 ```
 
 #### CSS
@@ -87,7 +87,7 @@ body {
   height: inherit;
 }
 
-div {
+button {
   width: 150px;
   height: 100px;
   background-color: red;
