@@ -124,7 +124,7 @@ Earlier on in the course we got you to type some simple JavaScript commands into
 
 ## A logic error
 
-At this point, the game should play through fine, however after playing through a few times you'll undoubtedly notice that the "random" number you've got to guess is always 1. Definitely not quite how we want the game to play out!
+At this point, the game should play through fine, however after playing through a few times you'll undoubtedly notice that the game always chooses 1 as the "random" number you've got to guess. Definitely not quite how we want the game to play out!
 
 There's definitely a problem in the game logic somewhere — the game is not returning an error; it just isn't playing right.
 
