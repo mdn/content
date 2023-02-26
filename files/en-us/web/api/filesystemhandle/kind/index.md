@@ -2,14 +2,6 @@
 title: FileSystemHandle.kind
 slug: Web/API/FileSystemHandle/kind
 page-type: web-api-instance-property
-tags:
-  - Directory
-  - File
-  - File System Access API
-  - FileSystemHandle
-  - Property
-  - Read-only
-  - handle
 browser-compat: api.FileSystemHandle.kind
 ---
 
@@ -41,12 +33,11 @@ async function getFile() {
   // open file picker
   [fileHandle] = await window.showOpenFilePicker();
 
-  if (fileHandle.kind === 'file') {
+  if (fileHandle.kind === "file") {
     // run file code
-  } else if (fileHandle.kind === 'directory') {
+  } else if (fileHandle.kind === "directory") {
     // run directory code
   }
-
 }
 ```
 

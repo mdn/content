@@ -2,13 +2,8 @@
 title: Highlight.priority
 slug: Web/API/Highlight/priority
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - CSS Custom Highlight API
-  - Reference
-  - priority
-  - Experimental
+status:
+  - experimental
 browser-compat: api.Highlight.priority
 ---
 

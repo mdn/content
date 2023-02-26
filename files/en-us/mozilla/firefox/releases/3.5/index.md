@@ -1,16 +1,6 @@
 ---
 title: Firefox 3.5 for developers
 slug: Mozilla/Firefox/Releases/3.5
-tags:
-  - CSS
-  - Firefox
-  - Firefox 3.5
-  - Gecko
-  - Gecko 1.9.1
-  - HTML
-  - JavaScript
-  - Storage
-  - XUL
 ---
 
 {{FirefoxSidebar}}
@@ -123,7 +113,7 @@ tags:
 - [Progress events for `XMLHttpRequest`](/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest#monitoring_progress)
   - : Progress events are now offered to enable extensions to monitor the progress of requests.
 - Improved Synchronous `XMLHttpRequest` support
-  - : [DOM Timeout](https://bugzilla.mozilla.org/show_bug.cgi?id=340345) and [Input Events](https://bugzilla.mozilla.org/show_bug.cgi?id=333198) are now suppressed during a synchronous `XMLHttpRequest`.
+  - : [DOM Timeout](https://bugzil.la/340345) and [Input Events](https://bugzil.la/333198) are now suppressed during a synchronous `XMLHttpRequest`.
 - Controlling DNS prefetching
   - : Firefox 3.5 provides DNS prefetching, whereby it performs domain name resolution ahead of time for links included in the current page, in order to save time when links are actually clicked. This article describes how you can tune your web site to disable prefetching, or to adjust how prefetching operates.
 

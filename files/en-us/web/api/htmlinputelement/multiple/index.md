@@ -2,14 +2,6 @@
 title: HTMLInputElement.multiple
 slug: Web/API/HTMLInputElement/multiple
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTML DOM
-  - HTMLInputElement
-  - NeedsMarkupWork
-  - NeedsSpecTable
-  - Property
-  - Reference
 browser-compat: api.HTMLInputElement.multiple
 ---
 
@@ -49,4 +41,4 @@ if (fileInput.multiple) {
 ## See also
 
 - [FileList](/en-US/docs/Web/API/FileList)
-- [Bug 523771](https://bugzilla.mozilla.org/show_bug.cgi?id=523771) - Support \<input type=file multiple>
+- [Bug 523771](https://bugzil.la/523771) - Support \<input type=file multiple>

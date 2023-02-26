@@ -1,10 +1,6 @@
 ---
 title: What is a web server?
 slug: Learn/Common_questions/Web_mechanics/What_is_a_web_server
-tags:
-  - Beginner
-  - Infrastructure
-  - needsSchema
 ---
 
 {{QuicklinksWithSubPages("Learn/Common_questions")}}

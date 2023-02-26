@@ -2,12 +2,6 @@
 title: FontFaceSet.keys()
 slug: Web/API/FontFaceSet/keys
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - keys
-  - FontFaceSet
 browser-compat: api.FontFaceSet.keys
 ---
 

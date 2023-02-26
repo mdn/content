@@ -1,15 +1,6 @@
 ---
 title: Initialize the framework
 slug: Games/Tutorials/2D_breakout_game_Phaser/Initialize_the_framework
-tags:
-  - 2D
-  - Beginner
-  - Canvas
-  - Games
-  - HTML
-  - JavaScript
-  - Phaser
-  - Tutorial
 ---
 
 {{GamesSidebar}}

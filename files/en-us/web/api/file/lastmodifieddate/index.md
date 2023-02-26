@@ -2,17 +2,9 @@
 title: File.lastModifiedDate
 slug: Web/API/File/lastModifiedDate
 page-type: web-api-instance-property
-tags:
-  - API
-  - Deprecated
-  - File
-  - File API
-  - Files
-  - Property
-  - Read-only
-  - Reference
-  - lastModifiedDate
-  - Non-standard
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.File.lastModifiedDate
 ---
 
@@ -31,7 +23,9 @@ A [`Date`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date) object indi
 const fileInput = document.getElementById("myfileinput");
 
 for (const file of fileInput.files) {
-  console.log(`${file.name} has a last modified date of ${file.lastModifiedDate}`);
+  console.log(
+    `${file.name} has a last modified date of ${file.lastModifiedDate}`
+  );
 }
 ```
 

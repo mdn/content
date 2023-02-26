@@ -2,11 +2,6 @@
 title: "TypeError: 'x' is not iterable"
 slug: Web/JavaScript/Reference/Errors/is_not_iterable
 page-type: javascript-error
-tags:
-  - Error
-  - JavaScript
-  - Reference
-  - TypeError
 ---
 
 {{jsSidebar("Errors")}}

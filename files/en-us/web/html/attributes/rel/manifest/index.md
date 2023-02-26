@@ -2,15 +2,8 @@
 title: rel=manifest
 slug: Web/HTML/Attributes/rel/manifest
 page-type: html-attribute-value
-tags:
-  - App
-  - Attribute
-  - HTML
-  - Link
-  - Link types
-  - Manifest
-  - Reference
-  - Experimental
+status:
+  - experimental
 browser-compat: html.elements.link.rel.manifest
 ---
 

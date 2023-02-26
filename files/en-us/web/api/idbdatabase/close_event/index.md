@@ -2,9 +2,6 @@
 title: 'IDBDatabase: close event'
 slug: Web/API/IDBDatabase/close_event
 page-type: web-api-event
-tags:
-  - Event
-  - Reference
 browser-compat: api.IDBDatabase.close_event
 ---
 

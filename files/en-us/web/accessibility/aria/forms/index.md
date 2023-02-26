@@ -1,9 +1,6 @@
 ---
 title: Forms
 slug: Web/Accessibility/ARIA/forms
-tags:
-  - ARIA
-  - Accessibility
 ---
 
 <section id="Quick_links">

@@ -2,15 +2,6 @@
 title: IDBIndex.objectStore
 slug: Web/API/IDBIndex/objectStore
 page-type: web-api-instance-property
-tags:
-  - API
-  - Database
-  - IDBIndex
-  - IndexedDB
-  - Property
-  - Reference
-  - Storage
-  - objectStore
 browser-compat: api.IDBIndex.objectStore
 ---
 

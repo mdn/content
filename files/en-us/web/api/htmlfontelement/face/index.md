@@ -2,13 +2,8 @@
 title: HTMLFontElement.face
 slug: Web/API/HTMLFontElement/face
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTML DOM
-  - HTMLFontElement
-  - Property
-  - Reference
-  - Deprecated
+status:
+  - deprecated
 browser-compat: api.HTMLFontElement.face
 ---
 

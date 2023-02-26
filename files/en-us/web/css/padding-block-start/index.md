@@ -2,14 +2,6 @@
 title: padding-block-start
 slug: Web/CSS/padding-block-start
 page-type: css-property
-tags:
-  - CSS
-  - CSS Logical Property
-  - CSS Property
-  - Reference
-  - padding-block
-  - padding-block-start
-  - recipe:css-property
 browser-compat: css.properties.padding-block-start
 ---
 

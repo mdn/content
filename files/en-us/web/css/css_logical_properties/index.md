@@ -2,13 +2,6 @@
 title: CSS Logical Properties and Values
 slug: Web/CSS/CSS_Logical_Properties
 page-type: css-module
-tags:
-  - CSS
-  - CSS Logical Properties
-  - Guide
-  - Landing
-  - Overview
-  - Reference
 spec-urls: https://drafts.csswg.org/css-logical/
 ---
 
@@ -115,10 +108,10 @@ Logical properties and values use the abstract terms _block_ and _inline_ to des
 
 ### Deprecated properties
 
-- {{CSSxRef("offset-block-end")}} {{Non-standard_Inline}} {{Deprecated_Inline}} (now {{CSSxRef("inset-block-end")}})
-- {{CSSxRef("offset-block-start")}} {{Non-standard_Inline}} {{Deprecated_Inline}} (now {{CSSxRef("inset-block-start")}})
-- {{CSSxRef("offset-inline-end")}} {{Non-standard_Inline}} {{Deprecated_Inline}} (now {{CSSxRef("inset-inline-end")}})
-- {{CSSxRef("offset-inline-start")}} {{Non-standard_Inline}} {{Deprecated_Inline}} (now {{CSSxRef("inset-inline-start")}})
+- `offset-block-end` {{Non-standard_Inline}} {{Deprecated_Inline}} (now {{CSSxRef("inset-block-end")}})
+- `offset-block-start` {{Non-standard_Inline}} {{Deprecated_Inline}} (now {{CSSxRef("inset-block-start")}})
+- `offset-inline-end` {{Non-standard_Inline}} {{Deprecated_Inline}} (now {{CSSxRef("inset-inline-end")}})
+- `offset-inline-start` {{Non-standard_Inline}} {{Deprecated_Inline}} (now {{CSSxRef("inset-inline-start")}})
 
 ## Guides
 

@@ -2,6 +2,8 @@
 title: ":target-within"
 slug: Web/CSS/:target-within
 page-type: css-pseudo-class
+status:
+  - experimental
 browser-compat: css.selectors.target-within
 ---
 

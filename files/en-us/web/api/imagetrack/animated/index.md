@@ -2,13 +2,8 @@
 title: ImageTrack.animated
 slug: Web/API/ImageTrack/animated
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - animated
-  - ImageTrack
-  - Experimental
+status:
+  - experimental
 browser-compat: api.ImageTrack.animated
 ---
 

@@ -2,13 +2,8 @@
 title: "-webkit-text-security"
 slug: Web/CSS/-webkit-text-security
 page-type: css-property
-tags:
-  - CSS
-  - CSS Property
-  - NeedsCompatTable
-  - Non-standard
-  - Reference
-  - recipe:css-property
+status:
+  - non-standard
 browser-compat: css.properties.-webkit-text-security
 ---
 

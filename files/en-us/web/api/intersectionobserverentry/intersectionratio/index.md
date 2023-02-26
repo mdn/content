@@ -2,14 +2,6 @@
 title: IntersectionObserverEntry.intersectionRatio
 slug: Web/API/IntersectionObserverEntry/intersectionRatio
 page-type: web-api-instance-property
-tags:
-  - API
-  - Intersection Observer
-  - Intersection Observer API
-  - IntersectionObserverEntry
-  - Property
-  - Reference
-  - intersectionRatio
 browser-compat: api.IntersectionObserverEntry.intersectionRatio
 ---
 

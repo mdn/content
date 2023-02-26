@@ -2,15 +2,6 @@
 title: IDBCursor.advance()
 slug: Web/API/IDBCursor/advance
 page-type: web-api-instance-method
-tags:
-  - API
-  - Database
-  - IDBCursor
-  - IndexedDB
-  - Method
-  - Reference
-  - Storage
-  - advance
 browser-compat: api.IDBCursor.advance
 ---
 

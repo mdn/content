@@ -2,10 +2,6 @@
 title: Bézier curve
 slug: Glossary/Bezier_curve
 page-type: glossary-definition
-tags:
-  - Bézier curve
-  - Graphics
-  - Reference
 ---
 
 A **Bézier curve** (pronounced \[bezje]) is a mathematically described curve used in computer graphics and animation. In vector images, they are used to model smooth curves that can be scaled indefinitely.

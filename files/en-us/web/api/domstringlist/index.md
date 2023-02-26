@@ -2,11 +2,6 @@
 title: DOMStringList
 slug: Web/API/DOMStringList
 page-type: web-api-interface
-tags:
-  - API
-  - DOM
-  - DOMStringList
-  - Reference
 browser-compat: api.DOMStringList
 ---
 

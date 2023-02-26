@@ -2,15 +2,8 @@
 title: exp()
 slug: Web/CSS/exp
 page-type: css-function
-tags:
-  - CSS
-  - CSS Function
-  - Function
-  - Math
-  - Reference
-  - Web
-  - exp
-  - Experimental
+status:
+  - experimental
 browser-compat: css.types.exp
 ---
 

@@ -2,14 +2,6 @@
 title: TypedArray.prototype.includes()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/includes
 page-type: javascript-instance-method
-tags:
-  - ECMAScript 2016
-  - JavaScript
-  - Method
-  - Prototype
-  - TypedArray
-  - TypedArrays
-  - Polyfill
 browser-compat: javascript.builtins.TypedArray.includes
 ---
 

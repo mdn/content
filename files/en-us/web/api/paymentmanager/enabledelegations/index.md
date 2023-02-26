@@ -38,7 +38,7 @@ enableDelegations(delegations)
 
 ### Return value
 
-A {{domxref("Promise")}} that resolves with a value of `undefined`.
+A {{jsxref("Promise")}} that resolves with a value of `undefined`.
 
 ## Examples
 

@@ -2,13 +2,8 @@
 title: animation-timeline
 slug: Web/CSS/animation-timeline
 page-type: css-property
-tags:
-  - CSS
-  - CSS Animations
-  - CSS Property
-  - Reference
-  - recipe:css-property
-  - Experimental
+status:
+  - experimental
 browser-compat: css.properties.animation-timeline
 ---
 

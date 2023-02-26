@@ -2,13 +2,7 @@
 title: CSS filter effects
 slug: Web/CSS/Filter_Effects
 page-type: css-module
-tags:
-  - CSS
-  - Filter Effects
-  - Guide
-  - Overview
-  - Reference
-spec-urls: 
+spec-urls:
   - https://drafts.fxtf.org/filter-effects-2/
   - https://drafts.fxtf.org/filter-effects-1/
 ---
@@ -54,7 +48,7 @@ To see the code for this filter effects sample, [view the source on Github](http
 
 - {{glossary("interpolation")}} glossary term
 
-- {{cssxref("color-interpolation-filters")}} SVG property
+- [`color-interpolation-filters`](/en-US/docs/Web/SVG/Attribute/color-interpolation-filters) SVG property
 
 ## Specifications
 

@@ -2,12 +2,8 @@
 title: NDEFRecord.id
 slug: Web/API/NDEFRecord/id
 page-type: web-api-instance-property
-tags:
-  - NDEF
-  - NDEFRecord
-  - Reference
-  - Web NFC
-  - Experimental
+status:
+  - experimental
 browser-compat: api.NDEFRecord.id
 ---
 

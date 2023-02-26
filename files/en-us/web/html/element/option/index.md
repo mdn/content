@@ -2,13 +2,6 @@
 title: '<option>: The HTML Option element'
 slug: Web/HTML/Element/option
 page-type: html-element
-tags:
-  - Element
-  - Forms
-  - HTML
-  - HTML forms
-  - Reference
-  - Select
 browser-compat: html.elements.option
 ---
 
@@ -45,7 +38,7 @@ See {{HTMLElement("select")}} for examples.
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories"
+        <a href="/en-US/docs/Web/HTML/Content_categories"
           >Content categories</a
         >
       </th>

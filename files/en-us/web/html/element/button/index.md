@@ -2,13 +2,6 @@
 title: '<button>: The Button element'
 slug: Web/HTML/Element/button
 page-type: html-element
-tags:
-  - Element
-  - Forms
-  - HTML
-  - HTML forms
-  - Reference
-  - Web
 browser-compat: html.elements.button
 ---
 
@@ -27,7 +20,7 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
 - {{htmlattrdef("autofocus")}}
   - : This Boolean attribute specifies that the button should have input [focus](/en-US/docs/Web/API/HTMLElement/focus) when the page loads. **Only one element in a document can have this attribute.**
 - {{htmlattrdef("autocomplete")}} {{non-standard_inline}}
-  - : This attribute on a {{HTMLElement("button")}} is nonstandard and Firefox-specific. Unlike other browsers, [Firefox persists the dynamic disabled state](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing) of a {{HTMLElement("button")}} across page loads. Setting `autocomplete="off"` on the button disables this feature; see {{bug(654072)}}.
+  - : This attribute on a {{HTMLElement("button")}} is nonstandard and Firefox-specific. Unlike other browsers, [Firefox persists the dynamic disabled state](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing) of a {{HTMLElement("button")}} across page loads. Setting `autocomplete="off"` on the button disables this feature; see [Firefox bug 654072](https://bugzil.la/654072).
 - {{htmlattrdef("disabled")}}
 
   - : This Boolean attribute prevents the user from interacting with the button: it cannot be pressed or focused.
@@ -170,7 +163,7 @@ Color contrast ratio is determined by comparing the luminosity of the button tex
 
 ### Clicking and focus
 
-Whether clicking on a {{HTMLElement("button")}} or {{HTMLElement("input")}} button types causes it to (by default) become focused varies by browser and OS. Most browsers do give focus to a button being clicked, but [Safari does not, by design](https://bugs.webkit.org/show_bug.cgi?id=22261).
+Whether clicking on a {{HTMLElement("button")}} or {{HTMLElement("input")}} button types causes it to (by default) become focused varies by browser and OS. Most browsers do give focus to a button being clicked, but [Safari does not, by design](https://webkit.org/b/22261).
 
 ## Technical summary
 
@@ -178,32 +171,32 @@ Whether clicking on a {{HTMLElement("button")}} or {{HTMLElement("input")}} butt
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories"
+        <a href="/en-US/docs/Web/HTML/Content_categories"
           >Content categories</a
         >
       </th>
       <td>
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
           >Flow content</a
         >,
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content"
           >phrasing content</a
         >,
         <a
-          href="/en-US/docs/Web/Guide/HTML/Content_categories#interactive_content"
+          href="/en-US/docs/Web/HTML/Content_categories#interactive_content"
           >Interactive content</a
         >,
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#form_listed"
+        <a href="/en-US/docs/Web/HTML/Content_categories#form_listed"
           >listed</a
         >,
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#form_labelable"
+        <a href="/en-US/docs/Web/HTML/Content_categories#form_labelable"
           >labelable</a
         >, and
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#form_submittable"
+        <a href="/en-US/docs/Web/HTML/Content_categories#form_submittable"
           >submittable</a
         >
         <a
-          href="/en-US/docs/Web/Guide/HTML/Content_categories#form-associated_content"
+          href="/en-US/docs/Web/HTML/Content_categories#form-associated_content"
           >form-associated</a
         >
         element, palpable content.
@@ -212,12 +205,12 @@ Whether clicking on a {{HTMLElement("button")}} or {{HTMLElement("input")}} butt
     <tr>
       <th scope="row">Permitted content</th>
       <td>
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content"
           >Phrasing content</a
         >
         but there must be no
         <a
-          href="/en-US/docs/Web/Guide/HTML/Content_categories#interactive_content"
+          href="/en-US/docs/Web/HTML/Content_categories#interactive_content"
           >Interactive content</a
         >
       </td>
@@ -230,7 +223,7 @@ Whether clicking on a {{HTMLElement("button")}} or {{HTMLElement("input")}} butt
       <th scope="row">Permitted parents</th>
       <td>
         Any element that accepts
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content"
           >phrasing content</a
         >.
       </td>

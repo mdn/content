@@ -20,7 +20,7 @@ Relevant directives include the {{Glossary("fetch directive", "fetch directives"
 
 - `<host-source>`
 
-  - : Internet host by name or IP address. The [URL scheme](/en-US/docs/Learn/Common_questions/What_is_a_URL), port number, and path are optional.
+  - : Internet host by name or IP address. The [URL scheme](/en-US/docs/Learn/Common_questions/Web_mechanics/What_is_a_URL), port number, and path are optional.
     Wildcards (`'*'`) can be used for subdomains, host address, and port number, indicating that all legal values of each are valid.
     When matching schemes, secure upgrades are allowed (e.g. specifying `http://example.com` will match `https://example.com`).
     Examples:

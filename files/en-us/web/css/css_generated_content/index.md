@@ -2,12 +2,6 @@
 title: CSS Generated Content
 slug: Web/CSS/CSS_Generated_Content
 page-type: css-module
-tags:
-  - CSS
-  - CSS Generated Content
-  - Guide
-  - Overview
-  - Reference
 spec-urls: https://drafts.csswg.org/css-content/
 ---
 

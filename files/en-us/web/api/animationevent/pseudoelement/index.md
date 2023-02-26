@@ -27,7 +27,7 @@ A string, starting with `'::'`, containing the name of the [pseudo-element](/en-
 
 ## See also
 
-- [Chromium Issue 437132](https://bugs.chromium.org/p/chromium/issues/detail?id=437132)
+- [Chromium Issue 437132](https://crbug.com/437132)
 - [Using CSS animations](/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations)
 - Animation-related CSS properties and at-rules: {{cssxref("animation")}},
   {{cssxref("animation-delay")}}, {{cssxref("animation-direction")}},

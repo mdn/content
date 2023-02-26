@@ -2,15 +2,9 @@
 title: scroll-snap-type-y
 slug: Web/CSS/scroll-snap-type-y
 page-type: css-property
-tags:
-  - CSS
-  - CSS Property
-  - CSS Scroll Snap
-  - NeedsExample
-  - Non-standard
-  - Reference
-  - recipe:css-property
-  - Deprecated
+status:
+  - deprecated
+  - non-standard
 browser-compat: css.properties.scroll-snap-type-y
 ---
 

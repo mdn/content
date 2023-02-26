@@ -2,8 +2,6 @@
 title: Dominator
 slug: Glossary/Dominator
 page-type: glossary-definition
-tags:
-  - CodingScripting
 ---
 
 In graph theory, node A dominates node B if every path from the root node to B passes through A.

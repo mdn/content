@@ -2,13 +2,8 @@
 title: HIDDevice.forget()
 slug: Web/API/HIDDevice/forget
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - forget
-  - HIDDevice
-  - Experimental
+status:
+  - experimental
 browser-compat: api.HIDDevice.forget
 ---
 
