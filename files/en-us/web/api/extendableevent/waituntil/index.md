@@ -32,7 +32,7 @@ but after that it can be called multiple times, until all the promises passed to
 settle.
 
 > **Note:** The behavior described in the above paragraph was fixed in
-> Firefox 43 (see {{bug(1180274)}}).
+> Firefox 43 (see [Firefox bug 1180274](https://bugzil.la/1180274)).
 
 ## Syntax
 

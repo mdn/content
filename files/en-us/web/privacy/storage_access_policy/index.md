@@ -167,7 +167,7 @@ A social content provider that is classified as a tracker will not have access t
 - For social login, the user may have to click a login button on the first party.
 - For social like or share buttons, the user will have to first interact with the button in a logged-out state. Once they do, many social content providers will prompt them to log in.
 
-After these interactions, the provider will receive third-party storage access if they prompt the user in a way that is captured by the storage access activation heuristics described above. These providers should consider switching to explicitly request storage access through the Storage Access API as soon as possible. An [initial implementation of this API](https://bugzilla.mozilla.org/show_bug.cgi?id=1469714) is currently available in Nightly.
+After these interactions, the provider will receive third-party storage access if they prompt the user in a way that is captured by the storage access activation heuristics described above. These providers should consider switching to explicitly request storage access through the Storage Access API as soon as possible. An [initial implementation of this API](https://bugzil.la/1469714) is currently available in Nightly.
 
 ### I use third-party pixels and other tools to measure the effectiveness of my ad campaigns. Will I still be able to measure the conversion rate of my ads?
 
