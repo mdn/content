@@ -57,7 +57,7 @@ function startAnimation() {
       { duration: 500, fill: "forwards" }
     );
     // onremove allows you to run an event handler that fires when the animation
-    // was removed (i.e. put into an active replace state)
+    // was removed
     anim.onremove = function () {
       console.log("Animation removed");
     };
