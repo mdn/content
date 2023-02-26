@@ -161,15 +161,6 @@ Most macros will also take a second argument allowing you to change the display 
   </tbody>
 </table>
 
-### Linking to bugs
-
-- Bugs
-
-  - [`bug`](https://github.com/mdn/yari/blob/main/kumascript/macros/bug.ejs) allows you to link to a bug on bugzilla.mozilla.org easily using this syntax: `\[Webkit bug 123456](https://bugzil.la/123456)`.
-    This gives you: [Webkit bug 123456](https://bugzil.la/123456).
-  - [`WebkitBug`](https://github.com/mdn/yari/blob/main/kumascript/macros/WebkitBug.ejs) inserts a link to a bug in the WebKit bug database.
-    For example, `\[Webkit bug 31277](https://webkit.org/b/31277)` inserts [Webkit bug 31277](https://webkit.org/b/31277).
-
 ### Navigation aids for multi-page guides
 
 [`Previous`](https://github.com/mdn/yari/blob/main/kumascript/macros/Previous.ejs), [`Next`](https://github.com/mdn/yari/blob/main/kumascript/macros/Next.ejs), and [`PreviousNext`](https://github.com/mdn/yari/blob/main/kumascript/macros/PreviousNext.ejs) provide navigation controls for articles which are part of sequences.
