@@ -62,7 +62,7 @@ filter: url(file.svg#filter-element-id);
 
 The `filter` property is specified as `none` or one or more of the functions listed below. If the parameter for any function is invalid, the function returns `none`. Except where noted, the functions that take a value expressed with a percent sign (as in `34%`) also accept the value expressed as decimal (as in `0.34`).
 
-When the `filter` property values contains mutiple functions, the filters are applied in order.
+When the `filter` property values contains multiple functions, the filters are applied in order.
 
 - {{cssxref("filter-function/blur", "blur()")}}
   - : Applies a Gaussian blur to the input image.

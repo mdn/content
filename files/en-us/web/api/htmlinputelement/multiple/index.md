@@ -41,4 +41,4 @@ if (fileInput.multiple) {
 ## See also
 
 - [FileList](/en-US/docs/Web/API/FileList)
-- [Bug 523771](https://bugzilla.mozilla.org/show_bug.cgi?id=523771) - Support \<input type=file multiple>
+- [Bug 523771](https://bugzil.la/523771) - Support \<input type=file multiple>

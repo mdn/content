@@ -21,8 +21,8 @@ You reference all extensions API functions using a namespace, for example, `brow
 
 There are two API namespaces in use:
 
-- `chrome` used in Chrome and Opera.
-- `browser` used in Firefox and Edge.
+- `chrome` used in Chrome, Edge and Opera.
+- `browser` used in Firefox.
 
 ## Asynchronous event handling
 

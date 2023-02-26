@@ -54,8 +54,8 @@ Using methods (1) and (2), you can only load scripts into pages whose URLs can b
 
 Using method (3), you can also load scripts into pages packaged with your extension, but you can't load scripts into privileged browser pages (like "`about:debugging`" or "`about:addons`").
 
-> **Note:** [Dynamic JS module imports](/en-US/docs/Web/JavaScript/Guide/Modules#dynamic_module_loading) are now working in content scripts. For more details, see {{bug(1536094)}}.
-> Only URLs with the _moz-extension_ scheme are allowed, which excludes data URLs ({{bug(1587336)}}).
+> **Note:** [Dynamic JS module imports](/en-US/docs/Web/JavaScript/Guide/Modules#dynamic_module_loading) are now working in content scripts. For more details, see [Firefox bug 1536094](https://bugzil.la/1536094).
+> Only URLs with the _moz-extension_ scheme are allowed, which excludes data URLs ([Firefox bug 1587336](https://bugzil.la/1587336)).
 
 ## Content script environment
 
