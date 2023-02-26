@@ -49,7 +49,7 @@ For example:
 - A video is played, paused, or ends.
 - An error occurs.
 
-You can gather from this (and from glancing at the MDN [event reference](/en-US/docs/Web/Events)) that there are **a lot** of events that can be fired.
+You can gather from this (and from glancing at the MDN [event reference](/en-US/docs/Web/Events) that there are **a lot** of events that can be fired.
 
 To react to an event, you attach an **event handler** to it. This is a block of code (usually a JavaScript function that you as a programmer create) that runs when the event fires.
 When such a block of code is defined to run in response to an event, we say we are **registering an event handler**.
@@ -651,7 +651,7 @@ An alternative form of event propagation is _event capture_. This is like event 
 
 Event capture is disabled by default. To enable it you have to pass the `capture` option in `addEventListener()`.
 
-This example is just like the [bubbling example](#Bubbling_example) we saw earlier, except that we have used the `capture` option:
+This example is just like the [bubbling example](#bubbling_example) we saw earlier, except that we have used the `capture` option:
 
 ```html
 <body>
