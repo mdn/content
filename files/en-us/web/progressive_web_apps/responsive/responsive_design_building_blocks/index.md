@@ -433,7 +433,7 @@ This all sounds good. But those solutions are definitely not ready for productio
 
 For some image requirements (not photographs, but icons and user interface elements are a good fit), a good solution is to use vector graphics. Because vector images are calculated based on mathematical algorithms rather than containing separate data on every pixel in the image, they tend to be smaller in file size, and are infinitely scalable when zoomed or viewed on high resolution devices (at least, in theory). Some ideas follow, which also help to keep the number of HTTP requests down — another key factor in mobile app performance:
 
-- You should try to use [CSS](/en-US/docs/Web/CSS/) features to programmatically generate graphical effects where possible, rather than relying on image files. These include rounded corners, gradients, and drop shadows. These scale as the resolution changes or the browser zooms.
+- You should try to use [CSS](/en-US/docs/Web/CSS\) features to programmatically generate graphical effects where possible, rather than relying on image files. These include rounded corners, gradients, and drop shadows. These scale as the resolution changes or the browser zooms.
 - You could also try using [SVG](/en-US/docs/Web/SVG) to create interface elements. SVG produces vector graphics and is supported well across modern browsers, with polyfills available for older browser support.
 - Using [Web fonts](/en-US/docs/Web/CSS/@font-face) for displaying icons is an effective technique for keeping file size and HTTP requests down, and this is supported well across modern and older browsers.
 
