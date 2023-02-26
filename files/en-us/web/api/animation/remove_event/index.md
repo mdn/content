@@ -56,12 +56,6 @@ function startAnimation() {
       { transform: `translate(${evt.clientX}px, ${evt.clientY}px)` },
       { duration: 500, fill: "forwards" }
     );
-
-    // If you explicitly want the animations to be retained, then you can invoke persist()
-    // But don't do this unless you really need to — having a huge list of animations
-    // persisted can cause a memory leak
-    //anim.persist()
-
     // onremove allows you to run an event handler that fires when the animation
     // was removed (i.e. put into an active replace state)
     anim.onremove = function () {
