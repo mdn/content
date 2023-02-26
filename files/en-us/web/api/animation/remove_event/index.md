@@ -57,10 +57,6 @@ function startAnimation() {
       { duration: 500, fill: "forwards" }
     );
 
-    // commitStyles() writes the end state of the animation to the animated
-    //element inside a style attribute
-    anim.commitStyles();
-
     // If you explicitly want the animations to be retained, then you can invoke persist()
     // But don't do this unless you really need to — having a huge list of animations
     // persisted can cause a memory leak
