@@ -37,7 +37,7 @@ Note that in this example data is only sent to the server when the user leaves t
 
 ```js
 // Catch errors since some browsers throw when using the new `type` option.
-// https://bugs.webkit.org/show_bug.cgi?id=209216
+// https://webkit.org/b/209216
 try {
   let cumulativeLayoutShiftScore = 0;
 

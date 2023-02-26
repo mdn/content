@@ -83,4 +83,4 @@ Not part of any standard.
 
 ## See also
 
-- {{bug(432891)}}
+- [Firefox bug 432891](https://bugzil.la/432891)

@@ -274,7 +274,7 @@ Property: {{CSSxRef("background-image")}}
 
 Property: {{CSSxRef("border-color")}}
 
-- `-moz-use-text-color` {{deprecated_inline}} (removed in {{bug(1306214)}}); use {{CSSxRef("color_value#currentcolor_keyword","currentcolor")}} instead.
+- `-moz-use-text-color` {{deprecated_inline}} (removed in [Firefox bug 1306214](https://bugzil.la/1306214)); use {{CSSxRef("color_value#currentcolor_keyword","currentcolor")}} instead.
 
 ### order-style and outline-style
 
@@ -568,7 +568,7 @@ Properties: {{CSSxRef("width")}}, {{CSSxRef("min-width")}}, and {{CSSxRef("max-w
 
 ## Other
 
-- {{CSSxRef("-moz-alt-content")}} (see {{Bug(11011)}})
+- {{CSSxRef("-moz-alt-content")}} (see [Webkit bug 11011](https://bugzil.la/11011))
 
 ## See also
 
