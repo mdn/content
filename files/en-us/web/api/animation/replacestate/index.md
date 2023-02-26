@@ -61,3 +61,5 @@ You can see the `replaceState` of the animation being logged at the end of the h
 
 - [Web Animations API](/en-US/docs/Web/API/Web_Animations_API)
 - {{domxref("Animation")}}
+- {{domxref("Animation.remove_event","remove")}} event
+- {{domxref("Animation.persist()")}}
