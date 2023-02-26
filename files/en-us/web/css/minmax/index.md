@@ -63,7 +63,7 @@ If _max_ < _min_, then _max_ is ignored and `minmax(min,max)` is treated as _min
 
 ### Formal syntax
 
-{{csssyntax}}
+{{CSSSyntax}}
 
 ### CSS properties
 
