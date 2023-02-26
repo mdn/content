@@ -42,12 +42,6 @@ _In addition to the properties listed below, properties from the parent interfac
 ```js
 const button = document.querySelector("button");
 
-document.addEventListener("keypress", function (e) {
-  if (e.key === " ") {
-    startAnimation();
-  }
-});
-
 document.addEventListener("click", startAnimation);
 
 function startAnimation() {
