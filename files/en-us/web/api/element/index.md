@@ -302,8 +302,6 @@ Listen to these events using `addEventListener()` or by assigning an event liste
   - : Fired when a [Content Security Policy](/en-US/docs/Web/HTTP/CSP) is violated.
 - {{domxref("Element/select_event", "select")}}
   - : Fired when some text has been selected.
-- {{domxref("Element/show_event", "show")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
-  - : Fired when a {{domxref("Element/contextmenu_event", "contextmenu")}} event was fired on/bubbled to an element that has a [`contextmenu`](/en-US/docs/Web/HTML/Global_attributes/contextmenu) attribute.
 - {{domxref("Element/wheel_event","wheel")}}
   - : Fired when the user rotates a wheel button on a pointing device (typically a mouse).
 
