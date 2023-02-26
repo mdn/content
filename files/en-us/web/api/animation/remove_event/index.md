@@ -35,28 +35,89 @@ _In addition to the properties listed below, properties from the parent interfac
 
 ## Examples
 
-In our simple [replace indefinite animations demo](https://mdn.github.io/dom-examples/web-animations-api/replace-indefinite-animations.html), you can see the following code:
+### Removing indefinite animations
+
+#### Javascript
 
 ```js
 const divElem = document.querySelector("div");
 
-document.body.addEventListener("mousemove", (evt) => {
-  const anim = divElem.animate(
-    { transform: `translate(${evt.clientX}px, ${evt.clientY}px)` },
-    { duration: 500, fill: "forwards" }
-  );
-
-  anim.commitStyles();
-
-  //anim.persist()
-
-  anim.onremove = (event) => {
-    console.log("Animation removed");
-  };
-
-  console.log(anim.replaceState);
+document.addEventListener("keypress", function (e) {
+  if (e.key === " ") {
+    startAnimation();
+  }
 });
+
+document.addEventListener("click", startAnimation);
+
+function startAnimation() {
+  document.body.addEventListener("mousemove", (evt) => {
+    let anim = divElem.animate(
+      { transform: `translate(${evt.clientX}px, ${evt.clientY}px)` },
+      { duration: 500, fill: "forwards" }
+    );
+
+    // commitStyles() writes the end state of the animation to the animated
+    //element inside a style attribute
+    anim.commitStyles();
+
+    // If you explicitly want the animations to be retained, then you can invoke persist()
+    // But don't do this unless you really need to — having a huge list of animations
+    // persisted can cause a memory leak
+    //anim.persist()
+
+    // onremove allows you to run an event handler that fires when the animation
+    // was removed (i.e. put into an active replace state)
+    anim.onremove = function () {
+      console.log("Animation removed");
+    };
+
+    // replaceState allows you to query an element to see what its replace state is
+    // It will be active by default, or persisted if persist() was invoked
+    console.log(anim.replaceState);
+  });
+}
 ```
+
+#### HTML
+
+```html
+<p>
+  Click, tap, or press the space bar to start the animation (disabled by default
+  to protect those who suffer migraines when experiencing such animations).
+</p>
+<div></div>
+```
+
+#### CSS
+
+```css
+html {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  height: inherit;
+}
+
+div {
+  width: 150px;
+  height: 100px;
+  background-color: red;
+  border: 10px solid black;
+  border-radius: 10px;
+}
+
+p {
+  position: absolute;
+  width: 300px;
+  right: 10px;
+  bottom: 10px;
+}
+```
+
+{{embedlivesample("Removing_indefinite_animations")}}
 
 Here we have a `<div>` element, and an event listener that fires the event handler code whenever the mouse moves. The event handler sets up an animation that animates the `<div>` element to the position of the mouse pointer. This could result in a huge animations list, which could create a memory leak. For this reason, modern browsers automatically remove overriding forward filling animations.
 
