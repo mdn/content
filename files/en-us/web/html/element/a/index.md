@@ -2,6 +2,18 @@
 title: "<a>: The Anchor element"
 slug: Web/HTML/Element/a
 page-type: html-element
+tags:
+  - Content
+  - Element
+  - HTML
+  - HTML text-level semantics
+  - HTML:Flow content
+  - HTML:Interactive content
+  - HTML:Palpable Content
+  - HTML:Phrasing content
+  - Inline element
+  - Reference
+  - Web
 browser-compat: html.elements.a
 ---
 
@@ -151,6 +163,11 @@ a {
 <h2 id="Section_further_down">Section further down</h2>
 ```
 
+#### Result
+
+{{EmbedLiveSample('inking to an element on the same page')}}
+
+
 > **Note:** You can use `href="#top"` or the empty fragment (`href="#"`) to link to the top of the current page, [as defined in the HTML specification](https://html.spec.whatwg.org/multipage/browsing-the-web.html#scroll-to-the-fragment-identifier).
 
 ### Linking to an email address
@@ -160,6 +177,9 @@ To create links that open in the user's email program to let them send a new mes
 ```html
 <a href="mailto:nowhere@mozilla.org">Send email to nowhere</a>
 ```
+#### Result
+
+{{EmbedLiveSample('Linking to an email address')}}
 
 For details about `mailto:` URLs, such as including a subject or body, see [Email links](/en-US/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks#email_links) or {{RFC(6068)}}.
 
@@ -169,6 +189,10 @@ For details about `mailto:` URLs, such as including a subject or body, see [Emai
 <a href="tel:+49.157.0156">+49 157 0156</a>
 <a href="tel:+1(800)555-0123">(800) 555-0123</a>
 ```
+
+#### Result
+{{EmbedLiveSample('Linking to telephone numbers')}}
+
 
 `tel:` link behavior varies with device capabilities:
 
@@ -244,7 +268,7 @@ document
   );
 ```
 
-##### Result
+#### Result
 
 {{EmbedLiveSample('Example_painting_app_with_save_link', '100%', '400')}}
 
@@ -268,6 +292,9 @@ A sadly common mistake is to only link the words "click here" or "here":
 <p>Learn more about our products <a href="/products">here</a>.</p>
 ```
 
+#### Result
+{{EmbedLiveSample('Inaccessible, weak link text')}}
+
 #### Strong link text
 
 Luckily, this is an easy fix, and it's actually shorter than the inaccessible version!
@@ -275,6 +302,9 @@ Luckily, this is an easy fix, and it's actually shorter than the inaccessible ve
 ```html example-good
 <p>Learn more <a href="/products">about our products</a>.</p>
 ```
+
+#### Result
+{{EmbedLiveSample('Strong link text')}}
 
 Assistive software has shortcuts to list all links on a page. However, strong link text benefits all users — the "list all links" shortcut emulates how sighted users quickly scan pages.
 
@@ -300,6 +330,9 @@ People experiencing low vision conditions, navigating with the aid of screen rea
 </a>
 ```
 
+#### Result
+{{EmbedLiveSample('Link that opens a new tab/window')}}
+
 #### Link to a non-HTML resource
 
 ```html
@@ -319,6 +352,9 @@ If an icon is used to signify link behavior, make sure it has {{HTMLAttrxRef("al
   <img alt="(PowerPoint file)" src="ppt-icon.svg" />
 </a>
 ```
+
+#### Result
+{{EmbedLiveSample('Link to a non-HTML resource')}}
 
 - [WebAIM: Links and Hypertext - Hypertext Links](https://webaim.org/techniques/hypertext/hypertext_links)
 - [MDN / Understanding WCAG, Guideline 3.2](/en-US/docs/Web/Accessibility/Understanding_WCAG/Understandable#guideline_3.2_—_predictable_make_web_pages_appear_and_operate_in_predictable_ways)
@@ -350,6 +386,8 @@ A **skip link** is a link placed as early as possible in {{HTMLElement("body")}}
   top: 0;
 }
 ```
+
+{{EmbedLiveSample('Skip links')}}
 
 Skip links let keyboard users bypass content repeated throughout multiple pages, such as header navigation.
 
@@ -386,19 +424,19 @@ Spacing may be created using CSS properties like {{CSSxRef("margin")}}.
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/Web/HTML/Content_categories"
+        <a href="/en-US/docs/Web/Guide/HTML/Content_categories"
           >Content categories</a
         >
       </th>
       <td>
-        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
+        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
           >Flow content</a
         >,
-        <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content"
+        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content"
           >phrasing content</a
         >,
         <a
-          href="/en-US/docs/Web/HTML/Content_categories#interactive_content"
+          href="/en-US/docs/Web/Guide/HTML/Content_categories#interactive_content"
           >interactive content</a
         >, palpable content.
       </td>
@@ -407,11 +445,11 @@ Spacing may be created using CSS properties like {{CSSxRef("margin")}}.
       <th scope="row">Permitted content</th>
       <td>
         <a
-          href="/en-US/docs/Web/HTML/Content_categories#transparent_content_model"
+          href="/en-US/docs/Web/Guide/HTML/Content_categories#transparent_content_model"
           >Transparent</a
         >, except that no descendant may be
         <a
-          href="/en-US/docs/Web/HTML/Content_categories#interactive_content"
+          href="/en-US/docs/Web/Guide/HTML/Content_categories#interactive_content"
           >interactive content</a
         > or an
         <a href="/en-US/docs/Web/HTML/Element/a"
@@ -431,10 +469,10 @@ Spacing may be created using CSS properties like {{CSSxRef("margin")}}.
       <th scope="row">Permitted parents</th>
       <td>
         Any element that accepts
-        <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content"
+        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content"
           >phrasing content</a
         >, or any element that accepts
-        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
+        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
           >flow content</a
         >, but not other <code>&#x3C;a></code> elements.
       </td>
