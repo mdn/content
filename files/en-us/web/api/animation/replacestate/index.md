@@ -7,7 +7,7 @@ browser-compat: api.Animation.replaceState
 
 {{ APIRef("Web Animations") }}
 
-The read-only **`Animation.replaceState`** property of the [Web Animations API](/en-US/docs/Web/API/Web_Animations_API) returns the [replace state](https://drafts.csswg.org/web-animations-1/#animation-replace-state) of the animation. This will be `removed` if the animation has been automatically removed, or `persisted` if {{domxref("Animation.persist()")}} has been invoked on it.
+The read-only **`Animation.replaceState`** property of the [Web Animations API](/en-US/docs/Web/API/Web_Animations_API) indicates whether the animation has been automatically removed after being replaced by another animation.
 
 ## Value
 
