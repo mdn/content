@@ -165,6 +165,7 @@ To create links that open in the user's email program to let them send a new mes
 ```html
 <a href="mailto:nowhere@mozilla.org">Send email to nowhere</a>
 ```
+
 #### Result
 
 {{EmbedLiveSample('Linking to an email address')}}
@@ -179,6 +180,7 @@ For details about `mailto:` URLs, such as including a subject or body, see [Emai
 ```
 
 #### Result
+
 {{EmbedLiveSample('Linking to telephone numbers')}}
 
 
@@ -256,7 +258,7 @@ document
   );
 ```
 
-#### Result
+##### Result
 
 {{EmbedLiveSample('Example_painting_app_with_save_link', '100%', '400')}}
 
@@ -280,7 +282,8 @@ A sadly common mistake is to only link the words "click here" or "here":
 <p>Learn more about our products <a href="/products">here</a>.</p>
 ```
 
-#### Result
+##### Result
+
 {{EmbedLiveSample('Inaccessible, weak link text')}}
 
 #### Strong link text
@@ -291,7 +294,8 @@ Luckily, this is an easy fix, and it's actually shorter than the inaccessible ve
 <p>Learn more <a href="/products">about our products</a>.</p>
 ```
 
-#### Result
+##### Result
+
 {{EmbedLiveSample('Strong link text')}}
 
 Assistive software has shortcuts to list all links on a page. However, strong link text benefits all users — the "list all links" shortcut emulates how sighted users quickly scan pages.
@@ -318,7 +322,8 @@ People experiencing low vision conditions, navigating with the aid of screen rea
 </a>
 ```
 
-#### Result
+##### Result
+
 {{EmbedLiveSample('Link that opens a new tab/window')}}
 
 #### Link to a non-HTML resource
@@ -341,7 +346,8 @@ If an icon is used to signify link behavior, make sure it has {{HTMLAttrxRef("al
 </a>
 ```
 
-#### Result
+##### Result
+
 {{EmbedLiveSample('Link to a non-HTML resource')}}
 
 - [WebAIM: Links and Hypertext - Hypertext Links](https://webaim.org/techniques/hypertext/hypertext_links)
