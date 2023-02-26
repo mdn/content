@@ -62,38 +62,21 @@ function startAnimation() {
 #### HTML
 
 ```html
+<button>Click to drag</button>
 <p>
   Click the button to start the animation (disabled by default to protect those
   who suffer migraines when experiencing such animations).
 </p>
-<button>Click to drag</button>
 ```
 
 #### CSS
 
 ```css
-html {
-  height: 100%;
-}
-
+:root,
 body {
   margin: 0;
-  height: inherit;
-}
-
-button {
-  width: 150px;
-  height: 100px;
-  background-color: red;
-  border: 10px solid black;
-  border-radius: 10px;
-}
-
-p {
-  position: absolute;
-  width: 300px;
-  right: 10px;
-  bottom: 10px;
+  padding: 0;
+  height: 100%;
 }
 ```
 
