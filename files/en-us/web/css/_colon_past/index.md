@@ -2,6 +2,8 @@
 title: ":past"
 slug: Web/CSS/:past
 page-type: css-pseudo-class
+status:
+  - experimental
 browser-compat: css.selectors.past
 ---
 

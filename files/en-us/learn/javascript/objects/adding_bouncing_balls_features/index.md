@@ -1,16 +1,6 @@
 ---
 title: Adding features to our bouncing balls demo
 slug: Learn/JavaScript/Objects/Adding_bouncing_balls_features
-tags:
-  - Assessment
-  - Beginner
-  - CodingScripting
-  - JavaScript
-  - Learn
-  - OOJS
-  - Object-Oriented
-  - Objects
-  - "l10n:priority"
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Objects/Object_building_practice", "", "Learn/JavaScript/Objects")}}
@@ -175,7 +165,7 @@ Now we've defined the evil circle, we need to actually make it appear in our sce
 
 To implement the score counter, follow the following steps:
 
-1. In your HTML file, add a {{HTMLElement("p")}} element just below the {{HTMLElement("h1")}} element containing the text "Ball count: ".
+1. In your HTML file, add a {{HTMLElement("p")}} element just below the {{HTMLElement("Heading_Elements", "h1")}} element containing the text "Ball count: ".
 2. In your CSS file, add the following rule at the bottom:
 
    ```css

@@ -2,10 +2,6 @@
 title: nonce
 slug: Web/HTML/Global_attributes/nonce
 page-type: html-attribute
-tags:
-  - Global attributes
-  - HTML
-  - Reference
 browser-compat: html.global_attributes.nonce
 ---
 

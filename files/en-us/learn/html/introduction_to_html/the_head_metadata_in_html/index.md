@@ -1,16 +1,6 @@
 ---
 title: What's in the head? Metadata in HTML
 slug: Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML
-tags:
-  - Beginner
-  - CodingScripting
-  - Guide
-  - HTML
-  - Meta
-  - favicon
-  - head
-  - lang
-  - metadata
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/Getting_started", "Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals", "Learn/HTML/Introduction_to_HTML")}}
@@ -64,13 +54,13 @@ The HTML head is the contents of the {{htmlelement("head")}} element. Unlike the
 </head>
 ```
 
-In larger pages however, the head can get quite large. Try going to some of your favorite websites and use the [developer tools](/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools) to check out their head contents. Our aim here is not to show you how to use everything that can possibly be put in the head, but rather to teach you how to use the major elements that you'll want to include in the head, and give you some familiarity. Let's get started.
+In larger pages however, the head can get quite large. Try going to some of your favorite websites and use the [developer tools](/en-US/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools) to check out their head contents. Our aim here is not to show you how to use everything that can possibly be put in the head, but rather to teach you how to use the major elements that you'll want to include in the head, and give you some familiarity. Let's get started.
 
 ## Adding a title
 
-We've already seen the {{htmlelement("title")}} element in action — this can be used to add a title to the document. This however can get confused with the {{htmlelement("h1")}} element, which is used to add a top level heading to your body content — this is also sometimes referred to as the page title. But they are different things!
+We've already seen the {{htmlelement("title")}} element in action — this can be used to add a title to the document. This however can get confused with the {{htmlelement("Heading_Elements", "h1")}} element, which is used to add a top level heading to your body content — this is also sometimes referred to as the page title. But they are different things!
 
-- The {{htmlelement("h1")}} element appears on the page when loaded in the browser — generally this should be used once per page, to mark up the title of your page content (the story title, or news headline, or whatever is appropriate to your usage.)
+- The {{htmlelement("Heading_Elements", "h1")}} element appears on the page when loaded in the browser — generally this should be used once per page, to mark up the title of your page content (the story title, or news headline, or whatever is appropriate to your usage.)
 - The {{htmlelement("title")}} element is metadata that represents the title of the overall HTML document (not the document's content.)
 
 ### Active learning: Inspecting a simple example

@@ -1,15 +1,6 @@
 ---
 title: "ARIA: slider role"
 slug: Web/Accessibility/ARIA/Roles/slider_role
-tags:
-  - Accessibility
-  - ARIA
-  - roles
-  - Reference
-  - ARIA roles
-  - widget role
-  - widget
-  - slider role
 spec-urls: https://w3c.github.io/aria/#slider
 ---
 

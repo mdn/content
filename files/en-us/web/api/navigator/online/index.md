@@ -25,10 +25,10 @@ is running a virtualization software that has virtual ethernet adapters that are
 "connected." Therefore, if you really want to determine the online status of the
 browser, you should develop additional means for checking.
 
-In Firefox and Internet Explorer, switching the browser to offline mode sends a
-`false` value. Until Firefox 41, all other conditions return a
-`true` value; testing actual behavior on Nightly 68 on Windows shows that it
-only looks for LAN connection like Chrome and Safari giving false positives.
+In Firefox, switching the browser to offline mode sends a `false` value. Until Firefox
+41, all other conditions returned a `true` value; testing actual behavior on Nightly 68 on
+Windows shows that it only looks for LAN connection like Chrome and Safari giving false
+positives.
 
 You can see changes in the network state by listening to the [`online`](/en-US/docs/Web/API/Window/online_event) and [`offline`](/en-US/docs/Web/API/Window/offline_event) events.
 

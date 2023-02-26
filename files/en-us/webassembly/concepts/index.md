@@ -1,17 +1,6 @@
 ---
 title: WebAssembly Concepts
 slug: WebAssembly/Concepts
-tags:
-  - C
-  - C++
-  - Emscripten
-  - JavaScript
-  - WebAssembly
-  - AssemblyScript
-  - concepts
-  - rust
-  - text format
-  - web platform
 ---
 
 {{WebAssemblySidebar}}

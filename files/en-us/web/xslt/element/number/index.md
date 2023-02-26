@@ -1,11 +1,6 @@
 ---
 title: <xsl:number>
 slug: Web/XSLT/Element/number
-tags:
-  - Element
-  - Number
-  - Reference
-  - XSLT
 ---
 
 {{ XsltRef() }}

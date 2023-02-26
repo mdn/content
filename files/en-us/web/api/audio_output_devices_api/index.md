@@ -2,13 +2,15 @@
 title: Audio Output Devices API
 slug: Web/API/Audio_Output_Devices_API
 page-type: web-api-overview
+status:
+  - experimental
 browser-compat:
   - api.MediaDevices.selectAudioOutput
   - api.HTMLMediaElement.setSinkId
   - api.HTMLMediaElement.sinkId
 ---
 
-{{DefaultAPISidebar("Audio Output Devices API")}} {{securecontext_header}}
+{{DefaultAPISidebar("Audio Output Devices API")}}{{securecontext_header}}{{SeeCompatTable}}
 
 The **Audio Output Devices API** allows web applications to prompt users about what audio output device should be used for playback.
 

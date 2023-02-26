@@ -1,11 +1,6 @@
 ---
 title: Firefox 111 for developers
 slug: Mozilla/Firefox/Releases/111
-tags:
-  - "111"
-  - Firefox
-  - Mozilla
-  - Release
 ---
 
 {{FirefoxSidebar}}
@@ -18,6 +13,9 @@ This article provides information about the changes in Firefox 111 that affect d
 
 ### HTML
 
+- The [`autocapitalize`](/en-US/docs/Web/HTML/Global_attributes/autocapitalize) global attribute is now supported by default. The default value for the attribute is `none`, so no capitalization occurs ([Firefox bug 1692007](https://bugzil.la/1692007)).
+- The [`translate`](/en-US/docs/Web/HTML/Global_attributes/translate) global attribute is now supported ([Firefox bug 1418449](https://bugzil.la/1418449)).
+
 #### Removals
 
 ### CSS
@@ -29,6 +27,9 @@ This article provides information about the changes in Firefox 111 that affect d
 #### Removals
 
 ### SVG
+
+- The `context-stroke` and `context-fill` values are now supported inside `<marker>` elements.
+  For more information on using these values with `fill` and `stroke` properties, see the [`<marker>`](/en-US/docs/Web/SVG/Element/marker) documentation ({{bug(752638)}}).
 
 #### Removals
 
@@ -45,7 +46,7 @@ This article provides information about the changes in Firefox 111 that affect d
 - [Origin private file system (OPFS)](/en-US/docs/Web/API/File_System_Access_API#origin_private_file_system) is now supported when using the [File System Access API](/en-US/docs/Web/API/File_System_Access_API).
   The data in this file system is origin-specific: permission prompts are not required to access files, and clearing data for the site/origin deletes the storage.
   The OPFS is accessed with the {{domxref("StorageManager.getDirectory()")}} method, by calling `navigator.storage.getDirectory()` in a worker or the main thread.
-  See {{bug(1785123)}} for more details.
+  See [Firefox bug 1785123](https://bugzil.la/1785123) for more details.
 
 #### DOM
 
@@ -53,7 +54,7 @@ This article provides information about the changes in Firefox 111 that affect d
 
 - [`RTCInboundRtpStreamStats.trackIdentifier`](/en-US/docs/Web/API/RTCInboundRtpStreamStats#trackidentifier) is now supported.
   This allows developers to associate `inbound-rtp` statistics with a particular track when using {{domxref("RTCPeerConnection.getStats()")}}.
-  (For more information see {{bug(1680606)}}.)
+  (For more information see [Firefox bug 1680606](https://bugzil.la/1680606).)
 
 #### Removals
 

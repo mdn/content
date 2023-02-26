@@ -1,13 +1,6 @@
 ---
 title: aria-rowspan
 slug: Web/Accessibility/ARIA/Attributes/aria-rowspan
-tags:
-  - Accessibility
-  - ARIA
-  - ARIA attribute
-  - ARIA property
-  - aria-rowspan
-  - Reference
 spec-urls: https://w3c.github.io/aria/#aria-rowspan
 ---
 

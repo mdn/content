@@ -2,17 +2,9 @@
 title: '<shadow>: The Shadow Root element'
 slug: Web/HTML/Element/shadow
 page-type: html-element
-tags:
-  - Deprecated
-  - Element
-  - HTML
-  - HTML Web Components
-  - Reference
-  - Shadow Root
-  - Web Components
-  - shadow
-  - shadow dom
-  - Non-standard
+status:
+  - deprecated
+  - non-standard
 browser-compat: html.elements.shadow
 ---
 
@@ -24,13 +16,13 @@ The **`<shadow>`** [HTML](/en-US/docs/Web/HTML) element—an obsolete part of th
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories"
+        <a href="/en-US/docs/Web/HTML/Content_categories"
           >Content categories</a
         >
       </th>
       <td>
         <a
-          href="/en-US/docs/Web/Guide/HTML/Content_categories#transparent_content_model"
+          href="/en-US/docs/Web/HTML/Content_categories#transparent_content_model"
           >Transparent content</a
         >
       </td>
@@ -38,7 +30,7 @@ The **`<shadow>`** [HTML](/en-US/docs/Web/HTML) element—an obsolete part of th
     <tr>
       <th scope="row">Permitted content</th>
       <td>
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
           >Flow content</a
         >
       </td>

@@ -48,16 +48,20 @@ None.
 
 ```js
 // Create the event.
-const event = document.createEvent('Event');
+const event = document.createEvent("Event");
 
 // Create a click event that bubbles up and
 // cannot be canceled
-event.initEvent('click', true, false);
+event.initEvent("click", true, false);
 
 // Listen for the event.
-elem.addEventListener('click', (e) => {
-  // e.target matches elem
-}, false);
+elem.addEventListener(
+  "click",
+  (e) => {
+    // e.target matches elem
+  },
+  false
+);
 
 elem.dispatchEvent(event);
 ```

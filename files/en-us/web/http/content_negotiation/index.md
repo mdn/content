@@ -96,7 +96,7 @@ In contrast to the previous `Accept-*` headers, which are sent by the client, th
 
 The special value '`*`' means that the server-driven content negotiation also uses information not conveyed in a header to choose the appropriate content.
 
-The `Vary` header was added in version 1.1 of HTTP and allows caches to work appropriately. To work with server-driven content negotiation, a cache needs to know which criteria the server used to select the transmitted content. That way, the cache can replay the algorithm and will be able to serve acceptable content directly, without more requests to the server. Obviously, the wildcard '`*`' prevents caching from occurring, as the cache can't know what element is behind it. For more information, see [HTTP caching > Varying responses](/en-US/docs/Web/HTTP/Caching#varying_responses).
+The `Vary` header was added in version 1.1 of HTTP and allows caches to work appropriately. To work with server-driven content negotiation, a cache needs to know which criteria the server used to select the transmitted content. That way, the cache can replay the algorithm and will be able to serve acceptable content directly, without more requests to the server. Obviously, the wildcard '`*`' prevents caching from occurring, as the cache can't know what element is behind it. For more information, see [HTTP caching > Varying responses](/en-US/docs/Web/HTTP/Caching#vary).
 
 ## Agent-driven negotiation
 

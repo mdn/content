@@ -1,12 +1,6 @@
 ---
 title: State Partitioning
 slug: Web/Privacy/State_Partitioning
-tags:
-  - Firefox
-  - Privacy
-  - Mozilla
-  - Storage
-  - tracking
 ---
 
 {{QuicklinksWithSubPages("Web/Privacy")}}
@@ -152,7 +146,7 @@ Details about automatic grants are provided in the
 
 [Service Workers](/en-US/docs/Web/API/Service_Worker_API)
 are currently disabled in partitioned contexts when dynamic partitioning is
-enabled. In [Bug 1495241](https://bugzilla.mozilla.org/show_bug.cgi?id=1495241)
+enabled. In [Bug 1495241](https://bugzil.la/1495241)
 we are exploring options to enable Service Workers in partitioned contexts.
 
 #### Storage Access Heuristics

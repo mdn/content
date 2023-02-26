@@ -1,10 +1,6 @@
 ---
 title: MathML scripted elements
 slug: Learn/MathML/First_steps/Scripts
-tags:
-  - Beginner
-  - MathML
-  - Landing
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/MathML/First_steps/Fractions_and_roots", "Learn/MathML/First_steps/Tables", "Learn/MathML/First_steps")}}

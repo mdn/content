@@ -31,7 +31,7 @@ This means that if extension X tries to change a setting:
 
 An extension can find out which of these scenarios applies by examining the "`levelOfControl`" property returned from a call to [`BrowserSetting.get()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/types/BrowserSetting/get).
 
-The [`BrowserSetting.set()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/types/BrowserSetting/set) method returns a Promise that resolves to a boolean: if an attempt to change a setting actually results in the setting being changed (scenarios 2 and 3 above) the boolean is `true`: otherwise it is `false`.
+The `BrowserSetting.set()` method returns a Promise that resolves to a boolean: if an attempt to change a setting actually results in the setting being changed (scenarios 2 and 3 above) the boolean is `true`: otherwise it is `false`.
 
 ## Syntax
 

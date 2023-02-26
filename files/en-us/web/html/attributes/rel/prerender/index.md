@@ -2,13 +2,8 @@
 title: rel=prerender
 slug: Web/HTML/Attributes/rel/prerender
 page-type: html-attribute-value
-tags:
-  - Attribute
-  - HTML
-  - Link
-  - Link types
-  - Reference
-  - Experimental
+status:
+  - experimental
 browser-compat: html.elements.link.rel.prerender
 ---
 

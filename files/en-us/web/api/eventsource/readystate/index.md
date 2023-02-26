@@ -22,7 +22,7 @@ A number representing the state of the connection. Possible values are:
 ## Examples
 
 ```js
-const evtSource = new EventSource('sse.php');
+const evtSource = new EventSource("sse.php");
 console.log(evtSource.readyState);
 ```
 
