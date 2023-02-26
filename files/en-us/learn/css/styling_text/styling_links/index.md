@@ -79,7 +79,6 @@ The example below illustrates what a link will behave like by default (the CSS i
 
 - Active links are red. Try holding down the mouse button on the link as you click it.
 
-
 ```html
 <p><a href="#">A simple link</a></p>
 ```
