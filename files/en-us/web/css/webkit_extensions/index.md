@@ -456,7 +456,7 @@ The following properties were once supported with the -webkit- prefix but are no
 ## Pseudo-classes
 
 - {{CSSxRef(":animating-full-screen-transition", ":-webkit-animating-full-screen-transition")}}
-- {{CSSxRef(":any", ":-webkit-any()")}}
+- {{CSSxRef(":is", ":-webkit-any()")}}
 - {{CSSxRef(":any-link", ":-webkit-any-link")}}\*
 - {{CSSxRef(":autofill",":-webkit-autofill")}}
 - {{CSSxRef(":autofill-strong-password",":-webkit-autofill-strong-password")}}

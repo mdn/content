@@ -265,7 +265,7 @@ Elements in HTML have **attributes**; these are additional values that configure
     </tr>
     <tr>
       <td>
-        <code><a href="/en-US/docs/Web/HTML/Element/applet#attr-code">code</a></code>
+        <code><a href="/en-US/docs/Web/HTML/Element/applet#code">code</a></code>
       </td>
       <td>{{ HTMLElement("applet") }}</td>
       <td>
@@ -274,7 +274,7 @@ Elements in HTML have **attributes**; these are additional values that configure
     </tr>
     <tr>
       <td>
-        <code><a href="/en-US/docs/Web/HTML/Element/applet#attr-codebase">codebase</a></code>
+        <code><a href="/en-US/docs/Web/HTML/Element/applet#codebase">codebase</a></code>
       </td>
       <td>{{ HTMLElement("applet") }}</td>
       <td>
@@ -363,7 +363,7 @@ Elements in HTML have **attributes**; these are additional values that configure
     </tr>
     <tr>
       <td>
-        <code><a href="/en-US/docs/Web/HTML/Element/area#attr-coords">coords</a></code>
+        <code><a href="/en-US/docs/Web/HTML/Element/area#coords">coords</a></code>
       </td>
       <td>{{ HTMLElement("area") }}</td>
       <td>
@@ -1044,7 +1044,7 @@ Elements in HTML have **attributes**; these are additional values that configure
     </tr>
     <tr>
       <td>
-        <code><a href="/en-US/docs/Web/HTML/Element/a#attr-ping">ping</a></code>
+        <code><a href="/en-US/docs/Web/HTML/Element/a#ping">ping</a></code>
       </td>
       <td>{{ HTMLElement("a") }}, {{ HTMLElement("area") }}</td>
       <td>

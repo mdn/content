@@ -36,7 +36,7 @@ _npm_ can also be used to (globally) install the _Express Application Generator_
 
 > **Note:** Unlike some other web frameworks, the development environment does not include a separate development web server. In _Node_/_Express_ a web application creates and runs its own web server!
 
-There are other peripheral tools that are part of a typical development environment, including [text editors](/en-US/docs/Learn/Common_questions/Available_text_editors) or IDEs for editing code, and source control management tools like [Git](https://git-scm.com/) for safely managing different versions of your code. We are assuming that you've already got these sorts of tools installed (in particular a text editor).
+There are other peripheral tools that are part of a typical development environment, including [text editors](/en-US/docs/Learn/Common_questions/Tools_and_setup/Available_text_editors) or IDEs for editing code, and source control management tools like [Git](https://git-scm.com/) for safely managing different versions of your code. We are assuming that you've already got these sorts of tools installed (in particular a text editor).
 
 ### What operating systems are supported?
 
