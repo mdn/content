@@ -35,8 +35,7 @@ const context = canvas.getContext('webgpu');
 context.configure({
   device: device,
   format: navigator.gpu.getPreferredCanvasFormat(),
-  alphaMode: 'premultiplied',
-  usage: GPUTextureUsage.COPY_SRC | GPUTextureUsage.RENDER_ATTACHMENT
+  alphaMode: 'premultiplied'
 });
 
 //...
@@ -45,7 +44,7 @@ const commandEncoder = device.createCommandEncoder();
 
 const renderPassDescriptor = {
   colorAttachments: [{
-    clearValue: clearColor,
+    clearValue: [0, 0, 0, 1], // Opaque black
     loadOp: 'clear',
     storeOp: 'store',
     view: context.getCurrentTexture().createView()

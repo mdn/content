@@ -23,7 +23,7 @@ _Inherits properties from its parent, {{DOMxRef("EventTarget")}}._
   - : A {{domxref("GPUSupportedFeatures")}} object that describes additional functionality supported by the device.
 
 - {{domxref("GPUDevice.label", "label")}} {{Experimental_Inline}}
-  - : A string providing an identifying label that can be used to identify the object, for example in {{domxref("GPUError")}} messages or console warnings.
+  - : A string providing a label that can be used to identify the object, for example in {{domxref("GPUError")}} messages or console warnings.
 
 - {{domxref("GPUDevice.limits", "limits")}} {{Experimental_Inline}} {{readonlyinline}}
   - : A {{domxref("GPUSupportedLimits")}} object that describes the limits supported by the device.
@@ -54,13 +54,13 @@ _Inherits methods from its parent, {{DOMxRef("EventTarget")}}._
   - : Creates a {{domxref("GPUComputePipeline")}} that can control the compute shader stage and be used in a {{domxref("GPUComputePassEncoder")}}.
 
 - {{domxref("GPUDevice.createComputePipelineAsync", "createComputePipelineAsync()")}} {{Experimental_Inline}}
-  - : Returns a {{jsxref("Promise")}} that fulfills with a {{domxref("GPUComputePipeline")}}, which can control the compute shader stage and be used in a {{domxref("GPUComputePassEncoder")}}.
+  - : Returns a {{jsxref("Promise")}} that fulfills with a {{domxref("GPUComputePipeline")}}, which can control the compute shader stage and be used in a {{domxref("GPUComputePassEncoder")}}, once the pipeline can be used without any stalling.
 
 - {{domxref("GPUDevice.createPipelineLayout", "createPipelineLayout()")}} {{Experimental_Inline}}
-  - : Creates a {{domxref("GPUPipelineLayout")}} that defines the mapping between resources referenced by {{domxref("GPUBindGroup")}} objects referenced during command encoding, and the shaders of a pipeline.
+  - : Creates a {{domxref("GPUPipelineLayout")}} that defines the {{domxref("GPUBindGroupLayout")}}s used by a pipeline. {{domxref("GPUBindGroup")}}s used with the pipeline during command encoding must have compatible {{domxref("GPUBindGroupLayout")}}s.
 
 - {{domxref("GPUDevice.createQuerySet", "createQuerySet()")}} {{Experimental_Inline}}
-  - : Creates a {{domxref("GPUQuerySet")}} that can be used to record occlusion and timestamp queries on passes.
+  - : Creates a {{domxref("GPUQuerySet")}} that can be used to record the results of queries on passes, such as occlusion or timestamp queries.
 
 - {{domxref("GPUDevice.createRenderBundleEncoder", "createRenderBundleEncoder()")}} {{Experimental_Inline}}
   - : Creates a {{domxref("GPURenderBundleEncoder")}} that can be used to pre-record bundles of commands. These can be reused in {{domxref("GPURenderPassEncoder")}}s via the {{domxref("GPURenderPassEncoder.executeBundles", "executeBundles()")}} method, as many times as required.
@@ -69,10 +69,10 @@ _Inherits methods from its parent, {{DOMxRef("EventTarget")}}._
   - : Creates a {{domxref("GPURenderPipeline")}} that can control the vertex and fragment shader stages and be used in a {{domxref("GPURenderPassEncoder")}} or {{domxref("GPURenderBundleEncoder")}}.
 
 - {{domxref("GPUDevice.createRenderPipelineAsync", "createRenderPipelineAsync()")}} {{Experimental_Inline}}
-  - : Returns a {{jsxref("Promise")}} that fulfills with a {{domxref("GPURenderPipeline")}}, which can control the vertex and fragment shader stages and be used in a {{domxref("GPURenderPassEncoder")}} or {{domxref("GPURenderBundleEncoder")}}.
+  - : Returns a {{jsxref("Promise")}} that fulfills with a {{domxref("GPURenderPipeline")}}, which can control the vertex and fragment shader stages and be used in a {{domxref("GPURenderPassEncoder")}} or {{domxref("GPURenderBundleEncoder")}}, once the pipeline can be used without any stalling.
 
 - {{domxref("GPUDevice.createSampler", "createSampler()")}} {{Experimental_Inline}}
-  - : Creates a {{domxref("GPUSampler")}} to encode transformations and filtering information, which can be used in a shader to interpret texture resource data.
+  - : Creates a {{domxref("GPUSampler")}}, which controls how shaders transform and filter texture resource data.
 
 - {{domxref("GPUDevice.createShaderModule", "createShaderModule()")}} {{Experimental_Inline}}
   - : Creates a {{domxref("GPUShaderModule")}} from a string of WGSL source code.
@@ -87,7 +87,7 @@ _Inherits methods from its parent, {{DOMxRef("EventTarget")}}._
   - : Takes an {{domxref("HTMLVideoElement")}} as an input and returns a {{domxref("GPUExternalTexture")}} wrapper object containing a snapshot of the video that can be used in GPU rendering operations.
 
 - {{domxref("GPUDevice.popErrorScope", "popErrorScope()")}} {{Experimental_Inline}}
-  - : Pops an existing GPU error scope from the error scope stack and returns a {{jsxref("Promise")}} that resolves to an object ({{domxref("GPUValidationError")}} or {{domxref("GPUOutOfMemoryError")}}) describing the first error captured in the scope.
+  - : Pops an existing GPU error scope from the error scope stack and returns a {{jsxref("Promise")}} that resolves to an object ({{domxref("GPUInternalError")}}, {{domxref("GPUOutOfMemoryError")}}, or {{domxref("GPUValidationError")}}) describing the first error captured in the scope, or `null` if no error occurred.
 
 - {{domxref("GPUDevice.pushErrorScope", "pushErrorScope()")}} {{Experimental_Inline}}
   - : Pushes a new GPU error scope onto the error scope stack, allowing you to capture errors of a particular type.

@@ -9,7 +9,7 @@ browser-compat: api.GPUCanvasContext
 
 {{APIRef("WebGPU API")}}{{SeeCompatTable}}
 
-The **`GPUCanvasContext`** interface of the {{domxref("WebGPU API", "WebGPU API", "", "nocode")}} represents the WebGPU rendering context of a {{htmlelement("canvas")}} element, returned via a {{domxref("HTMLCanvasElement.getContext()")}} call with a `contextType` of `webgpu`.
+The **`GPUCanvasContext`** interface of the {{domxref("WebGPU API", "WebGPU API", "", "nocode")}} represents the WebGPU rendering context of a {{htmlelement("canvas")}} element, returned via a {{domxref("HTMLCanvasElement.getContext()")}} call with a `contextType` of `"webgpu"`.
 
 {{InheritanceDiagram}}
 
@@ -21,7 +21,7 @@ The **`GPUCanvasContext`** interface of the {{domxref("WebGPU API", "WebGPU API"
 ## Instance methods
 
 - {{domxref("GPUCanvasContext.configure", "configure()")}} {{Experimental_Inline}}
-  - : Configures the context for this canvas, and clears the drawing buffer to transparent black.
+  - : Configures the context for use with a given {{domxref("GPUDevice")}} and clears the canvas to transparent black.
 - {{domxref("GPUCanvasContext.getCurrentTexture", "getCurrentTexture()")}} {{Experimental_Inline}}
   - : Returns the next {{domxref("GPUTexture")}} to be composited to the document by the canvas context.
 - {{domxref("GPUCanvasContext.unconfigure", "unconfigure()")}} {{Experimental_Inline}}
@@ -36,8 +36,7 @@ const context = canvas.getContext('webgpu');
 context.configure({
   device: device,
   format: navigator.gpu.getPreferredCanvasFormat(),
-  alphaMode: 'premultiplied',
-  usage: GPUTextureUsage.COPY_SRC | GPUTextureUsage.RENDER_ATTACHMENT
+  alphaMode: 'premultiplied'
 });
 ```
 

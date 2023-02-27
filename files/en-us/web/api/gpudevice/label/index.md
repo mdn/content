@@ -10,7 +10,7 @@ browser-compat: api.GPUDevice.label
 {{APIRef("WebGPU API")}}{{SeeCompatTable}}
 
 The **`label`** read-only property of the
-{{domxref("GPUDevice")}} interface is a string providing an identifying label that can be used to identify the object, for example in {{domxref("GPUError")}} messages or console warnings.
+{{domxref("GPUDevice")}} interface is a string providing a label that can be used to identify the object, for example in {{domxref("GPUError")}} messages or console warnings.
 
 ## Value
 

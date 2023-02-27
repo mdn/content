@@ -458,87 +458,107 @@ WebGPU improves on this with an asynchronous approach. Each {{domxref("GPUDevice
 
 Once you are done capturing errors, you can end capture by invoking {{domxref("GPUDevice.popErrorScope()")}}. This pops the scope from the stack and returns a {{jsxref("Promise")}} that resolves to an object ({{domxref("GPUValidationError")}} or {{domxref("GPUOutOfMemoryError")}}) describing the first error captured in the scope, or `null` if no errors were captured.
 
-You can find more information about WebGPU error handling in the explainer — see [Object validity and destroyed-ness](https://gpuweb.github.io/gpuweb/explainer/#invalid-and-destroyed) and [Errors](https://gpuweb.github.io/gpuweb/explainer/#errors)
+You can find more information about WebGPU error handling in the explainer — see [Object validity and destroyed-ness](https://gpuweb.github.io/gpuweb/explainer/#invalid-and-destroyed) and [Errors](https://gpuweb.github.io/gpuweb/explainer/#errors). [WebGPU Error Handling best practices](https://toji.dev/webgpu-best-practices/error-handling) provides useful real-world examples and advice.
 
 ## Interfaces
 
+### Entry point for the API
+
+- {{domxref("Navigator.gpu")}} / {{domxref("WorkerNavigator.gpu")}}
+  - : The entry point for the API — returns the {{domxref("GPU")}} object for the current context.
 - {{domxref("GPU")}}
   - : The starting point for using WebGPU. It can be used to return a `GPUAdapter`.
 - {{domxref("GPUAdapter")}}
-  - : Represents a GPU adapter. From this you can request a {{domxref("GPUDevice")}} to start using functionality of a device GPU and return adapter info, features, and limits.
+  - : Represents a GPU adapter. From this you can request a {{domxref("GPUDevice")}}, adapter info, features, and limits.
 - {{domxref("GPUAdapterInfo")}}
   - : Represents a {{domxref("GPUAdapterInfo")}} object containing identifying information about an adapter.
-- {{domxref("GPUBindGroup")}}
-  - : xxx
-- {{domxref("GPUBindGroupLayout")}}
-  - : xxx
-- {{domxref("GPUBuffer")}}
-  - : xxx
-- {{domxref("GPUCanvasContext")}}
-  - : Represents the WebGPU rendering context of a {{htmlelement("canvas")}} element, returned via a {{domxref("HTMLCanvasElement.getContext()")}} call with a `contextType` of `webgpu`.
-- {{domxref("GPUCommandBuffer")}}
-  - : xxx
-- {{domxref("GPUCommandEncoder")}}
-  - : xxx
-- {{domxref("GPUCompilationInfo")}}
-  - : xxx
-- {{domxref("GPUCompilationMessage")}}
-  - : xxx
-- {{domxref("GPUComputePassEncoder")}}
-  - : xxx
-- {{domxref("GPUComputePipeline")}}
-  - : xxx
+
+### Configuring GPUDevices
+
 - {{domxref("GPUDevice")}}
   - : Represents a logical GPU device. This is the main interface through which the majority of WebGPU functionality is accessed.
-- {{domxref("GPUDeviceLostInfo")}}
-  - : xxx
-- {{domxref("GPUError")}}
-  - : xxx
-- {{domxref("GPUExternalTexture")}}
-  - : xxx
-- {{domxref("GPUInternalError")}}
-  - : xxx
-- {{domxref("GPUOutOfMemoryError")}}
-  - : xxx
-- {{domxref("GPUPipelineError")}}
-  - : xxx
-- {{domxref("GPUPipelineLayout")}}
-  - : xxx
-- {{domxref("GPUQuerySet")}}
-  - : xxx
-- {{domxref("GPUQueue")}}
-  - : xxx
-- {{domxref("GPURenderBundle")}}
-  - : xxx
-- {{domxref("GPURenderBundleEncoder")}}
-  - : xxx
-- {{domxref("GPURenderPassEncoder")}}
-  - : xxx
-- {{domxref("GPURenderPipeline")}}
-  - : xxx
-- {{domxref("GPUSampler")}}
-  - : xxx
-- {{domxref("GPUShaderModule")}}
-  - : xxx
 - {{domxref("GPUSupportedFeatures")}}
-  - : A [setlike](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set) object that describes additional functionality supported by a {{domxref("GPUAdapter")}}.
+  - : A [setlike](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set) object that describes additional functionality supported by a {{domxref("GPUAdapter")}} or {{domxref("GPUDevice")}}.
 - {{domxref("GPUSupportedLimits")}}
-  - : Describes the limits supported by a {{domxref("GPUAdapter")}}.
+  - : Describes the limits supported by a {{domxref("GPUAdapter")}} or {{domxref("GPUDevice")}}.
+
+### Configuring a rendering `<canvas>`
+
+- {{domxref("HTMLCanvasElement.getContext()")}} — the `"webgpu"` `contextType`
+  - : Invoking `getContext()` with the `"webgpu"` `contextType` returns a {{domxref("GPUCanvasContext")}} object instance, which can then be configured with {{domxref("GPUCanvasContext.configure()")}}.
+- {{domxref("GPUCanvasContext")}}
+  - : Represents the WebGPU rendering context of a {{htmlelement("canvas")}} element, returned via a {{domxref("HTMLCanvasElement.getContext()")}} call with a `contextType` of `"webgpu"`.
+
+### Representing pipeline resources
+
+- {{domxref("GPUBuffer")}}
+  - : Represents a block of memory that can be used to store raw data to use in GPU operations.
+- {{domxref("GPUExternalTexture")}}
+  - : A wrapper object containing an {{domxref("HTMLVideoElement")}} snapshot that can be used as a texture in GPU rendering operations. Created using {{domxref("GPUDevice.importExternalTexture()")}}.
+- {{domxref("GPUSampler")}}
+  - : Controls how shaders transform and filter texture resource data.
+- {{domxref("GPUShaderModule")}}
+  - : A reference to an internal shader module object, a container for WGSL shader code that can be submitted to the GPU to execution by a pipeline.
 - {{domxref("GPUTexture")}}
-  - : xxx
+  - : A container used to store texture data to use in GPU rendering operations.
 - {{domxref("GPUTextureView")}}
-  - : xxx
+  - : A view onto some subset of the texture subresources defined by a particular {{domxref("GPUTexture")}}. Created by {{domxref("GPUTexture.createView()")}}.
+
+### Configuring pipelines
+
+- {{domxref("GPUBindGroup")}}
+  - : Based on a {{domxref("GPUBindGroupLayout")}}, a `GPUBindGroup` defines a set of resources to be bound together in a group and how those resources are used in shader stages.
+- {{domxref("GPUBindGroupLayout")}}
+  - : Defines the structure and purpose of related GPU resources such as buffers that will be used in a pipeline, and is used as a template when creating {{domxref("GPUBindGroup")}}s.
+- {{domxref("GPUComputePipeline")}}
+  - : Controls the compute shader stage and can be used in a {{domxref("GPUComputePassEncoder")}}.
+- {{domxref("GPUPipelineLayout")}}
+  - : Defines the {{domxref("GPUBindGroupLayout")}}s used by a pipeline. {{domxref("GPUBindGroup")}}s used with the pipeline during command encoding must have compatible {{domxref("GPUBindGroupLayout")}}s.
+
+### Encoding and submitting commands to the GPU
+
+- {{domxref("GPUCommandBuffer")}}
+  - : Represents a pre-recorded list of GPU commands that can be submitted to a {{domxref("GPUQueue")}} for execution. Created by calling {{domxref("GPUCommandEncoder.finish()")}}.
+- {{domxref("GPUCommandEncoder")}}
+  - : Represents a command encoder, used to encode commands to be issued to the GPU.
+- {{domxref("GPUComputePassEncoder")}}
+  - : Encodes commands issued related to controlling the compute shader stage, as issued by a {{domxref("GPUComputePipeline")}}. Part of the overall encoding activity of a {{domxref("GPUCommandEncoder")}}.
+- {{domxref("GPUQueue")}}
+  - : controls execution of encoded commends on the GPU.
+- {{domxref("GPURenderBundle")}}
+  - : A container for pre-recorded bundles of commands (see {{domxref("GPURenderBundleEncoder")}}).
+- {{domxref("GPURenderBundleEncoder")}}
+  - : Used to pre-record bundles of commands. These can be reused in {{domxref("GPURenderPassEncoder")}}s via the {{domxref("GPURenderPassEncoder.executeBundles", "executeBundles()")}} method, as many times as required.
+- {{domxref("GPURenderPassEncoder")}}
+  - : Encodes commands issued related to controlling the vertex and fragment shader stages, as issued by a {{domxref("GPURenderPipeline")}}. Part of the overall encoding activity of a {{domxref("GPUCommandEncoder")}}.
+- {{domxref("GPURenderPipeline")}}
+  - : Controls the vertex and fragment shader stages and can be used in a {{domxref("GPURenderPassEncoder")}} or {{domxref("GPURenderBundleEncoder")}}.
+
+### Running queries on rendering passes
+
+- {{domxref("GPUQuerySet")}}
+  - : Used to record the results of queries on passes, such as occlusion or timestamp queries.
+
+### Debugging errors
+
+- {{domxref("GPUCompilationInfo")}}
+  - : An array of {{domxref("GPUCompilationMessage")}} objects, generated by the GPU shader module compiler to help diagnose problems with shader code. Accessed via {{domxref("GPUShaderModule.compilationInfo()")}}.
+- {{domxref("GPUCompilationMessage")}}
+  - : Represents a single informational, warning, or error message generated by the GPU shader module compiler.
+- {{domxref("GPUDeviceLostInfo")}}
+  - : Returned when the {{domxref("GPUDevice.lost")}} {{domxref("Promise")}} resolves, providing information as to why the deivce was lost.
+- {{domxref("GPUError")}}
+  - : The base interface for errors surfaced by {{domxref("GPUDevice.popErrorScope")}} and the {{domxref("GPUDevice.uncapturederror_event", "uncapturederror")}} event.
+- {{domxref("GPUInternalError")}}
+  - : One of the types of errors surfaced by {{domxref("GPUDevice.popErrorScope")}} and the {{domxref("GPUDevice.uncapturederror_event", "uncapturederror")}} event. Indicates than an operation failed for a system or implementation-specific reason, even when all validation requirements were satisfied.
+- {{domxref("GPUOutOfMemoryError")}}
+  - : One of the types of errors surfaced by {{domxref("GPUDevice.popErrorScope")}} and the {{domxref("GPUDevice.uncapturederror_event", "uncapturederror")}} event. Indicates that there was not enough free memory to complete the requested operation.
+- {{domxref("GPUPipelineError")}}
+  - : Describes a pipeline failure. The value received when a {{jsxref("Promise")}} returned by a {{domxref("GPUDevice.createComputePipelineAsync()")}} or {{domxref("GPUDevice.createRenderPipelineAsync()")}} call rejects.
 - {{domxref("GPUUncapturedErrorEvent")}}
-  - : xxx
+  - : The event object type for the {{domxref("GPUDevice")}} {{domxref("GPUDevice.uncapturederror_event", "uncapturederror")}} event.
 - {{domxref("GPUValidationError")}}
-  - : xxx
-
-## Extensions to other interfaces
-
-- {{domxref("HTMLCanvasElement.getContext()")}} — the `webgpu` `contextType`
-  - : Invoking `getContext()` with the `webgpu` `contextType` returns a {{domxref("GPUCanvasContext")}} object instance, which can then be configured with {{domxref("GPUCanvasContext.configure()")}}.
-- {{domxref("Navigator.gpu")}} / {{domxref("WorkerNavigator.gpu")}}
-  - : The entry point for the API — returns the {{domxref("GPU")}} object for the current context.
+  - : One of the types of errors surfaced by {{domxref("GPUDevice.popErrorScope")}} and the {{domxref("GPUDevice.uncapturederror_event", "uncapturederror")}} event. Describes an application error indicating that an operation did not pass the app's validation constraints.
 
 ## Examples
 

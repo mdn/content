@@ -10,7 +10,7 @@ browser-compat: api.GPUAdapter.requestDevice
 {{APIRef("WebGPU API")}}{{SeeCompatTable}}
 
 The **`requestDevice()`** method of the
-{{domxref("GPUAdapter")}} interface returns a {{jsxref("Promise")}} that fulfills with a {{domxref("GPUDevice")}} object via which you can start using the functionality of a device GPU.
+{{domxref("GPUAdapter")}} interface returns a {{jsxref("Promise")}} that fulfills with a {{domxref("GPUDevice")}} object, which is the primary interface for communicating with the GPU.
 
 ## Syntax
 
@@ -26,7 +26,7 @@ requestDevice(descriptor)
     - `defaultQueue` {{optional_inline}}
       - : An object that provides information for the device's default {{domxref("GPUQueue")}} (as returned by {{domxref("GPUDevice.queue")}}). This object has a single property — `label` — which provides the default queue with a {{domxref("GPUQueue.label", "label")}} value. If no value is provided, this defaults to an empty object, and the default queue's label will be an empty string.
     - `label` {{optional_inline}}
-      - : A string providing an identifying label that can be used to identify the object, for example in {{domxref("GPUError")}} messages or console warnings.
+      - : A string providing a label that can be used to identify the object, for example in {{domxref("GPUError")}} messages or console warnings.
     - `requiredFeatures` {{optional_inline}}
       - : An array of strings representing additional functionality that you want supported by the returned {{domxref("GPUDevice")}}. The `requestDevice()` call will fail if the `GPUAdapter` cannot provide these features. See {{domxref("GPUSupportedFeatures")}} for a full list of possible features. This defaults to an empty array if no value is provided.
     - `requiredLimits` {{optional_inline}}
@@ -72,7 +72,7 @@ async function init() {
 In the following code we:
 
 1. Check whether a {{domxref("GPUAdapter")}} has the `texture-compression-astc` feature available. If so, we push it into the array of `requiredFeatures`.
-2. Query the {{domxref("GPUAdapter.limits")}} values of `maxTextureDimension3D` and `maxBindGroups` and add those maximum limits to the `requiredLimits` object.
+2. Query the `GPUAdapter.limits` value of `maxBindGroups` to see if it is equal to or greater than 6. Our theoretical example app ideally needs 6 bind groups, so if the returned value is >= 6, we add a maximum limit of 6 to the `requiredLimits` object.
 3. Request a device with those feature and limit requirements, plus a `defaultQueue` object.
 
 ```js
@@ -94,8 +94,10 @@ async function init() {
 
   const requiredLimits = {};
 
-  requiredLimits.maxTextureDimension3D = adapter.limits.maxTextureDimension3D;
-  requiredLimits.maxBindGroups = adapter.limits.maxBindGroups;
+  // App ideally needs 6 bind groups, so we'll try to request what the app needs
+  if (adapter.limits.maxBindGroups >= 6) {
+    requiredLimits.maxBindGroups = 6;
+  }
 
   const device = await adapter.requestDevice({
     defaultQueue: {

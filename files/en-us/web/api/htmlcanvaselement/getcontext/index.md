@@ -43,7 +43,7 @@ getContext(contextType, contextAttributes)
       version 2 (OpenGL ES 3.0). {{experimental_inline}}
     - `"webgpu"`, which will create a
       {{domxref("GPUCanvasContext")}} object representing a three-dimensional
-      rendering context for GPU render pipelines. This context is only available on browsers that implement [WebGPU](/en-US/docs/Web/API/WebGPU_API).
+      rendering context for WebGPU render pipelines. This context is only available on browsers that implement [WebGPU](/en-US/docs/Web/API/WebGPU_API).
     - `"bitmaprenderer"` which will create an
       {{domxref("ImageBitmapRenderingContext")}} which only provides functionality to
       replace the content of the canvas with a given {{domxref("ImageBitmap")}}.

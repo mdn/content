@@ -20,9 +20,9 @@ A {{domxref("GPUSupportedLimits")}} object instance.
 
 ## Examples
 
-In the following code we query the `GPUAdapter.limits` values of `maxTextureDimension3D` and `maxBindGroups`, add those maximum limits to the `requiredLimits` object, and request a device with those limit requirements using {{domxref("GPUAdapter.requestDevice()")}}.
+In the following code we query the `GPUAdapter.limits` value of `maxBindGroups` to see if it is equal to or greater than 6. Our theoretical example app ideally needs 6 bind groups, so if the returned value is >= 6, we add a maximum limit of 6 to the `requiredLimits` object.
 
-We then check that the expected limits have been set on the resulting device by logging those values to the console.
+We then check that the expected limit has been set on the resulting device by logging its value to the console.
 
 ```js
 async function init() {
@@ -37,14 +37,15 @@ async function init() {
 
   const requiredLimits = {};
 
-  requiredLimits.maxTextureDimension3D = adapter.limits.maxTextureDimension3D;
-  requiredLimits.maxBindGroups = adapter.limits.maxBindGroups;
+  // App ideally needs 6 bind groups, so we'll try to request what the app needs
+  if (adapter.limits.maxBindGroups >= 6) {
+    requiredLimits.maxBindGroups = 6;
+  }
 
   const device = await adapter.requestDevice({
       requiredLimits
   });
 
-  console.log(device.limits.maxTextureDimension3D);
   console.log(device.limits.maxBindGroups);
 
   // ...

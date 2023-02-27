@@ -10,7 +10,7 @@ browser-compat: api.GPU.requestAdapter
 {{APIRef("WebGPU API")}}{{SeeCompatTable}}
 
 The **`requestAdapter()`** method of the
-{{domxref("GPU")}} interface returns a {{jsxref("Promise")}} that fulfills with a {{domxref("GPUAdapter")}} object instance. From this you can request a {{domxref("GPUDevice")}} to start using functionality of a device GPU and return adapter info, features, and limits.
+{{domxref("GPU")}} interface returns a {{jsxref("Promise")}} that fulfills with a {{domxref("GPUAdapter")}} object instance. From this you can request a {{domxref("GPUDevice")}}, adapter info, features, and limits.
 
 Note that the user agent chooses whether to return an adapter. If so, it chooses according to the provided options. If no options are provided, the device will provide access to the default adapter, which is usually good enough for most purposes.
 
@@ -29,8 +29,8 @@ requestAdapter(options)
       - : An emumerated value that can be used to provide a hint to the user agent indicating what class of adapter should be chosen from the system's available adapters. Available values are:
 
         - `undefined` (or not specified), which provides no hint.
-        - `low-power`, which provides a hint to prioritize power savings over performance. If your app runs OK with this setting, it is recommended to use it, as it can significantly improve battery life on portable devices. This is usually the default if no options are provided.
-        - `high-performance`, which provides a hint to prioritize performance over power consumption. You are encouraged to only specify this value if absolutely necessary, since it may significantly decrease battery life on portable devices. It may also result in increased device loss — devices will sometimes elect to switch to a lower-power adapter to save power.
+        - `"low-power"`, which provides a hint to prioritize power savings over performance. If your app runs OK with this setting, it is recommended to use it, as it can significantly improve battery life on portable devices. This is usually the default if no options are provided.
+        - `"high-performance"`, which provides a hint to prioritize performance over power consumption. You are encouraged to only specify this value if absolutely necessary, since it may significantly decrease battery life on portable devices. It may also result in increased device loss — devices will sometimes elect to switch to a lower-power adapter to save power.
 
          This hint's primary purpose is to influence which GPU is used in a multi-GPU system. For instance, some laptops have a low-power integrated GPU and a high-performance discrete GPU. Different factors may affect which adapter is returned including battery status, attached displays, or removable GPUs.
     - `forceFallbackAdapter` {{optional_inline}}
@@ -41,7 +41,7 @@ requestAdapter(options)
 
 ### Fallback adapters
 
-A fallback adapter generally has significant performance caveats in exchange for some combination of wider compatibility, more predictable behavior, or improved privacy. A fallback adapter will not be available on every system.
+A fallback adapter generally has significant performance caveats in exchange for some combination of wider compatibility, more predictable behavior, or improved privacy. For example, some browsers may offer a software-based implementation of the API via a fallback adapter. A fallback adapter will not be available on every system.
 
 If you wish to prevent your apps from running on fallback adapters, you should check the {{domxref("GPUAdapter.isFallbackAdapter")}} attribute prior to requesting a {{domxref("GPUDevice")}}.
 
@@ -49,7 +49,7 @@ If you wish to prevent your apps from running on fallback adapters, you should c
 
 A {{jsxref("Promise")}} that fulfills with a {{domxref("GPUAdapter")}} object instance if the request is successful.
 
-`requestAdapter()` will resolve to `null` if `forceFallbackAdapter` is set to `true` but no fallback adapter is available.
+`requestAdapter()` will resolve to `null` if an appropriate adapter is not available.
 
 ### Exceptions
 

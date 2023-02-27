@@ -12,7 +12,7 @@ browser-compat: api.GPUAdapter.limits
 The **`limits`** read-only property of the
 {{domxref("GPUAdapter")}} interface returns a {{domxref("GPUSupportedLimits")}} object that describes the limits supported by the adapter.
 
-You should note that, rather than reporting the exact limits of each GPU, browsers will likely report different tier values of different limits to reduce the unique information available to drive-by fingerprinting. For example, the tiers of a certain limit might be 2048, 8192, and 32768. It your GPU's actual limit is 16384, the browser would still report 8192.
+You should note that, rather than reporting the exact limits of each GPU, browsers will likely report different tier values of different limits to reduce the unique information available to drive-by fingerprinting. For example, the tiers of a certain limit might be 2048, 8192, and 32768. If your GPU's actual limit is 16384, the browser would still report 8192.
 
 Given that different browsers will handle this differently and the tier values may change over time, it is hard to provide an accurate account of what limit values to expect — thorough testing is advised.
 
@@ -22,7 +22,7 @@ A {{domxref("GPUSupportedLimits")}} object instance.
 
 ## Examples
 
-In the following code we query the `GPUAdapter.limits` values of `maxTextureDimension3D` and `maxBindGroups`, add those maximum limits to the `requiredLimits` object, and request a device with those limit requirements using {{domxref("GPUAdapter.requestDevice()")}}:
+In the following code we query the `GPUAdapter.limits` value of `maxBindGroups` to see if it is equal to or greater than 6. Our theoretical example app ideally needs 6 bind groups, so if the returned value is >= 6, we add a maximum limit of 6 to the `requiredLimits` object, and request a device with that limit requirement using {{domxref("GPUAdapter.requestDevice()")}}:
 
 ```js
 async function init() {
@@ -37,8 +37,10 @@ async function init() {
 
   const requiredLimits = {};
 
-  requiredLimits.maxTextureDimension3D = adapter.limits.maxTextureDimension3D;
-  requiredLimits.maxBindGroups = adapter.limits.maxBindGroups;
+  // App ideally needs 6 bind groups, so we'll try to request what the app needs
+  if (adapter.limits.maxBindGroups >= 6) {
+    requiredLimits.maxBindGroups = 6;
+  }
 
   const device = await adapter.requestDevice({
       requiredLimits

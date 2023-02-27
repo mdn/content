@@ -10,7 +10,7 @@ browser-compat: api.GPUCanvasContext.unconfigure
 {{APIRef("WebGPU API")}}{{SeeCompatTable}}
 
 The **`unconfigure()`** method of the
-{{domxref("GPUCanvasContext")}} interface removes any previously-set context configuration, and destroys any textures produced while the canvas context was configured.
+{{domxref("GPUCanvasContext")}} interface removes any previously-set context configuration, and destroys any textures returned via {{domxref("GPUCanvasContext.getCurrentTexture", "getCurrentTexture()")}} while the canvas context was configured.
 
 ## Syntax
 
@@ -35,8 +35,7 @@ const context = canvas.getContext('webgpu');
 context.configure({
   device: device,
   format: navigator.gpu.getPreferredCanvasFormat(),
-  alphaMode: 'premultiplied',
-  usage: GPUTextureUsage.COPY_SRC | GPUTextureUsage.RENDER_ATTACHMENT
+  alphaMode: 'premultiplied'
 });
 
 //...
