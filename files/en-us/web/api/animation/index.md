@@ -83,7 +83,7 @@ Animations are removed when all of the following are true:
 
 The first four conditions ensure that, absent intervention by javascript code, the animation's effect will never change or end. The last condition ensures that the animation will never actually affect the style of any element; it has been entirely replaced.
 
-You can see this in action in our simple [replace indefinite animations demo](https://mdn.github.io/dom-examples/web-animations-api/replace-indefinite-animations.html). The related JavaScript features are:
+The related JavaScript features are:
 
 - {{domxref("animation.commitStyles()")}} for committing the current styling state of an animation to the element being animated, even after that animation has been removed.
 - The {{domxref("animation/remove_event", "remove")}} event on the {{domxref("Animation")}} interface fires when the animation is removed (i.e., put into the `removed` replace state).
