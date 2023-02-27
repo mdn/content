@@ -73,6 +73,16 @@ The **`Animation`** interface of the [Web Animations API](/en-US/docs/Web/API/We
 
 It is possible to trigger a large number of animations on the same element. If they are indefinite (i.e., forwards-filling), this can result in a huge animations list, which could create a memory leak. For this reason, modern browsers have implemented the part of the Web Animations spec that automatically removes overriding forward filling animations, unless the developer explicitly specifies to keep them.
 
+Animations are removed when all of the following are true:
+
+- The animation is filling (its `fill` is `forwards` if it is playing forwards, `backwards` if it is playing backwards, or `both`).
+- The animation is finished. (Note that because of the `fill` it will still be in effect.)
+- The animation's timeline is monotonically increasing. (This is always true for {{domxref("DocumentTimeline")}}; other timelines such as {{cssxref("scroll-timeline")}} can run backwards.)
+- The animation is not being controlled by declarative markup such as CSS.
+- Every styling effect of the animation's {{domxref("AnimationEffect")}} is being overridden by another animation that also satisfies all the condtions above. (Typically, when two animations would set the same style property of the same element, the one created last overrides the other.)
+
+The first four conditions ensure that, absent intervention by javascript code, the animation's effect will never change or end. The last condition ensures that the animation will never actually affect the style of any element; it has been entirely replaced.
+
 You can see this in action in our simple [replace indefinite animations demo](https://mdn.github.io/dom-examples/web-animations-api/replace-indefinite-animations.html). The related JavaScript features are:
 
 - {{domxref("animation.commitStyles()")}} for committing the end styling state of an animation to the element being animated, even after that animation has been removed.
