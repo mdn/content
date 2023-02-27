@@ -46,7 +46,7 @@ The **`Animation`** interface of the [Web Animations API](/en-US/docs/Web/API/We
 - {{domxref("Animation.cancel()")}}
   - : Clears all {{domxref("KeyframeEffect", "keyframeEffects")}} caused by this animation and aborts its playback.
 - {{domxref("animation.commitStyles()")}}
-  - : Commits the end styling state of an animation to the element being animated, even after that animation has been removed. It will cause the end styling state to be written to the element being animated, in the form of properties inside a `style` attribute.
+  - : Commits the current styling state of an animation to the element being animated, even after that animation has been removed. It will cause the current styling state to be written to the element being animated, in the form of properties inside a `style` attribute.
 - {{domxref("Animation.finish()")}}
   - : Seeks either end of an animation, depending on whether the animation is playing or reversing.
 - {{domxref("Animation.pause()")}}
@@ -85,7 +85,7 @@ The first four conditions ensure that, absent intervention by javascript code, t
 
 You can see this in action in our simple [replace indefinite animations demo](https://mdn.github.io/dom-examples/web-animations-api/replace-indefinite-animations.html). The related JavaScript features are:
 
-- {{domxref("animation.commitStyles()")}} for committing the end styling state of an animation to the element being animated, even after that animation has been removed.
+- {{domxref("animation.commitStyles()")}} for committing the current styling state of an animation to the element being animated, even after that animation has been removed.
 - The {{domxref("animation/remove_event", "remove")}} event on the {{domxref("Animation")}} interface fires when the animation is removed (i.e., put into an `active` replace state).
 - {{domxref("animation.persist()")}} for when you explicitly want an animation to be retained.
 - {{domxref("animation.replaceState")}} to return the replace state of the animation. This will be `active` if the animation has been removed, or `persisted` if {{domxref("Animation.persist", "persist()")}} has been invoked.
