@@ -45,7 +45,7 @@ When a `TypedArray` is created as a view of a resizable buffer (see [Resizing Ar
 
 #### Behavior of non-length-tracking TypedArrays
 
-In this case, `float32` is created with a specific size, and therefore won't grow to contain `buffer` as it is grown:
+In this case, `float32` is created with a specific size, and therefore won't grow to contain the `buffer` as it is grown:
 
 ```js
 const buffer = new ArrayBuffer(8, { maxByteLength: 16 });
@@ -62,7 +62,7 @@ console.log(float32.length) // Returns 2
 console.log(float32[0]) // Returns initialized value of 0
 ```
 
-If `buffer` is shrunk, however, the `float32` typed array can become out of bounds, in which case the size will decrease to 0. This happens if the typed array goes out of bounds even slightly:
+If the `buffer` is shrunk, however, the `float32` typed array can become out of bounds, in which case the size will decrease to 0. This happens if the typed array goes out of bounds even slightly:
 
 ```js
 buffer.resize(7);
@@ -72,7 +72,7 @@ console.log(float32.length) // Returns 0
 console.log(float32[0]) // Returns undefined
 ```
 
-If you then grow `buffer` again, `float32`'s size will increase again. This can potentially bring a typed array that previously became out-of-bounds, back in bounds:
+If you then grow the `buffer` again, `float32`'s size will increase again, only if it is brought back in bounds:
 
 ```js
 buffer.resize(8);
@@ -84,7 +84,7 @@ console.log(float32[0]) // Returns 0 - back in bounds again!
 
 #### Behavior of length-tracking TypedArrays
 
-In this case, `float32` is created without a specific size so it is non-length-tracking, and will grow to contain `array` as it is grown:
+In this case, `float32` is created without a specific size so it is length-tracking, and will grow to contain `array` as it is grown:
 
 ```js
 const buffer = new ArrayBuffer(8, { maxByteLength: 16 });

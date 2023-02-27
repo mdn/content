@@ -80,7 +80,7 @@ The WebAssembly Threads proposal also defines a new set of [atomic](https://gith
 
 ### Growing SharedArrayBuffers
 
-`SharedArrayBuffer`s can be made growable by including the `maxByteLength` option when calling the {{jsxref("SharedArrayBuffer.SharedArrayBuffer", "constructor", "", "nocode")}}. You can query whether an `ArrayBuffer` is growable and what its maximum size is by accessing its {{jsxref("SharedArrayBuffer.prototype.growable", "growable")}} and {{jsxref("SharedArrayBuffer.prototype.maxByteLength", "maxByteLength")}} properties, respectively. You can assign a new size to a growable `SharedArrayBuffer` with a {{jsxref("SharedArrayBuffer.prototype.grow()", "grow()")}} call.
+`SharedArrayBuffer`s can be made growable by including the `maxByteLength` option when calling the {{jsxref("SharedArrayBuffer.SharedArrayBuffer", "constructor", "", "nocode")}}. You can query whether a `SharedArrayBuffer` is growable and what its maximum size is by accessing its {{jsxref("SharedArrayBuffer.prototype.growable", "growable")}} and {{jsxref("SharedArrayBuffer.prototype.maxByteLength", "maxByteLength")}} properties, respectively. You can assign a new size to a growable `SharedArrayBuffer` with a {{jsxref("SharedArrayBuffer.prototype.grow()", "grow()")}} call.
 
 These additions have made growing `SharedArrayBuffer`s more efficient — previously you had to make a copy with a new size. It also gives JavaScript parity with WebAssembly in this regard (WASM linear memory can be resized with [`WebAssembly.Memory.prototype.grow()`](/en-US/docs/WebAssembly/JavaScript_interface/Memory/grow)).
 
