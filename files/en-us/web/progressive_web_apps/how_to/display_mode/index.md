@@ -11,6 +11,7 @@ tags:
   - Web applications
   - How to
   - Display mode
+browser-compat: html.manifest.display
 ---
 
 [Progressive Web Apps](/en-US/docs/Web/Progressive_web_apps) (PWAs) that are installed on a user's device can define how they appear when the user launches them. They can choose to be displayed in a web browser like websites, or have their own dedicated windows similar to how native applications work.
@@ -100,6 +101,14 @@ function isStandaloneApp() {
   return window.matchMedia("(display-mode: standalone)").matches;
 }
 ```
+
+## Specifications
+
+{{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}
 
 ## See also
 
