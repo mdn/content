@@ -1,11 +1,6 @@
 ---
 title: Compiling from Rust to WebAssembly
 slug: WebAssembly/Rust_to_wasm
-tags:
-  - Compiling
-  - WebAssembly
-  - rust
-  - wasm
 ---
 
 {{WebAssemblySidebar}}
@@ -229,7 +224,7 @@ Let's start by creating a file named `index.html` in the root of the project, an
 
 The script in this file will import the js glue code, initialize the wasm module, and call the `greet` function we wrote in rust.
 
-Serve the root directory of the project with a local web server, (e.g. `python3 -m http.server`). If you're not sure how to do that, refer to [Running a simple local HTTP server](/en-US/docs/Learn/Common_questions/set_up_a_local_testing_server#running_a_simple_local_http_server).
+Serve the root directory of the project with a local web server, (e.g. `python3 -m http.server`). If you're not sure how to do that, refer to [Running a simple local HTTP server](/en-US/docs/Learn/Common_questions/Tools_and_setup/set_up_a_local_testing_server#running_a_simple_local_http_server).
 
 > **Note:** Make sure to use an up-to-date web server that supports the `application/wasm` MIME type. Older web servers might not support it yet.
 

@@ -1,18 +1,6 @@
 ---
 title: Structural overview of progressive web apps
 slug: Web/Progressive_web_apps/Structural_overview
-tags:
-  - Applications
-  - Apps
-  - Guide
-  - Layout
-  - Overview
-  - PWAs
-  - Progressive web apps
-  - Structure
-  - Web
-  - Webapps
-  - contents
 ---
 
 {{QuickLinksWithSubpages("/en-US/docs/Web/Progressive_web_apps/")}}

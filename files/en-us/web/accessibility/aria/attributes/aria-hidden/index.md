@@ -1,13 +1,6 @@
 ---
-title: "aria-hidden"
+title: aria-hidden
 slug: Web/Accessibility/ARIA/Attributes/aria-hidden
-tags:
-  - Accessibility
-  - ARIA
-  - ARIA attribute
-  - ARIA property
-  - aria-hidden
-  - Reference
 spec-urls: https://w3c.github.io/aria/#aria-hidden
 ---
 

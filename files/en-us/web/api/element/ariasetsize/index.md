@@ -29,7 +29,7 @@ In this example the `aria-setsize` attribute on the element with an ID of `tab-i
 ```
 
 ```js
-let el = document.getElementById('tab-id');
+let el = document.getElementById("tab-id");
 console.log(el.ariaSetSize); // 3
 el.ariaSetSize = "4";
 console.log(el.ariaSetSize); // 4

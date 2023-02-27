@@ -1,18 +1,6 @@
 ---
 title: Advanced styling effects
 slug: Learn/CSS/Building_blocks/Advanced_styling_effects
-tags:
-  - Article
-  - Beginner
-  - Blend modes
-  - Boxes
-  - CSS
-  - CodingScripting
-  - Filters
-  - Styling
-  - box shadows
-  - effects
-  - shapes
 ---
 
 {{LearnSidebar}}

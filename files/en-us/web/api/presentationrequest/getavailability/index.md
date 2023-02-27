@@ -2,6 +2,8 @@
 title: PresentationRequest.getAvailability()
 slug: Web/API/PresentationRequest/getAvailability
 page-type: web-api-instance-method
+status:
+  - experimental
 browser-compat: api.PresentationRequest.getAvailability
 ---
 

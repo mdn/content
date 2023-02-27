@@ -190,7 +190,6 @@ p {
 ## See also
 
 - [`font-variant`](/en-US/docs/Web/CSS/font-variant)
-- [`font-variant-alternates`](/en-US/docs/Web/CSS/font-variant-ligatures)
 - [`font-variant-caps`](/en-US/docs/Web/CSS/font-variant-caps)
 - [`font-variant-emoji`](/en-US/docs/Web/CSS/font-variant-emoji)
 - [`font-variant-east-asian`](/en-US/docs/Web/CSS/font-variant-east-asian)

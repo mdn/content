@@ -1,15 +1,6 @@
 ---
 title: "ARIA: figure role"
 slug: Web/Accessibility/ARIA/Roles/figure_role
-tags:
-  - ARIA
-  - ARIA Role
-  - ARIA figure
-  - Accessibility
-  - Reference
-  - Role
-  - document structure role
-  - figure
 spec-urls:
   - https://w3c.github.io/aria/#figure
   - https://w3c.github.io/aria-practices/#describing_with_captions

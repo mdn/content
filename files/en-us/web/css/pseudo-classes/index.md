@@ -79,9 +79,9 @@ These pseudo-classes relate to form elements, and enable selecting elements base
 
 These pseudo-classes reflect the document language and enable the selection of elements based on language or script direction.
 
-- {{CSSxRef(":dir()")}}
+- {{CSSxRef(":dir", ":dir()")}}
   - : The directionality pseudo-class selects an element based on its directionality as determined by the document language.
-- {{CSSxRef(":lang()")}}
+- {{CSSxRef(":lang", ":lang()")}}
   - : Select an element based on its content language.
 
 ## Location pseudo-classes

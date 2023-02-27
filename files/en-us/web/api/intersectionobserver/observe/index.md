@@ -6,6 +6,7 @@ browser-compat: api.IntersectionObserver.observe
 ---
 
 {{APIRef("Intersection Observer API")}}
+
 The {{domxref("IntersectionObserver")}} method
 **`observe()`** adds an element to the set of target elements
 being watched by the `IntersectionObserver`. One observer has one set of

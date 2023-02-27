@@ -48,7 +48,7 @@ To see the code for this filter effects sample, [view the source on Github](http
 
 - {{glossary("interpolation")}} glossary term
 
-- {{cssxref("color-interpolation-filters")}} SVG property
+- [`color-interpolation-filters`](/en-US/docs/Web/SVG/Attribute/color-interpolation-filters) SVG property
 
 ## Specifications
 

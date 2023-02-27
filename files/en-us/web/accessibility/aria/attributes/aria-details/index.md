@@ -1,14 +1,6 @@
 ---
 title: aria-details
 slug: Web/Accessibility/ARIA/Attributes/aria-details
-tags:
-  - Accessibility
-  - ARIA
-  - ARIA attribute
-  - ARIA property
-  - aria-details
-  - Reference
-  - longdesc
 spec-urls: https://w3c.github.io/aria/#aria-details
 ---
 

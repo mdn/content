@@ -7,7 +7,7 @@ browser-compat: css.at-rules.namespace
 
 {{CSSRef}}
 
-**CSS Namespaces** is a CSS module that allows authors to specify [XML namespaces](/en-US/docs/Namespaces) in CSS.
+**CSS Namespaces** is a CSS module that allows authors to specify [XML namespaces](/en-US/docs/Web/SVG/Namespaces_Crash_Course) in CSS.
 
 ## Reference
 

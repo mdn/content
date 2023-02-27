@@ -1,5 +1,5 @@
 ---
-title: 'Element: auxclick event'
+title: "Element: auxclick event"
 slug: Web/API/Element/auxclick_event
 page-type: web-api-event
 browser-compat: api.Element.auxclick_event
@@ -16,9 +16,9 @@ The **`auxclick`** event is fired at an {{domxref("Element")}} when a non-primar
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('auxclick', (event) => {});
+addEventListener("auxclick", (event) => {});
 
-onauxclick = (event) => { };
+onauxclick = (event) => {};
 ```
 
 ## Event type
@@ -97,15 +97,15 @@ In this example we define functions for two event handlers — {{domxref("Elemen
 ### JavaScript
 
 ```js
-let button = document.querySelector('button');
-let html = document.querySelector('html');
+let button = document.querySelector("button");
+let html = document.querySelector("html");
 
 function random(number) {
   return Math.floor(Math.random() * number);
 }
 
 function randomColor() {
-    return `rgb(${random(255)}, ${random(255)}, ${random(255)})`;
+  return `rgb(${random(255)}, ${random(255)}, ${random(255)})`;
 }
 
 button.onclick = () => {
@@ -115,11 +115,11 @@ button.onclick = () => {
 button.onauxclick = (e) => {
   e.preventDefault();
   button.style.color = randomColor();
-}
+};
 
 button.oncontextmenu = (e) => {
   e.preventDefault();
-}
+};
 ```
 
 Notice that in addition to capturing the `auxclick` event using `onauxclick`, the {{domxref("Element.contextmenu_event", "contextmenu")}} event is also captured, and {{domxref("Event.preventDefault", "preventDefault()")}} called on that event, in order to prevent the context menu from popping up after the color change is applied.

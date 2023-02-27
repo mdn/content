@@ -2,6 +2,8 @@
 title: PresentationConnectionAvailableEvent.connection
 slug: Web/API/PresentationConnectionAvailableEvent/connection
 page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.PresentationConnectionAvailableEvent.connection
 ---
 
