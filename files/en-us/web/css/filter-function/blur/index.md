@@ -32,7 +32,7 @@ blur(8px)      /* Blur with 8px radius */
 blur(1.17rem)  /* Blur with 1.17rem radius */
 ```
 
-## SVG blur filter
+## SVG filter
 
 The SVG {{SVGElement("feGaussianBlur")}} filter element can also be used to blur content. The filter's {{SVGAttr("stdDeviation")}} attribute accepts up to two values enabling creating more complex blur values. To create an equivalent blur, we include one value for `stdDeviation`. This SVG effect can then be referenced by ID:
 
@@ -44,7 +44,7 @@ The SVG {{SVGElement("feGaussianBlur")}} filter element can also be used to blur
 </svg>
 ```
 
-The following two declarations are equivalent:
+The following declarations produce the same effect:
 
 ```css
 filter: blur(1.1px);
@@ -54,7 +54,7 @@ filter: url(folder/fileName.svg#blurr11); /* external svg filter definition */
 
 ## Examples
 
-This example shows three images: the original images, the image with a `blur()` filter function applied, and the image with the equivalent SVG blur function applied:
+This example shows three images: the image with a `blur()` filter function applied, the image with the equivalent SVG blur function applied, and the original images for comparison:
 
 ```css
 .filter {
@@ -67,7 +67,7 @@ This example shows three images: the original images, the image with a `blur()` 
   <filter id="blur">
     <feGaussianBlur stdDeviation="3.5" edgeMode="duplicate" />
   </filter>
-  <image xlink:href="asset/flag.jpg" filter="url(#blur)" />
+  <image xlink:href="flag.jpg" filter="url(#blur)" />
 </svg>
 ```
 
@@ -119,14 +119,14 @@ svg:not([height]) {
 
 ## See also
 
-The other {{cssxref("&lt;filter-function&gt;")}} functions available to be used in values of the {{cssxref("filter")}} and {{cssxref("backdrop-filter")}} properties include:
-
-- {{cssxref("filter-function/brightness", "brightness()")}}
-- {{cssxref("filter-function/contrast", "contrast()")}}
-- {{cssxref("filter-function/drop-shadow", "drop-shadow()")}}
-- {{cssxref("filter-function/grayscale", "grayscale()")}}
-- {{cssxref("filter-function/hue-rotate", "hue-rotate()")}}
-- {{cssxref("filter-function/invert", "invert()")}}
-- {{cssxref("filter-function/opacity", "opacity()")}}
-- {{cssxref("filter-function/saturate", "saturate()")}}
-- {{cssxref("filter-function/sepia", "sepia()")}}
+- [CSS filter effects](/en-us/docs/Web/CSS/filter_effects/) module
+- The other {{cssxref("&lt;filter-function&gt;")}} functions available to be used in values of the {{cssxref("filter")}} and {{cssxref("backdrop-filter")}} properties include:
+  - {{cssxref("filter-function/brightness", "brightness()")}}
+  - {{cssxref("filter-function/contrast", "contrast()")}}
+  - {{cssxref("filter-function/drop-shadow", "drop-shadow()")}}
+  - {{cssxref("filter-function/grayscale", "grayscale()")}}
+  - {{cssxref("filter-function/hue-rotate", "hue-rotate()")}}
+  - {{cssxref("filter-function/invert", "invert()")}}
+  - {{cssxref("filter-function/opacity", "opacity()")}}
+  - {{cssxref("filter-function/saturate", "saturate()")}}
+  - {{cssxref("filter-function/sepia", "sepia()")}}
