@@ -51,7 +51,7 @@ The `rel` attribute has no default value. If the attribute is omitted or if none
 
 ## Values
 
-- {{htmlattrdef("alternate")}}
+- `alternate`
 
   - : Indicates an alternate representation of the current document. Valid for {{htmlelement('link')}}, {{htmlelement('a')}}, and {{htmlelement('area')}}, the meaning depends on the values of the other attributes.
 
@@ -100,7 +100,7 @@ The `rel` attribute has no default value. If the attribute is omitted or if none
         title="French PDF" />
       ```
 
-- {{htmlattrdef("author")}}
+- `author`
 
   - : Indicates the referenced document provides further information about the author of the current document or article. Relevant for {{htmlelement('link')}}, {{htmlelement('a')}}, and {{htmlelement('area')}} elements.
 
@@ -110,17 +110,17 @@ The `rel` attribute has no default value. If the attribute is omitted or if none
 
     > **Note:** For historical reasons, the obsolete attribute value `rev="made"` is treated as `rel="author"`.
 
-- {{htmlattrdef("bookmark")}}
+- `bookmark`
   - : Relevant as the `rel` attribute value for the {{htmlelement('a')}} and {{htmlelement('area')}} elements. Gives a permalink for the nearest ancestor {{htmlelement('article')}} element, if there is one. If there is no ancestor `<article>` element, gives a permalink for the section the linking element is most closely associated with.
-- {{htmlattrdef("canonical")}}
+- `canonical`
   - : Valid for {{htmlelement('link')}}, it defines the preferred URL for the current document, which helps search engines reduce duplicate content.
-- {{htmlattrdef("dns-prefetch")}}
+- `dns-prefetch`
   - : Relevant for the {{htmlelement('link')}} element both in the {{htmlelement('body')}} and {{htmlelement('head')}}, it tells the browser to preemptively perform DNS resolution for the target resource's origin. Useful for resources the user will likely need, it helps reduce latency and thereby improves performance when the user does access the resources as the browser preemptively performed DNS resolution for the origin of the specified resource. See [dns-prefetch](/en-US/docs/Web/Performance/dns-prefetch) described in [resource hints](https://w3c.github.io/resource-hints/).
-- {{htmlattrdef("external")}}
+- `external`
   - : Relevant to {{htmlelement('form')}}, {{htmlelement('a')}}, and {{htmlelement('area')}}, it indicates the referenced document is not part of the current site. This can be used with attribute selectors to style external links in a way that indicates to the user that they will be leaving the current site.
-- {{htmlattrdef("help")}}
+- `help`
   - : Relevant to {{htmlelement('form')}}, {{htmlelement('link')}}, {{htmlelement('a')}}, and {{htmlelement('area')}}, the `help` keyword indicates that the linked to content provides context-sensitive help, providing information for the parent of the element defining the hyperlink, and its children. When used within `<link>`, the help is for the whole document. When included with {{htmlelement('a')}} and {{htmlelement('area')}} and supported, the default {{cssxref('cursor')}} will be `help` instead of `pointer`.
-- {{htmlattrdef("icon")}}
+- `icon`
 
   - : Valid with {{htmlelement('link')}}, the linked resource represents the icon, a resource for representing the page in the user interface, for the current document.
 
@@ -139,7 +139,7 @@ The `rel` attribute has no default value. If the attribute is omitted or if none
 
     > **Note:** The `shortcut` link type is often seen before `icon`, but this link type is non-conforming, ignored and **web authors must not use it anymore**.
 
-- {{htmlattrdef("license")}}
+- `license`
 
   - : Valid on the {{HTMLElement("a")}}, {{HTMLElement("area")}}, {{HTMLElement("form")}}, {{HTMLElement("link")}} elements, the `license` value indicates that the hyperlink leads to a document describing the licensing information; that the main content of the current document is covered by the copyright license described by the referenced document. If not inside the {{HTMLElement("head")}} element, the standard doesn't distinguish between a hyperlink applying to a specific part of the document or to the document as a whole. Only the data on the page can indicate this.
 
@@ -149,47 +149,47 @@ The `rel` attribute has no default value. If the attribute is omitted or if none
 
     > **Note:** Although recognized, the synonym `copyright` is incorrect and must be avoided.
 
-- {{htmlattrdef("manifest")}} {{Experimental_Inline}}
+- `manifest` {{Experimental_Inline}}
   - : [Web app manifest](/en-US/docs/Web/Manifest). Requires the use of the CORS protocol for cross-origin fetching.
-- {{htmlattrdef("modulepreload")}}
+- `modulepreload`
   - : Useful for improved performance, and relevant to the {{htmlelement('link')}} anywhere in the document, setting `rel="modulepreload"` tells the browser to preemptively fetch the script (and dependencies) and store it in the document's module map for later evaluation. `modulepreload` links can ensure network fetching is done with the module ready (but not evaluated) in the module map before it is necessarily needed. See also [`modulepreload`](/en-US/docs/Web/HTML/Attributes/rel/modulepreload).
-- {{htmlattrdef("next")}}
+- `next`
   - : Relevant to {{htmlelement('form')}}, {{htmlelement('link')}}, {{htmlelement('a')}}, and {{htmlelement('area')}}, the `next` values indicates that the current document is a part of a series, and that the next document in the series is the referenced document. When included in a `<link>`, browsers may assume that document will be fetched next, and treat it as a resource hint.
-- {{htmlattrdef("nofollow")}}
+- `nofollow`
   - : Relevant to {{htmlelement('form')}}, {{htmlelement('a')}}, and {{htmlelement('area')}}, the `nofollow` keyword tells search engine spiders to ignore the link relationship. The nofollow relationship may indicate the current document's owner does not endorse the referenced document. It is often included by Search Engine Optimizers pretending their link farms are not spam pages.
-- {{htmlattrdef("noopener")}}
+- `noopener`
 
   - : Relevant to {{htmlelement('form')}}, {{htmlelement('a')}}, and {{htmlelement('area')}}, creates a top-level browsing context that is not an auxiliary browsing context if the hyperlink would create either of those to begin with (i.e., has an appropriate `target` attribute value). In other words, it makes the link behave as if [`window.opener`](/en-US/docs/Web/API/Window/opener) were null and `target="_parent"` were set.
 
     This is the opposite of [`opener`](#attr-opener).
 
-- {{htmlattrdef("noreferrer")}}
+- `noreferrer`
   - : Relevant to {{htmlelement('form')}}, {{htmlelement('a')}}, and {{htmlelement('area')}}, including this value makes the referrer unknown (no `Referer` header will be included), and creates a top-level browsing context as if `noopener` were also set.
-- {{htmlattrdef("opener")}}
+- `opener`
   - : Creates an auxiliary browsing context if the hyperlink would otherwise create a top-level browsing context that is not an auxiliary browsing context (i.e., has "`_blank`" as `target` attribute value). Effectively, the opposite of [noopener](#noopener).
-- {{htmlattrdef("pingback")}}
+- `pingback`
   - : Gives the address of the pingback server that handles pingbacks to the current document. See the [Pingback specification](https://www.hixie.ch/specs/pingback/pingback).
-- {{htmlattrdef("preconnect")}}
+- `preconnect`
   - : Provides a hint to the browser suggesting that it open a connection to the linked website in advance, without disclosing any private information or downloading any content, so that when the link is followed the linked content can be fetched more quickly.
-- {{htmlattrdef("prefetch")}}
+- `prefetch`
   - : Specifies that the user agent should preemptively fetch and cache the target resource as it is likely to be required for a followup navigation. The [Link Prefetch FAQ](/en-US/docs/Web/HTTP/Link_prefetching_FAQ) has details on which links can be prefetched and on alternative methods.
-- {{htmlattrdef("preload")}}
+- `preload`
   - : Specifies that the user agent must preemptively fetch and cache the target resource for current navigation according to the potential destination given by the [`as`](/en-US/docs/Web/HTML/Element/link#attr-as) attribute (and the priority associated with the corresponding destination). See the page for the [`preload`](/en-US/docs/Web/HTML/Attributes/rel/preload) value.
-- {{htmlattrdef("prerender")}} {{Experimental_Inline}}
+- `prerender` {{Experimental_Inline}}
   - : Specifies that the user agent should preemptively fetch the target resource and process it in a way that helps deliver a faster response in the future, for example by fetching its subresources or performing some rendering.
-- {{htmlattrdef("prev")}}
+- `prev`
 
   - : Similar to the [`next`](#attr-next) keyword, relevant to {{htmlelement('form')}}, {{htmlelement('link')}}, {{htmlelement('a')}}, and {{htmlelement('area')}}, the `prev` values indicates that the current document is a part of a series, and that the link references a previous document in the series is the referenced document.
 
     Note: The synonym `previous` is incorrect and should not be used.
 
-- {{htmlattrdef("search")}}
+- `search`
 
   - : Relevant to {{htmlelement('form')}}, {{htmlelement('link')}}, {{htmlelement('a')}}, and {{htmlelement('area')}} elements, the `search` keywords indicates that the hyperlink references a document whose interface is specially designed for searching in the current document, site, and related resources, providing a link to a resource that can be used to search.
 
     If the [`type`](/en-US/docs/Web/HTML/Element/link#attr-type) attribute is set to `application/opensearchdescription+xml` the resource is an [OpenSearch](/en-US/docs/Web/OpenSearch) plugin that can be easily added to the interface of Firefox.
 
-- {{htmlattrdef("stylesheet")}}
+- `stylesheet`
 
   - : Valid for the {{htmlelement('link')}} element, it imports an external resource to be used as a stylesheet. The [`type`](/en-US/docs/Web/HTML/Element/link#attr-type) attribute is not needed as it's a `text/css` stylesheet, as that is the default value. If it's not a stylesheet of type `text/css` it is best to declare the type.
 
@@ -201,12 +201,12 @@ The `rel` attribute has no default value. If the attribute is omitted or if none
 
     Requires the use of the CORS protocol for cross-origin fetching.
 
-- {{htmlattrdef("tag")}}
+- `tag`
   - : Valid for the {{htmlelement('a')}}, and {{htmlelement('area')}} elements, it gives a tag (identified by the given address) that applies to the current document. The tag value denotes that the link refers to a document describing a tag applying to the document on which it is located. This link type is not meant for tags within a tag cloud, as those tags apply to a group of pages, whereas the `tag` value of the `rel` attribute is for a single document.
 
 ### Non-standard values
 
-- {{htmlattrdef("apple-touch-icon")}}
+- `apple-touch-icon`
   - : Specifies the icon for a web application on an iOS device.
 
 ## Specifications
