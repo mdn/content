@@ -2,30 +2,25 @@
 title: Using filter effects
 slug: Web/CSS/filter_effects/using_filter_effects
 page-type: guide
-tags:
-  - CSS
-  - CSS Property
-  - Reference
-  - filter-functions
-  - filter
-  - backdrop-filter
-  - SVG
-  - SVG Filter
 ---
 
 {{CSSRef}}
 
-Have you ever hovered over a black and white or sepia image and the full color image came into view instantly? Have you ever encountered an image with a small blurred out section that makes the text on top more legible? These effects used to not only require costly image editing applications but could also negatively impact performance. CSS Filters enable these visual effects. The only software required is the user's browser. There are no extra HTTP requests. Additionally, if you change the width or the user increases the font in the blur example, the effect grows (or shrinks) with automatically.
+Have you ever hovered over a black and white or sepia image and the full color image came into view instantly? Have you ever encountered an image with a small blurred out section that makes the text on top more legible? Such effects used to require image editing software, time, and http requests. [CSS filter effects](/en-us/docs/Web/CSS/filter_effects/) enable applying these visual effects live, without PhotoShop and without extra HTTP requests. The only software required is the user's browser. And, unlike with pre-set image effects, CSS filter effects, like most CSS features, are fully responsive.
 
-The [CSS filter effects](/en-us/docs/Web/CSS/filter_effects/) module defines the {{cssxref("&lt;filter-function&gt;")}} data type which provides 10 different graphical effects, like blur or color shifting, that can alter the appearance of an element as well as the ability to reference an SVG filter with a filter of your own creation. The CSS {{cssxref("filter")}} and {{cssxref("backdrop-filter")}} properties are used to apply these filters, impacting the rendering of text, images, backgrounds, and borders, or any element on which these properties are applied.
+The CSS filter effects module defines the {{cssxref("&lt;filter-function&gt;")}} data type which provides 10 different graphical effects, like blur or color shifting, that can alter the appearance of an element as well as the ability to reference an SVG filter with a filter of your own creation. The CSS {{cssxref("filter")}} and {{cssxref("backdrop-filter")}} properties are used to apply these filters, impacting the rendering of text, images, backgrounds, and borders, or any element on which these properties are applied.
 
-## Applying a filter to an image
+## CSS properties
 
-There are two filter properties defined in the CSS filter effects module enable applying zero, one, or more graphical effects to an element, like blur, sepia, or a drop-shadow. With `filter`, the effects are applied to the element on which the `filter` property is defined. With `backdrop-filter`, the graphical effects are applied to the area behind the element, or the element's "backdrop". The `backdrop-filter` property is often used to make foreground content more legible when the larger area upon which it located would otherwise not provide enough contrast to alw
+There are two filter properties defined in the CSS filter effects module enable applying zero, one, or more graphical effects to an element, like [blur](/en-US/docs/Web/CSS/filter-function/blur), [sepia](/en-US/docs/Web/CSS/filter-function/sepia), or a [drop-shadow](/en-US/docs/Web/CSS/filter-function/drop-shadow).
 
-The `filter` and `backdrop-filter` properties take as their value a filter function list, containing one or more filter-functions or or the default keyword `none`.
+With the `filter` property, the effects are applied to the element on which the `filter` property is defined. With the `backdrop-filter` property, the graphical effects are applied to the area behind the element, or the element's "backdrop". The `backdrop-filter` property is often used to make foreground content more legible when the larger area upon which it located would otherwise not provide enough contrast.
 
-There are 10 CSS filter functions. The following table lists the filter functions, their equivalent SVG filter element, their initial interpolation, or default, value, and the function's parameter data type:
+## Defined filter functions
+
+The `filter` and `backdrop-filter` properties take as their value a filter function list, containing one or more filter-functions or the default keyword `none`.
+
+There are 10 defined CSS [`<filter-function>`](/en-US/docs/Web/CSS/filter#functions) functions. The following table lists the filter functions, their equivalent SVG filter element, their initial interpolation, or default, value, and the function's parameter data type:
 
 | Filter function                                             | SVG element                                                                                                                                                                                               | data type                                                          | default             | min | max |
 | ----------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------ | ------------------- | --- | --- |
@@ -41,6 +36,38 @@ There are 10 CSS filter functions. The following table lists the filter function
 | {{cssxref("filter-function/sepia", "sepia()")}}             | {{SVGElement("feColorMatrix")}}                                                                                                                                                                           | {{cssxref("&lt;length&gt;")}}                                      |                     |     |     |
 
 with a URL to an [SVG filter element](/en-US/docs/Web/SVG/Element/filter).
+
+While generally applied to images, the `filter` and `backdrop-filter` properties can be applied to any element.
+
+### Applying a filter to an element
+
+To apply a filter effect to an element or pseudo-element, include a list of space separated [filter functions](#Defined_filter_functions). The effects are applied in the order in which they appear:
+
+```css
+#pinkText {
+  color: magenta;
+  filter: hue-rotate(180deg) drop-shadow(3px 3px red);
+}
+#blueText {
+  color: lightblue;
+  filter: drop-shadow(3px 3px red) hue-rotate(180deg);
+}
+```
+
+```css hidden
+h1 {
+  font-family: san-serif;
+  font-size: 4rem;
+}
+```
+
+```html hidden
+<h1 id="pinkText">This was originally pink!</h1>
+<h1 id="blueText">This was originally blue!</h1>
+```
+
+{{EmbedLiveSample('Applying_a_filter_to_an_element','100%','280')}}
+The same filters were applied to both lines of text, but in different order. Red drop shadows were applied to both lines of text. In the pink example, the pink hue was altered before the red shadow was applied; so the red shadow is red. In the blue example, the red drop shadow was added, and then the hue of both the text and the shadow were changed.
 
 ## Filter functions
 
