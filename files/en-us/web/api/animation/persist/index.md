@@ -7,7 +7,7 @@ browser-compat: api.Animation.persist
 
 {{APIRef("Web Animations")}}
 
-The `persist()` method of the [Web Animations API](/en-US/docs/Web/API/Web_Animations_API)'s {{domxref("Animation")}} interface explicitly persists an animation, when it would otherwise be removed due to the browser's [Automatically removing filling animations](/en-US/docs/Web/API/Animation#automatically_removing_filling_animations) behavior.
+The `persist()` method of the [Web Animations API](/en-US/docs/Web/API/Web_Animations_API)'s {{domxref("Animation")}} interface explicitly persists an animation, preventing it from being [automatically removed](/en-US/docs/Web/API/Animation#automatically_removing_filling_animations) when it is replaced by another animation.
 
 ## Syntax
 
