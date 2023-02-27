@@ -91,7 +91,28 @@ efforts as the Work Item is standardized.
     ["Strict" privacy protections](https://support.mozilla.org/en-US/kb/enhanced-tracking-protection-firefox-desktop#w_strict-enhanced-tracking-protection) enabled.
   - Since Firefox 90: Enabled in private browsing.
 
-### Network Partitioning
+### Static Partitioning
+
+#### Storage Partitioning:
+To prevent JavaScript accessible storage APIs being used for cross-site
+tracking, Firefox partitions accessible storage by top-level site. This
+mechanism means that, generally, a third-party embedded in one top-level site
+cannot access data stored under another top-level site.
+
+#### Storage APIs
+- [localStorage](/en-US/docs/Web/API/Window/localStorage)
+- [sessionStorage](/en-US/docs/Web/API/Window/sessionStorage)
+- [DOM Cache](/en-US/docs/Web/API/Cache)
+- [IndexedDB](/en-US/docs/Web/API/IndexedDB_API)
+- [Broadcast Channel](/en-US/docs/Web/API/BroadcastChannel)
+- [Shared Workers](/en-US/docs/Web/API/SharedWorker)
+
+[Service Workers](/en-US/docs/Web/API/Service_Worker_API)
+are currently disabled in partitioned contexts when dynamic partitioning is
+enabled. In [Bug 1495241](https://bugzilla.mozilla.org/show_bug.cgi?id=1495241)
+we are exploring options to enable Service Workers in partitioned contexts.
+
+#### Network Partitioning:
 
 Networking-related APIs are not intended to be used for websites to store
 data, but they can be
@@ -102,7 +123,7 @@ for cross-site tracking. As such, the following network APIs and caches are
 > **Note:** Network Partitioning is permanent. Websites can't
 > control or relax these restrictions.
 
-#### Partitioned APIs
+#### Network APIs
 
 - [HTTP Cache](/en-US/docs/Web/HTTP/Caching)
 - Image Cache
@@ -126,12 +147,7 @@ for cross-site tracking. As such, the following network APIs and caches are
 
 ### Dynamic Partitioning
 
-To prevent JavaScript accessible storage APIs being used for cross-site
-tracking, Firefox partitions accessible storage by top-level site. This
-mechanism means that, generally, a third-party embedded in one top-level site
-cannot access data stored under another top-level site.
-
-However, unlike Network Partitioning, this boundary is dynamic for cookies and access
+Generally Firefox partitions accessible storage by top-level site. However, this boundary is dynamic for cookies and access
 to a third-party's unpartitioned cookies can be granted:
 
 - using the [Storage Access API](#storage_access_api).
@@ -140,20 +156,9 @@ to a third-party's unpartitioned cookies can be granted:
 Details about automatic grants are provided in the
 [Storage Access Heuristics](#storage_access_heuristics) section.
 
-#### Partitioned APIs
+#### Dynamically Partitioned APIs
 
-- [Cookies](/en-US/docs/Web/API/Document/cookie) (Dynamic)
-- [localStorage](/en-US/docs/Web/API/Window/localStorage)
-- [sessionStorage](/en-US/docs/Web/API/Window/sessionStorage)
-- [DOM Cache](/en-US/docs/Web/API/Cache)
-- [IndexedDB](/en-US/docs/Web/API/IndexedDB_API)
-- [Broadcast Channel](/en-US/docs/Web/API/BroadcastChannel)
-- [Shared Workers](/en-US/docs/Web/API/SharedWorker)
-
-[Service Workers](/en-US/docs/Web/API/Service_Worker_API)
-are currently disabled in partitioned contexts when dynamic partitioning is
-enabled. In [Bug 1495241](https://bugzilla.mozilla.org/show_bug.cgi?id=1495241)
-we are exploring options to enable Service Workers in partitioned contexts.
+- [Cookies](/en-US/docs/Web/API/Document/cookie)
 
 #### Storage Access Heuristics
 
