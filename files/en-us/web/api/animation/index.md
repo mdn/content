@@ -85,7 +85,6 @@ The first four conditions ensure that, absent intervention by javascript code, t
 
 The related JavaScript features are:
 
-- {{domxref("animation.commitStyles()")}} for committing the current styling state of an animation to the element being animated, even after that animation has been removed.
 - The {{domxref("animation/remove_event", "remove")}} event on the {{domxref("Animation")}} interface fires when the animation is removed (i.e., put into the `removed` replace state).
 - {{domxref("animation.persist()")}} for when you explicitly want an animation to be retained.
 - {{domxref("animation.replaceState")}} to return the replace state of the animation. This will be `removed` if the animation has been removed, or `persisted` if {{domxref("Animation.persist", "persist()")}} has been invoked.
