@@ -2,13 +2,6 @@
 title: isolation
 slug: Web/CSS/isolation
 page-type: css-property
-tags:
-  - CSS
-  - CSS Property
-  - Compositing and Blending
-  - NeedsContent
-  - isolation
-  - recipe:css-property
 browser-compat: css.properties.isolation
 ---
 
@@ -60,42 +53,40 @@ The `isolation` property is specified as one of the keyword values listed below.
 
 ```html
 <div class="big-square ">
-    <div class="isolation-auto">
-        <div class="small-square">auto</div>
-    </div>
-    <div class="isolation-isolate">
-        <div class="small-square">isolate</div>
-    </div>
+  <div class="isolation-auto">
+    <div class="small-square">auto</div>
+  </div>
+  <div class="isolation-isolate">
+    <div class="small-square">isolate</div>
+  </div>
 </div>
 ```
 
 #### CSS
 
 ```css
-
 .isolation-auto {
-    isolation: auto;
+  isolation: auto;
 }
 
 .isolation-isolate {
-    isolation: isolate;
+  isolation: isolate;
 }
 
 .big-square {
-    background-color: rgb(0, 255, 0);
-    width: 200px;
-    height: 210px;
+  background-color: rgb(0, 255, 0);
+  width: 200px;
+  height: 210px;
 }
 
 .small-square {
-    background-color: rgb(0, 255, 0);
-    width: 100px;
-    height: 100px;
-    border: 1px solid black;
-    padding: 2px;
-    mix-blend-mode: difference;
+  background-color: rgb(0, 255, 0);
+  width: 100px;
+  height: 100px;
+  border: 1px solid black;
+  padding: 2px;
+  mix-blend-mode: difference;
 }
-
 ```
 
 #### Result

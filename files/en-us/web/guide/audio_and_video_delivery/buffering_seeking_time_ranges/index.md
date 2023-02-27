@@ -1,14 +1,6 @@
 ---
 title: Media buffering, seeking, and time ranges
 slug: Web/Guide/Audio_and_video_delivery/buffering_seeking_time_ranges
-tags:
-  - Apps
-  - Buffer
-  - HTML
-  - TimeRanges
-  - Video
-  - buffering
-  - seeking
 ---
 
 {{QuickLinksWithSubPages("/en-US/docs/Web/Guide/Audio_and_video_delivery")}}

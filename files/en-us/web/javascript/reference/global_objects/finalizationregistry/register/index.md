@@ -2,12 +2,6 @@
 title: FinalizationRegistry.prototype.register()
 slug: Web/JavaScript/Reference/Global_Objects/FinalizationRegistry/register
 page-type: javascript-instance-method
-tags:
-  - FinalizationRegistry
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
 browser-compat: javascript.builtins.FinalizationRegistry.register
 ---
 

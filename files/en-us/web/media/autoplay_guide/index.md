@@ -1,23 +1,6 @@
 ---
 title: Autoplay guide for media and Web Audio APIs
 slug: Web/Media/Autoplay_guide
-tags:
-  - API
-  - Audio
-  - Draft
-  - Guide
-  - HTML
-  - JavaScript
-  - Media
-  - Muting
-  - Playback
-  - Video
-  - Web
-  - Web Audio API
-  - autoplay
-  - mute
-  - muted
-  - play
 ---
 
 {{QuickLinksWithSubpages("/en-US/docs/Web/Media")}}

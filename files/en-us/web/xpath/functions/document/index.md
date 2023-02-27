@@ -1,9 +1,6 @@
 ---
 title: document
 slug: Web/XPath/Functions/document
-tags:
-  - XSLT
-  - XSLT_Reference
 ---
 
 {{ XsltRef() }}

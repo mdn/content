@@ -2,8 +2,6 @@
 title: Deep copy
 slug: Glossary/Deep_copy
 page-type: glossary-definition
-tags:
-  - Deep copy
 ---
 
 {{MDNSidebar}}

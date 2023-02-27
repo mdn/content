@@ -1,13 +1,6 @@
 ---
 title: How to fade a button on hover
 slug: Learn/CSS/Howto/Transition_button
-tags:
-  - Basic
-  - Beginner
-  - CSS
-  - CSS:Getting_Started
-  - Guide
-  - Web
 ---
 
 {{LearnSidebar}}

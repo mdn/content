@@ -2,14 +2,8 @@
 title: "-moz-user-focus"
 slug: Web/CSS/-moz-user-focus
 page-type: css-property
-tags:
-  - "-moz-user-focus"
-  - CSS
-  - CSS:Mozilla Extensions
-  - NeedsContent
-  - Non-standard
-  - Reference
-  - recipe:css-property
+status:
+  - non-standard
 browser-compat: css.properties.-moz-user-focus
 ---
 

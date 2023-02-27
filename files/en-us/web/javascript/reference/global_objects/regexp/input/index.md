@@ -2,13 +2,8 @@
 title: RegExp.input ($_)
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/input
 page-type: javascript-static-accessor-property
-tags:
-  - JavaScript
-  - Deprecated
-  - Property
-  - Reference
-  - RegExp
-  - Regular Expressions
+status:
+  - deprecated
 browser-compat: javascript.builtins.RegExp.input
 ---
 

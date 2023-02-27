@@ -2,13 +2,6 @@
 title: BigInt.prototype.toLocaleString()
 slug: Web/JavaScript/Reference/Global_Objects/BigInt/toLocaleString
 page-type: javascript-instance-method
-tags:
-  - BigInt
-  - Internationalization
-  - Intl
-  - JavaScript
-  - Method
-  - Prototype
 browser-compat: javascript.builtins.BigInt.toLocaleString
 ---
 

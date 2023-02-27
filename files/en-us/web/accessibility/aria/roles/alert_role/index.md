@@ -1,15 +1,6 @@
 ---
 title: "ARIA: alert role"
 slug: Web/Accessibility/ARIA/Roles/alert_role
-tags:
-  - ARIA
-  - Alert
-  - Live region
-  - Accessibility
-  - ARIA Role
-  - ARIA alert
-  - ARIA widget
-  - Reference
 spec-urls:
   - https://w3c.github.io/aria/#alert
   - https://w3c.github.io/aria-practices/#log

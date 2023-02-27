@@ -1,16 +1,6 @@
 ---
 title: "Express Tutorial Part 2: Creating a skeleton website"
 slug: Learn/Server-side/Express_Nodejs/skeleton_website
-tags:
-  - Beginner
-  - CodingScripting
-  - Development environment
-  - Express
-  - Intro
-  - Learn
-  - Node
-  - npm
-  - server-side
 ---
 
 {{LearnSidebar}}

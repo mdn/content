@@ -57,12 +57,12 @@ None ({{jsxref("undefined")}}).
 ## Examples
 
 ```js
-beforeBtn.addEventListener('click', () => {
-  para.insertAdjacentText('afterbegin',textInput.value);
+beforeBtn.addEventListener("click", () => {
+  para.insertAdjacentText("afterbegin", textInput.value);
 });
 
-afterBtn.addEventListener('click', () => {
-  para.insertAdjacentText('beforeend',textInput.value);
+afterBtn.addEventListener("click", () => {
+  para.insertAdjacentText("beforeend", textInput.value);
 });
 ```
 

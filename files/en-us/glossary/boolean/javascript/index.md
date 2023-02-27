@@ -2,12 +2,6 @@
 title: Boolean (Javascript)
 slug: Glossary/Boolean/JavaScript
 page-type: glossary-definition
-tags:
-  - Boolean
-  - CodingScripting
-  - JavaScript
-  - Programming Languages
-  - data types
 ---
 
 A **Boolean** in Javascript is a {{Glossary("Primitive", "primitive value")}} that can be either `true` or `false`.

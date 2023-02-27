@@ -33,7 +33,7 @@ An object is a collection of related data and/or functionality.
 These usually consist of several variables and functions (which are called properties and methods when they are inside objects).
 Let's work through an example to understand what they look like.
 
-To begin with, make a local copy of our [oojs.html](https://github.com/mdn/learning-area/blob/main/javascript/oojs/introduction/oojs.html) file. This contains very little — a {{HTMLElement("script")}} element for us to write our source code into. We'll use this as a basis for exploring basic object syntax. While working with this example you should have your [developer tools JavaScript console](/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools#the_javascript_console) open and ready to type in some commands.
+To begin with, make a local copy of our [oojs.html](https://github.com/mdn/learning-area/blob/main/javascript/oojs/introduction/oojs.html) file. This contains very little — a {{HTMLElement("script")}} element for us to write our source code into. We'll use this as a basis for exploring basic object syntax. While working with this example you should have your [developer tools JavaScript console](/en-US/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools#the_javascript_console) open and ready to type in some commands.
 
 As with many things in JavaScript, creating an object often begins with defining and initializing a variable. Try entering the following line below the JavaScript code that's already in your file, then saving and refreshing:
 
@@ -41,7 +41,7 @@ As with many things in JavaScript, creating an object often begins with defining
 const person = {};
 ```
 
-Now open your browser's [JavaScript console](/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools#the_javascript_console), enter `person` into it, and press <kbd>Enter</kbd>/<kbd>Return</kbd>. You should get a result similar to one of the below lines:
+Now open your browser's [JavaScript console](/en-US/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools#the_javascript_console), enter `person` into it, and press <kbd>Enter</kbd>/<kbd>Return</kbd>. You should get a result similar to one of the below lines:
 
 ```
 [object Object]
@@ -408,13 +408,3 @@ Congratulations, you've reached the end of our first JS objects article — you 
 In the next article we'll look at **prototypes**, which is the fundamental way that JavaScript lets an object inherit properties from other objects.
 
 {{NextMenu("Learn/JavaScript/Objects/Object_prototypes", "Learn/JavaScript/Objects")}}
-
-## In this module
-
-- **Object basics**
-- [Object prototypes](/en-US/docs/Learn/JavaScript/Objects/Object_prototypes)
-- [Object-oriented programming concepts](/en-US/docs/Learn/JavaScript/Objects/Object-oriented_programming)
-- [Classes in JavaScript](/en-US/docs/Learn/JavaScript/Objects/Classes_in_JavaScript)
-- [Working with JSON data](/en-US/docs/Learn/JavaScript/Objects/JSON)
-- [Object building practice](/en-US/docs/Learn/JavaScript/Objects/Object_building_practice)
-- [Adding features to our bouncing balls demo](/en-US/docs/Learn/JavaScript/Objects/Adding_bouncing_balls_features)

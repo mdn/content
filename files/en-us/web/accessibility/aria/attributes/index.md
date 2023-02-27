@@ -1,14 +1,6 @@
 ---
 title: ARIA states and properties
 slug: Web/Accessibility/ARIA/Attributes
-tags:
-  - ARIA
-  - ARIA states and properties
-  - ARIA attributes
-  - Accessibility
-  - Reference
-  - States
-  - Properties
 ---
 
 This page lists reference pages covering all the <abbr>WAI-ARIA</abbr> attributes discussed on MDN.

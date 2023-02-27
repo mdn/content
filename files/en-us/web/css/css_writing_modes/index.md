@@ -2,12 +2,6 @@
 title: CSS Writing Modes
 slug: Web/CSS/CSS_Writing_Modes
 page-type: css-module
-tags:
-  - CSS
-  - CSS Writing Modes
-  - Guide
-  - Overview
-  - Reference
 spec-urls: https://drafts.csswg.org/css-writing-modes/
 ---
 

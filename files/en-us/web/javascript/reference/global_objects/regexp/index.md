@@ -2,13 +2,6 @@
 title: RegExp
 slug: Web/JavaScript/Reference/Global_Objects/RegExp
 page-type: javascript-class
-tags:
-  - Class
-  - JavaScript
-  - Reference
-  - RegExp
-  - Regular Expressions
-  - Polyfill
 browser-compat: javascript.builtins.RegExp
 ---
 
@@ -125,6 +118,8 @@ Note that several of the {{JSxRef("RegExp")}} properties have both long and shor
 
 These properties are defined on `RegExp.prototype` and shared by all `RegExp` instances.
 
+- {{jsxref("Object/constructor", "RegExp.prototype.constructor")}}
+  - : The constructor function that created the instance object. For `RegExp` instances, the initial value is the {{jsxref("RegExp/RegExp", "RegExp")}} constructor.
 - {{JSxRef("RegExp.prototype.flags")}}
   - : A string that contains the flags of the `RegExp` object.
 - {{JSxRef("RegExp.prototype.dotAll")}}
@@ -315,7 +310,7 @@ Starting with Firefox 34, in the case of a capturing group with quantifiers prev
 // group: undefined
 ```
 
-Note that due to web compatibility, `RegExp.$N` will still return an empty string instead of `undefined` ([bug 1053944](https://bugzilla.mozilla.org/show_bug.cgi?id=1053944)).
+Note that due to web compatibility, `RegExp.$N` will still return an empty string instead of `undefined` ([bug 1053944](https://bugzil.la/1053944)).
 
 ## See also
 

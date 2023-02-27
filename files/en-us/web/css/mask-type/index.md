@@ -2,13 +2,6 @@
 title: mask-type
 slug: Web/CSS/mask-type
 page-type: css-property
-tags:
-  - CSS
-  - CSS Masking
-  - CSS Property
-  - Reference
-  - SVG
-  - recipe:css-property
 browser-compat: css.properties.mask-type
 ---
 

@@ -2,13 +2,8 @@
 title: "-webkit-mask-repeat-x"
 slug: Web/CSS/-webkit-mask-repeat-x
 page-type: css-property
-tags:
-  - CSS
-  - CSS Masking
-  - CSS Property
-  - Non-standard
-  - Reference
-  - recipe:css-property
+status:
+  - non-standard
 browser-compat: css.properties.-webkit-mask-repeat-x
 ---
 

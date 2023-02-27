@@ -27,7 +27,7 @@ In this example the [`aria-valuemax`](/en-US/docs/Web/Accessibility/ARIA/Attribu
 ```
 
 ```js
-let el = document.getElementById('slider');
+let el = document.getElementById("slider");
 console.log(el.ariaValueMax); // 7
 el.ariaValueMax = "6";
 console.log(el.ariaValueMax); // 6

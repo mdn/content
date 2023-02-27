@@ -2,12 +2,6 @@
 title: color
 slug: Web/CSS/@media/color
 page-type: css-media-feature
-tags:
-  - "@media"
-  - CSS
-  - Media Queries
-  - Reference
-  - media feature
 browser-compat: css.at-rules.media.color
 ---
 

@@ -2,15 +2,6 @@
 title: '<form>: The Form element'
 slug: Web/HTML/Element/form
 page-type: html-element
-tags:
-  - Element
-  - Form Element
-  - Forms
-  - HTML
-  - HTML Form Element
-  - HTML forms
-  - Reference
-  - Web
 browser-compat: html.elements.form
 ---
 
@@ -55,7 +46,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
   - : The name of the form. The value must not be the empty string, and must be unique among the `form` elements in the forms collection that it is in, if any.
 
 - {{htmlattrdef("rel")}}
-  - : Controls the annotations and what kinds of links the form creates. Annotations include [`external`](/en-US/docs/Web/HTML/Attributes/rel#attr-external), [`nofollow`](/en-US/docs/Web/HTML/Attributes/rel#attr-nofollow), [`opener`](/en-US/docs/Web/HTML/Attributes/rel#attr-opener), [`noopener`](/en-US/docs/Web/HTML/Attributes/rel#attr-noopener), and [`noreferrer`](/en-US/docs/Web/HTML/Attributes/rel#attr-noreferrer). Link types include [`help`](/en-US/docs/Web/HTML/Attributes/rel#attr-help), [`prev`](/en-US/docs/Web/HTML/Attributes/rel#attr-prev), [`next`](/en-US/docs/Web/HTML/Attributes/rel#attr-next), [`search`](/en-US/docs/Web/HTML/Attributes/rel#attr-search), and [`license`](/en-US/docs/Web/HTML/Attributes/rel#attr-license). The [`rel`](/en-US/docs/Web/HTML/Attributes/rel) value is a space-separated list of these enumerated values.
+  - : Controls the annotations and what kinds of links the form creates. Annotations include [`external`](/en-US/docs/Web/HTML/Attributes/rel#external), [`nofollow`](/en-US/docs/Web/HTML/Attributes/rel#nofollow), [`opener`](/en-US/docs/Web/HTML/Attributes/rel#opener), [`noopener`](/en-US/docs/Web/HTML/Attributes/rel#noopener), and [`noreferrer`](/en-US/docs/Web/HTML/Attributes/rel#noreferrer). Link types include [`help`](/en-US/docs/Web/HTML/Attributes/rel#help), [`prev`](/en-US/docs/Web/HTML/Attributes/rel#prev), [`next`](/en-US/docs/Web/HTML/Attributes/rel#next), [`search`](/en-US/docs/Web/HTML/Attributes/rel#search), and [`license`](/en-US/docs/Web/HTML/Attributes/rel#license). The [`rel`](/en-US/docs/Web/HTML/Attributes/rel) value is a space-separated list of these enumerated values.
 
 ### Attributes for form submission
 
@@ -132,15 +123,15 @@ The following attributes control behavior during form submission.
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories"
+        <a href="/en-US/docs/Web/HTML/Content_categories"
           >Content categories</a
         >
       </th>
       <td>
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
           >Flow content</a
         >,
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#palpable_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#palpable_content"
           >palpable content</a
         >
       </td>
@@ -148,7 +139,7 @@ The following attributes control behavior during form submission.
     <tr>
       <th scope="row">Permitted content</th>
       <td>
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
           >Flow content</a
         >, but not containing <code>&#x3C;form></code> elements
       </td>
@@ -161,7 +152,7 @@ The following attributes control behavior during form submission.
       <th scope="row">Permitted parents</th>
       <td>
         Any element that accepts
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
           >flow content</a
         >
       </td>
