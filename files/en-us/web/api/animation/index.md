@@ -35,7 +35,7 @@ The **`Animation`** interface of the [Web Animations API](/en-US/docs/Web/API/We
 - {{domxref("Animation.ready")}} {{ReadOnlyInline}}
   - : Returns the current ready Promise for this animation.
 - {{domxref("animation.replaceState")}} {{ReadOnlyInline}}
-  - : Returns the replace state of the animation. This will be `active` if the animation has been replaced, or `persisted` if {{domxref("Animation.persist()")}} has been invoked on it.
+  - : Returns the replace state of the animation. This will be `removed` if the animation has been replaced and removed, or `persisted` if {{domxref("Animation.persist()")}} has been invoked on it.
 - {{domxref("Animation.startTime")}}
   - : Gets or sets the scheduled time when an animation's playback should begin.
 - {{domxref("Animation.timeline")}}
@@ -67,7 +67,7 @@ The **`Animation`** interface of the [Web Animations API](/en-US/docs/Web/API/We
 - {{domxref("Animation.finish_event", "finish")}}
   - : Fires when the animation finishes playing.
 - {{domxref("animation.remove_event", "remove")}}
-  - : Fires when the animation is removed (i.e., put into an `active` replace state).
+  - : Fires when the animation is [automatically removed](#automatically_removing_filling_animations) by the browser.
 
 ## Automatically removing filling animations
 
