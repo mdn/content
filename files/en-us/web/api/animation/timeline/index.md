@@ -2,14 +2,6 @@
 title: Animation.timeline
 slug: Web/API/Animation/timeline
 page-type: web-api-instance-property
-tags:
-  - API
-  - Animation
-  - Property
-  - Reference
-  - Web Animations
-  - timeline
-  - web animations api
 browser-compat: api.Animation.timeline
 ---
 

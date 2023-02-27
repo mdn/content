@@ -2,16 +2,6 @@
 title: border-block-start-color
 slug: Web/CSS/border-block-start-color
 page-type: css-property
-tags:
-  - CSS
-  - CSS Logical Property
-  - CSS Property
-  - Reference
-  - border-block
-  - border-block-color
-  - border-block-start
-  - border-block-start-color
-  - recipe:css-property
 browser-compat: css.properties.border-block-start-color
 ---
 

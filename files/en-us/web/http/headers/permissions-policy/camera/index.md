@@ -1,5 +1,5 @@
 ---
-title: 'Permissions-Policy: camera'
+title: "Permissions-Policy: camera"
 slug: Web/HTTP/Headers/Permissions-Policy/camera
 tags:
   - Directive

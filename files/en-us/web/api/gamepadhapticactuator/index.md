@@ -2,15 +2,6 @@
 title: GamepadHapticActuator
 slug: Web/API/GamepadHapticActuator
 page-type: web-api-interface
-tags:
-  - API
-  - Gamepad
-  - GamepadHapticActuator
-  - Interface
-  - Reference
-  - VR
-  - Virtual Reality
-  - WebVR
 browser-compat: api.GamepadHapticActuator
 ---
 
@@ -41,7 +32,7 @@ const gamepad = navigator.getGamepads()[0];
 
 gamepad.hapticActuators[0].pulse(1.0, 200);
 
-gamepad.vibrationActuator.playEffect('dual-rumble', {
+gamepad.vibrationActuator.playEffect("dual-rumble", {
   startDelay: 0,
   duration: 200,
   weakMagnitude: 1.0,

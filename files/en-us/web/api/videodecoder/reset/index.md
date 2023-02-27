@@ -2,13 +2,8 @@
 title: VideoDecoder.reset()
 slug: Web/API/VideoDecoder/reset
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - reset
-  - VideoDecoder
-  - Experimental
+status:
+  - experimental
 browser-compat: api.VideoDecoder.reset
 ---
 

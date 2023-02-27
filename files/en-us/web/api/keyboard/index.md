@@ -2,15 +2,8 @@
 title: Keyboard
 slug: Web/API/Keyboard
 page-type: web-api-interface
-tags:
-  - API
-  - Experimental
-  - Interface
-  - Keyboard API
-  - Keyboard Lock
-  - Keyboard Map
-  - Reference
-  - keyboard
+status:
+  - experimental
 browser-compat: api.Keyboard
 ---
 

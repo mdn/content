@@ -1,8 +1,6 @@
 ---
 title: Writing Web Audio API code that works in every browser
 slug: Web/Guide/Audio_and_video_delivery/Web_Audio_API_cross_browser
-tags:
-  - API
 ---
 
 {{QuickLinksWithSubPages("/en-US/docs/Web/Guide/Audio_and_video_delivery")}}
@@ -59,7 +57,7 @@ Today the support is already present in [Nightly](https://www.mozilla.org/en-US/
 
 ```js
 const panner = new audioContext.PannerNode();
-panner.panningModel = 'equalpower';
+panner.panningModel = "equalpower";
 ```
 
 Note that there's a [list of projects](https://github.com/WebAudio/demo-list) built with the Web Audio API, specifying which ones use the standard `AudioContext` and which browsers do they work on. If you're a person that learns by example, it might be interesting to have a look at their source and see how they have resolved the compatibility issues.

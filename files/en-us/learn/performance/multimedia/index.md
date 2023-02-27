@@ -1,12 +1,6 @@
 ---
-title: 'Multimedia: Images'
+title: "Multimedia: Images"
 slug: Learn/Performance/Multimedia
-tags:
-  - Images
-  - Media
-  - Performance
-  - Video
-  - Web Performance
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Performance/measuring_performance", "Learn/Performance/video", "Learn/Performance")}}
@@ -87,7 +81,6 @@ Other formats improve on JPEG's capabilities regarding compression, but are not 
   > **Note:** Despite having [announced support](https://developer.apple.com/videos/play/wwdc2020/10663/?time=1174) for WebP in Safari 14, as of version 14.0 .webp images do not display natively on a macOS desktop, whereas Safari on iOS 14 does display .webp images properly.
 
 - [AVIF](/en-US/docs/Web/Media/Formats/Image_types#avif_image) — Good choice for both images and animated images due to high performance and royalty free image format (even more efficient that WebP, but not as widely supported). It is now supported on Chrome, Opera and Firefox. See also [an online tool to convert previous image formats to AVIF](https://avif.io/).
-- **JPEG-XR** — created by Microsoft and was only available in Internet Explorer and EdgeHTML-based Edge. It didn't support progressive display, and the image decoding was not hardware accelerated and, therefore, resource-intensive on the browser's main thread. Progressive JPEG above the fold is rendered progressively (hence the name), meaning the user saw a low-resolution version that gained clarity as the image downloaded, rather than the image loading at full resolution top-to-bottom or even rendering once completely downloaded.
 - **JPEG2000** — once to be successor to JPEG but only supported in Safari. Doesn't support progressive display either.
 
 Given the narrow support for JPEG-XR and JPEG2000, and also taking decode costs into the equation, the only serious contender for JPEG is WebP. Which is why you could offer your images in that flavor too. This can be done via the `<picture>` element with the help of a `<source>` element equipped with a [type attribute](/en-US/docs/Web/HTML/Element/picture#the_type_attribute).
@@ -119,7 +112,7 @@ Getting the most important images in front of visitors sooner than the less impo
 
 The first thing to check is that your content images use `<img>` or `<picture>` elements and your background images are defined in CSS with `background-image` — images referenced in `<img>` elements are assigned a higher loading priority than background images.
 
-Secondly, with the adoption of Priority Hints, you can control the priority further by adding an `importance` attribute to your image tags. An example use case for priority hints on images are carousels where the first image is a higher priority than the subsequent images.
+Secondly, with the adoption of Priority Hints, you can control the priority further by adding a `fetchPriority` attribute to your image tags. An example use case for priority hints on images are carousels where the first image is a higher priority than the subsequent images.
 
 ### Rendering strategy: preventing jank when loading images
 
@@ -159,19 +152,3 @@ For any background images, it's important you set a `background-color` value so 
 In this section we took a look at image optimization. You now have a general understanding of how to optimize half of the average websites average bandwidth total. This is just one of the types of media consuming users bandwidth and slowing down page load. Let's take a look at video optimization, tackling the next 20% of bandwidth consumption.
 
 {{PreviousMenuNext("Learn/Performance/measuring_performance", "Learn/Performance/video", "Learn/Performance")}}
-
-## In this module
-
-- [The "why" of web performance](/en-US/docs/Learn/Performance/why_web_performance)
-- [What is web performance?](/en-US/docs/Learn/Performance/What_is_web_performance)
-- [How do users perceive performance?](/en-US/docs/Learn/Performance/Perceived_performance)
-- [Measuring performance](/en-US/docs/Learn/Performance/Measuring_performance)
-- [Multimedia: images](/en-US/docs/Learn/Performance/Multimedia)
-- [Multimedia: video](/en-US/docs/Learn/Performance/video)
-- [JavaScript performance](/en-US/docs/Learn/Performance/JavaScript)
-- [HTML performance features](/en-US/docs/Learn/Performance/HTML)
-- [CSS performance features](/en-US/docs/Learn/Performance/CSS)
-- [Fonts and performance](/en-US/docs/Learn/Performance/Fonts)
-- [Mobile performance](/en-US/docs/Learn/Performance/Mobile)
-- [The business case for web performance](/en-US/docs/Learn/Performance/business_case_for_performance)
-- [Web performance resources](/en-US/docs/Learn/Performance/Web_Performance_Basics)

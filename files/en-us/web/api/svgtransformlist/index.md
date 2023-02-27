@@ -2,11 +2,6 @@
 title: SVGTransformList
 slug: Web/API/SVGTransformList
 page-type: web-api-interface
-tags:
-  - API
-  - Reference
-  - SVG
-  - SVG DOM
 browser-compat: api.SVGTransformList
 ---
 
@@ -73,7 +68,7 @@ An `SVGTransformList` is indexable and can be accessed like an array.
             {{ domxref("SVGTransform") }}
             <code
               >createSVGTransformFromMatrix(in
-              {{ domxref("SVGMatrix") }})</code
+              {{ domxref("DOMMatrix") }})</code
             >
           </li>
           <li>
@@ -316,7 +311,7 @@ An `SVGTransformList` is indexable and can be accessed like an array.
       <td>
         <code
           ><strong>createSVGTransformFromMatrix</strong>(in
-          {{ domxref("SVGMatrix") }})</code
+          {{ domxref("DOMMatrix") }})</code
         >
       </td>
       <td>{{ domxref("SVGTransform") }}</td>

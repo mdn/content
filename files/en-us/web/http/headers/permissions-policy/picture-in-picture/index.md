@@ -1,5 +1,5 @@
 ---
-title: 'Permissions-Policy: picture-in-picture'
+title: "Permissions-Policy: picture-in-picture"
 slug: Web/HTTP/Headers/Permissions-Policy/picture-in-picture
 tags:
   - Directive

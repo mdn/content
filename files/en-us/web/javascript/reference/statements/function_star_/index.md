@@ -2,13 +2,6 @@
 title: function*
 slug: Web/JavaScript/Reference/Statements/function*
 page-type: javascript-statement
-tags:
-  - ECMAScript 2015
-  - Function
-  - Iterator
-  - JavaScript
-  - Language feature
-  - Statement
 browser-compat: javascript.statements.generator_function
 ---
 

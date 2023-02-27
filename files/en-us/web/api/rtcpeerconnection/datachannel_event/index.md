@@ -2,20 +2,6 @@
 title: 'RTCPeerConnection: datachannel event'
 slug: Web/API/RTCPeerConnection/datachannel_event
 page-type: web-api-event
-tags:
-  - Channels
-  - Connection
-  - Connectivity
-  - Networking
-  - RTCDataChannel
-  - Reference
-  - WebRTC
-  - WebRTC API
-  - data
-  - datachannel
-  - events
-  - Event
-  - rtc
 browser-compat: api.RTCPeerConnection.datachannel_event
 ---
 

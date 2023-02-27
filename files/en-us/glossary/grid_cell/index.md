@@ -2,8 +2,6 @@
 title: Grid Cell
 slug: Glossary/Grid_Cell
 page-type: glossary-definition
-tags:
-  - CSS Grids
 ---
 
 In a [CSS Grid Layout](/en-US/docs/Web/CSS/CSS_Grid_Layout), a **grid cell** is the smallest unit you can have on your CSS grid. It is the space between four intersecting {{glossary("grid lines")}} and conceptually much like a table cell.

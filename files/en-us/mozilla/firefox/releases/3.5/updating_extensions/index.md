@@ -1,8 +1,6 @@
 ---
 title: Updating extensions for Firefox 3.5
 slug: Mozilla/Firefox/Releases/3.5/Updating_extensions
-tags:
-  - Extensions
 ---
 
 {{FirefoxSidebar}}
@@ -121,7 +119,7 @@ Firefox 3.5 closes a security hole that made it possible to use remote chrome. T
 
 ## Getting a load context from a request
 
-Previously, it was possible to get a load context from a request by querying various docShell APIs. In particular, it was a common practice to use `notificationCallbacks.getInterface(nsIDOMWindow)` to get the window object associated with the load. While the older approach may work in some circumstances, it is not recommended to use it anymore ([details](https://bugzilla.mozilla.org/show_bug.cgi?id=457153#c16)).
+Previously, it was possible to get a load context from a request by querying various docShell APIs. In particular, it was a common practice to use `notificationCallbacks.getInterface(nsIDOMWindow)` to get the window object associated with the load. While the older approach may work in some circumstances, it is not recommended to use it anymore ([details](https://bugzil.la/457153#c16)).
 
 This correct and reliable way to do this is to use an `nsILoadContext` (see the [interface definition](http://mxr.mozilla.org/mozilla-central/source/docshell/base/nsILoadContext.idl) on mxr).
 
@@ -181,7 +179,7 @@ NS_QueryNotificationCallbacks(channel, loadContext);
 
 ## Customizable toolbars
 
-In Firefox 3.5, customizable toolbar behavior has changed such that the `<xul:toolbar/>` binding now removes toolbar items from its associated `<xul:toolbarpalette/>` and adds them to the toolbar, rather than cloning them and copying them to the toolbar. This means that the palette will now only contain items not present on the toolbar, as opposed to the previous behavior of containing all customizable elements whether or not they were displayed on the toolbar. This might cause trouble for addons that depend on being able to retrieve all customizable toolbar items from the `<xul:toolbarpalette/>`, or which attempt to dynamically insert items into the palette to make them available during toolbar customization. More information is available in {{ Bug(407725) }} and {{ Bug(467045) }}.
+In Firefox 3.5, customizable toolbar behavior has changed such that the `<xul:toolbar/>` binding now removes toolbar items from its associated `<xul:toolbarpalette/>` and adds them to the toolbar, rather than cloning them and copying them to the toolbar. This means that the palette will now only contain items not present on the toolbar, as opposed to the previous behavior of containing all customizable elements whether or not they were displayed on the toolbar. This might cause trouble for addons that depend on being able to retrieve all customizable toolbar items from the `<xul:toolbarpalette/>`, or which attempt to dynamically insert items into the palette to make them available during toolbar customization. More information is available in [Webkit bug 407725](https://bugzil.la/407725) and [Webkit bug 467045](https://bugzil.la/467045).
 
 ## XPCNativeWrapper
 

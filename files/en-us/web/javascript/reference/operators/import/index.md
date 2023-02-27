@@ -2,14 +2,6 @@
 title: import()
 slug: Web/JavaScript/Reference/Operators/import
 page-type: javascript-operator
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Language feature
-  - Modules
-  - Reference
-  - dynamic import
-  - import
 browser-compat: javascript.operators.import
 ---
 
@@ -167,8 +159,8 @@ Here, we load 10 modules, `/modules/module-0.js`, `/modules/module-1.js`, etc., 
 ```js
 Promise.all(
   Array.from({ length: 10 }).map((_, index) =>
-    import(`/modules/module-${index}.js`)
-  )
+    import(`/modules/module-${index}.js`),
+  ),
 ).then((modules) => modules.forEach((module) => module.load()));
 ```
 

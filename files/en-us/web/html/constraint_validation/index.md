@@ -2,12 +2,6 @@
 title: Constraint validation
 slug: Web/HTML/Constraint_validation
 page-type: guide
-tags:
-  - CSS
-  - Guide
-  - HTML
-  - NeedsContent
-  - Selectors
 ---
 
 {{HTMLSidebar}}
@@ -31,7 +25,7 @@ The intrinsic constraints for the {{ htmlattrxref("type", "input") }} attribute 
 
 | Input type                                                         | Constraint description                                                                                                                                           | Associated violation                                                                    |
 | ------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
-| [`<input type="URL">`](/en-US/docs/Web/HTML/Element/input/url)     | The value must be an absolute [URL](/en-US/docs/Learn/Common_questions/What_is_a_URL), as defined in the [URL Living Standard](https://url.spec.whatwg.org/).    | **[TypeMismatch](/en-US/docs/Web/API/ValidityState/typeMismatch)** constraint violation |
+| [`<input type="URL">`](/en-US/docs/Web/HTML/Element/input/url)     | The value must be an absolute [URL](/en-US/docs/Learn/Common_questions/Web_mechanics/What_is_a_URL), as defined in the [URL Living Standard](https://url.spec.whatwg.org/).    | **[TypeMismatch](/en-US/docs/Web/API/ValidityState/typeMismatch)** constraint violation |
 | [`<input type="email">`](/en-US/docs/Web/HTML/Element/input/email) | The value must be a syntactically valid email address, which generally has the format `username@hostname.tld` but can also be local such as `username@hostname`. | **[TypeMismatch](/en-US/docs/Web/API/ValidityState/typeMismatch)** constraint violation |
 
 For both of these input types, if the {{ htmlattrxref("multiple", "input") }} attribute is set, several values can be set, as a comma-separated list. If any of these do not satisfy the condition described here, the **Type mismatch** constraint violation is triggered.

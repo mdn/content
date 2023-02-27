@@ -2,17 +2,6 @@
 title: '<caption>: The Table Caption element'
 slug: Web/HTML/Element/caption
 page-type: html-element
-tags:
-  - Element
-  - HTML
-  - HTML Tables
-  - HTML tabular data
-  - Reference
-  - Table Captions
-  - Table Titles
-  - Tables
-  - Web
-  - caption
 browser-compat: html.elements.caption
 ---
 
@@ -100,7 +89,7 @@ td {
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories"
+        <a href="/en-US/docs/Web/HTML/Content_categories"
           >Content categories</a
         >
       </th>
@@ -109,7 +98,7 @@ td {
     <tr>
       <th scope="row">Permitted content</th>
       <td>
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
           >Flow content</a
         >.
       </td>
@@ -130,9 +119,7 @@ td {
     <tr>
       <th scope="row">Implicit ARIA role</th>
       <td>
-        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
-          >No corresponding role</a
-        >
+        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/structural_roles#structural_roles_with_html_equivalents">caption</a>
       </td>
     </tr>
     <tr>

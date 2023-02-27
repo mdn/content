@@ -2,15 +2,6 @@
 title: window.requestIdleCallback()
 slug: Web/API/Window/requestIdleCallback
 page-type: web-api-instance-method
-tags:
-  - API
-  - HTML DOM
-  - JavaScript timers
-  - Method
-  - Reference
-  - Window
-  - requestIdleCallback
-  - polyfill
 browser-compat: api.Window.requestIdleCallback
 ---
 

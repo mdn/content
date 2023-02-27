@@ -2,23 +2,6 @@
 title: <input type="radio">
 slug: Web/HTML/Element/input/radio
 page-type: html-element
-tags:
-  - Choosing Options
-  - Element
-  - Form Options
-  - HTML
-  - HTML Input Types
-  - HTML forms
-  - HTML input
-  - Input
-  - Input Types
-  - Options
-  - Radio Buttons
-  - Radio Groups
-  - Reference
-  - form
-  - radio
-  - radio button
 browser-compat: html.elements.input.type_radio
 ---
 
@@ -335,6 +318,12 @@ Notice that when clicking on a radio button, there's a nice, smooth fade out/in 
       <td><strong>Methods</strong></td>
       <td>
         {{domxref("HTMLInputElement.select", "select()")}}
+      </td>
+    </tr>
+     <tr>
+      <td><strong>Implicit ARIA Role</strong></td>
+      <td>
+        <code><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/radio_role">radio</a></code>
       </td>
     </tr>
   </tbody>

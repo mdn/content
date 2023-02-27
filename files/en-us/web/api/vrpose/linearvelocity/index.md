@@ -2,17 +2,9 @@
 title: VRPose.linearVelocity
 slug: Web/API/VRPose/linearVelocity
 page-type: web-api-instance-property
-tags:
-  - API
-  - Deprecated
-  - Property
-  - Reference
-  - VR
-  - VRPose
-  - Virtual Reality
-  - WebVR
-  - linearVelocity
-  - Non-standard
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.VRPose.linearVelocity
 ---
 

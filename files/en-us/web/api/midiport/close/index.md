@@ -2,12 +2,6 @@
 title: MIDIPort.close()
 slug: Web/API/MIDIPort/close
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - close
-  - MIDIPort
 browser-compat: api.MIDIPort.close
 ---
 

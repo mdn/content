@@ -2,15 +2,6 @@
 title: KeyframeEffect.composite
 slug: Web/API/KeyframeEffect/composite
 page-type: web-api-instance-property
-tags:
-  - API
-  - Animation
-  - KeyframeEffect
-  - Property
-  - Reference
-  - composite
-  - waapi
-  - web animations api
 browser-compat: api.KeyframeEffect.composite
 ---
 

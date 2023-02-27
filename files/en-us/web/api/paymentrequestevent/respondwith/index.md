@@ -2,15 +2,8 @@
 title: PaymentRequestEvent.respondWith()
 slug: Web/API/PaymentRequestEvent/respondWith
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Payment Request API
-  - PaymentRequestEvent
-  - Reference
-  - payment
-  - respondWith()
-  - Experimental
+status:
+  - experimental
 browser-compat: api.PaymentRequestEvent.respondWith
 ---
 

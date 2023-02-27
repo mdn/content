@@ -2,13 +2,8 @@
 title: AudioDecoder.flush()
 slug: Web/API/AudioDecoder/flush
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - flush
-  - AudioDecoder
-  - Experimental
+status:
+  - experimental
 browser-compat: api.AudioDecoder.flush
 ---
 

@@ -2,16 +2,6 @@
 title: Writing WebSocket servers
 slug: Web/API/WebSockets_API/Writing_WebSocket_servers
 page-type: guide
-tags:
-  - Guide
-  - HTML
-  - NeedsContent
-  - NeedsExample
-  - NeedsMarkupWork
-  - Tutorial
-  - WebSocket
-  - WebSocket API
-  - WebSockets
 ---
 
 {{APIRef("Websockets API")}}

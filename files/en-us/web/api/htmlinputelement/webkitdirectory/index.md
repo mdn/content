@@ -2,16 +2,6 @@
 title: HTMLInputElement.webkitdirectory
 slug: Web/API/HTMLInputElement/webkitdirectory
 page-type: web-api-instance-property
-tags:
-  - API
-  - File and Directory Entries API
-  - Files
-  - HTML DOM
-  - HTMLInputElement
-  - Property
-  - Reference
-  - Web
-  - webkitdirectory
 browser-compat: api.HTMLInputElement.webkitdirectory
 ---
 
@@ -72,7 +62,7 @@ The entry for `PIC2343.jpg` will have a `webkitRelativePath` of
 possible to know the hierarchy even though the {{domxref("FileList")}} is flat.
 
 > **Note:** The behavior of `webkitRelativePath` is different
-> in _Chromium < 72_. See [this bug](https://bugs.chromium.org/p/chromium/issues/detail?id=124187) for
+> in _Chromium < 72_. See [this bug](https://crbug.com/124187) for
 > further details.
 
 ## Examples

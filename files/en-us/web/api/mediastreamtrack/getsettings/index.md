@@ -2,13 +2,6 @@
 title: MediaStreamTrack.getSettings()
 slug: Web/API/MediaStreamTrack/getSettings
 page-type: web-api-instance-method
-tags:
-  - API
-  - Constraints
-  - Media Capture and Streams
-  - MediaStreamTrack
-  - Method
-  - Reference
 browser-compat: api.MediaStreamTrack.getSettings
 ---
 

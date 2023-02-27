@@ -2,15 +2,8 @@
 title: CSSTransformValue.is2D
 slug: Web/API/CSSTransformValue/is2D
 page-type: web-api-instance-property
-tags:
-  - API
-  - CSS
-  - CSS Typed Object Model API
-  - CSSTransformValue
-  - Experimental
-  - Houdini
-  - Property
-  - is2D
+status:
+  - experimental
 browser-compat: api.CSSTransformValue.is2D
 ---
 

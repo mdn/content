@@ -2,14 +2,6 @@
 title: HTMLSlotElement.assign()
 slug: Web/API/HTMLSlotElement/assign
 page-type: web-api-instance-method
-tags:
-  - API
-  - HTMLSlotElement
-  - Method
-  - Reference
-  - Web Components
-  - assign
-  - shadow DOM
 browser-compat: api.HTMLSlotElement.assign
 ---
 

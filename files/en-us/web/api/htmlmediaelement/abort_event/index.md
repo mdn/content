@@ -2,13 +2,6 @@
 title: 'HTMLMediaElement: abort event'
 slug: Web/API/HTMLMediaElement/abort_event
 page-type: web-api-event
-tags:
-  - API
-  - Event
-  - HTMLMediaElement
-  - Reference
-  - Web
-  - abort
 browser-compat: api.HTMLMediaElement.abort_event
 ---
 

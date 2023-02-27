@@ -2,27 +2,6 @@
 title: Rendering and the WebXR frame animation callback
 slug: Web/API/WebXR_Device_API/Rendering
 page-type: guide
-tags:
-  - API
-  - AR
-  - Animation
-  - Drawing
-  - Frames
-  - Games
-  - Guide
-  - Intermediate
-  - Reality
-  - Scene
-  - VR
-  - Virtual
-  - WebXR
-  - WebXR API
-  - WebXR Device API
-  - XR
-  - augmented
-  - display
-  - rendering
-  - requestAnimationFrame
 ---
 
 {{DefaultAPISidebar("WebXR Device API")}}

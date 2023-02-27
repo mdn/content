@@ -2,16 +2,6 @@
 title: AnimationPlaybackEvent.currentTime
 slug: Web/API/AnimationPlaybackEvent/currentTime
 page-type: web-api-instance-property
-tags:
-  - API
-  - Animation
-  - AnimationPlaybackEvent
-  - Attribute
-  - Property
-  - Reference
-  - currentTime
-  - waapi
-  - web animations api
 browser-compat: api.AnimationPlaybackEvent.currentTime
 ---
 

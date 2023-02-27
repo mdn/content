@@ -1,22 +1,6 @@
 ---
 title: Fetching data from the server
 slug: Learn/JavaScript/Client-side_web_APIs/Fetching_data
-tags:
-  - API
-  - Article
-  - Beginner
-  - CodingScripting
-  - Fetch
-  - JSON
-  - JavaScript
-  - Learn
-  - Promises
-  - Server
-  - XHR
-  - XML
-  - XMLHttpRequest
-  - data
-  - request
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Client-side_web_APIs/Manipulating_documents", "Learn/JavaScript/Client-side_web_APIs/Third_party_APIs", "Learn/JavaScript/Client-side_web_APIs")}}
@@ -109,7 +93,7 @@ function updateDisplay(verse) {
 
 We'll start our function by constructing a relative URL pointing to the text file we want to load, as we'll need it later. The value of the {{htmlelement("select")}} element at any time is the same as the text inside the selected {{htmlelement("option")}} (unless you specify a different value in a value attribute) — so for example "Verse 1". The corresponding verse text file is "verse1.txt", and is in the same directory as the HTML file, therefore just the file name will do.
 
-However, web servers tend to be case-sensitive, and the file name doesn't have a space in it. To convert "Verse 1" to "verse1.txt" we need to convert the V to lower case, remove the space, and add .txt on the end. This can be done with {{jsxref("String.replace", "replace()")}}, {{jsxref("String.toLowerCase", "toLowerCase()")}}, and [string concatenation](/en-US/docs/Learn/JavaScript/First_steps/Strings#concatenating_strings). Add the following lines inside your `updateDisplay()` function:
+However, web servers tend to be case-sensitive, and the file name doesn't have a space in it. To convert "Verse 1" to "verse1.txt" we need to convert the 'V' to lower case, remove the space, and add ".txt" on the end. This can be done with {{jsxref("String.replace", "replace()")}}, {{jsxref("String.toLowerCase", "toLowerCase()")}}, and [template literal](/en-US/docs/Web/JavaScript/Reference/Template_literals). Add the following lines inside your `updateDisplay()` function:
 
 ```js
 verse = verse.replace(' ', '').toLowerCase();
@@ -164,7 +148,7 @@ verseChoose.value = 'Verse 1';
 
 Modern browsers will not run HTTP requests if you just run the example from a local file. This is because of security restrictions (for more on web security, read [Website security](/en-US/docs/Learn/Server-side/First_steps/Website_security)).
 
-To get around this, we need to test the example by running it through a local web server. To find out how to do this, read [our guide to setting up a local testing server](/en-US/docs/Learn/Common_questions/set_up_a_local_testing_server).
+To get around this, we need to test the example by running it through a local web server. To find out how to do this, read [our guide to setting up a local testing server](/en-US/docs/Learn/Common_questions/Tools_and_setup/set_up_a_local_testing_server).
 
 ### The can store
 
@@ -280,13 +264,3 @@ There are however a lot of different subjects discussed in this article, which h
 - [Server-side website programming](/en-US/docs/Learn/Server-side)
 
 {{PreviousMenuNext("Learn/JavaScript/Client-side_web_APIs/Manipulating_documents", "Learn/JavaScript/Client-side_web_APIs/Third_party_APIs", "Learn/JavaScript/Client-side_web_APIs")}}
-
-## In this module
-
-- [Introduction to web APIs](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Introduction)
-- [Manipulating documents](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents)
-- **Fetching data from the server**
-- [Third party APIs](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Third_party_APIs)
-- [Drawing graphics](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics)
-- [Video and audio APIs](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Video_and_audio_APIs)
-- [Client-side storage](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Client-side_storage)

@@ -2,10 +2,6 @@
 title: do...while
 slug: Web/JavaScript/Reference/Statements/do...while
 page-type: javascript-statement
-tags:
-  - JavaScript
-  - Language feature
-  - Statement
 browser-compat: javascript.statements.do_while
 ---
 
@@ -23,7 +19,7 @@ at least once.
 ```js-nolint
 do
   statement
-while (condition)
+while (condition);
 ```
 
 - `statement`

@@ -2,18 +2,12 @@
 title: hyphenate-limit-chars
 slug: Web/CSS/hyphenate-limit-chars
 page-type: css-property
-tags:
-  - CSS
-  - CSS Property
-  - CSS Text
-  - Reference
-  - recipe:css-property
 browser-compat: css.properties.hyphenate-limit-chars
 ---
 
 {{CSSRef}}
 
-The **`hyphenate-limit-chars`** [CSS](/en-US/docs/Web/CSS) property specifies the minimum word length to allow hyphenation of words as well as the the minimum number of characters before and after the hyphen.
+The **`hyphenate-limit-chars`** [CSS](/en-US/docs/Web/CSS) property specifies the minimum word length to allow hyphenation of words as well as the minimum number of characters before and after the hyphen.
 
 This property provides you with fine-grained control over hyphenation in text. This control enables you to avoid awkward hyphenations and set appropriate hyphenation for different languages, which, in turn, allows for better typography.
 

@@ -2,16 +2,6 @@
 title: MediaTrackSettings.noiseSuppression
 slug: Web/API/MediaTrackSettings/noiseSuppression
 page-type: web-api-instance-property
-tags:
-  - API
-  - Audio
-  - Media
-  - Media Capture and Streams API
-  - Media Streams API
-  - MediaTrackSettings
-  - Property
-  - Web
-  - noiseSuppression
 browser-compat: api.MediaTrackSettings.noiseSuppression
 ---
 

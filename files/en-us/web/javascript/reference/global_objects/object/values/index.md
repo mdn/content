@@ -2,12 +2,6 @@
 title: Object.values()
 slug: Web/JavaScript/Reference/Global_Objects/Object/values
 page-type: javascript-static-method
-tags:
-  - JavaScript
-  - Method
-  - Object
-  - Reference
-  - Polyfill
 browser-compat: javascript.builtins.Object.values
 ---
 

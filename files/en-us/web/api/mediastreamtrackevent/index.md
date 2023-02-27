@@ -2,16 +2,6 @@
 title: MediaStreamTrackEvent
 slug: Web/API/MediaStreamTrackEvent
 page-type: web-api-interface
-tags:
-  - API
-  - Event
-  - Interface
-  - Media
-  - Media Streams API
-  - MediaStreamTrackEvent
-  - Reference
-  - Streams
-  - track
 browser-compat: api.MediaStreamTrackEvent
 ---
 

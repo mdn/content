@@ -2,17 +2,8 @@
 title: CSS.paintWorklet (Static property)
 slug: Web/API/CSS/paintWorklet
 page-type: web-api-static-property
-tags:
-  - API
-  - CSS
-  - CSS Paint API
-  - Experimental
-  - Houdini
-  - Painting
-  - Property
-  - Reference
-  - Worklet
-  - paintWorklet
+status:
+  - experimental
 browser-compat: api.CSS.paintWorklet
 ---
 

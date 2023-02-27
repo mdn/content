@@ -1,12 +1,9 @@
 ---
-title: 'Element: MSGestureHold event'
+title: "Element: MSGestureHold event"
 slug: Web/API/Element/MSGestureHold_event
 page-type: web-api-event
-tags:
-  - Event
-  - Non-standard
-  - Reference
-browser-compat: api.Element.MSGestureHold_event
+status:
+  - non-standard
 ---
 
 {{APIRef}}{{Non-standard_header}}
@@ -51,7 +48,7 @@ Not part of any specification.
 
 ## Browser compatibility
 
-{{Compat}}
+This was an IE-only feature. No modern browser supports it.
 
 ## See also
 

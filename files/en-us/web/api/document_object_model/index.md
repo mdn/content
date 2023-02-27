@@ -2,15 +2,6 @@
 title: Document Object Model (DOM)
 slug: Web/API/Document_Object_Model
 page-type: web-api-overview
-tags:
-  - API
-  - DOM
-  - Document
-  - Document Object Model
-  - Guide
-  - Overview
-  - Reference
-  - Web
 spec-urls: https://dom.spec.whatwg.org/
 ---
 
@@ -26,6 +17,9 @@ To learn more about what the DOM is and how it represents documents, see our art
 
 ## DOM interfaces
 
+- {{DOMxRef("AbortController")}}
+- {{DOMxRef("AbortSignal")}}
+- {{DOMxRef("AbstractRange")}}
 - {{DOMxRef("Attr")}}
 - {{DOMxRef("CDATASection")}}
 - {{DOMxRef("CharacterData")}}
@@ -37,7 +31,10 @@ To learn more about what the DOM is and how it represents documents, see our art
 - {{DOMxRef("DOMError")}} {{Deprecated_Inline}}
 - {{DOMxRef("DOMException")}}
 - {{DOMxRef("DOMImplementation")}}
-- {{DOMxRef("DOMStringList")}}
+- {{DOMxRef("DOMParser")}}
+- {{DOMxRef("DOMPoint")}}
+- {{DOMxRef("DOMPointReadOnly")}}
+- {{DOMxRef("DOMRect")}}
 - {{DOMxRef("DOMTokenList")}}
 - {{DOMxRef("Element")}}
 - {{DOMxRef("Event")}}
@@ -52,15 +49,13 @@ To learn more about what the DOM is and how it represents documents, see our art
 - {{DOMxRef("NodeList")}}
 - {{DOMxRef("ProcessingInstruction")}}
 - {{DOMxRef("Range")}}
+- {{DOMxRef("StaticRange")}}
 - {{DOMxRef("Text")}}
-- {{DOMxRef("TextDecoder")}} {{Experimental_Inline}}
-- {{DOMxRef("TextEncoder")}} {{Experimental_Inline}}
+- {{DOMxRef("TextDecoder")}}
+- {{DOMxRef("TextEncoder")}}
 - {{DOMxRef("TimeRanges")}}
 - {{DOMxRef("TreeWalker")}}
-- {{DOMxRef("URL")}}
-- {{DOMxRef("Window")}}
-- {{DOMxRef("Worker")}}
-- {{DOMxRef("XMLDocument")}} {{Experimental_Inline}}
+- {{DOMxRef("XMLDocument")}}
 
 ### Obsolete DOM interfaces
 
@@ -198,7 +193,6 @@ Here are the DOM APIs for data types used in the definitions of SVG properties a
 - {{DOMxRef("SVGElementInstanceList")}}
 - {{DOMxRef("SVGLength")}}
 - {{DOMxRef("SVGLengthList")}}
-- {{DOMxRef("SVGMatrix")}} {{Deprecated_Inline}}
 - {{DOMxRef("SVGNameList")}}
 - {{DOMxRef("SVGNumber")}}
 - {{DOMxRef("SVGNumberList")}}

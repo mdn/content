@@ -2,20 +2,12 @@
 title: HTMLMediaElement.ended
 slug: Web/API/HTMLMediaElement/ended
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTML DOM
-  - HTMLMediaElement
-  - Property
-  - Read-only
-  - Web
-  - ended
 browser-compat: api.HTMLMediaElement.ended
 ---
 
 {{APIRef("HTML DOM")}}
 
-The **`HTMLMediaElement.ended`** indicates whether the media
+The **`HTMLMediaElement.ended`** property indicates whether the media
 element has ended playback.
 
 ## Value

@@ -2,11 +2,8 @@
 title: Navigator.userActivation
 slug: Web/API/Navigator/userActivation
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - Experimental
+status:
+  - experimental
 browser-compat: api.Navigator.userActivation
 ---
 
@@ -22,7 +19,7 @@ A {{domxref("UserActivation")}} object.
 
 ### Checking if a user gesture was recently performed
 
-Use {{domxref("UserActivation.isActive")}} to check wether the user is currently interacting with the page ({{Glossary("Transient activation")}}).
+Use {{domxref("UserActivation.isActive")}} to check whether the user is currently interacting with the page ({{Glossary("Transient activation")}}).
 
 ```js
 if (navigator.userActivation.isActive) {
@@ -32,7 +29,7 @@ if (navigator.userActivation.isActive) {
 
 ### Checking if a user gesture was ever performed
 
-Use {{domxref("UserActivation.hasBeenActive")}} to check wether the user has ever interacted with the page ({{Glossary("Sticky activation")}}).
+Use {{domxref("UserActivation.hasBeenActive")}} to check whether the user has ever interacted with the page ({{Glossary("Sticky activation")}}).
 
 ```js
 if (navigator.userActivation.hasBeenActive) {

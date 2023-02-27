@@ -2,15 +2,8 @@
 title: CSSTransformValue.keys()
 slug: Web/API/CSSTransformValue/keys
 page-type: web-api-instance-method
-tags:
-  - API
-  - CSS Typed Object Model API
-  - CSSTransformValue
-  - Experimental
-  - Houdini
-  - Method
-  - Reference
-  - keys
+status:
+  - experimental
 browser-compat: api.CSSTransformValue.keys
 ---
 

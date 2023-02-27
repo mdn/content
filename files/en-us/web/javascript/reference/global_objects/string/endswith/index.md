@@ -2,13 +2,6 @@
 title: String.prototype.endsWith()
 slug: Web/JavaScript/Reference/Global_Objects/String/endsWith
 page-type: javascript-instance-method
-tags:
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - String
-  - Polyfill
 browser-compat: javascript.builtins.String.endsWith
 ---
 

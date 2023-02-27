@@ -2,19 +2,6 @@
 title: RTCIceCandidatePair.remote
 slug: Web/API/RTCIceCandidatePair/remote
 page-type: web-api-instance-property
-tags:
-  - API
-  - Candidate
-  - ICE
-  - Negotiation
-  - Pair
-  - Property
-  - RTCIceCandidatePair
-  - Reference
-  - Remote
-  - WebRTC
-  - WebRTC API
-  - rtc
 browser-compat: api.RTCIceCandidatePair.remote
 ---
 

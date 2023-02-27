@@ -2,18 +2,6 @@
 title: ":host"
 slug: Web/CSS/:host
 page-type: css-pseudo-class
-tags:
-  - ":host"
-  - CSS
-  - DOM
-  - Layout
-  - Pseudo-class
-  - Reference
-  - Selector
-  - Web
-  - Web Components
-  - shadow
-  - shadow dom
 browser-compat: css.selectors.host
 ---
 
@@ -32,8 +20,10 @@ The **`:host`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Ps
 
 ## Syntax
 
-```
-:host
+```css
+:host {
+  /* ... */
+}
 ```
 
 ## Examples

@@ -2,14 +2,6 @@
 title: GainNode()
 slug: Web/API/GainNode/GainNode
 page-type: web-api-constructor
-tags:
-  - API
-  - Audio
-  - Constructor
-  - GainNode
-  - Media
-  - Reference
-  - Web Audio API
 browser-compat: api.GainNode.GainNode
 ---
 

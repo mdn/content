@@ -1,18 +1,6 @@
 ---
 title: Privacy, permissions, and information security
 slug: Web/Privacy
-tags:
-  - Information
-  - Permissions
-  - Personalize
-  - Privacy
-  - Protection
-  - Web
-  - allow
-  - allowlist
-  - data
-  - permission
-  - personal
 ---
 
 {{QuicklinksWithSubPages}}
@@ -136,7 +124,7 @@ There are several web technologies and features at play to manage privacy and se
       <td>
         TLS provides security and privacy by encrypting data during transport
         over the network. This is the technology behind the
-        <a href="/en-US/docs/Glossary/https">HTTPS</a> (HyperText Transport
+        <a href="/en-US/docs/Glossary/HTTPS">HTTPS</a> (HyperText Transport
         Protocol Secured) protocol
       </td>
     </tr>
@@ -170,3 +158,4 @@ Browsers may choose to provide ways around this. For example, in Firefox 73, the
 - [Web security](/en-US/docs/Web/Security)
 - [Permissions API](/en-US/docs/Web/API/Permissions_API)
 - [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy)
+- [The Privacy Sandbox](https://developer.chrome.com/docs/privacy-sandbox/)

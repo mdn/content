@@ -2,15 +2,6 @@
 title: "<table>: The Table element"
 slug: Web/HTML/Element/table
 page-type: html-element
-tags:
-  - Element
-  - HTML
-  - HTML tabular data
-  - NeedsLiveSample
-  - Reference
-  - Sorting
-  - Tables
-  - Web
 browser-compat: html.elements.table
 ---
 
@@ -24,12 +15,12 @@ The **`<table>`** [HTML](/en-US/docs/Web/HTML) element represents tabular data â
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories"
+        <a href="/en-US/docs/Web/HTML/Content_categories"
           >Content categories</a
         >
       </th>
       <td>
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
           >Flow content</a
         >
       </td>
@@ -100,7 +91,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
 - {{htmlattrdef("bgcolor")}} {{Deprecated_inline}}
 
-  - : The background color of the table. It is a [6-digit hexadecimal RGB code](/en-US/docs/Web/CSS/color_value#rgb_colors), prefixed by a '`#`'. One of the predefined [color keywords](/en-US/docs/Web/CSS/color_value#color_keywords) can also be used.
+  - : The background color of the table. It is a [6-digit hexadecimal RGB code](/en-US/docs/Web/CSS/hex-color), prefixed by a '`#`'. One of the predefined [color keywords](/en-US/docs/Web/CSS/named-color) can also be used.
 
     To achieve a similar effect, use the CSS {{cssxref("background-color")}} property.
 
@@ -135,7 +126,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
     - `none`, which indicates that no rules will be displayed; it is the default value;
     - `groups`, which will cause the rules to be displayed between row groups (defined by the {{HTMLElement("thead")}}, {{HTMLElement("tbody")}} and {{HTMLElement("tfoot")}} elements) and between column groups (defined by the {{HTMLElement("col")}} and {{HTMLElement("colgroup")}} elements) only;
     - `rows`, which will cause the rules to be displayed between rows;
-    - `columns`, which will cause the rules to be displayed between columns;
+    - `cols`, which will cause the rules to be displayed between columns;
     - `all`, which will cause the rules to be displayed between rows and columns.
 
     To achieve a similar effect, apply the {{cssxref("border")}} property to the appropriate {{HTMLElement("thead")}}, {{HTMLElement("tbody")}}, {{HTMLElement("tfoot")}}, {{HTMLElement("col")}}, or {{HTMLElement("colgroup")}} elements.

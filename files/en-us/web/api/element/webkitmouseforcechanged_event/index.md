@@ -1,23 +1,9 @@
 ---
-title: 'Element: webkitmouseforcechanged event'
+title: "Element: webkitmouseforcechanged event"
 slug: Web/API/Element/webkitmouseforcechanged_event
 page-type: web-api-event
-tags:
-  - Event
-  - Force Touch
-  - MouseEvent
-  - NeedsExample
-  - Non-standard
-  - Reference
-  - Safari
-  - Trackpad
-  - UI
-  - Web
-  - WebKit
-  - apple
-  - mouse
-  - touch
-  - webkitmouseforcechanged
+status:
+  - non-standard
 browser-compat: api.Element.webkitmouseforcechanged_event
 ---
 
@@ -34,9 +20,9 @@ This event first fires after the {{domxref("Element/mousedown_event", "mousedown
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('webkitmouseforcechanged', (event) => {});
+addEventListener("webkitmouseforcechanged", (event) => {});
 
-onwebkitmouseforcechanged = (event) => { };
+onwebkitmouseforcechanged = (event) => {};
 ```
 
 ## Event type

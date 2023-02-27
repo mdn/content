@@ -2,14 +2,6 @@
 title: offset-anchor
 slug: Web/CSS/offset-anchor
 page-type: css-property
-tags:
-  - CSS
-  - CSS Motion Path
-  - CSS Property
-  - Motion Path
-  - Reference
-  - offset-anchor
-  - recipe:css-property
 browser-compat: css.properties.offset-anchor
 ---
 

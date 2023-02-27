@@ -2,8 +2,6 @@
 title: Hotlink
 slug: Glossary/Hotlink
 page-type: glossary-definition
-tags:
-  - WebMechanics
 ---
 
 A **hotlink** (also known as an **inline link**) is an object (typically an image) directly linked to from another site. For example, an image hosted on site1.com is shown directly on site2.com.

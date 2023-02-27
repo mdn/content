@@ -2,16 +2,6 @@
 title: StaticRange
 slug: Web/API/StaticRange
 page-type: web-api-interface
-tags:
-  - API
-  - Content Range
-  - DOM
-  - DOM API
-  - DOM Tree
-  - Interface
-  - Reference
-  - Static Range API
-  - StaticRange
 browser-compat: api.StaticRange
 ---
 

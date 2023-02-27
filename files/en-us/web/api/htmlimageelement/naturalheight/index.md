@@ -2,15 +2,6 @@
 title: HTMLImageElement.naturalHeight
 slug: Web/API/HTMLImageElement/naturalHeight
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTMLImageElement
-  - Intrinsic Height
-  - Reference
-  - Property
-  - Vertical
-  - naturalHeight
-  - size
 browser-compat: api.HTMLImageElement.naturalHeight
 ---
 
@@ -28,7 +19,7 @@ image height, it will be rendered this tall.
 
 > **Note:** Most of the time the natural height is the actual height of the image sent by the server.
 > Nevertheless, browsers can modify an image before pushing it to the renderer. For example, Chrome
-> [degrades the resolution of images on low-end devices](https://bugs.chromium.org/p/chromium/issues/detail?id=1187043#c7). In such cases, `naturalHeight` will consider the height of the image modified
+> [degrades the resolution of images on low-end devices](https://crbug.com/1187043#c7). In such cases, `naturalHeight` will consider the height of the image modified
 > by such browser interventions as the natural height, and returns this value.
 
 ## Value

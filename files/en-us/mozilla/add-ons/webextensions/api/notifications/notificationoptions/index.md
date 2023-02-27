@@ -1,6 +1,7 @@
 ---
 title: notifications.NotificationOptions
 slug: Mozilla/Add-ons/WebExtensions/API/notifications/NotificationOptions
+page-type: webextension-api-type
 tags:
   - API
   - Add-ons

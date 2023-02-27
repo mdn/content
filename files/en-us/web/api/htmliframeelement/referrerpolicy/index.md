@@ -2,12 +2,6 @@
 title: HTMLIFrameElement.referrerPolicy
 slug: Web/API/HTMLIFrameElement/referrerPolicy
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTMLIFrameElement
-  - Property
-  - Reference
-  - Referrer Policy
 browser-compat: api.HTMLIFrameElement.referrerPolicy
 ---
 

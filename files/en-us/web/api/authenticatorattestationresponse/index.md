@@ -2,14 +2,6 @@
 title: AuthenticatorAttestationResponse
 slug: Web/API/AuthenticatorAttestationResponse
 page-type: web-api-interface
-tags:
-  - API
-  - Authentication
-  - AuthenticatorAttestationResponse
-  - Interface
-  - Reference
-  - Web Authentication API
-  - WebAuthn
 browser-compat: api.AuthenticatorAttestationResponse
 ---
 
@@ -25,15 +17,15 @@ This interface inherits from {{domxref("AuthenticatorResponse")}}.
 
 ## Instance properties
 
-- `AuthenticatorAttestationResponse.clientDataJSON` {{securecontext_inline}} {{ReadOnlyInline}}
-  - : Client data for the authentication, such as origin and challenge. The {{domxref("AuthenticatorResponse.clientDataJSON","clientDataJSON")}} property is inherited from the {{domxref("AuthenticatorResponse")}}.
+_Also inherits properties from its parent, {{domxref("AuthenticatorResponse")}}._
+
 - {{domxref("AuthenticatorAttestationResponse.attestationObject")}} {{securecontext_inline}} {{ReadOnlyInline}}
   - : An {{jsxref("ArrayBuffer")}} containing authenticator data and an attestation statement for a newly-created key pair.
 
 ## Instance methods
 
 - {{domxref("AuthenticatorAttestationResponse.getTransports()")}} {{securecontext_inline}}
-  - : Returns an {{jsxref("Array")}} of strings describing which transport methods (e.g. `usb`, `nfc`) are believed to be supported with the authenticator. The array may be empty if the information is not available.
+  - : Returns an {{jsxref("Array")}} of strings describing which transport methods (e.g., `usb`, `nfc`) are believed to be supported with the authenticator. The array may be empty if the information is not available.
 
 ## Examples
 

@@ -2,16 +2,9 @@
 title: VRDisplayCapabilities
 slug: Web/API/VRDisplayCapabilities
 page-type: web-api-interface
-tags:
-  - API
-  - Deprecated
-  - Interface
-  - Reference
-  - VR
-  - VRDisplayCapabilities
-  - Virtual Reality
-  - WebVR
-  - Non-standard
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.VRDisplayCapabilities
 ---
 

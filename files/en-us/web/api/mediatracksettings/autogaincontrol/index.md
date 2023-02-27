@@ -2,16 +2,6 @@
 title: MediaTrackSettings.autoGainControl
 slug: Web/API/MediaTrackSettings/autoGainControl
 page-type: web-api-instance-property
-tags:
-  - API
-  - Audio
-  - Media
-  - Media Capture and Streams API
-  - Media Streams API
-  - MediaTrackSettings
-  - Property
-  - Web
-  - autoGainControl
 browser-compat: api.MediaTrackSettings.autoGainControl
 ---
 

@@ -2,16 +2,8 @@
 title: CSSUnparsedValue.length
 slug: Web/API/CSSUnparsedValue/length
 page-type: web-api-instance-property
-tags:
-  - API
-  - CSS Typed Object Model API
-  - CSSUnparsedValue
-  - Experimental
-  - Houdini
-  - NeedsExample
-  - Property
-  - Reference
-  - length
+status:
+  - experimental
 browser-compat: api.CSSUnparsedValue.length
 ---
 
@@ -30,7 +22,7 @@ In this example we employ the {{domxref("CSSUnparsedValue.CSSUnparsedValue", "CS
 constructor, then query the length:
 
 ```js
-const values = new CSSUnparsedValue(['1em', '#445566', '-45px']);
+const values = new CSSUnparsedValue(["1em", "#445566", "-45px"]);
 
 console.log(values.length); // 3
 ```

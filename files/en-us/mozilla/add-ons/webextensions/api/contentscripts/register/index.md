@@ -1,6 +1,7 @@
 ---
 title: contentScripts.register()
 slug: Mozilla/Add-ons/WebExtensions/API/contentScripts/register
+page-type: webextension-api-function
 tags:
   - API
   - Extensions

@@ -2,16 +2,8 @@
 title: USBDevice.isochronousTransferOut()
 slug: Web/API/USBDevice/isochronousTransferOut
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - USB
-  - USBDevice
-  - WebUSB
-  - WebUSB API
-  - isochronousTransferOut
-  - Experimental
+status:
+  - experimental
 browser-compat: api.USBDevice.isochronousTransferOut
 ---
 

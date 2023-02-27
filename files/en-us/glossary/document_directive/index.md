@@ -2,12 +2,6 @@
 title: Document directive
 slug: Glossary/Document_directive
 page-type: glossary-definition
-tags:
-  - CSP
-  - Directive
-  - Document
-  - HTTP
-  - Security
 ---
 
 **{{Glossary("CSP")}} document directives** are used in a {{HTTPHeader("Content-Security-Policy")}} header and govern the properties of a document or [worker](/en-US/docs/Web/API/Web_Workers_API) environment to which a policy applies.
@@ -30,5 +24,4 @@ See [Document directives](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy#d
   - <https://www.w3.org/TR/CSP/#directives-document>
   - {{HTTPHeader("Content-Security-Policy/upgrade-insecure-requests", "upgrade-insecure-requests")}}
   - {{HTTPHeader("Content-Security-Policy/block-all-mixed-content", "block-all-mixed-content")}}
-  - {{HTTPHeader("Content-Security-Policy/require-sri-for", "require-sri-for")}} {{Deprecated_Inline}}
   - {{HTTPHeader("Content-Security-Policy")}}

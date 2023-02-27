@@ -2,14 +2,6 @@
 title: MediaKeys.setServerCertificate()
 slug: Web/API/MediaKeys/setServerCertificate
 page-type: web-api-instance-method
-tags:
-  - API
-  - EncryptedMediaExtensions
-  - Media
-  - MediaKeys
-  - Method
-  - Reference
-  - setServerCertificate
 browser-compat: api.MediaKeys.setServerCertificate
 ---
 

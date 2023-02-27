@@ -2,15 +2,6 @@
 title: '<form>: The Form element'
 slug: Web/HTML/Element/form
 page-type: html-element
-tags:
-  - Element
-  - Form Element
-  - Forms
-  - HTML
-  - HTML Form Element
-  - HTML forms
-  - Reference
-  - Web
 browser-compat: html.elements.form
 ---
 
@@ -55,7 +46,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
   - : The name of the form. The value must not be the empty string, and must be unique among the `form` elements in the forms collection that it is in, if any.
 
 - {{htmlattrdef("rel")}}
-  - : Controls the annotations and what kinds of links the form creates. Annotations include [`external`](/en-US/docs/Web/HTML/Attributes/rel#attr-external), [`nofollow`](/en-US/docs/Web/HTML/Attributes/rel#attr-nofollow), [`opener`](/en-US/docs/Web/HTML/Attributes/rel#attr-opener), [`noopener`](/en-US/docs/Web/HTML/Attributes/rel#attr-noopener), and [`noreferrer`](/en-US/docs/Web/HTML/Attributes/rel#attr-noreferrer). Link types include [`help`](/en-US/docs/Web/HTML/Attributes/rel#attr-help), [`prev`](/en-US/docs/Web/HTML/Attributes/rel#attr-prev), [`next`](/en-US/docs/Web/HTML/Attributes/rel#attr-next), [`search`](/en-US/docs/Web/HTML/Attributes/rel#attr-search), and [`license`](/en-US/docs/Web/HTML/Attributes/rel#attr-license). The [`rel`](/en-US/docs/Web/HTML/Attributes/rel) value is a space-separated list of these enumerated values.
+  - : Controls the annotations and what kinds of links the form creates. Annotations include [`external`](/en-US/docs/Web/HTML/Attributes/rel#external), [`nofollow`](/en-US/docs/Web/HTML/Attributes/rel#nofollow), [`opener`](/en-US/docs/Web/HTML/Attributes/rel#opener), [`noopener`](/en-US/docs/Web/HTML/Attributes/rel#noopener), and [`noreferrer`](/en-US/docs/Web/HTML/Attributes/rel#noreferrer). Link types include [`help`](/en-US/docs/Web/HTML/Attributes/rel#help), [`prev`](/en-US/docs/Web/HTML/Attributes/rel#prev), [`next`](/en-US/docs/Web/HTML/Attributes/rel#next), [`search`](/en-US/docs/Web/HTML/Attributes/rel#search), and [`license`](/en-US/docs/Web/HTML/Attributes/rel#license). The [`rel`](/en-US/docs/Web/HTML/Attributes/rel) value is a space-separated list of these enumerated values.
 
 ### Attributes for form submission
 
@@ -78,8 +69,8 @@ The following attributes control behavior during form submission.
   - : The [HTTP](/en-US/docs/Web/HTTP) method to submit the form with.
     The only allowed methods/values are (case insensitive):
 
-    - `post`: The [POST method](https://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html#sec9.5); form data sent as the [request body](/en-US/docs/Web/API/Request/body).
-    - `get` (default): The [GET method](https://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html#sec9.3); form data appended to the `action` URL with a `?` separator. Use this method when the form [has no side effects](/en-US/docs/Glossary/Idempotent).
+    - `post`: The {{HTTPMethod("POST")}} method; form data sent as the [request body](/en-US/docs/Web/API/Request/body).
+    - `get` (default): The {{HTTPMethod("GET")}}; form data appended to the `action` URL with a `?` separator. Use this method when the form [has no side effects](/en-US/docs/Glossary/Idempotent).
     - `dialog`: When the form is inside a {{HTMLElement("dialog")}}, closes the dialog and throws a submit event on submission without submitting data or clearing the form.
 
     This value is overridden by {{htmlattrxref("formmethod", "button")}} attributes on {{HTMLElement("button")}}, [`<input type="submit">`](/en-US/docs/Web/HTML/Element/input/submit), or [`<input type="image">`](/en-US/docs/Web/HTML/Element/input/image) elements.
@@ -98,8 +89,6 @@ The following attributes control behavior during form submission.
     This value can be overridden by a {{htmlattrxref("formtarget", "button")}} attribute on a {{HTMLElement("button")}}, [`<input type="submit">`](/en-US/docs/Web/HTML/Element/input/submit), or [`<input type="image">`](/en-US/docs/Web/HTML/Element/input/image) element.
 
 ## Examples
-
-### HTML
 
 ```html
 <!-- Form which will send a GET request to the current URL -->
@@ -128,23 +117,21 @@ The following attributes control behavior during form submission.
 </form>
 ```
 
-{{ EmbedLiveSample('Examples', '100%', 110) }}
-
 ## Technical summary
 
 <table class="properties">
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories"
+        <a href="/en-US/docs/Web/HTML/Content_categories"
           >Content categories</a
         >
       </th>
       <td>
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
           >Flow content</a
         >,
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#palpable_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#palpable_content"
           >palpable content</a
         >
       </td>
@@ -152,7 +139,7 @@ The following attributes control behavior during form submission.
     <tr>
       <th scope="row">Permitted content</th>
       <td>
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
           >Flow content</a
         >, but not containing <code>&#x3C;form></code> elements
       </td>
@@ -165,7 +152,7 @@ The following attributes control behavior during form submission.
       <th scope="row">Permitted parents</th>
       <td>
         Any element that accepts
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
           >flow content</a
         >
       </td>

@@ -2,13 +2,6 @@
 title: Touch.clientY
 slug: Web/API/Touch/clientY
 page-type: web-api-instance-property
-tags:
-  - API
-  - DOM
-  - Property
-  - Read-only
-  - Reference
-  - touch
 browser-compat: api.Touch.clientY
 ---
 

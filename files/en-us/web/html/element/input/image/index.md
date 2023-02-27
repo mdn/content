@@ -2,19 +2,6 @@
 title: <input type="image">
 slug: Web/HTML/Element/input/image
 page-type: html-element
-tags:
-  - Element
-  - Form Image
-  - Form Image Button
-  - Forms
-  - HTML
-  - HTML Image Button
-  - HTML forms
-  - Image Button
-  - Input
-  - Input Type
-  - Number
-  - Reference
 browser-compat: html.elements.input.type_image
 ---
 
@@ -53,7 +40,7 @@ This attribute is also available on [`<input type="submit">`](/en-US/docs/Web/HT
 A string that identifies the encoding method to use when submitting the form data to the server. There are three permitted values:
 
 - `application/x-www-form-urlencoded`
-  - : This, the default value, sends the form data as a string after URL encoding the text using an algorithm such as {{jsxref("encodeURI", "encodeURI()")}}.
+  - : This, the default value, sends the form data as a string after [URL encoding](https://en.wikipedia.org/wiki/URL_encoding) the text using an algorithm such as {{jsxref("encodeURI", "encodeURI()")}}.
 - `multipart/form-data`
   - : Uses the {{domxref("FormData")}} API to manage the data, allowing for files to be submitted to the server. You _must_ use this encoding type if your form includes any {{HTMLElement("input")}} elements of [`type`](/en-US/docs/Web/HTML/Element/input#type) `file` ([`<input type="file">`](/en-US/docs/Web/HTML/Element/input/file)).
 - `text/plain`
@@ -184,7 +171,7 @@ When you submit a form using a button created with `<input type="image">`, two e
 
 When you click on the image to submit the form, you'll see the data appended to the URL as parameters, for example `?x=52&y=55`. If the image input has a [`name`](/en-US/docs/Web/HTML/Element/input#name) attribute, then keep in mind that the specified name is prefixed on every attribute, so if the `name` is `position`, then the returned coordinates would be formatted in the URL as `?position.x=52&position.y=55`. This, of course, applies to all other attributes as well.
 
-These are the X and Y coordinates of the image that the mouse clicked on to submit the form, where (0,0) is the top-left of the image. These can be used when the position the image was clicked on is significant, for example you might have a map that when clicked, sends the coordinates that were clicked to the server. The server-side code then works out what location was clicked on, and returns information about places nearby.
+These are the X and Y coordinates of the image that the mouse clicked on to submit the form, where (0,0) is the top-left of the image and the default in case submission happens without a click on the image. These can be used when the position the image was clicked on is significant, for example you might have a map that when clicked, sends the coordinates that were clicked to the server. The server-side code then works out what location was clicked on, and returns information about places nearby.
 
 In our above example, we could write server-side code that works out what color was clicked on by the coordinates submitted, and keeps a tally of the favorite colors people voted for.
 
@@ -332,6 +319,10 @@ Here, `object-position` is configured to draw the image in the top-right corner 
     <tr>
       <td><strong>Methods</strong></td>
       <td>None.</td>
+    </tr>
+     <tr>
+      <td><strong>Implicit ARIA Role</strong></td>
+      <td><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/button_role"><code>button</code></a></td>
     </tr>
   </tbody>
 </table>

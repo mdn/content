@@ -2,11 +2,6 @@
 title: "-webkit-text-fill-color"
 slug: Web/CSS/-webkit-text-fill-color
 page-type: css-property
-tags:
-  - CSS
-  - CSS Property
-  - Reference
-  - recipe:css-property
 browser-compat: css.properties.-webkit-text-fill-color
 ---
 

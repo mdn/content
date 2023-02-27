@@ -2,15 +2,6 @@
 title: KeyframeEffect.target
 slug: Web/API/KeyframeEffect/target
 page-type: web-api-instance-property
-tags:
-  - API
-  - Animation
-  - KeyframeEffect
-  - Property
-  - Reference
-  - target
-  - waapi
-  - web animations api
 browser-compat: api.KeyframeEffect.target
 ---
 

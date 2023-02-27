@@ -2,9 +2,6 @@
 title: How to document an HTTP header
 slug: MDN/Writing_guidelines/Howto/Document_an_HTTP_header
 page-type: mdn-writing-guide
-tags:
-  - meta
-  - writing-guide
 ---
 
 {{MDNSidebar}}
@@ -18,7 +15,7 @@ You will need to know or be able to dive into some [HTTP](/en-US/docs/Web/HTTP).
 - There are many HTTP headers defined in various IETF standards.
 - IANA maintains a [registry of headers](https://www.iana.org/assignments/message-headers/message-headers.xhtml) and Wikipedia lists the [known header fields](https://en.wikipedia.org/wiki/List_of_HTTP_header_fields), but not all are relevant to web developers or are part of an official standard.
 - If there are any **red links** on the current [HTTP headers reference overview page](/en-US/docs/Web/HTTP/Headers), these headers are a good choice to document.
-- If in doubt, ask the [MDN Web Docs team](https://github.com/mdn/mdn-community/discussions) whether or not it makes sense to write about the header you have chosen.
+- If in doubt, [ask the MDN Web Docs team](/en-US/docs/MDN/Community/Communication_channels) whether or not it makes sense to write about the header you have chosen.
 
 ## Step 2 – Check the existing HTTP header pages
 
@@ -48,7 +45,7 @@ You will need to know or be able to dive into some [HTTP](/en-US/docs/Web/HTTP).
 
 ## Step 5 – Add browser compatibility information
 
-- If you have looked at other HTTP header pages, you will see that there is a `{{Compat}}` macro that will fill in a browser table for you.
+- If you have looked at other HTTP header pages, you will see that there is a `\{{Compat}}` macro that will fill in a browser table for you.
 - The compatibility table page is generated from structured data. If you'd like to contribute to the data, please check out the instructions at <https://github.com/mdn/browser-compat-data/blob/main/README.md> and send us a pull request.
 
 ## Step 6 – Update the HTTP headers list

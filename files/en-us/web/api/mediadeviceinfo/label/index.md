@@ -2,16 +2,6 @@
 title: MediaDeviceInfo.label
 slug: Web/API/MediaDeviceInfo/label
 page-type: web-api-instance-property
-tags:
-  - API
-  - Media
-  - Media Capture
-  - Media Capture and Streams
-  - Media Capture and Streams API
-  - MediaDevicesInfo
-  - Property
-  - Reference
-  - label
 browser-compat: api.MediaDeviceInfo.label
 ---
 

@@ -2,19 +2,6 @@
 title: HTMLImageElement.srcset
 slug: Web/API/HTMLImageElement/srcset
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTML
-  - HTML DOM
-  - HTMLImageElement
-  - Image
-  - Image Candidates
-  - Property
-  - Reference
-  - Responsive Design
-  - list
-  - source
-  - srcset
 browser-compat: api.HTMLImageElement.srcset
 ---
 
@@ -34,6 +21,8 @@ The `srcset` property, along with the {{domxref("HTMLImageElement.sizes",
   "sizes")}} property, are a crucial component in designing responsive web sites, as they
 can be used together to make pages that use appropriate images for the rendering
 situation.
+
+> **Note:** If the {{htmlattrxref("srcset", "img")}} attribute uses width descriptors, the `sizes` attribute must also be present, or the `srcset` itself will be ignored.
 
 ## Value
 

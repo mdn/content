@@ -2,15 +2,6 @@
 title: MediaSource()
 slug: Web/API/MediaSource/MediaSource
 page-type: web-api-constructor
-tags:
-  - API
-  - Audio
-  - Constructor
-  - MSE
-  - Media Source Extensions
-  - MediaSource
-  - Reference
-  - Video
 browser-compat: api.MediaSource.MediaSource
 ---
 

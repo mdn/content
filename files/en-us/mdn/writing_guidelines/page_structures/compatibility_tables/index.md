@@ -2,9 +2,6 @@
 title: Compatibility tables and the browser compatibility data repository (BCD)
 slug: MDN/Writing_guidelines/Page_structures/Compatibility_tables
 page-type: mdn-writing-guide
-tags:
-  - meta
-  - writing-guide
 browser-compat: api.AbortController
 ---
 
@@ -37,7 +34,6 @@ slug: Web/API/AbortController
 …
 browser-compat: api.AbortController
 ---
-
 ```
 
 The compatibility and specification tables corresponding to the key are then automatically rendered in place of the `\{{Compat}}` and `\{{Specifications}}` macros in the source.

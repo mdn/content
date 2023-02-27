@@ -2,13 +2,6 @@
 title: Request.clone()
 slug: Web/API/Request/clone
 page-type: web-api-instance-method
-tags:
-  - API
-  - Fetch
-  - Method
-  - Reference
-  - clone
-  - request
 browser-compat: api.Request.clone
 ---
 

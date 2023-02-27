@@ -1,16 +1,6 @@
 ---
 title: Client-side form validation
 slug: Learn/Forms/Form_validation
-tags:
-  - Beginner
-  - Example
-  - Forms
-  - Guide
-  - HTML
-  - JavaScript
-  - Learn
-  - Web
-  - regex
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Forms/UI_pseudo-classes", "Learn/Forms/Sending_and_retrieving_form_data", "Learn/HTML/Forms")}}
@@ -89,7 +79,7 @@ We've seen many of these earlier in the course, but to recap:
 - [`required`](/en-US/docs/Web/HTML/Attributes/required): Specifies whether a form field needs to be filled in before the form can be submitted.
 - [`minlength`](/en-US/docs/Web/HTML/Attributes/minlength) and [`maxlength`](/en-US/docs/Web/HTML/Attributes/maxlength): Specifies the minimum and maximum length of textual data (strings).
 - [`min`](/en-US/docs/Web/HTML/Attributes/min) and [`max`](/en-US/docs/Web/HTML/Attributes/max): Specifies the minimum and maximum values of numerical input types.
-- `type`: Specifies whether the data needs to be a number, an email address, or some other specific preset type.
+- [`type`](/en-US/docs/Web/HTML/Element/input#input_types): Specifies whether the data needs to be a number, an email address, or some other specific preset type.
 - [`pattern`](/en-US/docs/Web/HTML/Attributes/pattern): Specifies a [regular expression](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions) that defines a pattern the entered data needs to follow.
 
 If the data entered in a form field follows all of the rules specified by the above attributes, it is considered valid.
@@ -403,7 +393,7 @@ This renders as follows:
 
 {{EmbedLiveSample("Full_example", "100%", 420)}}
 
-See [Validation-related attributes](/en-US/docs/Web/Guide/HTML/Constraint_validation#validation-related_attributes) for a complete list of attributes that can be used to constrain input values and the input types that support them.
+See [Validation-related attributes](/en-US/docs/Web/HTML/Constraint_validation#validation-related_attributes) for a complete list of attributes that can be used to constrain input values and the input types that support them.
 
 > **Note:** You can find this example live on GitHub as [full-example.html](https://mdn.github.io/learning-area/html/forms/form-validation/full-example.html) (see also the [source code](https://github.com/mdn/learning-area/blob/main/html/forms/form-validation/full-example.html).)
 
@@ -694,7 +684,7 @@ The HTML is almost the same; we just removed the HTML validation features.
 </form>
 ```
 
-Similarly, the CSS doesn't need to change very much; we've just turned the {{cssxref(":invalid")}} CSS pseudo-class into a real class and avoided using the attribute selector that doesn't work on Internet Explorer 6.
+Similarly, the CSS doesn't need to change very much; we've just turned the {{cssxref(":invalid")}} CSS pseudo-class into a real class and avoided using the attribute selector.
 
 ```css
 body {
@@ -824,19 +814,6 @@ Once you have checked that the form is filled out correctly, the form can be sub
 We'll cover [sending form data](/en-US/docs/Learn/Forms/Sending_and_retrieving_form_data) next.
 
 {{PreviousMenuNext("Learn/Forms/UI_pseudo-classes", "Learn/Forms/Sending_and_retrieving_form_data", "Learn/HTML/Forms")}}
-
-## In this module
-
-- [Your first form](/en-US/docs/Learn/Forms/Your_first_form)
-- [How to structure a web form](/en-US/docs/Learn/Forms/How_to_structure_a_web_form)
-- [Basic native form controls](/en-US/docs/Learn/Forms/Basic_native_form_controls)
-- [The HTML5 input types](/en-US/docs/Learn/Forms/HTML5_input_types)
-- [Other form controls](/en-US/docs/Learn/Forms/Other_form_controls)
-- [Styling web forms](/en-US/docs/Learn/Forms/Styling_web_forms)
-- [Advanced form styling](/en-US/docs/Learn/Forms/Advanced_form_styling)
-- [UI pseudo-classes](/en-US/docs/Learn/Forms/UI_pseudo-classes)
-- **Client-side form validation**
-- [Sending form data](/en-US/docs/Learn/Forms/Sending_and_retrieving_form_data)
 
 ### Advanced Topics
 

@@ -2,14 +2,8 @@
 title: InkPresenter.presentationArea
 slug: Web/API/InkPresenter/presentationArea
 page-type: web-api-instance-property
-tags:
-  - API
-  - Experimental
-  - Ink
-  - Inking
-  - Latency
-  - Property
-  - presentationArea
+status:
+  - experimental
 browser-compat: api.InkPresenter.presentationArea
 ---
 

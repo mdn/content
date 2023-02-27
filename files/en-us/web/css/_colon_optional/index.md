@@ -2,13 +2,6 @@
 title: ":optional"
 slug: Web/CSS/:optional
 page-type: css-pseudo-class
-tags:
-  - CSS
-  - Layout
-  - Pseudo-class
-  - Reference
-  - Selector
-  - Web
 browser-compat: css.selectors.optional
 ---
 
@@ -24,8 +17,10 @@ This pseudo-class is useful for styling fields that are not required to submit a
 
 ## Syntax
 
-```
-:optional
+```css
+:optional {
+  /* ... */
+}
 ```
 
 ## Examples

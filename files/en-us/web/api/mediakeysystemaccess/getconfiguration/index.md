@@ -2,17 +2,6 @@
 title: MediaKeySystemAccess.getConfiguration()
 slug: Web/API/MediaKeySystemAccess/getConfiguration
 page-type: web-api-instance-method
-tags:
-  - API
-  - Audio
-  - EncryptedMediaExtensions
-  - Media
-  - MediaKeySystemAccess
-  - Method
-  - NeedsExample
-  - Reference
-  - Video
-  - getConfiguration
 browser-compat: api.MediaKeySystemAccess.getConfiguration
 ---
 

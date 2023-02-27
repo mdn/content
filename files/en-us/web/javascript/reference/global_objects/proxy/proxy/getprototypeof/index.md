@@ -2,18 +2,12 @@
 title: handler.getPrototypeOf()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/getPrototypeOf
 page-type: javascript-instance-method
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Proxy
 browser-compat: javascript.builtins.Proxy.handler.getPrototypeOf
 ---
 
 {{JSRef}}
 
-The **`handler.getPrototypeOf()`** method is a trap for the
-`[[GetPrototypeOf]]` internal method.
+The **`handler.getPrototypeOf()`** method is a trap for the `[[GetPrototypeOf]]` [object internal method](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy#object_internal_methods), which is used by operations such as {{jsxref("Object.getPrototypeOf()")}}.
 
 {{EmbedInteractiveExample("pages/js/proxyhandler-getprototypeof.html", "taller")}}
 
@@ -95,7 +89,7 @@ console.log(
   Reflect.getPrototypeOf(p) === Array.prototype, // true
   p.__proto__ === Array.prototype, // true
   Array.prototype.isPrototypeOf(p), // true
-  p instanceof Array // true
+  p instanceof Array, // true
 );
 ```
 

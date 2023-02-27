@@ -2,18 +2,6 @@
 title: Capabilities, constraints, and settings
 slug: Web/API/Media_Capture_and_Streams_API/Constraints
 page-type: guide
-tags:
-  - Advanced
-  - Audio
-  - Constraints
-  - Example
-  - Guide
-  - Media
-  - Media Capture and Streams API
-  - Media Streams API
-  - Settings
-  - Video
-  - WebRTC
 browser-compat: api.MediaDevices.getSupportedConstraints
 ---
 
@@ -118,9 +106,9 @@ So-called advanced constraints are created by adding an `advanced` property to t
 
 ## Checking capabilities
 
-You can call {{domxref("MediaStreamTrack.getCapabilities()")}} to get a list of all of the supported capabilities and the values or ranges of values which each one accepts on the current platform and user agent*.* This function returns a {{domxref("MediaTrackCapabilities")}} object which lists each constrainable property supported by the browser and a value or range of values which are supported for each one of those properties.
+You can call {{domxref("MediaStreamTrack.getCapabilities()")}} to get a list of all of the supported capabilities and the values or ranges of values which each one accepts on the current platform and user agent*.* This function returns an object which lists each constrainable property supported by the browser and a value or range of values which are supported for each one of those properties.
 
-> **Note:** `getCapabilities()` hasn't been implemented yet by all major browsers. For the time being, you'll have to try to get what you need, and if you can't, decide what to do at that point. See Firefox {{bug(1179084)}}, for example.
+> **Note:** `getCapabilities()` hasn't been implemented yet by all major browsers. For the time being, you'll have to try to get what you need, and if you can't, decide what to do at that point. See Firefox [Firefox bug 1179084](https://bugzil.la/1179084), for example.
 
 ## Applying constraints
 

@@ -2,14 +2,6 @@
 title: Element.ariaRowCount
 slug: Web/API/Element/ariaRowCount
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - ariaRowCount
-  - AriaAttributes
-  - AriaMixin
-  - Element
 browser-compat: api.Element.ariaRowCount
 ---
 
@@ -65,9 +57,9 @@ In this example the `aria-rowcount` attribute on the element with an ID of `sema
 ```
 
 ```js
-let el = document.getElementById('semantic-table');
+let el = document.getElementById("semantic-table");
 console.log(el.ariaRowCount); // 100
-el.ariaRowCount = "101"
+el.ariaRowCount = "101";
 console.log(el.ariaRowCount); // 101
 ```
 

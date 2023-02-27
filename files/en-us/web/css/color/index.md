@@ -2,20 +2,6 @@
 title: color
 slug: Web/CSS/color
 page-type: css-property
-tags:
-  - CSS
-  - CSS Colors
-  - CSS Property
-  - CSS Text
-  - HTML Colors
-  - HTML Styles
-  - Layout
-  - Reference
-  - Styling HTML
-  - Styling text
-  - Web
-  - color
-  - recipe:css-property
 browser-compat: css.properties.color
 ---
 
@@ -84,6 +70,8 @@ Note that the value must be a uniform {{cssxref("color")}}. It can't be a {{cssx
 
 - {{cssxref("&lt;color&gt;")}}
   - : Sets the color of the textual and decorative parts of the element.
+- [`currentcolor`](/en-US/docs/Web/CSS/color_value#currentcolor_keyword)
+  - : Sets the color to the element's `color` property value. However, if set as the value of `color`, `currentcolor` is treated as `inherit`.
 
 ## Accessibility concerns
 
@@ -110,17 +98,35 @@ Color contrast ratio is determined by comparing the luminosity of the text and b
 The following are all ways to make a paragraph's text red:
 
 ```css
-p { color: red; }
-p { color: #f00; }
-p { color: #ff0000; }
-p { color: rgb(255,0,0); }
-p { color: rgb(100%, 0%, 0%); }
-p { color: hsl(0, 100%, 50%); }
+p {
+  color: red;
+}
+p {
+  color: #f00;
+}
+p {
+  color: #ff0000;
+}
+p {
+  color: rgb(255, 0, 0);
+}
+p {
+  color: rgb(100%, 0%, 0%);
+}
+p {
+  color: hsl(0, 100%, 50%);
+}
 
 /* 50% translucent */
-p { color: #ff000080; }
-p { color: rgba(255, 0, 0, 0.5); }
-p { color: hsla(0, 100%, 50%, 0.5); }
+p {
+  color: #ff000080;
+}
+p {
+  color: rgba(255, 0, 0, 0.5);
+}
+p {
+  color: hsla(0, 100%, 50%, 0.5);
+}
 ```
 
 ## Specifications

@@ -2,15 +2,6 @@
 title: SpeechSynthesis.speaking
 slug: Web/API/SpeechSynthesis/speaking
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - SpeechSynthesis
-  - Web Speech API
-  - speaking
-  - speech
-  - synthesis
 browser-compat: api.SpeechSynthesis.speaking
 ---
 
