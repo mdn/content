@@ -78,7 +78,7 @@ The below code allows the user to choose a file from the file picker.
 
 ```js
 async function getFile() {
-  // open file picker (and destructure the result to only obtain one handle)
+  // Open file picker and destructure the result the first handle
   const [fileHandle] = await window.showOpenFilePicker();
   const file = await fileHandle.getFile();
   return file;
