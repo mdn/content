@@ -44,22 +44,26 @@ const button = document.querySelector("button");
 let created = 0;
 let removed = 0;
 
-button.addEventListener("click", () => {
-  document.body.addEventListener("mousemove", (event) => {
-    const animation = button.animate(
-      { transform: `translate(${event.clientX}px, ${event.clientY}px)` },
-      { duration: 500, fill: "forwards" }
-    );
-    created++;
-    showCounts();
-
-    // the remove event fires after the animation is removed
-    animation.addEventListener("remove", () => {
-      removed++;
+button.addEventListener(
+  "click",
+  () => {
+    document.body.addEventListener("mousemove", (event) => {
+      const animation = button.animate(
+        { transform: `translate(${event.clientX}px, ${event.clientY}px)` },
+        { duration: 500, fill: "forwards" }
+      );
+      created++;
       showCounts();
+
+      // the remove event fires after the animation is removed
+      animation.addEventListener("remove", () => {
+        removed++;
+        showCounts();
+      });
     });
-  });
-});
+  },
+  { once: true }
+);
 
 function showCounts() {
   document.getElementById("count-created").textContent = created;
@@ -92,7 +96,7 @@ body {
 
 #### Result
 
-{{embedlivesample("Removing_replaced_animations")}}
+{{embedlivesample("Removing_replaced_animations","",250)}}
 
 Here we have a `<button>` element, and an event listener that runs whenever the mouse moves. The {{domxref("Element.mousemove_event","mousemove")}} event handler sets up an animation that animates the `<button>` to the position of the mouse pointer. This could result in a huge animations list, which could create a memory leak. For this reason, modern browsers automatically remove forward filling animations that are overridden by other animations.
 
