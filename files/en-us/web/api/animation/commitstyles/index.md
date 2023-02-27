@@ -7,7 +7,7 @@ browser-compat: api.Animation.commitStyles
 
 {{APIRef("Web Animations")}}
 
-The `commitStyles()` method of the [Web Animations API](/en-US/docs/Web/API/Web_Animations_API)'s {{domxref("Animation")}} interface writes the [computed values](/en-US/docs/Web/CSS/computed_value) of the animation's current styles into its target element's {{htmlattrxref("style")}} attribute.
+The `commitStyles()` method of the [Web Animations API](/en-US/docs/Web/API/Web_Animations_API)'s {{domxref("Animation")}} interface writes the [computed values](/en-US/docs/Web/CSS/computed_value) of the animation's current styles into its target element's {{htmlattrxref("style")}} attribute. `commitStyles()` works even if the animation has been [automatically removed](/en-US/docs/Web/API/Animation#automatically_removing_filling_animations).
 
 ## Syntax
 
