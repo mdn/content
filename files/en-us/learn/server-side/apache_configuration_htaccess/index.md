@@ -1,13 +1,6 @@
 ---
-title: 'Apache Configuration: .htaccess'
+title: "Apache Configuration: .htaccess"
 slug: Learn/Server-side/Apache_Configuration_htaccess
-tags:
-  - 301 redirect
-  - Cache control
-  - Custom Error pages
-  - HTACCESS
-  - Permanent Redirect
-  - Redirect
 ---
 
 {{LearnSidebar}}

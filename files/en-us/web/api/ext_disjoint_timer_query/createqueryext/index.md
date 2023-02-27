@@ -29,7 +29,7 @@ A {{domxref("WebGLQuery")}} object.
 ## Examples
 
 ```js
-const ext = gl.getExtension('EXT_disjoint_timer_query');
+const ext = gl.getExtension("EXT_disjoint_timer_query");
 const query = ext.createQueryExt();
 ```
 

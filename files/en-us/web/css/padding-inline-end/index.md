@@ -2,14 +2,6 @@
 title: padding-inline-end
 slug: Web/CSS/padding-inline-end
 page-type: css-property
-tags:
-  - CSS
-  - CSS Logical Property
-  - CSS Property
-  - Reference
-  - padding-inline
-  - padding-inline-end
-  - recipe:css-property
 browser-compat: css.properties.padding-inline-end
 ---
 

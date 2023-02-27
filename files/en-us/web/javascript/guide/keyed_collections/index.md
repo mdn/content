@@ -2,13 +2,6 @@
 title: Keyed collections
 slug: Web/JavaScript/Guide/Keyed_collections
 page-type: guide
-tags:
-  - Collections
-  - Guide
-  - JavaScript
-  - Map
-  - "l10n:priority"
-  - set
 ---
 
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Indexed_Collections", "Web/JavaScript/Guide/Working_with_Objects")}}

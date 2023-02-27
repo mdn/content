@@ -2,16 +2,8 @@
 title: initial-letter
 slug: Web/CSS/initial-letter
 page-type: css-property
-tags:
-  - CSS
-  - CSS Inline
-  - CSS Property
-  - Experimental
-  - Graphics
-  - Layout
-  - Reference
-  - Web
-  - recipe:css-property
+status:
+  - experimental
 browser-compat: css.properties.initial-letter
 ---
 

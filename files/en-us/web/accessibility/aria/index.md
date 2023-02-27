@@ -1,12 +1,6 @@
 ---
 title: ARIA
 slug: Web/Accessibility/ARIA
-tags:
-  - ARIA
-  - Accessibility
-  - HTML
-  - Reference
-  - WAI-ARIA
 ---
 
 <section id="Quick_links">

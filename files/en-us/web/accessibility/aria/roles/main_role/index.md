@@ -1,13 +1,6 @@
 ---
 title: "ARIA: main role"
 slug: Web/Accessibility/ARIA/Roles/main_role
-tags:
-  - ARIA
-  - ARIA Role
-  - Reference
-  - Accessibility
-  - main role
-  - landmark role
 spec-urls:
   - https://w3c.github.io/aria/#main
   - https://w3c.github.io/aria-practices/#aria_lh_main

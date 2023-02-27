@@ -1,12 +1,6 @@
 ---
 title: Asynchronous flow control using async
 slug: Learn/Server-side/Express_Nodejs/Displaying_data/flow_control_using_async
-tags:
-  - Express
-  - Node
-  - displaying data
-  - part 5
-  - server-side
 ---
 
 The controller code for some of our _LocalLibrary_ pages will depend on the results of multiple asynchronous requests, which may be required to run either in some particular order or in parallel. In order to manage flow control, and render pages when we have all the required information available, we'll use the popular node [async](https://www.npmjs.com/package/async) module.

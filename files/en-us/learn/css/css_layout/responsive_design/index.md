@@ -1,16 +1,6 @@
 ---
 title: Responsive design
 slug: Learn/CSS/CSS_layout/Responsive_Design
-tags:
-  - Images
-  - Media Queries
-  - RWD
-  - Responsive web design
-  - flexbox
-  - fluid grids
-  - grid
-  - multicol
-  - typography
 ---
 
 {{learnsidebar}}{{PreviousMenuNext("Learn/CSS/CSS_layout/Multiple-column_Layout", "Learn/CSS/CSS_layout/Media_queries", "Learn/CSS/CSS_layout")}}
@@ -112,7 +102,7 @@ If you instead specify a `column-width`, you are specifying a _minimum_ width. T
 }
 ```
 
-You can use the {{cssxref('columns')}} shorthand to provides a maximum number of columns and a minimum column width. This can ensure line lengths don't become unreadably long as the screen size increases or too narrow as the screen size decreases.
+You can use the {{cssxref('columns')}} shorthand to provide a maximum number of columns and a minimum column width. This can ensure line lengths don't become unreadably long as the screen size increases or too narrow as the screen size decreases.
 
 ### Flexbox
 

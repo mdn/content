@@ -2,14 +2,6 @@
 title: sin()
 slug: Web/CSS/sin
 page-type: css-function
-tags:
-  - CSS
-  - CSS Function
-  - Function
-  - Math
-  - Reference
-  - Web
-  - sin
 browser-compat: css.types.sin
 ---
 

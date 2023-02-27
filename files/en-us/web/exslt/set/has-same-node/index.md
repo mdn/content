@@ -1,10 +1,6 @@
 ---
 title: set:has-same-node()
 slug: Web/EXSLT/set/has-same-node
-tags:
-  - EXSLT
-  - NeedsSpecTable
-  - Reference
 ---
 
 {{XSLTRef}}{{QuickLinksWithSubpages("/en-US/docs/Web/EXSLT")}}

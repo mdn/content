@@ -2,14 +2,8 @@
 title: ":-moz-submit-invalid"
 slug: Web/CSS/:-moz-submit-invalid
 page-type: css-pseudo-class
-tags:
-  - ":-moz-submit-invalid"
-  - CSS
-  - CSS:Mozilla Extensions
-  - Non-standard
-  - Pseudo-class
-  - Reference
-  - Selector
+status:
+  - non-standard
 browser-compat: css.selectors.-moz-submit-invalid
 ---
 

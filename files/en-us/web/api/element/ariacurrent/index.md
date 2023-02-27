@@ -43,9 +43,9 @@ In this example a set of links are used for site navigation. The `aria-current` 
 ```
 
 ```js
-let el = document.getElementById('link-home');
+let el = document.getElementById("link-home");
 console.log(el.ariaCurrent); // "page"
-el.ariaCurrent = "tab"
+el.ariaCurrent = "tab";
 console.log(el.ariaCurrent); // "tab"
 ```
 

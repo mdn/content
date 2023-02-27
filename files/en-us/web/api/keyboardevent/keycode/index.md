@@ -2306,7 +2306,7 @@ Gecko defines a lot of `keyCode` values in `KeyboardEvent` for making the mappin
       <td>0x0E (14)</td>
       <td>
         Reserved, but not used. {{deprecated_inline}} (Dropped, see
-        {{bug(969247)}}.)
+        [Firefox bug 969247](https://bugzil.la/969247).)
       </td>
     </tr>
     <tr>

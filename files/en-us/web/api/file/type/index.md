@@ -32,15 +32,15 @@ output {
 ### JavaScript
 
 ```js
-const output = document.getElementById('output');
-const filepicker = document.getElementById('filepicker');
+const output = document.getElementById("output");
+const filepicker = document.getElementById("filepicker");
 
-filepicker.addEventListener('change', (event) => {
+filepicker.addEventListener("change", (event) => {
   const files = event.target.files;
-  output.textContent = '';
+  output.textContent = "";
 
   for (const file of files) {
-    output.textContent += `${file.name}: ${file.type || 'unknown'}\n`;
+    output.textContent += `${file.name}: ${file.type || "unknown"}\n`;
   }
 });
 ```

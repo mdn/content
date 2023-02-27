@@ -12,7 +12,7 @@ Unlike other tools or libraries, the [Navigation Timing API](/en-US/docs/Web/API
 
 ## Collecting timing information
 
-Using the API is as simple as obtaining the {{domxref("Performance")}} object using {{domxref("window.performance")}} and looking up what you need within the object returned. For example, to measure the perceived loading time for a page:
+Using the API is as simple as obtaining the {{domxref("Performance")}} object using {{domxref("performance_property", "window.performance")}} and looking up what you need within the object returned. For example, to measure the perceived loading time for a page:
 
 ```js
 window.addEventListener("load", () => {
@@ -106,5 +106,5 @@ The values listed are for the {{HTMLElement("iframe")}} in which the sample is p
 ## See also
 
 - [Navigation Timing API](/en-US/docs/Web/API/Navigation_timing_API)
-- {{domxref("window.performance")}}
+- {{domxref("performance_property", "window.performance")}}
 - {{domxref("Performance")}}, {{domxref("PerformanceTiming")}}, and {{domxref("PerformanceNavigation")}}

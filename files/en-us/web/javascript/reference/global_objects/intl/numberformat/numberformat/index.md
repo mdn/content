@@ -2,14 +2,6 @@
 title: Intl.NumberFormat() constructor
 slug: Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat
 page-type: javascript-constructor
-tags:
-  - Constructor
-  - Internationalization
-  - Intl
-  - JavaScript
-  - Localization
-  - NumberFormat
-  - Reference
 browser-compat: javascript.builtins.Intl.NumberFormat.NumberFormat
 ---
 

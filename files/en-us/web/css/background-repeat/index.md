@@ -2,12 +2,6 @@
 title: background-repeat
 slug: Web/CSS/background-repeat
 page-type: css-property
-tags:
-  - CSS
-  - CSS Background
-  - CSS Property
-  - Reference
-  - recipe:css-property
 browser-compat: css.properties.background-repeat
 ---
 

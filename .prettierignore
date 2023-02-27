@@ -9,11 +9,9 @@ build/
 /files/en-us/mozilla/**/*.md
 /files/en-us/web/html/**/*.md
 /files/en-us/web/javascript/**/*.md
-/files/en-us/web/progressive_web_apps/**/*.md
 /files/en-us/web/svg/**/*.md
-/files/en-us/web/text_fragments/**/*.md
 /files/en-us/web/web_components/**/*.md
 
 # The /web/api folder is so large, it has been divided into multiple parts
 /files/en-us/web/api/**/*.md
-!/files/en-us/web/api/[a-d]*/**/*.md
+!/files/en-us/web/api/[a-g]*/**/*.md
