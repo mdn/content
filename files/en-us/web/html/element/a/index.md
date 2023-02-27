@@ -17,7 +17,7 @@ Content within each `<a>` _should_ indicate the link's destination. If the `href
 
 This element's attributes include the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 
-- {{HTMLAttrDef("download")}}
+- `download`
 
   - : Causes the browser to treat the linked URL as a download. Can be used with or without a `filename` value:
 
@@ -38,7 +38,7 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
     >   - If the header specifies a `filename`, it takes priority over a filename specified in the `download` attribute.
     >   - If the header specifies a disposition of `inline`, Chrome and Firefox prioritize the attribute and treat it as a download. Old Firefox versions (before 82) prioritize the header and will display the content inline.
 
-- {{HTMLAttrDef("href")}}
+- `href`
 
   - : The URL that the hyperlink points to. Links are not restricted to HTTP-based URLs — they can use any URL scheme supported by browsers:
 
@@ -49,11 +49,11 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
     - Email addresses with `mailto:` URLs
     - While web browsers may not support other URL schemes, websites can with [`registerProtocolHandler()`](/en-US/docs/Web/API/Navigator/registerProtocolHandler)
 
-- {{HTMLAttrDef("hreflang")}}
+- `hreflang`
   - : Hints at the human language of the linked URL. No built-in functionality. Allowed values are the same as [the global `lang` attribute](/en-US/docs/Web/HTML/Global_attributes/lang).
-- {{HTMLAttrDef("ping")}}
+- `ping`
   - : A space-separated list of URLs. When the link is followed, the browser will send {{HTTPMethod("POST")}} requests with the body `PING` to the URLs. Typically for tracking.
-- {{HTMLAttrDef("referrerpolicy")}}
+- `referrerpolicy`
 
   - : How much of the [referrer](/en-US/docs/Web/HTTP/Headers/Referer) to send when following the link.
 
@@ -66,9 +66,9 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
     - `strict-origin-when-cross-origin` (default): Send a full URL when performing a same-origin request, only send the origin when the protocol security level stays the same (HTTPS→HTTPS), and send no header to a less secure destination (HTTPS→HTTP).
     - `unsafe-url`: The referrer will include the origin _and_ the path (but not the [fragment](/en-US/docs/Web/API/HTMLAnchorElement/hash), [password](/en-US/docs/Web/API/HTMLAnchorElement/password), or [username](/en-US/docs/Web/API/HTMLAnchorElement/username)). **This value is unsafe**, because it leaks origins and paths from TLS-protected resources to insecure origins.
 
-- {{HTMLAttrDef("rel")}}
+- `rel`
   - : The relationship of the linked URL as space-separated link types.
-- {{HTMLAttrDef("target")}}
+- `target`
 
   - : Where to display the linked URL, as the name for a _browsing context_ (a tab, window, or {{HTMLElement("iframe")}}). The following keywords have special meanings for where to load the URL:
 
@@ -79,28 +79,28 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
 
     > **Note:** Setting `target="_blank"` on `<a>` elements implicitly provides the same `rel` behavior as setting [`rel="noopener"`](/en-US/docs/Web/HTML/Attributes/rel/noopener) which does not set `window.opener`.
 
-- {{HTMLAttrDef("type")}}
+- `type`
   - : Hints at the linked URL's format with a {{Glossary("MIME type")}}. No built-in functionality.
 
 ### Deprecated attributes
 
-- {{HTMLAttrDef("charset")}} {{Deprecated_Inline}}
+- `charset` {{Deprecated_Inline}}
 
   - : Hinted at the {{Glossary("character encoding")}} of the linked URL.
 
     > **Note:** This attribute is deprecated and **should not be used by authors**. Use the HTTP {{HTTPHeader("Content-Type")}} header on the linked URL.
 
-- {{HTMLAttrDef("coords")}} {{Deprecated_Inline}}
+- `coords` {{Deprecated_Inline}}
   - : Used with [the `shape` attribute](#shape). A comma-separated list of coordinates.
-- {{HTMLAttrDef("name")}} {{Deprecated_Inline}}
+- `name` {{Deprecated_Inline}}
 
   - : Was required to define a possible target location in a page. In HTML 4.01, `id` and `name` could both be used on `<a>`, as long as they had identical values.
 
     > **Note:** Use the global attribute {{HTMLAttrxRef("id")}} instead.
 
-- {{HTMLAttrDef("rev")}} {{Deprecated_Inline}}
+- `rev` {{Deprecated_Inline}}
   - : Specified a reverse link; the opposite of [the `rel` attribute](#rel). Deprecated for being very confusing.
-- {{HTMLAttrDef("shape")}} {{Deprecated_Inline}}
+- `shape` {{Deprecated_Inline}}
 
   - : The shape of the hyperlink's region in an image map.
 

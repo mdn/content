@@ -21,7 +21,7 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
 
 ### Deprecated attributes
 
-- {{htmlattrdef("clear")}} {{Deprecated_Inline}}
+- `clear` {{Deprecated_Inline}}
   - : Indicates where to begin the next line after the break.
 
 ## Styling with CSS
