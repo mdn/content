@@ -2,20 +2,6 @@
 title: '<td>: The Table Data Cell element'
 slug: Web/HTML/Element/td
 page-type: html-element
-tags:
-  - Cells
-  - Data Cell
-  - Element
-  - HTML
-  - HTML tabular data
-  - Reference
-  - Table Cell
-  - Table Data
-  - Tables
-  - Web
-  - cell
-  - data
-  - td
 browser-compat: html.elements.td
 ---
 
@@ -101,7 +87,7 @@ See {{HTMLElement("table")}} for examples on `<td>`.
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories"
+        <a href="/en-US/docs/Web/HTML/Content_categories"
           >Content categories</a
         >
       </th>
@@ -110,7 +96,7 @@ See {{HTMLElement("table")}} for examples on `<td>`.
     <tr>
       <th scope="row">Permitted content</th>
       <td>
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
           >Flow content</a
         >.
       </td>

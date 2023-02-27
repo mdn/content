@@ -30,9 +30,7 @@ console.log(navigator.platform);
 
 ## Usage notes
 
-Most browsers, including Chrome, Edge, and Firefox 63 and later, return
-`"Win32"` even if running on a 64-bit version of Windows. Internet Explorer
-and versions of Firefox prior to version 63 still report `"Win64"`.
+On Windows, modern browsers return `"Win32"` even if running on a 64-bit version of Windows
 
 ## Specifications
 

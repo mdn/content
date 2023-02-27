@@ -1,12 +1,6 @@
 ---
 title: Truncate (float to int)
 slug: WebAssembly/Reference/Numeric/Truncate_float_to_int
-tags:
-  - WebAssembly
-  - wasm
-  - Reference
-  - Numeric
-  - Conversion
 ---
 
 {{WebAssemblySidebar}}

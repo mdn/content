@@ -1,12 +1,6 @@
 ---
 title: aria-expanded
 slug: Web/Accessibility/ARIA/Attributes/aria-expanded
-tags:
-  - Accessibility
-  - ARIA
-  - ARIA attribute
-  - ARIA property
-  - aria-expanded
 spec-urls: https://w3c.github.io/aria/#aria-expanded
 ---
 

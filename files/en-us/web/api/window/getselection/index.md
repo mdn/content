@@ -78,8 +78,8 @@ You can call {{domxref("Document.getSelection()")}}, which works identically to
 `Window.getSelection()`.
 
 It is worth noting that currently `getSelection()` doesn't work on the
-content of {{htmlelement("textarea")}} and {{htmlelement("input")}} elements in Firefox,
-Edge (Legacy) and Internet Explorer. {{domxref("HTMLInputElement.setSelectionRange()")}}
+content of {{htmlelement("textarea")}} and {{htmlelement("input")}} elements in Firefox
+and Edge (Legacy). {{domxref("HTMLInputElement.setSelectionRange()")}}
 or the `selectionStart` and `selectionEnd` properties could be
 used to work around this.
 

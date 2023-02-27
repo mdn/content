@@ -1,19 +1,6 @@
 ---
 title: Sending forms through JavaScript
 slug: Learn/Forms/Sending_forms_through_JavaScript
-tags:
-  - Advanced
-  - Example
-  - Forms
-  - Forms Guide
-  - Guide
-  - HTML
-  - HTML forms
-  - JavaScript
-  - Learn
-  - Security
-  - Web
-  - Web Forms
 ---
 
 {{LearnSidebar}}

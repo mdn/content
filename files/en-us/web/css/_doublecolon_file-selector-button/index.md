@@ -122,7 +122,6 @@ input[type="file"]::file-selector-button:hover {
 ## See also
 
 - [WebKit CSS extensions](/en-US/docs/Web/CSS/WebKit_Extensions)
-- [Microsoft CSS extensions](/en-US/docs/Web/CSS/Microsoft_Extensions)
 - [File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API)
 - [File and Directory Entries API support in Firefox](/en-US/docs/Web/API/File_and_Directory_Entries_API/Firefox_support)
 - [`<input type="file">`](/en-US/docs/Web/HTML/Element/input/file)

@@ -1,17 +1,6 @@
 ---
 title: Handling text — strings in JavaScript
 slug: Learn/JavaScript/First_steps/Strings
-tags:
-  - Article
-  - Beginner
-  - CodingScripting
-  - Guide
-  - JavaScript
-  - Join
-  - Quotes
-  - concatenation
-  - "l10n:priority"
-  - strings
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/First_steps/Math", "Learn/JavaScript/First_steps/Useful_string_methods", "Learn/JavaScript/First_steps")}}
@@ -42,7 +31,7 @@ Pretty much all of the programs we've shown you so far in the course have involv
 
 ## Strings — the basics
 
-Strings are dealt with similarly to numbers at first glance, but when you dig deeper you'll start to see some notable differences. Let's start by entering some basic lines into the [browser developer console](/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools) to familiarize ourselves.
+Strings are dealt with similarly to numbers at first glance, but when you dig deeper you'll start to see some notable differences. Let's start by entering some basic lines into the [browser developer console](/en-US/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools) to familiarize ourselves.
 
 ### Creating a string
 

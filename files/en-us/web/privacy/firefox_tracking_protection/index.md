@@ -1,11 +1,6 @@
 ---
 title: Firefox tracking protection
 slug: Web/Privacy/Firefox_tracking_protection
-tags:
-  - Privacy
-  - Private browsing
-  - blocking
-  - tracking
 ---
 
 {{QuicklinksWithSubPages("Web/Privacy")}}

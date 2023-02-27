@@ -1,15 +1,6 @@
 ---
 title: "ARIA: document structural roles"
 slug: Web/Accessibility/ARIA/Roles/structural_roles
-tags:
-  - Accessibility
-  - ARIA
-  - roles
-  - structural
-  - ARIA Role
-  - structural Roles
-  - ARIA structure
-  - Reference
 spec-urls: https://w3c.github.io/aria/#document_structure_roles
 ---
 

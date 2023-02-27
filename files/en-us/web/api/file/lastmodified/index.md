@@ -37,19 +37,21 @@ output {
 ### JavaScript
 
 ```js
-const output = document.getElementById('output');
-const filepicker = document.getElementById('filepicker');
+const output = document.getElementById("output");
+const filepicker = document.getElementById("filepicker");
 
-filepicker.addEventListener('change', (event) => {
+filepicker.addEventListener("change", (event) => {
   const files = event.target.files;
   const now = new Date();
-  output.textContent = '';
+  output.textContent = "";
 
   for (const file of files) {
     const date = new Date(file.lastModified);
     // true if the file hasn't been modified for more than 1 year
     const stale = now.getTime() - file.lastModified > 31_536_000_000;
-    output.textContent += `${file.name} is ${stale ? 'stale' : 'fresh'} (${date}).\n`;
+    output.textContent += `${file.name} is ${
+      stale ? "stale" : "fresh"
+    } (${date}).\n`;
   }
 });
 ```
@@ -66,12 +68,12 @@ If a File is created dynamically, the last modified time can be supplied in the
 moment the `File` object gets created.
 
 ```js
-const fileWithDate = new File([], 'file.bin', {
+const fileWithDate = new File([], "file.bin", {
   lastModified: new Date(2017, 1, 1),
 });
 console.log(fileWithDate.lastModified); // returns 1485903600000
 
-const fileWithoutDate = new File([], 'file.bin');
+const fileWithoutDate = new File([], "file.bin");
 console.log(fileWithoutDate.lastModified); // returns current time
 ```
 

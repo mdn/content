@@ -1,9 +1,6 @@
 ---
 title: How to add images and media
 slug: MDN/Writing_guidelines/Howto/Images_media
-tags:
-  - meta
-  - writing-guide
 page-type: mdn-writing-guide
 ---
 

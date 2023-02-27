@@ -67,11 +67,21 @@ This example shows how a temporary log file might be moved into a more permanent
 directory.
 
 ```js
-workingDirectory.getFile("tmp/log.txt", {}, (fileEntry) => {
-  workingDirectory.getDirectory("log", {}, (dirEntry) => {
-    fileEntry.copyTo(dirEntry);
-  }, handleError);
-}, handleError);
+workingDirectory.getFile(
+  "tmp/log.txt",
+  {},
+  (fileEntry) => {
+    workingDirectory.getDirectory(
+      "log",
+      {},
+      (dirEntry) => {
+        fileEntry.copyTo(dirEntry);
+      },
+      handleError
+    );
+  },
+  handleError
+);
 ```
 
 ## Browser compatibility

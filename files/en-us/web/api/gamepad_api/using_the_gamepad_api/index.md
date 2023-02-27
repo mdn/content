@@ -21,9 +21,13 @@ You can use {{domxref("Window/gamepadconnected_event", "gamepadconnected")}} lik
 
 ```js
 window.addEventListener("gamepadconnected", (e) => {
-  console.log("Gamepad connected at index %d: %s. %d buttons, %d axes.",
-    e.gamepad.index, e.gamepad.id,
-    e.gamepad.buttons.length, e.gamepad.axes.length);
+  console.log(
+    "Gamepad connected at index %d: %s. %d buttons, %d axes.",
+    e.gamepad.index,
+    e.gamepad.id,
+    e.gamepad.buttons.length,
+    e.gamepad.axes.length
+  );
 });
 ```
 
@@ -35,8 +39,11 @@ When a gamepad is disconnected, and if a page has previously received data for t
 
 ```js
 window.addEventListener("gamepaddisconnected", (e) => {
-  console.log("Gamepad disconnected from index %d: %s",
-    e.gamepad.index, e.gamepad.id);
+  console.log(
+    "Gamepad disconnected from index %d: %s",
+    e.gamepad.index,
+    e.gamepad.id
+  );
 });
 ```
 
@@ -57,8 +64,20 @@ function gamepadHandler(event, connecting) {
   }
 }
 
-window.addEventListener("gamepadconnected", (e) => { gamepadHandler(e, true); }, false);
-window.addEventListener("gamepaddisconnected", (e) => { gamepadHandler(e, false); }, false);
+window.addEventListener(
+  "gamepadconnected",
+  (e) => {
+    gamepadHandler(e, true);
+  },
+  false
+);
+window.addEventListener(
+  "gamepaddisconnected",
+  (e) => {
+    gamepadHandler(e, false);
+  },
+  false
+);
 ```
 
 This previous example also demonstrates how the `gamepad` property can be held after the event has completed — a technique we will use for device state querying later.
@@ -74,9 +93,13 @@ The {{domxref("Navigator.getGamepads()")}} method returns an array of all device
 ```js
 window.addEventListener("gamepadconnected", (e) => {
   const gp = navigator.getGamepads()[e.gamepad.index];
-  console.log("Gamepad connected at index %d: %s. %d buttons, %d axes.",
-    gp.index, gp.id,
-    gp.buttons.length, gp.axes.length);
+  console.log(
+    "Gamepad connected at index %d: %s. %d buttons, %d axes.",
+    gp.index,
+    gp.id,
+    gp.buttons.length,
+    gp.axes.length
+  );
 });
 ```
 
@@ -136,7 +159,7 @@ Chrome does things differently here. Instead of constantly storing the gamepad's
 ```js
 let interval;
 
-if (!('ongamepadconnected' in window)) {
+if (!("ongamepadconnected" in window)) {
   // No gamepad events available, poll instead.
   interval = setInterval(pollGamepads, 500);
 }
@@ -193,7 +216,7 @@ function gameLoop() {
 This example shows how to use the {{ domxref("Gamepad") }} object, as well as the {{ domxref("Window/gamepadconnected_event", "gamepadconnected") }} and {{domxref("Window/gamepaddisconnected_event", "gamepaddisconnected")}} events in order to display the state of all gamepads connected to the system. You can find a [working demo](https://luser.github.io/gamepadtest/) and look at the [full source code](https://github.com/luser/gamepadtest) on GitHub.
 
 ```js
-const haveEvents = 'ongamepadconnected' in window;
+const haveEvents = "ongamepadconnected" in window;
 const controllers = {};
 
 function connecthandler(e) {
@@ -293,7 +316,8 @@ function updateStatus() {
 function scangamepads() {
   const gamepads = navigator.getGamepads();
   for (const gamepad of gamepads) {
-    if (gamepad) { // Can be null if disconnected during the session
+    if (gamepad) {
+      // Can be null if disconnected during the session
       if (gamepad.index in controllers) {
         controllers[gamepad.index] = gamepad;
       } else {
@@ -307,7 +331,7 @@ window.addEventListener("gamepadconnected", connecthandler);
 window.addEventListener("gamepaddisconnected", disconnecthandler);
 
 if (!haveEvents) {
- setInterval(scangamepads, 500);
+  setInterval(scangamepads, 500);
 }
 ```
 

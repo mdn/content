@@ -57,24 +57,26 @@ Just to show how it works, we then define the `stretch` descriptor using a prope
 
 ```js
 //Define a FontFace
-const font = new FontFace('myfont', 'url(myfont.woff)', {
-  style: 'italic',
-  weight: '400'
+const font = new FontFace("myfont", "url(myfont.woff)", {
+  style: "italic",
+  weight: "400",
 });
 
-font.stretch = 'condensed';
+font.stretch = "condensed";
 ```
 
 Next we load the font using {{domxref("FontFace.load()")}} and use the returned promise to track completion or report an error.
 
 ```js
 //Load the font
-font.load().then(() => {
-  // Resolved - add font to document.fonts
+font.load().then(
+  () => {
+    // Resolved - add font to document.fonts
   },
-(err) => {
-  console.error(err)
-});
+  (err) => {
+    console.error(err);
+  }
+);
 ```
 
 To actually _use_ the font we will need to add it to a {{domxref("FontFaceSet")}}.

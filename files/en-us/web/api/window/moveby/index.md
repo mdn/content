@@ -49,7 +49,7 @@ function budge() {
 
 {{Compat}}
 
-As of Firefox 7, websites can no longer move a browser window [in the following cases](https://bugzilla.mozilla.org/show_bug.cgi?id=565541#c24):
+As of Firefox 7, websites can no longer move a browser window [in the following cases](https://bugzil.la/565541#c24):
 
 1. You can't move a window or tab that wasn't created by {{domxref("Window.open()")}}.
 2. You can't move a window or tab when it's in a window with more than one tab.

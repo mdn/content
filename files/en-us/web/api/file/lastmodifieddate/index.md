@@ -23,7 +23,9 @@ A [`Date`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date) object indi
 const fileInput = document.getElementById("myfileinput");
 
 for (const file of fileInput.files) {
-  console.log(`${file.name} has a last modified date of ${file.lastModifiedDate}`);
+  console.log(
+    `${file.name} has a last modified date of ${file.lastModifiedDate}`
+  );
 }
 ```
 

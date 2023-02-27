@@ -1,10 +1,6 @@
 ---
 title: Sets (set)
 slug: Web/EXSLT/set
-tags:
-  - EXSLT
-  - Overview
-  - Reference
 ---
 
 {{XSLTRef}}{{QuickLinksWithSubpages("/en-US/docs/Web/EXSLT")}}

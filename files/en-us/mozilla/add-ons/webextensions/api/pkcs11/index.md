@@ -40,7 +40,7 @@ Perform the following steps:
 
 ## Provisioning PKCS #11 modules
 
-> **Note:** Starting with Firefox 58, extensions can use the [pkcs11](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/pkcs11) API to enumerate PKCS #11 modules and make them accessible to the browser as sources of keys and certificates.
+> **Note:** Starting with Firefox 58, extensions can use this API to enumerate PKCS #11 modules and make them accessible to the browser as sources of keys and certificates.
 
 There are two environmental prerequisites for using this **API**:
 

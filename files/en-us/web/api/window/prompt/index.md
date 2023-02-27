@@ -25,9 +25,7 @@ prompt(message, defaultValue)
   - : A string of text to display to the user. Can be omitted if there is nothing to show
     in the prompt window.
 - `defaultValue` {{optional_inline}}
-  - : A string containing the default value displayed in the text input field. Note that
-    in Internet Explorer 7 and 8, if you do not provide this parameter, the string
-    `"undefined"` is the default value.
+  - : A string containing the default value displayed in the text input field.
 
 ### Return value
 
