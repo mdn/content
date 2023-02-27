@@ -102,7 +102,7 @@ const pickerOpts = {
 };
 
 async function getTheFile() {
-  // open file picker (and destructure the result to only obtain one handle)
+  // Open file picker and destructure the result the first handle
   const [fileHandle] = await window.showOpenFilePicker(pickerOpts);
 
   // get file contents
