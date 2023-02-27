@@ -20,7 +20,7 @@ As this policy is expressed via a _[response header](/en-US/docs/Glossary/Respon
 
 ## Usage
 
-> **Note:** Due to a [bug in Chrome](https://bugs.chromium.org/p/chromium/issues/detail?id=1074261), setting Cross-Origin-Resource-Policy can break PDF rendering, preventing visitors from being able to read past the first page of some PDFs. Exercise caution using this header in a production environment.
+> **Note:** Due to a [bug in Chrome](https://crbug.com/1074261), setting Cross-Origin-Resource-Policy can break PDF rendering, preventing visitors from being able to read past the first page of some PDFs. Exercise caution using this header in a production environment.
 
 Web applications set a Cross-Origin Resource Policy via the {{HTTPHeader("Cross-Origin-Resource-Policy")}} HTTP response header, which accepts one of three values:
 

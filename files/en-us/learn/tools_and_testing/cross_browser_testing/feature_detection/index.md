@@ -1,18 +1,6 @@
 ---
 title: Implementing feature detection
 slug: Learn/Tools_and_testing/Cross_browser_testing/Feature_detection
-tags:
-  - Article
-  - Beginner
-  - CSS
-  - CodingScripting
-  - JavaScript
-  - Learn
-  - Modernizr
-  - Testing
-  - Tools
-  - cross browser
-  - feature detection
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Cross_browser_testing/Accessibility","Learn/Tools_and_testing/Cross_browser_testing/Automated_testing", "Learn/Tools_and_testing/Cross_browser_testing")}}

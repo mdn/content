@@ -2,16 +2,8 @@
 title: '<dir>: The Directory element'
 slug: Web/HTML/Element/dir
 page-type: html-element
-tags:
-  - Directory
-  - Element
-  - HTML
-  - HTML Lists
-  - Deprecated
-  - Reference
-  - Web
-  - dir
-  - lists
+status:
+  - deprecated
 browser-compat: html.elements.dir
 ---
 

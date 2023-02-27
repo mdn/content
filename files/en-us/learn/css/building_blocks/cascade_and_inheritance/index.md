@@ -1,15 +1,6 @@
 ---
 title: Cascade, specificity, and inheritance
 slug: Learn/CSS/Building_blocks/Cascade_and_inheritance
-tags:
-  - Beginner
-  - CSS
-  - Cascade
-  - Inheritance
-  - Learn
-  - rules
-  - source order
-  - specificity
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Selectors/Combinators", "Learn/CSS/Building_blocks/Cascade_layers", "Learn/CSS/Building_blocks")}}

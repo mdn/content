@@ -1,16 +1,7 @@
 ---
-title: 'React interactivity: Editing, filtering, conditional rendering'
+title: "React interactivity: Editing, filtering, conditional rendering"
 slug: >-
   Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_filtering_conditional_rendering
-tags:
-  - Beginner
-  - Frameworks
-  - JavaScript
-  - Learn
-  - React
-  - client-side
-  - conditional rendering
-  - filtering
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_events_state","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_accessibility", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}

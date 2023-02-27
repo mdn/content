@@ -1,13 +1,6 @@
 ---
 title: "ARIA: range role"
 slug: Web/Accessibility/ARIA/Roles/range_role
-tags:
-  - Accessibility
-  - ARIA
-  - roles
-  - Reference
-  - ARIA roles
-  - Abstract role
 spec-urls: https://w3c.github.io/aria/#range
 ---
 

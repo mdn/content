@@ -1,14 +1,6 @@
 ---
 title: Advanced form styling
 slug: Learn/Forms/Advanced_form_styling
-tags:
-  - Advanced
-  - CSS
-  - Example
-  - Forms
-  - Guide
-  - HTML
-  - Web
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Forms/Styling_web_forms", "Learn/Forms/UI_pseudo-classes", "Learn/Forms")}}
@@ -250,8 +242,6 @@ We've also created a couple of other examples to give you more ideas:
 - [Toggle switch example](https://mdn.github.io/learning-area/html/forms/toggle-switch-example/): A checkbox styled to look like a toggle switch.
 
 If you view these checkboxes in a browser that doesn't support {{cssxref("appearance")}}, your custom design will be lost, but they will still look like checkboxes and be usable.
-
-> **Note:** While Internet Explorer doesn't support any version of `appearance`, the `input[type=checkbox]::-ms-check` enables the targeting of checkboxes in IE only. This technique works for radio buttons too, despite the name `-ms-check`.
 
 ## What can be done about the "ugly" elements?
 

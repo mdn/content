@@ -1,12 +1,6 @@
 ---
 title: WAI-ARIA Roles
 slug: Web/Accessibility/ARIA/Roles
-tags:
-  - ARIA
-  - ARIA Roles
-  - Accessibility
-  - Reference
-  - Roles
 ---
 
 ARIA roles provide semantic meaning to content, allowing screen readers and other tools to present and support interaction with object in a way that is consistent with user expectations of that type of object. <abbr>ARIA</abbr> roles can be used to describe elements that don't natively exist in HTML or exist but don't yet have full browser support.

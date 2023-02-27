@@ -9,7 +9,7 @@ browser-compat: javascript.builtins.SharedArrayBuffer.SharedArrayBuffer
 
 > **Note:** `SharedArrayBuffer` was disabled by default in all major
 > browsers on 5 January, 2018 in response to [Spectre](https://meltdownattack.com/).
-> Chrome [re-enabled it in v67](https://bugs.chromium.org/p/chromium/issues/detail?id=821270)
+> Chrome [re-enabled it in v67](https://crbug.com/821270)
 > on platforms where its site-isolation feature is enabled to protect against
 > Spectre-style vulnerabilities.
 

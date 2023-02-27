@@ -1,13 +1,6 @@
 ---
 title: Framework main features
 slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features
-tags:
-  - Beginner
-  - Frameworks
-  - JavaScript
-  - Learn
-  - client-side
-  - features
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Introduction","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}

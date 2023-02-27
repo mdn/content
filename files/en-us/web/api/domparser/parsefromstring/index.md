@@ -19,7 +19,7 @@ parseFromString(string, mimeType)
 
 - `string`
   - : The string to be parsed. It must contain either an
-    {{Glossary("HTML")}}, {{Glossary("xml")}}, {{Glossary("xhtml+xml")}}, or
+    {{Glossary("HTML")}}, {{Glossary("xml")}}, {{Glossary("XHTML")}}, or
     {{Glossary("svg")}} document.
 - `mimeType`
 

@@ -1,15 +1,6 @@
 ---
 title: CSS property compatibility table for form controls
 slug: Learn/Forms/Property_compatibility_table_for_form_controls
-tags:
-  - Advanced
-  - CSS
-  - Forms
-  - Guide
-  - HTML
-  - Junk
-  - NeedsUpdate
-  - Web
 ---
 
 {{learnsidebar}}
@@ -44,9 +35,6 @@ For each property there are two possible renderings:
 * {
   /* Turn off the native look and feel */
   appearance: none;
-
-  /* for Internet Explorer */
-  background: none;
 }
 ```
 

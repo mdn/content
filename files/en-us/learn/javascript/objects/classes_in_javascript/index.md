@@ -1,9 +1,6 @@
 ---
 title: Classes in JavaScript
 slug: Learn/JavaScript/Objects/Classes_in_JavaScript
-tags:
-  - JavaScript
-  - Learn
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Objects/Object-oriented_programming", "Learn/JavaScript/Objects/JSON", "Learn/JavaScript/Objects")}}
