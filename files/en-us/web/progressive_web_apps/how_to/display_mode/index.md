@@ -17,7 +17,7 @@ tags:
 
 The [`display`](/en-US/docs/Web/Manifest/display) member of the [web app manifest](/en-US/docs/Web/Manifest) defines how a PWA appears on the user's device.
 
-## Choose a display mode in your web app manifest
+## Create a standalone app
 
 Use the optional [`display`](/en-US/docs/Web/Manifest/display) member in your [web app manifest](/en-US/docs/Web/Manifest) to define the preferred display mode for your PWA.
 
