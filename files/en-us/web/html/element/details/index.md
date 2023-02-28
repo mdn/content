@@ -27,7 +27,7 @@ Fully standards-compliant implementations automatically apply the CSS `{{cssxref
 
 This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 
-- {{htmlattrdef("open")}}
+- `open`
 
   - : This Boolean attribute indicates whether the details — that is, the contents of the `<details>` element — are currently visible. The details are shown when this attribute exists, or hidden when this attribute is absent. By default this attribute is absent which means the details are not visible.
 
