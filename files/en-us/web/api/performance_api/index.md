@@ -7,7 +7,7 @@ spec-urls:
   - https://w3c.github.io/event-timing/
   - https://w3c.github.io/hr-time/
   - https://w3c.github.io/largest-contentful-paint/
-  -
+  - https://wicg.github.io/layout-instability/
   - https://w3c.github.io/longtasks/
   - https://w3c.github.io/navigation-timing/
   - https://w3c.github.io/paint-timing/
