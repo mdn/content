@@ -45,7 +45,10 @@ navigator.getVRDevices().then((devices) => {
 
   if (gHMD) {
     for (const device of devices) {
-      if (device instanceof PositionSensorVRDevice && device.hardwareUnitId === gHMD.hardwareUnitId) {
+      if (
+        device instanceof PositionSensorVRDevice &&
+        device.hardwareUnitId === gHMD.hardwareUnitId
+      ) {
         gPositionSensor = devices[i];
         break;
       }

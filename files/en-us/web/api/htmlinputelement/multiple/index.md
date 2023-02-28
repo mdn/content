@@ -17,14 +17,14 @@ A boolean value.
 
 ```js
 // fileInput is a <input type=file multiple>
-let fileInput = document.getElementById('myfileinput');
+let fileInput = document.getElementById("myfileinput");
 
 if (fileInput.multiple) {
   // Loop fileInput.files
   for (const file of fileInput.files) {
     // Perform action on one file
   }
-// Only one file available
+  // Only one file available
 } else {
   let [file] = fileInput.files;
 }

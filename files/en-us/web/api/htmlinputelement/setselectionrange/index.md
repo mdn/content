@@ -77,7 +77,7 @@ the text box ("zil" in the word "Mozilla").
 
 ```js
 function selectText() {
-  const input = document.getElementById('text-box');
+  const input = document.getElementById("text-box");
   input.focus();
   input.setSelectionRange(2, 5);
 }

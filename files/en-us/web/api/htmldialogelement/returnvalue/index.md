@@ -18,13 +18,18 @@ A string representing the `returnValue` of the dialog.
 
 ## Examples
 
-The following example displays a button to open a {{htmlelement("dialog")}} containing a form via the `showModal()` method. The script assigns the `returnvalue` an initial value. From there, the confirm button submits the form with validation and the _X__ button submits the form without validation. Submitting a form with a `method="dialog"` closes the dialog and sets the return value to the `name`, if any, of the submit button. The reset button has an event handler that closes the dialog; it has no impact on the `returnValue`. Neither does closing the dialog with the <kbd>Esc</kbd> key.
+The following example displays a button to open a {{htmlelement("dialog")}} containing a form via the `showModal()` method. The script assigns the `returnvalue` an initial value. From there, the confirm button submits the form with validation and the "X" button submits the form without validation. Submitting a form with a `method="dialog"` closes the dialog and sets the return value to the `name`, if any, of the submit button. The reset button has an event handler that closes the dialog; it has no impact on the `returnValue`. Neither does closing the dialog with the <kbd>Esc</kbd> key.
 
 ```html
 <!-- Simple pop-up dialog box containing a form -->
 <dialog id="favDialog">
   <form method="dialog">
-    <input type="submit" aria-label="close" value="X" name="Xbutton" formnovalidate />
+    <input
+      type="submit"
+      aria-label="close"
+      value="X"
+      name="Xbutton"
+      formnovalidate />
     <p>
       <label
         >Favorite animal:
@@ -66,8 +71,8 @@ The following example displays a button to open a {{htmlelement("dialog")}} cont
 
     function handleUserInput(returnValue) {
       if (!returnValue) {
-        text.innerText += ". There was no return value"
-      } else  {
+        text.innerText += ". There was no return value";
+      } else {
         text.innerText += ". Return value: " + returnValue;
       }
     }
@@ -83,13 +88,11 @@ The following example displays a button to open a {{htmlelement("dialog")}} cont
       dialog.close();
     });
 
-        // when the dialog is closed, no matter how it is closed
+    // when the dialog is closed, no matter how it is closed
     dialog.addEventListener("close", () => {
       openCheck(dialog);
       handleUserInput(dialog.returnValue);
     });
-
-
   })();
 </script>
 <style>

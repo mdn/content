@@ -1,5 +1,5 @@
 ---
-title: 'HTMLMediaElement: loadeddata event'
+title: "HTMLMediaElement: loadeddata event"
 slug: Web/API/HTMLMediaElement/loadeddata_event
 page-type: web-api-event
 browser-compat: api.HTMLMediaElement.loadeddata_event
@@ -16,9 +16,9 @@ The **`loadeddata`** event is fired when the frame at the current playback posit
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('loadeddata', (event) => {});
+addEventListener("loadeddata", (event) => {});
 
-onloadeddata = (event) => { };
+onloadeddata = (event) => {};
 ```
 
 ## Event type
@@ -32,22 +32,26 @@ These examples add an event listener for the HTMLMediaElement's `loadeddata` eve
 Using `addEventListener()`:
 
 ```js
-const video = document.querySelector('video');
+const video = document.querySelector("video");
 
-video.addEventListener('loadeddata', (event) => {
-  console.log('Yay! The readyState just increased to  ' +
-      'HAVE_CURRENT_DATA or greater for the first time.');
+video.addEventListener("loadeddata", (event) => {
+  console.log(
+    "Yay! The readyState just increased to  " +
+      "HAVE_CURRENT_DATA or greater for the first time."
+  );
 });
 ```
 
 Using the `onloadeddata` event handler property:
 
 ```js
-const video = document.querySelector('video');
+const video = document.querySelector("video");
 
 video.onloadeddata = (event) => {
-  console.log('Yay! The readyState just increased to  ' +
-      'HAVE_CURRENT_DATA or greater for the first time.');
+  console.log(
+    "Yay! The readyState just increased to  " +
+      "HAVE_CURRENT_DATA or greater for the first time."
+  );
 };
 ```
 
