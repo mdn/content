@@ -35,7 +35,7 @@ brightness(200%) /* Double brightness */
 
 ## SVG filter
 
-The SVG {SVGElement("filter")}} element is used to define custom filter effects that can then be referenced by {{htmlattrxref("id")}}. The `<filter>`'s {{SVGElement("feComponentTransfer")}} primitive enables pixel-level color remapping. To alter the brightness, include linear {{SVGElement("feFuncR")}}, {{SVGElement("feFuncB")}}, and {{SVGElement("feFuncG>red")}} primitives with the `slope` attribute value defining the brightness multiplier.
+The SVG {SVGElement("filter")}} element is used to define custom filter effects that can then be referenced by {{htmlattrxref("id")}}. The `<filter>`'s {{SVGElement("feComponentTransfer")}} primitive enables pixel-level color remapping. To alter the brightness, include linear {{SVGElement("feFuncR")}}, {{SVGElement("feFuncB")}}, and {{SVGElement("feFuncG")}} primitives with the `slope` attribute value defining the brightness multiplier.
 
 ```html
 <svg role="none">
