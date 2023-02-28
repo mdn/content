@@ -45,7 +45,7 @@ for `x` and `z` located in or near the center of the space, and
 with the orientation set facing in a logical forward direction, as appropriate for the
 underlying platform or XR hardware.
 
-In order to reduce the risk of the room boundaries being used for fingerprinting
+In order to reduce the risk of the room boundaries being used for [fingerprinting](/en-US/docs/Glossary/Fingerprinting)
 purposes, each point in the `boundsGeometry` array may be rounded or adjusted
 by some amount. The specification recommends that browsers shift the points to the
 nearest 5 centimeters (while avoiding going outside the physical limitations of the

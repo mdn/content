@@ -32,7 +32,9 @@ console. For a full working example, see our [To-do Notifications](https://githu
 const title = "Walk dog";
 
 // Open up a transaction as usual
-const objectStore = db.transaction(['toDoList'], "readwrite").objectStore('toDoList');
+const objectStore = db
+  .transaction(["toDoList"], "readwrite")
+  .objectStore("toDoList");
 
 // Get the to-do list object that has this title as its title
 const objectStoreTitleRequest = objectStore.get(title);
@@ -52,7 +54,9 @@ objectStoreTitleRequest.onsuccess = () => {
   console.log(`The source of this request is ${updateTitleRequest.source}`);
   // When this new request succeeds, run the displayData()
   // function again to update the display
-  updateTitleRequest.onsuccess = () => { displayData(); };
+  updateTitleRequest.onsuccess = () => {
+    displayData();
+  };
 };
 ```
 

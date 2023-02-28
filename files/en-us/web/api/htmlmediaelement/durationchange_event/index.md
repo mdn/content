@@ -1,5 +1,5 @@
 ---
-title: 'HTMLMediaElement: durationchange event'
+title: "HTMLMediaElement: durationchange event"
 slug: Web/API/HTMLMediaElement/durationchange_event
 page-type: web-api-event
 browser-compat: api.HTMLMediaElement.durationchange_event
@@ -14,9 +14,9 @@ The `durationchange` event is fired when the `duration` attribute has been updat
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('durationchange', (event) => { });
+addEventListener("durationchange", (event) => {});
 
-ondurationchange = (event) => { };
+ondurationchange = (event) => {};
 ```
 
 ## Event type
@@ -30,20 +30,20 @@ These examples add an event listener for the HTMLMediaElement's `durationchange`
 Using `addEventListener()`:
 
 ```js
-const video = document.querySelector('video');
+const video = document.querySelector("video");
 
-video.addEventListener('durationchange', (event) => {
-  console.log('Not sure why, but the duration of the video has changed.');
+video.addEventListener("durationchange", (event) => {
+  console.log("Not sure why, but the duration of the video has changed.");
 });
 ```
 
 Using the `ondurationchange` event handler property:
 
 ```js
-const video = document.querySelector('video');
+const video = document.querySelector("video");
 
 video.ondurationchange = (event) => {
-  console.log('Not sure why, but the duration of the video has changed.');
+  console.log("Not sure why, but the duration of the video has changed.");
 };
 ```
 

@@ -126,10 +126,10 @@ Creating a new form element, modifying its attributes, then submitting it:
 
 ```js
 const f = document.createElement("form"); // Create a form
-document.body.appendChild(f);             // Add it to the document body
-f.action = "/cgi-bin/some.cgi";           // Add action and method attributes
+document.body.appendChild(f); // Add it to the document body
+f.action = "/cgi-bin/some.cgi"; // Add action and method attributes
 f.method = "POST";
-f.submit();                               // Call the form's submit() method
+f.submit(); // Call the form's submit() method
 ```
 
 Extract information from a `<form>` element and set some of its attributes:

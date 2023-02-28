@@ -37,8 +37,8 @@ The string will be one of the following values:
 ## Examples
 
 ```js
-let obj = document.createElement('video');
-console.log(obj.canPlayType('video/mp4')); // "maybe"
+let obj = document.createElement("video");
+console.log(obj.canPlayType("video/mp4")); // "maybe"
 ```
 
 ## Specifications

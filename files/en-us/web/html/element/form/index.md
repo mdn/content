@@ -17,16 +17,16 @@ It is possible to use the {{cssxref(':valid')}} and {{cssxref(':invalid')}} CSS 
 
 This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 
-- {{htmlattrdef("accept")}} {{deprecated_inline}}
+- `accept` {{deprecated_inline}}
 
   - : Comma-separated [content types](/en-US/docs/Web/SVG/Content_type) the server accepts.
 
     > **Note:** **This attribute has been deprecated and should not be used.** Instead, use the {{htmlattrxref("accept", "input")}} attribute on `<input type=file>` elements.
 
-- {{htmlattrdef("accept-charset")}}
+- `accept-charset`
   - : Space-separated {{Glossary("character encoding", "character encodings")}} the server accepts. The browser uses them in the order in which they are listed. The default value means [the same encoding as the page](/en-US/docs/Web/HTTP/Headers/Content-Encoding).
     (In previous versions of HTML, character encodings could also be delimited by commas.)
-- {{htmlattrdef("autocapitalize")}} {{non-standard_inline}}
+- `autocapitalize` {{non-standard_inline}}
 
   - : A nonstandard attribute used by iOS Safari that controls how textual form elements should be automatically capitalized. `autocapitalize` attributes on a form elements override it on `<form>`. Possible values:
 
@@ -35,26 +35,26 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
     - `words`: Capitalize the first letter of each word.
     - `characters`: Capitalize all characters — that is, uppercase.
 
-- {{htmlattrdef("autocomplete")}}
+- `autocomplete`
 
   - : Indicates whether input elements can by default have their values automatically completed by the browser. `autocomplete` attributes on form elements override it on `<form>`. Possible values:
 
     - `off`: The browser may not automatically complete entries. (Browsers tend to ignore this for suspected login forms; see [The autocomplete attribute and login fields](/en-US/docs/Web/Security/Securing_your_site/Turning_off_form_autocompletion#the_autocomplete_attribute_and_login_fields).)
     - `on`: The browser may automatically complete entries.
 
-- {{htmlattrdef("name")}}
+- `name`
   - : The name of the form. The value must not be the empty string, and must be unique among the `form` elements in the forms collection that it is in, if any.
 
-- {{htmlattrdef("rel")}}
+- `rel`
   - : Controls the annotations and what kinds of links the form creates. Annotations include [`external`](/en-US/docs/Web/HTML/Attributes/rel#external), [`nofollow`](/en-US/docs/Web/HTML/Attributes/rel#nofollow), [`opener`](/en-US/docs/Web/HTML/Attributes/rel#opener), [`noopener`](/en-US/docs/Web/HTML/Attributes/rel#noopener), and [`noreferrer`](/en-US/docs/Web/HTML/Attributes/rel#noreferrer). Link types include [`help`](/en-US/docs/Web/HTML/Attributes/rel#help), [`prev`](/en-US/docs/Web/HTML/Attributes/rel#prev), [`next`](/en-US/docs/Web/HTML/Attributes/rel#next), [`search`](/en-US/docs/Web/HTML/Attributes/rel#search), and [`license`](/en-US/docs/Web/HTML/Attributes/rel#license). The [`rel`](/en-US/docs/Web/HTML/Attributes/rel) value is a space-separated list of these enumerated values.
 
 ### Attributes for form submission
 
 The following attributes control behavior during form submission.
 
-- {{htmlattrdef("action")}}
+- `action`
   - : The URL that processes the form submission. This value can be overridden by a {{htmlattrxref("formaction", "button")}} attribute on a {{HTMLElement("button")}}, [`<input type="submit">`](/en-US/docs/Web/HTML/Element/input/submit), or [`<input type="image">`](/en-US/docs/Web/HTML/Element/input/image) element. This attribute is ignored when `method="dialog"` is set.
-- {{htmlattrdef("enctype")}}
+- `enctype`
 
   - : If the value of the `method` attribute is `post`, `enctype` is the [MIME type](https://en.wikipedia.org/wiki/Mime_type) of the form submission. Possible values:
 
@@ -64,7 +64,7 @@ The following attributes control behavior during form submission.
 
     This value can be overridden by {{htmlattrxref("formenctype", "button")}} attributes on {{HTMLElement("button")}}, [`<input type="submit">`](/en-US/docs/Web/HTML/Element/input/submit), or [`<input type="image">`](/en-US/docs/Web/HTML/Element/input/image) elements.
 
-- {{htmlattrdef("method")}}
+- `method`
 
   - : The [HTTP](/en-US/docs/Web/HTTP) method to submit the form with.
     The only allowed methods/values are (case insensitive):
@@ -75,9 +75,9 @@ The following attributes control behavior during form submission.
 
     This value is overridden by {{htmlattrxref("formmethod", "button")}} attributes on {{HTMLElement("button")}}, [`<input type="submit">`](/en-US/docs/Web/HTML/Element/input/submit), or [`<input type="image">`](/en-US/docs/Web/HTML/Element/input/image) elements.
 
-- {{htmlattrdef("novalidate")}}
+- `novalidate`
   - : This Boolean attribute indicates that the form shouldn't be validated when submitted. If this attribute is not set (and therefore the form **_is_** validated), it can be overridden by a {{htmlattrxref("formnovalidate", "button")}} attribute on a {{HTMLElement("button")}}, [`<input type="submit">`](/en-US/docs/Web/HTML/Element/input/submit), or [`<input type="image">`](/en-US/docs/Web/HTML/Element/input/image) element belonging to the form.
-- {{htmlattrdef("target")}}
+- `target`
 
   - : Indicates where to display the response after submitting the form. It is a name/keyword for a _browsing context_ (for example, tab, window, or iframe). The following keywords have special meanings:
 

@@ -32,12 +32,12 @@ Returns an {{jsxref("Iteration_protocols","iterator")}}.
 ```js
 // Create a test Headers object
 const myHeaders = new Headers();
-myHeaders.append('Content-Type', 'text/xml');
-myHeaders.append('Vary', 'Accept-Language');
+myHeaders.append("Content-Type", "text/xml");
+myHeaders.append("Vary", "Accept-Language");
 
 // Display the values
 for (const value of myHeaders.values()) {
-   console.log(value);
+  console.log(value);
 }
 ```
 

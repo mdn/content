@@ -24,7 +24,7 @@ A {{domxref("DOMHighResTimeStamp")}} value indicating the time at which the acti
 described by the statistics in this object was recorded, in milliseconds elapsed since
 the beginning of January 1, 1970, UTC. This should be accurate to within a few
 milliseconds but may not be entirely precise, either because of hardware or operating
-system limitations or because of fingerprinting protection in the form of reduced clock
+system limitations or because of [fingerprinting](/en-US/docs/Glossary/Fingerprinting) protection in the form of reduced clock
 precision or accuracy.
 
 ## Specifications

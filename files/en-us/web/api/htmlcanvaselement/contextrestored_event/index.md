@@ -1,5 +1,5 @@
 ---
-title: 'HTMLCanvasElement: contextrestored event'
+title: "HTMLCanvasElement: contextrestored event"
 slug: Web/API/HTMLCanvasElement/contextrestored_event
 page-type: web-api-event
 status:
@@ -18,9 +18,9 @@ You can redraw, re-retrieve resources, and reinitialize the state of your contex
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('contextrestored', (event) => {});
+addEventListener("contextrestored", (event) => {});
 
-oncontextrestored = (event) => { };
+oncontextrestored = (event) => {};
 ```
 
 ## Event type
@@ -32,12 +32,16 @@ A generic {{domxref("Event")}}.
 The code fragment below detects the context restored event.
 
 ```js
-const canvas = document.getElementById('canvas');
+const canvas = document.getElementById("canvas");
 
-canvas.addEventListener('contextrestored', (e) => {
-  console.log(e);
-  // call to redrawCanvas() or similar
-}, false);
+canvas.addEventListener(
+  "contextrestored",
+  (e) => {
+    console.log(e);
+    // call to redrawCanvas() or similar
+  },
+  false
+);
 ```
 
 ## Specifications

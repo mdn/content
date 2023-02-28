@@ -38,8 +38,8 @@ An array of elements.
 ## Examples
 
 ```js
-let slots = this.shadowRoot.querySelector('slot');
-let elements = slots.assignedElements({flatten: true});
+let slots = this.shadowRoot.querySelector("slot");
+let elements = slots.assignedElements({ flatten: true });
 ```
 
 ## Specifications
