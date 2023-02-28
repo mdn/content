@@ -43,9 +43,9 @@ You could add a header to this using {{domxref("Headers.append")}}, then test fo
 existence of it using `has()`:
 
 ```js
-myHeaders.append('Content-Type', 'image/jpeg');
-myHeaders.has('Content-Type'); // Returns true
-myHeaders.has('Accept-Encoding'); // Returns false
+myHeaders.append("Content-Type", "image/jpeg");
+myHeaders.has("Content-Type"); // Returns true
+myHeaders.has("Accept-Encoding"); // Returns false
 ```
 
 ## Specifications

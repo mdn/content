@@ -2,17 +2,6 @@
 title: ":where()"
 slug: Web/CSS/:where
 page-type: css-pseudo-class
-tags:
-  - ":where"
-  - CSS
-  - NeedsBrowserCompatibility
-  - NeedsContent
-  - NeedsExample
-  - Pseudo-class
-  - Reference
-  - Selector
-  - Selectors
-  - Web
 browser-compat: css.selectors.where
 ---
 

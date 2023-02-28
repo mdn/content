@@ -2,14 +2,6 @@
 title: ":read-only"
 slug: Web/CSS/:read-only
 page-type: css-pseudo-class
-tags:
-  - CSS
-  - Layout
-  - Pseudo-class
-  - Read-only
-  - Reference
-  - Selector
-  - Web
 browser-compat: css.selectors.read-only
 ---
 

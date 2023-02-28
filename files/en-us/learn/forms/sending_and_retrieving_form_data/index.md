@@ -1,17 +1,6 @@
 ---
 title: Sending form data
 slug: Learn/Forms/Sending_and_retrieving_form_data
-tags:
-  - Beginner
-  - CodingScripting
-  - Files
-  - Forms
-  - Guide
-  - HTML
-  - HTTP
-  - Headers
-  - Security
-  - Web
 ---
 
 {{LearnSidebar}}{{PreviousMenu("Learn/Forms/Form_validation", "Learn/Forms")}}
@@ -61,7 +50,7 @@ The {{HTMLElement("form")}} element defines how the data will be sent. All of it
 
 ### The action attribute
 
-The {{htmlattrxref("action","form")}} attribute defines where the data gets sent. Its value must be a valid relative or absolute [URL](/en-US/docs/Learn/Common_questions/What_is_a_URL). If this attribute isn't provided, the data will be sent to the URL of the page containing the form — the current page.
+The {{htmlattrxref("action","form")}} attribute defines where the data gets sent. Its value must be a valid relative or absolute [URL](/en-US/docs/Learn/Common_questions/Web_mechanics/What_is_a_URL). If this attribute isn't provided, the data will be sent to the URL of the page containing the form — the current page.
 
 In this example, the data is sent to an absolute URL — `https://example.com`:
 

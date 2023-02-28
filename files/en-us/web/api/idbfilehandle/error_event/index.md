@@ -1,5 +1,5 @@
 ---
-title: 'IDBFileHandle: error_event'
+title: "IDBFileHandle: error_event"
 slug: Web/API/IDBFileHandle/error_event
 page-type: web-api-event
 status:
@@ -22,8 +22,8 @@ This event is not cancelable and does not bubble.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('error', (event) => { })
-onerror = (event) => { }
+addEventListener("error", (event) => {});
+onerror = (event) => {};
 ```
 
 ## Event type

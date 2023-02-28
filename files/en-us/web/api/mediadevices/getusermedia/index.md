@@ -234,7 +234,7 @@ object when the requested media has successfully been obtained.
 
     > **Note:** Because this error can occur even when the user has not yet granted
     > permission to use the underlying device, it can potentially be used as a
-    > fingerprinting surface.
+    > [fingerprinting](/en-US/docs/Glossary/Fingerprinting) surface.
 
 - `SecurityError` {{domxref("DOMException")}}
   - : Thrown if user media support is disabled on the {{domxref("Document")}} on which

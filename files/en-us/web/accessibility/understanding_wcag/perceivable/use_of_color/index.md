@@ -1,11 +1,6 @@
 ---
 title: Use of color
 slug: Web/Accessibility/Understanding_WCAG/Perceivable/Use_of_color
-tags:
-  - Accessibility
-  - WCAG
-  - color
-  - perceivable
 ---
 
 {{QuicklinksWithSubPages("Web/Accessibility/Understanding_WCAG")}}

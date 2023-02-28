@@ -32,10 +32,10 @@ In the following example an {{domxref("EncodedVideoChunk")}} is created then cop
 
 ```js
 const init = {
-  type: 'key',
+  type: "key",
   data: videoBuffer,
   timestamp: 23000000,
-  duration: 2000000
+  duration: 2000000,
 };
 chunk = EncodedVideoChunk(init);
 

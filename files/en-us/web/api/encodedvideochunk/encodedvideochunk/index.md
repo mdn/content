@@ -40,10 +40,10 @@ In the following example a new `EncodedVideoChunk` is created.
 
 ```js
 const init = {
-  type: 'key',
+  type: "key",
   data: videoBuffer,
   timestamp: 23000000,
-  duration: 2000000
+  duration: 2000000,
 };
 chunk = EncodedVideoChunk(init);
 ```

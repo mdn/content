@@ -1,10 +1,6 @@
 ---
 title: exsl:object-type()
 slug: Web/EXSLT/exsl/object-type
-tags:
-  - EXSLT
-  - NeedsSpecTable
-  - Reference
 ---
 
 {{XSLTRef}}{{QuickLinksWithSubpages("/en-US/docs/Web/EXSLT")}}

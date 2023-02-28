@@ -2,9 +2,6 @@
 title: API landing page template
 slug: MDN/Writing_guidelines/Page_structures/Page_types/API_landing_page_template
 page-type: mdn-writing-guide
-tags:
-  - meta
-  - writing-guide
 ---
 
 {{MDNSidebar}}

@@ -39,7 +39,7 @@ WorkerLocation {hash: "", search: "", pathname: "/worker.js", port: "8000", host
 
 You could use this location object to return more information about the document's location, as you might do with a normal {{domxref("Location")}} object.
 
-> **Note:** Firefox has a bug with using `console.log` inside shared/service workers (see {{Bug("1058644")}}), which may return strange results, but this should be fixed soon.
+> **Note:** Firefox has a bug with using `console.log` inside shared/service workers (see [Webkit bug 1058644](https://bugzil.la/1058644)), which may return strange results, but this should be fixed soon.
 
 ## Specifications
 

@@ -2,12 +2,6 @@
 title: Logical AND assignment (&&=)
 slug: Web/JavaScript/Reference/Operators/Logical_AND_assignment
 page-type: javascript-operator
-tags:
-  - JavaScript
-  - Language feature
-  - Logical assignment
-  - Operator
-  - Reference
 browser-compat: javascript.operators.logical_and_assignment
 ---
 

@@ -2,13 +2,6 @@
 title: Reflect.defineProperty()
 slug: Web/JavaScript/Reference/Global_Objects/Reflect/defineProperty
 page-type: javascript-static-method
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Reference
-  - Reflect
-  - Polyfill
 browser-compat: javascript.builtins.Reflect.defineProperty
 ---
 

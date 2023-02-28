@@ -31,12 +31,20 @@ The compressed texture formats are exposed by 4 constants and can be used in two
 ## Examples
 
 ```js
-const ext = gl.getExtension('EXT_texture_compression_rgtc');
+const ext = gl.getExtension("EXT_texture_compression_rgtc");
 
 const texture = gl.createTexture();
 gl.bindTexture(gl.TEXTURE_2D, texture);
 
-gl.compressedTexImage2D(gl.TEXTURE_2D, 0, ext.COMPRESSED_RED_RGTC1_EXT, 128, 128, 0, textureData);
+gl.compressedTexImage2D(
+  gl.TEXTURE_2D,
+  0,
+  ext.COMPRESSED_RED_RGTC1_EXT,
+  128,
+  128,
+  0,
+  textureData
+);
 ```
 
 ## Specifications

@@ -1,26 +1,6 @@
 ---
 title: Web video codec guide
 slug: Web/Media/Formats/Video_codecs
-tags:
-  - AV1
-  - Codecs
-  - Encoder
-  - Encoding
-  - Guide
-  - H.264
-  - MPEG
-  - Media
-  - Theora
-  - VP8
-  - VP9
-  - Video
-  - compression
-  - data
-  - decoding
-  - h.263
-  - h.265
-  - mp4
-  - streaming
 ---
 
 {{QuickLinksWithSubpages("/en-US/docs/Web/Media")}}

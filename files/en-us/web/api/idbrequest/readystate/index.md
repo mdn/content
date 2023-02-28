@@ -40,7 +40,9 @@ the developer console. For a full working example, see our
 const title = "Walk dog";
 
 // Open up a transaction as usual
-const objectStore = db.transaction(['toDoList'], "readwrite").objectStore('toDoList');
+const objectStore = db
+  .transaction(["toDoList"], "readwrite")
+  .objectStore("toDoList");
 
 // Get the to-do list object that has this title as it's title
 const objectStoreTitleRequest = objectStore.get(title);
@@ -57,7 +59,9 @@ objectStoreTitleRequest.onsuccess = () => {
   const updateTitleRequest = objectStore.put(data);
 
   // Log the readyState of this request
-  console.log(`The readyState of this request is ${updateTitleRequest.readyState}`);
+  console.log(
+    `The readyState of this request is ${updateTitleRequest.readyState}`
+  );
 
   // When this new request succeeds, run the displayData()
   // function again to update the display

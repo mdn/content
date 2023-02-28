@@ -36,9 +36,9 @@ In this example the `aria-multiline` attribute on the element with an ID of `txt
 ```
 
 ```js
-let el = document.getElementById('txtBoxInput');
+let el = document.getElementById("txtBoxInput");
 console.log(el.ariaMultiLine); // "true"
-el.ariaMultiLine = "false"
+el.ariaMultiLine = "false";
 console.log(el.ariaMultiLine); // "false"
 ```
 

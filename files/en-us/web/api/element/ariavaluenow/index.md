@@ -27,7 +27,7 @@ In this example the [`aria-valuenow`](/en-US/docs/Web/Accessibility/ARIA/Attribu
 ```
 
 ```js
-let el = document.getElementById('slider');
+let el = document.getElementById("slider");
 console.log(el.ariaValueNow); // 1
 el.ariaValueNow = "2";
 console.log(el.ariaValueNow); // 2

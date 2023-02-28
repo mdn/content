@@ -2,12 +2,6 @@
 title: Specificity
 slug: Web/CSS/Specificity
 page-type: guide
-tags:
-  - CSS
-  - Example
-  - Guide
-  - Reference
-  - Web
 spec-urls: https://drafts.csswg.org/selectors/#specificity-rules
 ---
 

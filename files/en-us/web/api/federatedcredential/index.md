@@ -43,15 +43,14 @@ None.
 const cred = new FederatedCredential({
   id,
   name,
-  provider: 'https://account.google.com',
+  provider: "https://account.google.com",
   iconURL,
 });
 
 // Store it
-navigator.credentials.store(cred)
-  .then(() => {
-    // Do something else.
-  });
+navigator.credentials.store(cred).then(() => {
+  // Do something else.
+});
 ```
 
 ## Specifications

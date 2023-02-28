@@ -1,17 +1,6 @@
 ---
 title: Positioning
 slug: Learn/CSS/CSS_layout/Positioning
-tags:
-  - Article
-  - Beginner
-  - CSS
-  - CodingScripting
-  - Guide
-  - Layout
-  - Positioning
-  - absolute
-  - fixed
-  - relative
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/CSS_layout/Floats", "Learn/CSS/CSS_layout/Multiple-column_Layout", "Learn/CSS/CSS_layout")}}
@@ -422,7 +411,7 @@ body {
 }
 ```
 
-Now we're going to give the {{htmlelement("h1")}} element `position: fixed;` and have it sit at the top of the viewport. Add the following rule to your CSS:
+Now we're going to give the {{htmlelement("Heading_Elements", "h1")}} element `position: fixed;` and have it sit at the top of the viewport. Add the following rule to your CSS:
 
 ```css
 h1 {

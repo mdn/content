@@ -87,7 +87,7 @@ Yes, we send the following header along with each prefetch request:
 X-moz: prefetch
 ```
 
-Of course, this request header is not at all standardized, and it may change in future Mozilla releases. Chrome uses "X-Purpose: prefetch" or "Purpose: prefetch" [header](https://bugs.webkit.org/show_bug.cgi?id=46529).
+Of course, this request header is not at all standardized, and it may change in future Mozilla releases. Chrome uses "X-Purpose: prefetch" or "Purpose: prefetch" [header](https://webkit.org/b/46529).
 
 ### Is there a preference to disable link prefetching?
 

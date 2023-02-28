@@ -2,11 +2,6 @@
 title: 'TypeError: "x" is read-only'
 slug: Web/JavaScript/Reference/Errors/Read-only
 page-type: javascript-error
-tags:
-  - Error
-  - Errors
-  - JavaScript
-  - TypeError
 ---
 
 {{jsSidebar("Errors")}}

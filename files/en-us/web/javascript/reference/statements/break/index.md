@@ -2,11 +2,6 @@
 title: break
 slug: Web/JavaScript/Reference/Statements/break
 page-type: javascript-statement
-tags:
-  - JavaScript
-  - Language feature
-  - Reference
-  - Statement
 browser-compat: javascript.statements.break
 ---
 

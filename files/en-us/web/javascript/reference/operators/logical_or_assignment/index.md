@@ -2,12 +2,6 @@
 title: Logical OR assignment (||=)
 slug: Web/JavaScript/Reference/Operators/Logical_OR_assignment
 page-type: javascript-operator
-tags:
-  - JavaScript
-  - Language feature
-  - Logical Operator
-  - Operator
-  - Reference
 browser-compat: javascript.operators.logical_or_assignment
 ---
 

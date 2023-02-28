@@ -54,7 +54,7 @@ In this example, the `aria-haspopup` attribute on the element with an ID of `ani
 ```
 
 ```js
-let el = document.getElementById('animal');
+let el = document.getElementById("animal");
 console.log(el.ariaHasPopup); // true
 el.ariaHasPopup = "listbox";
 console.log(el.ariaHasPopup); // listbox

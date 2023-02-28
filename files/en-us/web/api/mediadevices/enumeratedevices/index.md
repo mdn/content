@@ -11,7 +11,7 @@ The {{domxref("MediaDevices")}} method **`enumerateDevices()`** requests a list 
 The returned {{jsxref("Promise")}} is resolved with a {{domxref("MediaDeviceInfo")}} array describing the devices.
 
 Access to particular devices is gated by the [Permissions API](/en-US/docs/Web/API/Permissions_API).
-The list of returned devices will omit any devices for which the corresponding permission has not been granted, including: `microphone`, `camera`, `speaker-selection` (for output devices), and so on.
+The list of returned devices will omit any devices for which the corresponding permission has not been granted, including: [`microphone`](/en-US/docs/Web/HTTP/Headers/Permissions-Policy/microphone), [`camera`](/en-US/docs/Web/HTTP/Headers/Permissions-Policy/camera), [`speaker-selection`](/en-US/docs/Web/HTTP/Headers/Permissions-Policy/speaker-selection) (for output devices), and so on.
 
 ## Syntax
 
@@ -25,11 +25,19 @@ None.
 
 ### Return value
 
-A {{ jsxref("Promise") }} that receives an array of {{domxref("MediaDeviceInfo")}} objects when the promise is fulfilled. Each object in the array describes one of the available media input and output devices. The order is significant — the default capture devices will be listed first.
+A {{ jsxref("Promise") }} that receives an array of {{domxref("MediaDeviceInfo")}} objects when the promise is fulfilled. Each object in the array describes one of the available media input and output devices.
+The order is significant — the default capture devices will be listed first.
 
-Only device types for which permission has been granted are "available". Also note that if a `speaker-selection` [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy) is used to block use of audio outputs, they won't be available in the list.
+Only device types for which permission has been granted are "available".
+Also note that if a [`speaker-selection`](/en-US/docs/Web/HTTP/Headers/Permissions-Policy/speaker-selection) [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy) is used to block use of audio outputs, they won't be available in the list.
 
 If enumeration fails, the promise is rejected.
+
+## Security requirements
+
+Access to the API is subject to the following constraints:
+
+- The method must be called in a [secure context](/en-US/docs/Web/Security/Secure_Contexts).
 
 ## Examples
 

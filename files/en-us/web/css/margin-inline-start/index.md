@@ -2,14 +2,6 @@
 title: margin-inline-start
 slug: Web/CSS/margin-inline-start
 page-type: css-property
-tags:
-  - CSS
-  - CSS Logical Property
-  - CSS Property
-  - Reference
-  - margin-inline
-  - margin-inline-start
-  - recipe:css-property
 browser-compat: css.properties.margin-inline-start
 ---
 

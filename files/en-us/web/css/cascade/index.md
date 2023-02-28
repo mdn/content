@@ -2,19 +2,6 @@
 title: Introducing the CSS Cascade
 slug: Web/CSS/Cascade
 page-type: guide
-tags:
-  - CSS
-  - Cascade
-  - Guide
-  - Introduction
-  - Layout
-  - Cascade layers
-  - specificity
-  - \@layers
-  - Reference
-  - Style
-  - Style sheet
-  - Stylesheets
 spec-urls: https://drafts.csswg.org/css-cascade/
 ---
 

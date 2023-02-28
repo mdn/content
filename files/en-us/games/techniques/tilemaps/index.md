@@ -1,15 +1,6 @@
 ---
 title: Tiles and tilemaps overview
 slug: Games/Techniques/Tilemaps
-tags:
-  - 2D
-  - Canvas
-  - Games
-  - JavaScript
-  - Static
-  - WebGL
-  - tilemap
-  - tiles
 ---
 
 {{GamesSidebar}}

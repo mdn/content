@@ -21,7 +21,7 @@ A string that represents the client ID.
 ## Examples
 
 ```js
-self.addEventListener('fetch', (event) => {
+self.addEventListener("fetch", (event) => {
   console.log(event.clientId);
 });
 ```

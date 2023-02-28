@@ -1,14 +1,6 @@
 ---
 title: "ARIA: region role"
 slug: Web/Accessibility/ARIA/Roles/region_role
-tags:
-  - ARIA
-  - ARIA Role
-  - Accessibility
-  - Reference
-  - landmark role
-  - region role
-  - ARIA region
 spec-urls:
   - https://w3c.github.io/aria/#region
   - https://w3c.github.io/aria-practices/#aria_lh_region

@@ -2,16 +2,6 @@
 title: "Vue conditional rendering: editing existing todos"
 slug: >-
   Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_conditional_rendering
-tags:
-  - Beginner
-  - Frameworks
-  - JavaScript
-  - Learn
-  - client-side
-  - conditional rendering
-  - v-else
-  - v-if
-  - Vue
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_computed_properties","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_refs_focus_management", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}

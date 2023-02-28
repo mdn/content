@@ -1,9 +1,6 @@
 ---
 title: concat
 slug: Web/XPath/Functions/concat
-tags:
-  - XSLT
-  - XSLT_Reference
 ---
 
 {{ XsltRef() }}
