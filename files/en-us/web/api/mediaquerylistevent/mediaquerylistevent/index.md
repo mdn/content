@@ -35,10 +35,13 @@ A new {{domxref("MediaQueryListEvent")}} object.
 ## Examples
 
 ```js
-const media = '(max-width: 600px)';
+const media = "(max-width: 600px)";
 const matches = true;
 
-const myMediaQueryListEvent = new MediaQueryListEvent("change", {media, matches});
+const myMediaQueryListEvent = new MediaQueryListEvent("change", {
+  media,
+  matches,
+});
 ```
 
 ## Specifications
