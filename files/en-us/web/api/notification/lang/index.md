@@ -27,13 +27,13 @@ constructor.
 
 ```js
 const options = {
-  body: 'Do you like my body?',
-  lang: 'en-US'
-}
+  body: "Your code submission has received 3 new review comments.",
+  lang: "en-US",
+};
 
-const n = new Notification('Test notification',options);
+const n = new Notification("New review activity", options);
 
-console.log(n.lang) // should return 'en-US'
+console.log(n.lang); // "en-US"
 ```
 
 ## Specifications

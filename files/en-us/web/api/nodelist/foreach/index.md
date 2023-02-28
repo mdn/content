@@ -57,12 +57,9 @@ node.appendChild(kid3);
 
 const list = node.childNodes;
 
-list.forEach(
-  function (currentValue, currentIndex, listObj) {
-    console.log(`${currentValue}, ${currentIndex}, ${this}`);
-  },
-  'myThisArg'
-);
+list.forEach(function (currentValue, currentIndex, listObj) {
+  console.log(`${currentValue}, ${currentIndex}, ${this}`);
+}, "myThisArg");
 ```
 
 The above code results in the following:
