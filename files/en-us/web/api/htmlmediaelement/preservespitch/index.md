@@ -54,7 +54,7 @@ pitch.addEventListener("change", () => {
   if ("preservesPitch" in audio) {
     audio.preservesPitch = pitch.checked;
   } else if ("mozPreservesPitch" in audio) {
-    //deprecated
+    // deprecated
     audio.mozPreservesPitch = pitch.checked;
   }
 });
