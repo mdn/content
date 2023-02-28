@@ -73,7 +73,7 @@ filter: url(folder/fileName.svg#darken25); /* external svg filter definition */
 
 ## Examples
 
-This example shows three images: the image with a `brightness()` filter function applied, the image with a similar SVG brightness function applied, and the original images for comparison:
+This example shows three images: the image with a `brightness()` filter function applied, the image with a similar SVG brightness function applied, and the original image for comparison:
 
 ```css
 .filter {
