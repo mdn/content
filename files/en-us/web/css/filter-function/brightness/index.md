@@ -39,7 +39,7 @@ The SVG {SVGElement("filter")}} element is used to define custom filter effects 
 
 ```html
 <svg role="none">
-  <filter id="brightnessFilter">
+  <filter id="[filterId]">
     <feComponentTransfer>
       <feFuncR type="linear" slope="[amount]" />
       <feFuncG type="linear" slope="[amount]" />
@@ -49,12 +49,11 @@ The SVG {SVGElement("filter")}} element is used to define custom filter effects 
 </svg>
 ```
 
-To create a filter that darkens the content on which it is applied by 25%, or 75% of the original brightness, we include red, green, and blue with i. The SVG effect :
-defines a custom filter effect by grouping atomic filter primitives
+To create a filter that darkens the content on which it is applied by 25%, we set the `slope` attribute to 0.75, for 75% of the original brightness.
 
 ```html
 <svg role="none">
-  <filter id="brightness75">
+  <filter id="darken25">
     <feComponentTransfer>
       <feFuncR type="linear" slope="0.75" />
       <feFuncG type="linear" slope="0.75" />
@@ -64,18 +63,22 @@ defines a custom filter effect by grouping atomic filter primitives
 </svg>
 ```
 
-The following declarations produce the same effect:
+We can then reference the filter by `id`. The following declarations produce similar effects:
 
 ```css
 filter: brightness(75%);
-filter: url(#brightness75); /* with embedded SVG */
-filter: url(folder/fileName.svg#brightness75); /* external svg filter definition */
+filter: url(#darken25); /* with embedded SVG */
+filter: url(folder/fileName.svg#darken25); /* external svg filter definition */
 ```
 
 ## Examples
 
+This example shows three images: the image with a `brightness()` filter function applied, the image with a similar SVG brightness function applied, and the original images for comparison:
+
 ```css
-filter: brightness(2);
+.filter {
+  filter: brightness(1.5);
+}
 ```
 
 ```css hidden
@@ -88,36 +91,39 @@ svg:not([height]) {
 <table cellpadding="5">
   <thead>
     <tr>
-      <th>Original image</th>
       <th>Live example</th>
       <th>SVG Equivalent</th>
+      <th>Original image</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td><img src="test_form.jpg" style="width: 100%;" /></td>
-      <td><img class="filter" src="test_form.jpg" style="width: 100%;" /></td>
-      <td><div class="svg-container"><svg xmlns="http://www.w3.org/2000/svg" id="svg" viewBox="0 0 286 217" color-interpolation-filters="sRGB">
- <filter id="brightness">
-    <feComponentTransfer>
-        <feFuncR type="linear" slope="2"/>
-        <feFuncG type="linear" slope="2"/>
-        <feFuncB type="linear" slope="2"/>
-    </feComponentTransfer>
-  </filter>
-  <image xlink:href="flag.jpg" filter="url(#brightness)" width="220" height="220" />
-</svg><div></td>
+      <td><img class="filter" src="flag.jpg" style="width: 100%;" /></td>
+      <td>
+        <svg id="svg" height="220" width="220" style="overflow: visible">
+          <filter id="brightness">
+            <feComponentTransfer>
+              <feFuncR type="linear" slope="2" />
+              <feFuncG type="linear" slope="2" />
+              <feFuncB type="linear" slope="2" />
+            </feComponentTransfer>
+          </filter>
+          <image
+            xlink:href="flag.jpg"
+            filter="url(#brightness)"
+            width="220"
+            height="220" />
+        </svg>
+      </td>
+      <td>
+        <img src="flag.jpg" alt="Pride flag" />
+      </td>
+    </tr>
   </tbody>
 </table>
 ```
 
-```css
-.filter {
-  filter: brightness(2);
-}
-```
-
-{{EmbedLiveSample('brightness','100%','231px','','', 'no-codepen')}}
+{{EmbedLiveSample('blur','100%','280')}}
 
 ## Specifications
 
