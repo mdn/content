@@ -38,8 +38,7 @@ const video = document.querySelector("video");
 
 video.addEventListener("pause", (event) => {
   console.log(
-    "The Boolean paused property is now true. Either the " +
-      "pause() method was called or the autoplay attribute was toggled."
+    "The Boolean paused property is now 'true'. Either the pause() method was called or the autoplay attribute was toggled."
   );
 });
 ```
@@ -51,8 +50,7 @@ const video = document.querySelector("video");
 
 video.onpause = (event) => {
   console.log(
-    "The Boolean paused property is now true. Either the " +
-      "pause() method was called or the autoplay attribute was toggled."
+    "The Boolean paused property is now 'true'. Either the pause() method was called or the autoplay attribute was toggled."
   );
 };
 ```
