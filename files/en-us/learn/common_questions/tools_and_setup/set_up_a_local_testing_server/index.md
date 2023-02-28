@@ -13,10 +13,10 @@ This article explains how to set up a simple local testing server on your machin
       <th scope="row">Prerequisites:</th>
       <td>
         You need to first know
-        <a href="/en-US/docs/Learn/Common_questions/How_does_the_Internet_work"
+        <a href="/en-US/docs/Learn/Common_questions/Web_mechanics/How_does_the_Internet_work"
           >how the Internet works</a
         >, and
-        <a href="/en-US/docs/Learn/Common_questions/What_is_a_web_server"
+        <a href="/en-US/docs/Learn/Common_questions/Web_mechanics/What_is_a_web_server"
           >what a Web server is</a
         >.
       </td>

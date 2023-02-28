@@ -72,7 +72,7 @@ The **`<data>`** [HTML](/en-US/docs/Web/HTML) element links a given piece of con
 
 This element's attributes include the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 
-- {{htmlattrdef("value")}}
+- `value`
   - : This attribute specifies the machine-readable translation of the content of the element.
 
 ## Examples

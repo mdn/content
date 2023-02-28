@@ -21,7 +21,7 @@ This article provides information about the changes in Firefox 66 that will affe
 
 #### Removals
 
-- The `x-moz-errormessage` attribute has been removed from the {{HTMLElement("input")}} element ([Firefox bug 1513890](https://bugzil.la/1513890)). You should use {{domxref("Constraint_validation", "Constraint validation features", "", "1")}} to implement custom validation messages instead.
+- The `x-moz-errormessage` attribute has been removed from the {{HTMLElement("input")}} element ([Firefox bug 1513890](https://bugzil.la/1513890)). You should use the [constraint validation](/en-US/docs/Web/HTML/Constraint_validation) API to implement custom validation messages instead.
 
 ### CSS
 

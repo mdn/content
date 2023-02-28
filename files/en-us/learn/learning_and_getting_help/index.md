@@ -198,7 +198,7 @@ If you are a complete beginner to web development, you'll have to do some study 
 
 When you find solutions to such problems, it is worth writing down notes on what you did, and keeping some minimal code examples in a directory somewhere so you can look back on previous work.
 
-In addition, the web has [developer tools](/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools) that allow you to look at the code used to build any site on the web. If you don't have a solution to hand, one good research method is to find websites with similar features in the wild, and find out how they did it.
+In addition, the web has [developer tools](/en-US/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools) that allow you to look at the code used to build any site on the web. If you don't have a solution to hand, one good research method is to find websites with similar features in the wild, and find out how they did it.
 
 > **Note:** Notice how above we talked about the problem we are trying to solve first, and the technology used to solve it second. This is pretty much always the best way to do it — don't start with a cool new technology that you want to use, and try to shoehorn it into the use case.
 

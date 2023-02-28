@@ -45,7 +45,7 @@ console.log(video.currentTime);
 
 ### Reduced time precision
 
-To offer protection against timing attacks and fingerprinting, browsers may round or
+To offer protection against timing attacks and [fingerprinting](/en-US/docs/Glossary/Fingerprinting), browsers may round or
 otherwise adjust the value returned by `currentTime`.
 
 ## Specifications

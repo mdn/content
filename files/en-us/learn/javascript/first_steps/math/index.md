@@ -51,7 +51,7 @@ The second bit of good news is that unlike some other programming languages, Jav
 
 ### It's all numbers to me
 
-Let's quickly play with some numbers to reacquaint ourselves with the basic syntax we need. Enter the commands listed below into your [developer tools JavaScript console](/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools).
+Let's quickly play with some numbers to reacquaint ourselves with the basic syntax we need. Enter the commands listed below into your [developer tools JavaScript console](/en-US/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools).
 
 1. First of all, let's declare a couple of variables and initialize them with an integer and a float, respectively, then type the variable names back in to check that everything is in order:
 
@@ -185,7 +185,7 @@ Arithmetic operators are the basic operators that we use to do sums in JavaScrip
 
 > **Note:** You may sometimes see exponents expressed using the older {{jsxref("Math.pow()")}} method, which works in a very similar way. For example, in `Math.pow(7, 3)`, `7` is the base and `3` is the exponent, so the result of the expression is `343`. `Math.pow(7, 3)` is equivalent to `7**3`.
 
-We probably don't need to teach you how to do basic math, but we would like to test your understanding of the syntax involved. Try entering the examples below into your [developer tools JavaScript console](/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools) to familiarize yourself with the syntax.
+We probably don't need to teach you how to do basic math, but we would like to test your understanding of the syntax involved. Try entering the examples below into your [developer tools JavaScript console](/en-US/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools) to familiarize yourself with the syntax.
 
 1. First try entering some simple examples of your own, such as
 
