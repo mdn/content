@@ -49,7 +49,7 @@ The SVG {{SVGElement("filter")}} element is used to define custom filter effects
 
 ## Examples
 
-This example shows three images: the image with a `contrast()` filter function applied, the image with the equivalent SVG blur function applied, and the original images for comparison:
+This example shows three images: the image with a `contrast()` filter function applied, the image with the equivalent SVG blur function applied, and the original image for comparison:
 
 ```css
 .filter {
@@ -75,9 +75,6 @@ To create a filter that doubles the original contrast, we set the `slope` attrib
 ```
 
 ```css hidden
-svg {
-  display: none;
-}
 .svgFilterLive {
   filter: url(#contrast2);
 }
