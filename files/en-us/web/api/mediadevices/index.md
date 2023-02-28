@@ -63,9 +63,7 @@ navigator.mediaDevices
       );
     } else if (error.name === "PermissionDeniedError") {
       console.error(
-        "Permissions have not been granted to use your camera and " +
-          "microphone, you need to allow the page access to your devices in " +
-          "order for the demo to work."
+        "You need to grant this page permission to access your camera and microphone."
       );
     } else {
       console.error(`getUserMedia error: ${error.name}`, error);
