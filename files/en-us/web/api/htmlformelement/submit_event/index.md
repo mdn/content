@@ -20,9 +20,9 @@ The `submit` event fires when the user clicks a submit button ({{HtmlElement("bu
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('submit', (event) => {});
+addEventListener("submit", (event) => {});
 
-onsubmit = (event) => { };
+onsubmit = (event) => {};
 ```
 
 ## Event type
@@ -61,9 +61,9 @@ function logSubmit(event) {
   event.preventDefault();
 }
 
-const form = document.getElementById('form');
-const log = document.getElementById('log');
-form.addEventListener('submit', logSubmit);
+const form = document.getElementById("form");
+const log = document.getElementById("log");
+form.addEventListener("submit", logSubmit);
 ```
 
 ### Result

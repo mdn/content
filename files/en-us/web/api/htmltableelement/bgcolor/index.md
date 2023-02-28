@@ -27,8 +27,8 @@ A string representing a color value.
 
 ```js
 // Set table background color to lightblue
-const t = document.getElementById('TableA');
-t.bgColor = 'lightblue';
+const t = document.getElementById("TableA");
+t.bgColor = "lightblue";
 ```
 
 ## Specifications

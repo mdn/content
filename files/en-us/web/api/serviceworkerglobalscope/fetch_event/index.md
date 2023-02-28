@@ -23,7 +23,7 @@ onfetch = (event) => {};
 
 ## Event type
 
-A generic {{domxref("Event")}}.
+A {{domxref("FetchEvent")}}.
 
 ## Example
 
