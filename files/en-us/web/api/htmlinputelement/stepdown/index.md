@@ -130,17 +130,17 @@ Click the button in this example to decrement the {{HTMLElement("input/number",
 
 ```html
 <p>
-  <label for="theNumber"
-    >Enter a number between 0 and 400 that is divisible by 5:</label
-  >
+  <label for="theNumber">
+    Enter a number between 0 and 400 that is divisible by 5:
+  </label>
   <input type="number" step="5" id="theNumber" min="0" max="400" />
 </p>
 <p>
-  <label for="decrementer">
+  <label for="decrementButton">
     Enter how many values of step you would like to decrement by or leave it
     blank:
   </label>
-  <input type="number" step="1" id="decrementer" min="-2" max="15" />
+  <input type="number" step="1" id="decrementInput" min="-2" max="15" />
 </p>
 <input type="button" value="Decrement" id="theButton" />
 ```
@@ -151,12 +151,12 @@ Click the button in this example to decrement the {{HTMLElement("input/number",
 /* make the button call the function */
 let button = document.getElementById("theButton");
 button.addEventListener("click", () => {
-  stepondown();
+  stepOnDown();
 });
 
-function stepondown() {
+function stepOnDown() {
   let input = document.getElementById("theNumber");
-  let val = document.getElementById("decrementer").value;
+  let val = document.getElementById("decrementInput").value;
 
   if (val) {
     // decrement with a parameter
@@ -188,7 +188,7 @@ decremented. The `stepDown()` method will not allow the input to go out of range
 case stopping when it reaches 0 and rounding down and floats that are passed as a
 parameter.
 
-Try setting the step decrementer to `1.2`. What happens when you invoke the
+Try setting the step decrement input to `1.2`. What happens when you invoke the
 method?
 
 Try setting the value to `44`, which is not valid. What happens when you
