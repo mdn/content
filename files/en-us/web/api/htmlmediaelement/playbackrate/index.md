@@ -22,7 +22,7 @@ A [`double`](https://en.wikipedia.org/wiki/Double-precision_floating-point_forma
 ## Examples
 
 ```js
-const obj = document.createElement('video');
+const obj = document.createElement("video");
 console.log(obj.playbackRate); // Expected Output: 1
 ```
 

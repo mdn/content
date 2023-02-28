@@ -57,7 +57,7 @@ Given this {{HTMLElement("canvas")}} element:
 You can get a data-URL of the canvas with the following lines:
 
 ```js
-const canvas = document.getElementById('canvas');
+const canvas = document.getElementById("canvas");
 const dataURL = canvas.toDataURL();
 console.log(dataURL);
 // "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNby
@@ -67,10 +67,10 @@ console.log(dataURL);
 ### Setting image quality with jpegs
 
 ```js
-const fullQuality = canvas.toDataURL('image/jpeg', 1.0);
+const fullQuality = canvas.toDataURL("image/jpeg", 1.0);
 // data:image/jpeg;base64,/9j/4AAQSkZJRgABAQ…9oADAMBAAIRAxEAPwD/AD/6AP/Z"
-const mediumQuality = canvas.toDataURL('image/jpeg', 0.5);
-const lowQuality = canvas.toDataURL('image/jpeg', 0.1);
+const mediumQuality = canvas.toDataURL("image/jpeg", 0.5);
+const lowQuality = canvas.toDataURL("image/jpeg", 0.1);
 ```
 
 ### Example: Dynamically change images
@@ -86,24 +86,28 @@ You can use this technique in coordination with mouse events in order to dynamic
 #### JavaScript
 
 ```js
-window.addEventListener('load', removeColors);
+window.addEventListener("load", removeColors);
 
 function showColorImg() {
-  this.style.display = 'none';
-  this.nextSibling.style.display = 'inline';
+  this.style.display = "none";
+  this.nextSibling.style.display = "inline";
 }
 
 function showGrayImg() {
-  this.previousSibling.style.display = 'inline';
-  this.style.display = 'none';
+  this.previousSibling.style.display = "inline";
+  this.style.display = "none";
 }
 
 function removeColors() {
-  const aImages = document.getElementsByClassName('grayscale'),
-      nImgsLen = aImages.length,
-      oCanvas = document.createElement('canvas'),
-      oCtx = oCanvas.getContext('2d');
-  for (let nWidth, nHeight, oImgData, oGrayImg, nPixel, aPix, nPixLen, nImgId = 0; nImgId < nImgsLen; nImgId++) {
+  const aImages = document.getElementsByClassName("grayscale"),
+    nImgsLen = aImages.length,
+    oCanvas = document.createElement("canvas"),
+    oCtx = oCanvas.getContext("2d");
+  for (
+    let nWidth, nHeight, oImgData, oGrayImg, nPixel, aPix, nPixLen, nImgId = 0;
+    nImgId < nImgsLen;
+    nImgId++
+  ) {
     oColorImg = aImages[nImgId];
     nWidth = oColorImg.offsetWidth;
     nHeight = oColorImg.offsetHeight;
@@ -114,7 +118,10 @@ function removeColors() {
     aPix = oImgData.data;
     nPixLen = aPix.length;
     for (nPixel = 0; nPixel < nPixLen; nPixel += 4) {
-      aPix[nPixel + 2] = aPix[nPixel + 1] = aPix[nPixel] = (aPix[nPixel] + aPix[nPixel + 1] + aPix[nPixel + 2]) / 3;
+      aPix[nPixel + 2] =
+        aPix[nPixel + 1] =
+        aPix[nPixel] =
+          (aPix[nPixel] + aPix[nPixel + 1] + aPix[nPixel + 2]) / 3;
     }
     oCtx.putImageData(oImgData, 0, 0);
     oGrayImg = new Image();
