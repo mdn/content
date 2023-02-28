@@ -30,7 +30,7 @@ Elements in HTML have **attributes**; these are additional values that configure
     </tr>
     <tr>
       <td>
-        <code><a href="/en-US/docs/Web/HTML/Element/form#attr-accept-charset">accept-charset</a></code>
+        <code><a href="/en-US/docs/Web/HTML/Element/form#accept-charset">accept-charset</a></code>
       </td>
       <td>{{ HTMLElement("form") }}</td>
       <td>List of supported charsets.</td>
@@ -503,7 +503,7 @@ Elements in HTML have **attributes**; these are additional values that configure
     </tr>
     <tr>
       <td>
-        <code><a href="/en-US/docs/Web/HTML/Element/form#attr-enctype">enctype</a></code>
+        <code><a href="/en-US/docs/Web/HTML/Element/form#enctype">enctype</a></code>
       </td>
       <td>{{ HTMLElement("form") }}</td>
       <td>
@@ -934,7 +934,7 @@ Elements in HTML have **attributes**; these are additional values that configure
     </tr>
     <tr>
       <td>
-        <code><a href="/en-US/docs/Web/HTML/Element/form#attr-method">method</a></code>
+        <code><a href="/en-US/docs/Web/HTML/Element/form#method">method</a></code>
       </td>
       <td>{{ HTMLElement("form") }}</td>
       <td>
@@ -1002,7 +1002,7 @@ Elements in HTML have **attributes**; these are additional values that configure
     </tr>
     <tr>
       <td>
-        <code><a href="/en-US/docs/Web/HTML/Element/form#attr-novalidate">novalidate</a></code>
+        <code><a href="/en-US/docs/Web/HTML/Element/form#novalidate">novalidate</a></code>
       </td>
       <td>{{ HTMLElement("form") }}</td>
       <td>
