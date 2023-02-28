@@ -38,7 +38,7 @@ for streaming over WebRTC, to allow sharing prerecorded videos with another pers
 during a video call.
 
 ```js
-document.querySelector('.playAndRecord').addEventListener('click', () => {
+document.querySelector(".playAndRecord").addEventListener("click", () => {
   const playbackElement = document.getElementById("playback");
   const captureStream = playbackElement.captureStream();
   playbackElement.play();

@@ -96,9 +96,11 @@ document.getElementById("focusButton").addEventListener("click", () => {
   document.getElementById("myButton").focus();
 });
 
-document.getElementById("focusButtonVisibleIndication").addEventListener("click", () => {
-  document.getElementById("myButton").focus({focusVisible: true});
-});
+document
+  .getElementById("focusButtonVisibleIndication")
+  .addEventListener("click", () => {
+    document.getElementById("myButton").focus({ focusVisible: true });
+  });
 ```
 
 #### Result
@@ -136,12 +138,11 @@ Note that the first handler doesn't specify the `preventScroll` option so scroll
 
 ```js
 document.getElementById("focus_scroll").addEventListener("click", () => {
-  document.getElementById("myButton").focus();  // default: {preventScroll:false}
+  document.getElementById("myButton").focus(); // default: {preventScroll:false}
 });
 
-
 document.getElementById("focus_no_scroll").addEventListener("click", () => {
-  document.getElementById("myButton").focus({preventScroll:true});
+  document.getElementById("myButton").focus({ preventScroll: true });
 });
 ```
 

@@ -1,5 +1,5 @@
 ---
-title: 'HTMLElement: mscandidatewindowshow event'
+title: "HTMLElement: mscandidatewindowshow event"
 slug: Web/API/HTMLElement/mscandidatewindowshow_event
 page-type: web-api-event
 status:
@@ -23,9 +23,9 @@ Web applications need only register for this event once per element (the handler
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('mscandidatewindowshow', (event) => { })
+addEventListener("mscandidatewindowshow", (event) => {});
 
-onmscandidatewindowshow = (event) => { }
+onmscandidatewindowshow = (event) => {};
 ```
 
 ## Event type
@@ -41,9 +41,11 @@ const context = document.getElementById("mySearchBox").msGetInputContext();
 context.addEventListener("MSCandidateWindowShow", candidateWindowShowHandler);
 
 function candidateWindowShowHandler(e) {
-   const imeRect = context.getCandidateWindowClientRect();
-   const suggestionRect = document.getElementById("mySuggestionList").getBoundingClientRect();
-   // Check if the two rects intersect, and position them away from each other.
+  const imeRect = context.getCandidateWindowClientRect();
+  const suggestionRect = document
+    .getElementById("mySuggestionList")
+    .getBoundingClientRect();
+  // Check if the two rects intersect, and position them away from each other.
 }
 ```
 
