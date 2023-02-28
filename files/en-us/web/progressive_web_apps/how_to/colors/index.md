@@ -84,7 +84,7 @@ The [`theme-color`](/en-US/docs/Web/HTML/Element/meta/name/theme-color) value fo
 
 If both are set, the `theme-color` meta element value overrides the `theme_color` manifest member. This lets you define a global color for your app, and override it on specific pages.
 
-Note that on certain browsers like Safari on macOS, or Chrome on Android, the `theme-color` meta element value is used to style the browser chrome
+Note that on certain browsers like Safari on macOS, or Chrome on Android, the `theme-color` meta element value is used to style the browser interface.
 
 ## Specifications
 
