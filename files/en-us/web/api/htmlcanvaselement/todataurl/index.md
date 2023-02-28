@@ -99,38 +99,33 @@ function showGrayImg() {
 }
 
 function removeColors() {
-  const aImages = document.getElementsByClassName("grayscale"),
-    nImgsLen = aImages.length,
-    oCanvas = document.createElement("canvas"),
-    oCtx = oCanvas.getContext("2d");
-  for (
-    let nWidth, nHeight, oImgData, oGrayImg, nPixel, aPix, nPixLen, nImgId = 0;
-    nImgId < nImgsLen;
-    nImgId++
-  ) {
-    oColorImg = aImages[nImgId];
-    nWidth = oColorImg.offsetWidth;
-    nHeight = oColorImg.offsetHeight;
-    oCanvas.width = nWidth;
-    oCanvas.height = nHeight;
-    oCtx.drawImage(oColorImg, 0, 0);
-    oImgData = oCtx.getImageData(0, 0, nWidth, nHeight);
-    aPix = oImgData.data;
-    nPixLen = aPix.length;
-    for (nPixel = 0; nPixel < nPixLen; nPixel += 4) {
-      aPix[nPixel + 2] =
-        aPix[nPixel + 1] =
-        aPix[nPixel] =
-          (aPix[nPixel] + aPix[nPixel + 1] + aPix[nPixel + 2]) / 3;
+  const images = document.getElementsByClassName("grayscale");
+  const canvas = document.createElement("canvas");
+  const ctx = canvas.getContext("2d");
+
+  for (const colorImg of images) {
+    const width = colorImg.offsetWidth;
+    const height = colorImg.offsetHeight;
+    canvas.width = width;
+    canvas.height = height;
+    ctx.drawImage(colorImg, 0, 0);
+    const imgData = ctx.getImageData(0, 0, width, height);
+    const pix = imgData.data;
+    const pixLen = pix.length;
+    for (let pixel = 0; pixel < pixLen; pixel += 4) {
+      pix[pixel + 2] =
+        pix[pixel + 1] =
+        pix[pixel] =
+          (pix[pixel] + pix[pixel + 1] + pix[pixel + 2]) / 3;
     }
-    oCtx.putImageData(oImgData, 0, 0);
-    oGrayImg = new Image();
-    oGrayImg.src = oCanvas.toDataURL();
-    oGrayImg.onmouseover = showColorImg;
-    oColorImg.onmouseout = showGrayImg;
-    oCtx.clearRect(0, 0, nWidth, nHeight);
-    oColorImg.style.display = "none";
-    oColorImg.parentNode.insertBefore(oGrayImg, oColorImg);
+    ctx.putImageData(imgData, 0, 0);
+    const grayImg = new Image();
+    grayImg.src = canvas.toDataURL();
+    grayImg.onmouseover = showColorImg;
+    colorImg.onmouseout = showGrayImg;
+    ctx.clearRect(0, 0, width, height);
+    colorImg.style.display = "none";
+    colorImg.parentNode.insertBefore(grayImg, colorImg);
   }
 }
 ```
