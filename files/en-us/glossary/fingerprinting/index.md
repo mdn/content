@@ -15,7 +15,7 @@ page-type: glossary-definition
 
 A website can retrieve information like this by executing JavaScript and CSS on the device, and by combining this data can often create a unique fingerprint for a browser, which can then be used to track users across the web.
 
-Web standards are designed in such a way as to minimise the ability of a website to collect identifying information, and browsers typically add their own protections as well.
+Web standards are designed in such a way as to minimize the ability of a website to collect identifying information, and browsers typically add their own protections as well.
 
 ## See also
 
