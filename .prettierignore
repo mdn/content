@@ -4,8 +4,8 @@
 build/
 /files/en-us/_githistory.json
 
-# A full pass on all Markdown files is being performed, the following folders
-# still need a full pass:
+# A full pass on all Markdown files is being performed.
+# The following folders still need a full pass:
 /files/en-us/learn/**/*.md
 /files/en-us/mozilla/**/*.md
 /files/en-us/web/html/**/*.md
@@ -15,4 +15,5 @@ build/
 
 # The /web/api folder is so large, it has been divided into multiple parts
 /files/en-us/web/api/**/*.md
-!/files/en-us/web/api/[a-h]*/**/*.md
+# Alphabetically 'allow' this range incrementally
+!/files/en-us/web/api/[a-l]*/**/*.md

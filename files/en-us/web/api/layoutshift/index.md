@@ -42,24 +42,24 @@ try {
   let cumulativeLayoutShiftScore = 0;
 
   const observer = new PerformanceObserver((list) => {
-  for (const entry of list.getEntries()) {
-    // Only count layout shifts without recent user input.
-    if (!entry.hadRecentInput) {
-      cumulativeLayoutShiftScore += entry.value;
+    for (const entry of list.getEntries()) {
+      // Only count layout shifts without recent user input.
+      if (!entry.hadRecentInput) {
+        cumulativeLayoutShiftScore += entry.value;
+      }
     }
-  }
   });
 
-  observer.observe({type: 'layout-shift', buffered: true});
+  observer.observe({ type: "layout-shift", buffered: true });
 
-  document.addEventListener('visibilitychange', () => {
-  if (document.visibilityState === 'hidden') {
-    // Force any pending records to be dispatched.
-    observer.takeRecords();
-    observer.disconnect();
+  document.addEventListener("visibilitychange", () => {
+    if (document.visibilityState === "hidden") {
+      // Force any pending records to be dispatched.
+      observer.takeRecords();
+      observer.disconnect();
 
-    console.log('CLS:', cumulativeLayoutShiftScore);
-  }
+      console.log("CLS:", cumulativeLayoutShiftScore);
+    }
   });
 } catch (e) {
   // Do nothing if the browser doesn't support this API.
