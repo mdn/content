@@ -2,15 +2,8 @@
 title: '<noframes>: The Frame Fallback element'
 slug: Web/HTML/Element/noframes
 page-type: html-element
-tags:
-  - Element
-  - Frames
-  - HTML
-  - HTML frames
-  - Deprecated
-  - Reference
-  - Web
-  - noframes
+status:
+  - deprecated
 browser-compat: html.elements.noframes
 ---
 

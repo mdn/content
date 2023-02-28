@@ -24,9 +24,9 @@ In this example the `aria-keyshortcuts` attribute on the element with an ID of `
 ```
 
 ```js
-let el = document.getElementById('saveChanges');
+let el = document.getElementById("saveChanges");
 console.log(el.ariaKeyShortcuts); // "Alt+Shift+A"
-el.ariaKeyShortcuts = "Alt+Shift+M"
+el.ariaKeyShortcuts = "Alt+Shift+M";
 console.log(el.ariaKeyShortcuts); // "Alt+Shift+M"
 ```
 

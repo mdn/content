@@ -2,13 +2,6 @@
 title: Generator.prototype.next()
 slug: Web/JavaScript/Reference/Global_Objects/Generator/next
 page-type: javascript-instance-method
-tags:
-  - ECMAScript 2015
-  - Generator
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
 browser-compat: javascript.builtins.Generator.next
 ---
 

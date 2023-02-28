@@ -44,16 +44,16 @@ namedItem(str)
 ### JavaScript
 
 ```js
-let selectElt = document.getElementById('myFormControl');
-elem1 = selectElt.namedItem('o1'); // Returns the HTMLOptionElement representing #o1
+let selectElt = document.getElementById("myFormControl");
+elem1 = selectElt.namedItem("o1"); // Returns the HTMLOptionElement representing #o1
 ```
 
 But, you cannot write:
 
 ```js
-let selectElt = document.getElementById('myFormControl');
+let selectElt = document.getElementById("myFormControl");
 elem1 = selectElt.o1; // Returns undefined
-elem1 = selectElt['o1']; // Returns undefined
+elem1 = selectElt["o1"]; // Returns undefined
 ```
 
 ## Specifications

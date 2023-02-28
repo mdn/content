@@ -2,9 +2,6 @@
 title: Syntax sections
 slug: MDN/Writing_guidelines/Page_structures/Syntax_sections
 page-type: mdn-writing-guide
-tags:
-  - meta
-  - writing-guide
 ---
 
 {{MDNSidebar}}

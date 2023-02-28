@@ -1,19 +1,6 @@
 ---
 title: The "codecs" parameter in common media types
 slug: Web/Media/Formats/codecs_parameter
-tags:
-  - Audio
-  - Codecs
-  - Containers
-  - MIME
-  - MIME Types
-  - Media
-  - Media Types
-  - Parameter
-  - Types
-  - Video
-  - Web
-  - formats
 ---
 
 {{QuickLinksWithSubpages("/en-US/docs/Web/Media")}}

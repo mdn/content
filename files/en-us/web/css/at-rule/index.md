@@ -2,10 +2,6 @@
 title: At-rules
 slug: Web/CSS/At-rule
 page-type: guide
-tags:
-  - CSS
-  - Guide
-  - Reference
 spec-urls:
   - https://drafts.csswg.org/css-conditional-3/
   - https://compat.spec.whatwg.org/#css-at-rules

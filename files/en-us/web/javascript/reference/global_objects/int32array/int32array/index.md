@@ -2,12 +2,6 @@
 title: Int32Array() constructor
 slug: Web/JavaScript/Reference/Global_Objects/Int32Array/Int32Array
 page-type: javascript-constructor
-tags:
-  - Constructor
-  - JavaScript
-  - Reference
-  - TypedArrays
-  - Polyfill
 browser-compat: javascript.builtins.Int32Array.Int32Array
 ---
 

@@ -16,7 +16,7 @@ The Storage Access API is designed to allow embedded content to request access t
 
 In this example we show how an embedded cross-origin {{htmlelement("iframe")}} can access a user's cookies under a storage access policy that blocks third-party cookies.
 
-First of all, if the `<iframe>` is sandboxed, the embedding website needs to add the `allow-storage-access-by-user-activation` [sandbox token](/en-US/docs/Web/HTML/Element/iframe#attr-sandbox) to allow storage access requests to be successful, along with `allow-scripts` and `allow-same-origin` to allow it to call the API, and execute in an origin that can have cookies:
+First of all, if the `<iframe>` is sandboxed, the embedding website needs to add the `allow-storage-access-by-user-activation` [sandbox token](/en-US/docs/Web/HTML/Element/iframe#sandbox) to allow storage access requests to be successful, along with `allow-scripts` and `allow-same-origin` to allow it to call the API, and execute in an origin that can have cookies:
 
 ```html
 <iframe

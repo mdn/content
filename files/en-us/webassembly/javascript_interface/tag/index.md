@@ -1,13 +1,6 @@
 ---
 title: WebAssembly.Tag
 slug: WebAssembly/JavaScript_interface/Tag
-tags:
-  - API
-  - Class
-  - Tag
-  - JavaScript
-  - Reference
-  - WebAssembly
 browser-compat: javascript.builtins.WebAssembly.Tag
 ---
 

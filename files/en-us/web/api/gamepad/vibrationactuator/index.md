@@ -21,7 +21,7 @@ A {{domxref("GamepadHapticActuator")}} object.
 ```js
 const gamepad = navigator.getGamepads()[0];
 
-gamepad.vibrationActuator.playEffect('dual-rumble', {
+gamepad.vibrationActuator.playEffect("dual-rumble", {
   startDelay: 0,
   duration: 200,
   weakMagnitude: 1.0,

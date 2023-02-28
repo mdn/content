@@ -1,5 +1,5 @@
 ---
-title: 'Element: pointerout event'
+title: "Element: pointerout event"
 slug: Web/API/Element/pointerout_event
 browser-compat: api.Element.pointerout_event
 page-type: web-api-event
@@ -14,9 +14,9 @@ The `pointerout` event is fired for several reasons including: pointing device i
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('pointerout', (event) => {});
+addEventListener("pointerout", (event) => {});
 
-onpointerout = (event) => { };
+onpointerout = (event) => {};
 ```
 
 ## Event type
@@ -55,20 +55,20 @@ _This interface inherits properties from {{domxref("MouseEvent")}} and {{domxref
 Using `addEventListener()`:
 
 ```js
-const para = document.querySelector('p');
+const para = document.querySelector("p");
 
-para.addEventListener('pointerout', (event) => {
-  console.log('Pointer moved out');
+para.addEventListener("pointerout", (event) => {
+  console.log("Pointer moved out");
 });
 ```
 
 Using the `onpointerout` event handler property:
 
 ```js
-const para = document.querySelector('p');
+const para = document.querySelector("p");
 
 para.onpointerout = (event) => {
-  console.log('Pointer moved out');
+  console.log("Pointer moved out");
 };
 ```
 

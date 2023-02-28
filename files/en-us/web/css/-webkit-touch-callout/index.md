@@ -2,15 +2,8 @@
 title: "-webkit-touch-callout"
 slug: Web/CSS/-webkit-touch-callout
 page-type: css-property
-tags:
-  - CSS
-  - CSS Property
-  - Layout
-  - NeedsLiveSample
-  - Non-standard
-  - Reference
-  - WebKit
-  - recipe:css-property
+status:
+  - non-standard
 browser-compat: css.properties.-webkit-touch-callout
 ---
 

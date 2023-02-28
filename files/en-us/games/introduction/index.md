@@ -1,11 +1,6 @@
 ---
 title: Introduction to game development for the Web
 slug: Games/Introduction
-tags:
-  - Firefox OS
-  - Games
-  - Guide
-  - Mobile
 ---
 
 {{GamesSidebar}}

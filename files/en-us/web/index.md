@@ -1,9 +1,6 @@
 ---
 title: Web technology for developers
 slug: Web
-tags:
-  - Landing
-  - Web
 ---
 
 <section id="Quick_links">

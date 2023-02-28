@@ -2,12 +2,6 @@
 title: Unsigned right shift assignment (>>>=)
 slug: Web/JavaScript/Reference/Operators/Unsigned_right_shift_assignment
 page-type: javascript-operator
-tags:
-  - Assignment operator
-  - JavaScript
-  - Language feature
-  - Operator
-  - Reference
 browser-compat: javascript.operators.unsigned_right_shift_assignment
 ---
 

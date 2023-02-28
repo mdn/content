@@ -2,15 +2,6 @@
 title: Intl.DateTimeFormat.prototype.formatToParts()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/formatToParts
 page-type: javascript-instance-method
-tags:
-  - DateTimeFormat
-  - Internationalization
-  - Intl
-  - JavaScript
-  - Localization
-  - Method
-  - Prototype
-  - Reference
 browser-compat: javascript.builtins.Intl.DateTimeFormat.formatToParts
 ---
 

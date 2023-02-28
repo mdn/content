@@ -1,17 +1,6 @@
 ---
 title: Handling common HTML and CSS problems
 slug: Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS
-tags:
-  - Article
-  - Beginner
-  - CSS
-  - CodingScripting
-  - HTML
-  - Learn
-  - Selectors
-  - Testing
-  - cross browser
-  - linting
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies","Learn/Tools_and_testing/Cross_browser_testing/JavaScript", "Learn/Tools_and_testing/Cross_browser_testing")}}
@@ -111,7 +100,7 @@ Now let's move on to look at some of the most common cross browser HTML and CSS 
 
 ### Browsers not supporting modern features
 
-This is a common problem, especially when you need to support old browsers (such as Internet Explorer) or you are using features that are implemented in some browsers but not yet in all. In general, most core HTML and CSS functionality (such as basic HTML elements, CSS basic colors and text styling) works across all the browsers you'll want to support; more problems are uncovered when you start wanting to use newer HTML, CSS, and APIs. MDN displays browser compatibility data for each feature documented; for example, see the [browser support table for the `:has()` pseudo-class](/en-US/docs/Web/CSS/:has#browser_compatibility).
+This is a common problem, especially when you need to support old browsers or you are using features that are implemented in some browsers but not yet in all. In general, most core HTML and CSS functionality (such as basic HTML elements, CSS basic colors and text styling) works across all the browsers you'll want to support; more problems are uncovered when you start wanting to use newer HTML, CSS, and APIs. MDN displays browser compatibility data for each feature documented; for example, see the [browser support table for the `:has()` pseudo-class](/en-US/docs/Web/CSS/:has#browser_compatibility).
 
 Once you've identified a list of technologies you will be using that are not universally supported, it is a good idea to research what browsers they are supported in, and what related techniques are useful. See [Finding help](#finding_help) below.
 
@@ -165,7 +154,7 @@ The output of this code is as follows:
 
 > **Note:** You can also see this running live as [forms-test.html](https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/html-css/forms-test.html) on GitHub (see the [source code](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/html-css/forms-test.html) also).
 
-If you view the example, you'll see the UI features in action as you try to input data. On devices with dynamic keyboards, type-specific keypads will be displayed. On a non-supporting browser like Internet Explorer, the inputs will just default to normal text inputs, meaning the user can still enter the correct information.
+If you view the example, you'll see the UI features in action as you try to input data. On devices with dynamic keyboards, type-specific keypads will be displayed. On a non-supporting browser, the inputs will just default to normal text inputs, meaning the user can still enter the correct information.
 
 #### CSS fallback behavior
 
@@ -184,22 +173,22 @@ button {
   /* … */
 
   background-color: #ff0000;
-  background-color: rgba(255 0 0 / 1);
-  box-shadow: inset 1px 1px 3px rgba(255 255 255 / 0.4), inset -1px -1px 3px
-      rgba(0 0 0 / 0.4);
+  background-color: rgb(255 0 0 / 1);
+  box-shadow: inset 1px 1px 3px rgb(255 255 255 / 0.4), inset -1px -1px 3px
+      rgb(0 0 0 / 0.4);
 }
 
 button:hover {
-  background-color: rgba(255 0 0 / 0.5);
+  background-color: rgb(255 0 0 / 0.5);
 }
 
 button:active {
-  box-shadow: inset 1px 1px 3px rgba(0 0 0 / 0.4), inset -1px -1px 3px rgba(255
+  box-shadow: inset 1px 1px 3px rgb(0 0 0 / 0.4), inset -1px -1px 3px rgb(255
           255 255 / 0.4);
 }
 ```
 
-Here we are providing an [RGBA](/en-US/docs/Web/CSS/color_value/rgba) {{cssxref("background-color")}} that changes opacity on hover to give the user a hint that the button is interactive, and some semi-transparent inset {{cssxref("box-shadow")}} shades to give the button a bit of texture and depth. While now fully supported, RGBA colors and box shadows haven't been around forever; starting in IE9. Browsers that didn't support RGBA colors would ignore the declaration meaning in old browsers the background just wouldn't show up at all so the text would be unreadable, no good at all!
+Here we are providing an [RGBA](/en-US/docs/Web/CSS/color_value/rgb) {{cssxref("background-color")}} that changes opacity on hover to give the user a hint that the button is interactive, and some semi-transparent inset {{cssxref("box-shadow")}} shades to give the button a bit of texture and depth. While now fully supported, RGBA colors and box shadows haven't been around forever; starting in IE9. Browsers that didn't support RGBA colors would ignore the declaration meaning in old browsers the background just wouldn't show up at all so the text would be unreadable, no good at all!
 
 ![Hard to see pill button with white text on an almost white background](unreadable-button.png)
 

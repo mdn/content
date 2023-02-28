@@ -1,15 +1,6 @@
 ---
 title: Styling web forms
 slug: Learn/Forms/Styling_web_forms
-tags:
-  - Beginner
-  - CSS
-  - Example
-  - Forms
-  - Guide
-  - HTML
-  - Learn
-  - Web
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Forms/Other_form_controls","Learn/Forms/Advanced_form_styling","Learn/Forms")}}

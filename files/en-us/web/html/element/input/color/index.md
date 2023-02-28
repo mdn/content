@@ -2,17 +2,6 @@
 title: <input type="color">
 slug: Web/HTML/Element/input/color
 page-type: html-element
-tags:
-  - Color Picker
-  - Element
-  - Form input
-  - Forms
-  - HTML
-  - HTML forms
-  - HTML input
-  - Input
-  - Reference
-  - color
 browser-compat: html.elements.input.type_color
 ---
 

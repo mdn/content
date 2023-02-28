@@ -31,14 +31,14 @@ An array of values whose key matches the specified `name`. Otherwise, an empty l
 If we add two `username` values to a {{domxref("FormData")}} using {{domxref("FormData.append", "append()")}}:
 
 ```js
-formData.append('username', 'Chris');
-formData.append('username', 'Bob');
+formData.append("username", "Chris");
+formData.append("username", "Bob");
 ```
 
 The following `getAll()` method will return both `username` values in an array:
 
 ```js
-formData.getAll('username'); // Returns ["Chris", "Bob"]
+formData.getAll("username"); // Returns ["Chris", "Bob"]
 ```
 
 ## Specifications
