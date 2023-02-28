@@ -81,9 +81,6 @@ This example shows three images: the image with a `brightness()` filter function
 }
 ```
 
-```css hidden
-```
-
 ```html hidden
 <table cellpadding="5">
   <thead>
