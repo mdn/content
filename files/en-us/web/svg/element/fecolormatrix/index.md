@@ -73,7 +73,7 @@ In it, every new value is exactly 1 times its old value, with nothing else added
 
 - [Core attributes](/en-US/docs/Web/SVG/Attribute#core_attributes)
 - [Presentation attributes](/en-US/docs/Web/SVG/Attribute#presentation_attributes)
-- [Filter primitive attributes](/en-US/docs/Web/SVG/Attribute#filter_primitive_attributes) - `x`, `y`, `width`, `height`, and `result`
+- [Filter primitive attributes](/en-US/docs/Web/SVG/Attribute#filter_primitive_attributes): `x`, `y`, `width`, `height`, and `result`
 - {{SVGAttr("class")}}
 - {{SVGAttr("style")}}
 
