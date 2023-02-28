@@ -61,9 +61,9 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
 
 > **Warning:** If either of the following attributes are specified, this element **must** come before other elements with attribute values of URLs, such as {{HTMLElement("link")}}'s `href` attribute.
 
-- {{htmlattrdef("href")}}
+- `href`
   - : The base URL to be used throughout the document for relative URLs. Absolute and relative URLs are allowed.
-- {{htmlattrdef("target")}}
+- `target`
 
   - : A **keyword** or **author-defined name** of the default {{Glossary("browsing context")}} to show the results of navigation from {{HTMLElement("a")}}, {{HTMLElement("area")}}, or {{HTMLElement("form")}} elements without explicit `target` attributes. The following keywords have special meanings:
 

@@ -80,11 +80,11 @@ Use the **HTML `<canvas>` element** with either the [canvas scripting API](/en-U
 
 This element's attributes include the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 
-- {{htmlattrdef("height")}}
+- `height`
   - : The height of the coordinate space in CSS pixels. Defaults to 150.
-- {{htmlattrdef("moz-opaque")}} {{non-standard_inline}} {{deprecated_inline}}
+- `moz-opaque` {{non-standard_inline}} {{deprecated_inline}}
   - : Lets the canvas know whether translucency will be a factor. If the canvas knows there's no translucency, painting performance can be optimized. This is only supported by Mozilla-based browsers; use the standardized {{domxref("HTMLCanvasElement.getContext()", "canvas.getContext('2d', { alpha: false })")}} instead.
-- {{htmlattrdef("width")}}
+- `width`
   - : The width of the coordinate space in CSS pixels. Defaults to 300.
 
 ## Usage notes

@@ -15,13 +15,13 @@ The **`<bgsound>`** [HTML](/en-US/docs/Web/HTML) element is deprecated. It sets 
 
 ## Attributes
 
-- {{htmlattrdef("balance")}}
+- `balance`
   - : This attribute defines a number between -10,000 and +10,000 that determines how the volume will be divided between the speakers.
-- {{htmlattrdef("loop")}}
+- `loop`
   - : This attribute indicates the number of times a sound is to be played and either has a numeric value or the keyword infinite.
-- {{htmlattrdef("src")}}
+- `src`
   - : This attribute specifies the URL of the sound file to be played, which must be one of the following types: .wav, .au, or .mid.
-- {{htmlattrdef("volume")}}
+- `volume`
   - : This attribute defines a number between -10,000 and 0 that determines the loudness of a page's background sound.
 
 ## Example

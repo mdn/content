@@ -393,7 +393,7 @@ When adding `'use strict';`, the following cases will throw a {{jsxref("SyntaxEr
 - Using [`eval`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval) or [`arguments`](/en-US/docs/Web/JavaScript/Reference/Functions/arguments) as variable or function argument name
 - Using one of the newly [reserved keywords](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#reserved_words) (in prevision for future language features): `implements`, `interface`, `let`, `package`, `private`, `protected`, `public`, `static`, and `yield`
 - Declaring two function parameters with the same name `function f(a, b, b) {}`
-- Declaring the same property name twice in an object literal `{a: 1, b: 3, a: 7}`. This constraint was later removed ([bug 1041128](https://bugzilla.mozilla.org/show_bug.cgi?id=1041128)).
+- Declaring the same property name twice in an object literal `{a: 1, b: 3, a: 7}`. This constraint was later removed ([bug 1041128](https://bugzil.la/1041128)).
 
 These errors are good, because they reveal plain errors or bad practices. They occur before the code is running, so they are easily discoverable as long as the code gets parsed by the runtime.
 

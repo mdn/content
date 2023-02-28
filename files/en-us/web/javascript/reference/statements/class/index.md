@@ -77,7 +77,7 @@ let Foo = class {};
 class Foo {} // Uncaught SyntaxError: Identifier 'Foo' has already been declared
 ```
 
-If you're experimenting in a REPL, such as the Firefox web console (**Tools** > **Web Developer** > **Web Console**), and you run two class declarations with the same name in two separate inputs, you may get the same re-declaration error. See further discussion of this issue in {{bug(1580891)}}. The Chrome console allows class re-declarations between different REPL inputs.
+If you're experimenting in a REPL, such as the Firefox web console (**Tools** > **Web Developer** > **Web Console**), and you run two class declarations with the same name in two separate inputs, you may get the same re-declaration error. See further discussion of this issue in [Firefox bug 1580891](https://bugzil.la/1580891). The Chrome console allows class re-declarations between different REPL inputs.
 
 ## Specifications
 

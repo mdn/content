@@ -72,7 +72,7 @@ In each case (except one — which one is inherently responsive?) we want the br
 
 Make sure you match the correct images with the correct links!
 
-> **Note:** To properly test the `srcset`/`sizes` examples, you'll need to upload your site to a server (using [GitHub pages](/en-US/docs/Learn/Common_questions/Using_Github_pages) is an easy and free solution), then from there you can test whether they are working properly using browser developer tools such as the Firefox [Network Monitor](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html).
+> **Note:** To properly test the `srcset`/`sizes` examples, you'll need to upload your site to a server (using [GitHub pages](/en-US/docs/Learn/Common_questions/Tools_and_setup/Using_Github_pages) is an easy and free solution), then from there you can test whether they are working properly using browser developer tools such as the Firefox [Network Monitor](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html).
 
 ### An art directed red panda
 

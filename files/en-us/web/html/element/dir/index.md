@@ -21,7 +21,7 @@ This element implements the {{domxref("HTMLDirectoryElement")}} interface.
 
 Like all other HTML elements, this element supports the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 
-- {{htmlattrdef("compact")}} {{Deprecated_Inline}}
+- `compact` {{Deprecated_Inline}}
   - : This Boolean attribute hints that the list should be rendered in a compact style. The interpretation of this attribute depends on the user agent and it doesn't work in all browsers.
 
 <!-- ## Technical summary -->

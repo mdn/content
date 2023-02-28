@@ -19,7 +19,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
 The following attributes are deprecated and should not be used. They are documented below for reference when updating existing code and for historical interest only.
 
-- {{htmlattrdef("align")}} {{deprecated_inline}}
+- `align` {{deprecated_inline}}
 
   - : This [enumerated](/en-US/docs/Glossary/Enumerated) attribute indicates how the caption must be aligned with respect to the table. It may have one of the following values:
 

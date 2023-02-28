@@ -15,7 +15,7 @@ The **`<colgroup>`** [HTML](/en-US/docs/Web/HTML) element defines a group of col
 
 This element's attributes include the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 
-- {{htmlattrdef("span")}}
+- `span`
 
   - : This attribute contains a positive integer indicating the number of consecutive columns the `<colgroup>` element spans. If not present, its default value is `1`.
 
@@ -25,7 +25,7 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
 
 The following attributes are deprecated and should not be used. They are documented below for reference when updating existing code and for historical interest only.
 
-- {{htmlattrdef("align")}} {{deprecated_inline}}
+- `align` {{deprecated_inline}}
 
   - : This [enumerated](/en-US/docs/Glossary/Enumerated) attribute specifies how horizontal alignment of each column cell content will be handled. Possible values are:
 
@@ -43,17 +43,17 @@ The following attributes are deprecated and should not be used. They are documen
     >
     > If the table does use a {{htmlattrxref("colspan", "td")}} attribute, the effect can be achieved by combining adequate CSS attribute selectors like `[colspan=n]`, though this is not trivial.
 
-- {{htmlattrdef("bgcolor")}} {{Deprecated_inline}}
+- `bgcolor` {{Deprecated_inline}}
 
   - : The background color of the table. It is a [6-digit hexadecimal RGB code](/en-US/docs/Web/CSS/hex-color), prefixed by a '`#`'. One of the predefined [color keywords](/en-US/docs/Web/CSS/named-color) can also be used.
 
     To achieve a similar effect, use the CSS {{cssxref("background-color")}} property.
 
-- {{htmlattrdef("char")}} {{deprecated_inline}}
+- `char` {{deprecated_inline}}
   - : This attribute specifies the alignment of the content in a column group to a character. Typical values for this include a period (.) when attempting to align numbers or monetary values. If {{htmlattrxref("align", "colgroup")}} is not set to `char`, this attribute is ignored, though it will still be used as the default value for the {{htmlattrxref("align", "col")}} of the {{HTMLElement("col")}} which are members of this column group.
-- {{htmlattrdef("charoff")}} {{deprecated_inline}}
+- `charoff` {{deprecated_inline}}
   - : This attribute is used to indicate the number of characters to offset the column data from the alignment character specified by the `char` attribute.
-- {{htmlattrdef("valign")}} {{deprecated_inline}}
+- `valign` {{deprecated_inline}}
 
   - : This attribute specifies the vertical alignment of the text within each cell of the column. Possible values for this attribute are:
 

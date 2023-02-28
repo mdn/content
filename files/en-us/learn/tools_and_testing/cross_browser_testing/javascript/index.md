@@ -436,7 +436,7 @@ Many developers implemented bad browser sniffing code and didn't maintain it, an
 
 The lesson to be learned here is to never use browser sniffing. The only real use case for browser sniffing code in the modern day is if you are implementing a fix for a bug in a very specific version of a particular browser. But even then, most bugs get fixed pretty quickly in browser vendor rapid release cycles. It won't come up very often. [Feature detection](#feature_detection) is almost always a better option — if you detect whether a feature is supported, you won't need to change your code when new browser versions come out, and the tests are much more reliable.
 
-If you come across browser sniffing when joining an existing project, look at whether it can be replaced with something more sensible. Browser sniffing causes all kind of interesting bugs, like {{bug(1308462)}}.
+If you come across browser sniffing when joining an existing project, look at whether it can be replaced with something more sensible. Browser sniffing causes all kind of interesting bugs, like [Firefox bug 1308462](https://bugzil.la/1308462).
 
 ### Handling JavaScript prefixes
 

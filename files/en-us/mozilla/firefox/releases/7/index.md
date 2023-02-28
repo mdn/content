@@ -19,7 +19,7 @@ Firefox 7 shipped on September 27, 2011. This article provides information about
 
 #### Canvas
 
-- As part of the [Azure project](https://web.archive.org/web/20160304084025/https://blog.mozilla.org/joe/2011/04/26/introducing-the-azure-project/) the Direct2D Azure Backend [has been implemented](https://bugzilla.mozilla.org/show_bug.cgi?id=651858) and will significantly improve the performance of the 2D canvas.
+- As part of the [Azure project](https://web.archive.org/web/20160304084025/https://blog.mozilla.org/joe/2011/04/26/introducing-the-azure-project/) the Direct2D Azure Backend [has been implemented](https://bugzil.la/651858) and will significantly improve the performance of the 2D canvas.
 - Specifying invalid values when calling `setTransform()`, `bezierCurveTo()`, or `arcTo()` no longer throws an exception; these calls are now correctly silently ignored.
 - The [`isPointInPath()`](/en-US/docs/Web/API/CanvasRenderingContext2D/ispointinpath) method now correctly considers the transformation matrix when comparing the specified point to the current path.
 - Calling `strokeRect()` with a zero width and height now correctly does nothing.
@@ -48,7 +48,7 @@ Firefox 7 shipped on September 27, 2011. This article provides information about
 
 ### DOM
 
-- The {{ domxref("File") }} interface's non-standard methods `getAsBinary()`, `getAsDataURL()`, and `getAsText()` have been removed as well as the non-standard properties `fileName` and `fileSize` ({{bug("661876")}}).
+- The {{ domxref("File") }} interface's non-standard methods `getAsBinary()`, `getAsDataURL()`, and `getAsText()` have been removed as well as the non-standard properties `fileName` and `fileSize` ([Firefox bug 661876](https://bugzil.la/661876)).
 - The {{ domxref("FormData", "FormData") }} interface no longer reports the filename as an empty string when sending the `Content-Disposition` HTTP header if the data was set using a {{ domxref("Blob") }}. This fixes errors that were happening with some servers.
 - The {{ domxref("element.dir") }} attribute now always returns its result as all lower-case, as required by the HTML specification.
 - The {{ domxref("FileReader") }} `readAsArrayBuffer()` method is now implemented.
@@ -132,7 +132,7 @@ Support has been added for multi-reporters; that is, memory reporters that gathe
 - The `nsIDOMWindow_2_0_BRANCH` interface has been merged into the `nsIDOMWindowInternal` interface.
 - `nsINavHistoryObserver` methods with URI parameters now require a GUID as well.
 - The `nsISHistory_2_0_BRANCH` interface has been merged into the `nsISHistory` interface.
-- `nsITelemetry` has a new method, `nsITelemetry.getHistogramById()` which returns a histogram by its ID, and a new attribute, `canRecord` which when set to `false` disables recording of telemetry statistics. Telemetry statistics are no longer recorded when in Private Browsing Mode. (see {{ bug("661574") }} and {{ bug("661573") }}) Telemetry histograms defined with `nsITelemetry.newHistogram()` will not be reported in the telemetry ping.
+- `nsITelemetry` has a new method, `nsITelemetry.getHistogramById()` which returns a histogram by its ID, and a new attribute, `canRecord` which when set to `false` disables recording of telemetry statistics. Telemetry statistics are no longer recorded when in Private Browsing Mode. (see [Firefox bug 661574](https://bugzil.la/661574) and [Firefox bug 661573](https://bugzil.la/661573)) Telemetry histograms defined with `nsITelemetry.newHistogram()` will not be reported in the telemetry ping.
 - The `nsIMemoryReporter` interface has been substantially changed; if you use it, you will need to make some adjustments to your code.
 - `nsIXMLHttpRequest`, headers set by `nsIXMLHttpRequest.setRequestHeader()` are sent with the request when following a redirect. Previously these headers would not be sent.
 - `nsIDocShell` has a new `allowWindowControl` attribute. If `true`, the docshell's content is allowed to control the window (that is, to move or resize the window).
@@ -184,8 +184,8 @@ The following interfaces were removed as part of the removal of the ActiveX embe
 
 ### Other Changes
 
-- The structure of the library window (`places.xul`) [has been cleaned up](https://bugzilla.mozilla.org/show_bug.cgi?id=588027). This [may break extensions](https://bugzilla.mozilla.org/show_bug.cgi?id=677417) and themes.
-- The look of the print preview window [has been modernized](https://bugzilla.mozilla.org/show_bug.cgi?id=663028) and theme authors are encouraged to style it using the CSS pseudo-elements {{ cssxref("::-moz-page") }}, {{ cssxref("::-moz-page-sequence") }} and {{ cssxref("::-moz-scrolled-page-sequence") }}.
+- The structure of the library window (`places.xul`) [has been cleaned up](https://bugzil.la/588027). This [may break extensions](https://bugzil.la/677417) and themes.
+- The look of the print preview window [has been modernized](https://bugzil.la/663028) and theme authors are encouraged to style it using the CSS pseudo-elements {{ cssxref("::-moz-page") }}, {{ cssxref("::-moz-page-sequence") }} and {{ cssxref("::-moz-scrolled-page-sequence") }}.
 
 ## See also
 
