@@ -2,13 +2,8 @@
 title: "::-webkit-search-results-button"
 slug: Web/CSS/::-webkit-search-results-button
 page-type: css-pseudo-element
-tags:
-  - CSS
-  - NeedsExample
-  - Non-standard
-  - Pseudo-element
-  - Reference
-  - Selector
+status:
+  - non-standard
 browser-compat: css.selectors.-webkit-search-results-button
 ---
 

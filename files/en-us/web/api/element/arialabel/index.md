@@ -22,9 +22,9 @@ In this example the [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes
 ```
 
 ```js
-let el = document.getElementById('close-button');
+let el = document.getElementById("close-button");
 console.log(el.ariaLabel); // "Close"
-el.ariaLabel = "Close dialog"
+el.ariaLabel = "Close dialog";
 console.log(el.ariaLabel); // "Close dialog"
 ```
 

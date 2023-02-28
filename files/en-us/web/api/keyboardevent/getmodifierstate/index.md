@@ -28,11 +28,6 @@ getModifierState(key)
 
 A boolean.
 
-## Modifier keys on Internet Explorer
-
-IE9 uses `"Scroll"` for `"ScrollLock"` and `"Win"` for
-`"OS"`.
-
 ## Modifier keys on Gecko
 
 When `getModifierState()` returns true on Gecko?

@@ -2,12 +2,6 @@
 title: Gecko
 slug: Glossary/Gecko
 page-type: glossary-definition
-tags:
-  - Firefox OS
-  - Gecko
-  - Infrastructure
-  - Intro
-  - Mozilla
 ---
 
 **Gecko** is the layout engine developed by the Mozilla Project and used in many apps/devices, including {{glossary("Mozilla Firefox","Firefox")}} and {{glossary("Firefox OS")}}.

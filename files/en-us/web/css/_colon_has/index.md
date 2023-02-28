@@ -2,13 +2,6 @@
 title: ":has()"
 slug: Web/CSS/:has
 page-type: css-pseudo-class
-tags:
-  - ":has"
-  - CSS
-  - Pseudo-class
-  - Reference
-  - Selector
-  - Selectors
 browser-compat: css.selectors.has
 ---
 

@@ -2,15 +2,8 @@
 title: scroll()
 slug: Web/CSS/animation-timeline/scroll
 page-type: css-function
-tags:
-  - CSS
-  - CSS Function
-  - Function
-  - CSS Animations
-  - Reference
-  - Web
-  - scroll
-  - Experimental
+status:
+  - experimental
 browser-compat: css.properties.animation-timeline.scroll
 ---
 

@@ -2,14 +2,6 @@
 title: break-inside
 slug: Web/CSS/break-inside
 page-type: css-property
-tags:
-  - CSS
-  - CSS Fragmentation
-  - CSS Multi-column Layout
-  - CSS Property
-  - NeedsExample
-  - Reference
-  - recipe:css-property
 browser-compat: css.properties.break-inside
 ---
 

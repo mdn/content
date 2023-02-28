@@ -46,11 +46,16 @@ As the user navigates through your application, each new location navigated to r
 
 The `Navigation` object contains all the methods you'll need to update and traverse through the navigation history:
 
-- {{domxref("Navigation.navigate", "navigate()")}} navigates to a new URL, creating a new navigation history entry.
-- {{domxref("Navigation.reload", "reload()")}} reloads the current navigation history entry.
-- {{domxref("Navigation.back", "back()")}} navigates to the previous navigation history entry, if that is possible.
-- {{domxref("Navigation.forward", "forward()")}} navigates to the next navigation history entry, if that is possible.
-- {{domxref("Navigation.traverseTo", "traverseTo()")}} navigates to a specific navigation history entry identified by its key value, which is obtained via the relevant entry's {{domxref("NavigationHistoryEntry.key")}} property.
+- {{domxref("Navigation.navigate", "navigate()")}} {{Experimental_Inline}}
+  - : Navigates to a new URL, creating a new navigation history entry.
+- {{domxref("Navigation.reload", "reload()")}} {{Experimental_Inline}}
+  - : Reloads the current navigation history entry.
+- {{domxref("Navigation.back", "back()")}} {{Experimental_Inline}}
+  - : Navigates to the previous navigation history entry, if that is possible.
+- {{domxref("Navigation.forward", "forward()")}} {{Experimental_Inline}}
+  - : Navigates to the next navigation history entry, if that is possible.
+- {{domxref("Navigation.traverseTo", "traverseTo()")}} {{Experimental_Inline}}
+  - : Navigates to a specific navigation history entry identified by its key value, which is obtained via the relevant entry's {{domxref("NavigationHistoryEntry.key")}} property.
 
 Each one of the above methods returns an object containing two promises — `{ committed, finished }`. This allows the invoking function to wait on taking further action until:
 

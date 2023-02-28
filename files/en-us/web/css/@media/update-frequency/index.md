@@ -2,13 +2,8 @@
 title: update
 slug: Web/CSS/@media/update-frequency
 page-type: css-media-feature
-tags:
-  - "@media"
-  - CSS
-  - Media Queries
-  - Reference
-  - media feature
-  - Experimental
+status:
+  - experimental
 browser-compat: css.at-rules.media.update
 ---
 

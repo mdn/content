@@ -25,7 +25,7 @@ ends with a given extension.
 
 ```js
 function isFileWithExtension(entry, extension) {
-  return (entry.isFile && entry.name.endsWith(`.${extension}`));
+  return entry.isFile && entry.name.endsWith(`.${extension}`);
 }
 ```
 

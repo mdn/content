@@ -1,17 +1,7 @@
 ---
-title: 'React interactivity: Events and state'
+title: "React interactivity: Events and state"
 slug: >-
   Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_events_state
-tags:
-  - Beginner
-  - Frameworks
-  - JavaScript
-  - Learn
-  - React
-  - client-side
-  - events
-  - interactivity
-  - state
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_components","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_filtering_conditional_rendering", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}

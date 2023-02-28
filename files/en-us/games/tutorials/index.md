@@ -1,12 +1,6 @@
 ---
 title: Tutorials
 slug: Games/Tutorials
-tags:
-  - Canvas
-  - Games
-  - JavaScript
-  - Web
-  - Workflows
 ---
 
 {{GamesSidebar}}

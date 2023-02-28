@@ -2,14 +2,6 @@
 title: ":read-write"
 slug: Web/CSS/:read-write
 page-type: css-pseudo-class
-tags:
-  - CSS
-  - Layout
-  - Pseudo-class
-  - Reference
-  - Selector
-  - Web
-  - read-write
 browser-compat: css.selectors.read-write
 ---
 

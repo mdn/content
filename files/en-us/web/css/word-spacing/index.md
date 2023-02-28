@@ -2,12 +2,6 @@
 title: word-spacing
 slug: Web/CSS/word-spacing
 page-type: css-property
-tags:
-  - CSS
-  - CSS Property
-  - CSS Text
-  - Reference
-  - recipe:css-property
 browser-compat: css.properties.word-spacing
 ---
 

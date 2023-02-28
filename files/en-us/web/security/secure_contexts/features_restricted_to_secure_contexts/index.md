@@ -1,15 +1,6 @@
 ---
 title: Features restricted to secure contexts
 slug: Web/Security/Secure_Contexts/features_restricted_to_secure_contexts
-tags:
-  - API
-  - Browsers
-  - Reference
-  - Secure contexts
-  - Security
-  - Web
-  - features
-  - support
 ---
 
 {{QuickLinksWithSubpages("/en-US/docs/Web/Security")}}

@@ -40,7 +40,7 @@ function gameLoop() {
   ball.style.top = `${b * 2}px`;
 
   const start = requestAnimationFrame(gameLoop);
-};
+}
 ```
 
 ## Specifications

@@ -1,11 +1,6 @@
 ---
 title: <xsl:message>
 slug: Web/XSLT/Element/message
-tags:
-  - Element
-  - Reference
-  - XSLT
-  - message
 ---
 
 {{ XsltRef() }}

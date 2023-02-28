@@ -2,11 +2,6 @@
 title: Mastering margin collapsing
 slug: Web/CSS/CSS_Box_Model/Mastering_margin_collapsing
 page-type: guide
-tags:
-  - CSS
-  - CSS Box Model
-  - Guide
-  - Reference
 spec-urls: https://www.w3.org/TR/CSS22/box.html#collapsing-margins
 ---
 

@@ -2,11 +2,6 @@
 title: Media (Audio-visual presentation)
 slug: Glossary/Media/Audio-visual_presentation
 page-type: glossary-definition
-tags:
-  - Audio
-  - Media
-  - Multimedia
-  - Video
 ---
 
 The term **media** (more accurately, **multimedia**) refers to audio, video, or combined audio-visual material such as music, recorded speech, movies, TV shows, or any other form of content that is presented over a period of time.

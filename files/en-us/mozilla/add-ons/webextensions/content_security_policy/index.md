@@ -117,7 +117,7 @@ Extensions wishing to use [WebAssembly](/en-US/docs/WebAssembly) require `'wasm-
 
 From Firefox 102 and Chrome 103, `'wasm-unsafe-eval'` can be included in the [`content_security_policy`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_security_policy) manifest.json key to enable the use of WebAssembly in extensions.
 
-Manifest V2 extensions in Firefox can use WebAssembly without `'wasm-unsafe-eval'` in their CSP for backward compatibility. However, this behavior isn't guaranteed, see {{bug(1770909)}}. Extensions using WebAssembly are therefore encouraged to declare `'wasm-unsafe-eval'` in their CSP.
+Manifest V2 extensions in Firefox can use WebAssembly without `'wasm-unsafe-eval'` in their CSP for backward compatibility. However, this behavior isn't guaranteed, see [Firefox bug 1770909](https://bugzil.la/1770909). Extensions using WebAssembly are therefore encouraged to declare `'wasm-unsafe-eval'` in their CSP.
 
 For Chrome, extensions cannot use WebAssembly in version 101 or earlier. In 102, extensions can use WebAssembly (the same behavior as Firefox 101 and earlier). From version 103, extensions can use WebAssembly if they include `'wasm-unsafe-eval'` in the `content_security_policy` in the manifest key.
 
@@ -132,8 +132,8 @@ Manifest V3 Extensions that need to make `http:` or `ws:` requests can opt out o
 ## CSP for content scripts
 
 In Manifest V2, content scripts have no CSP.
-As of Manifest V3, content scripts share the default CSP as extensions. It is currently not possible to specify a separate CSP for content scripts ([source](https://bugzilla.mozilla.org/show_bug.cgi?id=1581611#c10)).
+As of Manifest V3, content scripts share the default CSP as extensions. It is currently not possible to specify a separate CSP for content scripts ([source](https://bugzil.la/1581611#c10)).
 
 The extent to which the CSP controls loads from content scripts varies by browser.
 In Firefox, JavaScript features such as eval are restricted by the extension CSP. Generally, most DOM-based APIs are subjected to the CSP of the web page.
-In Chrome, many DOM APIs are covered by the extension CSP instead of the web page's CSP ([crbug 896041](https://bugs.chromium.org/p/chromium/issues/detail?id=896041)).
+In Chrome, many DOM APIs are covered by the extension CSP instead of the web page's CSP ([crbug 896041](https://crbug.com/896041)).

@@ -1,13 +1,6 @@
 ---
 title: "ARIA: widget role"
 slug: Web/Accessibility/ARIA/Roles/widget_role
-tags:
-  - widget
-  - Accessibility
-  - ARIA
-  - roles
-  - Reference
-  - ARIA roles
 spec-urls: https://w3c.github.io/aria/#widget
 ---
 

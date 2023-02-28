@@ -2,12 +2,8 @@
 title: <frameset>
 slug: Web/HTML/Element/frameset
 page-type: html-element
-tags:
-  - Deprecated
-  - Element
-  - HTML
-  - Reference
-  - Web
+status:
+  - deprecated
 browser-compat: html.elements.frameset
 ---
 

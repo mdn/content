@@ -32,7 +32,7 @@ In this example the `aria-colspan` attribute on the element with an ID of `spann
 ```
 
 ```js
-let el = document.getElementById('spanning-column');
+let el = document.getElementById("spanning-column");
 console.log(el.ariaColSpan);
 el.ariaColSpan = "3";
 console.log(el.ariaColSpan);

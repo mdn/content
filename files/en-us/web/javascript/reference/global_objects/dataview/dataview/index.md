@@ -2,13 +2,6 @@
 title: DataView() constructor
 slug: Web/JavaScript/Reference/Global_Objects/DataView/DataView
 page-type: javascript-constructor
-tags:
-  - Constructor
-  - DataView
-  - JavaScript
-  - Reference
-  - TypedArrays
-  - Polyfill
 browser-compat: javascript.builtins.DataView.DataView
 ---
 

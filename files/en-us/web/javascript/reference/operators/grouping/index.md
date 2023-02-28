@@ -2,11 +2,6 @@
 title: Grouping operator ( )
 slug: Web/JavaScript/Reference/Operators/Grouping
 page-type: javascript-operator
-tags:
-  - JavaScript
-  - Language feature
-  - Operator
-  - Primary Expressions
 browser-compat: javascript.operators.grouping
 ---
 

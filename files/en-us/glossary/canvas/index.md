@@ -2,11 +2,6 @@
 title: Canvas
 slug: Glossary/Canvas
 page-type: glossary-definition
-tags:
-  - CodingScripting
-  - Graphics
-  - HTML
-  - JavaScript
 ---
 
 The **canvas element** is part of [HTML5](https://en.wikipedia.org/wiki/HTML5) and allows for dynamic, [scriptable](https://en.wikipedia.org/wiki/Scripting_language) [rendering](<https://en.wikipedia.org/wiki/Rendering_(computer_graphics)>) of 2D and 3D shapes and [bitmap](https://en.wikipedia.org/wiki/Bitmap) images.

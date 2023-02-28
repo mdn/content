@@ -1,5 +1,5 @@
 ---
-title: 'Element: error event'
+title: "Element: error event"
 slug: Web/API/Element/error_event
 page-type: web-api-event
 browser-compat: api.Element.error_event
@@ -16,9 +16,9 @@ This event is not cancelable and does not bubble.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('error', (event) => {});
+addEventListener("error", (event) => {});
 
-onerror = (event) => { };
+onerror = (event) => {};
 ```
 
 ## Event type
@@ -90,17 +90,17 @@ img {
 #### JavaScript
 
 ```js
-const log = document.querySelector('.event-log-contents');
+const log = document.querySelector(".event-log-contents");
 
-const badImg = document.querySelector('.bad-img');
-badImg.addEventListener('error', (event) => {
-    log.textContent += `${event.type}: Loading image\n`;
-    console.log(event)
+const badImg = document.querySelector(".bad-img");
+badImg.addEventListener("error", (event) => {
+  log.textContent += `${event.type}: Loading image\n`;
+  console.log(event);
 });
 
-const imgError = document.querySelector('#img-error');
-imgError.addEventListener('click', () => {
-    badImg.setAttribute('src', 'i-dont-exist');
+const imgError = document.querySelector("#img-error");
+imgError.addEventListener("click", () => {
+  badImg.setAttribute("src", "i-dont-exist");
 });
 ```
 

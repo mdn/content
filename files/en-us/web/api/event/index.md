@@ -112,8 +112,6 @@ Note that all event interfaces have names which end in "Event".
   - : A historical property still supported in order to ensure existing sites continue to work. Use {{domxref("Event.preventDefault()")}} and {{domxref("Event.defaultPrevented")}} instead.
 - {{domxref("Event.composed", "Event.scoped")}} {{ReadOnlyInline}} {{deprecated_inline}}
   - : A boolean value indicating whether the given event will bubble across through the shadow root into the standard DOM. Use {{domxref("Event.composed", "composed")}} instead.
-- {{domxref("Event.srcElement")}} {{ReadOnlyInline}} {{deprecated_inline}}
-  - : An alias (from old versions of Microsoft Internet Explorer) for {{domxref("Event.target")}}. Use {{domxref("Event.target")}} instead.
 
 ## Instance methods
 
