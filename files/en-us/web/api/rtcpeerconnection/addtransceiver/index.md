@@ -48,7 +48,7 @@ The {{domxref("RTCRtpTransceiver")}} object which will be used to exchange the m
 
   - : Thrown if `trackOrKind` was not either `"audio"` or `"video"`.
 
-    If the `sendEncodings` argument is used, this error may also be thrown if there is badly formatted `rid` member, some but all encodings contain a `rid` member, or different encodings have the same `rid` value.
+    If the `sendEncodings` argument is used, this error may also be thrown if there is a badly formatted `rid` member, some but not all encodings contain a `rid` member, or different encodings have the same `rid` value.
 
 - {{jsxref("RangeError")}}
   - : Thrown if any of the `sendEncodings` encodings have a {{domxref("RTCRtpEncodingParameters.maxFramerate", "maxFramerate")}} value less than 0.0, or a {{domxref("RTCRtpEncodingParameters.scaleResolutionDownBy", "scaleResolutionDownBy")}} value of less than 1.0.
