@@ -45,7 +45,7 @@ A reference to a {{domxref("MediaStream")}} object, which has a single
 
 ```js
 // Find the canvas element to capture
-const canvasElt = document.querySelector('canvas');
+const canvasElt = document.querySelector("canvas");
 
 // Get the stream
 const stream = canvasElt.captureStream(25); // 25 FPS
