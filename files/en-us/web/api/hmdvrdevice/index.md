@@ -23,7 +23,7 @@ The **`HMDVRDevice`** interface of the [WebVR API](/en-US/docs/Web/API/WebVR_API
 
 _This interface doesn't define any properties of its own, but it does inherit the properties of its parent interface, {{domxref("VRDisplay")}}._
 
-- {{domxref("VRDisplay.hardwareUnitId")}} {{ReadOnlyInline}}
+- `VRDisplay.hardwareUnitId` {{ReadOnlyInline}}
   - : Returns the distinct hardware ID for the overall hardware unit that this `VRDevice` is a part of. All devices that are part of the same physical piece of hardware will have the same `hardwareUnitId`.
 - {{domxref("VRDisplay.displayId")}} {{ReadOnlyInline}}
   - : Returns the ID for this specific `VRDevice`. The ID shouldn't change across browser restarts, allowing configuration data to be saved based on it.
