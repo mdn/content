@@ -1,5 +1,5 @@
 ---
-title: 'IDBFileEvent: complete event'
+title: "IDBFileEvent: complete event"
 slug: Web/API/IDBFileHandle/complete_event
 page-type: web-api-event
 status:
@@ -22,8 +22,8 @@ This event is not cancelable and does not bubble.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('complete', (event) => { });
-onerror = (complete) => { };
+addEventListener("complete", (event) => {});
+onerror = (complete) => {};
 ```
 
 ## Event type

@@ -324,7 +324,10 @@ Browsers may have preferences that control the way autoplay works, or how autopl
 - `media.autoplay.allow-muted`
   - : A Boolean preference which if `true` (the default) allows audio media which is currently muted to be automatically played. If this has been changed to `false`, media with an audio track will not be permitted to play even if muted.
 - `media.autoplay.block-webaudio`
-  - : A Boolean preference which indicates whether to apply autoplay blocking to the [Web Audio API](/en-US/docs/Web/API/Web_Audio_API). The default is `false`, except on Nightly where it is `true`.
+  - : A Boolean preference that indicates whether to apply autoplay blocking to the [Web Audio API](/en-US/docs/Web/API/Web_Audio_API).
+     If `false`, web audio is always allowed to autoplay.
+     If `true`, audio contexts are only able to play on pages once there has been {{Glossary("Sticky activation")}}.
+     The default is set to `true`.
 - `media.autoplay.default`
   - : An integer preference which specifies whether per-domain configuration for autoplay support by default is allowed (`0`), blocked (`1`), or prompt-on-use (`2`). The default value is `0`.
 - `media.autoplay.enabled.user-gestures-needed` (Nightly builds only)

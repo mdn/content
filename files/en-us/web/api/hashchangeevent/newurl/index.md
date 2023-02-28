@@ -18,7 +18,7 @@ A string.
 ## Examples
 
 ```js
-window.addEventListener('hashchange', (event) => {
+window.addEventListener("hashchange", (event) => {
   console.log(`Hash changed to ${event.newURL}`);
 });
 ```

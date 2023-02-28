@@ -5,7 +5,6 @@ page-type: html-element
 status:
   - deprecated
   - non-standard
-browser-compat: html.elements.menuitem
 ---
 
 {{HTMLSidebar}}{{Deprecated_Header}}{{Non-standard_header}}
@@ -131,7 +130,7 @@ Not part of any current specifications.
 
 ## Browser compatibility
 
-{{Compat}}
+No longer supported in any browser. Firefox, the only browser that supported this element, removed support in 85.
 
 ## See also
 

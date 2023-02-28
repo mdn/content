@@ -37,9 +37,10 @@ The following example shows how to use a call to
 {{domxref("MediaStreamTrack")}} needed by the `ImageCapture()` constructor.
 
 ```js
- navigator.mediaDevices.getUserMedia({video: true})
+navigator.mediaDevices
+  .getUserMedia({ video: true })
   .then((mediaStream) => {
-    document.querySelector('video').srcObject = mediaStream
+    document.querySelector("video").srcObject = mediaStream;
     const track = mediaStream.getVideoTracks()[0];
     imageCapture = new ImageCapture(track);
   })

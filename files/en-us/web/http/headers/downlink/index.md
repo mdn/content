@@ -32,7 +32,7 @@ The **`Downlink`** [Client hint](/en-US/docs/Web/HTTP/Client_hints) request head
   </tbody>
 </table>
 
-The `Downlink` value is given in Mbps and rounded to the nearest 25 kilobits per second to prevent fingerprinting; There are many other mechanisms an attacker might use to obtain similar information.
+The `Downlink` value is given in Mbps and rounded to the nearest 25 kilobits per second to prevent [fingerprinting](/en-US/docs/Glossary/Fingerprinting). There are many other mechanisms an attacker might use to obtain similar information.
 
 The hint allows a server to choose what information is sent based on the network bandwidth. For example, a server might choose to send smaller versions of images and other resources on low bandwidth networks.
 
