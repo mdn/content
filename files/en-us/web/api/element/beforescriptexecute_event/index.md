@@ -1,5 +1,5 @@
 ---
-title: 'Element: beforescriptexecute event'
+title: "Element: beforescriptexecute event"
 slug: Web/API/Element/beforescriptexecute_event
 page-type: web-api-event
 status:
@@ -20,9 +20,9 @@ It is a proprietary event specific to Gecko (Firefox).
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('NameOfTheEvent', (event) => {});
+addEventListener("NameOfTheEvent", (event) => {});
 
-onNameOfTheEvent = (event) => { };
+onNameOfTheEvent = (event) => {};
 ```
 
 ## Event type

@@ -1,12 +1,8 @@
 ---
 title: Cookies Having Independent Partitioned State (CHIPS)
 slug: Web/Privacy/Partitioned_cookies
-tags:
-  - Cookies Having Independent Partitioned State
-  - CHIPS
-  - Partitioned cookies
-  - Privacy
-  - Experimental
+status:
+  - experimental
 browser-compat: http.headers.Set-Cookie.Partitioned
 ---
 

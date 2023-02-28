@@ -37,7 +37,7 @@ None ({{jsxref("undefined")}}).
 ## Examples
 
 ```js
-document.getElementById('myform').reset();
+document.getElementById("myform").reset();
 ```
 
 ## Specifications

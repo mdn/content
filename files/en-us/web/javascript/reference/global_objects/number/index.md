@@ -2,12 +2,6 @@
 title: Number
 slug: Web/JavaScript/Reference/Global_Objects/Number
 page-type: javascript-class
-tags:
-  - Class
-  - JavaScript
-  - Number
-  - Reference
-  - Polyfill
 browser-compat: javascript.builtins.Number
 ---
 
@@ -148,6 +142,13 @@ When `Number` is called as a constructor (with `new`), it creates a {{jsxref("Nu
   - : This is the same as the global {{jsxref("parseFloat", "parseFloat()")}} function.
 - {{jsxref("Number.parseInt()")}}
   - : This is the same as the global {{jsxref("parseInt", "parseInt()")}} function.
+
+## Instance properties
+
+These properties are defined on `Number.prototype` and shared by all `Number` instances.
+
+- {{jsxref("Object/constructor", "Number.prototype.constructor")}}
+  - : The constructor function that created the instance object. For `Number` instances, the initial value is the {{jsxref("Number/Number", "Number")}} constructor.
 
 ## Instance methods
 

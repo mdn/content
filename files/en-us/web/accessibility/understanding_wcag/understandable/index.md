@@ -1,22 +1,6 @@
 ---
 title: Understandable
 slug: Web/Accessibility/Understanding_WCAG/Understandable
-tags:
-  - Accessibility
-  - HELP
-  - Language
-  - Navigation
-  - Principle 3
-  - Text
-  - Understandable
-  - WCAG
-  - Web Content Accessibility Guidelines
-  - abbreviations
-  - consistency
-  - error messages
-  - form validation
-  - labels
-  - slang
 ---
 
 {{QuicklinksWithSubPages("Web/Accessibility/Understanding_WCAG")}}

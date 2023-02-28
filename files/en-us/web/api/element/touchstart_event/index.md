@@ -1,5 +1,5 @@
 ---
-title: 'Element: touchstart event'
+title: "Element: touchstart event"
 slug: Web/API/Element/touchstart_event
 page-type: web-api-event
 browser-compat: api.Element.touchstart_event
@@ -14,9 +14,9 @@ The `touchstart` event is fired when one or more touch points are placed on the 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('touchstart', (event) => {});
+addEventListener("touchstart", (event) => {});
 
-ontouchstart = (event) => { };
+ontouchstart = (event) => {};
 ```
 
 ## Event type

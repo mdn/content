@@ -2,14 +2,9 @@
 title: "-webkit-transition"
 slug: Web/CSS/@media/-webkit-transition
 page-type: css-media-feature
-tags:
-  - "@media"
-  - CSS
-  - Deprecated
-  - Non-standard
-  - Reference
-  - WebKit
-  - media feature
+status:
+  - deprecated
+  - non-standard
 browser-compat: css.at-rules.media.-webkit-transition
 ---
 

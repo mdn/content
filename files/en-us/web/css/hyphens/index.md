@@ -2,12 +2,6 @@
 title: hyphens
 slug: Web/CSS/hyphens
 page-type: css-property
-tags:
-  - CSS
-  - CSS Property
-  - CSS Text
-  - Reference
-  - recipe:css-property
 browser-compat: css.properties.hyphens
 ---
 

@@ -40,25 +40,28 @@ Creating an empty `Headers` object is simple:
 
 ```js
 const myHeaders = new Headers(); // Currently empty
-myHeaders.get('Not-Set'); // Returns null
+myHeaders.get("Not-Set"); // Returns null
 ```
 
 You could add a header to this using {{domxref("Headers.append")}}, then retrieve it
 using `get()`:
 
 ```js
-myHeaders.append('Content-Type', 'image/jpeg');
-myHeaders.get('Content-Type'); // Returns "image/jpeg"
+myHeaders.append("Content-Type", "image/jpeg");
+myHeaders.get("Content-Type"); // Returns "image/jpeg"
 ```
 
 If the header has multiple values associated with it, the byte string will contain all
 the values, in the order they were added to the Headers object:
 
 ```js
-myHeaders.append('Accept-Encoding', 'deflate');
-myHeaders.append('Accept-Encoding', 'gzip');
-myHeaders.get('Accept-Encoding'); // Returns "deflate, gzip"
-myHeaders.get('Accept-Encoding').split(',').map((v) => v.trimStart()); // Returns [ "deflate", "gzip" ]
+myHeaders.append("Accept-Encoding", "deflate");
+myHeaders.append("Accept-Encoding", "gzip");
+myHeaders.get("Accept-Encoding"); // Returns "deflate, gzip"
+myHeaders
+  .get("Accept-Encoding")
+  .split(",")
+  .map((v) => v.trimStart()); // Returns [ "deflate", "gzip" ]
 ```
 
 ## Specifications

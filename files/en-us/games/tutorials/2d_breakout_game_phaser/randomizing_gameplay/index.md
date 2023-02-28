@@ -1,14 +1,6 @@
 ---
 title: Randomizing gameplay
 slug: Games/Tutorials/2D_breakout_game_Phaser/Randomizing_gameplay
-tags:
-  - 2D
-  - Beginner
-  - Canvas
-  - Games
-  - JavaScript
-  - Phaser
-  - Tutorial
 ---
 
 {{GamesSidebar}}

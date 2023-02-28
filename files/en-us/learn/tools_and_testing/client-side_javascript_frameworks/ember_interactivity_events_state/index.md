@@ -1,18 +1,7 @@
 ---
-title: 'Ember interactivity: Events, classes and state'
+title: "Ember interactivity: Events, classes and state"
 slug: >-
   Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_interactivity_events_state
-tags:
-  - Beginner
-  - Classes
-  - Ember
-  - Frameworks
-  - JavaScript
-  - Learn
-  - Services
-  - client-side
-  - decorators
-  - events
 ---
 
 {{LearnSidebar}}
@@ -65,7 +54,7 @@ For our card-header / todo input, we'll want to be able to submit our typed in t
 
 We want to be able to capture the text typed into the input. We do this so that our JavaScript code knows what we typed in, and we can save our todo and pass that text along to the todo list component to display.
 
-We can capture the [`keydown`](/en-US/docs/Web/API/Document/keydown_event) event via the [on modifier](https://api.emberjs.com/ember/3.16/classes/Ember.Templates.helpers/methods/on?anchor=on), which is just Ember syntactic sugar around [`addEventListener`](/en-US/docs/Web/API/EventTarget/addEventListener) and [`removeEventListener`](/en-US/docs/Web/API/EventTarget/removeEventListener) (see [this explanation](/en-US/docs/Learn/JavaScript/Building_blocks/Events#addeventlistener_and_removeeventlistener) if needed).
+We can capture the [`keydown`](/en-US/docs/Web/API/Element/keydown_event) event via the [on modifier](https://api.emberjs.com/ember/3.16/classes/Ember.Templates.helpers/methods/on?anchor=on), which is just Ember syntactic sugar around [`addEventListener`](/en-US/docs/Web/API/EventTarget/addEventListener) and [`removeEventListener`](/en-US/docs/Web/API/EventTarget/removeEventListener) (see [this explanation](/en-US/docs/Learn/JavaScript/Building_blocks/Events#addeventlistener_and_removeeventlistener) if needed).
 
 Add the new line shown below to your `header.hbs` file:
 

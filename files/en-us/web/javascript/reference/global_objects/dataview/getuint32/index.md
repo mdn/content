@@ -2,12 +2,6 @@
 title: DataView.prototype.getUint32()
 slug: Web/JavaScript/Reference/Global_Objects/DataView/getUint32
 page-type: javascript-instance-method
-tags:
-  - DataView
-  - JavaScript
-  - Method
-  - Prototype
-  - TypedArrays
 browser-compat: javascript.builtins.DataView.getUint32
 ---
 

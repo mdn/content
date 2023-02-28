@@ -37,29 +37,31 @@ between the two is that their shadow roots are attached with their modes set to
 `open` and `closed` respectively.
 
 ```js
-customElements.define('open-shadow',
+customElements.define(
+  "open-shadow",
   class extends HTMLElement {
     constructor() {
       super();
 
-      const pElem = document.createElement('p');
-      pElem.textContent = this.getAttribute('text');
+      const pElem = document.createElement("p");
+      pElem.textContent = this.getAttribute("text");
 
-      const shadowRoot = this.attachShadow({mode: 'open'});
+      const shadowRoot = this.attachShadow({ mode: "open" });
       shadowRoot.appendChild(pElem);
     }
   }
 );
 
-customElements.define('closed-shadow',
+customElements.define(
+  "closed-shadow",
   class extends HTMLElement {
     constructor() {
       super();
 
-      const pElem = document.createElement('p');
-      pElem.textContent = this.getAttribute('text');
+      const pElem = document.createElement("p");
+      pElem.textContent = this.getAttribute("text");
 
-      const shadowRoot = this.attachShadow({mode: 'closed'});
+      const shadowRoot = this.attachShadow({ mode: "closed" });
       shadowRoot.appendChild(pElem);
     }
   }
@@ -76,7 +78,7 @@ We then insert one of each element into our page:
 Then include a click event listener on the `<html>` element:
 
 ```js
-document.querySelector('html').addEventListener('click', (e) => {
+document.querySelector("html").addEventListener("click", (e) => {
   console.log(e.composed);
   console.log(e.composedPath());
 });

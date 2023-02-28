@@ -2,13 +2,6 @@
 title: CSS Container Queries
 slug: Web/CSS/CSS_Container_Queries
 page-type: guide
-tags:
-  - CSS
-  - CSS Containment
-  - CSS Container Queries
-  - Guide
-  - Paint
-  - Responsive Design
 ---
 
 {{CSSRef}}

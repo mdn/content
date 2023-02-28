@@ -16,9 +16,9 @@ An event handler for this event can be added by setting the `onanimationcancel` 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('animationcancel', (event) => {});
+addEventListener("animationcancel", (event) => {});
 
-onanimationcancel = (event) => { };
+onanimationcancel = (event) => {};
 ```
 
 ## Event type
@@ -43,24 +43,24 @@ _Also inherits properties from its parent {{domxref("Event")}}_.
 This code gets an element that's currently being animated and adds a listener to the `animationcancel` event. It then sets the element's {{cssxref("display")}} property to `none`, which will trigger the `animationcancel` event.
 
 ```js
-const animated = document.querySelector('.animated');
+const animated = document.querySelector(".animated");
 
-animated.addEventListener('animationcancel', () => {
-  console.log('Animation canceled');
+animated.addEventListener("animationcancel", () => {
+  console.log("Animation canceled");
 });
 
-animated.style.display = 'none';
+animated.style.display = "none";
 ```
 
 The same, but using the `onanimationcancel` property instead of `addEventListener()`:
 
 ```js
-const animated = document.querySelector('.animated');
+const animated = document.querySelector(".animated");
 animated.onanimationcancel = () => {
-  console.log('Animation canceled');
+  console.log("Animation canceled");
 };
 
-animated.style.display = 'none';
+animated.style.display = "none";
 ```
 
 ### Live example
@@ -111,36 +111,42 @@ animated.style.display = 'none';
 #### JavaScript
 
 ```js
-const animation = document.querySelector('p.animation');
-const animationEventLog = document.querySelector('.animation-example>.event-log');
-const applyAnimation = document.querySelector('.animation-example>button.activate');
+const animation = document.querySelector("p.animation");
+const animationEventLog = document.querySelector(
+  ".animation-example>.event-log"
+);
+const applyAnimation = document.querySelector(
+  ".animation-example>button.activate"
+);
 let iterationCount = 0;
 
-animation.addEventListener('animationstart', () => {
+animation.addEventListener("animationstart", () => {
   animationEventLog.textContent = `${animationEventLog.textContent}'animation started' `;
 });
 
-animation.addEventListener('animationiteration', () => {
+animation.addEventListener("animationiteration", () => {
   iterationCount++;
   animationEventLog.textContent = `${animationEventLog.textContent}'animation iterations: ${iterationCount}' `;
 });
 
-animation.addEventListener('animationend', () => {
+animation.addEventListener("animationend", () => {
   animationEventLog.textContent = `${animationEventLog.textContent}'animation ended'`;
-  animation.classList.remove('active');
+  animation.classList.remove("active");
   applyAnimation.textContent = "Activate animation";
 });
 
-animation.addEventListener('animationcancel', () => {
+animation.addEventListener("animationcancel", () => {
   animationEventLog.textContent = `${animationEventLog.textContent}'animation canceled'`;
 });
 
-applyAnimation.addEventListener('click', () => {
-  animation.classList.toggle('active');
-  animationEventLog.textContent = '';
+applyAnimation.addEventListener("click", () => {
+  animation.classList.toggle("active");
+  animationEventLog.textContent = "";
   iterationCount = 0;
-  const active = animation.classList.contains('active');
-  applyAnimation.textContent = active ? "Cancel animation" : "Activate animation";
+  const active = animation.classList.contains("active");
+  applyAnimation.textContent = active
+    ? "Cancel animation"
+    : "Activate animation";
 });
 ```
 

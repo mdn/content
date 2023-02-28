@@ -25,9 +25,9 @@ msLaunchUri(uri, successCallback, noHandlerCallback)
 - `uri`
   - : A string specifying the URL containing including the protocol of the document or resource to be displayed.
 - `successCallback` {{optional_inline}}
-  - : A function matching the signature of {{DOMxRef("MSLaunchUriCallback")}} to be executed if the protocol handler is present.
+  - : A function without any parameters to be executed if the protocol handler is present.
 - `noHandlerCallback` {{optional_inline}}
-  - : A function matching {{DOMxRef("MSLaunchUriCallback")}} to be executed if the protocol handler is _not_ present.
+  - : A function without any parameters to be executed if the protocol handler is _not_ present.
 
 ### Return value
 
@@ -43,5 +43,4 @@ If the user's system does not have a program registered to handle a specific pro
 
 ## See also
 
-- {{DOMxRef("MSLaunchUriCallback")}}
 - [Microsoft API extensions](/en-US/docs/Web/API/Microsoft_Extensions)

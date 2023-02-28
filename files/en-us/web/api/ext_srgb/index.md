@@ -29,13 +29,22 @@ This extension exposes the following constants, which can be used in the {{domxr
 ## Examples
 
 ```js
-const ext = gl.getExtension('EXT_sRGB');
+const ext = gl.getExtension("EXT_sRGB");
 
 const texture = gl.createTexture();
 gl.bindTexture(gl.TEXTURE_2D, texture);
 
-gl.texImage2D(gl.TEXTURE_2D, 0, ext.SRGB_EXT, 512, 512, 0,
-              ext.SRGB_EXT, gl.UNSIGNED_BYTE, image);
+gl.texImage2D(
+  gl.TEXTURE_2D,
+  0,
+  ext.SRGB_EXT,
+  512,
+  512,
+  0,
+  ext.SRGB_EXT,
+  gl.UNSIGNED_BYTE,
+  image
+);
 ```
 
 ## Specifications

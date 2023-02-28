@@ -2,6 +2,8 @@
 title: CSS Typed Object Model API
 slug: Web/API/CSS_Typed_OM_API
 page-type: web-api-overview
+status:
+  - experimental
 browser-compat:
   - api.CSSStyleValue
   - api.StylePropertyMap
@@ -9,7 +11,7 @@ browser-compat:
   - api.CSSKeywordValue
 ---
 
-{{DefaultAPISidebar("CSS Typed Object Model API")}}
+{{DefaultAPISidebar("CSS Typed Object Model API")}}{{SeeCompatTable}}
 
 The CSS Typed Object Model API simplifies CSS property manipulation by exposing CSS values as typed JavaScript objects rather than strings. This not only simplifies CSS manipulation, but also lessens the negative impact on performance as compared to {{domxref('HTMLElement.style')}}.
 
@@ -23,9 +25,9 @@ CSS Typed OM both allows for the performant manipulation of values assigned to C
 
 The {{domxref('CSSStyleValue')}} interface of the CSS Typed Object Model API is the base class of all CSS values accessible through the Typed OM API. An instance of this class may be used anywhere a string is expected.
 
-- {{domxref('CSSStyleValue.parse()', 'CSSStyleValue.parse(property, cssText)')}}
+- {{domxref('CSSStyleValue.parse()', 'CSSStyleValue.parse(property, cssText)')}} {{Experimental_Inline}}
   - : The parse() method of the CSSStyleValue interface allows a CSSNumericValue to be constructed from a CSS string. It sets a specific CSS property to the specified values and returns the first value as a CSSStyleValue object.
-- {{domxref('CSSStyleValue.parseAll()')}}
+- {{domxref('CSSStyleValue.parseAll()')}} {{Experimental_Inline}}
   - : The parseAll() method of the CSSStyleValue interface sets all occurrences of a specific CSS property to the specified value and returns an array of CSSStyleValue objects, each containing one of the supplied values.
 
 ### `StylePropertyMap`

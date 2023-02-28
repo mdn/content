@@ -1,5 +1,5 @@
 ---
-title: 'Element: contextmenu event'
+title: "Element: contextmenu event"
 slug: Web/API/Element/contextmenu_event
 page-type: web-api-event
 browser-compat: api.Element.contextmenu_event
@@ -18,9 +18,9 @@ Any right-click event that is not disabled (by calling the event's {{domxref("Ev
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('contextmenu', (event) => {});
+addEventListener("contextmenu", (event) => {});
 
-oncontextmenu = (event) => { };
+oncontextmenu = (event) => {};
 ```
 
 ## Event type
@@ -98,9 +98,9 @@ In this example, the default action of the `contextmenu` event is canceled using
 ### JavaScript
 
 ```js
-const noContext = document.getElementById('noContextMenu');
+const noContext = document.getElementById("noContextMenu");
 
-noContext.addEventListener('contextmenu', (e) => {
+noContext.addEventListener("contextmenu", (e) => {
   e.preventDefault();
 });
 ```

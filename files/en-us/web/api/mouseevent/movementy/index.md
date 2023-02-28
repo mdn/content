@@ -33,8 +33,8 @@ function logMovement(event) {
   log.innerText = `movement: ${event.movementX}, ${event.movementY}\n${log.innerText}`;
 }
 
-const log = document.getElementById('log');
-document.addEventListener('mousemove', logMovement);
+const log = document.getElementById("log");
+document.addEventListener("mousemove", logMovement);
 ```
 
 ### Result

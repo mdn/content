@@ -1,20 +1,6 @@
 ---
 title: Web performance
 slug: Web/Performance
-tags:
-  - API
-  - App
-  - App Performance
-  - HTML
-  - JavaScript
-  - Landing
-  - Mobile
-  - Mobile Performance
-  - Performance
-  - Performance Budget
-  - Start-Up Performance
-  - Web
-  - Web Performance
 ---
 
 {{QuickLinksWithSubPages}}

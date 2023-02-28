@@ -42,7 +42,9 @@ None ({{jsxref("undefined")}}).
 
 ```js
 // Navigate to the Location.reload article by replacing this page
-window.location.replace('https://developer.mozilla.org/en-US/docs/Web/API/Location.reload');
+window.location.replace(
+  "https://developer.mozilla.org/en-US/docs/Web/API/Location.reload"
+);
 ```
 
 ## Specifications

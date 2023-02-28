@@ -2,11 +2,6 @@
 title: contain-intrinsic-width
 slug: Web/CSS/contain-intrinsic-width
 page-type: css-property
-tags:
-  - CSS
-  - CSS Property
-  - Reference
-  - contain-intrinsic-width
 browser-compat: css.properties.contain-intrinsic-width
 ---
 

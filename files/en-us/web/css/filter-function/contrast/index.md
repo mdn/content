@@ -2,12 +2,6 @@
 title: contrast()
 slug: Web/CSS/filter-function/contrast
 page-type: css-function
-tags:
-  - CSS
-  - CSS Function
-  - Filter Effects
-  - Function
-  - Reference
 browser-compat: css.types.filter-function.contrast
 ---
 

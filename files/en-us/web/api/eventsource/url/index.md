@@ -18,7 +18,7 @@ A string representing the URL of the source.
 ## Examples
 
 ```js
-const evtSource = new EventSource('sse.php');
+const evtSource = new EventSource("sse.php");
 console.log(evtSource.url);
 ```
 

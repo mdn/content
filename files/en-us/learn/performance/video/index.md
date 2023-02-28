@@ -1,12 +1,6 @@
 ---
-title: 'Multimedia: video'
+title: "Multimedia: video"
 slug: Learn/Performance/video
-tags:
-  - Images
-  - Media
-  - Performance
-  - Video
-  - Web Performance
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Performance/Multimedia", "Learn/Performance/javascript_performance", "Learn/Performance")}}

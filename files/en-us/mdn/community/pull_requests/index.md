@@ -2,10 +2,6 @@
 title: Pull request submission and review guidelines
 slug: MDN/Community/Pull_requests
 page-type: mdn-community-guide
-tags:
-  - meta
-  - community-guidelines
-  - governance
 ---
 
 {{MDNSidebar}}

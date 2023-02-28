@@ -2,13 +2,6 @@
 title: Map.prototype.values()
 slug: Web/JavaScript/Reference/Global_Objects/Map/values
 page-type: javascript-instance-method
-tags:
-  - ECMAScript 2015
-  - Iterator
-  - JavaScript
-  - Map
-  - Method
-  - Prototype
 browser-compat: javascript.builtins.Map.values
 ---
 
