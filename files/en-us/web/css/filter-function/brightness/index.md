@@ -82,9 +82,6 @@ This example shows three images: the image with a `brightness()` filter function
 ```
 
 ```css hidden
-svg:not([height]) {
-  display: none;
-}
 ```
 
 ```html hidden
