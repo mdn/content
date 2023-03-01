@@ -26,9 +26,11 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}_.
 - {{domxref("HTMLIFrameElement.contentDocument")}} {{ReadOnlyInline}}
   - : Returns a {{domxref("Document")}}, the active document in the inline frame's nested browsing context.
 - {{domxref("HTMLIFrameElement.contentWindow")}} {{ReadOnlyInline}}
+
   - : Returns a {{glossary("WindowProxy")}}, the window proxy for the nested browsing context.
 
 - {{domxref("HTMLIFrameElement.credentialless")}} {{Experimental_Inline}}
+
   - : A boolean value indicating whether the `<iframe>` is credentialless, meaning that its content is loaded in a new, ephemeral context. This context does not have access to the parent context's shared storage and credentials. In return, the {{httpheader("Cross-Origin-Embedder-Policy")}} (COEP) embedding rules can be lifted, so documents with COEP set can embed third-party documents that do not. See [IFrame credentialless](/en-US/docs/Web/Security/IFrame_credentialless) for a deeper explanation.
 
 - {{domxref("HTMLIFrameElement.csp")}} {{Experimental_Inline}}

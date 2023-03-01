@@ -78,7 +78,7 @@ One alternative is to explicitly state what domains have access to the content o
 
 ### Cross-origin images
 
-As reported in the [Chromium Blog](https://blog.chromium.org/2011/07/using-cross-domain-images-in-webgl-and.html) and documented in [Allowing cross-origin use of images and canvas](/en-US/docs/Web/HTML/CORS_enabled_image) can lead to fingerprinting attacks.
+As reported in the [Chromium Blog](https://blog.chromium.org/2011/07/using-cross-domain-images-in-webgl-and.html) and documented in [Allowing cross-origin use of images and canvas](/en-US/docs/Web/HTML/CORS_enabled_image) can lead to [fingerprinting](/en-US/docs/Glossary/Fingerprinting) attacks.
 
 To mitigate the possibility of these attacks, you should use the `crossorigin` attribute in the images you request and the code snippet below in your `.htaccess` to set the CORS header from the server.
 

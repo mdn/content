@@ -77,7 +77,7 @@ function recordStream(stream) {
     console.error(`Error: ${event.error}`);
   };
 
-  recorder.start(100);  /* 100ms time slices per buffer */
+  recorder.start(100); /* 100ms time slices per buffer */
   return recorder;
 }
 ```

@@ -34,7 +34,7 @@ A new {{domxref("NotificationEvent()")}} object.
 ## Examples
 
 ```js
-const n = new Notification('Hello');
+const n = new Notification("Hello");
 const myNotificationEvent = new NotificationEvent(type, { notification: n });
 ```
 

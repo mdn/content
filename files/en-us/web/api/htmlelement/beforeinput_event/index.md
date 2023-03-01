@@ -1,5 +1,5 @@
 ---
-title: 'HTMLElement: beforeinput event'
+title: "HTMLElement: beforeinput event"
 slug: Web/API/HTMLElement/beforeinput_event
 page-type: web-api-event
 browser-compat: api.HTMLElement.beforeinput_event
@@ -18,9 +18,9 @@ In the case of `contenteditable` and `designMode`, the event target is the **edi
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('beforeinput', (event) => {});
+addEventListener("beforeinput", (event) => {});
 
-onbeforeinput = (event) => { };
+onbeforeinput = (event) => {};
 ```
 
 ## Event type
@@ -50,7 +50,10 @@ The following function returns true if `beforeinput`, and thus `getTargetRanges`
 
 ```js
 function isBeforeInputEventAvailable() {
-  return window.InputEvent && typeof InputEvent.prototype.getTargetRanges === "function";
+  return (
+    window.InputEvent &&
+    typeof InputEvent.prototype.getTargetRanges === "function"
+  );
 }
 ```
 
@@ -68,10 +71,10 @@ This example logs the current value of the element, immediately before replacing
 #### JavaScript
 
 ```js
-const input = document.querySelector('input');
-const log = document.getElementById('values');
+const input = document.querySelector("input");
+const log = document.getElementById("values");
 
-input.addEventListener('beforeinput', updateValue);
+input.addEventListener("beforeinput", updateValue);
 
 function updateValue(e) {
   log.textContent = e.target.value;

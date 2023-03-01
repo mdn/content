@@ -67,10 +67,12 @@ const DBOpenRequest = window.indexedDB.open("toDoList", 4);
 
 // these two event handlers act on the IDBDatabase object,
 // when the database is opened successfully, or not
-DBOpenRequest.onerror = (event) => { note.innerHTML += '<li>Error loading database.</li>'; };
+DBOpenRequest.onerror = (event) => {
+  note.innerHTML += "<li>Error loading database.</li>";
+};
 
 DBOpenRequest.onsuccess = (event) => {
-  note.innerHTML += '<li>Database initialized.</li>';
+  note.innerHTML += "<li>Database initialized.</li>";
 
   // store the result of opening the database in the db
   // variable. This is used a lot later on
@@ -90,13 +92,15 @@ DBOpenRequest.onupgradeneeded = (event) => {
   const db = event.target.result;
 
   db.onerror = (event) => {
-    note.innerHTML += '<li>Error loading database.</li>';
+    note.innerHTML += "<li>Error loading database.</li>";
   };
 
   // Create an objectStore for this database using
   // IDBDatabase.createObjectStore
 
-  const objectStore = db.createObjectStore("toDoList", { keyPath: "taskTitle" });
+  const objectStore = db.createObjectStore("toDoList", {
+    keyPath: "taskTitle",
+  });
 
   // define what data items the objectStore will contain
 
@@ -108,14 +112,16 @@ DBOpenRequest.onupgradeneeded = (event) => {
 
   objectStore.createIndex("notified", "notified", { unique: false });
 
-  note.innerHTML += '<li>Object store created.</li>';
+  note.innerHTML += "<li>Object store created.</li>";
 };
 ```
 
 This next line opens up a transaction on the Database, then opens an object store that we can then manipulate the data inside of.
 
 ```js
-const objectStore = db.transaction('toDoList', 'readwrite').objectStore('toDoList');
+const objectStore = db
+  .transaction("toDoList", "readwrite")
+  .objectStore("toDoList");
 ```
 
 ## Specifications

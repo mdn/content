@@ -34,28 +34,28 @@ callbacks with the relevant action handlers. Each function harnesses the
 const actionHandlers = [
   // play
   [
-    'play',
+    "play",
     async () => {
       // play our audio
       await audioEl.play();
       // set playback state
       navigator.mediaSession.playbackState = "playing";
       // update our status element
-      updateStatus(allMeta[index], 'Action: play  |  Track is playing…')
-    }
+      updateStatus(allMeta[index], "Action: play  |  Track is playing…");
+    },
   ],
   [
-    'pause',
+    "pause",
     () => {
       // pause out audio
       audioEl.pause();
       // set playback state
       navigator.mediaSession.playbackState = "paused";
       // update our status element
-      updateStatus(allMeta[index], 'Action: pause  |  Track has been paused…');
-    }
+      updateStatus(allMeta[index], "Action: pause  |  Track has been paused…");
+    },
   ],
-]
+];
 
 for (const [action, handler] of actionHandlers) {
   try {

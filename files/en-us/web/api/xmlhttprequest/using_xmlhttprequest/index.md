@@ -713,7 +713,7 @@ FormData with XMLHttpRequests, see the [Using FormData Objects](/en-US/docs/Web/
         if (!formElement.action) { return; }
         const req = new XMLHttpRequest();
         req.onload = xhrSuccess;
-        if (fFormElement.method.toLowerCase() === "post") {
+        if (formElement.method.toLowerCase() === "post") {
           req.open("post", formElement.action);
           req.send(new FormData(formElement));
         } else {
