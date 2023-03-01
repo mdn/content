@@ -191,7 +191,7 @@ The first part of the CSS sets up the **named** pages, these include the size an
 }
 ```
 
-The next part of the CSS uses [attribute selectors](/en-US/docs/Web/CSS/Attribute_selectors) to apply the print dimensions, orientation, and margins defined in the named  `@page` rules defined in the previous CSS section to elements using the `page` property. 
+The next part of the CSS uses [attribute selectors](/en-US/docs/Web/CSS/Attribute_selectors) to apply the print dimensions, orientation, and margins defined in the named `@page` rules defined in the previous CSS section to elements using the `page` property.
 
 The sections with `class="chapter"` are concurrent and appear as one page. The `break-after: page;` is used to split them up, which splits each chapter into a separately printed page.
 
@@ -243,7 +243,8 @@ The sections with `class="chapter"` are concurrent and appear as one page. The `
 
 #### JavaScript
 
-The JavaScript updates the value of the `data-print` attribute, which is the attribute on which the named page is applied, when you select a different  printing option:
+The JavaScript updates the value of the `data-print` attribute, which is the attribute on which the named page is applied, when you select a different printing option:
+
 ```js
 const printArea = document.querySelector("#print-area");
 const printButton = document.querySelector("#print");
