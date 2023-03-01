@@ -2,13 +2,8 @@
 title: VideoEncoder.encode()
 slug: Web/API/VideoEncoder/encode
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - encode
-  - VideoEncoder
-  - Experimental
+status:
+  - experimental
 browser-compat: api.VideoEncoder.encode
 ---
 

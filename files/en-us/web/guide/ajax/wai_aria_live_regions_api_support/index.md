@@ -1,9 +1,6 @@
 ---
 title: WAI ARIA Live Regions/API Support
 slug: Web/Guide/AJAX/WAI_ARIA_Live_Regions_API_Support
-tags:
-  - AJAX
-  - Accessibility
 ---
 
 {{QuickLinksWithSubpages("/en-US/docs/Web/Guide/AJAX")}}
@@ -13,8 +10,6 @@ tags:
 Firefox 3 contains important improvements to the way the Mozilla engine exposes live changes in a document.
 
 These features will help screen reader developers improve the quality and performance of live region support, both for pages that are marked up with ARIA live region markup, and for pages where the author did not add any additional markup.
-
-Please read the [ARIA spec](https://www.w3.org/TR/wai-aria/#dfn-live-region) or the [live region report](/en-US/docs/Web/Guide/AJAX/WAI_ARIA_Live_Regions_API_Support) to learn about ARIA live region markup.
 
 As always, we're open to questions and suggestions for changes in [community forums](https://support.mozilla.org/en-US/kb/get-community-support).
 

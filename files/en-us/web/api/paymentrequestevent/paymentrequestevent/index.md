@@ -2,14 +2,8 @@
 title: PaymentRequestEvent()
 slug: Web/API/PaymentRequestEvent/PaymentRequestEvent
 page-type: web-api-constructor
-tags:
-  - API
-  - Constructor
-  - Payment Request API
-  - PaymentRequestEvent
-  - Reference
-  - Experimental
-  - payment
+status:
+  - experimental
 browser-compat: api.PaymentRequestEvent.PaymentRequestEvent
 ---
 
@@ -54,7 +48,7 @@ A new {{domxref("PaymentRequestEvent")}} object.
 A developer would not use this constructor manually. A new `PaymentRequestEvent` object is constructed when a handler is invoked as a result of the {{domxref("ServiceWorkerGlobalScope.paymentrequest_event", "paymentrequest")}} event firing.
 
 ```js
-self.addEventListener("paymentrequest", e => {
+self.addEventListener("paymentrequest", (e) => {
   // ...
 });
 ```

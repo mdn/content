@@ -2,14 +2,6 @@
 title: Intl.PluralRules
 slug: Web/JavaScript/Reference/Global_Objects/Intl/PluralRules
 page-type: javascript-class
-tags:
-  - Class
-  - Internationalization
-  - Intl
-  - JavaScript
-  - Localization
-  - PluralRules
-  - Reference
 browser-compat: javascript.builtins.Intl.PluralRules
 ---
 

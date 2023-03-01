@@ -2,12 +2,8 @@
 title: ReportBody
 slug: Web/API/ReportBody
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Reference
-  - Experimental
-  - ReportBody
+status:
+  - experimental
 browser-compat: api.ReportBody
 ---
 

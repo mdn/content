@@ -2,12 +2,6 @@
 title: HTMLLIElement
 slug: Web/API/HTMLLIElement
 page-type: web-api-interface
-tags:
-  - API
-  - HTML DOM
-  - HTML DOM Interface
-  - Interface
-  - Reference
 browser-compat: api.HTMLLIElement
 ---
 

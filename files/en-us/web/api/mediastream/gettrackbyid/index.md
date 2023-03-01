@@ -2,14 +2,6 @@
 title: MediaStream.getTrackById()
 slug: Web/API/MediaStream/getTrackById
 page-type: web-api-instance-method
-tags:
-  - Media
-  - MediaStream
-  - Media Capture and Streams API
-  - Method
-  - Reference
-  - WebRTC
-  - getTrackById
 browser-compat: api.MediaStream.getTrackById
 ---
 

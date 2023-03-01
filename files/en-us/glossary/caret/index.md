@@ -2,15 +2,6 @@
 title: Caret
 slug: Glossary/Caret
 page-type: glossary-definition
-tags:
-  - Cursor
-  - Input
-  - caret
-  - insertion point
-  - text cursor
-  - text entry
-  - text input
-  - text insertion point
 ---
 
 A **caret** (sometimes called a "text cursor") is an indicator displayed on the screen to indicate where text input will be inserted.

@@ -2,19 +2,6 @@
 title: shape-outside
 slug: Web/CSS/shape-outside
 page-type: css-property
-tags:
-  - Boundaries
-  - CSS
-  - CSS Property
-  - CSS Shapes
-  - Float Area
-  - Property
-  - Reference
-  - Shape
-  - margin
-  - recipe:css-property
-  - shape-outside
-  - wrapping
 browser-compat: css.properties.shape-outside
 ---
 

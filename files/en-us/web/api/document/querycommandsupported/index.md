@@ -2,15 +2,9 @@
 title: Document.queryCommandSupported()
 slug: Web/API/Document/queryCommandSupported
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - Document
-  - Method
-  - Reference
-  - editor
-  - Deprecated
-  - Non-standard
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.Document.queryCommandSupported
 ---
 

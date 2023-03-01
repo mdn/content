@@ -2,15 +2,8 @@
 title: PaymentRequestEvent.openWindow()
 slug: Web/API/PaymentRequestEvent/openWindow
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Payment Request API
-  - PaymentRequestEvent
-  - Reference
-  - openWindow()
-  - payment
-  - Experimental
+status:
+  - experimental
 browser-compat: api.PaymentRequestEvent.openWindow
 ---
 

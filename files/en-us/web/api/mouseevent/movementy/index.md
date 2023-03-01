@@ -2,17 +2,6 @@
 title: MouseEvent.movementY
 slug: Web/API/MouseEvent/movementY
 page-type: web-api-instance-property
-tags:
-  - API
-  - DOM
-  - DOM Events
-  - MouseEvent
-  - MovementY
-  - Property
-  - Read-only
-  - Reference
-  - mouse lock
-  - pointer lock
 browser-compat: api.MouseEvent.movementY
 ---
 
@@ -44,8 +33,8 @@ function logMovement(event) {
   log.innerText = `movement: ${event.movementX}, ${event.movementY}\n${log.innerText}`;
 }
 
-const log = document.getElementById('log');
-document.addEventListener('mousemove', logMovement);
+const log = document.getElementById("log");
+document.addEventListener("mousemove", logMovement);
 ```
 
 ### Result

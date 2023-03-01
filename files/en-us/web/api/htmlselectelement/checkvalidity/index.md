@@ -2,13 +2,6 @@
 title: HTMLSelectElement.checkValidity()
 slug: Web/API/HTMLSelectElement/checkValidity
 page-type: web-api-instance-method
-tags:
-  - API
-  - Constraint Validation API
-  - HTML DOM
-  - HTMLSelectElement
-  - Method
-  - Reference
 browser-compat: api.HTMLSelectElement.checkValidity
 ---
 
@@ -43,4 +36,4 @@ None ({{jsxref("undefined")}}).
 
 ## See also
 
-- [Form validation](/en-US/docs/Web/Guide/HTML/Constraint_validation)
+- [Form validation](/en-US/docs/Web/HTML/Constraint_validation)

@@ -2,19 +2,8 @@
 title: NavigationDestination.id
 slug: Web/API/NavigationDestination/id
 page-type: web-api-instance-property
-tags:
-  - API
-  - Experimental
-  - History
-  - id
-  - Navigate
-  - Navigation
-  - Navigation API
-  - Property
-  - Read-only
-  - Reference
-  - Scroll
-  - Traversal
+status:
+  - experimental
 browser-compat: api.NavigationDestination.id
 ---
 
@@ -32,7 +21,7 @@ A string representing the `id` of the destination {{domxref("NavigationHistoryEn
 ## Examples
 
 ```js
-navigation.addEventListener('navigate', (event) => {
+navigation.addEventListener("navigate", (event) => {
   console.log(event.destination.id);
 });
 ```

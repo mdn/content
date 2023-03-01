@@ -2,16 +2,8 @@
 title: Element.computedStyleMap()
 slug: Web/API/Element/computedStyleMap
 page-type: web-api-instance-method
-tags:
-  - API
-  - CSS Typed Object Model API
-  - Element
-  - Experimental
-  - Houdini
-  - Method
-  - Reference
-  - StylePropertyMapReadOnly
-  - computedStyleMap()
+status:
+  - experimental
 browser-compat: api.Element.computedStyleMap
 ---
 
@@ -62,10 +54,10 @@ property values using `computedStyleMap().`
 
 ```js
 // get the element
-const myElement = document.querySelector('a');
+const myElement = document.querySelector("a");
 
 // get the <dl> we'll be populating
-const stylesList = document.querySelector('#regurgitation');
+const stylesList = document.querySelector("#regurgitation");
 
 // Retrieve all computed styles with computedStyleMap()
 const allComputedStyles = myElement.computedStyleMap();
@@ -73,12 +65,12 @@ const allComputedStyles = myElement.computedStyleMap();
 // iterate thru the map of all the properties and values, adding a <dt> and <dd> for each
 for (const [prop, val] of allComputedStyles) {
   // properties
-  const cssProperty = document.createElement('dt');
+  const cssProperty = document.createElement("dt");
   cssProperty.appendChild(document.createTextNode(prop));
   stylesList.appendChild(cssProperty);
 
   // values
-  const cssValue = document.createElement('dd');
+  const cssValue = document.createElement("dd");
   cssValue.appendChild(document.createTextNode(val));
   stylesList.appendChild(cssValue);
 }

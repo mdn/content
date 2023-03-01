@@ -2,14 +2,8 @@
 title: Element.msZoomTo()
 slug: Web/API/Element/msZoomTo
 page-type: web-api-instance-method
-tags:
-  - API
-  - API:Microsoft Extensions
-  - Method
-  - Microsoft
-  - Non-standard
-  - Reference
-  - msZoomTo
+status:
+  - non-standard
 ---
 
 {{APIRef("Microsoft Extensions")}}{{Non-standard_header}}
@@ -87,10 +81,10 @@ This method does not return a value.
 ```js
 /* Zooming in on an element while still keeping it centered in the viewport */
 const args = {
-    contentX: target.offsetLeft + target.offsetWidth/2,
-    contentY: target.offsetTop + target.offsetHeight/2,
-    scaleFactor: 2.0,
-}
+  contentX: target.offsetLeft + target.offsetWidth / 2,
+  contentY: target.offsetTop + target.offsetHeight / 2,
+  scaleFactor: 2.0,
+};
 zoomer.msZoomTo(args);
 ```
 

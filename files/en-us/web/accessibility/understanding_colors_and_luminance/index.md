@@ -1,29 +1,6 @@
 ---
 title: "Web Accessibility: Understanding Colors and Luminance"
 slug: Web/Accessibility/Understanding_Colors_and_Luminance
-tags:
-  - accessibility
-  - CSS
-  - vision
-  - color
-  - luminance
-  - hue
-  - chroma
-  - saturation
-  - contrast
-  - readability
-  - legibility
-  - displays
-  - red
-  - green
-  - blue
-  - RGB Color model
-  - sRGB
-  - colorspace
-  - epilepsy
-  - photosensitivity
-  - photic seizure
-  - seizure disorders
 ---
 
 <section id="Quick_links">

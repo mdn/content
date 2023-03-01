@@ -2,15 +2,6 @@
 title: SpeechSynthesisEvent.utterance
 slug: Web/API/SpeechSynthesisEvent/utterance
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - SpeechSynthesisEvent
-  - Web Speech API
-  - speech
-  - synthesis
-  - utterance
 browser-compat: api.SpeechSynthesisEvent.utterance
 ---
 

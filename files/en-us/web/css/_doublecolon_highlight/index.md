@@ -2,15 +2,12 @@
 title: "::highlight()"
 slug: Web/CSS/::highlight
 page-type: css-pseudo-element
-tags:
-  - CSS
-  - Pseudo-element
-  - Reference
-  - Selector
+status:
+  - experimental
 browser-compat: css.selectors.highlight
 ---
 
-{{CSSRef}}
+{{CSSRef}}{{SeeCompatTable}}
 
 The **`::highlight()`** CSS [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) applies styles to a custom highlight.
 

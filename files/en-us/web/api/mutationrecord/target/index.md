@@ -2,11 +2,6 @@
 title: MutationRecord.target
 slug: Web/API/MutationRecord/target
 page-type: web-api-instance-property
-tags:
-  - target
-  - MutationRecord
-  - Property
-  - Reference
 browser-compat: api.MutationRecord.target
 ---
 

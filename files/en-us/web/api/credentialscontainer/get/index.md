@@ -2,14 +2,6 @@
 title: CredentialsContainer.get()
 slug: Web/API/CredentialsContainer/get
 page-type: web-api-instance-method
-tags:
-  - API
-  - Credential Management API
-  - CredentialsContainer
-  - Method
-  - NeedsExample
-  - Reference
-  - credential management
 browser-compat: api.CredentialsContainer.get
 ---
 

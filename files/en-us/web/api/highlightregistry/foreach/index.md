@@ -2,17 +2,13 @@
 title: HighlightRegistry.forEach()
 slug: Web/API/HighlightRegistry/forEach
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - CSS Custom Highlight API
-  - Reference
-  - forEach
+status:
+  - experimental
 browser-compat: api.HighlightRegistry.forEach
 spec-urls: https://tc39.es/ecma262/multipage/keyed-collections.html#sec-map.prototype.foreach
 ---
 
-{{APIRef("CSS Custom Highlight API")}}
+{{APIRef("CSS Custom Highlight API")}}{{SeeCompatTable}}
 
 The **`forEach()`** method of the {{domxref("HighlightRegistry")}} interface executes a provided function once for each {{domxref("Highlight")}} object in the registry, in insertion order.
 

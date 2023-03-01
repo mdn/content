@@ -2,12 +2,8 @@
 title: CustomStateSet
 slug: Web/API/CustomStateSet
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Reference
-  - CustomStateSet
-  - Experimental
+status:
+  - experimental
 browser-compat: api.CustomStateSet
 ---
 

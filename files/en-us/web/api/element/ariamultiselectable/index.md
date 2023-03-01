@@ -2,14 +2,6 @@
 title: Element.ariaMultiSelectable
 slug: Web/API/Element/ariaMultiSelectable
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - ariaMultiSelectable
-  - AriaAttributes
-  - AriaMixin
-  - Element
 browser-compat: api.Element.ariaMultiSelectable
 ---
 
@@ -42,9 +34,9 @@ In this example the `aria-multiselectable` attribute on the element with an ID o
 ```
 
 ```js
-let el = document.getElementById('listbox1');
+let el = document.getElementById("listbox1");
 console.log(el.ariaMultiSelectable); // "true"
-el.ariaMultiSelectable = "false"
+el.ariaMultiSelectable = "false";
 console.log(el.ariaMultiSelectable); // "false"
 ```
 

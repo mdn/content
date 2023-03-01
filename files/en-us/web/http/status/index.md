@@ -34,7 +34,7 @@ The status codes listed below are defined by [RFC 9110](https://httpwg.org/specs
   - : This code is sent in response to an {{HTTPHeader("Upgrade")}} request header from the client and indicates the protocol the server is switching to.
 - {{HTTPStatus(102, "102 Processing")}} ({{Glossary("WebDAV")}})
   - : This code indicates that the server has received and is processing the request, but no response is available yet.
-- {{HTTPStatus(103, "103 Early Hints")}}
+- {{HTTPStatus(103, "103 Early Hints")}} {{experimental_inline}}
   - : This status code is primarily intended to be used with the {{HTTPHeader("Link")}} header, letting the user agent start [preloading](/en-US/docs/Web/HTML/Attributes/rel/preload) resources while the server prepares a response.
 
 ## Successful responses
@@ -157,7 +157,7 @@ The status codes listed below are defined by [RFC 9110](https://httpwg.org/specs
 - {{HTTPStatus(421, "421 Misdirected Request")}}
   - : The request was directed at a server that is not able to produce a response.
     This can be sent by a server that is not configured to produce responses for the combination of scheme and authority that are included in the request URI.
-- {{HTTPStatus(422, "422 Unprocessable Entity")}} ({{Glossary("WebDAV")}})
+- {{HTTPStatus(422, "422 Unprocessable Content")}} ({{Glossary("WebDAV")}})
   - : The request was well-formed but was unable to be followed due to semantic errors.
 - {{HTTPStatus(423, "423 Locked")}} ({{Glossary("WebDAV")}})
   - : The resource that is being accessed is locked.

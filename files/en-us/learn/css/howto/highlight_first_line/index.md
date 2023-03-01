@@ -1,13 +1,6 @@
 ---
 title: How to highlight the first line of a paragraph
 slug: Learn/CSS/Howto/Highlight_first_line
-tags:
-  - Basic
-  - Beginner
-  - CSS
-  - CSS:Getting_Started
-  - Guide
-  - Web
 ---
 
 {{LearnSidebar}}

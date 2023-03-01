@@ -2,12 +2,6 @@
 title: HTMLEmbedElement
 slug: Web/API/HTMLEmbedElement
 page-type: web-api-interface
-tags:
-  - API
-  - HTML DOM
-  - Interface
-  - NeedsNewLayout
-  - Reference
 browser-compat: api.HTMLEmbedElement
 ---
 

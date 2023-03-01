@@ -2,15 +2,8 @@
 title: MediaQueryList.removeListener()
 slug: Web/API/MediaQueryList/removeListener
 page-type: web-api-instance-method
-tags:
-  - API
-  - CSSOM View
-  - Media Queries
-  - MediaQueryList
-  - Method
-  - Reference
-  - removeListener
-  - Deprecated
+status:
+  - deprecated
 browser-compat: api.MediaQueryList.removeListener
 ---
 
@@ -44,18 +37,18 @@ None ({{jsxref("undefined")}}).
 ## Examples
 
 ```js
-const paragraph = document.querySelector('p');
-const mediaQueryList = window.matchMedia('(max-width: 600px)');
+const paragraph = document.querySelector("p");
+const mediaQueryList = window.matchMedia("(max-width: 600px)");
 
 function screenTest(e) {
   if (e.matches) {
     /* the viewport is 600 pixels wide or less */
-    paragraph.textContent = 'This is a narrow screen — 600px wide or less.';
-    document.body.style.backgroundColor = 'pink';
+    paragraph.textContent = "This is a narrow screen — 600px wide or less.";
+    document.body.style.backgroundColor = "pink";
   } else {
     /* the viewport is more than 600 pixels wide */
-    paragraph.textContent = 'This is a wide screen — more than 600px wide.';
-    document.body.style.backgroundColor = 'aquamarine';
+    paragraph.textContent = "This is a wide screen — more than 600px wide.";
+    document.body.style.backgroundColor = "aquamarine";
   }
 }
 

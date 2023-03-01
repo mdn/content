@@ -2,15 +2,8 @@
 title: CSSUnitValue.unit
 slug: Web/API/CSSUnitValue/unit
 page-type: web-api-instance-property
-tags:
-  - API
-  - CSS Typed Object Model API
-  - CSSUnitValue
-  - Experimental
-  - Houdini
-  - Property
-  - Reference
-  - unit
+status:
+  - experimental
 browser-compat: api.CSSUnitValue.unit
 ---
 
@@ -51,5 +44,6 @@ console.log(pos.y.unit); // "em"
 ## See also
 
 - {{domxref('CSSUnitValue.value')}}
+- [Dimensions in CSS units and values](/en-US/docs/Web/CSS/CSS_Values_and_Units#dimensions)
 - [Using the CSS Typed OM](/en-US/docs/Web/API/CSS_Typed_OM_API/Guide)
 - [CSS Typed Object Model API](/en-US/docs/Web/API/CSS_Typed_OM_API)

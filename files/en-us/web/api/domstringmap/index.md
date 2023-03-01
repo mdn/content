@@ -2,14 +2,6 @@
 title: DOMStringMap
 slug: Web/API/DOMStringMap
 page-type: web-api-interface
-tags:
-  - API
-  - HTML DOM
-  - Interface
-  - NeedsMarkupWork
-  - NeedsNewLayout
-  - NeedsUpdate
-  - Reference
 browser-compat: api.DOMStringMap
 ---
 

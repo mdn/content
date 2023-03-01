@@ -2,14 +2,9 @@
 title: PaymentRequestEvent.instrumentKey
 slug: Web/API/PaymentRequestEvent/instrumentKey
 page-type: web-api-instance-property
-tags:
-  - API
-  - Deprecated
-  - Property
-  - Payment Request API
-  - PaymentRequestEvent
-  - Reference
-  - Non-standard
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.PaymentRequestEvent.instrumentKey
 ---
 

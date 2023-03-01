@@ -1,12 +1,6 @@
 ---
 title: aria-colspan
 slug: Web/Accessibility/ARIA/Attributes/aria-colspan
-tags:
-  - Accessibility
-  - ARIA
-  - ARIA attribute
-  - ARIA property
-  - aria-colspan
 spec-urls: https://w3c.github.io/aria/#aria-colspan
 ---
 

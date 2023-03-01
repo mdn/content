@@ -2,15 +2,6 @@
 title: yield*
 slug: Web/JavaScript/Reference/Operators/yield*
 page-type: javascript-operator
-tags:
-  - ECMAScript 2015
-  - Generators
-  - Iterable
-  - Iterator
-  - JavaScript
-  - Language feature
-  - Operator
-  - Reference
 browser-compat: javascript.operators.yield_star
 ---
 

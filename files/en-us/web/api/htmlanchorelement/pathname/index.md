@@ -2,11 +2,6 @@
 title: HTMLAnchorElement.pathname
 slug: Web/API/HTMLAnchorElement/pathname
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTMLAnchorElement
-  - Property
-  - Reference
 browser-compat: api.HTMLAnchorElement.pathname
 ---
 

@@ -2,12 +2,8 @@
 title: 'SerialPort: disconnect event'
 slug: Web/API/SerialPort/disconnect_event
 page-type: web-api-event
-tags:
-  - API
-  - Event
-  - Reference
-  - SerialPort
-  - Experimental
+status:
+  - experimental
 browser-compat: api.SerialPort.disconnect_event
 ---
 

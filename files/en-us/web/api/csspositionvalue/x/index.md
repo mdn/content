@@ -2,16 +2,9 @@
 title: CSSPositionValue.x
 slug: Web/API/CSSPositionValue/x
 page-type: web-api-instance-property
-tags:
-  - API
-  - CSS Typed Object Model API
-  - CSSPositionValue
-  - Houdini
-  - Property
-  - Reference
-  - Deprecated
-  - x
-  - Non-standard
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.CSSPositionValue.x
 ---
 

@@ -2,15 +2,6 @@
 title: "ServiceWorkerGlobalScope: fetch event"
 slug: Web/API/ServiceWorkerGlobalScope/fetch_event
 page-type: web-api-event
-tags:
-  - API
-  - Property
-  - Reference
-  - Service
-  - ServiceWorker
-  - ServiceWorkerGlobalScope
-  - Workers
-  - onfetch
 browser-compat: api.ServiceWorkerGlobalScope.fetch_event
 ---
 
@@ -32,7 +23,7 @@ onfetch = (event) => {};
 
 ## Event type
 
-A generic {{domxref("Event")}}.
+A {{domxref("FetchEvent")}}.
 
 ## Example
 

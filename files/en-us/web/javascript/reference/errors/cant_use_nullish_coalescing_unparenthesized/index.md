@@ -2,10 +2,6 @@
 title: "SyntaxError: cannot use `??` unparenthesized within `||` and `&&` expressions"
 slug: Web/JavaScript/Reference/Errors/Cant_use_nullish_coalescing_unparenthesized
 page-type: javascript-error
-tags:
-  - Error
-  - JavaScript
-  - SyntaxError
 ---
 
 {{jsSidebar("Errors")}}

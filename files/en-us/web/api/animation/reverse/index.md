@@ -2,16 +2,6 @@
 title: Animation.reverse()
 slug: Web/API/Animation/reverse
 page-type: web-api-instance-method
-tags:
-  - API
-  - Animation
-  - Interface
-  - Method
-  - Reference
-  - Web Animations
-  - reverse
-  - waapi
-  - web animations api
 browser-compat: api.Animation.reverse
 ---
 

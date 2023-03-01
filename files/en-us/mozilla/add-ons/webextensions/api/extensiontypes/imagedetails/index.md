@@ -1,6 +1,7 @@
 ---
 title: extensionTypes.ImageDetails
 slug: Mozilla/Add-ons/WebExtensions/API/extensionTypes/ImageDetails
+page-type: webextension-api-type
 tags:
   - API
   - Add-ons

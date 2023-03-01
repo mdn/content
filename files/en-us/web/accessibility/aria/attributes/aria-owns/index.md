@@ -1,13 +1,6 @@
 ---
-title: "aria-owns"
+title: aria-owns
 slug: Web/Accessibility/ARIA/Attributes/aria-owns
-tags:
-  - Accessibility
-  - ARIA
-  - ARIA attribute
-  - ARIA property
-  - aria-owns
-  - Reference
 spec-urls: https://w3c.github.io/aria/#aria-owns
 ---
 

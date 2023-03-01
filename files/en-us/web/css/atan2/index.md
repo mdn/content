@@ -2,14 +2,6 @@
 title: atan2()
 slug: Web/CSS/atan2
 page-type: css-function
-tags:
-  - CSS
-  - CSS Function
-  - Function
-  - Math
-  - Reference
-  - Web
-  - atan2
 browser-compat: css.types.atan2
 ---
 

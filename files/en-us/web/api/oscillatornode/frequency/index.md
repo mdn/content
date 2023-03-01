@@ -2,13 +2,6 @@
 title: OscillatorNode.frequency
 slug: Web/API/OscillatorNode/frequency
 page-type: web-api-instance-property
-tags:
-  - API
-  - OscillatorNode
-  - Property
-  - Reference
-  - Web Audio API
-  - frequency
 browser-compat: api.OscillatorNode.frequency
 ---
 
@@ -33,7 +26,7 @@ const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
 // create Oscillator node
 const oscillator = audioCtx.createOscillator();
 
-oscillator.type = 'square';
+oscillator.type = "square";
 oscillator.frequency.setValueAtTime(440, audioCtx.currentTime); // value in hertz
 oscillator.start();
 ```

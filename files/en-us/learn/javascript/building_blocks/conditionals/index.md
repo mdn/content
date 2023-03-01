@@ -1,19 +1,6 @@
 ---
 title: Making decisions in your code — conditionals
 slug: Learn/JavaScript/Building_blocks/conditionals
-tags:
-  - Article
-  - Beginner
-  - CodingScripting
-  - Conditionals
-  - JavaScript
-  - Learn
-  - Switch
-  - conditions
-  - else
-  - if
-  - "l10n:priority"
-  - ternary
 ---
 
 {{LearnSidebar}}{{NextMenu("Learn/JavaScript/Building_blocks/Looping_code", "Learn/JavaScript/Building_blocks")}}
@@ -412,7 +399,7 @@ select.addEventListener('change', () => select.value === 'black'
 
 {{ EmbedLiveSample('Ternary_operator_example', '100%', 300, "", "") }}
 
-Here we've got a {{htmlelement('select')}} element to choose a theme (black or white), plus a simple {{htmlelement('h1')}} to display a website title. We also have a function called `update()`, which takes two colors as parameters (inputs). The website's background color is set to the first provided color, and its text color is set to the second provided color.
+Here we've got a {{htmlelement('select')}} element to choose a theme (black or white), plus a simple {{htmlelement("Heading_Elements", "h1")}} to display a website title. We also have a function called `update()`, which takes two colors as parameters (inputs). The website's background color is set to the first provided color, and its text color is set to the second provided color.
 
 Finally, we've also got an [onchange](/en-US/docs/Web/API/HTMLElement/change_event) event listener that serves to run a function containing a ternary operator. It starts with a test condition — `select.value === 'black'`. If this returns `true`, we run the `update()` function with parameters of black and white, meaning that we end up with a background color of black and a text color of white. If it returns `false`, we run the `update()` function with parameters of white and black, meaning that the site colors are inverted.
 
@@ -424,7 +411,7 @@ In this example, you are going to help us finish a simple calendar application. 
 
 - A {{htmlelement("select")}} element to allow the user to choose between different months.
 - An `onchange` event handler to detect when the value selected in the `<select>` menu is changed.
-- A function called `createCalendar()` that draws the calendar and displays the correct month in the {{htmlelement("h1")}} element.
+- A function called `createCalendar()` that draws the calendar and displays the correct month in the {{htmlelement("Heading_Elements", "h1")}} element.
 
 We need you to write a conditional statement inside the `onchange` handler function, just below the `// ADD CONDITIONAL HERE` comment. It should:
 
@@ -849,13 +836,3 @@ And that's all you really need to know about conditional structures in JavaScrip
 - [Conditional (ternary) operator reference](/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator)
 
 {{NextMenu("Learn/JavaScript/Building_blocks/Looping_code", "Learn/JavaScript/Building_blocks")}}
-
-## In this module
-
-- **Making decisions in your code — conditionals**
-- [Looping code](/en-US/docs/Learn/JavaScript/Building_blocks/Looping_code)
-- [Functions — reusable blocks of code](/en-US/docs/Learn/JavaScript/Building_blocks/Functions)
-- [Build your own function](/en-US/docs/Learn/JavaScript/Building_blocks/Build_your_own_function)
-- [Function return values](/en-US/docs/Learn/JavaScript/Building_blocks/Return_values)
-- [Introduction to events](/en-US/docs/Learn/JavaScript/Building_blocks/Events)
-- [Image gallery](/en-US/docs/Learn/JavaScript/Building_blocks/Image_gallery)

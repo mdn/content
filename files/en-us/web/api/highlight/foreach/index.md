@@ -2,17 +2,13 @@
 title: Highlight.forEach()
 slug: Web/API/Highlight/forEach
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - CSS Custom Highlight API
-  - Reference
-  - forEach
+status:
+  - experimental
 browser-compat: api.Highlight.forEach
 spec-urls: https://tc39.es/ecma262/multipage/keyed-collections.html#sec-set.prototype.foreach
 ---
 
-{{APIRef("CSS Custom Highlight API")}}
+{{APIRef("CSS Custom Highlight API")}}{{SeeCompatTable}}
 
 The **`forEach()`** method of the {{domxref("Highlight")}} interface executes a provided function once for each {{domxref("Range")}} object in the `Highlight` object, in insertion order.
 
@@ -64,7 +60,7 @@ The code snippet below shows how create a new highlight with two ranges, and the
 
 ```js
 function logRanges(range, key, highlight) {
-    console.log(`Highlight object ${highlight} contains range ${range}`);
+  console.log(`Highlight object ${highlight} contains range ${range}`);
 }
 
 const text = new Text("Time is an illusion. Lunchtime doubly so.");

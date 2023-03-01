@@ -2,14 +2,6 @@
 title: HTMLFormElement.length
 slug: Web/API/HTMLFormElement/length
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTML DOM
-  - HTMLFormElement
-  - NeedsSpecTable
-  - Property
-  - Read-only
-  - Reference
 browser-compat: api.HTMLFormElement.length
 ---
 
@@ -39,7 +31,7 @@ A number.
 ## Examples
 
 ```js
-if (document.getElementById('form1').length > 1) {
+if (document.getElementById("form1").length > 1) {
   // more than one form control here
 }
 ```

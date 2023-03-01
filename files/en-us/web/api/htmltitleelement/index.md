@@ -2,11 +2,6 @@
 title: HTMLTitleElement
 slug: Web/API/HTMLTitleElement
 page-type: web-api-interface
-tags:
-  - API
-  - HTML DOM
-  - Interface
-  - Reference
 browser-compat: api.HTMLTitleElement
 ---
 

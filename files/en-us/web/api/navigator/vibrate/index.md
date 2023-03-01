@@ -2,12 +2,6 @@
 title: Navigator.vibrate()
 slug: Web/API/Navigator/vibrate
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Navigator
-  - Reference
-  - Vibration API
 browser-compat: api.Navigator.vibrate
 ---
 
@@ -51,7 +45,9 @@ A boolean.
 
 ```js
 navigator.vibrate(200); // vibrate for 200ms
-navigator.vibrate([100,30,100,30,100,30,200,30,200,30,200,30,100,30,100,30,100]); // Vibrate 'SOS' in Morse.
+navigator.vibrate([
+  100, 30, 100, 30, 100, 30, 200, 30, 200, 30, 200, 30, 100, 30, 100, 30, 100,
+]); // Vibrate 'SOS' in Morse.
 ```
 
 ## Specifications

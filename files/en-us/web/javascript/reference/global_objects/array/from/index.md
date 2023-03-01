@@ -2,13 +2,6 @@
 title: Array.from()
 slug: Web/JavaScript/Reference/Global_Objects/Array/from
 page-type: javascript-static-method
-tags:
-  - Array
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Reference
-  - Polyfill
 browser-compat: javascript.builtins.Array.from
 ---
 

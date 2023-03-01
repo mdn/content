@@ -2,12 +2,6 @@
 title: Element.getAttributeNS()
 slug: Web/API/Element/getAttributeNS
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - Element
-  - Method
-  - Reference
 browser-compat: api.Element.getAttributeNS
 ---
 

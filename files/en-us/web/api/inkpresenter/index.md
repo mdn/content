@@ -2,16 +2,8 @@
 title: InkPresenter
 slug: Web/API/InkPresenter
 page-type: web-api-interface
-tags:
-  - API
-  - Experimental
-  - Ink
-  - Inking
-  - InkPresenter
-  - Interface
-  - Landing
-  - Latency
-  - Overview
+status:
+  - experimental
 browser-compat: api.InkPresenter
 ---
 
@@ -45,39 +37,42 @@ Later on, in the `pointermove` event listener, the new position of the trailhead
 The result is that a delegated ink trail is drawn ahead of the default browser rendering on the app's behalf, in the specified style, until the next time it receives a `pointermove` event.
 
 ```js
-const ctx = canvas.getContext('2d');
-let presenter = navigator.ink.requestPresenter({presentationArea: canvas});
+const ctx = canvas.getContext("2d");
+let presenter = navigator.ink.requestPresenter({ presentationArea: canvas });
 let move_cnt = 0;
 let style = { color: "rgba(0, 0, 255, 1)", diameter: 10 };
 
 function getRandomInt(min, max) {
-    min = Math.ceil(min);
-    max = Math.floor(max);
-    return Math.floor(Math.random() * (max - min + 1)) + min;
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-canvas.addEventListener("pointermove", evt => {
+canvas.addEventListener("pointermove", (evt) => {
   const pointSize = 10;
   ctx.fillStyle = "#000000";
   ctx.fillRect(evt.pageX, evt.pageY, pointSize, pointSize);
   if (move_cnt == 50) {
-      let r = getRandomInt(0,255);
-      let g = getRandomInt(0,255);
-      let b = getRandomInt(0,255);
-      style = { color: "rgba("+r+", "+g+", "+b+", 1)", diameter:10};
-      move_cnt = 0;
-      document.getElementById('div').style.backgroundColor = "rgba("+r+", "+g+", "+b+", 1)";
+    let r = getRandomInt(0, 255);
+    let g = getRandomInt(0, 255);
+    let b = getRandomInt(0, 255);
+    style = { color: "rgba(" + r + ", " + g + ", " + b + ", 1)", diameter: 10 };
+    move_cnt = 0;
+    document.getElementById("div").style.backgroundColor =
+      "rgba(" + r + ", " + g + ", " + b + ", 1)";
   }
   move_cnt += 1;
-  presenter.then(function(v) { v.updateInkTrailStartPoint(evt, style); });
+  presenter.then(function (v) {
+    v.updateInkTrailStartPoint(evt, style);
+  });
 });
 
-window.addEventListener("pointerdown", evt => {
+window.addEventListener("pointerdown", (evt) => {
   evt.pointerId;
   ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
 });
 
-canvas.width =  window.innerWidth;
+canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 ```
 

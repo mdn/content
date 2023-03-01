@@ -2,13 +2,8 @@
 title: ruby-align
 slug: Web/CSS/ruby-align
 page-type: css-property
-tags:
-  - CSS
-  - CSS Property
-  - CSS Ruby
-  - Reference
-  - recipe:css-property
-  - Experimental
+status:
+  - experimental
 browser-compat: css.properties.ruby-align
 ---
 

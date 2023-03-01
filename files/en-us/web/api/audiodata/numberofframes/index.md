@@ -2,13 +2,8 @@
 title: AudioData.numberOfFrames
 slug: Web/API/AudioData/numberOfFrames
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - numberOfFrames
-  - AudioData
-  - Experimental
+status:
+  - experimental
 browser-compat: api.AudioData.numberOfFrames
 ---
 

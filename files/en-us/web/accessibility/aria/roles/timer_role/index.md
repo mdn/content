@@ -1,13 +1,6 @@
 ---
 title: "ARIA: timer role"
 slug: Web/Accessibility/ARIA/Roles/timer_role
-tags:
-  - ARIA
-  - ARIA Role
-  - ARIA widget
-  - Reference
-  - Role Timer
-  - timer
 spec-urls: https://w3c.github.io/aria/#timer
 ---
 

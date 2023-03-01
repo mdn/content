@@ -2,14 +2,6 @@
 title: ":host-context()"
 slug: Web/CSS/:host-context
 page-type: css-pseudo-class
-tags:
-  - ":host-context()"
-  - CSS
-  - Layout
-  - Pseudo-class
-  - Reference
-  - Selector
-  - Web
 browser-compat: css.selectors.host-context
 ---
 

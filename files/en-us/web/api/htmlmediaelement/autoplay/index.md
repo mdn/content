@@ -2,17 +2,6 @@
 title: HTMLMediaElement.autoplay
 slug: Web/API/HTMLMediaElement/autoplay
 page-type: web-api-instance-property
-tags:
-  - API
-  - Audio
-  - HTML DOM
-  - HTMLMediaElement
-  - Media
-  - NeedsExample
-  - Property
-  - Video
-  - Web
-  - autoplay
 browser-compat: api.HTMLMediaElement.autoplay
 ---
 
@@ -60,7 +49,7 @@ interruption.
 ```js
 // Disable autoplay (recommended)
 // false is the default value
-document.querySelector('#video').autoplay = false;
+document.querySelector("#video").autoplay = false;
 ```
 
 ## Specifications

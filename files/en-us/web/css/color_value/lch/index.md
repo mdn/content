@@ -2,15 +2,8 @@
 title: lch()
 slug: Web/CSS/color_value/lch
 page-type: css-function
-tags:
-  - CSS
-  - CSS Data Type
-  - Data Type
-  - Reference
-  - Web
-  - color
-  - lch
-  - Experimental
+status:
+  - experimental
 browser-compat: css.types.color.lch
 ---
 
