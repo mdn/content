@@ -165,10 +165,10 @@ The first part of the CSS sets up the **named** pages, these include the size an
   }
 }
 
-@page foreward {
+@page foreword {
   size: a4 portrait;
   @top-middle {
-    content: "Foreward";
+    content: "Foreword";
   }
 }
 
