@@ -32,12 +32,9 @@ page: unset;
 ### Values
 
 - `auto`
-  - : Default value.
-  - : Default value. Use the value of the nearest ancestor with a non-`auto` value. If no ancestor has a named page value set, the empty string.
+  - : Default value. Use the value of the nearest ancestor with a non-`auto` value. If no ancestor has a named page value set, the used value for auto is the empty string.
 - {{cssxref("custom-ident")}}
   - : Case-sensitive name defined in a [`@page`](/en-US/docs/Web/CSS/@page) at-rule.
-
-> **Note:** The `page` property does not inherit. However, if the `page` value on an element is `auto`, then its used value is the value specified on its nearest ancestor with a non-`auto` value. When specified on the root element, the used value for auto is the empty string.
 
 ## Formal definition
 
