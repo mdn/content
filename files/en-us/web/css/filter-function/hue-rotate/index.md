@@ -40,7 +40,7 @@ hue-rotate(0.5turn)
 
 ## Examples
 
-### With backdrop-filter
+### With the backdrop-filter property
 
 This example applies a `hue-rotate()` filter via the `backdrop-filter` CSS property the paragraph color shifting to the area behind the `<p>`.
 
@@ -77,9 +77,39 @@ p {
 </div>
 ```
 
-{{EmbedLiveSample('With_backdrop-filter','100%','280')}}
+{{EmbedLiveSample('With_the_backdrop-filter_property','100%','280')}}
 
-### SVG filter equivalent
+### With the filter property
+
+This example applies a `hue-rotate()` filter via the `filter` CSS property adding the color shift to to the entire element, including content, border, and background image.
+
+```css
+p {
+  filter: hue-rotate(-60deg);
+  text-shadow: 2px 2px blue;
+  background-color: magenta;
+  color: goldenrod;
+  border: 1em solid rebeccapurple;
+  box-shadow: inset -5px -5px red, 5px 5px yellow;
+}
+```
+
+```css hidden
+p {
+  padding: 0.5rem;
+  font-size: 2rem;
+  font-family: sans-serif;
+  width: 85vw;
+}
+```
+
+```html hidden
+<p>The person who wrote this example is not a designer, fortunately.</p>
+```
+
+{{EmbedLiveSample('With_the_filter_property','100%','220')}}
+
+### With url() and the SVG hueRotate filter
 
 The SVG {{SVGElement("filter")}} element is used to define custom filter effects that can then be referenced by {{htmlattrxref("id")}}. The `<filter>`'s {{SVGElement("feColorMatrix")}} primitive `hueRotate` type provides the same effect. Given the following:
 
@@ -89,7 +119,7 @@ The SVG {{SVGElement("filter")}} element is used to define custom filter effects
 </filter>
 ```
 
-These values for the {{cssxref("filter")}} and {{cssxref("backdrop-filter")}} properties would produce the same results:
+These values produce the same results:
 
 ```css
 filter: hue-rotate(90deg); /* 90deg rotation */
@@ -140,7 +170,7 @@ This example shows three images: the image with a `hue-rotate()` filter function
 </table>
 ```
 
-{{EmbedLiveSample('SVG_filter_equivalent','100%','280')}}
+{{EmbedLiveSample('With_url()_and_the_SVG_hueRotate_filter','100%','280')}}
 
 ## Specifications
 
