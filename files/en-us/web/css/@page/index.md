@@ -29,7 +29,7 @@ The **`@page`** at-rule is a CSS at-rule used to modify different aspects of a p
   margin-top: 4in;
 }
 
-/* Targets all selectors with an page property */
+/* Targets all selectors with `page: wide;` set */
 @page wide {
   size: a4 landscape;
 }
