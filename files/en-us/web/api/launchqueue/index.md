@@ -2,12 +2,8 @@
 title: LaunchQueue
 slug: Web/API/LaunchQueue
 page-type: web-api-interface
-tags:
-  - API
-  - Experimental
-  - Interface
-  - LaunchQueue
-  - Reference
+status:
+  - experimental
 browser-compat: api.LaunchQueue
 ---
 
@@ -25,13 +21,13 @@ The **`LaunchQueue`** interface is available via the {{domxref("Window.launchQue
 ## Examples
 
 ```js
-if ('launchQueue' in window) {
-  window.launchQueue.setConsumer(launchParams => {
+if ("launchQueue" in window) {
+  window.launchQueue.setConsumer((launchParams) => {
     if (launchParams.targetURL) {
       const params = new URL(launchParams.targetURL).searchParams;
 
       // Assuming a music player app that gets a track passed to it to be played
-      const track = params.get('track');
+      const track = params.get("track");
       if (track) {
         audio.src = track;
         title.textContent = new URL(track).pathname.substr(1);

@@ -16,7 +16,8 @@ jobs:
     runs-on: ubuntu-latest
 
     if: >
-      ${{ github.event.workflow_run.event == 'pull_request' &&
+      ${{ github.repository == 'mdn/content' &&
+      github.event.workflow_run.event == 'pull_request' &&
       github.event.workflow_run.conclusion == 'success' }}
 
     steps:
@@ -55,7 +56,7 @@ jobs:
 
       - name: Unzip what was downloaded
         run: |
-          unzip build.zip -d build
+          7z x build.zip -obuild -bb1
 
       - uses: actions/checkout@v3
         with:

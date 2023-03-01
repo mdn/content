@@ -1,12 +1,7 @@
 ---
-title: 'SyntaxError: return not in function'
+title: "SyntaxError: return not in function"
 slug: Web/JavaScript/Reference/Errors/Bad_return_or_yield
 page-type: javascript-error
-tags:
-  - Error
-  - Errors
-  - JavaScript
-  - SyntaxError
 ---
 
 {{jsSidebar("Errors")}}
@@ -45,10 +40,10 @@ execution and specify a value to be returned to the function caller.
 ```js example-bad
 function cheer(score) {
   if (score === 147)
-    return 'Maximum!';
+    return "Maximum!";
   }
   if (score > 100) {
-    return 'Century!';
+    return "Century!";
   }
 }
 
@@ -61,10 +56,10 @@ The curly brackets look correct at a first glance, but this code snippet is miss
 ```js example-good
 function cheer(score) {
   if (score === 147) {
-    return 'Maximum!';
+    return "Maximum!";
   }
   if (score > 100) {
-    return 'Century!';
+    return "Century!";
   }
 }
 ```

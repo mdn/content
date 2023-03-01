@@ -1,16 +1,12 @@
 ---
 title: XMLHttpRequest.msCachingEnabled()
 slug: Web/API/XMLHttpRequest/msCachingEnabled
-page-type: api-instance-method
-tags:
-  - msCachingEnabled
-  - Method
-  - Non-standard
+page-type: web-api-instance-method
+status:
+  - non-standard
 ---
 
-{{APIRef("HTML DOM")}}
-
-{{Non-standard_header()}}
+{{APIRef("HTML DOM")}}{{Non-standard_header}}
 
 The **`msCachingEnabled()`** method gets the current caching state for an [XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest).
 

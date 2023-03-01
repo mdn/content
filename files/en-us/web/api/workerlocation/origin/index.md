@@ -2,12 +2,6 @@
 title: WorkerLocation.origin
 slug: Web/API/WorkerLocation/origin
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Read-only
-  - Reference
-  - WorkerLocation
 browser-compat: api.WorkerLocation.origin
 ---
 

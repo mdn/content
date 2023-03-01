@@ -2,58 +2,12 @@
 title: <input type="submit">
 slug: Web/HTML/Element/input/submit
 page-type: html-element
-tags:
-  - Element
-  - Form Button
-  - Form input
-  - HTML
-  - HTML forms
-  - Input
-  - Input Types
-  - Reference
-  - Submit Form
-  - button
-  - form
-  - submit
-  - submit button
 browser-compat: html.elements.input.type_submit
 ---
 
 {{HTMLSidebar}}
 
 {{HTMLElement("input")}} elements of type **`submit`** are rendered as buttons. When the {{domxref("Element/click_event", "click")}} event occurs (typically because the user clicked the button), the {{Glossary("user agent")}} attempts to submit the form to the server.
-
-<table class="properties">
-  <tbody>
-    <tr>
-      <td><strong><a href="#value">Value</a></strong></td>
-      <td>A string used as the button's label</td>
-    </tr>
-    <tr>
-      <td><strong>Events</strong></td>
-      <td>{{domxref("Element/click_event", "click")}}</td>
-    </tr>
-    <tr>
-      <td><strong>Supported common attributes</strong></td>
-      <td>
-        <a href="/en-US/docs/Web/HTML/Element/input#type"><code>type</code></a> and
-        <a href="/en-US/docs/Web/HTML/Element/input#value"><code>value</code></a>
-      </td>
-    </tr>
-    <tr>
-      <td><strong>IDL attributes</strong></td>
-      <td><code>value</code></td>
-    </tr>
-    <tr>
-      <td><strong>DOM interface</strong></td>
-      <td><p>{{domxref("HTMLInputElement")}}</p></td>
-    </tr>
-    <tr>
-      <td><strong>Methods</strong></td>
-      <td>None</td>
-    </tr>
-  </tbody>
-</table>
 
 ## Value
 
@@ -92,7 +46,7 @@ This attribute is also available on [`<input type="image">`](/en-US/docs/Web/HTM
 A string that identifies the encoding method to use when submitting the form data to the server. There are three permitted values:
 
 - `application/x-www-form-urlencoded`
-  - : This, the default value, sends the form data as a string after URL encoding the text using an algorithm such as {{jsxref("encodeURI", "encodeURI()")}}.
+  - : This, the default value, sends the form data as a string after [URL encoding](https://en.wikipedia.org/wiki/URL_encoding) the text using an algorithm such as {{jsxref("encodeURI", "encodeURI()")}}.
 - `multipart/form-data`
   - : Uses the {{domxref("FormData")}} API to manage the data, allowing for files to be submitted to the server. You _must_ use this encoding type if your form includes any {{HTMLElement("input")}} elements of [`type`](/en-US/docs/Web/HTML/Element/input#type) `file` ([`<input type="file">`](/en-US/docs/Web/HTML/Element/input/file)).
 - `text/plain`
@@ -213,6 +167,44 @@ Submit buttons don't participate in constraint validation; they have no real val
 ## Examples
 
 We've included simple examples above. There isn't really anything more to say about submit buttons. There's a reason this kind of control is sometimes called a "simple button."
+
+## Technical Summary
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <td><strong><a href="#value">Value</a></strong></td>
+      <td>A string used as the button's label</td>
+    </tr>
+    <tr>
+      <td><strong>Events</strong></td>
+      <td>{{domxref("Element/click_event", "click")}}</td>
+    </tr>
+    <tr>
+      <td><strong>Supported common attributes</strong></td>
+      <td>
+        <a href="/en-US/docs/Web/HTML/Element/input#type"><code>type</code></a> and
+        <a href="/en-US/docs/Web/HTML/Element/input#value"><code>value</code></a>
+      </td>
+    </tr>
+    <tr>
+      <td><strong>IDL attributes</strong></td>
+      <td><code>value</code></td>
+    </tr>
+    <tr>
+      <td><strong>DOM interface</strong></td>
+      <td><p>{{domxref("HTMLInputElement")}}</p></td>
+    </tr>
+    <tr>
+      <td><strong>Methods</strong></td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <td><strong>Implicit ARIA Role</strong></td>
+      <td><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/button_role"><code>button</code></a></td>
+    </tr>
+  </tbody>
+</table>
 
 ## Specifications
 

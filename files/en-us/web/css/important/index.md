@@ -1,14 +1,7 @@
 ---
-title: '!important'
+title: "!important"
 slug: Web/CSS/important
 page-type: css-keyword
-tags:
-  - CSS
-  - Reference
-  - CSS rule
-  - important
-  - \!important
-# browser-compat: css.flag.important
 ---
 
 {{CSSRef}}
@@ -125,10 +118,10 @@ When the `!important` flag is added to a custom property value declaration, it m
 }
 p {
   color: var(--myColor);
-  }
+}
 blockquote {
-   color: var(--myColor);
-   color: purple;
+  color: var(--myColor);
+  color: purple;
 }
 ```
 

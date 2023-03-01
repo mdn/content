@@ -2,12 +2,6 @@
 title: Headers.forEach()
 slug: Web/API/Headers/forEach
 page-type: web-api-instance-method
-tags:
-  - API
-  - Fetch API
-  - Headers
-  - Method
-  - Reference
 browser-compat: api.Headers.forEach
 ---
 
@@ -65,7 +59,7 @@ myHeaders.append("compression", "gzip");
 // Display the key/value pairs
 myHeaders.forEach((value, key) => {
   console.log(`${key} ==> ${value}`);
-})
+});
 ```
 
 The result is:

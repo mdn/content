@@ -2,20 +2,6 @@
 title: 'RTCPeerConnection: icegatheringstatechange event'
 slug: Web/API/RTCPeerConnection/icegatheringstatechange_event
 page-type: web-api-event
-tags:
-  - API
-  - Connection
-  - Connectivity
-  - Gathering
-  - ICE
-  - RTCPeerConnection
-  - Reference
-  - WebRTC
-  - WebRTC API
-  - events
-  - Event
-  - icegatheringstatechange
-  - state
 browser-compat: api.RTCPeerConnection.icegatheringstatechange_event
 ---
 
@@ -35,9 +21,9 @@ This event is not cancelable and does not bubble.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('iceconnectionstatechange', (event) => { });
+addEventListener('icegatheringstatechange', (event) => { });
 
-oniceconnectionstatechange = (event) => { };
+onicegatheringstatechange = (event) => { };
 ```
 
 ## Event type

@@ -2,17 +2,6 @@
 title: RTCPeerConnection.generateCertificate() static function
 slug: Web/API/RTCPeerConnection/generateCertificate
 page-type: web-api-static-method
-tags:
-  - API
-  - Media
-  - RTCPeerConnection
-  - Reference
-  - Security
-  - Static Method
-  - Method
-  - WebRTC
-  - WebRTC API
-  - generateCertificate
 browser-compat: api.RTCPeerConnection.generateCertificate
 ---
 

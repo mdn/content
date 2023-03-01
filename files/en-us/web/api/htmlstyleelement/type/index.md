@@ -2,15 +2,8 @@
 title: HTMLStyleElement.type
 slug: Web/API/HTMLStyleElement/type
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTML DOM
-  - HTMLStyleElement
-  - NeedsMarkupWork
-  - NeedsSpecTable
-  - Property
-  - Read-only
-  - Deprecated
+status:
+  - deprecated
 browser-compat: api.HTMLStyleElement.type
 ---
 

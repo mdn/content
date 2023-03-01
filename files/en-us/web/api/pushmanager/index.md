@@ -2,13 +2,6 @@
 title: PushManager
 slug: Web/API/PushManager
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Push
-  - Push API
-  - Reference
-  - Service Workers
 browser-compat: api.PushManager
 ---
 

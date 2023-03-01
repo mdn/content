@@ -1,13 +1,6 @@
 ---
 title: "ARIA: application role"
 slug: Web/Accessibility/ARIA/Roles/application_role
-tags:
-  - ARIA
-  - ARIA Role
-  - ARIA widget
-  - Reference
-  - Role application
-  - document structure role
 spec-urls:
   - https://w3c.github.io/aria/#application
   - https://w3c.github.io/aria-practices/#application

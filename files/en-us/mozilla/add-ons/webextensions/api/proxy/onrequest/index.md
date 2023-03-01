@@ -1,6 +1,7 @@
 ---
 title: proxy.onRequest
 slug: Mozilla/Add-ons/WebExtensions/API/proxy/onRequest
+page-type: webextension-api-event
 tags:
   - API
   - Add-ons

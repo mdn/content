@@ -2,14 +2,6 @@
 title: Gamepad.connected
 slug: Web/API/Gamepad/connected
 page-type: web-api-instance-property
-tags:
-  - API
-  - Gamepad API
-  - Games
-  - NeedsBetterSpecLink
-  - NeedsMarkupWork
-  - Property
-  - Reference
 browser-compat: api.Gamepad.connected
 ---
 

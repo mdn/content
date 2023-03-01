@@ -2,11 +2,6 @@
 title: HTMLAreaElement
 slug: Web/API/HTMLAreaElement
 page-type: web-api-interface
-tags:
-  - API
-  - HTML DOM
-  - Interface
-  - Reference
 browser-compat: api.HTMLAreaElement
 ---
 

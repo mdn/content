@@ -2,12 +2,6 @@
 title: id
 slug: Web/HTML/Global_attributes/id
 page-type: html-attribute
-tags:
-  - Global attributes
-  - HTML
-  - Reference
-  - Web
-  - id
 browser-compat: html.global_attributes.id
 ---
 

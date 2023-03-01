@@ -2,10 +2,6 @@
 title: RangeError() constructor
 slug: Web/JavaScript/Reference/Global_Objects/RangeError/RangeError
 page-type: javascript-constructor
-tags:
-  - Constructor
-  - JavaScript
-  - Reference
 browser-compat: javascript.builtins.RangeError.RangeError
 ---
 
@@ -72,7 +68,7 @@ try {
 function check(value) {
   if (!["apple", "banana", "carrot"].includes(value)) {
     throw new RangeError(
-      'The argument must be an "apple", "banana", or "carrot".'
+      'The argument must be an "apple", "banana", or "carrot".',
     );
   }
 }

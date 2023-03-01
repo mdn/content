@@ -2,15 +2,8 @@
 title: Notification.silent
 slug: Web/API/Notification/silent
 page-type: web-api-instance-property
-tags:
-  - API
-  - Notification
-  - Notifications
-  - Notifications API
-  - Property
-  - Reference
-  - silent
-  - Experimental
+status:
+  - experimental
 browser-compat: api.Notification.silent
 ---
 
@@ -35,13 +28,13 @@ The following snippet is intended to fire a silent notification; a simple
 
 ```js
 const options = {
-  body: 'Do you like my body?',
-  silent: true
-}
+  body: "Your code submission has received 3 new review comments.",
+  silent: true,
+};
 
-const n = new Notification('Test notification', options);
+const n = new Notification("New review activity", options);
 
-console.log(n.silent) // should log true
+console.log(n.silent); // "true"
 ```
 
 ## Specifications

@@ -2,13 +2,6 @@
 title: Using the Web Storage API
 slug: Web/API/Web_Storage_API/Using_the_Web_Storage_API
 page-type: guide
-tags:
-  - API
-  - Guide
-  - Storage
-  - Web Storage API
-  - localStorage
-  - sessionStorage
 browser-compat:
   - api.Window.localStorage
   - api.Window.sessionStorage
@@ -47,7 +40,7 @@ To be able to use localStorage, we should first verify that it is supported and 
 
 ### Testing for availability
 
-> **Note:** This API is available in current versions of all major browsers. Testing for availability is necessary only if you must support very old browsers, such as Internet Explorer 6 or 7, or in the limited circumstances described below.
+> **Note:** This API is available in current versions of all major browsers. Testing for availability is necessary only if you must support very old browsers, or in the limited circumstances described below.
 
 Browsers that support localStorage have a property on the window object named `localStorage`. However, just asserting that the property exists may throw exceptions. If the `localStorage` object does exist, there is still no guarantee that the localStorage API is actually available, as various browsers offer settings that disable localStorage. So a browser may _support_ localStorage, but not make it _available_ to the scripts on the page.
 

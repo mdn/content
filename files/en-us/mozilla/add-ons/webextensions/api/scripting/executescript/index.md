@@ -1,6 +1,7 @@
 ---
 title: scripting.executeScript()
 slug: Mozilla/Add-ons/WebExtensions/API/scripting/executeScript
+page-type: webextension-api-function
 tags:
   - API
   - Add-ons
@@ -21,7 +22,7 @@ Injects a script into a target context. The script is run at `document_idle` by 
 
 To use this API you must have the `"scripting"` [permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) and permission for the target's URL, either explicitly as a [host permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions) or using the [activeTab permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#activetab_permission).
 
-In Firefox and Safari, partial lack of host permissions can result in a successful execution (with the partial results in the resolved promise). In Chrome, any missing permission prevents any execution from happening, see ([Issue 1325114](https://bugs.chromium.org/p/chromium/issues/detail?id=1325114))).
+In Firefox and Safari, partial lack of host permissions can result in a successful execution (with the partial results in the resolved promise). In Chrome, any missing permission prevents any execution from happening, see ([Issue 1325114](https://crbug.com/1325114))).
 
 The scripts you inject are called [content scripts](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts).
 
@@ -41,16 +42,18 @@ let results = await browser.scripting.executeScript(
 
   - : An object describing the script to inject. It contains these properties:
 
-    - `args`
+    - `args` {{optional_inline}}
       - : An array of arguments to carry into the function. This is only valid if the `func` parameter is specified. The arguments must be JSON-serializable.
-    - `files`
+    - `files` {{optional_inline}}
       - : `array` of `string`. An array of path of the JS files to inject, relative to the extension's root directory. Exactly one of `files` and `func` must be specified.
-    - `func`
+    - `func` {{optional_inline}}
       - : `function`. A JavaScript function to inject. This function is serialized and then deserialized for injection. This means that any bound parameters and execution context are lost. Exactly one of `files` and `func` must be specified.
     - `injectImmediately` {{optional_inline}}
       - : `boolean`. Whether the injection into the target is triggered as soon as possible, but not necessarily prior to page load.
     - `target`
       - : {{WebExtAPIRef("scripting.InjectionTarget")}}. Details specifying the target to inject the script into.
+    - `world` {{optional_inline}}
+      - : {{WebExtAPIRef("scripting.ExecutionWorld")}}. The execution environment for a script to execute in.
 
 ### Return value
 

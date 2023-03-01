@@ -2,12 +2,6 @@
 title: SharedArrayBuffer
 slug: Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer
 page-type: javascript-class
-tags:
-  - Class
-  - JavaScript
-  - Shared Memory
-  - SharedArrayBuffer
-  - TypedArrays
 browser-compat: javascript.builtins.SharedArrayBuffer
 ---
 
@@ -53,7 +47,7 @@ Cross-Origin-Embedder-Policy: require-corp
 To check if cross origin isolation has been successful, you can test against the [`crossOriginIsolated`](/en-US/docs/Web/API/crossOriginIsolated) property available to window and worker contexts:
 
 ```js
-const myWorker = new Worker('worker.js');
+const myWorker = new Worker("worker.js");
 
 if (crossOriginIsolated) {
   const buffer = new SharedArrayBuffer(16);
@@ -91,10 +85,14 @@ The WebAssembly Threads proposal also defines a new set of [atomic](https://gith
 
 ## Instance properties
 
-- `SharedArrayBuffer.prototype[@@toStringTag]`
-  - : The initial value of the [`@@toStringTag`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) property is the string `"SharedArrayBuffer"`. This property is used in {{jsxref("Object.prototype.toString()")}}.
+These properties are defined on `SharedArrayBuffer.prototype` and shared by all `SharedArrayBuffer` instances.
+
 - {{jsxref("SharedArrayBuffer.prototype.byteLength")}}
   - : The size, in bytes, of the array. This is established when the array is constructed and cannot be changed. **Read only.**
+- {{jsxref("Object/constructor", "SharedArrayBuffer.prototype.constructor")}}
+  - : The constructor function that created the instance object. For `SharedArrayBuffer` instances, the initial value is the {{jsxref("SharedArrayBuffer/SharedArrayBuffer", "SharedArrayBuffer")}} constructor.
+- `SharedArrayBuffer.prototype[@@toStringTag]`
+  - : The initial value of the [`@@toStringTag`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) property is the string `"SharedArrayBuffer"`. This property is used in {{jsxref("Object.prototype.toString()")}}.
 
 ## Instance methods
 

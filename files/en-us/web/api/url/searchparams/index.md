@@ -2,13 +2,6 @@
 title: URL.searchParams
 slug: Web/API/URL/searchParams
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Read-only
-  - Reference
-  - URL
-  - URLSearchParams
 browser-compat: api.URL.searchParams
 ---
 

@@ -2,15 +2,8 @@
 title: Screen Wake Lock API
 slug: Web/API/Screen_Wake_Lock_API
 page-type: web-api-overview
-tags:
-  - API
-  - Overview
-  - Reference
-  - Screen Wake Lock API
-  - Wake Lock
-  - WakeLock
-  - screen
-  - Experimental
+status:
+  - experimental
 browser-compat: api.WakeLock
 ---
 

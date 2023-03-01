@@ -2,13 +2,8 @@
 title: InterventionReportBody.columnNumber
 slug: Web/API/InterventionReportBody/columnNumber
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - Experimental
-  - columnNumber
-  - InterventionReportBody
+status:
+  - experimental
 browser-compat: api.InterventionReportBody.columnNumber
 ---
 
@@ -28,9 +23,9 @@ In this example we create a new {{domxref("ReportingObserver")}} to observe inte
 
 ```js
 const options = {
-  types: ['intervention'],
-  buffered: true
-}
+  types: ["intervention"],
+  buffered: true,
+};
 
 const observer = new ReportingObserver((reports, observer) => {
   const firstReport = reports[0];

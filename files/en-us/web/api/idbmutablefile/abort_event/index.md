@@ -1,15 +1,10 @@
 ---
-title: 'IDBMutableFile: abort event'
+title: "IDBMutableFile: abort event"
 slug: Web/API/IDBMutableFile/abort_event
 page-type: web-api-event
-tags:
-  - API
-  - Files
-  - Event
-  - Reference
-  - WebAPI
-  - Non-standard
-  - Deprecated
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.IDBMutableFile.abort_event
 ---
 
@@ -27,8 +22,8 @@ This event is not cancelable and does not bubble.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('abort', (event) => { })
-onabort = (event) => { }
+addEventListener("abort", (event) => {});
+onabort = (event) => {};
 ```
 
 ## Event type

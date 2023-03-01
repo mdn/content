@@ -2,16 +2,6 @@
 title: SourceBuffer.updating
 slug: Web/API/SourceBuffer/updating
 page-type: web-api-instance-property
-tags:
-  - API
-  - Audio
-  - MSE
-  - Media Source Extensions
-  - Property
-  - Reference
-  - SourceBuffer
-  - Updating
-  - Video
 browser-compat: api.SourceBuffer.updating
 ---
 

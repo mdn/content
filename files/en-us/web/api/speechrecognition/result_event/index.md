@@ -2,10 +2,6 @@
 title: 'SpeechRecognition: result event'
 slug: Web/API/SpeechRecognition/result_event
 page-type: web-api-event
-tags:
-  - Event
-  - Reference
-  - Web Speech API
 browser-compat: api.SpeechRecognition.result_event
 ---
 

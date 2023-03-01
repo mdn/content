@@ -1,14 +1,6 @@
 ---
 title: ARIA annotations
 slug: Web/Accessibility/ARIA/Annotations
-tags:
-  - ARIA
-  - Accessibility
-  - WAI-ARIA
-  - annotations
-  - comments
-  - details
-  - suggestions
 ---
 
 <section id="Quick_links">
@@ -116,13 +108,19 @@ Simple descriptions basically just involve usage of `aria-description` on an ele
       </legend>
       <ul>
         <li>
-          <label>Apple: <input type="radio" name="fruit" value="apple" /></label>
+          <label
+            >Apple: <input type="radio" name="fruit" value="apple"
+          /></label>
         </li>
         <li>
-          <label>Orange: <input type="radio" name="fruit" value="orange" /></label>
+          <label
+            >Orange: <input type="radio" name="fruit" value="orange"
+          /></label>
         </li>
         <li>
-          <label>Banana: <input type="radio" name="fruit" value="banana" /></label>
+          <label
+            >Banana: <input type="radio" name="fruit" value="banana"
+          /></label>
         </li>
       </ul>
     </fieldset>
@@ -146,13 +144,19 @@ If the descriptive text does appear in the UI (it should for this example), you 
       </legend>
       <ul>
         <li>
-          <label>Apple: <input type="radio" name="fruit" value="apple" /></label>
+          <label
+            >Apple: <input type="radio" name="fruit" value="apple"
+          /></label>
         </li>
         <li>
-          <label>Orange: <input type="radio" name="fruit" value="orange" /></label>
+          <label
+            >Orange: <input type="radio" name="fruit" value="orange"
+          /></label>
         </li>
         <li>
-          <label>Banana: <input type="radio" name="fruit" value="banana" /></label>
+          <label
+            >Banana: <input type="radio" name="fruit" value="banana"
+          /></label>
         </li>
       </ul>
     </fieldset>
@@ -166,7 +170,8 @@ A common wish in online document systems like Google Docs is to be able to track
 
 ```html
 <p>
-  Freida's pet is a <del>black Cat called Luna</del><ins>purple Tyrannosaurus Rex called Tiny</ins>.
+  Freida's pet is a <del>black Cat called Luna</del
+  ><ins>purple Tyrannosaurus Rex called Tiny</ins>.
 </p>
 ```
 
@@ -174,7 +179,8 @@ With the new additions, you now have new roles available to provide the same sem
 
 ```html
 <p>
-  Freida's pet is a <span role="deletion">black Cat called Luna</span><span role="insertion">purple Tyrannosaurus Rex called Tiny</span>.
+  Freida's pet is a <span role="deletion">black Cat called Luna</span
+  ><span role="insertion">purple Tyrannosaurus Rex called Tiny</span>.
 </p>
 ```
 
@@ -183,7 +189,10 @@ However, this often isn't enough — when you've got a content change like the o
 ```html
 <p>
   Freida's pet is a
-  <span role="suggestion"><span role="deletion">black Cat called Luna</span><span role="insertion">purple Tyrannosaurus Rex called Tiny</span></span>.
+  <span role="suggestion"
+    ><span role="deletion">black Cat called Luna</span
+    ><span role="insertion">purple Tyrannosaurus Rex called Tiny</span></span
+  >.
 </p>
 ```
 

@@ -2,17 +2,6 @@
 title: Document.pictureInPictureElement
 slug: Web/API/Document/pictureInPictureElement
 page-type: web-api-instance-property
-tags:
-  - API
-  - Document
-  - Graphics
-  - Picture-in-Picture
-  - Picture-in-Picture API
-  - Property
-  - Read-only
-  - Reference
-  - pictureInPictureElement
-  - pip
 browser-compat: api.Document.pictureInPictureElement
 ---
 

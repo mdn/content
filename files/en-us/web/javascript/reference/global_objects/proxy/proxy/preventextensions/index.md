@@ -2,17 +2,12 @@
 title: handler.preventExtensions()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/preventExtensions
 page-type: javascript-instance-method
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Proxy
 browser-compat: javascript.builtins.Proxy.handler.preventExtensions
 ---
 
 {{JSRef}}
 
-The **`handler.preventExtensions()`** method is a trap for {{jsxref("Object.preventExtensions()")}}.
+The **`handler.preventExtensions()`** method is a trap for the `[[PreventExtensions]]` [object internal method](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy#object_internal_methods), which is used by operations such as {{jsxref("Object.preventExtensions()")}}.
 
 {{EmbedInteractiveExample("pages/js/proxyhandler-preventextensions.html", "taller")}}
 
@@ -37,8 +32,6 @@ The following parameter is passed to the `preventExtensions()` method. `this` is
 The `preventExtensions()` method must return a boolean value.
 
 ## Description
-
-The **`handler.preventExtensions()`** method is a trap for {{jsxref("Object.preventExtensions()")}}.
 
 ### Interceptions
 
@@ -72,7 +65,7 @@ const p = new Proxy(
       Object.preventExtensions(target);
       return true;
     },
-  }
+  },
 );
 
 console.log(Object.preventExtensions(p));
@@ -89,7 +82,7 @@ const p = new Proxy(
     preventExtensions(target) {
       return true;
     },
-  }
+  },
 );
 
 Object.preventExtensions(p); // TypeError is thrown

@@ -2,9 +2,6 @@
 title: Falsy
 slug: Glossary/Falsy
 page-type: glossary-definition
-tags:
-  - CodingScripting
-  - JavaScript
 ---
 
 A **falsy** (sometimes written **falsey**) value is a value that is considered false when encountered in a {{Glossary("Boolean")}} context.
@@ -15,7 +12,7 @@ The following table provides a complete list of JavaScript falsy values:
 
 | Value                       | Description                                                                                                                                                                                                                      |
 | --------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `false`                     | The keyword [`false`](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#reserved_words).                                                                                                         |
+| `false`                     | The keyword [`false`](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#reserved_words).                                                                                                                                      |
 | `0`                         | The {{jsxref("Number")}} zero (so, also `0.0`, etc., and `0x0`).                                                                                                                                                                 |
 | `-0`                        | The {{jsxref("Number")}} negative zero (so, also `-0.0`, etc., and `-0x0`).                                                                                                                                                      |
 | `0n`                        | The {{jsxref("BigInt")}} zero (so, also `0x0n`). Note that there is no {{jsxref("BigInt")}} negative zero — the negation of `0n` is `0n`.                                                                                        |

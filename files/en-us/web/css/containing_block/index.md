@@ -2,17 +2,6 @@
 title: Layout and the containing block
 slug: Web/CSS/Containing_block
 page-type: guide
-tags:
-  - CSS
-  - CSS Position
-  - Containers
-  - Guide
-  - Layout
-  - Position
-  - Style
-  - blocks
-  - containing block
-  - size
 ---
 
 {{CSSRef}}
@@ -99,10 +88,10 @@ section {
 }
 
 p {
-  width: 50%;   /* == 400px * .5 = 200px */
-  height: 25%;  /* == 160px * .25 = 40px */
-  margin: 5%;   /* == 400px * .05 = 20px */
-  padding: 5%;  /* == 400px * .05 = 20px */
+  width: 50%; /* == 400px * .5 = 200px */
+  height: 25%; /* == 160px * .25 = 40px */
+  margin: 5%; /* == 400px * .05 = 20px */
+  padding: 5%; /* == 400px * .05 = 20px */
   background: cyan;
 }
 ```
@@ -132,8 +121,8 @@ section {
 }
 
 p {
-  width: 50%;     /* == half the body's width */
-  height: 200px;  /* Note: a percentage would be 0 */
+  width: 50%; /* == half the body's width */
+  height: 200px; /* Note: a percentage would be 0 */
   background: cyan;
 }
 ```
@@ -169,10 +158,10 @@ section {
 
 p {
   position: absolute;
-  width: 50%;   /* == (400px + 20px + 20px) * .5 = 220px */
-  height: 25%;  /* == (160px + 30px + 30px) * .25 = 55px */
-  margin: 5%;   /* == (400px + 20px + 20px) * .05 = 22px */
-  padding: 5%;  /* == (400px + 20px + 20px) * .05 = 22px */
+  width: 50%; /* == (400px + 20px + 20px) * .5 = 220px */
+  height: 25%; /* == (160px + 30px + 30px) * .25 = 55px */
+  margin: 5%; /* == (400px + 20px + 20px) * .05 = 22px */
+  padding: 5%; /* == (400px + 20px + 20px) * .05 = 22px */
   background: cyan;
 }
 ```
@@ -206,10 +195,10 @@ section {
 
 p {
   position: fixed;
-  width: 50%;   /* == (50vw - (width of vertical scrollbar)) */
-  height: 50%;  /* == (50vh - (height of horizontal scrollbar)) */
-  margin: 5%;   /* == (5vw - (width of vertical scrollbar)) */
-  padding: 5%;  /* == (5vw - (width of vertical scrollbar)) */
+  width: 50%; /* == (50vw - (width of vertical scrollbar)) */
+  height: 50%; /* == (50vh - (height of horizontal scrollbar)) */
+  margin: 5%; /* == (5vw - (width of vertical scrollbar)) */
+  padding: 5%; /* == (5vw - (width of vertical scrollbar)) */
   background: cyan;
 }
 ```
@@ -244,10 +233,10 @@ p {
   position: absolute;
   left: 80px;
   top: 30px;
-  width: 50%;   /* == 200px */
-  height: 25%;  /* == 40px */
-  margin: 5%;   /* == 20px */
-  padding: 5%;  /* == 20px */
+  width: 50%; /* == 200px */
+  height: 25%; /* == 40px */
+  margin: 5%; /* == 20px */
+  padding: 5%; /* == 20px */
   background: cyan;
 }
 ```

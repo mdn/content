@@ -2,14 +2,6 @@
 title: Promise
 slug: Web/JavaScript/Reference/Global_Objects/Promise
 page-type: javascript-class
-tags:
-  - Class
-  - ECMAScript 2015
-  - JavaScript
-  - Promise
-  - Reference
-  - promise.all
-  - Polyfill
 browser-compat: javascript.builtins.Promise
 ---
 
@@ -43,7 +35,7 @@ new Promise((resolveOuter) => {
   resolveOuter(
     new Promise((resolveInner) => {
       setTimeout(resolveInner, 1000);
-    })
+    }),
   );
 });
 ```
@@ -103,7 +95,7 @@ myPromise
 
 The termination condition of a promise determines the "settled" state of the next promise in the chain. A "fulfilled" state indicates a successful completion of the promise, while a "rejected" state indicates a lack of success. The return value of each fulfilled promise in the chain is passed along to the next `.then()`, while the reason for rejection is passed along to the next rejection-handler function in the chain.
 
-The promises of a chain are nested like Russian dolls, but get popped like the top of a stack. The first promise in the chain is most deeply nested and is the first to pop.
+The promises of a chain are nested in one another, but get popped like the top of a stack. The first promise in the chain is most deeply nested and is the first to pop.
 
 ```plain
 (promise D, (promise C, (promise B, (promise A) ) ) )
@@ -217,6 +209,10 @@ Note that JavaScript is [single-threaded](/en-US/docs/Glossary/Thread) by nature
 
 ## Instance properties
 
+These properties are defined on `Promise.prototype` and shared by all `Promise` instances.
+
+- {{jsxref("Object/constructor", "Promise.prototype.constructor")}}
+  - : The constructor function that created the instance object. For `Promise` instances, the initial value is the {{jsxref("Promise/Promise", "Promise")}} constructor.
 - `Promise.prototype[@@toStringTag]`
   - : The initial value of the [`@@toStringTag`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) property is the string `"Promise"`. This property is used in {{jsxref("Object.prototype.toString()")}}.
 
@@ -352,7 +348,7 @@ function testPromise() {
     // to resolve or reject the promise
     log.insertAdjacentHTML(
       "beforeend",
-      `${thisPromiseCount}) Promise constructor<br>`
+      `${thisPromiseCount}) Promise constructor<br>`,
     );
     // This is only an example to create asynchronism
     setTimeout(() => {
@@ -447,7 +443,7 @@ If we change this so that the `<iframe>` in the document is listening to post me
       // this code will only run in browsers that track the incumbent settings object
       console.log(event);
     },
-    false
+    false,
   );
 </script>
 ```

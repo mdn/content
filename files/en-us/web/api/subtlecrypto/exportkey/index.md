@@ -2,13 +2,6 @@
 title: SubtleCrypto.exportKey()
 slug: Web/API/SubtleCrypto/exportKey
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - SubtleCrypto
-  - Web Crypto API
-  - exportKey
 browser-compat: api.SubtleCrypto.exportKey
 ---
 
@@ -218,7 +211,7 @@ window.crypto.subtle.generateKey(
 
 ### JSON Web Key export
 
-This code exports an ECDSA private signing key as a JSON Web Key object. [See the complete code on GitHub](https://github.com/mdn/dom-examples/blob/main/web-crypto/export-key/jwk.js).
+This example exports an ECDSA private signing key as a JSON Web Key object. [See the complete code on GitHub](https://github.com/mdn/dom-examples/blob/main/web-crypto/export-key/jwk.js).
 
 ```js
 /*

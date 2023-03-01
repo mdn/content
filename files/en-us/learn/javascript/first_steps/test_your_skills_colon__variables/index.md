@@ -1,12 +1,6 @@
 ---
-title: 'Test your skills: variables'
+title: "Test your skills: variables"
 slug: Learn/JavaScript/First_steps/Test_your_skills:_variables
-tags:
-  - Beginner
-  - JavaScript
-  - Learn
-  - Text your skills
-  - Variables
 ---
 
 {{learnsidebar}}

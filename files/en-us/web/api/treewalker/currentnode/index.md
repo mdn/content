@@ -2,18 +2,13 @@
 title: TreeWalker.currentNode
 slug: Web/API/TreeWalker/currentNode
 page-type: web-api-instance-property
-tags:
-  - API
-  - DOM
-  - Property
-  - TreeWalker
 browser-compat: api.TreeWalker.currentNode
 ---
 
 {{ APIRef("DOM") }}
 
 The **`TreeWalker.currentNode`** property represents the
-{{domxref("Node")}} on which the {{domxref("TreeWalker")}} is currently pointing at.
+{{domxref("Node")}} which the {{domxref("TreeWalker")}} is currently pointing at.
 
 ## Value
 

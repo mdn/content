@@ -1,5 +1,5 @@
 ---
-title: 'CSP: object-src'
+title: "CSP: object-src"
 slug: Web/HTTP/Headers/Content-Security-Policy/object-src
 tags:
   - CSP

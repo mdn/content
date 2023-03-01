@@ -2,14 +2,6 @@
 title: Using promises
 slug: Web/JavaScript/Guide/Using_promises
 page-type: guide
-tags:
-  - Guide
-  - Intermediate
-  - JavaScript
-  - Promise
-  - Promises
-  - asynchronous
-  - "l10n:priority"
 ---
 
 {{jsSidebar("JavaScript Guide")}}{{PreviousNext("Web/JavaScript/Guide/Using_Classes", "Web/JavaScript/Guide/Iterators_and_Generators")}}
@@ -44,7 +36,7 @@ This convention has several advantages. We will explore each one.
 
 A common need is to execute two or more asynchronous operations back to back, where each subsequent operation starts when the previous operation succeeds, with the result from the previous step. In the old days, doing several asynchronous operations in a row would lead to the classic callback pyramid of doom:
 
-```js
+```js-nolint
 doSomething(function (result) {
   doSomethingElse(result, function (newResult) {
     doThirdThing(newResult, function (finalResult) {
@@ -426,7 +418,7 @@ Lastly, we will look into the more technical details, about when the registered 
 
 In the callback-based API, when and how the callback gets called depends on the API implementor. For example, the callback may be called synchronously or asynchronously:
 
-```js
+```js example-bad
 function doSomething(callback) {
   if (Math.random() > 0.5) {
     callback();
@@ -436,7 +428,7 @@ function doSomething(callback) {
 }
 ```
 
-This leads to [the state of Zalgo](https://blog.izs.me/2013/08/designing-apis-for-asynchrony/), because it makes side effects hard to analyze:
+The above design is strongly discouraged because it leads to the so-called "state of Zalgo". In the context of designing asynchronous APIs, this means a callback is called synchronously in some cases but asynchronously in other cases, creating ambiguity for the caller. For further background, see the article [Designing APIs for Asynchrony](https://blog.izs.me/2013/08/designing-apis-for-asynchrony/), where the term was first formally presented. This API design makes side effects hard to analyze:
 
 ```js
 let value = 1;

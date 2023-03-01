@@ -2,14 +2,6 @@
 title: OfflineAudioContext()
 slug: Web/API/OfflineAudioContext/OfflineAudioContext
 page-type: web-api-constructor
-tags:
-  - API
-  - Audio
-  - Audio Contexts
-  - Constructor
-  - OfflineAudioContext
-  - Reference
-  - Web Audio API
 browser-compat: api.OfflineAudioContext.OfflineAudioContext
 ---
 

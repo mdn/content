@@ -2,14 +2,8 @@
 title: Document.linkColor
 slug: Web/API/Document/linkColor
 page-type: web-api-instance-property
-tags:
-  - API
-  - Deprecated
-  - Document
-  - HTML DOM
-  - NeedsSpecTable
-  - Property
-  - Reference
+status:
+  - deprecated
 browser-compat: api.Document.linkColor
 ---
 
@@ -30,7 +24,7 @@ A string representing the color as a word (e.g., `red`) or hexadecimal value (e.
 ## Examples
 
 ```js
-document.linkColor = 'blue';
+document.linkColor = "blue";
 ```
 
 ## Specifications

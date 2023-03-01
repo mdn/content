@@ -1,6 +1,7 @@
 ---
 title: extension.lastError
 slug: Mozilla/Add-ons/WebExtensions/API/extension/lastError
+page-type: webextension-api-property
 tags:
   - API
   - Add-ons

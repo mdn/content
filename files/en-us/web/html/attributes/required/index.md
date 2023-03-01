@@ -2,12 +2,6 @@
 title: 'HTML attribute: required'
 slug: Web/HTML/Attributes/required
 page-type: html-attribute
-tags:
-  - Attribute
-  - Attributes
-  - Constraint validation
-  - Forms
-  - required
 browser-compat: html.elements.attributes.required
 ---
 

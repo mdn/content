@@ -4,10 +4,6 @@ title: >-
   initializer
 slug: Web/JavaScript/Reference/Errors/Invalid_for-of_initializer
 page-type: javascript-error
-tags:
-  - Error
-  - JavaScript
-  - SyntaxError
 ---
 
 {{jsSidebar("Errors")}}

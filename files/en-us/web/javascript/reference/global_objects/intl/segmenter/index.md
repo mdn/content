@@ -2,12 +2,6 @@
 title: Intl.Segmenter
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Segmenter
 page-type: javascript-class
-tags:
-  - Internationalization
-  - Intl
-  - JavaScript
-  - Localization
-  - Reference
 browser-compat: javascript.builtins.Intl.Segmenter
 ---
 
@@ -49,7 +43,7 @@ console.table(str.split(" "));
 
 ```js example-good
 const str = "吾輩は猫である。名前はたぬき。";
-const segmenterJa = new Intl.Segmenter('ja-JP', { granularity: 'word' });
+const segmenterJa = new Intl.Segmenter("ja-JP", { granularity: "word" });
 
 const segments = segmenterJa.segment(str);
 console.table(Array.from(segments));

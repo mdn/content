@@ -2,15 +2,8 @@
 title: PaymentRequestEvent.paymentRequestId
 slug: Web/API/PaymentRequestEvent/paymentRequestId
 page-type: web-api-instance-property
-tags:
-  - API
-  - Payment Request API
-  - PaymentRequestEvent
-  - Property
-  - Reference
-  - payment
-  - paymentRequestId
-  - Experimental
+status:
+  - experimental
 browser-compat: api.PaymentRequestEvent.paymentRequestId
 ---
 

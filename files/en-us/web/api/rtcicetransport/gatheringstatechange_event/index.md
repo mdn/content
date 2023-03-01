@@ -2,20 +2,6 @@
 title: 'RTCIceTransport: gatheringstatechange event'
 slug: Web/API/RTCIceTransport/gatheringstatechange_event
 page-type: web-api-event
-tags:
-  - Connection
-  - Connectivity
-  - Gathering
-  - ICE
-  - Negotiation
-  - RTCIceTransport
-  - Reference
-  - Transport
-  - WebRTC
-  - WebRTC API
-  - events
-  - gatheringState
-  - gatheringstatechange
 browser-compat: api.RTCIceTransport.gatheringstatechange_event
 ---
 

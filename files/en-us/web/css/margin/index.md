@@ -2,11 +2,6 @@
 title: margin
 slug: Web/CSS/margin
 page-type: css-shorthand-property
-tags:
-  - CSS
-  - CSS Property
-  - Property
-  - recipe:css-shorthand-property
 browser-compat: css.properties.margin
 ---
 
@@ -122,27 +117,27 @@ Elements' top and bottom margins are sometimes collapsed into a single margin th
 ### More examples
 
 ```css
-margin: 5%;                 /* All sides: 5% margin */
+margin: 5%; /* All sides: 5% margin */
 
-margin: 10px;               /* All sides: 10px margin */
+margin: 10px; /* All sides: 10px margin */
 
-margin: 1.6em 20px;         /* top and bottom: 1.6em margin */
-                            /* left and right: 20px margin */
+margin: 1.6em 20px; /* top and bottom: 1.6em margin */
+/* left and right: 20px margin */
 
-margin: 10px 3% -1em;       /* top:            10px margin */
-                            /* left and right: 3% margin   */
-                            /* bottom:         -1em margin */
+margin: 10px 3% -1em; /* top:            10px margin */
+/* left and right: 3% margin   */
+/* bottom:         -1em margin */
 
-margin: 10px 3px 30px 5px;  /* top:    10px margin */
-                            /* right:  3px margin  */
-                            /* bottom: 30px margin */
-                            /* left:   5px margin  */
+margin: 10px 3px 30px 5px; /* top:    10px margin */
+/* right:  3px margin  */
+/* bottom: 30px margin */
+/* left:   5px margin  */
 
-margin: 2em auto;           /* top and bottom: 2em margin   */
-                            /* Box is horizontally centered */
+margin: 2em auto; /* top and bottom: 2em margin   */
+/* Box is horizontally centered */
 
-margin: auto;               /* top and bottom: 0 margin     */
-                            /* Box is horizontally centered */
+margin: auto; /* top and bottom: 0 margin     */
+/* Box is horizontally centered */
 ```
 
 ## Specifications

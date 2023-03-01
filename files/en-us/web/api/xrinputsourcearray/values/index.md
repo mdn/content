@@ -2,27 +2,8 @@
 title: XRInputSourceArray.values()
 slug: Web/API/XRInputSourceArray/values
 page-type: web-api-instance-method
-tags:
-  - API
-  - AR
-  - Input Sources
-  - Inputs
-  - Iterator
-  - Method
-  - Mixed
-  - Reality
-  - Reference
-  - Sources
-  - VR
-  - Virtual
-  - WebXR
-  - WebXR API
-  - WebXR API Reference
-  - XR
-  - XRInputSourceArray
-  - augmented
-  - values
-  - Experimental
+status:
+  - experimental
 browser-compat: api.XRInputSourceArray.values
 ---
 

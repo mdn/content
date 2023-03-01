@@ -2,12 +2,6 @@
 title: Using dynamic styling information
 slug: Web/API/CSS_Object_Model/Using_dynamic_styling_information
 page-type: guide
-tags:
-  - API
-  - Beginner
-  - CSSOM
-  - Guide
-  - NeedsBeginnerUpdate
 ---
 
 {{DefaultAPISidebar("CSSOM")}}
@@ -145,8 +139,8 @@ The **media** and **type** of the style may or may not be given.
 Note that you can also change style of an element by getting a reference to it and then use its [`setAttribute`](/en-US/docs/Web/API/Element/setAttribute) method to specify the CSS property and its value.
 
 ```js
-const el = document.getElementById('some-element');
-el.setAttribute('style', 'background-color:darkblue;');
+const el = document.getElementById("some-element");
+el.setAttribute("style", "background-color:darkblue;");
 ```
 
 Be aware, however, that `setAttribute` removes all other `style` properties that may already have been defined in the element's `style` object. If the `some-element` element above had an in–line `style` attribute of say `style="font-size: 18px"`, that value would be removed by the use of `setAttribute`.

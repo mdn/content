@@ -2,13 +2,8 @@
 title: Window.scrollMaxX
 slug: Web/API/Window/scrollMaxX
 page-type: web-api-instance-property
-tags:
-  - API
-  - Gecko
-  - HTML DOM
-  - Non-standard
-  - Property
-  - Window
+status:
+  - non-standard
 browser-compat: api.Window.scrollMaxX
 ---
 

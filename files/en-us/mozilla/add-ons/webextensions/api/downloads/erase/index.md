@@ -1,6 +1,7 @@
 ---
 title: downloads.erase()
 slug: Mozilla/Add-ons/WebExtensions/API/downloads/erase
+page-type: webextension-api-function
 tags:
   - API
   - Add-ons

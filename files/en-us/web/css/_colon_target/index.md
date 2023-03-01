@@ -2,13 +2,6 @@
 title: ":target"
 slug: Web/CSS/:target
 page-type: css-pseudo-class
-tags:
-  - CSS
-  - Layout
-  - Pseudo-class
-  - Reference
-  - Selector
-  - Web
 browser-compat: css.selectors.target
 ---
 
@@ -37,8 +30,10 @@ The following element would be selected by a `:target` selector when the current
 
 ## Syntax
 
-```
-:target
+```css
+:target {
+  /* ... */
+}
 ```
 
 ## Examples

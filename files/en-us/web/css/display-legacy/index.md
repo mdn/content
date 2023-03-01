@@ -2,13 +2,6 @@
 title: <display-legacy>
 slug: Web/CSS/display-legacy
 page-type: css-type
-tags:
-  - CSS
-  - CSS Data Type
-  - CSS Display
-  - Data Type
-  - Reference
-  - display-legacy
 spec-urls: https://drafts.csswg.org/css-display/#typedef-display-legacy
 browser-compat:
   - css.properties.display.inline-block

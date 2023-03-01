@@ -2,14 +2,6 @@
 title: PerformanceEventTiming
 slug: Web/API/PerformanceEventTiming
 page-type: web-api-interface
-tags:
-  - API
-  - Event Timing API
-  - Interface
-  - Performance
-  - PerformanceEventTiming
-  - Reference
-  - Web Performance
 browser-compat: api.PerformanceEventTiming
 ---
 
@@ -221,7 +213,7 @@ function sendToAnalytics(data) {
 
 // Use a try/catch instead of feature detecting `first-input`
 // support, since some browsers throw when using the new `type` option.
-// https://bugs.webkit.org/show_bug.cgi?id=209216
+// https://webkit.org/b/209216
 try {
   function onFirstInputEntry(entry) {
     // Only report FID if the page wasn't hidden prior to

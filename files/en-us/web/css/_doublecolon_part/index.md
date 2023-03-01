@@ -1,15 +1,7 @@
 ---
-title: '::part()'
+title: "::part()"
 slug: Web/CSS/::part
 page-type: css-pseudo-element
-tags:
-  - '::part'
-  - CSS
-  - Draft
-  - NeedsExample
-  - Pseudo-element
-  - Reference
-  - Selector
 browser-compat: css.selectors.part
 ---
 
@@ -25,8 +17,10 @@ custom-element::part(foo) {
 
 ## Syntax
 
-```
-::part( <ident>+ )
+```css
+::part(<ident>+) {
+  /* ... */
+}
 ```
 
 ## Examples
@@ -74,8 +68,7 @@ tabbed-custom-element::part(tab):hover:active {
 }
 
 tabbed-custom-element::part(tab):focus {
-  box-shadow: 0 0 0 1px #0a84ff inset, 
-    0 0 0 1px #0a84ff,
+  box-shadow: 0 0 0 1px #0a84ff inset, 0 0 0 1px #0a84ff,
     0 0 0 4px rgba(10, 132, 255, 0.3);
 }
 
@@ -93,9 +86,7 @@ globalThis.customElements.define(
   template.id,
   class extends HTMLElement {
     constructor() {
-      super()
-        .attachShadow({ mode: "open" })
-        .append(template.content);
+      super().attachShadow({ mode: "open" }).append(template.content);
     }
   }
 );

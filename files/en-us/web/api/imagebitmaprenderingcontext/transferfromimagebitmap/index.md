@@ -2,13 +2,6 @@
 title: ImageBitmapRenderingContext.transferFromImageBitmap()
 slug: Web/API/ImageBitmapRenderingContext/transferFromImageBitmap
 page-type: web-api-instance-method
-tags:
-  - API
-  - ImageBitmapRenderingContext
-  - Method
-  - OffscreenCanvas
-  - Reference
-  - transferFromImageBitmap
 browser-compat: api.ImageBitmapRenderingContext.transferFromImageBitmap
 ---
 
@@ -48,7 +41,9 @@ None ({{jsxref("undefined")}}).
 ### JavaScript
 
 ```js
-const htmlCanvas = document.getElementById("htmlCanvas").getContext("bitmaprenderer");
+const htmlCanvas = document
+  .getElementById("htmlCanvas")
+  .getContext("bitmaprenderer");
 
 // Draw a WebGL scene offscreen
 const offscreen = new OffscreenCanvas(256, 256);

@@ -2,12 +2,6 @@
 title: SVGStyleElement.sheet
 slug: Web/API/SVGStyleElement/sheet
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - SVG
-  - SVG DOM
 browser-compat: api.SVGStyleElement.sheet
 ---
 

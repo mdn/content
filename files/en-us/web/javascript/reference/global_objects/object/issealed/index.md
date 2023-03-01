@@ -2,12 +2,6 @@
 title: Object.isSealed()
 slug: Web/JavaScript/Reference/Global_Objects/Object/isSealed
 page-type: javascript-static-method
-tags:
-  - ECMAScript 5
-  - JavaScript
-  - JavaScript 1.8.5
-  - Method
-  - Object
 browser-compat: javascript.builtins.Object.isSealed
 ---
 
@@ -56,14 +50,14 @@ Object.isSealed(empty); // true
 
 // The same is not true of a non-empty object,
 // unless its properties are all non-configurable.
-const hasProp = { fee: 'fie foe fum' };
+const hasProp = { fee: "fie foe fum" };
 Object.preventExtensions(hasProp);
 Object.isSealed(hasProp); // false
 
 // But make them all non-configurable
 // and the object becomes sealed.
-Object.defineProperty(hasProp, 'fee', {
-  configurable: false
+Object.defineProperty(hasProp, "fee", {
+  configurable: false,
 });
 Object.isSealed(hasProp); // true
 
@@ -85,7 +79,11 @@ const s2 = Object.seal({ p: 3 });
 Object.isFrozen(s2); // false
 // ('p' is still writable)
 
-const s3 = Object.seal({ get p() { return 0; } });
+const s3 = Object.seal({
+  get p() {
+    return 0;
+  },
+});
 Object.isFrozen(s3); // true
 // (only configurability matters for accessor properties)
 ```

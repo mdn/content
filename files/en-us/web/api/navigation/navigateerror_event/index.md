@@ -2,20 +2,8 @@
 title: "Navigation: navigateerror event"
 slug: Web/API/Navigation/navigateerror_event
 page-type: web-api-event
-tags:
-  - API
-  - Event
-  - Experimental
-  - History
-  - Navigate
-  - navigateerror
-  - Navigation
-  - Navigation API
-  - Property
-  - Reference
-  - Scroll
-  - Traversal
-  - updateCurrentEntry
+status:
+  - experimental
 browser-compat: api.Navigation.navigateerror_event
 ---
 
@@ -46,7 +34,7 @@ An {{domxref("ErrorEvent")}}. Inherits from {{domxref("Event")}}.
 You might deal with a successful navigation by hiding a previously displayed progress indicator, like this:
 
 ```js
-navigation.addEventListener('navigatesuccess', (event) => {
+navigation.addEventListener("navigatesuccess", (event) => {
   loadingIndicator.hidden = true;
 });
 ```
@@ -54,7 +42,7 @@ navigation.addEventListener('navigatesuccess', (event) => {
 Or you might show an error message on failure:
 
 ```js
-navigation.addEventListener('navigateerror', (event) => {
+navigation.addEventListener("navigateerror", (event) => {
   loadingIndicator.hidden = true; // also hide indicator
   showMessage(`Failed to load page: ${event.message}`);
 });

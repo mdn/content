@@ -1,6 +1,7 @@
 ---
 title: tabs.getAllInWindow()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/getAllInWindow
+page-type: webextension-api-function
 tags:
   - API
   - Add-ons

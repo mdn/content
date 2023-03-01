@@ -2,11 +2,6 @@
 title: performance.mark()
 slug: Web/API/Performance/mark
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - Web Performance
 browser-compat: api.Performance.mark
 ---
 

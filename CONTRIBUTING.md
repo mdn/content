@@ -88,7 +88,7 @@ After you have made changes to your branch, the goal is to open a [pull request]
 A pull request represents the work you want to be reviewed, approved, and merged into the `main` branch of the MDN repository.
 See the [Creating a pull request](#creating-a-pull-request) for more details on creating and handling pull requests successfully.
 
-If you're not certain of the changes that you want to make, [get in touch with us](/en-US/docs/MDN/Community/Communication_channels)!
+If you're not certain of the changes that you want to make, [get in touch with us][]!
 
 > **Note:** You can click the **Source on GitHub** link at the bottom of an MDN page to jump directly to the page source on GitHub.
 
@@ -417,3 +417,4 @@ according to [our license](LICENSE.md).
 [open source etiquette]: https://developer.mozilla.org/en-US/docs/MDN/Contribute/Open_source_etiquette
 [where is everything on mdn?]: https://developer.mozilla.org/en-US/docs/MDN/Contribute/Where_is_everything
 [writing style guide]: https://developer.mozilla.org/en-US/docs/MDN/Guidelines/Writing_style_guide
+[get in touch with us]: https://developer.mozilla.org/en-US/docs/MDN/Community/Communication_channels

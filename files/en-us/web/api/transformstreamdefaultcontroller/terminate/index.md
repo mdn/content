@@ -2,12 +2,6 @@
 title: TransformStreamDefaultController.terminate()
 slug: Web/API/TransformStreamDefaultController/terminate
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - terminate
-  - TransformStreamDefaultController
 browser-compat: api.TransformStreamDefaultController.terminate
 ---
 

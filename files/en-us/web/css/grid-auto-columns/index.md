@@ -2,11 +2,6 @@
 title: grid-auto-columns
 slug: Web/CSS/grid-auto-columns
 page-type: css-property
-tags:
-  - CSS
-  - CSS Grid
-  - CSS Property
-  - Reference
 browser-compat: css.properties.grid-auto-columns
 ---
 

@@ -2,13 +2,8 @@
 title: VideoFrame.timestamp
 slug: Web/API/VideoFrame/timestamp
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - timestamp
-  - VideoFrame
-  - Experimental
+status:
+  - experimental
 browser-compat: api.VideoFrame.timestamp
 ---
 

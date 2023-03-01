@@ -2,13 +2,6 @@
 title: GeolocationPositionError.message
 slug: Web/API/GeolocationPositionError/message
 page-type: web-api-instance-property
-tags:
-  - API
-  - Geolocation API
-  - GeolocationPositionError
-  - Property
-  - Secure context
-  - message
 browser-compat: api.GeolocationPositionError.message
 ---
 

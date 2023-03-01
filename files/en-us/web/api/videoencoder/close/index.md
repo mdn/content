@@ -2,13 +2,8 @@
 title: VideoEncoder.close()
 slug: Web/API/VideoEncoder/close
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - close
-  - VideoEncoder
-  - Experimental
+status:
+  - experimental
 browser-compat: api.VideoEncoder.close
 ---
 

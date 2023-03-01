@@ -2,13 +2,6 @@
 title: Request.cache
 slug: Web/API/Request/cache
 page-type: web-api-instance-property
-tags:
-  - API
-  - Cache
-  - Fetch
-  - Property
-  - Reference
-  - request
 browser-compat: api.Request.cache
 ---
 

@@ -3,11 +3,6 @@ title: FinalizationRegistry() constructor
 slug: >-
   Web/JavaScript/Reference/Global_Objects/FinalizationRegistry/FinalizationRegistry
 page-type: javascript-constructor
-tags:
-  - Constructor
-  - FinalizationRegistry
-  - JavaScript
-  - Reference
 browser-compat: javascript.builtins.FinalizationRegistry.FinalizationRegistry
 ---
 

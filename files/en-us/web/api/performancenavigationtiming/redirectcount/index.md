@@ -2,11 +2,6 @@
 title: PerformanceNavigationTiming.redirectCount
 slug: Web/API/PerformanceNavigationTiming/redirectCount
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - Web Performance
 browser-compat: api.PerformanceNavigationTiming.redirectCount
 ---
 

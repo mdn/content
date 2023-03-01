@@ -1,12 +1,6 @@
 ---
 title: Performance fundamentals
 slug: Web/Performance/Fundamentals
-tags:
-  - Apps
-  - Firefox
-  - Gecko
-  - Guide
-  - Performance
 ---
 
 {{QuickLinksWithSubPages("Web/Performance")}}
