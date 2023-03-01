@@ -19,26 +19,71 @@ The `hue-rotate()` function applies a color rotation to the elements on which it
 hue-rotate(angle)
 ```
 
-### Parameters
+### Values
 
 - `angle`
   - : The relative change in hue of the input sample, specified as an {{cssxref("&lt;angle&gt;")}}. A value of `0deg` leaves the input unchanged. A positive hue rotation increases the hue value, while a negative rotation decreases the hue value. The initial value for {{Glossary("interpolation")}} is `0`. There is no minimum or maximum value. The effect of values above `360deg` are, given `hue-rotate(Ndeg)`, evaluates to `N` modulo 360.
 
-### Examples of correct values for hue-rotate
+The `<angle>` CSS data type represents an angle value expressed in degrees, gradians, radians, or turns. The following are equivalent
 
 ```css
-hue-rotate(-90deg)  /* Same as 270deg rotation */
-hue-rotate(0deg)    /* No effect */
-hue-rotate(90deg)   /* 90deg rotation */
-hue-rotate(.5turn)  /* 180deg rotation */
-hue-rotate(405deg)  /* Same as 45deg rotation (405 % 360 = 45) */
+hue-rotate(-180deg)
+hue-rotate(540deg)
+hue-rotate(200grad)
+hue-rotate(3.14159rad)
+hue-rotate(0.5turn)
 ```
+
+### Formal syntax
+
+{{csssyntax}}
+
+## Examples
+
+### With backdrop-filter
+
+This example applies a `hue-rotate()` filter via the `backdrop-filter` CSS property the paragraph color shifting to the area behind the `<p>`.
+
+```css
+.container {
+  background: url(image.jpg) no-repeat left / contain #011296;
+}
+p {
+  backdrop-filter: hue-rotate(240deg);
+  text-shadow: 2px 2px #011296;
+}
+```
+
+```css hidden
+.container {
+  padding: 3rem;
+  width: 30rem;
+}
+p {
+  padding: 0.5rem;
+  color: #ffffff;
+  font-size: 2rem;
+  font-family: sans-serif;
+}
+```
+
+```html hidden
+<div
+  class="container"
+  style="background-image: url(listen_to_black_women.jpg);">
+  <p>
+    Text on images can be illegible and inaccessible even with a drop shadow.
+  </p>
+</div>
+```
+
+{{EmbedLiveSample('With_backdrop-filter','100%','280')}}
 
 ### SVG filter equivalent
 
-The SVG {SVGElement("filter")}} element is used to define custom filter effects that can then be referenced by {{htmlattrxref("id")}}. The `<filter>`'s {{SVGElement("feColorMatrix")}} primitive `hueRotate` type provides the same effect. Given the following:
+The SVG {{SVGElement("filter")}} element is used to define custom filter effects that can then be referenced by {{htmlattrxref("id")}}. The `<filter>`'s {{SVGElement("feColorMatrix")}} primitive `hueRotate` type provides the same effect. Given the following:
 
-```html
+```svg
 <filter id="filterID">
   <feColorMatrix type="hueRotate" values="90" />
 </filter>
@@ -47,20 +92,12 @@ The SVG {SVGElement("filter")}} element is used to define custom filter effects 
 These values for the {{cssxref("filter")}} and {{cssxref("backdrop-filter")}} properties would produce the same results:
 
 ```css
-hue-rotate(90deg); /* 90deg rotation */
-url(#filterID); /* with embedded SVG */
-url(folder/fileName.svg#filterID); /* external svg filter definition */
+filter: hue-rotate(90deg); /* 90deg rotation */
+filter: url(#filterID); /* with embedded SVG */
+filter: url(folder/fileName.svg#filterID); /* external svg filter definition */
 ```
-
-## Examples
 
 This example shows three images: the image with a `hue-rotate()` filter function applied, the image with an equivalent `url()` filter applied, and the original images for comparison:
-
-```css
-.filter {
-  filter: hue-rotate(90deg);
-}
-```
 
 ```html hidden
 <table cellpadding="5">
@@ -75,7 +112,7 @@ This example shows three images: the image with a `hue-rotate()` filter function
     <tr>
       <td>
         <img
-          class="filter"
+          style="filter: hue-rotate(90deg)"
           src="flag.jpg"
           alt="Pride flag with rotated colors" />
       </td>
@@ -103,7 +140,7 @@ This example shows three images: the image with a `hue-rotate()` filter function
 </table>
 ```
 
-{{EmbedLiveSample('Examples','100%','280')}}
+{{EmbedLiveSample('SVG_filter_equivalent','100%','280')}}
 
 ## Specifications
 
