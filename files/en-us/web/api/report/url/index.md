@@ -20,9 +20,9 @@ A string representing the URL of the document that generated the report.
 
 ```js
 const options = {
-  types: ['deprecation'],
-  buffered: true
-}
+  types: ["deprecation"],
+  buffered: true,
+};
 
 const observer = new ReportingObserver(([firstReport], observer) => {
   // Log the URL of the document that generated the first report

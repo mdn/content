@@ -22,11 +22,8 @@ const whiteRabbit = document.getElementById("rabbit");
 
 const rabbitDownKeyframes = new KeyframeEffect(
   whiteRabbit,
-  [
-    { transform: 'translateY(0%)' },
-    { transform: 'translateY(100%)' }
-  ],
-  { duration: 3000, fill: 'forwards' }
+  [{ transform: "translateY(0%)" }, { transform: "translateY(100%)" }],
+  { duration: 3000, fill: "forwards" }
 );
 
 // returns <div id="rabbit">Click the rabbit's ears!</div>

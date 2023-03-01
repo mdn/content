@@ -40,10 +40,10 @@ A promise that resolves either to an error or a list of dictionaries, each with 
 ## Examples
 
 ```js
-const promise = indexedDB.databases()
+const promise = indexedDB.databases();
 promise.then((databases) => {
-  console.log(databases)
-})
+  console.log(databases);
+});
 ```
 
 ## Specifications

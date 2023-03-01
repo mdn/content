@@ -42,21 +42,26 @@ navigation.addEventListener("navigate", (event) => {
     return;
   }
 
-  event.intercept({ async handler() {
-    if (myFramework.currentPage) {
-      await myFramework.currentPage.transitionOut();
-    }
+  event.intercept({
+    async handler() {
+      if (myFramework.currentPage) {
+        await myFramework.currentPage.transitionOut();
+      }
 
-    let { key } = event.destination;
+      let { key } = event.destination;
 
-    if (event.navigationType === "traverse" && myFramework.previousPages.has(key)) {
-      await myFramework.previousPages.get(key).transitionIn();
-    } else {
-      // This will probably result in myFramework storing
-      // the rendered page in myFramework.previousPages.
-      await myFramework.renderPage(event.destination);
-    }
-  } });
+      if (
+        event.navigationType === "traverse" &&
+        myFramework.previousPages.has(key)
+      ) {
+        await myFramework.previousPages.get(key).transitionIn();
+      } else {
+        // This will probably result in myFramework storing
+        // the rendered page in myFramework.previousPages.
+        await myFramework.renderPage(event.destination);
+      }
+    },
+  });
 });
 ```
 

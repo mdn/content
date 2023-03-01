@@ -38,7 +38,9 @@ const dc = pc.createDataChannel("my channel");
 
 // …
 
-document.getElementById("channel-name").innerHTML = `<span class='channelName'>${dc.label}</span>`;
+document.getElementById(
+  "channel-name"
+).innerHTML = `<span class='channelName'>${dc.label}</span>`;
 ```
 
 ## Specifications

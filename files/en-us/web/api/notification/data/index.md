@@ -27,13 +27,16 @@ constructor.
 
 ```js
 const options = {
-  body: 'Do you like my body?',
-  data: 'I like peas.'
-}
+  body: "Your code submission has received 3 new review comments.",
+  data: {
+    url: "https://example.com/review/12345",
+    status: "open",
+  },
+};
 
-const n = new Notification('Test notification',options);
+const n = new Notification("New review activity", options);
 
-console.log(n.data) // should return 'I like peas.'
+console.log(n.data); // Logs the data object
 ```
 
 ## Specifications

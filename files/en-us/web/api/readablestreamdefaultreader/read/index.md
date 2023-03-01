@@ -64,7 +64,7 @@ function fetchStream() {
     // value for fetch streams is a Uint8Array
     charsReceived += value.length;
     const chunk = value;
-    let listItem = document.createElement('li');
+    let listItem = document.createElement("li");
     listItem.textContent = `Received ${charsReceived} characters so far. Current chunk = ${chunk}`;
     list2.appendChild(listItem);
 
@@ -86,8 +86,8 @@ async function* makeTextFileLineIterator(fileURL) {
   const utf8Decoder = new TextDecoder("utf-8");
   let response = await fetch(fileURL);
   let reader = response.body.getReader();
-  let {value: chunk, done: readerDone} = await reader.read();
-  chunk = chunk ? utf8Decoder.decode(chunk, {stream: true}) : "";
+  let { value: chunk, done: readerDone } = await reader.read();
+  chunk = chunk ? utf8Decoder.decode(chunk, { stream: true }) : "";
 
   let re = /\r\n|\n|\r/gm;
   let startIndex = 0;
@@ -99,8 +99,9 @@ async function* makeTextFileLineIterator(fileURL) {
         break;
       }
       let remainder = chunk.substr(startIndex);
-      ({value: chunk, done: readerDone} = await reader.read());
-      chunk = remainder + (chunk ? utf8Decoder.decode(chunk, {stream: true}) : "");
+      ({ value: chunk, done: readerDone } = await reader.read());
+      chunk =
+        remainder + (chunk ? utf8Decoder.decode(chunk, { stream: true }) : "");
       startIndex = re.lastIndex = 0;
       continue;
     }

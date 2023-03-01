@@ -194,7 +194,8 @@ const log = document.getElementById("reportResult");
 const video = document.getElementById("bunny_vid");
 
 if (!navigator.getAutoplayPolicy) {
-  log.textContent = "navigator.getAutoplayPolicy() not supported. It may or may not autoplay, depending on the browser!";
+  log.textContent =
+    "navigator.getAutoplayPolicy() not supported. It may or may not autoplay, depending on the browser!";
 } else {
   log.textContent = `Autoplay policy for media elements is ${navigator.getAutoplayPolicy(
     "mediaelement"
@@ -264,7 +265,8 @@ const log = document.getElementById("reportResult");
 const video = document.getElementById("bunny_vid");
 
 if (!navigator.getAutoplayPolicy) {
-  log.textContent = "navigator.getAutoplayPolicy() not supported. It may or may not autoplay, depending on the browser!";
+  log.textContent =
+    "navigator.getAutoplayPolicy() not supported. It may or may not autoplay, depending on the browser!";
 } else {
   // Here we pass in the HTMLVideoElement to check
   log.textContent = `navigator.getAutoplayPolicy(video) == ${navigator.getAutoplayPolicy(

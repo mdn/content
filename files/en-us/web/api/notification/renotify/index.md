@@ -27,13 +27,13 @@ notification is fired using the `Notification()` constructor.
 
 ```js
 const options = {
-  body: 'Do you like my Notification?',
-  renotify: true
-}
+  body: "Your code submission has received 3 new review comments.",
+  renotify: true,
+};
 
-const n = new Notification('Test notification', options);
+const n = new Notification("New review activity", options);
 
-console.log(n.renotify) // should log true
+console.log(n.renotify); // "true"
 ```
 
 ## Specifications

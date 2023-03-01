@@ -25,7 +25,7 @@ The function below sets up the options object for the call to {{domxref("MediaDe
 async function capture() {
   const supportedConstraints = navigator.mediaDevices.getSupportedConstraints();
   const displayMediaOptions = {
-    audio: {}
+    audio: {},
   };
 
   if (supportedConstraints.suppressLocalAudioPlayback) {
@@ -33,7 +33,9 @@ async function capture() {
   }
 
   try {
-    videoElem.srcObject = await navigator.mediaDevices.getDisplayMedia(displayMediaOptions);
+    videoElem.srcObject = await navigator.mediaDevices.getDisplayMedia(
+      displayMediaOptions
+    );
   } catch (err) {
     /* handle the error */
   }

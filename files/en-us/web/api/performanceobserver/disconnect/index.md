@@ -31,13 +31,12 @@ The following example disconnects the performance observer to disable receiving 
 
 ```js
 const observer = new PerformanceObserver((list, obj) => {
-  list.getEntries()
-    .forEach((entry) => {
-      // Process "measure" events
-      // …
-      // Disable additional performance events
-      observer.disconnect();
-    });
+  list.getEntries().forEach((entry) => {
+    // Process "measure" events
+    // …
+    // Disable additional performance events
+    observer.disconnect();
+  });
 });
 observer.observe({ entryTypes: ["mark", "measure"] });
 ```

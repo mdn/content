@@ -31,15 +31,15 @@ putting it into a paragraph. The `handleMessage` method is associated to the
 
 ```js
 const channel = new MessageChannel();
-const para = document.querySelector('p');
+const para = document.querySelector("p");
 
-const ifr = document.querySelector('iframe');
+const ifr = document.querySelector("iframe");
 const otherWindow = ifr.contentWindow;
 
 ifr.addEventListener("load", iframeLoaded, false);
 
 function iframeLoaded() {
-  otherWindow.postMessage('Hello from the main page!', '*', [channel.port2]);
+  otherWindow.postMessage("Hello from the main page!", "*", [channel.port2]);
 }
 
 channel.port1.onmessage = handleMessage;
