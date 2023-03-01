@@ -50,7 +50,7 @@ The `@page` at-rule can be accessed via the CSS object model interface {{domxref
 
 > **Note:** The W3C is discussing how to handle viewport-related {{cssxref("&lt;length&gt;")}} units, `vh`, `vw`, `vmin`, and `vmax`. Meanwhile do not use them within a `@page` at-rule.
 
-### Properties
+### Related properties
 
 The `@page` at-rule, allows the user to assign a name to the rule, which is then called in a declaration using the `page` property.
 
