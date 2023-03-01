@@ -61,7 +61,7 @@ describe an RTP stream.
 function calculateAverageQP(stats) {
   let frameCount = 0;
 
-  switch(stats.type) {
+  switch (stats.type) {
     case "inbound-rtp":
     case "remote-inbound-rtp":
       frameCount = stats.framesDecoded;

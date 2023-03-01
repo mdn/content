@@ -38,7 +38,9 @@ function calculate_load_times() {
   // Get a list of "resource" performance entries
   const resources = performance.getEntriesByType("resource");
   if (resources === undefined || resources.length <= 0) {
-    console.log("= Calculate Load Times: there are NO `resource` performance records");
+    console.log(
+      "= Calculate Load Times: there are NO `resource` performance records"
+    );
     return;
   }
 
@@ -58,7 +60,10 @@ function calculate_load_times() {
     console.log(`… TCP time = ${t}`);
 
     // Secure connection time
-    t = (resource.secureConnectionStart > 0) ? (resource.connectEnd - resource.secureConnectionStart) : "0";
+    t =
+      resource.secureConnectionStart > 0
+        ? resource.connectEnd - resource.secureConnectionStart
+        : "0";
     console.log(`… Secure connection time = ${t}`);
 
     // Response time
@@ -66,15 +71,22 @@ function calculate_load_times() {
     console.log(`… Response time = ${t}`);
 
     // Fetch until response end
-    t = (resource.fetchStart > 0) ? (resource.responseEnd - resource.fetchStart) : "0";
+    t =
+      resource.fetchStart > 0
+        ? resource.responseEnd - resource.fetchStart
+        : "0";
     console.log(`… Fetch until response end time = ${t}`);
 
     // Request start until response end
-    t = (resource.requestStart > 0) ? (resource.responseEnd - resource.requestStart) : "0";
+    t =
+      resource.requestStart > 0
+        ? resource.responseEnd - resource.requestStart
+        : "0";
     console.log(`… Request start until response end time = ${t}`);
 
     // Start until response end
-    t = (resource.startTime > 0) ? (resource.responseEnd - resource.startTime) : "0";
+    t =
+      resource.startTime > 0 ? resource.responseEnd - resource.startTime : "0";
     console.log(`… Start until response end time = ${t}`);
   });
 }
@@ -87,7 +99,7 @@ The size of an application's resources can affect an application's performance s
 The following example demonstrates using these three properties.
 
 ```js
-function display_size_data(){
+function display_size_data() {
   // Check for support of the PerformanceResourceTiming.*size properties and print their values
   // if supported.
   if (performance === undefined) {
@@ -97,7 +109,9 @@ function display_size_data(){
 
   const entries = performance.getEntriesByType("resource");
   if (entries === undefined) {
-    console.log("= Display Size Data: performance.getEntriesByType() is NOT supported");
+    console.log(
+      "= Display Size Data: performance.getEntriesByType() is NOT supported"
+    );
     return;
   }
 
@@ -135,11 +149,13 @@ The following example demonstrates the usage of these two methods.
 ```js
 function clear_resource_timings() {
   if (performance === undefined) {
-    console.log("= performance.clearResourceTimings(): performance NOT supported");
+    console.log(
+      "= performance.clearResourceTimings(): performance NOT supported"
+    );
     return;
   }
   // Check if Performance.clearResourceTiming() is supported
-  console.log ("= Print performance.clearResourceTimings()");
+  console.log("= Print performance.clearResourceTimings()");
   const supported = typeof performance.clearResourceTimings === "function";
   if (supported) {
     console.log("… Performance.clearResourceTimings() = supported");
@@ -153,18 +169,23 @@ function clear_resource_timings() {
   if (p.length === 0) {
     console.log("… Performance data buffer cleared");
   } else {
-    console.log(`… Performance data buffer NOT cleared (still have '${p.length}' items`);
+    console.log(
+      `… Performance data buffer NOT cleared (still have '${p.length}' items`
+    );
   }
 }
 
 function set_resource_timing_buffer_size(n) {
   if (performance === undefined) {
-    console.log("= performance.setResourceTimingBufferSize(): performance NOT supported");
+    console.log(
+      "= performance.setResourceTimingBufferSize(): performance NOT supported"
+    );
     return;
   }
   // Check if Performance.setResourceTimingBufferSize() is supported
-  console.log ("= performance.setResourceTimingBufferSize()");
-  const supported = typeof performance.setResourceTimingBufferSize === "function";
+  console.log("= performance.setResourceTimingBufferSize()");
+  const supported =
+    typeof performance.setResourceTimingBufferSize === "function";
   if (supported) {
     console.log("… Performance.setResourceTimingBufferSize() = supported");
     performance.setResourceTimingBufferSize(n);
@@ -187,7 +208,8 @@ function init() {
   const image1 = new Image();
   image1.src = "https://developer.mozilla.org/static/img/opengraph-logo.png";
   const image2 = new Image();
-  image2.src = "http://mozorg.cdn.mozilla.net/media/img/firefox/firefox-256.e2c1fc556816.jpg"
+  image2.src =
+    "http://mozorg.cdn.mozilla.net/media/img/firefox/firefox-256.e2c1fc556816.jpg";
 
   // Set a callback if the resource buffer becomes filled
   performance.onresourcetimingbufferfull = buffer_full;
