@@ -22,7 +22,7 @@ The feature may not be available in private mode.
 This code checks if the browser supports service workers.
 
 ```js
-if ('serviceWorker' in navigator) {
+if ("serviceWorker" in navigator) {
   // Supported!
 }
 ```

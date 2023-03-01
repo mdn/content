@@ -91,7 +91,14 @@ None ({{jsxref("undefined")}}).
 ## Examples
 
 ```js
-ext.framebufferTextureMultiviewOVR(gl.DRAW_FRAMEBUFFER, gl.COLOR_ATTACHMENT0, colorTex, 0, 0, 2);
+ext.framebufferTextureMultiviewOVR(
+  gl.DRAW_FRAMEBUFFER,
+  gl.COLOR_ATTACHMENT0,
+  colorTex,
+  0,
+  0,
+  2
+);
 ```
 
 ## Specifications

@@ -53,7 +53,7 @@ Externally connectable controls which other extensions and web pages can communi
 >
 > - In Chrome, `chrome.runtime.connect` and `chrome.runtime.sendMessage` are used. These methods are only available when there is at least one extension listening for messages, see [chrome.runtime will no longer be defined unconditionally in Chrome 106](https://groups.google.com/a/chromium.org/g/chromium-extensions/c/tCWVZRq77cg/m/KB6-tvCdAgAJ) for more details.
 > - In Safari, `browser.runtime.connect` and `browser.runtime.sendMessage` are used.
-> - In Firefox, neither API is supported. See {{bug(1319168)}}.
+> - In Firefox, neither API is supported. See [Firefox bug 1319168](https://bugzil.la/1319168).
 
 ### "ids" attribute
 

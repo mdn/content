@@ -111,6 +111,5 @@ A CSS rule can be defined for the `code` selector to override the browser's defa
 
 - {{HTMLElement("samp")}}
 - {{HTMLElement("kbd")}}
-- {{HTMLElement("command")}} (deprecated)
 - {{HTMLElement("var")}}
 - {{HTMLElement("pre")}}

@@ -56,10 +56,10 @@ The following example returns a file handle with the specified name, if the file
 not exist it is created.
 
 ```js
-const fileName = 'fileToGetName';
+const fileName = "fileToGetName";
 
 // assuming we have a directory handle: 'currentDirHandle'
-const fileHandle = currentDirHandle.getFileHandle(fileName, {create: true});
+const fileHandle = currentDirHandle.getFileHandle(fileName, { create: true });
 ```
 
 ## Specifications

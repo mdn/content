@@ -46,15 +46,15 @@ The `handleMessage` handler then responds to a message being sent back from the 
 
 ```js
 const channel = new MessageChannel();
-const para = document.querySelector('p');
+const para = document.querySelector("p");
 
-const ifr = document.querySelector('iframe');
+const ifr = document.querySelector("iframe");
 const otherWindow = ifr.contentWindow;
 
 ifr.addEventListener("load", iframeLoaded, false);
 
 function iframeLoaded() {
-  otherWindow.postMessage('Transferring message port', '*', [channel.port2]);
+  otherWindow.postMessage("Transferring message port", "*", [channel.port2]);
 }
 
 channel.port1.onmessage = handleMessage;
@@ -64,7 +64,7 @@ function handleMessage(e) {
 
 // in the iframe…
 
-window.addEventListener('message', (event) => {
+window.addEventListener("message", (event) => {
   const messagePort = event.ports?.[0];
   messagePort.postMessage("Hello from the iframe!");
 });

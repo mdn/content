@@ -40,7 +40,7 @@ In addition to these, there's an experimental proposal to add more headers to th
 Even if server-driven content negotiation is the most common way to agree on a specific representation of a resource, it has several drawbacks:
 
 - The server doesn't have total knowledge of the browser. Even with the Client Hints extension, it doesn't have a complete knowledge of the capabilities of the browser. Unlike reactive content negotiation where the client makes the choice, the server choice is always somewhat arbitrary.
-- The information from the client is quite verbose (HTTP/2 header compression mitigates this problem) and a privacy risk (HTTP fingerprinting).
+- The information from the client is quite verbose (HTTP/2 header compression mitigates this problem) and a privacy risk (HTTP [fingerprinting](/en-US/docs/Glossary/Fingerprinting)).
 - As several representations of a given resource are sent, shared caches are less efficient and server implementations are more complex.
 
 ### The `Accept` header

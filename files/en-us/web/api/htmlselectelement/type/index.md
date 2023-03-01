@@ -21,14 +21,14 @@ One of the following:
 
 ```js
 switch (select.type) {
-  case 'select-multiple':
+  case "select-multiple":
     // Multiple values may be selected
     break;
-  case 'select-one':
+  case "select-one":
     // Only one value may be selected
     break;
   default:
-    // Non-standard value (or this isn't a SELECT element)
+  // Non-standard value (or this isn't a SELECT element)
 }
 ```
 

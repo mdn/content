@@ -29,7 +29,7 @@ There is no real code in the discussion because we haven't yet chosen a web fram
 
 ## Web servers and HTTP (a primer)
 
-Web browsers communicate with [web servers](/en-US/docs/Learn/Common_questions/What_is_a_web_server) using the **H**yper**T**ext **T**ransfer **P**rotocol ([HTTP](/en-US/docs/Web/HTTP)). When you click a link on a web page, submit a form, or run a search, the browser sends an _HTTP Request_ to the server.
+Web browsers communicate with [web servers](/en-US/docs/Learn/Common_questions/Web_mechanics/What_is_a_web_server) using the **H**yper**T**ext **T**ransfer **P**rotocol ([HTTP](/en-US/docs/Web/HTTP)). When you click a link on a web page, submit a form, or run a search, the browser sends an _HTTP Request_ to the server.
 
 This request includes:
 

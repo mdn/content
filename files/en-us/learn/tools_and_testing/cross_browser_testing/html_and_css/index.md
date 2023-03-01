@@ -173,22 +173,22 @@ button {
   /* … */
 
   background-color: #ff0000;
-  background-color: rgba(255 0 0 / 1);
-  box-shadow: inset 1px 1px 3px rgba(255 255 255 / 0.4), inset -1px -1px 3px
-      rgba(0 0 0 / 0.4);
+  background-color: rgb(255 0 0 / 1);
+  box-shadow: inset 1px 1px 3px rgb(255 255 255 / 0.4), inset -1px -1px 3px
+      rgb(0 0 0 / 0.4);
 }
 
 button:hover {
-  background-color: rgba(255 0 0 / 0.5);
+  background-color: rgb(255 0 0 / 0.5);
 }
 
 button:active {
-  box-shadow: inset 1px 1px 3px rgba(0 0 0 / 0.4), inset -1px -1px 3px rgba(255
+  box-shadow: inset 1px 1px 3px rgb(0 0 0 / 0.4), inset -1px -1px 3px rgb(255
           255 255 / 0.4);
 }
 ```
 
-Here we are providing an [RGBA](/en-US/docs/Web/CSS/color_value/rgba) {{cssxref("background-color")}} that changes opacity on hover to give the user a hint that the button is interactive, and some semi-transparent inset {{cssxref("box-shadow")}} shades to give the button a bit of texture and depth. While now fully supported, RGBA colors and box shadows haven't been around forever; starting in IE9. Browsers that didn't support RGBA colors would ignore the declaration meaning in old browsers the background just wouldn't show up at all so the text would be unreadable, no good at all!
+Here we are providing an [RGBA](/en-US/docs/Web/CSS/color_value/rgb) {{cssxref("background-color")}} that changes opacity on hover to give the user a hint that the button is interactive, and some semi-transparent inset {{cssxref("box-shadow")}} shades to give the button a bit of texture and depth. While now fully supported, RGBA colors and box shadows haven't been around forever; starting in IE9. Browsers that didn't support RGBA colors would ignore the declaration meaning in old browsers the background just wouldn't show up at all so the text would be unreadable, no good at all!
 
 ![Hard to see pill button with white text on an almost white background](unreadable-button.png)
 

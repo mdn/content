@@ -136,7 +136,7 @@ const myObject = {
 ### Debugging JavaScript
 
 - [What are the basic types of error?](/en-US/docs/Learn/JavaScript/First_steps/What_went_wrong#types_of_error)
-- [What are browser developer tools, and how do you access them?](/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools)
+- [What are browser developer tools, and how do you access them?](/en-US/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools)
 - [How do you log a value to the JavaScript console?](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/JavaScript#the_console_api)
 - [How do you use breakpoints and other JavaScript debugging features?](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/JavaScript#using_the_javascript_debugger)
 

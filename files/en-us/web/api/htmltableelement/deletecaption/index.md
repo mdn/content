@@ -51,7 +51,7 @@ This example uses JavaScript to delete a table's caption.
 ### JavaScript
 
 ```js
-let table = document.querySelector('table');
+let table = document.querySelector("table");
 table.deleteCaption();
 ```
 

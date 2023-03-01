@@ -994,7 +994,6 @@ This section lists events that have _their own_ reference pages on MDN. If you a
   - [pointerup event](/en-US/docs/Web/API/Element/pointerup_event)
   - [scroll event](/en-US/docs/Web/API/Element/scroll_event)
   - [select event](/en-US/docs/Web/API/Element/select_event)
-  - [show event](/en-US/docs/Web/API/Element/show_event)
   - [touchcancel event](/en-US/docs/Web/API/Element/touchcancel_event)
   - [touchend event](/en-US/docs/Web/API/Element/touchend_event)
   - [touchmove event](/en-US/docs/Web/API/Element/touchmove_event)

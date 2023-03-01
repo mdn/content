@@ -42,7 +42,7 @@ Firefox 6, based on Gecko 6.0, was released on August 16, 2011. This article pro
 - In the past, the {{ cssxref(":hover") }} pseudoclass was not applied to class selectors when in quirks mode; for example, `.someclass:hover` did not work. This quirk has been removed.
 - The {{ cssxref(":indeterminate") }} pseudo-class can be applied to {{ HTMLElement("progress") }} elements. This is non-standard, but we hope it will be adopted by other browsers, because it will be useful.
 - The `-moz-win-exclude-glass` value has been added to the `-moz-appearance` CSS property in order to exclude opaque regions in Aero Glass glaze effects on Windows systems.
-- {{ Bug(658949) }} changed how the hash (#) symbol is treated in data URLs which may break CSS stylesheets which contain such a symbol if it is not escaped.
+- [Webkit bug 658949](https://bugzil.la/658949) changed how the hash (#) symbol is treated in data URLs which may break CSS stylesheets which contain such a symbol if it is not escaped.
 
 ### DOM
 
@@ -57,7 +57,7 @@ Firefox 6, based on Gecko 6.0, was released on August 16, 2011. This article pro
 
 - `navigator.securityPolicy`, which has returned an empty string for a long time, has been removed outright.
 - {{ domxref("BlobBuilder") }} is now implemented, although for now it's prefixed (so you need to use `MozBlobBuilder`).
-- The {{ domxref("document.height") }} and {{ domxref("document.width") }} have been removed. {{ Bug(585877) }}
+- The {{ domxref("document.height") }} and {{ domxref("document.width") }} have been removed. [Webkit bug 585877](https://bugzil.la/585877)
 - The {{ domxref("DocumentType") }} object's `entities` and `notations` properties, which were never implemented and always returned `null`, have been removed, since they've been removed from the specification anyway.
 - The `DOMConfiguration` interface and the `document.domConfig` property that used it have both been removed; they were never supported and have since been removed from the DOM specification.
 - The `hashchange` event now correctly includes [the `newURL` and `oldURL` fields](/en-US/docs/Web/API/Window/hashchange_event).
@@ -72,7 +72,7 @@ Firefox 6, based on Gecko 6.0, was released on August 16, 2011. This article pro
 - The `EventTarget` function [`addEventListener()`](/en-US/docs/XPCOM_Interface_Reference/nsIDOMEventTarget)'s `useCapture` parameter is now optional, as it is in WebKit (and as per the latest version of the specification).
 - The `mozResponseArrayBuffer` property of the [`XMLHttpRequest`](/en-US/docs/Web/API/XMLHttpRequest) object has been replaced with the `responseType` and `response` properties.
 - The {{ domxref("element.dataset") }} property has been added to the [`HTMLElement`](/en-US/docs/Web/API/HTMLElement) interface allowing access to the [`data-*` global attributes](/en-US/docs/Web/HTML/Global_attributes#data-) of an element.
-- The {{ domxref("CustomEvent") }} interface has been implemented. (see {{ bug("427537") }})
+- The {{ domxref("CustomEvent") }} interface has been implemented. (see [Firefox bug 427537](https://bugzil.la/427537))
 - For security reasons, `data:` and `javascript:` URLs no longer inherit the security context of the current page when the user enters them in the location bar; instead, a new, empty, security context is created. This means that script loaded by entering `javascript:` URLs in the location bar no longer has access to DOM methods and the like, for example. These URLs continue to work as before when used by script, however.
 
 ### JavaScript
@@ -162,29 +162,29 @@ For an overview of the changes you may need to make in order to make your add-on
 - `nsIStructuredCloneContainer`
   - : A container for objects that have been serialized using the [structured clone algorithm](/en-US/docs/HTML/Structured_clones).
 - `nsITelemetry`
-  - : Implements telemetry support to allow recording of telemetry data to be used to present histograms for performance tracking purposes. See {{ bug("649502") }} and {{ bug("585196") }}.
+  - : Implements telemetry support to allow recording of telemetry data to be used to present histograms for performance tracking purposes. See [Firefox bug 649502](https://bugzil.la/649502) and [Firefox bug 585196](https://bugzil.la/585196).
 - `nsITimedChannel`
-  - : See {{ bug("576006") }}.
+  - : See [Firefox bug 576006](https://bugzil.la/576006).
 - `nsIWebSocketListener`
-  - : See {{ bug("640003") }}.
+  - : See [Firefox bug 640003](https://bugzil.la/640003).
 - `nsIWebSocketProtocol`
-  - : See {{ bug("640003") }}.
+  - : See [Firefox bug 640003](https://bugzil.la/640003).
 
 #### Removed interfaces
 
 The following interfaces were implementation details that are no longer needed:
 
-- `nsIDOMDocumentEvent` (see {{ bug("655517") }})
-- `nsIDOMDocumentTraversal` (see {{ bug("655514") }})
-- `nsIDOMDocumentRange` (see {{ bug("655513") }})
-- `IWeaveCrypto` (see {{ bug("651596") }})
-- `nsIDOM3DocumentEvent` (see {{ bug("481863") }})
+- `nsIDOMDocumentEvent` (see [Firefox bug 655517](https://bugzil.la/655517))
+- `nsIDOMDocumentTraversal` (see [Firefox bug 655514](https://bugzil.la/655514))
+- `nsIDOMDocumentRange` (see [Firefox bug 655513](https://bugzil.la/655513))
+- `IWeaveCrypto` (see [Firefox bug 651596](https://bugzil.la/651596))
+- `nsIDOM3DocumentEvent` (see [Firefox bug 481863](https://bugzil.la/481863))
 - `nsIDOMAbstractView`
 - `nsILiveTitleNotificationSubject`
-- `nsIPlugin` (see {{ bug("637253") }})
-- `nsIPluginInstance` (see {{ bug("637253") }})
-- `nsIHTMLEditRules` (see {{ bug(633750) }})
-- `nsIXSLTProcessorObsolete` (see {{ bug("649534") }})
+- `nsIPlugin` (see [Firefox bug 637253](https://bugzil.la/637253))
+- `nsIPluginInstance` (see [Firefox bug 637253](https://bugzil.la/637253))
+- `nsIHTMLEditRules` (see [Firefox bug 633750](https://bugzil.la/633750))
+- `nsIXSLTProcessorObsolete` (see [Firefox bug 649534](https://bugzil.la/649534))
 
 ### Other changes
 

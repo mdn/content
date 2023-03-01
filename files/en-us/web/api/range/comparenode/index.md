@@ -37,19 +37,17 @@ function rangeCompareNode(range, node) {
   const nodeRange = node.ownerDocument.createRange();
   try {
     nodeRange.selectNode(node);
-  }
-  catch (e) {
+  } catch (e) {
     nodeRange.selectNodeContents(node);
   }
-  const nodeIsBefore = range.compareBoundaryPoints(Range.START_TO_START, nodeRange) === 1;
-  const nodeIsAfter = range.compareBoundaryPoints(Range.END_TO_END, nodeRange) === -1;
+  const nodeIsBefore =
+    range.compareBoundaryPoints(Range.START_TO_START, nodeRange) === 1;
+  const nodeIsAfter =
+    range.compareBoundaryPoints(Range.END_TO_END, nodeRange) === -1;
 
-  if (nodeIsBefore && !nodeIsAfter)
-    return 0;
-  if (!nodeIsBefore && nodeIsAfter)
-    return 1;
-  if (nodeIsBefore && nodeIsAfter)
-    return 2;
+  if (nodeIsBefore && !nodeIsAfter) return 0;
+  if (!nodeIsBefore && nodeIsAfter) return 1;
+  if (nodeIsBefore && nodeIsAfter) return 2;
 
   return 3;
 }
