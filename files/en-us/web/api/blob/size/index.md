@@ -2,12 +2,6 @@
 title: Blob.size
 slug: Web/API/Blob/size
 page-type: web-api-instance-property
-tags:
-  - API
-  - Blob
-  - File API
-  - Property
-  - Reference
 browser-compat: api.Blob.size
 ---
 

@@ -2,16 +2,6 @@
 title: HTMLMediaElement
 slug: Web/API/HTMLMediaElement
 page-type: web-api-interface
-tags:
-  - API
-  - Audio
-  - HTML
-  - HTML DOM
-  - HTMLMediaElement
-  - Interface
-  - Media
-  - Reference
-  - Video
 browser-compat: api.HTMLMediaElement
 ---
 

@@ -2,13 +2,6 @@
 title: AuthenticatorAttestationResponse.attestationObject
 slug: Web/API/AuthenticatorAttestationResponse/attestationObject
 page-type: web-api-instance-property
-tags:
-  - API
-  - AuthenticatorAttestationResponse
-  - Property
-  - Reference
-  - Web Authentication API
-  - WebAuthn
 browser-compat: api.AuthenticatorAttestationResponse.attestationObject
 ---
 
@@ -110,7 +103,6 @@ navigator.credentials
 
 ## See also
 
-- {{domxref("PublicKeyCredentialCreationOptions.challenge")}}: the cryptographic
-  challenge which signature by the authenticator is contained in `attStmt`
-- {{domxref("PublicKeyCredentialCreationOptions.attestation")}}: the attestation
-  statement transport option specified for the creation
+- {{domxref("CredentialsContainer.create()")}}: the method used to create a statement with
+  a cryptographic `challenge` which signature by the authenticator is contained in `attStmt`,
+  with the specified `attestation` transport option.

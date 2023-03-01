@@ -442,9 +442,3 @@ If you are already learning CSS and have done well on the assessment, you can mo
 If you want to get started with learning CSS, check out the [CSS Learning Area](/en-US/docs/Learn/CSS)!
 
 {{PreviousMenuNext("Learn/HTML/Tables/Basics", "Learn/HTML/Tables/Structuring_planet_data", "Learn/HTML/Tables")}}
-
-## In this module
-
-- [HTML table basics](/en-US/docs/Learn/HTML/Tables/Basics)
-- [HTML table advanced features and accessibility](/en-US/docs/Learn/HTML/Tables/Advanced)
-- [Structuring planet data](/en-US/docs/Learn/HTML/Tables/Structuring_planet_data)

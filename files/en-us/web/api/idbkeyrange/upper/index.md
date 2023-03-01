@@ -2,15 +2,6 @@
 title: IDBKeyRange.upper
 slug: Web/API/IDBKeyRange/upper
 page-type: web-api-instance-property
-tags:
-  - API
-  - Database
-  - IDBKeyRange
-  - IndexedDB
-  - Property
-  - Reference
-  - Storage
-  - upper
 browser-compat: api.IDBKeyRange.upper
 ---
 

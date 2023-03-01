@@ -2,17 +2,6 @@
 title: RTCIceCandidate.protocol
 slug: Web/API/RTCIceCandidate/protocol
 page-type: web-api-instance-property
-tags:
-  - API
-  - ICE
-  - Property
-  - Protocol
-  - RTCIceCandidate
-  - Read-only
-  - Reference
-  - SDP
-  - WebRTC
-  - WebRTC API
 browser-compat: api.RTCIceCandidate.protocol
 ---
 

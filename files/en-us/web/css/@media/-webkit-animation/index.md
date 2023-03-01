@@ -2,14 +2,9 @@
 title: "-webkit-animation"
 slug: Web/CSS/@media/-webkit-animation
 page-type: css-media-feature
-tags:
-  - "@media"
-  - CSS
-  - Reference
-  - WebKit
-  - media feature
-  - Deprecated
-  - Non-standard
+status:
+  - deprecated
+  - non-standard
 browser-compat: css.at-rules.media.-webkit-animation
 ---
 

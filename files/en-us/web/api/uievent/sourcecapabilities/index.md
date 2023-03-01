@@ -2,13 +2,8 @@
 title: UIEvent.sourceCapabilities
 slug: Web/API/UIEvent/sourceCapabilities
 page-type: web-api-instance-property
-tags:
-  - API
-  - DOM
-  - Property
-  - Reference
-  - UIEvent
-  - Experimental
+status:
+  - experimental
 browser-compat: api.UIEvent.sourceCapabilities
 ---
 

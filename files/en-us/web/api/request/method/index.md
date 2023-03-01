@@ -2,12 +2,6 @@
 title: Request.method
 slug: Web/API/Request/method
 page-type: web-api-instance-property
-tags:
-  - API
-  - Fetch
-  - Property
-  - Reference
-  - request
 browser-compat: api.Request.method
 ---
 

@@ -2,9 +2,6 @@
 title: ProcessingInstruction
 slug: Web/API/ProcessingInstruction
 page-type: web-api-interface
-tags:
-  - Interface
-  - Reference
 browser-compat: api.ProcessingInstruction
 ---
 

@@ -2,12 +2,6 @@
 title: mask-mode
 slug: Web/CSS/mask-mode
 page-type: css-property
-tags:
-  - CSS
-  - CSS Masking
-  - CSS Property
-  - Reference
-  - recipe:css-property
 browser-compat: css.properties.mask-mode
 ---
 

@@ -1,6 +1,7 @@
 ---
 title: Chrome incompatibilities
 slug: Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities
+page-type: guide
 tags:
   - Guide
   - WebExtensions

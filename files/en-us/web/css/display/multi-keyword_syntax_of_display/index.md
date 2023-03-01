@@ -2,12 +2,8 @@
 title: Adapting to the new multi-keyword syntax of display
 slug: Web/CSS/display/multi-keyword_syntax_of_display
 page-type: guide
-tags:
-  - CSS
-  - Example
-  - Experimental
-  - Guide
-  - Intermediate
+status:
+  - experimental
 ---
 
 {{CSSRef}}

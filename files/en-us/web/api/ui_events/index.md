@@ -2,11 +2,6 @@
 title: UI Events
 slug: Web/API/UI_Events
 page-type: web-api-overview
-tags:
-  - API
-  - Overview
-  - Reference
-  - UI Events
 spec-urls: https://w3c.github.io/uievents/
 ---
 

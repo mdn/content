@@ -2,12 +2,6 @@
 title: ElementInternals.willValidate
 slug: Web/API/ElementInternals/willValidate
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - willValidate
-  - ElementInternals
 browser-compat: api.ElementInternals.willValidate
 ---
 
@@ -40,7 +34,6 @@ class CustomCheckbox extends HTMLElement {
   }
 
   // …
-
 }
 
 window.customElements.define("custom-checkbox", CustomCheckbox);

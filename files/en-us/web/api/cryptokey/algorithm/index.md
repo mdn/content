@@ -35,7 +35,7 @@ function importSecretKey(rawKey) {
   ]);
 }
 
-const key = importSecretKey(rawkey);
+const key = importSecretKey(rawKey);
 console.log(`This key is to be used with the ${key.algorithm} algorithm.`);
 ```
 

@@ -2,11 +2,6 @@
 title: HTMLMediaElement.preservesPitch
 slug: Web/API/HTMLMediaElement/preservesPitch
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTML DOM
-  - HTMLMediaElement
-  - Property
 browser-compat: api.HTMLMediaElement.preservesPitch
 ---
 

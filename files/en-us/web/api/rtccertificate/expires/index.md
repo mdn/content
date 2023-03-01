@@ -14,7 +14,7 @@ It's also useful to note that browsers may further restrict the expiration time 
 
 ## Value
 
-A timestamp, given as [Unix time](/en-US/docs/Glossary/Unix_time) in milliseconds, containing the expiration date of the certicate.
+A timestamp, given as [Unix time](/en-US/docs/Glossary/Unix_time) in milliseconds, containing the expiration date of the certificate.
 
 ## Examples
 

@@ -2,11 +2,6 @@
 title: HTMLTableRowElement
 slug: Web/API/HTMLTableRowElement
 page-type: web-api-interface
-tags:
-  - API
-  - HTML DOM
-  - Interface
-  - Reference
 browser-compat: api.HTMLTableRowElement
 ---
 

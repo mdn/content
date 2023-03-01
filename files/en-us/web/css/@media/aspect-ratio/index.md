@@ -2,12 +2,6 @@
 title: aspect-ratio
 slug: Web/CSS/@media/aspect-ratio
 page-type: css-media-feature
-tags:
-  - "@media"
-  - CSS
-  - Media Queries
-  - Reference
-  - media feature
 browser-compat: css.at-rules.media.aspect-ratio
 ---
 

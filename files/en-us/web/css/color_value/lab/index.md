@@ -2,15 +2,8 @@
 title: lab()
 slug: Web/CSS/color_value/lab
 page-type: css-function
-tags:
-  - CSS
-  - CSS Data Type
-  - Data Type
-  - Reference
-  - Web
-  - color
-  - lab
-  - Experimental
+status:
+  - experimental
 browser-compat: css.types.color.lab
 ---
 

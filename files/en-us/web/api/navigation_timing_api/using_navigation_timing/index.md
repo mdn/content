@@ -2,12 +2,6 @@
 title: Using Navigation Timing
 slug: Web/API/Navigation_timing_API/Using_Navigation_Timing
 page-type: guide
-tags:
-  - Guide
-  - Navigation Timing
-  - Navigation Timing API
-  - Optimization
-  - Performance
 ---
 
 {{DefaultAPISidebar("Performance API")}}

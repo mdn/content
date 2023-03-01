@@ -2,13 +2,6 @@
 title: 'FileReader: loadend event'
 slug: Web/API/FileReader/loadend_event
 page-type: web-api-event
-tags:
-  - API
-  - Event
-  - FileReader
-  - ProgressiveEvent
-  - Web
-  - loadend
 browser-compat: api.FileReader.loadend_event
 ---
 

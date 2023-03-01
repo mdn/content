@@ -2,14 +2,6 @@
 title: HTMLElement.inputMode
 slug: Web/API/HTMLElement/inputMode
 page-type: web-api-instance-property
-tags:
-  - API
-  - Attribute
-  - Element
-  - HTML
-  - HTML element
-  - Property
-  - Reference
 browser-compat: api.HTMLElement.inputMode
 ---
 

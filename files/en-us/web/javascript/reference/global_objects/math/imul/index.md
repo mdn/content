@@ -2,13 +2,6 @@
 title: Math.imul()
 slug: Web/JavaScript/Reference/Global_Objects/Math/imul
 page-type: javascript-static-method
-tags:
-  - JavaScript
-  - Math
-  - Method
-  - Reference
-  - imul
-  - Polyfill
 browser-compat: javascript.builtins.Math.imul
 ---
 

@@ -2,14 +2,8 @@
 title: CSSMathSum
 slug: Web/API/CSSMathSum
 page-type: web-api-interface
-tags:
-  - API
-  - CSS Typed Object Model API
-  - CSSMathSum
-  - Experimental
-  - Houdini
-  - Interface
-  - Reference
+status:
+  - experimental
 browser-compat: api.CSSMathSum
 ---
 

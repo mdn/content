@@ -2,11 +2,6 @@
 title: CanvasRenderingContext2D.filter
 slug: Web/API/CanvasRenderingContext2D/filter
 page-type: web-api-instance-property
-tags:
-  - API
-  - Canvas
-  - CanvasRenderingContext2D
-  - Property
 browser-compat: api.CanvasRenderingContext2D.filter
 ---
 

@@ -2,11 +2,6 @@
 title: Less than or equal (<=)
 slug: Web/JavaScript/Reference/Operators/Less_than_or_equal
 page-type: javascript-operator
-tags:
-  - JavaScript
-  - Language feature
-  - Operator
-  - Reference
 browser-compat: javascript.operators.less_than_or_equal
 ---
 

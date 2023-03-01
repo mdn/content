@@ -2,11 +2,6 @@
 title: 'IDBTransaction: complete event'
 slug: Web/API/IDBTransaction/complete_event
 page-type: web-api-event
-tags:
-  - Event
-  - IDBTransaction
-  - Reference
-  - complete
 browser-compat: api.IDBTransaction.complete_event
 ---
 

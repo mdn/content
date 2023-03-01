@@ -2,18 +2,6 @@
 title: Clipboard
 slug: Web/API/Clipboard
 page-type: web-api-interface
-tags:
-  - API
-  - Clip
-  - Clipboard
-  - Clipboard API
-  - Cut
-  - Editing
-  - Interface
-  - Pasteboard
-  - Reference
-  - copy
-  - paste
 browser-compat: api.Clipboard
 ---
 

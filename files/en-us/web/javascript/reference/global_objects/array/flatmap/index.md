@@ -2,15 +2,6 @@
 title: Array.prototype.flatMap()
 slug: Web/JavaScript/Reference/Global_Objects/Array/flatMap
 page-type: javascript-instance-method
-tags:
-  - Array
-  - JavaScript
-  - Map
-  - Method
-  - Prototype
-  - Reference
-  - flatMap
-  - Polyfill
 browser-compat: javascript.builtins.Array.flatMap
 ---
 

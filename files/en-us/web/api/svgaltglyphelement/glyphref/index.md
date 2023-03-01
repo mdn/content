@@ -2,14 +2,8 @@
 title: SVGAltGlyphElement.glyphRef
 slug: Web/API/SVGAltGlyphElement/glyphRef
 page-type: web-api-instance-property
-tags:
-  - API
-  - Deprecated
-  - Property
-  - Reference
-  - SVG
-  - SVGAltGlyphElement
-  - SVGAltGlyphRefElement
+status:
+  - deprecated
 browser-compat: api.SVGAltGlyphElement.glyphRef
 ---
 

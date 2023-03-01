@@ -2,15 +2,6 @@
 title: HTMLImageElement.currentSrc
 slug: Web/API/HTMLImageElement/currentSrc
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTMLImageElement
-  - Image
-  - Property
-  - Reference
-  - URL
-  - currentSrc
-  - source
 browser-compat: api.HTMLImageElement.currentSrc
 ---
 

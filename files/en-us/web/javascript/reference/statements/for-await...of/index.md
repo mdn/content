@@ -2,15 +2,6 @@
 title: for await...of
 slug: Web/JavaScript/Reference/Statements/for-await...of
 page-type: javascript-statement
-tags:
-  - Iterate
-  - Iteration
-  - JavaScript
-  - Language feature
-  - Reference
-  - Statement
-  - asynchronous
-  - await
 browser-compat: javascript.statements.for_await_of
 ---
 

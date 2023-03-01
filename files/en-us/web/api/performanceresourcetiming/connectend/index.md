@@ -2,11 +2,6 @@
 title: PerformanceResourceTiming.connectEnd
 slug: Web/API/PerformanceResourceTiming/connectEnd
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - Web Performance
 browser-compat: api.PerformanceResourceTiming.connectEnd
 ---
 

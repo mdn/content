@@ -2,17 +2,6 @@
 title: Adding 2D content to a WebGL context
 slug: Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context
 page-type: guide
-tags:
-  - 2D Graphics
-  - 3D
-  - 3D Graphics
-  - Drawing
-  - Graphics
-  - Intermediate
-  - Shaders
-  - Tutorial
-  - WebGL
-  - WebGL API
 ---
 
 {{DefaultAPISidebar("WebGL")}} {{PreviousNext("Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL", "Web/API/WebGL_API/Tutorial/Using_shaders_to_apply_color_in_WebGL")}}

@@ -2,12 +2,6 @@
 title: DocumentType.before()
 slug: Web/API/DocumentType/before
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - Method
-  - Node
-  - Reference
 browser-compat: api.DocumentType.before
 ---
 
@@ -57,7 +51,9 @@ works for IE as well, though:
 let docType = document.implementation.createDocumentType("html", "", "");
 let myDoc = document.implementation.createDocument("", "", docType);
 
-docType.before(document.createComment('<!--[if !IE]> conditional comment <![endif]-->'));
+docType.before(
+  document.createComment("<!--[if !IE]> conditional comment <![endif]-->")
+);
 
 myDoc.childNodes;
 // NodeList [<!--[if !IE]> conditional comment <![endif]-->, <!DOCTYPE html>]

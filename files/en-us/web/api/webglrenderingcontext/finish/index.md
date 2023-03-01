@@ -2,12 +2,6 @@
 title: WebGLRenderingContext.finish()
 slug: Web/API/WebGLRenderingContext/finish
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.finish
 ---
 

@@ -2,15 +2,6 @@
 title: "MediaRecorder: pause event"
 slug: Web/API/MediaRecorder/pause_event
 page-type: web-api-event
-tags:
-  - API
-  - Audio
-  - Media Capture
-  - MediaRecorder
-  - Event
-  - Reference
-  - Video
-  - pause
 browser-compat: api.MediaRecorder.pause_event
 ---
 

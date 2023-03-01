@@ -2,12 +2,8 @@
 title: font-smooth
 slug: Web/CSS/font-smooth
 page-type: css-property
-tags:
-  - CSS
-  - CSS Property
-  - Non-standard
-  - Reference
-  - recipe:css-property
+status:
+  - non-standard
 browser-compat: css.properties.font-smooth
 ---
 

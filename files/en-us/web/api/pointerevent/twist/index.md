@@ -2,14 +2,6 @@
 title: PointerEvent.twist
 slug: Web/API/PointerEvent/twist
 page-type: web-api-instance-property
-tags:
-  - API
-  - DOM
-  - Pointer Events
-  - PointerEvent
-  - Property
-  - Reference
-  - twist
 browser-compat: api.PointerEvent.twist
 ---
 

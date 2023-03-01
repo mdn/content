@@ -2,18 +2,6 @@
 title: MediaStream.getAudioTracks()
 slug: Web/API/MediaStream/getAudioTracks
 page-type: web-api-instance-method
-tags:
-  - API
-  - Audio
-  - Media
-  - Media Capture and Streams API
-  - Media Streams API
-  - MediaStream
-  - MediaStreamTrack
-  - Method
-  - Reference
-  - getAudioTracks
-  - track
 browser-compat: api.MediaStream.getAudioTracks
 ---
 

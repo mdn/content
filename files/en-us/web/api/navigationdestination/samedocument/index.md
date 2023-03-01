@@ -2,19 +2,8 @@
 title: NavigationDestination.sameDocument
 slug: Web/API/NavigationDestination/sameDocument
 page-type: web-api-instance-property
-tags:
-  - API
-  - Experimental
-  - History
-  - Navigate
-  - Navigation
-  - Navigation API
-  - Property
-  - Read-only
-  - Reference
-  - sameDocument
-  - Scroll
-  - Traversal
+status:
+  - experimental
 browser-compat: api.NavigationDestination.sameDocument
 ---
 

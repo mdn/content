@@ -2,14 +2,6 @@
 title: IDBObjectStore.get()
 slug: Web/API/IDBObjectStore/get
 page-type: web-api-instance-method
-tags:
-  - API
-  - Database
-  - IDBObjectStore
-  - IndexedDB
-  - Method
-  - Reference
-  - Storage
 browser-compat: api.IDBObjectStore.get
 ---
 

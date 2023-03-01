@@ -2,12 +2,6 @@
 title: WebGLRenderingContext.getFramebufferAttachmentParameter()
 slug: Web/API/WebGLRenderingContext/getFramebufferAttachmentParameter
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.getFramebufferAttachmentParameter
 ---
 

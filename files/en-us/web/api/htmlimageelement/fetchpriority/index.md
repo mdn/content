@@ -2,14 +2,8 @@
 title: HTMLImageElement.fetchPriority
 slug: Web/API/HTMLImageElement/fetchPriority
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTML DOM
-  - HTMLImageElement
-  - Property
-  - Reference
-  - fetchPriority
-  - Experimental
+status:
+  - experimental
 browser-compat: api.HTMLImageElement.fetchPriority
 ---
 

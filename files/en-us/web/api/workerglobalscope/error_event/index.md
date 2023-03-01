@@ -2,14 +2,6 @@
 title: 'WorkerGlobalScope: error event'
 slug: Web/API/WorkerGlobalScope/error_event
 page-type: web-api-event
-tags:
-  - API
-  - EventHandler
-  - Event
-  - Reference
-  - Web Workers
-  - WorkerGlobalScope
-  - error
 browser-compat: api.WorkerGlobalScope.error_event
 ---
 

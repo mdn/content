@@ -2,12 +2,8 @@
 title: PushManager.register()
 slug: Web/API/PushManager/register
 page-type: web-api-instance-method
-tags:
-  - API
-  - Deprecated
-  - Method
-  - Reference
-  - Simple Push API
+status:
+  - deprecated
 browser-compat: api.PushManager.register
 ---
 

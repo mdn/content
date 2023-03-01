@@ -2,21 +2,9 @@
 title: Guide to the Fullscreen API
 slug: Web/API/Fullscreen_API/Guide
 page-type: guide
-tags:
-  - API
-  - Drawing
-  - Full
-  - Fullscreen API
-  - Games
-  - Graphics
-  - Guide
-  - display
-  - full screen
-  - fullscreen
-  - screen
 browser-compat:
-  - api.Document.fullscreen
   - api.Document.fullscreenEnabled
+  - api.Document.fullscreen 
 ---
 
 {{DefaultAPISidebar("Fullscreen API")}}

@@ -2,16 +2,6 @@
 title: MediaKeySystemAccess
 slug: Web/API/MediaKeySystemAccess
 page-type: web-api-interface
-tags:
-  - API
-  - Audio
-  - EncryptedMediaExtensions
-  - Interface
-  - Media
-  - MediaKeySystemAccess
-  - NeedsExample
-  - Reference
-  - Video
 browser-compat: api.MediaKeySystemAccess
 ---
 

@@ -2,13 +2,8 @@
 title: "NDEFReader: readingerror event"
 slug: Web/API/NDEFReader/readingerror_event
 page-type: web-api-event
-tags:
-  - Event
-  - NDEF
-  - Reference
-  - Web NFC
-  - Property
-  - Experimental
+status:
+  - experimental
 browser-compat: api.NDEFReader.readingerror_event
 ---
 

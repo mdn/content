@@ -152,7 +152,7 @@ fieldset {
 }
 ```
 
-The first part of the CSS sets up the **named** pages, these include the size and orientaion and also some content to go in the `@top-middle` margin of the printed pages.
+The first part of the CSS sets up the **named** pages, these include the size and orientation and also some content to go in the [`@top-middle` margin](/en-US/docs/Web/CSS/@page#margin_at-rules) of the printed pages.
 
 ```css
 @page toc {
@@ -162,10 +162,10 @@ The first part of the CSS sets up the **named** pages, these include the size an
   }
 }
 
-@page foreward {
+@page foreword {
   size: a4 portrait;
   @top-middle {
-    content: "Foreward";
+    content: "Foreword";
   }
 }
 
@@ -191,7 +191,9 @@ The first part of the CSS sets up the **named** pages, these include the size an
 }
 ```
 
-The next part of the CSS specifies which CSS selectors will use which named pages when printing. As the sections with `class="chapter"` are concurrent they appear as one page, in order to split them up they are split using `break-after: page;` which splits each chapter into another page.
+The next part of the CSS uses [attribute selectors](/en-US/docs/Web/CSS/Attribute_selectors) to apply the print dimensions, orientation, and margins defined in the named  `@page` rules defined in the previous CSS section to elements using the `page` property. 
+
+The sections with `class="chapter"` are concurrent and appear as one page. The `break-after: page;` is used to split them up, which splits each chapter into a separately printed page.
 
 ```css
 @media print {
@@ -241,6 +243,7 @@ The next part of the CSS specifies which CSS selectors will use which named page
 
 #### JavaScript
 
+The JavaScript updates the value of the `data-print` attribute, which is the attribute on which the named page is applied, when you select a different  printing option:
 ```js
 const printArea = document.querySelector("#print-area");
 const printButton = document.querySelector("#print");
@@ -261,7 +264,7 @@ printButton.addEventListener("click", () => {
 
 #### Result
 
-Selecting a different print style radio input will change the output of the print dialog.
+What is printed, and what is shown in the print preview dialog, will change depending on which print style radio button is selected.
 
 {{ EmbedLiveSample('Named page example', '100%', 520) }}
 

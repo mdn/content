@@ -2,13 +2,8 @@
 title: AudioProcessingEvent
 slug: Web/API/AudioProcessingEvent
 page-type: web-api-interface
-tags:
-  - API
-  - Deprecated
-  - Interface
-  - Internationalization
-  - Reference
-  - Web Audio API
+status:
+  - deprecated
 browser-compat: api.AudioProcessingEvent
 ---
 

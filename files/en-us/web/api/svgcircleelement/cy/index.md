@@ -2,13 +2,6 @@
 title: SVGCircleElement.cy
 slug: Web/API/SVGCircleElement/cy
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - SVG
-  - SVGCircleElement
-  - cy
 browser-compat: api.SVGCircleElement.cy
 ---
 

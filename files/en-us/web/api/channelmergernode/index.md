@@ -2,12 +2,6 @@
 title: ChannelMergerNode
 slug: Web/API/ChannelMergerNode
 page-type: web-api-interface
-tags:
-  - API
-  - ChannelMergerNode
-  - Interface
-  - Reference
-  - Web Audio API
 browser-compat: api.ChannelMergerNode
 ---
 

@@ -2,13 +2,6 @@
 title: BiquadFilterNode.gain
 slug: Web/API/BiquadFilterNode/gain
 page-type: web-api-instance-property
-tags:
-  - API
-  - BiquadFilterNode
-  - Gain
-  - Property
-  - Reference
-  - Web Audio API
 browser-compat: api.BiquadFilterNode.gain
 ---
 

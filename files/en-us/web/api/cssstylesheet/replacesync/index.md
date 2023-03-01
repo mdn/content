@@ -2,12 +2,6 @@
 title: CSSStyleSheet.replaceSync()
 slug: Web/API/CSSStyleSheet/replaceSync
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - replaceSync
-  - CSSStyleSheet
 browser-compat: api.CSSStyleSheet.replaceSync
 ---
 

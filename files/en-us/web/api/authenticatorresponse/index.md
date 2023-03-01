@@ -2,14 +2,6 @@
 title: AuthenticatorResponse
 slug: Web/API/AuthenticatorResponse
 page-type: web-api-interface
-tags:
-  - API
-  - Authentication
-  - AuthenticatorResponse
-  - Interface
-  - Reference
-  - Web Authentication API
-  - WebAuthn
 browser-compat: api.AuthenticatorResponse
 ---
 

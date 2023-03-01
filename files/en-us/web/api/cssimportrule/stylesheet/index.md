@@ -2,13 +2,6 @@
 title: CSSImportRule.stylesheet
 slug: Web/API/CSSImportRule/stylesheet
 page-type: web-api-instance-property
-tags:
-  - API
-  - CSSOM
-  - Property
-  - Reference
-  - CSSImportRule
-  - Read-only
 browser-compat: api.CSSImportRule.styleSheet
 ---
 

@@ -29,7 +29,7 @@ The **`@page`** at-rule is a CSS at-rule used to modify different aspects of a p
   margin-top: 4in;
 }
 
-/* Targets all selectors with an page property */
+/* Targets all selectors with `page: wide;` set */
 @page wide {
   size: a4 landscape;
 }
@@ -50,9 +50,9 @@ The `@page` at-rule can be accessed via the CSS object model interface {{domxref
 
 > **Note:** The W3C is discussing how to handle viewport-related {{cssxref("&lt;length&gt;")}} units, `vh`, `vw`, `vmin`, and `vmax`. Meanwhile do not use them within a `@page` at-rule.
 
-### Properties
+### Related properties
 
-The `@page` at-rule, allows the user to assign a name to the rule, which is then called in a selector using the `page` property.
+The `@page` at-rule, allows the user to assign a name to the rule, which is then called in a declaration using the `page` property.
 
 - {{Cssxref("page")}}
   - : Allows a selector to use a user defined **named page**
@@ -291,7 +291,7 @@ The page-margin properties are the set of CSS properties can be set in any indiv
 
 ## Named pages
 
-Named pages allow web pages to perform per-page layout and add page-breaks in a declarative manner when printing.
+Named pages enable performing per-page layout and adding [page-breaks](/en-US/docs/Web/CSS/CSS_Fragmentation) in a declarative manner when printing.
 
 Named pages can be applied using the {{Cssxref("page")}} property. This allows the user to create different page configurations for use in print layouts.
 
@@ -433,6 +433,6 @@ Please refer to the various [pseudo-classes](/en-US/docs/Web/CSS/Pseudo-classes)
 
 ## See also
 
-- [`size`](/en-US/docs/Web/CSS/@page/size)
-- {{Cssxref("page")}}
+- The `@page` [`size`](/en-US/docs/Web/CSS/@page/size) descriptor
+- The {{Cssxref("page")}} property
 - See the [\[META\] CSS Paged Media Module Level 3](https://bugzilla.mozilla.org/show_bug.cgi?id=286443) ticket in Bugzilla for tracking progress on the subject (page-based counters, etc.)

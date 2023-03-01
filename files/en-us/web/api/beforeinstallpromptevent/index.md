@@ -2,14 +2,9 @@
 title: BeforeInstallPromptEvent
 slug: Web/API/BeforeInstallPromptEvent
 page-type: web-api-interface
-tags:
-  - API
-  - BeforeInstallPromptEvent
-  - Event
-  - Experimental
-  - Interface
-  - Reference
-  - Non-standard
+status:
+  - experimental
+  - non-standard
 browser-compat: api.BeforeInstallPromptEvent
 ---
 

@@ -2,14 +2,6 @@
 title: HTMLOptionsCollection
 slug: Web/API/HTMLOptionsCollection
 page-type: web-api-interface
-tags:
-  - API
-  - HTML DOM
-  - Interface
-  - NeedsExample
-  - NeedsMarkupWork
-  - NeedsSpecTable
-  - Reference
 browser-compat: api.HTMLOptionsCollection
 ---
 

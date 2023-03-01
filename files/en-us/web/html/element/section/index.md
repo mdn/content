@@ -33,7 +33,7 @@ Also consider these cases:
 - If the contents represent the main content area of a document, use {{HTMLElement("main")}}.
 - If you are only using the element as a styling wrapper, use a {{HTMLElement("div")}} instead.
 
-To reiterate, each `<section>` should be identified, typically by including a heading ({{HTMLElement('h1')}} - {{HTMLElement('h6')}} element) as a child of the `<section>` element, wherever possible. See below for examples of where you might see a `<section>` without a heading.
+To reiterate, each `<section>` should be identified, typically by including a heading ({{HTMLElement("Heading_Elements", "h1")}} - {{HTMLElement("Heading_Elements", "h6")}} element) as a child of the `<section>` element, wherever possible. See below for examples of where you might see a `<section>` without a heading.
 
 ## Examples
 
@@ -185,7 +185,7 @@ Depending on the content, including a heading could also be good for SEO, so it 
 
 ## See also
 
-- Other section-related elements: {{HTMLElement("body")}}, {{HTMLElement("nav")}}, {{HTMLElement("article")}}, {{HTMLElement("aside")}}, {{HTMLElement("h1")}}, {{HTMLElement("h2")}}, {{HTMLElement("h3")}}, {{HTMLElement("h4")}}, {{HTMLElement("h5")}}, {{HTMLElement("h6")}}, {{HTMLElement("hgroup")}}, {{HTMLElement("header")}}, {{HTMLElement("footer")}}, {{HTMLElement("address")}}
+- Other section-related elements: {{HTMLElement("body")}}, {{HTMLElement("nav")}}, {{HTMLElement("article")}}, {{HTMLElement("aside")}}, {{HTMLElement("Heading_Elements", "h1")}}, {{HTMLElement("Heading_Elements", "h2")}}, {{HTMLElement("Heading_Elements", "h3")}}, {{HTMLElement("Heading_Elements", "h4")}}, {{HTMLElement("Heading_Elements", "h5")}}, {{HTMLElement("Heading_Elements", "h6")}}, {{HTMLElement("hgroup")}}, {{HTMLElement("header")}}, {{HTMLElement("footer")}}, {{HTMLElement("address")}}
 - [Using HTML sections and outlines](/en-US/docs/Web/HTML/Element/Heading_Elements)
 - [ARIA: Region role](/en-US/docs/Web/Accessibility/ARIA/Roles/region_role)
 - [Why You Should Choose HTML5 article Over section](https://www.smashingmagazine.com/2020/01/html5-article-section/), by Bruce Lawson

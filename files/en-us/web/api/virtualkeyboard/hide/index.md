@@ -2,13 +2,8 @@
 title: VirtualKeyboard.hide()
 slug: Web/API/VirtualKeyboard/hide
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - VirtualKeyboard
-  - hide
-  - Experimental
+status:
+  - experimental
 browser-compat: api.VirtualKeyboard.hide
 ---
 
