@@ -244,6 +244,7 @@ The next part of the CSS specifies which CSS selectors will use which named page
 
 #### JavaScript
 
+The JavaScript updates the value of the `data-print` attribute, which is the attribute on which the named page is applied, when you select a different  printing option:
 ```js
 const printArea = document.querySelector("#print-area");
 const printButton = document.querySelector("#print");
