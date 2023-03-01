@@ -18,7 +18,7 @@ _This interface also inherits properties from its parent interface, {{domxref("S
 - {{domxref("SVGFEGaussianBlurElement.edgeMode")}} {{ReadOnlyInline}}
   - : An {{domxref("SVGAnimatedEnumeration")}} corresponding to the {{SVGAttr("edgeMode")}} attribute of the given element. Returns two identical values that are one of the following values:
     - `SVG_EDGEMODE_UNKNOWN` (0)
-      - :  The type is not one of predefined types. It is invalid to attempt to define a new value of this type or to attempt to switch an existing value to this type.
+      - : The type is not one of predefined types. It is invalid to attempt to define a new value of this type or to attempt to switch an existing value to this type.
     - `SVG_EDGEMODE_DUPLICATE` (1)
       - : Corresponds to the `duplicate` value.
     - `SVG_EDGEMODE_WRAP` (2)
