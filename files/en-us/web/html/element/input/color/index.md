@@ -74,7 +74,7 @@ Let's create an example which does a little more with the color input by trackin
 
 ### HTML
 
-The HTML is fairly straightforward — a couple of paragraphs of descriptive material with an {{HTMLElement("input")}} of type `color` with the ID `colorPicker`, which we'll use to change the color of the paragraphs' text.
+The HTML is fairly straightforward — a couple of paragraphs of descriptive material with an {{HTMLElement("input")}} of type `color` with the ID `color-picker`, which we'll use to change the color of the paragraphs' text.
 
 ```html
 <p>
@@ -111,7 +111,7 @@ Once the page is loaded, our `load` event handler, `startup()`, is called:
 
 ```js
 function startup() {
-  colorPicker = document.querySelector("#colorPicker");
+  colorPicker = document.querySelector("#color-picker");
   colorPicker.value = defaultColor;
   colorPicker.addEventListener("input", updateFirst, false);
   colorPicker.addEventListener("change", updateAll, false);
