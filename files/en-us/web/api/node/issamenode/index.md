@@ -61,11 +61,17 @@ JavaScript to compare the nodes using `isSameNode()` and output the results.
 
 ```js
 let output = document.getElementById("output");
-let divList  = document.getElementsByTagName("div");
+let divList = document.getElementsByTagName("div");
 
-output.innerHTML += `div 0 same as div 0: ${divList[0].isSameNode(divList[0])}<br/>`;
-output.innerHTML += `div 0 same as div 1: ${divList[0].isSameNode(divList[1])}<br/>`;
-output.innerHTML += `div 0 same as div 2: ${divList[0].isSameNode(divList[2])}<br/>`;
+output.innerHTML += `div 0 same as div 0: ${divList[0].isSameNode(
+  divList[0]
+)}<br/>`;
+output.innerHTML += `div 0 same as div 1: ${divList[0].isSameNode(
+  divList[1]
+)}<br/>`;
+output.innerHTML += `div 0 same as div 2: ${divList[0].isSameNode(
+  divList[2]
+)}<br/>`;
 ```
 
 ### Results

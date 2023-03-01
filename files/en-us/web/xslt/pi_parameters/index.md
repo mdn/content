@@ -1,8 +1,6 @@
 ---
 title: PI Parameters
 slug: Web/XSLT/PI_Parameters
-tags:
-  - XSLT
 ---
 
 ### Overview

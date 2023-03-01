@@ -1,13 +1,6 @@
 ---
 title: aria-required
 slug: Web/Accessibility/ARIA/Attributes/aria-required
-tags:
-  - Accessibility
-  - ARIA
-  - ARIA attribute
-  - ARIA property
-  - aria-required
-  - Reference
 spec-urls: https://w3c.github.io/aria/#aria-required
 ---
 

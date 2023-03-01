@@ -1,14 +1,6 @@
 ---
 title: WebAssembly.validate()
 slug: WebAssembly/JavaScript_interface/validate
-tags:
-  - API
-  - JavaScript
-  - Method
-  - Object
-  - Reference
-  - WebAssembly
-  - validate
 browser-compat: javascript.builtins.WebAssembly.validate
 ---
 

@@ -34,7 +34,9 @@ to this:
 
 ```js
 let mayHaveBackdropFlag = false;
-let displaySurface = displayStream.getVideoTracks()[0].getSettings().displaySurface;
+let displaySurface = displayStream
+  .getVideoTracks()[0]
+  .getSettings().displaySurface;
 
 if (displaySurface === "monitor") {
   mayHaveBackdropFlag = true;

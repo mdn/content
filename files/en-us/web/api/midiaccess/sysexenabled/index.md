@@ -18,12 +18,9 @@ A boolean value.
 The {{domxref("Navigator.requestMIDIAccess()")}} method returns a promise that resolves with a {{domxref("MIDIAccess")}} object. Printing the value of `sysexEnabled` to the console returns a boolean value, which is `true` if system exclusive supported is enabled.
 
 ```js
-navigator.requestMIDIAccess()
-  .then((access) => {
-
-     console.log(access.sysexEnabled);
-
-  });
+navigator.requestMIDIAccess().then((access) => {
+  console.log(access.sysexEnabled);
+});
 ```
 
 ## Specifications

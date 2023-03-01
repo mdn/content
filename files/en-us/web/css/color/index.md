@@ -2,20 +2,6 @@
 title: color
 slug: Web/CSS/color
 page-type: css-property
-tags:
-  - CSS
-  - CSS Colors
-  - CSS Property
-  - CSS Text
-  - HTML Colors
-  - HTML Styles
-  - Layout
-  - Reference
-  - Styling HTML
-  - Styling text
-  - Web
-  - color
-  - recipe:css-property
 browser-compat: css.properties.color
 ---
 

@@ -31,7 +31,7 @@ new FontFace(family, source, descriptors)
     This can be either:
 
     - A URL to a font face file.
-    - Binary font face data in an [`ArrayBuffer`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) (or {{domxref("ArrayBufferView")}}).
+    - Binary font face data in an [`ArrayBuffer`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) or a [`TypedArray`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray).
 
 - `descriptors` {{optional_inline}}
 

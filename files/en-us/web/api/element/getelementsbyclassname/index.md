@@ -57,14 +57,14 @@ To look for elements that include among their classes a single specified class, 
 provide that class name when calling `getElementsByClassName()`:
 
 ```js
-element.getElementsByClassName('test');
+element.getElementsByClassName("test");
 ```
 
 This example finds all elements that have a class of `test`, which are also
 a descendant of the element that has the `id` of `main`:
 
 ```js
-document.getElementById('main').getElementsByClassName('test');
+document.getElementById("main").getElementsByClassName("test");
 ```
 
 ### Matching multiple classes
@@ -73,7 +73,7 @@ To find elements whose class lists include both the `red` and
 `test` classes:
 
 ```js
-element.getElementsByClassName('red test');
+element.getElementsByClassName("red test");
 ```
 
 ### Examining the results
@@ -85,22 +85,22 @@ work as one might expect because `"matches"` will change as
 soon as any `"colorbox"` class is removed.
 
 ```js
-const matches = element.getElementsByClassName('colorbox');
+const matches = element.getElementsByClassName("colorbox");
 
 for (let i = 0; i < matches.length; i++) {
-  matches[i].classList.remove('colorbox');
-  matches.item(i).classList.add('hueframe');
+  matches[i].classList.remove("colorbox");
+  matches.item(i).classList.add("hueframe");
 }
 ```
 
 Instead, use another method, such as:
 
 ```js
-const matches = element.getElementsByClassName('colorbox');
+const matches = element.getElementsByClassName("colorbox");
 
 while (matches.length > 0) {
-  matches.item(0).classList.add('hueframe');
-  matches[0].classList.remove('colorbox');
+  matches.item(0).classList.add("hueframe");
+  matches[0].classList.remove("colorbox");
 }
 ```
 
@@ -114,10 +114,10 @@ then become `item(0)`.
 We can also use {{jsxref("Array")}} methods on any {{domxref("HTMLCollection")}} by passing the {{domxref("HTMLCollection")}} as the method's `this` value. Here we'll find all {{HTMLElement("div")}} elements that have a class of `test`:
 
 ```js
-const testElements = document.getElementsByClassName('test');
+const testElements = document.getElementsByClassName("test");
 const testDivs = Array.prototype.filter.call(
   testElements,
-  (testElement) => testElement.nodeName === 'DIV',
+  (testElement) => testElement.nodeName === "DIV"
 );
 ```
 

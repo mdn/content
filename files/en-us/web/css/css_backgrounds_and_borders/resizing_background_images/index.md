@@ -2,20 +2,6 @@
 title: Resizing background images with background-size
 slug: Web/CSS/CSS_Backgrounds_and_Borders/Resizing_background_images
 page-type: guide
-tags:
-  - CSS
-  - CSS Background
-  - Example
-  - Guide
-  - Intermediate
-  - Reference
-  - Scale
-  - Scaling
-  - Web
-  - dimensions
-  - height
-  - resize
-  - width
 ---
 
 {{CSSRef}}

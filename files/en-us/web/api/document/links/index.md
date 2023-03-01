@@ -7,7 +7,7 @@ browser-compat: api.Document.links
 
 {{ APIRef("DOM") }}
 
-The **`links`** read-only property of the {{domxref("Document")}} interface returns a collection of all {{HTMLElement("area")}} elements and {{HTMLElement("a")}} elements in a document with a value for the [href](/en-US/docs/Web/HTML/Element/a#attr-href) attribute.
+The **`links`** read-only property of the {{domxref("Document")}} interface returns a collection of all {{HTMLElement("area")}} elements and {{HTMLElement("a")}} elements in a document with a value for the [href](/en-US/docs/Web/HTML/Element/a#href) attribute.
 
 ## Value
 

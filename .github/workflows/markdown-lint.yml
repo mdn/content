@@ -6,6 +6,7 @@ on:
       - main
     paths:
       - .markdownlint-cli2.jsonc
+      - .nvmrc
       - package.json
       - yarn.lock
       - .github/workflows/markdown-lint.yml
@@ -21,7 +22,7 @@ jobs:
       - name: Setup Node.js environment
         uses: actions/setup-node@v3
         with:
-          node-version: 18
+          node-version-file: ".nvmrc"
           cache: yarn
 
       - name: Install all yarn packages

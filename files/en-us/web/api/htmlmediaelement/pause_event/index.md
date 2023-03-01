@@ -1,5 +1,5 @@
 ---
-title: 'HTMLMediaElement: pause event'
+title: "HTMLMediaElement: pause event"
 slug: Web/API/HTMLMediaElement/pause_event
 page-type: web-api-event
 browser-compat: api.HTMLMediaElement.pause_event
@@ -18,9 +18,9 @@ This event is not cancelable and does not bubble.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('pause', (event) => {});
+addEventListener("pause", (event) => {});
 
-onpause = (event) => { };
+onpause = (event) => {};
 ```
 
 ## Event type
@@ -34,22 +34,24 @@ These examples add an event listener for the HTMLMediaElement's `pause` event, t
 Using `addEventListener()`:
 
 ```js
-const video = document.querySelector('video');
+const video = document.querySelector("video");
 
-video.addEventListener('pause', (event) => {
-  console.log('The Boolean paused property is now true. Either the ' +
-  'pause() method was called or the autoplay attribute was toggled.');
+video.addEventListener("pause", (event) => {
+  console.log(
+    "The Boolean paused property is now 'true'. Either the pause() method was called or the autoplay attribute was toggled."
+  );
 });
 ```
 
 Using the `onpause` event handler property:
 
 ```js
-const video = document.querySelector('video');
+const video = document.querySelector("video");
 
 video.onpause = (event) => {
-  console.log('The Boolean paused property is now true. Either the ' +
-  'pause() method was called or the autoplay attribute was toggled.');
+  console.log(
+    "The Boolean paused property is now 'true'. Either the pause() method was called or the autoplay attribute was toggled."
+  );
 };
 ```
 

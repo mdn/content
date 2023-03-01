@@ -107,4 +107,4 @@ browser.browserAction.onClicked.addListener(() => {
 
 ## Known issues
 
-[Bug 1538119](https://bugzilla.mozilla.org/show_bug.cgi?id=1538119) - Duplicate sessionId in browser.sessions.getRecentlyClosed() after "Restore previous session"
+[Bug 1538119](https://bugzil.la/1538119) - Duplicate sessionId in browser.sessions.getRecentlyClosed() after "Restore previous session"

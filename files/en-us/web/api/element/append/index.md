@@ -49,30 +49,30 @@ None ({{jsxref("undefined")}}).
 ### Appending an element
 
 ```js
-let div = document.createElement("div")
-let p = document.createElement("p")
-div.append(p)
+let div = document.createElement("div");
+let p = document.createElement("p");
+div.append(p);
 
-console.log(div.childNodes) // NodeList [ <p> ]
+console.log(div.childNodes); // NodeList [ <p> ]
 ```
 
 ### Appending text
 
 ```js
-let div = document.createElement("div")
-div.append("Some text")
+let div = document.createElement("div");
+div.append("Some text");
 
-console.log(div.textContent) // "Some text"
+console.log(div.textContent); // "Some text"
 ```
 
 ### Appending an element and text
 
 ```js
-let div = document.createElement("div")
-let p = document.createElement("p")
-div.append("Some text", p)
+let div = document.createElement("div");
+let p = document.createElement("p");
+div.append("Some text", p);
 
-console.log(div.childNodes) // NodeList [ #text "Some text", <p> ]
+console.log(div.childNodes); // NodeList [ #text "Some text", <p> ]
 ```
 
 ### The append method is unscopable
@@ -81,10 +81,10 @@ The `append()` method is not scoped into the `with` statement.
 See {{jsxref("Symbol.unscopables")}} for more information.
 
 ```js
-let div = document.createElement("div")
+let div = document.createElement("div");
 
-with(div) {
-  append("foo")
+with (div) {
+  append("foo");
 }
 // ReferenceError: append is not defined
 ```

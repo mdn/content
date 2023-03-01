@@ -76,7 +76,7 @@ See {{jsxref("Symbol.unscopables")}} for more information.
 ```js
 let div = document.createElement("div");
 
-with(div) {
+with (div) {
   prepend("foo");
 }
 // ReferenceError: prepend is not defined

@@ -2,12 +2,6 @@
 title: container-name
 slug: Web/CSS/container-name
 page-type: css-property
-tags:
-  - container queries
-  - CSS
-  - CSS Containment
-  - Reference
-  - Property
 browser-compat: css.properties.container-name
 ---
 

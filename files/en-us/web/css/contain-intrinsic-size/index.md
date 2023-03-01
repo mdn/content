@@ -2,11 +2,6 @@
 title: contain-intrinsic-size
 slug: Web/CSS/contain-intrinsic-size
 page-type: css-shorthand-property
-tags:
-  - CSS
-  - CSS Property
-  - Reference
-  - contain-intrinsic-size
 browser-compat: css.properties.contain-intrinsic-size
 ---
 

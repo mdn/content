@@ -1,5 +1,5 @@
 ---
-title: 'RTCPeerConnection: icecandidateerror event'
+title: "RTCPeerConnection: icecandidateerror event"
 slug: Web/API/RTCPeerConnection/icecandidateerror_event
 page-type: web-api-event
 browser-compat: api.RTCPeerConnection.icecandidateerror_event
@@ -16,9 +16,9 @@ This event is not cancelable and does not bubble.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('icecandidateerror', (event) => { });
+addEventListener("icecandidateerror", (event) => {});
 
-onicecandidateerror = (event) => { };
+onicecandidateerror = (event) => {};
 ```
 
 ## Event type

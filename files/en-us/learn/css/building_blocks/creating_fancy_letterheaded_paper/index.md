@@ -1,19 +1,6 @@
 ---
 title: Creating fancy letterheaded paper
 slug: Learn/CSS/Building_blocks/Creating_fancy_letterheaded_paper
-tags:
-  - Assessment
-  - Background
-  - Beginner
-  - Boxes
-  - CSS
-  - CodingScripting
-  - border
-  - box
-  - letter
-  - letterhead
-  - letterheaded
-  - paper
 ---
 
 {{LearnSidebar}}
@@ -70,7 +57,7 @@ You have been given the files needed to create a letterheaded paper template. Yo
 
 ### The logo
 
-- To the {{htmlelement("h1")}}, add the logo as a background image.
+- To the {{htmlelement("Heading_Elements", "h1")}}, add the logo as a background image.
 - Add a filter to the logo to give it a subtle drop shadow.
 - Now comment out the filter and implement the drop shadow in a different (slightly more cross-browser compatible) way, which still follows the shape of the round image.
 

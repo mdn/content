@@ -2,13 +2,6 @@
 title: display
 slug: Web/CSS/display
 page-type: css-property
-tags:
-  - CSS
-  - CSS Display
-  - CSS Property
-  - Reference
-  - display
-  - recipe:css-property
 browser-compat: css.properties.display
 ---
 

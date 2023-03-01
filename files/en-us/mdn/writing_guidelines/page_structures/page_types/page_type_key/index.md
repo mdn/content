@@ -2,9 +2,6 @@
 title: The page-type front matter key
 slug: MDN/Writing_guidelines/Page_structures/Page_types/Page_type_key
 page-type: mdn-writing-guide
-tags:
-  - meta
-  - writing-guide
 ---
 
 {{MDNSidebar}}

@@ -2,12 +2,6 @@
 title: "::first-letter"
 slug: Web/CSS/::first-letter
 page-type: css-pseudo-element
-tags:
-  - CSS
-  - Layout
-  - Pseudo-element
-  - Reference
-  - Selector
 browser-compat: css.selectors.first-letter
 ---
 

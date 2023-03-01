@@ -56,7 +56,8 @@ PublicKeyCredential.isUserVerifyingPlatformAuthenticatorAvailable()
       // Use another kind of authenticator or a classical login/password
       // workflow
     }
-  }).catch((err) => {
+  })
+  .catch((err) => {
     // Something went wrong
     console.error(err);
   });

@@ -26,6 +26,8 @@ Values of this type are strings. The item is displayed when the given context ap
 
 - all
   - : Specifying 'all' is equivalent to the combination of all other contexts except for 'bookmark', 'tab' and 'tools_menu'.
+- action
+  - : Applies when the user context-clicks your browser action in a Manifest V3 extension. The maximum number of items that can be added to the top-level browser action context menu is {{WebExtAPIRef("menus.ACTION_MENU_TOP_LEVEL_LIMIT")}}, but you can add any number of items to submenus.
 - audio
   - : Applies when the user context-clicks an [audio](/en-US/docs/Web/HTML/Element/audio) element.
 - bookmark
@@ -33,7 +35,7 @@ Values of this type are strings. The item is displayed when the given context ap
   - : Applies when the user context-clicks a bookmark item in the bookmarks toolbar, bookmarks menu, bookmarks sidebar (<kbd>Ctrl</kbd>+<kbd>B</kbd>) and the Library window (<kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>B</kbd>). The latter two are supported as of Firefox 66. Requires the "bookmarks" [API permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions) in the manifest.
 
 - browser_action
-  - : Applies when the user context-clicks your browser action. The maximum number of items that can be added to the top-level browser action context menu is {{WebExtAPIRef("menus.ACTION_MENU_TOP_LEVEL_LIMIT")}}, but you can add any number of items to submenus.
+  - : Applies when the user context-clicks your browser action in a Manifest V2 extension. The maximum number of items that can be added to the top-level browser action context menu is {{WebExtAPIRef("menus.ACTION_MENU_TOP_LEVEL_LIMIT")}}, but you can add any number of items to submenus.
 - editable
   - : Applies when the user context-clicks an editable element, like a [textarea](/en-US/docs/Web/HTML/Element/textarea).
 - frame
