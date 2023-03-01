@@ -220,7 +220,7 @@ Elements in HTML have **attributes**; these are additional values that configure
     </tr>
     <tr>
       <td>
-        <code><a href="/en-US/docs/Web/HTML/Element/keygen#attr-challenge">challenge</a></code>
+        <code><a href="/en-US/docs/Web/HTML/Element/keygen#challenge">challenge</a></code>
       </td>
       <td>{{ HTMLElement("keygen") }}</td>
       <td>A challenge string that is submitted along with the public key.</td>
@@ -790,7 +790,7 @@ Elements in HTML have **attributes**; these are additional values that configure
     </tr>
     <tr>
       <td>
-        <code><a href="/en-US/docs/Web/HTML/Element/keygen#attr-keytype">keytype</a></code>
+        <code><a href="/en-US/docs/Web/HTML/Element/keygen#keytype">keytype</a></code>
       </td>
       <td>{{ HTMLElement("keygen") }}</td>
       <td>Specifies the type of key generated.</td>
@@ -872,7 +872,7 @@ Elements in HTML have **attributes**; these are additional values that configure
     </tr>
     <tr>
       <td>
-        <code><a href="/en-US/docs/Web/HTML/Element/html#attr-manifest">manifest</a></code>
+        <code><a href="/en-US/docs/Web/HTML/Element/html#manifest">manifest</a></code>
         {{deprecated_inline}}
       </td>
       <td>{{ HTMLElement("html") }}</td>
