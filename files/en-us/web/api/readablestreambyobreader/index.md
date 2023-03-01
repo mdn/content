@@ -96,10 +96,10 @@ The {{domxref("ReadableStreamBYOBReader.closed")}} property returns a promise th
 ```js
 reader.closed
   .then(() => {
-    /* Resolved - code to handle stream closing */
+    // Resolved - code to handle stream closing
   })
   .catch(() => {
-    /* Rejected - code to handle error */
+    // Rejected - code to handle error
   });
 ```
 

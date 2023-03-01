@@ -23,10 +23,10 @@ The code below shows the pattern for handling the closed/error state of a BYOBRe
 const reader = stream.getReader({ mode: "byob" });
 reader.closed
   .then(() => {
-    /* Resolved - code to handle stream closing */
+    // Resolved - code to handle stream closing
   })
   .catch(() => {
-    /* Rejected - code to handle error */
+    // Rejected - code to handle error
   });
 ```
 
