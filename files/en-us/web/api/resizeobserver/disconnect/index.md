@@ -32,9 +32,9 @@ None.
 ## Examples
 
 ```js
-btn.addEventListener('click', () => {
+btn.addEventListener("click", () => {
   resizeObserver.disconnect();
-})
+});
 ```
 
 ## Specifications

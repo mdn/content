@@ -2,12 +2,6 @@
 title: Multiplication assignment (*=)
 slug: Web/JavaScript/Reference/Operators/Multiplication_assignment
 page-type: javascript-operator
-tags:
-  - Assignment operator
-  - JavaScript
-  - Language feature
-  - Operator
-  - Reference
 browser-compat: javascript.operators.multiplication_assignment
 ---
 

@@ -2,11 +2,6 @@
 title: exportparts
 slug: Web/HTML/Global_attributes/exportparts
 page-type: html-attribute
-tags:
-  - Global attributes
-  - HTML
-  - Reference
-  - part
 browser-compat: html.global_attributes.exportparts
 ---
 

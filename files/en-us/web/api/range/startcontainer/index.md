@@ -19,8 +19,8 @@ A {{domxref("Node")}} object.
 
 ```js
 range = document.createRange();
-range.setStart(startNode,startOffset);
-range.setEnd(endNode,endOffset);
+range.setStart(startNode, startOffset);
+range.setEnd(endNode, endOffset);
 startRangeNode = range.startContainer;
 ```
 

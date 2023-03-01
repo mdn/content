@@ -98,7 +98,7 @@ The following session features and reference spaces can be requested, either as 
 - `local`
   - : Enable a tracking space whose native origin is located near the viewer's position at the time the session was created. The exact position depends on the underlying platform and implementation. The user isn't expected to move much if at all beyond their starting position, and tracking is optimized for this use case.
 - `local-floor`
-  - : Similar to the `local` type, except the starting position is placed in a safe location for the viewer to stand, where the value of the y axis is 0 at floor level. If that floor level isn't known, the {{Glossary("user agent")}} will estimate the floor level. If the estimated floor level is non-zero, the browser is expected to round it such a way as to avoid fingerprinting (likely to the nearest centimeter).
+  - : Similar to the `local` type, except the starting position is placed in a safe location for the viewer to stand, where the value of the y axis is 0 at floor level. If that floor level isn't known, the {{Glossary("user agent")}} will estimate the floor level. If the estimated floor level is non-zero, the browser is expected to round it such a way as to avoid [fingerprinting](/en-US/docs/Glossary/Fingerprinting) (likely to the nearest centimeter).
 - `secondary-views`
   - : Enable {{domxref("XRView")}} objects to be secondary views. This can be used for first-person observer views used for video capture, or "quad views" where there are two views per eye, with differing resolution and fields of view.
 - `unbounded`

@@ -2,11 +2,6 @@
 title: in operator
 slug: Web/JavaScript/Reference/Operators/in
 page-type: javascript-operator
-tags:
-  - JavaScript
-  - Language feature
-  - Operator
-  - Relational Operators
 browser-compat: javascript.operators.in
 ---
 

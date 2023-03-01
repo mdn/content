@@ -2,12 +2,6 @@
 title: background
 slug: Web/CSS/background
 page-type: css-shorthand-property
-tags:
-  - CSS
-  - CSS Background
-  - CSS Property
-  - Reference
-  - recipe:css-shorthand-property
 browser-compat: css.properties.background
 ---
 

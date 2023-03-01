@@ -54,13 +54,13 @@ changes to attributes on any of the elements in the tree.
 ```js
 function callback(mutationList, observer) {
   mutationList.forEach((mutation) => {
-    switch(mutation.type) {
-      case 'childList':
+    switch (mutation.type) {
+      case "childList":
         /* One or more children have been added to and/or removed
            from the tree.
            (See mutation.addedNodes and mutation.removedNodes.) */
         break;
-      case 'attributes':
+      case "attributes":
         /* An attribute value changed on the element in
            mutation.target.
            The attribute name is in mutation.attributeName, and
@@ -90,8 +90,8 @@ const observerOptions = {
   attributes: true,
 
   // Omit (or set to false) to observe only changes to the parent node
-  subtree: true
-}
+  subtree: true,
+};
 
 const observer = new MutationObserver(callback);
 observer.observe(targetNode, observerOptions);

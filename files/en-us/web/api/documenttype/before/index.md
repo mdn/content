@@ -12,10 +12,6 @@ The **`DocumentType.before()`** method inserts a set of
 `DocumentType`'s parent, just before the `DocumentType`.
 Strings are inserted as equivalent {{domxref("Text")}} nodes.
 
-> **Note:** Putting nodes before the document's doctype will set the rendering mode to
-> [quirks mode](/en-US/docs/Web/HTML/Quirks_Mode_and_Standards_Mode)
-> in some browsers (Internet Explorer). It is not advisable to do this.
-
 ## Syntax
 
 ```js-nolint

@@ -43,7 +43,7 @@ Undefined.
 In the following example, a checkbox custom element sets `on` as the value to send to the server, and `checked` as the state.
 
 ```js
-this.internals_.setFormValue("on","checked");
+this.internals_.setFormValue("on", "checked");
 ```
 
 ## Specifications

@@ -32,8 +32,8 @@ This example logs the `altKey` property when you trigger a {{domxref("Element/cl
 ### JavaScript
 
 ```js
-let log = document.querySelector('#log');
-document.addEventListener('click', logKey);
+let log = document.querySelector("#log");
+document.addEventListener("click", logKey);
 
 function logKey(e) {
   log.textContent = `The alt key is pressed: ${e.altKey}`;

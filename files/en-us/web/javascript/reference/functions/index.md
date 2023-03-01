@@ -2,13 +2,6 @@
 title: Functions
 slug: Web/JavaScript/Reference/Functions
 page-type: guide
-tags:
-  - Function
-  - Functions
-  - Guide
-  - JavaScript
-  - Parameter
-  - parameters
 browser-compat: javascript.functions
 ---
 

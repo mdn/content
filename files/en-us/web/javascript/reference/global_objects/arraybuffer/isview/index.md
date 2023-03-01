@@ -2,12 +2,6 @@
 title: ArrayBuffer.isView()
 slug: Web/JavaScript/Reference/Global_Objects/ArrayBuffer/isView
 page-type: javascript-static-method
-tags:
-  - ArrayBuffer
-  - JavaScript
-  - Method
-  - Reference
-  - TypedArrays
 browser-compat: javascript.builtins.ArrayBuffer.isView
 ---
 

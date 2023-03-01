@@ -2,15 +2,6 @@
 title: Destructuring assignment
 slug: Web/JavaScript/Reference/Operators/Destructuring_assignment
 page-type: javascript-language-feature
-tags:
-  - Destructuring
-  - Destructuring_assignment
-  - ECMAScript 2015
-  - ES6
-  - JavaScript
-  - Language feature
-  - Nested object and array destructuring
-  - Operator
 browser-compat: javascript.operators.destructuring
 ---
 

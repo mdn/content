@@ -74,7 +74,7 @@ ctx.fillRect(50, 50, 100, 100);
 
 - An early Canvas specification draft specified the value `"darker"`.
   However, Firefox removed support for `"darker"` in version 4
-  ({{bug(571532)}}). See also [this blog post](https://dropshado.ws/post/77229081704/firefox-doesnt-support-canvas-composite-darker) that suggests using `"difference"` as a way to achieve a
+  ([Firefox bug 571532](https://bugzil.la/571532)). See also [this blog post](https://dropshado.ws/post/77229081704/firefox-doesnt-support-canvas-composite-darker) that suggests using `"difference"` as a way to achieve a
   similar affect to `"darker"`.
 
 ## See also

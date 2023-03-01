@@ -1,15 +1,6 @@
 ---
 title: Backgrounds and borders
 slug: Learn/CSS/Building_blocks/Backgrounds_and_borders
-tags:
-  - Background
-  - Beginner
-  - CSS
-  - Image
-  - Learn
-  - Position
-  - borders
-  - color
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/The_box_model", "Learn/CSS/Building_blocks/Handling_different_text_directions", "Learn/CSS/Building_blocks")}}

@@ -30,9 +30,6 @@ with the OS (e.g., the Spinner player minimized to act like an additional toolba
 windows) may reduce the amount of space available to browser windows and other
 applications.
 
-Internet Explorer will take into account the zoom setting when reporting the screen
-height. It will only return the real height of the screen if the zoom is set to 100%.
-
 ## Specifications
 
 {{Specifications}}

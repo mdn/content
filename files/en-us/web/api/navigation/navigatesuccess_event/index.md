@@ -32,7 +32,7 @@ A generic {{domxref("Event")}}.
 You might deal with a successful navigation by hiding a previously displayed progress indicator, like this:
 
 ```js
-navigation.addEventListener('navigatesuccess', (event) => {
+navigation.addEventListener("navigatesuccess", (event) => {
   loadingIndicator.hidden = true;
 });
 ```
@@ -40,7 +40,7 @@ navigation.addEventListener('navigatesuccess', (event) => {
 Or you might show an error message on failure:
 
 ```js
-navigation.addEventListener('navigateerror', (event) => {
+navigation.addEventListener("navigateerror", (event) => {
   loadingIndicator.hidden = true; // also hide indicator
   showMessage(`Failed to load page: ${event.message}`);
 });

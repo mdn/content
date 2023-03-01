@@ -2,11 +2,6 @@
 title: autocapitalize
 slug: Web/HTML/Global_attributes/autocapitalize
 page-type: html-attribute
-tags:
-  - Autocapitalize
-  - Global attributes
-  - HTML
-  - Reference
 browser-compat: html.global_attributes.autocapitalize
 ---
 

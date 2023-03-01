@@ -2,12 +2,6 @@
 title: Inheritance and the prototype chain
 slug: Web/JavaScript/Inheritance_and_the_prototype_chain
 page-type: guide
-tags:
-  - Advanced
-  - Guide
-  - Inheritance
-  - JavaScript
-  - OOP
 ---
 
 {{jsSidebar("Advanced")}}

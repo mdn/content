@@ -22,7 +22,7 @@ mozSetImageElement(imageElementId, imageElement)
 ### Parameters
 
 - `imageElementId` is a string indicating the name of an element that has
-  been specified as a background image using the {{ cssxref("-moz-element") }} CSS
+  been specified as a background image using the {{ cssxref("element", "-moz-element") }} CSS
   function.
 - `imageElement` is the new element to use as the background corresponding
   to that image element string. Specify `null` to remove the background
@@ -95,4 +95,4 @@ Not part of any specification.
 
 ## See also
 
-- {{ cssxref("-moz-element") }}
+- {{ cssxref("element", "-moz-element") }}

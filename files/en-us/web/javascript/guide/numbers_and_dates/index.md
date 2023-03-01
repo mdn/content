@@ -2,19 +2,6 @@
 title: Numbers and dates
 slug: Web/JavaScript/Guide/Numbers_and_dates
 page-type: guide
-tags:
-  - Calculation
-  - Dates
-  - FP
-  - Floating Point
-  - Floating-Point
-  - Guide
-  - Integer
-  - JavaScript
-  - Math
-  - Numbers
-  - Numeric
-  - "l10n:priority"
 ---
 
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Expressions_and_Operators", "Web/JavaScript/Guide/Text_formatting")}}

@@ -1,12 +1,6 @@
 ---
 title: XOR
 slug: WebAssembly/Reference/Numeric/XOR
-tags:
-  - WebAssembly
-  - wasm
-  - Reference
-  - Numeric
-  - Bitwise
 ---
 
 {{WebAssemblySidebar}}

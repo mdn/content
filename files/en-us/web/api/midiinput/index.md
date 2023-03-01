@@ -33,8 +33,8 @@ inputs.forEach((input) => {
   console.log(input.name); /* inherited property from MIDIPort */
   input.onmidimessage = (message) => {
     console.log(message.data);
-  }
-})
+  };
+});
 ```
 
 ## Specifications

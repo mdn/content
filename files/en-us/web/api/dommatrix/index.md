@@ -2,8 +2,6 @@
 title: DOMMatrix (WebKitCSSMatrix)
 slug: Web/API/DOMMatrix
 page-type: web-api-interface
-status:
-  - experimental
 browser-compat:
   - api.DOMMatrix
   - api.WebKitCSSMatrix

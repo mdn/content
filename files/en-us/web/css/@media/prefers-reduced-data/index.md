@@ -2,13 +2,8 @@
 title: prefers-reduced-data
 slug: Web/CSS/@media/prefers-reduced-data
 page-type: css-media-feature
-tags:
-  - "@media"
-  - CSS
-  - Media Queries
-  - Reference
-  - media feature
-  - Experimental
+status:
+  - experimental
 browser-compat: css.at-rules.media.prefers-reduced-data
 ---
 

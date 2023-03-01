@@ -2,15 +2,8 @@
 title: pow()
 slug: Web/CSS/pow
 page-type: css-function
-tags:
-  - CSS
-  - CSS Function
-  - Function
-  - Math
-  - Reference
-  - Web
-  - pow
-  - Experimental
+status:
+  - experimental
 browser-compat: css.types.pow
 ---
 

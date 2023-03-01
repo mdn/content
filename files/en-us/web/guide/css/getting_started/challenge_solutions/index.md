@@ -1,9 +1,6 @@
 ---
 title: Challenge solutions
 slug: Web/Guide/CSS/Getting_started/Challenge_solutions
-tags:
-  - Beginner
-  - NeedsUpdate
 ---
 
 This page provides solutions to the challenges posed in the [CSS Getting Started](/en-US/docs/Learn/CSS/First_steps) tutorial. These are not the only possible solutions. The sections below correspond to the titles of the tutorial sections.

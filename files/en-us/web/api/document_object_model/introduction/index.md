@@ -82,7 +82,7 @@ and manipulation of the DOM (written in JavaScript),
 the JavaScript parts will be grouped together here,
 and separated from the HTML.
 
-For example, the following function creates a new {{HTMLElement("h1")}} element,
+For example, the following function creates a new {{HTMLElement("Heading_Elements", "h1")}} element,
 adds text to that element,
 and then adds it to the tree for the document:
 

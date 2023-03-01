@@ -1,10 +1,6 @@
 ---
 title: regexp:replace()
 slug: Web/EXSLT/regexp/replace
-tags:
-  - EXSLT
-  - NeedsSpecTable
-  - Reference
 ---
 
 {{XSLTRef}}{{QuickLinksWithSubpages("/en-US/docs/Web/EXSLT")}}

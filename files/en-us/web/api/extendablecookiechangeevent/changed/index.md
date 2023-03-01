@@ -43,7 +43,7 @@ An array of objects containing the changed cookie(s). Each object contains the f
 In this example when the cookie is set, the event listener logs the `changed` property to the console. The first item in that array contains an object representing the cookie that has just been set.
 
 ```js
-self.addEventListener('cookiechange', (event) => {
+self.addEventListener("cookiechange", (event) => {
   console.log(event.changed[0]);
 });
 
@@ -52,7 +52,7 @@ cookieStore.set({
   name: "cookie1",
   value: "cookie1-value",
   expires: Date.now() + one_day,
-  domain: "example.com"
+  domain: "example.com",
 });
 ```
 

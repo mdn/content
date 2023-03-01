@@ -2,13 +2,6 @@
 title: image-set()
 slug: Web/CSS/image/image-set
 page-type: css-function
-tags:
-  - CSS
-  - CSS Function
-  - CSS-4 Images
-  - Function
-  - Reference
-  - Web
 browser-compat: css.types.image.image-set
 ---
 

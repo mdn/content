@@ -1,5 +1,5 @@
 ---
-title: 'HTMLElement: dragenter event'
+title: "HTMLElement: dragenter event"
 slug: Web/API/HTMLElement/dragenter_event
 page-type: web-api-event
 browser-compat: api.HTMLElement.dragenter_event
@@ -16,9 +16,9 @@ The target object is the _immediate user selection_ (the element directly indica
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('dragenter', (event) => {});
+addEventListener("dragenter", (event) => {});
 
-ondragenter = (event) => { };
+ondragenter = (event) => {};
 ```
 
 ## Event type

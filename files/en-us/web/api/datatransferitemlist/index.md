@@ -26,7 +26,7 @@ This interface has no constructor.
   - : Removes the drag item from the list at the given index.
 - {{domxref("DataTransferItemList.clear()")}}
   - : Removes all of the drag items from the list.
-- {{domxref("DataTransferItemList.DataTransferItem()")}}
+- {{domxref("DataTransferItemList.operator[]")}}
   - : Getter that returns a {{domxref("DataTransferItem")}} at the given index.
 
 ## Example

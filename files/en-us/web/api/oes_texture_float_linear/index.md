@@ -22,8 +22,8 @@ With the help of this extension, you can now set the magnification or minificati
 ## Examples
 
 ```js
-gl.getExtension('OES_texture_float');
-gl.getExtension('OES_texture_float_linear');
+gl.getExtension("OES_texture_float");
+gl.getExtension("OES_texture_float_linear");
 
 const texture = gl.createTexture();
 gl.bindTexture(gl.TEXTURE_2D, texture);

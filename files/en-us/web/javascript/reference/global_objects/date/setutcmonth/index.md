@@ -2,12 +2,6 @@
 title: Date.prototype.setUTCMonth()
 slug: Web/JavaScript/Reference/Global_Objects/Date/setUTCMonth
 page-type: javascript-instance-method
-tags:
-  - Date
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
 browser-compat: javascript.builtins.Date.setUTCMonth
 ---
 

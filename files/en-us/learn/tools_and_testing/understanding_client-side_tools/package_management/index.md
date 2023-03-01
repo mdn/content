@@ -1,15 +1,6 @@
 ---
 title: Package management basics
 slug: Learn/Tools_and_testing/Understanding_client-side_tools/Package_management
-tags:
-  - Beginner
-  - Learn
-  - Tools
-  - dependency
-  - npm
-  - package manager
-  - package repository
-  - yarn
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Understanding_client-side_tools/Command_line","Learn/Tools_and_testing/Understanding_client-side_tools/Introducing_complete_toolchain", "Learn/Tools_and_testing/Understanding_client-side_tools")}}

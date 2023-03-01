@@ -28,11 +28,11 @@ If no `enterKeyHint` value has been specified or if it was set to a different va
 Give a virtual keyboard a hint how to label the enter key (might render as <kbd>Send</kbd> and <kbd>Search</kbd>, depending on the OS or the user's language).
 
 ```js
-const send = document.getElementById('sendInput');
-const search = document.getElementById('searchInput');
+const send = document.getElementById("sendInput");
+const search = document.getElementById("searchInput");
 
-send.enterKeyHint = 'send';
-search.enterKeyHint = 'search';
+send.enterKeyHint = "send";
+search.enterKeyHint = "search";
 ```
 
 ## Specifications

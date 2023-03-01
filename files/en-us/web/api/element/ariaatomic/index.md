@@ -27,9 +27,9 @@ In this example the `aria-atomic` attribute on the element with an ID of `"clock
 ```
 
 ```js
-let el = document.getElementById('clock');
+let el = document.getElementById("clock");
 console.log(el.ariaAtomic); // true
-el.ariaAtomic = "false"
+el.ariaAtomic = "false";
 console.log(el.ariaAtomic); // false
 ```
 
