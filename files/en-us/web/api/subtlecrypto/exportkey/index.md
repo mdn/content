@@ -2,13 +2,6 @@
 title: SubtleCrypto.exportKey()
 slug: Web/API/SubtleCrypto/exportKey
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - SubtleCrypto
-  - Web Crypto API
-  - exportKey
 browser-compat: api.SubtleCrypto.exportKey
 ---
 

@@ -2,11 +2,6 @@
 title: WEBGL_multi_draw
 slug: Web/API/WEBGL_multi_draw
 page-type: webgl-extension
-tags:
-  - API
-  - Reference
-  - WebGL
-  - WebGL extension
 browser-compat: api.WEBGL_multi_draw
 ---
 

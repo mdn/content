@@ -2,17 +2,6 @@
 title: SVGImageElement.decode()
 slug: Web/API/SVGImageElement/decode
 page-type: web-api-instance-method
-tags:
-  - API
-  - Decode
-  - Image
-  - Method
-  - NeedsExample
-  - Reference
-  - SVG
-  - SVG DOM
-  - SVGImageElement
-  - asynchronous
 browser-compat: api.SVGImageElement.decode
 ---
 

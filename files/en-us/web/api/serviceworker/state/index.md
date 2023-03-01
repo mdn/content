@@ -2,13 +2,6 @@
 title: ServiceWorker.state
 slug: Web/API/ServiceWorker/state
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - Service Workers
-  - ServiceWorker
-  - state
 browser-compat: api.ServiceWorker.state
 ---
 

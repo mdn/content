@@ -2,18 +2,6 @@
 title: Object.freeze()
 slug: Web/JavaScript/Reference/Global_Objects/Object/freeze
 page-type: javascript-static-method
-tags:
-  - Change
-  - Changeability
-  - ECMAScript 5
-  - JavaScript
-  - Method
-  - Mutability
-  - Mutable
-  - Object
-  - Reference
-  - freeze
-  - lock
 browser-compat: javascript.builtins.Object.freeze
 ---
 

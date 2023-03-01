@@ -2,12 +2,6 @@
 title: Selection.containsNode()
 slug: Web/API/Selection/containsNode
 page-type: web-api-instance-method
-tags:
-  - API
-  - HTML Editing
-  - Method
-  - Reference
-  - Selection
 browser-compat: api.Selection.containsNode
 ---
 

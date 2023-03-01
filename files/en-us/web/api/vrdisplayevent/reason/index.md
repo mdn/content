@@ -2,19 +2,9 @@
 title: VRDisplayEvent.reason
 slug: Web/API/VRDisplayEvent/reason
 page-type: web-api-instance-property
-tags:
-  - API
-  - Deprecated
-  - Non-standard
-
-  - Deprecated
-  - Property
-  - Reference
-  - VR
-  - VRDisplayEvent
-  - Virtual Reality
-  - WebVR
-  - reason
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.VRDisplayEvent.reason
 ---
 

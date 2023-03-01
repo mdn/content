@@ -2,17 +2,6 @@
 title: StorageManager.getDirectory()
 slug: Web/API/StorageManager/getDirectory
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Quota
-  - Reference
-  - Secure context
-  - Storage
-  - Storage API
-  - StorageManager
-  - Usage
-  - getDirectory
 browser-compat: api.StorageManager.getDirectory
 ---
 

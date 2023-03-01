@@ -2,14 +2,6 @@
 title: IntersectionObserver.root
 slug: Web/API/IntersectionObserver/root
 page-type: web-api-instance-property
-tags:
-  - API
-  - Intersection Observer
-  - Intersection Observer API
-  - IntersectionObserver
-  - Property
-  - Reference
-  - root
 browser-compat: api.IntersectionObserver.root
 ---
 

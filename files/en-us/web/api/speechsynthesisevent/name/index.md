@@ -2,15 +2,6 @@
 title: SpeechSynthesisEvent.name
 slug: Web/API/SpeechSynthesisEvent/name
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - SpeechSynthesisEvent
-  - Web Speech API
-  - name
-  - speech
-  - synthesis
 browser-compat: api.SpeechSynthesisEvent.name
 ---
 

@@ -2,14 +2,6 @@
 title: SpeechRecognitionResult
 slug: Web/API/SpeechRecognitionResult
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Reference
-  - SpeechRecognitionResult
-  - Web Speech API
-  - recognition
-  - speech
 browser-compat: api.SpeechRecognitionResult
 ---
 

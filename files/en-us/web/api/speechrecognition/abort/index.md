@@ -2,15 +2,6 @@
 title: SpeechRecognition.abort()
 slug: Web/API/SpeechRecognition/abort
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - SpeechRecognition
-  - Web Speech API
-  - abort
-  - recognition
-  - speech
 browser-compat: api.SpeechRecognition.abort
 ---
 

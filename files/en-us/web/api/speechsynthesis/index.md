@@ -2,14 +2,6 @@
 title: SpeechSynthesis
 slug: Web/API/SpeechSynthesis
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Reference
-  - SpeechSynthesis
-  - Web Speech API
-  - speech
-  - synthesis
 browser-compat: api.SpeechSynthesis
 ---
 

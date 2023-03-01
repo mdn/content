@@ -2,15 +2,8 @@
 title: CSSTransformComponent
 slug: Web/API/CSSTransformComponent
 page-type: web-api-interface
-tags:
-  - API
-  - CSS
-  - CSS Typed Object Model API
-  - CSSTransformComponent
-  - Experimental
-  - Houdini
-  - Interface
-  - Reference
+status:
+  - experimental
 browser-compat: api.CSSTransformComponent
 ---
 

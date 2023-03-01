@@ -2,15 +2,6 @@
 title: SpeechRecognitionErrorEvent.error
 slug: Web/API/SpeechRecognitionErrorEvent/error
 page-type: web-api-instance-property
-tags:
-  - API
-  - Error
-  - Property
-  - Reference
-  - SpeechRecognitionErrorEvent
-  - Web Speech API
-  - recognition
-  - speech
 browser-compat: api.SpeechRecognitionErrorEvent.error
 ---
 

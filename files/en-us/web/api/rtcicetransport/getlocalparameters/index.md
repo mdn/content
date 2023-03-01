@@ -2,23 +2,6 @@
 title: RTCIceTransport.getLocalParameters()
 slug: Web/API/RTCIceTransport/getLocalParameters
 page-type: web-api-instance-method
-tags:
-  - API
-  - Connectivity
-  - ICE
-  - Method
-  - Negotiation
-  - RTCIceTransport
-  - Reference
-  - Transport
-  - WebRTC
-  - WebRTC API
-  - getLocalParameters
-  - parameters
-  - password
-  - ufrag
-  - username
-  - usernameFragment
 browser-compat: api.RTCIceTransport.getLocalParameters
 ---
 

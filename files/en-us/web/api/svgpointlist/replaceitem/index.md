@@ -2,12 +2,6 @@
 title: SVGPointList.replaceItem()
 slug: Web/API/SVGPointList/replaceItem
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - replaceItem
-  - SVGPointList
 browser-compat: api.SVGPointList.replaceItem
 ---
 

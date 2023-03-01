@@ -2,12 +2,6 @@
 title: SharedWorker()
 slug: Web/API/SharedWorker/SharedWorker
 page-type: web-api-constructor
-tags:
-  - API
-  - Constructor
-  - Reference
-  - SharedWorker
-  - Web Workers
 browser-compat: api.SharedWorker.SharedWorker
 ---
 

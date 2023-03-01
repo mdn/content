@@ -2,14 +2,6 @@
 title: DeviceMotionEvent.acceleration
 slug: Web/API/DeviceMotionEvent/acceleration
 page-type: web-api-instance-property
-tags:
-  - API
-  - Device Orientation
-  - Mobile
-  - Motion
-  - Orientation
-  - Property
-  - Reference
 browser-compat: api.DeviceMotionEvent.acceleration
 ---
 

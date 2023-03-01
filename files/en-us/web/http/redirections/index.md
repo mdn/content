@@ -117,7 +117,7 @@ Ideally, there is one location, and therefore one URL, for each resource. But th
   - : A common case is when a site resides at `www.example.com`, but accessing it from `example.com` should also work. Redirections for `example.com` to `www.example.com` are thus set up. You might also redirect from common synonyms or frequent typos of your domains.
 - Moving to a new domain
   - : For example, your company was renamed, but you want existing links or bookmarks to still find you under the new name.
-- Forcing [HTTPS](/en-US/docs/Glossary/https)
+- Forcing [HTTPS](/en-US/docs/Glossary/HTTPS)
   - : Requests to the `http://` version of your site will redirect to the `https://` version of your site.
 
 ### Keeping links alive

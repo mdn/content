@@ -2,15 +2,6 @@
 title: SpeechRecognitionEvent.results
 slug: Web/API/SpeechRecognitionEvent/results
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - SpeechRecognitionEvent
-  - Web Speech API
-  - recognition
-  - results
-  - speech
 browser-compat: api.SpeechRecognitionEvent.results
 ---
 

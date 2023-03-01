@@ -2,16 +2,8 @@
 title: SpeechGrammar.src
 slug: Web/API/SpeechGrammar/src
 page-type: web-api-instance-property
-tags:
-  - API
-  - Experimental
-  - Property
-  - Reference
-  - SpeechGrammar
-  - Web Speech API
-  - recognition
-  - speech
-  - src
+status:
+  - experimental
 browser-compat: api.SpeechGrammar.src
 ---
 

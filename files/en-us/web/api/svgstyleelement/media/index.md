@@ -2,12 +2,6 @@
 title: SVGStyleElement.media
 slug: Web/API/SVGStyleElement/media
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - SVG
-  - SVG DOM
 browser-compat: api.SVGStyleElement.media
 ---
 

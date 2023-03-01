@@ -2,16 +2,6 @@
 title: ServiceWorkerRegistration.getNotifications()
 slug: Web/API/ServiceWorkerRegistration/getNotifications
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Notifications
-  - Reference
-  - Service Workers
-  - Service worker API
-  - ServiceWorker
-  - ServiceWorkerRegistration
-  - getNotifications
 browser-compat: api.ServiceWorkerRegistration.getNotifications
 ---
 

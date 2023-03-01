@@ -2,13 +2,6 @@
 title: ShadowRoot.pointerLockElement
 slug: Web/API/ShadowRoot/pointerLockElement
 page-type: web-api-instance-property
-tags:
-  - API
-  - DOM
-  - ShadowRoot
-  - Property
-  - Reference
-  - mouse lock
 browser-compat: api.ShadowRoot.pointerLockElement
 ---
 

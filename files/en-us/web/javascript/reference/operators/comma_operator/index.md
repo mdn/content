@@ -2,14 +2,6 @@
 title: Comma operator (,)
 slug: Web/JavaScript/Reference/Operators/Comma_Operator
 page-type: javascript-operator
-tags:
-  - Comma
-  - Compound
-  - Expression
-  - JavaScript
-  - Language feature
-  - Operator
-  - Reference
 browser-compat: javascript.operators.comma
 ---
 

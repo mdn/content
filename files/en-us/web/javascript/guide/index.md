@@ -2,10 +2,6 @@
 title: JavaScript Guide
 slug: Web/JavaScript/Guide
 page-type: guide
-tags:
-  - Guide
-  - JavaScript
-  - "l10n:priority"
 ---
 
 {{jsSidebar("JavaScript Guide")}}
@@ -100,8 +96,8 @@ Overview: [Text formatting](/en-US/docs/Web/JavaScript/Guide/Text_formatting)
 
 Overview: [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections)
 
-- [Arrays](/en-US/docs/Web/JavaScript/Guide/Indexed_collections#array_object)
-- [Typed arrays](/en-US/docs/Web/JavaScript/Guide/Indexed_collections#typed_arrays)
+- [Arrays](/en-US/docs/Web/JavaScript/Guide/Indexed_collections)
+- [Typed arrays](/en-US/docs/Web/JavaScript/Typed_arrays)
 
 ## Keyed collections
 
@@ -136,7 +132,7 @@ Overview: [Promises](/en-US/docs/Web/JavaScript/Guide/Using_promises)
 
 - [Guarantees](/en-US/docs/Web/JavaScript/Guide/Using_promises#guarantees)
 - [Chaining](/en-US/docs/Web/JavaScript/Guide/Using_promises#chaining)
-- [Error propagation](/en-US/docs/Web/JavaScript/Guide/Using_promises#error_propagation)
+- [Error handling](/en-US/docs/Web/JavaScript/Guide/Using_promises#error_handling)
 - [Composition](/en-US/docs/Web/JavaScript/Guide/Using_promises#composition)
 - [Timing](/en-US/docs/Web/JavaScript/Guide/Using_promises#timing)
 
@@ -146,7 +142,7 @@ Overview: [Iterators and generators](/en-US/docs/Web/JavaScript/Guide/Iterators_
 
 - [Iterators](/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators#iterators)
 - [Iterables](/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators#iterables)
-- [Generators](/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators#generators)
+- [Generators](/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators#generator_functions)
 
 ## Meta programming
 

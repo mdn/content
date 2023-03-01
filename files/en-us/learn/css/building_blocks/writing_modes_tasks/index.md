@@ -1,13 +1,6 @@
 ---
-title: 'Test your skills: Writing modes and logical properties'
+title: "Test your skills: Writing modes and logical properties"
 slug: Learn/CSS/Building_blocks/Writing_Modes_Tasks
-tags:
-  - Beginner
-  - CSS
-  - Learn
-  - Writing modes
-  - logical properties
-  - test your skills
 ---
 
 {{LearnSidebar}}

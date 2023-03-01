@@ -2,18 +2,6 @@
 title: WebVR concepts
 slug: Web/API/WebVR_API/Concepts
 page-type: guide
-tags:
-  - Acceleration
-  - Apps
-  - FOV
-  - Guide
-  - Orientation
-  - Position
-  - VR
-  - Virtual Reality
-  - WebVR
-  - concepts
-  - velocity
 ---
 
 {{APIRef("WebVR API")}}{{deprecated_header}}

@@ -2,14 +2,6 @@
 title: <angle>
 slug: Web/CSS/angle
 page-type: css-type
-tags:
-  - CSS
-  - CSS Data Type
-  - Data Type
-  - Layout
-  - Reference
-  - Web
-  - angle
 browser-compat: css.types.angle
 ---
 

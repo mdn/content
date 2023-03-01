@@ -2,20 +2,6 @@
 title: Using the Screen Capture API
 slug: Web/API/Screen_Capture_API/Using_Screen_Capture
 page-type: guide
-tags:
-  - API
-  - Capture
-  - Conference
-  - Guide
-  - Media
-  - Screen Capture
-  - Screen Capture API
-  - Sharing
-  - Video
-  - WebRTC
-  - display
-  - getDisplayMedia
-  - screen
 browser-compat: api.MediaDevices.getDisplayMedia
 ---
 

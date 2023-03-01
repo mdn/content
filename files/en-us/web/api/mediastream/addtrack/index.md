@@ -2,13 +2,6 @@
 title: MediaStream.addTrack()
 slug: Web/API/MediaStream/addTrack
 page-type: web-api-instance-method
-tags:
-  - API
-  - Media Streams API
-  - Method
-  - NeedsExample
-  - Reference
-  - addTrack
 browser-compat: api.MediaStream.addTrack
 ---
 

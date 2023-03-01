@@ -2,13 +2,8 @@
 title: Serial.requestPort()
 slug: Web/API/Serial/requestPort
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - requestPort
-  - Serial
-  - Experimental
+status:
+  - experimental
 browser-compat: api.Serial.requestPort
 ---
 

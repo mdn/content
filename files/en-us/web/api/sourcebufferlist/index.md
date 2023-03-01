@@ -2,15 +2,6 @@
 title: SourceBufferList
 slug: Web/API/SourceBufferList
 page-type: web-api-interface
-tags:
-  - API
-  - Audio
-  - Interface
-  - MSE
-  - Media Source Extensions
-  - Reference
-  - SourceBufferList
-  - Video
 browser-compat: api.SourceBufferList
 ---
 

@@ -2,12 +2,6 @@
 title: SVGStyleElement.disabled
 slug: Web/API/SVGStyleElement/disabled
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - SVG
-  - SVG DOM
 browser-compat: api.SVGStyleElement.disabled
 ---
 

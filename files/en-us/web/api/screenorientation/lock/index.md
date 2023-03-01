@@ -2,14 +2,6 @@
 title: ScreenOrientation.lock()
 slug: Web/API/ScreenOrientation/lock
 page-type: web-api-instance-method
-tags:
-  - API
-  - Orientation
-  - Method
-  - Reference
-  - Screen Orientation API
-  - ScreenOrientation
-  - lock
 browser-compat: api.ScreenOrientation.lock
 ---
 

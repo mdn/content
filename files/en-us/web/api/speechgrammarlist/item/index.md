@@ -2,17 +2,8 @@
 title: SpeechGrammarList.item()
 slug: Web/API/SpeechGrammarList/item
 page-type: web-api-instance-method
-tags:
-  - API
-  - Experimental
-  - Getter
-  - Method
-  - Reference
-  - SpeechGrammarList
-  - Web Speech API
-  - item
-  - recognition
-  - speech
+status:
+  - experimental
 browser-compat: api.SpeechGrammarList.item
 ---
 

@@ -2,15 +2,8 @@
 title: StylePropertyMapReadOnly.keys()
 slug: Web/API/StylePropertyMapReadOnly/keys
 page-type: web-api-instance-method
-tags:
-  - API
-  - CSS Typed Object Model API
-  - Experimental
-  - Houdini
-  - Method
-  - Reference
-  - StylePropertyMapReadOnly
-  - keys()
+status:
+  - experimental
 browser-compat: api.StylePropertyMapReadOnly.keys
 ---
 

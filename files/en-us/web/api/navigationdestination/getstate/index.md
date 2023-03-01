@@ -2,19 +2,8 @@
 title: NavigationDestination.getState()
 slug: Web/API/NavigationDestination/getState
 page-type: web-api-instance-method
-tags:
-  - API
-  - Experimental
-  - getState
-  - History
-  - Method
-  - Navigate
-  - Navigation
-  - Navigation API
-  - Reference
-  - Scroll
-  - transition
-  - Traversal
+status:
+  - experimental
 browser-compat: api.NavigationDestination.getState
 ---
 
@@ -46,7 +35,7 @@ None.
 ## Examples
 
 ```js
-navigation.addEventListener('navigate', (event) => {
+navigation.addEventListener("navigate", (event) => {
   console.log(event.destination.getState());
 });
 ```

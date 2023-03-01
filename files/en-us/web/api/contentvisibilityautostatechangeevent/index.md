@@ -2,15 +2,14 @@
 title: ContentVisibilityAutoStateChangeEvent
 slug: Web/API/ContentVisibilityAutoStateChangeEvent
 page-type: web-api-interface
-tags:
-  - Interface
-  - Reference
+status:
+  - experimental
 browser-compat: api.ContentVisibilityAutoStateChangeEvent
 ---
 
-{{APIRef("CSS Containment")}}
+{{APIRef("CSS Containment")}}{{SeeCompatTable}}
 
-The **`ContentVisibilityAutoStateChangeEvent`** interface of the [CSS Containment Module Level 2](https://www.w3.org/TR/css-contain-2/#content-visibility-auto-state-changed) is the event object for the {{domxref("element/contentvisibilityautostatechange_event", "contentvisibilityautostatechange")}} event, which fires on any element with {{cssxref("content-visibility", "content-visibility: auto")}} set on it when it starts or stops being [relevant to the user](/en-US/docs/Web/CSS/CSS_Containment#relevant_to_the_user) and [skipping its contents](/en-US/docs/Web/CSS/CSS_Containment#skips_its_contents).
+The **`ContentVisibilityAutoStateChangeEvent`** interface is the event object for the {{domxref("element/contentvisibilityautostatechange_event", "contentvisibilityautostatechange")}} event, which fires on any element with {{cssxref("content-visibility", "content-visibility: auto")}} set on it when it starts or stops being [relevant to the user](/en-US/docs/Web/CSS/CSS_Containment#relevant_to_the_user) and [skipping its contents](/en-US/docs/Web/CSS/CSS_Containment#skips_its_contents).
 
 While the element is not relevant (between the start and end events), the user agent skips an element's rendering, including layout and painting.
 This can significantly improve page rendering speed.

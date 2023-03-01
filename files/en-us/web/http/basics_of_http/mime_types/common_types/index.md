@@ -17,12 +17,12 @@ tags:
 
 {{HTTPSidebar}}
 
-This topic lists most common MIME types, with corresponding document types, ordered by their common extensions.
+This topic lists the most common MIME types with corresponding document types, ordered by their common extensions.
 
-Two primary MIME types are important for the role of default types:
+The following two important MIME types are the default types:
 
 - `text/plain` is the default value for textual files. A textual file should be human-readable and must not contain binary data.
-- `application/octet-stream` is the default value for all other cases. An unknown file type should use this type. Browsers pay a particular care when manipulating these files, to protect users from software vulnerabilities and possible dangerous behavior.
+- `application/octet-stream` is the default value for all other cases. An unknown file type should use this type. Browsers are particularly careful when manipulating these files to protect users from software vulnerabilities and possible dangerous behavior.
 
 IANA is the official registry of MIME media types and maintains a [list of all the official MIME types](https://www.iana.org/assignments/media-types/media-types.xhtml). This table lists important MIME types for the Web:
 

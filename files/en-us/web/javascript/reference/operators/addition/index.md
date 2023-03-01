@@ -2,11 +2,6 @@
 title: Addition (+)
 slug: Web/JavaScript/Reference/Operators/Addition
 page-type: javascript-operator
-tags:
-  - JavaScript
-  - Language feature
-  - Operator
-  - Reference
 browser-compat: javascript.operators.addition
 ---
 

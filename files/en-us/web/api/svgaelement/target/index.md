@@ -2,12 +2,6 @@
 title: SVGAElement.target
 slug: Web/API/SVGAElement/target
 page-type: web-api-instance-property
-tags:
-  - API
-  - NeedsBrowserCompatibility
-  - Property
-  - Reference
-  - SVG
 browser-compat: api.SVGAElement.target
 ---
 

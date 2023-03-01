@@ -2,15 +2,8 @@
 title: Contact Picker API
 slug: Web/API/Contact_Picker_API
 page-type: web-api-overview
-tags:
-  - API
-  - Contact Picker API
-  - Contacts
-  - Landing
-  - Overview
-  - PWA
-  - contact picker
-  - Experimental
+status:
+  - experimental
 browser-compat: api.ContactsManager
 ---
 

@@ -2,11 +2,8 @@
 title: Sanitizer.sanitizeFor()
 slug: Web/API/Sanitizer/sanitizeFor
 page-type: web-api-instance-method
-tags:
-  - HTML Sanitizer API
-  - Method
-  - sanitizeFor
-  - Experimental
+status:
+  - experimental
 browser-compat: api.Sanitizer.sanitizeFor
 ---
 

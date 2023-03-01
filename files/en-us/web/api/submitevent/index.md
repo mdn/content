@@ -2,17 +2,6 @@
 title: SubmitEvent
 slug: Web/API/SubmitEvent
 page-type: web-api-interface
-tags:
-  - API
-  - Form Submission
-  - Forms
-  - HTML DOM
-  - Interface
-  - Reference
-  - SubmitEvent
-  - Web
-  - events
-  - submit
 browser-compat: api.SubmitEvent
 ---
 

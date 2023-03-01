@@ -2,13 +2,6 @@
 title: ShadowRoot.mode
 slug: Web/API/ShadowRoot/mode
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - ShadowRoot
-  - mode
-  - shadow dom
 browser-compat: api.ShadowRoot.mode
 ---
 

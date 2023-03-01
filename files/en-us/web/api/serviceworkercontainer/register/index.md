@@ -2,15 +2,6 @@
 title: ServiceWorkerContainer.register()
 slug: Web/API/ServiceWorkerContainer/register
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - Service Workers
-  - Service worker API
-  - ServiceWorker
-  - ServiceWorkerContainer
-  - register
 browser-compat: api.ServiceWorkerContainer.register
 ---
 
@@ -40,7 +31,7 @@ register(scriptURL, options)
 
 - `scriptURL`
   - : The URL of the service worker script. The registered service worker file needs to
-    have a valid [JavaScript MIME type](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types#javascript_types).
+    have a valid [JavaScript MIME type](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types#textjavascript).
 - `options` {{optional_inline}}
 
   - : An object containing registration options. Currently available options are:

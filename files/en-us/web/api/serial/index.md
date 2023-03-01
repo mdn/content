@@ -2,12 +2,8 @@
 title: Serial
 slug: Web/API/Serial
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Reference
-  - Serial
-  - Experimental
+status:
+  - experimental
 browser-compat: api.Serial
 ---
 

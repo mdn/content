@@ -2,15 +2,6 @@
 title: SpeechSynthesis.cancel()
 slug: Web/API/SpeechSynthesis/cancel
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - SpeechSynthesis
-  - Web Speech API
-  - cancel
-  - speech
-  - synthesis
 browser-compat: api.SpeechSynthesis.cancel
 ---
 

@@ -2,15 +2,6 @@
 title: IDBFactory.open()
 slug: Web/API/IDBFactory/open
 page-type: web-api-instance-method
-tags:
-  - API
-  - Database
-  - IDBFactory
-  - IndexedDB
-  - Method
-  - Reference
-  - Storage
-  - open
 browser-compat: api.IDBFactory.open
 ---
 

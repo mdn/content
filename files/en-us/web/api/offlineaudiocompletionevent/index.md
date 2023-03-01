@@ -2,12 +2,6 @@
 title: OfflineAudioCompletionEvent
 slug: Web/API/OfflineAudioCompletionEvent
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - OfflineAudioCompletionEvent
-  - Reference
-  - Web Audio API
 browser-compat: api.OfflineAudioCompletionEvent
 ---
 

@@ -2,15 +2,8 @@
 title: StylePropertyMapReadOnly.entries()
 slug: Web/API/StylePropertyMapReadOnly/entries
 page-type: web-api-instance-method
-tags:
-  - API
-  - CSS Typed Object Model API
-  - Experimental
-  - Houdini
-  - Method
-  - Reference
-  - StylePropertyMapReadOnly
-  - entries()
+status:
+  - experimental
 browser-compat: api.StylePropertyMapReadOnly.entries
 ---
 

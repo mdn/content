@@ -2,12 +2,6 @@
 title: HTMLMediaElement.loop
 slug: Web/API/HTMLMediaElement/loop
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTML DOM
-  - HTMLMediaElement
-  - Property
-  - Web
 browser-compat: api.HTMLMediaElement.loop
 ---
 
@@ -22,7 +16,7 @@ A boolean value.
 ## Examples
 
 ```js
-const obj = document.createElement('video');
+const obj = document.createElement("video");
 obj.loop = true; // true
 ```
 

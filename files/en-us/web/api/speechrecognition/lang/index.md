@@ -2,19 +2,11 @@
 title: SpeechRecognition.lang
 slug: Web/API/SpeechRecognition/lang
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - SpeechRecognition
-  - Web Speech API
-  - lang
-  - recognition
-  - speech
 browser-compat: api.SpeechRecognition.lang
 ---
 
 {{APIRef("Web Speech API")}}
+
 The **`lang`** property of the {{domxref("SpeechRecognition")}}
 interface returns and sets the language of the current `SpeechRecognition`.
 If not specified, this defaults to the HTML {{htmlattrxref("lang","html")}} attribute

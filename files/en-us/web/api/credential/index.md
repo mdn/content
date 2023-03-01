@@ -2,13 +2,6 @@
 title: Credential
 slug: Web/API/Credential
 page-type: web-api-interface
-tags:
-  - API
-  - Credential Management API
-  - Interface
-  - NeedsExample
-  - Reference
-  - credential management
 browser-compat: api.Credential
 ---
 

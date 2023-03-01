@@ -2,13 +2,6 @@
 title: PannerNode.distanceModel
 slug: Web/API/PannerNode/distanceModel
 page-type: web-api-instance-property
-tags:
-  - API
-  - PannerNode
-  - Property
-  - Reference
-  - Web Audio API
-  - distanceModel
 browser-compat: api.PannerNode.distanceModel
 ---
 

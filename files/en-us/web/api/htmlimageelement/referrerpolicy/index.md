@@ -2,11 +2,6 @@
 title: HTMLImageElement.referrerPolicy
 slug: Web/API/HTMLImageElement/referrerPolicy
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTMLImageElement
-  - Property
-  - Referrer Policy
 browser-compat: api.HTMLImageElement.referrerPolicy
 ---
 
@@ -56,10 +51,10 @@ A string; one of the following:
 
 ```js
 const img = new Image();
-img.src = 'img/logo.png';
-img.referrerPolicy = 'origin';
+img.src = "img/logo.png";
+img.referrerPolicy = "origin";
 
-const div = document.getElementById('divAround');
+const div = document.getElementById("divAround");
 div.appendChild(img); // Fetch the image using the origin as the referrer
 ```
 

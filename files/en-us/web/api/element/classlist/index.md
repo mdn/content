@@ -2,13 +2,6 @@
 title: Element.classList
 slug: Web/API/Element/classList
 page-type: web-api-instance-property
-tags:
-  - API
-  - DOM
-  - Element
-  - Property
-  - Read-only
-  - Reference
 browser-compat: api.Element.classList
 ---
 

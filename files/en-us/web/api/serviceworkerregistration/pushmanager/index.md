@@ -2,14 +2,6 @@
 title: ServiceWorkerRegistration.pushManager
 slug: Web/API/ServiceWorkerRegistration/pushManager
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Push
-  - PushManager
-  - Reference
-  - Service Workers
-  - ServiceWorkerRegistration
 browser-compat: api.ServiceWorkerRegistration.pushManager
 ---
 

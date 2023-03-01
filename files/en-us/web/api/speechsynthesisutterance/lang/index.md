@@ -2,15 +2,6 @@
 title: SpeechSynthesisUtterance.lang
 slug: Web/API/SpeechSynthesisUtterance/lang
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - SpeechSynthesisUtterance
-  - Web Speech API
-  - lang
-  - speech
-  - synthesis
 browser-compat: api.SpeechSynthesisUtterance.lang
 ---
 

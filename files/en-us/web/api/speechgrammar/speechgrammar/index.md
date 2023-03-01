@@ -2,16 +2,9 @@
 title: SpeechGrammar()
 slug: Web/API/SpeechGrammar/SpeechGrammar
 page-type: web-api-constructor
-tags:
-  - API
-  - Constructor
-  - Experimental
-  - Reference
-  - SpeechGrammar
-  - Web
-  - Web Speech API
-  - speech
-  - Non-standard
+status:
+  - experimental
+  - non-standard
 browser-compat: api.SpeechGrammar.SpeechGrammar
 ---
 

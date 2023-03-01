@@ -2,13 +2,6 @@
 title: "::after"
 slug: Web/CSS/::after
 page-type: css-pseudo-element
-tags:
-  - CSS
-  - Layout
-  - Pseudo-element
-  - Reference
-  - Selector
-  - Web
 browser-compat: css.selectors.after
 ---
 

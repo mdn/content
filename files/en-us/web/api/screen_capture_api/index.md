@@ -2,16 +2,6 @@
 title: Screen Capture API
 slug: Web/API/Screen_Capture_API
 page-type: web-api-overview
-tags:
-  - API
-  - MediaDevices
-  - MediaStream
-  - Overview
-  - Reference
-  - Screen Capture
-  - Screen Capture API
-  - Screen Sharing
-  - getDisplayMedia
 browser-compat: api.MediaDevices.getDisplayMedia
 ---
 

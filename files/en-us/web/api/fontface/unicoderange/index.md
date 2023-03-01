@@ -2,15 +2,6 @@
 title: FontFace.unicodeRange
 slug: Web/API/FontFace/unicodeRange
 page-type: web-api-instance-property
-tags:
-  - API
-  - CSS Font Loading API
-  - CSSOM
-  - FontFace
-  - Fonts
-  - Property
-  - Reference
-  - unicodeRange
 browser-compat: api.FontFace.unicodeRange
 ---
 

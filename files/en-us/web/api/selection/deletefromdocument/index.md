@@ -2,13 +2,6 @@
 title: Selection.deleteFromDocument()
 slug: Web/API/Selection/deleteFromDocument
 page-type: web-api-instance-method
-tags:
-  - API
-  - HTML Editing
-  - Method
-  - Reference
-  - Selection
-  - deleteFromDocument
 browser-compat: api.Selection.deleteFromDocument
 ---
 

@@ -2,15 +2,6 @@
 title: HTMLInputElement.setCustomValidity()
 slug: Web/API/HTMLInputElement/setCustomValidity
 page-type: web-api-instance-method
-tags:
-  - API
-  - HTML DOM
-  - HTMLInputElement
-  - Method
-  - NeedsExample
-  - Reference
-  - setCustomValidity
-  - setCustomValidity()
 browser-compat: api.HTMLObjectElement.setCustomValidity
 ---
 
@@ -78,5 +69,5 @@ submitted.
 ## See also
 
 - [Learn: Client-side form validation](/en-US/docs/Learn/Forms/Form_validation)
-- [Guide: Constraint validation](/en-US/docs/Web/Guide/HTML/Constraint_validation)
+- [Guide: Constraint validation](/en-US/docs/Web/HTML/Constraint_validation)
 - {{domxref('ValidityState')}}

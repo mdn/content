@@ -1,13 +1,6 @@
 ---
 title: "ARIA: option role"
 slug: Web/Accessibility/ARIA/Roles/option_role
-tags:
-  - Accessibility
-  - ARIA
-  - roles
-  - Reference
-  - ARIA roles
-  - option role
 spec-urls:
   - https://w3c.github.io/aria/#option
   - https://w3c.github.io/aria-practices/#Listbox

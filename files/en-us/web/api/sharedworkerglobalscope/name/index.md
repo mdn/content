@@ -2,13 +2,6 @@
 title: SharedWorkerGlobalScope.name
 slug: Web/API/SharedWorkerGlobalScope/name
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - SharedWorkerGlobalScope
-  - Web Workers
-  - name
 browser-compat: api.SharedWorkerGlobalScope.name
 ---
 

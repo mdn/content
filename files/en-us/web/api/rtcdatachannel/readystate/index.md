@@ -2,13 +2,6 @@
 title: RTCDataChannel.readyState
 slug: Web/API/RTCDataChannel/readyState
 page-type: web-api-instance-property
-tags:
-  - Property
-  - RTCDataChannel
-  - Read-only
-  - Reference
-  - WebRTC
-  - readyState
 browser-compat: api.RTCDataChannel.readyState
 ---
 
@@ -47,7 +40,7 @@ const dataChannel = peerConnection.createDataChannel("File Transfer");
 const sendQueue = [];
 
 function sendMessage(msg) {
-  switch(dataChannel.readyState) {
+  switch (dataChannel.readyState) {
     case "connecting":
       console.log(`Connection not open; queueing: ${msg}`);
       sendQueue.push(msg);

@@ -2,13 +2,6 @@
 title: Document.implementation
 slug: Web/API/Document/implementation
 page-type: web-api-instance-property
-tags:
-  - API
-  - DOM
-  - Document
-  - NeedsContent
-  - Property
-  - Reference
 browser-compat: api.Document.implementation
 ---
 

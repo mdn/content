@@ -2,18 +2,8 @@
 title: ":-moz-locale-dir(rtl)"
 slug: Web/CSS/:-moz-locale-dir_rtl
 page-type: css-pseudo-class
-tags:
-  - ":-moz-locale-dir"
-  - CSS
-  - CSS:Mozilla Extensions
-  - Localization
-  - NeedsCompatTable
-  - NeedsExample
-  - Non-standard
-  - Pseudo-class
-  - Reference
-  - Right-to-left
-  - Selector
+status:
+  - non-standard
 ---
 
 {{CSSRef}}{{Non-standard_header}}
@@ -60,6 +50,5 @@ Not part of any standard.
 
 ## See also
 
-- {{CSSxRef(":dir",":dir(…)")}}
-- {{CSSxRef(":-moz-locale-dir(ltr)")}}
-- [Making sure your theme works with RTL locales](/en-US/docs/Making_Sure_Your_Theme_Works_with_RTL_Locales)
+- {{CSSxRef(":dir", ":dir(…)")}}
+- {{CSSxRef(":-moz-locale-dir_ltr", ":-moz-locale-dir(ltr)")}}

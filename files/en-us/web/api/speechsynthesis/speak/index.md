@@ -2,15 +2,6 @@
 title: SpeechSynthesis.speak()
 slug: Web/API/SpeechSynthesis/speak
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - SpeechSynthesis
-  - Web Speech API
-  - speak
-  - speech
-  - synthesis
 browser-compat: api.SpeechSynthesis.speak
 ---
 

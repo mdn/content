@@ -2,15 +2,8 @@
 title: SpeechGrammarList()
 slug: Web/API/SpeechGrammarList/SpeechGrammarList
 page-type: web-api-constructor
-tags:
-  - API
-  - Constructor
-  - Experimental
-  - Reference
-  - SpeechGrammarList
-  - Web Speech API
-  - recognition
-  - speech
+status:
+  - experimental
 browser-compat: api.SpeechGrammarList.SpeechGrammarList
 ---
 

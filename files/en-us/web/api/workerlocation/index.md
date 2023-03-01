@@ -2,10 +2,6 @@
 title: WorkerLocation
 slug: Web/API/WorkerLocation
 page-type: web-api-interface
-tags:
-  - API
-  - Web Workers
-  - Reference
 browser-compat: api.WorkerLocation
 ---
 

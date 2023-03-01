@@ -2,13 +2,6 @@
 title: ShadowRoot
 slug: Web/API/ShadowRoot
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Reference
-  - ShadowRoot
-  - Web Components
-  - shadow dom
 browser-compat: api.ShadowRoot
 ---
 

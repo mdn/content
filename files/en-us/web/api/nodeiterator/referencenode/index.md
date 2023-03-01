@@ -2,11 +2,6 @@
 title: NodeIterator.referenceNode
 slug: Web/API/NodeIterator/referenceNode
 page-type: web-api-instance-property
-tags:
-  - API
-  - DOM
-  - NodeIterator
-  - Property
 browser-compat: api.NodeIterator.referenceNode
 ---
 
@@ -24,9 +19,13 @@ A {{domxref("Node")}}.
 
 ```js
 const nodeIterator = document.createNodeIterator(
-    document.body,
-    NodeFilter.SHOW_ELEMENT,
-    { acceptNode(node) { return NodeFilter.FILTER_ACCEPT; } }
+  document.body,
+  NodeFilter.SHOW_ELEMENT,
+  {
+    acceptNode(node) {
+      return NodeFilter.FILTER_ACCEPT;
+    },
+  }
 );
 node = nodeIterator.referenceNode;
 ```

@@ -1,6 +1,7 @@
 ---
 title: find
 slug: Mozilla/Add-ons/WebExtensions/API/find
+page-type: webextension-api
 tags:
   - API
   - Add-ons

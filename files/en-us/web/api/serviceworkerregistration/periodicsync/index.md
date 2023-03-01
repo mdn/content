@@ -2,15 +2,8 @@
 title: ServiceWorkerRegistration.periodicSync
 slug: Web/API/ServiceWorkerRegistration/periodicSync
 page-type: web-api-instance-property
-tags:
-  - API
-  - Experimental
-  - PeriodicSyncManager
-  - Property
-  - Reference
-  - Service Workers
-  - ServiceWorkerRegistration
-  - periodicSync
+status:
+  - experimental
 browser-compat: api.ServiceWorkerRegistration.periodicSync
 ---
 

@@ -2,13 +2,6 @@
 title: Screen.availHeight
 slug: Web/API/Screen/availHeight
 page-type: web-api-instance-property
-tags:
-  - API
-  - CSSOM View
-  - Property
-  - Reference
-  - Screen size
-  - availHeight
 browser-compat: api.Screen.availHeight
 ---
 

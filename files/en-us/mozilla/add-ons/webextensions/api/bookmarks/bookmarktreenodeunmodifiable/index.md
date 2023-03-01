@@ -1,6 +1,7 @@
 ---
 title: bookmarks.BookmarkTreeNodeUnmodifiable
 slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/BookmarkTreeNodeUnmodifiable
+page-type: webextension-api-type
 tags:
   - API
   - Add-ons

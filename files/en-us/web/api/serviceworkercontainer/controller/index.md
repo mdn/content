@@ -2,15 +2,6 @@
 title: ServiceWorkerContainer.controller
 slug: Web/API/ServiceWorkerContainer/controller
 page-type: web-api-instance-property
-tags:
-  - API
-  - Controller
-  - Property
-  - Reference
-  - Service Workers
-  - Service worker API
-  - ServiceWorker
-  - ServiceWorkerController
 browser-compat: api.ServiceWorkerContainer.controller
 ---
 

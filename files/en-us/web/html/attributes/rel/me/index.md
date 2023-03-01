@@ -2,12 +2,6 @@
 title: rel=me
 slug: Web/HTML/Attributes/rel/me
 page-type: html-attribute-value
-tags:
-  - Attribute
-  - HTML
-  - Link
-  - Link types
-  - Reference
 browser-compat: html.elements.link.rel.me
 ---
 

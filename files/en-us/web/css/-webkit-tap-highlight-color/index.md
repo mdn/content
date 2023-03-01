@@ -2,15 +2,8 @@
 title: "-webkit-tap-highlight-color"
 slug: Web/CSS/-webkit-tap-highlight-color
 page-type: css-property
-tags:
-  - CSS
-  - CSS Property
-  - NeedsCompatTable
-  - NeedsExample
-  - Non-standard
-  - Reference
-  - WebKit
-  - recipe:css-property
+status:
+  - non-standard
 browser-compat: css.properties.-webkit-tap-highlight-color
 ---
 

@@ -2,12 +2,8 @@
 title: Window.dump()
 slug: Web/API/Window/dump
 page-type: web-api-instance-method
-tags:
-  - API
-  - HTML DOM
-  - Method
-  - Non-standard
-  - Window
+status:
+  - non-standard
 browser-compat: api.Window.dump
 ---
 

@@ -2,13 +2,6 @@
 title: ShadowRoot.innerHTML
 slug: Web/API/ShadowRoot/innerHTML
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - ShadowRoot
-  - innerHTML
-  - shadow dom
 browser-compat: api.ShadowRoot.innerHTML
 ---
 

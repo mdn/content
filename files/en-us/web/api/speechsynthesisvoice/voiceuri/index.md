@@ -2,15 +2,6 @@
 title: SpeechSynthesisVoice.voiceURI
 slug: Web/API/SpeechSynthesisVoice/voiceURI
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - SpeechSynthesisVoice
-  - Web Speech API
-  - speech
-  - synthesis
-  - voiceURI
 browser-compat: api.SpeechSynthesisVoice.voiceURI
 ---
 

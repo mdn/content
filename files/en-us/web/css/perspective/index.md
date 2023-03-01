@@ -2,17 +2,6 @@
 title: perspective
 slug: Web/CSS/perspective
 page-type: css-property
-tags:
-  - 3D
-  - CSS
-  - CSS Property
-  - CSS Transforms
-  - Distance
-  - Graphics
-  - Property
-  - Reference
-  - perspective
-  - recipe:css-property
 browser-compat: css.properties.perspective
 ---
 

@@ -2,11 +2,6 @@
 title: performance.getEntries()
 slug: Web/API/Performance/getEntries
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - Web Performance
 browser-compat: api.Performance.getEntries
 ---
 

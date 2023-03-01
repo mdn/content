@@ -2,13 +2,6 @@
 title: overscroll-behavior-y
 slug: Web/CSS/overscroll-behavior-y
 page-type: css-property
-tags:
-  - CSS
-  - CSS Box Model
-  - CSS Property
-  - Reference
-  - overscroll-behavior-y
-  - recipe:css-property
 browser-compat: css.properties.overscroll-behavior-y
 ---
 

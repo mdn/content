@@ -1,13 +1,6 @@
 ---
 title: "ARIA: group role"
 slug: Web/Accessibility/ARIA/Roles/group_role
-tags:
-  - Accessibility
-  - ARIA
-  - roles
-  - Reference
-  - ARIA roles
-  - document structure role
 spec-urls: https://w3c.github.io/aria/#group
 ---
 

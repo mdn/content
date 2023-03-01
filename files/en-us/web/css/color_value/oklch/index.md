@@ -2,15 +2,8 @@
 title: oklch()
 slug: Web/CSS/color_value/oklch
 page-type: css-function
-tags:
-  - CSS
-  - CSS Data Type
-  - Data Type
-  - Reference
-  - Web
-  - color
-  - oklch
-  - Experimental
+status:
+  - experimental
 browser-compat: css.types.color.oklch
 ---
 

@@ -2,11 +2,6 @@
 title: JPEG
 slug: Glossary/JPEG
 page-type: glossary-definition
-tags:
-  - Beginner
-  - Composing
-  - Images
-  - JPEG
 ---
 
 **JPEG** (Joint Photographic Experts Group) is a commonly used method of lossy compression for digital images.

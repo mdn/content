@@ -2,12 +2,6 @@
 title: Selection.setBaseAndExtent()
 slug: Web/API/Selection/setBaseAndExtent
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - Selection
-  - setBaseAndExtent
 browser-compat: api.Selection.setBaseAndExtent
 ---
 

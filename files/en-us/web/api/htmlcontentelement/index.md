@@ -2,13 +2,9 @@
 title: HTMLContentElement
 slug: Web/API/HTMLContentElement
 page-type: web-api-interface
-tags:
-  - API
-  - Deprecated
-  - HTML DOM
-  - Interface
-  - Reference
-  - Non-standard
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.HTMLContentElement
 ---
 

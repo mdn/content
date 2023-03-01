@@ -2,15 +2,6 @@
 title: SpeechRecognition.stop()
 slug: Web/API/SpeechRecognition/stop
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - SpeechRecognition
-  - Web Speech API
-  - recognition
-  - speech
-  - stop
 browser-compat: api.SpeechRecognition.stop
 ---
 

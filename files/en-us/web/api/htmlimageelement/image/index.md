@@ -2,16 +2,6 @@
 title: Image()
 slug: Web/API/HTMLImageElement/Image
 page-type: web-api-constructor
-tags:
-  - API
-  - Constructor
-  - DOM
-  - HTML
-  - HTML DOM
-  - HTMLImageElement
-  - Image()
-  - Reference
-  - img
 browser-compat: api.HTMLImageElement.Image
 ---
 
@@ -55,7 +45,7 @@ constructor both pairs of properties have the same values.
 
 ```js
 const myImage = new Image(100, 200);
-myImage.src = 'picture.jpg';
+myImage.src = "picture.jpg";
 document.body.appendChild(myImage);
 ```
 

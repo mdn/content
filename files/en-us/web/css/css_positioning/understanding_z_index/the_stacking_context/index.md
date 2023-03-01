@@ -2,12 +2,6 @@
 title: The stacking context
 slug: Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context
 page-type: guide
-tags:
-  - Advanced
-  - CSS
-  - Guide
-  - Reference
-  - z-index
 ---
 
 {{CSSRef}}
@@ -54,7 +48,7 @@ In summary:
 
 ![Example of stacking rules modified using z-index](understanding_zindex_04.png)
 
-In this example, every positioned element creates its own stacking context, because of their positioning and `z-index` values. The hierarchy of [stacking contexts](/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context) is organized as follows:
+In this example, every positioned element creates its own stacking context, because of their positioning and `z-index` values. The hierarchy of stacking contexts is organized as follows:
 
 - Root
 
