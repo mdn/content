@@ -40,7 +40,7 @@ background.
 
 ```js
 navigator.serviceWorker.ready.then((registration) => {
-  registration.periodicSync.unregister('get-latest-news');
+  registration.periodicSync.unregister("get-latest-news");
 });
 ```
 
