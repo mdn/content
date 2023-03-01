@@ -265,7 +265,7 @@ printButton.addEventListener("click", () => {
 
 #### Result
 
-Selecting a different print style radio input will change the output of the print dialog.
+What is printed, and what is shown in the print preview dialog, will change depending on which print style radio button is selected.
 
 {{ EmbedLiveSample('Named page example', '100%', 520) }}
 
