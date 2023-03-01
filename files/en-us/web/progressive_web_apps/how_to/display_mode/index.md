@@ -16,13 +16,11 @@ browser-compat: html.manifest.display
 
 [Progressive Web Apps](/en-US/docs/Web/Progressive_web_apps) (PWAs) that are installed on a user's device can define how they appear when the user launches them. They can choose to be displayed in a web browser like websites, or have their own dedicated windows similar to how native applications work.
 
-The [`display`](/en-US/docs/Web/Manifest/display) member of the [web app manifest](/en-US/docs/Web/Manifest) defines how a PWA appears on the user's device.
+The value of the [web app manifest](/en-US/docs/Web/Manifest)'s [`display`](/en-US/docs/Web/Manifest/display) member defines whether, when the PWA is launched from the user's device, the installed PWA is displayed in a browser or if the PWA has its own dedicated window.
 
-## Create a standalone app
+## Choose a display mode
 
-Use the optional [`display`](/en-US/docs/Web/Manifest/display) member in your [web app manifest](/en-US/docs/Web/Manifest) to define the preferred display mode for your PWA.
-
-The display mode you choose changes how much of the browser user interface is shown to the user, from showing the full browser {{Glossary("chrome")}}, to having your own dedicated window.
+The optional [`display`](/en-US/docs/Web/Manifest/display) member in your [web app manifest](/en-US/docs/Web/Manifest) defines the preferred display mode for your PWA. The display mode you choose changes how much of the browser user interface is shown to the user, from showing the full browser {{Glossary("chrome")}}, to having your own dedicated window.
 
 - `browser`
   - : The application opens in a conventional browser tab or new window. This is also the default value if `display` is not specified in the web app manifest or has an incorrect value.
