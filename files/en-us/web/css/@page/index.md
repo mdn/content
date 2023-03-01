@@ -52,7 +52,7 @@ The `@page` at-rule can be accessed via the CSS object model interface {{domxref
 
 ### Properties
 
-The `@page` at-rule, allows the user to assign a name to the rule, which is then called in a selector using the `page` property.
+The `@page` at-rule, allows the user to assign a name to the rule, which is then called in a declaration using the `page` property.
 
 - {{Cssxref("page")}}
   - : Allows a selector to use a user defined **named page**
