@@ -42,7 +42,7 @@ hue-rotate(0.5turn)
 
 ### With the backdrop-filter property
 
-This example applies a `hue-rotate()` filter via the `backdrop-filter` CSS property the paragraph color shifting to the area behind the `<p>`.
+This example applies a `hue-rotate()` filter via the `backdrop-filter` CSS property to the paragraph, color shifting to the area behind the `<p>`.
 
 ```css
 .container {
