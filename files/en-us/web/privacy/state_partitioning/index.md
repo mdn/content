@@ -106,11 +106,7 @@ cannot access data stored under another top-level site.
 - [IndexedDB](/en-US/docs/Web/API/IndexedDB_API)
 - [Broadcast Channel](/en-US/docs/Web/API/BroadcastChannel)
 - [Shared Workers](/en-US/docs/Web/API/SharedWorker)
-
-[Service Workers](/en-US/docs/Web/API/Service_Worker_API)
-are currently disabled in partitioned contexts when dynamic partitioning is
-enabled. In [Bug 1495241](https://bugzilla.mozilla.org/show_bug.cgi?id=1495241)
-we are exploring options to enable Service Workers in partitioned contexts.
+- [Service Workers](/en-US/docs/Web/API/Service_Worker_API)
 
 #### Network Partitioning:
 
