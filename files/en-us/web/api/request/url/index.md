@@ -21,7 +21,7 @@ In the following snippet, we create a new request using the
 the script), then save the URL of the request in a variable:
 
 ```js
-const myRequest = new Request('flowers.jpg');
+const myRequest = new Request("flowers.jpg");
 const myURL = myRequest.url; // "https://github.com/mdn/dom-examples/tree/main/fetch/fetch-request/flowers.jpg"
 ```
 

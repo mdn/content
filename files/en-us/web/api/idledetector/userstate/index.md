@@ -20,10 +20,10 @@ Either `"active"` or `"idle"` if {{domxref("IdleDetector.start()")}} has been ca
 In the following example, the `change` callback prints the status of `userState` and `screenState` to the console.
 
 ```js
-idleDetector.addEventListener('change', () => {
-    const userState = idleDetector.userState;
-    const screenState = idleDetector.screenState;
-    console.log(`Idle change: ${userState}, ${screenState}.`);
+idleDetector.addEventListener("change", () => {
+  const userState = idleDetector.userState;
+  const screenState = idleDetector.screenState;
+  console.log(`Idle change: ${userState}, ${screenState}.`);
 });
 ```
 

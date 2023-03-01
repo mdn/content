@@ -1,12 +1,6 @@
 ---
 title: "ARIA: mark role"
 slug: Web/Accessibility/ARIA/Roles/mark_role
-tags:
-  - ARIA
-  - ARIA Role
-  - Reference
-  - annotations
-  - mark
 ---
 
 The `mark` role denotes content which is marked or highlighted for reference or notation purposes, due to the content's relevance in the enclosing context.

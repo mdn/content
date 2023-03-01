@@ -38,7 +38,7 @@ for streaming over WebRTC, to allow sharing prerecorded videos with another pers
 during a video call.
 
 ```js
-document.querySelector('.playAndRecord').addEventListener('click', () => {
+document.querySelector(".playAndRecord").addEventListener("click", () => {
   const playbackElement = document.getElementById("playback");
   const captureStream = playbackElement.captureStream();
   playbackElement.play();
@@ -62,7 +62,7 @@ whose source is, itself, a {{domxref("MediaStream")}} (like a {{HTMLElement("vid
 element which is presenting a stream being received over a
 {{domxref("RTCPeerConnection")}}). Beginning in Firefox 51, this works. This means you
 can capture a stream from the video element and use {{domxref("MediaRecorder")}} to
-record it. See {{bug(1259788)}} for details.
+record it. See [Firefox bug 1259788](https://bugzil.la/1259788) for details.
 
 However, `captureStream()` is still prefixed as
 `mozCaptureStream()` on Firefox for good reason: there are some quirks in the

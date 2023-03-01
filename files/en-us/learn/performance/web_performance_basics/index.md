@@ -1,9 +1,6 @@
 ---
 title: Web performance resources
 slug: Learn/Performance/Web_Performance_Basics
-tags:
-  - Best practices
-  - Website performance
 ---
 
 {{LearnSidebar}}{{PreviousMenu("Learn/Performance/business_case_for_performance", "Learn/Performance")}}

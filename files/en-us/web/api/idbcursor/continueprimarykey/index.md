@@ -68,20 +68,22 @@ let request = articleStore.index("tag").openCursor();
 let count = 0;
 let unreadList = [];
 request.onsuccess = (event) => {
-    let cursor = event.target.result;
-    if (!cursor) { return; }
-    let lastPrimaryKey = getLastIteratedArticleId();
-    if (lastPrimaryKey > cursor.primaryKey) {
-      cursor.continuePrimaryKey("javascript", lastPrimaryKey);
-      return;
-    }
-    // update lastIteratedArticleId
-    setLastIteratedArticleId(cursor.primaryKey);
-    // preload 5 articles into the unread list;
-    unreadList.push(cursor.value);
-    if (++count < 5) {
-      cursor.continue();
-    }
+  let cursor = event.target.result;
+  if (!cursor) {
+    return;
+  }
+  let lastPrimaryKey = getLastIteratedArticleId();
+  if (lastPrimaryKey > cursor.primaryKey) {
+    cursor.continuePrimaryKey("javascript", lastPrimaryKey);
+    return;
+  }
+  // update lastIteratedArticleId
+  setLastIteratedArticleId(cursor.primaryKey);
+  // preload 5 articles into the unread list;
+  unreadList.push(cursor.value);
+  if (++count < 5) {
+    cursor.continue();
+  }
 };
 ```
 

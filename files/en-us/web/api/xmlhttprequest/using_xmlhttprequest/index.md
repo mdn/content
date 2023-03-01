@@ -713,7 +713,7 @@ FormData with XMLHttpRequests, see the [Using FormData Objects](/en-US/docs/Web/
         if (!formElement.action) { return; }
         const req = new XMLHttpRequest();
         req.onload = xhrSuccess;
-        if (fFormElement.method.toLowerCase() === "post") {
+        if (formElement.method.toLowerCase() === "post") {
           req.open("post", formElement.action);
           req.send(new FormData(formElement));
         } else {
@@ -953,7 +953,7 @@ terminated window has its {{domxref("Window/unload_event", "unload")}} event tri
 ## Workers
 
 Setting `overrideMimeType` does not work from a {{domxref("Worker")}}. See
-{{bug(678057)}} for more details. Other browsers may handle this differently.
+[Firefox bug 678057](https://bugzil.la/678057) for more details. Other browsers may handle this differently.
 
 ## Specifications
 

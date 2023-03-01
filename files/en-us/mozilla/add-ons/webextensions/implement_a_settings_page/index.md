@@ -155,7 +155,7 @@ This does two things:
 
 You could store the settings values in local storage instead if you feel that local storage is preferable for your extension.
 
-> **Note:** The implementation of `storage.sync` in Firefox relies on the Add-on ID. If you use `storage.sync`, you must set an ID for your extension using the [`browser_specific_settings`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings) key in `manifest.json`, as shown in the example manifest above. See {{bug(1323228)}} for related information.
+> **Note:** The implementation of `storage.sync` in Firefox relies on the Add-on ID. If you use `storage.sync`, you must set an ID for your extension using the [`browser_specific_settings`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings) key in `manifest.json`, as shown in the example manifest above. See [Firefox bug 1323228](https://bugzil.la/1323228) for related information.
 
 Finally, update `borderify.js` to read the border color from storage:
 

@@ -1,13 +1,6 @@
 ---
 title: Audio for Web games
 slug: Games/Techniques/Audio_for_Web_Games
-tags:
-  - Audio
-  - Games
-  - Web Audio API
-  - audio sprites
-  - spatialization
-  - syncing tracks
 ---
 
 {{GamesSidebar}}

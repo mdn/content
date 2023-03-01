@@ -2,14 +2,6 @@
 title: Using Vue computed properties
 slug: >-
   Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_computed_properties
-tags:
-  - Beginner
-  - Frameworks
-  - JavaScript
-  - Learn
-  - client-side
-  - computed properties
-  - Vue
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_styling","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_conditional_rendering", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}

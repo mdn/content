@@ -1,5 +1,5 @@
 ---
-title: 'MediaStreamTrack: mute event'
+title: "MediaStreamTrack: mute event"
 slug: Web/API/MediaStreamTrack/mute_event
 page-type: web-api-event
 browser-compat: api.MediaStreamTrack.mute_event
@@ -22,9 +22,9 @@ This event is not cancelable and does not bubble.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('mute', (event) => { });
+addEventListener("mute", (event) => {});
 
-onmute = (event) => { };
+onmute = (event) => {};
 ```
 
 ## Event type
@@ -36,13 +36,21 @@ A generic {{domxref("Event")}}.
 In this example, event handlers are established for the `mute` and {{domxref("MediaStreamTrack.unmute_event", "unmute")}} events in order to detect when the media is not flowing from the source for the {{domxref("MediaStreamTrack")}} referenced by `musicTrack`.
 
 ```js
-musicTrack.addEventListener("mute", (event) => {
-  document.getElementById("timeline-widget").style.backgroundColor = "#aaa";
-}, false);
+musicTrack.addEventListener(
+  "mute",
+  (event) => {
+    document.getElementById("timeline-widget").style.backgroundColor = "#aaa";
+  },
+  false
+);
 
-musicTrack.addEventListener("unmute", (event) => {
- document.getElementById("timeline-widget").style.backgroundColor = "#fff";
-}, false);
+musicTrack.addEventListener(
+  "unmute",
+  (event) => {
+    document.getElementById("timeline-widget").style.backgroundColor = "#fff";
+  },
+  false
+);
 ```
 
 With these event handlers in place, when the track `musicTrack` enters its {{domxref("MediaStreamTrack.muted", "muted")}} state, the element with the ID `timeline-widget` gets its background color changed to `#aaa`. When the track exits the muted state—detected by the arrival of an `unmute` event—the background color is restored to white.
@@ -52,11 +60,11 @@ You can also use the `onmute` event handler property to set up a handler for thi
 ```js
 musicTrack.onmute = (event) => {
   document.getElementById("timeline-widget").style.backgroundColor = "#aaa";
-}
+};
 
 musicTrack.onunmute = (event) => {
   document.getElementById("timeline-widget").style.backgroundColor = "#fff";
-}
+};
 ```
 
 ### Mute tracks through receivers
@@ -65,11 +73,11 @@ The following example shows how to mute tracks using receivers.
 
 ```js
 // Peer 1 (Receiver)
-audioTrack.addEventListener('mute', (event) => {
+audioTrack.addEventListener("mute", (event) => {
   // Do something in UI
 });
 
-videoTrack.addEventListener('mute', (event) => {
+videoTrack.addEventListener("mute", (event) => {
   // Do something in UI
 });
 
@@ -77,10 +85,10 @@ videoTrack.addEventListener('mute', (event) => {
 const transceivers = peer.getTransceivers();
 
 const audioTrack = transceivers[0];
-audioTrack.direction = 'recvonly';
+audioTrack.direction = "recvonly";
 
 const videoTrack = transceivers[1];
-videoTrack.direction = 'recvonly';
+videoTrack.direction = "recvonly";
 ```
 
 `transceivers` is an array of {{domxref("RTCRtpTransceiver")}} where you can find the audio or video track sent and received. For more information, see the {{domxref("RTCRtpTransceiver.direction", "direction")}} article.

@@ -39,8 +39,8 @@ Returns `-1`, `0`, or `1`.
 
 ```js
 range = document.createRange();
-range.selectNode(document.getElementsByTagName('div').item(0));
-returnValue = range.comparePoint(document.getElementsByTagName('p').item(0), 1);
+range.selectNode(document.getElementsByTagName("div").item(0));
+returnValue = range.comparePoint(document.getElementsByTagName("p").item(0), 1);
 ```
 
 ## Specifications

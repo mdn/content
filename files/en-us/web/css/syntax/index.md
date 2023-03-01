@@ -73,7 +73,7 @@ There is another group of statements – the **nested statements**. These are st
 ## See also
 
 - CSS key concepts:
-  - [CSS syntax](/en-US/docs/Web/CSS/Syntax)
+  - **CSS syntax**
   - [Comments](/en-US/docs/Web/CSS/Comments)
   - [Specificity](/en-US/docs/Web/CSS/Specificity)
   - [Inheritance](/en-US/docs/Web/CSS/inheritance)

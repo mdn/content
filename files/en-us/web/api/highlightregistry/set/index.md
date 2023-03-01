@@ -49,9 +49,10 @@ const fooHighlight = new Highlight();
 const barHighlight = new Highlight();
 const bazHighlight = new Highlight();
 
-CSS.highlights.set("foo", fooHighlight)
-              .set("bar", barHighlight)
-              .set("baz", bazHighlight);
+CSS.highlights
+  .set("foo", fooHighlight)
+  .set("bar", barHighlight)
+  .set("baz", bazHighlight);
 ```
 
 ## Specifications

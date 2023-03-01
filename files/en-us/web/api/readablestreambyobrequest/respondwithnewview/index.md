@@ -54,7 +54,9 @@ For example, we might define the view and respond as shown below:
 ```js
 const v = controller.byobRequest.view;
 bytesRead = socket.readInto(v.buffer, v.byteOffset, v.byteLength);
-byobRequest.respondWithNewView(byobRequest.view.subarray(v.byteOffset, bytesRead));
+byobRequest.respondWithNewView(
+  byobRequest.view.subarray(v.byteOffset, bytesRead)
+);
 ```
 
 ## Specifications

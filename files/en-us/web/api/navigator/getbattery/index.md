@@ -55,7 +55,7 @@ let batteryIsCharging = false;
 navigator.getBattery().then((battery) => {
   batteryIsCharging = battery.charging;
 
-  battery.addEventListener('chargingchange', () => {
+  battery.addEventListener("chargingchange", () => {
     batteryIsCharging = battery.charging;
   });
 });

@@ -1,9 +1,6 @@
 ---
 title: How to create, move, delete, and edit pages
 slug: MDN/Writing_guidelines/Howto/Creating_moving_deleting
-tags:
-  - meta
-  - writing-guide
 page-type: mdn-writing-guide
 ---
 

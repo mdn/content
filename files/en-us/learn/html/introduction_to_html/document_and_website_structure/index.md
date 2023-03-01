@@ -1,16 +1,6 @@
 ---
 title: Document and website structure
 slug: Learn/HTML/Introduction_to_HTML/Document_and_website_structure
-tags:
-  - Beginner
-  - CodingScripting
-  - Guide
-  - HTML
-  - Layout
-  - Page
-  - Site
-  - blocks
-  - semantics
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/Advanced_text_formatting", "Learn/HTML/Introduction_to_HTML/Debugging_HTML", "Learn/HTML/Introduction_to_HTML")}}

@@ -23,8 +23,11 @@ A string identifying the platform on which the user's browser is running; for ex
 
 ```js
 let modifierKeyPrefix = "^"; // control key
-if (navigator.platform.indexOf("Mac") === 0 || navigator.platform === "iPhone") {
-    modifierKeyPrefix = "⌘"; // command key
+if (
+  navigator.platform.indexOf("Mac") === 0 ||
+  navigator.platform === "iPhone"
+) {
+  modifierKeyPrefix = "⌘"; // command key
 }
 ```
 
@@ -32,8 +35,7 @@ That is, check if `navigator.platform` starts with `"Mac"` or else is an exact m
 
 ## Usage notes
 
-Most browsers, including Chrome, Edge, and Firefox 63 and later, return `"Win32"` even if running on a 64-bit version of Windows.
-Internet Explorer and versions of Firefox prior to version 63 still report `"Win64"`.
+On Windows, modern browsers return `"Win32"` even if running on a 64-bit version of Windows.
 
 ## Specifications
 

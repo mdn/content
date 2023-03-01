@@ -46,11 +46,13 @@ The following shows a trivial code snippet that could be used in a service worke
 
 ```js
 function notifyPaymentMethodChanged(e) {
-  e.changePaymentMethod('someMethod').then((paymentMethodChangeResponse) => {
-    paymentHandlerWindow.postMessage(paymentMethodChangeResponse);
-  }).catch((error) => {
-    sendMessage({error: error.message});
-  });
+  e.changePaymentMethod("someMethod")
+    .then((paymentMethodChangeResponse) => {
+      paymentHandlerWindow.postMessage(paymentMethodChangeResponse);
+    })
+    .catch((error) => {
+      sendMessage({ error: error.message });
+    });
 }
 ```
 

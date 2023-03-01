@@ -36,7 +36,7 @@ See the [example](/en-US/docs/Web/API/Element/setCapture#example) for
 
 ## Specifications
 
-Based on Internet Explorer's implementation.
+Not part of any specification.
 
 ## Browser compatibility
 

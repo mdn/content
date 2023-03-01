@@ -1,10 +1,6 @@
 ---
 title: Optimizing startup performance
 slug: Web/Performance/Optimizing_startup_performance
-tags:
-  - Apps
-  - Games
-  - Performance
 ---
 
 {{QuickLinksWithSubPages("Web/Performance")}}

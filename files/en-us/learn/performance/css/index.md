@@ -1,11 +1,6 @@
 ---
 title: CSS performance optimization
 slug: Learn/Performance/CSS
-tags:
-  - CSS
-  - Performance
-  - Reference
-  - Tutorial
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Performance/html", "Learn/Performance/business_case_for_performance", "Learn/Performance")}}
