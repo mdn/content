@@ -184,6 +184,8 @@ console.log(Array.prototype.find.call(arrayLike, (x) => !Number.isInteger(x)));
 // 7.3
 ```
 
+> **Warning:** Do not use the find() method to locate an {{jsxref("undefined")}} value in an array, since the return value when the testing function is not satisfied is also the {{jsxref("undefined")}} value.
+
 ## Specifications
 
 {{Specifications}}
