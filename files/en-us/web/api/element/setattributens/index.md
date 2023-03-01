@@ -30,8 +30,12 @@ None ({{jsxref("undefined")}}).
 ## Examples
 
 ```js
-let d = document.getElementById('d1');
-d.setAttributeNS('http://www.mozilla.org/ns/specialspace', 'spec:align', 'center');
+let d = document.getElementById("d1");
+d.setAttributeNS(
+  "http://www.mozilla.org/ns/specialspace",
+  "spec:align",
+  "center"
+);
 ```
 
 ## Notes

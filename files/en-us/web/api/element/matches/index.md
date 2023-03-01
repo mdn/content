@@ -44,10 +44,10 @@ matches(selectors)
 ### JavaScript
 
 ```js
-const birds = document.querySelectorAll('li');
+const birds = document.querySelectorAll("li");
 
 for (const bird of birds) {
-  if (bird.matches('.endangered')) {
+  if (bird.matches(".endangered")) {
     console.log(`The ${bird.textContent} is endangered!`);
   }
 }

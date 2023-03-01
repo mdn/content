@@ -56,9 +56,13 @@ navigator.getUserMedia({ video: true }, (stream) => {
   pc.addStream(stream);
 
   pc.createOffer((offer) => {
-    pc.setLocalDescription(new RTCSessionDescription(offer), () => {
-      // send the offer to a server to be forwarded to the friend you're calling.
-    }, error);
+    pc.setLocalDescription(
+      new RTCSessionDescription(offer),
+      () => {
+        // send the offer to a server to be forwarded to the friend you're calling.
+      },
+      error
+    );
   }, error);
 });
 ```

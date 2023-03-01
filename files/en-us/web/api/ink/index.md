@@ -23,10 +23,9 @@ The **`Ink`** interface of the [Ink API](/en-US/docs/Web/API/Ink_API) provides a
 ```js
 async function inkInit() {
   const ink = navigator.ink;
-  let presenter = await ink.requestPresenter({presentationArea: canvas});
+  let presenter = await ink.requestPresenter({ presentationArea: canvas });
 
   //...
-
 }
 ```
 

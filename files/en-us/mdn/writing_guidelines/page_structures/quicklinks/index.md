@@ -2,9 +2,6 @@
 title: Quicklinks
 slug: MDN/Writing_guidelines/Page_structures/Quicklinks
 page-type: mdn-writing-guide
-tags:
-  - meta
-  - writing-guide
 ---
 
 {{MDNSidebar}}

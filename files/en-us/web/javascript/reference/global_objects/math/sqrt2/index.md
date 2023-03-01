@@ -2,11 +2,6 @@
 title: Math.SQRT2
 slug: Web/JavaScript/Reference/Global_Objects/Math/SQRT2
 page-type: javascript-static-data-property
-tags:
-  - JavaScript
-  - Math
-  - Property
-  - Reference
 browser-compat: javascript.builtins.Math.SQRT2
 ---
 

@@ -2,12 +2,6 @@
 title: CSS Containment
 slug: Web/CSS/CSS_Containment
 page-type: css-module
-tags:
-  - CSS
-  - CSS Containment
-  - Guide
-  - Paint
-  - Performance
 browser-compat:
   - css.properties.contain
   - css.properties.content-visibility

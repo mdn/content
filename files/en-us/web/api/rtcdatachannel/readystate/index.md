@@ -40,7 +40,7 @@ const dataChannel = peerConnection.createDataChannel("File Transfer");
 const sendQueue = [];
 
 function sendMessage(msg) {
-  switch(dataChannel.readyState) {
+  switch (dataChannel.readyState) {
     case "connecting":
       console.log(`Connection not open; queueing: ${msg}`);
       sendQueue.push(msg);

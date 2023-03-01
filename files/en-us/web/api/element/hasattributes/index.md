@@ -28,7 +28,7 @@ A boolean.
 ## Examples
 
 ```js
-let foo = document.getElementById('foo');
+let foo = document.getElementById("foo");
 if (foo.hasAttributes()) {
   // Do something with 'foo.attributes'
 }

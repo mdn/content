@@ -1,12 +1,6 @@
 ---
 title: Beginner's guide to media queries
 slug: Learn/CSS/CSS_layout/Media_queries
-tags:
-  - Beginner
-  - CSS
-  - Layout
-  - Learn
-  - media query
 ---
 
 {{learnsidebar}}{{PreviousMenuNext("Learn/CSS/CSS_layout/Responsive_Design", "Learn/CSS/CSS_layout/Legacy_Layout_Methods", "Learn/CSS/CSS_layout")}}

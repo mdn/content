@@ -2,12 +2,6 @@
 title: Array.of()
 slug: Web/JavaScript/Reference/Global_Objects/Array/of
 page-type: javascript-static-method
-tags:
-  - Array
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Polyfill
 browser-compat: javascript.builtins.Array.of
 ---
 

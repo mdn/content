@@ -25,8 +25,6 @@ _Inherits properties from its parent, {{DOMxRef("Element")}}._
   - : A string, where a value of `true` means the element is editable and a value of `false` means it isn't.
 - {{DOMxRef("HTMLElement.isContentEditable")}} {{ReadOnlyInline}}
   - : Returns a boolean value indicating whether or not the content of the element can be edited.
-- {{DOMxRef("HTMLElement.contextMenu")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
-  - : A {{DOMxRef("HTMLMenuElement")}} representing the contextual menu associated with the element. It may be `null`.
 - {{DOMxRef("HTMLElement.dataset")}} {{ReadOnlyInline}}
   - : Returns a {{DOMxRef("DOMStringMap")}} with which script can read and write the element's [custom data attributes](/en-US/docs/Learn/HTML/Howto/Use_data_attributes) (`data-*`) .
 - {{DOMxRef("HTMLElement.dir")}}

@@ -1,13 +1,6 @@
 ---
 title: aria-sort
 slug: Web/Accessibility/ARIA/Attributes/aria-sort
-tags:
-  - Accessibility
-  - ARIA
-  - ARIA attribute
-  - ARIA property
-  - aria-sort
-  - Reference
 spec-urls: https://w3c.github.io/aria/#aria-sort
 ---
 

@@ -33,11 +33,13 @@ This example watches for changes to the user's connection.
 let type = navigator.connection.effectiveType;
 
 function updateConnectionStatus() {
-  console.log(`Connection type changed from ${type} to ${navigator.connection.effectiveType}`);
+  console.log(
+    `Connection type changed from ${type} to ${navigator.connection.effectiveType}`
+  );
   type = navigator.connection.effectiveType;
 }
 
-navigator.connection.addEventListener('change', updateConnectionStatus);
+navigator.connection.addEventListener("change", updateConnectionStatus);
 ```
 
 ### Preload large resources
@@ -48,7 +50,7 @@ The connection object is useful for deciding whether to preload resources that t
 let preloadVideo = true;
 const connection = navigator.connection;
 if (connection) {
-  if (connection.effectiveType === 'slow-2g') {
+  if (connection.effectiveType === "slow-2g") {
     preloadVideo = false;
   }
 }

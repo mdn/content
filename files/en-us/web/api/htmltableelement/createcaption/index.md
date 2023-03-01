@@ -55,9 +55,9 @@ This example uses JavaScript to add a caption to a table that initially lacks on
 ### JavaScript
 
 ```js
-let table = document.querySelector('table');
+let table = document.querySelector("table");
 let caption = table.createCaption();
-caption.textContent = 'This caption was created by JavaScript!';
+caption.textContent = "This caption was created by JavaScript!";
 ```
 
 ### Result

@@ -90,7 +90,7 @@ example:
 
 ```js
 const div = document.createElement("div");
-div.outerHTML = "<div class=\"test\">test</div>";
+div.outerHTML = '<div class="test">test</div>';
 console.log(div.outerHTML); // output: "<div></div>"
 ```
 

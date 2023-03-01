@@ -70,7 +70,6 @@ closed.
 
 ```js
 async function saveFile() {
-
   // create a new handle
   const newHandle = await window.showSaveFilePicker();
 

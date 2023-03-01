@@ -35,7 +35,7 @@ A boolean.
 ```js
 range = document.createRange();
 range.selectNode(document.getElementsByTagName("div").item(0));
-bool = range.isPointInRange(document.getElementsByTagName("p").item(0),1);
+bool = range.isPointInRange(document.getElementsByTagName("p").item(0), 1);
 ```
 
 ## Specifications

@@ -2,11 +2,6 @@
 title: Unary negation (-)
 slug: Web/JavaScript/Reference/Operators/Unary_negation
 page-type: javascript-operator
-tags:
-  - JavaScript
-  - Language feature
-  - Operator
-  - Reference
 browser-compat: javascript.operators.unary_negation
 ---
 

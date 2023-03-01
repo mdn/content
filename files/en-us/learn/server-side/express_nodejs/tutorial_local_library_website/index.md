@@ -1,16 +1,6 @@
 ---
 title: "Express Tutorial: The Local Library website"
 slug: Learn/Server-side/Express_Nodejs/Tutorial_local_library_website
-tags:
-  - Beginner
-  - CodingScripting
-  - Express
-  - Intro
-  - Learn
-  - Node
-  - Tutorial
-  - nodejs
-  - server-side
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Express_Nodejs/development_environment", "Learn/Server-side/Express_Nodejs/skeleton_website", "Learn/Server-side/Express_Nodejs")}}

@@ -27,6 +27,7 @@ negotiation is complete. Only then does the agreed-upon configuration take effec
 ```js-nolint
 setLocalDescription()
 setLocalDescription(sessionDescription)
+
 setLocalDescription(sessionDescription, successCallback, errorCallback) // deprecated
 ```
 
@@ -67,15 +68,19 @@ serialized version of a {{domxref("RTCSessionDescription")}} browser object. The
 interchangeable:
 
 ```js
-myPeerConnection.createOffer()
+myPeerConnection
+  .createOffer()
   .then((offer) => myPeerConnection.setLocalDescription(offer));
 ```
 
 This is equivalent to:
 
 ```js
-myPeerConnection.createOffer()
-  .then((offer) => myPeerConnection.setLocalDescription(new RTCSessionDescription(offer)));
+myPeerConnection
+  .createOffer()
+  .then((offer) =>
+    myPeerConnection.setLocalDescription(new RTCSessionDescription(offer))
+  );
 ```
 
 For this reason, the {{domxref("RTCSessionDescription.RTCSessionDescription",

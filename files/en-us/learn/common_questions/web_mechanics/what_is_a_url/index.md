@@ -1,12 +1,6 @@
 ---
 title: What is a URL?
 slug: Learn/Common_questions/Web_mechanics/What_is_a_URL
-tags:
-  - Beginner
-  - Infrastructure
-  - URL
-  - resources
-  - urls
 ---
 
 {{QuicklinksWithSubPages("Learn/Common_questions")}}

@@ -51,8 +51,7 @@ panner.positionX.setValueAtTime(-1, context.currentTime + 1);
 panner.positionX.setValueAtTime(1, context.currentTime + 2);
 panner.positionX.setValueAtTime(0, context.currentTime + 3);
 
-osc.connect(panner)
-   .connect(context.destination);
+osc.connect(panner).connect(context.destination);
 
 osc.start(0);
 ```

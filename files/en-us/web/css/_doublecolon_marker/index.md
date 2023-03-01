@@ -2,13 +2,6 @@
 title: "::marker"
 slug: Web/CSS/::marker
 page-type: css-pseudo-element
-tags:
-  - CSS
-  - CSS Lists
-  - Layout
-  - Pseudo-element
-  - Reference
-  - Selector
 browser-compat: css.selectors.marker
 ---
 

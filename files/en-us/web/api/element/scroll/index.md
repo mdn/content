@@ -55,7 +55,7 @@ Using `options`:
 element.scroll({
   top: 100,
   left: 100,
-  behavior: 'smooth'
+  behavior: "smooth",
 });
 ```
 

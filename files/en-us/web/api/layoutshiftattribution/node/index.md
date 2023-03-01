@@ -21,12 +21,12 @@ The following example prints the `node` of the first item in {{domxref("LayoutSh
 
 ```js
 new PerformanceObserver((list) => {
-  for (const {sources} of list.getEntries()) {
+  for (const { sources } of list.getEntries()) {
     if (sources) {
       console.log(sources[0].node);
     }
   }
-}).observe({type: 'layout-shift', buffered: true});
+}).observe({ type: "layout-shift", buffered: true });
 ```
 
 ## Specifications

@@ -23,7 +23,7 @@ This interface has no constructor. An `ElementInternals` object is returned when
   - : Returns the {{domxref("CustomStateSet")}} associated with this element.
 - {{domxref("ElementInternals.willValidate")}} {{ReadOnlyInline}}
   - : A boolean value which returns true if the element is a submittable element that is a candidate for
-    [constraint validation](/en-US/docs/Web/Guide/HTML/Constraint_validation).
+    [constraint validation](/en-US/docs/Web/HTML/Constraint_validation).
 - {{domxref("ElementInternals.validity")}} {{ReadOnlyInline}}
   - : Returns a {{domxref("ValidityState")}} object which represents the different validity states the element can be in, with respect to constraint validation.
 - {{domxref("ElementInternals.validationMessage")}} {{ReadOnlyInline}}
@@ -123,9 +123,9 @@ The `ElementInternals` interface includes the following properties, defined on t
 - {{domxref("ElementInternals.setValidity()")}}
   - : Sets the validity of the element.
 - {{domxref("ElementInternals.checkValidity()")}}
-  - : Checks if an element meets any [constraint validation](/en-US/docs/Web/Guide/HTML/Constraint_validation) rules applied to it.
+  - : Checks if an element meets any [constraint validation](/en-US/docs/Web/HTML/Constraint_validation) rules applied to it.
 - {{domxref("ElementInternals.reportValidity()")}}
-  - : Checks if an element meets any [constraint validation](/en-US/docs/Web/Guide/HTML/Constraint_validation) rules applied to it, and also sends a validation message to the user agent.
+  - : Checks if an element meets any [constraint validation](/en-US/docs/Web/HTML/Constraint_validation) rules applied to it, and also sends a validation message to the user agent.
 
 ## Examples
 

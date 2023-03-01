@@ -114,7 +114,7 @@ Most styles are automatically applied, but some elements require you to add the 
   </tbody>
 </table>
 
-> **Note:** See {{bug(1465256)}} for removal of this unnecessary requirement.
+> **Note:** See [Firefox bug 1465256](https://bugzil.la/1465256) for removal of this unnecessary requirement.
 
 ## Browser compatibility
 
