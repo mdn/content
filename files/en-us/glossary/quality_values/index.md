@@ -42,7 +42,7 @@ Some syntax, like the one of {{HTTPHeader("Accept")}}, allow additional specifie
 
 ### Firefox
 
-Starting with Firefox 18, the quality factor values are clamped to 2 decimal places. They used to be clamped to only 1 decimal place in earlier versions ({{bug(672448)}}).
+Starting with Firefox 18, the quality factor values are clamped to 2 decimal places. They used to be clamped to only 1 decimal place in earlier versions ([Firefox bug 672448](https://bugzil.la/672448)).
 
 ## More information
 

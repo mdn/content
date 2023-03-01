@@ -48,17 +48,17 @@ new Option(text, value, defaultSelected, selected)
 ### Just add new options
 
 ```js
- /* assuming we have the following HTML
+/* assuming we have the following HTML
 <select id='s'>
 
 </select>
 */
 
-const s = document.getElementById('s');
+const s = document.getElementById("s");
 const options = [Four, Five, Six];
 
-options.forEach((element,key) => {
-    s[key] = new Option(element,key);
+options.forEach((element, key) => {
+  s[key] = new Option(element, key);
 });
 ```
 
@@ -73,17 +73,17 @@ options.forEach((element,key) => {
 </select>
 */
 
-const s = document.getElementById('s');
-const options = [ 'zero', 'one', 'two' ];
+const s = document.getElementById("s");
+const options = ["zero", "one", "two"];
 
 options.forEach((element, key) => {
-  if (element === 'zero') {
+  if (element === "zero") {
     s[key] = new Option(element, s.options.length, false, false);
   }
-  if (element === 'one') {
+  if (element === "one") {
     s[key] = new Option(element, s.options.length, true, false); // Will add the "selected" attribute
   }
-  if (element === 'two') {
+  if (element === "two") {
     s[key] = new Option(element, s.options.length, false, true); // Just will be selected in "view"
   }
 });

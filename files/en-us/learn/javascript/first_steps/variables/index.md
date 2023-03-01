@@ -25,7 +25,7 @@ After reading the last couple of articles you should now know what JavaScript is
 
 ## Tools you need
 
-Throughout this article, you'll be asked to type in lines of code to test your understanding of the content. If you are using a desktop browser, the best place to type your sample code is your browser's JavaScript console (see [What are browser developer tools](/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools) for more information on how to access this tool).
+Throughout this article, you'll be asked to type in lines of code to test your understanding of the content. If you are using a desktop browser, the best place to type your sample code is your browser's JavaScript console (see [What are browser developer tools](/en-US/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools) for more information on how to access this tool).
 
 ## What is a variable?
 

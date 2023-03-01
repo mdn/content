@@ -2,9 +2,6 @@
 title: Commonly-used macros
 slug: MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros
 page-type: mdn-writing-guide
-tags:
-  - meta
-  - writing-guide
 ---
 
 {{MDNSidebar}}
@@ -163,15 +160,6 @@ Most macros will also take a second argument allowing you to change the display 
     </tr>
   </tbody>
 </table>
-
-### Linking to bugs
-
-- Bugs
-
-  - [`bug`](https://github.com/mdn/yari/blob/main/kumascript/macros/bug.ejs) allows you to link to a bug on bugzilla.mozilla.org easily using this syntax: `\{{Bug(123456)}}`.
-    This gives you: {{Bug(123456)}}.
-  - [`WebkitBug`](https://github.com/mdn/yari/blob/main/kumascript/macros/WebkitBug.ejs) inserts a link to a bug in the WebKit bug database.
-    For example, `\{{WebkitBug(31277)}}` inserts {{WebkitBug(31277)}}.
 
 ### Navigation aids for multi-page guides
 

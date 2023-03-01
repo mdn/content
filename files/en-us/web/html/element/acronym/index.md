@@ -2,13 +2,8 @@
 title: <acronym>
 slug: Web/HTML/Element/acronym
 page-type: html-element
-tags:
-  - Element
-  - HTML
-  - HTML:Flow content
-  - Deprecated
-  - Reference
-  - Web
+status:
+  - deprecated
 browser-compat: html.elements.acronym
 ---
 

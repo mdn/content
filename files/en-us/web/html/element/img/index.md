@@ -2,24 +2,6 @@
 title: "<img>: The Image Embed element"
 slug: Web/HTML/Element/img
 page-type: html-element
-tags:
-  - Content
-  - Element
-  - Graphics
-  - HTML
-  - HTML Graphics
-  - HTML Images
-  - HTML Photos
-  - HTML Pictures
-  - HTML embedded content
-  - Image
-  - Image Element
-  - Media
-  - Multimedia
-  - Photos
-  - Pictures
-  - Reference
-  - Web
 browser-compat: html.elements.img
 ---
 
@@ -333,7 +315,7 @@ When an `alt` attribute is not present on an image, some screen readers may anno
 
 ### Identifying SVG as an image
 
-Due to a [VoiceOver bug](https://bugs.webkit.org/show_bug.cgi?id=216364), VoiceOver does not correctly announce SVG images as images. Include [`role="img"`](/en-US/docs/Web/Accessibility/ARIA/Roles/img_role) to all `<img>` elements with SVG source files to ensure assistive technologies correctly announce the SVG as image content.
+Due to a [VoiceOver bug](https://webkit.org/b/216364), VoiceOver does not correctly announce SVG images as images. Include [`role="img"`](/en-US/docs/Web/Accessibility/ARIA/Roles/img_role) to all `<img>` elements with SVG source files to ensure assistive technologies correctly announce the SVG as image content.
 
 ```html
 <img src="mdn.svg" alt="MDN logo" role="img" />
@@ -355,21 +337,21 @@ The value of the `title` attribute is usually presented to the user as a tooltip
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories"
+        <a href="/en-US/docs/Web/HTML/Content_categories"
           >Content categories</a
         >
       </th>
       <td>
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
           >Flow content</a
         >,
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content"
           >phrasing content</a
         >,
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#embedded_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#embedded_content"
           >embedded content</a
         >,
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#palpable_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#palpable_content"
           >palpable content</a
         >. If the element has a <code>usemap</code> attribute, it also is a part
         of the interactive content category.

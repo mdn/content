@@ -77,14 +77,12 @@ audio will play.
 ```
 
 ```js
-const obj = document.getElementById('example');
+const obj = document.getElementById("example");
 
-obj.addEventListener('loadeddata', () => {
-
+obj.addEventListener("loadeddata", () => {
   if (obj.readyState >= 2) {
     obj.play();
   }
-
 });
 ```
 

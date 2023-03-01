@@ -83,17 +83,14 @@ For example:
 ```js example-bad
 const clearKeyOptions = [
   {
-    initDataTypes: ['keyids', 'webm'],
-    audioCapabilities: [
-      { contentType: 'audio/webm' }
-    ],
-    videoCapabilities: [
-      { contentType: 'video/webm' }
-    ]
-  }
+    initDataTypes: ["keyids", "webm"],
+    audioCapabilities: [{ contentType: "audio/webm" }],
+    videoCapabilities: [{ contentType: "video/webm" }],
+  },
 ];
 
-navigator.requestMediaKeySystemAccess('org.w3.clearkey', clearKeyOptions)
+navigator
+  .requestMediaKeySystemAccess("org.w3.clearkey", clearKeyOptions)
   .then((keySystemAccess) => {
     /* use the access to get create keys */
   });
@@ -106,19 +103,20 @@ warning to console, because `"codecs"` is not included in the
 ```js example-good
 const clearKeyOptions = [
   {
-    initDataTypes: ['keyids', 'webm'],
+    initDataTypes: ["keyids", "webm"],
     audioCapabilities: [
       { contentType: 'audio/webm; codecs="opus"' },
-      { contentType: 'audio/webm; codecs="vorbis"' }
+      { contentType: 'audio/webm; codecs="vorbis"' },
     ],
     videoCapabilities: [
       { contentType: 'video/webm; codecs="vp9"' },
-      { contentType: 'video/webm; codecs="vp8"' }
-    ]
-  }
+      { contentType: 'video/webm; codecs="vp8"' },
+    ],
+  },
 ];
 
-navigator.requestMediaKeySystemAccess('org.w3.clearkey', clearKeyOptions)
+navigator
+  .requestMediaKeySystemAccess("org.w3.clearkey", clearKeyOptions)
   .then((keySystemAccess) => {
     /* use the access to get create keys */
   });

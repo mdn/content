@@ -56,27 +56,21 @@ None ({{jsxref("undefined")}}).
 
 ```js
 // passing an array of keyframe objects
-existingKeyframeEffect.setKeyframes(
-[
-  { color: 'blue' },
-    { color: 'green', left: '10px' }
-  ]
-);
+existingKeyframeEffect.setKeyframes([
+  { color: "blue" },
+  { color: "green", left: "10px" },
+]);
 
 // passing an object with arrays for values
-existingKeyframeEffect.setKeyframes(
-  {
-    color: ['blue', 'green'],
-    left: [ '0', '10px']
-  }
-);
+existingKeyframeEffect.setKeyframes({
+  color: ["blue", "green"],
+  left: ["0", "10px"],
+});
 
 // passing a single-member object
-existingKeyframeEffect.setKeyframes(
-  {
-    color: 'blue'
-  }
-);
+existingKeyframeEffect.setKeyframes({
+  color: "blue",
+});
 ```
 
 ## Specifications

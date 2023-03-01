@@ -33,8 +33,8 @@ need to have access to the track itself, you should use a
 ```js
 const audioCtx = new window.AudioContext();
 let options = {
-  mediaStream : stream
-}
+  mediaStream: stream,
+};
 
 let source = new MediaStreamAudioSourceNode(audioCtx, options);
 console.log(source.mediaStream);

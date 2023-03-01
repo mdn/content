@@ -145,7 +145,7 @@ If there is a mistake in your Search Plugin XML, you could run into errors when 
 - Be sure that your Search Plugin XML is well formed. You can check by loading the file directly into Firefox. Ampersands (&) in the `template` URL must be escaped as `&amp;`, and tags must be closed with a trailing slash or matching end tag.
 - The `xmlns` attribute is important — without it you could get the error message "Firefox could not download the search plugin".
 - You **must** include a `text/html` URL — search plugins including only Atom or [RSS](/en-US/docs/Glossary/RSS) URL types (which is valid, but Firefox doesn't support) will also generate the "could not download the search plugin" error.
-- Remotely fetched favicons must not be larger than 10KB (see {{ Bug(361923) }}).
+- Remotely fetched favicons must not be larger than 10KB (see [Webkit bug 361923](https://bugzil.la/361923)).
 
 In addition, the search plugin service provides a logging mechanism that may be useful to plugin developers. Use `about:config` to set the pref '`browser.search.log`' to `true`. Then, logging information will appear in Firefox's [Browser Console](https://firefox-source-docs.mozilla.org/devtools-user/browser_console/index.html)(Tools ➤ Browser Tools ➤ Browser Console) when search plugins are added.
 

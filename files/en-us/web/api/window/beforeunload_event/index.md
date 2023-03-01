@@ -102,7 +102,7 @@ string not under the control of the webpage is shown instead of the returned
 string. For example:
 
 - Firefox displays the string, "This page is asking you to confirm that you want to
-  leave - data you have entered may not be saved." (see {{bug("588292")}}).
+  leave - data you have entered may not be saved." (see [Firefox bug 588292](https://bugzil.la/588292)).
 - Chrome displays the string, "Do you want to leave the site? Changes you made may not be saved." (see [Chrome Platform Status](https://chromestatus.com/feature/5349061406228480)).
 
 In some browsers, calls to {{domxref("window.alert()")}},

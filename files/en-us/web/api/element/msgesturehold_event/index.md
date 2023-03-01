@@ -4,7 +4,6 @@ slug: Web/API/Element/MSGestureHold_event
 page-type: web-api-event
 status:
   - non-standard
-browser-compat: api.Element.MSGestureHold_event
 ---
 
 {{APIRef}}{{Non-standard_header}}
@@ -49,7 +48,7 @@ Not part of any specification.
 
 ## Browser compatibility
 
-{{Compat}}
+This was an IE-only feature. No modern browser supports it.
 
 ## See also
 

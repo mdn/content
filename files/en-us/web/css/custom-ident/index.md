@@ -104,6 +104,8 @@ To prevent ambiguity, each property that uses `<custom-ident>` forbids the use o
 
 - {{CSSxRef("grid-row-start")}}, {{CSSxRef("grid-row-end")}}, {{CSSxRef("grid-column-start")}}, {{CSSxRef("grid-column-end")}}
   - : Forbids the `span` value.
+- {{CSSxRef("view-transition-name")}}
+  - : Forbids the global CSS values (`unset`, `initial`, and `inherit`), as well as `none`.
 - {{CSSxRef("will-change")}}
   - : Forbids the global CSS values (`unset`, `initial`, and `inherit`), as well as the values `will-change`, `auto`, `scroll-position`, and `contents`.
 

@@ -69,5 +69,5 @@ submitted.
 ## See also
 
 - [Learn: Client-side form validation](/en-US/docs/Learn/Forms/Form_validation)
-- [Guide: Constraint validation](/en-US/docs/Web/Guide/HTML/Constraint_validation)
+- [Guide: Constraint validation](/en-US/docs/Web/HTML/Constraint_validation)
 - {{domxref('ValidityState')}}

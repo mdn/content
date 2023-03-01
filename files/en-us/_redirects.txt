@@ -731,7 +731,6 @@
 /en-US/docs/CSS/image()	/en-US/docs/Web/CSS/image/image
 /en-US/docs/CSS/image-orientation	/en-US/docs/Web/CSS/image-orientation
 /en-US/docs/CSS/image-rendering	/en-US/docs/Web/CSS/image-rendering
-/en-US/docs/CSS/ime-mode	/en-US/docs/Web/CSS/ime-mode
 /en-US/docs/CSS/inherit	/en-US/docs/Web/CSS/inherit
 /en-US/docs/CSS/inheritance	/en-US/docs/Web/CSS/inheritance
 /en-US/docs/CSS/inherited_and_non-inherited_properties	/en-US/docs/Web/CSS/inheritance
@@ -1040,7 +1039,6 @@
 /en-US/docs/CSS:font-weight	/en-US/docs/Web/CSS/font-weight
 /en-US/docs/CSS:height	/en-US/docs/Web/CSS/height
 /en-US/docs/CSS:hidden	/en-US/docs/Web/CSS/visibility
-/en-US/docs/CSS:ime-mode	/en-US/docs/Web/CSS/ime-mode
 /en-US/docs/CSS:inherit	/en-US/docs/Web/CSS/inherit
 /en-US/docs/CSS:inheritance	/en-US/docs/Web/CSS/inheritance
 /en-US/docs/CSS:inherited_and_non-inherited_properties	/en-US/docs/Web/CSS/inheritance
@@ -1508,7 +1506,6 @@
 /en-US/docs/DOM/Mozilla_event_reference/seeked	/en-US/docs/Web/API/HTMLMediaElement/seeked_event
 /en-US/docs/DOM/Mozilla_event_reference/seeking	/en-US/docs/Web/API/HTMLMediaElement/seeking_event
 /en-US/docs/DOM/Mozilla_event_reference/select	/en-US/docs/Web/API/HTMLInputElement/select_event
-/en-US/docs/DOM/Mozilla_event_reference/show	/en-US/docs/Web/API/Element/show_event
 /en-US/docs/DOM/Mozilla_event_reference/stalled	/en-US/docs/Web/API/HTMLMediaElement/stalled_event
 /en-US/docs/DOM/Mozilla_event_reference/storage	/en-US/docs/Web/API/Window/storage_event
 /en-US/docs/DOM/Mozilla_event_reference/submit	/en-US/docs/Web/API/HTMLFormElement/submit_event
@@ -6315,7 +6312,6 @@
 /en-US/docs/Mozilla_event_reference/seeked	/en-US/docs/Web/API/HTMLMediaElement/seeked_event
 /en-US/docs/Mozilla_event_reference/seeking	/en-US/docs/Web/API/HTMLMediaElement/seeking_event
 /en-US/docs/Mozilla_event_reference/select	/en-US/docs/Web/API/HTMLInputElement/select_event
-/en-US/docs/Mozilla_event_reference/show	/en-US/docs/Web/API/Element/show_event
 /en-US/docs/Mozilla_event_reference/stalled	/en-US/docs/Web/API/HTMLMediaElement/stalled_event
 /en-US/docs/Mozilla_event_reference/storage	/en-US/docs/Web/API/Window/storage_event
 /en-US/docs/Mozilla_event_reference/submit	/en-US/docs/Web/API/HTMLFormElement/submit_event
@@ -9460,6 +9456,10 @@
 /en-US/docs/Web/API/RTCPeerConnectionIceEvent.RTCPeerConnectionIceEven	/en-US/docs/Web/API/RTCPeerConnectionIceEvent/RTCPeerConnectionIceEvent
 /en-US/docs/Web/API/RTCPeerConnectionIceEvent.RTCPeerConnectionIceEvent	/en-US/docs/Web/API/RTCPeerConnectionIceEvent/RTCPeerConnectionIceEvent
 /en-US/docs/Web/API/RTCPeerConnectionIceEvent.candidate	/en-US/docs/Web/API/RTCPeerConnectionIceEvent/candidate
+/en-US/docs/Web/API/RTCRtpParameters	/en-US/docs/Web/API/RTCRtpSender/setParameters
+/en-US/docs/Web/API/RTCRtpReceiveParameters	/en-US/docs/Web/API/RTCRtpReceiver/getParameters
+/en-US/docs/Web/API/RTCRtpSendParameters	/en-US/docs/Web/API/RTCRtpSender/setParameters
+/en-US/docs/Web/API/RTCRtpSendParameters/encodings	/en-US/docs/Web/API/RTCRtpSender/setParameters
 /en-US/docs/Web/API/RTCRtpSender/getCapabilities()	/en-US/docs/Web/API/RTCRtpSender/getCapabilities
 /en-US/docs/Web/API/RTCRtpSynchronizationSource	/en-US/docs/Web/API/RTCRtpReceiver/getSynchronizationSources
 /en-US/docs/Web/API/RTCRtpSynchronizationSource/voiceActivityFlag	/en-US/docs/Web/API/RTCRtpReceiver/getSynchronizationSources
@@ -10813,9 +10813,7 @@
 /en-US/docs/Web/API/window.window	/en-US/docs/Web/API/Window/window
 /en-US/docs/Web/API/window/onscroll	/en-US/docs/Web/API/Element/scroll_event
 /en-US/docs/Web/API/window/onscroll-temp	/en-US/docs/Web/API/Element/scroll_event
-/en-US/docs/Web/API/x-ms-acceleratorkey	/en-US/docs/Web/HTML/Global_attributes/x-ms-acceleratorkey
 /en-US/docs/Web/API/x-ms-aria-flowfrom	/en-US/docs/Web/Accessibility/ARIA
-/en-US/docs/Web/API/x-ms-format-detection	/en-US/docs/Web/HTML/Global_attributes/x-ms-format-detection
 /en-US/docs/Web/APIWwindow.sidebar	/en-US/docs/Web/API/Window/sidebar
 /en-US/docs/Web/APIr	/en-US/docs/Web/API/Document/dir
 /en-US/docs/Web/Accessibility/ARIA/ARIA_Examples	/en-US/docs/Web/Accessibility/ARIA
@@ -10854,9 +10852,7 @@
 /en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_switch_role	/en-US/docs/Web/Accessibility/ARIA/Roles/Switch_role
 /en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_textbox_role	/en-US/docs/Web/Accessibility/ARIA/Roles/textbox_role
 /en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_toolbar_role	/en-US/docs/Web/Accessibility/ARIA/Roles/toolbar_role
-/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/x-ms-acceleratorkey	/en-US/docs/Web/HTML/Global_attributes/x-ms-acceleratorkey
 /en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/x-ms-aria-flowfrom	/en-US/docs/Web/Accessibility/ARIA
-/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/x-ms-format-detection	/en-US/docs/Web/HTML/Global_attributes/x-ms-format-detection
 /en-US/docs/Web/Accessibility/ARIA/ARIA_Test_Cases	/en-US/docs/Web/Accessibility/ARIA
 /en-US/docs/Web/Accessibility/ARIA/Basic_form_hints	/en-US/docs/Web/Accessibility/ARIA
 /en-US/docs/Web/Accessibility/ARIA/Roles/ARIA:_tabpanel_role	/en-US/docs/Web/Accessibility/ARIA/Roles/Tabpanel_Role
@@ -11103,7 +11099,6 @@
 /en-US/docs/Web/CSS/-moz-zoom-out	/en-US/docs/Web/CSS/cursor
 /en-US/docs/Web/CSS/-ms-grid-columns	/en-US/docs/Web/CSS/grid-template-columns
 /en-US/docs/Web/CSS/-ms-grid-rows	/en-US/docs/Web/CSS/grid-template-rows
-/en-US/docs/Web/CSS/-ms-high-contrast	/en-US/docs/Web/CSS/@media/-ms-high-contrast
 /en-US/docs/Web/CSS/-ms-scroll-snap-type	/en-US/docs/Web/CSS/scroll-snap-type
 /en-US/docs/Web/CSS/-ms-text-size-adjust	/en-US/docs/Web/CSS/text-size-adjust
 /en-US/docs/Web/CSS/-ms-user-select	/en-US/docs/Web/CSS/user-select
@@ -11312,7 +11307,6 @@
 /en-US/docs/Web/CSS/Interactive	/en-US/docs/Web/CSS/@media
 /en-US/docs/Web/CSS/Layout_cookbook/Recipe:_Media_Objects	/en-US/docs/Web/CSS/Layout_cookbook/Media_objects
 /en-US/docs/Web/CSS/List_of_Proprietary_CSS_Features	/en-US/docs/Web/CSS/Reference
-/en-US/docs/Web/CSS/Microsoft_CSS_extensions	/en-US/docs/Web/CSS/Microsoft_extensions
 /en-US/docs/Web/CSS/Motion_Path	/en-US/docs/Web/CSS/CSS_Motion_Path
 /en-US/docs/Web/CSS/Other_Resources	/en-US/docs/Web/CSS
 /en-US/docs/Web/CSS/Reference/Mozilla_Extensions	/en-US/docs/Web/CSS/Mozilla_Extensions
@@ -11736,7 +11730,6 @@
 /en-US/docs/Web/Events/selectstart	/en-US/docs/Web/API/Node/selectstart_event
 /en-US/docs/Web/Events/shippingaddresschange	/en-US/docs/Web/API/PaymentRequest/shippingaddresschange_event
 /en-US/docs/Web/Events/shippingoptionchange	/en-US/docs/Web/API/PaymentRequest/shippingoptionchange_event
-/en-US/docs/Web/Events/show	/en-US/docs/Web/API/Element/show_event
 /en-US/docs/Web/Events/signalingstatechange	/en-US/docs/Web/API/RTCPeerConnection/signalingstatechange_event
 /en-US/docs/Web/Events/slotchange	/en-US/docs/Web/API/HTMLSlotElement/slotchange_event
 /en-US/docs/Web/Events/soundend	/en-US/docs/Web/API/SpeechRecognition/soundend_event
@@ -11960,6 +11953,7 @@
 /en-US/docs/Web/Guide/Prefixes	/en-US/docs/Glossary/Vendor_Prefix
 /en-US/docs/Web/Guide/Responsive_design	/en-US/docs/Web/Progressive_web_apps
 /en-US/docs/Web/Guide/Responsive_design/Responsive_design_references	/en-US/docs/Web/Progressive_web_apps
+/en-US/docs/Web/Guide/SVG-in-OpenType	/en-US/docs/Web/Guide
 /en-US/docs/Web/Guide/Terminology	/en-US/docs/Glossary
 /en-US/docs/Web/Guide/Touch_events	/en-US/docs/Web/API/Touch_events
 /en-US/docs/Web/Guide/User_experience/Using_the_Page_Visibility_API	/en-US/docs/Web/API/Page_Visibility_API
@@ -12654,7 +12648,6 @@
 /en-US/docs/Web/Reference/Events/seeked	/en-US/docs/Web/API/HTMLMediaElement/seeked_event
 /en-US/docs/Web/Reference/Events/seeking	/en-US/docs/Web/API/HTMLMediaElement/seeking_event
 /en-US/docs/Web/Reference/Events/select	/en-US/docs/Web/API/HTMLInputElement/select_event
-/en-US/docs/Web/Reference/Events/show	/en-US/docs/Web/API/Element/show_event
 /en-US/docs/Web/Reference/Events/stalled	/en-US/docs/Web/API/HTMLMediaElement/stalled_event
 /en-US/docs/Web/Reference/Events/statechange	/en-US/docs/Web/API/RTCIceTransport/statechange_event
 /en-US/docs/Web/Reference/Events/storage	/en-US/docs/Web/API/Window/storage_event

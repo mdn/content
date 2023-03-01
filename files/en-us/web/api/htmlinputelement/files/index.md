@@ -38,7 +38,9 @@ for (const file of fileInput.files) {
   console.log(file.name); // prints file name
   let fileDate = new Date(file.lastModified);
   console.log(fileDate.toLocaleDateString()); // prints legible date
-  console.log((file.size < 1000)? file.size : Math.round(file.size / 1000) + "KB");
+  console.log(
+    file.size < 1000 ? file.size : Math.round(file.size / 1000) + "KB"
+  );
   console.log(file.type); // prints MIME type
 }
 ```

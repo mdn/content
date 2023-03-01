@@ -57,8 +57,6 @@ _This interface inherits properties from its ancestors, {{DOMxRef("MouseEvent")}
 - {{DOMxRef("WheelEvent.wheelDeltaY")}} {{ReadOnlyInline}} {{deprecated_inline}}
   - : Returns an integer representing the vertical scroll amount.
 
-> **Note:** [Element: mousewheel event](/en-US/docs/Web/API/Element/mousewheel_event) has additional documentation about the deprecated properties `wheelDelta`, `wheelDeltaX`, `wheelDeltaY`.
-
 ## The detail property
 
 The value of the {{domxref("UIEvent/detail", "detail")}} property is always zero, except in Opera, which uses `detail` similarly to the Firefox-only {{domxref("Element.DOMMouseScroll_event", "DOMMouseScroll")}} event's `detail` value, which indicates the scroll distance in terms of lines, with negative values indicating the scrolling movement is either toward the bottom or toward the right, and positive values indicating scrolling to the top or left.
@@ -115,5 +113,4 @@ Not part of any specification.
 
 ## See also
 
-- Gecko's legacy mouse wheel events: `DOMMouseScroll`, `MozMousePixelScroll`
-- Standardized wheel event: `wheel`
+- The standard {{domxref("Element/wheel_event", "wheel")}} event to listen to instead.

@@ -12,7 +12,7 @@ immediately after the browser has completed other operations such as events and 
 updates.
 
 > **Note:** This method is not expected to become standard, and is nowadays only implemented
-> by Node.js 0.10+. It meets resistance both from [Gecko](https://bugzilla.mozilla.org/show_bug.cgi?id=686201) (Firefox) and [Chromium/WebKit](https://bugs.chromium.org/p/chromium/issues/detail?id=146172) (Chrome/Safari).
+> by Node.js 0.10+. It meets resistance both from [Gecko](https://bugzil.la/686201) (Firefox) and [Chromium/WebKit](https://crbug.com/146172) (Chrome/Safari).
 
 ## Syntax
 

@@ -94,7 +94,7 @@ The HTML for our list example looks like so:
 </dl>
 ```
 
-If you go to the live example now and investigate the list elements using [browser developer tools](/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools), you'll notice a couple of styling defaults:
+If you go to the live example now and investigate the list elements using [browser developer tools](/en-US/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools), you'll notice a couple of styling defaults:
 
 - The {{htmlelement("ul")}} and {{htmlelement("ol")}} elements have a top and bottom {{cssxref("margin")}} of `16px` (`1em`) and a {{cssxref("padding-left")}} of `40px` (`2.5em`).
 - The list items ({{htmlelement("li")}} elements) have no set defaults for spacing.

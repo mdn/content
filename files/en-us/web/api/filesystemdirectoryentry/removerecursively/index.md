@@ -72,11 +72,14 @@ a single parameter: a {{domxref("FileError")}} object describing the error. The
 ## Examples
 
 ```js
-directory.removeRecursively(() => {
-  /* The directory was removed successfully */
-}, () => {
-  /* an error occurred while removing the directory */
-});
+directory.removeRecursively(
+  () => {
+    /* The directory was removed successfully */
+  },
+  () => {
+    /* an error occurred while removing the directory */
+  }
+);
 ```
 
 ## Browser compatibility

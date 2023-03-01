@@ -1,15 +1,6 @@
 ---
 title: Progressive web app structure
 slug: Web/Progressive_web_apps/App_structure
-tags:
-  - App shell
-  - PWAs
-  - Progressive web apps
-  - Service Workers
-  - Streams
-  - Structure
-  - js13kGames
-  - progressive
 ---
 
 {{PreviousMenuNext("Web/Progressive_web_apps/Introduction", "Web/Progressive_web_apps/Offline_Service_workers", "Web/Progressive_web_apps")}}
