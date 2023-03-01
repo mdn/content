@@ -109,7 +109,7 @@ p {
 
 {{EmbedLiveSample('With_the_filter_property','100%','220')}}
 
-### With url() and the SVG hueRotate filter
+### With url() and the SVG hue-rotate filter
 
 The SVG {{SVGElement("filter")}} element is used to define custom filter effects that can then be referenced by {{htmlattrxref("id")}}. The `<filter>`'s {{SVGElement("feColorMatrix")}} primitive `hueRotate` type provides the same effect. Given the following:
 
@@ -170,7 +170,7 @@ This example shows three images: the image with a `hue-rotate()` filter function
 </table>
 ```
 
-{{EmbedLiveSample('With_url()_and_the_SVG_hueRotate_filter','100%','280')}}
+{{EmbedLiveSample('With_url()_and_the_SVG_hue-rotate_filter','100%','280')}}
 
 ## Specifications
 
