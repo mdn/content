@@ -194,7 +194,9 @@ The first part of the CSS sets up the **named** pages, these include the size an
 }
 ```
 
-The next part of the CSS specifies which CSS selectors will use which named pages when printing. As the sections with `class="chapter"` are concurrent they appear as one page, in order to split them up they are split using `break-after: page;` which splits each chapter into another page.
+The next part of the CSS uses [attribute selectors](/en-US/docs/Web/CSS/Attribute_selectors) to apply the print dimensions, orientation, and margins defined in the named  `@page` rules defined in the previous CSS section to elements using the `page` property. 
+
+The sections with `class="chapter"` are concurrent and appear as one page. The `break-after: page;` is used to split them up, which splits each chapter into a separately printed page.
 
 ```css
 @media print {
