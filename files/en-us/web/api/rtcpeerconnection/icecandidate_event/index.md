@@ -1,5 +1,5 @@
 ---
-title: 'RTCPeerConnection: icecandidate event'
+title: "RTCPeerConnection: icecandidate event"
 slug: Web/API/RTCPeerConnection/icecandidate_event
 page-type: web-api-event
 browser-compat: api.RTCPeerConnection.icecandidate_event
@@ -16,9 +16,9 @@ This event is not cancelable and does not bubble.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('icecandidate', (event) => { });
+addEventListener("icecandidate", (event) => {});
 
-onicecandidate = (event) => { };
+onicecandidate = (event) => {};
 ```
 
 ## Event type
@@ -45,11 +45,11 @@ The majority of `icecandidate` events are fired to indicate that a new candidate
 ```js
 rtcPeerConnection.onicecandidate = (event) => {
   if (event.candidate !== null) {
-    sendCandidateToRemotePeer(event.candidate)
+    sendCandidateToRemotePeer(event.candidate);
   } else {
     /* there are no more candidates coming during this negotiation */
   }
-}
+};
 ```
 
 The remote peer, upon receiving the candidate, will add the candidate to its candidate pool by calling {{domxref("RTCPeerConnection.addIceCandidate", "addIceCandidate()")}}, passing in the {{domxref("RTCPeerConnectionIceEvent.candidate", "candidate")}} string you have passed along using the signaling server.
@@ -72,7 +72,7 @@ If you need to perform any special actions when there are no further candidates 
 
 ```js
 pc.addEventListener("icegatheringstatechange", (ev) => {
-  switch(pc.iceGatheringState) {
+  switch (pc.iceGatheringState) {
     case "new":
       /* gathering is either just starting or has been reset */
       break;
@@ -97,14 +97,18 @@ This example creates a simple handler for the `icecandidate` event that uses a f
 First, an example using {{domxref("EventTarget.addEventListener", "addEventListener()")}}:
 
 ```js
-pc.addEventListener("icecandidate", (ev) => {
-  if (ev.candidate) {
-    sendMessage({
-      type: "new-ice-candidate",
-      candidate: event.candidate
-    });
-  }
-}, false);
+pc.addEventListener(
+  "icecandidate",
+  (ev) => {
+    if (ev.candidate) {
+      sendMessage({
+        type: "new-ice-candidate",
+        candidate: event.candidate,
+      });
+    }
+  },
+  false
+);
 ```
 
 You can also set the `onicecandidate` event handler property directly:
@@ -114,7 +118,7 @@ pc.onicecandidate = (ev) => {
   if (ev.candidate) {
     sendMessage({
       type: "new-ice-candidate",
-      candidate: event.candidate
+      candidate: event.candidate,
     });
   }
 };

@@ -42,11 +42,11 @@ const req = navigator.push.register();
 req.onsuccess = (e) => {
   const endpoint = req.result;
   console.log(`New endpoint: ${endpoint}`);
-}
+};
 
 req.onerror = (e) => {
   console.error(`Error getting a new endpoint: ${e.error}`);
-}
+};
 ```
 
 ## Specifications

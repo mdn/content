@@ -38,7 +38,7 @@ const stream = await getUserMedia({ video: true });
 const videoTrack = stream.getVideoTracks()[0];
 
 const trackProcessor = new MediaStreamTrackProcessor({ track: videoTrack });
-const trackGenerator = new MediaStreamTrackGenerator({ kind: 'video' });
+const trackGenerator = new MediaStreamTrackGenerator({ kind: "video" });
 
 const transformer = new TransformStream({
   async transform(videoFrame, controller) {
@@ -49,7 +49,9 @@ const transformer = new TransformStream({
   },
 });
 
-trackProcessor.readable.pipeThrough(transformer).pipeTo(trackGenerator.writable);
+trackProcessor.readable
+  .pipeThrough(transformer)
+  .pipeTo(trackGenerator.writable);
 ```
 
 ## Specifications

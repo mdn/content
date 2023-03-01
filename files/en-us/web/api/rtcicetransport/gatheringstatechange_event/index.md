@@ -1,5 +1,5 @@
 ---
-title: 'RTCIceTransport: gatheringstatechange event'
+title: "RTCIceTransport: gatheringstatechange event"
 slug: Web/API/RTCIceTransport/gatheringstatechange_event
 page-type: web-api-event
 browser-compat: api.RTCIceTransport.gatheringstatechange_event
@@ -20,9 +20,9 @@ This event is not cancelable and does not bubble.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('gatheringstatechange', (event) => { });
+addEventListener("gatheringstatechange", (event) => {});
 
-ongatheringstatechange = (event) => { };
+ongatheringstatechange = (event) => {};
 ```
 
 ## Event type
@@ -35,14 +35,18 @@ This example creates a handler for `gatheringstatechange` events on each {{domxr
 
 ```js
 pc.getSenders().forEach((sender) => {
-  sender.transport.iceTransport.addEventListener("gatheringstatechange", (ev) => {
-    let transport = ev.target;
+  sender.transport.iceTransport.addEventListener(
+    "gatheringstatechange",
+    (ev) => {
+      let transport = ev.target;
 
-    if (transport.gatheringState === "complete") {
-      /* this transport has finished gathering candidates,
+      if (transport.gatheringState === "complete") {
+        /* this transport has finished gathering candidates,
         but others may still be working on it */
-    }
-  }, false);
+      }
+    },
+    false
+  );
 });
 ```
 

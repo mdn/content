@@ -22,10 +22,10 @@ which the database is opened when the request's `onsuccess` handler is fired:
 ```js
 let db;
 function openDB() {
- const DBOpenRequest = window.indexedDB.open('toDoList');
- DBOpenRequest.onsuccess = (e) => {
-   db = DBOpenRequest.result;
- }
+  const DBOpenRequest = window.indexedDB.open("toDoList");
+  DBOpenRequest.onsuccess = (e) => {
+    db = DBOpenRequest.result;
+  };
 }
 ```
 

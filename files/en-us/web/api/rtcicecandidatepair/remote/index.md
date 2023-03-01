@@ -25,7 +25,9 @@ This one-line example obtains the current candidate pair and then from that gets
 remote candidate.
 
 ```js
-const candidatePair = pc.getSenders()[0].transport.transport.getSelectedCandidatePair();
+const candidatePair = pc
+  .getSenders()[0]
+  .transport.transport.getSelectedCandidatePair();
 const remoteCandidate = candidatePair.remote;
 ```
 

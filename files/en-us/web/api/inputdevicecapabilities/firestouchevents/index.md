@@ -31,9 +31,8 @@ A {{jsxref('Boolean')}}
 ## Example
 
 ```js
-myButton.addEventListener('mousedown', (e) => {
-  if (!e.sourceCapabilities.firesTouchEvents)
-    myButton.classList.add("pressed");
+myButton.addEventListener("mousedown", (e) => {
+  if (!e.sourceCapabilities.firesTouchEvents) myButton.classList.add("pressed");
 });
 ```
 

@@ -32,12 +32,12 @@ _This interface has no methods of its own, but inherits the methods of its paren
 
 ```js
 function locationHashChanged() {
-  if (location.hash === '#somecoolfeature') {
+  if (location.hash === "#somecoolfeature") {
     somecoolfeature();
   }
 }
 
-window.addEventListener('hashchange', locationHashChanged);
+window.addEventListener("hashchange", locationHashChanged);
 ```
 
 ## Specifications

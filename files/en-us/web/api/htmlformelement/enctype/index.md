@@ -25,7 +25,7 @@ A string.
 ## Examples
 
 ```js
-form.enctype = 'application/x-www-form-urlencoded';
+form.enctype = "application/x-www-form-urlencoded";
 ```
 
 ## Specifications

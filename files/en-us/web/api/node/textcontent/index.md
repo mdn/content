@@ -73,14 +73,14 @@ Start with this HTML fragment.
 You can use `textContent` to get the element's text content:
 
 ```js
-let text = document.getElementById('divA').textContent;
+let text = document.getElementById("divA").textContent;
 // The text variable is now: 'This is some text!'
 ```
 
 If you prefer to set the element's text content, you can do:
 
 ```js
-document.getElementById('divA').textContent = 'This text is different!';
+document.getElementById("divA").textContent = "This text is different!";
 // The HTML for divA is now:
 // <div id="divA">This text is different!</div>
 ```

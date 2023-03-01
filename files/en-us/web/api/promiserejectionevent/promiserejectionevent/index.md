@@ -55,8 +55,8 @@ an emergency contact who should be notified.
 
 ```js
 let myRejectionEvent = new PromiseRejectionEvent("unhandledrejection", {
-  promise : myPromise,
-  reason : "My house is on fire"
+  promise: myPromise,
+  reason: "My house is on fire",
 });
 ```
 

@@ -97,11 +97,11 @@ const DBOpenRequest = window.indexedDB.open("toDoList", 4);
 
 // Two event handlers for opening the database.
 DBOpenRequest.onerror = (event) => {
-  note.innerHTML += '<li>Error loading database.</li>';
+  note.innerHTML += "<li>Error loading database.</li>";
 };
 
 DBOpenRequest.onsuccess = (event) => {
-  note.innerHTML += '<li>Database initialized.</li>';
+  note.innerHTML += "<li>Database initialized.</li>";
 
   // store the result of opening the database in the db variable.
   // This is used a lot below.
@@ -120,11 +120,13 @@ DBOpenRequest.onupgradeneeded = (event) => {
   const db = event.target.result;
 
   db.onerror = (event) => {
-    note.innerHTML += '<li>Error loading database.</li>';
+    note.innerHTML += "<li>Error loading database.</li>";
   };
 
   // Create an objectStore for this database
-  const objectStore = db.createObjectStore("toDoList", { keyPath: "taskTitle" });
+  const objectStore = db.createObjectStore("toDoList", {
+    keyPath: "taskTitle",
+  });
 
   // define what data items the objectStore will contain
 

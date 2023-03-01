@@ -50,11 +50,11 @@ const req = navigator.push.unregister(pushEndpoint);
 req.onsuccess = (e) => {
   const endpoint = req.result;
   console.log(`Unregistered endpoint: ${endpoint}`);
-}
+};
 
 req.onerror = (e) => {
   console.error(`Error unregistering the endpoint: ${e.error}`);
-}
+};
 ```
 
 ## Specifications

@@ -20,12 +20,14 @@ A boolean value.
 ```html
 <p>
   <label>
-    <input id="check-box" name="b" value="1" type="checkbox" disabled /> Check this box!
+    <input id="check-box" name="b" value="1" type="checkbox" disabled /> Check
+    this box!
   </label>
 </p>
 <p>
   <label>
-    <input id="toggle-box" name="b" value="2" type="checkbox" /> Enable the other checkbox.
+    <input id="toggle-box" name="b" value="2" type="checkbox" /> Enable the
+    other checkbox.
   </label>
 </p>
 ```
@@ -36,9 +38,13 @@ A boolean value.
 const checkBox = document.getElementById("check-box");
 const toggleBox = document.getElementById("toggle-box");
 
-toggleBox.addEventListener("change", (event) => {
-  checkBox.disabled = !event.target.checked;
-}, false);
+toggleBox.addEventListener(
+  "change",
+  (event) => {
+    checkBox.disabled = !event.target.checked;
+  },
+  false
+);
 ```
 
 ### Result

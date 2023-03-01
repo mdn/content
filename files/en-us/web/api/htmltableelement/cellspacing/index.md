@@ -26,7 +26,7 @@ A string which is either a number of pixels (such as
 This example sets cell spacing for a given table to 10 pixels.
 
 ```js
-const t = document.getElementById('TableA');
+const t = document.getElementById("TableA");
 t.cellSpacing = "10";
 ```
 

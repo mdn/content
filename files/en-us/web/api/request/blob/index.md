@@ -27,14 +27,13 @@ A promise that resolves with a {{domxref("Blob")}}.
 ## Examples
 
 ```js
-const obj = { hello: 'world' };
-const myBlob = new Blob(
-  [JSON.stringify(obj, null, 2)],
-  { type : 'application/json' },
-);
+const obj = { hello: "world" };
+const myBlob = new Blob([JSON.stringify(obj, null, 2)], {
+  type: "application/json",
+});
 
-const request = new Request('/myEndpoint', {
-  method: 'POST',
+const request = new Request("/myEndpoint", {
+  method: "POST",
   body: myBlob,
 });
 
