@@ -155,7 +155,7 @@ fieldset {
 }
 ```
 
-The first part of the CSS sets up the **named** pages, these include the size and orientaion and also some content to go in the `@top-middle` margin of the printed pages.
+The first part of the CSS sets up the **named** pages, these include the size and orientation and also some content to go in the [`@top-middle` margin](/en-US/docs/Web/CSS/@page#margin_at-rules) of the printed pages.
 
 ```css
 @page toc {
