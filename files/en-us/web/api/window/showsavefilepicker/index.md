@@ -2,14 +2,8 @@
 title: Window.showSaveFilePicker()
 slug: Web/API/Window/showSaveFilePicker
 page-type: web-api-instance-method
-tags:
-  - Directory
-  - File
-  - File System Access API
-  - Method
-  - Window
-  - working with files
-  - Experimental
+status:
+  - experimental
 browser-compat: api.Window.showSaveFilePicker
 ---
 

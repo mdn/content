@@ -2,14 +2,8 @@
 title: CSSKeywordValue()
 slug: Web/API/CSSKeywordValue/CSSKeywordValue
 page-type: web-api-constructor
-tags:
-  - API
-  - CSS Typed Object Model API
-  - CSSKeywordValue
-  - Constructor
-  - Experimental
-  - Houdini
-  - Reference
+status:
+  - experimental
 browser-compat: api.CSSKeywordValue.CSSKeywordValue
 ---
 
@@ -56,11 +50,11 @@ to `style="display: initial"` if viewed in the [developer tools inspector](https
 ```
 
 ```js
-const keyword = new CSSKeywordValue('initial');
-const myElement = document.getElementById('myElement').attributeStyleMap;
-myElement.set('display', keyword);
+const keyword = new CSSKeywordValue("initial");
+const myElement = document.getElementById("myElement").attributeStyleMap;
+myElement.set("display", keyword);
 
-console.log(myElement.get('display').value);  // 'initial'
+console.log(myElement.get("display").value); // 'initial'
 console.dir(keyword);
 ```
 

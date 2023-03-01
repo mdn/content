@@ -2,14 +2,8 @@
 title: Window.fullScreen
 slug: Web/API/Window/fullScreen
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTML DOM
-  - NeedsMarkupWork
-  - Non-standard
-  - Property
-  - Reference
-  - Window
+status:
+  - non-standard
 browser-compat: api.Window.fullScreen
 ---
 
@@ -17,11 +11,6 @@ browser-compat: api.Window.fullScreen
 
 The **`fullScreen`** property of the `Window`
 interface indicates whether the window is displayed in full screen mode or not.
-
-With chrome privileges, the property is read-write, otherwise it is read-only. Bear in
-mind that if you try to set this property without chrome privileges, it will not throw
-an exception and instead just silently fail. This is to prevent scripts designed to set
-this property in Internet Explorer from breaking.
 
 ## Value
 

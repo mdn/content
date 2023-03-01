@@ -2,20 +2,6 @@
 title: RTCInboundRtpStreamStats.qpSum
 slug: Web/API/RTCInboundRtpStreamStats/qpSum
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - QP
-  - Quantization
-  - RTCInboundRtpStreamStats
-  - Reference
-  - Statistics
-  - Stats
-  - Video
-  - WebRTC
-  - WebRTC API
-  - qpSum
-  - stream
 browser-compat: api.RTCInboundRtpStreamStats.qpSum
 ---
 

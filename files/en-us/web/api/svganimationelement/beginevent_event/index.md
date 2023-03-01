@@ -2,13 +2,6 @@
 title: "SVGAnimationElement: beginEvent event"
 slug: Web/API/SVGAnimationElement/beginEvent_event
 page-type: web-api-event
-tags:
-  - API
-  - Reference
-  - SVG Animation
-  - SVGAnimationElement
-  - beginEvent
-  - Event
 browser-compat: api.SVGAnimationElement.beginEvent_event
 ---
 

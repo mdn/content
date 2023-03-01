@@ -2,18 +2,6 @@
 title: 'RTCPeerConnection: icecandidate event'
 slug: Web/API/RTCPeerConnection/icecandidate_event
 page-type: web-api-event
-tags:
-  - API
-  - Candidate
-  - Connectivity
-  - ICE
-  - Reference
-  - SDP
-  - WebRTC
-  - WebRTC API
-  - events
-  - Event
-  - icecandidate
 browser-compat: api.RTCPeerConnection.icecandidate_event
 ---
 

@@ -2,12 +2,6 @@
 title: TreeWalker.nextNode()
 slug: Web/API/TreeWalker/nextNode
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - DOM Reference
-  - Method
-  - TreeWalker
 browser-compat: api.TreeWalker.nextNode
 ---
 
@@ -15,8 +9,7 @@ browser-compat: api.TreeWalker.nextNode
 
 The **`TreeWalker.nextNode()`** method moves the current
 {{domxref("Node")}} to the next _visible_ node in the document order, and returns
-the found node. It also moves the current node to this one. If no such node exists,
-returns `null` and the current node is not changed.
+the found node. If no such node exists, it returns `null` and the current node is not changed.
 
 ## Syntax
 

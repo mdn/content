@@ -2,15 +2,9 @@
 title: Document.selectedStyleSheetSet
 slug: Web/API/Document/selectedStyleSheetSet
 page-type: web-api-instance-property
-tags:
-  - API
-  - CSSOM
-  - DOM
-  - Property
-  - Reference
-  - Stylesheets
-  - Deprecated
-  - Non-standard
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.Document.selectedStyleSheetSet
 ---
 
@@ -36,7 +30,7 @@ Setting the value of this property is equivalent to calling
 ```js
 console.log(`Current style sheet set: ${document.selectedStyleSheetSet}`);
 
-document.selectedStyleSheetSet = 'Some other style sheet';
+document.selectedStyleSheetSet = "Some other style sheet";
 ```
 
 ## Browser compatibility

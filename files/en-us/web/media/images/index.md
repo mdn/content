@@ -1,11 +1,6 @@
 ---
 title: Using images in HTML
 slug: Web/Media/images
-tags:
-  - HTML
-  - Images
-  - Landing
-  - Media
 ---
 
 {{QuickLinksWithSubpages("/en-US/docs/Web/Media")}}

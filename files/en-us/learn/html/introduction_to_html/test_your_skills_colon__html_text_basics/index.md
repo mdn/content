@@ -1,12 +1,6 @@
 ---
-title: 'Test your skills: HTML text basics'
+title: "Test your skills: HTML text basics"
 slug: Learn/HTML/Introduction_to_HTML/Test_your_skills:_HTML_text_basics
-tags:
-  - Beginner
-  - HTML
-  - Learn
-  - Text
-  - test your skills
 ---
 
 {{learnsidebar}}
@@ -21,6 +15,10 @@ The aim of this skill test is to assess whether you understand how to [mark up t
 
 In this task, we want you to mark up the provided HTML using semantic heading and paragraph elements.
 
+The finished example should look like this:
+
+{{EmbedGHLiveSample("learning-area/html/introduction-to-html/tasks/basic-text/basic-text1-finished.html", '100%', 300)}}
+
 Try updating the live code below to recreate the finished example:
 
 {{EmbedGHLiveSample("learning-area/html/introduction-to-html/tasks/basic-text/basic-text1.html", '100%', 700)}}
@@ -33,6 +31,10 @@ Try updating the live code below to recreate the finished example:
 
 In this task, we want you to turn the first un-marked up list into an unordered list, and the second one into an ordered list.
 
+The finished example should look like this:
+
+{{EmbedGHLiveSample("learning-area/html/introduction-to-html/tasks/basic-text/basic-text2-finished.html", '100%', 400)}}
+
 Try updating the live code below to recreate the finished example:
 
 {{EmbedGHLiveSample("learning-area/html/introduction-to-html/tasks/basic-text/basic-text2.html", '100%', 700)}}
@@ -44,6 +46,10 @@ Try updating the live code below to recreate the finished example:
 ## Task 3
 
 In this task, you are provided with a paragraph, and your aim is to use some inline elements to mark up a couple of appropriate words with strong importance, and a couple with emphasis.
+
+The finished example should look like this:
+
+{{EmbedGHLiveSample("learning-area/html/introduction-to-html/tasks/basic-text/basic-text3-finished.html", '100%', 120)}}
 
 Try updating the live code below to recreate the finished example:
 

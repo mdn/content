@@ -2,16 +2,9 @@
 title: VRFieldOfView
 slug: Web/API/VRFieldOfView
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Reference
-  - VR
-  - VRFieldOfView
-  - Virtual Reality
-  - WebVR
-  - Deprecated
-  - Non-standard
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.VRFieldOfView
 ---
 

@@ -2,12 +2,6 @@
 title: border-inline
 slug: Web/CSS/border-inline
 page-type: css-shorthand-property
-tags:
-  - CSS
-  - CSS Logical Property
-  - CSS Property
-  - Reference
-  - recipe:css-shorthand-property
 browser-compat: css.properties.border-inline
 ---
 

@@ -1,11 +1,6 @@
 ---
 title: Security changes in Firefox 3.5
 slug: Mozilla/Firefox/Releases/3.5/Security_changes
-tags:
-  - Firefox
-  - Firefox 3.5
-  - Security
-  - XUL
 ---
 
 {{FirefoxSidebar}}

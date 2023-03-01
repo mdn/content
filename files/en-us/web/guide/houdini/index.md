@@ -1,13 +1,6 @@
 ---
 title: CSS Houdini
 slug: Web/Guide/Houdini
-tags:
-  - API
-  - CSS
-  - Houdini
-  - JavaScript
-  - Landing
-  - Web
 ---
 
 <section id="Quick_links">

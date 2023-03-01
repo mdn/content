@@ -2,12 +2,6 @@
 title: Spread syntax (...)
 slug: Web/JavaScript/Reference/Operators/Spread_syntax
 page-type: javascript-operator
-tags:
-  - ECMAScript 2015
-  - Iterator
-  - JavaScript
-  - Language feature
-  - Reference
 browser-compat: javascript.operators.spread
 ---
 

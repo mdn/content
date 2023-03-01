@@ -2,14 +2,6 @@
 title: MediaElementAudioSourceNode
 slug: Web/API/MediaElementAudioSourceNode
 page-type: web-api-interface
-tags:
-  - API
-  - Audio
-  - AudioNode
-  - Interface
-  - MediaElementAudioSourceNode
-  - Reference
-  - Web Audio API
 browser-compat: api.MediaElementAudioSourceNode
 ---
 

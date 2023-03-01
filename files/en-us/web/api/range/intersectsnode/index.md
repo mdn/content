@@ -2,12 +2,6 @@
 title: Range.intersectsNode()
 slug: Web/API/Range/intersectsNode
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - Method
-  - Range
-  - Reference
 browser-compat: api.Range.intersectsNode
 ---
 

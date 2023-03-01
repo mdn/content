@@ -2,14 +2,8 @@
 title: Element.scrollLeftMax
 slug: Web/API/Element/scrollLeftMax
 page-type: web-api-instance-property
-tags:
-  - API
-  - CSSOM View
-  - Element
-  - Non-standard
-  - Property
-  - Read-only
-  - Reference
+status:
+  - non-standard
 browser-compat: api.Element.scrollLeftMax
 ---
 

@@ -2,13 +2,6 @@
 title: MediaKeyStatusMap.keys()
 slug: Web/API/MediaKeyStatusMap/keys
 page-type: web-api-instance-method
-tags:
-  - API
-  - EncryptedMediaExtensions
-  - MediaKeyStatusMap
-  - Method
-  - Reference
-  - keys()
 browser-compat: api.MediaKeyStatusMap.keys
 ---
 

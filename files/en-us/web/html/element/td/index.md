@@ -2,20 +2,6 @@
 title: '<td>: The Table Data Cell element'
 slug: Web/HTML/Element/td
 page-type: html-element
-tags:
-  - Cells
-  - Data Cell
-  - Element
-  - HTML
-  - HTML tabular data
-  - Reference
-  - Table Cell
-  - Table Data
-  - Tables
-  - Web
-  - cell
-  - data
-  - td
 browser-compat: html.elements.td
 ---
 
@@ -65,7 +51,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
   - : This attribute contains a list of space-separated strings. Each string is the `id` of a group of cells that this header applies to.
 - {{htmlattrdef("bgcolor")}} {{deprecated_inline}}
 
-  - : This attribute defines the background color of each cell in a column. It is a [6-digit hexadecimal RGB code](/en-US/docs/Web/CSS/color_value#rgb_colors), prefixed by a '`#`'. One of the predefined [color keywords](/en-US/docs/Web/CSS/color_value#color_keywords) can also be used.
+  - : This attribute defines the background color of each cell in a column. It is a [6-digit hexadecimal RGB code](/en-US/docs/Web/CSS/hex-color), prefixed by a '`#`'. One of the predefined [color keywords](/en-US/docs/Web/CSS/named-color) can also be used.
 
     To achieve a similar effect, use the CSS {{cssxref("background-color")}} property.
 
@@ -101,7 +87,7 @@ See {{HTMLElement("table")}} for examples on `<td>`.
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories"
+        <a href="/en-US/docs/Web/HTML/Content_categories"
           >Content categories</a
         >
       </th>
@@ -110,7 +96,7 @@ See {{HTMLElement("table")}} for examples on `<td>`.
     <tr>
       <th scope="row">Permitted content</th>
       <td>
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
           >Flow content</a
         >.
       </td>

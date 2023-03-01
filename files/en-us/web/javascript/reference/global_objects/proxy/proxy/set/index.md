@@ -2,11 +2,6 @@
 title: handler.set()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/set
 page-type: javascript-instance-method
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Proxy
 browser-compat: javascript.builtins.Proxy.handler.set
 ---
 
@@ -95,7 +90,7 @@ const p = new Proxy(
       console.log(`property set: ${prop} = ${value}`);
       return true;
     },
-  }
+  },
 );
 
 console.log("a" in p); // false

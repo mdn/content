@@ -2,12 +2,6 @@
 title: container-type
 slug: Web/CSS/container-type
 page-type: css-property
-tags:
-  - container
-  - CSS
-  - CSS Containment
-  - Reference
-  - Property
 browser-compat: css.properties.container-type
 ---
 

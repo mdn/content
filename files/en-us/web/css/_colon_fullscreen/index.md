@@ -2,15 +2,6 @@
 title: ":fullscreen"
 slug: Web/CSS/:fullscreen
 page-type: css-pseudo-class
-tags:
-  - CSS
-  - Fullscreen
-  - Fullscreen API
-  - Pseudo-class
-  - Reference
-  - Selector
-  - fullscreen
-  - screen
 browser-compat: css.selectors.fullscreen
 ---
 
@@ -20,8 +11,10 @@ The **`:fullscreen`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/
 
 ## Syntax
 
-```
-:fullscreen
+```css
+:fullscreen {
+  /* ... */
+}
 ```
 
 ## Usage notes

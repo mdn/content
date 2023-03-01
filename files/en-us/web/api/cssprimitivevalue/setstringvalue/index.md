@@ -2,13 +2,8 @@
 title: CSSPrimitiveValue.setStringValue()
 slug: Web/API/CSSPrimitiveValue/setStringValue
 page-type: web-api-instance-method
-tags:
-  - API
-  - CSSPrimitiveValue
-  - Method
-  - NeedsExample
-  - setStringValue
-  - Deprecated
+status:
+  - deprecated
 browser-compat: api.CSSPrimitiveValue.setStringValue
 ---
 

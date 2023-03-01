@@ -2,11 +2,6 @@
 title: "@font-palette-values"
 slug: Web/CSS/@font-palette-values
 page-type: css-at-rule
-tags:
-  - CSS
-  - CSS Fonts
-  - Color Fonts
-  - Reference
 browser-compat: css.at-rules.font-palette-values
 ---
 
@@ -67,9 +62,7 @@ p {
 }
 @font-palette-values --Alternate {
   font-family: "Bungee Spice";
-  override-colors: 
-    0 #00ffbb, 
-    1 #007744;
+  override-colors: 0 #00ffbb, 1 #007744;
 }
 .alternate {
   font-palette: --Alternate;

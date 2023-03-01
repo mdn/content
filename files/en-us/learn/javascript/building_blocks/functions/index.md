@@ -1,22 +1,6 @@
 ---
 title: Functions — reusable blocks of code
 slug: Learn/JavaScript/Building_blocks/Functions
-tags:
-  - API
-  - Article
-  - Beginner
-  - Browser
-  - CodingScripting
-  - Custom
-  - Functions
-  - Guide
-  - JavaScript
-  - Learn
-  - Method
-  - anonymous
-  - invoke
-  - "l10n:priority"
-  - parameters
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Building_blocks/Looping_code","Learn/JavaScript/Building_blocks/Build_your_own_function", "Learn/JavaScript/Building_blocks")}}
@@ -47,7 +31,7 @@ Another essential concept in coding is **functions**, which allow you to store a
 
 In JavaScript, you'll find functions everywhere. In fact, we've been using functions all the way through the course so far; we've just not been talking about them very much. Now is the time, however, for us to start talking about functions explicitly, and really exploring their syntax.
 
-Pretty much anytime you make use of a JavaScript structure that features a pair of parentheses — `()` — and you're **not** using a common built-in language structure like a [for loop](/en-US/docs/Learn/JavaScript/Building_blocks/Looping_code#the_standard_for_loop), [while or do...while loop](/en-US/docs/Learn/JavaScript/Building_blocks/Looping_code#while_and_do_..._while), or [if...else statement](/en-US/docs/Learn/JavaScript/Building_blocks/conditionals#if_..._else_statements), you are making use of a function.
+Pretty much anytime you make use of a JavaScript structure that features a pair of parentheses — `()` — and you're **not** using a common built-in language structure like a [for loop](/en-US/docs/Learn/JavaScript/Building_blocks/Looping_code#the_standard_for_loop), [while or do...while loop](/en-US/docs/Learn/JavaScript/Building_blocks/Looping_code#while_and_do_..._while), or [if...else statement](/en-US/docs/Learn/JavaScript/Building_blocks/conditionals#if...else_statements), you are making use of a function.
 
 ## Built-in browser functions
 
@@ -474,13 +458,3 @@ This article has explored the fundamental concepts behind functions, paving the 
 - [Default parameters](/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters), [Arrow functions](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions) — advanced concept references
 
 {{PreviousMenuNext("Learn/JavaScript/Building_blocks/Looping_code","Learn/JavaScript/Building_blocks/Build_your_own_function", "Learn/JavaScript/Building_blocks")}}
-
-## In this module
-
-- [Making decisions in your code — conditionals](/en-US/docs/Learn/JavaScript/Building_blocks/conditionals)
-- [Looping code](/en-US/docs/Learn/JavaScript/Building_blocks/Looping_code)
-- **Functions — reusable blocks of code**
-- [Build your own function](/en-US/docs/Learn/JavaScript/Building_blocks/Build_your_own_function)
-- [Function return values](/en-US/docs/Learn/JavaScript/Building_blocks/Return_values)
-- [Introduction to events](/en-US/docs/Learn/JavaScript/Building_blocks/Events)
-- [Image gallery](/en-US/docs/Learn/JavaScript/Building_blocks/Image_gallery)

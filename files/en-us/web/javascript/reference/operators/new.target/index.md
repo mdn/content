@@ -2,12 +2,6 @@
 title: new.target
 slug: Web/JavaScript/Reference/Operators/new.target
 page-type: javascript-language-feature
-tags:
-  - Classes
-  - ECMAScript 2015
-  - JavaScript
-  - Language feature
-  - Reference
 browser-compat: javascript.operators.new_target
 ---
 

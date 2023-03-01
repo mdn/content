@@ -2,12 +2,6 @@
 title: Selection.addRange()
 slug: Web/API/Selection/addRange
 page-type: web-api-instance-method
-tags:
-  - API
-  - HTML Editing
-  - Method
-  - Reference
-  - Selection
 browser-compat: api.Selection.addRange
 ---
 

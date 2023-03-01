@@ -1,11 +1,9 @@
 ---
-title: 'Element: gesturechange event'
+title: "Element: gesturechange event"
 slug: Web/API/Element/gesturechange_event
 page-type: web-api-event
-tags:
-  - Event
-  - Non-standard
-  - Reference
+status:
+  - non-standard
 browser-compat: api.Element.gesturechange_event
 ---
 
@@ -20,9 +18,9 @@ It is a proprietary event specific to WebKit.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('gesturechange', (event) => {});
+addEventListener("gesturechange", (event) => {});
 
-ongesturechange = (event) => { };
+ongesturechange = (event) => {};
 ```
 
 ## Event type

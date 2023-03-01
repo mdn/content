@@ -2,12 +2,6 @@
 title: background
 slug: Web/CSS/background
 page-type: css-shorthand-property
-tags:
-  - CSS
-  - CSS Background
-  - CSS Property
-  - Reference
-  - recipe:css-shorthand-property
 browser-compat: css.properties.background
 ---
 
@@ -91,7 +85,7 @@ The following three lines of CSS are equivalent:
 ```css
 background: none;
 background: transparent;
-background: repeat scroll 0% 0%/auto padding-box border-box none transparent;
+background: repeat scroll 0% 0% / auto padding-box border-box none transparent;
 ```
 
 ## Accessibility concerns

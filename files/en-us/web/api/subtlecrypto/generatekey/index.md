@@ -2,13 +2,6 @@
 title: SubtleCrypto.generateKey()
 slug: Web/API/SubtleCrypto/generateKey
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - SubtleCrypto
-  - Web Crypto API
-  - generateKey
 browser-compat: api.SubtleCrypto.generateKey
 ---
 

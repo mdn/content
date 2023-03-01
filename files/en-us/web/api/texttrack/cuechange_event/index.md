@@ -2,15 +2,6 @@
 title: 'TextTrack: cuechange event'
 slug: Web/API/TextTrack/cuechange_event
 page-type: web-api-event
-tags:
-  - API
-  - Event
-  - Reference
-  - TextTrack
-  - WebVTT
-  - cuechange
-  - oncuechange
-  - track
 browser-compat: api.TextTrack.cuechange_event
 ---
 

@@ -2,13 +2,6 @@
 title: CacheStorage
 slug: Web/API/CacheStorage
 page-type: web-api-interface
-tags:
-  - API
-  - CacheStorage
-  - Interface
-  - Reference
-  - Service Workers
-  - ServiceWorker
 browser-compat: api.CacheStorage
 ---
 

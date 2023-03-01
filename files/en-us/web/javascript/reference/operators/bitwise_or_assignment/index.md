@@ -2,12 +2,6 @@
 title: Bitwise OR assignment (|=)
 slug: Web/JavaScript/Reference/Operators/Bitwise_OR_assignment
 page-type: javascript-operator
-tags:
-  - Assignment operator
-  - JavaScript
-  - Language feature
-  - Operator
-  - Reference
 browser-compat: javascript.operators.bitwise_or_assignment
 ---
 

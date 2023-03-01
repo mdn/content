@@ -2,11 +2,6 @@
 title: HTMLMediaElement.preservesPitch
 slug: Web/API/HTMLMediaElement/preservesPitch
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTML DOM
-  - HTMLMediaElement
-  - Property
 browser-compat: api.HTMLMediaElement.preservesPitch
 ---
 
@@ -51,14 +46,15 @@ div {
 ```js
 const audio = document.querySelector("audio");
 
-const rate = document.querySelector('#rate');
-rate.addEventListener('input', () => audio.playbackRate = rate.value );
+const rate = document.querySelector("#rate");
+rate.addEventListener("input", () => (audio.playbackRate = rate.value));
 
-const pitch = document.querySelector('#pitch');
-pitch.addEventListener('change', () => {
-  if ('preservesPitch' in audio) {
+const pitch = document.querySelector("#pitch");
+pitch.addEventListener("change", () => {
+  if ("preservesPitch" in audio) {
     audio.preservesPitch = pitch.checked;
-  } else if ('mozPreservesPitch' in audio) { //deprecated
+  } else if ("mozPreservesPitch" in audio) {
+    // deprecated
     audio.mozPreservesPitch = pitch.checked;
   }
 });

@@ -2,12 +2,6 @@
 title: Blob
 slug: Web/API/Blob
 page-type: web-api-interface
-tags:
-  - API
-  - Blob
-  - File API
-  - Interface
-  - Reference
 browser-compat: api.Blob
 ---
 

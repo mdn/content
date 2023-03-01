@@ -2,9 +2,6 @@
 title: ARIA page template
 slug: MDN/Writing_guidelines/Page_structures/Page_types/ARIA_Page_Template
 page-type: mdn-writing-guide
-tags:
-  - meta
-  - writing-guide
 ---
 
 {{MDNSidebar}}

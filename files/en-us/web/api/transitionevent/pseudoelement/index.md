@@ -2,14 +2,6 @@
 title: TransitionEvent.pseudoElement
 slug: Web/API/TransitionEvent/pseudoElement
 page-type: web-api-instance-property
-tags:
-  - API
-  - CSS
-  - CSS Transitions
-  - CSSOM
-  - Property
-  - Reference
-  - TransitionEvent
 browser-compat: api.TransitionEvent.pseudoElement
 ---
 

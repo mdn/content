@@ -2,13 +2,8 @@
 title: ":user-invalid (:-moz-ui-invalid)"
 slug: Web/CSS/:user-invalid
 page-type: css-pseudo-class
-tags:
-  - CSS
-  - CSS Selectors
-  - Pseudo-class
-  - Reference
-  - Selector
-  - Experimental
+status:
+  - experimental
 browser-compat: css.selectors.user-invalid
 ---
 
@@ -22,8 +17,10 @@ The `:user-invalid` pseudo-class must match an {{CSSxRef(":invalid")}}, {{CSSxRe
 
 ## Syntax
 
-```
-:user-invalid
+```css
+:user-invalid {
+  /* ... */
+}
 ```
 
 ## Examples

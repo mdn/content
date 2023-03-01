@@ -1,14 +1,6 @@
 ---
 title: "ARIA: combobox role"
 slug: Web/Accessibility/ARIA/Roles/combobox_role
-tags:
-  - Accessibility
-  - ARIA
-  - roles
-  - Reference
-  - ARIA roles
-  - composite widget role
-  - combobox
 spec-urls:
   - https://w3c.github.io/aria/#combobox,
   - https://w3c.github.io/aria-practices/#combobox

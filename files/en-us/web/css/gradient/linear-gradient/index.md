@@ -2,16 +2,6 @@
 title: linear-gradient()
 slug: Web/CSS/gradient/linear-gradient
 page-type: css-function
-tags:
-  - CSS
-  - CSS Function
-  - CSS Images
-  - Function
-  - Graphics
-  - Layout
-  - Reference
-  - Web
-  - gradient
 browser-compat: css.types.image.gradient.linear-gradient
 ---
 

@@ -2,14 +2,6 @@
 title: NavigationPreloadManager
 slug: Web/API/NavigationPreloadManager
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Navigation
-  - NavigationPreloadManager
-  - Offline
-  - Reference
-  - Service Workers
 browser-compat: api.NavigationPreloadManager
 ---
 
@@ -115,7 +107,9 @@ The code below shows how to set the value of the header directive to some variab
 
 ```js
 navigator.serviceWorker.ready
-  .then((registration) => registration.navigationPreload.setHeaderValue(newValue))
+  .then((registration) =>
+    registration.navigationPreload.setHeaderValue(newValue)
+  )
   .then(() => {
     console.log("Done!");
   });

@@ -2,11 +2,6 @@
 title: while
 slug: Web/JavaScript/Reference/Statements/while
 page-type: javascript-statement
-tags:
-  - JavaScript
-  - Language feature
-  - Statement
-  - while
 browser-compat: javascript.statements.while
 ---
 

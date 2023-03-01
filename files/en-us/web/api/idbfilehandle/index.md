@@ -2,14 +2,9 @@
 title: IDBFileHandle
 slug: Web/API/IDBFileHandle
 page-type: web-api-interface
-tags:
-  - API
-  - Files
-  - Interface
-  - Reference
-  - WebAPI
-  - Non-standard
-  - Deprecated
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.IDBFileHandle
 ---
 

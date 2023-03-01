@@ -1,15 +1,6 @@
 ---
 title: "Square tilemaps implementation: Scrolling maps"
 slug: Games/Techniques/Tilemaps/Square_tilemaps_implementation:_Scrolling_maps
-tags:
-  - Canvas
-  - Games
-  - JavaScript
-  - atlas
-  - scrolling
-  - spritesheet
-  - tilemap
-  - tiles
 ---
 
 {{GamesSidebar}}

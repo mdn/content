@@ -2,12 +2,6 @@
 title: Specificity
 slug: Web/CSS/Specificity
 page-type: guide
-tags:
-  - CSS
-  - Example
-  - Guide
-  - Reference
-  - Web
 spec-urls: https://drafts.csswg.org/selectors/#specificity-rules
 ---
 
@@ -134,7 +128,6 @@ h2:nth-last-of-type(n + 2) {
 h2:has(~ h2) {
   /* 0-0-2 */
 }
-
 
 div.outer p {
   /* 0-1-2 */

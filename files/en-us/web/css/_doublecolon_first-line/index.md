@@ -1,13 +1,7 @@
 ---
-title: '::first-line'
+title: "::first-line"
 slug: Web/CSS/::first-line
 page-type: css-pseudo-element
-tags:
-  - CSS
-  - Layout
-  - Pseudo-element
-  - Reference
-  - Selector
 browser-compat: css.selectors.first-line
 ---
 
@@ -35,8 +29,10 @@ Only a small subset of CSS properties can be used with the `::first-line` pseudo
 
 ## Syntax
 
-```
-::first-line
+```css
+::first-line {
+  /* ... */
+}
 ```
 
 ## Examples
@@ -50,8 +46,8 @@ Only a small subset of CSS properties can be used with the `::first-line` pseudo
 </p>
 
 <span>
-  The first line of this text will not receive special styling because it is
-  not a block-level element.
+  The first line of this text will not receive special styling because it is not
+  a block-level element.
 </span>
 ```
 

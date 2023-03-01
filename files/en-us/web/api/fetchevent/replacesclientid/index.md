@@ -2,15 +2,6 @@
 title: FetchEvent.replacesClientId
 slug: Web/API/FetchEvent/replacesClientId
 page-type: web-api-instance-property
-tags:
-  - API
-  - DOM
-  - FetchEvent
-  - Property
-  - Reference
-  - Service Workers
-  - Workers
-  - replacesClientId
 browser-compat: api.FetchEvent.replacesClientId
 ---
 

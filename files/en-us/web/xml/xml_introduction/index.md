@@ -1,11 +1,6 @@
 ---
 title: XML introduction
 slug: Web/XML/XML_introduction
-tags:
-  - Beginner
-  - Introduction
-  - NeedsContent
-  - XML
 ---
 
 {{QuickLinksWithSubpages("/en-US/docs/Web/XML")}}

@@ -2,13 +2,6 @@
 title: 'OfflineAudioContext: complete event'
 slug: Web/API/OfflineAudioContext/complete_event
 page-type: web-api-event
-tags:
-  - API
-  - Event
-  - OfflineAudioContext
-  - Reference
-  - Web Audio API
-  - complete
 browser-compat: api.OfflineAudioContext.complete_event
 ---
 

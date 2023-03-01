@@ -2,12 +2,6 @@
 title: Element.before()
 slug: Web/API/Element/before
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - Method
-  - Node
-  - Reference
 browser-compat: api.Element.before
 ---
 

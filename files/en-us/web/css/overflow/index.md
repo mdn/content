@@ -2,16 +2,6 @@
 title: overflow
 slug: Web/CSS/overflow
 page-type: css-shorthand-property
-tags:
-  - CSS
-  - CSS Box Model
-  - CSS Property
-  - Clipping
-  - Layout
-  - Reference
-  - overflow
-  - recipe:css-shorthand-property
-  - scrolling
 browser-compat: css.properties.overflow
 ---
 

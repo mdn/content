@@ -2,27 +2,6 @@
 title: WebGLRenderingContext.makeXRCompatible()
 slug: Web/API/WebGLRenderingContext/makeXRCompatible
 page-type: web-api-instance-method
-tags:
-  - 3D
-  - API
-  - AR
-  - Context
-  - Mixed
-  - Reality
-  - Reference
-  - VR
-  - Virtual
-  - WebGL
-  - WebGL API
-  - WebGLRenderingContext
-  - WebXR
-  - WebXR API
-  - WebXR Device API
-  - XR
-  - XRWebGLLayer
-  - augmented
-  - makeXRCompatible
-  - Method
 browser-compat: api.WebGLRenderingContext.makeXRCompatible
 ---
 

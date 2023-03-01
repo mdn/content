@@ -2,13 +2,6 @@
 title: console.warn()
 slug: Web/API/console/warn
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - Debugging
-  - Method
-  - Web Development
-  - web console
 browser-compat: api.console.warn
 ---
 

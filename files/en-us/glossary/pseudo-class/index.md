@@ -2,10 +2,6 @@
 title: Pseudo-class
 slug: Glossary/Pseudo-class
 page-type: glossary-definition
-tags:
-  - CSS
-  - CodingScripting
-  - Selector
 ---
 
 In CSS, a **pseudo-class** selector targets elements depending on their state rather than on information from the document tree. For example, the selector `a`{{ cssxref(":visited") }} applies styles only to links that the user has already followed.

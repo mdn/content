@@ -2,14 +2,6 @@
 title: Notification.title
 slug: Web/API/Notification/title
 page-type: web-api-instance-property
-tags:
-  - API
-  - Notification
-  - Notifications
-  - Notifications API
-  - Property
-  - Reference
-  - Title
 browser-compat: api.Notification.title
 ---
 
@@ -27,15 +19,15 @@ A string.
 ## Examples
 
 ```js
-function spawnNotification(theBody,theIcon,theTitle) {
+function spawnNotification(theBody, theIcon, theTitle) {
   const options = {
-      body: theBody,
-      icon: theIcon
-  }
+    body: theBody,
+    icon: theIcon,
+  };
 
-  const n = new Notification(theTitle,options);
+  const n = new Notification(theTitle, options);
 
-  console.log(n.title)
+  console.log(n.title);
 }
 ```
 

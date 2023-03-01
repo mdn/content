@@ -2,20 +2,6 @@
 title: RTCIceCandidate.candidate
 slug: Web/API/RTCIceCandidate/candidate
 page-type: web-api-instance-property
-tags:
-  - API
-  - Candidate
-  - Candidates
-  - ICE
-  - Media
-  - Property
-  - RTCIceCandidate
-  - Read-only
-  - Reference
-  - SDP
-  - WebRTC
-  - WebRTC API
-  - a-line
 browser-compat: api.RTCIceCandidate.candidate
 ---
 

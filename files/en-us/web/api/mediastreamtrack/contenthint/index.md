@@ -2,13 +2,6 @@
 title: MediaStreamTrack.contentHint
 slug: Web/API/MediaStreamTrack/contentHint
 page-type: web-api-instance-property
-tags:
-  - Media Capture and Streams
-  - MediaStreamTrack
-  - Property
-  - Read-only
-  - Reference
-  - WebRTC
 browser-compat: api.MediaStreamTrack.contentHint
 ---
 

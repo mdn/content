@@ -1,9 +1,6 @@
 ---
 title: Using dns-prefetch
 slug: Web/Performance/dns-prefetch
-tags:
-  - Web Performance
-  - dns-prefetch
 ---
 
 {{QuickLinksWithSubPages("Web/Performance")}}

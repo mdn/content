@@ -2,12 +2,6 @@
 title: HTMLMetaElement.content
 slug: Web/API/HTMLMetaElement/content
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTML DOM
-  - HTMLMetaElement
-  - Property
-  - Reference
 browser-compat: api.HTMLMetaElement.content
 ---
 

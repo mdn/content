@@ -2,17 +2,6 @@
 title: MediaStreamTrack
 slug: Web/API/MediaStreamTrack
 page-type: web-api-interface
-tags:
-  - API
-  - Audio
-  - Interface
-  - Media
-  - Media Capture and Streams API
-  - Media Streams API
-  - MediaStreamTrack
-  - Reference
-  - Video
-  - WebRTC
 browser-compat: api.MediaStreamTrack
 ---
 

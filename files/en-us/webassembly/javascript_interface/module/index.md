@@ -1,12 +1,6 @@
 ---
 title: WebAssembly.Module
 slug: WebAssembly/JavaScript_interface/Module
-tags:
-  - Class
-  - JavaScript
-  - Module
-  - Reference
-  - WebAssembly
 browser-compat: javascript.builtins.WebAssembly.Module
 ---
 

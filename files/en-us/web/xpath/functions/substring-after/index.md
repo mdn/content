@@ -1,9 +1,6 @@
 ---
 title: substring-after
 slug: Web/XPath/Functions/substring-after
-tags:
-  - XSLT
-  - XSLT_Reference
 ---
 
 {{ XsltRef() }}

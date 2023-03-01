@@ -2,20 +2,6 @@
 title: RTCIceCandidate.relatedPort
 slug: Web/API/RTCIceCandidate/relatedPort
 page-type: web-api-instance-property
-tags:
-  - API
-  - Address
-  - Candidate
-  - ICE
-  - IP
-  - Media
-  - Property
-  - RTCIceCandidate
-  - Reference
-  - SDP
-  - WebRTC
-  - WebRTC API
-  - relatedPort
 browser-compat: api.RTCIceCandidate.relatedPort
 ---
 
