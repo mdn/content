@@ -159,7 +159,7 @@ Inherited into roles:
 - HTML {{HTMLElement('option')}} element
 - HTML {{HTMLElement('input')}} element
 - {{htmlattrxref("multiple")}} attribute
-- [`aria-selected`](/en-US/docs/Web/Accessibility/Attributes/aria-selected)
+- [`aria-selected`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-selected)
 
 <section id="Quick_links">
 <strong><a href="/en-US/docs/Web/Accessibility/ARIA/Attributes">WAI-ARIA states and properties</a></strong>
