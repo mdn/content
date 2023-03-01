@@ -522,15 +522,15 @@ You can find more information about WebGPU error handling in the explainer — s
 - {{domxref("GPUCommandEncoder")}}
   - : Represents a command encoder, used to encode commands to be issued to the GPU.
 - {{domxref("GPUComputePassEncoder")}}
-  - : Encodes commands issued related to controlling the compute shader stage, as issued by a {{domxref("GPUComputePipeline")}}. Part of the overall encoding activity of a {{domxref("GPUCommandEncoder")}}.
+  - : Encodes commands related to controlling the compute shader stage, as issued by a {{domxref("GPUComputePipeline")}}. Part of the overall encoding activity of a {{domxref("GPUCommandEncoder")}}.
 - {{domxref("GPUQueue")}}
-  - : controls execution of encoded commends on the GPU.
+  - : controls execution of encoded commands on the GPU.
 - {{domxref("GPURenderBundle")}}
   - : A container for pre-recorded bundles of commands (see {{domxref("GPURenderBundleEncoder")}}).
 - {{domxref("GPURenderBundleEncoder")}}
   - : Used to pre-record bundles of commands. These can be reused in {{domxref("GPURenderPassEncoder")}}s via the {{domxref("GPURenderPassEncoder.executeBundles", "executeBundles()")}} method, as many times as required.
 - {{domxref("GPURenderPassEncoder")}}
-  - : Encodes commands issued related to controlling the vertex and fragment shader stages, as issued by a {{domxref("GPURenderPipeline")}}. Part of the overall encoding activity of a {{domxref("GPUCommandEncoder")}}.
+  - : Encodes commands related to controlling the vertex and fragment shader stages, as issued by a {{domxref("GPURenderPipeline")}}. Part of the overall encoding activity of a {{domxref("GPUCommandEncoder")}}.
 - {{domxref("GPURenderPipeline")}}
   - : Controls the vertex and fragment shader stages and can be used in a {{domxref("GPURenderPassEncoder")}} or {{domxref("GPURenderBundleEncoder")}}.
 
@@ -558,13 +558,13 @@ You can find more information about WebGPU error handling in the explainer — s
 - {{domxref("GPUUncapturedErrorEvent")}}
   - : The event object type for the {{domxref("GPUDevice")}} {{domxref("GPUDevice.uncapturederror_event", "uncapturederror")}} event.
 - {{domxref("GPUValidationError")}}
-  - : One of the types of errors surfaced by {{domxref("GPUDevice.popErrorScope")}} and the {{domxref("GPUDevice.uncapturederror_event", "uncapturederror")}} event. Describes an application error indicating that an operation did not pass the app's validation constraints.
+  - : One of the types of errors surfaced by {{domxref("GPUDevice.popErrorScope")}} and the {{domxref("GPUDevice.uncapturederror_event", "uncapturederror")}} event. Describes an application error indicating that an operation did not pass the WebGPU API's validation constraints.
 
 ## Examples
 
 - [Basic compute demo](https://webgpu-basic-compute.glitch.me/)
 - [Basic render demo](https://webgpu-basic-render.glitch.me/)
-- [WebGPU samples](https://austin-eng.com/webgpu-samples/)
+- [WebGPU samples](https://webgpu.github.io/webgpu-samples/)
 
 ## Specifications
 
@@ -576,6 +576,6 @@ You can find more information about WebGPU error handling in the explainer — s
 
 ## See also
 
-- [WebGPU best practices](https://toji.github.io/webgpu-best-practices/)
+- [WebGPU best practices](https://toji.dev/webgpu-best-practices/)
 - [WebGPU explainer](https://gpuweb.github.io/gpuweb/explainer)
 - [WebGPU — All of the cores, none of the canvas](https://surma.dev/things/webgpu/)
