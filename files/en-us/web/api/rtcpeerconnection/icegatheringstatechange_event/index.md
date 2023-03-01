@@ -59,10 +59,10 @@ pc.addEventListener(
 
     switch (connection.iceGatheringState) {
       case "gathering":
-        /* collection of candidates has begun */
+        // collection of candidates has begun
         break;
       case "complete":
-        /* collection of candidates is finished */
+        // collection of candidates is finished
         break;
     }
   },

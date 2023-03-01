@@ -45,7 +45,7 @@ pc.addEventListener(
         })
       )
       .catch((err) => {
-        /* handle error */
+        // handle error
       });
   },
   false
@@ -67,7 +67,7 @@ pc.onnegotiationneeded = (ev) => {
       })
     )
     .catch((err) => {
-      /* handle error */
+      // handle error
     });
 };
 ```

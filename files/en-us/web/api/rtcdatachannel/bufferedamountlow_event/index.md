@@ -32,10 +32,8 @@ This example sets up a handler for `bufferedamountlow` to request more data any 
 ```js
 let pc = new RTCPeerConnection();
 let dc = pc.createDataChannel("SendFile");
-let source =
-  /* source data object */
-
-  (dc.bufferedAmountLowThreshold = 65536);
+// source data object
+let source = (dc.bufferedAmountLowThreshold = 65536);
 
 pc.addEventListener(
   "bufferedamountlow",
