@@ -115,7 +115,7 @@ worker.addEventListener("message", console.log);
 self.postMessage("hello!");
 ```
 
-This is also useful to calculate paths for other workers, such as [service workers](/en-US/docs/Web/API/ServiceWorker) and [shared workers](/en-US/docs/Web/API/SharedWorker). However, if you are using a relative path to calculate the URL of a worker, keep in mind that the directory of the resolved path determines its [registration scope](/en-US/docs/Web/API/ServiceWorkerRegistration/scope) by default (although a different scope can be specified [during registration](/en-US/docs/Web/API/ServiceWorkerContainer/register)).
+This is also useful to calculate paths for other workers, such as [service workers](/en-US/docs/Web/API/ServiceWorker) and [shared workers](/en-US/docs/Web/API/SharedWorker). However, if you are using a relative path to calculate the URL of a service worker, keep in mind that the directory of the resolved path determines its [registration scope](/en-US/docs/Web/API/ServiceWorkerRegistration/scope) by default (although a different scope can be specified [during registration](/en-US/docs/Web/API/ServiceWorkerContainer/register)).
 
 ## Specifications
 
