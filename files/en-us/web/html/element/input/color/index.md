@@ -132,8 +132,8 @@ The HTML is fairly straightforward — a couple of paragraphs of descriptive mat
   <code>&lt;input type="color"&gt;</code> control.
 </p>
 
-<label for="colorPicker">Color:</label>
-<input type="color" value="#ff0000" id="colorPicker" />
+<label for="color-picker">Color:</label>
+<input type="color" value="#ff0000" id="color-picker" />
 
 <p>
   Watch the paragraph colors change when you adjust the color picker. As you
