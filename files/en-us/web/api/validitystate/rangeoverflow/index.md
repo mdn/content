@@ -30,7 +30,7 @@ if `value > 40`, `rangeOverflow` will be true. When `true`, the element matches 
 ## See also
 
 - {{domxref("ValidityState.rangeUnderflow")}}
-- [Constraint validation](/en-US/docs/Web/Guide/HTML/Constraint_validation)
+- [Constraint validation](/en-US/docs/Web/HTML/Constraint_validation)
 - [Forms: Data form validation](/en-US/docs/Learn/Forms/Form_validation)
 - [`step` attribute](/en-US/docs/Web/HTML/Attributes/step)
 - [`min` attribute](/en-US/docs/Web/HTML/Attributes/min)

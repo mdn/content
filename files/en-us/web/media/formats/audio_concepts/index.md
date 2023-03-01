@@ -1,21 +1,6 @@
 ---
 title: Digital audio concepts
 slug: Web/Media/Formats/Audio_concepts
-tags:
-  - AAC
-  - Audio
-  - Codecs
-  - Coding
-  - Compressed
-  - Guide
-  - MPEG
-  - Media
-  - Music
-  - compression
-  - formats
-  - mp3
-  - mp4
-  - sound
 ---
 
 {{QuickLinksWithSubpages("/en-US/docs/Web/Media")}}

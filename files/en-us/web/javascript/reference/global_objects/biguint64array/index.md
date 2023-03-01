@@ -33,8 +33,12 @@ _Inherits static methods from its parent {{jsxref("TypedArray")}}_.
 
 _Also inherits instance properties from its parent {{jsxref("TypedArray")}}_.
 
+These properties are defined on `BigUint64Array.prototype` and shared by all `BigUint64Array` instances.
+
 - {{jsxref("TypedArray.BYTES_PER_ELEMENT", "BigUint64Array.prototype.BYTES_PER_ELEMENT")}}
   - : Returns a number value of the element size. `8` in the case of a `BigUint64Array`.
+- {{jsxref("Object/constructor", "BigUint64Array.prototype.constructor")}}
+  - : The constructor function that created the instance object. For `BigUint64Array` instances, the initial value is the {{jsxref("BigUint64Array/BigUint64Array", "BigUint64Array")}} constructor.
 
 ## Instance methods
 

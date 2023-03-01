@@ -40,8 +40,8 @@ One of the following:
 
 ```js
 // Set the frame of TableA to 'border'
-const t = document.getElementById('TableA');
-t.frame  = "border";
+const t = document.getElementById("TableA");
+t.frame = "border";
 t.border = "2px";
 ```
 

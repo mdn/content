@@ -56,7 +56,7 @@ jobs:
 
       - name: Unzip what was downloaded
         run: |
-          unzip build.zip -d build
+          7z x build.zip -obuild -bb1
 
       - uses: actions/checkout@v3
         with:

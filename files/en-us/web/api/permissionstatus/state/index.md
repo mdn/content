@@ -23,12 +23,16 @@ One of the following:
 ## Examples
 
 ```js
-navigator.permissions.query({ name: 'geolocation' }).then((permissionStatus) => {
-  console.log(`geolocation permission state is ${permissionStatus.state}`);
-  permissionStatus.onchange = () => {
-    console.log(`geolocation permission status has changed to ${permissionStatus.state}`);
-  };
-});
+navigator.permissions
+  .query({ name: "geolocation" })
+  .then((permissionStatus) => {
+    console.log(`geolocation permission state is ${permissionStatus.state}`);
+    permissionStatus.onchange = () => {
+      console.log(
+        `geolocation permission status has changed to ${permissionStatus.state}`
+      );
+    };
+  });
 ```
 
 ## Specifications

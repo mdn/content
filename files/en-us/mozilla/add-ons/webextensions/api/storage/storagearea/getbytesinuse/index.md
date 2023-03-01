@@ -22,7 +22,7 @@ Gets the amount of storage space, in bytes, used one or more items being stored 
 
 This function only exists in browser.storage.sync
 It does not exist in browser.storage.local
-See <https://bugzilla.mozilla.org/show_bug.cgi?id=1385832>
+See <https://bugzil.la/1385832>
 
 This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
@@ -34,7 +34,7 @@ let gettingSpace = browser.storage.<storageType>.getBytesInUse(
 )
 ```
 
-`<storageType>` can only be {{WebExtAPIRef("storage.sync")}}, not {{WebExtAPIRef("storage.local")}} because of [this bug](https://bugzilla.mozilla.org/show_bug.cgi?id=1385832).
+`<storageType>` can only be {{WebExtAPIRef("storage.sync")}}, not {{WebExtAPIRef("storage.local")}} because of [this bug](https://bugzil.la/1385832).
 
 ### Parameters
 

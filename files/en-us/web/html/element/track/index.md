@@ -2,18 +2,6 @@
 title: '<track>: The Embed Text Track element'
 slug: Web/HTML/Element/track
 page-type: html-element
-tags:
-  - Accessibility
-  - Cues
-  - Element
-  - HTML
-  - HTML embedded content
-  - Multimedia
-  - Reference
-  - TextTrack
-  - Web
-  - a11y
-  - track
 browser-compat: html.elements.track
 ---
 
@@ -27,7 +15,7 @@ The **`<track>`** [HTML](/en-US/docs/Web/HTML) element is used as a child of the
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories"
+        <a href="/en-US/docs/Web/HTML/Content_categories"
           >Content categories</a
         >
       </th>

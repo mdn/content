@@ -23,7 +23,8 @@ This is covered in more detail in the articles [WebRTC connectivity](/en-US/docs
 
 ```js-nolint
 addIceCandidate(candidate)
-addIceCandidate(candidate, successCallback)
+
+addIceCandidate(candidate, successCallback) // deprecated
 addIceCandidate(candidate, successCallback, failureCallback) // deprecated
 ```
 
@@ -105,7 +106,7 @@ addIceCandidate(candidate, successCallback, failureCallback) // deprecated
 In older code and documentation, you may see a callback-based version of this function.
 This has been deprecated and its use is **strongly** discouraged. You
 should update any existing code to use the {{jsxref("Promise")}}-based version of
-`addIceCandidate()` instead. The parameters for this form of
+`addIceCandidate()` instead. The parameters for the older form of
 `addIceCandidate()` are described below, to aid in updating existing code.
 
 - `successCallback` {{deprecated_inline}}

@@ -22,8 +22,8 @@ the negotiation process.
 createAnswer()
 createAnswer(options)
 
-createAnswer(successCallback, failureCallback)
-createAnswer(successCallback, failureCallback, options)
+createAnswer(successCallback, failureCallback) // deprecated
+createAnswer(successCallback, failureCallback, options) // deprecated
 ```
 
 ### Parameters
@@ -36,7 +36,7 @@ createAnswer(successCallback, failureCallback, options)
 In older code and documentation, you may see a callback-based version of this function.
 This has been deprecated and its use is **strongly** discouraged. You
 should update any existing code to use the {{jsxref("Promise")}}-based version of
-`createAnswer()` instead. The parameters for this form of
+`createAnswer()` instead. The parameters for the older form of
 `createAnswer()` are described below, to aid in updating existing code.
 
 - `successCallback` {{deprecated_inline}}

@@ -1,13 +1,6 @@
 ---
-title: "aria-relevant"
+title: aria-relevant
 slug: Web/Accessibility/ARIA/Attributes/aria-relevant
-tags:
-  - Accessibility
-  - ARIA
-  - ARIA attribute
-  - ARIA property
-  - aria-relevant
-  - Reference
 spec-urls: https://w3c.github.io/aria/#aria-relevant
 ---
 

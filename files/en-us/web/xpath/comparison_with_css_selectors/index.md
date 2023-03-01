@@ -1,13 +1,6 @@
 ---
 title: Comparison of CSS Selectors and XPath
 slug: Web/XPath/Comparison_with_CSS_selectors
-tags:
-  - CSS
-  - Draft
-  - NeedsContent
-  - Reference
-  - Selectors
-  - XPath
 ---
 
 <section id="Quick_links">

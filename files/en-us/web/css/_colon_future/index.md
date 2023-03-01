@@ -2,6 +2,8 @@
 title: ":future"
 slug: Web/CSS/:future
 page-type: css-pseudo-class
+status:
+  - experimental
 browser-compat: css.selectors.future
 ---
 

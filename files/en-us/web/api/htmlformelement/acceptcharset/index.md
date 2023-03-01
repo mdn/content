@@ -18,7 +18,7 @@ A string.
 ## Examples
 
 ```js
-let inputs = document.forms['myform'].acceptCharset;
+let inputs = document.forms["myform"].acceptCharset;
 ```
 
 ## Specifications

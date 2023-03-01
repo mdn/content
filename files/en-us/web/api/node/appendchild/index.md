@@ -50,7 +50,7 @@ node before appending it to some other node. This means that a node can't be in 
 `appendChild()` returns the newly appended node, instead of the parent node. This means you can append the new node as soon as it's created without losing reference to it:
 
 ```js
-const paragraph = document.body.appendChild(document.createElement('p'));
+const paragraph = document.body.appendChild(document.createElement("p"));
 // You can append more elements to the paragraph later
 ```
 
@@ -60,9 +60,9 @@ On the other hand, you cannot use `appendChild()` in a [fluent API](https://en.w
 // This doesn't append three paragraphs:
 // the three elements will be nested instead of siblings
 document.body
-  .appendChild(document.createElement('p'))
-  .appendChild(document.createElement('p'))
-  .appendChild(document.createElement('p'));
+  .appendChild(document.createElement("p"))
+  .appendChild(document.createElement("p"))
+  .appendChild(document.createElement("p"));
 ```
 
 ## Example
@@ -82,10 +82,10 @@ In this example, we attempt to create a nested DOM structure using as few tempor
 ```js
 const fragment = document.createDocumentFragment();
 const li = fragment
-  .appendChild(document.createElement('section'))
-  .appendChild(document.createElement('ul'))
-  .appendChild(document.createElement('li'));
-li.textContent = 'hello world';
+  .appendChild(document.createElement("section"))
+  .appendChild(document.createElement("ul"))
+  .appendChild(document.createElement("li"));
+li.textContent = "hello world";
 
 document.body.appendChild(fragment);
 ```

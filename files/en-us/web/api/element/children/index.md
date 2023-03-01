@@ -26,7 +26,7 @@ If the element has no element children, then `children` is an empty list with a
 ## Examples
 
 ```js
-const myElement = document.getElementById('foo');
+const myElement = document.getElementById("foo");
 for (const child of myElement.children) {
   console.log(child.tagName);
 }

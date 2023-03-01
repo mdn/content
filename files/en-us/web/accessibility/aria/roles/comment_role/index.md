@@ -1,12 +1,6 @@
 ---
 title: "ARIA: comment role"
 slug: Web/Accessibility/ARIA/Roles/comment_role
-tags:
-  - ARIA
-  - ARIA Role
-  - Comment
-  - Reference
-  - annotations
 ---
 
 The `comment` [landmark role](/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques#landmark_roles) semantically denotes a comment/reaction to some content on the page, or to a previous comment.

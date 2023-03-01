@@ -18,7 +18,7 @@ Moving backward and forward through the user's history is done using the {{DOMxR
 To move backward through history:
 
 ```js
-window.history.back()
+window.history.back();
 ```
 
 This acts exactly as if the user clicked on the <kbd><strong>Back</strong></kbd> button in their browser toolbar.
@@ -26,7 +26,7 @@ This acts exactly as if the user clicked on the <kbd><strong>Back</strong></kbd>
 Similarly, you can move forward (as if the user clicked the <kbd><strong>Forward</strong></kbd> button), like this:
 
 ```js
-window.history.forward()
+window.history.forward();
 ```
 
 ### Moving to a specific point in history
@@ -36,13 +36,13 @@ You can use the {{DOMxRef("History.go","go()")}} method to load a specific page 
 To move back one page (the equivalent of calling {{DOMxRef("History.back","back()")}}):
 
 ```js
-window.history.go(-1)
+window.history.go(-1);
 ```
 
 To move forward a page, just like calling {{DOMxRef("History.forward","forward()")}}:
 
 ```js
-window.history.go(1)
+window.history.go(1);
 ```
 
 Similarly, you can move forward 2 pages by passing `2`, and so forth.
@@ -53,14 +53,14 @@ Another use for the `go()` method is to refresh the current page by either passi
 // The following statements
 // both have the effect of
 // refreshing the page
-window.history.go(0)
-window.history.go()
+window.history.go(0);
+window.history.go();
 ```
 
 You can determine the number of pages in the history stack by looking at the value of the `length` property:
 
 ```js
-let numberOfEntries = window.history.length
+let numberOfEntries = window.history.length;
 ```
 
 ## Interfaces
@@ -74,15 +74,17 @@ The following example assigns a listener to the `onpopstate` property. And then 
 
 ```js
 window.onpopstate = (event) => {
-  alert(`location: ${document.location}, state: ${JSON.stringify(event.state)}`)
-}
+  alert(
+    `location: ${document.location}, state: ${JSON.stringify(event.state)}`
+  );
+};
 
-history.pushState({page: 1}, "title 1", "?page=1")
-history.pushState({page: 2}, "title 2", "?page=2")
-history.replaceState({page: 3}, "title 3", "?page=3")
-history.back() // alerts "location: http://example.com/example.html?page=1, state: {"page":1}"
-history.back() // alerts "location: http://example.com/example.html, state: null"
-history.go(2)  // alerts "location: http://example.com/example.html?page=3, state: {"page":3}"
+history.pushState({ page: 1 }, "title 1", "?page=1");
+history.pushState({ page: 2 }, "title 2", "?page=2");
+history.replaceState({ page: 3 }, "title 3", "?page=3");
+history.back(); // alerts "location: http://example.com/example.html?page=1, state: {"page":1}"
+history.back(); // alerts "location: http://example.com/example.html, state: null"
+history.go(2); // alerts "location: http://example.com/example.html?page=3, state: {"page":3}"
 ```
 
 ## Specifications

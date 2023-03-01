@@ -26,22 +26,24 @@ logs changes as they occur.
 
 ```js
 function logConnectionType() {
-  let connectionType = 'not supported';
-  let downlinkMax = 'not supported';
+  let connectionType = "not supported";
+  let downlinkMax = "not supported";
 
-  if ('connection' in navigator) {
+  if ("connection" in navigator) {
     connectionType = navigator.connection.effectiveType;
 
-    if ('downlinkMax' in navigator.connection) {
+    if ("downlinkMax" in navigator.connection) {
       downlinkMax = navigator.connection.downlinkMax;
     }
   }
 
-  console.log(`Current connection type: ${connectionType} (downlink max: ${downlinkMax})`);
+  console.log(
+    `Current connection type: ${connectionType} (downlink max: ${downlinkMax})`
+  );
 }
 
 logConnectionType();
-navigator.connection.addEventListener('change', logConnectionType);
+navigator.connection.addEventListener("change", logConnectionType);
 ```
 
 ## Specifications

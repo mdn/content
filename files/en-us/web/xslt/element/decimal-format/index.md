@@ -1,11 +1,6 @@
 ---
 title: <xsl:decimal-format>
 slug: Web/XSLT/Element/decimal-format
-tags:
-  - Element
-  - Reference
-  - XSLT
-  - decimal-format
 ---
 
 {{ XsltRef() }}

@@ -38,8 +38,7 @@ new array with any matching entries removed.
 
 ```js
 function removeMatches(fileEntry, entriesArr) {
-
-  let newArr = entriesArr.filter((entry) => !fileEntry.isSameEntry(entry))
+  let newArr = entriesArr.filter((entry) => !fileEntry.isSameEntry(entry));
 
   return newArr;
 }

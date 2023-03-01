@@ -27,13 +27,13 @@ fired using the `Notification()` constructor.
 
 ```js
 const options = {
-  body: 'Do you like my body?',
-  vibrate: [200, 100, 200]
-}
+  body: "Your code submission has received 3 new review comments.",
+  vibrate: [200, 100, 200],
+};
 
-const n = new Notification('Test notification',options);
+const n = new Notification("New review activity", options);
 
-console.log(n.vibrate) // should log [200,100,200]
+console.log(n.vibrate); // "[200, 100, 200]"
 ```
 
 ## Specifications

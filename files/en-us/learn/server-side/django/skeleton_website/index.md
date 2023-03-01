@@ -1,16 +1,6 @@
 ---
-title: 'Django Tutorial Part 2: Creating a skeleton website'
+title: "Django Tutorial Part 2: Creating a skeleton website"
 slug: Learn/Server-side/Django/skeleton_website
-tags:
-  - Article
-  - Beginner
-  - CodingScripting
-  - Guide
-  - Intro
-  - Learn
-  - Tutorial
-  - django
-  - server-side
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Tutorial_local_library_website", "Learn/Server-side/Django/Models", "Learn/Server-side/Django")}}

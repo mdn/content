@@ -1,13 +1,6 @@
 ---
 title: Getting started
 slug: Web/Guide/AJAX/Getting_Started
-tags:
-  - AJAX
-  - API
-  - Advanced
-  - JavaScript
-  - WebMechanics
-  - XMLHttpRequest
 ---
 
 {{QuickLinksWithSubpages("/en-US/docs/Web/Guide/AJAX")}}
@@ -167,8 +160,6 @@ In this example:
 - The event handler calls the `makeRequest()` function;
 - The request is made and then (`onreadystatechange`) the execution is passed to `alertContents()`;
 - `alertContents()` checks if the response was received and OK, then `alert()`s the contents of the `test.html` file.
-
-> **Note:** If you're sending a request to a piece of code that will return XML, rather than a static HTML file, you must set response headers to work in Internet Explorer. If you do not set header `Content-Type: application/xml`, IE will throw a JavaScript "Object Expected" error after the line where you tried to access an XML element.
 
 > **Note:** If you do not set header `Cache-Control: no-cache` the browser will cache the response and never re-submit the request, making debugging challenging. You can also add an always-different GET parameter, like a timestamp or random number (see [bypassing the cache](/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest#bypassing_the_cache))
 

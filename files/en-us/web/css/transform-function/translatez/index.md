@@ -2,13 +2,6 @@
 title: translateZ()
 slug: Web/CSS/transform-function/translateZ
 page-type: css-function
-tags:
-  - 3D
-  - CSS
-  - CSS Function
-  - CSS Transforms
-  - Function
-  - Reference
 browser-compat: css.types.transform-function.translateZ
 ---
 
