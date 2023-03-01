@@ -31,7 +31,7 @@ For example, {{domxref("AbortController")}} would be added as shown below:
 ---
 title: AbortController
 slug: Web/API/AbortController
-…
+# …
 browser-compat: api.AbortController
 ---
 ```
