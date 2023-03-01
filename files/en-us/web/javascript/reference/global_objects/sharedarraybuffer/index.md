@@ -80,9 +80,9 @@ The WebAssembly Threads proposal also defines a new set of [atomic](https://gith
 
 ### Growing SharedArrayBuffers
 
-`SharedArrayBuffer`s can be made growable by including the `maxByteLength` option when calling the {{jsxref("SharedArrayBuffer.SharedArrayBuffer", "constructor", "", "nocode")}}. You can query whether a `SharedArrayBuffer` is growable and what its maximum size is by accessing its {{jsxref("SharedArrayBuffer.prototype.growable", "growable")}} and {{jsxref("SharedArrayBuffer.prototype.maxByteLength", "maxByteLength")}} properties, respectively. You can assign a new size to a growable `SharedArrayBuffer` with a {{jsxref("SharedArrayBuffer.prototype.grow()", "grow()")}} call.
+`SharedArrayBuffer` objects can be made growable by including the `maxByteLength` option when calling the {{jsxref("SharedArrayBuffer/SharedArrayBuffer", "SharedArrayBuffer()")}} constructor. You can query whether a `SharedArrayBuffer` is growable and what its maximum size is by accessing its {{jsxref("SharedArrayBuffer/growable", "growable")}} and {{jsxref("SharedArrayBuffer/maxByteLength", "maxByteLength")}} properties, respectively. You can assign a new size to a growable `SharedArrayBuffer` with a {{jsxref("SharedArrayBuffer/grow()", "grow()")}} call. New bytes are initialized to 0.
 
-These additions have made growing `SharedArrayBuffer`s more efficient — previously you had to make a copy with a new size. It also gives JavaScript parity with WebAssembly in this regard (WASM linear memory can be resized with [`WebAssembly.Memory.prototype.grow()`](/en-US/docs/WebAssembly/JavaScript_interface/Memory/grow)).
+These features make growing `SharedArrayBuffer`s more efficient — otherwise, you have to make a copy of the buffer with a new size. It also gives JavaScript parity with WebAssembly in this regard (WASM linear memory can be resized with [`WebAssembly.Memory.prototype.grow()`](/en-US/docs/WebAssembly/JavaScript_interface/Memory/grow)).
 
 For security reasons, `SharedArrayBuffer`s cannot be reduced in size, only grown.
 
@@ -96,7 +96,7 @@ For security reasons, `SharedArrayBuffer`s cannot be reduced in size, only grown
 These properties are defined on `SharedArrayBuffer.prototype` and shared by all `SharedArrayBuffer` instances.
 
 - {{jsxref("SharedArrayBuffer.prototype.byteLength")}}
-  - : The size, in bytes, of the array. This is established when the array is constructed and can be changed using the {{jsxref("SharedArrayBuffer.prototype.grow()")}} method.
+  - : The size, in bytes, of the array. This is established when the array is constructed and can only be changed using the {{jsxref("SharedArrayBuffer.prototype.grow()")}} method if the `SharedArrayBuffer` is growable.
 - {{jsxref("SharedArrayBuffer.prototype.maxByteLength")}} {{experimental_inline}}
   - : The read-only maximum length, in bytes, that the `SharedArrayBuffer` can be grown to. This is established when the array is constructed and cannot be changed.
 - {{jsxref("SharedArrayBuffer.prototype.growable")}} {{experimental_inline}}

@@ -37,7 +37,7 @@ resize(newLength)
 
 ## Description
 
-The `resize()` method resizes an `ArrayBuffer` to the size specified by the `newLength` parameter, provided that the `ArrayBuffer` is [resizable](/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer/resizable) and the new size is less than or equal to the {{jsxref("ArrayBuffer/maxByteLength", "maxByteLength")}} of the `ArrayBuffer`.
+The `resize()` method resizes an `ArrayBuffer` to the size specified by the `newLength` parameter, provided that the `ArrayBuffer` is [resizable](/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer/resizable) and the new size is less than or equal to the {{jsxref("ArrayBuffer/maxByteLength", "maxByteLength")}} of the `ArrayBuffer`. New bytes are initialized to 0.
 
 Note that you can use `resize()` to shrink as well as grow an `ArrayBuffer` — it is permissible for `newLength` to be smaller than the `ArrayBuffer`'s current {{jsxref("ArrayBuffer/byteLength", "byteLength")}}.
 
