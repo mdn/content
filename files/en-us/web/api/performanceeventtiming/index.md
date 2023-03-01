@@ -168,23 +168,23 @@ const observer = new PerformanceObserver((list) => {
     // Input delay (before processing event)
     const delay = entry.processingStart - entry.startTime;
 
-    // Synchronous event processing time 
+    // Synchronous event processing time
     // (between start and end dispatch)
     const eventHandlerTime = entry.processingEnd - entry.processingStart;
-  console.log(`Total duration: ${duration}`);
-  console.log(`Event delay: ${delay}`);
-  console.log(`Event handler duration: ${time}`);
+    console.log(`Total duration: ${duration}`);
+    console.log(`Event delay: ${delay}`);
+    console.log(`Event handler duration: ${time}`);
   });
 });
 
 // Register the observer for events
-observer.observe({type: "event", buffered: true});
+observer.observe({ type: "event", buffered: true });
 ```
 
 You can also set a different [`durationThreshold`](/en-US/docs/Web/API/PerformanceObserver/observe#durationthreshold). The default is 104ms and the minimum possible duration threshold is 16ms.
 
 ```js
-observer.observe({type: "event", durationThreshold: 16, buffered: true});
+observer.observe({ type: "event", durationThreshold: 16, buffered: true });
 ```
 
 ### Reporting the First Input Delay (FID)
@@ -196,19 +196,23 @@ The {{Glossary("first input delay")}} or FID, measures the time from when a user
 // https://github.com/w3c/page-visibility/issues/29
 // NOTE: ideally this check would be performed in the document <head>
 // to avoid cases where the visibility state changes before this code runs.
-let firstHiddenTime = document.visibilityState === 'hidden' ? 0 : Infinity;
-document.addEventListener('visibilitychange', (event) => {
-  firstHiddenTime = Math.min(firstHiddenTime, event.timeStamp);
-}, {once: true});
+let firstHiddenTime = document.visibilityState === "hidden" ? 0 : Infinity;
+document.addEventListener(
+  "visibilitychange",
+  (event) => {
+    firstHiddenTime = Math.min(firstHiddenTime, event.timeStamp);
+  },
+  { once: true }
+);
 
 // Sends the passed data to an analytics endpoint. This code
 // uses `/analytics`; you can replace it with your own URL.
 function sendToAnalytics(data) {
   const body = JSON.stringify(data);
-  // Use `navigator.sendBeacon()` if available, 
+  // Use `navigator.sendBeacon()` if available,
   // falling back to `fetch()`.
-  (navigator.sendBeacon && navigator.sendBeacon('/analytics', body)) ||
-      fetch('/analytics', {body, method: 'POST', keepalive: true});
+  (navigator.sendBeacon && navigator.sendBeacon("/analytics", body)) ||
+    fetch("/analytics", { body, method: "POST", keepalive: true });
 }
 
 // Use a try/catch instead of feature detecting `first-input`
@@ -223,7 +227,7 @@ try {
       const fid = entry.processingStart - entry.startTime;
 
       // Report the FID value to an analytics endpoint.
-      sendToAnalytics({fid});
+      sendToAnalytics({ fid });
     }
   }
 
@@ -236,7 +240,7 @@ try {
   // Observe entries of type `first-input`, including buffered entries,
   // i.e. entries that occurred before calling `observe()` below.
   po.observe({
-    type: 'first-input',
+    type: "first-input",
     buffered: true,
   });
 } catch (e) {

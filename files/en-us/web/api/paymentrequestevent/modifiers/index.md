@@ -34,7 +34,7 @@ An array of `PaymentDetailsModifier` objects containing modifiers for payment de
 ## Examples
 
 ```js
-self.addEventListener('paymentrequest', e => {
+self.addEventListener("paymentrequest", (e) => {
   console.log(e.modifiers);
 });
 ```

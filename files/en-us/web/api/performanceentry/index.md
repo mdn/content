@@ -50,27 +50,23 @@ The following example creates `PerformanceEntry` objects that are of the types {
 The `PerformanceMark` and `PerformanceMeasure` subclasses inherit the `duration`, `entryType`, `name`, and `startTime` properties from `PerformanceEntry` and set them to their appropriate values.
 
 ```js
-// Place at a location in the code that starts login 
+// Place at a location in the code that starts login
 performance.mark("login-started");
 
-// Place at a location in the code that finishes login 
+// Place at a location in the code that finishes login
 performance.mark("login-finished");
 
 // Measure login duration
-performance.measure(
-  "login-duration",
-  "login-started",
-  "login-finished"
-);
+performance.measure("login-duration", "login-started", "login-finished");
 
 function perfObserver(list, observer) {
-  list.getEntries().forEach((entry) =>  {
+  list.getEntries().forEach((entry) => {
     if (entry.entryType === "mark") {
       console.log(`${entry.name}'s startTime: ${entry.startTime}`);
-    };
+    }
     if (entry.entryType === "measure") {
       console.log(`${entry.name}'s duration: ${entry.duration}`);
-    };
+    }
   });
 }
 const observer = new PerformanceObserver(perfObserver);
