@@ -433,6 +433,6 @@ Please refer to the various [pseudo-classes](/en-US/docs/Web/CSS/Pseudo-classes)
 
 ## See also
 
-- [`size`](/en-US/docs/Web/CSS/@page/size)
-- {{Cssxref("page")}}
+- The `@page` [`size`](/en-US/docs/Web/CSS/@page/size) descriptor
+- The {{Cssxref("page")}} property
 - See the [\[META\] CSS Paged Media Module Level 3](https://bugzilla.mozilla.org/show_bug.cgi?id=286443) ticket in Bugzilla for tracking progress on the subject (page-based counters, etc.)
