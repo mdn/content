@@ -2,14 +2,6 @@
 title: WindowClient.visibilityState
 slug: Web/API/WindowClient/visibilityState
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - Service Workers
-  - ServiceWorker
-  - WindowClient
-  - visibilityState
 browser-compat: api.WindowClient.visibilityState
 ---
 

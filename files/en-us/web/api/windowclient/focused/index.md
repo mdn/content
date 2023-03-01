@@ -2,14 +2,6 @@
 title: WindowClient.focused
 slug: Web/API/WindowClient/focused
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - Service Workers
-  - ServiceWorker
-  - WindowClient
-  - focused
 browser-compat: api.WindowClient.focused
 ---
 

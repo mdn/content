@@ -2,12 +2,6 @@
 title: InputDeviceInfo.getCapabilities()
 slug: Web/API/InputDeviceInfo/getCapabilities
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - getCapabilities
-  - InputDeviceInfo
 browser-compat: api.InputDeviceInfo.getCapabilities
 ---
 
@@ -75,12 +69,11 @@ If `device` is an `InputDeviceInfo` object, then `getCapabilities()` will return
 // Get permission to access audio or video devices
 navigator.mediaDevices.getUserMedia({ audio: true, video: true });
 
-navigator.mediaDevices.enumerateDevices()
-  .then((devices) => {
-    devices.forEach((device) => {
-      console.log(device.getCapabilities()); // a MediaTrackCapabilities object.
-    });
-  })
+navigator.mediaDevices.enumerateDevices().then((devices) => {
+  devices.forEach((device) => {
+    console.log(device.getCapabilities()); // a MediaTrackCapabilities object.
+  });
+});
 ```
 
 ## Specifications

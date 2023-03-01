@@ -2,17 +2,6 @@
 title: Textures from code
 slug: Web/API/WebGL_API/By_example/Textures_from_code
 page-type: guide
-tags:
-  - Beginner
-  - Example
-  - Graphics
-  - Learn
-  - Procedural Texturing
-  - Shaders
-  - Textures
-  - Texturing
-  - Tutorial
-  - WebGL
 ---
 
 {{PreviousNext("Learn/WebGL/By_example/Hello_vertex_attributes","Learn/WebGL/By_example/Video_textures")}}

@@ -2,14 +2,6 @@
 title: ElementInternals.ariaRoleDescription
 slug: Web/API/ElementInternals/ariaRoleDescription
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - ariaRoleDescription
-  - AriaAttributes
-  - AriaMixin
-  - ElementInternals
 browser-compat: api.ElementInternals.ariaRoleDescription
 ---
 

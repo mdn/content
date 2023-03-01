@@ -2,13 +2,8 @@
 title: 'VirtualKeyboard: geometrychange event'
 slug: Web/API/VirtualKeyboard/geometrychange_event
 page-type: web-api-event
-tags:
-  - API
-  - Event
-  - Reference
-  - VirtualKeyboard
-  - geometrychange
-  - Experimental
+status:
+  - experimental
 browser-compat: api.VirtualKeyboard.geometrychange_event
 ---
 

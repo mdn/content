@@ -2,15 +2,6 @@
 title: Element.setAttribute()
 slug: Web/API/Element/setAttribute
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - Element
-  - Method
-  - NeedsBrowserCompatibility
-  - NeedsSpecTable
-  - Reference
-  - setAttribute
 browser-compat: api.Element.setAttribute
 ---
 

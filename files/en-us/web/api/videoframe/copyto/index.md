@@ -2,13 +2,8 @@
 title: VideoFrame.copyTo()
 slug: Web/API/VideoFrame/copyTo
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - copyTo
-  - VideoFrame
-  - Experimental
+status:
+  - experimental
 browser-compat: api.VideoFrame.copyTo
 ---
 

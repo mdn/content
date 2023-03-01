@@ -2,12 +2,8 @@
 title: WindowControlsOverlayGeometryChangeEvent()
 slug: Web/API/WindowControlsOverlayGeometryChangeEvent/WindowControlsOverlayGeometryChangeEvent
 page-type: web-api-constructor
-tags:
-  - API
-  - Constructor
-  - DOM Events
-  - WindowControlsOverlayGeometryChangeEvent
-  - Experimental
+status:
+  - experimental
 browser-compat: api.WindowControlsOverlayGeometryChangeEvent.WindowControlsOverlayGeometryChangeEvent
 ---
 

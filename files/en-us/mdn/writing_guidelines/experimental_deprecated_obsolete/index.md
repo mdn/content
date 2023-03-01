@@ -2,9 +2,6 @@
 title: Experimental, deprecated, and obsolete
 slug: MDN/Writing_guidelines/Experimental_deprecated_obsolete
 page-type: mdn-writing-guide
-tags:
-  - meta
-  - writing-guide
 ---
 
 {{MDNSidebar}}

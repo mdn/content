@@ -2,24 +2,6 @@
 title: WebXR performance guide
 slug: Web/API/WebXR_Device_API/Performance
 page-type: guide
-tags:
-  - API
-  - Guide
-  - Performance
-  - Quality
-  - Scale
-  - Scaling
-  - WebXR
-  - WebXR API
-  - WebXR Device API
-  - detail
-  - effects
-  - frame rate
-  - frameRate
-  - rendering
-  - resolution
-  - size
-  - speed
 ---
 
 {{DefaultAPISidebar("WebXR Device API")}}

@@ -2,12 +2,6 @@
 title: rotate3d()
 slug: Web/CSS/transform-function/rotate3d
 page-type: css-function
-tags:
-  - CSS
-  - CSS Function
-  - CSS Transforms
-  - Function
-  - Reference
 browser-compat: css.types.transform-function.rotate3d
 ---
 

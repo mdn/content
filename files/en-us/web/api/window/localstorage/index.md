@@ -2,16 +2,6 @@
 title: Window.localStorage
 slug: Web/API/Window/localStorage
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Read-only
-  - Reference
-  - Storage
-  - Web Storage
-  - Window
-  - WindowLocalStorage
-  - localStorage
 browser-compat: api.Window.localStorage
 ---
 

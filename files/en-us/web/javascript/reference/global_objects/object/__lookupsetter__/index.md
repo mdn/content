@@ -2,13 +2,8 @@
 title: Object.prototype.__lookupSetter__()
 slug: Web/JavaScript/Reference/Global_Objects/Object/__lookupSetter__
 page-type: javascript-instance-method
-tags:
-  - Deprecated
-  - JavaScript
-  - Method
-  - Object
-  - Prototype
-  - Polyfill
+status:
+  - deprecated
 browser-compat: javascript.builtins.Object.lookupSetter
 ---
 

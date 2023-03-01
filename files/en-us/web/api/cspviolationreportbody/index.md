@@ -2,8 +2,6 @@
 title: CSPViolationReportBody
 slug: Web/API/CSPViolationReportBody
 page-type: web-api-interface
-tags:
-
 browser-compat: api.CSPViolationReportBody
 ---
 

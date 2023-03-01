@@ -2,14 +2,8 @@
 title: WebTransport.ready
 slug: Web/API/WebTransport/ready
 page-type: web-api-instance-property
-tags:
-  - API
-  - Experimental
-  - Property
-  - ready
-  - Reference
-  - WebTransport
-  - WebTransport API
+status:
+  - experimental
 browser-compat: api.WebTransport.ready
 ---
 

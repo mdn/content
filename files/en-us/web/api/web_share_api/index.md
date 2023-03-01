@@ -2,14 +2,6 @@
 title: Web Share API
 slug: Web/API/Web_Share_API
 page-type: web-api-overview
-tags:
-  - API
-  - Apps
-  - Web Share
-  - Web Share API
-  - Landing
-  - Overview
-  - Reference
 browser-compat:
   - api.Navigator.share
   - api.Navigator.canShare

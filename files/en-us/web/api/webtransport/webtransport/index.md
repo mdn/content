@@ -2,13 +2,8 @@
 title: WebTransport()
 slug: Web/API/WebTransport/WebTransport
 page-type: web-api-constructor
-tags:
-  - API
-  - Constructor
-  - Experimental
-  - Reference
-  - WebTransport
-  - WebTransport API
+status:
+  - experimental
 browser-compat: api.WebTransport.WebTransport
 ---
 

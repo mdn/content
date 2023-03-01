@@ -2,14 +2,6 @@
 title: Intl.DateTimeFormat.supportedLocalesOf()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/supportedLocalesOf
 page-type: javascript-static-method
-tags:
-  - DateTimeFormat
-  - Internationalization
-  - Intl
-  - JavaScript
-  - Localization
-  - Method
-  - Reference
 browser-compat: javascript.builtins.Intl.DateTimeFormat.supportedLocalesOf
 ---
 

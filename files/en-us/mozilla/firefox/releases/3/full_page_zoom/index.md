@@ -1,10 +1,6 @@
 ---
 title: Full page zoom
 slug: Mozilla/Firefox/Releases/3/Full_page_zoom
-tags:
-  - Extensions
-  - Firefox 3
-  - XUL
 ---
 
 {{FirefoxSidebar}}
@@ -40,5 +36,5 @@ docViewer.fullZoom = zoom;
 ### References
 
 - Page zoom extension by Ted Mielczarek [fullpagezoom.xpi](https://ted.mielczarek.org/code/mozilla/fullpagezoom.xpi) for latest Firefox 3.0 nightlies
-- The [bugzilla bug](https://bugzilla.mozilla.org/show_bug.cgi?id=4821) about fullZoom.
+- The [bugzilla bug](https://bugzil.la/4821) about fullZoom.
 - `nsIMarkupDocumentViewer` Interface documentation.

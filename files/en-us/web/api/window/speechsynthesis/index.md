@@ -2,12 +2,6 @@
 title: Window.speechSynthesis
 slug: Web/API/Window/speechSynthesis
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - SpeechSynthesis
-  - Window
 browser-compat: api.Window.speechSynthesis
 ---
 

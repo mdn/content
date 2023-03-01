@@ -2,12 +2,6 @@
 title: scheduler
 slug: Web/API/Window/scheduler
 page-type: web-api-instance-property
-tags:
-  - Property
-  - Reference
-  - scheduler
-  - Window
-  - WorkerGlobalScope
 browser-compat: api.scheduler
 ---
 

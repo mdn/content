@@ -2,13 +2,6 @@
 title: WritableStreamDefaultController
 slug: Web/API/WritableStreamDefaultController
 page-type: web-api-interface
-tags:
-  - API
-  - Fetch
-  - Interface
-  - Reference
-  - Streams
-  - WritableStreamDefaultController
 browser-compat: api.WritableStreamDefaultController
 ---
 

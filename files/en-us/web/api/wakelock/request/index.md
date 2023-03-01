@@ -2,13 +2,8 @@
 title: WakeLock.request()
 slug: Web/API/WakeLock/request
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - Screen Wake Lock API
-  - WakeLock
-  - Experimental
+status:
+  - experimental
 browser-compat: api.WakeLock.request
 ---
 

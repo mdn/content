@@ -2,15 +2,6 @@
 title: "Window: blur event"
 slug: Web/API/Window/blur_event
 page-type: web-api-event
-tags:
-  - API
-  - Event
-  - FocusEvent
-  - Reference
-  - Web
-  - Window
-  - blur
-  - onblur
 browser-compat: api.Window.blur_event
 ---
 
@@ -98,7 +89,7 @@ window.addEventListener("focus", play);
 
 {{Compat}}
 
-The value of {{DOMxRef("Document.activeElement")}} varies across browsers while this event is being handled ({{bug(452307)}}): IE10 sets it to the element that the focus will move to, while Firefox and Chrome often set it to the `body` of the document.
+The value of {{DOMxRef("Document.activeElement")}} varies across browsers while this event is being handled ([Firefox bug 452307](https://bugzil.la/452307)): IE10 sets it to the element that the focus will move to, while Firefox and Chrome often set it to the `body` of the document.
 
 ## See also
 

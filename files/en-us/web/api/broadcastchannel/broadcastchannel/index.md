@@ -2,13 +2,6 @@
 title: BroadcastChannel()
 slug: Web/API/BroadcastChannel/BroadcastChannel
 page-type: web-api-constructor
-tags:
-  - API
-  - Broadcast Channel API
-  - BroadcastChannel
-  - Constructor
-  - HTML API
-  - Reference
 browser-compat: api.BroadcastChannel.BroadcastChannel
 ---
 

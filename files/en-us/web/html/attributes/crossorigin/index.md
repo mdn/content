@@ -2,14 +2,6 @@
 title: 'HTML attribute: crossorigin'
 slug: Web/HTML/Attributes/crossorigin
 page-type: html-attribute
-tags:
-  - Advanced
-  - Attribute
-  - CORS
-  - HTML
-  - NeedsContent
-  - Reference
-  - Security
 spec-urls: https://html.spec.whatwg.org/multipage/urls-and-fetching.html#cors-settings-attributes
 browser-compat:
   - html.elements.img.crossorigin
@@ -64,7 +56,7 @@ By default (that is, when the attribute is not specified), CORS is not used at a
   </tbody>
 </table>
 
-> **Note:** Prior to Firefox 83 the `crossorigin` attribute was not supported for `rel="icon"`. There is also [an open issue for Chrome](https://bugs.chromium.org/p/chromium/issues/detail?id=1121645).
+> **Note:** Prior to Firefox 83 the `crossorigin` attribute was not supported for `rel="icon"`. There is also [an open issue for Chrome](https://crbug.com/1121645).
 
 ### Example: `crossorigin` with the `<script>` element
 

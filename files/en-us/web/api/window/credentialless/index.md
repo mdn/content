@@ -2,15 +2,9 @@
 title: Window.credentialless
 slug: Web/API/Window/credentialless
 page-type: web-api-instance-property
-tags:
-  - API
-  - credentialless
-  - Property
-  - Read-Only
-  - Reference
-  - Window
-  - Experimental
-  - Non-standard
+status:
+  - experimental
+  - non-standard
 browser-compat: api.Window.credentialless
 ---
 

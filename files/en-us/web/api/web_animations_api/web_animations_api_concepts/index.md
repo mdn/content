@@ -2,15 +2,6 @@
 title: Web Animations API Concepts
 slug: Web/API/Web_Animations_API/Web_Animations_API_Concepts
 page-type: guide
-tags:
-  - Animations
-  - Beginner
-  - CSS
-  - Guide
-  - JavaScript
-  - animate
-  - concepts
-  - web animations api
 ---
 
 {{DefaultAPISidebar("Web Animations")}}

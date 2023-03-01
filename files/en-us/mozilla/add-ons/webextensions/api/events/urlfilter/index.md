@@ -1,6 +1,7 @@
 ---
 title: events.UrlFilter
 slug: Mozilla/Add-ons/WebExtensions/API/events/UrlFilter
+page-type: webextension-api-type
 tags:
   - API
   - Add-ons

@@ -2,11 +2,6 @@
 title: WebGLShaderPrecisionFormat.rangeMin
 slug: Web/API/WebGLShaderPrecisionFormat/rangeMin
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - WebGL
 browser-compat: api.WebGLShaderPrecisionFormat.rangeMin
 ---
 

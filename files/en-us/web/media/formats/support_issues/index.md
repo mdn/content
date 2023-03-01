@@ -1,19 +1,6 @@
 ---
 title: Handling media support issues in web content
 slug: Web/Media/Formats/Support_issues
-tags:
-  - Audio
-  - Guide
-  - HTMLAudioElement
-  - HTMLMediaElement
-  - HTMLVideoElement
-  - Intermediate
-  - Media
-  - Sources
-  - Video
-  - WebRTC
-  - fallbacks
-  - sound
 ---
 
 One of the realities of working with audio and video presentation and manipulation on the web is that there are a number of media formats available, of varying degrees of popularity and with a variety of capabilities. The availability of choices is good for the user, in that they can choose the format that suits their needs best. There is a drawback, however: because there are so many to choose from, with so many different kinds of licenses and design principles involved, each web browser developer is left to its own devices when deciding which media file types and codecs to support.

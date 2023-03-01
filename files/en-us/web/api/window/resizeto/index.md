@@ -2,12 +2,6 @@
 title: Window.resizeTo()
 slug: Web/API/Window/resizeTo
 page-type: web-api-instance-method
-tags:
-  - API
-  - CSSOM View
-  - Method
-  - Reference
-  - Window
 browser-compat: api.Window.resizeTo
 ---
 

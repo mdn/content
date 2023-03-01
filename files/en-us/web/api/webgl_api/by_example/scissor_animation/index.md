@@ -2,15 +2,6 @@
 title: Scissor animation
 slug: Web/API/WebGL_API/By_example/Scissor_animation
 page-type: guide
-tags:
-  - Animation
-  - Beginner
-  - Example
-  - Graphics
-  - Learn
-  - Scissoring
-  - Tutorial
-  - WebGL
 ---
 
 {{PreviousNext("Learn/WebGL/By_example/Boilerplate_1","Learn/WebGL/By_example/Raining_rectangles")}}

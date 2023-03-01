@@ -2,15 +2,8 @@
 title: Using VR controllers with WebVR
 slug: Web/API/WebVR_API/Using_VR_controllers_with_WebVR
 page-type: guide
-tags:
-  - Experimental
-  - Gamepad API
-  - Guide
-  - VR
-  - Virtual Reality
-  - WebGL
-  - WebVR
-  - controllers
+status:
+  - experimental
 ---
 
 {{APIRef("WebVR API")}}{{Deprecated_Header}}

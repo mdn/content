@@ -2,10 +2,6 @@
 title: WebGLShader
 slug: Web/API/WebGLShader
 page-type: web-api-interface
-tags:
-  - Reference
-  - WebGL
-  - WebGLShader
 browser-compat: api.WebGLShader
 ---
 

@@ -2,18 +2,16 @@
 title: CSS Custom Highlight API
 slug: Web/API/CSS_Custom_Highlight_API
 page-type: web-api-overview
-tags:
-  - API
-  - CSS Custom Highlight
-  - Reference
-spec-urls: https://w3c.github.io/csswg-drafts/css-highlight-api-1/
+status:
+  - experimental
 browser-compat:
   - api.Highlight
   - api.HighlightRegistry
   - css.selectors.highlight
+spec-urls: https://w3c.github.io/csswg-drafts/css-highlight-api-1/
 ---
 
-{{DefaultAPISidebar("CSS Custom Highlight API")}}
+{{DefaultAPISidebar("CSS Custom Highlight API")}}{{SeeCompatTable}}
 
 The CSS Custom Highlight API provides a mechanism for styling arbitrary text ranges on a document by using JavaScript to create the ranges, and CSS to style them.
 
@@ -103,7 +101,7 @@ The final step is to style the registered highlights. This is done by using the 
 
 ## Interfaces
 
-- {{domxref("Highlight")}}
+- {{domxref("Highlight")}} {{Experimental_Inline}}
   - : This interface is used to represent a collection of ranges to be styled on a document.
 - {{domxref("HighlightRegistry")}}
   - : Accessible via {{domxref("CSS.highlights")}}, this {{jsxref("Map")}}-like object is used to register highlights with custom identifiers.
@@ -119,25 +117,25 @@ This example shows how to use the CSS Custom Highlight API to highlight search r
 The HTML code snippet below defines a search field and an article with a few paragraphs of text:
 
 ```html
-<label>Search within text <input id="query" type="text"></label>
+<label>Search within text <input id="query" type="text" /></label>
 <article>
   <p>
     Maxime debitis hic, delectus perspiciatis laborum molestiae labore,
-    deleniti, quam consequatur iure veniam alias voluptas nisi quo.
-    Dolorem eaque alias, quo vel quas repudiandae architecto deserunt
-    quidem, sapiente laudantium nulla.
+    deleniti, quam consequatur iure veniam alias voluptas nisi quo. Dolorem
+    eaque alias, quo vel quas repudiandae architecto deserunt quidem, sapiente
+    laudantium nulla.
   </p>
   <p>
-    Maiores odit molestias, necessitatibus doloremque dolor illum
-    reprehenderit provident nostrum laboriosam iste, tempore perferendis!
-    Ab porro neque esse voluptas libero necessitatibus fugiat, ex, minus
-    atque deserunt veniam molestiae tempora? Vitae.
+    Maiores odit molestias, necessitatibus doloremque dolor illum reprehenderit
+    provident nostrum laboriosam iste, tempore perferendis! Ab porro neque esse
+    voluptas libero necessitatibus fugiat, ex, minus atque deserunt veniam
+    molestiae tempora? Vitae.
   </p>
   <p>
-    Dolorum facilis voluptate eaque eius similique ducimus dignissimos
-    assumenda quos architecto. Doloremque deleniti non exercitationem
-    rerum quam alias harum, nisi obcaecati corporis temporibus vero sapiente
-    voluptatum est quibusdam id ipsa.
+    Dolorum facilis voluptate eaque eius similique ducimus dignissimos assumenda
+    quos architecto. Doloremque deleniti non exercitationem rerum quam alias
+    harum, nisi obcaecati corporis temporibus vero sapiente voluptatum est
+    quibusdam id ipsa.
   </p>
 </article>
 ```
@@ -169,7 +167,7 @@ query.addEventListener("input", () => {
     return;
   }
 
-  // Clear the HighlightRegistry to remove the 
+  // Clear the HighlightRegistry to remove the
   // previous search results.
   CSS.highlights.clear();
 
@@ -195,7 +193,7 @@ query.addEventListener("input", () => {
         startPos = index + str.length;
       }
 
-      // Create a range object for each instance of 
+      // Create a range object for each instance of
       // str we found in the text node.
       return indices.map((index) => {
         const range = new Range();

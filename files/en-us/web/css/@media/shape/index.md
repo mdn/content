@@ -2,12 +2,8 @@
 title: shape
 slug: Web/CSS/@media/shape
 page-type: css-media-feature
-tags:
-  - "@media"
-  - CSS
-  - Reference
-  - Experimental
-  - media feature
+status:
+  - experimental
 spec-urls: https://drafts.csswg.org/css-round-display/#shape-media-feature
 ---
 

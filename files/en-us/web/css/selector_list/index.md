@@ -2,11 +2,6 @@
 title: Selector list
 slug: Web/CSS/Selector_list
 page-type: css-combinator
-tags:
-  - CSS
-  - Selector
-  - Selector Lists
-  - Selectors
 browser-compat: css.selectors.list
 ---
 

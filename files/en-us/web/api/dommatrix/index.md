@@ -2,15 +2,6 @@
 title: DOMMatrix (WebKitCSSMatrix)
 slug: Web/API/DOMMatrix
 page-type: web-api-interface
-tags:
-  - API
-  - DOMMatrix
-  - Experimental
-  - Geometry
-  - Geometry Interfaces
-  - Interface
-  - Reference
-  - matrix
 browser-compat:
   - api.DOMMatrix
   - api.WebKitCSSMatrix

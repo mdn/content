@@ -2,13 +2,8 @@
 title: WorkerNavigator.serial
 slug: Web/API/WorkerNavigator/serial
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - serial
-  - WorkerNavigator
-  - Experimental
+status:
+  - experimental
 browser-compat: api.WorkerNavigator.serial
 ---
 

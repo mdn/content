@@ -2,17 +2,6 @@
 title: Worklet.addModule()
 slug: Web/API/Worklet/addModule
 page-type: web-api-instance-method
-tags:
-  - API
-  - Background
-  - Houdini
-  - Method
-  - Multiprocessor
-  - Processes
-  - Reference
-  - Tasks
-  - Worklets
-  - addModule
 browser-compat: api.Worklet.addModule
 ---
 
@@ -80,7 +69,7 @@ CSS.paintWorklet.addModule(
 );
 ```
 
-Once a {{domxref('paintWorklet')}} is included, the CSS {{cssxref('image/paint()')}} function
+Once a {{domxref('paintWorklet')}} is included, the CSS {{cssxref("image/paint", "paint()")}} function
 can be used to include the image created by the worklet:
 
 ```css

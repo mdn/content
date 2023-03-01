@@ -2,13 +2,6 @@
 title: TextDecoder
 slug: Web/API/TextDecoder
 page-type: web-api-interface
-tags:
-  - API
-  - DOM
-  - Encoding
-  - Interface
-  - Reference
-  - TextDecoder
 browser-compat: api.TextDecoder
 ---
 

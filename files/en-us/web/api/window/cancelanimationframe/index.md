@@ -2,14 +2,6 @@
 title: window.cancelAnimationFrame()
 slug: Web/API/Window/cancelAnimationFrame
 page-type: web-api-instance-method
-tags:
-  - API
-  - Animation
-  - DOM
-  - Method
-  - Reference
-  - Window
-  - Polyfill
 browser-compat: api.Window.cancelAnimationFrame
 ---
 

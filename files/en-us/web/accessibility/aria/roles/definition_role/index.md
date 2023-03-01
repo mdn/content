@@ -1,13 +1,6 @@
 ---
 title: "ARIA: definition role"
 slug: Web/Accessibility/ARIA/Roles/definition_role
-tags:
-  - Accessibility
-  - ARIA
-  - roles
-  - Reference
-  - ARIA roles
-  - document structure role
 spec-urls: https://w3c.github.io/aria/#definition
 ---
 
@@ -20,10 +13,11 @@ The `definition` ARIA role can be included on an element that is a definition of
 ```html
 <p>
   <span role="term">Mansplaining</span>,
-  <span role="definition">a portmanteau of "man" and "explain",
-    is the patronizing act of explaining without being asked to do so,
-    to someone already learned on the topic, often
-    after someone has already explained it</span>.
+  <span role="definition"
+    >a portmanteau of "man" and "explain", is the patronizing act of explaining
+    without being asked to do so, to someone already learned on the topic, often
+    after someone has already explained it</span
+  >.
 </p>
 ```
 
@@ -31,10 +25,9 @@ The `definition` ARIA role can be included on an element that is a definition of
 
 ```html
 <p>
-  <dfn>Mansplaining</dfn>, a portmanteau of "man" and
-  "explain", is the patronizing act of explaining without
-  being asked to do so, to someone already learned on the
-  topic, often after someone has already explained it.
+  <dfn>Mansplaining</dfn>, a portmanteau of "man" and "explain", is the
+  patronizing act of explaining without being asked to do so, to someone already
+  learned on the topic, often after someone has already explained it.
 </p>
 ```
 

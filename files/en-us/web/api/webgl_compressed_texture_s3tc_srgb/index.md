@@ -2,11 +2,6 @@
 title: WEBGL_compressed_texture_s3tc_srgb
 slug: Web/API/WEBGL_compressed_texture_s3tc_srgb
 page-type: webgl-extension
-tags:
-  - API
-  - Reference
-  - WebGL
-  - WebGL extension
 browser-compat: api.WEBGL_compressed_texture_s3tc_srgb
 ---
 

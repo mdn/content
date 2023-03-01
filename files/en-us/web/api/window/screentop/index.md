@@ -2,14 +2,6 @@
 title: Window.screenTop
 slug: Web/API/Window/screenTop
 page-type: web-api-instance-property
-tags:
-  - API
-  - CSSOM View
-  - Property
-  - Read-only
-  - Reference
-  - Window
-  - screenTop
 browser-compat: api.Window.screenTop
 ---
 

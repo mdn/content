@@ -2,13 +2,8 @@
 title: WakeLock
 slug: Web/API/WakeLock
 page-type: web-api-interface
-tags:
-  - Interface
-  - Reference
-  - Screen Wake Lock API
-  - Wake Lock
-  - screen
-  - Experimental
+status:
+  - experimental
 browser-compat: api.WakeLock
 ---
 

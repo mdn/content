@@ -2,12 +2,6 @@
 title: WebGLRenderingContext.sampleCoverage()
 slug: Web/API/WebGLRenderingContext/sampleCoverage
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.sampleCoverage
 ---
 

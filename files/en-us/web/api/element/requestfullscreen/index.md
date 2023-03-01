@@ -2,20 +2,6 @@
 title: Element.requestFullscreen()
 slug: Web/API/Element/requestFullscreen
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - Element
-  - Full
-  - Fullscreen API
-  - Graphics
-  - Method
-  - Reference
-  - Video
-  - full screen
-  - fullscreen
-  - requestFullscreen
-  - screen
 browser-compat: api.Element.requestFullscreen
 ---
 
@@ -125,7 +111,9 @@ function toggleFullscreen() {
 
   if (!document.fullscreenElement) {
     elem.requestFullscreen().catch((err) => {
-      alert(`Error attempting to enable fullscreen mode: ${err.message} (${err.name})`);
+      alert(
+        `Error attempting to enable fullscreen mode: ${err.message} (${err.name})`
+      );
     });
   } else {
     document.exitFullscreen();
@@ -154,9 +142,14 @@ In this example, the entire document is placed into fullscreen mode by calling
 ```js
 let elem = document.documentElement;
 
-elem.requestFullscreen({ navigationUI: "show" }).then(() => {}).catch((err) => {
-  alert(`An error occurred while trying to switch into fullscreen mode: ${err.message} (${err.name})`);
-});
+elem
+  .requestFullscreen({ navigationUI: "show" })
+  .then(() => {})
+  .catch((err) => {
+    alert(
+      `An error occurred while trying to switch into fullscreen mode: ${err.message} (${err.name})`
+    );
+  });
 ```
 
 The promise's resolve handler does nothing, but if the promise is rejected, an error

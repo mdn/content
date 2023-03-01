@@ -2,11 +2,6 @@
 title: WebGL2RenderingContext
 slug: Web/API/WebGL2RenderingContext
 page-type: web-api-interface
-tags:
-  - API
-  - Reference
-  - WebGL
-  - WebGL2
 browser-compat: api.WebGL2RenderingContext
 ---
 

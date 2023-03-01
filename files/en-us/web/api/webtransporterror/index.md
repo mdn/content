@@ -2,13 +2,8 @@
 title: WebTransportError
 slug: Web/API/WebTransportError
 page-type: web-api-interface
-tags:
-  - API
-  - Experimental
-  - Interface
-  - Reference
-  - WebTransport API
-  - WebTransportError
+status:
+  - experimental
 browser-compat: api.WebTransportError
 ---
 

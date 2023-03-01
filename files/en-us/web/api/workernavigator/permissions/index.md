@@ -2,15 +2,8 @@
 title: WorkerNavigator.permissions
 slug: Web/API/WorkerNavigator/permissions
 page-type: web-api-instance-property
-tags:
-  - API
-  - Experimental
-  - Permissions
-  - Property
-  - Reference
-  - Web Workers
-  - WorkerNavigator
-  - Workers
+status:
+  - experimental
 browser-compat: api.WorkerNavigator.permissions
 ---
 

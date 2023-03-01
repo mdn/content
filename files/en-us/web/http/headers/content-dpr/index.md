@@ -1,14 +1,9 @@
 ---
 title: Content-DPR
 slug: Web/HTTP/Headers/Content-DPR
-tags:
-  - Content-DPR
-  - Client hints
-  - HTTP
-  - HTTP Header
-  - Response header
-  - Deprecated
-  - Non-standard
+status:
+  - deprecated
+  - non-standard
 browser-compat: http.headers.Content-DPR
 ---
 

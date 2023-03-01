@@ -2,15 +2,8 @@
 title: MSManipulationEvent
 slug: Web/API/MSManipulationEvent
 page-type: web-api-interface
-tags:
-  - API
-  - API:Microsoft Extensions
-  - Event
-  - Event:Microsoft Extensions
-  - Interface
-  - MSManipulationEvent
-  - Non-standard
-  - Reference
+status:
+  - non-standard
 ---
 
 {{APIRef("UI Events")}}{{Non-standard_Header}}

@@ -2,13 +2,6 @@
 title: WritableStreamDefaultWriter.write()
 slug: Web/API/WritableStreamDefaultWriter/write
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - Streams
-  - WritableStreamDefaultWriter
-  - write
 browser-compat: api.WritableStreamDefaultWriter.write
 ---
 

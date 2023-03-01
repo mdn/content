@@ -2,11 +2,6 @@
 title: WebOTP API
 slug: Web/API/WebOTP_API
 page-type: web-api-overview
-tags:
-  - API
-  - WebOTP
-  - Overview
-  - Reference
 spec-urls: https://wicg.github.io/web-otp/
 ---
 

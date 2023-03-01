@@ -2,13 +2,6 @@
 title: WorkerGlobalScope.console
 slug: Web/API/WorkerGlobalScope/console
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Read-only
-  - Reference
-  - Web Workers
-  - WorkerGlobalScope
 browser-compat: api.WorkerGlobalScope.console
 ---
 

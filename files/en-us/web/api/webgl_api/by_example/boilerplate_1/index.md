@@ -2,12 +2,6 @@
 title: Boilerplate 1
 slug: Web/API/WebGL_API/By_example/Boilerplate_1
 page-type: guide
-tags:
-  - Beginner
-  - Example
-  - Learn
-  - Tutorial
-  - WebGL
 ---
 
 {{PreviousNext("Learn/WebGL/By_example/Canvas_size_and_WebGL","Learn/WebGL/By_example/Scissor_animation")}}

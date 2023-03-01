@@ -2,14 +2,6 @@
 title: Using Web Workers
 slug: Web/API/Web_Workers_API/Using_web_workers
 page-type: guide
-tags:
-  - Advanced
-  - Firefox
-  - Guide
-  - HTML
-  - JavaScript
-  - WebWorkers
-  - Workers
 spec-urls: https://html.spec.whatwg.org/multipage/#workers
 ---
 
@@ -157,7 +149,7 @@ Here we'll concentrate on the differences between dedicated and shared workers. 
 
 > **Note:** If SharedWorker can be accessed from several browsing contexts, all those browsing contexts must share the exact same origin (same protocol, host, and port).
 
-> **Note:** In Firefox, shared workers cannot be shared between documents loaded in private and non-private windows ({{bug(1177621)}}).
+> **Note:** In Firefox, shared workers cannot be shared between documents loaded in private and non-private windows ([Firefox bug 1177621](https://bugzil.la/1177621)).
 
 ### Spawning a shared worker
 
@@ -604,7 +596,7 @@ It is possible to switch the content of each mainpage -> worker and worker -> ma
 
 ### Passing data by transferring ownership (transferable objects)
 
-Modern browsers contain an additional way to pass certain types of objects to or from a worker with high performance. {{Glossary("Transferable Objects")}} are transferred from one context to another with a zero-copy operation, which results in a vast performance improvement when sending large data sets.
+Modern browsers contain an additional way to pass certain types of objects to or from a worker with high performance. [Transferable objects](/en-US/docs/Web/API/Web_Workers_API/Transferable_objects) are transferred from one context to another with a zero-copy operation, which results in a vast performance improvement when sending large data sets.
 
 For example, when transferring an {{jsxref("ArrayBuffer")}} from your main app to a worker script, the original {{jsxref("ArrayBuffer")}} is cleared and no longer usable. Its content is (quite literally) transferred to the worker context.
 

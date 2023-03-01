@@ -2,10 +2,6 @@
 title: WebGLRenderbuffer
 slug: Web/API/WebGLRenderbuffer
 page-type: web-api-interface
-tags:
-  - API
-  - Reference
-  - WebGL
 browser-compat: api.WebGLRenderbuffer
 ---
 

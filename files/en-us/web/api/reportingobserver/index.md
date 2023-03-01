@@ -2,13 +2,8 @@
 title: ReportingObserver
 slug: Web/API/ReportingObserver
 page-type: web-api-interface
-tags:
-  - API
-  - Experimental
-  - Interface
-  - Reference
-  - Reporting API
-  - ReportingObserver
+status:
+  - experimental
 browser-compat: api.ReportingObserver
 ---
 
@@ -44,9 +39,9 @@ In our [deprecation_report.html](https://mdn.github.io/dom-examples/reporting-ap
 
 ```js
 const options = {
-  types: ['deprecation'],
-  buffered: true
-}
+  types: ["deprecation"],
+  buffered: true,
+};
 
 const observer = new ReportingObserver((reports, observer) => {
   reportBtn.onclick = () => displayReports(reports);
@@ -63,15 +58,9 @@ Later on in the example we deliberately use the deprecated version of {{domxref(
 
 ```js
 if (navigator.mozGetUserMedia) {
-  navigator.mozGetUserMedia(
-    constraints,
-    success,
-    failure);
+  navigator.mozGetUserMedia(constraints, success, failure);
 } else {
-  navigator.getUserMedia(
-    constraints,
-    success,
-    failure);
+  navigator.getUserMedia(constraints, success, failure);
 }
 ```
 

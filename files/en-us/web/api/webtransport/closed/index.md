@@ -2,14 +2,8 @@
 title: WebTransport.closed
 slug: Web/API/WebTransport/closed
 page-type: web-api-instance-property
-tags:
-  - API
-  - closed
-  - Experimental
-  - Property
-  - Reference
-  - WebTransport
-  - WebTransport API
+status:
+  - experimental
 browser-compat: api.WebTransport.closed
 ---
 

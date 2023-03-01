@@ -2,13 +2,6 @@
 title: WritableStreamDefaultWriter
 slug: Web/API/WritableStreamDefaultWriter
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Reference
-  - Streams
-  - Streams API
-  - WritableStream
 browser-compat: api.WritableStreamDefaultWriter
 ---
 

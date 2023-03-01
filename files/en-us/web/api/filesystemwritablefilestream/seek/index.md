@@ -2,14 +2,8 @@
 title: FileSystemWritableFileStream.seek()
 slug: Web/API/FileSystemWritableFileStream/seek
 page-type: web-api-instance-method
-tags:
-  - File
-  - File System Access API
-  - FileSystemWritableFileStream
-  - Method
-  - stream
-  - write
-  - Experimental
+status:
+  - experimental
 browser-compat: api.FileSystemWritableFileStream.seek
 ---
 

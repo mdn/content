@@ -2,17 +2,9 @@
 title: VREyeParameters.offset
 slug: Web/API/VREyeParameters/offset
 page-type: web-api-instance-property
-tags:
-  - API
-  - Deprecated
-  - Property
-  - Reference
-  - VR
-  - VREyeParameters
-  - Virtual Reality
-  - WebVR
-  - offset
-  - Non-standard
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.VREyeParameters.offset
 ---
 

@@ -2,15 +2,6 @@
 title: SourceBuffer.audioTracks
 slug: Web/API/SourceBuffer/audioTracks
 page-type: web-api-instance-property
-tags:
-  - API
-  - Audio
-  - MSE
-  - Media Source Extensions
-  - Property
-  - Reference
-  - SourceBuffer
-  - audiotracks
 browser-compat: api.SourceBuffer.audioTracks
 ---
 

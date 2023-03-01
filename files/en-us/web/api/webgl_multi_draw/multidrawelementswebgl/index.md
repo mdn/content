@@ -2,11 +2,6 @@
 title: WEBGL_multi_draw.multiDrawElementsWEBGL()
 slug: Web/API/WEBGL_multi_draw/multiDrawElementsWEBGL
 page-type: webgl-extension-method
-tags:
-  - Method
-  - Reference
-  - WebGL
-  - WebGL extension
 browser-compat: api.WEBGL_multi_draw.multiDrawElementsWEBGL
 ---
 

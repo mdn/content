@@ -2,17 +2,6 @@
 title: OverconstrainedError.constraint
 slug: Web/API/OverconstrainedError/constraint
 page-type: web-api-instance-property
-tags:
-  - API
-  - Audio
-  - Media
-  - Media Capture and Streams API
-  - Media Streams API
-  - OverconstrainedError
-  - Property
-  - Reference
-  - Video
-  - constraint
 browser-compat: api.OverconstrainedError.constraint
 ---
 

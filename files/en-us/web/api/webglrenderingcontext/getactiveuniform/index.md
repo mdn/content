@@ -2,12 +2,6 @@
 title: WebGLRenderingContext.getActiveUniform()
 slug: Web/API/WebGLRenderingContext/getActiveUniform
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.getActiveUniform
 ---
 

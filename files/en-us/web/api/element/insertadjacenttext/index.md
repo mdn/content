@@ -2,14 +2,6 @@
 title: Element.insertAdjacentText()
 slug: Web/API/Element/insertAdjacentText
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - Element
-  - Gecko
-  - Method
-  - Reference
-  - insertAdjacentText
 browser-compat: api.Element.insertAdjacentText
 ---
 
@@ -65,12 +57,12 @@ None ({{jsxref("undefined")}}).
 ## Examples
 
 ```js
-beforeBtn.addEventListener('click', () => {
-  para.insertAdjacentText('afterbegin',textInput.value);
+beforeBtn.addEventListener("click", () => {
+  para.insertAdjacentText("afterbegin", textInput.value);
 });
 
-afterBtn.addEventListener('click', () => {
-  para.insertAdjacentText('beforeend',textInput.value);
+afterBtn.addEventListener("click", () => {
+  para.insertAdjacentText("beforeend", textInput.value);
 });
 ```
 

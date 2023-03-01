@@ -2,11 +2,6 @@
 title: "Window: unload event"
 slug: Web/API/Window/unload_event
 page-type: web-api-event
-tags:
-  - Event
-  - Reference
-  - Window
-  - events
 browser-compat: api.Window.unload_event
 ---
 

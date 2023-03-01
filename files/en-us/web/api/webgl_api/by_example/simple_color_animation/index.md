@@ -2,13 +2,6 @@
 title: Simple color animation
 slug: Web/API/WebGL_API/By_example/Simple_color_animation
 page-type: guide
-tags:
-  - Beginner
-  - Example
-  - Graphics
-  - Learn
-  - Tutorial
-  - WebGL
 ---
 
 {{PreviousNext("Learn/WebGL/By_example/Clearing_by_clicking","Learn/WebGL/By_example/Color_masking")}}

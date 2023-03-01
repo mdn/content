@@ -2,13 +2,8 @@
 title: WebTransportBidirectionalStream
 slug: Web/API/WebTransportBidirectionalStream
 page-type: web-api-interface
-tags:
-  - API
-  - Experimental
-  - Interface
-  - Reference
-  - WebTransport API
-  - WebTransportBidirectionalStream
+status:
+  - experimental
 browser-compat: api.WebTransportBidirectionalStream
 ---
 

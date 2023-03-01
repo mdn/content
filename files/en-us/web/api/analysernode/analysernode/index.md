@@ -2,14 +2,6 @@
 title: AnalyserNode()
 slug: Web/API/AnalyserNode/AnalyserNode
 page-type: web-api-constructor
-tags:
-  - API
-  - AnalyserNode
-  - Audio
-  - Constructor
-  - Media
-  - Reference
-  - Web Audio API
 browser-compat: api.AnalyserNode.AnalyserNode
 ---
 

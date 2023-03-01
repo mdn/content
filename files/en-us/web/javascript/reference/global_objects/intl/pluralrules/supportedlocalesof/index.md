@@ -2,14 +2,6 @@
 title: Intl.PluralRules.supportedLocalesOf()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/PluralRules/supportedLocalesOf
 page-type: javascript-static-method
-tags:
-  - Internationalization
-  - Intl
-  - JavaScript
-  - Localization
-  - Method
-  - PluralRules
-  - Reference
 browser-compat: javascript.builtins.Intl.PluralRules.supportedLocalesOf
 ---
 

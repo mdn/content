@@ -2,13 +2,6 @@
 title: paint-order
 slug: Web/CSS/paint-order
 page-type: css-property
-tags:
-  - CSS
-  - CSS Property
-  - Reference
-  - SVG
-  - Web
-  - recipe:css-property
 browser-compat: css.properties.paint-order
 ---
 

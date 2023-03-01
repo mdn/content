@@ -2,12 +2,6 @@
 title: Window.scroll()
 slug: Web/API/Window/scroll
 page-type: web-api-instance-method
-tags:
-  - API
-  - CSSOM View
-  - Method
-  - NeedsMarkupWork
-  - Reference
 browser-compat: api.Window.scroll
 ---
 

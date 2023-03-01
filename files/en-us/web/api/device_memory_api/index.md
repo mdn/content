@@ -2,8 +2,8 @@
 title: Device Memory API
 slug: Web/API/Device_Memory_API
 page-type: web-api-overview
-tags:
-  - Device Memory API
+status:
+  - experimental
 browser-compat:
   - api.Navigator.deviceMemory
   - http.headers.Device-Memory

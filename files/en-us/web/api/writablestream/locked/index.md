@@ -2,13 +2,6 @@
 title: WritableStream.locked
 slug: Web/API/WritableStream/locked
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - Streams
-  - WritableStream
-  - locked
 browser-compat: api.WritableStream.locked
 ---
 

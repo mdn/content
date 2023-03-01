@@ -2,15 +2,6 @@
 title: Raining rectangles
 slug: Web/API/WebGL_API/By_example/Raining_rectangles
 page-type: guide
-tags:
-  - Beginner
-  - Example
-  - Game
-  - Graphics
-  - Learn
-  - Scissoring
-  - Tutorial
-  - WebGL
 ---
 
 {{PreviousNext("Learn/WebGL/By_example/Scissor_animation","Learn/WebGL/By_example/Hello_GLSL")}}

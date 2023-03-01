@@ -2,13 +2,8 @@
 title: BeforeInstallPromptEvent.prompt()
 slug: Web/API/BeforeInstallPromptEvent/prompt
 page-type: web-api-instance-method
-tags:
-  - API
-  - BeforeInstallPromptEvent
-  - Experimental
-  - Method
-  - Reference
-  - prompt
+status:
+  - experimental
 browser-compat: api.BeforeInstallPromptEvent.prompt
 ---
 

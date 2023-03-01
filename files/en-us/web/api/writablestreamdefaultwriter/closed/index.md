@@ -2,13 +2,6 @@
 title: WritableStreamDefaultWriter.closed
 slug: Web/API/WritableStreamDefaultWriter/closed
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - Streams
-  - WritableStreamDefaultWriter
-  - closed
 browser-compat: api.WritableStreamDefaultWriter.closed
 ---
 

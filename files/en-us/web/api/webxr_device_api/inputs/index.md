@@ -2,22 +2,6 @@
 title: Inputs and input sources
 slug: Web/API/WebXR_Device_API/Inputs
 page-type: guide
-tags:
-  - API
-  - AR
-  - Controls
-  - Graphics
-  - Guide
-  - Input
-  - Input Sources
-  - Inputs
-  - Sources
-  - VR
-  - WebXR
-  - WebXR API
-  - WebXR Device API
-  - XR
-  - controllers
 ---
 
 {{APIRef("WebXR Device API")}}{{SecureContext_Header}}

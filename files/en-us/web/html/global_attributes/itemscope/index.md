@@ -2,13 +2,6 @@
 title: itemscope
 slug: Web/HTML/Global_attributes/itemscope
 page-type: html-attribute
-tags:
-  - Attribute
-  - Global attribute
-  - HTML
-  - HTML Microdata
-  - Microdata
-  - Reference
 browser-compat: html.global_attributes.itemscope
 ---
 

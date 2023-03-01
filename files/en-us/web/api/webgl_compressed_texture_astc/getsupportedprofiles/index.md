@@ -2,13 +2,6 @@
 title: WEBGL_compressed_texture_astc.getSupportedProfiles()
 slug: Web/API/WEBGL_compressed_texture_astc/getSupportedProfiles
 page-type: webgl-extension-method
-tags:
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGL extension
-  - WebGL extensions
 browser-compat: api.WEBGL_compressed_texture_astc.getSupportedProfiles
 ---
 

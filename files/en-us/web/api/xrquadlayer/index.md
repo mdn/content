@@ -2,19 +2,8 @@
 title: XRQuadLayer
 slug: Web/API/XRQuadLayer
 page-type: web-api-interface
-tags:
-  - API
-  - AR
-  - Augmented Reality
-  - Interface
-  - Reference
-  - VR
-  - Virtual Reality
-  - WebXR
-  - WebXR Device API
-  - XR
-  - XRQuadLayer
-  - Experimental
+status:
+  - experimental
 browser-compat: api.XRQuadLayer
 ---
 

@@ -2,22 +2,6 @@
 title: RTCIceCandidatePairStats.state
 slug: Web/API/RTCIceCandidatePairStats/state
 page-type: web-api-instance-property
-tags:
-  - API
-  - Candidate
-  - CandidatePair
-  - Check List
-  - ICE
-  - Pair
-  - Property
-  - RTCIceCandidatePair
-  - RTCIceCandidatePairStats
-  - Reference
-  - Statistics
-  - Stats
-  - WebRTC
-  - WebRTC API
-  - state
 browser-compat: api.RTCIceCandidatePairStats.state
 ---
 

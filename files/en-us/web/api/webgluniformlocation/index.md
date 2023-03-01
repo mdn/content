@@ -2,10 +2,6 @@
 title: WebGLUniformLocation
 slug: Web/API/WebGLUniformLocation
 page-type: web-api-interface
-tags:
-  - API
-  - Reference
-  - WebGL
 browser-compat: api.WebGLUniformLocation
 ---
 

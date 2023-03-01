@@ -2,14 +2,6 @@
 title: Response.redirected
 slug: Web/API/Response/redirected
 page-type: web-api-instance-property
-tags:
-  - API
-  - Fetch
-  - Property
-  - Read-only
-  - Reference
-  - Response
-  - redirected
 browser-compat: api.Response.redirected
 ---
 

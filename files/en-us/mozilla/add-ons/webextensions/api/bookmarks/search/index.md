@@ -1,6 +1,7 @@
 ---
 title: bookmarks.search()
 slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/search
+page-type: webextension-api-function
 tags:
   - API
   - Add-ons

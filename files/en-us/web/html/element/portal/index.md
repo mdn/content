@@ -2,17 +2,8 @@
 title: '<portal>: The Portal element'
 slug: Web/HTML/Element/portal
 page-type: html-element
-tags:
-  - Content
-  - Element
-  - Embedded content
-  - Embedding
-  - HTML
-  - HTML embedded content
-  - Reference
-  - Web
-  - Portal
-  - Experimental
+status:
+  - experimental
 browser-compat: html.elements.portal
 ---
 

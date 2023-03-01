@@ -2,11 +2,6 @@
 title: WebGLShaderPrecisionFormat.precision
 slug: Web/API/WebGLShaderPrecisionFormat/precision
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - WebGL
 browser-compat: api.WebGLShaderPrecisionFormat.precision
 ---
 

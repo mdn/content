@@ -2,12 +2,6 @@
 title: WEBGL_compressed_texture_astc
 slug: Web/API/WEBGL_compressed_texture_astc
 page-type: webgl-extension
-tags:
-  - API
-  - Reference
-  - WebGL
-  - WebGL extension
-  - WebGL extensions
 browser-compat: api.WEBGL_compressed_texture_astc
 ---
 

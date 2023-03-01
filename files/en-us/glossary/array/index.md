@@ -2,11 +2,6 @@
 title: Array
 slug: Glossary/Array
 page-type: glossary-definition
-tags:
-  - Array
-  - CodingScripting
-  - JavaScript
-  - programming
 ---
 
 An _array_ is an ordered collection of data (either {{Glossary("primitive")}} or {{Glossary("object")}} depending upon the language). Arrays are used to store multiple values in a single variable. This is compared to a variable that can store only one value.

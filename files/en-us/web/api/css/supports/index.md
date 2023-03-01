@@ -2,13 +2,6 @@
 title: CSS.supports()
 slug: Web/API/CSS/supports
 page-type: web-api-static-method
-tags:
-  - API
-  - CSS
-  - CSSOM
-  - Method
-  - Reference
-  - supports
 browser-compat: api.CSS.supports
 ---
 

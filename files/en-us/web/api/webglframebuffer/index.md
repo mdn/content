@@ -2,10 +2,6 @@
 title: WebGLFramebuffer
 slug: Web/API/WebGLFramebuffer
 page-type: web-api-interface
-tags:
-  - API
-  - Reference
-  - WebGL
 browser-compat: api.WebGLFramebuffer
 ---
 

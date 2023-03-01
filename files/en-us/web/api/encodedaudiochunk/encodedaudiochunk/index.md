@@ -2,12 +2,8 @@
 title: EncodedAudioChunk()
 slug: Web/API/EncodedAudioChunk/EncodedAudioChunk
 page-type: web-api-constructor
-tags:
-  - API
-  - Constructor
-  - Reference
-  - EncodedAudioChunk
-  - Experimental
+status:
+  - experimental
 browser-compat: api.EncodedAudioChunk.EncodedAudioChunk
 ---
 
@@ -44,10 +40,10 @@ In the following example a new `EncodedAudioChunk` is created.
 
 ```js
 const init = {
-  type: 'key',
+  type: "key",
   data: audioBuffer,
   timestamp: 23000000,
-  duration: 2000000
+  duration: 2000000,
 };
 chunk = EncodedAudioChunk(init);
 ```

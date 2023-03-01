@@ -2,11 +2,6 @@
 title: WebCodecs API
 slug: Web/API/WebCodecs_API
 page-type: web-api-overview
-tags:
-  - API
-  - WebCodecs
-  - Overview
-  - Reference
 ---
 
 {{DefaultAPISidebar("WebCodecs API")}}

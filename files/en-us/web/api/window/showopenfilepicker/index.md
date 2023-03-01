@@ -2,13 +2,8 @@
 title: Window.showOpenFilePicker()
 slug: Web/API/Window/showOpenFilePicker
 page-type: web-api-instance-method
-tags:
-  - File
-  - File System Access API
-  - Method
-  - Window
-  - working with files
-  - Experimental
+status:
+  - experimental
 browser-compat: api.Window.showOpenFilePicker
 ---
 

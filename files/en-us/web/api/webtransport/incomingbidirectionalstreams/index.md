@@ -2,14 +2,8 @@
 title: WebTransport.incomingBidirectionalStreams
 slug: Web/API/WebTransport/incomingBidirectionalStreams
 page-type: web-api-instance-property
-tags:
-  - API
-  - Experimental
-  - incomingBidirectionalStreams
-  - Property
-  - Reference
-  - WebTransport
-  - WebTransport API
+status:
+  - experimental
 browser-compat: api.WebTransport.incomingBidirectionalStreams
 ---
 

@@ -1,13 +1,7 @@
 ---
-title: Function.prototype.name
+title: "Function: name"
 slug: Web/JavaScript/Reference/Global_Objects/Function/name
 page-type: javascript-instance-data-property
-tags:
-  - ECMAScript 2015
-  - Function
-  - JavaScript
-  - Property
-  - Polyfill
 browser-compat: javascript.builtins.Function.name
 ---
 

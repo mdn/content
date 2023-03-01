@@ -2,24 +2,6 @@
 title: HTMLImageElement.loading
 slug: Web/API/HTMLImageElement/loading
 page-type: web-api-instance-property
-tags:
-  - API
-  - Content
-  - Eager
-  - Graphics
-  - HTML DOM
-  - HTMLImageElement
-  - Images
-  - Layout
-  - Lazy
-  - Lazy-loading
-  - Loading
-  - Performance
-  - Pictures
-  - Property
-  - Reference
-  - load
-  - rendering
 browser-compat: api.HTMLImageElement.loading
 ---
 

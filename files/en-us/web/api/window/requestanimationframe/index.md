@@ -2,22 +2,6 @@
 title: Window.requestAnimationFrame()
 slug: Web/API/window/requestAnimationFrame
 page-type: web-api-instance-method
-tags:
-  - API
-  - Animations
-  - Drawing
-  - Games
-  - Graphics
-  - HTML DOM
-  - Intermediate
-  - JavaScript timers
-  - Method
-  - Performance
-  - Reference
-  - Scheduling
-  - Window
-  - requestAnimationFrame
-  - Polyfill
 browser-compat: api.Window.requestAnimationFrame
 ---
 

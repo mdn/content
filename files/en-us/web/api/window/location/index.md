@@ -2,13 +2,6 @@
 title: Window.location
 slug: Web/API/Window/location
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTML
-  - NeedsExample
-  - Property
-  - Reference
-  - Window
 browser-compat: api.Window.location
 ---
 

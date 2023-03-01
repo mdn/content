@@ -2,12 +2,8 @@
 title: Bluetooth.getDevices()
 slug: Web/API/Bluetooth/getDevices
 page-type: web-api-instance-method
-tags:
-  - API
-  - Bluetooth
-  - Reference
-  - Web Bluetooth API
-  - Experimental
+status:
+  - experimental
 browser-compat: api.Bluetooth.getDevices
 ---
 

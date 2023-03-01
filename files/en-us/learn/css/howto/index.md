@@ -1,10 +1,6 @@
 ---
 title: Use CSS to solve common problems
 slug: Learn/CSS/Howto
-tags:
-  - Beginner
-  - CSS
-  - Learn
 ---
 
 {{LearnSidebar}}

@@ -2,9 +2,6 @@
 title: Syntax error
 slug: Glossary/Syntax_error
 page-type: glossary-definition
-tags:
-  - CodingScripting
-  - JavaScript
 ---
 
 An {{Glossary("exception")}} caused by the incorrect use of a pre-defined {{Glossary("syntax")}}. Syntax errors are detected while compiling or parsing source code.

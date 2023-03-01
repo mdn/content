@@ -2,12 +2,6 @@
 title: Window.scrollTo()
 slug: Web/API/Window/scrollTo
 page-type: web-api-instance-method
-tags:
-  - API
-  - CSSOM View
-  - Method
-  - NeedsMarkupWork
-  - Reference
 browser-compat: api.Window.scrollTo
 ---
 

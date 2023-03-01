@@ -2,15 +2,6 @@
 title: Using the Web Speech API
 slug: Web/API/Web_Speech_API/Using_the_Web_Speech_API
 page-type: guide
-tags:
-  - API
-  - Guide
-  - Tutorial
-  - Using
-  - Web Speech API
-  - recognition
-  - speech
-  - synthesis
 ---
 
 {{DefaultAPISidebar("Web Speech API")}}

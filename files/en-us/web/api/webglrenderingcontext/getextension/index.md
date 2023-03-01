@@ -2,12 +2,6 @@
 title: WebGLRenderingContext.getExtension()
 slug: Web/API/WebGLRenderingContext/getExtension
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.getExtension
 ---
 

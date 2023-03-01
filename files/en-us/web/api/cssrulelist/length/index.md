@@ -2,12 +2,6 @@
 title: CSSRuleList.length
 slug: Web/API/CSSRuleList/length
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - length
-  - CSSRuleList
 browser-compat: api.CSSRuleList.length
 ---
 

@@ -2,13 +2,6 @@
 title: Window.closed
 slug: Web/API/Window/closed
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTML DOM
-  - NeedsCompatTable
-  - Property
-  - Reference
-  - Window
 browser-compat: api.Window.closed
 ---
 

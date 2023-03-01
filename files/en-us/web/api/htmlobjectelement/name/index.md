@@ -2,14 +2,6 @@
 title: HTMLObjectElement.name
 slug: Web/API/HTMLObjectElement/name
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTML DOM
-  - HTMLObjectElement
-  - NeedsExample
-  - Property
-  - Reference
-  - name
 browser-compat: api.HTMLObjectElement.name
 ---
 

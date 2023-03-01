@@ -2,12 +2,6 @@
 title: Expressions and operators
 slug: Web/JavaScript/Reference/Operators
 page-type: landing-page
-tags:
-  - JavaScript
-  - Landing page
-  - Operators
-  - Overview
-  - Reference
 browser-compat: javascript.operators
 ---
 

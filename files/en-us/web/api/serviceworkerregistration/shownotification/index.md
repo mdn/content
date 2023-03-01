@@ -2,15 +2,6 @@
 title: ServiceWorkerRegistration.showNotification()
 slug: Web/API/ServiceWorkerRegistration/showNotification
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - NeedsExample
-  - Reference
-  - Service Workers
-  - ServiceWorker
-  - ServiceWorkerRegistration
-  - showNotification
 browser-compat: api.ServiceWorkerRegistration.showNotification
 ---
 

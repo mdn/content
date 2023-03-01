@@ -2,14 +2,8 @@
 title: WebTransportError.streamErrorCode
 slug: Web/API/WebTransportError/streamErrorCode
 page-type: web-api-instance-property
-tags:
-  - API
-  - Experimental
-  - Property
-  - Reference
-  - streamErrorCode
-  - WebTransportError
-  - WebTransport API
+status:
+  - experimental
 browser-compat: api.WebTransportError.streamErrorCode
 ---
 

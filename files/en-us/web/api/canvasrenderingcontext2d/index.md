@@ -2,13 +2,6 @@
 title: CanvasRenderingContext2D
 slug: Web/API/CanvasRenderingContext2D
 page-type: web-api-interface
-tags:
-  - API
-  - Canvas
-  - CanvasRenderingContext2D
-  - Games
-  - Graphics
-  - Reference
 browser-compat: api.CanvasRenderingContext2D
 ---
 

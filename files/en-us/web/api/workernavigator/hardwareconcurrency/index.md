@@ -2,14 +2,6 @@
 title: WorkerNavigator.hardwareConcurrency
 slug: Web/API/WorkerNavigator/hardwareConcurrency
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTML DOM
-  - Property
-  - Web Workers
-  - Worker
-  - WorkerNavigator
-  - hardwareConcurrency
 browser-compat: api.WorkerNavigator.hardwareConcurrency
 ---
 

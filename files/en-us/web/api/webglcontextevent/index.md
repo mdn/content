@@ -2,12 +2,6 @@
 title: WebGLContextEvent
 slug: Web/API/WebGLContextEvent
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Reference
-  - WebGL
-  - WebGLContextEvent
 browser-compat: api.WebGLContextEvent
 ---
 

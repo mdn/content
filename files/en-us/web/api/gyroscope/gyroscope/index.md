@@ -2,15 +2,6 @@
 title: Gyroscope()
 slug: Web/API/Gyroscope/Gyroscope
 page-type: web-api-constructor
-tags:
-  - API
-  - Constructor
-  - Generic Sensor API
-  - Gyroscope
-  - Reference
-  - Sensor
-  - Sensor APIs
-  - Sensors
 browser-compat: api.Gyroscope.Gyroscope
 ---
 

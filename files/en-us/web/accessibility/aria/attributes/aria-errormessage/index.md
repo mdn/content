@@ -1,13 +1,6 @@
 ---
 title: aria-errormessage
 slug: Web/Accessibility/ARIA/Attributes/aria-errormessage
-tags:
-  - Accessibility
-  - ARIA
-  - ARIA attribute
-  - ARIA property
-  - aria-errormessage
-  - Reference
 spec-urls: https://w3c.github.io/aria/#aria-errormessage
 ---
 

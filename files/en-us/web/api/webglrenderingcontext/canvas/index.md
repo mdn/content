@@ -2,11 +2,6 @@
 title: WebGLRenderingContext.canvas
 slug: Web/API/WebGLRenderingContext/canvas
 page-type: web-api-instance-property
-tags:
-  - Property
-  - Read-only
-  - WebGL
-  - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.canvas
 ---
 

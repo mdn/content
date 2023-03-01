@@ -2,11 +2,6 @@
 title: WEBGL_lose_context
 slug: Web/API/WEBGL_lose_context
 page-type: webgl-extension
-tags:
-  - API
-  - Reference
-  - WebGL
-  - WebGL extension
 browser-compat: api.WEBGL_lose_context
 ---
 

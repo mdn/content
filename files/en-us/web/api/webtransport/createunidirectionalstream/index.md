@@ -2,14 +2,8 @@
 title: WebTransport.createUnidirectionalStream()
 slug: Web/API/WebTransport/createUnidirectionalStream
 page-type: web-api-instance-method
-tags:
-  - API
-  - createUnidirectionalStream
-  - Experimental
-  - Property
-  - Reference
-  - WebTransport
-  - WebTransport API
+status:
+  - experimental
 browser-compat: api.WebTransport.createUnidirectionalStream
 ---
 

@@ -1,17 +1,7 @@
 ---
-title: 'HTMLElement: dragleave event'
+title: "HTMLElement: dragleave event"
 slug: Web/API/HTMLElement/dragleave_event
 page-type: web-api-event
-tags:
-  - API
-  - DOM
-  - HTMLElement
-  - DragEvent
-  - Event
-  - Reference
-  - Web
-  - drag and drop
-  - dragleave
 browser-compat: api.HTMLElement.dragleave_event
 ---
 
@@ -26,9 +16,9 @@ This event is not cancelable.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('dragleave', (event) => {});
+addEventListener("dragleave", (event) => {});
 
-ondragleave = (event) => { };
+ondragleave = (event) => {};
 ```
 
 ## Event type

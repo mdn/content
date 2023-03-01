@@ -2,12 +2,6 @@
 title: EcdsaParams
 slug: Web/API/EcdsaParams
 page-type: web-api-interface
-tags:
-  - API
-  - Dictionary
-  - EcdsaParams
-  - Reference
-  - Web Crypto API
 browser-compat:
   - api.SubtleCrypto.sign
   - api.SubtleCrypto.verify

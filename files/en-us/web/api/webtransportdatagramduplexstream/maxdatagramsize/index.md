@@ -2,14 +2,8 @@
 title: WebTransportDatagramDuplexStream.maxDatagramSize
 slug: Web/API/WebTransportDatagramDuplexStream/maxDatagramSize
 page-type: web-api-instance-property
-tags:
-  - API
-  - Experimental
-  - maxDatagramSize
-  - Property
-  - Reference
-  - WebTransport
-  - WebTransport API
+status:
+  - experimental
 browser-compat: api.WebTransportDatagramDuplexStream.maxDatagramSize
 ---
 

@@ -2,13 +2,8 @@
 title: HighlightRegistry.has()
 slug: Web/API/HighlightRegistry/has
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - CSS Custom Highlight API
-  - Reference
-  - has
-  - Experimental
+status:
+  - experimental
 browser-compat: api.HighlightRegistry.has
 spec-urls: https://tc39.es/ecma262/multipage/keyed-collections.html#sec-map.prototype.has
 ---

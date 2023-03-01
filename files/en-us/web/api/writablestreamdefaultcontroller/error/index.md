@@ -2,13 +2,6 @@
 title: WritableStreamDefaultController.error()
 slug: Web/API/WritableStreamDefaultController/error
 page-type: web-api-instance-method
-tags:
-  - API
-  - Error
-  - Method
-  - Reference
-  - Streams
-  - WritableStreamDefaultController
 browser-compat: api.WritableStreamDefaultController.error
 ---
 
