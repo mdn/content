@@ -1,18 +1,13 @@
 ---
 title: ArrayBuffer.isView()
 slug: Web/JavaScript/Reference/Global_Objects/ArrayBuffer/isView
-tags:
-  - ArrayBuffer
-  - JavaScript
-  - Method
-  - Reference
-  - TypedArrays
+page-type: javascript-static-method
 browser-compat: javascript.builtins.ArrayBuffer.isView
 ---
 
 {{JSRef}}
 
-The **`ArrayBuffer.isView()`** method determines whether the
+The **`ArrayBuffer.isView()`** static method determines whether the
 passed value is one of the `ArrayBuffer` views,
 such as [typed array objects](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray)
 or a {{jsxref("DataView")}}.

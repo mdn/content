@@ -1,9 +1,6 @@
 ---
 title: Perceived performance
 slug: Learn/Performance/Perceived_performance
-tags:
-  - Perceived Performance
-  - Web Performance
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Performance/what_is_web_performance", "Learn/Performance/Measuring_performance", "Learn/Performance")}}
@@ -52,7 +49,7 @@ There is no single metric or test that can be run on a site to evaluate how a us
   - : The time to start of first paint operation. Note that this change may not be visible; it can be a simple background color update or something even less noticeable.
 - [First Contentful Paint](/en-US/docs/Glossary/First_contentful_paint) (FCP)
   - : The time until first significant rendering (e.g. of text, foreground or background image, canvas or SVG, etc.). Note that this content is not necessarily useful or meaningful.
-- [First Meaningful Paint](/en-US/docs/Glossary/first_meaningful_paint) (FMP)
+- [First Meaningful Paint](/en-US/docs/Glossary/First_meaningful_paint) (FMP)
   - : The time at which useful content is rendered to the screen.
 - [Largest Contentful Paint](https://wicg.github.io/largest-contentful-paint/) (LCP)
   - : The render time of the largest content element visible in the viewport.
@@ -96,17 +93,3 @@ Making a content request on `keydown` rather than waiting for `keyup` can shave 
 By reducing the time that a user has to wait for _useful_ content, and keeping the site responsive and engaging, the users will feel like the site performs better — even the actual time to load resources stays the same.
 
 {{PreviousMenuNext("Learn/Performance/what_is_web_performance", "Learn/Performance/Measuring_performance", "Learn/Performance")}}
-
-## In this module
-
-- [The "why" of web performance](/en-US/docs/Learn/Performance/why_web_performance)
-- [What is web performance?](/en-US/docs/Learn/Performance/What_is_web_performance)
-- [How do users perceive performance?](/en-US/docs/Learn/Performance/Perceived_performance)
-- [Measuring performance](/en-US/docs/Learn/Performance/Measuring_performance)
-- [Multimedia: images](/en-US/docs/Learn/Performance/Multimedia)
-- [Multimedia: video](/en-US/docs/Learn/Performance/video)
-- [JavaScript performance](/en-US/docs/Learn/Performance/JavaScript)
-- [HTML performance features](/en-US/docs/Learn/Performance/HTML)
-- [CSS performance features](/en-US/docs/Learn/Performance/CSS)
-- [The business case for web performance](/en-US/docs/Learn/Performance/business_case_for_performance)
-- [Web performance resources](/en-US/docs/Learn/Performance/Web_Performance_Basics)

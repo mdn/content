@@ -1,10 +1,7 @@
 ---
-title: frame rate (FPS)
+title: Frame rate (FPS)
 slug: Glossary/FPS
-tags:
-  - Animation
-  - Web Performance
-  - requestAnimationFrame
+page-type: glossary-definition
 ---
 
 A **frame rate** is the speed at which the browser is able to recalculate, layout and paint content to the display. The **frames per second**, or **fps**, is how many frames can be repainted in one second. The goal frame rate for in web site computer graphics is 60fps.

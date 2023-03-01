@@ -1,10 +1,7 @@
 ---
 title: Block cipher mode of operation
 slug: Glossary/Block_cipher_mode_of_operation
-tags:
-  - Block cipher mode of operation
-  - Cryptography
-  - Security
+page-type: glossary-definition
 ---
 
 A block cipher mode of operation, usually just called a "mode" in context, specifies how a block cipher should be used to encrypt or decrypt messages that are longer than the block size.

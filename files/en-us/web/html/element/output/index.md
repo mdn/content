@@ -1,85 +1,13 @@
 ---
 title: '<output>: The Output element'
 slug: Web/HTML/Element/output
-tags:
-  - Element
-  - HTML
-  - HTML forms
-  - HTML:Flow content
-  - Reference
-  - Web
+page-type: html-element
 browser-compat: html.elements.output
 ---
 
 {{HTMLSidebar}}
 
 The **`<output>`** [HTML](/en-US/docs/Web/HTML) element is a container element into which a site or app can inject the results of a calculation or the outcome of a user action.
-
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories"
-          >Content categories</a
-        >
-      </th>
-      <td>
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
-          >Flow content</a
-        >,
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content"
-          >phrasing content</a
-        >,
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#form_listed"
-          >listed</a
-        >,
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#form_labelable"
-          >labelable</a
-        >,
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#form_resettable"
-          >resettable</a
-        >
-        <a
-          href="/en-US/docs/Web/Guide/HTML/Content_categories#form-associated_content"
-          >form-associated element</a
-        >, palpable content.
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Permitted content</th>
-      <td>
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content"
-          >Phrasing content</a
-        >.
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Tag omission</th>
-      <td>{{no_tag_omission}}</td>
-    </tr>
-    <tr>
-      <th scope="row">Permitted parents</th>
-      <td>
-        Any element that accepts
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content"
-          >phrasing content</a
-        >.
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Implicit ARIA role</th>
-      <td>{{ARIARole("status")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">Permitted ARIA roles</th>
-      <td>Any</td>
-    </tr>
-    <tr>
-      <th scope="row">DOM interface</th>
-      <td>{{domxref("HTMLOutputElement")}}</td>
-    </tr>
-  </tbody>
-</table>
 
 ## Attributes
 
@@ -115,6 +43,74 @@ In the following example, the form provides a slider whose value can range betwe
 ## Accessibility Concerns
 
 Many browsers implement this element as an [`aria-live`](/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions) region. Assistive technology will thereby announce the results of UI interactions posted inside it without requiring that focus is switched away from the controls that produce those results.
+
+## Technical summary
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">
+        <a href="/en-US/docs/Web/HTML/Content_categories"
+          >Content categories</a
+        >
+      </th>
+      <td>
+        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
+          >Flow content</a
+        >,
+        <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content"
+          >phrasing content</a
+        >,
+        <a href="/en-US/docs/Web/HTML/Content_categories#form_listed"
+          >listed</a
+        >,
+        <a href="/en-US/docs/Web/HTML/Content_categories#form_labelable"
+          >labelable</a
+        >,
+        <a href="/en-US/docs/Web/HTML/Content_categories#form_resettable"
+          >resettable</a
+        >
+        <a
+          href="/en-US/docs/Web/HTML/Content_categories#form-associated_content"
+          >form-associated element</a
+        >, palpable content.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Permitted content</th>
+      <td>
+        <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content"
+          >Phrasing content</a
+        >.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Tag omission</th>
+      <td>{{no_tag_omission}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Permitted parents</th>
+      <td>
+        Any element that accepts
+        <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content"
+          >phrasing content</a
+        >.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Implicit ARIA role</th>
+      <td><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/status_role"><code>status</code></a></td>
+    </tr>
+    <tr>
+      <th scope="row">Permitted ARIA roles</th>
+      <td>Any</td>
+    </tr>
+    <tr>
+      <th scope="row">DOM interface</th>
+      <td>{{domxref("HTMLOutputElement")}}</td>
+    </tr>
+  </tbody>
+</table>
 
 ## Specifications
 

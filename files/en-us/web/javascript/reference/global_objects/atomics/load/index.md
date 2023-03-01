@@ -1,17 +1,13 @@
 ---
 title: Atomics.load()
 slug: Web/JavaScript/Reference/Global_Objects/Atomics/load
-tags:
-  - Atomics
-  - JavaScript
-  - Method
-  - Shared Memory
+page-type: javascript-static-method
 browser-compat: javascript.builtins.Atomics.load
 ---
 
 {{JSRef}}
 
-The static **`Atomics.load()`**
+The **`Atomics.load()`** static
 method returns a value at a given position in the array.
 
 {{EmbedInteractiveExample("pages/js/atomics-load.html")}}

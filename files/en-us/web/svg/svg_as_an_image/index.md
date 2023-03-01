@@ -1,6 +1,7 @@
 ---
 title: SVG as an Image
 slug: Web/SVG/SVG_as_an_Image
+page-type: guide
 tags:
   - Images
   - NeedsContent

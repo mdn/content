@@ -1,12 +1,9 @@
 ---
 title: InternalError() constructor
 slug: Web/JavaScript/Reference/Global_Objects/InternalError/InternalError
-tags:
-  - Constructor
-  - InternalError
-  - JavaScript
-  - Reference
-  - Non-standard
+page-type: javascript-constructor
+status:
+  - non-standard
 browser-compat: javascript.builtins.InternalError.InternalError
 ---
 

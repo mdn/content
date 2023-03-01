@@ -1,22 +1,21 @@
 ---
 title: Symbol.match
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/match
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Property
-  - Symbol
-  - Polyfill
+page-type: javascript-static-data-property
 browser-compat: javascript.builtins.Symbol.match
 ---
 
 {{JSRef}}
 
-The **`Symbol.match`** well-known symbol specifies the matching of a regular expression against a string. This function is called by the {{jsxref("String.prototype.match()")}} method.
+The **`Symbol.match`** static data property represents the well-known symbol specifying the method used to match an input string against the current object, making the object behave like a {{jsxref("RegExp")}}. This function is called by the {{jsxref("String.prototype.match()")}} method.
 
 For more information, see {{jsxref("RegExp.@@match", "RegExp.prototype[@@match]()")}} and {{jsxref("String.prototype.match()")}}.
 
 {{EmbedInteractiveExample("pages/js/symbol-match.html", "taller")}}
+
+## Value
+
+The well-known symbol `@@match`.
 
 {{js_property_attributes(0, 0, 0)}}
 

@@ -1,14 +1,9 @@
 ---
 title: RegExp.lastMatch ($&)
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/lastMatch
-tags:
-  - JavaScript
-  - Deprecated
-  - Property
-  - Read-only
-  - Reference
-  - RegExp
-  - Regular Expressions
+page-type: javascript-static-accessor-property
+status:
+  - deprecated
 browser-compat: javascript.builtins.RegExp.lastMatch
 ---
 

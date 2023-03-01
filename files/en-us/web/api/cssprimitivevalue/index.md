@@ -2,13 +2,8 @@
 title: CSSPrimitiveValue
 slug: Web/API/CSSPrimitiveValue
 page-type: web-api-interface
-tags:
-  - API
-  - CSSOM
-  - CSSPrimitiveValue
-  - Interface
-  - Reference
-  - Deprecated
+status:
+  - deprecated
 browser-compat: api.CSSPrimitiveValue
 ---
 

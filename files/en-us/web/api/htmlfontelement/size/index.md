@@ -2,13 +2,8 @@
 title: HTMLFontElement.size
 slug: Web/API/HTMLFontElement/size
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTML DOM
-  - HTMLFontElement
-  - Property
-  - Reference
-  - Deprecated
+status:
+  - deprecated
 browser-compat: api.HTMLFontElement.size
 ---
 

@@ -2,13 +2,8 @@
 title: HIDInputReportEvent.reportId
 slug: Web/API/HIDInputReportEvent/reportId
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - reportId
-  - HIDInputReportEvent
-  - Experimental
+status:
+  - experimental
 browser-compat: api.HIDInputReportEvent.reportId
 ---
 

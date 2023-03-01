@@ -65,12 +65,6 @@ denominator "3 − b":
 
 The following MathML code should render as a [binomial coefficient](https://en.wikipedia.org/wiki/Binomial_coefficient):
 
-```html hidden
-<link
-  rel="stylesheet"
-  href="https://fred-wang.github.io/MathFonts/LatinModern/mathfonts.css" />
-```
-
 ```html
 <math display="block">
   <mrow>

@@ -1,6 +1,7 @@
 ---
 title: alignment-baseline
 slug: Web/SVG/Attribute/alignment-baseline
+page-type: svg-attribute
 tags:
   - SVG
   - SVG Attribute

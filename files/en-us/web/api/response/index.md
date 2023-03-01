@@ -2,13 +2,6 @@
 title: Response
 slug: Web/API/Response
 page-type: web-api-interface
-tags:
-  - API
-  - Fetch
-  - Fetch API
-  - Interface
-  - Reference
-  - Response
 browser-compat: api.Response
 ---
 
@@ -39,8 +32,6 @@ You can create a new `Response` object using the {{domxref("Response.Response", 
   - : The status code of the response. (This will be `200` for a success).
 - {{domxref("Response.statusText")}} {{ReadOnlyInline}}
   - : The status message corresponding to the status code. (e.g., `OK` for `200`).
-- {{domxref("Response.trailers")}}
-  - : A {{jsxref("Promise")}} resolving to a {{domxref("Headers")}} object, associated with the response with {{domxref("Response.headers")}} for values of the HTTP {{HTTPHeader("Trailer")}} header.
 - {{domxref("Response.type")}} {{ReadOnlyInline}}
   - : The type of the response (e.g., `basic`, `cors`).
 - {{domxref("Response.url")}} {{ReadOnlyInline}}

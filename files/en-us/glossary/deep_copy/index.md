@@ -1,8 +1,7 @@
 ---
 title: Deep copy
 slug: Glossary/Deep_copy
-tags:
-  - Deep copy
+page-type: glossary-definition
 ---
 
 {{MDNSidebar}}
@@ -28,7 +27,7 @@ As can be seen from the code above, because a deep copy shares no references wit
 
 However, while the object in the code above is simple enough to be [serializable](/en-US/docs/Glossary/Serialization), many JavaScript objects are not serializable at all — for example, [functions](/en-US/docs/Web/JavaScript/Guide/Functions) (with closures), [Symbols](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol), objects that represent HTML elements in the [HTML DOM API](/en-US/docs/Web/API/HTML_DOM_API), recursive data, and many other cases. Calling `JSON.stringify()` to serialize the objects in those cases will fail. So there's no way to make deep copies of such objects.
 
-For objects that _are_ serializable, you can alternatively use the [`structuredClone()`](/en-US/docs/Web/API/structuredClone) method to create deep copies. `structuredClone()` has the advantage of allowing {{Glossary("transferable objects")}} in the source to be _transferred_ to the new copy, rather than just cloned. But note that `structuredClone()` isn't a feature of the JavaScript language itself — instead it's a feature of browsers and any other JavaScript runtimes that implement a global object like [`window`](/en-US/docs/Web/API/Window). And calling `structuredClone()` to clone a non-serializable object will fail in the same way that calling `JSON.stringify()` to serialize it will fail.
+For objects that _are_ serializable, you can alternatively use the [`structuredClone()`](/en-US/docs/Web/API/structuredClone) method to create deep copies. `structuredClone()` has the advantage of allowing [transferable objects](/en-US/docs/Web/API/Web_Workers_API/Transferable_objects) in the source to be _transferred_ to the new copy, rather than just cloned. But note that `structuredClone()` isn't a feature of the JavaScript language itself — instead it's a feature of browsers and any other JavaScript runtimes that implement a global object like [`window`](/en-US/docs/Web/API/Window). And calling `structuredClone()` to clone a non-serializable object will fail in the same way that calling `JSON.stringify()` to serialize it will fail.
 
 ## See also
 

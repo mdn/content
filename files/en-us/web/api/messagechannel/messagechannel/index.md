@@ -2,12 +2,6 @@
 title: MessageChannel()
 slug: Web/API/MessageChannel/MessageChannel
 page-type: web-api-constructor
-tags:
-  - API
-  - Channel messaging
-  - Constructor
-  - MessageChannel
-  - Reference
 browser-compat: api.MessageChannel.MessageChannel
 ---
 
@@ -45,15 +39,15 @@ The {{domxref("MessageChannel.port1", "port1")}} is listened to, to check when t
 
 ```js
 const channel = new MessageChannel();
-const para = document.querySelector('p');
+const para = document.querySelector("p");
 
-const ifr = document.querySelector('iframe');
+const ifr = document.querySelector("iframe");
 const otherWindow = ifr.contentWindow;
 
 ifr.addEventListener("load", iframeLoaded, false);
 
 function iframeLoaded() {
-  otherWindow.postMessage('Hello from the main page!', '*', [channel.port2]);
+  otherWindow.postMessage("Hello from the main page!", "*", [channel.port2]);
 }
 
 channel.port1.onmessage = handleMessage;

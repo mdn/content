@@ -1,9 +1,7 @@
 ---
 title: Reference
 slug: Glossary/Reference
-tags:
-  - CodingScripting
-  - NeedsContent
+page-type: glossary-definition
 ---
 
 In the context of **{{glossary("object","objects")}}**, this is an **{{glossary("object reference")}}**. On MDN, we could be talking about the {{glossary("JavaScript")}} reference itself.

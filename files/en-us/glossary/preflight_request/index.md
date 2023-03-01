@@ -1,11 +1,7 @@
 ---
 title: Preflight request
 slug: Glossary/Preflight_request
-tags:
-  - CORS
-  - HTTP
-  - Preflight
-  - request
+page-type: glossary-definition
 ---
 
 A CORS preflight request is a {{Glossary("CORS")}} request that checks to see if the CORS protocol is understood and a server is aware using specific methods and headers.

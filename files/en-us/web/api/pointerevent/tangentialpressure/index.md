@@ -2,14 +2,6 @@
 title: PointerEvent.tangentialPressure
 slug: Web/API/PointerEvent/tangentialPressure
 page-type: web-api-instance-property
-tags:
-  - API
-  - DOM
-  - Pointer Events
-  - PointerEvent
-  - Property
-  - Reference
-  - tangentialPressure
 browser-compat: api.PointerEvent.tangentialPressure
 ---
 

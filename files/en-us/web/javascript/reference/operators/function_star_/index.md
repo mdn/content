@@ -1,14 +1,7 @@
 ---
 title: function* expression
 slug: Web/JavaScript/Reference/Operators/function*
-tags:
-  - ECMAScript 2015
-  - Function
-  - Iterator
-  - JavaScript
-  - Language feature
-  - Operator
-  - Primary Expression
+page-type: javascript-operator
 browser-compat: javascript.operators.generator_function
 ---
 

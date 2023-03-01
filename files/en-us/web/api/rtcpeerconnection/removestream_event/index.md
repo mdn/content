@@ -2,21 +2,9 @@
 title: 'RTCPeerConnection: removestream event'
 slug: Web/API/RTCPeerConnection/removestream_event
 page-type: web-api-event
-tags:
-  - API
-  - Event
-  - Managing Streams
-  - Media
-  - MediaStream
-  - RTCPeerConnection
-  - Reference
-  - Removing Streams
-  - Streams
-  - WebRTC
-  - WebRTC API
-  - removeStream
-  - Deprecated
-  - Non-standard
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.RTCPeerConnection.removestream_event
 ---
 

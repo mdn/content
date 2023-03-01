@@ -1,6 +1,7 @@
 ---
 title: max
 slug: Web/SVG/Attribute/max
+page-type: svg-attribute
 tags:
   - SVG
   - SVG Attribute

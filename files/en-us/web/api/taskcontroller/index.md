@@ -2,11 +2,6 @@
 title: TaskController
 slug: Web/API/TaskController
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Reference
-  - TaskController
 browser-compat: api.TaskController
 ---
 
@@ -50,7 +45,7 @@ _This interface also inherits the properties of its parent, {{domxref("AbortCont
 
 ## Examples
 
-> **Note:** Additional "live" examples can be found in: [Prioritized Task Scheduling API > Examples](/en-US/docs/Web/API/Prioritized_Task_Scheduling_API#examples).
+> **Note:** Additional "live" examples can be found in: [Prioritized Task Scheduling API Examples](/en-US/docs/Web/API/Prioritized_Task_Scheduling_API#examples).
 
 First we create a task controller, setting the priority of its associated signal to `user-blocking`.
 

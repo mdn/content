@@ -1,12 +1,7 @@
 ---
 title: Function expression
 slug: Web/JavaScript/Reference/Operators/function
-tags:
-  - Function
-  - JavaScript
-  - Language feature
-  - Operator
-  - Primary Expressions
+page-type: javascript-operator
 browser-compat: javascript.operators.function
 ---
 
@@ -77,7 +72,7 @@ console.log(notHoisted); // undefined
 notHoisted(); // TypeError: notHoisted is not a function
 
 var notHoisted = function () {
-  console.log('bar');
+  console.log("bar");
 };
 ```
 
@@ -90,15 +85,15 @@ This also avoids using the non-standard {{jsxref("Functions/arguments/callee", "
 ```js
 const math = {
   factit: function factorial(n) {
-    console.log(n)
+    console.log(n);
     if (n <= 1) {
       return 1;
     }
     return n * factorial(n - 1);
-  }
+  },
 };
 
-math.factit(3) //3;2;1;
+math.factit(3); //3;2;1;
 ```
 
 The variable to which the function expression is assigned will have a `name` property.
@@ -109,13 +104,13 @@ This also applies to [arrow functions](/en-US/docs/Web/JavaScript/Reference/Func
 
 ```js
 const foo = function () {};
-foo.name // "foo"
+foo.name; // "foo"
 
 const foo2 = foo;
-foo2.name // "foo"
+foo2.name; // "foo"
 
 const bar = function baz() {};
-bar.name // "baz"
+bar.name; // "baz"
 
 console.log(foo === foo2); // true
 console.log(typeof baz); // undefined
@@ -140,24 +135,24 @@ const x = function (y) {
 More commonly it is used as a {{Glossary("Callback_function", "callback")}}:
 
 ```js
-button.addEventListener('click', function (event) {
-  console.log('button is clicked!');
-})
+button.addEventListener("click", function (event) {
+  console.log("button is clicked!");
+});
 ```
 
 ### Using an Immediately Invoked Function Expression (IIFE)
 
 An anonymous function is created and called:
 
-```js
+```js-nolint
 (function () {
-  console.log('Code runs!');
+  console.log("Code runs!");
 })();
 
 // or
 
 !function () {
-  console.log('Code runs!');
+  console.log("Code runs!");
 }();
 ```
 

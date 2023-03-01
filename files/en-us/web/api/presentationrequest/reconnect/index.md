@@ -2,11 +2,8 @@
 title: PresentationRequest.reconnect()
 slug: Web/API/PresentationRequest/reconnect
 page-type: web-api-instance-method
-tags:
-  - Promise
-  - controlled presentations
-  - presentation identifier
-  - Experimental
+status:
+  - experimental
 browser-compat: api.PresentationRequest.reconnect
 ---
 

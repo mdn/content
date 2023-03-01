@@ -2,13 +2,6 @@
 title: WritableStreamDefaultWriter.releaseLock()
 slug: Web/API/WritableStreamDefaultWriter/releaseLock
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - Streams
-  - WritableStream
-  - releaseLock
 browser-compat: api.WritableStreamDefaultWriter.releaseLock
 ---
 

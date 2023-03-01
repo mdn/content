@@ -1,12 +1,7 @@
 ---
 title: '<meter>: The HTML Meter element'
 slug: Web/HTML/Element/meter
-tags:
-  - Element
-  - HTML
-  - HTML forms
-  - Reference
-  - Web
+page-type: html-element
 browser-compat: html.elements.meter
 ---
 
@@ -20,15 +15,15 @@ The **`<meter>`** [HTML](/en-US/docs/Web/HTML) element represents either a scala
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories"
+        <a href="/en-US/docs/Web/HTML/Content_categories"
           >Content categories</a
         >
       </th>
       <td>
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
           >Flow content</a
         >,
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content"
           >phrasing content</a
         >, labelable content, palpable content.
       </td>
@@ -36,7 +31,7 @@ The **`<meter>`** [HTML](/en-US/docs/Web/HTML) element represents either a scala
     <tr>
       <th scope="row">Permitted content</th>
       <td>
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content"
           >Phrasing content</a
         >, but there must be no <code>&#x3C;meter></code> element among its
         descendants.
@@ -50,7 +45,7 @@ The **`<meter>`** [HTML](/en-US/docs/Web/HTML) element represents either a scala
       <th scope="row">Permitted parents</th>
       <td>
         Any element that accepts
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content"
           >phrasing content</a
         >.
       </td>

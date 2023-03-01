@@ -2,14 +2,8 @@
 title: XRFrame.getHitTestResultsForTransientInput()
 slug: Web/API/XRFrame/getHitTestResultsForTransientInput
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - AR
-  - XR
-  - WebXR
-  - Experimental
+status:
+  - experimental
 browser-compat: api.XRFrame.getHitTestResultsForTransientInput
 ---
 
@@ -68,6 +62,6 @@ function onXRFrame(time, xrFrame) {
 
 ## See also
 
-- {{domxref("XRTransientInputHitResult")}}
+- {{domxref("XRTransientInputHitTestResult")}}
 - {{domxref("XRTransientInputHitTestSource")}}
 - {{domxref("XRRay")}}

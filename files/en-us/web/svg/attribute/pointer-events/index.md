@@ -1,6 +1,7 @@
 ---
 title: pointer-events
 slug: Web/SVG/Attribute/pointer-events
+page-type: svg-attribute
 tags:
   - SVG
   - SVG Attribute

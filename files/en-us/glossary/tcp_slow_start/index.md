@@ -1,13 +1,7 @@
 ---
 title: TCP slow start
 slug: Glossary/TCP_slow_start
-tags:
-  - Infrastructure
-  - Networking
-  - TCP
-  - Transmission Control Protocol
-  - Web Performance
-  - data
+page-type: glossary-definition
 ---
 
 {{glossary('TCP')}} slow start helps buildup transmission speeds to the network's capabilities. It does this without initially knowing what those capabilities are and without creating congestion. {{glossary('TCP')}} slow start is an algorithm used to detect the available bandwidth for packet transmission, and balances the speed of a network connection. It prevents the appearance of network congestion whose capabilities are initially unknown, and slowly increases the volume of information diffused until the network's maximum capacity is found.

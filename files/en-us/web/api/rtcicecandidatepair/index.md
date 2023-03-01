@@ -2,18 +2,6 @@
 title: RTCIceCandidatePair
 slug: Web/API/RTCIceCandidatePair
 page-type: web-api-interface
-tags:
-  - API
-  - Candidate
-  - Connectivity
-  - Dictionary
-  - ICE
-  - Interface
-  - Negotiation
-  - Pair
-  - Reference
-  - WebRTC
-  - WebRTC API
 browser-compat: api.RTCIceCandidatePair
 ---
 

@@ -1,6 +1,7 @@
 ---
 title: unicode
 slug: Web/SVG/Attribute/unicode
+page-type: svg-attribute
 tags:
   - Deprecated
   - SVG

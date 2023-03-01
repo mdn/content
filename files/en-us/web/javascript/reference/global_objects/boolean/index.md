@@ -1,11 +1,7 @@
 ---
 title: Boolean
 slug: Web/JavaScript/Reference/Global_Objects/Boolean
-tags:
-  - Boolean
-  - Class
-  - JavaScript
-  - Reference
+page-type: javascript-class
 browser-compat: javascript.builtins.Boolean
 ---
 
@@ -104,6 +100,13 @@ Truthy values are even more unlikely to be loosely equal to `true`. All values a
 
 - {{jsxref("Global_Objects/Boolean/Boolean", "Boolean()")}}
   - : Creates a new `Boolean` object.
+
+## Instance properties
+
+These properties are defined on `Boolean.prototype` and shared by all `Boolean` instances.
+
+- {{jsxref("Object/constructor", "Boolean.prototype.constructor")}}
+  - : The constructor function that created the instance object. For `Boolean` instances, the initial value is the {{jsxref("Boolean/Boolean", "Boolean")}} constructor.
 
 ## Instance methods
 

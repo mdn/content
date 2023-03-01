@@ -1,12 +1,7 @@
 ---
 title: Bitwise NOT (~)
 slug: Web/JavaScript/Reference/Operators/Bitwise_NOT
-tags:
-  - Bitwise operator
-  - JavaScript
-  - Language feature
-  - Operator
-  - Reference
+page-type: javascript-operator
 browser-compat: javascript.operators.bitwise_not
 ---
 

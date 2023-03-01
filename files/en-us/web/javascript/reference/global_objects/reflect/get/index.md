@@ -1,19 +1,13 @@
 ---
 title: Reflect.get()
 slug: Web/JavaScript/Reference/Global_Objects/Reflect/get
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Reference
-  - Reflect
-  - Polyfill
+page-type: javascript-static-method
 browser-compat: javascript.builtins.Reflect.get
 ---
 
 {{JSRef}}
 
-The static **`Reflect.get()`** method works like getting a
+The **`Reflect.get()`** static method works like getting a
 property from an object (`target[propertyKey]`) as a function.
 
 {{EmbedInteractiveExample("pages/js/reflect-get.html")}}
@@ -57,32 +51,32 @@ The `Reflect.get` method allows you to get a property on an object. It is like t
 
 ```js
 // Object
-let obj = { x: 1, y: 2 }
-Reflect.get(obj, 'x')  // 1
+let obj = { x: 1, y: 2 };
+Reflect.get(obj, "x"); // 1
 
 // Array
-Reflect.get(['zero', 'one'], 1)  // "one"
+Reflect.get(["zero", "one"], 1); // "one"
 
 // Proxy with a get handler
-let x = {p: 1};
+let x = { p: 1 };
 
 let obj = new Proxy(x, {
   get(t, k, r) {
-    return k + 'bar'
-  }
-})
-Reflect.get(obj, 'foo')  // "foobar"
+    return k + "bar";
+  },
+});
+Reflect.get(obj, "foo"); // "foobar"
 
 //Proxy with get handler and receiver
-let x = {p: 1, foo: 2};
-let y = {foo: 3};
+let x = { p: 1, foo: 2 };
+let y = { foo: 3 };
 
 let obj = new Proxy(x, {
   get(t, prop, receiver) {
-    return receiver[prop] + 'bar'
-  }
-})
-Reflect.get(obj, 'foo', y) // "3bar"
+    return receiver[prop] + "bar";
+  },
+});
+Reflect.get(obj, "foo", y); // "3bar"
 ```
 
 ## Specifications

@@ -2,14 +2,9 @@
 title: Animating textures in WebGL
 slug: Web/API/WebGL_API/Tutorial/Animating_textures_in_WebGL
 page-type: guide
-tags:
-  - Media
-  - Tutorial
-  - Video
-  - WebGL
 ---
 
-{{WebGLSidebar("Tutorial") }} {{Previous("Web/API/WebGL_API/Tutorial/Lighting_in_WebGL")}}
+{{DefaultAPISidebar("WebGL")}} {{Previous("Web/API/WebGL_API/Tutorial/Lighting_in_WebGL")}}
 
 In this demonstration, we build upon the previous example by replacing our static textures with the frames of an mp4 video file that's playing. This is actually pretty easy to do and fun to watch, so let's get started. You can use similar code to use any sort of data (such as a {{ HTMLElement("canvas") }}) as the source for your textures.
 
@@ -75,7 +70,7 @@ First we create a video element. We set it to autoplay, mute the sound, and loop
 
 And finally, we set the `src` attribute to start and call `play` to start loading and playing the video.
 
-The video must be loaded from a secure source in order to be used to provide texture data to WebGL. That means that you'll not only need to deploy code like using a secure web server, but you'll need a secure server to test with as well. See [How do you set up a local testing server?](/en-US/docs/Learn/Common_questions/set_up_a_local_testing_server) for help.
+The video must be loaded from a secure source in order to be used to provide texture data to WebGL. That means that you'll not only need to deploy code like using a secure web server, but you'll need a secure server to test with as well. See [How do you set up a local testing server?](/en-US/docs/Learn/Common_questions/Tools_and_setup/set_up_a_local_testing_server) for help.
 
 ## Using the video frames as a texture
 

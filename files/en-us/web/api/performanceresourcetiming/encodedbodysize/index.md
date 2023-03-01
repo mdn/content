@@ -2,11 +2,6 @@
 title: PerformanceResourceTiming.encodedBodySize
 slug: Web/API/PerformanceResourceTiming/encodedBodySize
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - Web Performance
 browser-compat: api.PerformanceResourceTiming.encodedBodySize
 ---
 
@@ -28,7 +23,7 @@ The `encodedBodySize` property can have the following values:
 
 If the `encodedBodySize` and {{domxref("PerformanceResourceTiming.decodedBodySize", "decodedBodySize")}} properties are non-null and differ, the content was compressed (for example, gzip or Brotli).
 
-Here's an example using a {{domxref("PerformanceObserver")}}, which notifies of new `resource` performance entries as they are recorded in the browser's performance timeline:
+Example using a {{domxref("PerformanceObserver")}}, which notifies of new `resource` performance entries as they are recorded in the browser's performance timeline. Use the `buffered` option to access entries from before the observer creation.
 
 ```js
 const observer = new PerformanceObserver((list) => {

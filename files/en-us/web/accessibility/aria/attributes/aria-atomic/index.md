@@ -1,13 +1,6 @@
 ---
-title: "aria-atomic"
+title: aria-atomic
 slug: Web/Accessibility/ARIA/Attributes/aria-atomic
-tags:
-  - Accessibility
-  - ARIA
-  - ARIA attribute
-  - ARIA property
-  - aria-atomic
-  - NeedsExample
 spec-urls: https://w3c.github.io/aria/#aria-atomic
 ---
 

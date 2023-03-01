@@ -1,6 +1,7 @@
 ---
 title: stemv
 slug: Web/SVG/Attribute/stemv
+page-type: svg-attribute
 tags:
   - Deprecated
   - SVG

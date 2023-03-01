@@ -2,12 +2,8 @@
 title: VideoEncoder()
 slug: Web/API/VideoEncoder/VideoEncoder
 page-type: web-api-constructor
-tags:
-  - API
-  - Constructor
-  - Reference
-  - VideoEncoder
-  - Experimental
+status:
+  - experimental
 browser-compat: api.VideoEncoder.VideoEncoder
 ---
 

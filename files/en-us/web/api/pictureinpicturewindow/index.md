@@ -2,15 +2,6 @@
 title: PictureInPictureWindow
 slug: Web/API/PictureInPictureWindow
 page-type: web-api-interface
-tags:
-  - API
-  - Advanced
-  - Interface
-  - Picture-in-Picture
-  - Picture-in-Picture API
-  - Reference
-  - Video
-  - pip
 browser-compat: api.PictureInPictureWindow
 ---
 
@@ -74,4 +65,4 @@ button.onclick = () => {
 
 ## See also
 
-- {{DOMxRef("Picture-in-Picture_API")}}
+- {{DOMxRef("Picture-in-Picture_API", "Picture-in-Picture API")}}

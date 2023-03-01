@@ -2,13 +2,6 @@
 title: PerformanceServerTiming.toJSON()
 slug: Web/API/PerformanceServerTiming/toJSON
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - PerformanceServerTiming
-  - Reference
-  - ServerTiming
-  - toJSON
 browser-compat: api.PerformanceServerTiming.toJSON
 ---
 
@@ -40,7 +33,9 @@ Server timing metrics require the server to send the {{HTTPHeader("Server-Timing
 Server-Timing: cache;desc="Cache Read";dur=23.2
 ```
 
-Then use a {{domxref("PerformanceObserver")}} to watch for {{domxref("PerformanceServerTiming")}} entries as they are recorded.
+The `serverTiming` entries can live on `navigation` and `resource` entries.
+
+Example using a {{domxref("PerformanceObserver")}}, which notifies of new `navigation` and `resource` performance entries as they are recorded in the browser's performance timeline. Use the `buffered` option to access entries from before the observer creation.
 
 ```js
 const observer = new PerformanceObserver((list) => {
@@ -51,7 +46,9 @@ const observer = new PerformanceObserver((list) => {
   });
 });
 
-observer.observe({ entryTypes: ["resource", "navigation"] });
+["navigation", "resource"].forEach((type) =>
+  observer.observe({ type, buffered: true })
+);
 ```
 
 This would log a JSON object like so:

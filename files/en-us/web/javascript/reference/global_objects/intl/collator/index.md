@@ -1,14 +1,7 @@
 ---
 title: Intl.Collator
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Collator
-tags:
-  - Class
-  - Collator
-  - Internationalization
-  - Intl
-  - JavaScript
-  - Localization
-  - Reference
+page-type: javascript-class
 browser-compat: javascript.builtins.Intl.Collator
 ---
 

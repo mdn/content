@@ -2,12 +2,6 @@
 title: PannerNode.orientationX
 slug: Web/API/PannerNode/orientationX
 page-type: web-api-instance-property
-tags:
-  - PannerNode
-  - Property
-  - Reference
-  - Web Audio API
-  - orientationX
 browser-compat: api.PannerNode.orientationX
 ---
 

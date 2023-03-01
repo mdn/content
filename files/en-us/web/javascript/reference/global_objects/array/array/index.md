@@ -1,11 +1,7 @@
 ---
 title: Array() constructor
 slug: Web/JavaScript/Reference/Global_Objects/Array/Array
-tags:
-  - Array
-  - Constructor
-  - JavaScript
-  - Reference
+page-type: javascript-constructor
 browser-compat: javascript.builtins.Array.Array
 ---
 
@@ -49,7 +45,7 @@ Array(arrayLength)
 
 ### Array literal notation
 
-Arrays can be created using the [literal](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#array_literals)
+Arrays can be created using the [literal](/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#array_literals)
 notation:
 
 ```js

@@ -1,12 +1,7 @@
 ---
 title: SVG
 slug: Glossary/SVG
-tags:
-  - Beginner
-  - CodingScripting
-  - Graphics
-  - SVG
-  - "l10n:priority"
+page-type: glossary-definition
 ---
 
 _Scalable Vector Graphics_ (**SVG**) is a 2D vector image format based on an {{Glossary("XML")}} syntax.

@@ -1,10 +1,7 @@
 ---
-title: 'Warning: expression closures are deprecated'
+title: "Warning: expression closures are deprecated"
 slug: Web/JavaScript/Reference/Errors/Deprecated_expression_closures
-tags:
-  - Error
-  - JavaScript
-  - Warning
+page-type: javascript-error
 ---
 
 {{jsSidebar("Errors")}}
@@ -27,7 +24,7 @@ Warning. JavaScript execution won't be halted.
 
 The non-standard expression closure
 syntax (shorthand function syntax) is deprecated and shouldn't be used
-anymore. This syntax has been removed entirely in [bug 1083458](https://bugzilla.mozilla.org/show_bug.cgi?id=1083458) and
+anymore. This syntax has been removed entirely in [bug 1083458](https://bugzil.la/1083458) and
 scripts using it will throw a {{jsxref("SyntaxError")}} in newer versions of Firefox.
 
 ## Examples
@@ -51,10 +48,14 @@ To convert the non-standard expression closures syntax to standard ECMAScript sy
 you can add curly braces and return statements.
 
 ```js example-good
-const x = function () { return 1; }
+const x = function () {
+  return 1;
+};
 
 const obj = {
-  count() { return 1; }
+  count() {
+    return 1;
+  },
 };
 ```
 
@@ -81,8 +82,12 @@ With [method definitions](/en-US/docs/Web/JavaScript/Reference/Functions/Method_
 
 ```js example-good
 const obj = {
-  get x() { return 1 },
-  set x(v) { this.v = v }
+  get x() {
+    return 1;
+  },
+  set x(v) {
+    this.v = v;
+  },
 };
 ```
 

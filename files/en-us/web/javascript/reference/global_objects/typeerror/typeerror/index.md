@@ -1,11 +1,7 @@
 ---
 title: TypeError() constructor
 slug: Web/JavaScript/Reference/Global_Objects/TypeError/TypeError
-tags:
-  - Constructor
-  - JavaScript
-  - Reference
-  - TypeError
+page-type: javascript-constructor
 browser-compat: javascript.builtins.TypeError.TypeError
 ---
 
@@ -53,15 +49,15 @@ TypeError(message, fileName, lineNumber)
 
 ```js
 try {
-  null.f()
+  null.f();
 } catch (e) {
-  console.log(e instanceof TypeError)  // true
-  console.log(e.message)               // "null has no properties"
-  console.log(e.name)                  // "TypeError"
-  console.log(e.fileName)              // "Scratchpad/1"
-  console.log(e.lineNumber)            // 2
-  console.log(e.columnNumber)          // 2
-  console.log(e.stack)                 // "@Scratchpad/2:2:3\n"
+  console.log(e instanceof TypeError); // true
+  console.log(e.message); // "null has no properties"
+  console.log(e.name); // "TypeError"
+  console.log(e.fileName); // "Scratchpad/1"
+  console.log(e.lineNumber); // 2
+  console.log(e.columnNumber); // 2
+  console.log(e.stack); // "@Scratchpad/2:2:3\n"
 }
 ```
 
@@ -69,15 +65,15 @@ try {
 
 ```js
 try {
-  throw new TypeError('Hello', "someFile.js", 10)
+  throw new TypeError("Hello", "someFile.js", 10);
 } catch (e) {
-  console.log(e instanceof TypeError)  // true
-  console.log(e.message)               // "Hello"
-  console.log(e.name)                  // "TypeError"
-  console.log(e.fileName)              // "someFile.js"
-  console.log(e.lineNumber)            // 10
-  console.log(e.columnNumber)          // 0
-  console.log(e.stack)                 // "@Scratchpad/2:2:9\n"
+  console.log(e instanceof TypeError); // true
+  console.log(e.message); // "Hello"
+  console.log(e.name); // "TypeError"
+  console.log(e.fileName); // "someFile.js"
+  console.log(e.lineNumber); // 10
+  console.log(e.columnNumber); // 0
+  console.log(e.stack); // "@Scratchpad/2:2:9\n"
 }
 ```
 

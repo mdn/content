@@ -1,12 +1,7 @@
 ---
 title: WeakSet() constructor
 slug: Web/JavaScript/Reference/Global_Objects/WeakSet/WeakSet
-tags:
-  - Constructor
-  - JavaScript
-  - Reference
-  - WeakSet
-  - Polyfill
+page-type: javascript-constructor
 browser-compat: javascript.builtins.WeakSet.WeakSet
 ---
 

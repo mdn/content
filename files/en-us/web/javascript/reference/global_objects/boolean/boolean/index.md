@@ -1,11 +1,7 @@
 ---
 title: Boolean() constructor
 slug: Web/JavaScript/Reference/Global_Objects/Boolean/Boolean
-tags:
-  - Boolean
-  - Constructor
-  - JavaScript
-  - Reference
+page-type: javascript-constructor
 browser-compat: javascript.builtins.Boolean.Boolean
 ---
 

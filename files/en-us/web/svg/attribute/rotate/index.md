@@ -1,6 +1,7 @@
 ---
 title: rotate
 slug: Web/SVG/Attribute/rotate
+page-type: svg-attribute
 tags:
   - Animation
   - Experimental

@@ -1,12 +1,7 @@
 ---
 title: Int16Array() constructor
 slug: Web/JavaScript/Reference/Global_Objects/Int16Array/Int16Array
-tags:
-  - Constructor
-  - JavaScript
-  - Reference
-  - TypedArray
-  - Polyfill
+page-type: javascript-constructor
 browser-compat: javascript.builtins.Int16Array.Int16Array
 ---
 

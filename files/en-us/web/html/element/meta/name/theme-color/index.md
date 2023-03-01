@@ -1,12 +1,7 @@
 ---
 title: theme-color
 slug: Web/HTML/Element/meta/name/theme-color
-tags:
-  - Attribute
-  - HTML
-  - HTML document metadata
-  - Reference
-  - metadata
+page-type: html-attribute-value
 browser-compat: html.elements.meta.name.theme-color
 ---
 

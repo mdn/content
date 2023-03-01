@@ -2,13 +2,6 @@
 title: PushEvent.data
 slug: Web/API/PushEvent/data
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Push
-  - PushEvent
-  - Reference
-  - data
 browser-compat: api.PushEvent.data
 ---
 

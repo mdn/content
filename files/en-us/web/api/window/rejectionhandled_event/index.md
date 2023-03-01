@@ -2,20 +2,6 @@
 title: 'Window: rejectionhandled event'
 slug: Web/API/Window/rejectionhandled_event
 page-type: web-api-event
-tags:
-  - API
-  - Event
-  - HTML DOM
-  - JavaScript
-  - Promise
-  - Promises
-  - Reference
-  - Window
-  - Worker
-  - events
-  - global
-  - onrejectionhandled
-  - rejectionhandled
 browser-compat: api.Window.rejectionhandled_event
 ---
 
@@ -75,7 +61,7 @@ window.addEventListener("rejectionhandled", (event) => {
 
 ## See also
 
-- {{SectionOnPage("/en-US/docs/Web/JavaScript/Guide/Using_promises", "Promise rejection events")}}
+- [Promise rejection events](/en-US/docs/Web/JavaScript/Guide/Using_promises#promise_rejection_events)
 - {{domxref("PromiseRejectionEvent")}}
 - {{jsxref("Promise")}}
 - {{domxref("Window/unhandledrejection_event", "unhandledrejection")}}

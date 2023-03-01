@@ -1,6 +1,7 @@
 ---
 title: glyph-orientation-horizontal
 slug: Web/SVG/Attribute/glyph-orientation-horizontal
+page-type: svg-attribute
 tags:
   - Deprecated
   - SVG

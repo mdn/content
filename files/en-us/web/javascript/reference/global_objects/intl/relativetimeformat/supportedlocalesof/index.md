@@ -2,20 +2,13 @@
 title: Intl.RelativeTimeFormat.supportedLocalesOf()
 slug: >-
   Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/supportedLocalesOf
-tags:
-  - Internationalization
-  - Intl
-  - JavaScript
-  - Localization
-  - Method
-  - Reference
-  - RelativeTimeFormat
+page-type: javascript-static-method
 browser-compat: javascript.builtins.Intl.RelativeTimeFormat.supportedLocalesOf
 ---
 
 {{JSRef}}
 
-The **`Intl.RelativeTimeFormat.supportedLocalesOf()`** method returns an array containing those of the provided locales that are supported in date and time formatting without having to fall back to the runtime's default locale.
+The **`Intl.RelativeTimeFormat.supportedLocalesOf()`** static method returns an array containing those of the provided locales that are supported in date and time formatting without having to fall back to the runtime's default locale.
 
 {{EmbedInteractiveExample("pages/js/intl-relativetimeformat-prototype-supportedlocalesof.html","shorter")}}
 
@@ -54,9 +47,11 @@ Returns an array with a subset of the language tags provided in `locales`. The l
 Assuming a runtime that supports Indonesian and German but not Balinese in date and time formatting, `supportedLocalesOf` returns the Indonesian and German language tags unchanged, even though `pinyin` collation is neither relevant to date and time formatting nor used with Indonesian, and a specialized German for Indonesia is unlikely to be supported. Note the specification of the `"lookup"` algorithm here — a `"best fit"` matcher might decide that Indonesian is an adequate match for Balinese since most Balinese speakers also understand Indonesian, and therefore return the Balinese language tag as well.
 
 ```js
-const locales = ['ban', 'id-u-co-pinyin', 'de-ID'];
-const options = { localeMatcher: 'lookup' };
-console.log(Intl.RelativeTimeFormat.supportedLocalesOf(locales, options).join(', '));
+const locales = ["ban", "id-u-co-pinyin", "de-ID"];
+const options = { localeMatcher: "lookup" };
+console.log(
+  Intl.RelativeTimeFormat.supportedLocalesOf(locales, options).join(", "),
+);
 // "id-u-co-pinyin, de-ID"
 ```
 

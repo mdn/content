@@ -1,6 +1,7 @@
 ---
 title: SVG element reference
 slug: Web/SVG/Element
+page-type: landing-page
 tags:
   - Drawing
   - Elements

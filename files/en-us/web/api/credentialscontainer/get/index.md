@@ -2,14 +2,6 @@
 title: CredentialsContainer.get()
 slug: Web/API/CredentialsContainer/get
 page-type: web-api-instance-method
-tags:
-  - API
-  - Credential Management API
-  - CredentialsContainer
-  - Method
-  - NeedsExample
-  - Reference
-  - credential management
 browser-compat: api.CredentialsContainer.get
 ---
 
@@ -83,7 +75,7 @@ get(options)
     - `mediation`
       - : A {{jsxref("String")}} indicating whether the user will
         be required to log on for every visit to the website. Valid values are
-        `"silent"`, `"optional"`, or `"required"`.
+        `"silent"`, `"optional"`, `"conditional"`, or `"required"`.
     - `unmediated` {{deprecated_inline}}
       - : A boolean value
         indicating the returned {{domxref("Credential")}} instance should not require user
@@ -101,6 +93,11 @@ A {{jsxref("Promise")}} that resolves with a {{domxref("Credential")}} instance 
 matches the provided parameters. If a single Credential cannot be unambiguously
 obtained, the Promise will resolve to null.
 
+### Exceptions
+
+- `SecurityError` {{domxref("DOMException")}}
+  - : Use of this feature was blocked by a [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy).
+
 ## Specifications
 
 {{Specifications}}
@@ -111,5 +108,5 @@ obtained, the Promise will resolve to null.
 
 ## See also
 
-- {{HTTPHeader("Feature-Policy")}} directive
-  {{HTTPHeader("Feature-Policy/publickey-credentials-get","publickey-credentials-get")}}
+- {{HTTPHeader("Permissions-Policy")}} directive
+  {{HTTPHeader("Permissions-Policy/publickey-credentials-get","publickey-credentials-get")}}

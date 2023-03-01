@@ -2,13 +2,6 @@
 title: 'OfflineAudioContext: complete event'
 slug: Web/API/OfflineAudioContext/complete_event
 page-type: web-api-event
-tags:
-  - API
-  - Event
-  - OfflineAudioContext
-  - Reference
-  - Web Audio API
-  - complete
 browser-compat: api.OfflineAudioContext.complete_event
 ---
 
@@ -43,7 +36,7 @@ _Also inherits properties from its parent, {{domxref("Event")}}_.
 
 ## Examples
 
-When processing is complete, you might want to use the `oncomplete` handler the prompt the user that the audio can now be played, and enable the play button:
+When processing is complete, you might want to use the `complete` event handler to prompt the user that the audio can now be played, and enable the play button:
 
 ```js
 const offlineAudioCtx = new OfflineAudioContext();

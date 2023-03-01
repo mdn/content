@@ -1,13 +1,7 @@
 ---
 title: eval()
 slug: Web/JavaScript/Reference/Global_Objects/eval
-tags:
-  - Evaluating JavaScript
-  - JavaScript
-  - Method
-  - Reference
-  - Warning
-  - eval
+page-type: javascript-function
 browser-compat: javascript.builtins.eval
 ---
 

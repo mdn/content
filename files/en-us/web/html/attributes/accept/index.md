@@ -1,13 +1,7 @@
 ---
 title: 'HTML attribute: accept'
 slug: Web/HTML/Attributes/accept
-tags:
-  - Accept
-  - Attribute
-  - File
-  - HTML
-  - Input
-  - Reference
+page-type: html-attribute
 browser-compat: html.elements.input.accept
 ---
 

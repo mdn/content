@@ -1,6 +1,7 @@
 ---
 title: pointsAtY
 slug: Web/SVG/Attribute/pointsAtY
+page-type: svg-attribute
 tags:
   - Filters
   - SVG

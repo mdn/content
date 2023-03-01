@@ -1,12 +1,7 @@
 ---
 title: async function
 slug: Web/JavaScript/Reference/Statements/async_function
-tags:
-  - Example
-  - Function
-  - JavaScript
-  - Language feature
-  - Statement
+page-type: javascript-statement
 browser-compat: javascript.statements.async_function
 ---
 
@@ -155,10 +150,10 @@ function `foo` in three stages.
 ```js
 async function foo() {
   const result1 = await new Promise((resolve) =>
-    setTimeout(() => resolve("1"))
+    setTimeout(() => resolve("1")),
   );
   const result2 = await new Promise((resolve) =>
-    setTimeout(() => resolve("2"))
+    setTimeout(() => resolve("2")),
   );
 }
 foo();
@@ -237,7 +232,7 @@ function concurrentPromise() {
     (messages) => {
       console.log(messages[0]); // slow
       console.log(messages[1]); // fast
-    }
+    },
   );
 }
 

@@ -1,6 +1,7 @@
 ---
 title: <feConvolveMatrix>
 slug: Web/SVG/Element/feConvolveMatrix
+page-type: svg-element
 tags:
   - Element
   - Filters

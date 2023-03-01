@@ -1,21 +1,23 @@
 ---
 title: Object.prototype.constructor
 slug: Web/JavaScript/Reference/Global_Objects/Object/constructor
-tags:
-  - JavaScript
-  - Object
-  - Property
-  - Prototype
+page-type: javascript-instance-data-property
 browser-compat: javascript.builtins.Object.constructor
 ---
 
 {{JSRef}}
 
-The **`constructor`** property returns a reference to the {{jsxref("Object")}} constructor function that created the instance object. Note that the value of this property is a reference to _the function itself_, not a string containing the function's name.
+The **`constructor`** data property of an {{jsxref("Object")}} instance returns a reference to the constructor function that created the instance object. Note that the value of this property is a reference to _the function itself_, not a string containing the function's name.
 
 > **Note:** This is a property of JavaScript objects. For the `constructor` method in classes, see [its own reference page](/en-US/docs/Web/JavaScript/Reference/Classes/constructor).
 
+## Value
+
+A reference to the constructor function that created the instance object.
+
 {{js_property_attributes(1, 0, 1)}}
+
+> **Note:** This property is created by default on the [`prototype`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/prototype) property of every constructor function and is inherited by all objects created by that constructor.
 
 ## Description
 

@@ -1,11 +1,7 @@
 ---
-title: 'TypeError: can''t access dead object'
+title: "TypeError: can't access dead object"
 slug: Web/JavaScript/Reference/Errors/Dead_object
-tags:
-  - Addons
-  - Error
-  - Errors
-  - JavaScript
+page-type: javascript-error
 ---
 
 {{JSSidebar("Errors")}}
@@ -53,8 +49,7 @@ exception.
 ```js
 try {
   String(window);
-}
-catch (e) {
+} catch (e) {
   console.log("window is likely dead");
 }
 ```

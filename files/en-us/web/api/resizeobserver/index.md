@@ -2,15 +2,6 @@
 title: ResizeObserver
 slug: Web/API/ResizeObserver
 page-type: web-api-interface
-tags:
-  - API
-  - Bounding Box
-  - Interface
-  - Reference
-  - Resize Observer API
-  - ResizeObserver
-  - content box
-  - observers
 browser-compat: api.ResizeObserver
 ---
 
@@ -19,8 +10,6 @@ browser-compat: api.ResizeObserver
 The **`ResizeObserver`** interface reports changes to the dimensions of an {{domxref('Element')}}'s content or border box, or the bounding box of an {{domxref('SVGElement')}}.
 
 > **Note:** The content box is the box in which content can be placed, meaning the border box minus the padding and border width. The border box encompasses the content, padding, and border. See [The box model](/en-US/docs/Learn/CSS/Building_blocks/The_box_model) for further explanation.
-
-`ResizeObserver` avoids infinite callback loops and cyclic dependencies that are often created when resizing via a callback function. It does this by only processing elements deeper in the DOM in subsequent frames. Implementations should, if they follow the specification, invoke resize events before paint and after layout.
 
 ## Constructor
 
@@ -64,9 +53,7 @@ slider.addEventListener('input', () => {
 const resizeObserver = new ResizeObserver((entries) => {
   for (const entry of entries) {
     if (entry.contentBoxSize) {
-      // Firefox implements `contentBoxSize` as a single content rect, rather than an array
-      const contentBoxSize = Array.isArray(entry.contentBoxSize) ? entry.contentBoxSize[0] : entry.contentBoxSize;
-
+      const contentBoxSize = entry.contentBoxSize[0];
       h1Elem.style.fontSize = `${Math.max(1.5, contentBoxSize.inlineSize / 200)}rem`;
       pElem.style.fontSize = `${Math.max(1, contentBoxSize.inlineSize / 600)}rem`;
     } else {
@@ -89,6 +76,30 @@ checkbox.addEventListener('change', () => {
 });
 ```
 
+## Observation Errors
+
+Implementations following the specification invoke resize events before paint (that is, before the frame is presented to the user). If there was any resize event, style and layout are re-evaluated — which in turn may trigger more resize events. Infinite loops from cyclic dependencies are addressed by only processing elements deeper in the DOM during each iteration. Resize events that don't meet that condition are deferred to the next paint, and an error event is fired on the {{domxref('Window')}} object, with the well-defined message string:
+
+**ResizeObserver loop completed with undelivered notifications.**
+
+Note that this only prevents user-agent lockup, not the infinite loop itself. For example, the following code will cause the width of `divElem` to grow indefinitely, with the above error message in the console repeating every frame:
+
+```js
+const divElem = document.querySelector('body > div');
+
+const resizeObserver = new ResizeObserver((entries) => {
+  for (const entry of entries) {
+    entry.target.style.width = entry.contentBoxSize[0].inlineSize + 10 + 'px';
+  }
+});
+
+window.addEventListener('error', function(e) {
+  console.error(e.message);
+});
+```
+
+As long as the error event does not fire indefinitely, resize observer will settle and produce a stable, likely correct, layout. However, visitors may see a flash of broken layout, as a sequence of changes expected to happen in a single frame is instead happening over multiple frames.
+
 ## Specifications
 
 {{Specifications}}
@@ -102,3 +113,4 @@ checkbox.addEventListener('change', () => {
 - [The box model](/en-US/docs/Learn/CSS/Building_blocks/The_box_model)
 - {{domxref('PerformanceObserver')}}
 - {{domxref('IntersectionObserver')}} (part of the [Intersection Observer API](/en-US/docs/Web/API/Intersection_Observer_API))
+- Upcoming [container queries](/en-US/docs/Web/CSS/CSS_Container_Queries) may be a viable alternative for implementing responsive design.

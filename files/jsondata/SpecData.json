@@ -1039,6 +1039,11 @@
     "url": "https://w3c.github.io/IndexedDB/",
     "status": "ED"
   },
+  "Ink API": {
+    "name": "Ink API",
+    "url": "https://wicg.github.io/ink-enhancement/",
+    "status": "Draft"
+  },
   "InputDeviceCapabilities": {
     "name": "InputDeviceCapabilities",
     "url": "https://wicg.github.io/InputDeviceCapabilities/",
@@ -1333,11 +1338,6 @@
     "name": "Presentation API",
     "url": "https://w3c.github.io/presentation-api/",
     "status": "CR"
-  },
-  "Priority Hints": {
-    "name": "Priority Hints",
-    "url": "https://wicg.github.io/priority-hints/",
-    "status": "Draft"
   },
   "Promise.any": {
     "name": "Promise.any",

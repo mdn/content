@@ -1,6 +1,7 @@
 ---
 title: browserSettings.cacheEnabled
 slug: Mozilla/Add-ons/WebExtensions/API/browserSettings/cacheEnabled
+page-type: webextension-api-property
 tags:
   - API
   - Add-ons

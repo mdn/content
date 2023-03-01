@@ -1,6 +1,7 @@
 ---
 title: onConnectivityAvailable
 slug: Mozilla/Add-ons/WebExtensions/API/captivePortal/onConnectivityAvailable
+page-type: webextension-api-event
 tags:
   - API
   - Add-ons

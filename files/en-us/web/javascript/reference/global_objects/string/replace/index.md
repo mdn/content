@@ -1,15 +1,7 @@
 ---
 title: String.prototype.replace()
 slug: Web/JavaScript/Reference/Global_Objects/String/replace
-tags:
-  - Expressions
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - Regular
-  - String
-  - Polyfill
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.String.replace
 ---
 

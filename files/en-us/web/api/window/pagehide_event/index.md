@@ -2,14 +2,6 @@
 title: 'Window: pagehide event'
 slug: Web/API/Window/pagehide_event
 page-type: web-api-event
-tags:
-  - API
-  - Event
-  - History
-  - Navigation
-  - Reference
-  - Window
-  - pagehide
 browser-compat: api.Window.pagehide_event
 ---
 
@@ -77,7 +69,7 @@ window.addEventListener("pagehide", (event) => {
 }, false);
 ```
 
-This can also be written using the {{domxref("Window.onpagehide", "onpagehide")}} event handler property on the {{domxref("Window")}}:
+This can also be written using the `onpagehide` event handler property on the {{domxref("Window")}}:
 
 ```js
 window.onpagehide = (event) => {

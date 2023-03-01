@@ -2,15 +2,6 @@
 title: Flow layout and overflow
 slug: Web/CSS/CSS_Flow_Layout/Flow_Layout_and_Overflow
 page-type: guide
-tags:
-  - CSS
-  - Flow Layout
-  - Guide
-  - Intermediate
-  - Layout
-  - Visibility
-  - overflow
-  - text-overflow
 ---
 
 {{CSSRef}}

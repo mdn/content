@@ -2,16 +2,6 @@
 title: PaymentResponse.methodName
 slug: Web/API/PaymentResponse/methodName
 page-type: web-api-instance-property
-tags:
-  - API
-  - Commerce
-  - Payment Request
-  - Payment Request API
-  - PaymentResponse
-  - Property
-  - Reference
-  - Secure context
-  - methodName
 browser-compat: api.PaymentResponse.methodName
 ---
 
@@ -30,8 +20,7 @@ to process payments.
 A string uniquely identifying the payment handler being used to
 process the payment. This may be either a standardized identifier, or a URL used by the
 payment processor to handle payments. See
-{{SectionOnPage("/en-US/docs/Web/API/Payment_Request_API/Concepts", "Merchant
-  validation")}} for more information.
+how [merchant validation](/en-US/docs/Web/API/Payment_Request_API/Concepts#merchant_validation) works.
 
 ## Examples
 

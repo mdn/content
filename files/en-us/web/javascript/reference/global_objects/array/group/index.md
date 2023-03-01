@@ -1,13 +1,9 @@
 ---
 title: Array.prototype.group()
 slug: Web/JavaScript/Reference/Global_Objects/Array/group
-tags:
-  - Array
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - Experimental
+page-type: javascript-instance-method
+status:
+  - experimental
 browser-compat: javascript.builtins.Array.group
 ---
 

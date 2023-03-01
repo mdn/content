@@ -1,14 +1,7 @@
 ---
 title: TypedArray.prototype.reduceRight()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/reduceRight
-tags:
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - TypedArray
-  - TypedArrays
-  - Polyfill
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.TypedArray.reduceRight
 ---
 
@@ -19,6 +12,8 @@ accumulator and each value of the typed array (from right-to-left) has to reduce
 single value. This method has the same algorithm as
 {{jsxref("Array.prototype.reduceRight()")}}. _TypedArray_ is one of the
 [typed array types](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#typedarray_objects) here.
+
+{{EmbedInteractiveExample("pages/js/typedarray-reduceright.html")}}
 
 ## Syntax
 

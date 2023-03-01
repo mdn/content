@@ -2,12 +2,6 @@
 title: CSS Images
 slug: Web/CSS/CSS_Images
 page-type: css-module
-tags:
-  - CSS
-  - CSS Images
-  - Guide
-  - Overview
-  - Reference
 spec-urls:
   - https://drafts.csswg.org/css-images/
   - https://compat.spec.whatwg.org/#css-%3Cimage%3E-type
@@ -30,15 +24,15 @@ spec-urls:
 
 ### Functions
 
-- {{CSSxRef("linear-gradient", "linear-gradient()")}}
-- {{CSSxRef("radial-gradient", "radial-gradient()")}}
-- {{CSSxRef("repeating-linear-gradient", "repeating-linear-gradient()")}}
-- {{CSSxRef("repeating-radial-gradient", "repeating-radial-gradient()")}}
-- {{CSSxRef("conic-gradient")}}
-- {{CSSxRef("repeating-conic-gradient", "repeating-conic-gradient()")}}
+- {{CSSxRef("gradient/linear-gradient", "linear-gradient()")}}
+- {{CSSxRef("gradient/radial-gradient", "radial-gradient()")}}
+- {{CSSxRef("gradient/repeating-linear-gradient", "repeating-linear-gradient()")}}
+- {{CSSxRef("gradient/repeating-radial-gradient", "repeating-radial-gradient()")}}
+- {{CSSxRef("gradient/conic-gradient", "conic-gradient()")}}
+- {{CSSxRef("gradient/repeating-conic-gradient", "repeating-conic-gradient()")}}
 - {{CSSxRef("url", "url()")}}
 - {{CSSxRef("element", "element()")}}
-- {{CSSxRef("_image", "image()")}}
+- {{CSSxRef("image/image", "image()")}}
 - {{CSSxRef("cross-fade", "cross-fade()")}}
 
 ### Data types

@@ -1,10 +1,7 @@
 ---
 title: Blink
 slug: Glossary/Blink
-tags:
-  - Infrastructure
-  - Layout
-  - Rendering engine
+page-type: glossary-definition
 ---
 
 Blink is an open-source browser layout engine developed by Google as part of Chromium (and therefore part of {{glossary("Google Chrome", "Chrome")}} as well). Specifically, Blink began as a fork of the WebCore library in {{glossary("WebKit")}}, which handles layout, rendering, and {{glossary("DOM")}}, but now stands on its own as a separate {{glossary("rendering engine")}}.

@@ -1,9 +1,7 @@
 ---
 title: EXIF
 slug: Glossary/EXIF
-tags:
-  - EXIF
-  - Image
+page-type: glossary-definition
 ---
 
 The **Exchangeable Image File Format (EXIF)** is a standard that specifies how metadata about a multimedia file can be embedded within the file. For example, an image might contain EXIF data describing the: pixel width, height, and density, shutter speed, aperture, ISO settings, capture date, etc.

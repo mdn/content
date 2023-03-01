@@ -1,8 +1,7 @@
 ---
 title: Advance measure
-slug: Glossary/advance_measure
-tags:
-  - Accessibility
+slug: Glossary/Advance_measure
+page-type: glossary-definition
 ---
 
 The **advance measure** is the total space the glyph takes, either horizontally or vertically, depending on the current writing direction. It is equal to the distance traveled by the cursor, placed directly in front of, and then shifted behind, the character.

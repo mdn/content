@@ -1,6 +1,7 @@
 ---
 title: devtools.inspectedWindow.eval()
 slug: Mozilla/Add-ons/WebExtensions/API/devtools/inspectedWindow/eval
+page-type: webextension-api-function
 tags:
   - API
   - Add-ons
@@ -54,7 +55,7 @@ let evaluating = browser.devtools.inspectedWindow.eval(
 ### Parameters
 
 - `expression`
-  - : `string`. The JavaScript expression to evaluate. The string must evaluate to a object that can be represented as JSON, or an exception will be thrown. For example, `expression` must not evaluate to a function.
+  - : `string`. The JavaScript expression to evaluate. The string must evaluate to an object that can be represented as JSON, or an exception will be thrown. For example, `expression` must not evaluate to a function.
 - `options` {{optional_inline}}
 
   - : `object`. Options for the function (Note that Firefox does not yet support this options), as follows:

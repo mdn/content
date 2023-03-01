@@ -1,14 +1,7 @@
 ---
 title: instanceof
 slug: Web/JavaScript/Reference/Operators/instanceof
-tags:
-  - JavaScript
-  - Language feature
-  - Object
-  - Operator
-  - Prototype
-  - Relational Operators
-  - instanceof
+page-type: javascript-operator
 browser-compat: javascript.operators.instanceof
 ---
 

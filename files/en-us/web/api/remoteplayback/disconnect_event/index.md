@@ -2,12 +2,6 @@
 title: 'RemotePlayback: disconnect event'
 slug: Web/API/RemotePlayback/disconnect_event
 page-type: web-api-event
-tags:
-  - API
-  - Event
-  - Reference
-  - ondisconnect
-  - RemotePlayback
 browser-compat: api.RemotePlayback.disconnect_event
 ---
 

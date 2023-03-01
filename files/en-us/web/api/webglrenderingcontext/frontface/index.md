@@ -2,12 +2,6 @@
 title: WebGLRenderingContext.frontFace()
 slug: Web/API/WebGLRenderingContext/frontFace
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.frontFace
 ---
 

@@ -1,18 +1,13 @@
 ---
 title: SharedArrayBuffer
 slug: Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer
-tags:
-  - Class
-  - JavaScript
-  - Shared Memory
-  - SharedArrayBuffer
-  - TypedArrays
+page-type: javascript-class
 browser-compat: javascript.builtins.SharedArrayBuffer
 ---
 
 {{JSRef}}
 
-The **`SharedArrayBuffer`** object is used to represent a generic, fixed-length raw binary data buffer, similar to the {{jsxref("ArrayBuffer")}} object, but in a way that they can be used to create views on shared memory. A `SharedArrayBuffer` is not a {{Glossary("Transferable Objects", "Transferable Object")}}, unlike an `ArrayBuffer` which is transferable.
+The **`SharedArrayBuffer`** object is used to represent a generic, fixed-length raw binary data buffer, similar to the {{jsxref("ArrayBuffer")}} object, but in a way that they can be used to create views on shared memory. A `SharedArrayBuffer` is not a [Transferable Object](/en-US/docs/Web/API/Web_Workers_API/Transferable_objects), unlike an `ArrayBuffer` which is transferable.
 
 ## Description
 
@@ -42,7 +37,7 @@ As a baseline requirement, your document needs to be in a [secure context](/en-U
 For top-level documents, two headers need to be set to cross-origin isolate your site:
 
 - [`Cross-Origin-Opener-Policy`](/en-US/docs/Web/HTTP/Headers/Cross-Origin-Opener-Policy) with `same-origin` as value (protects your origin from attackers)
-- [`Cross-Origin-Embedder-Policy`](/en-US/docs/Web/HTTP/Headers/Cross-Origin-Embedder-Policy) with `require-corp` as value (protects victims from your origin)
+- [`Cross-Origin-Embedder-Policy`](/en-US/docs/Web/HTTP/Headers/Cross-Origin-Embedder-Policy) with `require-corp` or `credentialless` as value (protects victims from your origin)
 
 ```http
 Cross-Origin-Opener-Policy: same-origin
@@ -52,10 +47,14 @@ Cross-Origin-Embedder-Policy: require-corp
 To check if cross origin isolation has been successful, you can test against the [`crossOriginIsolated`](/en-US/docs/Web/API/crossOriginIsolated) property available to window and worker contexts:
 
 ```js
+const myWorker = new Worker("worker.js");
+
 if (crossOriginIsolated) {
-  // Post SharedArrayBuffer
+  const buffer = new SharedArrayBuffer(16);
+  myWorker.postMessage(buffer);
 } else {
-  // Do something else
+  const buffer = new ArrayBuffer(16);
+  myWorker.postMessage(buffer);
 }
 ```
 
@@ -86,10 +85,14 @@ The WebAssembly Threads proposal also defines a new set of [atomic](https://gith
 
 ## Instance properties
 
-- `SharedArrayBuffer.prototype[@@toStringTag]`
-  - : The initial value of the [`@@toStringTag`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) property is the string `"SharedArrayBuffer"`. This property is used in {{jsxref("Object.prototype.toString()")}}.
+These properties are defined on `SharedArrayBuffer.prototype` and shared by all `SharedArrayBuffer` instances.
+
 - {{jsxref("SharedArrayBuffer.prototype.byteLength")}}
   - : The size, in bytes, of the array. This is established when the array is constructed and cannot be changed. **Read only.**
+- {{jsxref("Object/constructor", "SharedArrayBuffer.prototype.constructor")}}
+  - : The constructor function that created the instance object. For `SharedArrayBuffer` instances, the initial value is the {{jsxref("SharedArrayBuffer/SharedArrayBuffer", "SharedArrayBuffer")}} constructor.
+- `SharedArrayBuffer.prototype[@@toStringTag]`
+  - : The initial value of the [`@@toStringTag`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) property is the string `"SharedArrayBuffer"`. This property is used in {{jsxref("Object.prototype.toString()")}}.
 
 ## Instance methods
 

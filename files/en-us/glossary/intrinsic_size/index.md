@@ -1,9 +1,7 @@
 ---
 title: Intrinsic size
 slug: Glossary/Intrinsic_Size
-tags:
-  - CSS
-  - Intrinsic size
+page-type: glossary-definition
 ---
 
 In CSS, the _intrinsic size_ of an element is the size it would be based on its content, if no external factors were applied to it. For example, inline elements are sized intrinsically: `width`, `height`, and vertical margin and padding have no impact, though horizontal margin and padding do.

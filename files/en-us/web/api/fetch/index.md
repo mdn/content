@@ -2,14 +2,6 @@
 title: fetch()
 slug: Web/API/fetch
 page-type: web-api-global-function
-tags:
-  - API
-  - Fetch
-  - Fetch API
-  - GlobalFetch
-  - Method
-  - Reference
-  - request
 browser-compat: api.fetch
 ---
 
@@ -65,7 +57,7 @@ fetch(resource, options)
       - : The request method, e.g., `GET`, `POST`. Note that the
         {{httpheader("Origin")}} header is not set on Fetch requests with a method of
         {{HTTPMethod("HEAD")}} or {{HTTPMethod("GET")}}.
-        (This behavior was corrected in Firefox 65 — see {{bug(1508661)}}.)
+        (This behavior was corrected in Firefox 65 — see [Firefox bug 1508661](https://bugzil.la/1508661).)
     - `headers`
       - : Any headers you want to add to your request, contained within a
         {{domxref("Headers")}} object or an object literal with {{jsxref("String")}}
@@ -102,7 +94,7 @@ fetch(resource, options)
         - `follow`: Automatically follow redirects. Unless otherwise stated the redirect mode is set to `follow`.
         - `error`: Abort with an error if a redirect occurs.
         - `manual`: Caller intends to process the response in another context.
-          See [WHATWG fetch standard](https://fetch.spec.whatwg.org/#requests) for more information.
+          See [WHATWG fetch standard](https://fetch.spec.whatwg.org/#concept-request-redirect-mode) for more information.
 
     - `referrer`
       - : A string specifying the referrer of the request. This can be a
@@ -124,6 +116,11 @@ fetch(resource, options)
     - `signal`
       - : An {{domxref("AbortSignal")}} object instance; allows you to communicate with a
         fetch request and abort it if desired via an {{domxref("AbortController")}}.
+    - `priority`
+      - : Specifies the priority of the fetch request relative to other requests of the same type. Must be one of the following strings:
+        - `high`: A high priority fetch request relative to other requests of the same type.
+        - `low`: A low priority fetch request relative to other requests of the same type.
+        - `auto`: Automatically determine the priority of the fetch request relative to other requests of the same type (default).
 
 ### Return value
 
@@ -272,9 +269,9 @@ handled properly, then create an Object URL of it and display it in an
 {{htmlelement("img")}} element.
 
 ```js
-const myImage = document.querySelector('img');
+const myImage = document.querySelector("img");
 
-const myRequest = new Request('flowers.jpg');
+const myRequest = new Request("flowers.jpg");
 
 fetch(myRequest)
   .then((response) => {
@@ -293,31 +290,30 @@ In the [Fetch with init then Request example](https://github.com/mdn/dom-example
 `init` object when we invoke `fetch()`:
 
 ```js
-const myImage = document.querySelector('img');
+const myImage = document.querySelector("img");
 
 const myHeaders = new Headers();
-myHeaders.append('Accept', 'image/jpeg');
+myHeaders.append("Accept", "image/jpeg");
 
 const myInit = {
-  method: 'GET',
+  method: "GET",
   headers: myHeaders,
-  mode: 'cors',
-  cache: 'default',
+  mode: "cors",
+  cache: "default",
 };
 
-const myRequest = new Request('flowers.jpg');
+const myRequest = new Request("flowers.jpg");
 
-fetch(myRequest, myInit)
-  .then((response) => {
-    // …
-  });
+fetch(myRequest, myInit).then((response) => {
+  // …
+});
 ```
 
 You could also pass the `init` object in with the
 `Request` constructor to get the same effect:
 
 ```js
-const myRequest = new Request('flowers.jpg', myInit);
+const myRequest = new Request("flowers.jpg", myInit);
 ```
 
 You can also use an object literal as `headers` in
@@ -325,15 +321,15 @@ You can also use an object literal as `headers` in
 
 ```js
 const myInit = {
-  method: 'GET',
+  method: "GET",
   headers: {
-    'Accept': 'image/jpeg',
+    Accept: "image/jpeg",
   },
-  mode: 'cors',
-  cache: 'default',
+  mode: "cors",
+  cache: "default",
 };
 
-const myRequest = new Request('flowers.jpg', myInit);
+const myRequest = new Request("flowers.jpg", myInit);
 ```
 
 ## Specifications

@@ -1,8 +1,7 @@
 ---
 title: Shallow copy
 slug: Glossary/Shallow_copy
-tags:
-  - Shallow copy
+page-type: glossary-definition
 ---
 
 {{MDNSidebar}}

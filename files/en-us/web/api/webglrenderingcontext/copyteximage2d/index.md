@@ -2,13 +2,6 @@
 title: WebGLRenderingContext.copyTexImage2D()
 slug: Web/API/WebGLRenderingContext/copyTexImage2D
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - Textures
-  - WebGL
-  - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.copyTexImage2D
 ---
 

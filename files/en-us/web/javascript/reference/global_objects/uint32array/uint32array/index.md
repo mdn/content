@@ -1,12 +1,7 @@
 ---
 title: Uint32Array() constructor
 slug: Web/JavaScript/Reference/Global_Objects/Uint32Array/Uint32Array
-tags:
-  - Constructor
-  - JavaScript
-  - Reference
-  - TypedArrays
-  - Polyfill
+page-type: javascript-constructor
 browser-compat: javascript.builtins.Uint32Array.Uint32Array
 ---
 

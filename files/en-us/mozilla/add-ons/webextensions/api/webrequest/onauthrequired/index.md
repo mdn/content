@@ -1,6 +1,7 @@
 ---
 title: webRequest.onAuthRequired
 slug: Mozilla/Add-ons/WebExtensions/API/webRequest/onAuthRequired
+page-type: webextension-api-event
 tags:
   - API
   - Add-ons
@@ -111,7 +112,6 @@ Events have three functions:
 
     - `host`
       - : `string`. The server's [hostname](https://en.wikipedia.org/wiki/Hostname#Internet_hostnames).
-        > **Warning:** Unlike Chrome, Firefox will return the requested host instead of the proxy requesting the authentication, even if `isProxy` is `true`.
     - `port`
       - : `integer`. The server's port number.
 

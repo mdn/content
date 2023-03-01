@@ -2,12 +2,9 @@
 title: Animating objects with WebGL
 slug: Web/API/WebGL_API/Tutorial/Animating_objects_with_WebGL
 page-type: guide
-tags:
-  - Tutorial
-  - WebGL
 ---
 
-{{WebGLSidebar("Tutorial")}} {{PreviousNext("Web/API/WebGL_API/Tutorial/Using_shaders_to_apply_color_in_WebGL", "Web/API/WebGL_API/Tutorial/Creating_3D_objects_using_WebGL") }}
+{{DefaultAPISidebar("WebGL")}} {{PreviousNext("Web/API/WebGL_API/Tutorial/Using_shaders_to_apply_color_in_WebGL", "Web/API/WebGL_API/Tutorial/Creating_3D_objects_using_WebGL") }}
 
 ## Making the square rotate
 

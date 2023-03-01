@@ -1,11 +1,7 @@
 ---
 title: Strict inequality (!==)
 slug: Web/JavaScript/Reference/Operators/Strict_inequality
-tags:
-  - JavaScript
-  - Language feature
-  - Operator
-  - Reference
+page-type: javascript-operator
 browser-compat: javascript.operators.strict_inequality
 ---
 

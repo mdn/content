@@ -2,16 +2,6 @@
 title: clamp()
 slug: Web/CSS/clamp
 page-type: css-function
-tags:
-  - CSS
-  - CSS Function
-  - Calculate
-  - Compute
-  - Function
-  - Layout
-  - Reference
-  - Web
-  - clamp
 browser-compat: css.types.clamp
 ---
 
@@ -27,9 +17,9 @@ Note that using `clamp()` for font sizes, as in these examples, allows you to se
 
 ```css
 /* Static values */
-width: clamp(200px, 40%,  400px);
+width: clamp(200px, 40%, 400px);
 width: clamp(20rem, 30vw, 70rem);
-width: clamp(10vw,  20em, 100vw);
+width: clamp(10vw, 20em, 100vw);
 
 /* Calculated values */
 width: clamp(min(10vw, 20rem), 300px, max(90vw, 55rem));

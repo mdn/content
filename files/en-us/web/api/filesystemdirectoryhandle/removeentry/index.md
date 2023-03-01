@@ -2,16 +2,10 @@
 title: FileSystemDirectoryHandle.removeEntry()
 slug: Web/API/FileSystemDirectoryHandle/removeEntry
 page-type: web-api-instance-method
-tags:
-  - Directory
-  - File
-  - File System Access API
-  - FileSystemDirectoryHandle
-  - Method
 browser-compat: api.FileSystemDirectoryHandle.removeEntry
 ---
 
-{{securecontext_header}}{{DefaultAPISidebar("File System Access API")}}
+{{securecontext_header}}{{APIRef("File System Access API")}}
 
 The **`removeEntry()`** method of the
 {{domxref("FileSystemDirectoryHandle")}} interface attempts to remove an entry if the
@@ -57,12 +51,12 @@ A {{jsxref('Promise')}} which resolves with `undefined`.
 The following example removes an entry within the directory handle.
 
 ```js
-const entryName = 'entryToRemove';
+const entryName = "entryToRemove";
 
 // assuming we have a directory handle: 'currentDirHandle'
 currentDirHandle.removeEntry(entryName).then(() => {
   // code to run if removing was successful
-} );
+});
 ```
 
 ## Specifications

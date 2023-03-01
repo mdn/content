@@ -1,17 +1,7 @@
 ---
 title: HTML attribute reference
 slug: Web/HTML/Attributes
-tags:
-  - Attribute
-  - Attributes
-  - Beginner
-  - Configuring
-  - Element Attributes
-  - Elements
-  - HTML
-  - Reference
-  - Settings
-  - Web
+page-type: landing-page
 ---
 
 {{HTMLSidebar("Attributes")}}
@@ -40,7 +30,7 @@ Elements in HTML have **attributes**; these are additional values that configure
     </tr>
     <tr>
       <td>
-        <code><a href="/en-US/docs/Web/HTML/Element/form#attr-accept-charset">accept-charset</a></code>
+        <code><a href="/en-US/docs/Web/HTML/Element/form#accept-charset">accept-charset</a></code>
       </td>
       <td>{{ HTMLElement("form") }}</td>
       <td>List of supported charsets.</td>
@@ -82,7 +72,7 @@ Elements in HTML have **attributes**; these are additional values that configure
     </tr>
     <tr>
       <td>
-        <code><a href="/en-US/docs/Web/HTML/Element/iframe#attr-allow">allow</a></code>
+        <code><a href="/en-US/docs/Web/HTML/Element/iframe#allow">allow</a></code>
       </td>
       <td>{{ HTMLElement("iframe") }}</td>
       <td>Specifies a feature-policy for the iframe.</td>
@@ -230,7 +220,7 @@ Elements in HTML have **attributes**; these are additional values that configure
     </tr>
     <tr>
       <td>
-        <code><a href="/en-US/docs/Web/HTML/Element/keygen#attr-challenge">challenge</a></code>
+        <code><a href="/en-US/docs/Web/HTML/Element/keygen#challenge">challenge</a></code>
       </td>
       <td>{{ HTMLElement("keygen") }}</td>
       <td>A challenge string that is submitted along with the public key.</td>
@@ -246,10 +236,9 @@ Elements in HTML have **attributes**; these are additional values that configure
     </tr>
     <tr>
       <td>
-        <code><a href="/en-US/docs/Web/HTML/Attributes/checked">checked</a></code>
+        <code><a href="/en-US/docs/Web/HTML/Element/input#checked">checked</a></code>
       </td>
       <td>
-        {{ HTMLElement("command") }},
         {{ HTMLElement("input") }}
       </td>
       <td>Indicates whether the element should be checked on page load.</td>
@@ -276,7 +265,7 @@ Elements in HTML have **attributes**; these are additional values that configure
     </tr>
     <tr>
       <td>
-        <code><a href="/en-US/docs/Web/HTML/Element/applet#attr-code">code</a></code>
+        <code><a href="/en-US/docs/Web/HTML/Element/applet#code">code</a></code>
       </td>
       <td>{{ HTMLElement("applet") }}</td>
       <td>
@@ -285,7 +274,7 @@ Elements in HTML have **attributes**; these are additional values that configure
     </tr>
     <tr>
       <td>
-        <code><a href="/en-US/docs/Web/HTML/Element/applet#attr-codebase">codebase</a></code>
+        <code><a href="/en-US/docs/Web/HTML/Element/applet#codebase">codebase</a></code>
       </td>
       <td>{{ HTMLElement("applet") }}</td>
       <td>
@@ -374,7 +363,7 @@ Elements in HTML have **attributes**; these are additional values that configure
     </tr>
     <tr>
       <td>
-        <code><a href="/en-US/docs/Web/HTML/Element/area#attr-coords">coords</a></code>
+        <code><a href="/en-US/docs/Web/HTML/Element/area#coords">coords</a></code>
       </td>
       <td>{{ HTMLElement("area") }}</td>
       <td>
@@ -431,7 +420,7 @@ Elements in HTML have **attributes**; these are additional values that configure
     </tr>
     <tr>
       <td>
-        <code><a href="/en-US/docs/Web/HTML/Element/img#attr-decoding">decoding</a></code>
+        <code><a href="/en-US/docs/Web/HTML/Element/img#decoding">decoding</a></code>
       </td>
       <td>{{ HTMLElement("img") }}</td>
       <td>Indicates the preferred method to decode the image.</td>
@@ -484,7 +473,6 @@ Elements in HTML have **attributes**; these are additional values that configure
       </td>
       <td>
         {{ HTMLElement("button") }},
-        {{ HTMLElement("command") }},
         {{ HTMLElement("fieldset") }},
         {{ HTMLElement("input") }},
         {{ HTMLElement("keygen") }},
@@ -515,7 +503,7 @@ Elements in HTML have **attributes**; these are additional values that configure
     </tr>
     <tr>
       <td>
-        <code><a href="/en-US/docs/Web/HTML/Element/form#attr-enctype">enctype</a></code>
+        <code><a href="/en-US/docs/Web/HTML/Element/form#enctype">enctype</a></code>
       </td>
       <td>{{ HTMLElement("form") }}</td>
       <td>
@@ -732,13 +720,6 @@ Elements in HTML have **attributes**; these are additional values that configure
     </tr>
     <tr>
       <td>
-        <code><a href="/en-US/docs/Web/HTML/Element/command#attr-icon">icon</a></code>
-      </td>
-      <td>{{ HTMLElement("command") }}</td>
-      <td>Specifies a picture which represents the command.</td>
-    </tr>
-    <tr>
-      <td>
         <code><a href="/en-US/docs/Web/HTML/Global_attributes/id">id</a></code>
       </td>
       <td>
@@ -748,17 +729,6 @@ Elements in HTML have **attributes**; these are additional values that configure
         Often used with CSS to style a specific element. The value of this
         attribute must be unique.
       </td>
-    </tr>
-    <tr>
-      <td>
-        <code><a href="/en-US/docs/Web/HTML/Attributes/importance">importance</a></code>
-        {{experimental_inline}}
-      </td>
-      <td>
-        {{ HTMLElement("iframe") }}, {{ HTMLElement("img") }},
-        {{ HTMLElement("link") }}, {{ HTMLElement("script") }}
-      </td>
-      <td>Indicates the relative fetch priority for the resource.</td>
     </tr>
     <tr>
       <td>
@@ -777,7 +747,7 @@ Elements in HTML have **attributes**; these are additional values that configure
     </tr>
     <tr>
       <td>
-        <a href="/en-US/docs/Web/HTML/Element/img#attr-intrinsicsize"><code>intrinsicsize</code></a>
+        <a href="/en-US/docs/Web/HTML/Element/img#intrinsicsize"><code>intrinsicsize</code></a>
         {{deprecated_inline}}
       </td>
       <td>{{ HTMLElement("img") }}</td>
@@ -804,7 +774,7 @@ Elements in HTML have **attributes**; these are additional values that configure
     </tr>
     <tr>
       <td>
-        <code><a href="/en-US/docs/Web/HTML/Element/img#attr-ismap">ismap</a></code>
+        <code><a href="/en-US/docs/Web/HTML/Element/img#ismap">ismap</a></code>
       </td>
       <td>{{ HTMLElement("img") }}</td>
       <td>Indicates that the image is part of a server-side image map.</td>
@@ -820,7 +790,7 @@ Elements in HTML have **attributes**; these are additional values that configure
     </tr>
     <tr>
       <td>
-        <code><a href="/en-US/docs/Web/HTML/Element/keygen#attr-keytype">keytype</a></code>
+        <code><a href="/en-US/docs/Web/HTML/Element/keygen#keytype">keytype</a></code>
       </td>
       <td>{{ HTMLElement("keygen") }}</td>
       <td>Specifies the type of key generated.</td>
@@ -902,7 +872,7 @@ Elements in HTML have **attributes**; these are additional values that configure
     </tr>
     <tr>
       <td>
-        <code><a href="/en-US/docs/Web/HTML/Element/html#attr-manifest">manifest</a></code>
+        <code><a href="/en-US/docs/Web/HTML/Element/html#manifest">manifest</a></code>
         {{deprecated_inline}}
       </td>
       <td>{{ HTMLElement("html") }}</td>
@@ -964,7 +934,7 @@ Elements in HTML have **attributes**; these are additional values that configure
     </tr>
     <tr>
       <td>
-        <code><a href="/en-US/docs/Web/HTML/Element/form#attr-method">method</a></code>
+        <code><a href="/en-US/docs/Web/HTML/Element/form#method">method</a></code>
       </td>
       <td>{{ HTMLElement("form") }}</td>
       <td>
@@ -1032,7 +1002,7 @@ Elements in HTML have **attributes**; these are additional values that configure
     </tr>
     <tr>
       <td>
-        <code><a href="/en-US/docs/Web/HTML/Element/form#attr-novalidate">novalidate</a></code>
+        <code><a href="/en-US/docs/Web/HTML/Element/form#novalidate">novalidate</a></code>
       </td>
       <td>{{ HTMLElement("form") }}</td>
       <td>
@@ -1074,7 +1044,7 @@ Elements in HTML have **attributes**; these are additional values that configure
     </tr>
     <tr>
       <td>
-        <code><a href="/en-US/docs/Web/HTML/Element/a#attr-ping">ping</a></code>
+        <code><a href="/en-US/docs/Web/HTML/Element/a#ping">ping</a></code>
       </td>
       <td>{{ HTMLElement("a") }}, {{ HTMLElement("area") }}</td>
       <td>
@@ -1091,6 +1061,15 @@ Elements in HTML have **attributes**; these are additional values that configure
         {{ HTMLElement("textarea") }}
       </td>
       <td>Provides a hint to the user of what can be entered in the field.</td>
+    </tr>
+    <tr>
+      <td>
+        <code><a href="/en-US/docs/Web/HTML/Element/video#attr-playsinline">playsinline</a></code>
+      </td>
+      <td>
+        {{ HTMLElement("video") }}
+      </td>
+      <td>A Boolean attribute indicating that the video is to be played "inline"; that is, within the element's playback area. Note that the absence of this attribute does not imply that the video will always be played in fullscreen.</td>
     </tr>
     <tr>
       <td>
@@ -1113,13 +1092,6 @@ Elements in HTML have **attributes**; these are additional values that configure
         Indicates whether the whole resource, parts of it or nothing should be
         preloaded.
       </td>
-    </tr>
-    <tr>
-      <td>
-        <code><a href="/en-US/docs/Web/HTML/Element/command#attr-radiogroup">radiogroup</a></code>
-      </td>
-      <td>{{ HTMLElement("command") }}</td>
-      <td></td>
     </tr>
     <tr>
       <td>
@@ -1200,7 +1172,7 @@ Elements in HTML have **attributes**; these are additional values that configure
     </tr>
     <tr>
       <td>
-        <code><a href="/en-US/docs/Web/HTML/Element/iframe#attr-sandbox">sandbox</a></code>
+        <code><a href="/en-US/docs/Web/HTML/Element/iframe#sandbox">sandbox</a></code>
       </td>
       <td>{{ HTMLElement("iframe") }}</td>
       <td>
@@ -1310,7 +1282,7 @@ Elements in HTML have **attributes**; these are additional values that configure
     </tr>
     <tr>
       <td>
-        <code><a href="/en-US/docs/Web/HTML/Element/iframe#attr-srcdoc">srcdoc</a></code>
+        <code><a href="/en-US/docs/Web/HTML/Element/iframe#srcdoc">srcdoc</a></code>
       </td>
       <td>{{ HTMLElement("iframe") }}</td>
       <td></td>
@@ -1418,7 +1390,6 @@ Elements in HTML have **attributes**; these are additional values that configure
       <td>
         {{ HTMLElement("button") }},
         {{ HTMLElement("input") }},
-        {{ HTMLElement("command") }},
         {{ HTMLElement("embed") }},
         {{ HTMLElement("object") }},
         {{ HTMLElement("ol") }},

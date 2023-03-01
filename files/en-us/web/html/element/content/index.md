@@ -1,19 +1,10 @@
 ---
 title: '<content>: The Shadow DOM Content Placeholder element'
 slug: Web/HTML/Element/content
-tags:
-  - Content
-  - DOM
-  - Deprecated
-  - Element
-  - HTML
-  - HTML Web Components
-  - Placeholder
-  - Reference
-  - Web
-  - Web Components
-  - shadow dom
-  - Non-standard
+page-type: html-element
+status:
+  - deprecated
+  - non-standard
 browser-compat: html.elements.content
 ---
 
@@ -27,13 +18,13 @@ The **`<content>`** [HTML](/en-US/docs/Web/HTML) element—an obsolete part of t
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories"
+        <a href="/en-US/docs/Web/HTML/Content_categories"
           >Content categories</a
         >
       </th>
       <td>
         <a
-          href="/en-US/docs/Web/Guide/HTML/Content_categories#transparent_content_model"
+          href="/en-US/docs/Web/HTML/Content_categories#transparent_content_model"
           >Transparent content</a
         >.
       </td>
@@ -41,7 +32,7 @@ The **`<content>`** [HTML](/en-US/docs/Web/HTML) element—an obsolete part of t
     <tr>
       <th scope="row">Permitted content</th>
       <td>
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
           >Flow content</a
         >.
       </td>

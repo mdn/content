@@ -2,15 +2,6 @@
 title: SpeechRecognitionAlternative.confidence
 slug: Web/API/SpeechRecognitionAlternative/confidence
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - SpeechRecognitionAlternative
-  - Web Speech API
-  - confidence
-  - recognition
-  - speech
 browser-compat: api.SpeechRecognitionAlternative.confidence
 ---
 

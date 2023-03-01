@@ -1,20 +1,13 @@
 ---
 title: Intl.NumberFormat.supportedLocalesOf()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/supportedLocalesOf
-tags:
-  - Internationalization
-  - Intl
-  - JavaScript
-  - Localization
-  - Method
-  - NumberFormat
-  - Reference
+page-type: javascript-static-method
 browser-compat: javascript.builtins.Intl.NumberFormat.supportedLocalesOf
 ---
 
 {{JSRef}}
 
-The **`Intl.NumberFormat.supportedLocalesOf()`** method returns
+The **`Intl.NumberFormat.supportedLocalesOf()`** static method returns
 an array containing those of the provided locales that are supported in number
 formatting without having to fall back to the runtime's default locale.
 
@@ -69,9 +62,9 @@ adequate match for Balinese since most Balinese speakers also understand Indones
 and therefore return the Balinese language tag as well.
 
 ```js
-const locales = ['ban', 'id-u-co-pinyin', 'de-ID'];
-const options = { localeMatcher: 'lookup' };
-console.log(Intl.NumberFormat.supportedLocalesOf(locales, options).join(', '));
+const locales = ["ban", "id-u-co-pinyin", "de-ID"];
+const options = { localeMatcher: "lookup" };
+console.log(Intl.NumberFormat.supportedLocalesOf(locales, options).join(", "));
 // → "id-u-co-pinyin, de-ID"
 ```
 

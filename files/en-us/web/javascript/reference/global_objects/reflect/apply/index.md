@@ -1,19 +1,13 @@
 ---
 title: Reflect.apply()
 slug: Web/JavaScript/Reference/Global_Objects/Reflect/apply
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Reference
-  - Reflect
-  - Polyfill
+page-type: javascript-static-method
 browser-compat: javascript.builtins.Reflect.apply
 ---
 
 {{JSRef}}
 
-The static **`Reflect.apply()`** method calls a target function
+The **`Reflect.apply()`** static method calls a target function
 with arguments as specified.
 
 {{EmbedInteractiveExample("pages/js/reflect-apply.html")}}

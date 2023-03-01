@@ -2,13 +2,6 @@
 title: URL()
 slug: Web/API/URL/URL
 page-type: web-api-constructor
-tags:
-  - API
-  - Constructor
-  - Reference
-  - URL
-  - URL API
-  - Polyfill
 browser-compat: api.URL.URL
 ---
 
@@ -105,7 +98,7 @@ new URL("/a", "https://example.com/?query=1");
 // => 'https://example.com/a' (see relative URLs)
 
 new URL("//foo.com", "https://example.com");
-// => 'https://foo.com' (see relative URLs)
+// => 'https://foo.com/' (see relative URLs)
 ```
 
 ## Specifications

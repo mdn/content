@@ -1,6 +1,7 @@
 ---
 title: divisor
 slug: Web/SVG/Attribute/divisor
+page-type: svg-attribute
 tags:
   - Filters
   - SVG

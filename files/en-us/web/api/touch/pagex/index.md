@@ -2,12 +2,6 @@
 title: Touch.pageX
 slug: Web/API/Touch/pageX
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Read-only
-  - Reference
-  - touch
 browser-compat: api.Touch.pageX
 ---
 

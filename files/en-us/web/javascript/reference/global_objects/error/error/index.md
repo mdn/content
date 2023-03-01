@@ -1,11 +1,7 @@
 ---
 title: Error() constructor
 slug: Web/JavaScript/Reference/Global_Objects/Error/Error
-tags:
-  - Constructor
-  - JavaScript
-  - Reference
-  - Polyfill
+page-type: javascript-constructor
 browser-compat: javascript.builtins.Error.Error
 ---
 

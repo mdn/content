@@ -1,15 +1,7 @@
 ---
 title: The event loop
 slug: Web/JavaScript/EventLoop
-tags:
-  - Advanced
-  - Event Loop
-  - Event Management
-  - Event Queue
-  - Guide
-  - Handling Events
-  - JavaScript
-  - events
+page-type: guide
 ---
 
 {{JsSidebar("Advanced")}}
@@ -97,7 +89,7 @@ const seconds = new Date().getTime() / 1000;
 setTimeout(() => {
   // prints out "2", meaning that the callback is not called immediately after 500 milliseconds.
   console.log(`Ran after ${new Date().getTime() / 1000 - seconds} seconds`);
-}, 500)
+}, 500);
 
 while (true) {
   if (new Date().getTime() / 1000 - seconds >= 2) {
@@ -117,21 +109,19 @@ The `setTimeout` needs to wait for all the code for queued messages to complete 
 
 ```js
 (() => {
-
-  console.log('this is the start');
+  console.log("this is the start");
 
   setTimeout(() => {
-    console.log('Callback 1: this is a msg from call back');
+    console.log("Callback 1: this is a msg from call back");
   }); // has a default time value of 0
 
-  console.log('this is just a message');
+  console.log("this is just a message");
 
   setTimeout(() => {
-    console.log('Callback 2: this is a msg from call back');
+    console.log("Callback 2: this is a msg from call back");
   }, 0);
 
-  console.log('this is the end');
-
+  console.log("this is the end");
 })();
 
 // "this is the start"

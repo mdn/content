@@ -1,11 +1,7 @@
 ---
 title: Addition (+)
 slug: Web/JavaScript/Reference/Operators/Addition
-tags:
-  - JavaScript
-  - Language feature
-  - Operator
-  - Reference
+page-type: javascript-operator
 browser-compat: javascript.operators.addition
 ---
 
@@ -47,29 +43,29 @@ You are advised to not use `"" + x` to perform [string coercion](/en-US/docs/Web
 
 ```js
 // Number + Number -> addition
-1 + 2 // 3
+1 + 2; // 3
 
 // Boolean + Number -> addition
-true + 1 // 2
+true + 1; // 2
 
 // Boolean + Boolean -> addition
-false + false // 0
+false + false; // 0
 ```
 
 ### String concatenation
 
 ```js
 // String + String -> concatenation
-'foo' + 'bar' // "foobar"
+"foo" + "bar"; // "foobar"
 
 // Number + String -> concatenation
-5 + 'foo' // "5foo"
+5 + "foo"; // "5foo"
 
 // String + Boolean -> concatenation
-'foo' + false // "foofalse"
+"foo" + false; // "foofalse"
 
 // String + Number -> concatenation
-'2' + 2 // "22"
+"2" + 2; // "22"
 ```
 
 ## Specifications

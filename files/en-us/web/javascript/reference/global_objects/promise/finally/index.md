@@ -1,14 +1,7 @@
 ---
 title: Promise.prototype.finally()
 slug: Web/JavaScript/Reference/Global_Objects/Promise/finally
-tags:
-  - JavaScript
-  - Method
-  - Promises
-  - Prototype
-  - Reference
-  - finally
-  - Polyfill
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.Promise.finally
 ---
 

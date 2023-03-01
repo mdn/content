@@ -2,12 +2,6 @@
 title: SharedWorkerGlobalScope
 slug: Web/API/SharedWorkerGlobalScope
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Reference
-  - SharedWorkerGlobalScope
-  - Web Workers
 browser-compat: api.SharedWorkerGlobalScope
 ---
 
@@ -23,8 +17,6 @@ _This interface inherits properties from the {{domxref("WorkerGlobalScope")}} in
 
 - {{domxref("SharedWorkerGlobalScope.name")}} {{ReadOnlyInline}}
   - : The name that the {{domxref("SharedWorker")}} was (optionally) given when it was created using the {{domxref("SharedWorker.SharedWorker", "SharedWorker()")}} constructor. This is mainly useful for debugging purposes.
-- {{domxref("SharedWorkerGlobalScope.applicationCache")}} {{ReadOnlyInline}} {{Deprecated_Inline}} {{Non-standard_Inline}}
-  - : This property returns the {{domxref("ApplicationCache")}} object for the worker.
 
 ### Instance properties inherited from WorkerGlobalScope
 
@@ -36,7 +28,7 @@ _This interface inherits properties from the {{domxref("WorkerGlobalScope")}} in
   - : Returns the {{domxref("WorkerLocation")}} associated with the worker. `WorkerLocation` is a specific location object, mostly a subset of the {{domxref("Location")}} for browsing scopes, but adapted to workers.
 - {{domxref("WorkerGlobalScope.navigator")}} {{ReadOnlyInline}}
   - : Returns the {{domxref("WorkerNavigator")}} associated with the worker. `WorkerNavigator` is a specific navigator object, mostly a subset of the {{domxref("Navigator")}} for browsing scopes, but adapted to workers.
-- {{domxref("WorkerGlobalScope.performance")}} {{ReadOnlyInline}} {{Non-standard_Inline}}
+- {{domxref("performance_property", "WorkerGlobalScope.performance")}} {{ReadOnlyInline}} {{Non-standard_Inline}}
   - : Returns the {{domxref("Performance")}} object associated with the worker, which is a regular performance object, but with a subset of its properties and methods available.
 
 ## Instance methods

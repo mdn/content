@@ -2,13 +2,8 @@
 title: Window.ondragdrop
 slug: Web/API/Window/ondragdrop
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTML DOM
-  - Deprecated
-  - Property
-  - Window
-  - ondragdrop
+status:
+  - deprecated
 ---
 
 {{ APIRef() }}{{deprecated_header}}{{non-standard_header}}
@@ -23,7 +18,7 @@ An event handler for drag and drop events sent to the window.
 
 The event handler function to be registered.
 
-The `window.ondragdrop` property and the `ondragdrop` attribute are not implemented in [Gecko](/en-US/Gecko) ({{ Bug(112288) }}), you have to use `addEventListener`. See [addEventListener](/en-US/docs/Web/API/EventTarget/addEventListener) for details.
+The `window.ondragdrop` property and the `ondragdrop` attribute are not implemented in Firefox ([Webkit bug 112288](https://bugzil.la/112288)), you have to use `addEventListener`. See [addEventListener](/en-US/docs/Web/API/EventTarget/addEventListener) for details.
 
 ## Examples
 

@@ -1,15 +1,7 @@
 ---
 title: TypedArray.prototype.findLast()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/findLast
-tags:
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - TypedArray
-  - TypedArrays
-  - findLast
-  - Polyfill
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.TypedArray.findLast
 ---
 

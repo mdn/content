@@ -1,12 +1,7 @@
 ---
 title: Remainder assignment (%=)
 slug: Web/JavaScript/Reference/Operators/Remainder_assignment
-tags:
-  - Assignment operator
-  - JavaScript
-  - Language feature
-  - Operator
-  - Reference
+page-type: javascript-operator
 browser-compat: javascript.operators.remainder_assignment
 ---
 
@@ -31,7 +26,7 @@ x %= y // x = x % y
 let bar = 5;
 
 bar %= 2; // 1
-bar %= 'foo'; // NaN
+bar %= "foo"; // NaN
 bar %= 0; // NaN
 ```
 

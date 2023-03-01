@@ -1,15 +1,6 @@
 ---
 title: Same-origin policy
 slug: Web/Security/Same-origin_policy
-tags:
-  - CORS
-  - Host
-  - JavaScript
-  - Same-origin policy
-  - Security
-  - URL
-  - origin
-  - secure
 ---
 
 {{QuickLinksWithSubpages("/en-US/docs/Web/Security")}}
@@ -40,17 +31,6 @@ For example, `about:blank` is often used as a URL of new, empty popup windows in
 
 `data:` URLs get a new, empty, security context.
 
-### Exceptions in Internet Explorer
-
-Internet Explorer has two major exceptions to the same-origin policy:
-
-- Trust Zones
-  - : If both domains are in the _highly trusted zone_ (e.g. corporate intranet domains), then the same-origin limitations are not applied.
-- Port
-  - : IE doesn't include port into same-origin checks. Therefore, `https://company.com:81/index.html` and `https://company.com/index.html` are considered the same origin and no restrictions are applied.
-
-These exceptions are nonstandard and unsupported in any other browser.
-
 ### File origins
 
 Modern browsers usually treat the origin of files loaded using the `file:///` schema as _opaque origins_.
@@ -74,7 +54,7 @@ Afterward, the page can pass the same-origin check with `http://company.com/dir/
 
 The port number is checked separately by the browser. Any call to `document.domain`, including `document.domain = document.domain`, causes the port number to be overwritten with `null`. Therefore, one **cannot** make `company.com:8080` talk to `company.com` by only setting `document.domain = "company.com"` in the first. It has to be set in both so their port numbers are both `null`.
 
-The mechanism has some limitations. For example, it will throw a "`SecurityError`" [`DOMException`](/en-US/docs/Web/API/DOMException) if the [`document-domain`](/en-US/docs/Web/HTTP/Headers/Feature-Policy/document-domain) [`Feature-Policy`](/en-US/docs/Web/HTTP/Headers/Feature-Policy) is enabled or the document is in a sandboxed [`<iframe>`](/en-US/docs/Web/HTML/Element/iframe), and changing the origin in this way does not affect the origin checks used by many Web APIs (e.g. [`localStorage`](/en-US/docs/Web/API/Window/localStorage), [`indexedDB`](/en-US/docs/Web/API/IndexedDB_API), [`BroadcastChannel`](/en-US/docs/Web/API/BroadcastChannel), [`SharedWorker`](/en-US/docs/Web/API/SharedWorker)). A more exhaustive list of failure cases can be found in [Document.domain > Failures](/en-US/docs/Web/API/Document/domain#failures).
+The mechanism has some limitations. For example, it will throw a "`SecurityError`" [`DOMException`](/en-US/docs/Web/API/DOMException) if the [`document-domain`](/en-US/docs/Web/HTTP/Headers/Permissions-Policy/document-domain) [`Permissions-Policy`](/en-US/docs/Web/HTTP/Headers/Permissions-Policy) is enabled or the document is in a sandboxed [`<iframe>`](/en-US/docs/Web/HTML/Element/iframe), and changing the origin in this way does not affect the origin checks used by many Web APIs (e.g. [`localStorage`](/en-US/docs/Web/API/Window/localStorage), [`indexedDB`](/en-US/docs/Web/API/IndexedDB_API), [`BroadcastChannel`](/en-US/docs/Web/API/BroadcastChannel), [`SharedWorker`](/en-US/docs/Web/API/SharedWorker)). A more exhaustive list of failure cases can be found in [Document.domain > Failures](/en-US/docs/Web/API/Document/domain#failures).
 
 > **Note:** When using `document.domain` to allow a subdomain to access its parent, you need to set `document.domain` to the _same value_ in both the parent domain and the subdomain. This is necessary even if doing so is setting the parent domain back to its original value. Failure to do this may result in permission errors.
 
@@ -84,7 +64,7 @@ The same-origin policy controls interactions between two different origins, such
 
 - Cross-origin _writes_ are typically allowed. Examples are links, redirects, and form submissions. Some HTTP requests require [preflight](/en-US/docs/Web/HTTP/CORS#preflighted_requests).
 - Cross-origin _embedding_ is typically allowed. (Examples are listed below.)
-- Cross-origin _reads_ are typically disallowed, but read access is often leaked by embedding. For example, you can read the dimensions of an embedded image, the actions of an embedded script, or the [availability of an embedded resource](https://bugzilla.mozilla.org/show_bug.cgi?id=629094).
+- Cross-origin _reads_ are typically disallowed, but read access is often leaked by embedding. For example, you can read the dimensions of an embedded image, the actions of an embedded script, or the [availability of an embedded resource](https://bugzil.la/629094).
 
 Here are some examples of resources which may be embedded cross-origin:
 
@@ -149,7 +129,7 @@ The following cross-origin access to `Location` properties is allowed:
 
 | Attributes                   |             |
 | ---------------------------- | ----------- |
-| {{domxref("URLUtils.href")}} | Write-only. |
+| {{domxref("location.href")}} | Write-only. |
 
 Some browsers allow access to more properties than the above.
 
@@ -157,7 +137,7 @@ Some browsers allow access to more properties than the above.
 
 Access to data stored in the browser such as [Web Storage](/en-US/docs/Web/API/Web_Storage_API) and [IndexedDB](/en-US/docs/Web/API/IndexedDB_API) are separated by origin. Each origin gets its own separate storage, and JavaScript in one origin cannot read from or write to the storage belonging to another origin.
 
-{{glossary("Cookie", "Cookies")}} use a separate definition of origins. A page can set a cookie for its own domain or any parent domain, as long as the parent domain is not a public suffix. Firefox and Chrome use the [Public Suffix List](https://publicsuffix.org/) to determine if a domain is a public suffix. Internet Explorer uses its own internal method to determine if a domain is a public suffix. The browser will make a cookie available to the given domain including any sub-domains, no matter which protocol (HTTP/HTTPS) or port is used. When you set a cookie, you can limit its availability using the `Domain`, `Path`, `Secure`, and `HttpOnly` flags. When you read a cookie, you cannot see from where it was set. Even if you use only secure https connections, any cookie you see may have been set using an insecure connection.
+{{glossary("Cookie", "Cookies")}} use a separate definition of origins. A page can set a cookie for its own domain or any parent domain, as long as the parent domain is not a public suffix. Firefox and Chrome use the [Public Suffix List](https://publicsuffix.org/) to determine if a domain is a public suffix. When you set a cookie, you can limit its availability using the `Domain`, `Path`, `Secure`, and `HttpOnly` flags. When you read a cookie, you cannot see from where it was set. Even if you use only secure https connections, any cookie you see may have been set using an insecure connection.
 
 ## See also
 

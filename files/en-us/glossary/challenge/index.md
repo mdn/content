@@ -1,8 +1,7 @@
 ---
 title: Challenge-response authentication
-slug: Glossary/challenge
-tags:
-  - Security
+slug: Glossary/Challenge
+page-type: glossary-definition
 ---
 
 In security protocols, a _challenge_ is some data sent to the client by the server in order to generate a different response each time. Challenge-response protocols are one way to fight against [replay attacks](https://en.wikipedia.org/wiki/Replay_attack) where an attacker listens to the previous messages and resends them at a later time to get the same credentials as the original message.

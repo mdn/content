@@ -2,13 +2,6 @@
 title: <custom-ident>
 slug: Web/CSS/custom-ident
 page-type: css-type
-tags:
-  - CSS
-  - CSS Data Type
-  - Data Type
-  - Layout
-  - Reference
-  - Web
 spec-urls:
   - https://drafts.csswg.org/css-values/#custom-idents
   - https://drafts.csswg.org/css-will-change/#valdef-will-change-custom-ident
@@ -148,4 +141,5 @@ _As this type is not a real type but a convenience type used to simplify the des
 
 ## See also
 
-- {{CSSxRef("&lt;ident&gt;")}}
+- [&lt;ident&gt;](/en-US/docs/Web/CSS/ident)
+- [&lt;dashed-ident&gt;](/en-US/docs/Web/CSS/dashed-ident)

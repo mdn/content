@@ -2,15 +2,8 @@
 title: CSSNumericValue.to()
 slug: Web/API/CSSNumericValue/to
 page-type: web-api-instance-method
-tags:
-  - API
-  - CSS Typed Object Model API
-  - CSSNumericValue
-  - Experimental
-  - Houdini
-  - Method
-  - Reference
-  - to()
+status:
+  - experimental
 browser-compat: api.CSSNumericValue.to
 ---
 

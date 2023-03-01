@@ -2,18 +2,6 @@
 title: Background audio processing using AudioWorklet
 slug: Web/API/Web_Audio_API/Using_AudioWorklet
 page-type: guide
-tags:
-  - API
-  - Audio
-  - AudioWorklet
-  - Background
-  - Examples
-  - Guide
-  - Processing
-  - Web Audio
-  - Web Audio API
-  - WebAudio API
-  - sound
 ---
 
 {{DefaultAPISidebar("Web Audio API")}}
@@ -30,7 +18,7 @@ It's worth noting that because audio processing can often involve substantial co
 
 Before we start looking at the use of AudioWorklet on a step-by-step basis, let's start with a brief high-level overview of what's involved.
 
-1. Create module that defines a audio worklet processor class, based on {{domxref("AudioWorkletProcessor")}} which takes audio from one or more incoming sources, performs its operation on the data, and outputs the resulting audio data.
+1. Create module that defines an audio worklet processor class, based on {{domxref("AudioWorkletProcessor")}} which takes audio from one or more incoming sources, performs its operation on the data, and outputs the resulting audio data.
 2. Access the audio context's {{domxref("AudioWorklet")}} through its {{domxref("BaseAudioContext.audioWorklet", "audioWorklet")}} property, and call the audio worklet's {{domxref("Worklet.addModule", "addModule()")}} method to install the audio worklet processor module.
 3. As needed, create audio processing nodes by passing the processor's name (which is defined by the module) to the {{domxref("AudioWorkletNode.AudioWorkletNode", "AudioWorkletNode()")}} constructor.
 4. Set up any audio parameters the {{domxref("AudioWorkletNode")}} needs, or that you wish to configure. These are defined in the audio worklet processor module.
@@ -182,7 +170,7 @@ Specifying a value of `true` as the result from your `process()` function in ess
 
 Returning `false` from the `process()` method tells the API that it should follow its normal logic and shut down your processor node if it deems it appropriate to do so. If the API determines that your node is no longer needed, `process()` will not be called again.
 
-> **Note:** At this time, unfortunately, Chrome does not implement this algorithm in a manner that matches the current standard. Instead, it keeps the node alive if you return `true` and shuts it down if you return `false`. Thus for compatibility reasons you must always return `true` from `process()`, at least on Chrome. However, once [this Chrome issue](https://bugs.chromium.org/p/chromium/issues/detail?id=921354) is fixed, you will want to change this behavior if possible as it may have a slight negative impact on performance.
+> **Note:** At this time, unfortunately, Chrome does not implement this algorithm in a manner that matches the current standard. Instead, it keeps the node alive if you return `true` and shuts it down if you return `false`. Thus for compatibility reasons you must always return `true` from `process()`, at least on Chrome. However, once [this Chrome issue](https://crbug.com/921354) is fixed, you will want to change this behavior if possible as it may have a slight negative impact on performance.
 
 ## Creating an audio processor worklet node
 

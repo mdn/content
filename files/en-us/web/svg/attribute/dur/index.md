@@ -1,6 +1,7 @@
 ---
 title: dur
 slug: Web/SVG/Attribute/dur
+page-type: svg-attribute
 tags:
   - SVG
   - SVG Attribute

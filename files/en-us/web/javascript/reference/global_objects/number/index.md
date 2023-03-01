@@ -1,12 +1,7 @@
 ---
 title: Number
 slug: Web/JavaScript/Reference/Global_Objects/Number
-tags:
-  - Class
-  - JavaScript
-  - Number
-  - Reference
-  - Polyfill
+page-type: javascript-class
 browser-compat: javascript.builtins.Number
 ---
 
@@ -40,7 +35,7 @@ Number(undefined); // NaN
 
 ### Number encoding
 
-The JavaScript `Number` type is a [double-precision 64-bit binary format IEEE 754](https://en.wikipedia.org/wiki/Double_precision_floating-point_format) value, like `double` in Java or C#. This means it can represent fractional values, but there are some limits to the stored number's magnitude and precision. Very briefly, a IEEE 754 double-precision number uses 64 bits to represent 3 parts:
+The JavaScript `Number` type is a [double-precision 64-bit binary format IEEE 754](https://en.wikipedia.org/wiki/Double_precision_floating-point_format) value, like `double` in Java or C#. This means it can represent fractional values, but there are some limits to the stored number's magnitude and precision. Very briefly, an IEEE 754 double-precision number uses 64 bits to represent 3 parts:
 
 - 1 bit for the _sign_ (positive or negative)
 - 11 bits for the _exponent_ (-1022 to 1023)
@@ -68,7 +63,7 @@ Many built-in operations that expect numbers first coerce their arguments to num
 - `true` turns into `1`; `false` turns into `0`.
 - Strings are converted by parsing them as if they contain a [number literal](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#numeric_literals). Parsing failure results in `NaN`. There are some minor differences compared to an actual number literal:
   - Leading and trailing whitespace/line terminators are ignored.
-  - A leading `0` digit does not cause the number to become a octal literal (or get rejected in strict mode).
+  - A leading `0` digit does not cause the number to become an octal literal (or get rejected in strict mode).
   - `+` and `-` are allowed at the start of the string to indicate its sign. (In actual code, they "look like" part of the literal, but are actually separate unary operators.) However, the sign can only appear once, and must not be followed by whitespace.
   - `Infinity` and `-Infinity` are recognized as literals. In actual code, they are global variables.
   - Empty or whitespace-only strings are converted to `0`.
@@ -147,6 +142,13 @@ When `Number` is called as a constructor (with `new`), it creates a {{jsxref("Nu
   - : This is the same as the global {{jsxref("parseFloat", "parseFloat()")}} function.
 - {{jsxref("Number.parseInt()")}}
   - : This is the same as the global {{jsxref("parseInt", "parseInt()")}} function.
+
+## Instance properties
+
+These properties are defined on `Number.prototype` and shared by all `Number` instances.
+
+- {{jsxref("Object/constructor", "Number.prototype.constructor")}}
+  - : The constructor function that created the instance object. For `Number` instances, the initial value is the {{jsxref("Number/Number", "Number")}} constructor.
 
 ## Instance methods
 

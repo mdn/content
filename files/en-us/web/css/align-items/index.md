@@ -2,12 +2,6 @@
 title: align-items
 slug: Web/CSS/align-items
 page-type: css-property
-tags:
-  - CSS
-  - CSS Flexible Boxes
-  - CSS Property
-  - Reference
-  - recipe:css-property
 browser-compat: css.properties.align-items
 ---
 
@@ -216,15 +210,15 @@ select {
 ```
 
 ```js hidden
-const values = document.getElementById('values');
-const display = document.getElementById('display');
-const container = document.getElementById('container');
+const values = document.getElementById("values");
+const display = document.getElementById("display");
+const container = document.getElementById("container");
 
-values.addEventListener('change', (evt) => {
+values.addEventListener("change", (evt) => {
   container.style.alignItems = evt.target.value;
 });
 
-display.addEventListener('change', (evt) => {
+display.addEventListener("change", (evt) => {
   container.className = evt.target.value;
 });
 ```

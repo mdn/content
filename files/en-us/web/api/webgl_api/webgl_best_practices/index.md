@@ -2,20 +2,9 @@
 title: WebGL best practices
 slug: Web/API/WebGL_API/WebGL_best_practices
 page-type: guide
-tags:
-  - 2D
-  - 3D
-  - Advanced
-  - Best practices
-  - Drawing
-  - GL
-  - Graphics
-  - Guide
-  - OpenGL
-  - WebGL
 ---
 
-{{WebGLSidebar}}
+{{DefaultAPISidebar("WebGL")}}
 
 WebGL is a complicated API, and it's often not obvious what the recommended ways to use it are. This page tackles recommendations across the spectrum of expertise, and not only highlights dos and don'ts, but also details _why_. You can rely on this document to guide your choice of approach, and ensure you're on the right track no matter what browser or hardware your users run.
 
@@ -101,7 +90,7 @@ WebGL doesn't have a SwapBuffers call by default, so a flush can help fill the g
 
 ### Use `webgl.flush()` when not using requestAnimationFrame
 
-When not using RAF, (such as when using RPAF; see below) use `webgl.flush()` to encourage eager execution of enqueued commands.
+When not using RAF, use `webgl.flush()` to encourage eager execution of enqueued commands.
 
 Because RAF is directly followed by the frame boundary, an explicit `webgl.flush()` isn't really needed with RAF.
 
@@ -220,7 +209,7 @@ While we've described a pattern to allow browsers to compile and link in paralle
 Example usage:
 
 ```js
-ext = gl.getExtension('KHR_parallel_shader_compile');
+ext = gl.getExtension("KHR_parallel_shader_compile");
 gl.compileProgram(vs);
 gl.compileProgram(fs);
 gl.attachShader(prog, vs);
@@ -406,7 +395,7 @@ A number of formats (particularly three-channel formats) are emulated. For examp
 
 ## Avoid alpha:false, which can be expensive
 
-Specifying `alpha:false` during context creation causes the browser to composite the WebGL-rendered canvas as though it were opaque, ignoring any alpha values the application writes in its fragment shader. On some platforms, this capability unfortunately comes at a significant performance cost. The RGB back buffer may have to be emulated on top of an RGBA surface, and there are relatively few techniques available in the OpenGL API for making it appear to the application that an RGBA surface has no alpha channel. [It has been found](https://bugs.chromium.org/p/chromium/issues/detail?id=1045643) that all of these techniques have approximately equal performance impact on affected platforms.
+Specifying `alpha:false` during context creation causes the browser to composite the WebGL-rendered canvas as though it were opaque, ignoring any alpha values the application writes in its fragment shader. On some platforms, this capability unfortunately comes at a significant performance cost. The RGB back buffer may have to be emulated on top of an RGBA surface, and there are relatively few techniques available in the OpenGL API for making it appear to the application that an RGBA surface has no alpha channel. [It has been found](https://crbug.com/1045643) that all of these techniques have approximately equal performance impact on affected platforms.
 
 Most applications, even those requiring alpha blending, can be structured to produce `1.0` for the alpha channel. The primary exception is any application requiring destination alpha in the blending function. If feasible, it is recommended to do this rather than using `alpha:false`.
 
@@ -465,7 +454,7 @@ Behind the scenes in the browser:
     drawArrays()
     bindTexture(webgl_texture)
     -texImage2D(HTMLVideoElement):
-        +useProgram(_internal_tex_tranform_prog)
+        +useProgram(_internal_tex_transform_prog)
 <pipeline flush>
         +bindFramebuffer(webgl_texture._internal_framebuffer)
         +bindTexture(HTMLVideoElement._internal_video_tex)
@@ -501,7 +490,7 @@ Behind the scenes in the browser:
     …
     bindTexture(webgl_texture)
     -texImage2D(HTMLVideoElement):
-        +useProgram(_internal_tex_tranform_prog)
+        +useProgram(_internal_tex_transform_prog)
 <pipeline flush>
         +bindFramebuffer(webgl_texture._internal_framebuffer)
         +bindTexture(HTMLVideoElement._internal_video_tex)
@@ -553,8 +542,14 @@ function clientWaitAsync(gl, sync, flags, interval_ms) {
 }
 
 async function getBufferSubDataAsync(
-    gl, target, buffer, srcByteOffset, dstBuffer,
-    /* optional */ dstOffset, /* optional */ length) {
+  gl,
+  target,
+  buffer,
+  srcByteOffset,
+  dstBuffer,
+  /* optional */ dstOffset,
+  /* optional */ length
+) {
   const sync = gl.fenceSync(gl.SYNC_GPU_COMMANDS_COMPLETE, 0);
   gl.flush();
 
@@ -595,24 +590,26 @@ Demo: [Device pixel presnap](https://kdashg.github.io/misc/webgl/device-pixel-pr
 On supporting browsers (Chromium?), `ResizeObserver` can be used with `'device-pixel-content-box'` to request a callback that includes the true device pixel size of an element. This can be used to build an async-but-accurate function:
 
 ```js
-window.getDevicePixelSize = window.getDevicePixelSize || (async (elem) => {
-   await new Promise((fn_resolve) => {
+window.getDevicePixelSize =
+  window.getDevicePixelSize ||
+  (async (elem) => {
+    await new Promise((fn_resolve) => {
       const observer = new ResizeObserver((entries) => {
-         for (const cur of entries) {
-            const dev_size = cur.devicePixelContentBoxSize;
-            const ret = {
-               width: dev_size[0].inlineSize,
-               height: dev_size[0].blockSize,
-            };
-            fn_resolve(ret);
-            observer.disconnect();
-            return;
-         }
-         throw `device-pixel-content-box not observed for elem ${elem}`;
+        for (const cur of entries) {
+          const dev_size = cur.devicePixelContentBoxSize;
+          const ret = {
+            width: dev_size[0].inlineSize,
+            height: dev_size[0].blockSize,
+          };
+          fn_resolve(ret);
+          observer.disconnect();
+          return;
+        }
+        throw `device-pixel-content-box not observed for elem ${elem}`;
       });
-      observer.observe(elem, {box: 'device-pixel-content-box'});
-   });
-});
+      observer.observe(elem, { box: "device-pixel-content-box" });
+    });
+  });
 ```
 
 Please refer to [the specification](https://www.w3.org/TR/resize-observer/#resize-observer-interface) for more details.

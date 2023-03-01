@@ -2,16 +2,9 @@
 title: PaymentRequest.shippingType
 slug: Web/API/PaymentRequest/shippingType
 page-type: web-api-instance-property
-tags:
-  - API
-  - Payment Request
-  - Payment Request API
-  - PaymentRequest
-  - Reference
-  - Secure context
-  - shippingType
-  - Deprecated
-  - Non-standard
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.PaymentRequest.shippingType
 ---
 

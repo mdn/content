@@ -1,12 +1,7 @@
 ---
 title: '<object>: The External Object element'
 slug: Web/HTML/Element/object
-tags:
-  - Element
-  - HTML
-  - HTML embedded content
-  - Reference
-  - Web
+page-type: html-element
 browser-compat: html.elements.object
 ---
 
@@ -15,58 +10,6 @@ browser-compat: html.elements.object
 The **`<object>`** [HTML](/en-US/docs/Web/HTML) element represents an external resource, which can be treated as an image, a nested browsing context, or a resource to be handled by a plugin.
 
 {{EmbedInteractiveExample("pages/tabbed/object.html", "tabbed-standard")}}
-
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories">Content categories</a>
-      </th>
-      <td>
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content">Flow content</a>;
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content">phrasing content</a>;
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#embedded_content">embedded content</a>, palpable content; if the element has a
-        {{htmlattrxref("usemap","object")}} attribute, <a href="/en-US/docs/Web/Guide/HTML/Content_categories#interactive_content">interactive content</a>;
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#form_listed">listed</a>,
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#form_submittable">submittable</a>
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#form-associated_content">form-associated</a> element.
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Permitted content</th>
-      <td>
-        zero or more {{HTMLElement("param")}} elements, then
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#transparent_content_model">transparent</a>.
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Tag omission</th>
-      <td>{{no_tag_omission}}</td>
-    </tr>
-    <tr>
-      <th scope="row">Permitted parents</th>
-      <td>
-        Any element that accepts <a href="/en-US/docs/Web/Guide/HTML/Content_categories#embedded_content">embedded content</a>.
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Implicit ARIA role</th>
-      <td>
-        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role">No corresponding role</a>
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Permitted ARIA roles</th>
-      <td>
-        {{ARIARole("application")}}, {{ARIARole("document")}}, {{ARIARole("image")}}
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">DOM interface</th>
-      <td>{{domxref("HTMLObjectElement")}}</td>
-    </tr>
-  </tbody>
-</table>
 
 ## Attributes
 
@@ -114,6 +57,60 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 ```
 
 Note that a `type` field is normally specified, but is not needed for Youtube videos.
+
+## Technical summary
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">
+        <a href="/en-US/docs/Web/HTML/Content_categories">Content categories</a>
+      </th>
+      <td>
+        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content">Flow content</a>;
+        <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content">phrasing content</a>;
+        <a href="/en-US/docs/Web/HTML/Content_categories#embedded_content">embedded content</a>, palpable content; if the element has a
+        {{htmlattrxref("usemap","object")}} attribute, <a href="/en-US/docs/Web/HTML/Content_categories#interactive_content">interactive content</a>;
+        <a href="/en-US/docs/Web/HTML/Content_categories#form_listed">listed</a>,
+        <a href="/en-US/docs/Web/HTML/Content_categories#form_submittable">submittable</a>
+        <a href="/en-US/docs/Web/HTML/Content_categories#form-associated_content">form-associated</a> element.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Permitted content</th>
+      <td>
+        zero or more {{HTMLElement("param")}} elements, then
+        <a href="/en-US/docs/Web/HTML/Content_categories#transparent_content_model">transparent</a>.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Tag omission</th>
+      <td>{{no_tag_omission}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Permitted parents</th>
+      <td>
+        Any element that accepts <a href="/en-US/docs/Web/HTML/Content_categories#embedded_content">embedded content</a>.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Implicit ARIA role</th>
+      <td>
+        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role">No corresponding role</a>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Permitted ARIA roles</th>
+      <td>
+        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/application_role"><code>application</code></a>, <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/document_role"><code>document</code></a>, <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/img_role"><code>img</code></a>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">DOM interface</th>
+      <td>{{domxref("HTMLObjectElement")}}</td>
+    </tr>
+  </tbody>
+</table>
 
 ## Specifications
 

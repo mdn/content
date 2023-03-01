@@ -1,19 +1,13 @@
 ---
 title: Nullish coalescing assignment (??=)
 slug: Web/JavaScript/Reference/Operators/Nullish_coalescing_assignment
-tags:
-  - Assignment operator
-  - JavaScript
-  - Language feature
-  - Logical Operator
-  - Operator
-  - Reference
-browser-compat: javascript.operators.logical_nullish_assignment
+page-type: javascript-operator
+browser-compat: javascript.operators.nullish_coalescing_assignment
 ---
 
 {{jsSidebar("Operators")}}
 
-The **nullish coalescing assignment (`x ??= y`)** operator only assigns if `x` is {{Glossary("nullish")}} (`null` or `undefined`).
+The **nullish coalescing assignment (`x ??= y`)** operator, also known as the **logical nullish assignment** operator, only assigns if `x` is {{Glossary("nullish")}} (`null` or `undefined`).
 
 {{EmbedInteractiveExample("pages/js/expressions-logical-nullish-assignment.html")}}
 

@@ -1,11 +1,7 @@
 ---
 title: String() constructor
 slug: Web/JavaScript/Reference/Global_Objects/String/String
-tags:
-  - Constructor
-  - JavaScript
-  - Reference
-  - String
+page-type: javascript-constructor
 browser-compat: javascript.builtins.String.String
 ---
 

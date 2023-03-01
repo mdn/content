@@ -2,16 +2,6 @@
 title: PushEvent
 slug: Web/API/PushEvent
 page-type: web-api-interface
-tags:
-  - API
-  - ExtendableEvent
-  - Interface
-  - Offline
-  - Push
-  - Push API
-  - Reference
-  - Service Workers
-  - Workers
 browser-compat: api.PushEvent
 ---
 

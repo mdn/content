@@ -1,12 +1,7 @@
 ---
 title: Unsigned right shift (>>>)
 slug: Web/JavaScript/Reference/Operators/Unsigned_right_shift
-tags:
-  - Bitwise operator
-  - JavaScript
-  - Language feature
-  - Operator
-  - Reference
+page-type: javascript-operator
 browser-compat: javascript.operators.unsigned_right_shift
 ---
 

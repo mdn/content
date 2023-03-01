@@ -1,12 +1,7 @@
 ---
 title: ArrayBuffer() constructor
 slug: Web/JavaScript/Reference/Global_Objects/ArrayBuffer/ArrayBuffer
-tags:
-  - ArrayBuffer
-  - Constructor
-  - JavaScript
-  - Reference
-  - Polyfill
+page-type: javascript-constructor
 browser-compat: javascript.builtins.ArrayBuffer.ArrayBuffer
 ---
 

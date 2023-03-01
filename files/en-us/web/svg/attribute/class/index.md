@@ -1,6 +1,7 @@
 ---
 title: class
 slug: Web/SVG/Attribute/class
+page-type: svg-attribute
 tags:
   - Reference
   - SVG

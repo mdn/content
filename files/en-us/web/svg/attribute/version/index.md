@@ -1,6 +1,7 @@
 ---
 title: version
 slug: Web/SVG/Attribute/version
+page-type: svg-attribute
 tags:
   - Deprecated
   - SVG

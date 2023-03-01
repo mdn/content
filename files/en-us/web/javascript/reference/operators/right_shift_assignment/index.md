@@ -1,12 +1,7 @@
 ---
 title: Right shift assignment (>>=)
 slug: Web/JavaScript/Reference/Operators/Right_shift_assignment
-tags:
-  - Assignment operator
-  - JavaScript
-  - Language feature
-  - Operator
-  - Reference
+page-type: javascript-operator
 browser-compat: javascript.operators.right_shift_assignment
 ---
 

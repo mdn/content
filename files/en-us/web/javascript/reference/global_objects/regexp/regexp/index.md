@@ -1,12 +1,7 @@
 ---
 title: RegExp() constructor
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/RegExp
-tags:
-  - Constructor
-  - JavaScript
-  - Reference
-  - RegExp
-  - Polyfill
+page-type: javascript-constructor
 browser-compat: javascript.builtins.RegExp.RegExp
 ---
 
