@@ -1,10 +1,7 @@
 ---
 title: Browser storage limits and eviction criteria
-slug: Web/API/IndexedDB_API/Browser_storage_limits_and_eviction_criteria
-page-type: guide
+slug: Learn/JavaScript/Client-side_web_APIs/Browser_storage_limits_and_eviction_criteria
 ---
-
-{{DefaultAPISidebar("IndexedDB")}}
 
 There are a number of web technologies that store data of one kind or another on the client-side (i.e., on your local disk). The process by which the browser works out how much space to allocate to web data storage and what to delete when that limit is reached is not simple, and differs between browsers. This article describes how browsers determine what local content to purge and when in order to free up needed local storage space.
 
