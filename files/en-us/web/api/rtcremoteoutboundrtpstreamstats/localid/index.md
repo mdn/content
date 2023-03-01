@@ -137,10 +137,10 @@ async function networkTestStop(pc) {
             "remoteId",
             endRemoteOutbound.id
           );
-
+          // Elapsed time in seconds
           const elapsedTime =
             (endRemoteOutbound.timestamp - startRemoteOutbound.timestamp) /
-            1000; /* in seconds */
+            1000;
           const packetsSent =
             endRemoteOutbound.packetsSent - startRemoteOutbound.packetsSent;
           const bytesSent =
