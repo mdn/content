@@ -20,7 +20,7 @@ contrast(amount)
 ### Parameters
 
 - `amount`
-  - : The contrast of the result, specified as a {{cssxref("&lt;number&gt;")}} or a {{cssxref("&lt;percentage&gt;")}}. A value under `100%` decreases the contrast, while a value over `100%` increases it. A value of `0%` will create an image that is completely gray, while a value of `100%` leaves the input unchanged. The initial value for {{Glossary("interpolation")}} is `1`.
+  - : The contrast of the result, specified as a {{cssxref("&lt;number&gt;")}} or a {{cssxref("&lt;percentage&gt;")}}. A value under `100%` decreases the contrast, while a value over `100%` increases it. A value of `0` or `0%` will create an image that is completely gray, while a value of `1` or `100%` leaves the input unchanged. Negative values are not allowed. The initial value for {{Glossary("interpolation")}} is `1`.
 
 ### Setting contrast using numbers and percentages
 
@@ -31,12 +31,99 @@ contrast(1)     /* No effect */
 contrast(200%)  /* Double contrast */
 ```
 
-## SVG filter
+### Formal syntax
 
-The SVG {{SVGElement("filter")}} element is used to define custom filter effects that can then be referenced by {{htmlattrxref("id")}}. The `<filter>`'s {{SVGElement("feComponentTransfer")}} primitive enables pixel-level color remapping. To alter the contrast, include linear {{SVGElement("feFuncR")}} (red), {{SVGElement("feFuncB")}} (blue), and {{SVGElement("feFuncG")}} (green) primitives with the `slope` attribute value defining the contrast multiplier and the `intercept` attribute.
+{{csssyntax}}
+
+## Examples
+
+### With the backdrop-filter property
+
+This example applies a `contrast()` filter via the `backdrop-filter` CSS property to the paragraph and monospaced text, color shifting to the area behind the `<p>` and `<code>`.
+
+```css
+.container {
+  background: url(image.jpg) no-repeat center / contain #339;
+}
+p {
+  backdrop-filter: contrast(0.5);
+}
+code {
+  backdrop-filter: contrast(0.15);
+}
+```
+
+```css hidden
+.container {
+  padding: 3rem;
+  width: 30rem;
+}
+p {
+  padding: 0.5rem;
+  color: #ffffff;
+  font-family: sans-serif;
+}
+```
+
+```html hidden
+<div class="container" style="background-image: url(unity_for_the_people.jpg);">
+  <p>
+    If you think your text may land ontop of a background image, include a
+    <code>backdrop-filter</code>. Alway ensure there is enough contrast between
+    text and all background colors. Remove the background colors with the
+    <code>contrast()</code> may improve legibility but does not guarantee
+    accessibility.
+  </p>
+</div>
+```
+
+{{EmbedLiveSample('With_the_backdrop-filter_property','100%','260')}}
+
+### With the filter property
+
+This example applies a `contrast()` filter via the `filter` CSS property, changing contrast by shifting colors of the entire element, including content, border, background, and shadows.
+
+```css
+p:first-of-type {
+  filter: contrast(30%);
+}
+p:last-of-type {
+  filter: contrast(300%);
+}
+```
+
+```css hidden
+p {
+  text-shadow: 2px 2px blue;
+  background-color: magenta;
+  color: palegoldenrod;
+  border: 1em solid rebeccapurple;
+  box-shadow: inset -5px -5px red, 5px 5px yellow;
+  padding: 0.25rem;
+  font-size: 1.25rem;
+  font-family: sans-serif;
+  width: 85vw;
+}
+```
+
+```html hidden
+<p>This paragraph has reduced contrast.</p>
+<p>This paragraph has normal contrast.</p>
+<p>This paragraph has increased contrast.</p>
+```
+
+{{EmbedLiveSample('With_the_filter_property','100%','320')}}
+
+### With url() and the SVG contrast filter
+
+The SVG {{SVGElement("filter")}} element is used to define custom filter effects that can then be referenced by {{htmlattrxref("id")}}. The `<filter>`'s {{SVGElement("feComponentTransfer")}} primitive enables pixel-level color remapping.
+
+<!-- Content for SVG contrast page:
+
+ To alter the contrast, include linear {{SVGElement("feFuncR")}} (red), {{SVGElement("feFuncB")}} (blue), and {{SVGElement("feFuncG")}} (green) primitives with the `slope` attribute value defining the contrast multiplier and the `intercept` attribute.
 
 ```svg
-<svg style="position: absolute; top: -99999px" xmlns="http://www.w3.org/2000/svg">
+<svg role="none">
   <filter id="contrast">
     <feComponentTransfer>
       <feFuncR type="linear" slope="[amount]" intercept="-(0.5 * [amount]) + 0.5"/>
@@ -46,8 +133,6 @@ The SVG {{SVGElement("filter")}} element is used to define custom filter effects
   </filter>
 </svg>
 ```
-
-## Examples
 
 This example shows three images: the image with a `contrast()` filter function applied, the image with the equivalent SVG blur function applied, and the original image for comparison:
 
@@ -73,6 +158,21 @@ To create a filter that doubles the original contrast, we set the `slope` attrib
   </filter>
 </svg>
 ```
+-->
+
+Given the following:
+
+```svg
+  <filter id="contrast">
+    <feComponentTransfer>
+      <feFuncR type="linear" slope="2" intercept="-0.5"/>
+      <feFuncG type="linear" slope="2" intercept="-0.5"/>
+      <feFuncB type="linear" slope="2" intercept="-0.5"/>
+    </feComponentTransfer>
+  </filter>
+```
+
+These values produce the same results:
 
 ```css hidden
 .svgFilterLive {
@@ -80,19 +180,27 @@ To create a filter that doubles the original contrast, we set the `slope` attrib
 }
 ```
 
+```css
+filter: contrast(200%);
+filter: url(#contrast); /* with embedded SVG */
+filter: url(folder/fileName.svg#contrast); /* external svg filter definition */
+```
+
+This example shows three images: the image with a `contrast()` filter function applied, the image with an equivalent `url()` filter applied, and the original images for comparison:
+
 ```html hidden
 <table cellpadding="5">
   <thead>
     <tr>
-      <th>Live example</th>
-      <th>SVG Equivalent</th>
+      <th><code>contrast()</code></th>
+      <th><code>url()</code></th>
       <th>Original image</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td>
-        <img class="filter" src="flag.jpg" alt="Pride flag" />
+        <img style="filter: contrast(200%)" src="flag.jpg" alt="Pride flag" />
       </td>
       <td>
         <img class="svgFilterLive" src="flag.jpg" alt="Pride flag" />
@@ -121,7 +229,7 @@ To create a filter that doubles the original contrast, we set the `slope` attrib
 </table>
 ```
 
-{{EmbedLiveSample('Examples','100%','280')}}
+{{EmbedLiveSample('With_url()_and_the_SVG_contrast_filter','100%','280')}}
 
 ## Specifications
 
