@@ -35,6 +35,100 @@ oklch(59.69% 0.156 49.77 / .5)
 
 {{csssyntax}}
 
+## Examples
+
+### Adjusting the lightness, chroma, and hue of a color
+
+The following example shows the effect of varying the `L` (lightness), `C` (chroma), and `H` (hue) values of the `oklch()` color function.
+
+```html
+<div id="blue"></div>
+<div id="blue-light"></div>
+
+<div id="red"></div>
+<div id="red-chroma"></div>
+
+<div id="green"></div>
+<div id="green-hue"></div>
+```
+
+```css hidden
+div {
+  width: 50px;
+  height: 50px;
+  padding: 5px;
+  margin: 5px;
+  display: inline-block;
+  border: 1px solid black;
+}
+```
+
+```css
+#blue {
+  background-color: oklch(60% 0.4 240);
+}
+#blue-light {
+  background-color: oklch(90% 0.4 240);
+}
+
+#red {
+  background-color: oklch(100% 0.4 30);
+}
+#red-chroma {
+  background-color: oklch(100% 0.3 40);
+}
+
+#green {
+  background-color: oklch(60% 0.57 161);
+}
+#green-hue {
+  background-color: oklch(60% 0.57 181);
+}
+```
+
+{{EmbedLiveSample('Adjusting_the_lightness_chroma_and_hue_of_a_color')}}
+
+### Adjusting the alpha value of a color
+
+The following example shows the effect of varying the `A` (alpha) value of the `oklch()` color function.
+The `#red` and `#red-alpha` elements overlap the `#background-div` element to demonstrate the effect of opacity.
+Giving `A` a value of `0.4` makes the color 40% opaque.
+
+```html
+<div id="background-div">
+  <div id="red"></div>
+  <div id="red-alpha"></div>
+</div>
+```
+
+```css hidden
+div {
+  width: 50px;
+  height: 50px;
+  padding: 5px;
+  margin: 5px;
+  display: inline-block;
+  border: 1px solid black;
+}
+```
+
+```css
+#background-div {
+  background-color: oklch(100% 0.57 217);
+  width: 150px;
+  height: 40px;
+}
+
+#red {
+  background-color: oklch(50% 130 20);
+}
+#red-alpha {
+  background-color: oklch(50% 130 20 / 0.4);
+}
+```
+
+{{EmbedLiveSample('Adjusting_the_alpha_value_of_a_color')}}
+
 ## Specifications
 
 {{Specifications}}
@@ -45,6 +139,7 @@ oklch(59.69% 0.156 49.77 / .5)
 
 ## See also
 
+- [Color values](/en-US/docs/Web/CSS/color_value) lists color notation
 - [A perceptual color space for image processing](https://bottosson.github.io/posts/oklab/)
 - [OKLCH in CSS](https://evilmartians.com/chronicles/oklch-in-css-why-quit-rgb-hsl)
 - [Safari Technology Preview 137 release notes](https://webkit.org/blog/12156/release-notes-for-safari-technology-preview-137/): includes `oklch()` and {{cssxref("color_value/oklab",'oklab()')}} colors.
