@@ -49,7 +49,7 @@ If you specify `DENY`, not only will the browser attempt to load the page in a f
   - : The page cannot be displayed in a frame, regardless of the site attempting to do so.
 - `SAMEORIGIN`
   - : The page can only be displayed if all ancestor frames are same origin to the page itself.
-- `ALLOW-FROM=url` {{deprecated_inline}}
+- `ALLOW-FROM origin` {{deprecated_inline}}
   - : This is an obsolete directive that no longer works in modern browsers. (Using it will give the same behavior as omitting the header.) Don't use it. The {{HTTPHeader("Content-Security-Policy")}} HTTP header has a {{HTTPHeader("Content-Security-Policy/frame-ancestors", "frame-ancestors")}} directive which you can use instead.
 
 ## Examples
