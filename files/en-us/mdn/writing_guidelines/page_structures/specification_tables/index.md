@@ -30,11 +30,6 @@ then the macro gets the specifications for {{cssxref("text-align")}} and renders
 
 {{Specifications("css.properties.text-align")}}
 
-## Specification tables without front-matter
-
-In case you want to display a specification section on a page that doesn't provide a front-matter,
-you can pass the browser-compat query directly to the macro: `\{{Specifications("css.properties.text-align")}}`
-
 ## Non-standard features
 
 When documenting a feature that doesn't have a specification (anymore),
