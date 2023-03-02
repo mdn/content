@@ -2,12 +2,8 @@
 title: Launch Handler API
 slug: Web/API/Launch_Handler_API
 page-type: web-api-overview
-tags:
-  - API
-  - Experimental
-  - Landing
-  - Overview
-  - Reference
+status:
+  - experimental
 browser-compat:
   - api.Window.launchQueue
 ---
