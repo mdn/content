@@ -2,6 +2,7 @@
 title: Specification tables
 slug: MDN/Writing_guidelines/Page_structures/Specification_tables
 page-type: mdn-writing-guide
+browser-urls: css.properties.text-align
 ---
 
 {{MDNSidebar}}
@@ -28,7 +29,7 @@ then the macro gets the specifications for {{cssxref("text-align")}} and renders
 
 ### Specifications
 
-{{Specifications("css.properties.text-align")}}
+{{Specifications}}
 
 ## Non-standard features
 
