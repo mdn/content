@@ -71,6 +71,8 @@ navigator.storage.estimate().then((estimate) => {
 });
 ```
 
+For more information on browser storage quotas and eviction, read [Browser storage limits and eviction criteria](/en-US/docs/learn/javascript/client-side_web_APIs/browser_storage_limits_and_eviction_criteria).
+
 ## Specifications
 
 {{Specifications}}
