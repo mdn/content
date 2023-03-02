@@ -100,7 +100,7 @@ const gdmOptions = {
   audio: {
     echoCancellation: true,
     noiseSuppression: true,
-    sampleRate: 44100
+    sampleRate: 44100,
     suppressLocalAudioPlayback: true
   },
   surfaceSwitching: "include",
