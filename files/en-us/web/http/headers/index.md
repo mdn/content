@@ -74,7 +74,7 @@ HTTP [Client hints](/en-US/docs/Web/HTTP/Client_hints) are a set of request head
 Servers proactively requests the client hint headers they are interested in from the client using {{HTTPHeader("Accept-CH")}}. The client may then choose to include the requested headers in subsequent requests.
 
 - {{HTTPHeader("Accept-CH")}} {{experimental_inline}}
-  - : Servers can advertise support for Client Hints using the `Accept-CH` header field or an equivalent HTML `<meta>` element with [`http-equiv`](/en-US/docs/Web/HTML/Element/meta#attr-http-equiv) attribute.
+  - : Servers can advertise support for Client Hints using the `Accept-CH` header field or an equivalent HTML `<meta>` element with [`http-equiv`](/en-US/docs/Web/HTML/Element/meta#http-equiv) attribute.
 - {{HTTPHeader("Accept-CH-Lifetime")}} {{experimental_inline}} {{deprecated_inline}}
   - : Servers can ask the client to remember the set of Client Hints that the server supports for a specified period of time, to enable delivery of Client Hints on subsequent requests to the server's origin.
 - {{HTTPHeader("Critical-CH")}} {{experimental_inline}}
@@ -243,7 +243,7 @@ _Learn more about CORS [here](/en-US/docs/Glossary/CORS)._
 - {{HTTPHeader("Location")}}
   - : Indicates the URL to redirect a page to.
 - {{HTTPHeader("Refresh")}}
-  - : Directs the browser to reload the page or redirect to another. Takes the same value as the `meta` element with [`http-equiv="refresh"`](/en-US/docs/Web/HTML/Element/meta#attr-http-equiv).
+  - : Directs the browser to reload the page or redirect to another. Takes the same value as the `meta` element with [`http-equiv="refresh"`](/en-US/docs/Web/HTML/Element/meta#http-equiv).
 
 ## Request context
 
@@ -293,7 +293,7 @@ _Learn more about CORS [here](/en-US/docs/Glossary/CORS)._
 - {{HTTPHeader("Origin-Isolation")}} {{experimental_inline}}
   - : Provides a mechanism to allow web applications to isolate their origins.
 - {{HTTPHeader("Permissions-Policy")}}
-  - : Provides a mechanism to allow and deny the use of browser features in a web site's own frame, and in {{htmlelement("iframe")}}s that it embeds.
+  - : Provides a mechanism to allow and deny the use of browser features in a website's own frame, and in {{htmlelement("iframe")}}s that it embeds.
 - {{HTTPHeader("Strict-Transport-Security")}} ({{Glossary("HSTS")}})
   - : Force communication using HTTPS instead of HTTP.
 - {{HTTPHeader("Upgrade-Insecure-Requests")}}

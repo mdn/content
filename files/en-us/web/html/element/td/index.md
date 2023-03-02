@@ -15,22 +15,22 @@ The **`<td>`** [HTML](/en-US/docs/Web/HTML) element defines a cell of a table th
 
 This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 
-- {{htmlattrdef("colspan")}}
+- `colspan`
   - : This attribute contains a non-negative integer value that indicates for how many columns the cell extends. Its default value is `1`. Values higher than 1000 will be considered as incorrect and will be set to the default value (1).
-- {{htmlattrdef("headers")}}
+- `headers`
   - : This attribute contains a list of space-separated strings, each corresponding to the **id** attribute of the {{HTMLElement("th")}} elements that apply to this element.
-- {{htmlattrdef("rowspan")}}
+- `rowspan`
   - : This attribute contains a non-negative integer value that indicates for how many rows the cell extends. Its default value is `1`; if its value is set to `0`, it extends until the end of the table section ({{HTMLElement("thead")}}, {{HTMLElement("tbody")}}, {{HTMLElement("tfoot")}}, even if implicitly defined), that the cell belongs to. Values higher than 65534 are clipped down to 65534.
 
 ### Deprecated attributes
 
-- {{htmlattrdef("abbr")}} {{deprecated_inline}}
+- `abbr` {{deprecated_inline}}
 
   - : This attribute contains a short abbreviated description of the cell's content. Some user-agents, such as speech readers, may present this description before the content itself.
 
     > **Note:** Do not use this attribute as it is obsolete in the latest standard. Alternatively, you can put the abbreviated description inside the cell and place the long content in the **title** attribute.
 
-- {{htmlattrdef("align")}} {{deprecated_inline}}
+- `align` {{deprecated_inline}}
 
   - : This [enumerated](/en-US/docs/Glossary/Enumerated) attribute specifies how the cell content's horizontal alignment will be handled. Possible values are:
 
@@ -47,23 +47,23 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
     > - To achieve the same effect as the `left`, `center`, `right` or `justify` values, apply the CSS {{cssxref("text-align")}} property to the element.
     > - To achieve the same effect as the `char` value, give the {{cssxref("text-align")}} property the same value you would use for the {{htmlattrxref("char", "td")}}. {{unimplemented_inline}} in CSS.
 
-- {{htmlattrdef("axis")}} {{deprecated_inline}}
+- `axis` {{deprecated_inline}}
   - : This attribute contains a list of space-separated strings. Each string is the `id` of a group of cells that this header applies to.
-- {{htmlattrdef("bgcolor")}} {{deprecated_inline}}
+- `bgcolor` {{deprecated_inline}}
 
   - : This attribute defines the background color of each cell in a column. It is a [6-digit hexadecimal RGB code](/en-US/docs/Web/CSS/hex-color), prefixed by a '`#`'. One of the predefined [color keywords](/en-US/docs/Web/CSS/named-color) can also be used.
 
     To achieve a similar effect, use the CSS {{cssxref("background-color")}} property.
 
-- {{htmlattrdef("char")}} {{deprecated_inline}}
+- `char` {{deprecated_inline}}
   - : The content in the cell element is aligned to a character. Typical values include a period (.) to align numbers or monetary values. If {{htmlattrxref("align", "td")}} is not set to `char`, this attribute is ignored.
-- {{htmlattrdef("charoff")}} {{deprecated_inline}}
+- `charoff` {{deprecated_inline}}
   - : This attribute is used to shift column data to the right of the character specified by the **char** attribute. Its value specifies the length of this shift.
-- {{htmlattrdef("height")}} {{deprecated_inline}}
+- `height` {{deprecated_inline}}
   - : This attribute is used to define a recommended cell height. Use the CSS {{cssxref("height")}} property instead.
-- {{htmlattrdef("scope")}} {{deprecated_inline}}
+- `scope` {{deprecated_inline}}
   - : This enumerated attribute defines the cells that the header (defined in the {{HTMLElement("th")}}) element relates to. Only use this attribute with the `<th>` element to define the row or column for which it is a header.
-- {{htmlattrdef("valign")}} {{deprecated_inline}}
+- `valign` {{deprecated_inline}}
 
   - : This attribute specifies how a text is vertically aligned inside a cell. Possible values for this attribute are:
 
@@ -74,7 +74,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
     To achieve a similar effect, use the CSS {{cssxref("vertical-align")}} property.
 
-- {{htmlattrdef("width")}} {{deprecated_inline}}
+- `width` {{deprecated_inline}}
   - : This attribute is used to define a recommended cell width. Use the CSS {{cssxref("width")}} property instead.
 
 ## Examples

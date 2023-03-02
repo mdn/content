@@ -31,7 +31,7 @@ It is also relatively "privacy-preserving", in that it is up to the client to de
 
 There is a small set of [low entropy client hint headers](#low_entropy_hints) that may be sent by a client even if not requested.
 
-> **Note:** Client hints can also be specified in HTML using the {{HTMLElement("meta")}} element with the [`http-equiv`](/en-US/docs/Web/HTML/Element/meta#attr-http-equiv) attribute.
+> **Note:** Client hints can also be specified in HTML using the {{HTMLElement("meta")}} element with the [`http-equiv`](/en-US/docs/Web/HTML/Element/meta#http-equiv) attribute.
 >
 > ```html
 > <meta http-equiv="Accept-CH" content="Width, Downlink, Sec-CH-UA" />

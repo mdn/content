@@ -1529,6 +1529,13 @@
       "properties": [],
       "events": []
     },
+    "View Transitions API": {
+      "overview": ["View Transitions API"],
+      "interfaces": ["ViewTransition"],
+      "methods": ["Document.startViewTransition()"],
+      "properties": [],
+      "events": []
+    },
     "VirtualKeyboard API": {
       "overview": ["VirtualKeyboard API"],
       "interfaces": ["VirtualKeyboard"],

@@ -26,7 +26,7 @@ An {{jsxref("ArrayBuffer")}}.
 ## Examples
 
 ```js
-self.addEventListener('push', (event) => {
+self.addEventListener("push", (event) => {
   const buffer = event.data.arrayBuffer();
 
   // do something with your array buffer

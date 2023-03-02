@@ -134,9 +134,9 @@ Let's look at a basic example that includes all the essential features you'd nee
 
 `<input type="image">` elements — like regular [submit buttons](/en-US/docs/Web/HTML/Element/input/submit) — can accept a number of attributes that override the default form behavior:
 
-- {{htmlattrdef("formaction")}}
+- `formaction`
   - : The URI of a program that processes the information submitted by the input element; overrides the {{htmlattrxref("action","form")}} attribute of the element's form owner.
-- {{htmlattrdef("formenctype")}}
+- `formenctype`
 
   - : Specifies the type of content that is used to submit the form to the server. Possible values are:
 
@@ -145,7 +145,7 @@ Let's look at a basic example that includes all the essential features you'd nee
 
     If this attribute is specified, it overrides the {{htmlattrxref("enctype","form")}} attribute of the element's form owner.
 
-- {{htmlattrdef("formmethod")}}
+- `formmethod`
 
   - : Specifies the HTTP method that the browser uses to submit the form. Possible values are:
 
@@ -154,9 +154,9 @@ Let's look at a basic example that includes all the essential features you'd nee
 
     If specified, this attribute overrides the {{htmlattrxref("method","form")}} attribute of the element's form owner.
 
-- {{htmlattrdef("formnovalidate")}}
+- `formnovalidate`
   - : A Boolean attribute specifying that the form is not to be validated when it is submitted. If this attribute is specified, it overrides the {{htmlattrxref("novalidate","form")}} attribute of the element's form owner.
-- {{htmlattrdef("formtarget")}}
+- `formtarget`
 
   - : A name or keyword indicating where to display the response that is received after submitting the form. This is a name of, or keyword for, a _browsing context_ (for example, tab, window, or inline frame). If this attribute is specified, it overrides the {{htmlattrxref("target", "form")}} attribute of the element's form owner. The following keywords have special meanings:
 

@@ -38,7 +38,7 @@ const observer = new PerformanceObserver((list) => {
   });
 });
 
-observer.observe({type: "event", buffered: true});
+observer.observe({ type: "event", buffered: true });
 ```
 
 This would log a JSON object like so:

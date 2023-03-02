@@ -158,6 +158,7 @@ For the exercise that follows, create a folder on your computer. You can name th
 <html lang="en">
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
     <title>My CSS experiments</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
