@@ -160,6 +160,7 @@ For the exercise that follows, create a folder on your computer. You can name th
     <meta charset="utf-8" />
     <title>My CSS experiments</title>
     <link rel="stylesheet" href="styles.css" />
+    <meta name="viewport" content="width=device-width">
   </head>
   <body>
     <p>Create your test HTML here</p>
