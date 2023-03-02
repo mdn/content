@@ -2,14 +2,6 @@
 title: RTCDtlsTransport.state
 slug: Web/API/RTCDtlsTransport/state
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - RTCDtlsTransport
-  - Read-only
-  - Reference
-  - WebRTC
-  - state
 browser-compat: api.RTCDtlsTransport.state
 ---
 

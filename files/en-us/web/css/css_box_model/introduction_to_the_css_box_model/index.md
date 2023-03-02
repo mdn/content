@@ -2,11 +2,6 @@
 title: Introduction to the CSS basic box model
 slug: Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model
 page-type: guide
-tags:
-  - CSS
-  - CSS Box Model
-  - Guide
-  - Layout
 spec-urls: https://drafts.csswg.org/css-box/#intro
 ---
 
@@ -16,7 +11,7 @@ When laying out a document, the browser's rendering engine represents each eleme
 
 Every box is composed of four parts (or _areas_), defined by their respective edges: the _content edge_, _padding edge_, _border edge_, and _margin edge_.
 
-![CSS Box model](<boxmodel-(3).png>)
+![CSS Box model](boxmodel.png)
 
 ## Content area
 

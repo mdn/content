@@ -2,23 +2,8 @@
 title: HTMLImageElement.hspace
 slug: Web/API/HTMLImageElement/hspace
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTML
-  - HTML DOM
-  - HTMLImageElement
-  - Horizontal
-  - Image
-  - Layout
-  - Property
-  - Reference
-  - hspace
-  - img
-  - left
-  - margin
-  - right
-  - spacing
-  - Deprecated
+status:
+  - deprecated
 browser-compat: api.HTMLImageElement.hspace
 ---
 

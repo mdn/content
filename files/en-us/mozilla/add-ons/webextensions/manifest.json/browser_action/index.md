@@ -1,6 +1,7 @@
 ---
 title: browser_action
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/browser_action
+page-type: webextension-manifest-key
 tags:
   - Add-ons
   - Extensions
@@ -160,7 +161,7 @@ The `browser_action` key is an object that may have any of the following propert
           </li>
         </ul>
         <p>This property is only supported in Firefox.</p>
-        <p>This property is optional, and defaults to "navbar".</p>
+        <p>This property is optional, and defaults to "menupanel".</p>
         <p>
           Firefox remembers the <code>default_area</code> setting for an
           extension, even if that extension is uninstalled and subsequently

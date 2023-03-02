@@ -1,9 +1,7 @@
 ---
-title: 'MediaStream: addtrack event'
+title: "MediaStream: addtrack event"
 slug: Web/API/MediaStream/addtrack_event
 page-type: web-api-event
-tags:
-  - Event
 browser-compat: api.MediaStream.addtrack_event
 ---
 
@@ -18,9 +16,9 @@ This event is not cancelable and does not bubble.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('addtrack', (event) => { });
+addEventListener("addtrack", (event) => {});
 
-onaddtrack = (event) => { };
+onaddtrack = (event) => {};
 ```
 
 ## Event type
@@ -43,7 +41,7 @@ Using `addEventListener()`:
 ```js
 let stream = new MediaStream();
 
-stream.addEventListener('addtrack', (event) => {
+stream.addEventListener("addtrack", (event) => {
   console.log(`New ${event.track.kind} track added`);
 });
 ```

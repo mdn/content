@@ -1,5 +1,5 @@
 ---
-title: 'CSP: worker-src'
+title: "CSP: worker-src"
 slug: Web/HTTP/Headers/Content-Security-Policy/worker-src
 tags:
   - CSP

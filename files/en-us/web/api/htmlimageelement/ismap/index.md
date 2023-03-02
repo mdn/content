@@ -2,17 +2,6 @@
 title: HTMLImageElement.isMap
 slug: Web/API/HTMLImageElement/isMap
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTML
-  - HTML DOM
-  - HTMLImageElement
-  - Image Map
-  - Link
-  - Reference
-  - isMap
-  - server-side
-  - Property
 browser-compat: api.HTMLImageElement.isMap
 ---
 

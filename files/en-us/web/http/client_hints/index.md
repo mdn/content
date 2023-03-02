@@ -29,9 +29,9 @@ Accept-CH: Width, Downlink, Sec-CH-UA
 This approach is efficient in that the server only requests the information that it is able to usefully handle.
 It is also relatively "privacy-preserving", in that it is up to the client to decide what information it can safely share.
 
-There is a small set of [low entropy client hint headers](#low_entropy_hints) that may be sent by a client event if not requested.
+There is a small set of [low entropy client hint headers](#low_entropy_hints) that may be sent by a client even if not requested.
 
-> **Note:** Client hints can also be specified in HTML using the {{HTMLElement("meta")}} element with the [`http-equiv`](/en-US/docs/Web/HTML/Element/meta#attr-http-equiv) attribute.
+> **Note:** Client hints can also be specified in HTML using the {{HTMLElement("meta")}} element with the [`http-equiv`](/en-US/docs/Web/HTML/Element/meta#http-equiv) attribute.
 >
 > ```html
 > <meta http-equiv="Accept-CH" content="Width, Downlink, Sec-CH-UA" />
@@ -64,7 +64,7 @@ For example, to stop requesting any hints it would send `Accept-CH` with an empt
 
 Client hints are broadly divided into high and low entropy hints.
 
-The low entropy hints are those that don't give away much information that might be used to "fingerprint" (identify) a particular user.
+The low entropy hints are those that don't give away much information that might be used to create a [fingerprinting](/en-US/docs/Glossary/Fingerprinting) for a user.
 They may be sent by default on every client request, irrespective of the server `Accept-CH` response header, depending on the permission policy.
 These hints include: {{HTTPHeader("Save-Data")}}, {{HTTPHeader("Sec-CH-UA")}}, {{HTTPHeader("Sec-CH-UA-Mobile")}}, {{HTTPHeader("Sec-CH-UA-Platform")}}.
 

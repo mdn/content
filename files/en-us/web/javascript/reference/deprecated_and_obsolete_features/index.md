@@ -2,11 +2,6 @@
 title: Deprecated and obsolete features
 slug: Web/JavaScript/Reference/Deprecated_and_obsolete_features
 page-type: guide
-tags:
-  - Deprecated
-  - Guide
-  - JavaScript
-  - Deprecated
 ---
 
 {{JsSidebar("More")}}
@@ -162,10 +157,10 @@ The `valueOf()` method is no longer specialized for `RegExp`. It uses {{jsxref("
 
 - `Proxy.create` and `Proxy.createFunction` are obsolete. Use the {{jsxref("Proxy/Proxy", "Proxy()")}} constructor instead.
 - The following traps are obsolete:
-  - `hasOwn` ([bug 980565](https://bugzilla.mozilla.org/show_bug.cgi?id=980565), Firefox 33).
-  - `getEnumerablePropertyKeys` ([bug 783829](https://bugzilla.mozilla.org/show_bug.cgi?id=783829), Firefox 37)
-  - `getOwnPropertyNames` ([bug 1007334](https://bugzilla.mozilla.org/show_bug.cgi?id=1007334), Firefox 33)
-  - `keys` ([bug 1007334](https://bugzilla.mozilla.org/show_bug.cgi?id=1007334), Firefox 33)
+  - `hasOwn` ([bug 980565](https://bugzil.la/980565), Firefox 33).
+  - `getEnumerablePropertyKeys` ([bug 783829](https://bugzil.la/783829), Firefox 37)
+  - `getOwnPropertyNames` ([bug 1007334](https://bugzil.la/1007334), Firefox 33)
+  - `keys` ([bug 1007334](https://bugzil.la/1007334), Firefox 33)
 
 ### ParallelArray
 

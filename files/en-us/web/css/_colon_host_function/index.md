@@ -2,14 +2,6 @@
 title: ":host()"
 slug: Web/CSS/:host_function
 page-type: css-pseudo-class
-tags:
-  - ":host()"
-  - CSS
-  - Layout
-  - Pseudo-class
-  - Reference
-  - Selector
-  - Web
 browser-compat: css.selectors.hostfunction
 ---
 
@@ -31,8 +23,10 @@ The most obvious use of this is to put a class name only on certain custom eleme
 
 ## Syntax
 
-```
-:host( <compound-selector> )
+```css-nolint
+:host(<compound-selector>) {
+  /* ... */
+}
 ```
 
 ## Examples

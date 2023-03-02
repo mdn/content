@@ -2,11 +2,6 @@
 title: Atomics.wait()
 slug: Web/JavaScript/Reference/Global_Objects/Atomics/wait
 page-type: javascript-static-method
-tags:
-  - Atomics
-  - JavaScript
-  - Method
-  - Shared Memory
 browser-compat: javascript.builtins.Atomics.wait
 ---
 

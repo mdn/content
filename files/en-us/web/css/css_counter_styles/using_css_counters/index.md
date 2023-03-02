@@ -2,14 +2,6 @@
 title: Using CSS counters
 slug: Web/CSS/CSS_Counter_Styles/Using_CSS_counters
 page-type: guide
-tags:
-  - Advanced
-  - CSS
-  - CSS Counter Styles
-  - Guide
-  - Layout
-  - Reference
-  - Web
 spec-urls: https://drafts.csswg.org/css-lists/#auto-numbering
 ---
 
@@ -274,7 +266,7 @@ li::before {
 
 #### HTML
 
-```html
+```html-nolint
 <ol>
   <li>item</li>          <!-- 1     -->
   <li>item               <!-- 2     -->

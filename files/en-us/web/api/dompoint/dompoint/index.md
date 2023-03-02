@@ -2,16 +2,6 @@
 title: DOMPoint()
 slug: Web/API/DOMPoint/DOMPoint
 page-type: web-api-constructor
-tags:
-  - API
-  - Constructor
-  - Coordinates
-  - DOM
-  - DOMPoint
-  - Geometry
-  - Geometry Interfaces
-  - Point
-  - Reference
 browser-compat: api.DOMPoint.DOMPoint
 ---
 

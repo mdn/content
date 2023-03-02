@@ -2,12 +2,6 @@
 title: HTMLAreaElement.href
 slug: Web/API/HTMLAreaElement/href
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTMLAreaElement
-  - Location
-  - Property
-  - Reference
 browser-compat: api.HTMLAreaElement.href
 ---
 

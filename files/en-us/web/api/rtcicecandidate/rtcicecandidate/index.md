@@ -2,18 +2,6 @@
 title: RTCIceCandidate()
 slug: Web/API/RTCIceCandidate/RTCIceCandidate
 page-type: web-api-constructor
-tags:
-  - API
-  - Audio
-  - Candidate
-  - Constructor
-  - ICE
-  - Media
-  - RTCIceCandidate
-  - Video
-  - WebRTC
-  - WebRTC API
-  - rtc
 browser-compat: api.RTCIceCandidate.RTCIceCandidate
 ---
 

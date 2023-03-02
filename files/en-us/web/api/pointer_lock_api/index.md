@@ -2,13 +2,6 @@
 title: Pointer Lock API
 slug: Web/API/Pointer_Lock_API
 page-type: web-api-overview
-tags:
-  - API
-  - Advanced
-  - Games
-  - Reference
-  - mouse lock
-  - pointer lock
 browser-compat: api.Element.requestPointerLock
 ---
 
@@ -52,7 +45,7 @@ To disable OS-level mouse acceleration and access raw mouse input, you can set t
 ```js
 canvas.addEventListener("click", async () => {
   await canvas.requestPointerLock({
-    unadjustedMovement: true
+    unadjustedMovement: true,
   });
 });
 ```
@@ -99,9 +92,9 @@ Here is an example of using `pointerLockElement`:
 
 ```js
 if (document.pointerLockElement === canvas) {
-    console.log("The pointer lock status is now locked");
+  console.log("The pointer lock status is now locked");
 } else {
-    console.log("The pointer lock status is now unlocked");
+  console.log("The pointer lock status is now unlocked");
 }
 ```
 
@@ -170,7 +163,7 @@ Next we set up an event listener to run the `requestPointerLock()` method on the
 
 ```js
 canvas.addEventListener("click", async () => {
-  if(!document.pointerLockElement) {
+  if (!document.pointerLockElement) {
     await canvas.requestPointerLock({
       unadjustedMovement: true,
     });
@@ -191,10 +184,10 @@ This function checks the `pointerLockElement` property to see if it is our canva
 ```js
 function lockChangeAlert() {
   if (document.pointerLockElement === canvas) {
-    console.log('The pointer lock status is now locked');
+    console.log("The pointer lock status is now locked");
     document.addEventListener("mousemove", updatePosition, false);
   } else {
-    console.log('The pointer lock status is now unlocked');
+    console.log("The pointer lock status is now unlocked");
     document.removeEventListener("mousemove", updatePosition, false);
   }
 }

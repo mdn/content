@@ -2,11 +2,8 @@
 title: Window.launchQueue
 slug: Web/API/Window/launchQueue
 page-type: web-api-instance-property
-tags:
-  - API
-  - Experimental
-  - Property
-  - Reference
+status:
+  - experimental
 browser-compat: api.Window.launchQueue
 ---
 

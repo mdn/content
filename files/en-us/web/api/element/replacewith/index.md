@@ -2,12 +2,6 @@
 title: Element.replaceWith()
 slug: Web/API/Element/replaceWith
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - Method
-  - Element
-  - Reference
 browser-compat: api.Element.replaceWith
 ---
 
@@ -62,7 +56,7 @@ The `replaceWith()` method is not scoped into the `with`
 statement. See {{jsxref("Symbol.unscopables")}} for more information.
 
 ```js
-with(node) {
+with (node) {
   replaceWith("foo");
 }
 // ReferenceError: replaceWith is not defined

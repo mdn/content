@@ -2,22 +2,8 @@
 title: VideoPlaybackQuality.corruptedVideoFrames
 slug: Web/API/VideoPlaybackQuality/corruptedVideoFrames
 page-type: web-api-instance-property
-tags:
-  - API
-  - Corruption
-  - Data Loss
-  - Frames
-  - Media
-  - Media Playback Quality
-  - Media Playback Quality API
-  - Playback
-  - Property
-  - Quality
-  - Reference
-  - Video
-  - VideoPlaybackQuality
-  - corruptedVideoFrames
-  - Deprecated
+status:
+  - deprecated
 browser-compat: api.VideoPlaybackQuality.corruptedVideoFrames
 ---
 

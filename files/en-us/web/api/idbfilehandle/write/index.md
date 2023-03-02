@@ -2,14 +2,9 @@
 title: IDBFileHandle.write()
 slug: Web/API/IDBFileHandle/write
 page-type: web-api-instance-method
-tags:
-  - API
-  - Files
-  - Method
-  - Reference
-  - WebAPI
-  - Non-standard
-  - Deprecated
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.IDBFileHandle.write
 ---
 

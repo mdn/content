@@ -1,12 +1,7 @@
 ---
-title: 'SyntaxError: function statement requires a name'
+title: "SyntaxError: function statement requires a name"
 slug: Web/JavaScript/Reference/Errors/Unnamed_function_statement
 page-type: javascript-error
-tags:
-  - Error
-  - Errors
-  - JavaScript
-  - SyntaxError
 ---
 
 {{jsSidebar("Errors")}}
@@ -41,7 +36,7 @@ This won't work:
 
 ```js example-bad
 function () {
-  return 'Hello world';
+  return "Hello world";
 }
 // SyntaxError: function statement requires a name
 ```
@@ -50,7 +45,7 @@ You can use a [function expression](/en-US/docs/Web/JavaScript/Reference/Operato
 
 ```js example-good
 const greet = function () {
-  return 'Hello world';
+  return "Hello world";
 };
 ```
 
@@ -58,7 +53,7 @@ If your function is intended to be an [IIFE](https://en.wikipedia.org/wiki/Immed
 
 ```js example-good
 (function () {
-
+  // …
 })();
 ```
 
@@ -95,7 +90,7 @@ The following syntax without a name after the `function` keyword is valid then.
 const greeter = {
   german: function () {
     return "Moin";
-  }
+  },
 };
 
 // or
@@ -103,7 +98,7 @@ const greeter = {
 const greeter = {
   german() {
     return "Moin";
-  }
+  },
 };
 ```
 

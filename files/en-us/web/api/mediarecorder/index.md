@@ -2,16 +2,6 @@
 title: MediaRecorder
 slug: Web/API/MediaRecorder
 page-type: web-api-interface
-tags:
-  - API
-  - Audio
-  - Interface
-  - Media
-  - Media Capture
-  - Media Capture and Streams
-  - MediaRecorder
-  - Reference
-  - Video
 browser-compat: api.MediaRecorder
 ---
 

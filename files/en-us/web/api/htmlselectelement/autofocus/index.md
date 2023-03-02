@@ -2,12 +2,6 @@
 title: HTMLSelectElement.autofocus
 slug: Web/API/HTMLSelectElement/autofocus
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTML forms
-  - HTMLSelectElement
-  - Property
-  - Reference
 browser-compat: api.HTMLSelectElement.autofocus
 ---
 
@@ -45,7 +39,7 @@ A boolean value.
 
 ```js
 // Check if the autofocus attribute on the <select>
-const hasAutofocus = document.getElementById('mySelect').autofocus;
+const hasAutofocus = document.getElementById("mySelect").autofocus;
 ```
 
 ## Specifications

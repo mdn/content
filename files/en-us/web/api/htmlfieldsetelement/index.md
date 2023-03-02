@@ -2,11 +2,6 @@
 title: HTMLFieldSetElement
 slug: Web/API/HTMLFieldSetElement
 page-type: web-api-interface
-tags:
-  - API
-  - HTML DOM
-  - Interface
-  - Reference
 browser-compat: api.HTMLFieldSetElement
 ---
 

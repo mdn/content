@@ -2,11 +2,6 @@
 title: Value definition syntax
 slug: Web/CSS/Value_definition_syntax
 page-type: guide
-tags:
-  - CSS
-  - Guide
-  - Reference
-  - Syntax
 spec-urls: https://drafts.csswg.org/css-values/#value-defs
 ---
 
@@ -430,6 +425,6 @@ But not:
     - [Computed values](/en-US/docs/Web/CSS/computed_value)
     - [Used values](/en-US/docs/Web/CSS/used_value)
     - [Actual values](/en-US/docs/Web/CSS/actual_value)
-  - [Value definition syntax](/en-US/docs/Web/CSS/Value_definition_syntax)
+  - **Value definition syntax**
   - [Shorthand properties](/en-US/docs/Web/CSS/Shorthand_properties)
   - [Replaced elements](/en-US/docs/Web/CSS/Replaced_element)

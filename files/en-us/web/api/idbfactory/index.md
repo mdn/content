@@ -2,14 +2,6 @@
 title: IDBFactory
 slug: Web/API/IDBFactory
 page-type: web-api-interface
-tags:
-  - API
-  - HTTP
-  - IndexedDB
-  - Interface
-  - Offline
-  - Reference
-  - Storage
 browser-compat: api.IDBFactory
 ---
 

@@ -2,18 +2,6 @@
 title: <input type="reset">
 slug: Web/HTML/Element/input/reset
 page-type: html-element
-tags:
-  - Element
-  - Form Button
-  - Form input
-  - Forms
-  - HTML
-  - HTML forms
-  - Input
-  - Input Types
-  - Reference
-  - Reset Button
-  - reset
 browser-compat: html.elements.input.type_reset
 ---
 
@@ -145,6 +133,10 @@ We've included simple examples above. There isn't really anything more to say ab
     <tr>
       <td><strong>Methods</strong></td>
       <td>None</td>
+    </tr>
+    <tr>
+      <td><strong>Implicit ARIA Role</strong></td>
+      <td><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/button_role"><code>button</code></a></td>
     </tr>
   </tbody>
 </table>

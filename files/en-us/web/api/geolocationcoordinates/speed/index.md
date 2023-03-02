@@ -2,13 +2,6 @@
 title: GeolocationCoordinates.speed
 slug: Web/API/GeolocationCoordinates/speed
 page-type: web-api-instance-property
-tags:
-  - API
-  - Geolocation API
-  - GeolocationCoordinates
-  - Property
-  - Secure context
-  - speed
 browser-compat: api.GeolocationCoordinates.speed
 ---
 

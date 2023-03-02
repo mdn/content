@@ -2,11 +2,8 @@
 title: NDEFMessage
 slug: Web/API/NDEFMessage
 page-type: web-api-interface
-tags:
-  - NDEF
-  - Reference
-  - Web NFC
-  - Experimental
+status:
+  - experimental
 browser-compat: api.NDEFMessage
 ---
 

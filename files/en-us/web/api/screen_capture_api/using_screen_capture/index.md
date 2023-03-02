@@ -2,20 +2,6 @@
 title: Using the Screen Capture API
 slug: Web/API/Screen_Capture_API/Using_Screen_Capture
 page-type: guide
-tags:
-  - API
-  - Capture
-  - Conference
-  - Guide
-  - Media
-  - Screen Capture
-  - Screen Capture API
-  - Sharing
-  - Video
-  - WebRTC
-  - display
-  - getDisplayMedia
-  - screen
 browser-compat: api.MediaDevices.getDisplayMedia
 ---
 
@@ -114,7 +100,7 @@ const gdmOptions = {
   audio: {
     echoCancellation: true,
     noiseSuppression: true,
-    sampleRate: 44100
+    sampleRate: 44100,
     suppressLocalAudioPlayback: true
   },
   surfaceSwitching: "include",
@@ -347,5 +333,5 @@ If you're performing screen capture within an `<iframe>`, you can request permis
 
 - [Screen Capture API](/en-US/docs/Web/API/Screen_Capture_API)
 - [Media Capture and Streams API](/en-US/docs/Web/API/Media_Capture_and_Streams_API)
-- [Taking still photos with WebRTC](/en-US/docs/Web/API/WebRTC_API/Taking_still_photos)
+- [Taking still photos with WebRTC](/en-US/docs/Web/API/Media_Capture_and_Streams_API/Taking_still_photos)
 - {{domxref("HTMLCanvasElement.captureStream()")}} to obtain a {{domxref("MediaStream")}} with the live contents of a {{HTMLElement("canvas")}}

@@ -2,18 +2,12 @@
 title: Number.MIN_SAFE_INTEGER
 slug: Web/JavaScript/Reference/Global_Objects/Number/MIN_SAFE_INTEGER
 page-type: javascript-static-data-property
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Number
-  - Property
-  - Polyfill
 browser-compat: javascript.builtins.Number.MIN_SAFE_INTEGER
 ---
 
 {{JSRef}}
 
-The **`Number.MIN_SAFE_INTEGER`** constant represents the minimum safe integer in JavaScript, or -(2<sup>53</sup> - 1).
+The **`Number.MIN_SAFE_INTEGER`** static data property represents the minimum safe integer in JavaScript, or -(2<sup>53</sup> - 1).
 
 To represent integers smaller than this, consider using {{jsxref("BigInt")}}.
 

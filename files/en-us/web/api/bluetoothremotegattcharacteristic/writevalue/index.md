@@ -2,15 +2,8 @@
 title: BluetoothRemoteGATTCharacteristic.writeValue()
 slug: Web/API/BluetoothRemoteGATTCharacteristic/writeValue
 page-type: web-api-instance-method
-tags:
-  - API
-  - Bluetooth
-  - BluetoothRemoteGATTCharacteristic
-  - Method
-  - Reference
-  - Web Bluetooth API
-  - writeValue
-  - Deprecated
+status:
+  - deprecated
 browser-compat: api.BluetoothRemoteGATTCharacteristic.writeValue
 ---
 

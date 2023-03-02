@@ -20,7 +20,7 @@ The **`<feColorMatrix>`** SVG filter element changes colors based on a transform
 | G' |     | g1 g2 g3 g4 g5 |   | G |
 | B' |  =  | b1 b2 b3 b4 b5 | * | B |
 | A' |     | a1 a2 a3 a4 a5 |   | A |
-| 1  |     | 0  0  0  0  1 |   | 1 |
+| 1  |     | 0  0  0  0  1  |   | 1 |
 ```
 
 In simplified terms, below is how each color channel in the new pixel is calculated. The last row is ignored because its values are constant.

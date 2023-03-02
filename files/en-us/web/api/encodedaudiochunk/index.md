@@ -2,12 +2,8 @@
 title: EncodedAudioChunk
 slug: Web/API/EncodedAudioChunk
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Reference
-  - EncodedAudioChunk
-  - Experimental
+status:
+  - experimental
 browser-compat: api.EncodedAudioChunk
 ---
 

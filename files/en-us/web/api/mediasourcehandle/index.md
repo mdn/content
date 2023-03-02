@@ -2,14 +2,8 @@
 title: MediaSourceHandle
 slug: Web/API/MediaSourceHandle
 page-type: web-api-interface
-tags:
-  - API
-  - Experimental
-  - Interface
-  - MSE
-  - MediaSource
-  - MediaSource Extensions
-  - Reference
+status:
+  - experimental
 browser-compat: api.MediaSourceHandle
 ---
 
@@ -40,24 +34,24 @@ The {{domxref("MediaSource.handle", "handle")}} property can be accessed inside 
 let mediaSource = new MediaSource();
 let handle = mediaSource.handle;
 // Transfer the handle to the context that created the worker
-postMessage({arg: handle}, [handle]);
+postMessage({ arg: handle }, [handle]);
 
-mediaSource.addEventListener('sourceopen', () => {
+mediaSource.addEventListener("sourceopen", () => {
   // Await sourceopen on MediaSource before creating SourceBuffers
   // and populating them with fetched media — MediaSource won't
   // accept creation of SourceBuffers until it is attached to the
   // HTMLMediaElement and its readyState is "open"
-})
+});
 ```
 
 Over in the main thread, we receive the handle via a {{domxref("Worker.message_event", "message")}} event handler, attach it to a {{htmlelement("video")}} via its {{domxref("HTMLMediaElement.srcObject")}} property, and {{domxref("HTMLMediaElement.play()", "play")}} the video:
 
 ```js
-worker.addEventListener('message', (msg) => {
+worker.addEventListener("message", (msg) => {
   let mediaSourceHandle = msg.data.arg;
   video.srcObject = mediaSourceHandle;
   video.play();
-})
+});
 ```
 
 > **Note:** {{domxref("MediaSourceHandle")}}s cannot be successfully transferred into or via a shared worker or service worker.

@@ -2,12 +2,6 @@
 title: hover
 slug: Web/CSS/@media/hover
 page-type: css-media-feature
-tags:
-  - "@media"
-  - CSS
-  - Media Queries
-  - Reference
-  - media feature
 browser-compat: css.at-rules.media.hover
 ---
 

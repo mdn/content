@@ -2,13 +2,6 @@
 title: SVGCircleElement.cx
 slug: Web/API/SVGCircleElement/cx
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - SVG
-  - SVGCircleElement
-  - cx
 browser-compat: api.SVGCircleElement.cx
 ---
 

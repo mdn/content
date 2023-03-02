@@ -1,12 +1,6 @@
 ---
 title: aria-current
 slug: Web/Accessibility/ARIA/Attributes/aria-current
-tags:
-  - Accessibility
-  - ARIA
-  - ARIA attribute
-  - ARIA property
-  - aria-current
 spec-urls: https://w3c.github.io/aria/#aria-current
 ---
 

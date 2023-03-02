@@ -2,17 +2,12 @@
 title: TypedArray.name
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/name
 page-type: javascript-static-data-property
-tags:
-  - JavaScript
-  - Property
-  - TypedArray
-  - TypedArrays
 browser-compat: javascript.builtins.TypedArray.name
 ---
 
 {{JSRef}}
 
-The **`TypedArray.name`** property represents a string value of the typed array constructor name.
+The **`TypedArray.name`** static data property represents a string value of the typed array constructor name.
 
 {{EmbedInteractiveExample("pages/js/typedarray-name.html","shorter")}}
 

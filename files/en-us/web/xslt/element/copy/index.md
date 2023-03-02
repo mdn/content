@@ -1,11 +1,6 @@
 ---
 title: <xsl:copy>
 slug: Web/XSLT/Element/copy
-tags:
-  - Element
-  - Reference
-  - XSLT
-  - copy
 ---
 
 {{ XsltRef() }}

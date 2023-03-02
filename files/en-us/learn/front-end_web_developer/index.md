@@ -1,15 +1,6 @@
 ---
 title: Front-end web developer
 slug: Learn/Front-end_web_developer
-tags:
-  - Beginner
-  - CSS
-  - Front-end
-  - HTML
-  - JavaScript
-  - Learn
-  - Tools
-  - Web Standards
 ---
 
 {{learnsidebar}}
@@ -41,7 +32,7 @@ If you are not sure if front-end web development is for you, and/or you want a g
 
 We have tried to make learning front-end web development as comfortable as possible, but you will probably still get stuck because you don't understand something, or some code is just not working.
 
-Don't panic. We all get stuck, whether we are beginner or professional web developers. The [Learning and getting help](/en-US/docs/Learn/Learning_and_getting_help) article provides you with a series of tips for looking up information and helping yourself. If you are still stuck, feel free to post a question on our [Discourse forum](https://discourse.mozilla.org/c/mdn/learn/250).
+Don't panic. We all get stuck, whether we are beginner or professional web developers. The [Learning and getting help](/en-US/docs/Learn/Learning_and_getting_help) article provides you with a series of tips for looking up information and helping yourself. If you are still stuck, feel free to post a question on our [Discourse forums](/en-US/docs/MDN/Community/Communication_channels#forums).
 
 Let's get started. Good luck!
 

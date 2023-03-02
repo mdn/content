@@ -2,22 +2,6 @@
 title: URL
 slug: Web/API/URL
 page-type: web-api-interface
-tags:
-  - API
-  - Address
-  - Domain
-  - Interface
-  - Location
-  - Networking
-  - Reference
-  - URI
-  - URL
-  - URL API
-  - Web
-  - hostname
-  - href
-  - origin
-  - Polyfill
 browser-compat: api.URL
 ---
 
@@ -129,6 +113,6 @@ const response = await fetch(new URL('http://www.example.com/démonstration.html
 
 - [Polyfill of `URL` in `core-js`](https://github.com/zloirock/core-js#url-and-urlsearchparams)
 - [URL API](/en-US/docs/Web/API/URL_API)
-- [What is a URL?](/en-US/docs/Learn/Common_questions/What_is_a_URL)
+- [What is a URL?](/en-US/docs/Learn/Common_questions/Web_mechanics/What_is_a_URL)
 - Property to obtain a `URL` object: {{domxref("URL")}}.
 - {{domxref("URLSearchParams")}}.

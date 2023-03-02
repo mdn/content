@@ -2,12 +2,6 @@
 title: CompositionEvent.data
 slug: Web/API/CompositionEvent/data
 page-type: web-api-instance-property
-tags:
-  - API
-  - CompositionEvent
-  - Property
-  - Reference
-  - data
 browser-compat: api.CompositionEvent.data
 ---
 

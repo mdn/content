@@ -2,12 +2,6 @@
 title: MIDIAccess.outputs
 slug: Web/API/MIDIAccess/outputs
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - outputs
-  - MIDIAccess
 browser-compat: api.MIDIAccess.outputs
 ---
 
@@ -24,12 +18,9 @@ A {{domxref("MIDIOutputMap")}} instance.
 The {{domxref("Navigator.requestMIDIAccess()")}} method returns a promise that resolves with a {{domxref("MIDIAccess")}} object. Printing the value of `outputs` to the console returns a {{domxref("MIDIOutputMap")}}.
 
 ```js
-navigator.requestMIDIAccess()
-  .then((access) => {
-
-     console.log(access.outputs);
-
-  });
+navigator.requestMIDIAccess().then((access) => {
+  console.log(access.outputs);
+});
 ```
 
 ## Specifications

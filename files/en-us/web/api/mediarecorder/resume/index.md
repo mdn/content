@@ -2,13 +2,6 @@
 title: MediaRecorder.resume()
 slug: Web/API/MediaRecorder/resume
 page-type: web-api-instance-method
-tags:
-  - API
-  - Media Capture
-  - MediaRecorder
-  - Method
-  - Reference
-  - resume
 browser-compat: api.MediaRecorder.resume
 ---
 

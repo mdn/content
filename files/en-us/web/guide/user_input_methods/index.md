@@ -1,16 +1,6 @@
 ---
 title: User input and controls
 slug: Web/Guide/User_input_methods
-tags:
-  - Screen Orientation
-  - contenteditable
-  - drag and drop
-  - fullscreen
-  - keyboard
-  - mouse
-  - pointer lock
-  - touch
-  - user input
 ---
 
 <section id="Quick_links">

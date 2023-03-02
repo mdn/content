@@ -2,10 +2,8 @@
 title: CSSStyleDeclaration.msGetPropertyEnabled()
 slug: Web/API/CSSStyleDeclaration/msGetPropertyEnabled
 page-type: web-api-instance-method
-tags:
-  - msGetPropertyEnabled
-  - Method
-  - Non-standard
+status:
+  - non-standard
 ---
 
 {{APIRef("CSSOM")}}

@@ -2,13 +2,8 @@
 title: LaunchParams.files
 slug: Web/API/LaunchParams/files
 page-type: web-api-instance-property
-tags:
-  - API
-  - Experimental
-  - Property
-  - Read-only
-  - Reference
-  - files
+status:
+  - experimental
 browser-compat: api.LaunchParams.files
 ---
 
@@ -23,11 +18,11 @@ A read-only array of {{domxref("FileSystemHandle")}} objects.
 ## Examples
 
 ```js
-if ('launchQueue' in window) {
-  window.launchQueue.setConsumer(launchParams => {
+if ("launchQueue" in window) {
+  window.launchQueue.setConsumer((launchParams) => {
     if (launchParams.files) {
       const files = launchParams.files;
-      for(file in files) {
+      for (file in files) {
         // Do stuff with file handles
       }
     }

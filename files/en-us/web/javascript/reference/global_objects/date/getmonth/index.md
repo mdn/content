@@ -2,12 +2,6 @@
 title: Date.prototype.getMonth()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getMonth
 page-type: javascript-instance-method
-tags:
-  - Date
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
 browser-compat: javascript.builtins.Date.getMonth
 ---
 

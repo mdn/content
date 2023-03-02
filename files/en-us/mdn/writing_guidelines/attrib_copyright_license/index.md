@@ -2,9 +2,6 @@
 title: Attribution and copyright licensing
 slug: MDN/Writing_guidelines/Attrib_copyright_license
 page-type: mdn-writing-guide
-tags:
-  - meta
-  - writing-guide
 ---
 
 {{MDNSidebar}}
@@ -41,7 +38,7 @@ If you wish to contribute to MDN Web Docs, you agree that your documentation is 
 
 **Copyright for contributed materials remains with the author unless the author assigns it to someone else.**
 
-If you have any questions or concerns about anything discussed here, please contact the [MDN Web Docs team](https://github.com/mdn/mdn-community/discussions).
+If you have any questions or concerns about anything discussed here, please contact the [MDN Web Docs team](/en-US/docs/MDN/Community/Communication_channels).
 
 ### Logos, trademarks, service marks, and wordmarks
 

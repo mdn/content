@@ -2,18 +2,12 @@
 title: handler.deleteProperty()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/deleteProperty
 page-type: javascript-instance-method
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Proxy
 browser-compat: javascript.builtins.Proxy.handler.deleteProperty
 ---
 
 {{JSRef}}
 
-The **`handler.deleteProperty()`** method is a trap for the
-{{jsxref("Operators/delete", "delete")}} operator.
+The **`handler.deleteProperty()`** method is a trap for the `[[Delete]]` [object internal method](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy#object_internal_methods), which is used by operations such as the {{jsxref("Operators/delete", "delete")}} operator.
 
 {{EmbedInteractiveExample("pages/js/proxyhandler-deleteproperty.html", "taller")}}
 
@@ -42,9 +36,6 @@ The `deleteProperty()` method must return a {{jsxref("Boolean")}} indicating
 whether or not the property has been successfully deleted.
 
 ## Description
-
-The **`handler.deleteProperty()`** method is a trap for the
-{{jsxref("Operators/delete", "delete")}} operator.
 
 ### Interceptions
 
@@ -82,7 +73,7 @@ const p = new Proxy(
       console.log(`property removed: ${prop}`);
       return true;
     },
-  }
+  },
 );
 
 p.a = 10;

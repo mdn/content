@@ -1,21 +1,6 @@
 ---
 title: Working with JSON
 slug: Learn/JavaScript/Objects/JSON
-tags:
-  - Article
-  - Beginner
-  - CodingScripting
-  - Guide
-  - JSON
-  - JSON API
-  - JSON Arrays
-  - JSON parsing
-  - JSON structure
-  - JavaScript
-  - Learn
-  - Objects
-  - Tutorial
-  - "l10n:priority"
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Objects/Classes_in_JavaScript", "Learn/JavaScript/Objects/Object_building_practice", "Learn/JavaScript/Objects")}}
@@ -240,7 +225,7 @@ function populateHeader(obj) {
 }
 ```
 
-Here we first create an {{HTMLElement("h1")}} element with [`createElement()`](/en-US/docs/Web/API/Document/createElement), set its [`textContent`](/en-US/docs/Web/API/Node/textContent) to equal the `squadName` property of the object, then append it to the header using [`appendChild()`](/en-US/docs/Web/API/Node/appendChild). We then do a very similar operation with a paragraph: create it, set its text content and append it to the header. The only difference is that its text is set to a [template literal](/en-US/docs/Web/JavaScript/Reference/Template_literals) containing both the `homeTown` and `formed` properties of the object.
+Here we first create an {{HTMLElement("Heading_Elements", "h1")}} element with [`createElement()`](/en-US/docs/Web/API/Document/createElement), set its [`textContent`](/en-US/docs/Web/API/Node/textContent) to equal the `squadName` property of the object, then append it to the header using [`appendChild()`](/en-US/docs/Web/API/Node/appendChild). We then do a very similar operation with a paragraph: create it, set its text content and append it to the header. The only difference is that its text is set to a [template literal](/en-US/docs/Web/JavaScript/Reference/Template_literals) containing both the `homeTown` and `formed` properties of the object.
 
 ### Creating the hero information cards
 
@@ -366,13 +351,3 @@ In this article, we've given you a simple guide to using JSON in your programs, 
 - [Official JSON web site with link to ECMA standard](https://json.org)
 
 {{PreviousMenuNext("Learn/JavaScript/Objects/Classes_in_JavaScript", "Learn/JavaScript/Objects/Object_building_practice", "Learn/JavaScript/Objects")}}
-
-## In this module
-
-- [Object basics](/en-US/docs/Learn/JavaScript/Objects/Basics)
-- [Object prototypes](/en-US/docs/Learn/JavaScript/Objects/Object_prototypes)
-- [Object-oriented programming concepts](/en-US/docs/Learn/JavaScript/Objects/Object-oriented_programming)
-- [Classes in JavaScript](/en-US/docs/Learn/JavaScript/Objects/Classes_in_JavaScript)
-- **Working with JSON data**
-- [Object building practice](/en-US/docs/Learn/JavaScript/Objects/Object_building_practice)
-- [Adding features to our bouncing balls demo](/en-US/docs/Learn/JavaScript/Objects/Adding_bouncing_balls_features)

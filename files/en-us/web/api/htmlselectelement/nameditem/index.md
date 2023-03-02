@@ -2,12 +2,6 @@
 title: HTMLSelectElement.namedItem()
 slug: Web/API/HTMLSelectElement/namedItem
 page-type: web-api-instance-method
-tags:
-  - API
-  - HTML DOM
-  - HTMLSelectElement
-  - Method
-  - Reference
 browser-compat: api.HTMLSelectElement.namedItem
 ---
 
@@ -50,16 +44,16 @@ namedItem(str)
 ### JavaScript
 
 ```js
-let selectElt = document.getElementById('myFormControl');
-elem1 = selectElt.namedItem('o1'); // Returns the HTMLOptionElement representing #o1
+let selectElt = document.getElementById("myFormControl");
+elem1 = selectElt.namedItem("o1"); // Returns the HTMLOptionElement representing #o1
 ```
 
 But, you cannot write:
 
 ```js
-let selectElt = document.getElementById('myFormControl');
+let selectElt = document.getElementById("myFormControl");
 elem1 = selectElt.o1; // Returns undefined
-elem1 = selectElt['o1']; // Returns undefined
+elem1 = selectElt["o1"]; // Returns undefined
 ```
 
 ## Specifications

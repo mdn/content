@@ -2,9 +2,6 @@
 title: What we write
 slug: MDN/Writing_guidelines/What_we_write
 page-type: mdn-writing-guide
-tags:
-  - meta
-  - writing-guide
 ---
 
 {{MDNSidebar}}

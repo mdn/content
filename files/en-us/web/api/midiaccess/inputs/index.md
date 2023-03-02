@@ -2,12 +2,6 @@
 title: MIDIAccess.inputs
 slug: Web/API/MIDIAccess/inputs
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - inputs
-  - MIDIAccess
 browser-compat: api.MIDIAccess.inputs
 ---
 
@@ -24,12 +18,9 @@ A {{domxref("MIDIInputMap")}} instance.
 The {{domxref("Navigator.requestMIDIAccess()")}} method returns a promise that resolves with a {{domxref("MIDIAccess")}} object. Printing the value of `inputs` to the console returns a {{domxref("MIDIInputMap")}}.
 
 ```js
-navigator.requestMIDIAccess()
-  .then((access) => {
-
-     console.log(access.inputs);
-
-  });
+navigator.requestMIDIAccess().then((access) => {
+  console.log(access.inputs);
+});
 ```
 
 ## Specifications

@@ -2,12 +2,6 @@
 title: MIDIOutput.clear()
 slug: Web/API/MIDIOutput/clear
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - clear
-  - MIDIOutput
 browser-compat: api.MIDIOutput.clear
 ---
 

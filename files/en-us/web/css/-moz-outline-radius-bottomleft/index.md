@@ -2,15 +2,9 @@
 title: "-moz-outline-radius-bottomleft"
 slug: Web/CSS/-moz-outline-radius-bottomleft
 page-type: css-property
-tags:
-  - CSS
-  - CSS Property
-  - NeedsCompatTable
-  - NeedsContent
-  - Non-standard
-  - Reference
-  - recipe:css-property
-  - Deprecated
+status:
+  - deprecated
+  - non-standard
 browser-compat: css.properties.-moz-outline-radius-bottomleft
 ---
 

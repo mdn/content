@@ -2,12 +2,6 @@
 title: '<ol>: The Ordered List element'
 slug: Web/HTML/Element/ol
 page-type: html-element
-tags:
-  - Element
-  - HTML
-  - HTML grouping content
-  - HTML:Flow content
-  - Reference
 browser-compat: html.elements.ol
 ---
 
@@ -21,11 +15,11 @@ The **`<ol>`** [HTML](/en-US/docs/Web/HTML) element represents an ordered list o
 
 This element also accepts the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 
-- {{HTMLAttrDef("reversed")}}
+- `reversed`
   - : This Boolean attribute specifies that the list's items are in reverse order. Items will be numbered from high to low.
-- {{HTMLAttrDef("start")}}
+- `start`
   - : An integer to start counting from for the list items. Always an Arabic numeral (1, 2, 3, etc.), even when the numbering `type` is letters or Roman numerals. For example, to start numbering elements from the letter "d" or the Roman numeral "iv," use `start="4"`.
-- {{HTMLAttrDef("type")}}
+- `type`
 
   - : Sets the numbering type:
 
@@ -152,16 +146,16 @@ The above HTML will output:
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories"
+        <a href="/en-US/docs/Web/HTML/Content_categories"
           >Content categories</a
         >
       </th>
       <td>
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
           >Flow content</a
         >, and if the <code>&#x3C;ol></code> element's children include at least
         one {{HTMLElement("li")}} element,
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#palpable_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#palpable_content"
           >palpable content</a
         >.
       </td>
@@ -182,7 +176,7 @@ The above HTML will output:
       <th scope="row">Permitted parents</th>
       <td>
         Any element that accepts
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
           >flow content</a
         >.
       </td>

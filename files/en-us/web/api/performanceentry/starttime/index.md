@@ -2,11 +2,6 @@
 title: PerformanceEntry.startTime
 slug: Web/API/PerformanceEntry/startTime
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - Web Performance
 browser-compat: api.PerformanceEntry.startTime
 ---
 
@@ -56,18 +51,18 @@ Note: The {{domxref("performance.mark()")}} method allows you to set your own `s
 performance.mark("my-mark");
 performance.mark("my-other-mark", { startTime: 12.5 });
 
-loginButton.addEventListener('click', (clickEvent) => {
+loginButton.addEventListener("click", (clickEvent) => {
   performance.measure("login-click", { start: clickEvent.timeStamp });
 });
 
 function perfObserver(list, observer) {
-  list.getEntries().forEach((entry) =>  {
+  list.getEntries().forEach((entry) => {
     if (entry.entryType === "mark") {
       console.log(`${entry.name}'s startTime: ${entry.startTime}`);
-    };
+    }
     if (entry.entryType === "measure") {
       console.log(`${entry.name}'s duration: ${entry.duration}`);
-    };
+    }
   });
 }
 const observer = new PerformanceObserver(perfObserver);

@@ -1,6 +1,7 @@
 ---
 title: browserSettings.openBookmarksInNewTabs
 slug: Mozilla/Add-ons/WebExtensions/API/browserSettings/openBookmarksInNewTabs
+page-type: webextension-api-property
 tags:
   - API
   - Add-ons

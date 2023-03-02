@@ -2,15 +2,8 @@
 title: XRCompositionLayer.destroy()
 slug: Web/API/XRCompositionLayer/destroy
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - AR
-  - VR
-  - XR
-  - WebXR
-  - Experimental
+status:
+  - experimental
 browser-compat: api.XRCompositionLayer.destroy
 ---
 

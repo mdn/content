@@ -2,12 +2,8 @@
 title: LaunchQueue.setConsumer()
 slug: Web/API/LaunchQueue/setConsumer
 page-type: web-api-instance-method
-tags:
-  - API
-  - Experimental
-  - Method
-  - Reference
-  - setConsumer
+status:
+  - experimental
 browser-compat: api.LaunchQueue.setConsumer
 ---
 
@@ -33,13 +29,13 @@ setConsumer(callback)
 ## Examples
 
 ```js
-if ('launchQueue' in window) {
-  window.launchQueue.setConsumer(launchParams => {
+if ("launchQueue" in window) {
+  window.launchQueue.setConsumer((launchParams) => {
     if (launchParams.targetURL) {
       const params = new URL(launchParams.targetURL).searchParams;
 
       // Assuming a music player app that gets a track passed to it to be played
-      const track = params.get('track');
+      const track = params.get("track");
       if (track) {
         audio.src = track;
         title.textContent = new URL(track).pathname.substr(1);

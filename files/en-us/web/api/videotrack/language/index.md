@@ -2,18 +2,6 @@
 title: VideoTrack.language
 slug: Web/API/VideoTrack/language
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTML DOM
-  - Language
-  - Localization
-  - Media
-  - Property
-  - Read-only
-  - Reference
-  - Video
-  - VideoTrack
-  - track
 browser-compat: api.VideoTrack.language
 ---
 

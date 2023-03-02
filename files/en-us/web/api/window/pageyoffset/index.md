@@ -2,17 +2,6 @@
 title: Window.pageYOffset
 slug: Web/API/Window/pageYOffset
 page-type: web-api-instance-property
-tags:
-  - API
-  - Alias
-  - CSSOM View
-  - CSSOM View API
-  - Property
-  - Scrolling Documents
-  - Scrolling Windows
-  - Vertical
-  - Window
-  - scrolling
 browser-compat: api.Window.pageYOffset
 ---
 

@@ -2,17 +2,6 @@
 title: Equality comparisons and sameness
 slug: Web/JavaScript/Equality_comparisons_and_sameness
 page-type: guide
-tags:
-  - Comparison
-  - Equality
-  - Guide
-  - Intermediate
-  - JS
-  - JavaScript
-  - NaN
-  - SameValue
-  - SameValueZero
-  - Sameness
 ---
 
 {{jsSidebar("Intermediate")}}
@@ -66,7 +55,8 @@ Besides `===`, strict equality is also used by array index-finding methods inclu
 ```js
 console.log([NaN].indexOf(NaN)); // -1
 switch (NaN) {
-  case NaN: console.log("Surprise"); // Nothing is logged
+  case NaN:
+    console.log("Surprise"); // Nothing is logged
 }
 ```
 

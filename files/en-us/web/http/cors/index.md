@@ -74,7 +74,7 @@ A _simple request_ is one that **meets all the following conditions**:
   - {{HTTPHeader("Content-Type")}} (please note the additional requirements below)
   - {{HTTPHeader("Range")}} (only with a [simple range header value](https://fetch.spec.whatwg.org/#simple-range-header-value); e.g., `bytes=256-` or `bytes=127-255`)
 
-> **Note:** Firefox has not implemented `Range` as a safelisted request-header yet. See [bug 1733981](https://bugzilla.mozilla.org/show_bug.cgi?id=1733981).
+> **Note:** Firefox has not implemented `Range` as a safelisted request-header yet. See [bug 1733981](https://bugzil.la/1733981).
 
 - The only type/subtype combinations allowed for the {{Glossary("MIME type","media type")}} specified in the {{HTTPHeader("Content-Type")}} header are:
 
@@ -87,9 +87,9 @@ A _simple request_ is one that **meets all the following conditions**:
 
 > **Note:** WebKit Nightly and Safari Technology Preview place additional restrictions on the values allowed in the {{HTTPHeader("Accept")}}, {{HTTPHeader("Accept-Language")}}, and {{HTTPHeader("Content-Language")}} headers. If any of those headers have "nonstandard" values, WebKit/Safari does not consider the request to be a "simple request". What values WebKit/Safari consider "nonstandard" is not documented, except in the following WebKit bugs:
 >
-> - [Require preflight for non-standard CORS-safelisted request headers Accept, Accept-Language, and Content-Language](https://bugs.webkit.org/show_bug.cgi?id=165178)
-> - [Allow commas in Accept, Accept-Language, and Content-Language request headers for simple CORS](https://bugs.webkit.org/show_bug.cgi?id=165566)
-> - [Switch to a blacklist model for restricted Accept headers in simple CORS requests](https://bugs.webkit.org/show_bug.cgi?id=166363)
+> - [Require preflight for non-standard CORS-safelisted request headers Accept, Accept-Language, and Content-Language](https://webkit.org/b/165178)
+> - [Allow commas in Accept, Accept-Language, and Content-Language request headers for simple CORS](https://webkit.org/b/165566)
+> - [Switch to a blacklist model for restricted Accept headers in simple CORS requests](https://webkit.org/b/166363)
 >
 > No other browsers implement these extra restrictions because they're not part of the spec.
 
@@ -344,7 +344,7 @@ CORS-preflight requests must never include credentials. The _response_ to a pref
 
 > **Note:** Some enterprise authentication services require that TLS client certificates be sent in preflight requests, in contravention of the [Fetch](https://fetch.spec.whatwg.org/#cors-protocol-and-credentials) specification.
 >
-> Firefox 87 allows this non-compliant behavior to be enabled by setting the preference: `network.cors_preflight.allow_client_cert` to `true` ({{bug(1511151)}}). Chromium-based browsers currently always send TLS client certificates in CORS preflight requests ([Chrome bug 775438](https://bugs.chromium.org/p/chromium/issues/detail?id=775438)).
+> Firefox 87 allows this non-compliant behavior to be enabled by setting the preference: `network.cors_preflight.allow_client_cert` to `true` ([Firefox bug 1511151](https://bugzil.la/1511151)). Chromium-based browsers currently always send TLS client certificates in CORS preflight requests ([Chrome bug 775438](https://crbug.com/775438)).
 
 #### Credentialed requests and wildcards
 

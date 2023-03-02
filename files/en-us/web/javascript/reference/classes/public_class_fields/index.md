@@ -2,10 +2,6 @@
 title: Public class fields
 slug: Web/JavaScript/Reference/Classes/Public_class_fields
 page-type: javascript-language-feature
-tags:
-  - Classes
-  - JavaScript
-  - Language feature
 browser-compat: javascript.classes.public_class_fields
 ---
 
@@ -23,6 +19,11 @@ class ClassWithField {
   static staticFieldWithInitializer = "static field";
 }
 ```
+
+There are some additional syntax restrictions:
+
+- The name of a static property (field or method) cannot be `prototype`.
+- The name of a class field (static or instance) cannot be `constructor`.
 
 ## Description
 
@@ -74,6 +75,18 @@ const sub = new Derived();
 console.log(base.anotherBaseField); // "base field"
 
 console.log(sub.subField); // "base method output"
+```
+
+The field initializer expression is evaluated each time a new instance is created. (Because the `this` value is different for each instance, the initializer expression can access instance-specific properties.)
+
+```js
+class C {
+  obj = {};
+}
+
+const instance1 = new C();
+const instance2 = new C();
+console.log(instance1.obj === instance2.obj); // false
 ```
 
 Because instance fields of a class are added before the respective constructor runs, you can access the fields' values within the constructor. However, because instance fields of a derived class are defined after `super()` returns, the base class's constructor does not have access to the derived class's fields.

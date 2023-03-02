@@ -2,11 +2,6 @@
 title: PerformanceResourceTiming.toJSON()
 slug: Web/API/PerformanceResourceTiming/toJSON
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - Web Performance
 browser-compat: api.PerformanceResourceTiming.toJSON
 ---
 

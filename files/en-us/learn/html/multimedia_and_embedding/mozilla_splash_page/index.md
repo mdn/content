@@ -1,24 +1,6 @@
 ---
 title: Mozilla splash page
 slug: Learn/HTML/Multimedia_and_embedding/Mozilla_splash_page
-tags:
-  - Assessment
-  - Beginner
-  - CodingScripting
-  - Embedding
-  - HTML
-  - Images
-  - JPEG
-  - Multimedia
-  - PNG
-  - Video
-  - iframe
-  - img
-  - picture
-  - responsive
-  - sizes
-  - src
-  - srcset
 ---
 
 {{LearnSidebar}}{{PreviousMenu("Learn/HTML/Multimedia_and_embedding/Responsive_images", "Learn/HTML/Multimedia_and_embedding")}}
@@ -90,7 +72,7 @@ In each case (except one — which one is inherently responsive?) we want the br
 
 Make sure you match the correct images with the correct links!
 
-> **Note:** To properly test the `srcset`/`sizes` examples, you'll need to upload your site to a server (using [GitHub pages](/en-US/docs/Learn/Common_questions/Using_Github_pages) is an easy and free solution), then from there you can test whether they are working properly using browser developer tools such as the Firefox [Network Monitor](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html).
+> **Note:** To properly test the `srcset`/`sizes` examples, you'll need to upload your site to a server (using [GitHub pages](/en-US/docs/Learn/Common_questions/Tools_and_setup/Using_Github_pages) is an easy and free solution), then from there you can test whether they are working properly using browser developer tools such as the Firefox [Network Monitor](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html).
 
 ### An art directed red panda
 
@@ -123,12 +105,3 @@ If you would like your work assessed or are stuck and want to ask for help:
    - A link to the actual task or assessment page, so we can find the question you want help with.
 
 {{PreviousMenu("Learn/HTML/Multimedia_and_embedding/Responsive_images", "Learn/HTML/Multimedia_and_embedding")}}
-
-## In this module
-
-- [Images in HTML](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML)
-- [Video and audio content](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)
-- [From \<object> to \<iframe> — other embedding technologies](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies)
-- [Adding vector graphics to the Web](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web)
-- [Responsive images](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)
-- [Mozilla splash page](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Mozilla_splash_page)

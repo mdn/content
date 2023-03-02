@@ -2,15 +2,8 @@
 title: XRView.requestViewportScale()
 slug: Web/API/XRView/requestViewportScale
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - AR
-  - VR
-  - XR
-  - WebXR
-  - Experimental
+status:
+  - experimental
 browser-compat: api.XRView.requestViewportScale
 ---
 

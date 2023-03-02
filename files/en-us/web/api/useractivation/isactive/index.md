@@ -2,11 +2,8 @@
 title: UserActivation.isActive
 slug: Web/API/UserActivation/isActive
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - Experimental
+status:
+  - experimental
 browser-compat: api.UserActivation.isActive
 ---
 
@@ -22,7 +19,7 @@ A boolean.
 
 ### Checking if a user gesture was recently performed
 
-Use the `isActive` property to check wether the user is currently interacting with the page.
+Use the `isActive` property to check whether the user is currently interacting with the page.
 
 ```js
 if (navigator.userActivation.isActive) {

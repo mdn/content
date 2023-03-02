@@ -22,8 +22,10 @@ The `nth-col()` pseudo-class is specified with a single argument, which represen
 
 See {{Cssxref(":nth-child")}} for a more detailed explanation of its syntax.
 
-```
-:nth-col(An+B)
+```css
+:nth-col(An + B) {
+  /* ... */
+}
 ```
 
 ## Examples

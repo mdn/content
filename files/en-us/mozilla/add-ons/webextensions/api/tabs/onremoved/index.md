@@ -1,6 +1,7 @@
 ---
 title: tabs.onRemoved
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/onRemoved
+page-type: webextension-api-event
 tags:
   - API
   - Add-ons

@@ -2,14 +2,6 @@
 title: ":read-write"
 slug: Web/CSS/:read-write
 page-type: css-pseudo-class
-tags:
-  - CSS
-  - Layout
-  - Pseudo-class
-  - Reference
-  - Selector
-  - Web
-  - read-write
 browser-compat: css.selectors.read-write
 ---
 
@@ -21,8 +13,10 @@ The **`:read-write`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/
 
 ## Syntax
 
-```
-:read-write
+```css
+:read-write {
+  /* ... */
+}
 ```
 
 ## Examples

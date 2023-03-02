@@ -2,14 +2,8 @@
 title: SyncEvent()
 slug: Web/API/SyncEvent/SyncEvent
 page-type: web-api-constructor
-tags:
-  - API
-  - Background Sync
-  - Constructor
-  - Experimental
-  - Reference
-  - ServiceWorker
-  - SyncEvent
+status:
+  - experimental
 browser-compat: api.SyncEvent.SyncEvent
 ---
 

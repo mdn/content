@@ -2,15 +2,6 @@
 title: column-count
 slug: Web/CSS/column-count
 page-type: css-property
-tags:
-  - CSS
-  - CSS Multi-column Layout
-  - CSS Property
-  - Layout
-  - Reference
-  - column-count
-  - columns
-  - recipe:css-property
 browser-compat: css.properties.column-count
 ---
 

@@ -2,16 +2,8 @@
 title: CSSSkew
 slug: Web/API/CSSSkew
 page-type: web-api-interface
-tags:
-  - API
-  - CSS
-  - CSS Typed Object Model API
-  - CSSSkew
-  - CSSTransformComponent
-  - CSSTransformValue
-  - Experimental
-  - Houdini
-  - Interface
+status:
+  - experimental
 browser-compat: api.CSSSkew
 ---
 

@@ -2,13 +2,6 @@
 title: HTMLFormElement.enctype
 slug: Web/API/HTMLFormElement/enctype
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTML DOM
-  - HTMLFormElement
-  - NeedsSpecTable
-  - Property
-  - Reference
 browser-compat: api.HTMLFormElement.enctype
 ---
 
@@ -32,7 +25,7 @@ A string.
 ## Examples
 
 ```js
-form.enctype = 'application/x-www-form-urlencoded';
+form.enctype = "application/x-www-form-urlencoded";
 ```
 
 ## Specifications

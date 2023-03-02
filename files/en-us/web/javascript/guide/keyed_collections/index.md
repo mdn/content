@@ -2,13 +2,6 @@
 title: Keyed collections
 slug: Web/JavaScript/Guide/Keyed_collections
 page-type: guide
-tags:
-  - Collections
-  - Guide
-  - JavaScript
-  - Map
-  - "l10n:priority"
-  - set
 ---
 
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Indexed_Collections", "Web/JavaScript/Guide/Working_with_Objects")}}
@@ -25,15 +18,15 @@ The following code shows some basic operations with a `Map`. See also the {{jsxr
 
 ```js
 const sayings = new Map();
-sayings.set('dog', 'woof');
-sayings.set('cat', 'meow');
-sayings.set('elephant', 'toot');
+sayings.set("dog", "woof");
+sayings.set("cat", "meow");
+sayings.set("elephant", "toot");
 sayings.size; // 3
-sayings.get('dog'); // woof
-sayings.get('fox'); // undefined
-sayings.has('bird'); // false
-sayings.delete('dog');
-sayings.has('dog'); // false
+sayings.get("dog"); // woof
+sayings.get("fox"); // undefined
+sayings.has("bird"); // false
+sayings.delete("dog");
+sayings.has("dog"); // false
 
 for (const [key, value] of sayings) {
   console.log(`${key} goes ${value}`);
@@ -100,11 +93,11 @@ The following code shows some basic operations with a `Set`. See also the {{jsxr
 ```js
 const mySet = new Set();
 mySet.add(1);
-mySet.add('some text');
-mySet.add('foo');
+mySet.add("some text");
+mySet.add("foo");
 
 mySet.has(1); // true
-mySet.delete('foo');
+mySet.delete("foo");
 mySet.size; // 2
 
 for (const item of mySet) {

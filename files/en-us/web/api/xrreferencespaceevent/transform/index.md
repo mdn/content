@@ -2,29 +2,6 @@
 title: XRReferenceSpaceEvent.transform
 slug: Web/API/XRReferenceSpaceEvent/transform
 page-type: web-api-instance-property
-tags:
-  - API
-  - AR
-  - Coordinate System
-  - Coordinates
-  - Event
-  - Mixed
-  - Orientation
-  - Position
-  - Property
-  - Read-only
-  - Reality
-  - Reference
-  - VR
-  - Virtual
-  - WebXR
-  - WebXR API
-  - WebXR Device API
-  - XR
-  - XRReferenceSpace
-  - augmented
-  - reset
-  - transform
 browser-compat: api.XRReferenceSpaceEvent.transform
 ---
 
@@ -52,7 +29,7 @@ system. Alternatively, you can just discard any cached positional information an
 recompute from scratch. The approach you take will depend on your needs.
 
 For details on what causes a `reset` event and how to respond, see the
-{{domxref("XRReferenceSpaceEvent.reset_event", "reset")}} event's documentation.
+{{domxref("XRReferenceSpace.reset_event", "reset")}} event's documentation.
 
 ## Examples
 

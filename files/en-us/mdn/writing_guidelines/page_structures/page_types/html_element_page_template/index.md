@@ -2,9 +2,6 @@
 title: HTML element page template
 slug: MDN/Writing_guidelines/Page_structures/Page_types/HTML_element_page_template
 page-type: mdn-writing-guide
-tags:
-  - meta
-  - writing-guide
 browser-compat: path.to.feature.NameOfTheElement
 ---
 
@@ -23,14 +20,11 @@ browser-compat: path.to.feature.NameOfTheElement
 > ---
 > title: "<NameOfTheElement>: The NameOfTheElement element"
 > slug: Web/HTML/Element/NameOfTheElement
-> tags:
->   - NameOfTheElement
->   - HTML
->   - Element
->   - Reference
->   - Experimental
->   - Deprecated
->   - Non-standard
+> page-type: html-element
+> status:
+>   - experimental
+>   - deprecated
+>   - non-standard
 > browser-compat: html.elements.NameOfTheElement
 > ---
 > ```
@@ -43,16 +37,10 @@ browser-compat: path.to.feature.NameOfTheElement
 >   - : The end of the URL path after `https://developer.mozilla.org/en-US/docs/`).
 >     This will be formatted like `Web/HTML/Element/NameOfTheElement`, where the element name is in _lower case_.
 >     For example, the [`<video>`](/en-US/docs/Web/HTML/Element/video) element has a _slug_ of `Web/HTML/Element/video`.
-> - **tags**
->
->   - : Always include the following tags: **HTML**, **Element**, **Reference**, the _NameOfTheElement_ (e.g. **video**).
->
->     Include the following tags as appropriate:
->
->     - Technology status: **Experimental** (if the technology is [experimental](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#experimental)), **Deprecated** (if it is [deprecated](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#deprecated_and_obsolete)), **Non-standard** (if it isn't on a standards track).
->     - Any other tags that represent possible search terms for the element.
->       For example, the [`<video>`](/en-US/docs/Web/HTML/Element/video) element includes the tags: **HTML Video**, **Multimedia**, **Media Player**, **Movie Playback**, etc.
->
+> - **page-type**
+>   - : Always `html-element`.
+> - **status**
+>   - : Include (appropriate) technology status keys: [**experimental**](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#experimental), [**deprecated**](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#deprecated_and_obsolete), **non-standard** (if not on a standards track).
 > - **browser-compat**
 >
 >   - : Replace the placeholder value `html.elements.NameOfTheElement` with the query string for the element in the [Browser compat data repo](https://github.com/mdn/browser-compat-data).
@@ -94,9 +82,9 @@ Further information — at this point, include a few more paragraphs explaining 
 
 This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 
-- {{htmlattrdef("attribute1")}} {{Deprecated_inline}} {{experimental_inline}}
+- `attribute1` {{Deprecated_inline}} {{experimental_inline}}
   - : Include description here of what the attribute does. Include one term and definition for each attribute. If the attribute is not experimental/deprecated, remove the relevant macro calls.
-- {{htmlattrdef("attribute2")}}
+- `attribute2`
   - : etc.
 
 ## Events
@@ -157,7 +145,7 @@ Optionally, warn of any potential accessibility concerns that exist with using t
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories"
+        <a href="/en-US/docs/Web/HTML/Content_categories"
           >Content categories</a
         >
       </th>
@@ -180,7 +168,7 @@ Optionally, warn of any potential accessibility concerns that exist with using t
       <td>
         What parent elements can the element be a child of? For example "Any
         element that accepts
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
           >flow content</a
         >."
       </td>

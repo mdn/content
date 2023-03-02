@@ -1,16 +1,6 @@
 ---
 title: Crisp pixel art look with image-rendering
 slug: Games/Techniques/Crisp_pixel_art_look
-tags:
-  - 2D
-  - 3D
-  - CSS
-  - Canvas
-  - Games
-  - JavaScript
-  - WebGL
-  - image-rendering
-  - pixel
 ---
 
 {{GamesSidebar}}
