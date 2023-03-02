@@ -17,7 +17,7 @@ The HyperText Transfer Protocol (HTTP) **`301 Moved Permanently`** redirect stat
 
 ## Status
 
-```
+```http
 301 Moved Permanently
 ```
 

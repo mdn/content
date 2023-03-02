@@ -1,11 +1,7 @@
 ---
 title: Function() constructor
 slug: Web/JavaScript/Reference/Global_Objects/Function/Function
-tags:
-  - Constructor
-  - Function
-  - JavaScript
-  - Reference
+page-type: javascript-constructor
 browser-compat: javascript.builtins.Function.Function
 ---
 
@@ -135,10 +131,6 @@ sayHello('world');
 
 ## See also
 
-- {{jsxref("Functions", "Functions and function scope", "", 1)}}
-- {{jsxref("Statements/function", "function")}} statement
-- {{jsxref("Operators/function", "function")}} expression
-- {{jsxref("Statements/function*", "function*")}} statement
-- {{jsxref("Operators/function*", "function*")}} expression
-- {{jsxref("AsyncFunction")}}
-- {{jsxref("GeneratorFunction")}}
+- [`function` declaration](/en-US/docs/Web/JavaScript/Reference/Statements/function)
+- [`function` expression](/en-US/docs/Web/JavaScript/Reference/Operators/function)
+- {{jsxref("Functions", "Functions", "", 1)}}

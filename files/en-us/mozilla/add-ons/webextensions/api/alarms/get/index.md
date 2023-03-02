@@ -1,6 +1,7 @@
 ---
 title: alarms.get()
 slug: Mozilla/Add-ons/WebExtensions/API/alarms/get
+page-type: webextension-api-function
 tags:
   - API
   - Add-ons
@@ -57,5 +58,3 @@ getAlarm.then(gotAlarm);
 {{Compat}}
 
 > **Note:** This API is based on Chromium's [`chrome.alarms`](https://developer.chrome.com/docs/extensions/reference/alarms/) API.
->
-> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.

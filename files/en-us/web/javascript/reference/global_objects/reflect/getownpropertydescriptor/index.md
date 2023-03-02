@@ -1,20 +1,13 @@
 ---
 title: Reflect.getOwnPropertyDescriptor()
 slug: Web/JavaScript/Reference/Global_Objects/Reflect/getOwnPropertyDescriptor
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Reference
-  - Reflect
-  - Polyfill
+page-type: javascript-static-method
 browser-compat: javascript.builtins.Reflect.getOwnPropertyDescriptor
 ---
 
 {{JSRef}}
 
-The static
-**`Reflect.getOwnPropertyDescriptor()`** method is similar to
+The **`Reflect.getOwnPropertyDescriptor()`** static method is similar to
 {{jsxref("Object.getOwnPropertyDescriptor()")}}. It returns a property descriptor of
 the given property if it exists on the object, {{jsxref("undefined")}}
 otherwise.

@@ -1,6 +1,7 @@
 ---
 title: tabs.warmup()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/warmup
+page-type: webextension-api-function
 tags:
   - API
   - Add-ons

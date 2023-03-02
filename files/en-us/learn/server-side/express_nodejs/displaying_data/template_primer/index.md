@@ -1,12 +1,6 @@
 ---
 title: Template primer
 slug: Learn/Server-side/Express_Nodejs/Displaying_data/Template_primer
-tags:
-  - Express
-  - Node
-  - displaying data
-  - part 5
-  - server-side
 ---
 
 A template is a text file defining the _structure_ or layout of an output file, with placeholders used to represent where data will be inserted when the template is rendered (in _Express_, templates are referred to as _views_).
@@ -114,7 +108,7 @@ a(href='http://someurl/') Link text
 | Plain text
 ```
 
-Pug allows you to perform conditional operations using `if`, `else`, `else if` and `unless`—for example:
+Pug allows you to perform conditional operations using `if`, `else`, `else if` and `unless` — for example:
 
 ```pug
 if title

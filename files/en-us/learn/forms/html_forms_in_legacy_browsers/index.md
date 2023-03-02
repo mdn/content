@@ -1,18 +1,11 @@
 ---
 title: HTML forms in legacy browsers
 slug: Learn/Forms/HTML_forms_in_legacy_browsers
-tags:
-  - Example
-  - Forms
-  - Guide
-  - HTML
-  - Intermediate
-  - Web
 ---
 
 {{LearnSidebar}}
 
-All web developers learn very quickly (and sometimes painfully) that the Web is a very rough place for them. Our worst curse is legacy browsers. Okay, let's admit it, when we said "legacy browser" we all have in mind Safari and Internet Explorer, but they are far from the only ones. In the mobile world, when neither the browser nor the OS can be updated such as on older Android phones or iPhones, the stock browsers that don't update are also legacy browsers.
+All web developers learn very quickly (and sometimes painfully) that the Web is a very rough place for them. Our worst curse is legacy browsers. Okay, let's admit it, when we said "legacy browser" we all have in mind "Internet Explorer", but they are far from the only ones. In the mobile world, when neither the browser nor the OS can be updated such as on older Android phones or iPhones, the stock browsers that don't update are also legacy browsers.
 
 Dealing with this wilderness is part of the job. Fortunately, there are a few tricks to know that can help you to solve most of the problems caused by legacy browsers. If a browser doesn't support an HTML {{htmlelement('input')}} type, it doesn't fail: it just uses the default value of `type=text`.
 
@@ -214,6 +207,6 @@ If you read all the articles of this [HTML Forms guide](/en-US/docs/Learn/Forms)
 
 - [Sending forms through JavaScript](/en-US/docs/Learn/Forms/Sending_forms_through_JavaScript)
 - [How to build custom form widgets](/en-US/docs/Learn/Forms/How_to_build_custom_form_controls)
-- [HTML forms in legacy browsers](/en-US/docs/Learn/Forms/HTML_forms_in_legacy_browsers)
+- **HTML forms in legacy browsers**
 - [Advanced styling for HTML forms](/en-US/docs/Learn/Forms/Advanced_form_styling)
 - [Property compatibility table for form widgets](/en-US/docs/Learn/Forms/Property_compatibility_table_for_form_controls)

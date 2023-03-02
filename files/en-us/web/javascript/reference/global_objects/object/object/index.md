@@ -1,11 +1,7 @@
 ---
 title: Object() constructor
 slug: Web/JavaScript/Reference/Global_Objects/Object/Object
-tags:
-  - Constructor
-  - JavaScript
-  - Object
-  - Reference
+page-type: javascript-constructor
 browser-compat: javascript.builtins.Object.Object
 ---
 

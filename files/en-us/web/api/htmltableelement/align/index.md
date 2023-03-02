@@ -2,15 +2,8 @@
 title: HTMLTableElement.align
 slug: Web/API/HTMLTableElement/align
 page-type: web-api-instance-property
-tags:
-  - API
-  - Deprecated
-  - HTML DOM
-  - HTMLTableElement
-  - NeedsMarkupWork
-  - NeedsSpecTable
-  - Property
-  - Reference
+status:
+  - deprecated
 browser-compat: api.HTMLTableElement.align
 ---
 
@@ -31,8 +24,8 @@ One of the following string values:
 
 ```js
 // Set the alignment of a table
-const t = document.getElementById('TableA');
-t.align = 'center';
+const t = document.getElementById("TableA");
+t.align = "center";
 ```
 
 ## Specifications

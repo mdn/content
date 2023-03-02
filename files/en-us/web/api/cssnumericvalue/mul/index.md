@@ -2,15 +2,8 @@
 title: CSSNumericValue.mul()
 slug: Web/API/CSSNumericValue/mul
 page-type: web-api-instance-method
-tags:
-  - API
-  - CSS Typed Object Model API
-  - CSSNumericValue
-  - Experimental
-  - Houdini
-  - Method
-  - Reference
-  - mul()
+status:
+  - experimental
 browser-compat: api.CSSNumericValue.mul
 ---
 
@@ -43,7 +36,10 @@ A {{domxref('CSSMathProduct')}}
 ## Examples
 
 ```js
-let mathSum = CSS.px("23").mul(CSS.percent("4")).mul(CSS.cm("3")).mul(CSS.in("9"));
+let mathSum = CSS.px("23")
+  .mul(CSS.percent("4"))
+  .mul(CSS.cm("3"))
+  .mul(CSS.in("9"));
 // Prints "calc(23px * 4% * 3cm * 9in)"
 console.log(mathSum.toString());
 ```

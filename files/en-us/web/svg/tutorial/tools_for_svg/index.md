@@ -1,6 +1,7 @@
 ---
 title: Tools for SVG
 slug: Web/SVG/Tutorial/Tools_for_SVG
+page-type: guide
 tags:
   - Intermediate
   - NeedsUpdate

@@ -2,16 +2,10 @@
 title: FileSystemDirectoryHandle.resolve()
 slug: Web/API/FileSystemDirectoryHandle/resolve
 page-type: web-api-instance-method
-tags:
-  - Directory
-  - File
-  - File System Access API
-  - FileSystemDirectoryHandle
-  - Method
 browser-compat: api.FileSystemDirectoryHandle.resolve
 ---
 
-{{securecontext_header}}{{DefaultAPISidebar("File System Access API")}}
+{{securecontext_header}}{{APIRef("File System Access API")}}
 
 The **`resolve()`** method of the
 {{domxref("FileSystemDirectoryHandle")}} interface returns an {{jsxref('Array')}} of
@@ -46,7 +40,6 @@ chosen file, relative to a specified directory handle.
 
 ```js
 async function returnPathDirectories(directoryHandle) {
-
   // Get a file handle by showing a file picker:
   const handle = await self.showOpenFilePicker();
   if (!handle) {

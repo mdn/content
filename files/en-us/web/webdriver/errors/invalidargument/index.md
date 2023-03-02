@@ -31,7 +31,7 @@ except exceptions.InvalidArgumentException as e:
 
 Output:
 
-```
+```plain
 InvalidArgumentException: Expected -100 to be >= 0
 ```
 

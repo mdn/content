@@ -1,6 +1,7 @@
 ---
 title: Specification deviations
 slug: Web/SVG/Specification_Deviations
+page-type: guide
 tags:
   - SVG
 ---

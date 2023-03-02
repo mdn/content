@@ -1,21 +1,13 @@
 ---
 title: yield*
 slug: Web/JavaScript/Reference/Operators/yield*
-tags:
-  - ECMAScript 2015
-  - Generators
-  - Iterable
-  - Iterator
-  - JavaScript
-  - Language feature
-  - Operator
-  - Reference
+page-type: javascript-operator
 browser-compat: javascript.operators.yield_star
 ---
 
 {{jsSidebar("Operators")}}
 
-The **`yield*` expression** is used to
+The **`yield*`** operator is used to
 delegate to another {{jsxref("Statements/function*", "generator")}} or iterable
 object.
 

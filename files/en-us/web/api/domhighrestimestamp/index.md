@@ -1,17 +1,6 @@
 ---
 title: DOMHighResTimeStamp
 slug: Web/API/DOMHighResTimeStamp
-tags:
-  - API
-  - DOMHighResTimeStamp
-  - High Resolution Time
-  - Milliseconds
-  - Performance
-  - Reference
-  - Time
-  - Type
-  - speed
-  - timeStamp
 browser-compat: api.DOMHighResTimestamp
 ---
 
@@ -21,17 +10,17 @@ The **`DOMHighResTimeStamp`** type is a `double` and is used to store a time val
 
 This type can be used to describe a discrete point in time or a time interval (the difference in time between two discrete points in time).
 
-The time, given in milliseconds, should be accurate to 5 µs (microseconds), with the fractional part of the number indicating fractions of a millisecond. However, if the browser is unable to provide a time value accurate to 5 µs (due, for example, to hardware or software constraints), the browser can represent the value as a time in milliseconds accurate to a millisecond. Also note the section below on reduced time precision controlled by browser preferences to avoid timing attacks and fingerprinting.
+The time, given in milliseconds, should be accurate to 5 µs (microseconds), with the fractional part of the number indicating fractions of a millisecond. However, if the browser is unable to provide a time value accurate to 5 µs (due, for example, to hardware or software constraints), the browser can represent the value as a time in milliseconds accurate to a millisecond. Also note the section below on reduced time precision controlled by browser preferences to avoid timing attacks and [fingerprinting](/en-US/docs/Glossary/Fingerprinting).
 
 Further, if the device or operating system the user agent is running on doesn't have a clock accurate to the microsecond level, they may only be accurate to the millisecond.
 
 ## Reduced time precision
 
-To offer protection against timing attacks and fingerprinting, the precision of time stamps might get rounded depending on browser settings. In Firefox, the `privacy.reduceTimerPrecision` preference is enabled by default and defaults to 20 µs in Firefox 59; in 60 it will be 2ms.
+To offer protection against timing attacks and fingerprinting, the precision of timestamps might get rounded depending on browser settings. In Firefox, the `privacy.reduceTimerPrecision` preference is enabled by default and defaults to 20 µs in Firefox 59; in 60 it will be 2ms.
 
 ```js
 // reduced time precision (2ms) in Firefox 60
-event.timeStamp
+event.timeStamp;
 // 1519211809934
 // 1519211810362
 // 1519211811670

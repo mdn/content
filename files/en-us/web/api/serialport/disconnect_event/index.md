@@ -1,13 +1,9 @@
 ---
-title: 'SerialPort: disconnect'
+title: 'SerialPort: disconnect event'
 slug: Web/API/SerialPort/disconnect_event
 page-type: web-api-event
-tags:
-  - API
-  - Event
-  - Reference
-  - SerialPort
-  - Experimental
+status:
+  - experimental
 browser-compat: api.SerialPort.disconnect_event
 ---
 
@@ -35,7 +31,7 @@ A generic {{domxref("Event")}}.
 
 This event bubbles to {{domxref("Serial")}}. The `event.target` property refers to the {{domxref('SerialPort')}} object that bubbles up.
 
-For more information, see [Event bubbling and capture](/en-US/docs/Learn/JavaScript/Building_blocks/Events#event_bubbling_and_capture).
+For more information, see [Event bubbling](/en-US/docs/Learn/JavaScript/Building_blocks/Events#event_bubbling).
 
 ## Examples
 

@@ -2,14 +2,6 @@
 title: quotes
 slug: Web/CSS/quotes
 page-type: css-property
-tags:
-  - CSS
-  - CSS Property
-  - Generated Content
-  - Layout
-  - Reference
-  - Web
-  - recipe:css-property
 browser-compat: css.properties.quotes
 ---
 
@@ -27,8 +19,8 @@ quotes: none;
 quotes: auto;
 
 /* <string> values */
-quotes: "«" "»";           /* Set open-quote and close-quote to the French quotation marks */
-quotes: "«" "»" "‹" "›";   /* Set two levels of quotation marks */
+quotes: "«" "»"; /* Set open-quote and close-quote to the French quotation marks */
+quotes: "«" "»" "‹" "›"; /* Set two levels of quotation marks */
 
 /* Global values */
 quotes: inherit;

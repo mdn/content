@@ -2,13 +2,8 @@
 title: Serial.requestPort()
 slug: Web/API/Serial/requestPort
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - requestPort
-  - Serial
-  - Experimental
+status:
+  - experimental
 browser-compat: api.Serial.requestPort
 ---
 
@@ -31,7 +26,7 @@ requestPort(options)
 
     - `filters`
 
-      - : A list of objects containing vendor and product IDs used to search for attached devices. The [USB Implementors Forum](https://www.usb.org/) assigns IDs to specific companies. Each company assigns IDS to its products. Filters contain the following values:
+      - : A list of objects containing vendor and product IDs used to search for attached devices. The [USB Implementors Forum](https://www.usb.org/) assigns IDs to specific companies. Each company assigns IDs to its products. Filters contain the following values:
 
         - `usbVendorId`
           - : An unsigned short integer that identifies a USB device vendor.
@@ -45,7 +40,7 @@ A {{jsxref("Promise")}} that resolves with an instance of {{domxref("SerialPort"
 ### Exceptions
 
 - `SecurityError` {{domxref("DOMException")}}
-  - : The returned `Promise` rejects with this error if a [Feature Policy](/en-US/docs/Web/HTTP/Feature_Policy) restricts use of this API or a permission to use it has not granted via a user gesture.
+  - : The returned `Promise` rejects with this error if a [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy) blocks the use of this feature or a user permission prompt was denied.
 - `AbortError` {{domxref("DOMException")}}
   - : The returned `Promise` rejects with this if the user does not select a port when prompted.
 

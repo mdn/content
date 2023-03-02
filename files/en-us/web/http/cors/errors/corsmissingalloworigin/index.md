@@ -1,5 +1,5 @@
 ---
-title: 'Reason: CORS header ''Access-Control-Allow-Origin'' missing'
+title: "Reason: CORS header 'Access-Control-Allow-Origin' missing"
 slug: Web/HTTP/CORS/Errors/CORSMissingAllowOrigin
 tags:
   - CORS
@@ -19,7 +19,7 @@ tags:
 
 ## Reason
 
-```
+```plain
 Reason: CORS header 'Access-Control-Allow-Origin' missing
 ```
 

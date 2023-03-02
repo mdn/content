@@ -1,5 +1,5 @@
 ---
-title: 'Reason: Multiple CORS header ''Access-Control-Allow-Origin'' not allowed'
+title: "Reason: Multiple CORS header 'Access-Control-Allow-Origin' not allowed"
 slug: Web/HTTP/CORS/Errors/CORSMultipleAllowOriginNotAllowed
 tags:
   - CORS
@@ -19,7 +19,7 @@ tags:
 
 ## Reason
 
-```
+```plain
 Reason: Multiple CORS header 'Access-Control-Allow-Origin' not allowed
 ```
 

@@ -1,6 +1,7 @@
 ---
 title: bbox
 slug: Web/SVG/Attribute/bbox
+page-type: svg-attribute
 tags:
   - Deprecated
   - SVG

@@ -1,6 +1,7 @@
 ---
 title: refY
 slug: Web/SVG/Attribute/refY
+page-type: svg-attribute
 tags:
   - NeedsBrowserCompatibility
   - NeedsExample

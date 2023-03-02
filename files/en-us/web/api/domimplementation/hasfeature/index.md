@@ -2,13 +2,8 @@
 title: DOMImplementation.hasFeature()
 slug: Web/API/DOMImplementation/hasFeature
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - DOMImplementation
-  - Deprecated
-  - Method
-  - Reference
+status:
+  - deprecated
 browser-compat: api.DOMImplementation.hasFeature
 ---
 

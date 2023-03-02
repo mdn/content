@@ -1,12 +1,7 @@
 ---
 title: id
 slug: Web/HTML/Global_attributes/id
-tags:
-  - Global attributes
-  - HTML
-  - Reference
-  - Web
-  - id
+page-type: html-attribute
 browser-compat: html.global_attributes.id
 ---
 
@@ -34,3 +29,5 @@ The **`id`** [global attribute](/en-US/docs/Web/HTML/Global_attributes) defines 
 
 - All [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 - {{domxref("Element.id")}} that reflects this attribute.
+- The {{domxref("Document.getElementById")}} method.
+- CSS [ID selectors](/en-US/docs/Web/CSS/ID_selectors).

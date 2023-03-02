@@ -1,12 +1,7 @@
 ---
 title: Float32Array() constructor
 slug: Web/JavaScript/Reference/Global_Objects/Float32Array/Float32Array
-tags:
-  - Constructor
-  - JavaScript
-  - Reference
-  - TypedArrays
-  - Polyfill
+page-type: javascript-constructor
 browser-compat: javascript.builtins.Float32Array.Float32Array
 ---
 

@@ -1,12 +1,9 @@
 ---
-title: 'Element: MSGestureEnd event'
+title: "Element: MSGestureEnd event"
 slug: Web/API/Element/MSGestureEnd_event
 page-type: web-api-event
-tags:
-  - Event
-  - Non-standard
-  - Reference
-browser-compat: api.Element.MSGestureEnd_event
+status:
+  - non-standard
 ---
 
 {{APIRef}}{{Non-standard_header}}
@@ -42,7 +39,7 @@ Not part of any specification.
 
 ## Browser compatibility
 
-{{Compat}}
+This was an IE-only feature. No modern browser supports it.
 
 ## See also
 

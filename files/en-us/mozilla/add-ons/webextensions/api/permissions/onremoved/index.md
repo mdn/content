@@ -1,6 +1,7 @@
 ---
 title: permissions.onRemoved
 slug: Mozilla/Add-ons/WebExtensions/API/permissions/onRemoved
+page-type: webextension-api-event
 tags:
   - API
   - Add-ons
@@ -62,5 +63,3 @@ browser.permissions.onRemoved.addListener(handleRemoved);
 {{WebExtExamples}}
 
 > **Note:** This API is based on Chromium's [`chrome.permissions`](https://developer.chrome.com/docs/extensions/reference/permissions/) API.
->
-> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.

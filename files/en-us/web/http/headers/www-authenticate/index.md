@@ -155,7 +155,7 @@ WWW-Authenticate: Basic realm="Access to the staging site", charset="UTF-8"
 A user-agent receiving this header would first prompt the user for their username and password, and then re-request the resource: this time including the (encoded) credentials in the {{HTTPHeader("Authorization")}} header.
 The {{HTTPHeader("Authorization")}} header might look like this:
 
-```https
+```http
 Authorization: Basic YWxhZGRpbjpvcGVuc2VzYW1l
 ```
 

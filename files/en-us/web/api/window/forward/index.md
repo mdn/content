@@ -2,16 +2,9 @@
 title: Window.forward()
 slug: Web/API/Window/forward
 page-type: web-api-instance-method
-tags:
-  - API
-  - Deprecated
-  - Firefox
-  - HTML DOM
-  - Method
-  - Non-standard
-  - Deprecated
-  - Window
-  - forward
+status:
+  - deprecated
+  - non-standard
 ---
 
 {{APIRef}}{{Non-standard_header}} {{deprecated_header}}

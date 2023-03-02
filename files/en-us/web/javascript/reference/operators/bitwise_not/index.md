@@ -1,18 +1,13 @@
 ---
 title: Bitwise NOT (~)
 slug: Web/JavaScript/Reference/Operators/Bitwise_NOT
-tags:
-  - Bitwise operator
-  - JavaScript
-  - Language feature
-  - Operator
-  - Reference
+page-type: javascript-operator
 browser-compat: javascript.operators.bitwise_not
 ---
 
 {{jsSidebar("Operators")}}
 
-The bitwise NOT operator (`~`) inverts the bits of its operand. Like other bitwise operators, it converts the operand to a 32-bit signed integer
+The **bitwise NOT (`~`)** operator inverts the bits of its operand. Like other bitwise operators, it converts the operand to a 32-bit signed integer
 
 {{EmbedInteractiveExample("pages/js/expressions-bitwise-not.html")}}
 

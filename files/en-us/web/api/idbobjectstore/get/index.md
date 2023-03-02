@@ -2,14 +2,6 @@
 title: IDBObjectStore.get()
 slug: Web/API/IDBObjectStore/get
 page-type: web-api-instance-method
-tags:
-  - API
-  - Database
-  - IDBObjectStore
-  - IndexedDB
-  - Method
-  - Reference
-  - Storage
 browser-compat: api.IDBObjectStore.get
 ---
 
@@ -42,8 +34,9 @@ get(key)
 
 ### Return value
 
-An {{domxref("IDBRequest")}} object on which subsequent events related to this
-operation are fired.
+An {{domxref("IDBRequest")}} object on which subsequent events related to this operation are fired.
+
+If the operation is successful, the value of the request's {{domxref("IDBRequest.result", "result")}} property is the value of the first record matching the given key or key range.
 
 ### Exceptions
 
@@ -70,7 +63,7 @@ normal JavaScript, then put it back into the database using a
 const DBOpenRequest = window.indexedDB.open("toDoList", 4);
 
 DBOpenRequest.onsuccess = (event) => {
-  note.innerHTML += '<li>Database initialized.</li>';
+  note.innerHTML += "<li>Database initialized.</li>";
 
   // store the result of opening the database in the db variable.
   // This is used a lot below
@@ -86,7 +79,7 @@ function getData() {
 
   // report on the success of the transaction completing, when everything is done
   transaction.oncomplete = (event) => {
-    note.innerHTML += '<li>Transaction completed.</li>';
+    note.innerHTML += "<li>Transaction completed.</li>";
   };
 
   transaction.onerror = (event) => {
@@ -101,12 +94,11 @@ function getData() {
 
   objectStoreRequest.onsuccess = (event) => {
     // report the success of our request
-    note.innerHTML += '<li>Request successful.</li>';
+    note.innerHTML += "<li>Request successful.</li>";
 
     const myRecord = objectStoreRequest.result;
   };
-
-};
+}
 ```
 
 ## Specifications

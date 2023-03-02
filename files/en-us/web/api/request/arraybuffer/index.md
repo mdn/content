@@ -2,13 +2,6 @@
 title: Request.arrayBuffer()
 slug: Web/API/Request/arrayBuffer
 page-type: web-api-instance-method
-tags:
-  - API
-  - ArrayBuffer
-  - Fetch
-  - Method
-  - Reference
-  - Request
 browser-compat: api.Request.arrayBuffer
 ---
 
@@ -36,9 +29,9 @@ A promise that resolves with an {{jsxref("ArrayBuffer")}}.
 ```js
 const myArray = new Uint8Array(10);
 
-const request = new Request('/myEndpoint', {
-  method: 'POST',
-  body: myArray
+const request = new Request("/myEndpoint", {
+  method: "POST",
+  body: myArray,
 });
 
 request.arrayBuffer().then((buffer) => {

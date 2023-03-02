@@ -2,11 +2,6 @@
 title: HTMLIFrameElement
 slug: Web/API/HTMLIFrameElement
 page-type: web-api-interface
-tags:
-  - API
-  - HTML DOM
-  - Interface
-  - Reference
 browser-compat: api.HTMLIFrameElement
 ---
 
@@ -31,11 +26,15 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}_.
 - {{domxref("HTMLIFrameElement.contentDocument")}} {{ReadOnlyInline}}
   - : Returns a {{domxref("Document")}}, the active document in the inline frame's nested browsing context.
 - {{domxref("HTMLIFrameElement.contentWindow")}} {{ReadOnlyInline}}
-  - : Returns a {{domxref("WindowProxy")}}, the window proxy for the nested browsing context.
+
+  - : Returns a {{glossary("WindowProxy")}}, the window proxy for the nested browsing context.
+
+- {{domxref("HTMLIFrameElement.credentialless")}} {{Experimental_Inline}}
+
+  - : A boolean value indicating whether the `<iframe>` is credentialless, meaning that its content is loaded in a new, ephemeral context. This context does not have access to the parent context's shared storage and credentials. In return, the {{httpheader("Cross-Origin-Embedder-Policy")}} (COEP) embedding rules can be lifted, so documents with COEP set can embed third-party documents that do not. See [IFrame credentialless](/en-US/docs/Web/Security/IFrame_credentialless) for a deeper explanation.
+
 - {{domxref("HTMLIFrameElement.csp")}} {{Experimental_Inline}}
   - : Specifies the Content Security Policy that an embedded document must agree to enforce upon itself.
-- {{domxref("HTMLIFrameElement.fetchPriority")}} {{Experimental_Inline}}
-  - : An optional string representing a hint given to the browser on how it should prioritize fetching of the iframe document relative to other iframe documents. If this value is provided, it must be one of the possible permitted values: `high` to fetch at a high priority, `low` to fetch at a low priority, or `auto` to indicate no preference (which is the default).
 - {{domxref("HTMLIFrameElement.frameBorder")}} {{Deprecated_Inline}}
   - : A string that indicates whether to create borders between frames.
 - {{domxref("HTMLIFrameElement.height")}}
@@ -49,7 +48,7 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}_.
 - {{domxref("HTMLIFrameElement.name")}}
   - : A string that reflects the {{htmlattrxref("name", "iframe")}} HTML attribute, containing a name by which to refer to the frame.
 - {{domxref("HTMLIFrameElement.featurePolicy")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - : Returns the {{domxref("FeaturePolicy")}} interface which provides a simple API for introspecting the feature policies applied to a specific document.
+  - : Returns the {{domxref("FeaturePolicy")}} interface which provides a simple API for introspecting the [Permissions Policies](/en-US/docs/Web/HTTP/Permissions_Policy) applied to a specific document.
 - {{domxref("HTMLIFrameElement.referrerPolicy")}}
   - : A string that reflects the {{htmlattrxref("referrerPolicy", "iframe")}} HTML attribute indicating which referrer to use when fetching the linked resource.
 - {{domxref("HTMLIFrameElement.sandbox")}}

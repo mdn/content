@@ -1,17 +1,13 @@
 ---
 title: Decrement (--)
 slug: Web/JavaScript/Reference/Operators/Decrement
-tags:
-  - Decrement
-  - JavaScript
-  - Language feature
-  - Operator
+page-type: javascript-operator
 browser-compat: javascript.operators.decrement
 ---
 
 {{jsSidebar("Operators")}}
 
-The decrement operator (`--`) decrements (subtracts one from) its operand and returns the value before or after the decrement, depending on where the operator is placed.
+The **decrement (`--`)** operator decrements (subtracts one from) its operand and returns the value before or after the decrement, depending on where the operator is placed.
 
 {{EmbedInteractiveExample("pages/js/expressions-decrement.html")}}
 

@@ -2,13 +2,6 @@
 title: prefix
 slug: Web/CSS/@counter-style/prefix
 page-type: css-at-rule-descriptor
-tags:
-  - "@counter-style"
-  - At-rule descriptor
-  - CSS
-  - CSS Counter Styles
-  - CSS Descriptor
-  - Reference
 browser-compat: css.at-rules.counter-style.prefix
 ---
 

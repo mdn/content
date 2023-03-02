@@ -1,19 +1,7 @@
 ---
 title: <input type="password">
 slug: Web/HTML/Element/input/password
-tags:
-  - Element
-  - Forms
-  - HTML
-  - HTML Input Types
-  - HTML Inputs
-  - HTML Password Input
-  - HTML forms
-  - HTML input tag
-  - Input Types
-  - Reference
-  - Web
-  - password
+page-type: html-element
 browser-compat: html.elements.input.type_password
 ---
 
@@ -33,58 +21,6 @@ Both approaches help a user check that they entered the intended password, which
 > **Note:** Any forms involving sensitive information like passwords (such as login forms) should be served over HTTPS.
 > Many browsers now implement mechanisms to warn against insecure login forms; see [Insecure passwords](/en-US/docs/Web/Security/Insecure_passwords).
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <td><strong><a href="#value">Value</a></strong></td>
-      <td>
-        A string representing a password, or empty
-      </td>
-    </tr>
-    <tr>
-      <td><strong>Events</strong></td>
-      <td>
-        {{domxref("HTMLElement/change_event", "change")}} and
-        {{domxref("HTMLElement/input_event", "input")}}
-      </td>
-    </tr>
-    <tr>
-      <td><strong>Supported Common Attributes</strong></td>
-      <td>
-        {{htmlattrxref("autocomplete", "input")}},
-        {{htmlattrxref("inputmode", "input")}},
-        {{htmlattrxref("maxlength", "input")}},
-        {{htmlattrxref("minlength", "input")}},
-        {{htmlattrxref("pattern", "input")}},
-        {{htmlattrxref("placeholder", "input")}},
-        {{htmlattrxref("readonly", "input")}},
-        {{htmlattrxref("required", "input")}}, and
-        {{htmlattrxref("size", "input")}}
-      </td>
-    </tr>
-    <tr>
-      <td><strong>IDL attributes</strong></td>
-      <td>
-        <code>selectionStart</code>, <code>selectionEnd</code>,
-        <code>selectionDirection</code>, and <code>value</code>
-      </td>
-    </tr>
-    <tr>
-      <td><strong>DOM interface</strong></td>
-      <td><p>{{domxref("HTMLInputElement")}}</p></td>
-    </tr>
-    <tr>
-      <td><strong>Methods</strong></td>
-      <td>
-        {{domxref("HTMLInputElement.select", "select()")}},
-        {{domxref("HTMLInputElement.setRangeText", "setRangeText()")}},
-        and
-        {{domxref("HTMLInputElement.setSelectionRange", "setSelectionRange()")}}
-      </td>
-    </tr>
-  </tbody>
-</table>
-
 ## Value
 
 The {{htmlattrxref("value", "input")}} attribute contains a string whose value is the current contents of the text editing control being used to enter the password. If the user hasn't entered anything yet, this value is an empty string (`""`). If the {{htmlattrxref("required")}} property is specified, then the password edit box must contain a value other than an empty string to be valid.
@@ -101,17 +37,17 @@ In addition to the attributes that operate on all {{HTMLElement("input")}} eleme
 
 The maximum number of characters (as UTF-16 code units) the user can enter into the password field. This must be an integer value 0 or higher. If no `maxlength` is specified, or an invalid value is specified, the password field has no maximum length. This value must also be greater than or equal to the value of `minlength`.
 
-The input will fail [constraint validation](/en-US/docs/Web/Guide/HTML/Constraint_validation) if the length of the text entered into the field is greater than `maxlength` UTF-16 code units long.
+The input will fail [constraint validation](/en-US/docs/Web/HTML/Constraint_validation) if the length of the text entered into the field is greater than `maxlength` UTF-16 code units long.
 
 ### minlength
 
 The minimum number of characters (as UTF-16 code units) the user can enter into the password entry field. This must be a non-negative integer value smaller than or equal to the value specified by `maxlength`. If no `minlength` is specified, or an invalid value is specified, the password input has no minimum length.
 
-The input will fail [constraint validation](/en-US/docs/Web/Guide/HTML/Constraint_validation) if the length of the text entered into the field is fewer than `minlength` UTF-16 code units long.
+The input will fail [constraint validation](/en-US/docs/Web/HTML/Constraint_validation) if the length of the text entered into the field is fewer than `minlength` UTF-16 code units long.
 
 ### pattern
 
-The `pattern` attribute, when specified, is a regular expression that the input's {{htmlattrxref("value")}} must match in order for the value to pass [constraint validation](/en-US/docs/Web/Guide/HTML/Constraint_validation). It must be a valid JavaScript regular expression, as used by the {{jsxref("RegExp")}} type, and as documented in our [guide on regular expressions](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions); the `'u'` flag is specified when compiling the regular expression, so that the pattern is treated as a sequence of Unicode code points, instead of as ASCII. No forward slashes should be specified around the pattern text.
+The `pattern` attribute, when specified, is a regular expression that the input's {{htmlattrxref("value")}} must match in order for the value to pass [constraint validation](/en-US/docs/Web/HTML/Constraint_validation). It must be a valid JavaScript regular expression, as used by the {{jsxref("RegExp")}} type, and as documented in our [guide on regular expressions](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions); the `'u'` flag is specified when compiling the regular expression, so that the pattern is treated as a sequence of Unicode code points, instead of as ASCII. No forward slashes should be specified around the pattern text.
 
 If the specified pattern is not specified or is invalid, no regular expression is applied and this attribute is ignored completely.
 
@@ -125,7 +61,7 @@ The `placeholder` attribute is a string that provides a brief hint to the user a
 
 If the control's content has one directionality ({{Glossary("LTR")}} or {{Glossary("RTL")}}) but needs to present the placeholder in the opposite directionality, you can use Unicode bidirectional algorithm formatting characters to override directionality within the placeholder; see [How to use Unicode controls for bidi text](https://www.w3.org/International/questions/qa-bidi-unicode-controls) for more information.
 
-> **Note:** Avoid using the `placeholder` attribute if you can. It is not as semantically useful as other ways to explain your form, and can cause unexpected technical issues with your content. See {{SectionOnPage("/en-US/docs/Web/HTML/Element/input", "Labels and placeholders")}} for more information.
+> **Note:** Avoid using the `placeholder` attribute if you can. It is not as semantically useful as other ways to explain your form, and can cause unexpected technical issues with your content. See [`<input>` labels](/en-US/docs/Web/HTML/Element/input#labels) for more information.
 
 ### readonly
 
@@ -302,6 +238,64 @@ ssn.oninput = (event) => {
 #### Result
 
 {{EmbedLiveSample("Requesting_a_Social_Security_number", 600, 60)}}
+
+## Technical summary
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <td><strong><a href="#value">Value</a></strong></td>
+      <td>
+        A string representing a password, or empty
+      </td>
+    </tr>
+    <tr>
+      <td><strong>Events</strong></td>
+      <td>
+        {{domxref("HTMLElement/change_event", "change")}} and
+        {{domxref("HTMLElement/input_event", "input")}}
+      </td>
+    </tr>
+    <tr>
+      <td><strong>Supported Common Attributes</strong></td>
+      <td>
+        {{htmlattrxref("autocomplete", "input")}},
+        {{htmlattrxref("inputmode", "input")}},
+        {{htmlattrxref("maxlength", "input")}},
+        {{htmlattrxref("minlength", "input")}},
+        {{htmlattrxref("pattern", "input")}},
+        {{htmlattrxref("placeholder", "input")}},
+        {{htmlattrxref("readonly", "input")}},
+        {{htmlattrxref("required", "input")}}, and
+        {{htmlattrxref("size", "input")}}
+      </td>
+    </tr>
+    <tr>
+      <td><strong>IDL attributes</strong></td>
+      <td>
+        <code>selectionStart</code>, <code>selectionEnd</code>,
+        <code>selectionDirection</code>, and <code>value</code>
+      </td>
+    </tr>
+    <tr>
+      <td><strong>DOM interface</strong></td>
+      <td><p>{{domxref("HTMLInputElement")}}</p></td>
+    </tr>
+    <tr>
+      <td><strong>Methods</strong></td>
+      <td>
+        {{domxref("HTMLInputElement.select", "select()")}},
+        {{domxref("HTMLInputElement.setRangeText", "setRangeText()")}},
+        and
+        {{domxref("HTMLInputElement.setSelectionRange", "setSelectionRange()")}}
+      </td>
+    </tr>
+    <tr>
+      <td><strong>Implicit ARIA Role</strong></td>
+      <td><a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"><code>no corresponding role</code></a></td>
+    </tr>
+  </tbody>
+</table>
 
 ## Specifications
 

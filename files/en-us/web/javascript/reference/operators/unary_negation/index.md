@@ -1,17 +1,13 @@
 ---
 title: Unary negation (-)
 slug: Web/JavaScript/Reference/Operators/Unary_negation
-tags:
-  - JavaScript
-  - Language feature
-  - Operator
-  - Reference
+page-type: javascript-operator
 browser-compat: javascript.operators.unary_negation
 ---
 
 {{jsSidebar("Operators")}}
 
-The unary negation operator (`-`) precedes its operand and negates it.
+The **unary negation (`-`)** operator precedes its operand and negates it.
 
 {{EmbedInteractiveExample("pages/js/expressions-unary-negation.html")}}
 

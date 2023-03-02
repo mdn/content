@@ -2,19 +2,6 @@
 title: RTCError.sdpLineNumber
 slug: Web/API/RTCError/sdpLineNumber
 page-type: web-api-instance-property
-tags:
-  - API
-  - Error
-  - Networking
-  - Property
-  - RTCError
-  - Read-only
-  - Reference
-  - SDP
-  - WebRTC
-  - WebRTC API
-  - WebRTC Device API
-  - sdpLineNumber
 browser-compat: api.RTCError.sdpLineNumber
 ---
 

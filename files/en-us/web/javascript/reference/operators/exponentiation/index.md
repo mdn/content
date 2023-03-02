@@ -1,17 +1,13 @@
 ---
 title: Exponentiation (**)
 slug: Web/JavaScript/Reference/Operators/Exponentiation
-tags:
-  - JavaScript
-  - Language feature
-  - Operator
-  - Reference
+page-type: javascript-operator
 browser-compat: javascript.operators.exponentiation
 ---
 
 {{jsSidebar("Operators")}}
 
-The exponentiation operator (`**`) returns the result of raising the first
+The **exponentiation (`**`)** operator returns the result of raising the first
 operand to the power of the second operand. It is equivalent to {{jsxref("Math.pow()")}},
 except it also accepts [BigInts](/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt) as operands.
 
@@ -52,21 +48,21 @@ exponentiation, but JavaScript uses that symbol for the
 ### Basic exponentiation
 
 ```js
-2 ** 3   // 8
-3 ** 2   // 9
-3 ** 2.5 // 15.588457268119896
-10 ** -1 // 0.1
-NaN ** 2 // NaN
-NaN ** 0 // 1
-1 ** Infinity // NaN
+2 ** 3; // 8
+3 ** 2; // 9
+3 ** 2.5; // 15.588457268119896
+10 ** -1; // 0.1
+NaN ** 2; // NaN
+NaN ** 0; // 1
+1 ** Infinity; // NaN
 ```
 
 ### Associativity
 
 ```js
-2 ** 3 ** 2   // 512
-2 ** (3 ** 2) // 512
-(2 ** 3) ** 2 // 64
+2 ** 3 ** 2; // 512
+2 ** (3 ** 2); // 512
+(2 ** 3) ** 2; // 64
 ```
 
 ### Usage with unary operators
@@ -74,13 +70,13 @@ NaN ** 0 // 1
 To invert the sign of the result of an exponentiation expression:
 
 ```js
--(2 ** 2) // -4
+-(2 ** 2); // -4
 ```
 
 To force the base of an exponentiation expression to be a negative number:
 
 ```js
-(-2) ** 2 // 4
+(-2) ** 2; // 4
 ```
 
 ## Specifications

@@ -1,6 +1,7 @@
 ---
 title: repeatCount
 slug: Web/SVG/Attribute/repeatCount
+page-type: svg-attribute
 tags:
   - SVG
   - SVG Attribute

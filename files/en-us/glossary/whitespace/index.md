@@ -1,9 +1,7 @@
 ---
 title: Whitespace
 slug: Glossary/Whitespace
-tags:
-  - Lexical Grammar
-  - whitespace
+page-type: glossary-definition
 ---
 
 **Whitespace** refers to {{Glossary("Character", "characters")}} which are used to provide horizontal or vertical space between other characters. Whitespace is often used to separate tokens in {{Glossary("HTML")}}, {{Glossary("CSS")}}, {{Glossary("JavaScript")}}, and other computer languages.

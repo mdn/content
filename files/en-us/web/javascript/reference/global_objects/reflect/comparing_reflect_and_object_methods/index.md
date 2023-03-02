@@ -2,13 +2,7 @@
 title: Comparing Reflect and Object methods
 slug: >-
   Web/JavaScript/Reference/Global_Objects/Reflect/Comparing_Reflect_and_Object_methods
-tags:
-  - Guide
-  - JavaScript
-  - JavaScript Object Model
-  - Object
-  - Overview
-  - Reflect
+page-type: guide
 ---
 
 {{jssidebar}}
@@ -55,7 +49,7 @@ The table below details the differences between the methods available on the `Ob
         {{jsxref("Reflect.has()")}} returns <code>true</code> if the
         property exists on the object or on its prototype chain or
         <code>false</code> otherwise, similar to the
-        [`in` operator](/en-US/docs/Web/JavaScript/Reference/Operators/in).
+        {{jsxref("Operators/in", "in")}} operator.
         Throws a <code>TypeError</code> if the target was not
         an <code>Object</code>.
       </td>

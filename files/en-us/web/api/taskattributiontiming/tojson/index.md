@@ -2,16 +2,12 @@
 title: TaskAttributionTiming.toJSON()
 slug: Web/API/TaskAttributionTiming/toJSON
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - Web Performance
-  - Experimental
+status:
+  - experimental
 browser-compat: api.TaskAttributionTiming.toJSON
 ---
 
-{{APIRef("Performance API")}}
+{{APIRef("Performance API")}}{{SeeCompatTable}}
 
 The **`toJSON()`** method of the {{domxref("TaskAttributionTiming")}} interface is a {{Glossary("Serialization","serializer")}}; it returns a JSON representation of the {{domxref("TaskAttributionTiming")}} object.
 

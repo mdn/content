@@ -1,15 +1,7 @@
 ---
 title: Learn web development
 slug: Learn
-tags:
-  - Beginner
-  - CSS
-  - HTML
-  - Index
-  - Intro
-  - Landing
-  - Learn
-  - Web
+page-type: landing-page
 ---
 
 {{LearnSidebar}}
@@ -51,7 +43,7 @@ The following is a list of all the topics we cover in the MDN learning area.
 - [HTML — Structuring the web](/en-US/docs/Learn/HTML)
   - : HTML is the language that we use to structure the different parts of our content and define what their meaning or purpose is. This topic teaches HTML in detail.
 - [CSS — Styling the web](/en-US/docs/Learn/CSS)
-  - : CSS is the language that we can use to style and layout our web content, as well as adding behavior like animation. This topic provides comprehensive coverage of CSS.
+  - : CSS is the language that we use to control our web content's style and layout, as well as adding behavior like animation. This topic provides comprehensive coverage of CSS.
 - [JavaScript — Dynamic client-side scripting](/en-US/docs/Learn/JavaScript)
   - : JavaScript is the scripting language used to add dynamic functionality to web pages. This topic teaches all the essentials needed to become comfortable with writing and understanding JavaScript.
 - [Web forms — Working with user data](/en-US/docs/Learn/Forms)
@@ -99,7 +91,7 @@ You can update the `learning-area` repository with any changes made to the maste
 
 ## Contact us
 
-If you want to get in touch with us about anything, the best way is to drop us a message on our [Discourse forum](https://discourse.mozilla.org/c/mdn/236). We'd like to hear from you about anything you think is wrong or missing on the site, requests for new learning topics, requests for help with items you don't understand, or any other questions or concerns.
+If you want to get in touch with us about anything, use the [communication channels](/en-US/docs/MDN/Community/Communication_channels). We'd like to hear from you about anything you think is wrong or missing on the site, requests for new learning topics, requests for help with items you don't understand, or any other questions or concerns.
 
 If you're interested in helping develop/improve the content, take a look at [how you can help](/en-US/docs/MDN/Contribute) and get in touch! We are more than happy to talk to you, whether you are a learner, teacher, experienced web developer, or someone else interested in helping to improve the learning experience.
 

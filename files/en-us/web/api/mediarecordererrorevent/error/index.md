@@ -2,17 +2,9 @@
 title: MediaRecorderErrorEvent.error
 slug: Web/API/MediaRecorderErrorEvent/error
 page-type: web-api-instance-property
-tags:
-  - API
-  - Error
-  - Error Handling
-  - MediaRecordingErrorEvent
-  - MediaStream Recording
-  - MediaStream Recording API
-  - Property
-  - Reference
-  - Deprecated
-  - Non-standard
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.MediaRecorderErrorEvent.error
 ---
 
@@ -85,7 +77,7 @@ function recordStream(stream) {
     console.error(`Error: ${event.error}`);
   };
 
-  recorder.start(100);  /* 100ms time slices per buffer */
+  recorder.start(100); /* 100ms time slices per buffer */
   return recorder;
 }
 ```

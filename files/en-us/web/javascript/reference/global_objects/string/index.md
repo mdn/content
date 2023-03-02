@@ -1,12 +1,7 @@
 ---
 title: String
 slug: Web/JavaScript/Reference/Global_Objects/String
-tags:
-  - Class
-  - ECMAScript 2015
-  - JavaScript
-  - Reference
-  - String
+page-type: javascript-class
 browser-compat: javascript.builtins.String
 ---
 
@@ -30,7 +25,7 @@ with the {{jsxref("String.prototype.substring()", "substring()")}} method.
 Strings can be created as primitives, from string literals, or as objects, using the
 {{jsxref("String/String", "String()")}} constructor:
 
-```js
+```js-nolint
 const string1 = "A string primitive";
 const string2 = 'Also a string primitive';
 const string3 = `Yet another string primitive`;
@@ -53,13 +48,13 @@ There are two ways to access an individual character in a string. The first is t
 {{jsxref("String.prototype.charAt()", "charAt()")}} method:
 
 ```js
-'cat'.charAt(1) // gives value "a"
+"cat".charAt(1); // gives value "a"
 ```
 
 The other way is to treat the string as an array-like object, where individual characters correspond to a numerical index:
 
 ```js
-'cat'[1] // gives value "a"
+"cat"[1]; // gives value "a"
 ```
 
 When using bracket notation for character access, attempting to delete or assign a
@@ -68,18 +63,18 @@ nor configurable. (See {{jsxref("Object.defineProperty()")}} for more informatio
 
 ### Comparing strings
 
-In C, the `strcmp()` function is used for comparing strings. In JavaScript,
-you just use the [less-than and greater-than operators](/en-US/docs/Web/JavaScript/Reference/Operators):
+Use the [less-than and greater-than operators](/en-US/docs/Web/JavaScript/Reference/Operators) to compare strings:
 
 ```js
-const a = 'a';
-const b = 'b';
-if (a < b) { // true
-  console.log(`${a} is less than ${b}`)
+const a = "a";
+const b = "b";
+if (a < b) {
+  // true
+  console.log(`${a} is less than ${b}`);
 } else if (a > b) {
-  console.log(`${a} is greater than ${b}`)
+  console.log(`${a} is greater than ${b}`);
 } else {
-  console.log(`${a} and ${b} are equal.`)
+  console.log(`${a} and ${b} are equal.`);
 }
 ```
 
@@ -148,10 +143,10 @@ using {{jsxref("Global_Objects/eval", "eval()")}}. Primitives passed to
 all other objects are, by returning the object. For example:
 
 ```js
-const s1 = '2 + 2';              // creates a string primitive
-const s2 = new String('2 + 2');  // creates a String object
-console.log(eval(s1));           // returns the number 4
-console.log(eval(s2));           // returns the string "2 + 2"
+const s1 = "2 + 2"; // creates a string primitive
+const s2 = new String("2 + 2"); // creates a String object
+console.log(eval(s1)); // returns the number 4
+console.log(eval(s2)); // returns the string "2 + 2"
 ```
 
 For these reasons, the code may break when it encounters `String` objects
@@ -162,7 +157,7 @@ A `String` object can always be converted to its primitive counterpart with
 the {{jsxref("String.prototype.valueOf()", "valueOf()")}} method.
 
 ```js
-console.log(eval(s2.valueOf()))  // returns the number 4
+console.log(eval(s2.valueOf())); // returns the number 4
 ```
 
 ### String coercion
@@ -217,9 +212,10 @@ You can use the [`+`](/en-US/docs/Web/JavaScript/Reference/Operators/Addition)
 operator to append multiple strings together, like this:
 
 ```js
-const longString = "This is a very long string which needs " +
-                   "to wrap across multiple lines because " +
-                   "otherwise my code is unreadable."
+const longString =
+  "This is a very long string which needs " +
+  "to wrap across multiple lines because " +
+  "otherwise my code is unreadable.";
 ```
 
 Or you can use the backslash character (`\`) at the end of each line to
@@ -228,9 +224,10 @@ any other character after the backslash (except for a line break), or as an inde
 otherwise it will not work.
 
 ```js
-const longString = "This is a very long string which needs \
+const longString =
+  "This is a very long string which needs \
 to wrap across multiple lines because \
-otherwise my code is unreadable."
+otherwise my code is unreadable.";
 ```
 
 Both of the above methods result in identical strings.
@@ -280,7 +277,14 @@ You must be careful which level of characters you are iterating on. For example,
 
 ## Instance properties
 
-- {{jsxref("String.prototype.length")}}
+These properties are defined on `String.prototype` and shared by all `String` instances.
+
+- {{jsxref("Object/constructor", "String.prototype.constructor")}}
+  - : The constructor function that created the instance object. For `String` instances, the initial value is the {{jsxref("String/String", "String")}} constructor.
+
+These properties are own properties of each `String` instance.
+
+- {{jsxref("String/length", "length")}}
   - : Reflects the `length` of the string. Read-only.
 
 ## Instance methods
@@ -444,12 +448,12 @@ used on [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) and {{jsxr
 
 ```js
 const nullVar = null;
-nullVar.toString();       // TypeError: nullVar is null
-String(nullVar);          // "null"
+nullVar.toString(); // TypeError: nullVar is null
+String(nullVar); // "null"
 
 const undefinedVar = undefined;
-undefinedVar.toString();  // TypeError: undefinedVar is undefined
-String(undefinedVar);     // "undefined"
+undefinedVar.toString(); // TypeError: undefinedVar is undefined
+String(undefinedVar); // "undefined"
 ```
 
 ## Specifications

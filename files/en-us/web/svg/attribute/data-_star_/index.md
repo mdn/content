@@ -1,6 +1,7 @@
 ---
 title: data-*
 slug: Web/SVG/Attribute/data-*
+page-type: svg-attribute
 tags:
   - Attribute
   - SVG

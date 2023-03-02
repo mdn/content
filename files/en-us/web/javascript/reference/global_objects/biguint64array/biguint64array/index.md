@@ -1,12 +1,7 @@
 ---
 title: BigUint64Array() constructor
 slug: Web/JavaScript/Reference/Global_Objects/BigUint64Array/BigUint64Array
-tags:
-  - BigInt
-  - Constructor
-  - JavaScript
-  - Reference
-  - TypedArrays
+page-type: javascript-constructor
 browser-compat: javascript.builtins.BigUint64Array.BigUint64Array
 ---
 

@@ -2,13 +2,8 @@
 title: WakeLock.request()
 slug: Web/API/WakeLock/request
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - Screen Wake Lock API
-  - WakeLock
-  - Experimental
+status:
+  - experimental
 browser-compat: api.WakeLock.request
 ---
 
@@ -45,11 +40,10 @@ A {{jsxref("Promise")}} that resolves with a {{domxref("WakeLockSentinel")}} obj
 
   - : Thrown when wake lock is not available, which can happen because:
 
-    - Document is not allowed to use screen wake lock due to screen-wake-lock
-      policy.
-    - Document is not fully active.
-    - Document is hidden.
-    - {{Glossary("User Agent")}} could not acquire platform's wake lock.
+    - Use of this feature is blocked by a [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy).
+    - The document is not fully active.
+    - The document is hidden.
+    - The {{Glossary("User Agent")}} could not acquire platform's wake lock.
 
 ## Examples
 

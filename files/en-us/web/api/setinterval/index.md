@@ -2,18 +2,6 @@
 title: setInterval()
 slug: Web/API/setInterval
 page-type: web-api-global-function
-tags:
-  - API
-  - Gecko
-  - HTML DOM
-  - Intervals
-  - JavaScript timers
-  - MakeBrowserAgnostic
-  - Method
-  - NeedsMarkupWork
-  - Timers
-  - setInterval
-  - Polyfill
 browser-compat: api.setInterval
 ---
 
@@ -194,7 +182,7 @@ function in the legacy JavaScript.
 
 ### A possible solution
 
-All modern JavaScript runtimes (in browsers and elsewhere) support [arrow functions](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions), with lexical `this` — allowing us to write `setInterval(() => this.myMethod)` if we're inside the `myArray` method.
+All modern JavaScript runtimes (in browsers and elsewhere) support [arrow functions](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions), with lexical `this` — allowing us to write `setInterval(() => this.myMethod())` if we're inside the `myArray` method.
 
 If you need to support IE, use the [`Function.prototype.bind()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/bind) method, which lets you specify the value that should be used as `this` for all calls to a given function. That lets you easily bypass problems where it's unclear what `this` will be, depending on the context from which your function was called.
 
@@ -221,8 +209,7 @@ Browsers may enforce even more stringent minimum values for the interval under s
 circumstances, although these should not be common. Note also that the actual amount of
 time that elapses between calls to the callback may be longer than the given
 `delay`; see
-{{SectionOnPage("/en-US/docs/Web/API/setTimeout", "Reasons for
- delays longer than specified")}} for examples.
+[Reasons for delays longer than specified](/en-US/docs/Web/API/setTimeout#reasons_for_delays_longer_than_specified) for examples.
 
 ### Ensure that execution duration is shorter than interval frequency
 

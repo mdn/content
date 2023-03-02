@@ -29,7 +29,7 @@ use HTTP pre-connection mechanisms to speed up surfing.
 
 ## Status
 
-```
+```http
 408 Request Timeout
 ```
 

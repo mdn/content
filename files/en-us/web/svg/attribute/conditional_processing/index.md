@@ -1,6 +1,7 @@
 ---
 title: SVG Conditional Processing Attributes
 slug: Web/SVG/Attribute/Conditional_Processing
+page-type: svg-attribute
 tags:
   - Intermediate
   - NeedsExample

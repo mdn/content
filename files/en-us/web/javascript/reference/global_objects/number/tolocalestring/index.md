@@ -1,12 +1,7 @@
 ---
 title: Number.prototype.toLocaleString()
 slug: Web/JavaScript/Reference/Global_Objects/Number/toLocaleString
-tags:
-  - Internationalization
-  - JavaScript
-  - Method
-  - Number
-  - Prototype
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.Number.toLocaleString
 ---
 

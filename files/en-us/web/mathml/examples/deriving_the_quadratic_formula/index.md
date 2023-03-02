@@ -1,5 +1,5 @@
 ---
-title: 'MathML: Deriving the Quadratic Formula'
+title: "MathML: Deriving the Quadratic Formula"
 slug: Web/MathML/Examples/Deriving_the_Quadratic_Formula
 tags:
   - Beginner
@@ -10,6 +10,8 @@ tags:
   - MathML
   - NeedsBeginnerUpdate
 ---
+
+{{QuickLinksWithSubPages("/en-us/docs/Web/MathML/Examples")}}
 
 This page outlines the derivation of the [Quadratic Formula](https://en.wikipedia.org/wiki/Quadratic_formula).
 

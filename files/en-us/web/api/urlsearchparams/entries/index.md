@@ -2,12 +2,6 @@
 title: URLSearchParams.entries()
 slug: Web/API/URLSearchParams/entries
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - URL API
-  - URLSearchParams
 browser-compat: api.URLSearchParams.entries
 ---
 
@@ -49,7 +43,7 @@ for (const [key, value] of searchParams.entries()) {
 
 The result is:
 
-```
+```plain
 key1, value1
 key2, value2
 ```

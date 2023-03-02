@@ -1,12 +1,7 @@
 ---
 title: DataView.prototype.getFloat64()
 slug: Web/JavaScript/Reference/Global_Objects/DataView/getFloat64
-tags:
-  - DataView
-  - JavaScript
-  - Method
-  - Prototype
-  - TypedArrays
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.DataView.getFloat64
 ---
 

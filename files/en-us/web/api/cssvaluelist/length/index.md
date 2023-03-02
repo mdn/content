@@ -2,15 +2,8 @@
 title: CSSValueList.length
 slug: Web/API/CSSValueList/length
 page-type: web-api-instance-property
-tags:
-  - API
-  - CSSValueList
-  - NeedsExample
-  - Property
-  - Read-only
-  - Reference
-  - length
-  - Deprecated
+status:
+  - deprecated
 browser-compat: api.CSSValueList.length
 ---
 

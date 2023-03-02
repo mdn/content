@@ -1,13 +1,7 @@
 ---
 title: async function* expression
 slug: Web/JavaScript/Reference/Operators/async_function*
-tags:
-  - Function
-  - Iterator
-  - JavaScript
-  - Language feature
-  - Operator
-  - Primary Expression
+page-type: javascript-operator
 browser-compat: javascript.operators.async_generator_function
 ---
 

@@ -1,12 +1,7 @@
 ---
 title: Symbol() constructor
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/Symbol
-tags:
-  - Constructor
-  - JavaScript
-  - Reference
-  - Symbol
-  - Polyfill
+page-type: javascript-constructor
 browser-compat: javascript.builtins.Symbol.Symbol
 ---
 

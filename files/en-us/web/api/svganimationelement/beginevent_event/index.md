@@ -2,13 +2,6 @@
 title: "SVGAnimationElement: beginEvent event"
 slug: Web/API/SVGAnimationElement/beginEvent_event
 page-type: web-api-event
-tags:
-  - API
-  - Reference
-  - SVG Animation
-  - SVGAnimationElement
-  - beginEvent
-  - Event
 browser-compat: api.SVGAnimationElement.beginEvent_event
 ---
 
@@ -41,7 +34,7 @@ A {{domxref("TimeEvent")}}. Inherits from {{domxref("Event")}}.
 - {{domxref("TimeEvent.detail")}} {{ReadOnlyInline}}
   - : A `long` that specifies some detail information about the Event, depending on the type of the event. For this event type, indicates the repeat number for the animation.
 - {{domxref("TimeEvent.view")}} {{ReadOnlyInline}}
-  - : A {{domxref("WindowProxy")}} that identifies the Window from which the event was generated.
+  - : A {{glossary("WindowProxy")}} that identifies the Window from which the event was generated.
 
 ## Examples
 

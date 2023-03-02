@@ -2,12 +2,6 @@
 title: GamepadButton.touched
 slug: Web/API/GamepadButton/touched
 page-type: web-api-instance-property
-tags:
-  - API
-  - Gamepad API
-  - Games
-  - Property
-  - Reference
 browser-compat: api.GamepadButton.touched
 ---
 

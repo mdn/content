@@ -1,6 +1,7 @@
 ---
 title: kerning
 slug: Web/SVG/Attribute/kerning
+page-type: svg-attribute
 tags:
   - Deprecated
   - SVG

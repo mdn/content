@@ -2,16 +2,6 @@
 title: MediaStream Recording API
 slug: Web/API/MediaStream_Recording_API
 page-type: web-api-overview
-tags:
-  - API
-  - Audio
-  - Media
-  - Media Capture and Streams
-  - MediaStream Recording
-  - MediaStream Recording API
-  - Overview
-  - Reference
-  - Video
 browser-compat: api.MediaRecorder
 ---
 
@@ -67,7 +57,7 @@ function handleDataAvailable(event) {
 }
 function download() {
   const blob = new Blob(recordedChunks, {
-    type: "video/webm"
+    type: "video/webm",
   });
   const url = URL.createObjectURL(blob);
   const a = document.createElement("a");
@@ -99,8 +89,7 @@ If your goal is to record camera and/or microphone input, you may wish to examin
 In this code snippet, `enumerateDevices()` is used to examine the available input devices, locate those which are audio input devices, and create {{HTMLElement("option")}} elements that are then added to a {{HTMLElement("select")}} element representing an input source picker.
 
 ```js
-navigator.mediaDevices.enumerateDevices()
-.then((devices) => {
+navigator.mediaDevices.enumerateDevices().then((devices) => {
   devices.forEach((device) => {
     const menu = document.getElementById("inputdevices");
     if (device.kind === "audioinput") {
@@ -144,7 +133,7 @@ To learn more about using the MediaStream Recording API, see [Using the MediaStr
 - {{domxref("MediaDevices.getUserMedia")}}
 - [HTML5's Media Recorder API in Action on Chrome and Firefox](https://blog.addpipe.com/mediarecorder-api/)
 - [MediaRecorder polyfill](https://github.com/ai/audio-recorder-polyfill) for Safari and Edge
-- [TutorRoom](https://github.com/chrisjohndigital/TutorRoom): HTML video capture/playback/download using getUserMedia and the MediaRecorder API ([source on GitHub](https://github.com/chrisjohndigital/TutorRoom))
+- [TutorRoom](https://github.com/chrisjohndigital/TutorRoom): HTML video capture/playback/download using getUserMedia and the MediaStream Recording API ([source on GitHub](https://github.com/chrisjohndigital/TutorRoom))
 - [Simple video recording demo](https://codepen.io/anon/pen/gpmPzm)
 - [Advanced media stream recorder sample](https://quickblox.github.io/javascript-media-recorder/sample/)
 - [OpenLang](https://github.com/chrisjohndigital/OpenLang): HTML video language lab web application using MediaDevices and the MediaStream Recording API for video recording ([source on GitHub](https://github.com/chrisjohndigital/OpenLang))

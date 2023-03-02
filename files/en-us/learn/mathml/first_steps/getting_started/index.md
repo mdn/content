@@ -1,10 +1,6 @@
 ---
 title: Getting started with MathML
 slug: Learn/MathML/First_steps/Getting_started
-tags:
-  - Beginner
-  - MathML
-  - Landing
 ---
 
 {{LearnSidebar}}{{NextMenu("Learn/MathML/First_steps/Text_containers", "Learn/MathML/First_steps")}}

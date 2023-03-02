@@ -1,12 +1,7 @@
 ---
 title: Number
 slug: Web/JavaScript/Reference/Global_Objects/Number
-tags:
-  - Class
-  - JavaScript
-  - Number
-  - Reference
-  - Polyfill
+page-type: javascript-class
 browser-compat: javascript.builtins.Number
 ---
 
@@ -40,7 +35,7 @@ Number(undefined); // NaN
 
 ### Number encoding
 
-The JavaScript `Number` type is a [double-precision 64-bit binary format IEEE 754](https://en.wikipedia.org/wiki/Double_precision_floating-point_format) value, like `double` in Java or C#. This means it can represent fractional values, but there are some limits to the stored number's magnitude and precision. Very briefly, a IEEE 754 double-precision number uses 64 bits to represent 3 parts:
+The JavaScript `Number` type is a [double-precision 64-bit binary format IEEE 754](https://en.wikipedia.org/wiki/Double_precision_floating-point_format) value, like `double` in Java or C#. This means it can represent fractional values, but there are some limits to the stored number's magnitude and precision. Very briefly, an IEEE 754 double-precision number uses 64 bits to represent 3 parts:
 
 - 1 bit for the _sign_ (positive or negative)
 - 11 bits for the _exponent_ (-1022 to 1023)
@@ -68,7 +63,7 @@ Many built-in operations that expect numbers first coerce their arguments to num
 - `true` turns into `1`; `false` turns into `0`.
 - Strings are converted by parsing them as if they contain a [number literal](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#numeric_literals). Parsing failure results in `NaN`. There are some minor differences compared to an actual number literal:
   - Leading and trailing whitespace/line terminators are ignored.
-  - A leading `0` digit does not cause the number to become a octal literal (or get rejected in strict mode).
+  - A leading `0` digit does not cause the number to become an octal literal (or get rejected in strict mode).
   - `+` and `-` are allowed at the start of the string to indicate its sign. (In actual code, they "look like" part of the literal, but are actually separate unary operators.) However, the sign can only appear once, and must not be followed by whitespace.
   - `Infinity` and `-Infinity` are recognized as literals. In actual code, they are global variables.
   - Empty or whitespace-only strings are converted to `0`.
@@ -84,7 +79,13 @@ There are two ways to achieve nearly the same effect in JavaScript.
 
 {{jsxref("Number.parseFloat()")}} and {{jsxref("Number.parseInt()")}} are similar to `Number()` but only convert strings, and have slightly different parsing rules. For example, `parseInt()` doesn't recognize the decimal point, and `parseFloat()` doesn't recognize the `0x` prefix.
 
-### Fixed-width number conversion
+#### Integer conversion
+
+Some operations expect integers, most notably those that work with array/string indices, date/time components, and number radixes. After performing the number coercion steps above, the result is [truncated](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/trunc) to an integer (by discarding the fractional part). If the number is ±Infinity, it's returned as-is. If the number is `NaN` or `-0`, it's returned as `0`. The result is therefore always an integer (which is not `-0`) or ±Infinity.
+
+Notably, when converted to integers, both `undefined` and `null` become `0`, because `undefined` is converted to `NaN`, which also becomes `0`.
+
+#### Fixed-width number conversion
 
 JavaScript has some lower-level functions that deal with the binary encoding of integer numbers, most notably [bitwise operators](/en-US/docs/Web/JavaScript/Reference/Operators#bitwise_shift_operators) and {{jsxref("TypedArray")}} objects. Bitwise operators always convert the operands to 32-bit integers. In these cases, after converting the value to a number, the number is then normalized to the given width by first [truncating](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/trunc) the fractional part and then taking the lowest bits in the integer's two's complement encoding.
 
@@ -141,6 +142,13 @@ When `Number` is called as a constructor (with `new`), it creates a {{jsxref("Nu
   - : This is the same as the global {{jsxref("parseFloat", "parseFloat()")}} function.
 - {{jsxref("Number.parseInt()")}}
   - : This is the same as the global {{jsxref("parseInt", "parseInt()")}} function.
+
+## Instance properties
+
+These properties are defined on `Number.prototype` and shared by all `Number` instances.
+
+- {{jsxref("Object/constructor", "Number.prototype.constructor")}}
+  - : The constructor function that created the instance object. For `Number` instances, the initial value is the {{jsxref("Number/Number", "Number")}} constructor.
 
 ## Instance methods
 

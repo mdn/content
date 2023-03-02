@@ -1,19 +1,13 @@
 ---
 title: Reflect.getPrototypeOf()
 slug: Web/JavaScript/Reference/Global_Objects/Reflect/getPrototypeOf
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Reference
-  - Reflect
-  - Polyfill
+page-type: javascript-static-method
 browser-compat: javascript.builtins.Reflect.getPrototypeOf
 ---
 
 {{JSRef}}
 
-The static **`Reflect.getPrototypeOf()`** method is almost the
+The **`Reflect.getPrototypeOf()`** static method is almost the
 same method as {{jsxref("Object.getPrototypeOf()")}}. It returns the prototype (i.e. the
 value of the internal `[[Prototype]]` property) of the specified object.
 

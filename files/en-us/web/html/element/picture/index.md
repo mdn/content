@@ -1,16 +1,7 @@
 ---
 title: '<picture>: The Picture element'
 slug: Web/HTML/Element/picture
-tags:
-  - Element
-  - Graphics
-  - HTML
-  - HTML embedded content
-  - Images
-  - Reference
-  - Web
-  - WebP
-  - picture
+page-type: html-element
 browser-compat: html.elements.picture
 ---
 
@@ -44,12 +35,12 @@ If providing higher-density versions of an image for high-DPI (Retina) display, 
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories"
+        <a href="/en-US/docs/Web/HTML/Content_categories"
           >Content categories</a
         >
       </th>
       <td>
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
           >Flow content</a
         >, phrasing content, embedded content
       </td>

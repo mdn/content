@@ -17,7 +17,7 @@ a canvas state, or to refresh the UI.
 
 ## Status
 
-```
+```http
 205 Reset Content
 ```
 

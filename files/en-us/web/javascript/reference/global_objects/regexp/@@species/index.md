@@ -1,19 +1,13 @@
 ---
 title: get RegExp[@@species]
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/@@species
-tags:
-  - JavaScript
-  - Property
-  - Prototype
-  - Reference
-  - RegExp
-  - Regular Expressions
+page-type: javascript-static-accessor-property
 browser-compat: javascript.builtins.RegExp.@@species
 ---
 
 {{JSRef}}
 
-The **`RegExp[@@species]`** accessor property returns the constructor used to construct copied regular expressions in certain `RegExp` methods.
+The **`RegExp[@@species]`** static accessor property returns the constructor used to construct copied regular expressions in certain `RegExp` methods.
 
 > **Warning:** The existence of `@@species` allows execution of arbitrary code and may create security vulnerabilities. It also makes certain optimizations much harder. Engine implementers are [investigating whether to remove this feature](https://github.com/tc39/proposal-rm-builtin-subclassing). Avoid relying on it if possible.
 

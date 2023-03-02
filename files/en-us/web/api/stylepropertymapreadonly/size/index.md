@@ -2,15 +2,8 @@
 title: StylePropertyMapReadOnly.size
 slug: Web/API/StylePropertyMapReadOnly/size
 page-type: web-api-instance-property
-tags:
-  - API
-  - CSS Typed Object Model API
-  - Experimental
-  - Houdini
-  - Property
-  - Reference
-  - StylePropertyMapReadOnly
-  - size
+status:
+  - experimental
 browser-compat: api.StylePropertyMapReadOnly.size
 ---
 

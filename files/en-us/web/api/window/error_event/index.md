@@ -2,11 +2,6 @@
 title: "Window: error event"
 slug: Web/API/Window/error_event
 page-type: web-api-event
-tags:
-  - API
-  - Event
-  - UI Events
-  - Window
 browser-compat: api.Window.error_event
 ---
 
@@ -36,7 +31,7 @@ The event object is a {{domxref("UIEvent")}} instance if it was generated from a
 
 Unlike other events, the `error` event is canceled by returning `true` from the handler instead of returning `false`. When canceled, the error won't appear in the console, but the current script will still stop executing.
 
-The event handler's signature is asymmetric between `addEventListener()` and `onerror`. The event handler passed to `addEventLister` receives a single {{domxref("ErrorEvent")}} object, while the `onerror` handler receives five arguments, matching the {{domxref("ErrorEvent")}} object's properties:
+The event handler's signature is asymmetric between `addEventListener()` and `onerror`. The event handler passed to `addEventListener` receives a single {{domxref("ErrorEvent")}} object, while the `onerror` handler receives five arguments, matching the {{domxref("ErrorEvent")}} object's properties:
 
 - `event`
   - : A string containing a human-readable error message describing the problem. Same as {{domxref("ErrorEvent.message")}}.

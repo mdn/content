@@ -2,19 +2,6 @@
 title: AudioWorkletGlobalScope
 slug: Web/API/AudioWorkletGlobalScope
 page-type: web-api-interface
-tags:
-  - API
-  - Audio
-  - AudioWorklet
-  - AudioWorkletGlobalScope
-  - Background
-  - Interface
-  - Reference
-  - Web Audio API
-  - Worklet
-  - global
-  - scope
-  - sound
 browser-compat: api.AudioWorkletGlobalScope
 ---
 

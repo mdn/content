@@ -2,15 +2,10 @@
 title: TransformStreamDefaultController
 slug: Web/API/TransformStreamDefaultController
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Reference
-  - TransformStreamDefaultController
 browser-compat: api.TransformStreamDefaultController
 ---
 
-{{DefaultAPISidebar("Streams API")}}
+{{APIRef("Streams")}}
 
 The **`TransformStreamDefaultController`** interface of the [Streams API](/en-US/docs/Web/API/Streams_API) provides methods to manipulate the associated {{domxref("ReadableStream")}} and {{domxref("WritableStream")}}.
 

@@ -21,7 +21,7 @@ header.
 
 ## Status
 
-```
+```http
 300 Multiple Choices
 ```
 

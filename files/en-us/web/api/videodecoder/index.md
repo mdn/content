@@ -2,12 +2,8 @@
 title: VideoDecoder
 slug: Web/API/VideoDecoder
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Reference
-  - VideoDecoder
-  - Experimental
+status:
+  - experimental
 browser-compat: api.VideoDecoder
 ---
 
@@ -35,6 +31,11 @@ _Inherits properties from its parent, {{DOMxRef("EventTarget")}}._
 
 - {{domxref("VideoDecoder.dequeue_event", "dequeue")}} {{Experimental_Inline}}
   - : Fires to signal a decrease in {{domxref("VideoDecoder.decodeQueueSize")}}.
+
+## Static methods
+
+- {{domxref("VideoDecoder.isConfigSupported()")}} {{Experimental_Inline}}
+  - : Returns a promise indicating whether the provided `VideoDecoderConfig` is supported.
 
 ## Instance methods
 

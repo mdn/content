@@ -1,14 +1,6 @@
 ---
 title: TypeScript support in Svelte
 slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_TypeScript
-tags:
-  - Beginner
-  - Frameworks
-  - JavaScript
-  - Learn
-  - Svelte
-  - TypeScript
-  - client-side
 ---
 
 {{LearnSidebar}}
@@ -184,35 +176,35 @@ There is work in progress to support TypeScript in Svelte projects in several co
 
 > **Note:** Make sure you are using [Svelte for VS Code](https://marketplace.visualstudio.com/items?itemName=svelte.svelte-vscode) and NOT the old "Svelte" by James Birtles, which has been discontinued. In case you have it installed, you should uninstall it and install the official Svelte extension instead.
 
-Assuming you are inside the VS Code application, from the root of your project's folder, type `code .` (the trailing dot tells VS code to open the current folder) to open the code editor. VS Code will tell you that there are recommended extensions to install.
+Assuming you are inside the VS Code application, from the root of your project's folder, type `code .` (the trailing dot tells VS Code to open the current folder) to open the code editor. VS Code will tell you that there are recommended extensions to install.
 
-![dialog box saying this workspace has extension recommendations, with options to install or show a list](01-vscode-extension-recommendations.png)
+![Dialog box saying this workspace has extension recommendations, with options to install or show a list](01-vscode-extension-recommendations.png)
 
 Clicking _Install all_ will install Svelte for VS Code.
 
-![svelte for vs code extension information](02-svelte-for-vscode.png)
+![Svelte for VS Code extension information](02-svelte-for-vscode.png)
 
 We can also see that the `setupTypeScript.js` file made a couple of changes to our project. The `main.js` file has been renamed to `main.ts`, which means that VS Code can provide hover-information on our Svelte components:
 
-![vs code screenshot showing that when you add type="ts" to a component, it gives you three dot alert hints](03-vscode-hints-in-main-ts.png)
+![VS Code screenshot showing that when you add type="ts" to a component, it gives you three dot alert hints](03-vscode-hints-in-main-ts.png)
 
 We also get type checking for free. If we pass an unknown property in the options parameter of the `App` constructor (for example a typo like `traget` instead of `target`), TypeScript will complain:
 
-![type checking in vs code - App object has been given an unknown property target](04-vscode-type-checking-in-main-ts.png)
+![Type checking in VS Code - App object has been given an unknown property target](04-vscode-type-checking-in-main-ts.png)
 
 In the `App.svelte` component, the `setupTypeScript.js` script has added the `lang="ts"` attribute to the `<script>` tag. Moreover, thanks to type inference, in many cases we won't even need to specify types to get code assistance. For example, if you start adding an `ms` property to the `Alert` component call, TypeScript will infer from the default value that the `ms` property should be a number:
 
-![vs code type inference and code hinting - ms variable should be a number](05-vscode-type-inference-and-code-assistance.png)
+![VS Code type inference and code hinting - ms variable should be a number](05-vscode-type-inference-and-code-assistance.png)
 
 And if you pass something that is not a number, it will complain about it:
 
-![type checking in vs code - App object has been given an unknown property target](06-vscode-type-checking-in-components.png)
+![Type checking in VS Code - App object has been given an unknown property target](06-vscode-type-checking-in-components.png)
 
 The application template has a `check` script configured that runs `svelte-check` against your code. This package allows you to detect errors and warnings normally displayed by a code editor from the command line, which makes it pretty useful for running it in a continuous integration (CI) pipeline. Just run `npm run check` to check for unused CSS, and return A11y hints and TypeScript compile errors.
 
 In this case, if you run `npm run check` (either in the VS Code console or terminal) you will get the following error:
 
-![check command being run inside vs code showing type error, ms variable should be assigned a number](07-vscode-svelte-check.png)
+![Check command being run inside VS Code showing type error, ms variable should be assigned a number](07-vscode-svelte-check.png)
 
 Even better, if you run it from the VS Code integrated terminal (you can open it with the <kbd>Ctrl</kbd> + <kbd>`</kbd> keyboard shortcut), <kbd>Cmd</kbd>/<kbd>Ctrl</kbd> clicking on the file name will take you to the line containing the error.
 
@@ -264,7 +256,7 @@ We'll define a `TodoType` type to see how TypeScript enforces that anything pass
 
    We will get the following error:
 
-   ![type error in vscode, Todo Type object requires an id property.](08-vscode-structural-typing.png)
+   ![Type error in VS Code, Todo Type object requires an id property.](08-vscode-structural-typing.png)
 
 By now you should get an idea about the kind of assistance we can get from TypeScript when building Svelte projects.
 
@@ -298,7 +290,7 @@ svelte-check found no errors and no warnings
 
 Note that if you are using a supporting code editor like VS Code, a simple way to start porting a Svelte component is to just add the `<script lang='ts'>` at the top of your component and look for the three-dotted hints:
 
-![vs code screenshot showing that when you add type="ts" to a component, it gives you three dot alert hints](09-vscode-alert-hints.png)
+![VS Code screenshot showing that when you add type="ts" to a component, it gives you three dot alert hints](09-vscode-alert-hints.png)
 
 ### Alert.svelte
 
@@ -574,7 +566,7 @@ Let's fix it.
 
 4. Finally, you'll notice the following error reported, related to where we set the `tabindex` attribute. That's because TypeScript is type checking the `<h2>` element and expects `tabindex` to be of type `number`.
 
-   ![tabindex hint inside vs code, tabindex expects a type of number, not string](10-vscode-tabindex-hint.png)
+   ![Tabindex hint inside VS Code, tabindex expects a type of number, not string](10-vscode-tabindex-hint.png)
 
    To fix it, replace `tabindex="-1"` with `tabindex={-1}`, like this:
 
@@ -771,7 +763,7 @@ import { localStore } from "./localStore";
 
 Now if we try to create a `localStore` with something that cannot be converted to JSON via `JSON.stringify()`, for example an object with a function as a property, VS Code/`validate` will complain about it:
 
-![vs code showing an error with using our store — it fails when trying to set a local storage value to something incompatible with JSON stringify](11-vscode-invalid-store.png)
+![VS Code showing an error with using our store — it fails when trying to set a local storage value to something incompatible with JSON stringify](11-vscode-invalid-store.png)
 
 And best of all, it will even work with the [`$store` auto-subscription syntax](https://svelte.dev/docs#4_Prefix_stores_with_%24_to_access_their_values). If we try to save an invalid value to our `todos` store using the `$store` syntax, like this:
 
@@ -1002,58 +994,3 @@ We saw how to work with [Visual Studio Code](https://code.visualstudio.com/) and
 In the next article we will learn how to compile and deploy our app to production. We will also see which resources are available online to go further with learning Svelte.
 
 {{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_stores","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_deployment_next", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
-
-## In this module
-
-- [Introduction to client-side frameworks](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Introduction)
-- [Framework main features](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features)
-- React
-
-  - [Getting started with React](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started)
-  - [Beginning our React todo list](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning)
-  - [Componentizing our React app](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_components)
-  - [React interactivity: Events and state](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_events_state)
-  - [React interactivity: Editing, filtering, conditional rendering](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_filtering_conditional_rendering)
-  - [Accessibility in React](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_accessibility)
-  - [React resources](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_resources)
-
-- Ember
-
-  - [Getting started with Ember](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_getting_started)
-  - [Ember app structure and componentization](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_structure_componentization)
-  - [Ember interactivity: Events, classes and state](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_interactivity_events_state)
-  - [Ember Interactivity: Footer functionality, conditional rendering](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_conditional_footer)
-  - [Routing in Ember](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_routing)
-  - [Ember resources and troubleshooting](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_resources)
-
-- Vue
-
-  - [Getting started with Vue](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_getting_started)
-  - [Creating our first Vue component](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_first_component)
-  - [Rendering a list of Vue components](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_rendering_lists)
-  - [Adding a new todo form: Vue events, methods, and models](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_methods_events_models)
-  - [Styling Vue components with CSS](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_styling)
-  - [Using Vue computed properties](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_computed_properties)
-  - [Vue conditional rendering: editing existing todos](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_conditional_rendering)
-  - [Focus management with Vue refs](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_refs_focus_management)
-  - [Vue resources](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_resources)
-
-- Svelte
-
-  - [Getting started with Svelte](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_getting_started)
-  - [Starting our Svelte Todo list app](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_Todo_list_beginning)
-  - [Dynamic behavior in Svelte: working with variables and props](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_variables_props)
-  - [Componentizing our Svelte app](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_components)
-  - [Advanced Svelte: Reactivity, lifecycle, accessibility](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_reactivity_lifecycle_accessibility)
-  - [Working with Svelte stores](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_stores)
-  - [TypeScript support in Svelte](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_TypeScript)
-  - [Deployment and next steps](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_deployment_next)
-
-- Angular
-
-  - [Getting started with Angular](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_getting_started)
-  - [Beginning our Angular todo list app](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_todo_list_beginning)
-  - [Styling our Angular app](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_styling)
-  - [Creating an item component](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_item_component)
-  - [Filtering our to-do items](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_filtering)
-  - [Building Angular applications and further resources](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_building)

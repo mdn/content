@@ -1,10 +1,7 @@
 ---
 title: translate
 slug: Web/HTML/Global_attributes/translate
-tags:
-  - Global attributes
-  - HTML
-  - Reference
+page-type: html-attribute
 browser-compat: html.global_attributes.translate
 ---
 

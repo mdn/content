@@ -1,20 +1,6 @@
 ---
 title: Grids
 slug: Learn/CSS/CSS_layout/Grids
-tags:
-  - Article
-  - Beginner
-  - CSS
-  - CSS Grids
-  - CodingScripting
-  - Grids
-  - Guide
-  - Layout
-  - Learn
-  - Tutorial
-  - grid design
-  - grid framework
-  - grid system
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/CSS_layout/Flexbox", "Learn/CSS/CSS_layout/Floats", "Learn/CSS/CSS_layout")}}
@@ -243,7 +229,7 @@ You'll now get three `1fr` tracks just as before. The first value passed to the 
 
 ### The implicit and explicit grid
 
-We've only specified column tracks so far, yet rows are being created to hold our content. This is an example of the _explicit_ versus the _implicit_ grid. The explicit grid is the one that you create using `grid-template-columns` or `grid-template-rows`. The implicit grid is created when content is placed outside of that grid, such as into our rows.
+We've only specified column tracks so far, yet rows are being created to hold our content. This is an example of the _explicit_ versus the _implicit_ grid. The explicit grid is the one that you create using `grid-template-columns` or `grid-template-rows`. The implicit grid extends the defined explicit grid when content is placed outside of that grid, such as into our rows by drawing additional grid lines.
 
 By default, tracks created in the implicit grid are `auto` sized, which in general means that they're large enough to accommodate their content. If you wish to give implicit grid tracks a size, you can use the {{cssxref("grid-auto-rows")}} and {{cssxref("grid-auto-columns")}} properties. If you add `grid-auto-rows` with a value of `100px` to your CSS, you'll see that those created rows are now 100 pixels tall.
 
@@ -685,18 +671,3 @@ In this overview, we've toured the main features of CSS Grid Layout. You should 
 - [Grid Garden](https://cssgridgarden.com/) — an educational game to learn and better understand the basics of Grid
 
 {{PreviousMenuNext("Learn/CSS/CSS_layout/Flexbox", "Learn/CSS/CSS_layout/Floats", "Learn/CSS/CSS_layout")}}
-
-## In this module
-
-- [Introduction to CSS layout](/en-US/docs/Learn/CSS/CSS_layout/Introduction)
-- [Normal flow](/en-US/docs/Learn/CSS/CSS_layout/Normal_Flow)
-- [Flexbox](/en-US/docs/Learn/CSS/CSS_layout/Flexbox)
-- [Grid](/en-US/docs/Learn/CSS/CSS_layout/Grids)
-- [Floats](/en-US/docs/Learn/CSS/CSS_layout/Floats)
-- [Positioning](/en-US/docs/Learn/CSS/CSS_layout/Positioning)
-- [Multiple-column layout](/en-US/docs/Learn/CSS/CSS_layout/Multiple-column_Layout)
-- [Responsive design](/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design)
-- [Beginner's guide to media queries](/en-US/docs/Learn/CSS/CSS_layout/Media_queries)
-- [Legacy layout methods](/en-US/docs/Learn/CSS/CSS_layout/Legacy_Layout_Methods)
-- [Supporting older browsers](/en-US/docs/Learn/CSS/CSS_layout/Supporting_Older_Browsers)
-- [Fundamental layout comprehension](/en-US/docs/Learn/CSS/CSS_layout/Fundamental_Layout_Comprehension)

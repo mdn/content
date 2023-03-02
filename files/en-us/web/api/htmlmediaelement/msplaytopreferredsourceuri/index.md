@@ -2,9 +2,8 @@
 title: HTMLMediaElement.msPlayToPreferredSourceUri
 slug: Web/API/HTMLMediaElement/msPlayToPreferredSourceURI
 page-type: web-api-instance-property
-tags:
-  - Non-standard
-  - Property
+status:
+  - non-standard
 ---
 
 {{APIRef("HTML DOM")}}
@@ -40,11 +39,11 @@ a _PlayTo_ device. This is done to conform to URI standards.
 ```
 
 ```js
-  const video = document.createElement('video');
-  document.body.appendChild(video);
+const video = document.createElement("video");
+document.body.appendChild(video);
 
-  video.src = "http://www.contoso.com/videos/video.mp4";
-  video.msPlayToPreferredSourceUri = "http://www.contoso.com/catalogid=1234";
+video.src = "http://www.contoso.com/videos/video.mp4";
+video.msPlayToPreferredSourceUri = "http://www.contoso.com/catalogid=1234";
 ```
 
 ## See also

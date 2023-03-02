@@ -2,17 +2,12 @@
 title: "-webkit-line-clamp"
 slug: Web/CSS/-webkit-line-clamp
 page-type: css-property
-tags:
-  - "-webkit-line-clamp"
-  - CSS
-  - CSS Property
-  - recipe:css-property
 browser-compat: css.properties.-webkit-line-clamp
 ---
 
 {{CSSRef}}
 
-The **`-webkit-line-clamp`** CSS property allows limiting of the contents of a {{Glossary("block container")}} to the specified number of lines.
+The **`-webkit-line-clamp`** CSS property allows limiting of the contents of a {{Glossary("block")}} to the specified number of lines.
 
 It only works in combination with the {{cssxref("display")}} property set to `-webkit-box` or `-webkit-inline-box` and the {{cssxref("-webkit-box-orient")}} property set to `vertical`.
 

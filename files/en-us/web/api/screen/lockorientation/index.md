@@ -2,14 +2,8 @@
 title: Screen.lockOrientation()
 slug: Web/API/Screen/lockOrientation
 page-type: web-api-instance-method
-tags:
-  - API
-  - CSSOM View
-  - Deprecated
-  - Method
-  - NeedsUpdate
-  - Screen Orientation
-  - screen
+status:
+  - deprecated
 browser-compat: api.Screen.lockOrientation
 ---
 

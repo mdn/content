@@ -2,12 +2,6 @@
 title: PerformanceEntry.entryType
 slug: Web/API/PerformanceEntry/entryType
 page-type: web-api-instance-property
-tags:
-  - API
-  - PerformanceEntry
-  - Property
-  - Reference
-  - Web Performance
 browser-compat: api.PerformanceEntry.entryType
 ---
 
@@ -22,49 +16,70 @@ All supported `entryTypes` are available using the static property {{domxref("Pe
 A string. The return value depends on the subtype of the `PerformanceEntry` object. Some subtypes have more than one `entryType`.
 
 - `element`
+
   - : Reports load time of elements.
 
-      The entry instance will be a {{domxref("PerformanceElementTiming")}} object.
+    The entry instance will be a {{domxref("PerformanceElementTiming")}} object.
+
 - `event`
+
   - : Reports event latencies.
 
-      The entry instance will be a {{domxref("PerformanceEventTiming")}} object.
+    The entry instance will be a {{domxref("PerformanceEventTiming")}} object.
+
 - `first-input`
+
   - : Reports the {{Glossary("first input delay")}} (FID).
 
-      The entry instance will be a {{domxref("PerformanceEventTiming")}} object.
+    The entry instance will be a {{domxref("PerformanceEventTiming")}} object.
+
 - `largest-contentful-paint`
+
   - : Reports the largest paint an element triggered on screen.
 
-       The entry instance will be a {{domxref("LargestContentfulPaint")}} object.
+    The entry instance will be a {{domxref("LargestContentfulPaint")}} object.
+
 - `longtask`
+
   - : Reports instances of long tasks.
 
-      The entry instance will be a {{domxref("PerformanceLongTaskTiming")}} object.
+    The entry instance will be a {{domxref("PerformanceLongTaskTiming")}} object.
+
 - `mark`
+
   - : Reports your own custom performance markers.
 
-      The entry instance will be a {{domxref("PerformanceMark")}} object.
+    The entry instance will be a {{domxref("PerformanceMark")}} object.
+
 - `measure`
+
   - : Reports your own custom performance measures.
 
-      The entry instance will be a {{domxref("PerformanceMeasure")}} object.
+    The entry instance will be a {{domxref("PerformanceMeasure")}} object.
+
 - `navigation`
+
   - : Reports document navigation timing.
 
-      The entry instance will be a {{domxref("PerformanceNavigationTiming")}} object.
+    The entry instance will be a {{domxref("PerformanceNavigationTiming")}} object.
+
 - `paint`
+
   - : Reports key moments of document rendering (first paint, first contentful paint) during page load.
 
-      The entry instance will be a {{domxref("PerformancePaintTiming")}} object.
+    The entry instance will be a {{domxref("PerformancePaintTiming")}} object.
+
 - `resource`
+
   - : Reports timing information for resources in a document.
 
-      The entry instance will be a {{domxref("PerformanceResourceTiming")}} object.
+    The entry instance will be a {{domxref("PerformanceResourceTiming")}} object.
+
 - `taskattribution`
+
   - : Reports the type of work that contributed significantly to the long task.
 
-      The entry instance will be a {{domxref("TaskAttributionTiming")}} object.
+    The entry instance will be a {{domxref("TaskAttributionTiming")}} object.
 
 ## Examples
 
@@ -73,10 +88,12 @@ A string. The return value depends on the subtype of the `PerformanceEntry` obje
 The `entryType` property can be useful when filtering out specific performance entries. For example, you might want to check all script resources, so you would check for an `entryType` of `"resource"` and an {{domxref("PerformanceResourceTiming.initiatorType", "initiatorType")}} of `"script"`.
 
 ```js
-const scriptResources = performance.getEntries().filter((entry) => 
-  entry.entryType === "resource" && 
-  entry.initiatorType === "script"
-);
+const scriptResources = performance
+  .getEntries()
+  .filter(
+    (entry) =>
+      entry.entryType === "resource" && entry.initiatorType === "script"
+  );
 console.log(scriptResources);
 ```
 
@@ -84,7 +101,7 @@ console.log(scriptResources);
 
 Both, {{domxref("Performance")}} and {{domxref("PerformanceObserver")}}, provide methods that allow you to get performance entries by type directly. You don't necessarily need the `entryType` property for that, instead you might use {{domxref("Performance.getEntriesByType()")}} or {{domxref("PerformanceObserverEntryList.getEntriesByType()")}}.
 
-Also, when observing with a {{domxref("PerformanceObserver")}}, the {{domxref("PerformanceObserver.observe", "observe()")}} method takes an an array of `entryTypes` in its options object where you can decide which entry types to observe.
+Also, when observing with a {{domxref("PerformanceObserver")}}, the {{domxref("PerformanceObserver.observe", "observe()")}} method takes an array of `entryTypes` in its options object where you can decide which entry types to observe.
 
 ```js
 // Log all resource entries at this point
@@ -96,8 +113,8 @@ resources.forEach((entry) => {
 // PerformanceObserver version
 // Log all resource entries when they are available
 function perfObserver(list, observer) {
-  list.getEntriesByType("resource").forEach((entry) =>  {
-     console.log(`${entry.name}'s duration: ${entry.duration}`);
+  list.getEntriesByType("resource").forEach((entry) => {
+    console.log(`${entry.name}'s duration: ${entry.duration}`);
   });
 }
 const observer = new PerformanceObserver(perfObserver);

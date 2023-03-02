@@ -1,6 +1,7 @@
 ---
 title: browserSettings.zoomSiteSpecific
 slug: Mozilla/Add-ons/WebExtensions/API/browserSettings/zoomSiteSpecific
+page-type: webextension-api-property
 tags:
   - API
   - Add-ons

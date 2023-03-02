@@ -1,11 +1,7 @@
 ---
-title: Regular expression syntax cheatsheet
+title: Regular expression syntax cheat sheet
 slug: Web/JavaScript/Guide/Regular_Expressions/Cheatsheet
-tags:
-  - Cheatsheet
-  - Guide
-  - JavaScript
-  - RegExp
+page-type: guide
 ---
 
 {{jsSidebar("JavaScript Guide")}}

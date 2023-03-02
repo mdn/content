@@ -1,12 +1,6 @@
 ---
 title: An overview of accessible web applications and widgets
 slug: Web/Accessibility/An_overview_of_accessible_web_applications_and_widgets
-tags:
-  - ARIA
-  - Accessibility
-  - Guide
-  - Web apps
-  - Widget
 ---
 
 <section id="Quick_links">

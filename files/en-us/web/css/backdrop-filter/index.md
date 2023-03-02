@@ -2,17 +2,6 @@
 title: backdrop-filter
 slug: Web/CSS/backdrop-filter
 page-type: css-property
-tags:
-  - CSS
-  - CSS Property
-  - Graphics
-  - Layout
-  - NeedsContent
-  - Reference
-  - SVG
-  - SVG Filter
-  - Web
-  - recipe:css-property
 browser-compat: css.properties.backdrop-filter
 ---
 
@@ -94,8 +83,7 @@ body {
 }
 
 body {
-  background-image: url(https://picsum.photos/id/1080/6858/4574),
-    linear-gradient(rgb(219, 166, 166), rgb(0, 0, 172));
+  background-image: url("anemones.jpg"), linear-gradient(rgb(219, 166, 166), rgb(0, 0, 172));
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;

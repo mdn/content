@@ -1,8 +1,7 @@
 ---
 title: ICANN
 slug: Glossary/ICANN
-tags:
-  - Infrastructure
+page-type: glossary-definition
 ---
 
 **ICANN** (Internet Corporation for Assigned Names and Numbers) is an international nonprofit that maintains the {{glossary("DNS","domain name system")}} and the record of {{glossary("IP address","IP addresses")}}.

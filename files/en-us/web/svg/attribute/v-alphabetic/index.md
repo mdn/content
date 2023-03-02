@@ -1,6 +1,7 @@
 ---
 title: v-alphabetic
 slug: Web/SVG/Attribute/v-alphabetic
+page-type: svg-attribute
 tags:
   - Deprecated
   - SVG

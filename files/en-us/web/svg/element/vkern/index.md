@@ -1,6 +1,7 @@
 ---
 title: <vkern>
 slug: Web/SVG/Element/vkern
+page-type: svg-element
 tags:
   - Deprecated
   - Element

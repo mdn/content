@@ -1,12 +1,7 @@
 ---
 title: DataView.prototype.getInt32()
 slug: Web/JavaScript/Reference/Global_Objects/DataView/getInt32
-tags:
-  - DataView
-  - JavaScript
-  - Method
-  - Prototype
-  - TypedArrays
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.DataView.getInt32
 ---
 

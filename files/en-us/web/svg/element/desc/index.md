@@ -1,6 +1,7 @@
 ---
 title: <desc>
 slug: Web/SVG/Element/desc
+page-type: svg-element
 tags:
   - Element
   - SVG

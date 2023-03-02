@@ -2,9 +2,6 @@
 title: Specification tables
 slug: MDN/Writing_guidelines/Page_structures/Specification_tables
 page-type: mdn-writing-guide
-tags:
-  - meta
-  - writing-guide
 ---
 
 {{MDNSidebar}}

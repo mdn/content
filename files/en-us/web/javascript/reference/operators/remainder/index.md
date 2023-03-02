@@ -1,17 +1,13 @@
 ---
 title: Remainder (%)
 slug: Web/JavaScript/Reference/Operators/Remainder
-tags:
-  - JavaScript
-  - Language feature
-  - Operator
-  - Reference
+page-type: javascript-operator
 browser-compat: javascript.operators.remainder
 ---
 
 {{jsSidebar("Operators")}}
 
-The remainder operator (`%`) returns the remainder left over when one
+The **remainder (`%`)** operator returns the remainder left over when one
 operand is divided by a second operand. It always takes the sign of the dividend.
 
 {{EmbedInteractiveExample("pages/js/expressions-remainder.html")}}
@@ -35,35 +31,35 @@ Note that while in most languages, '%' is a remainder operator, in some (e.g. [P
 ### Remainder with positive dividend
 
 ```js
-13 % 5  // 3
-1 % -2 // 1
-1 % 2  // 1
-2 % 3  // 2
-5.5 % 2 // 1.5
+13 % 5; // 3
+1 % -2; // 1
+1 % 2; // 1
+2 % 3; // 2
+5.5 % 2; // 1.5
 ```
 
 ### Remainder with negative dividend
 
 ```js
--13 % 5 // -3
--1 % 2  // -1
--4 % 2  // -0
+-13 % 5; // -3
+-1 % 2;  // -1
+-4 % 2;  // -0
 ```
 
 ### Remainder with NaN
 
 ```js
-NaN % 2 // NaN
+NaN % 2; // NaN
 ```
 
 ### Remainder with Infinity
 
 ```js
-Infinity % 2 // NaN
-Infinity % 0 // NaN
-Infinity % Infinity // NaN
-2 % Infinity // 2
-0 % Infinity // 0
+Infinity % 2; // NaN
+Infinity % 0; // NaN
+Infinity % Infinity; // NaN
+2 % Infinity; // 2
+0 % Infinity; // 0
 ```
 
 ## Specifications

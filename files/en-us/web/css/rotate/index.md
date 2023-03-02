@@ -2,21 +2,14 @@
 title: rotate
 slug: Web/CSS/rotate
 page-type: css-property
-tags:
-  - CSS
-  - CSS Property
-  - Reference
-  - Rotate
-  - Transforms
-  - angle
-  - recipe:css-property
-  - rotation
 browser-compat: css.properties.rotate
 ---
 
 {{CSSRef}}
 
 The **`rotate`** [CSS](/en-US/docs/Web/CSS) property allows you to specify rotation transforms individually and independently of the {{CSSxRef("transform")}} property. This maps better to typical user interface usage, and saves having to remember the exact order of transform functions to specify in the `transform` property.
+
+{{EmbedInteractiveExample("pages/css/rotate.html")}}
 
 ## Syntax
 
@@ -66,53 +59,48 @@ rotate: unset;
 
 ## Examples
 
-### Rotate an element on hover
+### Rotating an element on hover
+
+The following example shows how to use the `rotate` property to rotate an element along various axes on hover.
+The first box rotates 90 degrees on the Z axis hover, the second rotates 180 degrees on the Y axis on hover, and the third rotates 360 degrees on hover around a vector defined by coordinates.
 
 #### HTML
 
 ```html
-<div>
-  <p class="rotate">Rotation</p>
-</div>
+<div class="box" id="box1">rotate Z</div>
+<div class="box" id="box2">rotate Y</div>
+<div class="box" id="box3">vector & angle</div>
 ```
 
 #### CSS
 
 ```css
-* {
-  box-sizing: border-box;
-}
-
-html {
-  font-family: sans-serif;
-}
-
-div {
-  width: 150px;
-  margin: 0 auto;
-}
-
-p {
-  padding: 10px 5px;
-  border: 3px solid black;
-  border-radius: 20px;
-  width: 150px;
-  font-size: 1.2rem;
+.box {
+  display: inline-block;
+  margin: 1em;
+  min-width: 6.5em;
+  line-height: 6.5em;
   text-align: center;
+  transition: 1s ease-in-out;
+  border: 0.25em dotted;
 }
 
-.rotate {
-  transition: rotate 1s;
+#box1:hover {
+  rotate: 90deg;
 }
 
-div:hover .rotate {
-  rotate: 1 -0.5 1 180deg;
+#box2:hover {
+  rotate: y 180deg;
+}
+
+#box3:hover {
+  rotate: 1 2 1 360deg;
 }
 ```
 
 #### Result
 
-{{EmbedLiveSample("Rotate_an_element_on_hover")}}
+{{EmbedLiveSample("Rotating_an_element_on_hover", "100%", 150)}}
 
 ## Specifications
 

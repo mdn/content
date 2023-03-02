@@ -1,11 +1,7 @@
 ---
 title: WeakRef() constructor
 slug: Web/JavaScript/Reference/Global_Objects/WeakRef/WeakRef
-tags:
-  - Constructor
-  - JavaScript
-  - Reference
-  - WeakRef
+page-type: javascript-constructor
 browser-compat: javascript.builtins.WeakRef.WeakRef
 ---
 

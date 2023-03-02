@@ -2,12 +2,6 @@
 title: MIDIPort.state
 slug: Web/API/MIDIPort/state
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - state
-  - MIDIPort
 browser-compat: api.MIDIPort.state
 ---
 

@@ -2,19 +2,14 @@
 title: 'USB: disconnect event'
 slug: Web/API/USB/disconnect_event
 page-type: web-api-event
-tags:
-  - API
-  - Event
-  - Reference
-  - USB
-  - WebUSB
-  - Experimental
+status:
+  - experimental
 browser-compat: api.USB.disconnect_event
 ---
 
 {{APIRef("WebUSB API")}}{{SeeCompatTable}}
 
-The **`connect`** event of the {{DOMxRef("USB")}} interface is fired whenever a paired device is disconnected.
+The **`disconnect`** event of the {{DOMxRef("USB")}} interface is fired whenever a paired device is disconnected.
 
 ## Syntax
 

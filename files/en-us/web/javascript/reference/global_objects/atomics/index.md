@@ -1,11 +1,7 @@
 ---
 title: Atomics
 slug: Web/JavaScript/Reference/Global_Objects/Atomics
-tags:
-  - JavaScript
-  - Namespace
-  - Shared Memory
-  - Specifications
+page-type: javascript-namespace
 browser-compat: javascript.builtins.Atomics
 ---
 

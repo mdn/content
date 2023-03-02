@@ -2,10 +2,8 @@
 title: MSGraphicsTrust
 slug: Web/API/MSGraphicsTrust
 page-type: web-api-interface
-tags:
-  - msGraphicsTrust
-  - Interface
-  - Non-standard
+status:
+  - non-standard
 ---
 
 {{APIRef("HTML DOM")}}

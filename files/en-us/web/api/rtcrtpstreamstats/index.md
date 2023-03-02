@@ -2,18 +2,6 @@
 title: RTCRtpStreamStats
 slug: Web/API/RTCRtpStreamStats
 page-type: web-api-interface
-tags:
-  - API
-  - Dictionary
-  - Interface
-  - RTCRtpStreamStats
-  - RTP
-  - Reference
-  - Statistics
-  - Stats
-  - WebRTC
-  - WebRTC API
-  - rtc
 browser-compat: api.RTCRtpStreamStats
 ---
 
@@ -43,11 +31,6 @@ _The `RTCRtpStreamStats` dictionary is based on {{domxref("RTCStats")}}, and inh
   - : A string which uniquely identifies the {{domxref("RTCMediaStreamTrackStats")}} object representing the associated {{domxref("MediaStreamTrack")}}. This is _not_ the same as the value of {{domxref("MediaStreamTrack.id")}}.
 - {{domxref("RTCRtpStreamStats.transportId", "transportId")}}
   - : A string uniquely identifying the object which was inspected to produce the {{domxref("RTCTransportStats")}} object associated with this RTP stream.
-
-#### Obsolete fields
-
-- {{domxref("RTCRtpStreamStats.kind", "mediaType")}} {{Deprecated_Inline}}
-  - : Renamed to {{domxref("RTCRtpStreamStats.kind", "kind")}} in the specification in February 2018. See {{SectionOnPage("/en-US/docs/Web/API/RTCRtpStreamStats/kind", "Browser Compatibility", "code")}} to determine when browsers made the transition.
 
 ### Local-only measurements
 

@@ -2,18 +2,9 @@
 title: WebRTC connectivity
 slug: Web/API/WebRTC_API/Connectivity
 page-type: guide
-tags:
-  - API
-  - Advanced
-  - Audio
-  - Draft
-  - Guide
-  - Media
-  - Video
-  - WebRTC
 ---
 
-{{WebRTCSidebar}}
+{{DefaultAPISidebar("WebRTC")}}
 
 This article describes how the various WebRTC-related protocols interact with one another in order to create a connection and transfer data and/or media among peers.
 
@@ -129,7 +120,7 @@ In addition, the ICE agent will automatically initiate a rollback when a peer th
 
 ### ICE restarts
 
-For now, see {{SectionOnPage("/en-US/docs/Web/API/WebRTC_API/Session_lifetime", "ICE restart")}}.
+Learn about the [ICE restart](/en-US/docs/Web/API/WebRTC_API/Session_lifetime#ice_restart) process.
 
 ## The entire exchange in a complicated diagram
 

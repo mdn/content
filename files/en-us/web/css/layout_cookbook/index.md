@@ -2,12 +2,6 @@
 title: CSS Layout cookbook
 slug: Web/CSS/Layout_cookbook
 page-type: landing-page
-tags:
-  - CSS
-  - Guide
-  - Layout
-  - cookbook
-  - recipes
 ---
 
 {{CSSRef}}
@@ -33,4 +27,4 @@ The CSS layout cookbook aims to bring together recipes for common layout pattern
 
 ## Contribute a Recipe
 
-As with all of MDN we would love you to contribute a recipe in the same format as the ones shown above. [See this page](/en-US/docs/Web/CSS/Layout_cookbook/Contribute_a_recipe) for a template and guidelines for writing your own example.
+As with all of MDN we would love you to contribute a recipe in the same format as the ones shown above. See the [guide for adding Layout Cookbook recipes](/en-US/docs/Web/CSS/Layout_cookbook/Contribute_a_recipe) for a template and guidelines for writing your own example.

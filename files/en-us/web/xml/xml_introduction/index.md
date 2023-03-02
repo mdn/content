@@ -1,11 +1,6 @@
 ---
 title: XML introduction
 slug: Web/XML/XML_introduction
-tags:
-  - Beginner
-  - Introduction
-  - NeedsContent
-  - XML
 ---
 
 {{QuickLinksWithSubpages("/en-US/docs/Web/XML")}}
@@ -30,7 +25,7 @@ XML - declaration is not a tag. It is used for the transmission of the meta-data
 
 - version:
   - : Used version XML in this document.
-- encoding :
+- encoding:
   - : Used encoding in this document.
 
 ### Comments

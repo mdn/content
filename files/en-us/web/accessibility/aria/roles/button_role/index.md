@@ -1,13 +1,6 @@
 ---
 title: "ARIA: button role"
 slug: Web/Accessibility/ARIA/Roles/button_role
-tags:
-  - ARIA
-  - ARIA Role
-  - ARIA button
-  - Accessibility
-  - Button Role
-  - Reference
 spec-urls:
   - https://w3c.github.io/aria/#button
   - https://w3c.github.io/aria-practices/#button
@@ -101,7 +94,7 @@ Buttons can be operated by mouse, touch, and keyboard users. For native HTML `<b
 - `onclick`
   - : Handles the event raised when the button is activated using a mouse click or touch event.
 - `onKeyDown`
-  - : Handles the event raised when the button is activated using the Enter or Space key on the keyboard. (Note not the [deprecated onKeyPress](/en-US/docs/Web/API/Document/keypress_event))
+  - : Handles the event raised when the button is activated using the Enter or Space key on the keyboard. (Note not the [deprecated onKeyPress](/en-US/docs/Web/API/Element/keypress_event))
 
 ## Examples
 

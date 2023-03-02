@@ -1,14 +1,7 @@
 ---
 title: Array.prototype.forEach()
 slug: Web/JavaScript/Reference/Global_Objects/Array/forEach
-tags:
-  - Array
-  - ECMAScript 5
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - Polyfill
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.Array.forEach
 ---
 
@@ -68,7 +61,7 @@ The `forEach()` method is an [iterative method](/en-US/docs/Web/JavaScript/Refer
 
 `forEach()` does not mutate the array on which it is called, but the function provided as `callbackFn` can. Note, however, that the length of the array is saved _before_ the first invocation of `callbackFn`. Therefore:
 
-- `callbackFn` will not visit any elements added beyond the array's initial length when the call to `every()` began.
+- `callbackFn` will not visit any elements added beyond the array's initial length when the call to `forEach()` began.
 - Changes to already-visited indexes do not cause `callbackFn` to be invoked on them again.
 - If an existing, yet-unvisited element of the array is changed by `callbackFn`, its value passed to the `callbackFn` will be the value at the time that element gets visited. [Deleted](/en-US/docs/Web/JavaScript/Reference/Operators/delete) elements are not visited.
 
@@ -125,7 +118,7 @@ The callback function is not invoked for the missing value at index 2.
 ### Converting a for loop to forEach
 
 ```js
-const items = ['item1', 'item2', 'item3'];
+const items = ["item1", "item2", "item3"];
 const copyItems = [];
 
 // before
@@ -235,10 +228,10 @@ Because element `four` is now at an earlier position in the array,
 `forEach()` does not make a copy of the array before iterating.
 
 ```js
-const words = ['one', 'two', 'three', 'four'];
+const words = ["one", "two", "three", "four"];
 words.forEach((word) => {
   console.log(word);
-  if (word === 'two') {
+  if (word === "two") {
     words.shift(); //'one' will delete from array
   }
 }); // one // two // four
@@ -262,7 +255,7 @@ const flatten = (arr) => {
     }
   });
   return result;
-}
+};
 
 // Usage
 const nested = [1, 2, 3, [4, 5, [6, 7], 8, 9]];

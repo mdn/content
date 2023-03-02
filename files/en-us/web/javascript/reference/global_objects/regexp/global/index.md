@@ -1,13 +1,7 @@
 ---
 title: RegExp.prototype.global
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/global
-tags:
-  - JavaScript
-  - Property
-  - Prototype
-  - Reference
-  - RegExp
-  - Regular Expressions
+page-type: javascript-instance-accessor-property
 browser-compat: javascript.builtins.RegExp.global
 ---
 
@@ -38,8 +32,8 @@ const str1 = str.replace(regex, "");
 console.log(str1); // example
 
 const regex1 = /foo/;
-const str2 = str.replace(regex1, '');
-console.log(str2);  // examplefoo
+const str2 = str.replace(regex1, "");
+console.log(str2); // examplefoo
 ```
 
 ## Specifications

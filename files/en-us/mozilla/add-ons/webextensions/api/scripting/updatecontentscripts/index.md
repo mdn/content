@@ -1,6 +1,7 @@
 ---
 title: scripting.updateContentScripts()
 slug: Mozilla/Add-ons/WebExtensions/API/scripting/updateContentScripts
+page-type: webextension-api-function
 tags:
   - API
   - Add-ons
@@ -74,5 +75,3 @@ try {
 {{Compat}}
 
 > **Note:** This API is based on Chromium's [`chrome.scripting`](https://developer.chrome.com/docs/extensions/reference/scripting/#method-updateContentScripts) API.
->
-> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.

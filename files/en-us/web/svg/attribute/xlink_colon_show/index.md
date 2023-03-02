@@ -1,6 +1,7 @@
 ---
 title: xlink:show
 slug: Web/SVG/Attribute/xlink:show
+page-type: svg-attribute
 tags:
   - Deprecated
   - SVG

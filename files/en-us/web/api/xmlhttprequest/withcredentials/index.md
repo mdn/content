@@ -2,16 +2,6 @@
 title: XMLHttpRequest.withCredentials
 slug: Web/API/XMLHttpRequest/withCredentials
 page-type: web-api-instance-property
-tags:
-  - AJAX
-  - API
-  - Property
-  - Reference
-  - Security
-  - XHR
-  - XMLHttpRequest
-  - credentials
-  - withCredentials
 browser-compat: api.XMLHttpRequest.withCredentials
 ---
 

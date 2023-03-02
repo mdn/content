@@ -1,12 +1,9 @@
 ---
 title: Creating a cross-browser video player
 slug: Web/Guide/Audio_and_video_delivery/cross_browser_video_player
-tags:
-  - Apps
-  - HTML
-  - Video
-  - full screen
 ---
+
+{{QuickLinksWithSubPages("/en-US/docs/Web/Guide/Audio_and_video_delivery")}}
 
 This article describes a simple HTML video player that uses the Media and Fullscreen APIs and works across most major desktop and mobile browsers. As well as working fullscreen, the player features custom controls rather than just using the browser defaults. The player controls themselves won't be styled beyond the basics required to get them working; full styling of the player will be taken care of in a future article.
 
@@ -103,22 +100,22 @@ HTML comes with a JavaScript [Media API](/en-US/docs/Web/API/HTMLMediaElement) t
 
 Before dealing with the individual buttons, a number of initialization calls are required.
 
-To begin with, it's a good idea to first check if the browser actually supports the {{ htmlelement("video") }} element and to only setup the custom controls if it does. This is done by checking if a created {{ htmlelement("video") }} element supports [the `canPlayType()` method](https://html.spec.whatwg.org/multipage/media.html#dom-navigator-canplaytype), which any supported HTML {{ htmlelement("video") }} element should.
+To begin with, it's a good idea to first check if the browser actually supports the {{ htmlelement("video") }} element and to only set up the custom controls if it does. This is done by checking if a created {{ htmlelement("video") }} element supports [the `canPlayType()` method](https://html.spec.whatwg.org/multipage/media.html#dom-navigator-canplaytype), which any supported HTML {{ htmlelement("video") }} element should.
 
 ```js
-const supportsVideo = !!document.createElement('video').canPlayType;
+const supportsVideo = !!document.createElement("video").canPlayType;
 if (supportsVideo) {
-   // set up custom controls
-   // …
+  // set up custom controls
+  // …
 }
 ```
 
 Once it has been confirmed that the browser does indeed support HTML video, it's time to set up the custom controls. A number of variables pointing to HTML elements are required:
 
 ```js
-const videoContainer = document.getElementById('videoContainer');
-const video = document.getElementById('video');
-const videoControls = document.getElementById('video-controls');
+const videoContainer = document.getElementById("videoContainer");
+const video = document.getElementById("video");
+const videoControls = document.getElementById("video-controls");
 ```
 
 As mentioned earlier, the browser's default controls now need to be disabled, and the custom controls need to be displayed:
@@ -128,20 +125,20 @@ As mentioned earlier, the browser's default controls now need to be disabled, an
 video.controls = false;
 
 // Display the user defined video controls
-videoControls.style.display = 'block';
+videoControls.style.display = "block";
 ```
 
 With that done, a variable pointing to each of the buttons is now required:
 
 ```js
-const playpause = document.getElementById('playpause');
-const stop = document.getElementById('stop');
-const mute = document.getElementById('mute');
-const volinc = document.getElementById('volinc');
-const voldec = document.getElementById('voldec');
-const progress = document.getElementById('progress');
-const progressBar = document.getElementById('progress-bar');
-const fullscreen = document.getElementById('fs');
+const playpause = document.getElementById("playpause");
+const stop = document.getElementById("stop");
+const mute = document.getElementById("mute");
+const volinc = document.getElementById("volinc");
+const voldec = document.getElementById("voldec");
+const progress = document.getElementById("progress");
+const progressBar = document.getElementById("progress-bar");
+const fullscreen = document.getElementById("fs");
 ```
 
 Using these handles, events can now be attached to each of the custom control buttons making them interactive. Most of these buttons require a simple `click` event listener to be added, and a Media API defined method and/or attributes to be called/checked on the video.
@@ -149,7 +146,7 @@ Using these handles, events can now be attached to each of the custom control bu
 ### Play/Pause
 
 ```js
-playpause.addEventListener('click', (e) => {
+playpause.addEventListener("click", (e) => {
   if (video.paused || video.ended) {
     video.play();
   } else {
@@ -158,12 +155,12 @@ playpause.addEventListener('click', (e) => {
 });
 ```
 
-When a `click` event is detected on the play/pause button, the handler first of all checks if the video is currently paused or has ended (via the Media API's `paused` and `ended` attributes); if so, it uses the `play()` method to playback the video. Otherwise the video must be playing, so it is paused using the `pause()` method.
+When a `click` event is detected on the play/pause button, the handler first of all checks if the video is currently paused or has ended (via the Media API's `paused` and `ended` attributes); if so, it uses the `play()` method to play back the video. Otherwise the video must be playing, so it is paused using the `pause()` method.
 
 ### Stop
 
 ```js
-stop.addEventListener('click', (e) => {
+stop.addEventListener("click", (e) => {
   video.pause();
   video.currentTime = 0;
   progress.value = 0;
@@ -175,7 +172,7 @@ The Media API doesn't have a `stop` method, so to mimic this the video is paused
 ### Mute
 
 ```js
-mute.addEventListener('click', (e) => {
+mute.addEventListener("click", (e) => {
   video.muted = !video.muted;
 });
 ```
@@ -185,11 +182,11 @@ The mute button is a simple toggle button that uses the Media API's `muted` attr
 ### Volume
 
 ```js
-volinc.addEventListener('click', (e) => {
-  alterVolume('+');
+volinc.addEventListener("click", (e) => {
+  alterVolume("+");
 });
-voldec.addEventListener('click', (e) => {
-  alterVolume('-');
+voldec.addEventListener("click", (e) => {
+  alterVolume("-");
 });
 ```
 
@@ -198,9 +195,9 @@ Two volume control buttons have been defined, one for increasing the volume and 
 ```js
 function alterVolume(dir) {
   const currentVolume = Math.floor(video.volume * 10) / 10;
-  if (dir === '+' && currentVolume < 1) {
+  if (dir === "+" && currentVolume < 1) {
     video.volume += 0.1;
-  } else if (dir === '-' && currentVolume > 0) {
+  } else if (dir === "-" && currentVolume > 0) {
     video.volume -= 0.1;
   }
 }
@@ -215,8 +212,8 @@ When the {{ htmlelement("progress") }} element was defined above in the HTML, on
 Ideally, the correct value of the video's `duration` attribute is available when the `loadedmetadata` event is raised, which occurs when the video's metadata has been loaded:
 
 ```js
-video.addEventListener('loadedmetadata', () => {
-  progress.setAttribute('max', video.duration);
+video.addEventListener("loadedmetadata", () => {
+  progress.setAttribute("max", video.duration);
 });
 ```
 
@@ -225,21 +222,26 @@ Unfortunately in some mobile browsers, when `loadedmetadata` is raised — if it
 Another event, `timeupdate`, is raised periodically as the video is being played through. This event is ideal for updating the progress bar's value, setting it to the value of the video's `currentTime` attribute, which indicates how far through the video the current playback is.
 
 ```js
-video.addEventListener('timeupdate', () => {
+video.addEventListener("timeupdate", () => {
   progress.value = video.currentTime;
-  progressBar.style.width = `${Math.floor(video.currentTime * 100 / video.duration)}%`;
+  progressBar.style.width = `${Math.floor(
+    (video.currentTime * 100) / video.duration
+  )}%`;
 });
 ```
 
-As the `timeupdate` event is raised, the `progress` element's `value` attribute is set to the video's `currentTime`. The {{ htmlelement("span") }} element mentioned earlier, for browsers that do not support the {{ htmlelement("progress") }} element (e.g. Internet Explorer 9), is also updated at this time, setting its width to be a percentage of the total time played. This span has a solid CSS background color, which helps it provide the same visual feedback as a {{ htmlelement("progress") }} element.
+As the `timeupdate` event is raised, the `progress` element's `value` attribute is set to the video's `currentTime`. The {{ htmlelement("span") }} element mentioned earlier, for browsers that do not support the {{ htmlelement("progress") }} element, is also updated at this time, setting its width to be a percentage of the total time played. This span has a solid CSS background color, which helps it provide the same visual feedback as a {{ htmlelement("progress") }} element.
 
 Coming back to the `video.duration` problem mentioned above, when the `timeupdate` event is raised, in most mobile browsers the video's `duration` attribute should now have the correct value. This can be taken advantage of to set the `progress` element's `max` attribute if it is currently not set:
 
 ```js
-video.addEventListener('timeupdate', () => {
-  if (!progress.getAttribute('max')) progress.setAttribute('max', video.duration);
+video.addEventListener("timeupdate", () => {
+  if (!progress.getAttribute("max"))
+    progress.setAttribute("max", video.duration);
   progress.value = video.currentTime;
-  progressBar.style.width = `${Math.floor(video.currentTime * 100 / video.duration)}%`;
+  progressBar.style.width = `${Math.floor(
+    (video.currentTime * 100) / video.duration
+  )}%`;
 });
 ```
 
@@ -250,9 +252,9 @@ video.addEventListener('timeupdate', () => {
 Another feature of most browser default video control sets is the ability to click on the video's progress bar to "skip ahead" to a different point in the video. This can also be achieved by adding a simple `click` event listener to the `progress` element:
 
 ```js
-progress.addEventListener('click', (e) => {
+progress.addEventListener("click", (e) => {
   const rect = progress.getBoundingClientRect();
-  const pos = (e.pageX  - rect.left) / progress.offsetWidth;
+  const pos = (e.pageX - rect.left) / progress.offsetWidth;
   video.currentTime = pos * video.duration;
 });
 ```
@@ -263,20 +265,20 @@ This piece of code uses the clicked position to (roughly) work out where in the 
 
 The Fullscreen API should be straight forward to use: the user clicks a button, if the video is in fullscreen mode: cancel it, otherwise enter fullscreen mode.
 
-Alas it has been implemented in browsers in a number of weird and wonderful ways which requires a lot of extra code to check for various prefixed versions of attributes and methods so as to call the right one.
+Alas it has been implemented in browsers in a number of weird and wonderful ways which requires a lot of extra code to check for various prefixed versions of attributes and methods to call the right one.
 
 The visibility of the fullscreen button depends on whether the browser supports the Fullscreen API and that it is enabled:
 
 ```js
 if (!document?.fullscreenEnabled) {
-  fullscreen.style.display = 'none';
+  fullscreen.style.display = "none";
 }
 ```
 
 Naturally the fullscreen button needs to actually do something, so, like the other buttons, a `click` event handler is attached in which we call a user defined function `handleFullscreen`:
 
 ```js
-fullscreen.addEventListener('click', (e) => {
+fullscreen.addEventListener("click", (e) => {
   handleFullscreen();
 });
 ```
@@ -303,14 +305,14 @@ Another user defined function — `setFullscreenData()` — is also called, whic
 
 ```js
 function setFullscreenData(state) {
-  videoContainer.setAttribute('data-fullscreen', !!state);
+  videoContainer.setAttribute("data-fullscreen", !!state);
 }
 ```
 
 This is used to set some basic CSS to improve the styling of the custom controls when they are in fullscreen (see the sample code for further details). When a video goes into fullscreen mode, it usually displays a message indicating that the user can press the _Esc_ key to exit fullscreen mode, so the code also needs to listen for relevant events in order to call the `setFullscreenData()` function to ensure the control styling is correct:
 
 ```js
-document.addEventListener('fullscreenchange', (e) => {
+document.addEventListener("fullscreenchange", (e) => {
   setFullscreenData(!!document.fullscreenElement);
 });
 ```

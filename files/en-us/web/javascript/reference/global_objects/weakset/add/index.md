@@ -1,12 +1,7 @@
 ---
 title: WeakSet.prototype.add()
 slug: Web/JavaScript/Reference/Global_Objects/WeakSet/add
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Prototype
-  - WeakSet
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.WeakSet.add
 ---
 

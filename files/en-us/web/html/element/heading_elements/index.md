@@ -1,12 +1,7 @@
 ---
 title: '<h1>–<h6>: The HTML Section Heading elements'
 slug: Web/HTML/Element/Heading_Elements
-tags:
-  - Element
-  - HTML
-  - HTML sections
-  - Reference
-  - Web
+page-type: html-element
 browser-compat: html.elements.h1
 ---
 
@@ -20,12 +15,12 @@ The **`<h1>`** to **`<h6>`** [HTML](/en-US/docs/Web/HTML) elements represent six
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories"
+        <a href="/en-US/docs/Web/HTML/Content_categories"
           >Content categories</a
         >
       </th>
       <td>
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
           >Flow content</a
         >, heading content, palpable content.
       </td>
@@ -33,7 +28,7 @@ The **`<h1>`** to **`<h6>`** [HTML](/en-US/docs/Web/HTML) elements represent six
     <tr>
       <th scope="row">Permitted content</th>
       <td>
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content"
           >Phrasing content</a
         >.
       </td>
@@ -46,7 +41,7 @@ The **`<h1>`** to **`<h6>`** [HTML](/en-US/docs/Web/HTML) elements represent six
       <th scope="row">Permitted parents</th>
       <td>
         Any element that accepts
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
           >flow content</a
         >.
       </td>
@@ -62,8 +57,8 @@ The **`<h1>`** to **`<h6>`** [HTML](/en-US/docs/Web/HTML) elements represent six
     <tr>
       <th scope="row">Permitted ARIA roles</th>
       <td>
-        {{ARIARole("tab")}}, {{ARIARole("presentation")}} or
-        {{ARIARole("none")}}
+        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/tab_role"><code>tab</code></a>, <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/presentation_role"><code>presentation</code></a> or
+        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/none_role"><code>none</code></a>
       </td>
     </tr>
     <tr>

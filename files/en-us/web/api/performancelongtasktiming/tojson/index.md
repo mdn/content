@@ -2,16 +2,12 @@
 title: PerformanceLongTaskTiming.toJSON()
 slug: Web/API/PerformanceLongTaskTiming/toJSON
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - Web Performance,
-  - Experimental
+status:
+  - experimental
 browser-compat: api.PerformanceLongTaskTiming.toJSON
 ---
 
-{{APIRef("Performance API")}}
+{{APIRef("Performance API")}}{{SeeCompatTable}}
 
 The **`toJSON()`** method of the {{domxref("PerformanceLongTaskTiming")}} interface is a {{Glossary("Serialization","serializer")}}; it returns a JSON representation of the {{domxref("PerformanceLongTaskTiming")}} object.
 

@@ -1,12 +1,7 @@
 ---
 title: WeakMap.prototype.has()
 slug: Web/JavaScript/Reference/Global_Objects/WeakMap/has
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Prototype
-  - WeakMap
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.WeakMap.has
 ---
 

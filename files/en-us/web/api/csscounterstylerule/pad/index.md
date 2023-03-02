@@ -2,12 +2,6 @@
 title: CSSCounterStyleRule.pad
 slug: Web/API/CSSCounterStyleRule/pad
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - pad
-  - CSSCounterStyleRule
 browser-compat: api.CSSCounterStyleRule.pad
 ---
 

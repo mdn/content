@@ -1,12 +1,6 @@
 ---
-title: "aria-keyshortcuts"
+title: aria-keyshortcuts
 slug: Web/Accessibility/ARIA/Attributes/aria-keyshortcuts
-tags:
-  - Accessibility
-  - ARIA
-  - ARIA attribute
-  - ARIA property
-  - aria-keyshortcuts
 spec-urls:
   - https://w3c.github.io/aria/#aria-keyshortcuts
   - https://w3c.github.io/aria-practices/#kbd_shortcuts
@@ -88,7 +82,8 @@ The `aria-keyshortcuts` attribute is very similar to the [problematic](https://w
 ```html
 <p>
   Press the
-  <strong><u>S</u></strong>tress reliever to relax!
+  <strong><u>S</u></strong
+  >tress reliever to relax!
 </p>
 <button accesskey="s">Stress reliever</button>
 ```

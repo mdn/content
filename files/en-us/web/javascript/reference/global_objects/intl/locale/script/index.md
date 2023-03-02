@@ -1,15 +1,7 @@
 ---
 title: Intl.Locale.prototype.script
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/script
-tags:
-  - Internationalization
-  - Intl
-  - JavaScript
-  - Property
-  - Locale
-  - Localization
-  - Prototype
-  - Reference
+page-type: javascript-instance-accessor-property
 browser-compat: javascript.builtins.Intl.Locale.script
 ---
 

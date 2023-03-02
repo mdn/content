@@ -1,12 +1,7 @@
 ---
 title: Set() constructor
 slug: Web/JavaScript/Reference/Global_Objects/Set/Set
-tags:
-  - Constructor
-  - JavaScript
-  - Reference
-  - set
-  - Polyfill
+page-type: javascript-constructor
 browser-compat: javascript.builtins.Set.Set
 ---
 

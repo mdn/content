@@ -2,12 +2,6 @@
 title: scaleX()
 slug: Web/CSS/transform-function/scaleX
 page-type: css-function
-tags:
-  - CSS
-  - CSS Function
-  - CSS Transforms
-  - Function
-  - Reference
 browser-compat: css.types.transform-function.scaleX
 ---
 
@@ -19,7 +13,7 @@ x-axis (horizontally). Its result is a {{cssxref("&lt;transform-function&gt;")}}
 {{EmbedInteractiveExample("pages/css/function-scaleX.html")}}
 
 It modifies the abscissa of each element point by a constant factor, except when the scale factor is 1, in which case
-the function is the identity transform. The scaling is not isotropic, and the angles of the element are not conserved.
+the function is the identity transform. The scaling is not isotropic, and the angles of the element are generally not conserved, except for multiples of 90 degrees.
 `scaleX(-1)` defines an [axial symmetry](https://en.wikipedia.org/wiki/Axial_symmetry), with a vertical axis passing through the origin (as specified by the {{cssxref("transform-origin")}}
 property).
 

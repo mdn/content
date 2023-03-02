@@ -1,19 +1,13 @@
 ---
 title: yield
 slug: Web/JavaScript/Reference/Operators/yield
-tags:
-  - ECMAScript 2015
-  - Generators
-  - Iterator
-  - JavaScript
-  - Language feature
-  - Operator
+page-type: javascript-operator
 browser-compat: javascript.operators.yield
 ---
 
 {{jsSidebar("Operators")}}
 
-The `yield` keyword is used to pause and resume a [generator function](/en-US/docs/Web/JavaScript/Reference/Statements/function*).
+The **`yield`** operator is used to pause and resume a [generator function](/en-US/docs/Web/JavaScript/Reference/Statements/function*).
 
 {{EmbedInteractiveExample("pages/js/expressions-yield.html", "taller")}}
 

@@ -1,6 +1,7 @@
 ---
 title: height
 slug: Web/SVG/Attribute/height
+page-type: svg-attribute
 tags:
   - SVG
   - SVG Attribute

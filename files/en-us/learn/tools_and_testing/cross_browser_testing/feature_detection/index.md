@@ -1,18 +1,6 @@
 ---
 title: Implementing feature detection
 slug: Learn/Tools_and_testing/Cross_browser_testing/Feature_detection
-tags:
-  - Article
-  - Beginner
-  - CSS
-  - CodingScripting
-  - JavaScript
-  - Learn
-  - Modernizr
-  - Testing
-  - Tools
-  - cross browser
-  - feature detection
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Cross_browser_testing/Accessibility","Learn/Tools_and_testing/Cross_browser_testing/Automated_testing", "Learn/Tools_and_testing/Cross_browser_testing")}}
@@ -83,7 +71,7 @@ Using this as an example, we could include a subgrid stylesheet if the value is 
 
 Here, `basic-styling.css` handles all the styling that we want to give to every browser. We have two additional CSS files, `grid-layout.css` and `subgrid-layout.css`, which contain the CSS we want to selectively apply to browsers depending on their support levels.
 
-We use JavaScript to test the support for the subgrid value, then update the `href` of our conditional stylessheet based on browser support.
+We use JavaScript to test the support for the subgrid value, then update the `href` of our conditional stylesheet based on browser support.
 
 We can add a `<script></script>` to our document, filled with the following JavaScript
 
@@ -279,7 +267,7 @@ Let's have a look at how Modernizr works in terms of selectively applying CSS.
    <html lang="en-us" class="no-js">…</html>
    ```
 
-At this point, try loading your page, and you'll get an idea of how Modernizr works for CSS features. If you look at the DOM inspector of your browser's developer tools, you'll see that Modernizr has updated your `<html>` `class` value like so:
+At this point, try loading your page, and you'll get an idea of how Modernizr works for CSS features. If you look at the DOM inspector of your browser's developer tools, you'll see that Modernizr has updated the `class` attribute of your `<html>` element like so:
 
 ```html
 <html
@@ -377,14 +365,3 @@ This article covered feature detection in a reasonable amount of detail, going t
 Next up, we'll start looking at automated testing.
 
 {{PreviousMenuNext("Learn/Tools_and_testing/Cross_browser_testing/Accessibility","Learn/Tools_and_testing/Cross_browser_testing/Automated_testing", "Learn/Tools_and_testing/Cross_browser_testing")}}
-
-## In this module
-
-- [Introduction to cross browser testing](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Introduction)
-- [Strategies for carrying out testing](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies)
-- [Handling common HTML and CSS problems](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS)
-- [Handling common JavaScript problems](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/JavaScript)
-- [Handling common accessibility problems](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility)
-- [Implementing feature detection](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Feature_detection)
-- [Introduction to automated testing](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Automated_testing)
-- [Setting up your own test automation environment](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Your_own_automation_environment)

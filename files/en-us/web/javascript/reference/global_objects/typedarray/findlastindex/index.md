@@ -1,14 +1,7 @@
 ---
 title: TypedArray.prototype.findLastIndex()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/findLastIndex
-tags:
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - TypedArray
-  - TypedArrays
-  - Polyfill
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.TypedArray.findLastIndex
 ---
 

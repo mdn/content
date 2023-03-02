@@ -1,6 +1,7 @@
 ---
 title: sidebarAction
 slug: Mozilla/Add-ons/WebExtensions/API/sidebarAction
+page-type: webextension-api
 tags:
   - API
   - Extensions
@@ -57,8 +58,6 @@ The sidebarAction API is based on Opera's [sidebarAction API](https://dev.opera.
 - [annotate-page](https://github.com/mdn/webextensions-examples/tree/master/annotate-page)
 
 > **Note:** This API is based on Opera's [`chrome.sidebarAction`](https://dev.opera.com/extensions/sidebar-action-api/) API.
->
-> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

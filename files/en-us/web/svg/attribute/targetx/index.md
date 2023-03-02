@@ -1,6 +1,7 @@
 ---
 title: targetX
 slug: Web/SVG/Attribute/targetX
+page-type: svg-attribute
 tags:
   - Filters
   - NeedsExample

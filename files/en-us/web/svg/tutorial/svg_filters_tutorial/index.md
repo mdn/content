@@ -1,6 +1,7 @@
 ---
 title: SVG Filters Tutorial
 slug: Web/SVG/Tutorial/SVG_Filters_Tutorial
+page-type: guide
 tags:
   - SVG filters primitives
 ---
@@ -22,7 +23,7 @@ This element has different attributes that help us create the clipping region. B
   </filter>
 </defs>
 
-<g id="ghost" style="filter: url(#drop-shadow);"/>
+<g id="ghost" style="filter: url(#drop-shadow);">
  <!--Ghost drawing in here-->
 </g>
 ```

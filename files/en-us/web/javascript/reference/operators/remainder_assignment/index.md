@@ -1,18 +1,13 @@
 ---
 title: Remainder assignment (%=)
 slug: Web/JavaScript/Reference/Operators/Remainder_assignment
-tags:
-  - Assignment operator
-  - JavaScript
-  - Language feature
-  - Operator
-  - Reference
+page-type: javascript-operator
 browser-compat: javascript.operators.remainder_assignment
 ---
 
 {{jsSidebar("Operators")}}
 
-The remainder assignment operator (`%=`) divides a variable by the value of
+The **remainder assignment (`%=`)** operator divides a variable by the value of
 the right operand and assigns the remainder to the variable.
 
 {{EmbedInteractiveExample("pages/js/expressions-remainder-assignment.html")}}
@@ -31,7 +26,7 @@ x %= y // x = x % y
 let bar = 5;
 
 bar %= 2; // 1
-bar %= 'foo'; // NaN
+bar %= "foo"; // NaN
 bar %= 0; // NaN
 ```
 

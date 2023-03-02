@@ -2,12 +2,6 @@
 title: DOMRect.fromRect()
 slug: Web/API/DOMRect/fromRect
 page-type: web-api-static-method
-tags:
-  - API
-  - DOMRect
-  - Geometry
-  - Method
-  - Reference
 browser-compat: api.DOMRect.fromRect
 ---
 

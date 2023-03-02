@@ -2,13 +2,6 @@
 title: ":link"
 slug: Web/CSS/:link
 page-type: css-pseudo-class
-tags:
-  - CSS
-  - Layout
-  - Pseudo-class
-  - Reference
-  - Selector
-  - Web
 browser-compat: css.selectors.link
 ---
 
@@ -18,14 +11,16 @@ The **`:link`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Ps
 
 {{EmbedInteractiveExample("pages/tabbed/pseudo-class-link.html", "tabbed-shorter")}}
 
-Styles defined by the `:link` pseudo-class will be overridden by any subsequent link-related pseudo-class ({{cssxref(":active")}}, {{cssxref(":hover")}}, or {{cssxref(":visited")}}) that has at least equal specificity. To style links appropriately, put the `:link` rule before all other link-related rules, as defined by the _LVHA-order_: `:link` — `:visited` — `:hover` — `:active`.
+Styles defined by the `:link` and [`:visited`](/en-US/docs/Web/CSS/:visited) pseudo-classes can be overridden by any subsequent user-action pseudo-classes ({{cssxref(":hover")}} or {{cssxref(":active")}}) that have at least equal specificity. To style links appropriately, put the `:link` rule before all other link-related rules, as defined by the _LVHA-order_: `:link` — `:visited` — `:hover` — `:active`. The `:visited` pseudo-class and `:link` pseudo-class are mutually exclusive.
 
 > **Note:** Use {{cssxref(":any-link")}} to select an element independent of whether it has been visited or not.
 
 ## Syntax
 
-```
-:link
+```css
+:link {
+  /* ... */
+}
 ```
 
 ## Examples

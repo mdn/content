@@ -1,9 +1,6 @@
 ---
 title: How to add images and media
 slug: MDN/Writing_guidelines/Howto/Images_media
-tags:
-  - meta
-  - writing-guide
 page-type: mdn-writing-guide
 ---
 
@@ -62,15 +59,25 @@ Let's walk through an example:
 
 ## Adding alternative text to images
 
-Every image, `![]` and `<img>`, must include `alt` text. Provide short and concise text providing all the relevant information the image conveys. This text is read by those unable to see the image.
+Every image, `![]` and `<img>`, must include `alt` text.
+Alt attributes should be short, providing all the relevant information the image conveys.
+When writing the image description, think about the valuable information of the image and how you would relay that information to someone who can read the page's content but can't load images.
 
-The content of `alt` text differs based on the context. For example, if the photo of a dog is the avatar for a Yuckymeat dog food review, `alt="Fluffy"` is appropriate. If the photo is the dog's image on an animal rescue adoption site, the `alt="Fluffy, a medium-sized tri-color terrier with very short hair, playing with a chew toy."` is appropriate as the image conveys information relevant for prospective dog parents which is not duplicated in the surrounding text. There is rarely a need to describe the image itself; Fluffy being outdoors with a red collar and a blue leash doesn't add useful information in either context.
+Make sure the alternative text for the image is based on its context.
+If the photo of Fluffy the dog is an avatar next to a review for Yuckymeat dog food, `alt="Fluffy"` is appropriate.
+If the same photo is part of Fluffy's animal rescue adoption page, the information conveyed in the image is relevant for prospective dog parents, such as `alt="Fluffy, a tri-color terrier with very short hair, with a tennis ball in her mouth."`.
+The surrounding text likely has Fluffy's size and breed, so including it would be redundant.
+Refrain from describing the image in too much detail: the prospective parent does not need to know if the dog is in- or outdoors or has a red collar and a blue leash.
 
-Alternative text should include all the information the image conveys that a sighted user can access and is relevant to the context; nothing more. Keep it short, precise, and useful.
+With screenshots, write what you learn from the image, don't detail the screenshot's contents, and omit information readers don't need or already know.
+For example, if you're on a page about changing settings on Bing, if you have a screenshot of a Bing search result, don't include the search term or number of results, etc., as those are not the point of the image.
+Limit the alt to the topic at hand: how to change settings in Bing.
+The alt might be `alt="The settings icon is in the navigation bar below the search field."`.
+Don't include "screenshot" or "Bing" as the user doesn't need to know it's a screenshot and already knows it's Bing as they are on a page explaining changing Bing settings.
 
 The syntax in markdown and HTML:
 
-```html
+```html-nolint
 ![<alt-text>](<url-of-image>)
 <img alt="<alt-text>" src="<url-of-image>">
 ```
@@ -79,7 +86,7 @@ Examples:
 
 ```html
 ![OpenWebDocs Logo: Carle the book worm](carle.png)
-<img alt="OpenWebDocs Logo: Carle the book worm" src="carle.png">
+<img alt="OpenWebDocs Logo: Carle the book worm" src="carle.png" />
 ```
 
 While purely decorative images should have an empty `alt`, images added to MDN documentation should have a purpose, and therefore require a non-empty-string description.

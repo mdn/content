@@ -1,12 +1,7 @@
 ---
 title: Uint16Array() constructor
 slug: Web/JavaScript/Reference/Global_Objects/Uint16Array/Uint16Array
-tags:
-  - Constructor
-  - JavaScript
-  - Reference
-  - TypedArrays
-  - Polyfill
+page-type: javascript-constructor
 browser-compat: javascript.builtins.Uint16Array.Uint16Array
 ---
 

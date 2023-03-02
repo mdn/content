@@ -2,24 +2,9 @@
 title: Introduction to WebRTC protocols
 slug: Web/API/WebRTC_API/Protocols
 page-type: guide
-tags:
-  - API
-  - Audio
-  - Beginner
-  - Draft
-  - Guide
-  - ICE
-  - Media
-  - NAT
-  - SDP
-  - STUN
-  - TURN
-  - Video
-  - WebRTC
-  - WebRTC API
 ---
 
-{{WebRTCSidebar}}
+{{DefaultAPISidebar("WebRTC")}}
 
 This article introduces the protocols on top of which the WebRTC API is built.
 

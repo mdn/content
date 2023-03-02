@@ -2,11 +2,6 @@
 title: grid-auto-rows
 slug: Web/CSS/grid-auto-rows
 page-type: css-property
-tags:
-  - CSS
-  - CSS Grid
-  - CSS Property
-  - Reference
 browser-compat: css.properties.grid-auto-rows
 ---
 

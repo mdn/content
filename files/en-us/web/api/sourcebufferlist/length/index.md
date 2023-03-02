@@ -2,16 +2,6 @@
 title: SourceBufferList.length
 slug: Web/API/SourceBufferList/length
 page-type: web-api-instance-property
-tags:
-  - API
-  - Audio
-  - MSE
-  - Media Source Extensions
-  - Property
-  - Reference
-  - SourceBufferList
-  - Video
-  - length
 browser-compat: api.SourceBufferList.length
 ---
 

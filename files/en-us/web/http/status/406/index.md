@@ -32,7 +32,7 @@ among them.
 
 ## Status
 
-```
+```http
 406 Not Acceptable
 ```
 

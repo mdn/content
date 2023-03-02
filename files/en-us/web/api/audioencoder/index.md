@@ -2,16 +2,13 @@
 title: AudioEncoder
 slug: Web/API/AudioEncoder
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Reference
-  - AudioEncoder
-  - Experimental
+status:
+  - experimental
 browser-compat: api.AudioEncoder
 ---
 
 {{APIRef("WebCodecs API")}}{{SeeCompatTable}}
+
 The **`AudioEncoder`** interface of the [WebCodecs API](/en-US/docs/Web/API/WebCodecs_API) encodes {{domxref("AudioData")}} objects.
 
 {{InheritanceDiagram}}
@@ -34,6 +31,11 @@ _Inherits properties from its parent, {{DOMxRef("EventTarget")}}._
 
 - {{domxref("AudioEncoder.dequeue_event", "dequeue")}} {{Experimental_Inline}}
   - : Fires to signal a decrease in {{domxref("AudioEncoder.encodeQueueSize")}}.
+
+## Static methods
+
+- {{domxref("AudioEncoder.isConfigSupported()")}} {{Experimental_Inline}}
+  - : Returns a promise indicating whether the provided `AudioEncoderConfig` is supported.
 
 ## Instance methods
 

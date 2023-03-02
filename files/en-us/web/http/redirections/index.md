@@ -117,7 +117,7 @@ Ideally, there is one location, and therefore one URL, for each resource. But th
   - : A common case is when a site resides at `www.example.com`, but accessing it from `example.com` should also work. Redirections for `example.com` to `www.example.com` are thus set up. You might also redirect from common synonyms or frequent typos of your domains.
 - Moving to a new domain
   - : For example, your company was renamed, but you want existing links or bookmarks to still find you under the new name.
-- Forcing [HTTPS](/en-US/docs/Glossary/https)
+- Forcing [HTTPS](/en-US/docs/Glossary/HTTPS)
   - : Requests to the `http://` version of your site will redirect to the `https://` version of your site.
 
 ### Keeping links alive
@@ -159,7 +159,7 @@ The URL `https://example.com/` will be redirected to `https://www.example.com/`,
 
 `RedirectMatch` does the same, but takes a {{glossary("regular expression")}} to define a collection of affected URLs:
 
-```
+```plain
 RedirectMatch ^/images/(.*)$ https://images.example.com/$1
 ```
 
@@ -167,7 +167,7 @@ All documents in the `images/` directory will redirect to a different domain.
 
 If you don't want a temporary redirect, an extra parameter (either the HTTP status code to use or the `permanent` keyword) can be used to set up a different redirect:
 
-```
+```plain
 Redirect permanent / https://www.example.com
 # …acts the same as:
 Redirect 301 / https://www.example.com
@@ -179,7 +179,7 @@ The [`mod_rewrite`](https://httpd.apache.org/docs/current/mod/mod_rewrite.html) 
 
 In Nginx, you create a specific server block for the content you want to redirect:
 
-```
+```plain
 server {
   listen 80;
   server_name example.com;
@@ -189,7 +189,7 @@ server {
 
 To apply a redirect to a directory or only certain pages, use the `rewrite` directive:
 
-```
+```plain
 rewrite ^/images/(.*)$ https://images.example.com/$1 redirect;
 rewrite ^/images/(.*)$ https://images.example.com/$1 permanent;
 ```

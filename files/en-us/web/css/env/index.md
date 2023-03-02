@@ -2,16 +2,6 @@
 title: env()
 slug: Web/CSS/env
 page-type: css-function
-tags:
-  - CSS
-  - CSS Function
-  - CSS Variables
-  - Draft
-  - Function
-  - Reference
-  - Variables
-  - env
-  - env()
 browser-compat: css.properties.custom-property.env
 ---
 
@@ -49,6 +39,8 @@ env(safe-area-inset-left, 1.4rem);
   - : The `safe-area-inset-*` variables are four environment variables that define a rectangle by its top, right, bottom, and left insets from the edge of the viewport, which is safe to put content into without risking it being cut off by the shape of a non‑rectangular display. For rectangular viewports, like your average laptop monitor, their value is equal to zero. For non-rectangular displays — like a round watch face — the four values set by the user agent form a rectangle such that all content inside the rectangle is visible.
 - `titlebar-area-x`, `titlebar-area-y`, `titlebar-area-width`, `titlebar-area-height`
   - : The `titlebar-area-*` variables are useful for PWA installed on Desktop devices. When a desktop PWA uses the `window-controls-overlay` [display_override](/en-US/docs/Web/Manifest/display_override) value, then it can use the `titlebar-area-*` variables to make sure content doesn't overlap with the window control buttons (i.e. minimize, maximize, and close).
+- `keyboard-inset-top`, `keyboard-inset-right`, `keyboard-inset-bottom`, `keyboard-inset-left`, `keyboard-inset-width`, `keyboard-inset-height`
+  - : The `keyboard-inset-*` variables provide information about the on-screen virtual keyboard's appearance. They define a rectangle by its top, right, bottom, and left insets from the edge of the viewport (the width and height insets are calculated from the other insets). To learn more, see the {{domxref("VirtualKeyboard API", "VirtualKeyboard API", "", "nocode")}}.
 
 > **Note:** Unlike other CSS properties, user agent-defined property names are case-sensitive.
 

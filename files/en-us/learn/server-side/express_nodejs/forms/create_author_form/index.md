@@ -1,12 +1,6 @@
 ---
 title: Create Author form
 slug: Learn/Server-side/Express_Nodejs/forms/Create_author_form
-tags:
-  - Express
-  - Forms
-  - Node
-  - part 6
-  - server-side
 ---
 
 This subarticle shows how to define a page for creating `Author` objects.

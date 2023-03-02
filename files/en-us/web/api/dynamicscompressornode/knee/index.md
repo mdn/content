@@ -2,13 +2,6 @@
 title: DynamicsCompressorNode.knee
 slug: Web/API/DynamicsCompressorNode/knee
 page-type: web-api-instance-property
-tags:
-  - API
-  - DynamicsCompressorNode
-  - Property
-  - Reference
-  - Web Audio API
-  - knee
 browser-compat: api.DynamicsCompressorNode.knee
 ---
 

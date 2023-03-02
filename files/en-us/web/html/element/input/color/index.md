@@ -1,17 +1,7 @@
 ---
 title: <input type="color">
 slug: Web/HTML/Element/input/color
-tags:
-  - Color Picker
-  - Element
-  - Form input
-  - Forms
-  - HTML
-  - HTML forms
-  - HTML input
-  - Input
-  - Reference
-  - color
+page-type: html-element
 browser-compat: html.elements.input.type_color
 ---
 
@@ -24,46 +14,6 @@ Only simple colors (without alpha channel) are allowed though CSS colors has mor
 The element's presentation may vary substantially from one browser and/or platform to another—it might be a simple textual input that automatically validates to ensure that the color information is entered in the proper format, or a platform-standard color picker, or some kind of custom color picker window.
 
 {{EmbedInteractiveExample("pages/tabbed/input-color.html", "tabbed-standard")}}
-
-<table class="properties">
-  <tbody>
-    <tr>
-      <td><strong><a href="#value">Value</a></strong></td>
-      <td>
-        A 7-character string specifying a
-        {{cssxref("&lt;color&gt;")}} in lower-case hexadecimal notation
-      </td>
-    </tr>
-    <tr>
-      <td><strong>Events</strong></td>
-      <td>
-        {{domxref("HTMLElement/change_event", "change")}} and
-        {{domxref("HTMLElement/input_event", "input")}}
-      </td>
-    </tr>
-    <tr>
-      <td><strong>Supported common attributes</strong></td>
-      <td>
-        {{htmlattrxref("autocomplete", "input")}} and
-        {{htmlattrxref("list", "input")}}
-      </td>
-    </tr>
-    <tr>
-      <td><strong>IDL attributes</strong></td>
-      <td><code>list</code> and <code>value</code></td>
-    </tr>
-    <tr>
-      <td><strong>DOM interface</strong></td>
-      <td><p>{{domxref("HTMLInputElement")}}</p></td>
-    </tr>
-    <tr>
-      <td><strong>Methods</strong></td>
-      <td>
-        {{domxref("HTMLInputElement.select", "select()")}}
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ## Value
 
@@ -203,6 +153,52 @@ This sets the color of every {{HTMLElement("p")}} block so that its {{cssxref("c
 The final result looks like this:
 
 {{EmbedLiveSample("Example", 700, 200)}}
+
+## Technical summary
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <td><strong><a href="#value">Value</a></strong></td>
+      <td>
+        A 7-character string specifying a
+        {{cssxref("&lt;color&gt;")}} in lower-case hexadecimal notation
+      </td>
+    </tr>
+    <tr>
+      <td><strong>Events</strong></td>
+      <td>
+        {{domxref("HTMLElement/change_event", "change")}} and
+        {{domxref("HTMLElement/input_event", "input")}}
+      </td>
+    </tr>
+    <tr>
+      <td><strong>Supported common attributes</strong></td>
+      <td>
+        {{htmlattrxref("autocomplete", "input")}} and
+        {{htmlattrxref("list", "input")}}
+      </td>
+    </tr>
+    <tr>
+      <td><strong>IDL attributes</strong></td>
+      <td><code>list</code> and <code>value</code></td>
+    </tr>
+    <tr>
+      <td><strong>DOM interface</strong></td>
+      <td><p>{{domxref("HTMLInputElement")}}</p></td>
+    </tr>
+    <tr>
+      <td><strong>Methods</strong></td>
+      <td>
+        {{domxref("HTMLInputElement.select", "select()")}}
+      </td>
+    </tr>
+    <tr>
+      <td><strong>Implicit ARIA Role</strong></td>
+      <td><a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"><code>no corresponding role</code></a></td>
+    </tr>
+  </tbody>
+</table>
 
 ## Specifications
 

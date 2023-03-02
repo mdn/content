@@ -2,9 +2,6 @@
 title: DOMTokenList.keys()
 slug: Web/API/DOMTokenList/keys
 page-type: web-api-instance-method
-tags:
-  - Method
-  - Reference
 browser-compat: api.DOMTokenList.keys
 ---
 

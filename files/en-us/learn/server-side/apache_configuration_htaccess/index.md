@@ -1,20 +1,13 @@
 ---
-title: 'Apache Configuration: .htaccess'
+title: "Apache Configuration: .htaccess"
 slug: Learn/Server-side/Apache_Configuration_htaccess
-tags:
-  - 301 redirect
-  - Cache control
-  - Custom Error pages
-  - HTACCESS
-  - Permanent Redirect
-  - Redirect
 ---
 
 {{LearnSidebar}}
 
 Apache .htaccess files allow users to configure directories of the web server they control without modifying the main configuration file.
 
-While this is useful it's important to note that using `.htaccess` files slows down Apache, so, if you have access to the main server configuration file (which is usually called \`httpd.conf\`), you should add this logic there under a `Directory` block.
+While this is useful it's important to note that using `.htaccess` files slows down Apache, so, if you have access to the main server configuration file (which is usually called `httpd.conf`), you should add this logic there under a `Directory` block.
 
 See [.htaccess](https://httpd.apache.org/docs/current/howto/htaccess.html) in the Apache HTTPD documentation site for more details about what .htaccess files can do.
 
@@ -85,7 +78,7 @@ One alternative is to explicitly state what domains have access to the content o
 
 ### Cross-origin images
 
-As reported in the [Chromium Blog](https://blog.chromium.org/2011/07/using-cross-domain-images-in-webgl-and.html) and documented in [Allowing cross-origin use of images and canvas](/en-US/docs/Web/HTML/CORS_enabled_image) can lead to fingerprinting attacks.
+As reported in the [Chromium Blog](https://blog.chromium.org/2011/07/using-cross-domain-images-in-webgl-and.html) and documented in [Allowing cross-origin use of images and canvas](/en-US/docs/Web/HTML/CORS_enabled_image) can lead to [fingerprinting](/en-US/docs/Glossary/Fingerprinting) attacks.
 
 To mitigate the possibility of these attacks, you should use the `crossorigin` attribute in the images you request and the code snippet below in your `.htaccess` to set the CORS header from the server.
 
@@ -239,7 +232,7 @@ Use [AddDefaultCharset](https://httpd.apache.org/docs/current/mod/core.html#addd
 
 ## Set the charset for specific media types
 
-Serve the following file types with the `charset` parameter set to \`UTF-8\` using the [AddCharset](https://httpd.apache.org/docs/current/mod/mod_mime.html#addcharset) directive available in `mod_mime`.
+Serve the following file types with the `charset` parameter set to `UTF-8` using the [AddCharset](https://httpd.apache.org/docs/current/mod/mod_mime.html#addcharset) directive available in `mod_mime`.
 
 ```apache
 <IfModule mod_mime.c>
@@ -268,7 +261,7 @@ Serve the following file types with the `charset` parameter set to \`UTF-8\` usi
 
 [mod_rewrite](https://httpd.apache.org/docs/current/mod/mod_rewrite.html) provides a way to modify incoming URL requests, dynamically, based on regular expression rules. This allows you to map arbitrary URLs onto your internal URL structure in any way you like.
 
-It supports an unlimited number of rules and an unlimited number of attached rule conditions for each rule to provide a really flexible and powerful URL manipulation mechanism. The URL manipulations can depend on various tests: server variables, environment variables, HTTP headers, time stamps, external database lookups, and various other external programs or handlers, can be used to achieve granular URL matching.
+It supports an unlimited number of rules and an unlimited number of attached rule conditions for each rule to provide a really flexible and powerful URL manipulation mechanism. The URL manipulations can depend on various tests: server variables, environment variables, HTTP headers, timestamps, external database lookups, and various other external programs or handlers, can be used to achieve granular URL matching.
 
 ### Enable mod_rewrite
 
@@ -389,7 +382,7 @@ Nonetheless, you should ensure that you send the `X-Frame-Options` header for al
 
 ## Content Security Policy (CSP)
 
-[CSP (Content Security Policy)](https://content-security-policy.com/) mitigates the risk of cross-site scripting and other content-injection attacks by setting a \`Content Security Policy\` which allows trusted sources of content for your website.
+[CSP (Content Security Policy)](https://content-security-policy.com/) mitigates the risk of cross-site scripting and other content-injection attacks by setting a `Content Security Policy` which allows trusted sources of content for your website.
 
 There is no policy that fits all websites, the example below is meant as guidelines for you to modify for your site.
 

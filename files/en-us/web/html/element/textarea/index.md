@@ -1,14 +1,7 @@
 ---
 title: '<textarea>: The Textarea element'
 slug: Web/HTML/Element/textarea
-tags:
-  - Element
-  - Forms
-  - HTML
-  - HTML forms
-  - Reference
-  - Web
-  - textarea
+page-type: html-element
 browser-compat: html.elements.textarea
 ---
 
@@ -31,7 +24,7 @@ The `<textarea>` element also accepts several attributes common to form `<input>
 
 This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 
-- {{htmlattrdef("autocomplete")}}
+- `autocomplete`
 
   - : This attribute indicates whether the value of the control can be automatically completed by the browser. Possible values are:
 
@@ -67,7 +60,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
   - : A hint to the user of what can be entered in the control. Carriage returns or line-feeds within the placeholder text must be treated as line breaks when rendering the hint.
 
-    > **Note:** Placeholders should only be used to show an example of the type of data that should be entered into a form; they are _not_ a substitute for a proper {{HTMLElement("label")}} element tied to the input. See {{SectionOnPage("/en-US/docs/Web/HTML/Element/input", "Labels and placeholders")}} for a full explanation.
+    > **Note:** Placeholders should only be used to show an example of the type of data that should be entered into a form; they are _not_ a substitute for a proper {{HTMLElement("label")}} element tied to the input. See [`<input>` labels](/en-US/docs/Web/HTML/Element/input#labels) for a full explanation.
 
 - {{ htmlattrdef("readonly") }}
   - : This Boolean attribute indicates that the user cannot modify the value of the control. Unlike the `disabled` attribute, the `readonly` attribute does not prevent the user from clicking or selecting in the control. The value of a read-only control is still submitted with the form.
@@ -167,7 +160,7 @@ This example has a placeholder set. Notice how it disappears when you start typi
 
 {{ EmbedLiveSample('Example using "placeholder"','600','80') }}
 
-> **Note:** Placeholders should only be used to show an example of the type of data that should be entered into a form; they are _not_ a substitute for a proper {{HTMLElement("label")}} element tied to the input. See {{SectionOnPage("/en-US/docs/Web/HTML/Element/input", "Labels and placeholders")}} for a full explanation.
+> **Note:** Placeholders should only be used to show an example of the type of data that should be entered into a form; they are _not_ a substitute for a proper {{HTMLElement("label")}} element tied to the input. See [`<input>` labels](/en-US/docs/Web/HTML/Element/input#labels) for a full explanation.
 
 ### Disabled and readonly
 
@@ -192,34 +185,34 @@ I am a read-only textarea.
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories"
+        <a href="/en-US/docs/Web/HTML/Content_categories"
           >Content categories</a
         >
       </th>
       <td>
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
           >Flow content</a
         >,
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content"
           >phrasing content</a
         >,
         <a
-          href="/en-US/docs/Web/Guide/HTML/Content_categories#interactive_content"
+          href="/en-US/docs/Web/HTML/Content_categories#interactive_content"
           >Interactive content</a
         >,
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#form_listed"
+        <a href="/en-US/docs/Web/HTML/Content_categories#form_listed"
           >listed</a
         >,
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#form_labelable"
+        <a href="/en-US/docs/Web/HTML/Content_categories#form_labelable"
           >labelable</a
         >,
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#form_resettable"
+        <a href="/en-US/docs/Web/HTML/Content_categories#form_resettable"
           >resettable</a
         >, and
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#form_submittable"
+        <a href="/en-US/docs/Web/HTML/Content_categories#form_submittable"
           >submittable</a
         >
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#form-associated_"
+        <a href="/en-US/docs/Web/HTML/Content_categories#form-associated_"
           >form-associated</a
         >
         element.
@@ -237,7 +230,7 @@ I am a read-only textarea.
       <th scope="row">Permitted parents</th>
       <td>
         Any element that accepts
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content"
           >phrasing content</a
         >.
       </td>

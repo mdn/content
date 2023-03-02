@@ -11,12 +11,16 @@ tags:
   - NeedsBeginnerUpdate
 ---
 
+{{QuickLinksWithSubPages("/en-us/docs/Web/MathML/Examples")}}
+
 We will now prove the [Pythagorean theorem](https://en.wikipedia.org/wiki/Pythagorean_theorem):
 
 **Statement**: In a right triangle, the square of the hypotenuse is equal to
 the sum of the squares of the other two sides.
 
 i.e., If a and b are the legs and c is the hypotenuse then
+
+<!-- @prettier-ignore -->
 <math>
   <mrow>
     <msup>

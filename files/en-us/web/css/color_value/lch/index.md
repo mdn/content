@@ -2,15 +2,8 @@
 title: lch()
 slug: Web/CSS/color_value/lch
 page-type: css-function
-tags:
-  - CSS
-  - CSS Data Type
-  - Data Type
-  - Reference
-  - Web
-  - color
-  - lch
-  - Experimental
+status:
+  - experimental
 browser-compat: css.types.color.lch
 ---
 
@@ -37,6 +30,10 @@ lch(52.2345% 72.2 56.2 / .5);
     The third argument `H` is the hue angle. `0deg` points along the positive "a" axis (toward purplish red), `90deg` points along the positive "b" axis (toward mustard yellow), `180deg` points along the negative "a" axis (toward greenish cyan), and `270deg` points along the negative "b" axis (toward sky blue).
 
     `A` (alpha) can be a {{cssxref("&lt;number&gt;")}} between `0` and `1`, or a {{cssxref("&lt;percentage&gt;")}}, where the number `1` corresponds to `100%` (full opacity).
+
+### Formal syntax
+
+{{csssyntax}}
 
 ## Specifications
 

@@ -1,14 +1,7 @@
 ---
 title: '<style>: The Style Information element'
 slug: Web/HTML/Element/style
-tags:
-  - CSS
-  - Element
-  - HTML
-  - HTML document metadata
-  - Reference
-  - Style
-  - Web
+page-type: html-element
 browser-compat: html.elements.style
 ---
 
@@ -34,6 +27,9 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
   - : A cryptographic nonce (number used once) used to allow inline styles in a [style-src Content-Security-Policy](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/style-src). The server must generate a unique nonce value each time it transmits a policy. It is critical to provide a nonce that cannot be guessed as bypassing a resource's policy is otherwise trivial.
 - {{htmlattrdef("title")}}
   - : This attribute specifies [alternative style sheet](/en-US/docs/Web/CSS/Alternative_style_sheets) sets.
+- {{htmlattrdef("blocking")}}
+  - : This attribute explicitly indicates that certain operations should be blocked on the fetching of critical subresources. [`@import`](/en-US/docs/Web/CSS/@import)-ed stylesheets are generally considered as critical subresources, whereas [`background-image`](/en-US/docs/Web/CSS/background-image) and fonts are not.
+    - `render`: The rendering of content on the screen is blocked.
 
 ### Deprecated attributes
 
@@ -138,15 +134,15 @@ In this example we build on the previous one, including a `media` attribute on t
   <tbody>
     <tr>
       <th>
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories"
+        <a href="/en-US/docs/Web/HTML/Content_categories"
           >Content categories</a
         >
       </th>
       <td>
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#metadata_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#metadata_content"
           >Metadata content</a
         >, and if the <code>scoped</code> attribute is present:
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
           >flow content</a
         >.
       </td>
@@ -166,7 +162,7 @@ In this example we build on the previous one, including a `media` attribute on t
       <th>Permitted parents</th>
       <td>
         Any element that accepts
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#metadata_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#metadata_content"
           >metadata content</a
         >.
       </td>

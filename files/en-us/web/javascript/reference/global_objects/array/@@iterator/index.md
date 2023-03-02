@@ -1,16 +1,7 @@
 ---
 title: Array.prototype[@@iterator]()
 slug: Web/JavaScript/Reference/Global_Objects/Array/@@iterator
-tags:
-  - Array
-  - Beginner
-  - ECMAScript 2015
-  - Iterator
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - Polyfill
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.Array.@@iterator
 ---
 
@@ -78,11 +69,10 @@ Because both [strings](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Strin
 
 ```js
 function logIterable(it) {
-  if (!(Symbol.iterator in it)) {
-    console.log(it, " is not an iterable object.");
+  if (typeof it[Symbol.iterator] !== "function") {
+    console.log(it, "is not iterable.");
     return;
   }
-
   for (const letter of it) {
     console.log(letter);
   }
@@ -94,14 +84,15 @@ logIterable(["a", "b", "c"]);
 // b
 // c
 
-// string
+// String
 logIterable("abc");
 // a
 // b
 // c
 
+// Number
 logIterable(123);
-// 123 is not an iterable object.
+// 123 is not iterable.
 ```
 
 ## Specifications

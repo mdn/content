@@ -2,11 +2,6 @@
 title: PerformanceEntry.name
 slug: Web/API/PerformanceEntry/name
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - Web Performance
 browser-compat: api.PerformanceEntry.name
 ---
 
@@ -127,8 +122,8 @@ debugMarks.forEach((entry) => {
 // PerformanceObserver version
 // Log all marks named "debug-marks" when they happen
 function perfObserver(list, observer) {
-  list.getEntriesByName("debug-mark", "mark").forEach((entry) =>  {
-     console.log(`${entry.name}'s startTime: ${entry.startTime}`);
+  list.getEntriesByName("debug-mark", "mark").forEach((entry) => {
+    console.log(`${entry.name}'s startTime: ${entry.startTime}`);
   });
 }
 const observer = new PerformanceObserver(perfObserver);

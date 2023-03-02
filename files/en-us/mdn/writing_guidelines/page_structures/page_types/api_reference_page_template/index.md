@@ -2,9 +2,6 @@
 title: API reference page template
 slug: MDN/Writing_guidelines/Page_structures/Page_types/API_reference_page_template
 page-type: mdn-writing-guide
-tags:
-  - meta
-  - writing-guide
 browser-compat: path.to.feature.NameOfTheInterface
 ---
 
@@ -21,13 +18,10 @@ The page front matter in the pages on MDN Web Docs comprises of the YAML headers
 > title: NameOfTheInterface
 > slug: Web/API/NameOfTheInterface
 > page-type: web-api-interface
-> tags:
->   - API
->   - NameOfTheInterface
->   - NameOfTheAPI
->   - Reference
->   - Experimental
->
+> status:
+>   - experimental
+>   - deprecated
+>   - non-standard
 > browser-compat: path.to.feature.NameOfTheInterface
 > ---
 > ```
@@ -38,9 +32,8 @@ The page front matter in the pages on MDN Web Docs comprises of the YAML headers
 >   - : The end of the URL path after `https://developer.mozilla.org/en-US/docs/`). This will be formatted like `Web/API/NameOfTheParentInterface`. For example, [Request](/en-US/docs/Web/API/Request) slug is "Web/API/Request".
 > - **page-type**
 >   - : The `page-type` key for Web/API interfaces is always `web-api-interface`.
-> - **tags**
->   - : Include the following tags: **API**, **Reference**, **Interface**, _the name of the API_ (e.g. **WebVR**), the name of the interface (e.g. **Request**), **Experimental** (if the technology is [experimental](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#experimental)), **Secure context** (if it is available in a secure context only), and **Deprecated** (if it is [deprecated](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#deprecated_and_obsolete)).
->     Optionally, you can elect to include some other tags that represent terms people might search for when looking for information on that technology. For example on WebVR interface pages we include **VR** and **Virtual reality**.
+> - **status**
+>   - : Include (appropriate) technology status keys: [**experimental**](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#experimental), [**deprecated**](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#deprecated_and_obsolete), **non-standard** (if not on a standards track).
 > - **browser-compat**
 >
 >   - : Replace the placeholder value `path.to.feature.NameOfTheMethod` with the query string for the method in the [Browser compat data repo](https://github.com/mdn/browser-compat-data). The toolchain automatically uses the key to populate the compatibility and specification sections (replacing the `\{{Compat}}` and `\{{Specifications}}` macros).

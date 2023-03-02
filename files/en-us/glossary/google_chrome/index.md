@@ -1,13 +1,7 @@
 ---
 title: Google Chrome
 slug: Glossary/Google_Chrome
-tags:
-  - Browser
-  - Chrome canary
-  - Chrome stable
-  - Chromium
-  - WebMechanics
-  - google chrome
+page-type: glossary-definition
 ---
 
 Google Chrome is a free Web {{glossary("browser")}} developed by Google. It's based on the [Chromium](https://www.chromium.org/) open source project. Some key differences are described on [BrowserStack](https://www.browserstack.com/guide/difference-between-chrome-and-chromium#toc5). Chrome supports its own layout called {{glossary("Blink")}}. Note that the iOS version of Chrome uses that platform's WebView, not Blink.

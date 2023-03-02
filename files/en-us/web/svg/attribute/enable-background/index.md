@@ -1,6 +1,7 @@
 ---
 title: enable-background
 slug: Web/SVG/Attribute/enable-background
+page-type: svg-attribute
 tags:
   - Deprecated
   - SVG

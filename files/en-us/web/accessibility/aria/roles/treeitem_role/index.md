@@ -1,13 +1,6 @@
 ---
 title: "ARIA: treeitem role"
 slug: Web/Accessibility/ARIA/Roles/treeitem_role
-tags:
-  - Accessibility
-  - ARIA
-  - roles
-  - Reference
-  - ARIA roles
-  - treeitem
 spec-urls:
   - https://w3c.github.io/aria/#treeitem
   - https://w3c.github.io/aria-practices/#TreeView
@@ -60,15 +53,13 @@ A `treeitem` is required to have an accessible name. Generally, that name comes 
 - [`tree`](/en-US/docs/Web/Accessibility/ARIA/Roles/tree_role) role
   - : The root node for the hierarchical list of parent and child `treeitem` nodes that can expand and collapse
 - [`group`](/en-US/docs/Web/Accessibility/ARIA/Roles/group_role) role
-
   - : Identifies a set of `treeitem` child nodes.
-
 - [`aria-expanded`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-expanded)
   - : Set on the root `tree` and on `group` nodes that are parents of `treeitem` nodes, to indicate whether the tree view is expanded (`true`) or collapsed (`false`).
 - [`aria-selected`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-selected)
-  - Set to `true` or `false`, indicates a `treeitem` is selectable, and whether or not it is currently selected.
+  - : Set to `true` or `false`, indicates a `treeitem` is selectable, and whether or not it is currently selected.
 - [`aria-checked`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-checked)
-  - Set to `true` or `false`, indicates the `treeitem` can be checked, and whether or not it is currently checked.
+  - : Set to `true` or `false`, indicates the `treeitem` can be checked, and whether or not it is currently checked.
 
 ### Keyboard interactions
 
@@ -80,7 +71,7 @@ For a vertically oriented `tree`, which is the default orientation:
 <td>
 <ul>
 <li>When focus is on a closed node, opens the node; focus does not move.
-<li>When focus is on a open node, moves focus to the first child node.
+<li>When focus is on an open node, moves focus to the first child node.
 <li>When focus is on an end node (a tree item with no children), does nothing.
 </td>
 </tr>

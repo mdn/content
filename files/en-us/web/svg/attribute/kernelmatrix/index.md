@@ -1,6 +1,7 @@
 ---
 title: kernelMatrix
 slug: Web/SVG/Attribute/kernelMatrix
+page-type: svg-attribute
 tags:
   - Filters
   - SVG

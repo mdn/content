@@ -1,18 +1,13 @@
 ---
 title: Multiplication assignment (*=)
 slug: Web/JavaScript/Reference/Operators/Multiplication_assignment
-tags:
-  - Assignment operator
-  - JavaScript
-  - Language feature
-  - Operator
-  - Reference
+page-type: javascript-operator
 browser-compat: javascript.operators.multiplication_assignment
 ---
 
 {{jsSidebar("Operators")}}
 
-The multiplication assignment operator (`*=`) multiplies a variable by the
+The **multiplication assignment (`*=`)** operator multiplies a variable by the
 value of the right operand and assigns the result to the variable.
 
 {{EmbedInteractiveExample("pages/js/expressions-multiplication-assignment.html")}}
@@ -31,7 +26,7 @@ x *= y // x = x * y
 let bar = 5;
 
 bar *= 2; // 10
-bar *= 'foo'; // NaN
+bar *= "foo"; // NaN
 ```
 
 ## Specifications

@@ -2,15 +2,6 @@
 title: ":focus-within"
 slug: Web/CSS/:focus-within
 page-type: css-pseudo-class
-tags:
-  - ":focus"
-  - ":focus-within"
-  - CSS
-  - Layout
-  - Pseudo-class
-  - Reference
-  - Selector
-  - Web
 browser-compat: css.selectors.focus-within
 ---
 
@@ -24,8 +15,10 @@ This selector is useful, to take a common example, for highlighting an entire {{
 
 ## Syntax
 
-```
-:focus-within
+```css
+:focus-within {
+  /* ... */
+}
 ```
 
 ## Examples

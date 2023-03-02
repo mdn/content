@@ -2,14 +2,6 @@
 title: HTMLLabelElement.form
 slug: Web/API/HTMLLabelElement/form
 page-type: web-api-instance-property
-tags:
-  - Forms
-  - HTML DOM
-  - HTMLLabelElement
-  - Property
-  - Read-only
-  - Reference
-  - form
 browser-compat: api.HTMLLabelElement.form
 ---
 

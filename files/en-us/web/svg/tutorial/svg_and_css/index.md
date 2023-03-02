@@ -1,6 +1,7 @@
 ---
 title: SVG and CSS
 slug: Web/SVG/Tutorial/SVG_and_CSS
+page-type: guide
 tags:
   - CSS
   - CSS:Getting_Started

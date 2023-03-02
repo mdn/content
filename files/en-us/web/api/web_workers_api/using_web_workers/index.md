@@ -2,14 +2,6 @@
 title: Using Web Workers
 slug: Web/API/Web_Workers_API/Using_web_workers
 page-type: guide
-tags:
-  - Advanced
-  - Firefox
-  - Guide
-  - HTML
-  - JavaScript
-  - WebWorkers
-  - Workers
 spec-urls: https://html.spec.whatwg.org/multipage/#workers
 ---
 
@@ -134,7 +126,7 @@ Workers may spawn more workers if they wish. So-called sub-workers must be hoste
 
 ### Importing scripts and libraries
 
-Worker threads have access to a global function, `importScripts()`, which lets them import scripts. It accepts zero or more URIs as parameters to resources to import; all of the following examples are valid:
+Worker threads have access to a global function, `importScripts()`, which lets them import scripts. It accepts zero or more URIs as parameters to resources to import; all the following examples are valid:
 
 ```js
 importScripts();                         /* imports nothing */
@@ -155,7 +147,7 @@ Here we'll concentrate on the differences between dedicated and shared workers. 
 
 > **Note:** If SharedWorker can be accessed from several browsing contexts, all those browsing contexts must share the exact same origin (same protocol, host, and port).
 
-> **Note:** In Firefox, shared workers cannot be shared between documents loaded in private and non-private windows ({{bug(1177621)}}).
+> **Note:** In Firefox, shared workers cannot be shared between documents loaded in private and non-private windows ([Firefox bug 1177621](https://bugzil.la/1177621)).
 
 ### Spawning a shared worker
 
@@ -195,7 +187,7 @@ onconnect = (e) => {
 }
 ```
 
-First, we use an `onconnect` handler to fire code when a connection to the port happens (i.e. when the `onmessage` event handler in the parent thread is setup, or when the `start()` method is explicitly called in the parent thread).
+First, we use an `onconnect` handler to fire code when a connection to the port happens (i.e. when the `onmessage` event handler in the parent thread is set up, or when the `start()` method is explicitly called in the parent thread).
 
 We use the `ports` attribute of this event object to grab the port and store it in a variable.
 
@@ -588,7 +580,7 @@ It is possible to switch the content of each mainpage -> worker and worker -> ma
 
 ### Passing data by transferring ownership (transferable objects)
 
-Modern browsers contain an additional way to pass certain types of objects to or from a worker with high performance. {{Glossary("Transferable Objects")}} are transferred from one context to another with a zero-copy operation, which results in a vast performance improvement when sending large data sets.
+Modern browsers contain an additional way to pass certain types of objects to or from a worker with high performance. [Transferable objects](/en-US/docs/Web/API/Web_Workers_API/Transferable_objects) are transferred from one context to another with a zero-copy operation, which results in a vast performance improvement when sending large data sets.
 
 For example, when transferring an {{jsxref("ArrayBuffer")}} from your main app to a worker script, the original {{jsxref("ArrayBuffer")}} is cleared and no longer usable. Its content is (quite literally) transferred to the worker context.
 
@@ -639,7 +631,7 @@ There is not an "official" way to embed the code of a worker within a web page, 
         document.querySelectorAll("script[type='text\/js-worker']"),
         (script) => script.textContent,
         { type: 'text/javascript' }
-      );
+      ));
 
       // Creating a new document.worker property containing all our "text/js-worker" scripts.
       document.worker = new Worker(window.URL.createObjectURL(blob));
@@ -699,7 +691,7 @@ function fibonacci(num){
 }
 ```
 
-The worker sets the property `onmessage` to a function which will receive messages sent when the worker object's `postMessage()` is called (note that this differs from defining a global _variable_ of that name, or defining a _function_ with that name. `var onmessage`, `let onmessage` and `function onmessage` will define global properties with those names, but they will not register the function to receive messages sent by the web page that created the worker). This starts the recursion, spawning new copies of itself to handle each iteration of the calculation.
+The worker sets the property `onmessage` to a function which will receive messages sent when the worker object's `postMessage()` is called (note that this differs from defining a _function_ with that name. `var onmessage`, `let onmessage` and `function onmessage` will define global properties with those names, but they will not register the function to receive messages sent by the web page that created the worker). This performs the math and eventually returns the result back to the main thread.
 
 #### The HTML code
 
@@ -771,7 +763,7 @@ Finally, a message is sent to the worker to start it.
 
 ### Dividing tasks among multiple workers
 
-As multi-core computers become increasingly common, it's often useful to divide computationally complex tasks among multiple workers, which may then perform those tasks on multiple-processor cores.
+As multicore computers become increasingly common, it's often useful to divide computationally complex tasks among multiple workers, which may then perform those tasks on multiple-processor cores.
 
 ## Other types of workers
 
@@ -798,7 +790,7 @@ You can use most standard JavaScript features inside a web worker, including:
 - {{jsxref("Global_Objects/Array", "Array")}}, {{jsxref("Global_Objects/Date", "Date")}}, {{jsxref("Global_Objects/Math", "Math")}}, and {{jsxref("Global_Objects/String", "String")}}
 - {{domxref("setTimeout()")}} and {{domxref("setInterval()")}}
 
-The main thing you _can't_ do in a Worker is directly affect the parent page. This includes manipulating the DOM and using that page's objects. You have to do it indirectly, by sending a message back to the main script via {{domxref("DedicatedWorkerGlobalScope.postMessage")}}, then actioning the changes from there.
+The main thing you _can't_ do in a Worker is directly affect the parent page. This includes manipulating the DOM and using that page's objects. You have to do it indirectly, by sending a message back to the main script via {{domxref("DedicatedWorkerGlobalScope.postMessage")}}, then doing the changes in event handler.
 
 > **Note:** You can test whether a method is available to workers using the site: <https://worker-playground.glitch.me/>. For example, if you enter [EventSource](/en-US/docs/Web/API/EventSource) into the site on Firefox 84 you'll see that this is not supported in service workers, but is in dedicated and shared workers.
 

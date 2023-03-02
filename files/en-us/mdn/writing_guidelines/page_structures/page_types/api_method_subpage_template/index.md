@@ -2,9 +2,6 @@
 title: API method subpage template
 slug: MDN/Writing_guidelines/Page_structures/Page_types/API_method_subpage_template
 page-type: mdn-writing-guide
-tags:
-  - meta
-  - writing-guide
 browser-compat: path.to.feature.NameOfTheMethod
 ---
 
@@ -24,14 +21,10 @@ browser-compat: path.to.feature.NameOfTheMethod
 > title: NameOfTheParentInterface.NameOfTheMethod()
 > slug: Web/API/NameOfTheParentInterface/NameOfTheMethod
 > page-type: web-api-instance-method OR web-api-static-method
-> tags:
->   - NameOfTheMethod
->   - API
->   - Method
->   - Reference
->   - Experimental
->   - Deprecated
->   - Non-standard
+> status:
+>   - experimental
+>   - deprecated
+>   - non-standard
 > browser-compat: path.to.feature.NameOfTheMethod
 > ---
 > ```
@@ -46,17 +39,8 @@ browser-compat: path.to.feature.NameOfTheMethod
 >     Note that the name of the method in the slug omits the parenthesis (it ends in `NameOfTheMethod` not `NameOfTheMethod()`).
 > - **page-type**
 >   - : The `page-type` key for Web/API methods is either `web-api-instance-method` (for instance methods) or `web-api-static-method` (for static methods).
-> - **tags**
->
->   - : Always include the following tags: **API**, **Reference**, **Method**, the _name of the API_ (e.g. **WebVR**), the name of the _parent interface_ (e.g. **IDBIndex**), the name of the method (e.g. **count()**).
->
->     Include the following tags as appropriate:
->
->     - Technology status: **Experimental** (if the technology is [experimental](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#experimental)), **Deprecated** (if it is [deprecated](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#deprecated_and_obsolete)), **Non-standard** if it isn't on a standards track.
->     - Special requirements: **Secure context** (if it is available in a secure context only)
->     - Any other tags that represent terms people might search for related to the technology.
->       For example on WebVR interface pages we include **VR** and **Virtual reality**.
->
+> - **status**
+>   - : Include (appropriate) technology status keys: [**experimental**](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#experimental), [**deprecated**](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#deprecated_and_obsolete), **non-standard** (if not on a standards track).
 > - **browser-compat**
 >
 >   - : Replace the placeholder value `path.to.feature.NameOfTheMethod` with the query string for the method in the [Browser compat data repo](https://github.com/mdn/browser-compat-data).

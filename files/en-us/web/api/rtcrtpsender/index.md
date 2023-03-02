@@ -2,21 +2,6 @@
 title: RTCRtpSender
 slug: Web/API/RTCRtpSender
 page-type: web-api-interface
-tags:
-  - API
-  - Audio
-  - DTLS
-  - DTMF
-  - Interface
-  - Media
-  - NeedsExample
-  - RTCRtpSender
-  - RTP
-  - Reference
-  - Video
-  - WebRTC
-  - WebRTC API
-  - WebRTC Device API
 browser-compat: api.RTCRtpSender
 ---
 
@@ -48,7 +33,7 @@ With it, you can configure the encoding used for the corresponding track, get in
 ## Instance methods
 
 - {{domxref("RTCRtpSender.getParameters()")}}
-  - : Returns a {{domxref("RTCRtpParameters")}} object describing the current configuration for the encoding and transmission of media on the `track`.
+  - : Returns an object describing the current configuration for the encoding and transmission of media on the `track`.
 - {{domxref("RTCRtpSender.getStats()")}}
   - : Returns a {{jsxref("Promise")}} which is fulfilled with a {{domxref("RTCStatsReport")}} which provides statistics data for all outbound streams being sent using this `RTCRtpSender`.
 - {{domxref("RTCRtpSender.setParameters()")}}

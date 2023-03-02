@@ -1,9 +1,6 @@
 ---
 title: Updating extensions for Firefox 2
 slug: Mozilla/Firefox/Releases/2/Updating_extensions
-tags:
-  - Add-ons
-  - Extensions
 ---
 
 {{FirefoxSidebar}}

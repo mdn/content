@@ -1,11 +1,7 @@
 ---
 title: 'TypeError: "x" is not a non-null object'
 slug: Web/JavaScript/Reference/Errors/No_non-null_object
-tags:
-  - Error
-  - Errors
-  - JavaScript
-  - TypeError
+page-type: javascript-error
 ---
 
 {{JSSidebar("Errors")}}
@@ -44,17 +40,17 @@ used, the optional descriptor parameter expects a property descriptor object. Pr
 no object (like just a number), will throw an error:
 
 ```js example-bad
-Object.defineProperty({}, 'key', 1);
+Object.defineProperty({}, "key", 1);
 // TypeError: 1 is not a non-null object
 
-Object.defineProperty({}, 'key', null);
+Object.defineProperty({}, "key", null);
 // TypeError: null is not a non-null object
 ```
 
 A valid property descriptor object might look like this:
 
 ```js example-good
-Object.defineProperty({}, 'key', { value: 'foo', writable: false });
+Object.defineProperty({}, "key", { value: "foo", writable: false });
 ```
 
 ### WeakMap and WeakSet objects require object keys
@@ -64,14 +60,14 @@ use other types as keys.
 
 ```js example-bad
 const ws = new WeakSet();
-ws.add('foo');
+ws.add("foo");
 // TypeError: "foo" is not a non-null object
 ```
 
 Use objects instead:
 
 ```js example-good
-ws.add({ foo: 'bar' });
+ws.add({ foo: "bar" });
 ws.add(window);
 ```
 

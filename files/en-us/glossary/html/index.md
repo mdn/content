@@ -1,10 +1,7 @@
 ---
 title: HTML
 slug: Glossary/HTML
-tags:
-  - CodingScripting
-  - HTML
-  - "l10n:priority"
+page-type: glossary-definition
 ---
 
 **HTML** (HyperText Markup Language) is a descriptive language that specifies webpage structure.
@@ -17,7 +14,7 @@ At that time, the W3C nearly abandoned HTML in favor of {{Glossary("XHTML")}}, p
 
 ## Concept and syntax
 
-An HTML document is a plaintext document structured with {{Glossary("element","elements")}}. Elements are surrounded by matching opening and closing {{Glossary("tag","tags")}}. Each tag begins and ends with angle brackets (`<>`). There are a few empty or _void_ tags that cannot enclose any text, for instance {{htmlelement("img")}}.
+An HTML document is a plaintext document structured with {{Glossary("element","elements")}}. Elements are surrounded by matching opening and closing {{Glossary("tag","tags")}}. Each tag begins and ends with angle brackets (`<>`). There are a few empty or _void_ elements that cannot enclose any text, for instance {{htmlelement("img")}}.
 
 You can extend HTML tags with {{Glossary("attribute","attributes")}}, which provide additional information affecting how the browser interprets the element:
 

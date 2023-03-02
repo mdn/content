@@ -1,12 +1,7 @@
 ---
 title: Symbol
 slug: Web/JavaScript/Reference/Global_Objects/Symbol
-tags:
-  - Class
-  - ECMAScript 2015
-  - JavaScript
-  - Symbol
-  - Polyfill
+page-type: javascript-class
 browser-compat: javascript.builtins.Symbol
 ---
 
@@ -22,20 +17,20 @@ To create a new primitive Symbol, you write `Symbol()` with an optional string a
 
 ```js
 const sym1 = Symbol();
-const sym2 = Symbol('foo');
-const sym3 = Symbol('foo');
+const sym2 = Symbol("foo");
+const sym3 = Symbol("foo");
 ```
 
 The above code creates three new Symbols. Note that `Symbol("foo")` does not coerce the string `"foo"` into a Symbol. It creates a new Symbol each time:
 
 ```js
-Symbol('foo') === Symbol('foo')  // false
+Symbol("foo") === Symbol("foo"); // false
 ```
 
 The following syntax with the {{jsxref("Operators/new", "new")}} operator will throw a {{jsxref("TypeError")}}:
 
 ```js
-const sym = new Symbol();  // TypeError
+const sym = new Symbol(); // TypeError
 ```
 
 This prevents authors from creating an explicit `Symbol` wrapper object instead of a new Symbol value and might be surprising as creating explicit wrapper objects around primitive data types is generally possible (for example, `new Boolean`, `new String` and `new Number`).
@@ -43,10 +38,10 @@ This prevents authors from creating an explicit `Symbol` wrapper object instead 
 If you really want to create a `Symbol` wrapper object, you can use the `Object()` function:
 
 ```js
-const sym = Symbol('foo');
-typeof sym      // "symbol"
+const sym = Symbol("foo");
+typeof sym; // "symbol"
 const symObj = Object(sym);
-typeof symObj   // "object"
+typeof symObj; // "object"
 ```
 
 ### Shared Symbols in the global Symbol registry
@@ -58,7 +53,7 @@ Note that the "global Symbol registry" is only a fictitious concept and may not 
 The method `Symbol.for(tokenString)` takes a string key and returns a symbol value from the registry, while `Symbol.keyFor(symbolValue)` takes a symbol value and returns the string key corresponding to it. Each is the other's inverse, so the following is `true`:
 
 ```js
-Symbol.keyFor(Symbol.for("tokenString")) === "tokenString" // true
+Symbol.keyFor(Symbol.for("tokenString")) === "tokenString"; // true
 ```
 
 ### Well-known Symbols
@@ -116,10 +111,14 @@ The static properties are all well-known Symbols. In these Symbols' descriptions
 
 ## Instance properties
 
-- `Symbol.prototype[@@toStringTag]`
-  - : The initial value of the [`@@toStringTag`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) property is the string `"Symbol"`. This property is used in {{jsxref("Object.prototype.toString()")}}. However, because `Symbol` also has its own [`toString()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toString) method, this property is not used unless you call [`Object.prototype.toString.call()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/call) with a symbol as `thisArg`.
+These properties are defined on `Symbol.prototype` and shared by all `Symbol` instances.
+
+- {{jsxref("Object/constructor", "Symbol.prototype.constructor")}}
+  - : The constructor function that created the instance object. For `Symbol` instances, the initial value is the {{jsxref("Symbol/Symbol", "Symbol")}} constructor.
 - {{jsxref("Symbol.prototype.description")}}
   - : A read-only string containing the description of the Symbol.
+- `Symbol.prototype[@@toStringTag]`
+  - : The initial value of the [`@@toStringTag`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) property is the string `"Symbol"`. This property is used in {{jsxref("Object.prototype.toString()")}}. However, because `Symbol` also has its own [`toString()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toString) method, this property is not used unless you call [`Object.prototype.toString.call()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/call) with a symbol as `thisArg`.
 
 ## Instance methods
 
@@ -137,9 +136,9 @@ The static properties are all well-known Symbols. In these Symbols' descriptions
 The {{jsxref("Operators/typeof", "typeof")}} operator can help you to identify Symbols.
 
 ```js
-typeof Symbol() === 'symbol'
-typeof Symbol('foo') === 'symbol'
-typeof Symbol.iterator === 'symbol'
+typeof Symbol() === "symbol";
+typeof Symbol("foo") === "symbol";
+typeof Symbol.iterator === "symbol";
 ```
 
 ### Symbol type conversions
@@ -159,15 +158,15 @@ Symbols are not enumerable in [`for...in`](/en-US/docs/Web/JavaScript/Reference/
 ```js
 const obj = {};
 
-obj[Symbol('a')] = 'a';
-obj[Symbol.for('b')] = 'b';
-obj['c'] = 'c';
-obj.d = 'd';
+obj[Symbol("a")] = "a";
+obj[Symbol.for("b")] = "b";
+obj["c"] = "c";
+obj.d = "d";
 
 for (const i in obj) {
   console.log(i);
 }
- // "c" "d"
+// "c" "d"
 ```
 
 ### Symbols and JSON.stringify()
@@ -175,7 +174,7 @@ for (const i in obj) {
 Symbol-keyed properties will be completely ignored when using `JSON.stringify()`:
 
 ```js
-JSON.stringify({ [Symbol('foo')]: 'foo' })
+JSON.stringify({ [Symbol("foo")]: "foo" });
 // '{}'
 ```
 
@@ -186,10 +185,10 @@ For more details, see {{jsxref("JSON.stringify()")}}.
 When a Symbol wrapper object is used as a property key, this object will be coerced to its wrapped Symbol:
 
 ```js
-const sym = Symbol('foo');
-const obj = {[sym]: 1};
-obj[sym]             // 1
-obj[Object(sym)]     // still 1
+const sym = Symbol("foo");
+const obj = { [sym]: 1 };
+obj[sym]; // 1
+obj[Object(sym)]; // still 1
 ```
 
 ## Specifications

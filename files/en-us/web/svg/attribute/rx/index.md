@@ -1,6 +1,7 @@
 ---
 title: rx
 slug: Web/SVG/Attribute/rx
+page-type: svg-attribute
 tags:
   - SVG
   - SVG Attribute

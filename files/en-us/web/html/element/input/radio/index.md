@@ -1,23 +1,7 @@
 ---
 title: <input type="radio">
 slug: Web/HTML/Element/input/radio
-tags:
-  - Choosing Options
-  - Element
-  - Form Options
-  - HTML
-  - HTML Input Types
-  - HTML forms
-  - HTML input
-  - Input
-  - Input Types
-  - Options
-  - Radio Buttons
-  - Radio Groups
-  - Reference
-  - form
-  - radio
-  - radio button
+page-type: html-element
 browser-compat: html.elements.input.type_radio
 ---
 
@@ -34,46 +18,6 @@ They are called radio buttons because they look and operate in a similar manner 
 ![Shows what radio buttons looked like in the olden days.](old-radio.jpg)
 
 > **Note:** [Checkboxes](/en-US/docs/Web/HTML/Element/input/checkbox) are similar to radio buttons, but with an important distinction: radio buttons are designed for selecting one value out of a set, whereas checkboxes let you turn individual values on and off. Where multiple controls exist, radio buttons allow one to be selected out of them all, whereas checkboxes allow multiple values to be selected.
-
-<table class="properties">
-  <tbody>
-    <tr>
-      <td><strong><a href="#value">Value</a></strong></td>
-      <td>
-        A string representing the value of the radio
-        button.
-      </td>
-    </tr>
-    <tr>
-      <td><strong>Events</strong></td>
-      <td>{{domxref("HTMLElement/change_event", "change")}} and {{domxref("HTMLElement/input_event", "input")}}</td>
-    </tr>
-    <tr>
-      <td><strong>Supported common attributes</strong></td>
-      <td>
-        <code><a href="#attr-checked">checked</a></code
-        >, <code><a href="#attr-value">value</a></code> and
-        <code
-          ><a href="/en-US/docs/Web/HTML/Attributes/required">required</a></code
-        >
-      </td>
-    </tr>
-    <tr>
-      <td><strong>IDL attributes</strong></td>
-      <td><code>checked</code> and <code>value</code></td>
-    </tr>
-    <tr>
-      <td><strong>DOM interface</strong></td>
-      <td><p>{{domxref("HTMLInputElement")}}</p></td>
-    </tr>
-    <tr>
-      <td><strong>Methods</strong></td>
-      <td>
-        {{domxref("HTMLInputElement.select", "select()")}}
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ## Value
 
@@ -177,17 +121,17 @@ Try this example out and see how there's never more than one result for the `con
 
 In addition to the common attributes shared by all {{HTMLElement("input")}} elements, `radio` inputs support the following attributes.
 
-- {{htmlattrdef("checked")}}
+- `checked`
 
   - : A Boolean attribute which, if present, indicates that this radio button is the default selected one in the group.
 
     Unlike other browsers, Firefox by default [persists the dynamic checked state](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing) of an `<input>` across page loads. Use the {{htmlattrxref("autocomplete","input")}} attribute to control this feature.
 
-- {{htmlattrdef("value")}}
+- `value`
 
   - : The `value` attribute is one which all {{HTMLElement("input")}}s share; however, it serves a special purpose for inputs of type `radio`: when a form is submitted, only radio buttons which are currently checked are submitted to the server, and the reported value is the value of the `value` attribute. If the `value` is not otherwise specified, it is the string `on` by default. This is demonstrated in the section [Value](#value) above.
 
-- {{htmlattrdef("required")}}
+- `required`
   - : The `required` attribute is one which most {{HTMLElement("input")}}s share. If any radio button in a same-named group of radio buttons has the `required` attribute, a radio button in that group must be checked, although it doesn't have to be the one with the attribute applied.
 
 ## Using radio inputs
@@ -336,6 +280,54 @@ Most notable here is the use of the {{cssxref("appearance")}} property (with pre
 {{EmbedLiveSample('Styling_radio_inputs', 600, 120)}}
 
 Notice that when clicking on a radio button, there's a nice, smooth fade out/in effect as the two buttons change state. In addition, the style and coloring of the legend and submit button are customized to have strong contrast. This might not be a look you'd want in a real web application, but it definitely shows off the possibilities.
+
+## Technical summary
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <td><strong><a href="#value">Value</a></strong></td>
+      <td>
+        A string representing the value of the radio
+        button.
+      </td>
+    </tr>
+    <tr>
+      <td><strong>Events</strong></td>
+      <td>{{domxref("HTMLElement/change_event", "change")}} and {{domxref("HTMLElement/input_event", "input")}}</td>
+    </tr>
+    <tr>
+      <td><strong>Supported common attributes</strong></td>
+      <td>
+        <code><a href="#attr-checked">checked</a></code
+        >, <code><a href="#attr-value">value</a></code> and
+        <code
+          ><a href="/en-US/docs/Web/HTML/Attributes/required">required</a></code
+        >
+      </td>
+    </tr>
+    <tr>
+      <td><strong>IDL attributes</strong></td>
+      <td><code>checked</code> and <code>value</code></td>
+    </tr>
+    <tr>
+      <td><strong>DOM interface</strong></td>
+      <td><p>{{domxref("HTMLInputElement")}}</p></td>
+    </tr>
+    <tr>
+      <td><strong>Methods</strong></td>
+      <td>
+        {{domxref("HTMLInputElement.select", "select()")}}
+      </td>
+    </tr>
+     <tr>
+      <td><strong>Implicit ARIA Role</strong></td>
+      <td>
+        <code><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/radio_role">radio</a></code>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
 ## Specifications
 

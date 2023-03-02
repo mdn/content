@@ -1,6 +1,7 @@
 ---
 title: <set>
 slug: Web/SVG/Element/set
+page-type: svg-element
 tags:
   - Element
   - SVG

@@ -2,25 +2,6 @@
 title: RTCIceCandidateStats.transportId
 slug: Web/API/RTCIceCandidateStats/transportId
 page-type: web-api-instance-property
-tags:
-  - API
-  - Candidate
-  - Connection
-  - Connectivity
-  - ICE
-  - Network
-  - Networking
-  - Property
-  - RTCIceCandidateStats
-  - Reference
-  - Statistics
-  - Stats
-  - Transport
-  - WebRTC
-  - WebRTC API
-  - id
-  - rtc
-  - transportID
 browser-compat: api.RTCIceCandidateStats.transportId
 ---
 

@@ -1,12 +1,7 @@
 ---
-title: 'ReferenceError: deprecated caller or arguments usage'
+title: "ReferenceError: deprecated caller or arguments usage"
 slug: Web/JavaScript/Reference/Errors/Deprecated_caller_or_arguments_usage
-tags:
-  - Error
-  - Errors
-  - JavaScript
-  - Strict Mode
-  - TypeError
+page-type: javascript-error
 ---
 
 {{jsSidebar("Errors")}}
@@ -43,11 +38,11 @@ non-standard, hard to optimize and potentially a performance-harmful feature.
 are deprecated (see the reference articles for more information).
 
 ```js example-bad
-'use strict';
+"use strict";
 
 function myFunc() {
   if (myFunc.caller === null) {
-    return 'The function was called from the top!';
+    return "The function was called from the top!";
   } else {
     return `This function's caller was ${myFunc.caller}`;
   }
@@ -63,13 +58,17 @@ myFunc();
 information).
 
 ```js example-bad
-'use strict';
+"use strict";
 
-function f(n) { g(n - 1); }
+function f(n) {
+  g(n - 1);
+}
 
 function g(n) {
   console.log(`before: ${g.arguments[0]}`);
-  if (n > 0) { f(n); }
+  if (n > 0) {
+    f(n);
+  }
   console.log(`after: ${g.arguments[0]}`);
 }
 

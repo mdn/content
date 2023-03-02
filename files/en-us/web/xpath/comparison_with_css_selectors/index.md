@@ -1,16 +1,11 @@
 ---
 title: Comparison of CSS Selectors and XPath
 slug: Web/XPath/Comparison_with_CSS_selectors
-tags:
-  - CSS
-  - Draft
-  - NeedsContent
-  - Reference
-  - Selectors
-  - XPath
 ---
 
-{{XSLTRef}}
+<section id="Quick_links">
+  {{ListSubpagesForSidebar("/en-US/docs/Web/XPath")}}
+</section>
 
 This article seeks to document the difference between CSS Selectors and XPath for web developers to be able to better choose the right tool for the right job.
 

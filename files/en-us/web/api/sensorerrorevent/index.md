@@ -2,16 +2,6 @@
 title: SensorErrorEvent
 slug: Web/API/SensorErrorEvent
 page-type: web-api-interface
-tags:
-  - API
-  - Error
-  - Generic Sensor API
-  - Interface
-  - Reference
-  - Sensor
-  - Sensor APIs
-  - SensorErrorEvent
-  - Sensors
 browser-compat: api.SensorErrorEvent
 ---
 

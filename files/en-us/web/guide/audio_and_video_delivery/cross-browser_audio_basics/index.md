@@ -1,14 +1,9 @@
 ---
 title: Cross-browser audio basics
 slug: Web/Guide/Audio_and_video_delivery/Cross-browser_audio_basics
-tags:
-  - Apps
-  - Audio
-  - Guide
-  - HTML
-  - Media
-  - events
 ---
+
+{{QuickLinksWithSubPages("/en-US/docs/Web/Guide/Audio_and_video_delivery")}}
 
 This article provides:
 
@@ -23,7 +18,7 @@ The code below is an example of a basic audio implementation using HTML5:
 <audio controls>
   <source src="audiofile.mp3" type="audio/mpeg" />
   <source src="audiofile.ogg" type="audio/ogg" />
-  <!-- fallback for non supporting browsers goes here -->
+  <!-- fallback for non-supporting browsers goes here -->
   <p>
     Your browser does not support HTML audio, but you can still
     <a href="audiofile.mp3">download the music</a>.
@@ -39,7 +34,7 @@ The code below is an example of a basic audio implementation using HTML5:
   - `src` contains the path to the audio file to be loaded (relative or absolute).
   - `type` is used to inform the browser of the file type. If omitted, most browsers will attempt to guess this from the file extension.
 
-- If the {{ htmlelement("audio") }} element is not supported then {{ htmlelement("audio") }} and {{ htmlelement("source") }} will be ignored. However any supported text or elements that you define within {{ htmlelement("audio") }} will be displayed or acted upon. So the ideal place to create a fallback or inform of incompatibility is before the closing `</audio>` tag. In this case, we've provided a simple paragraph including a link to download the audio directly.
+- If the {{ htmlelement("audio") }} element is not supported then {{ htmlelement("audio") }} and {{ htmlelement("source") }} will be ignored. However, any supported text or elements that you define within {{ htmlelement("audio") }} will be displayed or acted upon. So the ideal place to create a fallback or inform of incompatibility is before the closing `</audio>` tag. In this case, we've provided a simple paragraph including a link to download the audio directly.
 - The `controls` attribute on the {{ htmlelement("audio") }} element is specified when we require the browser to provide us with default playback controls. If you don't specify this attribute, no controls will appear — and you will instead have to create your own controls and program their functionality using the Media API (see below). However, that can be a good approach, because the default controls look different among various browsers. So creating your own controls ensures a consistent look for the controls across all browsers.
 
 ## HTML audio in detail
@@ -58,7 +53,7 @@ Specifying `autoplay` will cause the audio to start playing as soon as possible 
 <audio autoplay>…</audio>
 ```
 
-> **Note:** This value is often ignored on mobile platforms, and its use is not recommended unless really necessary. Auto-playing audio (and video) is usually really annoying. Plus browsers have policies that will block autoplay entirely in many situations. See the [Autoplay guide for media and Web Audio APIs](/en-US/docs/Web/Media/Autoplay_guide) for details.
+> **Note:** This value is often ignored on mobile platforms, and its use is not recommended unless really necessary. Autoplaying audio (and video) is usually really annoying. Plus browsers have policies that will block autoplay entirely in many situations. See the [Autoplay guide for media and Web Audio APIs](/en-US/docs/Web/Media/Autoplay_guide) for details.
 
 #### loop
 
@@ -131,31 +126,31 @@ Given the following HTML:
 You can grab the {{htmlelement("audio") }} element like this:
 
 ```js
-const audio = document.getElementById('my-audio');
+const audio = document.getElementById("my-audio");
 ```
 
 Alternatively, you can create a new element. Here's an example of creating an {{ htmlelement("audio") }} element, setting the media to play, playing and pausing, and then playing from 5 seconds into the audio:
 
 ```js
-const audio = document.createElement('audio');
+const audio = document.createElement("audio");
 
-if (audio.canPlayType('audio/mpeg')) {
-  audio.setAttribute('src','audiofile.mp3');
+if (audio.canPlayType("audio/mpeg")) {
+  audio.setAttribute("src", "audiofile.mp3");
 }
 
-if (audio.canPlayType('audio/ogg')) {
-  audio.setAttribute('src','audiofile.ogg');
+if (audio.canPlayType("audio/ogg")) {
+  audio.setAttribute("src", "audiofile.ogg");
 }
 
-alert('play');
+alert("play");
 
 audio.play();
 
-alert('stop');
+alert("stop");
 
 audio.pause();
 
-alert('play from 5 seconds in');
+alert("play from 5 seconds in");
 
 audio.currentTime = 5;
 audio.play();
@@ -186,7 +181,7 @@ audio.pause();
 The `canPlayType()` method asks the browser whether a certain audio file type is supported. It takes the mime type of the type to check as a parameter.
 
 ```js
-if (audio.canPlayType('audio/mpeg')) {
+if (audio.canPlayType("audio/mpeg")) {
   // It's supported.
   // Do something here!
 }
@@ -244,9 +239,9 @@ Next, we attach some functionality to the player using JavaScript:
 
 ```js
 window.onload = () => {
-  const audio = document.getElementById('my-audio');
-  const play = document.getElementById('play');
-  const pause = document.getElementById('pause');
+  const audio = document.getElementById("my-audio");
+  const play = document.getElementById("play");
+  const pause = document.getElementById("pause");
 
   // associate functions with the 'onclick' events
   play.onclick = playAudio;
@@ -259,8 +254,7 @@ window.onload = () => {
   function pauseAudio() {
     audio.pause();
   }
-
-}
+};
 ```
 
 ## Media loading events
@@ -354,7 +348,7 @@ We also have a few events available that will fire when there is some kind of in
 - abort
   - : Media data download has been aborted but not due to an error.
 - error
-  - : An error is encountered while media data is being download.
+  - : An error is encountered while media data is being downloaded.
 - emptied
   - : The media buffer has been emptied, possibly due to an error or because the load() method was invoked to reload it.
 - stalled
@@ -454,11 +448,11 @@ Now let's wire this thing up with JavaScript:
 
 ```js
 window.onload = () => {
-  const audio = document.getElementById('my-audio');
-  const play = document.getElementById('play');
-  const pause = document.getElementById('pause');
-  const loading = document.getElementById('loading');
-  const bar = document.getElementById('bar');
+  const audio = document.getElementById("my-audio");
+  const play = document.getElementById("play");
+  const pause = document.getElementById("pause");
+  const loading = document.getElementById("loading");
+  const bar = document.getElementById("bar");
 
   function displayControls() {
     loading.style.display = "none";
@@ -470,29 +464,31 @@ window.onload = () => {
     displayControls();
   } else {
     // not ready yet - wait for canplay event
-    audio.addEventListener('canplay', () => {
+    audio.addEventListener("canplay", () => {
       displayControls();
     });
   }
 
-  play.addEventListener('click', () => {
+  play.addEventListener("click", () => {
     audio.play();
     play.style.display = "none";
     pause.style.display = "block";
   });
 
-  pause.addEventListener('click', () => {
+  pause.addEventListener("click", () => {
     audio.pause();
     pause.style.display = "none";
     play.style.display = "block";
   });
 
   // Display progress
-  audio.addEventListener('timeupdate', () => {
+  audio.addEventListener("timeupdate", () => {
     // Sets the percentage
-    bar.style.width = `${Math.floor(audio.currentTime / audio.duration * 100)}%`;
+    bar.style.width = `${Math.floor(
+      (audio.currentTime / audio.duration) * 100
+    )}%`;
   });
-}
+};
 ```
 
 You should end up with something like this:
@@ -516,11 +512,11 @@ First of all, we apply a quick update to the progress bar CSS to display the han
 Then we add the code that detects the click and moves the 'playhead' to the correct position:
 
 ```js
-const progress = document.getElementById('progress');
+const progress = document.getElementById("progress");
 
-progress.addEventListener('click', (e) => {
+progress.addEventListener("click", (e) => {
   // Calculate the normalized position clicked
-  const clickPosition = (e.pageX  - progress.offsetLeft) / progress.offsetWidth;
+  const clickPosition = (e.pageX - progress.offsetLeft) / progress.offsetWidth;
   const clickTime = clickPosition * audio.duration;
 
   // Move the playhead to the correct position

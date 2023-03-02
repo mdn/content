@@ -1,22 +1,7 @@
 ---
 title: 'HTML attribute: autocomplete'
 slug: Web/HTML/Attributes/autocomplete
-tags:
-  - Addresses
-  - Attribute
-  - Email addresses
-  - Forms
-  - HTML
-  - Input
-  - Phone Numbers
-  - Reference
-  - Select
-  - Text
-  - Usernames
-  - autocomplete
-  - form
-  - passwords
-  - textarea
+page-type: html-attribute
 browser-compat: html.global_attributes.autocomplete
 ---
 
@@ -37,6 +22,8 @@ For more information, see the {{htmlattrxref("autocomplete", "form")}} attribute
 > 1. Have a `name` and/or `id` attribute
 > 2. Be descendants of a `<form>` element
 > 3. The form to have a {{HTMLElement("input/submit", "submit")}} button
+
+{{EmbedInteractiveExample("pages/tabbed/attribute-autocomplete.html", "tabbed-shorter")}}
 
 ## Values
 
@@ -157,7 +144,7 @@ For more information, see the {{htmlattrxref("autocomplete", "form")}} attribute
 
 See the [WHATWG Standard](https://html.spec.whatwg.org/multipage/forms.html#autofill) for more detailed information.
 
-> **Note:** The `autocomplete` attribute also controls whether Firefox will — unlike other browsers — [persist the dynamic disabled state and (if applicable) dynamic checkedness](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing) of an `<input>` element, `<textarea>` element, or entire `<form>` across page loads. The persistence feature is enabled by default. Setting the value of the `autocomplete` attribute to `off` disables this feature. This works even when the `autocomplete` attribute would normally not apply by virtue of its `type`. See {{bug(654072)}}.
+> **Note:** The `autocomplete` attribute also controls whether Firefox will — unlike other browsers — [persist the dynamic disabled state and (if applicable) dynamic checkedness](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing) of an `<input>` element, `<textarea>` element, or entire `<form>` across page loads. The persistence feature is enabled by default. Setting the value of the `autocomplete` attribute to `off` disables this feature. This works even when the `autocomplete` attribute would normally not apply by virtue of its `type`. See [Firefox bug 654072](https://bugzil.la/654072).
 
 ## Examples
 
@@ -208,7 +195,7 @@ The address levels are:
 
 - `address-level1`: The post town — "Winchelsea" in this case.
 - `address-line2`: The locality — "Upper-Wapping" in this case.
-- `address-line1`: The house/street particulars — "103 Frogmarch Street"
+- `address-line1`: The house/street particulars — "103 Frogmarch Street".
 
 The postcode is separate. Note that you can actually use just the postcode and `address-line1` to successfully deliver mail in the UK, so they should be the only mandatory items, but usually people tend to provide more details.
 
@@ -242,9 +229,9 @@ An address in Japan is typically **written in one line**, in an order from the l
 
 ## See also
 
-- The {{htmlelement("input")}} element.
-- The {{htmlelement("select")}} element.
-- The {{htmlelement("textarea")}} element.
-- The {{htmlelement("form")}} element.
+- The {{htmlelement("input")}} element
+- The {{htmlelement("select")}} element
+- The {{htmlelement("textarea")}} element
+- The {{htmlelement("form")}} element
 - [HTML forms](/en-US/docs/Learn/Forms)
-- All [global attributes](/en-US/docs/Web/HTML/Global_attributes).
+- All [global attributes](/en-US/docs/Web/HTML/Global_attributes)

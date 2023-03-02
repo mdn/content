@@ -1,6 +1,7 @@
 ---
 title: description
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/description
+page-type: webextension-manifest-key
 tags:
   - Add-ons
   - Extensions

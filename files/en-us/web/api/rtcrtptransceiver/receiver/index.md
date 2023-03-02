@@ -2,15 +2,6 @@
 title: RTCRtpTransceiver.receiver
 slug: Web/API/RTCRtpTransceiver/receiver
 page-type: web-api-instance-property
-tags:
-  - API
-  - Media
-  - Property
-  - RTCRtpTransceiver
-  - RTP
-  - Reference
-  - WebRTC
-  - receiver
 browser-compat: api.RTCRtpTransceiver.receiver
 ---
 

@@ -1,17 +1,13 @@
 ---
 title: Subtraction (-)
 slug: Web/JavaScript/Reference/Operators/Subtraction
-tags:
-  - JavaScript
-  - Language feature
-  - Operator
-  - Reference
+page-type: javascript-operator
 browser-compat: javascript.operators.subtraction
 ---
 
 {{jsSidebar("Operators")}}
 
-The subtraction operator (`-`) subtracts the two operands, producing their
+The **subtraction (`-`)** operator subtracts the two operands, producing their
 difference.
 
 {{EmbedInteractiveExample("pages/js/expressions-subtraction.html")}}

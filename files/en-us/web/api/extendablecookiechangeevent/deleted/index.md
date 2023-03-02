@@ -2,12 +2,6 @@
 title: ExtendableCookieChangeEvent.deleted
 slug: Web/API/ExtendableCookieChangeEvent/deleted
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - deleted
-  - ExtendableCookieChangeEvent
 browser-compat: api.ExtendableCookieChangeEvent.deleted
 ---
 
@@ -28,7 +22,7 @@ An array of objects containing the deleted cookie(s). Each object contains the f
 - `path`
   - : A string containing the path of the cookie.
 - `expires`
-  - : A {{domxref("DOMTimeStamp")}} containing the expiration date of the cookie.
+  - : A timestamp, given as [Unix time](/en-US/docs/Glossary/Unix_time) in milliseconds, containing the expiration date of the cookie.
 - `secure`
   - : A {{jsxref("boolean")}} indicating whether the cookie is from a site with a secure context (HTTPS rather than HTTP).
 - `sameSite`
@@ -49,7 +43,7 @@ An array of objects containing the deleted cookie(s). Each object contains the f
 In this example when the cookie is deleted the event listener logs the first item in the `deleted` property to the console. It contains an object representing the cookie that has just been deleted.
 
 ```js
-self.addEventListener('cookiechange', (event) => {
+self.addEventListener("cookiechange", (event) => {
   console.log(event.deleted[0]);
 });
 ```

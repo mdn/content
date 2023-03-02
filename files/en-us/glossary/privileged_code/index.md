@@ -1,8 +1,7 @@
 ---
-title: privileged code
-slug: Glossary/privileged_code
-tags:
-  - privileged
+title: Privileged code
+slug: Glossary/Privileged_code
+page-type: glossary-definition
 ---
 
 **Privileged code** - JavaScript code of your extension. For example, code in content scripts.

@@ -1,18 +1,13 @@
 ---
 title: Subtraction assignment (-=)
 slug: Web/JavaScript/Reference/Operators/Subtraction_assignment
-tags:
-  - Assignment operator
-  - JavaScript
-  - Language feature
-  - Operator
-  - Reference
+page-type: javascript-operator
 browser-compat: javascript.operators.subtraction_assignment
 ---
 
 {{jsSidebar("Operators")}}
 
-The subtraction assignment operator (`-=`) subtracts the value of the right
+The **subtraction assignment (`-=`)** operator subtracts the value of the right
 operand from a variable and assigns the result to the variable.
 
 {{EmbedInteractiveExample("pages/js/expressions-subtraction-assignment.html")}}
@@ -31,7 +26,7 @@ x -= y // x = x - y
 let bar = 5;
 
 bar -= 2; // 3
-bar -= 'foo'; // NaN
+bar -= "foo"; // NaN
 ```
 
 ## Specifications

@@ -1,8 +1,6 @@
 ---
 title: Web-related technologies
 slug: Related
-tags:
-  - Related
 ---
 
 This section of the site is a home for documentation on web-related technologies that aren't central to the MDN's remit (i.e. they aren't web standards technologies), but are nonetheless related to the web and of interest to web developers.
@@ -28,7 +26,7 @@ If the MDN Web Docs team accepts your proposal, it's time to get started with wr
 
 ## Contact
 
-You can contact the MDN team at <mdn-admins@mozilla.org>.
+You can contact the MDN team on the [communication channels](/en-US/docs/MDN/Community/Communication_channels).
 
 ## See also
 

@@ -9,7 +9,7 @@ tags:
 browser-compat: mathml.global_attributes.mathcolor
 ---
 
-{{MathMLRef("Global_attributes")}}{{Deprecated_Header}}
+{{QuickLinksWithSubPages("/en-us/docs/Web/MathML/Global_attributes")}}{{Deprecated_Header}}
 
 The **`mathcolor`** [global attribute](/en-US/docs/Web/MathML/Global_attributes) sets the [color](/en-US/docs/Web/CSS/color) of a MathML element.
 
@@ -17,7 +17,7 @@ The **`mathcolor`** [global attribute](/en-US/docs/Web/MathML/Global_attributes)
 
 ## Syntax
 
-```html
+```html-nolint
 <!-- Keyword values -->
 <math mathcolor="currentcolor">
 

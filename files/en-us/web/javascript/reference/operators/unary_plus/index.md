@@ -1,17 +1,13 @@
 ---
 title: Unary plus (+)
 slug: Web/JavaScript/Reference/Operators/Unary_plus
-tags:
-  - JavaScript
-  - Language feature
-  - Operator
-  - Reference
+page-type: javascript-operator
 browser-compat: javascript.operators.unary_plus
 ---
 
 {{jsSidebar("Operators")}}
 
-The unary plus operator (`+`) precedes its operand and evaluates to its
+The **unary plus (`+`)** operator precedes its operand and evaluates to its
 operand but attempts to [convert it into a number](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#number_coercion), if it isn't already.
 
 {{EmbedInteractiveExample("pages/js/expressions-unary-plus.html", "taller")}}
@@ -53,6 +49,7 @@ console.log(+y);
 +true  // 1
 +false // 0
 +null  // 0
++[]    // 0
 +function (val) { return val; } // NaN
 +1n    // throws TypeError: Cannot convert BigInt value to number
 ```

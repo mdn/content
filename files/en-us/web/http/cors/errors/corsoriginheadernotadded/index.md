@@ -19,7 +19,7 @@ tags:
 
 ## Reason
 
-```
+```plain
 Reason: CORS header 'Origin' cannot be added
 ```
 

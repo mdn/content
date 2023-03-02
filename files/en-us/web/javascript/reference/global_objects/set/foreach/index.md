@@ -1,13 +1,7 @@
 ---
 title: Set.prototype.forEach()
 slug: Web/JavaScript/Reference/Global_Objects/Set/forEach
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - set
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.Set.forEach
 ---
 
@@ -99,7 +93,7 @@ The following code logs a line for each element in a `Set` object:
 
 ```js
 function logSetElements(value1, value2, set) {
-  console.log(`s[${value}] = ${value2}`);
+  console.log(`s[${value1}] = ${value2}`);
 }
 
 new Set(["foo", "bar", undefined]).forEach(logSetElements);

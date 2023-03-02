@@ -2,14 +2,9 @@
 title: Element.setCapture()
 slug: Web/API/Element/setCapture
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - Element
-  - Method
-  - Non-standard
-  - Reference
-  - Deprecated
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.Element.setCapture
 ---
 
@@ -106,7 +101,7 @@ layout of other elements.
 
 ## Specifications
 
-Based on Internet Explorer's implementation.
+Not part of any specification.
 
 ## Browser compatibility
 

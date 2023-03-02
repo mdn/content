@@ -1,9 +1,7 @@
 ---
 title: JavaScript typed arrays
 slug: Web/JavaScript/Typed_arrays
-tags:
-  - Guide
-  - JavaScript
+page-type: guide
 ---
 
 {{JsSidebar("Advanced")}}

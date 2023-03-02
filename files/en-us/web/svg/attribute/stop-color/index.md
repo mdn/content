@@ -1,6 +1,7 @@
 ---
 title: stop-color
 slug: Web/SVG/Attribute/stop-color
+page-type: svg-attribute
 tags:
   - NeedsExample
   - SVG

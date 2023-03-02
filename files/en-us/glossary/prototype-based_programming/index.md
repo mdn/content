@@ -1,8 +1,7 @@
 ---
 title: Prototype-based programming
 slug: Glossary/Prototype-based_programming
-tags:
-  - CodingScripting
+page-type: glossary-definition
 ---
 
 **Prototype-based programming** is a style of {{Glossary("OOP", "object-oriented programming")}} in which {{Glossary('Class', 'classes')}} are not explicitly defined, but rather derived by adding properties and methods to an instance of another class or, less frequently, adding them to an empty object.

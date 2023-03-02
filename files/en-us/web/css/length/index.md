@@ -2,14 +2,6 @@
 title: <length>
 slug: Web/CSS/length
 page-type: css-type
-tags:
-  - CSS
-  - CSS Data Type
-  - Data Type
-  - Layout
-  - Reference
-  - Web
-  - length
 browser-compat: css.types.length
 ---
 
@@ -50,11 +42,11 @@ Font lengths define the `<length>` value in terms of the size of a particular ch
   - : Represents the [x-height](https://en.wikipedia.org/wiki/X-height) of the element's {{Cssxref("font")}}. In fonts with the `x` letter, this is generally the height of lowercase letters in the font; `1ex ≈ 0.5em` in many fonts.
 - `ic`
   - : Equal to the used {{Glossary("advance measure")}} of the "水" glyph (CJK water ideograph, U+6C34), found in the font used to render it.
-- `lh` {{experimental_inline}} {{Non-standard_Inline}}
+- `lh` {{experimental_inline}}
   - : Equal to the computed value of the {{Cssxref("line-height")}} property of the element on which it is used, converted to an absolute length.
 - `rem`
   - : Represents the {{Cssxref("font-size")}} of the root element (typically {{HTMLElement("html")}}). When used within the root element {{Cssxref("font-size")}}, it represents its initial value (a common browser default is `16px`, but user-defined preferences may modify this).
-- `rlh` {{experimental_inline}} {{Non-standard_Inline}}
+- `rlh` {{experimental_inline}}
   - : Equal to the computed value of the {{Cssxref("line-height")}} property on the root element (typically {{HTMLElement("html")}}), converted to an absolute length. When used on the {{Cssxref("font-size")}} or {{Cssxref("line-height")}} properties of the root element, it refers to the properties' initial value.
 
 ### Relative length units based on viewport
@@ -135,6 +127,37 @@ Viewport-percentage lengths define `<length>` values in percentage relative to t
 
     For small, large, and dynamic viewport sizes, the respective viewport-percentage units are `svi`, `lvi`, and `dvi`.
     `vi` represents the viewport-percentage length unit based on the browser default viewport size.
+
+### Container query length units
+
+When applying styles to a container using container queries, you can use container query length units.
+These units specify a length relative to the dimensions of a query container.
+Components that use units of length relative to their container are more flexible to use in different containers without having to recalculate concrete length values.
+For more information, see [Container queries](/en-US/docs/Web/CSS/CSS_Container_Queries).
+
+- `cqw`
+
+  - : Represents a percentage of the width of the query container. `1cqw` is 1% of the query container's width. For example, if the query container's width is `800px`, then a value of `50cqw` on a property will be `400px`.
+
+- `cqh`
+
+  - : Represents a percentage of the height of the query container. `1cqh` is 1% of the query container's height. For example, if the query container's height is `300px`, then a value of `10cqh` on a property will be `30px`.
+
+- `cqi`
+
+  - : Represents a percentage of the inline size of the query container. `1cqi` is 1% of the query container's inline size. For example, if the query container's inline size is `800px`, then a value of `50cqi` on a property will be `400px`.
+
+- `cqb`
+
+  - : Represents a percentage of the block size of the query container. `1cqb` is 1% of the query container's block size. For example, if the query container's block size is `300px`, then a value of `10cqb` on a property will be `30px`.
+
+- `cqmin`
+
+  - : Represents a percentage of the smaller value of either the query container's inline size or block size. `1cqmin` is 1% of the smaller value of either the query container's inline size or block size. For example, if the query container's inline size is `800px` and its block size is `300px`, then a value of `50cqmin` on a property will be `150px`.
+
+- `cqmax`
+
+  - : Represents a percentage of the larger value of either the query container's inline size or block size. `1cqmax` is 1% of the larger value of either the query container's inline size or block size. For example, if the query container's inline size is `800px` and its block size is `300px`, then a value of `50cqmax` on a property will be `400px`.
 
 #### Absolute length units
 
@@ -244,22 +267,22 @@ label {
 #### JavaScript
 
 ```js
-const inputDiv = document.querySelector('.inner');
-const inputElem = document.querySelector('input');
-const resultsDiv = document.querySelector('.results');
+const inputDiv = document.querySelector(".inner");
+const inputElem = document.querySelector("input");
+const resultsDiv = document.querySelector(".results");
 
-inputElem.addEventListener('change', () => {
+inputElem.addEventListener("change", () => {
   inputDiv.style.width = inputElem.value;
 
-  const result = document.createElement('div');
-  result.className = 'result';
+  const result = document.createElement("div");
+  result.className = "result";
   result.style.width = inputElem.value;
   result.innerHTML = `<code>width: ${inputElem.value}</code>`;
   resultsDiv.appendChild(result);
 
-  inputElem.value = '';
+  inputElem.value = "";
   inputElem.focus();
-})
+});
 ```
 
 #### Result

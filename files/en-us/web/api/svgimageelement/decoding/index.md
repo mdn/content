@@ -2,15 +2,6 @@
 title: SVGImageElement.decoding
 slug: Web/API/SVGImageElement/decoding
 page-type: web-api-instance-property
-tags:
-  - API
-  - Image
-  - Property
-  - Reference
-  - SVG
-  - SVG DOM
-  - SVGImageElement
-  - decoding
 browser-compat: api.SVGImageElement.decoding
 ---
 
@@ -47,4 +38,4 @@ img.src = 'img/logo.svg';
 
 ## See also
 
-- [\<img>: The Image Embed element](/en-US/docs/Web/HTML/Element/img)
+- [`<img>`: The Image Embed element](/en-US/docs/Web/HTML/Element/img)

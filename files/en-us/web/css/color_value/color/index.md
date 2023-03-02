@@ -2,18 +2,10 @@
 title: color()
 slug: Web/CSS/color_value/color
 page-type: css-function
-tags:
-  - CSS
-  - CSS Data Type
-  - Data Type
-  - Reference
-  - Web
-  - color
-  - Experimental
 browser-compat: css.types.color.color
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{CSSRef}}
 
 The **`color()`** functional notation allows a color to be specified in a particular, specified colorspace rather than the implicit sRGB colorspace that most of the other color functions operate in.
 
@@ -30,13 +22,17 @@ color(display-p3 1 0.5 0 / .5);
 
 ### Values
 
-- Functional notation: `color( [ [<ident> | <dashed-ident>]? [ <number-percentage>+ | <string> ] [ / <alpha-value> ]? ] )`
+- Functional notation: `color( [ [<ident> | <dashed-ident>]? [ <number-percentage>+ ] [ / <alpha-value> ]? ] )`
 
-  - : `[<ident> | <dashed-ident>]` is an optional {{cssxref("ident")}} or {{cssxref("dashed-ident")}} denoting the colorspace. If this is an `<ident>` it denotes one of the predefined colorspaces (such as display-p3); if it is a \<dashed-ident> it denotes a custom colorspace, defined by a [`@color-profile`](/en-US/docs/Web/CSS/@color-profile) rule.
+  - : `[<ident> | <dashed-ident>]` is an optional {{cssxref("ident")}} or {{cssxref("dashed-ident")}} denoting the colorspace. If this is an `<ident>` it denotes one of the predefined colorspaces (such as display-p3); if it is a `<dashed-ident>` it denotes a custom colorspace, defined by a [`@color-profile`](/en-US/docs/Web/CSS/@color-profile) rule.
 
-    `[ <number-percentage>+ | <string> ]` is either one or more {{cssxref("number")}} or {{cssxref("percentage")}} values providing the parameter values that the colorspace takes, or a {{cssxref("string")}} giving the name of a color defined by the colorspace.
+    `[ <number-percentage>+ ]` is one or more {{cssxref("number")}} or {{cssxref("percentage")}} values providing the parameter values that the colorspace takes.
 
     `/ <alpha-value>` (alpha) can be a {{cssxref("&lt;number&gt;")}} between `0` and `1`, or a {{cssxref("&lt;percentage&gt;")}}, where the number `1` corresponds to `100%` (full opacity).
+
+### Formal syntax
+
+{{csssyntax}}
 
 ## Specifications
 

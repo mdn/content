@@ -2,16 +2,6 @@
 title: ServiceWorkerContainer
 slug: Web/API/ServiceWorkerContainer
 page-type: web-api-interface
-tags:
-  - API
-  - Draft
-  - Interface
-  - Offline
-  - Reference
-  - Service Workers
-  - Service worker API
-  - ServiceWorkerContainer
-  - Workers
 browser-compat: api.ServiceWorkerContainer
 ---
 

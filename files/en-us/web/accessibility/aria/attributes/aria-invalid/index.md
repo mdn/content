@@ -1,13 +1,6 @@
 ---
 title: aria-invalid
 slug: Web/Accessibility/ARIA/Attributes/aria-invalid
-tags:
-  - Accessibility
-  - ARIA
-  - ARIA attribute
-  - ARIA property
-  - aria-invalid
-  - Reference
 spec-urls: https://w3c.github.io/aria/#aria-invalid
 ---
 
@@ -76,7 +69,7 @@ The following snippet shows a simplified version of two form fields with a valid
       id="email"
       aria-required="true"
       aria-invalid="false"
-      onblur="checkValidity('email', '@', 'Invalid e-mail address');" />
+      onblur="checkValidity('email', '@', 'Invalid email address');" />
   </li>
 </ul>
 ```

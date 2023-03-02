@@ -2,11 +2,6 @@
 title: ProgressEvent.lengthComputable
 slug: Web/API/ProgressEvent/lengthComputable
 page-type: web-api-instance-property
-tags:
-  - API
-  - Progress Events
-  - ProgressEvent
-  - Property
 browser-compat: api.ProgressEvent.lengthComputable
 ---
 

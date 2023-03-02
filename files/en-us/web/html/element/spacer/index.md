@@ -1,12 +1,9 @@
 ---
 title: <spacer>
 slug: Web/HTML/Element/spacer
-tags:
-  - Element
-  - HTML
-  - Deprecated
-  - Reference
-  - Web
+page-type: html-element
+status:
+  - deprecated
 browser-compat: html.elements.spacer
 ---
 

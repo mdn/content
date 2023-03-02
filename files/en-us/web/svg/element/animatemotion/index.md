@@ -1,6 +1,7 @@
 ---
 title: <animateMotion>
 slug: Web/SVG/Element/animateMotion
+page-type: svg-element
 tags:
   - Element
   - SVG

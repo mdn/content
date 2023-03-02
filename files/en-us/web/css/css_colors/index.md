@@ -2,16 +2,6 @@
 title: CSS Colors
 slug: Web/CSS/CSS_Colors
 page-type: css-module
-tags:
-  - CSS
-  - CSS Colors
-  - Guide
-  - HTML Colors
-  - Overview
-  - Reference
-  - Styles
-  - Styling HTML
-  - colors
 spec-urls: https://drafts.csswg.org/css-color/
 ---
 
