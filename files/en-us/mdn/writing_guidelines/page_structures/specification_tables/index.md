@@ -2,7 +2,7 @@
 title: Specification tables
 slug: MDN/Writing_guidelines/Page_structures/Specification_tables
 page-type: mdn-writing-guide
-browser-urls: css.properties.text-align
+browser-compat: css.properties.text-align
 ---
 
 {{MDNSidebar}}
