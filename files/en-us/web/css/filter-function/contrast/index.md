@@ -39,7 +39,7 @@ contrast(200%)  /* Double contrast */
 
 ### With the backdrop-filter property
 
-This example applies a `contrast()` filter via the `backdrop-filter` CSS property to the paragraph and monospaced text, color shifting to the area behind the `<p>` and `<code>`.
+This example applies a `contrast()` filter via the {{cssxref("backdrop-filter")}} CSS property to the paragraph and monospaced text, color shifting to the area behind the `<p>` and `<code>`.
 
 ```css
 .container {
@@ -81,7 +81,7 @@ p {
 
 ### With the filter property
 
-This example applies a `contrast()` filter via the `filter` CSS property, changing contrast by shifting colors of the entire element, including content, border, background, and shadows.
+This example applies a `contrast()` filter via the {{cssxref("filter")}} CSS property, changing contrast by shifting colors of the entire element, including content, border, background, and shadows.
 
 ```css
 p:first-of-type {
@@ -116,51 +116,7 @@ p {
 
 ### With url() and the SVG contrast filter
 
-The SVG {{SVGElement("filter")}} element is used to define custom filter effects that can then be referenced by {{htmlattrxref("id")}}. The `<filter>`'s {{SVGElement("feComponentTransfer")}} primitive enables pixel-level color remapping.
-
-<!-- Content for SVG contrast page:
-
- To alter the contrast, include linear {{SVGElement("feFuncR")}} (red), {{SVGElement("feFuncB")}} (blue), and {{SVGElement("feFuncG")}} (green) primitives with the `slope` attribute value defining the contrast multiplier and the `intercept` attribute.
-
-```svg
-<svg role="none">
-  <filter id="contrast">
-    <feComponentTransfer>
-      <feFuncR type="linear" slope="[amount]" intercept="-(0.5 * [amount]) + 0.5"/>
-      <feFuncG type="linear" slope="[amount]" intercept="-(0.5 * [amount]) + 0.5"/>
-      <feFuncB type="linear" slope="[amount]" intercept="-(0.5 * [amount]) + 0.5"/>
-    </feComponentTransfer>
-  </filter>
-</svg>
-```
-
-This example shows three images: the image with a `contrast()` filter function applied, the image with the equivalent SVG blur function applied, and the original image for comparison:
-
-```css
-.filter {
-  filter: contrast(2);
-}
-.svgFilter {
-  filter: url(#contrast);
-}
-```
-
-To create a filter that doubles the original contrast, we set the `slope` attribute to 2, for 200%, and the `intercept` attribute set to the `-(0.25 * [2.00]) + 0.5`, which is `-0.5`.
-
-```svg
-<svg role="none">
-  <filter id="contrast">
-    <feComponentTransfer>
-      <feFuncR type="linear" slope="2" intercept="-0.5"/>
-      <feFuncG type="linear" slope="2" intercept="-0.5"/>
-      <feFuncB type="linear" slope="2" intercept="-0.5"/>
-    </feComponentTransfer>
-  </filter>
-</svg>
-```
--->
-
-Given the following:
+The SVG {{SVGElement("filter")}} element is used to define custom filter effects that can then be referenced by {{htmlattrxref("id")}}. The `<filter>`'s {{SVGElement("feComponentTransfer")}} primitive enables pixel-level color remapping. Given the following:
 
 ```svg
   <filter id="contrast">
@@ -171,14 +127,14 @@ Given the following:
     </feComponentTransfer>
   </filter>
 ```
-
-These values produce the same results:
 
 ```css hidden
 .svgFilterLive {
   filter: url(#contrast2);
 }
 ```
+
+These values produce the same results:
 
 ```css
 filter: contrast(200%);
