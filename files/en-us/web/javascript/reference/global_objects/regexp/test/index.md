@@ -7,10 +7,7 @@ browser-compat: javascript.builtins.RegExp.test
 
 {{JSRef}}
 
-The **`test()`** method executes a search for a match between a regular expression and
-a specified string. Returns `true` if there is a match; `false`
-otherwise. Note that if the specified string is `undefined` or `null`, this method 
-returns `false` without raising an error.
+The **`test()`** method executes a search for a match between a regular expression and a specified string. Returns `true` if there is a match; `false` otherwise.
 
 JavaScript {{jsxref("RegExp")}} objects are **stateful** when they have
 the {{jsxref("RegExp/global", "global")}} or {{jsxref("RegExp/sticky", "sticky")}} flags
@@ -30,7 +27,7 @@ test(str)
 ### Parameters
 
 - `str`
-  - : The string against which to match the regular expression.
+  - : The string against which to match the regular expression. All values are [coerced to strings](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#string_coercion), so omitting it or passing `undefined` causes `test()` to search for the string `"undefined"`, which is rarely what you want.
 
 ### Returns
 
@@ -40,11 +37,9 @@ test(str)
 ## Description
 
 Use `test()` whenever you want to know whether a pattern is found in a
-string. `test()` returns a boolean, unlike the {{jsxref("String.prototype.search()")}} 
-method (which returns the index of a match, or `-1` if a match is not found.) Using 
-`test()` is advantageous in cases when it's immaterial if the string to be 
-evaluated is `null` or `undefined`, because it will simply return `false` rather than
-throwing an error.
+string. `test()` returns a boolean, unlike the
+{{jsxref("String.prototype.search()")}} method (which returns the index of a match, or
+`-1` if not found).
 
 To get more information (but with slower execution), use the
 {{jsxref("RegExp.prototype.exec()", "exec()")}} method. (This is similar to the
@@ -74,33 +69,6 @@ The following example logs a message which depends on the success of the test:
 function testInput(re, str) {
   const midstring = re.test(str) ? "contains" : "does not contain";
   console.log(`${str} ${midstring} ${re.source}`);
-}
-```
-
-The following example illustrates the difference between `test` and `match` on undefined and null strings:
-
-```js
-function testInput(re, word){
-    console.log('test result is ' + re.test(word) + ' and test works with ' + word);
-    console.log('match result is ' + word.match(re) + ' and match works with ' + word); // TypeError thrown
-}
-
-const re = /foo/
-
-let word; // word is undefined
-try{
-    testInput(re, word);
-}
-catch(error) {
-    console.error(error);
-}
-
-word = null;
-try{
-    testInput(re, word);
-}
-catch(error) {
-    console.error(error);
 }
 ```
 
