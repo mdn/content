@@ -22,7 +22,7 @@ No notable changes
 - The {{CSSxRef("counter-reset")}} property now supports the `reversed()` function for creating _reversed_ [CSS counters](/en-US/docs/Web/CSS/CSS_Counter_Styles/Using_CSS_counters), which are intended for numbering elements in descending order.
   This can be used with the `list-item` counter to automatically number ordered lists in reverse order, starting from the number of elements in the list
   (`list-item` is a counter that is automatically applied for ordered lists, such as those created using {{HTMLElement("ol")}}).
-  Firefox uses this feature internally to support the `<ol>` [`reversed` attribute](/en-US/docs/Web/HTML/Element/ol#attr-reversed).
+  Firefox uses this feature internally to support the `<ol>` [`reversed` attribute](/en-US/docs/Web/HTML/Element/ol#reversed).
   ([Firefox bug 1706346](https://bugzil.la/1706346)).
 
 ### JavaScript
