@@ -1,15 +1,6 @@
 ---
 title: "ARIA: progressbar role"
 slug: Web/Accessibility/ARIA/Roles/progressbar_role
-tags:
-  - Accessibility
-  - ARIA
-  - roles
-  - Reference
-  - ARIA roles
-  - widget role
-  - widget
-  - progressbar role
 spec-urls: https://w3c.github.io/aria/#progressbar
 ---
 

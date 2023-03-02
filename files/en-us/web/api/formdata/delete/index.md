@@ -31,7 +31,7 @@ None ({{jsxref("undefined")}}).
 You can delete a key and its values using `delete()`:
 
 ```js
-formData.delete('username');
+formData.delete("username");
 ```
 
 ## Specifications

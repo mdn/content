@@ -56,7 +56,7 @@ The `replaceWith()` method is not scoped into the `with`
 statement. See {{jsxref("Symbol.unscopables")}} for more information.
 
 ```js
-with(node) {
+with (node) {
   replaceWith("foo");
 }
 // ReferenceError: replaceWith is not defined

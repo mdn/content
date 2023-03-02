@@ -50,15 +50,25 @@ This example checks the size of a log file in a temporary folder and, if it exce
 megabyte, moves it into a different directory.
 
 ```js
-workingDirectory.getFile("tmp/log.txt", {}, (fileEntry) => {
-  fileEntry.getMetadata((metadata) => {
-    if (metadata.size > 1048576) {
-      workingDirectory.getDirectory("log", {}, (dirEntry) => {
-        fileEntry.moveTo(dirEntry);
-      }, handleError);
-    }
-  });
-}, handleError);
+workingDirectory.getFile(
+  "tmp/log.txt",
+  {},
+  (fileEntry) => {
+    fileEntry.getMetadata((metadata) => {
+      if (metadata.size > 1048576) {
+        workingDirectory.getDirectory(
+          "log",
+          {},
+          (dirEntry) => {
+            fileEntry.moveTo(dirEntry);
+          },
+          handleError
+        );
+      }
+    });
+  },
+  handleError
+);
 ```
 
 ## Browser compatibility

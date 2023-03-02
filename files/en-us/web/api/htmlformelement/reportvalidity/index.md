@@ -26,9 +26,13 @@ reportValidity()
 ## Example
 
 ```js
-document.forms['myform'].addEventListener('submit', () => {
-  document.forms['myform'].reportValidity();
-}, false);
+document.forms["myform"].addEventListener(
+  "submit",
+  () => {
+    document.forms["myform"].reportValidity();
+  },
+  false
+);
 ```
 
 ## Specifications

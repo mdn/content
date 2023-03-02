@@ -42,11 +42,11 @@ getUserMedia(constraints, successCallback, errorCallback)
 
     ```js
     function successCallback(stream) {
-       const video = document.querySelector('video');
-       video.srcObject = stream;
-       video.onloadedmetadata = (e) => {
-          // Do something with the video here.
-       };
+      const video = document.querySelector("video");
+      video.srcObject = stream;
+      video.onloadedmetadata = (e) => {
+        // Do something with the video here.
+      };
     }
     ```
 
@@ -70,25 +70,27 @@ various browsers' prefixes. Note that this is the deprecated way of doing it: Se
 under the {{domxref("MediaDevices.getUserMedia()")}} for modern examples.
 
 ```js
-navigator.getUserMedia = navigator.getUserMedia ||
-                         navigator.webkitGetUserMedia ||
-                         navigator.mozGetUserMedia;
+navigator.getUserMedia =
+  navigator.getUserMedia ||
+  navigator.webkitGetUserMedia ||
+  navigator.mozGetUserMedia;
 
 if (navigator.getUserMedia) {
-   navigator.getUserMedia({ audio: true, video: { width: 1280, height: 720 } },
-      (stream) => {
-         const video = document.querySelector('video');
-         video.srcObject = stream;
-         video.onloadedmetadata = (e) => {
-           video.play();
-         };
-      },
-      (err) => {
-         console.error(`The following error occurred: ${err.name}`);
-      }
-   );
+  navigator.getUserMedia(
+    { audio: true, video: { width: 1280, height: 720 } },
+    (stream) => {
+      const video = document.querySelector("video");
+      video.srcObject = stream;
+      video.onloadedmetadata = (e) => {
+        video.play();
+      };
+    },
+    (err) => {
+      console.error(`The following error occurred: ${err.name}`);
+    }
+  );
 } else {
-   console.log("getUserMedia not supported");
+  console.log("getUserMedia not supported");
 }
 ```
 

@@ -53,7 +53,7 @@ To disable OS-level mouse acceleration and access raw mouse input, you can set t
 ```js
 canvas.addEventListener("click", async () => {
   await canvas.requestPointerLock({
-    unadjustedMovement: true
+    unadjustedMovement: true,
   });
 });
 ```

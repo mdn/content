@@ -1,15 +1,6 @@
 ---
 title: "Express Tutorial Part 5: Displaying library data"
 slug: Learn/Server-side/Express_Nodejs/Displaying_data
-tags:
-  - Beginner
-  - Controller
-  - Express
-  - Learn
-  - Template
-  - View
-  - nodejs
-  - pug
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Express_Nodejs/routes", "Learn/Server-side/Express_Nodejs/forms", "Learn/Server-side/Express_Nodejs")}}

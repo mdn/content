@@ -23,8 +23,8 @@ During drag operations, several event types are fired, and some events might fir
 
 Each [drag event type](/en-US/docs/Web/API/DragEvent#event_types) has an associated event handler:
 
-| Event                                                | Fires when...                                                                                                                                                                   |
-| ---------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Event                                                   | Fires when...                                                                                                                                                                   |
+| ------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | {{domxref('HTMLElement/drag_event', 'drag')}}           | ...a _dragged item_ (element or text selection) is dragged.                                                                                                                     |
 | {{domxref('HTMLElement/dragend_event', 'dragend')}}     | ...a drag operation ends (such as releasing a mouse button or hitting the Esc key; see [Finishing a Drag](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations#dragend).) |
 | {{domxref('HTMLElement/dragenter_event', 'dragenter')}} | ...a dragged item enters a valid drop target. (See [Specifying Drop Targets](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations#specifying_drop_targets).)              |
@@ -95,7 +95,10 @@ function dragstart_handler(ev) {
   // Add different types of drag data
   ev.dataTransfer.setData("text/plain", ev.target.innerText);
   ev.dataTransfer.setData("text/html", ev.target.outerHTML);
-  ev.dataTransfer.setData("text/uri-list", ev.target.ownerDocument.location.href);
+  ev.dataTransfer.setData(
+    "text/uri-list",
+    ev.target.ownerDocument.location.href
+  );
 }
 ```
 
@@ -112,7 +115,7 @@ function dragstart_handler(ev) {
   // NOTE: change "example.gif" to a real image URL or the image
   // will not be created and the default drag image will be used.
   let img = new Image();
-  img.src = 'example.gif';
+  img.src = "example.gif";
   ev.dataTransfer.setDragImage(img, 10, 10);
 }
 ```

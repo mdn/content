@@ -21,8 +21,10 @@ negotiation session.
 
 ```js
 pc.onicecandidate = (ev) => {
-  alert(`The ICE candidate (transport address: '${ev.candidate.candidate}') has been added to this connection.`);
-}
+  alert(
+    `The ICE candidate (transport address: '${ev.candidate.candidate}') has been added to this connection.`
+  );
+};
 ```
 
 ## Specifications

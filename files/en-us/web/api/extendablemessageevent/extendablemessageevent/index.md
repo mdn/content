@@ -44,11 +44,13 @@ A new {{domxref("ExtendableMessageEvent")}} object.
 ## Examples
 
 ```js
-const options = { data : 'hello message',
-                  source : MessagePortReference,
-                  ports : MessagePortListReference };
+const options = {
+  data: "hello message",
+  source: MessagePortReference,
+  ports: MessagePortListReference,
+};
 
-const myEME = new ExtendableMessageEvent('message', init);
+const myEME = new ExtendableMessageEvent("message", init);
 ```
 
 ## Specifications

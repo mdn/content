@@ -1,16 +1,6 @@
 ---
 title: "ARIA: rowgroup role"
 slug: Web/Accessibility/ARIA/Roles/rowgroup_role
-tags:
-  - ARIA
-  - HTML
-  - Roles
-  - rowgroup
-  - table
-  - document structure role
-  - Accessibility
-  - ARIA role
-  - reference
 spec-urls: https://w3c.github.io/aria/#rowgroup
 ---
 

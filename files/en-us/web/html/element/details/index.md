@@ -2,15 +2,6 @@
 title: '<details>: The Details disclosure element'
 slug: Web/HTML/Element/details
 page-type: html-element
-tags:
-  - Disclosure Box
-  - Disclosure Widget
-  - Element
-  - HTML
-  - HTML interactive elements
-  - Reference
-  - Web
-  - details
 browser-compat: html.elements.details
 ---
 
@@ -36,7 +27,7 @@ Fully standards-compliant implementations automatically apply the CSS `{{cssxref
 
 This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 
-- {{htmlattrdef("open")}}
+- `open`
 
   - : This Boolean attribute indicates whether the details — that is, the contents of the `<details>` element — are currently visible. The details are shown when this attribute exists, or hidden when this attribute is absent. By default this attribute is absent which means the details are not visible.
 
@@ -211,12 +202,12 @@ This CSS creates a look similar to a tabbed interface, where activating the tab 
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories"
+        <a href="/en-US/docs/Web/HTML/Content_categories"
           >Content categories</a
         >
       </th>
       <td>
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
           >Flow content</a
         >, sectioning root, interactive content, palpable content.
       </td>
@@ -225,7 +216,7 @@ This CSS creates a look similar to a tabbed interface, where activating the tab 
       <th scope="row">Permitted content</th>
       <td>
         One {{HTMLElement("summary")}} element followed by
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
           >flow content</a
         >.
       </td>
@@ -238,7 +229,7 @@ This CSS creates a look similar to a tabbed interface, where activating the tab 
       <th scope="row">Permitted parents</th>
       <td>
         Any element that accepts
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
           >flow content</a
         >.
       </td>

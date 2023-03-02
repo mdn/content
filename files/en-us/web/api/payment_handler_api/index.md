@@ -20,29 +20,40 @@ Communication with payment apps (authorization, passing of payment credentials) 
 On a merchant website, a payment request is initiated by the construction of a new {{domxref("PaymentRequest")}} object:
 
 ```js
-const request = new PaymentRequest([{
-  supportedMethods: 'https://bobbucks.dev/pay'
-}], {
-  total: {
-    label: 'total',
-    amount: { value: '10', currency: 'USD' }
+const request = new PaymentRequest(
+  [
+    {
+      supportedMethods: "https://bobbucks.dev/pay",
+    },
+  ],
+  {
+    total: {
+      label: "total",
+      amount: { value: "10", currency: "USD" },
+    },
   }
-});
+);
 ```
 
 The `supportedMethods` property specifies a URL representing the payment method supported by the merchant. To use more than one payment method, you would specify them in an array of objects, like this:
 
 ```js
-const request = new PaymentRequest([{
-  supportedMethods: 'https://alicebucks.dev/pay'
-}, {
-  supportedMethods: 'https://bobbucks.dev/pay'
-}], {
-  total: {
-    label: 'total',
-    amount: { value: '10', currency: 'USD' }
+const request = new PaymentRequest(
+  [
+    {
+      supportedMethods: "https://alicebucks.dev/pay",
+    },
+    {
+      supportedMethods: "https://bobbucks.dev/pay",
+    },
+  ],
+  {
+    total: {
+      label: "total",
+      amount: { value: "10", currency: "USD" },
+    },
   }
-});
+);
 ```
 
 ### Making payment apps available
@@ -52,9 +63,7 @@ In supporting browsers, the process starts by requesting a payment method manife
 ```json
 {
   "default_applications": ["https://bobbucks.dev/manifest.json"],
-  "supported_origins": [
-    "https://alicepay.friendsofalice.example"
-  ]
+  "supported_origins": ["https://alicepay.friendsofalice.example"]
 }
 ```
 
@@ -129,7 +138,6 @@ The Payment Request API's {{domxref("PaymentRequest.canMakePayment()")}} method 
 
 ```js
 async function checkCanMakePayment() {
-
   // ...
 
   const canMakePayment = await request.canMakePayment();
@@ -142,12 +150,18 @@ async function checkCanMakePayment() {
 The Payment Handler API adds an additional mechanism to prepare for handling a payment. The {{domxref("ServiceWorkerGlobalScope.canmakepayment_event", "canmakepayment")}} event is fired on a payment app's service worker to check whether it is ready to handle a payment. Specifically, it is fired when the merchant website calls {{domxref("PaymentRequest.PaymentRequest", "new PaymentRequest()")}}. The service worker can then use the {{domxref("CanMakePaymentEvent.respondWith()")}} method to respond appropriately:
 
 ```js
-self.addEventListener("canmakepayment", e => {
-  e.respondWith(new Promise((resolve, reject) => {
-    someAppSpecificLogic()
-    .then(result => { resolve(result); })
-    .catch(error => { reject(error); });
-  }));
+self.addEventListener("canmakepayment", (e) => {
+  e.respondWith(
+    new Promise((resolve, reject) => {
+      someAppSpecificLogic()
+        .then((result) => {
+          resolve(result);
+        })
+        .catch((error) => {
+          reject(error);
+        });
+    })
+  );
 });
 ```
 
@@ -163,7 +177,7 @@ let resolver;
 let client;
 
 // `self` is the global object in service worker
-self.addEventListener('paymentrequest', async e => {
+self.addEventListener("paymentrequest", async (e) => {
   if (payment_request_event) {
     // If there's an ongoing payment transaction, reject it.
     resolver.reject();
@@ -172,7 +186,6 @@ self.addEventListener('paymentrequest', async e => {
   payment_request_event = e;
 
   // ...
-
 });
 ```
 
@@ -189,18 +202,17 @@ Once a payment app service worker is registered, you can use the service worker'
 For example:
 
 ```js
-navigator.serviceWorker.register("serviceworker.js")
-  .then(registration => {
-    registration.paymentManager.userHint = "Card number should be 16 digits";
+navigator.serviceWorker.register("serviceworker.js").then((registration) => {
+  registration.paymentManager.userHint = "Card number should be 16 digits";
 
-    registration.paymentManager.enableDelegations(['shippingAddress', 'payerName']) 
-      .then(() => {
-          // ...
-      });
+  registration.paymentManager
+    .enableDelegations(["shippingAddress", "payerName"])
+    .then(() => {
+      // ...
+    });
 
-    // ...
-
-  });
+  // ...
+});
 ```
 
 - {{domxref("PaymentManager.userHint")}} is used to provide a hint for the browser to display along with the payment app's name and icon in the Payment Handler UI.

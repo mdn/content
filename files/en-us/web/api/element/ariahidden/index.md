@@ -29,9 +29,9 @@ In this example the [`aria-hidden`](/en-US/docs/Web/Accessibility/ARIA/Attribute
 ```
 
 ```js
-let el = document.getElementById('hidden');
+let el = document.getElementById("hidden");
 console.log(el.ariaHidden); // true
-el.ariaHidden = "false"
+el.ariaHidden = "false";
 console.log(el.ariaHidden); // false
 ```
 

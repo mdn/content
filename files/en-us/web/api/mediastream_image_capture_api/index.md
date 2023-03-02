@@ -18,10 +18,9 @@ The process of retrieving an image or video stream happens as described below. T
 First, get a reference to a device by calling {{domxref("MediaDevices.getUserMedia()")}}. The example below says give me whatever video device is available, though the `getUserMedia()` method allows more specific capabilities to be requested. This method returns a {{jsxref("Promise")}} that resolves with a {{domxref("MediaStream")}} object.
 
 ```js
-navigator.mediaDevices.getUserMedia({ video: true })
-  .then((mediaStream) => {
-    // Do something with the stream.
-  })
+navigator.mediaDevices.getUserMedia({ video: true }).then((mediaStream) => {
+  // Do something with the stream.
+});
 ```
 
 Next, isolate the visual part of the media stream. Do this by calling {{domxref("MediaStream.getVideoTracks()")}}. This returns an array of {{domxref("MediaStreamTrack")}} objects. The code below assumes that the first item in the `MediaStreamTrack` array is the one to use. You can use the properties of the `MediaStreamTrack` objects to select the one you need.
@@ -33,13 +32,13 @@ const track = mediaStream.getVideoTracks()[0];
 At this point, you might want to configure the device capabilities before capturing an image. You can do this by calling {{domxref("MediaStreamTrack.applyConstraints","applyConstraints()")}} on the track object before doing anything else.
 
 ```js
-let zoom = document.querySelector('#zoom');
+let zoom = document.querySelector("#zoom");
 const capabilities = track.getCapabilities();
 // Check whether zoom is supported or not.
 if (!capabilities.zoom) {
   return;
 }
-track.applyConstraints({ advanced : [{ zoom: zoom.value }] });
+track.applyConstraints({ advanced: [{ zoom: zoom.value }] });
 ```
 
 Finally, pass the `MediaStreamTrack` object to the {{domxref("ImageCapture.ImageCapture()", "ImageCapture()")}} constructor. Though a `MediaStream` holds several types of tracks and provides multiple methods for retrieving them, the ImageCapture constructor will throw a {{domxref("DOMException")}} of type `NotSupportedError` if {{domxref("MediaStreamTrack.kind")}} is not `"video"`.

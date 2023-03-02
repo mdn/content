@@ -41,7 +41,7 @@ In this example, we use `item()` to select the first item in the `FileList`.
 
 ```js
 const fileInput = document.querySelector("input[type=file]");
-const output = document.querySelector('.output');
+const output = document.querySelector(".output");
 
 fileInput.addEventListener("change", () => {
   const fileList = fileInput.files;

@@ -47,8 +47,7 @@ descendants to finish before removing the element from the document.
 
 ```js
 Promise.all(
-  elem.getAnimations({ subtree: true })
-    .map((animation) => animation.finished)
+  elem.getAnimations({ subtree: true }).map((animation) => animation.finished)
 ).then(() => elem.remove());
 ```
 

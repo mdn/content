@@ -95,7 +95,7 @@ CSS selectors can be grouped into the following categories based on the type of 
 
     **Syntax:** `A + B`
 
-    **Example:** `h2 + p` will match the first {{HTMLElement("p")}} element that _immediately_ follows an {{HTMLElement("h2")}} element.
+    **Example:** `h2 + p` will match the first {{HTMLElement("p")}} element that _immediately_ follows an {{HTMLElement("Heading_Elements", "h2")}} element.
 
 - [Column combinator](/en-US/docs/Web/CSS/Column_combinator) {{Experimental_Inline}}
 

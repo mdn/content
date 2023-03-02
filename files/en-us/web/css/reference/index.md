@@ -109,7 +109,7 @@ Combinators are selectors that establish a relationship between two or more simp
 - [At-rules](/en-US/docs/Web/CSS/At-rule)
 - [Cascade](/en-US/docs/Web/CSS/Cascade)
 - [Comments](/en-US/docs/Web/CSS/Comments)
-- [Descriptor](</en-US/docs/Glossary/Descriptor_(CSS)>)
+- [Descriptor](/en-US/docs/Glossary/CSS_Descriptor)
 - [Inheritance](/en-US/docs/Web/CSS/inheritance)
 - [Shorthand properties](/en-US/docs/Web/CSS/Shorthand_properties)
 - [Specificity](/en-US/docs/Web/CSS/Specificity)
@@ -159,7 +159,6 @@ Combinators are selectors that establish a relationship between two or more simp
 
 - [Mozilla CSS extensions](/en-US/docs/Web/CSS/Mozilla_Extensions) (prefixed with `-moz-`)
 - [WebKit CSS extensions](/en-US/docs/Web/CSS/WebKit_Extensions) (mostly prefixed with `-webkit-`)
-- [Microsoft CSS extensions](/en-US/docs/Web/CSS/Microsoft_Extensions) (prefixed with `-ms-`)
 
 ## External Links
 

@@ -38,7 +38,7 @@ The following table summarizes the possible return values of `typeof`. For more 
 | [Function](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function) (implements [[Call]] in ECMA-262 terms; [classes](/en-US/docs/Web/JavaScript/Reference/Statements/class) are functions as well) | `"function"`                        |
 | Any other object                                                                                                                                                                                         | `"object"`                          |
 
-This list of values is exhaustive. No spec-compliant engines are reported to produce (or had historically produced) values other than those listed. The old Internet Explorer was the only browser known to [implement additional return values](https://github.com/tc39/ecma262/issues/1440#issuecomment-461963872), before the spec removed the behavior of `typeof` returning implementation-defined strings for non-callable non-standard exotic objects.
+This list of values is exhaustive. No spec-compliant engines are reported to produce (or had historically produced) values other than those listed.
 
 ## Examples
 

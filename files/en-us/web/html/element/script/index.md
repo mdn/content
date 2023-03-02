@@ -2,18 +2,6 @@
 title: '<script>: The Script element'
 slug: Web/HTML/Element/script
 page-type: html-element
-tags:
-  - Element
-  - HTML
-  - HTML scripting
-  - HTML:Flow content
-  - HTML:Metadata content
-  - HTML:Phrasing content
-  - HTML:Script-supporting element
-  - Reference
-  - Script
-  - Web
-  - tag
 browser-compat: html.elements.script
 ---
 
@@ -25,12 +13,12 @@ The **`<script>`** [HTML](/en-US/docs/Web/HTML) element is used to embed executa
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories">Content categories</a>
+        <a href="/en-US/docs/Web/HTML/Content_categories">Content categories</a>
       </th>
       <td>
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#metadata_content">Metadata content</a>,
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content">Flow content</a>,
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content">Phrasing content</a>.
+        <a href="/en-US/docs/Web/HTML/Content_categories#metadata_content">Metadata content</a>,
+        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content">Flow content</a>,
+        <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content">Phrasing content</a>.
       </td>
     </tr>
     <tr>
@@ -44,8 +32,8 @@ The **`<script>`** [HTML](/en-US/docs/Web/HTML) element is used to embed executa
     <tr>
       <th scope="row">Permitted parents</th>
       <td>
-        Any element that accepts <a href="/en-US/docs/Web/Guide/HTML/Content_categories#metadata_content">metadata content</a>,
-        or any element that accepts <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content">phrasing content</a>.
+        Any element that accepts <a href="/en-US/docs/Web/HTML/Content_categories#metadata_content">metadata content</a>,
+        or any element that accepts <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content">phrasing content</a>.
       </td>
     </tr>
     <tr>
@@ -274,6 +262,5 @@ so that the script doesn't block parsing but is guaranteed to be evaluated befor
 ## See also
 
 - {{domxref("document.currentScript")}}
-- [Ryan Grove's `<script>` and `<link>` node event compatibility chart](https://pie.gd/test/script-link-events/)
 - [Flavio Copes' article on loading JavaScript efficiently and explaining the differences between `async` and `defer`](https://flaviocopes.com/javascript-async-defer/)
 - [JavaScript modules](/en-US/docs/Web/JavaScript/Guide/Modules) guide
