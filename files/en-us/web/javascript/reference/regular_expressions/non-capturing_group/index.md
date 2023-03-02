@@ -2,6 +2,7 @@
 title: "Non-capturing group: (?:...)"
 slug: Web/JavaScript/Reference/Regular_expressions/Non-capturing_group
 page-type: javascript-language-feature
+browser-compat: javascript.regular_expressions.non-capturing_group
 ---
 
 {{JsSidebar}}
@@ -89,6 +90,14 @@ parseTitle('name="foo"'); // 'foo'
 ```
 
 [Named capturing groups](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Named_capturing_group) are another way to avoid refactoring hazards. It allows capturing groups to accessed by a custom name, which is unaffected when other capturing groups are added or removed.
+
+## Specifications
+
+{{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}
 
 ## See also
 

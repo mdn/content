@@ -2,6 +2,7 @@
 title: "Character class escape: \\d, \\D, \\w, \\W, \\s, \\S"
 slug: Web/JavaScript/Reference/Regular_expressions/Character_class_escape
 page-type: javascript-language-feature
+browser-compat: javascript.regular_expressions.character_class_escape
 ---
 
 {{JsSidebar}}
@@ -34,6 +35,14 @@ The uppercase forms `\D`, `\W`, and `\S` negates the match or `\d`, `\w`, and `\
 [Unicode character class escapes](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Unicode_character_class_escape) start with `\p` and `\P`, but they are only supported in [unicode mode](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode). In non-unicode mode, they are [identity escapes](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Character_escape) for the `p` or `P` character.
 
 Character class escapes can be used in [character classes](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Character_class). However, they cannot be used as boundaries of character ranges. This is only allowed as a [deprecated syntax for web compatibility](/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features#regexp), and you should not rely on it.
+
+## Specifications
+
+{{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}
 
 ## See also
 

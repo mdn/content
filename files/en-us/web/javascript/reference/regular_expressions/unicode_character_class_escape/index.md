@@ -2,6 +2,7 @@
 title: "Unicode character class escape: \\p{...}, \\P{...}"
 slug: Web/JavaScript/Reference/Regular_expressions/Unicode_character_class_escape
 page-type: javascript-language-feature
+browser-compat: javascript.regular_expressions.unicode_character_class_escape
 ---
 
 {{JsSidebar}}
@@ -38,6 +39,14 @@ To compose multiple properties, see [pattern subtraction and intersection](/en-U
 <!-- TODO: replace it with a better suggestion when the v flag ships: https://github.com/tc39/proposal-regexp-v-flag -->
 
 ## Examples
+
+## Specifications
+
+{{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}
 
 ## See also
 

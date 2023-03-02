@@ -2,6 +2,7 @@
 title: "Input boundary assertion: ^, $"
 slug: Web/JavaScript/Reference/Regular_expressions/Input_boundary_assertion
 page-type: javascript-language-feature
+browser-compat: javascript.regular_expressions.input_boundary_assertion
 ---
 
 {{JsSidebar}}
@@ -89,6 +90,14 @@ console.log(statements);
 // globalThis["foo:bar"] = undefined;
 // globalThis["  foo  "] = undefined;
 ```
+
+## Specifications
+
+{{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}
 
 ## See also
 

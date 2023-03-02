@@ -2,6 +2,7 @@
 title: "Backreference: \\1, \\2"
 slug: Web/JavaScript/Reference/Regular_expressions/Backreference
 page-type: javascript-language-feature
+browser-compat: javascript.regular_expressions.backreference
 ---
 
 {{JsSidebar}}
@@ -65,6 +66,14 @@ parseTitle('title="foo"'); // 'foo'
 parseTitle("title='foo' lang='en'"); // 'foo'
 parseTitle('title="Named capturing groups\' advantages"'); // "Named capturing groups' advantages"
 ```
+
+## Specifications
+
+{{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}
 
 ## See also
 

@@ -2,6 +2,7 @@
 title: "Named capturing group: (?<name>...)"
 slug: Web/JavaScript/Reference/Regular_expressions/Named_capturing_group
 page-type: javascript-language-feature
+browser-compat: javascript.regular_expressions.named_capturing_group
 ---
 
 {{JsSidebar}}
@@ -63,6 +64,14 @@ function parseLog(entry) {
 
 parseLog("1560979912,Caroline"); // "Caroline committed on 6/19/2019, 5:31:52 PM"
 ```
+
+## Specifications
+
+{{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}
 
 ## See also
 

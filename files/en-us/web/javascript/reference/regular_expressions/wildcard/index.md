@@ -2,6 +2,7 @@
 title: "Wildcard: ."
 slug: Web/JavaScript/Reference/Regular_expressions/Wildcard
 page-type: javascript-language-feature
+browser-compat: javascript.regular_expressions.wildcard
 ---
 
 {{JsSidebar}}
@@ -81,6 +82,14 @@ catch (e)
 ```
 
 > **Warning:** These examples are for demonstration only. If you want to parse Markdown, use a dedicated Markdown parser because there are many edge cases to consider.
+
+## Specifications
+
+{{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}
 
 ## See also
 

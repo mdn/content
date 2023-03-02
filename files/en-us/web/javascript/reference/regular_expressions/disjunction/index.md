@@ -2,6 +2,7 @@
 title: "Disjunction: |"
 slug: Web/JavaScript/Reference/Regular_expressions/Disjunction
 page-type: javascript-language-feature
+browser-compat: javascript.regular_expressions.disjunction
 ---
 
 {{JsSidebar}}
@@ -46,6 +47,14 @@ An alternative can be empty, in which case it matches the empty string (in other
 Alternatives are always attempted left-to-right, regardless of the direction of matching (which is reversed in a [lookbehind](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Lookbehind_assertion)).
 
 ## Examples
+
+## Specifications
+
+{{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}
 
 ## See also
 

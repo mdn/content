@@ -1,7 +1,8 @@
 ---
 title: Regular expressions
 slug: Web/JavaScript/Reference/Regular_expressions
-page-type: guide
+page-type: landing-page
+browser-compat: javascript.regular_expressions
 ---
 
 {{JsSidebar}}
@@ -69,3 +70,15 @@ A regular expression is typically created as a literal by enclosing a pattern in
   - : Matches an atom a certain number of times.
 - [Disjunction: `|`](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Disjunction)
   - : Matches any of a set of alternatives separated by the `|` character.
+
+## Specifications
+
+{{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}
+
+## See also
+
+- [Operator precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence)

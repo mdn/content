@@ -2,6 +2,7 @@
 title: "Lookahead assertion: (?=...), (?!...)"
 slug: Web/JavaScript/Reference/Regular_expressions/Lookahead_assertion
 page-type: javascript-language-feature
+browser-compat: javascript.regular_expressions.lookahead_assertion
 ---
 
 {{JsSidebar}}
@@ -111,6 +112,14 @@ isASCIIIDPart("a"); // true
 isASCIIIDPart("α"); // false
 isASCIIIDPart(":"); // false
 ```
+
+## Specifications
+
+{{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}
 
 ## See also
 

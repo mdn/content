@@ -2,6 +2,7 @@
 title: "Character escape: \\n, \\u{...}"
 slug: Web/JavaScript/Reference/Regular_expressions/Character_escape
 page-type: javascript-language-feature
+browser-compat: javascript.regular_expressions.character_escape
 ---
 
 {{JsSidebar}}
@@ -62,6 +63,14 @@ In non-unicode mode, escape sequences within [character classes](/en-US/docs/Web
 ```
 
 ## Examples
+
+## Specifications
+
+{{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}
 
 ## See also
 

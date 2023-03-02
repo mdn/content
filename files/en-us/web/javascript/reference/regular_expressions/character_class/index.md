@@ -2,6 +2,7 @@
 title: "Character class: [...], [^...]"
 slug: Web/JavaScript/Reference/Regular_expressions/Character_class
 page-type: javascript-language-feature
+browser-compat: javascript.regular_expressions.character_class
 ---
 
 {{JsSidebar}}
@@ -62,6 +63,14 @@ Even if the pattern [ignores case](/en-US/docs/Web/JavaScript/Reference/Global_O
 The `^` prefix in a character class inverts the match. For example, `[^abc]` matches any character except `a`, `b`, or `c`. The `^` character is a literal character when it appears in the middle of a character class — for example, `[a^b]` matches the characters `a`, `^`, and `b`.
 
 ## Examples
+
+## Specifications
+
+{{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}
 
 ## See also
 

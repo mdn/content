@@ -2,6 +2,7 @@
 title: "Named backreference: \\k<name>"
 slug: Web/JavaScript/Reference/Regular_expressions/Named_backreference
 page-type: javascript-language-feature
+browser-compat: javascript.regular_expressions.named_backreference
 ---
 
 {{JsSidebar}}
@@ -44,6 +45,14 @@ parseTitle('title="foo"'); // 'foo'
 parseTitle("title='foo' lang='en'"); // 'foo'
 parseTitle('title="Named capturing groups\' advantages"'); // "Named capturing groups' advantages"
 ```
+
+## Specifications
+
+{{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}
 
 ## See also
 

@@ -2,6 +2,7 @@
 title: "Quantifier: *, +, ?, {n}, {n,}, {n,m}"
 slug: Web/JavaScript/Reference/Regular_expressions/Quantifier
 page-type: javascript-language-feature
+browser-compat: javascript.regular_expressions.quantifier
 ---
 
 {{JsSidebar}}
@@ -158,6 +159,14 @@ Another paragraph
 ```
 
 > **Warning:** This is for demonstration only — it doesn't handle line breaks in code blocks or other Markdown block elements like headings. Use a proper Markdown parser instead.
+
+## Specifications
+
+{{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}
 
 ## See also
 

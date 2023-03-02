@@ -2,6 +2,7 @@
 title: "Lookbehind assertion: (?<=...), (?<!...)"
 slug: Web/JavaScript/Reference/Regular_expressions/Lookbehind_assertion
 page-type: javascript-language-feature
+browser-compat: javascript.regular_expressions.lookbehind_assertion
 ---
 
 {{JsSidebar}}
@@ -55,6 +56,14 @@ getPrice("10.53"); // undefined
 ```
 
 A similar effect can be achieved by [capturing](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Capturing_group) the submatch you are interested in.
+
+## Specifications
+
+{{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}
 
 ## See also
 
