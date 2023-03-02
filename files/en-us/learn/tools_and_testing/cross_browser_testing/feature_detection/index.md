@@ -178,7 +178,7 @@ Common patterns for detectable features include:
 
   - : Create an element in memory using {{domxref("Document.createElement()")}} and then check if a method exists on it. If it does, check what value it returns. See the feature test in [Dive into HTML Video Format detection](https://diveinto.html5doctor.com/detect.html#video-formats) for an example of this pattern.
 
-- Property on element retains value
+- Retention of assigned property value by an element
 
   - : Create an element in memory using {{domxref("Document.createElement()")}}, set a property to a specific value, then check to see if the value is retained. See the feature test in [Dive into HTML \<input> type detection](https://diveinto.html5doctor.com/detect.html#input-types) for an example of this pattern.
 
