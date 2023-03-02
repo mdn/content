@@ -24,7 +24,7 @@ The `<textarea>` element also accepts several attributes common to form `<input>
 
 This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 
-- {{htmlattrdef("autocomplete")}}
+- `autocomplete`
 
   - : This attribute indicates whether the value of the control can be automatically completed by the browser. Possible values are:
 
