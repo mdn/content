@@ -50,13 +50,18 @@ This example renames the file specified by the variable `fileEntry` to
 `"newname.html"`.
 
 ```js
-fileEntry.getParent((parent) => {
-  fileEntry.moveTo(parent, "newname.html", (updatedEntry) => {
-    console.log(`File ${fileEntry.name} renamed to newname.html.`);
-  });
-}, (error) => {
-  console.error(`An error occurred: Unable to rename ${fileEntry.name} to newname.html.`);
-});
+fileEntry.getParent(
+  (parent) => {
+    fileEntry.moveTo(parent, "newname.html", (updatedEntry) => {
+      console.log(`File ${fileEntry.name} renamed to newname.html.`);
+    });
+  },
+  (error) => {
+    console.error(
+      `An error occurred: Unable to rename ${fileEntry.name} to newname.html.`
+    );
+  }
+);
 ```
 
 This is accomplished by first obtaining a {{domxref("FileSystemDirectoryEntry")}}

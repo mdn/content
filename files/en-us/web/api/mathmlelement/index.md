@@ -39,7 +39,7 @@ _This interface has no methods, but inherits methods from its parent, {{DOMxRef(
 ### JavaScript
 
 ```js
-document.querySelector('msqrt').constructor.name; // MathMLElement
+document.querySelector("msqrt").constructor.name; // MathMLElement
 ```
 
 ## Specifications

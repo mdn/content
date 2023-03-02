@@ -1,15 +1,6 @@
 ---
 title: Styling Vue components with CSS
 slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_styling
-tags:
-  - Beginner
-  - CSS
-  - Frameworks
-  - JavaScript
-  - Learn
-  - Styling
-  - client-side
-  - Vue
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_methods_events_models","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_computed_properties", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}

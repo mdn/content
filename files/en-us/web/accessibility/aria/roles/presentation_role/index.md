@@ -1,13 +1,6 @@
 ---
 title: "ARIA: presentation role"
 slug: Web/Accessibility/ARIA/Roles/presentation_role
-tags:
-  - Accessibility
-  - ARIA
-  - roles
-  - Reference
-  - ARIA roles
-  - document structure role
 spec-urls:
   - https://w3c.github.io/aria/#presentation
   - https://w3c.github.io/aria-practices/#presentation_role

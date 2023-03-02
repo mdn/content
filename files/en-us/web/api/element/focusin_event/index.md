@@ -1,5 +1,5 @@
 ---
-title: 'Element: focusin event'
+title: "Element: focusin event"
 slug: Web/API/Element/focusin_event
 page-type: web-api-event
 browser-compat: api.Element.focusin_event
@@ -18,7 +18,7 @@ The `focusin` event is not cancelable.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}.
 
 ```js
-addEventListener('focusin', (event) => {});
+addEventListener("focusin", (event) => {});
 ```
 
 ## Event type
@@ -42,10 +42,12 @@ _This interface also inherits properties from its parent {{domxref("UIEvent")}},
 
 ```html
 <form id="form">
-  <label>Some text:
+  <label>
+    Some text:
     <input type="text" placeholder="text input" />
   </label>
-  <label>Password:
+  <label>
+    Password:
     <input type="password" placeholder="password" />
   </label>
 </form>
@@ -54,14 +56,14 @@ _This interface also inherits properties from its parent {{domxref("UIEvent")}},
 #### JavaScript
 
 ```js
-const form = document.getElementById('form');
+const form = document.getElementById("form");
 
-form.addEventListener('focusin', (event) => {
-  event.target.style.background = 'pink';
+form.addEventListener("focusin", (event) => {
+  event.target.style.background = "pink";
 });
 
-form.addEventListener('focusout', (event) => {
-  event.target.style.background = '';
+form.addEventListener("focusout", (event) => {
+  event.target.style.background = "";
 });
 ```
 

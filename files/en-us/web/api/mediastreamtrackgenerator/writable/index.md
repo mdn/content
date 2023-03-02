@@ -22,11 +22,13 @@ In the following example video frames are transformed then written to the {{domx
 
 ```js
 const trackProcessor = new MediaStreamTrackProcessor({ track: videoTrack });
-const trackGenerator = new MediaStreamTrackGenerator({ kind: 'video' });
+const trackGenerator = new MediaStreamTrackGenerator({ kind: "video" });
 
 /* */
 
-trackProcessor.readable.pipeThrough(transformer).pipeTo(trackGenerator.writable);
+trackProcessor.readable
+  .pipeThrough(transformer)
+  .pipeTo(trackGenerator.writable);
 ```
 
 ## Specifications

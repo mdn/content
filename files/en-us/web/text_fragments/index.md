@@ -20,7 +20,7 @@ browser-compat:
   - css.selectors.target-text
 ---
 
-Text Fragments allow you to link directly to a specific portion of text in a web document, without requiring the author to annotate it with an ID, using particular syntax in the URL fragment. Supporting browsers are free to choose how to draw attention to the linked text, e.g. with a color highlight and/or scrolling to the content on the page. This is useful because it allows web content authors to deep-link to other content they don't control, without relying on the presence of IDs to make that possible. Building on top of that, it could be used to generate more effective content-sharing links for users to pass to one another.
+**Text fragments** allow you linking directly to a specific portion of text in a web document, without requiring the author to annotate it with an ID, using particular syntax in the URL fragment. Supporting browsers are free to choose how to draw attention to the linked text, e.g. with a color highlight and/or scrolling to the content on the page. This is useful because it allows web content authors to deep-link to other content they don't control, without relying on the presence of IDs to make that possible. Building on top of that, it could be used to generate more effective content-sharing links for users to pass to one another.
 
 ## Concepts and usage
 
@@ -72,7 +72,7 @@ Supporting browsers will scroll to and highlight the first text fragment in the 
 
 - Text strings used for the `textStart`, `textEnd`, `prefix-`, and `-suffix` values need to be [percent-encoded](/en-US/docs/Web/JavaScript/Reference/Global_Objects/encodeURIComponent).
 - Matches are case-insensitive.
-- Individual `textStart`, `textEnd`, `prefix-`, and `-suffix` strings need to reside wholly inside the same [block-level element](/en-US/docs/Web/HTML/Block-level_elements#Elements), but complete matches can span across multiple element boundaries.
+- Individual `textStart`, `textEnd`, `prefix-`, and `-suffix` strings need to reside wholly inside the same [block-level element](/en-US/docs/Web/HTML/Block-level_elements#elements), but complete matches can span across multiple element boundaries.
 - For security reasons, the feature requires links to be opened in a noopener context — you need to add `rel="noopener"` to your {{htmlelement("a")}} elements, and add `noopener` to your {{domxref("window.open()")}} calls when using this feature.
 - Text fragments are invoked only on full (non-same-page), user-initiated navigations.
 - Text fragments are only applied to the main frame; text will not be searched inside {{htmlelement("iframe")}}s, and `iframe` navigation will not invoke a text fragment.

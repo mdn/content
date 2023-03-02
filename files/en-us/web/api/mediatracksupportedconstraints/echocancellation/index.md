@@ -39,7 +39,8 @@ you'll get {{jsxref("undefined")}} if you try to look at its value.
 
 ```js
 const result = document.getElementById("result");
-const supported = navigator.mediaDevices.getSupportedConstraints().echoCancellation;
+const supported =
+  navigator.mediaDevices.getSupportedConstraints().echoCancellation;
 result.textContent = supported ? "Supported!" : "Not supported!";
 ```
 

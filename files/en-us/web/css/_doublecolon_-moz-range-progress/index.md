@@ -61,9 +61,5 @@ Not part of any standard.
   - {{cssxref("::-moz-range-thumb")}} represents the indicator that slides in the groove.
   - {{cssxref("::-moz-range-track")}} represents the groove in which the thumb slides.
 
-- Similar pseudo-elements used by other browsers:
-
-  - {{cssxref("::-ms-fill-upper")}}, pseudo-element supported by Internet Explorer and Edge
-
 - [CSS-Tricks: Styling Cross-Browser Compatible Range Inputs with CSS](https://css-tricks.com/styling-cross-browser-compatible-range-inputs-css/)
 - [QuirksMode: Styling and scripting sliders](https://www.quirksmode.org/blog/archives/2015/11/styling_and_scr.html)

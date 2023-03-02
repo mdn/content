@@ -1,14 +1,6 @@
 ---
 title: "ARIA: alertdialog role"
 slug: Web/Accessibility/ARIA/Roles/alertdialog_role
-tags:
-  - Alert
-  - Alertdialog
-  - Accessibility
-  - ARIA
-  - roles
-  - Reference
-  - ARIA roles
 spec-urls:
   - https://w3c.github.io/aria/#alertdialog
   - https://w3c.github.io/aria-practices/#alertdialog

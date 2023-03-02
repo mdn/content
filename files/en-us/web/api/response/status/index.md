@@ -25,9 +25,9 @@ We then fetch this request using {{domxref("fetch()")}}, extract a blob from the
 Note that at the top of the `fetch()` block we log the response `status` value to the console.
 
 ```js
-const myImage = document.querySelector('img');
+const myImage = document.querySelector("img");
 
-const myRequest = new Request('flowers.jpg');
+const myRequest = new Request("flowers.jpg");
 
 fetch(myRequest).then((response) => {
   console.log(response.status); // returns 200

@@ -2,9 +2,6 @@
 title: How to write an entry in the glossary
 slug: MDN/Writing_guidelines/Howto/Write_a_new_entry_in_the_glossary
 page-type: mdn-writing-guide
-tags:
-  - meta
-  - writing-guide
 ---
 
 {{MDNSidebar}}

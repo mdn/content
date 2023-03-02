@@ -43,17 +43,16 @@ _Inherits methods from its parent, {{DOMxRef("FileSystemHandle")}}._
 The following example returns a directory handle with the specified name, if the directory does not exist it is created.
 
 ```js
-const dirName = 'directoryToGetName';
+const dirName = "directoryToGetName";
 
 // assuming we have a directory handle: 'currentDirHandle'
-const subDir = currentDirHandle.getDirectoryHandle(dirName, {create: true});
+const subDir = currentDirHandle.getDirectoryHandle(dirName, { create: true });
 ```
 
 The following asynchronous function uses `resolve()` to find the path to a chosen file, relative to a specified directory handle.
 
 ```js
 async function returnPathDirectories(directoryHandle) {
-
   // Get a file handle by showing a file picker:
   const handle = await self.showOpenFilePicker();
   if (!handle) {
@@ -80,14 +79,14 @@ async function returnPathDirectories(directoryHandle) {
 The following example scans recursively through a directory to return {{domxref('FileSystemFileHandle')}} objects for each file in that directory:
 
 ```js
-async function* getFilesRecursively (entry) {
-  if (entry.kind === 'file') {
+async function* getFilesRecursively(entry) {
+  if (entry.kind === "file") {
     const file = await entry.getFile();
     if (file !== null) {
       file.relativePath = getRelativePath(entry);
       yield file;
     }
-  } else if (entry.kind === 'directory') {
+  } else if (entry.kind === "directory") {
     for await (const handle of entry.values()) {
       yield* getFilesRecursively(handle);
     }

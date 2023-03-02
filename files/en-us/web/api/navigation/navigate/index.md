@@ -67,19 +67,19 @@ Either one of these promises rejects if the navigation has failed for some reaso
 function initHomeBtn() {
   // Get the key of the first loaded entry
   // so the user can always go back to this view.
-  const {key} = navigation.currentEntry;
+  const { key } = navigation.currentEntry;
   backToHomeButton.onclick = () => {
     navigation.traverseTo(key);
-  }
+  };
 }
 // Intercept navigate events, such as link clicks, and
 // replace them with single-page navigations
-navigation.addEventListener("navigate", event => {
+navigation.addEventListener("navigate", (event) => {
   event.intercept({
-      async handler() {
-        // Navigate to a different view,
-        // but the "home" button will always work.
-      }
+    async handler() {
+      // Navigate to a different view,
+      // but the "home" button will always work.
+    },
   });
 });
 ```
@@ -90,7 +90,10 @@ A page-supplied "back" button can take you back, even after reload, by inspectin
 
 ```js
 backButtonEl.addEventListener("click", () => {
-  if (navigation.entries()[navigation.currentEntry.index - 1]?.url === "/product-listing") {
+  if (
+    navigation.entries()[navigation.currentEntry.index - 1]?.url ===
+    "/product-listing"
+  ) {
     navigation.back();
   } else {
     // If the user arrived here in some other way
@@ -104,7 +107,10 @@ backButtonEl.addEventListener("click", () => {
 
 ```js
 async function navigateHandler() {
-  await navigation.navigate(url, { info: { animation: "swipe-right" }, state: { infoPaneOpen: true } } );
+  await navigation.navigate(url, {
+    info: { animation: "swipe-right" },
+    state: { infoPaneOpen: true },
+  });
 }
 ```
 

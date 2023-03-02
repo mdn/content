@@ -1,18 +1,6 @@
 ---
 title: Silly story generator
 slug: Learn/JavaScript/First_steps/Silly_story_generator
-tags:
-  - Arrays
-  - Assessment
-  - Beginner
-  - CodingScripting
-  - JavaScript
-  - Learn
-  - Numbers
-  - Operators
-  - Variables
-  - "l10n:priority"
-  - strings
 ---
 
 {{LearnSidebar}}{{PreviousMenu("Learn/JavaScript/First_steps/Arrays", "Learn/JavaScript/First_steps")}}

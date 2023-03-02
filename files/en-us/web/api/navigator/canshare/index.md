@@ -65,20 +65,20 @@ The HTML just creates a paragraph in which to display the result of the test.
 
 ```js
 let shareData = {
-  title: 'MDN',
-  text: 'Learn web development on MDN!',
-  url: 'https://developer.mozilla.org',
-}
+  title: "MDN",
+  text: "Learn web development on MDN!",
+  url: "https://developer.mozilla.org",
+};
 
-const resultPara = document.querySelector('.result');
+const resultPara = document.querySelector(".result");
 
 if (!navigator.canShare) {
-  resultPara.textContent = 'navigator.canShare() not supported.';
-}
-else if (navigator.canShare(shareData)) {
-  resultPara.textContent = 'navigator.canShare() supported. We can use navigator.share() to send the data.';
+  resultPara.textContent = "navigator.canShare() not supported.";
+} else if (navigator.canShare(shareData)) {
+  resultPara.textContent =
+    "navigator.canShare() supported. We can use navigator.share() to send the data.";
 } else {
-  resultPara.textContent = 'Specified data cannot be shared.';
+  resultPara.textContent = "Specified data cannot be shared.";
 }
 ```
 
@@ -97,15 +97,15 @@ The code below demonstrates verifying that a data property is supported.
 
 ```js
 // Feature that may not be supported
-let testShare = { someNewProperty: 'Data to share' }
+let testShare = { someNewProperty: "Data to share" };
 
 // Complex data that uses new key
 const shareData = {
-  title: 'MDN',
-  text: 'Learn web development on MDN!',
-  url: 'https://developer.mozilla.org',
-  someNewProperty: 'Data to share'
-}
+  title: "MDN",
+  text: "Learn web development on MDN!",
+  url: "https://developer.mozilla.org",
+  someNewProperty: "Data to share",
+};
 
 // Test that the key is valid and supported before sharing
 if (navigator.canShare(testShare)) {

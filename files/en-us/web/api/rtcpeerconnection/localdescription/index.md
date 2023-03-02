@@ -30,8 +30,7 @@ const pc = new RTCPeerConnection();
 const sd = pc.localDescription;
 if (sd) {
   alert(`Local session: type='${sd.type}'; sdp description='${sd.sdp}'`);
-}
-else {
+} else {
   alert("No local session yet.");
 }
 ```

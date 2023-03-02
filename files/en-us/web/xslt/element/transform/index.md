@@ -1,11 +1,6 @@
 ---
 title: <xsl:transform>
 slug: Web/XSLT/Element/transform
-tags:
-  - Element
-  - Reference
-  - XSLT
-  - transform
 ---
 
 {{ XsltRef() }}

@@ -29,10 +29,10 @@ The next line logs the value to the console again, showing that
 console.log(`History.state before pushState: ${history.state}`);
 
 // Now push something on the stack
-history.pushState({name: 'Example'}, "pushState example", 'page3.html');
+history.pushState({ name: "Example" }, "pushState example", "page3.html");
 
 // Now state has a value.
-console.log('History.state after pushState: ', history.state);
+console.log("History.state after pushState: ", history.state);
 ```
 
 ## Specifications

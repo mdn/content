@@ -93,9 +93,9 @@ let divs = null;
 let chCapture = null;
 
 window.onload = () => {
-  divInfo = document.getElementById('divInfo');
-  divs = document.getElementsByTagName('div');
-  chCapture = document.getElementById('chCapture');
+  divInfo = document.getElementById("divInfo");
+  divs = document.getElementsByTagName("div");
+  chCapture = document.getElementById("chCapture");
   chCapture.onclick = () => {
     removeListeners();
     addListeners();
@@ -103,25 +103,27 @@ window.onload = () => {
   };
   clearDivs();
   addListeners();
-}
+};
 
 function removeListeners() {
   for (const div of divs) {
-    if (div.id !== 'divInfo') {
-      div.removeEventListener('click', onDivClick, true);
-      div.removeEventListener('click', onDivClick, false);
+    if (div.id !== "divInfo") {
+      div.removeEventListener("click", onDivClick, true);
+      div.removeEventListener("click", onDivClick, false);
     }
   }
 }
 
 function addListeners() {
   for (const div of divs) {
-    if (div.id !== 'divInfo') {
+    if (div.id !== "divInfo") {
       if (chCapture.checked) {
-        div.addEventListener('click', onDivClick, true);
+        div.addEventListener("click", onDivClick, true);
       } else {
-        div.addEventListener('click', onDivClick, false);
-        div.onmousemove = () => { clear = true };
+        div.addEventListener("click", onDivClick, false);
+        div.onmousemove = () => {
+          clear = true;
+        };
       }
     }
   }
@@ -133,21 +135,22 @@ function onDivClick(e) {
     clear = false;
   }
   if (e.eventPhase === 2) {
-    e.currentTarget.style.backgroundColor = 'red';
+    e.currentTarget.style.backgroundColor = "red";
   }
-  const level = ['none', 'capturing', 'target', 'bubbling'][e.eventPhase] ?? 'error';
-  const para = document.createElement('p');
+  const level =
+    ["none", "capturing", "target", "bubbling"][e.eventPhase] ?? "error";
+  const para = document.createElement("p");
   para.textContent = `${e.currentTarget.id}; eventPhase: ${level}`;
   divInfo.appendChild(para);
 }
 
 function clearDivs() {
   for (let i = 0; i < divs.length; i++) {
-    if (divs[i].id !== 'divInfo') {
-      divs[i].style.backgroundColor = i % 2 !== 0 ? '#f6eedb' : '#cceeff';
+    if (divs[i].id !== "divInfo") {
+      divs[i].style.backgroundColor = i % 2 !== 0 ? "#f6eedb" : "#cceeff";
     }
   }
-  divInfo.textContent = '';
+  divInfo.textContent = "";
 }
 ```
 

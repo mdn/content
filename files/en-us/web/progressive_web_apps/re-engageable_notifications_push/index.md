@@ -1,13 +1,6 @@
 ---
 title: How to make PWAs re-engageable using Notifications and Push
 slug: Web/Progressive_web_apps/Re-engageable_Notifications_Push
-tags:
-  - Notifications
-  - PWAs
-  - Progressive web apps
-  - Push
-  - js13kGames
-  - progressive
 ---
 
 {{PreviousMenuNext("Web/Apps/Progressive/Installable_PWAs", "Web/Apps/Progressive/Loading", "Web/Apps/Progressive")}}

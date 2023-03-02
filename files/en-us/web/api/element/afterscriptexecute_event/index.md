@@ -1,5 +1,5 @@
 ---
-title: 'Element: afterscriptexecute event'
+title: "Element: afterscriptexecute event"
 slug: Web/API/Element/afterscriptexecute_event
 page-type: web-api-event
 status:
@@ -22,9 +22,9 @@ This event is not cancelable.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('afterscriptexecute', (event) => {});
+addEventListener("afterscriptexecute", (event) => {});
 
-onafterscriptexecute = (event) => { };
+onafterscriptexecute = (event) => {};
 ```
 
 ## Event type

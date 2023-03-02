@@ -1,20 +1,6 @@
 ---
 title: Looping code
 slug: Learn/JavaScript/Building_blocks/Looping_code
-tags:
-  - Article
-  - Beginner
-  - CodingScripting
-  - DO
-  - Guide
-  - JavaScript
-  - Learn
-  - Loop
-  - break
-  - continue
-  - for
-  - "l10n:priority"
-  - while
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Building_blocks/conditionals","Learn/JavaScript/Building_blocks/Functions", "Learn/JavaScript/Building_blocks")}}

@@ -1,10 +1,6 @@
 ---
 title: ARIA live regions
 slug: Web/Accessibility/ARIA/ARIA_Live_Regions
-tags:
-  - ARIA
-  - Accessibility
-  - ariaLive
 ---
 
 <section id="Quick_links">

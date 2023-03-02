@@ -20,8 +20,8 @@ A string representing pixels (e.g. "10") or a percentage value (e.g. "10%").
 
 ```js
 // Set cell padding to 10 pixels
-let t = document.getElementById('TableA');
-t.cellPadding = '10';
+let t = document.getElementById("TableA");
+t.cellPadding = "10";
 ```
 
 ## Specifications

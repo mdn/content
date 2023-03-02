@@ -1,19 +1,6 @@
 ---
 title: Introduction to CSS layout
 slug: Learn/CSS/CSS_layout/Introduction
-tags:
-  - Article
-  - Beginner
-  - CSS
-  - Floats
-  - Grids
-  - Introduction
-  - Layout
-  - Learn
-  - Positioning
-  - Tables
-  - flexbox
-  - flow
 ---
 
 {{LearnSidebar}}{{NextMenu("Learn/CSS/CSS_layout/Normal_Flow", "Learn/CSS/CSS_layout")}}

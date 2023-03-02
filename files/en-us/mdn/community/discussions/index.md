@@ -2,10 +2,6 @@
 title: Community discussions
 slug: MDN/Community/Discussions
 page-type: mdn-community-guide
-tags:
-  - meta
-  - community-guidelines
-  - governance
 ---
 
 {{MDNSidebar}}

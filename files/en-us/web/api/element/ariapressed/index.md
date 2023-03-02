@@ -33,9 +33,9 @@ In this example the `aria-pressed` attribute on the element with an ID of `saveC
 ```
 
 ```js
-let el = document.getElementById('saveChanges');
+let el = document.getElementById("saveChanges");
 console.log(el.ariaPressed); // "false"
-el.ariaPressed = "true"
+el.ariaPressed = "true";
 console.log(el.ariaPressed); // "true"
 ```
 
