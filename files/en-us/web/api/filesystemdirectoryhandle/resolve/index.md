@@ -20,7 +20,7 @@ resolve(possibleDescendant)
 
 ### Parameters
 
-- possibleDescendant
+- `possibleDescendant`
   - : The {{domxref('FileSystemHandle')}} from which to return the relative path.
 
 ### Return value
