@@ -333,5 +333,5 @@ If you're performing screen capture within an `<iframe>`, you can request permis
 
 - [Screen Capture API](/en-US/docs/Web/API/Screen_Capture_API)
 - [Media Capture and Streams API](/en-US/docs/Web/API/Media_Capture_and_Streams_API)
-- [Taking still photos with WebRTC](/en-US/docs/Web/API/WebRTC_API/Taking_still_photos)
+- [Taking still photos with WebRTC](/Web/API/Media_Capture_and_Streams_API/Taking_still_photos)
 - {{domxref("HTMLCanvasElement.captureStream()")}} to obtain a {{domxref("MediaStream")}} with the live contents of a {{HTMLElement("canvas")}}
