@@ -128,7 +128,7 @@ const listOfIngredients = [];
 
 doSomething()
   .then((url) =>
-    fetch(url)
+    return fetch(url)
       .then((res) => res.json())
       .then((data) => {
         listOfIngredients.push(data);
