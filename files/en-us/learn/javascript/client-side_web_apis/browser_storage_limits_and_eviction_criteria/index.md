@@ -84,8 +84,6 @@ Each browser determines, using whatever mechanism it chooses, the maximum amount
 
 In Firefox, the maximum storage space an origin can use is calculated as 50% of the total disk space where the profile of the user is stored, capped at 8 TiB.
 
-(TODO: CHECK IF THIS IS THE CASE FOR BOTH BEST-EFFORT AND PERSISTENT. ASKED ANDREW)
-
 For example, if the device has a 500 GiB hard drive, Firefox will allow an origin to store up to 250 GiB of data.
 
 Note that it might not actually be possible for the origin to reach this quota because it is calculate based on the **total** disk space, not the currently available disk space. This is done for security reasons, to avoid {{Glossary("fingerprinting")}}.
