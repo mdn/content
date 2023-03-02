@@ -21,8 +21,7 @@ resolve(possibleDescendant)
 ### Parameters
 
 - possibleDescendant
-  - : The {{domxref('FileSystemHandle.name')}} of the {{domxref('FileSystemHandle')}} from
-    which to return the relative path.
+  - : The {{domxref('FileSystemHandle')}} from which to return the relative path.
 
 ### Return value
 
@@ -41,14 +40,14 @@ chosen file, relative to a specified directory handle.
 ```js
 async function returnPathDirectories(directoryHandle) {
   // Get a file handle by showing a file picker:
-  const handle = await self.showOpenFilePicker();
+  const [handle] = await self.showOpenFilePicker();
   if (!handle) {
     // User cancelled, or otherwise failed to open a file.
     return;
   }
 
   // Check if handle exists inside our directory handle
-  const relativePaths = await directoryHandle.resolve(handle[0]);
+  const relativePaths = await directoryHandle.resolve(handle);
 
   if (relativePaths === null) {
     // Not inside directory handle
