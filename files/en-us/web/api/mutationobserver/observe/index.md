@@ -111,12 +111,12 @@ const elementToObserve = document.querySelector("#targetElementId");
 // create a new instance of `MutationObserver` named `observer`,
 // passing it a callback function
 const observer = new MutationObserver(() => {
-    console.log('callback that runs when observer is triggered');
+  console.log("callback that runs when observer is triggered");
 });
 
 // call `observe()` on that MutationObserver instance,
 // passing it the element to observe, and the options object
-observer.observe(elementToObserve, {subtree: true, childList: true});
+observer.observe(elementToObserve, { subtree: true, childList: true });
 ```
 
 ### Using `attributeFilter`
@@ -130,9 +130,9 @@ for example, reflect changes to users' nicknames, or to mark them as away from k
 ```js
 function callback(mutationList) {
   mutationList.forEach((mutation) => {
-    switch(mutation.type) {
+    switch (mutation.type) {
       case "attributes":
-        switch(mutation.attributeName) {
+        switch (mutation.attributeName) {
           case "status":
             userStatusChanged(mutation.target.username, mutation.target.status);
             break;
@@ -149,9 +149,9 @@ const userListElement = document.querySelector("#userlist");
 
 const observer = new MutationObserver(callback);
 observer.observe(userListElement, {
-  attributeFilter: [ "status", "username" ],
+  attributeFilter: ["status", "username"],
   attributeOldValue: true,
-  subtree: true
+  subtree: true,
 });
 ```
 

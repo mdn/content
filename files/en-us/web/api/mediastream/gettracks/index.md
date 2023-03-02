@@ -30,15 +30,16 @@ An array of {{domxref("MediaStreamTrack")}} objects.
 ## Examples
 
 ```js
-navigator.mediaDevices.getUserMedia({audio: false, video: true})
-.then((mediaStream) => {
-  document.querySelector('video').srcObject = mediaStream;
-  // Stop the stream after 5 seconds
-  setTimeout(() => {
-    const tracks = mediaStream.getTracks()
-    tracks[0].stop()
-  }, 5000)
-})
+navigator.mediaDevices
+  .getUserMedia({ audio: false, video: true })
+  .then((mediaStream) => {
+    document.querySelector("video").srcObject = mediaStream;
+    // Stop the stream after 5 seconds
+    setTimeout(() => {
+      const tracks = mediaStream.getTracks();
+      tracks[0].stop();
+    }, 5000);
+  });
 ```
 
 ## Specifications

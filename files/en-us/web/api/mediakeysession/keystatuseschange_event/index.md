@@ -1,5 +1,5 @@
 ---
-title: 'MediaKeySession: keystatuseschange event'
+title: "MediaKeySession: keystatuseschange event"
 slug: Web/API/MediaKeySession/keystatuseschange_event
 page-type: web-api-event
 browser-compat: api.MediaKeySession.keystatuseschange_event
@@ -14,9 +14,9 @@ The **`keystatuseschange`** event of the {{domxref("MediaKeySession")}} API fire
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('keystatuseschange', (event) => { });
+addEventListener("keystatuseschange", (event) => {});
 
-onkeystatuseschange = (event) => { };
+onkeystatuseschange = (event) => {};
 ```
 
 ## Event type

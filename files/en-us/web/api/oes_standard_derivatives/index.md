@@ -35,8 +35,8 @@ genType fwidth(genType)
 Enabling the extensions:
 
 ```js
-gl.getExtension('OES_standard_derivatives');
-gl.getExtension('EXT_shader_texture_lod');
+gl.getExtension("OES_standard_derivatives");
+gl.getExtension("EXT_shader_texture_lod");
 ```
 
 Shader code that avoids artifacts when wrapping texture coordinates:

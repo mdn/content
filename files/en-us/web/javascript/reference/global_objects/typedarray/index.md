@@ -39,6 +39,77 @@ When creating an instance of a `TypedArray` subclass (e.g. `Int8Array`), an arra
 | {{jsxref("BigInt64Array")}}     | -2<sup>63</sup> to 2<sup>63</sup> - 1                           | 8             | 64-bit two's complement signed integer                                             | `bigint`              | `int64_t (signed long long)`    |
 | {{jsxref("BigUint64Array")}}    | 0 to 2<sup>64</sup> - 1                                         | 8             | 64-bit unsigned integer                                                            | `bigint`              | `uint64_t (unsigned long long)` |
 
+### Behavior when viewing a resizable buffer
+
+When a `TypedArray` is created as a view of a [resizable buffer](/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer#resizing_arraybuffers), resizing the underlying buffer will have different effects on the size of the `TypedArray` depending on whether the `TypedArray` is constructed as length-tracking.
+
+If a typed array is created without a specific size by omitting the third parameter or passing `undefined`, the typed array will become _length-tracking_, and will automatically resize to fit the underlying `buffer` as the latter is resized:
+
+```js
+const buffer = new ArrayBuffer(8, { maxByteLength: 16 });
+const float32 = new Float32Array(buffer);
+
+console.log(float32.byteLength); // 8
+console.log(float32.length); // 2
+
+buffer.resize(12);
+
+console.log(float32.byteLength); // 12
+console.log(float32.length); // 3
+```
+
+If a typed array is created with a specific size using the third `length` parameter, it won't resize to contain the `buffer` as the latter is grown:
+
+```js
+const buffer = new ArrayBuffer(8, { maxByteLength: 16 });
+const float32 = new Float32Array(buffer, 0, 2);
+
+console.log(float32.byteLength); // 8
+console.log(float32.length); // 2
+console.log(float32[0]) // 0, the initial value
+
+buffer.resize(12);
+
+console.log(float32.byteLength); // 8
+console.log(float32.length); // 2
+console.log(float32[0]); // 0, the initial value
+```
+
+When a `buffer` is shrunk, the viewing typed array may become out of bounds, in which case the typed array's observed size will decrease to 0. This is the only case where a non-length-tracking typed array's length may change.
+
+```js
+const buffer = new ArrayBuffer(8, { maxByteLength: 16 });
+const float32 = new Float32Array(buffer, 0, 2);
+
+buffer.resize(7);
+
+console.log(float32.byteLength); // 0
+console.log(float32.length); // 0
+console.log(float32[0]); // undefined
+```
+
+If you then grow the `buffer` again to bring the typed array back in bounds, the typed array's size will be restored to its original value.
+
+```js
+buffer.resize(8);
+
+console.log(float32.byteLength); // 8
+console.log(float32.length); // 2
+console.log(float32[0]); // 0 - back in bounds again!
+```
+
+The same can happen for length-tracking typed arrays as well, if the buffer is shrunk beyond the `byteOffset`.
+
+```js
+const buffer = new ArrayBuffer(8, { maxByteLength: 16 });
+const float32 = new Float32Array(buffer, 4);
+// float32 is length-tracking, but it only extends from the 4th byte
+// to the end of the buffer, so if the buffer is resized to be shorter
+// than 4 bytes, the typed array will become out of bounds
+buffer.resize(3);
+console.log(float32.byteLength); // 0
+```
+
 ## Constructor
 
 This object cannot be instantiated directly — attempting to construct it with `new` throws a {{jsxref("TypeError")}}.
@@ -74,7 +145,7 @@ Where `TypedArray` is a constructor for one of the concrete types.
 - `length` {{optional_inline}}
   - : When called with a non-object, the parameter will be treated as a number specifying the length of the typed array. An internal array buffer is created in memory, of size `length` multiplied by [`BYTES_PER_ELEMENT`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/BYTES_PER_ELEMENT) bytes, filled with zeros. Omitting all parameters is equivalent to using `0` as `length`.
 - `buffer`, `byteOffset` {{optional_inline}}, `length` {{optional_inline}}
-  - : When called with an [`ArrayBuffer`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) or [`SharedArrayBuffer`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer) instance, and optionally a `byteOffset` and a `length` argument, a new typed array view is created that views the specified buffer. The `byteOffset` and `length` parameters specify the memory range that will be exposed by the typed array view. If both are omitted, all of `buffer` is viewed; if only `length` is omitted, the remainder of `buffer` starting from `byteOffset` is viewed.
+  - : When called with an [`ArrayBuffer`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) or [`SharedArrayBuffer`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer) instance, and optionally a `byteOffset` and a `length` argument, a new typed array view is created that views the specified buffer. The `byteOffset` and `length` parameters specify the memory range that will be exposed by the typed array view. If both are omitted, all of `buffer` is viewed; if only `length` is omitted, the remainder of `buffer` starting from `byteOffset` is viewed. If `length` is omitted, the typed array becomes [length-tracking](#behavior_when_viewing_a_resizable_buffer).
 
 ### Exceptions
 

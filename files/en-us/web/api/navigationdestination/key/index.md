@@ -21,7 +21,7 @@ A string representing the `key` of the destination {{domxref("NavigationHistoryE
 ## Examples
 
 ```js
-navigation.addEventListener('navigate', (event) => {
+navigation.addEventListener("navigate", (event) => {
   console.log(event.destination.key);
 });
 ```

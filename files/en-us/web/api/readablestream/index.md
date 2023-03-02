@@ -142,7 +142,7 @@ This example shows how you can process the `fetch()` response using a [`for awai
 const response = await fetch("https://www.example.org");
 let total = 0;
 
-// Iterate response.body (a ReadableStream) asynchronously 
+// Iterate response.body (a ReadableStream) asynchronously
 for await (const chunk of response.body) {
   // Do something with each chunk
   // Here we just accumulate the size of the response.

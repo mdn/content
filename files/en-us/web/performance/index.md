@@ -64,7 +64,7 @@ The MDN [Web Performance Learning Area](/en-US/docs/Learn/Performance) contains 
 
 - {{glossary('Beacon')}}
 - {{glossary('Brotli compression')}}
-- {{glossary('Client hints')}}
+- [Client hints](/en-US/docs/Web/HTTP/Client_hints)
 - {{glossary('Code splitting')}}
 - {{glossary('CSSOM')}}
 - {{glossary('Domain sharding')}}
