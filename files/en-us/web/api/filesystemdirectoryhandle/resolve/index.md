@@ -53,7 +53,6 @@ async function returnPathDirectories(directoryHandle) {
     // Not inside directory handle
   } else {
     // relativePath is an array of names, giving the relative path
-
     for (const name of relativePaths) {
       // log each entry
       console.log(name);
