@@ -1,13 +1,6 @@
 ---
 title: Set-Cookie
 slug: Web/HTTP/Headers/Set-Cookie
-tags:
-  - Cookies
-  - HTTP
-  - Reference
-  - Response
-  - header
-  - samesite
 browser-compat: http.headers.Set-Cookie
 ---
 

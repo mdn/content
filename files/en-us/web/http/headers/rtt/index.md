@@ -1,14 +1,8 @@
 ---
 title: RTT
 slug: Web/HTTP/Headers/RTT
-tags:
-  - RTT
-  - Client hints
-  - HTTP
-  - HTTP Header
-  - Request header
-  - Client hints
-  - Experimental
+status:
+  - experimental
 browser-compat: http.headers.rtt
 ---
 

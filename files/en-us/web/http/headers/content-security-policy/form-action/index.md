@@ -1,15 +1,6 @@
 ---
 title: "CSP: form-action"
 slug: Web/HTTP/Headers/Content-Security-Policy/form-action
-tags:
-  - CSP
-  - Content-Security-Policy
-  - Directive
-  - HTTP
-  - Security
-  - action
-  - form
-  - form-action
 browser-compat: http.headers.Content-Security-Policy.form-action
 ---
 
