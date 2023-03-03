@@ -1,12 +1,6 @@
 ---
 title: 203 Non-Authoritative Information
 slug: Web/HTTP/Status/203
-tags:
-  - HTTP
-  - HTTP Status Code
-  - Reference
-  - Status code
-  - Successful response
 spec-urls: https://httpwg.org/specs/rfc9110.html#status.203
 ---
 
