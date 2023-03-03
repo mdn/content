@@ -1,12 +1,6 @@
 ---
 title: Configuring servers for Ogg media
 slug: Web/HTTP/Configuring_servers_for_Ogg_media
-tags:
-  - Audio
-  - HTTP
-  - Media
-  - Ogg
-  - Video
 ---
 
 {{HTTPSidebar}}

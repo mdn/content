@@ -36,7 +36,11 @@ Returns `true` if the orientation was successfully unlocked or
 ## Examples
 
 ```js
-const unlockOrientation = screen.unlockOrientation || screen.mozUnlockOrientation || screen.msUnlockOrientation || (screen.orientation && screen.orientation.unlock);
+const unlockOrientation =
+  screen.unlockOrientation ||
+  screen.mozUnlockOrientation ||
+  screen.msUnlockOrientation ||
+  (screen.orientation && screen.orientation.unlock);
 
 if (unlockOrientation()) {
   // orientation was unlocked

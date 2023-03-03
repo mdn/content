@@ -27,7 +27,7 @@ for the `hash` part. This pattern matches any fragment that starts with `books/`
 and ends with an arbitrary string identifier.
 
 ```js
-const pattern = new URLPattern('https://example.org#books/:id');
+const pattern = new URLPattern("https://example.org#books/:id");
 console.log(pattern.hash); // 'books/:id'
 ```
 

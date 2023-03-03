@@ -1,14 +1,6 @@
 ---
 title: Link prefetching FAQ
 slug: Web/HTTP/Link_prefetching_FAQ
-tags:
-  - HTML
-  - HTTP
-  - Link
-  - Necko
-  - Performance
-  - Prefetch
-  - Web Development
 ---
 
 {{HTTPSidebar}}

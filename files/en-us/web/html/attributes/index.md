@@ -302,7 +302,7 @@ Elements in HTML have **attributes**; these are additional values that configure
     </tr>
     <tr>
       <td>
-        <code><a href="/en-US/docs/Web/HTML/Element/textarea#attr-cols">cols</a></code>
+        <code><a href="/en-US/docs/Web/HTML/Element/textarea#cols">cols</a></code>
       </td>
       <td>{{ HTMLElement("textarea") }}</td>
       <td>Defines the number of columns in a textarea.</td>
@@ -320,7 +320,7 @@ Elements in HTML have **attributes**; these are additional values that configure
     </tr>
     <tr>
       <td>
-        <code><a href="/en-US/docs/Web/HTML/Element/meta#attr-content">content</a></code>
+        <code><a href="/en-US/docs/Web/HTML/Element/meta#content">content</a></code>
       </td>
       <td>{{ HTMLElement("meta") }}</td>
       <td>
@@ -394,7 +394,7 @@ Elements in HTML have **attributes**; these are additional values that configure
     </tr>
     <tr>
       <td>
-        <code><a href="/en-US/docs/Web/HTML/Element/object#attr-data">data</a></code>
+        <code><a href="/en-US/docs/Web/HTML/Element/object#data">data</a></code>
       </td>
       <td>{{ HTMLElement("object") }}</td>
       <td>Specifies the URL of the resource.</td>
@@ -427,7 +427,7 @@ Elements in HTML have **attributes**; these are additional values that configure
     </tr>
     <tr>
       <td>
-        <code><a href="/en-US/docs/Web/HTML/Element/track#attr-default">default</a></code>
+        <code><a href="/en-US/docs/Web/HTML/Element/track#default">default</a></code>
       </td>
       <td>{{ HTMLElement("track") }}</td>
       <td>
@@ -686,7 +686,7 @@ Elements in HTML have **attributes**; these are additional values that configure
     </tr>
     <tr>
       <td>
-        <code><a href="/en-US/docs/Web/HTML/Element/meter#attr-high">high</a></code>
+        <code><a href="/en-US/docs/Web/HTML/Element/meter#high">high</a></code>
       </td>
       <td>{{ HTMLElement("meter") }}</td>
       <td>Indicates the lower bound of the upper range.</td>
@@ -713,7 +713,7 @@ Elements in HTML have **attributes**; these are additional values that configure
     </tr>
     <tr>
       <td>
-        <code><a href="/en-US/docs/Web/HTML/Element/meta#attr-http-equiv">http-equiv</a></code>
+        <code><a href="/en-US/docs/Web/HTML/Element/meta#http-equiv">http-equiv</a></code>
       </td>
       <td>{{ HTMLElement("meta") }}</td>
       <td>Defines a pragma directive.</td>
@@ -797,7 +797,7 @@ Elements in HTML have **attributes**; these are additional values that configure
     </tr>
     <tr>
       <td>
-        <code><a href="/en-US/docs/Web/HTML/Element/track#attr-kind">kind</a></code>
+        <code><a href="/en-US/docs/Web/HTML/Element/track#kind">kind</a></code>
       </td>
       <td>{{ HTMLElement("track") }}</td>
       <td>Specifies the kind of text track.</td>
@@ -865,7 +865,7 @@ Elements in HTML have **attributes**; these are additional values that configure
     </tr>
     <tr>
       <td>
-        <code><a href="/en-US/docs/Web/HTML/Element/meter#attr-low">low</a></code>
+        <code><a href="/en-US/docs/Web/HTML/Element/meter#low">low</a></code>
       </td>
       <td>{{ HTMLElement("meter") }}</td>
       <td>Indicates the upper bound of the lower range.</td>
@@ -1027,7 +1027,7 @@ Elements in HTML have **attributes**; these are additional values that configure
     </tr>
     <tr>
       <td>
-        <code><a href="/en-US/docs/Web/HTML/Element/meter#attr-optimum">optimum</a></code>
+        <code><a href="/en-US/docs/Web/HTML/Element/meter#optimum">optimum</a></code>
       </td>
       <td>{{ HTMLElement("meter") }}</td>
       <td>Indicates the optimal numeric value.</td>
@@ -1064,7 +1064,7 @@ Elements in HTML have **attributes**; these are additional values that configure
     </tr>
     <tr>
       <td>
-        <code><a href="/en-US/docs/Web/HTML/Element/video#attr-playsinline">playsinline</a></code>
+        <code><a href="/en-US/docs/Web/HTML/Element/video#playsinline">playsinline</a></code>
       </td>
       <td>
         {{ HTMLElement("video") }}
@@ -1073,7 +1073,7 @@ Elements in HTML have **attributes**; these are additional values that configure
     </tr>
     <tr>
       <td>
-        <code><a href="/en-US/docs/Web/HTML/Element/video#attr-poster">poster</a></code>
+        <code><a href="/en-US/docs/Web/HTML/Element/video#poster">poster</a></code>
       </td>
       <td>{{ HTMLElement("video") }}</td>
       <td>
@@ -1139,7 +1139,7 @@ Elements in HTML have **attributes**; these are additional values that configure
     </tr>
     <tr>
       <td>
-        <code><a href="/en-US/docs/Web/HTML/Element/ol#attr-reversed">reversed</a></code>
+        <code><a href="/en-US/docs/Web/HTML/Element/ol#reversed">reversed</a></code>
       </td>
       <td>{{ HTMLElement("ol") }}</td>
       <td>
@@ -1156,7 +1156,7 @@ Elements in HTML have **attributes**; these are additional values that configure
     </tr>
     <tr>
       <td>
-        <code><a href="/en-US/docs/Web/HTML/Element/textarea#attr-rows">rows</a></code>
+        <code><a href="/en-US/docs/Web/HTML/Element/textarea#rows">rows</a></code>
       </td>
       <td>{{ HTMLElement("textarea") }}</td>
       <td>Defines the number of rows in a text area.</td>
@@ -1182,7 +1182,7 @@ Elements in HTML have **attributes**; these are additional values that configure
     </tr>
     <tr>
       <td>
-        <code><a href="/en-US/docs/Web/HTML/Element/th#attr-scope">scope</a></code>
+        <code><a href="/en-US/docs/Web/HTML/Element/th#scope">scope</a></code>
       </td>
       <td>{{ HTMLElement("th") }}</td>
       <td>
@@ -1200,7 +1200,7 @@ Elements in HTML have **attributes**; these are additional values that configure
     </tr>
     <tr>
       <td>
-        <code><a href="/en-US/docs/Web/HTML/Element/option#attr-selected">selected</a></code>
+        <code><a href="/en-US/docs/Web/HTML/Element/option#selected">selected</a></code>
       </td>
       <td>{{ HTMLElement("option") }}</td>
       <td>Defines a value which will be selected on page load.</td>
@@ -1289,7 +1289,7 @@ Elements in HTML have **attributes**; these are additional values that configure
     </tr>
     <tr>
       <td>
-        <code><a href="/en-US/docs/Web/HTML/Element/track#attr-srclang">srclang</a></code>
+        <code><a href="/en-US/docs/Web/HTML/Element/track#srclang">srclang</a></code>
       </td>
       <td>{{ HTMLElement("track") }}</td>
       <td></td>
@@ -1305,7 +1305,7 @@ Elements in HTML have **attributes**; these are additional values that configure
     </tr>
     <tr>
       <td>
-        <code><a href="/en-US/docs/Web/HTML/Element/ol#attr-start">start</a></code>
+        <code><a href="/en-US/docs/Web/HTML/Element/ol#start">start</a></code>
       </td>
       <td>{{ HTMLElement("ol") }}</td>
       <td>Defines the first number if other than 1.</td>
@@ -1328,7 +1328,7 @@ Elements in HTML have **attributes**; these are additional values that configure
     </tr>
     <tr>
       <td>
-        <code><a href="/en-US/docs/Web/HTML/Element/table#attr-summary">summary</a></code>
+        <code><a href="/en-US/docs/Web/HTML/Element/table#summary">summary</a></code>
         {{deprecated_inline}}
       </td>
       <td>{{ HTMLElement("table") }}</td>
@@ -1455,7 +1455,7 @@ Elements in HTML have **attributes**; these are additional values that configure
     </tr>
     <tr>
       <td>
-        <code><a href="/en-US/docs/Web/HTML/Element/textarea#attr-wrap">wrap</a></code>
+        <code><a href="/en-US/docs/Web/HTML/Element/textarea#wrap">wrap</a></code>
       </td>
       <td>{{ HTMLElement("textarea") }}</td>
       <td>Indicates whether the text should be wrapped.</td>

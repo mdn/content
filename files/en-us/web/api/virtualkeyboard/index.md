@@ -48,7 +48,7 @@ The following example demonstrates how to opt out of the automatic virtual keybo
 if ("virtualKeyboard" in navigator) {
   navigator.overlaysContent = true;
 
-  navigator.virtualKeyboard.addEventListener("geometrychange", event => {
+  navigator.virtualKeyboard.addEventListener("geometrychange", (event) => {
     const { x, y, width, height } = event.target.boundingRect;
   });
 }

@@ -14,7 +14,7 @@ browser-compat: javascript.builtins.SharedArrayBuffer.SharedArrayBuffer
 > Spectre-style vulnerabilities.
 
 The **`SharedArrayBuffer()` constructor** is used to create a
-{{jsxref("SharedArrayBuffer")}} object representing a generic, fixed-length raw binary
+{{jsxref("SharedArrayBuffer")}} object representing a generic raw binary
 data buffer, similar to the {{jsxref("ArrayBuffer")}} object.
 
 {{EmbedInteractiveExample("pages/js/sharedarraybuffer-constructor.html","shorter")}}
@@ -24,6 +24,7 @@ data buffer, similar to the {{jsxref("ArrayBuffer")}} object.
 ```js-nolint
 new SharedArrayBuffer()
 new SharedArrayBuffer(length)
+new SharedArrayBuffer(length, options)
 ```
 
 > **Note:** `SharedArrayBuffer()` can only be constructed with [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Attempting to call it without `new` throws a {{jsxref("TypeError")}}.
@@ -32,10 +33,14 @@ new SharedArrayBuffer(length)
 
 - `length` {{optional_inline}}
   - : The size, in bytes, of the array buffer to create.
+- `options` {{optional_inline}} {{experimental_inline}}
+  - : An object, which can contain the following properties:
+    - `maxByteLength` {{optional_inline}} {{experimental_inline}}
+      - : The maximum size, in bytes, that the shared array buffer can be resized to.
 
 ### Return value
 
-A new `SharedArrayBuffer` object of the specified size. Its contents are
+A new `SharedArrayBuffer` object of the specified size, with its {{jsxref("SharedArrayBuffer/maxByteLength", "maxByteLength")}} property set to the specified `maxByteLength` if one was specified. Its contents are
 initialized to 0.
 
 ## Examples
@@ -55,6 +60,18 @@ const sab = SharedArrayBuffer(1024);
 ```js example-good
 const sab = new SharedArrayBuffer(1024);
 ```
+
+### Growing a growable SharedArrayBuffer
+
+In this example, we create an 8-byte buffer that is growable to a max length of 16 bytes, then {{jsxref("SharedArrayBuffer/grow", "grow()")}} it to 12 bytes:
+
+```js
+const buffer = new SharedArrayBuffer(8, { maxByteLength: 16 });
+
+buffer.grow(12);
+```
+
+> **Note:** It is recommended that `maxByteLength` is set to the smallest value possible for your use case. It should never exceed `1073741824` (1GB), to reduce the risk of out-of-memory errors.
 
 ## Specifications
 

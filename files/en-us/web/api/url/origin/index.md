@@ -31,7 +31,7 @@ A string.
 ## Examples
 
 ```js
-const url = new URL("blob:https://mozilla.org:443/")
+const url = new URL("blob:https://mozilla.org:443/");
 console.log(url.origin); // Logs 'https://mozilla.org'
 
 const url = new URL("http://localhost:80/")
