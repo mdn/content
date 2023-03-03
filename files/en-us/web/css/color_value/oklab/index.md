@@ -148,6 +148,6 @@ div {
 
 ## See also
 
-- [Color values](/en-US/docs/Web/CSS/color_value) for a list of all color notations
+- The [`<color >` data type](/en-US/docs/Web/CSS/color_value) for a list of all color notations
 - {{cssxref("color_value/oklch",'oklch()')}} use the same color space as `oklab()` but a polar coordinate system.
 - [A perceptual color space for image processing](https://bottosson.github.io/posts/oklab/)

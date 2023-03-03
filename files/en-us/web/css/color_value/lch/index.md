@@ -139,6 +139,6 @@ div {
 
 ## See also
 
-- [Color values](/en-US/docs/Web/CSS/color_value) lists color notation
+- The [`<color >` data type](/en-US/docs/Web/CSS/color_value) for a list of all color notations
 - [LCH colors in CSS: what, why, and how?](https://lea.verou.me/2020/04/lch-colors-in-css-what-why-and-how/)
 - [Safari Technology Preview 122 release notes](https://webkit.org/blog/11577/release-notes-for-safari-technology-preview-122/): includes `lch()` and {{cssxref("color_value/lab",'lab()')}} colors.

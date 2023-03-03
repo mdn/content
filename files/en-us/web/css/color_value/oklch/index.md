@@ -139,7 +139,7 @@ div {
 
 ## See also
 
-- [Color values](/en-US/docs/Web/CSS/color_value) lists color notation
+- The [ `<color >` data type](/en-US/docs/Web/CSS/color_value) for a list of all color notations
 - [A perceptual color space for image processing](https://bottosson.github.io/posts/oklab/)
 - [OKLCH in CSS](https://evilmartians.com/chronicles/oklch-in-css-why-quit-rgb-hsl)
 - [Safari Technology Preview 137 release notes](https://webkit.org/blog/12156/release-notes-for-safari-technology-preview-137/): includes `oklch()` and {{cssxref("color_value/oklab",'oklab()')}} colors.

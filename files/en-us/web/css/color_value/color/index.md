@@ -163,6 +163,6 @@ div {
 
 ## See also
 
-- [Color values](/en-US/docs/Web/CSS/color_value) lists color notation
+- [The `<color >` data type](/en-US/docs/Web/CSS/color_value) for a list of all color notations
 - [`color-gamut`](/en-US/docs/Web/CSS/@media/color-gamut) media feature
 - [Wide Gamut Color in CSS with Display-p3](https://webkit.org/blog/10042/wide-gamut-color-in-css-with-display-p3/)
