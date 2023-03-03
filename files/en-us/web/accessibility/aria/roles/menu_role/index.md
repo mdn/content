@@ -53,21 +53,21 @@ If the menu is visually persistent, consider the [`menubar`](/en-US/docs/Web/Acc
 
 ### Keyboard interactions
 
-- <kbd>Space</kdb> / <kbd>Enter</kdb>
+- <kbd>Space</kbd> / <kbd>Enter</kbd>
   - : If the item is a parent menu item, opens submenu and moves focus to first item in the submenu. Otherwise, activates the menu item, which loads new content and places focus on the heading that titles the content.
 - <kbd>Escape</kbd>
   - : When in a submenu, closes the submenu and moves focus to parent menu or menubar item.
-- <kbd>Right Arrow</kdb>
+- <kbd>Right Arrow</kbd>
   - : In a menubar, moves focus to the next item in the menubar. If focus is on the last item, moves focus to the first item. If in a submenu, if focus is on an item that does not have a submenu, closes the submenu and moves focus to next item in the menubar. Otherwise, opens submenu of newly focused menubar item, keeping focus on that parent menubar item. If not in a menubar or submenu and not on a menuitem with a submenu, if focus is not the last focusable element in the menu, optionally moves focus to the next focusable element.
-- <kbd>Left Arrow </kdb>
+- <kbd>Left Arrow </kbd>
   - : Moves focus to the previous item in the menubar. If focus is on the first item, moves focus to the last item. If in a submenu, closes submenu and moves focus to parent menu item. If not in a menubar or submenu, if focus is not the first focusable element in the menu, optionally moves focus to the last focusable element.
-- <kbd>Down Arrow</kdb>
+- <kbd>Down Arrow</kbd>
   - : Opens submenu and moves focus to first item in the submenu.
-- <kbd>Up Arrow</kdb>
+- <kbd>Up Arrow</kbd>
   - : Opens submenu and moves focus to last item in the submenu.
-- <kbd>Home</kdb>
+- <kbd>Home</kbd>
   - : Moves focus to first item in the menubar.
-- <kbd>End</kdb>
+- <kbd>End</kbd>
   - : Moves focus to last item in the menubar.
 - Any character key
   - : Moves focus to next item in the menubar having a name that starts with the typed character. If none of the items have a name starting with the typed character, focus does not move.

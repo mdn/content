@@ -41,8 +41,8 @@ None ({{jsxref("undefined")}}).
 Suppose `https://www.mozilla.org/foo.html` executes the following JavaScript:
 
 ```js
-const stateObj = { foo: 'bar' };
-history.pushState(stateObj, '', 'bar.html');
+const stateObj = { foo: "bar" };
+history.pushState(stateObj, "", "bar.html");
 ```
 
 On the next page you could then use `history.state` to access the `stateObj` that was just added.
@@ -52,7 +52,7 @@ The explanation of these two lines above can be found in the [Example of `pushSt
 JavaScript:
 
 ```js
-history.replaceState(stateObj, '', 'bar2.html');
+history.replaceState(stateObj, "", "bar2.html");
 ```
 
 This will cause the URL bar to display

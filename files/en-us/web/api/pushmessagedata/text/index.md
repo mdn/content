@@ -26,7 +26,7 @@ A string.
 ## Examples
 
 ```js
-self.addEventListener('push', (event) => {
+self.addEventListener("push", (event) => {
   const textObj = event.data.text();
 
   // do something with your text

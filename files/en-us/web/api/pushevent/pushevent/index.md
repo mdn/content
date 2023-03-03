@@ -38,10 +38,10 @@ A new {{domxref("PushEvent")}} object.
 
 ```js
 const dataInit = {
-  data : 'Some sample text'
-}
+  data: "Some sample text",
+};
 
-const myPushEvent = new PushEvent('push', dataInit);
+const myPushEvent = new PushEvent("push", dataInit);
 
 myPushEvent.data.text(); // should return 'Some sample text'
 ```

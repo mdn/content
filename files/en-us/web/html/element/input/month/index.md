@@ -81,7 +81,7 @@ This value must specify a year-month pairing later than or equal to the one spec
 
 ### min
 
-The latest year and month to accept, in the same "`yyyy-MM`" format described above.
+The earliest year and month to accept, in the same "`yyyy-MM`" format described above.
 If the {{htmlattrxref("value", "input")}} of the element is less than this, the element fails [constraint validation](/en-US/docs/Web/HTML/Constraint_validation).
 If a value is specified for `min` that isn't a valid year and month string, the input has no minimum value.
 

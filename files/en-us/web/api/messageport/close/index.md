@@ -34,10 +34,10 @@ run when a message is sent back to this document using
 {{domxref("EventTarget.addEventListener")}}.
 
 ```js
-channel.port1.addEventListener('message', handleMessage, false);
+channel.port1.addEventListener("message", handleMessage, false);
 function handleMessage(e) {
   para.innerHTML = e.data;
-  textInput.value = '';
+  textInput.value = "";
 }
 
 channel.port1.start();

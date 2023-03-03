@@ -40,9 +40,9 @@ In our [deprecation_report.html](https://mdn.github.io/dom-examples/reporting-ap
 
 ```js
 const options = {
-  types: ['deprecation'],
-  buffered: true
-}
+  types: ["deprecation"],
+  buffered: true,
+};
 
 const observer = new ReportingObserver((reports, observer) => {
   reportBtn.onclick = () => displayReports(reports);
@@ -63,20 +63,22 @@ The report details are displayed via the `displayReports()` function, which take
 
 ```js
 function displayReports(reports) {
-  const outputElem = document.querySelector('.output');
-  const list = document.createElement('ul');
+  const outputElem = document.querySelector(".output");
+  const list = document.createElement("ul");
   outputElem.appendChild(list);
 
   reports.forEach((report, i) => {
-    let listItem = document.createElement('li');
-    let textNode = document.createTextNode(`Report ${i + 1}, type: ${report.type}`);
+    let listItem = document.createElement("li");
+    let textNode = document.createTextNode(
+      `Report ${i + 1}, type: ${report.type}`
+    );
     listItem.appendChild(textNode);
-    let innerList = document.createElement('ul');
+    let innerList = document.createElement("ul");
     listItem.appendChild(innerList);
     list.appendChild(listItem);
 
     for (const key in report.body) {
-      const innerListItem = document.createElement('li');
+      const innerListItem = document.createElement("li");
       const keyValue = report.body[key];
       innerListItem.textContent = `${key}: ${keyValue}`;
       innerList.appendChild(innerListItem);

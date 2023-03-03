@@ -1,12 +1,6 @@
 ---
 title: 417 Expectation Failed
 slug: Web/HTTP/Status/417
-tags:
-  - Client error
-  - HTTP
-  - HTTP Status Code
-  - Reference
-  - Status code
 spec-urls: https://httpwg.org/specs/rfc9110.html#status.417
 ---
 

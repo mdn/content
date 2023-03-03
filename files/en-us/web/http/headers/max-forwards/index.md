@@ -1,11 +1,6 @@
 ---
 title: Max-Forwards
 slug: Web/HTTP/Headers/Max-Forwards
-tags:
-  - HTTP
-  - HTTP Header
-  - Reference
-  - Request header
 spec-urls: https://httpwg.org/specs/rfc9110.html#field.max-forwards
 ---
 

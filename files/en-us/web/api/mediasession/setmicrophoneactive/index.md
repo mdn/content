@@ -41,7 +41,7 @@ let microphoneActive = false;
 
 navigator.mediaSession.setMicrophoneActive(microphoneActive);
 
-navigator.mediaSession.setActionHandler('togglemicrophone', () => {
+navigator.mediaSession.setActionHandler("togglemicrophone", () => {
   microphoneActive = !microphoneActive;
   navigator.mediaSession.setMicrophoneActive(microphoneActive);
 });

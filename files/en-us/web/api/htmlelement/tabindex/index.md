@@ -30,7 +30,7 @@ An integer.
 ## Examples
 
 ```js
-const b1 = document.getElementById('button1');
+const b1 = document.getElementById("button1");
 
 b1.tabIndex = 1;
 ```

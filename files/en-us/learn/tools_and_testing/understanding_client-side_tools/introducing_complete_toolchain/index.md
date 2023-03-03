@@ -6,7 +6,7 @@ slug: >-
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Understanding_client-side_tools/Package_management","Learn/Tools_and_testing/Understanding_client-side_tools/Deployment", "Learn/Tools_and_testing/Understanding_client-side_tools")}}
 
-In the final couple of articles in the series we will solidify your tooling knowledge by walking you through the process of building up a sample case study toolchain. We'll go all the way from setting up a sensible development environment and putting transformation tools in place to actually deploying your app on Netlify. In this article we'll introduce the case study, set up our development environment, and set up our code transformation tools.
+In the final couple of articles in the series, we will solidify your tooling knowledge by walking you through the process of building up a sample case study toolchain. We'll go all the way from setting up a sensible development environment and putting transformation tools in place to actually deploying your app on Netlify. In this article, we'll introduce the case study, set up our development environment, and set up our code transformation tools.
 
 <table>
   <tbody>
@@ -34,7 +34,7 @@ There really are unlimited combinations of tools and ways to use them, what you 
 
 ## Introducing our case study
 
-The toolchain that we are creating in this article will be used to build and deploy a mini site that lists data (taken from one of [NASA's open APIs](https://api.nasa.gov/)) concerning potentially hazardous space objects that threaten our existence on Earth! It looks like this:
+The toolchain that we are creating in this article will be used to build and deploy a mini-site that lists data (taken from one of [NASA's open APIs](https://api.nasa.gov/)) concerning potentially hazardous space objects that threaten our existence on Earth! It looks like this:
 
 ![screenshot of the sample will it miss website](will-it-miss-screenshot.png)
 
@@ -45,7 +45,7 @@ You can see a live version of the site at [near-misses.netlify.com](https://near
 In this article we're going to use the following tools and features:
 
 - [JSX](https://reactjs.org/docs/introducing-jsx.html), a [React](https://reactjs.org)-related set of syntax extensions that allow you to do things like defining component structures inside JavaScript. You won't need to know React to follow this tutorial, but we've included this to give you an idea of how a non-native web language could be integrated into a toolchain.
-- The latest built-in JavaScript features (at time of writing), such as [`import`](/en-US/docs/Web/JavaScript/Reference/Statements/import).
+- The latest built-in JavaScript features (at the time of writing), such as [`import`](/en-US/docs/Web/JavaScript/Reference/Statements/import).
 - Useful development tools such as [Prettier](https://prettier.io/) for formatting and [ESLint](https://eslint.org/) for linting.
 - [PostCSS](https://postcss.org/) to provide CSS nesting capabilities.
 - [Parcel](https://parceljs.org/) to build and minify our code, and to write a bunch of configuration file content automatically for us.
@@ -66,18 +66,18 @@ However, more complicated software requirements will likely benefit from the usa
 
 For our sample project, we'll be using a toolchain specifically designed to aid our software development and support the technical choices made during the software design phase. We will however be avoiding any superfluous tooling, with the aim of keeping complexity to a minimum.
 
-For example, we _could_ have included a tool to minimize our SVG file sizes during build. However, this project has only 4 SVG images, which were [manually minified using SVGO](https://www.npmjs.com/package/svgo) before adding them to the project.
+For example, we _could_ have included a tool to minimize our SVG file sizes during the build. However, this project has only 4 SVG images, which were [manually minified using SVGO](https://www.npmjs.com/package/svgo) before adding them to the project.
 
 ## A couple of prerequisites
 
 Besides the tools we're going to install that contribute to our toolchain, we mentioned two web services in the above list of tools. Let's take this opportunity to make sure we are set up with them before we continue. You will need to create accounts with each of GitHub and Netlify if you wish to complete the tutorial.
 
-- As mentioned previously, GitHub is a source code repository service that adds community features such as issue tracking, following project releases and much more. In the next chapter we will push to a GitHub code repository, which will cause a cascade effect that (should) deploy all the software to a home on the web.
-- Netlify is a hosting service for static websites (that is, websites that entirely consist of files that do not change in real time), which lets us deploy multiple times a day and freely hosts static sites of all kinds. Netlify is what provides the "home on the web" mentioned above — free hosting for us to deploy our test app to.
+- As mentioned previously, GitHub is a source code repository service that adds community features such as issue tracking, following project releases, and much more. In the next chapter, we will push to a GitHub code repository, which will cause a cascade effect that (should) deploy all the software to a home on the web.
+- Netlify is a hosting service for static websites (that is, websites that entirely consist of files that do not change in real-time), which lets us deploy multiple times a day and freely hosts static sites of all kinds. Netlify is what provides the "home on the web" mentioned above — free hosting for us to deploy our test app to.
 
 Once you've signed up for [GitHub](https://github.com/) (click the _Sign Up_ link on the homepage if you don't already have an account, and follow the instructions), you can use your GitHub account for authentication on [Netlify](https://www.netlify.com/) (click _Sign Up_, then choose _GitHub_ from the "Sign up with one of the following" list), so technically you only need to create one new account.
 
-Later on you'll need to connect your Netlify account to your GitHub repository to deploy this project; we'll see how to do that in the next chapter.
+Later on, you'll need to connect your Netlify account to your GitHub repository to deploy this project; we'll see how to do that in the next chapter.
 
 ## Three stages of tools
 
@@ -93,9 +93,9 @@ Let's start working on these, beginning with our development environment.
 
 This part of the toolchain is sometimes seen to be delaying the actual work, and it can be very easy to fall into a "rabbit hole" of tooling where you spend a lot of time trying to get the environment "just right".
 
-But you can look at this in the same way as setting up your physical work environment. The chair needs to be comfortable, and set up in a good position to help with your posture. You need power, Wi-Fi, and USB ports! There might be important decorations or music that help with your mental state — these are all important to doing your best work possible, and they should also only need to be set up once, if done properly.
+But you can look at this in the same way as setting up your physical work environment. The chair needs to be comfortable, and set up in a good position to help with your posture. You need power, Wi-Fi, and USB ports! There might be important decorations or music that help with your mental state — these are all important to do your best work possible, and they should also only need to be set up once, if done properly.
 
-In the same way, setting up your development environment, if done well, needs doing only once and should be reusable in many future projects. You will probably want to review this part of the toolchain semi-regularly and consider if there's any upgrades or changes you should introduce, but this shouldn't be required too often.
+In the same way, setting up your development environment, if done well, needs to be done only once and should be reusable in many future projects. You will probably want to review this part of the toolchain semi-regularly and consider if there are any upgrades or changes you should introduce, but this shouldn't be required too often.
 
 Your toolchain will depend on your own needs, but for this example of a (possible) complete toolchain, the tools that will be installed up front will be:
 
@@ -108,7 +108,7 @@ Your toolchain will depend on your own needs, but for this example of a (possibl
 
 We'll use npm to install our tools, which you first met in Chapter 2. You should have Node.js and npm installed already, but if not, [refer back to that section](/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line#adding_powerups).
 
-> **Note:** Though it's not clear from the installation process, installing npm also installs a complementary tool called npx. We will use npx later on this chapter to help run tools that are installed as local dependencies to the project.
+> **Note:** Though it's not clear from the installation process, installing npm also installs a complementary tool called npx. We will use npx later in this chapter to help run tools that are installed as local dependencies to the project.
 
 npm will be used to install subsequent parts of our toolchain. First of all, however, we'll install git to help with revision control.
 
@@ -120,7 +120,7 @@ It might be obvious to some, but it bears repeating: Git is not the same thing a
 
 Using revision control in your projects and including it as part of the toolchain will help manage the evolution of your code. It offers a way to "commit" blocks of work as you progress, along with comments such as "X new feature implemented", or "Bug Z now fixed due to Y changes".
 
-Revision control can also allow you to _branch_ out your project code, creating a separate version and try out new functionality on, without those changes affecting your original code.
+Revision control can also allow you to _branch_ out your project code, creating a separate version, and trying out new functionality on, without those changes affecting your original code.
 
 Finally, it can help you undo changes or revert your code back to a time "when it was working" if a mistake has been introduced somewhere and you are having trouble fixing it — something all developers need to do once in a while!
 
@@ -154,7 +154,7 @@ Now that Prettier is installed, running and tidying your code can be done on the
 prettier --write ./src/index.html
 ```
 
-> **Note:** In the command above, I use Prettier with the `--write` flag. Prettier understands this to mean "if there's problems in my code format, go ahead and fix them, then save my file". This is fine for our development process, but we can also use `prettier` without the flag and it will only check the file. Checking the file (and not saving it) is useful for purposes like checks that run before a release - i.e. "don't release any code that's not been properly formatted."
+> **Note:** In the command above, I use Prettier with the `--write` flag. Prettier understands this to mean "if there's any problem in my code format, go ahead and fix them, then save my file". This is fine for our development process, but we can also use `prettier` without the flag and it will only check the file. Checking the file (and not saving it) is useful for purposes like checks that run before a release - i.e. "don't release any code that's not been properly formatted."
 
 It can be arduous to run the initial command against each file, and it would be useful to have a single command to do this for us (and the same will go for our linting tools).
 
@@ -164,7 +164,7 @@ There are many ways to solve this problem; here's just a few:
 - Using special "git hooks" to test if the code is formatted before a commit.
 - Using code editor plugins to run Prettier commands each time a file is saved.
 
-> **Note:** What is a git hook? Git (not GitHub) provides a system that lets us attach pre- and post- actions to the tasks you perform with git (such as committing your code). Although git hooks can be a bit overly complicated (in this author's opinion), once they're in place they can be very powerful. If you're interested in using hooks, [Husky](https://github.com/typicode/husky) is a greatly simplified route into using hooks.
+> **Note:** What is a git hook? Git (not GitHub) provides a system that lets us attach pre- and post- actions to the tasks we perform with git (such as committing your code). Although git hooks can be a bit overly complicated (in this author's opinion), once they're in place they can be very powerful. If you're interested in using hooks, [Husky](https://github.com/typicode/husky) is a greatly simplified route into using hooks.
 
 For VS Code, one useful extension is the [Prettier Code Formatter by Esben Petersen](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode), which lets VSCode automatically format code upon saving. This means that any file in the project we are working on gets formatted nicely, including HTML, CSS, JavaScript, JSON, markdown, and more. All the editor needs is "Format On Save" enabled.
 
@@ -178,14 +178,14 @@ Web development linting tools mostly exist for JavaScript (though there are a fe
 
 The go-to tool for JavaScript linting is [ESLint](https://eslint.org/). It's an extremely powerful and versatile tool but can be tricky to configure correctly and you could easily consume many hours trying to get a configuration _just right_!
 
-Out of the box, ESLint is going to complain that it can't find the configuration file if you run it. The configuration file supports multiple formats but for this project we'll use `.eslintrc.json` (the leading period means the file is hidden by default).
+Out of the box, ESLint is going to complain that it can't find the configuration file if you run it. The configuration file supports multiple formats but for this project, we'll use `.eslintrc.json` (the leading period means the file is hidden by default).
 
 ESLint is installed via npm, so as per discussions in Chapter 2, you have the choice to install this tool locally or globally. Using both is recommended:
 
 - For projects you intend to share, you should always include ESLint as a local dependency so that anyone making their own copy can follow the rules you've applied to the project.
 - You should also consider having ESLint installed globally so that you can quickly use it to check any file you want.
 
-For the sake of simplicity, in this chapter we're not going to explore all the features of ESLint, but we will put a configuration in place that works for our particular project and its requirements. However, bear in mind that if you want to refine and enforce a rule about how your code looks (or validates), it's very likely that it can be done with the right ESLint configuration.
+For the sake of simplicity, in this chapter, we're not going to explore all the features of ESLint, but we will put a configuration in place that works for our particular project and its requirements. However, bear in mind that if you want to refine and enforce a rule about how your code looks (or validates), it's very likely that it can be done with the right ESLint configuration.
 
 A little later in this chapter, we'll provide the ESLint config. Once a working configuration is in place, running the command can generate some useful information. Here is an example ESLint output:
 
@@ -206,7 +206,7 @@ As with other tools, code editor integration support is typically good for ESLin
 
 ## Configuring the initial project
 
-Using these tools, a new project can be set up safe in the knowledge that many "basic" issues will be caught early on.
+Using these tools, a new project can be set up safely in the knowledge that many "basic" issues will be caught early on.
 
 Using the command line, we can create the project, install the initial tooling, and create rudimentary configuration files. Again, once you've repeated this process a few times, you'll get a feel for what your default setup should be. Of course, this is _just one_ possible configuration.
 
@@ -268,7 +268,7 @@ Now it's time to install the initial set of tools we'll be using in our dev envi
 npm install --save-dev eslint prettier babel-eslint
 ```
 
-There's two important things to note about the command you just ran. The first is that we're installing the dependencies locally to the project — installing tools locally is better for a specific project. Installing locally (not including the `--global` option) allows us to easily recreate this setup on other machines.
+There are two important things to note about the command you just ran. The first is that we're installing the dependencies locally to the project — installing tools locally is better for a specific project. Installing locally (not including the `--global` option) allows us to easily recreate this setup on other machines.
 
 The second important part of this install command is the `--save-dev` option. This tells the npm tool that these particular dependencies are only needed for development (npm therefore lists them in the `package.json` file under `devDependencies`, not `dependencies`). This means that if this project is installed in production mode these dependencies will not be installed. A "typical" project can have many development dependencies which are not needed to actually run the code in production. Keeping them as separate dependencies reduces any unnecessary work when deploying to production (which we will look at in the next chapter).
 
@@ -276,7 +276,7 @@ Before starting on the development of the actual application code, a little conf
 
 ### Configuring our tools
 
-In the root of the project (not in the `src` directory), we will add configuration files to configure some of our tools, namely Prettier and ESLint. This is general practice for tool configuration — you tend to find the config files in the project root, which more often than not contain configuration options expressed in a JSON structure (though our tools and many others also support YAML, which you can switch to if that's your preferred flavor of configuration file).
+In the root of the project (not in the `src` directory), we will add configuration files to configure some of our tools, namely Prettier and ESLint. This is general practice for tool configuration — you tend to find the config files in the project root, which more often than not contain configuration options expressed in a JSON structure (though our tools and many others also support YAML, which you can switch to if that's your preferred flavor of the configuration file).
 
 1. First of all, create a file in the root of your `will-it-miss` directory called `.prettierrc.json`.
 2. To configure Prettier, give `.prettierrc.json` the following contents:

@@ -32,7 +32,9 @@ A boolean value.
 
 ```js
 function ismetaKey(e) {
-  document.querySelector("#output").textContent = `metaKey pressed? ${e.metaKey}`;
+  document.querySelector(
+    "#output"
+  ).textContent = `metaKey pressed? ${e.metaKey}`;
 }
 ```
 

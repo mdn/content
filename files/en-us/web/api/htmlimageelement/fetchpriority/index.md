@@ -41,8 +41,8 @@ degrading performance.
 
 ```js
 const img = new Image();
-img.fetchPriority = 'high';
-img.src = 'img/logo.png';
+img.fetchPriority = "high";
+img.src = "img/logo.png";
 ```
 
 ## Specifications

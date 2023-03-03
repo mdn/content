@@ -1,5 +1,5 @@
 ---
-title: 'HTMLDetailsElement: toggle event'
+title: "HTMLDetailsElement: toggle event"
 slug: Web/API/HTMLDetailsElement/toggle_event
 page-type: web-api-event
 browser-compat: api.HTMLDetailsElement.toggle_event
@@ -16,9 +16,9 @@ This event is not cancelable and does not bubble.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('toggle', (event) => {});
+addEventListener("toggle", (event) => {});
 
-ontoggle = (event) => { };
+ontoggle = (event) => {};
 ```
 
 ## Event type
@@ -81,12 +81,12 @@ body {
 ```js
 function logItem(e) {
   const item = document.querySelector(`[data-id=${e.target.id}]`);
-  item.toggleAttribute('hidden');
+  item.toggleAttribute("hidden");
 }
 
-const chapters = document.querySelectorAll('details');
+const chapters = document.querySelectorAll("details");
 chapters.forEach((chapter) => {
-  chapter.addEventListener('toggle', logItem);
+  chapter.addEventListener("toggle", logItem);
 });
 ```
 

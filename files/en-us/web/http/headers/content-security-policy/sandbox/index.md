@@ -1,13 +1,6 @@
 ---
 title: "CSP: sandbox"
 slug: Web/HTTP/Headers/Content-Security-Policy/sandbox
-tags:
-  - CSP
-  - Content-Security-Policy
-  - Directive
-  - HTTP
-  - Sandbox
-  - Security
 browser-compat: http.headers.Content-Security-Policy.sandbox
 ---
 
@@ -50,7 +43,7 @@ Content-Security-Policy: sandbox <value>;
 where `<value>` can optionally be one of the following values:
 
 - `allow-downloads`
-  - : Allows downloading files through an {{HTMLElement("a")}} or {{HTMLElement("area")}} element with the [download](/en-US/docs/Web/HTML/Element/a#attr-download) attribute, as well as through the navigation that leads to a download of a file. This works regardless of whether the user clicked on the link, or JS code initiated it without user interaction.
+  - : Allows downloading files through an {{HTMLElement("a")}} or {{HTMLElement("area")}} element with the [download](/en-US/docs/Web/HTML/Element/a#download) attribute, as well as through the navigation that leads to a download of a file. This works regardless of whether the user clicked on the link, or JS code initiated it without user interaction.
 - `allow-downloads-without-user-activation` {{experimental_inline}}
   - : Allows for downloads to occur without a gesture from the user.
 - `allow-forms`

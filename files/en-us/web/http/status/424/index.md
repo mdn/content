@@ -1,11 +1,6 @@
 ---
 title: 424 Failed Dependency
 slug: Web/HTTP/Status/424
-tags:
-  - HTTP
-  - HTTP Status Code
-  - Reference
-  - Client Error
 spec-urls: https://www.rfc-editor.org/rfc/rfc4918#section-11.4
 ---
 
