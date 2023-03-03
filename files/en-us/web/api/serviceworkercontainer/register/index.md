@@ -92,7 +92,7 @@ if ("serviceWorker" in navigator) {
     (registration) => {
       console.log("Service worker registration succeeded:", registration);
     },
-    /*catch*/ (error) => {
+    (error) => {
       console.error(`Service worker registration failed: ${error}`);
     }
   );
@@ -117,7 +117,7 @@ if ("serviceWorker" in navigator) {
     (registration) => {
       console.log("Service worker registration succeeded:", registration);
     },
-    /*catch*/ (error) => {
+    (error) => {
       console.error(`Service worker registration failed: ${error}`);
     }
   );
@@ -140,7 +140,7 @@ if ("serviceWorker" in navigator) {
     (registration) => {
       console.log("Service worker registration succeeded:", registration);
     },
-    /*catch*/ (error) => {
+    (error) => {
       console.error(`Service worker registration failed: ${error}`);
     }
   );
