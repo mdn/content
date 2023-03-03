@@ -15,16 +15,13 @@ browser-compat: http.status.103
 {{HTTPSidebar}}{{SeeCompatTable}}
 
 The HTTP **`103 Early Hints`** [information response](/en-US/docs/Web/HTTP/Status#information_responses) may be sent by a server while it is still preparing a response, with hints about the resources that the server is expecting the final response will link.
-This allows a user-agent to start [preloading](/en-US/docs/Web/HTML/Attributes/rel/preload) resources even before the server has prepared and sent that final response.
+This allows a browser to start [preloading](/en-US/docs/Web/HTML/Attributes/rel/preload) resources even before the server has prepared and sent that final response.
 
 The early hint response is primarily intended for use with the {{HTTPHeader("Link")}} header, which indicates the resources to be loaded.
 It may also contain a [`Content-Security-Policy`](/en-US/docs/Web/HTTP/CSP) header that is enforced while processing the early hint.
 
-The server may send multiple `103` responses.
-The HTTP RFC allows the user-agent to determine how it handles resources from multiple `103` responses.
-Aside from performance optimizations, only resources that are listed in the final response will affect the final response.
-
-Note that the HTML specification further requires that the user-agent only processes the first early hint response, which must be discarded if the request results in a cross-origin redirect.
+A server might send multiple `103` responses, for example, following a redirect.
+Browsers only process the first early hint response, and this response must be discarded if the request results in a cross-origin redirect.
 Preloaded resources from the early hint are effectively pre-pended to the `Document`'s head element, and then followed by the resources loaded in the final response.
 
 ## Syntax
