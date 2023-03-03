@@ -57,7 +57,7 @@ The **`<script>`** [HTML](/en-US/docs/Web/HTML) element is used to embed executa
 
 This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 
-- {{htmlattrdef("async")}}
+- `async`
 
   - : For classic scripts, if the `async` attribute is present, then the classic script will be fetched in parallel to parsing and evaluated as soon as it is available.
 
@@ -69,9 +69,9 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
     See [Browser compatibility](#browser_compatibility) for notes on browser support. See also [Async scripts for asm.js](/en-US/docs/Games/Techniques/Async_scripts).
 
-- {{htmlattrdef("crossorigin")}}
+- `crossorigin`
   - : Normal `script` elements pass minimal information to the {{domxref('Window.error_event', 'window.onerror')}} for scripts which do not pass the standard {{Glossary("CORS")}} checks. To allow error logging for sites which use a separate domain for static media, use this attribute. See [CORS settings attributes](/en-US/docs/Web/HTML/Attributes/crossorigin) for a more descriptive explanation of its valid arguments.
-- {{htmlattrdef("defer")}}
+- `defer`
 
   - : This Boolean attribute is set to indicate to a browser that the script is meant to be executed after the document has been parsed, but before firing {{domxref("Document/DOMContentLoaded_event", "DOMContentLoaded")}}.
 
@@ -85,7 +85,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
     This attribute allows the elimination of **parser-blocking JavaScript** where the browser would have to load and evaluate scripts before continuing to parse. `async` has a similar effect in this case.
 
-- {{htmlattrdef("fetchpriority")}} {{Experimental_Inline}}
+- `fetchpriority` {{Experimental_Inline}}
 
   - : Provides a hint of the relative priority to use when fetching an external script. Allowed values:
 
@@ -96,13 +96,13 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
     - `auto`
       - : Default: Signals automatic determination of fetch priority relative to other external scripts.
 
-- {{htmlattrdef("integrity")}}
+- `integrity`
   - : This attribute contains inline metadata that a user agent can use to verify that a fetched resource has been delivered free of unexpected manipulation. See [Subresource Integrity](/en-US/docs/Web/Security/Subresource_Integrity).
-- {{htmlattrdef("nomodule")}}
+- `nomodule`
   - : This Boolean attribute is set to indicate that the script should not be executed in browsers that support [ES modules](/en-US/docs/Web/JavaScript/Guide/Modules) — in effect, this can be used to serve fallback scripts to older browsers that do not support modular JavaScript code.
-- {{htmlattrdef("nonce")}}
+- `nonce`
   - : A cryptographic nonce (number used once) to allow scripts in a [script-src Content-Security-Policy](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/script-src). The server must generate a unique nonce value each time it transmits a policy. It is critical to provide a nonce that cannot be guessed as bypassing a resource's policy is otherwise trivial.
-- {{htmlattrdef("referrerpolicy")}}
+- `referrerpolicy`
 
   - : Indicates which [referrer](/en-US/docs/Web/API/Document/referrer) to send when fetching the script, or resources fetched by the script:
 
@@ -117,7 +117,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
     > **Note:** An empty string value (`""`) is both the default value, and a fallback value if `referrerpolicy` is not supported. If `referrerpolicy` is not explicitly specified on the `<script>` element, it will adopt a higher-level referrer policy, i.e. one set on the whole document or domain. If a higher-level policy is not available, the empty string is treated as being equivalent to `strict-origin-when-cross-origin`.
 
-- {{htmlattrdef("src")}}
+- `src`
   - : This attribute specifies the URI of an external script; this can be used as an alternative to embedding a script directly within a document.
 - [**`type`**](/en-US/docs/Web/HTML/Element/script/type)
 
@@ -142,15 +142,15 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
         Developers must use a valid MIME type that is not a JavaScript MIME type to denote data blocks.
         All of the other attributes will be ignored, including the `src` attribute.
 
-- {{htmlattrdef("blocking")}}
+- `blocking`
   - : This attribute explicitly indicates that certain operations should be blocked on the fetching of the script. The operations that are to be blocked must be a space-separated list of blocking attributes listed below.
     - `render`: The rendering of content on the screen is blocked.
 
 ### Deprecated attributes
 
-- {{htmlattrdef("charset")}} {{Deprecated_inline}}
+- `charset` {{Deprecated_inline}}
   - : If present, its value must be an ASCII case-insensitive match for "`utf-8`". It's unnecessary to specify the `charset` attribute, because documents must use UTF-8, and the `script` element inherits its character encoding from the document.
-- {{htmlattrdef("language")}} {{Deprecated_inline}} {{Non-standard_Inline}}
+- `language` {{Deprecated_inline}} {{Non-standard_Inline}}
   - : Like the `type` attribute, this attribute identifies the scripting language in use. Unlike the `type` attribute, however, this attribute's possible values were never standardized. The `type` attribute should be used instead.
 
 ## Notes
