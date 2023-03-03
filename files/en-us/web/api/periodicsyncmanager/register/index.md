@@ -54,11 +54,11 @@ interval of one day from a browsing context:
 async function registerPeriodicNewsCheck() {
   const registration = await navigator.serviceWorker.ready;
   try {
-    await registration.periodicSync.register('fetch-news', {
+    await registration.periodicSync.register("fetch-news", {
       minInterval: 24 * 60 * 60 * 1000,
     });
   } catch {
-    console.log('Periodic Sync could not be registered!');
+    console.log("Periodic Sync could not be registered!");
   }
 }
 ```

@@ -27,8 +27,8 @@ This example logs the `shiftKey` property when you trigger a {{domxref("Element/
 ### JavaScript
 
 ```js
-let log = document.querySelector('#log');
-document.addEventListener('click', logKey);
+let log = document.querySelector("#log");
+document.addEventListener("click", logKey);
 
 function logKey(e) {
   log.textContent = `The shift key is pressed: ${e.shiftKey}`;

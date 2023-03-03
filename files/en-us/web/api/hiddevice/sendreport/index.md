@@ -47,7 +47,9 @@ await device.sendReport(0x01, new Uint8Array(enableVibrationData));
 
 // Then, send a command to make the Joy-Con device rumble.
 // Actual bytes are available in the sample.
-const rumbleData = [ /* … */ ];
+const rumbleData = [
+  /* … */
+];
 await device.sendReport(0x10, new Uint8Array(rumbleData));
 ```
 

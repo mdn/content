@@ -63,7 +63,7 @@ let stdRSACertificate = {
   name: "RSASSA-PKCS1-v1_5",
   modulusLength: 2048,
   publicExponent: new Uint8Array([1, 0, 1]),
-  hash: "SHA-256"
+  hash: "SHA-256",
 };
 ```
 
@@ -72,7 +72,7 @@ let stdRSACertificate = {
 ```js
 let stdECDSACertificate = {
   name: "ECDSA",
-  namedCurve: "P-256"
+  namedCurve: "P-256",
 };
 ```
 
@@ -91,12 +91,12 @@ modulus length of 2048.
 
 ```js
 RTCPeerConnection.generateCertificate({
-    name: 'RSASSA-PKCS1-v1_5',
-    hash: 'SHA-256',
-    modulusLength: 2048,
-    publicExponent: new Uint8Array([1, 0, 1])
+  name: "RSASSA-PKCS1-v1_5",
+  hash: "SHA-256",
+  modulusLength: 2048,
+  publicExponent: new Uint8Array([1, 0, 1]),
 }).then((cert) => {
-  const pc = new RTCPeerConnection({certificates: [cert]});
+  const pc = new RTCPeerConnection({ certificates: [cert] });
 });
 ```
 

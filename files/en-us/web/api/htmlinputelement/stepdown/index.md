@@ -46,18 +46,18 @@ parameter, would have resulted in `16:45`, as `n` defaults to
 However, calling `stepDown` on `<input type="time" max="17:00" step="900">` would not set the value to `17:00`, as one would expect — and as it does for `stepUp` when the input is `<input type="time" min="17:00" step="900">`. Instead, the first call to `stepDown` will set the initial value to `23:45` even though the `max` attribute is set. The second call will set the value to `17:00`. And the third call to will set the value to `16:45`.
 
 ```js
-let input1 = document.createElement('input');
-input1.setAttribute('type', 'time');
-input1.setAttribute('min', '17:00');
-input1.setAttribute('step', 900);
+let input1 = document.createElement("input");
+input1.setAttribute("type", "time");
+input1.setAttribute("min", "17:00");
+input1.setAttribute("step", 900);
 console.log(input1.value); // ""
 input1.stepUp();
 console.log(input1.value); // "17:00"
 // However
-let input2 = document.createElement('input');
-input2.setAttribute('type', 'time');
-input2.setAttribute('max', '17:00');
-input2.setAttribute('step', 900);
+let input2 = document.createElement("input");
+input2.setAttribute("type", "time");
+input2.setAttribute("max", "17:00");
+input2.setAttribute("step", 900);
 console.log(input2.value); // ""
 input2.stepDown();
 console.log(input2.value); // "23:45"
@@ -130,14 +130,17 @@ Click the button in this example to decrement the {{HTMLElement("input/number",
 
 ```html
 <p>
-  <label for="theNumber">Enter a number between 0 and 400 that is divisible by 5:</label>
+  <label for="theNumber">
+    Enter a number between 0 and 400 that is divisible by 5:
+  </label>
   <input type="number" step="5" id="theNumber" min="0" max="400" />
 </p>
 <p>
-  <label for="decrementer">
-    Enter how many values of step you would like to decrement by or leave it blank:
+  <label for="decrementButton">
+    Enter how many values of step you would like to decrement by or leave it
+    blank:
   </label>
-  <input type="number" step="1" id="decrementer" min="-2" max="15" />
+  <input type="number" step="1" id="decrementInput" min="-2" max="15" />
 </p>
 <input type="button" value="Decrement" id="theButton" />
 ```
@@ -146,18 +149,20 @@ Click the button in this example to decrement the {{HTMLElement("input/number",
 
 ```js
 /* make the button call the function */
-let button = document.getElementById('theButton');
-button.addEventListener('click', () => {
-  stepondown();
+let button = document.getElementById("theButton");
+button.addEventListener("click", () => {
+  stepOnDown();
 });
 
-function stepondown() {
-  let input = document.getElementById('theNumber');
-  let val = document.getElementById('decrementer').value;
+function stepOnDown() {
+  let input = document.getElementById("theNumber");
+  let val = document.getElementById("decrementInput").value;
 
-  if (val) {  // decrement with a parameter
+  if (val) {
+    // decrement with a parameter
     input.stepDown(val);
-  } else {    // or without a parameter. Try it with 0, 5, -2, etc.
+  } else {
+    // or without a parameter. Try it with 0, 5, -2, etc.
     input.stepDown();
   }
 }
@@ -183,7 +188,7 @@ decremented. The `stepDown()` method will not allow the input to go out of range
 case stopping when it reaches 0 and rounding down and floats that are passed as a
 parameter.
 
-Try setting the step decrementer to `1.2`. What happens when you invoke the
+Try setting the step decrement input to `1.2`. What happens when you invoke the
 method?
 
 Try setting the value to `44`, which is not valid. What happens when you

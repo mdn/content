@@ -21,9 +21,9 @@ A string.
 ```js
 function spawnNotification(theBody, theIcon, theTitle) {
   const options = {
-      body: theBody,
-      icon: theIcon
-  }
+    body: theBody,
+    icon: theIcon,
+  };
   const n = new Notification(theTitle, options);
 
   console.log(n.body);

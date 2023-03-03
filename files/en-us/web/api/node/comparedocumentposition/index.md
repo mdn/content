@@ -53,9 +53,9 @@ const head = document.head;
 const body = document.body;
 
 if (head.compareDocumentPosition(body) & Node.DOCUMENT_POSITION_FOLLOWING) {
-  console.log('Well-formed document');
+  console.log("Well-formed document");
 } else {
-  console.error('<head> is not before <body>');
+  console.error("<head> is not before <body>");
 }
 ```
 

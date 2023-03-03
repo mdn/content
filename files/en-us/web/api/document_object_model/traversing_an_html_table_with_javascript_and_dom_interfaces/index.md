@@ -332,7 +332,7 @@ This example introduces two new DOM attributes. First it uses the `childNodes` a
 
 The differences are that (a) `getElementsByTagName()` only returns elements of the specified tag name; and (b) `getElementsByTagName()` returns descendants at any level, not just immediate children.
 
-Once you have the returned list, use `[x]` method to retrieve the desired child item. This example stores in myCellText the text node of the second cell in the second row of the table.
+Once you have the returned list, use `[x]` method to retrieve the desired child item. This example stores in `myCellText` the text node of the second cell in the second row of the table.
 
 Then, to display the results in this example, it creates a new text node whose content is the data of `myCellText`, and appends it as a child of the `<body>` element.
 

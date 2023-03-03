@@ -19,7 +19,7 @@ A string.
 ## Examples
 
 ```js
-document.forms['myform'].method = 'post';
+document.forms["myform"].method = "post";
 
 const formElement = document.createElement("form"); // Create a form
 document.body.appendChild(formElement);

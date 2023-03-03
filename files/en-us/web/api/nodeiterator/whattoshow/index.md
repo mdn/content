@@ -121,9 +121,11 @@ const nodeIterator = document.createNodeIterator(
   NodeFilter.SHOW_ELEMENT | NodeFilter.SHOW_COMMENT | NodeFilter.SHOW_TEXT,
   { acceptNode: (node) => NodeFilter.FILTER_ACCEPT }
 );
-if ((nodeIterator.whatToShow & NodeFilter.SHOW_ALL) ||
-    (nodeIterator.whatToShow & NodeFilter.SHOW_COMMENT)) {
-    // nodeIterator will show comments
+if (
+  nodeIterator.whatToShow & NodeFilter.SHOW_ALL ||
+  nodeIterator.whatToShow & NodeFilter.SHOW_COMMENT
+) {
+  // nodeIterator will show comments
 }
 ```
 

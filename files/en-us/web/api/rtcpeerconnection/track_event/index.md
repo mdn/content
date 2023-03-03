@@ -1,5 +1,5 @@
 ---
-title: 'RTCPeerConnection: track event'
+title: "RTCPeerConnection: track event"
 slug: Web/API/RTCPeerConnection/track_event
 page-type: web-api-event
 browser-compat: api.RTCPeerConnection.track_event
@@ -18,9 +18,9 @@ This event is not cancellable and does not bubble.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('track', (event) => { });
+addEventListener("track", (event) => {});
 
-ontrack = (event) => { };
+ontrack = (event) => {};
 ```
 
 ## Event type
@@ -52,15 +52,19 @@ pc = new RTCPeerConnection({
     {
       urls: "turn:fake.turnserver.url",
       username: "someusername",
-      credential: "somepassword"
-    }
-  ]
+      credential: "somepassword",
+    },
+  ],
 });
 
-pc.addEventListener("track", (e) => {
-  videoElement.srcObject = e.streams[0];
-  hangupButton.disabled = false;
-}, false);
+pc.addEventListener(
+  "track",
+  (e) => {
+    videoElement.srcObject = e.streams[0];
+    hangupButton.disabled = false;
+  },
+  false
+);
 ```
 
 The event handler assigns the new track's first stream to an existing {{HTMLElement("video")}} element, identified using the variable `videoElement`.
@@ -72,7 +76,7 @@ pc.ontrack = (e) => {
   videoElement.srcObject = e.streams[0];
   hangupButton.disabled = false;
   return false;
-}
+};
 ```
 
 ## Specifications

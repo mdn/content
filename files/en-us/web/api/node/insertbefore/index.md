@@ -113,7 +113,7 @@ Pre-insert validity
 > In the previous example, `sp1` could be inserted after `sp2` using:
 >
 > ```js
-> parentDiv.insertBefore(sp1, sp2.nextSibling)
+> parentDiv.insertBefore(sp1, sp2.nextSibling);
 > ```
 >
 > If `sp2` does not have a next sibling, then it must be the last child —
@@ -127,15 +127,15 @@ Insert an element before the first child element, using the
 
 ```js
 // Get the parent element
-let parentElement = document.getElementById('parentElement')
+let parentElement = document.getElementById("parentElement");
 // Get the parent's first child
-let theFirstChild = parentElement.firstChild
+let theFirstChild = parentElement.firstChild;
 
 // Create a new element
-let newElement = document.createElement("div")
+let newElement = document.createElement("div");
 
 // Insert the new element before the first child
-parentElement.insertBefore(newElement, theFirstChild)
+parentElement.insertBefore(newElement, theFirstChild);
 ```
 
 When the element does not have a first child, then `firstChild` is

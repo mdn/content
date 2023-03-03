@@ -49,7 +49,7 @@ Device-Memory: <number>
 - `<number>`
   - : The approximate amount of device RAM. Possible values are: `0.25`, `0.5`, `1`, `2`, `4`, `8`.
 
-The amount of device RAM can be used as a fingerprinting variable, so values for the header are intentionally coarse to reduce the potential for its misuse.
+The amount of device RAM can be used as a [fingerprinting](/en-US/docs/Glossary/Fingerprinting) variable, so values for the header are intentionally coarse to reduce the potential for its misuse.
 
 ## Examples
 

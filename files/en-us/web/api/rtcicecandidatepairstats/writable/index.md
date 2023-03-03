@@ -26,8 +26,10 @@ request _and_ that {{Glossary("STUN")}} consent hasn't expired.
 > {{domxref("RTCIceCandidatePairStats.consentExpiredTimestamp", "consentExpiredTimestamp")}} has not passed:
 >
 > ```js
-> if (icpStats.responsesReceived > 0
->     && icpStats.consentExpiredTimestamp < performance.now()) {
+> if (
+>   icpStats.responsesReceived > 0 &&
+>   icpStats.consentExpiredTimestamp < performance.now()
+> ) {
 >   /* at least one ICE response has been received */
 > }
 > ```

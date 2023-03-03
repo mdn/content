@@ -56,7 +56,7 @@ If a box is marked as `"persistent"`, the contents won't be cleared by the user 
 
 The user agent determines, using whatever mechanism it chooses, the maximum amount of storage a given site can use. This maximum is the origin's **quota**. The amount of this space which is in use by the site is called its **usage**. Both of these values are estimates; there are several reasons why they're not precise:
 
-- User agents are encouraged to obscure the exact size of the data used by a given origin, to prevent these values from being used for fingerprinting purposes.
+- User agents are encouraged to obscure the exact size of the data used by a given origin, to prevent these values from being used for [fingerprinting](/en-US/docs/Glossary/Fingerprinting) purposes.
 - De-duplication, compression, and other methods to reduce the physical size of the stored data may be used.
 - Quotas are conservative estimates of the space available for the origin's use, and should be less than the available space on the device to help prevent overruns.
 
