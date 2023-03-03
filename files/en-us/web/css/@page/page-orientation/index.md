@@ -55,6 +55,8 @@ Size may either be defined with a "scalable" keyword (in this case the page will
 
 ### Example of rotating printed pages
 
+This example shows how the contents of a print document can be rotated, to suit the page content and the page position.
+
 ```html hidden
 <fieldset id="printStyle">
   <legend>
@@ -358,9 +360,7 @@ Size may either be defined with a "scalable" keyword (in this case the page will
 
 #### CSS
 
-```css hidden
-
-```
+The first part of the [CSS](/en-US/docs/Web/CSS) sets up the [named pages](/en-US/docs/Web/CSS/@page#named_pages) and use these to dictate which direction the content should be rotated.
 
 ```css
 @page upright {
@@ -398,6 +398,8 @@ p {
 }
 ```
 
+The second part of the [CSS](/en-US/docs/Web/CSS) declares which [named pages](/en-US/docs/Web/CSS/@page#named_pages) are used for which [selectors](/en-US/docs/Web/CSS/CSS_Selectors).
+
 ```css
 @media print {
   .upright {
@@ -420,6 +422,8 @@ printButton.addEventListener("click", () => {
 ```
 
 ### Result
+
+Click the print button to see the pages rotated.
 
 {{ EmbedLiveSample('Example_of_rotating_printed_pages', '100%', 520) }}
 
