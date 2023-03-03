@@ -6,6 +6,7 @@
 # FROM-URL	TO-URL
 /en-US/docs/-moz-locale-dir(ltr)	/en-US/docs/Web/CSS/:-moz-locale-dir_ltr
 /en-US/docs/-moz-locale-dir(rtl)	/en-US/docs/Web/CSS/:-moz-locale-dir_rtl
+/en-US/docs//Web/JavaScript/Reference/Errors/Dead_object	https://blog.mozilla.org/addons/2012/09/12/what-does-cant-access-dead-object-mean/
 /en-US/docs/::file-selector-button	/en-US/docs/Web/CSS/::file-selector-button
 /en-US/docs/<img>	/en-US/docs/Web/HTML/Element/Img
 /en-US/docs/AJAX	/en-US/docs/Web/Guide/AJAX
