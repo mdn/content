@@ -73,8 +73,7 @@ This example shows how the contents of a print document can be rotated, to suit 
     <h2>Section in Portrait/Upright</h2>
     <p>This section will be printed in Portrait and upright with:</p>
     <pre>
-.upright{
-  size: a4 portrait;
+.upright {
   page-orientation: upright;
 }
     </pre>
@@ -166,11 +165,10 @@ This example shows how the contents of a print document can be rotated, to suit 
     </table>
   </section>
   <section class="left">
-    <h2>Section in Landscape/Left</h2>
-    <p>This section will be printed in Landscape and rotated left with:</p>
+    <h2>Section in Portrait/Left</h2>
+    <p>This section will be printed in Portrait and rotated left with:</p>
     <pre>
-.left{
-  size: a4 landscape;
+.left {
   page-orientation: rotate-left;
 }
     </pre>
@@ -262,13 +260,12 @@ This example shows how the contents of a print document can be rotated, to suit 
     </table>
   </section>
   <section class="right">
-    <h2>Section in Landscape/Right</h2>
+    <h2>Section in Portrait/Right</h2>
     <p>
-      This section will be printed in Landscape and is using a named page with:
+      This section will be printed in Portrait and is using a named page with:
     </p>
     <pre>
-.right{
-  size: a4 landscape;
+.right {
   page-orientation: rotate-right;
 }
     </pre>
