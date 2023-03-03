@@ -117095,10 +117095,6 @@
       "loganfranken"
     ]
   },
-  "Web/JavaScript/Reference/Global_Objects/Reflect/Comparing_Reflect_and_Object_methods": {
-    "modified": "2020-03-12T19:48:57.283Z",
-    "contributors": ["ddbeck", "vaidehijoshi", "chrisdavidmills"]
-  },
   "Web/JavaScript/Reference/Global_Objects/Reflect/apply": {
     "modified": "2020-10-17T10:25:51.365Z",
     "contributors": [
