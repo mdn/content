@@ -19,18 +19,25 @@ The `brightness()` function applies a linear multiplier to the elements on which
 brightness(amount)
 ```
 
-### Parameters
+### Values
 
 - `amount`
   - : The brightness of the result, specified as a {{cssxref("&lt;number&gt;")}} or a {{cssxref("&lt;percentage&gt;")}}. A value under `100%` darkens the image, while a value over `100%` brightens it. A value of `0%` will create an image that is completely black, while a value of `100%` leaves the input unchanged. Other values are linear multipliers on the effect. Values of an amount over `100%` are allowed, providing brighter results. The initial value for {{Glossary("interpolation")}} is `1`.
 
-### Setting brightness using numbers and percentages
+The following are pairs of equivalent values:
 
 ```css
-brightness(0%)   /* Completely black */
-brightness(0.4)  /* 40% brightness */
-brightness(1)    /* No effect */
-brightness(200%) /* Double brightness */
+brightness(0) /* Completely black */
+brightness(0%)
+
+brightness(0.4) /* 40% brightness, which is 60% darker */
+brightness(40%)
+
+brightness(1) /* No effect */
+brightness(100%)
+
+brightness(2) /* Double brightness */
+brightness(200%)
 ```
 
 ## SVG filter
@@ -129,7 +136,7 @@ This example shows three images: the image with a `brightness()` filter function
 
 ## See also
 
-- [CSS filter effects](/en-us/docs/Web/CSS/filter_effects/) module
+- [CSS filter effects](/en-US/docs/Web/CSS/filter_effects/) module
 - The other {{cssxref("&lt;filter-function&gt;")}} functions available to be used in values of the {{cssxref("filter")}} and {{cssxref("backdrop-filter")}} properties include:
   - {{cssxref("filter-function/blur", "blur()")}}
   - {{cssxref("filter-function/contrast", "contrast()")}}
