@@ -116,31 +116,26 @@ p {
 <p>This paragraph has increased brightness.</p>
 ```
 
-{{EmbedLiveSample('With_the_filter_property','100%','220')}}
+{{EmbedLiveSample('With_the_filter_property','100%','280')}}
 
 ### With url() SVG brightness filter
 
-This example applies a `brightness()` filter via the `filter` CSS property adding the color shift to to the entire element, including content, border, and background image.
+The SVG {{SVGElement("filter")}} element is used to define custom filter effects that can then be referenced by {{htmlattrxref("id")}}. The `<filter>`'s {{SVGElement("feComponentTransfer")}} primitive enables pixel-level color remapping. To create a filter that darkens the content on which it is applied by 25%, we set the `slope` attribute to 0.75, for 75% of the original brightness. We can then reference the filter by `id`.
 
-The SVG {SVGElement("filter")}} element is used to define custom filter effects that can then be referenced by {{htmlattrxref("id")}}. The `<filter>`'s {{SVGElement("feComponentTransfer")}} primitive enables pixel-level color remapping. To alter the brightness, include linear {{SVGElement("feFuncR")}}, {{SVGElement("feFuncB")}}, and {{SVGElement("feFuncG")}} primitives with the `slope` attribute value defining the brightness multiplier.
+Given the following:
 
-```html
-<svg role="none">
-  <filter id="[filterId]">
-    <feComponentTransfer>
-      <feFuncR type="linear" slope="[amount]" />
-      <feFuncG type="linear" slope="[amount]" />
-      <feFuncB type="linear" slope="[amount]" />
-    </feComponentTransfer>
-  </filter>
-</svg>
+```css hidden
+.filter {
+  filter: brightness(0.75);
+}
+svg {
+  position: absolute;
+}
 ```
 
-To create a filter that darkens the content on which it is applied by 25%, we set the `slope` attribute to 0.75, for 75% of the original brightness.
-
 ```html
 <svg role="none">
-  <filter id="darken25">
+  <filter id="darken25" color-interpolation-filters="sRGB">
     <feComponentTransfer>
       <feFuncR type="linear" slope="0.75" />
       <feFuncG type="linear" slope="0.75" />
@@ -150,7 +145,7 @@ To create a filter that darkens the content on which it is applied by 25%, we se
 </svg>
 ```
 
-We can then reference the filter by `id`. The following declarations produce similar effects:
+The following declarations produce similar effects:
 
 ```css
 filter: brightness(75%);
@@ -159,12 +154,6 @@ filter: url(folder/fileName.svg#darken25); /* external svg filter definition */
 ```
 
 This example shows three images: the image with a `brightness()` filter function applied, the image with a similar SVG brightness function applied, and the original image for comparison:
-
-```css
-.filter {
-  filter: brightness(1.5);
-}
-```
 
 ```html hidden
 <table cellpadding="5">
@@ -177,22 +166,12 @@ This example shows three images: the image with a `brightness()` filter function
   </thead>
   <tbody>
     <tr>
-      <td><img class="filter" src="flag.jpg" style="width: 100%;" /></td>
+      <td><img class="filter" src="flag.jpg" alt="darkened pride flag" /></td>
       <td>
-        <svg id="svg" height="220" width="220" style="overflow: visible">
-          <filter id="brightness">
-            <feComponentTransfer>
-              <feFuncR type="linear" slope="2" />
-              <feFuncG type="linear" slope="2" />
-              <feFuncB type="linear" slope="2" />
-            </feComponentTransfer>
-          </filter>
-          <image
-            xlink:href="flag.jpg"
-            filter="url(#brightness)"
-            width="220"
-            height="220" />
-        </svg>
+        <img
+          style="filter: url(#darken25)"
+          src="flag.jpg"
+          alt="darkened pride flag" />
       </td>
       <td>
         <img src="flag.jpg" alt="Pride flag" />
