@@ -1,12 +1,6 @@
 ---
 title: Via
 slug: Web/HTTP/Headers/Via
-tags:
-  - HTTP
-  - HTTP Header
-  - Request header
-  - Response header
-  - Reference
 browser-compat: http.headers.Via
 ---
 

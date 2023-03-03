@@ -1,11 +1,6 @@
 ---
 title: "Permissions-Policy: geolocation"
 slug: Web/HTTP/Headers/Permissions-Policy/geolocation
-tags:
-  - Permissions Policy
-  - Geolocation
-  - HTTP
-  - header
 browser-compat: http.headers.Permissions-Policy.geolocation
 ---
 

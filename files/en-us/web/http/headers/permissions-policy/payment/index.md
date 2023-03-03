@@ -1,15 +1,8 @@
 ---
 title: "Permissions-Policy: payment"
 slug: Web/HTTP/Headers/Permissions-Policy/payment
-tags:
-  - Directive
-  - Permissions Policy
-  - Permissions-Policy
-  - HTTP
-  - Payment Request API
-  - Payments API
-  - Reference
-  - Experimental
+status:
+  - experimental
 browser-compat: http.headers.Permissions-Policy.payment
 ---
 

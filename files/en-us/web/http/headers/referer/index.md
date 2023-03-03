@@ -1,12 +1,6 @@
 ---
 title: Referer
 slug: Web/HTTP/Headers/Referer
-tags:
-  - HTTP
-  - Reference
-  - header
-  - referer
-  - referrer
 browser-compat: http.headers.Referer
 ---
 

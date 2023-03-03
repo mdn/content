@@ -1,14 +1,8 @@
 ---
 title: "Permissions-Policy: screen-wake-lock"
 slug: Web/HTTP/Headers/Permissions-Policy/screen-wake-lock
-tags:
-  - Directive
-  - Permissions Policy
-  - Permissions-Policy
-  - HTTP
-  - Reference
-  - screen-wake-lock
-  - Experimental
+status:
+  - experimental
 browser-compat: http.headers.Permissions-Policy.screen-wake-lock
 ---
 
