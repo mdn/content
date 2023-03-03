@@ -41,11 +41,15 @@ Size may either be defined with a "scalable" keyword (in this case the page will
 ## Values
 
 - `upright`
-  - : default, blah blah blah.
+  - : No orientation is applied and the page is laid out and formatted as normal.
 - `rotate-left`
-  - : anti-clockwise, blah blah blah.
+  - : After the page has been laid out this value indicates that the page must be displayed rotated a quarter turn to the left (counter-clockwise) of how it was laid out.
 - `rotate-right`
-  - : clockwise, blah blah blah.
+  - : After the page has been laid out this value indicates that the page must be displayed rotated a quarter turn to the right (clockwise) of how it was laid out.
+
+## Formal definition
+
+{{cssinfo}}
 
 ## Formal syntax
 
