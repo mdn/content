@@ -34,7 +34,7 @@ properties within our {{domxref('Element.computedStyleMap()')}}.
 
 ```js
 // get a button element
-const buttonEl = document.querySelector('button');
+const buttonEl = document.querySelector("button");
 
 // we can retrieve all computed styles with `computedStyleMap`
 const allComputedStyles = buttonEl.computedStyleMap();

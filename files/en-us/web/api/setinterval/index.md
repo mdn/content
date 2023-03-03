@@ -70,14 +70,13 @@ avoid confusion when maintaining your code.
 The following example demonstrates `setInterval()`'s basic syntax.
 
 ```js
-const intervalID = setInterval(myCallback, 500, 'Parameter 1', 'Parameter 2');
+const intervalID = setInterval(myCallback, 500, "Parameter 1", "Parameter 2");
 
-function myCallback(a, b)
-{
- // Your code here
- // Parameters are purely optional.
- console.log(a);
- console.log(b);
+function myCallback(a, b) {
+  // Your code here
+  // Parameters are purely optional.
+  console.log(a);
+  console.log(b);
 }
 ```
 
@@ -158,7 +157,7 @@ function that called `setTimeout`. See the following example (which uses
 is the same for both timers):
 
 ```js
-myArray = ['zero', 'one', 'two'];
+myArray = ["zero", "one", "two"];
 
 myArray.myMethod = function (sProperty) {
   alert(arguments.length > 0 ? this[sProperty] : this);
@@ -225,10 +224,10 @@ In these cases, a recursive `setTimeout()` pattern is preferred:
 
 ```js
 (function loop() {
-   setTimeout(() => {
-      // Your logic here
+  setTimeout(() => {
+    // Your logic here
 
-      loop();
+    loop();
   }, delay);
 })();
 ```
