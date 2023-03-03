@@ -1,11 +1,6 @@
 ---
 title: webSocketUrl
 slug: Web/WebDriver/Capabilities/webSocketUrl
-tags:
-  - Reference
-  - WebDriver
-  - capabilities
-  - webSocketUrl
 ---
 
 {{QuickLinksWithSubpages("/en-US/docs/Web/WebDriver/Capabilities")}}
