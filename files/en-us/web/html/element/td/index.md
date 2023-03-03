@@ -38,7 +38,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
     - `center`: The content is centered in the cell.
     - `right`: The content is aligned to the right of the cell.
     - `justify` (with text only): The content is stretched out inside the cell so that it covers its entire width.
-    - `char` (with text only): The content is aligned to a character inside the `<th>` element with minimal offset. This character is defined by the {{htmlattrxref("char", "td")}} and {{htmlattrxref("charoff", "td")}} attributes {{unimplemented_inline(2212)}}.
+    - `char` (with text only): The content is aligned to a character inside the `<th>` element with minimal offset. This character is defined by the {{htmlattrxref("char", "td")}} and {{htmlattrxref("charoff", "td")}} attributes.
 
     The default value when this attribute is not specified is `left`.
 
