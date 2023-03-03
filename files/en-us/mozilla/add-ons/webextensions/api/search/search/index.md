@@ -40,7 +40,7 @@ browser.search.search(
     - `disposition` {{optional_inline}}
       - : `string`. The location where the search results are displayed. Valid values are `CURRENT_TAB`, `NEW_TAB`, and `NEW_WINDOW`. Defaults to `NEW_TAB`. Cannot be specified with `tabId`.
     - `engine` {{optional_inline}}
-      - : `string`. The name of the search engine. If the search engine name doesn't exist, the function throws an error. If this property is omitted, the default search engine is used.
+      - : `string`. The name of the search engine. If the search engine name doesn't exist, the function rejects the call with an error. If this property is omitted, the default search engine is used.
     - `query`
       - : `string`. The search query.
     - `tabId` {{optional_inline}}
