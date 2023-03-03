@@ -1,14 +1,8 @@
 ---
 title: Sec-CH-UA
 slug: Web/HTTP/Headers/Sec-CH-UA
-tags:
-  - Sec-CH-UA
-  - Client hint
-  - HTTP
-  - HTTP Header
-  - Reference
-  - Request header
-  - Experimental
+status:
+  - experimental
 browser-compat: http.headers.Sec-CH-UA
 ---
 

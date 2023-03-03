@@ -87,7 +87,7 @@ present implementation which are worth noting:
   with MediaStream sources from then on.
 - This special behavior will be removed once the non-`MediaStream` source
   support is brought up to specification and the method is unprefixed. See
-  {{bug(1259788, "bug", 160)}} for details.
+  [Firefox bug 1259788](https://bugzil.la/1259788) for details.
 
 ## See also
 

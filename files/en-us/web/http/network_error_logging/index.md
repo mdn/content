@@ -1,12 +1,8 @@
 ---
 title: Network Error Logging
 slug: Web/HTTP/Network_Error_Logging
-tags:
-  - Guide
-  - HTTP
-  - Network Error Logging
-  - Reference
-  - Experimental
+status:
+  - experimental
 browser-compat: http.headers.NEL
 ---
 

@@ -1,18 +1,6 @@
 ---
 title: Cross-Origin Resource Sharing (CORS)
 slug: Web/HTTP/CORS
-tags:
-  - AJAX
-  - CORS
-  - Cross-Origin Resource Sharing
-  - Fetch
-  - Fetch API
-  - HTTP
-  - HTTP Access Controls
-  - Same-origin policy
-  - Security
-  - XMLHttpRequest
-  - "l10n:priority"
 browser-compat: http.headers.Access-Control-Allow-Origin
 ---
 

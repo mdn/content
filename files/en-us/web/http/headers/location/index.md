@@ -1,11 +1,6 @@
 ---
 title: Location
 slug: Web/HTTP/Headers/Location
-tags:
-  - HTTP
-  - HTTP Header
-  - Reference
-  - Response Header
 browser-compat: http.headers.Location
 ---
 

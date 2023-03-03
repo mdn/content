@@ -1,10 +1,6 @@
 ---
 title: PATCH
 slug: Web/HTTP/Methods/PATCH
-tags:
-  - HTTP
-  - Reference
-  - Request method
 spec-urls: https://www.rfc-editor.org/rfc/rfc5789
 ---
 

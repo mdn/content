@@ -2306,6 +2306,10 @@
     "modified": "2019-05-14T16:39:39.319Z",
     "contributors": ["milsyobtaf", "estelle", "jordana"]
   },
+  "Glossary/First_meaningful_paint": {
+    "modified": "2019-05-14T16:39:56.381Z",
+    "contributors": ["milsyobtaf", "estelle", "ehoops", "cfwilson"]
+  },
   "Glossary/First_paint": {
     "modified": "2020-11-21T06:09:28.368Z",
     "contributors": ["dskmori", "sasara", "j9t", "milsyobtaf", "estelle"]
@@ -4860,6 +4864,10 @@
       "Navneetk"
     ]
   },
+  "Glossary/Time_to_first_byte": {
+    "modified": "2019-05-02T21:38:17.951Z",
+    "contributors": ["estelle", "ehoops"]
+  },
   "Glossary/Time_to_interactive": {
     "modified": "2019-04-04T19:16:15.773Z",
     "contributors": ["estelle", "sareg0", "jordana", "ehoops", "greglockwood"]
@@ -5554,10 +5562,6 @@
       "Anirban_Dutta"
     ]
   },
-  "Glossary/First_meaningful_paint": {
-    "modified": "2019-05-14T16:39:56.381Z",
-    "contributors": ["milsyobtaf", "estelle", "ehoops", "cfwilson"]
-  },
   "Glossary/gif": {
     "modified": "2019-01-16T20:56:47.872Z",
     "contributors": ["klez", "dsmatlak"]
@@ -5721,10 +5725,6 @@
   "Glossary/strict_mode": {
     "modified": "2020-04-10T12:12:47.862Z",
     "contributors": ["mfuji09", "sideshowbarker", "hhimanshu", "estelle"]
-  },
-  "Glossary/Time_to_first_byte": {
-    "modified": "2019-05-02T21:38:17.951Z",
-    "contributors": ["estelle", "ehoops"]
   },
   "Glossary/undefined": {
     "modified": "2019-09-28T02:08:20.781Z",
@@ -106103,10 +106103,6 @@
       "jonasraoni"
     ]
   },
-  "Web/JavaScript/Reference/Errors/Dead_object": {
-    "modified": "2020-04-16T11:25:27.803Z",
-    "contributors": ["fscholz"]
-  },
   "Web/JavaScript/Reference/Errors/Delete_in_strict_mode": {
     "modified": "2020-05-06T09:39:01.985Z",
     "contributors": ["fscholz", "PatrickKettner"]
@@ -117098,10 +117094,6 @@
       "SphinxKnight",
       "loganfranken"
     ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/Reflect/Comparing_Reflect_and_Object_methods": {
-    "modified": "2020-03-12T19:48:57.283Z",
-    "contributors": ["ddbeck", "vaidehijoshi", "chrisdavidmills"]
   },
   "Web/JavaScript/Reference/Global_Objects/Reflect/apply": {
     "modified": "2020-10-17T10:25:51.365Z",

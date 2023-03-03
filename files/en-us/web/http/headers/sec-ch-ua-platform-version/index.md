@@ -1,14 +1,8 @@
 ---
 title: Sec-CH-UA-Platform-Version
 slug: Web/HTTP/Headers/Sec-CH-UA-Platform-Version
-tags:
-  - Sec-CH-UA-Platform-Version
-  - Client hint
-  - HTTP
-  - HTTP Header
-  - Reference
-  - Request header
-  - Experimental
+status:
+  - experimental
 browser-compat: http.headers.Sec-CH-UA-Platform-Version
 ---
 
