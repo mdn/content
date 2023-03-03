@@ -40,7 +40,87 @@ brightness(2) /* Double brightness */
 brightness(200%)
 ```
 
-## SVG filter
+### Formal syntax
+
+{{csssyntax}}
+
+## Examples
+
+### With the backdrop-filter property
+
+This example applies a `brightness()` filter via the `backdrop-filter` CSS property to the paragraph, linearly shifting the colors of area behind the `<p>`.
+
+```css
+.container {
+  background: url(image.jpg) no-repeat right / contain #d4d5b2;
+}
+p {
+  backdrop-filter: brightness(150%);
+  text-shadow: 2px 2px #ffffff;
+}
+```
+
+```css hidden
+.container {
+  padding: 5rem 3rem 1rem;
+  width: 30rem;
+}
+p {
+  padding: 0.5rem;
+  color: #000000;
+  font-size: 2rem;
+  font-family: sans-serif;
+}
+```
+
+```html hidden
+<div class="container" style="background-image: url(be_fierce.jpg);">
+  <p>
+    Text on images can be illegible and inaccessible even with a drop shadow.
+  </p>
+</div>
+```
+
+{{EmbedLiveSample('With_the_backdrop-filter_property','100%','280')}}
+
+### With the filter property
+
+This example applies a `brightness()` filter via the `filter` CSS property linearly color shifting the entire element, including content, border, and background image.
+
+```css
+p:first-of-type {
+  filter: brightness(50%);
+}
+p:last-of-type {
+  filter: contrast(200%);
+}
+```
+
+```css hidden
+p {
+  text-shadow: 2px 2px blue;
+  background-color: magenta;
+  color: palegoldenrod;
+  border: 1em solid rebeccapurple;
+  box-shadow: inset -5px -5px red, 5px 5px yellow;
+  padding: 0.25rem;
+  font-size: 1.25rem;
+  font-family: sans-serif;
+  width: 85vw;
+}
+```
+
+```html hidden
+<p>This paragraph has reduced brightness.</p>
+<p>This paragraph has normal brightness.</p>
+<p>This paragraph has increased brightness.</p>
+```
+
+{{EmbedLiveSample('With_the_filter_property','100%','220')}}
+
+### With url() SVG brightness filter
+
+This example applies a `brightness()` filter via the `filter` CSS property adding the color shift to to the entire element, including content, border, and background image.
 
 The SVG {SVGElement("filter")}} element is used to define custom filter effects that can then be referenced by {{htmlattrxref("id")}}. The `<filter>`'s {{SVGElement("feComponentTransfer")}} primitive enables pixel-level color remapping. To alter the brightness, include linear {{SVGElement("feFuncR")}}, {{SVGElement("feFuncB")}}, and {{SVGElement("feFuncG")}} primitives with the `slope` attribute value defining the brightness multiplier.
 
@@ -77,8 +157,6 @@ filter: brightness(75%);
 filter: url(#darken25); /* with embedded SVG */
 filter: url(folder/fileName.svg#darken25); /* external svg filter definition */
 ```
-
-## Examples
 
 This example shows three images: the image with a `brightness()` filter function applied, the image with a similar SVG brightness function applied, and the original image for comparison:
 
