@@ -48,7 +48,7 @@ In Firefox, when a site chooses to use persistent storage, the user is notified 
 
 Safari and most Chromium-based browsers, such as Chrome or Edge, automatically handle the permission request, and do not show any prompts to the user.
 
-Note that research from the Chrome team shows that data is very rarely deleted by the browser (source: [Persistent storage](https://web.dev/persistent-storage/) at web.dev). If a user uses a website regularly, there are very little chances that its stored data, even in best-effort mode, will get evicted by the browser.
+Note that research from the Chrome team shows that data is very rarely deleted by the browser (source: [Persistent storage](https://web.dev/persistent-storage/) at web.dev). If a user uses a website regularly, there is very little chance that its stored data, even in best-effort mode, will get evicted by the browser.
 
 ### Private browsing
 
