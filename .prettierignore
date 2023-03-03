@@ -16,4 +16,4 @@ build/
 # The /web/api folder is so large, it has been divided into multiple parts
 /files/en-us/web/api/**/*.md
 # Alphabetically 'allow' this range incrementally
-!/files/en-us/web/api/[a-t]*/**/*.md
+!/files/en-us/web/api/[a-v]*/**/*.md

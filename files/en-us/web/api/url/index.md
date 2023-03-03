@@ -66,7 +66,7 @@ If a browser doesn't yet support the {{domxref("URL.URL", "URL()")}} constructor
 The constructor takes a `url` parameter, and an optional `base` parameter to use as a base if the `url` parameter is a relative URL:
 
 ```js
-const url = new URL('../cats', 'http://www.example.com/dogs');
+const url = new URL("../cats", "http://www.example.com/dogs");
 console.log(url.hostname); // "www.example.com"
 console.log(url.pathname); // "/cats"
 ```
@@ -74,14 +74,14 @@ console.log(url.pathname); // "/cats"
 URL properties can be set to construct the URL:
 
 ```js
-url.hash = 'tabby';
+url.hash = "tabby";
 console.log(url.href); // "http://www.example.com/cats#tabby"
 ```
 
 URLs are encoded according to the rules found in {{RFC(3986)}}. For instance:
 
 ```js
-url.pathname = 'démonstration.html';
+url.pathname = "démonstration.html";
 console.log(url.href); // "http://www.example.com/d%C3%A9monstration.html"
 ```
 
@@ -98,7 +98,9 @@ console.log(parsedUrl.searchParams.get("id")); // "123"
 The {{domxref("URL.toString", "toString()")}} method of `URL` just returns the value of the {{domxref("URL.href", "href")}} property, so the constructor can be used to normalize and encode a URL directly.
 
 ```js
-const response = await fetch(new URL('http://www.example.com/démonstration.html'));
+const response = await fetch(
+  new URL("http://www.example.com/démonstration.html")
+);
 ```
 
 ## Specifications
