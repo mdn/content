@@ -17,7 +17,7 @@ browser-compat: css.at-rules.page.page-orientation
 
 The **`page-orientation`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/At-rule) descriptor, {{cssxref("@page")}} at-rule, the rotation of a page. This differs from the [`size`](/en-US/docs/Web/CSS/@page/size) descriptor in that the user can define which direction the content is rotated.
 
-Size may either be defined with a "scalable" keyword (in this case the page will fill the available dimensions) or with absolute dimensions.
+**This bit needs finishing.**
 
 ## Syntax
 
