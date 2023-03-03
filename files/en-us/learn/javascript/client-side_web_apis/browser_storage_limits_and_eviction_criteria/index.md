@@ -42,7 +42,7 @@ Data for an origin can be stored in two ways in a browser, _persistent_ and _bes
 
 The data stored in the browser by a origin is best-effort by default. When using web technologies such as IndexedDB or Cache, the data is stored transparently without asking for the user's permission. Similarly, when the browser needs to evict best-effort data, it does so without interrupting the user.
 
-If, for any reasons, developers need persistent storage (e.g., when building a web app that relies on critical data that isn't persisted anywhere else), they can do so by using the {{domxref("StorageManager.persist()")}} method of the {{domxref("Storage_API", "Storage API", "", "nocode")}}.
+If, for any reason, developers need persistent storage (e.g., when building a web app that relies on critical data that isn't persisted anywhere else), they can do so by using the {{domxref("StorageManager.persist()")}} method of the {{domxref("Storage_API", "Storage API", "", "nocode")}}.
 
 In Firefox, when a site chooses to use persistent storage, the user is notified with a UI popup their permission is requested.
 
