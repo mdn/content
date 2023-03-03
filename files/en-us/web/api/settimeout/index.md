@@ -249,8 +249,16 @@ approximately 4 milliseconds:
 
 ```html
 <button id="run">Run</button>
-<pre>previous    this    actual delay</pre>
-<div id="log"></div>
+<table>
+  <thead>
+    <tr>
+      <th>Previous</th>
+      <th>This</th>
+      <th>Actual delay</th>
+    </tr>
+  </thead>
+  <tbody id="log"></tbody>
+</table>
 ```
 
 ```js
@@ -260,7 +268,6 @@ let iterations = 10;
 function timeout() {
   // log the time of this call
   logline(new Date().getMilliseconds());
-
   // if we are not finished, schedule the next call
   if (iterations-- > 0) {
     setTimeout(timeout, 0);
@@ -277,26 +284,37 @@ function run() {
   // initialize iteration count and the starting timestamp
   iterations = 10;
   last = new Date().getMilliseconds();
-
   // start timer
   setTimeout(timeout, 0);
 }
 
-function pad(number) {
-  return number.toString().padStart(3, "0");
-}
-
 function logline(now) {
   // log the last timestamp, the new timestamp, and the difference
-  const newLine = document.createElement("pre");
-  newLine.textContent = `${pad(last)}         ${pad(now)}          ${
-    now - last
-  }`;
-  document.getElementById("log").appendChild(newLine);
+  const tableBody = document.getElementById("log");
+  const logRow = tableBody.insertRow();
+  logRow.insertCell().textContent = last;
+  logRow.insertCell().textContent = now;
+  logRow.insertCell().textContent = now - last;
   last = now;
 }
 
 document.querySelector("#run").addEventListener("click", run);
+```
+
+```css hidden
+* {
+  font-family: monospace;
+}
+th,
+td {
+  padding: 0 10px 0 10px;
+  text-align: center;
+  border: 1px solid;
+}
+table {
+  border-collapse: collapse;
+  margin-top: 10px;
+}
 ```
 
 {{EmbedLiveSample("Nested_timeouts", 100, 420)}}
