@@ -1,11 +1,6 @@
 ---
 title: Content negotiation
 slug: Web/HTTP/Content_negotiation
-tags:
-  - Content Negotiation
-  - Content Negotiation Reference
-  - HTTP
-  - Reference
 ---
 
 {{HTTPSidebar}}

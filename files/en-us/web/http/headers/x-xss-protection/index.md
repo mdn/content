@@ -1,13 +1,8 @@
 ---
 title: X-XSS-Protection
 slug: Web/HTTP/Headers/X-XSS-Protection
-tags:
-  - HTTP
-  - Reference
-  - Security
-  - XSS
-  - header
-  - Non-standard
+status:
+  - non-standard
 browser-compat: http.headers.X-XSS-Protection
 ---
 

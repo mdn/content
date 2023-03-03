@@ -98,5 +98,7 @@ One of the keyword values listed below.
 
 {{Compat}}
 
+## See also
+
 - {{cssxref("initial-letter")}}
 - [Drop caps in CSS](https://www.oddbird.net/2017/01/03/initial-letter/)

@@ -1,17 +1,6 @@
 ---
 title: MIME types (IANA media types)
 slug: Web/HTTP/Basics_of_HTTP/MIME_types
-tags:
-  - Content-Type
-  - Guide
-  - HTTP
-  - MIME Types
-  - Meta
-  - Request header
-  - Response Header
-  - application/javascript
-  - application/json
-  - application/xml
 ---
 
 {{HTTPSidebar}}

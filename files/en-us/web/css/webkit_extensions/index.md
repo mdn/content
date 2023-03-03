@@ -1,7 +1,7 @@
 ---
 title: WebKit CSS extensions
 slug: Web/CSS/WebKit_Extensions
-page-type: css-property
+page-type: landing-page
 status:
   - non-standard
 ---

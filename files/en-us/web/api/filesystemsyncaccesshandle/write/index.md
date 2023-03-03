@@ -8,7 +8,7 @@ browser-compat: api.FileSystemSyncAccessHandle.write
 {{securecontext_header}}{{APIRef("File System Access API")}}
 
 The **`write()`** method of the
-{{domxref("FileSystemSyncAccessHandle")}} interface writes the content of a specified buffer to the file associated with the handle, optionally at a given offset.
+{{domxref("FileSystemSyncAccessHandle")}} interface writes the content of a specified buffer to the file associated with the handle, optionally at a given offset. Note that you cannot directly manipulate the contents of an `ArrayBuffer`. Instead, you create one of the typed array objects like an {{jsxref("Int8Array")}} or a {{jsxref("DataView")}} object which represents the buffer in a specific format, and use that to read and write the contents of the buffer.
 
 Writes performed using {{domxref('FileSystemSyncAccessHandle.write()')}} are in-place, meaning that changes are written to the actual underlying file at the same time as they are written to the writer. This is not the case with other writing mechanisms available in the {{domxref("File System Access API", "File System Access API", "", "nocode")}} (e.g. {{domxref('FileSystemFileHandle.createWritable()')}}), where changes are not committed to disk until the writing stream is closed.
 

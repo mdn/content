@@ -1,11 +1,6 @@
 ---
 title: 423 Locked
 slug: Web/HTTP/Status/423
-tags:
-  - HTTP
-  - HTTP Status Code
-  - Reference
-  - Client Error
 spec-urls: https://www.rfc-editor.org/rfc/rfc4918#section-11.3
 ---
 

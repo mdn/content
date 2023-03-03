@@ -2,12 +2,8 @@
 title: view-transition-name
 slug: Web/CSS/view-transition-name
 page-type: css-property
-tags:
-  - CSS
-  - CSS Property
-  - Experimental
-  - Reference
-  - recipe:css-property
+status:
+  - experimental
 browser-compat: css.properties.view-transition-name
 ---
 
