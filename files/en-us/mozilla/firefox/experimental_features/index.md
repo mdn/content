@@ -2055,7 +2055,7 @@ The [`Clear-Site-Data`](/en-US/docs/Web/HTTP/Headers/Clear-Site-Data) HTTP respo
 ### SameSite=Lax by default
 
 [`SameSite` cookies](/en-US/docs/Web/HTTP/Headers/Set-Cookie/SameSite#lax) have a default value of [`Lax`](/en-US/docs/Web/HTTP/Headers/Set-Cookie/SameSite#lax).
-With this setting cookies are only sent when a user is navigating to the origin site, not for cross-site subrequests to load images or frames into a third party site and so on.
+With this setting, cookies are only sent when a user is navigating to the origin site, not for cross-site subrequests to load images or frames into a third party site and so on.
 For more details see [Firefox bug 1617609](https://bugzil.la/1617609).
 
 <table>
