@@ -19,7 +19,7 @@ The content inside the opening and closing `<video></video>` tags is shown as a 
 
 Like all other HTML elements, this element supports the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 
-- {{htmlattrdef("autoplay")}}
+- `autoplay`
 
   - : A Boolean attribute; if specified, the video automatically begins to play back as soon as it can do so without stopping to finish loading the data.
 
@@ -29,11 +29,11 @@ Like all other HTML elements, this element supports the [global attributes](/en-
 
     In some browsers (e.g. Chrome 70.0) autoplay doesn't work if no `muted` attribute is present.
 
-- {{htmlattrdef("autopictureinpicture")}} {{experimental_inline}}
+- `autopictureinpicture` {{experimental_inline}}
   - : A Boolean attribute which if `true` indicates that the element should automatically toggle picture-in-picture mode when the user switches back and forth between this document and another document or application.
-- {{htmlattrdef("controls")}}
+- `controls`
   - : If this attribute is present, the browser will offer controls to allow the user to control video playback, including volume, seeking, and pause/resume playback.
-- {{htmlattrdef("controlslist")}} {{experimental_inline}}{{non-standard_inline}}
+- `controlslist` {{experimental_inline}}{{non-standard_inline}}
 
   - : The [`controlslist`](https://wicg.github.io/controls-list/explainer.html) attribute, when specified, helps the browser select what controls to show for the `video` element whenever the browser shows its own set of controls (that is, when the `controls` attribute is specified).
 
@@ -41,7 +41,7 @@ Like all other HTML elements, this element supports the [global attributes](/en-
 
     Use the [`disablepictureinpicture`](#attr-disablepictureinpicture) attribute if you want to disable the Picture-In-Picture mode (and the control).
 
-- {{htmlattrdef("crossorigin")}}
+- `crossorigin`
 
   - : This [enumerated](/en-US/docs/Glossary/Enumerated) attribute indicates whether to use CORS to fetch the related video. [CORS-enabled resources](/en-US/docs/Web/HTML/CORS_enabled_image) can be reused in the {{HTMLElement("canvas")}} element without being _tainted_. The allowed values are:
 
@@ -52,25 +52,25 @@ Like all other HTML elements, this element supports the [global attributes](/en-
 
     When not present, the resource is fetched without a CORS request (i.e. without sending the `Origin:` HTTP header), preventing its non-tainted use in {{HTMLElement('canvas')}} elements. If invalid, it is handled as if the enumerated keyword `anonymous` was used. See [CORS settings attributes](/en-US/docs/Web/HTML/Attributes/crossorigin) for additional information.
 
-- {{htmlattrdef("disablepictureinpicture")}} {{experimental_inline}}
+- `disablepictureinpicture` {{experimental_inline}}
   - : Prevents the browser from suggesting a Picture-in-Picture context menu or to request Picture-in-Picture automatically in some cases.
-- {{htmlattrdef("disableremoteplayback")}} {{experimental_inline}}
+- `disableremoteplayback` {{experimental_inline}}
 
   - : A Boolean attribute used to disable the capability of remote playback in devices that are attached using wired (HDMI, DVI, etc.) and wireless technologies (Miracast, Chromecast, DLNA, AirPlay, etc.).
 
     In Safari, you can use [`x-webkit-airplay="deny"`](https://developer.apple.com/library/archive/documentation/AudioVideo/Conceptual/AirPlayGuide/OptingInorOutofAirPlay/OptingInorOutofAirPlay.html) as a fallback.
 
-- {{htmlattrdef("height")}}
+- `height`
   - : The height of the video's display area, in [CSS pixels](https://drafts.csswg.org/css-values/#px) (absolute values only; [no percentages](https://html.spec.whatwg.org/multipage/embedded-content.html#dimension-attributes)).
-- {{htmlattrdef("loop")}}
+- `loop`
   - : A Boolean attribute; if specified, the browser will automatically seek back to the start upon reaching the end of the video.
-- {{htmlattrdef("muted")}}
+- `muted`
   - : A Boolean attribute that indicates the default setting of the audio contained in the video. If set, the audio will be initially silenced. Its default value is `false`, meaning that the audio will be played when the video is played.
-- {{htmlattrdef("playsinline")}}
+- `playsinline`
   - : A Boolean attribute indicating that the video is to be played "inline", that is within the element's playback area. Note that the absence of this attribute _does not_ imply that the video will always be played in fullscreen.
-- {{htmlattrdef("poster")}}
+- `poster`
   - : A URL for an image to be shown while the video is downloading. If this attribute isn't specified, nothing is displayed until the first frame is available, then the first frame is shown as the poster frame.
-- {{htmlattrdef("preload")}}
+- `preload`
 
   - : This enumerated attribute is intended to provide a hint to the browser about what the author thinks will lead to the best user experience regarding what content is loaded before the video is played. It may have one of the following values:
 
@@ -86,9 +86,9 @@ Like all other HTML elements, this element supports the [global attributes](/en-
     > - The `autoplay` attribute has precedence over `preload`. If `autoplay` is specified, the browser would obviously need to start downloading the video for playback.
     > - The specification does not force the browser to follow the value of this attribute; it is a mere hint.
 
-- {{htmlattrdef("src")}}
+- `src`
   - : The URL of the video to embed. This is optional; you may instead use the {{HTMLElement("source")}} element within the video block to specify the video to embed.
-- {{htmlattrdef("width")}}
+- `width`
   - : The width of the video's display area, in [CSS pixels](https://drafts.csswg.org/css-values/#px) (absolute values only; [no percentages](https://html.spec.whatwg.org/multipage/embedded-content.html#dimension-attributes)).
 
 ## Events

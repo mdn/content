@@ -140,7 +140,7 @@ _No changes._
 
 ### Security
 
-- Due to [CVE-2019-11730: Same-origin policy treats all files in a directory as having the same-origin](https://www.mozilla.org/en-US/security/advisories/mfsa2019-21/#CVE-2019-11730), changes have been made so that Firefox now treats files in the same directory as being from different origins. This has a number of side-effects on what will work in documents loaded via file:// URLs (see {{bug("file-fallout")}} for useful background research). For example, workers can no longer be loaded.
+- Due to [CVE-2019-11730: Same-origin policy treats all files in a directory as having the same-origin](https://www.mozilla.org/en-US/security/advisories/mfsa2019-21/#CVE-2019-11730), changes have been made so that Firefox now treats files in the same directory as being from different origins. This has a number of side-effects on what will work in documents loaded via file:// URLs (see [Firefox bug 1558299](https://bugzil.la/1558299) for useful background research). For example, workers can no longer be loaded.
 
 ### WebDriver conformance (Marionette)
 

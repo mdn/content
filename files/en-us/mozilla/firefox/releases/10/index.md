@@ -87,7 +87,7 @@ Great progress has been made to update IndexedDB to the latest draft specificati
 - The ESC key no longer incorrectly results in the {{ domxref("Element.keydown_event", "onkeydown") }} handler incorrectly getting called.
 - The `NameList` interface is no longer implemented; it previously had an implementation with no way to actually get access to one.
 - The {{ domxref("document.createProcessingInstruction()") }} method now works on HTML documents as well as XML documents. {{ domxref("ProcessingInstruction") }} nodes are still only supported on XML documents, but since nodes can be moved among documents, it's helpful to be able to create them on HTML documents as well.
-- The {{ domxref("XMLHttpRequest") }} `responseType` "`moz-json`" [introduced in Firefox 9](/en-US/docs/Mozilla/Firefox/Releases/9#dom) has been updated to the latest draft of the specification and has been unprefixed. See {{ bug("707142#c13") }}
+- The {{ domxref("XMLHttpRequest") }} `responseType` "`moz-json`" [introduced in Firefox 9](/en-US/docs/Mozilla/Firefox/Releases/9#dom) has been updated to the latest draft of the specification and has been unprefixed. See note in [Firefox bug 707142](https://bugzil.la/707142#c13).
 
 ### CSS
 

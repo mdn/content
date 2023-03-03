@@ -1,11 +1,6 @@
 ---
 title: 404 Not Found
 slug: Web/HTTP/Status/404
-tags:
-  - Browser
-  - Client error
-  - HTTP
-  - Status code
 browser-compat: http.status.404
 ---
 

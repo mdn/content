@@ -1,14 +1,8 @@
 ---
 title: Downlink
 slug: Web/HTTP/Headers/Downlink
-tags:
-  - Downlink
-  - Client hints
-  - HTTP
-  - HTTP Header
-  - Request header
-  - Client hints
-  - Experimental
+status:
+  - experimental
 browser-compat: http.headers.downlink
 ---
 

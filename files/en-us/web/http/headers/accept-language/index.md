@@ -1,13 +1,6 @@
 ---
 title: Accept-Language
 slug: Web/HTTP/Headers/Accept-Language
-tags:
-  - Accept-Language
-  - Content Negotiation
-  - HTTP
-  - HTTP Header
-  - Reference
-  - Request header
 browser-compat: http.headers.Accept-Language
 ---
 
