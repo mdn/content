@@ -1,10 +1,6 @@
 ---
 title: POST
 slug: Web/HTTP/Methods/POST
-tags:
-  - HTTP
-  - Reference
-  - Request method
 browser-compat: http.methods.POST
 ---
 

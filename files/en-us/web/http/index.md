@@ -1,14 +1,6 @@
 ---
 title: HTTP
 slug: Web/HTTP
-tags:
-  - HTTP
-  - Hypertext
-  - Reference
-  - TCP/IP
-  - Web
-  - Web Development
-  - "l10n:priority"
 ---
 
 {{HTTPSidebar}}
