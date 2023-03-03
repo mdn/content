@@ -44,7 +44,7 @@ The data stored in the browser by a origin is best-effort by default. When using
 
 If, for any reason, developers need persistent storage (e.g., when building a web app that relies on critical data that isn't persisted anywhere else), they can do so by using the {{domxref("StorageManager.persist()")}} method of the {{domxref("Storage_API", "Storage API", "", "nocode")}}.
 
-In Firefox, when a site chooses to use persistent storage, the user is notified with a UI popup their permission is requested.
+In Firefox, when a site chooses to use persistent storage, the user is notified with a UI popup that their permission is requested.
 
 Safari and most Chromium-based browsers, such as Chrome or Edge, automatically handle the permission request, and do not show any prompts to the user.
 
