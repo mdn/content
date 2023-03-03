@@ -1,15 +1,6 @@
 ---
 title: "CSP: connect-src"
 slug: Web/HTTP/Headers/Content-Security-Policy/connect-src
-tags:
-  - CSP
-  - Content-Security-Policy
-  - Directive
-  - HTTP
-  - Reference
-  - Security
-  - connect-src
-  - source
 browser-compat: http.headers.Content-Security-Policy.connect-src
 ---
 

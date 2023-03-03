@@ -2,6 +2,7 @@
 title: Specification tables
 slug: MDN/Writing_guidelines/Page_structures/Specification_tables
 page-type: mdn-writing-guide
+browser-compat: css.properties.text-align
 ---
 
 {{MDNSidebar}}
@@ -28,12 +29,7 @@ then the macro gets the specifications for {{cssxref("text-align")}} and renders
 
 ### Specifications
 
-{{Specifications("css.properties.text-align")}}
-
-## Specification tables without front-matter
-
-In case you want to display a specification section on a page that doesn't provide a front-matter,
-you can pass the browser-compat query directly to the macro: `\{{Specifications("css.properties.text-align")}}`
+{{Specifications}}
 
 ## Non-standard features
 

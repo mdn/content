@@ -31,13 +31,13 @@ Firefox 20 was released on April, 2nd 2013. This article provides information ab
 
 ### DOM/APIs
 
-- {{domxref("HTMLMediaElement")}} supports now `playbackRate` (both read and write), with pitch correction. Pitch correction can be controlled using the property `mozPreservesPitch` ({{bug('495040')}}).
+- {{domxref("HTMLMediaElement")}} supports now `playbackRate` (both read and write), with pitch correction. Pitch correction can be controlled using the property `mozPreservesPitch` ([Firefox bug 495040](https://bugzil.la/495040)).
 - CSSOM: Support for the new {{domxref("CSSGroupingRule")}} and {{domxref("CSSConditionRule")}} has been added ([Firefox bug 814907](https://bugzil.la/814907)).
 - CSSOM: On {{domxref("CSSRule")}} the constant CSSRule.MOZ_KEYFRAME_RULE and CSSRule.MOZ_KEYFRAMES_RULE have been unprefixed to CSSRule.KEYFRAME_RULE and CSSRule.KEYFRAMES_RULE. The prefixed version are temporarily kept for helping Web author to transition their code [Firefox bug 816431](https://bugzil.la/816431)).
 - CSSOM: It is now possible to set the value of `conditionText` for {{domxref("CSSMediaRule")}} ([Firefox bug 815021](https://bugzil.la/815021)).
-- The {{domxref("DOMParser")}} `parseFromStream` and `parseFromBuffer` methods are no longer available from web content ({{bug('816410')}}).
-- The [`XMLSerializer`](/en-US/docs/Web/API/XMLSerializer) `serializeToStream` method is no longer available from web content ({{bug('816410')}}).
-- {{domxref("TextDecoder")}} and {{domxref("TextEncoder")}} interfaces are now available in Workers ({{bug('795542')}}).
+- The {{domxref("DOMParser")}} `parseFromStream` and `parseFromBuffer` methods are no longer available from web content ([Firefox bug 816410](https://bugzil.la/816410)).
+- The [`XMLSerializer`](/en-US/docs/Web/API/XMLSerializer) `serializeToStream` method is no longer available from web content ([Firefox bug 816410](https://bugzil.la/816410)).
+- {{domxref("TextDecoder")}} and {{domxref("TextEncoder")}} interfaces are now available in Workers ([Firefox bug 795542](https://bugzil.la/795542)).
 - Support for the `CSS.supports()` method has been added, behind the `layout.css.supports-rule.enabled` pref (off by default) ([Firefox bug 779917](https://bugzil.la/779917)).
 - Support for UndoManager has been added ([Firefox bug 617532](https://bugzil.la/617532)).
 - The CSSOM {{domxref("Document.caretPositionFromPoint()")}} method, which returns a {{domxref("CaretPosition")}} has been implemented.
@@ -61,10 +61,10 @@ Firefox 20 was released on April, 2nd 2013. This article provides information ab
 ## Changes for add-on and Mozilla developers
 
 - [ECMAScript for XML (E4X)](/en-US/docs/E4X) is now fully disabled for all chrome and content scripts. It was previously disabled for content in Firefox 17 and has been removed entirely for Firefox 21. Use DOMParser/DOMSerializer or a non-native JXON algorithm instead.
-- The `nsIDOMParserJS` interface no longer exists {{bug('816410')}}. See `nsIDOMParser` for alternatives.
+- The `nsIDOMParserJS` interface no longer exists ([Firefox bug 816410](https://bugzil.la/816410)). See `nsIDOMParser` for alternatives.
 - Content Preferences: The `nsIContentPrefService` interface is now deprecated and the asynchronous `nsIContentPrefService2` storage API has been implemented.
 - The `nsIProfile` and `nsIProfileChangeStatus` interfaces have been removed, along with other code supporting the pre-Firefox profile management system. You probably weren't using these interfaces, but if you were, you should stop doing so. This prevents defunct parts of the profile management system from vetoing the shutdown process.
-- The `nsIEventSource` interface no longer exists {{bug('819639')}}.
+- The `nsIEventSource` interface no longer exists ([Firefox bug 819639](https://bugzil.la/819639)).
 
 ## See also
 

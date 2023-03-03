@@ -2,13 +2,8 @@
 title: "::view-transition-group"
 slug: Web/CSS/::view-transition-group
 page-type: css-pseudo-element
-tags:
-  - API
-  - CSS
-  - Experimental
-  - Pseudo-element
-  - Reference
-  - Selector
+status:
+  - experimental
 browser-compat: css.selectors.view-transition-group
 ---
 

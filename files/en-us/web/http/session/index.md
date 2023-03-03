@@ -1,8 +1,6 @@
 ---
 title: A typical HTTP session
 slug: Web/HTTP/Session
-tags:
-  - HTTP
 ---
 
 {{HTTPSidebar}}
