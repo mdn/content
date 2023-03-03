@@ -36,10 +36,10 @@ element's [style attribute](/en-US/docs/Web/HTML/Global_attributes/style).
 
 ```js
 // get the button element
-const buttonEl = document.querySelector('button');
+const buttonEl = document.querySelector("button");
 
 // remove background-image from style attribute
-buttonEl.attributeStyleMap.delete('background-image');
+buttonEl.attributeStyleMap.delete("background-image");
 ```
 
 ## Specifications

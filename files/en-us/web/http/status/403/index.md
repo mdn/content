@@ -1,11 +1,6 @@
 ---
 title: 403 Forbidden
 slug: Web/HTTP/Status/403
-tags:
-  - Client error
-  - HTTP
-  - Reference
-  - Status code
 browser-compat: http.status.403
 ---
 

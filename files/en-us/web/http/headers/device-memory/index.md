@@ -1,14 +1,8 @@
 ---
 title: Device-Memory
 slug: Web/HTTP/Headers/Device-Memory
-tags:
-  - Device-Memory
-  - Client hints
-  - Device Memory API
-  - HTTP
-  - HTTP Header
-  - Request header
-  - Experimental
+status:
+  - experimental
 browser-compat: http.headers.Device-Memory
 ---
 

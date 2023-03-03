@@ -1,11 +1,6 @@
 ---
 title: HTTP Client hints
 slug: Web/HTTP/Client_hints
-tags:
-  - Client hints
-  - Guide
-  - HTTP
-  - Performance
 ---
 
 {{HTTPSidebar}}

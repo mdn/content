@@ -1,11 +1,6 @@
 ---
 title: 204 No Content
 slug: Web/HTTP/Status/204
-tags:
-  - HTTP
-  - Reference
-  - Status code
-  - Success
 browser-compat: http.status.204
 ---
 

@@ -33,7 +33,8 @@ A {{jsxref("Promise")}} that resolves to an array of
 
 ```js
 navigator.serviceWorker.getRegistrations().then((registrations) => {
-  document.querySelector('#status').textContent = 'ServiceWorkerRegistrations found.';
+  document.querySelector("#status").textContent =
+    "ServiceWorkerRegistrations found.";
 });
 ```
 

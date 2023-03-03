@@ -1,11 +1,8 @@
 ---
 title: launch_handler
 slug: Web/Manifest/launch_handler
-tags:
-  - Manifest
-  - Web
-  - launch_handler
-  - Experimental
+status:
+  - experimental
 browser-compat: html.manifest.launch_handler
 ---
 

@@ -1,10 +1,6 @@
 ---
 title: Browser detection using the user agent
 slug: Web/HTTP/Browser_detection_using_the_user_agent
-tags:
-  - Compatibility
-  - HTTP
-  - Web Development
 ---
 
 {{HTTPSidebar}}

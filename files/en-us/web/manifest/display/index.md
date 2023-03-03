@@ -1,10 +1,6 @@
 ---
 title: display
 slug: Web/Manifest/display
-tags:
-  - Manifest
-  - Web
-  - display
 browser-compat: html.manifest.display
 ---
 

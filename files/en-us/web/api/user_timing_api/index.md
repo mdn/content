@@ -79,10 +79,10 @@ The `PerformanceMeasure` interface has the following read-only properties (direc
 Typically, you identify the most critical paths of your application and measure how long it takes from start to finish. For example, you can measure how long it takes to login:
 
 ```js
-// Place at a location in the code that starts login 
+// Place at a location in the code that starts login
 performance.mark("login-started");
 
-// Place at a location in the code that finishes login 
+// Place at a location in the code that finishes login
 performance.mark("login-finished");
 
 // Measure login duration
