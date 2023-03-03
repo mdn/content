@@ -55,9 +55,7 @@ Size may either be defined with a "scalable" keyword (in this case the page will
 
 ### Example of rotating printed pages
 
-#### HTML
-
-```html
+```html hidden
 <fieldset id="printStyle">
   <legend>
     Click print and your page will print in landscape and portrait
@@ -83,7 +81,7 @@ Size may either be defined with a "scalable" keyword (in this case the page will
           <th>Hurdles</th>
           <th>Long Jump</th>
           <th>High Jump</th>
-          <th>Javlin</th>
+          <th>Javelin</th>
           <th>Discus</th>
         </tr>
       </thead>
@@ -179,7 +177,7 @@ Size may either be defined with a "scalable" keyword (in this case the page will
           <th>Hurdles</th>
           <th>Long Jump</th>
           <th>High Jump</th>
-          <th>Javlin</th>
+          <th>Javelin</th>
           <th>Discus</th>
         </tr>
       </thead>
@@ -277,7 +275,7 @@ Size may either be defined with a "scalable" keyword (in this case the page will
           <th>Hurdles</th>
           <th>Long Jump</th>
           <th>High Jump</th>
-          <th>Javlin</th>
+          <th>Javelin</th>
           <th>Discus</th>
         </tr>
       </thead>
@@ -361,6 +359,24 @@ Size may either be defined with a "scalable" keyword (in this case the page will
 #### CSS
 
 ```css hidden
+
+```
+
+```css
+@page upright {
+  page-orientation: upright;
+}
+
+@page left {
+  page-orientation: rotate-left;
+}
+
+@page right {
+  page-orientation: rotate-right;
+}
+```
+
+```css hidden
 fieldset {
   display: flex;
   flex-direction: row;
@@ -368,44 +384,9 @@ fieldset {
   gap: 1rem;
   width: fit-content;
 }
-```
-
-```css
-@page upright {
-  page-orientation: upright;
-  size: A4 portrait;
-  @top-middle {
-    content: "Upright page";
-    z-index: 100;
-  }
-}
-
-@page left {
-  page-orientation: rotate-left;
-  size: A4 landscape;
-  @top-middle {
-    content: "Left rotated page";
-    z-index: 100;
-  }
-}
-
-@page right {
-  page-orientation: rotate-right;
-  size: A4 landscape;
-  @top-middle {
-    content: "Right rotated page";
-    z-index: 100;
-  }
-}
-```
-
-```css hidden
 p {
   max-width: 60ch;
 }
-```
-
-```css
 @media print {
   fieldset {
     display: none;
@@ -414,6 +395,11 @@ p {
     font-family: Roboto;
     font-size: 1.5rem;
   }
+}
+```
+
+```css
+@media print {
   .upright {
     page: upright;
   }
@@ -426,9 +412,7 @@ p {
 }
 ```
 
-#### JavaScript
-
-```js
+```js hidden
 const printButton = document.querySelector("#print");
 printButton.addEventListener("click", () => {
   window.print();
