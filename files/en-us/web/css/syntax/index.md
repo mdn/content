@@ -1,3 +1,4 @@
+![PHOTO-2023-02-13-11-47-40 (3)](https://user-images.githubusercontent.com/117320087/222928493-6b99b070-a6d5-43ce-a7e9-15c956484a1b.jpg)
 ---
 title: Syntax
 slug: Web/CSS/Syntax
