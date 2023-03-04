@@ -378,6 +378,7 @@ A **skip link** is a link placed as early as possible in {{HTMLElement("body")}}
   top: 0;
 }
 ```
+
 #### Result
 
 {{EmbedLiveSample('Skip links')}}
