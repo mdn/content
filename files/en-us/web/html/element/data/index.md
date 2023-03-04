@@ -87,6 +87,8 @@ The following example displays product names but also associates each name with 
   <li><data value="400">Mega Jumbo Ketchup</data></li>
 </ul>
 ```
+### Result
+{{EmbedLiveSample('Examples')}}
 
 ## Specifications
 
