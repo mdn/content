@@ -2,10 +2,6 @@
 title: Event.cancelable
 slug: Web/API/Event/cancelable
 page-type: web-api-instance-property
-tags:
-  - Property
-  - Read-only
-  - Reference
 browser-compat: api.Event.cancelable
 ---
 
@@ -48,7 +44,7 @@ canceled.
 
 ```js
 function preventScrollWheel(event) {
-  if (typeof event.cancelable !== 'boolean' || event.cancelable) {
+  if (typeof event.cancelable !== "boolean" || event.cancelable) {
     // The event can be canceled, so we do so.
     event.preventDefault();
   } else {
@@ -59,7 +55,7 @@ function preventScrollWheel(event) {
   }
 }
 
-document.addEventListener('wheel', preventScrollWheel);
+document.addEventListener("wheel", preventScrollWheel);
 ```
 
 ## Specifications

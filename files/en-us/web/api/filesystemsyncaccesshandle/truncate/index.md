@@ -2,15 +2,6 @@
 title: FileSystemSyncAccessHandle.truncate()
 slug: Web/API/FileSystemSyncAccessHandle/truncate
 page-type: web-api-instance-method
-tags:
-  - truncate
-  - Directory
-  - File
-  - File System Access API
-  - FileSystemSyncAccessHandle
-  - Method
-  - stream
-  - working with files
 browser-compat: api.FileSystemSyncAccessHandle.truncate
 ---
 
@@ -47,7 +38,7 @@ A {{jsxref('Promise')}} which resolves to undefined.
 async function truncateFile() {
   // Get handle to draft file
   const root = await navigator.storage.getDirectory();
-  const draftHandle = await root.getFileHandle('draft.txt', { create: true });
+  const draftHandle = await root.getFileHandle("draft.txt", { create: true });
   // Get sync access handle
   const accessHandle = await draftHandle.createSyncAccessHandle();
 

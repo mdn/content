@@ -2,13 +2,6 @@
 title: DynamicsCompressorNode.release
 slug: Web/API/DynamicsCompressorNode/release
 page-type: web-api-instance-property
-tags:
-  - API
-  - DynamicsCompressorNode
-  - Property
-  - Reference
-  - Release
-  - Web Audio API
 browser-compat: api.DynamicsCompressorNode.release
 ---
 

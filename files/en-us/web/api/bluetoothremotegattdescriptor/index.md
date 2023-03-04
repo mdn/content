@@ -2,14 +2,8 @@
 title: BluetoothRemoteGATTDescriptor
 slug: Web/API/BluetoothRemoteGATTDescriptor
 page-type: web-api-interface
-tags:
-  - API
-  - Bluetooth
-  - BluetoothRemoteGATTDescriptor
-  - Experimental
-  - Interface
-  - Reference
-  - Web Bluetooth API
+status:
+  - experimental
 browser-compat: api.BluetoothRemoteGATTDescriptor
 ---
 

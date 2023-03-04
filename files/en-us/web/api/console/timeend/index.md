@@ -2,14 +2,6 @@
 title: console.timeEnd()
 slug: Web/API/console/timeEnd
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - Debugging
-  - Method
-  - Web Development
-  - console
-  - web console
 browser-compat: api.console.timeEnd
 ---
 
@@ -50,7 +42,7 @@ console.timeEnd("answer time");
 ```
 
 The output from the example above shows the time taken by the user to dismiss the first
-alert box, followed by the time it took for the user to dismiss the second alert:
+alert box, followed by the cumulative time it took for the user to dismiss both alerts:
 
 ![Timer output in Firefox console](timer_output.png)
 

@@ -2,8 +2,6 @@
 title: Touch.msManipulationViewsEnabled
 slug: Web/API/Touch/MsManipulationViewsEnabled
 page-type: web-api-instance-property
-tags:
-  - msManipulationViesEnabled
 ---
 
 {{APIRef("DOM")}}
@@ -24,7 +22,7 @@ Using a JSON file:
 
 ```json
 {
-  "msManipulationViewsEnabled": true,
+  "msManipulationViewsEnabled": true
 }
 ```
 

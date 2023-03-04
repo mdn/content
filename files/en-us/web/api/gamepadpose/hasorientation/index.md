@@ -2,16 +2,8 @@
 title: GamepadPose.hasOrientation
 slug: Web/API/GamepadPose/hasOrientation
 page-type: web-api-instance-property
-tags:
-  - API
-  - Experimental
-  - Gamepad API
-  - GamepadPose
-  - Property
-  - Reference
-  - Virtual Reality
-  - WebVR
-  - hasOrientation
+status:
+  - experimental
 browser-compat: api.GamepadPose.hasOrientation
 ---
 

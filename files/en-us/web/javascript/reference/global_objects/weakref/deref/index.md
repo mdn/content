@@ -2,18 +2,12 @@
 title: WeakRef.prototype.deref()
 slug: Web/JavaScript/Reference/Global_Objects/WeakRef/deref
 page-type: javascript-instance-method
-tags:
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - WeakRef
 browser-compat: javascript.builtins.WeakRef.deref
 ---
 
 {{JSRef}}
 
-The `deref` method returns the {{jsxref("WeakRef")}} instance's target
+The **`deref()`** method returns the {{jsxref("WeakRef")}} instance's target
 object, or `undefined` if the target object has been garbage-collected.
 
 ## Syntax

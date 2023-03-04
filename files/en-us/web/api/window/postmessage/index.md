@@ -2,14 +2,6 @@
 title: Window.postMessage()
 slug: Web/API/Window/postMessage
 page-type: web-api-instance-method
-tags:
-  - API
-  - Cross-origin Communication
-  - HTML DOM
-  - Method
-  - Reference
-  - Window
-  - postMessage
 browser-compat: api.Window.postMessage
 ---
 
@@ -59,7 +51,7 @@ postMessage(message, targetOrigin, transfer)
     window's document should be located. Failing to provide a specific target discloses
     the data you send to any interested malicious site.**
 - `transfer` {{optional_Inline}}
-  - : A sequence of {{Glossary("transferable objects")}} that are transferred with the message.
+  - : A sequence of [transferable objects](/en-US/docs/Web/API/Web_Workers_API/Transferable_objects) that are transferred with the message.
     The ownership of these objects is given to the destination side and they are no longer usable on the sending side.
 
 ### Return value
@@ -127,8 +119,8 @@ memory is gated behind two HTTP headers:
 
 - {{HTTPHeader("Cross-Origin-Opener-Policy")}} with `same-origin` as value
   (protects your origin from attackers)
-- {{HTTPHeader("Cross-Origin-Embedder-Policy")}} with `require-corp` as
-  value (protects victims from your origin)
+- {{HTTPHeader("Cross-Origin-Embedder-Policy")}} with `require-corp` or
+  `credentialless` as value (protects victims from your origin)
 
 ```http
 Cross-Origin-Opener-Policy: same-origin
@@ -140,16 +132,16 @@ To check if cross origin isolation has been successful, you can test against the
 property available to window and worker contexts:
 
 ```js
+const myWorker = new Worker('worker.js');
+
 if (crossOriginIsolated) {
-  // Post SharedArrayBuffer
+  const buffer = new SharedArrayBuffer(16);
+  myWorker.postMessage(buffer);
 } else {
-  // Do something else
+  const buffer = new ArrayBuffer(16);
+  myWorker.postMessage(buffer);
 }
 ```
-
-See also {{jsxref("Global_Objects/SharedArrayBuffer/Planned_changes", "Planned changes
-  to shared memory", "", 1)}} which is starting to roll out to browsers (Firefox 79, for
-example).
 
 ## Examples
 

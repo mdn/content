@@ -2,12 +2,6 @@
 title: CSS Box Model
 slug: Web/CSS/CSS_Box_Model
 page-type: css-module
-tags:
-  - CSS
-  - CSS Box Model
-  - Guide
-  - Overview
-  - Reference
 spec-urls: https://drafts.csswg.org/css-box/
 ---
 

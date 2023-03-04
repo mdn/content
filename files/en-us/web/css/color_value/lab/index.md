@@ -2,15 +2,8 @@
 title: lab()
 slug: Web/CSS/color_value/lab
 page-type: css-function
-tags:
-  - CSS
-  - CSS Data Type
-  - Data Type
-  - Reference
-  - Web
-  - color
-  - lab
-  - Experimental
+status:
+  - experimental
 browser-compat: css.types.color.lab
 ---
 
@@ -37,6 +30,10 @@ lab(52.2345% 40.1645 59.9971 / .5);
     The third argument `b` is the distance along the `b` axis in the Lab colorspace.
 
     `A` (alpha) can be a {{cssxref("&lt;number&gt;")}} between `0` and `1`, or a {{cssxref("&lt;percentage&gt;")}}, where the number `1` corresponds to `100%` (full opacity).
+
+### Formal syntax
+
+{{csssyntax}}
 
 ## Specifications
 

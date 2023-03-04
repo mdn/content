@@ -2,17 +2,12 @@
 title: Math.ceil()
 slug: Web/JavaScript/Reference/Global_Objects/Math/ceil
 page-type: javascript-static-method
-tags:
-  - JavaScript
-  - Math
-  - Method
-  - Reference
 browser-compat: javascript.builtins.Math.ceil
 ---
 
 {{JSRef}}
 
-The **`Math.ceil()`** function always rounds up and returns the smaller integer greater than or equal to a given number.
+The **`Math.ceil()`** static method always rounds up and returns the smaller integer greater than or equal to a given number.
 
 {{EmbedInteractiveExample("pages/js/math-ceil.html")}}
 

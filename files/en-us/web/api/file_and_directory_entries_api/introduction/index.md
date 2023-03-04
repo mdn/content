@@ -2,13 +2,6 @@
 title: Introduction to the File and Directory Entries API
 slug: Web/API/File_and_Directory_Entries_API/Introduction
 page-type: guide
-tags:
-  - API
-  - Beginner
-  - File
-  - File and Directory Entries API
-  - Guide
-  - Introduction
 browser-compat: api.FileSystem
 ---
 

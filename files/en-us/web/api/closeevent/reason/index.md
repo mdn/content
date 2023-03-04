@@ -2,11 +2,6 @@
 title: CloseEvent.reason
 slug: Web/API/CloseEvent/reason
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - closeEvent
 browser-compat: api.CloseEvent.reason
 ---
 

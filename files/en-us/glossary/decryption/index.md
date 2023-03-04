@@ -1,10 +1,7 @@
 ---
 title: Decryption
 slug: Glossary/Decryption
-tags:
-  - Cryptography
-  - Privacy
-  - Security
+page-type: glossary-definition
 ---
 
 In {{glossary("cryptography")}}, **decryption** is the conversion of {{glossary("ciphertext")}} into {{glossary("Plaintext")}}.

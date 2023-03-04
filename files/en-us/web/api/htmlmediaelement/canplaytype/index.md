@@ -2,24 +2,6 @@
 title: HTMLMediaElement.canPlayType()
 slug: Web/API/HTMLMediaElement/canPlayType
 page-type: web-api-instance-method
-tags:
-  - API
-  - Audio
-  - Capability
-  - Compatibility
-  - Format
-  - HTML DOM
-  - HTMLMediaElement
-  - MIME Types
-  - Media
-  - Media Types
-  - Method
-  - Reference
-  - Type
-  - Video
-  - Web
-  - canPlayType
-  - support
 browser-compat: api.HTMLMediaElement.canPlayType
 ---
 
@@ -55,8 +37,8 @@ The string will be one of the following values:
 ## Examples
 
 ```js
-let obj = document.createElement('video');
-console.log(obj.canPlayType('video/mp4')); // "maybe"
+let obj = document.createElement("video");
+console.log(obj.canPlayType("video/mp4")); // "maybe"
 ```
 
 ## Specifications

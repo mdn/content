@@ -1,17 +1,9 @@
 ---
 title: '<portal>: The Portal element'
 slug: Web/HTML/Element/portal
-tags:
-  - Content
-  - Element
-  - Embedded content
-  - Embedding
-  - HTML
-  - HTML embedded content
-  - Reference
-  - Web
-  - Portal
-  - Experimental
+page-type: html-element
+status:
+  - experimental
 browser-compat: html.elements.portal
 ---
 
@@ -25,9 +17,9 @@ A `<portal>` is similar to an `<iframe>`. An `<iframe>` allows a separate {{Glos
 
 This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 
-- {{htmlattrdef("referrerpolicy")}}
+- `referrerpolicy`
   - : Sets the [referrer policy](/en-US/docs/Web/HTTP/Headers/Referrer-Policy) to use when requesting the page at the URL given as the value of the `src` attribute.
-- {{htmlattrdef("src")}}
+- `src`
   - : The URL of the page to embed.
 
 ## Examples

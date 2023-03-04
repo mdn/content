@@ -2,13 +2,8 @@
 title: ReportingObserver.disconnect()
 slug: Web/API/ReportingObserver/disconnect
 page-type: web-api-instance-method
-tags:
-  - API
-  - Experimental
-  - Method
-  - Reference
-  - Reporting API
-  - ReportingObserver
+status:
+  - experimental
 browser-compat: api.ReportingObserver.disconnect
 ---
 
@@ -42,19 +37,19 @@ None ({{jsxref("undefined")}}).
 
 ```js
 const options = {
-  types: ['deprecation'],
-  buffered: true
-}
+  types: ["deprecation"],
+  buffered: true,
+};
 
 const observer = new ReportingObserver((reports, observer) => {
   reportBtn.onclick = () => displayReports(reports);
 }, options);
 
-observer.observe()
+observer.observe();
 
 // ...
 
-observer.disconnect()
+observer.disconnect();
 ```
 
 ## Specifications

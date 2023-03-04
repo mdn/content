@@ -2,12 +2,8 @@
 title: User-Agent Client Hints API
 slug: Web/API/User-Agent_Client_Hints_API
 page-type: web-api-overview
-tags:
-  - API
-  - User-Agent Client Hints API
-  - Overview
-  - Reference
-  - Experimental
+status:
+  - experimental
 browser-compat: api.NavigatorUAData
 ---
 
@@ -62,13 +58,17 @@ console.log(navigator.userAgentData.brands);
 In the following example a number of hints are requested using the {{domxref("NavigatorUAData.getHighEntropyValues()")}} method. When the promise resolves, this information is printed to the console.
 
 ```js
-navigator.userAgentData.getHighEntropyValues(
-  ["architecture",
-  "model",
-  "platform",
-  "platformVersion",
-  "fullVersionList"])
-  .then((ua) => { console.log(ua) });
+navigator.userAgentData
+  .getHighEntropyValues([
+    "architecture",
+    "model",
+    "platform",
+    "platformVersion",
+    "fullVersionList",
+  ])
+  .then((ua) => {
+    console.log(ua);
+  });
 ```
 
 ## Specifications

@@ -1,11 +1,7 @@
 ---
-title: 'SpeechRecognition: nomatch event'
+title: "SpeechRecognition: nomatch event"
 slug: Web/API/SpeechRecognition/nomatch_event
 page-type: web-api-event
-tags:
-  - Event
-  - Reference
-  - Web Speech API
 browser-compat: api.SpeechRecognition.nomatch_event
 ---
 
@@ -20,9 +16,9 @@ This may involve some degree of recognition, which doesn't meet or exceed the {{
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('nomatch', (event) => { })
+addEventListener("nomatch", (event) => {});
 
-onnomatch = (event) => { }
+onnomatch = (event) => {};
 ```
 
 ## Event type
@@ -51,8 +47,8 @@ You can use the `nomatch` event in an [`addEventListener`](/en-US/docs/Web/API/E
 ```js
 const recognition = new webkitSpeechRecognition() || new SpeechRecognition();
 
-recognition.addEventListener('nomatch', () => {
-  console.error('Speech not recognized');
+recognition.addEventListener("nomatch", () => {
+  console.error("Speech not recognized");
 });
 ```
 
@@ -60,8 +56,8 @@ Or use the `onnomatch` event handler property:
 
 ```js
 recognition.onnomatch = () => {
-  console.error('Speech not recognized');
-}
+  console.error("Speech not recognized");
+};
 ```
 
 ## Specifications

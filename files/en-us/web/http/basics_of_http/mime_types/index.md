@@ -1,17 +1,6 @@
 ---
 title: MIME types (IANA media types)
 slug: Web/HTTP/Basics_of_HTTP/MIME_types
-tags:
-  - Content-Type
-  - Guide
-  - HTTP
-  - MIME Types
-  - Meta
-  - Request header
-  - Response Header
-  - application/javascript
-  - application/json
-  - application/xml
 ---
 
 {{HTTPSidebar}}
@@ -262,7 +251,7 @@ The following `<form>`:
   <label>Name: <input name="myTextField" value="Test" /></label>
   <label><input type="checkbox" name="myCheckBox" /> Check</label>
   <label>
-    Upload file: <input type="file" name="myFile" value="test.txt"/>
+    Upload file: <input type="file" name="myFile" value="test.txt" />
   </label>
   <button>Send the file</button>
 </form>

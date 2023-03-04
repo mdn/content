@@ -1,20 +1,6 @@
 ---
 title: Tutorials
 slug: Web/Tutorials
-tags:
-  - Beginner
-  - Browser
-  - CSS
-  - Code
-  - Coding
-  - GitHub
-  - Guide
-  - HTML
-  - JavaScript
-  - MDN
-  - Tutorial
-  - Web Article
-  - Web Development
 ---
 
 The links on this page lead to a variety of tutorials and training materials. Whether you are just starting, learning the basics, or are an old hand at web development, you can find helpful resources here for best practices.
@@ -142,12 +128,12 @@ These resources are created by forward-thinking companies and web developers who
   - : A comprehensive, regularly updated guide to JavaScript for all levels of learning from beginner to advanced.
 - [You Don't Know JS](https://github.com/getify/You-Dont-Know-JS)
   - : A series of books diving deep into the core mechanisms of the JavaScript language.
-- [JavaScript Garden](https://bonsaiden.github.io/JavaScript-Garden/)
+- [JavaScript Garden](https://github.com/BonsaiDen/JavaScript-Garden)
   - : Documentation of the most quirky parts of JavaScript.
 - [Exploring ES6](https://exploringjs.com/es6/)
   - : Reliable and in-depth information on ECMAScript 2015.
 - [JavaScript Patterns](https://shichuan.github.io/javascript-patterns/)
-  - : A JavaScript pattern and antipattern collection that covers function patterns, jQuery patterns, jQuery plugin patterns, design patterns, general patterns, literals and constructor patterns, object creation patterns, code reuse patterns, DOM.
+  - : A JavaScript pattern and anti-pattern collection that covers function patterns, jQuery patterns, jQuery plugin patterns, design patterns, general patterns, literals and constructor patterns, object creation patterns, code reuse patterns, DOM.
 - [How browsers work](https://www.html5rocks.com/en/tutorials/internals/howbrowserswork/)
   - : A detailed research article describing different modern browsers, their engines, page rendering etc.
 - [JavaScript Videos](https://github.com/bolshchikov/js-must-watch)

@@ -1,8 +1,7 @@
 ---
 title: Object reference
 slug: Glossary/Object_reference
-tags:
-  - CodingScripting
+page-type: glossary-definition
 ---
 
 A link to an **{{glossary("object")}}**. Object references can be used exactly like the linked objects.

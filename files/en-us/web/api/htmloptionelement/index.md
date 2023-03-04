@@ -2,12 +2,6 @@
 title: HTMLOptionElement
 slug: Web/API/HTMLOptionElement
 page-type: web-api-interface
-tags:
-  - API
-  - HTML DOM
-  - Interface
-  - NeedsNewLayout
-  - Reference
 browser-compat: api.HTMLOptionElement
 ---
 
@@ -58,3 +52,4 @@ _Doesn't implement any specific method, but inherits methods from its parent, {{
 ## See also
 
 - The HTML element implementing this interface: {{HTMLElement("option")}}.
+- The {{domxref("HTMLOptionsCollection")}} interface.

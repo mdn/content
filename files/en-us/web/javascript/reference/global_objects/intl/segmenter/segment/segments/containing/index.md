@@ -3,12 +3,6 @@ title: Segments.prototype.containing()
 slug: >-
   Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/segment/Segments/containing
 page-type: javascript-instance-method
-tags:
-  - Internationalization
-  - Intl
-  - JavaScript
-  - Localization
-  - Reference
 browser-compat: javascript.builtins.Intl.Segments.containing
 ---
 
@@ -49,7 +43,7 @@ An object describing the segment of the original string with the following prope
 // ┃A l l o n s┃-┃y┃!┃   ← code unit
 const input = "Allons-y!";
 
-const segmenter = new Intl.Segmenter("fr", {granularity: "word"});
+const segmenter = new Intl.Segmenter("fr", { granularity: "word" });
 const segments = segmenter.segment(input);
 
 let current = segments.containing();

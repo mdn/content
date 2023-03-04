@@ -2,19 +2,14 @@
 title: Uint16Array
 slug: Web/JavaScript/Reference/Global_Objects/Uint16Array
 page-type: javascript-class
-tags:
-  - Class
-  - Uint16Array
-  - JavaScript
-  - TypedArray
-  - TypedArrays
-  - Polyfill
 browser-compat: javascript.builtins.Uint16Array
 ---
 
 {{JSRef}}
 
 The **`Uint16Array`** typed array represents an array of 16-bit unsigned integers in the platform byte order. If control over byte order is needed, use {{jsxref("DataView")}} instead. The contents are initialized to `0`. Once established, you can reference elements in the array using the object's methods, or using standard array index syntax (that is, using bracket notation).
+
+`Uint16Array` is a subclass of the hidden {{jsxref("TypedArray")}} class.
 
 ## Constructor
 
@@ -38,8 +33,12 @@ _Inherits static methods from its parent {{jsxref("TypedArray")}}_.
 
 _Also inherits instance properties from its parent {{jsxref("TypedArray")}}_.
 
+These properties are defined on `Uint16Array.prototype` and shared by all `Uint16Array` instances.
+
 - {{jsxref("TypedArray.BYTES_PER_ELEMENT", "Uint16Array.prototype.BYTES_PER_ELEMENT")}}
   - : Returns a number value of the element size. `2` in the case of a `Uint16Array`.
+- {{jsxref("Object/constructor", "Uint16Array.prototype.constructor")}}
+  - : The constructor function that created the instance object. For `Uint16Array` instances, the initial value is the {{jsxref("Uint16Array/Uint16Array", "Uint16Array")}} constructor.
 
 ## Instance methods
 

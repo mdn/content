@@ -2,12 +2,6 @@
 title: TrustedTypePolicyFactory.getPropertyType()
 slug: Web/API/TrustedTypePolicyFactory/getPropertyType
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - getPropertyType
-  - TrustedTypePolicyFactory
 browser-compat: api.TrustedTypePolicyFactory.getPropertyType
 ---
 
@@ -46,7 +40,7 @@ Or, null.
 In this example, passing the {{htmlelement("div")}} element and `innerHTML` property to `getPropertyType` returns "TrustedHTML".
 
 ```js
-console.log(trustedTypes.getPropertyType('div', 'innerHTML')); // "TrustedHTML"
+console.log(trustedTypes.getPropertyType("div", "innerHTML")); // "TrustedHTML"
 ```
 
 ## Specifications

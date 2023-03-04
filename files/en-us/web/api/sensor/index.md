@@ -2,14 +2,6 @@
 title: Sensor
 slug: Web/API/Sensor
 page-type: web-api-interface
-tags:
-  - API
-  - Generic Sensor API
-  - Interface
-  - Reference
-  - Sensor
-  - Sensor APIs
-  - Sensors
 browser-compat: api.Sensor
 ---
 
@@ -44,7 +36,7 @@ Below is a list of interfaces based on the `Sensor` interface.
 - {{domxref('Sensor.hasReading')}} {{ReadOnlyInline}}
   - : Returns a boolean value indicating whether the sensor has a reading.
 - {{domxref('Sensor.timestamp')}} {{ReadOnlyInline}}
-  - : Returns the time stamp of the latest sensor reading.
+  - : Returns the timestamp of the latest sensor reading.
 
 ## Instance methods
 

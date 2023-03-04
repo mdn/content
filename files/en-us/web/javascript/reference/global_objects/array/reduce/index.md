@@ -2,16 +2,6 @@
 title: Array.prototype.reduce()
 slug: Web/JavaScript/Reference/Global_Objects/Array/reduce
 page-type: javascript-instance-method
-tags:
-  - Array
-  - Array method
-  - ECMAScript 5
-  - JavaScript
-  - Method
-  - Prototype
-  - Reduce
-  - Reference
-  - Polyfill
 browser-compat: javascript.builtins.Array.reduce
 ---
 
@@ -344,8 +334,8 @@ console.log(doubledPositiveNumbers); // [12, 4]
  *
  * @param {array} arr - A list of promise handlers, each one receiving the
  * resolved result of the previous handler and returning another promise.
- * @param {*} input The initial value to start the promise chain
- * @return {Object} Final promise with a chain of handlers attached
+ * @param {*} input - The initial value to start the promise chain
+ * @return {Object} - Final promise with a chain of handlers attached
  */
 function runPromiseInSequence(arr, input) {
   return arr.reduce(

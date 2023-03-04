@@ -1,15 +1,10 @@
 ---
 title: '<image>: The Image element'
 slug: Web/HTML/Element/image
-tags:
-  - Element
-  - HTML
-  - HTML Element Reference
-  - HTML Reference
-  - HTML element
-  - Non-standard
-  - Deprecated
-  - Reference
+page-type: html-element
+status:
+  - deprecated
+  - non-standard
 browser-compat: html.elements.image
 ---
 

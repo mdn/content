@@ -2,17 +2,6 @@
 title: AbsoluteOrientationSensor
 slug: Web/API/AbsoluteOrientationSensor
 page-type: web-api-interface
-tags:
-  - API
-  - AbsoluteOrientationSensor
-  - Generic Sensor API
-  - Interface
-  - Orientation Sensor API
-  - OrientationSensor
-  - Reference
-  - Sensor
-  - Sensor APIs
-  - Sensors
 browser-compat: api.AbsoluteOrientationSensor
 ---
 

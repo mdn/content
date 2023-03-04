@@ -2,15 +2,8 @@
 title: StylePropertyMapReadOnly.keys()
 slug: Web/API/StylePropertyMapReadOnly/keys
 page-type: web-api-instance-method
-tags:
-  - API
-  - CSS Typed Object Model API
-  - Experimental
-  - Houdini
-  - Method
-  - Reference
-  - StylePropertyMapReadOnly
-  - keys()
+status:
+  - experimental
 browser-compat: api.StylePropertyMapReadOnly.keys
 ---
 
@@ -41,7 +34,7 @@ properties within our {{domxref('Element.computedStyleMap()')}}.
 
 ```js
 // get a button element
-const buttonEl = document.querySelector('button');
+const buttonEl = document.querySelector("button");
 
 // we can retrieve all computed styles with `computedStyleMap`
 const allComputedStyles = buttonEl.computedStyleMap();

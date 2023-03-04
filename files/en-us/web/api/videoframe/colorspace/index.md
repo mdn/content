@@ -2,13 +2,8 @@
 title: VideoFrame.colorSpace
 slug: Web/API/VideoFrame/colorSpace
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - colorSpace
-  - VideoFrame
-  - Experimental
+status:
+  - experimental
 browser-compat: api.VideoFrame.colorSpace
 ---
 
@@ -25,7 +20,7 @@ A {{domxref("VideoColorSpace")}} object.
 The following example prints the `colorSpace` to the console.
 
 ```js
-const cnv = document.createElement('canvas');
+const cnv = document.createElement("canvas");
 // draw something on the canvas
 // ...
 const videoFrame = new VideoFrame(cnv, { timestamp: 0 });

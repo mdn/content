@@ -2,14 +2,8 @@
 title: AudioListener.setOrientation()
 slug: Web/API/AudioListener/setOrientation
 page-type: web-api-instance-method
-tags:
-  - API
-  - AudioListener
-  - Method
-  - Reference
-  - Web Audio API
-  - setOrientation
-  - Deprecated
+status:
+  - deprecated
 browser-compat: api.AudioListener.setOrientation
 ---
 

@@ -2,12 +2,6 @@
 title: Selection.type
 slug: Web/API/Selection/type
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - Selection
-  - Type
 browser-compat: api.Selection.type
 ---
 
@@ -41,7 +35,7 @@ text, or a range has been selected.
 let selection;
 
 document.onselectionchange = () => {
-  console.log('New selection made');
+  console.log("New selection made");
   selection = document.getSelection();
   console.log(selection.type);
 };

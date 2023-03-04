@@ -2,20 +2,12 @@
 title: Intl.Collator.supportedLocalesOf()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Collator/supportedLocalesOf
 page-type: javascript-static-method
-tags:
-  - Collator
-  - Internationalization
-  - Intl
-  - JavaScript
-  - Localization
-  - Method
-  - Reference
 browser-compat: javascript.builtins.Intl.Collator.supportedLocalesOf
 ---
 
 {{JSRef}}
 
-The **`Intl.Collator.supportedLocalesOf()`** method returns an
+The **`Intl.Collator.supportedLocalesOf()`** static method returns an
 array containing those of the provided locales that are supported in collation without
 having to fall back to the runtime's default locale.
 

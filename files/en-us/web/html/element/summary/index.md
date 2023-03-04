@@ -1,16 +1,7 @@
 ---
 title: '<summary>: The Disclosure Summary element'
 slug: Web/HTML/Element/summary
-tags:
-  - Disclosure Box
-  - Disclosure Control
-  - Disclosure Summary
-  - Element
-  - HTML
-  - HTML interactive elements
-  - Reference
-  - Summary
-  - Web
+page-type: html-element
 browser-compat: html.elements.summary
 ---
 
@@ -103,18 +94,18 @@ This example adds some semantics to the `<summary>` element to indicate the labe
 
 {{EmbedLiveSample("HTML_in_summaries", 650, 120)}}
 
-## Technical Summary
+## Technical summary
 
 <table class="properties">
   <tbody>
     <tr>
       <th scope="row">Permitted content</th>
       <td>
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content"
           >Phrasing content</a
         >
         or one element of
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#heading_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#heading_content"
           >Heading content</a
         >
       </td>

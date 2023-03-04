@@ -1,20 +1,7 @@
 ---
 title: <input type="month">
 slug: Web/HTML/Element/input/month
-tags:
-  - Date picker
-  - Element
-  - Form input
-  - Forms
-  - HTML
-  - HTML forms
-  - HTML input
-  - Input
-  - Input Element
-  - Input Type
-  - Number
-  - Reference
-  - month
+page-type: html-element
 browser-compat: html.elements.input.type_month
 ---
 
@@ -40,7 +27,7 @@ The Microsoft Edge `month` control looks like this:
 ## Value
 
 A string representing the value of the month and year entered into the input, in the form YYYY-MM (four or more digit year, then a hyphen ("`-`"), followed by the two-digit month).
-The format of the month string used by this input type is described in {{SectionOnPage("/en-US/docs/Web/HTML/Date_and_time_formats", "Format of a valid local month string")}}.
+The format of the month string used by this input type is described in [Month strings](/en-US/docs/Web/HTML/Date_and_time_formats#month_strings).
 
 ### Setting a default value
 
@@ -87,15 +74,15 @@ The values provided are suggestions, not requirements: users can select from thi
 ### max
 
 The latest year and month, in the string format discussed in the [Value](#value) section above, to accept.
-If the {{htmlattrxref("value", "input")}} entered into the element exceeds this, the element fails [constraint validation](/en-US/docs/Web/Guide/HTML/Constraint_validation).
+If the {{htmlattrxref("value", "input")}} entered into the element exceeds this, the element fails [constraint validation](/en-US/docs/Web/HTML/Constraint_validation).
 If the value of the `max` attribute isn't a valid string in "`yyyy-MM`" format, then the element has no maximum value.
 
 This value must specify a year-month pairing later than or equal to the one specified by the `min` attribute.
 
 ### min
 
-The latest year and month to accept, in the same "`yyyy-MM`" format described above.
-If the {{htmlattrxref("value", "input")}} of the element is less than this, the element fails [constraint validation](/en-US/docs/Web/Guide/HTML/Constraint_validation).
+The earliest year and month to accept, in the same "`yyyy-MM`" format described above.
+If the {{htmlattrxref("value", "input")}} of the element is less than this, the element fails [constraint validation](/en-US/docs/Web/HTML/Constraint_validation).
 If a value is specified for `min` that isn't a valid year and month string, the input has no minimum value.
 
 This value must be a year-month pairing which is earlier than or equal to the one specified by the `max` attribute.
@@ -510,6 +497,10 @@ function populateYears() {
         {{domxref("HTMLInputElement.stepDown", "stepDown()")}},
         {{domxref("HTMLInputElement.stepUp", "stepUp()")}}.
       </td>
+    </tr>
+    <tr>
+      <td><strong>Implicit ARIA Role</strong></td>
+      <td><a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"><code>no corresponding role</code></a></td>
     </tr>
   </tbody>
 </table>

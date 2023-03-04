@@ -2,13 +2,9 @@
 title: 'Window: vrdisplayconnect event'
 slug: Web/API/Window/vrdisplayconnect_event
 page-type: web-api-event
-tags:
-  - Event
-  - Reference
-  - WebVR
-  - Deprecated
-  - vrdisplayconnect
-  - Non-standard
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.Window.vrdisplayconnect_event
 ---
 

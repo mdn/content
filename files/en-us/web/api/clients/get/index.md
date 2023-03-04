@@ -2,13 +2,6 @@
 title: Clients.get()
 slug: Web/API/Clients/get
 page-type: web-api-instance-method
-tags:
-  - API
-  - Clients
-  - Method
-  - Reference
-  - Service Workers
-  - get
 browser-compat: api.Clients.get
 ---
 

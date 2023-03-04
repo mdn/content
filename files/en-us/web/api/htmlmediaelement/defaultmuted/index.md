@@ -2,12 +2,6 @@
 title: HTMLMediaElement.defaultMuted
 slug: Web/API/HTMLMediaElement/defaultMuted
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTML DOM
-  - HTMLMediaElement
-  - Property
-  - Web
 browser-compat: api.HTMLMediaElement.defaultMuted
 ---
 
@@ -22,7 +16,7 @@ A boolean value. A value of `true` means that the audio output will be muted by 
 ## Examples
 
 ```js
-const videoEle = document.createElement('video');
+const videoEle = document.createElement("video");
 videoEle.defaultMuted = true;
 console.log(videoEle.outerHTML); // <video muted=""></video>
 ```

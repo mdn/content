@@ -2,12 +2,6 @@
 title: location.toString()
 slug: Web/API/Location/toString
 page-type: web-api-instance-method
-tags:
-  - API
-  - Location
-  - Method
-  - Reference
-  - Stringifier
 browser-compat: api.Location.toString
 ---
 

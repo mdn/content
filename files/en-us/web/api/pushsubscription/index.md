@@ -2,14 +2,6 @@
 title: PushSubscription
 slug: Web/API/PushSubscription
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Push
-  - Push API
-  - PushSubscription
-  - Reference
-  - Service Workers
 browser-compat: api.PushSubscription
 ---
 
@@ -44,12 +36,15 @@ An instance of this interface can be serialized.
 ```js
 navigator.serviceWorker.ready.then((reg) => {
   reg.pushManager.getSubscription().then((subscription) => {
-    subscription.unsubscribe().then((successful) => {
-      // You've successfully unsubscribed
-    }).catch((e) => {
-      // Unsubscribing failed
-    })
-  })
+    subscription
+      .unsubscribe()
+      .then((successful) => {
+        // You've successfully unsubscribed
+      })
+      .catch((e) => {
+        // Unsubscribing failed
+      });
+  });
 });
 ```
 

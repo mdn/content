@@ -1,15 +1,9 @@
 ---
 title: Width
 slug: Web/HTTP/Headers/Width
-tags:
-  - Width
-  - Client hints
-  - Device Memory API
-  - HTTP
-  - HTTP Header
-  - Request header
-  - Deprecated
-  - Non-standard
+status:
+  - deprecated
+  - non-standard
 browser-compat: http.headers.Width
 ---
 

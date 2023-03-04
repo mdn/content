@@ -2,14 +2,8 @@
 title: Report.url
 slug: Web/API/Report/url
 page-type: web-api-instance-property
-tags:
-  - API
-  - Experimental
-  - Property
-  - Reference
-  - Report
-  - Reporting API
-  - URL
+status:
+  - experimental
 browser-compat: api.Report.url
 ---
 
@@ -26,9 +20,9 @@ A string representing the URL of the document that generated the report.
 
 ```js
 const options = {
-  types: ['deprecation'],
-  buffered: true
-}
+  types: ["deprecation"],
+  buffered: true,
+};
 
 const observer = new ReportingObserver(([firstReport], observer) => {
   // Log the URL of the document that generated the first report

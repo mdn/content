@@ -2,18 +2,12 @@
 title: Promise.resolve()
 slug: Web/JavaScript/Reference/Global_Objects/Promise/resolve
 page-type: javascript-static-method
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Promise
-  - Reference
 browser-compat: javascript.builtins.Promise.resolve
 ---
 
 {{JSRef}}
 
-The **`Promise.resolve()`** method "resolves" a given value to a {{jsxref("Promise")}}. If the value is a promise, that promise is returned; if the value is a [thenable](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise#thenables), `Promise.resolve()` will call the `then()` method with two callbacks it prepared; otherwise the returned promise will be fulfilled with the value.
+The **`Promise.resolve()`** static method "resolves" a given value to a {{jsxref("Promise")}}. If the value is a promise, that promise is returned; if the value is a [thenable](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise#thenables), `Promise.resolve()` will call the `then()` method with two callbacks it prepared; otherwise the returned promise will be fulfilled with the value.
 
 This function flattens nested layers of promise-like objects (e.g. a promise that fulfills to a promise that fulfills to something) into a single layer — a promise that fulfills to a non-thenable value.
 
@@ -45,7 +39,7 @@ A {{jsxref("Promise")}} that is resolved with the given value, or the promise pa
 The bulk of the resolving logic is actually implemented by the [resolver function](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/Promise#resolver_function) passed by the `Promise()` constructor. In summary:
 
 - If a non-[thenable](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise#thenables) value is passed, the returned promise is already fulfilled with that value.
-- If a thenable is passed, the returned promise will adopt the state of that thenable by calling the `then` method and passing a pair of resolving functions as arguments. (But because native promises directly pass through `Promise.resolve()` without creating a wrapper, the `then` method is not called on native promises.) If the resolver function receives another thenable object, it will be resolved agin, so that the eventual fulfillment value of the promise will never be thenable.
+- If a thenable is passed, the returned promise will adopt the state of that thenable by calling the `then` method and passing a pair of resolving functions as arguments. (But because native promises directly pass through `Promise.resolve()` without creating a wrapper, the `then` method is not called on native promises.) If the resolver function receives another thenable object, it will be resolved again, so that the eventual fulfillment value of the promise will never be thenable.
 
 ## Examples
 

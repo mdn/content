@@ -2,13 +2,8 @@
 title: VideoEncoder.configure()
 slug: Web/API/VideoEncoder/configure
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - configure
-  - VideoEncoder
-  - Experimental
+status:
+  - experimental
 browser-compat: api.VideoEncoder.configure
 ---
 
@@ -82,11 +77,11 @@ const init = {
   output: handleChunk,
   error: (e) => {
     console.log(e.message);
-  }
+  },
 };
 
 let config = {
-  codec: 'vp8',
+  codec: "vp8",
   width: 640,
   height: 480,
   bitrate: 2_000_000, // 2 Mbps

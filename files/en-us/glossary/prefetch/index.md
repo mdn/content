@@ -1,10 +1,7 @@
 ---
 title: Prefetch
 slug: Glossary/Prefetch
-tags:
-  - Prefetch
-  - Reference
-  - Web Performance
+page-type: glossary-definition
 ---
 
 Prefetching is when content is downloaded in the background, this is based on the assumption that the content will likely be requested, enabling the content to load instantly if and when the user requests it. The content is downloaded and cached for anticipated future use without the user making an explicit request for it.
@@ -42,6 +39,6 @@ Browsers will prefetch content when the prefetch [`<link>`](/en-US/docs/Web/HTML
 
 - defer
 - async
-- [preload](/en-US/docs/Web/HTML/Link_types/preload)
+- [preload](/en-US/docs/Web/HTML/Attributes/rel/preload)
 - [page prediction](/en-US/docs/Glossary/Page_prediction)
 - [lazy loading](/en-US/docs/Web/Performance/Lazy_loading)

@@ -2,13 +2,6 @@
 title: LockManager.query()
 slug: Web/API/LockManager/query
 page-type: web-api-instance-method
-tags:
-  - API
-  - LockManager
-  - Method
-  - Reference
-  - Web Locks API
-  - query()
 browser-compat: api.LockManager.query
 ---
 

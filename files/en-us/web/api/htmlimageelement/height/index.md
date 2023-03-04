@@ -2,17 +2,6 @@
 title: HTMLImageElement.height
 slug: Web/API/HTMLImageElement/height
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTML
-  - HTML DOM
-  - HTMLImageElement
-  - Image
-  - Property
-  - Reference
-  - dimensions
-  - height
-  - size
 browser-compat: api.HTMLImageElement.height
 ---
 
@@ -68,7 +57,9 @@ image given the width at which it's currently drawn.
 const clockImage = document.querySelector("img");
 let output = document.querySelector(".size");
 
-const updateHeight = (event) => { output.innerText = clockImage.height; };
+const updateHeight = (event) => {
+  output.innerText = clockImage.height;
+};
 
 window.addEventListener("load", updateHeight);
 window.addEventListener("resize", updateHeight);

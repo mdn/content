@@ -1,20 +1,7 @@
 ---
 title: <input type="week">
 slug: Web/HTML/Element/input/week
-tags:
-  - Element
-  - Forms
-  - HTML
-  - HTML Input Types
-  - HTML forms
-  - HTML input
-  - Input
-  - Input Element
-  - Input Type
-  - Input Types
-  - Reference
-  - Week
-  - Weeks
+page-type: html-element
 browser-compat: html.elements.input.type_week
 ---
 
@@ -36,7 +23,7 @@ The Edge `week` control is somewhat more elaborate, opening up week and year pic
 
 ## Value
 
-A string representing the value of the week/year entered into the input. The format of the date and time value used by this input type is described in {{SectionOnPage("/en-US/docs/Web/HTML/Date_and_time_formats", "Format of a valid week string")}}.
+A string representing the value of the week/year entered into the input. The format of the date and time value used by this input type is described in [Week strings](/en-US/docs/Web/HTML/Date_and_time_formats#week_strings).
 
 You can set a default value for the input by including a value inside the {{htmlattrxref("value", "input")}} attribute, like so:
 
@@ -62,13 +49,13 @@ In addition to the attributes common to {{HTMLElement("input")}} elements, week 
 
 ### max
 
-The latest (time-wise) year and week number, in the string format discussed in the [Value](#value) section above, to accept. If the {{htmlattrxref("value", "input")}} entered into the element exceeds this, the element fails [constraint validation](/en-US/docs/Web/Guide/HTML/Constraint_validation). If the value of the `max` attribute isn't a valid week string, then the element has no maximum value.
+The latest (time-wise) year and week number, in the string format discussed in the [Value](#value) section above, to accept. If the {{htmlattrxref("value", "input")}} entered into the element exceeds this, the element fails [constraint validation](/en-US/docs/Web/HTML/Constraint_validation). If the value of the `max` attribute isn't a valid week string, then the element has no maximum value.
 
 This value must be greater than or equal to the year and week specified by the `min` attribute.
 
 ### min
 
-The earliest year and week to accept. If the {{htmlattrxref("value", "input")}} of the element is less than this, the element fails [constraint validation](/en-US/docs/Web/Guide/HTML/Constraint_validation). If a value is specified for `min` that isn't a valid week string, the input has no minimum value.
+The earliest year and week to accept. If the {{htmlattrxref("value", "input")}} of the element is less than this, the element fails [constraint validation](/en-US/docs/Web/HTML/Constraint_validation). If a value is specified for `min` that isn't a valid week string, the input has no minimum value.
 
 This value must be less than or equal to the value of the `max` attribute.
 
@@ -381,6 +368,10 @@ function populateWeeks() {
         {{domxref("HTMLInputElement.stepDown", "stepDown()")}},
         and {{domxref("HTMLInputElement.stepUp", "stepUp()")}}
       </td>
+    </tr>
+    <tr>
+      <td><strong>Implicit ARIA Role</strong></td>
+      <td><a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"><code>no corresponding role</code></a></td>
     </tr>
   </tbody>
 </table>

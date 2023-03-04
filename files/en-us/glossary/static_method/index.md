@@ -1,12 +1,7 @@
 ---
 title: Static method
 slug: Glossary/Static_method
-tags:
-  - CodingScripting
-  - JavaScript
-  - Method
-  - Static
-  - Static Method
+page-type: glossary-definition
 ---
 
 A static method (or _static function_) is a {{Glossary("method")}} defined as a member of an {{Glossary("object")}} but is accessible directly from an API object's constructor, rather than from an object instance created via the constructor.

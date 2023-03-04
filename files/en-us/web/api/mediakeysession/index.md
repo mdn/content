@@ -2,16 +2,6 @@
 title: MediaKeySession
 slug: Web/API/MediaKeySession
 page-type: web-api-interface
-tags:
-  - API
-  - Audio
-  - EncryptedMediaExtensions
-  - Interface
-  - Media
-  - MediaKeySession
-  - NeedsExample
-  - Reference
-  - Video
 browser-compat: api.MediaKeySession
 ---
 

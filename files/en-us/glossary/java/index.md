@@ -1,10 +1,7 @@
 ---
 title: Java
 slug: Glossary/Java
-tags:
-  - CodingScripting
-  - Java
-  - Programming Language
+page-type: glossary-definition
 ---
 
 Java is a {{glossary("Compile", "compiled")}}, {{glossary("OOP", "object-oriented")}}, highly portable {{Glossary("computer programming", "programming")}} language.

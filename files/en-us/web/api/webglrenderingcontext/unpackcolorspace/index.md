@@ -2,13 +2,8 @@
 title: WebGLRenderingContext.unpackColorSpace
 slug: Web/API/WebGLRenderingContext/unpackColorSpace
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - WebGL
-  - WebGLRenderingContext
-  - Experimental
+status:
+  - experimental
 browser-compat: api.WebGLRenderingContext.unpackColorSpace
 ---
 

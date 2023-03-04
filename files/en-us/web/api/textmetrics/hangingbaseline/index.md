@@ -2,12 +2,8 @@
 title: TextMetrics.hangingBaseline
 slug: Web/API/TextMetrics/hangingBaseline
 page-type: web-api-instance-property
-tags:
-  - API
-  - Experimental
-  - Property
-  - Reference
-  - TextMetrics
+status:
+  - experimental
 browser-compat: api.TextMetrics.hangingBaseline
 ---
 
@@ -18,9 +14,9 @@ The read-only `hangingBaseline` property of the {{domxref("TextMetrics")}} inter
 ## Examples
 
 ```js
-const canvas = document.createElement('canvas');
-const ctx = canvas.getContext('2d');
-const text = ctx.measureText('foo'); // returns TextMetrics object
+const canvas = document.createElement("canvas");
+const ctx = canvas.getContext("2d");
+const text = ctx.measureText("foo"); // returns TextMetrics object
 
 text.hangingBaseline; // 6.078125;
 ```

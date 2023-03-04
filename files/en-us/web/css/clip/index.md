@@ -2,19 +2,18 @@
 title: clip
 slug: Web/CSS/clip
 page-type: css-property
-tags:
-  - CSS
-  - CSS Masking
-  - CSS Property
-  - Deprecated
-  - Reference
-  - recipe:css-property
+status:
+  - deprecated
 browser-compat: css.properties.clip
 ---
 
 {{CSSRef}}{{Deprecated_Header}}
 
+> **Warning:** Where possible, authors are encouraged to use the newer {{cssxref("clip-path")}} property instead.
+
 The **`clip`** [CSS](/en-US/docs/Web/CSS) property defines a visible portion of an element. The `clip` property applies only to absolutely positioned elements — that is, elements with {{cssxref("position","position:absolute")}} or {{cssxref("position","position:fixed")}}.
+
+## Syntax
 
 ```css
 /* Keyword value */
@@ -30,10 +29,6 @@ clip: revert;
 clip: revert-layer;
 clip: unset;
 ```
-
-## Syntax
-
-> **Note:** Where possible, authors are encouraged to use the newer {{cssxref("clip-path")}} property instead.
 
 ### Values
 
@@ -58,14 +53,28 @@ clip: unset;
 
 ### Clipping an image
 
+#### HTML
+
+```html
+<p class="dotted-border">
+  <img src="macarons.png" alt="Original graphic" />
+  <img id="top-left" src="macarons.png" alt="Graphic clipped to upper left" />
+  <img id="middle" src="macarons.png" alt="Graphic clipped towards middle" />
+  <img
+    id="bottom-right"
+    src="macarons.png"
+    alt="Graphic clipped to bottom right" />
+</p>
+```
+
 #### CSS
 
 ```css
 .dotted-border {
   border: dotted;
   position: relative;
-  width: 536px;
-  height: 350px;
+  width: 390px;
+  height: 400px;
 }
 
 #top-left,
@@ -76,46 +85,24 @@ clip: unset;
 }
 
 #top-left {
-  left: 360px;
-  clip: rect(0, 175px, 113px, 0);
+  left: 400px;
+  clip: rect(0, 130px, 90px, 0);
 }
 
 #middle {
-  left: 280px;
-  clip: rect(119px, 255px, 229px, 80px);
+  left: 270px;
+  clip: rect(100px, 260px, 190px, 130px);
 }
 
 #bottom-right {
-  left: 200px;
-  clip: rect(235px, 335px, 345px, 160px);
+  left: 140px;
+  clip: rect(200px, 390px, 290px, 260px);
 }
-```
-
-#### HTML
-
-```html
-<p class="dotted-border">
-  <img
-    src="https://developer.mozilla.org/@api/deki/files/3613/=hut.jpg"
-    title="Original graphic" />
-  <img
-    id="top-left"
-    src="https://developer.mozilla.org/@api/deki/files/3613/=hut.jpg"
-    title="Graphic clipped to upper left" />
-  <img
-    id="middle"
-    src="https://developer.mozilla.org/@api/deki/files/3613/=hut.jpg"
-    title="Graphic clipped towards middle" />
-  <img
-    id="bottom-right"
-    src="https://developer.mozilla.org/@api/deki/files/3613/=hut.jpg"
-    title="Graphic clipped to bottom right" />
-</p>
 ```
 
 #### Result
 
-{{EmbedLiveSample('Clipping_an_image', '689px', '410px')}}
+{{EmbedLiveSample('', '', '450px')}}
 
 ## Specifications
 
@@ -128,4 +115,11 @@ clip: unset;
 ## See also
 
 - This property is deprecated. Use {{cssxref("clip-path")}} instead.
-- Related CSS properties: {{cssxref("text-overflow")}}, {{cssxref("white-space")}}, {{cssxref("overflow-x")}}, {{cssxref("overflow-y")}}, {{cssxref("overflow")}}, {{cssxref("display")}}, {{cssxref("position")}}
+- Related CSS properties:
+  - {{cssxref("text-overflow")}}
+  - {{cssxref("white-space")}}
+  - {{cssxref("overflow-x")}}
+  - {{cssxref("overflow-y")}}
+  - {{cssxref("overflow")}}
+  - {{cssxref("display")}}
+  - {{cssxref("position")}}

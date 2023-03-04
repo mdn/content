@@ -2,13 +2,8 @@
 title: VideoDecoder.configure()
 slug: Web/API/VideoDecoder/configure
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - configure
-  - VideoDecoder
-  - Experimental
+status:
+  - experimental
 browser-compat: api.VideoDecoder.configure
 ---
 
@@ -88,13 +83,13 @@ const init = {
   output: handleFrame,
   error: (e) => {
     console.log(e.message);
-  }
+  },
 };
 
 const config = {
-  codec: 'vp8',
+  codec: "vp8",
   codedWidth: 640,
-  codedHeight: 480
+  codedHeight: 480,
 };
 
 let decoder = new VideoDecoder(init);

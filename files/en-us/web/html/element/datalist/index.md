@@ -1,12 +1,7 @@
 ---
 title: '<datalist>: The HTML Data List element'
 slug: Web/HTML/Element/datalist
-tags:
-  - Element
-  - HTML
-  - HTML forms
-  - Reference
-  - Web
+page-type: html-element
 browser-compat: html.elements.datalist
 ---
 
@@ -38,7 +33,6 @@ Typically the right side of a control will also have an arrow pointing to the pr
 <datalist id="browsers">
   <option value="Chrome"></option>
   <option value="Firefox"></option>
-  <option value="Internet Explorer"></option>
   <option value="Opera"></option>
   <option value="Safari"></option>
   <option value="Microsoft Edge"></option>
@@ -113,21 +107,21 @@ The specification allows linking `<datalist>` with a {{HTMLElement("input/passwo
 
 {{EmbedLiveSample("Password_type", 600, 40)}}
 
-## Technical Summary
+## Technical summary
 
 <table class="properties">
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories"
+        <a href="/en-US/docs/Web/HTML/Content_categories"
           >Content categories</a
         >
       </th>
       <td>
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
           >Flow content</a
         >,
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content"
           >phrasing content</a
         >.
       </td>
@@ -136,7 +130,7 @@ The specification allows linking `<datalist>` with a {{HTMLElement("input/passwo
       <th scope="row">Permitted content</th>
       <td>
         Either
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content"
           >phrasing content</a
         >
         or zero or more {{HTMLElement("option")}} elements.
@@ -150,7 +144,7 @@ The specification allows linking `<datalist>` with a {{HTMLElement("input/passwo
       <th scope="row">Permitted parents</th>
       <td>
         Any element that accepts
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content"
           >phrasing content</a
         >.
       </td>

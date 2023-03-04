@@ -2,19 +2,6 @@
 title: HTMLImageElement.src
 slug: Web/API/HTMLImageElement/src
 page-type: web-api-instance-property
-tags:
-  - 1x
-  - API
-  - HTML
-  - HTML DOM
-  - HTMLImageElement
-  - Image
-  - Reference
-  - URL
-  - fallback
-  - source
-  - src
-  - Property
 browser-compat: api.HTMLImageElement.src
 ---
 

@@ -2,13 +2,6 @@
 title: HTMLOptGroupElement
 slug: Web/API/HTMLOptGroupElement
 page-type: web-api-interface
-tags:
-  - API
-  - Forms
-  - HTML DOM
-  - Interface
-  - NeedsBrowserCompatibility
-  - Reference
 browser-compat: api.HTMLOptGroupElement
 ---
 

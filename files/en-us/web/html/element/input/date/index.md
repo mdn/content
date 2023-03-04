@@ -1,17 +1,7 @@
 ---
 title: <input type="date">
 slug: Web/HTML/Element/input/date
-tags:
-  - Date
-  - Date picker
-  - Element
-  - Form Inputs
-  - HTML
-  - HTML forms
-  - Input
-  - Input Element
-  - Input Type
-  - Reference
+page-type: html-element
 browser-compat: html.elements.input.type_date
 ---
 
@@ -56,13 +46,13 @@ The attributes common to all {{HTMLElement("input")}} elements apply to the `dat
 
 ### max
 
-The latest date to accept. If the {{htmlattrxref("value", "input")}} entered into the element occurs afterward, the element fails [constraint validation](/en-US/docs/Web/Guide/HTML/Constraint_validation). If the value of the `max` attribute isn't a possible date string in the format `yyyy-mm-dd`, then the element has no maximum date value.
+The latest date to accept. If the {{htmlattrxref("value", "input")}} entered into the element occurs afterward, the element fails [constraint validation](/en-US/docs/Web/HTML/Constraint_validation). If the value of the `max` attribute isn't a possible date string in the format `yyyy-mm-dd`, then the element has no maximum date value.
 
 If both the `max` and `min` attributes are set, this value must be a date string **later than or equal to** the one in the `min` attribute.
 
 ### min
 
-The earliest date to accept. If the {{htmlattrxref("value", "input")}} entered into the element occurs beforehand, the element fails [constraint validation](/en-US/docs/Web/Guide/HTML/Constraint_validation). If the value of the `min` attribute isn't a possible date string in the format `yyyy-mm-dd`, then the element has no minimum date value.
+The earliest date to accept. If the {{htmlattrxref("value", "input")}} entered into the element occurs beforehand, the element fails [constraint validation](/en-US/docs/Web/HTML/Constraint_validation). If the value of the `min` attribute isn't a possible date string in the format `yyyy-mm-dd`, then the element has no minimum date value.
 
 If both the `max` and `min` attributes are set, this value must be a date string **earlier than or equal to** the one in the `max` attribute.
 
@@ -474,6 +464,10 @@ daySelect.onchange = () => {
         {{domxref("HTMLInputElement.stepDown", "stepDown()")}},
         {{domxref("HTMLInputElement.stepUp", "stepUp()")}}
       </td>
+    </tr>
+    <tr>
+      <td><strong>Implicit ARIA Role</strong></td>
+      <td><a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"><code>no corresponding role</code></a></td>
     </tr>
   </tbody>
 </table>

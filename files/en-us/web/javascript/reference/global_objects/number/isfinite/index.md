@@ -2,18 +2,12 @@
 title: Number.isFinite()
 slug: Web/JavaScript/Reference/Global_Objects/Number/isFinite
 page-type: javascript-static-method
-tags:
-  - JavaScript
-  - Method
-  - Number
-  - Reference
-  - Polyfill
 browser-compat: javascript.builtins.Number.isFinite
 ---
 
 {{JSRef}}
 
-The **`Number.isFinite()`** method determines whether the passed value is a finite number — that is, it checks that a given value is a number, and the number is neither positive {{jsxref("Infinity")}}, negative `Infinity`, nor {{jsxref("NaN")}}.
+The **`Number.isFinite()`** static method determines whether the passed value is a finite number — that is, it checks that a given value is a number, and the number is neither positive {{jsxref("Infinity")}}, negative `Infinity`, nor {{jsxref("NaN")}}.
 
 {{EmbedInteractiveExample("pages/js/number-isfinite.html")}}
 

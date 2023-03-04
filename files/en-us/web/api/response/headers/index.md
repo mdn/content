@@ -2,13 +2,6 @@
 title: Response.headers
 slug: Web/API/Response/headers
 page-type: web-api-instance-property
-tags:
-  - API
-  - Fetch
-  - Headers
-  - Property
-  - Reference
-  - Response
 browser-compat: api.Response.headers
 ---
 
@@ -32,9 +25,9 @@ create an object URL out of it using {{domxref("URL.createObjectURL")}}, and dis
 Note that at the top of the `fetch()` block, we log the response headers to the console.
 
 ```js
-const myImage = document.querySelector('img');
+const myImage = document.querySelector("img");
 
-const myRequest = new Request('flowers.jpg');
+const myRequest = new Request("flowers.jpg");
 
 fetch(myRequest).then((response) => {
   // for each response header, log an array with header name as key

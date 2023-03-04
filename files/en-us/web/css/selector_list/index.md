@@ -2,11 +2,6 @@
 title: Selector list
 slug: Web/CSS/Selector_list
 page-type: css-combinator
-tags:
-  - CSS
-  - Selector
-  - Selector Lists
-  - Selectors
 browser-compat: css.selectors.list
 ---
 
@@ -51,7 +46,12 @@ When applying the same styles to elements matching different criteria, grouping 
 This example shows grouping selectors in a single line using a comma-separated list.
 
 ```css
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: helvetica;
 }
 ```
@@ -92,7 +92,9 @@ h3 {
 ```
 
 ```css
-h1, h2:invalid-pseudo, h3 {
+h1,
+h2:invalid-pseudo,
+h3 {
   font-family: sans-serif;
 }
 ```
@@ -130,12 +132,12 @@ The difference between the two is that the specificity of `:is()` is its most sp
 A relative selector list is a comma-separated selector list parsed as [relative selectors](/en-US/docs/Web/CSS/CSS_Selectors#relative_selector), which begin with an explicit or implied combinator.
 
 ```css
-h2:has(+ p, > ul::after, + ul.red) {
+h2:has(+ p, + ul.red) {
   font-style: italic;
 }
 ```
 
-In the above, an `h2` that is immediately followed by a `<p>` or a `<ul class="red">`, will be italic. Pseudo-elements and the `:has()` selector are not valid within a [`:has()`](/en-US/docs/Web/CSS/:has) relative selector list parameter.
+In the above example, the italic style will be applied to any `h2` heading that is immediately followed by `<p>` or `<ul class="red">`. Note that pseudo-elements and the `:has()` selector are not valid within the [`:has()`](/en-US/docs/Web/CSS/:has) relative selector list.
 
 ## Specifications
 

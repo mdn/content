@@ -2,12 +2,6 @@
 title: SharedArrayBuffer.prototype.byteLength
 slug: Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer/byteLength
 page-type: javascript-instance-accessor-property
-tags:
-  - JavaScript
-  - Property
-  - Shared Memory
-  - SharedArrayBuffer
-  - TypedArrays
 browser-compat: javascript.builtins.SharedArrayBuffer.byteLength
 ---
 

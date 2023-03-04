@@ -2,12 +2,6 @@
 title: flex-direction
 slug: Web/CSS/flex-direction
 page-type: css-property
-tags:
-  - CSS
-  - CSS Flexible Boxes
-  - CSS Property
-  - Reference
-  - recipe:css-property
 browser-compat: css.properties.flex-direction
 ---
 

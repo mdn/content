@@ -1,22 +1,13 @@
 ---
 title: '<dfn>: The Definition element'
 slug: Web/HTML/Element/dfn
-tags:
-  - Definition
-  - Definitions
-  - Element
-  - HTML
-  - HTML text-level semantics
-  - Reference
-  - Semantic Markup
-  - Web
-  - dfn
+page-type: html-element
 browser-compat: html.elements.dfn
 ---
 
 {{HTMLSidebar}}
 
-The **`<dfn>`** [HTML](/en-US/docs/Web/HTML) element is used to indicate the term being defined within the context of a definition phrase or sentence. The {{HTMLElement("p")}} element, the {{HTMLElement("dt")}}/{{HTMLElement("dd")}} pairing, or the {{HTMLElement("section")}} element which is the nearest ancestor of the `<dfn>` is considered to be the definition of the term.
+The **`<dfn>`** [HTML](/en-US/docs/Web/HTML) element is used to indicate the term being defined within the context of a definition phrase or sentence. The ancestor {{HTMLElement("p")}} element, the {{HTMLElement("dt")}}/{{HTMLElement("dd")}} pairing, or the nearest {{HTMLElement("section")}} ancestor of the `<dfn>` element, is considered to be the definition of the term.
 
 {{EmbedInteractiveExample("pages/tabbed/dfn.html", "tabbed-shorter")}}
 
@@ -141,21 +132,21 @@ The output of the above code looks like this:
 
 {{EmbedLiveSample("Using_abbreviations_and_definitions_together", 650, 200)}}
 
-## Technical Summary
+## Technical summary
 
 <table class="properties">
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories"
+        <a href="/en-US/docs/Web/HTML/Content_categories"
           >Content categories</a
         >
       </th>
       <td>
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
           >Flow content</a
         >,
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content"
           >phrasing content</a
         >, palpable content.
       </td>
@@ -163,7 +154,7 @@ The output of the above code looks like this:
     <tr>
       <th scope="row">Permitted content</th>
       <td>
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content"
           >Phrasing content</a
         >, but no {{HTMLElement("dfn")}} element must be a descendant.
       </td>
@@ -176,14 +167,14 @@ The output of the above code looks like this:
       <th scope="row">Permitted parents</th>
       <td>
         Any element that accepts
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content"
           >phrasing content</a
         >.
       </td>
     </tr>
     <tr>
       <th scope="row">Implicit ARIA role</th>
-      <td>{{ARIARole("term")}}</td>
+      <td><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/term_role"><code>term</code></a></td>
     </tr>
     <tr>
       <th scope="row">Permitted ARIA roles</th>

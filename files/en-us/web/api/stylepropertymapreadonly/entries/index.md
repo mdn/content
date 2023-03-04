@@ -2,15 +2,8 @@
 title: StylePropertyMapReadOnly.entries()
 slug: Web/API/StylePropertyMapReadOnly/entries
 page-type: web-api-instance-method
-tags:
-  - API
-  - CSS Typed Object Model API
-  - Experimental
-  - Houdini
-  - Method
-  - Reference
-  - StylePropertyMapReadOnly
-  - entries()
+status:
+  - experimental
 browser-compat: api.StylePropertyMapReadOnly.entries
 ---
 
@@ -44,7 +37,7 @@ on an elements computed styles.
 
 ```js
 // grab a DOM element
-const buttonEl = document.querySelector('button');
+const buttonEl = document.querySelector("button");
 
 // we can retrieve all computed styles with `computedStyleMap`
 const allComputedStyles = buttonEl.computedStyleMap();

@@ -1,12 +1,9 @@
 ---
 title: <frameset>
 slug: Web/HTML/Element/frameset
-tags:
-  - Deprecated
-  - Element
-  - HTML
-  - Reference
-  - Web
+page-type: html-element
+status:
+  - deprecated
 browser-compat: html.elements.frameset
 ---
 
@@ -20,9 +17,9 @@ The **`<frameset>`** [HTML](/en-US/docs/Web/HTML) element is used to contain {{H
 
 Like all other HTML elements, this element supports the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 
-- {{htmlattrdef("cols")}} {{Deprecated_Inline}}
+- `cols` {{Deprecated_Inline}}
   - : This attribute specifies the number and size of horizontal spaces in a frameset.
-- {{htmlattrdef("rows")}} {{Deprecated_Inline}}
+- `rows` {{Deprecated_Inline}}
   - : This attribute specifies the number and size of vertical spaces in a frameset.
 
 ## Example

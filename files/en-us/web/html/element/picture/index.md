@@ -1,16 +1,7 @@
 ---
 title: '<picture>: The Picture element'
 slug: Web/HTML/Element/picture
-tags:
-  - Element
-  - Graphics
-  - HTML
-  - HTML embedded content
-  - Images
-  - Reference
-  - Web
-  - WebP
-  - picture
+page-type: html-element
 browser-compat: html.elements.picture
 ---
 
@@ -44,12 +35,12 @@ If providing higher-density versions of an image for high-DPI (Retina) display, 
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories"
+        <a href="/en-US/docs/Web/HTML/Content_categories"
           >Content categories</a
         >
       </th>
       <td>
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
           >Flow content</a
         >, phrasing content, embedded content
       </td>
@@ -118,7 +109,7 @@ If the {{HTMLElement("source")}}'s media condition evaluates to `false`, the bro
 
 ### The srcset attribute
 
-The [{{htmlattrdef("srcset")}}](/en-US/docs/Web/HTML/Element/source#attr-srcset) attribute is used to offer list of possible images _based on size_.
+The [srcset](/en-US/docs/Web/HTML/Element/source#srcset) attribute is used to offer list of possible images _based on size_.
 
 It is composed of a comma-separated list of image descriptors. Each image descriptor is composed of a URL of the image, and _either_:
 

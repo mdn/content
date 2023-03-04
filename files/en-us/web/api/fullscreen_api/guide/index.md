@@ -2,21 +2,9 @@
 title: Guide to the Fullscreen API
 slug: Web/API/Fullscreen_API/Guide
 page-type: guide
-tags:
-  - API
-  - Drawing
-  - Full
-  - Fullscreen API
-  - Games
-  - Graphics
-  - Guide
-  - display
-  - full screen
-  - fullscreen
-  - screen
 browser-compat:
-  - api.Document.fullscreen
   - api.Document.fullscreenEnabled
+  - api.Document.fullscreen
 ---
 
 {{DefaultAPISidebar("Fullscreen API")}}
@@ -83,6 +71,10 @@ The {{DOMxRef("Document")}} provides some additional information that can be use
 - {{DOMxRef("Document.fullscreenEnabled")}}
   - : The `fullscreenEnabled` property tells you whether or not the document is currently in a state that would allow fullscreen mode to be requested.
 
+### Viewport scaling in mobile browsers
+
+Some mobile browsers while in fullscreen mode ignore viewport meta-tag settings and block user scaling; for example: a "pinch to zoom" gesture may not work on a page presented in fullscreen mode — even if, when not in fullscreen mode, the page can be scaled using pinch to zoom.
+
 ## Things your users want to know
 
 You'll want to be sure to let your users know that they can press the <kbd>Esc</kbd> key (or <kbd>F11</kbd>) to exit fullscreen mode.
@@ -100,11 +92,15 @@ In this example, a video is presented in a web page. Pressing the <kbd>Return</k
 When the page is loaded, this code is run to set up an event listener to watch for the <kbd>Enter</kbd> key.
 
 ```js
-document.addEventListener("keydown", (e) => {
-  if (e.keyCode === 13) {
-    toggleFullScreen();
-  }
-}, false);
+document.addEventListener(
+  "keydown",
+  (e) => {
+    if (e.keyCode === 13) {
+      toggleFullScreen();
+    }
+  },
+  false
+);
 ```
 
 ### Toggling fullscreen mode

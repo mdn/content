@@ -2,9 +2,6 @@
 title: TreeWalker
 slug: Web/API/TreeWalker
 page-type: web-api-interface
-tags:
-  - API
-  - DOM
 browser-compat: api.TreeWalker
 ---
 
@@ -75,7 +72,10 @@ _This interface doesn't inherit any method._
     But if we do:
 
     ```js
-    let walker = document.createTreeWalker(document.body, NodeFilter.SHOW_ELEMENT);
+    let walker = document.createTreeWalker(
+      document.body,
+      NodeFilter.SHOW_ELEMENT
+    );
     let node = walker.firstChild(); // nodeName: "DIV"
     ```
 

@@ -2,12 +2,6 @@
 title: CSSCounterStyleRule.range
 slug: Web/API/CSSCounterStyleRule/range
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - range
-  - CSSCounterStyleRule
 browser-compat: api.CSSCounterStyleRule.range
 ---
 

@@ -1,13 +1,7 @@
 ---
 title: '<i>: The Idiomatic Text element'
 slug: Web/HTML/Element/i
-tags:
-  - Element
-  - HTML
-  - HTML text-level semantics
-  - Reference
-  - Web
-  - em
+page-type: html-element
 browser-compat: html.elements.i
 ---
 
@@ -47,31 +41,28 @@ This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_a
 This example demonstrates using the `<i>` element to mark text that is in another language.
 
 ```html
-<p>
-  The Latin phrase <i>Veni, vidi, vici</i> is often mentioned in music, art, and
-  literature.
-</p>
+<p>The Latin phrase <i lang="la">Veni, vidi, vici</i> is often mentioned in music, art, and literature.</p>
 ```
 
 ### Result
 
 {{EmbedLiveSample("Examples")}}
 
-## Technical Summary
+## Technical summary
 
 <table class="properties">
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories"
+        <a href="/en-US/docs/Web/HTML/Content_categories"
           >Content categories</a
         >
       </th>
       <td>
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
           >Flow content</a
         >,
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content"
           >phrasing content</a
         >, palpable content.
       </td>
@@ -79,7 +70,7 @@ This example demonstrates using the `<i>` element to mark text that is in anothe
     <tr>
       <th scope="row">Permitted content</th>
       <td>
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content"
           >Phrasing content</a
         >.
       </td>
@@ -92,7 +83,7 @@ This example demonstrates using the `<i>` element to mark text that is in anothe
       <th scope="row">Permitted parents</th>
       <td>
         Any element that accepts
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content"
           >phrasing content</a
         >.
       </td>

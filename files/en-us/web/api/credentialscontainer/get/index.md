@@ -2,14 +2,6 @@
 title: CredentialsContainer.get()
 slug: Web/API/CredentialsContainer/get
 page-type: web-api-instance-method
-tags:
-  - API
-  - Credential Management API
-  - CredentialsContainer
-  - Method
-  - NeedsExample
-  - Reference
-  - credential management
 browser-compat: api.CredentialsContainer.get
 ---
 
@@ -83,7 +75,7 @@ get(options)
     - `mediation`
       - : A {{jsxref("String")}} indicating whether the user will
         be required to log on for every visit to the website. Valid values are
-        `"silent"`, `"optional"`, or `"required"`.
+        `"silent"`, `"optional"`, `"conditional"`, or `"required"`.
     - `unmediated` {{deprecated_inline}}
       - : A boolean value
         indicating the returned {{domxref("Credential")}} instance should not require user

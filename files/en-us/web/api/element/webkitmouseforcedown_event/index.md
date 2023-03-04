@@ -1,25 +1,9 @@
 ---
-title: 'Element: webkitmouseforcedown event'
+title: "Element: webkitmouseforcedown event"
 slug: Web/API/Element/webkitmouseforcedown_event
 page-type: web-api-event
-tags:
-  - Element
-  - Event
-  - Force Touch
-  - MouseEvent
-  - NeedsCompatTable
-  - NeedsExample
-  - Reference
-  - Safari
-  - Trackpad
-  - UI
-  - Web
-  - WebKit
-  - apple
-  - mouse
-  - touch
-  - webkitmouseforcedown
-  - Non-standard
+status:
+  - non-standard
 browser-compat: api.Element.webkitmouseforcedown_event
 ---
 
@@ -34,9 +18,9 @@ After a {{domxref("Element.mousedown_event", "mousedown")}} event has been fired
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('webkitmouseforcedown', (event) => {});
+addEventListener("webkitmouseforcedown", (event) => {});
 
-onwebkitmouseforcedown = (event) => { };
+onwebkitmouseforcedown = (event) => {};
 ```
 
 ## Event type

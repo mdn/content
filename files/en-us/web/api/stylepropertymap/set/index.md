@@ -2,15 +2,8 @@
 title: StylePropertyMap.set()
 slug: Web/API/StylePropertyMap/set
 page-type: web-api-instance-method
-tags:
-  - API
-  - CSS Typed Object Model API
-  - Houdini
-  - Method
-  - Reference
-  - StylePropertyMap
-  - set()
-  - Experimental
+status:
+  - experimental
 browser-compat: api.StylePropertyMap.set
 ---
 
@@ -44,10 +37,10 @@ the element's [style attribute](/en-US/docs/Web/HTML/Global_attributes/style).
 
 ```js
 // get the button element
-const buttonEl = document.querySelector('button');
+const buttonEl = document.querySelector("button");
 
 // set padding-top on button style attribute
-buttonEl.attributeStyleMap.set('padding-top', CSS.px(10));
+buttonEl.attributeStyleMap.set("padding-top", CSS.px(10));
 ```
 
 ## Specifications

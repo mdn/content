@@ -1,12 +1,6 @@
 ---
 title: Subresource Integrity
 slug: Web/Security/Subresource_Integrity
-tags:
-  - HTML
-  - HTTP
-  - Intro
-  - Networking
-  - Security
 browser-compat:
   - html.elements.link.integrity
   - html.elements.script.integrity
@@ -127,8 +121,8 @@ Browsers handle SRI by doing the following:
 
 ## See also
 
-- Content Security Policy
-- {{httpheader("Content-Security-Policy")}}
+- [Content Security Policy](/en-US/docs/Web/HTTP/CSP)
+- The {{httpheader("Content-Security-Policy")}} HTTP header.
 - [A CDN that can not XSS you: Using Subresource Integrity](https://frederik-braun.com/using-subresource-integrity.html)
 - [Subresource Integrity test from W3C](https://w3c-test.org/subresource-integrity/subresource-integrity.html)
 - [SRI Hash Generator](https://www.srihash.org/)

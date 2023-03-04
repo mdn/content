@@ -2,16 +2,6 @@
 title: Gyroscope.y
 slug: Web/API/Gyroscope/y
 page-type: web-api-instance-property
-tags:
-  - API
-  - Generic Sensor API
-  - Gyroscope
-  - Property
-  - Reference
-  - Sensor
-  - Sensor APIs
-  - Sensors
-  - 'y'
 browser-compat: api.Gyroscope.y
 ---
 
@@ -29,9 +19,9 @@ The gyroscope is typically read in the {{domxref('Sensor.reading_event', 'readin
 In the example below this occurs sixty times a second.
 
 ```js
-let gyroscope = new Gyroscope({frequency: 60});
+let gyroscope = new Gyroscope({ frequency: 60 });
 
-gyroscope.addEventListener('reading', (e) => {
+gyroscope.addEventListener("reading", (e) => {
   console.log(`Angular velocity along the X-axis ${gyroscope.x}`);
   console.log(`Angular velocity along the Y-axis ${gyroscope.y}`);
   console.log(`Angular velocity along the Z-axis ${gyroscope.z}`);

@@ -2,18 +2,12 @@
 title: Math.sign()
 slug: Web/JavaScript/Reference/Global_Objects/Math/sign
 page-type: javascript-static-method
-tags:
-  - JavaScript
-  - Math
-  - Method
-  - Reference
-  - Polyfill
 browser-compat: javascript.builtins.Math.sign
 ---
 
 {{JSRef}}
 
-The **`Math.sign()`** function returns 1 or -1, indicating the sign of the number passed as argument. If the input is 0 or -0, it will be returned as-is.
+The **`Math.sign()`** static method returns 1 or -1, indicating the sign of the number passed as argument. If the input is 0 or -0, it will be returned as-is.
 
 {{EmbedInteractiveExample("pages/js/math-sign.html")}}
 
@@ -68,7 +62,6 @@ Math.sign(); // NaN
 ## See also
 
 - [Polyfill of `Math.sign` in `core-js`](https://github.com/zloirock/core-js#ecmascript-math)
-- [A polyfill](https://github.com/behnammodi/polyfill/blob/master/math.polyfill.js)
 - {{jsxref("Math.abs()")}}
 - {{jsxref("Math.ceil()")}}
 - {{jsxref("Math.floor()")}}

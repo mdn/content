@@ -2,14 +2,6 @@
 title: "HTMLFormElement: submit event"
 slug: Web/API/HTMLFormElement/submit_event
 page-type: web-api-event
-tags:
-  - API
-  - Event
-  - Forms
-  - HTML DOM
-  - HTMLFormElement
-  - Reference
-  - submit
 browser-compat: api.HTMLFormElement.submit_event
 ---
 
@@ -28,9 +20,9 @@ The `submit` event fires when the user clicks a submit button ({{HtmlElement("bu
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('submit', (event) => {});
+addEventListener("submit", (event) => {});
 
-onsubmit = (event) => { };
+onsubmit = (event) => {};
 ```
 
 ## Event type
@@ -65,13 +57,13 @@ This example uses {{domxref("EventTarget.addEventListener()")}} to listen for fo
 
 ```js
 function logSubmit(event) {
-  log.textContent = `Form Submitted! Time stamp: ${event.timeStamp}`;
+  log.textContent = `Form Submitted! Timestamp: ${event.timeStamp}`;
   event.preventDefault();
 }
 
-const form = document.getElementById('form');
-const log = document.getElementById('log');
-form.addEventListener('submit', logSubmit);
+const form = document.getElementById("form");
+const log = document.getElementById("log");
+form.addEventListener("submit", logSubmit);
 ```
 
 ### Result

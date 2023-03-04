@@ -1,14 +1,7 @@
 ---
 title: '<slot>: The Web Component Slot element'
 slug: Web/HTML/Element/slot
-tags:
-  - Element
-  - HTML
-  - HTML Web Components
-  - Reference
-  - Web Components
-  - shadow dom
-  - slot
+page-type: html-element
 browser-compat: html.elements.slot
 ---
 
@@ -20,7 +13,7 @@ The **`<slot>`** [HTML](/en-US/docs/Web/HTML) element—part of the [Web Compone
 
 This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 
-- {{htmlattrdef("name")}}
+- `name`
 
   - : The slot's name.
 
@@ -78,15 +71,15 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories"
+        <a href="/en-US/docs/Web/HTML/Content_categories"
           >Content categories</a
         >
       </th>
       <td>
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
           >Flow content</a
         >,
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content"
           >phrasing content</a
         >
       </td>
@@ -95,7 +88,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
       <th scope="row">Permitted content</th>
       <td>
         <a
-          href="/en-US/docs/Web/Guide/HTML/Content_categories#transparent_content_model"
+          href="/en-US/docs/Web/HTML/Content_categories#transparent_content_model"
           >Transparent</a
         >
       </td>
@@ -112,7 +105,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
       <th scope="row">Permitted parents</th>
       <td>
         Any element that accepts
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content"
           >phrasing content</a
         >
       </td>

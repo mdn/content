@@ -2,13 +2,8 @@
 title: Navigator.oscpu
 slug: Web/API/Navigator/oscpu
 page-type: web-api-instance-property
-tags:
-  - API
-  - Deprecated
-  - HTML DOM
-  - Navigator
-  - Property
-  - Reference
+status:
+  - deprecated
 browser-compat: api.Navigator.oscpu
 ---
 

@@ -2,13 +2,6 @@
 title: Animation.replaceState
 slug: Web/API/Animation/replaceState
 page-type: web-api-instance-property
-tags:
-  - API
-  - Animation
-  - Property
-  - Reference
-  - replaceState
-  - web animations api
 browser-compat: api.Animation.replaceState
 ---
 

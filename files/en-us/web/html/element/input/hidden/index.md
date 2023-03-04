@@ -1,15 +1,7 @@
 ---
 title: <input type="hidden">
 slug: Web/HTML/Element/input/hidden
-tags:
-  - Element
-  - Forms
-  - HTML
-  - HTML forms
-  - Input
-  - Input Types
-  - Reference
-  - hidden
+page-type: html-element
 browser-compat: html.elements.input.type_hidden
 ---
 
@@ -166,6 +158,10 @@ Even though the hidden input cannot be seen at all, its data is still submitted.
     <tr>
       <td><strong>Methods</strong></td>
       <td>None.</td>
+    </tr>
+    <tr>
+      <td><strong>Implicit ARIA Role</strong></td>
+      <td><a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"><code>no corresponding role</code></a></td>
     </tr>
   </tbody>
 </table>

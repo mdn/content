@@ -2,15 +2,8 @@
 title: HTMLTableElement.bgColor
 slug: Web/API/HTMLTableElement/bgColor
 page-type: web-api-instance-property
-tags:
-  - API
-  - Deprecated
-  - HTML DOM
-  - NeedsBrowserCompatibility
-  - NeedsMarkupWork
-  - NeedsSpecTable
-  - Property
-  - Reference
+status:
+  - deprecated
 browser-compat: api.HTMLTableElement.bgColor
 ---
 
@@ -34,8 +27,8 @@ A string representing a color value.
 
 ```js
 // Set table background color to lightblue
-const t = document.getElementById('TableA');
-t.bgColor = 'lightblue';
+const t = document.getElementById("TableA");
+t.bgColor = "lightblue";
 ```
 
 ## Specifications

@@ -2,11 +2,6 @@
 title: MutationRecord.oldValue
 slug: Web/API/MutationRecord/oldValue
 page-type: web-api-instance-property
-tags:
-  - oldValue
-  - MutationRecord
-  - Property
-  - Reference
 browser-compat: api.MutationRecord.oldValue
 ---
 

@@ -1,15 +1,6 @@
 ---
-title: 'CSP: connect-src'
+title: "CSP: connect-src"
 slug: Web/HTTP/Headers/Content-Security-Policy/connect-src
-tags:
-  - CSP
-  - Content-Security-Policy
-  - Directive
-  - HTTP
-  - Reference
-  - Security
-  - connect-src
-  - source
 browser-compat: http.headers.Content-Security-Policy.connect-src
 ---
 
@@ -90,7 +81,8 @@ The following connections are blocked and won't load:
     navigator.sendBeacon("https://not-example.com/", {
       /* … */
     });
-  </script></a>
+  </script></a
+>
 ```
 
 ## Specifications

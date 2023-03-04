@@ -2,12 +2,6 @@
 title: performance.now()
 slug: Web/API/Performance/now
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Performance
-  - Reference
-  - Web Performance API
 browser-compat: api.Performance.now
 ---
 
@@ -73,7 +67,7 @@ approximately equal to `Date.now()`.
 
 ## Reduced time precision
 
-To offer protection against timing attacks and fingerprinting, the precision of
+To offer protection against timing attacks and [fingerprinting](/en-US/docs/Glossary/Fingerprinting), the precision of
 `performance.now()` might get rounded depending on browser settings.
 In Firefox, the `privacy.reduceTimerPrecision` preference is enabled by
 default and defaults to 1ms.
@@ -103,7 +97,7 @@ Starting with Firefox 79, high resolution timers can be used if you cross-origin
 isolate your document using the {{HTTPHeader("Cross-Origin-Opener-Policy")}} and
 {{HTTPHeader("Cross-Origin-Embedder-Policy")}} headers:
 
-```plain
+```http
 Cross-Origin-Opener-Policy: same-origin
 Cross-Origin-Embedder-Policy: require-corp
 ```

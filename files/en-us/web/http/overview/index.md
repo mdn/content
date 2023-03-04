@@ -1,12 +1,6 @@
 ---
 title: An overview of HTTP
 slug: Web/HTTP/Overview
-tags:
-  - HTML
-  - HTTP
-  - Overview
-  - WebMechanics
-  - "l10n:priority"
 ---
 
 {{HTTPSidebar}}
@@ -83,7 +77,7 @@ Proxies may perform numerous functions:
 
 ### HTTP is simple
 
-HTTP is generally designed to be simple and human readable, even with the added complexity introduced in HTTP/2 by encapsulating HTTP messages into frames.
+HTTP is generally designed to be simple and human-readable, even with the added complexity introduced in HTTP/2 by encapsulating HTTP messages into frames.
 HTTP messages can be read and understood by humans, providing easier testing for developers, and reduced complexity for newcomers.
 
 ### HTTP is extensible

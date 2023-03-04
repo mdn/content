@@ -2,14 +2,6 @@
 title: AudioWorkletGlobalScope.registerProcessor()
 slug: Web/API/AudioWorkletGlobalScope/registerProcessor
 page-type: web-api-instance-method
-tags:
-  - API
-  - Audio
-  - AudioWorkletGlobalScope
-  - AudioWorkletProcessor
-  - Method
-  - Reference
-  - Web Audio API
 browser-compat: api.AudioWorkletGlobalScope.registerProcessor
 ---
 

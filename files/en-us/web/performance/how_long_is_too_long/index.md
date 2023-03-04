@@ -1,11 +1,6 @@
 ---
-title: 'Recommended Web Performance Timings: How long is too long?'
+title: "Recommended Web Performance Timings: How long is too long?"
 slug: Web/Performance/How_long_is_too_long
-tags:
-  - Performance
-  - Reference
-  - Tutorial
-  - Web Performance
 ---
 
 {{QuickLinksWithSubPages("Web/Performance")}}

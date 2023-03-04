@@ -2,15 +2,8 @@
 title: StylePropertyMapReadOnly.has()
 slug: Web/API/StylePropertyMapReadOnly/has
 page-type: web-api-instance-method
-tags:
-  - API
-  - CSS Typed Object Model API
-  - Experimental
-  - Houdini
-  - Method
-  - Reference
-  - StylePropertyMapReadOnly
-  - has()
+status:
+  - experimental
 browser-compat: api.StylePropertyMapReadOnly.has
 ---
 
@@ -42,10 +35,10 @@ within the button elements style attribute.
 
 ```js
 // get the button element
-const buttonEl = document.querySelector('.example');
+const buttonEl = document.querySelector(".example");
 
 // find what's in the style attribute with attributeStyleMap and has()
-const hasPadTop = buttonEl.attributeStyleMap.has('padding-top');
+const hasPadTop = buttonEl.attributeStyleMap.has("padding-top");
 
 console.log(hasPadTop); // logs true if padding-top is present in style attribute
 ```

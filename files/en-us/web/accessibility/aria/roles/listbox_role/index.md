@@ -1,14 +1,6 @@
 ---
 title: "ARIA: listbox role"
 slug: Web/Accessibility/ARIA/Roles/listbox_role
-tags:
-  - ARIA
-  - ARIA role
-  - Accessibility
-  - Reference
-  - listbox role
-  - composite widget role
-  - NeedsContent
 spec-urls:
   - https://w3c.github.io/aria/#listbox
   - https://w3c.github.io/aria-practices/#Listbox
@@ -67,8 +59,6 @@ When the listbox role is added to an element, or such an element becomes visible
 
 - [`aria-roledescription`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-roledescription)
   - : A human-readable string value which more clearly identifies the role of the listbox. Screen readers will often read this value to the user after reading the label (if there is one), in place of saying "listbox".
-
-For further details and a full list of ARIA states and properties see the [`listbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/listbox_role) role.
 
 ### Keyboard interactions
 
@@ -166,9 +156,9 @@ When the user clicks on an option, hits <kbd>Space</kbd> when focused on an opti
 
 ## Examples
 
-### Example 1: A single select listbox that uses [`aria-activedescendant`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-activedescendant)
+### Example 1: A single select listbox that uses `aria-activedescendant`
 
-The snippet below shows how the listbox role is added directly into the HTML source code.
+The snippet below, using [`aria-activedescendant`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-activedescendant), shows how the listbox role is added directly into the HTML source code.
 
 ```html
 <p id="listbox1label" role="label">Select a color:</p>

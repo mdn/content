@@ -1,12 +1,6 @@
 ---
-title: 'Test your skills: Advanced HTML text'
+title: "Test your skills: Advanced HTML text"
 slug: Learn/HTML/Introduction_to_HTML/Test_your_skills:_Advanced_HTML_text
-tags:
-  - Beginner
-  - HTML
-  - Learn
-  - advanced text
-  - test your skills
 ---
 
 {{learnsidebar}}
@@ -20,6 +14,10 @@ The aim of this skill test is to assess whether you understand how to use [lesse
 ## Task 1
 
 In this task, we want you to turn the provided animals and their definitions into a description list.
+
+The finished example should look like this:
+
+{{EmbedGHLiveSample("learning-area/html/introduction-to-html/tasks/advanced-text/advanced-text1-finished.html", '100%', 250)}}
 
 Try updating the live code below to recreate the finished example:
 
@@ -37,6 +35,10 @@ In this task, we want you to add some semantics to the provided HTML as follows:
 - Semantically mark up "HTML" and "CSS" as acronyms, providing expansions as tooltips.
 - Use subscript and superscript to provide correct semantics for the chemical formulae and dates, and make them display correctly.
 - Semantically associate machine-readable dates with the dates in the text.
+
+The finished example should look like this:
+
+{{EmbedGHLiveSample("learning-area/html/introduction-to-html/tasks/advanced-text/advanced-text2-finished.html", '100%', 300)}}
 
 Try updating the live code below to recreate the finished example:
 

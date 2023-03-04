@@ -2,18 +2,8 @@
 title: HTMLImageElement.longDesc
 slug: Web/API/HTMLImageElement/longDesc
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTML
-  - HTML DOM
-  - HTMLImageElement
-  - Long description
-  - Property
-  - Reference
-  - description
-  - img
-  - longDesc
-  - Deprecated
+status:
+  - deprecated
 browser-compat: api.HTMLImageElement.longDesc
 ---
 

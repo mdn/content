@@ -1,29 +1,6 @@
 ---
 title: "Web Accessibility: Understanding Colors and Luminance"
 slug: Web/Accessibility/Understanding_Colors_and_Luminance
-tags:
-  - accessibility
-  - CSS
-  - vision
-  - color
-  - luminance
-  - hue
-  - chroma
-  - saturation
-  - contrast
-  - readability
-  - legibility
-  - displays
-  - red
-  - green
-  - blue
-  - RGB Color model
-  - sRGB
-  - colorspace
-  - epilepsy
-  - photosensitivity
-  - photic seizure
-  - seizure disorders
 ---
 
 <section id="Quick_links">
@@ -101,7 +78,7 @@ Our perception of contrast is not only affected by surrounding elements and the 
 
 In a typical eye exam for acuity (ability to focus), legibility at a particular level means getting three out of five letters correct. This is wholly insufficient for fluent, easy reading.
 
-"Normal" print is usually considered 11.5pt to 12pt, this is equivalent of 16px on screen. And this is for normal vision. To relate this to real world visual acuity, if you think of an eye doctor's chart, and focusing on a capital E. If that E is at the legibility or acuity limit for 20/20 vision, and that is at full contrast, it is equivalent to a Helvetica capital E that is 3.9px on screen, meaning a 5.5px CSS font-size. (In print, this is a 4pt font on coated paper).
+"Normal" print is usually considered 11.5pt to 12pt, this is equivalent of 16px on screen. And this is for normal vision. To relate this to real-world visual acuity, if you think of an eye doctor's chart, and focusing on a capital E. If that E is at the legibility or acuity limit for 20/20 vision, and that is at full contrast, it is equivalent to a Helvetica capital E that is 3.9px on screen, meaning a 5.5px CSS font-size. (In print, this is a 4pt font on coated paper).
 
 This is the minimum for "just making out" letters at \~70% accuracy. That is legibility, not readability. For readability, the lower case [x-height](https://kazdesignworks.com/graphic-design-terms-x-height-and-cap-height/) needs to be a minimum of twice that [cap height](https://kazdesignworks.com/graphic-design-terms-x-height-and-cap-height/). This is called the critical font size for readability.
 
@@ -282,9 +259,9 @@ Saturation is the "Colorfulness of an area judged in proportion to its brightnes
 
 Chroma is the "Colorfulness of an area judged as a proportion of the brightness of a similarly illuminated area that appears white or highly transmitting." (CIE 17-139). A color exhibits approximately constant chroma for all levels of illuminance in normal day viewing conditions (except when the brightness is very high). If the luminance is increased, the chroma usually increases in the same circumstances.
 
-Here is an example of high chroma vs no chroma. On the right, each of the three sRGB primaries are at maximum. On the left, there is no chroma, also known as "achromatic."
+Here is an example of high chroma vs. no chroma. On the right, each of the three sRGB primaries are at maximum. On the left, there is no chroma, also known as "achromatic."
 
-![0 to 100 Chroma Ramps, an example of high chroma vs no chroma.](chroma-ramps.svg)
+![0 to 100 Chroma Ramps, an example of high chroma vs. no chroma.](chroma-ramps.svg)
 
 A good resource with many more detailed examples is at [the Munsell color site](https://munsell.com/color-blog/difference-chroma-saturation/).
 
