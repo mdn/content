@@ -5,9 +5,9 @@ slug: Web/Progressive_web_apps/Guides/Installation
 
 One of the defining aspects of a PWA is that it can be installed on the device, and then appears to users as a platform-specific app, a permanent feature of their device which they can launch directly from the platform like any other app.
 
-We can summarise this as follows:
+We can summarize this as follows:
 
-- The PWA can be installed from platform's app store or installed directly from the web.
+- The PWA can be installed from the platform's app store or installed directly from the web.
 - The PWA can be installed like a platform-specific app, and can customize the install process.
 - Once installed, the PWA gets an app icon on the device, alongside platform-specific apps.
 - Once installed, the PWA can be launched as a standalone app, rather than a website in a browser.
@@ -20,7 +20,7 @@ For a website to be installable it needs to meet some technical requirements. We
 
 ### The web app manifest
 
-A web app manifest is a JSON file that tells the browser how the PWA should appear and behave on the device. For website to be a PWA it must be installable, and for it to be installable it must include a manifest.
+A web app manifest is a JSON file that tells the browser how the PWA should appear and behave on the device. For a website to be a PWA it must be installable, and for it to be installable it must include a manifest.
 
 The manifest is included using a {{HTMLElement("link")}} element in the app's HTML:
 
@@ -135,7 +135,7 @@ window.addEventListener("beforeinstallprompt", (event) => {
 
 The `prompt()` method returns a {{jsxref("Promise")}} that resolves with a string `"accepted"` or `"dismissed"` indicating whether or not the user chose to install the PWA.
 
-### Customising installation
+### Customizing installation
 
 By default, the install prompt contains the name and icon for the PWA. If you provide values for the [`description`](/en-US/docs/Web/Manifest/description) and [`screenshots`](/en-US/docs/Web/Manifest/screenshots) manifest keys, then, on Android only, these values will be shown in the install prompt, giving the user extra context and motivation to install the PWA.
 
