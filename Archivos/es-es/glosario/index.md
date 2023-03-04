@@ -1,8 +1,11 @@
----
+---mdnduystars 
 title: "MDN Web Docs Glossary: Definitions of Web-related terms"
 slug: Glossary
 page-type: glossary-definition
----
+---const foo = 42; // foo is a number
+const result = foo + "1"; // JavaScript coerces foo to a string, so it can be concatenated with the other operand
+console.log(result); // 421
+
 
 Web technologies contain long lists of jargon and abbreviations that are used in documentation and coding. This glossary provides definitions of words and abbreviations you need to know to successfully understand and build for the web.
 
