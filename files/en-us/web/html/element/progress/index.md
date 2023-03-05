@@ -110,6 +110,10 @@ In most cases you should provide an accessible label when using `<progress>`. Wh
 <progress id="progress-bar" value="70" max="100">70 %</progress>
 ```
 
+##### Result
+
+{{EmbedLiveSample('Example')}}
+
 ### Describing a particular region
 
 If the `<progress>` element is describing the loading progress of a section of a page, use [`aria-describedby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-describedby) to point to the status, and set [`aria-busy="true"`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-busy) on the section that is being updated, removing the `aria-busy` attribute when it has finished loading.
@@ -125,6 +129,10 @@ If the `<progress>` element is describing the loading progress of a section of a
 
 <progress id="progress-bar" aria-label="Content loading…"></progress>
 ```
+
+##### Result
+
+{{EmbedLiveSample('Example')}}
 
 ## Specifications
 
