@@ -55,7 +55,6 @@ Note that we could also write this example with the two base text parts annotate
 
 {{EmbedLiveSample("Separate annotation", "100%", 60)}}
 
-
 See the article about the {{HTMLElement("ruby")}} element for further examples.
 
 ## Technical summary
