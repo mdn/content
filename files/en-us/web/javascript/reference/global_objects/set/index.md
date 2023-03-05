@@ -21,7 +21,7 @@ Value equality is based on the [SameValueZero](/en-US/docs/Web/JavaScript/Equali
 
 ### Performance
 
-The set's [`has`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/has) method checks if a value is in a set object, using an approach that is, on average, quicker than testing most of the elements that have previously been added to the set object. In particular, it is, on average, faster than the [`Array.prototype.includes`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/includes) method when an array object has a `length` equal to a set object's `size`.
+The [`has`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/has) method checks if a value is in the set, using an approach that is, on average, quicker than testing most of the elements that have previously been added to the set. In particular, it is, on average, faster than the [`Array.prototype.includes`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/includes) method when an array has a `length` equal to a set's `size`.
 
 ## Constructor
 
