@@ -1,12 +1,6 @@
 ---
 title: <menclose>
 slug: Web/MathML/Element/menclose
-tags:
-  - MathML
-  - MathML Reference
-  - MathML:Element
-  - MathML:General Layout Schemata
-  - Non-standard
 browser-compat: mathml.elements.menclose
 ---
 

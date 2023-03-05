@@ -1,10 +1,6 @@
 ---
 title: scriptlevel
 slug: Web/MathML/Global_attributes/scriptlevel
-tags:
-  - Global attributes
-  - MathML
-  - Reference
 browser-compat: mathml.global_attributes.scriptlevel
 ---
 
