@@ -103,7 +103,7 @@ In most cases you should provide an accessible label when using `<progress>`. Wh
 
 ```html
 <label>Uploading Document: <progress value="70" max="100">70 %</progress></label>
-
+<br/>
 <!-- OR -->
 
 <label for="progress-bar">Uploading Document</label>
@@ -124,7 +124,7 @@ If the `<progress>` element is describing the loading progress of a section of a
 <div aria-busy="true" aria-describedby="progress-bar">
   <!-- content is for this region is loading -->
 </div>
-
+<br/>
 <!-- ... -->
 
 <progress id="progress-bar" aria-label="Content loading…"></progress>
