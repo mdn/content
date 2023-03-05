@@ -11,9 +11,9 @@ The **`Set`** object lets you store unique values of any type, whether {{Glossar
 
 ## Description
 
-`Set` objects are collections of values. A value in the `Set` **may only occur once**; it is unique in the `Set`'s collection. You can iterate through the elements of a `Set` in insertion order. The _insertion order_ corresponds to the order in which each element was inserted into the `Set` by the [`add()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/add) method successfully (that is, there wasn't an identical element already in the `Set` when `add()` was called).
+Set objects are collections of values. A value in the set **may only occur once**; it is unique in the set's collection. You can iterate through the elements of a set in insertion order. The _insertion order_ corresponds to the order in which each element was inserted into the set by the [`add()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/add) method successfully (that is, there wasn't an identical element already in the set when `add()` was called).
 
-The specification requires `Set` to be implemented "that, on average, provide access times that are sublinear on the number of elements in the collection". Therefore, it could be represented internally as a hash table (with O(1) lookup), a search tree (with O(log(N)) lookup), or any other data structure, as long as the complexity is better than O(N).
+The specification requires sets to be implemented "that, on average, provide access times that are sublinear on the number of elements in the collection". Therefore, it could be represented internally as a hash table (with O(1) lookup), a search tree (with O(log(N)) lookup), or any other data structure, as long as the complexity is better than O(N).
 
 ### Value equality
 
@@ -21,7 +21,7 @@ Value equality is based on the [SameValueZero](/en-US/docs/Web/JavaScript/Equali
 
 ### Performance
 
-The `Set`'s [`has`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/has) method checks if a value is in a `Set` object, using an approach that is, on average, quicker than testing most of the elements that have previously been added to the `Set` object. In particular, it is, on average, faster than the [`Array.prototype.includes`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/includes) method when an `Array` object has a `length` equal to a `Set` object's `size`.
+The set's [`has`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/has) method checks if a value is in a set object, using an approach that is, on average, quicker than testing most of the elements that have previously been added to the set object. In particular, it is, on average, faster than the [`Array.prototype.includes`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/includes) method when an array object has a `length` equal to a set object's `size`.
 
 ## Constructor
 
@@ -71,7 +71,7 @@ These properties are defined on `Set.prototype` and shared by all `Set` instance
 
 ## Examples
 
-### Using the Set object
+### Using the set object
 
 ```js
 const mySet1 = new Set();
@@ -86,7 +86,7 @@ mySet1.add(o);
 mySet1.add({ a: 1, b: 2 }); // o is referencing a different object, so this is okay
 
 mySet1.has(1); // true
-mySet1.has(3); // false, since 3 has not been added to the Set
+mySet1.has(3); // false, since 3 has not been added to the set
 mySet1.has(5); // true
 mySet1.has(Math.sqrt(25)); // true
 mySet1.has("Some Text".toLowerCase()); // true
@@ -94,7 +94,7 @@ mySet1.has(o); // true
 
 mySet1.size; // 5
 
-mySet1.delete(5); // removes 5 from the Set
+mySet1.delete(5); // removes 5 from the set
 mySet1.has(5); // false, 5 has been removed
 
 mySet1.size; // 4, since we just removed one value
@@ -104,9 +104,9 @@ mySet1.add(5); // Set(5) { 1, 'some text', {...}, {...}, 5 } - a previously dele
 console.log(mySet1); // Set(5) { 1, "some text", {…}, {…}, 5 }
 ```
 
-### Iterating Sets
+### Iterating sets
 
-The iteration over a `Set` visits elements in insertion order.
+The iteration over a set visits elements in insertion order.
 
 ```js
 for (const item of mySet1) {
@@ -148,7 +148,7 @@ const intersection = new Set([...mySet1].filter((x) => mySet2.has(x)));
 // difference can be simulated via
 const difference = new Set([...mySet1].filter((x) => !mySet2.has(x)));
 
-// Iterate Set's entries with forEach()
+// Iterate set's entries with forEach()
 mySet2.forEach((value) => {
   console.log(value);
 });
@@ -158,7 +158,7 @@ mySet2.forEach((value) => {
 // 4
 ```
 
-### Implementing basic Set operations
+### Implementing basic set operations
 
 ```js
 function isSuperset(set, subset) {
@@ -220,7 +220,7 @@ symmetricDifference(setA, setC); // returns Set {1, 2, 5, 6}
 difference(setA, setC); // returns Set {1, 2}
 ```
 
-### Relation to Array objects
+### Relation to array objects
 
 ```js
 const myArray = ["value1", "value2", "value3"];
@@ -246,7 +246,7 @@ console.log([...new Set(numbers)]);
 // [2, 3, 4, 5, 6, 7, 32]
 ```
 
-### Relation with Strings
+### Relation to strings
 
 ```js
 const text = "India";
@@ -259,7 +259,7 @@ new Set("Firefox"); // Set(7) { "F", "i", "r", "e", "f", "o", "x" }
 new Set("firefox"); // Set(6) { "f", "i", "r", "e", "o", "x" }
 ```
 
-### Use Set to ensure the uniqueness of a list of values
+### Use set to ensure the uniqueness of a list of values
 
 ```js
 const array = Array.from(document.querySelectorAll("[id]")).map((e) => e.id);
