@@ -220,7 +220,7 @@ symmetricDifference(setA, setC); // returns Set {1, 2, 5, 6}
 difference(setA, setC); // returns Set {1, 2}
 ```
 
-### Relation to array objects
+### Relation to arrays
 
 ```js
 const myArray = ["value1", "value2", "value3"];
