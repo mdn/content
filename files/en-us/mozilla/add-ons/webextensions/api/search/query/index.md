@@ -20,8 +20,6 @@ The results are displayed in the current tab, a new tab, or a new window accordi
 
 To use this function, your extension must have the `"search"` [manifest permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions).
 
-To get the installed search engines, use {{WebExtAPIRef("search.get()")}}.
-
 ## Syntax
 
 ```js-nolint
