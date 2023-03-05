@@ -71,7 +71,7 @@ These properties are defined on `Set.prototype` and shared by all `Set` instance
 
 ## Examples
 
-### Using the set object
+### Using the Set object
 
 ```js
 const mySet1 = new Set();
