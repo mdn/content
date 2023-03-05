@@ -53,7 +53,7 @@ The first thing to understand is the concept of link states — different states
 
 ### Default styles
 
-The example below illustrates what a link will behave like by default (the CSS is enlarging and centering the text to make it stand out more). You can compare the behavior of the default stylings in the example with the behavior of other links on this page (which have some CSS stylings applied to them). Default links have the following properties:
+The example below illustrates what a link will look and behave like by default; though the CSS is enlarging and centering the text to make it stand out more. You can compare the look and behavior of the default stylings in the example with the look and behavior of other links on this page which have more CSS styles applied. Default links have the following properties:
 
 - Links are underlined.
 - Unvisited links are blue.
