@@ -259,7 +259,7 @@ new Set("Firefox"); // Set(7) { "F", "i", "r", "e", "f", "o", "x" }
 new Set("firefox"); // Set(6) { "f", "i", "r", "e", "o", "x" }
 ```
 
-### Use set to ensure the uniqueness of a list of values
+### Use a set to ensure the uniqueness of a list of values
 
 ```js
 const array = Array.from(document.querySelectorAll("[id]")).map((e) => e.id);
