@@ -2,9 +2,6 @@
 title: shape-subtract
 slug: Web/SVG/Attribute/shape-subtract
 page-type: svg-attribute
-tags:
-  - SVG
-  - SVG Attribute
 browser-compat: svg.attributes.presentation.shape-subtract
 ---
 
