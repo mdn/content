@@ -148,6 +148,21 @@ The `background` key can also contain this optional property:
         </ul>
       </td>
     </tr>
+    <tr>
+      <td><code>type</code></td>
+      <td>
+        <p>A <code>String</code> value.</p>
+        <ul>
+          <li>
+            <code>classic</code> indicates the background scripts or service workers are not included as an ES Module.
+          </li>
+          <li>
+            <code>module</code> indicates the background scripts or service workers are included as an ES Module. This enables the background page or service worker to <code>import</code> code.
+          </li>
+        </ul>
+        <p>If omitted, this property defaults to <code>classic</code>.</p>
+      </td>
+    </tr>
   </tbody>
 </table>
 

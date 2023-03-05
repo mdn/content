@@ -60,9 +60,9 @@ In your extension, you include a background script using the [`"background"`](/e
 }
 ```
 
-You can specify multiple background scripts. If you do, they run in the same context, just like scripts loaded into a web page.
+You can specify multiple background scripts. If you do, they run in the same context, like scripts loaded into a web page. To include background scripts as ES modules, set `"type": "module"`.
 
-Instead of specifying background scripts, you can specify a background page. This has the added advantage of support for ES modules:
+Instead of specifying background scripts, you can specify a background page. Before the introduction of the `"type"` property to the `"background"` key, this was the only option to include ES modules. You specify a background page like this:
 
 - manifest.json
 
