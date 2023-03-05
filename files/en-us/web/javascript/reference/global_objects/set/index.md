@@ -148,7 +148,7 @@ const intersection = new Set([...mySet1].filter((x) => mySet2.has(x)));
 // difference can be simulated via
 const difference = new Set([...mySet1].filter((x) => !mySet2.has(x)));
 
-// Iterate set's entries with forEach()
+// Iterate set entries with forEach()
 mySet2.forEach((value) => {
   console.log(value);
 });
