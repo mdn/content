@@ -243,6 +243,7 @@ Below is a list of all of the attributes available in SVG along with links to re
 - {{SVGAttr("scale")}}
 - {{SVGAttr("seed")}}
 - {{SVGAttr("shape-rendering")}}
+- {{SVGAttr("shape-subtract")}}
 - {{SVGAttr("slope")}}
 - {{SVGAttr("spacing")}}
 - {{SVGAttr("specularConstant")}}
