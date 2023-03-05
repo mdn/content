@@ -92,7 +92,7 @@ p {
 
 {{ EmbedLiveSample('Default_styles', '100%', 130) }}
 
-> **Note:** All the links in the examples on this page are fake links — a `#` (hash/pound sign) is put in place of the real URL. This is because if the real links were included, clicking on them would break the examples (you'd end up with an error or a page loaded in the embedded example that you couldn't get back from). `#` just links to the current page.
+> **Note:** All the link examples on this page link to the top of their window. The empty fragment (`href="#"`) is used to create simple examples and ensure the live examples, which are each contained in an {{HTMLElement("iframe")}}, don't break.
 
 Interestingly enough, these default styles are nearly the same as they were back in the early days of browsers in the mid-1990s. This is because users know and have come to expect this behavior — if links were styled differently, it would confuse a lot of people. This doesn't mean that you shouldn't style links at all. It just means that you shouldn't stray too far from the expected behavior. You should at least:
 
