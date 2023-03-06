@@ -30,7 +30,7 @@ image-set(
 /* Select gradient based on resolution */
 image-set(
   linear-gradient(blue, white) 1x,
-  linear-gradient(blue, green) 2x);
+  linear-gradient(blue, green) 2x
 );
 
 /* Select image based on supported formats */
