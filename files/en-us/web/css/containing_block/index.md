@@ -49,6 +49,8 @@ As noted above, when certain properties are given a percentage value, the comput
 1. The {{cssxref("height")}}, {{cssxref("top")}}, and {{cssxref("bottom")}} properties compute percentage values from the `height` of the containing block.
 2. The {{cssxref("width")}}, {{cssxref("left")}}, {{cssxref("right")}}, {{cssxref("padding")}}, and {{cssxref("margin")}} properties compute percentage values from the `width` of the containing block.
 
+> **Note:** A **block container** (such as an inline-block, block, or list-item element) either contains only inline-level boxes participating in an inline formatting context, or only block-level boxes participating in a block formatting context. An element is a block container only if it contains block-level or inline-level boxes.
+
 ## Some examples
 
 The HTML code for all our examples is:
@@ -65,7 +67,7 @@ Only the CSS is altered in each instance below.
 
 ### Example 1
 
-In this example, the paragraph is statically positioned, so its containing block is {{HTMLElement("section")}} because it's the nearest ancestor that is a block container.
+In this example, the paragraph is statically positioned, so its containing block is {{HTMLElement("section")}} because it's the nearest ancestor that is a block container (because of `display: block`).
 
 ```html hidden
 <body>

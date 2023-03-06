@@ -1,10 +1,6 @@
 ---
 title: <semantics>
 slug: Web/MathML/Element/semantics
-tags:
-  - MathML
-  - MathML Reference
-  - MathML:Element
 browser-compat: mathml.elements.semantics
 ---
 

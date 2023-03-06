@@ -1,14 +1,8 @@
 ---
 title: "Permissions-Policy: midi"
 slug: Web/HTTP/Headers/Permissions-Policy/midi
-tags:
-  - Directive
-  - Permissions Policy
-  - Permissions-Policy
-  - HTTP
-  - MIDI
-  - Reference
-  - Experimental
+status:
+  - experimental
 browser-compat: http.headers.Permissions-Policy.midi
 ---
 

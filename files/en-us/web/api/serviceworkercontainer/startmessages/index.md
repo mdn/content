@@ -45,15 +45,15 @@ None.
 ## Examples
 
 ```js
-if ('serviceWorker' in navigator) {
-  navigator.serviceWorker
-           .register('/sw.js')
-           .then(() => { console.log('Service Worker Registered'); });
+if ("serviceWorker" in navigator) {
+  navigator.serviceWorker.register("/sw.js").then(() => {
+    console.log("Service Worker Registered");
+  });
 }
 
 // …
 
-navigator.serviceWorker.addEventListener('message', (e) => {
+navigator.serviceWorker.addEventListener("message", (e) => {
   // …
 });
 

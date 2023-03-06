@@ -79,7 +79,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
 ### Deprecated attributes
 
-- {{htmlattrdef("align")}} {{Deprecated_inline}}
+- `align` {{Deprecated_inline}}
 
   - : This [enumerated](/en-US/docs/Glossary/Enumerated) attribute indicates how the table must be aligned inside the containing document. It may have the following values:
 
@@ -89,37 +89,37 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
     Set {{cssxref("margin-left")}} and {{cssxref("margin-right")}} to `auto` or {{cssxref("margin")}} to `0 auto` to achieve an effect that is similar to the align attribute.
 
-- {{htmlattrdef("bgcolor")}} {{Deprecated_inline}}
+- `bgcolor` {{Deprecated_inline}}
 
   - : The background color of the table. It is a [6-digit hexadecimal RGB code](/en-US/docs/Web/CSS/hex-color), prefixed by a '`#`'. One of the predefined [color keywords](/en-US/docs/Web/CSS/named-color) can also be used.
 
     To achieve a similar effect, use the CSS {{cssxref("background-color")}} property.
 
-- {{htmlattrdef("border")}} {{Deprecated_inline}}
+- `border` {{Deprecated_inline}}
 
   - : This integer attribute defines, in pixels, the size of the frame surrounding the table. If set to 0, the {{htmlattrxref("frame", "table")}} attribute is set to void.
 
     To achieve a similar effect, use the CSS {{cssxref("border")}} shorthand property.
 
-- {{htmlattrdef("cellpadding")}} {{Deprecated_inline}}
+- `cellpadding` {{Deprecated_inline}}
 
   - : This attribute defines the space between the content of a cell and its border, displayed or not. If the cellpadding's length is defined in pixels, this pixel-sized space will be applied to all four sides of the cell's content. If the length is defined using a percentage value, the content will be centered and the total vertical space (top and bottom) will represent this value. The same is true for the total horizontal space (left and right).
 
     To achieve a similar effect, apply the {{cssxref("border-collapse")}} property to the `<table>` element, with its value set to collapse, and the {{cssxref("padding")}} property to the {{HTMLElement("td")}} elements.
 
-- {{htmlattrdef("cellspacing")}} {{Deprecated_inline}}
+- `cellspacing` {{Deprecated_inline}}
 
   - : This attribute defines the size of the space between two cells in a percentage value or pixels. The attribute is applied both horizontally and vertically, to the space between the top of the table and the cells of the first row, the left of the table and the first column, the right of the table and the last column and the bottom of the table and the last row.
 
     To achieve a similar effect, apply the {{cssxref("border-spacing")}} property to the `<table>` element. `border-spacing` does not have any effect if {{cssxref("border-collapse")}} is set to collapse.
 
-- {{htmlattrdef("frame")}} {{Deprecated_inline}}
+- `frame` {{Deprecated_inline}}
 
   - : This enumerated attribute defines which side of the frame surrounding the table must be displayed.
 
     To achieve a similar effect, use the {{cssxref("border-style")}} and {{cssxref("border-width")}} properties.
 
-- {{htmlattrdef("rules")}} {{Deprecated_inline}}
+- `rules` {{Deprecated_inline}}
 
   - : This enumerated attribute defines where rules, i.e. lines, should appear in a table. It can have the following values:
 
@@ -131,9 +131,9 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
     To achieve a similar effect, apply the {{cssxref("border")}} property to the appropriate {{HTMLElement("thead")}}, {{HTMLElement("tbody")}}, {{HTMLElement("tfoot")}}, {{HTMLElement("col")}}, or {{HTMLElement("colgroup")}} elements.
 
-- {{htmlattrdef("summary")}} {{Deprecated_inline}}
+- `summary` {{Deprecated_inline}}
   - : This attribute defines an alternative text that summarizes the content of the table. Use the {{htmlelement("caption")}} element instead.
-- {{htmlattrdef("width")}} {{Deprecated_inline}}
+- `width` {{Deprecated_inline}}
   - : This attribute defines the width of the table. Use the CSS {{cssxref("width")}} property instead.
 
 ## Examples

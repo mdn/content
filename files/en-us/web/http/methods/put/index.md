@@ -1,10 +1,6 @@
 ---
 title: PUT
 slug: Web/HTTP/Methods/PUT
-tags:
-  - HTTP
-  - Reference
-  - Request method
 browser-compat: http.methods.PUT
 ---
 

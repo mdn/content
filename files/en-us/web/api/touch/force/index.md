@@ -32,16 +32,20 @@ the `targetTouches` list and logs the `force` value of each touch
 point but the code could invoke different processing depending on the value.
 
 ```js
-someElement.addEventListener('touchstart', (e) => {
-   // Iterate through the list of touch points and log each touch
-   // point's force.
-   for (let i = 0; i < e.targetTouches.length; i++) {
-     // Add code to "switch" based on the force value. For example
-     // minimum pressure vs. maximum pressure could result in
-     // different handling of the user's input.
-     console.log(`targetTouches[${i}].force = ${e.targetTouches[i].force}`);
-   }
-}, false);
+someElement.addEventListener(
+  "touchstart",
+  (e) => {
+    // Iterate through the list of touch points and log each touch
+    // point's force.
+    for (let i = 0; i < e.targetTouches.length; i++) {
+      // Add code to "switch" based on the force value. For example
+      // minimum pressure vs. maximum pressure could result in
+      // different handling of the user's input.
+      console.log(`targetTouches[${i}].force = ${e.targetTouches[i].force}`);
+    }
+  },
+  false
+);
 ```
 
 ## Specifications

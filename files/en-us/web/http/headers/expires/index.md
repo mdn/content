@@ -1,11 +1,6 @@
 ---
 title: Expires
 slug: Web/HTTP/Headers/Expires
-tags:
-  - Caching
-  - HTTP
-  - Response
-  - header
 browser-compat: http.headers.Expires
 ---
 

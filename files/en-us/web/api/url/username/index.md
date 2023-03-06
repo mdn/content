@@ -19,8 +19,10 @@ A string.
 ## Examples
 
 ```js
-const url = new URL('https://anonymous:flabada@developer.mozilla.org/en-US/docs/Web/API/URL/username');
-console.log(url.username) // Logs "anonymous"
+const url = new URL(
+  "https://anonymous:flabada@developer.mozilla.org/en-US/docs/Web/API/URL/username"
+);
+console.log(url.username); // Logs "anonymous"
 ```
 
 ## Specifications

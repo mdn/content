@@ -1,19 +1,6 @@
 ---
 title: Web Components
 slug: Web/Web_Components
-tags:
-  - Components
-  - HTML Imports
-  - JavaScript
-  - Landing
-  - Overview
-  - Template
-  - Web Article
-  - Web Components
-  - Web Development
-  - custom elements
-  - shadow dom
-  - slot
 browser-compat:
   - html.elements.template
   - api.ShadowRoot

@@ -29,7 +29,7 @@ The constant `sanitized` is an object created via a Trusted Types policy. The `t
 
 ```js
 const sanitized = scriptPolicy.createScript("eval('2 + 2')");
-  console.log(sanitized.toJSON());
+console.log(sanitized.toJSON());
 ```
 
 ## Specifications

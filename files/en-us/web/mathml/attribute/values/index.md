@@ -1,10 +1,6 @@
 ---
 title: MathML Attribute Values
 slug: Web/MathML/Attribute/Values
-tags:
-  - Guide
-  - MathML
-  - MathML Reference
 browser-compat: mathml.attribute_values
 ---
 

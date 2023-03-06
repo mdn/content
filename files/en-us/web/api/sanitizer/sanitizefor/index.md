@@ -52,8 +52,8 @@ None.
 The code below demonstrates how to sanitize a string of HTML into a `div` element.
 
 ```js
-const unsanitized_string = "abc <script>alert(1)<" + "/script> def";  // Unsanitized string of HTML
-const sanitizer = new Sanitizer();  // Default sanitizer;
+const unsanitized_string = "abc <script>alert(1)<" + "/script> def"; // Unsanitized string of HTML
+const sanitizer = new Sanitizer(); // Default sanitizer;
 
 // Sanitize the string
 const sanitizedDiv = sanitizer.sanitizeFor("div", unsanitized_string);
@@ -61,7 +61,7 @@ const sanitizedDiv = sanitizer.sanitizeFor("div", unsanitized_string);
 //We can verify the returned element type, and view sanitized HTML in string form:
 console.log(sanitizedDiv instanceof HTMLDivElement);
 // true
-console.log(sanitizedDiv.innerHTML)
+console.log(sanitizedDiv.innerHTML);
 // "abc  def"
 
 // At some point later…
