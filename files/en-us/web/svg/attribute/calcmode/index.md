@@ -2,11 +2,6 @@
 title: calcMode
 slug: Web/SVG/Attribute/calcMode
 page-type: svg-attribute
-tags:
-  - NeedsCompatTable
-  - NeedsExample
-  - SVG
-  - SVG Attribute
 spec-urls: https://svgwg.org/specs/animations/#CalcModeAttribute
 ---
 

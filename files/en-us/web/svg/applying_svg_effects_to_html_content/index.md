@@ -2,11 +2,6 @@
 title: Applying SVG effects to HTML content
 slug: Web/SVG/Applying_SVG_effects_to_HTML_content
 page-type: guide
-tags:
-  - CSS
-  - Guide
-  - HTML
-  - SVG
 ---
 
 {{SVGRef}}

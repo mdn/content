@@ -2,10 +2,6 @@
 title: Paths
 slug: Web/SVG/Tutorial/Paths
 page-type: guide
-tags:
-  - Intermediate
-  - SVG
-  - SVG:Tutorial
 ---
 
 {{SVGRef}}

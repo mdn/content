@@ -2,10 +2,6 @@
 title: Basic transformations
 slug: Web/SVG/Tutorial/Basic_Transformations
 page-type: guide
-tags:
-  - Intermediate
-  - SVG
-  - SVG:Tutorial
 ---
 
 {{SVGRef}}
