@@ -1,16 +1,6 @@
 ---
 title: Resources and URIs
 slug: Web/HTTP/Resources_and_URIs
-tags:
-  - HTTP
-  - MIME
-  - MIME Type
-  - Overview
-  - Type
-  - URI
-  - URIs
-  - URL
-  - resources
 ---
 
 {{HTTPSidebar}}

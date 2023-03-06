@@ -1,11 +1,6 @@
 ---
 title: Examples
 slug: Web/MathML/Examples
-tags:
-  - Beginner
-  - Example
-  - Guide
-  - MathML
 ---
 
 <section id="Quick_links">

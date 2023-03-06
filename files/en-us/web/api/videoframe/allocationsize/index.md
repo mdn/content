@@ -45,12 +45,12 @@ In the following example the `allocationSize` is returned for the rectangle at t
 
 ```js
 const videoRect = {
-  x:0,
-  y:0,
-  width:800,
-  height:600
-}
-let size = VideoFrame.allocationSize({rect: videoRect})
+  x: 0,
+  y: 0,
+  width: 800,
+  height: 600,
+};
+let size = VideoFrame.allocationSize({ rect: videoRect });
 ```
 
 ## Specifications

@@ -18,7 +18,7 @@ The property value is set using the `delegatesFocus` property of the object pass
 ## Examples
 
 ```js
-let customElem = document.querySelector('my-shadow-dom-element');
+let customElem = document.querySelector("my-shadow-dom-element");
 let shadow = customElem.shadowRoot;
 
 // ...

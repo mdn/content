@@ -118,10 +118,13 @@ const treeWalker = document.createTreeWalker(
   document.body,
   NodeFilter.SHOW_ELEMENT + NodeFilter.SHOW_COMMENT + NodeFilter.SHOW_TEXT,
   { acceptNode: (node) => NodeFilter.FILTER_ACCEPT },
-  false,
+  false
 );
-if ((treeWalker.whatToShow === NodeFilter.SHOW_ALL) ||
-    (treeWalker.whatToShow % (NodeFilter.SHOW_COMMENT * 2)) >= NodeFilter.SHOW_COMMENT) {
+if (
+  treeWalker.whatToShow === NodeFilter.SHOW_ALL ||
+  treeWalker.whatToShow % (NodeFilter.SHOW_COMMENT * 2) >=
+    NodeFilter.SHOW_COMMENT
+) {
   // treeWalker will show comments
 }
 ```

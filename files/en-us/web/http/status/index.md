@@ -1,13 +1,6 @@
 ---
 title: HTTP response status codes
 slug: Web/HTTP/Status
-tags:
-  - HTTP
-  - Landing
-  - Overview
-  - Reference
-  - Status code
-  - Web
 browser-compat: http.status
 ---
 

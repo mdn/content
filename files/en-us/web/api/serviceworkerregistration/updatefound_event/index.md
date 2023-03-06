@@ -1,5 +1,5 @@
 ---
-title: 'ServiceWorkerRegistration: updatefound event'
+title: "ServiceWorkerRegistration: updatefound event"
 slug: Web/API/ServiceWorkerRegistration/updatefound_event
 page-type: web-api-event
 browser-compat: api.ServiceWorkerRegistration.updatefound_event
@@ -15,9 +15,9 @@ The **`updatefound`** event of the
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('updatefound', (event) => { });
+addEventListener("updatefound", (event) => {});
 
-onupdatefound = (event) => { };
+onupdatefound = (event) => {};
 ```
 
 ## Event type
@@ -29,9 +29,9 @@ A generic {{domxref("Event")}}.
 ```js
 const registration = await navigator.serviceWorker.getRegistration();
 if (registration) {
-    registration.addEventListener('updatefound', () => {
-        console.log('Service Worker update found!');
-    });
+  registration.addEventListener("updatefound", () => {
+    console.log("Service Worker update found!");
+  });
 }
 ```
 

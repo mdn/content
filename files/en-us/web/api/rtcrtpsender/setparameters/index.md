@@ -91,7 +91,7 @@ But this is a clearer demonstration of the basic concept of first fetching the p
 
 ```js
 async function setVideoParams(sender, height, bitrate) {
-  const scaleRatio = sender.track.getSettings().height/height;
+  const scaleRatio = sender.track.getSettings().height / height;
   const params = sender.getParameters();
 
   params.encodings[0].scaleResolutionDownBy = Math.max(scaleRatio, 1);
@@ -116,13 +116,13 @@ For that reason, if you want to be compatible with iPhone and other devices runn
 
 ```js
 async function setVideoParams(sender, height, bitrate) {
-  const scaleRatio = sender.track.getSettings().height/height;
+  const scaleRatio = sender.track.getSettings().height / height;
   const params = sender.getParameters();
 
   // If encodings is null, create it
 
   if (!params.encodings) {
-    params.encodings = [{ }];
+    params.encodings = [{}];
   }
 
   params.encodings[0].scaleResolutionDownBy = Math.max(scaleRatio, 1);

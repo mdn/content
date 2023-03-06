@@ -1,11 +1,6 @@
 ---
 title: Invalid cookie domain
 slug: Web/WebDriver/Errors/InvalidCookieDomain
-tags:
-  - Error
-  - Reference
-  - WebDriver
-  - invalid cookie domain
 ---
 
 {{QuickLinksWithSubpages("/en-US/docs/Web/WebDriver/Errors")}}

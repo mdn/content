@@ -1,14 +1,6 @@
 ---
 title: Authorization
 slug: Web/HTTP/Headers/Authorization
-tags:
-  - HTTP
-  - HTTP Header
-  - Reference
-  - Request header
-  - Header
-  - Authorization
-  - Authentication
 browser-compat: http.headers.Authorization
 ---
 

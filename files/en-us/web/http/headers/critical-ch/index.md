@@ -1,14 +1,8 @@
 ---
 title: Critical-CH
 slug: Web/HTTP/Headers/Critical-CH
-tags:
-  - Critical-CH
-  - Client hint
-  - HTTP
-  - HTTP Header
-  - Reference
-  - Response header
-  - Experimental
+status:
+  - experimental
 browser-compat: http.headers.Critical-CH
 ---
 

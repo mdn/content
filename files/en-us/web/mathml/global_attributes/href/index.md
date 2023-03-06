@@ -1,11 +1,6 @@
 ---
 title: href
 slug: Web/MathML/Global_attributes/href
-tags:
-  - Global attributes
-  - MathML
-  - Reference
-  - Non-standard
 browser-compat: mathml.global_attributes.href
 ---
 

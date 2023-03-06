@@ -1,11 +1,6 @@
 ---
 title: mathsize
 slug: Web/MathML/Global_attributes/mathsize
-tags:
-  - Global attributes
-  - MathML
-  - Reference
-  - Deprecated
 browser-compat: mathml.global_attributes.mathsize
 ---
 

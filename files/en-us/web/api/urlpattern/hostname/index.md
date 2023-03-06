@@ -27,7 +27,7 @@ The below example creates a {{domxref("URLPattern")}} object with
 is a direct subdomain of `example.org`.
 
 ```js
-const pattern = new URLPattern('https://*.example.org');
+const pattern = new URLPattern("https://*.example.org");
 console.log(pattern.hostname); // '*.example.org'
 ```
 

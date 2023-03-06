@@ -30,7 +30,9 @@ In this example the `error()` method is used when a chunk could not be transform
 
 ```js
 const transformContent = {
-  start() { /* … */ },
+  start() {
+    /* … */
+  },
   async transform(chunk, controller) {
     try {
       chunk = await applyMyTransformation(chunk);

@@ -31,7 +31,7 @@ For example, {{domxref("AbortController")}} would be added as shown below:
 ---
 title: AbortController
 slug: Web/API/AbortController
-…
+page-type: web-api-interface
 browser-compat: api.AbortController
 ---
 ```
@@ -44,7 +44,7 @@ If multiple compatibility/specification tables are required on the same page, yo
 ---
 title: Channel Messaging API
 slug: Web/API/Channel_Messaging_API
-# …
+page-type: web-api-overview
 browser-compat:
   - api.MessageChannel
   - api.MessagePort
