@@ -103,7 +103,6 @@ console.log(Array.prototype.at.call(arrayLike, -1)); // "b"
 
 ## See also
 
-- [Polyfill of `Array.prototype.at` in `core-js`](https://github.com/zloirock/core-js#relative-indexing-method)
 - [A polyfill for the at() method](https://github.com/tc39/proposal-relative-indexing-method#polyfill).
 - {{jsxref("Array.prototype.find()")}} – return a value based on a given test.
 - {{jsxref("Array.prototype.includes()")}} – test whether a value exists in the array.
