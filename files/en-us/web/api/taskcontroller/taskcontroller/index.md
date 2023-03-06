@@ -39,7 +39,7 @@ const controller = new TaskController();
 To construct a task controller that has a specific signal priority, pass the `priority` as a property of the optional argument.
 
 ```js
-controller2 = new TaskController({priority: 'user-blocking'});
+controller2 = new TaskController({ priority: "user-blocking" });
 ```
 
 ## Specifications

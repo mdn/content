@@ -75,10 +75,7 @@ the key. [See the complete code on GitHub](https://github.com/mdn/dom-examples/b
 Export the given key and write it into the "exported-key" space.
 */
 async function exportCryptoKey(key) {
-  const exported = await window.crypto.subtle.exportKey(
-    "raw",
-    key
-  );
+  const exported = await window.crypto.subtle.exportKey("raw", key);
   const exportedKeyBuffer = new Uint8Array(exported);
 
   const exportKeyOutput = document.querySelector(".exported-key");
@@ -89,19 +86,21 @@ async function exportCryptoKey(key) {
 Generate an encrypt/decrypt secret key,
 then set up an event listener on the "Export" button.
 */
-window.crypto.subtle.generateKey(
-  {
-    name: "AES-GCM",
-    length: 256,
-  },
-  true,
-  ["encrypt", "decrypt"]
-).then((key) => {
-  const exportButton = document.querySelector(".raw");
-  exportButton.addEventListener("click", () => {
-    exportCryptoKey(key);
+window.crypto.subtle
+  .generateKey(
+    {
+      name: "AES-GCM",
+      length: 256,
+    },
+    true,
+    ["encrypt", "decrypt"]
+  )
+  .then((key) => {
+    const exportButton = document.querySelector(".raw");
+    exportButton.addEventListener("click", () => {
+      exportCryptoKey(key);
+    });
   });
-});
 ```
 
 ### PKCS #8 export
@@ -122,10 +121,7 @@ function ab2str(buf) {
 Export the given key and write it into the "exported-key" space.
 */
 async function exportCryptoKey(key) {
-  const exported = await window.crypto.subtle.exportKey(
-    "pkcs8",
-    key
-  );
+  const exported = await window.crypto.subtle.exportKey("pkcs8", key);
   const exportedAsString = ab2str(exported);
   const exportedAsBase64 = window.btoa(exportedAsString);
   const pemExported = `-----BEGIN PRIVATE KEY-----\n${exportedAsBase64}\n-----END PRIVATE KEY-----`;
@@ -138,23 +134,24 @@ async function exportCryptoKey(key) {
 Generate a sign/verify key pair,
 then set up an event listener on the "Export" button.
 */
-window.crypto.subtle.generateKey(
-  {
-    name: "RSA-PSS",
-    // Consider using a 4096-bit key for systems that require long-term security
-    modulusLength: 2048,
-    publicExponent: new Uint8Array([1, 0, 1]),
-    hash: "SHA-256",
-  },
-  true,
-  ["sign", "verify"]
-).then((keyPair) => {
-  const exportButton = document.querySelector(".pkcs8");
-  exportButton.addEventListener("click", () => {
-    exportCryptoKey(keyPair.privateKey);
+window.crypto.subtle
+  .generateKey(
+    {
+      name: "RSA-PSS",
+      // Consider using a 4096-bit key for systems that require long-term security
+      modulusLength: 2048,
+      publicExponent: new Uint8Array([1, 0, 1]),
+      hash: "SHA-256",
+    },
+    true,
+    ["sign", "verify"]
+  )
+  .then((keyPair) => {
+    const exportButton = document.querySelector(".pkcs8");
+    exportButton.addEventListener("click", () => {
+      exportCryptoKey(keyPair.privateKey);
+    });
   });
-
-});
 ```
 
 ### SubjectPublicKeyInfo export
@@ -175,10 +172,7 @@ function ab2str(buf) {
 Export the given key and write it into the "exported-key" space.
 */
 async function exportCryptoKey(key) {
-  const exported = await window.crypto.subtle.exportKey(
-    "spki",
-    key
-  );
+  const exported = await window.crypto.subtle.exportKey("spki", key);
   const exportedAsString = ab2str(exported);
   const exportedAsBase64 = window.btoa(exportedAsString);
   const pemExported = `-----BEGIN PUBLIC KEY-----\n${exportedAsBase64}\n-----END PUBLIC KEY-----`;
@@ -191,22 +185,24 @@ async function exportCryptoKey(key) {
 Generate an encrypt/decrypt key pair,
 then set up an event listener on the "Export" button.
 */
-window.crypto.subtle.generateKey(
-  {
-    name: "RSA-OAEP",
-    // Consider using a 4096-bit key for systems that require long-term security
-    modulusLength: 2048,
-    publicExponent: new Uint8Array([1, 0, 1]),
-    hash: "SHA-256",
-  },
-  true,
-  ["encrypt", "decrypt"]
-).then((keyPair) => {
-  const exportButton = document.querySelector(".spki");
-  exportButton.addEventListener("click", () => {
-    exportCryptoKey(keyPair.publicKey);
+window.crypto.subtle
+  .generateKey(
+    {
+      name: "RSA-OAEP",
+      // Consider using a 4096-bit key for systems that require long-term security
+      modulusLength: 2048,
+      publicExponent: new Uint8Array([1, 0, 1]),
+      hash: "SHA-256",
+    },
+    true,
+    ["encrypt", "decrypt"]
+  )
+  .then((keyPair) => {
+    const exportButton = document.querySelector(".spki");
+    exportButton.addEventListener("click", () => {
+      exportCryptoKey(keyPair.publicKey);
+    });
   });
-});
 ```
 
 ### JSON Web Key export
@@ -218,32 +214,30 @@ This example exports an ECDSA private signing key as a JSON Web Key object. [See
 Export the given key and write it into the "exported-key" space.
 */
 async function exportCryptoKey(key) {
-  const exported = await window.crypto.subtle.exportKey(
-    "jwk",
-    key
-  );
+  const exported = await window.crypto.subtle.exportKey("jwk", key);
   const exportKeyOutput = document.querySelector(".exported-key");
   exportKeyOutput.textContent = JSON.stringify(exported, null, " ");
- }
+}
 
 /*
 Generate a sign/verify key pair,
 then set up an event listener on the "Export" button.
 */
-window.crypto.subtle.generateKey(
-  {
-    name: "ECDSA",
-    namedCurve: "P-384"
-  },
-  true,
-  ["sign", "verify"]
-).then((keyPair) => {
-  const exportButton = document.querySelector(".jwk");
-  exportButton.addEventListener("click", () => {
-    exportCryptoKey(keyPair.privateKey);
+window.crypto.subtle
+  .generateKey(
+    {
+      name: "ECDSA",
+      namedCurve: "P-384",
+    },
+    true,
+    ["sign", "verify"]
+  )
+  .then((keyPair) => {
+    const exportButton = document.querySelector(".jwk");
+    exportButton.addEventListener("click", () => {
+      exportCryptoKey(keyPair.privateKey);
+    });
   });
-
-});
 ```
 
 ## Specifications

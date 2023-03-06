@@ -18,12 +18,12 @@ A number, or `"auto"` representing the cue line of this WebVTT cue.
 In the following example a new {{domxref("VTTCue")}} is created, then the value of `line` is set to `1`. The value is then printed to the console.
 
 ```js
-let video = document.querySelector('video');
+let video = document.querySelector("video");
 let track = video.addTextTrack("captions", "Captions", "en");
 track.mode = "showing";
 
-let cue1 = new VTTCue(0, 0.9, 'Hildy!');
-cue1.line = '1';
+let cue1 = new VTTCue(0, 0.9, "Hildy!");
+cue1.line = "1";
 console.log(cue1.line);
 
 track.addCue(cue1);

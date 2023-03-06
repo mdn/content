@@ -32,12 +32,12 @@ A string containing one of the following values:
 In the following example a new {{domxref("VTTCue")}} is created, then the value of `positionAlign` is set to `"line-right"`. The value is then printed to the console.
 
 ```js
-let video = document.querySelector('video');
+let video = document.querySelector("video");
 let track = video.addTextTrack("captions", "Captions", "en");
 track.mode = "showing";
 
-let cue1 = new VTTCue(0, 0.9, 'Hildy!');
-cue1.positionAlign = 'line-right';
+let cue1 = new VTTCue(0, 0.9, "Hildy!");
+cue1.positionAlign = "line-right";
 console.log(cue1.positionAlign);
 
 track.addCue(cue1);

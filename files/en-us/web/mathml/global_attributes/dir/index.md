@@ -1,10 +1,6 @@
 ---
 title: dir
 slug: Web/MathML/Global_attributes/dir
-tags:
-  - Global attributes
-  - MathML
-  - Reference
 browser-compat: mathml.global_attributes.dir
 ---
 
