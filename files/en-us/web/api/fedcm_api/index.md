@@ -69,10 +69,12 @@ The config file (hosted at `https://accounts.idp.example/config.json` in our exa
   "branding": {
     "background_color": "green",
     "color": "0xFFEEAA",
-    "icons": [{
-      "url": "https://idp.example/icon.ico",
-      "size": 25
-    }]
+    "icons": [
+      {
+        "url": "https://idp.example/icon.ico",
+        "size": 25
+      }
+    ]
   }
 }
 ```
@@ -136,7 +138,7 @@ Provides URLs pointing to the RP's metadata and terms of service pages, to be us
 ```json
 {
   "privacy_policy_url": "https://rp.example/privacy_policy.html",
-  "terms_of_service_url": "https://rp.example/terms_of_service.html",
+  "terms_of_service_url": "https://rp.example/terms_of_service.html"
 }
 ```
 
@@ -158,12 +160,14 @@ RPs can call {{domxref("CredentialsContainer.get", "navigator.credentials.get()"
 async function signIn() {
   const identityCredential = await navigator.credentials.get({
     identity: {
-      providers: [{
-        configURL: 'https://accounts.idp.example/config.json',
-        clientId: '********',
-        nonce: '******'
-      }]
-    }
+      providers: [
+        {
+          configURL: "https://accounts.idp.example/config.json",
+          clientId: "********",
+          nonce: "******",
+        },
+      ],
+    },
   });
 }
 ```
@@ -177,6 +181,7 @@ The browser requests the IdP config file and carries out the sign-in flow detail
 1. The RP invokes {{domxref("CredentialsContainer.get", "navigator.credentials.get()")}} to start off the sign-in flow.
 
 2. From the `configURL` provided in the `get()` call, the browser requests two files:
+
    1. The well-known file (`/.well-known/web-identity`), available from `/.well-known/web-identity` at the [eTLD+1](https://web.dev/same-site-same-origin/#site) of the `configURL`.
    2. The config file (`/config.json`), available at the `configURL`.
 
@@ -195,7 +200,7 @@ The browser requests the IdP config file and carries out the sign-in flow detail
 
 3. The IdP responds with the requested files. The config file URL is validated against the list of valid config URLs inside the well-known file.
 
-4. The browser makes a request to the `accounts_endpoint` inside the config file for the list of accounts that the user is currently signed in to on the IdP. This is a `GET` request with cookies, but without a `client_id` parameter or the {{httpheader("Referer")}} header. This effectively prevents the IdP from learning which RP the user is trying to sign in to.
+4. The browser makes a request to the `accounts_endpoint` inside the config file for the list of accounts that the user is currently signed in to on the IdP. This is a `GET` request with cookies, but without a `client_id` parameter or the {{httpheader("Origin")}} header. This effectively prevents the IdP from learning which RP the user is trying to sign in to.
 
    For example:
 
@@ -216,7 +221,7 @@ The browser requests the IdP config file and carries out the sign-in flow detail
    ```http
    GET /client_metadata.php?client_id=1234 HTTP/1.1
    Host: accounts.idp.example
-   Referer: https://rp.example/
+   Origin: https://rp.example/
    Accept: application/json
    Sec-Fetch-Dest: webidentity
    ```
@@ -232,7 +237,7 @@ The browser requests the IdP config file and carries out the sign-in flow detail
    ```http
    POST /assertion.php HTTP/1.1
    Host: accounts.idp.example
-   Referer: https://rp.example/
+   Origin: https://rp.example/
    Content-Type: application/x-www-form-urlencoded
    Cookie: 0x23223
    Sec-Fetch-Dest: webidentity
@@ -250,9 +255,9 @@ The browser requests the IdP config file and carries out the sign-in flow detail
    - `disclosure_text_shown`
      - : A string of "true" or "false" indicating whether the disclosure text was shown or not. The disclosure text is the information shown to the user (which can include the terms of service and privacy policy links, if provided) if the user is signed in to the IdP but doesn't have an account specifically on the current RP (in which case they'd need to choose to "Continue as..." their IdP identity and then create a corresponding account on the RP).
 
-10. The IdP checks that the account ID sent by the RP matches the ID for the account that is already signed in, and that the `Referer` matches the origin of the RP, which will have been registered in advance with the IdP. If everything looks good, it responds with the validation token.
+10. The IdP checks that the account ID sent by the RP matches the ID for the account that is already signed in, and that the `Origin` matches the origin of the RP, which will have been registered in advance with the IdP. If everything looks good, it responds with the validation token.
 
-  > **Note:** The origin of the RP will be registered with the IdP in a completely separate process when the RP first integrates with the IdP. This process will be specific to each IdP.
+> **Note:** The origin of the RP will be registered with the IdP in a completely separate process when the RP first integrates with the IdP. This process will be specific to each IdP.
 
 When the flow is complete, the RP validates the validation token. If validation is successful, the `get()` promise resolves with an {{domxref("IdentityCredential")}} object, which provides further RP functionality. Additionally, at this point the RP may register the user or let them sign in and start a new session.
 
@@ -267,7 +272,7 @@ The {{httpheader("Permissions-Policy/identity-credentials-get", "identity-creden
 Developers can explicitly grant permission for an {{htmlelement("iframe")}} to use FedCM via the `allow` attribute:
 
 ```html
-<iframe src="3rd-party.example" allow="identity-credentials-get"></iframe> 
+<iframe src="3rd-party.example" allow="identity-credentials-get"></iframe>
 ```
 
 The availability of FedCM within `<iframe>`s enables a couple of use cases:
