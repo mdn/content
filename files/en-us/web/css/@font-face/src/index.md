@@ -2,14 +2,6 @@
 title: src
 slug: Web/CSS/@font-face/src
 page-type: css-at-rule-descriptor
-tags:
-  - "@font-face"
-  - At-rule descriptor
-  - CSS
-  - CSS Descriptor
-  - CSS Fonts
-  - CSS Property
-  - Reference
 browser-compat: css.at-rules.font-face.src
 ---
 
@@ -64,6 +56,7 @@ src: url("trickster-COLRv1.otf") format(opentype) tech(color-COLRv1), url("trick
   - : An optional declaration that follows the `url()` value that provides a hint for the user agent on the font technology.
     The value for `tech()` may be one of the keywords described in [Font technologies](#font-technologies).
 - `local(<font-face-name>)`
+
   - : Specifies the font name should the font be available on the user's device.
     Enclosing the font name in quotes is optional.
 

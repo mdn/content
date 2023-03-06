@@ -2,15 +2,8 @@
 title: StylePropertyMap.append()
 slug: Web/API/StylePropertyMap/append
 page-type: web-api-instance-method
-tags:
-  - API
-  - CSS Typed Object Model API
-  - Houdini
-  - Method
-  - Reference
-  - StylePropertyMap
-  - append()
-  - Experimental
+status:
+  - experimental
 browser-compat: api.StylePropertyMap.append
 ---
 
@@ -46,10 +39,13 @@ This example shows an extra background image value being added to the
 
 ```js
 // get the button element
-const buttonEl = document.querySelector('button');
+const buttonEl = document.querySelector("button");
 
 // append another value to the background-image property set on the attribute
-buttonEl.attributeStyleMap.append('background-image', 'linear-gradient(180deg, blue, black');
+buttonEl.attributeStyleMap.append(
+  "background-image",
+  "linear-gradient(180deg, blue, black"
+);
 ```
 
 ## Specifications

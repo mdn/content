@@ -2,13 +2,8 @@
 title: revert-layer
 slug: Web/CSS/revert-layer
 page-type: css-keyword
-tags:
-  - CSS
-  - CSS Value
-  - Keyword
-  - Reference
-  - revert-layer
-  - Experimental
+status:
+  - experimental
 browser-compat: css.types.global_keywords.revert-layer
 ---
 

@@ -1,10 +1,6 @@
 ---
 title: scriptlevel
 slug: Web/MathML/Global_attributes/scriptlevel
-tags:
-  - Global attributes
-  - MathML
-  - Reference
 browser-compat: mathml.global_attributes.scriptlevel
 ---
 
@@ -33,7 +29,7 @@ The **`scriptlevel`** [global attribute](/en-US/docs/Web/MathML/Global_attribute
 
 ## Syntax
 
-```html
+```html-nolint
 <math scriptlevel="-1"> <!-- decrease math-depth by 1 -->
 <math scriptlevel="+2"> <!-- increase math-depth by 2 -->
 <math scriptlevel="0"> <!-- reset math-depth to 0 -->

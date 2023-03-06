@@ -2,12 +2,8 @@
 title: shape
 slug: Web/CSS/@media/shape
 page-type: css-media-feature
-tags:
-  - "@media"
-  - CSS
-  - Reference
-  - Experimental
-  - media feature
+status:
+  - experimental
 spec-urls: https://drafts.csswg.org/css-round-display/#shape-media-feature
 ---
 
@@ -65,10 +61,7 @@ This HTML will apply a special stylesheet for devices that have round screens.
     media="screen and (shape: rect)"
     rel="stylesheet"
     href="rectangle.css" />
-  <link
-    media="screen and (shape: round)"
-    rel="stylesheet"
-    href="round.css" />
+  <link media="screen and (shape: round)" rel="stylesheet" href="round.css" />
 </head>
 ```
 

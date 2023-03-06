@@ -1,10 +1,6 @@
 ---
 title: displaystyle
 slug: Web/MathML/Global_attributes/displaystyle
-tags:
-  - Global attributes
-  - MathML
-  - Reference
 browser-compat: mathml.global_attributes.displaystyle
 ---
 
@@ -31,7 +27,7 @@ In this example, an [munder](/en-US/docs/Web/MathML/Element/munder) element is u
 
 ## Syntax
 
-```html
+```html-nolint
 <math displaystyle="true"></math>
 <math displaystyle="false"></math>
 ```

@@ -2,13 +2,8 @@
 title: LayoutShiftAttribution.currentRect
 slug: Web/API/LayoutShiftAttribution/currentRect
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - currentRect
-  - LayoutShiftAttribution
-  - Experimental
+status:
+  - experimental
 browser-compat: api.LayoutShiftAttribution.currentRect
 ---
 
@@ -26,12 +21,12 @@ The following example prints the `currentRect` of the first item in {{domxref("L
 
 ```js
 new PerformanceObserver((list) => {
-  for (const {sources} of list.getEntries()) {
+  for (const { sources } of list.getEntries()) {
     if (sources) {
       console.log(sources[0].currentRect);
     }
   }
-}).observe({type: 'layout-shift', buffered: true});
+}).observe({ type: "layout-shift", buffered: true });
 ```
 
 ## Specifications

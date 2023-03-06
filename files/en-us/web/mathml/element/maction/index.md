@@ -1,12 +1,6 @@
 ---
 title: <maction>
 slug: Web/MathML/Element/maction
-tags:
-  - MathML
-  - MathML Reference
-  - MathML:Element
-  - MathML:Enlivening Expressions
-  - Deprecated
 browser-compat: mathml.elements.maction
 ---
 
@@ -37,12 +31,11 @@ This element's attributes include the [global MathML attributes](/en-US/docs/Web
 The following example uses the "toggle" `actiontype`:
 
 ```html
-<p>Try clicking this formula several times:
+<p>
+  Try clicking this formula several times:
 
   <math display="block">
-
     <maction actiontype="toggle">
-
       <mfrac>
         <mn>6</mn>
         <mn>8</mn>
@@ -65,9 +58,7 @@ The following example uses the "toggle" `actiontype`:
         <mn>3</mn>
         <mn>4</mn>
       </mfrac>
-
     </maction>
-
   </math>
 </p>
 ```

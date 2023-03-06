@@ -42,19 +42,13 @@ Each document's `index.md` starts with front-matter, which is written in [YAML](
 The YAML is read by the MDN build system and is used to read the metadata of a document.
 
 The front-matter must be the first thing in the file and must take the form of valid YAML set between triple-dashed lines (`---`).
-Front-matter defines the document's `title`, `slug`, and optional [`tags`][].
+Front-matter defines the document's `title` and `slug`, and may also include `status`, `browser-compat` and specification information.
 Here's an example of front-matter from the [JavaScript page](files/en-us/web/javascript/index.md):
 
 ```yaml
 ---
 title: JavaScript
 slug: Web/JavaScript
-tags:
-  - JavaScript
-  - Landing
-  - Landing page
-  - Learn
-  - "l10n:priority"
 ---
 ```
 

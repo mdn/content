@@ -1,12 +1,9 @@
 ---
 title: serviceworker
 slug: Web/Manifest/serviceworker
-tags:
-  - serviceworker
-  - Manifest
-  - Web
-  - Experimental
-  - Non-standard
+status:
+  - experimental
+  - non-standard
 browser-compat: html.manifest.serviceworker
 ---
 

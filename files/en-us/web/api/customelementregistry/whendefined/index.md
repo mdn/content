@@ -2,14 +2,6 @@
 title: CustomElementRegistry.whenDefined()
 slug: Web/API/CustomElementRegistry/whenDefined
 page-type: web-api-instance-method
-tags:
-  - API
-  - CustomElementRegistry
-  - Method
-  - Reference
-  - Web Components
-  - custom elements
-  - whenDefined
 browser-compat: api.CustomElementRegistry.whenDefined
 ---
 
@@ -55,14 +47,14 @@ content is ready to display.
 ```
 
 ```js
-const container = document.getElementById('menu-container');
-const placeholder = container.querySelector('.menu-placeholder');
+const container = document.getElementById("menu-container");
+const placeholder = container.querySelector(".menu-placeholder");
 // Fetch all the children of menu that are not yet defined.
-const undefinedElements = container.querySelectorAll(':not(:defined)');
+const undefinedElements = container.querySelectorAll(":not(:defined)");
 
-async function removePlaceholder(){
-  const promises = [...undefinedElements].map(
-    (button) => customElements.whenDefined(button.localName)
+async function removePlaceholder() {
+  const promises = [...undefinedElements].map((button) =>
+    customElements.whenDefined(button.localName)
   );
 
   // Wait for all the children to be upgraded

@@ -2,15 +2,6 @@
 title: ChannelSplitterNode()
 slug: Web/API/ChannelSplitterNode/ChannelSplitterNode
 page-type: web-api-constructor
-tags:
-  - API
-  - Audio
-  - ChannelSplitterNode
-  - Constructor
-  - Reference
-  - Splitter
-  - Web Audio
-  - Web Audio API
 browser-compat: api.ChannelSplitterNode.ChannelSplitterNode
 ---
 

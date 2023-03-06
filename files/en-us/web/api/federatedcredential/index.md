@@ -2,14 +2,8 @@
 title: FederatedCredential
 slug: Web/API/FederatedCredential
 page-type: web-api-interface
-tags:
-  - API
-  - Credential Management API
-  - FederatedCredential
-  - Interface
-  - Reference
-  - credential management
-  - Experimental
+status:
+  - experimental
 browser-compat: api.FederatedCredential
 ---
 
@@ -51,15 +45,14 @@ None.
 const cred = new FederatedCredential({
   id,
   name,
-  provider: 'https://account.google.com',
+  provider: "https://account.google.com",
   iconURL,
 });
 
 // Store it
-navigator.credentials.store(cred)
-  .then(() => {
-    // Do something else.
-  });
+navigator.credentials.store(cred).then(() => {
+  // Do something else.
+});
 ```
 
 ## Specifications

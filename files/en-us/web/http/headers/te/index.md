@@ -1,10 +1,6 @@
 ---
 title: TE
 slug: Web/HTTP/Headers/TE
-tags:
-  - HTTP
-  - Reference
-  - header
 browser-compat: http.headers.TE
 ---
 

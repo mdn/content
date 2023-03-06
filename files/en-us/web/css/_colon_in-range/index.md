@@ -2,12 +2,6 @@
 title: ":in-range"
 slug: Web/CSS/:in-range
 page-type: css-pseudo-class
-tags:
-  - CSS
-  - Pseudo-class
-  - Reference
-  - Selector
-  - Web
 browser-compat: css.selectors.in-range
 ---
 
@@ -23,8 +17,10 @@ This pseudo-class is useful for giving the user a visual indication that a field
 
 ## Syntax
 
-```
-:in-range
+```css
+:in-range {
+  /* ... */
+}
 ```
 
 ## Examples

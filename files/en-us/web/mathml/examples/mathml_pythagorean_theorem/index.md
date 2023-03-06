@@ -1,14 +1,6 @@
 ---
 title: Proving the Pythagorean theorem
 slug: Web/MathML/Examples/MathML_Pythagorean_Theorem
-tags:
-  - Beginner
-  - Example
-  - Guide
-  - HTML Math
-  - Math education
-  - MathML
-  - NeedsBeginnerUpdate
 ---
 
 {{QuickLinksWithSubPages("/en-us/docs/Web/MathML/Examples")}}
@@ -19,6 +11,8 @@ We will now prove the [Pythagorean theorem](https://en.wikipedia.org/wiki/Pythag
 the sum of the squares of the other two sides.
 
 i.e., If a and b are the legs and c is the hypotenuse then
+
+<!-- @prettier-ignore -->
 <math>
   <mrow>
     <msup>

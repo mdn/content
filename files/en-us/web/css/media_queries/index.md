@@ -2,13 +2,6 @@
 title: Media queries
 slug: Web/CSS/Media_Queries
 page-type: css-module
-tags:
-  - CSS
-  - Guide
-  - Media Queries
-  - Overview
-  - Reference
-  - Responsive Design
 spec-urls:
   - https://drafts.csswg.org/mediaqueries/
   - https://drafts.csswg.org/css-conditional/

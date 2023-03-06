@@ -2,14 +2,8 @@
 title: ScriptProcessorNode.bufferSize
 slug: Web/API/ScriptProcessorNode/bufferSize
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - ScriptProcessorNode
-  - Web Audio API
-  - bufferSize
-  - Deprecated
+status:
+  - deprecated
 browser-compat: api.ScriptProcessorNode.bufferSize
 ---
 

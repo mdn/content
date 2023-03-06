@@ -2,14 +2,6 @@
 title: WaveShaperNode()
 slug: Web/API/WaveShaperNode/WaveShaperNode
 page-type: web-api-constructor
-tags:
-  - API
-  - Audio
-  - Constructor
-  - Media
-  - Reference
-  - WaveShaperNode
-  - Web Audio API
 browser-compat: api.WaveShaperNode.WaveShaperNode
 ---
 

@@ -1,23 +1,6 @@
 ---
 title: Installing and uninstalling web apps
 slug: Web/Progressive_web_apps/Installing
-tags:
-  - Android
-  - Applications
-  - Apps
-  - Beginner
-  - Chrome
-  - Firefox
-  - Guide
-  - Home Screen
-  - Installing
-  - Launcher
-  - PWA
-  - Progressive web apps
-  - Samsung
-  - Springboard
-  - Uninstalling
-  - Web
 ---
 
 {{QuickLinksWithSubpages("/en-US/docs/Web/Progressive_web_apps/")}}

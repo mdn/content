@@ -2,12 +2,8 @@
 title: VideoFrame
 slug: Web/API/VideoFrame
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Reference
-  - VideoFrame
-  - Experimental
+status:
+  - experimental
 browser-compat: api.VideoFrame
 ---
 
@@ -15,7 +11,7 @@ browser-compat: api.VideoFrame
 
 The **`VideoFrame`** interface of the [Web Codecs API](/en-US/docs/Web/API/WebCodecs_API) represents a frame of a video.
 
-`VideoFrame` is a {{glossary("Transferable objects","transferable object")}}.
+`VideoFrame` is a [transferable object](/en-US/docs/Web/API/Web_Workers_API/Transferable_objects).
 
 ## Description
 
@@ -85,21 +81,20 @@ const media_processor = new MediaStreamTrackProcessor(track);
 
 const reader = media_processor.readable.getReader();
 while (true) {
-    const result = await reader.read();
-    if (result.done)
-      break;
+  const result = await reader.read();
+  if (result.done) break;
 
-    let frame = result.value;
-    if (encoder.encodeQueueSize > 2) {
-      // Too many frames in flight, encoder is overwhelmed
-      // let's drop this frame.
-      frame.close();
-    } else {
-      frame_counter++;
-      const insert_keyframe = frame_counter % 150 === 0;
-      encoder.encode(frame, { keyFrame: insert_keyframe });
-      frame.close();
-    }
+  let frame = result.value;
+  if (encoder.encodeQueueSize > 2) {
+    // Too many frames in flight, encoder is overwhelmed
+    // let's drop this frame.
+    frame.close();
+  } else {
+    frame_counter++;
+    const insert_keyframe = frame_counter % 150 === 0;
+    encoder.encode(frame, { keyFrame: insert_keyframe });
+    frame.close();
+  }
 }
 ```
 

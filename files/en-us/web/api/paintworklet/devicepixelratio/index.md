@@ -2,18 +2,6 @@
 title: PaintWorkletGlobalScope.devicePixelRatio
 slug: Web/API/PaintWorklet/devicePixelRatio
 page-type: web-api-instance-property
-tags:
-  - CSS Paint API
-  - DPI
-  - Houdini
-  - NeedsBrowserCompatibility
-  - NeedsExample
-  - NeedsLiveSample
-  - Property
-  - Reference
-  - Worklet
-  - devicePixelRatio
-  - paintWorklet
 browser-compat: api.PaintWorkletGlobalScope.devicePixelRatio
 ---
 

@@ -1,13 +1,7 @@
 ---
 title: JavaScript
 slug: Web/JavaScript
-page-type: guide
-tags:
-  - JavaScript
-  - Landing
-  - Landing page
-  - Learn
-  - "l10n:priority"
+page-type: landing-page
 ---
 
 {{JsSidebar}}

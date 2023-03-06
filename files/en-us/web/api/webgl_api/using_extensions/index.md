@@ -2,9 +2,6 @@
 title: Using WebGL extensions
 slug: Web/API/WebGL_API/Using_Extensions
 page-type: guide
-tags:
-  - Advanced
-  - WebGL
 ---
 
 {{DefaultAPISidebar("WebGL")}}
@@ -71,6 +68,7 @@ The current extensions are:
 - {{domxref("EXT_texture_filter_anisotropic")}}
 - {{domxref("EXT_texture_norm16")}}
 - {{domxref("KHR_parallel_shader_compile")}}
+- {{domxref("OES_draw_buffers_indexed")}}
 - {{domxref("OES_element_index_uint")}}
 - {{domxref("OES_fbo_render_mipmap")}}
 - {{domxref("OES_standard_derivatives")}}

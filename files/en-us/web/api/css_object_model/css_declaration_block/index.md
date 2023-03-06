@@ -2,12 +2,6 @@
 title: CSS Declaration Block
 slug: Web/API/CSS_Object_Model/CSS_Declaration_Block
 page-type: guide
-tags:
-  - CSS
-  - CSS Object Model
-  - CSS Declaration Block
-  - CSS Declarations
-  - Reference
 spec-urls: https://drafts.csswg.org/cssom/#css-declaration-blocks
 ---
 
@@ -32,7 +26,7 @@ When a {{domxref("CSSStyleDeclaration")}} is returned by a [CSS Object Model (CS
 
 ## Basic example
 
-The following example shows a CSS rule with a declaration block for the {{htmlelement("Heading_elements","&lt;h1&gt;")}} element. The CSS declaration block is the lines between the curly braces.
+The following example shows a CSS rule with a declaration block for the {{htmlelement("Heading_Elements","h1")}} element. The CSS declaration block is the lines between the curly braces.
 
 ```css
 h1 {

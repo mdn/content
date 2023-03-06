@@ -1,15 +1,6 @@
 ---
 title: Permissions-Policy
 slug: Web/HTTP/Headers/Permissions-Policy
-tags:
-  - Authorization
-  - Permissions-Policy
-  - HTTP
-  - Permissions
-  - Reference
-  - Security
-  - Web
-  - header
 browser-compat: http.headers.Permissions-Policy
 ---
 

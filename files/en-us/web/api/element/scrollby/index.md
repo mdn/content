@@ -2,13 +2,6 @@
 title: Element.scrollBy()
 slug: Web/API/Element/scrollBy
 page-type: web-api-instance-method
-tags:
-  - API
-  - CSSOM View
-  - Element
-  - Method
-  - Reference
-  - scrollBy
 browser-compat: api.Element.scrollBy
 ---
 
@@ -59,7 +52,7 @@ Using `options`:
 element.scrollBy({
   top: 100,
   left: 100,
-  behavior: 'smooth'
+  behavior: "smooth",
 });
 ```
 

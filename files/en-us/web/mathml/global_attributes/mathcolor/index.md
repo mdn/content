@@ -1,11 +1,6 @@
 ---
 title: mathcolor
 slug: Web/MathML/Global_attributes/mathcolor
-tags:
-  - Global attributes
-  - MathML
-  - Reference
-  - Deprecated
 browser-compat: mathml.global_attributes.mathcolor
 ---
 
@@ -17,7 +12,7 @@ The **`mathcolor`** [global attribute](/en-US/docs/Web/MathML/Global_attributes)
 
 ## Syntax
 
-```html
+```html-nolint
 <!-- Keyword values -->
 <math mathcolor="currentcolor">
 

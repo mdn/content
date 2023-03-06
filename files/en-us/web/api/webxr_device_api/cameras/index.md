@@ -2,30 +2,6 @@
 title: 'Viewpoints and viewers: Simulating cameras in WebXR'
 slug: Web/API/WebXR_Device_API/Cameras
 page-type: guide
-tags:
-  - 3D
-  - API
-  - AR
-  - Advanced
-  - Cameras
-  - Coordinates
-  - Guide
-  - Location
-  - Motion
-  - Position
-  - VR
-  - Viewers
-  - Viewpoints
-  - WebGL
-  - WebXR
-  - WebXR API
-  - WebXR Device API
-  - XR
-  - XRPose
-  - XRView
-  - XRViewerPose
-  - rotation
-  - transform
 ---
 
 {{DefaultAPISidebar("WebXR Device API")}}

@@ -2,16 +2,8 @@
 title: KeyframeEffect.iterationComposite
 slug: Web/API/KeyframeEffect/iterationComposite
 page-type: web-api-instance-property
-tags:
-  - API
-  - Animation
-  - Experimental
-  - KeyframeEffect
-  - Property
-  - Reference
-  - iterationComposite
-  - waapi
-  - web animations api
+status:
+  - experimental
 browser-compat: api.KeyframeEffect.iterationComposite
 ---
 

@@ -2,16 +2,6 @@
 title: PromiseRejectionEvent.reason
 slug: Web/API/PromiseRejectionEvent/reason
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTML DOM
-  - JavaScript
-  - PromiseRejectionEvent
-  - Promises
-  - Property
-  - Reference
-  - events
-  - reason
 browser-compat: api.PromiseRejectionEvent.reason
 ---
 
@@ -33,7 +23,7 @@ and whatever else you might wish to include.
 ```js
 window.onunhandledrejection = (e) => {
   console.log(e.reason);
-}
+};
 ```
 
 ## Specifications

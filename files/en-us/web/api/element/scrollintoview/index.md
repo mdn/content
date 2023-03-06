@@ -2,16 +2,6 @@
 title: Element.scrollIntoView()
 slug: Web/API/Element/scrollIntoView
 page-type: web-api-instance-method
-tags:
-  - API
-  - CSSOM Views
-  - DOM
-  - Element
-  - Method
-  - Reference
-  - View
-  - scrollIntoView
-  - scrolling
 browser-compat: api.Element.scrollIntoView
 ---
 
@@ -72,8 +62,8 @@ const element = document.getElementById("box");
 
 element.scrollIntoView();
 element.scrollIntoView(false);
-element.scrollIntoView({block: "end"});
-element.scrollIntoView({behavior: "smooth", block: "end", inline: "nearest"});
+element.scrollIntoView({ block: "end" });
+element.scrollIntoView({ behavior: "smooth", block: "end", inline: "nearest" });
 ```
 
 ## Notes

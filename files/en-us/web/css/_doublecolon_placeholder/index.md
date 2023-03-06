@@ -1,13 +1,7 @@
 ---
-title: '::placeholder'
+title: "::placeholder"
 slug: Web/CSS/::placeholder
 page-type: css-pseudo-element
-tags:
-  - '::placeholder'
-  - CSS
-  - Pseudo-element
-  - Reference
-  - Selector
 browser-compat: css.selectors.placeholder
 ---
 
@@ -23,8 +17,10 @@ Only the subset of CSS properties that apply to the {{cssxref("::first-line")}} 
 
 ## Syntax
 
-```
-::placeholder
+```css
+::placeholder {
+  /* ... */
+}
 ```
 
 ## Accessibility concerns

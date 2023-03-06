@@ -2,13 +2,6 @@
 title: SharedWorker.port
 slug: Web/API/SharedWorker/port
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - SharedWorker
-  - Web Workers
-  - port
 browser-compat: api.SharedWorker.port
 ---
 
@@ -31,7 +24,7 @@ using the `SharedWorker.port` property — the port is started using its
 `start()` method:
 
 ```js
-const myWorker = new SharedWorker('worker.js');
+const myWorker = new SharedWorker("worker.js");
 myWorker.port.start();
 ```
 

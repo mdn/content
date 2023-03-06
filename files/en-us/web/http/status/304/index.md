@@ -1,11 +1,6 @@
 ---
 title: 304 Not Modified
 slug: Web/HTTP/Status/304
-tags:
-  - HTTP
-  - Redirection
-  - Reference
-  - Status code
 browser-compat: http.status.304
 ---
 

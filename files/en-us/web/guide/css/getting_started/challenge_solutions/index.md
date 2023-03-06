@@ -1,9 +1,6 @@
 ---
 title: Challenge solutions
 slug: Web/Guide/CSS/Getting_started/Challenge_solutions
-tags:
-  - Beginner
-  - NeedsUpdate
 ---
 
 This page provides solutions to the challenges posed in the [CSS Getting Started](/en-US/docs/Learn/CSS/First_steps) tutorial. These are not the only possible solutions. The sections below correspond to the titles of the tutorial sections.
@@ -315,7 +312,7 @@ The challenges on page [Media](/en-US/docs/Web/CSS/Media_Queries/Using_media_que
 
     ```js
     // JavaScript demonstration
-    function doDemo (button) {
+    function doDemo(button) {
       const square = document.getElementById("square");
       square.style.backgroundColor = "#fa4";
       square.style.marginLeft = "20em";
@@ -323,7 +320,7 @@ The challenges on page [Media](/en-US/docs/Web/CSS/Media_Queries/Using_media_que
       setTimeout(clearDemo, 2000, button);
     }
 
-    function clearDemo (button) {
+    function clearDemo(button) {
       const square = document.getElementById("square");
       square.style.backgroundColor = "transparent";
       square.style.marginLeft = "0em";

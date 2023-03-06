@@ -2,15 +2,8 @@
 title: StylePropertyMapReadOnly.getAll()
 slug: Web/API/StylePropertyMapReadOnly/getAll
 page-type: web-api-instance-method
-tags:
-  - API
-  - CSS Typed Object Model API
-  - Experimental
-  - Houdini
-  - Method
-  - Reference
-  - StylePropertyMapReadOnly
-  - getAll()
+status:
+  - experimental
 browser-compat: api.StylePropertyMapReadOnly.getAll
 ---
 
@@ -43,13 +36,13 @@ contains an item for each background image declared.
 
 ```js
 // get a button element
-const buttonEl = document.querySelector('button');
+const buttonEl = document.querySelector("button");
 
 // we can retrieve all computed styles with `computedStyleMap`
 const allComputedStyles = buttonEl.computedStyleMap();
 
 // use getAll() with the background image property
-const allBkImages = allComputedStyles.getAll('background-image');
+const allBkImages = allComputedStyles.getAll("background-image");
 console.log(allBkImages); // logs an array with each background image as an item
 ```
 

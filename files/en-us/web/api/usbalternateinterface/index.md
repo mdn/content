@@ -2,15 +2,8 @@
 title: USBAlternateInterface
 slug: Web/API/USBAlternateInterface
 page-type: web-api-interface
-tags:
-  - API
-  - Experimental
-  - Interface
-  - NeedsExample
-  - Reference
-  - USBAlternateInterface
-  - WebUSB
-  - WebUSB API
+status:
+  - experimental
 browser-compat: api.USBAlternateInterface
 ---
 

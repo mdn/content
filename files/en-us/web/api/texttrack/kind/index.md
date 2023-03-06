@@ -2,12 +2,6 @@
 title: TextTrack.kind
 slug: Web/API/TextTrack/kind
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - kind
-  - TextTrack
 browser-compat: api.TextTrack.kind
 ---
 
@@ -35,7 +29,7 @@ A string. One of:
 In the following example the value of `kind` is printed to the console.
 
 ```js
-let video = document.querySelector('video');
+let video = document.querySelector("video");
 let track = video.addTextTrack("captions", "Captions", "en");
 track.mode = "showing";
 console.log(track.kind);

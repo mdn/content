@@ -1,6 +1,7 @@
 ---
 title: events
 slug: Mozilla/Add-ons/WebExtensions/API/events
+page-type: webextension-api
 tags:
   - API
   - Add-ons

@@ -2,14 +2,6 @@
 title: ElementInternals.ariaValueNow
 slug: Web/API/ElementInternals/ariaValueNow
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - ariaValueNow
-  - AriaAttributes
-  - AriaMixin
-  - ElementInternals
 browser-compat: api.ElementInternals.ariaValueNow
 ---
 

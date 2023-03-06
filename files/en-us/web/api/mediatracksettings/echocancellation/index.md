@@ -2,17 +2,6 @@
 title: MediaTrackSettings.echoCancellation
 slug: Web/API/MediaTrackSettings/echoCancellation
 page-type: web-api-instance-property
-tags:
-  - API
-  - Audio
-  - Media
-  - Media Capture and Streams API
-  - Media Streams API
-  - MediaTrackSettings
-  - Property
-  - Reference
-  - Settings
-  - echoCancellation
 browser-compat: api.MediaTrackSettings.echoCancellation
 ---
 

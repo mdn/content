@@ -2,13 +2,6 @@
 title: ReadableStream.locked
 slug: Web/API/ReadableStream/locked
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - ReadableStream
-  - Reference
-  - Streams
-  - locked
 browser-compat: api.ReadableStream.locked
 ---
 
@@ -32,7 +25,7 @@ const stream = new ReadableStream({
 
 const reader = stream.getReader();
 
-stream.locked
+stream.locked;
 // should return true, as the stream has been locked to a reader
 ```
 

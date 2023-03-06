@@ -1,8 +1,6 @@
 ---
 title: ARIA guides
 slug: Web/Accessibility/ARIA/ARIA_Guides
-tags:
-  - ARIA
 ---
 
 <section id="Quick_links">

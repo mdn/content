@@ -2,14 +2,6 @@
 title: Using the MediaStream Recording API
 slug: Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recording_API
 page-type: guide
-tags:
-  - API
-  - Example
-  - Guide
-  - MediaRecorder
-  - MediaStream Recording API
-  - NeedsUpdate
-  - Tutorial
 browser-compat: api.MediaRecorder
 ---
 
@@ -58,8 +50,6 @@ However, we wanted to make the third area (which contains the recorded samples y
   overflow: scroll;
 }
 ```
-
-> **Note:** `calc()` has good support across modern browsers too, even going back to Internet Explorer 9.
 
 ### Checkbox hack for showing/hiding
 

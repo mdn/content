@@ -1,12 +1,6 @@
 ---
 title: Service-Worker-Navigation-Preload
 slug: Web/HTTP/Headers/Service-Worker-Navigation-Preload
-tags:
-  - HTTP
-  - Reference
-  - Request header
-  - header
-  - NavigationPreloadManager
 browser-compat: http.headers.Service-Worker-Navigation-Preload
 ---
 

@@ -2,16 +2,6 @@
 title: FetchEvent.preloadResponse
 slug: Web/API/FetchEvent/preloadResponse
 page-type: web-api-instance-property
-tags:
-  - API
-  - FetchEvent
-  - Offline
-  - Property
-  - Reference
-  - Service Workers
-  - Web Performance
-  - Workers
-  - request
 browser-compat: api.FetchEvent.preloadResponse
 ---
 

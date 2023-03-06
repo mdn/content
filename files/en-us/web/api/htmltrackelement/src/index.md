@@ -2,15 +2,6 @@
 title: HTMLTrackElement.src
 slug: Web/API/HTMLTrackElement/src
 page-type: web-api-instance-property
-tags:
-  - HTML
-  - HTML DOM
-  - HTMLTrackElement
-  - Property
-  - Reference
-  - Web
-  - WebVTT
-  - src
 browser-compat: api.HTMLTrackElement.src
 ---
 

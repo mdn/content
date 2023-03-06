@@ -2,13 +2,6 @@
 title: DOMMatrix()
 slug: Web/API/DOMMatrix/DOMMatrix
 page-type: web-api-constructor
-tags:
-  - API
-  - Constructor
-  - Geometry
-  - Geometry Interfaces
-  - Reference
-  - matrix
 browser-compat: api.DOMMatrix.DOMMatrix
 ---
 
@@ -54,7 +47,7 @@ const matrix = new DOMMatrix([
   -Math.sin(angle) * scaleY,
   Math.cos(angle) * scaleY,
   translateX,
-  translateY
+  translateY,
 ]);
 const transformedPoint = point.matrixTransform(matrix);
 ```

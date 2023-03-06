@@ -1,6 +1,7 @@
 ---
 title: get()
 slug: Mozilla/Add-ons/WebExtensions/API/types/BrowserSetting/get
+page-type: webextension-api-function
 tags:
   - API
   - Add-ons

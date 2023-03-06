@@ -2,14 +2,6 @@
 title: AudioListener.upX
 slug: Web/API/AudioListener/upX
 page-type: web-api-instance-property
-tags:
-  - API
-  - Audio
-  - AudioListener
-  - Property
-  - Reference
-  - Web Audio API
-  - upX
 browser-compat: api.AudioListener.upX
 ---
 

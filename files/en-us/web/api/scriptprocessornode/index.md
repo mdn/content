@@ -2,13 +2,8 @@
 title: ScriptProcessorNode
 slug: Web/API/ScriptProcessorNode
 page-type: web-api-interface
-tags:
-  - API
-  - Deprecated
-  - Interface
-  - Reference
-  - ScriptProcessorNode
-  - Web Audio API
+status:
+  - deprecated
 browser-compat: api.ScriptProcessorNode
 ---
 

@@ -2,8 +2,6 @@
 title: HTMLAudioElement.msAudioDeviceType
 slug: Web/API/HTMLAudioElement/msAudioDeviceType
 page-type: web-api-instance-property
-tags:
-  - msAudioDeviceType
 ---
 
 {{APIRef("Audio element")}}

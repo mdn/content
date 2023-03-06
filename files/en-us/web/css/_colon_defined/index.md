@@ -2,13 +2,6 @@
 title: ":defined"
 slug: Web/CSS/:defined
 page-type: css-pseudo-class
-tags:
-  - CSS
-  - Layout
-  - Pseudo-class
-  - Reference
-  - Selector
-  - Web
 browser-compat: css.selectors.defined
 ---
 
@@ -30,8 +23,10 @@ simple-custom:defined {
 
 ## Syntax
 
-```
-:defined
+```css
+:defined {
+  /* ... */
+}
 ```
 
 ## Examples

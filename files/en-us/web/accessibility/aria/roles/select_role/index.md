@@ -1,14 +1,6 @@
 ---
 title: "ARIA: select role"
 slug: Web/Accessibility/ARIA/Roles/select_role
-tags:
-  - Accessibility
-  - ARIA
-  - roles
-  - Reference
-  - ARIA roles
-  - select
-  - select role
 spec-urls: https://w3c.github.io/aria/#select
 ---
 

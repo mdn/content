@@ -2,12 +2,6 @@
 title: String
 slug: Web/JavaScript/Reference/Global_Objects/String
 page-type: javascript-class
-tags:
-  - Class
-  - ECMAScript 2015
-  - JavaScript
-  - Reference
-  - String
 browser-compat: javascript.builtins.String
 ---
 
@@ -31,7 +25,7 @@ with the {{jsxref("String.prototype.substring()", "substring()")}} method.
 Strings can be created as primitives, from string literals, or as objects, using the
 {{jsxref("String/String", "String()")}} constructor:
 
-```js
+```js-nolint
 const string1 = "A string primitive";
 const string2 = 'Also a string primitive';
 const string3 = `Yet another string primitive`;
@@ -283,7 +277,14 @@ You must be careful which level of characters you are iterating on. For example,
 
 ## Instance properties
 
-- {{jsxref("String.prototype.length")}}
+These properties are defined on `String.prototype` and shared by all `String` instances.
+
+- {{jsxref("Object/constructor", "String.prototype.constructor")}}
+  - : The constructor function that created the instance object. For `String` instances, the initial value is the {{jsxref("String/String", "String")}} constructor.
+
+These properties are own properties of each `String` instance.
+
+- {{jsxref("String/length", "length")}}
   - : Reflects the `length` of the string. Read-only.
 
 ## Instance methods

@@ -1,13 +1,6 @@
 ---
 title: aria-disabled
 slug: Web/Accessibility/ARIA/Attributes/aria-disabled
-tags:
-  - Accessibility
-  - ARIA
-  - ARIA attribute
-  - ARIA property
-  - aria-disabled
-  - Reference
 spec-urls: https://w3c.github.io/aria/#aria-disabled
 ---
 

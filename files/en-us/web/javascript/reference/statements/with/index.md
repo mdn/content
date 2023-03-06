@@ -2,11 +2,8 @@
 title: with
 slug: Web/JavaScript/Reference/Statements/with
 page-type: javascript-statement
-tags:
-  - Deprecated
-  - JavaScript
-  - Language feature
-  - Statement
+status:
+  - deprecated
 browser-compat: javascript.statements.with
 ---
 

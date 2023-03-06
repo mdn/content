@@ -2,15 +2,8 @@
 title: CSSNumericValue.max()
 slug: Web/API/CSSNumericValue/max
 page-type: web-api-instance-method
-tags:
-  - API
-  - CSS Typed Object Model API
-  - CSSNumericValue
-  - Experimental
-  - Houdini
-  - Method
-  - Reference
-  - max()
+status:
+  - experimental
 browser-compat: api.CSSNumericValue.max
 ---
 

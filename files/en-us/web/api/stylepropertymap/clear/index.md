@@ -2,15 +2,8 @@
 title: StylePropertyMap.clear()
 slug: Web/API/StylePropertyMap/clear
 page-type: web-api-instance-method
-tags:
-  - API
-  - CSS Typed Object Model API
-  - Houdini
-  - Method
-  - Reference
-  - StylePropertyMap
-  - clear()
-  - Experimental
+status:
+  - experimental
 browser-compat: api.StylePropertyMap.clear
 ---
 
@@ -39,7 +32,7 @@ The following example removes all styles within the elements [style attribute](/
 
 ```js
 // get the button element
-const buttonEl = document.querySelector('.example');
+const buttonEl = document.querySelector(".example");
 
 // remove all styles from the style attribute
 buttonEl.attributeStyleMap.clear();

@@ -2,8 +2,8 @@
 title: "Element: beforematch event"
 slug: Web/API/Element/beforematch_event
 page-type: web-api-event
-tags:
-  - Experimental
+status:
+  - experimental
 browser-compat: api.Element.beforematch_event
 ---
 

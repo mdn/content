@@ -2,12 +2,6 @@
 title: File.webkitRelativePath
 slug: Web/API/File/webkitRelativePath
 page-type: web-api-instance-property
-tags:
-  - API
-  - File API
-  - Property
-  - Read-only
-  - Reference
 browser-compat: api.File.webkitRelativePath
 ---
 
@@ -46,10 +40,10 @@ output {
 ### JavaScript
 
 ```js
-const output = document.getElementById('output');
-const filepicker = document.getElementById('filepicker');
+const output = document.getElementById("output");
+const filepicker = document.getElementById("filepicker");
 
-filepicker.addEventListener('change', (event) => {
+filepicker.addEventListener("change", (event) => {
   const files = event.target.files;
 
   for (const file of files) {

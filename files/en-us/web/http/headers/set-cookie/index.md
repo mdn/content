@@ -1,13 +1,6 @@
 ---
 title: Set-Cookie
 slug: Web/HTTP/Headers/Set-Cookie
-tags:
-  - Cookies
-  - HTTP
-  - Reference
-  - Response
-  - header
-  - samesite
 browser-compat: http.headers.Set-Cookie
 ---
 
@@ -69,7 +62,7 @@ Set-Cookie: <cookie-name>=<cookie-value>; Domain=<domain-value>; Secure; HttpOnl
 
     A `<cookie-value>` can optionally be wrapped in double quotes and include any US-ASCII character excluding a control character, {{glossary("Whitespace")}}, double quotes, comma, semicolon, and backslash.
 
-    **Encoding**: Many implementations perform URL encoding on cookie values.
+    **Encoding**: Many implementations perform [URL encoding](https://en.wikipedia.org/wiki/URL_encoding) on cookie values.
     However, this is not required by the RFC specification.
     The URL encoding does help to satisfy the requirements of the characters allowed for `<cookie-value>`.
 
@@ -83,6 +76,8 @@ Set-Cookie: <cookie-name>=<cookie-value>; Domain=<domain-value>; Secure; HttpOnl
 - `Domain=<domain-value>` {{optional_inline}}
 
   - : Defines the host to which the cookie will be sent.
+
+    Only the current domain can be set as the value, or a domain of a higher order, unless it is a public suffix. Setting the domain will make the cookie available to it, as well as to all its subdomains.
 
     If omitted, this attribute defaults to the host of the current document URL, not including subdomains.
 

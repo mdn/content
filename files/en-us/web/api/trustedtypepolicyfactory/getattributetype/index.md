@@ -2,12 +2,6 @@
 title: TrustedTypePolicyFactory.getAttributeType()
 slug: Web/API/TrustedTypePolicyFactory/getAttributeType
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - getAttributeType
-  - TrustedTypePolicyFactory
 browser-compat: api.TrustedTypePolicyFactory.getAttributeType
 ---
 
@@ -49,7 +43,7 @@ Or, null.
 In this example, passing the {{htmlelement("script")}} element and {{htmlattrxref("src")}} attribute to `getAttributeType` returns "TrustedScriptURL".
 
 ```js
-console.log(trustedTypes.getAttributeType('script', 'src')); // "TrustedScriptURL"
+console.log(trustedTypes.getAttributeType("script", "src")); // "TrustedScriptURL"
 ```
 
 ## Specifications

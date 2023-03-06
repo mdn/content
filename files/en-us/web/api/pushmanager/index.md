@@ -2,13 +2,6 @@
 title: PushManager
 slug: Web/API/PushManager
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Push
-  - Push API
-  - Reference
-  - Service Workers
 browser-compat: api.PushManager
 ---
 
@@ -50,17 +43,19 @@ this.onpush = (event) => {
   console.log(event.data);
   // From here we can write the data to IndexedDB, send it to any open
   // windows, display a notification, etc.
-}
+};
 
-navigator.serviceWorker.register('serviceworker.js').then(
-  (serviceWorkerRegistration) => {
+navigator.serviceWorker
+  .register("serviceworker.js")
+  .then((serviceWorkerRegistration) => {
     serviceWorkerRegistration.pushManager.subscribe().then(
       (pushSubscription) => {
         console.log(pushSubscription.endpoint);
         // The push subscription details needed by the application
         // server are now available, and can be sent to it using,
         // for example, an XMLHttpRequest.
-      }, (error) => {
+      },
+      (error) => {
         console.error(error);
       }
     );

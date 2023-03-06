@@ -2,13 +2,6 @@
 title: image-rendering
 slug: Web/CSS/image-rendering
 page-type: css-property
-tags:
-  - CSS
-  - CSS Images
-  - CSS Property
-  - Reference
-  - image-rendering
-  - recipe:css-property
 browser-compat: css.properties.image-rendering
 ---
 

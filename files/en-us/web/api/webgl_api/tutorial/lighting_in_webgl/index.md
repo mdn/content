@@ -2,19 +2,6 @@
 title: Lighting in WebGL
 slug: Web/API/WebGL_API/Tutorial/Lighting_in_WebGL
 page-type: guide
-tags:
-  - 3D
-  - Fragments
-  - Graphics
-  - Guide
-  - Light Sources
-  - Shaders
-  - Shading
-  - Tutorial
-  - Vertexes
-  - WebGL
-  - lighting
-  - vertices
 ---
 
 {{DefaultAPISidebar("WebGL")}} {{PreviousNext("Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL", "Web/API/WebGL_API/Tutorial/Animating_textures_in_WebGL")}}
