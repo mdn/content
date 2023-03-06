@@ -4,7 +4,7 @@ slug: Web/MathML/Global_attributes/mathsize
 browser-compat: mathml.global_attributes.mathsize
 ---
 
-{{QuickLinksWithSubPages("/en-us/docs/Web/MathML/Global_attributes")}}{{Deprecated_Header}}
+{{MathMLRef}}{{Deprecated_Header}}
 
 The **`mathsize`** [global attribute](/en-US/docs/Web/MathML/Global_attributes) sets the [font-size](/en-US/docs/Web/CSS/font-size) of a MathML element.
 
