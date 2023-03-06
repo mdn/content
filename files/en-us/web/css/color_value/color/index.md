@@ -41,12 +41,12 @@ color(display-p3 1 0.5 0 / .5);
 The following example shows the effect of varying the lightness, a-axis, and b-axis values of the `color()` function.
 
 ```html
-<div id="red-a98-rgb"></div>
-<div id="red-prophoto-rgb"></div>
-<div id="green-srgb-linear"></div>
-<div id="green-display-p3"></div>
-<div id="blue-rec2020"></div>
-<div id="blue-srgb"></div>
+<div data-color="red-a98-rgb"></div>
+<div data-color="red-prophoto-rgb"></div>
+<div data-color="green-srgb-linear"></div>
+<div data-color="green-display-p3"></div>
+<div data-color="blue-rec2020"></div>
+<div data-color="blue-srgb"></div>
 ```
 
 ```css hidden
@@ -61,22 +61,22 @@ div {
 ```
 
 ```css
-#red-a98-rgb {
+[data-color="red-a98-rgb"] {
   background-color: color(a98-rgb 1 0 0);
 }
-#red-prophoto-rgb {
+[data-color="red-prophoto-rgb"] {
   background-color: color(prophoto-rgb 1 0 0);
 }
-#green-srgb-linear {
+[data-color="green-srgb-linear"] {
   background-color: color(srgb-linear 0 1 0);
 }
-#green-display-p3 {
+[data-color="green-display-p3"] {
   background-color: color(display-p3 0 1 0);
 }
-#blue-rec2020 {
+[data-color="blue-rec2020"] {
   background-color: color(rec2020 0 0 1);
 }
-#blue-srgb {
+[data-color="blue-srgb"] {
   background-color: color(srgb 0 0 1);
 }
 ```
@@ -88,9 +88,9 @@ div {
 The following example shows how to use `xyz` colorspaces to specify a color.
 
 ```html
-<div id="red"></div>
-<div id="green"></div>
-<div id="blue"></div>
+<div data-color="red"></div>
+<div data-color="green"></div>
+<div data-color="blue"></div>
 ```
 
 ```css hidden
@@ -105,15 +105,15 @@ div {
 ```
 
 ```css
-#red {
+[data-color="red"] {
   background-color: color(xyz 45 20 0);
 }
 
-#green {
+[data-color="green"] {
   background-color: color(xyz-d50 0.3 80 0.3);
 }
 
-#blue {
+[data-color="blue"] {
   background-color: color(xyz-d65 5 0 50);
 }
 ```
@@ -122,10 +122,12 @@ div {
 
 ### Using color-gamut media queries with color()
 
-The following example shows how to use the `color-gamut` media query to detect support for `srgb` and to apply a different color in that case.
+This example shows how to use the [`color-gamut`](/en-US/docs/Web/CSS/@media/color-gamut) media query to detect support for a particular colorspace and use that colorspace to specify a color.
 
 ```html
-<div class="blue"></div>
+<div></div>
+<div></div>
+<div></div>
 ```
 
 ```css hidden
@@ -140,13 +142,21 @@ div {
 ```
 
 ```css
-.blue {
-  background-color: lightblue;
+@media (color-gamut: p3) {
+  div {
+    background-color: color(display-p3 0 0 1);
+  }
 }
 
 @media (color-gamut: srgb) {
-  .blue {
-    background-color: color(srgb 48% 86% 92%);
+  div:nth-child(2) {
+    background-color: color(srgb 0 0 1);
+  }
+}
+
+@media (color-gamut: rec2020) {
+  div:nth-child(3) {
+    background-color: color(rec2020 0 0 1);
   }
 }
 ```
@@ -163,6 +173,6 @@ div {
 
 ## See also
 
-- [The `<color >` data type](/en-US/docs/Web/CSS/color_value) for a list of all color notations
+- [The `<color>` data type](/en-US/docs/Web/CSS/color_value) for a list of all color notations
 - [`color-gamut`](/en-US/docs/Web/CSS/@media/color-gamut) media feature
 - [Wide Gamut Color in CSS with Display-p3](https://webkit.org/blog/10042/wide-gamut-color-in-css-with-display-p3/)

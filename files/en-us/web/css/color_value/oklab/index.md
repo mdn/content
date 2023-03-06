@@ -40,6 +40,9 @@ oklab(59.69% 0.1007 0.1191 / 0.5);
   - `b` is a {{cssxref("&lt;number&gt;")}} between `-0.4` and `0.4` or a {{cssxref("&lt;percentage&gt;")}} between `-100%` and `100%`, specifying the distance along the `b` axis in the Oklab colorspace, that is how blue/yellow the color is.
   - `A` is a {{cssxref("&lt;number&gt;")}} between `0` and `1`, or a {{cssxref("&lt;percentage&gt;")}}, where the number `1` corresponds to `100%` (full opacity), representing the transparency (or alpha channel) of the color.
 
+> **Note:** Usually when percentage values have a numeric equivalent in CSS, `100%` is equal to the number `1`.
+> This case is notable where `100%` is equal to the number `100` for the `L` value and `0.4` for the `a` and `b` values.
+
 ### Formal syntax
 
 {{csssyntax}}
@@ -51,14 +54,14 @@ oklab(59.69% 0.1007 0.1191 / 0.5);
 The following example shows the effect of varying the lightness, a-axis, and b-axis values of the `oklab()` function.
 
 ```html
-<div id="blue"></div>
-<div id="blue-light"></div>
+<div data-color="blue"></div>
+<div data-color="blue-light"></div>
 
-<div id="red"></div>
-<div id="red-a"></div>
+<div data-color="red"></div>
+<div data-color="red-a"></div>
 
-<div id="green"></div>
-<div id="green-b"></div>
+<div data-color="green"></div>
+<div data-color="green-b"></div>
 ```
 
 ```css hidden
@@ -73,24 +76,24 @@ div {
 ```
 
 ```css
-#blue {
+[data-color="blue"] {
   background-color: oklab(0.5 -0.3 -0.4);
 }
-#blue-light {
+[data-color="blue-light"] {
   background-color: oklab(0.7 -0.3 -0.4);
 }
 
-#red {
+[data-color="red"] {
   background-color: oklab(100% 0.4 0.4);
 }
-#red-a {
+[data-color="red-a"] {
   background-color: oklab(100% 0.2 0.4);
 }
 
-#green {
+[data-color="green"] {
   background-color: oklab(100% -100% 0.4);
 }
-#green-b {
+[data-color="green-b"] {
   background-color: oklab(100% -100% 0.6);
 }
 ```
@@ -105,8 +108,8 @@ Giving the `#red-alpha` element an opacity of `0.4` makes it appear more transpa
 
 ```html
 <div id="background-div">
-  <div id="red"></div>
-  <div id="red-alpha"></div>
+  <div data-color="red"></div>
+  <div data-color="red-alpha"></div>
 </div>
 ```
 
@@ -119,19 +122,18 @@ div {
   display: inline-block;
   border: 1px solid black;
 }
-```
-
-```css
 #background-div {
   background-color: lightblue;
   width: 150px;
   height: 40px;
 }
+```
 
-#red {
+```css
+[data-color="red"] {
   background-color: oklab(50% 130 20);
 }
-#red-alpha {
+[data-color="red-alpha"] {
   background-color: oklab(50% 130 20 / 0.4);
 }
 ```
@@ -148,6 +150,6 @@ div {
 
 ## See also
 
-- The [`<color >` data type](/en-US/docs/Web/CSS/color_value) for a list of all color notations
+- The [`<color>` data type](/en-US/docs/Web/CSS/color_value) for a list of all color notations
 - {{cssxref("color_value/oklch",'oklch()')}} use the same color space as `oklab()` but a polar coordinate system.
 - [A perceptual color space for image processing](https://bottosson.github.io/posts/oklab/)

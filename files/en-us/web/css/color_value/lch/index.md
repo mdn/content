@@ -31,6 +31,9 @@ lch(52.2345% 72.2 56.2 / .5);
 
   - `A` (alpha) can be a {{cssxref("&lt;number&gt;")}} between `0` and `1`, or a {{cssxref("&lt;percentage&gt;")}}, where the number `1` corresponds to `100%` (full opacity).
 
+> **Note:** Usually when percentage values have a numeric equivalent in CSS, `100%` is equal to the number `1`.
+> This case is notable where `100%` is equal to the number `100` for the `L` value and `150` for the `C` value.
+
 ### Formal syntax
 
 {{csssyntax}}
@@ -42,14 +45,14 @@ lch(52.2345% 72.2 56.2 / .5);
 The following example shows the effect of varying the `L` (lightness), `C` (chroma), and `H` (hue) values of the `lch()` functional notation.
 
 ```html
-<div id="blue"></div>
-<div id="blue-light"></div>
+<div data-color="blue"></div>
+<div data-color="blue-light"></div>
 
-<div id="red"></div>
-<div id="red-chroma"></div>
+<div data-color="red"></div>
+<div data-color="red-chroma"></div>
 
-<div id="green"></div>
-<div id="green-hue"></div>
+<div data-color="green"></div>
+<div data-color="green-hue"></div>
 ```
 
 ```css hidden
@@ -64,24 +67,24 @@ div {
 ```
 
 ```css
-#red {
+[data-color="red"] {
   background-color: lch(50% 130 20);
 }
-#red-chroma {
+[data-color="red-chroma"] {
   background-color: lch(100% 30 20);
 }
 
-#green {
+[data-color="green"] {
   background-color: lch(50% 132 130);
 }
-#green-hue {
+[data-color="green-hue"] {
   background-color: lch(50% 132 180);
 }
 
-#blue {
+[data-color="blue"] {
   background-color: lch(0% 100 240);
 }
-#blue-light {
+[data-color="blue-light"] {
   background-color: lch(100% 100 240);
 }
 ```
@@ -96,8 +99,8 @@ Giving `A` a value of `0.4` makes the color 40% opaque.
 
 ```html
 <div id="background-div">
-  <div id="red"></div>
-  <div id="red-alpha"></div>
+  <div data-color="red"></div>
+  <div data-color="red-alpha"></div>
 </div>
 ```
 
@@ -110,19 +113,18 @@ div {
   display: inline-block;
   border: 1px solid black;
 }
-```
-
-```css
 #background-div {
   background-color: lch(100% 100 240);
   width: 150px;
   height: 40px;
 }
+```
 
-#red {
+```css
+[data-color="red"] {
   background-color: lch(50% 130 20);
 }
-#red-alpha {
+[data-color="red-alpha"] {
   background-color: lch(50% 130 20 / 0.4);
 }
 ```
@@ -139,6 +141,6 @@ div {
 
 ## See also
 
-- The [`<color >` data type](/en-US/docs/Web/CSS/color_value) for a list of all color notations
+- The [`<color>` data type](/en-US/docs/Web/CSS/color_value) for a list of all color notations
 - [LCH colors in CSS: what, why, and how?](https://lea.verou.me/2020/04/lch-colors-in-css-what-why-and-how/)
 - [Safari Technology Preview 122 release notes](https://webkit.org/blog/11577/release-notes-for-safari-technology-preview-122/): includes `lch()` and {{cssxref("color_value/lab",'lab()')}} colors.

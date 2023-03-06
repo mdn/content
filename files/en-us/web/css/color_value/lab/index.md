@@ -31,6 +31,9 @@ lab(52.2345% 40.1645 59.9971 / .5);
 
   - `A` (alpha) can be a {{cssxref("&lt;number&gt;")}} between `0` and `1`, or a {{cssxref("&lt;percentage&gt;")}}, where the number `1` corresponds to `100%` (full opacity).
 
+> **Note:** Usually when percentage values have a numeric equivalent in CSS, `100%` is equal to the number `1`.
+> This case is notable where `100%` is equal to the number `100` for the `L` value and `125` for the `a` and `b` values.
+
 ### Formal syntax
 
 {{csssyntax}}
@@ -42,14 +45,14 @@ lab(52.2345% 40.1645 59.9971 / .5);
 The following example shows the effect of varying the lightness, a-axis, and b-axis values of the `lab()` function.
 
 ```html
-<div id="red"></div>
-<div id="red-a"></div>
+<div data-color="red"></div>
+<div data-color="red-a"></div>
 
-<div id="green"></div>
-<div id="green-b"></div>
+<div data-color="green"></div>
+<div data-color="green-b"></div>
 
-<div id="blue"></div>
-<div id="blue-light"></div>
+<div data-color="blue"></div>
+<div data-color="blue-light"></div>
 ```
 
 ```css hidden
@@ -64,24 +67,24 @@ div {
 ```
 
 ```css
-#red {
+[data-color="red"] {
   background-color: lab(100 125 125);
 }
-#red-a {
+[data-color="red-a"] {
   background-color: lab(100 110 125);
 }
 
-#green {
+[data-color="green"] {
   background-color: lab(75% -120 125);
 }
-#green-b {
+[data-color="green-b"] {
   background-color: lab(75% -120 10);
 }
 
-#blue {
+[data-color="blue"] {
   background-color: lab(0 -120 -120);
 }
-#blue-light {
+[data-color="blue-light"] {
   background-color: lab(70 -120 -120);
 }
 ```
@@ -96,8 +99,8 @@ Giving `A` a value of `0.4` makes the color 40% opaque.
 
 ```html
 <div id="background-div">
-  <div id="red"></div>
-  <div id="red-alpha"></div>
+  <div data-color="red"></div>
+  <div data-color="red-alpha"></div>
 </div>
 ```
 
@@ -110,19 +113,18 @@ div {
   display: inline-block;
   border: 1px solid black;
 }
-```
-
-```css
 #background-div {
   background-color: lightblue;
   width: 150px;
   height: 40px;
 }
+```
 
-#red {
+```css
+[data-color="red"] {
   background-color: lab(100 125 125);
 }
-#red-alpha {
+[data-color="red-alpha"] {
   background-color: lab(100 125 125 / 0.4);
 }
 ```
@@ -139,6 +141,6 @@ div {
 
 ## See also
 
-- The [`<color >` data type](/en-US/docs/Web/CSS/color_value) for a list of all color notations
+- The [`<color>` data type](/en-US/docs/Web/CSS/color_value) for a list of all color notations
 - [LCH colors in CSS: what, why, and how?](https://lea.verou.me/2020/04/lch-colors-in-css-what-why-and-how/)
 - [Safari Technology Preview 122 release notes](https://webkit.org/blog/11577/release-notes-for-safari-technology-preview-122/): includes `lab()` and {{cssxref("color_value/lch",'lch()')}} colors.
