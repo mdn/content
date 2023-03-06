@@ -9,6 +9,8 @@ tags:
   - Tools
 ---
 
+{{SVGRef}}
+
 {{ PreviousNext("Web/SVG/Tutorial/SVG_Image_Tag", "Web/SVG/Tutorial/SVG_and_CSS") }}
 
 Now that we covered the basics of the SVG internals, we will take a look at some tools to work with SVG files.

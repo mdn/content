@@ -9,6 +9,8 @@ tags:
   - SVG:Tutorial
 ---
 
+{{SVGRef}}
+
 {{ PreviousNext("Web/SVG/Tutorial/Paths", "Web/SVG/Tutorial/Gradients") }}
 
 There are several ways to color shapes (including specifying attributes on the object) using inline [CSS](/en-US/docs/Glossary/CSS), an embedded CSS section, or an external CSS file. Most [SVG](/en-US/docs/Glossary/SVG) you'll find around the web use inline CSS, but there are advantages and disadvantages associated with each type.

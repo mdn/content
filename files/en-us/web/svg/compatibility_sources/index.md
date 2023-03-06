@@ -6,6 +6,8 @@ tags:
   - SVG
 ---
 
+{{SVGRef}}
+
 The following sources are used for the compatibility tables on SVG elements and attributes:
 
 - [https://developer.mozilla.org/en-US/docs/Web/SVG/SVG_1.1_Support_in_Firefox](/en-US/docs/Web/SVG/SVG_1.1_Support_in_Firefox) together with its revision history for Firefox

@@ -8,6 +8,8 @@ tags:
   - SVG:Tutorial
 ---
 
+{{SVGRef}}
+
 {{ PreviousNext("Web/SVG/Tutorial/Fills_and_Strokes", "Web/SVG/Tutorial/Patterns") }}
 
 Perhaps more exciting than just fills and strokes is the fact that you can also create and apply gradients as either fills or strokes.

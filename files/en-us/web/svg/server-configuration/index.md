@@ -6,4 +6,6 @@ tags:
   - SVG
 ---
 
+{{SVGRef}}
+
 See [SVG Server Settings](https://www.w3.org/services/svg-server/).

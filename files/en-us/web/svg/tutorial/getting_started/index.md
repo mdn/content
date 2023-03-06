@@ -9,6 +9,8 @@ tags:
   - SVG:Tutorial
 ---
 
+{{SVGRef}}
+
 {{ PreviousNext("Web/SVG/Tutorial/Introduction", "Web/SVG/Tutorial/Positions") }}
 
 ## A simple example
