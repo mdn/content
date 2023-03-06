@@ -39,13 +39,14 @@ async function init() {
   let device = await adapter.requestDevice(descriptor);
 
   // Use lost to handle lost devices
-  let info = await device.lost;
-  console.error(`WebGPU device was lost: ${info.message}`);
-  gpuDevice = null;
+  device.lost.then((info) => {
+    console.error(`WebGPU device was lost: ${info.message}`);
+    device = null;
 
-  if (info.reason !== "destroyed") {
-    init();
-  }
+    if (info.reason !== "destroyed") {
+      init();
+    }
+  });
 
   // ...
 }

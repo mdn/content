@@ -35,7 +35,7 @@ A {{domxref("GPUExternalTexture")}} object instance.
 
 ### Validation
 
-If any of the following are false, a {{domxref("GPUValidationError")}} is generated:
+The following criteria must be met when calling **`importExternalTexture()`**, otherwise a {{domxref("GPUValidationError")}} is generated and an invalid {{domxref("GPUExternalTexture")}} object is returned:
 
 - The video snapshot is usable (e.g. the video source is loaded properly, and doesn't have a width or height of 0).
 

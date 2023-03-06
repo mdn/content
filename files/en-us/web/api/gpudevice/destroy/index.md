@@ -16,6 +16,7 @@ Note that:
 
 - Any commands currently enqueued on the device's {{domxref("GPUQueue")}} will be executed before the device is destroyed.
 - Any WebGPU resources created using the device (buffers, textures, etc.) are also destroyed.
+- Any mapped buffers created using the device will be unmapped.
 
 ## Syntax
 

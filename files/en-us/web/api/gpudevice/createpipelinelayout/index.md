@@ -33,7 +33,7 @@ A {{domxref("GPUPipelineLayout")}} object instance.
 
 ### Validation
 
-If any of the following are false, a {{domxref("GPUValidationError")}} is generated:
+The following criteria must be met when calling **`createPipelineLayout()`**, otherwise a {{domxref("GPUValidationError")}} is generated and an invalid {{domxref("GPUPipelineLayout")}} object is returned:
 
 - The {{domxref("GPUBindGroupLayout")}} objects in `bindGroupLayouts` are valid.
 - The number of {{domxref("GPUBindGroupLayout")}} objects in `bindGroupLayouts` is less than the {{domxref("GPUDevice")}}'s `maxBindGroups` {{domxref("GPUSupportedLimits", "limit", "", "nocode")}}.
@@ -46,13 +46,13 @@ If any of the following are false, a {{domxref("GPUValidationError")}} is genera
 
 The following snippet:
 
-- Creates a {{domxref("GPUBindGroupLayout")}} that describes a binding with a uniform buffer, a texture, and a sampler.
-- Creates a {{domxref("GPUBindGroup")}} and a {{domxref("GPUPipelineLayout")}} based on the {{domxref("GPUBindGroupLayout")}}.
+- Creates a {{domxref("GPUBindGroupLayout")}} that describes a binding with a buffer, a texture, and a sampler.
+- Creates a {{domxref("GPUPipelineLayout")}} based on the {{domxref("GPUBindGroupLayout")}}.
 
 ```js
 // ...
 
-const bindGroupLayout = gpuDevice.createBindGroupLayout({
+const bindGroupLayout = device.createBindGroupLayout({
   entries: [
     {
       binding: 0,
@@ -72,25 +72,7 @@ const bindGroupLayout = gpuDevice.createBindGroupLayout({
   ],
 });
 
-const bindGroup = gpuDevice.createBindGroup({
-  layout: bindGroupLayout,
-  entries: [
-    {
-      binding: 0,
-      resource: { buffer: buffer },
-    },
-    {
-      binding: 1,
-      resource: texture,
-    },
-    {
-      binding: 2,
-      resource: sampler,
-    },
-  ],
-});
-
-const pipelineLayout = gpuDevice.createPipelineLayout({
+const pipelineLayout = device.createPipelineLayout({
   bindGroupLayouts: [bindGroupLayout],
 });
 

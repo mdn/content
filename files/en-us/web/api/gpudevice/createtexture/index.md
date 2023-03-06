@@ -29,7 +29,7 @@ createTexture(descriptor)
       - : An enumerated value indicating the dimension level of the texture. Possible values are:
 
         - `"1d"`: The texture is one-dimensional.
-        - `"2d"`: The texture is an array of two-dimensional layers.
+        - `"2d"`: The texture is two-dimensional or an array of two-dimensional layers.
         - `"3d"`: The texture is three-dimensional.
 
         `dimension` defaults to `"2d"` if the value is omitted.
@@ -87,7 +87,7 @@ A {{domxref("GPUTexture")}} object instance.
 
 ### Validation
 
-If any of the following are false, a {{domxref("GPUValidationError")}} is generated:
+The following criteria must be met when calling **`createTexture()`**, otherwise a {{domxref("GPUValidationError")}} is generated and an invalid {{domxref("GPUTexture")}} object is returned:
 
 - A valid `usage` is specified.
 - The values specified in `size` (width, height, or depth/array layer count) are greater than 0.

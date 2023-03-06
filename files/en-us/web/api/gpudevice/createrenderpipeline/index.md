@@ -23,21 +23,21 @@ createRenderPipeline(descriptor)
 - `descriptor`
   - : An object containing the following properties:
     - `depthStencil` {{optional_inline}}
-      - : An object describing depth-stencil properties including testing, operations, and bias.
+      - : An object (see [`depthStencil` object structure](/en-US/docs/Web/API/GPUDevice/createRenderPipeline#depthstencil_object_structure)) describing depth-stencil properties including testing, operations, and bias.
     - `fragment` {{optional_inline}}
-      - : An object describing the fragment shader entry point of the pipeline and its output colors. If no fragment shader entry point is defined, the pipeline will not produce any color attachment outputs, but it still performs rasterization and produces depth values based on the vertex position output. The depth testing and stencil operations can still be used.
+      - : An object (see [`fragment` object structure](/en-US/docs/Web/API/GPUDevice/createRenderPipeline#fragment_object_structure)) describing the fragment shader entry point of the pipeline and its output colors. If no fragment shader entry point is defined, the pipeline will not produce any color attachment outputs, but it still performs rasterization and produces depth values based on the vertex position output. The depth testing and stencil operations can still be used.
     - `label` {{optional_inline}}
       - : A string providing a label that can be used to identify the object, for example in {{domxref("GPUError")}} messages or console warnings.
     - `layout`
       - : Defines the layout (structure, purpose, and type) of all the GPU resources (buffers, textures, etc.) used during the execution of the pipeline. Possible values are:
         - A {{domxref("GPUPipelineLayout")}} object, created using {{domxref("GPUDevice.createPipelineLayout()")}}, which allows the GPU to figure out how to run the pipeline most efficiently ahead of time.
-        - A string of `"auto"`, which causes the pipeline to generate an implicit bind group layout based on any bindings defined in the shader code.
+        - A string of `"auto"`, which causes the pipeline to generate an implicit bind group layout based on any bindings defined in the shader code. If `"auto"` is used, the generated bind group layouts may only be used with the current pipeline.
     - `multisample` {{optional_inline}}
-      - : An object describing how the pipeline interacts with a render pass's multisampled attachments.
+      - : An object (see [`multisample` object structure](/en-US/docs/Web/API/GPUDevice/createRenderPipeline#multisample_object_structure)) describing how the pipeline interacts with a render pass's multisampled attachments.
     - `primitive` {{optional_inline}}
-      - : An object describing how a pipeline constructs and rasterizes primitives from its vertex inputs.
+      - : An object (see [`primitive` object structure](/en-US/docs/Web/API/GPUDevice/createRenderPipeline#primitive_object_structure)) describing how a pipeline constructs and rasterizes primitives from its vertex inputs.
     - `vertex`
-      - : An object describing the vertex shader entry point of the pipeline and its input buffer layouts.
+      - : An object (see [`vertex` object structure](/en-US/docs/Web/API/GPUDevice/createRenderPipeline#depthstencil_object_structure)) describing the vertex shader entry point of the pipeline and its input buffer layouts.
 
 ### depthStencil object structure
 
@@ -49,7 +49,7 @@ The `depthStencil` object can contain the following properties:
   - : A number representing the maximum depth bias of a fragment. If omitted, `depthBiasClamp` defaults to 0.
 - `depthBiasSlopeScale` {{optional_inline}}
   - : A number representing a depth bias that scales with the fragment's slope. If omitted, `depthBiasSlopeScale` defaults to 0.
-- `depthCompare` {{optional_inline}}
+- `depthCompare`
 
   - : An enumerated value specifying the comparison operation used to test fragment depths against `depthStencilAttachment` depth values. Possible values are:
 
@@ -62,10 +62,8 @@ The `depthStencil` object can contain the following properties:
     - `"greater-equal"`: A provided value passes the comparison test if it is greater than or equal to the sampled value.
     - `"always"`: Comparison tests always pass.
 
-    If omitted, `depthCompare` defaults to `"always"`.
-
-- `depthWriteEnabled` {{optional_inline}}
-  - : A boolean. A value of `true` indicates that the {{domxref("GPURenderPipeline")}} can modify `depthStencilAttachment` depth values after creation. If omitted, `depthWriteEnabled` defaults to `false`.
+- `depthWriteEnabled`
+  - : A boolean. A value of `true` specifies that the {{domxref("GPURenderPipeline")}} can modify `depthStencilAttachment` depth values after creation. Setting it to `false` means it cannot.
 - `format`
   - : An enumerated value specifying the `depthStencilAttachment` format that the {{domxref("GPURenderPipeline")}} will be compatible with. See the specification's [Texture Formats](https://gpuweb.github.io/gpuweb/#enumdef-gputextureformat) section for all the available `format` values.
 - `stencilBack` {{optional_inline}}
@@ -115,24 +113,24 @@ The `fragment` object contains an array of objects, each of which can contain th
 
     Depending on which constant you want to override, the `id` may take the form of the numeric ID of the constant, if one is specified, or otherwise the constant's identifier name.
 
-    A code snippet providing override values for all overridable constants would look like this:
+    A code snippet providing override values for several overridable constants might look like this:
 
     ```js
     {
       // ...
       constants: {
-        0: false,   // "has_point_light"
-        1200: 3.0,  // "specular_param"
-        1300: 2.0,  // "gain"
-        width: 20,  // "width"
-        depth: -1,  // "depth"
-        height: 15, // "height"
+        0: false,
+        1200: 3.0,
+        1300: 2.0,
+        width: 20,
+        depth: -1,
+        height: 15,
       }
     }
     ```
 
 - `entryPoint`
-  - : The name of the function in the `module` that this stage will use to perform its work.
+  - : The name of the function in the `module` that this stage will use to perform its work. The corresponding shader function must have the `@fragment` attribute to be identified as this entry point. See [Entry Point Declaration](https://gpuweb.github.io/gpuweb/wgsl/#entry-point-decl) for more information.
 - `module`
   - : A {{domxref("GPUShaderModule")}} object containing the [WGSL](https://gpuweb.github.io/gpuweb/wgsl/) code that this programmable stage will execute.
 - `targets`
@@ -283,24 +281,24 @@ The `vertex` object can contain the following properties:
 
     Depending on which constant you want to override, the `id` may take the form of the numeric ID of the constant, if one is specified, or otherwise the constant's identifier name.
 
-    A code snippet providing override values for all overridable constants would look like this:
+    A code snippet providing override values for several overridable constants might look like this:
 
     ```js
     {
       // ...
       constants: {
-        0: false,   // "has_point_light"
-        1200: 3.0,  // "specular_param"
-        1300: 2.0,  // "gain"
-        width: 20,  // "width"
-        depth: -1,  // "depth"
-        height: 15, // "height"
+        0: false,
+        1200: 3.0,
+        1300: 2.0,
+        width: 20,
+        depth: -1,
+        height: 15,
       }
     }
     ```
 
 - `entryPoint`
-  - : The name of the function in the `module` that this stage will use to perform its work.
+  - : The name of the function in the `module` that this stage will use to perform its work. The corresponding shader function must have the `@vertex` attribute to be identified as this entry point. See [Entry Point Declaration](https://gpuweb.github.io/gpuweb/wgsl/#entry-point-decl) for more information.
 - `module`
   - : A {{domxref("GPUShaderModule")}} object containing the [WGSL](https://gpuweb.github.io/gpuweb/wgsl/) code that this programmable stage will execute.
 - `buffers` {{optional_inline}}
@@ -332,7 +330,7 @@ A {{domxref("GPURenderPipeline")}} object instance.
 
 ### Validation
 
-If any of the following are false, a {{domxref("GPUValidationError")}} is generated:
+The following criteria must be met when calling **`createRenderPipeline()`**, otherwise a {{domxref("GPUValidationError")}} is generated and an invalid {{domxref("GPURenderPipeline")}} object is returned:
 
 - For `depthStencil` objects:
   - `fomat` is a [`depth-of-stencil`](https://gpuweb.github.io/gpuweb/#depth-or-stencil-format) format.

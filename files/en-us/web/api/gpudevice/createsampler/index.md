@@ -54,7 +54,7 @@ createSampler(descriptor)
         - `"greater-equal"`: A provided value passes the comparison test if it is greater than or equal to the sampled value.
         - `"always"`: Comparison tests always pass.
 
-          Comparison samplers may use filtering, but the sampling results will be implementation-dependent and may differ from the normal filtering rules.
+        Comparison samplers may use filtering, but the sampling results will be implementation-dependent and may differ from the normal filtering rules.
 
     - `label` {{optional_inline}}
 
@@ -92,7 +92,7 @@ A {{domxref("GPUSampler")}} object instance.
 
 ### Validation
 
-If any of the following are false, a {{domxref("GPUValidationError")}} is generated:
+The following criteria must be met when calling **`createSampler()`**, otherwise a {{domxref("GPUValidationError")}} is generated and an invalid {{domxref("GPUSampler")}} object is returned:
 
 - `lodMinClamp` is equal to or more than 0.
 - `lodMaxClamp` is equal to or more than `lodMinClamp`.

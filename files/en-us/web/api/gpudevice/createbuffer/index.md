@@ -28,7 +28,7 @@ createBuffer(descriptor)
       - : A string providing a label that can be used to identify the object, for example in {{domxref("GPUError")}} messages or console warnings.
     - `mappedAtCreation` {{optional_inline}}
 
-      - : A boolean. If set to `true`, the buffer will be mapped upon creation, meaning that JavaScript can access the values inside the buffer by calling {{domxref("GPUBuffer.getMappedRange()")}} immediately. The default value is `false`.
+      - : A boolean. If set to `true`, the buffer will be mapped upon creation, meaning that you can set the values inside the buffer immediately by calling {{domxref("GPUBuffer.getMappedRange()")}}. The default value is `false`.
 
         Note that it is valid to set `mappedAtCreation: true` so you can set the buffer's initial data, even if the `GPUBufferUsage.MAP_READ` or `GPUBufferUsage.MAP_WRITE` usage flags are not set.
 
@@ -61,12 +61,14 @@ A {{domxref("GPUBuffer")}} object instance.
 
 ### Validation
 
-- If the buffer allocation fails without any specific side-effects, an {{domxref("GPUOutOfMemoryError")}} is generated.
-- If any of the following are false, a {{domxref("GPUValidationError")}} is generated:
-  - A valid `usage` is specified.
-  - `GPUBufferUsage.MAP_READ` is specified, and no additional flags are specified other than `GPUBufferUsage.COPY_DST`.
-  - `GPUBufferUsage.MAP_WRITE` is specified, and no additional flags are specified other than `GPUBufferUsage.COPY_SRC`.
-  - `mappedAtCreation: true` is specified, and the specified `size` is a multiple of 4.
+The following criteria must be met when calling **`createBuffer()`**, otherwise a {{domxref("GPUValidationError")}} is generated and an invalid {{domxref("GPUBuffer")}} object is returned:
+
+- A valid `usage` is specified.
+- `GPUBufferUsage.MAP_READ` is specified, and no additional flags are specified other than `GPUBufferUsage.COPY_DST`.
+- `GPUBufferUsage.MAP_WRITE` is specified, and no additional flags are specified other than `GPUBufferUsage.COPY_SRC`.
+- `mappedAtCreation: true` is specified, and the specified `size` is a multiple of 4.
+
+> **Note:** If the buffer allocation fails without any specific side-effects, an {{domxref("GPUOutOfMemoryError")}} is generated.
 
 ## Examples
 

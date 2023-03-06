@@ -32,10 +32,15 @@ createShaderModule(descriptor)
 
         The point of `hints` is to provide information about the pipeline layout as early as possible to improve performance. The idea is that more compilation can be done a single time by `createShaderModule()`, rather than multiple times in multiple calls to {{domxref("GPUDevice.createComputePipeline()")}} and {{domxref("GPUDevice.createRenderPipeline()")}}.
 
+        > **Note:** Different implementations may handle `hints` in different ways, including possibly ignoring them entirely. Providing hints does not guarantee improved shader compilation performance on all browsers/systems.
+
     - `label` {{optional_inline}}
       - : A string providing a label that can be used to identify the object, for example in {{domxref("GPUError")}} messages or console warnings.
     - `sourceMap` {{optional_inline}}
+
       - : A source map definition to provide developer tool integration such as source-language debugging. WGSL names (identifiers) in source maps should follow the rules defined in [WGSL identifier comparison](https://gpuweb.github.io/gpuweb/wgsl/#identifier-comparison). If defined, the source map may be interpreted as a [source-map-v3 format](https://sourcemaps.info/spec.html).
+
+        > **Note:** Different implementations may handle `sourceMap`s in different ways, including possibly ignoring them entirely.
 
 ### Return value
 

@@ -23,7 +23,7 @@ createBindGroupLayout(descriptor)
 - `descriptor`
   - : An object containing the following properties:
     - `entries`
-      - : An array of entry objects, each one of which describes a single shader resource binding to be included in the {{domxref("GPUBindGroupLayout")}}. Each entry will correspond to an entry defined in a {{domxref("GPUBindGroup")}} (created via a {{domxref("Device.createBindGroup()")}} call) that uses this {{domxref("GPUBindGroupLayout")}} object as a template.
+      - : An array of [entry objects](/en-US/docs/Web/API/GPUDevice/createBindGroupLayout#entry_objects), each one of which describes a single shader resource binding to be included in the {{domxref("GPUBindGroupLayout")}}. Each entry will correspond to an entry defined in a {{domxref("GPUBindGroup")}} (created via a {{domxref("Device.createBindGroup()")}} call) that uses this {{domxref("GPUBindGroupLayout")}} object as a template.
     - `label` {{optional_inline}}
       - : A string providing a label that can be used to identify the object, for example in {{domxref("GPUError")}} messages or console warnings.
 
@@ -47,8 +47,8 @@ An entry object includes the following properties:
     visibility: GPUShaderStage.FRAGMENT | GPUShaderStage.VERTEX;
     ```
 
-- "Resource layout"
-  - : An object that defines the required binding resource type and structure of the {{domxref("GPUBindGroup")}} entry corresponding to this entry. This object can be one of `buffer`, `sampler`, `texture`, `storageTexture`, or `externalTexture`, the structures of which are described in the next section.
+- "Resource layout object"
+  - : An object that defines the required binding resource type and structure of the {{domxref("GPUBindGroup")}} entry corresponding to this entry. This property can be one of `buffer`, `sampler`, `texture`, `storageTexture`, or `externalTexture`, the object structures of which are described in the next section.
 
 ### Resource layout objects
 
@@ -134,7 +134,7 @@ A {{domxref("GPUBindGroupLayout")}} object instance.
 
 ### Validation
 
-If any of the following are false, a {{domxref("GPUValidationError")}} is generated:
+The following criteria must be met when calling **`createBindGroupLayout()`**, otherwise a {{domxref("GPUValidationError")}} is generated and an invalid {{domxref("GPUBindGroupLayout")}} object is returned:
 
 - Each entry's `binding` value is unique.
 - Each entry's `binding` value is less than the {{domxref("GPUDevice")}}'s `maxBindingsPerBindGroup` {{domxref("GPUSupportedLimits", "limit", "", "nocode")}}.
@@ -183,61 +183,6 @@ const bindGroup = device.createBindGroup({
       },
     },
   ],
-});
-
-// ...
-```
-
-### Multiple bind group layouts, bind group, and pipeline layout
-
-The following snippet:
-
-- Creates a {{domxref("GPUBindGroupLayout")}} that describes a binding with a uniform buffer, a texture, and a sampler.
-- Creates a {{domxref("GPUBindGroup")}} and a {{domxref("GPUPipelineLayout")}} based on the {{domxref("GPUBindGroupLayout")}}.
-
-```js
-// ...
-
-const bindGroupLayout = gpuDevice.createBindGroupLayout({
-  entries: [
-    {
-      binding: 0,
-      visibility: GPUShaderStage.VERTEX | GPUShaderStage.FRAGMENT,
-      buffer: {},
-    },
-    {
-      binding: 1,
-      visibility: GPUShaderStage.FRAGMENT,
-      texture: {},
-    },
-    {
-      binding: 2,
-      visibility: GPUShaderStage.FRAGMENT,
-      sampler: {},
-    },
-  ],
-});
-
-const bindGroup = gpuDevice.createBindGroup({
-  layout: bindGroupLayout,
-  entries: [
-    {
-      binding: 0,
-      resource: { buffer: buffer },
-    },
-    {
-      binding: 1,
-      resource: texture,
-    },
-    {
-      binding: 2,
-      resource: sampler,
-    },
-  ],
-});
-
-const pipelineLayout = gpuDevice.createPipelineLayout({
-  bindGroupLayouts: [bindGroupLayout],
 });
 
 // ...

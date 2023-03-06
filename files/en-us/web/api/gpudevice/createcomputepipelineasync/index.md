@@ -50,7 +50,7 @@ A validation error can occur if any of the following are false:
 
 The following example shows a process of:
 
-- Creating a bind group layout with {{domxref("GPUDevice.createBindGroupLayout()")}} and using that as a template when creating a bind group with {{domxref("GPUDevice.createBindGroup()")}}.
+- Creating a bind group layout with {{domxref("GPUDevice.createBindGroupLayout()")}}.
 - Feeding the `bindGroupLayout` into {{domxref("GPUDevice.createPipelineLayout()")}} to create a {{domxref("GPUPipelineLayout")}}.
 - Using that value immediately in a `createComputePipelineAsync()` call to create a {{domxref("GPUComputePipeline")}}.
 
@@ -65,18 +65,6 @@ async function init() {
         visibility: GPUShaderStage.COMPUTE,
         buffer: {
           type: "storage",
-        },
-      },
-    ],
-  });
-
-  const bindGroup = device.createBindGroup({
-    layout: bindGroupLayout,
-    entries: [
-      {
-        binding: 0,
-        resource: {
-          buffer: output,
         },
       },
     ],
