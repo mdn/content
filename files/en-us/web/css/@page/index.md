@@ -33,7 +33,7 @@ The **`@page`** at-rule is a CSS at-rule used to modify different aspects of a p
 ### Descriptors
 
 - [`page-orientation`](/en-US/docs/Web/CSS/@page/page-orientation)
-  - : Specifies the orientation of the page, this will rotate the whole page including header & footer
+  - : Specifies the orientation of the page, this does not affect the layout of the page, the rotation is applied after the layout.
 - [`size`](/en-US/docs/Web/CSS/@page/size)
   - : Specifies the target size and orientation of the page box's containing block. In the general case, where one page box is rendered onto one page sheet, it also indicates the size of the destination page sheet.
 

@@ -15,9 +15,11 @@ browser-compat: css.at-rules.page.page-orientation
 
 {{CSSRef}}
 
-The **`page-orientation`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/At-rule) descriptor, {{cssxref("@page")}} at-rule, the rotation of a page. This differs from the [`size`](/en-US/docs/Web/CSS/@page/size) descriptor in that the user can define which direction the content is rotated.
+The **`page-orientation`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/At-rule) descriptor, for the {{cssxref("@page")}} at-rule, controls the rotation of a page. This differs from the [`size`](/en-US/docs/Web/CSS/@page/size) descriptor in that the user can define which direction the content is rotated.
 
-**This bit needs finishing.**
+This helps with the layout and orientation of printed documents, especially when documents are printed double-sided. The user can choose which way the pages are rotated when printed. For content, such as {{HTMLElement("table")}}s, which may be wider than the norm can be laid out in a different orientation.
+
+> **Note:** [Margin boxes](/en-US/docs/Web/CSS/@page#margin_at-rules) and other positional things have no special interaction with this property; they'll be laid out as normal in the unrotated page, then rotated along with everything else.
 
 ## Syntax
 
@@ -64,111 +66,50 @@ This example shows how the contents of a print document can be rotated, to suit 
 ```html hidden
 <fieldset id="printStyle">
   <legend>
-    Click print and your page will print in landscape and portrait
+    Click print and your page will laid out in portrait and landscape
   </legend>
   <button id="print">Print</button>
 </fieldset>
 <div id="print-area">
   <section class="upright">
     <h2>Section in Portrait/Upright</h2>
-    <p>This section will be printed in Portrait and upright with:</p>
+    <p>This section will be printed in portrait and upright with:</p>
     <pre>
 .upright {
+  size: portrait;
   page-orientation: upright;
 }
     </pre>
-    <table>
-      <thead>
-        <tr>
-          <th></th>
-          <th>100m</th>
-          <th>1500m</th>
-          <th>Hurdles</th>
-          <th>Long Jump</th>
-          <th>High Jump</th>
-          <th>Javelin</th>
-          <th>Discus</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <th>Dave</th>
-          <td>9.65</td>
-          <td>3:49</td>
-          <td>12.64</td>
-          <td>8.54m</td>
-          <td>1.95m</td>
-          <td>56.65m</td>
-          <td>47.63m</td>
-        </tr>
-        <tr>
-          <th>Simon</th>
-          <td>9.87</td>
-          <td>3:52</td>
-          <td>11.89</td>
-          <td>8.16m</td>
-          <td>1.96m</td>
-          <td>59.03m</td>
-          <td>45.72m</td>
-        </tr>
-        <tr>
-          <th>Fred</th>
-          <td>9.67</td>
-          <td>3:52</td>
-          <td>12.03</td>
-          <td>8.04m</td>
-          <td>2.01m</td>
-          <td>62.58m</td>
-          <td>46.83m</td>
-        </tr>
-        <tr>
-          <th>Gary</th>
-          <td>9.77</td>
-          <td>3:56</td>
-          <td>13.04</td>
-          <td>7.96m</td>
-          <td>2.02m</td>
-          <td>63.87m</td>
-          <td>47.73m</td>
-        </tr>
-        <tr>
-          <th>Dick</th>
-          <td>9.95</td>
-          <td>3:44</td>
-          <td>12.99</td>
-          <td>5.66m</td>
-          <td>1.97m</td>
-          <td>56.43m</td>
-          <td>43.87m</td>
-        </tr>
-        <tr>
-          <th>Tom</th>
-          <td>9.84</td>
-          <td>3:48</td>
-          <td>12.86</td>
-          <td>6.87m</td>
-          <td>1.95m</td>
-          <td>67.03m</td>
-          <td>42.73m</td>
-        </tr>
-        <tr>
-          <th>Harry</th>
-          <td>9.91</td>
-          <td>3:53</td>
-          <td>13.77</td>
-          <td>7.34m</td>
-          <td>1.94m</td>
-          <td>62.84m</td>
-          <td>46.72m</td>
-        </tr>
-      </tbody>
-    </table>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eu
+      convallis ligula, tincidunt malesuada tortor. Ut ac turpis erat. Mauris
+      consequat, leo rhoncus venenatis elementum, sem nisl venenatis justo, non
+      mattis diam massa vitae dolor. Aenean ac dolor et leo laoreet tincidunt.
+      Suspendisse tempus risus nibh, a feugiat mauris pharetra a. Nulla mi dui,
+      scelerisque vitae sollicitudin nec, placerat eget purus. Vivamus enim
+      elit, scelerisque id venenatis eu, sodales vel leo. Quisque bibendum
+      feugiat diam, ut feugiat urna suscipit et. Nulla lacinia metus a nisi
+      volutpat interdum. Lorem ipsum dolor sit amet, consectetur adipiscing
+      elit. Vestibulum vitae elit vel orci malesuada bibendum ut vitae enim. Ut
+      ultrices elit nec vestibulum blandit. In in eleifend dui. Nam nec aliquet
+      nunc. Praesent convallis ipsum sed fermentum scelerisque.
+    </p>
+    <p>
+      Praesent posuere, neque non fringilla ultricies, purus mi ullamcorper
+      velit, vitae egestas nisl eros at ex. Nulla sed viverra libero. Praesent
+      sed placerat magna, iaculis commodo lectus. Ut gravida ligula sed purus
+      molestie, in accumsan est eleifend. Etiam consectetur nulla pretium
+      blandit iaculis. Nunc semper libero ut mauris faucibus placerat. Cras ac
+      justo ac est laoreet sollicitudin. Aliquam vel sapien ut sapien vestibulum
+      dictum.
+    </p>
   </section>
   <section class="left">
-    <h2>Section in Portrait/Left</h2>
-    <p>This section will be printed in Portrait and rotated left with:</p>
+    <h2>Section in Landscape/Left</h2>
+    <p>This section will be printed in landscape and rotated left with:</p>
     <pre>
 .left {
+  size: landscape;
   page-orientation: rotate-left;
 }
     </pre>
@@ -260,12 +201,11 @@ This example shows how the contents of a print document can be rotated, to suit 
     </table>
   </section>
   <section class="right">
-    <h2>Section in Portrait/Right</h2>
-    <p>
-      This section will be printed in Portrait and is using a named page with:
-    </p>
+    <h2>Section in Landscape/Right</h2>
+    <p>This section will be printed in landscape and rotated right with:</p>
     <pre>
 .right {
+  size: landscape;
   page-orientation: rotate-right;
 }
     </pre>
@@ -361,18 +301,21 @@ This example shows how the contents of a print document can be rotated, to suit 
 
 #### CSS
 
-The first part of the [CSS](/en-US/docs/Web/CSS) sets up the [named pages](/en-US/docs/Web/CSS/@page#named_pages) and use these to dictate which direction the content should be rotated.
+The first part of the [CSS](/en-US/docs/Web/CSS) sets up the [named pages](/en-US/docs/Web/CSS/@page#named_pages) and these to dictate which direction the content should be rotated.
 
 ```css
 @page upright {
+  size: portrait;
   page-orientation: upright;
 }
 
 @page left {
+  size: landscape;
   page-orientation: rotate-left;
 }
 
 @page right {
+  size: landscape;
   page-orientation: rotate-right;
 }
 ```
