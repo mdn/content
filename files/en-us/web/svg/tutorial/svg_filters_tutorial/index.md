@@ -6,6 +6,8 @@ tags:
   - SVG filters primitives
 ---
 
+{{SVGRef}}
+
 ## Filters
 
 SVG allows us to use similar tools as the bitmap description language such as the use of shadow, blur effects or even merging the results of different filters. With the filter element `<filter>` it is possible to add these effects and later on attach them to an object.
@@ -19,12 +21,12 @@ This element has different attributes that help us create the clipping region. B
 ```html
 <defs>
   <filter id="drop-shadow">
-  <feGaussianBlur in="SourceAlpha" stdDeviation="3"/>
+    <feGaussianBlur in="SourceAlpha" stdDeviation="3" />
   </filter>
 </defs>
 
 <g id="ghost" style="filter: url(#drop-shadow);">
- <!--Ghost drawing in here-->
+  <!--Ghost drawing in here-->
 </g>
 ```
 

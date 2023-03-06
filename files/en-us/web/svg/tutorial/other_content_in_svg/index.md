@@ -8,6 +8,8 @@ tags:
   - SVG:Tutorial
 ---
 
+{{SVGRef}}
+
 {{ PreviousNext("Web/SVG/Tutorial/Clipping_and_masking", "Web/SVG/Tutorial/Filter_effects") }}
 
 Apart from graphic primitives like rectangles and circles, SVG offers a set of elements to embed other types of content in images as well.

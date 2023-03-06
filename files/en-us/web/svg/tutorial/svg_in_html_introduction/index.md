@@ -7,6 +7,8 @@ tags:
   - SVG
 ---
 
+{{SVGRef}}
+
 ## Overview
 
 This article and its associated example shows how to use inline [SVG](/en-US/docs/Web/SVG).

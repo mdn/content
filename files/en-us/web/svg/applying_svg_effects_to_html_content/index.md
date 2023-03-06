@@ -9,6 +9,8 @@ tags:
   - SVG
 ---
 
+{{SVGRef}}
+
 Modern browsers support using [SVG](/en-US/docs/Web/SVG) within [CSS](/en-US/docs/Web/CSS) styles to apply graphical effects to HTML content.
 
 You may specify SVG in styles either within the same document or an external style sheet. There are 3 properties you can use: [`mask`](/en-US/docs/Web/CSS/mask), [`clip-path`](/en-US/docs/Web/CSS/clip-path), and [`filter`](/en-US/docs/Web/CSS/filter).
@@ -68,8 +70,10 @@ Applying the SVG effect to HTML is accomplished by assigning the `target` class 
 </p>
 <p>
   Lorem ipsum dolor sit amet, consectetur adipisicing
-  <em class="target">elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-    aliqua.</em>
+  <em class="target"
+    >elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+    aliqua.</em
+  >
   Ut enim ad minim veniam.
 </p>
 ```
@@ -89,8 +93,10 @@ This example demonstrates using SVG to clip HTML content. Notice that even the c
 </p>
 <p>
   Lorem ipsum dolor sit amet, consectetur adipisicing
-  <em class="target">elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-    aliqua.</em>
+  <em class="target"
+    >elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+    aliqua.</em
+  >
   Ut enim ad minim veniam.
 </p>
 
@@ -140,8 +146,10 @@ This demonstrates applying a filter to HTML content using SVG. It establishes se
 <pre class="target">lorem</pre>
 <p>
   Lorem ipsum dolor sit amet, consectetur adipisicing
-  <em class="target">elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-    aliqua.</em>
+  <em class="target"
+    >elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+    aliqua.</em
+  >
   Ut enim ad minim veniam.
 </p>
 ```

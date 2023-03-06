@@ -8,6 +8,8 @@ tags:
   - SVG:Tutorial
 ---
 
+{{SVGRef}}
+
 {{ PreviousNext("Web/SVG/Tutorial/Basic_Transformations", "Web/SVG/Tutorial/Other_content_in_SVG") }}
 
 Erasing part of what you have created might seem contradictory at first. But when you, for example, try to create a semicircle in SVG, you will find out the use of the following properties quickly:
