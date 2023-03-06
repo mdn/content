@@ -87,13 +87,15 @@ efforts as the Work Item is standardized.
 
 ### Static Partitioning
 
-#### Storage Partitioning:
+#### Storage Partitioning
+
 To prevent JavaScript accessible storage APIs being used for cross-site
 tracking, Firefox partitions accessible storage by top-level site. This
 mechanism means that, generally, a third-party embedded in one top-level site
 cannot access data stored under another top-level site.
 
 #### Storage APIs
+
 - [localStorage](/en-US/docs/Web/API/Window/localStorage)
 - [sessionStorage](/en-US/docs/Web/API/Window/sessionStorage)
 - [DOM Cache](/en-US/docs/Web/API/Cache)
@@ -102,7 +104,7 @@ cannot access data stored under another top-level site.
 - [Shared Workers](/en-US/docs/Web/API/SharedWorker)
 - [Service Workers](/en-US/docs/Web/API/Service_Worker_API)
 
-#### Network Partitioning:
+#### Network Partitioning
 
 Networking-related APIs are not intended to be used for websites to store
 data, but they can be
