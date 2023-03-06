@@ -1,6 +1,8 @@
 ---
 title: href
 slug: Web/MathML/Global_attributes/href
+status:
+  - non-standard
 browser-compat: mathml.global_attributes.href
 ---
 
