@@ -7,9 +7,9 @@ page-type: guide
 
 {{LearnSidebar}}
 
-There are a number of web technologies that developers can use in their websites or apps to store data of one kind or another in the user's browser (i.e., on the local disk of the device the user is using to view the website).
+There are a number of web technologies that developers can use in their websites or apps to store data in the user's browser (i.e., on the local disk of the device the user is using to view the website).
 
-The amount of data that browsers allow websites to store, and the mechanisms they use to delete data when that limit is reached differs between browsers.
+The amount of data browsers allow websites to store and the mechanisms they use to delete data when that limit is reached differs between browsers.
 
 This article describes the web technologies that can be used to store data, the quotas that browsers have in place to limit websites from storing too much data, and the mechanisms they use to delete data when needed.
 
@@ -24,21 +24,23 @@ Web developers can use the following web technologies to store data in the brows
 | Technology | Description |
 | ---------- | ----------- |
 | [Cookies](/en-US/docs/Web/HTTP/Cookies) | An HTTP cookie is a small piece of data that the web server and browser send each other to remember stateful information across page navigation. |
-| [Web Storage](/en-US/docs/Web/API/Web_Storage_API) | The Web Storage API provides mechanisms for webpages to store string-only key/value pairs. |
+| [Web Storage](/en-US/docs/Web/API/Web_Storage_API) | The Web Storage API provides mechanisms for webpages to store string-only key/value pairs, including [`localStorage`](/en-US/docs/Web/API/Window/localStorage) and [`sessionStorage`](/en-US/docs/Web/API/Window/sessionStorage). |
 | [IndexedDB](/en-US/docs/Web/API/IndexedDB_API) | IndexedDB is a Web API for storing large data structures in the browser and indexing them for high-performance searching. |
 | [Cache API](/en-US/docs/Web/API/Cache) | The Cache API provides a persistent storage mechanism for HTTP request and response object pairs that's used to make webpages load faster. |
-| [Origin Private File System Access API (OPFS)](https://developer.chrome.com/articles/file-system-access/#accessing-the-origin-private-file-system) | OPFS provides a file system that's private to the origin of the page and can be used to read and write directories and files. |
+| [Origin Private File System Access API (OPFS)](/en-US/docs/Web/API/File_System_Access_API#origin_private_file_system) | OPFS provides a file system that's private to the origin of the page and can be used to read and write directories and files. |
 
-Note that, on top of the above, browsers will store other types of data in the browser for an origin, such as [WebAssembly](/en-US/docs/WebAssembly) code caching.
+Note that, in addition to the above, browsers will store other types of data in the browser for an origin, such as [WebAssembly](/en-US/docs/WebAssembly) code caching.
 
 Browsers use different storage management systems for different types of data. For example, in most browsers today, Web Storage and cookies are not managed by the same system that's used to manage IndexedDB and Cache. Also note that that way browsers manage data changes over time. For example, in Firefox, Web Storage will soon start to use the same storage management system as the one used for IndexedDB.
+
+Browsers use different storage management systems for different types of data. For example, Web Storage and cookies are not managed by the same system that's used to manage IndexedDB and Cache in most browsers. Also, note the way browsers manage data can change over time. For example, some browsers are changing how Web Storage is managed to reuse the same storage management system as IndexedDB.
 
 ## Does browser-stored data persist?
 
 Data for an origin can be stored in two ways in a browser, _persistent_ and _best-effort_:
 
 - Best-effort: this is the way that data is stored by default. Best-effort data persists as long as the origin is below its quota, the device has enough storage space, and the user doesn't choose to delete the data via their browser's settings.
-- Persistent: an origin can opt-in to store its data in a persistent way. Data stored this way is only evicted if the user chooses to, by using their browser's settings.
+- Persistent: an origin can opt-in to store its data in a persistent way. Data stored this way is only evicted, or deleted, if the user chooses to, by using their browser's settings. To learn more, see [When is data evicted](#when-is-data-evicted).
 
 The data stored in the browser by a origin is best-effort by default. When using web technologies such as IndexedDB or Cache, the data is stored transparently without asking for the user's permission. Similarly, when the browser needs to evict best-effort data, it does so without interrupting the user.
 
@@ -48,29 +50,31 @@ In Firefox, when a site chooses to use persistent storage, the user is notified 
 
 Safari and most Chromium-based browsers, such as Chrome or Edge, automatically handle the permission request, and do not show any prompts to the user.
 
-Note that research from the Chrome team shows that data is very rarely deleted by the browser (source: [Persistent storage](https://web.dev/persistent-storage/) at web.dev). If a user uses a website regularly, there are very little chances that its stored data, even in best-effort mode, will get evicted by the browser.
+Note that [research from the Chrome team](https://web.dev/persistent-storage/) shows that data is very rarely deleted by the browser. If a user visits a website regularly, there are very little chances that its stored data, even in best-effort mode, will get evicted by the browser.
 
 ### Private browsing
 
-In private browsing mode (also called _Incognito_ in Chrome, and _InPrivate_ in Edge), stored data is deleted when the private window is closed.
+Note that in private browsing mode (also called _Incognito_ in Chrome, and _InPrivate_ in Edge), stored data does not persist and is usually deleted when the private browsing mode ends.
 
 ## How much data can be stored?
 
-> **Note:** The quotas documented below only apply to non private browser windows. In a private browsing window, quotas are calculated differently, and usually much lower than those given below.
+> **Note:** The quotas documented below only apply to non private browser windows. In a private browser window, quotas are calculated differently and are usually much lower.
 
 ### Cookies
 
 Different browsers have different rules around how many cookies are allowed per origin and how much space these cookies can use on the disk. This article does not go into these details because cookies should not be used for storing data in the browser.
 
-Cookies are useful for preserving some small shared state between the browser and the web server across page navigation, for example to keep a user logged in. Cookies are sent with each and every HTTP request, so storing data in cookies that could be stored by using another web technology unnecessarily increases the size of requests.
+Different browsers have different rules around how many cookies are allowed per origin and how much space these cookies can use on the disk. While cookies are useful for preserving some small shared state between the browser and the web server across page navigation, using cookies for storing data in the browser is not advised. Cookies are sent with each and every HTTP request, so storing data in cookies that could be stored by using another web technology unnecessarily increases the size of requests.
+
+Because cookies should not be used for storing data in the browser, cookie storage browser limits are not covered here.
 
 ### Web Storage
 
-Web Storage, which can be accessed by using the {{domxref("Window.localStorage", "localStorage")}} and {{domxref("Window.sessionStorage", "sessionStorage")}} properties of the {{domxref("window")}} object is limited to 10 MiB of data maximum on all browsers.
+Web Storage, which can be accessed by using the {{domxref("Window.localStorage", "localStorage")}} and {{domxref("Window.sessionStorage", "sessionStorage")}} properties of the {{domxref("window")}} object, is limited to 10 MiB of data maximum on all browsers.
 
-Your origin can store up to 5 MiB of local storage, and 5 MiB of session storage, 10 MiB in total.
+Browsers can store up to 5 MiB of local storage, and 5 MiB of session storage per origin.
 
-Once this limit is reached, browsers throw a `QuotaExceededError` exception which your code should handle by using a {{jsxref("Statements/try...catch","try...catch")}} block.
+Once this limit is reached, browsers throw a `QuotaExceededError` exception which should be handled by using a {{jsxref("Statements/try...catch","try...catch")}} block.
 
 ### Other web technologies
 
@@ -86,33 +90,33 @@ In Firefox, the maximum storage space an origin can use is calculated as 50% of 
 
 For example, if the device has a 500 GiB hard drive, Firefox will allow an origin to store up to 250 GiB of data.
 
-Note that it might not actually be possible for the origin to reach this quota because it is calculate based on the **total** disk space, not the currently available disk space. This is done for security reasons, to avoid {{Glossary("fingerprinting")}}.
+Note that it might not actually be possible for the origin to reach this quota because it is calculated based on the **total** disk space, not the currently available disk space. This is done for security reasons, to avoid {{Glossary("fingerprinting")}}.
 
 Firefox has a second quota called _group limit_ that applies to all origins that are part of the same eTLD+1 domain. For example: `mozilla.org`, `www.mozilla.org`, and `joe.blogs.mozilla.org` are three different origins that are part of the same eTLD+1 group. This group maximum storage limit is 10 GiB, but is going to be removed as part of [this bug](https://bugzilla.mozilla.org/show_bug.cgi?id=1305665).
 
 #### Chrome and Chromium-based browsers
 
-In browsers based on the [Chromium open-source project](https://www.chromium.org/Home/), such as Chrome or Edge, an origin can store up to 60% of the total disk space.
+In browsers based on the [Chromium open-source project](https://www.chromium.org/Home/), including Chrome and Edge, an origin can store up to 60% of the total disk space.
 
 For example, if the device has a 1 TiB hard drive, the browser will allow an origin to use up to 600 GiB.
 
-Like with Firefox, because this quota is calculated based on the total disk space, to avoid fingerprinting, an origin might not actually be able to reach its quota.
+Like with Firefox, because this quota is calculated based on the total disk space to avoid fingerprinting, an origin might not actually be able to reach its quota.
 
 #### Safari
 
-In Safari, an origin is given an initial 1 GiB quota. Once the origin reaches this limit, Safari asks the user for permission to let the origin store more data. This happens whether the origin stores data in best-effort mode, or in persistent mode.
+In Safari, an origin is given an initial 1 GiB quota. Once the origin reaches this limit, Safari asks the user for permission to let the origin store more data. This happens whether the origin stores data in best-effort mode or persistent mode.
 
 ## How to check the available space?
 
-Web developers can check how much space is available to their origin and how much it currently takes up by using the {{domxref("StorageManager.estimate()")}} method of the {{domxref("Storage_API", "Storage API", "", "nocode")}}.
+Web developers can check how much space is available for their origin and how much is being used by the origin with the {{domxref("StorageManager.estimate()")}} method of the {{domxref("Storage_API", "Storage API", "", "nocode")}}.
 
 Note that this method only returns the estimated usage value, not the actual value. Some of the resources that are stored by an origin may be coming from other origins and browsers voluntarily pad the size of the cross-origin data when reporting total usage value.
 
 ## What happens when an origin fills its quota?
 
-Attempting to store more than an origin's quota using, for example, IndexedDB, Cache, or OPFS fails with a `QuotaExceededError` exception.
+Attempting to store more than an origin's quota using IndexedDB, Cache, or OPFS, for example, fails with a `QuotaExceededError` exception.
 
-Web developers should wrap the part of their JavaScript code that writes to the browser storage with a {{jsxref("Statements/try...catch","try...catch")}} block, and then free up space by deleting data before storing new data.
+Web developers should wrap JavaScript that writes to browser storage within {{jsxref("Statements/try...catch","try...catch")}} blocks. Freeing up space by deleting data before storing new data is also recommended.
 
 ## When is data evicted?
 
@@ -120,17 +124,17 @@ Data eviction is the process by which a browser deletes an origin's stored data.
 
 Data eviction can happen in multiple cases:
 
-- When the device is running low on storage space, also known as storage pressure.
+- When the device is running low on storage space, also known as _storage pressure_.
 - When all of the data stored in the browser (across all origins) exceeds the total amount of space the browser is willing to use on the device.
 - Proactively, for origins that aren't used regularly, which happens only in Safari.
 
 ### Storage pressure eviction
 
-When a device is running low on storage space, also known as storage pressure, there may come a point when the browser has less available space than it needs to store all of the origin's stored data.
+When a device is running low on storage space, also known as _storage pressure_, there may come a point when the browser has less available space than it needs to store all of the origin's stored data.
 
-Browsers use an LRU, or Least Recently Used, policy to deal with this scenario. The data from the least recently used origin is deleted. If storage pressure continues, the browser moves on the second least recently used origin, and so on, until the problem is resolved.
+Browsers use a Least Recently Used (LRU) policy to deal with this scenario. The data from the least recently used origin is deleted. If storage pressure continues, the browser moves on to the second least recently used origin, and so on, until the problem is resolved.
 
-This eviction mechanism only applies to origins that are not persistent, and skips over origins that have requested the user for persistent data by using {{domxref("StorageManager.persist()")}}).
+This eviction mechanism only applies to origins that are not persistent and skips over origins that have requested the user for persistent data by using {{domxref("StorageManager.persist()")}}).
 
 ### Browser maximum storage exceeded eviction
 
@@ -146,7 +150,7 @@ Currently, Safari is the only browser that proactively evicts data. The data fro
 
 ## How is data evicted?
 
-When an origin's data is evicted by the browser, all of its data, not parts of it, is deleted at the same time. If the origin had stored data by using IndexedDB and the Cache API for example, then both types of data is deleted.
+When an origin's data is evicted by the browser, all of its data, not parts of it, is deleted at the same time. If the origin had stored data by using IndexedDB and the Cache API for example, then both types of data are deleted.
 
 Only deleting some of the origin's data could cause inconsistency problems.
 
