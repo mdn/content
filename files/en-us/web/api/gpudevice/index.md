@@ -111,7 +111,7 @@ _Inherits methods from its parent, {{DOMxRef("EventTarget")}}._
   - : Pops an existing GPU error scope from the error scope stack and returns a {{jsxref("Promise")}} that resolves to an object ({{domxref("GPUInternalError")}}, {{domxref("GPUOutOfMemoryError")}}, or {{domxref("GPUValidationError")}}) describing the first error captured in the scope, or `null` if no error occurred.
 
 - {{domxref("GPUDevice.pushErrorScope", "pushErrorScope()")}} {{Experimental_Inline}}
-  - : Pushes a new GPU error scope onto the error scope stack, allowing you to capture errors of a particular type.
+  - : Pushes a new GPU error scope onto the device's error scope stack, allowing you to capture errors of a particular type.
 
 ## Events
 

@@ -333,7 +333,7 @@ A {{domxref("GPURenderPipeline")}} object instance.
 The following criteria must be met when calling **`createRenderPipeline()`**, otherwise a {{domxref("GPUValidationError")}} is generated and an invalid {{domxref("GPURenderPipeline")}} object is returned:
 
 - For `depthStencil` objects:
-  - `fomat` is a [`depth-of-stencil`](https://gpuweb.github.io/gpuweb/#depth-or-stencil-format) format.
+  - `format` is a [`depth-or-stencil`](https://gpuweb.github.io/gpuweb/#depth-or-stencil-format) format.
   - If `depthWriteEnabled` is `true` or `depthCompare` is not `"always"`, `format` must have a depth component.
   - If `stencilFront` or `stencilBack`'s properties are not at their default values, `format` has a stencil component.
 - For `fragment` objects:
