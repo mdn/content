@@ -14,8 +14,6 @@ The **`scroll-timeline`** [CSS](/en-US/docs/Web/CSS) [shorthand property](/en-US
 The name can be referenced in an [`animation-timeline`](/en-US/docs/Web/CSS/animation-timeline) declaration in order to indicate the element, and hence the scrollbar, that will be used to control the progress of the animation.
 Note that if the element does not display a scrollbar in the axis dimension, then no timeline will be created.
 
-The `scroll-timeline` property is equivalent to setting both [`scroll-timeline-name`](/en-US/docs/Web/CSS/scroll-timeline-name) and [`scroll-timeline-axis`](/en-US/docs/Web/CSS/scroll-timeline-axis) properties in a single declaration.
-
 ## Constituent properties
 
 This property is a shorthand for the following CSS properties:
@@ -49,7 +47,7 @@ scroll-timeline: horizontal;
 
 ### Values
 
-A `<scroll-timeline-name>` value followed by a `<scroll-timeline-axis>` value may be applied to the container element in any order.
+A `<scroll-timeline-name>` value followed by a `<scroll-timeline-axis>` value may be applied to the container element in that fixed order.
 At least one value must be applied.
 
 Allowed values for `<scroll-timeline-name>` are:
@@ -86,10 +84,12 @@ Allowed values are:
 
 ## Examples
 
+### Setting a scroll timeline
+
 In this example, a scroll timeline named `squareTimeline` is defined using the `scroll-timeline-name` property on the element with the id `container`.
 This is then applied to the animation on the `#square` element using `animation-timeline: squareTimeline`.
 
-### HTML
+#### HTML
 
 The HTML for the example is shown below.
 
@@ -100,7 +100,7 @@ The HTML for the example is shown below.
 </div>
 ```
 
-### CSS
+#### CSS
 
 The CSS for the container sets it as the source of a scroll timeline named `squareTimeline` using the `scroll-timeline` property.
 It also sets the scrollbar to use for the timeline as "vertical" (though this was not actually needed as it would have been used by default).
@@ -152,7 +152,7 @@ Without this element there would be no scrollbar, and hence no scroll timeline t
 }
 ```
 
-### Result
+#### Result
 
 Scroll the vertical bar to see the animation.
 
