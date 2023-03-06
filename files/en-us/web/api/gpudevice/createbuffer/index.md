@@ -59,7 +59,7 @@ createBuffer(descriptor)
 
 A {{domxref("GPUBuffer")}} object instance.
 
-### Invalid reasons
+### Validation
 
 - If the buffer allocation fails without any specific side-effects, an {{domxref("GPUOutOfMemoryError")}} is generated.
 - If any of the following are false, a {{domxref("GPUValidationError")}} is generated:

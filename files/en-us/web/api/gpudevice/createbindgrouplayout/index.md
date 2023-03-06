@@ -132,7 +132,7 @@ The resource layout object can be one of the following (see also {{domxref("Devi
 
 A {{domxref("GPUBindGroupLayout")}} object instance.
 
-### Invalid reasons
+### Validation
 
 If any of the following are false, a {{domxref("GPUValidationError")}} is generated:
 

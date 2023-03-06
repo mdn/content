@@ -85,7 +85,7 @@ createTexture(descriptor)
 
 A {{domxref("GPUTexture")}} object instance.
 
-### Invalid reasons
+### Validation
 
 If any of the following are false, a {{domxref("GPUValidationError")}} is generated:
 

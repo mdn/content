@@ -29,7 +29,7 @@ createComputePipeline(descriptor)
 
 A {{jsxref("Promise")}} that fulfills with a {{domxref("GPUComputePipeline")}} object instance when the created pipeline is ready to be used without additional delay.
 
-### Invalid reasons
+### Validation
 
 If pipeline creation fails and the resulting pipeline becomes invalid as a result, the returned promise rejects with a {{domxref("GPUPipelineError")}}:
 

@@ -330,7 +330,7 @@ The `vertex` object can contain the following properties:
 
 A {{domxref("GPURenderPipeline")}} object instance.
 
-### Invalid reasons
+### Validation
 
 If any of the following are false, a {{domxref("GPUValidationError")}} is generated:
 

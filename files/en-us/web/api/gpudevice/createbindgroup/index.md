@@ -23,7 +23,7 @@ createBindGroup(descriptor)
 - `descriptor`
   - : An object containing the following properties:
     - `entries`
-      - : An array of entry objects describing the resources to expose to the shader. There will be one for each corresponding binding described by the {{domxref("GPUBindGroupLayout")}} referenced in `layout`. Each entry object has the following properties:
+      - : An array of entry objects describing the resources to expose to the shader. There will be one for each corresponding entry described by the {{domxref("GPUBindGroupLayout")}} referenced in `layout`. Each entry object has the following properties:
         - `binding`
           - : A number representing a unique identifier for this resource binding, which matches the `binding` value of a corresponding {{domxref("GPUBindGroupLayout")}} entry. In addition, it corresponds to a [`@binding`](https://gpuweb.github.io/gpuweb/wgsl/#attribute-binding) attribute in the shader code contained in the {{domxref("GPUShaderModule")}} used in a related pipeline.
         - `resource`
@@ -44,15 +44,15 @@ A `GPUBufferBinding` object can contain the following properties:
 - `buffer`
   - : The {{domxref("GPUBuffer")}} object you want to bind.
 - `offset` {{optional_inline}}
-  - : The offset, in bytes, from the beginning of the `buffer` to the beginning of the range exposed to the shader by the buffer binding. If omitted, `offset` defaults to 0, meaning that the whole length of the `buffer` is exposed.
+  - : The offset, in bytes, from the beginning of the `buffer` to the beginning of the range exposed to the shader by the buffer binding. If omitted, `offset` defaults to 0.
 - `size` {{optional_inline}}
-  - : The size, in bytes, of the buffer binding. If omitted, `size` will be the range starting at `offset` and ending at the end of the `buffer`.
+  - : The size, in bytes, of the buffer binding. If omitted, `size` will be the range starting at `offset` and ending at the end of the `buffer`. If both `offset` and `size` are omitted, the entire buffer is exposed to the shader.
 
 ### Return value
 
 A {{domxref("GPUBindGroup")}} object instance.
 
-### Invalid reasons
+### Validation
 
 If any of the following are false, a {{domxref("GPUValidationError")}} is generated:
 

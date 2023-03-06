@@ -66,7 +66,7 @@ createComputePipeline(descriptor)
 
 A {{domxref("GPUComputePipeline")}} object instance.
 
-### Invalid reasons
+### Validation
 
 If any of the following are false, a {{domxref("GPUValidationError")}} is generated:
 

@@ -31,7 +31,7 @@ createPipelineLayout(descriptor)
 
 A {{domxref("GPUPipelineLayout")}} object instance.
 
-### Invalid reasons
+### Validation
 
 If any of the following are false, a {{domxref("GPUValidationError")}} is generated:
 
