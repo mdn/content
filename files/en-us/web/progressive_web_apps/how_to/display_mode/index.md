@@ -1,43 +1,17 @@
 ---
 title: Create a standalone app
-slug: Web/Progressive_web_apps/How_to/Display_mode
-tags:
-  - PWA
-  - Progressive web apps
-  - App
-  - Apps
-  - Application
-  - Web app
-  - Web applications
-  - How to
-  - Display mode
-browser-compat: html.manifest.display
+slug: Web/Progressive_web_apps/How_to/Create_a_standalone_app
 ---
 
-[Progressive Web Apps](/en-US/docs/Web/Progressive_web_apps) (PWAs) that are installed on a user's device can define how they appear when the user launches them. They can choose to be displayed in a web browser like websites, or have their own dedicated windows similar to how native applications work.
+[Progressive Web Apps](/en-US/docs/Web/Progressive_web_apps) (PWAs) that are installed on a user's device can define how they appear when the user launches them. They can choose to be displayed in a web browser, just like websites, or have their own dedicated windows similar to how OS-native applications work.
 
-The value of the [web app manifest](/en-US/docs/Web/Manifest)'s [`display`](/en-US/docs/Web/Manifest/display) member defines whether, when the PWA is launched from the user's device, the installed PWA is displayed in a browser or if the PWA has its own dedicated window.
+Users tend to have specific expectations of how installed applications behave on their devices. One of these expectations is that applications have their own dedicated windows.
 
-## Choose a display mode
+By using the [web app manifest](/en-US/docs/Web/Manifest)'s [`display`](/en-US/docs/Web/Manifest/display) member, you can define whether the installed PWA is displayed in a browser or has its own dedicated window when the PWA is launched from the user's device.
 
-The optional [`display`](/en-US/docs/Web/Manifest/display) member in your [web app manifest](/en-US/docs/Web/Manifest) defines the preferred display mode for your PWA. The display mode you choose changes how much of the browser user interface is shown to the user, from showing the full browser {{Glossary("chrome")}}, to having your own dedicated window.
+## Use the standalone display mode
 
-- `browser`
-  - : The application opens in a conventional browser tab or new window. This is also the default value if `display` is not specified in the web app manifest or has an incorrect value.
-- `minimal-ui`
-  - : The application looks and feels like a standalone application, but has a minimal set of UI elements from the browser to control back and forward page navigation.
-- `standalone`
-  - : The application opens in its own dedicated window.
-- `fullscreen`
-  - : The entire device display area is used by the application.
-
-If a particular display mode is not supported, the following fallback chain is used: `fullscreen` → `standalone` → `minimal-ui` → `browser`.
-
-This means that if `fullscreen` is defined but not supported, `standalone` will be used. If `standalone` is not supported, `minimal-ui` will be used. If `minimal-ui` is not supported, the default `browser` display mode will be used.
-
-### Example
-
-Here is a web app manifest file example, showing how to define a display mode:
+To use a standalone display mode and give your PWA its own dedicated window, add the [`display`](/en-US/docs/Web/Manifest/display) member to your [web app manifest](/en-US/docs/Web/Manifest) and set its value to `standalone`:
 
 ```json
 {
@@ -54,19 +28,13 @@ Here is a web app manifest file example, showing how to define a display mode:
 }
 ```
 
-## Best practices for installed PWAs
+Note that there are other display modes available, such as `browser`, `minimal-ui`, and `fullscreen`. The display mode you choose changes how much of the browser user interface is shown to the user, from showing all of it, to having your own dedicated window. To learn more about all the available display mode and about how they fallback when one is not supported, see the documentation about the [`display`](/en-US/docs/Web/Manifest/display) member.
 
-### Create a familiar experience
-
-The `display` manifest member is not mandatory and defaults to `browser`. This means that by default, your PWA will still open in a browser window when installed.
-
-However, users have specific expectations of how installed applications behave on their devices. One of these expectations is that applications have their own dedicated windows.
-
-By using the `standalone` display mode, you can provide an app experience that is more familiar to users.
+## Best practices
 
 ### Handle multi-page navigation
 
-If your application is built using several navigatable HTML pages, make sure to include UI elements for controlling navigation within your application.
+If your application is built using several navigable HTML pages, make sure to include UI elements for controlling navigation within your application.
 
 If you don't have your own navigation elements, use the `minimal-ui` display mode to make sure users can still go between pages using previous and next buttons rendered by the browser in your app's title bar.
 
@@ -74,7 +42,7 @@ If you don't have your own navigation elements, use the `minimal-ui` display mod
 
 When you define a display mode other than `browser` in your web app manifest, it only applies when the application is installed. Like any other webpage, a manifest's `display` member has no effect when the PWA is not installed. You can check the display mode at runtime to detect if the app is installed or not.
 
-Using the CSS {{cssxref("@media/display-mode", "display-mode")}} media feature or the {{domxref("Window.matchMedia")}} JavaScript feature, you can selectively apply CSS styles or run JavaScript code in your app based on its display mode.
+Using the CSS {{cssxref("@media/display-mode", "display-mode")}} media feature or the {{domxref("Window.matchMedia()")}} JavaScript feature, you can selectively apply CSS styles or run JavaScript code in your app based on its display mode.
 
 Here is an example showing how to use the {{cssxref("@media")}} CSS at-rule to only reveal an element on a webpage when the `standalone` display mode is enabled:
 
@@ -99,14 +67,6 @@ function isStandaloneApp() {
   return window.matchMedia("(display-mode: standalone)").matches;
 }
 ```
-
-## Specifications
-
-{{Specifications}}
-
-## Browser compatibility
-
-{{Compat}}
 
 ## See also
 
