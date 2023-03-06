@@ -4,7 +4,7 @@ slug: Web/MathML/Global_attributes/mathvariant
 browser-compat: mathml.global_attributes.mathvariant
 ---
 
-{{QuickLinksWithSubPages("/en-us/docs/Web/MathML/Global_attributes")}}
+{{MathMLRef}}
 
 The **`mathvariant`** [global attribute](/en-US/docs/Web/MathML/Global_attributes) sets a logical class for textual elements, which is visually
 distinguished by using special [Mathematical Alphanumeric Symbols](https://en.wikipedia.org/wiki/Mathematical_Alphanumeric_Symbols).
