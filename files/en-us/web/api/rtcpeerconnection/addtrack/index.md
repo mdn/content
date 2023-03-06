@@ -7,13 +7,10 @@ browser-compat: api.RTCPeerConnection.addTrack
 
 {{APIRef("WebRTC")}}
 
-The {{domxref("RTCPeerConnection")}} method
-**`addTrack()`** adds a new media track to the set of tracks
-which will be transmitted to the other peer.>
+The {{domxref("RTCPeerConnection")}} method **`addTrack()`** adds a new media track to the set of tracks which will be transmitted to the other peer.
 
-> **Note:** Adding a track to a connection triggers renegotiation by
-> firing a {{DOMxRef("RTCPeerConnection/negotiationneeded_event", "negotiationneeded")}} event. See
-> [Starting negotiation](/en-US/docs/Web/API/WebRTC_API/Signaling_and_video_calling#starting_negotiation) for details.
+> **Note:** Adding a track to a connection triggers renegotiation by firing a {{DOMxRef("RTCPeerConnection/negotiationneeded_event", "negotiationneeded")}} event.
+> See [Starting negotiation](/en-US/docs/Web/API/WebRTC_API/Signaling_and_video_calling#starting_negotiation) for details.
 
 ## Syntax
 

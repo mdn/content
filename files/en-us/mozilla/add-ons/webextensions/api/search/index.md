@@ -21,8 +21,8 @@ To use this API you need to have the `"search"` [permission](/en-US/docs/Mozilla
 
 When choosing between `search.query()` and `search.search()`, consider the following:
 
-- {{WebExtAPIRef("search.search()")}} is available on all the main browser engines and, therefore, is ideal for use in cross-browser extensions. However, it can only issue searches against the browser's default search engine.
-- {{WebExtAPIRef("search.query()")}} is available only on Firefox. However, it has the advantage of enabling you to issue a search against any search engines installed in the browser.
+- {{WebExtAPIRef("search.query()")}} is available in most major browsers, making it ideal for use in cross-browser extensions. However, it can only issue searches against the browser's default search engine.
+- {{WebExtAPIRef("search.search()")}} is available only in Firefox. However, it has the advantage of being able to issue a search against any search engine installed in the browser.
 
 ## Functions
 

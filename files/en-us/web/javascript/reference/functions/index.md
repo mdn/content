@@ -198,7 +198,7 @@ doSomething(
 );
 ```
 
-On the other hand, a function expression may also be turned into a function declaration. An expression statement cannot begin with the `function` or `async function` keywords, which is a common mistake when implementing [IIFEs](/en-US/docs/Glossary/IIFE) (Immediately Invoked Function Expressions).
+On the other hand, a function expression may also be turned into a function declaration. An [expression statement](/en-US/docs/Web/JavaScript/Reference/Statements/Expression_statement) cannot begin with the `function` or `async function` keywords, which is a common mistake when implementing [IIFEs](/en-US/docs/Glossary/IIFE) (Immediately Invoked Function Expressions).
 
 ```js example-bad
 function () { // SyntaxError: Function statements require a function name
