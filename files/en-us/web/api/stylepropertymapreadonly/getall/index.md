@@ -36,13 +36,13 @@ contains an item for each background image declared.
 
 ```js
 // get a button element
-const buttonEl = document.querySelector('button');
+const buttonEl = document.querySelector("button");
 
 // we can retrieve all computed styles with `computedStyleMap`
 const allComputedStyles = buttonEl.computedStyleMap();
 
 // use getAll() with the background image property
-const allBkImages = allComputedStyles.getAll('background-image');
+const allBkImages = allComputedStyles.getAll("background-image");
 console.log(allBkImages); // logs an array with each background image as an item
 ```
 

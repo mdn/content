@@ -1,10 +1,6 @@
 ---
 title: Authoring MathML
 slug: Web/MathML/Authoring
-tags:
-  - Beginner
-  - MathML
-  - MathML Project
 ---
 
 <section id="Quick_links">

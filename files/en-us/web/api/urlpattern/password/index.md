@@ -27,7 +27,7 @@ The below example creates a {{domxref("URLPattern")}} object with
 the passwords `correct-horse-battery` and `correct-horse-battery-staple`.
 
 ```js
-const pattern = new URLPattern({ password: 'correct-horse-battery{-staple}?' });
+const pattern = new URLPattern({ password: "correct-horse-battery{-staple}?" });
 console.log(pattern.password); // 'correct-horse-battery{-staple}?'
 ```
 

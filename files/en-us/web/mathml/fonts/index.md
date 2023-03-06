@@ -1,10 +1,6 @@
 ---
 title: Fonts for MathML
 slug: Web/MathML/Fonts
-tags:
-  - Fonts
-  - MathML
-  - Project
 ---
 
 <section id="Quick_links">

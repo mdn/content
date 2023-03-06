@@ -17,7 +17,7 @@ A string.
 ## Examples
 
 ```js
- myStyleSheet.type = 'text/css';
+myStyleSheet.type = "text/css";
 ```
 
 ## Specifications

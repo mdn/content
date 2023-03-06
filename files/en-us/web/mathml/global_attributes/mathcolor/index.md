@@ -1,11 +1,6 @@
 ---
 title: mathcolor
 slug: Web/MathML/Global_attributes/mathcolor
-tags:
-  - Global attributes
-  - MathML
-  - Reference
-  - Deprecated
 browser-compat: mathml.global_attributes.mathcolor
 ---
 

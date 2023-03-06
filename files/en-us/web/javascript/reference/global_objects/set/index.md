@@ -11,7 +11,7 @@ The **`Set`** object lets you store unique values of any type, whether {{Glossar
 
 ## Description
 
-`Set` objects are collections of values. A value in the `Set` **may only occur once**; it is unique in the `Set`'s collection. You can iterate through the elements of a set in insertion order. The _insertion order_ corresponds to the order in which each element was inserted into the set by the [`add()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/add) method successfully (that is, there wasn't an identical element already in the set when `add()` was called).
+`Set` objects are collections of values. A value in the set **may only occur once**; it is unique in the set's collection. You can iterate through the elements of a set in insertion order. The _insertion order_ corresponds to the order in which each element was inserted into the set by the [`add()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/add) method successfully (that is, there wasn't an identical element already in the set when `add()` was called).
 
 The specification requires sets to be implemented "that, on average, provide access times that are sublinear on the number of elements in the collection". Therefore, it could be represented internally as a hash table (with O(1) lookup), a search tree (with O(log(N)) lookup), or any other data structure, as long as the complexity is better than O(N).
 
@@ -21,7 +21,7 @@ Value equality is based on the [SameValueZero](/en-US/docs/Web/JavaScript/Equali
 
 ### Performance
 
-The `Set` [`has`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/has) method checks if a value is in a `Set` object, using an approach that is, on average, quicker than testing most of the elements that have previously been added to the `Set` object. In particular, it is, on average, faster than the [`Array.prototype.includes`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/includes) method when an `Array` object has a `length` equal to a `Set` object's `size`.
+The [`has`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/has) method checks if a value is in the set, using an approach that is, on average, quicker than testing most of the elements that have previously been added to the set. In particular, it is, on average, faster than the [`Array.prototype.includes`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/includes) method when an array has a `length` equal to a set's `size`.
 
 ## Constructor
 
@@ -104,9 +104,9 @@ mySet1.add(5); // Set(5) { 1, 'some text', {...}, {...}, 5 } - a previously dele
 console.log(mySet1); // Set(5) { 1, "some text", {…}, {…}, 5 }
 ```
 
-### Iterating Sets
+### Iterating sets
 
-Iteration of sets visits elements in insertion order.
+The iteration over a set visits elements in insertion order.
 
 ```js
 for (const item of mySet1) {
@@ -220,7 +220,7 @@ symmetricDifference(setA, setC); // returns Set {1, 2, 5, 6}
 difference(setA, setC); // returns Set {1, 2}
 ```
 
-### Relation with Array objects
+### Relation to arrays
 
 ```js
 const myArray = ["value1", "value2", "value3"];
@@ -234,10 +234,10 @@ mySet.has("value1"); // returns true
 console.log([...mySet]); // Will show you exactly the same Array as myArray
 ```
 
-### Remove duplicate elements from the array
+### Remove duplicate elements from an array
 
 ```js
-// Use to remove duplicate elements from the array
+// Use to remove duplicate elements from an array
 
 const numbers = [2, 3, 4, 4, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 5, 32, 3, 4, 5];
 
@@ -246,7 +246,7 @@ console.log([...new Set(numbers)]);
 // [2, 3, 4, 5, 6, 7, 32]
 ```
 
-### Relation with Strings
+### Relation to strings
 
 ```js
 const text = "India";
@@ -254,12 +254,12 @@ const text = "India";
 const mySet = new Set(text); // Set(5) {'I', 'n', 'd', 'i', 'a'}
 mySet.size; // 5
 
-//case sensitive & duplicate omission
+// case sensitive & duplicate omission
 new Set("Firefox"); // Set(7) { "F", "i", "r", "e", "f", "o", "x" }
 new Set("firefox"); // Set(6) { "f", "i", "r", "e", "o", "x" }
 ```
 
-### Use Set to ensure the uniqueness of a list of values
+### Use a set to ensure the uniqueness of a list of values
 
 ```js
 const array = Array.from(document.querySelectorAll("[id]")).map((e) => e.id);

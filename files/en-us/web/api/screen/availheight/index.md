@@ -40,7 +40,11 @@ vertical space available, you can do so using code similar to what's seen here.
 In the main window, when it's time to open the panels, code like the following is used.
 
 ```js
-const paletteWindow = window.open("panels.html", "Panels", "left=0, top=0, width=200");
+const paletteWindow = window.open(
+  "panels.html",
+  "Panels",
+  "left=0, top=0, width=200"
+);
 ```
 
 The Panels window's HTML, in `panels.html`, has JavaScript code of its own,

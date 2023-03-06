@@ -25,7 +25,7 @@ const recognition = new SpeechRecognition();
 recognition.onerror = (event) => {
   console.log(`Speech recognition error detected: ${event.error}`);
   console.log(`Additional information: ${event.message}`);
-}
+};
 ```
 
 ## Specifications
