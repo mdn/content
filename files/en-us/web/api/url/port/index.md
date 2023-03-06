@@ -21,7 +21,7 @@ A string.
 ## Examples
 
 ```js
-const url = new URL('https://mydomain.com:80/svn/Repos/');
+const url = new URL("https://example.com:80/svn/Repos/");
 console.log(url.port); // Logs '80'
 ```
 

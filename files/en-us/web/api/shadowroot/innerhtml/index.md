@@ -18,10 +18,10 @@ A string.
 ## Examples
 
 ```js
-let customElem = document.querySelector('my-shadow-dom-element');
+let customElem = document.querySelector("my-shadow-dom-element");
 let shadow = customElem.shadowRoot;
 
-shadow.innerHTML = '<strong>This element should be more important!</strong>';
+shadow.innerHTML = "<strong>This element should be more important!</strong>";
 ```
 
 ## Specifications

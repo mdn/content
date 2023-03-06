@@ -379,6 +379,8 @@ A **skip link** is a link placed as early as possible in {{HTMLElement("body")}}
 }
 ```
 
+#### Result
+
 {{EmbedLiveSample('Skip links')}}
 
 Skip links let keyboard users bypass content repeated throughout multiple pages, such as header navigation.

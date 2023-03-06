@@ -20,7 +20,9 @@ A string.
 ## Examples
 
 ```js
-const url = new URL('https://developer.mozilla.org/en-US/docs/Web/API/URL/protocol');
+const url = new URL(
+  "https://developer.mozilla.org/en-US/docs/Web/API/URL/protocol"
+);
 console.log(url.protocol); // Logs "https:"
 ```
 

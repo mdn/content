@@ -1,13 +1,8 @@
 ---
 title: "Permissions-Policy: execution-while-not-rendered"
 slug: Web/HTTP/Headers/Permissions-Policy/execution-while-not-rendered
-tags:
-  - Directive
-  - Permissions Policy
-  - Permissions-Policy
-  - HTTP
-  - Reference
-  - Experimental
+status:
+  - experimental
 browser-compat: http.headers.Permissions-Policy.execution-while-not-rendered
 ---
 

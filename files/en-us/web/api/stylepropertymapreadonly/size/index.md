@@ -24,7 +24,7 @@ Here we use the size property to return the total entries within the button elem
 
 ```js
 // grab our element
-const buttonEl = document.querySelector('button');
+const buttonEl = document.querySelector("button");
 
 // we can retrieve all computed styles with `computedStyleMap`
 const allComputedStyles = buttonEl.computedStyleMap();

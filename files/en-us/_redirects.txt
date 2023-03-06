@@ -6,6 +6,7 @@
 # FROM-URL	TO-URL
 /en-US/docs/-moz-locale-dir(ltr)	/en-US/docs/Web/CSS/:-moz-locale-dir_ltr
 /en-US/docs/-moz-locale-dir(rtl)	/en-US/docs/Web/CSS/:-moz-locale-dir_rtl
+/en-US/docs//Web/JavaScript/Reference/Errors/Dead_object	https://blog.mozilla.org/addons/2012/09/12/what-does-cant-access-dead-object-mean/
 /en-US/docs/::file-selector-button	/en-US/docs/Web/CSS/::file-selector-button
 /en-US/docs/<img>	/en-US/docs/Web/HTML/Element/Img
 /en-US/docs/AJAX	/en-US/docs/Web/Guide/AJAX
@@ -12372,6 +12373,7 @@
 /en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler/setPrototypeOf	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/setPrototypeOf
 /en-US/docs/Web/JavaScript/Reference/Global_Objects/RangeError/prototype	/en-US/docs/Web/JavaScript/Reference/Global_Objects/RangeError
 /en-US/docs/Web/JavaScript/Reference/Global_Objects/ReferenceError/prototype	/en-US/docs/Web/JavaScript/Reference/Global_Objects/ReferenceError
+/en-US/docs/Web/JavaScript/Reference/Global_Objects/Reflect/Comparing_Reflect_and_Object_methods	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Reflect
 /en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/constructor	/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp
 /en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/prototype	/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp
 /en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/toSource	/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/toString

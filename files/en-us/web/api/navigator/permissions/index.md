@@ -18,10 +18,10 @@ A {{domxref("Permissions")}} object.
 ## Examples
 
 ```js
-navigator.permissions.query({name:'geolocation'}).then((result) => {
-  if (result.state === 'granted') {
+navigator.permissions.query({ name: "geolocation" }).then((result) => {
+  if (result.state === "granted") {
     showMap();
-  } else if (result.state === 'prompt') {
+  } else if (result.state === "prompt") {
     showButtonToEnableMap();
   }
   // Don't do anything if the permission was denied.

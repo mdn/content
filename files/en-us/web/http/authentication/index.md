@@ -1,12 +1,6 @@
 ---
 title: HTTP authentication
 slug: Web/HTTP/Authentication
-tags:
-  - Access Control
-  - Authentication
-  - Guide
-  - HTTP
-  - Security
 ---
 
 {{HTTPSidebar}}

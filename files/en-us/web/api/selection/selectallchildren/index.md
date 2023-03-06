@@ -45,10 +45,10 @@ None ({{jsxref("undefined")}}).
 ### JavaScript
 
 ```js
-const button = document.querySelector('button');
-const footer = document.querySelector('footer');
+const button = document.querySelector("button");
+const footer = document.querySelector("footer");
 
-button.addEventListener('click', (e) => {
+button.addEventListener("click", (e) => {
   window.getSelection().selectAllChildren(footer);
 });
 ```

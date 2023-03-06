@@ -24,9 +24,9 @@ If the URL of your page is
 the `name` and `age` parameters using:
 
 ```js
-let params = (new URL(document.location)).searchParams;
-let name = params.get('name'); // is the string "Jonathan Smith".
-let age = parseInt(params.get('age')); // is the number 18
+let params = new URL(document.location).searchParams;
+let name = params.get("name"); // is the string "Jonathan Smith".
+let age = parseInt(params.get("age")); // is the number 18
 ```
 
 ## Specifications

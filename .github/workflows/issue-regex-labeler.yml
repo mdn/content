@@ -4,7 +4,7 @@ on:
     types: [opened]
 
 jobs:
-  triage:
+  issue-labeler:
     runs-on: ubuntu-latest
     steps:
       - uses: github/issue-labeler@v3.0

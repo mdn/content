@@ -1,5 +1,5 @@
 ---
-title: 'SVGGraphicsElement: cut event'
+title: "SVGGraphicsElement: cut event"
 slug: Web/API/SVGGraphicsElement/cut_event
 page-type: web-api-event
 browser-compat: api.Element.cut_event
@@ -26,9 +26,9 @@ It's possible to construct and dispatch a [synthetic](/en-US/docs/Web/Events/Cre
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('cut', (event) => { });
+addEventListener("cut", (event) => {});
 
-oncut = (event) => { };
+oncut = (event) => {};
 ```
 
 ## Event type

@@ -127,13 +127,26 @@ async function networkTestStop(pc) {
         const startRemoteOutbound = startReport.get(endRemoteOutbound.id);
 
         if (startRemoteOutbound) {
-          const startInboundStats = findReportEntry(startReport, "remoteId", startRemoteOutbound.id);
-          const endInboundStats = findReportEntry(endReport, "remoteId", endRemoteOutbound.id);
-
-          const elapsedTime = (endRemoteOutbound.timestamp - startRemoteOutbound.timestamp) / 1000;    /* in seconds */
-          const packetsSent = endRemoteOutbound.packetsSent - startRemoteOutbound.packetsSent;
-          const bytesSent = endRemoteOutbound.bytesSent - startRemoteOutbound.bytesSent;
-          const framesDecoded = endInboundStats.framesDecoded - startInboundStats.framesDecoded;
+          const startInboundStats = findReportEntry(
+            startReport,
+            "remoteId",
+            startRemoteOutbound.id
+          );
+          const endInboundStats = findReportEntry(
+            endReport,
+            "remoteId",
+            endRemoteOutbound.id
+          );
+          // Elapsed time in seconds
+          const elapsedTime =
+            (endRemoteOutbound.timestamp - startRemoteOutbound.timestamp) /
+            1000;
+          const packetsSent =
+            endRemoteOutbound.packetsSent - startRemoteOutbound.packetsSent;
+          const bytesSent =
+            endRemoteOutbound.bytesSent - startRemoteOutbound.bytesSent;
+          const framesDecoded =
+            endInboundStats.framesDecoded - startInboundStats.framesDecoded;
           const frameRate = framesDecoded / elapsedTime;
 
           let timeString = "";
@@ -143,13 +156,16 @@ async function networkTestStop(pc) {
 
           let frameString = "";
           if (!isNaN(framesDecoded)) {
-            frameString = `Decoded ${framesDecoded} frames for a frame rate of ${frameRate.toFixed(2)} FPS.<br>`;
+            frameString = `Decoded ${framesDecoded} frames for a frame rate of ${frameRate.toFixed(
+              2
+            )} FPS.<br>`;
           }
 
-          const logEntry = `<div class="stats-entry"><h2>Report ID: ${endRemoteOutbound.id}</h2>` +
-                         `Remote peer sent ${packetsSent} packets ${timeString}.<br>` +
-                         `${frameString}` +
-                         `Data size: ${bytesSent} bytes.</div>`;
+          const logEntry =
+            `<div class="stats-entry"><h2>Report ID: ${endRemoteOutbound.id}</h2>` +
+            `Remote peer sent ${packetsSent} packets ${timeString}.<br>` +
+            `${frameString}` +
+            `Data size: ${bytesSent} bytes.</div>`;
           statsBox.innerHTML += logEntry;
         } else {
           statsBox.innerHTML += `<div class="stats-error">Unable to find initial statistics for ID ${endRemoteOutbound.id}.</div>`;

@@ -32,7 +32,7 @@ An {{domxref("SVGAnimatedLength")}} representing the y-coordinate of the circle'
 ### JavaScript
 
 ```js
-const circle = document.getElementById('circle');
+const circle = document.getElementById("circle");
 console.log(circle.cy);
 ```
 

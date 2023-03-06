@@ -1,12 +1,6 @@
 ---
 title: Strict-Transport-Security
 slug: Web/HTTP/Headers/Strict-Transport-Security
-tags:
-  - HSTS
-  - HTTP
-  - HTTPS
-  - Security
-  - header
 browser-compat: http.headers.Strict-Transport-Security
 ---
 

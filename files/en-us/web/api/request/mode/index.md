@@ -67,7 +67,7 @@ In the following snippet, we create a new request using the
 the script), then save the request mode in a variable:
 
 ```js
-const myRequest = new Request('flowers.jpg');
+const myRequest = new Request("flowers.jpg");
 const myMode = myRequest.mode; // returns "cors" by default
 ```
 
