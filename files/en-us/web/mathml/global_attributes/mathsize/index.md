@@ -1,6 +1,8 @@
 ---
 title: mathsize
 slug: Web/MathML/Global_attributes/mathsize
+status:
+  - deprecated
 browser-compat: mathml.global_attributes.mathsize
 ---
 
