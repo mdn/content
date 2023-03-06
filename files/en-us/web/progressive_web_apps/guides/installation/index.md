@@ -3,7 +3,7 @@ title: Installation
 slug: Web/Progressive_web_apps/Guides/Installation
 ---
 
-One of the defining aspects of a PWA is that it can be installed on the device, and then appears to users as a platform-specific app, a permanent feature of their device which they can launch directly from the platform like any other app.
+One of the defining aspects of a PWA is that it can be installed on the device, and then appears to users as a platform-specific app, a permanent feature of their device which they can launch directly from the operating system like any other app.
 
 We can summarize this as follows:
 
@@ -16,7 +16,7 @@ We'll discuss each of these features in this guide. First, though, we'll discuss
 
 ## Installability
 
-For a website to be installable it needs to meet some technical requirements. We can consider these the minimum requirements for a website to be a PWA.
+For a web app to be installable, it needs to meet some technical requirements. We can consider these the minimum requirements for a web app to be a PWA.
 
 ### The web app manifest
 
