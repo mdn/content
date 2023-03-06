@@ -1,11 +1,6 @@
 ---
 title: 410 Gone
 slug: Web/HTTP/Status/410
-tags:
-  - Client error
-  - HTTP
-  - Reference
-  - Status code
 browser-compat: http.status.410
 ---
 

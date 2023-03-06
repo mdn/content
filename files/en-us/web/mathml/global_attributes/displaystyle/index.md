@@ -1,10 +1,6 @@
 ---
 title: displaystyle
 slug: Web/MathML/Global_attributes/displaystyle
-tags:
-  - Global attributes
-  - MathML
-  - Reference
 browser-compat: mathml.global_attributes.displaystyle
 ---
 

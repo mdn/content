@@ -1,12 +1,8 @@
 ---
 title: display_override
 slug: Web/Manifest/display_override
-tags:
-  - Manifest
-  - Web
-  - display
-  - display_override
-  - Experimental
+status:
+  - experimental
 browser-compat: html.manifest.display_override
 ---
 

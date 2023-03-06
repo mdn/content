@@ -1,11 +1,6 @@
 ---
 title: 201 Created
 slug: Web/HTTP/Status/201
-tags:
-  - HTTP
-  - Reference
-  - Status code
-  - Success
 browser-compat: http.status.201
 ---
 

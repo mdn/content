@@ -1,13 +1,6 @@
 ---
 title: Web app manifests
 slug: Web/Manifest
-tags:
-  - App
-  - Manifest
-  - PWA
-  - Progressive web apps
-  - Reference
-  - Web
 browser-compat: html.manifest
 ---
 

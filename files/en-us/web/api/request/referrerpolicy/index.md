@@ -25,7 +25,7 @@ In the following snippet, we create a new request using the
 the script), then save the request referrer policy in a variable:
 
 ```js
-const myRequest = new Request('flowers.jpg');
+const myRequest = new Request("flowers.jpg");
 const myReferrer = myRequest.referrerPolicy; // returns "" by default
 ```
 

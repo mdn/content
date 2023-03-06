@@ -75,12 +75,12 @@ An {{HTMLElement("audio")}} element using the `autoplay` attribute might look li
 
 If autoplay is important for your application, you may need to customize behavior based on whether or not autoplay is allowed, disallowed, or only supported for inaudible content.
 For example, if your application needs to autoplay a video and you know that the page only allows the autoplay of inaudible content, you can either mute it or supply a video with no audio track.
-Similarly, if you know that autoplay is not allowed at all, you might provide a default image for the video (using the [`poster`](/en-US/docs/Web/HTML/Element/video#attr-poster) attribute), or choose to defer loading the video until it is requested.
+Similarly, if you know that autoplay is not allowed at all, you might provide a default image for the video (using the [`poster`](/en-US/docs/Web/HTML/Element/video#poster) attribute), or choose to defer loading the video until it is requested.
 
 The [`Navigator.getAutoplayPolicy()`](/en-US/docs/Web/API/Navigator/getAutoplayPolicy) method can be used to check the autoplay policy for a type of media feature (i.e. all media elements, or all audio contexts) in a document, or to check whether a specific media element or audio context can autoplay.
 
 The example below shows how you pass the `mediaelement` string to get the autoplay policy for all media elements in the document (pass `audiocontext` to get the policy for audio contexts).
-The code assumes `video` is an `HTMLVideoElement` media element using the [`<video>`](/en-US/docs/Web/HTML/Element/video#attr-autoplay) tag or [`HTMLVideoElement`](/en-US/docs/Web/API/HTMLVideoElement), and that it is configured to autoplay with audio by default.
+The code assumes `video` is an `HTMLVideoElement` media element using the [`<video>`](/en-US/docs/Web/HTML/Element/video#autoplay) tag or [`HTMLVideoElement`](/en-US/docs/Web/API/HTMLVideoElement), and that it is configured to autoplay with audio by default.
 If autoplay is only allowed for inaudible content, we mute the audio; if autoplay is disallowed, we make sure that a placeholder image is displayed for the video.
 
 ```js
@@ -325,9 +325,9 @@ Browsers may have preferences that control the way autoplay works, or how autopl
   - : A Boolean preference which if `true` (the default) allows audio media which is currently muted to be automatically played. If this has been changed to `false`, media with an audio track will not be permitted to play even if muted.
 - `media.autoplay.block-webaudio`
   - : A Boolean preference that indicates whether to apply autoplay blocking to the [Web Audio API](/en-US/docs/Web/API/Web_Audio_API).
-     If `false`, web audio is always allowed to autoplay.
-     If `true`, audio contexts are only able to play on pages once there has been {{Glossary("Sticky activation")}}.
-     The default is set to `true`.
+    If `false`, web audio is always allowed to autoplay.
+    If `true`, audio contexts are only able to play on pages once there has been {{Glossary("Sticky activation")}}.
+    The default is set to `true`.
 - `media.autoplay.default`
   - : An integer preference which specifies whether per-domain configuration for autoplay support by default is allowed (`0`), blocked (`1`), or prompt-on-use (`2`). The default value is `0`.
 - `media.autoplay.enabled.user-gestures-needed` (Nightly builds only)

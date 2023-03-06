@@ -20,7 +20,7 @@ An {{domxref("Element")}} or `null`.
 ## Examples
 
 ```js
-let customElem = document.querySelector('my-shadow-dom-element');
+let customElem = document.querySelector("my-shadow-dom-element");
 let shadow = customElem.shadowRoot;
 let pleElem = shadow.pointerLockElement;
 ```

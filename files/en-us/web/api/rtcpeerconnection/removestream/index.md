@@ -44,15 +44,19 @@ removeStream(mediaStream)
 ```js
 let pc;
 let videoStream;
-navigator.getUserMedia({video: true}, (stream) => {
+navigator.getUserMedia({ video: true }, (stream) => {
   pc = new RTCPeerConnection();
   videoStream = stream;
   pc.addStream(stream);
 });
-document.getElementById("closeButton").addEventListener("click", (event) => {
-  pc.removeStream(videoStream);
-  pc.close();
-}, false);
+document.getElementById("closeButton").addEventListener(
+  "click",
+  (event) => {
+    pc.removeStream(videoStream);
+    pc.close();
+  },
+  false
+);
 ```
 
 ## Browser compatibility

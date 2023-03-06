@@ -31,10 +31,10 @@ A boolean value.
 ## Examples
 
 ```js
-let url = new URL('https://example.com?foo=1&bar=2');
+let url = new URL("https://example.com?foo=1&bar=2");
 let params = new URLSearchParams(url.search);
 
-console.log(params.has('bar')); //true
+console.log(params.has("bar")); //true
 ```
 
 ## Specifications

@@ -1,11 +1,6 @@
 ---
 title: Want-Digest
 slug: Web/HTTP/Headers/Want-Digest
-tags:
-  - HTTP
-  - HTTP Header
-  - Request header
-  - Response header
 browser-compat: http.headers.Want-Digest
 ---
 

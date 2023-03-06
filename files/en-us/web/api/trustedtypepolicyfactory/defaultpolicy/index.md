@@ -21,7 +21,7 @@ The first line below returns null as no default policy has been created. Once a 
 
 ```js
 console.log(trustedTypes.defaultPolicy); // null
-const dp = trustedTypes.createPolicy('default', {});
+const dp = trustedTypes.createPolicy("default", {});
 console.log(trustedTypes.defaultPolicy); // a TrustedTypePolicy object
 ```
 

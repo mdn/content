@@ -91,11 +91,19 @@ JavaScript has some lower-level functions that deal with the binary encoding of 
 
 ```js
 new Int32Array([1.1, 1.9, -1.1, -1.9]); // Int32Array(4) [ 1, 1, -1, -1 ]
-new Int8Array([257, -257]); // Int8Array(1) [ 1, -1 ]
-// 257 = 0001 0000 0001 = 0000 0001 (mod 2^8) = 1
-// -257 = 1110 1111 1111 = 1111 1111 (mod 2^8) = -1 (as signed integer)
-new Uint8Array([257, -257]); // Uint8Array(1) [ 1, 255 ]
-// -257 = 1110 1111 1111 = 1111 1111 (mod 2^8) = 255 (as unsigned integer)
+
+new Int8Array([257, -257]); // Int8Array(2) [ 1, -1 ]
+// 257 = 0001 0000 0001
+//     =      0000 0001 (mod 2^8)
+//     = 1
+// -257 = 1110 1111 1111
+//      =      1111 1111 (mod 2^8) 
+//      = -1 (as signed integer)
+
+new Uint8Array([257, -257]); // Uint8Array(2) [ 1, 255 ]
+// -257 = 1110 1111 1111 
+//      =      1111 1111 (mod 2^8)
+//      = 255 (as unsigned integer)
 ```
 
 ## Constructor

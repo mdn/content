@@ -32,12 +32,18 @@ A {{domxref("CanMakePaymentEvent")}}. Inherits from {{domxref("ExtendableEvent")
 The `canmakepayment` event is fired on a payment app's service worker to check whether it is ready to handle a payment. Specifically, it is fired when the merchant website calls {{domxref("PaymentRequest.PaymentRequest", "new PaymentRequest()")}}. The service worker can then use the {{domxref("CanMakePaymentEvent.respondWith()")}} method to respond appropriately:
 
 ```js
-self.addEventListener("canmakepayment", e => {
-  e.respondWith(new Promise((resolve, reject) => {
-    someAppSpecificLogic()
-    .then(result => { resolve(result); })
-    .catch(error => { reject(error); });
-  }));
+self.addEventListener("canmakepayment", (e) => {
+  e.respondWith(
+    new Promise((resolve, reject) => {
+      someAppSpecificLogic()
+        .then((result) => {
+          resolve(result);
+        })
+        .catch((error) => {
+          reject(error);
+        });
+    })
+  );
 });
 ```
 

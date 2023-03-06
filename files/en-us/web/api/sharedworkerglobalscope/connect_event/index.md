@@ -1,5 +1,5 @@
 ---
-title: 'SharedWorkerGlobalScope: connect event'
+title: "SharedWorkerGlobalScope: connect event"
 slug: Web/API/SharedWorkerGlobalScope/connect_event
 page-type: web-api-event
 browser-compat: api.SharedWorkerGlobalScope.connect_event
@@ -16,9 +16,9 @@ This event is not cancelable and does not bubble.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('connect', (event) => { });
+addEventListener("connect", (event) => {});
 
-onconnect = (event) => { };
+onconnect = (event) => {};
 ```
 
 ## Event type
@@ -50,15 +50,15 @@ The connecting port can be referenced through the event object's `ports` paramet
 
 ```js
 self.onconnect = (e) => {
-    const port = e.ports[0];
+  const port = e.ports[0];
 
-    port.onmessage = (e) => {
-      const workerResult = `Result: ${e.data[0] * e.data[1]}`;
-      port.postMessage(workerResult);
-    }
+  port.onmessage = (e) => {
+    const workerResult = `Result: ${e.data[0] * e.data[1]}`;
+    port.postMessage(workerResult);
+  };
 
-    port.start();
-}
+  port.start();
+};
 ```
 
 For a complete running example, see our [Basic shared worker example](https://github.com/mdn/dom-examples/tree/main/web-workers/simple-shared-worker) ([run shared worker](https://mdn.github.io/dom-examples/web-workers/simple-shared-worker/).)
@@ -68,14 +68,13 @@ For a complete running example, see our [Basic shared worker example](https://gi
 You could also set up an event handler using the {{domxref("EventTarget/addEventListener", "addEventListener()")}} method:
 
 ```js
-self.addEventListener('connect', (e) => {
+self.addEventListener("connect", (e) => {
   const port = e.ports[0];
 
   port.onmessage = (e) => {
     const workerResult = `Result: ${e.data[0] * e.data[1]}`;
     port.postMessage(workerResult);
-  }
-
+  };
 });
 ```
 
