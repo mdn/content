@@ -27,6 +27,8 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 </p>
 ```
 
+### Result
+
 {{EmbedLiveSample('Example')}}
 
 ## Technical summary
