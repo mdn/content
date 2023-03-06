@@ -1,19 +1,6 @@
 ---
 title: Text fragments
 slug: Web/Text_fragments
-tags:
-  - Components
-  - HTML Imports
-  - JavaScript
-  - Landing
-  - Overview
-  - Template
-  - Web Article
-  - Web Components
-  - Web Development
-  - custom elements
-  - shadow dom
-  - slot
 browser-compat:
   - html.elements.a.text_fragments
   - api.FragmentDirective

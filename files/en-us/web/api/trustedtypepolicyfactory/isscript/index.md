@@ -32,7 +32,7 @@ In the below example the constant `url` was created by a policy, and therefore `
 
 ```js
 const myScript = policy.createScript("eval('2 + 2')");
-console.log(trustedTypes.isScript(myScript)) // true;
+console.log(trustedTypes.isScript(myScript)); // true;
 
 const fake = Object.create(TrustedScript.prototype);
 console.log(trustedTypes.isScript(fake)); // false

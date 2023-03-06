@@ -1,14 +1,8 @@
 ---
 title: Sec-CH-UA-Bitness
 slug: Web/HTTP/Headers/Sec-CH-UA-Bitness
-tags:
-  - Sec-CH-UA-Bitness
-  - Client hint
-  - HTTP
-  - HTTP Header
-  - Reference
-  - Request header
-  - Experimental
+status:
+  - experimental
 browser-compat: http.headers.Sec-CH-UA-Bitness
 ---
 

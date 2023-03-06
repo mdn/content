@@ -63,8 +63,8 @@ You can create an SVG style element as shown:
 const svg = document.querySelector("svg");
 
 // Create the `style` element in the SVG namespace
-const style = document.createElementNS('http://www.w3.org/2000/svg', 'style');
-const node = document.createTextNode('circle { fill: red; }');
+const style = document.createElementNS("http://www.w3.org/2000/svg", "style");
+const node = document.createTextNode("circle { fill: red; }");
 style.appendChild(node);
 
 // Append the style element to the SVG element
@@ -155,14 +155,14 @@ This is called after initialization, whenever the frame resizes, and if the butt
 
 ```js
 // Get logging text area
-const log = document.getElementById("log")
+const log = document.getElementById("log");
 
 function setLogText() {
   //Log current values of properties
   log.value = `style.media: ${style.media} (frame width: ${window.innerWidth})\n`; // 'all' by default
   log.value += `style.title: ${style.title}\n`; // no default value
-  log.value += `style.disabled: ${style.disabled}\n`;  // 'false' by default
-  log.value += `style.type: ${style.type}\n`;  // deprecated (do not use)
+  log.value += `style.disabled: ${style.disabled}\n`; // 'false' by default
+  log.value += `style.type: ${style.type}\n`; // deprecated (do not use)
   log.value += `style.sheet.rules[0].cssText: ${style.sheet.rules[0].cssText}\n`;
 }
 
@@ -170,8 +170,8 @@ function setLogText() {
 setLogText();
 
 // Log when the frame resizes
-addEventListener('resize', () => {
-    setLogText();
+addEventListener("resize", () => {
+  setLogText();
 });
 ```
 
@@ -180,15 +180,15 @@ When the button is clicked the {{domxref("SVGStyleElement.disabled","disabled")}
 This also updates the log and the button text.
 
 ```js
-const button = document.querySelector('button');
+const button = document.querySelector("button");
 
-button.addEventListener('click', () => {
-   style.disabled = !style.disabled;
-   button.textContent = style.disabled ? 'Enable' : 'Disable';
+button.addEventListener("click", () => {
+  style.disabled = !style.disabled;
+  button.textContent = style.disabled ? "Enable" : "Disable";
 
-   // Log after button presses
-   setLogText();
-   });
+  // Log after button presses
+  setLogText();
+});
 ```
 
 ### Result

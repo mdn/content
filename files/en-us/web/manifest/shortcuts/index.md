@@ -1,11 +1,8 @@
 ---
 title: shortcuts
 slug: Web/Manifest/shortcuts
-tags:
-  - Manifest
-  - Web
-  - shortcuts
-  - Experimental
+status:
+  - experimental
 browser-compat: html.manifest.shortcuts
 ---
 

@@ -62,15 +62,15 @@ In this example, a message appears when you select the secret word. It uses
 #### JavaScript
 
 ```js
-const secret = document.getElementById('secret');
-const win = document.getElementById('win');
+const secret = document.getElementById("secret");
+const win = document.getElementById("win");
 
 // Listen for selection changes
-document.addEventListener('selectionchange', () => {
+document.addEventListener("selectionchange", () => {
   const selection = window.getSelection();
   const found = selection.containsNode(secret);
 
-  win.toggleAttribute('hidden', !found);
+  win.toggleAttribute("hidden", !found);
 });
 ```
 

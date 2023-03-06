@@ -42,7 +42,7 @@ parameters `buffer`, an {{jsxref("ArrayBuffer")}}, a {{jsxref("TypedArray")}}, o
 ```js
 async function fillSourceBuffer(buffer, msBuffer) {
   try {
-    while(true) {
+    while (true) {
       await msBuffer.appendBufferAsync(buffer);
     }
   } catch (e) {

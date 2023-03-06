@@ -128,7 +128,7 @@ HTML, CSS, and JavaScript are front-end (or client-side) languages, which means 
 
 There are another class of languages called back-end (or server-side) languages, meaning that they are run on the server before the result is then sent to the browser to be displayed. A typical use for a server-side language is to get some data out of a database and generate some HTML to contain the data, before then sending the HTML over to the browser to display it to the user.
 
-Example server-side languages include ASP.NET, Python, PHP, and NodeJS.
+Example server-side frameworks include ASP.NET (in C#), Django (in Python), Laravel (in PHP), and Next.js (in JavaScript).
 
 ## Web best practices
 

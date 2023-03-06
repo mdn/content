@@ -1,12 +1,6 @@
 ---
 title: Origin
 slug: Web/HTTP/Headers/Origin
-tags:
-  - HTTP
-  - Reference
-  - Request header
-  - header
-  - origin
 browser-compat: http.headers.Origin
 ---
 

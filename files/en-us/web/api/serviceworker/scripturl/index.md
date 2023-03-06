@@ -18,7 +18,9 @@ A string.
 ## Examples
 
 ```js
-TBD
+const sw = navigator.serviceWorker.controller;
+console.log(sw.scriptURL);
+// https://example.com/scripts/service-worker.js
 ```
 
 ## Specifications

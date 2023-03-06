@@ -1,13 +1,6 @@
 ---
 title: HTTP headers
 slug: Web/HTTP/Headers
-tags:
-  - HTTP
-  - HTTP Header
-  - Headers
-  - Networking
-  - Overview
-  - Reference
 ---
 
 {{HTTPSidebar}}

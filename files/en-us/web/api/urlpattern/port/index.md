@@ -27,7 +27,7 @@ The below example creates a {{domxref("URLPattern")}} object with
 and `8080`.
 
 ```js
-const pattern = new URLPattern({ port: '(80|443|8080)' });
+const pattern = new URLPattern({ port: "(80|443|8080)" });
 console.log(pattern.port); // '(80|443|8080)'
 ```
 

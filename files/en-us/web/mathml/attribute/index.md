@@ -1,9 +1,6 @@
 ---
 title: MathML attribute reference
 slug: Web/MathML/Attribute
-tags:
-  - MathML
-  - MathML Reference
 ---
 
 <section id="Quick_links">

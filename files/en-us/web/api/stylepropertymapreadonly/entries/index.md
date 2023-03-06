@@ -37,7 +37,7 @@ on an elements computed styles.
 
 ```js
 // grab a DOM element
-const buttonEl = document.querySelector('button');
+const buttonEl = document.querySelector("button");
 
 // we can retrieve all computed styles with `computedStyleMap`
 const allComputedStyles = buttonEl.computedStyleMap();

@@ -1,12 +1,6 @@
 ---
 title: An overview of HTTP
 slug: Web/HTTP/Overview
-tags:
-  - HTML
-  - HTTP
-  - Overview
-  - WebMechanics
-  - "l10n:priority"
 ---
 
 {{HTTPSidebar}}

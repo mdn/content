@@ -1,13 +1,8 @@
 ---
 title: "Permissions-Policy: accelerometer"
 slug: Web/HTTP/Headers/Permissions-Policy/accelerometer
-tags:
-  - Accelerometer
-  - Directive
-  - Permissions Policy
-  - HTTP
-  - Reference
-  - Experimental
+status:
+  - experimental
 browser-compat: http.headers.Permissions-Policy.accelerometer
 ---
 
