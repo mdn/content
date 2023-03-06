@@ -2,10 +2,6 @@
 title: Clipping and masking
 slug: Web/SVG/Tutorial/Clipping_and_masking
 page-type: guide
-tags:
-  - Advanced
-  - SVG
-  - SVG:Tutorial
 ---
 
 {{SVGRef}}

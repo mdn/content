@@ -2,14 +2,6 @@
 title: Scripting
 slug: Web/SVG/Scripting
 page-type: guide
-tags:
-  - Graphics
-  - SVG
-  - Scripting
-  - default
-  - eventListeners
-  - preventing
-  - setProperty
 ---
 
 {{SVGRef}}

@@ -2,8 +2,6 @@
 title: Compatibility sources
 slug: Web/SVG/Compatibility_sources
 page-type: guide
-tags:
-  - SVG
 ---
 
 {{SVGRef}}

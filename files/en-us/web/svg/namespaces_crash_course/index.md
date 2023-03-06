@@ -2,9 +2,6 @@
 title: Namespaces crash course
 slug: Web/SVG/Namespaces_Crash_Course
 page-type: guide
-tags:
-  - SVG
-  - XML
 ---
 
 {{SVGRef}}

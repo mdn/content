@@ -2,11 +2,6 @@
 title: Fills and Strokes
 slug: Web/SVG/Tutorial/Fills_and_Strokes
 page-type: guide
-tags:
-  - Beginner
-  - NeedLiveSamples
-  - SVG
-  - SVG:Tutorial
 ---
 
 {{SVGRef}}

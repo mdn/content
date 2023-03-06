@@ -2,10 +2,6 @@
 title: Other content in SVG
 slug: Web/SVG/Tutorial/Other_content_in_SVG
 page-type: guide
-tags:
-  - Intermediate
-  - SVG
-  - SVG:Tutorial
 ---
 
 {{SVGRef}}

@@ -2,10 +2,8 @@
 title: xlink:type
 slug: Web/SVG/Attribute/xlink:type
 page-type: svg-attribute
-tags:
-  - Deprecated
-  - SVG
-  - SVG Attribute
+status:
+  - deprecated
 browser-compat: svg.attributes.xlink.xlink_type
 ---
 

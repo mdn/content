@@ -2,14 +2,6 @@
 title: SVG element reference
 slug: Web/SVG/Element
 page-type: landing-page
-tags:
-  - Drawing
-  - Elements
-  - Responsive Design
-  - SVG
-  - SVG Reference
-  - Vector Graphics
-  - "l10n:priority"
 ---
 
 {{SVGRef}}

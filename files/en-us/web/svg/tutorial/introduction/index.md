@@ -2,14 +2,6 @@
 title: Introduction
 slug: Web/SVG/Tutorial/Introduction
 page-type: guide
-tags:
-  - Beginner
-  - Guide
-  - NeedsBeginnerUpdate
-  - NeedsUpdate
-  - SVG
-  - SVG:Tutorial
-  - Tutorial
 ---
 
 {{SVGRef}}
