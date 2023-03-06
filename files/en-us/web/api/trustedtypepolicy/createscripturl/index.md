@@ -37,7 +37,9 @@ A {{domxref("TrustedScriptURL")}} object.
 In the below example a string containing the URL to an external resource is used as the input for `createScriptURL()`. The policy can check that this is an allowed URL before inserting it into an injection sink that could cause this external script to be executed.
 
 ```js
-const escaped = escapeURLPolicy.createScriptURL("https://example.com/my-script.js");
+const escaped = escapeURLPolicy.createScriptURL(
+  "https://example.com/my-script.js"
+);
 ```
 
 ## Specifications

@@ -105,11 +105,14 @@ This section provides an overview of how to connect Mongoose to a MongoDB databa
 
 ### Installing Mongoose and MongoDB
 
-Mongoose is installed in your project (**package.json**) like any other dependency — using npm. To install it, use the following command inside your project folder:
+Mongoose is installed in your project (**package.json**) like any other dependency — using npm.
+To install it, use the following command inside your project folder:
 
 ```bash
-npm install mongoose
+npm install mongoose@6.9.0
 ```
+
+> **Note:** Mongoose 7 and later are incompatible with this tutorial.
 
 Installing _Mongoose_ adds all its dependencies, including the MongoDB database driver, but it does not install MongoDB itself. If you want to install a MongoDB server then you can [download installers from here](https://www.mongodb.com/try/download/community) for various operating systems and install it locally. You can also use cloud-based MongoDB instances.
 
@@ -581,10 +584,10 @@ This will look something like: `mongodb+srv://your_user_name:your_password@clust
 ## Install Mongoose
 
 Open a command prompt and navigate to the directory where you created your [skeleton Local Library website](/en-US/docs/Learn/Server-side/Express_Nodejs/skeleton_website).
-Enter the following command to install Mongoose (and its dependencies) and add it to your **package.json** file, unless you have already done so when reading the [Mongoose Primer](#installing_mongoose_and_mongodb) above.
+Enter the following command to install Mongoose 6 (and its dependencies) and add it to your **package.json** file, unless you have already done so when reading the [Mongoose Primer](#installing_mongoose_and_mongodb) above.
 
 ```bash
-npm install mongoose
+npm install mongoose@6.9.0
 ```
 
 ## Connect to MongoDB

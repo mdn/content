@@ -35,7 +35,7 @@ would be implemented to switch to a different video that might tax the network l
 const videoElem = document.getElementById("my_vid");
 const quality = videoElem.getVideoPlaybackQuality();
 
-if (quality.corruptedVideoFrames/quality.totalVideoFrames > 0.05) {
+if (quality.corruptedVideoFrames / quality.totalVideoFrames > 0.05) {
   downgradeVideo(videoElem);
 }
 ```

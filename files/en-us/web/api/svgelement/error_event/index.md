@@ -1,5 +1,5 @@
 ---
-title: 'SVGElement: error event'
+title: "SVGElement: error event"
 slug: Web/API/SVGElement/error_event
 page-type: web-api-event
 browser-compat: api.SVGElement.error_event
@@ -18,9 +18,9 @@ This event is not cancelable.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('error', (event) => {});
+addEventListener("error", (event) => {});
 
-onerror = (event) => { };
+onerror = (event) => {};
 ```
 
 ## Event type
@@ -30,9 +30,9 @@ A generic {{domxref("Event")}}.
 ## Examples
 
 ```js
-svgElem.addEventListener('error', () => {
-  console.log('SVG not loaded properly.');
-})
+svgElem.addEventListener("error", () => {
+  console.log("SVG not loaded properly.");
+});
 ```
 
 ## Specifications

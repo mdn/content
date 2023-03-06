@@ -1,9 +1,6 @@
 ---
 title: MathML element reference
 slug: Web/MathML/Element
-tags:
-  - MathML
-  - MathML Reference
 ---
 
 <section id="Quick_links">

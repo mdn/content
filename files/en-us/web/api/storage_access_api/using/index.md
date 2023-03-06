@@ -32,7 +32,7 @@ Now on to the code executed inside the embedded document. Since it does not know
 ```js
 function doThingsWithFirstPartyStorageAccess() {
   // Let's access some items from the first-party cookie jar
-  document.cookie = "foo=bar";              // set a cookie
+  document.cookie = "foo=bar"; // set a cookie
   localStorage.setItem("username", "John"); // access a localStorage entry
 }
 
@@ -47,23 +47,26 @@ if (document.hasStorageAccess == null) {
     } else {
       // As we don't have access, we need to request it. This request has to happen within
       // an event handler for a user interaction (e.g., clicking)
-      btn.addEventListener('click', () => {
-        document.requestStorageAccess().then(() => {
-          doThingsWithFirstPartyStorageAccess();
-        }).catch((err) => {
-          // If there is an error obtaining storage access.
-          console.error('Error obtaining storage access', err);
-        })
-      })
+      btn.addEventListener("click", () => {
+        document
+          .requestStorageAccess()
+          .then(() => {
+            doThingsWithFirstPartyStorageAccess();
+          })
+          .catch((err) => {
+            // If there is an error obtaining storage access.
+            console.error("Error obtaining storage access", err);
+          });
+      });
     }
-  })
+  });
 }
 ```
 
 Note that access requests are automatically denied unless the embedded content is currently processing a user gesture such as a tap or click — so this code needs to be run inside some kind of user gesture-based event handler, for example:
 
 ```js
-btn.addEventListener('click', () => {
+btn.addEventListener("click", () => {
   // run code here
 });
 ```
