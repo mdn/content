@@ -44,13 +44,13 @@ Data for an origin can be stored in two ways in a browser, _persistent_ and _bes
 
 The data stored in the browser by a origin is best-effort by default. When using web technologies such as IndexedDB or Cache, the data is stored transparently without asking for the user's permission. Similarly, when the browser needs to evict best-effort data, it does so without interrupting the user.
 
-If, for any reasons, developers need persistent storage (e.g., when building a web app that relies on critical data that isn't persisted anywhere else), they can do so by using the {{domxref("StorageManager.persist()")}} method of the {{domxref("Storage_API", "Storage API", "", "nocode")}}.
+If, for any reason, developers need persistent storage (e.g., when building a web app that relies on critical data that isn't persisted anywhere else), they can do so by using the {{domxref("StorageManager.persist()")}} method of the {{domxref("Storage_API", "Storage API", "", "nocode")}}.
 
-In Firefox, when a site chooses to use persistent storage, the user is notified with a UI popup their permission is requested.
+In Firefox, when a site chooses to use persistent storage, the user is notified with a UI popup that their permission is requested.
 
 Safari and most Chromium-based browsers, such as Chrome or Edge, automatically handle the permission request, and do not show any prompts to the user.
 
-Note that [research from the Chrome team](https://web.dev/persistent-storage/) shows that data is very rarely deleted by the browser. If a user visits a website regularly, there are very little chances that its stored data, even in best-effort mode, will get evicted by the browser.
+Note that [research from the Chrome team](https://web.dev/persistent-storage/) shows that data is very rarely deleted by the browser. If a user visits a website regularly, there is very little chance that its stored data, even in best-effort mode, will get evicted by the browser.
 
 ### Private browsing
 
