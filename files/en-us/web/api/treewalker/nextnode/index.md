@@ -29,10 +29,14 @@ A {{domxref("Node")}} object or `null`.
 
 ```js
 const treeWalker = document.createTreeWalker(
-    document.body,
-    NodeFilter.SHOW_ELEMENT,
-    { acceptNode(node) { return NodeFilter.FILTER_ACCEPT; } },
-    false
+  document.body,
+  NodeFilter.SHOW_ELEMENT,
+  {
+    acceptNode(node) {
+      return NodeFilter.FILTER_ACCEPT;
+    },
+  },
+  false
 );
 const node = treeWalker.nextNode(); // returns the first child of root, as it is the next node in document order
 ```

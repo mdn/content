@@ -50,8 +50,8 @@ The following example creates a new `VideoColorSpace` object with {{domxref("Vid
 ```js
 const options = {
   primaries: "bt709",
-  fullRange: true
-}
+  fullRange: true,
+};
 
 const colorSpace = new VideoColorSpace(options);
 console.log(colorSpace);

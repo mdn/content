@@ -38,7 +38,7 @@ The following table lists some of the most important existing keywords. Every ke
 | [`pingback`](#attr-pingback)                                         | Gives the address of the pingback server that handles pingbacks to the current document.                                                                                                                                                                                                     | External Resource       | Not allowed                                      | Not allowed             |
 | [`preconnect`](/en-US/docs/Web/HTML/Attributes/rel/preconnect)       | Specifies that the user agent should preemptively connect to the target resource's origin.                                                                                                                                                                                                   | External Resource       | Not allowed                                      | Not allowed             |
 | [`prefetch`](/en-US/docs/Web/HTML/Attributes/rel/prefetch)           | Specifies that the user agent should preemptively fetch and cache the target resource as it is likely to be required for a followup navigation.                                                                                                                                              | External Resource       | Not allowed                                      | Not allowed             |
-| [`preload`](/en-US/docs/Web/HTML/Attributes/rel/preload)             | Specifies that the user agent must preemptively fetch and cache the target resource for current navigation according to the potential destination given by the [`as`](/en-US/docs/Web/HTML/Element/link#attr-as) attribute (and the priority associated with the corresponding destination). | External Resource       | Not allowed                                      | Not allowed             |
+| [`preload`](/en-US/docs/Web/HTML/Attributes/rel/preload)             | Specifies that the user agent must preemptively fetch and cache the target resource for current navigation according to the potential destination given by the [`as`](/en-US/docs/Web/HTML/Element/link#as) attribute (and the priority associated with the corresponding destination). | External Resource       | Not allowed                                      | Not allowed             |
 | [`prerender`](/en-US/docs/Web/HTML/Attributes/rel/prerender)         | Specifies that the user agent should preemptively fetch the target resource and process it in a way that helps deliver a faster response in the future.                                                                                                                                      | External Resource       | Not allowed                                      | Not allowed             |
 | [`prev`](#attr-prev)                                                 | Indicates that the current document is a part of a series and that the previous document in the series is the referenced document.                                                                                                                                                           | Link                    | Link                                             | Link                    |
 | [`search`](#attr-search)                                             | Gives a link to a resource that can be used to search through the current document and its related pages.                                                                                                                                                                                    | Link                    | Link                                             | Link                    |
@@ -67,8 +67,8 @@ The `rel` attribute has no default value. If the attribute is omitted or if none
         title="High contrast" />
       ```
 
-    - With an [`hreflang`](/en-US/docs/Web/HTML/Element/link#attr-hreflang) attribute that differs from the document language, it indicates a translation.
-    - With the [`type`](/en-US/docs/Web/HTML/Element/link#attr-type) attribute value of `"application/rss+xml"`or `"application/atom+xml"`, it creates a hyperlink referencing a syndication feed.
+    - With an [`hreflang`](/en-US/docs/Web/HTML/Element/link#hreflang) attribute that differs from the document language, it indicates a translation.
+    - With the [`type`](/en-US/docs/Web/HTML/Element/link#type) attribute value of `"application/rss+xml"`or `"application/atom+xml"`, it creates a hyperlink referencing a syndication feed.
 
       ```html
       <link
@@ -78,7 +78,7 @@ The `rel` attribute has no default value. If the attribute is omitted or if none
         title="Blog" />
       ```
 
-    - Otherwise, it creates a hyperlink referencing an alternate representation of the current document, whose nature is given by the [`hreflang`](/en-US/docs/Web/HTML/Element/link#attr-hreflang) and [`type`](/en-US/docs/Web/HTML/Element/link#attr-type) attributes.
+    - Otherwise, it creates a hyperlink referencing an alternate representation of the current document, whose nature is given by the [`hreflang`](/en-US/docs/Web/HTML/Element/link#hreflang) and [`type`](/en-US/docs/Web/HTML/Element/link#type) attributes.
 
       - If `hreflang` is given alongside `alternate`, and the value of `hreflang` is different from the current document's language, it indicates that the referenced document is a translation.
       - If `type` is given alongside `alternate`, it indicates that the referenced document is an alternative format (such as a PDF).
@@ -130,11 +130,11 @@ The `rel` attribute has no default value. If the attribute is omitted or if none
     <link rel="icon" href="favicon.ico" />
     ```
 
-    If there are multiple `<link rel="icon">`s, the browser uses their [`media`](/en-US/docs/Web/HTML/Element/link#attr-media), [`type`](/en-US/docs/Web/HTML/Element/link#attr-type), and [`sizes`](/en-US/docs/Web/HTML/Element/link#attr-sizes) attributes to select the most appropriate icon. If several icons are equally appropriate, the last one is used. If the most appropriate icon is later found to be inappropriate, for example because it uses an unsupported format, the browser proceeds to the next-most appropriate, and so on.
+    If there are multiple `<link rel="icon">`s, the browser uses their [`media`](/en-US/docs/Web/HTML/Element/link#media), [`type`](/en-US/docs/Web/HTML/Element/link#type), and [`sizes`](/en-US/docs/Web/HTML/Element/link#sizes) attributes to select the most appropriate icon. If several icons are equally appropriate, the last one is used. If the most appropriate icon is later found to be inappropriate, for example because it uses an unsupported format, the browser proceeds to the next-most appropriate, and so on.
 
     > **Note:** Prior to Firefox 83 the [crossorigin](/en-US/docs/Web/HTML/Attributes/crossorigin) attribute was not supported for `rel="icon"` there is also [an open issue for Chrome](https://crbug.com/1121645).
 
-    > **Note:** Apple's iOS does not use this link type, nor the [`sizes`](/en-US/docs/Web/HTML/Element/link#attr-sizes) attribute, like others mobile browsers do, to select a webpage icon for Web Clip or a start-up placeholder.
+    > **Note:** Apple's iOS does not use this link type, nor the [`sizes`](/en-US/docs/Web/HTML/Element/link#sizes) attribute, like others mobile browsers do, to select a webpage icon for Web Clip or a start-up placeholder.
     > Instead it uses the non-standard [`apple-touch-icon`](https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html#//apple_ref/doc/uid/TP40002051-CH3-SW4) and [`apple-touch-startup-image`](https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html#//apple_ref/doc/uid/TP40002051-CH3-SW6) respectively.
 
     > **Note:** The `shortcut` link type is often seen before `icon`, but this link type is non-conforming, ignored and **web authors must not use it anymore**.
@@ -174,7 +174,7 @@ The `rel` attribute has no default value. If the attribute is omitted or if none
 - `prefetch`
   - : Specifies that the user agent should preemptively fetch and cache the target resource as it is likely to be required for a followup navigation. The [Link Prefetch FAQ](/en-US/docs/Web/HTTP/Link_prefetching_FAQ) has details on which links can be prefetched and on alternative methods.
 - `preload`
-  - : Specifies that the user agent must preemptively fetch and cache the target resource for current navigation according to the potential destination given by the [`as`](/en-US/docs/Web/HTML/Element/link#attr-as) attribute (and the priority associated with the corresponding destination). See the page for the [`preload`](/en-US/docs/Web/HTML/Attributes/rel/preload) value.
+  - : Specifies that the user agent must preemptively fetch and cache the target resource for current navigation according to the potential destination given by the [`as`](/en-US/docs/Web/HTML/Element/link#as) attribute (and the priority associated with the corresponding destination). See the page for the [`preload`](/en-US/docs/Web/HTML/Attributes/rel/preload) value.
 - `prerender` {{Experimental_Inline}}
   - : Specifies that the user agent should preemptively fetch the target resource and process it in a way that helps deliver a faster response in the future, for example by fetching its subresources or performing some rendering.
 - `prev`
@@ -187,17 +187,17 @@ The `rel` attribute has no default value. If the attribute is omitted or if none
 
   - : Relevant to {{htmlelement('form')}}, {{htmlelement('link')}}, {{htmlelement('a')}}, and {{htmlelement('area')}} elements, the `search` keywords indicates that the hyperlink references a document whose interface is specially designed for searching in the current document, site, and related resources, providing a link to a resource that can be used to search.
 
-    If the [`type`](/en-US/docs/Web/HTML/Element/link#attr-type) attribute is set to `application/opensearchdescription+xml` the resource is an [OpenSearch](/en-US/docs/Web/OpenSearch) plugin that can be easily added to the interface of Firefox.
+    If the [`type`](/en-US/docs/Web/HTML/Element/link#type) attribute is set to `application/opensearchdescription+xml` the resource is an [OpenSearch](/en-US/docs/Web/OpenSearch) plugin that can be easily added to the interface of Firefox.
 
 - `stylesheet`
 
-  - : Valid for the {{htmlelement('link')}} element, it imports an external resource to be used as a stylesheet. The [`type`](/en-US/docs/Web/HTML/Element/link#attr-type) attribute is not needed as it's a `text/css` stylesheet, as that is the default value. If it's not a stylesheet of type `text/css` it is best to declare the type.
+  - : Valid for the {{htmlelement('link')}} element, it imports an external resource to be used as a stylesheet. The [`type`](/en-US/docs/Web/HTML/Element/link#type) attribute is not needed as it's a `text/css` stylesheet, as that is the default value. If it's not a stylesheet of type `text/css` it is best to declare the type.
 
     While this attribute defines the link as being a stylesheet, the interaction with other attributes and other key terms within the rel value impact whether the stylesheet is downloaded and/or used.
 
-    When used with the [`alternate`](#attr-alternate) keyword, it defines an alternative style sheet. In this case, include a non-empty [`title`](/en-US/docs/Web/HTML/Element/link#attr-title).
+    When used with the [`alternate`](#attr-alternate) keyword, it defines an alternative style sheet. In this case, include a non-empty [`title`](/en-US/docs/Web/HTML/Element/link#title).
 
-    The external stylesheet will not be used or even downloaded if the media does not match the value of the [`media`](/en-US/docs/Web/HTML/Element/link#attr-media) attribute.
+    The external stylesheet will not be used or even downloaded if the media does not match the value of the [`media`](/en-US/docs/Web/HTML/Element/link#media) attribute.
 
     Requires the use of the CORS protocol for cross-origin fetching.
 

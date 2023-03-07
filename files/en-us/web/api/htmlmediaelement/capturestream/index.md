@@ -38,7 +38,7 @@ for streaming over WebRTC, to allow sharing prerecorded videos with another pers
 during a video call.
 
 ```js
-document.querySelector('.playAndRecord').addEventListener('click', () => {
+document.querySelector(".playAndRecord").addEventListener("click", () => {
   const playbackElement = document.getElementById("playback");
   const captureStream = playbackElement.captureStream();
   playbackElement.play();
@@ -87,7 +87,7 @@ present implementation which are worth noting:
   with MediaStream sources from then on.
 - This special behavior will be removed once the non-`MediaStream` source
   support is brought up to specification and the method is unprefixed. See
-  {{bug(1259788, "bug", 160)}} for details.
+  [Firefox bug 1259788](https://bugzil.la/1259788) for details.
 
 ## See also
 

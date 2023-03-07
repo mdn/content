@@ -36,13 +36,15 @@ A {{jsxref("Promise")}} that resolves with {{jsxref('undefined')}}.
 The code below shows how to enable preloading, after first using {{domxref("ServiceWorkerRegistration.navigationPreload")}} to test that it is supported.
 
 ```js
-addEventListener('activate', (event) => {
-  event.waitUntil((async () => {
-    if (self.registration.navigationPreload) {
-      // Enable navigation preloads!
-      await self.registration.navigationPreload.enable();
-    }
-  })());
+addEventListener("activate", (event) => {
+  event.waitUntil(
+    (async () => {
+      if (self.registration.navigationPreload) {
+        // Enable navigation preloads!
+        await self.registration.navigationPreload.enable();
+      }
+    })()
+  );
 });
 ```
 

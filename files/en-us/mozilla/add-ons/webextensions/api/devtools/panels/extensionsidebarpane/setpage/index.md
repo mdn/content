@@ -2,14 +2,6 @@
 title: devtools.panels.ExtensionSidebarPane.setPage()
 slug: Mozilla/Add-ons/WebExtensions/API/devtools/panels/ExtensionSidebarPane/setPage
 page-type: webextension-api-function
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Reference
-  - WebExtensions
-  - setPage
 browser-compat: webextensions.api.devtools.panels.ExtensionSidebarPane.setPage
 ---
 

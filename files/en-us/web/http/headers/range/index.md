@@ -1,12 +1,6 @@
 ---
 title: Range
 slug: Web/HTTP/Headers/Range
-tags:
-  - HTTP
-  - HTTP Header
-  - Range Requests
-  - Reference
-  - Request header
 browser-compat: http.headers.Range
 ---
 

@@ -31,15 +31,15 @@ None ({{jsxref("undefined")}}).
 
 ```js
 const options = {
-  types: ['deprecation'],
-  buffered: true
-}
+  types: ["deprecation"],
+  buffered: true,
+};
 
 const observer = new ReportingObserver((reports, observer) => {
   reportBtn.onclick = () => displayReports(reports);
 }, options);
 
-observer.observe()
+observer.observe();
 ```
 
 ## Specifications

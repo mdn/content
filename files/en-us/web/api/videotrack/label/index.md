@@ -31,16 +31,14 @@ only allow certain track kinds through.
 ```js
 function getTrackList(el) {
   const trackList = [];
-  const wantedKinds = [
-    "main", "alternative", "commentary"
-  ];
+  const wantedKinds = ["main", "alternative", "commentary"];
 
   el.videoTracks.forEach((track) => {
     if (wantedKinds.includes(track.kind)) {
       trackList.push({
         id: track.id,
         kind: track.kind,
-        label: track.label
+        label: track.label,
       });
     }
   });

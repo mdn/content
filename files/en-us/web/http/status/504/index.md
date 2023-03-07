@@ -1,10 +1,6 @@
 ---
 title: 504 Gateway Timeout
 slug: Web/HTTP/Status/504
-tags:
-  - HTTP
-  - Server error
-  - Status code
 browser-compat: http.status.504
 ---
 

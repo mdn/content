@@ -2,10 +2,8 @@
 title: slope
 slug: Web/SVG/Attribute/slope
 page-type: svg-attribute
-tags:
-  - Deprecated
-  - SVG
-  - SVGAttribute
+status:
+  - deprecated
 browser-compat: svg.elements.font-face.slope
 ---
 

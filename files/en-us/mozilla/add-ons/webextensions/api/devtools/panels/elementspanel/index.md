@@ -2,16 +2,6 @@
 title: devtools.panels.ElementsPanel
 slug: Mozilla/Add-ons/WebExtensions/API/devtools/panels/ElementsPanel
 page-type: webextension-api-type
-tags:
-  - API
-  - Add-ons
-  - DevTools
-  - Type
-  - Extensions
-  - Reference
-  - WebExtensions
-  - devtools.panels
-  - devtools.panels.ElementsPanel
 browser-compat: webextensions.api.devtools.panels.ElementsPanel
 ---
 

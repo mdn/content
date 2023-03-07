@@ -20,8 +20,8 @@ A string representing the width of the border in pixels.
 
 ```js
 // Set the width of a table border to 2 pixels
-const t = document.getElementById('TableA');
-t.border = '2';
+const t = document.getElementById("TableA");
+t.border = "2";
 ```
 
 ## Specifications

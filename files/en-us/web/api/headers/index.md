@@ -60,23 +60,21 @@ In the following snippet, we create a new header using the `Headers()` construct
 ```js
 const myHeaders = new Headers();
 
-myHeaders.append('Content-Type', 'text/xml');
-myHeaders.get('Content-Type') // should return 'text/xml'
+myHeaders.append("Content-Type", "text/xml");
+myHeaders.get("Content-Type"); // should return 'text/xml'
 ```
 
 The same can be achieved by passing an array of arrays or an object literal to the constructor:
 
 ```js
 let myHeaders = new Headers({
-    'Content-Type': 'text/xml'
+  "Content-Type": "text/xml",
 });
 
 // or, using an array of arrays:
-myHeaders = new Headers([
-    ['Content-Type', 'text/xml']
-]);
+myHeaders = new Headers([["Content-Type", "text/xml"]]);
 
-myHeaders.get('Content-Type') // should return 'text/xml'
+myHeaders.get("Content-Type"); // should return 'text/xml'
 ```
 
 ## Specifications

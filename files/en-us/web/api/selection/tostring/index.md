@@ -32,8 +32,8 @@ In [JavaScript](/en-US/docs/Web/JavaScript), this method is called automatically
 a function the selection object is passed to requires a string:
 
 ```js
-alert(window.getSelection()) // What is called
-alert(window.getSelection().toString()) // What is actually being effectively called.
+alert(window.getSelection()); // What is called
+alert(window.getSelection().toString()); // What is actually being effectively called.
 ```
 
 ## Specifications

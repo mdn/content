@@ -2,14 +2,6 @@
 title: tabs.discard()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/discard
 page-type: webextension-api-function
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - WebExtensions
-  - discard
-  - tabs
 browser-compat: webextensions.api.tabs.discard
 ---
 

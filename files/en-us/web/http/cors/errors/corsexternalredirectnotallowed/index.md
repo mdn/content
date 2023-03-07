@@ -1,18 +1,6 @@
 ---
 title: "Reason: CORS request external redirect not allowed"
 slug: Web/HTTP/CORS/Errors/CORSExternalRedirectNotAllowed
-tags:
-  - CORS
-  - CORSOriginHeaderNotAdded
-  - Cross-Origin
-  - Error
-  - HTTP
-  - HTTPS
-  - Messages
-  - Reasons
-  - Security
-  - console
-  - troubleshooting
 ---
 
 {{HTTPSidebar}}

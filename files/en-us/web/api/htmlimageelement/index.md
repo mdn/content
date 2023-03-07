@@ -95,13 +95,13 @@ If an error occurs while trying to load or render the image, and an {{htmlattrxr
 
 ```js
 const img1 = new Image(); // Image constructor
-img1.src = 'image1.png';
-img1.alt = 'alt';
+img1.src = "image1.png";
+img1.alt = "alt";
 document.body.appendChild(img1);
 
-const img2 = document.createElement('img'); // Use DOM HTMLImageElement
-img2.src = 'image2.jpg';
-img2.alt = 'alt text';
+const img2 = document.createElement("img"); // Use DOM HTMLImageElement
+img2.src = "image2.jpg";
+img2.alt = "alt text";
 document.body.appendChild(img2);
 
 // using first image in the document

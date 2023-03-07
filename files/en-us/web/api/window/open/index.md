@@ -28,7 +28,7 @@ open(url, target, windowFeatures)
 
   - : A string, without whitespace, specifying the [name](/en-US/docs/Web/API/Window/name) of the browsing context the resource is being loaded into. If the name doesn't identify an existing context, a new context is created and given the specified name. The special [`target` keywords](/en-US/docs/Web/HTML/Element/a#target), `_self`, `_blank`, `_parent`, and `_top`, can also be used.
 
-    This name can be used as the `target` attribute of [`<a>`](/en-US/docs/Web/HTML/Element/a#target) or [`<form>`](/en-US/docs/Web/HTML/Element/form#attr-target) elements.
+    This name can be used as the `target` attribute of [`<a>`](/en-US/docs/Web/HTML/Element/a#target) or [`<form>`](/en-US/docs/Web/HTML/Element/form#target) elements.
 
 - `windowFeatures` {{optional_inline}}
 
@@ -159,7 +159,7 @@ link.addEventListener(
 
 The above code solves a few usability problems related to links opening popups. The purpose of the `event.preventDefault()` in the code is to cancel the default action of the link: if the event listener for `click` is executed, then there is no need to execute the default action of the link. But if JavaScript support is disabled or non-existent on the user's browser, then the event listener for `click` is ignored, and the browser loads the referenced resource in the target frame or window that has the name `"WikipediaWindowName"`. If no frame nor window has the name `"WikipediaWindowName"`, then the browser will create a new window and name it `"WikipediaWindowName"`.
 
-> **Note:** For more details about the `target` attribute, see [`<a>`](/en-US/docs/Web/HTML/Element/a#target) or [`<form>`](/en-US/docs/Web/HTML/Element/form#attr-target).
+> **Note:** For more details about the `target` attribute, see [`<a>`](/en-US/docs/Web/HTML/Element/a#target) or [`<form>`](/en-US/docs/Web/HTML/Element/form#target).
 
 ### Reuse existing windows and avoid `target="_blank"`
 
@@ -297,7 +297,7 @@ When extreme changes in context are explicitly identified before they occur, the
 
 - `target` attribute documentation:
   - [`<a>`](/en-US/docs/Web/HTML/Element/a#target)
-  - [`<form>`](/en-US/docs/Web/HTML/Element/form#attr-target)
+  - [`<form>`](/en-US/docs/Web/HTML/Element/form#target)
 - [`window.close()`](/en-US/docs/Web/API/Window/close)
 - [`window.closed`](/en-US/docs/Web/API/Window/closed)
 - [`window.focus()`](/en-US/docs/Web/API/Window/focus)

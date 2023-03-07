@@ -88,10 +88,10 @@ body {
 ### JavaScript
 
 ```js
-document.addEventListener('pointerup', (e) => {
+document.addEventListener("pointerup", (e) => {
   const selection = window.getSelection();
 
-  if (selection.type === 'Range') {
+  if (selection.type === "Range") {
     for (let i = 0; i < selection.rangeCount; i++) {
       const range = selection.getRangeAt(i);
       playAnimation(range.commonAncestorContainer);
@@ -104,9 +104,9 @@ function playAnimation(el) {
     el = el.parentNode;
   }
 
-  el.classList.remove('highlight');
+  el.classList.remove("highlight");
   setTimeout(() => {
-    el.classList.add('highlight');
+    el.classList.add("highlight");
   }, 0);
 }
 ```

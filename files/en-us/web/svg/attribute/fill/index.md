@@ -2,9 +2,6 @@
 title: fill
 slug: Web/SVG/Attribute/fill
 page-type: svg-attribute
-tags:
-  - SVG
-  - SVG Attribute
 browser-compat: svg.attributes.presentation.fill
 ---
 

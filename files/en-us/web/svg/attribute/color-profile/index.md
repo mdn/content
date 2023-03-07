@@ -2,11 +2,8 @@
 title: color-profile
 slug: Web/SVG/Attribute/color-profile
 page-type: svg-attribute
-tags:
-  - Deprecated
-  - NeedsExample
-  - SVG
-  - SVG Attribute
+status:
+  - deprecated
 browser-compat: svg.attributes.presentation.color-profile
 ---
 

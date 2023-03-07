@@ -8,7 +8,7 @@ page-type: web-api-instance-property
 
 The **`HTMLMetaElement.charset`** property is a string that specifies the {{Glossary("character_encoding", "character encoding")}} used in a document.
 Using **non-UTF-8 character encodings is strongly discouraged** as this can create unexpected results on form submission and [URL encoding](https://en.wikipedia.org/wiki/URL_encoding).
-For more details, see [Character encodings in HTML](/en-US/docs/Web/HTML/Element/meta#attr-charset).
+For more details, see [Character encodings in HTML](/en-US/docs/Web/HTML/Element/meta#charset).
 
 ## Value
 

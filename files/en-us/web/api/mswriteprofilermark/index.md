@@ -45,7 +45,7 @@ This method is useful to profile real website performance by using the operating
 
 ```js
 if (msWriteProfilerMark) {
- msWriteProfilerMark("Mark1");
+  msWriteProfilerMark("Mark1");
 }
 ```
 

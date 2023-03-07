@@ -1,11 +1,6 @@
 ---
 title: List of default Accept values
 slug: Web/HTTP/Content_negotiation/List_of_default_Accept_values
-tags:
-  - Accept
-  - Content Negotiation
-  - HTTP
-  - Reference
 ---
 
 {{HTTPSidebar}}

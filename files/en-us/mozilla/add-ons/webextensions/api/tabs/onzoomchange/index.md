@@ -2,16 +2,6 @@
 title: tabs.onZoomChange
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/onZoomChange
 page-type: webextension-api-event
-tags:
-  - API
-  - Add-ons
-  - Event
-  - Extensions
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - onZoomChange
-  - tabs
 browser-compat: webextensions.api.tabs.onZoomChange
 ---
 

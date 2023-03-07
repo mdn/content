@@ -19,7 +19,7 @@ displayed.
 ## Examples
 
 ```js
-const obj = document.createElement('video');
+const obj = document.createElement("video");
 obj.controls = true;
 ```
 

@@ -27,7 +27,7 @@ In the following example the value of {{domxref("RemotePlayback.state")}} is pri
 ```js
 RemotePlayback.onconnect = () => {
   console.log(RemotePlayback.state);
-}
+};
 ```
 
 ## Specifications

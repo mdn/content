@@ -24,15 +24,20 @@ This example checks the size of a log file and removes it if it's larger than a
 megabyte.
 
 ```js
-workingDirectory.getFile("log/important.log", {}, (fileEntry) => {
-  fileEntry.getMetadata((metadata) => {
-    if (metadata.size > 1048576) {
-      fileEntry.remove(() => {
-        /* log file removed; do something clever here */
-      });
-    }
-  });
-}, handleError);
+workingDirectory.getFile(
+  "log/important.log",
+  {},
+  (fileEntry) => {
+    fileEntry.getMetadata((metadata) => {
+      if (metadata.size > 1048576) {
+        fileEntry.remove(() => {
+          /* log file removed; do something clever here */
+        });
+      }
+    });
+  },
+  handleError
+);
 ```
 
 ## Specifications

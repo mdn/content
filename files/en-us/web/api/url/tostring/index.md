@@ -30,7 +30,9 @@ A string.
 ## Examples
 
 ```js
-const url = new URL("https://developer.mozilla.org/en-US/docs/Web/API/URL/toString");
+const url = new URL(
+  "https://developer.mozilla.org/en-US/docs/Web/API/URL/toString"
+);
 url.toString(); // should return the URL as a string
 ```
 

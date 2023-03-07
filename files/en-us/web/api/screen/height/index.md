@@ -18,7 +18,7 @@ A number.
 
 ```js
 if (window.screen.availHeight !== window.screen.height) {
-   // Something is occupying some screen real estate!
+  // Something is occupying some screen real estate!
 }
 ```
 

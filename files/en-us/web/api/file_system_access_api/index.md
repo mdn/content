@@ -74,21 +74,14 @@ There is also "save" functionality:
 
 ### Accessing files
 
-The below code allows the user to choose a file from the file picker and then tests to see whether the handle returned is a file or directory
+The below code allows the user to choose a file from the file picker.
 
 ```js
-// store a reference to our file handle
-let fileHandle;
-
 async function getFile() {
-  // open file picker
-  [fileHandle] = await window.showOpenFilePicker();
-
-  if (fileHandle.kind === "file") {
-    // run file code
-  } else if (fileHandle.kind === "directory") {
-    // run directory code
-  }
+  // Open file picker and destructure the result the first handle
+  const [fileHandle] = await window.showOpenFilePicker();
+  const file = await fileHandle.getFile();
+  return file;
 }
 ```
 
@@ -109,8 +102,8 @@ const pickerOpts = {
 };
 
 async function getTheFile() {
-  // open file picker
-  [fileHandle] = await window.showOpenFilePicker(pickerOpts);
+  // Open file picker and destructure the result the first handle
+  const [fileHandle] = await window.showOpenFilePicker(pickerOpts);
 
   // get file contents
   const fileData = await fileHandle.getFile();
@@ -235,7 +228,7 @@ onmessage = async (e) => {
 };
 ```
 
-> **Note:** In earlier versions of the spec, {{domxref("FileSystemSyncAccessHandle.close()", "close()")}}, {{domxref("FileSystemSyncAccessHandle.flush()", "flush()")}}, {{domxref("FileSystemSyncAccessHandle.getSize()", "getSize()")}}, and {{domxref("FileSystemSyncAccessHandle.truncate()", "truncate()")}} were wrongly specified as asynchronous methods. This has now been [amended](https://github.com/whatwg/fs/issues/7), but some browsers still support the asynchronous versions.
+> **Note:** In earlier versions of the spec, {{domxref("FileSystemSyncAccessHandle.close()", "close()")}}, {{domxref("FileSystemSyncAccessHandle.flush()", "flush()")}}, {{domxref("FileSystemSyncAccessHandle.getSize()", "getSize()")}}, and {{domxref("FileSystemSyncAccessHandle.truncate()", "truncate()")}} were unergonomically specified as asynchronous methods. This has now been [amended](https://github.com/whatwg/fs/issues/7), but some browsers still support the asynchronous versions.
 
 ## Specifications
 
