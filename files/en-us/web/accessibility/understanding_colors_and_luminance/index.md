@@ -168,7 +168,7 @@ Calculations for relative luminance are not casual ones. Luckily, some tools wil
 - [Calculate relative luminance](https://www.topster.net/relative-luminance/)
 - [Analyze Luminosity Contrast Ratio](http://juicystudio.com/services/luminositycontrastratio.php)
 
-You can even [build your own luminance tool](https://alvaromontoro.com/blog/67854/building-your-own-color-contrast-checker)
+You can even [build your own contrast checker](https://alvaromontoro.com/blog/67854/building-your-own-color-contrast-checker).
 
 ## Color perception
 
