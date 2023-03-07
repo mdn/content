@@ -37,7 +37,7 @@ The manifest is included using a {{HTMLElement("link")}} element in the app's HT
 
 If the PWA has more than one page, every page must reference the manifest in this way.
 
-The manifest contains a single JSON object containing a collection of keys, each of which defines some aspect of the PWA's appearance or behavior. Here's a rather minimal manifest, containing just two keys: `"name"` and `"icons"`.
+The manifest contains a single JSON object containing a collection of members, each of which defines some aspect of the PWA's appearance or behavior. Here's a rather minimal manifest, containing just two members: `"name"` and `"icons"`.
 
 ```json
 {
@@ -52,7 +52,7 @@ The manifest contains a single JSON object containing a collection of keys, each
 }
 ```
 
-For a full description of every key, see the [web app manifest reference documentation](/en-US/docs/Web/Manifest).
+For a full description of every member, see the [web app manifest reference documentation](/en-US/docs/Web/Manifest).
 
 ### Additional installability requirements
 
@@ -61,7 +61,7 @@ As well as a manifest, browsers expect websites to meet additional criteria if t
 Chromium-based browsers, including Google Chrome, Samsung Internet, and Microsoft Edge, require that:
 
 - the pages are served over HTTPS
-- the manifest includes the following keys:
+- the manifest includes the following members:
   - [`name`](/en-US/docs/Web/Manifest/name)
   - [`icons`](/en-US/docs/Web/Manifest/icons)
   - [`start_url`](/en-US/docs/Web/Manifest/start_url)
@@ -94,7 +94,7 @@ The UI for installing a PWA from the web varies from one browser to another, and
 
 When the user selects the icon, the browser displays a prompt asking if they want to install the PWA, and if they accept, the PWA is installed.
 
-The prompt displays the name and icon for the PWA, taken from the [`name`](/en-US/docs/Web/Manifest/name) and [`icons`](/en-US/docs/Web/Manifest/icons) manifest keys.
+The prompt displays the name and icon for the PWA, taken from the [`name`](/en-US/docs/Web/Manifest/name) and [`icons`](/en-US/docs/Web/Manifest/icons) manifest members.
 
 ### Browser support
 
@@ -137,7 +137,7 @@ The `prompt()` method returns a {{jsxref("Promise")}} that resolves with a strin
 
 ### Customizing installation
 
-By default, the install prompt contains the name and icon for the PWA. If you provide values for the [`description`](/en-US/docs/Web/Manifest/description) and [`screenshots`](/en-US/docs/Web/Manifest/screenshots) manifest keys, then, on Android only, these values will be shown in the install prompt, giving the user extra context and motivation to install the PWA.
+By default, the install prompt contains the name and icon for the PWA. If you provide values for the [`description`](/en-US/docs/Web/Manifest/description) and [`screenshots`](/en-US/docs/Web/Manifest/screenshots) manifest members, then, on Android only, these values will be shown in the install prompt, giving the user extra context and motivation to install the PWA.
 
 The screenshot below shows what the install prompt for the [pwamp demo](https://github.com/MicrosoftEdge/Demos/tree/main/pwamp) looks like on Google Chrome, running on Android:
 
@@ -147,7 +147,7 @@ The screenshot below shows what the install prompt for the [pwamp demo](https://
 
 Once the PWA is installed its icon is shown on the device alongside any other apps that the user has installed, and clicking the icon launches the app.
 
-You can use the [`display`](/en-US/docs/Web/Manifest/display) manifest key to control the _display mode_: that is, how the PWA appears when it is launched. In particular:
+You can use the [`display`](/en-US/docs/Web/Manifest/display) manifest member to control the _display mode_: that is, how the PWA appears when it is launched. In particular:
 
 - `"standalone"` indicates that the PWA should look and feel like a platform-specific application, with no browser UI elements
 - `"browser"` indicates that the PWA should be opened as a new browser tab or window, just like a normal website.
