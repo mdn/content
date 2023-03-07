@@ -126,7 +126,7 @@ This technique relies on the [`beforeinstallprompt`](/en-US/docs/Web/API/Window/
 
 By default, the install prompt contains the name and icon for the PWA. If you provide values for the [`description`](/en-US/docs/Web/Manifest/description) and [`screenshots`](/en-US/docs/Web/Manifest/screenshots) manifest members, then, on Android only, these values will be shown in the install prompt, giving the user extra context and motivation to install the PWA.
 
-The screenshot below shows what the install prompt for the [pwamp demo](https://github.com/MicrosoftEdge/Demos/tree/main/pwamp) looks like on Google Chrome, running on Android:
+The screenshot below shows what the install prompt for the [PWAmp demo](https://github.com/MicrosoftEdge/Demos/tree/main/pwamp) looks like on Google Chrome, running on Android:
 
 ![Install prompt for pwamp on Android](pwamp-install-prompt-android.png)
 
