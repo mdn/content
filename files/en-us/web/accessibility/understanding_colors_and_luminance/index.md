@@ -90,7 +90,7 @@ We can set the sRGB values directly, as a percentage, 0% being off (black) and 1
 
 Shown after that are hex color values. Hexadecimal is a numbering system with base-16, where the 0-255 integer is represented by two digits that each range from 0-15 represented using 0-9 and a-f for 10-15. Thus, `ff` = `255`, `00` = `0`, and `d5` = `200`. The '#' symbol precedes the color to indicate the value is hex.
 
-If all values are pairs of identical digits, the value can be represented by single digits that the browser will duplicate. Thus `f00` is the same as `ff0000`. If a forth set of numbers is present, that value is the A in RGBA; the alpha channel definining transparency in terms of the opacity value of the color. A higher value means the color is more opaque therefore less transparent. In the examples above, the alpha value is `f`, `ff`, `1`, and `100$` for fully opaque.
+If all values are pairs of identical digits, the value can be represented by single digits that the browser will duplicate. Thus `f00` is the same as `ff0000`. If a forth set of numbers is present, that value is the A in RGBA; the alpha channel definining transparency in terms of the opacity value of the color. A higher value means the color is more opaque therefore less transparent. In the examples above, the alpha value is `f`, `ff`, `1`, and `100%` for fully opaque.
 
 The examples also show the [legacy `rgba()`](/en-US/docs/Web/CSS/color_value/rgb#legacy_syntax_rgba) syntax. The older syntax for color functions was comma separated, with separated functions for when the alpha channel was included. New color functions only have one syntax with space-separated (rather than comma separated) values, with the alpha channel, if present, being preceded by a slash.
 
