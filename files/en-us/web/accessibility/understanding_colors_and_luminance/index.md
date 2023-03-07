@@ -150,7 +150,7 @@ Also, note that icons need sufficient contrast for perception. See [WCAG 2.1 tec
 
 ### Luminance
 
-It is the difference in the luminance of a color that enables us to see the contrast. The definition of [_relative luminance_](https://www.w3.org/WAI/GL/wiki/Relative_luminance) as defined by the W3C is "The relative brightness of any point in a colorspace, normalized to 0 for darkest black and 1 for lightest white."
+It is the difference in the luminance of a color that enables us to see the contrast. The definition of _relative luminance_ as defined by the W3C is "The relative brightness of any point in a colorspace, normalized to 0 for darkest black and 1 for lightest white."
 
 This statement is of course accurate, but may be confusing when used in reference to the RGB color space, which is an integer between 0 and 255. White has 100% relative luminance, black has 0% relative luminance (in most but not all literature). Interpreting for the W3C standard above, that would mean that white, normalized to 1, would have an RGB value of `rgb(255 255 255)` and black, normalized to 0, would have an RGB value of `rgb(0 0 0)`. Note that black and white can also be written as `rgb(100% 100% 100%)` and `rgb(0% 0% 0%)` respectively, which may be more intuitive.
 
@@ -164,9 +164,7 @@ Where human perception is concerned, a difference in luminance matters more than
 
 ### Measuring relative luminance
 
-The W3C's [wiki on relative luminance](https://www.w3.org/WAI/GL/wiki/Relative_luminance) notes that as long as systems use sRGB encoding unless it is known that another color space will be used to process and display the content, the sRGB colorspace should be used when calculating luminance.
-
-The calculations for evaluating luminance are spelled out in WCAG 2.1 in the definition for [relative luminance](https://www.w3.org/TR/WCAG21/#dfn-relative-luminance), and is as follows:
+As long as systems use sRGB encoding, unless it is known that another color space will be used to process and display the content, the sRGB colorspace should be used when calculating luminance. The calculations for evaluating luminance are spelled out in WCAG 2.1 in the definition for [relative luminance](https://www.w3.org/TR/WCAG21/#dfn-relative-luminance), and is as follows:
 
 R, G, and B have distinct weights in the relative luminance formula.For the sRGB colorspace, the relative luminance of a color is defined as `L = 0.2126 * R + 0.7152 * G+ 0.0722 * B` where red, green and blue, _R_, _G_ and _B_, are defined as:
 
@@ -318,4 +316,3 @@ Color as in hues and saturation can affect our mood, and enhance — or de-enhan
 - [How the Color Red Influences Our Behavior](https://www.scientificamerican.com/article/how-the-color-red-influences-our-behavior/) Scientific American By Susana Martinez-Conde, Stephen L. Macknik on November 1, 2014
 - [Red Desaturation](https://www.smart-optometry.com/red-desaturation/) The human eye is so sensitively "tuned" to red, that opthamolegists set up a test using it, assessing the integrity of the optic nerve.
 - [Photic- and pattern-induced seizures: expert consensus of the Epilepsy Foundation of America Working Group](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.532.7063&rep=rep1&type=pdf)
-- [WCAG Working Group's Wiki page on Relative Luminance](https://www.w3.org/WAI/GL/wiki/Relative_luminance)
