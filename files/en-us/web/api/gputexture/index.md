@@ -25,7 +25,7 @@ A `GPUTexture` object instance is created using the {{domxref("GPUDevice.createT
   - : A enumerated value representing the format of the `GPUTexture`.
 - {{domxref("GPUTexture.height", "height")}} {{Experimental_Inline}} {{readonlyinline}}
   - : A number representing the height of the `GPUTexture` in pixels.
-- {{domxref("GPUBuffer.label", "label")}} {{Experimental_Inline}}
+- {{domxref("GPUTexture.label", "label")}} {{Experimental_Inline}}
   - : A string providing a label that can be used to identify the object, for example in {{domxref("GPUError")}} messages or console warnings.
 - {{domxref("GPUTexture.mipLevelCount", "mipLevelCount")}} {{Experimental_Inline}} {{readonlyinline}}
   - : A number representing the number of mip levels of the `GPUTexture`.
