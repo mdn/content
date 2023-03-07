@@ -2,9 +2,6 @@
 title: Native manifests
 slug: Mozilla/Add-ons/WebExtensions/Native_manifests
 page-type: guide
-tags:
-  - Extensions
-  - WebExtensions
 ---
 
 {{AddonSidebar}}
