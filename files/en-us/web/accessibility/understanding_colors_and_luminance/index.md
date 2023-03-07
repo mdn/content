@@ -180,7 +180,6 @@ Luminance provides for fine vision details, including differentiating edges and 
 
 For accessibility, this means that it is luminance contrast that is critically important for text. Color, as in hue and colorfulness, is important for _distinguishing_ items such as different lines on a map, or bars in a graph.
 
-A convenient way to think of this is in the case of old-school broadcast television, the luminance is the "black &amp; white" signal, which both the black &amp; white and color television sets received. Those old color televisions also received a [small additional signal](https://en.wikipedia.org/wiki/YIQ) of _just_ color information. The small additional signal was subtracted from the luminance for the green primary, and added to luminance for the red primary, and finally partly added &amp; partly subtracted for the blue primary.
 
 Another essential point to consider is the color or luminance that is surrounding a color. The color will appear differently depending on what is surrounding it. In the following image both the yellow dots and the grey of the square they are on, are identical in terms of the sRGB color values displayed. Your context-sensitive perception of these colors makes them appear different as your brain's image processing adjusts the perception based on what it thinks is in shadow or not.
 
