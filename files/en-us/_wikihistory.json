@@ -11743,43 +11743,6 @@
     "modified": "2019-01-16T22:58:13.741Z",
     "contributors": ["wbamberg", "fscholz"]
   },
-  "MDN/Writing_guidelines/Howto/Tag": {
-    "modified": "2020-03-25T16:30:08.477Z",
-    "contributors": [
-      "Sheppy",
-      "jswisher",
-      "FeRDNYC",
-      "kenj115188",
-      "sideshowbarker",
-      "ExE-Boss",
-      "mfuji09",
-      "wbamberg",
-      "lucian95",
-      "johnjago",
-      "KadirTopal",
-      "pqpace",
-      "SphinxKnight",
-      "Bodo1445",
-      "helperman",
-      "devanshmanu",
-      "dkocho4",
-      "Uemmra3",
-      "ganshenhai",
-      "Jeremie",
-      "kiloan.com",
-      "Riyaj786",
-      "Andrew_Pfeiffer",
-      "dio",
-      "dwj83624",
-      "marowilson",
-      "fscholz",
-      "Newser",
-      "vernvernvern",
-      "maybe",
-      "teoli",
-      "markg"
-    ]
-  },
   "MDN/Writing_guidelines/Howto/Write_a_new_entry_in_the_glossary": {
     "modified": "2020-12-14T04:30:45.303Z",
     "contributors": [
