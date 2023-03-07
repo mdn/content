@@ -7,13 +7,13 @@ slug: Web/Accessibility/Understanding_Colors_and_Luminance
   {{ListSubpagesForSidebar("Web/Accessibility", 1)}}
 </section>
 
-While understanding color, luminance, and saturation is important for design and readability for all sighted users, they are especially important for those with reduced vision and color deficient vision, and also for those with certain neurological, cognitive, and other impairments.
+While understanding color, luminance, and saturation is important for design and readability for all sighted users, they are essential for those with reduced vision and color-deficient vision and those with specific neurological, cognitive, and other impairments.
 
 Accessibility guidelines define adequate [color contrast](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable/Color_contrast) for sighted users with reduced vision, as well as guidelines intended to help users with color insensitive vision, commonly referred to as "color blindness". Understanding color is also important in preventing [seizures and other physical reactions](/en-US/docs/Web/Accessibility/Seizure_disorders) in people with vestibular disorders or other neurological disorders.
 
 ## Overview
 
-Colors, and how they are used, are a major component of accessibility. At the surface, the subject seems simple, but it is actually a complex subject because color is as much about the physiology of the eye and human perception as it is about light emitting from a computer screen.
+The choice of colors and their use is a significant component of accessibility. On the surface, the subject seems simple. Still, it is a complex subject because color perception is as much about the physiology of the eye and human brain processing as it is about light emitting from a computer screen.
 
 ### Environment and perception
 
@@ -21,29 +21,29 @@ Environment matters. Perception of color in a well-lit room will be different th
 
 A viewer's distance from the screen, the ambient background, the health of his eyes, and more all affect how that color is received by the viewer. How the viewer perceives color after it gets to their eyes is yet another matter, and can be affected by overall health. Fortunately, there are [media queries](/en-US/docs/Web/CSS/@media) that enable developers to provide styles based on user preferences, including [contrast](/en-US/docs/Web/CSS/@media/prefers-contrast) and [color scheme](/en-US/docs/Web/CSS/@media/prefers-color-scheme) preferences.
 
-When supported, the [Ambient Light Sensor](/en-US/docs/Web/API/AmbientLightSensor) interface returns the current light level or illuminance of the ambient light around the hosting device enabling a web page to be aware of any change in the light intensity, and consequently, adjust the text accordingly. Additionally, the above media queries enable developers to provide alternative user experiences when user preferences indicate prefered contrast levels, automatically adjusting levels depending upon where the user is and what kind of screen they are using.
+When supported, the [Ambient Light Sensor](/en-US/docs/Web/API/AmbientLightSensor) interface returns the current light level or illuminance of the ambient light around the hosting device, enabling a web page to be aware of any change in the light intensity, and consequently, adjust the text accordingly. Additionally, the above media queries enable developers to provide alternative user experiences when user preferences indicate preferred contrast levels, automatically adjusting levels depending on the user's location and what kind of screen they are using.
 
 ### Luminance and perception
 
-Color, contrast, and luminance are among the most central and critical concepts to creating accessible web content with color. Luminance is of particular importance, however, because at the end of the day, understanding of what it is and how it is employed enables accessibility for those who are color-blind, as well as those who can perceive color. It is the luminance contrast that enable the color-blind to distinguish dark against light.
+Color, contrast, and luminance are the most central and critical concepts to creating accessible web content with color. Luminance is of particular importance, however, because understanding what it is and how it is employed enables accessibility for those who are color-blind, as well as those who can perceive color. The luminance contrast enables the color blind to distinguish dark from light.
 
-Luminance must be established before the contrast may be. When speaking of color contrast, W3C formulas are actually incorporating luminance, not just the colors ("hues") themselves.
+Luminance must be established before the contrast may be. When speaking of color contrast, W3C formulas are incorporating luminance, not just the colors ("hues") themselves.
 
 ### Terminology
 
-Terminology can be confusing, because different terms are often used to describe the same thing. "Luminance" and "Saturation" are particularly important to get right. For example, "saturation" is known as "chroma" in some circles. In others, "chroma" and "saturation" are two different concepts. The "L" in the HSL color space is sometimes referred to as "luminosity," other times as "lightness." Even something seemingly simple like naming common colors can be open to debate. For example, the color "crimson red" may be described in hex values as `#990000` by some and `#DC143C` by others. For the purposes of this document, we'll use terminology as it is defined in the W3C, in the [CSS Color Module Level 4](https://www.w3.org/TR/css-color-4/)
+Terminology can be confusing because different terms often describe the same thing. "Luminance" and "Saturation" are particularly important to get right. For example, "saturation" is known as "chroma" in some circles. In others, "chroma" and "saturation" are two different concepts. The "L" in the HSL color space is sometimes referred to as "luminosity," and other times as "lightness." Even something seemingly simple, like naming common colors, can be open to debate. For example, the color "crimson red" may be described in hex values as `#990000` by some and `#DC143C` by others. For this document, we'll use terminology as it is defined in the W3C, in the [CSS Color Module Level 4](https://www.w3.org/TR/css-color-4/)
 
 When working with color, it's important to know which "color space" you are working in, as different color spaces map to different measurement systems.
 
-In color printing, your printer likely have cyan, magenta, yellow, black (CMYK) ink cartridges. CMYK is a subtractive model wherein the four inks _remove_ certain wavelengths of light, reflecting back only the narrow range each is associated with. RGB is an additive color model that adds red, green, and blue lights in different proportions.
+In color printing, your printer likely has cyan, magenta, yellow, and black (CMYK) ink cartridges. CMYK is a subtractive model wherein the four inks _remove_ specific wavelengths of light, reflecting only the narrow range each is associated with. RGB is an additive color model that adds different proportions of red, green, and blue lights.
 
-Currently, the RGB color space predominates as the space web developers work in. While HEX, RGB and HSL color spaces are notated differently, browseres automatically convert values between these color notations. [CSS color modules](/en-US/docs/Web/CSS/CSS_Colors) provide for additional color spaces, but because of the current domination of the RGB color space in measuring color output, most calculations in this document are presumed to be in the RGB color space, and very specifically, in the sRGB color space.
+Currently, the RGB color space predominates as the space web developers work in. While HEX, RGB, and HSL color spaces are notated differently, browsers automatically convert values between these color notations. [CSS color modules](/en-US/docs/Web/CSS/CSS_Colors) provide additional color spaces. Still, because of the current domination of the RGB color space in measuring color output, most calculations in this document are presumed to be in the RGB color space and, very specifically, in the sRGB color space.
 
 ## The sRGB color space
 
 Color has many ways of being defined, as is apparent in the [`<color>` data type](/en-US/docs/Web/CSS/color_value), including RGB, RGB decimal, RGB percent, HSL, HWB, LCH, and CMYK, among others.
 
-For digital concerns, much of the technology has historically resided in the RGB color space. The RGB color model is extended to include "alpha" — RGBA — to allow specification of the opacity of a color. Other methods for measuring color involving measurements using other color spaces exist and are supported in modern displays and browsers, but color measurements in the RGB color space predominates, including in video production.
+For digital concerns, much of the technology has historically resided in the RGB color space. The RGB color model is extended to include "alpha" — RGBA — to allow specification of the opacity of a color. Other methods for measuring color involve measurements using other color spaces and are supported in modern displays and browsers. Still, color measurements in the RGB color space predominate, including in video production.
 
 Technologies, such as [OpenGL](https://en.wikipedia.org/wiki/OpenGL) and [Direct3D](https://en.wikipedia.org/wiki/Direct3D) incorporate support for the sRGB gamma curve, although some articles for OpenGL reference use of RGBA rather than sRGB. WebGL is usually in the RGBA format; see an example of how it is used in "[Clearing with colors](/en-US/docs/Web/API/WebGL_API/By_example/Clearing_with_colors)".
 
@@ -84,41 +84,41 @@ color: hwb(300deg 0% 0%);
 color: hwb(300 0% 0% / 1);
 ```
 
-The first example is using one of the defined [named colors](/en-US/docs/Web/CSS/named-color).
+The first example uses one of the defined [named colors](/en-US/docs/Web/CSS/named-color).
 
-We can set the sRGB values directly, as a percentage, 0% being off (black) and 100% being the full value for that color. The values are in the order of red, green, blue. We can also set the sRGB values directly by a number from 0 to 255.
+We can set the sRGB values directly as a percentage, with 0% being off (black) and 100% being the full value for that color. The values are in the order of red, green, and blue. We can also set the sRGB values directly by a number from 0 to 255.
 
-Shown after that are hex color values. Hexadecimal is a numbering system with base-16, where the 0-255 integer is represented by two digits that each range from 0-15 represented using 0-9 and a-f for 10-15. Thus, `ff` = `255`, `00` = `0`, and `d5` = `200`. The '#' symbol precedes the color to indicate the value is hex.
+Shown after that are hex color values. Hexadecimal is a numbering system with base-16, where the 0-255 integer is represented by two digits ranging from 0-15 using the digits 0-9 and a-f for 10-15. Thus, `ff` = `255`, `00` = `0`, and `d5` = `200`. The '#' symbol precedes the color to indicate the value is hex.
 
-If all values are pairs of identical digits, the value can be represented by single digits that the browser will duplicate. Thus `f00` is the same as `ff0000`. If a forth set of numbers is present, that value is the A in RGBA; the alpha channel definining transparency in terms of the opacity value of the color. A higher value means the color is more opaque therefore less transparent. In the examples above, the alpha value is `f`, `ff`, `1`, and `100%` for fully opaque.
+If all values are pairs of identical digits, the value can be represented by single digits that the browser will duplicate. Thus `f00` is the same as `ff0000`. If a fourth set of numbers is present, that value is the A in RGBA, the alpha channel defining transparency in terms of the opacity value of the color. A higher value means the color is more opaque and therefore, less transparent. In the examples above, the alpha value is `f`, `ff`, `1`, and `100%` for fully opaque.
 
-The examples also show the [legacy `rgba()`](/en-US/docs/Web/CSS/color_value/rgb#legacy_syntax_rgba) syntax. The older syntax for color functions was comma separated, with separated functions for when the alpha channel was included. New color functions only have one syntax with space-separated (rather than comma separated) values, with the alpha channel, if present, being preceded by a slash.
+The examples also show the legacy [`rgba()`](/en-US/docs/Web/CSS/color_value/rgb#legacy_syntax_rgba) syntax. The older syntax for color functions was comma-separated, with separate functions for when the alpha channel was included. New color functions only have one syntax with space-separated (rather than comma-separated) values, with the alpha channel, if present, being preceded by a slash.
 
-The next examples show "HSL" which stands for **"Hue, Saturation, Lightness"**. HSL color values are considered by many to be more intuitive than RGB values.The color produced from the settings are still in the sRGB colorspace, but [`hsl()`](/en-US/docs/Web/CSS/color_value/hsl) is an intuitive syntax for many. The hue is adjusted as an angle, it is easy to create a user interface using a knob or circular control to adjust hue. Do note that HSL colors incorporate _lightness_, not _luminance_, and this is a significant consideration.
+The following examples show "HSL", which stands for _Hue, Saturation, and Lightness_. HSL color values are considered by many to be more intuitive than RGB values. The color produced from the settings are still in the sRGB colorspace, but [`hsl()`](/en-US/docs/Web/CSS/color_value/hsl) is an intuitive syntax for many. The hue is adjusted as an angle, and it is easy to create a user interface using a knob or circular control to adjust the hue. Do note that HSL colors incorporate _lightness_, not _luminance_, which is a significant consideration.
 
-The last examples shows "HWB" which stands for **"Hue, Whiteness, Blackness"**. Unlike `rgba()` and `hsla()`, [`hwb()`](/en-US/docs/Web/CSS/color_value/hwb) does not have a legacy `a` syntax and does not support comma-separated values. With both `hsl()` and `hwb()` the first value can be a [`<number>`](/en-US/docs/Web/CSS/number) or an [`<angle>`](/en-US/docs/Web/CSS/angle) value. When unitless, the value is interpreted as `deg` degrees.
+The last examples shows "HWB" which stands for _Hue, Whiteness, and Blackness_. Unlike `rgba()` and `hsla()`, [`hwb()`](/en-US/docs/Web/CSS/color_value/hwb) does not have a legacy `a` syntax and does not support comma-separated values. With both `hsl()` and `hwb()` the first value can be a [`<number>`](/en-US/docs/Web/CSS/number) or an [`<angle>`](/en-US/docs/Web/CSS/angle) value. When unitless, the value is interpreted as `deg` degrees.
 
 ### Conversions
 
-As we saw, one color within the same color space may be expressed in different ways. Looking at how the RGB color space is used to describe a color "magenta", you can see that the same color may be expressed in a shorthand, three-digit hex number that converts to a rgb value, as a full six-digit hex number that also converts to the same rgb value, or as a rgba value, expressed in percentages.
+As we saw, one color within the same color space may be expressed in many ways. Looking at how the RGB color space is used to describe the color "magenta", you can see that the same color may be expressed in a shorthand, three-digit hex number that converts to an rgb value as a six-digit hex number that also converts to the same rgb value, or as a rgba value, expressed in percentages.
 
-RGB is hardware-oriented, reflecting the use of CRTs. Many developers and designers prefer the intuitiveness of [`hsl()`](/en-US/docs/Web/CSS/color_value/hsl) notation. Converting from RGB to HSL is not a simple equation. Fortunately, browsers do it automatically and shift-clicking on colors in browser developer tools provide conversion functionality.
+RGB is hardware-oriented, reflecting the use of CRTs. Many developers and designers prefer the intuitiveness of [`hsl()`](/en-US/docs/Web/CSS/color_value/hsl) notation. Converting from RGB to HSL is not a simple equation. Fortunately, browsers do it automatically, and shift-clicking on colors in browser developer tools provides conversion functionality.
 
-In addition to developer tools, there are many tools that can convert RGB to HSL for you, with both the RGB hexadecimal and CSS function syntax. A great example of a tool that converts colors for you is Tom Jewett's "[mini color selector](https://colortutorial.design/microColorsC.html)" with HSL, RGB, Hex options for checking contrast in the browser. Note that developer tools color pickers and this tool all provide WCAG color contrast values.
+In addition to developer tools, many tools can convert RGB to HSL for you and provide both the RGB hexadecimal and CSS function syntax. A great example of a tool that converts colors for you is Tom Jewett's "[mini color selector](https://colortutorial.design/microColorsC.html)" with HSL, RGB, and Hex options for checking contrast in the browser. Note that developer tools color pickers and this tool all provide WCAG color contrast values.
 
 ![Color picker with HSL and RGB, with color contrast values.](microcolorsc.jpg)
 
-As noted earlier **[CSS color module](/en-US/docs/Web/CSS/CSS_Colors)** includes adding additional colorspaces, including [`lch()`](/en-US/docs/Web/CSS/color_value/lch) functional color notation and the [`lab()`](/en-US/docs/Web/CSS/color_value/lab) color coordinate system which can specify any visible color, but because of its upbiquity, sRGB is the default and preferred colorspace for accessibility.
+As noted earlier, the [CSS color module](/en-US/docs/Web/CSS/CSS_Colors) includes adding additional colorspaces, including [`lch()`](/en-US/docs/Web/CSS/color_value/lch) functional color notation and the [`lab()`](/en-US/docs/Web/CSS/color_value/lab) color coordinate system which can specify any visible color, but because of its ubiquity, sRGB is the default and preferred colorspace for accessibility.
 
 Where accessibility is concerned, however, standards and guidelines are currently written predominantly using the sRGB color space, especially as it applies to color contrast ratios. In speaking specifically to relative luminance, [WCAG's definition of relative luminance](https://www.w3.org/WAI/GL/wiki/Relative_luminance) notes:
 
 > **Note:** Almost all systems used today to view Web content assume sRGB encoding. Unless it is known that another color space will be used to process and display the content, authors should evaluate using sRGB colorspace. If using other color spaces, see Understanding Success Criterion 1.4.3."
 
-[CSS Color Module Level 5](https://drafts.csswg.org/css-color-5/) introduced [`lch()`](/en-US/docs/Web/CSS/color_value/lch) functional color notation and the [`lab()`](/en-US/docs/Web/CSS/color_value/lab) color coordinate system which can specify any visible color. These will change the domination of the sRGB color space in the future; but we are not there yet.
+[CSS Color Module Level 5](https://drafts.csswg.org/css-color-5/) introduced [`lch()`](/en-US/docs/Web/CSS/color_value/lch) functional color notation and the [`lab()`](/en-US/docs/Web/CSS/color_value/lab) color coordinate system which can specify any visible color. These will change the domination of the sRGB color space in the future, but we are not there yet.
 
 ### Querying color values
 
-{{domxref('Window.getComputedStyle()')}} returns values using RGB Decimal Reference scale. For example, calling `Window.getComputedStyle()` on a div with a `background-color: #990000;` set returns the computed background color as `rgb(153 0 0)` — the RGB Decimal reference. Being tied to computer hardware,`Window.getComputedStyle()` measures color in terms of RGB, not how the human eye perceives color.
+The {{domxref('Window.getComputedStyle()')}} method returns values using the RGB Decimal Reference scale. For example, calling `Window.getComputedStyle()` on a div with a `background-color: #990000;` set returns the computed background color as `rgb(153 0 0)` — the RGB Decimal reference. Being tied to computer hardware,`Window.getComputedStyle()` measures color in terms of RGB, not how the human eye perceives color.
 
 ### Red / green color blindness
 
@@ -128,43 +128,43 @@ Protanopia is a color vision deficiency in which the eye has no red cones; sRGB 
 
 ### Contrast
 
-Contrast between colors ("hues") is a critical component, but the use of color ("hues") alone is not enough to create accessible content. As mentioned before, any calculation of contrast must include luminance in the calculation.
+The contrast between colors ("hues") is a critical component, but the use of color ("hues") alone is not enough to create accessible content. As mentioned before, any calculation of contrast must include luminance.
 
-In addition, the "shape" of the text itself will matter. Thin letters will be harder to read than thick ones; all type faces need space to "breathe" for human perception.
+In addition, the "shape" of the text itself will matter. Thin letters will be harder to read than thick ones; all typefaces need space to "breathe" for human perception.
 
 ### Contrast and font size
 
 [WCAG contrast guidelines](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background) define "large" text as text that is `18pt` (approximately `24px`) or larger when {{cssxref('font-weight')}} is `normal` and `14pt` (approximately `18.7px`) for `bold` text. Stating:
 
-_Text that is larger and has wider character strokes is easier to read at lower contrast. The contrast requirement for larger text is therefore lower. This allows authors to use a wider range of color choices for large text, which is helpful for design of pages, particularly titles._
+_Text that is larger and has wider character strokes is easier to read at lower contrast. Therefore, the contrast requirement for larger text is lower. This allows authors to use a wider range of color choices for large text, which is helpful for the design of pages, particularly titles._
 
-While larger text does not require as great of a color contrast with its background as smaller text, increasing font size is not a panacea.
+While larger text does not require as great color contrast with its background as smaller text, increasing font size is not a panacea.
 
-"Normal" print is usually considered 11.5pt to 12pt, this is equivalent of 16px on screen. While smaller font may be legible — a user can make out letters at \~70% accuracy — that is not readable. A 16px font size is generally readable for people with normal vision. Someone with 20/40 needs twice that, about a 31px font. This is why the WCAG guidelines require that users have the ability to zoom text larger.
+"Normal" print is usually considered 11.5pt to 12pt, equivalent to 16px on screen. While smaller font may be legible — a user can make out letters at \~70% accuracy — that is not readable. A 16px font size is generally readable for people with normal vision. Someone with 20/40 needs twice that, about a 31px font. This is why the WCAG guidelines require that users have the ability to zoom any text larger.
 
-While text that is too small is hard to read, so is text that is too large. For users with 20/20 vision, when text size is greater than approximately 96px, reading speed decreases. Also, when there is a large disparity between the smallest and largest font size on a page,the larger text will become less readable if users enlarge the smaller text on the page, as most browsers zoom all text as the user zooms.
+While a text displayed too small is hard to read, so is a text that is too large. For users with 20/20 vision, with a text size greater than approximately 96px, reading speed decreases. Also, when there is a large disparity between the smallest and largest font size on a page, the larger text will become less readable if users enlarge the smaller text on the page, as most browsers zoom all text as the user zooms.
 
-In general, for accessibility purposes, the more contrast the better. That changes with animation. "Safer" animation means images with less contrast, not more. For more on color contrast in animation, see [Three Flashes or Below Threshold Understanding SC 2.3.1](https://www.w3.org/TR/UNDERSTANDING-WCAG20/seizure-does-not-violate.html)
+In general, for accessibility purposes, the more contrast, the better. That changes with animation. "Safer" animation means images with less contrast, not more. For more on color contrast in animation, see [Three Flashes or Below Threshold Understanding SC 2.3.1](https://www.w3.org/TR/UNDERSTANDING-WCAG20/seizure-does-not-violate.html)
 
-Also note that icons need sufficient contrast for perception. See [WCAG 2.1 technique G207](https://www.w3.org/WAI/WCAG21/Techniques/general/G207)
+Also, note that icons need sufficient contrast for perception. See [WCAG 2.1 technique G207](https://www.w3.org/WAI/WCAG21/Techniques/general/G207)
 
 ### Luminance
 
-It is the difference in the luminance of a color that enables us to see contrast. The definition of [_relative luminance_](https://www.w3.org/WAI/GL/wiki/Relative_luminance) as defined by the W3C is "The relative brightness of any point in a colorspace, normalized to 0 for darkest black and 1 for lightest white."
+It is the difference in the luminance of a color that enables us to see the contrast. The definition of [_relative luminance_](https://www.w3.org/WAI/GL/wiki/Relative_luminance) as defined by the W3C is "The relative brightness of any point in a colorspace, normalized to 0 for darkest black and 1 for lightest white."
 
 This statement is of course accurate, but may be confusing when used in reference to the RGB color space, which is an integer between 0 and 255. White has 100% relative luminance, black has 0% relative luminance (in most but not all literature). Interpreting for the W3C standard above, that would mean that white, normalized to 1, would have an RGB value of `rgb(255 255 255)` and black, normalized to 0, would have an RGB value of `rgb(0 0 0)`. Note that black and white can also be written as `rgb(100% 100% 100%)` and `rgb(0% 0% 0%)` respectively, which may be more intuitive.
 
-So, where do these numbers of 0 to 255 come from? Historically, graphics engines store the color channels as a single byte; that means a range of integers between 0 and 255.
+So, where do these numbers of 0 to 255 come from? Historically, graphics engines stored the color channels as a single byte, which means a range of integers between 0 and 255.
 
-The luminances of the primary colors are different. Yellow has a greater luminance than blue, for example. This was done by way of design, "to achieve white alignment of the monitor" according to the NASA document, "[Luminance Contrast in Color Graphics](https://colorusage.arc.nasa.gov/design_lum_1.php)"
+The luminances of the primary colors are different. Yellow has a greater luminance than blue, for example. This was done by way of design, _to achieve white alignment of the monitor_, according to the NASA document, "[Luminance Contrast in Color Graphics](https://colorusage.arc.nasa.gov/design_lum_1.php)"
 
-A color contrast ratio is meaningless without its luminance component; and once luminance is established, the color contrast ratio can be established.
+A color contrast ratio is meaningless without its luminance component, and once luminance is established, the color contrast ratio can be established.
 
-Where human perception is concerned, a difference in luminance matters more than a difference in color. This is important, luminance contrast enables the development of content that even those with color-blindness can see. With this understanding, luminance may be manipulated so that colors that are difficult to see because of their low luminance could be made more legible by placing these colors against another that had contrasting luminance. An interesting study by NASA on the color blue, for example, noted that this color, which has low luminance, can be made legible if "care was taken to achieve adequate luminance contrast" (From the article, [Designing With Blue](https://colorusage.arc.nasa.gov/blue_2.php))
+Where human perception is concerned, a difference in luminance matters more than a color difference. This is important, as luminance contrast enables the development of content that even those with color blindness can see. With this understanding, luminance may be manipulated so that colors that are difficult to see because of their low luminance could be made more legible by placing these colors against another with contrasting luminance. An interesting study by NASA on the color blue, for example, noted that this color, which has low luminance, can be made legible if _care was taken to achieve adequate luminance contrast_ (From the article, [Designing with blue](https://colorusage.arc.nasa.gov/blue_2.php))
 
 ### Measuring relative luminance
 
-The W3C's [wiki on relative luminance](https://www.w3.org/WAI/GL/wiki/Relative_luminance) notes that as long as systems use sRGB encoding, unless it is known that another color space will be used to process and display the content, the sRGB colorspace should be used when calculating luminance.
+The W3C's [wiki on relative luminance](https://www.w3.org/WAI/GL/wiki/Relative_luminance) notes that as long as systems use sRGB encoding unless it is known that another color space will be used to process and display the content, the sRGB colorspace should be used when calculating luminance.
 
 The calculations for evaluating luminance are spelled out in WCAG 2.1 in the definition for [relative luminance](https://www.w3.org/TR/WCAG21/#dfn-relative-luminance), and is as follows:
 
@@ -176,7 +176,7 @@ R, G, and B have distinct weights in the relative luminance formula.For the sRGB
 
 These formulas come from [sRGB](https://www.w3.org/TR/WCAG21/#bib-sRGB)] and [IEC-4WD](https://www.w3.org/TR/WCAG21/#bib-IEC-4WD).
 
-Calculations for relative luminance are not casual ones, luckily, there are tools that will do it for you. Here are a few.
+Calculations for relative luminance are not casual ones. Luckily, some tools will do it for you. Here are a few.
 
 - [Relative luminance calculation.](https://planetcalc.com/7779/)
 - [Calculate relative luminance](https://www.topster.net/relative-luminance/)
@@ -184,33 +184,33 @@ Calculations for relative luminance are not casual ones, luckily, there are tool
 
 ## Color perception
 
-When it comes to "perceiving" colors, not all colors are created equal. Our eyes are tuned to perceive certain colors, red, blue, and green, but we do not perceive these colors with equal strength. According to the article, [Hypersensitive cones](http://hyperphysics.phy-astr.gsu.edu/hbase/vision/colcon.html), the authors note that "By population, about 64% of the cones are red-sensitive, about 32% green sensitive, and about 2% are blue sensitive." Surprisingly, although cones that are blue-sensitive typically make up the fewest number of cones, they are also the most "sensitive" to color.
+When _perceiving_ colors, not all colors are created equal: Our eyes are tuned to perceive specific colors, red, blue, and green, but we do not perceive these colors with equal strength. According to the article, [Hypersensitive cones](http://hyperphysics.phy-astr.gsu.edu/hbase/vision/colcon.html), the authors note that "By population, about 64% of the cones are red-sensitive, about 32% green sensitive, and about 2% are blue sensitive." Surprisingly, although blue-sensitive cones typically make up the fewest cones, they are also the most _sensitive_ to color.
 
-Put another way, as humans, the color blue is perceived differently than other colors, for multiple reasons. First, because the blue cones are actually the most sensitive of the three, second, we have fewer blue cones than red or green, and third, it so happens that these "blue sensitive" cones tend to be located at the rims of our eyeballs, away from the center ([fovea centralis](http://hyperphysics.phy-astr.gsu.edu/hbase/vision/retina.html#c2)) of the back of the eyeball, where the red and green cones tend to cluster.
+Put another way, as humans, blue is perceived differently than other colors for multiple reasons. First, because the blue cones are the most sensitive of the three; second, we have fewer blue cones than red or green; and third, it so happens that these blue-sensitive cones tend to be located at the rims of our eyeballs, away from the center ([fovea centralis](http://hyperphysics.phy-astr.gsu.edu/hbase/vision/retina.html#c2)) of the back of the eyeball, where the red and green cones tend to cluster.
 
-There is software that actually takes advantage of that fact. Because we do not perceive the color "blue" as well as other colors, for example, some algorithms for compressing image sizes remove the parts of the image with "blue" in them more heavily than other parts of an image. This fact is also used by television signals to allocate less bandwidth to the yellow-blue part of their signal, thus saving bandwidth.
+There is software that takes advantage of that fact. Because we do not perceive blue as well as other colors, for example, some algorithms for compressing image sizes remove the parts of the image with "blue" more heavily than other parts. Television signals also use this fact to allocate less bandwidth to the yellow-blue part of their signal, thus saving bandwidth.
 
-Another important point to consider is the ambience of light surrounding the color. The color will appear differently if the background lighting is dark, or light.
+Another essential point to consider is the ambiance of light surrounding the color. The color will appear differently if the background lighting is dark or light.
 
-Color contrast and perception are impacted by internal and external factors. In the following image both of the yellow dots, and the grey of the square they are on, are identical in terms of the sRGB color value that is being displayed on your monitor. It is your context-sensitive perception of these colors that makes them appear so different, as your brain's image processing adjusts the perception based on what it thinks is in shadow or not.
+Internal and external factors impact color contrast and perception. In the following image both the yellow dots and the grey of the square they are on, are identical in terms of the sRGB color value that is being displayed on your monitor. Your context-sensitive perception of these colors makes them appear so different, as your brain's image processing adjusts the perception based on what it thinks is in shadow or not.
 
 ![An image of a checkerboard, where identical colors look different if they are in shadow](yellowdotcheckershadow_dlyon.png)
 
-The yellow dots in this image are identical colors coming from your monitor, but they appear different due to context. Image D.Lyon
+The yellow dots in this image are identical colors on your monitor, but they appear different due to context. (Image D.Lyon)
 
-Our contrast, lightness, and color perception is affected by the context of the nearby colors, and other features of a design or image. This makes predicting contrast challenging. It is clearly not as simple as a mathematical ratio between two colors.
+Our contrast, lightness, and color perception are affected by the context of the nearby colors and other features of a design or image. This makes predicting contrast challenging. It is not as simple as a mathematical ratio between two colors.
 
-To summarize, color is as much about human physiology and perception in the brain as it is the measurement of light coming from a computer screen. It's also important to understand that the ambient light environment affects the ability to perceive color and contrast. Light, and its measurements, are linear, but human vision and human perception are not.
+To summarize, color is as much about human physiology and perception in the brain as it is about measuring light from a computer screen. It's also important to understand that the ambient light environment affects the ability to perceive color and contrast. Light and its measurements are linear, but human vision and perception are not.
 
 ## Adaption
 
-Our eyes don't adapt equally, in the same way, going from light areas to dark ones, and vice versa. This is due to the physiological ways our eye are built. This affects the ability of a user to read text against a background. There are at least two kinds of adaptation that take place: local adaptation, and adaptation to an ambient environment.
+Our eyes don't adapt equally, in the same way, going from light areas to dark ones and vice versa. This is due to the physiological ways our eyes are built. This affects the ability of a user to read text against a background. At least two kinds of adaptation take place: local adaptation and adaptation to an ambient environment.
 
-Local adaptation takes place right on the "page" a reader is looking at. For example, if you have blue text within a gray "highlighted" area, your eyes will perceive that same blue text with a gray highlight differently if it is in a black div, or a white one. This is called _local_ adaptation. This difference in the ability to perceive the text is affected even though the ambient lighting of the room does not change.
+Local adaptation occurs right on the "page" a reader is looking at. For example, if you have blue text within a gray "highlighted" area, your eyes will perceive that exact blue text with a gray highlight differently if it is in a black {{HTMLElement("div")}}, or a white one. This is called _local_ adaptation. This difference in the ability to perceive the text is affected even though the room's ambient lighting does not change.
 
-The implication is that web developers who seek to improve legibility of text against a background can take advantage of the principles of local adaptation.
+The implication is that web developers who seek to improve the legibility of text against a background can take advantage of the principles of local adaptation.
 
-Dark adaptation, to low luminance, is slow. When you come in from outside where the sun was bright, and walk into a dark room, you are experiencing dark adaptation. It can take a few minutes to adjust to this.
+Dark adaptation to low luminance is slow. When you come in from outside, where the sun is bright, and walk into a dark room, you are experiencing dark adaptation. It can take a few minutes to adjust to this.
 
 Light adaptation is the reverse. Going from a dark room into bright sunlight is quicker, but it can also hurt.
 
