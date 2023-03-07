@@ -17,9 +17,9 @@ Colors, and how they are used, are a major component of accessibility. At the su
 
 ### Environment and perception
 
-Environment matters. Perception of color in a well-lit room will be different than perception of that same color on that same computer screen in a dark room. In terms of accessibility, the use of certain color-combinations have more impact than others. Font size, [font style ](https://www.nngroup.com/articles/glanceable-fonts/) (some fonts are so thin or fancy that they present accessibility problems on their own), background color, the size of the background space around the text, even pixel densities, and more all affect how color is delivered from the screen.
+Environment matters. Perception of color in a well-lit room will be different than perception of that same color on that same computer screen in a dark room. In terms of accessibility, the use of certain color-combinations have more impact than others. Font size, [font style](https://www.nngroup.com/articles/glanceable-fonts/) (some fonts are so thin or fancy that they present accessibility problems on their own), background color, the size of the background space around the text, even pixel densities, and more all affect how color is delivered from the screen.
 
-A viewer's distance from the screen, the ambient background, the health of his eyes, and more all affect how that color is received by the viewer. How the viewer perceives color after it gets to their eyes is yet another matter, and can be affected by overall health. Fortunately, there are [media queries](/en-US/docs/Web/CSS/@media/) that enable developers to provide styles based on user preferences, including [contrast](/en-US/docs/Web/CSS/@media/prefers-contrast) and [color scheme](/en-US/docs/Web/CSS/@media/prefers-color-scheme) preferences.
+A viewer's distance from the screen, the ambient background, the health of his eyes, and more all affect how that color is received by the viewer. How the viewer perceives color after it gets to their eyes is yet another matter, and can be affected by overall health. Fortunately, there are [media queries](/en-US/docs/Web/CSS/@media) that enable developers to provide styles based on user preferences, including [contrast](/en-US/docs/Web/CSS/@media/prefers-contrast) and [color scheme](/en-US/docs/Web/CSS/@media/prefers-color-scheme) preferences.
 
 When supported, the [Ambient Light Sensor](/en-US/docs/Web/API/AmbientLightSensor) interface returns the current light level or illuminance of the ambient light around the hosting device enabling a web page to be aware of any change in the light intensity, and consequently, adjust the text accordingly. Additionally, the above media queries enable developers to provide alternative user experiences when user preferences indicate prefered contrast levels, automatically adjusting levels depending upon where the user is and what kind of screen they are using.
 
@@ -37,13 +37,13 @@ When working with color, it's important to know which "color space" you are work
 
 In color printing, your printer likely have cyan, magenta, yellow, black (CMYK) ink cartridges. CMYK is a subtractive model wherein the four inks _remove_ certain wavelengths of light, reflecting back only the narrow range each is associated with. RGB is an additive color model that adds red, green, and blue lights in different proportions.
 
-Currently, the RGB color space predominates as the space web developers work in. While HEX, RGB and HSL color spaces are notated differently, browseres automatically convert values between these color notations. [CSS color modules](en-US/docs/Web/CSS/CSS_Colors) provide for additional color spaces, but because of the current domination of the RGB color space in measuring color output, most calculations in this document are presumed to be in the RGB color space, and very specifically, in the sRGB color space.
+Currently, the RGB color space predominates as the space web developers work in. While HEX, RGB and HSL color spaces are notated differently, browseres automatically convert values between these color notations. [CSS color modules](/en-US/docs/Web/CSS/CSS_Colors) provide for additional color spaces, but because of the current domination of the RGB color space in measuring color output, most calculations in this document are presumed to be in the RGB color space, and very specifically, in the sRGB color space.
 
 ## The sRGB color space
 
 Color has many ways of being defined, as is apparent in the [`<color>` data type](/en-US/docs/Web/CSS/color_value), including RGB, RGB decimal, RGB percent, HSL, HWB, LCH, and CMYK, among others.
 
-For digital concerns, much of the technology has historically resided in the RGB color space. The RGB color model is extended to include “alpha” -- RGBA -- to allow specification of the opacity of a color. Other methods for measuring color involving measurements using other color spaces exist and are supported in modern displays and browsers, but color measurements in the RGB color space predominates, including in video production.
+For digital concerns, much of the technology has historically resided in the RGB color space. The RGB color model is extended to include "alpha" — RGBA — to allow specification of the opacity of a color. Other methods for measuring color involving measurements using other color spaces exist and are supported in modern displays and browsers, but color measurements in the RGB color space predominates, including in video production.
 
 Technologies, such as [OpenGL](https://en.wikipedia.org/wiki/OpenGL) and [Direct3D](https://en.wikipedia.org/wiki/Direct3D) incorporate support for the sRGB gamma curve, although some articles for OpenGL reference use of RGBA rather than sRGB. WebGL is usually in the RGBA format; see an example of how it is used in "[Clearing with colors](/en-US/docs/Web/API/WebGL_API/By_example/Clearing_with_colors)".
 
@@ -118,7 +118,7 @@ Where accessibility is concerned, however, standards and guidelines are currentl
 
 ### Querying color values
 
-{{domxref('Window.getComputedStyle()')}} returns values using RGB Decimal Reference scale. For example, calling `Window.getComputedStyle()` on a div with a `background-color: #990000;` set returns the computed background color as `rgb(153 0 0)` -- the RGB Decimal reference. Being tied to computer hardware,`Window.getComputedStyle()` measures color in terms of RGB, not how the human eye perceives color.
+{{domxref('Window.getComputedStyle()')}} returns values using RGB Decimal Reference scale. For example, calling `Window.getComputedStyle()` on a div with a `background-color: #990000;` set returns the computed background color as `rgb(153 0 0)` — the RGB Decimal reference. Being tied to computer hardware,`Window.getComputedStyle()` measures color in terms of RGB, not how the human eye perceives color.
 
 ### Red / green color blindness
 
@@ -140,7 +140,7 @@ _Text that is larger and has wider character strokes is easier to read at lower 
 
 While larger text does not require as great of a color contrast with its background as smaller text, increasing font size is not a panacea.
 
-"Normal" print is usually considered 11.5pt to 12pt, this is equivalent of 16px on screen. While smaller font may be legible -- a user can make out letters at \~70% accuracy -- that is not readable. A 16px font size is generally readable for people with normal vision. Someone with 20/40 needs twice that, about a 31px font. This is why the WCAG guidelines require that users have the ability to zoom text larger.
+"Normal" print is usually considered 11.5pt to 12pt, this is equivalent of 16px on screen. While smaller font may be legible — a user can make out letters at \~70% accuracy — that is not readable. A 16px font size is generally readable for people with normal vision. Someone with 20/40 needs twice that, about a 31px font. This is why the WCAG guidelines require that users have the ability to zoom text larger.
 
 While text that is too small is hard to read, so is text that is too large. For users with 20/20 vision, when text size is greater than approximately 96px, reading speed decreases. Also, when there is a large disparity between the smallest and largest font size on a page,the larger text will become less readable if users enlarge the smaller text on the page, as most browsers zoom all text as the user zooms.
 
@@ -259,7 +259,7 @@ The nature of blue light causes it to focus at a different location on the retin
 
 ## The special case of red
 
-Not all colors ("hue") are processed the same way by our brains. Human physiology and psychology are affected by the color "red" generally speaking, in ways different from that of other colors. We respond physiologically as well as psychologically to colors. For example, it has been demonstrated that [some colors are more likely to cause epileptic fits than others](https://www.sciencedaily.com/releases/2009/09/090925092858.htm); There is an interesting observation in a discussion thread, "[What is the “grayscale” setting for in accessibility options?](https://ask.metafilter.com/312049/What-is-the-grayscale-setting-for-in-accessibility-options)" in which one of the participants states: "I have photo-triggered ocular migraines and wish everything had a greyscale option. Even better a red or violet scale, but that is probably very specific to me."
+Not all colors ("hue") are processed the same way by our brains. Human physiology and psychology are affected by the color "red" generally speaking, in ways different from that of other colors. We respond physiologically as well as psychologically to colors. For example, it has been demonstrated that [some colors are more likely to cause epileptic fits than others](https://www.sciencedaily.com/releases/2009/09/090925092858.htm); There is an interesting observation in a discussion thread, "[What is the "grayscale" setting for in accessibility options?](https://ask.metafilter.com/312049/What-is-the-grayscale-setting-for-in-accessibility-options)" in which one of the participants states: "I have photo-triggered ocular migraines and wish everything had a greyscale option. Even better a red or violet scale, but that is probably very specific to me."
 
 ### Saturated red
 
@@ -279,7 +279,7 @@ Not all saturated reds may be represented well in the RGB spectrum, or other spe
 
 In addition to a red environment affecting the cognitive function of those with traumatic brain injury, color in the red spectrum wavelength requires special attention and tests.
 
-Dr. Gregg Vanderheiden, when testing the Photosensitive Epilepsy Analysis Tool, noted seizure rates were much higher than expected. They found that we are much more sensitive to saturated red flashing. (See the video,[ The Photosensitive Epilepsy Analysis Tool](https://www.pbs.org/video/university-place-the-photosensitive-epilepsy-analysis-tool-ep-429/)[)](https://www.pbs.org/video/university-place-the-photosensitive-epilepsy-analysis-tool-ep-429/)
+Dr. Gregg Vanderheiden, when testing the Photosensitive Epilepsy Analysis Tool, noted seizure rates were much higher than expected. They found that we are much more sensitive to saturated red flashing. (See the video,[The Photosensitive Epilepsy Analysis Tool](https://www.pbs.org/video/university-place-the-photosensitive-epilepsy-analysis-tool-ep-429/)[)](https://www.pbs.org/video/university-place-the-photosensitive-epilepsy-analysis-tool-ep-429/)
 
 ### Flashing and seizures
 
@@ -315,7 +315,7 @@ Color as in hues and saturation can affect our mood, and enhance — or de-enhan
 - CSS [`color`](/en-US/docs/Web/CSS/color) property
 - [`<color>`](/en-US/docs/Web/CSS/color_value) data type
 - [Web accessibility for seizures and physical reactions](/en-US/docs/Web/Accessibility/Seizure_disorders)
-- [What is the “grayscale” setting for in accessibility options?](https://ask.metafilter.com/312049/What-is-the-grayscale-setting-for-in-accessibility-options)
+- [What is the "grayscale" setting for in accessibility options?](https://ask.metafilter.com/312049/What-is-the-grayscale-setting-for-in-accessibility-options)
 - [How the Color Red Influences Our Behavior](https://www.scientificamerican.com/article/how-the-color-red-influences-our-behavior/) Scientific American By Susana Martinez-Conde, Stephen L. Macknik on November 1, 2014
 - [Red Desaturation](https://www.smart-optometry.com/red-desaturation/) The human eye is so sensitively "tuned" to red, that opthamolegists set up a test using it, assessing the integrity of the optic nerve.
 - [Photic- and pattern-induced seizures: expert consensus of the Epilepsy Foundation of America Working Group](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.532.7063&rep=rep1&type=pdf)
