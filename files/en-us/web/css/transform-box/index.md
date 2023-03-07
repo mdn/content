@@ -40,7 +40,7 @@ The `transform-box` property is specified as one of the keyword values listed be
 - `stroke-box`
   - : The stroke bounding box is used as the reference box.
 - `view-box`
-  - : The nearest {{Glossary("SVG")}} viewport is used as the reference box. If a {{SVGAttr("viewBox")}} attribute is specified for the SVG viewport creating element, the reference box is positioned at the origin of the coordinate system established by the `viewBox` attribute, and the dimension of the reference box is set to the width and height values of the `viewBox` attribute.
+  - : The nearest {{Glossary("SVG")}} viewport is used as the reference box. If a {{SVGAttr("viewBox")}} attribute is specified for the SVG viewport creating element, the reference box is positioned at the origin of the coordinate system established by the `viewBox` attribute, and the dimension of the reference box is set to the width and height values of the `viewBox` attribute. For elements with associated CSS layout box, the used value for `fill-box` is `content-box` and for `stroke-box` and `view-box` is `border-box`.
 
 ## Formal definition
 
