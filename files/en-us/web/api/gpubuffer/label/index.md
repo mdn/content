@@ -16,7 +16,7 @@ This can be set by providing a `label` property in the descriptor object passed 
 
 ## Value
 
-A string. If this has not been previously set as described above, it will contain an empty string.
+A string. If this has not been previously set as described above, it will be an empty string.
 
 ## Examples
 
@@ -28,9 +28,9 @@ const output = device.createBuffer({
   usage: GPUBufferUsage.STORAGE | GPUBufferUsage.COPY_SRC,
 });
 
-output.label = "mylabel";
+output.label = "mybuffer";
 
-console.log(output.label); // "mylabel"
+console.log(output.label); // "mybuffer"
 ```
 
 Setting a label via the originating {{domxref("GPUDevice.createBuffer()")}} call, and then getting it via `GPUBuffer.label`:
@@ -39,10 +39,10 @@ Setting a label via the originating {{domxref("GPUDevice.createBuffer()")}} call
 const output = device.createBuffer({
   size: BUFFER_SIZE,
   usage: GPUBufferUsage.STORAGE | GPUBufferUsage.COPY_SRC,
-  label: "mylabel",
+  label: "mybuffer",
 });
 
-console.log(output.label); // "mylabel"
+console.log(output.label); // "mybuffer"
 ```
 
 ## Specifications
