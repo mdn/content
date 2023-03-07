@@ -2,16 +2,6 @@
 title: tabs.removeCSS()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/removeCSS
 page-type: webextension-api-function
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - removeCSS
-  - tabs
 browser-compat: webextensions.api.tabs.removeCSS
 ---
 
