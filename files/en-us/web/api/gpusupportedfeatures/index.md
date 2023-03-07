@@ -22,6 +22,10 @@ If you are hoping to take advantage of a specific additional feature in a WebGPU
 
 {{InheritanceDiagram}}
 
+## Available features
+
+We have not listed the exact set of additional features available to be used in WebGPU, as it will vary between implementations and physical devices, and will change over time. For a list, refer to the [Feature Index](https://gpuweb.github.io/gpuweb/#feature-index) in the specification.
+
 ## Instance properties
 
 The following properties are available to all read-only [setlike](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set) objects (the below links are to the {{jsxref("Set")}} global object reference pages).
@@ -49,12 +53,12 @@ The following methods are available to all read-only [setlike](/en-US/docs/Web/J
 ```js
 async function init() {
   if (!navigator.gpu) {
-    throw Error('WebGPU not supported.');
+    throw Error("WebGPU not supported.");
   }
 
   const adapter = await navigator.gpu.requestAdapter();
   if (!adapter) {
-    throw Error('Couldn\'t request WebGPU adapter.');
+    throw Error("Couldn't request WebGPU adapter.");
   }
 
   const adapterFeatures = adapter.features;
@@ -62,8 +66,8 @@ async function init() {
   // Return the size of the set
   console.log(adapterFeatures.size);
 
-  // Check whether a feature is supported by the adapter 
-  console.log(adapterFeatures.has('texture-compression-astc'));
+  // Check whether a feature is supported by the adapter
+  console.log(adapterFeatures.has("texture-compression-astc"));
 
   // Iterate through all the set values using values()
   const valueIterator = adapterFeatures.values();
@@ -86,10 +90,9 @@ async function init() {
   // Iterate through all the set values using forEach()
   adapterFeatures.forEach((value) => {
     console.log(value);
-  })
+  });
 
   //...
-
 }
 ```
 
