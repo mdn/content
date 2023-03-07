@@ -94,7 +94,7 @@ div {
 ### Adjusting opacity with lch()
 
 The following example shows the effect of varying the `A` (alpha) value of the `lch()` functional notation.
-The `#red` and `#red-alpha` elements overlap the `#background-div` element to demonstrate the effect of opacity.
+The `red` and `red-alpha` elements overlap the `#background-div` element to demonstrate the effect of opacity.
 Giving `A` a value of `0.4` makes the color 40% opaque.
 
 ```html

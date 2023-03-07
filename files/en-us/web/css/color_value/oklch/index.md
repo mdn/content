@@ -32,7 +32,7 @@ oklch(59.69% 0.156 49.77 / .5)
   - `A` (alpha) can be a {{cssxref("&lt;number&gt;")}} between `0` and `1`, or a {{cssxref("&lt;percentage&gt;")}}, where the number `1` corresponds to `100%` (full opacity).
 
 > **Note:** Usually when percentage values have a numeric equivalent in CSS, `100%` is equal to the number `1`.
-> This case is notable where `100%` is equal to the number `100` for the `L` value and `0.4` for the `C` value.
+> This case is notable in that `100%` is equal to the number `100` for the `L` value and `0.4` for the `C` value.
 
 ### Formal syntax
 
@@ -94,7 +94,7 @@ div {
 ### Adjusting the alpha value of a color
 
 The following example shows the effect of varying the `A` (alpha) value of the `oklch()` color function.
-The `#red` and `#red-alpha` elements overlap the `#background-div` element to demonstrate the effect of opacity.
+The `red` and `red-alpha` elements overlap the `#background-div` element to demonstrate the effect of opacity.
 Giving `A` a value of `0.4` makes the color 40% opaque.
 
 ```html

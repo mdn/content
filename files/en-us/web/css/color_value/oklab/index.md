@@ -41,7 +41,7 @@ oklab(59.69% 0.1007 0.1191 / 0.5);
   - `A` is a {{cssxref("&lt;number&gt;")}} between `0` and `1`, or a {{cssxref("&lt;percentage&gt;")}}, where the number `1` corresponds to `100%` (full opacity), representing the transparency (or alpha channel) of the color.
 
 > **Note:** Usually when percentage values have a numeric equivalent in CSS, `100%` is equal to the number `1`.
-> This case is notable where `100%` is equal to the number `100` for the `L` value and `0.4` for the `a` and `b` values.
+> This case is notable in that `100%` is equal to the number `100` for the `L` value and `0.4` for the `a` and `b` values.
 
 ### Formal syntax
 
@@ -103,8 +103,8 @@ div {
 ### Adjusting opacity with oklab()
 
 The following example shows the effect of varying the `A` (alpha) value of the `oklab()` function.
-The `#red` and `#red-alpha` elements overlap the `#background-div` element to demonstrate the effect of opacity.
-Giving the `#red-alpha` element an opacity of `0.4` makes it appear more transparent than the `#red` element.
+The `red` and `#ed-alpha` elements overlap the `#background-div` element to demonstrate the effect of opacity.
+Giving the `red-alpha` element an opacity of `0.4` makes it appear more transparent than the `red` element.
 
 ```html
 <div id="background-div">
