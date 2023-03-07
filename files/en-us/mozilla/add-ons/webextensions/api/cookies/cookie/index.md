@@ -2,16 +2,6 @@
 title: cookies.Cookie
 slug: Mozilla/Add-ons/WebExtensions/API/cookies/Cookie
 page-type: webextension-api-type
-tags:
-  - API
-  - Add-ons
-  - Cookies
-  - Extensions
-  - Non-standard
-  - Reference
-  - Type
-  - WebExtensions
-  - cookie
 browser-compat: webextensions.api.cookies.Cookie
 ---
 

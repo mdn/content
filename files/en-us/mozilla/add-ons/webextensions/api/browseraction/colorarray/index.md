@@ -2,16 +2,6 @@
 title: browserAction.ColorArray
 slug: Mozilla/Add-ons/WebExtensions/API/browserAction/ColorArray
 page-type: webextension-api-type
-tags:
-  - API
-  - Add-ons
-  - ColorArray
-  - Extensions
-  - Non-standard
-  - Reference
-  - Type
-  - WebExtensions
-  - browserAction
 browser-compat: webextensions.api.browserAction.ColorArray
 ---
 

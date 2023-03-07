@@ -2,15 +2,6 @@
 title: proxy.unregister()
 slug: Mozilla/Add-ons/WebExtensions/API/proxy/unregister
 page-type: webextension-api-function
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Proxy
-  - Reference
-  - WebExtensions
-  - unregister
 browser-compat: webextensions.api.proxy.unregister
 ---
 

@@ -2,14 +2,8 @@
 title: offline_enabled
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/offline_enabled
 page-type: webextension-manifest-key
-tags:
-  - Add-ons
-  - Deprecated
-  - Extensions
-  - Non-standard
-  - Offline
-  - WebExtensions
-  - google chrome
+status:
+  - deprecated
 browser-compat: webextensions.manifest.offline_enabled
 ---
 

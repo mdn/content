@@ -1,15 +1,6 @@
 ---
 title: declarativeNetRequest.isRegexSupported
 slug: Mozilla/Add-ons/WebExtensions/API/declarativeNetRequest/isRegexSupported
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Reference
-  - WebExtensions
-  - Method
-  - declarativeNetRequest
-  - isRegexSupported
 browser-compat: webextensions.api.declarativeNetRequest.isRegexSupported
 ---
 

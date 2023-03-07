@@ -2,14 +2,6 @@
 title: find.find()
 slug: Mozilla/Add-ons/WebExtensions/API/find/find
 page-type: webextension-api-function
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Reference
-  - WebExtensions
-  - find
 browser-compat: webextensions.api.find.find
 ---
 

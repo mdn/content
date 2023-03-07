@@ -2,14 +2,6 @@
 title: devtools.inspectedWindow
 slug: Mozilla/Add-ons/WebExtensions/API/devtools/inspectedWindow
 page-type: webextension-api-property
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Property
-  - Reference
-  - WebExtensions
-  - devtools.inspectedWindow
 browser-compat: webextensions.api.devtools.inspectedWindow
 ---
 

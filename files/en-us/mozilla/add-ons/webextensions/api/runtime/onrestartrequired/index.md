@@ -2,16 +2,6 @@
 title: runtime.onRestartRequired
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/onRestartRequired
 page-type: webextension-api-event
-tags:
-  - API
-  - Add-ons
-  - Event
-  - Extensions
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - onRestartRequired
-  - runtime
 browser-compat: webextensions.api.runtime.onRestartRequired
 ---
 

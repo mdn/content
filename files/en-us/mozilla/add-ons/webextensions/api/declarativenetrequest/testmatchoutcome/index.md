@@ -1,15 +1,6 @@
 ---
 title: declarativeNetRequest.testMatchOutcome
 slug: Mozilla/Add-ons/WebExtensions/API/declarativeNetRequest/testMatchOutcome
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Reference
-  - WebExtensions
-  - Method
-  - declarativeNetRequest
-  - testMatchOutcome
 browser-compat: webextensions.api.declarativeNetRequest.testMatchOutcome
 ---
 
