@@ -197,7 +197,7 @@ async function* makeTextFileLineIterator(fileURL) {
   let result;
 
   while (true) {
-    let result = newline.exec(chunk);
+    const result = newline.exec(chunk);
     if (!result) {
       if (readerDone) break;
       const remainder = chunk.substr(startIndex);
