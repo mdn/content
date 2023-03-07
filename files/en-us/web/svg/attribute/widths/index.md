@@ -2,10 +2,8 @@
 title: widths
 slug: Web/SVG/Attribute/widths
 page-type: svg-attribute
-tags:
-  - Deprecated
-  - SVG
-  - SVG Attribute
+status:
+  - deprecated
 browser-compat: svg.elements.font-face.widths
 ---
 

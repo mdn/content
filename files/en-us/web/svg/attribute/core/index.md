@@ -2,11 +2,6 @@
 title: SVG Core Attributes
 slug: Web/SVG/Attribute/Core
 page-type: svg-attribute
-tags:
-  - Attribute
-  - Intermediate
-  - Reference
-  - SVG
 browser-compat: svg.attributes.core
 ---
 

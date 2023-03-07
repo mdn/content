@@ -2,13 +2,8 @@
 title: rotate
 slug: Web/SVG/Attribute/rotate
 page-type: svg-attribute
-tags:
-  - Animation
-  - Experimental
-  - Graphics
-  - Reference
-  - Rotate
-  - SVG
+status:
+  - experimental
 spec-urls: https://svgwg.org/specs/animations/#RotateAttribute
 ---
 
