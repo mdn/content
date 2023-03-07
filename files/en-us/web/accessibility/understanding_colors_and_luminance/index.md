@@ -194,7 +194,7 @@ On the left is the central cone mosaic of standard vision, and on the right is t
 
 The red and the green cones join together to create luminance, which we can think of as lightness/darkness without regard to hue. Separately, the red, green, and blue cones allow for standard vision to perceive millions of colors. For accessibility, it's important to know that our brain processes luminance separately from color (hue and colorfulness).
 
-Luminance carries all the fine details in an image, as well as edges, and particularly text. Hue and colorfulness carries a third of the detail of luminance. Image data compression takes advantage of this fact. As an example, the popular h.264 video codec samples color at a fourth the resolution of the luminance. 
+Luminance carries all the fine details in an image, as well as edges, and particularly text. Hue and colorfulness carries a third of the detail of luminance. Image data compression takes advantage of this fact. As an example, the popular h.264 video codec samples color at a fourth the resolution of the luminance.
 
 For accessibility, this means that it is luminance contrast that is critically important for text. Color, as in hue and colorfulness, is important for _distinguishing_ items such as different lines on a map, or bars in a graph.
 
