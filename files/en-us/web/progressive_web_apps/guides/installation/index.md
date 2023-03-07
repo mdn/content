@@ -114,26 +114,12 @@ On mobile:
 
 A PWA can provide its own UI for the user to open the install prompt, instead of relying on the UI provided by the browser. This enables a PWA to provide some context and a reason for the user to install the PWA.
 
-This technique relies on the [`beforeinstallprompt`](/en-US/docs/Web/API/Window/beforeinstallprompt_event) event, which is fired on the global [`Window`](/en-US/docs/Web/API/Window) object as soon as the browser has determined that the PWA is installable. A PWA can:
+This technique relies on the [`beforeinstallprompt`](/en-US/docs/Web/API/Window/beforeinstallprompt_event) event, which is fired on the global [`Window`](/en-US/docs/Web/API/Window) object as soon as the browser has determined that the PWA is installable. This event has a [`prompt()`](/en-US/docs/Web/API/BeforeInstallPromptEvent/prompt) method that shows the install prompt. So a PWA can:
 
-- add a UI element for the user to install the PWA (for example, its own "Install" button)
+- add its own "Install" button
 - listen for the `beforeinstallprompt` event
 - cancel the event's default behavior by calling [`preventDefault()`](/en-US/docs/Web/API/Event/preventDefault)
-- keep a reference to the [`BeforeInstallPromptEvent`](/en-US/docs/Web/API/BeforeInstallPromptEvent), and in the event handler for its own "Install" button, call the [`BeforeInstallPromptEvent.prompt()`](/en-US/docs/Web/API/BeforeInstallPromptEvent/prompt) method. This method will show the browser prompt that asks the user if they want to install the PWA.
-
-For example:
-
-```js
-window.addEventListener("beforeinstallprompt", (event) => {
-  // Don't let the default prompt go.
-  event.preventDefault();
-
-  // Instead, wait for the user to click the install button.
-  installButton.addEventListener("click", () => event.prompt());
-});
-```
-
-The `prompt()` method returns a {{jsxref("Promise")}} that resolves with a string `"accepted"` or `"dismissed"` indicating whether or not the user chose to install the PWA.
+- in the event handler for its own "Install" button, call [`prompt()`](/en-US/docs/Web/API/BeforeInstallPromptEvent/prompt).
 
 ### Customizing installation
 
