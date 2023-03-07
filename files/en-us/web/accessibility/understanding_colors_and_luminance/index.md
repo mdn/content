@@ -168,7 +168,7 @@ The W3C's [wiki on relative luminance](https://www.w3.org/WAI/GL/wiki/Relative_l
 
 The calculations for evaluating luminance are spelled out in WCAG 2.1 in the definition for [relative luminance](https://www.w3.org/TR/WCAG21/#dfn-relative-luminance), and is as follows:
 
-R, G, and B have distinct weights in the relative luminance formula.For the sRGB colorspace, the relative luminance of a color is defined as `L = 0.2126 * R + 0.7152 * G+ 0.0722 * B` where red, green and blue, _R_, _G_ and _B_, are defined as:
+R, G, and B have distinct weights in the relative luminance formula.For the sRGB colorspace, the relative luminance of a color is defined as `L = 0.2126 * R + 0.7152 * G + 0.0722 * B` where red, green and blue, _R_, _G_ and _B_, are defined as:
 
 - if `RsRGB <= 0.04045` then `R = RsRGB/12.92` else `R = ((RsRGB+0.055)/1.055) ^ 2.4`
 - if `GsRGB <= 0.04045` then `G = GsRGB/12.92` else `G = ((GsRGB+0.055)/1.055) ^ 2.4`
@@ -181,17 +181,23 @@ Calculating relative luminance is not simple, but there are plenty of tools that
 - [PlanetCalc Relative luminance calculation](https://planetcalc.com/7779/)
 - [Relative luminance calculator at Topster](https://www.topster.net/relative-luminance/)
 
-## Color perception
+## Perceiving color
 
-When _perceiving_ colors, not all colors are created equal: Our [eyes](https://www.verywellhealth.com/eye-cones-5088699) are tuned to perceive specific colors, red, blue, and green, but we do not perceive these colors with equal strength. The [minority of cones are blue-sensitive](https://www.aao.org/eye-health/anatomy/cones). About 60% of cones are red-sensitive, 30% green sensitive, and about 10% are blue sensitive. Surprisingly, although blue-sensitive cones typically make up the fewest cones, they are also the most _sensitive_ to color.
+Color is our perception of the narrow band of visible light, from red through yellow and green to blue. Our sensitivity to these various hues of color are not equal. The light sensitive cells in our [eyes](https://www.verywellhealth.com/eye-cones-5088699), called cones, are tuned to perceive some colors more than others. About 65% of cones are _most_ sensitive to a yellow/green, but also respond to red (we'll call these "red" cones). 30% are green sensitive, and only [5% are blue sensitive](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0144891#sec001). While there are far fewer blue-sensitive cones than the other two types, these cones are very sensitive, which partially makes up for their smaller numbers.
 
-Put another way, as humans, blue is perceived differently than other colors for multiple reasons. First, because the blue cones are the most sensitive of the three; second, we have fewer blue cones than red or green; and third, it so happens that these blue-sensitive cones tend to be located at the rims of our eyeballs, away from the center ([fovea centralis](https://en.wikipedia.org/wiki/Fovea_centralis)) of the back of the eyeball, where the red and green cones tend to cluster.
+Deep, pure blue is perceived differently than other colors for multiple reasons. First, because the blue cones do not contribute to luminance; second, we have far fewer blue cones than red or green; and third, the blue-sensitive cones are scattered semi-evenly throughout the peripheral-vision area, while most of the red and green cones are densely packed in the narrow central vision ([fovea centralis](https://en.wikipedia.org/wiki/Fovea_centralis)). In fact, at the very center of vision,  less than about third of a degree of visual angle, there are [no blue cones](https://www.cis.rit.edu/people/faculty/montag/vandplite/pages/chap_9/ch9p1.html) at all.
 
-There is software that takes advantage of that fact. Because we do not perceive blue as well as other colors, for example, some algorithms for compressing image sizes remove the parts of the image with "blue" more heavily than other parts. Television signals also use this fact to allocate less bandwidth to the yellow-blue part of their signal, thus saving bandwidth.
+![On the left is a cone mosaic of standard vision, and on the right is that of someone with protanopia where they are missing the red cones.](ConeMosaics.jpg)
 
-Another essential point to consider is the ambiance of light surrounding the color. The color will appear differently if the background lighting is dark or light.
+On the left is the central cone mosaic of standard vision, and on the right is that of someone with protanopia, a form of color vision deficiency, where they are missing the red cones. (Illustration by Mark Fairchild of RIT, [wikicommons](https://commons.wikimedia.org/wiki/File:ConeMosaics.jpg))
 
-Internal and external factors impact color contrast and perception. In the following image both the yellow dots and the grey of the square they are on, are identical in terms of the sRGB color value that is being displayed on your monitor. Your context-sensitive perception of these colors makes them appear so different, as your brain's image processing adjusts the perception based on what it thinks is in shadow or not.
+The red and the green cones join together to create luminance, which we can think of as lightness/darkness without regard to hue. Separately, the red, green, and blue cones allow for standard vision to perceive millions of colors. For accessibility, it's important to know that our brain processes luminance separately from color, as in hue and colorfulness. 
+
+Luminance carries all the fine details in an image, or sharp edges, and especially text. Hue and colorfulness carries a third of the detail of luminance. Image data compression takes advantage of this fact. As an example, the popular h.264 video codec samples color at a fourth the rate of the luminance. For accessibility, this means that it is a luminance contrast that is important for text. 
+
+A convenient way to think of this is in the case of old-school broadcast television, the luminance is the "black &amp; white" signal, which both the black &amp; white and color television set receive. Those old color televisions also received a [small additional signal](https://en.wikipedia.org/wiki/YIQ) of _just_ color information. The small additional signal was subtracted from the luminance for the green primary, and added to luminance for the red primary, and finally partly added &amp; partly subtracted for the blue primary.
+
+Another essential point to consider is the color or luminance that is surrounding a color. The color will appear differently depending on what is surrounding it. In the following image both the yellow dots and the grey of the square they are on, are identical in terms of the sRGB color value that is being displayed on your monitor. Your context-sensitive perception of these colors makes them appear so different, as your brain's image processing adjusts the perception based on what it thinks is in shadow or not.
 
 ![An image of a checkerboard, where identical colors look different if they are in shadow](yellowdotcheckershadow_dlyon.png)
 
@@ -201,7 +207,7 @@ Our contrast, lightness, and color perception are affected by the context of the
 
 To summarize, color is as much about human physiology and perception in the brain as it is about measuring light from a computer screen. It's also important to understand that the ambient light environment affects the ability to perceive color and contrast. Light and its measurements are linear, but human vision and perception are not.
 
-## Adaption
+## Adaptation
 
 Our eyes don't adapt equally, in the same way, going from light areas to dark ones and vice versa. This is due to the physiological ways our eyes are built. This affects the ability of a user to read text against a background. At least two kinds of adaptation take place: local adaptation and adaptation to an ambient environment.
 
