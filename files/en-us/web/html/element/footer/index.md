@@ -111,10 +111,39 @@ This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_a
 ## Examples
 
 ```html
+<article>
+<h1>How to be a wizard</h1>
+<ol>
+<li>Grow a long, majestic beard</li>
+<li>Wear a tall, pointed hat</li>
+<li>Have I mentioned the beard?</li>
+  </ol>
+
 <footer>
-  Some copyright info or perhaps some author info for an &lt;article&gt;?
-</footer>
+  <p>© 2018 Gandalf</p>
+  </footer>
+</article>
 ```
+
+```css
+article {
+    min-height: 100%;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+    background-color: #45a1ff;
+    color: #fff;
+}
+```
+
+### Result
+
+{{EmbedLiveSample('Examples')}}
 
 ## Accessibility concerns
 
