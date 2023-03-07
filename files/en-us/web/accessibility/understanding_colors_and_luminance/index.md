@@ -104,15 +104,15 @@ As we saw, one color within the same color space may be expressed in many ways. 
 
 RGB is hardware-oriented, reflecting the use of CRTs. Many developers and designers prefer the intuitiveness of [`hsl()`](/en-US/docs/Web/CSS/color_value/hsl) notation. Converting from RGB to HSL is not a simple equation. Fortunately, browsers do it automatically, and shift-clicking on colors in browser developer tools provides conversion functionality.
 
-In addition to developer tools, many tools can convert RGB to HSL for you and provide both the RGB hexadecimal and CSS function syntax. A great example of a tool that converts colors for you is Tom Jewett's "[mini color selector](https://colortutorial.design/microColorsC.html)" with HSL, RGB, and Hex options for checking contrast in the browser. Note that developer tools color pickers and this tool all provide WCAG color contrast values.
+In addition to developer tools, many tools can convert RGB to HSL for you and provide both the RGB hexadecimal and CSS function syntax. A great example of a tool that converts colors for you is Tom Jewett's "[mini color selector](https://colortutorial.design/microColorsC.html)" with HSL, RGB, and Hex options for checking contrast in the browser. Note that developer tools color pickers and this tool all provide WCAG [color contrast](https://webaim.org/resources/contrastchecker/) values.
 
 ![Color picker with HSL and RGB, with color contrast values.](microcolorsc.jpg)
 
 As noted earlier, the [CSS color module](/en-US/docs/Web/CSS/CSS_Colors) includes adding additional colorspaces, including [`lch()`](/en-US/docs/Web/CSS/color_value/lch) functional color notation and the [`lab()`](/en-US/docs/Web/CSS/color_value/lab) color coordinate system which can specify any visible color, but because of its ubiquity, sRGB is the default and preferred colorspace for accessibility.
 
-Where accessibility is concerned, however, standards and guidelines are currently written predominantly using the sRGB color space, especially as it applies to color contrast ratios. In speaking specifically to relative luminance, [WCAG's definition of relative luminance](https://www.w3.org/WAI/GL/wiki/Relative_luminance) notes:
+Where accessibility is concerned, however, standards and guidelines are currently written predominantly using the sRGB color space, especially as it applies to color contrast ratios.
 
-> **Note:** Almost all systems used today to view Web content assume sRGB encoding. Unless it is known that another color space will be used to process and display the content, authors should evaluate using sRGB colorspace. If using other color spaces, see Understanding Success Criterion 1.4.3."
+> **Note:** Almost all systems used today to view Web content assume sRGB encoding. Unless it is known that another color space will be used to process and display the content, authors should evaluate using sRGB colorspace. If using other color spaces, apply the principles of [minimum contrast ratios](https://webaim.org/articles/contrast/#sc143).
 
 [CSS Color Module Level 5](https://drafts.csswg.org/css-color-5/) introduced [`lch()`](/en-US/docs/Web/CSS/color_value/lch) functional color notation and the [`lab()`](/en-US/docs/Web/CSS/color_value/lab) color coordinate system which can specify any visible color. These will change the domination of the sRGB color space in the future, but we are not there yet.
 
@@ -184,9 +184,9 @@ Calculations for relative luminance are not casual ones. Luckily, some tools wil
 
 ## Color perception
 
-When _perceiving_ colors, not all colors are created equal: Our eyes are tuned to perceive specific colors, red, blue, and green, but we do not perceive these colors with equal strength. According to the article, [Hypersensitive cones](http://hyperphysics.phy-astr.gsu.edu/hbase/vision/colcon.html), the authors note that "By population, about 64% of the cones are red-sensitive, about 32% green sensitive, and about 2% are blue sensitive." Surprisingly, although blue-sensitive cones typically make up the fewest cones, they are also the most _sensitive_ to color.
+When _perceiving_ colors, not all colors are created equal: Our [eyes](https://www.verywellhealth.com/eye-cones-5088699) are tuned to perceive specific colors, red, blue, and green, but we do not perceive these colors with equal strength. The [minority of cones are blue-sensitive](https://www.aao.org/eye-health/anatomy/cones). About 60% of cones are red-sensitive, 30% green sensitive, and about 10% are blue sensitive. Surprisingly, although blue-sensitive cones typically make up the fewest cones, they are also the most _sensitive_ to color.
 
-Put another way, as humans, blue is perceived differently than other colors for multiple reasons. First, because the blue cones are the most sensitive of the three; second, we have fewer blue cones than red or green; and third, it so happens that these blue-sensitive cones tend to be located at the rims of our eyeballs, away from the center ([fovea centralis](http://hyperphysics.phy-astr.gsu.edu/hbase/vision/retina.html#c2)) of the back of the eyeball, where the red and green cones tend to cluster.
+Put another way, as humans, blue is perceived differently than other colors for multiple reasons. First, because the blue cones are the most sensitive of the three; second, we have fewer blue cones than red or green; and third, it so happens that these blue-sensitive cones tend to be located at the rims of our eyeballs, away from the center ([fovea centralis](https://en.wikipedia.org/wiki/Fovea_centralis)) of the back of the eyeball, where the red and green cones tend to cluster.
 
 There is software that takes advantage of that fact. Because we do not perceive blue as well as other colors, for example, some algorithms for compressing image sizes remove the parts of the image with "blue" more heavily than other parts. Television signals also use this fact to allocate less bandwidth to the yellow-blue part of their signal, thus saving bandwidth.
 
@@ -239,7 +239,7 @@ There is a loss of saturation at the extremes of luminance and the extremes of b
 
 Contrast alone is not enough when it comes to accessibility considerations. In the case of animation, certain color combinations are more likely to cause photosensitive seizures to those who are susceptible to them than others. For example, alternating flashes between red and blue is more problematic than alternating flashes between green and blue. It has been theorized that this is because the "red" sensitive cones of our eyes, which tend to cluster around the fovea (near the center), are physically located at a different location than the "blue" sensitive cones of our eyes, which are located away from the fovea and towards the rims. The electrical signals from the eye to the brain have much to resolve between them as the information is processed in our brains.
 
-In [Certain colors more likely to cause epileptic fits, researchers find](https://www.sciencedaily.com/releases/2009/09/090925092858.htm), the authors noted that "…complexities underlying brain dynamics could be modulated by certain color combinations more than the other, for example, red-blue flickering stimulus causes larger cortical excitation than red-green or blue-green stimulus".
+Some colors more likely to [cause epileptic seizures](https://www.epilepsy.com/sites/default/files/2022-10/Epilepsia_2022_fisher_visually_sensitive_seizures.pdf). Complexities underlying brain dynamics can be modulated by some color combinations more than the others. For example, red-blue flickering stimulus causes larger cortical excitation than red-green or blue-green stimulus.
 
 Certain color combinations can be very problematic on a computer monitor or mobile device, and some color combinations can interfere with some impairments. The combination of red/blue is one such example.
 
@@ -259,7 +259,7 @@ The nature of blue light causes it to focus at a different location on the retin
 
 ## The special case of red
 
-Not all colors ("hue") are processed similarly by our brains. Human physiology and psychology are affected by the color red, generally speaking, in ways different from that of other colors. We respond physiologically as well as psychologically to colors. For example, it has been demonstrated that [some colors are more likely to cause epileptic fits than others](https://www.sciencedaily.com/releases/2009/09/090925092858.htm); There is an interesting observation in a discussion thread, "[What is the "grayscale" setting for in accessibility options?](https://ask.metafilter.com/312049/What-is-the-grayscale-setting-for-in-accessibility-options)" in which one of the participants states: "I have photo-triggered ocular migraines and wish everything had a greyscale option. Even better a red or violet scale, but that is probably very specific to me."
+Not all colors ("hue") are processed similarly by our brains. Human physiology and psychology are affected by the color red, generally speaking, in ways different from that of other colors. We respond physiologically as well as psychologically to colors. For example, it has been demonstrated that [some colors are more likely to cause epileptic fits than others](https://www.sciencedaily.com/releases/2009/09/090925092858.htm). Some devices offer a ["grayscale" setting as an accessibility option](https://ask.metafilter.com/312049/What-is-the-grayscale-setting-for-in-accessibility-options)" which can help people who are photo-sensitive. To mimick the grayscale setting, use the CSS {{cssxref("filter")}} property with a [`grayscale()`](/en-US/docs/Web/CSS/filter-function/grayscale) or [`saturate()`](/en-US/docs/Web/CSS/filter-function/saturate) [`<filter-function>`](/en-US/docs/Web/CSS/filter-function).
 
 ### Saturated red
 
@@ -315,7 +315,6 @@ Color as in hues and saturation can affect our mood, and enhance — or de-enhan
 - CSS [`color`](/en-US/docs/Web/CSS/color) property
 - [`<color>`](/en-US/docs/Web/CSS/color_value) data type
 - [Web accessibility for seizures and physical reactions](/en-US/docs/Web/Accessibility/Seizure_disorders)
-- [What is the "grayscale" setting for in accessibility options?](https://ask.metafilter.com/312049/What-is-the-grayscale-setting-for-in-accessibility-options)
 - [How the Color Red Influences Our Behavior](https://www.scientificamerican.com/article/how-the-color-red-influences-our-behavior/) Scientific American By Susana Martinez-Conde, Stephen L. Macknik on November 1, 2014
 - [Red Desaturation](https://www.smart-optometry.com/red-desaturation/) The human eye is so sensitively "tuned" to red, that opthamolegists set up a test using it, assessing the integrity of the optic nerve.
 - [Photic- and pattern-induced seizures: expert consensus of the Epilepsy Foundation of America Working Group](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.532.7063&rep=rep1&type=pdf)
