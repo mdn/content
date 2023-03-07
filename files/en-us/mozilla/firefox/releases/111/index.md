@@ -47,6 +47,8 @@ This article provides information about the changes in Firefox 111 that affect d
   The data in this file system is origin-specific: permission prompts are not required to access files, and clearing data for the site/origin deletes the storage.
   The OPFS is accessed with the {{domxref("StorageManager.getDirectory()")}} method, by calling `navigator.storage.getDirectory()` in a worker or the main thread.
   See [Firefox bug 1785123](https://bugzil.la/1785123) for more details.
+- The HTTP [`Authorization`](/en-US/docs/Web/HTTP/Headers/Authorization) header is removed from [`fetch()`](/en-US/docs/Web/API/fetch) requests that are redirected cross-origin (headers may be added by developers using the [`option.headers`](/en-US/docs/Web/API/fetch#headers) argument).
+  See [Firefox bug 1802086](https://bugzil.la/1802086) for more details.
 
 #### DOM
 
