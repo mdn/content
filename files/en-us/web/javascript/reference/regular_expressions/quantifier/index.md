@@ -89,6 +89,12 @@ Quantifiers are _greedy_ by default, which means they try to match as many times
 /^a*?$/.exec("aaa"); // ['aaa']; it's not possible to consume fewer characters and still match successfully
 ```
 
+However, as soon as the regex successfully matches the string at some index, it will not try subsequent indices, although that may result in fewer characters being consumed.
+
+```js
+/a*?$/.exec("aaa"); // ['aaa']; the match already succeeds at the first character, so the regex never attempts to start matching at the second character
+```
+
 Greedy quantifiers may try fewer repetitions if it's otherwise impossible to match the rest of the pattern.
 
 ```js
