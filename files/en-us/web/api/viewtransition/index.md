@@ -30,7 +30,7 @@ This object type is returned by the {{domxref("Document.startViewTransition()", 
 
 ## Examples
 
-In the following example, the {{domxref("ViewTransition.ready")}} promise is used to trigger a custom circular reveal view transition eminating from the position of the user's cursor on click, with animation provided by the {{domxref("Web Animations API", "Web Animations API", "", "nocode")}}.
+In the following example, the {{domxref("ViewTransition.ready")}} promise is used to trigger a custom circular reveal view transition emanating from the position of the user's cursor on click, with animation provided by the {{domxref("Web Animations API", "Web Animations API", "", "nocode")}}.
 
 ```js
 // Store the last click event
