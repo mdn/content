@@ -2,14 +2,6 @@
 title: devtools.network
 slug: Mozilla/Add-ons/WebExtensions/API/devtools/network
 page-type: webextension-api-property
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Property
-  - Reference
-  - WebExtensions
-  - devtools.network
 browser-compat: webextensions.api.devtools.network
 ---
 

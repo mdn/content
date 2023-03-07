@@ -2,16 +2,6 @@
 title: notifications.clear()
 slug: Mozilla/Add-ons/WebExtensions/API/notifications/clear
 page-type: webextension-api-function
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Notifications
-  - Reference
-  - WebExtensions
-  - clear
 browser-compat: webextensions.api.notifications.clear
 ---
 

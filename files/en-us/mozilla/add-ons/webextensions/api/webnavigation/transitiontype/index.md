@@ -2,16 +2,6 @@
 title: webNavigation.TransitionType
 slug: Mozilla/Add-ons/WebExtensions/API/webNavigation/TransitionType
 page-type: webextension-api-type
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Non-standard
-  - Reference
-  - TransitionType
-  - Type
-  - WebExtensions
-  - webNavigation
 browser-compat: webextensions.api.webNavigation.TransitionType
 ---
 

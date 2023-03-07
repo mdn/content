@@ -1,6 +1,8 @@
 ---
 title: <maction>
 slug: Web/MathML/Element/maction
+status:
+  - deprecated
 browser-compat: mathml.elements.maction
 ---
 

@@ -71,6 +71,7 @@ Let's walk through how this works:
 2. Next, the callback passed to `startViewTransition()` is invoked, in this case `displayNewImage`, which causes the DOM to change.
 
    When the callback has run successfully, the {{domxref("ViewTransition.updateCallbackDone")}} promise fulfills, allowing you to respond to the DOM updating.
+
 3. The API captures the new state of the page as a live representation.
 4. The API constructs a pseudo-element tree with the following structure:
 
@@ -86,6 +87,7 @@ Let's walk through how this works:
    - {{cssxref("::view-transition-old")}} is the screenshot of the old page view, and {{cssxref("::view-transition-new")}} is the live representation of the new page view. Both of these render as replaced content, in the same manner as an {{htmlelement("img")}} or {{htmlelement("video")}}, meaning that they can be styled with handy properties like {{cssxref("object-fit")}} and {{cssxref("object-position")}}.
 
    When the transition animation is about to run, the {{domxref("ViewTransition.ready")}} promise fulfills, allowing you to respond by running a custom JavaScript animation instead of the default, for example.
+
 5. The old page view animates from {{cssxref("opacity")}} 1 to 0, while the new view animates from `opacity` 0 to 1, which is what creates the default cross-fade.
 6. When the transition animation has reached its end state, the {{domxref("ViewTransition.finished")}} promise fulfills, allowing you to respond.
 
@@ -138,13 +140,21 @@ Let's look at something more interesting — a custom animation for the `<figcap
 
 ```css
 @keyframes grow-x {
-  from { transform: scaleX(0); }
-  to { transform: scaleX(1); }
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
 }
 
 @keyframes shrink-x {
-  from { transform: scaleX(1); }
-  to { transform: scaleX(0); }
+  from {
+    transform: scaleX(1);
+  }
+  to {
+    transform: scaleX(0);
+  }
 }
 
 ::view-transition-old(figure-caption),
@@ -161,7 +171,7 @@ Let's look at something more interesting — a custom animation for the `<figcap
 
 ::view-transition-new(figure-caption) {
   animation: 0.25s 0.25s linear both grow-x;
-} 
+}
 ```
 
 Here we've created a custom CSS animation and applied it to the `::view-transition-old(figure-caption)` and `::view-transition-new(figure-caption)` pseudo-elements, plus we've also added a number of other styles to both to keep them in the same place and stop the default styling from interfering with our custom animations.
@@ -187,12 +197,12 @@ This works because by default, `::view-transition-group` transitions width and h
 
 The {{domxref("Document.startViewTransition()", "document.startViewTransition()")}} method returns a {{domxref("ViewTransition")}} object instance, which contains several promise members allowing you to run JavaScript in response to different states of the transition being reached. For example, {{domxref("ViewTransition.ready")}} fulfills once the pseudo-element tree is created and the animation is about to start, whereas {{domxref("ViewTransition.finished")}} fulfills once the the animation is finished, and the new page view is visible and interactive to the user.
 
-For example, the following JavaScript could be used to create a circular reveal view transition eminating from the position of the user's cursor on click, with animation provided by the {{domxref("Web Animations API", "Web Animations API", "", "nocode")}}.
+For example, the following JavaScript could be used to create a circular reveal view transition emanating from the position of the user's cursor on click, with animation provided by the {{domxref("Web Animations API", "Web Animations API", "", "nocode")}}.
 
 ```js
 // Store the last click event
 let lastClick;
-addEventListener('click', event => (lastClick = event));
+addEventListener("click", (event) => (lastClick = event));
 
 function spaNavigate(data) {
   // Fallback for browsers that don’t support this API:
@@ -227,9 +237,9 @@ function spaNavigate(data) {
       },
       {
         duration: 500,
-        easing: 'ease-in',
+        easing: "ease-in",
         // Specify which pseudo-element to animate
-        pseudoElement: '::view-transition-new(root)',
+        pseudoElement: "::view-transition-new(root)",
       }
     );
   });

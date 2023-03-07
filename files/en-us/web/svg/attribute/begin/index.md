@@ -2,10 +2,6 @@
 title: begin
 slug: Web/SVG/Attribute/begin
 page-type: svg-attribute
-tags:
-  - NeedsCompatTable
-  - SVG
-  - SVG Attribute
 spec-urls:
   - https://svgwg.org/specs/animations/#DiscardElementBeginAttribute
   - https://svgwg.org/specs/animations/#BeginAttribute

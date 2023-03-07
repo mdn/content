@@ -2,11 +2,8 @@
 title: xlink:href
 slug: Web/SVG/Attribute/xlink:href
 page-type: svg-attribute
-tags:
-  - NeedsCompatTable
-  - SVG
-  - SVG Attribute
-  - Deprecated
+status:
+  - deprecated
 browser-compat: svg.elements.a.xlink_href
 ---
 
