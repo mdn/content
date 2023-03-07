@@ -67,6 +67,13 @@ div {
 ```
 
 ```css
+[data-color="blue"] {
+  background-color: lch(0% 100 240);
+}
+[data-color="blue-light"] {
+  background-color: lch(100% 100 240);
+}
+
 [data-color="red"] {
   background-color: lch(50% 130 20);
 }
@@ -79,13 +86,6 @@ div {
 }
 [data-color="green-hue"] {
   background-color: lch(50% 132 180);
-}
-
-[data-color="blue"] {
-  background-color: lch(0% 100 240);
-}
-[data-color="blue-light"] {
-  background-color: lch(100% 100 240);
 }
 ```
 
