@@ -20,4 +20,4 @@ The **`DOMStringMap`** interface is used for the {{domxref("HTMLElement.dataset"
 ## See also
 
 - {{domxref("HTMLElement.dataset")}} / {{domxref("SVGElement.dataset")}}
-- [Global attributes - `data-*`](/en-US/docs/Web/HTML/Global_attributes#data-)
+- [Global attributes - `data-*`](/en-US/docs/Web/HTML/Global_attributes/data-*)

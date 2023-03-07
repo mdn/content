@@ -2,10 +2,6 @@
 title: <feFlood>
 slug: Web/SVG/Element/feFlood
 page-type: svg-element
-tags:
-  - Element
-  - SVG
-  - SVG Filter
 browser-compat: svg.elements.feFlood
 ---
 

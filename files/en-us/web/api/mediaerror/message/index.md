@@ -39,36 +39,37 @@ we add to the `<audio>` element itself.
 The error handler looks like this:
 
 ```js
-  audioElement.onerror = () => {
-    let s = "";
-    const err = audioElement.error;
+audioElement.onerror = () => {
+  let s = "";
+  const err = audioElement.error;
 
-    switch(err.code) {
-      case MediaError.MEDIA_ERR_ABORTED:
-        s += "The user canceled the audio.";
-        break;
-      case MediaError.MEDIA_ERR_NETWORK:
-        s+= "A network error occurred while fetching the audio.";
-        break;
-      case MediaError.MEDIA_ERR_DECODE:
-        s+= "An error occurred while decoding the audio.";
-        break;
-      case MediaError.MEDIA_ERR_SRC_NOT_SUPPORTED:
-        s+= "The audio is missing or is in a format not supported by your browser.";
-        break;
-      default:
-        s += "An unknown error occurred.";
-        break;
-    }
+  switch (err.code) {
+    case MediaError.MEDIA_ERR_ABORTED:
+      s += "The user canceled the audio.";
+      break;
+    case MediaError.MEDIA_ERR_NETWORK:
+      s += "A network error occurred while fetching the audio.";
+      break;
+    case MediaError.MEDIA_ERR_DECODE:
+      s += "An error occurred while decoding the audio.";
+      break;
+    case MediaError.MEDIA_ERR_SRC_NOT_SUPPORTED:
+      s +=
+        "The audio is missing or is in a format not supported by your browser.";
+      break;
+    default:
+      s += "An unknown error occurred.";
+      break;
+  }
 
-    const message = err.message;
+  const message = err.message;
 
-    if (message?.length > 0) {
-      s += ` ${message}`;
-    }
+  if (message?.length > 0) {
+    s += ` ${message}`;
+  }
 
-    displayErrorMessage(`<strong>Error ${err.code}:</strong> ${s}<br>`);
-  };
+  displayErrorMessage(`<strong>Error ${err.code}:</strong> ${s}<br>`);
+};
 ```
 
 This gets the {{domxref("MediaError")}} object describing the error from the

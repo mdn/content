@@ -2,10 +2,6 @@
 title: end
 slug: Web/SVG/Attribute/end
 page-type: svg-attribute
-tags:
-  - NeedsCompatTable
-  - SVG
-  - SVG Attribute
 spec-urls: https://svgwg.org/specs/animations/#EndAttribute
 ---
 

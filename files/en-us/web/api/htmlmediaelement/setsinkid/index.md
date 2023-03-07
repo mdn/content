@@ -45,8 +45,8 @@ Access to the API is subject to the following constraints:
 
 ```js
 const devices = await navigator.mediaDevices.enumerateDevices();
-const audioDevice = devices.find((device) => device.kind === 'audiooutput');
-const audio = document.createElement('audio');
+const audioDevice = devices.find((device) => device.kind === "audiooutput");
+const audio = document.createElement("audio");
 await audio.setSinkId(audioDevice.deviceId);
 console.log(`Audio is being played on ${audio.sinkId}`);
 ```

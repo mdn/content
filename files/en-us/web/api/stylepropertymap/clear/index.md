@@ -32,7 +32,7 @@ The following example removes all styles within the elements [style attribute](/
 
 ```js
 // get the button element
-const buttonEl = document.querySelector('.example');
+const buttonEl = document.querySelector(".example");
 
 // remove all styles from the style attribute
 buttonEl.attributeStyleMap.clear();

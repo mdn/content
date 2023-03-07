@@ -87,7 +87,9 @@ Fetch the encoded message-to-sign and verify it against the stored signature.
 * Otherwise set the "invalid" class.
 */
 async function verifyMessage(publicKey) {
-  const signatureValue = document.querySelector(".rsassa-pkcs1 .signature-value");
+  const signatureValue = document.querySelector(
+    ".rsassa-pkcs1 .signature-value"
+  );
   signatureValue.classList.remove("valid", "invalid");
 
   let encoded = getMessageEncoding();
@@ -173,7 +175,7 @@ async function verifyMessage(publicKey) {
   let result = await window.crypto.subtle.verify(
     {
       name: "ECDSA",
-      hash: {name: "SHA-384"},
+      hash: { name: "SHA-384" },
     },
     publicKey,
     signature,
@@ -195,10 +197,10 @@ Fetch the contents of the "message" textbox, and encode it
 in a form we can use for sign operation.
 */
 function getMessageEncoding() {
-   const messageBox = document.querySelector(".hmac #message");
-   let message = messageBox.value;
-   let enc = new TextEncoder();
-   return enc.encode(message);
+  const messageBox = document.querySelector(".hmac #message");
+  let message = messageBox.value;
+  let enc = new TextEncoder();
+  return enc.encode(message);
 }
 
 /*
@@ -207,18 +209,18 @@ Fetch the encoded message-to-sign and verify it against the stored signature.
 * Otherwise set the "invalid" class.
 */
 async function verifyMessage(key) {
-   const signatureValue = document.querySelector(".hmac .signature-value");
-   signatureValue.classList.remove("valid", "invalid");
+  const signatureValue = document.querySelector(".hmac .signature-value");
+  signatureValue.classList.remove("valid", "invalid");
 
-   let encoded = getMessageEncoding();
-   let result = await window.crypto.subtle.verify(
-     "HMAC",
-     key,
-     signature,
-     encoded
-   );
+  let encoded = getMessageEncoding();
+  let result = await window.crypto.subtle.verify(
+    "HMAC",
+    key,
+    signature,
+    encoded
+  );
 
-   signatureValue.classList.add(result ? "valid" : "invalid");
+  signatureValue.classList.add(result ? "valid" : "invalid");
 }
 ```
 

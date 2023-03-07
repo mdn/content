@@ -10,7 +10,7 @@ on:
       - .github/workflows/pr-check_redirects.yml
 
 jobs:
-  check_redirects:
+  check-redirects:
     runs-on: ubuntu-latest
 
     steps:
@@ -23,8 +23,7 @@ jobs:
           cache: yarn
 
       - name: Install all yarn packages
-        run: |
-          yarn --frozen-lockfile
+        run: yarn --frozen-lockfile
 
       - name: Check redirects file(s)
         run: yarn content validate-redirects en-us --strict

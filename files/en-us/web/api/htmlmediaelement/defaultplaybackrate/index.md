@@ -21,7 +21,7 @@ A double. `1.0` is "normal speed," values lower than `1.0` make the media play s
 ## Examples
 
 ```js
-const obj = document.createElement('video');
+const obj = document.createElement("video");
 console.log(obj.defaultPlaybackRate); // 1
 ```
 

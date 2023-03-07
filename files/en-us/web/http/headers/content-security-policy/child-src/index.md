@@ -1,16 +1,6 @@
 ---
 title: "CSP: child-src"
 slug: Web/HTTP/Headers/Content-Security-Policy/child-src
-tags:
-  - CSP
-  - Child
-  - Content-Security-Policy
-  - Directive
-  - HTTP
-  - Reference
-  - Security
-  - child-src
-  - source
 browser-compat: http.headers.Content-Security-Policy.child-src
 ---
 

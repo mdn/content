@@ -27,7 +27,7 @@ A string containing one of the following values:
 In the following example, `colorSpace` is a `VideoColorSpace` object returned from {{domxref("VideoFrame")}}. The value of `matrix` is printed to the console.
 
 ```js
-let colorSpace = VideoFrame.colorSpace
+let colorSpace = VideoFrame.colorSpace;
 console.log(colorSpace.matrix);
 ```
 

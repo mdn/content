@@ -14,7 +14,7 @@ attribute. A container is the iframe, embed or object etc. that is being implica
 
 ## Value
 
-A string containing the container's `name` HTML content attribute (e.g. [`<iframe name="myIframe"`](/en-US/docs/Web/HTML/Element/iframe#name) or [`<object name="myObject"`](/en-US/docs/Web/HTML/Element/object#attr-name)).
+A string containing the container's `name` HTML content attribute (e.g. [`<iframe name="myIframe"`](/en-US/docs/Web/HTML/Element/iframe#name) or [`<object name="myObject"`](/en-US/docs/Web/HTML/Element/object#name)).
 
 ## Specifications
 

@@ -17,10 +17,10 @@ When a user interacts with a web page, a user interaction (for example a click) 
 
 An `interactionId` is only computed for the following event types belonging to a user interaction. It is `0` otherwise.
 
-| Event types | User interaction |
-| --- | --- |
-| {{domxref("Element/pointerdown_event", "pointerdown")}}, {{domxref("Element/pointerup_event", "pointerup")}}, {{domxref("Element/click_event", "click")}} | click / tap / drag  |
-| {{domxref("Element/keydown_event", "keydown")}}, {{domxref("Element/keyup_event", "keyup")}} | key press |
+| Event types                                                                                                                                               | User interaction   |
+| --------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------ |
+| {{domxref("Element/pointerdown_event", "pointerdown")}}, {{domxref("Element/pointerup_event", "pointerup")}}, {{domxref("Element/click_event", "click")}} | click / tap / drag |
+| {{domxref("Element/keydown_event", "keydown")}}, {{domxref("Element/keyup_event", "keyup")}}                                                              | key press          |
 
 ## Value
 
@@ -47,7 +47,7 @@ const observer = new PerformanceObserver((list) => {
   });
 });
 
-observer.observe({type: "event", buffered: true}); 
+observer.observe({type: "event", buffered: true});
 
 // Log events with maximum event duration for a user interaction
 Object.entries(eventLatencies).forEach(([k, v]) => {

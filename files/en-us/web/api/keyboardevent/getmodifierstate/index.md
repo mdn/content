@@ -209,18 +209,23 @@ user settings. For example, Firefox users can customize this with a pref,
 ```js
 function handleKeyboardEvent(event) {
   // Ignore if following modifier is active.
-  if (event.getModifierState("Fn") ||
-      event.getModifierState("Hyper") ||
-      event.getModifierState("OS") ||
-      event.getModifierState("Super") ||
-      event.getModifierState("Win") /* hack for IE */) {
+  if (
+    event.getModifierState("Fn") ||
+    event.getModifierState("Hyper") ||
+    event.getModifierState("OS") ||
+    event.getModifierState("Super") ||
+    event.getModifierState("Win") /* hack for IE */
+  ) {
     return;
   }
 
   // Also ignore if two or more modifiers except Shift are active.
-  if (event.getModifierState("Control") +
+  if (
+    event.getModifierState("Control") +
       event.getModifierState("Alt") +
-      event.getModifierState("Meta") > 1) {
+      event.getModifierState("Meta") >
+    1
+  ) {
     return;
   }
 
@@ -244,11 +249,13 @@ function handleKeyboardEvent(event) {
   }
 
   // Do something different for arrow keys if ScrollLock is locked.
-  if ((event.getModifierState("ScrollLock") ||
-        event.getModifierState("Scroll") /* hack for IE */) &&
-      !event.getModifierState("Control") &&
-      !event.getModifierState("Alt") &&
-      !event.getModifierState("Meta")) {
+  if (
+    (event.getModifierState("ScrollLock") ||
+      event.getModifierState("Scroll")) /* hack for IE */ &&
+    !event.getModifierState("Control") &&
+    !event.getModifierState("Alt") &&
+    !event.getModifierState("Meta")
+  ) {
     switch (event.key) {
       case "ArrowDown":
       case "Down": // hack for IE and old Gecko

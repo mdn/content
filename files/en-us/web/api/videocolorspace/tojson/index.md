@@ -28,7 +28,7 @@ A JSON object.
 In the following example, `colorSpace` is a `VideoColorSpace` object returned from {{domxref("VideoFrame")}}. This object is then printed to the console as JSON.
 
 ```js
-let colorSpace = VideoFrame.colorSpace
+let colorSpace = VideoFrame.colorSpace;
 console.log(colorSpace.toJSON());
 ```
 

@@ -2,10 +2,6 @@
 title: attributeName
 slug: Web/SVG/Attribute/attributeName
 page-type: svg-attribute
-tags:
-  - NeedsCompatTable
-  - SVG
-  - SVG Attribute
 spec-urls: https://svgwg.org/specs/animations/#AttributeNameAttribute
 ---
 

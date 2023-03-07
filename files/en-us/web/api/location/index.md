@@ -47,7 +47,6 @@ body {
   white-space: nowrap;
 }
 
-
 [title] {
   position: relative;
   display: inline-block;

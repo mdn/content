@@ -15,7 +15,7 @@ The **`lang`** [global attribute](/en-US/docs/Web/HTML/Global_attributes) helps 
 
 If the attribute value is the _empty string_ (`lang=""`), the language is set to _unknown_; if the language tag is not valid according to BCP47, it is set to _invalid_.
 
-Even if the **lang** attribute is set, it may not be taken into account, as the [**xml:lang**](/en-US/docs/Web/HTML/Global_attributes#attr-xml:lang) attribute has priority.
+Even if the **lang** attribute is set, it may not be taken into account, as the [**xml:lang**](/en-US/docs/Web/HTML/Global_attributes#lang) attribute has priority.
 
 For the CSS pseudo-class {{cssxref(":lang")}}, two invalid language names are different if their names are different. So while `:lang(es)` matches both `lang="es-ES"` and `lang="es-419"`, `:lang(xyzzy)` would _not_ match `lang="xyzzy-Zorp!"`.
 

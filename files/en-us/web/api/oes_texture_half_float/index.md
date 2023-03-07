@@ -37,7 +37,7 @@ This extension implicitly enables the {{domxref("EXT_color_buffer_half_float")}}
 ## Examples
 
 ```js
-const ext = gl.getExtension('OES_texture_half_float');
+const ext = gl.getExtension("OES_texture_half_float");
 
 const texture = gl.createTexture();
 gl.bindTexture(gl.TEXTURE_2D, texture);

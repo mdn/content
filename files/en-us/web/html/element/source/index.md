@@ -69,17 +69,17 @@ The **`<source>`** [HTML](/en-US/docs/Web/HTML) element specifies multiple media
 
 This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 
-- {{htmlattrdef("type")}}
+- `type`
 
   - : The [MIME media type of the image](/en-US/docs/Web/Media/Formats/Image_types) or [other media type](/en-US/docs/Web/Media/Formats/Containers), optionally with a [`codecs` parameter](/en-US/docs/Web/Media/Formats/codecs_parameter).
 
-- {{htmlattrdef("src")}}
+- `src`
 
   - : Required if the `source` element's parent is an {{HTMLElement("audio")}} and {{HTMLElement("video")}} element, but not allowed if the `source` element's parent is a {{HTMLElement("picture")}} element.
 
     Address of the media resource.
 
-- {{htmlattrdef("srcset")}}
+- `srcset`
 
   - : Required if the `source` element's parent is a {{HTMLElement("picture")}} element, but not allowed if the `source` element's parent is an {{HTMLElement("audio")}} or {{HTMLElement("video")}} element.
 
@@ -91,25 +91,25 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
     Each string in the list must have at least a width descriptor or a pixel density descriptor to be valid. The two types of descriptors should not be mixed together and only one should be used consistently throughout the list. Among the list, the value of each descriptor must be unique. The browser chooses the most adequate image to display at a given point of time. If the `sizes` attribute is present, then a width descriptor must be specified for each string. If the browser does not support `srcset`, then `src` will be used for the default source.
 
-- {{htmlattrdef("sizes")}}
+- `sizes`
 
   - : Allowed if the `source` element's parent is a {{HTMLElement("picture")}} element, but not allowed if the `source` element's parent is an {{HTMLElement("audio")}} or {{HTMLElement("video")}} element.
 
     A list of source sizes that describes the final rendered width of the image represented by the source. Each source size consists of a comma-separated list of media condition-length pairs. This information is used by the browser to determine, before laying the page out, which image defined in {{htmlattrxref("srcset", "source")}} to use. Please note that `sizes` will have its effect only if width dimension descriptors are provided with `srcset` instead of pixel ratio values (200w instead of 2x for example).
 
-- {{htmlattrdef("media")}}
+- `media`
 
   - : Allowed if the `source` element's parent is a {{HTMLElement("picture")}} element, but not allowed if the `source` element's parent is an {{HTMLElement("audio")}} or {{HTMLElement("video")}} element.
 
     [Media query](/en-US/docs/Web/CSS/Media_Queries) of the resource's intended media.
 
-- {{htmlattrdef("height")}}
+- `height`
 
   - : Allowed if the `source` element's parent is a {{HTMLElement("picture")}} element, but not allowed if the `source` element's parent is an {{HTMLElement("audio")}} or {{HTMLElement("video")}} element.
 
     The intrinsic height of the image, in pixels. Must be an integer without a unit.
 
-- {{htmlattrdef("width")}}
+- `width`
 
   - : Allowed if the `source` element's parent is a {{HTMLElement("picture")}} element, but not allowed if the `source` element's parent is an {{HTMLElement("audio")}} or {{HTMLElement("video")}} element.
 
@@ -158,7 +158,7 @@ With the `<picture>` element, you must always include an `<img>` with a fallback
 
 ### Picture with height & width attributes example
 
-In this example, three `<source>` elements with {{htmlattrdef("height")}} and {{htmlattrdef("width")}} attributes are included in a {{HTMLElement("picture")}} element.
+In this example, three `<source>` elements with `height` and `width` attributes are included in a {{HTMLElement("picture")}} element.
 A [media query](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries) allows the browser to select an image to display with the `height` and `width` attributes based on the [viewport](/en-US/docs/Glossary/Viewport) size.
 
 ```html

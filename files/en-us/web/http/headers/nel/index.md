@@ -1,14 +1,8 @@
 ---
 title: NEL
 slug: Web/HTTP/Headers/NEL
-tags:
-  - HTTP
-  - HTTP Header
-  - Network Error Logging
-  - Reference
-  - Response Header
-  - header
-  - Experimental
+status:
+  - experimental
 browser-compat: http.headers.NEL
 ---
 

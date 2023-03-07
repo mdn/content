@@ -1,5 +1,5 @@
 ---
-title: 'HTMLMediaElement: timeupdate event'
+title: "HTMLMediaElement: timeupdate event"
 slug: Web/API/HTMLMediaElement/timeupdate_event
 page-type: web-api-event
 browser-compat: api.HTMLMediaElement.timeupdate_event
@@ -18,9 +18,9 @@ This event is not cancelable and does not bubble.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('timeupdate', (event) => {});
+addEventListener("timeupdate", (event) => {});
 
-ontimeupdate = (event) => { };
+ontimeupdate = (event) => {};
 ```
 
 ## Event type
@@ -34,20 +34,20 @@ These examples add an event listener for the HTMLMediaElement's `timeupdate` eve
 Using `addEventListener()`:
 
 ```js
-const video = document.querySelector('video');
+const video = document.querySelector("video");
 
-video.addEventListener('timeupdate', (event) => {
-  console.log('The currentTime attribute has been updated. Again.');
+video.addEventListener("timeupdate", (event) => {
+  console.log("The currentTime attribute has been updated. Again.");
 });
 ```
 
 Using the `ontimeupdate` event handler property:
 
 ```js
-const video = document.querySelector('video');
+const video = document.querySelector("video");
 
 video.ontimeupdate = (event) => {
-  console.log('The currentTime attribute has been updated. Again.');
+  console.log("The currentTime attribute has been updated. Again.");
 };
 ```
 

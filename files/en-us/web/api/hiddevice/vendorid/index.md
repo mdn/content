@@ -20,7 +20,7 @@ An integer. If the device has no vendor ID, or the vendor ID cannot be accessed 
 The following example retrieves devices with {{domxref("HID.getDevices()")}} and logs the value of `vendorId` to the console.
 
 ```js
-document.addEventListener('DOMContentLoaded', async () => {
+document.addEventListener("DOMContentLoaded", async () => {
   let devices = await navigator.hid.getDevices();
   devices.forEach((device) => {
     console.log(`HID: ${device.vendorId}`);

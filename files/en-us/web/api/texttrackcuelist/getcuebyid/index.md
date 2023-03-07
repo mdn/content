@@ -43,8 +43,8 @@ How are you?
 ```js
 const video = document.getElementById("video");
 video.onplay = () => {
-  console.log(video.textTracks[0].cues.getCueById("second")) // a VTTCue object;
-}
+  console.log(video.textTracks[0].cues.getCueById("second")); // a VTTCue object;
+};
 ```
 
 ## Specifications

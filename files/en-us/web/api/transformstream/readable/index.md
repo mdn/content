@@ -19,7 +19,7 @@ The following example creates a new {{domxref("TransformStream")}} as `textEncod
 
 ```js
 const textEncoderStream = new TransformStream();
-console.log(textEncoderStream.readable) // a ReadableStream
+console.log(textEncoderStream.readable); // a ReadableStream
 ```
 
 ## Specifications
