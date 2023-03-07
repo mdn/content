@@ -3,7 +3,7 @@ title: Proving the Pythagorean theorem
 slug: Web/MathML/Examples/MathML_Pythagorean_Theorem
 ---
 
-{{QuickLinksWithSubPages("/en-us/docs/Web/MathML/Examples")}}
+{{MathMLRef}}
 
 We will now prove the [Pythagorean theorem](https://en.wikipedia.org/wiki/Pythagorean_theorem):
 

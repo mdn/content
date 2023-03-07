@@ -2,10 +2,6 @@
 title: preserveAlpha
 slug: Web/SVG/Attribute/preserveAlpha
 page-type: svg-attribute
-tags:
-  - Filters
-  - SVG
-  - SVG Attribute
 browser-compat: svg.elements.feConvolveMatrix.preserveAlpha
 ---
 

@@ -2,11 +2,6 @@
 title: in
 slug: Web/SVG/Attribute/in
 page-type: svg-attribute
-tags:
-  - Filters
-  - NeedsCompatTable
-  - SVG
-  - SVG Attribute
 spec-urls: https://drafts.fxtf.org/filter-effects/#element-attrdef-filter-primitive-in
 ---
 

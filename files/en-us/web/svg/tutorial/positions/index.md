@@ -2,16 +2,9 @@
 title: Positions
 slug: Web/SVG/Tutorial/Positions
 page-type: guide
-tags:
-  - Beginner
-  - Coordinate systems
-  - Coordinates
-  - Drawing
-  - Graphics
-  - NeedsBeginnerUpdate
-  - SVG
-  - SVG:Tutorial
 ---
+
+{{SVGRef}}
 
 {{ PreviousNext("Web/SVG/Tutorial/Getting_Started", "Web/SVG/Tutorial/Basic_Shapes") }}
 
