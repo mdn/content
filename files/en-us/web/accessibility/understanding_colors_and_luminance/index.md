@@ -170,11 +170,12 @@ The calculations for evaluating luminance are spelled out in WCAG 2.1 in the def
 
 R, G, and B have distinct weights in the relative luminance formula.For the sRGB colorspace, the relative luminance of a color is defined as `L = 0.2126 * R + 0.7152 * G+ 0.0722 * B` where red, green and blue, _R_, _G_ and _B_, are defined as:
 
-- if `RsRGB <= 0.03928` then `R = RsRGB/12.92` else `R = ((RsRGB+0.055)/1.055) ^ 2.4`
-- if `GsRGB <= 0.03928` then `G = GsRGB/12.92` else `G = ((GsRGB+0.055)/1.055) ^ 2.4`
-- if `BsRGB <= 0.03928` then `B = BsRGB/12.92` else `B = ((BsRGB+0.055)/1.055) ^ 2.4`
+- if `RsRGB <= 0.04045` then `R = RsRGB/12.92` else `R = ((RsRGB+0.055)/1.055) ^ 2.4`
+- if `GsRGB <= 0.04045` then `G = GsRGB/12.92` else `G = ((GsRGB+0.055)/1.055) ^ 2.4`
+- if `BsRGB <= 0.04045` then `B = BsRGB/12.92` else `B = ((BsRGB+0.055)/1.055) ^ 2.4`
 
-These formulas come from [sRGB](https://www.w3.org/TR/WCAG21/#bib-sRGB)] and [IEC-4WD](https://www.w3.org/TR/WCAG21/#bib-IEC-4WD).
+These formulas come from [WCAG&nbsp;2.1](https://www.w3.org/WAI/WCAG21/Understanding/contrast-minimum.html#dfn-relative-luminance) and [sRGB (IEC 61966-2-1:1999)](https://webstore.iec.ch/publication/6169). _(NOTE 0.04045 is the official IEC standard. WCAG&nbsp;2 was originally drafted with an older value 0.03928. In May&nbsp;2021, this was corrected to 0.04045 in the WCAG&nbsp;2.1 document)._
+
 
 Calculations for relative luminance are not casual ones. Luckily, some tools will do it for you. Here are a few.
 
