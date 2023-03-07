@@ -35,7 +35,7 @@ In the following example, the {{domxref("ViewTransition.ready")}} promise is use
 ```js
 // Store the last click event
 let lastClick;
-addEventListener('click', event => (lastClick = event));
+addEventListener("click", (event) => (lastClick = event));
 
 function spaNavigate(data) {
   // Fallback for browsers that don’t support this API:
@@ -70,9 +70,9 @@ function spaNavigate(data) {
       },
       {
         duration: 500,
-        easing: 'ease-in',
+        easing: "ease-in",
         // Specify which pseudo-element to animate
-        pseudoElement: '::view-transition-new(root)',
+        pseudoElement: "::view-transition-new(root)",
       }
     );
   });
