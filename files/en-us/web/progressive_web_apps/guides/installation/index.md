@@ -113,7 +113,7 @@ On mobile:
 
 ### Triggering the install prompt
 
-A PWA can provide its own UI for the user to open the install prompt, instead of relying on the UI provided by the browser. This enables a PWA to provide some context and a reason for the user to install the PWA.
+A PWA can provide its own in-page UI for the user to open the install prompt, instead of relying on the UI provided by the browser by default. This enables a PWA to provide some context and a reason for the user to install the PWA, and can help make the install user flow easier to discover.
 
 This technique relies on the [`beforeinstallprompt`](/en-US/docs/Web/API/Window/beforeinstallprompt_event) event, which is fired on the global [`Window`](/en-US/docs/Web/API/Window) object as soon as the browser has determined that the PWA is installable. This event has a [`prompt()`](/en-US/docs/Web/API/BeforeInstallPromptEvent/prompt) method that shows the install prompt. So a PWA can:
 
@@ -132,7 +132,7 @@ The screenshot below shows what the install prompt for the [PWAmp demo](https://
 
 ## Launching the app
 
-Once the PWA is installed its icon is shown on the device alongside any other apps that the user has installed, and clicking the icon launches the app.
+Once the PWA is installed, its icon is shown on the device alongside any other apps that the user has installed, and clicking the icon launches the app.
 
 You can use the [`display`](/en-US/docs/Web/Manifest/display) manifest member to control the _display mode_: that is, how the PWA appears when it is launched. In particular:
 
