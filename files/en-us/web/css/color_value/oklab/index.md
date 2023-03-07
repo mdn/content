@@ -103,7 +103,7 @@ div {
 ### Adjusting opacity with oklab()
 
 The following example shows the effect of varying the `A` (alpha) value of the `oklab()` function.
-The `red` and `#ed-alpha` elements overlap the `#background-div` element to demonstrate the effect of opacity.
+The `red` and `red-alpha` elements overlap the `#background-div` element to demonstrate the effect of opacity.
 Giving the `red-alpha` element an opacity of `0.4` makes it appear more transparent than the `red` element.
 
 ```html
