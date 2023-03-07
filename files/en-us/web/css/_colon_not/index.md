@@ -134,7 +134,7 @@ div:not(:is(.foo, .bar)) {
 
 {{EmbedLiveSample('not_with_invalid_selectors', '100%', 320)}}
 
-The `p:not(.foo, :invalid-pseudo-class)` rule is invalid because it contains an invalid selector. The `:is()` pseudo-class accepts a forgiving selector list, so the `:is(.foo, :invalid-pseudo-class)` selector is valid and equivalent to `:is(.foo)`. Thus, the `p:not(:is(.foo, :invalid-pseudo-class))` rule is valid and equivalent to `p:not(.foo)`.
+The `p:not(.foo, :invalid-pseudo-class)` rule is invalid because it contains an invalid selector. The `:is()` pseudo-class accepts a forgiving selector list, so the `:is(.foo, :invalid-pseudo-class)` rule is valid and equivalent to `:is(.foo)`. Thus, the `p:not(:is(.foo, :invalid-pseudo-class))` rule is valid and equivalent to `p:not(.foo)`.
 
 If `:invalid-pseudo-class` was a valid selector, the first two rules above would still be equivalent (the last two rules showcase that). Hence, the use of `:is()` makes the rule more robust.
 
