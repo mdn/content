@@ -285,7 +285,7 @@ Gregg Vanderheiden, when testing the _Photosensitive epilepsy analysis tool_, no
 
 Continuous flashing brighter/darker at rates higher than three flashes per second has been shown to induce photic seizures in some people. It has also been found that specific, very regular, high-contrast patterns, such as parallel white and black stripes, can also induce seizures.
 
-The Epilepsy Foundation of America researched [photic- and pattern-induced seizures](https://www.researchgate.net/publication/7615895_Photic-_and_Pattern-induced_Seizures_A_Review_for_the_Epilepsy_Foundation_of_America_Working_Group). The study resulted in several important guidelines, a few key guidelines are:
+The Epilepsy Foundation of America researched [photic- and pattern-induced seizures](https://www.researchgate.net/publication/7615895_Photic-_and_Pattern-induced_Seizures_A_Review_for_the_Epilepsy_Foundation_of_America_Working_Group). The study resulted in several fundamental guidelines:
 
 1. Single, double, or triple flashes in one second are acceptable, but a sequence of flashes is not recommended when more than three flashes happen within one second.
 
