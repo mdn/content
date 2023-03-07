@@ -2,9 +2,9 @@
 title: Compatibility sources
 slug: Web/SVG/Compatibility_sources
 page-type: guide
-tags:
-  - SVG
 ---
+
+{{SVGRef}}
 
 The following sources are used for the compatibility tables on SVG elements and attributes:
 

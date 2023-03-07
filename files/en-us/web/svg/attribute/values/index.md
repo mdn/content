@@ -2,11 +2,6 @@
 title: values
 slug: Web/SVG/Attribute/values
 page-type: svg-attribute
-tags:
-  - NeedsCompatTable
-  - NeedsExample
-  - SVG
-  - SVG Attribute
 spec-urls:
   - https://drafts.fxtf.org/filter-effects/#element-attrdef-fecolormatrix-values
   - https://svgwg.org/specs/animations/#ValuesAttribute

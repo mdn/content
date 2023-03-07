@@ -2,13 +2,6 @@
 title: SVG Event Attributes
 slug: Web/SVG/Attribute/Events
 page-type: svg-attribute
-tags:
-  - Advanced
-  - Attribute
-  - Draft
-  - Landing
-  - NeedsUpdate
-  - SVG
 browser-compat: svg.attributes.events.global
 ---
 

@@ -2,11 +2,6 @@
 title: <a>
 slug: Web/SVG/Element/a
 page-type: svg-element
-tags:
-  - Element
-  - Reference
-  - SVG
-  - SVG Container
 browser-compat: svg.elements.a
 ---
 
