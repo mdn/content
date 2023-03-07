@@ -180,7 +180,6 @@ Luminance provides for fine vision details, including differentiating edges and 
 
 For accessibility, this means that it is luminance contrast that is critically important for text. Color, as in hue and colorfulness, is important for _distinguishing_ items such as different lines on a map, or bars in a graph.
 
-
 Another essential point to consider is the color or luminance that is surrounding a color. The color will appear differently depending on what is surrounding it. In the following image both the yellow dots and the grey of the square they are on, are identical in terms of the sRGB color values displayed. Your context-sensitive perception of these colors makes them appear different as your brain's image processing adjusts the perception based on what it thinks is in shadow or not.
 
 ![An image of a checkerboard, where identical colors look different if they are in shadow](yellowdotcheckershadow_dlyon.png)
