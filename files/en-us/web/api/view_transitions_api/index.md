@@ -35,12 +35,7 @@ An SPA will include functionality to fetch new content and update the DOM in res
 ```js
 function updateView(event) {
   // Handle the difference in whether the event is fired on the <a> or the <img>
-  let targetIdentifier;
-  if (event.target.firstChild === null) {
-    targetIdentifier = event.target;
-  } else {
-    targetIdentifier = event.target.firstChild;
-  }
+  const targetIdentifier = event.target.firstChild || event.target;
 
   const displayNewImage = () => {
     const mainSrc = `${targetIdentifier.src.split("_th.jpg")[0]}.jpg`;
