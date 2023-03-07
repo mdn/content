@@ -176,12 +176,10 @@ R, G, and B have distinct weights in the relative luminance formula.For the sRGB
 
 These formulas come from [WCAG&nbsp;2.1](https://www.w3.org/WAI/WCAG21/Understanding/contrast-minimum.html#dfn-relative-luminance) and [sRGB (IEC 61966-2-1:1999)](https://webstore.iec.ch/publication/6169). _(NOTE 0.04045 is the official IEC standard. WCAG&nbsp;2 was originally drafted with an older value 0.03928. In May&nbsp;2021, this was corrected to 0.04045 in the WCAG&nbsp;2.1 document)._
 
-
-Calculations for relative luminance are not casual ones. Luckily, some tools will do it for you. Here are a few.
-
-- [Relative luminance calculation.](https://planetcalc.com/7779/)
-- [Calculate relative luminance](https://www.topster.net/relative-luminance/)
-- [Analyze Luminosity Contrast Ratio](http://juicystudio.com/services/luminositycontrastratio.php)
+Calculating relative luminance is not simple, but there are plenty of tools that can do it for you. Here are a few which show the relative luminance along with the WCAG&nbsp;2 contrast ratio.
+- [Lea Verou's contrast tool calculates relative luminance](https://contrast-ratio.com)
+- [PlanetCalc Relative luminance calculation](https://planetcalc.com/7779/)
+- [Relative luminance calculator at Topster](https://www.topster.net/relative-luminance/)
 
 ## Color perception
 
