@@ -64,7 +64,6 @@ No notable changes.
 
   - The {{WebExtAPIRef("scripting")}} API, although this has been available to Manifest V2 extensions from Firefox 102.
   - The {{WebExtAPIRef("action")}} API, and [`"action"`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/action) manifest key and [`_execute_action` special shortcut](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/commands#special_shortcuts) in the manifest `commands` key.
-  - The [`"background"`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/background) manifest key property `"persistent"` can be set to `false`.
   - The [`"host_permissions"`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/host_permissions) manifest key.
 
 - The default [Content Security Policy (CSP)](/docs/Mozilla/Add-ons/WebExtensions/Content_Security_Policy) for Manifest V3 extensions has been updated to [include `upgrade-insecure-requests`](/docs/Mozilla/Add-ons/WebExtensions/Content_Security_Policy#upgrade_insecure_network_requests_in_manifest_v3). This means that, by default, all network requests are upgraded to use `https:`. Extensions that need to use `http:` can do so by overriding the default CSP using the [`content_security_policy`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_security_policy) manifest.json key ([Firefox bug 1797086](https://bugzil.la/1797086)).
