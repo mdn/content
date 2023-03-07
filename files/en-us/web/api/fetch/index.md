@@ -64,7 +64,7 @@ fetch(resource, options)
       - : Any headers you want to add to your request, contained within a {{domxref("Headers")}} object or an object literal with {{jsxref("String")}} values.
         Note that [some names are forbidden](/en-US/docs/Glossary/Forbidden_header_name).
 
-        > **Note:** The `Authorization` header is sent with initial requests and same-origin redirects, but is removed from cross-origin redirects.
+        > **Note:** The [`Authorization`](/en-US/docs/Web/HTTP/Headers/Authorization) HTTP header may be added to a request, but will be removed if the request is redirected cross-origin.
 
     - `body`
       - : Any body that you want to add to your request:
