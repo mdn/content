@@ -177,6 +177,7 @@ R, G, and B have distinct weights in the relative luminance formula.For the sRGB
 These formulas come from [WCAG&nbsp;2.1](https://www.w3.org/WAI/WCAG21/Understanding/contrast-minimum.html#dfn-relative-luminance) and [sRGB (IEC 61966-2-1:1999)](https://webstore.iec.ch/publication/6169). _(NOTE 0.04045 is the official IEC standard. WCAG&nbsp;2 was originally drafted with an older value 0.03928. In May&nbsp;2021, this was corrected to 0.04045 in the WCAG&nbsp;2.1 document)._
 
 Calculating relative luminance is not simple, but there are plenty of tools that can do it for you. Here are a few which show the relative luminance along with the WCAG&nbsp;2 contrast ratio.
+
 - [Lea Verou's contrast tool calculates relative luminance](https://contrast-ratio.com)
 - [PlanetCalc Relative luminance calculation](https://planetcalc.com/7779/)
 - [Relative luminance calculator at Topster](https://www.topster.net/relative-luminance/)
@@ -185,13 +186,13 @@ Calculating relative luminance is not simple, but there are plenty of tools that
 
 Color is our perception of the narrow band of visible light, from red through yellow and green to blue. Our sensitivity to these various hues of color are not equal. The light sensitive cells in our [eyes](https://www.verywellhealth.com/eye-cones-5088699), called cones, are tuned to perceive some colors more than others. About 65% of cones are _most_ sensitive to a yellow/green, but also respond to red (we'll call these "red" cones). 30% are green sensitive, and only [5% are blue sensitive](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0144891#sec001). While there are far fewer blue-sensitive cones than the other two types, these cones are very sensitive, which partially makes up for their smaller numbers.
 
-Deep, pure blue is perceived differently than other colors for multiple reasons. First, because the blue cones do not contribute to luminance; second, we have far fewer blue cones than red or green; and third, the blue-sensitive cones are scattered semi-evenly throughout the peripheral-vision area, while most of the red and green cones are densely packed in the narrow central vision ([fovea centralis](https://en.wikipedia.org/wiki/Fovea_centralis)). In fact, at the very center of vision,  less than about third of a degree of visual angle, there are [no blue cones](https://www.cis.rit.edu/people/faculty/montag/vandplite/pages/chap_9/ch9p1.html) at all.
+Deep, pure blue is perceived differently than other colors for multiple reasons. First, because the blue cones do not contribute to luminance; second, we have far fewer blue cones than red or green; and third, the blue-sensitive cones are scattered semi-evenly throughout the peripheral-vision area, while most of the red and green cones are densely packed in the narrow central vision ([fovea centralis](https://en.wikipedia.org/wiki/Fovea_centralis)). In fact, at the very center of vision, less than about third of a degree of visual angle, there are [no blue cones](https://www.cis.rit.edu/people/faculty/montag/vandplite/pages/chap_9/ch9p1.html) at all.
 
-![On the left is a cone mosaic of standard vision, and on the right is that of someone with protanopia where they are missing the red cones.](ConeMosaics.jpg)
+![On the left is a cone mosaic of standard vision, and on the right is that of someone with protanopia where they are missing the red cones.](conemosaics.jpg)
 
 On the left is the central cone mosaic of standard vision, and on the right is that of someone with protanopia, a form of color vision deficiency, where they are missing the red cones. (Illustration by Mark Fairchild of RIT, [wikicommons](https://commons.wikimedia.org/wiki/File:ConeMosaics.jpg))
 
-The red and the green cones join together to create luminance, which we can think of as lightness/darkness without regard to hue. Separately, the red, green, and blue cones allow for standard vision to perceive millions of colors. For accessibility, it's important to know that our brain processes luminance separately from color, as in hue and colorfulness. 
+The red and the green cones join together to create luminance, which we can think of as lightness/darkness without regard to hue. Separately, the red, green, and blue cones allow for standard vision to perceive millions of colors. For accessibility, it's important to know that our brain processes luminance separately from color (hue and colorfulness).
 
 Luminance carries all the fine details in an image, or sharp edges, and especially text. Hue and colorfulness carries a third of the detail of luminance. Image data compression takes advantage of this fact. As an example, the popular h.264 video codec samples color at a fourth the rate of the luminance. For accessibility, this means that it is a luminance contrast that is important for text. 
 
