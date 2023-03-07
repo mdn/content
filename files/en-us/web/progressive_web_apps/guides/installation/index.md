@@ -12,7 +12,7 @@ We can summarize this as follows:
 - Once installed, the PWA gets an app icon on the device, alongside platform-specific apps.
 - Once installed, the PWA can be launched as a standalone app, rather than a website in a browser.
 
-We'll discuss each of these features in this guide. First, though, we'll discuss the requirements that a website must meet for it to be installable.
+We'll discuss each of these features in this guide. First, though, we'll discuss the requirements that a web app must meet for it to be installable.
 
 ## Installability
 
@@ -20,7 +20,7 @@ For a web app to be installable, it needs to meet some technical requirements. W
 
 ### The web app manifest
 
-A web app manifest is a JSON file that tells the browser how the PWA should appear and behave on the device. For a website to be a PWA it must be installable, and for it to be installable it must include a manifest.
+A web app manifest is a JSON file that tells the browser how the PWA should appear and behave on the device. For a web app to be a PWA it must be installable, and for it to be installable it must include a manifest.
 
 The manifest is included using a {{HTMLElement("link")}} element in the app's HTML:
 
@@ -52,21 +52,22 @@ The manifest contains a single JSON object containing a collection of members, e
 }
 ```
 
+Chromium-based browsers, including Google Chrome, Samsung Internet, and Microsoft Edge, require that the manifest includes the following members:
+
+- [`name`](/en-US/docs/Web/Manifest/name)
+- [`icons`](/en-US/docs/Web/Manifest/icons)
+- [`start_url`](/en-US/docs/Web/Manifest/start_url)
+- [`display`](/en-US/docs/Web/Manifest/display) and/or [`display_override`](/en-US/docs/Web/Manifest/display_override)
+
 For a full description of every member, see the [web app manifest reference documentation](/en-US/docs/Web/Manifest).
 
-### Additional installability requirements
+### HTTPS
 
-As well as a manifest, browsers expect websites to meet additional criteria if they are to be installable.
+For a web app to be installable, it must be served over HTTPS.
 
-Chromium-based browsers, including Google Chrome, Samsung Internet, and Microsoft Edge, require that:
+### Service worker
 
-- the pages are served over HTTPS
-- the manifest includes the following members:
-  - [`name`](/en-US/docs/Web/Manifest/name)
-  - [`icons`](/en-US/docs/Web/Manifest/icons)
-  - [`start_url`](/en-US/docs/Web/Manifest/start_url)
-  - [`display`](/en-US/docs/Web/Manifest/display) and/or [`display_override`](/en-US/docs/Web/Manifest/display_override)
-- the website includes a [service worker](/en-US/docs/Web/API/Service_Worker_API) with a [`fetch` event handler](/en-US/docs/Web/API/ServiceWorkerGlobalScope/fetch_event) that provides a basic offline experience.
+For a web app to be installable, it must include a [service worker](/en-US/docs/Web/API/Service_Worker_API) with a [`fetch` event handler](/en-US/docs/Web/API/ServiceWorkerGlobalScope/fetch_event) that provides a basic offline experience.
 
 ## Installation from an app store
 
