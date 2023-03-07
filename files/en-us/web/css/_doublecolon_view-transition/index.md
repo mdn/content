@@ -7,7 +7,7 @@ status:
 browser-compat: css.selectors.view-transition
 ---
 
-{{CSSRef}}{{seecompattable}}
+{{CSSRef}}{{SeeCompatTable}}
 
 The **`::view-transition`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) represents the root of the [view transitions](/en-US/docs/Web/API/View_Transitions_API) overlay, which contains all view transitions and sits over the top of all other page content.
 
