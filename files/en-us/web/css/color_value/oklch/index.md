@@ -67,24 +67,24 @@ div {
 ```
 
 ```css
-#blue {
+[data-color="blue"] {
   background-color: oklch(60% 0.4 240);
 }
-#blue-light {
+[data-color="blue-light"] {
   background-color: oklch(90% 0.4 240);
 }
 
-#red {
+[data-color="red"] {
   background-color: oklch(100% 0.4 30);
 }
-#red-chroma {
+[data-color="red-chroma"] {
   background-color: oklch(100% 0.3 40);
 }
 
-#green {
+[data-color="green"] {
   background-color: oklch(60% 0.57 161);
 }
-#green-hue {
+[data-color="green-hue"] {
   background-color: oklch(60% 0.57 181);
 }
 ```
