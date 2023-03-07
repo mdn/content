@@ -171,8 +171,7 @@ Note that we include the CSS and JS files from this file, just like a web page.
 The CSS fixes the size of the popup, ensures that the three choices fill the space, and gives them some basic styling. It also hides elements with `class="hidden"`: this means that our `<div id="error-content"...` element will be hidden by default.
 
 ```css
-html,
-body {
+html, body {
   width: 100px;
 }
 
@@ -275,14 +274,16 @@ function listenForClicks() {
      * Get the active tab,
      * then call "beastify()" or "reset()" as appropriate.
      */
+    if (e.target.tagName !== "BUTTON" || !e.target.closest("#popup-content")) {
+      // Ignore when click is not on a button within <div id="popup-content">.
+      return;
+    } 
     if (e.target.type === "reset") {
-      browser.tabs
-        .query({ active: true, currentWindow: true })
+      browser.tabs.query({active: true, currentWindow: true})
         .then(reset)
         .catch(reportError);
     } else {
-      browser.tabs
-        .query({ active: true, currentWindow: true })
+      browser.tabs.query({active: true, currentWindow: true})
         .then(beastify)
         .catch(reportError);
     }
@@ -316,7 +317,8 @@ A common reason the `browser.tabs.executeScript()` call might fail is that you c
 
 If executing the content script is successful, we call `listenForClicks()`. This listens for clicks on the popup.
 
-- If the click was on a button with `class="reset"`, then we call `reset()`.
+- If the click was not on a button in the popup, we ignore it and do nothing.
+- If the click was on a button with `type="reset"`, then we call `reset()`.
 - If the click was on any other button (i.e. the beast buttons), then we call `beastify()`.
 
 The `beastify()` function does three things:
