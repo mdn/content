@@ -117,7 +117,6 @@ The following elements are inline by default (although block and inline elements
 - {{ HTMLElement("cite") }}
 - {{ HTMLElement("code") }}
 - {{ HTMLElement("data") }}
-- {{ HTMLElement("datalist") }}
 - {{ HTMLElement("del") }}
 - {{ HTMLElement("dfn") }}
 - {{ HTMLElement("em") }}
