@@ -2,14 +2,6 @@
 title: getState
 slug: Mozilla/Add-ons/WebExtensions/API/captivePortal/getState
 page-type: webextension-api-function
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - captivePortal
 browser-compat: webextensions.api.captivePortal.getState
 ---
 

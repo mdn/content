@@ -2,16 +2,6 @@
 title: bookmarks.onRemoved
 slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/onRemoved
 page-type: webextension-api-event
-tags:
-  - API
-  - Add-ons
-  - Bookmarks
-  - Event
-  - Extensions
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - onRemoved
 browser-compat: webextensions.api.bookmarks.onRemoved
 ---
 
