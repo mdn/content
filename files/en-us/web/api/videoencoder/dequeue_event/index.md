@@ -2,12 +2,10 @@
 title: "VideoEncoder: dequeue event"
 slug: Web/API/VideoEncoder/dequeue_event
 page-type: web-api-event
-status:
-  - experimental
 browser-compat: api.VideoEncoder.dequeue_event
 ---
 
-{{securecontext_header}}{{APIRef("WebCodecs API")}}{{SeeCompatTable}}
+{{securecontext_header}}{{APIRef("WebCodecs API")}}
 
 The **`dequeue`** event of the {{domxref("VideoEncoder")}} interface fires to signal a decrease in {{domxref("VideoEncoder.encodeQueueSize")}}.
 

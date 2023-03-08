@@ -2,12 +2,10 @@
 title: Navigator.wakeLock
 slug: Web/API/Navigator/wakeLock
 page-type: web-api-instance-property
-status:
-  - experimental
 browser-compat: api.Navigator.wakeLock
 ---
 
-{{ApiRef("Screen Wake Lock API")}}{{SeeCompatTable}}{{securecontext_header}}
+{{ApiRef("Screen Wake Lock API")}}{{securecontext_header}}
 
 The **`wakeLock`** read-only property
 returns a {{DOMxRef("WakeLock")}} interface which allows a document to acquire a

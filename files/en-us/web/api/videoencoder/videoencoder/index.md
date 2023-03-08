@@ -2,12 +2,10 @@
 title: VideoEncoder()
 slug: Web/API/VideoEncoder/VideoEncoder
 page-type: web-api-constructor
-status:
-  - experimental
 browser-compat: api.VideoEncoder.VideoEncoder
 ---
 
-{{APIRef("WebCodecs API")}}{{SecureContext_Header}}{{SeeCompatTable}}
+{{APIRef("WebCodecs API")}}{{SecureContext_Header}}
 
 The **`VideoEncoder()`** constructor creates a new {{domxref("VideoEncoder")}} object with the provided `init.output` callback assigned as the output callback, the provided `init.error` callback as the error callback, and the {{domxref("VideoEncoder.state")}} set to `"unconfigured"`.
 

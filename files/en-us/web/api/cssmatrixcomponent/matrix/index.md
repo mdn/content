@@ -2,12 +2,10 @@
 title: CSSMatrixComponent.matrix
 slug: Web/API/CSSMatrixComponent/matrix
 page-type: web-api-instance-property
-status:
-  - experimental
 browser-compat: api.CSSMatrixComponent.matrix
 ---
 
-{{SeeCompatTable}}{{APIRef("CSS Typed Object Model API")}}
+{{APIRef("CSS Typed Object Model API")}}
 
 The **`matrix`** property of the
 {{domxref("CSSMatrixComponent")}} interface gets and sets a 2d or 3d matrix.

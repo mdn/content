@@ -2,12 +2,10 @@
 title: ReportingObserver.takeRecords()
 slug: Web/API/ReportingObserver/takeRecords
 page-type: web-api-instance-method
-status:
-  - experimental
 browser-compat: api.ReportingObserver.takeRecords
 ---
 
-{{APIRef("Reporting API")}}{{SeeCompatTable}}
+{{APIRef("Reporting API")}}
 
 The **`takeRecords()`** method of the
 {{domxref("ReportingObserver")}} interface returns the current list of reports contained

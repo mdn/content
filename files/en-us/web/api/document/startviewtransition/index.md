@@ -32,7 +32,7 @@ A {{domxref("ViewTransition")}} object instance.
 
 ### Basic usage
 
-In our [Basic View Transitions demo](https://basic-view-transitions-api.glitch.me/), the `updateView()` function handles both browsers that do and don't support the View Transitions API. In supporting browsers, we invoke `startViewTransition()` to set off the view transition process without worrying about the return value.
+In our [Basic View Transitions demo](https://mdn.github.io/dom-examples/view-transitions/), the `updateView()` function handles both browsers that do and don't support the View Transitions API. In supporting browsers, we invoke `startViewTransition()` to set off the view transition process without worrying about the return value.
 
 ```js
 function updateView(event) {

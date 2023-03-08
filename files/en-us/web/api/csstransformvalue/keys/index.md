@@ -2,12 +2,10 @@
 title: CSSTransformValue.keys()
 slug: Web/API/CSSTransformValue/keys
 page-type: web-api-instance-method
-status:
-  - experimental
 browser-compat: api.CSSTransformValue.keys
 ---
 
-{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
+{{APIRef("CSS Typed OM")}}
 
 The **`CSSTransformValue.keys()`** method
 returns a new _array iterator_ object that contains the keys

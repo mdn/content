@@ -2,12 +2,10 @@
 title: ReportBody.toJSON()
 slug: Web/API/ReportBody/toJSON
 page-type: web-api-instance-method
-status:
-  - experimental
 browser-compat: api.ReportBody.toJSON
 ---
 
-{{APIRef("Reporting API")}}{{SeeCompatTable}}
+{{APIRef("Reporting API")}}
 
 The **`toJSON()`** method of the {{domxref("ReportBody")}} interface is a _serializer_, and returns a JSON representation of the `ReportBody` object.
 
