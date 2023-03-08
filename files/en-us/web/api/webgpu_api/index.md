@@ -509,7 +509,7 @@ You can find more information about WebGPU error handling in the explainer — s
 - {{domxref("GPUTextureView")}}
   - : A view onto some subset of the texture subresources defined by a particular {{domxref("GPUTexture")}}. Created by {{domxref("GPUTexture.createView()")}}.
 
-### Configuring pipelines
+### Representing pipelines
 
 - {{domxref("GPUBindGroup")}}
   - : Based on a {{domxref("GPUBindGroupLayout")}}, a `GPUBindGroup` defines a set of resources to be bound together in a group and how those resources are used in shader stages.
@@ -519,6 +519,8 @@ You can find more information about WebGPU error handling in the explainer — s
   - : Controls the compute shader stage and can be used in a {{domxref("GPUComputePassEncoder")}}.
 - {{domxref("GPUPipelineLayout")}}
   - : Defines the {{domxref("GPUBindGroupLayout")}}s used by a pipeline. {{domxref("GPUBindGroup")}}s used with the pipeline during command encoding must have compatible {{domxref("GPUBindGroupLayout")}}s.
+- {{domxref("GPURenderPipeline")}}
+  - : Controls the vertex and fragment shader stages and can be used in a {{domxref("GPURenderPassEncoder")}} or {{domxref("GPURenderBundleEncoder")}}.
 
 ### Encoding and submitting commands to the GPU
 
@@ -536,8 +538,6 @@ You can find more information about WebGPU error handling in the explainer — s
   - : Used to pre-record bundles of commands. These can be reused in {{domxref("GPURenderPassEncoder")}}s via the {{domxref("GPURenderPassEncoder.executeBundles", "executeBundles()")}} method, as many times as required.
 - {{domxref("GPURenderPassEncoder")}}
   - : Encodes commands related to controlling the vertex and fragment shader stages, as issued by a {{domxref("GPURenderPipeline")}}. Part of the overall encoding activity of a {{domxref("GPUCommandEncoder")}}.
-- {{domxref("GPURenderPipeline")}}
-  - : Controls the vertex and fragment shader stages and can be used in a {{domxref("GPURenderPassEncoder")}} or {{domxref("GPURenderBundleEncoder")}}.
 
 ### Running queries on rendering passes
 
