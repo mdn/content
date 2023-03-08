@@ -12,7 +12,7 @@ browser-compat: api.GPUTexture.depthOrArrayLayers
 The **`depthOrArrayLayers`** read-only property of the
 {{domxref("GPUTexture")}} interface represents the depth or layer count of the `GPUTexture`.
 
-This is set based on the values of the `dimension` and `size` properties in the descriptor object passed into the originating {{domxref("GPUDevice.createTexture()")}} call.
+This is set based on the `size` property in the descriptor object passed into the originating {{domxref("GPUDevice.createTexture()")}} call.
 
 ## Value
 

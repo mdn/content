@@ -9,7 +9,7 @@ browser-compat: api.GPUTexture
 
 {{APIRef("WebGPU API")}}{{SeeCompatTable}}
 
-The **`GPUTexture`** interface of the {{domxref("WebGPU API", "WebGPU API", "", "nocode")}} represents a container used to store texture data to use in GPU rendering operations.
+The **`GPUTexture`** interface of the {{domxref("WebGPU API", "WebGPU API", "", "nocode")}} represents a container used to store 1D, 2D, or 3D arrays of data, such as images, to use in GPU rendering operations.
 
 A `GPUTexture` object instance is created using the {{domxref("GPUDevice.createTexture()")}} method.
 
@@ -20,9 +20,9 @@ A `GPUTexture` object instance is created using the {{domxref("GPUDevice.createT
 - {{domxref("GPUTexture.depthOrArrayLayers", "depthOrArrayLayers")}} {{Experimental_Inline}} {{readonlyinline}}
   - : A number representing the depth or layer count of the `GPUTexture` (pixels, or number of layers).
 - {{domxref("GPUTexture.dimension", "dimension")}} {{Experimental_Inline}} {{readonlyinline}}
-  - : A enumerated value representing the dimension of the set of texels for each `GPUTexture` subresource.
+  - : An enumerated value representing the dimension of the set of texels for each `GPUTexture` subresource.
 - {{domxref("GPUTexture.format", "format")}} {{Experimental_Inline}} {{readonlyinline}}
-  - : A enumerated value representing the format of the `GPUTexture`.
+  - : An enumerated value representing the format of the `GPUTexture`.
 - {{domxref("GPUTexture.height", "height")}} {{Experimental_Inline}} {{readonlyinline}}
   - : A number representing the height of the `GPUTexture` in pixels.
 - {{domxref("GPUTexture.label", "label")}} {{Experimental_Inline}}

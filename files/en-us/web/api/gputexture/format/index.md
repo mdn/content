@@ -16,7 +16,7 @@ This is set via the `format` property in the descriptor object passed into the o
 
 ## Value
 
-A enumerated value. See the [Texture formats](https://gpuweb.github.io/gpuweb/#enumdef-gputextureformat) section of the specification for all the possible values.
+An enumerated value. See the [Texture formats](https://gpuweb.github.io/gpuweb/#enumdef-gputextureformat) section of the specification for all the possible values.
 
 ## Examples
 

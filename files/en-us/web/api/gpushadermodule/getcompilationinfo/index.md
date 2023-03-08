@@ -61,20 +61,7 @@ When we compile the shader module, we use `getCompilationInfo()` to grab some in
 
 ```js
 async function init() {
-  if (!navigator.gpu) {
-    throw Error("WebGPU not supported.");
-  }
-
-  const adapter = await navigator.gpu.requestAdapter();
-
-  if (!adapter) {
-    throw Error("Couldn't request WebGPU adapter.");
-  }
-
-  let device = await adapter.requestDevice();
-
   // ...
-  // later on
 
   const shaderModule = device.createShaderModule({
     code: shaders,

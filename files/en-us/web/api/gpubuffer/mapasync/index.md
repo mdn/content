@@ -10,9 +10,9 @@ browser-compat: api.GPUBuffer.mapAsync
 {{APIRef("WebGPU API")}}{{SeeCompatTable}}
 
 The **`mapAsync()`** method of the
-{{domxref("GPUBuffer")}} interface maps the specified range of the `GPUBuffer`. It returns a {{jsxref("Promise")}} that resolves when the `GPUBuffer`'s content is ready to be accessed.
+{{domxref("GPUBuffer")}} interface maps the specified range of the `GPUBuffer`. It returns a {{jsxref("Promise")}} that resolves when the `GPUBuffer`'s content is ready to be accessed. While the `GPUBuffer` is mapped it cannot be used in any GPU commands.
 
-Once the buffer is mapped, calls to {{domxref("GPUBuffer.getMappedRange()")}} will return an {{jsxref("ArrayBuffer")}} containing the `GPUBuffer`'s current values, to be read and updated by JavaScript as required. In this state, the GPU cannot access the `GPUBuffer`.
+Once the buffer is mapped, calls to {{domxref("GPUBuffer.getMappedRange()")}} will return an {{jsxref("ArrayBuffer")}} containing the `GPUBuffer`'s current values, to be read and updated by JavaScript as required.
 
 When you have finished working with the `GPUBuffer` values, call {{domxref("GPUBuffer.unmap()")}} to unmap it, making it accessible to the GPU again.
 
@@ -62,39 +62,7 @@ The following criteria must be met when calling **`mapSync()`**, otherwise an `O
 
 ## Examples
 
-In our [basic compute demo](https://webgpu-basic-compute.glitch.me/), we create an output buffer to read GPU calculations to, and a staging buffer to be mapped for JavaScript access.
-
-```js
-const output = device.createBuffer({
-  size: BUFFER_SIZE,
-  usage: GPUBufferUsage.STORAGE | GPUBufferUsage.COPY_SRC,
-});
-
-const stagingBuffer = device.createBuffer({
-  size: BUFFER_SIZE,
-  usage: GPUBufferUsage.MAP_READ | GPUBufferUsage.COPY_DST,
-});
-```
-
-Later on, once the `stagingBuffer` contains the results of the GPU computation, a combination of `GPUBuffer` methods are used to read the data back to JavaScript so that it can then be logged to the console:
-
-- `mapAsync()` is used to map the `GPUBuffer` for reading.
-- {{domxref("GPUBuffer.getMappedRange()")}} is used to return an {{domxref("ArrayBuffer")}} containing the `GPUBuffer`'s contents.
-- {{domxref("GPUBuffer.unmap()")}} is used to unmap the `GPUBuffer` again, once we have read the content into JavaScript as needed.
-
-```js
-// map staging buffer to read results back to JS
-await stagingBuffer.mapAsync(
-  GPUMapMode.READ,
-  0, // Offset
-  BUFFER_SIZE // Length
-);
-
-const copyArrayBuffer = stagingBuffer.getMappedRange(0, BUFFER_SIZE);
-const data = copyArrayBuffer.slice();
-stagingBuffer.unmap();
-console.log(new Float32Array(data));
-```
+See the [main `GPUBuffer` page](/en-US/docs/Web/API/GPUBuffer#examples) for an example.
 
 ## Specifications
 

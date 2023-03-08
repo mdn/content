@@ -24,12 +24,12 @@ A number.
 // ...
 
 const depthTexture = device.createTexture({
-  size: [canvas.width, canvas.height],
+  size: [640, 480],
   format: "depth24plus",
   usage: GPUTextureUsage.RENDER_ATTACHMENT,
 });
 
-console.log(depthTexture.height); // A number such as 480
+console.log(depthTexture.height); // 480
 ```
 
 ## Specifications

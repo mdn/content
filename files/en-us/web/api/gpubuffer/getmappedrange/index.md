@@ -12,7 +12,7 @@ browser-compat: api.GPUBuffer.getMappedRange
 The **`getMappedRange()`** method of the
 {{domxref("GPUBuffer")}} interface returns an {{jsxref("ArrayBuffer")}} containing the mapped contents of the `GPUBuffer` in the specified range.
 
-This can only happen once the `GPUBuffer` has been successfully mapped with {{domxref("GPUBuffer.mapAsync()")}}. In this state, the GPU cannot access the `GPUBuffer`.
+This can only happen once the `GPUBuffer` has been successfully mapped with {{domxref("GPUBuffer.mapAsync()")}}. While the `GPUBuffer` is mapped it cannot be used in any GPU commands.
 
 When you have finished working with the `GPUBuffer` values, call {{domxref("GPUBuffer.unmap()")}} to unmap it, making it accessible to the GPU again.
 
@@ -50,39 +50,7 @@ The following criteria must be met when calling **`getMappedRange()`**, otherwis
 
 ## Examples
 
-In our [basic compute demo](https://webgpu-basic-compute.glitch.me/), we create an output buffer to read GPU calculations to, and a staging buffer to be mapped for JavaScript access.
-
-```js
-const output = device.createBuffer({
-  size: BUFFER_SIZE,
-  usage: GPUBufferUsage.STORAGE | GPUBufferUsage.COPY_SRC,
-});
-
-const stagingBuffer = device.createBuffer({
-  size: BUFFER_SIZE,
-  usage: GPUBufferUsage.MAP_READ | GPUBufferUsage.COPY_DST,
-});
-```
-
-Later on, once the `stagingBuffer` contains the results of the GPU computation, a combination of `GPUBuffer` methods are used to read the data back to JavaScript so that it can then be logged to the console:
-
-- {{domxref("GPUBuffer.mapAsync()")}} is used to map the `GPUBuffer` for reading.
-- `getMappedRange()` is used to return an {{domxref("ArrayBuffer")}} containing the `GPUBuffer`'s contents.
-- {{domxref("GPUBuffer.unmap()")}} is used to unmap the `GPUBuffer` again, once we have read the content into JavaScript as needed.
-
-```js
-// map staging buffer to read results back to JS
-await stagingBuffer.mapAsync(
-  GPUMapMode.READ,
-  0, // Offset
-  BUFFER_SIZE // Length
-);
-
-const copyArrayBuffer = stagingBuffer.getMappedRange(0, BUFFER_SIZE);
-const data = copyArrayBuffer.slice();
-stagingBuffer.unmap();
-console.log(new Float32Array(data));
-```
+See the [main `GPUBuffer` page](/en-US/docs/Web/API/GPUBuffer#examples) for an example.
 
 ## Specifications
 

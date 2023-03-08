@@ -34,7 +34,7 @@ A `GPUBuffer` object instance is created using the {{domxref("GPUDevice.createBu
 - {{domxref("GPUBuffer.getMappedRange", "getMappedRange()")}} {{Experimental_Inline}}
   - : Returns an {{jsxref("ArrayBuffer")}} containing the mapped contents of the `GPUBuffer` in the specified range.
 - {{domxref("GPUBuffer.mapAsync", "mapAsync()")}} {{Experimental_Inline}}
-  - : Maps the specified range of the `GPUBuffer`. Returns a {{jsxref("Promise")}} that resolves when the `GPUBuffer`'s content is ready to be accessed (i.e. with {{domxref("GPUBuffer.getMappedRange()")}}).
+  - : Maps the specified range of the `GPUBuffer`. Returns a {{jsxref("Promise")}} that resolves when the `GPUBuffer`'s content is ready to be accessed with {{domxref("GPUBuffer.getMappedRange()")}}.
 - {{domxref("GPUBuffer.unmap", "unmap()")}} {{Experimental_Inline}}
   - : Unmaps the mapped range of the `GPUBuffer`, making its contents available for use by the GPU again.
 

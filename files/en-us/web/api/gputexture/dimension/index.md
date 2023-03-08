@@ -16,7 +16,7 @@ This is set via the `dimension` property in the descriptor object passed into th
 
 ## Value
 
-A enumerated value. Possible values are:
+An enumerated value. Possible values are:
 
 - `"1d"`: A one-dimensional texture with a single dimension, width.
 - `"2d"`: A two-dimensional texture with a width and height, which may also have layers. Only `"2d"` textures can have mipmaps, be multisampled, use a compressed or depth/stencil format, and be used as a render attachment.
