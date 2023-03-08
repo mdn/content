@@ -131,10 +131,10 @@ console.log([][Symbol.iterator]());
 
 Array Iterator {}
   [[Prototype]]: Array Iterator     ==> This is the prototype shared by all array iterators
-    next: ƒ next()
+    next: function next()
     Symbol(Symbol.toStringTag): "Array Iterator"
     [[Prototype]]: Object           ==> This is the prototype shared by all built-in iterators
-      Symbol(Symbol.iterator): ƒ [Symbol.iterator]()
+      Symbol(Symbol.iterator): function [Symbol.iterator]()
       [[Prototype]]: Object         ==> This is Object.prototype
 ```
 
