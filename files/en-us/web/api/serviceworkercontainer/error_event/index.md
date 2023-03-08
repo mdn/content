@@ -1,5 +1,5 @@
 ---
-title: 'ServiceWorkerContainer: error event'
+title: "ServiceWorkerContainer: error event"
 slug: Web/API/ServiceWorkerContainer/error_event
 page-type: web-api-event
 status:
@@ -17,9 +17,9 @@ The `error` event fires when an error occurs in the service worker.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('error', (event) => { });
+addEventListener("error", (event) => {});
 
-onerror = (event) => { };
+onerror = (event) => {};
 ```
 
 ## Event type
@@ -31,7 +31,7 @@ A generic {{domxref("Event")}}.
 ```js
 navigator.serviceWorker.onerror = (errorevent) => {
   console.error(`received error message: ${errorevent.message}`);
-}
+};
 ```
 
 ## Browser compatibility

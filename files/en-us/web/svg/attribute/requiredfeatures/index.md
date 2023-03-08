@@ -2,10 +2,8 @@
 title: requiredFeatures
 slug: Web/SVG/Attribute/requiredFeatures
 page-type: svg-attribute
-tags:
-  - SVG
-  - SVG Attribute
-  - Deprecated
+status:
+  - deprecated
 browser-compat: svg.attributes.conditional_processing.requiredFeatures
 ---
 
@@ -17,14 +15,11 @@ If the attribute is not present, then its implicit evaluated value is `true`. If
 
 `requiredFeatures` is often used in conjunction with the {{SVGElement("switch")}} element. If `requiredFeatures` is used in other situations, it represents a simple switch on the given element whether to render the element or not.
 
-To detect availability of an SVG feature from script, there is the (also deprecated) {{domxref("DOMImplementation.hasFeature()")}} method.
-
 You can use this attribute with the following SVG elements:
 
 - {{SVGElement("a")}}
 - {{SVGElement("altGlyph")}}
 - {{SVGElement("animate")}}
-- {{SVGElement("animateColor")}}
 - {{SVGElement("animateMotion")}}
 - {{SVGElement("animateTransform")}}
 - {{SVGElement("circle")}}
@@ -244,7 +239,7 @@ The following are the feature strings for the `requiredFeatures` attribute. Thes
 - `http://www.w3.org/TR/SVG11/feature#Script`
   - : The browser supports the {{SVGElement("script")}} element
 - `http://www.w3.org/TR/SVG11/feature#Animation`
-  - : The browser supports the {{SVGElement("animate")}}, {{SVGElement("set")}}, {{SVGElement("animateMotion")}}, {{SVGElement("animateTransform")}}, {{SVGElement("animateColor")}} and {{SVGElement("mpath")}} elements
+  - : The browser supports the {{SVGElement("animate")}}, {{SVGElement("set")}}, {{SVGElement("animateMotion")}}, {{SVGElement("animateTransform")}}, and {{SVGElement("mpath")}} elements
 - `http://www.w3.org/TR/SVG11/feature#Font`
   - : The browser supports the {{SVGElement("font")}}, {{SVGElement("font-face")}}, {{SVGElement("glyph")}}, {{SVGElement("missing-glyph")}}, {{SVGElement("hkern")}}, {{SVGElement("vkern")}}, {{SVGElement("font-face-src")}}, {{SVGElement("font-face-uri")}}, {{SVGElement("font-face-format")}} and {{SVGElement("font-face-name")}} elements
 - `http://www.w3.org/TR/SVG11/feature#BasicFont`
@@ -810,7 +805,3 @@ text {
 ## Browser compatibility
 
 {{Compat}}
-
-## See also
-
-- {{domxref("DOMImplementation.hasFeature()")}}

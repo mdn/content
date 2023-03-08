@@ -1,13 +1,6 @@
 ---
 title: Content Security Policy (CSP)
 slug: Web/HTTP/CSP
-tags:
-  - CSP
-  - Content Security Policy
-  - Example
-  - Guide
-  - Security
-  - access
 browser-compat: http.headers.Content-Security-Policy
 ---
 

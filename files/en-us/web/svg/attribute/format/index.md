@@ -2,10 +2,8 @@
 title: format
 slug: Web/SVG/Attribute/format
 page-type: svg-attribute
-tags:
-  - Deprecated
-  - SVG
-  - SVG Attribute
+status:
+  - deprecated
 browser-compat: svg.elements.altGlyph.format
 ---
 

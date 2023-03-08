@@ -1,16 +1,6 @@
 ---
 title: declarativeNetRequest.MAX_NUMBER_OF_DYNAMIC_AND_SESSION_RULES
 slug: Mozilla/Add-ons/WebExtensions/API/declarativeNetRequest/MAX_NUMBER_OF_DYNAMIC_AND_SESSION_RULES
-tags:
-  - MAX_NUMBER_OF_DYNAMIC_AND_SESSION_RULES
-  - API
-  - Add-ons
-  - Extensions
-  - Reference
-  - WebExtensions
-  - Property
-  - declarativeNetRequest
-  - MAX_NUMBER_OF_DYNAMIC_AND_SESSION_RULES
 browser-compat: webextensions.api.declarativeNetRequest.MAX_NUMBER_OF_DYNAMIC_AND_SESSION_RULES
 ---
 

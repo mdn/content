@@ -51,10 +51,10 @@ p {
   letter-spacing: 1px;
   text-transform: uppercase;
   text-align: center;
-  border: 2px solid rgba(0, 0, 200, 0.6);
-  background: rgba(0, 0, 200, 0.3);
-  color: rgba(0, 0, 200, 0.6);
-  box-shadow: 1px 1px 2px rgba(0, 0, 200, 0.4);
+  border: 2px solid rgb(0 0 200 / 0.6);
+  background: rgb(0 0 200 / 0.6);
+  color: rgb(255 255 255 / 1);
+  box-shadow: 1px 1px 2px rgb(0 0 200 / 0.4);
   border-radius: 10px;
   padding: 3px 10px;
   display: inline-block;

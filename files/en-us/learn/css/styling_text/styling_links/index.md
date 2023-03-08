@@ -53,24 +53,7 @@ The first thing to understand is the concept of link states — different states
 
 ### Default styles
 
-The following example illustrates what a link will behave like by default (the CSS is enlarging and centering the text to make it stand out more).
-
-```html
-<p><a href="#">A simple link</a></p>
-```
-
-```css
-p {
-  font-size: 2rem;
-  text-align: center;
-}
-```
-
-{{ EmbedLiveSample('Default_styles', '100%', 130) }}
-
-> **Note:** All the links in the examples on this page are fake links — a `#` (hash/pound sign) is put in place of the real URL. This is because if the real links were included, clicking on them would break the examples (you'd end up with an error or a page loaded in the embedded example that you couldn't get back from). `#` just links to the current page.
-
-You'll notice a few things as you explore the default styles:
+The example below illustrates what a link will look and behave like by default; though the CSS is enlarging and centering the text to make it stand out more. You can compare the look and behavior of the default stylings in the example with the look and behavior of other links on this page which have more CSS styles applied. Default links have the following properties:
 
 - Links are underlined.
 - Unvisited links are blue.
@@ -95,6 +78,21 @@ You'll notice a few things as you explore the default styles:
   .)
 
 - Active links are red. Try holding down the mouse button on the link as you click it.
+
+```html
+<p><a href="#">A simple link</a></p>
+```
+
+```css
+p {
+  font-size: 2rem;
+  text-align: center;
+}
+```
+
+{{ EmbedLiveSample('Default_styles', '100%', 130) }}
+
+> **Note:** All the link examples on this page link to the top of their window. The empty fragment (`href="#"`) is used to create simple examples and ensure the live examples, which are each contained in an {{HTMLElement("iframe")}}, don't break.
 
 Interestingly enough, these default styles are nearly the same as they were back in the early days of browsers in the mid-1990s. This is because users know and have come to expect this behavior — if links were styled differently, it would confuse a lot of people. This doesn't mean that you shouldn't style links at all. It just means that you shouldn't stray too far from the expected behavior. You should at least:
 

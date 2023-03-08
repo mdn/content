@@ -31,8 +31,8 @@ A {{jsxref("boolean")}}that is true if the object is a valid {{domxref("TrustedS
 In the below example the constant `url` was created by a policy, and therefore `isScriptURL()` returns true. The second example is an attempt to fake an object, and the third is a string. Both of these will return false when passed to `isScriptURL()`.
 
 ```js
-const url = policy.createScriptURL('https://example.com/myscript.js');
-console.log(trustedTypes.isScriptURL(url)) // true;
+const url = policy.createScriptURL("https://example.com/myscript.js");
+console.log(trustedTypes.isScriptURL(url)); // true;
 
 const fake = Object.create(TrustedScriptURL.prototype);
 console.log(trustedTypes.isScriptURL(fake)); // false

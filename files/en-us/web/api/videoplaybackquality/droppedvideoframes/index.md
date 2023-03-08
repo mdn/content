@@ -34,7 +34,8 @@ const videoElem = document.getElementById("my_vid");
 const percentElem = document.getElementById("percent");
 const quality = videoElem.getVideoPlaybackQuality();
 
-const dropPercent = (quality.droppedVideoFrames/quality.totalVideoFrames)*100;
+const dropPercent =
+  (quality.droppedVideoFrames / quality.totalVideoFrames) * 100;
 percentElem.innerText = Math.trunc(dropPercent).toString(10);
 ```
 

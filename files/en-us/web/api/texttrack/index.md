@@ -54,7 +54,7 @@ _This interface also inherits methods from {{domxref("EventTarget")}}._
 The following example adds a new `TextTrack` to a video, then sets it to display using {{domxref("TextTrack.mode")}}.
 
 ```js
-let video = document.querySelector('video');
+let video = document.querySelector("video");
 let track = video.addTextTrack("captions", "Captions", "en");
 track.mode = "showing";
 ```

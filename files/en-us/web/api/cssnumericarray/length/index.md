@@ -2,12 +2,10 @@
 title: CSSNumericArray.length
 slug: Web/API/CSSNumericArray/length
 page-type: web-api-instance-property
-status:
-  - experimental
 browser-compat: api.CSSNumericArray.length
 ---
 
-{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
+{{APIRef("CSS Typed OM")}}
 
 The read-only **`length`** property of the
 {{domxref("CSSNumericArray")}} interface returns the number of

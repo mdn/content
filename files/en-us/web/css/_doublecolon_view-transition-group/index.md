@@ -2,17 +2,12 @@
 title: "::view-transition-group"
 slug: Web/CSS/::view-transition-group
 page-type: css-pseudo-element
-tags:
-  - API
-  - CSS
-  - Experimental
-  - Pseudo-element
-  - Reference
-  - Selector
+status:
+  - experimental
 browser-compat: css.selectors.view-transition-group
 ---
 
-{{CSSRef}}{{seecompattable}}
+{{CSSRef}}{{SeeCompatTable}}
 
 The **`::view-transition-group`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) represents a single view transition group.
 

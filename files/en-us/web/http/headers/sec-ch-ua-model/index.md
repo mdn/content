@@ -1,14 +1,8 @@
 ---
 title: Sec-CH-UA-Model
 slug: Web/HTTP/Headers/Sec-CH-UA-Model
-tags:
-  - Sec-CH-UA-Model
-  - Client hint
-  - HTTP
-  - HTTP Header
-  - Reference
-  - Request header
-  - Experimental
+status:
+  - experimental
 browser-compat: http.headers.Sec-CH-UA-Model
 ---
 

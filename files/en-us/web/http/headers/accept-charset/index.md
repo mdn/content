@@ -1,12 +1,6 @@
 ---
 title: Accept-Charset
 slug: Web/HTTP/Headers/Accept-Charset
-tags:
-  - Content Negotiation
-  - HTTP
-  - HTTP Header
-  - Reference
-  - Request header
 ---
 
 {{HTTPSidebar}}

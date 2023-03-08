@@ -2,11 +2,6 @@
 title: <use>
 slug: Web/SVG/Element/use
 page-type: svg-element
-tags:
-  - Element
-  - Reference
-  - SVG
-  - SVG Graphics
 browser-compat: svg.elements.use
 ---
 

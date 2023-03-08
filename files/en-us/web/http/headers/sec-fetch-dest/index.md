@@ -1,13 +1,6 @@
 ---
 title: Sec-Fetch-Dest
 slug: Web/HTTP/Headers/Sec-Fetch-Dest
-tags:
-  - Sec-Fetch-Dest
-  - Fetch Metadata Request Headers
-  - HTTP
-  - HTTP Headers
-  - Reference
-  - Request header
 browser-compat: http.headers.Sec-Fetch-Dest
 ---
 

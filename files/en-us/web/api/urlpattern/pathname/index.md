@@ -27,7 +27,7 @@ The below example creates a {{domxref("URLPattern")}} object with
 with `/books/`, followed by an integer.
 
 ```js
-const pattern = new URLPattern({ pathname: '/books/:id(\\d)' });
+const pattern = new URLPattern({ pathname: "/books/:id(\\d)" });
 console.log(pattern.pathname); // '/books/:id(\\d)'
 ```
 

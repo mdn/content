@@ -1,11 +1,6 @@
 ---
 title: <mspace>
 slug: Web/MathML/Element/mspace
-tags:
-  - MathML
-  - MathML Reference
-  - MathML:Element
-  - MathML:Token Elements
 browser-compat: mathml.elements.mspace
 ---
 

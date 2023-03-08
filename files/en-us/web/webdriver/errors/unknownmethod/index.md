@@ -1,11 +1,6 @@
 ---
 title: Unknown method
 slug: Web/WebDriver/Errors/UnknownMethod
-tags:
-  - Error
-  - Reference
-  - Unknown method
-  - WebDriver
 ---
 
 {{QuickLinksWithSubpages("/en-US/docs/Web/WebDriver/Errors")}}

@@ -2,9 +2,6 @@
 title: by
 slug: Web/SVG/Attribute/by
 page-type: svg-attribute
-tags:
-  - SVG
-  - SVG Attribute
 browser-compat: svg.elements.animateTransform.by
 ---
 
@@ -17,7 +14,6 @@ The starting value for the attribute is either indicated by specifying it as val
 You can use this attribute with the following SVG elements:
 
 - {{SVGElement("animate")}}
-- {{SVGElement("animateColor")}}
 - {{SVGElement("animateMotion")}}
 - {{SVGElement("animateTransform")}}
 
