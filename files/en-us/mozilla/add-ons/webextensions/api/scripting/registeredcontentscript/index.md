@@ -2,15 +2,6 @@
 title: scripting.RegisteredContentScript
 slug: Mozilla/Add-ons/WebExtensions/API/scripting/RegisteredContentScript
 page-type: webextension-api-type
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - RegisteredContentScript
-  - Reference
-  - Type
-  - WebExtensions
-  - scripting
 browser-compat: webextensions.api.scripting.RegisteredContentScript
 ---
 

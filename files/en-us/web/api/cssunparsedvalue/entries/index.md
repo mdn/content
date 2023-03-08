@@ -2,12 +2,10 @@
 title: CSSUnparsedValue.entries()
 slug: Web/API/CSSUnparsedValue/entries
 page-type: web-api-instance-method
-status:
-  - experimental
 browser-compat: api.CSSUnparsedValue.entries
 ---
 
-{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
+{{APIRef("CSS Typed OM")}}
 
 The **`CSSUnparsedValue.entries()`** method
 returns an array of a given object's own enumerable property `[key, value]`

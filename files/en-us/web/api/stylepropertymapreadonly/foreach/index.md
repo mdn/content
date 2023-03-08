@@ -2,12 +2,10 @@
 title: StylePropertyMapReadOnly.forEach()
 slug: Web/API/StylePropertyMapReadOnly/forEach
 page-type: web-api-instance-method
-status:
-  - experimental
 browser-compat: api.StylePropertyMapReadOnly.forEach
 ---
 
-{{APIRef("CSS Typed Object Model API")}}{{SeeCompatTable}}
+{{APIRef("CSS Typed Object Model API")}}
 
 The **`StylePropertyMapReadOnly.forEach()`** method executes a
 provided function once for each element of {{domxref('StylePropertyMapReadOnly')}}.

@@ -2,16 +2,6 @@
 title: tabs.captureVisibleTab()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/captureVisibleTab
 page-type: webextension-api-function
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - captureVisibleTab
-  - tabs
 browser-compat: webextensions.api.tabs.captureVisibleTab
 ---
 

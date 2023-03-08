@@ -2,9 +2,6 @@
 title: repeatDur
 slug: Web/SVG/Attribute/repeatDur
 page-type: svg-attribute
-tags:
-  - SVG
-  - SVG Attribute
 spec-urls: https://svgwg.org/specs/animations/#RepeatDurAttribute
 ---
 

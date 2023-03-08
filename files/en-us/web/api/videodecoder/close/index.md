@@ -2,12 +2,10 @@
 title: VideoDecoder.close()
 slug: Web/API/VideoDecoder/close
 page-type: web-api-instance-method
-status:
-  - experimental
 browser-compat: api.VideoDecoder.close
 ---
 
-{{APIRef("WebCodecs API")}}{{SecureContext_Header}}{{SeeCompatTable}}
+{{APIRef("WebCodecs API")}}{{SecureContext_Header}}
 
 The **`close()`** method of the {{domxref("VideoDecoder")}} interface ends all pending work and releases system resources.
 

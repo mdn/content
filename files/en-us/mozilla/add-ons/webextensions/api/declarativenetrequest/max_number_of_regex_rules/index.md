@@ -1,16 +1,6 @@
 ---
 title: declarativeNetRequest.MAX_NUMBER_OF_REGEX_RULES
 slug: Mozilla/Add-ons/WebExtensions/API/declarativeNetRequest/MAX_NUMBER_OF_REGEX_RULES
-tags:
-  - MAX_NUMBER_OF_REGEX_RULES
-  - API
-  - Add-ons
-  - Extensions
-  - Reference
-  - WebExtensions
-  - Property
-  - declarativeNetRequest
-  - MAX_NUMBER_OF_REGEX_RULES
 browser-compat: webextensions.api.declarativeNetRequest.MAX_NUMBER_OF_REGEX_RULES
 ---
 

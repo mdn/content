@@ -2,9 +2,6 @@
 title: text-decoration
 slug: Web/SVG/Attribute/text-decoration
 page-type: svg-attribute
-tags:
-  - SVG
-  - SVG Attribute
 browser-compat: svg.attributes.presentation.text-decoration
 ---
 

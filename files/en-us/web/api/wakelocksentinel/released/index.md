@@ -2,12 +2,10 @@
 title: WakeLockSentinel.released
 slug: Web/API/WakeLockSentinel/released
 page-type: web-api-instance-property
-status:
-  - experimental
 browser-compat: api.WakeLockSentinel.released
 ---
 
-{{APIRef("Screen Wake Lock API")}}{{SeeCompatTable}}
+{{APIRef("Screen Wake Lock API")}}
 
 The read-only **`released`** property of the
 {{domxref("WakeLockSentinel")}} interface returns a boolean that indicates whether

@@ -20,6 +20,10 @@ This article provides information about the changes in Firefox 111 that affect d
 
 ### CSS
 
+- CSS color functions `color()`, `lab()`, `lch()`, `oklab()`, and `oklch()` are now supported.
+  These features are disabled by default and can be enabled by setting the preference `layout.css.more_color_4.enabled` to true.
+  For more information, see the [CSS color value](/en-US/docs/Web/CSS/color_value) documentation ([Firefox bug 1352757](https://bugzil.la/1352757) and [Firefox bug 1128204](https://bugzil.la/1128204)).
+
 #### Removals
 
 ### JavaScript
@@ -70,7 +74,9 @@ This article provides information about the changes in Firefox 111 that affect d
 
 ## Changes for add-on developers
 
-- `matchDiacritics` has been added to the {{WebExtAPIRef("Find.find")}} API. This option enables searches to distinguish between accented letters and their base letters. For example, when set to `true`, searching for "résumé" does not find a match for "resume" ([Firefox bug 1680606](https://bugzil.la/1680606))
+- `matchDiacritics` has been added to the {{WebExtAPIRef("Find.find")}} API. This option enables searches to distinguish between accented letters and their base letters. For example, when set to `true`, searching for "résumé" does not find a match for "resume" [Firefox bug 1680606](https://bugzil.la/1680606).
+- {{WebExtAPIRef("search.query")}} has been added, providing search API compatibility with Chromium-based browsers [Firefox bug 1804357](https://bugzil.la/1804357).
+- The `disposition` property has been added to {{WebExtAPIRef("search.search")}}, enabling results to be displayed in a new tab or window [Firefox bug 1811274](https://bugzil.la/1811274).
 
 ### Removals
 

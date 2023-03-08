@@ -2,15 +2,6 @@
 title: sessions.forgetClosedTab()
 slug: Mozilla/Add-ons/WebExtensions/API/sessions/forgetClosedTab
 page-type: webextension-api-function
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Reference
-  - WebExtensions
-  - forgetClosedTab
-  - sessions
 browser-compat: webextensions.api.sessions.forgetClosedTab
 ---
 
