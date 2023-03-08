@@ -10,19 +10,19 @@ If you want to jump right in, see [Getting started on MDN][] for an overview of 
 
 Before contributing, make sure you're familiar with the project guidelines and conventions:
 
-- [MDN guidelines][] - This page covers everything from how and what we write to general project guidelines.
+- [Writing guidelines][] - This page covers everything from how and what we write to general project guidelines.
 - [Writing style guide][] - This covers the language and style we use and how we write and format code examples.
-- [Guide to writing Markdown for MDN][] - Which Markdown features we support and custom extensions we've added.
+- [How to write in Markdown][] - This covers the Markdown features we support on MDN and custom extensions we've added.
 
 ### Prerequisite knowledge
 
 We expect contributors to MDN to have some knowledge of web technologies before working on content.
 We've put together relevant resources to get up to speed on specific topics before contributing:
 
-- **Open source:** If you're new to open source projects, see the [open source etiquette][] page.
-- **Git and GitHub:** If you are unfamiliar with these, [GitHub for complete beginners][] is a good primer.
+- **Open source:** If you're new to open source projects, see the [Open source etiquette][] page.
+- **Git and GitHub:** If you are unfamiliar with these, see the section [Getting ready to contribute][] to get pointers on where to start.
 - **Web technologies:** HTML, CSS, JavaScript, and more are covered in our [Learn web development][] tutorials.
-- **MDN repository:** To find out where everything lives, see [Where is everything on MDN?][].
+- **MDN repositories:** To find out where everything lives in various MDN repositories, see our [MDN Web Docs repositories][] page.
 
 ### Documentation conventions
 
