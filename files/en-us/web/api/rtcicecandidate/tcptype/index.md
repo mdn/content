@@ -32,7 +32,7 @@ and `tcpType` are used to adjust the user interface for simultaneous-open TCP ca
 
 ```js
 if (candidate.protocol === "tcp" && candidate.tcpType === "so") {
-    adjustForSimultaneousOpen(candidate);
+  adjustForSimultaneousOpen(candidate);
 }
 ```
 

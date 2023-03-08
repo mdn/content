@@ -31,7 +31,7 @@ None ({{jsxref("undefined")}}).
 
 ```js
 const range = document.createRange();
-const referenceNode = document.getElementsByTagName('div').item(0);
+const referenceNode = document.getElementsByTagName("div").item(0);
 
 range.setEndAfter(referenceNode);
 ```

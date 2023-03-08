@@ -15,11 +15,11 @@ The **`<ol>`** [HTML](/en-US/docs/Web/HTML) element represents an ordered list o
 
 This element also accepts the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 
-- {{HTMLAttrDef("reversed")}}
+- `reversed`
   - : This Boolean attribute specifies that the list's items are in reverse order. Items will be numbered from high to low.
-- {{HTMLAttrDef("start")}}
+- `start`
   - : An integer to start counting from for the list items. Always an Arabic numeral (1, 2, 3, etc.), even when the numbering `type` is letters or Roman numerals. For example, to start numbering elements from the letter "d" or the Roman numeral "iv," use `start="4"`.
-- {{HTMLAttrDef("type")}}
+- `type`
 
   - : Sets the numbering type:
 

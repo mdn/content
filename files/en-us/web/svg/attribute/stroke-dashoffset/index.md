@@ -2,9 +2,6 @@
 title: stroke-dashoffset
 slug: Web/SVG/Attribute/stroke-dashoffset
 page-type: svg-attribute
-tags:
-  - SVG
-  - SVG Attribute
 browser-compat: svg.attributes.presentation.stroke-dashoffset
 ---
 

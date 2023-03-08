@@ -2,16 +2,6 @@
 title: UserScripts.UserScriptOptions
 slug: Mozilla/Add-ons/WebExtensions/API/userScripts/UserScriptOptions
 page-type: webextension-api-type
-tags:
-  - Add-ons
-  - Extensions
-  - Firefox
-  - Guide
-  - Intermediate
-  - NeedsExample
-  - UserScriptOptions
-  - WebExtensions
-  - userScripts
 ---
 
 {{AddonSidebar}}

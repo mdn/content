@@ -20,7 +20,7 @@ A string containing a language identifier. For example, `"en-US"` for United Sta
 In the following example the value of `language` is printed to the console.
 
 ```js
-let video = document.querySelector('video');
+let video = document.querySelector("video");
 let track = video.addTextTrack("captions", "Captions", "en-US");
 track.mode = "showing";
 console.log(track.language);

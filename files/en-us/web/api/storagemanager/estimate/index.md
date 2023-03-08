@@ -57,8 +57,10 @@ In this example, we obtain the usage estimates and present the percentage of sto
 
 ```js
 navigator.storage.estimate().then((estimate) => {
-  document.getElementById("percent").value =
-      (estimate.usage / estimate.quota * 100).toFixed(2);
+  document.getElementById("percent").value = (
+    (estimate.usage / estimate.quota) *
+    100
+  ).toFixed(2);
 });
 ```
 

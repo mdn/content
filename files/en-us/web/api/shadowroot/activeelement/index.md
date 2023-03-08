@@ -17,7 +17,7 @@ The {{domxref('Element')}} which currently has focus, or `null` if there is no f
 ## Examples
 
 ```js
-let customElem = document.querySelector('my-shadow-dom-element');
+let customElem = document.querySelector("my-shadow-dom-element");
 let shadow = customElem.shadowRoot;
 let focusedElem = shadow.activeElement;
 ```

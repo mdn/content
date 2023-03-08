@@ -178,7 +178,7 @@ That may sound confusing, but this simple example should illustrate the concepts
 // This is what our customer data looks like.
 const customerData = [
   { ssn: "444-44-4444", name: "Bill", age: 35, email: "bill@company.com" },
-  { ssn: "555-55-5555", name: "Donna", age: 32, email: "donna@home.org" }
+  { ssn: "555-55-5555", name: "Donna", age: 32, email: "donna@home.org" },
 ];
 ```
 
@@ -214,7 +214,9 @@ request.onupgradeneeded = (event) => {
   // finished before adding data into it.
   objectStore.transaction.oncomplete = (event) => {
     // Store values in the newly created objectStore.
-    const customerObjectStore = db.transaction("customers", "readwrite").objectStore("customers");
+    const customerObjectStore = db
+      .transaction("customers", "readwrite")
+      .objectStore("customers");
     customerData.forEach((customer) => {
       customerObjectStore.add(customer);
     });
@@ -243,11 +245,10 @@ We can create another object store with the key generator as below:
 const request = indexedDB.open(dbName, 3);
 
 request.onupgradeneeded = (event) => {
-
   const db = event.target.result;
 
   // Create another object store called "names" with the autoIncrement flag set as true.
-  const objStore = db.createObjectStore("names", { autoIncrement : true });
+  const objStore = db.createObjectStore("names", { autoIncrement: true });
 
   // Because the "names" object store has the key generator, the key for the name value is generated automatically.
   // The added records would be like:
@@ -350,7 +351,10 @@ request.onsuccess = (event) => {
 That's a lot of code for a "simple" retrieval. Here's how you can shorten it up a bit, assuming that you handle errors at the database level:
 
 ```js
-db.transaction("customers").objectStore("customers").get("444-44-4444").onsuccess = (event) => {
+db
+  .transaction("customers")
+  .objectStore("customers")
+  .get("444-44-4444").onsuccess = (event) => {
   console.log(`Name for SSN 444-44-4444 is ${event.target.result.name}`);
 };
 ```
@@ -367,7 +371,9 @@ Note that you can speed up data access by limiting the scope and mode in the tra
 Now we've retrieved some data, updating it and inserting it back into the IndexedDB is pretty simple. Let's update the previous example somewhat:
 
 ```js
-const objectStore = db.transaction(["customers"], "readwrite").objectStore("customers");
+const objectStore = db
+  .transaction(["customers"], "readwrite")
+  .objectStore("customers");
 const request = objectStore.get("444-44-4444");
 request.onerror = (event) => {
   // Handle errors!
@@ -466,7 +472,9 @@ index.openCursor().onsuccess = (event) => {
   const cursor = event.target.result;
   if (cursor) {
     // cursor.key is a name, like "Bill", and cursor.value is the whole object.
-    console.log(`Name: ${cursor.key}, SSN: ${cursor.value.ssn}, email: ${cursor.value.email}`);
+    console.log(
+      `Name: ${cursor.key}, SSN: ${cursor.value.ssn}, email: ${cursor.value.email}`
+    );
     cursor.continue();
   }
 };
@@ -582,7 +590,9 @@ function useDatabase(db) {
   // If you don't do this then the upgrade won't happen until the user closes the tab.
   db.onversionchange = (event) => {
     db.close();
-    console.log("A new version of this page is ready. Please reload or close this tab!");
+    console.log(
+      "A new version of this page is ready. Please reload or close this tab!"
+    );
   };
 
   // Do stuff with the database.

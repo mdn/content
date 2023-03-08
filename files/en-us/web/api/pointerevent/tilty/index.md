@@ -24,9 +24,13 @@ This example illustrates simple accessing of the
 {{domxref("PointerEvent.tiltX","tiltX")}} and `tiltY` properties.
 
 ```js
-someElement.addEventListener("pointerdown", (event) => {
-  process_tilt(event.tiltX, event.tiltY);
-}, false);
+someElement.addEventListener(
+  "pointerdown",
+  (event) => {
+    process_tilt(event.tiltX, event.tiltY);
+  },
+  false
+);
 ```
 
 ## Specifications

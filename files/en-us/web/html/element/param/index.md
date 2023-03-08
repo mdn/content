@@ -15,13 +15,13 @@ The **`<param>`** [HTML](/en-US/docs/Web/HTML) element defines parameters for an
 
 This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 
-- {{htmlattrdef("name")}} {{deprecated_inline}}
+- `name` {{deprecated_inline}}
   - : Name of the parameter.
-- {{htmlattrdef("value")}} {{deprecated_inline}}
+- `value` {{deprecated_inline}}
   - : Specifies the value of the parameter.
-- {{htmlattrdef("type")}} {{deprecated_inline}}
+- `type` {{deprecated_inline}}
   - : Only used if the `valuetype` is set to `ref`. Specifies the MIME type of values found at the URI specified by value.
-- {{htmlattrdef("valuetype")}} {{deprecated_inline}}
+- `valuetype` {{deprecated_inline}}
 
   - : Specifies the type of the `value` attribute. Possible values are:
 

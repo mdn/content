@@ -7,8 +7,7 @@ browser-compat: javascript.builtins.Reflect.get
 
 {{JSRef}}
 
-The **`Reflect.get()`** static method works like getting a
-property from an object (`target[propertyKey]`) as a function.
+The **`Reflect.get()`** static method is like the [property accessor](/en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors) syntax, but as a function.
 
 {{EmbedInteractiveExample("pages/js/reflect-get.html")}}
 
@@ -26,10 +25,7 @@ Reflect.get(target, propertyKey, receiver)
 - `propertyKey`
   - : The name of the property to get.
 - `receiver` {{optional_inline}}
-  - : The value of `this` provided for the call to
-    `target` if a getter is encountered. When used with
-    {{jsxref("Proxy")}}, it can be an object that inherits from
-    `target`.
+  - : The value of `this` provided for the call to `target` if a getter is encountered.
 
 ### Return value
 
@@ -37,46 +33,54 @@ The value of the property.
 
 ### Exceptions
 
-A {{jsxref("TypeError")}}, if `target` is not an
-{{jsxref("Object")}}.
+- {{jsxref("TypeError")}}
+  - : Thrown if `target` is not an object.
 
 ## Description
 
-The `Reflect.get` method allows you to get a property on an object. It is like the
-[property accessor](/en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors) syntax as a function.
+`Reflect.get()` provides the reflective semantic of a [property access](/en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors). That is, `Reflect.get(target, propertyKey, receiver)` is semantically equivalent to:
+
+```js
+target[propertyKey];
+```
+
+Note that in a normal property access, `target` and `receiver` would observably be the same object.
+
+`Reflect.get()` invokes the `[[Get]]` [object internal method](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy#object_internal_methods) of `target`.
 
 ## Examples
 
-### Using `Reflect.get()`
+### Using Reflect.get()
 
 ```js
 // Object
-let obj = { x: 1, y: 2 };
-Reflect.get(obj, "x"); // 1
+const obj1 = { x: 1, y: 2 };
+Reflect.get(obj1, "x"); // 1
 
 // Array
 Reflect.get(["zero", "one"], 1); // "one"
 
 // Proxy with a get handler
-let x = { p: 1 };
-
-let obj = new Proxy(x, {
-  get(t, k, r) {
-    return k + "bar";
-  },
-});
-Reflect.get(obj, "foo"); // "foobar"
+const obj2 = new Proxy(
+  { p: 1 },
+  {
+    get(t, k, r) {
+      return k + "bar";
+    },
+  }
+);
+Reflect.get(obj2, "foo"); // "foobar"
 
 //Proxy with get handler and receiver
-let x = { p: 1, foo: 2 };
-let y = { foo: 3 };
-
-let obj = new Proxy(x, {
-  get(t, prop, receiver) {
-    return receiver[prop] + "bar";
-  },
-});
-Reflect.get(obj, "foo", y); // "3bar"
+const obj3 = new Proxy(
+  { p: 1, foo: 2 },
+  {
+    get(t, prop, receiver) {
+      return receiver[prop] + "bar";
+    },
+  }
+);
+Reflect.get(obj, "foo", { foo: 3 }); // "3bar"
 ```
 
 ## Specifications
@@ -92,3 +96,4 @@ Reflect.get(obj, "foo", y); // "3bar"
 - [Polyfill of `Reflect.get` in `core-js`](https://github.com/zloirock/core-js#ecmascript-reflect)
 - {{jsxref("Reflect")}}
 - [Property accessors](/en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors)
+- [`Proxy`'s `get` handler](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/get)

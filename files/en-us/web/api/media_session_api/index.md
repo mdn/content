@@ -46,43 +46,90 @@ navigator.mediaSession.playbackState = "playing";
 The following example shows feature detection for the Media Session API. It then instantiates a metadata object for the session, and adds action handlers for the user control actions:
 
 ```js
-if ('mediaSession' in navigator) {
+if ("mediaSession" in navigator) {
   navigator.mediaSession.metadata = new MediaMetadata({
-    title: 'Unforgettable',
-    artist: 'Nat King Cole',
-    album: 'The Ultimate Collection (Remastered)',
+    title: "Unforgettable",
+    artist: "Nat King Cole",
+    album: "The Ultimate Collection (Remastered)",
     artwork: [
-      { src: 'https://dummyimage.com/96x96',   sizes: '96x96',   type: 'image/png' },
-      { src: 'https://dummyimage.com/128x128', sizes: '128x128', type: 'image/png' },
-      { src: 'https://dummyimage.com/192x192', sizes: '192x192', type: 'image/png' },
-      { src: 'https://dummyimage.com/256x256', sizes: '256x256', type: 'image/png' },
-      { src: 'https://dummyimage.com/384x384', sizes: '384x384', type: 'image/png' },
-      { src: 'https://dummyimage.com/512x512', sizes: '512x512', type: 'image/png' },
-    ]
+      {
+        src: "https://dummyimage.com/96x96",
+        sizes: "96x96",
+        type: "image/png",
+      },
+      {
+        src: "https://dummyimage.com/128x128",
+        sizes: "128x128",
+        type: "image/png",
+      },
+      {
+        src: "https://dummyimage.com/192x192",
+        sizes: "192x192",
+        type: "image/png",
+      },
+      {
+        src: "https://dummyimage.com/256x256",
+        sizes: "256x256",
+        type: "image/png",
+      },
+      {
+        src: "https://dummyimage.com/384x384",
+        sizes: "384x384",
+        type: "image/png",
+      },
+      {
+        src: "https://dummyimage.com/512x512",
+        sizes: "512x512",
+        type: "image/png",
+      },
+    ],
   });
 
-  navigator.mediaSession.setActionHandler('play', () => { /* Code excerpted. */ });
-  navigator.mediaSession.setActionHandler('pause', () => { /* Code excerpted. */ });
-  navigator.mediaSession.setActionHandler('stop', () => { /* Code excerpted. */ });
-  navigator.mediaSession.setActionHandler('seekbackward', () => { /* Code excerpted. */ });
-  navigator.mediaSession.setActionHandler('seekforward', () => { /* Code excerpted. */ });
-  navigator.mediaSession.setActionHandler('seekto', () => { /* Code excerpted. */ });
-  navigator.mediaSession.setActionHandler('previoustrack', () => { /* Code excerpted. */ });
-  navigator.mediaSession.setActionHandler('nexttrack', () => { /* Code excerpted. */ });
-  navigator.mediaSession.setActionHandler('skipad', () => { /* Code excerpted. */ });
+  navigator.mediaSession.setActionHandler("play", () => {
+    /* Code excerpted. */
+  });
+  navigator.mediaSession.setActionHandler("pause", () => {
+    /* Code excerpted. */
+  });
+  navigator.mediaSession.setActionHandler("stop", () => {
+    /* Code excerpted. */
+  });
+  navigator.mediaSession.setActionHandler("seekbackward", () => {
+    /* Code excerpted. */
+  });
+  navigator.mediaSession.setActionHandler("seekforward", () => {
+    /* Code excerpted. */
+  });
+  navigator.mediaSession.setActionHandler("seekto", () => {
+    /* Code excerpted. */
+  });
+  navigator.mediaSession.setActionHandler("previoustrack", () => {
+    /* Code excerpted. */
+  });
+  navigator.mediaSession.setActionHandler("nexttrack", () => {
+    /* Code excerpted. */
+  });
+  navigator.mediaSession.setActionHandler("skipad", () => {
+    /* Code excerpted. */
+  });
 }
 ```
 
 Some user agents disable autoplay for media elements on mobile devices and require a user gesture to start media. The following example adds a `pointerup` event to an on-page play button, which is then used to kick off the media session code:
 
 ```js
-playButton.addEventListener('pointerup', (event) => {
-  const audio = document.querySelector('audio');
+playButton.addEventListener("pointerup", (event) => {
+  const audio = document.querySelector("audio");
 
   // User interacted with the page. Let's play audio!
-  audio.play()
-  .then(() => { /* Set up media session controls, as shown above. */ })
-  .catch((error) => { console.error(error) });
+  audio
+    .play()
+    .then(() => {
+      /* Set up media session controls, as shown above. */
+    })
+    .catch((error) => {
+      console.error(error);
+    });
 });
 ```
 

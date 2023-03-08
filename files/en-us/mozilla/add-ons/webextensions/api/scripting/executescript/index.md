@@ -2,15 +2,6 @@
 title: scripting.executeScript()
 slug: Mozilla/Add-ons/WebExtensions/API/scripting/executeScript
 page-type: webextension-api-function
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Reference
-  - WebExtensions
-  - executeScript
-  - scripting
 browser-compat: webextensions.api.scripting.executeScript
 ---
 

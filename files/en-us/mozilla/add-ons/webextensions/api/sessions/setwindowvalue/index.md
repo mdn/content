@@ -2,15 +2,6 @@
 title: sessions.setWindowValue()
 slug: Mozilla/Add-ons/WebExtensions/API/sessions/setWindowValue
 page-type: webextension-api-function
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Reference
-  - WebExtensions
-  - sessions
-  - setWindowValue
 browser-compat: webextensions.api.sessions.setWindowValue
 ---
 

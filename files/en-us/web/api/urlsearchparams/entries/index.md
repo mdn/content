@@ -37,7 +37,7 @@ const searchParams = new URLSearchParams("key1=value1&key2=value2");
 
 // Display the key/value pairs
 for (const [key, value] of searchParams.entries()) {
-   console.log(`${key}, ${value}`);
+  console.log(`${key}, ${value}`);
 }
 ```
 

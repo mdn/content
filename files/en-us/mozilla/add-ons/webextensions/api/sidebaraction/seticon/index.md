@@ -2,15 +2,6 @@
 title: sidebarAction.setIcon()
 slug: Mozilla/Add-ons/WebExtensions/API/sidebarAction/setIcon
 page-type: webextension-api-function
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Reference
-  - WebExtensions
-  - setIcon
-  - sidebarAction
 browser-compat: webextensions.api.sidebarAction.setIcon
 ---
 

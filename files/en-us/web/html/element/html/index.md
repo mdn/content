@@ -62,11 +62,11 @@ The **`<html>`** [HTML](/en-US/docs/Web/HTML) element represents the root (top-l
 
 This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 
-- {{htmlattrdef("manifest")}} {{deprecated_inline}} {{Non-standard_Inline}}
+- `manifest` {{deprecated_inline}} {{Non-standard_Inline}}
   - : Specifies the {{glossary("URI")}} of a resource manifest indicating resources that should be cached locally.
-- {{htmlattrdef("version")}} {{deprecated_inline}}
+- `version` {{deprecated_inline}}
   - : Specifies the version of the HTML {{glossary("Doctype", "Document Type Definition")}} that governs the current document. This attribute is not needed, because it is redundant with the version information in the document type declaration.
-- {{htmlattrdef("xmlns")}}
+- `xmlns`
   - : Specifies the {{glossary("XML")}} {{glossary("Namespace")}} of the document. Default value is `"http://www.w3.org/1999/xhtml"`. This is required in documents parsed with XML {{glossary("parser", "parsers")}}, and optional in text/html documents.
 
 ## Example

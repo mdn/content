@@ -104,7 +104,7 @@ The semantics of the `nav` element is that of providing links. However a `nav` e
     You are on my home page. To the north lies <a href="/blog">my blog</a>, from
     whence the sounds of battle can be heard. To the east you can see a large
     mountain, upon which many <a href="/school">school papers</a> are littered.
-    Far up thus mountain you can spy a little figure who appears to be me,
+    Far up this mountain you can spy a little figure who appears to be me,
     desperately scribbling a <a href="/school/thesis">thesis</a>.
   </p>
   <p>

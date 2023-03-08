@@ -65,7 +65,7 @@ The exact validation technology depends on the payment handler, and merchant val
 ```js
 paymentRequest.onmerchantvalidation = (event) => {
   event.complete(fetchValidationData(event.validationURL));
-}
+};
 ```
 
 In this example, `fetchValidationData()` is a function which loads the payment handler specific identifying information from the address given by `validationURL`. Note this function must go through the merchant server, because a client typically does not access the validation URL itself.

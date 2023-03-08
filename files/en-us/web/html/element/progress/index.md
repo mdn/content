@@ -72,9 +72,9 @@ The **`<progress>`** [HTML](/en-US/docs/Web/HTML) element displays an indicator 
 
 This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 
-- {{ htmlattrdef("max") }}
+- `max`
   - : This attribute describes how much work the task indicated by the `progress` element requires. The `max` attribute, if present, must have a value greater than `0` and be a valid floating point number. The default value is `1`.
-- {{ htmlattrdef("value") }}
+- `value`
   - : This attribute specifies how much of the task that has been completed. It must be a valid floating point number between `0` and `max`, or between `0` and `1` if `max` is omitted. If there is no `value` attribute, the progress bar is indeterminate; this indicates that an activity is ongoing with no indication of how long it is expected to take.
 
 > **Note:** Unlike the {{htmlelement("meter")}} element, the minimum value is always 0, and the `min` attribute is not allowed for the `<progress>` element.

@@ -65,12 +65,12 @@ Used in **ALL** roles.
 
 ## See Also
 
-- HTML {{htmlattrdef('id')}} attribute
+- HTML [id](/en-US/docs/Web/HTML/Global_attributes/id) attribute
 - [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby)
 - [`aria-describedby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-describedby)
 - [`aria-description`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-describedby)
 - [The image `alt` attribute](/en-US/docs/Web/API/HTMLImageElement/alt)
-- HTML {{htmlattrdef('title')}} attribute
+- HTML [title](/en-US/docs/Web/HTML/Global_attributes/title) attribute
 
 <section id="Quick_links">
 <strong><a href="/en-US/docs/Web/Accessibility/ARIA/Attributes">WAI-ARIA states and properties</a></strong>

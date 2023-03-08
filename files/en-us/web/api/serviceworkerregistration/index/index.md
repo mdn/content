@@ -29,11 +29,9 @@ Here is an example from the main script:
 const registration = await navigator.serviceWorker.ready;
 
 // feature detection
-if ('index' in registration) {
-
+if ("index" in registration) {
   // Content Index API functionality
   const contentIndex = registration.index;
-
 }
 ```
 

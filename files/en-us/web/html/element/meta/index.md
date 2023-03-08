@@ -106,11 +106,11 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
 > **Note:** the attribute {{htmlattrxref("name", "meta")}} has a specific meaning for the `<meta>` element, and the [`itemprop`](/en-US/docs/Web/HTML/Global_attributes/itemprop) attribute must not be set on the same `<meta>` element that has any existing {{htmlattrxref("name", "meta")}}, {{htmlattrxref("http-equiv", "meta")}} or {{htmlattrxref("charset", "meta")}} attributes.
 
-- {{htmlattrdef("charset")}}
+- `charset`
   - : This attribute declares the document's character encoding. If the attribute is present, its value must be an ASCII case-insensitive match for the string "`utf-8`", because UTF-8 is the only valid encoding for HTML5 documents. `<meta>` elements which declare a character encoding must be located entirely within the first 1024 bytes of the document.
-- {{htmlattrdef("content")}}
+- `content`
   - : This attribute contains the value for the {{htmlattrxref("http-equiv", "meta")}} or {{htmlattrxref("name", "meta")}} attribute, depending on which is used.
-- {{htmlattrdef("http-equiv")}}
+- `http-equiv`
 
   - : Defines a pragma directive. The attribute is named `http-equiv(alent)` because all the allowed values are names of particular HTTP headers:
 
@@ -145,7 +145,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
       > - [Understanding Success Criterion 2.2.4 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/time-limits-postponed.html)
       > - [Understanding Success Criterion 3.2.5 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/consistent-behavior-no-extreme-changes-context.html)
 
-- {{htmlattrdef("name")}}
+- `name`
 
   - : The `name` and `content` attributes can be used together to provide document metadata in terms of name-value pairs, with the `name` attribute giving the metadata name, and the `content` attribute giving the value.
 

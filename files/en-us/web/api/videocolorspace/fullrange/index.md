@@ -18,7 +18,7 @@ A {{jsxref("Boolean")}}, `true` if full-range color values are used.
 In the following example, `colorSpace` is a `VideoColorSpace` object returned from {{domxref("VideoFrame")}}. The value of `fullRange` is printed to the console.
 
 ```js
-let colorSpace = VideoFrame.colorSpace
+let colorSpace = VideoFrame.colorSpace;
 console.log(colorSpace.fullRange);
 ```
 

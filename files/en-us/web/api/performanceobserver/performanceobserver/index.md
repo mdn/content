@@ -39,13 +39,13 @@ The `perfObserver` callback provides a `list` ({{domxref("PerformanceObserverEnt
 
 ```js
 function perfObserver(list, observer) {
-  list.getEntries().forEach((entry) =>  {
+  list.getEntries().forEach((entry) => {
     if (entry.entryType === "mark") {
       console.log(`${entry.name}'s startTime: ${entry.startTime}`);
-    };
+    }
     if (entry.entryType === "measure") {
       console.log(`${entry.name}'s duration: ${entry.duration}`);
-    };
+    }
   });
 }
 const observer = new PerformanceObserver(perfObserver);
@@ -63,7 +63,9 @@ function perfObserver(list, observer, droppedEntriesCount) {
     // do something with the entries
   });
   if (droppedEntriesCount > 0) {
-    console.warn(`${droppedEntriesCount} entries got dropped due to the buffer being full.`);
+    console.warn(
+      `${droppedEntriesCount} entries got dropped due to the buffer being full.`
+    );
   }
 }
 const observer = new PerformanceObserver(perfObserver);

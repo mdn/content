@@ -1,14 +1,9 @@
 ---
 title: Viewport-Width
 slug: Web/HTTP/Headers/Viewport-Width
-tags:
-  - Viewport-Width
-  - Client hints
-  - HTTP
-  - HTTP Header
-  - Request header
-  - Deprecated
-  - Non-standard
+status:
+  - deprecated
+  - non-standard
 browser-compat: http.headers.Viewport-Width
 ---
 

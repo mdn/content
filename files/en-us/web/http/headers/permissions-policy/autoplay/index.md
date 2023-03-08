@@ -1,14 +1,8 @@
 ---
 title: "Permissions-Policy: autoplay"
 slug: Web/HTTP/Headers/Permissions-Policy/autoplay
-tags:
-  - Directive
-  - Permissions Policy
-  - Permissions-Policy
-  - HTTP
-  - Reference
-  - autoplay
-  - Experimental
+status:
+  - experimental
 browser-compat: http.headers.Permissions-Policy.autoplay
 ---
 

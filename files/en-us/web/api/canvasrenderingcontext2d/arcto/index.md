@@ -207,13 +207,9 @@ control.oninput = () => {
   controlOut.textContent = radius = control.value;
 };
 
-const mouse = { x: 0, y: 0 };
-
-const p0 = { x: 0, y: 50 };
 const p1 = { x: 100, y: 100 };
 const p2 = { x: 150, y: 50 };
 const p3 = { x: 200, y: 100 };
-
 let radius = control.value; // match with init control value
 
 function labelPoint(p, offset, i = 0) {

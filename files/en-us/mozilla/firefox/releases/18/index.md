@@ -20,7 +20,7 @@ Firefox 18 was released on January 8, 2013. This article lists key changes that 
 - The {{cssxref("min-width")}} and {{cssxref("min-height")}} now uses the `auto` keyword as _initial value_ (This has an effect only on flex items as it resolves to `0`, the previous initial value, for other items). ([Firefox bug 763689](https://bugzil.la/763689))
 - The cascade has been updated: now author `!important` rules override [CSS animations](/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations). ([Firefox bug 783714](https://bugzil.la/783714))
 - The {{cssxref("background")}} shorthand property now recognizes CSS3 {{cssxref("background-size")}} property specified inside. ([Firefox bug 570326](https://bugzil.la/570326))
-- Initial support for the CSS Flexbox Module has been landed. It is disabled by default but can be enabled by setting `layout.css.flexbox.enabled` to true. ({{bug('666041')}})
+- Initial support for the CSS Flexbox Module has been landed. It is disabled by default but can be enabled by setting `layout.css.flexbox.enabled` to true ([Firefox bug 666041](https://bugzil.la/666041)).
 
 ### DOM/APIs
 

@@ -34,8 +34,7 @@ const pc = new RTCPeerConnection();
 const sd = pc.pendingLocalDescription;
 if (sd) {
   // There's a description change underway!
-}
-else {
+} else {
   // No description change pending
 }
 ```

@@ -21,7 +21,7 @@ It may represent one of the following:
 
 Like all other HTML elements, this element supports the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 
-- {{htmlattrdef("datetime")}}
+- `datetime`
   - : This attribute indicates the time and/or date of the element and must be in one of the formats described below.
 
 ## Usage notes

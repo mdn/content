@@ -41,8 +41,7 @@ sync task with a given tag is registered.
 ```js
 navigator.serviceWorker.ready.then((registration) => {
   registration.periodicSync.getTags().then((tags) => {
-    if (tags.includes('get-latest-news'))
-      skipDownloadingLatestNewsOnPageLoad();
+    if (tags.includes("get-latest-news")) skipDownloadingLatestNewsOnPageLoad();
   });
 });
 ```
