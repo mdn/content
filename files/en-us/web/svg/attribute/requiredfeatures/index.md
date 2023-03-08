@@ -15,8 +15,6 @@ If the attribute is not present, then its implicit evaluated value is `true`. If
 
 `requiredFeatures` is often used in conjunction with the {{SVGElement("switch")}} element. If `requiredFeatures` is used in other situations, it represents a simple switch on the given element whether to render the element or not.
 
-To detect availability of an SVG feature from script, there is the (also deprecated) {{domxref("DOMImplementation.hasFeature()")}} method.
-
 You can use this attribute with the following SVG elements:
 
 - {{SVGElement("a")}}
@@ -807,7 +805,3 @@ text {
 ## Browser compatibility
 
 {{Compat}}
-
-## See also
-
-- {{domxref("DOMImplementation.hasFeature()")}}
