@@ -4,7 +4,7 @@ Thanks for taking the time to contribute to [MDN Web Docs](https://developer.moz
 
 This document covers project setup steps along with a set of guidelines for contributing to MDN Web Docs content.
 Everyone participating in this project is expected to follow our [Code of Conduct](CODE_OF_CONDUCT.md).
-If you want to jump right in, see [Getting started on MDN][] for an overview of how to join, and the [Contribute page][] on MDN for a filtered list of tasks.
+If you want to jump right in, see [Getting started with MDN Web Docs][] for an overview of how to join, and the [Contribute page][] on MDN for a filtered list of tasks.
 
 ## Getting started
 
@@ -402,13 +402,13 @@ according to [our license](LICENSE.md).
 
 [`tags`]: https://developer.mozilla.org/en-US/docs/MDN/Writing_guidelines/Howto/Tag
 [contribute page]: https://developer.mozilla.org/en-US/docs/MDN/Contribute
-[getting started on mdn]: https://developer.mozilla.org/en-US/docs/MDN/Community/Contributing/Getting_started
+[getting started with mdn web docs]: https://developer.mozilla.org/en-US/docs/MDN/Community/Contributing/Getting_started
 [github for complete beginners]: https://developer.mozilla.org/en-US/docs/MDN/Contribute/GitHub_beginners
 [guide to writing markdown for mdn]: https://developer.mozilla.org/en-US/docs/MDN/Writing_guidelines/Howto/Markdown_in_MDN
 [javascript landing page]: https://developer.mozilla.org/en-US/docs/Web/JavaScript
 [learn web development]: https://developer.mozilla.org/en-US/docs/Learn
-[mdn guidelines]: https://developer.mozilla.org/en-US/docs/MDN/Guidelines
-[open source etiquette]: https://developer.mozilla.org/en-US/docs/MDN/Contribute/Open_source_etiquette
-[where is everything on mdn?]: https://developer.mozilla.org/en-US/docs/MDN/Contribute/Where_is_everything
-[writing style guide]: https://developer.mozilla.org/en-US/docs/MDN/Guidelines/Writing_style_guide
+[writing guidelines]: https://developer.mozilla.org/en-US/docs/MDN/Writing_guidelines
+[open source etiquette]: https://developer.mozilla.org/en-US/docs/MDN/Community/Open_source_etiquette
+[mdn web docs repositories]: https://developer.mozilla.org/en-US/docs/MDN/Community/Contributing/Our_repositories
+[writing style guide]: https://developer.mozilla.org/en-US/docs/MDN/Writing_guidelines/Writing_style_guide
 [get in touch with us]: https://developer.mozilla.org/en-US/docs/MDN/Community/Communication_channels
