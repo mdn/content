@@ -2,16 +2,6 @@
 title: downloads.open()
 slug: Mozilla/Add-ons/WebExtensions/API/downloads/open
 page-type: webextension-api-function
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - downloads
-  - open
 browser-compat: webextensions.api.downloads.open
 ---
 

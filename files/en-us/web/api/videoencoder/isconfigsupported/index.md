@@ -2,12 +2,10 @@
 title: VideoEncoder.isConfigSupported()
 slug: Web/API/VideoEncoder/isConfigSupported
 page-type: web-api-static-method
-status:
-  - experimental
 browser-compat: api.VideoEncoder.isConfigSupported
 ---
 
-{{APIRef("WebCodecs API")}}{{SecureContext_Header}}{{SeeCompatTable}}
+{{APIRef("WebCodecs API")}}{{SecureContext_Header}}
 
 The **`isConfigSupported()`** static method of the {{domxref("VideoEncoder")}} interface checks if the given config is supported (that is, if {{domxref("VideoEncoder")}} objects can be successfully configured with the given config).
 

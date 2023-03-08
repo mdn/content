@@ -2,15 +2,6 @@
 title: BrowserSetting
 slug: Mozilla/Add-ons/WebExtensions/API/types/BrowserSetting
 page-type: webextension-api-type
-tags:
-  - API
-  - Add-ons
-  - BrowserSetting
-  - Extensions
-  - Reference
-  - Type
-  - Types
-  - WebExtensions
 browser-compat: webextensions.api.types.BrowserSetting
 ---
 

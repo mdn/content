@@ -2,9 +2,6 @@
 title: systemLanguage
 slug: Web/SVG/Attribute/systemLanguage
 page-type: svg-attribute
-tags:
-  - SVG
-  - SVG Attribute
 browser-compat: svg.attributes.conditional_processing.systemLanguage
 ---
 

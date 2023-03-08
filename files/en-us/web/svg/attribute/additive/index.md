@@ -2,11 +2,6 @@
 title: additive
 slug: Web/SVG/Attribute/additive
 page-type: svg-attribute
-tags:
-  - NeedsCompatTable
-  - NeedsExample
-  - SVG
-  - SVG Attribute
 spec-urls: https://svgwg.org/specs/animations/#AdditiveAttribute
 ---
 

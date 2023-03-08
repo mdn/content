@@ -2,12 +2,10 @@
 title: EncodedVideoChunk.duration
 slug: Web/API/EncodedVideoChunk/duration
 page-type: web-api-instance-property
-status:
-  - experimental
 browser-compat: api.EncodedVideoChunk.duration
 ---
 
-{{APIRef("WebCodecs API")}}{{SeeCompatTable}}
+{{APIRef("WebCodecs API")}}
 
 The **`duration`** read-only property of the {{domxref("EncodedVideoChunk")}} interface returns an integer indicating the duration of the video in microseconds.
 

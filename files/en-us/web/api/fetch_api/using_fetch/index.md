@@ -192,22 +192,22 @@ async function* makeTextFileLineIterator(fileURL) {
   let { value: chunk, done: readerDone } = await reader.read();
   chunk = chunk ? utf8Decoder.decode(chunk) : "";
 
-  const re = /\n|\r|\r\n/gm;
+  const newline = /\r?\n/gm;
   let startIndex = 0;
   let result;
 
   while (true) {
-    let result = re.exec(chunk);
+    const result = newline.exec(chunk);
     if (!result) {
       if (readerDone) break;
-      let remainder = chunk.substr(startIndex);
+      const remainder = chunk.substr(startIndex);
       ({ value: chunk, done: readerDone } = await reader.read());
       chunk = remainder + (chunk ? utf8Decoder.decode(chunk) : "");
-      startIndex = re.lastIndex = 0;
+      startIndex = newline.lastIndex = 0;
       continue;
     }
     yield chunk.substring(startIndex, result.index);
-    startIndex = re.lastIndex;
+    startIndex = newline.lastIndex;
   }
 
   if (startIndex < chunk.length) {

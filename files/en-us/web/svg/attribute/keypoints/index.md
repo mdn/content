@@ -2,9 +2,6 @@
 title: keyPoints
 slug: Web/SVG/Attribute/keyPoints
 page-type: svg-attribute
-tags:
-  - SVG
-  - SVG Attribute
 browser-compat: svg.elements.animateMotion.keyPoints
 ---
 
