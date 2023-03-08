@@ -1,10 +1,6 @@
 ---
 title: id
 slug: Web/Manifest/id
-tags:
-  - Manifest
-  - Web
-  - id
 browser-compat: html.manifest.id
 ---
 

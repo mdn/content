@@ -2,11 +2,6 @@
 title: Serializable object
 slug: Glossary/Serializable_object
 page-type: glossary-definition
-tags:
-  - Serializable
-  - Transferable
-  - Structured clone
-  - Workers
 ---
 
 **Serializable objects** are objects that can be serialized and later deserialized in any JavaScript environment ("realm").

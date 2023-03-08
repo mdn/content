@@ -2,12 +2,8 @@
 title: USBConnectionEvent
 slug: Web/API/USBConnectionEvent
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Reference
-  - USBConnectionEvent
-  - Experimental
+status:
+  - experimental
 browser-compat: api.USBConnectionEvent
 ---
 
@@ -32,11 +28,11 @@ The **`USBConnectionEvent`** interface of the {{domxref('WebUSB API','','',' ')}
 In the following example listening for connect and disconnect events is used to add and remove the devices from the user interface of an application.
 
 ```js
-navigator.usb.addEventListener('connect', (event) => {
+navigator.usb.addEventListener("connect", (event) => {
   // Add event.device to the UI.
 });
 
-navigator.usb.addEventListener('disconnect', (event) => {
+navigator.usb.addEventListener("disconnect", (event) => {
   // Remove event.device from the UI.
 });
 ```

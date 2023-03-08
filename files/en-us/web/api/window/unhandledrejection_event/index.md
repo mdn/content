@@ -2,20 +2,6 @@
 title: 'Window: unhandledrejection event'
 slug: Web/API/Window/unhandledrejection_event
 page-type: web-api-event
-tags:
-  - API
-  - Event
-  - HTML DOM
-  - JavaScript
-  - Promise
-  - Promises
-  - Reference
-  - Rejection
-  - Window
-  - Worker
-  - events
-  - global scope
-  - unhandledrejection
 browser-compat: api.Window.unhandledrejection_event
 ---
 

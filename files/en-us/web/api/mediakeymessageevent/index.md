@@ -2,13 +2,6 @@
 title: MediaKeyMessageEvent
 slug: Web/API/MediaKeyMessageEvent
 page-type: web-api-interface
-tags:
-  - API
-  - EncryptedMediaExtensions
-  - MediaKeyMessageEvent
-  - NeedsContent
-  - NeedsExample
-  - Reference
 browser-compat: api.MediaKeyMessageEvent
 ---
 

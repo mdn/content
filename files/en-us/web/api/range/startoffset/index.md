@@ -2,11 +2,6 @@
 title: Range.startOffset
 slug: Web/API/Range/startOffset
 page-type: web-api-instance-property
-tags:
-  - API
-  - DOM
-  - Property
-  - Range
 browser-compat: api.Range.startOffset
 ---
 
@@ -33,8 +28,8 @@ A number.
 
 ```js
 const range = document.createRange();
-range.setStart(startNode,startOffset);
-range.setEnd(endNode,endOffset);
+range.setStart(startNode, startOffset);
+range.setEnd(endNode, endOffset);
 const startRangeOffset = range.startOffset;
 ```
 

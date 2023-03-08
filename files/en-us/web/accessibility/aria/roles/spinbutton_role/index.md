@@ -1,15 +1,6 @@
 ---
 title: "ARIA: spinbutton role"
 slug: Web/Accessibility/ARIA/Roles/spinbutton_role
-tags:
-  - Accessibility
-  - ARIA
-  - roles
-  - Reference
-  - ARIA roles
-  - range role
-  - spinbutton role
-  - spinbutton
 spec-urls: https://w3c.github.io/aria/#spinbutton
 ---
 

@@ -1,18 +1,7 @@
 ---
-title: 'Advanced Svelte: Reactivity, lifecycle, accessibility'
+title: "Advanced Svelte: Reactivity, lifecycle, accessibility"
 slug: >-
   Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_reactivity_lifecycle_accessibility
-tags:
-  - Accessibility
-  - Beginner
-  - Components
-  - Frameworks
-  - JavaScript
-  - Learn
-  - Lifecycle
-  - Svelte
-  - client-side
-  - reactivity
 ---
 
 {{LearnSidebar}}

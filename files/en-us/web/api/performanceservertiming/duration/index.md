@@ -2,11 +2,6 @@
 title: PerformanceServerTiming.duration
 slug: Web/API/PerformanceServerTiming/duration
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - ServerTiming
 browser-compat: api.PerformanceServerTiming.duration
 ---
 

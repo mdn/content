@@ -2,11 +2,6 @@
 title: Attestation and Assertion
 slug: Web/API/Web_Authentication_API/Attestation_and_Assertion
 page-type: guide
-tags:
-  - API
-  - Guide
-  - Web Authentication API
-  - WebAuthn
 ---
 
 {{SeeCompatTable}}{{DefaultAPISidebar("Web Authentication API")}}

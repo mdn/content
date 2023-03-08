@@ -2,14 +2,6 @@
 title: CSSOM View
 slug: Web/CSS/CSSOM_View
 page-type: css-module
-tags:
-  - CSS
-  - CSSOM
-  - CSSOM View
-  - Guide
-  - Layout
-  - Overview
-  - Reference
 browser-compat: css.properties.scroll-behavior
 ---
 

@@ -1,14 +1,9 @@
 ---
-title: 'ServiceWorkerGlobalScope: periodicsync event'
+title: "ServiceWorkerGlobalScope: periodicsync event"
 slug: Web/API/ServiceWorkerGlobalScope/periodicsync_event
 page-type: web-api-event
-tags:
-  - Offline
-  - PWA
-  - Periodic Background Synchronization
-  - ServiceWorkerGlobalScope
-  - events
-  - Experimental
+status:
+  - experimental
 browser-compat: api.ServiceWorkerGlobalScope.periodicsync_event
 ---
 
@@ -23,9 +18,9 @@ This event is not cancelable and does not bubble.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('periodicsync', (event) => { });
+addEventListener("periodicsync", (event) => {});
 
-onperiodicsync = (event) => { };
+onperiodicsync = (event) => {};
 ```
 
 ## Event type
@@ -46,8 +41,8 @@ _Inherits properties from its ancestor, {{domxref("Event")}}_.
 The following example shows how to respond to a periodic sync event in the service worker.
 
 ```js
-self.addEventListener('periodicsync', (event) => {
-  if (event.tag === 'get-latest-news') {
+self.addEventListener("periodicsync", (event) => {
+  if (event.tag === "get-latest-news") {
     event.waitUntil(fetchAndCacheLatestNews());
   }
 });
@@ -57,7 +52,7 @@ You can also set up the event handler using the `onperiodicsync` property:
 
 ```js
 self.onperiodicsync = (event) => {
- // ...
+  // ...
 };
 ```
 

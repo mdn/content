@@ -2,11 +2,6 @@
 title: CSS values and units
 slug: Web/CSS/CSS_Values_and_Units
 page-type: guide
-tags:
-  - CSS
-  - Guide
-  - Reference
-  - values and units
 spec-urls:
   - https://drafts.csswg.org/css-values/
   - https://drafts.csswg.org/css-color/
@@ -294,3 +289,4 @@ Some legacy functional notations such as `rgba()` use commas, but generally comm
 
 - [CSS Basic Data Types](/en-US/docs/Web/CSS/CSS_Types)
 - [Introduction to CSS: Values and Units](/en-US/docs/Learn/CSS/Building_blocks/Values_and_units)
+- [Trigonometric functions in CSS](https://web.dev/css-trig-functions/)

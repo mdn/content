@@ -2,12 +2,6 @@
 title: HTMLMediaElement.controls
 slug: Web/API/HTMLMediaElement/controls
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTML DOM
-  - HTMLMediaElement
-  - Property
-  - Web
 browser-compat: api.HTMLMediaElement.controls
 ---
 
@@ -25,7 +19,7 @@ displayed.
 ## Examples
 
 ```js
-const obj = document.createElement('video');
+const obj = document.createElement("video");
 obj.controls = true;
 ```
 

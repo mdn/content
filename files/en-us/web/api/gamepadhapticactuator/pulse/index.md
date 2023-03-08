@@ -2,14 +2,6 @@
 title: GamepadHapticActuator.pulse()
 slug: Web/API/GamepadHapticActuator/pulse
 page-type: web-api-instance-method
-tags:
-  - API
-  - Gamepad
-  - Gamepad API
-  - GamepadHapticActuator
-  - Method
-  - Reference
-  - pulse
 browser-compat: api.GamepadHapticActuator.pulse
 ---
 

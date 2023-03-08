@@ -2,12 +2,6 @@
 title: Number.MIN_SAFE_INTEGER
 slug: Web/JavaScript/Reference/Global_Objects/Number/MIN_SAFE_INTEGER
 page-type: javascript-static-data-property
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Number
-  - Property
-  - Polyfill
 browser-compat: javascript.builtins.Number.MIN_SAFE_INTEGER
 ---
 

@@ -2,13 +2,8 @@
 title: "-webkit-mask-position-y"
 slug: Web/CSS/-webkit-mask-position-y
 page-type: css-property
-tags:
-  - CSS
-  - CSS Masking
-  - CSS Property
-  - Non-standard
-  - Reference
-  - recipe:css-property
+status:
+  - non-standard
 browser-compat: css.properties.-webkit-mask-position-y
 ---
 
@@ -91,4 +86,4 @@ Not part of any standard.
 
 ## See also
 
-{{cssxref("-webkit-mask-position")}}, {{cssxref("-webkit-mask-position-x")}}, {{cssxref("-webkit-mask-origin")}}, {{cssxref("-webkit-mask-attachment")}}
+{{cssxref("mask-position", "-webkit-mask-position")}}, {{cssxref("-webkit-mask-position-x")}}, {{cssxref("mask-origin", "-webkit-mask-origin")}}, {{cssxref("-webkit-mask-attachment")}}

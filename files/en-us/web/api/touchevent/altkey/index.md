@@ -2,14 +2,6 @@
 title: TouchEvent.altKey
 slug: Web/API/TouchEvent/altKey
 page-type: web-api-instance-property
-tags:
-  - API
-  - DOM
-  - Mobile
-  - Property
-  - TouchEvent
-  - touch
-  - Read-only
 browser-compat: api.TouchEvent.altKey
 ---
 
@@ -30,13 +22,17 @@ This example illustrates how to access the {{domxref("TouchEvent")}} key modifie
 In following code snippet, the {{domxref("Element/touchstart_event", "touchstart")}} event handler logs the state of the event's modifier keys.
 
 ```js
-someElement.addEventListener('touchstart', (e) => {
-   // Log the state of this event's modifier keys
-   console.log(`altKey = ${e.altKey}`);
-   console.log(`ctrlKey = ${e.ctrlKey}`);
-   console.log(`metaKey = ${e.metaKey}`);
-   console.log(`shiftKey = ${e.shiftKey}`);
-}, false);
+someElement.addEventListener(
+  "touchstart",
+  (e) => {
+    // Log the state of this event's modifier keys
+    console.log(`altKey = ${e.altKey}`);
+    console.log(`ctrlKey = ${e.ctrlKey}`);
+    console.log(`metaKey = ${e.metaKey}`);
+    console.log(`shiftKey = ${e.shiftKey}`);
+  },
+  false
+);
 ```
 
 ## Specifications

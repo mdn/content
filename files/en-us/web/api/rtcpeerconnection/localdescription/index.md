@@ -2,13 +2,6 @@
 title: RTCPeerConnection.localDescription
 slug: Web/API/RTCPeerConnection/localDescription
 page-type: web-api-instance-property
-tags:
-  - Property
-  - RTCPeerConnection
-  - Read-only
-  - Reference
-  - WebRTC
-  - localDescription
 browser-compat: api.RTCPeerConnection.localDescription
 ---
 
@@ -37,8 +30,7 @@ const pc = new RTCPeerConnection();
 const sd = pc.localDescription;
 if (sd) {
   alert(`Local session: type='${sd.type}'; sdp description='${sd.sdp}'`);
-}
-else {
+} else {
   alert("No local session yet.");
 }
 ```

@@ -2,17 +2,10 @@
 title: WakeLock.request()
 slug: Web/API/WakeLock/request
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - Screen Wake Lock API
-  - WakeLock
-  - Experimental
 browser-compat: api.WakeLock.request
 ---
 
-{{APIRef("Screen Wake Lock API")}}{{SecureContext_Header}}{{SeeCompatTable}}
+{{APIRef("Screen Wake Lock API")}}{{SecureContext_Header}}
 
 The **`request()`** method of the
 {{domxref("WakeLock")}} interface returns a {{jsxref("Promise")}} that resolves with a

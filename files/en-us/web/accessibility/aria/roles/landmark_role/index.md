@@ -1,15 +1,6 @@
 ---
 title: "ARIA: landmark role"
 slug: Web/Accessibility/ARIA/Roles/landmark_role
-tags:
-  - Accessibility
-  - ARIA
-  - roles
-  - landmark
-  - ARIA Role
-  - Abstract Role
-  - ARIA landmark
-  - Reference
 spec-urls: https://w3c.github.io/aria/#landmark
 ---
 

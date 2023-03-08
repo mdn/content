@@ -2,12 +2,6 @@
 title: TreeWalker.lastChild()
 slug: Web/API/TreeWalker/lastChild
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - DOM Reference
-  - Method
-  - TreeWalker
 browser-compat: api.TreeWalker.lastChild
 ---
 
@@ -35,9 +29,13 @@ A {{domxref("Node")}} object or `null`.
 
 ```js
 const treeWalker = document.createTreeWalker(
-    document.body,
-    NodeFilter.SHOW_ELEMENT,
-    { acceptNode(node) { return NodeFilter.FILTER_ACCEPT; } }
+  document.body,
+  NodeFilter.SHOW_ELEMENT,
+  {
+    acceptNode(node) {
+      return NodeFilter.FILTER_ACCEPT;
+    },
+  }
 );
 const node = treeWalker.lastChild(); // returns the last visible child of the root element
 ```

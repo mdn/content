@@ -2,16 +2,8 @@
 title: RTCRtpTransceiver.stopped
 slug: Web/API/RTCRtpTransceiver/stopped
 page-type: web-api-instance-property
-tags:
-  - API
-  - Deprecated
-  - Media
-  - Property
-  - RTCRtpTransceiver
-  - RTP
-  - Reference
-  - WebRTC
-  - stopped
+status:
+  - deprecated
 browser-compat: api.RTCRtpTransceiver.stopped
 ---
 

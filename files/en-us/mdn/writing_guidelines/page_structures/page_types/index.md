@@ -2,9 +2,6 @@
 title: Page types
 slug: MDN/Writing_guidelines/Page_structures/Page_types
 page-type: mdn-writing-guide
-tags:
-  - meta
-  - writing-guide
 ---
 
 {{MDNSidebar}}

@@ -2,12 +2,6 @@
 title: MediaStream.id
 slug: Web/API/MediaStream/id
 page-type: web-api-instance-property
-tags:
-  - MediaStream
-  - Property
-  - Read-only
-  - Reference
-  - Web
 browser-compat: api.MediaStream.id
 ---
 
@@ -24,11 +18,14 @@ A string.
 ## Examples
 
 ```js
-const promise = navigator.mediaDevices.getUserMedia({ audio: true, video: true });
+const promise = navigator.mediaDevices.getUserMedia({
+  audio: true,
+  video: true,
+});
 
 promise.then((stream) => {
-   console.log(stream.id);
-})
+  console.log(stream.id);
+});
 ```
 
 ## Specifications

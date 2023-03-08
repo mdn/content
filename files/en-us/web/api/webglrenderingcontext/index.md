@@ -2,20 +2,6 @@
 title: WebGLRenderingContext
 slug: Web/API/WebGLRenderingContext
 page-type: web-api-interface
-tags:
-  - 2D
-  - 3D
-  - API
-  - Canvas
-  - Context
-  - Drawing
-  - GL
-  - Graphics
-  - Interface
-  - Reference
-  - WebGL
-  - WebGLRenderingContext
-  - rendering
 browser-compat: api.WebGLRenderingContext
 ---
 
@@ -302,7 +288,7 @@ The following properties and methods provide general information and functionali
 
 ## Color spaces
 
-- {{domxref("WebGLRenderingContext.drawingBufferColorSpace")}} {{Experimental_Inline}}
+- {{domxref("WebGLRenderingContext.drawingBufferColorSpace")}}
   - : Specifies the color space of the WebGL drawing buffer.
 - {{domxref("WebGLRenderingContext.unpackColorSpace")}} {{Experimental_Inline}}
   - : Specifies the color space to convert to when importing textures.

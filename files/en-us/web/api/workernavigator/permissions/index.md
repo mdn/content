@@ -2,19 +2,10 @@
 title: WorkerNavigator.permissions
 slug: Web/API/WorkerNavigator/permissions
 page-type: web-api-instance-property
-tags:
-  - API
-  - Experimental
-  - Permissions
-  - Property
-  - Reference
-  - Web Workers
-  - WorkerNavigator
-  - Workers
 browser-compat: api.WorkerNavigator.permissions
 ---
 
-{{APIRef("Web Workers API")}}{{SeeCompatTable}}
+{{APIRef("Web Workers API")}}
 
 The **`WorkerNavigator.permissions`** read-only property
 returns a {{domxref("Permissions")}} object that can be used to query and update

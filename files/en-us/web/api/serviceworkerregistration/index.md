@@ -2,15 +2,6 @@
 title: ServiceWorkerRegistration
 slug: Web/API/ServiceWorkerRegistration
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Offline
-  - Reference
-  - Service Workers
-  - Service worker API
-  - ServiceWorkerRegistration
-  - Workers
 browser-compat: api.ServiceWorkerRegistration
 ---
 

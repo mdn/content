@@ -1,16 +1,6 @@
 ---
 title: Componentizing our React app
 slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_components
-tags:
-  - Beginner
-  - Frameworks
-  - JavaScript
-  - Learn
-  - React
-  - client-side
-  - events
-  - interactivity
-  - state
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_events_state", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
@@ -325,7 +315,7 @@ const taskList = props.tasks.map((task) => (
 
 ## Componentizing the rest of the app
 
-Now that we've got our most important component sorted out, we can turn the rest of our app into components. Remembering that components are either obvious pieces of UI, or reused pieces of UI, or both, we can make two more components:
+Now that we've got our most important component sorted out, we can turn the rest of our app into components. Remembering that components are either obvious pieces of UI, reused pieces of UI, or both, we can make two more components:
 
 - `<Form/>`
 - `<FilterButton/>`

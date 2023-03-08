@@ -2,13 +2,6 @@
 title: String.prototype.indexOf()
 slug: Web/JavaScript/Reference/Global_Objects/String/indexOf
 page-type: javascript-instance-method
-tags:
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - String
-  - indexOf
 browser-compat: javascript.builtins.String.indexOf
 ---
 

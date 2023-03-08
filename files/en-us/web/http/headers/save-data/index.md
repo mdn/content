@@ -1,14 +1,8 @@
 ---
 title: Save-Data
 slug: Web/HTTP/Headers/Save-Data
-tags:
-  - Save-Data
-  - Client hints
-  - HTTP
-  - HTTP Header
-  - Reference
-  - Request header
-  - Experimental
+status:
+  - experimental
 browser-compat: http.headers.Save-Data
 ---
 

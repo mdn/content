@@ -2,12 +2,6 @@
 title: Right shift (>>)
 slug: Web/JavaScript/Reference/Operators/Right_shift
 page-type: javascript-operator
-tags:
-  - Bitwise operator
-  - JavaScript
-  - Language feature
-  - Operator
-  - Reference
 browser-compat: javascript.operators.right_shift
 ---
 

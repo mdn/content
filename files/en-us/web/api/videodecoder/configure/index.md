@@ -2,17 +2,10 @@
 title: VideoDecoder.configure()
 slug: Web/API/VideoDecoder/configure
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - configure
-  - VideoDecoder
-  - Experimental
 browser-compat: api.VideoDecoder.configure
 ---
 
-{{APIRef("WebCodecs API")}}{{SecureContext_Header}}{{SeeCompatTable}}
+{{APIRef("WebCodecs API")}}{{SecureContext_Header}}
 
 The **`configure()`** method of the {{domxref("VideoDecoder")}} interface enqueues a control message to configure the video decoder for decoding chunks.
 
@@ -88,13 +81,13 @@ const init = {
   output: handleFrame,
   error: (e) => {
     console.log(e.message);
-  }
+  },
 };
 
 const config = {
-  codec: 'vp8',
+  codec: "vp8",
   codedWidth: 640,
-  codedHeight: 480
+  codedHeight: 480,
 };
 
 let decoder = new VideoDecoder(init);

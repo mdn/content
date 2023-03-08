@@ -2,14 +2,6 @@
 title: Credential.id
 slug: Web/API/Credential/id
 page-type: web-api-instance-property
-tags:
-  - API
-  - Credential
-  - Credential Management API
-  - Property
-  - Reference
-  - credential management
-  - id
 browser-compat: api.Credential.id
 ---
 

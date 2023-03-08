@@ -2,12 +2,6 @@
 title: FormData
 slug: Web/API/FormData
 page-type: web-api-interface
-tags:
-  - API
-  - FormData
-  - Interface
-  - Reference
-  - XMLHttpRequest
 browser-compat: api.FormData
 ---
 

@@ -2,14 +2,6 @@
 title: TouchEvent.metaKey
 slug: Web/API/TouchEvent/metaKey
 page-type: web-api-instance-property
-tags:
-  - API
-  - DOM
-  - Mobile
-  - Property
-  - TouchEvent
-  - touch
-  - Read-only
 browser-compat: api.TouchEvent.metaKey
 ---
 

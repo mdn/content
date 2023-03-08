@@ -2,21 +2,6 @@
 title: RTCRtpStreamStats.kind
 slug: Web/API/RTCRtpStreamStats/kind
 page-type: web-api-instance-property
-tags:
-  - API
-  - Audio
-  - Media
-  - Property
-  - RTCRtpStreamStats
-  - RTP
-  - Reference
-  - Statistics
-  - Stats
-  - Video
-  - WebRTC
-  - WebRTC API
-  - kind
-  - rtc
 browser-compat: api.RTCRtpStreamStats.kind
 ---
 

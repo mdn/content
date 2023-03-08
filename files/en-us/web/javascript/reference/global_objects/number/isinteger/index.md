@@ -2,12 +2,6 @@
 title: Number.isInteger()
 slug: Web/JavaScript/Reference/Global_Objects/Number/isInteger
 page-type: javascript-static-method
-tags:
-  - JavaScript
-  - Method
-  - Number
-  - Reference
-  - Polyfill
 browser-compat: javascript.builtins.Number.isInteger
 ---
 

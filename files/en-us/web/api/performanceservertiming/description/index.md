@@ -2,11 +2,6 @@
 title: PerformanceServerTiming.description
 slug: Web/API/PerformanceServerTiming/description
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - ServerTiming
 browser-compat: api.PerformanceServerTiming.description
 ---
 

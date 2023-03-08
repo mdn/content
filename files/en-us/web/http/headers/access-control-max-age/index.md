@@ -1,11 +1,6 @@
 ---
 title: Access-Control-Max-Age
 slug: Web/HTTP/Headers/Access-Control-Max-Age
-tags:
-  - CORS
-  - HTTP
-  - Reference
-  - header
 browser-compat: http.headers.Access-Control-Max-Age
 ---
 

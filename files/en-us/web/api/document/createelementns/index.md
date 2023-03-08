@@ -2,11 +2,6 @@
 title: Document.createElementNS()
 slug: Web/API/Document/createElementNS
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - Method
-  - Reference
 browser-compat: api.Document.createElementNS
 ---
 

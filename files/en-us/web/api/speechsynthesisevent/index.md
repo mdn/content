@@ -2,14 +2,6 @@
 title: SpeechSynthesisEvent
 slug: Web/API/SpeechSynthesisEvent
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Reference
-  - SpeechSynthesisEvent
-  - Web Speech API
-  - speech
-  - synthesis
 browser-compat: api.SpeechSynthesisEvent
 ---
 
@@ -43,12 +35,16 @@ _The {{domxref("SpeechSynthesisEvent")}} interface also inherits methods from it
 ```js
 utterThis.onpause = (event) => {
   const char = event.utterance.text.charAt(event.charIndex);
-  console.log(`Speech paused at character ${event.charIndex} of "${event.utterance.text}", which is "${char}".`);
-}
+  console.log(
+    `Speech paused at character ${event.charIndex} of "${event.utterance.text}", which is "${char}".`
+  );
+};
 
 utterThis.onboundary = (event) => {
-  console.log(`${event.name} boundary reached after ${event.elapsedTime} seconds.`);
-}
+  console.log(
+    `${event.name} boundary reached after ${event.elapsedTime} seconds.`
+  );
+};
 ```
 
 ## Specifications

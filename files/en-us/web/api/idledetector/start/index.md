@@ -2,13 +2,8 @@
 title: IdleDetector.start()
 slug: Web/API/IdleDetector/start
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - start
-  - IdleDetector
-  - Experimental
+status:
+  - experimental
 browser-compat: api.IdleDetector.start
 ---
 
@@ -58,7 +53,7 @@ await idleDetector.start({
   threshold: 60_000,
   signal,
 });
-console.log('IdleDetector is active.');
+console.log("IdleDetector is active.");
 ```
 
 ## Specifications

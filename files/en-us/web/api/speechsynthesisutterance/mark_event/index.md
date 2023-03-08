@@ -1,11 +1,7 @@
 ---
-title: 'SpeechSynthesisUtterance: mark event'
+title: "SpeechSynthesisUtterance: mark event"
 slug: Web/API/SpeechSynthesisUtterance/mark_event
 page-type: web-api-event
-tags:
-  - Event
-  - Reference
-  - Web Speech API
 browser-compat: api.SpeechSynthesisUtterance.mark_event
 ---
 
@@ -18,9 +14,9 @@ The **`mark`** event of the [Web Speech API](/en-US/docs/Web/API/Web_Speech_API)
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('mark', (event) => { })
+addEventListener("mark", (event) => {});
 
-onmark = (event) => { }
+onmark = (event) => {};
 ```
 
 ## Event type
@@ -47,7 +43,7 @@ _In addition to the properties listed below, properties from the parent interfac
 You can use the `mark` event in an [`addEventListener`](/en-US/docs/Web/API/EventTarget/addEventListener) method:
 
 ```js
-utterThis.addEventListener('mark', (event) => {
+utterThis.addEventListener("mark", (event) => {
   console.log(`A mark was reached: ${event.name}`);
 });
 ```
@@ -57,7 +53,7 @@ Or use the `onmark` event handler property:
 ```js
 utterThis.onmark = (event) => {
   console.log(`A mark was reached: ${event.name}`);
-}
+};
 ```
 
 ## Specifications

@@ -2,11 +2,6 @@
 title: HTMLOutputElement
 slug: Web/API/HTMLOutputElement
 page-type: web-api-interface
-tags:
-  - API
-  - HTML DOM
-  - Interface
-  - Reference
 browser-compat: api.HTMLOutputElement
 ---
 

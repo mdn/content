@@ -1,10 +1,6 @@
 ---
 title: Content-Language
 slug: Web/HTTP/Headers/Content-Language
-tags:
-  - HTTP
-  - Headers
-  - Reference
 browser-compat: http.headers.Content-Language
 ---
 

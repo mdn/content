@@ -1,10 +1,7 @@
 ---
 title: Contributing to MDN
 slug: MDN/Contribute
-tags:
-  - Guide
-  - Landing
-  - MDN Meta
+page-type: landing-page
 ---
 
 {{MDNSidebar}}

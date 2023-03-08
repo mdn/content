@@ -2,13 +2,8 @@
 title: WorkerNavigator.appVersion
 slug: Web/API/WorkerNavigator/appVersion
 page-type: web-api-instance-property
-tags:
-  - API
-  - Deprecated
-  - WorkerNavigator
-  - Property
-  - Reference
-  - appVersion
+status:
+  - deprecated
 browser-compat: api.WorkerNavigator.appVersion
 ---
 

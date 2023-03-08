@@ -4,6 +4,7 @@ slug: Web/API/DocumentType/name
 page-type: web-api-instance-property
 browser-compat: api.DocumentType.name
 ---
+
 {{APIRef("DOM")}}
 
 The read-only **`name`** property of the {{domxref("DocumentType")}} returns the type of the document.

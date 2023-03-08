@@ -2,14 +2,6 @@
 title: IIRFilterNode()
 slug: Web/API/IIRFilterNode/IIRFilterNode
 page-type: web-api-constructor
-tags:
-  - API
-  - Audio
-  - Constructor
-  - IIRFilterNode
-  - Media
-  - Reference
-  - Web Audio API
 browser-compat: api.IIRFilterNode.IIRFilterNode
 ---
 
@@ -70,7 +62,10 @@ let feedBackward = [1.0126964558, -1.9991880801, 0.9873035442];
 const AudioContext = window.AudioContext || window.webkitAudioContext;
 const audioCtx = new AudioContext();
 
-const iirFilter = new IIRFilterNode(audioCtx, { feedforward: feedForward, feedback: feedBackward });
+const iirFilter = new IIRFilterNode(audioCtx, {
+  feedforward: feedForward,
+  feedback: feedBackward,
+});
 ```
 
 ## Specifications

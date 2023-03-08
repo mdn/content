@@ -2,12 +2,6 @@
 title: WorkerLocation.pathname
 slug: Web/API/WorkerLocation/pathname
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Read-only
-  - Reference
-  - WorkerLocation
 browser-compat: api.WorkerLocation.pathname
 ---
 

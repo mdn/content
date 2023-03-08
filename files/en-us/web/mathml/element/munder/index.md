@@ -1,11 +1,6 @@
 ---
 title: <munder>
 slug: Web/MathML/Element/munder
-tags:
-  - MathML
-  - MathML Reference
-  - MathML:Element
-  - MathML:Script and Limit Schemata
 browser-compat: mathml.elements.munder
 ---
 

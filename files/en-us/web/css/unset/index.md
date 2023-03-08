@@ -2,15 +2,6 @@
 title: unset
 slug: Web/CSS/unset
 page-type: css-keyword
-tags:
-  - CSS
-  - CSS Cascade
-  - CSS Value
-  - Keyword
-  - Layout
-  - Reference
-  - Style
-  - unset
 browser-compat: css.types.global_keywords.unset
 ---
 

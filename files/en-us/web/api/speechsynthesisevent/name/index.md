@@ -2,15 +2,6 @@
 title: SpeechSynthesisEvent.name
 slug: Web/API/SpeechSynthesisEvent/name
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - SpeechSynthesisEvent
-  - Web Speech API
-  - name
-  - speech
-  - synthesis
 browser-compat: api.SpeechSynthesisEvent.name
 ---
 
@@ -27,8 +18,10 @@ A string.
 
 ```js
 utterThis.onboundary = (event) => {
-  console.log(`${event.name} boundary reached after ${event.elapsedTime} seconds.`);
-}
+  console.log(
+    `${event.name} boundary reached after ${event.elapsedTime} seconds.`
+  );
+};
 ```
 
 ## Specifications

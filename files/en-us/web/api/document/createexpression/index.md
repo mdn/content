@@ -2,13 +2,6 @@
 title: Document.createExpression()
 slug: Web/API/Document/createExpression
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - Method
-  - Reference
-  - XPath
-  - createExpression
 browser-compat: api.Document.createExpression
 ---
 

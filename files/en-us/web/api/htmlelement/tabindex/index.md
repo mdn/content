@@ -2,13 +2,6 @@
 title: HTMLElement.tabIndex
 slug: Web/API/HTMLElement/tabIndex
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTML DOM
-  - HTMLElement
-  - Property
-  - Reference
-  - tabIndex
 browser-compat: api.HTMLElement.tabIndex
 ---
 
@@ -37,7 +30,7 @@ An integer.
 ## Examples
 
 ```js
-const b1 = document.getElementById('button1');
+const b1 = document.getElementById("button1");
 
 b1.tabIndex = 1;
 ```

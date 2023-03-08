@@ -2,13 +2,6 @@
 title: Optional chaining (?.)
 slug: Web/JavaScript/Reference/Operators/Optional_chaining
 page-type: javascript-operator
-tags:
-  - Chaining
-  - JavaScript
-  - Language feature
-  - Operator
-  - Optional chaining
-  - Reference
 browser-compat: javascript.operators.optional_chaining
 ---
 

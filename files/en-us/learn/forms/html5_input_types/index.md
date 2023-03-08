@@ -1,15 +1,6 @@
 ---
 title: The HTML5 input types
 slug: Learn/Forms/HTML5_input_types
-tags:
-  - Beginner
-  - Controls
-  - Example
-  - Forms
-  - Guide
-  - HTML
-  - Web
-  - Widgets
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Forms/Basic_native_form_controls", "Learn/Forms/Other_form_controls", "Learn/Forms")}}

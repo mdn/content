@@ -2,14 +2,6 @@
 title: caches
 slug: Web/API/caches
 page-type: web-api-global-property
-tags:
-  - API
-  - Property
-  - Read-only
-  - Reference
-  - Service Workers
-  - Web Workers
-  - Window
 browser-compat: api.caches
 ---
 

@@ -2,13 +2,6 @@
 title: orientation
 slug: Web/CSS/@media/orientation
 page-type: css-media-feature
-tags:
-  - "@media"
-  - CSS
-  - Media Queries
-  - NeedsBrowserCompatibility
-  - Reference
-  - media feature
 browser-compat: css.at-rules.media.orientation
 ---
 

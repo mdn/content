@@ -2,15 +2,6 @@
 title: Range.setEnd()
 slug: Web/API/Range/setEnd
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - DOM API
-  - End
-  - Method
-  - Range
-  - Reference
-  - setEnd
 browser-compat: api.Range.setEnd
 ---
 
@@ -57,7 +48,7 @@ the start of the `endNode`.
 
 ```js
 const range = document.createRange();
-const endNode = document.getElementsByTagName('p').item(3);
+const endNode = document.getElementsByTagName("p").item(3);
 const endOffset = endNode.childNodes.length;
 range.setEnd(endNode, endOffset);
 ```

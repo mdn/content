@@ -1,16 +1,9 @@
 ---
 title: "CSP: referrer"
 slug: Web/HTTP/Headers/Content-Security-Policy/referrer
-tags:
-  - CSP
-  - Content-Security-Policy
-  - Directive
-  - HTTP
-  - Deprecated
-  - Reference
-  - Security
-  - referrer
-  - Non-standard
+status:
+  - deprecated
+  - non-standard
 browser-compat: http.headers.Content-Security-Policy.referrer
 ---
 

@@ -2,13 +2,8 @@
 title: HighlightRegistry.set()
 slug: Web/API/HighlightRegistry/set
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - CSS Custom Highlight API
-  - Reference
-  - set
-  - Experimental
+status:
+  - experimental
 browser-compat: api.HighlightRegistry.set
 spec-urls: https://tc39.es/ecma262/multipage/keyed-collections.html#sec-map.prototype.set
 ---
@@ -54,9 +49,10 @@ const fooHighlight = new Highlight();
 const barHighlight = new Highlight();
 const bazHighlight = new Highlight();
 
-CSS.highlights.set("foo", fooHighlight)
-              .set("bar", barHighlight)
-              .set("baz", bazHighlight);
+CSS.highlights
+  .set("foo", fooHighlight)
+  .set("bar", barHighlight)
+  .set("baz", bazHighlight);
 ```
 
 ## Specifications

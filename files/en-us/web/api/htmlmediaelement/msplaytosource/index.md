@@ -2,10 +2,8 @@
 title: HTMLMediaElement.msPlayToSource
 slug: Web/API/HTMLMediaElement/msPlayToSource
 page-type: web-api-instance-property
-tags:
-  - msPlayToSource
-  - Non-standard
-  - Property
+status:
+  - non-standard
 ---
 
 {{APIRef("HTML DOM")}}
@@ -44,11 +42,11 @@ const ptm = windows.media.playTo.playToManager.getForCurrentView();
 
 // Step 2: Register for the sourcerequested event (user swipes Devices charm).
 ptm.addEventListener("sourcerequested", (event) => {
-
   // Step 3: Specify the media to be streamed (to filter devices).
-  event.sourceRequest.setSource(document.getElementById("videoplayer").msPlayToSource);
+  event.sourceRequest.setSource(
+    document.getElementById("videoplayer").msPlayToSource
+  );
 
   // The media will then be streamed to the device chosen by the user in the UI.
-
 });
 ```

@@ -1,15 +1,6 @@
 ---
 title: declarativeNetRequest.MatchedRule
 slug: Mozilla/Add-ons/WebExtensions/API/declarativeNetRequest/MatchedRule
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Reference
-  - WebExtensions
-  - Type
-  - declarativeNetRequest
-  - MatchedRule
 browser-compat: webextensions.api.declarativeNetRequest.MatchedRule
 ---
 

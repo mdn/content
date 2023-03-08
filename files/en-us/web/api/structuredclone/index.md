@@ -2,14 +2,6 @@
 title: structuredClone()
 slug: Web/API/structuredClone
 page-type: web-api-global-function
-tags:
-  - API
-  - DOM
-  - Method
-  - NeedsCompatTable
-  - Reference
-  - structuredClone
-  - Polyfill
 browser-compat: api.structuredClone
 ---
 

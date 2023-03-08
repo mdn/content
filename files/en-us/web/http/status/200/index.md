@@ -1,10 +1,6 @@
 ---
 title: 200 OK
 slug: Web/HTTP/Status/200
-tags:
-  - HTTP
-  - Status code
-  - Success
 browser-compat: http.status.200
 ---
 

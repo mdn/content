@@ -2,14 +2,8 @@
 title: String.prototype.strike()
 slug: Web/JavaScript/Reference/Global_Objects/String/strike
 page-type: javascript-instance-method
-tags:
-  - Deprecated
-  - HTML wrapper methods
-  - JavaScript
-  - Method
-  - Prototype
-  - String
-  - Polyfill
+status:
+  - deprecated
 browser-compat: javascript.builtins.String.strike
 ---
 

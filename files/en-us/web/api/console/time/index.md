@@ -2,13 +2,6 @@
 title: console.time()
 slug: Web/API/console/time
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - Debugging
-  - Method
-  - Web Development
-  - web console
 browser-compat: api.console.time
 ---
 

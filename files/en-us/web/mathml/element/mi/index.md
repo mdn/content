@@ -1,11 +1,6 @@
 ---
 title: <mi>
 slug: Web/MathML/Element/mi
-tags:
-  - MathML
-  - MathML Reference
-  - MathML:Element
-  - MathML:Token Elements
 browser-compat: mathml.elements.mi
 ---
 

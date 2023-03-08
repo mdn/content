@@ -2,17 +2,10 @@
 title: VideoEncoder.encode()
 slug: Web/API/VideoEncoder/encode
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - encode
-  - VideoEncoder
-  - Experimental
 browser-compat: api.VideoEncoder.encode
 ---
 
-{{APIRef("WebCodecs API")}}{{SecureContext_Header}}{{SeeCompatTable}}
+{{APIRef("WebCodecs API")}}{{SecureContext_Header}}
 
 The **`encode()`** method of the {{domxref("VideoEncoder")}} interface enqueues a control message to encode a given {{domxref("VideoFrame")}}.
 

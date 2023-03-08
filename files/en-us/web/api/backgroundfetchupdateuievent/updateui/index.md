@@ -2,13 +2,8 @@
 title: BackgroundFetchUpdateUIEvent.updateUI()
 slug: Web/API/BackgroundFetchUpdateUIEvent/updateUI
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - updateUI
-  - BackgroundFetchUpdateUIEvent
-  - Experimental
+status:
+  - experimental
 browser-compat: api.BackgroundFetchUpdateUIEvent.updateUI
 ---
 

@@ -1,12 +1,6 @@
 ---
 title: Navigation and resource timings
 slug: Web/Performance/Navigation_and_resource_timings
-tags:
-  - Navigation Timing
-  - Resource Timing
-  - Timings
-  - Web Performance
-  - performance APIs
 ---
 
 {{QuickLinksWithSubPages("Web/Performance")}}
@@ -23,7 +17,7 @@ The performance timing API provided read only times, in milliseconds(ms), descri
 
 ![Navigation Timing event metrics](screen_shot_2019-05-03_at_1.06.27_pm.png)
 
-With the metrics above, and a bit of math, we can calculate many important metrics like [time to first byte](/en-US/docs/Glossary/time_to_first_byte), page load time, dns lookup, and whether the connection is secure.
+With the metrics above, and a bit of math, we can calculate many important metrics like [time to first byte](/en-US/docs/Glossary/Time_to_first_byte), page load time, dns lookup, and whether the connection is secure.
 
 To help measure the time it takes to complete all the steps, the Performance Timing API provides read only measurements of navigation timings. To view and capture our app's timing we enter:
 
@@ -308,7 +302,7 @@ const ssl = time.requestStart - time.secureConnectionStart;
 
 ### Time to first byte
 
-[Time to First Byte](/en-US/docs/Glossary/time_to_first_byte) is the time between the `navigationStart` (start of the navigation) and `responseStart`, (when the first byte of response data is received) available in the `performanceTiming` API:
+[Time to First Byte](/en-US/docs/Glossary/Time_to_first_byte) is the time between the `navigationStart` (start of the navigation) and `responseStart`, (when the first byte of response data is received) available in the `performanceTiming` API:
 
 ```js
 const ttfb = time.responseStart - time.navigationStart;
@@ -340,7 +334,7 @@ const tcp = time.connectEnd - time.connectStart;
 
 ### SSL negotiation
 
-[`secureConnectionStart`](/en-US/docs/Web/API/PerformanceResourceTiming/secureConnectionStart) will be `undefined` if not available, `0` if [https](/en-US/docs/Glossary/https) in not used, or a timestamp if available, and used. In other words, if a secure connection was used, `secureConnectionStart` will be [truthy](/en-US/docs/Glossary/Truthy), and the time between `secureConnectionStart` and `requestStart` will greater than 0.
+[`secureConnectionStart`](/en-US/docs/Web/API/PerformanceResourceTiming/secureConnectionStart) will be `undefined` if not available, `0` if [HTTPS](/en-US/docs/Glossary/HTTPS) in not used, or a timestamp if available, and used. In other words, if a secure connection was used, `secureConnectionStart` will be [truthy](/en-US/docs/Glossary/Truthy), and the time between `secureConnectionStart` and `requestStart` will greater than 0.
 
 ```js
 const ssl = time.requestStart - time.secureConnectionStart;

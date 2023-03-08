@@ -2,14 +2,6 @@
 title: CSSPropertyRule
 slug: Web/API/CSSPropertyRule
 page-type: web-api-interface
-tags:
-  - API
-  - CSS
-  - CSS Properties and Values API
-  - CSSPropertyRule
-  - Houdini
-  - Interface
-  - Reference
 browser-compat: api.CSSPropertyRule
 ---
 

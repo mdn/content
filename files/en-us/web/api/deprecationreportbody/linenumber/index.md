@@ -2,13 +2,8 @@
 title: DeprecationReportBody.lineNumber
 slug: Web/API/DeprecationReportBody/lineNumber
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - Experimental
-  - lineNumber
-  - DeprecationReportBody
+status:
+  - experimental
 browser-compat: api.DeprecationReportBody.lineNumber
 ---
 
@@ -28,9 +23,9 @@ In this example we create a new {{domxref("ReportingObserver")}} to observe depr
 
 ```js
 let options = {
-  types: ['deprecation'],
-  buffered: true
-}
+  types: ["deprecation"],
+  buffered: true,
+};
 
 let observer = new ReportingObserver((reports, observer) => {
   let firstReport = reports[0];

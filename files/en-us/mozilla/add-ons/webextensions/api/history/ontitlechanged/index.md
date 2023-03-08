@@ -2,14 +2,6 @@
 title: history.onTitleChanged
 slug: Mozilla/Add-ons/WebExtensions/API/history/onTitleChanged
 page-type: webextension-api-event
-tags:
-  - API
-  - Add-ons
-  - Event
-  - History
-  - Reference
-  - WebExtensions
-  - onTitleChanged
 browser-compat: webextensions.api.history.onTitleChanged
 ---
 

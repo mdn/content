@@ -2,14 +2,8 @@
 title: color-mix()
 slug: Web/CSS/color_value/color-mix
 page-type: css-function
-tags:
-  - CSS
-  - CSS Data Type
-  - Data Type
-  - Reference
-  - Web
-  - color-mix
-  - Experimental
+status:
+  - experimental
 browser-compat: css.types.color.color-mix
 ---
 

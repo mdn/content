@@ -2,11 +2,6 @@
 title: PannerNode.orientationZ
 slug: Web/API/PannerNode/orientationZ
 page-type: web-api-instance-property
-tags:
-  - Audio
-  - PannerNode
-  - Property
-  - Web Audio
 browser-compat: api.PannerNode.orientationZ
 ---
 

@@ -1,12 +1,6 @@
 ---
 title: WebAssembly numeric instructions
 slug: WebAssembly/Reference/Numeric
-tags:
-  - WebAssembly
-  - wasm
-  - Landing page
-  - Reference
-  - Numeric
 ---
 
 {{WebAssemblySidebar}}

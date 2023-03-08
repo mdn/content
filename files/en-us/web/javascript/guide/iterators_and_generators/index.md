@@ -2,11 +2,6 @@
 title: Iterators and generators
 slug: Web/JavaScript/Guide/Iterators_and_Generators
 page-type: guide
-tags:
-  - Guide
-  - Intermediate
-  - JavaScript
-  - "l10n:priority"
 ---
 
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Using_promises", "Web/JavaScript/Guide/Meta_programming")}}

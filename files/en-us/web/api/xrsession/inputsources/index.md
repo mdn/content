@@ -9,7 +9,7 @@ browser-compat: api.XRSession.inputSources
 
 {{APIRef("WebXR Device API")}}{{SeeCompatTable}}
 
-The _read-only_ **`inputSources`** property of the
+The read-only **`inputSources`** property of the
 {{DOMxRef("XRSession")}} interface returns an {{domxref("XRInputSourceArray")}} object
 which lists all controllers and input devices which are expressly associated with the
 XR device and are currently available. These controllers may include handheld
@@ -44,5 +44,5 @@ reference to the list that you've previously saved.
 ## See also
 
 - {{DOMxRef("XRInputSource")}}
-- {{DOMxRef("XRSession.oninputsourceschange")}}
+- The {{DOMxRef("XRSession.inputsourceschange_event", "inputsourceschange")}} event
 - [Gamepad API](/en-US/docs/Web/API/Gamepad_API)

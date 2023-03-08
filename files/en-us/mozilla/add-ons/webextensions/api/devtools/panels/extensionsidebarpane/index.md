@@ -2,16 +2,6 @@
 title: devtools.panels.ExtensionSidebarPane
 slug: Mozilla/Add-ons/WebExtensions/API/devtools/panels/ExtensionSidebarPane
 page-type: webextension-api-type
-tags:
-  - API
-  - Add-ons
-  - DevTools
-  - Extensions
-  - Type
-  - Reference
-  - WebExtensions
-  - devtools.panels
-  - devtools.panels.ExtensionSidebarPane
 browser-compat: webextensions.api.devtools.panels.ExtensionSidebarPane
 ---
 

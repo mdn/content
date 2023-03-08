@@ -2,11 +2,6 @@
 title: GamepadButton
 slug: Web/API/GamepadButton
 page-type: web-api-interface
-tags:
-  - API
-  - Gamepad API
-  - Games
-  - Reference
 browser-compat: api.GamepadButton
 ---
 
@@ -47,7 +42,7 @@ function gameLoop() {
   ball.style.top = `${b * 2}px`;
 
   requestAnimationFrame(gameLoop);
-};
+}
 ```
 
 ## Specifications

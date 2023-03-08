@@ -2,12 +2,6 @@
 title: ValidityState.typeMismatch
 slug: Web/API/ValidityState/typeMismatch
 page-type: web-api-instance-property
-tags:
-  - API
-  - Constraint Validation API
-  - DOM
-  - Property
-  - Reference
 browser-compat: api.ValidityState.typeMismatch
 ---
 
@@ -67,6 +61,6 @@ The `typeMismatch` occurs when there is a disconnect between the [`value`](/en-U
 
 ## See also
 
-- [Constraint validation](/en-US/docs/Web/Guide/HTML/Constraint_validation)
+- [Constraint validation](/en-US/docs/Web/HTML/Constraint_validation)
 - [Forms: Data form validation](/en-US/docs/Learn/Forms/Form_validation)
 - [Regular Expressions](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions)
