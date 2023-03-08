@@ -2,12 +2,10 @@
 title: CSSUnitValue()
 slug: Web/API/CSSUnitValue/CSSUnitValue
 page-type: web-api-constructor
-status:
-  - experimental
 browser-compat: api.CSSUnitValue.CSSUnitValue
 ---
 
-{{APIRef("CSS Typed Object Model API")}}{{SeeCompatTable}}
+{{APIRef("CSS Typed Object Model API")}}
 
 The **`CSSUnitValue()`** constructor creates a
 new {{domxref("CSSUnitValue")}} object which returns a new {{domxref('CSSUnitValue')}}

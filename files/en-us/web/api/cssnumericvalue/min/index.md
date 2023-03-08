@@ -2,12 +2,10 @@
 title: CSSNumericValue.min()
 slug: Web/API/CSSNumericValue/min
 page-type: web-api-instance-method
-status:
-  - experimental
 browser-compat: api.CSSNumericValue.min
 ---
 
-{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
+{{APIRef("CSS Typed OM")}}
 
 The **`min()`** method of the
 {{domxref("CSSNumericValue")}} interface returns the lowest value from among those
