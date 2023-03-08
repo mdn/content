@@ -1,6 +1,6 @@
 ---
-title: Installation
-slug: Web/Progressive_web_apps/Guides/Installation
+title: Making PWAs installable
+slug: Web/Progressive_web_apps/Guides/Making_PWAs_installable
 ---
 
 One of the defining aspects of a PWA is that it can be installed on the device, and then appears to users as a platform-specific app, a permanent feature of their device which they can launch directly from the operating system like any other app.
@@ -64,6 +64,8 @@ For a full description of every member, see the [web app manifest reference docu
 ### HTTPS
 
 For a web app to be installable, it must be served over HTTPS.
+
+Note that to make development easier, browsers do not require HTTPS if the web app is accessed via the `localhost` domain.
 
 ### Service worker
 
