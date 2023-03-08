@@ -1,16 +1,7 @@
 ---
 title: downloads.onChanged
 slug: Mozilla/Add-ons/WebExtensions/API/downloads/onChanged
-tags:
-  - API
-  - Add-ons
-  - Event
-  - Extensions
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - downloads
-  - onChanged
+page-type: webextension-api-event
 browser-compat: webextensions.api.downloads.onChanged
 ---
 

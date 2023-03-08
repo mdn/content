@@ -2,12 +2,6 @@
 title: PerformanceMeasure
 slug: Web/API/PerformanceMeasure
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Performance Timeline API
-  - Reference
-  - Web Performance
 browser-compat: api.PerformanceMeasure
 ---
 

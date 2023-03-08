@@ -1,15 +1,7 @@
 ---
 title: omnibox.setDefaultSuggestion()
 slug: Mozilla/Add-ons/WebExtensions/API/omnibox/setDefaultSuggestion
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Reference
-  - WebExtensions
-  - omnibox
-  - setDefaultSuggestion
+page-type: webextension-api-function
 browser-compat: webextensions.api.omnibox.setDefaultSuggestion
 ---
 

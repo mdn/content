@@ -2,15 +2,6 @@
 title: RTCPeerConnection.getReceivers()
 slug: Web/API/RTCPeerConnection/getReceivers
 page-type: web-api-instance-method
-tags:
-  - Media
-  - Method
-  - RTCPeerConnection
-  - RTP
-  - Reference
-  - WebRTC
-  - WebRTC API
-  - getReceivers
 browser-compat: api.RTCPeerConnection.getReceivers
 ---
 

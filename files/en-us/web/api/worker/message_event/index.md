@@ -2,12 +2,6 @@
 title: 'Worker: message event'
 slug: Web/API/Worker/message_event
 page-type: web-api-event
-tags:
-  - API
-  - Worker
-  - Event
-  - Reference
-  - message
 browser-compat: api.Worker.message_event
 ---
 

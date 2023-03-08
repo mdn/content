@@ -2,12 +2,6 @@
 title: Subtraction assignment (-=)
 slug: Web/JavaScript/Reference/Operators/Subtraction_assignment
 page-type: javascript-operator
-tags:
-  - Assignment operator
-  - JavaScript
-  - Language feature
-  - Operator
-  - Reference
 browser-compat: javascript.operators.subtraction_assignment
 ---
 
@@ -32,7 +26,7 @@ x -= y // x = x - y
 let bar = 5;
 
 bar -= 2; // 3
-bar -= 'foo'; // NaN
+bar -= "foo"; // NaN
 ```
 
 ## Specifications

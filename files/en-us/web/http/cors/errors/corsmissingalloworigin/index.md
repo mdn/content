@@ -1,18 +1,6 @@
 ---
 title: "Reason: CORS header 'Access-Control-Allow-Origin' missing"
 slug: Web/HTTP/CORS/Errors/CORSMissingAllowOrigin
-tags:
-  - CORS
-  - CORSMissingAllowOrigin
-  - Cross-Origin
-  - Error
-  - HTTP
-  - HTTPS
-  - Messages
-  - Reasons
-  - Security
-  - console
-  - troubleshooting
 ---
 
 {{HTTPSidebar}}

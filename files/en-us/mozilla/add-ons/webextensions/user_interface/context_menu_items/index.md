@@ -1,8 +1,7 @@
 ---
 title: Context menu items
 slug: Mozilla/Add-ons/WebExtensions/user_interface/Context_menu_items
-tags:
-  - WebExtensions
+page-type: guide
 ---
 
 {{AddonSidebar}}

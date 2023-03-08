@@ -2,14 +2,6 @@
 title: AudioListener.positionY
 slug: Web/API/AudioListener/positionY
 page-type: web-api-instance-property
-tags:
-  - API
-  - Audio
-  - AudioListener
-  - Property
-  - Reference
-  - Web Audio API
-  - positionY
 browser-compat: api.AudioListener.positionY
 ---
 

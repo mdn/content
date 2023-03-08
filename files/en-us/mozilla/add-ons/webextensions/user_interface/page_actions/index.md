@@ -1,11 +1,7 @@
 ---
 title: Address bar button
 slug: Mozilla/Add-ons/WebExtensions/user_interface/Page_actions
-tags:
-  - AddressBarButton
-  - Page Action
-  - User Interface
-  - WebExtensions
+page-type: guide
 ---
 
 {{AddonSidebar}}

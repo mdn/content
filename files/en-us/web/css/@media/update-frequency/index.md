@@ -2,13 +2,8 @@
 title: update
 slug: Web/CSS/@media/update-frequency
 page-type: css-media-feature
-tags:
-  - "@media"
-  - CSS
-  - Media Queries
-  - Reference
-  - media feature
-  - Experimental
+status:
+  - experimental
 browser-compat: css.at-rules.media.update
 ---
 
@@ -38,7 +33,10 @@ The `update` feature is specified as a single keyword value chosen from the list
 ### HTML
 
 ```html
-<p>If this text animates for you, your browser supports `update` and you are using a fast-updating device.</p>
+<p>
+  If this text animates for you, your browser supports `update` and you are
+  using a fast-updating device.
+</p>
 ```
 
 ### CSS

@@ -2,12 +2,6 @@
 title: Window.menubar
 slug: Web/API/Window/menubar
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTML DOM
-  - Property
-  - Reference
-  - Window
 browser-compat: api.Window.menubar
 ---
 

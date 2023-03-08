@@ -2,18 +2,6 @@
 title: BaseAudioContext.createBuffer()
 slug: Web/API/BaseAudioContext/createBuffer
 page-type: web-api-instance-method
-tags:
-  - API
-  - Audio
-  - AudioContext
-  - BaseAudioContext
-  - Buffer
-  - Media
-  - Method
-  - Reference
-  - Web Audio
-  - Web Audio API
-  - createBuffer
 browser-compat: api.BaseAudioContext.createBuffer
 ---
 

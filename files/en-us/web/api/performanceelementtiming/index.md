@@ -2,12 +2,8 @@
 title: PerformanceElementTiming
 slug: Web/API/PerformanceElementTiming
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Reference
-  - PerformanceElementTiming
-  - Experimental
+status:
+  - experimental
 browser-compat: api.PerformanceElementTiming
 ---
 
@@ -23,7 +19,7 @@ The API supports timing information on the following elements:
 
 - {{htmlelement("img")}} elements,
 - {{SVGElement("image")}} elements inside an {{SVGElement("svg")}},
-- [poster](/en-US/docs/Web/HTML/Element/video#attr-poster) images of {{htmlelement("video")}} elements,
+- [poster](/en-US/docs/Web/HTML/Element/video#poster) images of {{htmlelement("video")}} elements,
 - elements which have a {{cssxref("background-image")}}, and
 - groups of text nodes, such as a {{htmlelement("p")}}.
 

@@ -1,8 +1,7 @@
 ---
 title: sidebar_action
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/sidebar_action
-tags:
-  - WebExtensions
+page-type: webextension-manifest-key
 browser-compat: webextensions.manifest.sidebar_action
 ---
 

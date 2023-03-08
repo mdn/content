@@ -1,9 +1,6 @@
 ---
 title: The history of MDN
 slug: MDN/At_ten/History_of_MDN
-tags:
-  - History
-  - MDN Meta
 ---
 
 {{MDNSidebar}}

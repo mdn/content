@@ -14,6 +14,8 @@ jobs:
     steps:
       - name: Setup node.js
         uses: actions/setup-node@v3
+        with:
+          node-version-file: ".nvmrc"
 
       - name: Checkout content
         uses: actions/checkout@v3
@@ -30,7 +32,7 @@ jobs:
 
       - name: Extract data from webref
         working-directory: mdn-content
-        run: node scripts/update-interface-data.mjs ../webref/
+        run: node scripts/update-interface-data.js ../webref/
 
       - name: Create pull request
         uses: peter-evans/create-pull-request@v4

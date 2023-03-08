@@ -2,13 +2,6 @@
 title: ":hover"
 slug: Web/CSS/:hover
 page-type: css-pseudo-class
-tags:
-  - CSS
-  - Layout
-  - Pseudo-class
-  - Reference
-  - Selector
-  - Web
 browser-compat: css.selectors.hover
 ---
 
@@ -24,8 +17,10 @@ Styles defined by the `:hover` pseudo-class will be overridden by any subsequent
 
 ## Syntax
 
-```
-:hover
+```css
+:hover {
+  /* ... */
+}
 ```
 
 ## Examples
@@ -65,5 +60,5 @@ a:hover {
 
 ## See also
 
-- [Chromium bug #370155: Don't make `:hover` sticky on tap on sites that set a mobile viewport](https://bugs.chromium.org/p/chromium/issues/detail?id=370155)
-- [Chromium bug #306581: Immediately show hover and active states on touch when page isn't scrollable.](https://bugs.chromium.org/p/chromium/issues/detail?id=306581)
+- [Chromium bug #370155: Don't make `:hover` sticky on tap on sites that set a mobile viewport](https://crbug.com/370155)
+- [Chromium bug #306581: Immediately show hover and active states on touch when page isn't scrollable.](https://crbug.com/306581)

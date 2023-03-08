@@ -2,13 +2,8 @@
 title: LargestContentfulPaint.toJSON()
 slug: Web/API/LargestContentfulPaint/toJSON
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - toJSON
-  - LargestContentfulPaint
-  - Experimental
+status:
+  - experimental
 browser-compat: api.LargestContentfulPaint.toJSON
 ---
 
@@ -45,7 +40,7 @@ const observer = new PerformanceObserver((list) => {
   });
 });
 
-observer.observe({type: 'largest-contentful-paint', buffered: true});
+observer.observe({ type: "largest-contentful-paint", buffered: true });
 ```
 
 This would log a JSON object like so:

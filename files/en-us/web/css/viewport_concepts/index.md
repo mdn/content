@@ -2,15 +2,6 @@
 title: Viewport concepts
 slug: Web/CSS/Viewport_concepts
 page-type: guide
-tags:
-  - Best practices
-  - CSS
-  - Guide
-  - Mobile
-  - Resource
-  - layout viewport
-  - viewport
-  - virtual viewport
 ---
 
 {{CSSRef}}

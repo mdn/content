@@ -2,8 +2,6 @@
 title: HTMLMediaElement.disableRemotePlayback
 slug: Web/API/HTMLMediaElement/disableRemotePlayback
 page-type: web-api-instance-property
-tags:
-- Property
 browser-compat: api.HTMLMediaElement.disableRemotePlayback
 ---
 
@@ -20,7 +18,7 @@ UI. (false means "not disabled", which means "enabled")
 ## Example
 
 ```js
-const obj = document.createElement('audio');
+const obj = document.createElement("audio");
 obj.disableRemotePlayback = true;
 ```
 

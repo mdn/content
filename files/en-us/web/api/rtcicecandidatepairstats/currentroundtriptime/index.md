@@ -2,22 +2,6 @@
 title: RTCIceCandidatePairStats.currentRoundTripTime
 slug: Web/API/RTCIceCandidatePairStats/currentRoundTripTime
 page-type: web-api-instance-property
-tags:
-  - API
-  - Connectivity
-  - ICE
-  - Network
-  - Performance
-  - Ping
-  - RTCIceCandidatePairStats
-  - Reference
-  - Statistics
-  - Stats
-  - WebRTC
-  - WebRTC API
-  - currentRoundTripTime
-  - rtc
-  - speed
 browser-compat: api.RTCIceCandidatePairStats.currentRoundTripTime
 ---
 

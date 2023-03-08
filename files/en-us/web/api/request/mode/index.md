@@ -2,13 +2,6 @@
 title: Request.mode
 slug: Web/API/Request/mode
 page-type: web-api-instance-property
-tags:
-  - API
-  - Fetch
-  - Property
-  - Reference
-  - mode
-  - request
 browser-compat: api.Request.mode
 ---
 
@@ -74,7 +67,7 @@ In the following snippet, we create a new request using the
 the script), then save the request mode in a variable:
 
 ```js
-const myRequest = new Request('flowers.jpg');
+const myRequest = new Request("flowers.jpg");
 const myMode = myRequest.mode; // returns "cors" by default
 ```
 

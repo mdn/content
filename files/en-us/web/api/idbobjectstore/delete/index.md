@@ -2,11 +2,6 @@
 title: IDBObjectStore.delete()
 slug: Web/API/IDBObjectStore/delete
 page-type: web-api-instance-method
-tags:
-  - API
-  - IndexedDB
-  - Method
-  - Reference
 browser-compat: api.IDBObjectStore.delete
 ---
 

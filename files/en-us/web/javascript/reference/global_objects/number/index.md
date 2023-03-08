@@ -2,12 +2,6 @@
 title: Number
 slug: Web/JavaScript/Reference/Global_Objects/Number
 page-type: javascript-class
-tags:
-  - Class
-  - JavaScript
-  - Number
-  - Reference
-  - Polyfill
 browser-compat: javascript.builtins.Number
 ---
 
@@ -97,11 +91,19 @@ JavaScript has some lower-level functions that deal with the binary encoding of 
 
 ```js
 new Int32Array([1.1, 1.9, -1.1, -1.9]); // Int32Array(4) [ 1, 1, -1, -1 ]
-new Int8Array([257, -257]); // Int8Array(1) [ 1, -1 ]
-// 257 = 0001 0000 0001 = 0000 0001 (mod 2^8) = 1
-// -257 = 1110 1111 1111 = 1111 1111 (mod 2^8) = -1 (as signed integer)
-new Uint8Array([257, -257]); // Uint8Array(1) [ 1, 255 ]
-// -257 = 1110 1111 1111 = 1111 1111 (mod 2^8) = 255 (as unsigned integer)
+
+new Int8Array([257, -257]); // Int8Array(2) [ 1, -1 ]
+// 257 = 0001 0000 0001
+//     =      0000 0001 (mod 2^8)
+//     = 1
+// -257 = 1110 1111 1111
+//      =      1111 1111 (mod 2^8) 
+//      = -1 (as signed integer)
+
+new Uint8Array([257, -257]); // Uint8Array(2) [ 1, 255 ]
+// -257 = 1110 1111 1111 
+//      =      1111 1111 (mod 2^8)
+//      = 255 (as unsigned integer)
 ```
 
 ## Constructor
@@ -148,6 +150,13 @@ When `Number` is called as a constructor (with `new`), it creates a {{jsxref("Nu
   - : This is the same as the global {{jsxref("parseFloat", "parseFloat()")}} function.
 - {{jsxref("Number.parseInt()")}}
   - : This is the same as the global {{jsxref("parseInt", "parseInt()")}} function.
+
+## Instance properties
+
+These properties are defined on `Number.prototype` and shared by all `Number` instances.
+
+- {{jsxref("Object/constructor", "Number.prototype.constructor")}}
+  - : The constructor function that created the instance object. For `Number` instances, the initial value is the {{jsxref("Number/Number", "Number")}} constructor.
 
 ## Instance methods
 

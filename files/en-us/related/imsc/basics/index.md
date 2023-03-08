@@ -1,12 +1,6 @@
 ---
 title: IMSC basics
 slug: Related/IMSC/Basics
-tags:
-  - Guide
-  - IMSC
-  - basics
-  - captions
-  - subtitles
 ---
 
 IMSC allows you to add subtitles or captions to your online video. In this article we'll take you through what you need to get started, including basic document structure, and the basics of how to style, time, and position subtitles.

@@ -2,13 +2,6 @@
 title: CSSKeyframesRule.findRule()
 slug: Web/API/CSSKeyframesRule/findRule
 page-type: web-api-instance-method
-tags:
-  - API
-  - CSSOM
-  - CSSKeyframesRule
-  - CSS Animations
-  - Method
-  - Reference
 browser-compat: api.CSSKeyframesRule.findRule
 ---
 
@@ -57,7 +50,7 @@ The CSS includes a keyframes at-rule. This will be the first {{domxref("CSSRule"
 ```js
 let myRules = document.styleSheets[0].cssRules;
 let keyframes = myRules[0]; // a CSSKeyframesRule
-console.log(keyframes.findRule('to'));  // a CSSKeyframeRule object
+console.log(keyframes.findRule("to")); // a CSSKeyframeRule object
 ```
 
 ## Specifications

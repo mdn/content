@@ -1,8 +1,7 @@
 ---
 title: Sidebars
 slug: Mozilla/Add-ons/WebExtensions/user_interface/Sidebars
-tags:
-  - WebExtensions
+page-type: guide
 ---
 
 {{AddonSidebar}}

@@ -1,11 +1,6 @@
 ---
 title: <mrow>
 slug: Web/MathML/Element/mrow
-tags:
-  - MathML
-  - MathML Reference
-  - MathML:Element
-  - MathML:General Layout Schemata
 browser-compat: mathml.elements.mrow
 ---
 
@@ -27,7 +22,7 @@ This element accepts the [global MathML attributes](/en-US/docs/Web/MathML/Globa
 ```html
 <math display="block">
   <mfrac>
-   <mrow>
+    <mrow>
       <!-- numerator content grouped in one mrow -->
       <mn>1</mn>
       <mo>+</mo>

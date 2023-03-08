@@ -2,14 +2,6 @@
 title: 'SVG attribute: crossorigin'
 slug: Web/SVG/Attribute/crossorigin
 page-type: svg-attribute
-tags:
-  - Advanced
-  - Attribute
-  - CORS
-  - SVG
-  - NeedsContent
-  - Reference
-  - Security
 browser-compat: api.SVGImageElement.crossOrigin
 ---
 

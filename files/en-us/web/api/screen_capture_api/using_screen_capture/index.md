@@ -2,20 +2,6 @@
 title: Using the Screen Capture API
 slug: Web/API/Screen_Capture_API/Using_Screen_Capture
 page-type: guide
-tags:
-  - API
-  - Capture
-  - Conference
-  - Guide
-  - Media
-  - Screen Capture
-  - Screen Capture API
-  - Sharing
-  - Video
-  - WebRTC
-  - display
-  - getDisplayMedia
-  - screen
 browser-compat: api.MediaDevices.getDisplayMedia
 ---
 
@@ -36,7 +22,9 @@ async function startCapture(displayMediaOptions) {
   let captureStream = null;
 
   try {
-    captureStream = await navigator.mediaDevices.getDisplayMedia(displayMediaOptions);
+    captureStream = await navigator.mediaDevices.getDisplayMedia(
+      displayMediaOptions
+    );
   } catch (err) {
     console.error(`Error: ${err}`);
   }
@@ -50,8 +38,12 @@ You can write this code either using an asynchronous function and the [`await`](
 
 ```js
 function startCapture(displayMediaOptions) {
- return navigator.mediaDevices.getDisplayMedia(displayMediaOptions)
-    .catch((err) => { console.error(`Error:${err}`); return null; });
+  return navigator.mediaDevices
+    .getDisplayMedia(displayMediaOptions)
+    .catch((err) => {
+      console.error(`Error:${err}`);
+      return null;
+    });
 }
 ```
 
@@ -100,8 +92,8 @@ To request that the screen be shared with included audio, the options passed int
 ```js
 const gdmOptions = {
   video: true,
-  audio: true
-}
+  audio: true,
+};
 ```
 
 This allows the user total freedom to select whatever they want, within the limits of what the user agent supports. This could be refined further by specifying additional options, and constraints inside the `audio` and `video` objects:
@@ -114,7 +106,7 @@ const gdmOptions = {
   audio: {
     echoCancellation: true,
     noiseSuppression: true,
-    sampleRate: 44100
+    sampleRate: 44100,
     suppressLocalAudioPlayback: true
   },
   surfaceSwitching: "include",
@@ -177,19 +169,27 @@ const stopElem = document.getElementById("stop");
 
 const displayMediaOptions = {
   video: {
-    displaySurface: "window"
+    displaySurface: "window",
   },
-  audio: false
+  audio: false,
 };
 
 // Set event listeners for the start and stop buttons
-startElem.addEventListener("click", (evt) => {
-  startCapture();
-}, false);
+startElem.addEventListener(
+  "click",
+  (evt) => {
+    startCapture();
+  },
+  false
+);
 
-stopElem.addEventListener("click", (evt) => {
-  stopCapture();
-}, false);
+stopElem.addEventListener(
+  "click",
+  (evt) => {
+    stopCapture();
+  },
+  false
+);
 ```
 
 ##### Logging content
@@ -197,10 +197,11 @@ stopElem.addEventListener("click", (evt) => {
 To make logging of errors and other issues easy, this example overrides certain {{domxref("console")}} methods to output their messages to the {{HTMLElement("pre")}} block whose ID is `log`.
 
 ```js
-console.log = (msg) => logElem.innerHTML += `${msg}<br>`;
-console.error = (msg) => logElem.innerHTML += `<span class="error">${msg}</span><br>`;
-console.warn = (msg) => logElem.innerHTML += `<span class="warn">${msg}<span><br>`;
-console.info = (msg) => logElem.innerHTML += `<span class="info">${msg}</span><br>`;
+const logger = logElem.innerHTML;
+console.log = (msg) => (logger += `${msg}<br>`);
+console.error = (msg) => (logger += `<span class="error">${msg}</span><br>`);
+console.warn = (msg) => (logger += `<span class="warn">${msg}<span><br>`);
+console.info = (msg) => (logger += `<span class="info">${msg}</span><br>`);
 ```
 
 This allows us to use the familiar {{domxref("console.log()")}}, {{domxref("console.error()")}}, and so on to log information to the log box in the document.
@@ -214,7 +215,9 @@ async function startCapture() {
   logElem.innerHTML = "";
 
   try {
-    videoElem.srcObject = await navigator.mediaDevices.getDisplayMedia(displayMediaOptions);
+    videoElem.srcObject = await navigator.mediaDevices.getDisplayMedia(
+      displayMediaOptions
+    );
     dumpOptionsInfo();
   } catch (err) {
     console.error(`Error: ${err}`);
@@ -347,5 +350,5 @@ If you're performing screen capture within an `<iframe>`, you can request permis
 
 - [Screen Capture API](/en-US/docs/Web/API/Screen_Capture_API)
 - [Media Capture and Streams API](/en-US/docs/Web/API/Media_Capture_and_Streams_API)
-- [Taking still photos with WebRTC](/en-US/docs/Web/API/WebRTC_API/Taking_still_photos)
+- [Taking still photos with WebRTC](/en-US/docs/Web/API/Media_Capture_and_Streams_API/Taking_still_photos)
 - {{domxref("HTMLCanvasElement.captureStream()")}} to obtain a {{domxref("MediaStream")}} with the live contents of a {{HTMLElement("canvas")}}

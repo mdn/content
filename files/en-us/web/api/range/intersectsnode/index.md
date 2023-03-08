@@ -2,12 +2,6 @@
 title: Range.intersectsNode()
 slug: Web/API/Range/intersectsNode
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - Method
-  - Range
-  - Reference
 browser-compat: api.Range.intersectsNode
 ---
 
@@ -37,7 +31,9 @@ A boolean.
 const range = document.createRange();
 
 range.selectNode(document.getElementsByTagName("div").item(0));
-const intersectingNode = range.intersectsNode(document.getElementsByTagName("p").item(0));
+const intersectingNode = range.intersectsNode(
+  document.getElementsByTagName("p").item(0)
+);
 ```
 
 ## Specifications

@@ -2,13 +2,8 @@
 title: <font>
 slug: Web/SVG/Element/font
 page-type: svg-element
-tags:
-  - Deprecated
-  - Element
-  - NeedsExample
-  - Reference
-  - SVG
-  - SVG Font
+status:
+  - deprecated
 browser-compat: svg.elements.font
 ---
 

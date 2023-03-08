@@ -1,16 +1,7 @@
 ---
 title: menus.ItemType
 slug: Mozilla/Add-ons/WebExtensions/API/menus/ItemType
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Non-standard
-  - Reference
-  - Type
-  - WebExtensions
-  - contextMenus
-  - itemtype
+page-type: webextension-api-type
 browser-compat: webextensions.api.menus.ItemType
 ---
 

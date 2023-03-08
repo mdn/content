@@ -1,15 +1,7 @@
 ---
 title: options_ui
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/options_ui
-tags:
-  - Add-ons
-  - Extensions
-  - Manifest
-  - Options
-  - Reference
-  - Web
-  - WebExtensions
-  - options_ui
+page-type: webextension-manifest-key
 browser-compat: webextensions.manifest.options_ui
 ---
 

@@ -1,11 +1,7 @@
 ---
 title: Building a cross-browser extension
 slug: Mozilla/Add-ons/WebExtensions/Build_a_cross_browser_extension
-tags:
-  - Add-ons
-  - Extensions
-  - Guide
-  - WebExtensions
+page-type: guide
 ---
 
 {{AddonSidebar()}}

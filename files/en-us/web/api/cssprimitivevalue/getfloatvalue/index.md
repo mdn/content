@@ -2,12 +2,8 @@
 title: CSSPrimitiveValue.getFloatValue()
 slug: Web/API/CSSPrimitiveValue/getFloatValue
 page-type: web-api-instance-method
-tags:
-  - API
-  - CSSPrimitiveValue
-  - Method
-  - getFloatValue
-  - Deprecated
+status:
+  - deprecated
 browser-compat: api.CSSPrimitiveValue.getFloatValue
 ---
 

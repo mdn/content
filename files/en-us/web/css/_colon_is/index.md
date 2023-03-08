@@ -2,14 +2,6 @@
 title: ":is()"
 slug: Web/CSS/:is
 page-type: css-pseudo-class
-tags:
-  - ":is"
-  - CSS
-  - Pseudo-class
-  - Reference
-  - Selector
-  - Selectors
-  - Web
 browser-compat: css.selectors.is
 ---
 
@@ -123,7 +115,7 @@ You can replace it with:
 
 The `:is()` pseudo-class is particularly useful when dealing with HTML [sections and headings](/en-US/docs/Web/HTML/Element/Heading_Elements). Since {{HTMLElement("section")}}, {{HTMLElement("article")}}, {{HTMLElement("aside")}}, and {{HTMLElement("nav")}} are commonly nested together, without `:is()`, styling them to match one another can be tricky.
 
-For example, without `:is()`, styling all the {{HTMLElement("h1")}} elements at different depths could be very complicated:
+For example, without `:is()`, styling all the {{HTMLElement("Heading_Elements", "h1")}} elements at different depths could be very complicated:
 
 ```css
 /* Level 0 */
@@ -208,8 +200,10 @@ some-element::after {
 
 ## Syntax
 
-```
-:is( <forgiving-selector-list> )
+```css-nolint
+:is(<forgiving-selector-list>) {
+  /* ... */
+}
 ```
 
 ## Specifications

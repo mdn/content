@@ -1,16 +1,7 @@
 ---
 title: bookmarks.getRecent()
 slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/getRecent
-tags:
-  - API
-  - Add-ons
-  - Bookmarks
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - getRecent
+page-type: webextension-api-function
 browser-compat: webextensions.api.bookmarks.getRecent
 ---
 

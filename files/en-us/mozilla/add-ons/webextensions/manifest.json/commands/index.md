@@ -1,11 +1,7 @@
 ---
 title: commands
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/commands
-tags:
-  - Add-ons
-  - Extensions
-  - Keyboard Shortcuts
-  - WebExtensions
+page-type: webextension-manifest-key
 browser-compat: webextensions.manifest.commands
 ---
 

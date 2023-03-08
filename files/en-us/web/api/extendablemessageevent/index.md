@@ -2,12 +2,6 @@
 title: ExtendableMessageEvent
 slug: Web/API/ExtendableMessageEvent
 page-type: web-api-interface
-tags:
-  - API
-  - ExtendableMessageEvent
-  - Interface
-  - Reference
-  - Service Workers
 browser-compat: api.ExtendableMessageEvent
 ---
 
@@ -50,10 +44,9 @@ In the below example a page gets a handle to the {{domxref("ServiceWorker")}} ob
 ```js
 // in the page being controlled
 if (navigator.serviceWorker) {
+  navigator.serviceWorker.register("service-worker.js");
 
-  navigator.serviceWorker.register('service-worker.js');
-
-  navigator.serviceWorker.addEventListener('message', (event) => {
+  navigator.serviceWorker.addEventListener("message", (event) => {
     // event is a MessageEvent object
     console.log(`The service worker sent me a message: ${event.data}`);
   });
@@ -61,7 +54,6 @@ if (navigator.serviceWorker) {
   navigator.serviceWorker.ready.then((registration) => {
     registration.active.postMessage("Hi service worker");
   });
-
 }
 ```
 
@@ -69,7 +61,7 @@ The service worker can receive the message by listening to the `message` event:
 
 ```js
 // in the service worker
-addEventListener('message', (event) => {
+addEventListener("message", (event) => {
   // event is an ExtendableMessageEvent object
   console.log(`The client sent me a message: ${event.data}`);
 

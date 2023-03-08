@@ -1,11 +1,6 @@
 ---
-title: 'Test your skills: Loops'
+title: "Test your skills: Loops"
 slug: Learn/JavaScript/Building_blocks/Test_your_skills:_Loops
-tags:
-  - Beginner
-  - JavaScript
-  - Learn
-  - Loops
 ---
 
 {{learnsidebar}}

@@ -2,13 +2,6 @@
 title: Window.history
 slug: Web/API/Window/history
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTML DOM
-  - History API
-  - Property
-  - Reference
-  - Window
 browser-compat: api.Window.history
 ---
 

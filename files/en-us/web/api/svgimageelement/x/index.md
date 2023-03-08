@@ -2,16 +2,6 @@
 title: SVGImageElement.x
 slug: Web/API/SVGImageElement/x
 page-type: web-api-instance-property
-tags:
-  - API
-  - Image
-  - NeedsExample
-  - Property
-  - Reference
-  - SVG
-  - SVG DOM
-  - SVGImageElement
-  - x
 browser-compat: api.SVGImageElement.x
 ---
 

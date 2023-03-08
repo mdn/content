@@ -1,17 +1,7 @@
 ---
 title: Sharing objects with page scripts
 slug: Mozilla/Add-ons/WebExtensions/Sharing_objects_with_page_scripts
-tags:
-  - Add-ons
-  - Content script
-  - Extensions
-  - Firefox
-  - Guide
-  - Mozilla
-  - Non-standard
-  - WebExtensions
-  - XPCOM
-  - page scripts
+page-type: guide
 ---
 
 {{AddonSidebar}}

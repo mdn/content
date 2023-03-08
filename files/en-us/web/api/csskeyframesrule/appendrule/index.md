@@ -2,13 +2,6 @@
 title: CSSKeyframesRule.appendRule()
 slug: Web/API/CSSKeyframesRule/appendRule
 page-type: web-api-instance-method
-tags:
-  - API
-  - CSSOM
-  - CSSKeyframesRule
-  - CSS Animations
-  - Method
-  - Reference
 browser-compat: api.CSSKeyframesRule.appendRule
 ---
 
@@ -49,7 +42,7 @@ After appending another rule with `appendRule` the `cssRules` property returns a
 ```js
 let myRules = document.styleSheets[0].cssRules;
 let keyframes = myRules[0]; // a CSSKeyframesRule
-keyframes.appendRule('to {transform: translateX(100%);}');
+keyframes.appendRule("to {transform: translateX(100%);}");
 console.log(keyframes.cssRules); // a CSSRuleList object with two rules
 ```
 

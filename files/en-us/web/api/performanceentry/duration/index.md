@@ -2,11 +2,6 @@
 title: PerformanceEntry.duration
 slug: Web/API/PerformanceEntry/duration
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - Web Performance
 browser-compat: api.PerformanceEntry.duration
 ---
 
@@ -49,10 +44,10 @@ The following example logs all observed performance entries with a `duration` la
 
 ```js
 function perfObserver(list, observer) {
-  list.getEntries().forEach((entry) =>  {
+  list.getEntries().forEach((entry) => {
     if (entry.duration > 0) {
       console.log(`${entry.name}'s duration: ${entry.duration}`);
-    };
+    }
   });
 }
 const observer = new PerformanceObserver(perfObserver);

@@ -2,19 +2,8 @@
 title: NavigationDestination.key
 slug: Web/API/NavigationDestination/key
 page-type: web-api-instance-property
-tags:
-  - API
-  - Experimental
-  - History
-  - key
-  - Navigate
-  - Navigation
-  - Navigation API
-  - Property
-  - Read-only
-  - Reference
-  - Scroll
-  - Traversal
+status:
+  - experimental
 browser-compat: api.NavigationDestination.key
 ---
 
@@ -32,7 +21,7 @@ A string representing the `key` of the destination {{domxref("NavigationHistoryE
 ## Examples
 
 ```js
-navigation.addEventListener('navigate', (event) => {
+navigation.addEventListener("navigate", (event) => {
   console.log(event.destination.key);
 });
 ```

@@ -2,12 +2,6 @@
 title: Window.document
 slug: Web/API/Window/document
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTML DOM
-  - Property
-  - Reference
-  - Window
 browser-compat: api.Window.document
 ---
 

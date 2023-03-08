@@ -1,12 +1,6 @@
 ---
-title: 'Test your skills: Overflow'
+title: "Test your skills: Overflow"
 slug: Learn/CSS/Building_blocks/Overflow_Tasks
-tags:
-  - Beginner
-  - CSS
-  - Learn
-  - Overflow
-  - test your skills
 ---
 
 {{LearnSidebar}}

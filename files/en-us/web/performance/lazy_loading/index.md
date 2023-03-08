@@ -1,16 +1,6 @@
 ---
 title: Lazy loading
 slug: Web/Performance/Lazy_loading
-tags:
-  - Content
-  - Images
-  - Layout
-  - Lazy
-  - Lazy-loading
-  - Loading
-  - Performance
-  - Web Performance
-  - rendering
 spec-urls: https://html.spec.whatwg.org/multipage/#lazy-loading-attributes
 ---
 
@@ -26,7 +16,7 @@ As the web has evolved, we have come to see huge increases in the number and siz
 Between 2011 and 2019, the median resource weight increased from **\~100KB** to **\~400KB** for desktop and **\~50KB** to **\~350KB** for mobile. While Image size has increased from **\~250KB** to **\~900KB** on desktop and **\~100KB** to **\~850KB** on mobile.
 
 One of the methods we can use to tackle this problem is to shorten the [Critical Rendering Path](/en-US/docs/Web/Performance/Critical_rendering_path) length by lazy loading resources that are not critical for the first render to happen.
-A practical example would be when, you land on the home page of an e-commerce site which has a link to a cart page/section and all its resources (JS, CSS, images…) are downloaded **only** when the user navigates to that cart page.
+A practical example would be when you land on the home page of an e-commerce site with a link to a cart page/section, and none of the cart page's resources (such as JavaScript, CSS, and images) are downloaded **until** you navigate there.
 
 ## Strategies
 

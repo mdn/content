@@ -2,15 +2,6 @@
 title: Document Object Model (DOM)
 slug: Web/API/Document_Object_Model
 page-type: web-api-overview
-tags:
-  - API
-  - DOM
-  - Document
-  - Document Object Model
-  - Guide
-  - Overview
-  - Reference
-  - Web
 spec-urls: https://dom.spec.whatwg.org/
 ---
 
@@ -202,7 +193,6 @@ Here are the DOM APIs for data types used in the definitions of SVG properties a
 - {{DOMxRef("SVGElementInstanceList")}}
 - {{DOMxRef("SVGLength")}}
 - {{DOMxRef("SVGLengthList")}}
-- {{DOMxRef("SVGMatrix")}} {{Deprecated_Inline}}
 - {{DOMxRef("SVGNameList")}}
 - {{DOMxRef("SVGNumber")}}
 - {{DOMxRef("SVGNumberList")}}

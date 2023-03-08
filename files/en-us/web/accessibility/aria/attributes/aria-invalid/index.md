@@ -1,13 +1,6 @@
 ---
 title: aria-invalid
 slug: Web/Accessibility/ARIA/Attributes/aria-invalid
-tags:
-  - Accessibility
-  - ARIA
-  - ARIA attribute
-  - ARIA property
-  - aria-invalid
-  - Reference
 spec-urls: https://w3c.github.io/aria/#aria-invalid
 ---
 

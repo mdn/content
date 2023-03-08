@@ -2,12 +2,6 @@
 title: HTMLMenuElement
 slug: Web/API/HTMLMenuElement
 page-type: web-api-interface
-tags:
-  - API
-  - Draft
-  - HTMLMenuElement
-  - Interface
-  - Reference
 browser-compat: api.HTMLMenuElement
 ---
 

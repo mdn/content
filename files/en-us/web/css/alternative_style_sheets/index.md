@@ -2,11 +2,6 @@
 title: Alternative style sheets
 slug: Web/CSS/Alternative_style_sheets
 page-type: guide
-tags:
-  - CSS
-  - Guide
-  - HTML
-  - Reference
 browser-compat: html.elements.link.rel.alternate_stylesheet
 ---
 

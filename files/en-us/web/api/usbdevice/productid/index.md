@@ -2,16 +2,8 @@
 title: USBDevice.productId
 slug: Web/API/USBDevice/productID
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - USB
-  - USBDevice
-  - WebUSB
-  - WebUSB API
-  - productID
-  - Experimental
+status:
+  - experimental
 browser-compat: api.USBDevice.productId
 ---
 

@@ -1,9 +1,6 @@
 ---
 title: Accessibility information for web authors
 slug: Web/Accessibility/Information_for_Web_authors
-tags:
-  - Accessibility
-  - Authoring
 ---
 
 <section id="Quick_links">

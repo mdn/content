@@ -1,16 +1,7 @@
 ---
 title: runtime.Port
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/Port
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Non-standard
-  - Reference
-  - Type
-  - WebExtensions
-  - port
-  - runtime
+page-type: webextension-api-type
 browser-compat: webextensions.api.runtime.Port
 ---
 

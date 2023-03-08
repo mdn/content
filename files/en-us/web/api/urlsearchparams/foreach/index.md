@@ -2,12 +2,6 @@
 title: URLSearchParams.forEach()
 slug: Web/API/URLSearchParams/forEach
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - URLSearchParams
-  - forEach
 browser-compat: api.URLSearchParams.forEach
 ---
 

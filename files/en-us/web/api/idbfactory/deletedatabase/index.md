@@ -2,15 +2,6 @@
 title: IDBFactory.deleteDatabase()
 slug: Web/API/IDBFactory/deleteDatabase
 page-type: web-api-instance-method
-tags:
-  - API
-  - Database
-  - IDBFactory
-  - IndexedDB
-  - Method
-  - Reference
-  - Storage
-  - deleteDatabase
 browser-compat: api.IDBFactory.deleteDatabase
 ---
 

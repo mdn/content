@@ -2,12 +2,9 @@
 title: box-direction
 slug: Web/CSS/box-direction
 page-type: css-property
-tags:
-  - CSS
-  - Non-standard
-  - Reference
-  - recipe:css-property
-  - Deprecated
+status:
+  - deprecated
+  - non-standard
 browser-compat: css.properties.box-direction
 ---
 

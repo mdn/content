@@ -1,11 +1,6 @@
 ---
 title: The Netscape XSLT/XPath Reference
 slug: Web/XSLT/Transforming_XML_with_XSLT/The_Netscape_XSLT_XPath_Reference
-tags:
-  - Netscape
-  - Reference
-  - XSLT
-  - axes
 ---
 
 The following is an alphabetized and annotated list of the elements, axes, and functions from the W3C's 1.0 Recommendation for XSLT, as well as from the appropriate sections of the XPath Recommendation. Development of the XSLT processor is ongoing, and this document will be updated as functionality is expanded.

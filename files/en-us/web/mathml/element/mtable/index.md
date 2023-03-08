@@ -1,11 +1,6 @@
 ---
 title: <mtable>
 slug: Web/MathML/Element/mtable
-tags:
-  - MathML
-  - MathML Reference
-  - MathML:Element
-  - MathML:Tabular Math
 browser-compat: mathml.elements.mtable
 ---
 

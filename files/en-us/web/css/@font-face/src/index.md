@@ -2,14 +2,6 @@
 title: src
 slug: Web/CSS/@font-face/src
 page-type: css-at-rule-descriptor
-tags:
-  - "@font-face"
-  - At-rule descriptor
-  - CSS
-  - CSS Descriptor
-  - CSS Fonts
-  - CSS Property
-  - Reference
 browser-compat: css.at-rules.font-face.src
 ---
 
@@ -64,8 +56,12 @@ src: url("trickster-COLRv1.otf") format(opentype) tech(color-COLRv1), url("trick
   - : An optional declaration that follows the `url()` value that provides a hint for the user agent on the font technology.
     The value for `tech()` may be one of the keywords described in [Font technologies](#font-technologies).
 - `local(<font-face-name>)`
+
   - : Specifies the font name should the font be available on the user's device.
     Enclosing the font name in quotes is optional.
+
+    > **Note:** For OpenType and TrueType fonts, `<font-face-name>` is used to match either the Postscript name or the full font name in the name table of locally available fonts. Which type of name is used varies by platform and font, so you should include both of these names to assure proper matching across platforms. Platform substitutions for a given font name must not be used.
+
 - `<font-face-name>`
   - : Specifies the full name or postscript name of a locally-installed font face using the `local()` component value, which uniquely identifies a single font face within a larger family.
     The name can optionally be enclosed in quotes. The font face name [is not case-sensitive](https://w3c.github.io/csswg-drafts/css-fonts-3/#font-family-casing).

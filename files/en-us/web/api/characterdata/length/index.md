@@ -2,10 +2,6 @@
 title: CharacterData.length
 slug: Web/API/CharacterData/length
 page-type: web-api-instance-property
-tags:
-  - Property
-  - Reference
-  - Read-only
 browser-compat: api.CharacterData.length
 ---
 

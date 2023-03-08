@@ -2,12 +2,6 @@
 title: Math.sign()
 slug: Web/JavaScript/Reference/Global_Objects/Math/sign
 page-type: javascript-static-method
-tags:
-  - JavaScript
-  - Math
-  - Method
-  - Reference
-  - Polyfill
 browser-compat: javascript.builtins.Math.sign
 ---
 
@@ -68,7 +62,6 @@ Math.sign(); // NaN
 ## See also
 
 - [Polyfill of `Math.sign` in `core-js`](https://github.com/zloirock/core-js#ecmascript-math)
-- [A polyfill](https://github.com/behnammodi/polyfill/blob/master/math.polyfill.js)
 - {{jsxref("Math.abs()")}}
 - {{jsxref("Math.ceil()")}}
 - {{jsxref("Math.floor()")}}
