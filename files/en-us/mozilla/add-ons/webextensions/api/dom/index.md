@@ -1,12 +1,6 @@
 ---
 title: dom
 slug: Mozilla/Add-ons/WebExtensions/API/dom
-tags:
-  - API
-  - Add-ons
-  - DOM
-  - Extensions
-  - WebExtensions
 browser-compat: webextensions.api.dom
 ---
 

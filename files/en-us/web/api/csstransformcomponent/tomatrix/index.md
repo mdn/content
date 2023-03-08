@@ -2,12 +2,10 @@
 title: CSSTransformComponent.toMatrix()
 slug: Web/API/CSSTransformComponent/toMatrix
 page-type: web-api-instance-method
-status:
-  - experimental
 browser-compat: api.CSSTransformComponent.toMatrix
 ---
 
-{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
+{{APIRef("CSS Typed OM")}}
 
 The **`toMatrix()`** method of the
 {{domxref("CSSTransformComponent")}} interface returns a {{domxref('DOMMatrix')}}

@@ -1,15 +1,6 @@
 ---
 title: declarativeNetRequest.RuleAction
 slug: Mozilla/Add-ons/WebExtensions/API/declarativeNetRequest/RuleAction
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Reference
-  - WebExtensions
-  - Type
-  - declarativeNetRequest
-  - RuleAction
 browser-compat: webextensions.api.declarativeNetRequest.RuleAction
 ---
 

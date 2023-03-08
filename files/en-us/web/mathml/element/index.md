@@ -3,9 +3,7 @@ title: MathML element reference
 slug: Web/MathML/Element
 ---
 
-<section id="Quick_links">
-  {{MathMLRef}}
-</section>
+{{MathMLRef}}
 
 This is an alphabetical list of MathML elements. All of them implement the {{domxref("MathMLElement")}} class.
 

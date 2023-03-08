@@ -2,13 +2,6 @@
 title: management
 slug: Mozilla/Add-ons/WebExtensions/API/management
 page-type: webextension-api
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Reference
-  - WebExtensions
-  - management
 browser-compat: webextensions.api.management
 ---
 

@@ -1,16 +1,6 @@
 ---
 title: declarativeNetRequest.GETMATCHEDRULES_QUOTA_INTERVAL
 slug: Mozilla/Add-ons/WebExtensions/API/declarativeNetRequest/GETMATCHEDRULES_QUOTA_INTERVAL
-tags:
-  - GETMATCHEDRULES_QUOTA_INTERVAL
-  - API
-  - Add-ons
-  - Extensions
-  - Reference
-  - WebExtensions
-  - Property
-  - declarativeNetRequest
-  - GETMATCHEDRULES_QUOTA_INTERVAL
 browser-compat: webextensions.api.declarativeNetRequest.GETMATCHEDRULES_QUOTA_INTERVAL
 ---
 

@@ -2,12 +2,10 @@
 title: StylePropertyMap.append()
 slug: Web/API/StylePropertyMap/append
 page-type: web-api-instance-method
-status:
-  - experimental
 browser-compat: api.StylePropertyMap.append
 ---
 
-{{APIRef("CSS Typed Object Model API")}}{{SeeCompatTable}}
+{{APIRef("CSS Typed Object Model API")}}
 
 The **`append()`** method of the
 {{domxref("StylePropertyMap")}} interface adds the passed CSS value to the

@@ -1,15 +1,6 @@
 ---
 title: declarativeNetRequest.RuleCondition
 slug: Mozilla/Add-ons/WebExtensions/API/declarativeNetRequest/RuleCondition
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Reference
-  - WebExtensions
-  - Type
-  - declarativeNetRequest
-  - RuleCondition
 browser-compat: webextensions.api.declarativeNetRequest.RuleCondition
 ---
 
