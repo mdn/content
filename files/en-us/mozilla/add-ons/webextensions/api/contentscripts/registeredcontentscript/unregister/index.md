@@ -3,12 +3,6 @@ title: contentScripts.RegisteredContentScript.unregister()
 slug: >-
   Mozilla/Add-ons/WebExtensions/API/contentScripts/RegisteredContentScript/unregister
 page-type: webextension-api-function
-tags:
-  - API
-  - Extensions
-  - Reference
-  - RegisteredContentScript.unregister
-  - contentScripts
 browser-compat: webextensions.api.contentScripts.RegisteredContentScript.unregister
 ---
 

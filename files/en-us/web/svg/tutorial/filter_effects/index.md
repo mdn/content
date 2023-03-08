@@ -2,12 +2,9 @@
 title: Filter effects
 slug: Web/SVG/Tutorial/Filter_effects
 page-type: guide
-tags:
-  - Advanced
-  - NeedsContent
-  - SVG
-  - SVG:Tutorial
 ---
+
+{{SVGRef}}
 
 {{ PreviousNext("Web/SVG/Tutorial/Other_content_in_SVG", "Web/SVG/Tutorial/SVG_Fonts") }}
 

@@ -6626,8 +6626,8 @@
 /en-US/docs/SVG/Attribute/y2	/en-US/docs/Web/SVG/Attribute/y2
 /en-US/docs/SVG/Attribute/yChannelSelector	/en-US/docs/Web/SVG/Attribute/yChannelSelector
 /en-US/docs/SVG/Attribute/z	/en-US/docs/Web/SVG/Attribute/z
-/en-US/docs/SVG/Compatibility_sources	/en-US/docs/Web/SVG/Compatibility_sources
-/en-US/docs/SVG/Content_type	/en-US/docs/Web/SVG/Content_type
+/en-US/docs/SVG/Compatibility_sources	/en-US/docs/Web/SVG
+/en-US/docs/SVG/Content_type	/en-US/docs/Web/SVG
 /en-US/docs/SVG/Element	/en-US/docs/Web/SVG/Element
 /en-US/docs/SVG/Element/a	/en-US/docs/Web/SVG/Element/a
 /en-US/docs/SVG/Element/altGlyph	/en-US/docs/Web/SVG/Element/altGlyph
@@ -12237,6 +12237,7 @@
 /en-US/docs/Web/JavaScript/Reference/Data_types	/en-US/docs/Web/JavaScript/Data_structures
 /en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features/The_legacy_Iterator_protocol	/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features
 /en-US/docs/Web/JavaScript/Reference/Errors/Cant_access_property	/en-US/docs/Web/JavaScript/Reference/Errors/Unexpected_type
+/en-US/docs/Web/JavaScript/Reference/Errors/Dead_object	https://blog.mozilla.org/addons/2012/09/12/what-does-cant-access-dead-object-mean/
 /en-US/docs/Web/JavaScript/Reference/Functions_and_function_scope	/en-US/docs/Web/JavaScript/Reference/Functions
 /en-US/docs/Web/JavaScript/Reference/Functions_and_function_scope/Strict_mode	/en-US/docs/Web/JavaScript/Reference/Strict_mode
 /en-US/docs/Web/JavaScript/Reference/Functions_and_function_scope/Strict_mode/Transitioning_to_strict_mode	/en-US/docs/Web/JavaScript/Reference/Strict_mode
@@ -12371,6 +12372,7 @@
 /en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler/setPrototypeOf	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/setPrototypeOf
 /en-US/docs/Web/JavaScript/Reference/Global_Objects/RangeError/prototype	/en-US/docs/Web/JavaScript/Reference/Global_Objects/RangeError
 /en-US/docs/Web/JavaScript/Reference/Global_Objects/ReferenceError/prototype	/en-US/docs/Web/JavaScript/Reference/Global_Objects/ReferenceError
+/en-US/docs/Web/JavaScript/Reference/Global_Objects/Reflect/Comparing_Reflect_and_Object_methods	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Reflect
 /en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/constructor	/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp
 /en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/prototype	/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp
 /en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/toSource	/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/toString
@@ -12673,6 +12675,7 @@
 /en-US/docs/Web/Reference/Functions_and classes_available_to_workers	/en-US/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers
 /en-US/docs/Web/Reference/Functions_and_classes_available_to_workers	/en-US/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers
 /en-US/docs/Web/SVG/Attribute/dataset	/en-US/docs/Web/API/HTMLElement/dataset
+/en-US/docs/Web/SVG/Compatibility_sources	/en-US/docs//Web/SVG
 /en-US/docs/Web/SVG/Element/animateColor	/en-US/docs/Web/SVG/Element/animate
 /en-US/docs/Web/SVG/Index	/en-US/docs/Web/SVG
 /en-US/docs/Web/SVG/Tutorial/Fill_Stroke_and_Gradients	/en-US/docs/Web/SVG/Tutorial/Fills_and_Strokes

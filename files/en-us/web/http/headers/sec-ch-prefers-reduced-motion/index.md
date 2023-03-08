@@ -1,14 +1,8 @@
 ---
 title: Sec-CH-Prefers-Reduced-Motion
 slug: Web/HTTP/Headers/Sec-CH-Prefers-Reduced-Motion
-tags:
-  - Sec-CH-Prefers-Reduced-Motion
-  - Client hint
-  - HTTP
-  - HTTP Header
-  - Reference
-  - Request header
-  - Experimental
+status:
+  - experimental
 browser-compat: http.headers.Sec-CH-Prefers-Reduced-Motion
 ---
 

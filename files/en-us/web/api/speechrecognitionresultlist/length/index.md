@@ -37,7 +37,7 @@ recognition.onresult = (event) => {
   bg.style.backgroundColor = color;
 
   console.log(event.results.length);
-}
+};
 ```
 
 ## Specifications

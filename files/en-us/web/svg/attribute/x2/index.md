@@ -2,9 +2,6 @@
 title: x2
 slug: Web/SVG/Attribute/x2
 page-type: svg-attribute
-tags:
-  - SVG
-  - SVG Attribute
 spec-urls:
   - https://svgwg.org/svg2-draft/shapes.html#LineElementX2Attribute
   - https://svgwg.org/svg2-draft/pservers.html#LinearGradientElementX2Attribute

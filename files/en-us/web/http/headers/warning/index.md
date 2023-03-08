@@ -1,13 +1,8 @@
 ---
 title: Warning
 slug: Web/HTTP/Headers/Warning
-tags:
-  - HTTP
-  - HTTP Header
-  - Request header
-  - Response header
-  - Deprecated
-  - Reference
+status:
+  - deprecated
 browser-compat: http.headers.Warning
 ---
 

@@ -2,17 +2,12 @@
 title: "::view-transition-image-pair"
 slug: Web/CSS/::view-transition-image-pair
 page-type: css-pseudo-element
-tags:
-  - API
-  - CSS
-  - Experimental
-  - Pseudo-element
-  - Reference
-  - Selector
+status:
+  - experimental
 browser-compat: css.selectors.view-transition-image-pair
 ---
 
-{{CSSRef}}{{seecompattable}}
+{{CSSRef}}{{SeeCompatTable}}
 
 The **`::view-transition-image-pair`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) represents a container for a [view transition's](/en-US/docs/Web/API/View_Transitions_API) "old" and "new" view states — before and after the transition.
 

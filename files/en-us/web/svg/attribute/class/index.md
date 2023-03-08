@@ -2,10 +2,6 @@
 title: class
 slug: Web/SVG/Attribute/class
 page-type: svg-attribute
-tags:
-  - Reference
-  - SVG
-  - SVG Attribute
 browser-compat: svg.attributes.style.class
 ---
 

@@ -1,9 +1,6 @@
 ---
 title: HTTP resources and specifications
 slug: Web/HTTP/Resources_and_specifications
-tags:
-  - Guide
-  - HTTP
 ---
 
 {{HTTPSidebar}}

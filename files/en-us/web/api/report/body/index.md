@@ -2,12 +2,10 @@
 title: Report.body
 slug: Web/API/Report/body
 page-type: web-api-instance-property
-status:
-  - experimental
 browser-compat: api.Report.body
 ---
 
-{{APIRef("Reporting API")}}{{SeeCompatTable}}
+{{APIRef("Reporting API")}}
 
 The **`body`** read-only property of the {{domxref("Report")}}
 interface returns the body of the report, which is a `ReportBody` object

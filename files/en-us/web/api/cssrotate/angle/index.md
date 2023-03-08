@@ -2,12 +2,10 @@
 title: CSSRotate.angle
 slug: Web/API/CSSRotate/angle
 page-type: web-api-instance-property
-status:
-  - experimental
 browser-compat: api.CSSRotate.angle
 ---
 
-{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
+{{APIRef("CSS Typed OM")}}
 
 The **`angle`** property of the
 {{domxref("CSSRotate")}} interface gets and sets the angle of rotation. A positive angle

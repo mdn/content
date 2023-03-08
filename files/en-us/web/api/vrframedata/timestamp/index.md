@@ -30,9 +30,9 @@ let vrDisplay;
 
 navigator.getVRDisplays().then((displays) => {
   vrDisplay = displays[0];
-  console.log('Display found');
+  console.log("Display found");
   // Starting the presentation when the button is clicked: It can only be called in response to a user gesture
-  btn.addEventListener('click', () => {
+  btn.addEventListener("click", () => {
     vrDisplay.requestPresent([{ source: canvas }]).then(() => {
       drawVRScene();
     });
@@ -49,7 +49,7 @@ function drawVRScene() {
 
   // grab the current timestamp on each run of the rendering loop
   // and do something with it
-  framedata.timestamp
+  framedata.timestamp;
 
   // …
 

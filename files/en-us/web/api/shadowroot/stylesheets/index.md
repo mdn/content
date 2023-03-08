@@ -17,7 +17,7 @@ A {{domxref('StyleSheetList')}} of {{domxref('CSSStyleSheet')}} objects.
 ## Examples
 
 ```js
-let customElem = document.querySelector('my-shadow-dom-element');
+let customElem = document.querySelector("my-shadow-dom-element");
 let shadow = customElem.shadowRoot;
 let styleSheets = shadow.styleSheets;
 ```

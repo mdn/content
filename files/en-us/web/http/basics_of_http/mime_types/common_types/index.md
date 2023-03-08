@@ -1,18 +1,6 @@
 ---
 title: Common MIME types
 slug: Web/HTTP/Basics_of_HTTP/MIME_types/Common_types
-tags:
-  - Audio
-  - File Types
-  - Files
-  - HTTP
-  - MIME
-  - MIME Types
-  - PHP
-  - Reference
-  - Text
-  - Types
-  - Video
 ---
 
 {{HTTPSidebar}}

@@ -128,83 +128,47 @@ This is more convenient than the previous example — we can do all of our featu
 
 ### JavaScript
 
-We already saw an example of a JavaScript feature detection test earlier on. Generally, such tests are done via one of the following common patterns:
-
-<table class="standard-table">
-  <caption>
-    Summary of JavaScript feature detection techniques
-  </caption>
-  <thead>
-    <tr>
-      <th scope="col">Feature detection type</th>
-      <th scope="col">Explanation</th>
-      <th scope="col">Example</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><em>If member in object</em></td>
-      <td>
-        Check whether a certain method or property (typically an entry point
-        into using the API or other feature you are detecting for) exists in its
-        parent Object.
-      </td>
-      <td>
-        <p><code>if ("geolocation" in navigator) { }</code></p>
-      </td>
-    </tr>
-    <tr>
-      <td><em>Property on element</em></td>
-      <td>
-        Create an element in memory using
-        {{domxref("Document.createElement()")}} and then check if a
-        property exists on it. The example shown is a way of detecting
-        <a href="/en-US/docs/Web/API/Canvas_API">Canvas</a> support.
-      </td>
-      <td>
-        <code
-          >function supports_canvas() {<br />return
-          !!document.createElement('canvas').getContext;<br />}<br /><br />if (supports_canvas())
-          { }</code
-        >
-      </td>
-    </tr>
-    <tr>
-      <td><em>Method on element return value</em></td>
-      <td>
-        Create an element in memory using
-        {{domxref("Document.createElement()")}} and then check if a
-        method exists on it. If it does, check what value it returns.
-      </td>
-      <td>
-        See
-        <a href="https://diveinto.html5doctor.com/detect.html#video-formats"
-          >Dive into HTML Video Format detection</a
-        >
-        test.
-      </td>
-    </tr>
-    <tr>
-      <td><em>Property on element retains value</em></td>
-      <td>
-        Create an element in memory using
-        {{domxref("Document.createElement()")}}, set a property to
-        a certain value, then check to see if the value is retained.
-      </td>
-      <td>
-        See
-        <a href="https://diveinto.html5doctor.com/detect.html#input-types"
-          >Dive into HTML <code>&#x3C;input></code> type detection</a
-        >
-        test.
-      </td>
-    </tr>
-  </tbody>
-</table>
-
-> **Note:** The double `NOT` in the above example (`!!`) is a way to force a return value to become a "proper" boolean value, rather than a {{glossary("Truthy")}}/{{glossary("Falsy")}} value that may skew the results.
+We already saw an example of a JavaScript feature detection test earlier on. Generally, such tests are done via one of a few common patterns.
 
 Bear in mind though that some features, however, are known to be undetectable — see Modernizr's list of [Undetectables](https://github.com/Modernizr/Modernizr/wiki/Undetectables) from 2016.
+
+Common patterns for detectable features include:
+
+- Members of an object
+  - : Check whether a particular method or property (typically an entry point into using the API or other feature you are detecting) exists in its parent `Object`.
+
+    Our earlier example used this pattern to detect [Geolocation](/en-US/docs/Web/API/Geolocation_API) support by testing the [`navigator`](/en-US/docs/Web/API/Navigator) object for a `geolocation` member:
+
+    ```js
+    if ("geolocation" in navigator) {
+      // Access navigator.geolocation APIs
+    }
+    ```
+
+- Properties of an element
+  - : Create an element in memory using {{domxref("Document.createElement()")}} and then check if a property exists on it.
+
+    This example shows a way of detecting [Canvas API](/en-US/docs/Web/API/Canvas_API) support:
+
+    ```js
+    function supports_canvas() {
+      return !!document.createElement('canvas').getContext;
+    }
+
+    if (supports_canvas()) {
+      // Create and draw on canvas elements
+    }
+    ```
+
+    > **Note:** The double `NOT` in the above example (`!!`) is a way to force a return value to become a "proper" boolean value, rather than a {{glossary("Truthy")}}/{{glossary("Falsy")}} value that may skew the results.
+
+- Specific return values of a method on an element
+
+  - : Create an element in memory using {{domxref("Document.createElement()")}} and then check if a method exists on it. If it does, check what value it returns. See the feature test in [Dive into HTML Video Format detection](https://diveinto.html5doctor.com/detect.html#video-formats) for an example of this pattern.
+
+- Retention of assigned property value by an element
+
+  - : Create an element in memory using {{domxref("Document.createElement()")}}, set a property to a specific value, then check to see if the value is retained. See the feature test in [Dive into HTML \<input> type detection](https://diveinto.html5doctor.com/detect.html#input-types) for an example of this pattern.
 
 #### matchMedia
 
