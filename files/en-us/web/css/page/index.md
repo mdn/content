@@ -2,7 +2,7 @@
 title: page
 slug: Web/CSS/page
 page-type: css-property
-browser-compat: css.at-rules.page.page
+browser-compat: css.properties.page
 ---
 
 {{CSSRef}}
