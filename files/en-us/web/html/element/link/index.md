@@ -177,7 +177,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
     If the attribute is not present, the resource is fetched without a {{Glossary("CORS")}} request (i.e. without sending the `Origin` HTTP header), preventing its non-tainted usage. If invalid, it is handled as if the enumerated keyword **anonymous** was used.
     See [CORS settings attributes](/en-US/docs/Web/HTML/Attributes/crossorigin) for additional information.
 
-- `disabled` {{Deprecated_Inline}} {{Non-standard_Inline}}
+- `disabled` {{Non-standard_Inline}}
 
   - : For `rel="stylesheet"` only, the `disabled` Boolean attribute indicates whether the described stylesheet should be loaded and applied to the document.
     If `disabled` is specified in the HTML when it is loaded, the stylesheet will not be loaded during page load.

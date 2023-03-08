@@ -39,7 +39,7 @@ Like all other HTML elements, this element supports the [global attributes](/en-
 
     The allowed values are `nodownload`, `nofullscreen` and `noremoteplayback`.
 
-    Use the [`disablepictureinpicture`](#attr-disablepictureinpicture) attribute if you want to disable the Picture-In-Picture mode (and the control).
+    Use the [`disablepictureinpicture`](#disablepictureinpicture) attribute if you want to disable the Picture-In-Picture mode (and the control).
 
 - `crossorigin`
 

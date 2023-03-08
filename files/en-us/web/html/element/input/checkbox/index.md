@@ -279,9 +279,9 @@ otherCheckbox.addEventListener('change', () => {
     <tr>
       <td><strong>IDL attributes</strong></td>
       <td>
-        <code><a href="#attr-checked">checked</a></code>,
-        <code><a href="#attr-indeterminate">indeterminate</a></code> and
-        <code><a href="#attr-value">value</a></code>
+        <code><a href="#checked">checked</a></code>,
+        <code><a href="#indeterminate">indeterminate</a></code> and
+        <code><a href="#value">value</a></code>
       </td>
     </tr>
     <tr>
