@@ -23,7 +23,7 @@ None.
 
 ### Return value
 
-A {{jsxref("Promise")}} that resolves with `undefined` after trying to actiavete the newly installed service worker.
+A {{jsxref("Promise")}} that resolves with `undefined` after trying to activate the newly installed service worker.
 
 ## Examples
 
