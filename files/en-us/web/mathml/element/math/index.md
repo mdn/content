@@ -1,10 +1,6 @@
 ---
 title: <math>
 slug: Web/MathML/Element/math
-tags:
-  - MathML
-  - MathML Reference
-  - MathML:Element
 browser-compat: mathml.elements.math
 ---
 

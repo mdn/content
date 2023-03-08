@@ -2,14 +2,6 @@
 title: search.search()
 slug: Mozilla/Add-ons/WebExtensions/API/search/search
 page-type: webextension-api-function
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Reference
-  - Search
-  - Search Engines
-  - WebExtensions
 browser-compat: webextensions.api.search.search
 ---
 

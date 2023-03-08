@@ -2,19 +2,6 @@
 title: StorageArea.get()
 slug: Mozilla/Add-ons/WebExtensions/API/storage/StorageArea/get
 page-type: webextension-api-function
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - JavaScript
-  - Method
-  - Non-standard
-  - Reference
-  - Storage
-  - StorageArea
-  - Web
-  - WebExtensions
-  - get
 browser-compat: webextensions.api.storage.StorageArea.get
 ---
 

@@ -2,12 +2,9 @@
 title: SVG fonts
 slug: Web/SVG/Tutorial/SVG_fonts
 page-type: guide
-tags:
-  - Advanced
-  - NeedsUpdate
-  - SVG
-  - SVG:Tutorial
 ---
+
+{{SVGRef}}
 
 {{ PreviousNext("Web/SVG/Tutorial/Filter_effects", "Web/SVG/Tutorial/SVG_Image_Tag") }}
 

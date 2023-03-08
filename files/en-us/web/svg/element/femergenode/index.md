@@ -2,13 +2,6 @@
 title: <feMergeNode>
 slug: Web/SVG/Element/feMergeNode
 page-type: svg-element
-tags:
-  - Element
-  - NeedsContent
-  - NeedsExample
-  - Reference
-  - SVG
-  - SVG Filter
 browser-compat: svg.elements.feMergeNode
 ---
 
