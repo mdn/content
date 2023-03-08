@@ -404,7 +404,7 @@ according to [our license](LICENSE.md).
 [contribute page]: https://developer.mozilla.org/en-US/docs/MDN/Contribute
 [getting started with mdn web docs]: https://developer.mozilla.org/en-US/docs/MDN/Community/Contributing/Getting_started
 [github for complete beginners]: https://developer.mozilla.org/en-US/docs/MDN/Contribute/GitHub_beginners
-[guide to writing markdown for mdn]: https://developer.mozilla.org/en-US/docs/MDN/Writing_guidelines/Howto/Markdown_in_MDN
+[how to write in markdown]: https://developer.mozilla.org/en-US/docs/MDN/Writing_guidelines/Howto/Markdown_in_MDN
 [javascript landing page]: https://developer.mozilla.org/en-US/docs/Web/JavaScript
 [learn web development]: https://developer.mozilla.org/en-US/docs/Learn
 [writing guidelines]: https://developer.mozilla.org/en-US/docs/MDN/Writing_guidelines
