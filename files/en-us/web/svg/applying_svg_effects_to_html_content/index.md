@@ -2,12 +2,9 @@
 title: Applying SVG effects to HTML content
 slug: Web/SVG/Applying_SVG_effects_to_HTML_content
 page-type: guide
-tags:
-  - CSS
-  - Guide
-  - HTML
-  - SVG
 ---
+
+{{SVGRef}}
 
 Modern browsers support using [SVG](/en-US/docs/Web/SVG) within [CSS](/en-US/docs/Web/CSS) styles to apply graphical effects to HTML content.
 

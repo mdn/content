@@ -2,12 +2,6 @@
 title: String
 slug: Web/JavaScript/Reference/Global_Objects/String
 page-type: javascript-class
-tags:
-  - Class
-  - ECMAScript 2015
-  - JavaScript
-  - Reference
-  - String
 browser-compat: javascript.builtins.String
 ---
 
@@ -282,6 +276,11 @@ You must be careful which level of characters you are iterating on. For example,
   - : Returns a string created from a raw template string.
 
 ## Instance properties
+
+These properties are defined on `String.prototype` and shared by all `String` instances.
+
+- {{jsxref("Object/constructor", "String.prototype.constructor")}}
+  - : The constructor function that created the instance object. For `String` instances, the initial value is the {{jsxref("String/String", "String")}} constructor.
 
 These properties are own properties of each `String` instance.
 

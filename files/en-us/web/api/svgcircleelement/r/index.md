@@ -32,7 +32,7 @@ An {{domxref("SVGAnimatedLength")}} representing the radius of the circle.
 ### JavaScript
 
 ```js
-const circle = document.getElementById('circle');
+const circle = document.getElementById("circle");
 console.log(circle.r);
 ```
 

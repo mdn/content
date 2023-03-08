@@ -14,9 +14,9 @@ The **`animationiteration`** event is fired when an iteration of a [CSS Animatio
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('animationiteration', (event) => {});
+addEventListener("animationiteration", (event) => {});
 
-onanimationiteration = (event) => { };
+onanimationiteration = (event) => {};
 ```
 
 ## Event type
@@ -41,11 +41,11 @@ _Also inherits properties from its parent {{domxref("Event")}}_.
 This code uses `animationiteration` to keep track of the number of iterations an animation has completed:
 
 ```js
-const animated = document.querySelector('.animated');
+const animated = document.querySelector(".animated");
 
 let iterationCount = 0;
 
-animated.addEventListener('animationiteration', () => {
+animated.addEventListener("animationiteration", () => {
   iterationCount++;
   console.log(`Animation iteration count: ${iterationCount}`);
 });
@@ -54,7 +54,7 @@ animated.addEventListener('animationiteration', () => {
 The same, but using the `onanimationiteration` event handler property:
 
 ```js
-const animated = document.querySelector('.animated');
+const animated = document.querySelector(".animated");
 
 let iterationCount = 0;
 
@@ -112,36 +112,42 @@ animated.onanimationiteration = () => {
 #### JavaScript
 
 ```js
-const animation = document.querySelector('p.animation');
-const animationEventLog = document.querySelector('.animation-example>.event-log');
-const applyAnimation = document.querySelector('.animation-example>button.activate');
+const animation = document.querySelector("p.animation");
+const animationEventLog = document.querySelector(
+  ".animation-example>.event-log"
+);
+const applyAnimation = document.querySelector(
+  ".animation-example>button.activate"
+);
 let iterationCount = 0;
 
-animation.addEventListener('animationstart', () => {
+animation.addEventListener("animationstart", () => {
   animationEventLog.textContent = `${animationEventLog.textContent}'animation started' `;
 });
 
-animation.addEventListener('animationiteration', () => {
+animation.addEventListener("animationiteration", () => {
   iterationCount++;
   animationEventLog.textContent = `${animationEventLog.textContent}'animation iterations: ${iterationCount}' `;
 });
 
-animation.addEventListener('animationend', () => {
+animation.addEventListener("animationend", () => {
   animationEventLog.textContent = `${animationEventLog.textContent}'animation ended'`;
-  animation.classList.remove('active');
+  animation.classList.remove("active");
   applyAnimation.textContent = "Activate animation";
 });
 
-animation.addEventListener('animationcancel', () => {
+animation.addEventListener("animationcancel", () => {
   animationEventLog.textContent = `${animationEventLog.textContent}'animation canceled'`;
 });
 
-applyAnimation.addEventListener('click', () => {
-  animation.classList.toggle('active');
-  animationEventLog.textContent = '';
+applyAnimation.addEventListener("click", () => {
+  animation.classList.toggle("active");
+  animationEventLog.textContent = "";
   iterationCount = 0;
-  const active = animation.classList.contains('active');
-  applyAnimation.textContent = active ? "Cancel animation" : "Activate animation";
+  const active = animation.classList.contains("active");
+  applyAnimation.textContent = active
+    ? "Cancel animation"
+    : "Activate animation";
 });
 ```
 

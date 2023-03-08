@@ -2,14 +2,6 @@
 title: Array.prototype.findLast()
 slug: Web/JavaScript/Reference/Global_Objects/Array/findLast
 page-type: javascript-instance-method
-tags:
-  - Array
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - findLast
-  - Polyfill
 browser-compat: javascript.builtins.Array.findLast
 ---
 

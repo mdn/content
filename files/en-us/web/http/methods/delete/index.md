@@ -1,10 +1,6 @@
 ---
 title: DELETE
 slug: Web/HTTP/Methods/DELETE
-tags:
-  - HTTP
-  - Reference
-  - Request method
 browser-compat: http.methods.DELETE
 ---
 

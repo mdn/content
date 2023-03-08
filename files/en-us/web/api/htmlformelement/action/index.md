@@ -20,7 +20,7 @@ A string.
 ## Examples
 
 ```js
-form.action = '/cgi-bin/publish';
+form.action = "/cgi-bin/publish";
 ```
 
 ## Specifications

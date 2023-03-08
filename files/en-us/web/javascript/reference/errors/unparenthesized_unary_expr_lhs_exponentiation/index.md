@@ -2,10 +2,6 @@
 title: "SyntaxError: unparenthesized unary expression can't appear on the left-hand side of '**'"
 slug: Web/JavaScript/Reference/Errors/Unparenthesized_unary_expr_lhs_exponentiation
 page-type: javascript-error
-tags:
-  - Error
-  - JavaScript
-  - SyntaxError
 ---
 
 {{jsSidebar("Errors")}}

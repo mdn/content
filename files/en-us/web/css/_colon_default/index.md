@@ -2,16 +2,6 @@
 title: ":default"
 slug: Web/CSS/:default
 page-type: css-pseudo-class
-tags:
-  - ":default"
-  - CSS
-  - Forms
-  - Layout
-  - Pseudo-class
-  - Reference
-  - Selector
-  - Web
-  - default
 browser-compat: css.selectors.default
 ---
 

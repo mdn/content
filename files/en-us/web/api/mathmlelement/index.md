@@ -13,16 +13,16 @@ The **`MathMLElement`** interface represents any [MathML](/en-US/docs/Web/MathML
 
 ## Instance properties
 
-_Also inherits properties from: {{DOMxRef("DocumentAndElementEventHandlers")}}, {{DOMxRef("Element")}}_.
+_Also inherits properties from its parent, {{DOMxRef("Element")}}_.
 
-- {{DOMxRef("MathMLElement.attributeStyleMap")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{DOMxRef("MathMLElement.attributeStyleMap")}} {{ReadOnlyInline}}
   - : A {{DOMxRef("StylePropertyMap")}} representing the declarations of the element's `style` attribute.
 - {{DOMxRef("MathMLElement.style")}}
   - : A {{DOMxRef("CSSStyleDeclaration")}} representing the declarations of the element's `style` attribute.
 
 ## Instance methods
 
-_This interface has no methods, but inherits methods from: {{DOMxRef("DocumentAndElementEventHandlers")}}, {{DOMxRef("Element")}}_.
+_This interface has no methods, but inherits methods from its parent, {{DOMxRef("Element")}}_.
 
 ## Examples
 
@@ -39,7 +39,7 @@ _This interface has no methods, but inherits methods from: {{DOMxRef("DocumentAn
 ### JavaScript
 
 ```js
-document.querySelector('msqrt').constructor.name; // MathMLElement
+document.querySelector("msqrt").constructor.name; // MathMLElement
 ```
 
 ## Specifications

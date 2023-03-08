@@ -22,7 +22,7 @@ JavaScript also offers an array-like bracketed syntax for obtaining an item from
 NodeList by index:
 
 ```js
-nodeItem = nodeList[index]
+nodeItem = nodeList[index];
 ```
 
 ### Parameters

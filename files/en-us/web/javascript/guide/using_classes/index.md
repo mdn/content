@@ -2,11 +2,6 @@
 title: Using classes
 slug: Web/JavaScript/Guide/Using_Classes
 page-type: guide
-tags:
-  - Guide
-  - Intermediate
-  - JavaScript
-  - Object
 ---
 
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Working_with_Objects", "Web/JavaScript/Guide/Using_promises")}}

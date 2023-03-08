@@ -1,10 +1,6 @@
 ---
 title: icons
 slug: Web/Manifest/icons
-tags:
-  - Icons
-  - Manifest
-  - Web
 browser-compat: html.manifest.icons
 ---
 

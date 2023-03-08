@@ -2,12 +2,6 @@
 title: container-name
 slug: Web/CSS/container-name
 page-type: css-property
-tags:
-  - container queries
-  - CSS
-  - CSS Containment
-  - Reference
-  - Property
 browser-compat: css.properties.container-name
 ---
 
@@ -109,7 +103,7 @@ This is useful if you want to target the same container with multiple container 
   }
 }
 
-@container nav (max-height: 200px) {
+@container card (max-height: 200px) {
   h2 {
     font-size: 1.5em;
   }

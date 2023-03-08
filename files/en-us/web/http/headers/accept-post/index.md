@@ -1,11 +1,6 @@
 ---
 title: Accept-Post
 slug: Web/HTTP/Headers/Accept-Post
-tags:
-  - Accept-Post
-  - HTTP
-  - HTTP Header
-  - Response Header
 spec-urls: https://www.w3.org/TR/ldp/#header-accept-post
 ---
 

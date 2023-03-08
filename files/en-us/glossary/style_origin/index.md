@@ -2,11 +2,6 @@
 title: Style origin
 slug: Glossary/Style_origin
 page-type: glossary-definition
-tags:
-  - CSS
-  - Style
-  - Style Origin
-  - origin
 ---
 
 In {{Glossary("CSS")}}, there are three categories of sources for style changes. These categories are called **style origins**. They are the **user agent origin**, **user origin**, and the **author origin**.

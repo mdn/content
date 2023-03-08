@@ -2,12 +2,10 @@
 title: CSSMathSum.values
 slug: Web/API/CSSMathSum/values
 page-type: web-api-instance-property
-status:
-  - experimental
 browser-compat: api.CSSMathSum.values
 ---
 
-{{APIRef("CSS Typed Object Model API")}}{{SeeCompatTable}}
+{{APIRef("CSS Typed Object Model API")}}
 
 The **`CSSMathSum.values`** read-only property
 of the {{domxref("CSSMathSum")}} interface returns a {{domxref('CSSNumericArray')}}

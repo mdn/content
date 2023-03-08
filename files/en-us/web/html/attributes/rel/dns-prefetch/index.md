@@ -2,12 +2,6 @@
 title: rel=dns-prefetch
 slug: Web/HTML/Attributes/rel/dns-prefetch
 page-type: html-attribute-value
-tags:
-  - Attribute
-  - HTML
-  - Link
-  - Link types
-  - Reference
 browser-compat: html.elements.link.rel.dns-prefetch
 ---
 

@@ -36,7 +36,7 @@ _Inherits methods from its parent, {{domxref("HTMLElement")}}._
 - {{domxref("HTMLDialogElement/cancel_event", "cancel")}}
   - : Fired when the user dismisses the current open dialog with the escape key.
 - {{domxref("HTMLDialogElement/close_event", "close")}}
-  - : Fired when the dialog is closed, whether with the escape key, the `HTMLDialogElement.close()` method, or via submitting a form within the dialog with [`method="dialog"`](/en-US/docs/Web/HTML/Element/form#attr-method).
+  - : Fired when the dialog is closed, whether with the escape key, the `HTMLDialogElement.close()` method, or via submitting a form within the dialog with [`method="dialog"`](/en-US/docs/Web/HTML/Element/form#method).
 
 ## Examples
 

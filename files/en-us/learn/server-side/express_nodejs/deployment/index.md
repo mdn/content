@@ -1,14 +1,6 @@
 ---
 title: "Express Tutorial Part 7: Deploying to production"
 slug: Learn/Server-side/Express_Nodejs/deployment
-tags:
-  - Beginner
-  - CodingScripting
-  - Deployment
-  - Express
-  - Learn
-  - Node
-  - server-side
 ---
 
 {{LearnSidebar}}{{PreviousMenu("Learn/Server-side/Express_Nodejs/forms", "Learn/Server-side/Express_Nodejs")}}

@@ -2,14 +2,6 @@
 title: paint()
 slug: Web/CSS/image/paint
 page-type: css-function
-tags:
-  - CSS
-  - CSS Function
-  - CSS images
-  - Function
-  - Houdini
-  - Reference
-  - Web
 browser-compat: css.types.image.paint
 ---
 
@@ -131,4 +123,4 @@ We've included a custom property in the selector block defining a boxColor. Cust
 - [CSS Painting API](/en-US/docs/Web/API/CSS_Painting_API)
 - [Using the CSS Painting API](/en-US/docs/Web/API/CSS_Painting_API/Guide)
 - {{cssxref("&lt;image&gt;")}}
-- {{domxref("canvas")}}
+- [Canvas API](/en-US/docs/Web/API/Canvas_API)

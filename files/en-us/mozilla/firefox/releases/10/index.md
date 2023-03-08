@@ -1,10 +1,6 @@
 ---
 title: Firefox 10 for developers
 slug: Mozilla/Firefox/Releases/10
-tags:
-  - Firefox
-  - Firefox 10
-  - Gecko 10
 ---
 
 {{FirefoxSidebar}}
@@ -23,7 +19,7 @@ Firefox 10 shipped on January 31, 2012. This article provides information about 
 ### JavaScript
 
 - The method `WeakMap.set()` now returns `undefined`, instead of itself.
-- A bug was introduced in regular expression handling in Firefox 7; this has been fixed. See {{ bug(683838) }} if you want the gory details.
+- A bug was introduced in regular expression handling in Firefox 7; this has been fixed. See [Firefox bug 683838](https://bugzil.la/683838) if you want the gory details.
 - You can no longer use [E4X](/en-US/docs/E4X) syntax while in [ECMAScript 5 strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode) (that is, after `"use strict;"`).
 
 ### DOM
@@ -91,7 +87,7 @@ Great progress has been made to update IndexedDB to the latest draft specificati
 - The ESC key no longer incorrectly results in the {{ domxref("Element.keydown_event", "onkeydown") }} handler incorrectly getting called.
 - The `NameList` interface is no longer implemented; it previously had an implementation with no way to actually get access to one.
 - The {{ domxref("document.createProcessingInstruction()") }} method now works on HTML documents as well as XML documents. {{ domxref("ProcessingInstruction") }} nodes are still only supported on XML documents, but since nodes can be moved among documents, it's helpful to be able to create them on HTML documents as well.
-- The {{ domxref("XMLHttpRequest") }} `responseType` "`moz-json`" [introduced in Firefox 9](/en-US/docs/Mozilla/Firefox/Releases/9#dom) has been updated to the latest draft of the specification and has been unprefixed. See {{ bug("707142#c13") }}
+- The {{ domxref("XMLHttpRequest") }} `responseType` "`moz-json`" [introduced in Firefox 9](/en-US/docs/Mozilla/Firefox/Releases/9#dom) has been updated to the latest draft of the specification and has been unprefixed. See note in [Firefox bug 707142](https://bugzil.la/707142#c13).
 
 ### CSS
 
@@ -147,7 +143,7 @@ For an overview of likely issues that may arise when updating your add-ons to su
 
 ### Build system changes
 
-- The `--disable-rdf` build option, which actually made it impossible to successfully build, has been removed. Work is ongoing on being able to actually remove RDF support entirely, but at present XUL still requires it to function. See {{ bug(559505) }} for progress on removing the last vestiges of RDF being required.
+- The `--disable-rdf` build option, which actually made it impossible to successfully build, has been removed. Work is ongoing on being able to actually remove RDF support entirely, but at present XUL still requires it to function. See [Firefox bug 559505](https://bugzil.la/559505) for progress on removing the last vestiges of RDF being required.
 - The `--disable-smil` build option has been removed.
 
 ### See also

@@ -80,7 +80,7 @@ A selection object represents the {{DOMxRef("Range")}}s that the user has select
 
 ```js
 const selObj = window.getSelection();
-const range  = selObj.getRangeAt(0);
+const range = selObj.getRangeAt(0);
 ```
 
 - `selObj` is a Selection object
@@ -92,7 +92,7 @@ As the [Selection API specification notes](https://www.w3.org/TR/selection-api/#
 
 Selection and input focus (indicated by {{DOMxRef("Document.activeElement")}}) have a complex relationship that varies by browser. In cross-browser compatible code, it's better to handle them separately.
 
-Safari and Chrome (unlike Firefox) currently focus the element containing selection when modifying the selection programmatically; it's possible that this may change in the future (see [W3C bug 14383](https://www.w3.org/Bugs/Public/show_bug.cgi?id=14383) and {{WebKitBug("38696")}}).
+Safari and Chrome (unlike Firefox) currently focus the element containing selection when modifying the selection programmatically; it's possible that this may change in the future (see [W3C bug 14383](https://www.w3.org/Bugs/Public/show_bug.cgi?id=14383) and [Webkit bug 38696](https://webkit.org/b/38696)).
 
 ### Behavior of Selection API in terms of editing host focus changes
 

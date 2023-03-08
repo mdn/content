@@ -1,15 +1,6 @@
 ---
 title: Other form controls
 slug: Learn/Forms/Other_form_controls
-tags:
-  - Beginner
-  - Controls
-  - Example
-  - Forms
-  - Guide
-  - HTML
-  - Web
-  - Widgets
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Forms/HTML5_input_types","Learn/Forms/Styling_web_forms", "Learn/Forms")}}
@@ -131,7 +122,7 @@ The {{HTMLElement("option")}} elements can be nested inside {{HTMLElement("optgr
 
 {{EmbedLiveSample("Using_optgroup", 120, 120)}}
 
-On the {{HTMLElement("optgroup")}} element, the value of the [`label`](/en-US/docs/Web/HTML/Element/optgroup#attr-label) attribute is displayed before the values of the nested options. The browser usually sets them visually apart from the options (i.e. by being bolded and at a different nesting level) so they are less likely to be confused for actual options.
+On the {{HTMLElement("optgroup")}} element, the value of the [`label`](/en-US/docs/Web/HTML/Element/optgroup#label) attribute is displayed before the values of the nested options. The browser usually sets them visually apart from the options (i.e. by being bolded and at a different nesting level) so they are less likely to be confused for actual options.
 
 #### Using the value attribute
 
@@ -302,7 +293,7 @@ Such a bar is created by using the {{HTMLElement("meter")}} element. This is for
 
 The content inside the {{HTMLElement("meter")}} element is a fallback for browsers that don't support the element and for assistive technologies to vocalize it.
 
-Support for {{HTMLElement("progress")}} and {{HTMLElement("meter")}} is fairly good — there is no support in Internet Explorer, but other browsers support it well.
+Support for {{HTMLElement("progress")}} and {{HTMLElement("meter")}} is available in all modern browsers.
 
 ## Test your skills!
 

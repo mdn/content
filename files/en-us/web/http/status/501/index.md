@@ -1,10 +1,6 @@
 ---
 title: 501 Not Implemented
 slug: Web/HTTP/Status/501
-tags:
-  - HTTP
-  - Server error
-  - Status code
 browser-compat: http.status.501
 ---
 

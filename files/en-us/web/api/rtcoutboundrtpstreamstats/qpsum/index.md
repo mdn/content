@@ -60,7 +60,7 @@ the given {{domxref("RTCStats")}} object that contains RTP stream statistics, re
 function calculateAverageQP(stats) {
   let frameCount = 0;
 
-  switch(stats.type) {
+  switch (stats.type) {
     case "inbound-rtp":
     case "remote-inbound-rtp":
       frameCount = stats.framesDecoded;

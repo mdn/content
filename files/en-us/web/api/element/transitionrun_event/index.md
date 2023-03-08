@@ -1,5 +1,5 @@
 ---
-title: 'Element: transitionrun event'
+title: "Element: transitionrun event"
 slug: Web/API/Element/transitionrun_event
 browser-compat: api.Element.transitionrun_event
 page-type: web-api-event
@@ -16,9 +16,9 @@ This event is not cancelable.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('transitionrun', (event) => {});
+addEventListener("transitionrun", (event) => {});
 
-ontransitionrun = (event) => { };
+ontransitionrun = (event) => {};
 ```
 
 ## Event type
@@ -43,8 +43,10 @@ _Also inherits properties from its parent {{domxref("Event")}}_.
 This code adds a listener to the `transitionrun` event:
 
 ```js
-el.addEventListener('transitionrun', () => {
-  console.log('Transition is running but hasn\'t necessarily started transitioning yet');
+el.addEventListener("transitionrun", () => {
+  console.log(
+    "Transition is running but hasn't necessarily started transitioning yet"
+  );
 });
 ```
 
@@ -52,7 +54,9 @@ The same, but using the `ontransitionrun` property instead of `addEventListener(
 
 ```js
 el.ontransitionrun = () => {
-  console.log('Transition started running, and will start transitioning when the transition delay has expired');
+  console.log(
+    "Transition started running, and will start transitioning when the transition delay has expired"
+  );
 };
 ```
 
@@ -84,19 +88,19 @@ In the following example, we have a simple {{htmlelement("div")}} element, style
 To this, we'll add some JavaScript to indicate where the {{domxref("Element/transitionstart_event", "transitionstart")}} and {{domxref("Element/transitionrun_event", "transitionrun")}} events fire.
 
 ```js
-const el = document.querySelector('.transition');
-const message = document.querySelector('.message');
+const el = document.querySelector(".transition");
+const message = document.querySelector(".message");
 
-el.addEventListener('transitionrun', () => {
-  message.textContent = 'transitionrun fired';
+el.addEventListener("transitionrun", () => {
+  message.textContent = "transitionrun fired";
 });
 
-el.addEventListener('transitionstart', () => {
-  message.textContent = 'transitionstart fired';
+el.addEventListener("transitionstart", () => {
+  message.textContent = "transitionstart fired";
 });
 
-el.addEventListener('transitionend', () => {
-  message.textContent = 'transitionend fired';
+el.addEventListener("transitionend", () => {
+  message.textContent = "transitionend fired";
 });
 ```
 

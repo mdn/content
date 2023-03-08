@@ -21,11 +21,13 @@ In the following example video frames from the {{domxref("ReadableStream")}} are
 
 ```js
 const trackProcessor = new MediaStreamTrackProcessor({ track: videoTrack });
-const trackGenerator = new MediaStreamTrackGenerator({ kind: 'video' });
+const trackGenerator = new MediaStreamTrackGenerator({ kind: "video" });
 
 /* */
 
-trackProcessor.readable.pipeThrough(transformer).pipeTo(trackGenerator.writable);
+trackProcessor.readable
+  .pipeThrough(transformer)
+  .pipeTo(trackGenerator.writable);
 ```
 
 ## Specifications

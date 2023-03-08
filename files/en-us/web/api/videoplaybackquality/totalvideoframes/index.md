@@ -33,7 +33,11 @@ indicator to show an increase in frame loss.
 const videoElem = document.getElementById("my_vid");
 const quality = videoElem.getVideoPlaybackQuality();
 
-if ((quality.corruptedVideoFrames + quality.droppedVideoFrames)/quality.totalVideoFrames > 0.1) {
+if (
+  (quality.corruptedVideoFrames + quality.droppedVideoFrames) /
+    quality.totalVideoFrames >
+  0.1
+) {
   lostFramesThresholdExceeded();
 }
 ```

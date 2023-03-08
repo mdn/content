@@ -1,9 +1,6 @@
 ---
 title: The MDN Web Docs project
 slug: MDN
-tags:
-  - Landing
-  - MDN Meta
 ---
 
 {{MDNSidebar}}

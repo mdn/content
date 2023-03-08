@@ -1,26 +1,13 @@
 ---
 title: Text fragments
 slug: Web/Text_fragments
-tags:
-  - Components
-  - HTML Imports
-  - JavaScript
-  - Landing
-  - Overview
-  - Template
-  - Web Article
-  - Web Components
-  - Web Development
-  - custom elements
-  - shadow dom
-  - slot
 browser-compat:
   - html.elements.a.text_fragments
   - api.FragmentDirective
   - css.selectors.target-text
 ---
 
-Text Fragments allow you to link directly to a specific portion of text in a web document, without requiring the author to annotate it with an ID, using particular syntax in the URL fragment. Supporting browsers are free to choose how to draw attention to the linked text, e.g. with a color highlight and/or scrolling to the content on the page. This is useful because it allows web content authors to deep-link to other content they don't control, without relying on the presence of IDs to make that possible. Building on top of that, it could be used to generate more effective content-sharing links for users to pass to one another.
+**Text fragments** allow you linking directly to a specific portion of text in a web document, without requiring the author to annotate it with an ID, using particular syntax in the URL fragment. Supporting browsers are free to choose how to draw attention to the linked text, e.g. with a color highlight and/or scrolling to the content on the page. This is useful because it allows web content authors to deep-link to other content they don't control, without relying on the presence of IDs to make that possible. Building on top of that, it could be used to generate more effective content-sharing links for users to pass to one another.
 
 ## Concepts and usage
 
@@ -31,7 +18,7 @@ Historically, one of the web's key features has always been its ability to provi
 - You can link to a specific section of a document by linking to its URL plus the _document fragment_ (ID) of that section, for example:
   - [https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a#browser_compatibility](/en-US/docs/Web/HTML/Element/a#browser_compatibility).
 
-The issue with linking to specific document fragments is that the author of the linked page needs to put an anchor in place to _actually_ link to. The second example above links to an {{htmlelement("h2")}} element with an ID of `browser_compatibility`:
+The issue with linking to specific document fragments is that the author of the linked page needs to put an anchor in place to _actually_ link to. The second example above links to an {{htmlelement("Heading_Elements", "h2")}} element with an ID of `browser_compatibility`:
 
 ```html
 <h2 id="browser_compatibility">
@@ -72,7 +59,7 @@ Supporting browsers will scroll to and highlight the first text fragment in the 
 
 - Text strings used for the `textStart`, `textEnd`, `prefix-`, and `-suffix` values need to be [percent-encoded](/en-US/docs/Web/JavaScript/Reference/Global_Objects/encodeURIComponent).
 - Matches are case-insensitive.
-- Individual `textStart`, `textEnd`, `prefix-`, and `-suffix` strings need to reside wholly inside the same [block-level element](/en-US/docs/Web/HTML/Block-level_elements#Elements), but complete matches can span across multiple element boundaries.
+- Individual `textStart`, `textEnd`, `prefix-`, and `-suffix` strings need to reside wholly inside the same [block-level element](/en-US/docs/Web/HTML/Block-level_elements#elements), but complete matches can span across multiple element boundaries.
 - For security reasons, the feature requires links to be opened in a noopener context — you need to add `rel="noopener"` to your {{htmlelement("a")}} elements, and add `noopener` to your {{domxref("window.open()")}} calls when using this feature.
 - Text fragments are invoked only on full (non-same-page), user-initiated navigations.
 - Text fragments are only applied to the main frame; text will not be searched inside {{htmlelement("iframe")}}s, and `iframe` navigation will not invoke a text fragment.

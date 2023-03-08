@@ -30,30 +30,31 @@ Developers should always use `IDBLocaleAwareKeyRange` when dealing with locale-a
 function displayData() {
   const keyRangeValue = IDBLocaleAwareKeyRange.bound("A", "F");
 
-  const transaction = db.transaction(['fThings'], 'readonly');
-  const objectStore = transaction.objectStore('fThings');
+  const transaction = db.transaction(["fThings"], "readonly");
+  const objectStore = transaction.objectStore("fThings");
 
-  const myIndex = objectStore.index('lName');
+  const myIndex = objectStore.index("lName");
   myIndex.openCursor(keyRangeValue).onsuccess = (event) => {
     const cursor = event.target.result;
     if (cursor) {
-      const tableRow = document.createElement('tr');
-      tableRow.innerHTML = `<td>${cursor.value.id}</td>`
-                         + `<td>${cursor.value.lName}</td>`
-                         + `<td>${cursor.value.fName}</td>`
-                         + `<td>${cursor.value.jTitle}</td>`
-                         + `<td>${cursor.value.company}</td>`
-                         + `<td>${cursor.value.eMail}</td>`
-                         + `<td>${cursor.value.phone}</td>`
-                         + `<td>${cursor.value.age}</td>`;
+      const tableRow = document.createElement("tr");
+      tableRow.innerHTML =
+        `<td>${cursor.value.id}</td>` +
+        `<td>${cursor.value.lName}</td>` +
+        `<td>${cursor.value.fName}</td>` +
+        `<td>${cursor.value.jTitle}</td>` +
+        `<td>${cursor.value.company}</td>` +
+        `<td>${cursor.value.eMail}</td>` +
+        `<td>${cursor.value.phone}</td>` +
+        `<td>${cursor.value.age}</td>`;
       tableEntry.appendChild(tableRow);
 
       cursor.continue();
     } else {
-      console.log('Entries all displayed.');
+      console.log("Entries all displayed.");
     }
   };
-};
+}
 ```
 
 ## Specifications

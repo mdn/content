@@ -1,11 +1,6 @@
 ---
 title: CSS performance optimization
 slug: Learn/Performance/CSS
-tags:
-  - CSS
-  - Performance
-  - Reference
-  - Tutorial
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Performance/html", "Learn/Performance/business_case_for_performance", "Learn/Performance")}}
@@ -68,7 +63,7 @@ The {{cssxref('contain')}} CSS property allows an author to indicate that an ele
 
 ## Conclusion
 
-{{PreviousMenuNext("Learn/Performance/html", "Learn/Performance/fonts", "Learn/Performance")}}
+{{PreviousMenuNext("Learn/Performance/html", "Learn/Performance/business_case_for_performance", "Learn/Performance")}}
 
 ## See also
 

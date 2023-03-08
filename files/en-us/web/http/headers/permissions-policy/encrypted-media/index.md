@@ -1,14 +1,8 @@
 ---
 title: "Permissions-Policy: encrypted-media"
 slug: Web/HTTP/Headers/Permissions-Policy/encrypted-media
-tags:
-  - Directive
-  - EME
-  - Permissions Policy
-  - Permissions-Policy
-  - HTTP
-  - Reference
-  - Experimental
+status:
+  - experimental
 browser-compat: http.headers.Permissions-Policy.encrypted-media
 ---
 

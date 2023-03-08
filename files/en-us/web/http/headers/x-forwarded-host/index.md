@@ -1,13 +1,8 @@
 ---
 title: X-Forwarded-Host
 slug: Web/HTTP/Headers/X-Forwarded-Host
-tags:
-  - HTTP
-  - HTTP Header
-  - Non-standard
-  - Reference
-  - Request header
-  - header
+status:
+  - non-standard
 ---
 
 {{HTTPSidebar}}

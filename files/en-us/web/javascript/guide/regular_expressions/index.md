@@ -2,14 +2,6 @@
 title: Regular expressions
 slug: Web/JavaScript/Guide/Regular_Expressions
 page-type: guide
-tags:
-  - Guide
-  - Intermediate
-  - JavaScript
-  - Reference
-  - RegExp
-  - Regular Expressions
-  - regex
 ---
 
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Text_formatting", "Web/JavaScript/Guide/Indexed_collections")}}

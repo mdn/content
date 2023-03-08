@@ -1,14 +1,6 @@
 ---
 title: ARIA annotations
 slug: Web/Accessibility/ARIA/Annotations
-tags:
-  - ARIA
-  - Accessibility
-  - WAI-ARIA
-  - annotations
-  - comments
-  - details
-  - suggestions
 ---
 
 <section id="Quick_links">

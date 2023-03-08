@@ -2,9 +2,6 @@
 title: keyTimes
 slug: Web/SVG/Attribute/keyTimes
 page-type: svg-attribute
-tags:
-  - SVG
-  - SVG Attribute
 spec-urls: https://svgwg.org/specs/animations/#KeyTimesAttribute
 ---
 

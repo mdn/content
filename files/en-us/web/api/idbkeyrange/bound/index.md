@@ -66,22 +66,22 @@ include `"A"` and `"F"`, only the values between them.
 function displayData() {
   const keyRangeValue = IDBKeyRange.bound("A", "F");
 
-  const transaction = db.transaction(['fThings'], 'readonly');
-  const objectStore = transaction.objectStore('fThings');
+  const transaction = db.transaction(["fThings"], "readonly");
+  const objectStore = transaction.objectStore("fThings");
 
   objectStore.openCursor(keyRangeValue).onsuccess = (event) => {
     const cursor = event.target.result;
-      if (cursor) {
-        const listItem = document.createElement('li');
-        listItem.textContent = `${cursor.value.fThing}, ${cursor.value.fRating}`;
-        list.appendChild(listItem);
+    if (cursor) {
+      const listItem = document.createElement("li");
+      listItem.textContent = `${cursor.value.fThing}, ${cursor.value.fRating}`;
+      list.appendChild(listItem);
 
-        cursor.continue();
-      } else {
-        console.log('Entries all displayed.');
-      }
-    };
+      cursor.continue();
+    } else {
+      console.log("Entries all displayed.");
+    }
   };
+}
 ```
 
 ## Specifications

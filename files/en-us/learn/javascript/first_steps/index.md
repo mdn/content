@@ -1,22 +1,6 @@
 ---
 title: JavaScript First Steps
 slug: Learn/JavaScript/First_steps
-tags:
-  - Arrays
-  - Article
-  - Assessment
-  - Beginner
-  - CodingScripting
-  - Guide
-  - JavaScript
-  - Landing
-  - Module
-  - Numbers
-  - Operators
-  - Variables
-  - "l10n:priority"
-  - maths
-  - strings
 ---
 
 {{LearnSidebar}}

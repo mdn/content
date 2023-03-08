@@ -1,11 +1,6 @@
 ---
 title: Access-Control-Request-Method
 slug: Web/HTTP/Headers/Access-Control-Request-Method
-tags:
-  - CORS
-  - HTTP
-  - Reference
-  - header
 browser-compat: http.headers.Access-Control-Request-Method
 ---
 

@@ -29,9 +29,6 @@ string is user configurable. For example:
   the HTTP header that gets sent, and doesn't affect browser detection performed by
   JavaScript code.
 - Opera 6+ allows users to set the browser identification string via a menu.
-- Microsoft Internet Explorer uses the Windows registry.
-- Safari and iCab allow users to change the browser user agent string to predefined
-  Internet Explorer or Netscape strings via a menu.
 
 ## Value
 

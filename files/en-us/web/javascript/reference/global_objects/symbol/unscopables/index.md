@@ -2,11 +2,6 @@
 title: Symbol.unscopables
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/unscopables
 page-type: javascript-static-data-property
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Property
-  - Symbol
 browser-compat: javascript.builtins.Symbol.unscopables
 ---
 

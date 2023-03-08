@@ -2,13 +2,8 @@
 title: "::spelling-error"
 slug: Web/CSS/::spelling-error
 page-type: css-pseudo-element
-tags:
-  - CSS
-  - Experimental
-  - Pseudo-element
-  - Reference
-  - Selector
-  - Web
+status:
+  - experimental
 browser-compat: css.selectors.spelling-error
 ---
 

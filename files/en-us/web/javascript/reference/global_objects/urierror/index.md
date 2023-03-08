@@ -2,12 +2,6 @@
 title: URIError
 slug: Web/JavaScript/Reference/Global_Objects/URIError
 page-type: javascript-class
-tags:
-  - Class
-  - JavaScript
-  - Object
-  - Reference
-  - URIError
 browser-compat: javascript.builtins.URIError
 ---
 
@@ -30,6 +24,8 @@ _Also inherits instance properties from its parent {{jsxref("Error")}}_.
 
 These properties are defined on `URIError.prototype` and shared by all `URIError` instances.
 
+- {{jsxref("Object/constructor", "URIError.prototype.constructor")}}
+  - : The constructor function that created the instance object. For `URIError` instances, the initial value is the {{jsxref("URIError/URIError", "URIError")}} constructor.
 - {{jsxref("Error/name", "URIError.prototype.name")}}
   - : Represents the name for the type of error. For `URIError.prototype.name`, the initial value is `"URIError"`.
 

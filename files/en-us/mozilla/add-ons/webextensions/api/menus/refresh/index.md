@@ -2,15 +2,6 @@
 title: menus.refresh()
 slug: Mozilla/Add-ons/WebExtensions/API/menus/refresh
 page-type: webextension-api-function
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Reference
-  - WebExtensions
-  - menus
-  - refresh
 browser-compat: webextensions.api.menus.refresh
 ---
 

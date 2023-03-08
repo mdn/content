@@ -1,15 +1,6 @@
 ---
 title: Building Angular applications and further resources
 slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_building
-tags:
-  - Beginner
-  - Frameworks
-  - JavaScript
-  - Learn
-  - client-side
-  - Angular
-  - Building
-  - Resources
 ---
 
 {{LearnSidebar}}{{PreviousMenu("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_filtering", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}

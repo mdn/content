@@ -2,10 +2,6 @@
 title: <script>
 slug: Web/SVG/Element/script
 page-type: svg-element
-tags:
-  - Element
-  - Reference
-  - SVG
 browser-compat: svg.elements.script
 ---
 

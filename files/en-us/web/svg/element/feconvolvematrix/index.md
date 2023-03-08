@@ -2,11 +2,6 @@
 title: <feConvolveMatrix>
 slug: Web/SVG/Element/feConvolveMatrix
 page-type: svg-element
-tags:
-  - Element
-  - Filters
-  - SVG
-  - SVG Filter
 browser-compat: svg.elements.feConvolveMatrix
 ---
 

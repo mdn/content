@@ -1,13 +1,6 @@
 ---
-title: "aria-multiline"
+title: aria-multiline
 slug: Web/Accessibility/ARIA/Attributes/aria-multiline
-tags:
-  - Accessibility
-  - ARIA
-  - ARIA attribute
-  - ARIA property
-  - aria-multiline
-  - Reference
 spec-urls: https://w3c.github.io/aria/#aria-multiline
 ---
 

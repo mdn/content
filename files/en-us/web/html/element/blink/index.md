@@ -2,13 +2,8 @@
 title: '<blink>: The Blinking Text element'
 slug: Web/HTML/Element/blink
 page-type: html-element
-tags:
-  - Blink
-  - Element
-  - HTML
-  - Deprecated
-  - Reference
-  - Web
+status:
+  - deprecated
 browser-compat: html.elements.blink
 ---
 

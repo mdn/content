@@ -2,17 +2,12 @@
 title: CSS Scrollbars
 slug: Web/CSS/CSS_Scrollbars
 page-type: css-module
-tags:
-  - CSS
-  - Guide
-  - Overview
-  - CSS scrollbars
 browser-compat:
   - css.properties.scrollbar-width
   - css.properties.scrollbar-color
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{CSSRef}}
 
 **CSS Scrollbars** standardizes the obsolete scrollbar color properties introduced in 2000 by Windows IE 5.5.
 
@@ -70,4 +65,3 @@ When you customize scrollbars, consider they have enough contrast and that their
 ## See also
 
 - {{CSSxRef("::-webkit-scrollbar")}}
-- {{CSSxRef("-ms-overflow-style")}}

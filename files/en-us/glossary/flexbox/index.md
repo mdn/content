@@ -2,10 +2,6 @@
 title: Flexbox
 slug: Glossary/Flexbox
 page-type: glossary-definition
-tags:
-  - CSS
-  - Intro
-  - flexbox
 ---
 
 Flexbox is the commonly-used name for the [CSS Flexible Box Layout Module](https://www.w3.org/TR/css-flexbox-1/), a layout model for displaying items in a single dimension — as a row or as a column.

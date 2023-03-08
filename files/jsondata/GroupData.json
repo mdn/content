@@ -1,5 +1,14 @@
 [
   {
+    "Audio Output Devices API": {
+      "overview": ["Audio Output Devices API"],
+      "methods": [
+        "MediaDevices.selectAudioOutput",
+        "HTMLMediaElement.setSinkId"
+      ],
+      "properties": ["HTMLMediaElement.sinkId"],
+      "events": []
+    },
     "Background Fetch API": {
       "overview": ["Background Fetch API"],
       "interfaces": [
@@ -788,6 +797,13 @@
       "interfaces": ["Keyboard", "KeyboardLayoutMap"],
       "methods": ["Navigator.keyboard"]
     },
+    "Launch Handler API": {
+      "overview": ["Launch Handler API"],
+      "interfaces": ["LaunchParams", "LaunchQueue"],
+      "methods": [],
+      "properties": ["Window.launchQueue"],
+      "events": []
+    },
     "Layout Instability API": {
       "overview": ["Layout Instability API"],
       "interfaces: ": ["LayoutShift", "LayoutShiftAttribution"],
@@ -828,7 +844,6 @@
         "MediaStream",
         "MediaStreamTrack",
         "MediaStreamTrackEvent",
-        "MediaTrackCapabilities",
         "MediaTrackConstraints",
         "MediaTrackSettings",
         "MediaTrackSupportedConstraints"
@@ -1294,7 +1309,6 @@
         "SVGAnimatedLengthList",
         "SVGAnimatedNumber",
         "SVGAnimatedNumberList",
-        "SVGAnimatedPathData",
         "SVGAnimatedPreserveAspectRatio",
         "SVGAnimatedRect",
         "SVGAnimatedString",
@@ -1365,27 +1379,6 @@
         "SVGNumber",
         "SVGNumberList",
         "SVGPathElement",
-        "SVGPathSeg",
-        "SVGPathSegClosePath",
-        "SVGPathSegMovetoAbs",
-        "SVGPathSegMovetoRel",
-        "SVGPathSegLinetoAbs",
-        "SVGPathSegLinetoRel",
-        "SVGPathSegCurvetoCubicAbs",
-        "SVGPathSegCurvetoCubicRel",
-        "SVGPathSegCurvetoQuadraticAbs",
-        "SVGPathSegCurvetoQuadraticRel",
-        "SVGPathSegArcAbs",
-        "SVGPathSegArcRel",
-        "SVGPathSegLinetoHorizontalAbs",
-        "SVGPathSegLinetoHorizontalRel",
-        "SVGPathSegLinetoVerticalAbs",
-        "SVGPathSegLinetoVerticalRel",
-        "SVGPathSegCurvetoCubicSmoothAbs",
-        "SVGPathSegCurvetoCubicSmoothRel",
-        "SVGPathSegCurvetoQuadraticSmoothAbs",
-        "SVGPathSegCurvetoQuadraticSmoothRel",
-        "SVGPathSegList",
         "SVGPatternElement",
         "SVGPoint",
         "SVGPointList",
@@ -1540,6 +1533,13 @@
       "overview": ["Vibration API"],
       "interfaces": [],
       "methods": ["Navigator.vibrate()"],
+      "properties": [],
+      "events": []
+    },
+    "View Transitions API": {
+      "overview": ["View Transitions API"],
+      "interfaces": ["ViewTransition"],
+      "methods": ["Document.startViewTransition()"],
       "properties": [],
       "events": []
     },
@@ -1834,7 +1834,8 @@
         "OES_vertex_array_object",
         "ANGLE_instanced_arrays",
         "EXT_blend_minmax",
-        "EXT_disjoint_timer_query"
+        "EXT_disjoint_timer_query",
+        "OES_draw_buffers_indexed"
       ],
       "methods": [],
       "properties": [],

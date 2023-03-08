@@ -32,7 +32,7 @@ recognition.onresult = (event) => {
   diagnostic.textContent = `Result received: ${color}.`;
   bg.style.backgroundColor = color;
   console.log(event.interpretation);
-}
+};
 ```
 
 ## Browser compatibility

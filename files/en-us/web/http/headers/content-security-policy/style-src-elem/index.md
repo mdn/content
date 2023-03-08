@@ -1,18 +1,6 @@
 ---
 title: "CSP: style-src-elem"
 slug: Web/HTTP/Headers/Content-Security-Policy/style-src-elem
-tags:
-  - CSP
-  - Content
-  - Content-Security-Policy
-  - Directive
-  - HTTP
-  - Reference
-  - Security
-  - Style
-  - source
-  - style-src
-  - style-src-elem
 browser-compat: http.headers.Content-Security-Policy.style-src-elem
 ---
 

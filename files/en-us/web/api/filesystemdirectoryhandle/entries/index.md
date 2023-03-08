@@ -31,10 +31,10 @@ property `[key, value]` pairs.
 ## Examples
 
 ```js
-const dirHandle = await window.showDirectoryPicker()
+const dirHandle = await window.showDirectoryPicker();
 
 for await (const [key, value] of dirHandle.entries()) {
-    console.log({ key, value })
+  console.log({ key, value });
 }
 ```
 

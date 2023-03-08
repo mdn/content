@@ -2,13 +2,6 @@
 title: Uint32Array
 slug: Web/JavaScript/Reference/Global_Objects/Uint32Array
 page-type: javascript-class
-tags:
-  - Class
-  - Uint32Array
-  - JavaScript
-  - TypedArray
-  - TypedArrays
-  - Polyfill
 browser-compat: javascript.builtins.Uint32Array
 ---
 
@@ -40,8 +33,12 @@ _Inherits static methods from its parent {{jsxref("TypedArray")}}_.
 
 _Also inherits instance properties from its parent {{jsxref("TypedArray")}}_.
 
+These properties are defined on `Uint32Array.prototype` and shared by all `Uint32Array` instances.
+
 - {{jsxref("TypedArray.BYTES_PER_ELEMENT", "Uint32Array.prototype.BYTES_PER_ELEMENT")}}
   - : Returns a number value of the element size. `4` in the case of a `Uint32Array`.
+- {{jsxref("Object/constructor", "Uint32Array.prototype.constructor")}}
+  - : The constructor function that created the instance object. For `Uint32Array` instances, the initial value is the {{jsxref("Uint32Array/Uint32Array", "Uint32Array")}} constructor.
 
 ## Instance methods
 

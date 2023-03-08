@@ -1,14 +1,6 @@
 ---
 title: declarativeNetRequest
 slug: Mozilla/Add-ons/WebExtensions/API/declarativeNetRequest
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Interface
-  - Reference
-  - WebExtensions
-  - declarativeNetRequest
 browser-compat: webextensions.api.declarativeNetRequest
 ---
 
