@@ -24,6 +24,7 @@ new Intl.DurationFormat.()
 new Intl.DurationFormat(locales)
 new Intl.DurationFormat(locales, options)
 ```
+
 ### Parameters
 
 - `locales` {{optional_inline}}
@@ -48,7 +49,7 @@ new Intl.DurationFormat(locales, options)
     - `style`
       - : The length of the formatted message, the default is "`short`".
         - "`long`" (eg 1 hour and 50 minutes)
-        - "`short`"  (eg 1 hr, 50 min)
+        - "`short`" (eg 1 hr, 50 min)
         - "`narrow`" (eg 1h 50m)
         - "`digital`" (eg 1:50:00)
 
@@ -185,7 +186,7 @@ const duration = {
     seconds: 35,
 }
 
-console.log(new Intl.DurationFormat("pt", { style: "long" }).format(duration););
+console.log(new Intl.DurationFormat("pt", { style: "long" }).format(duration));
 // → "2 horas, 20 minutos e 35 segundos"
 ```
 

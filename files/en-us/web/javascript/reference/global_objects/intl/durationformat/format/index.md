@@ -31,6 +31,7 @@ format(duration);
 - `duration`
   - : The duration object to be formatted. Possible values include:
      "`months`", " `weeks`", "`days`", "`hours`", "`minutes`", " `seconds`", "`milliseconds`", "`microseconds`", "`nanoseconds`".
+
 ## Description
 
 The `format` getter function formats a duration into a string containing the formatted duration, according to the locale and formatting options of this {{jsxref("Intl.DurationFormat")}} object.
@@ -55,13 +56,24 @@ const duration = {
   nanoseconds: 9,
 };
 
+
+// Example without options, default to `short`
 new Intl.DurationFormat('en').format(duration);
-// →  '1 year, 2 months, 3 weeks, 3 days, 4 hours, 5 minutes, 6 seconds, 7 milliseconds, 8 microseconds, and 9 nanoseconds'
+// →  '1 yr, 2 mths, 3 wks, 3 days, 4 hr, 5 min, 6 sec, 7 ms, 8 μs, 9 ns'
+
+
+// Example with style set to `long`
+new Intl.DurationFormat('en', { style: 'long'}).format(duration);
+// →  '1 year, 2 months, 3 weeks, 3 days, 4 hours, 5 minutes, 6 seconds, 7 milliseconds, 8 microseconds, 9 nanoseconds'
+
+// Example with style set to `narrow`
+new Intl.DurationFormat('en', { style: 'narrow'}).format(duration);
+// → '1y 2mo 3w 3d 4h 5m 6s 7ms 8μs 9ns'
 ```
 
 ### Using format with style options
 
-Use the `format` getter function for formatting using style options.
+Use the `format` getter function for formatting using style options and different locales.
 
 ```js
 const duration = {
@@ -70,16 +82,26 @@ const duration = {
   seconds: 40,
 };
 
-new Intl.DurationFormat('fr-FR', { style: 'long' }).format(duration);
+// Example using style set to `long` and locale `fr-FR`
+new Intl.DurationFormat("fr-FR", { style: "long" }).format(duration);
 // → '1 heure, 46 minutes et 40 secondes'
 
-new Intl.DurationFormat('en', { style: 'short' }).format(duration);
+// Example using style set to `short` and locale set to `en`
+new Intl.DurationFormat("en", { style: "short" }).format(duration);
 // → '1 hr, 46 min and 40 sec'
+
+// Example using style set to `short` and locale set to`pt`
+new Intl.DurationFormat("pt", { style: "narrow" }).format(duration);
+// → 1h 46min 40s
+
+// Example using style set to `digital`  and locale set to `en`
+new Intl.DurationFormat("en", { style: "digital" }).format(duration);
+// → 1:46:40
 ```
 
 ### Using format with fractionalDigits option
 
-Use the `format` getter function for formatting using with fractionalDigits  options and setting milliseconds display to `narrow`.
+Use the `format` getter function for formatting using with fractionalDigits options and setting milliseconds display to `narrow`.
 
 ```js
 const duration = {
@@ -89,15 +111,15 @@ const duration = {
 };
 
 // Example using fractionalDigits
-new Intl.DurationFormat('en', { fractionalDigits: 2 }).format(duration);
-// => 12.34 sec
+new Intl.DurationFormat("en", { fractionalDigits: 2 }).format(duration);
+// => 12 sec, 345 ms, 600 μs
 
-// Example using fractionalDigits and milliseconds set to `narrow`
-new Intl.DurationFormat('en', {
-  milliseconds: 'narrow',
+// Example using fractionalDigits and milliseconds set to `long`
+new Intl.DurationFormat("en", {
+  milliseconds: "long",
   fractionalDigits: 2,
 }).format(duration);
-// => 12s 345.60ms
+// => 12 sec, 345 milliseconds, 600 μs
 ```
 
 ## Specifications

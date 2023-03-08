@@ -37,19 +37,23 @@ The **`Intl.DurationFormat`** object enables language-sensitive duration formatt
 In basic use without specifying a locale, `DurationFormat` uses the default locale and default options.
 
 ```js
-const duration  = {
-  seconds: 12,
-  milliseconds: 345,
-  microseconds: 600
-}
+const duration = {
+  hours: 1,
+  minutes: 46,
+  seconds: 40,
+};
 
-// Example using fractionalDigits
-new Intl.DurationFormat('en', { fractionalDigits: 2 }).format(duration);
-// => 12.34 sec
+// Example using style set to `long` and locale `fr-FR`
+new Intl.DurationFormat("fr-FR", { style: "long" }).format(duration);
+// → '1 heure, 46 minutes et 40 secondes'
 
-// Example using fractionalDigits and milliseconds set to `narrow`
-new Intl.DurationFormat('en', { milliseconds: 'narrow', fractionalDigits: 2 }).format(duration);
-// => 12s 345.60ms
+// Example using style set to `short`  and locale `en`
+new Intl.DurationFormat("en", { style: "short" }).format(duration);
+// → '1 hr, 46 min and 40 sec'
+
+// Example using style set to `short`  and locale `pt`
+new Intl.DurationFormat("pt", { style: "narrow" }).format(duration);
+// → 1h 46min 40s
 ```
 
 ## Specifications
