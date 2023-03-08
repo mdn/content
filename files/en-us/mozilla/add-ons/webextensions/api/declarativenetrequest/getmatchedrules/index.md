@@ -1,15 +1,6 @@
 ---
 title: declarativeNetRequest.getMatchedRules
 slug: Mozilla/Add-ons/WebExtensions/API/declarativeNetRequest/getMatchedRules
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Reference
-  - WebExtensions
-  - Method
-  - declarativeNetRequest
-  - getMatchedRules
 browser-compat: webextensions.api.declarativeNetRequest.getMatchedRules
 ---
 

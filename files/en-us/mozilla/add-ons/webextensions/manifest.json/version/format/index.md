@@ -2,10 +2,6 @@
 title: Legacy Version Formats
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/version/format
 page-type: guide
-tags:
-  - Add-ons
-  - Extensions
-  - WebExtensions
 ---
 
 {{AddonSidebar}}

@@ -2,16 +2,6 @@
 title: idle.onStateChanged
 slug: Mozilla/Add-ons/WebExtensions/API/idle/onStateChanged
 page-type: webextension-api-event
-tags:
-  - API
-  - Add-ons
-  - Event
-  - Extensions
-  - Idle
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - onStateChanged
 browser-compat: webextensions.api.idle.onStateChanged
 ---
 

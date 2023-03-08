@@ -2,17 +2,6 @@
 title: Interact with the clipboard
 slug: Mozilla/Add-ons/WebExtensions/Interact_with_the_clipboard
 page-type: guide
-tags:
-  - Add-ons
-  - Clip
-  - Clipboard
-  - Cut
-  - Editing
-  - Extensions
-  - Text
-  - WebExtensions
-  - copy
-  - paste
 browser-compat:
   - api.Clipboard
   - webextensions.api.clipboard

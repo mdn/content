@@ -2,9 +2,6 @@
 title: max
 slug: Web/SVG/Attribute/max
 page-type: svg-attribute
-tags:
-  - SVG
-  - SVG Attribute
 spec-urls: https://svgwg.org/specs/animations/#MaxAttribute
 ---
 

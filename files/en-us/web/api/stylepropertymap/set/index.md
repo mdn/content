@@ -2,12 +2,10 @@
 title: StylePropertyMap.set()
 slug: Web/API/StylePropertyMap/set
 page-type: web-api-instance-method
-status:
-  - experimental
 browser-compat: api.StylePropertyMap.set
 ---
 
-{{APIRef("CSS Typed Object Model API")}}{{SeeCompatTable}}
+{{APIRef("CSS Typed Object Model API")}}
 
 The **`set()`** method of the {{domxref("StylePropertyMap")}}
 interface changes the CSS declaration with the given property.

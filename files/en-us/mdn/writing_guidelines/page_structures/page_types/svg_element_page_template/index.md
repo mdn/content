@@ -21,14 +21,10 @@ browser-compat: path.to.feature.NameOfTheElement
 > title: <NameOfTheElement>
 > slug: Web/SVG/Element/NameOfTheElement
 > page-type: svg-element
-> tags:
->   - NameOfTheElement
->   - SVG
->   - Element
->   - Reference
->   - Experimental
->   - Deprecated
->   - Non-standard
+> status:
+>   - experimental
+>   - deprecated
+>   - non-standard
 > browser-compat: svg.elements.NameOfTheElement
 > ---
 > ```
@@ -42,16 +38,8 @@ browser-compat: path.to.feature.NameOfTheElement
 >     This will be formatted like `Web/SVG/Element/NameOfTheElement`.
 > - **page-type**
 >   - : Always `svg-element`.
-> - **tags**
->
->   - : Always include the following tags: **SVG**, **Reference**, **Element**, the _NameOfTheElement_ (e.g. **g**).
->
->     Include the following tags as appropriate:
->
->     - Relevant category: **SVG Container**, **SVG Animation**, **SVG Light Source**, **SVG Text Content**, **SVG Font**.
->     - Technology status: **Experimental** (if the technology is [experimental](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#experimental)), **Deprecated** (if it is [deprecated](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#deprecated_and_obsolete)), **Non-standard** (if it isn't on a standards track).
->     - Any other tags that represent possible search terms for the element.
->
+> - **status**
+>   - : Include (appropriate) technology status keys: [**experimental**](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#experimental), [**deprecated**](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#deprecated_and_obsolete), **non-standard** (if not on a standards track).
 > - **browser-compat**
 >
 >   - : Replace the placeholder value `svg.elements.NameOfTheElement` with the query string for the element in the [Browser compat data repo](https://github.com/mdn/browser-compat-data).
