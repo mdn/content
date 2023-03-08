@@ -297,7 +297,7 @@ The {{domxref("HTMLCanvasElement")}} provides a `toDataURL()` method, which is u
 - {{domxref("HTMLCanvasElement.toDataURL", "canvas.toDataURL('image/jpeg', quality)")}}
   - : Creates a JPG image. Optionally, you can provide a quality in the range from 0 to 1, with one being the best quality and with 0 almost not recognizable but small in file size.
 
-Once you have generated a data URL from your canvas, you are able to use it as the source of any {{HTMLElement("image")}} or put it into a hyper link with a [download attribute](/en-US/docs/Web/HTML/Element/a#attr-download) to save it to disc, for example.
+Once you have generated a data URL from your canvas, you are able to use it as the source of any {{HTMLElement("image")}} or put it into a hyperlink with a [download attribute](/en-US/docs/Web/HTML/Element/a#download) to save it to disc, for example.
 
 You can also create a {{domxref("Blob")}} from the canvas.
 

@@ -40,7 +40,7 @@ This example constructs a new {{domxref('PeriodicSyncEvent')}} with the relevant
 associated tag.
 
 ```js
-const psEvent = new ExtendableEvent('periodicsync', {tag : 'unique-tag'});
+const psEvent = new ExtendableEvent("periodicsync", { tag: "unique-tag" });
 ```
 
 ## Specifications

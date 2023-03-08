@@ -1,12 +1,8 @@
 ---
 title: DNT
 slug: Web/HTTP/Headers/DNT
-tags:
-  - DNT
-  - HTTP
-  - Reference
-  - header
-  - Deprecated
+status:
+  - deprecated
 browser-compat: http.headers.DNT
 ---
 

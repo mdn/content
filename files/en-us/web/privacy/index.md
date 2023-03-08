@@ -124,7 +124,7 @@ There are several web technologies and features at play to manage privacy and se
       <td>
         TLS provides security and privacy by encrypting data during transport
         over the network. This is the technology behind the
-        <a href="/en-US/docs/Glossary/https">HTTPS</a> (HyperText Transport
+        <a href="/en-US/docs/Glossary/HTTPS">HTTPS</a> (HyperText Transport
         Protocol Secured) protocol
       </td>
     </tr>

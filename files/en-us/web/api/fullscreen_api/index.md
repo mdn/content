@@ -7,7 +7,7 @@ browser-compat:
   - api.Document.fullscreenEnabled
   - api.Document.exitFullscreen
   - api.Element.requestFullscreen
-  - api.Document.fullscreen 
+  - api.Document.fullscreen
 ---
 
 {{DefaultAPISidebar("Fullscreen API")}}

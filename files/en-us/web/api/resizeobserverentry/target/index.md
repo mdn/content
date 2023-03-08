@@ -35,14 +35,21 @@ To grab a reference to the observed element so we can update its
 const resizeObserver = new ResizeObserver((entries) => {
   for (const entry of entries) {
     if (entry.contentBoxSize) {
-      entry.target.style.borderRadius = `${Math.min(100, (entry.contentBoxSize.inlineSize / 10) + (entry.contentBoxSize.blockSize / 10))}px`;
+      entry.target.style.borderRadius = `${Math.min(
+        100,
+        entry.contentBoxSize.inlineSize / 10 +
+          entry.contentBoxSize.blockSize / 10
+      )}px`;
     } else {
-      entry.target.style.borderRadius = `${Math.min(100, (entry.contentRect.width / 10) + (entry.contentRect.height / 10))}px`;
+      entry.target.style.borderRadius = `${Math.min(
+        100,
+        entry.contentRect.width / 10 + entry.contentRect.height / 10
+      )}px`;
     }
   }
 });
 
-resizeObserver.observe(document.querySelector('div'));
+resizeObserver.observe(document.querySelector("div"));
 ```
 
 ## Specifications

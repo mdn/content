@@ -51,12 +51,12 @@ Namespace URL for <code>xml</code> on &lt;svg&gt;:
 ```
 
 ```js
-const button = document.querySelector('button');
+const button = document.querySelector("button");
 button.addEventListener("click", () => {
-  const aHtmlElt = document.querySelector('output');
-  const aSvgElt = document.querySelector('svg');
+  const aHtmlElt = document.querySelector("output");
+  const aSvgElt = document.querySelector("svg");
 
-  const result = document.getElementsByTagName('output');
+  const result = document.getElementsByTagName("output");
   result[0].value = aHtmlElt.lookupNamespaceURI("xlink");
   result[1].value = aHtmlElt.lookupNamespaceURI("xml");
   result[2].value = aHtmlElt.lookupNamespaceURI("html");

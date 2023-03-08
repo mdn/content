@@ -1506,7 +1506,6 @@
 /en-US/docs/DOM/Mozilla_event_reference/seeked	/en-US/docs/Web/API/HTMLMediaElement/seeked_event
 /en-US/docs/DOM/Mozilla_event_reference/seeking	/en-US/docs/Web/API/HTMLMediaElement/seeking_event
 /en-US/docs/DOM/Mozilla_event_reference/select	/en-US/docs/Web/API/HTMLInputElement/select_event
-/en-US/docs/DOM/Mozilla_event_reference/show	/en-US/docs/Web/API/Element/show_event
 /en-US/docs/DOM/Mozilla_event_reference/stalled	/en-US/docs/Web/API/HTMLMediaElement/stalled_event
 /en-US/docs/DOM/Mozilla_event_reference/storage	/en-US/docs/Web/API/Window/storage_event
 /en-US/docs/DOM/Mozilla_event_reference/submit	/en-US/docs/Web/API/HTMLFormElement/submit_event
@@ -6313,7 +6312,6 @@
 /en-US/docs/Mozilla_event_reference/seeked	/en-US/docs/Web/API/HTMLMediaElement/seeked_event
 /en-US/docs/Mozilla_event_reference/seeking	/en-US/docs/Web/API/HTMLMediaElement/seeking_event
 /en-US/docs/Mozilla_event_reference/select	/en-US/docs/Web/API/HTMLInputElement/select_event
-/en-US/docs/Mozilla_event_reference/show	/en-US/docs/Web/API/Element/show_event
 /en-US/docs/Mozilla_event_reference/stalled	/en-US/docs/Web/API/HTMLMediaElement/stalled_event
 /en-US/docs/Mozilla_event_reference/storage	/en-US/docs/Web/API/Window/storage_event
 /en-US/docs/Mozilla_event_reference/submit	/en-US/docs/Web/API/HTMLFormElement/submit_event
@@ -6628,8 +6626,8 @@
 /en-US/docs/SVG/Attribute/y2	/en-US/docs/Web/SVG/Attribute/y2
 /en-US/docs/SVG/Attribute/yChannelSelector	/en-US/docs/Web/SVG/Attribute/yChannelSelector
 /en-US/docs/SVG/Attribute/z	/en-US/docs/Web/SVG/Attribute/z
-/en-US/docs/SVG/Compatibility_sources	/en-US/docs/Web/SVG/Compatibility_sources
-/en-US/docs/SVG/Content_type	/en-US/docs/Web/SVG/Content_type
+/en-US/docs/SVG/Compatibility_sources	/en-US/docs/Web/SVG
+/en-US/docs/SVG/Content_type	/en-US/docs/Web/SVG
 /en-US/docs/SVG/Element	/en-US/docs/Web/SVG/Element
 /en-US/docs/SVG/Element/a	/en-US/docs/Web/SVG/Element/a
 /en-US/docs/SVG/Element/altGlyph	/en-US/docs/Web/SVG/Element/altGlyph
@@ -9458,6 +9456,7 @@
 /en-US/docs/Web/API/RTCPeerConnectionIceEvent.RTCPeerConnectionIceEven	/en-US/docs/Web/API/RTCPeerConnectionIceEvent/RTCPeerConnectionIceEvent
 /en-US/docs/Web/API/RTCPeerConnectionIceEvent.RTCPeerConnectionIceEvent	/en-US/docs/Web/API/RTCPeerConnectionIceEvent/RTCPeerConnectionIceEvent
 /en-US/docs/Web/API/RTCPeerConnectionIceEvent.candidate	/en-US/docs/Web/API/RTCPeerConnectionIceEvent/candidate
+/en-US/docs/Web/API/RTCRtpParameters	/en-US/docs/Web/API/RTCRtpSender/setParameters
 /en-US/docs/Web/API/RTCRtpReceiveParameters	/en-US/docs/Web/API/RTCRtpReceiver/getParameters
 /en-US/docs/Web/API/RTCRtpSendParameters	/en-US/docs/Web/API/RTCRtpSender/setParameters
 /en-US/docs/Web/API/RTCRtpSendParameters/encodings	/en-US/docs/Web/API/RTCRtpSender/setParameters
@@ -11731,7 +11730,6 @@
 /en-US/docs/Web/Events/selectstart	/en-US/docs/Web/API/Node/selectstart_event
 /en-US/docs/Web/Events/shippingaddresschange	/en-US/docs/Web/API/PaymentRequest/shippingaddresschange_event
 /en-US/docs/Web/Events/shippingoptionchange	/en-US/docs/Web/API/PaymentRequest/shippingoptionchange_event
-/en-US/docs/Web/Events/show	/en-US/docs/Web/API/Element/show_event
 /en-US/docs/Web/Events/signalingstatechange	/en-US/docs/Web/API/RTCPeerConnection/signalingstatechange_event
 /en-US/docs/Web/Events/slotchange	/en-US/docs/Web/API/HTMLSlotElement/slotchange_event
 /en-US/docs/Web/Events/soundend	/en-US/docs/Web/API/SpeechRecognition/soundend_event
@@ -11955,6 +11953,7 @@
 /en-US/docs/Web/Guide/Prefixes	/en-US/docs/Glossary/Vendor_Prefix
 /en-US/docs/Web/Guide/Responsive_design	/en-US/docs/Web/Progressive_web_apps
 /en-US/docs/Web/Guide/Responsive_design/Responsive_design_references	/en-US/docs/Web/Progressive_web_apps
+/en-US/docs/Web/Guide/SVG-in-OpenType	/en-US/docs/Web/Guide
 /en-US/docs/Web/Guide/Terminology	/en-US/docs/Glossary
 /en-US/docs/Web/Guide/Touch_events	/en-US/docs/Web/API/Touch_events
 /en-US/docs/Web/Guide/User_experience/Using_the_Page_Visibility_API	/en-US/docs/Web/API/Page_Visibility_API
@@ -12238,6 +12237,7 @@
 /en-US/docs/Web/JavaScript/Reference/Data_types	/en-US/docs/Web/JavaScript/Data_structures
 /en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features/The_legacy_Iterator_protocol	/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features
 /en-US/docs/Web/JavaScript/Reference/Errors/Cant_access_property	/en-US/docs/Web/JavaScript/Reference/Errors/Unexpected_type
+/en-US/docs/Web/JavaScript/Reference/Errors/Dead_object	https://blog.mozilla.org/addons/2012/09/12/what-does-cant-access-dead-object-mean/
 /en-US/docs/Web/JavaScript/Reference/Functions_and_function_scope	/en-US/docs/Web/JavaScript/Reference/Functions
 /en-US/docs/Web/JavaScript/Reference/Functions_and_function_scope/Strict_mode	/en-US/docs/Web/JavaScript/Reference/Strict_mode
 /en-US/docs/Web/JavaScript/Reference/Functions_and_function_scope/Strict_mode/Transitioning_to_strict_mode	/en-US/docs/Web/JavaScript/Reference/Strict_mode
@@ -12372,6 +12372,7 @@
 /en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler/setPrototypeOf	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/setPrototypeOf
 /en-US/docs/Web/JavaScript/Reference/Global_Objects/RangeError/prototype	/en-US/docs/Web/JavaScript/Reference/Global_Objects/RangeError
 /en-US/docs/Web/JavaScript/Reference/Global_Objects/ReferenceError/prototype	/en-US/docs/Web/JavaScript/Reference/Global_Objects/ReferenceError
+/en-US/docs/Web/JavaScript/Reference/Global_Objects/Reflect/Comparing_Reflect_and_Object_methods	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Reflect
 /en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/constructor	/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp
 /en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/prototype	/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp
 /en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/toSource	/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/toString
@@ -12649,7 +12650,6 @@
 /en-US/docs/Web/Reference/Events/seeked	/en-US/docs/Web/API/HTMLMediaElement/seeked_event
 /en-US/docs/Web/Reference/Events/seeking	/en-US/docs/Web/API/HTMLMediaElement/seeking_event
 /en-US/docs/Web/Reference/Events/select	/en-US/docs/Web/API/HTMLInputElement/select_event
-/en-US/docs/Web/Reference/Events/show	/en-US/docs/Web/API/Element/show_event
 /en-US/docs/Web/Reference/Events/stalled	/en-US/docs/Web/API/HTMLMediaElement/stalled_event
 /en-US/docs/Web/Reference/Events/statechange	/en-US/docs/Web/API/RTCIceTransport/statechange_event
 /en-US/docs/Web/Reference/Events/storage	/en-US/docs/Web/API/Window/storage_event
@@ -12675,6 +12675,7 @@
 /en-US/docs/Web/Reference/Functions_and classes_available_to_workers	/en-US/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers
 /en-US/docs/Web/Reference/Functions_and_classes_available_to_workers	/en-US/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers
 /en-US/docs/Web/SVG/Attribute/dataset	/en-US/docs/Web/API/HTMLElement/dataset
+/en-US/docs/Web/SVG/Compatibility_sources	/en-US/docs//Web/SVG
 /en-US/docs/Web/SVG/Element/animateColor	/en-US/docs/Web/SVG/Element/animate
 /en-US/docs/Web/SVG/Index	/en-US/docs/Web/SVG
 /en-US/docs/Web/SVG/Tutorial/Fill_Stroke_and_Gradients	/en-US/docs/Web/SVG/Tutorial/Fills_and_Strokes

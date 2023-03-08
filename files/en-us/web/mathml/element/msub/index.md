@@ -1,11 +1,6 @@
 ---
 title: <msub>
 slug: Web/MathML/Element/msub
-tags:
-  - MathML
-  - MathML Reference
-  - MathML:Element
-  - MathML:Script and Limit Schemata
 browser-compat: mathml.elements.msub
 ---
 

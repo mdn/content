@@ -22,8 +22,7 @@ A {{domxref("Serial")}} object.
 The following example uses the `getPorts()` method to initialize a list of available ports.
 
 ```js
-navigator.serial.getPorts()
-.then((ports) => {
+navigator.serial.getPorts().then((ports) => {
   // Initialize the list of available ports with `ports` on page load.
 });
 ```

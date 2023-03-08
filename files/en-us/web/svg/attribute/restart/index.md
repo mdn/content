@@ -2,9 +2,6 @@
 title: restart
 slug: Web/SVG/Attribute/restart
 page-type: svg-attribute
-tags:
-  - SVG
-  - SVG Attribute
 spec-urls: https://svgwg.org/specs/animations/#RestartAttribute
 ---
 
@@ -15,7 +12,6 @@ The **`restart`** attribute specifies whether or not an animation can restart.
 You can use this attribute with the following SVG elements:
 
 - {{SVGElement("animate")}}
-- {{SVGElement("animateColor")}}
 - {{SVGElement("animateMotion")}}
 - {{SVGElement("animateTransform")}}
 - {{SVGElement("set")}}

@@ -45,14 +45,13 @@ const context = new AudioContext();
 
 const osc = new OscillatorNode(context);
 const panner = new PannerNode(context);
-panner.panningModel = 'HRTF';
+panner.panningModel = "HRTF";
 
 panner.positionY.setValueAtTime(1, context.currentTime + 1);
 panner.positionY.setValueAtTime(-1, context.currentTime + 2);
 panner.positionY.setValueAtTime(0, context.currentTime + 3);
 
-osc.connect(panner)
-   .connect(context.destination);
+osc.connect(panner).connect(context.destination);
 
 osc.start(0);
 ```

@@ -1,10 +1,6 @@
 ---
 title: 418 I'm a teapot
 slug: Web/HTTP/Status/418
-tags:
-  - HTTP
-  - HTTP Status Code
-  - Reference
 browser-compat: http.status.418
 ---
 

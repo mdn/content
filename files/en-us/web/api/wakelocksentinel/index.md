@@ -2,12 +2,10 @@
 title: WakeLockSentinel
 slug: Web/API/WakeLockSentinel
 page-type: web-api-interface
-status:
-  - experimental
 browser-compat: api.WakeLockSentinel
 ---
 
-{{securecontext_header}}{{APIRef("Screen Wake Lock API")}}{{SeeCompatTable}}
+{{securecontext_header}}{{APIRef("Screen Wake Lock API")}}
 
 The **`WakeLockSentinel`** interface of the [Screen Wake Lock API](/en-US/docs/Web/API/Screen_Wake_Lock_API) provides a handle to the underlying platform wake lock and can be manually released and reacquired. An {{jsxref('Object')}} representing the wake lock is returned via the {{domxref('WakeLock.request()','navigator.wakelock.request()')}} method.
 
@@ -19,9 +17,9 @@ An acquired `WakeLockSentinel` can be released manually via the {{domxref('WakeL
 
 _This interface provides the following properties._
 
-- {{domxref("WakeLockSentinel.released", "released")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref("WakeLockSentinel.released", "released")}} {{ReadOnlyInline}}
   - : Returns a boolean indicating whether the `WakeLockSentinel` has been released.
-- {{domxref("WakeLockSentinel.type", "type")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref("WakeLockSentinel.type", "type")}} {{ReadOnlyInline}}
 
   - : Returns a string representation of the currently acquired `WakeLockSentinel` type.
     Return values are:
@@ -30,7 +28,7 @@ _This interface provides the following properties._
 
 ## Events
 
-- {{domxref("WakeLockSentinel.release_event", "release")}} {{Experimental_Inline}}
+- {{domxref("WakeLockSentinel.release_event", "release")}}
   - : Fired when the {{domxref('WakeLockSentinel.release','release()')}} method is called or the wake lock is released by the user agent.
 
 ## Instance methods

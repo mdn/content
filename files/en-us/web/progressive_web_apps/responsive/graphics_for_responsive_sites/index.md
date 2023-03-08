@@ -37,7 +37,7 @@ If your images need to feature some level of interactivity, such as links, other
 - JavaScript
   - : [JavaScript](/en-US/docs/Web/JavaScript) has functions that enable developers to create effects based on interactions. It is very powerful when combined with other technologies, although its complexity is a barrier for non-developers.
 - SVG
-  - : [SVG](/en-US/docs/Web/SVG), just like [HTML](/en-US/docs/Web/HTML)/[CSS](/en-US/docs/Web/CSS/), can be manipulated with CSS and via JavaScript. So adding interactivity is not difficult. You can also add links directly into SVG and can create animations using [SMIL](/en-US/docs/Web/SVG/SVG_animation_with_SMIL) (Synchronized Multimedia Integration Language).
+  - : [SVG](/en-US/docs/Web/SVG), just like [HTML](/en-US/docs/Web/HTML)/[CSS](/en-US/docs/Web/CSS\), can be manipulated with CSS and via JavaScript. So adding interactivity is not difficult. You can also add links directly into SVG and can create animations using [SMIL](/en-US/docs/Web/SVG/SVG_animation_with_SMIL) (Synchronized Multimedia Integration Language).
 - WebGL/Canvas
 
   - : You can create a canvas to draw interactive graphics on using the HTML {{HTMLElement('canvas')}} element, then use the Canvas API to create shapes, lines, import image files, create text, do compositing operations, and much more. Standard JavaScript can then be used to animate the image output, etc. You can create 2D imagery using the regular 2D canvas context, or 3D imagery using the more nascent [WebGL API](/en-US/docs/Web/API/WebGL_API).

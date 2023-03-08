@@ -2,14 +2,6 @@
 title: permissions.request()
 slug: Mozilla/Add-ons/WebExtensions/API/permissions/request
 page-type: webextension-api-function
-tags:
-  - API
-  - Add-ons
-  - Method
-  - Permissions
-  - Reference
-  - WebExtensions
-  - request
 browser-compat: webextensions.api.permissions.request
 ---
 
@@ -80,6 +72,6 @@ document.querySelector("#request").addEventListener("click", requestPermissions)
 
 {{WebExtExamples}}
 
-> **Note:** Currently has a [bug with requesting origins](https://bugzilla.mozilla.org/show_bug.cgi?id=1411873) and [requesting permissions on the about:addons page](https://bugzilla.mozilla.org/show_bug.cgi?id=1382953).
+> **Note:** Currently has a [bug with requesting origins](https://bugzil.la/1411873) and [requesting permissions on the about:addons page](https://bugzil.la/1382953).
 
 > **Note:** This API is based on Chromium's [`chrome.permissions`](https://developer.chrome.com/docs/extensions/reference/permissions/) API.

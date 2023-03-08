@@ -9,9 +9,7 @@ browser-compat: api.FileSystemWritableFileStream.seek
 
 {{securecontext_header}}{{APIRef("File System Access API")}}{{SeeCompatTable}}
 
-The **`seek()`** method of the
-{{domxref("FileSystemWritableFileStream")}} interface updates the current file cursor
-offset to the position (in bytes) specified when calling the method.
+The **`seek()`** method of the {{domxref("FileSystemWritableFileStream")}} interface updates the current file cursor offset to the position (in bytes) specified when calling the method.
 
 ## Syntax
 

@@ -20,7 +20,7 @@ A string.
 const anchor = document.createElement("a");
 anchor.href = "https://developer.mozilla.org:4097/en-US/docs/Location.hostname";
 
-console.log(anchor.hostname);  // developer.mozilla.org
+console.log(anchor.hostname); // developer.mozilla.org
 ```
 
 ## Specifications

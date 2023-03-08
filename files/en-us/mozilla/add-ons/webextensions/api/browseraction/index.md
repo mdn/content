@@ -2,15 +2,6 @@
 title: browserAction
 slug: Mozilla/Add-ons/WebExtensions/API/browserAction
 page-type: webextension-api
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Interface
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - browserAction
 browser-compat: webextensions.api.browserAction
 ---
 

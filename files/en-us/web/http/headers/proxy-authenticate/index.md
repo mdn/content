@@ -1,12 +1,6 @@
 ---
 title: Proxy-Authenticate
 slug: Web/HTTP/Headers/Proxy-Authenticate
-tags:
-  - HTTP
-  - HTTP Header
-  - Proxy
-  - Reference
-  - Response Header
 browser-compat: http.headers.Proxy-Authenticate
 ---
 

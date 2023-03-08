@@ -2,10 +2,6 @@
 title: specularConstant
 slug: Web/SVG/Attribute/specularConstant
 page-type: svg-attribute
-tags:
-  - Filters
-  - SVG
-  - SVG Attribute
 browser-compat: svg.elements.feSpecularLighting.specularConstant
 ---
 

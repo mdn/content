@@ -37,9 +37,9 @@ None ({{jsxref("undefined")}}).
 ```js
 // Assuming vrDisplay already contains a VRDisplay object,
 // and we have a <button> referenced inside btn
-btn.addEventListener('click', () => {
+btn.addEventListener("click", () => {
   vrDisplay.resetPose();
-  console.log('Current pose set as origin/center');
+  console.log("Current pose set as origin/center");
 });
 ```
 

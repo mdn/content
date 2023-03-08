@@ -38,36 +38,45 @@ We also provide a checkbox to turn the observer off and on. If it is turned off,
 The JavaScript looks like so:
 
 ```js
-const h1Elem = document.querySelector('h1');
-const pElem = document.querySelector('p');
-const divElem = document.querySelector('body > div');
+const h1Elem = document.querySelector("h1");
+const pElem = document.querySelector("p");
+const divElem = document.querySelector("body > div");
 const slider = document.querySelector('input[type="range"]');
 const checkbox = document.querySelector('input[type="checkbox"]');
 
-divElem.style.width = '600px';
+divElem.style.width = "600px";
 
-slider.addEventListener('input', () => {
+slider.addEventListener("input", () => {
   divElem.style.width = `${slider.value}px`;
-})
+});
 
 const resizeObserver = new ResizeObserver((entries) => {
   for (const entry of entries) {
     if (entry.contentBoxSize) {
       const contentBoxSize = entry.contentBoxSize[0];
-      h1Elem.style.fontSize = `${Math.max(1.5, contentBoxSize.inlineSize / 200)}rem`;
-      pElem.style.fontSize = `${Math.max(1, contentBoxSize.inlineSize / 600)}rem`;
+      h1Elem.style.fontSize = `${Math.max(
+        1.5,
+        contentBoxSize.inlineSize / 200
+      )}rem`;
+      pElem.style.fontSize = `${Math.max(
+        1,
+        contentBoxSize.inlineSize / 600
+      )}rem`;
     } else {
-      h1Elem.style.fontSize = `${Math.max(1.5, entry.contentRect.width / 200)}rem`;
+      h1Elem.style.fontSize = `${Math.max(
+        1.5,
+        entry.contentRect.width / 200
+      )}rem`;
       pElem.style.fontSize = `${Math.max(1, entry.contentRect.width / 600)}rem`;
     }
   }
 
-  console.log('Size changed');
+  console.log("Size changed");
 });
 
 resizeObserver.observe(divElem);
 
-checkbox.addEventListener('change', () => {
+checkbox.addEventListener("change", () => {
   if (checkbox.checked) {
     resizeObserver.observe(divElem);
   } else {
@@ -85,15 +94,15 @@ Implementations following the specification invoke resize events before paint (t
 Note that this only prevents user-agent lockup, not the infinite loop itself. For example, the following code will cause the width of `divElem` to grow indefinitely, with the above error message in the console repeating every frame:
 
 ```js
-const divElem = document.querySelector('body > div');
+const divElem = document.querySelector("body > div");
 
 const resizeObserver = new ResizeObserver((entries) => {
   for (const entry of entries) {
-    entry.target.style.width = entry.contentBoxSize[0].inlineSize + 10 + 'px';
+    entry.target.style.width = entry.contentBoxSize[0].inlineSize + 10 + "px";
   }
 });
 
-window.addEventListener('error', function(e) {
+window.addEventListener("error", function (e) {
   console.error(e.message);
 });
 ```

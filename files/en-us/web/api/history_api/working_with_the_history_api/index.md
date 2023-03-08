@@ -17,10 +17,10 @@ Suppose `https://mozilla.org/foo.html` executes the following JavaScript:
 
 ```js
 let stateObj = {
-    foo: "bar",
-}
+  foo: "bar",
+};
 
-history.pushState(stateObj, "page 2", "bar.html")
+history.pushState(stateObj, "page 2", "bar.html");
 ```
 
 This will cause the URL bar to display `https://mozilla.org/bar.html`, but won't cause the browser to load `bar.html` or even check that `bar.html` exists.
@@ -67,8 +67,8 @@ In other documents, it creates an element with a `null` namespace URI.
 Suppose `https://mozilla.org/foo.html` executes the following JavaScript:
 
 ```js
-let stateObj = { foo: "bar" }
-history.pushState(stateObj, "page 2", "bar.html")
+let stateObj = { foo: "bar" };
+history.pushState(stateObj, "page 2", "bar.html");
 ```
 
 The explanation of these two lines above can be found at the above section _[Example of pushState() method](#example_of_pushstate_method)_ section.
@@ -76,7 +76,7 @@ The explanation of these two lines above can be found at the above section _[Exa
 Next, suppose `https://mozilla.org/bar.html` executes the following JavaScript:
 
 ```js
-history.replaceState(stateObj, "page 3", "bar2.html")
+history.replaceState(stateObj, "page 3", "bar2.html");
 ```
 
 This will cause the URL bar to display `https://mozilla.org/bar2.html`, but won't cause the browser to load `bar2.html` or even check that `bar2.html` exists.
@@ -96,7 +96,7 @@ When your page loads, it might have a non-null state object. This can happen, fo
 You can read the state of the current history entry without waiting for a `popstate` event using the {{DOMxRef("History.state","history.state")}} property like this:
 
 ```js
-let currentState = history.state
+let currentState = history.state;
 ```
 
 ## See also

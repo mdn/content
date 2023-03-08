@@ -1,5 +1,5 @@
 ---
-title: 'PaymentRequest: merchantvalidation event'
+title: "PaymentRequest: merchantvalidation event"
 slug: Web/API/PaymentRequest/merchantvalidation_event
 page-type: web-api-event
 status:
@@ -20,9 +20,9 @@ This event is not cancelable and does not bubble.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('merchantvalidation', (event) => { });
+addEventListener("merchantvalidation", (event) => {});
 
-onmerchantvalidation = (event) => { };
+onmerchantvalidation = (event) => {};
 ```
 
 ## Event type
@@ -45,7 +45,9 @@ In this example, an event handler is established for the `merchantvalidation` ev
 ```js
 request.addEventListener("merchantvalidation", (event) => {
   event.complete(async () => {
-    const merchantServerUrl = `${window.location.origin}/validate?url=${encodeURIComponent(event.validationURL)}`;
+    const merchantServerUrl = `${
+      window.location.origin
+    }/validate?url=${encodeURIComponent(event.validationURL)}`;
     // get validation data, and complete validation;
     return await fetch(merchantServerUrl).then((response) => response.text());
   }, false);
@@ -61,7 +63,9 @@ You can also use the `onmerchantvalidation` event handler property to set up the
 ```js
 request.onmerchantvalidation = (event) => {
   event.complete(async () => {
-    const merchantServerUrl = `${window.location.origin}/validate?url=${encodeURIComponent(event.validationURL)}`;
+    const merchantServerUrl = `${
+      window.location.origin
+    }/validate?url=${encodeURIComponent(event.validationURL)}`;
     // get validation data, and complete validation;
     return await fetch(merchantServerUrl).then((response) => response.text());
   });

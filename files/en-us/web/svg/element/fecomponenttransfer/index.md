@@ -2,10 +2,6 @@
 title: <feComponentTransfer>
 slug: Web/SVG/Element/feComponentTransfer
 page-type: svg-element
-tags:
-  - Element
-  - SVG
-  - SVG Filter
 browser-compat: svg.elements.feComponentTransfer
 ---
 

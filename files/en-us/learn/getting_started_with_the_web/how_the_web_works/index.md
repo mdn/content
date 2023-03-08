@@ -69,7 +69,7 @@ Earlier we used the term "packets" to describe the format in which the data is s
 
 ## See also
 
-- [How the Internet works](/en-US/docs/Learn/Common_questions/How_does_the_Internet_work)
+- [How the Internet works](/en-US/docs/Learn/Common_questions/Web_mechanics/How_does_the_Internet_work)
 - [HTTP — an Application-Level Protocol](https://dev.opera.com/articles/http-basic-introduction/)
 - [HTTP: Let's GET It On!](https://dev.opera.com/articles/http-lets-get-it-on/)
 - [HTTP: Response Codes](https://dev.opera.com/articles/http-response-codes/)

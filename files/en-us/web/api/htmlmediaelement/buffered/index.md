@@ -18,7 +18,7 @@ A new static [normalized TimeRanges object](/en-US/docs/Web/API/TimeRanges#norma
 ## Examples
 
 ```js
-const obj = document.createElement('video');
+const obj = document.createElement("video");
 console.log(obj.buffered); // TimeRanges { length: 0 }
 ```
 

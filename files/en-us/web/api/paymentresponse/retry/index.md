@@ -102,7 +102,11 @@ async function recursiveValidate(request, response) {
   }
   if (errors.shippingAddress) {
     // "shippingaddresschange" fired at request object
-    const promise = fixField(request, "shippingaddresschange", shippingValidator);
+    const promise = fixField(
+      request,
+      "shippingaddresschange",
+      shippingValidator
+    );
     promisesToFixThings.push(promise);
   }
   if (errors.payer) {
@@ -121,7 +125,8 @@ function fixField(requestOrResponse, event, validator) {
       const promiseToValidate = validator(requestOrResponse);
       ev.updateWith(promiseToValidate);
       const errors = await promiseToValidate;
-      if (!errors) { // yay! fixed!
+      if (!errors) {
+        // yay! fixed!
         event.removeEventListener(event, listener);
         resolve();
       }
