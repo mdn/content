@@ -341,15 +341,15 @@ As seen above, `doSomething()` has a default `prototype` property, as demonstrat
 
 ```
 {
-  constructor: ƒ doSomething(),
+  constructor: function doSomething(),
   [[Prototype]]: {
-    constructor: ƒ Object(),
-    hasOwnProperty: ƒ hasOwnProperty(),
-    isPrototypeOf: ƒ isPrototypeOf(),
-    propertyIsEnumerable: ƒ propertyIsEnumerable(),
-    toLocaleString: ƒ toLocaleString(),
-    toString: ƒ toString(),
-    valueOf: ƒ valueOf()
+    constructor: function Object(),
+    hasOwnProperty: function hasOwnProperty(),
+    isPrototypeOf: function isPrototypeOf(),
+    propertyIsEnumerable: function propertyIsEnumerable(),
+    toLocaleString: function toLocaleString(),
+    toString: function toString(),
+    valueOf: function valueOf()
   }
 }
 ```
@@ -369,15 +369,15 @@ This results in:
 ```
 {
   foo: "bar",
-  constructor: ƒ doSomething(),
+  constructor: function doSomething(),
   [[Prototype]]: {
-    constructor: ƒ Object(),
-    hasOwnProperty: ƒ hasOwnProperty(),
-    isPrototypeOf: ƒ isPrototypeOf(),
-    propertyIsEnumerable: ƒ propertyIsEnumerable(),
-    toLocaleString: ƒ toLocaleString(),
-    toString: ƒ toString(),
-    valueOf: ƒ valueOf()
+    constructor: function Object(),
+    hasOwnProperty: function hasOwnProperty(),
+    isPrototypeOf: function isPrototypeOf(),
+    propertyIsEnumerable: function propertyIsEnumerable(),
+    toLocaleString: function toLocaleString(),
+    toString: function toString(),
+    valueOf: function valueOf()
   }
 }
 ```
@@ -401,15 +401,15 @@ This results in an output similar to the following:
   prop: "some value",
   [[Prototype]]: {
     foo: "bar",
-    constructor: ƒ doSomething(),
+    constructor: function doSomething(),
     [[Prototype]]: {
-      constructor: ƒ Object(),
-      hasOwnProperty: ƒ hasOwnProperty(),
-      isPrototypeOf: ƒ isPrototypeOf(),
-      propertyIsEnumerable: ƒ propertyIsEnumerable(),
-      toLocaleString: ƒ toLocaleString(),
-      toString: ƒ toString(),
-      valueOf: ƒ valueOf()
+      constructor: function Object(),
+      hasOwnProperty: function hasOwnProperty(),
+      isPrototypeOf: function isPrototypeOf(),
+      propertyIsEnumerable: function propertyIsEnumerable(),
+      toLocaleString: function toLocaleString(),
+      toString: function toString(),
+      valueOf: function valueOf()
     }
   }
 }
