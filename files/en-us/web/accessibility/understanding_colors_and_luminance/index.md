@@ -178,9 +178,9 @@ The red and the green cones join together to create luminance, which we can thin
 
 Luminance provides for fine vision details, including differentiating edges and text. Hue and colorfulness carry a third of the detail of luminance. Image data compression takes advantage of this fact. As an example, [h.264 video codec](/en-US/docs/Web/Media/Formats/Video_codecs) samples color at a fourth of the resolution of the luminance.
 
-For accessibility, this means that it is luminance contrast that is critically important for text. Color, as in hue and colorfulness, is important for _distinguishing_ items such as different lines on a map, or bars in a graph.
+For accessibility, this means that luminance contrast is critically important for text. Color, as in hue and colorfulness, is important for _distinguishing_ items such as different lines on a map or bars in a graph.
 
-Another essential point to consider is the color or luminance that is surrounding a color. The color will appear differently depending on what is surrounding it. In the following image both the yellow dots and the grey of the square they are on, are identical in terms of the sRGB color values displayed. Your context-sensitive perception of these colors makes them appear different as your brain's image processing adjusts the perception based on what it thinks is in shadow or not.
+Another essential point to consider is the color or luminance that is surrounding a color. Colors appear differently depending on what is surrounding them. In the following image, both the yellow dots and the grey squares they are are the same sRGB color. Context-sensitive color perception makes them appear different; your brain's image processing adjusts the perception based on what it thinks is in shadow or not.
 
 ![An image of a checkerboard, where identical colors look different if they are in shadow](yellowdotcheckershadow_dlyon.png)
 
