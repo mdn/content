@@ -7,7 +7,7 @@ browser-compat: css.properties.writing-mode
 
 {{CSSRef}}
 
-The **`writing-mode`** [CSS](/en-US/docs/Web/CSS) property sets whether lines of text are laid out horizontally or vertically, as well as the direction in which blocks progress. When set for an entire document, it should be set on the root element (`html` element for HTML documents).
+The **`writing-mode`** [CSS](/en-US/docs/Web/CSS) property sets whether [inline elements](/en-US/docs/Web/HTML/Inline_elements) are laid out horizontally or vertically, as well as the direction in which [block-level elements](/en-US/docs/Web/HTML/Block-level_elements) progress. When set for an entire document, it should be set on the root element (`html` element for HTML documents).
 
 {{EmbedInteractiveExample("pages/css/writing-mode.html")}}
 
