@@ -505,7 +505,7 @@ You can find more information about WebGPU error handling in the explainer — s
 - {{domxref("GPUShaderModule")}}
   - : A reference to an internal shader module object, a container for WGSL shader code that can be submitted to the GPU to execution by a pipeline.
 - {{domxref("GPUTexture")}}
-  - : A container used to store texture data to use in GPU rendering operations.
+  - : A container used to store 1D, 2D, or 3D arrays of data, such as images, to use in GPU rendering operations.
 - {{domxref("GPUTextureView")}}
   - : A view onto some subset of the texture subresources defined by a particular {{domxref("GPUTexture")}}. Created by {{domxref("GPUTexture.createView()")}}.
 
