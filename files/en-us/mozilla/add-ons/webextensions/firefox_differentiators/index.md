@@ -2,14 +2,6 @@
 title: Firefox differentiators
 slug: Mozilla/Add-ons/WebExtensions/Firefox_differentiators
 page-type: guide
-tags:
-  - Add-ons
-  - Draft
-  - Extensions
-  - Firefox
-  - NeedsMarkupWork
-  - Themes
-  - WebExtensions
 ---
 
 {{AddonSidebar}}

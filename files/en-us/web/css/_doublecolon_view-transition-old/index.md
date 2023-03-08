@@ -7,7 +7,7 @@ status:
 browser-compat: css.selectors.view-transition-old
 ---
 
-{{CSSRef}}{{seecompattable}}
+{{CSSRef}}{{SeeCompatTable}}
 
 The **`::view-transition-old`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) represents the "old" view state of a view transition — a static screenshot of the old view, before the transition.
 

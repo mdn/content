@@ -1,15 +1,6 @@
 ---
 title: declarativeNetRequest.URLTransform
 slug: Mozilla/Add-ons/WebExtensions/API/declarativeNetRequest/URLTransform
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Reference
-  - WebExtensions
-  - Type
-  - declarativeNetRequest
-  - URLTransform
 browser-compat: webextensions.api.declarativeNetRequest.URLTransform
 ---
 
