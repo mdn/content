@@ -403,7 +403,7 @@ according to [our license](LICENSE.md).
 [`tags`]: https://developer.mozilla.org/en-US/docs/MDN/Writing_guidelines/Howto/Tag
 [contribute page]: https://developer.mozilla.org/en-US/docs/MDN/Contribute
 [getting started with mdn web docs]: https://developer.mozilla.org/en-US/docs/MDN/Community/Contributing/Getting_started
-[github for complete beginners]: https://developer.mozilla.org/en-US/docs/MDN/Contribute/GitHub_beginners
+[getting ready to contribute]: https://developer.mozilla.org/en-US/docs/MDN/Community/Contributing/Getting_started#getting_ready_to_contribute
 [how to write in markdown]: https://developer.mozilla.org/en-US/docs/MDN/Writing_guidelines/Howto/Markdown_in_MDN
 [javascript landing page]: https://developer.mozilla.org/en-US/docs/Web/JavaScript
 [learn web development]: https://developer.mozilla.org/en-US/docs/Learn
