@@ -108,7 +108,7 @@ If you are including non-text content such as video or animation, you should fol
 
 To check your contrast as you make your color choices, use a tool such as WebAIM's [Color Contrast Checker](https://webaim.org/resources/contrastchecker/).
 
-You can also check color contrast on the fly using Firefox's Developer Tools — see our [Accessibility inspector](/en-US/docs/Tools/Accessibility_inspector) guide, and in particular the section [Check for accessibility issues](/en-US/docs/Tools/Accessibility_inspector#check_for_accessibility_issues). Try using it on the live examples in the description section.
+You can also check color contrast on the fly using Firefox's Developer Tools — see the [Accessibility inspector](https://firefox-source-docs.mozilla.org/devtools-user/accessibility_inspector/index.html) guide, and in particular the section [Check for accessibility issues](https://firefox-source-docs.mozilla.org/devtools-user/accessibility_inspector/index.html#check-for-accessibility-issues). Try using it on the live examples in the description section.
 
 ## Related WCAG success criteria
 
