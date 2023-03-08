@@ -3,17 +3,21 @@ title: Display a badge on the app icon
 slug: Web/Progressive_web_apps/How_to/Display_badge_on_app_icon
 ---
 
-OS-native applications on mobile and desktop operating systems can display badges on top of their app icons to inform users that new content is available. For example, an email client application can display the total number of unread messages in a badge and update this number even if the app is not running.
+Applications native to mobile and desktop operating systems can display badges on top of their app icons to inform users that new content is available. For example, an email client application can display the total number of unread messages in a badge and update this number even if the app is not running.
+
+Here is an example showing the Mail application on an iOS device with a badge in its top right corner:
+
+![The dock area on an iPhone home screen, showing a badge on the Mail app icon](./mail-badge-ios.png)
 
 [Progressive Web Apps](/en-US/docs/Web/Progressive_web_apps) (PWAs) can display and update badges on their app icons too.
 
-Displaying a badge is done by using the [Badging API](/en-US/docs/Web/API/Badging_API), and updating the badge even when the app is not running can be done by using the app's [service worker](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers).
+Displaying and updating a badge is done by using the [Badging API](/en-US/docs/Web/API/Badging_API). You can call this API from the app's [service worker](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers), to display or update the badge even when the app is not running.
 
 ## Support for badges
 
 App badges are only supported when a PWA is installed on its host operating system. Badges appear on the app icon which only exists after the app has been installed.
 
-> **Note:** that this article focuses on the {{domxref("Navigator.setAppBadge()")}} and {{domxref("Navigator.clearAppBadge()")}} methods from the Badging API and ignores the `Navigator.setClientBadge` and `Navigator.clearClientBadge`. Although these methods are defined in the [Badging API specification](https://w3c.github.io/badging/) too, they are not implemented in any browser and are meant to display badges on documents, not on application icons.
+> **Note:** This article focuses on the {{domxref("Navigator.setAppBadge()")}} and {{domxref("Navigator.clearAppBadge()")}} methods from the Badging API and ignores the `Navigator.setClientBadge` and `Navigator.clearClientBadge`. Although these methods are defined in the [Badging API specification](https://w3c.github.io/badging/) too, they are for displaying badges on documents, not on application icons.
 
 ### Desktop support
 
@@ -31,7 +35,7 @@ Before learning how to use badges, consider these best practices to ensure your 
 
 ### Check for support
 
-The Badging API is not [supported](#support-for-badges) in all browsers and all operating systems, so make sure you check for support in your JavaScript code before using the API:
+To ensure the Badging API is [supported](#support-for-badges) in the user's browser and operating system, to prevent throwing a JavaScript error, check for support before using the API:
 
 ```javascript
 if (navigator.setAppBadge) {
@@ -41,7 +45,7 @@ if (navigator.setAppBadge) {
 }
 ```
 
-Additionally, even in browsers where it is supported, there are cases where using the API does not actually display a badge. For example, even if Chrome supports the Badging API, badges do not appear on installed application icons on Linux. Therefore, do not only rely on badges to inform users about the availability of new content.
+Do not rely solely on badges to inform users about the availability of new content. Browsers that support the Badging API may be installed on operating systems that do not support displaying a badge. For example, while Chrome supports the Badging API, badges will not appear on installed application icons on Linux.
 
 ### Use badges sparingly
 
@@ -51,11 +55,15 @@ Like notifications, badges can be a very effective way to re-engage users with y
 
 Make sure to update your application badge in real-time. This means updating the badge count to reflect how many new items are actually left for the user to consume, and clearing the app badge when there are no new items.
 
+For example, if an email client app receives new messages in the background, it should update its badge to display the right number of unread messages in the inbox, potentially filtering out messages from other folders such as a spam folder. It's possible to [update badges in the background](#updating-the-badge-in-the-background) by using the `navigator.setAppBadge()` method from a service worker.
+
+Once the user launches the app and starts reading messages, the email client app should update its badge accordingly by calling `navigator.setAppBadge()` with the new unread messages count, or by calling `navigator.clearAppBadge()` when there are no unread messages.
+
 ### Highlight new content in the app
 
-When new content is available and signaled by the presence of a badge on the app icon, that new content should clearly be identifiable by the user when they launch the app.
+When your app receives new content and adds a badge on the app icon, make sure to highlight that new content for users when they launch the app.
 
-For example, an email client app with an unread messages badge on the app icon should bold or highlight the unread messages when the app is opened.
+For example, if an email client app displays the unread messages count on the app icon badge, then those messages should be bolded or highlighted in some way when the app is opened.
 
 ## Displaying and updating the badge
 
@@ -112,10 +120,12 @@ self.addEventListener("push", (event) => {
   const unreadCount = message.unreadCount;
 
   // Set or clear the badge.
-  if (unreadCount && unreadCount > 0) {
-    navigator.setAppBadge(unreadCount);
-  } else {
-    navigator.clearAppBadge();
+  if (navigator.setAppBadge) {
+    if (unreadCount && unreadCount > 0) {
+      navigator.setAppBadge(unreadCount);
+    } else {
+      navigator.clearAppBadge();
+    }
   }
 });
 ```
