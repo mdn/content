@@ -585,7 +585,7 @@ Object destructuring is almost equivalent to [property accessing](/en-US/docs/We
 
 ```js
 const { a, toFixed } = 1;
-console.log(a, toFixed); // undefined ƒ toFixed() { [native code] }
+console.log(a, toFixed); // undefined function toFixed() { [native code] }
 ```
 
 Same as accessing properties, destructuring `null` or `undefined` throws a {{jsxref("TypeError")}}.
