@@ -241,7 +241,7 @@ The nature of blue light causes it to focus at a different location on the retin
 
 ## The special case of red
 
-Not all colors ("hue") are processed similarly by our brains. Human physiology and psychology are affected by the color red, generally speaking, in ways different from that of other colors. We respond physiologically as well as psychologically to colors. For example, it has been demonstrated that [some colors are more likely to cause epileptic fits than others](https://www.sciencedaily.com/releases/2009/09/090925092858.htm). Some devices offer a ["grayscale" setting as an accessibility option](https://ask.metafilter.com/312049/What-is-the-grayscale-setting-for-in-accessibility-options)" which can help people who are photo-sensitive. To mimick the grayscale setting, use the CSS {{cssxref("filter")}} property with a [`grayscale()`](/en-US/docs/Web/CSS/filter-function/grayscale) or [`saturate()`](/en-US/docs/Web/CSS/filter-function/saturate) [`<filter-function>`](/en-US/docs/Web/CSS/filter-function).
+Not all colors ("hue") are processed similarly by our brains. Human physiology and psychology are affected by the color red, generally speaking, in ways different from that of other colors. We respond physiologically as well as psychologically to colors. For example, it has been demonstrated that [some colors are more likely to cause epileptic fits than others](https://www.sciencedaily.com/releases/2009/09/090925092858.htm). Some devices offer a ["grayscale" setting as an accessibility option](https://ask.metafilter.com/312049/What-is-the-grayscale-setting-for-in-accessibility-options)" which can help people who are photo-sensitive. To mimic the grayscale setting, use the CSS {{cssxref("filter")}} property with a [`grayscale()`](/en-US/docs/Web/CSS/filter-function/grayscale) or [`saturate()`](/en-US/docs/Web/CSS/filter-function/saturate) [`<filter-function>`](/en-US/docs/Web/CSS/filter-function).
 
 ### Saturated red
 
@@ -298,5 +298,5 @@ Color as in hues and saturation can affect our mood, and enhance — or de-enhan
 - [`<color>`](/en-US/docs/Web/CSS/color_value) data type
 - [Web accessibility for seizures and physical reactions](/en-US/docs/Web/Accessibility/Seizure_disorders)
 - [How the Color Red Influences Our Behavior](https://www.scientificamerican.com/article/how-the-color-red-influences-our-behavior/) Scientific American By Susana Martinez-Conde, Stephen L. Macknik on November 1, 2014
-- [Red Desaturation](https://www.smart-optometry.com/red-desaturation/) The human eye is so sensitively "tuned" to red, that opthamolegists set up a test using it, assessing the integrity of the optic nerve.
+- [Red Desaturation](https://www.smart-optometry.com/red-desaturation/) The human eye is so sensitively "tuned" to red, that ophthalmologists set up a test using it, assessing the integrity of the optic nerve.
 - [Photic- and pattern-induced seizures: expert consensus of the Epilepsy Foundation of America Working Group](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.532.7063&rep=rep1&type=pdf)
