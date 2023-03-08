@@ -150,7 +150,7 @@ Also, note that icons need sufficient contrast for perception. See [WCAG 2.1 tec
 
 ### Luminance
 
-It is the difference in the luminance of a color that enables us to see the contrast. Relative luminance is defined in WCAG as “the relative brightness of any point in a colorspace, normalized to 0 for darkest black and 1 for lightest white.”
+It is the difference in the luminance of a color that enables us to see the contrast. Relative luminance is defined in WCAG as "the relative brightness of any point in a colorspace, normalized to 0 for darkest black and 1 for lightest white."
 
 This statement is of course accurate, but may be confusing when used in reference to the RGB color space, which is an integer between 0 and 255. White has 100% relative luminance, black has 0% relative luminance (in most but not all literature). Interpreting for the W3C standard above, that would mean that white, normalized to 1, would have an RGB value of `rgb(255 255 255)` and black, normalized to 0, would have an RGB value of `rgb(0 0 0)`. Note that black and white can also be written as `rgb(100% 100% 100%)` and `rgb(0% 0% 0%)` respectively, which may be more intuitive.
 
