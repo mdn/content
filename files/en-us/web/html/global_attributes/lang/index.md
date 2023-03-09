@@ -114,7 +114,7 @@ For example, the language menu on this site (MDN) includes a **`lang`** attribut
     </li>
     <li lang="zh-Hans" role="menuitem">
       <a
-        href="/zh-Hans/docs/Web/HTML/Global_attributes/lang"
+        href="/zh-CN/docs/Web/HTML/Global_attributes/lang"
         title="Chinese (Simplified)">
         <bdi>中文 (简体)</bdi>
       </a>
