@@ -81,6 +81,27 @@ In this example, a web app manifest declares one file handler that registers the
 }
 ```
 
+To actually implement file handling in a PWA, web developers also need to use {{domxref("window.launchQueue")}} to handle the incoming file.
+
+In this example, {{domxref("LaunchQueue.setConsumer", "window.launchQueue.setConsumer()")}} is used to specify a callback function that plays the handled audio file:
+
+```js
+async function playSong(handledFile) {
+  const blob = await file.getFile();
+  const url = window.URL.createObjectURL(blob);
+  const audio = new Audio(url);
+  audio.play();
+}
+
+if ("launchQueue" in window) {
+  window.launchQueue.setConsumer((launchParams) => {
+    if (launchParams.files && launchParams.files.length === 1) {
+      playSong(launchParams.files[0]);
+    }
+  });
+}
+```
+
 ## Specifications
 
 {{Specifications}}
