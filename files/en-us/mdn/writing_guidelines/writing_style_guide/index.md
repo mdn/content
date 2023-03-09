@@ -521,7 +521,9 @@ However, depending on the type of list you are creating, you will want to adjust
 
 Most of the guides, reference pages, and even glossary pages on MDN Web Docs contain a _See also_ section at the end of the article. This is a reference section containing cross-references to related topics within MDN and sometimes links to related external articles. For example, this is the [See also section](/en-US/docs/Web/CSS/@layer#see_also) for the `@layer` page.
 
-To maintain consistency across MDN Web Docs, keep the following guidelines in mind while adding or updating a See also section. In general, present the links in a See also section in a [bulleted list](#lists) format with each item in the list as a phrase.
+In general, present the links in a See also section in a [bulleted list](#lists) format with each item in the list as a phrase. In the [Learn web development](/en-US/docs/Learn) area on MDN, however, the See also section follows the [definition list](/en-US/docs/MDN/Writing_guidelines/Howto/Markdown_in_MDN#definition_lists) format.
+
+To maintain consistency across MDN Web Docs, keep the following guidelines in mind while adding or updating a See also section.
 
 #### Link text
 
@@ -541,7 +543,7 @@ To maintain consistency across MDN Web Docs, keep the following guidelines in mi
 
 - Keep the descriptive text surrounding the link minimal. As far as possible, the list should be a list of links.
 - If the links can be grouped by a theme, add a lead-in sentence to describe the list of links. End the lead-in sentence with a colon.
-- A single item in a list can be a series of comma-separated links, in which case, a lead-in phrase can be added, ending in a colon. Don’t use the conjunction "and" before the last item in the series. For example, to provide a reference to related color properties, the list item would be (notice that the common word "properties" is included in the lead-in phrase and so it is not added after the name of each property):
+- A single item in a list can be a series of comma-separated links, in which case, a lead-in phrase can be added, ending in a colon. Don't use the conjunction "and" before the last item in the series. For example, to provide a reference to related color properties, the list item would be (notice that the common word "properties" is included in the lead-in phrase and so it is not added after the name of each property):
   - Other color-related properties: {{cssxref("background-color")}}, {{cssxref("border-color")}}, {{cssxref("color")}}, {{cssxref("caret-color")}}, {{cssxref("column-rule-color")}}, {{cssxref("outline-color")}}, {{cssxref("text-decoration-color")}}, {{cssxref("text-emphasis-color")}}, {{cssxref("text-shadow")}}
 - After an external link and the source website, mention the date or year when the article was published within parentheses. Specify date using the format "January 1, 1900". The publication date not only helps to inform the readers about the relevance of the linked content but also helps authors to review links that are very old. For example, to link to the [Top-level await](https://v8.dev/features/top-level-await) external article, the reference will be:
   - [Top-level await](https://v8.dev/features/top-level-await) on v8.dev (October 8, 2019)
