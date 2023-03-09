@@ -12,7 +12,7 @@ The **`playbackTime`** read-only property of the {{domxref("AudioProcessingEvent
 
 ## Value
 
-A number, that doesn't need to be an integer.
+A number that doesn't need to be an integer.
 
 ## Example
 
