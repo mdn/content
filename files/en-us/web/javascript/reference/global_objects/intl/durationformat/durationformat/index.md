@@ -11,6 +11,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Intl.DurationFormat.DurationFormat
 ---
+
 {{JSRef}} {{SeeCompatTable}}
 
 The **`Intl.DurationFormat()`** constructor creates
