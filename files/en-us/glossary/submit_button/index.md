@@ -18,11 +18,11 @@ In addition to submitting a form, a submit button can affect the form's behavior
 
 Submit buttons can override the form's submission behavior through various attributes:
 
-- `{{HtmlElement("button#attr-formaction", "formaction")}}`
-- `{{HtmlElement("button#attr-formenctype", "formenctype")}}`
-- `{{HtmlElement("button#attr-formmethod", "formmethod")}}`
-- `{{HtmlElement("button#attr-formnovalidate", "formnovalidate")}}`
-- `{{HtmlElement("button#attr-formtarget", "formtarget")}}`
+- `{{HtmlElement("button#attr-formaction", "formaction")}}`: Override the {{htmlattrxref("action","form")}} attribute of the form.
+- `{{HtmlElement("button#attr-formenctype", "formenctype")}}`: Override the {{htmlattrxref("enctype","form")}} attribute of the form.
+- `{{HtmlElement("button#attr-formmethod", "formmethod")}}`: Override the {{htmlattrxref("method","form")}} attribute of the form.
+- `{{HtmlElement("button#attr-formnovalidate", "formnovalidate")}}`: Override the {{htmlattrxref("novalidate","form")}} attribute of the form.
+- `{{HtmlElement("button#attr-formtarget", "formtarget")}}`: Override the {{htmlattrxref("target","form")}} attribute of the form.
 
 ## Form data entries
 
