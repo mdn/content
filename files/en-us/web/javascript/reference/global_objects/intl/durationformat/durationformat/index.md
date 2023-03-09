@@ -162,8 +162,8 @@ new Intl.DurationFormat(locales, options)
 
     - `nanosecondsDisplay`
       - : Whether to always display nanoseconds, or only if nonzero.
-        - "`always`"
-        - "`auto`"
+        - `"always"`
+        - `"auto"`
 
     - `fractionalDigits`
       - : Number of how many fractional digits to display in the output.
