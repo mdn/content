@@ -197,7 +197,6 @@ stopElem.addEventListener(
 This example overrides certain {{domxref("console")}} methods to output their messages to the {{HTMLElement("pre")}} block whose ID is `log`.
 
 ```js
-let logger = logElem.innerHTML;
 console.log = (msg) => (logElem.textContent = `${logElem.textContent}\n${msg}`);
 console.error = (msg) =>
   (logElem.textContent = `${logElem.textContent}\nError: ${msg}`);
@@ -304,12 +303,12 @@ The CSS is entirely cosmetic in this example. The video is given a border, and i
   max-width: 860px;
 }
 
-#logger {
+#log {
   width: 25rem;
-  height: 4rem;
+  height: 15rem;
   border: 1px solid black;
-  margin: 0.5rem;
-  padding: 0.2rem;
+  padding: 0.5rem;
+  overflow: scroll;
 }
 ```
 
@@ -317,7 +316,7 @@ The CSS is entirely cosmetic in this example. The video is given a border, and i
 
 The final product looks like this. If your browser supports Screen Capture API, clicking "Start Capture" will present the {{Glossary("user agent", "user agent's")}} interface for selecting a screen, window, or tab to share.
 
-{{EmbedLiveSample("Streaming screen capture", 640, 760, "", "", "", "display-capture")}}
+{{EmbedLiveSample("Streaming screen capture", 640, 800, "", "", "", "display-capture")}}
 
 ## Security
 
