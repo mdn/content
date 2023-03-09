@@ -37,7 +37,7 @@ parseFromString(string, mimeType)
 
     Any other value is invalid and will cause a [`TypeError`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypeError) to be thrown.
     
-    Any `script` element get marked unexecutable and the contents of `noscript` get parsed as markup.
+    Any `script` element gets marked inexecutable and the contents of `noscript` get parsed as markup.
 
 ### Return value
 
