@@ -11,6 +11,8 @@ browser-compat: api.AudioProcessingEvent
 
 The `AudioProcessingEvent` interface of the [Web Audio API](/en-US/docs/Web/API/Web_Audio_API) represents events that occur when a {{domxref("ScriptProcessorNode")}} input buffer is ready to be processed.
 
+An `audioprocess` event with this interface is thrown to a {{domxref("ScriptProcessorNode")}} when audio processing is required. During audio processing, the input buffer is read and processed to produce output audio data, which is then written to the output buffer.
+
 > **Warning:** This feature has been deprecated and should be replaced by an [`AudioWorklet`](/en-US/docs/Web/API/AudioWorklet).
 
 {{InheritanceDiagram}}
