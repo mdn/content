@@ -767,26 +767,16 @@ Graph.prototype.addVertex = function (v) {
 const g = new Graph();
 // g ---> Graph.prototype ---> Object.prototype ---> null
 
-console.log(g.hasOwnProperty("vertices"));
-// true
+g.hasOwnProperty("vertices"); // true
+Object.hasOwn(g, "vertices"); // true
 
-console.log(Object.hasOwn(g, "vertices"));
-// true
+g.hasOwnProperty("nope"); // false
+Object.hasOwn(g, "nope"); // false
 
-console.log(g.hasOwnProperty("nope"));
-// false
+g.hasOwnProperty("addVertex"); // false
+Object.hasOwn(g, "addVertex"); // false
 
-console.log(Object.hasOwn(g, "nope"));
-// false
-
-console.log(g.hasOwnProperty("addVertex"));
-// false
-
-console.log(Object.hasOwn(g, "addVertex"));
-// false
-
-console.log(Object.getPrototypeOf(g).hasOwnProperty("addVertex"));
-// true
+Object.getPrototypeOf(g).hasOwnProperty("addVertex"); // true
 ```
 
 Note: It is **not** enough to check whether a property is [`undefined`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined). The property might very well exist, but its value just happens to be set to `undefined`.
