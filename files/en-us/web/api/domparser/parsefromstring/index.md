@@ -36,6 +36,8 @@ parseFromString(string, mimeType)
     The other valid values (`text/xml`, `application/xml`, `application/xhtml+xml`, and `image/svg+xml`) are functionally equivalent. They all invoke the XML parser, and the method will return a {{domxref("XMLDocument")}}.
 
     Any other value is invalid and will cause a [`TypeError`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypeError) to be thrown.
+    
+    Any `script` element get marked unexecutable and the contents of `noscript` get parsed as markup.
 
 ### Return value
 
