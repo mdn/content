@@ -4,7 +4,7 @@ slug: Web/API/View_Transitions_API
 page-type: web-api-overview
 status: experimental
 browser-compat:
-  - api.Document.startViewTransitions()
+  - api.Document.startViewTransition
 ---
 
 {{SeeCompatTable}}{{DefaultAPISidebar("View Transitions API")}}
@@ -30,7 +30,7 @@ The View Transitions API provides a much easier way of handling the required DOM
 
 ### Creating a basic view transition
 
-An SPA will include functionality to fetch new content and update the DOM in response to an event of some kind, such as a navigation link being clicked or an update being pushed from the server. In our [Basic View Transitions demo](https://basic-view-transitions-api.glitch.me/) we've simplified this to a `displayNewImage()` function that shows a new full-size image based on the thumbnail that was clicked. We've encapsulated this inside an `updateView()` function that handles both browsers that do and don't support the View Transitions API:
+An SPA will include functionality to fetch new content and update the DOM in response to an event of some kind, such as a navigation link being clicked or an update being pushed from the server. In our [Basic View Transitions demo](https://mdn.github.io/dom-examples/view-transitions/) we've simplified this to a `displayNewImage()` function that shows a new full-size image based on the thumbnail that was clicked. We've encapsulated this inside an `updateView()` function that handles both browsers that do and don't support the View Transitions API:
 
 ```js
 function updateView(event) {
@@ -288,7 +288,7 @@ This animation also requires the following CSS, to turn off the default CSS anim
 
 ## Examples
 
-- [Basic View Transitions demo](https://basic-view-transitions-api.glitch.me/): A basic image gallery demo with separate transitions between old and new images, and old and new captions.
+- [Basic View Transitions demo](https://mdn.github.io/dom-examples/view-transitions/): A basic image gallery demo with separate transitions between old and new images, and old and new captions.
 - [HTTP 203 playlist](https://http203-playlist.netlify.app/): A more sophisticated video player demo app that features a number of different view transitions, many of which are explained in [Smooth and simple transitions with the View Transitions API](https://developer.chrome.com/docs/web-platform/view-transitions/).
 
 ## Specifications

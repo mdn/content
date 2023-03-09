@@ -2,12 +2,10 @@
 title: CSSTransformValue.is2D
 slug: Web/API/CSSTransformValue/is2D
 page-type: web-api-instance-property
-status:
-  - experimental
 browser-compat: api.CSSTransformValue.is2D
 ---
 
-{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
+{{APIRef("CSS Typed OM")}}
 
 The read-only **`is2D`** property of the
 {{domxref("CSSTransformValue")}} interface returns whether the transform is 2D or 3D.

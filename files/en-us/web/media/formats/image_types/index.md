@@ -1265,7 +1265,7 @@ As such, TIFF files are not useful within the context of web content, _but_ it's
 ### WebP image
 
 WebP supports lossy compression via predictive coding based on the VP8 video codec, and lossless compression that uses substitutions for repeating data.
-Lossy WebP images average 25–35% smaller than JPEG images of visually similar compression levels.
+Lossy WebP images are on average 25–35% smaller than JPEG images of visually similar compression levels.
 Lossless WebP images are typically 26% smaller than the same images in PNG format.
 
 WebP also supports animation: in a lossy WebP file, the image data is represented by a VP8 bitstream, which may contain multiple frames.
