@@ -529,12 +529,10 @@ To maintain consistency across MDN Web Docs, keep the following guidelines in mi
   - [ARIA states and properties](/en-US/docs/Web/Accessibility/ARIA/Attributes)
 - Use sentence casing in the link text even if it is different from the linked page title or section title. It might be that the case used in the page or section title is incorrect. For example, the link text to the [WAI-ARIA Roles](/en-US/docs/Web/Accessibility/ARIA/Roles) page will be:
   - [WAI-ARIA roles](/en-US/docs/Web/Accessibility/ARIA/Roles)
-- For external links as well, use sentence casing even if the casing on the target page is different. This is to ensure consistency across MDN Web Docs.
+- For external links as well, use sentence casing even if the casing on the target article page is different. This is to ensure consistency across MDN Web Docs. Exceptions include names of books.
 - Follow up the feature name with the appropriate word such as property, function, expression. For example, the reference to the {{cssxref("revert-layer")}} page will be:
   - {{cssxref("revert-layer")}} keyword
 - Use the appropriate macro to link to a page as defined in the [Linking to pages in references](/en-US/docs/MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros#linking_to_pages_in_references) section. The use of macro will add code formatting to the keyword in the link text, as shown in the previous example.
-- For external links, add the source website as part of the link text. For example, to link to the [Top-level await](https://v8.dev/features/top-level-await) external link, the link text will be (see below how to add publication date information):
-  - [Top-level await on v8.dev](https://v8.dev/features/top-level-await)
 - No article ("A", "An", "The") is needed at the beginning of the link text.
   - **Incorrect**: The {{cssxref("revert-layer")}} keyword
 - No punctuation is required after a link text because it will invariably be a phrase.
@@ -545,8 +543,8 @@ To maintain consistency across MDN Web Docs, keep the following guidelines in mi
 - If the links can be grouped by a theme, add a lead-in sentence to describe the list of links. End the lead-in sentence with a colon.
 - A single item in a list can be a series of comma-separated links, in which case, a lead-in phrase can be added, ending in a colon. Don’t use the conjunction "and" before the last item in the series. For example, to provide a reference to related color properties, the list item would be (notice that the common word "properties" is included in the lead-in phrase and so it is not added after the name of each property):
   - Other color-related properties: {{cssxref("background-color")}}, {{cssxref("border-color")}}, {{cssxref("color")}}, {{cssxref("caret-color")}}, {{cssxref("column-rule-color")}}, {{cssxref("outline-color")}}, {{cssxref("text-decoration-color")}}, {{cssxref("text-emphasis-color")}}, {{cssxref("text-shadow")}}
-- After an external link, mention the date or year when the article was published within parentheses. Specify date using the format "January 1, 1900". The publication date not only helps to inform the readers about the relevance of the linked content but also helps authors to review links that are very old. For example, to link to the [Top-level await](https://v8.dev/features/top-level-await) external link, the link text will be:
-  - [Top-level await on v8.dev](https://v8.dev/features/top-level-await) (October 8, 2019)
+- After an external link and the source website, mention the date or year when the article was published within parentheses. Specify date using the format "January 1, 1900". The publication date not only helps to inform the readers about the relevance of the linked content but also helps authors to review links that are very old. For example, to link to the [Top-level await](https://v8.dev/features/top-level-await) external article, the reference will be:
+  - [Top-level await](https://v8.dev/features/top-level-await) on v8.dev (October 8, 2019)
 
 #### Order of links
 
@@ -606,26 +604,15 @@ Keep the following guidelines in mind when writing titles:
 
 ## See also
 
-### Preferred style guides
-
-If you have questions about usage and style not covered here, we recommend referring to the [Microsoft Writing Style Guide](https://docs.microsoft.com/style-guide/welcome/)—or, failing that, the [Chicago Manual of Style](https://www.amazon.com/Chicago-Manual-Style-16th/dp/0226104206).
-An [unofficial crib sheet for the Chicago Manual of Style](https://faculty.cascadia.edu/cma/HIST148/cmscrib.pdf) is available online.
-
-### Preferred dictionary
-
-For questions about spelling, refer to [Dictionary.com](https://www.dictionary.com/).
-The spelling checker for this site uses American English.
-Do not use variant spellings (e.g., use _color_ rather than _colour_).
-
-We will be expanding the guide over time, so if you have specific questions that aren't covered in this document, [please get in touch](/en-US/docs/MDN/Community/Contributing/Getting_started#step_4_ask_for_help), so we know what should be added.
-
-### Language, grammar, and spelling
-
-If you're interested in improving your writing and editing skills, you may find the following resources to be helpful.
-
-- [On Writing Well](https://www.amazon.com/Writing-Well-30th-Anniversary-Nonfiction/dp/0060891548), by William Zinsser (Amazon link)
-- [Style: The Basics of Clarity and Grace](https://www.amazon.com/Style-Basics-Clarity-Grace-4th/dp/0205830765/), by Joseph Williams and Gregory Colomb (Amazon link)
-- [Common Errors in English](https://brians.wsu.edu/common-errors-in-english-usage/)
-- [English Grammar FAQ](https://www-personal.umich.edu/~jlawler/aue.html) (alt.usage.english)
-- [Merriam-Webster's Concise Dictionary of English Usage](https://www.amazon.com/Merriam-Websters-Concise-Dictionary-English-Usage/dp/B004L2KNI2) (Amazon link): Scholarly but user-friendly, evidence-based advice; very good for non-native speakers, especially for preposition usage.
-- [English Language and Usage StackExchange](https://english.stackexchange.com/): Question and answer site for English language usage.
+- Preferred style guides: If you have questions about usage and style not covered here, we recommend referring to the [Microsoft Writing Style Guide](https://docs.microsoft.com/style-guide/welcome/) or [The Chicago Manual of Style](https://www.amazon.com/Chicago-Manual-Style-16th/dp/0226104206).
+  An [unofficial crib sheet for the Chicago Manual of Style](https://faculty.cascadia.edu/cma/HIST148/cmscrib.pdf) is available online.
+- Preferred dictionary: For questions about spelling, refer to [Dictionary.com](https://www.dictionary.com/).
+  The spelling checker for this site uses American English.
+  Do not use variant spellings (e.g., use _color_ rather than _colour_).
+- Resources for improving your writing and editing skills:
+  - [Common errors in English usage](https://brians.wsu.edu/common-errors-in-english-usage/) on brians.wsu.edu
+  - [English grammar FAQ](https://www-personal.umich.edu/~jlawler/aue.html) on alt-usage-english.org
+  - [English language and usage](https://english.stackexchange.com/) on english.stackexchange.com
+  - [Merriam-Webster's Concise Dictionary of English Usage, 1st Edition](https://www.amazon.com/Merriam-Websters-Concise-Dictionary-English-Usage/dp/B004L2KNI2) (book link on amazon.com)
+  - [On Writing Well](https://www.amazon.com/Writing-Well-30th-Anniversary-Nonfiction/dp/0060891548) by William Zinsser (book link on amazon.com)
+  - [Style: The Basics of Clarity and Grace, 4th Edition](https://www.amazon.com/Style-Basics-Clarity-Grace-4th/dp/0205830765/) by Joseph Williams and Gregory Colomb (book link on amazon.com)
