@@ -28,7 +28,7 @@ svg {
 
 ```html
 <svg xmlns="http://www.w3.org/2000/svg"
-     width="450" height="300" viewBox="0 0 450 300">
+     width="450" height="300" viewBox="0 0 450 300" alt="W3 SVG">
 
   <rect id="rect1" x="25"  y="25"  width="225" height="175" fill="white" stroke="black"/>
   <rect id="rect2" x="200" y="125" width="225" height="150" fill="white" stroke="black" style="shape-margin:25px;"/>
