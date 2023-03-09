@@ -21,7 +21,7 @@ language-sensitive duration formatting.
 ## Syntax
 
 ```js
-new Intl.DurationFormat.()
+new Intl.DurationFormat()
 new Intl.DurationFormat(locales)
 new Intl.DurationFormat(locales, options)
 ```
