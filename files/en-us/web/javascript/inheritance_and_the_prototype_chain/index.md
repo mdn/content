@@ -755,6 +755,18 @@ The lookup time for properties that are high up on the prototype chain can have 
 Also, when iterating over the properties of an object, **every** enumerable property that is on the prototype chain will be enumerated. To check whether an object has a property defined on _itself_ and not somewhere on its prototype chain, it is necessary to use the [`hasOwnProperty`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty) or [`Object.hasOwn`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwn) methods. All objects, except those with `null` as `[[Prototype]]`, inherit [`hasOwnProperty`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty) from `Object.prototype` — unless it has been overridden further down the prototype chain. To give you a concrete example, let's take the above graph example code to illustrate it:
 
 ```js
+function Graph() {
+  this.vertices = [];
+  this.edges = [];
+}
+
+Graph.prototype.addVertex = function (v) {
+  this.vertices.push(v);
+};
+
+const g = new Graph();
+// g ---> Graph.prototype ---> Object.prototype ---> null
+
 console.log(g.hasOwnProperty("vertices"));
 // true
 
