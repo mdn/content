@@ -155,10 +155,10 @@ new Intl.DurationFormat(locales, options)
 
     - `nanoseconds`
       - : The style to be used for formatting nanoseconds.
-        - "`long`"
-        - "`short`"
-        - "`narrow`"
-        - "`numeric`"
+        - `"long"`
+        - `"short"`
+        - `"narrow"`
+        - `"numeric"`
 
     - `nanosecondsDisplay`
       - : Whether to always display nanoseconds, or only if nonzero.
