@@ -1,18 +1,10 @@
 ---
-title: Intl.DurationFormat.formatToParts()
+title: Intl.DurationFormat.prototype.formatToParts()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/DurationFormat/formatToParts
-tags:
-  - Internationalization
-  - Intl
-  - JavaScript
-  - Localization
-  - Method
-  - DurationFormat
-  - Format
-  - Prototype
-  - Reference
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.Intl.DurationFormat.formatToParts
 ---
+
 {{JSRef}} {{SeeCompatTable}}
 
 The **`Intl.DurationFormat.prototype.formatToParts()`** method allows locale-aware formatting of strings produced by {{jsxref("Intl.DurationFormat")}} formatters.
@@ -33,15 +25,15 @@ formatToParts(duration)
 The `formatToParts()` method is useful for custom formatting of duration objects. It returns an {{jsxref("Array")}} of objects containing the locale-specific tokens from which it possible to build custom strings while preserving the locale-specific parts. The structure the `formatToParts()` method returns, looks like this:
 
 ```js
- [
-   { type: "integer", value: "7", unit: "hour" },
-   { type: "literal", value: " ", unit: "hour" },
-   { type: "unit", value: "hr", unit: "hour" },
-   { type: "literal", value: ", " },
-   { type: "integer", value: "8", unit: "minute" },
-   { type: "literal", value: " ", unit: "minute" },
-   { type: "unit", value: "min", unit: "minute" }
- ]
+[
+ { type: "integer", value: "7", unit: "hour" },
+ { type: "literal", value: " ", unit: "hour" },
+ { type: "unit", value: "hr", unit: "hour" },
+ { type: "literal", value: ", " },
+ { type: "integer", value: "8", unit: "minute" },
+ { type: "literal", value: " ", unit: "minute" },
+ { type: "unit", value: "min", unit: "minute" }
+]
 ```
 
 ## Examples
@@ -60,33 +52,32 @@ const duration = {
 
 new Intl.DurationFormat('en', { style : 'long' }).formatToParts(duration);
 
-// return value:
+// Returned value:
 [
-    { type: "integer", value: "7", unit: "hour" },
-    { type: "literal", value: " ", unit: "hour" },
-    { type: "unit", value: "hours", unit: "hour" },
-    { type: "literal", value: ", " },
-    { type: "integer", value: "8", unit: "minute" },
-    { type: "literal", value: " ", unit: "minute" },
-    { type: "unit", value: "minutes", unit: "minute" },
-    { type: "literal", value: ", " },
-    { type: "integer", value: "9", unit: "second" },
-    { type: "literal", value: " ", unit: "second" },
-    { type: "unit", value: "seconds", unit: "second" },
-    { type: "literal", value: ", " },
-    { type: "integer", value: "123", unit: "millisecond" },
-    { type: "literal", value: " ", unit: "millisecond" },
-    { type: "unit", value: "milliseconds", unit: "millisecond" },
-    { type: "literal", value: ", " },
-    { type: "integer", value: "456", unit: "microsecond" },
-    { type: "literal", value: " ", unit: "microsecond" },
-    { type: "unit", value: "microseconds", unit: "microsecond" },
-    { type: "literal", value: " and " },
-    { type: "integer", value: "789", unit: "nanosecond" },
-    { type: "literal", value: " ", unit: "nanosecond" },
-    { type: "unit", value: "nanoseconds", unit: "nanosecond" },
-  ]
-
+  { type: "integer", value: "7", unit: "hour" },
+  { type: "literal", value: " ", unit: "hour" },
+  { type: "unit", value: "hours", unit: "hour" },
+  { type: "literal", value: ", " },
+  { type: "integer", value: "8", unit: "minute" },
+  { type: "literal", value: " ", unit: "minute" },
+  { type: "unit", value: "minutes", unit: "minute" },
+  { type: "literal", value: ", " },
+  { type: "integer", value: "9", unit: "second" },
+  { type: "literal", value: " ", unit: "second" },
+  { type: "unit", value: "seconds", unit: "second" },
+  { type: "literal", value: ", " },
+  { type: "integer", value: "123", unit: "millisecond" },
+  { type: "literal", value: " ", unit: "millisecond" },
+  { type: "unit", value: "milliseconds", unit: "millisecond" },
+  { type: "literal", value: ", " },
+  { type: "integer", value: "456", unit: "microsecond" },
+  { type: "literal", value: " ", unit: "microsecond" },
+  { type: "unit", value: "microseconds", unit: "microsecond" },
+  { type: "literal", value: " and " },
+  { type: "integer", value: "789", unit: "nanosecond" },
+  { type: "literal", value: " ", unit: "nanosecond" },
+  { type: "unit", value: "nanoseconds", unit: "nanosecond" },
+]
 ```
 
 ## Specifications

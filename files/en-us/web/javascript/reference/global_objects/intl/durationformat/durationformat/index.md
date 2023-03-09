@@ -13,7 +13,7 @@ language-sensitive duration formatting.
 
 ## Syntax
 
-```js
+```js-nolint
 new Intl.DurationFormat()
 new Intl.DurationFormat(locales)
 new Intl.DurationFormat(locales, options)
@@ -30,111 +30,111 @@ new Intl.DurationFormat(locales, options)
   - : An object with some or all of the following properties:
 
     - `localeMatcher`
-      - : The locale matching algorithm to use. Possible values are "`lookup`"
-        and "`best fit`"; the default is "`best fit`". For
+      - : The locale matching algorithm to use. Possible values are `"lookup"`
+        and `"best fit"`; the default is `"best fit"`. For
         information about this option, see the {{jsxref("Global_Objects/Intl", "Intl",
-        "#Locale_negotiation", 1)}} page.
+        "#Locale_negotiation")}} page.
 
     - `numberingSystem`
       - : A string containing the name of the numbering system to be used for number formatting, see {{jsxref("Global_Objects/Intl/Locale/numberingSystem", "Intl.Locale.prototype.numberingSystem",
-        "#description", 1)}}.
+        "#description")}}.
 
     - `style`
-      - : The length of the formatted message, the default is "`short`".
-        - "`long`" (eg 1 hour and 50 minutes)
-        - "`short`" (eg 1 hr, 50 min)
-        - "`narrow`" (eg 1h 50m)
-        - "`digital`" (eg 1:50:00)
+      - : The length of the formatted message, the default is `"short"`.
+        - `"long"` (E.g., 1 hour and 50 minutes)
+        - `"short"` (E.g., 1 hr, 50 min)
+        - `"narrow"` (E.g., 1h 50m)
+        - `"digital"` (E.g., 1:50:00)
 
     - `years`
       - : The style to be used for formatting years.
-        - "`long`"
-        - "`short`"
-        - "`narrow`"
+        - `"long"`
+        - `"short"`
+        - `"narrow"`
 
     - `yearsDisplay`
       - : Whether to always display years, or only if nonzero.
-        - "`always`"
-        - "`auto`"
+        - `"always"`
+        - `"auto"`
 
     - `months`
       - : The style to be used for formatting months.
-        - "`long`"
-        - "`short`"
-        - "`narrow`"
+        - `"long"`
+        - `"short"`
+        - `"narrow"`
 
     - `monthsDisplay`
       - : Whether to always display months, or only if nonzero.
-        - "`always`"
-        - "`auto`"
+        - `"always"`
+        - `"auto"`
 
     - `weeks`
       - : The style to be used for formatting weeks.
-        - "`long`"
-        - "`short`"
-        - "`narrow`"
+        - `"long"`
+        - `"short"`
+        - `"narrow"`
 
     - `weeksDisplay`
       - : Whether to always display weeks, or only if nonzero.
-        - "`always`"
-        - "`auto`"
+        - `"always"`
+        - `"auto"`
 
     - `days`
       - : The style to be used for formatting days.
-        - "`long`"
-        - "`short`"
-        - "`narrow`"
+        - `"long"`
+        - `"short"`
+        - `"narrow"`
 
     - `daysDisplay`
       - : Whether to always display days, or only if nonzero.
-        - "`always`"
-        - "`auto`"
+        - `"always"`
+        - `"auto"`
 
     - `hours`
       - : The style to be used for formatting hours.
-        - "`long`"
-        - "`short`"
-        - "`narrow`"
-        - "`numeric`"
-        - "`2-digit`"
+        - `"long"`
+        - `"short"`
+        - `"narrow"`
+        - `"numeric"`
+        - `"2-digit"`
 
     - `hoursDisplay`
       - : Whether to always display hours, or only if nonzero.
-        - "`always`"
-        - "`auto`"
+        - `"always"`
+        - `"auto"`
 
     - `minutes`
       - : The style to be used for formatting minutes.
-        - "`long`"
-        - "`short`"
-        - "`narrow`"
-        - "`numeric`"
-        - "`2-digit`"
+        - `"long"`
+        - `"short"`
+        - `"narrow"`
+        - `"numeric"`
+        - `"2-digit"`
 
     - `minutesDisplay`
       - : Whether to always display minutes, or only if nonzero.
-        - "`always`"
-        - "`auto`"
+        - `"always"`
+        - `"auto"`
 
     - `seconds`
       - : The style to be used for formatting seconds.
-        - "`long`"
-        - "`short`"
-        - "`narrow`"
-        - "`numeric`"
-        - "`2-digit`"
+        - `"long"`
+        - `"short"`
+        - `"narrow"`
+        - `"numeric"`
+        - `"2-digit"`
 
     - `secondsDisplay`
       - : Whether to always display seconds, or only if nonzero.
-        - "`always`"
-        - "`auto`"
+        - `"always"`
+        - `"auto"`
 
     - `milliseconds`
       - : The style to be used for formatting milliseconds.
-        - "`long`"
-        - "`short`"
-        - "`narrow`"
-        - "`numeric`"
+        - `"long"`
+        - `"short"`
+        - `"narrow"`
+        - `"numeric"`
 
     - `millisecondsDisplay`
       - : Whether to always display milliseconds, or only if nonzero.
@@ -174,9 +174,9 @@ Basic Usage
 
 ```js
 const duration = {
-    hours: 2,
-    minutes: 20,
-    seconds: 35,
+  hours: 2,
+  minutes: 20,
+  seconds: 35,
 }
 
 console.log(new Intl.DurationFormat("pt", { style: "long" }).format(duration));

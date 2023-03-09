@@ -1,16 +1,7 @@
 ---
-title: Intl.DurationFormat.format()
+title: Intl.DurationFormat.prototype.format()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/DurationFormat/format
-tags:
-  - Internationalization
-  - Intl
-  - JavaScript
-  - Localization
-  - Method
-  - DurationFormat
-  - Format
-  - Prototype
-  - Reference
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.Intl.DurationFormat.format
 ---
 
@@ -30,7 +21,7 @@ format(duration);
 
 - `duration`
   - : The duration object to be formatted. Possible values include:
-     "`months`", " `weeks`", "`days`", "`hours`", "`minutes`", " `seconds`", "`milliseconds`", "`microseconds`", "`nanoseconds`".
+     `"months"`, `"weeks"`, `"days"`, `"hours"`, `"minutes"`, `"seconds"`, `"milliseconds"`, `"microseconds"`, `"nanoseconds"`.
 
 ## Description
 

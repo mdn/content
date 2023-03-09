@@ -1,16 +1,7 @@
 ---
-title: Intl.DurationFormat.resolvedOptions()
+title: Intl.DurationFormat.prototype.resolvedOptions()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/DurationFormat/resolvedOptions
-tags:
-  - Internationalization
-  - Intl
-  - JavaScript
-  - Localization
-  - Method
-  - DurationFormat
-  - ResolvedOptions
-  - Prototype
-  - Reference
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.Intl.DurationFormat.resolvedOptions
 ---
 
@@ -34,56 +25,56 @@ computed during the initialization of the given {{jsxref("Intl.DateTimeFormat")}
 The resulting object has the following properties:
 
 - `locale`
-  - : The BCP 47 language tag for the locale actually used. If any Unicode extension
+  - : The [BCP 47 language tag](https://datatracker.ietf.org/doc/html/rfc5646) for the locale used. If any Unicode extension
     values were requested in the input BCP 47 language tag that led to this locale,
     the key-value pairs that were requested and are supported for this locale are
     included in `locale`.
 - `style`
-  - : Is one of the String values `long`, `short`, `narrow`, or "digital" identifying the duration formatting style used.
+  - : One of the strings `"long"`, `"short"`, `"narrow"`, or `"digital"` identifying the duration formatting style used.
 - `years`
-  - : Is one of the String values `long`, `short`, `narrow` identifying the formatting style used for the years field.
+  - : One of the strings `"long"`, `"shor"t`, or `"narrow"` identifying the formatting style used for the `years` field.
 - `yearsDisplay`
-  - : Is one of the String values `auto` or `always` identifying when to display the years field.
+  - : One of the strings `"auto"` or `"always"` identifying when to display the `years` field.
 - `months`
-  - : Is one of the String values `long`, `short`, `narrow` identifying the formatting style used for the months field.
+  - : One of the strings `"long"`, `"short"`, `and "narrow"` identifying the formatting style used for the `months` field.
 - `monthsDisplay`
-  - : Is one of the String values `auto` or `always` identifying when to display the months field.
+  - : One of the strings `"auto"` or `"always"` identifying when to display the `months` field.
 - `weeks`
-  - : Is one of the String values `long`, `short`, `narrow` identifying the formatting style used for the weeks field.
+  - : One of the strings `"long"`, `"short"`, `and "narrow"` identifying the formatting style used for the `weeks` field.
 - `weeksDisplay`
-  - : Is one of the String values `auto` or `always` identifying when to display the weeks field.
+  - : One of the strings `"auto"` or `"always"` identifying when to display the `weeks` field.
 - `days`
-  - : Is one of the String values `long`, `short`, `narrow` identifying the formatting style used for the days field.
+  - : One of the strings `"long"`, `"short"`, and `"narrow"` identifying the formatting style used for the `days` field.
 - `daysDisplay`
-  - : Is one of the String values `auto` or `always` identifying when to display the days field.
+  - : One of the strings `"auto"` or `"always"` identifying when to display the `days` field.
 - `hours`
-  - : Is one of the String values `long`, `short`, `narrow`, `2-digit`, or `numeric` identifying the formatting style used for the hours field.
+  - : One of the strings `"long"`, `"short"`, `"narrow"`, `"2-digit"`, or `"numeric"` identifying the formatting style used for the `hours` field.
 - `hoursDisplay`
-  - : Is one of the String values `auto` or `always` identifying when to display the hours field.
+  - : One of the strings `"auto"` or `"always"` identifying when to display the `hours` field.
 - `minutes`
-  - : Is one of the String values `long`, `short`, `narrow`, `2-digit`, or `numeric` identifying the formatting style used for the minutes field.
+  - : One of the strings `"long"`, `"short"`, `"narrow"`, `"2-digit"`, or `"numeric"` identifying the formatting style used for the `minutes` field.
 - `minutesDisplay`
-  - : Is one of the String values `auto` or `always` identifying when to display the minutes field.
+  - : One of the strings `"auto"` or `"always"` identifying when to display the `minutes` field.
 - `seconds`
-  - : Is one of the String values `long`, `short`, `narrow`, `2-digit`, or `numeric` identifying the formatting style used for the seconds field.
+  - : One of the strings `"long"`, `"short"`, `"narrow"`, `"2-digit"`, or `"numeric"` identifying the formatting style used for the `seconds` field.
 - `secondsDisplay`
-  - : Is one of the String values `auto` or `always` identifying when to display the seconds field.
+  - : One of the strings `"auto"` or `"always"` identifying when to display the `seconds` field.
 - `milliseconds`
-  - : Is one of the String values `long`, `short`, `narrow`, or `numeric` identifying the formatting style used for the milliseconds field.
+  - : One of the strings `"long"`, `"short"`, `"narrow"`, or `"numeric"` identifying the formatting style used for the `milliseconds` field.
 - `millisecondsDisplay`
-  - : Is one of the String values `auto` or `always` identifying when to display the millisecondsDisplay field.
+  - : One of the strings `"auto"` or `"always"` identifying when to display the `millisecondsDisplay` field.
 - `microseconds`
-  - : Is one of the String values `long`, `short`, `narrow`, or `numeric` identifying the formatting style used for the microseconds field.
+  - : One of the strings `"long"`, `"short"`, `"narrow"`, or `"numeric"` identifying the formatting style used for the `microseconds` field.
 - `microsecondsDisplay`
-  - : Is one of the String values `auto` or `always` identifying when to display the microsecondsDisplay field.
+  - : One of the strings `"auto"` or `"always"` identifying when to display the `microsecondsDisplay` field.
 - `nanoseconds`
-  - : Is one of the String values `long`, `short`, `narrow`, or `numeric` identifying the formatting style used for the nanoseconds field.
+  - : One of the strings `"long"`, `"short"`, `"narrow"`, or `"numeric"` identifying the formatting style used for the `nanoseconds` field.
 - `nanosecondsDisplay`
-  - : Is one of the String values `auto` or `always` identifying when to display the nanosecondsDisplay field.
+  - : One of the strings `"auto"` or `"always"` identifying when to display the `nanosecondsDisplay` field.
 - `fractionalDigits`
-  - : Is a Number value, identifying the number of fractional digits to be used with numeric styles.
+  - : A number, identifying the number of fractional digits used with numeric styles.
 - `numberingSystem`
-  - : The value provided for this properties in the options argument, if present, or the value requested using the Unicode extension key `nu` or filled in as a default.
+  - : The value provided for this property in the options argument, if present, or the value requested using the Unicode extension key `nu` or filled in as a default.
 
 ## Examples
 

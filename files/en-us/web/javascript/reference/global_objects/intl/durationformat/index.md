@@ -1,14 +1,7 @@
 ---
 title: Intl.DurationFormat
 slug: Web/JavaScript/Reference/Global_Objects/Intl/DurationFormat
-tags:
-  - Class
-  - DurationFormat
-  - Internationalization
-  - Intl
-  - JavaScript
-  - Localization
-  - Reference
+page-type: javascript-class
 browser-compat: javascript.builtins.Intl.DurationFormat
 ---
 
