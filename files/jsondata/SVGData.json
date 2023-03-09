@@ -123,28 +123,6 @@
       ],
       "interfaces": ["SVGAnimateElement"]
     },
-    "animateColor": {
-      "categories": ["basicShapeElement", "graphicsElement", "shapeElement"],
-      "content": {
-        "description": "anyNumberOfElementsAnyOrder",
-        "elements": ["descriptiveElements"]
-      },
-      "attributes": [
-        "conditionalProcessingAttributes",
-        "coreAttributes",
-        "animationEventAttributes",
-        "xLinkAttributes",
-        "animationAttributeTargetAttributes",
-        "animationTimingAttributes",
-        "animationValueAttributes",
-        "animationAdditionAttributes",
-        "'externalResourcesRequired'",
-        "'by'",
-        "'from'",
-        "'to'"
-      ],
-      "interfaces": ["SVGAnimateColorElement"]
-    },
     "animateMotion": {
       "categories": ["animationElement"],
       "content": {
@@ -532,7 +510,7 @@
       "categories": ["filterPrimitiveElement"],
       "content": {
         "description": "anyNumberOfElementsAnyOrder",
-        "elements": ["&lt;animate&gt;", "&lt;animateColor&gt;", "&lt;set&gt;"]
+        "elements": ["&lt;animate&gt;", "&lt;set&gt;"]
       },
       "attributes": [
         "coreAttributes",
@@ -1534,7 +1512,7 @@
       "categories": ["gradientElement"],
       "content": {
         "description": "anyNumberOfElementsAnyOrder",
-        "elements": ["&lt;animate&gt;", "&lt;animateColor&gt;", "&lt;set&gt;"]
+        "elements": ["&lt;animate&gt;", "&lt;set&gt;"]
       },
       "attributes": [
         "coreAttributes",
@@ -1720,7 +1698,6 @@
           "&lt;a&gt;",
           "&lt;altGlyph&gt;",
           "&lt;animate&gt;",
-          "&lt;animateColor&gt;",
           "&lt;set&gt;",
           "&lt;tref&gt;",
           "&lt;tspan&gt;"
@@ -1754,12 +1731,7 @@
       "categories": ["textContentElement", "textContentChildElement"],
       "content": {
         "description": "anyNumberOfElementsAnyOrder",
-        "elements": [
-          "descriptiveElements",
-          "&lt;animate&gt;",
-          "&lt;animateColor&gt;",
-          "&lt;set&gt;"
-        ]
+        "elements": ["descriptiveElements", "&lt;animate&gt;", "&lt;set&gt;"]
       },
       "attributes": [
         "conditionalProcessingAttributes",
@@ -1783,7 +1755,6 @@
           "&lt;a&gt;",
           "&lt;altGlyph&gt;",
           "&lt;animate&gt;",
-          "&lt;animateColor&gt;",
           "&lt;set&gt;",
           "&lt;tref&gt;",
           "&lt;tspan&gt;"

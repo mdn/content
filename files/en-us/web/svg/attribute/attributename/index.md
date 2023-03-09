@@ -12,7 +12,6 @@ The **`attributeName`** attribute indicates the name of the CSS property or attr
 You can use this attribute with the following SVG elements:
 
 - {{SVGElement("animate")}}
-- {{SVGElement("animateColor")}}
 - {{SVGElement("animateTransform")}}
 - {{SVGElement("set")}}
 

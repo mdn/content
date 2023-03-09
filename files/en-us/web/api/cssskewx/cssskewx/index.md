@@ -2,12 +2,10 @@
 title: CSSSkewX()
 slug: Web/API/CSSSkewX/CSSSkewX
 page-type: web-api-constructor
-status:
-  - experimental
 browser-compat: api.CSSSkewX.CSSSkewX
 ---
 
-{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
+{{APIRef("CSS Typed OM")}}
 
 The **`CSSSkewX()`** constructor creates a new
 {{domxref("CSSSkewX")}} object which represents the

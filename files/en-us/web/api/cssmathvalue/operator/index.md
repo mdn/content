@@ -2,12 +2,10 @@
 title: CSSMathValue.operator
 slug: Web/API/CSSMathValue/operator
 page-type: web-api-instance-property
-status:
-  - experimental
 browser-compat: api.CSSMathValue.operator
 ---
 
-{{APIRef("CSS Typed Object Model API")}}{{SeeCompatTable}}
+{{APIRef("CSS Typed Object Model API")}}
 
 The **`CSSMathValue.operator`** read-only
 property of the {{domxref("CSSMathValue")}} interface indicates the operator that the

@@ -2,10 +2,12 @@
 title: FileSystemWritableFileStream.write()
 slug: Web/API/FileSystemWritableFileStream/write
 page-type: web-api-instance-method
+status:
+  - experimental
 browser-compat: api.FileSystemWritableFileStream.write
 ---
 
-{{securecontext_header}}{{APIRef("File System Access API")}}
+{{securecontext_header}}{{APIRef("File System Access API")}}{{SeeCompatTable}}
 
 The **`write()`** method of the {{domxref("FileSystemWritableFileStream")}} interface writes content into the file the method is called on, at the current file cursor offset.
 
