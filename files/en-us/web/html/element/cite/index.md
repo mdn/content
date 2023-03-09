@@ -135,4 +135,4 @@ The HTML above outputs:
 ## See also
 
 - The element {{HTMLElement("blockquote")}} for long quotations.
-- The element {{HTMLElement("q")}} for inline quotations and the [`cite`](/en-US/docs/Web/HTML/Element/q#attr-cite) attribute.
+- The element {{HTMLElement("q")}} for inline quotations and the [`cite`](/en-US/docs/Web/HTML/Element/q#cite) attribute.

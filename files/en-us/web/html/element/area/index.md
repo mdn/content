@@ -23,7 +23,7 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
     This attribute is required only if the {{htmlattrxref("href", "area")}} attribute is used.
 - `coords`
 
-  - : The `coords` attribute details the coordinates of the [`shape`](#attr-shape) attribute in size, shape, and placement of an `<area>`.
+  - : The `coords` attribute details the coordinates of the [`shape`](#shape) attribute in size, shape, and placement of an `<area>`.
     This attribute must not be used if `shape` is set to `default`.
 
     - `rect`: the value is `x1,y1,x2,y2`.

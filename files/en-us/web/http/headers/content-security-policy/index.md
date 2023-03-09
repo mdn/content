@@ -222,7 +222,7 @@ For detailed reference see [CSP Source Values](/en-US/docs/Web/HTTP/Headers/Cont
 ### Other values
 
 - `'nonce-*'`
-  - : A cryptographic nonce (only used once) to allow scripts. The server must generate a unique nonce value each time it transmits a policy. It is critical to provide a nonce that cannot be guessed as bypassing a resource's policy is otherwise trivial. This is used in conjunction with the [script tag nonce attribute](/en-US/docs/Web/HTML/Element/script#attr-nonce). For example, `nonce-DhcnhD3khTMePgXwdayK9BsMqXjhguVV`.
+  - : A cryptographic nonce (only used once) to allow scripts. The server must generate a unique nonce value each time it transmits a policy. It is critical to provide a nonce that cannot be guessed as bypassing a resource's policy is otherwise trivial. This is used in conjunction with the [script tag nonce attribute](/en-US/docs/Web/HTML/Element/script#nonce). For example, `nonce-DhcnhD3khTMePgXwdayK9BsMqXjhguVV`.
 - `'sha*-*'`
   - : sha256, sha384, or sha512. Followed by a dash and then the sha\* value. For example, `sha256-jzgBGA4UWFFmpOBq0JpdsySukE1FrEN5bUpoK8Z29fY=`.
 

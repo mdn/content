@@ -7,8 +7,8 @@ browser-compat: svg.attributes.style
 
 The SVG styling attributes are all the attributes that can be specified on any SVG element to apply CSS styling effects.
 
-- [`class`](#attr-class)
-- [`style`](#attr-style)
+- [`class`](#class)
+- [`style`](#style)
 
 ## Attributes
 
