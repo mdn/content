@@ -532,10 +532,10 @@ To maintain consistency across MDN Web Docs, keep the following guidelines in mi
 - Use sentence casing in the link text even if it is different from the linked page title or section title. It might be that the case used in the page or section title is incorrect. For example, the link text to the [WAI-ARIA Roles](/en-US/docs/Web/Accessibility/ARIA/Roles) page will be:
   - [WAI-ARIA roles](/en-US/docs/Web/Accessibility/ARIA/Roles)
 - For external links as well, use sentence casing even if the casing on the target article page is different. This is to ensure consistency across MDN Web Docs. Exceptions include names of books.
-- Follow up the feature name with the appropriate word such as property, function, expression. For example, the reference to the {{cssxref("revert-layer")}} page will be:
+- Follow up the feature name with the appropriate word such as property, function, expression. For example, the cross-reference to the {{cssxref("revert-layer")}} page will be:
   - {{cssxref("revert-layer")}} keyword
 - Use the appropriate macro to link to a page as defined in the [Linking to pages in references](/en-US/docs/MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros#linking_to_pages_in_references) section. The use of macro will add code formatting to the keyword in the link text, as shown in the previous example.
-- No article ("A", "An", "The") is needed at the beginning of the link text.
+- No article ("A", "An", "The") is needed at the beginning of the link list item.
   - **Incorrect**: The {{cssxref("revert-layer")}} keyword
 - No punctuation is required after a link text because it will invariably be a phrase.
 
@@ -550,7 +550,7 @@ To maintain consistency across MDN Web Docs, keep the following guidelines in mi
 
 #### Order of links
 
-- For cross-referencing within MDN, list the links to reference pages first and then the links to the related conceptual (guide, tutorial) pages.
+- For cross-referencing within MDN, list the links to reference pages first and then the links to the related guide, and tutorial pages.
 - If the list is a mix of internal and external links, list the internal links first and then the external ones.
 - Within each group of internal and external links, follow alphabetical or simple-to-advanced order, whatever makes more sense for the context.
 
