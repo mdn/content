@@ -144,10 +144,10 @@ new Intl.DurationFormat(locales, options)
 
     - `microseconds`
       - : The style to be used for formatting microseconds.
-        - "`long`"
-        - "`short`"
-        - "`narrow`"
-        - "`numeric`"
+        - `"long"`
+        - `"short"`
+        - `"narrow"`
+        - `"numeric"`
 
     - `microsecondsDisplay`
       - : Whether to always display microseconds, or only if nonzero.
