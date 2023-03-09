@@ -7,17 +7,27 @@ spec-urls: https://drafts.csswg.org/css-color/
 
 {{CSSRef}}
 
-**CSS Color** is a CSS module that deals with colors, color types, color blending, opacity, and how you can apply these colors and effects to HTML content.
+The **CSS color** module defines colors, color types, color blending, opacity, and how you can apply these colors and effects to HTML content.
 
 Not all CSS properties that take a {{cssxref("&lt;color&gt;")}} as a value are part of this module, but they do depend upon it.
+
+### Colors in action
+
+```html
+<label for="color"
+  >Use the color picker to pick a color: <input type="color" id="color"
+/></label>
+```
 
 ## Reference
 
 ### Properties
 
 - {{cssxref("color")}}
-- {{cssxref("print-color-adjust")}}
 - {{cssxref("opacity")}}
+- {{cssxref("print-color-adjust")}}
+
+### Functions
 
 ### Data types
 
