@@ -89,7 +89,7 @@ Elements in HTML have **attributes**; these are additional values that configure
     </tr>
     <tr>
       <td>
-        <code><a href="/en-US/docs/Web/HTML/Element/script#attr-async">async</a></code>
+        <code><a href="/en-US/docs/Web/HTML/Element/script#async">async</a></code>
       </td>
       <td>{{ HTMLElement("script") }}</td>
       <td>Executes the script asynchronously.</td>
@@ -437,7 +437,7 @@ Elements in HTML have **attributes**; these are additional values that configure
     </tr>
     <tr>
       <td>
-        <code><a href="/en-US/docs/Web/HTML/Element/script#attr-defer">defer</a></code>
+        <code><a href="/en-US/docs/Web/HTML/Element/script#defer">defer</a></code>
       </td>
       <td>{{ HTMLElement("script") }}</td>
       <td>
@@ -824,7 +824,7 @@ Elements in HTML have **attributes**; these are additional values that configure
     </tr>
     <tr>
       <td>
-        <code><a href="/en-US/docs/Web/HTML/Element/script#attr-language">language</a></code>
+        <code><a href="/en-US/docs/Web/HTML/Element/script#language">language</a></code>
         {{deprecated_inline}}
       </td>
       <td>{{ HTMLElement("script") }}</td>
@@ -1192,7 +1192,7 @@ Elements in HTML have **attributes**; these are additional values that configure
     </tr>
     <tr>
       <td>
-        <code><a href="/en-US/docs/Web/HTML/Element/style#attr-scoped">scoped</a></code>
+        <code><a href="/en-US/docs/Web/HTML/Element/style#scoped">scoped</a></code>
         {{non-standard_inline}} {{deprecated_inline}}
       </td>
       <td>{{ HTMLElement("style") }}</td>
