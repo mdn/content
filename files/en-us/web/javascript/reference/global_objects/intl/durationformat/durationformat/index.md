@@ -146,8 +146,8 @@ new Intl.DurationFormat(locales, options)
 
     - `millisecondsDisplay`
       - : Whether to always display milliseconds, or only if nonzero.
-        - "`always`"
-        - "`auto`"
+        - `"always"`
+        - `"auto"`
 
     - `microseconds`
       - : The style to be used for formatting microseconds.
