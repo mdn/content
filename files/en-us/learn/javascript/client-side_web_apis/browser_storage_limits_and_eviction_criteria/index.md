@@ -13,9 +13,15 @@ The amount of data browsers allow websites to store and the mechanisms they use 
 
 This article describes the web technologies that can be used to store data, the quotas that browsers have in place to limit websites from storing too much data, and the mechanisms they use to delete data when needed.
 
-The term _{{Glossary("origin")}}_ is used in many places throughout this article. An origin is defined by a scheme (such as HTTPS), a hostname, and a port. For example, `https://example.com` and `https://example.com/app/index.html` belong to the same origin because they have the same scheme (`https`), hostname (`example.com`), and default port.
+## How browsers separate data from different websites?
 
-This term is important in this article because browsers manage stored data _per origin_. The quotas and eviction criteria described in this article apply to an entire origin, even if this origin is used to run several websites, such as `https://example.com/site1/` and `https://example.com/site2/`.
+Browsers store the data from websites in different places to reduce risks of user being tracked across the web. In most cases, browsers manage stored data _per origin_.
+
+The term _{{Glossary("origin")}}_ is therefore important to understand this article. An origin is defined by a scheme (such as HTTPS), a hostname, and a port. For example, `https://example.com` and `https://example.com/app/index.html` belong to the same origin because they have the same scheme (`https`), hostname (`example.com`), and default port.
+
+The quotas and eviction criteria described in this article apply to an entire origin, even if this origin is used to run several websites, such as `https://example.com/site1/` and `https://example.com/site2/`.
+
+In some cases, however, browsers can decide to further separate the data stored by an origin in different partitions. For example, Chrome uses [Storage Partitioning](https://developer.chrome.com/en/docs/privacy-sandbox/storage-partitioning/) in cases where an origin is loaded within {{HTMLElement('iframe')}} elements in different third-party origins. For simplicity reasons, this article assumes that data is always stored per origin.
 
 ## What technologies store data in the browser?
 
@@ -134,7 +140,7 @@ When a device is running low on storage space, also known as _storage pressure_,
 
 Browsers use a Least Recently Used (LRU) policy to deal with this scenario. The data from the least recently used origin is deleted. If storage pressure continues, the browser moves on to the second least recently used origin, and so on, until the problem is resolved.
 
-This eviction mechanism only applies to origins that are not persistent and skips over origins that have requested the user for persistent data by using {{domxref("StorageManager.persist()")}}).
+This eviction mechanism only applies to origins that are not persistent and skips over origins that have been granted data persistence by using {{domxref("StorageManager.persist()")}}.
 
 ### Browser maximum storage exceeded eviction
 
