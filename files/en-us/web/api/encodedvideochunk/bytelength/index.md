@@ -2,12 +2,10 @@
 title: EncodedVideoChunk.byteLength
 slug: Web/API/EncodedVideoChunk/byteLength
 page-type: web-api-instance-property
-status:
-  - experimental
 browser-compat: api.EncodedVideoChunk.byteLength
 ---
 
-{{APIRef("WebCodecs API")}}{{SeeCompatTable}}
+{{APIRef("WebCodecs API")}}
 
 The **`byteLength`** read-only property of the {{domxref("EncodedVideoChunk")}} interface returns the length in bytes of the encoded video data.
 

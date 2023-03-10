@@ -1,16 +1,6 @@
 ---
 title: declarativeNetRequest.DYNAMIC_RULESET_ID
 slug: Mozilla/Add-ons/WebExtensions/API/declarativeNetRequest/DYNAMIC_RULESET_ID
-tags:
-  - DYNAMIC_RULESET_ID
-  - API
-  - Add-ons
-  - Extensions
-  - Reference
-  - WebExtensions
-  - Property
-  - declarativeNetRequest
-  - DYNAMIC_RULESET_ID
 browser-compat: webextensions.api.declarativeNetRequest.DYNAMIC_RULESET_ID
 ---
 

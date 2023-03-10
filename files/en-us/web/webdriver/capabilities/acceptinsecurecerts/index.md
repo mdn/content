@@ -1,11 +1,6 @@
 ---
 title: acceptInsecureCerts
 slug: Web/WebDriver/Capabilities/acceptInsecureCerts
-tags:
-  - Reference
-  - WebDriver
-  - capabilities
-  - acceptInsecureCerts
 ---
 
 {{QuickLinksWithSubpages("/en-US/docs/Web/WebDriver/Capabilities")}}

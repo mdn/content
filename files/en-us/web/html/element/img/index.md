@@ -120,7 +120,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
   - : The intrinsic height of the image, in pixels. Must be an integer without a unit.
 
-    > **Note:** Including `height` and [`width`](#attr-width) enables the aspect ratio of the image to be calculated by the browser prior to the image being loaded. This aspect ratio is used to reserve the space needed to display the image, reducing or even preventing a layout shift when the image is downloaded and painted to the screen. Reducing layout shift is a major component of good user experience and web performance.
+    > **Note:** Including `height` and [`width`](#width) enables the aspect ratio of the image to be calculated by the browser prior to the image being loaded. This aspect ratio is used to reserve the space needed to display the image, reducing or even preventing a layout shift when the image is downloaded and painted to the screen. Reducing layout shift is a major component of good user experience and web performance.
 
 - `ismap`
 

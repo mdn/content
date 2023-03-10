@@ -2,16 +2,6 @@
 title: Internationalization
 slug: Mozilla/Add-ons/WebExtensions/Internationalization
 page-type: guide
-tags:
-  - Article
-  - Guide
-  - Internationalization
-  - Localization
-  - WebExtensions
-  - i18n
-  - messages.json
-  - placeholders
-  - predefined messages
 ---
 
 {{AddonSidebar}}

@@ -87,7 +87,7 @@ _No change._
 
 ## Network & Security
 
-- HTTP/2 has been implemented and activated, with AEAD ciphers only ([Firefox bug 1027720](https://bugzil.la/1027720)) and ({{bug('1047594')}}).
+- HTTP/2 has been implemented and activated, with AEAD ciphers only ([Firefox bug 1027720](https://bugzil.la/1027720) and [Firefox bug 1047594](https://bugzil.la/1047594)).
 - The HTTP/2 `alt-svc` header is now supported ([Firefox bug 1003448](https://bugzil.la/1003448)).
 - The Public Key Pinning Extension for HTTP (HPKP) has been implemented ([Firefox bug 787133](https://bugzil.la/787133)).
 - The [CSP](/en-US/docs/Web/HTTP/CSP) 1.1 `base-uri` [directive](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy) is now supported ([Firefox bug 1045897](https://bugzil.la/1045897)).

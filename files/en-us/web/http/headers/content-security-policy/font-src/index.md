@@ -1,15 +1,6 @@
 ---
 title: "CSP: font-src"
 slug: Web/HTTP/Headers/Content-Security-Policy/font-src
-tags:
-  - CSP
-  - Content-Security-Policy
-  - Directive
-  - HTTP
-  - Reference
-  - Security
-  - font
-  - source
 browser-compat: http.headers.Content-Security-Policy.font-src
 ---
 

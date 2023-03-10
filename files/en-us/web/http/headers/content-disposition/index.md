@@ -1,12 +1,6 @@
 ---
 title: Content-Disposition
 slug: Web/HTTP/Headers/Content-Disposition
-tags:
-  - HTTP
-  - HTTP Header
-  - Request header
-  - Response header
-  - Reference
 browser-compat: http.headers.Content-Disposition
 ---
 

@@ -2,9 +2,6 @@
 title: visibility
 slug: Web/SVG/Attribute/visibility
 page-type: svg-attribute
-tags:
-  - SVG
-  - SVG Attribute
 browser-compat: svg.attributes.presentation.visibility
 ---
 

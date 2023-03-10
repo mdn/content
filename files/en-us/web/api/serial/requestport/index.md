@@ -49,13 +49,16 @@ A {{jsxref("Promise")}} that resolves with an instance of {{domxref("SerialPort"
 The following example shows a filter being passed to `requestPort()` with a USB vendor ID in order to limit the set of devices shown to the user to only USB devices built by a particular manufacturer. If this filter was omitted the user would be able to select any available port.
 
 ```js
-button.addEventListener('click', () => {
-  const usbVendorId = 0xABCD;
-  navigator.serial.requestPort({ filters: [{ usbVendorId }]}).then((port) => {
-    // Connect to `port` or add it to the list of available ports.
-  }).catch((e) => {
-    // The user didn't select a port.
-  });
+button.addEventListener("click", () => {
+  const usbVendorId = 0xabcd;
+  navigator.serial
+    .requestPort({ filters: [{ usbVendorId }] })
+    .then((port) => {
+      // Connect to `port` or add it to the list of available ports.
+    })
+    .catch((e) => {
+      // The user didn't select a port.
+    });
 });
 ```
 

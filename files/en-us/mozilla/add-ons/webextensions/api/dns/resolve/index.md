@@ -2,15 +2,6 @@
 title: dns.resolve()
 slug: Mozilla/Add-ons/WebExtensions/API/dns/resolve
 page-type: webextension-api-function
-tags:
-  - API
-  - Add-ons
-  - DNS
-  - Extensions
-  - Method
-  - Reference
-  - WebExtensions
-  - resolve
 browser-compat: webextensions.api.dns.resolve
 ---
 

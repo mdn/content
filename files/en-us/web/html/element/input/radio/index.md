@@ -299,8 +299,8 @@ Notice that when clicking on a radio button, there's a nice, smooth fade out/in 
     <tr>
       <td><strong>Supported common attributes</strong></td>
       <td>
-        <code><a href="#attr-checked">checked</a></code
-        >, <code><a href="#attr-value">value</a></code> and
+        <code><a href="#checked">checked</a></code
+        >, <code><a href="#value">value</a></code> and
         <code
           ><a href="/en-US/docs/Web/HTML/Attributes/required">required</a></code
         >

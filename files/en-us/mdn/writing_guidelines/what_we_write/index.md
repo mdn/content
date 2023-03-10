@@ -22,7 +22,7 @@ Outbound links to commercial sites that are relevant to the topic from which the
 
 Articles on MDN Web Docs must maintain a [neutral point-of-view](https://en.wikipedia.org/wiki/Wikipedia:Neutral_point_of_view), reporting on browser variations without editorial bias. Derogatory comments about any browser or user agent is not acceptable.
 
-### Open web topics
+### Standardization
 
 Web technologies to be documented on MDN Web Docs should be on a standards track and must be implemented by at least one rendering engine. Variations in browser support are documented in the [browser compatibility](/en-US/docs/MDN/Writing_guidelines/Page_structures/Compatibility_tables) section of an article.
 

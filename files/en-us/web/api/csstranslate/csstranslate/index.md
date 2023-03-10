@@ -2,12 +2,10 @@
 title: CSSTranslate()
 slug: Web/API/CSSTranslate/CSSTranslate
 page-type: web-api-constructor
-status:
-  - experimental
 browser-compat: api.CSSTranslate.CSSTranslate
 ---
 
-{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
+{{APIRef("CSS Typed OM")}}
 
 The **`CSSTranslate()`** constructor creates a
 new {{domxref("CSSTranslate")}} object representing the [translate()](/en-US/docs/Web/CSS/transform-function/translate) value of the

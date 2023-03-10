@@ -52,4 +52,4 @@ For details on the usage of this attribute, see the page for the [`inputmode`](/
 
 ## See also
 
-- {{htmlattrxref("inputmode")}} attribute
+- [inputmode](/en-US/docs/Web/HTML/Global_attributes#inputmode) attribute

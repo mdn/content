@@ -1,12 +1,6 @@
 ---
 title: Date
 slug: Web/HTTP/Headers/Date
-tags:
-  - HTTP
-  - HTTP Header
-  - Request header
-  - Response header
-  - Reference
 browser-compat: http.headers.Date
 ---
 

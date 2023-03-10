@@ -2,12 +2,10 @@
 title: CSSNumericValue.sub()
 slug: Web/API/CSSNumericValue/sub
 page-type: web-api-instance-method
-status:
-  - experimental
 browser-compat: api.CSSNumericValue.sub
 ---
 
-{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
+{{APIRef("CSS Typed OM")}}
 
 The **`sub()`** method of the
 {{domxref("CSSNumericValue")}} interface subtracts a supplied number from the

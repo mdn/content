@@ -1,10 +1,6 @@
 ---
 title: OPTIONS
 slug: Web/HTTP/Methods/OPTIONS
-tags:
-  - HTTP
-  - Reference
-  - Request method
 browser-compat: http.methods.OPTIONS
 ---
 

@@ -23,7 +23,9 @@ A string.
 ## Examples
 
 ```js
-const url = new URL('https://developer.mozilla.org/en-US/docs/Web/API/URL/href#Examples');
+const url = new URL(
+  "https://developer.mozilla.org/en-US/docs/Web/API/URL/href#Examples"
+);
 console.log(url.hash); // Logs: '#Examples'
 ```
 

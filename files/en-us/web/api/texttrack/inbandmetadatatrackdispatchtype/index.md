@@ -22,7 +22,7 @@ A string containing the `inBandMetadataTrackDispatchType`, or an empty string.
 In the following example the value of `inBandMetadataTrackDispatchType` is printed to the console.
 
 ```js
-let video = document.querySelector('video');
+let video = document.querySelector("video");
 let track = video.addTextTrack("captions", "Captions", "en");
 track.mode = "showing";
 console.log(track.inBandMetadataTrackDispatchType);

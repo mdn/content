@@ -2,16 +2,6 @@
 title: extension.onRequest
 slug: Mozilla/Add-ons/WebExtensions/API/extension/onRequest
 page-type: webextension-api-event
-tags:
-  - API
-  - Add-ons
-  - Event
-  - Extension
-  - Extensions
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - onRequest
 browser-compat: webextensions.api.extension.onRequest
 ---
 

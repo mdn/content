@@ -26,7 +26,7 @@ None.
 
 ## Examples
 
-The example below shows how to get an instance of {{domxref("BackgroundFetchManager")}} from a {{domxref("ServiceWorkerRegistration")}} object and calls `fetch()` to download a video in the background.
+The example below shows how to get an instance of {{domxref("BackgroundFetchManager")}} from a {{domxref("ServiceWorkerRegistration")}} object and calls `fetch()` to download an audio file in the background.
 
 ```js
 navigator.serviceWorker.ready.then(async (swReg) => {

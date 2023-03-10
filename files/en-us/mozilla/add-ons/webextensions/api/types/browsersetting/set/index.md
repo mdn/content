@@ -2,15 +2,6 @@
 title: set()
 slug: Mozilla/Add-ons/WebExtensions/API/types/BrowserSetting/set
 page-type: webextension-api-function
-tags:
-  - API
-  - Add-ons
-  - BrowserSetting
-  - Extensions
-  - Privacy
-  - Reference
-  - WebExtensions
-  - set
 ---
 
 {{AddonSidebar()}}
