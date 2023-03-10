@@ -21,7 +21,7 @@ browser-compat: html.manifest.file_handlers
   </tbody>
 </table>
 
-The `file_handlers` member specifies an array of objects that represent types of files that an installed [Progressive web app (PWA)](/en-US/docs/Web/Progressive_web_apps) should handle.
+The `file_handlers` member specifies an array of objects that represent types of files that an installed [progressive web app (PWA)](/en-US/docs/Web/Progressive_web_apps) can handle.
 
 The `file_handlers` member is used by the browser when the PWA is installed to register the application in the operating system's file association registry.
 
