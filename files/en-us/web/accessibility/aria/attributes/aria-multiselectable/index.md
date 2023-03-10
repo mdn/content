@@ -158,7 +158,7 @@ Inherited into roles:
 - HTML {{HTMLElement('select')}} element
 - HTML {{HTMLElement('option')}} element
 - HTML {{HTMLElement('input')}} element
-- {{htmlattrxref("multiple")}} attribute
+- [multiple](/en-US/docs/Web/HTML/Attributes/multiple) attribute
 - [`aria-selected`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-selected)
 
 <section id="Quick_links">

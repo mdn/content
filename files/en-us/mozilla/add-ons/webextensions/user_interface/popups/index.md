@@ -2,11 +2,6 @@
 title: Popups
 slug: Mozilla/Add-ons/WebExtensions/user_interface/Popups
 page-type: guide
-tags:
-  - UI
-  - User Interface
-  - WebExtensions
-  - popup
 ---
 
 {{AddonSidebar}}

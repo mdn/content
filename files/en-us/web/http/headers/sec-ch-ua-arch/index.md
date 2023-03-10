@@ -1,14 +1,8 @@
 ---
 title: Sec-CH-UA-Arch
 slug: Web/HTTP/Headers/Sec-CH-UA-Arch
-tags:
-  - Sec-CH-UA-Arch
-  - Client hint
-  - HTTP
-  - HTTP Header
-  - Reference
-  - Request header
-  - Experimental
+status:
+  - experimental
 browser-compat: http.headers.Sec-CH-UA-Arch
 ---
 

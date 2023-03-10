@@ -1,10 +1,6 @@
 ---
 title: "Permissions-Policy: web-share"
 slug: Web/HTTP/Headers/Permissions-Policy/web-share
-tags:
-  - Permissions-Policy
-  - HTTP
-  - Web Share
 browser-compat: http.headers.Permissions-Policy.web-share
 ---
 

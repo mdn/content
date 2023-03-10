@@ -189,6 +189,6 @@ The import map must be a valid JSON object that can define at most two optional 
 ## See also
 
 - [JavaScript modules > Importing modules using import maps](/en-US/docs/Web/JavaScript/Guide/Modules#importing_modules_using_import_maps)
-- [The `type` attribute of HTML `<script>` elements](/en-US/docs/Web/HTML/Element/script#attr-type)
+- [The `type` attribute of HTML `<script>` elements](/en-US/docs/Web/HTML/Element/script#type)
 - [`import` statement](/en-US/docs/Web/JavaScript/Reference/Statements/import)
 - [`import()` operator](/en-US/docs/Web/JavaScript/Reference/Operators/import)

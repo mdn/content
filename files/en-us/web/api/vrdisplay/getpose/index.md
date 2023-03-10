@@ -36,19 +36,18 @@ Once we have a reference to a {{domxref("VRDisplay")}} object, we can retrieve t
 
 ```js
 if (navigator.getVRDisplays) {
-  console.log('WebVR 1.1 supported');
+  console.log("WebVR 1.1 supported");
   // Then get the displays attached to the computer
   navigator.getVRDisplays().then((displays) => {
     // If a display is available, use it to present the scene
     if (displays.length > 0) {
       vrDisplay = displays[0];
-      console.log('Display found');
+      console.log("Display found");
 
       // Return the current VRPose object for the display
       const pose = vrDisplay.getPose();
 
       // …
-
     }
   });
 }

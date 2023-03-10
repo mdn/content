@@ -22,7 +22,7 @@ The **`KeyframeEffect`** interface of the [Web Animations API](/en-US/docs/Web/A
   - : Gets and sets the element, or originating element of the pseudo-element, being animated by this object. This may be `null` for animations that do not target a specific element or pseudo-element.
 - {{domxref("KeyframeEffect.pseudoElement")}}
   - : Gets and sets the selector of the pseudo-element being animated by this object. This may be `null` for animations that do not target a pseudo-element.
-- {{domxref("KeyframeEffect.iterationComposite")}} {{Experimental_Inline}}
+- {{domxref("KeyframeEffect.iterationComposite")}}
   - : Gets and sets the iteration composite operation for resolving the property value changes of this keyframe effect.
 - {{domxref("KeyframeEffect.composite")}}
   - : Gets and sets the composite operation property for resolving the property value changes between this and other keyframe effects.

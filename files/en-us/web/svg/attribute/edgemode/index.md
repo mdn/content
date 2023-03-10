@@ -2,12 +2,6 @@
 title: edgeMode
 slug: Web/SVG/Attribute/edgeMode
 page-type: svg-attribute
-tags:
-  - Filters
-  - NeedsCompatTable
-  - NeedsExample
-  - SVG
-  - SVG Attribute
 spec-urls: https://drafts.fxtf.org/filter-effects/#element-attrdef-feconvolvematrix-edgemode
 ---
 

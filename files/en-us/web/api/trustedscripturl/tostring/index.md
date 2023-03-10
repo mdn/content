@@ -28,7 +28,9 @@ A string containing the sanitized URL
 The constant `sanitized` is an object created via a Trusted Types policy. The `toString()` method returns a string to safely use to load a third party script.
 
 ```js
-const sanitized = scriptPolicy.createScriptURL("https://example.com/my-script.js");
+const sanitized = scriptPolicy.createScriptURL(
+  "https://example.com/my-script.js"
+);
 console.log(sanitized.toString());
 ```
 

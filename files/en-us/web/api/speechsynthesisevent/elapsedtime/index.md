@@ -20,8 +20,10 @@ A float containing the elapsed time, in seconds.
 
 ```js
 utterThis.onboundary = (event) => {
-  console.log(`${event.name} boundary reached after ${event.elapsedTime} seconds.`);
-}
+  console.log(
+    `${event.name} boundary reached after ${event.elapsedTime} seconds.`
+  );
+};
 ```
 
 ## Specifications

@@ -1,16 +1,6 @@
 ---
 title: declarativeNetRequest.MAX_NUMBER_OF_ENABLED_STATIC_RULESETS
 slug: Mozilla/Add-ons/WebExtensions/API/declarativeNetRequest/MAX_NUMBER_OF_ENABLED_STATIC_RULESETS
-tags:
-  - MAX_NUMBER_OF_ENABLED_STATIC_RULESETS
-  - API
-  - Add-ons
-  - Extensions
-  - Reference
-  - WebExtensions
-  - Property
-  - declarativeNetRequest
-  - MAX_NUMBER_OF_ENABLED_STATIC_RULESETS
 browser-compat: webextensions.api.declarativeNetRequest.MAX_NUMBER_OF_ENABLED_STATIC_RULESETS
 ---
 

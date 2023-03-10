@@ -2,11 +2,6 @@
 title: <feMerge>
 slug: Web/SVG/Element/feMerge
 page-type: svg-element
-tags:
-  - Element
-  - Reference
-  - SVG
-  - SVG Filter
 browser-compat: svg.elements.feMerge
 ---
 

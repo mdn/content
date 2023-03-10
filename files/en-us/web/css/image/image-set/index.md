@@ -15,10 +15,29 @@ Resolution and bandwidth differ by device and network access. The `image-set()` 
 
 ## Syntax
 
-```css
-image-set() = image-set( <image-set-option># )
-where <image-set-option> = [ <image> | <string> ] <resolution> and
-      <string> is an <url>
+```css-nolint
+/* Select image based on resolution */
+image-set(
+  "image1.jpg" 1x,
+  "image2.jpg" 2x
+);
+
+image-set(
+  url("image1.jpg") 1x,
+  url("image2.jpg") 2x
+);
+
+/* Select gradient based on resolution */
+image-set(
+  linear-gradient(blue, white) 1x,
+  linear-gradient(blue, green) 2x
+);
+
+/* Select image based on supported formats */
+image-set(
+  url("image1.avif") type("image/avif"),
+  url("image2.jpg") type("image/jpeg")
+);
 ```
 
 ### Values
@@ -31,6 +50,10 @@ where <image-set-option> = [ <image> | <string> ] <resolution> and
   - : [`<resolution>`](/en-US/docs/Web/CSS/resolution) units include `x` or `dppx`, for dots per pixel unit, `dpi`, for dots per inch, and `dpcm` for dots per centimeter. Every image within an `image-set()` must have a unique resolution.
 - `type(<string>)` {{optional_inline}}
   - : A valid MIME type string, for example "image/jpeg".
+
+### Formal syntax
+
+{{csssyntax}}
 
 ## Examples
 

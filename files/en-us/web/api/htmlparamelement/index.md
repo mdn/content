@@ -24,7 +24,7 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 - {{domxref("HTMLParamElement.type")}} {{Deprecated_Inline}}
   - : A string containing the type of the parameter when `valueType` has the `"ref"` value. It reflects the {{htmlattrxref("type", "param")}} attribute.
 - {{domxref("HTMLParamElement.valueType")}} {{Deprecated_Inline}}
-  - : A string containing the type of the `value`. It reflects the [valuetype](/en-US/docs/Web/HTML/Element/param#attr-valuetype) attribute and has one of the values: `"data"`, `"ref"`, or `"object"`.
+  - : A string containing the type of the `value`. It reflects the [valuetype](/en-US/docs/Web/HTML/Element/param#valuetype) attribute and has one of the values: `"data"`, `"ref"`, or `"object"`.
 
 ## Instance methods
 
