@@ -50,7 +50,7 @@ Each file handler object contains the following values:
     <tr>
       <td><code>accept</code></td>
       <td>
-        A required, non-empty, array of objects that map MIME types to file extensions that the PWA handles. For example: <code>{ "audio/wav": [".wav"] }</code> defines that the PWA should handle files that have the <code>audio/wave</code> MIME type and a <code>.wav</code> file extension.
+        A required, non-empty, array of objects that map MIME types to arrays of file extensions that the PWA can handle. For example: <code>{ "audio/wav": [".wav"] }</code> defines that the PWA can handle files that have the <code>audio/wave</code> MIME type and a <code>.wav</code> file extension.
       </td>
     </tr>
   </tbody>
