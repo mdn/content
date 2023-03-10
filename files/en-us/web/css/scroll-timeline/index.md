@@ -95,7 +95,7 @@ The height of the container is set to `300px` and the container is also set to c
 }
 ```
 
-The CSS below defines a square that rotates according to the timeline provided by the `animation-timeline` property, which is set to the `squareTimeline` timeline named above.
+The CSS below defines a square that rotates according to the timeline provided by the `animation-timeline` property, which is set to the `squareTimeline` timeline named above. The position is set as `absolute` so that the element rotates in place.
 
 ```css
 #square {
