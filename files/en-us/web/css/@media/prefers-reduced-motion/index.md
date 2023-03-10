@@ -117,7 +117,7 @@ This example has a scaling animation by default. If Reduce Motion or Remove Anim
 
 ## Browser compatibility
 
-{{Compat}}Tcss
+{{Compat}}
 
 ## See also
 
