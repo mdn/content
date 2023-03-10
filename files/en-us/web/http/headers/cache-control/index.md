@@ -13,7 +13,7 @@ The **`Cache-Control`** HTTP header field holds _directives_ (instructions) — 
     <tr>
       <th scope="row">Header type</th>
       <td>
-        {{Glossary("Request header")}},
+        {{Glossary("Request header")}},g
         {{Glossary("Response header")}}
       </td>
     </tr>
