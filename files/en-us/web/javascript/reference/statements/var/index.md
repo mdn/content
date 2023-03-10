@@ -50,7 +50,6 @@ in strict mode, and the variable will not lose its value, unless another assignm
 performed.
 
 ```js
-"use strict";
 function foo() {
   var x = 1;
   function bar() {
