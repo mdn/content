@@ -41,7 +41,7 @@ function startCapture(displayMediaOptions) {
   return navigator.mediaDevices
     .getDisplayMedia(displayMediaOptions)
     .catch((err) => {
-      console.error(`Error:${err}`);
+      console.error(err);
       return null;
     });
 }
@@ -101,18 +101,18 @@ This allows the user total freedom to select whatever they want, within the limi
 ```js
 const gdmOptions = {
   video: {
-    displaySurface: "window"
+    displaySurface: "window",
   },
   audio: {
     echoCancellation: true,
     noiseSuppression: true,
     sampleRate: 44100,
-    suppressLocalAudioPlayback: true
+    suppressLocalAudioPlayback: true,
   },
   surfaceSwitching: "include",
   selfBrowserSurface: "exclude",
-  systemAudio: "exclude"
-}
+  systemAudio: "exclude",
+};
 ```
 
 In this example the display surface captured is to be the whole window. The audio track should ideally have noise suppression and echo cancellation features enabled, as well as an ideal audio sample rate of 44.1kHz, and suppression of local audio playback.
@@ -143,7 +143,7 @@ Before streaming of captured screen contents can begin, the {{Glossary("user age
 
 ## Examples
 
-### Simple screen capture
+### Streaming screen capture
 
 In this example, the contents of the captured screen area are streamed into a {{HTMLElement("video")}} element on the same page.
 
@@ -194,17 +194,15 @@ stopElem.addEventListener(
 
 ##### Logging content
 
-To make logging of errors and other issues easy, this example overrides certain {{domxref("console")}} methods to output their messages to the {{HTMLElement("pre")}} block whose ID is `log`.
+This example overrides certain {{domxref("console")}} methods to output their messages to the {{HTMLElement("pre")}} block whose ID is `log`.
 
 ```js
-const logger = logElem.innerHTML;
-console.log = (msg) => (logger += `${msg}<br>`);
-console.error = (msg) => (logger += `<span class="error">${msg}</span><br>`);
-console.warn = (msg) => (logger += `<span class="warn">${msg}<span><br>`);
-console.info = (msg) => (logger += `<span class="info">${msg}</span><br>`);
+console.log = (msg) => (logElem.textContent = `${logElem.textContent}\n${msg}`);
+console.error = (msg) =>
+  (logElem.textContent = `${logElem.textContent}\nError: ${msg}`);
 ```
 
-This allows us to use the familiar {{domxref("console.log()")}}, {{domxref("console.error()")}}, and so on to log information to the log box in the document.
+This allows us to use {{domxref("console.log()")}} and {{domxref("console.error()")}} to log information to the log box in the document.
 
 ##### Starting display capture
 
@@ -220,7 +218,7 @@ async function startCapture() {
     );
     dumpOptionsInfo();
   } catch (err) {
-    console.error(`Error: ${err}`);
+    console.error(err);
   }
 }
 ```
@@ -254,10 +252,10 @@ For informational purposes, the `startCapture()` method shown above calls a meth
 function dumpOptionsInfo() {
   const videoTrack = videoElem.srcObject.getVideoTracks()[0];
 
-  console.info("Track settings:");
-  console.info(JSON.stringify(videoTrack.getSettings(), null, 2));
-  console.info("Track constraints:");
-  console.info(JSON.stringify(videoTrack.getConstraints(), null, 2));
+  console.log("Track settings:");
+  console.log(JSON.stringify(videoTrack.getSettings(), null, 2));
+  console.log("Track constraints:");
+  console.log(JSON.stringify(videoTrack.getConstraints(), null, 2));
 }
 ```
 
@@ -265,7 +263,7 @@ The track list is obtained by calling {{domxref("MediaStream.getVideoTracks", "g
 
 #### HTML
 
-The HTML starts with a simple introductory paragraph, then gets into the meat of things.
+The HTML starts with an introductory paragraph, then gets into the meat of things.
 
 ```html
 <p>
@@ -298,8 +296,6 @@ The key parts of the HTML are:
 
 The CSS is entirely cosmetic in this example. The video is given a border, and its width is set to occupy nearly the entire available horizontal space (`width: 98%`). {{cssxref("max-width")}} is set to `860px` to set an absolute upper limit on the video's size,
 
-The `error`, `warn`, and `info` classes are used to style the corresponding console output types.
-
 ```css
 #video {
   border: 1px solid #999;
@@ -307,16 +303,12 @@ The `error`, `warn`, and `info` classes are used to style the corresponding cons
   max-width: 860px;
 }
 
-.error {
-  color: red;
-}
-
-.warn {
-  color: orange;
-}
-
-.info {
-  color: darkgreen;
+#log {
+  width: 25rem;
+  height: 15rem;
+  border: 1px solid black;
+  padding: 0.5rem;
+  overflow: scroll;
 }
 ```
 
@@ -324,7 +316,7 @@ The `error`, `warn`, and `info` classes are used to style the corresponding cons
 
 The final product looks like this. If your browser supports Screen Capture API, clicking "Start Capture" will present the {{Glossary("user agent", "user agent's")}} interface for selecting a screen, window, or tab to share.
 
-{{EmbedLiveSample("Simple_screen_capture", 640, 680, "", "", "", "display-capture")}}
+{{EmbedLiveSample("Streaming screen capture", 640, 800, "", "", "", "display-capture")}}
 
 ## Security
 

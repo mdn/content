@@ -207,7 +207,7 @@ For this active learning, we're expecting you to be brave and do it alone, mostl
 2. Find a nice wide screen landscape image with some kind of detail contained in it somewhere. Create a web-sized version of it using a graphics editor, then crop it to show a smaller part that zooms in on the detail, and create a second image (about 480px wide is good for this).
 3. Use the `<picture>` element to implement an art direction picture switcher!
 4. Create multiple image files of different sizes, each showing the same picture.
-5. Use `srcset`/`size` to create a resolution switcher example, either to serve the same size image at different resolutions, or different image sizes at different viewport widths.
+5. Use `srcset`/`sizes` to create a resolution switcher example, either to serve the same size image at different resolutions depending on the device resolution or to serve different image sizes depending on the viewport widths.
 
 ## Summary
 
