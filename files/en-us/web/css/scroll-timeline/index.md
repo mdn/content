@@ -9,9 +9,9 @@ browser-compat: css.properties.scroll-timeline
 
 {{CSSRef}}{{SeeCompatTable}}
 
-The **`scroll-timeline`** [CSS](/en-US/docs/Web/CSS) [shorthand property](/en-US/docs/Web/CSS/Shorthand_properties) is used to define a named timeline that is linked to the progress of the scrollbar in a container. Optionally, the scroll axis of the scrollbar can be specified. The starting scroll position represents 0% progress and the ending scroll position represents 100% progress. If the 0% position and 100% position coincide (i.e., the scroll container has no overflow to scroll), the timeline is inactive.
+The **`scroll-timeline`** [CSS](/en-US/docs/Web/CSS) [shorthand property](/en-US/docs/Web/CSS/Shorthand_properties) is used to define a named timeline that is linked to the progress of the scrollbar in a container. The name is then referenced in an [`animation-timeline`](/en-US/docs/Web/CSS/animation-timeline) declaration to indicate the container's element that is used to control the progress of the animation through the scrolling action.
 
-The name can be referenced in an [`animation-timeline`](/en-US/docs/Web/CSS/animation-timeline) declaration to indicate the element, and hence the scrollbar, that will be used to control the progress of the animation.
+Optionally, the scroll axis of the scrollbar can be specified. The starting scroll position represents 0% progress and the ending scroll position represents 100% progress. If the 0% position and 100% position coincide (i.e., the scroll container has no overflow to scroll), the timeline is inactive.
 
 > **Note:** If the element does not display a scrollbar in the axis dimension, no timeline will be created.
 
@@ -65,7 +65,7 @@ The `scroll-timeline` shorthand property can be applied to a container element a
 
 ### Creating a scroll-driven animation
 
-In this example, a scroll timeline named `squareTimeline` is defined using the `scroll-timeline-name` property on the element with the id `container`.
+In this example, a scroll timeline named `squareTimeline` is defined using the `scroll-timeline-name` property on the element with the ID `container`.
 This is then applied to the animation on the `#square` element using `animation-timeline: squareTimeline`.
 
 #### HTML
@@ -84,7 +84,7 @@ The HTML for the example is shown below.
 The CSS for the container sets it as the source of a scroll timeline named `squareTimeline` using the `scroll-timeline` property.
 It also sets the scrollbar to use for the timeline as "vertical" (though this was not actually needed as it would have been used by default).
 
-The height of the container is set to `300px` and the container is also set to create a vertical scrollbar if it overflows; the CSS rule on the `stretcher` element below does make it overflow.
+The height of the container is set to `300px` and the container is also set to create a vertical scrollbar if it overflows (the CSS rule on the `stretcher` element below does make it overflow).
 
 ```css
 #container {
@@ -95,7 +95,7 @@ The height of the container is set to `300px` and the container is also set to c
 }
 ```
 
-The CSS below defines a square that rotates in alternate directions according to the timeline provided by the `animation-timeline` property, which is set to the `squareTimeline` timeline named above.
+The CSS below defines a square that rotates according to the timeline provided by the `animation-timeline` property, which is set to the `squareTimeline` timeline named above.
 
 ```css
 #square {
@@ -125,12 +125,12 @@ The CSS below defines a square that rotates in alternate directions according to
 }
 ```
 
-The `stretcher` CSS rule simply sets the block height to `600px`, which forces the container element to overflow and create scroll bars.
+The `stretcher` CSS rule sets the block height to `600px`, which forces the container element to overflow and create scroll bars.
 Without this rule, there would be no scrollbar, and hence no scroll timeline to associate with the animation timeline.
 
 #### Result
 
-Scroll the vertical bar to see the pink square animate as you scroll.
+Scroll the vertical bar to see the square animate as you scroll.
 
 {{EmbedLiveSample("Creating_a_scroll_driven_animation", "100%", "320px")}}
 
