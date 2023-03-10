@@ -70,11 +70,11 @@ This article provides information about the changes in Firefox 111 that affect d
 
 #### WebDriver BiDi
 
-- Changed the behaviors for handling stale elements checks based on recently updated WebDriver classic specification ({{bug(1808894)}}).
+- Changed the behaviors for handling stale elements checks based on recently updated WebDriver classic specification [Firefox bug 1808894](https://bugzil.la/1808894).
 
 #### Marionette
 
-- Fixed an issue where returning a ShadowRoot from "WebDriver:ExecuteScript" causes a "cyclic object value" error ({{bug(1764594)}}).
+- Fixed an issue where returning a ShadowRoot from "WebDriver:ExecuteScript" causes a "cyclic object value" error [Firefox bug 1764594](https://bugzil.la/1764594).
 
 ## Changes for add-on developers
 
