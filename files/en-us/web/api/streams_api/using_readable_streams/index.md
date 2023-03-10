@@ -145,7 +145,254 @@ This is the standard pattern you'll see when using stream readers:
 3. If there is more stream to read, you process the current chunk then run the function again.
 4. You keep chaining the `pipe` function until there is no more stream to read, in which case step 2 is followed.
 
-> **Note:** The function looks as if `pump()` calls itself and leads to a potentially deep recursion. However, because `pump` is asynchronous and each `pump()` call is at the end of the promise handler, it's actually analogous to a chain of promise handlers.
+Removing all the code to actually perform a "pump", the code might be generalized to something like this:
+
+```js
+fetch("http://example.com/somefile.txt")
+  // Retrieve its body as ReadableStream
+  .then((response) => {
+    const reader = response.body.getReader();
+    while (true) {
+      // read() returns a promise that resolves when a value has been received
+      reader.read().then(function pump({ done, value }) {
+        if (done) {
+          // Do something with last chunk of data then exit reader
+          return;
+        }
+        // Otherwise do something here to process current chunk
+
+        // Read some more, and call this function again
+        return reader.read().then(pump);
+      });
+    }
+  })
+  .catch((err) => console.error(err));
+```
+
+> **Note:** The function looks as if `pump()` calls itself and leads to a potentially deep recursion.
+> However, because `pump` is asynchronous and each `pump()` call is at the end of the promise handler, it's actually analogous to a chain of promise handlers.
+
+## Consuming a fetch() using asynchronous iteration
+
+The pattern shown in the previous section easier to understand when written using async/await rather than promises:
+
+```js
+async function readData(url) {
+  const response = await fetch(url);
+  const reader = response.body.getReader();
+  while (true) {
+    const { done, value } = await reader.read();
+    if (done) {
+      // Do something with last chunk of data then exit reader
+      return;
+    }
+    // Otherwise do something here to process current chunk
+  }
+}
+```
+
+However there is another even simpler option, which is to iterate the `response.body` returned by `fetch()` using the [for await...of](/en-US/docs/Web/JavaScript/Reference/Statements/for-await...of) syntax.
+Using this approach, the method above can be written as shown:
+
+```js
+async function readData(url) {
+  const response = await fetch(url);
+  for await (const chunk of response.body) {
+    // Do something with each 'chunk'
+  }
+  //Exit when done
+}
+```
+
+This works because the `response.body` returns a `ReadableStream`, which is an [async iterator](/en-US/docs/Web/API/ReadableStream#async_iteration).
+Not every browser supports this feature at time of writing.
+
+If you want to cancel the operation you can either abort the fetch, or break out of the loop based on some trigger.
+Note that code in the loop is only run when there is new data to process, so if you use the second option there may be some delay before the loop exits.
+
+### Example async reader
+
+```js hidden
+// A mock push source.
+// Used to simulate some random data arriving
+class MockPushSource {
+  constructor() {
+    this.max_data = 90; // total amount of data to to stream from the push source
+    //this.max_per_read = 100; // max data per read
+    //this.min_per_read = 40; // min data per read
+    this.data_read = 0; // total data read so far (capped to maxdata)
+  }
+
+  // Method returning promise when this push source is readable.
+  dataRequest() {
+    // Object used to resolve promise
+    const resultobj = {};
+    resultobj["bytesRead"] = 8;
+
+    return new Promise((resolve /*, reject*/) => {
+      if (this.data_read >= this.max_data) {
+        //out of data
+        resultobj["bytesRead"] = 0;
+        resultobj["data"] = "";
+        resolve(resultobj);
+        return;
+      }
+
+      // Emulate slow read of data
+      setTimeout(() => {
+        const numberBytesReceived = 8;
+        this.data_read += numberBytesReceived;
+        resultobj["data"] = this.randomChars();
+        resolve(resultobj);
+      }, 500);
+    });
+  }
+
+  // Dummy close function
+  close() {
+    return;
+  }
+
+  // Return random character string
+  randomChars(length = 8) {
+    let string = "";
+    let choices =
+      "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()";
+
+    for (let i = 0; i < length; i++) {
+      string += choices.charAt(Math.floor(Math.random() * choices.length));
+    }
+    return string;
+  }
+}
+```
+
+<!-- The following html and js sets up reporting. Hidden because it is not useful for readers -->
+
+```css hidden
+.input {
+  float: left;
+  width: 50%;
+}
+.output {
+  float: right;
+  width: 50%;
+  overflow-wrap: break-word;
+}
+button {
+  display: block;
+}
+```
+
+```html hidden
+<button>Cancel stream</button>
+<div class="input">
+  <h2>Underlying source</h2>
+  <ul></ul>
+</div>
+<div class="output">
+  <h2>Consumer</h2>
+  <ul></ul>
+</div>
+```
+
+```js hidden
+// Store reference to lists, paragraph and button
+const list1 = document.querySelector(".input ul");
+const list2 = document.querySelector(".output ul");
+const button = document.querySelector("button");
+
+// Create empty string in which to store final result
+let result = "";
+
+// Function to log data from underlying source
+function logSource(result) {
+  const listItem = document.createElement("li");
+  listItem.textContent = result;
+  list1.appendChild(listItem);
+}
+
+// Function to log data from consumer
+function logConsumer(result) {
+  const listItem = document.createElement("li");
+  listItem.textContent = result;
+  list2.appendChild(listItem);
+}
+```
+
+```js hidden
+const stream = makePushSourceStream();
+
+function makePushSourceStream() {
+  const pushSource = new MockPushSource();
+
+  return new ReadableStream({
+    start(controller) {
+      readRepeatedly().catch((e) => controller.error(e));
+      function readRepeatedly() {
+        return pushSource.dataRequest().then((result) => {
+          //logSource(`chunk length: ${result.data.length} bytes`);
+          if (result.data.length == 0) {
+            logSource(`No data from source: closing`);
+            controller.close();
+            return;
+          }
+
+          logSource(`enqueue() ${result.data} bytes`);
+          controller.enqueue(result.data);
+          return readRepeatedly();
+        });
+      }
+    },
+
+    cancel() {
+      logSource(`cancel() called on underlying source`);
+      pushSource.close();
+    },
+  });
+}
+```
+
+<!-- 
+
+The following code creates a `ReadableStreamBYOBReader` for the socket byte stream and uses it read data into a buffer.
+Note `processText()` is called recursively to read more data until the buffer is filled.
+When the underlying source signals that it has no more data, the `reader.read()` will have `done` set to true, which in turn completes the read operation.
+
+This code is almost exactly the same as for the [Underlying pull source with byte reader](#underlying_pull_source_with_byte_reader) example above.
+The only difference is that the reader includes some code to slow down reading, so the log output can demonstrate that data will be enqueued if not read fast enough.
+
+-->
+
+```js
+let bytes = 0;
+logChunks(stream);
+
+const aborter = new AbortController();
+button.addEventListener("click", () => aborter.abort());
+logChunks(stream, { signal: aborter.signal });
+
+async function logChunks(readableStream, { signal }) {
+  try {
+    for await (const chunk of readableStream) {
+      if (signal.aborted) throw signal.reason;
+      bytes += chunk.length;
+      logConsumer(`Chunk: ${chunk}. Read ${bytes} characters.`);
+    }
+  } catch (e) {
+    if (e instanceof TypeError) {
+      logConsumer("TypeError: Browser may not support async iteration");
+    } else {
+      logConsumer(`Error in async iterator: ${e}.`);
+    }
+  }
+}
+```
+
+The logging from the underlying push source (left) and consumer (right) are shown below.
+Not the period in the middle where data is enqueued rather than transferred as a zero-copy operation.
+
+{{EmbedLiveSample("Example async reader","100%","400px")}}
 
 ## Creating your own custom readable stream
 
