@@ -169,4 +169,4 @@ Firefox supports the `"clipboardRead"` [permission](/en-US/docs/Mozilla/Add-ons/
 
 - [Clipboard API](/en-US/docs/Web/API/Clipboard_API)
 - [Permissions API](/en-US/docs/Web/API/Permissions_API)
-- [Making content editable](/en-US/docs/Web/HTML/Global_attributes#contenteditable)
+- [Make content editable](/en-US/docs/Web/HTML/Global_attributes#contenteditable)
