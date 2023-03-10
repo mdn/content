@@ -610,7 +610,7 @@ The following non-standard attributes are also available on some browsers. As a 
     <tr>
       <td><a href="#autocapitalize"><code>autocapitalize</code></a></td>
       <td>
-        A string indicating how auto-capitalization should be applied to the contet of text elements. <strong>Safari only.</strong>
+        A string indicating how auto-capitalization should be applied to the content of text elements. <strong>Safari only.</strong>
       </td>
     </tr>
     <tr>
