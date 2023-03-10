@@ -22,7 +22,7 @@ The **`prefers-reduced-motion`** [CSS](/en-US/docs/Web/CSS) [media feature](/en-
 - `no-preference`
   - : Indicates that the user has made no preference known to the system.
 - `reduce`
-  - : Indicates that user has notified the system that they prefer either an interface that removes or replaces the types of motion-based animation that trigger discomfort for those with vestibular motion disorders, or depending on the underlying OS, an interface that removes animations in general.
+  - : Indicates that the user has notified the system that they prefer either an interface that removes or replaces the types of motion-based animation that trigger discomfort for those with vestibular motion disorders, or depending on the underlying OS, an interface that removes animations in general.
 
 ## User preferences
 
