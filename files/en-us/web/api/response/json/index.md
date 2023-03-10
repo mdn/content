@@ -35,6 +35,32 @@ None.
 A {{jsxref("Promise")}} that resolves to a JavaScript object. This object could be
 anything that can be represented by JSON — an object, an array, a string, a number...
 
+### Exceptions
+
+- `TypeError`
+  - A {{jsxref("TypeError")}} will be thrown if the body of the `Response` is unusable, meaning that the body is non-null and its stream is [disturbed](https://streams.spec.whatwg.org/#is-readable-stream-disturbed) or [locked](https://streams.spec.whatwg.org/#readablestream-locked). The following are some possible reasons for the stream to be disturbed or locked:
+  
+    - Attempting to read the body's stream multiple times
+    - Attempting to read the body's stream after it has been consumed
+    - Using a request body that doesn't have a known length (such as a `ReadableStream`)
+  - Here is an example of how a TypeError can be thrown when using `response.json()`:
+
+    ```js
+    fetch('https://example.com/data.json')
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+        return response.json();
+      })
+      .catch((error) => {
+        if (error instanceof TypeError) {
+          console.error('Error: Response body stream is disturbed or locked.');
+        } else {
+          console.error('Error:', error.message);
+        }
+      });
+    ```
 ## Example
 
 In our [fetch
