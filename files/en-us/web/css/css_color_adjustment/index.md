@@ -27,7 +27,7 @@ Together with the {{CSSxRef("@media")}} features {{cssxref("@media/prefers-color
   - {{cssxref("@media/prefers-color-scheme", "prefers-color-scheme")}}
   - {{cssxref("@media/prefers-contrast", "prefers-contrast")}}
   - {{cssxref("@media/forced-colors", "forced-colors")}}
-- Properties effected by forced colors mode
+- Properties affected by forced colors mode
   - {{cssxref("accent-color")}}
   - {{cssxref("background-color")}}
   - {{cssxref("background-image")}}
