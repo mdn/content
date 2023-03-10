@@ -83,6 +83,9 @@ anything that can be represented by JSON — an object, an array, a string, a nu
       }
     });
     ```
+
+- Other Exceptions
+  - Other exceptions that can be thrown by `response.json()` include those that are thrown by JSON.parse() when attempting to parse the response body as JSON. These exceptions include {{jsxref("TypeError")}}, {{jsxref("RangeError")}}, and {{jsxref("URIError")}}. For more information on these exceptions, see the {{jsxref("JSON.parse()#exceptions")}}.
 ## Example
 
 In our [fetch
