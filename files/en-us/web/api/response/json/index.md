@@ -61,6 +61,28 @@ anything that can be represented by JSON — an object, an array, a string, a nu
         }
       });
     ```
+
+- `SyntaxError`
+  - A {{jsxref("SyntaxError")}} will be thrown if the response body is not valid JSON. This can happen if the server returns a non-JSON response or if the response body is truncated or malformed.
+
+  - Here is an example of how a `SyntaxError` can be thrown when using `response.json()`:
+
+    ```js
+    fetch('https://example.com/data.json')
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+      return response.json();
+    })
+    .catch((error) => {
+      if (error instanceof SyntaxError) {
+        console.error('Error: Response body is not valid JSON.');
+      } else {
+        console.error('Error:', error.message);
+      }
+    });
+    ```
 ## Example
 
 In our [fetch
