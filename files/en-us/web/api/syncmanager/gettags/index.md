@@ -28,6 +28,10 @@ None.
 A {{jsxref("Promise")}} that resolves to an array of strings
 containing developer-defined identifiers for `SyncManager` registrations.
 
+## Specifications
+
+{{Specifications}}
+
 ## Browser compatibility
 
 {{Compat}}

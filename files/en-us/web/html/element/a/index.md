@@ -7,7 +7,7 @@ browser-compat: html.elements.a
 
 {{HTMLSidebar}}
 
-The **`<a>`** [HTML](/en-US/docs/Web/HTML) element (or _anchor_ element), with [its `href` attribute](#attr-href), creates a hyperlink to web pages, files, email addresses, locations in the same page, or anything else a URL can address.
+The **`<a>`** [HTML](/en-US/docs/Web/HTML) element (or _anchor_ element), with [its `href` attribute](#href), creates a hyperlink to web pages, files, email addresses, locations in the same page, or anything else a URL can address.
 
 Content within each `<a>` _should_ indicate the link's destination. If the `href` attribute is present, pressing the enter key while focused on the `<a>` element will activate it.
 
@@ -330,7 +330,7 @@ People experiencing low vision conditions, navigating with the aid of screen rea
 <a href="2017-annual-report.ppt"> 2017 Annual Report (PowerPoint) </a>
 ```
 
-If an icon is used to signify link behavior, make sure it has {{HTMLAttrxRef("alt", "img", "alt text", "true")}}:
+If an icon is used to signify link behavior, make sure it has an [_alt text_](/en-US/docs/Web/HTML/Element/img#alt):
 
 ```html
 <a target="_blank" href="https://www.wikipedia.org">

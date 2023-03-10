@@ -7,9 +7,9 @@ browser-compat: svg.attributes.conditional_processing
 
 The SVG conditional processing attributes are all the attributes that can be specified on some SVG elements to control whether or not the element on which it appears should be rendered.
 
-- [requiredExtensions](#attr-requiredextensions)
-- [requiredFeatures](#attr-requiredfeatures)
-- [systemLanguage](#attr-systemlanguage)
+- [requiredExtensions](#requiredextensions)
+- [requiredFeatures](#requiredfeatures)
+- [systemLanguage](#systemlanguage)
 
 ## Attributes
 

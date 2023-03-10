@@ -400,7 +400,7 @@ These properties are own properties of each `String` instance.
 > They are of limited use, as they are based on a very old HTML standard and provide only a subset of the currently available HTML tags and attributes. Many of them create deprecated or non-standard markup today. In addition, they do simple string concatenation without any validation or sanitation, which makes them a potential security threat when directly inserted using [`innerHTML`](/en-US/docs/Web/API/Element/innerHTML). Use [DOM APIs](/en-US/docs/Web/API/Document_Object_Model) such as [`document.createElement()`](/en-US/docs/Web/API/Document/createElement) instead.
 
 - {{jsxref("String.prototype.anchor()")}} {{Deprecated_Inline}}
-  - : {{htmlattrxref("name", "a", "&lt;a name=\"name\"&gt;")}} (hypertext target)
+  - : [`<a name="name">`](/en-US/docs/Web/HTML/Element/a#name) (hypertext target)
 - {{jsxref("String.prototype.big()")}} {{Deprecated_Inline}}
   - : {{HTMLElement("big")}}
 - {{jsxref("String.prototype.blink()")}} {{Deprecated_Inline}}
@@ -410,13 +410,13 @@ These properties are own properties of each `String` instance.
 - {{jsxref("String.prototype.fixed()")}} {{Deprecated_Inline}}
   - : {{HTMLElement("tt")}}
 - {{jsxref("String.prototype.fontcolor()")}} {{Deprecated_Inline}}
-  - : {{htmlattrxref("color", "font", "&lt;font color=\"color\"&gt;")}}
+  - : [`<font color="color">`](/en-US/docs/Web/HTML/Element/font#color)
 - {{jsxref("String.prototype.fontsize()")}} {{Deprecated_Inline}}
-  - : {{htmlattrxref("size", "font", "&lt;font size=\"size\"&gt;")}}
+  - : [`<font size="size">`](/en-US/docs/Web/HTML/Element/font#size)
 - {{jsxref("String.prototype.italics()")}} {{Deprecated_Inline}}
   - : {{HTMLElement("i")}}
 - {{jsxref("String.prototype.link()")}} {{Deprecated_Inline}}
-  - : {{htmlattrxref("href", "a", "&lt;a href=\"url\"&gt;")}} (link to URL)
+  - : [`<a href="url">`](/en-US/docs/Web/HTML/Element/a#href) (link to URL)
 - {{jsxref("String.prototype.small()")}} {{Deprecated_Inline}}
   - : {{HTMLElement("small")}}
 - {{jsxref("String.prototype.strike()")}} {{Deprecated_Inline}}
