@@ -7,7 +7,7 @@ spec-urls: https://drafts.csswg.org/css-color-adjust-1/
 
 {{CSSRef}}
 
-The **CSS color adjustment** module provides a model and controls over automatic color adjustment by the user agent to handle user preferences, such as "Dark Mode", contrast adjustment, and other color scheme preferences.
+The **CSS color adjustment** module provides a model and controls automatic color adjustment by the user agent to handle user preferences, such as "Dark Mode", contrast adjustment, and other color scheme preferences.
 
 Together with the {{CSSxRef("@media")}} features {{cssxref("@media/prefers-color-scheme", "prefers-color-scheme")}}, {{cssxref("@media/prefers-contrast", "prefers-contrast")}} and {{cssxref("@media/forced-colors", "forced-colors")}}, this module defines how and when colors are automatically adjusted by the browser.
 
