@@ -74,7 +74,7 @@ The following connections are blocked and won't load:
     xhr.open("GET", "https://not-example.com/");
     xhr.send();
 
-    const ws = new WebSocket("https://not-example.com/");
+    const ws = new WebSocket("wss://not-example.com/");
 
     const es = new EventSource("https://not-example.com/");
 

@@ -136,7 +136,7 @@ function updateFirst(event) {
 }
 ```
 
-When the color picker is dismissed, indicating that the value will not be changing again (unless the user re-opens the color picker), a `change` event is sent to the element. We handle that event using the `updateAll()` function, using {{htmlattrxref("value", "input", "Event.target.value")}} to obtain the final selected color:
+When the color picker is dismissed, indicating that the value will not change again (unless the user re-opens the color picker), a `change` event is sent to the element. We handle that event using the `updateAll()` function, using [`Event.target.value`](/en-US/docs/Web/HTML/Element/input#value) to obtain the final selected color:
 
 ```js
 function updateAll(event) {
