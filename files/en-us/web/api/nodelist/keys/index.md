@@ -37,7 +37,7 @@ let list = node.childNodes;
 
 // Using for...of
 for (const key of list.keys()) {
-   console.log(key);
+  console.log(key);
 }
 ```
 

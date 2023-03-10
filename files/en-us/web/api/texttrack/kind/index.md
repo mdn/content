@@ -29,7 +29,7 @@ A string. One of:
 In the following example the value of `kind` is printed to the console.
 
 ```js
-let video = document.querySelector('video');
+let video = document.querySelector("video");
 let track = video.addTextTrack("captions", "Captions", "en");
 track.mode = "showing";
 console.log(track.kind);

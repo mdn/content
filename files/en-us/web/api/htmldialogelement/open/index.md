@@ -33,7 +33,7 @@ button.
 <!-- Simple pop-up dialog box -->
 <dialog id="dialog">
   <form method="dialog">
-      <button type="submit">Close</button>
+    <button type="submit">Close</button>
   </form>
 </dialog>
 
@@ -65,7 +65,6 @@ button.
     dialog.addEventListener("close", () => {
       openCheck(dialog);
     });
-
   })();
 </script>
 ```

@@ -2,16 +2,6 @@
 title: windows.CreateType
 slug: Mozilla/Add-ons/WebExtensions/API/windows/CreateType
 page-type: webextension-api-type
-tags:
-  - API
-  - Add-ons
-  - CreateType
-  - Extensions
-  - Non-standard
-  - Reference
-  - Type
-  - WebExtensions
-  - Windows
 browser-compat: webextensions.api.windows.CreateType
 ---
 

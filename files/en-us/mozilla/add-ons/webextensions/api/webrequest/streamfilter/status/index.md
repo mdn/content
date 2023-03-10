@@ -2,14 +2,6 @@
 title: webRequest.StreamFilter.status
 slug: Mozilla/Add-ons/WebExtensions/API/webRequest/StreamFilter/status
 page-type: webextension-api-property
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Reference
-  - StreamFilter.status
-  - WebExtensions
-  - webRequest
 browser-compat: webextensions.api.webRequest.StreamFilter.status
 ---
 

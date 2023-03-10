@@ -19,13 +19,13 @@ Keep in mind that most modern browsers have deprecated and removed support for b
 
 This element's attributes include the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 
-- {{htmlattrdef("height")}}
+- `height`
   - : The displayed height of the resource, in [CSS pixels](https://drafts.csswg.org/css-values/#px). This must be an absolute value; percentages are _not_ allowed.
-- {{htmlattrdef("src")}}
+- `src`
   - : The URL of the resource being embedded.
-- {{htmlattrdef("type")}}
+- `type`
   - : The {{glossary("MIME type")}} to use to select the plug-in to instantiate.
-- {{htmlattrdef("width")}}
+- `width`
   - : The displayed width of the resource, in [CSS pixels](https://drafts.csswg.org/css-values/#px). This must be an absolute value; percentages are _not_ allowed.
 
 ## Usage notes

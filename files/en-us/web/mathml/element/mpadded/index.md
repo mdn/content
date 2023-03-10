@@ -1,11 +1,6 @@
 ---
 title: <mpadded>
 slug: Web/MathML/Element/mpadded
-tags:
-  - MathML
-  - MathML Reference
-  - MathML:Element
-  - MathML:General Layout Schemata
 browser-compat: mathml.elements.mpadded
 ---
 

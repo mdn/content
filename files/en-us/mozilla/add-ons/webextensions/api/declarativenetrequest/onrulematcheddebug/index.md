@@ -1,15 +1,6 @@
 ---
 title: declarativeNetRequest.onRuleMatchedDebug
 slug: Mozilla/Add-ons/WebExtensions/API/declarativeNetRequest/onRuleMatchedDebug
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Reference
-  - WebExtensions
-  - Event
-  - declarativeNetRequest
-  - onRuleMatchedDebug
 browser-compat: webextensions.api.declarativeNetRequest.onRuleMatchedDebug
 ---
 

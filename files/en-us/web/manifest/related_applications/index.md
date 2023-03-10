@@ -1,11 +1,8 @@
 ---
 title: related_applications
 slug: Web/Manifest/related_applications
-tags:
-  - Manifest
-  - Web
-  - related_applications
-  - Experimental
+status:
+  - experimental
 browser-compat: html.manifest.related_applications
 ---
 

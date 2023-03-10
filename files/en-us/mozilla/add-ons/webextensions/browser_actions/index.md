@@ -2,8 +2,6 @@
 title: Browser actions
 slug: Mozilla/Add-ons/WebExtensions/Browser_actions
 page-type: guide
-tags:
-  - WebExtensions
 ---
 
 {{AddonSidebar}}

@@ -2,12 +2,10 @@
 title: CSSTransformValue.values()
 slug: Web/API/CSSTransformValue/values
 page-type: web-api-instance-method
-status:
-  - experimental
 browser-compat: api.CSSTransformValue.values
 ---
 
-{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
+{{APIRef("CSS Typed OM")}}
 
 The **`CSSTransformValue.values()`** returns a
 new _array iterator_ object that contains the values for

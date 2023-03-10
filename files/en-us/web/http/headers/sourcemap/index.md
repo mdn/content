@@ -1,12 +1,6 @@
 ---
 title: SourceMap
 slug: Web/HTTP/Headers/SourceMap
-tags:
-  - HTTP
-  - HTTP Header
-  - Reference
-  - Response Header
-  - header
 browser-compat: http.headers.SourceMap
 ---
 

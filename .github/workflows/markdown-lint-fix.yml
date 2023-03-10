@@ -16,18 +16,16 @@ jobs:
       - name: Setup Node.js environment
         uses: actions/setup-node@v3
         with:
-          node-version: 18
+          node-version-file: ".nvmrc"
           cache: yarn
 
       - name: Install all yarn packages
         env:
           HUSKY: 0
-        run: |
-          yarn --frozen-lockfile
+        run: yarn --frozen-lockfile
 
       - name: Lint markdown files
-        run: |
-          yarn fix:md
+        run: yarn fix:md
 
       - name: Create PR with only fixable issues
         if: success()

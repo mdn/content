@@ -1,11 +1,8 @@
 ---
 title: protocol_handlers
 slug: Web/Manifest/protocol_handlers
-tags:
-  - protocol_handlers
-  - Manifest
-  - Web
-  - Experimental
+status:
+  - experimental
 browser-compat: html.manifest.protocol_handlers
 ---
 

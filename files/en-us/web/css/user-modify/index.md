@@ -79,4 +79,4 @@ Not part of any standard.
 
 - {{CSSxRef("-moz-user-focus")}}
 - {{CSSxRef("-moz-user-input")}}
-- {{CSSxRef("-moz-user-select")}}
+- {{CSSxRef("user-select", "-moz-user-select")}}

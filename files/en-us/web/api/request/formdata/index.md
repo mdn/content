@@ -30,12 +30,12 @@ A {{jsxref("Promise")}} that resolves with a {{domxref("FormData")}} object.
 const formData = new FormData();
 const fileField = document.querySelector('input[type="file"]');
 
-formData.append('username', 'abc123');
-formData.append('avatar', fileField.files[0]);
+formData.append("username", "abc123");
+formData.append("avatar", fileField.files[0]);
 
-const request = new Request('/myEndpoint', {
-  method: 'POST',
-  body: formData
+const request = new Request("/myEndpoint", {
+  method: "POST",
+  body: formData,
 });
 
 request.formData().then((data) => {

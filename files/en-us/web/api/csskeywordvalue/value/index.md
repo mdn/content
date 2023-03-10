@@ -2,12 +2,10 @@
 title: CSSKeywordValue.value
 slug: Web/API/CSSKeywordValue/value
 page-type: web-api-instance-property
-status:
-  - experimental
 browser-compat: api.CSSKeywordValue.value
 ---
 
-{{SeeCompatTable}}{{APIRef("CSS Typed Object Model API")}}
+{{APIRef("CSS Typed Object Model API")}}
 
 The **`value`** property of the
 {{domxref("CSSKeywordValue")}} interface returns or sets the value of the

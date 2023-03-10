@@ -2,11 +2,6 @@
 title: underline-position
 slug: Web/SVG/Attribute/underline-position
 page-type: svg-attribute
-tags:
-  - Attribute
-  - Reference
-  - SVG
-  - font
 ---
 
 « [SVG Attribute reference home](/en-US/docs/Web/SVG/Attribute)

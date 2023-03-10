@@ -21,21 +21,23 @@ A boolean value; `true` means the display is presenting; `false` means it isn't.
 ## Examples
 
 ```js
-function onVRExitPresent () {
+function onVRExitPresent() {
   // No sense in exiting presentation if we're not actually presenting.
   // (This may happen if we get an event like vrdisplaydeactivate when
   // we weren't presenting.)
-  if (!vrDisplay.isPresenting)
-    return;
-  vrDisplay.exitPresent().then(() => {
-    // Nothing to do because we're handling things in onVRPresentChange.
-  }, (err) => {
-    let errMsg = "exitPresent failed.";
-    if (err && err.message) {
-      errMsg += `<br/>${err.message}`;
+  if (!vrDisplay.isPresenting) return;
+  vrDisplay.exitPresent().then(
+    () => {
+      // Nothing to do because we're handling things in onVRPresentChange.
+    },
+    (err) => {
+      let errMsg = "exitPresent failed.";
+      if (err && err.message) {
+        errMsg += `<br/>${err.message}`;
+      }
+      VRSamplesUtil.addError(errMsg, 2000);
     }
-    VRSamplesUtil.addError(errMsg, 2000);
-  });
+  );
 }
 ```
 

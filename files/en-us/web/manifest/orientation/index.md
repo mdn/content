@@ -1,11 +1,8 @@
 ---
 title: orientation
 slug: Web/Manifest/orientation
-tags:
-  - Manifest
-  - Orientation
-  - Web
-  - Experimental
+status:
+  - experimental
 browser-compat: html.manifest.orientation
 ---
 

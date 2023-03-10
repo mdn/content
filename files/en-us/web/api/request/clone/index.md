@@ -39,7 +39,7 @@ A {{domxref("Request")}} object, which is an exact copy of the `Request` that `c
 In the following snippet, we create a new request using the {{domxref("Request.Request", "Request()")}} constructor (for an image file in the same directory as the script), then clone the request.
 
 ```js
-const myRequest = new Request('flowers.jpg');
+const myRequest = new Request("flowers.jpg");
 const newRequest = myRequest.clone(); // a copy of the request is now stored in newRequest
 ```
 

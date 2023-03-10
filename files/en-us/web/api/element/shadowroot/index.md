@@ -75,7 +75,3 @@ function updateStyle(elem) {
 ## Browser compatibility
 
 {{Compat}}
-
-## See also
-
-- {{DOMxRef("Element.openOrClosedShadowRoot")}} {{non-standard_inline}}

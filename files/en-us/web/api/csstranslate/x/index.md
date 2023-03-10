@@ -2,12 +2,10 @@
 title: CSSTranslate.x
 slug: Web/API/CSSTranslate/x
 page-type: web-api-instance-property
-status:
-  - experimental
 browser-compat: api.CSSTranslate.x
 ---
 
-{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
+{{APIRef("CSS Typed OM")}}
 
 The **`x`** property of the
 {{domxref("CSSTranslate")}} interface gets and sets the abscissa or x-axis of the

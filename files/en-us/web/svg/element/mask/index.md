@@ -2,10 +2,6 @@
 title: <mask>
 slug: Web/SVG/Element/mask
 page-type: svg-element
-tags:
-  - Element
-  - SVG
-  - SVG Container
 browser-compat: svg.elements.mask
 ---
 

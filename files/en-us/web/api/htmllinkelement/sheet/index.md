@@ -4,6 +4,7 @@ slug: Web/API/HTMLLinkElement/sheet
 page-type: web-api-instance-property
 browser-compat: api.HTMLLinkElement.sheet
 ---
+
 {{APIRef("HTML DOM")}}
 
 The read-only **`sheet`** property of the {{domxref("HTMLLinkElement")}} interface
@@ -21,7 +22,9 @@ A {{DOMxRef("StyleSheet")}} object, or `null` if none is associated with the ele
 <html>
   <header>
     <link rel="stylesheet" href="styles.css" />
-…
+    …
+  </header>
+</html>
 ```
 
 The `sheet` property of the `HTMLLinkElement` object will return the {{domxref("StyleSheet")}} object describing `styles.css`.

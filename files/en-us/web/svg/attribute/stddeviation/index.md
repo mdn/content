@@ -2,10 +2,6 @@
 title: stdDeviation
 slug: Web/SVG/Attribute/stdDeviation
 page-type: svg-attribute
-tags:
-  - Filters
-  - SVG
-  - SVG Attribute
 browser-compat: svg.elements.feGaussianBlur.stdDeviation
 ---
 

@@ -2,15 +2,6 @@
 title: webRequest.StreamFilter
 slug: Mozilla/Add-ons/WebExtensions/API/webRequest/StreamFilter
 page-type: webextension-api-type
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Reference
-  - StreamFilter
-  - Type
-  - WebExtensions
-  - webRequest
 browser-compat: webextensions.api.webRequest.StreamFilter
 ---
 

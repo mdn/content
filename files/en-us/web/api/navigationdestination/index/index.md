@@ -19,7 +19,7 @@ A number representing the `index` of the destination {{domxref("NavigationHistor
 ## Examples
 
 ```js
-navigation.addEventListener('navigate', (event) => {
+navigation.addEventListener("navigate", (event) => {
   console.log(event.destination.index);
 });
 ```

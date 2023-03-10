@@ -17,14 +17,14 @@ The **`<col>`** [HTML](/en-US/docs/Web/HTML) element defines a column within a t
 
 This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 
-- {{htmlattrdef("span")}}
+- `span`
   - : This attribute contains a positive integer indicating the number of consecutive columns the `<col>` element spans. If not present, its default value is `1`.
 
 ### Deprecated attributes
 
 The following attributes are deprecated and should not be used. They are documented below for reference when updating existing code and for historical interest only.
 
-- {{htmlattrdef("align")}} {{deprecated_inline}}
+- `align` {{deprecated_inline}}
 
   - : This [enumerated](/en-US/docs/Glossary/Enumerated) attribute specifies how horizontal alignment of each column cell content will be handled. Possible values are:
 
@@ -41,17 +41,17 @@ The following attributes are deprecated and should not be used. They are documen
     >
     > If the table does use a {{htmlattrxref("colspan", "td")}} attribute, the effect can be achieved by combining adequate CSS attribute selectors like `[colspan=n]`, though this is not trivial.
 
-- {{htmlattrdef("bgcolor")}} {{Deprecated_inline}}
+- `bgcolor` {{Deprecated_inline}}
 
   - : The background color of the table. It is a [6-digit hexadecimal RGB code](/en-US/docs/Web/CSS/hex-color), prefixed by a '`#`'. One of the predefined [color keywords](/en-US/docs/Web/CSS/color_value#named_colors) can also be used.
 
     To achieve a similar effect, use the CSS {{cssxref("background-color")}} property.
 
-- {{htmlattrdef("char")}} {{deprecated_inline}}
+- `char` {{deprecated_inline}}
   - : This attribute is used to set the character to align the cells in a column on. Typical values for this include a period (.) when attempting to align numbers or monetary values. If {{htmlattrxref("align", "col")}} is not set to `char`, this attribute is ignored.
-- {{htmlattrdef("charoff")}} {{deprecated_inline}}
+- `charoff` {{deprecated_inline}}
   - : This attribute is used to indicate the number of characters to offset the column data from the alignment characters specified by the `char` attribute.
-- {{htmlattrdef("valign")}} {{deprecated_inline}}
+- `valign` {{deprecated_inline}}
 
   - : This attribute specifies the vertical alignment of the text within each cell of the column. Possible values for this attribute are:
 
@@ -66,7 +66,7 @@ The following attributes are deprecated and should not be used. They are documen
     >
     > If the table does use a {{htmlattrxref("colspan", "td")}} attribute, the effect can be achieved by combining adequate CSS attribute selectors like `[colspan=n]`, though this is not trivial.
 
-- {{htmlattrdef("width")}} {{deprecated_inline}}
+- `width` {{deprecated_inline}}
   - : This attribute specifies a default width for each column in the current column group. In addition to the standard pixel and percentage values, this attribute might take the special form `0*`, which means that the width of each column in the group should be the minimum width necessary to hold the column's contents. Relative widths such as `5*` also can be used.
 
 ## Examples

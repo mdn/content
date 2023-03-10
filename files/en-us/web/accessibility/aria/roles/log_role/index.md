@@ -38,7 +38,6 @@ With an area that has scrolling text, such as a stock ticker, the [`marquee`](/e
 
 ## See Also
 
-- [ARIA: using the `log` role](/en-US/docs/Web/Accessibility/ARIA/Roles/log_role)
 - [ARIA: `alert` role](/en-US/docs/Web/Accessibility/ARIA/Roles/alert_role)
 - [ARIA: `marquee` role](/en-US/docs/Web/Accessibility/ARIA/Roles/marquee_role)
 - [ARIA: `status` role](/en-US/docs/Web/Accessibility/ARIA/Roles/status_role)

@@ -29,7 +29,7 @@ async function capture() {
   let supportedConstraints = navigator.mediaDevices.getSupportedConstraints();
   let displayMediaOptions = {
     video: {},
-    audio: false
+    audio: false,
   };
 
   if (supportedConstraints.displaySurface) {
@@ -37,7 +37,9 @@ async function capture() {
   }
 
   try {
-    videoElem.srcObject = await navigator.mediaDevices.getDisplayMedia(displayMediaOptions);
+    videoElem.srcObject = await navigator.mediaDevices.getDisplayMedia(
+      displayMediaOptions
+    );
   } catch (err) {
     /* handle the error */
   }

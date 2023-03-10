@@ -20,7 +20,7 @@ A string representing the ID.
 ```js
 myWorker.onmessage = (e) => {
   result.textContent = e.data;
-  console.log('Message received from worker');
+  console.log("Message received from worker");
   console.log(e.lastEventId);
 };
 ```

@@ -120,7 +120,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
   - : The intrinsic height of the image, in pixels. Must be an integer without a unit.
 
-    > **Note:** Including `height` and [`width`](#attr-width) enables the aspect ratio of the image to be calculated by the browser prior to the image being loaded. This aspect ratio is used to reserve the space needed to display the image, reducing or even preventing a layout shift when the image is downloaded and painted to the screen. Reducing layout shift is a major component of good user experience and web performance.
+    > **Note:** Including `height` and [`width`](#width) enables the aspect ratio of the image to be calculated by the browser prior to the image being loaded. This aspect ratio is used to reserve the space needed to display the image, reducing or even preventing a layout shift when the image is downloaded and painted to the screen. Reducing layout shift is a major component of good user experience and web performance.
 
 - `ismap`
 
@@ -315,7 +315,7 @@ When an `alt` attribute is not present on an image, some screen readers may anno
 
 ### Identifying SVG as an image
 
-Due to a [VoiceOver bug](https://bugs.webkit.org/show_bug.cgi?id=216364), VoiceOver does not correctly announce SVG images as images. Include [`role="img"`](/en-US/docs/Web/Accessibility/ARIA/Roles/img_role) to all `<img>` elements with SVG source files to ensure assistive technologies correctly announce the SVG as image content.
+Due to a [VoiceOver bug](https://webkit.org/b/216364), VoiceOver does not correctly announce SVG images as images. Include [`role="img"`](/en-US/docs/Web/Accessibility/ARIA/Roles/img_role) to all `<img>` elements with SVG source files to ensure assistive technologies correctly announce the SVG as image content.
 
 ```html
 <img src="mdn.svg" alt="MDN logo" role="img" />

@@ -2,12 +2,9 @@
 title: SVG fonts
 slug: Web/SVG/Tutorial/SVG_fonts
 page-type: guide
-tags:
-  - Advanced
-  - NeedsUpdate
-  - SVG
-  - SVG:Tutorial
 ---
+
+{{SVGRef}}
 
 {{ PreviousNext("Web/SVG/Tutorial/Filter_effects", "Web/SVG/Tutorial/SVG_Image_Tag") }}
 
@@ -15,7 +12,7 @@ When SVG was specified, support for web fonts was not widespread in browsers. Si
 
 > **Note:** SVG Fonts are currently supported only in Safari and Android Browser.
 >
-> The functionality was [removed from Chrome 38](https://chromestatus.com/feature/5930075908210688) (and Opera 25) and Firefox [postponed its implementation indefinitely](https://bugzilla.mozilla.org/show_bug.cgi?id=119490) to concentrate on [WOFF](/en-US/docs/Web/Guide/WOFF). Other tools, however, like Batik and parts of Inkscape support SVG font embedding.
+> The functionality was [removed from Chrome 38](https://chromestatus.com/feature/5930075908210688) (and Opera 25) and Firefox [postponed its implementation indefinitely](https://bugzil.la/119490) to concentrate on [WOFF](/en-US/docs/Web/Guide/WOFF). Other tools, however, like Batik and parts of Inkscape support SVG font embedding.
 
 The base for defining an SVG font is the {{ SVGElement("font") }} element.
 

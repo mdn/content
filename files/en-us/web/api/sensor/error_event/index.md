@@ -1,5 +1,5 @@
 ---
-title: 'Sensor: error event'
+title: "Sensor: error event"
 slug: Web/API/Sensor/error_event
 page-type: web-api-event
 browser-compat: api.Sensor.error_event
@@ -19,9 +19,9 @@ After this event has occurred, the {{domxref('Sensor')}} object becomes idle. If
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('error', (event) => { })
+addEventListener("error", (event) => {});
 
-onerror = (event) => { }
+onerror = (event) => {};
 ```
 
 ## Event type
@@ -44,8 +44,8 @@ _In addition to the properties listed below, properties from the parent interfac
 This example adds an event listener to log errors occurred on an {{domxref("Accelerometer")}}.
 
 ```js
-const acl = new Accelerometer({frequency: 60});
-acl.addEventListener('error', (error) => console.log(`Error: ${error.name}`));
+const acl = new Accelerometer({ frequency: 60 });
+acl.addEventListener("error", (error) => console.log(`Error: ${error.name}`));
 acl.start();
 ```
 

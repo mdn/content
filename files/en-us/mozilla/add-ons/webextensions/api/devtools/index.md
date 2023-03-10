@@ -2,15 +2,6 @@
 title: devtools
 slug: Mozilla/Add-ons/WebExtensions/API/devtools
 page-type: webextension-api
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Reference
-  - WebExtensions
-  - devtools.inspectedWindow
-  - devtools.network
-  - devtools.panels
 browser-compat: webextensions.api.devtools
 ---
 

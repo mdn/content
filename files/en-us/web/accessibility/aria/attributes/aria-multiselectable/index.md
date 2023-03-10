@@ -120,7 +120,7 @@ If the above isn't stylable to your liking, you can also create a list of select
 </fieldset>
 ```
 
-Instead of `aria-selected="true"`, include the [`checked`](/en-US/docs/Web/HTML/Element/input/checkbox#attr-checked) attribute. The browser does the rest.
+Instead of `aria-selected="true"`, include the [`checked`](/en-US/docs/Web/HTML/Element/input/checkbox#checked) attribute. The browser does the rest.
 
 ## Values
 
@@ -158,8 +158,8 @@ Inherited into roles:
 - HTML {{HTMLElement('select')}} element
 - HTML {{HTMLElement('option')}} element
 - HTML {{HTMLElement('input')}} element
-- {{htmlattrxref("multiple")}} attribute
-- [`aria-selected`](/en-US/docs/Web/Accessibility/Attributes/aria-selected)
+- [multiple](/en-US/docs/Web/HTML/Attributes/multiple) attribute
+- [`aria-selected`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-selected)
 
 <section id="Quick_links">
 <strong><a href="/en-US/docs/Web/Accessibility/ARIA/Attributes">WAI-ARIA states and properties</a></strong>

@@ -60,8 +60,6 @@ When the listbox role is added to an element, or such an element becomes visible
 - [`aria-roledescription`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-roledescription)
   - : A human-readable string value which more clearly identifies the role of the listbox. Screen readers will often read this value to the user after reading the label (if there is one), in place of saying "listbox".
 
-For further details and a full list of ARIA states and properties see the [`listbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/listbox_role) role.
-
 ### Keyboard interactions
 
 - When a single-select listbox receives focus:

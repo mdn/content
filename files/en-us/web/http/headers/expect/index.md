@@ -1,11 +1,6 @@
 ---
 title: Expect
 slug: Web/HTTP/Headers/Expect
-tags:
-  - HTTP
-  - HTTP Header
-  - Reference
-  - Request header
 browser-compat: http.headers.Expect
 ---
 

@@ -2,8 +2,6 @@
 title: Modify a web page
 slug: Mozilla/Add-ons/WebExtensions/Modify_a_web_page
 page-type: guide
-tags:
-  - WebExtensions
 ---
 
 {{AddonSidebar}}
