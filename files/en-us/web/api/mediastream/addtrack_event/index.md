@@ -31,7 +31,7 @@ A {{domxref("MediaStreamTrackEvent")}}. Inherits from {{domxref("Event")}}.
 
 _Also inherits properties from its parent interface, {{domxref("Event")}}._
 
-- {{domxref("MedisStreamTrackEvent.track")}} {{ReadOnlyInline}}
+- {{domxref("MediaStreamTrackEvent.track")}} {{ReadOnlyInline}}
   - : A {{domxref("MediaStreamTrack")}} object representing the track which was added to the stream.
 
 ## Examples
