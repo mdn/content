@@ -95,7 +95,7 @@ async function playSong(handledFile) {
 
 if ("launchQueue" in window) {
   window.launchQueue.setConsumer((launchParams) => {
-    if (launchParams.files && launchParams.files.length === 1) {
+    if (launchParams.files && launchParams.files.length) {
       playSong(launchParams.files[0]);
     }
   });
