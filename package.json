@@ -24,7 +24,7 @@
     "up-to-date-check": "node scripts/up-to-date-check.js"
   },
   "dependencies": {
-    "@mdn/yari": "2.8.7",
+    "@mdn/yari": "2.8.9",
     "cross-env": "7.0.3",
     "env-cmd": "10.1.0",
     "husky": "8.0.3",
