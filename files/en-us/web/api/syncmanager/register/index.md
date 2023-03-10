@@ -27,6 +27,20 @@ register(tag)
 
 A {{jsxref("Promise")}} that resolves to {{jsxref("undefined")}}.
 
+### Examples
+
+The following asynchronous function registers a background sync from a browsing context:
+
+```js
+async function syncMessagesLater() {
+  const registration = await navigator.serviceWorker.ready;
+  try {
+    await registration.sync.register("sync-messages");
+  } catch {
+    console.log("Background Sync could not be registered!");
+  }
+}
+```
 ## Specifications
 
 {{Specifications}}

@@ -10,7 +10,7 @@ browser-compat: api.SyncManager
 
 {{DefaultAPISidebar("Background Sync")}}{{Securecontext_Header}}{{SeeCompatTable}}
 
-The Background Synchronization API enables a web app to defer tasks, so that they can be run in a {{domxref('Service Worker API','service worker', "", "nocode")}} once the user has a stable network connection.
+The **Background Synchronization API** enables a web app to defer tasks so that they can be run in a [service worker](/en-US/docs/Web/API/Service_Worker_API) once the user has a stable network connection.
 
 ## Concepts and usage
 
@@ -29,15 +29,15 @@ As this API relies on service workers, functionality provided by this API is onl
 - {{domxref('SyncManager')}} {{Experimental_Inline}}
   - : Registers tasks to be run in a service worker at a later time with network connectivity. These tasks are referred to as _background sync requests_.
 - {{domxref('SyncEvent')}} {{Experimental_Inline}}
-  - : Represents a synchronization event, sent to the {{domxref('ServiceWorkerGlobalScope', 'global scope', "", "nocode")}} of a {{domxref('ServiceWorker')}}. It provides a way to run tasks in the service worker once the device has network connectivity.
+  - : Represents a synchronization event, sent to the [global scope](/en-US/docs/Web/API/ServiceWorkerGlobalScope) of a {{domxref('ServiceWorker')}}. It provides a way to run tasks in the service worker once the device has network connectivity.
 
 ### Extensions to other interfaces
 
-The following additions to the {{domxref('Service Worker API', "", "", "nocode")}} are specified in the Background Synchronization specification to provide an entry point for using background sync.
+The following additions to the [Service Worker API](/en-US/docs/Web/API/Service_Worker_API) provide an entry point for setting up background synchronization.
 
 - {{domxref("ServiceWorkerRegistration.sync")}} {{ReadOnlyInline}}
   - : Returns a reference to the {{domxref("SyncManager")}} interface for registering tasks to run once the device has network connectivity.
-- [`ServiceWorkerGlobalScope: sync` event](/en-US/docs/Web/API/ServiceWorkerGlobalScope/sync_event)
+- [`ServiceWorkerGlobalScope: sync`](/en-US/docs/Web/API/ServiceWorkerGlobalScope/sync_event)  event
   - : An event handler fired whenever a {{domxref("ServiceWorkerGlobalScope/sync_event", "sync")}} event occurs. This happens as soon as the network becomes available.
 
 ## Examples
