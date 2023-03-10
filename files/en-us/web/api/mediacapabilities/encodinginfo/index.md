@@ -28,7 +28,7 @@ encodingInfo(configuration)
 
         - `record`
           - : Represents a configuration for recording of media, e.g. using {{domxref("MediaRecorder")}}.
-        - `transmission`
+        - `webrtc`
           - : Represents a configuration meant to be transmitted over electronic means (e.g. using {{domxref("RTCPeerConnection")}}).
 
     - `video`
