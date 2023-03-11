@@ -111,31 +111,26 @@ This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_a
 ## Examples
 
 ```html
-<article>
-    <h1>How to be a wizard</h1>
-    <ol>
-        <li>Grow a long, majestic beard.</li>
-        <li>Wear a tall, pointed hat.</li>
-        <li>Have I mentioned the beard?</li>
-    </ol>
-    <footer>
-        <p>© 2018 Gandalf</p>
-    </footer>
-</article>
+<h2>Top Scorers of the 1954 World Cup</h2>
+<ol>
+<li>Sándor Kocsis, Hungary(11)</li>
+<li>Josef Hügi, Switzerland(6)</li>
+<li>Max Morlock, Germany(6)</li>
+  </ol>
+<p><br/></p>
+<footer>
+<small> Copyright © 2004 - 2005 The Linux Information Project. All Rights Reserved.</small>
+
+</footer>
 ```
 
 ```css
-article {
-    min-height: 100%;
-    display: grid;
-    grid-template-rows: auto 1fr auto;
-}
 
 footer {
     display: flex;
     justify-content: center;
     padding: 5px;
-    background-color: #45a1ff;
+    background-color: #aabaab;
     color: #fff;
 }
 ```
