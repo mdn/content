@@ -33,11 +33,11 @@ initMutationEvent(type, canBubble, cancelable, relatedNode,
 - `cancelable`
   - : A boolean indicating whether or not the event's default action can be prevented. Sets the value of {{domxref("Event.cancelable")}}.
 - `relatedNode`
-  - : A string the new value of the modified node, if any. Sets the value of {{domxref("MutationEvent.relatedNode")}}.
+  - : A string representing the new value of the modified node, if any. Sets the value of {{domxref("MutationEvent.relatedNode")}}.
 - `prevValue`
-  - : A string the previous value of the modified node, if any. Sets the value of {{domxref("MutationEvent.prevValue")}}.
+  - : A string representing the previous value of the modified node, if any. Sets the value of {{domxref("MutationEvent.prevValue")}}.
 - `newValue`
-  - : A string the new value of the modified node, if any. Sets the value of {{domxref("MutationEvent.newValue")}}.
+  - : A string representing the new value of the modified node, if any. Sets the value of {{domxref("MutationEvent.newValue")}}.
 - `attrName`
   - : A string representing the name of the {{domxref("Attr")}} node changed, if any. Sets the value of {{domxref("MutationEvent.attrName")}}.
 - `attrChange`
