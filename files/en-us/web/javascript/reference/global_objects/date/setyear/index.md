@@ -32,7 +32,7 @@ setYear(yearValue)
 
 ### Return value
 
-The number of milliseconds between 1 January 1970 00:00:00 UTC and the updated date.
+Changes the {{jsxref("Date")}} object in place, and returns its new [timestamp](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#the_epoch_timestamps_and_invalid_date). If `yearValue` is (or gets [coerced](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#number_coercion) to, such as `undefined`) `NaN`, the date is set to [Invalid Date](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#the_epoch_timestamps_and_invalid_date) and `NaN` is returned.
 
 ## Description
 
