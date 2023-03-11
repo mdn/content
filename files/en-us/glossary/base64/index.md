@@ -27,50 +27,40 @@ This means that the Base64 version of a string or file will be at least 133% the
 
 ## The "Unicode Problem"
 
-Since JavaScript strings are 16-bit-encoded strings, in most browsers calling `window.btoa` on a Unicode string will cause a `Character Out Of Range` exception if a character exceeds the range of a 8-bit ASCII-encoded character. There are two possible methods to solve this problem:
+Since `window.btoa` only accepts characters within the `Latin1` Unicode range (codepoints `0x00..0xff`), calling `window.btoa` on a string will cause a `Character Out Of Range` exception if a character exceeds that range. There are two possible methods to solve this problem:
 
-- the first one is to escape the whole string and then encode it;
-- the second one is to convert the UTF-16 string to an UTF-8 array of characters and then encode it.
+- Convert the string to its constituent bytes in a Unicode encoding, such as UTF-8, then encode the bytes;
+- Escape the whole string and then encode it.
 
-Here are the two possible methods.
+### Converting the string to UTF-8
 
-### Solution 1 – escaping the string before encoding it
-
-```js
-function utf8_to_b64(str) {
-  return window.btoa(unescape(encodeURIComponent(str)));
-}
-
-function b64_to_utf8(str) {
-  return decodeURIComponent(escape(window.atob(str)));
-}
-
-// Usage:
-utf8_to_b64("✓ à la mode"); // "4pyTIMOgIGxhIG1vZGU="
-b64_to_utf8("4pyTIMOgIGxhIG1vZGU="); // "✓ à la mode"
-```
-
-This solution has been proposed by [Johan Sundström](https://ecmanaut.blogspot.com/2006/07/encoding-decoding-utf8-in-javascript.html).
-
-Another possible solution without utilizing the now deprecated 'unescape' and 'escape' functions.
-This alternative, though, does not perform base64 encoding of the input string.
-Note the differences in the outputs of `utf8_to_b64` and `b64EncodeUnicode`.
-Adopting this alternative may lead to interoperability issues with other applications.
+#### Solution 1 – `TextEncoder` and `TextDecoder`
 
 ```js
-function b64EncodeUnicode(str) {
-  return btoa(encodeURIComponent(str));
+const encodeB64 = (str) => {
+  const utf8Bytes = new TextEncoder().encode(str);
+  const asciiCodePoints = String.fromCodePoint(...utf8Bytes);
+
+  return btoa(asciiCodePoints);
 }
 
-function UnicodeDecodeB64(str) {
-  return decodeURIComponent(atob(str));
-}
-
-b64EncodeUnicode("✓ à la mode"); // "JUUyJTlDJTkzJTIwJUMzJUEwJTIwbGElMjBtb2Rl"
-UnicodeDecodeB64("JUUyJTlDJTkzJTIwJUMzJUEwJTIwbGElMjBtb2Rl"); // "✓ à la mode"
+// usage
+encodeB64('á ü 文 🦄') // 'w6Egw7wg5paHIPCfpoQ='
 ```
 
-### Solution 2 – rewriting `atob()` and `btoa()` using `TypedArray`s and UTF-8
+```js
+const decodeB64 = (b64) => {
+  const asciiCodePoints = atob(b64);
+  const utf8Bytes = new Uint8Array(asciiCodePoints.split('').map((char) => char.codePointAt(0)));
+
+  return new TextDecoder().decode(utf8Bytes);
+}
+
+// usage
+encodeB64('w6Egw7wg5paHIPCfpoQ=') // 'á ü 文 🦄'
+```
+
+#### Solution 2 – rewriting `atob()` and `btoa()` using `TypedArray`s and UTF-8
 
 > **Note:** The following code is also useful to get an [ArrayBuffer](/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) from a Base64 string and/or vice versa ([see below](#appendix_decode_a_base64_string_to_uint8array_or_arraybuffer)).
 
@@ -289,7 +279,7 @@ function strToUTF8Arr(sDOMStr) {
 }
 ```
 
-### Tests
+##### Tests
 
 ```js
 /* Tests */
@@ -309,7 +299,43 @@ const sMyOutput = UTF8ArrToStr(aMyUTF8Output);
 alert(sMyOutput);
 ```
 
-### Appendix: Decode a Base64 string to Uint8Array or ArrayBuffer
+#### Escaping the string before encoding it
+
+```js
+function utf8_to_b64(str) {
+  return window.btoa(unescape(encodeURIComponent(str)));
+}
+
+function b64_to_utf8(str) {
+  return decodeURIComponent(escape(window.atob(str)));
+}
+
+// Usage:
+utf8_to_b64("✓ à la mode"); // "4pyTIMOgIGxhIG1vZGU="
+b64_to_utf8("4pyTIMOgIGxhIG1vZGU="); // "✓ à la mode"
+```
+
+This solution has been proposed by [Johan Sundström](https://ecmanaut.blogspot.com/2006/07/encoding-decoding-utf8-in-javascript.html).
+
+Another possible solution without utilizing the now deprecated 'unescape' and 'escape' functions.
+This alternative, though, does not perform base64 encoding of the input string.
+Note the differences in the outputs of `utf8_to_b64` and `b64EncodeUnicode`.
+Adopting this alternative may lead to interoperability issues with other applications.
+
+```js
+function b64EncodeUnicode(str) {
+  return btoa(encodeURIComponent(str));
+}
+
+function UnicodeDecodeB64(str) {
+  return decodeURIComponent(atob(str));
+}
+
+b64EncodeUnicode("✓ à la mode"); // "JUUyJTlDJTkzJTIwJUMzJUEwJTIwbGElMjBtb2Rl"
+UnicodeDecodeB64("JUUyJTlDJTkzJTIwJUMzJUEwJTIwbGElMjBtb2Rl"); // "✓ à la mode"
+```
+
+#### Appendix: Decode a Base64 string to Uint8Array or ArrayBuffer
 
 These function let us to create also [uint8Arrays](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array) or [arrayBuffers](/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) from Base64-encoded strings:
 
