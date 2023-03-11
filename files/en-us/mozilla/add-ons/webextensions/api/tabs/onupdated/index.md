@@ -49,7 +49,7 @@ Events have three functions:
     - `tabId`
       - : `integer`. ID of the tab that was updated.
     - `changeInfo`
-      - : [`object`](#changeinfo). Contains properties for the tab properties that have changed. See [`changeInfo`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/onUpdated#changeinfo) below.
+      - : [`object`](#changeinfo). Contains properties for the tab properties that have changed. See [`changeInfo`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/onUpdated#changeinfo_2) below.
     - `tab`
       - : {{WebExtAPIRef('tabs.Tab')}}. The new state of the tab.
 
