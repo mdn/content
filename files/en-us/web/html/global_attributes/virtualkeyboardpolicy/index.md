@@ -4,7 +4,7 @@ slug: Web/HTML/Global_attributes/virtualkeyboardpolicy
 page-type: html-attribute
 status:
   - experimental
-browser-compat: html.global_attributes.virtualkeyboardpolicy
+spec-urls: https://w3c.github.io/virtual-keyboard/#dom-elementcontenteditable-virtualkeyboardpolicy
 ---
 
 {{HTMLSidebar("Global_attributes")}}{{SeeCompatTable}}
@@ -22,7 +22,7 @@ The attribute must take one of the following values:
 
 ## Browser compatibility
 
-{{Compat}}
+This feature is not implemented by any browser
 
 ## See also
 
