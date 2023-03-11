@@ -32,6 +32,15 @@ x = y; // x is 10
 x = y = z; // x, y and z are all 25
 ```
 
+### The assignment operator evaluates to the assigned value
+
+```js
+let x;
+console.log(x); // undefined
+console.log(x = 2) // 2
+console.log(x); // 2
+```
+
 ## Specifications
 
 {{Specifications}}
