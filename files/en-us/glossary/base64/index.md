@@ -12,12 +12,12 @@ One common application of Base64 encoding on the web is to encode binary data so
 
 In JavaScript there are two functions respectively for decoding and encoding Base64 strings:
 
-- [`btoa()`](/en-US/docs/Web/API/btoa): creates a Base64-encoded ASCII string from a "string" of binary data ("btoa" should be read as "binary to ASCII").
+- [`btoa()`](/en-US/docs/Web/API/btoa): creates a Base64-encoded ASCII string from a string of binary data ("btoa" should be read as "binary to ASCII").
 - [`atob()`](/en-US/docs/Web/API/atob): decodes a Base64-encoded string ("atob" should be read as "ASCII to binary").
 
 The algorithm used by `atob()` and `btoa()` is specified in [RFC 4648](https://datatracker.ietf.org/doc/html/rfc4648), section 4.
 
-> **Note:** `btoa()` expects to be passed binary data, and will throw an exception if the given string contains any characters whose UTF-16 representation occupies more than one byte.
+> **Note:** `btoa()` expects to be passed a string of "binary" data and will throw an exception if the given string contains any characters whose codepoint exceeds `0xff` (the maximum value that can be held in 1 byte). See [§ The "Unicode Problem"](#the_unicode_problem) for ways of working around this limitation.
 
 ## Encoded size increase
 
@@ -27,7 +27,7 @@ This means that the Base64 version of a string or file will be at least 133% the
 
 ## The "Unicode Problem"
 
-Since `window.btoa` only accepts characters within the `Latin1` Unicode range (codepoints `0x00..0xff`), calling `window.btoa` on a string will cause a `Character Out Of Range` exception if a character exceeds that range. There are two possible methods to solve this problem:
+Since `btoa` only accepts characters within the `Latin1` Unicode range (codepoints `0x00..0xff`), calling `btoa` on a string will cause a `Character Out Of Range` exception if a character exceeds that range. There are two possible methods to solve this problem:
 
 - Convert the string to its constituent bytes in a Unicode encoding, such as UTF-8, then encode the bytes;
 - Escape the whole string and then encode it.
@@ -37,30 +37,32 @@ Since `window.btoa` only accepts characters within the `Latin1` Unicode range (c
 #### Solution 1 – `TextEncoder` and `TextDecoder`
 
 ```js
-function encodeB64(str) {
-  const utf8Bytes = new TextEncoder().encode(str);
-  const asciiCodePoints = String.fromCodePoint(...utf8Bytes);
+function encodeBase64(unicodeString) {
+  const utf8Bytes = new TextEncoder().encode(unicodeString);
+  const binString = Array.from(utf8Bytes, (x) => String.fromCodePoint(x)).join(
+    ""
+  );
 
-  return btoa(asciiCodePoints);
+  return btoa(binString);
 }
 
-// usage
-encodeB64("á ü 文 🦄"); // 'w6Egw7wg5paHIPCfpoQ='
+// Usage
+encodeBase64("a Ā 𐀀 文 🦄"); // "YSDEgCDwkICAIOaWhyDwn6aE"
 ```
 
 ```js
-function decodeB64(b64) {
-  const asciiCodePoints = atob(b64);
-  const utf8Bytes = new Uint8Array(asciiCodePoints.split('').map((char) => char.codePointAt(0)));
+function decodeBase64(base64String) {
+  const binString = atob(base64String);
+  const utf8Bytes = Uint8Array.from(binString, (m) => m.codePointAt(0));
 
   return new TextDecoder().decode(utf8Bytes);
 }
 
-// usage
-encodeB64("w6Egw7wg5paHIPCfpoQ="); // 'á ü 文 🦄'
+// Usage
+decodeBase64("YSDEgCDwkICAIOaWhyDwn6aE"); // "a Ā 𐀀 文 🦄"
 ```
 
-#### Solution 2 – rewriting `atob()` and `btoa()` using `TypedArray`s and UTF-8
+#### Solution 2 – custom UTF-8 implementation using `TypedArray`s
 
 > **Note:** The following code is also useful to get an [ArrayBuffer](/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) from a Base64 string and/or vice versa ([see below](#appendix_decode_a_base64_string_to_uint8array_or_arraybuffer)).
 
@@ -299,7 +301,7 @@ const sMyOutput = UTF8ArrToStr(aMyUTF8Output);
 alert(sMyOutput);
 ```
 
-#### Escaping the string before encoding it
+### Escaping the string before encoding it
 
 ```js
 function utf8_to_b64(str) {
@@ -335,9 +337,9 @@ b64EncodeUnicode("✓ à la mode"); // "JUUyJTlDJTkzJTIwJUMzJUEwJTIwbGElMjBtb2Rl
 UnicodeDecodeB64("JUUyJTlDJTkzJTIwJUMzJUEwJTIwbGElMjBtb2Rl"); // "✓ à la mode"
 ```
 
-#### Appendix: Decode a Base64 string to Uint8Array or ArrayBuffer
+### Appendix: Decode a Base64 string to Uint8Array or ArrayBuffer
 
-These function let us to create also [uint8Arrays](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array) or [arrayBuffers](/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) from Base64-encoded strings:
+The functions in [§ Solution 2 – custom UTF-8 implementation using `TypedArray`s](#solution_2_–_custom_utf-8_implementation_using_typedarrays) also let us create [uint8Arrays](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array) or [arrayBuffers](/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) from Base64-encoded strings:
 
 ```js
 // "Base 64 \u2014 Mozilla Developer Network"
@@ -354,7 +356,7 @@ alert(myBuffer.byteLength);
 ```
 
 > **Note:** The function `base64DecToArr(sBase64[, nBlocksSize])` returns
-> an [`uint8Array`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array) of bytes.
+> a [`uint8Array`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array) of bytes.
 > If your aim is to build a buffer of 16-bit / 32-bit / 64-bit raw data,
 > use the `nBlocksSize` argument,
 > which is the number of bytes of which the `uint8Array.buffer.bytesLength` property must result a multiple
