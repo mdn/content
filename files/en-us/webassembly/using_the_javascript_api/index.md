@@ -79,6 +79,7 @@ In Firefox 54+, the Developer Tool Debugger Panel has functionality to expose th
 ![Developer tools debugger panel highlighting a module.](wasm-debug.png)
 
 In addition to viewing WebAssembly as text, developers are able to debug (place breakpoints, inspect the callstack, single-step, etc.) WebAssembly using the text format.
+
 ## Memory
 
 In the low-level memory model of WebAssembly, memory is represented as a contiguous range of untyped bytes called [Linear Memory](https://webassembly.github.io/spec/core/exec/index.html) that are read and written by [load and store instructions](https://webassembly.github.io/spec/core/exec/instructions.html#memory-instructions) inside the module. In this memory model, any load or store can access any byte in the entire linear memory, which is necessary to faithfully represent C/C++ concepts like pointers.
