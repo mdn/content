@@ -41,7 +41,7 @@ One of the `onFulfilled` and `onRejected` handlers will be executed to handle th
 - throws an error: `p` gets rejected with the thrown error as its value.
 - returns an already fulfilled promise: `p` gets fulfilled with that promise's value as its value.
 - returns an already rejected promise: `p` gets rejected with that promise's value as its value.
-- returns another pending promise: the fulfillment/rejection of the promise returned by `then` will be subsequent to the resolution/rejection of the promise returned by the handler. Also, the resolved value of the promise returned by `then` will be the same as the resolved value of the promise returned by the handler.
+- returns another pending promise: the fulfillment/rejection of `p` will be subsequent to the fulfillment/rejection of that promise. Also, `p` will get fulfilled/rejected with that promise's value as its value.
 
 ## Description
 
