@@ -1,17 +1,12 @@
 ---
 title: Sec-CH-UA
 slug: Web/HTTP/Headers/Sec-CH-UA
-tags:
-  - Sec-CH-UA
-  - Client hint
-  - HTTP
-  - HTTP Header
-  - Reference
-  - Request header
-  -  Experimental
+status:
+  - experimental
 browser-compat: http.headers.Sec-CH-UA
 ---
-{{HTTPSidebar}} {{SeeCompatTable}} {{securecontext_header}}
+
+{{HTTPSidebar}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The **`Sec-CH-UA`** [user agent client hint](/en-US/docs/Web/HTTP/Client_hints#user-agent_client_hints) request header provides the user-agent's branding and significant version information.
 

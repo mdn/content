@@ -1,16 +1,8 @@
 ---
 title: Using CSS generated content
 slug: Learn/CSS/Howto/Generated_content
-tags:
-  - Basic
-  - Beginner
-  - CSS
-  - CSS:Getting_Started
-  - Graphics
-  - Guide
-  - NeedsUpdate
-  - Web
 ---
+
 {{LearnSidebar}}
 
 This article describes some ways in which you can use CSS to add content when a document is displayed. You modify your stylesheet to add text content or images.
@@ -27,7 +19,7 @@ This issue does not arise if the content you specify consists of symbols or imag
 
 ### Text content
 
-CSS can insert text content before or after an element. To specify this, make a rule and add {{ cssxref("::before") }} or {{ cssxref("::after") }} to the selector. In the declaration, specify the {{ cssxref("content") }} property with the text content as its value.
+CSS can insert text content before or after an element, or change the content of a list item marker (such as a bullet symbol or number) before a {{HTMLElement('li')}} or other element with {{ cssxref("display", "display: list-item;") }}. To specify this, make a rule and add {{ cssxref("::before") }}, {{ cssxref("::after") }}, or {{cssxref("::marker")}} to the selector. In the declaration, specify the {{ cssxref("content") }} property with the text content as its value.
 
 #### HTML
 
@@ -69,7 +61,7 @@ This rule adds a space and an icon after every link that has the class `glossary
 
 ```css
 a.glossary::after {
-   content: " " url("glossary-icon.gif");
+  content: " " url("glossary-icon.gif");
 }
 ```
 

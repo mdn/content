@@ -1,12 +1,12 @@
 ---
 title: hanging
 slug: Web/SVG/Attribute/hanging
-tags:
-  - Deprecated
-  - SVG
-  - SVG Attribute
+page-type: svg-attribute
+status:
+  - deprecated
 browser-compat: svg.elements.font-face.hanging
 ---
+
 {{SVGRef}}{{Deprecated_Header}}
 
 The **`hanging`** attribute indicates the alignment coordinate for {{Glossary("glyph", "glyphs")}} to achieve hanging baseline alignment for horizontally oriented glyph layouts. The value is an offset in the font coordinate system.
@@ -45,24 +45,7 @@ You can use this attribute with the following SVG elements:
 
 ## Specifications
 
-<table class="no-markdown">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        {{SpecName("SVG1.1", "fonts.html#FontFaceElementHangingAttribute", "hanging")}}
-      </td>
-      <td>{{Spec2("SVG1.1")}}</td>
-      <td>Initial definition</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 ## Browser compatibility
 

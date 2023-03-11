@@ -1,23 +1,10 @@
 ---
 title: Introduction to WebRTC protocols
 slug: Web/API/WebRTC_API/Protocols
-tags:
-  - API
-  - Audio
-  - Beginner
-  - Draft
-  - Guide
-  - ICE
-  - Media
-  - NAT
-  - SDP
-  - STUN
-  - TURN
-  - Video
-  - WebRTC
-  - WebRTC API
+page-type: guide
 ---
-{{WebRTCSidebar}}
+
+{{DefaultAPISidebar("WebRTC")}}
 
 This article introduces the protocols on top of which the WebRTC API is built.
 
@@ -37,7 +24,7 @@ The client will send a request to a STUN server on the Internet who will reply w
 
 [Network Address Translation (NAT)](https://en.wikipedia.org/wiki/Network_address_translation) is used to give your device a public IP address. A router will have a public IP address and every device connected to the router will have a private IP address. Requests will be translated from the device's private IP to the router's public IP with a unique port. That way you don't need a unique public IP for each device but can still be discovered on the Internet.
 
-Some routers will have restrictions on who can connect to devices on the network. This can mean that even though we have the public IP address found by the STUN server, not anyone can create a connection. In this situation we need to turn to TURN.
+Some routers will have restrictions on who can connect to devices on the network. This can mean that even though we have the public IP address found by the STUN server, not anyone can create a connection. In this situation we need to use TURN.
 
 ## TURN
 

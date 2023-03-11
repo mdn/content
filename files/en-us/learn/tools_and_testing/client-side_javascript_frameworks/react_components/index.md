@@ -1,17 +1,8 @@
 ---
 title: Componentizing our React app
 slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_components
-tags:
-  - Beginner
-  - Frameworks
-  - JavaScript
-  - Learn
-  - React
-  - client-side
-  - events
-  - interactivity
-  - state
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_events_state", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
 
 At this point, our app is a monolith. Before we can make it do things, we need to break it apart into manageable, descriptive components. React doesn't have any hard rules for what is and isn't a component – that's up to you! In this article we will show you a sensible way to break our app up into components.
@@ -62,23 +53,23 @@ touch src/components/Todo.js
 
 Our new `Todo.js` file is currently empty! Open it up and give it its first line:
 
-```js
+```jsx
 import React from "react";
 ```
 
 Since we're going to make a component called `Todo`, you can start adding the code for that to `Todo.js` too, as follows. In this code, we define the function and export it on the same line:
 
-```js
+```jsx
 export default function Todo() {
   return (
-
+    // …
   );
 }
 ```
 
 This is OK so far, but our component has to return something! Go back to `src/App.js`, copy the first [`<li>`](/en-US/docs/Web/HTML/Element/li) from inside the unordered list, and paste it into `Todo.js` so that it reads like this:
 
-```js
+```jsx
 export default function Todo() {
   return (
     <li className="todo stack-small">
@@ -105,13 +96,13 @@ export default function Todo() {
 
 Our `Todo` component is complete, at least for now; now we can use it. In `App.js`, add the following line near the top of the file to import `Todo`:
 
-```js
+```jsx
 import Todo from "./components/Todo";
 ```
 
 With this component imported, you can replace all of the `<li>` elements in `App.js` with `<Todo />` component calls. Your `<ul>` should read like this:
 
-```js
+```jsx
 <ul
   role="list"
   className="todo-list stack-large stack-exception"
@@ -129,7 +120,7 @@ When you look back at your browser, you'll notice something unfortunate: your li
 
 We don't only want to eat; we have other things to — well — to do. Next we'll look at how we can make different component calls render unique content.
 
-## Make a _unique_ `<Todo />`
+## Make a unique `<Todo />`
 
 Components are powerful because they let us re-use pieces of our UI, and refer to one place for the source of that UI. The problem is, we don't typically want to reuse all of each component; we want to reuse most parts, and change small pieces. This is where props come in.
 
@@ -139,7 +130,7 @@ In order to track the names of tasks we want to complete, we should ensure that 
 
 In `App.js`, give each `<Todo />` a name prop. Let's use the names of our tasks that we had before:
 
-```js
+```jsx
 <Todo name="Eat" />
 <Todo name="Sleep" />
 <Todo name="Repeat" />
@@ -153,7 +144,7 @@ Once you're confident that your component is getting its `props`, you can replac
 
 Putting all that together, your `Todo()` function should read like this:
 
-```js
+```jsx
 export default function Todo(props) {
   return (
     <li className="todo stack-small">
@@ -182,9 +173,9 @@ _Now_ your browser should show three unique tasks. Another problem remains thoug
 
 ### Is it `completed`?
 
-In our original static list, only `Eat` was checked. Once again, we want to reuse _most_ of the UI that makes up a `<Todo />`  component, but change one thing. That's a good job for another prop!  Give each `<Todo />` call in `App.js` a new prop of `completed`. The first (`Eat`) should have a value of `true`; the rest should be `false`:
+In our original static list, only `Eat` was checked. Once again, we want to reuse _most_ of the UI that makes up a `<Todo />` component, but change one thing. That's a good job for another prop! Give each `<Todo />` call in `App.js` a new prop of `completed`. The first (`Eat`) should have a value of `true`; the rest should be `false`:
 
-```js
+```jsx
 <Todo name="Eat" completed={true} />
 <Todo name="Sleep" completed={false} />
 <Todo name="Repeat" completed={false} />
@@ -192,7 +183,7 @@ In our original static list, only `Eat` was checked. Once again, we want to reus
 
 As before, we must go back to `Todo.js` to actually use these props. Change the `defaultChecked` attribute on the `<input />` so that its value is equal to the `completed` prop. Once you're done, the Todo component's `<input />` element will read like this:
 
-```js
+```jsx
 <input id="todo-0" type="checkbox" defaultChecked={props.completed} />
 ```
 
@@ -208,7 +199,7 @@ Right now, our `<Todo />` component gives every task an `id` attribute of `todo-
 
 To follow the same pattern we had initially, let's give each instance of the `<Todo />` component an ID in the format of `todo-i`, where `i` gets larger by one every time:
 
-```js
+```jsx
 <Todo name="Eat" completed={true} id="todo-0" />
 <Todo name="Sleep" completed={false} id="todo-1" />
 <Todo name="Repeat" completed={false} id="todo-2" />
@@ -216,7 +207,7 @@ To follow the same pattern we had initially, let's give each instance of the `<T
 
 Now go back to `Todo.js` and make use of the `id` prop. It needs to replace the value of the `id` attribute of the `<input />` element, as well as the value of its label's `htmlFor` attribute:
 
-```js
+```jsx
 <div className="c-cb">
   <input id={props.id} type="checkbox" defaultChecked={props.completed} />
   <label className="todo-label" htmlFor={props.id}>
@@ -237,7 +228,7 @@ Each of our tasks currently contains three pieces of information: its name, whet
 
 In `src/index.js`, make a new `const` beneath the final import, but above `ReactDOM.render()`:
 
-```js
+```jsx
 const DATA = [
   { id: "todo-0", name: "Eat", completed: true },
   { id: "todo-1", name: "Sleep", completed: false },
@@ -247,8 +238,13 @@ const DATA = [
 
 Next, we'll pass `DATA` to `<App />` as a prop, called `tasks`. The final line of `src/index.js` should read like this:
 
-```js
-ReactDOM.render(<App tasks={DATA} />, document.getElementById("root"));
+```jsx
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(
+  <React.StrictMode>
+    <App tasks={DATA} />
+  </React.StrictMode>
+);
 ```
 
 This array is now available to the App component as `props.tasks`. You can `console.log()` it to check, if you'd like.
@@ -261,13 +257,13 @@ To render our array of objects, we have to turn each one into a `<Todo />` compo
 
 Above the return statement of `App()`, make a new `const` called `taskList` and use `map()` to transform it. Let's start by turning our `tasks` array into something simple: the `name` of each task:
 
-```js
-const taskList = props.tasks?.map(task => task.name);
+```jsx
+const taskList = props.tasks?.map((task) => task.name);
 ```
 
 Let's try replacing all the children of the `<ul>` with `taskList`:
 
-```js
+```jsx
 <ul
   role="list"
   className="todo-list stack-large stack-exception"
@@ -283,14 +279,14 @@ This gets us some of the way towards showing all the components again, but we've
 
 To fix this, we need to return a `<Todo />` component from our `map()` function — remember that JSX allows us to mix up JavaScript and markup structures! Let's try the following instead of what we have already:
 
-```js
- const taskList = props.tasks.map(task => <Todo />);
+```jsx
+  const taskList = props.tasks.map((task) => <Todo />);
 ```
 
-Look again at your app; now our tasks look more like they used to, but they're missing the names of the tasks themselves.  Remember that each task we map over has the `id`, `name`, and `checked` properties we want to pass into our `<Todo />` component. If we put that knowledge together, we get code like this:
+Look again at your app; now our tasks look more like they used to, but they're missing the names of the tasks themselves. Remember that each task we map over has the `id`, `name`, and `completed` properties we want to pass into our `<Todo />` component. If we put that knowledge together, we get code like this:
 
-```js
-const taskList = props.tasks.map(task => (
+```jsx
+const taskList = props.tasks.map((task) => (
   <Todo id={task.id} name={task.name} completed={task.completed} />
 ));
 ```
@@ -303,8 +299,8 @@ Now that React is rendering our tasks out of an array, it has to keep track of w
 
 Because keys should be unique, we're going to re-use the `id` of each task object as its key. Update your `taskList` constant like so:
 
-```js
-const taskList = props.tasks.map(task => (
+```jsx
+const taskList = props.tasks.map((task) => (
     <Todo
       id={task.id}
       name={task.name}
@@ -319,7 +315,7 @@ const taskList = props.tasks.map(task => (
 
 ## Componentizing the rest of the app
 
-Now that we've got our most important component sorted out, we can turn the rest of our app into components. Remembering that components are either obvious pieces of UI, or reused pieces of UI, or both, we can make two more components:
+Now that we've got our most important component sorted out, we can turn the rest of our app into components. Remembering that components are either obvious pieces of UI, reused pieces of UI, or both, we can make two more components:
 
 - `<Form/>`
 - `<FilterButton/>`
@@ -341,7 +337,7 @@ Open `components/Form.js` and do the following:
 
 Your `Form.js` file should read like this:
 
-```js
+```jsx
 import React from "react";
 
 function Form(props) {
@@ -375,7 +371,7 @@ Do the same things you did to create `Form.js` inside `FilterButton.js`, but cal
 
 The file should read like this:
 
-```js
+```jsx
 import React from "react";
 
 function FilterButton(props) {
@@ -401,14 +397,14 @@ Add some more `import` statements to the top of `App.js`, to import them.
 
 Then, update the `return` statement of `App()` so that it renders our components. When you're done, `App.js` will read like this:
 
-```js
+```jsx
 import React from "react";
 import Form from "./components/Form";
 import FilterButton from "./components/FilterButton";
 import Todo from "./components/Todo";
 
 function App(props) {
-  const taskList = props.tasks.map(task => (
+  const taskList = props.tasks.map((task) => (
     <Todo
         id={task.id}
         name={task.name}
@@ -448,58 +444,3 @@ With this in place, we're _almost_ ready to tackle some interactivity in our Rea
 And that's it for this article — we've gone into some depth on how to break up your app nicely into components, and render them efficiently. Now we'll go on to look at how we handle events in React, and start adding some interactivity.
 
 {{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_events_state", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
-
-## In this module
-
-- [Introduction to client-side frameworks](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Introduction)
-- [Framework main features](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features)
-- React
-
-  - [Getting started with React](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started)
-  - [Beginning our React todo list](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning)
-  - [Componentizing our React app](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_components)
-  - [React interactivity: Events and state](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_events_state)
-  - [React interactivity: Editing, filtering, conditional rendering](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_filtering_conditional_rendering)
-  - [Accessibility in React](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_accessibility)
-  - [React resources](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_resources)
-
-- Ember
-
-  - [Getting started with Ember](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_getting_started)
-  - [Ember app structure and componentization](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_structure_componentization)
-  - [Ember interactivity: Events, classes and state](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_interactivity_events_state)
-  - [Ember Interactivity: Footer functionality, conditional rendering](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_conditional_footer)
-  - [Routing in Ember](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_routing)
-  - [Ember resources and troubleshooting](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_resources)
-
-- Vue
-
-  - [Getting started with Vue](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_getting_started)
-  - [Creating our first Vue component](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_first_component)
-  - [Rendering a list of Vue components](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_rendering_lists)
-  - [Adding a new todo form: Vue events, methods, and models](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_methods_events_models)
-  - [Styling Vue components with CSS](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_styling)
-  - [Using Vue computed properties](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_computed_properties)
-  - [Vue conditional rendering: editing existing todos](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_conditional_rendering)
-  - [Focus management with Vue refs](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_refs_focus_management)
-  - [Vue resources](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_resources)
-
-- Svelte
-
-  - [Getting started with Svelte](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_getting_started)
-  - [Starting our Svelte Todo list app](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_Todo_list_beginning)
-  - [Dynamic behavior in Svelte: working with variables and props](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_variables_props)
-  - [Componentizing our Svelte app](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_components)
-  - [Advanced Svelte: Reactivity, lifecycle, accessibility](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_reactivity_lifecycle_accessibility)
-  - [Working with Svelte stores](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_stores)
-  - [TypeScript support in Svelte](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_TypeScript)
-  - [Deployment and next steps](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_deployment_next)
-
-- Angular
-
-  - [Getting started with Angular](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_getting_started)
-  - [Beginning our Angular todo list app](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_todo_list_beginning)
-  - [Styling our Angular app](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_styling)
-  - [Creating an item component](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_item_component)
-  - [Filtering our to-do items](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_filtering)
-  - [Building Angular applications and further resources](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_building)

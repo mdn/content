@@ -1,37 +1,21 @@
 ---
 title: KeyframeEffect.iterationComposite
 slug: Web/API/KeyframeEffect/iterationComposite
-tags:
-  - API
-  - Animation
-  - Experimental
-  - KeyframeEffect
-  - Property
-  - Reference
-  - iterationComposite
-  - waapi
-  - web animations api
+page-type: web-api-instance-property
 browser-compat: api.KeyframeEffect.iterationComposite
 ---
-{{ SeeCompatTable() }}{{ APIRef("Web Animations API") }}
+
+{{ APIRef("Web Animations API") }}
 
 The **`iterationComposite`** property of a {{domxref("KeyframeEffect")}} resolves how the animation's property value changes accumulate or override each other upon each of the animation's iterations.
 
-## Syntax
+## Value
 
-```js
-// getting
-var iterationCompositeEnumeration = keyframeEffect.iterationComposite;
+One of the following:
 
-// setting
-keyframeEffect.iterationComposite = 'replace';
-```
-
-### Values
-
-- replace
+- `replace`
   - : The `keyframeEffect` value produced is independent of the current iteration.
-- accumulate
+- `accumulate`
   - : Subsequent iterations of the `keyframeEffect` build on the final value of the previous iteration.
 
 ## Specifications

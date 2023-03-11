@@ -1,15 +1,10 @@
 ---
 title: Request.arrayBuffer()
 slug: Web/API/Request/arrayBuffer
-tags:
-  - API
-  - ArrayBuffer
-  - Fetch
-  - Method
-  - Reference
-  - Request
+page-type: web-api-instance-method
 browser-compat: api.Request.arrayBuffer
 ---
+
 {{APIRef("Fetch")}}
 
 The **`arrayBuffer()`** method of the {{domxref("Request")}} interface
@@ -17,10 +12,8 @@ reads the request body and returns it as a promise that resolves with an {{jsxre
 
 ## Syntax
 
-```js
-request.arrayBuffer().then(function(buffer) {
-   // do something with the buffer
-});
+```js-nolint
+arrayBuffer()
 ```
 
 ### Parameters
@@ -36,12 +29,12 @@ A promise that resolves with an {{jsxref("ArrayBuffer")}}.
 ```js
 const myArray = new Uint8Array(10);
 
-const request = new Request('/myEndpoint', {
-  method: 'POST',
-  body: myArray
+const request = new Request("/myEndpoint", {
+  method: "POST",
+  body: myArray,
 });
 
-request.arrayBuffer().then(function(buffer) {
+request.arrayBuffer().then((buffer) => {
   // do something with the buffer sent in the request
 });
 ```

@@ -1,17 +1,10 @@
 ---
 title: CSSTransformComponent.toMatrix()
 slug: Web/API/CSSTransformComponent/toMatrix
-tags:
-  - API
-  - CSS Typed Object Model API
-  - CSSTransformComponent
-  - Experimental
-  - Houdini
-  - Method
-  - Reference
-  - toMatrix
+page-type: web-api-instance-method
 browser-compat: api.CSSTransformComponent.toMatrix
 ---
+
 {{APIRef("CSS Typed OM")}}
 
 The **`toMatrix()`** method of the
@@ -24,13 +17,13 @@ All transform functions can be represented mathematically as a 4x4 transformatio
 
 ## Syntax
 
-```js
-var matrix = CSSTransformComponent.toMatrix();
+```js-nolint
+toMatrix()
 ```
 
 ### Parameters
 
-None
+None.
 
 ### Return value
 

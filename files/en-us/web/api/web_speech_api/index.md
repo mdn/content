@@ -1,15 +1,12 @@
 ---
 title: Web Speech API
 slug: Web/API/Web_Speech_API
-tags:
-  - API
-  - Landing
-  - Reference
-  - Web Speech API
-  - recognition
-  - speech
-  - synthesis
+page-type: web-api-overview
+browser-compat:
+  - api.SpeechRecognition
+  - api.SpeechSynthesis
 ---
+
 {{DefaultAPISidebar("Web Speech API")}}
 
 The **Web Speech API** enables you to incorporate voice data into web apps.
@@ -36,10 +33,10 @@ For more details on using these features, see [Using the Web Speech API](/en-US/
   - : The controller interface for the recognition service; this also handles the {{domxref("SpeechRecognitionEvent")}} sent from the recognition service.
 - {{domxref("SpeechRecognitionAlternative")}}
   - : Represents a single word that has been recognized by the speech recognition service.
-- {{domxref("SpeechRecognitionError")}} {{deprecated_inline}}
+- {{domxref("SpeechRecognitionErrorEvent")}}
   - : Represents error messages from the recognition service.
 - {{domxref("SpeechRecognitionEvent")}}
-  - : The event object for the {{event("result")}} and {{event("nomatch")}} events, and contains all the data associated with an interim or final speech recognition result.
+  - : The event object for the {{domxref("SpeechRecognition.result_event", "result")}} and {{domxref("SpeechRecognition.nomatch_event", "nomatch")}} events, and contains all the data associated with an interim or final speech recognition result.
 - {{domxref("SpeechGrammar")}}
   - : The words or patterns of words that we want the recognition service to recognize.
 - {{domxref("SpeechGrammarList")}}
@@ -66,29 +63,27 @@ For more details on using these features, see [Using the Web Speech API](/en-US/
 - {{domxref("Window.speechSynthesis")}}
   - : Specified out as part of a `[NoInterfaceObject]` interface called `SpeechSynthesisGetter`, and Implemented by the `Window` object, the `speechSynthesis` property provides access to the {{domxref("SpeechSynthesis")}} controller, and therefore the entry point to speech synthesis functionality.
 
+## Errors
+
+For information on errors reported by the Speech API (for example, `"language-not-supported"` and `"language-unavailable"`), see the following documentation:
+
+- [`error` property of the `SpeechRecognitionErrorEvent` object](/en-US/docs/Web/API/SpeechRecognitionErrorEvent/error)
+- [`error` property of the `SpeechSynthesisErrorEvent` object](/en-US/docs/Web/API/SpeechSynthesisErrorEvent/error)
+
 ## Examples
 
-The [Web Speech API repo](https://github.com/mdn/web-speech-api/) on GitHub contains demos to illustrate speech recognition and synthesis.
+The [Web Speech API examples](https://github.com/mdn/dom-examples/tree/main/web-speech-api) on GitHub contains demos to illustrate speech recognition and synthesis.
 
 ## Specifications
 
-| Specification      |
-| ------------------ |
-| [Web Speech API](https://wicg.github.io/speech-api/) |
+{{Specifications}}
 
 ## Browser compatibility
 
-### `SpeechRecognition`
-
-{{Compat("api.SpeechRecognition", 0)}}
-
-### `SpeechSynthesis`
-
-{{Compat("api.SpeechSynthesis", 0)}}
+{{Compat}}
 
 ## See also
 
 - [Using the Web Speech API](/en-US/docs/Web/API/Web_Speech_API/Using_the_Web_Speech_API)
 - [SitePoint article](https://www.sitepoint.com/talking-web-pages-and-the-speech-synthesis-api/)
-- [HTML5Rocks article](http://updates.html5rocks.com/2014/01/Web-apps-that-talk---Introduction-to-the-Speech-Synthesis-API)
-- [Demo](https://aurelio.audero.it/demo/speech-synthesis-api-demo.html) \[aurelio.audero.it]
+- [HTML5Rocks article](https://developer.chrome.com/blog/web-apps-that-talk-introduction-to-the-speech-synthesis-api/)

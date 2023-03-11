@@ -1,18 +1,10 @@
 ---
 title: RTCRtpSender.getStats()
 slug: Web/API/RTCRtpSender/getStats
-tags:
-  - API
-  - Media
-  - Method
-  - RTCRtpSender
-  - Reference
-  - WebRTC
-  - WebRTC Statistics
-  - WebRTC Statistics API
-  - getStats
+page-type: web-api-instance-method
 browser-compat: api.RTCRtpSender.getStats
 ---
+
 {{APIRef("WebRTC")}}
 
 The {{domxref("RTCRtpSender")}} method **`getStats()`**
@@ -23,9 +15,13 @@ available.
 
 ## Syntax
 
-```js
-var promise = RTCRtpSender.getStats();
+```js-nolint
+getStats()
 ```
+
+### Parameters
+
+None.
 
 ### Return value
 
@@ -37,16 +33,15 @@ The returned `RTCStatsReport` accumulates the statistics for all of the
 streams being sent using the `RTCRtpSender`, as well as the statistics for
 any dependencies those streams have.
 
-## Example
+## Examples
 
 This simple example obtains the statistics for an `RTCRtpSender` and updates
 an element's {{domxref("HTMLElement/innerText", "innerText")}} to display the current round
 trip time for requests on the sender.
 
 ```js
-sender.getStats().then(function(stats) {
-  document.getElementById("currentRTT").innerText =
-          stats.roundTripTime;
+sender.getStats().then((stats) => {
+  document.getElementById("currentRTT").innerText = stats.roundTripTime;
 });
 ```
 

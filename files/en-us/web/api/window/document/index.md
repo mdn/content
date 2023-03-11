@@ -1,19 +1,19 @@
 ---
 title: Window.document
 slug: Web/API/Window/document
-tags:
-  - API
-  - HTML DOM
-  - Property
-  - Reference
-  - Window
+page-type: web-api-instance-property
 browser-compat: api.Window.document
 ---
+
 {{APIRef}}
 
 **`window.document`** returns a reference to the [document](/en-US/docs/Web/API/Document) contained in the window.
 
-## Example
+## Value
+
+A [document](/en-US/docs/Web/API/Document) object.
+
+## Examples
 
 ```js
 console.log(window.document.title);

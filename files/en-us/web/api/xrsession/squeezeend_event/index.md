@@ -1,29 +1,13 @@
 ---
 title: 'XRSession: squeezeend event'
 slug: Web/API/XRSession/squeezeend_event
-tags:
-  - API
-  - AR
-  - Event
-  - Input Sources
-  - Mixed
-  - Primary Squeeze Actions
-  - Reality
-  - Reference
-  - Squeeze Actions
-  - VR
-  - Virtual
-  - WebXR
-  - WebXR API
-  - WebXR Device API
-  - XR
-  - XRSession
-  - actions
-  - augmented
-  - squeezeend
+page-type: web-api-event
+status:
+  - experimental
 browser-compat: api.XRSession.squeezeend_event
 ---
-{{APIRef("WebXR Device API")}}
+
+{{APIRef("WebXR Device API")}}{{SeeCompatTable}}
 
 The WebXR event **`squeezeend`** is sent to an {{domxref("XRSession")}} when one of its input sources ends its [primary action](/en-US/docs/Web/API/WebXR_Device_API/Inputs#primary_squeeze_actions) or when an input source that's in the process of handling an ongoing primary action is disconnected without successfully completing the action.
 
@@ -34,9 +18,9 @@ Primary squeeze actions include things like users pressing triggers or buttons, 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('squeezeend', event => { })
+addEventListener('squeezeend', (event) => { })
 
-onsqueezeend = event => { }
+onsqueezeend = (event) => { }
 ```
 
 ## Event type

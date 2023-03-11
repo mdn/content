@@ -1,15 +1,10 @@
 ---
 title: Element.clientTop
 slug: Web/API/Element/clientTop
-tags:
-  - API
-  - CSSOM View
-  - NeedsAgnostify
-  - NeedsMarkupWork
-  - Property
-  - Reference
+page-type: web-api-instance-property
 browser-compat: api.Element.clientTop
 ---
+
 {{ APIRef("DOM") }}
 
 The width of the top border of an element in pixels. It is a read-only, integer
@@ -27,13 +22,11 @@ then **`clientTop`** is also zero.
 > **Note:** This property will round the value to an integer. If you
 > need a fractional value, use {{ domxref("element.getBoundingClientRect()") }}.
 
-## Syntax
+## Value
 
-```js
-var top = element.clientTop;
-```
+A number.
 
-## Example
+## Examples
 
 In the following example, the client area has a white background and a 24px black `border-top`. The `clientTop` value is the distance from where the margin (yellow) area ends and the padding and content areas (white) begin: that is, 24px.
 
@@ -42,9 +35,12 @@ In the following example, the client area has a white background and a 24px blac
 ```html
 <div id="container">
   <div id="contained">
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-    nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+      veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+      commodo consequat.
+    </p>
   </div>
 </div>
 ```
@@ -52,7 +48,6 @@ In the following example, the client area has a white background and a 24px blac
 ### CSS
 
 ```css
-
 #container {
   margin: 3rem;
   background-color: rgb(255, 255, 204);
@@ -70,7 +65,7 @@ In the following example, the client area has a white background and a 24px blac
 
 ### Result
 
-{{EmbedLiveSample("Example", 400, 350)}}
+{{EmbedLiveSample("Examples", 400, 350)}}
 
 ## Notes
 

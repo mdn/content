@@ -1,16 +1,8 @@
 ---
 title: Converting WebAssembly text format to wasm
 slug: WebAssembly/Text_format_to_wasm
-tags:
-  - WebAssembly
-  - assembly
-  - conversion
-  - text format
-  - wabt
-  - wasm
-  - wast2wasm
-  - wat2wasm
 ---
+
 {{WebAssemblySidebar}}
 
 WebAssembly has an S-expression-based textual representation, an intermediate form designed to be exposed in text editors, browser developer tools, etc. This article explains a little bit about how it works, and how to use available tools to convert text format files to the `.wasm` assembly format.
@@ -42,9 +34,9 @@ Let's have a go at converting the above `.wat` text representation example into 
 3. Once you've got the tool built, add the `/wabt/out/clang/Debug` directory to your system `PATH`.
 4. Next, execute the wat2wasm program, passing it the path to the input file, followed by an `-o` parameter, followed by the path to the output file:
 
-    ```bash
-    wat2wasm simple.wat -o simple.wasm
-    ```
+   ```bash
+   wat2wasm simple.wat -o simple.wasm
+   ```
 
 This will convert the wasm into a file called `simple.wasm`, which contains the `.wasm` assembly code.
 

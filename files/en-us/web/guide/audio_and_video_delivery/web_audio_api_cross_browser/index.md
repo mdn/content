@@ -1,9 +1,10 @@
 ---
 title: Writing Web Audio API code that works in every browser
 slug: Web/Guide/Audio_and_video_delivery/Web_Audio_API_cross_browser
-tags:
-  - API
 ---
+
+{{QuickLinksWithSubPages("/en-US/docs/Web/Guide/Audio_and_video_delivery")}}
+
 You probably have already read [the announcement](https://hacks.mozilla.org/2013/07/web-audio-api-comes-to-firefox/) on the Web Audio API coming to Firefox, and are totally excited and ready to make your _until-now-WebKit-only_ sites work with Firefox, which uses the unprefixed version of [the spec](https://dvcs.w3.org/hg/audio/raw-file/tip/webaudio/specification.html).
 
 Unfortunately, Chrome, Safari and Opera still use the `webkitAudioContext` prefixed name. Furthermore, as a result of the spec being still in flux, some browsers use deprecated properties and method names that are not present in standards-compliant browsers: Safari uses the old method names, Firefox uses the new ones, and Chrome and Opera use both. In addition, not all features of Web Audio are already implemented in Firefox _yet_.
@@ -19,7 +20,7 @@ First, get a copy of [AudioContext-MonkeyPatch](https://github.com/cwilso/AudioC
 Once you include it in your page, you can write in "modern Web Audio API" style, and do things such as:
 
 ```js
-var audioContext = new AudioContext();
+const audioContext = new AudioContext();
 ```
 
 everywhere, including Chrome/ium, Opera, Safari, and ---of course!--- Firefox.
@@ -29,13 +30,13 @@ Also, if new methods such as `start` are not detected in some nodes, the library
 If you're porting moderately "old" code (say, a year old) it's possible that it uses some methods that `AudioContext-MonkeyPatch` doesn't alias, because it helps you to write code in the _new_ style. For example, the way to create instances of `GainNode` used to be
 
 ```js
-var gain = audioContext.createGainNode();
+const gain = audioContext.createGainNode();
 ```
 
 but nowadays it is just
 
 ```js
-var gain = audioContext.createGain();
+const gain = audioContext.createGain();
 ```
 
 Since the old method names are not present in Firefox, existing code may crash with something like `createGainNode is not a function`, and you now know why.
@@ -52,11 +53,11 @@ The node parameters you use must also be supported in Firefox too. If they aren'
 
 For example, up until a couple of days ago [PannerNode](https://dvcs.w3.org/hg/audio/raw-file/tip/webaudio/specification.html#PannerNode-section) did not support the default HRTF panning model yet, and attempting to use a `PannerNode` with that configuration resulted in silence or a mono output coming out from that node, depending on the build you used.
 
-Today the support is already present in [Nightly](https://nightly.mozilla.org/), but not quite yet in [Aurora](https://www.mozilla.org/en-US/firefox/aurora/). In the meantime, you can explicitly specify `'equalpower'` instead:
+Today the support is already present in [Nightly](https://www.mozilla.org/en-US/firefox/channel/desktop/), but not quite yet in [Aurora](https://www.mozilla.org/en-US/firefox/channel/desktop/). In the meantime, you can explicitly specify `'equalpower'` instead:
 
 ```js
-var panner = new audioContext.PannerNode();
-panner.panningModel = 'equalpower';
+const panner = new audioContext.PannerNode();
+panner.panningModel = "equalpower";
 ```
 
 Note that there's a [list of projects](https://github.com/WebAudio/demo-list) built with the Web Audio API, specifying which ones use the standard `AudioContext` and which browsers do they work on. If you're a person that learns by example, it might be interesting to have a look at their source and see how they have resolved the compatibility issues.

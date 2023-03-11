@@ -1,17 +1,12 @@
 ---
 title: SyncEvent.tag
 slug: Web/API/SyncEvent/tag
-tags:
-  - API
-  - Background Sync
-  - Experimental
-  - Property
-  - Reference
-  - ServiceWorker
-  - SyncEvent
-  - tag
+page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.SyncEvent.tag
 ---
+
 {{SeeCompatTable}}{{APIRef("")}}
 
 The **`SyncEvent.tag`** read-only property of the
@@ -19,13 +14,7 @@ The **`SyncEvent.tag`** read-only property of the
 this `SyncEvent`. This is the value passed in the `tag` parameter
 of the {{domxref("SyncEvent.SyncEvent","SyncEvent()")}} constructor.
 
-## Syntax
-
-```js
-var tag = SyncEvent.tag
-```
-
-### Value
+## Value
 
 The developer-defined identifier for this `SyncEvent`.
 

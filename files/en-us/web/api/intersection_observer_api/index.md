@@ -1,17 +1,10 @@
 ---
 title: Intersection Observer API
 slug: Web/API/Intersection_Observer_API
-tags:
-  - API
-  - Clipping
-  - Intersection
-  - Intersection Observer API
-  - IntersectionObserver
-  - Overview
-  - Performance
-  - Reference
-  - Web
+page-type: web-api-overview
+browser-compat: api.IntersectionObserver
 ---
+
 {{DefaultAPISidebar("Intersection Observer API")}}
 
 The Intersection Observer API provides a way to asynchronously observe changes in the intersection of a target element with an ancestor element or with a top-level document's {{Glossary("viewport")}}.
@@ -50,10 +43,10 @@ Create the intersection observer by calling its constructor and passing it a cal
 
 ```js
 let options = {
-  root: document.querySelector('#scrollArea'),
-  rootMargin: '0px',
-  threshold: 1.0
-}
+  root: document.querySelector("#scrollArea"),
+  rootMargin: "0px",
+  threshold: 1.0,
+};
 
 let observer = new IntersectionObserver(callback, options);
 ```
@@ -76,7 +69,7 @@ The `options` object passed into the {{domxref("IntersectionObserver.Intersectio
 Once you have created the observer, you need to give it a target element to watch:
 
 ```js
-let target = document.querySelector('#listItem');
+let target = document.querySelector("#listItem");
 observer.observe(target);
 
 // the callback we setup for the observer will be executed now for the first time
@@ -87,7 +80,7 @@ Whenever the target meets a threshold specified for the `IntersectionObserver`, 
 
 ```js
 let callback = (entries, observer) => {
-  entries.forEach(entry => {
+  entries.forEach((entry) => {
     // Each entry describes an intersection change for one observed
     // target element:
     //   entry.boundingClientRect
@@ -109,7 +102,7 @@ Also, note that if you specified the `root` option, the target must be a descend
 
 ### How intersection is calculated
 
-All areas considered by the Intersection Observer API are rectangles; elements which are irregularly shaped are considered as occupying the smallest rectangle which encloses all of the element's parts. Similarly, if the visible portion of an element is not rectangular, the element's intersection rectangle is construed to be the smallest rectangle that contains all the visible portions of the element.
+All areas considered by the Intersection Observer API are rectangles; elements which are irregularly shaped are considered as occupying the smallest rectangle which encloses all of the element's parts. Similarly, if the visible portion of an element is not rectangular, the element's intersection rectangle is considered to be the smallest rectangle that contains all the visible portions of the element.
 
 It's useful to understand a bit about how the various properties provided by {{domxref("IntersectionObserverEntry")}} describe an intersection.
 
@@ -133,13 +126,13 @@ For example, if you want to be informed every time a target's visibility passes 
 
 When the callback is invoked, it receives a list of `IntersectionObserverEntry` objects, one for each observed target which has had the degree to which it intersects the root change such that the amount exposed crosses over one of the thresholds, in either direction.
 
-You can see if the target *currently* intersects the root by looking at the entry's {{domxref("IntersectionObserverEntry.isIntersecting", "isIntersecting")}} property; if its value is `true`, the target is at least partially intersecting the root element or document. This lets you determine whether the entry represents a transition from the elements intersecting to no longer intersecting or a transition from not intersecting to intersecting.
+You can see if the target _currently_ intersects the root by looking at the entry's {{domxref("IntersectionObserverEntry.isIntersecting", "isIntersecting")}} property; if its value is `true`, the target is at least partially intersecting the root element or document. This lets you determine whether the entry represents a transition from the elements intersecting to no longer intersecting or a transition from not intersecting to intersecting.
 
 Note that it's possible to have a non-zero intersection rectangle, which can happen if the intersection is exactly along the boundary between the two or the area of {{domxref("IntersectionObserverEntry.boundingClientRect", "boundingClientRect")}} is zero. This state of the target and root sharing a boundary line is not considered enough to be considered transitioning into an intersecting state.
 
 To get a feeling for how thresholds work, try scrolling the box below around. Each colored box within it displays the percentage of itself that's visible in all four of its corners, so you can see these ratios change over time as you scroll the container. Each box has a different set of thresholds:
 
-- The first box has a threshold for each percentage point of visibility; that is, the {{domxref("IntersectionObserver.thresholds")}} array is `[0.00, 0.01, 0.02, ..., 0.99, 1.00]`.
+- The first box has a threshold for each percentage point of visibility; that is, the {{domxref("IntersectionObserver.thresholds")}} array is `[0.00, 0.01, 0.02, /*…,*/ 0.99, 1.00]`.
 - The second box has a single threshold, at the 50% mark.
 - The third box has thresholds every 10% of visibility (0%, 10%, 20%, etc.).
 - The last box has thresholds each 25%.
@@ -156,8 +149,7 @@ To get a feeling for how thresholds work, try scrolling the box below around. Ea
 
 <main>
   <div class="contents">
-    <div class="wrapper">
-    </div>
+    <div class="wrapper"></div>
   </div>
 </main>
 ```
@@ -244,7 +236,7 @@ startup = () => {
   let observerOptions = {
     root: null,
     rootMargin: "0px",
-    threshold: []
+    threshold: [],
   };
 
   // An array of threshold sets for each of the boxes. The
@@ -256,45 +248,51 @@ startup = () => {
     [],
     [0.5],
     [0.0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0],
-    [0, 0.25, 0.5, 0.75, 1.0]
+    [0, 0.25, 0.5, 0.75, 1.0],
   ];
 
-  for (let i=0; i<=1.0; i+= 0.01) {
+  for (let i = 0; i <= 1.0; i += 0.01) {
     thresholdSets[0].push(i);
   }
 
   // Add each box, creating a new observer for each
 
-  for (let i=0; i<4; i++) {
-    let template = document.querySelector("#boxTemplate").content.cloneNode(true);
-    let boxID = "box" + (i+1);
+  for (let i = 0; i < 4; i++) {
+    let template = document
+      .querySelector("#boxTemplate")
+      .content.cloneNode(true);
+    let boxID = `box${i + 1}`;
     template.querySelector(".sampleBox").id = boxID;
     wrapper.appendChild(document.importNode(template, true));
 
     // Set up the observer for this box
 
     observerOptions.threshold = thresholdSets[i];
-    observers[i] = new IntersectionObserver(intersectionCallback, observerOptions);
-    observers[i].observe(document.querySelector("#" + boxID));
+    observers[i] = new IntersectionObserver(
+      intersectionCallback,
+      observerOptions
+    );
+    observers[i].observe(document.querySelector(`#${boxID}`));
   }
 
   // Scroll to the starting position
 
-  document.scrollingElement.scrollTop = wrapper.firstElementChild.getBoundingClientRect().top + window.scrollY;
+  document.scrollingElement.scrollTop =
+    wrapper.firstElementChild.getBoundingClientRect().top + window.scrollY;
   document.scrollingElement.scrollLeft = 750;
-}
+};
 
 intersectionCallback = (entries) => {
   entries.forEach((entry) => {
     let box = entry.target;
-    let visiblePct = (Math.floor(entry.intersectionRatio * 100)) + "%";
+    let visiblePct = `${Math.floor(entry.intersectionRatio * 100)}%`;
 
     box.querySelector(".topLeft").innerHTML = visiblePct;
     box.querySelector(".topRight").innerHTML = visiblePct;
     box.querySelector(".bottomLeft").innerHTML = visiblePct;
     box.querySelector(".bottomRight").innerHTML = visiblePct;
   });
-}
+};
 
 startup();
 ```
@@ -321,8 +319,8 @@ Each entry in the list of thresholds is an {{domxref("IntersectionObserverEntry"
 The code snippet below shows a callback which keeps a counter of how many times elements transition from not intersecting the root to intersecting by at least 75%. For a threshold value of 0.0 (default) the callback is called [approximately](https://www.w3.org/TR/intersection-observer/#dom-intersectionobserverentry-isintersecting) upon transition of the boolean value of {{domxref("IntersectionObserverEntry.isIntersecting", "isIntersecting")}}. The snippet thus first checks that the transition is a positive one, then determines whether {{domxref("IntersectionObserverEntry.intersectionRatio", "intersectionRatio")}} is above 75%, in which case it increments the counter.
 
 ```js
-intersectionCallback(entries) => {
-  entries.forEach(entry => {
+const intersectionCallback = (entries) => {
+  entries.forEach((entry) => {
     if (entry.isIntersecting) {
       let elem = entry.target;
 
@@ -331,7 +329,7 @@ intersectionCallback(entries) => {
       }
     }
   });
-}
+};
 ```
 
 ## Interfaces
@@ -343,7 +341,7 @@ intersectionCallback(entries) => {
 
 ## A simple example
 
-This simple example causes a target element to change its color and transparency as it becomes more or less visible. At [Timing element visibility with the Intersection Observer API](/en-US/docs/Web/API/Intersection_Observer_API/Timing_element_visibility), you can find a more extensive example showing how to time how long a set of elements (such as ads) are visible to the user and to react to that information by recording statistics or by updating elements..
+This simple example causes a target element to change its color and transparency as it becomes more or less visible. At [Timing element visibility with the Intersection Observer API](/en-US/docs/Web/API/Intersection_Observer_API/Timing_element_visibility), you can find a more extensive example showing how to time how long a set of elements (such as ads) are visible to the user and to react to that information by recording statistics or by updating elements.
 
 ### HTML
 
@@ -351,9 +349,7 @@ The HTML for this example is very short, with a primary element which is the box
 
 ```html
 <div id="box">
-  <div class="vertical">
-    Welcome to <strong>The Box!</strong>
-  </div>
+  <div class="vertical">Welcome to <strong>The Box!</strong></div>
 </div>
 ```
 
@@ -363,7 +359,7 @@ The CSS isn't terribly important for the purposes of this example; it lays out t
 
 ```css
 #box {
-  background-color: rgba(40, 40, 190, 255);
+  background-color: rgba(40, 40, 190, 1);
   border: 4px solid rgb(20, 20, 120);
   transition: background-color 1s, border 1s;
   width: 350px;
@@ -406,11 +402,15 @@ let increasingColor = "rgba(40, 40, 190, ratio)";
 let decreasingColor = "rgba(190, 40, 40, ratio)";
 
 // Set things up
-window.addEventListener("load", (event) => {
-  boxElement = document.querySelector("#box");
+window.addEventListener(
+  "load",
+  (event) => {
+    boxElement = document.querySelector("#box");
 
-  createObserver();
-}, false);
+    createObserver();
+  },
+  false
+);
 ```
 
 The constants and variables we set up here are:
@@ -424,7 +424,7 @@ The constants and variables we set up here are:
 - `decreasingColor`
   - : Similarly, this is a string defining a color we'll apply when the visibility ratio is decreasing.
 
-We call {{domxref("EventTarget.addEventListener", "Window.addEventListener()")}} to start listening for the {{event("load")}} event; once the page has finished loading, we get a reference to the element with the ID `"box"` using {{domxref("Document.querySelector", "querySelector()")}}, then call the `createObserver()` method we'll create in a moment to handle building and installing the intersection observer.
+We call {{domxref("EventTarget.addEventListener", "Window.addEventListener()")}} to start listening for the {{domxref("Window/load_event", "load")}} event; once the page has finished loading, we get a reference to the element with the ID `"box"` using {{domxref("Document.querySelector", "querySelector()")}}, then call the `createObserver()` method we'll create in a moment to handle building and installing the intersection observer.
 
 #### Creating the intersection observer
 
@@ -437,7 +437,7 @@ function createObserver() {
   let options = {
     root: null,
     rootMargin: "0px",
-    threshold: buildThresholdList()
+    threshold: buildThresholdList(),
   };
 
   observer = new IntersectionObserver(handleIntersect, options);
@@ -462,8 +462,8 @@ function buildThresholdList() {
   let thresholds = [];
   let numSteps = 20;
 
-  for (let i=1.0; i<=numSteps; i++) {
-    let ratio = i/numSteps;
+  for (let i = 1.0; i <= numSteps; i++) {
+    let ratio = i / numSteps;
     thresholds.push(ratio);
   }
 
@@ -555,9 +555,15 @@ When the browser detects that the target element (in our case, the one with the 
 function handleIntersect(entries, observer) {
   entries.forEach((entry) => {
     if (entry.intersectionRatio > prevRatio) {
-      entry.target.style.backgroundColor = increasingColor.replace("ratio", entry.intersectionRatio);
+      entry.target.style.backgroundColor = increasingColor.replace(
+        "ratio",
+        entry.intersectionRatio
+      );
     } else {
-      entry.target.style.backgroundColor = decreasingColor.replace("ratio", entry.intersectionRatio);
+      entry.target.style.backgroundColor = decreasingColor.replace(
+        "ratio",
+        entry.intersectionRatio
+      );
     }
 
     prevRatio = entry.intersectionRatio;
@@ -581,13 +587,11 @@ There's an even more extensive example at [Timing element visibility with the In
 
 ## Specifications
 
-| Specification                                    | Status                                       | Comment |
-| ------------------------------------------------ | -------------------------------------------- | ------- |
-| {{SpecName('IntersectionObserver')}} | {{Spec2('IntersectionObserver')}} |         |
+{{Specifications}}
 
 ## Browser compatibility
 
-{{Compat("api.IntersectionObserver")}}
+{{Compat}}
 
 ## See also
 

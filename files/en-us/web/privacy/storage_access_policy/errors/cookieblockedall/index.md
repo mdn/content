@@ -1,18 +1,15 @@
 ---
-title: 'Blocked: All storage access requests'
+title: "Blocked: All storage access requests"
 slug: Web/Privacy/Storage_access_policy/Errors/CookieBlockedAll
-tags:
-  - Cookies
-  - Errors
-  - Storage
-  - storage access policy
-  - tracking
 ---
+
+{{QuicklinksWithSubPages("Web/Privacy/Storage_access_policy/Errors")}}
+
 ## Message
 
 Firefox:
 
-```
+```plain
 CookieBlockedAll=Request to access cookies or storage on "X" was blocked because we are blocking all storage access requests.
 ```
 

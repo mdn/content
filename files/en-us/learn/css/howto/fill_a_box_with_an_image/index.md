@@ -1,14 +1,8 @@
 ---
 title: How to fill a box with an image without distorting it
 slug: Learn/CSS/Howto/Fill_a_box_with_an_image
-tags:
-  - Basic
-  - Beginner
-  - CSS
-  - CSS:Getting_Started
-  - Guide
-  - Web
 ---
+
 {{LearnSidebar}}
 
 In this guide you can learn a technique for causing an HTML image to completely fill a box.

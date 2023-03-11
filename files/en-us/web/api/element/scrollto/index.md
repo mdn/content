@@ -1,14 +1,10 @@
 ---
 title: Element.scrollTo()
 slug: Web/API/Element/scrollTo
-tags:
-  - API
-  - Element
-  - Method
-  - Reference
-  - scrollTo
+page-type: web-api-instance-method
 browser-compat: api.Element.scrollTo
 ---
+
 {{APIRef}}
 
 The **`scrollTo()`** method of the {{domxref("Element")}}
@@ -16,9 +12,9 @@ interface scrolls to a particular set of coordinates inside a given element.
 
 ## Syntax
 
-```js
-element.scrollTo(x-coord, y-coord)
-element.scrollTo(options)
+```js-nolint
+scrollTo(x-coord, y-coord)
+scrollTo(options)
 ```
 
 ### Parameters
@@ -39,6 +35,10 @@ element.scrollTo(options)
     - `behavior`
       - : Specifies whether the scrolling should animate smoothly (`smooth`), happen instantly in a single jump (`instant`), or let the browser choose (`auto`, default).
 
+### Return value
+
+None ({{jsxref("undefined")}}).
+
 ## Examples
 
 ```js
@@ -51,7 +51,7 @@ Using `options`:
 element.scrollTo({
   top: 100,
   left: 100,
-  behavior: 'smooth'
+  behavior: "smooth",
 });
 ```
 

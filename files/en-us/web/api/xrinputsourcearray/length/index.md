@@ -1,28 +1,13 @@
 ---
 title: XRInputSourceArray.length
 slug: Web/API/XRInputSourceArray/length
-tags:
-  - API
-  - AR
-  - Input Sources
-  - Inputs
-  - Mixed
-  - Property
-  - Reality
-  - Reference
-  - VR
-  - Virtual
-  - WebXR
-  - WebXR API
-  - WebXR Device API
-  - XR
-  - XRInputSourceArray
-  - augmented
-  - controllers
-  - count
+page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.XRInputSourceArray.length
 ---
-{{APIRef("WebXR Device API")}}
+
+{{APIRef("WebXR Device API")}}{{SeeCompatTable}}
 
 The read-only **`length`** property returns an integer value
 indicating the number of items in the input source list represented by
@@ -46,7 +31,7 @@ if (sources.length === 0) {
   showAlertDialog("You need to have at least one controller to play Super Duper Shark Jump Fest 9000.",
                   [
                     { label: "Shop Now", url: "https://www.amazon.com/s?k=vr+controllers" },
-                    { label: "Quit" handler: quitGame }
+                    { label: "Quit", handler: quitGame }
                   ]);
 }
 ```

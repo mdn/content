@@ -1,14 +1,12 @@
 ---
-title: 'USB: connect event'
+title: "USB: connect event"
 slug: Web/API/USB/connect_event
-tags:
-  - API
-  - Event
-  - Reference
-  - USB
-  - WebUSB
+page-type: web-api-event
+status:
+  - experimental
 browser-compat: api.USB.connect_event
 ---
+
 {{APIRef("WebUSB API")}}{{SeeCompatTable}}
 
 The **`connect`** event of the {{DOMxRef("USB")}} interface is fired whenever a paired device is connected.
@@ -18,9 +16,9 @@ The **`connect`** event of the {{DOMxRef("USB")}} interface is fired whenever a 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('connect', event => { })
+addEventListener("connect", (event) => {});
 
-onconnect = event => { }
+onconnect = (event) => {};
 ```
 
 ## Event type
@@ -41,7 +39,7 @@ _In addition to the properties listed below, properties from the parent interfac
 Once a USB device is connected, you might want to update the UI.
 
 ```js
-navigator.usb.addEventListener('connect', event => {
+navigator.usb.addEventListener("connect", (event) => {
   // Add event.device to the UI.
 });
 ```
@@ -49,7 +47,7 @@ navigator.usb.addEventListener('connect', event => {
 Alternatively, you can use the `USB.onconnect` event handler property to establish a handler for the `connect` event:
 
 ```js
-navigator.usb.onconnect = event => {
+navigator.usb.onconnect = (event) => {
   // Add event.device to the UI.
 };
 ```

@@ -1,25 +1,10 @@
 ---
 title: MutationObserver.disconnect()
 slug: Web/API/MutationObserver/disconnect
-tags:
-  - API
-  - Changes
-  - DOM
-  - DOM Changes
-  - DOM Reference
-  - DOM Tree
-  - Disconnect
-  - Method
-  - Mutation Observer
-  - Mutation Observer API
-  - MutationObserver
-  - Observing
-  - Reference
-  - Watching
-  - mutation
-  - stop
+page-type: web-api-instance-method
 browser-compat: api.MutationObserver.disconnect
 ---
+
 {{APIRef("DOM WHATWG")}}
 
 The {{domxref("MutationObserver")}} method
@@ -31,8 +16,8 @@ The observer can be reused by calling its
 
 ## Syntax
 
-```js
-mutationObserver.disconnect()
+```js-nolint
+disconnect()
 ```
 
 ### Parameters
@@ -45,6 +30,8 @@ None.
 
 > **Note:** All notifications of mutations that have already been
 > _detected_, but _not yet reported_ to the observer, are discarded.
+> To hold on to and handle the detected but unreported mutations, use
+> the {{domxref("MutationObserver.takeRecords()", "takeRecords()")}} method.
 
 ## Usage notes
 
@@ -53,7 +40,7 @@ by the browser's garbage collection mechanism, the `MutationObserver` will stop 
 the removed element. However, the `MutationObserver` itself can continue to exist to observe
 other existing elements.
 
-## Example
+## Examples
 
 This example creates an observer, then disconnects from it, leaving it available for
 possible reuse.
@@ -62,13 +49,13 @@ possible reuse.
 const targetNode = document.querySelector("#someElement");
 const observerOptions = {
   childList: true,
-  attributes: true
-}
+  attributes: true,
+};
 
 const observer = new MutationObserver(callback);
 observer.observe(targetNode, observerOptions);
 
-/* some time later... */
+/* some time later… */
 
 observer.disconnect();
 ```

@@ -1,28 +1,24 @@
 ---
 title: URLPattern.hash
 slug: Web/API/URLPattern/hash
-tags:
-  - API
-  - Property
-  - Reference
-  - URLPattern
-  - URL Pattern API
-  - Experimental
+page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.URLPattern.hash
 ---
 
-{{ APIRef("URL Pattern API") }}
+{{APIRef("URL Pattern API")}}{{SeeCompatTable}}
 
 The **`hash`** property of the {{domxref("URLPattern")}} interface is a
-{{domxref("USVString")}} containing the pattern used to match the fragment part
+string containing the pattern used to match the fragment part
 of a URL. This value may differ from the input to the constructor due to
 normalization.
 
 {{AvailableInWorkers}}
 
-### Value
+## Value
 
-A {{domxref("USVString")}}.
+A string.
 
 ## Examples
 
@@ -31,7 +27,7 @@ for the `hash` part. This pattern matches any fragment that starts with `books/`
 and ends with an arbitrary string identifier.
 
 ```js
-const pattern = new URLPattern('https://example.org#books/:id');
+const pattern = new URLPattern("https://example.org#books/:id");
 console.log(pattern.hash); // 'books/:id'
 ```
 

@@ -1,12 +1,9 @@
 ---
 title: Prefetch
 slug: Glossary/Prefetch
-tags:
-  - Glossary
-  - Prefetch
-  - Reference
-  - Web Performance
+page-type: glossary-definition
 ---
+
 Prefetching is when content is downloaded in the background, this is based on the assumption that the content will likely be requested, enabling the content to load instantly if and when the user requests it. The content is downloaded and cached for anticipated future use without the user making an explicit request for it.
 
 ### DNS Prefetching
@@ -14,7 +11,7 @@ Prefetching is when content is downloaded in the background, this is based on th
 Domain lookups can be slow, especially with network latency on mobile phones. They are most relevant when there are a plethora of links to external websites that may be clicked on, like search engine results, DNS prefetching resolves domain names in advance thereby speeding up load times by reducing the time associated with domain lookup at request time.
 
 ```html
-<link rel="dns-prefetch" href="https://example.com/">
+<link rel="dns-prefetch" href="https://example.com/" />
 ```
 
 ### Link prefetching
@@ -23,7 +20,7 @@ Link prefetching is a performance optimization technique that works by assuming 
 
 The prefetch hints are sent in HTTP headers:
 
-```
+```http
 Link: ; rel=dns-prefetch,
       ; as=script; rel=preload,
       ; rel=prerender,
@@ -42,6 +39,6 @@ Browsers will prefetch content when the prefetch [`<link>`](/en-US/docs/Web/HTML
 
 - defer
 - async
-- [preload](/en-US/docs/Web/HTML/Link_types/preload)
+- [preload](/en-US/docs/Web/HTML/Attributes/rel/preload)
 - [page prediction](/en-US/docs/Glossary/Page_prediction)
 - [lazy loading](/en-US/docs/Web/Performance/Lazy_loading)

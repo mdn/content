@@ -1,14 +1,13 @@
 ---
 title: text-anchor
 slug: Web/SVG/Attribute/text-anchor
-tags:
-  - SVG
-  - SVG Attribute
+page-type: svg-attribute
 browser-compat: svg.attributes.presentation.text-anchor
 ---
+
 {{SVGRef}}
 
-The **`text-anchor`** attribute is used to align (start-, middle- or end-alignment) a string of pre-formatted text or auto-wrapped text where the wrapping area is determined from the {{SVGAttr("inline-size")}} property relative to a given point.
+The **`text-anchor`** attribute is used to align (start-, middle- or end-alignment) a string of pre-formatted text or auto-wrapped text where the wrapping area is determined from the {{cssxref("inline-size")}} property relative to a given point.
 
 This attribute is not applicable to other types of auto-wrapped text. For those cases you should use {{cssxref("text-align")}}. For multi-line text, the alignment takes place for each line.
 
@@ -27,7 +26,9 @@ You can use this attribute with the following SVG elements:
 ## Example
 
 ```css hidden
-html, body, svg {
+html,
+body,
+svg {
   height: 100%;
 }
 ```
@@ -35,7 +36,9 @@ html, body, svg {
 ```html
 <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
   <!-- Materialization of anchors -->
-  <path d="M60,15 L60,110 M30,40 L90,40 M30,75 L90,75 M30,110 L90,110" stroke="grey" />
+  <path
+    d="M60,15 L60,110 M30,40 L90,40 M30,75 L90,75 M30,110 L90,110"
+    stroke="grey" />
 
   <!-- Anchors in action -->
   <text text-anchor="start" x="60" y="40">A</text>
@@ -47,11 +50,13 @@ html, body, svg {
   <circle cx="60" cy="75" r="3" fill="red" />
   <circle cx="60" cy="110" r="3" fill="red" />
 
-  <style><![CDATA[
-  text {
-    font: bold 36px Verdana, Helvetica, Arial, sans-serif;
-  }
-  ]]></style>
+  <style>
+    <![CDATA[
+      text {
+        font: bold 36px Verdana, Helvetica, Arial, sans-serif;
+      }
+      ]]>
+  </style>
 </svg>
 ```
 
@@ -85,31 +90,7 @@ html, body, svg {
 
 ## Specifications
 
-<table class="no-markdown">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        {{SpecName("SVG2", "text.html#TextAnchorProperty", "text-anchor")}}
-      </td>
-      <td>{{Spec2("SVG2")}}</td>
-      <td>No significant change</td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("SVG1.1", "text.html#TextAnchorProperty", "text-anchor")}}
-      </td>
-      <td>{{Spec2("SVG1.1")}}</td>
-      <td>Initial definition</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 ## Browser compatibility
 

@@ -1,14 +1,10 @@
 ---
 title: Blob.stream()
 slug: Web/API/Blob/stream
-tags:
-  - API
-  - Blob
-  - File API
-  - Method
-  - Reference
+page-type: web-api-instance-method
 browser-compat: api.Blob.stream
 ---
+
 {{APIRef("File API")}}
 
 The {{domxref("Blob")}} interface's
@@ -17,9 +13,13 @@ which upon reading returns the data contained within the `Blob`.
 
 ## Syntax
 
-```js
-stream();
+```js-nolint
+stream()
 ```
+
+### Parameters
+
+None.
 
 ### Return value
 

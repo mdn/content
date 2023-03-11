@@ -1,27 +1,21 @@
 ---
 title: Navigator.maxTouchPoints
 slug: Web/API/Navigator/maxTouchPoints
-tags:
-  - API
-  - HTML DOM
-  - Navigator
-  - Property
-  - Reference
+page-type: web-api-instance-property
 browser-compat: api.Navigator.maxTouchPoints
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`maxTouchPoints`** read-only property of the
 {{domxref("Navigator")}} interface returns the maximum number of simultaneous touch
 contact points are supported by the current device.
 
-## Syntax
+## Value
 
-```js
-touchPoints = navigator.maxTouchPoints;
-```
+A number.
 
-## Example
+## Examples
 
 ```js
 if (navigator.maxTouchPoints > 1) {

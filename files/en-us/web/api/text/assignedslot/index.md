@@ -1,12 +1,10 @@
 ---
 title: Text.assignedSlot
 slug: Web/API/Text/assignedSlot
-tags:
-  - Property
-  - Reference
-  - Read-only
+page-type: web-api-instance-property
 browser-compat: api.Text.assignedSlot
 ---
+
 {{APIRef("DOM")}}
 
 The read-only **`assignedSlot`** property of the {{domxref("Text")}} interface

@@ -1,23 +1,10 @@
 ---
 title: MutationObserver.observe()
 slug: Web/API/MutationObserver/observe
-tags:
-  - API
-  - Attribute Changes
-  - Changes
-  - DOM
-  - DOM Changes
-  - DOM WHATWG
-  - Element Changes
-  - Method
-  - Mutation Observer
-  - Mutation Observer API
-  - MutationObserver
-  - Node Changes
-  - Reference
-  - observe
+page-type: web-api-instance-method
 browser-compat: api.MutationObserver.observe
 ---
+
 {{APIRef("DOM WHATWG")}}
 
 The {{domxref("MutationObserver")}} method **`observe()`** configures the `MutationObserver`
@@ -29,8 +16,8 @@ To stop the `MutationObserver` (so that none of its callbacks will be triggered 
 
 ## Syntax
 
-```js
-mutationObserver.observe(target, options)
+```js-nolint
+observe(target, options)
 ```
 
 ### Parameters
@@ -53,14 +40,13 @@ mutationObserver.observe(target, options)
       - : Set to `true` to monitor the target node (and, if `subtree` is `true`, its descendants) for the addition of new child nodes or removal of existing child nodes.
         The default value is `false`.
     - `attributes` {{optional_inline}}
-      - : Set to `true` to watch for changes to the value of attributes on the node or nodes being monitored.
-      - The default value is `true` if either of `attributeFilter` or `attributeOldValue` is specified, otherwise the default value is `false`.
+      - : Set to `true` to watch for changes to the value of attributes on the node or nodes being monitored. The default value is `true` if either of `attributeFilter` or `attributeOldValue` is specified, otherwise the default value is `false`.
     - `attributeFilter` {{optional_inline}}
       - : An array of specific attribute names to be monitored.
         If this property isn't included, changes to all attributes cause mutation notifications.
     - `attributeOldValue` {{optional_inline}}
       - : Set to `true` to record the previous value of any attribute that changes when monitoring the node or nodes for attribute changes;
-        see {{SectionOnPage("/en-US/docs/Web/API/MutationObserver", "Monitoring attribute values")}} for details on watching for attribute changes and value recording.
+        See [Monitoring attribute values](/en-US/docs/Web/API/MutationObserver#monitoring_attribute_values) for details on watching for attribute changes and value recording.
         The default value is `false`.
     - `characterData` {{optional_inline}}
       - : Set to `true` to monitor the specified target node (and, if `subtree` is `true`, its descendants) for changes to the character data contained within the node or nodes.
@@ -71,7 +57,7 @@ mutationObserver.observe(target, options)
 
 ### Return value
 
-`undefined`.
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 
@@ -124,13 +110,13 @@ const elementToObserve = document.querySelector("#targetElementId");
 
 // create a new instance of `MutationObserver` named `observer`,
 // passing it a callback function
-const observer = new MutationObserver(function() {
-    console.log('callback that runs when observer is triggered');
+const observer = new MutationObserver(() => {
+  console.log("callback that runs when observer is triggered");
 });
 
 // call `observe()` on that MutationObserver instance,
 // passing it the element to observe, and the options object
-observer.observe(elementToObserve, {subtree: true, childList: true});
+observer.observe(elementToObserve, { subtree: true, childList: true });
 ```
 
 ### Using `attributeFilter`
@@ -143,10 +129,10 @@ for example, reflect changes to users' nicknames, or to mark them as away from k
 
 ```js
 function callback(mutationList) {
-  mutationList.forEach(function(mutation) {
-    switch(mutation.type) {
+  mutationList.forEach((mutation) => {
+    switch (mutation.type) {
       case "attributes":
-        switch(mutation.attributeName) {
+        switch (mutation.attributeName) {
           case "status":
             userStatusChanged(mutation.target.username, mutation.target.status);
             break;
@@ -159,13 +145,13 @@ function callback(mutationList) {
   });
 }
 
-var userListElement = document.querySelector("#userlist");
+const userListElement = document.querySelector("#userlist");
 
-var observer = new MutationObserver(callback);
+const observer = new MutationObserver(callback);
 observer.observe(userListElement, {
-  attributeFilter: [ "status", "username" ],
+  attributeFilter: ["status", "username"],
   attributeOldValue: true,
-  subtree: true
+  subtree: true,
 });
 ```
 

@@ -1,16 +1,10 @@
 ---
 title: Gamepad.mapping
 slug: Web/API/Gamepad/mapping
-tags:
-  - API
-  - Gamepad API
-  - Games
-  - NeedsBetterSpecLink
-  - NeedsMarkupWork
-  - Property
-  - Reference
+page-type: web-api-instance-property
 browser-compat: api.Gamepad.mapping
 ---
+
 {{APIRef("Gamepad API")}}
 
 The **`Gamepad.mapping`** property of the

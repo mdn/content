@@ -1,51 +1,37 @@
 ---
 title: DedicatedWorkerGlobalScope
 slug: Web/API/DedicatedWorkerGlobalScope
-tags:
-  - API
-  - DedicatedWorkerGlobalScope
-  - Interface
-  - Reference
-  - Web Workers
-  - Workers
+page-type: web-api-interface
 browser-compat: api.DedicatedWorkerGlobalScope
 ---
+
 {{APIRef("Web Workers API")}}
 
 The **`DedicatedWorkerGlobalScope`** object (the {{domxref("Worker")}} global scope) is accessible through the {{domxref("window.self","self")}} keyword. Some additional global functions, namespaces objects, and constructors, not typically associated with the worker global scope, but available on it, are listed in the [JavaScript Reference](/en-US/docs/Web/JavaScript/Reference). See also: [Functions available to workers](/en-US/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers).
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _This interface inherits properties from the {{domxref("WorkerGlobalScope")}} interface, and its parent {{domxref("EventTarget")}}._
 
-- {{domxref("DedicatedWorkerGlobalScope.name")}} {{readOnlyinline}}
+- {{domxref("DedicatedWorkerGlobalScope.name")}} {{ReadOnlyInline}}
   - : The name that the {{domxref("Worker")}} was (optionally) given when it was created using the {{domxref("Worker.Worker", "Worker()")}} constructor. This is mainly useful for debugging purposes.
 
-### Properties inherited from WorkerGlobalScope
+### Instance properties inherited from WorkerGlobalScope
 
 - {{domxref("WorkerGlobalScope.self")}}
   - : Returns an object reference to the `DedicatedWorkerGlobalScope` object itself.
-- {{domxref("WorkerGlobalScope.console")}} {{readOnlyinline}}
+- {{domxref("WorkerGlobalScope.console")}} {{ReadOnlyInline}}
   - : Returns the {{domxref("console")}} associated with the worker.
-- {{domxref("WorkerGlobalScope.location")}} {{readOnlyinline}}
+- {{domxref("WorkerGlobalScope.location")}} {{ReadOnlyInline}}
   - : Returns the {{domxref("WorkerLocation")}} associated with the worker. `WorkerLocation` is a specific location object, mostly a subset of the {{domxref("Location")}} for browsing scopes, but adapted to workers.
-- {{domxref("WorkerGlobalScope.navigator")}} {{readOnlyinline}}
+- {{domxref("WorkerGlobalScope.navigator")}} {{ReadOnlyInline}}
   - : Returns the {{domxref("WorkerNavigator")}} associated with the worker. `WorkerNavigator` is a specific navigator object, mostly a subset of the {{domxref("Navigator")}} for browsing scopes, but adapted to workers.
-- {{domxref("WorkerGlobalScope.performance")}} {{readOnlyinline}} {{Non-standard_inline}}
+- {{domxref("performance_property", "WorkerGlobalScope.performance")}} {{ReadOnlyInline}} {{Non-standard_inline}}
   - : Returns the {{domxref("Performance")}} object associated with the worker, which is a regular performance object, but with a subset of its properties and methods available.
 
-### Event handlers
-
-_This interface inherits event handlers from the {{domxref("WorkerGlobalScope")}} interface, and its parent {{domxref("EventTarget")}}._
-
-- {{domxref("DedicatedWorkerGlobalScope.onmessage")}}
-  - : Is an [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{event("message")}} event is raised. These events are of type {{domxref("MessageEvent")}} and will be called when the worker receives a message from the document that started it (i.e. from the {{domxref("Worker.postMessage")}} method.)
-- {{domxref("DedicatedWorkerGlobalScope.onmessageerror")}}
-  - : Is an [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{event("messageerror")}} event is raised.
-
-## Methods
+## Instance methods
 
 _This interface inherits methods from the {{domxref("WorkerGlobalScope")}} interface, and its parent {{domxref("EventTarget")}}._
 
@@ -75,15 +61,17 @@ _This interface inherits methods from the {{domxref("WorkerGlobalScope")}} inter
   - : Schedules the execution of a function every X milliseconds.
 - {{domxref("setTimeout")}}
   - : Sets a delay for executing a function.
+- {{domxref("Window/requestAnimationFrame", "requestAnimationFrame")}}
+  - : Requests the browser to execute a callback function before painting the next frame.
+- {{domxref("Window/cancelAnimationFrame", "cancelAnimationFrame")}}
+  - : Cancels a callback scheduled by requestAnimationFrame.
 
 ## Events
 
 - [`message`](/en-US/docs/Web/API/DedicatedWorkerGlobalScope/message_event)
   - : Fired when the worker receives a message from its parent.
-    Also available via the [`onmessage`](/en-US/docs/Web/API/DedicatedWorkerGlobalScope/onmessage) property.
 - [`messageerror`](/en-US/docs/Web/API/DedicatedWorkerGlobalScope/messageerror_event)
   - : Fired when a worker receives a message that can't be deserialized.
-    Also available via the [`onmessageerror`](/en-US/docs/Web/API/DedicatedWorkerGlobalScope/onmessageerror) property.
 
 ## Specifications
 

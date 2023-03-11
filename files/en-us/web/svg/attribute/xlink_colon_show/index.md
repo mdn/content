@@ -1,12 +1,12 @@
 ---
 title: xlink:show
 slug: Web/SVG/Attribute/xlink:show
-tags:
-  - Deprecated
-  - SVG
-  - SVG Attribute
+page-type: svg-attribute
+status:
+  - deprecated
 browser-compat: svg.attributes.xlink.xlink_show
 ---
+
 {{SVGRef}}{{Deprecated_Header}}
 
 The **`xlink:show`** attribute indicates how a linked resource should be opened and is meant for {{Glossary("XLink")}}-aware processors. In case of a conflict, the {{SVGAttr("target")}} attribute has priority, since it can express a wider range of values.
@@ -38,9 +38,9 @@ You can use this attribute with the following SVG elements:
 </table>
 
 - `new`
-  - : This value specifies that the referenced resource is opened in a new window or tab. This is similar to the effect achieved by an HTML {{HTMLElement("a")}} element with {{HTMLAttrDef("target")}} set to `_blank`.
+  - : This value specifies that the referenced resource is opened in a new window or tab. This is similar to the effect achieved by an HTML {{HTMLElement("a")}} element with [target](/en-US/docs/Web/HTML/Element/a#target) set to `_blank`.
 - `replace`
-  - : This value specifies that the referenced resource is opened in the same window or tab. This is similar to the effect achieved by an HTML {{HTMLElement("a")}} element with {{HTMLAttrDef("target")}} set to `_self`.
+  - : This value specifies that the referenced resource is opened in the same window or tab. This is similar to the effect achieved by an HTML {{HTMLElement("a")}} element with [target](/en-US/docs/Web/HTML/Element/a#target) set to `_self`.
 - `embed`
   - : This value specifies that instead of linking to the resource it will be loaded and shown within the document. This is similar to the effect achieved by an HTML {{HTMLElement("img")}} element.
 - `other`
@@ -50,24 +50,7 @@ You can use this attribute with the following SVG elements:
 
 ## Specifications
 
-<table class="no-markdown">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        {{SpecName("SVG1.1", "linking.html#XLinkShowAttribute", "xlink:show")}}
-      </td>
-      <td>{{Spec2("SVG1.1")}}</td>
-      <td>Initial definition</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 ## Browser compatibility
 

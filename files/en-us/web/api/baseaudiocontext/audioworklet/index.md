@@ -1,18 +1,10 @@
 ---
 title: BaseAudioContext.audioWorklet
 slug: Web/API/BaseAudioContext/audioWorklet
-tags:
-  - API
-  - Audio
-  - AudioContext
-  - AudioWorklet
-  - BaseAudioContext
-  - Property
-  - Reference
-  - Web Audio API
-  - Worklet
+page-type: web-api-instance-property
 browser-compat: api.BaseAudioContext.audioWorklet
 ---
+
 {{ APIRef("Web Audio API") }}{{securecontext_header}}
 
 The `audioWorklet` read-only property of the
@@ -21,13 +13,7 @@ The `audioWorklet` read-only property of the
 {{domxref("AudioWorkletProcessor")}}-derived classes which implement custom audio
 processing.
 
-## Syntax
-
-```js
-baseAudioContextInstance.audioWorklet;
-```
-
-### Value
+## Value
 
 An {{domxref("AudioWorklet")}} instance.
 

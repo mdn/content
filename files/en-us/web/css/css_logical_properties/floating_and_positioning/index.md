@@ -1,13 +1,9 @@
 ---
 title: Logical properties for floating and positioning
 slug: Web/CSS/CSS_Logical_Properties/Floating_and_positioning
-tags:
-  - CSS
-  - CSS Logical Properties
-  - Floating
-  - Guide
-  - Positioning
+page-type: guide
 ---
+
 {{CSSRef}}
 
 The [Logical Properties and Values specification](https://drafts.csswg.org/css-logical/) contains logical mappings for the physical values of {{cssxref("float")}} and {{cssxref("clear")}}, and also for the positioning properties used with [positioned layout](/en-US/docs/Web/CSS/CSS_Positioning). This guide takes a look at how to use these.
@@ -16,26 +12,26 @@ The [Logical Properties and Values specification](https://drafts.csswg.org/css-l
 
 The table below details the properties and values discussed in this guide along with their physical mappings. They assume a horizontal {{cssxref("writing-mode")}}, with a left-to-right direction.
 
-| Logical property or value                    | Physical property or value              |
-| -------------------------------------------- | --------------------------------------- |
-| {{cssxref("float")}}: inline-start   | {{cssxref("float")}}: left      |
-| {{cssxref("float")}}: inline-end     | {{cssxref("float")}}: right     |
-| {{cssxref("clear")}}: inline-start   | {{cssxref("clear")}}: left      |
-| {{cssxref("clear")}}: inline-end     | {{cssxref("clear")}}: right     |
-| {{cssxref("inset-inline-start")}} | {{cssxref("left")}}                |
-| {{cssxref("inset-inline-end")}}     | {{cssxref("right")}}            |
-| {{cssxref("inset-block-start")}} | {{cssxref("top")}}                |
+| Logical property or value          | Physical property or value       |
+| ---------------------------------- | -------------------------------- |
+| {{cssxref("float")}}: inline-start | {{cssxref("float")}}: left       |
+| {{cssxref("float")}}: inline-end   | {{cssxref("float")}}: right      |
+| {{cssxref("clear")}}: inline-start | {{cssxref("clear")}}: left       |
+| {{cssxref("clear")}}: inline-end   | {{cssxref("clear")}}: right      |
+| {{cssxref("inset-inline-start")}}  | {{cssxref("left")}}              |
+| {{cssxref("inset-inline-end")}}    | {{cssxref("right")}}             |
+| {{cssxref("inset-block-start")}}   | {{cssxref("top")}}               |
 | {{cssxref("inset-block-end")}}     | {{cssxref("bottom")}}            |
-| {{cssxref("text-align")}}: start      | {{cssxref("text-align")}}: left  |
-| {{cssxref("text-align")}}: end        | {{cssxref("text-align")}}: right |
+| {{cssxref("text-align")}}: start   | {{cssxref("text-align")}}: left  |
+| {{cssxref("text-align")}}: end     | {{cssxref("text-align")}}: right |
 
 In addition to these mapped properties there are some additional shorthand properties made possible by being able to address block and inline dimensions. These have no mapping to physical properties, aside from the {{cssxref("inset")}} property.
 
-| Logical property                     | Purpose                                                                         |
-| ------------------------------------ | ------------------------------------------------------------------------------- |
+| Logical property            | Purpose                                                                         |
+| --------------------------- | ------------------------------------------------------------------------------- |
 | {{cssxref("inset-inline")}} | Sets both of the above inset values for the inline dimension simultaneously.    |
-| {{cssxref("inset-block")}} | Sets both of the above inset values for the block dimension simultaneously.     |
-| {{cssxref("inset")}}         | Sets all four inset values simultaneously with physical mapping of multi-value. |
+| {{cssxref("inset-block")}}  | Sets both of the above inset values for the block dimension simultaneously.     |
+| {{cssxref("inset")}}        | Sets all four inset values simultaneously with physical mapping of multi-value. |
 
 ## Float and clear example
 

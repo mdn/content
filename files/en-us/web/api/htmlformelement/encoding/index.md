@@ -1,16 +1,10 @@
 ---
 title: HTMLFormElement.encoding
 slug: Web/API/HTMLFormElement/encoding
-tags:
-  - API
-  - HTML DOM
-  - HTMLFormElement
-  - NeedsContent
-  - NeedsSpecTable
-  - Property
-  - Reference
+page-type: web-api-instance-property
 browser-compat: api.HTMLFormElement.encoding
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`HTMLFormElement.encoding`** property is an alternative name for the {{domxref("HTMLFormElement.enctype","enctype")}} element on the DOM {{domxref("HTMLFormElement")}} object.

@@ -1,14 +1,10 @@
 ---
 title: AudioListener
 slug: Web/API/AudioListener
-tags:
-  - API
-  - AudioListener
-  - Interface
-  - Reference
-  - Web Audio API
+page-type: web-api-interface
 browser-compat: api.AudioListener
 ---
+
 {{ APIRef("Web Audio API") }}
 
 The `AudioListener` interface represents the position and orientation of the unique person listening to the audio scene, and is used in [audio spatialization](/en-US/docs/Web/API/Web_Audio_API/Web_audio_spatialization_basics). All {{domxref("PannerNode")}}s spatialize in relation to the `AudioListener` stored in the {{domxref("BaseAudioContext.listener")}} attribute.
@@ -17,7 +13,7 @@ It is important to note that there is only one listener per context and that it 
 
 ![We see the position, up and front vectors of an AudioListener, with the up and front vectors at 90° from the other.](webaudiolistenerreduced.png)
 
-## Properties
+## Instance properties
 
 > **Note:** The position, forward, and up value are set and retrieved using different syntaxes. Retrieval is done by accessing, for example, `AudioListener.positionX`, while setting the same property is done with `AudioListener.positionX.value`. This is why these values are not marked read only, which is how they appear in the specification's IDL.
 
@@ -40,21 +36,21 @@ It is important to note that there is only one listener per context and that it 
 - {{domxref("AudioListener.upZ")}}
   - : Represents the longitudinal (back and forth) position of the top of the listener's head in the same cartesian coordinate system as the position (`positionX`, `positionY`, and `positionZ`) values. The forward and up values are linearly independent of each other. The default is 0.
 
-## Methods
+## Instance methods
 
 - {{domxref("AudioListener.setOrientation()")}} {{deprecated_inline}}
   - : Sets the orientation of the listener.
 - {{domxref("AudioListener.setPosition()")}} {{deprecated_inline}}
   - : Sets the position of the listener.
 
-> **Note:** Although these methods are deprecated they are currently the only way to set the orientation and position in Firefox, Internet Explorer and Safari.
+> **Note:** Although these methods are deprecated they are currently the only way to set the orientation and position in Firefox.
 
 ## Deprecated features
 
 - {{domxref("AudioListener.dopplerFactor")}} {{deprecated_inline}}
   - : A double value representing the amount of pitch shift to use when rendering a [doppler effect](https://en.wikipedia.org/wiki/Doppler_effect).
 - {{domxref("AudioListener.speedOfSound")}} {{deprecated_inline}}
-  - : Is a double value representing the speed of sound, in _meters per second_.
+  - : A double value representing the speed of sound, in _meters per second_.
 
 In a previous version of the specification, the `dopplerFactor` and `speedOfSound` properties and the `setPosition()` method could be used to control the doppler effect applied to {{domxref("AudioBufferSourceNode")}}s connected downstream — these would be pitched up and down according to the relative speed of the {{domxref("PannerNode")}} and the {{domxref("AudioListener")}}. These features had a number of problems:
 

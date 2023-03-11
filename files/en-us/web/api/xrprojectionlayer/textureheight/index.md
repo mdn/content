@@ -1,18 +1,13 @@
 ---
 title: XRProjectionLayer.textureHeight
 slug: Web/API/XRProjectionLayer/textureHeight
-tags:
-  - API
-  - Property
-  - Reference
-  - VR
-  - WebXR
-  - WebXR API
-  - WebXR Device API
-  - XR
+page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.XRProjectionLayer.textureHeight
 ---
-{{APIRef("WebXR Device API")}}
+
+{{APIRef("WebXR Device API")}}{{SeeCompatTable}}
 
 The read-only **`textureHeight`** property of the {{domxref("XRProjectionLayer")}} interface indicates the height in pixels of the color textures of this layer.
 

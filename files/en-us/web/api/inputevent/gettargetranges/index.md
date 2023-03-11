@@ -1,18 +1,11 @@
 ---
 title: InputEvent.getTargetRanges()
 slug: Web/API/InputEvent/getTargetRanges
-tags:
-  - API
-  - DOM Events
-  - Input
-  - InputEvent
-  - Method
-  - Reference
-  - events
-  - getTargetRanges()
+page-type: web-api-instance-method
 browser-compat: api.InputEvent.getTargetRanges
 ---
-{{APIRef("DOM Events")}}
+
+{{APIRef("UI Events")}}
 
 The **`getTargetRanges()`** method of the {{domxref("InputEvent")}} interface returns an array of static ranges that will be affected by a change to the DOM if the input event is not canceled.
 
@@ -20,8 +13,8 @@ This allows web apps to override text edit behavior before the browser modifies 
 
 ## Syntax
 
-```js
-var staticRanges[] = inputEvent.getTargetRanges()
+```js-nolint
+getTargetRanges()
 ```
 
 ### Parameters
@@ -41,7 +34,10 @@ The following function returns true if `beforeinput`, and thus
 
 ```js
 function isBeforeInputEventAvailable() {
-  return window.InputEvent && typeof InputEvent.prototype.getTargetRanges === "function";
+  return (
+    window.InputEvent &&
+    typeof InputEvent.prototype.getTargetRanges === "function"
+  );
 }
 ```
 
@@ -54,10 +50,10 @@ event to log the result of `getTargetRanges()`.
 ```js
 const editableElem = document.querySelector('[contenteditable="true"]');
 
-editableElem.addEventListener('beforeinput', (e) => {
-    const targetRanges = e.getTargetRanges();
-    console.log(targetRanges);
-})
+editableElem.addEventListener("beforeinput", (e) => {
+  const targetRanges = e.getTargetRanges();
+  console.log(targetRanges);
+});
 ```
 
 ## Specifications

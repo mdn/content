@@ -1,17 +1,8 @@
 ---
 title: Using audio and video in HTML
 slug: Web/Media/HTML_media
-tags:
-  - Audio
-  - Beginner
-  - Guide
-  - HTML
-  - Media
-  - NeedsContent
-  - Video
-  - WIP
-  - sound
 ---
+
 {{QuickLinksWithSubpages("/en-US/docs/Web/Media")}}
 
 The {{Glossary("HTML")}} {{HTMLElement("audio")}} and {{HTMLElement("video")}} elements let you embed audio and video content into a web page. More than that, their underlying interfaces are the key to manipulating and playing back media in general, even offscreen. In this guide, we'll review the media elements and how to use them in HTML content.

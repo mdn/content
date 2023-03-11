@@ -1,13 +1,10 @@
 ---
 title: CSS Declaration Block
 slug: Web/API/CSS_Object_Model/CSS_Declaration_Block
-tags:
-  - CSS
-  - CSS Object Model
-  - CSS Declaration Block
-  - CSS Declarations
-  - Reference
+page-type: guide
+spec-urls: https://drafts.csswg.org/cssom/#css-declaration-blocks
 ---
+
 {{ APIRef("CSSOM") }}
 
 A **CSS declaration block** is an ordered collection of CSS properties and values. It is represented in the DOM as a {{domxref("CSSStyleDeclaration")}}.
@@ -29,7 +26,7 @@ When a {{domxref("CSSStyleDeclaration")}} is returned by a [CSS Object Model (CS
 
 ## Basic example
 
-The following example shows a CSS rule with a declaration block for the {{htmlelement("Heading_elements","&lt;h1&gt;")}} element. The CSS declaration block is the lines between the curly braces.
+The following example shows a CSS rule with a declaration block for the {{htmlelement("Heading_Elements","h1")}} element. The CSS declaration block is the lines between the curly braces.
 
 ```css
 h1 {
@@ -50,6 +47,4 @@ console.log(rule.style); // a CSSStyleDeclaration object
 
 ## Specifications
 
-| Specification                                                                                        | Status                   | Comment |
-| ---------------------------------------------------------------------------------------------------- | ------------------------ | ------- |
-| {{SpecName('CSSOM', '#css-declaration-blocks', 'CSS Declaration Blocks')}} | {{Spec2('CSSOM')}} |         |
+{{Specifications}}

@@ -1,15 +1,10 @@
 ---
 title: flex-shrink
 slug: Web/CSS/flex-shrink
-tags:
-  - CSS
-  - CSS Flexible Boxes
-  - CSS Property
-  - NeedsContent
-  - Reference
-  - recipe:css-property
+page-type: css-property
 browser-compat: css.properties.flex-shrink
 ---
+
 {{CSSRef}}
 
 The **`flex-shrink`** [CSS](/en-US/docs/Web/CSS) property sets the flex shrink factor of a flex item. If the size of all flex items is larger than the flex container, items shrink to fit according to `flex-shrink`.
@@ -29,6 +24,7 @@ flex-shrink: 0.6;
 flex-shrink: inherit;
 flex-shrink: initial;
 flex-shrink: revert;
+flex-shrink: revert-layer;
 flex-shrink: unset;
 ```
 
@@ -76,7 +72,7 @@ The `flex-shrink` property is specified as a single `<number>`.
 
 #content div {
   flex-basis: 120px;
-  border: 3px solid rgba(0,0,0,.2);
+  border: 3px solid rgba(0, 0, 0, 0.2);
 }
 
 .box {

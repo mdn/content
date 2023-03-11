@@ -1,17 +1,10 @@
 ---
 title: pageAction.isShown()
 slug: Mozilla/Add-ons/WebExtensions/API/pageAction/isShown
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Reference
-  - WebExtensions
-  - isShown
-  - pageAction
+page-type: webextension-api-function
 browser-compat: webextensions.api.pageAction.isShown
 ---
+
 {{AddonSidebar()}}
 
 Returns `true` if the page action is being shown for the given tab.
@@ -20,7 +13,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ## Syntax
 
-```js
+```js-nolint
 let gettingIsShown = browser.pageAction.isShown(
   details // object
 )

@@ -1,30 +1,13 @@
 ---
 title: XRInputSourceArray.keys()
 slug: Web/API/XRInputSourceArray/keys
-tags:
-  - API
-  - AR
-  - Devices
-  - Input Sources
-  - Inputs
-  - Iterator
-  - Method
-  - Mixed
-  - Reality
-  - Reference
-  - Sources
-  - VR
-  - Virtual
-  - WebXR
-  - WebXR API
-  - WebXR Device API
-  - XR
-  - XRInputSourceArray
-  - augmented
-  - keys
+page-type: web-api-instance-method
+status:
+  - experimental
 browser-compat: api.XRInputSourceArray.keys
 ---
-{{APIRef("WebXR Device API")}}
+
+{{APIRef("WebXR Device API")}}{{SeeCompatTable}}
 
 The **`keys()`** method in the
 {{domxref("XRInputSourceArray")}} interface returns a {{Glossary("JavaScript")}}
@@ -34,8 +17,8 @@ of input sources.
 
 ## Syntax
 
-```js
-xrInputSourceArray.keys();
+```js-nolint
+keys()
 ```
 
 ### Parameters

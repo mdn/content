@@ -1,15 +1,10 @@
 ---
 title: fallback
 slug: Web/CSS/@counter-style/fallback
-tags:
-  - '@counter-style'
-  - At-rule descriptor
-  - CSS
-  - CSS Counter Styles
-  - CSS Descriptor
-  - Reference
+page-type: css-at-rule-descriptor
 browser-compat: css.at-rules.counter-style.fallback
 ---
+
 {{CSSRef}}
 
 The **`fallback`** descriptor can be used to specify a counter style to fall back to if the current counter style cannot create a marker representation for a particular counter value.
@@ -60,7 +55,7 @@ A couple of scenarios where a fallback style will be used are:
 ```css
 @counter-style fallback-example {
   system: fixed;
-  symbols: "\24B6" "\24B7" "\24B8";
+  symbols: "\24B6""\24B7""\24B8";
   fallback: upper-alpha;
 }
 

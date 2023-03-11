@@ -1,13 +1,10 @@
 ---
 title: General sibling combinator
 slug: Web/CSS/General_sibling_combinator
-tags:
-  - CSS
-  - Reference
-  - Selector
-  - Selectors
+page-type: css-combinator
 browser-compat: css.selectors.general_sibling
 ---
+
 {{CSSRef("Selectors")}}
 
 The **general sibling combinator** (`~`) separates two selectors and matches _all iterations_ of the second element, that are following the first element (though not necessarily immediately), and are children of the same parent {{Glossary("element")}}.
@@ -44,10 +41,10 @@ p ~ span {
 <code>Here is some code.</code>
 <span>And here is a red span!</span>
 <span>And this is a red span!</span>
-<code>More code...</code>
-<div> How are you? </div>
-<p> Whatever it may be, keep smiling. </p>
-<h1> Dream big </h1>
+<code>More code…</code>
+<div>How are you?</div>
+<p>Whatever it may be, keep smiling.</p>
+<h1>Dream big</h1>
 <span>And yet again this is a red span!</span>
 ```
 

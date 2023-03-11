@@ -1,17 +1,11 @@
 ---
 title: AbortSignal.throwIfAborted()
 slug: Web/API/AbortSignal/throwIfAborted
-tags:
-  - API
-  - AbortSignal
-  - throwIfAborted
-  - Experimental
-  - method
-  - Reference
-  - reason
+page-type: web-api-instance-method
 browser-compat: api.AbortSignal.throwIfAborted
 ---
-{{APIRef("DOM")}} {{SeeCompatTable}}
+
+{{APIRef("DOM")}}
 
 The **`throwIfAborted()`** method throws the signal's abort {{domxref("AbortSignal.reason", "reason")}} if the signal has been aborted; otherwise it does nothing.
 
@@ -21,13 +15,17 @@ This method can also be used to abort operations at particular points in code, r
 
 ## Syntax
 
-```js
+```js-nolint
 throwIfAborted()
 ```
 
-### Return value
+### Parameters
 
 None.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ## Examples
 
@@ -37,7 +35,7 @@ The examples below come from the specification.
 
 This example demonstrates how you can use `throwIfAborted()` to abort a polling operation.
 
-Consider an asynchronous `waitForCondition()` function that is called with another asynchronous function "`func`", a target value "`targetValue`, and an `AbortSignal`.
+Consider an asynchronous `waitForCondition()` function that is called with another asynchronous function `func`, a target value `targetValue`, and an `AbortSignal`.
 The method compares the result of `func` with `targetValue` in a loop, returning when they match.
 
 ```js
@@ -60,24 +58,26 @@ If the signal is aborted, this will cause the `waitForCondition()` promise to be
 
 An API that needs to support aborting can accept an `AbortSignal` object, and use its state to trigger abort signal handling when needed.
 
-A {{domxref("Promise")}}-based API should should respond to the abort signal by rejecting any unsettled promise with the `AbortSignal` abort {{domxref("AbortSignal.reason", "reason")}}.
+A {{jsxref("Promise")}}-based API should respond to the abort signal by rejecting any unsettled promise with the `AbortSignal` abort {{domxref("AbortSignal.reason", "reason")}}.
 For example, consider the following `myCoolPromiseAPI`, which takes a signal and returns a promise.
 The promise is rejected immediately if the signal is already aborted, or if the abort event is detected.
 Otherwise it completes normally and then resolves the promise.
 
 ```js
-function myCoolPromiseAPI(..., {signal}) {
+function myCoolPromiseAPI(/* … ,*/ { signal }) {
   return new Promise((resolve, reject) => {
-    //If the signal is already aborted, immediately throw in order to reject the promise.
-    signal.throwIfAborted();
+    // If the signal is already aborted, immediately throw in order to reject the promise.
+    if (signal.aborted) {
+      reject(signal.reason);
+    }
 
     // Perform the main purpose of the API
     // Call resolve(result) when done.
 
     // Watch for 'abort' signals
-    signal.addEventListener('abort', () => {
+    signal.addEventListener("abort", () => {
       // Stop the main operation
-      // Reject the promise wth the abort reason.
+      // Reject the promise with the abort reason.
       reject(signal.reason);
     });
   });
@@ -93,10 +93,10 @@ const signal = controller.signal;
 
 startSpinner();
 
-myCoolPromiseAPI({ ..., signal })
-  .then(result => ...)
-  .catch(err => {
-    if (err.name == 'AbortError') return;
+myCoolPromiseAPI({ /* … ,*/ signal })
+  .then((result) => {})
+  .catch((err) => {
+    if (err.name === "AbortError") return;
     showUserErrorMessage();
   })
   .then(() => stopSpinner());

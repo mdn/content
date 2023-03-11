@@ -1,24 +1,29 @@
 ---
 title: Document.clear()
 slug: Web/API/Document/clear
-tags:
-  - API
-  - Deprecated
-  - Document
-  - HTML DOM
-  - Method
-  - Reference
+page-type: web-api-instance-method
+status:
+  - deprecated
 browser-compat: api.Document.clear
 ---
+
 {{APIRef("DOM")}}{{Deprecated_Header}}
 
 The **`Document.clear()`** method does nothing, but doesn't raise any error.
 
 ## Syntax
 
-```js
-document.clear();
+```js-nolint
+clear()
 ```
+
+### Parameters
+
+None.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ## Specifications
 

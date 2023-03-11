@@ -1,32 +1,20 @@
 ---
 title: BluetoothCharacteristicProperties.read
 slug: Web/API/BluetoothCharacteristicProperties/read
-tags:
-  - API
-  - Bluetooth
-  - BluetoothCharacteristicProperties
-  - Experimental
-  - NeedsExample
-  - Property
-  - Reference
-  - Web Bluetooth API
-  - read
+page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.BluetoothCharacteristicProperties.read
 ---
-{{securecontext_header}}{{APIRef("Bluetooth API")}}
+
+{{securecontext_header}}{{APIRef("Bluetooth API")}}{{SeeCompatTable}}
 
 The **`read`** read-only property of the
 {{domxref("BluetoothCharacteristicProperties")}} interface returns a
 `boolean` that is `true` if the reading of the characteristic
 value is permitted.
 
-## Syntax
-
-```js
-var aBoolean = BluetoothCharacteristicProperties.read;
-```
-
-### Value
+## Value
 
 A boolean value.
 

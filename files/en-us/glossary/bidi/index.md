@@ -1,12 +1,11 @@
 ---
 title: BiDi
 slug: Glossary/BiDi
-tags:
-  - Accessibility
-  - Glossary
+page-type: glossary-definition
 ---
+
 **BiDi** (BiDirectional) refers to a document containing both right-to-left and left-to-right text. Even when both directionalities occur in the same paragraph, the text in each language must appear in its proper directionality.
 
 ## See also
 
-- {{Interwiki("wikipedia", "Bi-directional text")}} on Wikipedia
+- [Bi-directional text](https://en.wikipedia.org/wiki/Bi-directional_text) on Wikipedia

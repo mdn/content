@@ -1,38 +1,30 @@
 ---
 title: XRSession.requestLightProbe()
 slug: Web/API/XRSession/requestLightProbe
-tags:
-  - API
-  - AR
-  - Augmented Reality
-  - Experimental
-  - Method
-  - Reference
-  - VR
-  - Virtual Reality
-  - WebXR
-  - WebXR Device API
-  - XR
-  - XRSession
+page-type: web-api-instance-method
+status:
+  - experimental
 browser-compat: api.XRSession.requestLightProbe
 ---
-{{APIRef("WebXR Device API")}}
+
+{{APIRef("WebXR Device API")}}{{SeeCompatTable}}
 
 The **`requestLightProbe()`** method of the
 {{domxref("XRSession")}} interface returns a {{jsxref("Promise")}} that resolves with an {{domxref("XRLightProbe")}} object that estimates lighting information at a given point in the user's environment.
 
 ## Syntax
 
-```js
+```js-nolint
 requestLightProbe()
 requestLightProbe(options)
 ```
 
 ### Parameters
 
-- `options` {{optional_inline}}
+- `options` {{Optional_Inline}}
   - : An object containing configuration options, specifically:
-    - `reflectionFormat`: The internal reflection format indicating how the texture data is represented, either `srgba8` (default value) or `rgba16f`. See also {{domxref("XRSession.preferredReflectionFormat")}}.
+    - `reflectionFormat`
+      - : The internal reflection format indicating how the texture data is represented, either `srgba8` (default value) or `rgba16f`. See also {{domxref("XRSession.preferredReflectionFormat")}}.
 
 ### Return value
 

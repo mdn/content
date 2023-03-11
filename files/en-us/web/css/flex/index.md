@@ -1,14 +1,10 @@
 ---
 title: flex
 slug: Web/CSS/flex
-tags:
-  - CSS
-  - CSS Flexible Boxes
-  - CSS Property
-  - Reference
-  - recipe:css-shorthand-property
+page-type: css-shorthand-property
 browser-compat: css.properties.flex
 ---
+
 {{CSSRef}}
 
 The **`flex`** [CSS](/en-US/docs/Web/CSS) [shorthand property](/en-US/docs/Web/CSS/Shorthand_properties) sets how a flex _item_ will grow or shrink to fit the space available in its flex container.
@@ -53,6 +49,7 @@ flex: 2 2 10%;
 flex: inherit;
 flex: initial;
 flex: revert;
+flex: revert-layer;
 flex: unset;
 ```
 
@@ -60,26 +57,24 @@ The `flex` property may be specified using one, two, or three values.
 
 - **One-value syntax:** the value must be one of:
 
-  - a `<number>`: In this case it is interpreted as `flex: <number> 1 0`; the {{cssxref("flex-shrink")}} value is assumed to be `1` and the {{cssxref("flex-basis")}} value is assumed to be `0`.
-  - a `<width>`: In this case it is interpreted as `flex: 1 1 <width>`; the {{cssxref("flex-grow")}} value is assumed to be `1` and the {{cssxref("flex-shrink")}} value is assumed to be `1`.
-  - one of the keywords: `none`, `auto`, or `initial`.
+  - a valid value for {{cssxref("&lt;flex-grow&gt;")}}: then the shorthand expands to `flex: <flex-grow> 1 0`.
+  - a valid value for {{cssxref("&lt;flex-basis&gt;")}}: then the shorthand expands to `flex: 1 1 <flex-basis>`.
+  - the keyword `none` or one of the global keywords.
 
 - **Two-value syntax:**
 
-  - The first value must be:
-
-    - a {{cssxref("&lt;number&gt;")}} and it is interpreted as `<flex-grow>`.
+  - The first value must be a valid value for {{cssxref("flex-grow")}}.
 
   - The second value must be one of:
 
-    - a {{cssxref("&lt;number&gt;")}}: then it is interpreted as `<flex-shrink>`.
-    - a valid value for {{cssxref("width")}}: then it is interpreted as `<flex-basis>`.
+    - a valid value for {{cssxref("flex-shrink")}}: then the shorthand expands to `flex: <flex-grow> <flex-shrink> 0`.
+    - a valid value for {{cssxref("flex-basis")}}: then the shorthand expands to `flex: <flex-grow> 1 <flex-basis>`.
 
 - **Three-value syntax:** the values must be in the following order:
 
-  1. a {{cssxref("&lt;number&gt;")}} for `<flex-grow>`.
-  2. a {{cssxref("&lt;number&gt;")}} for `<flex-shrink>`.
-  3. a valid value for {{cssxref("width")}} for `<flex-basis>`.
+  1. a valid value for {{cssxref("flex-grow")}}.
+  2. a valid value for {{cssxref("flex-shrink")}}.
+  3. a valid value for {{cssxref("flex-basis")}}.
 
 ### Values
 
@@ -138,7 +133,7 @@ For most purposes, authors should set `flex` to one of the following values: `au
 }
 
 .flex-container {
-  background-color: #F4F7F8;
+  background-color: #f4f7f8;
   resize: horizontal;
   overflow: hidden;
   display: flex;
@@ -150,7 +145,7 @@ For most purposes, authors should set `flex` to one of the following values: `au
   padding: 0.5em;
   width: 110px;
   min-width: 0;
-  background-color: #1B5385;
+  background-color: #1b5385;
   color: white;
   font-family: monospace;
   font-size: 13px;
@@ -224,10 +219,10 @@ By default flex items don't shrink below their minimum content size. To change t
 ```
 
 ```js hidden
-var flex = document.getElementById("flex");
-var raw = document.getElementById("raw");
-flex.addEventListener("click", function() {
-  raw.style.display = raw.style.display == "none" ? "block" : "none";
+const flex = document.getElementById("flex");
+const raw = document.getElementById("raw");
+flex.addEventListener("click", () => {
+  raw.style.display = raw.style.display === "none" ? "block" : "none";
 });
 ```
 

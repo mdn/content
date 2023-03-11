@@ -1,29 +1,17 @@
 ---
 title: VisualViewport.scale
 slug: Web/API/VisualViewport/scale
-tags:
-  - API
-  - Property
-  - Reference
-  - Visual Viewport API
-  - VisualViewport
-  - size
-  - viewport
+page-type: web-api-instance-property
 browser-compat: api.VisualViewport.scale
 ---
+
 {{APIRef("Visual Viewport")}}
 
 The **`scale`** read-only property of the
 {{domxref("VisualViewport")}} interface returns the pinch-zoom scaling factor applied
 to the visual viewport.
 
-## Syntax
-
-```js
-var scale = VisualViewport.scale
-```
-
-### Value
+## Value
 
 A double.
 

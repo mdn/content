@@ -1,33 +1,20 @@
 ---
 title: HTMLObjectElement.type
 slug: Web/API/HTMLObjectElement/type
-tags:
-  - API
-  - HTML DOM
-  - HTMLObjectElement
-  - NeedsExample
-  - Property
-  - Reference
-  - Type
+page-type: web-api-instance-property
 browser-compat: api.HTMLObjectElement.type
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`type`** property of the
-{{domxref("HTMLObjectElement")}} interface returns a {{domxref("DOMString")}} that
+{{domxref("HTMLObjectElement")}} interface returns a string that
 reflects the {{htmlattrxref("type", "object")}} HTML attribute, specifying the MIME type
 of the resource.
 
-## Syntax
+## Value
 
-```js
-var String = HTMLObjectElement.type
-HTMLObjectElement.type = String;
-```
-
-### Value
-
-A {{domxref('DOMString')}}.
+A string.
 
 ## Specifications
 

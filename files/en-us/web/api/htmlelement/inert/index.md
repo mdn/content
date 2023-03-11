@@ -1,21 +1,15 @@
 ---
 title: HTMLElement.inert
 slug: Web/API/HTMLElement/inert
+page-type: web-api-instance-property
 browser-compat: api.HTMLElement.inert
 ---
+
 {{ APIRef("HTML DOM") }}
 
-The {{domxref("HTMLElement")}} property **`inert`** is a boolean value that, when present, makes the browser "ignore" user input events for the element, including focus events and events from assistive technologies. The browser may also ignore page search and text selection in the element. This can be useful when building UIs such as modals where you would want to "trap" the focus inside the modal when it's visible.
+The {{domxref("HTMLElement")}} property **`inert`** reflects the value of the element's [`inert`](/en-US/docs/Web/HTML/Global_attributes/inert) attribute. It is a boolean value that, when present, makes the browser "ignore" user input events for the element, including focus events and events from assistive technologies. The browser may also ignore page search and text selection in the element. This can be useful when building UIs such as modals where you would want to "trap" the focus inside the modal when it's visible.
 
-## Syntax
-
-```js
-isInert = HTMLElement.inert;
-
-HTMLElement.inert = true | false;
-```
-
-### Value
+## Value
 
 A Boolean which is `true` if the element is inert; otherwise, the value is `false`.
 
@@ -38,7 +32,7 @@ A Boolean which is `true` if the element is inert; otherwise, the value is `fals
 
 ```css
 [inert] > * {
-  opacity: .5;
+  opacity: 0.5;
 }
 ```
 
@@ -56,4 +50,7 @@ A Boolean which is `true` if the element is inert; otherwise, the value is `fals
 
 ## See also
 
+- [Global attribute: `inert`](/en-US/docs/Web/HTML/Global_attributes/inert)
+- {{HTMLElement("dialog")}}
 - [Inert Polyfill](https://github.com/WICG/inert)
+- {{domxref("HTMLInputElement.disabled", "disabled")}}

@@ -1,25 +1,22 @@
 ---
 title: WeakMap() constructor
 slug: Web/JavaScript/Reference/Global_Objects/WeakMap/WeakMap
-tags:
-  - Constructor
-  - JavaScript
-  - Reference
-  - WeakMap
-  - Polyfill
+page-type: javascript-constructor
 browser-compat: javascript.builtins.WeakMap.WeakMap
 ---
+
 {{JSRef}}
 
-The **`WeakMap()` constructor** creates a [`WeakMap`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakMap/WeakMap)
-object, optionally based on a provided [`Array`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) or other iterable object.
+The **`WeakMap()` constructor** creates a [`WeakMap`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakMap) object, optionally based on a provided [`Array`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) or other iterable object.
 
 ## Syntax
 
-```js
+```js-nolint
 new WeakMap()
 new WeakMap(iterable)
 ```
+
+> **Note:** `WeakMap()` can only be constructed with [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Attempting to call it without `new` throws a {{jsxref("TypeError")}}.
 
 ### Parameters
 
@@ -31,15 +28,15 @@ new WeakMap(iterable)
 ### Using WeakMap
 
 ```js
-const wm1 = new WeakMap(),
-      wm2 = new WeakMap(),
-      wm3 = new WeakMap();
-const o1 = {},
-      o2 = function() {},
-      o3 = window;
+const wm1 = new WeakMap();
+const wm2 = new WeakMap();
+const wm3 = new WeakMap();
+const o1 = {};
+const o2 = function () {};
+const o3 = window;
 
 wm1.set(o1, 37);
-wm1.set(o2, 'azerty');
+wm1.set(o2, "azerty");
 wm2.set(o1, o2); // a value can be anything, including an object or a function
 wm2.set(o3, undefined);
 wm2.set(wm1, wm2); // keys and values can be any objects. Even WeakMaps!
@@ -71,10 +68,8 @@ wm1.has(o1); // false
 ## See also
 
 - [Polyfill of `WeakMap` in `core-js`](https://github.com/zloirock/core-js#weakmap)
-- [`WeakMap`
-  in the JavaScript guide](/en-US/docs/Web/JavaScript/Guide/Keyed_collections#WeakMap_object)
-- [Hiding Implementation Details with
-  ECMAScript 6 WeakMaps](http://fitzgeraldnick.com/weblog/53/)
+- [`WeakMap` in the JavaScript guide](/en-US/docs/Web/JavaScript/Guide/Keyed_collections#weakmap_object)
+- [Hiding Implementation Details with ECMAScript 6 WeakMaps](https://fitzgeraldnick.com/2014/01/13/hiding-implementation-details-with-e6-weakmaps.html)
 - {{jsxref("Map")}}
 - {{jsxref("Set")}}
 - {{jsxref("WeakSet")}}

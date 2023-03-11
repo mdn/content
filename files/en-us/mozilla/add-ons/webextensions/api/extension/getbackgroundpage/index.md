@@ -1,28 +1,22 @@
 ---
 title: extension.getBackgroundPage()
 slug: Mozilla/Add-ons/WebExtensions/API/extension/getBackgroundPage
-tags:
-  - API
-  - Add-ons
-  - Extension
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - getBackgroundPage
+page-type: webextension-api-function
 browser-compat: webextensions.api.extension.getBackgroundPage
 ---
+
 {{AddonSidebar()}}
 
-Alias for {{WebExtAPIRef("runtime.getBackgroundPage()")}}.
+Returns the [Window](/en-US/docs/Web/API/Window) of the background page if the background script is running. If the script is not running, null is returned.
 
-> **Note:** This method cannot be used in Private Browsing mode — it always returns an empty array. Consider using {{WebExtAPIRef("runtime.sendMessage","runtime.sendMessage()")}} or {{WebExtAPIRef("runtime.connect","runtime.connect()")}}. For more info see {{bug(1329304)}}.
+This a synchronous function.
+
+> **Note:** This method cannot be used in Private Browsing mode — it always returns null. Consider using {{WebExtAPIRef("runtime.sendMessage","runtime.sendMessage()")}} or {{WebExtAPIRef("runtime.connect","runtime.connect()")}}. See [Firefox bug 1329304](https://bugzil.la/1329304) for more information.
 
 ## Syntax
 
-```js
-var page = browser.extension.getBackgroundPage()
+```js-nolint
+let page = browser.extension.getBackgroundPage()
 ```
 
 ### Parameters
@@ -31,7 +25,7 @@ None.
 
 ### Return value
 
-`object`. [Window](/en-US/docs/Web/API/Window) of the background page.
+`object`. [Window](/en-US/docs/Web/API/Window) of the background page or null.
 
 ## Examples
 
@@ -50,7 +44,7 @@ A script running in a [popup](/en-US/docs/Mozilla/Add-ons/WebExtensions/Anatomy_
 ```js
 // popup.js
 
-var page = browser.extension.getBackgroundPage();
+let page = browser.extension.getBackgroundPage();
 page.foo(); // -> "I'm defined in background.js"
 ```
 
@@ -60,11 +54,10 @@ page.foo(); // -> "I'm defined in background.js"
 
 {{Compat}}
 
-> **Note:** This API is based on Chromium's [`chrome.extension`](https://developer.chrome.com/extensions/extension#method-getBackgroundPage) API. This documentation is derived from [`extension.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/extension.json) in the Chromium code.
->
-> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
+> **Note:** This API is based on Chromium's [`chrome.extension`](https://developer.chrome.com/docs/extensions/reference/extension/#method-getBackgroundPage) API. This documentation is derived from [`extension.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/extension.json) in the Chromium code.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -91,4 +84,4 @@ page.foo(); // -> "I'm defined in background.js"
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

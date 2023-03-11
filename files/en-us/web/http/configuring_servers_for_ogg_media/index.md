@@ -1,13 +1,8 @@
 ---
 title: Configuring servers for Ogg media
 slug: Web/HTTP/Configuring_servers_for_Ogg_media
-tags:
-  - Audio
-  - HTTP
-  - Media
-  - Ogg
-  - Video
 ---
+
 {{HTTPSidebar}}
 
 HTML {{HTMLElement("audio")}} and {{HTMLElement("video")}} elements allow media presentation without the need for the user to install any plug-ins or other software to do so.
@@ -24,7 +19,7 @@ Most servers don't by default serve Ogg media with the correct MIME types, so yo
 
 For Apache, you can add the following to your configuration:
 
-```
+```plain
 AddType audio/ogg .oga
 AddType video/ogg .ogv
 AddType application/ogg .ogg
@@ -44,7 +39,7 @@ Your server must also return `206: Partial Content` for the request `Range: byte
 
 When the browser seeks through Ogg media to a specified time, it has to seek to the nearest key frame before the seek target, then download and decode the video from there until the requested target time. The farther apart your key frames are, the longer this takes, so it's helpful to include key frames at regular intervals.
 
-By default, [`ffmpeg2theora`](https://v2v.cc/~j/ffmpeg2theora/) uses one key frame every 64 frames (or about every 2 seconds at 30 frames per second), which works pretty well.
+By default, [`ffmpeg2theora`](http://v2v.cc/~j/ffmpeg2theora/) uses one key frame every 64 frames (or about every 2 seconds at 30 frames per second), which works pretty well.
 
 > **Note:** Of course, the more key frames you use, the larger your video file is, so you may need to experiment a bit to get the right balance between file size and seek performance.
 
@@ -52,13 +47,13 @@ By default, [`ffmpeg2theora`](https://v2v.cc/~j/ffmpeg2theora/) uses one key fra
 
 The HTML {{HTMLElement("audio")}} and {{HTMLElement("video")}} elements provide the `preload` attribute, which tells the browser to attempt to download the entire media when the page loads. Without `preload`, the browser only downloads enough of the media to display the first video frame, and to determine the media's duration.
 
-`preload` is off by default, so if getting to video is the point of your web page, your users may appreciate it if you include `preload` in your video elements. using `preload="metadata"` will preload the media file's metadata and possibly the first few frames of video. Setting `payload` to `auto` tells the browser to automatically begin downloading the media as soon as the page is loaded, under the assumption that the user will play it.
+`preload` is off by default, so if getting to video is the point of your web page, your users may appreciate it if you include `preload` in your video elements. Using `preload="metadata"` will preload the media file's metadata and possibly the first few frames of video. Setting `payload` to `auto` tells the browser to automatically begin downloading the media as soon as the page is loaded, under the assumption that the user will play it.
 
 ## Configuration for older Firefox versions
 
 ### Serve X-Content-Duration headers
 
-> **Note:** As of [Firefox 41](/en-US/docs/Mozilla/Firefox/Releases/41), the `X-Content-Duration` header is no longer supported. See {{Bug(1160695)}} for more details.
+> **Note:** As of [Firefox 41](/en-US/docs/Mozilla/Firefox/Releases/41), the `X-Content-Duration` header is no longer supported. See [Webkit bug 1160695](https://bugzil.la/1160695) for more details.
 
 The Ogg format doesn't encapsulate the duration of media, so for the progress bar on the video controls to display the duration of the video, Gecko needs to determine the length of the media using other means.
 
@@ -66,7 +61,7 @@ There are two ways Gecko can do this. The best way is to offer an `X-Content-Dur
 
 For example, if the video is 1 minute and 32.6 seconds long, this header would be:
 
-```
+```http
 X-Content-Duration: 92.6
 ```
 

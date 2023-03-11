@@ -1,15 +1,10 @@
 ---
 title: HTMLTableElement.tBodies
 slug: Web/API/HTMLTableElement/tBodies
-tags:
-  - API
-  - HTML DOM
-  - HTMLTableElement
-  - Property
-  - Read-only
-  - Reference
+page-type: web-api-instance-property
 browser-compat: api.HTMLTableElement.tBodies
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`HTMLTableElement.tBodies`** read-only property returns a
@@ -32,13 +27,11 @@ example:
 The HTML DOM generated from the above HTML will have a {{HTMLElement("tbody")}} element
 even though the tags are not included in the source HTML.
 
-## Syntax
+## Value
 
-```js
-HTMLCollectionObject = table.tBodies
-```
+A live {{domxref("HTMLCollection")}}.
 
-## Example
+## Examples
 
 This snippet gets the number of bodies in a table.
 

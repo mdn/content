@@ -1,20 +1,10 @@
 ---
 title: RTCPeerConnection.addTransceiver()
 slug: Web/API/RTCPeerConnection/addTransceiver
-tags:
-  - API
-  - Audio
-  - Media
-  - RTCPeerConnection
-  - RTCRtpTransceiver
-  - RTP
-  - Reference
-  - Transceivers
-  - Video
-  - addTransceiver
-  - Method
+page-type: web-api-instance-method
 browser-compat: api.RTCPeerConnection.addTransceiver
 ---
+
 {{APIRef("WebRTC")}}
 
 The {{domxref("RTCPeerConnection")}} method
@@ -26,15 +16,16 @@ bidirectional stream, with both an {{domxref("RTCRtpSender")}} and an
 
 ## Syntax
 
-```js
-rtpTransceiver = RTCPeerConnection.addTransceiver(trackOrKind, init);
+```js-nolint
+addTransceiver(trackOrKind)
+addTransceiver(trackOrKind, init)
 ```
 
 ### Parameters
 
 - `trackOrKind`
   - : A {{domxref("MediaStreamTrack")}} to associate with the transceiver, or a
-    {{domxref("DOMString")}} which is used as the {{domxref("MediaStreamTrack.kind",
+    string which is used as the {{domxref("MediaStreamTrack.kind",
     "kind")}} of the receiver's {{domxref("RTCRtpReceiver.track", "track")}}, and by
     extension of the {{domxref("RTCRtpReceiver")}} itself.
 - `init` {{optional_inline}}
@@ -45,13 +36,28 @@ rtpTransceiver = RTCPeerConnection.addTransceiver(trackOrKind, init);
     - `sendEncodings` {{optional_inline}}
       - : A list of encodings to allow when sending RTP media from the {{domxref("RTCRtpSender")}}. Each entry is of type {{domxref("RTCRtpEncodingParameters")}}.
     - `streams` {{optional_inline}}
-      - : A list of {{domxref("MediaStream")}} objects to add to the transceiver's {{domxref("RTCRtpReceiver")}}; when the remote peer's {{domxref("RTCPeerConnection")}}'s {{event("track")}} event occurs, these are the streams that will be specified by that event.
+      - : A list of {{domxref("MediaStream")}} objects to add to the transceiver's {{domxref("RTCRtpReceiver")}}; when the remote peer's {{domxref("RTCPeerConnection")}}'s {{domxref("RTCPeerConnection.track_event", "track")}} event occurs, these are the streams that will be specified by that event.
+
+### Return value
+
+The {{domxref("RTCRtpTransceiver")}} object which will be used to exchange the media data.
 
 ### Exceptions
 
-- `TypeError`
-  - : A string was specified as `trackOrKind` which is not valid. The string
-    must be either `"audio"` or `"video"`.
+- {{jsxref("TypeError")}}
+
+  - : Thrown if `trackOrKind` was not either `"audio"` or `"video"`.
+
+    If the `sendEncodings` argument is used, this error may also be thrown if there is a badly formatted `rid` member, some but not all encodings contain a `rid` member, or different encodings have the same `rid` value.
+
+- {{jsxref("RangeError")}}
+  - : Thrown if any of the `sendEncodings` encodings have a {{domxref("RTCRtpEncodingParameters.maxFramerate", "maxFramerate")}} value less than 0.0, or a {{domxref("RTCRtpEncodingParameters.scaleResolutionDownBy", "scaleResolutionDownBy")}} value of less than 1.0.
+
+- {{jsxref("InvalidStateError")}}
+  - : Thrown if the the method is called when the associated connection is closed.
+
+- {{jsxref("InvalidAccessError")}}
+  - : Thrown if the `sendEncodings` argument is used, and contains a read-only parameter other than `rid`.
 
 ## Specifications
 
@@ -64,7 +70,6 @@ rtpTransceiver = RTCPeerConnection.addTransceiver(trackOrKind, init);
 ## See also
 
 - [WebRTC API](/en-US/docs/Web/API/WebRTC_API)
-- [Introduction to the Real-time
-  Transport Protocol (RTP)](/en-US/docs/Web/API/WebRTC_API/Intro_to_RTP)
+- [Introduction to the Real-time Transport Protocol (RTP)](/en-US/docs/Web/API/WebRTC_API/Intro_to_RTP)
 - {{domxref("RTCPeerConnection.addTrack()")}} also creates transceivers
 - {{domxref("RTCRtpReceiver")}} and {{domxref("RTCRtpSender")}}

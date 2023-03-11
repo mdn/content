@@ -1,11 +1,10 @@
 ---
 title: DOMTokenList.item()
 slug: Web/API/DOMTokenList/item
-tags:
-  - Method
-  - Reference
+page-type: web-api-instance-method
 browser-compat: api.DOMTokenList.item
 ---
+
 {{APIRef("DOM")}}
 
 The **`item()`** method of the {{domxref("DOMTokenList")}} interface returns an item in the list,
@@ -16,7 +15,7 @@ determined by its position in the list, its index.
 
 ## Syntax
 
-```js
+```js-nolint
 tokenList.item(index)
 ```
 
@@ -54,7 +53,7 @@ Now the JavaScript:
 ```js
 const span = document.querySelector("span");
 const classes = span.classList;
-const item = classes.item(classes.length-1);
+const item = classes.item(classes.length - 1);
 span.textContent = item;
 ```
 

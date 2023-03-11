@@ -1,19 +1,15 @@
 ---
 title: '<menu>: The Menu element'
 slug: Web/HTML/Element/menu
-tags:
-  - Element
-  - Experimental
-  - HTML
-  - HTML grouping content
-  - Reference
-  - Web
+page-type: html-element
 browser-compat: html.elements.menu
 ---
 
-{{HTMLRef}}{{SeeCompatTable}}
+{{HTMLSidebar}}
 
-The **`<menu>`** [HTML](/en-US/docs/Web/HTML) element is a semantic alternative to {{HTMLElement("ul")}}. It represents an unordered list of items (represented by {{HTMLElement("li")}} elements), each of these represent a link or other command that the user can activate.
+The **`<menu>`** [HTML](/en-US/docs/Web/HTML) element is described in the HTML specification as a semantic alternative to {{HTMLElement("ul")}}, but treated by browsers (and exposed through the accessibility tree) as no different than {{HTMLElement("ul")}}. It represents an unordered list of items (which are represented by {{HTMLElement("li")}} elements).
+
+{{EmbedInteractiveExample("pages/tabbed/menu.html", "tabbed-shorter")}}
 
 ## Attributes
 
@@ -21,9 +17,9 @@ This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_a
 
 ## Usage notes
 
-The `<menu>` and {{HTMLElement("ul")}} elements both represent an unordered list of items. The key difference is that {{HTMLElement("ul")}} primarily contains items for display, whilst `<menu>` is intended for interactive items, to act on.
+The `<menu>` and {{HTMLElement("ul")}} elements both represent an unordered list of items. The key difference is that {{HTMLElement("ul")}} primarily contains items for display, while `<menu>` was intended for interactive items. The related {{HTMLElement("menuitem")}} element has been deprecated.
 
-> **Note:** In previous version of the HTML specification, the `<menu>` element had an additional use case as a context menu. This functionality is now considered obsolete, and has been removed from the specification.
+> **Note:** In early versions of the HTML specification, the `<menu>` element had an additional use case as a context menu. This functionality is considered obsolete and is not in the specification.
 
 ## Examples
 
@@ -41,10 +37,21 @@ In this example, a `<menu>` is used to create a toolbar for an editing applicati
 </menu>
 ```
 
+Note that this is functionally no different from:
+
+```html
+<ul>
+  <li><button onclick="copy()">Copy</button></li>
+  <li><button onclick="cut()">Cut</button></li>
+  <li><button onclick="paste()">Paste</button></li>
+</ul>
+```
+
 #### CSS
 
 ```css
-menu {
+menu,
+ul {
   display: flex;
   list-style: none;
   padding: 0;
@@ -70,18 +77,18 @@ button {
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories"
+        <a href="/en-US/docs/Web/HTML/Content_categories"
           >Content categories</a
         >
       </th>
       <td>
         <p>
-          <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+          <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
             >Flow content</a
           >. If the element's children include at least one
           {{HTMLElement("li")}} element:
           <a
-            href="/en-US/docs/Web/Guide/HTML/Content_categories#palpable_content"
+            href="/en-US/docs/Web/HTML/Content_categories#palpable_content"
             >Palpable content</a
           >.
         </p>
@@ -105,7 +112,7 @@ button {
       <th scope="row">Permitted parents</th>
       <td>
         Any element that accepts
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
           >flow content</a
         >.
       </td>
@@ -123,15 +130,15 @@ button {
     <tr>
       <th scope="row">Permitted ARIA roles</th>
       <td>
-        {{ARIARole("directory")}}, {{ARIARole("group")}},
+        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/directory_role"><code>directory</code></a>, <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/group_role"><code>group</code></a>,
         <code
           ><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/listbox_role"
             >listbox</a
           ></code
-        >, {{ARIARole("menu")}}, {{ARIARole("menubar")}},
-        {{ARIARole("none")}}, {{ARIARole("presentation")}},
-        {{ARIARole("radiogroup")}}, {{ARIARole("tablist")}},
-        {{ARIARole("toolbar")}} or {{ARIARole("tree")}}
+        >, <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/menu_role"><code>menu</code></a>, <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/menubar_role"><code>menubar</code></a>,
+        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/none_role"><code>none</code></a>, <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/presentation_role"><code>presentation</code></a>,
+        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/radiogroup_role"><code>radiogroup</code></a>, <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/tablist_role"><code>tablist</code></a>,
+        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/toolbar_role"><code>toolbar</code></a> or <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/tree_role"><code>tree</code></a>
       </td>
     </tr>
     <tr>

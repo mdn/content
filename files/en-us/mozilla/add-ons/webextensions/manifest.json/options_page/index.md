@@ -1,16 +1,12 @@
 ---
 title: options_page
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/options_page
-tags:
-  - Add-ons
-  - Deprecated
-  - Extensions
-  - Manifest
-  - Options
-  - WebExtensions
-  - options_page
+page-type: webextension-manifest-key
+status:
+  - deprecated
 browser-compat: webextensions.manifest.options_page
 ---
+
 {{AddonSidebar}}
 
 <table class="fullwidth-table standard-table">
@@ -22,6 +18,10 @@ browser-compat: webextensions.manifest.options_page
     <tr>
       <th scope="row">Mandatory</th>
       <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Manifest version</th>
+      <td>2 or higher</td>
     </tr>
     <tr>
       <th scope="row">Example</th>

@@ -1,14 +1,10 @@
 ---
 title: FileReader.readAsBinaryString()
 slug: Web/API/FileReader/readAsBinaryString
-tags:
-  - API
-  - File API
-  - Files
-  - Method
-  - Reference
+page-type: web-api-instance-method
 browser-compat: api.FileReader.readAsBinaryString
 ---
+
 {{APIRef("File API")}}
 
 The `readAsBinaryString` method is used to start reading the contents of the
@@ -24,8 +20,8 @@ Using {{domxref("FileReader.readAsArrayBuffer()")}} is recommended.
 
 ## Syntax
 
-```js
-instanceOfFileReader.readAsBinaryString(blob);
+```js-nolint
+readAsBinaryString(blob)
 ```
 
 ### Parameters
@@ -33,29 +29,33 @@ instanceOfFileReader.readAsBinaryString(blob);
 - `blob`
   - : The {{domxref("Blob")}} or {{domxref("File")}} from which to read.
 
-## Example
+### Return value
+
+None ({{jsxref("undefined")}}).
+
+## Examples
 
 ```js
-var canvas = document.createElement('canvas');
-var height = 200;
-var width  = 200;
+const canvas = document.createElement("canvas");
+const height = 200;
+const width = 200;
 
-canvas.width  = width;
+canvas.width = width;
 canvas.height = height;
 
-var ctx = canvas.getContext('2d');
+const ctx = canvas.getContext("2d");
 
-ctx.strokeStyle = '#090';
+ctx.strokeStyle = "#090";
 ctx.beginPath();
-ctx.arc(width/2, height/2, width/2 - width/10, 0, Math.PI*2);
+ctx.arc(width / 2, height / 2, width / 2 - width / 10, 0, Math.PI * 2);
 ctx.stroke();
 
-canvas.toBlob(function (blob) {
-  var reader = new FileReader();
+canvas.toBlob((blob) => {
+  const reader = new FileReader();
 
-  reader.onload = function () {
+  reader.onload = () => {
     console.log(reader.result);
-  }
+  };
 
   reader.readAsBinaryString(blob);
 });

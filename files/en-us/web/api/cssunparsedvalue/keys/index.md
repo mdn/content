@@ -1,20 +1,11 @@
 ---
 title: CSSUnparsedValue.keys()
 slug: Web/API/CSSUnparsedValue/keys
-tags:
-  - API
-  - CSS Typed Object Model API
-  - CSSUnparsedValue
-  - Constructor
-  - Experimental
-  - Houdini
-  - Method
-  - NeedsExample
-  - Reference
-  - keys()
+page-type: web-api-instance-method
 browser-compat: api.CSSUnparsedValue.keys
 ---
-{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
+
+{{APIRef("CSS Typed OM")}}
 
 The **`CSSUnparsedValue.keys()`** method
 returns a new _array iterator_ object that contains the keys
@@ -22,8 +13,8 @@ for each index in the array.
 
 ## Syntax
 
-```js
-CSSUnparsedValue.keys()
+```js-nolint
+keys()
 ```
 
 ### Parameters
@@ -44,7 +35,7 @@ A new {{jsxref("Array")}}.
 
 ## See also
 
-- {{domxref("CSSUnparsedValue.CSSUnparsedValue()")}}
+- {{domxref("CSSUnparsedValue.CSSUnparsedValue", "CSSUnparsedValue()")}}
 - {{domxref("CSSUnparsedValue.entries")}}
 - {{domxref("CSSUnparsedValue.forEach")}}
 - {{domxref("CSSUnparsedValue.length")}}

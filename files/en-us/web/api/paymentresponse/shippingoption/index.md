@@ -1,18 +1,13 @@
 ---
 title: PaymentResponse.shippingOption
 slug: Web/API/PaymentResponse/shippingOption
-tags:
-  - API
-  - Experimental
-  - Payment Request
-  - PaymentResponse
-  - Property
-  - Reference
-  - Request Payment API
-  - Secure context
-  - shippingOption
+page-type: web-api-instance-property
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.PaymentResponse.shippingOption
 ---
+
 {{securecontext_header}}{{APIRef("Payment Request API")}}{{Deprecated_header}}{{Non-standard_header}}
 
 The **`shippingOption`** read-only property of
@@ -22,47 +17,50 @@ option selected by the user. This option is only present when the
 {{domxref('PaymentOptions')}} object passed to the
 {{domxref('PaymentRequest.PaymentRequest','PaymentRequest')}} constructor.
 
-## Syntax
+## Value
 
-```js
-var shippingOption = PaymentRequest.shippingOption;
-```
+A string.
 
-## Example
+## Examples
 
-In the example below, the {{domxref('PaymentRequest.onshippingaoptionchange')}} event
+In the example below, the {{domxref('PaymentRequest.shippingoptionchange_event', 'shippingoptionchange')}} event
 is called. It calls `updateDetails()` to toggle the shipping method between
 "standard" and "express".
 
 ```js
 // Initialization of PaymentRequest arguments are excerpted for brevity.
-var payment = new PaymentRequest(supportedInstruments, details, options);
+const payment = new PaymentRequest(supportedInstruments, details, options);
 
-request.addEventListener('shippingoptionchange', function(evt) {
-  evt.updateWith(new Promise(function(resolve, reject) {
-    updateDetails(details, request.shippingOption, resolve, reject);
-  }));
+request.addEventListener("shippingoptionchange", (evt) => {
+  evt.updateWith(
+    new Promise((resolve, reject) => {
+      updateDetails(details, request.shippingOption, resolve, reject);
+    })
+  );
 });
 
-payment.show().then(function(paymentResponse) {
-  // Processing of paymentResponse excerpted for the same of brevity.
-}).catch(function(err) {
-  console.error("Uh oh, something bad happened", err.message);
-});
+payment
+  .show()
+  .then((paymentResponse) => {
+    // Processing of paymentResponse excerpted for the same of brevity.
+  })
+  .catch((err) => {
+    console.error("Uh oh, something bad happened", err.message);
+  });
 
 function updateDetails(details, shippingOption, resolve, reject) {
-  var selectedShippingOption;
-  var otherShippingOption;
-  if (shippingOption === 'standard') {
+  let selectedShippingOption;
+  let otherShippingOption;
+  if (shippingOption === "standard") {
     selectedShippingOption = details.shippingOptions[0];
     otherShippingOption = details.shippingOptions[1];
-    details.total.amount.value = '55.00';
-  } else if (shippingOption === 'express') {
+    details.total.amount.value = "55.00";
+  } else if (shippingOption === "express") {
     selectedShippingOption = details.shippingOptions[1];
     otherShippingOption = details.shippingOptions[0];
-    details.total.amount.value = '67.00';
+    details.total.amount.value = "67.00";
   } else {
-    reject('Unknown shipping option \'' + shippingOption + '\'');
+    reject(`Unknown shipping option '${shippingOption}'`);
     return;
   }
   selectedShippingOption.selected = true;

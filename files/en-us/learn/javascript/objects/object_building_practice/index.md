@@ -1,18 +1,8 @@
 ---
 title: Object building practice
 slug: Learn/JavaScript/Objects/Object_building_practice
-tags:
-  - Article
-  - Beginner
-  - Canvas
-  - CodingScripting
-  - Guide
-  - JavaScript
-  - Learn
-  - Objects
-  - Tutorial
-  - l10n:priority
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Objects/JSON", "Learn/JavaScript/Objects/Adding_bouncing_balls_features", "Learn/JavaScript/Objects")}}
 
 In previous articles we looked at all the essential JavaScript object theory and syntax details, giving you a solid base to start from. In this article we dive into a practical exercise, giving you some more practice in building custom JavaScript objects, with a fun and colorful result.
@@ -37,7 +27,7 @@ In previous articles we looked at all the essential JavaScript object theory and
       <th scope="row">Objective:</th>
       <td>
         To get some practice with using objects and object-oriented techniques
-        in a real world context.
+        in a real-world context.
       </td>
     </tr>
   </tbody>
@@ -47,31 +37,31 @@ In previous articles we looked at all the essential JavaScript object theory and
 
 In this article we will write a classic "bouncing balls" demo, to show you how useful objects can be in JavaScript. Our little balls will bounce around on the screen, and change color when they touch each other. The finished example will look a little something like this:
 
-![](bouncing-balls.png)
+![Screenshot of a webpage titled "Bouncing balls". 23 balls of various pastel colors and sizes are visible across a black screen with long trails behind them indicating motion.](bouncing-balls.png)
 
-This example will make use of the [Canvas API](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics) for drawing the balls to the screen, and the [requestAnimationFrame](/en-US/docs/Web/API/window/requestAnimationFrame) API for animating the whole display — you don't need to have any previous knowledge of these APIs, and we hope that by the time you've finished this article you'll be interested in exploring them more. Along the way we'll make use of some nifty objects, and show you a couple of nice techniques like bouncing balls off walls, and checking whether they have hit each other (otherwise known as **collision detection**).
+This example will make use of the [Canvas API](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics) for drawing the balls to the screen, and the [`requestAnimationFrame`](/en-US/docs/Web/API/window/requestAnimationFrame) API for animating the whole display — you don't need to have any previous knowledge of these APIs, and we hope that by the time you've finished this article you'll be interested in exploring them more. Along the way, we'll make use of some nifty objects, and show you a couple of nice techniques like bouncing balls off walls, and checking whether they have hit each other (otherwise known as _collision detection_).
 
 ## Getting started
 
-To begin with, make local copies of our [`index.html`](https://github.com/mdn/learning-area/blob/master/javascript/oojs/bouncing-balls/index.html), [`style.css`](https://github.com/mdn/learning-area/blob/master/javascript/oojs/bouncing-balls/style.css), and [`main.js`](https://github.com/mdn/learning-area/blob/master/javascript/oojs/bouncing-balls/main.js) files. These contain the following, respectively:
+To begin with, make local copies of our [`index.html`](https://github.com/mdn/learning-area/blob/main/javascript/oojs/bouncing-balls/index.html), [`style.css`](https://github.com/mdn/learning-area/blob/main/javascript/oojs/bouncing-balls/style.css), and [`main.js`](https://github.com/mdn/learning-area/blob/main/javascript/oojs/bouncing-balls/main.js) files. These contain the following, respectively:
 
-1. A very simple HTML document featuring an {{HTMLElement("h1")}} element, a {{HTMLElement("canvas")}} element to draw our balls on, and elements to apply our CSS and JavaScript to our HTML.
+1. A very simple HTML document featuring an {{HTMLElement("Heading_Elements", "h1")}} element, a {{HTMLElement("canvas")}} element to draw our balls on, and elements to apply our CSS and JavaScript to our HTML.
 2. Some very simple styles, which mainly serve to style and position the `<h1>`, and get rid of any scrollbars or margin around the edge of the page (so that it looks nice and neat).
 3. Some JavaScript that serves to set up the `<canvas>` element and provide a general function that we're going to use.
 
 The first part of the script looks like so:
 
 ```js
-const canvas = document.querySelector('canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.querySelector("canvas");
+const ctx = canvas.getContext("2d");
 
-const width = canvas.width = window.innerWidth;
-const height = canvas.height = window.innerHeight;
+const width = (canvas.width = window.innerWidth);
+const height = (canvas.height = window.innerHeight);
 ```
 
 This script gets a reference to the `<canvas>` element, then calls the [`getContext()`](/en-US/docs/Web/API/HTMLCanvasElement/getContext) method on it to give us a context on which we can start to draw. The resulting constant (`ctx`) is the object that directly represents the drawing area of the canvas and allows us to draw 2D shapes on it.
 
-Next, we set constants called `width` and `height`, and the width and height of the canvas element (represented by the `canvas.width` and `canvas.height` properties) to equal the width and height of the browser viewport (the area that the webpage appears on — this can be gotten from the {{domxref("Window.innerWidth")}} and {{domxref("Window.innerHeight")}} properties).
+Next, we set constants called `width` and `height`, and the width and height of the canvas element (represented by the `canvas.width` and `canvas.height` properties) to equal the width and height of the browser viewport (the area which the webpage appears on — this can be gotten from the {{domxref("Window.innerWidth")}} and {{domxref("Window.innerHeight")}} properties).
 
 Note that we are chaining multiple assignments together, to get the variables all set quicker — this is perfectly OK.
 
@@ -87,31 +77,28 @@ function randomRGB() {
 }
 ```
 
-The `random()` function takes two numbers as arguments, and returns a random number in the range between the two. The `randomRGB()` function generates a random color represented as an [`rgb()`](/en-US/docs/Web/CSS/color_value/rgb()) string.
+The `random()` function takes two numbers as arguments, and returns a random number in the range between the two. The `randomRGB()` function generates a random color represented as an [`rgb()`](/en-US/docs/Web/CSS/color_value/rgb) string.
 
 ## Modeling a ball in our program
 
 Our program will feature lots of balls bouncing around the screen. Since these balls will all behave in the same way, it makes sense to represent them with an object. Let's start by adding the following class definition to the bottom of our code.
 
 ```js
-
 class Ball {
-
-   constructor(x, y, velX, velY, color, size) {
-      this.x = x;
-      this.y = y;
-      this.velX = velX;
-      this.velY = velY;
-      this.color = color;
-      this.size = size;
-   }
-
+  constructor(x, y, velX, velY, color, size) {
+    this.x = x;
+    this.y = y;
+    this.velX = velX;
+    this.velY = velY;
+    this.color = color;
+    this.size = size;
+  }
 }
 ```
 
 So far this class only contains a constructor, in which we can initialize the properties each ball needs in order to function in our program:
 
-- `x` and `y` coordinates — the horizontal and vertical coordinates where the ball starts on the screen. This can range between 0 (top left hand corner) to the width and height of the browser viewport (bottom right hand corner).
+- `x` and `y` coordinates — the horizontal and vertical coordinates where the ball starts on the screen. This can range between 0 (top left hand corner) to the width and height of the browser viewport (bottom right-hand corner).
 - horizontal and vertical velocity (`velX` and `velY`) — each ball is given a horizontal and vertical velocity; in real terms these values are regularly added to the `x`/`y` coordinate values when we animate the balls, to move them by this much on each frame.
 - `color` — each ball gets a color.
 - `size` — each ball gets a size — this is its radius, in pixels.
@@ -149,18 +136,18 @@ You can start testing your object out already.
 2. Open the browser's JavaScript console, and then refresh the page so that the canvas size changes to the smaller visible viewport that remains when the console opens.
 3. Type in the following to create a new ball instance:
 
-    ```js
-    const testBall = new Ball(50, 100, 4, 4, 'blue', 10);
-    ```
+   ```js
+   const testBall = new Ball(50, 100, 4, 4, "blue", 10);
+   ```
 
 4. Try calling its members:
 
-    ```js
-    testBall.x
-    testBall.size
-    testBall.color
-    testBall.draw()
-    ```
+   ```js
+   testBall.x;
+   testBall.size;
+   testBall.color;
+   testBall.draw();
+   ```
 
 5. When you enter the last line, you should see the ball draw itself somewhere on the canvas.
 
@@ -170,28 +157,28 @@ We can draw the ball in position, but to actually move the ball, we need an upda
 
 ```js
 update() {
-   if ((this.x + this.size) >= width) {
-      this.velX = -(this.velX);
-   }
+  if ((this.x + this.size) >= width) {
+    this.velX = -(this.velX);
+  }
 
-   if ((this.x - this.size) <= 0) {
-      this.velX = -(this.velX);
-   }
+  if ((this.x - this.size) <= 0) {
+    this.velX = -(this.velX);
+  }
 
-   if ((this.y + this.size) >= height) {
-      this.velY = -(this.velY);
-   }
+  if ((this.y + this.size) >= height) {
+    this.velY = -(this.velY);
+  }
 
-   if ((this.y - this.size) <= 0) {
-      this.velY = -(this.velY);
-   }
+  if ((this.y - this.size) <= 0) {
+    this.velY = -(this.velY);
+  }
 
-   this.x += this.velX;
-   this.y += this.velY;
+  this.x += this.velX;
+  this.y += this.velY;
 }
 ```
 
-The first four parts of the function check whether the ball has reached the edge of the canvas. If it has, we reverse the polarity of the relevant velocity to make the ball travel in the opposite direction. So for example, if the ball was traveling upwards (positive `velY`), then the vertical velocity is changed so that it starts to travel downwards instead (negative `velY`).
+The first four parts of the function check whether the ball has reached the edge of the canvas. If it has, we reverse the polarity of the relevant velocity to make the ball travel in the opposite direction. So for example, if the ball was traveling upwards (negative `velY`), then the vertical velocity is changed so that it starts to travel downwards instead (positive `velY`).
 
 In the four cases, we are checking to see:
 
@@ -216,17 +203,17 @@ First, we need to create somewhere to store all our balls and then populate it. 
 const balls = [];
 
 while (balls.length < 25) {
-   const size = random(10,20);
-   const ball = new Ball(
-      // ball position always drawn at least one ball width
-      // away from the edge of the canvas, to avoid drawing errors
-      random(0 + size,width - size),
-      random(0 + size,height - size),
-      random(-7,7),
-      random(-7,7),
-      randomRGB(),
-      size
-   );
+  const size = random(10, 20);
+  const ball = new Ball(
+    // ball position always drawn at least one ball width
+    // away from the edge of the canvas, to avoid drawing errors
+    random(0 + size, width - size),
+    random(0 + size, height - size),
+    random(-7, 7),
+    random(-7, 7),
+    randomRGB(),
+    size
+  );
 
   balls.push(ball);
 }
@@ -238,15 +225,15 @@ Next, add the following to the bottom of your code:
 
 ```js
 function loop() {
-   ctx.fillStyle = 'rgba(0, 0, 0, 0.25)';
-   ctx.fillRect(0, 0, width, height);
+  ctx.fillStyle = "rgba(0, 0, 0, 0.25)";
+  ctx.fillRect(0, 0, width, height);
 
-   for (const ball of balls) {
-     ball.draw();
-     ball.update();
-   }
+  for (const ball of balls) {
+    ball.draw();
+    ball.update();
+  }
 
-   requestAnimationFrame(loop);
+  requestAnimationFrame(loop);
 }
 ```
 
@@ -272,17 +259,17 @@ First, add the following method definition to your `Ball` class.
 
 ```js
 collisionDetect() {
-   for (const ball of balls) {
-      if (!(this === ball)) {
-         const dx = this.x - ball.x;
-         const dy = this.y - ball.y;
-         const distance = Math.sqrt(dx * dx + dy * dy);
+  for (const ball of balls) {
+    if (this !== ball) {
+      const dx = this.x - ball.x;
+      const dy = this.y - ball.y;
+      const distance = Math.sqrt(dx * dx + dy * dy);
 
-         if (distance < this.size + ball.size) {
-           ball.color = this.color = randomRGB();
-         }
+      if (distance < this.size + ball.size) {
+        ball.color = this.color = randomRGB();
       }
-   }
+    }
+  }
 }
 ```
 
@@ -291,32 +278,32 @@ This method is a little complex, so don't worry if you don't understand exactly 
 - For each ball, we need to check every other ball to see if it has collided with the current ball. To do this, we start another `for...of` loop to loop through all the balls in the `balls[]` array.
 - Immediately inside the for loop, we use an `if` statement to check whether the current ball being looped through is the same ball as the one we are currently checking. We don't want to check whether a ball has collided with itself! To do this, we check whether the current ball (i.e., the ball whose collisionDetect method is being invoked) is the same as the loop ball (i.e., the ball that is being referred to by the current iteration of the for loop in the collisionDetect method). We then use `!` to negate the check, so that the code inside the `if` statement only runs if they are **not** the same.
 - We then use a common algorithm to check the collision of two circles. We are basically checking whether any of the two circle's areas overlap. This is explained further in [2D collision detection](/en-US/docs/Games/Techniques/2D_collision_detection).
-- If a collision is detected, the code inside the inner `if` statement is run. In this case we only set the `color` property of both the circles to a new random color. We could have done something far more complex, like get the balls to bounce off each other realistically, but that would have been far more complex to implement. For such physics simulations, developers tend to use a games or physics library such as [PhysicsJS](https://wellcaffeinated.net/PhysicsJS/), [matter.js](https://brm.io/matter-js/), [Phaser](https://phaser.io/), etc.
+- If a collision is detected, the code inside the inner `if` statement is run. In this case, we only set the `color` property of both the circles to a new random color. We could have done something far more complex, like get the balls to bounce off each other realistically, but that would have been far more complex to implement. For such physics simulations, developers tend to use a games or physics libraries such as [PhysicsJS](https://wellcaffeinated.net/PhysicsJS/), [matter.js](https://brm.io/matter-js/), [Phaser](https://phaser.io/), etc.
 
 You also need to call this method in each frame of the animation. Update your `loop()` function to call `ball.collisionDetect()` after `ball.update()`:
 
 ```js
 function loop() {
-   ctx.fillStyle = 'rgba(0, 0, 0, 0.25)';
-   ctx.fillRect(0, 0, width, height);
+  ctx.fillStyle = "rgba(0, 0, 0, 0.25)";
+  ctx.fillRect(0, 0, width, height);
 
-   for (const ball of balls) {
-     ball.draw();
-     ball.update();
-     ball.collisionDetect();
-   }
+  for (const ball of balls) {
+    ball.draw();
+    ball.update();
+    ball.collisionDetect();
+  }
 
-   requestAnimationFrame(loop);
+  requestAnimationFrame(loop);
 }
 ```
 
 Save and refresh the demo again, and you'll see your balls change color when they collide!
 
-> **Note:** If you have trouble getting this example to work, try comparing your JavaScript code against our [finished version](https://github.com/mdn/learning-area/blob/master/javascript/oojs/bouncing-balls/main-finished.js) (also see it [running live](https://mdn.github.io/learning-area/javascript/oojs/bouncing-balls/index-finished.html)).
+> **Note:** If you have trouble getting this example to work, try comparing your JavaScript code against our [finished version](https://github.com/mdn/learning-area/blob/main/javascript/oojs/bouncing-balls/main-finished.js) (also see it [running live](https://mdn.github.io/learning-area/javascript/oojs/bouncing-balls/index-finished.html)).
 
 ## Summary
 
-We hope you had fun writing your own real world random bouncing balls example, using various object and object-oriented techniques from throughout the module! This should have given you some useful practice in using objects, and good real world context.
+We hope you had fun writing your own real-world random bouncing balls example, using various object and object-oriented techniques from throughout the module! This should have given you some useful practice in using objects, and good real-world context.
 
 That's it for object articles — all that remains now is for you to test your skills in the object assessment.
 
@@ -330,13 +317,3 @@ That's it for object articles — all that remains now is for you to test your s
 - [2D breakout game using Phaser](/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser) — explains the basics of building a 2D game using a JavaScript game library.
 
 {{PreviousMenuNext("Learn/JavaScript/Objects/JSON", "Learn/JavaScript/Objects/Adding_bouncing_balls_features", "Learn/JavaScript/Objects")}}
-
-## In this module
-
-- [Object basics](/en-US/docs/Learn/JavaScript/Objects/Basics)
-- [Object prototypes](/en-US/docs/Learn/JavaScript/Objects/Object_prototypes)
-- [Object-oriented programming concepts](/en-US/docs/Learn/JavaScript/Objects/Object-oriented_programming)
-- [Classes in JavaScript](/en-US/docs/Learn/JavaScript/Objects/Classes_in_JavaScript)
-- [Working with JSON data](/en-US/docs/Learn/JavaScript/Objects/JSON)
-- **Object building practice**
-- [Adding features to our bouncing balls demo](/en-US/docs/Learn/JavaScript/Objects/Adding_bouncing_balls_features)

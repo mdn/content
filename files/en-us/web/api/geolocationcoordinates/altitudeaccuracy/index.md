@@ -1,15 +1,10 @@
 ---
 title: GeolocationCoordinates.altitudeAccuracy
 slug: Web/API/GeolocationCoordinates/altitudeAccuracy
-tags:
-  - API
-  - Geolocation API
-  - GeolocationCoordinates
-  - Property
-  - Secure context
-  - altitudeAccuracy
+page-type: web-api-instance-property
 browser-compat: api.GeolocationCoordinates.altitudeAccuracy
 ---
+
 {{securecontext_header}}{{APIRef("Geolocation API")}}
 
 The **`GeolocationCoordinates.altitudeAccuracy`** read-only
@@ -17,13 +12,7 @@ property is a strictly positive `double` representing the accuracy, with a
 95% confidence level, of the `altitude` expressed in meters. This value is
 `null` if the implementation doesn't support measuring altitude.
 
-## Syntax
-
-```js
-let altAcc = geolocationCoordinatesInstance.altitudeAccuracy
-```
-
-### Value
+## Value
 
 A positive `double` representing the accuracy, with a 95% confidence level,
 of the `altitude` expressed in meters.

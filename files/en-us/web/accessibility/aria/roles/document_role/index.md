@@ -1,12 +1,7 @@
 ---
-title: 'ARIA: document role'
+title: "ARIA: document role"
 slug: Web/Accessibility/ARIA/Roles/document_role
-tags:
-  - ARIA
-  - ARIA Role
-  - Document
-  - document structure role
-  - Reference
+spec-urls: https://w3c.github.io/aria/#document
 ---
 
 The `document` role is for focusable content within complex composite [widgets](/en-US/docs/Web/Accessibility/ARIA/Roles/widget_role) or [applications](/en-US/docs/Web/Accessibility/ARIA/Roles/application_role) for which assistive technologies can switch reading context back to a reading mode.
@@ -17,12 +12,12 @@ The `document` role is for the top container containing content that assistive t
 
 ```html
 <div role="dialog">
- ...
- <div id="InfoText" role="document" tabindex="0">
-  <p>Some informational text goes here.</p>
- </div>
- ...
- <button>Close</button>
+  …
+  <div id="InfoText" role="document" tabindex="0">
+    <p>Some informational text goes here.</p>
+  </div>
+  …
+  <button>Close</button>
 </div>
 ```
 
@@ -41,6 +36,7 @@ In contrast to the [`article`](/en-US/docs/Web/Accessibility/ARIA/Roles/article_
 ### Associated WAI-ARIA roles, states, and properties
 
 - [`aria-expanded`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-expanded)
+
   - : Include with a value of `true` or `false` if the document element is collapsible, to indicate if the document is currently expanded or collapsed. Other values include the default `undefined` which means the document is not collapsible.
 
 - tabindex="0"
@@ -68,9 +64,7 @@ The document role is an easy way to indirectly control assistive technology beha
 
 ## Specifications
 
-| Specification                                            | Status                   |
-| -------------------------------------------------------- | ------------------------ |
-| {{SpecName("ARIA","#document","document")}} | {{Spec2('ARIA')}} |
+{{Specifications}}
 
 ## See also
 
@@ -81,6 +75,6 @@ The document role is an easy way to indirectly control assistive technology beha
 
 1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
 
-    {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
+   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
 
 </section>

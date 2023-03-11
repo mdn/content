@@ -1,17 +1,10 @@
 ---
 title: sessions.setTabValue()
 slug: Mozilla/Add-ons/WebExtensions/API/sessions/setTabValue
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Reference
-  - WebExtensions
-  - sessions
-  - setTabValue
+page-type: webextension-api-function
 browser-compat: webextensions.api.sessions.setTabValue
 ---
+
 {{AddonSidebar()}}
 
 Stores a key/value pair to associate with a given tab. You can subsequently retrieve this value using {{WebExtAPIRef("sessions.getTabValue")}}.
@@ -22,8 +15,8 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ## Syntax
 
-```js
-var storing = browser.sessions.setTabValue(
+```js-nolint
+let storing = browser.sessions.setTabValue(
   tabId,    // integer
   key,      // string
   value     // string or object

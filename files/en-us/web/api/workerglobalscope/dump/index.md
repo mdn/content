@@ -1,16 +1,14 @@
 ---
 title: WorkerGlobalScope.dump()
 slug: Web/API/WorkerGlobalScope/dump
-tags:
-  - API
-  - Method
-  - Reference
-  - Web Workers
-  - WorkerGlobalScope
-  - dump
+page-type: web-api-instance-method
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.WorkerGlobalScope.dump
 ---
-{{APIRef("Web Workers API")}} {{Non-standard_header}}
+
+{{APIRef("Web Workers API")}}{{Non-standard_Header}}{{Deprecated_Header}}
 
 The **`WorkerGlobalScope.dump()`** method logs messages to the browser's standard output (`stdout`). If the browser was started from a terminal, output sent to `dump()` will appear in the terminal. This is the same as {{domxref("Window.dump()")}}, but for workers.
 
@@ -18,14 +16,18 @@ Output from `dump()` is _not_ sent to the browser's developer tools console. To 
 
 ## Syntax
 
-```js
-dump(message);
+```js-nolint
+dump(message)
 ```
 
 ### Parameters
 
 - `message`
   - : A string containing the message to log.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ## Specifications
 

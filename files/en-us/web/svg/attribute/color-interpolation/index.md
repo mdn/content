@@ -1,12 +1,10 @@
 ---
 title: color-interpolation
 slug: Web/SVG/Attribute/color-interpolation
-tags:
-  - NeedsExample
-  - SVG
-  - SVG Attribute
+page-type: svg-attribute
 browser-compat: svg.attributes.presentation.color-interpolation
 ---
+
 {{SVGRef}}
 
 The **`color-interpolation`** attribute specifies the color space for gradient interpolations, color animations, and alpha compositing.
@@ -23,7 +21,6 @@ You can use this attribute with the following SVG elements:
 
 - {{SVGElement("a")}}
 - {{SVGElement("animate")}}
-- {{SVGElement("animateColor")}}
 - {{SVGElement("circle")}}
 - {{SVGElement("clipPath")}}
 - {{SVGElement("defs")}}
@@ -79,31 +76,7 @@ You can use this attribute with the following SVG elements:
 
 ## Specifications
 
-<table class="no-markdown">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        {{SpecName('SVG2', 'painting.html#ColorInterpolation', 'color-interpolation')}}
-      </td>
-      <td>{{Spec2('SVG2')}}</td>
-      <td>No significant change</td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName('SVG1.1', 'painting.html#ColorInterpolationProperty', 'color-interpolation')}}
-      </td>
-      <td>{{Spec2('SVG1.1')}}</td>
-      <td>Initial definition</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 ## Browser compatibility
 

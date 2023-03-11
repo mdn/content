@@ -1,27 +1,19 @@
 ---
 title: BackgroundFetchRegistration.id
 slug: Web/API/BackgroundFetchRegistration/id
-tags:
-  - API
-  - Property
-  - Reference
-  - id
-  - BackgroundFetchRegistration
+page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.BackgroundFetchRegistration.id
 ---
-{{APIRef("Background Fetch API")}}
+
+{{APIRef("Background Fetch API")}}{{SeeCompatTable}}
 
 The **`id`** read-only property of the {{domxref("BackgroundFetchRegistration")}} interface returns a copy of the background fetch's `ID`.
 
-## Syntax
+## Value
 
-```js
-let id = BackgroundFetchRegistration.id;
-```
-
-### Value
-
-A {{domxref("DOMString","string")}}.
+A string.
 
 ## Examples
 

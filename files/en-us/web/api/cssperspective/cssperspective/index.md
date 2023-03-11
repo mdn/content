@@ -1,27 +1,20 @@
 ---
 title: CSSPerspective()
 slug: Web/API/CSSPerspective/CSSPerspective
-tags:
-  - API
-  - CSS Typed Object Model API
-  - CSSPerspective
-  - CSSTransformComponent
-  - CSSTransformValue
-  - Constructor
-  - Experimental
-  - Houdini
+page-type: web-api-constructor
 browser-compat: api.CSSPerspective.CSSPerspective
 ---
-{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
+
+{{APIRef("CSS Typed OM")}}
 
 The **`CSSPerspective()`** constructor creates
-a new {{domxref("CSSPerspective")}} object representing the [perspective()](</en-US/docs/Web/CSS/transform-function/perspective()>) value of
+a new {{domxref("CSSPerspective")}} object representing the [perspective()](/en-US/docs/Web/CSS/transform-function/perspective) value of
 the individual {{CSSXref('transform')}} property in CSS.
 
 ## Syntax
 
-```js
-var CSSPerspective = new CSSPerspective(length);
+```js-nolint
+new CSSPerspective(length)
 ```
 
 ### Parameters

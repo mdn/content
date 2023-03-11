@@ -1,14 +1,10 @@
 ---
 title: HTMLElement.outerText
 slug: Web/API/HTMLElement/outerText
-tags:
-  - API
-  - HTML DOM
-  - HTMLElement
-  - Property
-  - Reference
+page-type: web-api-instance-property
 browser-compat: api.HTMLElement.outerText
 ---
+
 {{APIRef("DOM")}}
 
 The **`outerText`** property of the {{domxref("HTMLElement")}} interface returns the same value as {{domxref("HTMLElement.innerText")}}.
@@ -18,13 +14,13 @@ See {{domxref("HTMLElement.innerText")}} for more information and examples showi
 
 ## Value
 
-A {{domxref("DOMString")}} representing the rendered text content of an element and its descendants.
+A string representing the rendered text content of an element and its descendants.
 
 If the element itself is not [being rendered](https://html.spec.whatwg.org/multipage/rendering.html#being-rendered) (for example, is detached from the document or is hidden from view), the returned value is the same as the {{domxref("Node.textContent")}} property.
 
 When used as a setter it replaces the current node with the given text, converting any line breaks into {{HTMLElement("br")}} elements.
 
-## Example
+## Examples
 
 This example highlights the fundamental difference between `outerText` and `innerText` when used as setters (they are the same when used by getters).
 
@@ -41,9 +37,7 @@ Consider a page that contains the following HTML:
 `outerText` replaces the whole selected element, so the JavaScript `p.outerText = "Whole element replaced"` replaces the whole selected `p` element:
 
 ```html
-<div>
-   Whole element replaced
-</div>
+<div>Whole element replaced</div>
 ```
 
 By contrast, `p.innerText = "Content inside element replaced"` replaces the content _inside_ the selected `p` element:

@@ -1,17 +1,12 @@
 ---
 title: Sec-CH-UA-Mobile
 slug: Web/HTTP/Headers/Sec-CH-UA-Mobile
-tags:
-  - Sec-CH-UA-Mobile
-  - Client hint
-  - HTTP
-  - HTTP Header
-  - Reference
-  - Request header
-  -  Experimental
+status:
+  - experimental
 browser-compat: http.headers.Sec-CH-UA-Mobile
 ---
-{{HTTPSidebar}} {{SeeCompatTable}} {{securecontext_header}}
+
+{{HTTPSidebar}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The **`Sec-CH-UA-Mobile`** [user agent client hint](/en-US/docs/Web/HTTP/Client_hints#user-agent_client_hints) request header indicates whether the browser is on a mobile device.
 It can also be used by a desktop browser to indicate a preference for a "mobile" user experience.

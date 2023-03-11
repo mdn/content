@@ -1,13 +1,10 @@
 ---
 title: SVGAngle
 slug: Web/API/SVGAngle
-tags:
-  - API
-  - Reference
-  - SVG
-  - SVG DOM
+page-type: web-api-interface
 browser-compat: api.SVGAngle
 ---
+
 {{APIRef("SVG")}}
 
 The `SVGAngle` interface is used to represent a value that can be an {{cssxref("&lt;angle&gt;")}} or {{cssxref("&lt;number&gt;")}} value. An `SVGAngle` reflected through the {{SVGAttr("animVal")}} attribute is always read only.
@@ -34,7 +31,7 @@ Every `SVGAngle` object operates in one of two modes:
 - `SVG_ANGLETYPE_GRAD`
   - : An {{cssxref("&lt;angle&gt;")}} with a `grad` unit.
 
-## Properties
+## Instance properties
 
 - `unitType`
   - : The type of the value as specified by one of the `SVG_ANGLETYPE_*` constants defined on this interface.
@@ -52,7 +49,7 @@ Every `SVGAngle` object operates in one of two modes:
 
 - `valueAsString`
 
-  - : The value as a {{domxref("DOMString")}} value, in the units expressed by `unitType`. Setting this attribute will cause `value`, `valueInSpecifiedUnits`, and `unitType` to be updated automatically to reflect this setting.
+  - : The value as a string value, in the units expressed by `unitType`. Setting this attribute will cause `value`, `valueInSpecifiedUnits`, and `unitType` to be updated automatically to reflect this setting.
 
     **Exceptions on setting:**
 
@@ -60,7 +57,7 @@ Every `SVGAngle` object operates in one of two modes:
 
     A {{domxref("DOMException")}} with code `NO_MODIFICATION_ALLOWED_ERR` is raised when the length corresponds to a read-only attribute, or when the object itself is read-only.
 
-## Methods
+## Instance methods
 
 - `newValueSpecifiedUnits`
 

@@ -1,23 +1,19 @@
 ---
 title: Object.getOwnPropertySymbols()
 slug: Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertySymbols
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Object
-  - Polyfill
+page-type: javascript-static-method
 browser-compat: javascript.builtins.Object.getOwnPropertySymbols
 ---
+
 {{JSRef}}
 
-The **`Object.getOwnPropertySymbols()`** method returns an array of all symbol properties found directly upon a given object.
+The **`Object.getOwnPropertySymbols()`** static method returns an array of all symbol properties found directly upon a given object.
 
 {{EmbedInteractiveExample("pages/js/object-getownpropertysymbols.html")}}
 
 ## Syntax
 
-```js
+```js-nolint
 Object.getOwnPropertySymbols(obj)
 ```
 
@@ -41,18 +37,18 @@ As all objects have no own symbol properties initially, `Object.getOwnPropertySy
 ### Using getOwnPropertySymbols
 
 ```js
-var obj = {};
-var a = Symbol('a');
-var b = Symbol.for('b');
+const obj = {};
+const a = Symbol("a");
+const b = Symbol.for("b");
 
-obj[a] = 'localSymbol';
-obj[b] = 'globalSymbol';
+obj[a] = "localSymbol";
+obj[b] = "globalSymbol";
 
-var objectSymbols = Object.getOwnPropertySymbols(obj);
+const objectSymbols = Object.getOwnPropertySymbols(obj);
 
 console.log(objectSymbols.length); // 2
-console.log(objectSymbols);        // [Symbol(a), Symbol(b)]
-console.log(objectSymbols[0]);     // Symbol(a)
+console.log(objectSymbols); // [Symbol(a), Symbol(b)]
+console.log(objectSymbols[0]); // Symbol(a)
 ```
 
 ## Specifications

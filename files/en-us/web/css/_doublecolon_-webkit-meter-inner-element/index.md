@@ -1,15 +1,12 @@
 ---
-title: '::-webkit-meter-inner-element'
+title: "::-webkit-meter-inner-element"
 slug: Web/CSS/::-webkit-meter-inner-element
-tags:
-  - '-webkit-meter-inner-element'
-  - CSS
-  - Non-standard
-  - Pseudo-element
-  - Reference
-  - Selector
+page-type: css-pseudo-element
+status:
+  - non-standard
 browser-compat: css.selectors.-webkit-meter-inner-element
 ---
+
 {{CSSRef}}{{Non-standard_header}}
 
 **`::-webkit-meter-inner-element`** is a proprietary WebKit CSS pseudo-element for selecting and applying styles to the outer containing element of a {{htmlelement("meter")}} element. Additional markup to render the meter element as read-only.
@@ -17,7 +14,9 @@ browser-compat: css.selectors.-webkit-meter-inner-element
 ## Syntax
 
 ```css
-::-webkit-meter-inner-element
+::-webkit-meter-inner-element {
+  /* ... */
+}
 ```
 
 ## Specifications
@@ -38,10 +37,8 @@ This will only work in WebKit and Blink-based browsers, such as Safari, Chrome, 
 
 ```css
 meter {
-  /* Reset the default appearance */
+  /* Reset the default appearance for -webkit- only */
   -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
 }
 
 meter::-webkit-meter-inner-element {

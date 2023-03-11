@@ -1,12 +1,10 @@
 ---
 title: AbstractRange.startContainer
 slug: Web/API/AbstractRange/startContainer
-tags:
-  - Property
-  - Read-only
-  - Reference
+page-type: web-api-instance-property
 browser-compat: api.AbstractRange.startContainer
 ---
+
 {{APIRef("DOM")}}
 
 The read-only **`startContainer`** property of the {{domxref("AbstractRange")}} interface returns the start {{domxref("Node")}} for the range.

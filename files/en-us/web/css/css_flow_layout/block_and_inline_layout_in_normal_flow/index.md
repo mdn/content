@@ -1,15 +1,9 @@
 ---
 title: Block and inline layout in normal flow
 slug: Web/CSS/CSS_Flow_Layout/Block_and_Inline_Layout_in_Normal_Flow
-tags:
-  - CSS
-  - CSS Flow Layout
-  - Guide
-  - Intermediate
-  - Layout
-  - Margins
-  - flow
+page-type: guide
 ---
+
 {{CSSRef}}
 
 In this guide, we will explore the basics of how Block and Inline elements behave when they are part of the normal flow.
@@ -32,11 +26,11 @@ Note that the CSS 2.1 specification describes documents as being in a horizontal
 
 Block elements in a horizontal writing mode such as English, layout vertically, one below the other.
 
-![](mdn-horizontal.png)
+![Inline direction is horizontal. Block direction is vertical.](mdn-horizontal.png)
 
 In a vertical writing mode then would lay out horizontally.
 
-![](mdn-vertical.png)
+![Inline direction is vertical. Block direction is horizontal.](mdn-vertical.png)
 
 In this guide, we will be working in English and therefore a horizontal writing mode. However, everything described should work in the same way if your document is in a vertical writing mode.
 
@@ -64,7 +58,7 @@ You can read more about margin collapsing in our article [Mastering Margin Colla
 
 > **Note:** If you are not sure whether margins are collapsing, check the Box Model values in your browser DevTools. This will give you the actual size of the margin which can help you to identify what is happening.
 >
-> ![](box-model.png)
+> ![Screen shot box model panel in browser dev tools which shows the four values for margin, border, and padding along with height and width in a graphic at top and lists box-sizing, display, float, line-height, position, and z-index below the graphic.](box-model.png)
 
 ## Elements participating in an inline formatting context
 
@@ -76,7 +70,7 @@ In the following example, we have three inline boxes created by a paragraph with
 
 The boxes around the words before the `<strong>` element and after the `<strong>` element are referred to as anonymous boxes, boxes introduced to ensure that everything is wrapped in a box, but ones that we cannot target directly.
 
-The line box size in the block direction (so the height when working in English) is defined by the tallest box inside it. In the next example, I have made the `<strong>` element 300%; that content now defines the height of the line box on that line.
+The line box size in the block direction (so the height when working in English) is defined by the tallest box inside it. In the next example, the `<strong>` element is 300%; since that content spans two lines, it now defines the height of the line boxes of those two lines.
 
 {{EmbedGHLiveSample("css-examples/flow/block-inline/line-box.html", '100%', 500)}}
 

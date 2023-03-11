@@ -1,18 +1,13 @@
 ---
 title: XREquirectLayer.space
 slug: Web/API/XREquirectLayer/space
-tags:
-  - API
-  - Property
-  - Reference
-  - VR
-  - WebXR
-  - WebXR API
-  - WebXR Device API
-  - XR
+page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.XREquirectLayer.space
 ---
-{{APIRef("WebXR Device API")}}
+
+{{APIRef("WebXR Device API")}}{{SeeCompatTable}}
 
 The **`space`** property of the {{domxref("XREquirectLayer")}} interface represents the layer's spatial relationship with the user's physical environment.
 

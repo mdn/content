@@ -1,25 +1,15 @@
 ---
 title: XRSession.environmentBlendMode
 slug: Web/API/XRSession/environmentBlendMode
-tags:
-  - API
-  - AR
-  - Property
-  - Read-only
-  - Reality
-  - Reference
-  - VR
-  - Virtual
-  - WebXR Augmented Reality
-  - WebXR Augmented Reality API
-  - XRSession
-  - augmented
-  - environmentBlendMode
+page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.XRSession.environmentBlendMode
 ---
-{{APIRef("WebXR Device API")}}
 
-The {{domxref("XRSession")}} interface's *read-only* **`environmentBlendMode`**
+{{APIRef("WebXR Device API")}}{{SeeCompatTable}}
+
+The {{domxref("XRSession")}} interface's _read-only_ **`environmentBlendMode`**
 property identifies if, and to what degree, the computer-generated imagery is overlaid atop the real world.
 
 This is used to differentiate between fully-immersive VR sessions and AR sessions which render

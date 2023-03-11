@@ -1,19 +1,10 @@
 ---
 title: Intl.Locale.prototype.textInfo
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/textInfo
-tags:
-  - Internationalization
-  - Intl
-  - JavaScript
-  - Property
-  - Locale
-  - Localization
-  - Prototype
-  - Reference
-  - textInfo
-  - text direction
+page-type: javascript-instance-accessor-property
 browser-compat: javascript.builtins.Intl.Locale.textInfo
 ---
+
 {{JSRef}}
 
 The **`Intl.Locale.prototype.textInfo`** property is an accessor property which returns the ordering of characters indicated by either `ltr` (left-to-right) or by `rtl` (right-to-left) for the associated `Locale`.
@@ -29,15 +20,15 @@ Returns the `Locale` information associated with the Locale data specified in [U
 Return the supported text directions for a given `Locale`.
 
 ```js
-let ar = new Intl.Locale("ar");
-console.log(ar.textInfo); // logs { direction: "rtl" }
-console.log(ar.textInfo.direction); // logs "rtl"
+const ar = new Intl.Locale("ar");
+console.log(ar.textInfo); // { direction: "rtl" }
+console.log(ar.textInfo.direction); // "rtl"
 ```
 
 ```js
-let es = new Intl.Locale("es");
-console.log(es.textInfo); // logs { direction: "ltr" }
-console.log(es.textInfo.direction); // logs "ltr"
+const es = new Intl.Locale("es");
+console.log(es.textInfo); // { direction: "ltr" }
+console.log(es.textInfo.direction); // "ltr"
 ```
 
 ## Specifications

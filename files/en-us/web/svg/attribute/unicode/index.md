@@ -1,12 +1,12 @@
 ---
 title: unicode
 slug: Web/SVG/Attribute/unicode
-tags:
-  - Deprecated
-  - SVG
-  - SVG Attribute
+page-type: svg-attribute
+status:
+  - deprecated
 browser-compat: svg.elements.glyph.unicode
 ---
+
 {{SVGRef}}{{Deprecated_Header}}
 
 The **`unicode`** attribute specifies one or more {{Glossary("Unicode")}} characters indicating the sequence of Unicode characters which corresponds to a {{Glossary("glyph")}}.
@@ -45,24 +45,7 @@ You can use this attribute with the following SVG elements:
 
 ## Specifications
 
-<table class="no-markdown">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        {{SpecName("SVG1.1", "fonts.html#GlyphElementUnicodeAttribute", "unicode")}}
-      </td>
-      <td>{{Spec2("SVG1.1")}}</td>
-      <td>Initial definition</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 ## Browser compatibility
 

@@ -1,14 +1,10 @@
 ---
 title: Date.prototype.setMinutes()
 slug: Web/JavaScript/Reference/Global_Objects/Date/setMinutes
-tags:
-  - Date
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.Date.setMinutes
 ---
+
 {{JSRef}}
 
 The **`setMinutes()`** method sets the minutes for a specified
@@ -18,7 +14,7 @@ date according to local time.
 
 ## Syntax
 
-```js
+```js-nolint
 setMinutes(minutesValue)
 setMinutes(minutesValue, secondsValue)
 setMinutes(minutesValue, secondsValue, msValue)
@@ -59,7 +55,7 @@ seconds.
 ### Using setMinutes()
 
 ```js
-var theBigDay = new Date();
+const theBigDay = new Date();
 theBigDay.setMinutes(45);
 ```
 

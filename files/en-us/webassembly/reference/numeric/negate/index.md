@@ -1,18 +1,13 @@
 ---
 title: Negate
 slug: WebAssembly/Reference/Numeric/Negate
-tags:
-  - WebAssembly
-  - wasm
-  - Reference
-  - Numeric
-  - Something
 ---
+
 {{WebAssemblySidebar}}
 
-The **`neg`** instructions, short for *negate*, are used to negate a number. That is, turn a positive number into a negative number and a negative number into a positive number.
+The **`neg`** instructions, short for _negate_, are used to negate a number. That is, turn a positive number into a negative number and a negative number into a positive number.
 
-{{EmbedInteractiveExample("pages/wat/neg.html")}}
+{{EmbedInteractiveExample("pages/wat/neg.html", "tabbed-standard")}}
 
 ## Syntax
 

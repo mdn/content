@@ -1,24 +1,13 @@
 ---
-title: 'Reason: Multiple CORS header ''Access-Control-Allow-Origin'' not allowed'
+title: "Reason: Multiple CORS header 'Access-Control-Allow-Origin' not allowed"
 slug: Web/HTTP/CORS/Errors/CORSMultipleAllowOriginNotAllowed
-tags:
-  - CORS
-  - CORSMultipleAllowOriginNotAllowed
-  - Cross-Origin
-  - Error
-  - HTTP
-  - HTTPS
-  - Messages
-  - Reasons
-  - Security
-  - console
-  - troubleshooting
 ---
+
 {{HTTPSidebar}}
 
 ## Reason
 
-```
+```plain
 Reason: Multiple CORS header 'Access-Control-Allow-Origin' not allowed
 ```
 
@@ -37,5 +26,4 @@ null
 - [CORS errors](/en-US/docs/Web/HTTP/CORS/Errors)
 - Glossary: {{Glossary("CORS")}}
 - [CORS introduction](/en-US/docs/Web/HTTP/CORS)
-- [Enable CORS: I want to add CORS
-  support to my server](https://enable-cors.org/server.html)
+- [Enable CORS: I want to add CORS support to my server](https://enable-cors.org/server.html)

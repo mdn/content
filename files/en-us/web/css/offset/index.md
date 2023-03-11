@@ -1,20 +1,17 @@
 ---
 title: offset
 slug: Web/CSS/offset
-tags:
-  - CSS
-  - CSS Motion Path
-  - CSS Property
-  - Experimental
-  - Reference
-  - recipe:css-shorthand-property
+page-type: css-shorthand-property
 browser-compat: css.properties.offset
 ---
+
 {{CSSRef}}
 
 The **`offset`** CSS [shorthand property](/en-US/docs/Web/CSS/Shorthand_properties) sets all the properties required for animating an element along a defined path.
 
 > **Note:** Early versions of the spec called this property `motion`.
+
+{{EmbedInteractiveExample("pages/css/offset.html")}}
 
 ## Constituent properties
 
@@ -36,7 +33,7 @@ offset: none;
 
 /* Offset path */
 offset: ray(45deg closest-side);
-offset: path('M 100 100 L 300 100 L 200 300 z');
+offset: path("M 100 100 L 300 100 L 200 300 z");
 offset: url(arc.svg);
 
 /* Offset path with distance and/or rotation */
@@ -54,6 +51,7 @@ offset: url(arc.svg) 30deg / 50px 100px;
 offset: inherit;
 offset: initial;
 offset: revert;
+offset: revert-layer;
 offset: unset;
 ```
 

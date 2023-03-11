@@ -1,14 +1,11 @@
 ---
 title: WakeLockSentinel.released
 slug: Web/API/WakeLockSentinel/released
-tags:
-  - Property
-  - Read-only
-  - Screen Wake Lock API
-  - WakeLockSentinel
+page-type: web-api-instance-property
 browser-compat: api.WakeLockSentinel.released
 ---
-{{DefaultAPISidebar("Screen Wake Lock API")}}
+
+{{APIRef("Screen Wake Lock API")}}
 
 The read-only **`released`** property of the
 {{domxref("WakeLockSentinel")}} interface returns a boolean that indicates whether
@@ -16,8 +13,8 @@ a {{domxref("WakeLockSentinel")}} has been released yet.
 
 ## Syntax
 
-```js
-var released = sentinel.released;
+```js-nolint
+const released = sentinel.released
 ```
 
 ### Value
@@ -25,7 +22,7 @@ var released = sentinel.released;
 A boolean value, that is `false` until the
 {{domxref("WakeLockSentinel")}} has been released (either through a call to
 {{domxref("WakeLockSentinel.release()")}} or because the lock has been released
-automatically) and the {{domxref("WakeLockSentinel.onrelease")}} event has been
+automatically) and the {{domxref("WakeLockSentinel/release_event", "release")}} event has been
 emitted, after which it becomes `true` and no longer changes.
 
 ## Examples

@@ -1,17 +1,9 @@
 ---
 title: SVG Attribute reference
 slug: Web/SVG/Attribute
-tags:
-  - Drawing
-  - Landing
-  - NeedsHelp
-  - Overview
-  - Responsive Design
-  - SVG
-  - SVG Attribute
-  - SVG Reference
-  - Vector Graphics
+page-type: landing-page
 ---
+
 {{SVGRef}}
 
 SVG elements can be modified using attributes that specify details about exactly how the element should be handled or rendered.
@@ -354,13 +346,17 @@ Below is a list of all of the attributes available in SVG along with links to re
 ### Generic attributes
 
 - Core attributes
+
   - : [Core attributes](/en-US/docs/Web/SVG/Attribute/Core)
 
     {{SVGAttr("id")}}, {{SVGAttr("lang")}}, {{SVGAttr("tabindex")}}, {{SVGAttr("xml:base")}}, {{SVGAttr("xml:lang")}}, {{SVGAttr("xml:space")}}
+
 - Style attributes
+
   - : [Style attributes](/en-US/docs/Web/SVG/Attribute/Styling)
 
     {{SVGAttr("class")}}, {{SVGAttr("style")}}
+
 - Conditional processing attributes
   - : {{SVGAttr("requiredExtensions")}}, {{SVGAttr("requiredFeatures")}}, {{SVGAttr("systemLanguage")}}.
 
@@ -372,7 +368,68 @@ Below is a list of all of the attributes available in SVG along with links to re
 
 > **Note:** All [SVG presentation attributes](/en-US/docs/Web/SVG/Attribute/Presentation) can be used as CSS properties.
 
-{{SVGAttr("alignment-baseline")}}, {{SVGAttr("baseline-shift")}}, {{SVGAttr("clip")}}, {{SVGAttr("clip-path")}}, {{SVGAttr("clip-rule")}}, {{SVGAttr("color")}}, {{SVGAttr("color-interpolation")}}, {{SVGAttr("color-interpolation-filters")}}, {{SVGAttr("color-profile")}}, {{SVGAttr("color-rendering")}}, {{SVGAttr("cursor")}}, {{SVGAttr("direction")}}, {{SVGAttr("display")}}, {{SVGAttr("dominant-baseline")}}, {{SVGAttr("enable-background")}}, {{SVGAttr("fill")}}, {{SVGAttr("fill-opacity")}}, {{SVGAttr("fill-rule")}}, {{SVGAttr("filter")}}, {{SVGAttr("flood-color")}}, {{SVGAttr("flood-opacity")}}, {{SVGAttr("font-family")}}, {{SVGAttr("font-size")}}, {{SVGAttr("font-size-adjust")}}, {{SVGAttr("font-stretch")}}, {{SVGAttr("font-style")}}, {{SVGAttr("font-variant")}}, {{SVGAttr("font-weight")}}, {{SVGAttr("glyph-orientation-horizontal")}}, {{SVGAttr("glyph-orientation-vertical")}}, {{SVGAttr("image-rendering")}}, {{SVGAttr("kerning")}}, {{SVGAttr("letter-spacing")}}, {{SVGAttr("lighting-color")}}, {{SVGAttr("marker-end")}}, {{SVGAttr("marker-mid")}}, {{SVGAttr("marker-start")}}, {{SVGAttr("mask")}}, {{SVGAttr("opacity")}}, {{SVGAttr("overflow")}}, {{SVGAttr("pointer-events")}}, {{SVGAttr("shape-rendering")}}, {{SVGAttr("stop-color")}}, {{SVGAttr("stop-opacity")}}, {{SVGAttr("stroke")}}, {{SVGAttr("stroke-dasharray")}}, {{SVGAttr("stroke-dashoffset")}}, {{SVGAttr("stroke-linecap")}}, {{SVGAttr("stroke-linejoin")}}, {{SVGAttr("stroke-miterlimit")}}, {{SVGAttr("stroke-opacity")}}, {{SVGAttr("stroke-width")}}, {{SVGAttr("text-anchor")}}, {{SVGAttr("text-decoration")}}, {{SVGAttr("text-rendering")}}, {{SVGAttr("transform")}}, {{SVGAttr("transform-origin")}}, {{SVGAttr("unicode-bidi")}}, {{SVGAttr("vector-effect")}}, {{SVGAttr("visibility")}}, {{SVGAttr("word-spacing")}}, {{SVGAttr("writing-mode")}}
+- {{SVGAttr("alignment-baseline")}}
+- {{SVGAttr("baseline-shift")}}
+- {{SVGAttr("clip")}}
+- {{SVGAttr("clip-path")}}
+- {{SVGAttr("clip-rule")}}
+- {{SVGAttr("color")}}
+- {{SVGAttr("color-interpolation")}}
+- {{SVGAttr("color-interpolation-filters")}}
+- {{SVGAttr("color-profile")}}
+- {{SVGAttr("color-rendering")}}
+- {{SVGAttr("cursor")}}
+- {{SVGAttr("direction")}}
+- {{SVGAttr("display")}}
+- {{SVGAttr("dominant-baseline")}}
+- {{SVGAttr("enable-background")}}
+- {{SVGAttr("fill")}}
+- {{SVGAttr("fill-opacity")}}
+- {{SVGAttr("fill-rule")}}
+- {{SVGAttr("filter")}}
+- {{SVGAttr("flood-color")}}
+- {{SVGAttr("flood-opacity")}}
+- {{SVGAttr("font-family")}}
+- {{SVGAttr("font-size")}}
+- {{SVGAttr("font-size-adjust")}}
+- {{SVGAttr("font-stretch")}}
+- {{SVGAttr("font-style")}}
+- {{SVGAttr("font-variant")}}
+- {{SVGAttr("font-weight")}}
+- {{SVGAttr("glyph-orientation-horizontal")}}
+- {{SVGAttr("glyph-orientation-vertical")}}
+- {{SVGAttr("image-rendering")}}
+- {{SVGAttr("kerning")}}
+- {{SVGAttr("letter-spacing")}}
+- {{SVGAttr("lighting-color")}}
+- {{SVGAttr("marker-end")}}
+- {{SVGAttr("marker-mid")}}
+- {{SVGAttr("marker-start")}}
+- {{SVGAttr("mask")}}
+- {{SVGAttr("opacity")}}
+- {{SVGAttr("overflow")}}
+- {{SVGAttr("pointer-events")}}
+- {{SVGAttr("shape-rendering")}}
+- {{SVGAttr("stop-color")}}
+- {{SVGAttr("stop-opacity")}}
+- {{SVGAttr("stroke")}}
+- {{SVGAttr("stroke-dasharray")}}
+- {{SVGAttr("stroke-dashoffset")}}
+- {{SVGAttr("stroke-linecap")}}
+- {{SVGAttr("stroke-linejoin")}}
+- {{SVGAttr("stroke-miterlimit")}}
+- {{SVGAttr("stroke-opacity")}}
+- {{SVGAttr("stroke-width")}}
+- {{SVGAttr("text-anchor")}}
+- {{SVGAttr("text-decoration")}}
+- {{SVGAttr("text-rendering")}}
+- {{SVGAttr("transform")}}
+- {{SVGAttr("transform-origin")}}
+- {{SVGAttr("unicode-bidi")}}
+- {{SVGAttr("vector-effect")}}
+- {{SVGAttr("visibility")}}
+- {{SVGAttr("word-spacing")}}
+- {{SVGAttr("writing-mode")}}
 
 ### Filters attributes
 
@@ -397,18 +454,25 @@ Below is a list of all of the attributes available in SVG along with links to re
 ### Event attributes
 
 - Animation event attributes
+
   - : [Animation event attributes](/en-US/docs/Web/SVG/Attribute/Events#animation_event_attributes)
 
     **`onbegin`**, **`onend`**, **`onrepeat`**
+
 - Document event attributes
+
   - : [Document event attributes](/en-US/docs/Web/SVG/Attribute/Events#document_event_attributes)
 
     **`onabort`**, **`onerror`**, **`onresize`**, **`onscroll`**, **`onunload`**
+
 - Global event attributes
+
   - : [Global event attributes](/en-US/docs/Web/SVG/Attribute/Events#global_event_attributes)
 
     **`oncancel`**, **`oncanplay`**, **`oncanplaythrough`**, **`onchange`**, **`onclick`**, **`onclose`**, **`oncuechange`**, **`ondblclick`**, **`ondrag`**, **`ondragend`**, **`ondragenter`**, **`ondragleave`**, **`ondragover`**, **`ondragstart`**, **`ondrop`**, **`ondurationchange`**, **`onemptied`**, **`onended`**, **`onerror`**, **`onfocus`**, **`oninput`**, **`oninvalid`**, **`onkeydown`**, **`onkeypress`**, **`onkeyup`**, **`onload`**, **`onloadeddata`**, **`onloadedmetadata`**, **`onloadstart`**, **`onmousedown`**, **`onmouseenter`**, **`onmouseleave`**, **`onmousemove`**, **`onmouseout`**, **`onmouseover`**, **`onmouseup`**, **`onmousewheel`**, **`onpause`**, **`onplay`**, **`onplaying`**, **`onprogress`**, **`onratechange`**, **`onreset`**, **`onresize`**, **`onscroll`**, **`onseeked`**, **`onseeking`**, **`onselect`**, **`onshow`**, **`onstalled`**, **`onsubmit`**, **`onsuspend`**, **`ontimeupdate`**, **`ontoggle`**, **`onvolumechange`**, **`onwaiting`**
+
 - Graphical event attributes
+
   - : [Graphical event attributes](/en-US/docs/Web/SVG/Attribute/Events#graphical_event_attributes)
 
     **`onactivate`**, **`onfocusin`**, **`onfocusout`**

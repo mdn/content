@@ -1,13 +1,10 @@
 ---
 title: scroll-padding
 slug: Web/CSS/scroll-padding
-tags:
-  - CSS
-  - CSS Property
-  - recipe:css-shorthand-property
-  - scroll-snap
+page-type: css-shorthand-property
 browser-compat: css.properties.scroll-padding
 ---
+
 {{CSSRef}}
 
 The **`scroll-padding`** [shorthand property](/en-US/docs/Web/CSS/Shorthand_properties) sets scroll padding on all sides of an element at once, much like the {{cssxref("padding")}} property does for padding on an element.
@@ -33,13 +30,14 @@ scroll-padding: auto;
 
 /* <length> values */
 scroll-padding: 10px;
-scroll-padding: 1em .5em 1em 1em;
+scroll-padding: 1em 0.5em 1em 1em;
 scroll-padding: 10%;
 
 /* Global values */
 scroll-padding: inherit;
 scroll-padding: initial;
 scroll-padding: revert;
+scroll-padding: revert-layer;
 scroll-padding: unset;
 ```
 

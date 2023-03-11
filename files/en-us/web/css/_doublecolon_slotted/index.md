@@ -1,17 +1,11 @@
 ---
-title: '::slotted()'
+title: "::slotted()"
 slug: Web/CSS/::slotted
-tags:
-  - '::slotted'
-  - CSS
-  - Layout
-  - Pseudo-element
-  - Reference
-  - Selector
-  - Web
+page-type: css-pseudo-element
 browser-compat: css.selectors.slotted
 ---
-{{ CSSRef }}
+
+{{CSSRef}}
 
 The **`::slotted()`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) represents any element that has been placed into a slot inside an HTML template (see [Using templates and slots](/en-US/docs/Web/Web_Components/Using_templates_and_slots) for more information).
 
@@ -31,13 +25,17 @@ This only works when used inside CSS placed within a [shadow DOM](/en-US/docs/We
 
 ## Syntax
 
-{{csssyntax}}
+```css-nolint
+::slotted(<compound-selector>) {
+  /* ... */
+}
+```
 
 ## Examples
 
 ### Highlighting slotted elements
 
-The following snippets are taken from our [slotted-pseudo-element](https://github.com/mdn/web-components-examples/tree/master/slotted-pseudo-element) demo ([see it live also](https://mdn.github.io/web-components-examples/slotted-pseudo-element/)).
+The following snippets are taken from our [slotted-pseudo-element](https://github.com/mdn/web-components-examples/tree/main/slotted-pseudo-element) demo ([see it live also](https://mdn.github.io/web-components-examples/slotted-pseudo-element/)).
 
 In this demo we use a simple template with three slots:
 
@@ -57,26 +55,29 @@ In this demo we use a simple template with three slots:
 A custom element — `<person-details>` — is defined like so:
 
 ```js
-customElements.define('person-details',
+customElements.define(
+  "person-details",
   class extends HTMLElement {
     constructor() {
       super();
-      let template = document.getElementById('person-template');
+      let template = document.getElementById("person-template");
       let templateContent = template.content;
 
-      const shadowRoot = this.attachShadow({mode: 'open'});
+      const shadowRoot = this.attachShadow({ mode: "open" });
 
-      let style = document.createElement('style');
-      style.textContent = 'div { padding: 10px; border: 1px solid gray; width: 200px; margin: 10px; }' +
-                           'h2 { margin: 0 0 10px; }' +
-                           'ul { margin: 0; }' +
-                           'p { margin: 10px 0; }' +
-                           '::slotted(*) { color: gray; font-family: sans-serif; } ';
+      let style = document.createElement("style");
+      style.textContent =
+        "div { padding: 10px; border: 1px solid gray; width: 200px; margin: 10px; }" +
+        "h2 { margin: 0 0 10px; }" +
+        "ul { margin: 0; }" +
+        "p { margin: 10px 0; }" +
+        "::slotted(*) { color: gray; font-family: sans-serif; } ";
 
       shadowRoot.appendChild(style);
       shadowRoot.appendChild(templateContent.cloneNode(true));
+    }
   }
-})
+);
 ```
 
 You'll see that when filling the `style` element with content, we select all slotted elements (`::slotted(*)`) and give them a different font and color. This allows them to stand out better next to the slots that haven't been successfully filled.

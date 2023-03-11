@@ -1,11 +1,8 @@
 ---
 title: HTTP Messages
 slug: Web/HTTP/Messages
-tags:
-  - Guide
-  - HTTP
-  - WebMechanics
 ---
+
 {{HTTPSidebar}}
 
 HTTP messages are how data is exchanged between a server and a client. There are two types of messages: _requests_ sent by the client to trigger an action on the server, and _responses_, the answer from the server.
@@ -38,23 +35,23 @@ HTTP requests are messages sent by the client to initiate an action on the serve
 1. An _[HTTP method](/en-US/docs/Web/HTTP/Methods)_, a verb (like {{HTTPMethod("GET")}}, {{HTTPMethod("PUT")}} or {{HTTPMethod("POST")}}) or a noun (like {{HTTPMethod("HEAD")}} or {{HTTPMethod("OPTIONS")}}), that describes the action to be performed. For example, `GET` indicates that a resource should be fetched or `POST` means that data is pushed to the server (creating or modifying a resource, or generating a temporary document to send back).
 2. The _request target_, usually a {{glossary("URL")}}, or the absolute path of the protocol, port, and domain are usually characterized by the request context. The format of this request target varies between different HTTP methods. It can be
 
-    - An absolute path, ultimately followed by a `'?'` and query string. This is the most common form, known as the _origin form_, and is used with `GET`, `POST`, `HEAD`, and `OPTIONS` methods.
-      - `POST / HTTP/1.1`
-      - `GET /background.png HTTP/1.0`
-      - `HEAD /test.html?query=alibaba HTTP/1.1`
-      - `OPTIONS /anypage.html HTTP/1.0`
-    - A complete URL, known as the _absolute form_, is mostly used with `GET` when connected to a proxy.
-      `GET https://developer.mozilla.org/en-US/docs/Web/HTTP/Messages HTTP/1.1`
-    - The authority component of a URL, consisting of the domain name and optionally the port (prefixed by a `':'`), is called the _authority form_. It is only used with `CONNECT` when setting up an HTTP tunnel.
-      `CONNECT developer.mozilla.org:80 HTTP/1.1`
-    - The _asterisk form_, a simple asterisk (`'*'`) is used with `OPTIONS`, representing the server as a whole.
-      `OPTIONS * HTTP/1.1`
+   - An absolute path, ultimately followed by a `'?'` and query string. This is the most common form, known as the _origin form_, and is used with `GET`, `POST`, `HEAD`, and `OPTIONS` methods.
+     - `POST / HTTP/1.1`
+     - `GET /background.png HTTP/1.0`
+     - `HEAD /test.html?query=alibaba HTTP/1.1`
+     - `OPTIONS /anypage.html HTTP/1.0`
+   - A complete URL, known as the _absolute form_, is mostly used with `GET` when connected to a proxy.
+     `GET https://developer.mozilla.org/en-US/docs/Web/HTTP/Messages HTTP/1.1`
+   - The authority component of a URL, consisting of the domain name and optionally the port (prefixed by a `':'`), is called the _authority form_. It is only used with `CONNECT` when setting up an HTTP tunnel.
+     `CONNECT developer.mozilla.org:80 HTTP/1.1`
+   - The _asterisk form_, a simple asterisk (`'*'`) is used with `OPTIONS`, representing the server as a whole.
+     `OPTIONS * HTTP/1.1`
 
 3. The _HTTP version_, which defines the structure of the remaining message, acting as an indicator of the expected version to use for the response.
 
 ### Headers
 
-[HTTP headers](/en-US/docs/Web/HTTP/Headers) from a request follow the same basic structure of an HTTP header: a case-insensitive string followed by a colon (`':'`) and a value whose structure depends upon the header. The whole header, including the value, consist of one single line, which can be quite long.
+[HTTP headers](/en-US/docs/Web/HTTP/Headers) from a request follow the same basic structure of an HTTP header: a case-insensitive string followed by a colon (`':'`) and a value whose structure depends upon the header. The whole header, including the value, consists of one single line, which can be quite long.
 
 Many different headers can appear in requests. They can be divided in several groups:
 

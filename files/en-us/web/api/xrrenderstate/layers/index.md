@@ -1,18 +1,13 @@
 ---
 title: XRRenderState.layers
 slug: Web/API/XRRenderState/layers
-tags:
-  - API
-  - Property
-  - Reference
-  - VR
-  - WebXR
-  - WebXR API
-  - WebXR Device API
-  - XR
+page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.XRRenderState.layers
 ---
-{{APIRef("WebXR Device API")}}
+
+{{APIRef("WebXR Device API")}}{{SeeCompatTable}}
 
 The read-only **`layers`** property of the {{domxref("XRRenderState")}} interface is an ordered array containing {{domxref("XRLayer")}} objects that are displayed by the XR compositor.
 
@@ -30,7 +25,7 @@ Layers can be set using the {{domxref("XRSession.updateRenderState()")}} method.
 ```js
 const xrSession = navigator.xr.requestSession("immersive-ar", {
   optionalFeatures: ["layers"]
-}
+});
 
 function onXRSessionStarted(xrSession) {
   const glCanvas = document.createElement("canvas");

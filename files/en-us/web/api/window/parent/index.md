@@ -1,15 +1,10 @@
 ---
 title: Window.parent
 slug: Web/API/Window/parent
-tags:
-  - API
-  - HTML DOM
-  - NeedsSpecTable
-  - Property
-  - Reference
-  - Window
+page-type: web-api-instance-property
 browser-compat: api.Window.parent
 ---
+
 {{APIRef}}
 
 The **`Window.parent`** property is a reference to the parent
@@ -22,16 +17,14 @@ When a window is loaded in an {{htmlelement("iframe")}}, {{htmlelement("object")
 {{htmlelement("frame")}}, its parent is the window with the element embedding the
 window.
 
-## Syntax
+## Value
+
+A `Window` or {{htmlelement("iframe")}} object.
+
+## Examples
 
 ```js
-var parentWindow = window.parent;
-```
-
-## Example
-
-```js
-if (window.parent != window.top) {
+if (window.parent !== window.top) {
   // We're deeper than one down
 }
 ```

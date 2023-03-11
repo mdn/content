@@ -1,18 +1,13 @@
 ---
 title: XRQuadLayer.height
 slug: Web/API/XRQuadLayer/height
-tags:
-  - API
-  - Property
-  - Reference
-  - VR
-  - WebXR
-  - WebXR API
-  - WebXR Device API
-  - XR
+page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.XRQuadLayer.height
 ---
-{{APIRef("WebXR Device API")}}
+
+{{APIRef("WebXR Device API")}}{{SeeCompatTable}}
 
 The **`height`** property of the {{domxref("XRQuadLayer")}} interface represents the height of the layer in meters.
 

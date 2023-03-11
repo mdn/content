@@ -1,15 +1,11 @@
 ---
 title: Worklet
 slug: Web/API/Worklet
-tags:
-  - API
-  - Interface
-  - Reference
-  - Worklet
-  - Worklets
+page-type: web-api-interface
 browser-compat: api.Worklet
 ---
-{{APIRef("Worklets")}}{{SeeCompatTable}}
+
+{{APIRef("Worklets")}}
 
 The **`Worklet`** interface is a lightweight version of {{domxref("Worker", "Web Workers")}} and gives developers access to low-level parts of the rendering pipeline.
 
@@ -85,13 +81,13 @@ Worklets are restricted to specific use cases; they cannot be used for arbitrary
 
 For 3D rendering with [WebGL](/en-US/docs/Web/API/WebGL_API), you don't use Worklets. Instead, you write Vertex Shaders and Fragment Shaders using GLSL code, and those shaders will then run on the graphics card.
 
-## Properties
+## Instance properties
 
 _The Worklet interface does not define any properties._
 
-## Methods
+## Instance methods
 
-- {{domxref("Worklet.addModule()")}} {{experimental_inline}}
+- {{domxref("Worklet.addModule()")}}
   - : Adds the script module at the given URL to the current worklet.
 
 ## Specifications
@@ -104,7 +100,7 @@ _The Worklet interface does not define any properties._
 
 ## See also
 
-- [Houdini: Demystifying CSS](https://developers.google.com/web/updates/2016/05/houdini) on Google Developers (May 2016)
+- [Houdini: Demystifying CSS](https://developer.chrome.com/blog/houdini/) on Google Developers (May 2016)
 - [AudioWorklet :: What, Why, and How](https://www.youtube.com/watch?v=g1L4O1smMC0&t=1m33s) on YouTube (November 2017)
-- [Enter AudioWorklet](https://developers.google.com/web/updates/2017/12/audio-worklet) on Google Developers (December 2017)
+- [Enter AudioWorklet](https://developer.chrome.com/blog/audio-worklet/) on Google Developers (December 2017)
 - [Animation Worklet - HTTP203 Advent](https://www.youtube.com/watch?v=ZPkMMShYxKU&t=0m19s) on YouTube (December 2017)

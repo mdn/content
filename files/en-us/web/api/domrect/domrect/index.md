@@ -1,23 +1,18 @@
 ---
 title: DOMRect()
 slug: Web/API/DOMRect/DOMRect
-tags:
-  - API
-  - Constructor
-  - DOM Reference
-  - DOMRect
-  - Geometry
-  - Reference
+page-type: web-api-constructor
 browser-compat: api.DOMRect.DOMRect
 ---
+
 {{APIRef("Geometry Interfaces")}}
 
 The **`DOMRect()`** constructor creates a new {{domxref("DOMRect")}} object.
 
 ## Syntax
 
-```js
-new DOMRect(x, y, width, height);
+```js-nolint
+new DOMRect(x, y, width, height)
 ```
 
 ### Parameters

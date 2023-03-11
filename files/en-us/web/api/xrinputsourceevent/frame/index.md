@@ -1,27 +1,10 @@
 ---
 title: XRInputSourceEvent.frame
 slug: Web/API/XRInputSourceEvent/frame
-tags:
-  - API
-  - AR
-  - Input Sources
-  - Inputs
-  - Mixed
-  - Property
-  - Read-only
-  - Reality
-  - Reference
-  - VR
-  - Virtual
-  - WebXR
-  - WebXR API
-  - WebXR Device API
-  - XR
-  - XRInputSourceEvent
-  - augmented
-  - events
+page-type: web-api-instance-property
 browser-compat: api.XRInputSourceEvent.frame
 ---
+
 {{APIRef("WebXR Device API")}}
 
 The read-only {{domxref("XRInputSourceEvent")}} property
@@ -38,8 +21,7 @@ described by the object took place.
 ## Usage notes
 
 The event frame does not correspond to a visual frame as is delivered to the frame
-rendering callback function (see [Rendering and the WebXR frame
-rendering callback](/en-US/docs/Web/API/WebXR_Device_API/Rendering) for details on the callback). Instead, the `XRFrame`
+rendering callback function (see [Rendering and the WebXR frame rendering callback](/en-US/docs/Web/API/WebXR_Device_API/Rendering) for details on the callback). Instead, the `XRFrame`
 specified by the `frame` property is a method to provide access to the
 {{domxref("XRFrame.getPose", "getPose()")}} method, which you can use to get the
 relative positions of the objects in the scene at the time the event occurred.
@@ -62,7 +44,7 @@ into a function called `myCheckAndHandleHit()` to see if the ray was pointing
 at anything when the select was triggered.
 
 ```js
-xrSession.onselectstart = event => {
+xrSession.onselectstart = (event) => {
   let targetRayPose = event.frame.getPose(event.inputSource.targetRaySpace,
                             myRefSpace);
   if (targetRayPose) {

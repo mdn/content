@@ -1,14 +1,10 @@
 ---
 title: Window.resizeTo()
 slug: Web/API/Window/resizeTo
-tags:
-  - API
-  - CSSOM View
-  - Method
-  - Reference
-  - Window
+page-type: web-api-instance-method
 browser-compat: api.Window.resizeTo
 ---
+
 {{APIRef}}
 
 The **`Window.resizeTo()`** method dynamically resizes the
@@ -16,21 +12,25 @@ window.
 
 ## Syntax
 
-```js
-window.resizeTo(width, height)
+```js-nolint
+resizeTo(width, height)
 ```
 
 ### Parameters
 
 - `width`
   - : An integer representing the new {{domxref("window.outerWidth","outerWidth")}} in
-    pixels (including scroll bars, title bars, etc).
+    pixels (including scroll bars, title bars, etc.).
 - `height`
   - : An integer value representing the new
     {{domxref("window.outerHeight","outerHeight")}} in pixels (including scroll bars,
-    title bars, etc).
+    title bars, etc.).
 
-## Example
+### Return value
+
+None ({{jsxref("undefined")}}).
+
+## Examples
 
 This function resizes the window so that it takes up one quarter of the available
 screen. See the {{domxref("Screen.availWidth")}} and {{domxref("Screen.availHeight")}}

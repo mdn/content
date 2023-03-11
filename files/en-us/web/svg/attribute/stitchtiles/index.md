@@ -1,12 +1,10 @@
 ---
 title: stitchTiles
 slug: Web/SVG/Attribute/stitchTiles
-tags:
-  - Filters
-  - SVG
-  - SVG Attribute
+page-type: svg-attribute
 browser-compat: svg.elements.feTurbulence.stitchTiles
 ---
+
 {{SVGRef}}
 
 The **`stitchTiles`** attribute defines how the Perlin Noise tiles behave at the border.
@@ -18,7 +16,9 @@ You can use this attribute with the following SVG elements:
 ## Example
 
 ```css hidden
-html, body, svg {
+html,
+body,
+svg {
   height: 100%;
 }
 ```
@@ -33,14 +33,49 @@ html, body, svg {
   </filter>
 
   <rect x="0" y="0" width="100" height="100" style="filter: url(#noise1);" />
-  <rect x="0" y="0" width="100" height="100" style="filter: url(#noise1); transform: translate(100px, 0);" />
-  <rect x="0" y="0" width="100" height="100" style="filter: url(#noise1); transform: translate(0, 100px);" />
-  <rect x="0" y="0" width="100" height="100" style="filter: url(#noise1); transform: translate(100px, 100px);" />
+  <rect
+    x="0"
+    y="0"
+    width="100"
+    height="100"
+    style="filter: url(#noise1); transform: translate(100px, 0);" />
+  <rect
+    x="0"
+    y="0"
+    width="100"
+    height="100"
+    style="filter: url(#noise1); transform: translate(0, 100px);" />
+  <rect
+    x="0"
+    y="0"
+    width="100"
+    height="100"
+    style="filter: url(#noise1); transform: translate(100px, 100px);" />
 
-  <rect x="0" y="0" width="100" height="100" style="filter: url(#noise2); transform: translate(220px, 0);" />
-  <rect x="0" y="0" width="100" height="100" style="filter: url(#noise2); transform: translate(320px, 0);" />
-  <rect x="0" y="0" width="100" height="100" style="filter: url(#noise2); transform: translate(220px, 100px);" />
-  <rect x="0" y="0" width="100" height="100" style="filter: url(#noise2); transform: translate(320px, 100px);" />
+  <rect
+    x="0"
+    y="0"
+    width="100"
+    height="100"
+    style="filter: url(#noise2); transform: translate(220px, 0);" />
+  <rect
+    x="0"
+    y="0"
+    width="100"
+    height="100"
+    style="filter: url(#noise2); transform: translate(320px, 0);" />
+  <rect
+    x="0"
+    y="0"
+    width="100"
+    height="100"
+    style="filter: url(#noise2); transform: translate(220px, 100px);" />
+  <rect
+    x="0"
+    y="0"
+    width="100"
+    height="100"
+    style="filter: url(#noise2); transform: translate(320px, 100px);" />
 </svg>
 ```
 
@@ -72,31 +107,7 @@ html, body, svg {
 
 ## Specifications
 
-<table class="no-markdown">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        {{SpecName("Filters 1.0", "#element-attrdef-feturbulence-stitchtiles", "stitchTiles")}}
-      </td>
-      <td>{{Spec2("Filters 1.0")}}</td>
-      <td>No change</td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("SVG1.1", "filters.html#feTurbulenceStitchTilesAttribute", "stitchTiles")}}
-      </td>
-      <td>{{Spec2("SVG1.1")}}</td>
-      <td>Initial definition</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 ## Browser compatibility
 

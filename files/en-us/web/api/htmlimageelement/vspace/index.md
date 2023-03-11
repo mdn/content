@@ -1,40 +1,20 @@
 ---
 title: HTMLImageElement.vspace
 slug: Web/API/HTMLImageElement/vspace
-tags:
-  - API
-  - HTML
-  - HTML DOM
-  - HTMLImageElement
-  - Image
-  - Property
-  - Reference
-  - Vertical
-  - bottom
-  - img
-  - margin
-  - space
-  - spacing
-  - top
-  - vspace
-  - Deprecated
+page-type: web-api-instance-property
+status:
+  - deprecated
 browser-compat: api.HTMLImageElement.vspace
 ---
+
 {{APIRef("HTML DOM")}}{{deprecated_header}}
 
-The *obsolete* **`vspace`** property of the
+The _obsolete_ **`vspace`** property of the
 {{domxref("HTMLImageElement")}} interface specifies the number of pixels of empty space
 to leave empty on the top and bottom of the {{HTMLElement("img")}} element when laying
 out the page.
 
-## Syntax
-
-```js
-htmlImageElement.vspace = marginHeight;
-marginHeight = htmlImageElement.vspace;
-```
-
-### Value
+## Value
 
 An integer value specifying the height, in pixels, of the vertical margin to apply to
 the top and bottom sides of the image.

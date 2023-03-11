@@ -1,24 +1,15 @@
 ---
 title: HTMLImageElement.align
 slug: Web/API/HTMLImageElement/align
-tags:
-  - API
-  - Align
-  - HTML
-  - HTML DOM
-  - HTMLImageElement
-  - Image
-  - Property
-  - Reference
-  - alignment
-  - float
-  - img
-  - Deprecated
+page-type: web-api-instance-property
+status:
+  - deprecated
 browser-compat: api.HTMLImageElement.align
 ---
+
 {{APIRef("HTML DOM")}}{{deprecated_header}}
 
-The *obsolete* **`align`**
+The _obsolete_ **`align`**
 property of the {{domxref("HTMLImageElement")}} interface is a string which indicates
 how to position the image relative to its container.
 
@@ -30,19 +21,12 @@ to the left or right margin.
 The `align` property reflects the HTML {{htmlattrxref("align", "img")}}
 content attribute.
 
-## Syntax
+## Value
 
-```js
-htmlImageElement.align = alignMode;
-alignMode = htmlImageElement.align;
-```
-
-### Value
-
-A {{domxref("DOMString")}} specifying one of the following strings which set the
+A string specifying one of the following strings which set the
 alignment mode for the image.
 
-#### Baseline alignment
+### Baseline alignment
 
 These three values specify the alignment of the element relative to the text baseline.
 These should be replaced by using the CSS {{cssxref("vertical-align")}} property.
@@ -58,7 +42,7 @@ These should be replaced by using the CSS {{cssxref("vertical-align")}} property
 It may be worth noting that {{cssxref("vertical-align")}} offers several additional
 options for its value; you may wish to consider these when changing your code to use it.
 
-#### Floating images horizontally
+### Floating images horizontally
 
 The `left` and `right` properties don't affect the
 baseline-relative alignment. Instead, they cause the image to "float" to the left or

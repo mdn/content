@@ -1,35 +1,31 @@
 ---
 title: border-right
 slug: Web/CSS/border-right
-tags:
-  - CSS
-  - CSS Borders
-  - CSS Property
-  - Reference
-  - recipe:css-shorthand-property
+page-type: css-shorthand-property
 browser-compat: css.properties.border-right
 ---
+
 {{CSSRef}}
 
 The **`border-right`** [shorthand](/en-US/docs/Web/CSS/Shorthand_properties) [CSS](/en-US/docs/Web/CSS) property sets all the properties of an element's right [border](/en-US/docs/Web/CSS/border).
 
 {{EmbedInteractiveExample("pages/css/border-right.html")}}
 
-As with all shorthand properties, `border-right` always sets the values of all of the properties that it can set, even if they are not specified. It sets those that are not specified to their default values. This means that ...
+As with all shorthand properties, `border-right` always sets the values of all of the properties that it can set, even if they are not specified. It sets those that are not specified to their default values. Consider the following code:
 
 ```css
 border-right-style: dotted;
 border-right: thick green;
 ```
 
-... is actually the same as ...
+It is actually the same as this one:
 
 ```css
 border-right-style: dotted;
 border-right: none thick green;
 ```
 
-... and the value of {{cssxref("border-right-style")}} given before `border-right` is ignored. Since the default value of {{cssxref("border-right-style")}} is `none`, not specifying the `border-style` part results in no border.
+The value of {{cssxref("border-right-style")}} given before `border-right` is ignored. Since the default value of {{cssxref("border-right-style")}} is `none`, not specifying the `border-style` part results in no border.
 
 ## Constituent properties
 
@@ -50,6 +46,7 @@ border-right: medium dashed green;
 border-right: inherit;
 border-right: initial;
 border-right: revert;
+border-right: revert-layer;
 border-right: unset;
 ```
 
@@ -79,9 +76,7 @@ The three values of the shorthand property can be specified in any order, and on
 #### HTML
 
 ```html
-<div>
-  This box has a border on the right side.
-</div>
+<div>This box has a border on the right side.</div>
 ```
 
 #### CSS

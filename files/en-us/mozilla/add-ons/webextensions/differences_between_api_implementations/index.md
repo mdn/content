@@ -1,10 +1,9 @@
 ---
 title: Differences between API implementations
 slug: Mozilla/Add-ons/WebExtensions/Differences_between_API_implementations
-tags:
-  - Guide
-  - WebExtensions
+page-type: guide
 ---
+
 {{AddonSidebar}}
 
 The browser extensions API is still an [emerging standard](https://browserext.github.io/browserext/). As a result, while it is supported by most major browsers including Firefox, Chrome, Edge, and Opera, there are differences between the various implementations. This means that some changes may be necessary to implement your extension for multiple browsers.
@@ -19,8 +18,8 @@ You reference all extensions API functions using a namespace, for example, `brow
 
 There are two API namespaces in use:
 
-- `chrome` used in Chrome and Opera.
-- `browser` used in Firefox and Edge.
+- `chrome` used in Chrome, Edge and Opera.
+- `browser` used in Firefox.
 
 ## Asynchronous event handling
 

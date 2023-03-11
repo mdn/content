@@ -1,14 +1,10 @@
 ---
 title: WebGLRenderingContext.blendFunc()
 slug: Web/API/WebGLRenderingContext/blendFunc
-tags:
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGLRenderingContext
+page-type: web-api-instance-method
 browser-compat: api.WebGLRenderingContext.blendFunc
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGLRenderingContext.blendFunc()`** method of the [WebGL API](/en-US/docs/Web/API/WebGL_API) defines which function is used for
@@ -16,8 +12,8 @@ blending pixel arithmetic.
 
 ## Syntax
 
-```js
-void gl.blendFunc(sfactor, dfactor);
+```js-nolint
+blendFunc(sfactor, dfactor)
 ```
 
 ### Parameters
@@ -31,7 +27,7 @@ void gl.blendFunc(sfactor, dfactor);
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 
@@ -178,7 +174,7 @@ To get the current blend function, query the `BLEND_SRC_RGB`,
 ```js
 gl.enable(gl.BLEND);
 gl.blendFunc(gl.SRC_COLOR, gl.DST_COLOR);
-gl.getParameter(gl.BLEND_SRC_RGB) == gl.SRC_COLOR;
+gl.getParameter(gl.BLEND_SRC_RGB) === gl.SRC_COLOR;
 // true
 ```
 

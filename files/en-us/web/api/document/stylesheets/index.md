@@ -1,25 +1,15 @@
 ---
 title: Document.styleSheets
 slug: Web/API/Document/styleSheets
-tags:
-  - API
-  - Document
-  - Property
-  - Reference
-  - Stylesheets
+page-type: web-api-instance-property
 browser-compat: api.Document.styleSheets
 ---
+
 {{APIRef("CSSOM")}}
 
 The **`styleSheets`** read-only property of the {{domxref("Document")}} interface returns a {{domxref('StyleSheetList')}} of {{domxref('CSSStyleSheet')}} objects, for stylesheets explicitly linked into or embedded in a document.
 
-## Syntax
-
-```js
-document.styleSheets
-```
-
-### Value
+## Value
 
 The returned list is ordered as follows:
 

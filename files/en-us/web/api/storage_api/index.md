@@ -1,16 +1,10 @@
 ---
 title: Storage API
 slug: Web/API/Storage_API
-tags:
-  - API
-  - Overview
-  - Quotas
-  - Reference
-  - Secure context
-  - Storage
-  - Storage API
-  - Usage
+page-type: web-api-overview
+browser-compat: api.StorageManager
 ---
+
 {{securecontext_header}}{{DefaultAPISidebar("Storage")}} {{AvailableInWorkers}}
 
 The Storage Standard defines a common, shared storage system to be used by all APIs and technologies that store content-accessible data for individual Web sites. The Storage API gives sites' code the ability to find out how much space they can use, how much they are already using, and even control whether or not they need to be alerted before the {{Glossary("user agent")}} disposes of site data in order to make room for other things.
@@ -35,7 +29,7 @@ The site storage system described by the Storage Standard and interacted with us
 - Origin 2 has no data stored in it yet; it's just an empty box waiting for content. This origin, however, has a lower quota than the other two do. It may be a less-visited site, or one known to have lower data storage requirements.
 - Origin 3's storage unit is completely full; it's reached its quota and can't store any more data without some existing material being removed.
 
-{{Glossary("User agent", "User agents")}} are likely to use various techniques to determine the quota for various origins. One of the most likely methods—one which the specification specifically encourages, in fact—would be to consider the popularity and/or usage levels of individual sites to determine what their quotas should be.  It's also conceivable that the browser might offer a user interface to customize these quotas.
+{{Glossary("User agent", "User agents")}} are likely to use various techniques to determine the quota for various origins. One of the most likely methods—one which the specification specifically encourages, in fact—would be to consider the popularity and/or usage levels of individual sites to determine what their quotas should be. It's also conceivable that the browser might offer a user interface to customize these quotas.
 
 ## Box modes
 
@@ -62,7 +56,7 @@ If a box is marked as `"persistent"`, the contents won't be cleared by the user 
 
 The user agent determines, using whatever mechanism it chooses, the maximum amount of storage a given site can use. This maximum is the origin's **quota**. The amount of this space which is in use by the site is called its **usage**. Both of these values are estimates; there are several reasons why they're not precise:
 
-- User agents are encouraged to obscure the exact size of the data used by a given origin, to prevent these values from being used for fingerprinting purposes.
+- User agents are encouraged to obscure the exact size of the data used by a given origin, to prevent these values from being used for [fingerprinting](/en-US/docs/Glossary/Fingerprinting) purposes.
 - De-duplication, compression, and other methods to reduce the physical size of the stored data may be used.
 - Quotas are conservative estimates of the space available for the origin's use, and should be less than the available space on the device to help prevent overruns.
 
@@ -71,7 +65,7 @@ User agents may use any method they choose to determine the size of origins' quo
 To determine the estimated quota and usage values for a given origin, use the {{domxref("StorageManager.estimate", "navigator.storage.estimate()")}} method, which returns a promise that, when resolved, receives an object that contains these figures. For example:
 
 ```js
-navigator.storage.estimate().then(estimate => {
+navigator.storage.estimate().then((estimate) => {
   // estimate.quota is the estimated quota
   // estimate.usage is the estimated number of bytes used
 });
@@ -79,15 +73,11 @@ navigator.storage.estimate().then(estimate => {
 
 ## Specifications
 
-| Specification                                               |
-| ----------------------------------------------------------- |
-| [Storage Living Standard](https://storage.spec.whatwg.org/) |
+{{Specifications}}
 
 ## Browser compatibility
 
-### `StorageManager`
-
-{{Compat("api.StorageManager")}}
+{{Compat}}
 
 ## See also
 

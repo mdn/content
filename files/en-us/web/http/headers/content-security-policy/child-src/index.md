@@ -1,18 +1,9 @@
 ---
-title: 'CSP: child-src'
+title: "CSP: child-src"
 slug: Web/HTTP/Headers/Content-Security-Policy/child-src
-tags:
-  - CSP
-  - Child
-  - Content-Security-Policy
-  - Directive
-  - HTTP
-  - Reference
-  - Security
-  - child-src
-  - source
-browser-compat: http.headers.csp.Content-Security-Policy.child-src
+browser-compat: http.headers.Content-Security-Policy.child-src
 ---
+
 {{HTTPSidebar}}
 
 The HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP)
@@ -72,7 +63,7 @@ This {{HTMLElement("iframe")}} and worker are blocked and won't load:
 <iframe src="https://not-example.com"></iframe>
 
 <script>
-  var blockedWorker = new Worker("data:application/javascript,...");
+  const blockedWorker = new Worker("data:application/javascript,…");
 </script>
 ```
 

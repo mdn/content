@@ -1,14 +1,9 @@
 ---
 title: Origin
 slug: Web/HTTP/Headers/Origin
-tags:
-  - HTTP
-  - Reference
-  - Request header
-  - header
-  - origin
 browser-compat: http.headers.Origin
 ---
+
 {{HTTPSidebar}}
 
 The **`Origin`** request header indicates the {{glossary("origin")}} (scheme, hostname, and port) that _caused_ the request.
@@ -29,7 +24,7 @@ For example, if a user agent needs to request resources included in a page, or f
 
 ## Syntax
 
-```
+```http
 Origin: null
 Origin: <scheme>://<hostname>
 Origin: <scheme>://<hostname>:<port>
@@ -38,6 +33,7 @@ Origin: <scheme>://<hostname>:<port>
 ## Directives
 
 - `null`
+
   - : The origin is "privacy sensitive", or is an _opaque origin_ as defined by the HTML specification (specific cases are listed in the [description](#description) section).
 
 - `<scheme>`
@@ -65,12 +61,13 @@ The `Origin` header value may be `null` in a number of cases, including (non-exh
 
 - Origins whose scheme is not one of `http`, `https`, `ftp`, `ws`, `wss`, or `gopher` (including `blob`, `file` and `data`).
 - Cross-origin images and media data, including that in `<img>`, `<video>` and `<audio>` elements.
-- Documents created programmatically using `createDocument()`, generated from a `data:` url, or that do not have a creator browsing context.
+- Documents created programmatically using `createDocument()`, generated from a `data:` URL, or that do not have a creator browsing context.
 - Redirects across origins.
 - iframes with a sandbox attribute that doesn't contain the value `allow-same-origin`.
 - Responses that are network errors.
+- [`Referrer-Policy`](/en-US/docs/Web/HTTP/Headers/Referrer-Policy) set to `no-referrer` for non-`cors` request modes (e.g. simple form posts).
 
-> **Note:** There is a more detailed listing of case that may return `null` on Stack Overflow here: [When do browsers send the Origin header? When do browsers set the origin to null?](https://stackoverflow.com/a/42242802/).
+> **Note:** There is a more detailed listing of cases that may return `null` on Stack Overflow: [When do browsers send the Origin header? When do browsers set the origin to null?](https://stackoverflow.com/questions/42239643/when-do-browsers-send-the-origin-header-when-do-browsers-set-the-origin-to-null/42242802)
 
 ## Examples
 
@@ -95,4 +92,4 @@ Origin: http://developer.mozilla.org:80
 - {{HTTPHeader("Host")}}
 - {{HTTPHeader("Referer")}}
 - [Same-origin policy](/en-US/docs/Web/Security/Same-origin_policy)
-- [When do browsers send the Origin header? When do browsers set the origin to null?](https://stackoverflow.com/a/42242802/) (Stack Overflow)
+- [When do browsers send the Origin header? When do browsers set the origin to null?](https://stackoverflow.com/questions/42239643/when-do-browsers-send-the-origin-header-when-do-browsers-set-the-origin-to-null/42242802) (Stack Overflow)

@@ -1,13 +1,12 @@
 ---
 title: shortcuts
 slug: Web/Manifest/shortcuts
-tags:
-  - Manifest
-  - Web
-  - shortcuts
+status:
+  - experimental
 browser-compat: html.manifest.shortcuts
 ---
-{{QuickLinksWithSubpages("/en-US/docs/Web/Manifest")}}
+
+{{QuickLinksWithSubpages("/en-US/docs/Web/Manifest")}}{{SeeCompatTable}}
 
 <table class="properties">
   <tbody>

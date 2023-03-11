@@ -1,13 +1,7 @@
 ---
 title: RTCPeerConnection.remoteDescription
 slug: Web/API/RTCPeerConnection/remoteDescription
-tags:
-  - Property
-  - RTCPeerConnection
-  - Read-only
-  - Reference
-  - WebRTC
-  - remoteDescription
+page-type: web-api-instance-property
 browser-compat: api.RTCPeerConnection.remoteDescription
 ---
 
@@ -25,16 +19,15 @@ code calling {{domxref("RTCPeerConnection.setRemoteDescription()")}} in response
 
 ## Syntax
 
-```js
-var sessionDescription = peerConnection.remoteDescription;
+```js-nolint
+const sessionDescription = peerConnection.remoteDescription
 ```
 
 On a more fundamental level, the returned value is the value of
 {{domxref("RTCPeerConnection.pendingRemoteDescription")}} if that property isn't
 `null`; otherwise, the value of
 {{domxref("RTCPeerConnection.currentRemoteDescription")}} is returned. See
-{{SectionOnPage("/en-US/docs/Web/API/WebRTC_API/Connectivity", "Pending and current
-  descriptions")}} for details on this algorithm and why it's used.
+[Pending and current descriptions](/en-US/docs/Web/API/WebRTC_API/Connectivity#pending_and_current_descriptions) in the WebRTC Connectivity page for details on this algorithm and why it's used.
 
 ## Example
 
@@ -43,15 +36,12 @@ containing the {{domxref("RTCSessionDescription")}} object's `type` and
 `sdp` fields.
 
 ```js
-var pc = new RTCPeerConnection();
-…
-var sd = pc.remoteDescription;
+const pc = new RTCPeerConnection();
+// ...
+const sd = pc.remoteDescription;
 if (sd) {
-  alert("Remote session: type='" +
-        sd.type + "'; sdp description='" +
-        sd.sdp + "'");
-}
-else {
+  alert(`Remote session: type='${sd.type}'; sdp description='${sd.sdp}'`);
+} else {
   alert("No remote session yet.");
 }
 ```

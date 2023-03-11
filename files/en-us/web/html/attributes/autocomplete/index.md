@@ -1,22 +1,8 @@
 ---
-title: The HTML autocomplete attribute
+title: 'HTML attribute: autocomplete'
 slug: Web/HTML/Attributes/autocomplete
-tags:
-  - Addresses
-  - Attribute
-  - Email addresses
-  - Forms
-  - HTML
-  - Input
-  - Phone Numbers
-  - Reference
-  - Select
-  - Text
-  - Usernames
-  - autocomplete
-  - form
-  - passwords
-  - textarea
+page-type: html-attribute
+browser-compat: html.global_attributes.autocomplete
 ---
 
 {{HTMLSidebar}}
@@ -36,6 +22,8 @@ For more information, see the {{htmlattrxref("autocomplete", "form")}} attribute
 > 1. Have a `name` and/or `id` attribute
 > 2. Be descendants of a `<form>` element
 > 3. The form to have a {{HTMLElement("input/submit", "submit")}} button
+
+{{EmbedInteractiveExample("pages/tabbed/attribute-autocomplete.html", "tabbed-shorter")}}
 
 ## Values
 
@@ -83,13 +71,13 @@ For more information, see the {{htmlattrxref("autocomplete", "form")}} attribute
 - "`address-line1`", "`address-line2`", "`address-line3`"
   - : Each individual line of the street address. These should only be present if the "`street-address`" is not present.
 - "`address-level4`"
-  - : The finest-grained {{anch("Administrative levels in addresses", "administrative level")}}, in addresses which have four levels.
+  - : The finest-grained [administrative level](#administrative_levels_in_addresses), in addresses which have four levels.
 - "`address-level3`"
-  - : The third {{anch("Administrative levels in addresses", "administrative level")}}, in addresses with at least three administrative levels.
+  - : The third [administrative level](#administrative_levels_in_addresses), in addresses with at least three administrative levels.
 - "`address-level2`"
-  - : The second {{anch("Administrative levels in addresses", "administrative level")}}, in addresses with at least two of them. In countries with two administrative levels, this would typically be the city, town, village, or other locality in which the address is located.
+  - : The second [administrative level](#administrative_levels_in_addresses), in addresses with at least two of them. In countries with two administrative levels, this would typically be the city, town, village, or other locality in which the address is located.
 - "`address-level1`"
-  - : The first {{anch("Administrative levels in addresses", "administrative level")}} in the address. This is typically the province in which the address is located. In the United States, this would be the state. In Switzerland, the canton. In the United Kingdom, the post town.
+  - : The first [administrative level](#administrative_levels_in_addresses) in the address. This is typically the province in which the address is located. In the United States, this would be the state. In Switzerland, the canton. In the United Kingdom, the post town.
 - "`country`"
   - : A country or territory code.
 - "`country-name`"
@@ -131,7 +119,7 @@ For more information, see the {{htmlattrxref("autocomplete", "form")}} attribute
 - "`bday-year`"
   - : The year of a birth date.
 - "`sex`"
-  - : A gender identity (such as "Female", "Fa'afafine", "Male"), as freeform text without newlines.
+  - : A gender identity (such as "Female", "Fa'afafine", "Hijra", "Male", "Nonbinary"), as freeform text without newlines.
 - "`tel`"
 
   - : A full telephone number, including the country code. If you need to break the phone number up into its components, you can use these values for those fields:
@@ -156,14 +144,14 @@ For more information, see the {{htmlattrxref("autocomplete", "form")}} attribute
 
 See the [WHATWG Standard](https://html.spec.whatwg.org/multipage/forms.html#autofill) for more detailed information.
 
-> **Note:** The `autocomplete` attribute also controls whether Firefox will — unlike other browsers — [persist the dynamic disabled state and (if applicable) dynamic checkedness](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing) of an `<input>` element, `<textarea>` element, or entire `<form>` across page loads. The persistence feature is enabled by default. Setting the value of the `autocomplete` attribute to `off` disables this feature. This works even when the `autocomplete` attribute would normally not apply by virtue of its `type`. See {{bug(654072)}}.
+> **Note:** The `autocomplete` attribute also controls whether Firefox will — unlike other browsers — [persist the dynamic disabled state and (if applicable) dynamic checkedness](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing) of an `<input>` element, `<textarea>` element, or entire `<form>` across page loads. The persistence feature is enabled by default. Setting the value of the `autocomplete` attribute to `off` disables this feature. This works even when the `autocomplete` attribute would normally not apply by virtue of its `type`. See [Firefox bug 654072](https://bugzil.la/654072).
 
 ## Examples
 
 ```html
 <div>
   <label for="cc-number">Enter your credit card number</label>
-  <input name="cc-number" id="cc-number" autocomplete="off">
+  <input name="cc-number" id="cc-number" autocomplete="off" />
 </div>
 ```
 
@@ -207,7 +195,7 @@ The address levels are:
 
 - `address-level1`: The post town — "Winchelsea" in this case.
 - `address-line2`: The locality — "Upper-Wapping" in this case.
-- `address-line1`: The house/street particulars — "103 Frogmarch Street"
+- `address-line1`: The house/street particulars — "103 Frogmarch Street".
 
 The postcode is separate. Note that you can actually use just the postcode and `address-line1` to successfully deliver mail in the UK, so they should be the only mandatory items, but usually people tend to provide more details.
 
@@ -233,19 +221,17 @@ An address in Japan is typically **written in one line**, in an order from the l
 
 ## Specifications
 
-| Specification                                                        |
-| -------------------------------------------------------------------- |
-| {{SpecName('HTML WHATWG', "#attr-fe-autocomplete", "autocomplete")}} |
+{{Specifications}}
 
 ## Browser compatibility
 
-{{Compat("html.global_attributes.autocomplete")}}
+{{Compat}}
 
 ## See also
 
-- The {{htmlelement("input")}} element.
-- The {{htmlelement("select")}} element.
-- The {{htmlelement("textarea")}} element.
-- The {{htmlelement("form")}} element.
+- The {{htmlelement("input")}} element
+- The {{htmlelement("select")}} element
+- The {{htmlelement("textarea")}} element
+- The {{htmlelement("form")}} element
 - [HTML forms](/en-US/docs/Learn/Forms)
-- All [global attributes](/en-US/docs/Web/HTML/Global_attributes).
+- All [global attributes](/en-US/docs/Web/HTML/Global_attributes)

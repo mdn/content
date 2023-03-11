@@ -1,27 +1,13 @@
 ---
 title: XRWebGLLayer.getViewport()
 slug: Web/API/XRWebGLLayer/getViewport
-tags:
-  - API
-  - AR
-  - Layer
-  - Method
-  - Reality
-  - Reference
-  - VR
-  - Virtual
-  - WebGL
-  - WebXR
-  - WebXR API
-  - WebXR Device API
-  - XR
-  - XRWebGLLayer
-  - augmented
-  - getViewport
-  - viewport
+page-type: web-api-instance-method
+status:
+  - experimental
 browser-compat: api.XRWebGLLayer.getViewport
 ---
-{{APIRef("WebXR Device API")}}
+
+{{APIRef("WebXR Device API")}}{{SeeCompatTable}}
 
 The {{domxref("XRWebGLLayer")}} interface's
 **`getViewport()`** method returns the
@@ -33,8 +19,8 @@ represented by the view.
 
 ## Syntax
 
-```js
-getViewport(view);
+```js-nolint
+getViewport(view)
 ```
 
 ### Parameters
@@ -55,7 +41,7 @@ drawing to the portion of the layer corresponding to the specified `view`.
     that `XRFrame` and the {{domxref("XRWebGLLayer")}} are not part of the same
     [WebXR session](/en-US/docs/Web/API/XRSession).
 
-## Example
+## Examples
 
 This example demonstrates in part what the callback for the
 {{domxref("XRSession.requestAnimationFrame", "requestAnimationFrame()")}} function might
@@ -74,23 +60,24 @@ article --->>>**
 
 ```js
 function drawFrame(time, frame) {
-  let session = frame.session;
+  const session = frame.session;
 
-  let pose = frame.getViewerPose(mainReferenceSpace);
+  const pose = frame.getViewerPose(mainReferenceSpace);
 
   if (pose) {
-    let glLayer = session.renderState.baseLayer;
+    const glLayer = session.renderState.baseLayer;
     gl.bindFramebuffer(gl.FRAMEBUFFER, glLayer.framebuffer);
 
     gl.clearColor(0, 0, 0, 1.0);
     gl.clearDepth(1.0);
     gl.clear(gl.COLOR_BUFFER_BIT, gl.DEPTH_COLOR_BIT);
 
-    for (let view of pose.views) {
-      let viewport = glLayer.getViewport(view);
+    for (const view of pose.views) {
+      const viewport = glLayer.getViewport(view);
       gl.viewport(viewport.x, viewport.y, viewport.width, viewport.height);
 
       /* Render the scene now */
+    }
   }
 }
 ```
@@ -106,4 +93,3 @@ function drawFrame(time, frame) {
 ## See also
 
 - [WebXR Device API](/en-US/docs/Web/API/WebXR_Device_API)
-- {{domxref("WebGLLayerInit")}}

@@ -1,24 +1,18 @@
 ---
 title: Window.name
 slug: Web/API/Window/name
-tags:
-  - API
-  - HTML DOM
-  - Property
-  - Reference
+page-type: web-api-instance-property
 browser-compat: api.Window.name
 ---
+
 {{APIRef}}
 
 The `Window.name` property
 gets/sets the name of the window's browsing context.
 
-## Syntax
+## Value
 
-```js
-string = window.name;
-window.name = string;
-```
+A string.
 
 ## Description
 
@@ -33,7 +27,7 @@ the new page might also modify such data, which might then be read by the origin
 if it was reloaded).
 
 `Window.name` has also been used in some frameworks for providing
-cross-domain messaging (e.g. Dojo's [dojox.io.windowName](https://www.sitepen.com/blog/2008/07/22/windowname-transport/))
+cross-domain messaging
 as a more secure alternative to JSONP. Modern web applications hosting sensitive data
 should, however, not rely on `window.name` for cross-domain messaging — that
 is not its intended purpose and there are safer/better ways of sharing information
@@ -48,10 +42,9 @@ is the recommended mechanism.
 
 ```html
 <script>
-    // Open a tab with a specific browsing context name
-    const otherTab = window.open("url1", "_blank");
-    if (otherTab)
-        otherTab.name = "other-tab";
+  // Open a tab with a specific browsing context name
+  const otherTab = window.open("url1", "_blank");
+  if (otherTab) otherTab.name = "other-tab";
 </script>
 <a href="url2" target="other-tab">This link will be opened in the other tab.</a>
 ```

@@ -1,15 +1,8 @@
 ---
 title: Introduction to the server side
 slug: Learn/Server-side/First_steps/Introduction
-tags:
-  - Beginner
-  - CodingScripting
-  - Guide
-  - Intro
-  - Learn
-  - Server
-  - Server-side programming
 ---
+
 {{LearnSidebar}}{{NextMenu("Learn/Server-side/First_steps/Client-Server_overview", "Learn/Server-side/First_steps")}}
 
 Welcome to the MDN beginner's server-side programming course! In this first article, we look at server-side programming from a high level, answering questions such as "what is it?", "how does it differ from client-side programming?", and "why it is so useful?". After reading this article you'll understand the additional power available to websites through server-side coding.
@@ -42,17 +35,17 @@ In the modern world of web development, learning about server-side development i
 
 ## What is server-side website programming?
 
-Web browsers communicate with [web servers](/en-US/docs/Learn/Common_questions/What_is_a_web_server) using the **H**yper**T**ext **T**ransfer **P**rotocol ({{glossary("HTTP")}}). When you click a link on a web page, submit a form, or run a search, an **HTTP request** is sent from your browser to the target server.
+Web browsers communicate with [web servers](/en-US/docs/Learn/Common_questions/Web_mechanics/What_is_a_web_server) using the **H**yper**T**ext **T**ransfer **P**rotocol ({{glossary("HTTP")}}). When you click a link on a web page, submit a form, or run a search, an **HTTP request** is sent from your browser to the target server.
 
 The request includes a URL identifying the affected resource, a method that defines the required action (for example to get, delete, or post the resource), and may include additional information encoded in URL parameters (the field-value pairs sent via a [query string](https://en.wikipedia.org/wiki/Query_string)), as POST data (data sent by the [HTTP POST method](/en-US/docs/Web/HTTP/Methods/POST)), or in associated {{glossary("Cookie", "cookies")}}.
 
 Web servers wait for client request messages, process them when they arrive, and reply to the web browser with an **HTTP response** message. The response contains a status line indicating whether or not the request succeeded (e.g. "HTTP/1.1 200 OK" for success).
 
-The body of a successful response to a request would contain the requested resource (e.g. a new HTML page, or an image, etc...), which could then be displayed by the web browser.
+The body of a successful response to a request would contain the requested resource (e.g. a new HTML page, or an image), which could then be displayed by the web browser.
 
 ### Static sites
 
-The diagram below shows a basic web server architecture for a *static site* (a static site is one that returns the same hard-coded content from the server whenever a particular resource is requested). When a user wants to navigate to a page, the browser sends an HTTP "GET" request specifying its URL.
+The diagram below shows a basic web server architecture for a _static site_ (a static site is one that returns the same hard-coded content from the server whenever a particular resource is requested). When a user wants to navigate to a page, the browser sends an HTTP "GET" request specifying its URL.
 
 The server retrieves the requested document from its file system and returns an HTTP response containing the document and a [success status](/en-US/docs/Web/HTTP/Status#successful_responses) (usually 200 OK). If the file cannot be retrieved for some reason, an error status is returned (see [client error responses](/en-US/docs/Web/HTTP/Status#client_error_responses) and [server error responses](/en-US/docs/Web/HTTP/Status#server_error_responses)).
 
@@ -68,7 +61,7 @@ Most of the code to support a dynamic website must run on the server. Creating t
 
 The diagram below shows a simple architecture for a _dynamic website_. As in the previous diagram, browsers send HTTP requests to the server, then the server processes the requests and returns appropriate HTTP responses.
 
-Requests for _static_ resources are handled in the same way as for static sites (static resources are any files that don't change —typically: CSS, JavaScript, Images, pre-created PDF files etc).
+Requests for _static_ resources are handled in the same way as for static sites (static resources are any files that don't change — typically: CSS, JavaScript, Images, pre-created PDF files, etc.).
 
 ![A simplified diagram of a web server that uses server-side programming to get information from a database and construct HTML from templates. This is the same diagram as is in the Client-Server overview.](web_application_with_html_and_steps.png)
 
@@ -82,7 +75,7 @@ Let's now turn our attention to the code involved in server-side and client-side
 - They generally don't use the same programming languages (the exception being JavaScript, which can be used on the server- and client-side).
 - They run inside different operating system environments.
 
-Code running in the browser is known as **client-side code** and is primarily concerned with improving the appearance and behavior of a rendered web page. This includes selecting and styling UI components, creating layouts, navigation, form validation, etc. By contrast, server-side website programming mostly involves choosing *which content* is returned to the browser in response to requests. The server-side code handles tasks like validating submitted data and requests, using databases to store and retrieve data and sending the correct data to the client as required.
+Code running in the browser is known as **client-side code** and is primarily concerned with improving the appearance and behavior of a rendered web page. This includes selecting and styling UI components, creating layouts, navigation, form validation, etc. By contrast, server-side website programming mostly involves choosing _which content_ is returned to the browser in response to requests. The server-side code handles tasks like validating submitted data and requests, using databases to store and retrieve data and sending the correct data to the client as required.
 
 Client-side code is written using [HTML](/en-US/docs/Learn/HTML), [CSS](/en-US/docs/Learn/CSS), and [JavaScript](/en-US/docs/Learn/JavaScript) — it is run inside a web browser and has little or no access to the underlying operating system (including limited access to the file system).
 
@@ -100,7 +93,7 @@ Again, while both client and server-side code use frameworks, the domains are ve
 
 ## What can you do on the server-side?
 
-Server-side programming is very useful because it allows us to *efficiently* deliver information tailored for individual users and thereby create a much better user experience.
+Server-side programming is very useful because it allows us to _efficiently_ deliver information tailored for individual users and thereby create a much better user experience.
 
 Companies like Amazon use server-side programming to construct search results for products, make targeted product suggestions based on client preferences and previous buying habits, simplify purchases, etc.
 
@@ -132,11 +125,11 @@ Servers can store and use information about clients to provide a convenient and 
 
 A deeper analysis of user habits can be used to anticipate their interests and further customize responses and notifications, for example providing a list of previously visited or popular locations you may want to look at on a map.
 
-> **Note:** [Google Maps](https://maps.google.com/) saves your search and visit history. Frequently visited or frequently searched locations are highlighted more than others.
+> **Note:** [Google Maps](https://www.google.com/maps) saves your search and visit history. Frequently visited or frequently searched locations are highlighted more than others.
 >
 > Google search results are optimized based on previous searches.
 >
-> 1. Go to [Google search](https://google.com).
+> 1. Go to [Google search](https://www.google.com/).
 > 2. Search for "football".
 > 3. Now try typing "favorite" in the search box and observe the autocomplete search predictions.
 >
@@ -146,10 +139,7 @@ A deeper analysis of user habits can be used to anticipate their interests and f
 
 Server-side programming allows sites to restrict access to authorized users and serve only the information that a user is permitted to see.
 
-Real world examples include:
-
-- Social networks like Facebook allow users to fully control their own data but only allow their friends to view or comment on it. The user determines who can see their data, and by extension, whose data appears in their feed —  authorization is a central part of the user experience!
-- The site you are on right now controls access to content: articles are visible to everyone, but only users who have logged in can edit them. To try this, click on the **Edit** button at the top of this page — if you are logged in you will be shown the edit view; if you are not logged in you will be taken to the sign-up page.
+Real-world examples include social-networking sites which allow users to determine who can see the content they post to the site, and whose content appears in their feed.
 
 > **Note:** Consider other real examples where access to content is controlled. For example, what can you see if you go to the online site for your bank? Log in to your account — what additional information can you see and modify? What information can you see that only the bank can change?
 
@@ -168,7 +158,7 @@ Servers can send general or user-specific notifications through the website itse
 A few examples include:
 
 - Facebook and Twitter send emails and SMS messages to notify you of new communications.
-- Amazon regularly sends product e-mails that suggest products similar to those already bought or viewed that you might be interested in.
+- Amazon regularly sends product emails that suggest products similar to those already bought or viewed that you might be interested in.
 - A web server might send warning messages to site administrators alerting them to low memory on the server, or suspicious user activity.
 
 > **Note:** The most common type of notification is a "confirmation of registration". Pick almost any large site that you are interested in (Google, Amazon, Instagram, etc.) and create a new account using your email address. You will shortly receive an email confirming your registration, or requiring acknowledgment to activate your account.
@@ -187,19 +177,12 @@ For example, Amazon and Google both advertise products based on previous searche
 
 Congratulations, you've reached the end of the first article about server-side programming.
 
-You've now learned that server-side code is run on a web server and that its main role is to control *what* information is sent to the user (while client-side code mainly handles the structure and presentation of that data to the user).
+You've now learned that server-side code is run on a web server and that its main role is to control _what_ information is sent to the user (while client-side code mainly handles the structure and presentation of that data to the user).
 
-You should also understand that it is useful because it allows us to create websites that *efficiently* deliver information tailored for individual users and have a good idea of some of the things you might be able to do when you're a server-side programmer.
+You should also understand that it is useful because it allows us to create websites that _efficiently_ deliver information tailored for individual users and have a good idea of some of the things you might be able to do when you're a server-side programmer.
 
 Lastly, you should understand that server-side code can be written in a number of programming languages and that you should use a web framework to make the whole process easier.
 
 In a future article we'll help you choose the best web framework for your first site. Here we'll take you through the main client-server interactions in just a little more detail.
 
 {{NextMenu("Learn/Server-side/First_steps/Client-Server_overview", "Learn/Server-side/First_steps")}}
-
-## In this module
-
-- [Introduction to the server side](/en-US/docs/Learn/Server-side/First_steps/Introduction)
-- [Client-Server overview](/en-US/docs/Learn/Server-side/First_steps/Client-Server_overview)
-- [Server-side web frameworks](/en-US/docs/Learn/Server-side/First_steps/Web_frameworks)
-- [Website security](/en-US/docs/Learn/Server-side/First_steps/Website_security)

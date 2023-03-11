@@ -1,17 +1,11 @@
 ---
 title: 'WakeLockSentinel: release event'
 slug: Web/API/WakeLockSentinel/release_event
-tags:
-  - Event Handler
-  - Property
-  - Screen Wake Lock API
-  - Wake Lock
-  - WakeLockSentinel
-  - screen
-  - screen wake lock
+page-type: web-api-event
 browser-compat: api.WakeLockSentinel.release_event
 ---
-{{securecontext_header}}{{DefaultAPISidebar("Screen Wake Lock API")}}
+
+{{APIRef("Screen Wake Lock API")}}{{SecureContext_Header}}
 
 The **`release`** event of the {{domxref("WakeLockSentinel")}} interface is fired when the sentinel object's handle has been released.
 
@@ -25,9 +19,9 @@ power save mode.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event-handler property.
 
 ```js
-addEventListener('release', event => { })
+addEventListener('release', (event) => { })
 
-onrelease = event => { }
+onrelease = (event) => { }
 ```
 
 ## Event type

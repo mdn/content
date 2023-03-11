@@ -1,15 +1,11 @@
 ---
-title: '::-moz-list-number'
+title: "::-moz-list-number"
 slug: Web/CSS/:-moz-list-number
-tags:
-  - CSS
-  - CSS:Mozilla Extensions
-  - NeedsCompatTable
-  - Non-standard
-  - Pseudo-element
-  - Reference
-  - Selector
+page-type: css-pseudo-class
+status:
+  - non-standard
 ---
+
 {{CSSRef}}{{Non-standard_header}}
 
 The **`::-moz-list-number`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) is a [Mozilla extension](/en-US/docs/Web/CSS/Mozilla_Extensions) that represents the marker (typically a number) of a list item ({{HTMLElement("li")}}) in an ordered list ({{HTMLElement("ol")}}).
@@ -17,7 +13,9 @@ The **`::-moz-list-number`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/
 ## Syntax
 
 ```css
-li::-moz-list-number
+li::-moz-list-number {
+  /* ... */
+}
 ```
 
 ## Examples
@@ -43,7 +41,7 @@ li::-moz-list-number {
 
 ### Result
 
-{{EmbedLiveSample("Examples","auto","auto","/@api/deki/files/4668/=moz-list-number.png")}}
+{{ EmbedLiveSample("Examples", "auto", "auto", "moz-list-number.png") }}
 
 ## Specifications
 

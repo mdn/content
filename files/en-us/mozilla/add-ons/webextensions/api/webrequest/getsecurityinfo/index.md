@@ -1,17 +1,10 @@
 ---
 title: webRequest.getSecurityInfo()
 slug: Mozilla/Add-ons/WebExtensions/API/webRequest/getSecurityInfo
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Reference
-  - WebExtensions
-  - getSecurityInfo
-  - webRequest
+page-type: webextension-api-function
 browser-compat: webextensions.api.webRequest.getSecurityInfo
 ---
+
 {{AddonSidebar()}}
 
 Use this function to get detailed information about the [TLS](/en-US/docs/Glossary/TLS) connection associated with a particular request.
@@ -24,8 +17,8 @@ You must also pass the "blocking" option to `webRequest.onHeadersReceived.addLis
 
 ## Syntax
 
-```js
-var gettingInfo = browser.webRequest.getSecurityInfo(
+```js-nolint
+let gettingInfo = browser.webRequest.getSecurityInfo(
   requestId,       // string
   options          // object
 )
@@ -65,7 +58,7 @@ async function logSubject(details) {
       console.log(securityInfo.certificates[0].subject);
     }
   }
-  catch(error) {
+  catch (error) {
     console.error(error);
   }
 }
@@ -90,7 +83,7 @@ async function logRoot(details) {
       console.log(securityInfo.certificates[securityInfo.certificates.length - 1].issuer);
     }
   }
-  catch(error) {
+  catch (error) {
     console.error(error);
   }
 }

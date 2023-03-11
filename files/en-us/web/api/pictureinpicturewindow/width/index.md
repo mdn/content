@@ -1,17 +1,11 @@
 ---
 title: PictureInPictureWindow.width
 slug: Web/API/PictureInPictureWindow/width
-tags:
-  - API
-  - Interface
-  - Media
-  - Picture-in-Picture
-  - Picture-in-Picture API
-  - Video
-  - pip
+page-type: web-api-instance-property
 browser-compat: api.PictureInPictureWindow.width
 ---
-{{APIRef}}
+
+{{APIRef("Picture-in-Picture API")}}
 
 The read-only {{domxref("PictureInPictureWindow")}} property
 **`width`** returns the width of the floating video window in
@@ -19,8 +13,8 @@ pixels.
 
 ## Syntax
 
-```js
-let width = pictureInPictureWindow.width;
+```js-nolint
+pictureInPictureWindow.width
 ```
 
 ### Value

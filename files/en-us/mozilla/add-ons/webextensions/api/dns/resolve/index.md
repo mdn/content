@@ -1,17 +1,10 @@
 ---
 title: dns.resolve()
 slug: Mozilla/Add-ons/WebExtensions/API/dns/resolve
-tags:
-  - API
-  - Add-ons
-  - DNS
-  - Extensions
-  - Method
-  - Reference
-  - WebExtensions
-  - resolve
+page-type: webextension-api-function
 browser-compat: webextensions.api.dns.resolve
 ---
+
 {{AddonSidebar()}}
 
 Resolves the given hostname to a DNS record.
@@ -20,8 +13,8 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ## Syntax
 
-```js
-var resolving = browser.dns.resolve(
+```js-nolint
+let resolving = browser.dns.resolve(
   hostname,    // string
   flags        // array of string
 )

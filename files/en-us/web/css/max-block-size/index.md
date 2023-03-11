@@ -1,22 +1,10 @@
 ---
 title: max-block-size
 slug: Web/CSS/max-block-size
-tags:
-  - CSS
-  - CSS Logical Property
-  - CSS Property
-  - Experimental
-  - Layout
-  - Maximum Height
-  - Maximum Width
-  - Reference
-  - height
-  - max-block-size
-  - recipe:css-property
-  - size
-  - width
+page-type: css-property
 browser-compat: css.properties.max-block-size
 ---
+
 {{CSSRef}}
 
 The **`max-block-size`** [CSS](/en-US/docs/Web/CSS) property specifies the maximum size of an element in the direction opposite that of the writing direction as specified by {{cssxref("writing-mode")}}. That is, if the writing direction is horizontal, then `max-block-size` is equivalent to {{cssxref("max-height")}}; if the writing direction is vertical, `max-block-size` is the same as {{cssxref("max-width")}}.
@@ -25,7 +13,7 @@ The other dimension's maximum length is specified using the {{cssxref("max-inlin
 
 This is useful because the `max-width` is always used for horizontal sizes and `max-height` is always used for vertical sizes, and if you need to set lengths based on the size of your text content, you need to be able to do so with the writing direction in mind.
 
-Any time you would normally use `max-height` or `max-width`, you should instead use `max-block-size` to set the maximum "height" of the content (even though this may not be a vertical value) and `max-inline-size` to set the maximum "width" of the content (although this may instead be vertical rather than horizontal). See the {{SectionOnPage("/en-US/docs/Web/CSS/writing-mode", "Example")}}, which shows the different writing modes in action.
+Any time you would normally use `max-height` or `max-width`, you should instead use `max-block-size` to set the maximum "height" of the content (even though this may not be a vertical value) and `max-inline-size` to set the maximum "width" of the content (although this may instead be vertical rather than horizontal). See [`writing-mode` examples](/en-US/docs/Web/CSS/writing-mode#examples), which show the different writing modes in action.
 
 {{EmbedInteractiveExample("pages/css/max-block-size.html")}}
 
@@ -49,6 +37,7 @@ max-block-size: fit-content(20em);
 max-block-size: inherit;
 max-block-size: initial;
 max-block-size: revert;
+max-block-size: revert-layer;
 max-block-size: unset;
 ```
 
@@ -94,7 +83,7 @@ The values of `writing-mode` affect the mapping of `max-block-size` to `max-widt
 
 ### Setting max-block-size with horizontal and vertical text
 
-In this example, the same text (the opening sentences from {{interwiki("wikipedia", "Herman Melville", "Herman Melville's")}} novel _{{interwiki("wikipedia", "Moby-Dick")}}_) is presented in both the `horizontal-tb` and `vertical-rl` writing modes.
+In this example, the same text (the opening sentences from [Herman Melville's](https://en.wikipedia.org/wiki/Herman_Melville) novel _[Moby-Dick](https://en.wikipedia.org/wiki/Moby-Dick)_) is presented in both the `horizontal-tb` and `vertical-rl` writing modes.
 
 Everything else about the two boxes is identical, including the values used for {{cssxref("max-block-size")}}.
 

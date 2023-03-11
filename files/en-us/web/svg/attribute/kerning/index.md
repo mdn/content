@@ -1,12 +1,12 @@
 ---
 title: kerning
 slug: Web/SVG/Attribute/kerning
-tags:
-  - Deprecated
-  - SVG
-  - SVG Attribute
+page-type: svg-attribute
+status:
+  - deprecated
 browser-compat: svg.attributes.presentation.kerning
 ---
+
 {{SVGRef}}{{Deprecated_Header}}
 
 The **`kerning`** attribute indicates whether the spacing between {{Glossary("glyph", "glyphs")}} should be adjusted based on kerning tables that are included in the relevant font (i.e., enable auto-kerning) or instead disable auto-kerning and set the spacing between them to a specific length (typically, zero).
@@ -24,7 +24,9 @@ You can use this attribute with the following SVG elements:
 ## Example
 
 ```css hidden
-html, body, svg {
+html,
+body,
+svg {
   height: 100%;
   font: 36px Verdana, Helvetica, Arial, sans-serif;
 }
@@ -69,6 +71,7 @@ html, body, svg {
 - `auto`
   - : This value indicates that the spacing between {{Glossary("glyph", "glyphs")}} is adjusted based on kerning tables that are included in the font that will be used.
 - `<length>`
+
   - : If a length is provided, then auto-kerning is disabled. Instead, inter-character spacing is set to the given length.
 
     If a length is provided without a unit identifier (e.g., an unqualified number such as 128), the length is processed as a width value in the current user coordinate system. If a unit identifier (e.g., `0.25em` or `1%`) is provided, then the length is converted into a corresponding value in the current user coordinate system.

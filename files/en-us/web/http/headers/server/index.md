@@ -1,12 +1,9 @@
 ---
 title: Server
 slug: Web/HTTP/Headers/Server
-tags:
-  - HTTP
-  - Reference
-  - header
 browser-compat: http.headers.Server
 ---
+
 {{HTTPSidebar}}
 
 The **`Server`** header describes the
@@ -31,7 +28,7 @@ generated the response.
 
 ## Syntax
 
-```
+```http
 Server: <product>
 ```
 
@@ -49,7 +46,7 @@ versions with {{HTTPHeader('Content-Encoding')}} and
 
 ## Examples
 
-```
+```http
 Server: Apache/2.4.1 (Unix)
 ```
 

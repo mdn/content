@@ -1,14 +1,10 @@
 ---
 title: grid-row-start
 slug: Web/CSS/grid-row-start
-tags:
-  - CSS
-  - CSS Grid
-  - CSS Property
-  - Reference
-  - recipe:css-property
+page-type: css-property
 browser-compat: css.properties.grid-row-start
 ---
+
 {{CSSRef}}
 
 The **`grid-row-start`** CSS property specifies a grid item's start position within the grid row by contributing a line, a span, or nothing (automatic) to its grid placement, thereby specifying the inline-start edge of its {{glossary("grid areas", "grid area")}}.
@@ -37,6 +33,7 @@ grid-row-start: 5 somegridarea span;
 grid-row-start: inherit;
 grid-row-start: initial;
 grid-row-start: revert;
+grid-row-start: revert-layer;
 grid-row-start: unset;
 ```
 
@@ -126,7 +123,9 @@ This property is specified as a single `<grid-line>` value. A `<grid-line>` valu
 ```
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -166,4 +165,4 @@ This property is specified as a single `<grid-line>` value. A `<grid-line>` valu
 
 - Related CSS properties: {{cssxref("grid-row-end")}}, {{cssxref("grid-row")}}, {{cssxref("grid-column-start")}}, {{cssxref("grid-column-end")}}, {{cssxref("grid-column")}}
 - Grid Layout Guide: _[Line-based placement with CSS Grid](/en-US/docs/Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid)_
-- Video tutorial: _[Line-based placement](http://gridbyexample.com/video/series-line-based-placement/)_
+- Video tutorial: _[Line-based placement](https://gridbyexample.com/video/series-line-based-placement/)_

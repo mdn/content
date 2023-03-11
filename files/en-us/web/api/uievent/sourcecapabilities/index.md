@@ -1,15 +1,13 @@
 ---
 title: UIEvent.sourceCapabilities
 slug: Web/API/UIEvent/sourceCapabilities
-tags:
-  - API
-  - DOM
-  - Property
-  - Reference
-  - UIEvent
+page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.UIEvent.sourceCapabilities
 ---
-{{SeeCompatTable}}{{APIRef()}}
+
+{{APIRef("UI Events")}}{{SeeCompatTable}}
 
 The **`UIEvent.sourceCapabilities`** read-only property returns
 an instance of the {{domxref('InputDeviceCapabilities')}} interface which provides
@@ -30,13 +28,7 @@ window to be resized with a mouse or a keyboard, but this detail is not exposed 
 web platform in any way, and so the sourceCapabilities of a resize event will typically
 be null.
 
-## Syntax
-
-```js
-var iDC = event.sourceCapabilities
-```
-
-### Value
+## Value
 
 An instance of {{domxref('InputDeviceCapabilities')}}.
 

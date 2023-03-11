@@ -1,15 +1,10 @@
 ---
 title: CSSImportRule.stylesheet
 slug: Web/API/CSSImportRule/stylesheet
-tags:
-  - API
-  - CSSOM
-  - Property
-  - Reference
-  - CSSImportRule
-  - Read-only
+page-type: web-api-instance-property
 browser-compat: api.CSSImportRule.styleSheet
 ---
+
 {{APIRef("CSSOM")}}
 
 The read-only **`styleSheet`** property of the
@@ -20,13 +15,7 @@ in the form of a {{domxref("CSSStyleSheet")}} object.
 An {{cssxref("@import")}} [at-rule](/en-US/docs/Web/CSS/At-rule) always has
 an associated stylesheet.
 
-## Syntax
-
-```js
-var href = CSSImportRule.styleSheet;
-```
-
-### Value
+## Value
 
 A {{domxref("CSSStyleSheet")}}.
 

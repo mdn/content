@@ -1,31 +1,25 @@
 ---
 title: RTCSessionDescription.sdp
 slug: Web/API/RTCSessionDescription/sdp
-tags:
-  - Experimental
-  - Property
-  - RTCSessionDescription
-  - Reference
-  - SDP
-  - WebRTC
+page-type: web-api-instance-property
 browser-compat: api.RTCSessionDescription.sdp
 ---
 
-{{APIRef("WebRTC")}}{{SeeCompatTable}}
+{{APIRef("WebRTC")}}
 
 The property **`RTCSessionDescription.sdp`** is a read-only
-{{domxref("DOMString")}} containing the {{Glossary("SDP")}} which describes the session.
+string containing the {{Glossary("SDP")}} which describes the session.
 
 ## Syntax
 
-```js
-var value = sessionDescription.sdp;
-sessionDescription.sdp = value;
+```js-nolint
+const value = sessionDescription.sdp
+sessionDescription.sdp = value
 ```
 
 ### Value
 
-The value is a {{domxref("DOMString")}} containing an SDP message like this one:
+The value is a string containing an SDP message like this one:
 
 ```
 v=0

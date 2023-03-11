@@ -1,18 +1,10 @@
 ---
 title: Window.devicePixelRatio
 slug: Web/API/Window/devicePixelRatio
-tags:
-  - API
-  - Adaptive Design
-  - Property
-  - Read-only
-  - Reference
-  - Window
-  - devicePixelRatio
-  - ratio
-  - resolution
+page-type: web-api-instance-property
 browser-compat: api.Window.devicePixelRatio
 ---
+
 {{APIRef}}
 
 The **`devicePixelRatio`** of
@@ -21,7 +13,7 @@ pixels_ to the resolution in _CSS pixels_ for the current display
 device.
 
 This value could also be interpreted as the ratio of pixel sizes: the
-size of one *CSS pixel* to the size of one _physical pixel_. In simpler
+size of one _CSS pixel_ to the size of one _physical pixel_. In simpler
 terms, this tells the browser how many of the screen's actual pixels should be used to
 draw a single CSS pixel.
 
@@ -32,15 +24,9 @@ resulting in a sharper image.
 You can use {{domxref("Window.matchMedia", "window.matchMedia()")}} to check if the
 value of `devicePixelRatio` changes (which can happen, for example, if the
 user drags the window to a display with a different pixel density). See
-{{anch("Monitoring screen resolution or zoom level changes", "the example below")}}.
+[the example below](#monitoring_screen_resolution_or_zoom_level_changes).
 
-## Syntax
-
-```js
-value = window.devicePixelRatio;
-```
-
-### Value
+## Value
 
 A double-precision floating-point value indicating the ratio of the display's
 resolution in physical pixels to the resolution in CSS pixels. A value of 1 indicates a
@@ -66,20 +52,20 @@ should be added to allow for a sharper image.
 #### JavaScript
 
 ```js
-var canvas = document.getElementById('canvas');
-var ctx = canvas.getContext('2d');
+const canvas = document.getElementById('canvas');
+const ctx = canvas.getContext('2d');
 
 // Set display size (css pixels).
-var size = 200;
-canvas.style.width = size + "px";
-canvas.style.height = size + "px";
+const size = 200;
+canvas.style.width = `${size}px`;
+canvas.style.height = `${size}px`;
 
 // Set actual size in memory (scaled to account for extra pixel density).
-var scale = window.devicePixelRatio; // Change to 1 on retina screens to see blurry canvas.
+const scale = window.devicePixelRatio; // Change to 1 on retina screens to see blurry canvas.
 canvas.width = Math.floor(size * scale);
 canvas.height = Math.floor(size * scale);
 
-// Normalize coordinate system to use css pixels.
+// Normalize coordinate system to use CSS pixels.
 ctx.scale(scale, scale);
 
 ctx.fillStyle = "#bada55";
@@ -89,10 +75,10 @@ ctx.font = '18px Arial';
 ctx.textAlign = 'center';
 ctx.textBaseline = 'middle';
 
-var x = size / 2;
-var y = size / 2;
+const x = size / 2;
+const y = size / 2;
 
-var textString = "I love MDN";
+const textString = "I love MDN";
 ctx.fillText(textString, x, y);
 ```
 
@@ -110,22 +96,26 @@ The JavaScript code creates the media query that monitors the device resolution 
 checks the value of `devicePixelRatio` any time it changes.
 
 ```js
-let pixelRatioBox = document.querySelector(".pixel-ratio");
+let remove = null;
 
 const updatePixelRatio = () => {
-  let pr = window.devicePixelRatio;
-  let prString = (pr * 100).toFixed(0);
-  pixelRatioBox.innerText = `${prString}% (${pr.toFixed(2)})`;
-  matchMedia(`(resolution: ${pr}dppx)`).addEventListener("change", updatePixelRatio, { once: true })
-}
+  if (remove != null) {
+      remove();
+  }
+  let mqString = `(resolution: ${window.devicePixelRatio}dppx)`;
+  let media = matchMedia(mqString);
+  media.addListener(updatePixelRatio);
+  remove = function() {media.removeListener(updatePixelRatio)};
 
+  console.log("devicePixelRatio: " + window.devicePixelRatio);
+}
 updatePixelRatio();
 ```
 
 The string `mqString` is set up to be the media query itself. The media
-query, which begins as `(resolution: 1dppx)` (for standard  displays) or
+query, which begins as `(resolution: 1dppx)` (for standard displays) or
 `(resolution: 2dppx)` (for Retina/HiDPI displays), checks to see if the
-current display resolution matches a specific  number of device dots per
+current display resolution matches a specific number of device dots per
 `px`.
 
 The `updatePixelRatio()` function fetches the current value of
@@ -147,12 +137,14 @@ box that will display the current pixel ratio information.
 ```html
 <div class="container">
   <div class="inner-container">
-    <p>This example demonstrates the effect of zooming the page in
-       and out (or moving it to a screen with a different scaling
-       factor) on the value of the property <code>Window.devicePixelRatio</code>.
-       Try it and watch what happens!</p>
+    <p>
+      This example demonstrates the effect of zooming the page in and out (or
+      moving it to a screen with a different scaling factor) on the value of the
+      property <code>Window.devicePixelRatio</code>. Try it and watch what
+      happens!
+    </p>
   </div>
-    <div class="pixel-ratio"></div>
+  <div class="pixel-ratio"></div>
 </div>
 ```
 

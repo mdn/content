@@ -1,39 +1,32 @@
 ---
 title: SubmitEvent()
 slug: Web/API/SubmitEvent/SubmitEvent
-tags:
-  - API
-  - Allocate
-  - Constructor
-  - Event
-  - Forms
-  - HTML DOM
-  - Initialize
-  - Reference
-  - SubmitEvent
-  - submit
+page-type: web-api-constructor
 browser-compat: api.SubmitEvent.SubmitEvent
 ---
+
 {{APIRef("HTML DOM")}}
 
-The **`SubmitEvent()`** constructor
-creates and returns a new {{domxref("SubmitEvent")}} object, which is used to
-represent a {{domxref("HTMLFormElement.submit_event", "submit")}} event fired at an
-{{Glossary("HTML")}} [form](/en-US/docs/Learn/Forms).
+The **`SubmitEvent()`** constructor creates and returns a new {{domxref("SubmitEvent")}} object,
+which is used to represent a {{domxref("HTMLFormElement.submit_event", "submit")}} event
+fired at an {{Glossary("HTML")}} [form](/en-US/docs/Learn/Forms).
 
 ## Syntax
 
-```js
-let submitEvent = new SubmitEvent(type,eventInitDict);
+```js-nolint
+new SubmitEvent(type)
+new SubmitEvent(type, options)
 ```
 
 ### Parameters
 
 - `type`
-  - : A {{domxref("DOMString")}} indicating the event which occurred.
-    For `SubmitEvent`, this is always `submit`.
-- `eventInitDict` {{optional_inline}}
-  - : An optional dictionary of initial values for the event's properties.
+  - : A string with the name of the event.
+    It is case-sensitive and browsers always set it to `submit`.
+- `options` {{optional_inline}}
+  - : An object that, _in addition of the properties defined in {{domxref("Event/Event", "Event()")}}_, can have the following properties:
+    - `submitter` {{optional_inline}}
+      - : An {{domxref('HTMLElement')}} object that is the submit button that triggered the form submission.
 
 ### Return value
 

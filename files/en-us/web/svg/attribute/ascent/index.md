@@ -1,13 +1,12 @@
 ---
 title: ascent
 slug: Web/SVG/Attribute/ascent
-tags:
-  - Deprecated
-  - NeedsExample
-  - SVG
-  - SVG Attribute
+page-type: svg-attribute
+status:
+  - deprecated
 browser-compat: svg.elements.font-face.ascent
 ---
+
 {{SVGRef}}{{deprecated_header}}
 
 The **`ascent`** attribute defines the maximum unaccented height of the font within the font coordinate system.
@@ -46,24 +45,7 @@ For {{SVGElement("font-face")}}, `ascent` defines the maximum unaccented height 
 
 ## Specifications
 
-<table class="no-markdown">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        {{SpecName("SVG1.1", "fonts.html#FontFaceElementAscentAttribute", "ascent")}}
-      </td>
-      <td>{{Spec2("SVG1.1")}}</td>
-      <td>Initial definition</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 ## Browser compatibility
 

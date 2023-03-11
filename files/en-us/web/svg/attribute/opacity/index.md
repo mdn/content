@@ -1,11 +1,10 @@
 ---
 title: opacity
 slug: Web/SVG/Attribute/opacity
-tags:
-  - SVG
-  - SVG Attribute
+page-type: svg-attribute
 browser-compat: svg.attributes.presentation.opacity
 ---
+
 {{SVGRef}}
 
 The **`opacity`** attribute specifies the transparency of an object or of a group of objects, that is, the degree to which the background behind the element is overlaid.
@@ -42,7 +41,9 @@ You can use this attribute with the following SVG elements:
 ## Example
 
 ```css hidden
-html, body, svg {
+html,
+body,
+svg {
   height: 100%;
 }
 ```
@@ -87,48 +88,7 @@ html, body, svg {
 
 ## Specifications
 
-<table class="no-markdown">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        {{SpecName("CSS4 Colors", "#transparency", "opacity")}}
-      </td>
-      <td>{{Spec2("CSS4 Colors")}}</td>
-      <td>Defines in more detail what this attribute applies to.</td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("CSS3 Colors", "#transparency", "opacity")}}
-      </td>
-      <td>{{Spec2("CSS3 Colors")}}</td>
-      <td>Defines in more detail what this attribute applies to.</td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("SVG2", "render.html#ObjectAndGroupOpacityProperties", "opacity")}}
-      </td>
-      <td>{{Spec2("SVG2")}}</td>
-      <td>
-        References the specification in CSS Color 3 and notes that there are
-        some related attributes.
-      </td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("SVG1.1", "masking.html#OpacityProperty", "opacity")}}
-      </td>
-      <td>{{Spec2("SVG1.1")}}</td>
-      <td>Initial definition</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 ## Browser compatibility
 

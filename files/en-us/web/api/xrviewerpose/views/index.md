@@ -1,24 +1,10 @@
 ---
 title: XRViewerPose.views
 slug: Web/API/XRViewerPose/views
-tags:
-  - 3D
-  - API
-  - AR
-  - Property
-  - Read-only
-  - Reality
-  - Reference
-  - VR
-  - Virtual
-  - WebXR Device API
-  - XR
-  - XRViewerPose
-  - augmented
-  - pose
-  - views
+page-type: web-api-instance-property
 browser-compat: api.XRViewerPose.views
 ---
+
 {{APIRef("WebXR Device API")}}
 
 The read-only {{domxref("XRViewerPose")}} property **`views`**
@@ -56,5 +42,4 @@ See [`XRViewerPose`](/en-US/docs/Web/API/XRViewerPose#examples) for example code
 ## See also
 
 - [WebXR Device API](/en-US/docs/Web/API/WebXR_Device_API)
-- [Movement,
-  orientation, and motion](/en-US/docs/Web/API/WebXR_Device_API/Movement_and_motion)
+- [Movement, orientation, and motion](/en-US/docs/Web/API/WebXR_Device_API/Movement_and_motion)

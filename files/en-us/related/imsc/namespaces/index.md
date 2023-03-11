@@ -1,19 +1,15 @@
 ---
 title: Namespaces in IMSC
 slug: Related/IMSC/Namespaces
-tags:
-  - IMSC
-  - Namespaces
-  - TTML
-  - XML
 ---
+
 This article covers the subject of XML namespaces, giving you enough information to recognize their usage in IMSC, and be able to use it effectively.
 
 ## What are XML namespaces?
 
 Namespaces are basically the mechanism that you use in XML to differentiate different families of markup (which may have features with the same name), and allow them to be used in the same document.
 
-To help you understand what we mean by this, let's use a real world example — human family names. There are many people in the world called Mary. One way to tell them apart is by their full names — there can be a Mary Smith and a Mary Jones.
+To help you understand what we mean by this, let's use a real-world example — human family names. There are many people in the world called Mary. One way to tell them apart is by their full names — there can be a Mary Smith and a Mary Jones.
 
 In XML you can also give elements and attributes a "family name", which is their namespace. Namespaces define what family an XML vocabulary belongs to, and generally consist of an identifying string of characters. The `<p>` element is available in both HTML and IMSC, so perhaps you could use the namespace `html` to specify HTML's `<p>`, and `imsc` to specify IMSC's `<p>`?
 
@@ -21,8 +17,8 @@ As with many things, it's not that simple. There might be another XML vocabulary
 
 So normally you use longer strings as namespace names. A URL is a very popular form of namespace. It is easy to remember and can also point to further information about that XML vocabulary.
 
-- The W3C standard IMSC uses the URL [`http://www.w3.org/ns/ttml`](https://www.w3.org/ns/ttml) as the namespace for the `<p>` element.
-- For the `<p>` in HTML the namespace is [`http://www.w3.org/1999/xhtml`](https://www.w3.org/1999/xhtml).
+- The W3C standard IMSC uses the URL [`http://www.w3.org/ns/ttml`](https://www.w3.org/ns/ttml/) as the namespace for the `<p>` element.
+- For the `<p>` in HTML the namespace is [`http://www.w3.org/1999/xhtml`](https://www.w3.org/1999/xhtml/).
 
 If you use the namespace `http://www.w3.org/ns/ttml` it is quite safe to assume that you are referring to elements from the IMSC vocabulary.
 
@@ -44,7 +40,7 @@ But this is not very efficient. Imagine a document with hundreds of subtitles. T
 
 ### Default namespaces
 
-Fortunately, you don't need to do the above — instead you can just use a default namespace. If you set the attribute `xmlns` on the  document's root element to the value `http://www.w3.org/ns/ttml`, all elements nested inside the root will inherit this namespace — they will all have that namespace too.
+Fortunately, you don't need to do the above — instead you can just use a default namespace. If you set the attribute `xmlns` on the document's root element to the value `http://www.w3.org/ns/ttml`, all elements nested inside the root will inherit this namespace — they will all have that namespace too.
 
 ```xml
 <tt xmlns="http://www.w3.org/ns/ttml" xml:lang="en">
@@ -134,4 +130,24 @@ Much more readable, isn't it?
 
 > **Note:** The namespace/prefix match is only a document-wide agreement. Theoretically you can use another prefix than `tts` to bind the styling namespace. It is completely legal to define `xmlns:foo="http://www.w3.org/ns/ttml#styling"` and then write `<p foo:color="yellow">`. But it makes your IMSC document much more readable if you use the official prefixes listed in [namespace section](https://www.w3.org/TR/ttml-imsc1.0.1/#namespaces) of the IMSC standard.
 
-<section id="Quick_links"><ol><li><a href="/en-US/docs/Related/IMSC/"><strong>IMSC</strong></a></li><li class="toggle"><details open><summary>IMSC guides</summary><ol><li><a href="/en-US/docs/Related/IMSC/Basics">IMSC basics</a></li><li><a href="/en-US/docs/Related/IMSC/Using_the_imscJS_polyfill">Using the imscJS polyfill</a></li><li><a href="/en-US/docs/Related/IMSC/Styling">Styling IMSC documents</a></li><li><a href="/en-US/docs/Related/IMSC/Subtitle_placement">Subtitle placement in IMSC</a></li><li><a href="/en-US/docs/Related/IMSC/Namespaces">Namespaces in IMSC</a></li><li><a href="/en-US/docs/Related/IMSC/Timing_in_IMSC">Timing in IMSC</a></li><li><a href="/en-US/docs/Related/IMSC/Mapping_video_time_codes_to_IMSC">Mapping video time codes to IMSC</a></li><li><a href="/en-US/docs/Related/IMSC/IMSC_and_other_standards">IMSC and other standards</a></li></ol></details></li></ol></section>
+<section id="Quick_links">
+  <ol>
+    <li><a href="/en-US/docs/Related/IMSC/"><strong>IMSC</strong></a></li>
+    <li class="toggle">
+      <details open>
+        <summary>IMSC guides</summary>
+        <ol>
+          <li><a href="/en-US/docs/Related/IMSC/Basics">IMSC basics</a></li>
+          <li><a href="/en-US/docs/Related/IMSC/Using_the_imscJS_polyfill">Using the imscJS polyfill</a></li>
+          <li><a href="/en-US/docs/Related/IMSC/Styling">Styling IMSC documents</a></li>
+          <li><a href="/en-US/docs/Related/IMSC/Subtitle_placement">Subtitle placement in IMSC</a></li>
+          <li><a href="/en-US/docs/Related/IMSC/Namespaces">Namespaces in IMSC</a></li>
+          <li><a href="/en-US/docs/Related/IMSC/Timing_in_IMSC">Timing in IMSC</a></li>
+          <li><a href="/en-US/docs/Related/IMSC/Mapping_video_time_codes_to_IMSC">Mapping video time codes to IMSC</a>
+          </li>
+          <li><a href="/en-US/docs/Related/IMSC/IMSC_and_other_standards">IMSC and other standards</a></li>
+        </ol>
+      </details>
+    </li>
+  </ol>
+</section>

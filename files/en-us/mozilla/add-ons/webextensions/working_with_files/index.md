@@ -1,10 +1,9 @@
 ---
 title: Working with files
 slug: Mozilla/Add-ons/WebExtensions/Working_with_files
-tags:
-  - Guide
-  - WebExtensions
+page-type: guide
 ---
+
 {{AddonSidebar()}}
 
 Your browser extension may need to work with files to deliver its full functionality. This article looks at the five mechanisms you have for handling files:
@@ -41,7 +40,7 @@ API reference: [downloads API](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/dow
 If you want to work with a file from the user's computer one option is to let the user select a file using the computer's file browser. Either create a new page or inject code into an existing page to use the `file` type of the HTML `input` element to offer the user a file picker. Once the user has picked a file or files, the script associated with the page can access the content of the file using the [DOM File API](/en-US/docs/Web/API/File), in the same way a web application does.
 
 Example: [Imagify](https://github.com/mdn/webextensions-examples/tree/master/imagify)
-Guide: [Using files from web applications](/en-US/docs/Web/API/File/Using_files_from_web_applications)
+Guide: [Using files from web applications](/en-US/docs/Web/API/File_API/Using_files_from_web_applications)
 API references: [HTML input element](/en-US/docs/Web/HTML/Element/input/file) | [DOM File API](/en-US/docs/Web/API/File)
 
 > **Note:** If you want to access or process all the files in a selected folder, you can do so using `<input type="file" webkitdirectory="true"/>` to select the folder and return all the files it contains.
@@ -51,7 +50,7 @@ API references: [HTML input element](/en-US/docs/Web/HTML/Element/input/file) | 
 The Web Drag and Drop API offers an alternative to using a file picker. To use this method, establish a 'drop zone' that fits with your UI, then add listeners for the [`dragenter`](/en-US/docs/Web/API/Document/dragenter_event), [`dragover`](/en-US/docs/Web/API/Document/dragover_event), and [`drop`](/en-US/docs/Web/API/Document/drop_event) events to the element. In the handler for the drop event, your code can access any file dropped by the user from the object offered by the `dataTransfer` property using [`DataTransfer.files`](/en-US/docs/Web/API/DataTransfer/files). Your code can then access and manipulate the files using the [DOM File API](/en-US/docs/Web/API/File).
 
 Example: [Imagify](https://github.com/mdn/webextensions-examples/tree/master/imagify)
-Guides: [Using files from web applications](/en-US/docs/Web/API/File/Using_files_from_web_applications) | [File drag and drop](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/File_drag_and_drop)
+Guides: [Using files from web applications](/en-US/docs/Web/API/File_API/Using_files_from_web_applications) | [File drag and drop](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/File_drag_and_drop)
 API references: [DOM File API](/en-US/docs/Web/API/File)
 
 ## Store files data locally using the IndexedDB file storage library
@@ -75,7 +74,7 @@ The key features of the library are:
 
 The [Store Collected Images](https://github.com/mdn/webextensions-examples/tree/master/store-collected-images/webextension-plain) example illustrates how to use most of these features. (IDBMutableFile is not included, but you can find examples in the [idb-file-storage examples](https://rpl.github.io/idb-file-storage/examples/) along with a number of other examples of the library in action).
 
-The Store Collected Images example lets users add images to a collection using an option on the image context menu. Selected images are collected in a popup and can be saved to a named collection. A toolbar button ({{WebExtAPIRef("browserAction")}}) opens a navigate collection page, on which the user can view and delete saved images, with a filter option to narrow choices. [See the example in action](https://youtu.be/t6aVqMMe2Rc).
+The Store Collected Images example lets users add images to a collection using an option on the image context menu. Selected images are collected in a popup and can be saved to a named collection. A toolbar button ({{WebExtAPIRef("browserAction")}}) opens a navigate collection page, on which the user can view and delete saved images, with a filter option to narrow choices. [See the example in action](https://www.youtube.com/watch?v=t6aVqMMe2Rc&ab_channel=LucaGreco).
 
 The workings of the library can be understood by viewing [image-store.js](https://github.com/mdn/webextensions-examples/blob/master/store-collected-images/webextension-plain/utils/image-store.js) in /utils/:
 
@@ -133,10 +132,10 @@ async function removeStoredImages(storedImages) {
 
 Note the use of [`URL.revokeObjectURL()`](/en-US/docs/Web/API/URL/revokeObjectURL) to explicitly revoke the blob URL. This enables the garbage collector to free the memory allocated to the URL. If this is not done, the memory will not get returned until the page on which it was created is closed. If the URL was created in an extension's background page, this is not unloaded until the extension is disabled, uninstalled, or reloaded, so holding this memory unnecessarily could affect browser performance. If the URL is created in an extension's page (new tab, popup, or sidebar) the memory is released when the page is closed, but it is still a good practice to revoke the URL when it is no longer needed.
 
-Once the blob URL has been revoked, any attempt to load it will result in an error. For example, if the blob url was used as the `SRC` attribute of an `IMG` tag, the image will not load and will not be visible. It is therefore good practice to remove any revoked blob URLs from generated HTML elements when the blob URL is revoked.
+Once the blob URL has been revoked, any attempt to load it will result in an error. For example, if the blob URL was used as the `SRC` attribute of an `IMG` tag, the image will not load and will not be visible. It is therefore good practice to remove any revoked blob URLs from generated HTML elements when the blob URL is revoked.
 
 Example: [Store Collected Images](https://github.com/mdn/webextensions-examples/tree/master/store-collected-images/webextension-plain)
-API References:  [idb-file-storage library](https://rpl.github.io/idb-file-storage/)
+API References: [idb-file-storage library](https://rpl.github.io/idb-file-storage/)
 
 > **Note:** You can also use the full Web [IndexedDB API](/en-US/docs/Web/API/IndexedDB_API) to store data from your extension. This can be useful where you need to store data that isn't handled well by the simple key/value pairs offered by the DOM [Storage API](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/storage).
 

@@ -1,12 +1,8 @@
 ---
 title: <xsl:key>
 slug: Web/XSLT/Element/key
-tags:
-  - Element
-  - Key
-  - Reference
-  - XSLT
 ---
+
 {{ XsltRef() }}
 
 The `<xsl:key>` element declares a named key which can be used elsewhere in the stylesheet with the `key( )` function.

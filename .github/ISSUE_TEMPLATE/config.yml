@@ -1,0 +1,14 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Content or feature request
+    url: https://github.com/mdn/mdn/issues/new/choose
+    about: Propose new content for MDN Web Docs or submit a feature request using this link.
+  - name: MDN GitHub Discussions
+    url: https://github.com/orgs/mdn/discussions
+    about: Does the issue involve a lot of pages, or are you not sure how it can be split into actionable tasks? Consider starting a discussion first.
+  - name: MDN Web Docs on Discourse
+    url: https://discourse.mozilla.org/c/mdn/learn/250
+    about: Need help with assessments on MDN Web Docs? We have a support community for this purpose on Discourse.
+  - name: Help with code
+    url: https://stackoverflow.com/
+    about: If you are stuck and need help with code, StackOverflow is a great resource.

@@ -1,18 +1,13 @@
 ---
 title: XRCylinderLayer.aspectRatio
 slug: Web/API/XRCylinderLayer/aspectRatio
-tags:
-  - API
-  - Property
-  - Reference
-  - VR
-  - WebXR
-  - WebXR API
-  - WebXR Device API
-  - XR
+page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.XRCylinderLayer.aspectRatio
 ---
-{{APIRef("WebXR Device API")}}
+
+{{APIRef("WebXR Device API")}}{{SeeCompatTable}}
 
 The **`aspectRatio`** property of the {{domxref("XRCylinderLayer")}} interface represents the ratio of the visible cylinder section. It is the ratio of the width of the visible section of the cylinder divided by its height. The width is calculated by multiplying the {{domxref("XRCylinderLayer.radius", "radius")}} with the {{domxref("XRCylinderLayer.centralAngle", "centralAngle")}}.
 
@@ -34,7 +29,7 @@ const cylinderLayer = xrGlBinding.createCylinderLayer({
   centralAngle : 60 * Math.PI / 180,
   aspectRatio : 2,
   radius : 2,
-  transform : new XRRigidTransform(/* ... */),
+  transform : new XRRigidTransform(/* … */),
 });
 
 cylinderLayer.aspectRatio; // 2

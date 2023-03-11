@@ -1,17 +1,10 @@
 ---
 title: identity.launchWebAuthFlow
 slug: Mozilla/Add-ons/WebExtensions/API/identity/launchWebAuthFlow
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Identity
-  - Method
-  - Reference
-  - WebExtensions
-  - launchWebAuthFlow
+page-type: webextension-api-function
 browser-compat: webextensions.api.identity.launchWebAuthFlow
 ---
+
 {{AddonSidebar()}}
 
 Performs the first part of an [OAuth2](https://oauth.net/2/) flow, including user authentication and client authorization.
@@ -38,8 +31,8 @@ If there's any error, the promise is rejected with an error message. Error condi
 
 ## Syntax
 
-```js
-var authorizing = browser.identity.launchWebAuthFlow(
+```js-nolint
+let authorizing = browser.identity.launchWebAuthFlow(
   details   // object
 )
 ```
@@ -104,6 +97,4 @@ function getAccessToken() {
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`identity`](https://developer.chrome.com/extensions/identity) API.
->
-> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
+> **Note:** This API is based on Chromium's [`identity`](https://developer.chrome.com/docs/extensions/reference/identity/) API.

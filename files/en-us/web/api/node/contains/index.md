@@ -1,11 +1,10 @@
 ---
 title: Node.contains()
 slug: Web/API/Node/contains
-tags:
-  - Method
-  - Reference
+page-type: web-api-instance-method
 browser-compat: api.Node.contains
 ---
+
 {{APIRef("DOM")}}
 
 The **`contains()`** method of the {{domxref("Node")}} interface
@@ -18,8 +17,8 @@ one of the children's direct children, and so on.
 
 ## Syntax
 
-```js
-contains(otherNode);
+```js-nolint
+contains(otherNode)
 ```
 
 ### Parameters
@@ -44,7 +43,7 @@ intention of `isInPage` this case explicitly returns `false`.
 
 ```js
 function isInPage(node) {
-  return (node === document.body) ? false : document.body.contains(node);
+  return node === document.body ? false : document.body.contains(node);
 }
 ```
 

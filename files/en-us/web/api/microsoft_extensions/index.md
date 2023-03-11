@@ -1,13 +1,11 @@
 ---
 title: Microsoft API extensions
 slug: Web/API/Microsoft_Extensions
-tags:
-  - API
-  - API:Microsoft Extensions
-  - Non-standard
-  - Overview
-  - Reference
+page-type: landing-page
+status:
+  - non-standard
 ---
+
 {{DefaultAPISidebar("Microsoft Extensions")}}
 
 Microsoft browsers (Internet Explorer, and in a few cases, Microsoft Edge) support a number of special Microsoft extensions to the otherwise standard [DOM APIs](/en-US/docs/Web/API). These extensions are prefixed with `MS` or `ms`.
@@ -17,11 +15,11 @@ Microsoft browsers (Internet Explorer, and in a few cases, Microsoft Edge) suppo
 ## Touch APIs
 
 - {{DOMxRef("Element.msZoomTo()")}}
-- {{Event("msContentZoom")}}
+- {{domxref("Element/msContentZoom_event", "msContentZoom")}}
 - {{DOMxRef("MSManipulationEvent")}}
-- {{Event("MSManipulationStateChanged")}}
+- {{domxref("Element/MSManipulationStateChanged_event", "MSManipulationStateChanged")}}
 - {{DOMxRef("Touch.MsManipulationViewsEnabled")}}
-- {{Event("MSPointerHover")}} {{Deprecated_Inline}}
+- `MSPointerHover` {{Deprecated_Inline}}
 
 ## Media APIs
 
@@ -62,8 +60,6 @@ Microsoft browsers (Internet Explorer, and in a few cases, Microsoft Edge) suppo
 ## Other APIs
 
 - [`x-ms-aria-flowfrom`](/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/x-ms-aria-flowfrom)
-- [`x-ms-acceleratorkey`](/en-US/docs/Web/HTML/Global_attributes/x-ms-acceleratorkey)
-- [`x-ms-format-detection`](/en-US/docs/Web/HTML/Global_attributes/x-ms-format-detection)
 - {{DOMxRef("msCaching")}}
 - {{DOMxRef("msCachingEnabled")}}
 - {{DOMxRef("msCapsLockWarningOff")}}

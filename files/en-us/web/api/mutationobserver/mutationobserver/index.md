@@ -1,20 +1,10 @@
 ---
 title: MutationObserver()
 slug: Web/API/MutationObserver/MutationObserver
-tags:
-  - API
-  - Changes
-  - Constructor
-  - DOM
-  - DOM Changes
-  - DOM Reference
-  - DOM Tree
-  - Mutation Observer API
-  - MutationObserver
-  - Observing
-  - Reference
+page-type: web-api-constructor
 browser-compat: api.MutationObserver.MutationObserver
 ---
+
 {{APIRef("DOM WHATWG")}}
 
 The DOM **`MutationObserver()`**
@@ -28,8 +18,8 @@ establish which portion of the DOM to watch and what kinds of changes to watch f
 
 ## Syntax
 
-```js
-const observer = new MutationObserver(callback)
+```js-nolint
+new MutationObserver(callback)
 ```
 
 ### Parameters
@@ -42,18 +32,18 @@ const observer = new MutationObserver(callback)
     The `callback` function takes as input two parameters:
 
     1. An array of {{domxref("MutationRecord")}} objects, describing each change that
-        occurred; and
+       occurred; and
     2. the {{domxref("MutationObserver")}} which invoked the
-        `callback`.
+       `callback`.
 
-    See the {{anch("Example", "example")}} below for more details.
+    See the [examples](#examples) below for more details.
 
 ### Return value
 
 A new {{domxref("MutationObserver")}} object, configured to call the specified
 `callback` when DOM mutations occur.
 
-## Example
+## Examples
 
 This example creates a new `MutationObserver` configured to watch a node and
 all of its children for additions and removals of elements to the tree, as well as any
@@ -63,14 +53,14 @@ changes to attributes on any of the elements in the tree.
 
 ```js
 function callback(mutationList, observer) {
-  mutationList.forEach( (mutation) => {
-    switch(mutation.type) {
-      case 'childList':
+  mutationList.forEach((mutation) => {
+    switch (mutation.type) {
+      case "childList":
         /* One or more children have been added to and/or removed
            from the tree.
            (See mutation.addedNodes and mutation.removedNodes.) */
         break;
-      case 'attributes':
+      case "attributes":
         /* An attribute value changed on the element in
            mutation.target.
            The attribute name is in mutation.attributeName, and
@@ -100,8 +90,8 @@ const observerOptions = {
   attributes: true,
 
   // Omit (or set to false) to observe only changes to the parent node
-  subtree: true
-}
+  subtree: true,
+};
 
 const observer = new MutationObserver(callback);
 observer.observe(targetNode, observerOptions);

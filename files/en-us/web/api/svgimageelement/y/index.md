@@ -1,18 +1,10 @@
 ---
 title: SVGImageElement.y
 slug: Web/API/SVGImageElement/y
-tags:
-  - API
-  - Image
-  - NeedsExample
-  - Property
-  - Reference
-  - SVG
-  - SVG DOM
-  - SVGImageElement
-  - 'y'
+page-type: web-api-instance-property
 browser-compat: api.SVGImageElement.y
 ---
+
 {{APIRef("SVG")}}
 
 The **`y`** read-only property of the
@@ -20,13 +12,7 @@ The **`y`** read-only property of the
 corresponding to the {{SVGAttr("y")}} attribute of the given {{SVGElement("image")}}
 element.
 
-## Syntax
-
-```js
-var y = svgImageElement.y;
-```
-
-### Value
+## Value
 
 An {{domxref("SVGAnimatedLength")}}.
 

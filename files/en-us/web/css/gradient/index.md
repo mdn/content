@@ -1,16 +1,10 @@
 ---
 title: <gradient>
 slug: Web/CSS/gradient
-tags:
-  - CSS
-  - CSS Data Type
-  - CSS Images
-  - Data Type
-  - Graphics
-  - Layout
-  - Reference
+page-type: css-type
 browser-compat: css.types.image.gradient
 ---
+
 {{CSSRef}}
 
 The **`<gradient>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Types) is a special type of {{cssxref("&lt;image&gt;")}} that consists of a progressive transition between two or more colors.
@@ -23,25 +17,29 @@ A CSS gradient has [no intrinsic dimensions](/en-US/docs/Web/CSS/image#descripti
 
 The `<gradient>` data type is defined with one of the function types listed below.
 
-#### Linear gradient
+### Linear gradient
 
-Linear gradients transition colors progressively along an imaginary line. They are generated with the {{cssxref("gradient/linear-gradient()", "linear-gradient()")}} function.
+Linear gradients transition colors progressively along an imaginary line. They are generated with the {{cssxref("gradient/linear-gradient", "linear-gradient()")}} function.
 
-#### Radial gradient
+### Radial gradient
 
-Radial gradients transition colors progressively from a center point (origin). They are generated with the {{cssxref("gradient/radial-gradient()", "radial-gradient()")}} function.
+Radial gradients transition colors progressively from a center point (origin). They are generated with the {{cssxref("gradient/radial-gradient", "radial-gradient()")}} function.
 
-#### Repeating gradient
+### Repeating gradient
 
-Repeating gradients duplicate a gradient as much as necessary to fill a given area. They are generated with the {{cssxref("gradient/repeating-linear-gradient()", "repeating-linear-gradient()")}} and {{cssxref("gradient/repeating-radial-gradient()", "repeating-radial-gradient()")}} functions.
+Repeating gradients duplicate a gradient as much as necessary to fill a given area. They are generated with the {{cssxref("gradient/repeating-linear-gradient", "repeating-linear-gradient()")}} and {{cssxref("gradient/repeating-radial-gradient", "repeating-radial-gradient()")}} functions.
 
-#### Conic gradient
+### Conic gradient
 
-Conic gradients transition colors progressively around a circle. They are generated with the {{cssxref("gradient/conic-gradient()", "conic-gradient()")}} function.
+Conic gradients transition colors progressively around a circle. They are generated with the {{cssxref("gradient/conic-gradient", "conic-gradient()")}} function.
 
 ## Interpolation
 
-As with any interpolation involving colors, gradients are calculated in the alpha-premultiplied color space. This prevents unexpected shades of gray from appearing when both the color and the opacity are changing. (Be aware that older browsers may not use this behavior when using the [transparent keyword](/en-US/docs/Web/CSS/color_value#transparent_keyword).)
+As with any interpolation involving colors, gradients are calculated in the alpha-premultiplied color space. This prevents unexpected shades of gray from appearing when both the color and the opacity are changing. (Be aware that older browsers may not use this behavior when using the [transparent keyword](/en-US/docs/Web/CSS/named-color#transparent).)
+
+## Formal syntax
+
+{{csssyntax}}
 
 ## Examples
 
@@ -62,8 +60,16 @@ div {
 
 ```css
 .linear-gradient {
-  background: linear-gradient(to right,
-      red, orange, yellow, green, blue, indigo, violet);
+  background: linear-gradient(
+    to right,
+    red,
+    orange,
+    yellow,
+    green,
+    blue,
+    indigo,
+    violet
+  );
 }
 ```
 
@@ -98,7 +104,7 @@ Simple repeating linear and radial gradient examples.
 
 ```html hidden
 <div class="linear-repeat">Repeating linear gradient</div>
-<br>
+<br />
 <div class="radial-repeat">Repeating radial gradient</div>
 ```
 
@@ -111,12 +117,22 @@ div {
 
 ```css
 .linear-repeat {
-  background: repeating-linear-gradient(to top left,
-      lightpink, lightpink 5px, white 5px, white 10px);
+  background: repeating-linear-gradient(
+    to top left,
+    lightpink,
+    lightpink 5px,
+    white 5px,
+    white 10px
+  );
 }
 
 .radial-repeat {
-  background: repeating-radial-gradient(powderblue, powderblue 8px, white 8px, white 16px);
+  background: repeating-radial-gradient(
+    powderblue,
+    powderblue 8px,
+    white 8px,
+    white 16px
+  );
 }
 ```
 
@@ -156,7 +172,7 @@ div {
 ## See also
 
 - [Using CSS gradients](/en-US/docs/Web/CSS/CSS_Images/Using_CSS_gradients)
-- Gradient functions: {{cssxref("gradient/linear-gradient()", "linear-gradient()")}}, {{cssxref("gradient/repeating-linear-gradient()", "repeating-linear-gradient()")}}, {{cssxref("gradient/radial-gradient()", "radial-gradient()")}}, {{cssxref("gradient/repeating-radial-gradient()", "repeating-radial-gradient()")}}, {{cssxref("gradient/conic-gradient()", "conic-gradient()")}}, {{cssxref("gradient/repeating-conic-gradient()", "repeating-conic-gradient()")}}
+- Gradient functions: {{cssxref("gradient/linear-gradient", "linear-gradient()")}}, {{cssxref("gradient/repeating-linear-gradient", "repeating-linear-gradient()")}}, {{cssxref("gradient/radial-gradient", "radial-gradient()")}}, {{cssxref("gradient/repeating-radial-gradient", "repeating-radial-gradient()")}}, {{cssxref("gradient/conic-gradient", "conic-gradient()")}}, {{cssxref("gradient/repeating-conic-gradient", "repeating-conic-gradient()")}}
 - [CSS Basic Data Types](/en-US/docs/Web/CSS/CSS_Types)
 - [CSS Units and Values](/en-US/docs/Web/CSS/CSS_Values_and_Units)
 - [Introduction to CSS: Values and Units](/en-US/docs/Learn/CSS/Building_blocks/Values_and_units)

@@ -1,30 +1,27 @@
 ---
 title: CSS values and units
 slug: Web/CSS/CSS_Values_and_Units
-tags:
-  - CSS
-  - Guide
-  - Reference
-  - values and units
-spec-urls: >-
-  https://drafts.csswg.org/css-values/,
-  https://drafts.csswg.org/css-color/,
-  https://drafts.csswg.org/css-images/
+page-type: guide
+spec-urls:
+  - https://drafts.csswg.org/css-values/
+  - https://drafts.csswg.org/css-color/
+  - https://drafts.csswg.org/css-images/
 ---
+
 {{CSSRef}}
 
-Every CSS declaration includes a property / value pair. Depending on the property, the value can include a single integer or keyword, to a series of keywords and values with or without units. There are a common set of data types -- values and units -- that CSS properties accept. Below is an overview of most of these data types. Refer to the page for each value type for more detailed information.
+Every CSS declaration includes a property / value pair. Depending on the property, the value can include a single integer or keyword, to a series of keywords and values with or without units. There are a common set of data types — values and units — that CSS properties accept. Below is an overview of most of these data types. Refer to the page for each value type for more detailed information.
 
 ## Textual data types
 
 - {{cssxref("&lt;custom-ident&gt;")}}
 - Pre-defined keywords as an `<ident>`
 - {{cssxref("&lt;string&gt;")}}
-- {{cssxref("url()","url()")}}
+- {{cssxref("url","url()")}}
 
 Text data types are either `<string>`, a quoted series of characters, or an `<ident>`, a "CSS Identifier" which is an unquoted string. A `<string>` must be quoted with either single or double quotes. CSS Identifiers, listed in the specifications as `<ident>` or `<custom-ident>`, must be unquoted.
 
-In the CSS specifications, values that can be defined by the web developer, like keyframe animations, font-family names, or grid areas are listed as a  {{cssxref("&lt;custom-ident&gt;")}}, {{cssxref("&lt;string&gt;")}}, or both.
+In the CSS specifications, values that can be defined by the web developer, like keyframe animations, font-family names, or grid areas are listed as a {{cssxref("&lt;custom-ident&gt;")}}, {{cssxref("&lt;string&gt;")}}, or both.
 
 When both quoted and unquoted user defined text values are permitted, the specification will list `<custom-ident> | <string>`, meaning quotes are optional, such as is the case with animation names:
 
@@ -49,7 +46,7 @@ In comparison, a data type that is a {{cssxref("&lt;string&gt;")}}, such as a st
 
 ```css
 .item::after {
-    content: "This is my content.";
+  content: "This is my content.";
 }
 ```
 
@@ -61,7 +58,7 @@ Pre-defined keywords are text values defined by the specification for that prope
 
 When viewing CSS property value syntax in a CSS specification or the MDN property page, allowable keywords will be listed in the following form. The following values are the pre-defined keyword values allowed for {{cssxref("float")}}.
 
-```css
+```plain
 left | right | none | inline-start | inline-end
 ```
 
@@ -69,7 +66,7 @@ Such values are used without quotes:
 
 ```css
 .box {
-    float: left;
+  float: left;
 }
 ```
 
@@ -85,7 +82,7 @@ A fourth value of {{cssxref("revert")}} was added in the Cascade Level 4 specifi
 
 ### URLs
 
-A {{cssxref("url()","url()")}} type uses functional notation, which accepts a `<string>` that is a URL. This may be an absolute URL or a relative URL. For example, if you wanted to include a background image, you might use either of the following.
+A {{cssxref("url","url()")}} type uses functional notation, which accepts a `<string>` that is a URL. This may be an absolute URL or a relative URL. For example, if you wanted to include a background image, you might use either of the following.
 
 ```css
 .box {
@@ -97,7 +94,7 @@ A {{cssxref("url()","url()")}} type uses functional notation, which accepts a `<
 }
 ```
 
-The parameter for `url()` can be either quoted or unquoted. If unquoted, it is parsed as a `<url-token>`, which has extra requirements including the escaping of certain characters. See {{cssxref("url()","url()")}}  for more information.
+The parameter for `url()` can be either quoted or unquoted. If unquoted, it is parsed as a `<url-token>`, which has extra requirements including the escaping of certain characters. See {{cssxref("url","url()")}} for more information.
 
 ## Numeric data types
 
@@ -124,6 +121,7 @@ CSS uses dimensions to specify:
 - {{cssxref("&lt;angle&gt;")}}
 - {{cssxref("&lt;time&gt;")}}
 - {{cssxref("&lt;frequency&gt;")}}
+- {{cssxref("&lt;flex&gt;")}}
 - {{cssxref("&lt;resolution&gt;")}}
 
 These are all covered in subsections below.
@@ -132,7 +130,8 @@ These are all covered in subsections below.
 
 Where a distance unit, also known as a length, is allowed as a value for a property, this is described as the {{cssxref("&lt;length&gt;")}} type. There are two types of lengths in CSS: relative and absolute.
 
-Relative length units specify a length in relation to something else. For example, `em` is relative to the font size on the element and `vh` is relative to the viewport height.
+Relative length units specify a length in relation to something else.
+For example, `em` is relative to the font size on the element and `vh` is relative to the viewport height.
 
 | Unit   | Relative to                                                                                                                            |
 | ------ | -------------------------------------------------------------------------------------------------------------------------------------- |
@@ -151,6 +150,18 @@ Relative length units specify a length in relation to something else. For exampl
 | `vmin` | 1% of viewport's smaller dimension.                                                                                                    |
 | `vmax` | 1% of viewport's larger dimension.                                                                                                     |
 
+Container query length units specify a length relative to the dimensions of a [query container](/en-US/docs/Web/CSS/CSS_Container_Queries).
+For example, `cqw` is relative to the width of the query container and `cqh` is relative to the height of the query container.
+
+| Unit    | Relative to                           |
+| ------- | ------------------------------------- |
+| `cqw`   | 1% of a query container's width       |
+| `cqh`   | 1% of a query container's height      |
+| `cqi`   | 1% of a query container's inline size |
+| `cqb`   | 1% of a query container's block size  |
+| `cqmin` | The smaller value of `cqi` or `cqb`   |
+| `cqmax` | The larger value of `cqi` or `cqb`    |
+
 Absolute length units are fixed to a physical length: either an inch or a centimeter. Many of these units are therefore more useful when the output is a fixed size media, such as print. For example, `mm` is a physical millimeter, 1/10th of a centimeter.
 
 | Unit | Name                | Equivalent to       |
@@ -159,7 +170,7 @@ Absolute length units are fixed to a physical length: either an inch or a centim
 | `mm` | Millimeters         | 1mm = 1/10th of 1cm |
 | `Q`  | Quarter-millimeters | 1Q = 1/40th of 1cm  |
 | `in` | Inches              | 1in = 2.54cm = 96px |
-| `pc` | Picas               | 1pc = 1/6th of 1in |
+| `pc` | Picas               | 1pc = 1/6th of 1in  |
 | `pt` | Points              | 1pt = 1/72th of 1in |
 | `px` | Pixels              | 1px = 1/96th of 1in |
 
@@ -178,7 +189,7 @@ Angle values are represented by the type {{cssxref("&lt;angle&gt;")}} and accept
 
 #### Time units
 
-Time values are represented by the type {{cssxref("&lt;time&gt;")}}. When including a time value, the unit identifier -- the `s` or `ms` -- is required. It accepts the following values.
+Time values are represented by the type {{cssxref("&lt;time&gt;")}}. When including a time value, the unit identifier — the `s` or `ms` — is required. It accepts the following values.
 
 | Unit | Name         | Description                               |
 | ---- | ------------ | ----------------------------------------- |
@@ -195,6 +206,14 @@ Frequency values are represented by the type {{cssxref("&lt;frequency&gt;")}}. I
 | `kHz` | KiloHertz | A kiloHertz is 1000 Hertz.                       |
 
 `1Hz`, which can also be written as `1hz` or `1HZ`, is one cycle per second.
+
+#### Flex units
+
+Flex units are represented by the type {{cssxref("&lt;flex&gt;")}}. It accepts the following value.
+
+| Unit | Name | Description                                          |
+| ---- | ---- | ---------------------------------------------------- |
+| `fr` | Flex | Represents a flexible length within a grid container |
 
 #### Resolution units
 
@@ -244,17 +263,17 @@ The {{cssxref("&lt;image&gt;")}} value specifies all the different types of imag
 
 #### Position
 
-The {{cssxref("&lt;position&gt;")}} type defines 2D positioning of an object inside a positioning area, for example a background image inside a container. This type is interpreted as a  {{cssxref("background-position")}} and therefore specified in the [CSS Backgrounds and Borders specification](https://www.w3.org/TR/css-backgrounds-3/).
+The {{cssxref("&lt;position&gt;")}} type defines 2D positioning of an object inside a positioning area, for example a background image inside a container. This type is interpreted as a {{cssxref("background-position")}} and therefore specified in the [CSS Backgrounds and Borders specification](https://www.w3.org/TR/css-backgrounds-3/).
 
 ### Functional notation
 
-- {{cssxref("calc()", "calc()")}}
-- {{cssxref("min()", "min()")}}
-- {{cssxref("max()", "max()")}}
-- {{cssxref("minmax()", "minmax()")}}
-- {{cssxref("clamp()", "clamp()")}}
+- {{cssxref("calc", "calc()")}}
+- {{cssxref("min", "min()")}}
+- {{cssxref("max", "max()")}}
+- {{cssxref("minmax", "minmax()")}}
+- {{cssxref("clamp", "clamp()")}}
 - {{cssxref("toggle", "toggle()")}}
-- {{cssxref("attr()", "attr()")}}
+- {{cssxref("attr", "attr()")}}
 
 [Functional notation](/en-US/docs/Web/CSS/CSS_Functions) is a type of value that can represent more complex types or invoke special processing by CSS. The syntax starts with the name of the function immediately followed by a left parenthesis `(` followed by the argument(s) to the notation followed by a right parenthesis `)`. Functions can take multiple arguments, which are formatted similarly to a CSS property value.
 
@@ -270,3 +289,4 @@ Some legacy functional notations such as `rgba()` use commas, but generally comm
 
 - [CSS Basic Data Types](/en-US/docs/Web/CSS/CSS_Types)
 - [Introduction to CSS: Values and Units](/en-US/docs/Learn/CSS/Building_blocks/Values_and_units)
+- [Trigonometric functions in CSS](https://web.dev/css-trig-functions/)

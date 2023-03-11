@@ -1,36 +1,31 @@
 ---
 title: DOMException
 slug: Web/API/DOMException
-tags:
-  - API
-  - DOM
-  - DOMException
-  - Error
-  - Error code
-  - Exception
-  - Reference
-  - Polyfill
+page-type: web-api-interface
 browser-compat: api.DOMException
 ---
+
 {{ APIRef("DOM") }}
 
 The **`DOMException`** interface represents an abnormal event (called an **exception**) that occurs as a result of calling a method or accessing a property of a web API. This is how error conditions are described in web APIs.
 
 Each exception has a **name**, which is a short "PascalCase"-style string identifying the error or abnormal condition.
 
+`DOMException` is a {{Glossary("Serializable object")}}, so it can be cloned with {{domxref("structuredClone()")}} or copied between [Workers](/en-US/docs/Web/API/Worker) using {{domxref("Worker.postMessage()", "postMessage()")}}.
+
 ## Constructor
 
-- {{domxref("DOMException.DOMException()", "DOMException()")}} {{experimental_inline}}
+- {{domxref("DOMException.DOMException()", "DOMException()")}}
   - : Returns a `DOMException` object with a specified message and name.
 
-## Properties
+## Instance properties
 
-- {{domxref("DOMException.code")}} {{deprecated_inline}} {{readOnlyInline}}
-  - : Returns a `short` that contains one of the error code constants, or `0` if none match. This field is used for historical reasons. New DOM exceptions don't use this anymore: they put this info in the {{domxref("DOMException.name")}} attribute.
-- {{domxref("DOMException.message")}} {{readOnlyInline}}
-  - : Returns a {{ domxref("DOMString") }} representing a message or description associated with the given [error name](#error_names).
-- {{domxref("DOMException.name")}} {{readOnlyInline}}
-  - : Returns a {{domxref("DOMString")}} that contains one of the strings associated with an [error name](#error_names).
+- {{domxref("DOMException.code")}} {{deprecated_inline}} {{ReadOnlyInline}}
+  - : Returns one of the legacy error code constants, or `0` if none match.
+- {{domxref("DOMException.message")}} {{ReadOnlyInline}}
+  - : Returns a string representing a message or description associated with the given [error name](#error_names).
+- {{domxref("DOMException.name")}} {{ReadOnlyInline}}
+  - : Returns a string that contains one of the strings associated with an [error name](#error_names).
 
 ## Error names
 

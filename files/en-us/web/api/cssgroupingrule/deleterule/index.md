@@ -1,14 +1,10 @@
 ---
 title: CSSGroupingRule.deleteRule()
 slug: Web/API/CSSGroupingRule/deleteRule
-tags:
-  - API
-  - CSSOM
-  - CSSGroupingRule
-  - Method
-  - Reference
+page-type: web-api-instance-method
 browser-compat: api.CSSGroupingRule.deleteRule
 ---
+
 {{ APIRef("CSSOM") }}
 
 The **`deleteRule()`** method of the
@@ -17,18 +13,18 @@ rules.
 
 ## Syntax
 
-```js
-cssGroupingRule.deleteRule(index);
+```js-nolint
+deleteRule(index)
 ```
 
 ### Parameters
 
-- index
+- `index`
   - : The index of the rule to delete.
 
 ### Return value
 
-undefined
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 

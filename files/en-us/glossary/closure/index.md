@@ -1,13 +1,12 @@
 ---
 title: Closure
 slug: Glossary/Closure
-tags:
-  - CodingScripting
-  - Glossary
+page-type: glossary-definition
 ---
+
 The binding which defines the **{{glossary("scope")}}** of execution. In {{glossary("JavaScript")}}, **{{glossary("function","functions")}}** create a closure context.
 
 ## See also
 
-- {{Interwiki("wikipedia", "Closure_%28computer_programming%29", "Closure")}} on Wikipedia
+- [Closure](https://en.wikipedia.org/wiki/Closure_%28computer_programming%29) on Wikipedia
 - [Closure](/en-US/docs/Web/JavaScript/Closures) on MDN

@@ -1,18 +1,13 @@
 ---
 title: XRCylinderLayer.transform
 slug: Web/API/XRCylinderLayer/transform
-tags:
-  - API
-  - Property
-  - Reference
-  - VR
-  - WebXR
-  - WebXR API
-  - WebXR Device API
-  - XR
+page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.XRCylinderLayer.transform
 ---
-{{APIRef("WebXR Device API")}}
+
+{{APIRef("WebXR Device API")}}{{SeeCompatTable}}
 
 The **`transform`** property of the {{domxref("XRCylinderLayer")}} interface represents the offset and orientation relative to the layer's {{domxref("XRCylinderLayer.space", "space")}}.
 

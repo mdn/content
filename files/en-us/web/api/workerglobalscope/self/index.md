@@ -1,30 +1,19 @@
 ---
 title: WorkerGlobalScope.self
 slug: Web/API/WorkerGlobalScope/self
-tags:
-  - API
-  - Property
-  - Reference
-  - Web Workers
-  - WorkerGlobalScope
-  - self
+page-type: web-api-instance-property
 browser-compat: api.WorkerGlobalScope.self
 ---
+
 {{APIRef("Web Workers API")}}
 
-The **`self`** read-only property of the {{domxref("WorkerGlobalScope")}} interface returns a reference to the `WorkerGlobalScope` itself. Most of the time it is a specific scope like {{domxref("DedicatedWorkerGlobalScope")}},  {{domxref("SharedWorkerGlobalScope")}}, or {{domxref("ServiceWorkerGlobalScope")}}.
+The **`self`** read-only property of the {{domxref("WorkerGlobalScope")}} interface returns a reference to the `WorkerGlobalScope` itself. Most of the time it is a specific scope like {{domxref("DedicatedWorkerGlobalScope")}}, {{domxref("SharedWorkerGlobalScope")}}, or {{domxref("ServiceWorkerGlobalScope")}}.
 
-## Syntax
-
-```js
-var selfRef = self;
-```
-
-### Value
+## Value
 
 A global scope object (differs depending on the type of worker you are dealing with, as indicated above).
 
-## Example
+## Examples
 
 If you called
 
@@ -34,7 +23,7 @@ console.log(self);
 
 inside a worker, you will get a worker global scope of the same type as that worker object written to the console — something like the following:
 
-```js
+```
 DedicatedWorkerGlobalScope {
 undefined: undefined, Infinity: Infinity, Math: MathConstructor, NaN: NaN, Intl: Object…}
     Infinity: Infinity
@@ -59,7 +48,7 @@ undefined: undefined, Infinity: Infinity, Math: MathConstructor, NaN: NaN, Intl:
 // etc. etc.
 ```
 
-This provides a full list of the objects available to that worker scope, so it is quite a useful test if you want to see whether something is available to your worker or not. We also maintain a list of [Functions and classes available to Web Workers](/en-US/docs/Web/API/Worker/Functions_and_classes_available_to_workers).
+This provides a full list of the objects available to that worker scope, so it is quite a useful test if you want to see whether something is available to your worker or not. We also maintain a list of [Functions and classes available to Web Workers](/en-US/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers).
 
 ## Specifications
 

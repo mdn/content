@@ -1,14 +1,10 @@
 ---
 title: WebGLRenderingContext.isRenderbuffer()
 slug: Web/API/WebGLRenderingContext/isRenderbuffer
-tags:
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGLRenderingContext
+page-type: web-api-instance-method
 browser-compat: api.WebGLRenderingContext.isRenderbuffer
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGLRenderingContext.isRenderbuffer()`** method of the
@@ -17,13 +13,13 @@ passed {{domxref("WebGLRenderbuffer")}} is valid and `false` otherwise.
 
 ## Syntax
 
-```js
-GLboolean gl.isRenderbuffer(renderbuffer);
+```js-nolint
+isRenderbuffer(renderbuffer)
 ```
 
 ### Parameters
 
-- renderbuffer
+- `renderbuffer`
   - : A {{domxref("WebGLRenderbuffer")}} to check.
 
 ### Return value
@@ -35,9 +31,9 @@ A {{domxref("WebGL_API/Types", "GLboolean")}} indicating whether or not the rend
 ### Checking a renderbuffer
 
 ```js
-var canvas = document.getElementById('canvas');
-var gl = canvas.getContext('webgl');
-var renderbuffer = gl.createRenderbuffer();
+const canvas = document.getElementById('canvas');
+const gl = canvas.getContext('webgl');
+const renderbuffer = gl.createRenderbuffer();
 
 gl.isRenderbuffer(renderbuffer);
 ```

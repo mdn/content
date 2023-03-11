@@ -1,17 +1,10 @@
 ---
 title: DataView.prototype.getBigUint64()
 slug: Web/JavaScript/Reference/Global_Objects/DataView/getBigUint64
-tags:
-  - BigInt
-  - DataView
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - TypedArrays
-  - getBigUint64
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.DataView.getBigUint64
 ---
+
 {{JSRef}}
 
 The **`getBigUint64()`** method gets an unsigned 64-bit integer
@@ -22,7 +15,7 @@ The **`getBigUint64()`** method gets an unsigned 64-bit integer
 
 ## Syntax
 
-```js
+```js-nolint
 getBigUint64(byteOffset)
 getBigUint64(byteOffset, littleEndian)
 ```
@@ -54,8 +47,8 @@ There is no alignment constraint; multi-byte values may be fetched from any offs
 ### Using the `getBigUint64` method
 
 ```js
-var buffer = new ArrayBuffer(8);
-var dataview = new DataView(buffer);
+const buffer = new ArrayBuffer(8);
+const dataview = new DataView(buffer);
 dataview.getBigUint64(0); // 0n
 ```
 

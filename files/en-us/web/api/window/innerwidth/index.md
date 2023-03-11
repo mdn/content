@@ -1,18 +1,10 @@
 ---
 title: Window.innerWidth
 slug: Web/API/Window/innerWidth
-tags:
-  - API
-  - CSSOM View
-  - HTML DOM
-  - Layout
-  - Property
-  - Reference
-  - Window
-  - innerWidth
-  - width
+page-type: web-api-instance-property
 browser-compat: api.Window.innerWidth
 ---
+
 {{APIRef}}
 
 The read-only {{domxref("Window")}} property
@@ -24,13 +16,7 @@ More precisely, `innerWidth` returns the width of the window's
 layout viewport—can be obtained from the {{domxref("Window.innerHeight",
   "innerHeight")}} property.
 
-## Syntax
-
-```js
-let intViewportWidth = window.innerWidth;
-```
-
-### Value
+## Value
 
 An integer value indicating the width of the window's layout viewport in pixels. This
 property is read-only, and has no default value.
@@ -48,20 +34,20 @@ property instead.
 The `innerWidth` property is available on any window or object that behaves
 like a window, such as a frame or tab.
 
-## Example
+## Examples
 
 ```js
-// This will return the width of the viewport
-var intFrameWidth = window.innerWidth;
+// This will log the width of the viewport
+console.log(window.innerWidth);
 
-// This will return the width of the frame viewport within a frameset
-var intFrameWidth = self.innerWidth;
+// This will log the width of the frame viewport within a frameset
+console.log(self.innerWidth);
 
-// This will return the width of the viewport of the closest frameset
-var intFramesetWidth = parent.innerWidth;
+// This will log the width of the viewport of the closest frameset
+console.log(parent.innerWidth);
 
-// This will return the width of the viewport of the outermost frameset
-var intOuterFramesetWidth = top.innerWidth;
+// This will log the width of the viewport of the outermost frameset
+console.log(top.innerWidth);
 ```
 
 ## Demo
@@ -80,12 +66,13 @@ var intOuterFramesetWidth = top.innerWidth;
 const heightOutput = document.querySelector("#height");
 const widthOutput = document.querySelector("#width");
 
-function resizeListener() {
+function updateSize() {
   heightOutput.textContent = window.innerHeight;
   widthOutput.textContent = window.innerWidth;
 }
 
-window.addEventListener("resize", resizeListener);
+updateSize();
+window.addEventListener("resize", updateSize);
 ```
 
 ### Result

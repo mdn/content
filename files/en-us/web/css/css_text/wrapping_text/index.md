@@ -1,14 +1,9 @@
 ---
 title: Wrapping and breaking text
 slug: Web/CSS/CSS_Text/Wrapping_Text
-tags:
-  - CSS
-  - CSS Text
-  - Guide
-  - overflow
-  - overflow-wrap
-  - word-break
+page-type: guide
 ---
+
 {{CSSRef}}
 
 This guide explains the various ways in which overflowing text can be managed in CSS.
@@ -76,5 +71,6 @@ In the below example the text breaks in the location of the {{HTMLElement("wbr")
 - The HTML {{HTMLElement("wbr")}} element
 - The CSS {{cssxref("word-break")}} property
 - The CSS {{cssxref("overflow-wrap")}} property
+- The CSS {{cssxref("white-space")}} property
 - The CSS {{cssxref("hyphens")}} property
 - [Overflow and Data Loss in CSS](https://www.smashingmagazine.com/2019/09/overflow-data-loss-css/)

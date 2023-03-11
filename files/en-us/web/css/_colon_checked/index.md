@@ -1,32 +1,15 @@
 ---
-title: ':checked'
+title: ":checked"
 slug: Web/CSS/:checked
-tags:
-  - ':checked'
-  - CSS
-  - Checked
-  - Layout
-  - Pseudo-class
-  - Reference
-  - Selector
-  - Toggled
-  - Web
-  - button
-  - checkbox
-  - radio
+page-type: css-pseudo-class
 browser-compat: css.selectors.checked
 ---
+
 {{CSSRef}}
 
 The **`:checked`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) selector represents any **radio** ([`<input type="radio">`](/en-US/docs/Web/HTML/Element/input/radio)), **checkbox** ([`<input type="checkbox">`](/en-US/docs/Web/HTML/Element/input/checkbox)), or **option** ({{HTMLElement("option")}} in a {{HTMLElement("select")}}) element that is checked or toggled to an `on` state.
 
-```css
-/* Matches any checked/selected radio, checkbox, or option */
-:checked {
-  margin-left: 25px;
-  border: 1px solid blue;
-}
-```
+{{EmbedInteractiveExample("pages/tabbed/pseudo-class-checked.html", "tabbed-shorter")}}
 
 The user can engage this state by checking/selecting an element, or disengage it by unchecking/deselecting the element.
 
@@ -34,7 +17,11 @@ The user can engage this state by checking/selecting an element, or disengage it
 
 ## Syntax
 
-{{csssyntax}}
+```css
+:checked {
+  /* ... */
+}
+```
 
 ## Examples
 
@@ -44,15 +31,15 @@ The user can engage this state by checking/selecting an element, or disengage it
 
 ```html
 <div>
-  <input type="radio" name="my-input" id="yes">
+  <input type="radio" name="my-input" id="yes" value="yes" />
   <label for="yes">Yes</label>
 
-  <input type="radio" name="my-input" id="no">
+  <input type="radio" name="my-input" id="no" value="no" />
   <label for="no">No</label>
 </div>
 
 <div>
-  <input type="checkbox" name="my-checkbox" id="opt-in">
+  <input type="checkbox" name="my-checkbox" id="opt-in" />
   <label for="opt-in">Check me!</label>
 </div>
 
@@ -108,14 +95,38 @@ This example utilizes the `:checked` pseudo-class to let the user toggle content
 
 <table>
   <thead>
-    <tr><th>Column #1</th><th>Column #2</th><th>Column #3</th></tr>
+    <tr>
+      <th>Column #1</th>
+      <th>Column #2</th>
+      <th>Column #3</th>
+    </tr>
   </thead>
   <tbody>
-    <tr class="expandable"><td>[more text]</td><td>[more text]</td><td>[more text]</td></tr>
-    <tr><td>[cell text]</td><td>[cell text]</td><td>[cell text]</td></tr>
-    <tr><td>[cell text]</td><td>[cell text]</td><td>[cell text]</td></tr>
-    <tr class="expandable"><td>[more text]</td><td>[more text]</td><td>[more text]</td></tr>
-    <tr class="expandable"><td>[more text]</td><td>[more text]</td><td>[more text]</td></tr>
+    <tr class="expandable">
+      <td>[more text]</td>
+      <td>[more text]</td>
+      <td>[more text]</td>
+    </tr>
+    <tr>
+      <td>[cell text]</td>
+      <td>[cell text]</td>
+      <td>[cell text]</td>
+    </tr>
+    <tr>
+      <td>[cell text]</td>
+      <td>[cell text]</td>
+      <td>[cell text]</td>
+    </tr>
+    <tr class="expandable">
+      <td>[more text]</td>
+      <td>[more text]</td>
+      <td>[more text]</td>
+    </tr>
+    <tr class="expandable">
+      <td>[more text]</td>
+      <td>[more text]</td>
+      <td>[more text]</td>
+    </tr>
   </tbody>
 </table>
 
@@ -160,12 +171,6 @@ This example utilizes the `:checked` pseudo-class to let the user toggle content
 #### Result
 
 {{EmbedLiveSample("Toggling_elements_with_a_hidden_checkbox", "auto", 220)}}
-
-### Image gallery
-
-You can use the `:checked` pseudo-class to build an image gallery with full-size images that show only when the user clicks on a thumbnail. See [this demo](/@api/deki/files/6268/=css-checked-gallery.zip "css-checked-gallery.zip") for a possible cue.
-
-> **Note:** For an analogous effect, but based on the [`:hover`](/en-US/docs/Web/CSS/:hover) pseudo-class and without hidden radioboxes, see [this demo](/@api/deki/files/6247/=css-gallery.zip "css-gallery.zip"), taken from the [:hover](/en-US/docs/Web/CSS/:hover) reference page.
 
 ## Specifications
 

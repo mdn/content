@@ -1,25 +1,10 @@
 ---
 title: RTCIceTransport.getLocalParameters()
 slug: Web/API/RTCIceTransport/getLocalParameters
-tags:
-  - API
-  - Connectivity
-  - ICE
-  - Method
-  - Negotiation
-  - RTCIceTransport
-  - Reference
-  - Transport
-  - WebRTC
-  - WebRTC API
-  - getLocalParameters
-  - parameters
-  - password
-  - ufrag
-  - username
-  - usernameFragment
+page-type: web-api-instance-method
 browser-compat: api.RTCIceTransport.getLocalParameters
 ---
+
 {{APIRef("WebRTC")}}
 
 The **{{domxref("RTCIceTransport")}}** method
@@ -32,8 +17,8 @@ transport when the client calls {{domxref("RTCPeerConnection.setLocalDescription
 
 ## Syntax
 
-```js
-parameters = RTCIceTransport.getLocalParameters();
+```js-nolint
+getLocalParameters()
 ```
 
 ### Parameters

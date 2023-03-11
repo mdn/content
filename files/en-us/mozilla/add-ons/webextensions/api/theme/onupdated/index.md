@@ -1,27 +1,23 @@
 ---
 title: theme.onUpdated
 slug: Mozilla/Add-ons/WebExtensions/API/theme/onUpdated
-tags:
-  - Add-ons
-  - Event
-  - Extensions
-  - Theme
-  - WebExtensions
+page-type: webextension-api-event
 browser-compat: webextensions.api.theme.onUpdated
 ---
+
 {{AddonSidebar()}}
 
 Fires when a theme supplied as a browser extension is applied or removed. Specifically:
 
 - when a [static theme](https://extensionworkshop.com/documentation/themes/static-themes/) is installed
-- when a [dynamic theme](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/theme) calls [`theme.update()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/theme/update) or [`theme.reset()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/theme/update)
+- when a [dynamic theme](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/theme) calls [`theme.update()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/theme/update) or [`theme.reset()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/theme/reset)
 - when a theme gets uninstalled.
 
 Note that this event is not fired for changes to the built-in themes.
 
 ## Syntax
 
-```js
+```js-nolint
 browser.theme.onUpdated.addListener(listener)
 browser.theme.onUpdated.removeListener(listener)
 browser.theme.onUpdated.hasListener(listener)
@@ -50,7 +46,7 @@ Events have three functions:
 
         - `theme`
           - : `object`. If the event fired because an extension-supplied theme was removed, this will be an empty object. If it fired because an extension-supplied theme was applied, then it will be a {{WebExtAPIRef("theme.Theme")}} object representing the theme that was applied.
-        - `windowId`{{optional_inline}}
+        - `windowId` {{optional_inline}}
           - : `integer`. The ID of the window for which theme has been updated. If this property is not present, it means that the theme was updated globally.
 
 ## Browser compatibility

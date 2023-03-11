@@ -1,17 +1,12 @@
 ---
 title: Sec-CH-UA-Model
 slug: Web/HTTP/Headers/Sec-CH-UA-Model
-tags:
-  - Sec-CH-UA-Model
-  - Client hint
-  - HTTP
-  - HTTP Header
-  - Reference
-  - Request header
-  -  Experimental
+status:
+  - experimental
 browser-compat: http.headers.Sec-CH-UA-Model
 ---
-{{HTTPSidebar}} {{SeeCompatTable}} {{securecontext_header}}
+
+{{HTTPSidebar}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The **`Sec-CH-UA-Model`** [user agent client hint](/en-US/docs/Web/HTTP/Client_hints#user-agent_client_hints) request header indicates the device model on which the browser is running.
 

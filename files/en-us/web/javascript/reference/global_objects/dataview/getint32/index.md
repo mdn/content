@@ -1,14 +1,10 @@
 ---
 title: DataView.prototype.getInt32()
 slug: Web/JavaScript/Reference/Global_Objects/DataView/getInt32
-tags:
-  - DataView
-  - JavaScript
-  - Method
-  - Prototype
-  - TypedArrays
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.DataView.getInt32
 ---
+
 {{JSRef}}
 
 The **`getInt32()`** method gets a signed 32-bit integer (long)
@@ -18,7 +14,7 @@ at the specified byte offset from the start of the {{jsxref("DataView")}}.
 
 ## Syntax
 
-```js
+```js-nolint
 getInt32(byteOffset)
 getInt32(byteOffset, littleEndian)
 ```
@@ -51,8 +47,8 @@ There is no alignment constraint; multi-byte values may be fetched from any offs
 ### Using the getInt32 method
 
 ```js
-var buffer = new ArrayBuffer(8);
-var dataview = new DataView(buffer);
+const buffer = new ArrayBuffer(8);
+const dataview = new DataView(buffer);
 dataview.getInt32(1); // 0
 ```
 

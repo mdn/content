@@ -1,17 +1,10 @@
 ---
 title: DataView.prototype.setBigInt64()
 slug: Web/JavaScript/Reference/Global_Objects/DataView/setBigInt64
-tags:
-  - BigInt
-  - DataView
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - TypedArrays
-  - setBigInt64
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.DataView.setBigInt64
 ---
+
 {{JSRef}}
 
 The **`setBigInt64()`** method stores a signed 64-bit integer
@@ -22,7 +15,7 @@ The **`setBigInt64()`** method stores a signed 64-bit integer
 
 ## Syntax
 
-```js
+```js-nolint
 setBigInt64(byteOffset, value)
 setBigInt64(byteOffset, value, littleEndian)
 ```
@@ -55,8 +48,8 @@ setBigInt64(byteOffset, value, littleEndian)
 ### Using the `setBigInt64` method
 
 ```js
-var buffer = new ArrayBuffer(8);
-var dataview = new DataView(buffer);
+const buffer = new ArrayBuffer(8);
+const dataview = new DataView(buffer);
 dataview.setBigInt64(0, 3n);
 dataview.getBigInt64(0); // 3n
 ```

@@ -1,11 +1,10 @@
 ---
 title: DOMTokenList.value
 slug: Web/API/DOMTokenList/value
-tags:
-  - Property
-  - Reference
+page-type: web-api-instance-property
 browser-compat: api.DOMTokenList.value
 ---
+
 {{APIRef("DOM")}}
 
 The **`value`** property of the {{domxref("DOMTokenList")}}

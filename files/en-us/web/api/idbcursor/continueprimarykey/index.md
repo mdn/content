@@ -1,16 +1,10 @@
 ---
 title: IDBCursor.continuePrimaryKey()
 slug: Web/API/IDBCursor/continuePrimaryKey
-tags:
-  - API
-  - IDBCursor
-  - IndexedDB
-  - Method
-  - Reference
-  - Storage
-  - Web
+page-type: web-api-instance-method
 browser-compat: api.IDBCursor.continuePrimaryKey
 ---
+
 {{APIRef("IndexedDB")}}
 
 The **`continuePrimaryKey()`** method of the
@@ -33,8 +27,8 @@ from an object store will throw an error.
 
 ## Syntax
 
-```js
-cursor.continuePrimaryKey(key, primaryKey);
+```js-nolint
+continuePrimaryKey(key, primaryKey)
 ```
 
 ### Parameters
@@ -43,6 +37,10 @@ cursor.continuePrimaryKey(key, primaryKey);
   - : The key to position the cursor at.
 - `primaryKey`
   - : The primary key to position the cursor at.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 
@@ -58,9 +56,9 @@ This method may raise a {{domxref("DOMException")}} of one of the following type
 - `InvalidStateError` {{domxref("DOMException")}}
   - : Thrown if the cursor is currently being iterated or has iterated past its end.
 - `InvalidAccessError` {{domxref("DOMException")}}
-  - : Thrown if the The cursor's direction is not `prev` or `next`.
+  - : Thrown if the cursor's direction is not `prev` or `next`.
 
-## Example
+## Examples
 
 here's how you can resume an iteration of all articles tagged with
 `"javascript"` since your last visit:
@@ -70,20 +68,22 @@ let request = articleStore.index("tag").openCursor();
 let count = 0;
 let unreadList = [];
 request.onsuccess = (event) => {
-    let cursor = event.target.result;
-    if (!cursor) { return; }
-    let lastPrimaryKey = getLastIteratedArticleId();
-    if (lastPrimaryKey > cursor.primaryKey) {
-      cursor.continuePrimaryKey("javascript", lastPrimaryKey);
-      return;
-    }
-    // update lastIteratedArticleId
-    setLastIteratedArticleId(cursor.primaryKey);
-    // preload 5 articles into the unread list;
-    unreadList.push(cursor.value);
-    if (++count < 5) {
-      cursor.continue();
-    }
+  let cursor = event.target.result;
+  if (!cursor) {
+    return;
+  }
+  let lastPrimaryKey = getLastIteratedArticleId();
+  if (lastPrimaryKey > cursor.primaryKey) {
+    cursor.continuePrimaryKey("javascript", lastPrimaryKey);
+    return;
+  }
+  // update lastIteratedArticleId
+  setLastIteratedArticleId(cursor.primaryKey);
+  // preload 5 articles into the unread list;
+  unreadList.push(cursor.value);
+  if (++count < 5) {
+    cursor.continue();
+  }
 };
 ```
 
@@ -103,5 +103,4 @@ request.onsuccess = (event) => {
 - Setting a range of keys: {{domxref("IDBKeyRange")}}
 - Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}
 - Using cursors: {{domxref("IDBCursor")}}
-- Reference example: [To-do
-  Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](https://mdn.github.io/to-do-notifications/).)
+- Reference example: [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([View the example live](https://mdn.github.io/dom-examples/to-do-notifications/)).

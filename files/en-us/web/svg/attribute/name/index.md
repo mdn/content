@@ -1,11 +1,14 @@
 ---
 title: name
 slug: Web/SVG/Attribute/name
-tags:
-  - Deprecated
-  - SVG
-  - SVG Attribute
+page-type: svg-attribute
+status:
+  - deprecated
+spec-urls:
+  - https://www.w3.org/TR/SVG11/fonts.html#FontFaceNameElementNameAttribute
+  - https://www.w3.org/TR/SVG11/color.html#ColorProfileElementNameAttribute
 ---
+
 {{SVGRef}}{{Deprecated_Header}}
 
 The **`name`** attribute specifies either the name of a color profile or a font face.
@@ -40,28 +43,4 @@ For {{SVGElement("font-face-name")}}, `name` defines the name of the font face.
 
 ## Specifications
 
-<table class="no-markdown">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        {{SpecName("SVG1.1", "fonts.html#FontFaceNameElementNameAttribute", "name for &lt;font-face-name&gt;")}}
-      </td>
-      <td>{{Spec2("SVG1.1")}}</td>
-      <td>Initial definition for <code>&#x3C;font-face-name></code></td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("SVG1.1", "color.html#ColorProfileElementNameAttribute", "name for &lt;color-profile&gt;")}}
-      </td>
-      <td>{{Spec2("SVG1.1")}}</td>
-      <td>Initial definition for <code>&#x3C;color-profile></code></td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}

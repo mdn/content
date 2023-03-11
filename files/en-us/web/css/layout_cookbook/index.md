@@ -1,13 +1,9 @@
 ---
 title: CSS Layout cookbook
 slug: Web/CSS/Layout_cookbook
-tags:
-  - CSS
-  - Guide
-  - Layout
-  - cookbook
-  - recipes
+page-type: landing-page
 ---
+
 {{CSSRef}}
 
 The CSS layout cookbook aims to bring together recipes for common layout patterns, things you might need to implement in your own sites. In addition to providing code you can use as a starting point in your projects, these recipes highlight the different ways layout specifications can be used, and the choices you can make as a developer.
@@ -18,11 +14,11 @@ The CSS layout cookbook aims to bring together recipes for common layout pattern
 
 | Recipe                                                                               | Description                                                                                                  | Layout Methods                                                                                                                                       |
 | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [Media objects](/en-US/docs/Web/CSS/Layout_cookbook/Media_objects)                   | A two-column box with an image on one side and descriptive text on the other, e.g. a facebook post or tweet. | [CSS Grid](/en-US/docs/Web/CSS/CSS_Grid_Layout), {{cssxref("float")}} fallback, {{cssxref("fit-content")}} sizing                  |
+| [Media objects](/en-US/docs/Web/CSS/Layout_cookbook/Media_objects)                   | A two-column box with an image on one side and descriptive text on the other, e.g. a facebook post or tweet. | [CSS Grid](/en-US/docs/Web/CSS/CSS_Grid_Layout), {{cssxref("float")}} fallback, {{cssxref("fit-content")}} sizing                                    |
 | [Columns](/en-US/docs/Web/CSS/Layout_cookbook/Column_layouts)                        | When to choose multi-column layout, flexbox or grid for your columns.                                        | [CSS Grid](/en-US/docs/Web/CSS/CSS_Grid_Layout), [Multicol](/en-US/docs/Web/CSS/CSS_Columns), [Flexbox](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout) |
 | [Center an element](/en-US/docs/Web/CSS/Layout_cookbook/Center_an_element)           | How to center an item horizontally and vertically.                                                           | [Flexbox](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout), [Box Alignment](/en-US/docs/Web/CSS/CSS_Box_Alignment)                                       |
 | [Sticky footers](/en-US/docs/Web/CSS/Layout_cookbook/Sticky_footers)                 | Creating a footer which sits at the bottom of the container or viewport when the content is shorter.         | [CSS Grid](/en-US/docs/Web/CSS/CSS_Grid_Layout), [Flexbox](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout)                                              |
-| [Split navigation](/en-US/docs/Web/CSS/Layout_cookbook/Split_Navigation)             | A navigation pattern where some links are visually separated from the others.                                | [Flexbox](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout), {{cssxref("margin")}}                                                                 |
+| [Split navigation](/en-US/docs/Web/CSS/Layout_cookbook/Split_Navigation)             | A navigation pattern where some links are visually separated from the others.                                | [Flexbox](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout), {{cssxref("margin")}}                                                                        |
 | [Breadcrumb navigation](/en-US/docs/Web/CSS/Layout_cookbook/Breadcrumb_Navigation)   | Creating a list of links to allow the visitor to navigate back up through the page hierarchy.                | [Flexbox](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout)                                                                                               |
 | [List group with badges](/en-US/docs/Web/CSS/Layout_cookbook/List_group_with_badges) | A list of items with a badge to display a count.                                                             | [Flexbox](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout), [Box Alignment](/en-US/docs/Web/CSS/CSS_Box_Alignment)                                       |
 | [Pagination](/en-US/docs/Web/CSS/Layout_cookbook/Pagination)                         | Links to pages of content (such as search results).                                                          | [Flexbox](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout), [Box Alignment](/en-US/docs/Web/CSS/CSS_Box_Alignment)                                       |
@@ -31,4 +27,4 @@ The CSS layout cookbook aims to bring together recipes for common layout pattern
 
 ## Contribute a Recipe
 
-As with all of MDN we would love you to contribute a recipe in the same format as the ones shown above. [See this page](/en-US/docs/Web/CSS/Layout_cookbook/Contribute_a_recipe) for a template and guidelines for writing your own example.
+As with all of MDN we would love you to contribute a recipe in the same format as the ones shown above. See the [guide for adding Layout Cookbook recipes](/en-US/docs/Web/CSS/Layout_cookbook/Contribute_a_recipe) for a template and guidelines for writing your own example.

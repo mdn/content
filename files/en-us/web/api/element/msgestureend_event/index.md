@@ -1,12 +1,11 @@
 ---
-title: 'Element: MSGestureEnd event'
+title: "Element: MSGestureEnd event"
 slug: Web/API/Element/MSGestureEnd_event
-tags:
-  - Event
-  - Non-standard
-  - Reference
-browser-compat: api.Element.MSGestureEnd_event
+page-type: web-api-event
+status:
+  - non-standard
 ---
+
 {{APIRef}}{{Non-standard_header}}
 
 The **`MSGestureEnd`** event is fired when all associated touch points have stopped contacting the touch surface, and any associated inertial movements have ended; thus ending the gesture.
@@ -40,7 +39,7 @@ Not part of any specification.
 
 ## Browser compatibility
 
-{{Compat}}
+This was an IE-only feature. No modern browser supports it.
 
 ## See also
 

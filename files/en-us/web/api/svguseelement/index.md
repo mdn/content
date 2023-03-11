@@ -1,14 +1,10 @@
 ---
 title: SVGUseElement
 slug: Web/API/SVGUseElement
-tags:
-  - API
-  - NeedsExample
-  - Reference
-  - SVG
-  - SVG DOM
+page-type: web-api-interface
 browser-compat: api.SVGUseElement
 ---
+
 {{APIRef("SVG")}}
 
 ## SVG use DOM interface
@@ -17,7 +13,7 @@ The **`SVGUseElement`** interface corresponds to the {{SVGElement("use")}} eleme
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _This interface also inherits properties from its parent interface, {{domxref("SVGGraphicsElement")}}._
 
@@ -32,7 +28,7 @@ _This interface also inherits properties from its parent interface, {{domxref("S
 - {{domxref("SVGUseElement.height")}} {{ReadOnlyInline}}
   - : An {{domxref("SVGAnimatedLength")}} corresponding to the {{SVGAttr("height")}} attribute of the given element.
 
-## Methods
+## Instance methods
 
 _This interface doesn't implement any specific methods, but inherits methods from its parent interface, {{domxref("SVGGraphicsElement")}}._
 

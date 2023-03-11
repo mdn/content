@@ -1,22 +1,14 @@
 ---
 title: '<content>: The Shadow DOM Content Placeholder element'
 slug: Web/HTML/Element/content
-tags:
-  - Content
-  - DOM
-  - Deprecated
-  - Element
-  - HTML
-  - HTML Web Components
-  - Placeholder
-  - Reference
-  - Web
-  - Web Components
-  - shadow dom
+page-type: html-element
+status:
+  - deprecated
+  - non-standard
 browser-compat: html.elements.content
 ---
 
-{{Deprecated_header}}
+{{HTMLSidebar}}{{Deprecated_Header}}{{Non-standard_header}}
 
 The **`<content>`** [HTML](/en-US/docs/Web/HTML) element—an obsolete part of the [Web Components](/en-US/docs/Web/Web_Components) suite of technologies—was used inside of [Shadow DOM](/en-US/docs/Web/Web_Components/Using_shadow_DOM) as an {{glossary("insertion point")}}, and wasn't meant to be used in ordinary HTML. It has now been replaced by the {{HTMLElement("slot")}} element, which creates a point in the DOM at which a shadow DOM can be inserted.
 
@@ -26,13 +18,13 @@ The **`<content>`** [HTML](/en-US/docs/Web/HTML) element—an obsolete part of t
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories"
+        <a href="/en-US/docs/Web/HTML/Content_categories"
           >Content categories</a
         >
       </th>
       <td>
         <a
-          href="/en-US/docs/Web/Guide/HTML/Content_categories#transparent_content_model"
+          href="/en-US/docs/Web/HTML/Content_categories#transparent_content_model"
           >Transparent content</a
         >.
       </td>
@@ -40,7 +32,7 @@ The **`<content>`** [HTML](/en-US/docs/Web/HTML) element—an obsolete part of t
     <tr>
       <th scope="row">Permitted content</th>
       <td>
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
           >Flow content</a
         >.
       </td>
@@ -74,26 +66,27 @@ Here is a simple example of using the `<content>` element. It is an HTML file wi
 > **Note:** For this code to work, the browser you display it in must support Web Components. See [Enabling Web Components in Firefox](/en-US/docs/Web/Web_Components#enabling_web_components_in_firefox).
 
 ```html
-<html>
+<html lang="en">
   <head></head>
   <body>
-  <!-- The original content accessed by <content> -->
-  <div>
-    <h4>My Content Heading</h4>
-    <p>My content text</p>
-  </div>
+    <!-- The original content accessed by <content> -->
+    <div>
+      <h4>My Content Heading</h4>
+      <p>My content text</p>
+    </div>
 
-  <script>
-  // Get the <div> above.
-  var myContent = document.querySelector('div');
-  // Create a shadow DOM on the <div>
-  var shadowroot = myContent.createShadowRoot();
-  // Insert into the shadow DOM a new heading and
-  // part of the original content: the <p> tag.
-  shadowroot.innerHTML =
-   '<h2>Inserted Heading</h2> <content select="p"></content>';
-  </script>
+    <script>
+      // Get the <div> above.
+      const myContent = document.querySelector("div");
 
+      // Create a shadow DOM on the <div>
+      const shadowroot = myContent.createShadowRoot();
+
+      // Insert into the shadow DOM a new heading and
+      // part of the original content: the <p> tag.
+      shadowroot.innerHTML =
+        '<h2>Inserted Heading</h2> <content select="p"></content>';
+    </script>
   </body>
 </html>
 ```
@@ -114,5 +107,3 @@ This element is no longer defined by any specifications.
 
 - [Web Components](/en-US/docs/Web/Web_Components)
 - {{HTMLElement("shadow")}}, {{HTMLElement("slot")}}, {{HTMLElement("template")}}, {{HTMLElement("element")}}
-
-{{HTMLRef}}

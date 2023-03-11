@@ -1,15 +1,8 @@
 ---
 title: Web performance
 slug: Learn/Performance
-tags:
-  - CSS
-  - HTML
-  - HTTP
-  - JavaScript
-  - Learn
-  - Performance
-  - Web Performance
 ---
+
 {{LearnSidebar}}
 
 Building websites requires HTML, CSS, and JavaScript. To build websites and applications people want to use, which attract and retain users, you need to create a good user experience. Part of good user experience is ensuring the content is quick to load and responsive to user interaction. This is known as **web performance**, and in this module you'll focus on the fundamentals of how to create performant websites.
@@ -35,7 +28,7 @@ This topic contains the following guides. The following is a suggested order for
 - [The "why" of web performance](/en-US/docs/Learn/Performance/why_web_performance)
   - : This article discusses why web performance is important for accessibility, user experience and your business goals.
 - [What is web performance?](/en-US/docs/Learn/Performance/What_is_web_performance)
-  - : You know web performance is important, but what is constitutes web performance? This article introduces the components of performance, from web page loading and rendering, including how your content makes it into your users browser to be viewed, to what groups of people we need to consider when thinking about performance.
+  - : You know web performance is important, but what constitutes web performance? This article introduces the components of performance, from web page loading and rendering, including how your content makes it into your users' browser to be viewed, to what groups of people we need to consider when thinking about performance.
 - [How do users perceive performance?](/en-US/docs/Learn/Performance/Perceived_performance)
   - : More important than how fast your website is in milliseconds, is how fast your users perceive your site to be. These perceptions are impacted by actual page load time, idling, responsiveness to user interaction, and the smoothness of scrolling and other animations. In this article, we discuss the various loading metrics, animation, and responsiveness metrics, along with best practices to improve user perception, if not the actual timings.
 - [Measuring performance](/en-US/docs/Learn/Performance/Measuring_performance)
@@ -47,15 +40,15 @@ This topic contains the following guides. The following is a suggested order for
 - [JavaScript performance best practices](/en-US/docs/Learn/Performance/JavaScript)
   - : JavaScript, when used properly, can allow for interactive and immersive web experiences — or it can significantly harm download time, render time, in-app performance, battery life, and user experience. This article outlines some JavaScript best practices that should be considered to ensure even complex content is as performant as possible.
 - [HTML performance features](/en-US/docs/Learn/Performance/HTML)
-  - : Some attributes and the source order of your mark-up can impact the performance or your website. By minimizing the number of DOM nodes, making sure the best order and attributes are used for including content such as styles, scripts, media, and third-party scripts, you can drastically improve the user experience. This article looks in detail at how HTML can be used to ensure maximum performance.
+  - : Some attributes and the source order of your markup can impact the performance or your website. By minimizing the number of DOM nodes, making sure the best order and attributes are used for including content such as styles, scripts, media, and third-party scripts, you can drastically improve the user experience. This article looks in detail at how HTML can be used to ensure maximum performance.
 - [CSS performance features](/en-US/docs/Learn/Performance/CSS)
   - : CSS may be a less important optimization focus for improved performance, but there are some CSS features that impact performance more than others. In this article we look at some CSS properties that impact performance and suggested ways of handling styles to ensure performance is not negatively impacted.
 - [Fonts and performance](/en-US/docs/Learn/Performance/Fonts)
   - : A look at whether you need to include external fonts and, if you do, how to include the fonts your design requires with the least impact on your sites performance.
 - [Mobile performance](/en-US/docs/Learn/Performance/Mobile)
   - : With web access on mobile devices being so popular, and all mobile platforms having fully-fledged web browsers, but possibly limited bandwidth, CPU and battery life, it is important to consider the performance of your web content on these platforms. This article looks at mobile-specific performance considerations.
-- [Focusing on performance](/en-US/docs/Learn/Performance/business_case_for_performance)
-  - : There are many different things a developer can do to improve performance, but how fast is fast enough? How can you convince powers that be of the importance of these efforts? Once optimized, how can you ensure bloat doesn't come back? In this article we look at convincing managements, developing a performance culture and performance budget, and introduce ways to ensure regressions don't sneak into your code base.
+- [The business case for web performance](/en-US/docs/Learn/Performance/business_case_for_performance)
+  - : There are many things a developer can do to improve performance, but how fast is fast enough? How can you convince powers that be of the importance of these efforts? Once optimized, how can you ensure bloat doesn't come back? In this article we look at convincing management, developing a performance culture and performance budget, and introduce ways to ensure regressions don't sneak into your code base.
 
 ## See also
 

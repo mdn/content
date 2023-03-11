@@ -1,11 +1,10 @@
 ---
 title: overflow
 slug: Web/SVG/Attribute/overflow
-tags:
-  - SVG
-  - SVG Attribute
+page-type: svg-attribute
 browser-compat: svg.attributes.presentation.overflow
 ---
+
 {{SVGRef}}
 
 The **`overflow`** attribute sets what to do when an element's content is too big to fit in its block formatting context. **This feature is not widely implemented yet**.
@@ -35,14 +34,18 @@ You can use this attribute with the following SVG elements:
 ## Example
 
 ```css hidden
-html, body, svg {
+html,
+body,
+svg {
   height: 100%;
 }
 ```
 
 ```html
 <svg viewBox="0 0 200 30" xmlns="http://www.w3.org/2000/svg" overflow="auto">
-  <text y="20">This text is wider than the SVG, so there should be a scrollbar shown.</text>
+  <text y="20">
+    This text is wider than the SVG, so there should be a scrollbar shown.
+  </text>
 </svg>
 ```
 
@@ -74,41 +77,7 @@ For a description of the values, please see the {{cssxref("overflow", "CSS overf
 
 ## Specifications
 
-<table class="no-markdown">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        {{SpecName("CSS2.1", "visufx.html#overflow", "overflow")}}
-      </td>
-      <td>{{Spec2("CSS2.1")}}</td>
-      <td>Definition in CSS</td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("SVG2", "render.html#OverflowAndClipProperties", "overflow")}}
-      </td>
-      <td>{{Spec2("SVG2")}}</td>
-      <td>
-        Simplifies the definition and outlines the values within the user agent
-        stylesheet.
-      </td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("SVG1.1", "masking.html#OverflowProperty", "overflow")}}
-      </td>
-      <td>{{Spec2("SVG1.1")}}</td>
-      <td>Initial definition</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 ## Browser compatibility
 

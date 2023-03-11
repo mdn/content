@@ -1,12 +1,9 @@
 ---
 title: 500 Internal Server Error
 slug: Web/HTTP/Status/500
-tags:
-  - HTTP
-  - Server error
-  - Status code
 browser-compat: http.status.500
 ---
+
 {{HTTPSidebar}}
 
 The HyperText Transfer Protocol (HTTP) **`500 Internal Server Error`** server error response code indicates that the server encountered an unexpected condition that prevented it from fulfilling the request.
@@ -15,7 +12,7 @@ This error response is a generic "catch-all" response. Usually, this indicates t
 
 ## Status
 
-```
+```http
 500 Internal Server Error
 ```
 
@@ -29,4 +26,4 @@ This error response is a generic "catch-all" response. Usually, this indicates t
 
 ## See also
 
-- [HTTP/1.1: Status Code Definitions](https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html)
+- [HTTP Status Code Definitions](https://httpwg.org/specs/rfc9110.html#status.500)

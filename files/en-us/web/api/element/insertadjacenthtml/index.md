@@ -1,15 +1,10 @@
 ---
 title: Element.insertAdjacentHTML()
 slug: Web/API/Element/insertAdjacentHTML
-tags:
-  - API
-  - DOM
-  - Element
-  - Method
-  - Reference
-  - insertAdjacentHTML
+page-type: web-api-instance-method
 browser-compat: api.Element.insertAdjacentHTML
 ---
+
 {{APIRef("DOM")}}
 
 The **`insertAdjacentHTML()`** method of the
@@ -18,8 +13,8 @@ the resulting nodes into the DOM tree at a specified position.
 
 ## Syntax
 
-```js
-element.insertAdjacentHTML(position, text);
+```js-nolint
+insertAdjacentHTML(position, text)
 ```
 
 ### Parameters
@@ -32,7 +27,7 @@ element.insertAdjacentHTML(position, text);
       - : Before the element. Only valid if the element is in the DOM tree and has a parent element.
     - `"afterbegin"`
       - : Just inside the element, before its first child.
-    - `"beforeend"`:
+    - `"beforeend"`
       - : Just inside the element, after its last child.
     - `"afterend"`
       - : After the element. Only valid if the element is in the DOM tree and has a parent element.
@@ -42,7 +37,7 @@ element.insertAdjacentHTML(position, text);
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 
@@ -96,8 +91,9 @@ content as HTML, but instead inserts it as raw text.
 <button id="insert">Insert HTML</button>
 <button id="reset">Reset</button>
 
-<p>Some text, with a <code id="subject">code-formatted element</code> inside it.</p>
-
+<p>
+  Some text, with a <code id="subject">code-formatted element</code> inside it.
+</p>
 ```
 
 #### CSS
@@ -111,22 +107,25 @@ code {
 #### JavaScript
 
 ```js
-const insert = document.querySelector('#insert');
-insert.addEventListener('click', () => {
-  const subject = document.querySelector('#subject');
-  const positionSelect = document.querySelector('#position');
-  subject.insertAdjacentHTML(positionSelect.value, '<strong>inserted text</strong>');
+const insert = document.querySelector("#insert");
+insert.addEventListener("click", () => {
+  const subject = document.querySelector("#subject");
+  const positionSelect = document.querySelector("#position");
+  subject.insertAdjacentHTML(
+    positionSelect.value,
+    "<strong>inserted text</strong>"
+  );
 });
 
-const reset = document.querySelector('#reset');
-reset.addEventListener('click', () => {
+const reset = document.querySelector("#reset");
+reset.addEventListener("click", () => {
   document.location.reload();
 });
 ```
 
 #### Result
 
-{{EmbedLiveSample("Example", 100, 100)}}
+{{EmbedLiveSample("Examples", 100, 100)}}
 
 ## Specifications
 
@@ -141,6 +140,5 @@ reset.addEventListener('click', () => {
 - {{domxref("Element.insertAdjacentElement()")}}
 - {{domxref("Element.insertAdjacentText()")}}
 - {{domxref("XMLSerializer")}}: Serialize a DOM tree into an XML string
-- [hacks.mozilla.org
-  guest post](https://hacks.mozilla.org/2011/11/insertadjacenthtml-enables-faster-html-snippet-injection/) by Henri Sivonen including benchmark showing
+- [hacks.mozilla.org guest post](https://hacks.mozilla.org/2011/11/insertadjacenthtml-enables-faster-html-snippet-injection/) by Henri Sivonen including benchmark showing
   that insertAdjacentHTML can be way faster in some cases.

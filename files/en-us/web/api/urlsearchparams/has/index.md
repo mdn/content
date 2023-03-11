@@ -1,14 +1,10 @@
 ---
 title: URLSearchParams.has()
 slug: Web/API/URLSearchParams/has
-tags:
-  - API
-  - Method
-  - URL API
-  - URLSearchParams
-  - has
+page-type: web-api-instance-method
 browser-compat: api.URLSearchParams.has
 ---
+
 {{ApiRef("URL API")}}
 
 The **`has()`** method of the {{domxref("URLSearchParams")}}
@@ -19,13 +15,13 @@ specified name exists.
 
 ## Syntax
 
-```js
-var hasName = URLSearchParams.has(name)
+```js-nolint
+has(name)
 ```
 
 ### Parameters
 
-- name
+- `name`
   - : The name of the parameter to find.
 
 ### Return value
@@ -35,10 +31,10 @@ A boolean value.
 ## Examples
 
 ```js
-let url = new URL('https://example.com?foo=1&bar=2');
+let url = new URL("https://example.com?foo=1&bar=2");
 let params = new URLSearchParams(url.search);
 
-params.has('bar') === true; //true
+console.log(params.has("bar")); //true
 ```
 
 ## Specifications

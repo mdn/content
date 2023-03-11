@@ -1,24 +1,13 @@
 ---
 title: "Reason: expected 'true' in CORS header 'Access-Control-Allow-Credentials'"
 slug: Web/HTTP/CORS/Errors/CORSMIssingAllowCredentials
-tags:
-  - CORS
-  - CORSMissingAllowCredentials
-  - Cross-Origin
-  - Error
-  - HTTP
-  - HTTPS
-  - Messages
-  - Reasons
-  - Security
-  - console
-  - troubleshooting
 ---
+
 {{HTTPSidebar}}
 
 ## Reason
 
-```
+```plain
 Reason: expected 'true' in CORS header 'Access-Control-Allow-Credentials'
 ```
 

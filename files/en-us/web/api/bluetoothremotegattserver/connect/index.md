@@ -1,18 +1,13 @@
 ---
 title: BluetoothRemoteGATTServer.connect()
 slug: Web/API/BluetoothRemoteGATTServer/connect
-tags:
-  - API
-  - Bluetooth
-  - BluetoothRemoteGATTServer
-  - Experimental
-  - Method
-  - Reference
-  - Web Bluetooth API
-  - connect()
+page-type: web-api-instance-method
+status:
+  - experimental
 browser-compat: api.BluetoothRemoteGATTServer.connect
 ---
-{{SeeCompatTable}}
+
+{{APIRef("Bluetooth API")}}{{SeeCompatTable}}
 
 The
 **`BluetoothRemoteGATTServer.connect()`** method causes the
@@ -20,18 +15,17 @@ script execution environment to connect to `this.device`.
 
 ## Syntax
 
-```js
-BluetoothRemoteGATTServer.connect()
-  .then(function(bluetoothRemoteGATTServer) { /* ... */ })
+```js-nolint
+connect()
 ```
-
-### Returns
-
-A {{jsxref("Promise")}} that resolves to a {{domxref("BluetoothRemoteGATTServer")}}.
 
 ### Parameters
 
 None.
+
+### Return value
+
+A {{jsxref("Promise")}} that resolves to a {{domxref("BluetoothRemoteGATTServer")}}.
 
 ## Specifications
 

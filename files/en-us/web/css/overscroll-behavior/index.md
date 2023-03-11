@@ -1,15 +1,10 @@
 ---
 title: overscroll-behavior
 slug: Web/CSS/overscroll-behavior
-tags:
-  - CSS
-  - CSS Box Model
-  - CSS Property
-  - Reference
-  - overscroll-behavior
-  - recipe:css-property
+page-type: css-shorthand-property
 browser-compat: css.properties.overscroll-behavior
 ---
+
 {{CSSRef}}
 
 The **`overscroll-behavior`** CSS property sets what a browser does when reaching the boundary of a scrolling area. It's a shorthand for {{cssxref("overscroll-behavior-x")}} and {{cssxref("overscroll-behavior-y")}}.
@@ -19,6 +14,8 @@ The **`overscroll-behavior`** CSS property sets what a browser does when reachin
 By default, mobile browsers tend to provide a "bounce" effect or even a page refresh when the top or bottom of a page (or other scroll area) is reached. You may also have noticed that when you have a dialog box with scrolling content on top of a page of scrolling content, once the dialog box's scroll boundary is reached, the underlying page will then start to scroll — this is called **scroll chaining**.
 
 In some cases these behaviors are not desirable. You can use `overscroll-behavior` to get rid of unwanted scroll chaining and the browser's Facebook/Twitter app-inspired "pull to refresh"-type behavior.
+
+Note that this property only applies to {{Glossary("Scroll_container", "scroll containers")}}. In particular, since an [`<iframe>`](/en-US/docs/Web/HTML/Element/iframe) is not a scroll container, this property cannot be used to stop scroll chaining for iframes.
 
 ## Syntax
 
@@ -35,6 +32,7 @@ overscroll-behavior: auto contain;
 overscroll-behavior: inherit;
 overscroll-behavior: initial;
 overscroll-behavior: revert;
+overscroll-behavior: revert-layer;
 overscroll-behavior: unset;
 ```
 
@@ -63,7 +61,7 @@ Two keywords specifies the `overscroll-behavior` value on the `x` and `y` axes r
 
 ### Preventing an underlying element from scrolling
 
-In our [overscroll-behavior example](https://mdn.github.io/css-examples/overscroll-behavior/) (see the [source code](https://github.com/mdn/css-examples/tree/master/overscroll-behavior) also), we present a full-page list of fake contacts, and a dialog box containing a chat window.
+In our [overscroll-behavior example](https://mdn.github.io/css-examples/overscroll-behavior/) (see the [source code](https://github.com/mdn/css-examples/tree/main/overscroll-behavior) also), we present a full-page list of fake contacts, and a dialog box containing a chat window.
 
 ![A popup chat window titled 'Active chat', showing a conversation between Chris and Bob. Behind the chat window is a contact list titled 'overscroll-behavior demo'.](example.png)
 
@@ -96,4 +94,4 @@ html {
 
 ## See also
 
-- [Take control of your scroll: customizing pull-to-refresh and overflow effects](https://developers.google.com/web/updates/2017/11/overscroll-behavior#demo)
+- [Take control of your scroll: customizing pull-to-refresh and overflow effects](https://developer.chrome.com/blog/overscroll-behavior/#demo)

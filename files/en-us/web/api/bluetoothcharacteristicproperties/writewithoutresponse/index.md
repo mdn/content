@@ -1,32 +1,20 @@
 ---
 title: BluetoothCharacteristicProperties.writeWithoutResponse
 slug: Web/API/BluetoothCharacteristicProperties/writeWithoutResponse
-tags:
-  - API
-  - Bluetooth
-  - BluetoothCharacteristicProperties
-  - Experimental
-  - NeedsExample
-  - Property
-  - Reference
-  - Web Bluetooth API
-  - writeWithoutResponse
+page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.BluetoothCharacteristicProperties.writeWithoutResponse
 ---
-{{securecontext_header}}{{APIRef("Bluetooth API")}}
+
+{{securecontext_header}}{{APIRef("Bluetooth API")}}{{SeeCompatTable}}
 
 The **`writeWithoutResponse`** read-only
 property of the {{domxref("BluetoothCharacteristicProperties")}} interface returns a
 `boolean` that is `true` if the writing to the characteristic
 without response is permitted.
 
-## Syntax
-
-```js
-var aBoolean = BluetoothCharacteristicProperties.writeWithoutResponse;
-```
-
-### Value
+## Value
 
 A boolean value.
 

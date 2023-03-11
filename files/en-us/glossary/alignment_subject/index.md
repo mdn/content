@@ -1,12 +1,9 @@
 ---
 title: Alignment subject
 slug: Glossary/Alignment_Subject
-tags:
-  - Alignment subject
-  - CSS
-  - Glossary
-  - alignment
+page-type: glossary-definition
 ---
+
 In [CSS Box Alignment](/en-US/docs/Web/CSS/CSS_Box_Alignment) the **alignment subject** is the thing (or things) being aligned by the property.
 
 For {{cssxref("justify-self")}} and {{cssxref("align-self")}}, the alignment subject is the margin box of the box the property is set on, using the writing mode of that box.

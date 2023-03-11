@@ -1,18 +1,13 @@
 ---
 title: XREquirectLayer.radius
 slug: Web/API/XREquirectLayer/radius
-tags:
-  - API
-  - Property
-  - Reference
-  - VR
-  - WebXR
-  - WebXR API
-  - WebXR Device API
-  - XR
+page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.XREquirectLayer.radius
 ---
-{{APIRef("WebXR Device API")}}
+
+{{APIRef("WebXR Device API")}}{{SeeCompatTable}}
 
 The **`radius`** property of the {{domxref("XREquirectLayer")}} interface represents the radius of the sphere.
 

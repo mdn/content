@@ -1,15 +1,12 @@
 ---
 title: WorkerNavigator.appName
 slug: Web/API/WorkerNavigator/appName
-tags:
-  - API
-  - Deprecated
-  - HTML DOM
-  - WorkerNavigator
-  - Property
-  - Reference
+page-type: web-api-instance-property
+status:
+  - deprecated
 browser-compat: api.WorkerNavigator.appName
 ---
+
 {{APIRef("HTML DOM")}} {{Deprecated_Header}}
 
 The value of the **`WorkerNavigator.appName`** property is always
@@ -18,13 +15,7 @@ purposes.
 
 > **Note:** Do not rely on this property to return a real browser name. All browsers return "`Netscape`" as the value of this property.
 
-## Syntax
-
-```js
-appName = navigator.appName
-```
-
-### Value
+## Value
 
 The string "`Netscape`".
 

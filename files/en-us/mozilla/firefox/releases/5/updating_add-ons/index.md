@@ -1,18 +1,15 @@
 ---
 title: Updating add-ons for Firefox 5
 slug: Mozilla/Firefox/Releases/5/Updating_add-ons
-tags:
-  - Add-ons
-  - Extensions
-  - Firefox 5
 ---
+
 {{FirefoxSidebar}}
 
 This article provides an overview of the changes you may need to make to your add-ons in order for them to work properly in Firefox 5. You can find a complete list of developer-related changes in Firefox 5 in [Firefox 5 for developers](/en-US/docs/Mozilla/Firefox/Releases/5).
 
 ## Do you need to do anything at all?
 
-If your add-on is distributed on [addons.mozilla.org](http://addons.mozilla.org) (AMO), it's been checked by an automated compatibility verification tool. Add-ons that don't use APIs that changed in Firefox 5, and have no binary components (which [need to be recompiled for every major Firefox release](/en-US/docs/Mozilla/Developer_guide/Interface_Compatibility#binary_interfaces)), have automatically been updated on AMO to indicate that they work in Firefox 5.
+If your add-on is distributed on [addons.mozilla.org](https://addons.mozilla.org/en-US/firefox/) (AMO), it's been checked by an automated compatibility verification tool. Add-ons that don't use APIs that changed in Firefox 5, and have no binary components (which [need to be recompiled for every major Firefox release](/en-US/docs/Mozilla/Developer_guide/Interface_Compatibility#binary_interfaces)), have automatically been updated on AMO to indicate that they work in Firefox 5.
 
 So you should start by visiting AMO and looking to see if your add-on needs any work done at all.
 
@@ -49,19 +46,25 @@ Don't use those keywords anywhere in your code, even as object property names.
 
 ## Interface changes
 
-Instantiating certain services, including the {{ interface("nsICertOverrideService") }}, at startup can make Firefox unusable ({{ bug(650858) }}. This happens only if you try to instantiate a service before the `load` event is fired.
+Instantiating certain services, including the `nsICertOverrideService`, at startup can make Firefox unusable ([Firefox bug 650858](https://bugzil.la/650858). This happens only if you try to instantiate a service before the `load` event is fired.
 
 To fix this, move your instantiation of these services into your `load` event handler:
 
 ```js
 var MyObject = {
-  comp : null,
-  init: function() {
-    this.comp = Components.classes[...].getService(...);
+  comp: null,
+  init() {
+    this.comp = Components.classes["…"].getService(/* … */);
   },
-  ...
-}
-window.addEventListener("load", function() { MyObject.init(); }, false);
+  // …
+};
+window.addEventListener(
+  "load",
+  function () {
+    MyObject.init();
+  },
+  false
+);
 ```
 
 An even better solution, of course, is to follow [performance best practices](/en-US/docs/Extensions/Performance_best_practices_in_extensions) and to not instantiate services until you need to use them.

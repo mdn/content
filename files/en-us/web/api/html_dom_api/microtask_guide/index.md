@@ -1,22 +1,9 @@
 ---
 title: Using microtasks in JavaScript with queueMicrotask()
 slug: Web/API/HTML_DOM_API/Microtask_guide
-tags:
-  - API
-  - Batch
-  - Guide
-  - HTML DOM
-  - JavaScript
-  - Microtask
-  - Queue
-  - Reference
-  - ServiceWorker
-  - SharedWorker
-  - Window
-  - Worker
-  - asynchronous
-  - queueMicrotask
+page-type: guide
 ---
+
 {{APIRef("HTML DOM")}}
 
 A **microtask** is a short function which is executed after the function or program which created it exits _and_ only if the [JavaScript execution stack](/en-US/docs/Web/JavaScript/EventLoop#stack) is empty, but before returning control to the event loop being used by the {{Glossary("user agent")}} to drive the script's execution environment.
@@ -25,7 +12,7 @@ This event loop may be either the browser's main event loop or the event loop dr
 
 JavaScript [promises](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) and the [Mutation Observer API](/en-US/docs/Web/API/MutationObserver) both use the microtask queue to run their callbacks, but there are other times when the ability to defer work until the current event loop pass is wrapping up. In order to allow microtasks to be used by third-party libraries, frameworks, and polyfills, the {{domxref("queueMicrotask()")}} method is exposed on the {{domxref("Window")}} and {{domxref("Worker")}} interfaces.
 
-## Tasks vs microtasks
+## Tasks vs. microtasks
 
 To properly discuss microtasks, it's first useful to know what a JavaScript task is and how microtasks differ from tasks. This is a quick, simplified explanation, but if you would like more details, you can read the information in the article [In depth: Microtasks and the JavaScript runtime environment](/en-US/docs/Web/API/HTML_DOM_API/Microtask_guide/In_depth).
 
@@ -86,16 +73,18 @@ The main reason to use microtasks is that: to ensure consistent ordering of task
 One situation in which microtasks can be used to ensure that the ordering of execution is always consistent is when promises are used in one clause of an `if...else` statement (or other conditional statement), but not in the other clause. Consider code such as this:
 
 ```js
-customElement.prototype.getData = url => {
+customElement.prototype.getData = (url) => {
   if (this.cache[url]) {
     this.data = this.cache[url];
     this.dispatchEvent(new Event("load"));
   } else {
-    fetch(url).then(result => result.arrayBuffer()).then(data => {
-      this.cache[url] = data;
-      this.data = data;
-      this.dispatchEvent(new Event("load"));
-    });
+    fetch(url)
+      .then((result) => result.arrayBuffer())
+      .then((data) => {
+        this.cache[url] = data;
+        this.data = data;
+        this.dispatchEvent(new Event("load"));
+      });
   }
 };
 ```
@@ -104,7 +93,7 @@ The problem introduced here is that by using a task in one branch of the `if...e
 
 ```js
 element.addEventListener("load", () => console.log("Loaded data"));
-console.log("Fetching data...");
+console.log("Fetching data…");
 element.getData();
 console.log("Data fetched");
 ```
@@ -132,18 +121,20 @@ Even worse, sometimes the element's `data` property will be set and other times 
 We can ensure consistent ordering of these operations by using a microtask in the `if` clause to balance the two clauses:
 
 ```js
-customElement.prototype.getData = url => {
+customElement.prototype.getData = (url) => {
   if (this.cache[url]) {
     queueMicrotask(() => {
       this.data = this.cache[url];
       this.dispatchEvent(new Event("load"));
     });
   } else {
-    fetch(url).then(result => result.arrayBuffer()).then(data => {
-      this.cache[url] = data;
-      this.data = data;
-      this.dispatchEvent(new Event("load"));
-    });
+    fetch(url)
+      .then((result) => result.arrayBuffer())
+      .then((data) => {
+        this.cache[url] = data;
+        this.data = data;
+        this.dispatchEvent(new Event("load"));
+      });
   }
 };
 ```
@@ -159,7 +150,7 @@ The snippet below creates a function that batches multiple messages into an arra
 ```js
 const messageQueue = [];
 
-let sendMessage = message => {
+let sendMessage = (message) => {
   messageQueue.push(message);
 
   if (messageQueue.length === 1) {
@@ -189,15 +180,14 @@ The server will receive the JSON string, then will presumably decode it and proc
 In this simple example, we see that enqueueing a microtask causes the microtask's callback to run after the body of this top-level script is done running.
 
 ```html hidden
-<pre id="log">
-</pre>
+<pre id="log"></pre>
 ```
 
 #### JavaScript
 
 ```js hidden
 let logElem = document.getElementById("log");
-let log = s => logElem.innerHTML += s + "<br>";
+let log = (s) => (logElem.innerHTML += `${s}<br>`);
 ```
 
 In the following code, we see a call to {{domxref("queueMicrotask()")}} used to schedule a microtask to run. This call is bracketed by calls to `log()`, a custom function that outputs text to the screen.
@@ -205,7 +195,7 @@ In the following code, we see a call to {{domxref("queueMicrotask()")}} used to 
 ```js
 log("Before enqueueing the microtask");
 queueMicrotask(() => {
-  log("The microtask has run.")
+  log("The microtask has run.");
 });
 log("After enqueueing the microtask");
 ```
@@ -219,15 +209,14 @@ log("After enqueueing the microtask");
 In this example, a timeout is scheduled to fire after zero milliseconds (or "as soon as possible"). This demonstrates the difference between what "as soon as possible" means when scheduling a new task (such as by using `setTimeout()`) versus using a microtask.
 
 ```html hidden
-<pre id="log">
-</pre>
+<pre id="log"></pre>
 ```
 
 #### JavaScript
 
 ```js hidden
 let logElem = document.getElementById("log");
-let log = s => logElem.innerHTML += s + "<br>";
+let log = (s) => (logElem.innerHTML += `${s}<br>`);
 ```
 
 In the following code, we see a call to {{domxref("queueMicrotask()")}} used to schedule a microtask to run. This call is bracketed by calls to `log()`, a custom function that outputs text to the screen.
@@ -256,15 +245,14 @@ Note that the output logged from the main program body appears first, followed b
 This example expands slightly on the previous one by adding a function that does some work. This function uses `queueMicrotask()` to schedule a microtask. The important thing to take away from this one is that the microtask isn't processed when the function exits, but when the main program exits.
 
 ```html hidden
-<pre id="log">
-</pre>
+<pre id="log"></pre>
 ```
 
 #### JavaScript
 
 ```js hidden
 let logElem = document.getElementById("log");
-let log = s => logElem.innerHTML += s + "<br>";
+let log = (s) => (logElem.innerHTML += `${s}<br>`);
 ```
 
 The main program code follows. The `doWork()` function here calls `queueMicrotask()`, yet the microtask still doesn't fire until the entire program exits, since that's when the task exits and there's nothing else on the execution stack.
@@ -279,7 +267,7 @@ let doWork = () => {
 
   queueMicrotask(urgentCallback);
 
-  for (let i=2; i<=10; i++) {
+  for (let i = 2; i <= 10; i++) {
     result *= i;
   }
   return result;
@@ -289,7 +277,6 @@ log("Main program started");
 setTimeout(callback, 0);
 log(`10! equals ${doWork()}`);
 log("Main program exiting");
-log("Regular timeout callback has run");
 ```
 
 #### Result
@@ -301,9 +288,6 @@ log("Regular timeout callback has run");
 - [In depth: Microtasks and the JavaScript runtime environment](/en-US/docs/Web/API/HTML_DOM_API/Microtask_guide/In_depth)
 - {{domxref("queueMicrotask()")}}
 - [Asynchronous JavaScript](/en-US/docs/Learn/JavaScript/Asynchronous)
-
-  - [General asynchronous programming concepts](/en-US/docs/Learn/JavaScript/Asynchronous/Concepts)
   - [Introducing asynchronous JavaScript](/en-US/docs/Learn/JavaScript/Asynchronous/Introducing)
-  - [Cooperative asynchronous JavaScript: Timeouts and intervals](/en-US/docs/Learn/JavaScript/Asynchronous/Timeouts_and_intervals)
+  - [Cooperative asynchronous JavaScript: Timeouts and intervals](/en-US/docs/Learn/JavaScript/Asynchronous)
   - [Graceful asynchronous programming with Promises](/en-US/docs/Learn/JavaScript/Asynchronous/Promises)
-  - [Choosing the right approach](/en-US/docs/Learn/JavaScript/Asynchronous/Choosing_the_right_approach)

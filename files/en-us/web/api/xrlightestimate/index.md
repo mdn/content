@@ -1,32 +1,28 @@
 ---
 title: XRLightEstimate
 slug: Web/API/XRLightEstimate
-tags:
-  - API
-  - Interface
-  - Reference
-  - WebXR
-  - XR
-  - AR
-  - VR
+page-type: web-api-interface
+status:
+  - experimental
 browser-compat: api.XRLightEstimate
 ---
-{{APIRef("WebXR Device API")}} {{secureContext_header}}
+
+{{APIRef("WebXR Device API")}} {{secureContext_header}}{{SeeCompatTable}}
 
 The **`XRLightEstimate`** interface of the [WebXR Device API](/en-US/docs/Web/API/WebXR_Device_API) provides the estimated lighting values for an {{domxref("XRLightProbe")}} at the time represented by an {{domxref("XRFrame")}}.
 
-To get an `XRLightEstimate`object, call the {{domxref("XRFrame.getLightEstimate()")}} method.
+To get an `XRLightEstimate` object, call the {{domxref("XRFrame.getLightEstimate()")}} method.
 
-## Properties
+## Instance properties
 
-- {{domxref("XRLightEstimate.primaryLightDirection")}} {{ReadOnlyInline}}
+- {{domxref("XRLightEstimate.primaryLightDirection")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : A {{domxref("DOMPointReadOnly")}} representing the direction to the primary light source from the `probeSpace` of an {{domxref("XRLightProbe")}}.
-- {{domxref("XRLightEstimate.primaryLightIntensity")}} {{ReadOnlyInline}}
+- {{domxref("XRLightEstimate.primaryLightIntensity")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : A {{domxref("DOMPointReadOnly")}} (with the `x`, `y`, `z` values mapped to RGB) representing the intensity of the primary light source from the `probeSpace` of an {{domxref("XRLightProbe")}}.
-- {{domxref("XRLightEstimate.sphericalHarmonicsCoefficients")}} {{ReadOnlyInline}}
+- {{domxref("XRLightEstimate.sphericalHarmonicsCoefficients")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : A {{jsxref("Float32Array")}} containing 9 spherical harmonics coefficients.
 
-## Methods
+## Instance methods
 
 None.
 

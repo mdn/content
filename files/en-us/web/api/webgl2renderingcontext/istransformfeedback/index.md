@@ -1,14 +1,10 @@
 ---
 title: WebGL2RenderingContext.isTransformFeedback()
 slug: Web/API/WebGL2RenderingContext/isTransformFeedback
-tags:
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGL2
+page-type: web-api-instance-method
 browser-compat: api.WebGL2RenderingContext.isTransformFeedback
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGL2RenderingContext.isTransformFeedback()`** method
@@ -17,8 +13,8 @@ if the passed object is a valid {{domxref("WebGLTransformFeedback")}} object.
 
 ## Syntax
 
-```js
-GLboolean gl.isTransformFeedback(transformFeedback);
+```js-nolint
+isTransformFeedback(transformFeedback)
 ```
 
 ### Parameters
@@ -38,9 +34,9 @@ A {{domxref("WebGL_API/Types", "GLboolean")}} indicating whether the given objec
 `WebGLTransformFeedback` objects are not available in WebGL 1.
 
 ```js
-var transformFeedback = gl.createTransformFeedback();
+const transformFeedback = gl.createTransformFeedback();
 
-// ...
+// …
 
 gl.isTransformFeedback(transformFeedback);
 ```

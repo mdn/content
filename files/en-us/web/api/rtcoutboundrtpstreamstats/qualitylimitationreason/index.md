@@ -1,22 +1,10 @@
 ---
 title: RTCOutboundRtpStreamStats.qualityLimitationReason
 slug: Web/API/RTCOutboundRtpStreamStats/qualityLimitationReason
-tags:
-  - API
-  - Media
-  - Property
-  - Quality
-  - RTCOutboundRtpStreamStats
-  - Reference
-  - Statistics
-  - Stats
-  - WebRTC
-  - WebRTC API
-  - qualityLimitationReason
-  - reason
-  - stream
+page-type: web-api-instance-property
 browser-compat: api.RTCOutboundRtpStreamStats.qualityLimitationReason
 ---
+
 {{APIRef("WebRTC")}}
 
 The **`qualityLimitationReason`**
@@ -33,16 +21,9 @@ potential ways that can be done can be found in
 {{domxref("RTCOutboundRtpStreamStats.qualityLimitationDurations",
   "qualityLimitationDurations")}}.
 
-## Syntax
+## Value
 
-```js
-var qualityLimitationReason = RTCOutboundRtpStreamStats.qualityLimitationReason;
-```
-
-### Value
-
-A {{jsxref("Map")}} whose keys are {{domxref("DOMString")}}s whose values come from the
-{{domxref("RTCQualityLimitationReason")}} enumerated type, and whose values are the
+A {{jsxref("Map")}} whose keys are strings whose values are `none`, `cpu`, `bandwidth`, or `other`, and whose values are the
 duration of the media, in seconds, whose quality was reduced for that reason.
 
 ## Examples

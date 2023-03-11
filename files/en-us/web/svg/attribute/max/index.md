@@ -1,11 +1,10 @@
 ---
 title: max
 slug: Web/SVG/Attribute/max
-tags:
-  - SVG
-  - SVG Attribute
-browser-compat: svg.elements.animate.max
+page-type: svg-attribute
+spec-urls: https://svgwg.org/specs/animations/#MaxAttribute
 ---
+
 {{SVGRef}}
 
 The **`max`** attribute specifies the maximum value of the active animation duration.
@@ -13,7 +12,6 @@ The **`max`** attribute specifies the maximum value of the active animation dura
 You can use this attribute with the following SVG elements:
 
 - {{SVGElement("animate")}}
-- {{SVGElement("animateColor")}}
 - {{SVGElement("animateMotion")}}
 - {{SVGElement("animateTransform")}}
 - {{SVGElement("set")}}
@@ -21,7 +19,9 @@ You can use this attribute with the following SVG elements:
 ## Example
 
 ```css hidden
-html, body, svg {
+html,
+body,
+svg {
   height: 100%;
 }
 ```
@@ -29,10 +29,20 @@ html, body, svg {
 ```html
 <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
   <circle cx="60" cy="10" r="10">
-    <animate attributeName="cx" dur="4s" max="6s" repeatCount="indefinite"
-        values="60 ; 110 ; 60 ; 10 ; 60" keyTimes="0 ; 0.25 ; 0.5 ; 0.75 ; 1"/>
-    <animate attributeName="cy" dur="4s" max="6s" repeatCount="indefinite"
-        values="10 ; 60 ; 110 ; 60 ; 10" keyTimes="0 ; 0.25 ; 0.5 ; 0.75 ; 1"/>
+    <animate
+      attributeName="cx"
+      dur="4s"
+      max="6s"
+      repeatCount="indefinite"
+      values="60 ; 110 ; 60 ; 10 ; 60"
+      keyTimes="0 ; 0.25 ; 0.5 ; 0.75 ; 1" />
+    <animate
+      attributeName="cy"
+      dur="4s"
+      max="6s"
+      repeatCount="indefinite"
+      values="10 ; 60 ; 110 ; 60 ; 10"
+      keyTimes="0 ; 0.25 ; 0.5 ; 0.75 ; 1" />
   </circle>
 </svg>
 ```
@@ -69,35 +79,7 @@ html, body, svg {
 
 ## Specifications
 
-<table class="no-markdown">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        {{SpecName("SVG Animations 2", "#MaxAttribute", "max")}}
-      </td>
-      <td>{{Spec2("SVG Animations 2")}}</td>
-      <td>No change</td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("SVG1.1", "animate.html#MaxAttribute", "max")}}
-      </td>
-      <td>{{Spec2("SVG1.1")}}</td>
-      <td>Initial definition</td>
-    </tr>
-  </tbody>
-</table>
-
-## Browser compatibility
-
-{{Compat}}
+{{Specifications}}
 
 ## See also
 

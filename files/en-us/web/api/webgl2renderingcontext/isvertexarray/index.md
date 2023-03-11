@@ -1,14 +1,10 @@
 ---
 title: WebGL2RenderingContext.isVertexArray()
 slug: Web/API/WebGL2RenderingContext/isVertexArray
-tags:
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGL2
+page-type: web-api-instance-method
 browser-compat: api.WebGL2RenderingContext.isVertexArray
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGL2RenderingContext.isVertexArray()`** method of the
@@ -17,8 +13,8 @@ passed object is a valid {{domxref("WebGLVertexArrayObject")}} object.
 
 ## Syntax
 
-```js
-GLBoolean gl.isVertexArray(vertexArray);
+```js-nolint
+isVertexArray(vertexArray)
 ```
 
 ### Parameters
@@ -35,10 +31,10 @@ A {{domxref("WebGL_API/Types", "GLboolean")}} indicating whether the given objec
 ## Examples
 
 ```js
-var vao = gl.createVertexArray();
+const vao = gl.createVertexArray();
 gl.bindVertexArray(vao);
 
-// ...
+// …
 
 gl.isVertexArray(vao);
 ```

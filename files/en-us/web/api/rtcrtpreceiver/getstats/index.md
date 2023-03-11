@@ -1,19 +1,10 @@
 ---
 title: RTCRtpReceiver.getStats()
 slug: Web/API/RTCRtpReceiver/getStats
-tags:
-  - API
-  - Media
-  - Method
-  - RTCRtpReceiver
-  - Reference
-  - WebRTC
-  - WebRTC API
-  - WebRTC Statistics
-  - WebRTC Statistics API
-  - getStats
+page-type: web-api-instance-method
 browser-compat: api.RTCRtpReceiver.getStats
 ---
+
 {{APIRef("WebRTC")}}
 
 The {{domxref("RTCRtpReceiver")}} method **`getStats()`**
@@ -24,9 +15,13 @@ results are available.
 
 ## Syntax
 
-```js
-var promise = RTCRtpReceiver.getStats();
+```js-nolint
+getStats()
 ```
+
+### Parameters
+
+None.
 
 ### Return value
 
@@ -37,16 +32,15 @@ available. The promise's fulfillment handler receives as a parameter a
 The returned statistics include those from all streams which are coming in through the
 `RTCRtpReceiver`, as well as any of their dependencies.
 
-## Example
+## Examples
 
 This simple example obtains the statistics for an `RTCRtpReceiver` and
 updates an element's {{domxref("HTMLElement/innerText", "innerText")}} to display the number of
 packets lost.
 
 ```js
-receiver.getStats().then(function(stats) {
-  document.getElementById("lostpackets").innerText =
-          stats.packetsLost;
+receiver.getStats().then((stats) => {
+  document.getElementById("lostpackets").innerText = stats.packetsLost;
 });
 ```
 

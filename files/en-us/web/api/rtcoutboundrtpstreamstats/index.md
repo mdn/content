@@ -1,26 +1,15 @@
 ---
 title: RTCOutboundRtpStreamStats
 slug: Web/API/RTCOutboundRtpStreamStats
-tags:
-  - API
-  - Dictionary
-  - Outbound
-  - RTCOutboundRtpStreamStats
-  - RTCRtpSender
-  - RTP
-  - Reference
-  - Statistics
-  - Stats
-  - WebRTC
-  - WebRTC API
-  - stream
+page-type: web-api-interface
 browser-compat: api.RTCOutboundRtpStreamStats
 ---
+
 {{APIRef("WebRTC")}}
 
 The **`RTCOutboundRtpStreamStats`** dictionary is the {{domxref("RTCStats")}}-based object which provides metrics and statistics related to an outbound {{Glossary("RTP")}} stream being sent by an {{domxref("RTCRtpSender")}}.
 
-## Properties
+## Instance properties
 
 _The `RTCOutboundRtpStreamStats` dictionary includes the following properties in addition to those it inherits from {{domxref("RTCSentRtpStreamStats")}}, {{domxref("RTCRtpStreamStats")}}, and {{domxref("RTCStats")}}._
 
@@ -43,7 +32,7 @@ _The `RTCOutboundRtpStreamStats` dictionary includes the following properties in
 - {{domxref("RTCOutboundRtpStreamStats.qualityLimitationDurations", "qualityLimitationDurations")}}
   - : A record mapping each of the quality limitation reasons in the {{domxref("RTCRemoteInboundRtpStreamStats")}} enumeration to a floating-point value indicating the number of seconds the stream has spent with its quality limited for that reason.
 - {{domxref("RTCOutboundRtpStreamStats.qualityLimitationReason", "qualityLimitationReason")}}
-  - : A value from the {{domxref("RTCQualityLimitationReason")}} enumerated type explaining why the resolution and/or frame rate is being limited for this RTP stream. _Valid only for video streams_.
+  - : One of the string `none`, `cpu`, `bandwidth`, or `other`, explaining why the resolution and/or frame rate is being limited for this RTP stream. _Valid only for video streams_.
 - {{domxref("RTCOutboundRtpStreamStats.remoteId", "remoteId")}}
   - : A string which identifies the {{domxref("RTCRemoteInboundRtpStreamStats")}} object that provides statistics for the remote peer for this same SSRC. This ID is stable across multiple calls to `getStats()`.
 - {{domxref("RTCOutboundRtpStreamStats.retransmittedBytesSent", "retransmittedBytesSent")}}

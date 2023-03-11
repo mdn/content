@@ -1,23 +1,10 @@
 ---
 title: XMLHttpRequest.upload
 slug: Web/API/XMLHttpRequest/upload
-tags:
-  - AJAX
-  - API
-  - Monitoring XMLHttpRequest
-  - Property
-  - Read-only
-  - Reference
-  - Sending Files
-  - Uploading
-  - XHR
-  - XHR Uploads
-  - XMLHttpRequest
-  - XMLHttpRequest Uploads
-  - XMLHttpRequestUpload
-  - upload
+page-type: web-api-instance-property
 browser-compat: api.XMLHttpRequest.upload
 ---
+
 {{APIRef('XMLHttpRequest')}}
 
 The {{domxref("XMLHttpRequest")}} `upload` property returns an {{domxref("XMLHttpRequestUpload")}} object that can be observed to monitor an upload's progress.
@@ -92,5 +79,4 @@ The following events can be triggered on an upload object and used to monitor th
 ## See also
 
 - [Using XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)
-- [FileHandle API](/en-US/docs/Web/API/File_Handle_API)
 - [File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API)

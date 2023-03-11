@@ -1,14 +1,10 @@
 ---
 title: Using Navigation Timing
 slug: Web/API/Navigation_timing_API/Using_Navigation_Timing
-tags:
-  - Guide
-  - Navigation Timing
-  - Navigation Timing API
-  - Optimization
-  - Performance
+page-type: guide
 ---
-{{DefaultAPISidebar("Navigation Timing")}}
+
+{{DefaultAPISidebar("Performance API")}}
 
 The Navigation Timing API lets you easily obtain detailed and highly accurate timing information to help isolate performance problems with your site's code or resources.
 
@@ -16,23 +12,25 @@ Unlike other tools or libraries, the [Navigation Timing API](/en-US/docs/Web/API
 
 ## Collecting timing information
 
-Using the API is as simple as obtaining the {{domxref("Performance")}} object using {{domxref("window.performance")}} and looking up what you need within the object returned. For example, to measure the perceived loading time for a page:
+Using the API is as simple as obtaining the {{domxref("Performance")}} object using {{domxref("performance_property", "window.performance")}} and looking up what you need within the object returned. For example, to measure the perceived loading time for a page:
 
 ```js
-window.addEventListener("load", function() {
-  let now = new Date().getTime();
-  let loadingTime = now - performance.timing.navigationStart;
+window.addEventListener(
+  "load",
+  () => {
+    const now = new Date().getTime();
+    const loadingTime = now - performance.timing.navigationStart;
 
-  document.querySelector(".output").innerText =
-        loadingTime + " ms";
-}, false);
+    document.querySelector(".output").innerText = `${loadingTime} ms`;
+  },
+  false
+);
 ```
 
-This code, executed when the {{event("load")}} event occurs, subtracts from the current time the time at which the navigation whose timing was recorded began ({{domxref("PerformanceTiming.navigationStart", "performance.timing.navigationStart")}}), and outputs that information to the screen by inserting it into an element.
+This code, executed when the {{domxref("Window/load_event", "load")}} event occurs, subtracts from the current time the time at which the navigation whose timing was recorded began ({{domxref("PerformanceTiming.navigationStart", "performance.timing.navigationStart")}}), and outputs that information to the screen by inserting it into an element.
 
 ```html hidden
-<div class="output">
-</div>
+<div class="output"></div>
 ```
 
 ```css hidden
@@ -48,7 +46,7 @@ In tandem with appropriate HTML and CSS, the result is:
 
 The values listed are for the {{HTMLElement("iframe")}} in which the sample is presented above.
 
-For a list of the available timing values you can look for in {{domxref("PerformanceTiming")}}, see the {{domxref("PerformanceTiming")}} interface's [Properties](/en-US/docs/Web/API/PerformanceTiming#Properties) section.
+For a list of the available timing values you can look for in {{domxref("PerformanceTiming")}}, see the {{domxref("PerformanceTiming")}} interface's [Properties](/en-US/docs/Web/API/PerformanceTiming#instance_properties) section.
 
 ## Determining navigation type
 
@@ -63,39 +61,41 @@ This information is provided by the {{domxref("Performance.navigation")}} proper
 Let's add this information to the example above. The new code looks like this:
 
 ```js
-window.addEventListener("load", function() {
-  let now = new Date().getTime();
-  let loadingTime = now - performance.timing.navigationStart;
+window.addEventListener(
+  "load",
+  () => {
+    const now = new Date().getTime();
+    const loadingTime = now - performance.timing.navigationStart;
 
-  output = "Load time: " + loadingTime + " ms<br/>";
-  output += "Navigation type: ";
+    let output = `Load time: ${loadingTime} ms<br/>`;
+    output += "Navigation type: ";
 
-  switch(performance.navigation.type) {
+    switch (performance.navigation.type) {
       case PerformanceNavigation.TYPE_NAVIGATE:
         output += "Navigation";
-      break;
-    case PerformanceNavigation.TYPE_RELOAD:
+        break;
+      case PerformanceNavigation.TYPE_RELOAD:
         output += "Reload";
-      break;
-    case PerformanceNavigation.TYPE_BACK_FORWARD:
+        break;
+      case PerformanceNavigation.TYPE_BACK_FORWARD:
         output += "History";
-      break;
-    default:
+        break;
+      default:
         output += "Unknown";
-      break;
-  }
+        break;
+    }
 
-  output += "<br/>Redirects: " +
-      performance.navigation.redirectCount;
-  document.querySelector(".output").innerHTML = output;
-}, false);
+    output += `<br/>Redirects: ${performance.navigation.redirectCount}`;
+    document.querySelector(".output").innerHTML = output;
+  },
+  false
+);
 ```
 
 This amends the previous example by looking at the contents of the `performance.navigation` object. {{domxref("PerformanceNavigation.type", "performance.navigation.type")}} indicates what kind of load operation took place: a navigation, a reload, or a shift through the browser's history. We also obtain the number of redirects that were incurred during the navigation from {{domxref("PerformanceNavigation.redirectCount", "performance.navigation.redirectCount")}}. This information is output to the screen just like the page load time was previously: by inserting it into the element with class `"output"`.
 
 ```html hidden
-<div class="output">
-</div>
+<div class="output"></div>
 ```
 
 ```css hidden
@@ -114,5 +114,5 @@ The values listed are for the {{HTMLElement("iframe")}} in which the sample is p
 ## See also
 
 - [Navigation Timing API](/en-US/docs/Web/API/Navigation_timing_API)
-- {{domxref("window.performance")}}
+- {{domxref("performance_property", "window.performance")}}
 - {{domxref("Performance")}}, {{domxref("PerformanceTiming")}}, and {{domxref("PerformanceNavigation")}}

@@ -1,20 +1,17 @@
 ---
 title: '<big>: The Bigger Text element'
 slug: Web/HTML/Element/big
-tags:
-  - Element
-  - HTML
-  - Deprecated
-  - Reference
-  - Web
+page-type: html-element
+status:
+  - deprecated
 browser-compat: html.elements.big
 ---
 
-{{deprecated_header}}
+{{HTMLSidebar}}{{deprecated_header}}
 
 The **`<big>`** [HTML](/en-US/docs/Web/HTML) deprecated element renders the enclosed text at a font size one level larger than the surrounding text (`medium` becomes `large`, for example). The size is capped at the browser's maximum permitted font size.
 
-> **Warning:** This element has been removed from the specification and shouldn't be used any more. Use the CSS {{cssxref("font-size")}} property to adjust the font size.
+> **Warning:** This element has been removed from the specification and shouldn't be used anymore. Use the CSS {{cssxref("font-size")}} property to adjust the font size.
 
 ## Attributes
 
@@ -32,8 +29,8 @@ This example uses the obsolete `<big>` element to increase the size of some text
 
 ```html
 <p>
-  This is the first sentence. <big>This whole
-  sentence is in bigger letters.</big>
+  This is the first sentence.
+  <big>This whole sentence is in bigger letters.</big>
 </p>
 ```
 
@@ -57,8 +54,8 @@ This example uses the CSS {{cssxref("font-size")}} property to increase the font
 
 ```html
 <p>
-  This is the first sentence. <span class="bigger">This whole
-  sentence is in bigger letters.</span>
+  This is the first sentence.
+  <span class="bigger">This whole sentence is in bigger letters.</span>
 </p>
 ```
 
@@ -69,6 +66,8 @@ This example uses the CSS {{cssxref("font-size")}} property to increase the font
 ## DOM interface
 
 This element implements the {{domxref('HTMLElement')}} interface.
+
+<!-- ## Technical summary -->
 
 ## Specifications
 
@@ -83,5 +82,3 @@ This element implements the {{domxref('HTMLElement')}} interface.
 - CSS: {{cssxref("font-size")}}, {{cssxref("font")}}
 - HTML: {{htmlelement("small")}}, {{htmlelement("font")}}, {{htmlelement("style")}}
 - HTML 4.01 Specification: [Font Styles](https://www.w3.org/TR/html4/present/graphics.html#h-15.2)
-
-{{HTMLRef}}

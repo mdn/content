@@ -1,22 +1,18 @@
 ---
 title: VideoEncoder.configure()
 slug: Web/API/VideoEncoder/configure
-tags:
-  - API
-  - Method
-  - Reference
-  - configure
-  - VideoEncoder
+page-type: web-api-instance-method
 browser-compat: api.VideoEncoder.configure
 ---
-{{securecontext_header}}{{DefaultAPISidebar("WebCodecs API")}}
+
+{{APIRef("WebCodecs API")}}{{SecureContext_Header}}
 
 The **`configure()`** method of the {{domxref("VideoEncoder")}} interface enqueues a control message to configure the video encoder for encoding chunks.
 
 ## Syntax
 
-```js
-VideoEncoder.configure(config)
+```js-nolint
+configure(config)
 ```
 
 ### Parameters
@@ -24,14 +20,14 @@ VideoEncoder.configure(config)
 - `config`
   - : A dictionary object containing the following members:
     - `codec`
-      - : A {{domxref("DOMString","string")}} containing a [valid codec string](https://www.w3.org/TR/webcodecs-codec-registry/#audio-codec-registry).
-    - `width`{{Optional_Inline}}
+      - : A string containing a [valid codec string](https://www.w3.org/TR/webcodecs-codec-registry/#audio-codec-registry).
+    - `width` {{optional_inline}}
       - : An integer representing the width of each output {{domxref("EncodedVideoChunk")}} in pixels, before any ratio adjustments.
-    - `height`{{Optional_Inline}}
+    - `height` {{optional_inline}}
       - : An integer representing the height of each output {{domxref("EncodedVideoChunk")}} in pixels, before any ratio adjustments.
-    - `displayWidth`{{Optional_Inline}}
+    - `displayWidth` {{optional_inline}}
       - : An integer representing the intended display width of each output {{domxref("EncodedVideoChunk")}} in pixels when displayed.
-    - `displayHeight`{{Optional_Inline}}
+    - `displayHeight` {{optional_inline}}
       - : An integer representing the vertical dimension of each output {{domxref("EncodedVideoChunk")}} in pixels when displayed.
     - `hardwareAcceleration`
       - : A hint that configures the hardware acceleration method of this codec. One of:
@@ -47,7 +43,7 @@ VideoEncoder.configure(config)
         - `"discard"` (default)
         - `"keep"`
     - `scalabilityMode`
-      - : A {{domxref("DOMString", "string")}} containing an encoding scalability mode identifier as defined in [WebRTC](https://w3c.github.io/webrtc-svc/#scalabilitymodes*).
+      - : A string containing an encoding scalability mode identifier as defined in [WebRTC](https://w3c.github.io/webrtc-svc/#scalabilitymodes*).
     - `bitrateMode`
       - : A string containing a bitrate mode. One of:
         - `"constant"`
@@ -57,13 +53,13 @@ VideoEncoder.configure(config)
         - `"quality"` (default)
         - `"realtime"`
 
-### Return Value
+### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 
-- `TypeError` {{domxref("DOMException")}}
+- {{jsxref("TypeError")}}
   - : Thrown if the provided `config` is invalid.
 - `InvalidStateError` {{domxref("DOMException")}}
   - : Thrown if the {{domxref("VideoEncoder.state","state")}} is `"closed"`.
@@ -79,11 +75,11 @@ const init = {
   output: handleChunk,
   error: (e) => {
     console.log(e.message);
-  }
+  },
 };
 
 let config = {
-  codec: 'vp8',
+  codec: "vp8",
   width: 640,
   height: 480,
   bitrate: 2_000_000, // 2 Mbps

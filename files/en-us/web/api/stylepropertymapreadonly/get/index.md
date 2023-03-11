@@ -1,17 +1,11 @@
 ---
 title: StylePropertyMapReadOnly.get()
 slug: Web/API/StylePropertyMapReadOnly/get
-tags:
-  - API
-  - CSS Typed Object Model API
-  - Experimental
-  - Houdini
-  - Method
-  - Reference
-  - get()
+page-type: web-api-instance-method
 browser-compat: api.StylePropertyMapReadOnly.get
 ---
-{{APIRef("CSS Typed Object Model API")}}{{SeeCompatTable}}
+
+{{APIRef("CSS Typed Object Model API")}}
 
 The **`get()`** method of the
 {{domxref("StylePropertyMapReadOnly")}} interface returns a {{domxref("CSSStyleValue")}}
@@ -19,13 +13,13 @@ object for the first value of the specified property.
 
 ## Syntax
 
-```js
-var declarationBlock = StylePropertyMapReadOnly.get(property)
+```js-nolint
+get(property)
 ```
 
 ### Parameters
 
-- property
+- `property`
   - : The name of the property to retrieve the value of.
 
 ### Return value
@@ -40,7 +34,7 @@ JavaScript:
 
 ```html
 <p>
-   <a href="https://example.com">Link</a>
+  <a href="https://example.com">Link</a>
 </p>
 <dl id="results"></dl>
 ```
@@ -52,8 +46,8 @@ p {
   font-weight: bold;
 }
 a {
-   --color: red;
-   color: var(--color);
+  --color: red;
+  color: var(--color);
 }
 ```
 
@@ -65,29 +59,28 @@ those values.
 
 ```js
 // get the element
-const myElement = document.querySelector('a');
+const myElement = document.querySelector("a");
 
 // Retrieve all computed styles with computedStyleMap()
 const styleMap = myElement.computedStyleMap();
 
 // get the <dl> we'll be populating
-const stylesList = document.querySelector('#results');
+const stylesList = document.querySelector("#results");
 
 // array of properties we're interested in
-const ofInterest = ['font-weight', 'border-left-color', 'color', '--color'];
+const ofInterest = ["font-weight", "border-left-color", "color", "--color"];
 
 // iterate over our properties of interest
-for ( let i = 0; i < ofInterest.length; i++ ) {
-
+for (const property of ofInterest) {
   // properties
-  const cssProperty = document.createElement('dt');
-  cssProperty.innerText = ofInterest[i];
+  const cssProperty = document.createElement("dt");
+  cssProperty.innerText = property;
   stylesList.appendChild(cssProperty);
 
   // values
-  const cssValue = document.createElement('dd');
+  const cssValue = document.createElement("dd");
   // use get() to find the value
-  cssValue.innerText = styleMap.get(ofInterest[i]);
+  cssValue.innerText = styleMap.get(property);
   stylesList.appendChild(cssValue);
 }
 ```
@@ -104,6 +97,5 @@ for ( let i = 0; i < ofInterest.length; i++ ) {
 
 ## See also
 
-- [CSS Typed Object Model API](/en-US/docs/Web/Houdini/CSS_Typed_OM)
-- [Learning Houdini: the CSS Typed
-  Object Model](/en-US/docs/Web/Houdini/learn/CSS_Typed_OM)
+- [CSS Typed Object Model API](/en-US/docs/Web/API/CSS_Typed_OM_API)
+- [Learning Houdini: the CSS Typed Object Model](/en-US/docs/Web/API/CSS_Typed_OM_API/Guide)

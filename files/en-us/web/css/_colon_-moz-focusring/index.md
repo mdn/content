@@ -1,15 +1,12 @@
 ---
-title: ':-moz-focusring'
+title: ":-moz-focusring"
 slug: Web/CSS/:-moz-focusring
-tags:
-  - CSS
-  - CSS:Mozilla Extensions
-  - Non-standard
-  - Pseudo-class
-  - Reference
-  - Selector
+page-type: css-pseudo-class
+status:
+  - non-standard
 browser-compat: css.selectors.-moz-focusring
 ---
+
 {{Non-standard_header}}{{CSSRef}}
 
 The **`:-moz-focusring`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) is a [Mozilla extension](/en-US/docs/Web/CSS/Mozilla_Extensions) that is similar to the {{cssxref(":focus")}} pseudo-class, but it only matches an element if it's currently focused _and_ a focus ring or other indicator should be drawn around it.
@@ -25,7 +22,9 @@ The working group previously [intended to add this feature to CSS Selectors 4 or
 ## Syntax
 
 ```css
-:-moz-focusring
+:-moz-focusring {
+  /* ... */
+}
 ```
 
 ## Example
@@ -64,4 +63,4 @@ Not part of any standard.
 ## See also
 
 - {{cssxref(":focus-visible")}}
-- {{bug("418521")}}
+- [Firefox bug 418521](https://bugzil.la/418521)

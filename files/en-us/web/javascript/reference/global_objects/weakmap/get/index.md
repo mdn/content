@@ -1,14 +1,10 @@
 ---
 title: WeakMap.prototype.get()
 slug: Web/JavaScript/Reference/Global_Objects/WeakMap/get
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Prototype
-  - WeakMap
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.WeakMap.get
 ---
+
 {{JSRef}}
 
 The **`get()`** method returns a specified element from a
@@ -18,7 +14,7 @@ The **`get()`** method returns a specified element from a
 
 ## Syntax
 
-```js
+```js-nolint
 get(key)
 ```
 
@@ -37,11 +33,11 @@ the key can't be found, {{jsxref("undefined")}} is returned.
 ### Using the get() method
 
 ```js
-var wm = new WeakMap();
-wm.set(window, 'foo');
+const wm = new WeakMap();
+wm.set(window, "foo");
 
 wm.get(window); // Returns "foo".
-wm.get('baz');  // Returns undefined.
+wm.get("baz"); // Returns undefined.
 ```
 
 ## Specifications
@@ -55,5 +51,5 @@ wm.get('baz');  // Returns undefined.
 ## See also
 
 - {{jsxref("WeakMap")}}
-- {{jsxref("WeakMap.set()")}}
-- {{jsxref("WeakMap.has()")}}
+- {{jsxref("WeakMap.prototype.set()")}}
+- {{jsxref("WeakMap.prototype.has()")}}

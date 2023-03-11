@@ -1,18 +1,10 @@
 ---
 title: SensorErrorEvent
 slug: Web/API/SensorErrorEvent
-tags:
-  - API
-  - Error
-  - Generic Sensor API
-  - Interface
-  - Reference
-  - Sensor
-  - Sensor APIs
-  - SensorErrorEvent
-  - Sensors
+page-type: web-api-interface
 browser-compat: api.SensorErrorEvent
 ---
+
 {{APIRef("Sensor API")}}
 
 The **`SensorErrorEvent`** interface of the [Sensor APIs](/en-US/docs/Web/API/Sensor_APIs) provides information about errors thrown by a {{domxref('Sensor')}} or derived interface.
@@ -24,9 +16,9 @@ The **`SensorErrorEvent`** interface of the [Sensor APIs](/en-US/docs/Web/API/Se
 - {{domxref("SensorErrorEvent.SensorErrorEvent", "SensorErrorEvent()")}}
   - : Creates a new `SensorErrorEvent` object.
 
-## Properties
+## Instance properties
 
-- {{domxref('SensorErrorEvent.error')}} {{readonlyinline}}
+- {{domxref('SensorErrorEvent.error')}} {{ReadOnlyInline}}
   - : Returns the {{domxref('DOMException')}} object passed in the event's constructor.
 
 ## Specifications

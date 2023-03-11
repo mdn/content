@@ -1,14 +1,12 @@
 ---
 title: max-content
 slug: Web/CSS/max-content
-tags:
-  - CSS
-  - CSS Grid
-  - Reference
-  - max-content
-  - sizing
+page-type: css-keyword
 browser-compat: css.properties.width.max-content
 ---
+
+{{CSSRef}}
+
 The `max-content` sizing keyword represents the intrinsic maximum width or height of the content. For text content this means that the content will not wrap at all even if it causes overflows.
 
 ## Syntax
@@ -22,12 +20,6 @@ block-size: max-content;
 
 /* used in grid tracks */
 grid-template-columns: 200px 1fr max-content;
-
-/* Global values */
-max-content: inherit;
-max-content: initial;
-max-content: revert;
-max-content: unset;
 ```
 
 ## Examples
@@ -39,7 +31,9 @@ max-content: unset;
 ```html
 <div id="container">
   <div class="item">Item</div>
-  <div class="item">Item with more text in it which will overflow the fixed width box.</div>
+  <div class="item">
+    Item with more text in it which will overflow the fixed width box.
+  </div>
 </div>
 ```
 
@@ -71,9 +65,7 @@ max-content: unset;
 ```html
 <div id="container">
   <div>Item</div>
-  <div>
-    Item with more text in it.
-  </div>
+  <div>Item with more text in it.</div>
   <div>Flexible item</div>
 </div>
 ```
@@ -107,8 +99,6 @@ max-content: unset;
 {{Specifications}}
 
 ## Browser compatibility
-
-### Supported for width (and other sizing properties)
 
 {{Compat}}
 

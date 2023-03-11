@@ -1,17 +1,13 @@
 ---
 title: XRRenderState.inlineVerticalFieldOfView
 slug: Web/API/XRRenderState/inlineVerticalFieldOfView
-tags:
-  - API
-  - Field of View
-  - Vertical Field of View
-  - WebXR
-  - WebXR Device API
-  - Property
-  - Experimental
+page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.XRRenderState.inlineVerticalFieldOfView
 ---
-{{APIRef("WebXR Device API")}}
+
+{{APIRef("WebXR Device API")}}{{SeeCompatTable}}
 
 The read-only **`inlineVerticalFieldOfView`**
 property of the {{DOMxRef("XRRenderState")}} interface returns the default vertical

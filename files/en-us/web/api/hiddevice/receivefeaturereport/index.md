@@ -1,15 +1,13 @@
 ---
 title: HIDDevice.receiveFeatureReport()
 slug: Web/API/HIDDevice/receiveFeatureReport
-tags:
-  - API
-  - Method
-  - Reference
-  - receiveFeatureReport
-  - HIDDevice
+page-type: web-api-instance-method
+status:
+  - experimental
 browser-compat: api.HIDDevice.receiveFeatureReport
 ---
-{{securecontext_header}}{{DefaultAPISidebar("WebHID API")}}
+
+{{securecontext_header}}{{APIRef("WebHID API")}}{{SeeCompatTable}}
 
 The **`receiveFeatureReport()`** method of the {{domxref("HIDDevice")}} interface receives a feature report from the HID device. Feature reports are a way for HID devices and applications to exchange non-standardized HID data.
 
@@ -17,8 +15,8 @@ The `reportId` for each of the report formats that this device supports can be r
 
 ## Syntax
 
-```js
-HIDDevice.receiveFeatureReport(reportId);
+```js-nolint
+receiveFeatureReport(reportId)
 ```
 
 ### Parameters
@@ -32,7 +30,7 @@ A {{jsxref("Promise")}} which resolves with a {{jsxref("DataView")}} object cont
 
 ### Exceptions
 
-- {{domxref("DOMException")}} `NotAllowedError`
+- `NotAllowedError` {{domxref("DOMException")}}
   - : Thrown if receiving the report fails for any reason.
 
 ## Examples

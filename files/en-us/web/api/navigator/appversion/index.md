@@ -1,15 +1,12 @@
 ---
 title: Navigator.appVersion
 slug: Web/API/Navigator/appVersion
-tags:
-  - API
-  - Deprecated
-  - Navigator
-  - Property
-  - Reference
-  - appVersion
+page-type: web-api-instance-property
+status:
+  - deprecated
 browser-compat: api.Navigator.appVersion
 ---
+
 {{APIRef("HTML DOM")}} {{Deprecated_Header}}
 
 Returns either "`4.0`" or a string representing version information about
@@ -17,21 +14,15 @@ the browser.
 
 > **Note:** Do not rely on this property to return the correct browser version.
 
-## Syntax
-
-```js
-window.navigator.appVersion
-```
-
-### Value
+## Value
 
 Either "`4.0`" or a string representing version information about the
 browser.
 
-## Example
+## Examples
 
 ```js
-alert('Your browser version is reported as ' + navigator.appVersion);
+alert(`Your browser version is reported as ${navigator.appVersion}`);
 ```
 
 ## Notes

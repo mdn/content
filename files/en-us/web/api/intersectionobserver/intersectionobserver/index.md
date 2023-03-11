@@ -1,16 +1,10 @@
 ---
 title: IntersectionObserver()
 slug: Web/API/IntersectionObserver/IntersectionObserver
-tags:
-  - API
-  - Constructor
-  - Intersection Observer API
-  - IntersectionObserver
-  - Reference
-  - Visibility
-  - Visible
+page-type: web-api-constructor
 browser-compat: api.IntersectionObserver.IntersectionObserver
 ---
+
 {{APIRef("Intersection Observer API")}}
 
 The **`IntersectionObserver()`** constructor creates and returns a new {{domxref("IntersectionObserver")}} object.
@@ -23,7 +17,7 @@ If the threshold list is empty, it's set to the array `[0.0]`.
 
 ## Syntax
 
-```js
+```js-nolint
 new IntersectionObserver(callback)
 new IntersectionObserver(callback, options)
 ```
@@ -70,18 +64,17 @@ Call its {{domxref("IntersectionObserver.observe", "observe()")}} method to begi
 
 ### Exceptions
 
-- `SyntaxError`
+- `SyntaxError` {{domxref("DOMException")}}
   - : The specified `rootMargin` is invalid.
-- `RangeError`
+- {{jsxref("RangeError")}}
   - : One or more of the values in `threshold` is outside the range 0.0 to 1.0.
 
-## Example
+## Examples
 
 This example creates a new intersection observer which calls the function `myObserverCallback` every time the visible area of the element being observed changes by at least 10%.
 
 ```js
-let observer = new IntersectionObserver(myObserverCallback,
-                   {threshold: 0.1});
+let observer = new IntersectionObserver(myObserverCallback, { threshold: 0.1 });
 ```
 
 ## Specifications

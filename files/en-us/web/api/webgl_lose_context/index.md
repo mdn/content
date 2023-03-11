@@ -1,13 +1,10 @@
 ---
 title: WEBGL_lose_context
 slug: Web/API/WEBGL_lose_context
-tags:
-  - API
-  - Reference
-  - WebGL
-  - WebGL extension
+page-type: webgl-extension
 browser-compat: api.WEBGL_lose_context
 ---
+
 {{APIRef("WebGL")}}
 
 The **WEBGL_lose_context** extension is part of the [WebGL API](/en-US/docs/Web/API/WebGL_API) and exposes functions to simulate losing and restoring a {{domxref("WebGLRenderingContext")}}.
@@ -16,7 +13,7 @@ WebGL extensions are available using the {{domxref("WebGLRenderingContext.getExt
 
 > **Note:** This extension is available to both, {{domxref("WebGLRenderingContext", "WebGL1", "", 1)}} and {{domxref("WebGL2RenderingContext", "WebGL2", "", 1)}} contexts.
 
-## Methods
+## Instance methods
 
 - {{domxref("WEBGL_lose_context.loseContext()")}}
   - : Simulates losing the context.

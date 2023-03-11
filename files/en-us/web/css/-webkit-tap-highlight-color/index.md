@@ -1,20 +1,13 @@
 ---
-title: '-webkit-tap-highlight-color'
+title: "-webkit-tap-highlight-color"
 slug: Web/CSS/-webkit-tap-highlight-color
-tags:
-  - CSS
-  - CSS Property
-  - NeedsCompatTable
-  - NeedsExample
-  - Non-standard
-  - Reference
-  - WebKit
-  - recipe:css-property
+page-type: css-property
+status:
+  - non-standard
 browser-compat: css.properties.-webkit-tap-highlight-color
 ---
-{{ CSSRef() }}
 
-{{ Non-standard_header() }}
+{{CSSRef}}{{Non-standard_header}}
 
 **`-webkit-tap-highlight-color`** is a non-standard CSS property that sets the color of the highlight that appears over a link while it's being tapped. The highlighting indicates to the user that their tap is being successfully recognized, and indicates which element they're tapping on.
 
@@ -35,11 +28,14 @@ A {{Cssxref("&lt;color&gt;")}}.
 
 ## Formal syntax
 
-{{csssyntax}}
+```plain
+-webkit-tap-highlight-color =
+  <color>
+```
 
 ## Specifications
 
-Not part of any standard. Apple has [a description in the Safari Web Content Guide](https://developer.apple.com/library/mac/documentation/AppleApplications/Reference/SafariWebContent/AdjustingtheTextSize/AdjustingtheTextSize.html#//apple_ref/doc/uid/TP40006510-SW5).
+Not part of any standard. Apple has [a description in the Safari Web Content Guide](https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariWebContent/AdjustingtheTextSize/AdjustingtheTextSize.html#//apple_ref/doc/uid/TP40006510-SW5).
 
 ## Browser compatibility
 

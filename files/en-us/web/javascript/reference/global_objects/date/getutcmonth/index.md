@@ -1,14 +1,10 @@
 ---
 title: Date.prototype.getUTCMonth()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getUTCMonth
-tags:
-  - Date
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.Date.getUTCMonth
 ---
+
 {{JSRef}}
 
 The **`getUTCMonth()`** returns the month of the specified date
@@ -19,15 +15,15 @@ of the year).
 
 ## Syntax
 
-```js
+```js-nolint
 getUTCMonth()
 ```
 
 ### Return value
 
-A `number`. If the `Date` object represents a valid date, an integer number, between 0 and 11,
+A number. If the `Date` object represents a valid date, an integer number, between 0 and 11,
 corresponding to the month of the given date according to universal time. 0 for January,
-1 for February, 2 for March, and so on. Otherwise, [`NaN`](/en-us/docs/Web/JavaScript/Reference/Global_Objects/Number/NaN)
+1 for February, 2 for March, and so on. Otherwise, [`NaN`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/NaN)
 if the `Date` object doesn't represent a valid date.
 
 ## Examples
@@ -38,8 +34,8 @@ The following example assigns the month portion of the current date to the varia
 `month`.
 
 ```js
-var today = new Date();
-var month = today.getUTCMonth();
+const today = new Date();
+const month = today.getUTCMonth();
 ```
 
 ## Specifications

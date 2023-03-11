@@ -1,19 +1,10 @@
 ---
 title: perspective
 slug: Web/CSS/perspective
-tags:
-  - 3D
-  - CSS
-  - CSS Property
-  - CSS Transforms
-  - Distance
-  - Graphics
-  - Property
-  - Reference
-  - perspective
-  - recipe:css-property
+page-type: css-property
 browser-compat: css.properties.perspective
 ---
+
 {{CSSRef}}
 
 The **`perspective`** [CSS](/en-US/docs/Web/CSS) property determines the distance between the z=0 plane and the user in order to give a 3D-positioned element some perspective.
@@ -34,6 +25,7 @@ perspective: 3.5em;
 perspective: inherit;
 perspective: initial;
 perspective: revert;
+perspective: revert-layer;
 perspective: unset;
 ```
 
@@ -42,7 +34,7 @@ perspective: unset;
 - `none`
   - : Indicates that no perspective transform is to be applied.
 - `<length>`
-  - : A {{cssxref("&lt;length&gt;")}} giving the distance from the user to the z=0 plane. It is used to apply a perspective transform to the children of the element.  Negative values are syntax errors.  If the value is smaller than `1px`, it is clamped to `1px`.
+  - : A {{cssxref("&lt;length&gt;")}} giving the distance from the user to the z=0 plane. It is used to apply a perspective transform to the children of the element. Negative values are syntax errors. If the value is smaller than `1px`, it is clamped to `1px`.
 
 ## Description
 

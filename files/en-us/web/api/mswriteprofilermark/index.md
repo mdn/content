@@ -1,9 +1,9 @@
 ---
 title: msWriteProfilerMark
 slug: Web/API/msWriteProfilerMark
-tags:
-  - msWriteProfilerMark
+page-type: web-api-global-function
 ---
+
 {{APIRef("HTML DOM")}}
 
 {{Non-standard_header()}}
@@ -14,14 +14,14 @@ This proprietary method is specific to Internet Explorer and Microsoft Edge.
 
 ## Syntax
 
-```js
- window.msWriteProfilerMark("start-render");
+```js-nolint
+msWriteProfilerMark(profilerMarkName)
 ```
 
 ### Parameters
 
-- _bstrProfilerMarkName_\[in]
-  - : An event name. Type = **String**. This parameter may be null.
+- `profilerMarkName`
+  - : A string containing the event name. This parameter is not optional but may be `null`.
 
 ### Return value
 
@@ -29,7 +29,7 @@ Type: `HRESULT`. If this method succeeds, it returns `S_OK`. Otherwise, it retur
 
 ### Notes
 
-`msWriteProfilerMark` enables you to inject DOM based performance markers in addition to existing Javascript API to learn exactly when parts of the page are being rendered, building a waterfall view for every one of our impressions showing latency per object, which can be useful for more accurately debugging real users perf issues.
+`msWriteProfilerMark` enables you to inject DOM based performance markers in addition to existing JavaScript API to learn exactly when parts of the page are being rendered, building a waterfall view for every one of our impressions showing latency per object, which can be useful for more accurately debugging real users perf issues.
 
 Internet Explorer 10. This method is also available in the Web Worker global scope.
 
@@ -45,7 +45,7 @@ This method is useful to profile real website performance by using the operating
 
 ```js
 if (msWriteProfilerMark) {
- msWriteProfilerMark("Mark1");
+  msWriteProfilerMark("Mark1");
 }
 ```
 

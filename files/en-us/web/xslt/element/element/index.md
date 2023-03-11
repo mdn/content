@@ -1,11 +1,8 @@
 ---
 title: <xsl:element>
 slug: Web/XSLT/Element/element
-tags:
-  - Element
-  - Reference
-  - XSLT
 ---
+
 {{ XsltRef() }}
 
 The `<xsl:element>` element creates an element in the output document.

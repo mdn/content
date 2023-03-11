@@ -1,17 +1,10 @@
 ---
 title: Window.matchMedia()
 slug: Web/API/Window/matchMedia
-tags:
-  - API
-  - CSSOM View
-  - HTML DOM
-  - JavaScript
-  - Media Queries
-  - Method
-  - Reference
-  - Window
+page-type: web-api-instance-method
 browser-compat: api.Window.matchMedia
 ---
+
 {{APIRef}}
 
 The {{domxref("Window")}} interface's **`matchMedia()`** method
@@ -22,8 +15,8 @@ media query.
 
 ## Syntax
 
-```js
-mqList = window.matchMedia(mediaQueryString)
+```js-nolint
+matchMedia(mediaQueryString)
 ```
 
 ### Parameters
@@ -49,7 +42,7 @@ requirements.
 
 If you need to be kept aware of whether or not the document matches the media query at
 all times, you can instead watch for the {{domxref("MediaQueryList.change_event",
-  "change")}} event to be delivered to the object. There's [a good example of this](/en-US/docs/Web/API/Window/devicePixelRatio#example)
+  "change")}} event to be delivered to the object. There's [a good example of this](/en-US/docs/Web/API/Window/devicePixelRatio#monitoring_screen_resolution_or_zoom_level_changes)
 in the article on {{domxref("Window.devicePixelRatio")}}.
 
 ## Examples
@@ -95,8 +88,7 @@ A simple `<span>` to receive the output.
 
 {{EmbedLiveSample("Examples", "100%", "60")}}
 
-See [Testing media
-queries programmatically](/en-US/docs/Web/CSS/Media_Queries/Testing_media_queries) for additional code examples.
+See [Testing media queries programmatically](/en-US/docs/Web/CSS/Media_Queries/Testing_media_queries) for additional code examples.
 
 ## Specifications
 

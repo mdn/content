@@ -1,12 +1,10 @@
 ---
 title: image-rendering
 slug: Web/SVG/Attribute/image-rendering
-tags:
-  - NeedsExample
-  - SVG
-  - SVG Attribute
+page-type: svg-attribute
 browser-compat: svg.attributes.presentation.image-rendering
 ---
+
 {{SVGRef}}
 
 The **`image-rendering`** attribute provides a hint to the browser about how to make speed vs. quality tradeoffs as it performs image processing.
@@ -50,38 +48,7 @@ You can use this attribute with the following SVG elements:
 
 ## Specifications
 
-<table class="no-markdown">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        {{SpecName("CSS3 Images", "#the-image-rendering", "image-rendering")}}
-      </td>
-      <td>{{Spec2("CSS3 Images")}}</td>
-      <td>Definition in CSS</td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("SVG2", "painting.html#ImageRenderingProperty", "image-rendering")}}
-      </td>
-      <td>{{Spec2("SVG2")}}</td>
-      <td>No significant change, only added a reference to CSS Images 3</td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("SVG1.1", "painting.html#ImageRenderingProperty", "image-rendering")}}
-      </td>
-      <td>{{Spec2("SVG1.1")}}</td>
-      <td>Initial definition</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 ## Browser compatibility
 

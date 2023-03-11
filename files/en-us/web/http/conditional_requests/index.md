@@ -1,11 +1,8 @@
 ---
 title: HTTP conditional requests
 slug: Web/HTTP/Conditional_requests
-tags:
-  - Conditional Requests
-  - Guide
-  - HTTP
 ---
+
 {{HTTPSidebar}}
 
 HTTP has a concept of _conditional requests_, where the result, and even the success of a request, can be changed by comparing the affected resources with the value of a _validator_. Such requests can be useful to validate the content of a cache, and sparing a useless control, to verify the integrity of a document, like when resuming a download, or when preventing lost updates when uploading or modifying a document on the server.
@@ -68,13 +65,14 @@ The most common use case for conditional requests is updating a cache. With an e
 
 Together with the resource, the validators are sent in the headers. In this example, both {{HTTPHeader("Last-Modified")}} and {{HTTPHeader("ETag")}} are sent, but it could equally have been only one of them. These validators are cached with the resource (like all headers) and will be used to craft conditional requests, once the cache becomes stale.
 
-As long as the cache is not stale, no requests are issued at all. But once it has become stale, this is mostly controlled by the {{HTTPHeader("Cache-Control")}} header, the client doesn't use the cached value directly but issues a _conditional request_. The value of the validator is used as a parameter of the {{HTTPHeader("If-Modified-Since")}} and {{HTTPHeader("If-Match")}} headers.
+As long as the cache is not stale, no requests are issued at all. But once it has become stale, this is mostly controlled by the {{HTTPHeader("Cache-Control")}} header, the client doesn't use the cached value directly but issues a _conditional request_. The value of the validator is used as a parameter of the {{HTTPHeader("If-Modified-Since")}} and {{HTTPHeader("If-None-Match")}} headers.
 
 If the resource has not changed, the server sends back a {{HTTPStatus("304")}} `Not Modified` response. This makes the cache fresh again, and the client uses the cached resource. Although there is a response/request round-trip that consumes some resources, this is more efficient than to transmit the whole resource over the wire again.
 
 ![With a stale cache, the conditional request is sent. The server can determine if the resource changed, and, as in this case, decide not to send it again as it is the same.](httpcache2.png)
 
-If the resource has changed, the server just sends back a {{HTTPStatus("200", "200 OK")}} response, with the new version of the resource, like if the request wasn't conditional and the client uses this new resource (and caches it).
+If the resource has changed, the server just sends back a {{HTTPStatus("200", "200 OK")}} response, with the new version of the resource (as though the request wasn't conditional).
+The client uses this new resource (and caches it).
 
 ![In the case where the resource was changed, it is sent back as if the request wasn't conditional.](httpcache3.png)
 

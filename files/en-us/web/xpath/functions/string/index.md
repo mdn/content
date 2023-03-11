@@ -1,10 +1,8 @@
 ---
 title: string
 slug: Web/XPath/Functions/string
-tags:
-  - XSLT
-  - XSLT_Reference
 ---
+
 {{ XsltRef() }}
 
 The `string` function converts the given argument to a string.
@@ -17,7 +15,7 @@ string( [object] )
 
 ### Arguments
 
-- _`object`_(optional)
+- `object` (optional)
   - : The object to convert to a string. If omitted, the context node is used.
 
 ### Returns
@@ -40,7 +38,7 @@ A string
 
 ### Defined
 
-[XPath 1.0 4.2](https://www.w3.org/TR/xpath#function-string)
+[XPath 1.0 4.2](https://www.w3.org/TR/1999/REC-xpath-19991116/#function-string)
 
 ### Gecko support
 

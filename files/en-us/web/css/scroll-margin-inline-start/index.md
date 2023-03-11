@@ -1,16 +1,10 @@
 ---
 title: scroll-margin-inline-start
 slug: Web/CSS/scroll-margin-inline-start
-tags:
-  - CSS
-  - CSS Property
-  - Reference
-  - Web
-  - recipe:css-property
-  - scroll-margin-inline
-  - scroll-margin-inline-start
+page-type: css-property
 browser-compat: css.properties.scroll-margin-inline-start
 ---
+
 {{CSSRef}}
 
 The `scroll-margin-inline-start` property defines the margin of the scroll snap area at the start of the inline dimension that is used for snapping this box to the snapport. The scroll snap area is determined by taking the transformed border box, finding its rectangular bounding box (axis-aligned in the scroll container's coordinate space), then adding the specified outsets.
@@ -28,6 +22,7 @@ scroll-margin-inline-start: 1em;
 scroll-margin-inline-start: inherit;
 scroll-margin-inline-start: initial;
 scroll-margin-inline-start: revert;
+scroll-margin-inline-start: revert-layer;
 scroll-margin-inline-start: unset;
 ```
 
@@ -67,7 +62,7 @@ The HTML that represents the blocks is very simple:
 
 #### CSS
 
-Let's walk through the CSS. the outer container is styled like this:
+Let's walk through the CSS. The outer container is styled like this:
 
 ```css
 .scroller {

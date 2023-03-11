@@ -1,20 +1,21 @@
 ---
 title: Screen
 slug: Web/API/Screen
-tags:
-  - API
-  - CSSOM View
-  - Interface
-  - Reference
+page-type: web-api-interface
 browser-compat: api.Screen
 ---
+
 {{APIRef("CSSOM")}}
 
 The `Screen` interface represents a screen, usually the one on which the current window is being rendered, and is obtained using {{DOMxRef("window.screen")}}.
 
 Note that browsers determine which screen to report as current by detecting which screen has the center of the browser window.
 
-## Properties
+{{InheritanceDiagram}}
+
+## Instance properties
+
+_Also inherits properties from its parent {{domxref("EventTarget")}}_.
 
 - {{DOMxRef("Screen.availTop")}} {{Non-standard_Inline}}
   - : Specifies the y-coordinate of the first pixel that is not allocated to permanent or semipermanent user interface features.
@@ -34,7 +35,7 @@ Note that browsers determine which screen to report as current by detecting whic
   - : Returns the {{DOMxRef("ScreenOrientation")}} instance associated with this screen.
 - {{DOMxRef("Screen.pixelDepth")}}
   - : Gets the bit depth of the screen.
-- {{DOMxRef("Screen.top")}} {{deprecated_inline}}{{Non-standard_Inline}}
+- {{DOMxRef("Screen.top")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : Returns the distance in pixels from the top side of the current screen.
 - {{DOMxRef("Screen.width")}}
   - : Returns the width of the screen.
@@ -43,21 +44,19 @@ Note that browsers determine which screen to report as current by detecting whic
 - {{DOMxRef("Screen.mozBrightness")}} {{Non-standard_Inline}} {{Deprecated_Inline}}
   - : Controls the brightness of a device's screen. A double between 0 and 1.0 is expected.
 
-### Events handler
+## Instance methods
 
-- {{DOMxRef("Screen.onorientationchange")}} {{Deprecated_Inline}}
-  - : A handler for the {{Event("orientationchange")}} event.
+_Also inherits methods from its parent {{domxref("EventTarget")}}_.
 
-## Methods
-
-- {{DOMxRef("Screen.lockOrientation")}} {{Non-standard_Inline}} {{Deprecated_Inline}}
+- {{DOMxRef("Screen.lockOrientation")}} {{Deprecated_Inline}}
   - : Lock the screen orientation (only works in fullscreen or for installed apps)
-- {{DOMxRef("Screen.unlockOrientation")}} {{Non-standard_Inline}} {{Deprecated_Inline}}
+- {{DOMxRef("Screen.unlockOrientation")}} {{Deprecated_Inline}}
   - : Unlock the screen orientation (only works in fullscreen or for installed apps)
 
-_Methods inherited from {{DOMxRef("EventTarget")}}:_
+## Events
 
-{{Page("/en-US/docs/Web/API/EventTarget", "Methods")}}
+- {{DOMxRef("Screen.orientationchange_event", "orientationchange")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
+  - : Fires when the screen orientation changes.
 
 ## Example
 

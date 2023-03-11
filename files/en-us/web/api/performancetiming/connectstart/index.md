@@ -1,19 +1,13 @@
 ---
 title: PerformanceTiming.connectStart
 slug: Web/API/PerformanceTiming/connectStart
-tags:
-  - API
-  - Backwards compatibility
-  - Deprecated
-  - HTML
-  - Navigation Timing
-  - PerformanceTiming
-  - Property
-  - Read-only
-  - legacy
+page-type: web-api-instance-property
+status:
+  - deprecated
 browser-compat: api.PerformanceTiming.connectStart
 ---
-{{APIRef("Navigation Timing")}}{{Deprecated_Header}}
+
+{{APIRef("Performance API")}}{{Deprecated_Header}}
 
 > **Warning:** This interface of this property is deprecated in the [Navigation Timing Level 2 specification](https://w3c.github.io/navigation-timing/#obsolete). Please use the {{domxref("PerformanceNavigationTiming")}}
 > interface instead.
@@ -27,11 +21,9 @@ started again, the last connection establishment start time is given. If a persi
 connection is used, the value will be the same as
 {{domxref("PerformanceTiming.fetchStart")}}.
 
-## Syntax
+## Value
 
-```js
-time = performanceTiming.connectStart;
-```
+An `unsigned long long`.
 
 ## Specifications
 

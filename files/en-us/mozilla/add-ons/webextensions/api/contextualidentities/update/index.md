@@ -1,17 +1,10 @@
 ---
 title: contextualIdentities.update()
 slug: Mozilla/Add-ons/WebExtensions/API/contextualIdentities/update
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Reference
-  - Update
-  - WebExtensions
-  - contextualIdentities
+page-type: webextension-api-function
 browser-compat: webextensions.api.contextualIdentities.update
 ---
+
 {{AddonSidebar()}}
 
 Updates properties of a contextual identity, given its cookie store ID.
@@ -20,8 +13,8 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ## Syntax
 
-```js
-var createContext = browser.contextualIdentities.update(
+```js-nolint
+let createContext = browser.contextualIdentities.update(
   cookieStoreId,           // string
   details                  // object
 )

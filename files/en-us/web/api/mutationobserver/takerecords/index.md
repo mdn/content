@@ -1,22 +1,10 @@
 ---
 title: MutationObserver.takeRecords()
 slug: Web/API/MutationObserver/takeRecords
-tags:
-  - API
-  - Attribute Changes
-  - Changes
-  - DOM Changes
-  - DOM WHATWG
-  - Method
-  - Mutation Observer
-  - Mutation Observer API
-  - MutationObserver
-  - MutationObserver API
-  - Observer
-  - mutation
-  - takeRecords
+page-type: web-api-instance-method
 browser-compat: api.MutationObserver.takeRecords
 ---
+
 {{APIRef("DOM WHATWG")}}
 
 The {{domxref("MutationObserver")}} method
@@ -31,8 +19,8 @@ observer.
 
 ## Syntax
 
-```js
-const mutationRecords = mutationObserver.takeRecords()
+```js-nolint
+takeRecords()
 ```
 
 ### Parameters
@@ -41,14 +29,14 @@ None.
 
 ### Return value
 
-An array {{domxref("MutationRecord")}} objects, each describing one change applied to
+An array of {{domxref("MutationRecord")}} objects, each describing one change applied to
 the observed portion of the document's DOM tree.
 
 > **Note:** The queue of mutations which have occurred, but not been
 > delivered to the observer's callback is left empty after calling
 > `takeRecords()`.
 
-## Example
+## Examples
 
 In this example, we demonstrate how to handle any undelivered
 {{domxref("MutationRecord")}}s by calling `takeRecords()` just before
@@ -58,13 +46,13 @@ disconnecting the observer.
 const targetNode = document.querySelector("#someElement");
 const observerOptions = {
   childList: true,
-  attributes: true
-}
+  attributes: true,
+};
 
 const observer = new MutationObserver(callback);
 observer.observe(targetNode, observerOptions);
 
-/* ...later, when it's time to stop observing... */
+/* later, when it's time to stop observing… */
 
 /* handle any still-pending mutations */
 
@@ -72,7 +60,7 @@ let mutations = observer.takeRecords();
 
 observer.disconnect();
 
-if (mutations) {
+if (mutations.length > 0) {
   callback(mutations);
 }
 ```

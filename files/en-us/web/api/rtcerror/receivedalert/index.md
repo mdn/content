@@ -1,34 +1,17 @@
 ---
 title: RTCError.receivedAlert
 slug: Web/API/RTCError/receivedAlert
-tags:
-  - API
-  - DTLS
-  - Error
-  - Networking
-  - Property
-  - RTCError
-  - Read-only
-  - Reference
-  - WebRTC
-  - WebRTC API
-  - WebRTC Device API
-  - receivedAlert
+page-type: web-api-instance-property
 browser-compat: api.RTCError.receivedAlert
 ---
+
 {{APIRef("WebRTC")}}
 
 The {{domxref("RTCError")}} read-only property
 **`receivedAlert`** specifies the fatal {{Glossary("DTLS")}}
 error which resulted in an alert being received from the remote peer.
 
-## Syntax
-
-```js
-let receivedAlert = rtcError.receivedAlert;
-```
-
-### Value
+## Value
 
 An unsigned long integer value specifying the fatal {{Glossary("DTLS")}} error which
 resulted in an alert being received from the remote peer.

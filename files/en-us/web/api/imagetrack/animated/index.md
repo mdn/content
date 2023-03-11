@@ -1,19 +1,17 @@
 ---
 title: ImageTrack.animated
 slug: Web/API/ImageTrack/animated
-tags:
-  - API
-  - Property
-  - Reference
-  - animated
-  - ImageTrack
+page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.ImageTrack.animated
 ---
-{{DefaultAPISidebar("WebCodecs API")}}
+
+{{APIRef("WebCodecs API")}}{{SeeCompatTable}}
 
 The **`animated`** property of the {{domxref("ImageTrack")}} interface returns `true` if the track is animated and therefore has multiple frames.
 
-### Value
+## Value
 
 A {{jsxref("boolean")}}, if `true` this is an animated track.
 

@@ -1,22 +1,10 @@
 ---
 title: Request.destination
 slug: Web/API/Request/destination
-tags:
-  - API
-  - Experimental
-  - Fetch
-  - Fetch API
-  - Files
-  - Loading
-  - Networking
-  - Property
-  - Read-only
-  - Reference
-  - data
-  - destination
-  - request
+page-type: web-api-instance-property
 browser-compat: api.Request.destination
 ---
+
 {{APIRef("Fetch")}}
 
 The **`destination`** read-only
@@ -43,20 +31,14 @@ any of the {{domxref("Worklet")}}-based destinations
 {{domxref("Worker")}}-based destinations, including {{domxref("ServiceWorker")}}
 and {{domxref("SharedWorker")}}.
 
-## Syntax
-
-```js
-var destination = request.destination;
-```
-
-### Value
+## Value
 
 A string which indicates the type of content the request is asking for. This type is much broader than the usual document type values (such as `"document"` or `"manifest"`), and may include contextual cues such as `"image"` or `"worker"` or `"audioworklet"`.
 
 Possible values are:
 
 - `""`
-  - : The default value of `destination` is used for destinations that do not have their own value. [navigator.sendBeacon()](/en-US/docs/Web/API/Navigator/sendBeacon), [EventSource](/en-US/docs/Web/API/EventSource), [\<a ping>](/en-US/docs/Web/HTML/Element/a#attr-ping), [\<area ping>](/en-US/docs/Web/HTML/Element/area#attr-ping), [fetch()](/en-US/docs/Web/API/fetch), [XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest), [WebSocket](/en-US/docs/Web/API/WebSocket), [Cache](/en-US/docs/Web/API/Cache) and more.
+  - : The default value of `destination` is used for destinations that do not have their own value. [navigator.sendBeacon()](/en-US/docs/Web/API/Navigator/sendBeacon), [EventSource](/en-US/docs/Web/API/EventSource), [\<a ping>](/en-US/docs/Web/HTML/Element/a#ping), [\<area ping>](/en-US/docs/Web/HTML/Element/area#ping), [fetch()](/en-US/docs/Web/API/fetch), [XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest), [WebSocket](/en-US/docs/Web/API/WebSocket), [Cache](/en-US/docs/Web/API/Cache) and more.
 - `"audio"`
   - : The target is audio data.
 - `"audioworklet"`
@@ -92,17 +74,17 @@ Possible values are:
 - `"worker"`
   - : The target is a worker.
 - `"xslt"`
-  - : The target is an XLST transform.
+  - : The target is an XSLT transform.
 
-## Example
+## Examples
 
 In the following snippet, we create a new request using the
 {{domxref("Request.Request", "Request()")}} constructor (for an image file in the same
 directory as the script), then save the request's destination:
 
 ```js
-var myRequest = new Request('flowers.jpg');
-var myDestination = myRequest.destination; // returns the empty string by default
+const myRequest = new Request("flowers.jpg");
+const myDestination = myRequest.destination; // returns the empty string by default
 ```
 
 ## Specifications

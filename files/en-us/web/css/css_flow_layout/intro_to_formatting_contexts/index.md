@@ -1,16 +1,9 @@
 ---
 title: Introduction to formatting contexts
 slug: Web/CSS/CSS_Flow_Layout/Intro_to_formatting_contexts
-tags:
-  - BFC
-  - Block Formatting Context
-  - CSS
-  - Formatting contexts
-  - Guide
-  - Intermediate
-  - Layout
-  - flow
+page-type: guide
 ---
+
 {{CSSRef}}
 
 This article introduces the concept of formatting contexts, of which there are several types, including block formatting contexts, inline formatting contexts, and flex formatting contexts. The basics of how they behave and how you can make use of these behaviors are also introduced.

@@ -1,10 +1,8 @@
 ---
 title: Use HTML to solve common problems
 slug: Learn/HTML/Howto
-tags:
-  - CodingScripting
-  - HTML
 ---
+
 {{LearnSidebar}}
 
 The following links point to solutions to common everyday problems you'll need to solve with HTML.
@@ -46,13 +44,12 @@ One of the main reasons for HTML is making navigation easy with {{Glossary("hype
 
 HTML only sets up document structure. To solve presentation issues, use {{glossary("CSS")}}, or use scripting to make your page interactive.
 
-- [How to use CSS within a webpage](/en-US/docs/Learn/CSS/First_steps/How_CSS_works#how_to_apply_your_css_to_your_html)
+- [How to use CSS within a webpage](/en-US/docs/Learn/CSS/First_steps/How_CSS_works#applying_css_to_the_dom)
 - [How to use JavaScript within a webpage](/en-US/docs/Learn/HTML/Howto/Use_JavaScript_within_a_webpage)
 
 ### Embedded content
 
 - [How to embed a webpage within another webpage](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies)
-- [How to add Flash content within a webpage](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies#the_%3cembed%3e_and_%3cobject%3e_elements)
 
 ## Uncommon or advanced problems
 

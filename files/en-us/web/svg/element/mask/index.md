@@ -1,12 +1,10 @@
 ---
 title: <mask>
 slug: Web/SVG/Element/mask
-tags:
-  - Element
-  - SVG
-  - SVG Container
+page-type: svg-element
 browser-compat: svg.elements.mask
 ---
+
 {{SVGRef}}
 
 The **`<mask>`** element defines an alpha mask for compositing the current object into the background. A mask is used/referenced using the {{SVGAttr("mask")}} property.
@@ -14,7 +12,11 @@ The **`<mask>`** element defines an alpha mask for compositing the current objec
 ## Example
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
@@ -24,7 +26,9 @@ html,body,svg { height:100% }
     <rect x="0" y="0" width="100" height="100" fill="white" />
 
     <!-- Everything under a black pixel will be invisible -->
-    <path d="M10,35 A20,20,0,0,1,50,35 A20,20,0,0,1,90,35 Q90,65,50,95 Q10,65,10,35 Z" fill="black" />
+    <path
+      d="M10,35 A20,20,0,0,1,50,35 A20,20,0,0,1,90,35 Q90,65,50,95 Q10,65,10,35 Z"
+      fill="black" />
   </mask>
 
   <polygon points="-10,110 110,110 110,-10" fill="orange" />
@@ -40,22 +44,22 @@ html,body,svg { height:100% }
 
 - {{SVGAttr("height")}}
   - : This attribute defines the height of the masking area.
-    *Value type*: [**\<length>**](/en-US/docs/Web/SVG/Content_type#length) ; *Default value*: `120%`; *Animatable*: **yes**
+    _Value type_: [**\<length>**](/en-US/docs/Web/SVG/Content_type#length) ; _Default value_: `120%`; _Animatable_: **yes**
 - {{SVGAttr("maskContentUnits")}}
   - : This attribute defines the coordinate system for the contents of the `<mask>`.
-    *Value type*: `userSpaceOnUse`|`objectBoundingBox` ; *Default value*: `userSpaceOnUse`; *Animatable*: **yes**
+    _Value type_: `userSpaceOnUse`|`objectBoundingBox` ; _Default value_: `userSpaceOnUse`; _Animatable_: **yes**
 - {{SVGAttr("maskUnits")}}
   - : This attribute defines the coordinate system for attributes {{SVGAttr("x")}}, {{SVGAttr("y")}}, {{SVGAttr("width")}} and {{SVGAttr("height")}} on the `<mask>`.
-    *Value type*: `userSpaceOnUse`|`objectBoundingBox` ; *Default value*: `objectBoundingBox`; *Animatable*: **yes**
+    _Value type_: `userSpaceOnUse`|`objectBoundingBox` ; _Default value_: `objectBoundingBox`; _Animatable_: **yes**
 - {{SVGAttr("x")}}
   - : This attribute defines the x-axis coordinate of the top-left corner of the masking area.
-    *Value type*: [**\<coordinate>**](/en-US/docs/Web/SVG/Content_type#coordinate) ; *Default value*: `-10%`; *Animatable*: **yes**
+    _Value type_: [**\<coordinate>**](/en-US/docs/Web/SVG/Content_type#coordinate) ; _Default value_: `-10%`; _Animatable_: **yes**
 - {{SVGAttr("y")}}
   - : This attribute defines the y-axis coordinate of the top-left corner of the masking area.
-    *Value type*: [**\<coordinate>**](/en-US/docs/Web/SVG/Content_type#coordinate) ; *Default value*: `-10%`; *Animatable*: **yes**
+    _Value type_: [**\<coordinate>**](/en-US/docs/Web/SVG/Content_type#coordinate) ; _Default value_: `-10%`; _Animatable_: **yes**
 - {{SVGAttr("width")}}
   - : This attribute defines the width of the masking area.
-    *Value type*: [**\<length>**](/en-US/docs/Web/SVG/Content_type#length) ; *Default value*: `120%`; *Animatable*: **yes**
+    _Value type_: [**\<length>**](/en-US/docs/Web/SVG/Content_type#length) ; _Default value_: `120%`; _Animatable_: **yes**
 
 ### Global attributes
 
@@ -83,4 +87,4 @@ html,body,svg { height:100% }
 ## See also
 
 - Other clipping and masking SVG elements: {{SVGElement("clipPath")}}
-- Clipping and masking CSS properties: {{cssxref("mask")}}, {{cssxref("mask-image")}},{{cssxref("mask-mode")}}, {{cssxref("mask-repeat")}}, {{cssxref("mask-position")}}, {{cssxref("mask-clip")}}, {{cssxref("mask-origin")}}, {{cssxref("mask-composite")}}, {{cssxref("mask-size")}}, {{cssxref("pointer-events")}}
+- Clipping and masking CSS properties: {{cssxref("mask")}}, {{cssxref("mask-image")}}, {{cssxref("mask-mode")}}, {{cssxref("mask-repeat")}}, {{cssxref("mask-position")}}, {{cssxref("mask-clip")}}, {{cssxref("mask-origin")}}, {{cssxref("mask-composite")}}, {{cssxref("mask-size")}}, {{cssxref("pointer-events")}}
