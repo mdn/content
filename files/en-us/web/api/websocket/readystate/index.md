@@ -1,14 +1,10 @@
 ---
 title: WebSocket.readyState
 slug: Web/API/WebSocket/readyState
-tags:
-  - API
-  - Property
-  - Reference
-  - Web API
-  - WebSocket
+page-type: web-api-instance-property
 browser-compat: api.WebSocket.readyState
 ---
+
 {{APIRef("Web Sockets API")}}
 
 The **`WebSocket.readyState`** read-only property returns the

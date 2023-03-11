@@ -1,8 +1,10 @@
 ---
 title: HTMLElement.accessKey
 slug: Web/API/HTMLElement/accessKey
+page-type: web-api-instance-property
 browser-compat: api.HTMLElement.accessKey
 ---
+
 {{APIRef("DOM")}}
 
 The **`HTMLElement.accessKey`** property sets the keystroke which a user can press to jump to a given element.

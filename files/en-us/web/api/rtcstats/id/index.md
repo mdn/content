@@ -1,19 +1,10 @@
 ---
 title: RTCStats.id
 slug: Web/API/RTCStats/id
-tags:
-  - API
-  - Property
-  - RTCStats
-  - Reference
-  - Statistics
-  - Stats
-  - WebRTC
-  - WebRTC API
-  - id
-  - rtc
+page-type: web-api-instance-property
 browser-compat: api.RTCStats.id
 ---
+
 {{APIRef("WebRTC")}}
 
 The **`id`** property of the
@@ -26,15 +17,9 @@ order to monitor statistics over time for a given WebRTC object, such as an
 {{Glossary("RTP")}} stream, an {{domxref("RTCPeerConnection")}}, or an
 {{domxref("RTCDataChannel")}}.
 
-## Syntax
+## Value
 
-```js
-var id = RTCStats.id;
-```
-
-### Value
-
-A {{domxref("DOMString")}} which uniquely identifies the object for which this
+A string which uniquely identifies the object for which this
 `RTCStats`-based object provides statistics.
 
 The format of the ID string is not defined by the specification, so you cannot reliably

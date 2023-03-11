@@ -1,16 +1,9 @@
 ---
 title: Web Animations API Concepts
 slug: Web/API/Web_Animations_API/Web_Animations_API_Concepts
-tags:
-  - Animations
-  - Beginner
-  - CSS
-  - Guide
-  - JavaScript
-  - animate
-  - concepts
-  - web animations api
+page-type: guide
 ---
+
 {{DefaultAPISidebar("Web Animations")}}
 
 The Web Animations API (WAAPI) provides JavaScript developers access to the browser's animation engine and describes how animations should be implemented across browsers. This article will introduce you to the important concepts behind the WAAPI, providing you with a theoretical understanding of how it works so you can use it effectively. To learn how to put the API to use, check out its sister article, [Using the Web Animations API](/en-US/docs/Web/API/Web_Animations_API/Using_the_Web_Animations_API).
@@ -19,7 +12,7 @@ The Web Animations API fills the gap between declarative CSS animations and tran
 
 ## History
 
-Over a decade ago, [Synchronized Multimedia Integration Language, or SMIL](/en-US/docs/Web/SVG/SVG_animation_with_SMIL) (pronounced "smile"), brought animation to SVG. Back then it was the only animation engine browsers had to worry about. While four out of five browsers supported SMIL, it only animated SVG elements, could not be used from CSS, and was very complex — often leading to inconsistent implementations. Ten years later, the Safari team introduced the {{SpecName("CSS3 Animations")}} and {{SpecName("CSS3 Transitions")}} specs.
+Over a decade ago, [Synchronized Multimedia Integration Language, or SMIL](/en-US/docs/Web/SVG/SVG_animation_with_SMIL) (pronounced "smile"), brought animation to SVG. Back then it was the only animation engine browsers had to worry about. While four out of five browsers supported SMIL, it only animated SVG elements, could not be used from CSS, and was very complex — often leading to inconsistent implementations. Ten years later, the Safari team introduced the [CSS Animations](https://drafts.csswg.org/css-animations/) and [CSS Transitions](https://drafts.csswg.org/css-transitions/) specs.
 
 The Internet Explorer team requested an animations API to consolidate and normalize animation functionality across all browsers, and thus efforts began in earnest among Mozilla Firefox and Google Chrome developers to create the one animation spec to rule them all: the Web Animations API. Now we've got the WAAPI for future animation specifications to piggyback on, allowing them to remain consistent and play well together. It also provides a point of reference all browsers can adhere to with the currently available specs.
 
@@ -69,13 +62,9 @@ We can assemble all these pieces together to create a working animation with the
 
 The API allows for the creation of dynamic animations that can be updated on the fly as well as more straightforward, declarative animations like those CSS creates. It can be used in automated tests to ensure that your UI animations are running correctly. It opens up the browser's rendering engine for building animation development tools like timelines. It is also a performant base on which to build a custom or commercial animation library. (See [Animating like you just don't care with Element.animate](https://hacks.mozilla.org/2016/08/animating-like-you-just-dont-care-with-element-animate/).) In some instances, it may negate the need for a fully fledged library entirely in the same way Vanilla JavaScript can be used without jQuery for many purposes.
 
-## Polyfill
-
-The Web Animation API has a [polyfill](https://github.com/web-animations/web-animations-js) that you can use today.
-
 ## See also
 
 - [Web Animations API](/en-US/docs/Web/API/Web_Animations_API) — main page
 - [Using the Web Animations API](/en-US/docs/Web/API/Web_Animations_API/Using_the_Web_Animations_API) — guide
-- The [full suite of Alice in Wonderland demos](http://codepen.io/collection/bpEza/) on CodePen for you to play with, fork, and share
+- The [full suite of Alice in Wonderland demos](https://codepen.io/collection/nqNJvD) on CodePen for you to play with, fork, and share
 - [web-animations-js](https://github.com/web-animations/web-animations-js) — the Web Animations API polyfill

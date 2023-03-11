@@ -1,10 +1,8 @@
 ---
 title: lang
 slug: Web/XPath/Functions/lang
-tags:
-  - XSLT
-  - XSLT_Reference
 ---
+
 {{ XsltRef() }}
 
 The `lang` function determines whether the context node matches the given language and returns boolean true or false.
@@ -58,7 +56,7 @@ The output might be:
 
 ### Defined
 
-[XPath 1.0 4.3](https://www.w3.org/TR/xpath#function-lang)
+[XPath 1.0 4.3](https://www.w3.org/TR/1999/REC-xpath-19991116/#function-lang)
 
 ### Gecko support
 

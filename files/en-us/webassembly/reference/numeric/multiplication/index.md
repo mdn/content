@@ -1,18 +1,13 @@
 ---
 title: Multiplication
 slug: WebAssembly/Reference/Numeric/Multiplication
-tags:
-  - WebAssembly
-  - wasm
-  - Reference
-  - Numeric
-  - Arithmetic
 ---
+
 {{WebAssemblySidebar}}
 
-The **`mul`** instructions, short for *multiplication*, are used for multiplying one number by another number, similar to the **`*`** operator in other languages.
+The **`mul`** instructions, short for _multiplication_, are used for multiplying one number by another number, similar to the **`*`** operator in other languages.
 
-{{EmbedInteractiveExample("pages/wat/mul.html")}}
+{{EmbedInteractiveExample("pages/wat/mul.html", "tabbed-taller")}}
 
 ## Syntax
 

@@ -1,27 +1,18 @@
 ---
 title: Using the Resource Timing API
 slug: Web/API/Resource_Timing_API/Using_the_Resource_Timing_API
-tags:
-  - API
-  - Guide
-  - NeedsExample
-  - Performance
-  - Resource Timing
-  - Resource Timing API
-  - Timing
-  - Web
-  - Web Development
-  - Web Performance
+page-type: guide
 ---
-{{DefaultAPISidebar("Resource Timing API")}}
+
+{{DefaultAPISidebar("Performance API")}}
 
 The **Resource Timing API** provides a way to retrieve and analyze detailed network timing data regarding the loading of an application's _resource(s)_. An application can use the timing metrics to determine, for example, the length of time it takes to fetch a specific resource such as an {{domxref("XMLHttpRequest")}}, {{SVGElement("SVG","SVG element")}}, image, script, etc.).
 
 The interface's properties create a _resource loading timeline_ with {{domxref("DOMHighResTimeStamp","high-resolution timestamps")}} for network events such as redirect start and end times, fetch start, DNS lookup start and end times, response start and end times, etc. The interface also includes other properties that provide data about the size of the fetched resource as well as the _type_ of resource that initiated the fetch.
 
-This document shows the use of Resource Timing interfaces. For more details about the interfaces, including examples, see each interface's reference page and the references in the {{anch("See also")}} section.
+This document shows the use of Resource Timing interfaces. For more details about the interfaces, including examples, see each interface's reference page and the references in the [See also](#see_also) section.
 
-A _live_ version of the examples is available on [Github](https://mdn.github.io/dom-examples/performance-apis/Using_the_Resource_Timing_API.html), as is the [source code](https://github.com/mdn/dom-examples/blob/master/performance-apis/Using_the_Resource_Timing_API.html). Pull requests and [bug reports](https://github.com/mdn/dom-examples/issues) are welcome.
+A _live_ version of the examples is available on [GitHub](https://mdn.github.io/dom-examples/performance-apis/Using_the_Resource_Timing_API.html), as is the [source code](https://github.com/mdn/dom-examples/blob/main/performance-apis/Using_the_Resource_Timing_API.html). Pull requests and [bug reports](https://github.com/mdn/dom-examples/issues) are welcome.
 
 ## Resource loading phases
 
@@ -45,47 +36,59 @@ function calculate_load_times() {
   }
 
   // Get a list of "resource" performance entries
-  var resources = performance.getEntriesByType("resource");
+  const resources = performance.getEntriesByType("resource");
   if (resources === undefined || resources.length <= 0) {
-    console.log("= Calculate Load Times: there are NO `resource` performance records");
+    console.log(
+      "= Calculate Load Times: there are NO `resource` performance records"
+    );
     return;
   }
 
   console.log("= Calculate Load Times");
-  for (var i=0; i < resources.length; i++) {
-    console.log("== Resource[" + i + "] - " + resources[i].name);
+  resources.forEach((resource, i) => {
+    console.log(`== Resource[${i}] - ${resource.name}`);
     // Redirect time
-    var t = resources[i].redirectEnd - resources[i].redirectStart;
-    console.log("... Redirect time = " + t);
+    let t = resource.redirectEnd - resource.redirectStart;
+    console.log(`… Redirect time = ${t}`);
 
     // DNS time
-    t = resources[i].domainLookupEnd - resources[i].domainLookupStart;
-    console.log("... DNS lookup time = " + t);
+    t = resource.domainLookupEnd - resource.domainLookupStart;
+    console.log(`… DNS lookup time = ${t}`);
 
     // TCP handshake time
-    t = resources[i].connectEnd - resources[i].connectStart;
-    console.log("... TCP time = " + t);
+    t = resource.connectEnd - resource.connectStart;
+    console.log(`… TCP time = ${t}`);
 
     // Secure connection time
-    t = (resources[i].secureConnectionStart > 0) ? (resources[i].connectEnd - resources[i].secureConnectionStart) : "0";
-    console.log("... Secure connection time = " + t);
+    t =
+      resource.secureConnectionStart > 0
+        ? resource.connectEnd - resource.secureConnectionStart
+        : "0";
+    console.log(`… Secure connection time = ${t}`);
 
     // Response time
-    t = resources[i].responseEnd - resources[i].responseStart;
-    console.log("... Response time = " + t);
+    t = resource.responseEnd - resource.responseStart;
+    console.log(`… Response time = ${t}`);
 
     // Fetch until response end
-    t = (resources[i].fetchStart > 0) ? (resources[i].responseEnd - resources[i].fetchStart) : "0";
-    console.log("... Fetch until response end time = " + t);
+    t =
+      resource.fetchStart > 0
+        ? resource.responseEnd - resource.fetchStart
+        : "0";
+    console.log(`… Fetch until response end time = ${t}`);
 
     // Request start until response end
-    t = (resources[i].requestStart > 0) ? (resources[i].responseEnd - resources[i].requestStart) : "0";
-    console.log("... Request start until response end time = " + t);
+    t =
+      resource.requestStart > 0
+        ? resource.responseEnd - resource.requestStart
+        : "0";
+    console.log(`… Request start until response end time = ${t}`);
 
     // Start until response end
-    t = (resources[i].startTime > 0) ? (resources[i].responseEnd - resources[i].startTime) : "0";
-    console.log("... Start until response end time = " + t);
-  }
+    t =
+      resource.startTime > 0 ? resource.responseEnd - resource.startTime : "0";
+    console.log(`… Start until response end time = ${t}`);
+  });
 }
 ```
 
@@ -96,7 +99,7 @@ The size of an application's resources can affect an application's performance s
 The following example demonstrates using these three properties.
 
 ```js
-function display_size_data(){
+function display_size_data() {
   // Check for support of the PerformanceResourceTiming.*size properties and print their values
   // if supported.
   if (performance === undefined) {
@@ -104,31 +107,36 @@ function display_size_data(){
     return;
   }
 
-  var list = performance.getEntriesByType("resource");
-  if (list === undefined) {
-    console.log("= Display Size Data: performance.getEntriesByType() is  NOT supported");
+  const entries = performance.getEntriesByType("resource");
+  if (entries === undefined) {
+    console.log(
+      "= Display Size Data: performance.getEntriesByType() is NOT supported"
+    );
     return;
   }
 
   // For each "resource", display its *Size property values
   console.log("= Display Size Data");
-  for (var i=0; i < list.length; i++) {
-    console.log("== Resource[" + i + "] - " + list[i].name);
-    if ("decodedBodySize" in list[i])
-      console.log("... decodedBodySize[" + i + "] = " + list[i].decodedBodySize);
-    else
-      console.log("... decodedBodySize[" + i + "] = NOT supported");
+  entries.forEach((entry, i) => {
+    console.log(`== Resource[${i}] - ${entry.name}`);
+    if ("decodedBodySize" in entry) {
+      console.log(`… decodedBodySize[${i}] = ${entry.decodedBodySize}`);
+    } else {
+      console.log(`… decodedBodySize[${i}] = NOT supported`);
+    }
 
-    if ("encodedBodySize" in list[i])
-      console.log("... encodedBodySize[" + i + "] = " + list[i].encodedBodySize);
-    else
-      console.log("... encodedBodySize[" + i + "] = NOT supported");
+    if ("encodedBodySize" in entry) {
+      console.log(`… encodedBodySize[${i}] = ${entry.encodedBodySize}`);
+    } else {
+      console.log(`… encodedBodySize[${i}] = NOT supported`);
+    }
 
-    if ("transferSize" in list[i])
-      console.log("... transferSize[" + i + "] = " + list[i].transferSize);
-    else
-      console.log("... transferSize[" + i + "] = NOT supported");
-  }
+    if ("transferSize" in entry) {
+      console.log(`… transferSize[${i}] = ${entry.transferSize}`);
+    } else {
+      console.log(`… transferSize[${i}] = NOT supported`);
+    }
+  });
 }
 ```
 
@@ -141,45 +149,53 @@ The following example demonstrates the usage of these two methods.
 ```js
 function clear_resource_timings() {
   if (performance === undefined) {
-    console.log("= performance.clearResourceTimings(): performance NOT supported");
+    console.log(
+      "= performance.clearResourceTimings(): performance NOT supported"
+    );
     return;
   }
   // Check if Performance.clearResourceTiming() is supported
-  console.log ("= Print performance.clearResourceTimings()");
-  var supported = typeof performance.clearResourceTimings == "function";
+  console.log("= Print performance.clearResourceTimings()");
+  const supported = typeof performance.clearResourceTimings === "function";
   if (supported) {
-    console.log("... Performance.clearResourceTimings() = supported");
+    console.log("… Performance.clearResourceTimings() = supported");
     performance.clearResourceTimings();
   } else {
-    console.log("... Performance.clearResourceTiming() = NOT supported");
+    console.log("… Performance.clearResourceTiming() = NOT supported");
     return;
   }
   // getEntries should now return zero
-  var p = performance.getEntriesByType("resource");
-  if (p.length == 0)
-    console.log("... Performance data buffer cleared");
-  else
-    console.log("... Performance data buffer NOT cleared (still have `" + p.length + "` items");
+  const p = performance.getEntriesByType("resource");
+  if (p.length === 0) {
+    console.log("… Performance data buffer cleared");
+  } else {
+    console.log(
+      `… Performance data buffer NOT cleared (still have '${p.length}' items`
+    );
+  }
 }
 
 function set_resource_timing_buffer_size(n) {
   if (performance === undefined) {
-    console.log("= performance.setResourceTimingBufferSize(): performance NOT supported");
+    console.log(
+      "= performance.setResourceTimingBufferSize(): performance NOT supported"
+    );
     return;
   }
   // Check if Performance.setResourceTimingBufferSize() is supported
-  console.log ("= performance.setResourceTimingBufferSize()");
-  var supported = typeof performance.setResourceTimingBufferSize == "function";
+  console.log("= performance.setResourceTimingBufferSize()");
+  const supported =
+    typeof performance.setResourceTimingBufferSize === "function";
   if (supported) {
-    console.log("... Performance.setResourceTimingBufferSize() = supported");
+    console.log("… Performance.setResourceTimingBufferSize() = supported");
     performance.setResourceTimingBufferSize(n);
   } else {
-    console.log("... Performance.setResourceTimingBufferSize() = NOT supported");
+    console.log("… Performance.setResourceTimingBufferSize() = NOT supported");
   }
 }
 ```
 
-The {{domxref("Performance")}} interface has a {{domxref("Performance.onresourcetimingbufferfull","onresourcetimingbufferfull")}} event handler that gets called (with an {{domxref("Event")}} of type {{domxref("Event.type")}} of "{{event("resourcetimingbufferfull")}}") when the browser's resource performance entry buffer is full. The following code example sets a {{domxref("Performance.onresourcetimingbufferfull","onresourcetimingbufferfull")}} event callback in the `init()` function.
+The {{domxref("Performance.resourcetimingbufferfull_event","resourcetimingbufferfull")}} event is fired at the {{domxref("Performance")}} object when the browser's resource performance entry buffer is full. The following code example sets a {{domxref("Performance.resourcetimingbufferfull_event","onresourcetimingbufferfull")}} event handler in the `init()` function.
 
 ```js
 function buffer_full(event) {
@@ -189,10 +205,11 @@ function buffer_full(event) {
 
 function init() {
   // load some image to trigger "resource" fetch events
-  var image1 = new Image();
+  const image1 = new Image();
   image1.src = "https://developer.mozilla.org/static/img/opengraph-logo.png";
-  var image2 = new Image();
-  image2.src = "http://mozorg.cdn.mozilla.net/media/img/firefox/firefox-256.e2c1fc556816.jpg"
+  const image2 = new Image();
+  image2.src =
+    "http://mozorg.cdn.mozilla.net/media/img/firefox/firefox-256.e2c1fc556816.jpg";
 
   // Set a callback if the resource buffer becomes filled
   performance.onresourcetimingbufferfull = buffer_full;
@@ -207,7 +224,7 @@ When {{Glossary("CORS")}} is in effect, many of the timing properties' values ar
 
 ## See also
 
-- [Firefox Performance Tool](/en-US/docs/Tools/Performance)
+- [Firefox Performance Tool](https://firefox-source-docs.mozilla.org/devtools-user/performance/index.html)
 - [Resource Timing Standard](https://w3c.github.io/resource-timing/); W3C Editor's Draft
-- [Resource Timing practical tips](http://www.stevesouders.com/blog/2014/08/21/resource-timing-practical-tips/); Steve Souders; 2014 August 21
-- [Measuring network performance with Resource Timing API](http://googledevelopers.blogspot.ca/2013/12/measuring-network-performance-with.html); Ilya Grigorik; 2013 December 11
+- [Resource Timing practical tips](https://www.stevesouders.com/blog/2014/08/21/resource-timing-practical-tips/); Steve Souders; 2014 August 21
+- [Measuring network performance with Resource Timing API](https://developers.googleblog.com/2013/12/measuring-network-performance-with.html); Ilya Grigorik; 2013 December 11

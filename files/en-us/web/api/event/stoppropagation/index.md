@@ -1,11 +1,10 @@
 ---
 title: Event.stopPropagation()
 slug: Web/API/Event/stopPropagation
-tags:
-  - Method
-  - Reference
+page-type: web-api-instance-method
 browser-compat: api.Event.stopPropagation
 ---
+
 {{APIRef("DOM")}}
 
 The **`stopPropagation()`** method of the {{domxref("Event")}}
@@ -18,8 +17,8 @@ see {{domxref("Event.stopImmediatePropagation", "stopImmediatePropagation()")}}.
 
 ## Syntax
 
-```js
-event.stopPropagation();
+```js-nolint
+event.stopPropagation()
 ```
 
 ### Parameters

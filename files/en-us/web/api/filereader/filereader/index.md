@@ -1,35 +1,34 @@
 ---
 title: FileReader()
 slug: Web/API/FileReader/FileReader
-tags:
-  - API
-  - Constructor
-  - FileReader
-  - Reference
+page-type: web-api-constructor
 browser-compat: api.FileReader.FileReader
 ---
+
+{{APIRef("File API")}}
+
 The **`FileReader()`** constructor creates a new FileReader.
 
-For details about how to use `FileReader`, see [Using files from web applications](/en-US/docs/Web/API/File/Using_files_from_web_applications).
+For details about how to use `FileReader`, see [Using files from web applications](/en-US/docs/Web/API/File_API/Using_files_from_web_applications).
 
 ## Syntax
 
-```js
-const reader = new FileReader();
+```js-nolint
+new FileReader()
 ```
 
 ### Parameters
 
 None.
 
-## Example
+## Examples
 
 The following code snippet shows creation of a [`FileReader`](/en-US/docs/Web/API/FileReader) object using the `FileReader()` constructor and subsequent usage of the object:
 
 ```js
 function printFile(file) {
   const reader = new FileReader();
-  reader.onload = function(evt) {
+  reader.onload = (evt) => {
     console.log(evt.target.result);
   };
   reader.readAsText(file);
@@ -46,4 +45,4 @@ function printFile(file) {
 
 ## See also
 
-- [Using files from web applications](/en-US/docs/Web/API/File/Using_files_from_web_applications)
+- [Using files from web applications](/en-US/docs/Web/API/File_API/Using_files_from_web_applications)

@@ -1,15 +1,10 @@
 ---
 title: Navigator.geolocation
 slug: Web/API/Navigator/geolocation
-tags:
-  - API
-  - Geolocation API
-  - Navigator
-  - Property
-  - Reference
-  - Secure context
+page-type: web-api-instance-property
 browser-compat: api.Navigator.geolocation
 ---
+
 {{securecontext_header}}{{APIRef("Geolocation API")}}
 
 The **`Navigator.geolocation`** read-only property returns a
@@ -21,11 +16,9 @@ location.
 > information, the user is notified and asked to grant permission. Be aware that each
 > browser has its own policies and methods for requesting this permission.
 
-## Syntax
+## Value
 
-```js
-geo = navigator.geolocation
-```
+A {{domxref("Geolocation")}} object.
 
 ## Specifications
 
@@ -37,5 +30,4 @@ geo = navigator.geolocation
 
 ## See also
 
-- [Using the
-  Geolocation API](/en-US/docs/Web/API/Geolocation_API/Using_the_Geolocation_API)
+- [Using the Geolocation API](/en-US/docs/Web/API/Geolocation_API/Using_the_Geolocation_API)

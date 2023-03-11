@@ -1,32 +1,28 @@
 ---
 title: HTMLShadowElement.getDistributedNodes()
 slug: Web/API/HTMLShadowElement/getDistributedNodes
-tags:
-  - API
-  - HTML DOM
-  - Property
-  - Reference
-  - Web Components
-  - Deprecated
+page-type: web-api-instance-method
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.HTMLShadowElement.getDistributedNodes
 ---
-{{APIRef("Web Components")}}{{Deprecated_header}}
+
+{{APIRef("Web Components")}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 The **`HTMLShadowElement.getDistributedNodes()`** method
 returns a static {{domxref("NodeList")}} of the {{glossary("distributed nodes")}}
 associated with this `<shadow>` element.
 
-## Syntax
+## Value
 
-```js
-var nodeList = object.getDistributedNodes()
-```
+A {{domxref("NodeList")}}.
 
-## Example
+## Examples
 
 ```js
 // Get the distributed nodes
-var nodes = myShadowObject.getDistributedNodes();
+const nodes = myShadowObject.getDistributedNodes();
 ```
 
 ## Specifications

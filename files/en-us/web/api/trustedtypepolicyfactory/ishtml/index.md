@@ -1,14 +1,10 @@
 ---
 title: TrustedTypePolicyFactory.isHTML()
 slug: Web/API/TrustedTypePolicyFactory/isHTML
-tags:
-  - API
-  - Method
-  - Reference
-  - isHTML
-  - TrustedTypePolicyFactory
+page-type: web-api-instance-method
 browser-compat: api.TrustedTypePolicyFactory.isHTML
 ---
+
 {{DefaultAPISidebar("Trusted Types API")}}
 
 The **`isHTML()`** method of the {{domxref("TrustedTypePolicyFactory")}} interface returns true if it is passed a valid {{domxref("TrustedHTML")}} object.
@@ -17,8 +13,8 @@ The **`isHTML()`** method of the {{domxref("TrustedTypePolicyFactory")}} interfa
 
 ## Syntax
 
-```js
-var isHTML = TrustedTypePolicyFactory.isHTML(value);
+```js-nolint
+isHTML(value)
 ```
 
 ### Parameters
@@ -35,8 +31,8 @@ A {{jsxref("boolean")}} that is true if the object is a valid {{domxref("Trusted
 In the below example the constant `html` was created by a policy, and therefore `isHTML()` returns true. The second example is an attempt to fake an object, and the third is a string. Both of these will return false when passed to `isHTML()`.
 
 ```js
-const html = policy.createHTML('<div>');
-console.log(trustedTypes.isHTML(html)) // true;
+const html = policy.createHTML("<div>");
+console.log(trustedTypes.isHTML(html)); // true;
 
 const fake = Object.create(TrustedHTML.prototype);
 console.log(trustedTypes.isHTML(fake)); // false

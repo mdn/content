@@ -1,16 +1,10 @@
 ---
 title: tabs.moveInSuccession()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/moveInSuccession
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Reference
-  - WebExtensions
-  - tabs
+page-type: webextension-api-function
 browser-compat: webextensions.api.tabs.moveInSuccession
 ---
+
 {{AddonSidebar()}}
 
 Modifies the succession relationship for a group of tabs.
@@ -25,7 +19,7 @@ While the successor tab can be assigned with {{WebExtAPIRef('tabs.update()')}}, 
 
 ## Syntax
 
-```js
+```js-nolint
 browser.tabs.moveInSuccession([1, 3, 5, 7, 2, 9], 4, {insert:true})
 ```
 
@@ -34,7 +28,7 @@ browser.tabs.moveInSuccession([1, 3, 5, 7, 2, 9], 4, {insert:true})
 - `tabIds`
   - : `array` of `integer`. An array of tab `ID`s. The order of the elements in the array defines the relationship of the tabs. Any invalid tab `ID`s, or tab `ID`s corresponding to tabs not in the same window as `tabId` (or the first tab in the array, if `tabId` is omitted), will be ignored—they will keep their current successors and predecessors.
 - `tabId` {{optional_inline}}
-  - : `integer.` The `ID` of the tab that will be the successor of the last tab in the `tabIds` array. If this `ID` is invalid or {{WebExtAPIRef('tabs.TAB_ID_NONE')}}, the last tab will not have a successor. Defaults to {{WebExtAPIRef('tabs.TAB_ID_NONE')}}.
+  - : `integer`. The `ID` of the tab that will be the successor of the last tab in the `tabIds` array. If this `ID` is invalid or {{WebExtAPIRef('tabs.TAB_ID_NONE')}}, the last tab will not have a successor. Defaults to {{WebExtAPIRef('tabs.TAB_ID_NONE')}}.
 - `options` {{optional_inline}}
 
   - : `object`.

@@ -1,12 +1,10 @@
 ---
 title: color-interpolation-filters
 slug: Web/SVG/Attribute/color-interpolation-filters
-tags:
-  - NeedsExample
-  - SVG
-  - SVG Attribute
+page-type: svg-attribute
 browser-compat: svg.attributes.presentation.color-interpolation-filters
 ---
+
 {{SVGRef}}
 
 The **`color-interpolation-filters`** attribute specifies the color space for imaging operations performed via filter effects.
@@ -68,31 +66,7 @@ You can use this attribute with the following SVG elements:
 
 ## Specifications
 
-<table class="no-markdown">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        {{SpecName("Filters 1.0", "#ColorInterpolationFiltersProperty", "color-interpolation")}}
-      </td>
-      <td>{{Spec2("Filters 1.0")}}</td>
-      <td>No significant change</td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("SVG1.1", "painting.html#ColorInterpolationFiltersProperty", "color-interpolation-filters")}}
-      </td>
-      <td>{{Spec2("SVG1.1")}}</td>
-      <td>Initial definition</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 ## Browser compatibility
 

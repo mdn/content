@@ -1,14 +1,10 @@
 ---
 title: MediaStreamAudioDestinationNode
 slug: Web/API/MediaStreamAudioDestinationNode
-tags:
-  - API
-  - Interface
-  - MediaStreamAudioDestinationNode
-  - Reference
-  - Web Audio API
+page-type: web-api-interface
 browser-compat: api.MediaStreamAudioDestinationNode
 ---
+
 {{APIRef("Web Audio API")}}
 
 The `MediaStreamAudioDestinationNode` interface represents an audio destination consisting of a [WebRTC](/en-US/docs/Web/API/WebRTC_API) {{domxref("MediaStream")}} with a single `AudioMediaStreamTrack`, which can be used in a similar way to a `MediaStream` obtained from {{domxref("MediaDevices.getUserMedia",
@@ -45,23 +41,23 @@ It is an {{domxref("AudioNode")}} that acts as an audio destination, created usi
 
 ## Constructor
 
-- {{domxref("MediaStreamAudioDestinationNode.MediaStreamAudioDestinationNode()")}}
+- {{domxref("MediaStreamAudioDestinationNode.MediaStreamAudioDestinationNode", "MediaStreamAudioDestinationNode()")}}
   - : Creates a new `MediaStreamAudioDestinationNode` object instance.
 
-## Properties
+## Instance properties
 
 _Inherits properties from its parent, {{domxref("AudioNode")}}_.
 
 - {{domxref("MediaStreamAudioDestinationNode.stream")}}
   - : A {{domxref("MediaStream")}} containing a single {{domxref("MediaStreamTrack")}} whose {{domxref("MediaStreamTrack.kind", "kind")}} is `audio` and with the same number of channels as the node. You can use this property to get a stream out of the audio graph and feed it into another construct, such as a [Media Recorder](/en-US/docs/Web/API/MediaStream_Recording_API).
 
-## Methods
+## Instance methods
 
 _Inherits methods from its parent, {{domxref("AudioNode")}}_.
 
 ## Example
 
-See [`AudioContext.createMediaStreamDestination()`](/en-US/docs/Web/API/AudioContext.createMediaStreamDestination#examples) for example code that creates a `MediaStreamAudioDestinationNode` and uses it as a source for audio to be recorded.
+See [`AudioContext.createMediaStreamDestination()`](/en-US/docs/Web/API/AudioContext/createMediaStreamDestination#examples) for example code that creates a `MediaStreamAudioDestinationNode` and uses it as a source for audio to be recorded.
 
 ## Specifications
 

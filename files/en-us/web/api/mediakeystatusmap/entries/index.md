@@ -1,16 +1,11 @@
 ---
 title: MediaKeyStatusMap.entries()
 slug: Web/API/MediaKeyStatusMap/entries
-tags:
-  - API
-  - EncryptedMediaExtensions
-  - MediaKeyStatusMap
-  - Method
-  - Reference
-  - entries()
+page-type: web-api-instance-method
 browser-compat: api.MediaKeyStatusMap.entries
 ---
-{{APIRef("EncryptedMediaExtensions API")}}{{SeeCompatTable}}
+
+{{APIRef("EncryptedMediaExtensions API")}}
 
 The **`entries()`** read-only property
 of the {{domxref("MediaKeyStatusMap")}} interface returns a new Iterator object,
@@ -19,15 +14,15 @@ insertion order.
 
 ## Syntax
 
-```js
-// TBD
+```js-nolint
+entries()
 ```
 
 ### Parameters
 
 None.
 
-### Returns
+### Return value
 
 ### Exceptions
 

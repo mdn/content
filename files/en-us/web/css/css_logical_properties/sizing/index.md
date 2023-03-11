@@ -1,13 +1,9 @@
 ---
 title: Logical properties for sizing
 slug: Web/CSS/CSS_Logical_Properties/Sizing
-tags:
-  - CSS
-  - CSS Logical Properties
-  - Guide
-  - sizing
-  - writing modes
+page-type: guide
 ---
+
 {{CSSRef}}
 
 In this guide we will explain the flow-relative mappings between physical dimension properties and logical properties used for sizing elements on our pages.
@@ -20,14 +16,14 @@ The table below provides mappings between logical and physical properties. These
 
 If you were in a vertical writing mode then {{CSSxRef("inline-size")}} would be mapped to {{CSSxRef("height")}}.
 
-| Logical Property                         | Physical Property                |
-| ---------------------------------------- | -------------------------------- |
-| {{CSSxRef("inline-size")}}     | {{CSSxRef("width")}}     |
-| {{CSSxRef("block-size")}}         | {{CSSxRef("height")}}     |
-| {{CSSxRef("min-inline-size")}} | {{CSSxRef("min-width")}} |
-| {{CSSxRef("min-block-size")}} | {{CSSxRef("min-height")}} |
-| {{CSSxRef("max-inline-size")}} | {{CSSxRef("max-width")}} |
-| {{CSSxRef("max-block-size")}} | {{CSSxRef("max-height")}} |
+| Logical Property               | Physical Property         |
+| ------------------------------ | ------------------------- |
+| {{CSSxRef("inline-size")}}     | {{CSSxRef("width")}}      |
+| {{CSSxRef("block-size")}}      | {{CSSxRef("height")}}     |
+| {{CSSxRef("min-inline-size")}} | {{CSSxRef("min-width")}}  |
+| {{CSSxRef("min-block-size")}}  | {{CSSxRef("min-height")}} |
+| {{CSSxRef("max-inline-size")}} | {{CSSxRef("max-width")}}  |
+| {{CSSxRef("max-block-size")}}  | {{CSSxRef("max-height")}} |
 
 ## Width and height example
 

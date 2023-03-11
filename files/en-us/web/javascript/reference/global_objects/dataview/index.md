@@ -1,14 +1,10 @@
 ---
 title: DataView
 slug: Web/JavaScript/Reference/Global_Objects/DataView
-tags:
-  - Class
-  - DataView
-  - JavaScript
-  - TypedArrays
-  - Polyfill
+page-type: javascript-class
 browser-compat: javascript.builtins.DataView
 ---
+
 {{JSRef}}
 
 The **`DataView`** view provides a low-level interface for reading and writing multiple number types in a binary {{jsxref("ArrayBuffer")}}, without having to care about the platform's [endianness](/en-US/docs/Glossary/Endianness).
@@ -20,8 +16,8 @@ The **`DataView`** view provides a low-level interface for reading and writing m
 Multi-byte number formats are represented in memory differently depending on machine architecture — see [Endianness](/en-US/docs/Glossary/Endianness) for an explanation. `DataView` accessors provide explicit control of how data is accessed, regardless of the executing computer's endianness.
 
 ```js
-var littleEndian = (function() {
-  var buffer = new ArrayBuffer(2);
+const littleEndian = (() => {
+  const buffer = new ArrayBuffer(2);
   new DataView(buffer).setInt16(0, 256, true /* littleEndian */);
   // Int16Array uses the platform's endianness.
   return new Int16Array(buffer)[0] === 256;
@@ -70,12 +66,18 @@ function getUint64BigInt(dataview, byteOffset, littleEndian) {
 
 ## Instance properties
 
+These properties are defined on `DataView.prototype` and shared by all `DataView` instances.
+
 - {{jsxref("DataView.prototype.buffer")}}
   - : The {{jsxref("ArrayBuffer")}} referenced by this view. Fixed at construction time and thus **read only.**
 - {{jsxref("DataView.prototype.byteLength")}}
-  - : The length (in bytes) of this view from the start of its {{jsxref("ArrayBuffer")}}. Fixed at construction time and thus **read only.**
+  - : The length (in bytes) of this view. Fixed at construction time and thus **read only.**
 - {{jsxref("DataView.prototype.byteOffset")}}
   - : The offset (in bytes) of this view from the start of its {{jsxref("ArrayBuffer")}}. Fixed at construction time and thus **read only.**
+- {{jsxref("Object/constructor", "DataView.prototype.constructor")}}
+  - : The constructor function that created the instance object. For `DataView` instances, the initial value is the {{jsxref("DataView/DataView", "DataView")}} constructor.
+- `DataView.prototype[@@toStringTag]`
+  - : The initial value of the [`@@toStringTag`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) property is the string `"DataView"`. This property is used in {{jsxref("Object.prototype.toString()")}}.
 
 ## Instance methods
 
@@ -125,8 +127,8 @@ function getUint64BigInt(dataview, byteOffset, littleEndian) {
 ### Using DataView
 
 ```js
-var buffer = new ArrayBuffer(16);
-var view = new DataView(buffer, 0);
+const buffer = new ArrayBuffer(16);
+const view = new DataView(buffer, 0);
 
 view.setInt16(1, 42);
 view.getInt16(1); // 42

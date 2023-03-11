@@ -1,11 +1,10 @@
 ---
-title: 'Storage access policy: Block cookies from trackers'
+title: "Storage access policy: Block cookies from trackers"
 slug: Web/Privacy/Storage_Access_Policy
-tags:
-  - Privacy
-  - storage access policy
-  - tracking protection
 ---
+
+{{QuicklinksWithSubPages("Web/Privacy")}}
+
 Firefox includes a new storage access policy that blocks cookies and other site data from third-party tracking resources. This policy is designed as an alternative to the older cookie policies, which have been available in Firefox for many years. This policy protects against cross-site tracking while minimizing the site breakage associated with traditional cookie blocking. This article explains how the policy works and how you can test it.
 
 ## Testing in Firefox
@@ -18,7 +17,7 @@ These protections are on by default in Nightly. The cookie policy can be enabled
 
 ### Report Broken Sites
 
-If you find a website broken as a result of this change, file a bug under the Tracking Protection component within the Firefox product on [Bugzilla](https://bugzilla.mozilla.org/enter_bug.cgi?assigned_to=nobody%40mozilla.org&blocked=1480137&bug_file_loc=http%3A%2F%2F&bug_ignored=0&bug_severity=normal&bug_status=NEW&cf_fx_iteration=---&cf_fx_points=---&cf_platform_rel=---&cf_status_firefox62=---&cf_status_firefox63=---&cf_status_firefox64=---&cf_status_firefox_esr60=---&cf_status_geckoview62=---&cf_tracking_firefox62=---&cf_tracking_firefox63=---&cf_tracking_firefox64=---&cf_tracking_firefox_esr60=---&cf_tracking_firefox_relnote=---&cf_tracking_geckoview62=---&component=Tracking%20Protection&contenttypemethod=list&contenttypeselection=text%2Fplain&defined_groups=1&flag_type-203=X&flag_type-37=X&flag_type-41=X&flag_type-5=X&flag_type-607=X&flag_type-721=X&flag_type-737=X&flag_type-748=X&flag_type-787=X&flag_type-799=X&flag_type-800=X&flag_type-803=X&flag_type-835=X&flag_type-846=X&flag_type-855=X&flag_type-864=X&flag_type-914=X&flag_type-916=X&flag_type-929=X&flag_type-930=X&flag_type-933=X&form_name=enter_bug&maketemplate=Remember%20values%20as%20bookmarkable%20template&op_sys=Unspecified&priority=--&product=Firefox&rep_platform=Unspecified&target_milestone=---&version=unspecified). Alternatively you can report broken sites directly in Firefox by clicking "Report a Problem" in the Content Blocking section of the [Control Center](https://support.mozilla.org/en-US/kb/control-center-site-privacy-and-security-firefox) (this shortcut may not be available in all versions of Firefox).
+If you find a website broken as a result of this change, file a bug under the Tracking Protection component within the Firefox product on [Bugzilla](https://bugzilla.mozilla.org/enter_bug.cgi?assigned_to=nobody%40mozilla.org&blocked=1480137&bug_file_loc=http%3A%2F%2F&bug_ignored=0&bug_severity=normal&bug_status=NEW&cf_fx_iteration=---&cf_fx_points=---&cf_platform_rel=---&cf_status_firefox62=---&cf_status_firefox63=---&cf_status_firefox64=---&cf_status_firefox_esr60=---&cf_status_geckoview62=---&cf_tracking_firefox62=---&cf_tracking_firefox63=---&cf_tracking_firefox64=---&cf_tracking_firefox_esr60=---&cf_tracking_firefox_relnote=---&cf_tracking_geckoview62=---&component=Tracking%20Protection&contenttypemethod=list&contenttypeselection=text%2Fplain&defined_groups=1&flag_type-203=X&flag_type-37=X&flag_type-41=X&flag_type-5=X&flag_type-607=X&flag_type-721=X&flag_type-737=X&flag_type-748=X&flag_type-787=X&flag_type-799=X&flag_type-800=X&flag_type-803=X&flag_type-835=X&flag_type-846=X&flag_type-855=X&flag_type-864=X&flag_type-914=X&flag_type-916=X&flag_type-929=X&flag_type-930=X&flag_type-933=X&form_name=enter_bug&maketemplate=Remember%20values%20as%20bookmarkable%20template&op_sys=Unspecified&priority=--&product=Firefox&rep_platform=Unspecified&target_milestone=---&version=unspecified). Alternatively you can report broken sites directly in Firefox by clicking "Report a Problem" in the Content Blocking section of the [Control Center](https://support.mozilla.org/en-US/kb/site-information-panel) (this shortcut may not be available in all versions of Firefox).
 
 ## Tracking protection explained
 
@@ -29,7 +28,7 @@ Firefox uses the Tracking Protection list to determine which resources are track
 - First, we only use the "Basic Protection" version of the list, which [excludes some categories of trackers](https://github.com/mozilla-services/shavar-prod-lists#disconnect-blacklistjson). In the future, we may expand our protections to use the "Strict Protection" version of the list.
 - Second, Firefox uses an additional "[entity list](https://github.com/mozilla-services/shavar-prod-lists/blob/master/disconnect-entitylist.json)", which prevents [domains from being classified as trackers when they are loaded on a top-level site owned by the same organization](https://github.com/mozilla-services/shavar-prod-lists#disconnect-entitylistjson).
 
-Firefox uses the built-in [Tracking Protection](https://support.mozilla.org/en-US/kb/tracking-protection) URL classifier to determine which resources match the tracking protection list. Domains are matched against the list in accordance with the [SafeBrowsing v4 specification](https://developers.google.com/safe-browsing/v4/urls-hashing#suffixprefix-expressions). Specifically, we check the exact hostname of the resource against the list, as well as the last four hostnames formed by starting with the last five components and successively removing the leading component. Consider the following examples:
+Firefox uses the built-in [Tracking Protection](https://support.mozilla.org/en-US/kb/what-happened-tracking-protection) URL classifier to determine which resources match the tracking protection list. Domains are matched against the list in accordance with the [SafeBrowsing v4 specification](https://developers.google.com/safe-browsing/v4/urls-hashing#suffixprefix-expressions). Specifically, we check the exact hostname of the resource against the list, as well as the last four hostnames formed by starting with the last five components and successively removing the leading component. Consider the following examples:
 
 | Hostname on the list | Hostname of resource   | Matched |
 | -------------------- | ---------------------- | ------- |
@@ -71,7 +70,7 @@ Browser caches:
 Network connections:
 
 - [TLS sessions](https://wiki.mozilla.org/Security/Server_Side_TLS#Session_Resumption) will not be resumed using a session ticket when an HTTPS connection is made to an embedded third-party resource that is classified as a tracker.
-- [HTTP connection reuse](/en-US/docs/Web/HTTP/Connection_management_in_HTTP_1.x#persistent_connections) by domains classified as trackers is limited to requests that occur under the same top-level origin. For example, a request for content from tracker.example on news.example will not reuse an HTTP connection with a request for content from tracker.example on shopping.example or with requests that occur when tracker.example is visited directly (i.e., as a first party).
+- [HTTP connection reuse](/en-US/docs/Web/HTTP/Connection_management_in_HTTP_1.x#persistent_connections) by domains classified as trackers is limited to requests that occur under the same top-level origin. For example, a request for content from `tracker.example` on `news.example` will not reuse an HTTP connection with a request for content from `tracker.example` on `shopping.example` or with requests that occur when `tracker.example` is visited directly (i.e., as a first party).
 
 HTTP Referrers
 
@@ -129,7 +128,7 @@ We encourage site owners to test their sites, particularly those that rely on th
 
 ### Developer Tools notifications
 
-The [Network Monitor](/en-US/docs/Tools/Network_Monitor) in Firefox Developer Tools now includes an indicator for all resource requests that have been classified as tracking resources. This indicator is shown as a shield icon in the domain column. In the sample image below, `trackertest.org` is classified as a tracking resource, while the request to example.com is not.
+The [Network Monitor](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html) in Firefox Developer Tools now includes an indicator for all resource requests that have been classified as tracking resources. This indicator is shown as a shield icon in the domain column. In the sample image below, `trackertest.org` is classified as a tracking resource, while the request to example.com is not.
 
 ![network requests in Firefox devtools indicating which ones are tracking resources with a small shield icon](screen_shot_2018-09-21_at_10.34.22_am.png)
 
@@ -168,7 +167,7 @@ A social content provider that is classified as a tracker will not have access t
 - For social login, the user may have to click a login button on the first party.
 - For social like or share buttons, the user will have to first interact with the button in a logged-out state. Once they do, many social content providers will prompt them to log in.
 
-After these interactions, the provider will receive third-party storage access if they prompt the user in a way that is captured by the storage access activation heuristics described above. These providers should consider switching to explicitly request storage access through the Storage Access API as soon as possible. An [initial implementation of this API](https://bugzilla.mozilla.org/show_bug.cgi?id=1469714) is currently available in Nightly.
+After these interactions, the provider will receive third-party storage access if they prompt the user in a way that is captured by the storage access activation heuristics described above. These providers should consider switching to explicitly request storage access through the Storage Access API as soon as possible. An [initial implementation of this API](https://bugzil.la/1469714) is currently available in Nightly.
 
 ### I use third-party pixels and other tools to measure the effectiveness of my ad campaigns. Will I still be able to measure the conversion rate of my ads?
 

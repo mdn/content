@@ -1,14 +1,10 @@
 ---
 title: transition
 slug: Web/CSS/transition
-tags:
-  - CSS
-  - CSS Property
-  - CSS Transitions
-  - Reference
-  - recipe:css-shorthand-property
+page-type: css-shorthand-property
 browser-compat: css.properties.transition
 ---
+
 {{CSSRef}}
 
 The **`transition`** [CSS](/en-US/docs/Web/CSS) property is a [shorthand property](/en-US/docs/Web/CSS/Shorthand_properties) for {{ cssxref("transition-property") }}, {{ cssxref("transition-duration") }}, {{ cssxref("transition-timing-function") }}, and {{ cssxref("transition-delay") }}.
@@ -52,6 +48,7 @@ transition: all 0.5s ease-out;
 transition: inherit;
 transition: initial;
 transition: revert;
+transition: revert-layer;
 transition: unset;
 ```
 

@@ -1,25 +1,17 @@
 ---
 title: notifications.onButtonClicked
 slug: Mozilla/Add-ons/WebExtensions/API/notifications/onButtonClicked
-tags:
-  - API
-  - Add-ons
-  - Event
-  - Extensions
-  - Non-standard
-  - Notifications
-  - Reference
-  - WebExtensions
-  - onButtonClicked
+page-type: webextension-api-event
 browser-compat: webextensions.api.notifications.onButtonClicked
 ---
+
 {{AddonSidebar()}}
 
 Fired when the user clicks one of the notification's buttons.
 
 ## Syntax
 
-```js
+```js-nolint
 browser.notifications.onButtonClicked.addListener(listener)
 browser.notifications.onButtonClicked.removeListener(listener)
 browser.notifications.onButtonClicked.hasListener(listener)
@@ -53,6 +45,4 @@ Events have three functions:
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.notifications`](https://developer.chrome.com/extensions/notifications) API.
->
-> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
+> **Note:** This API is based on Chromium's [`chrome.notifications`](https://developer.chrome.com/docs/extensions/reference/notifications/) API.

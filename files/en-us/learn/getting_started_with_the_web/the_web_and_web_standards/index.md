@@ -1,13 +1,8 @@
 ---
 title: The web and web standards
 slug: Learn/Getting_started_with_the_web/The_web_and_web_standards
-tags:
-  - Beginner
-  - Front-end
-  - Learn
-  - Web
-  - Web Standards
 ---
+
 {{learnsidebar}}
 
 This article provides some useful background on the Web — how it came about, what web standard technologies are, how they work together, why "web developer" is a great career to choose, and what kinds of best practices you'll learn about through the course.
@@ -66,7 +61,7 @@ There are a number of technologies to learn if you want to be a front-end web de
 
 ### Browsers
 
-You are probably reading these words inside a web browser in this very moment (unless you've printed it out, or are using assistive technology, such as a screenreader to read it out to you). Web browsers are the software programs people use to consume the web, and include [Firefox](https://www.mozilla.org/en-US/firefox/), [Chrome](https://www.google.com/chrome/), [Opera](https://www.opera.com/), [Safari](https://www.apple.com/safari/), and [Edge](https://www.microsoft.com/en-us/windows/microsoft-edge).
+You are probably reading these words inside a web browser in this very moment (unless you've printed it out, or are using assistive technology, such as a screen reader to read it out to you). Web browsers are the software programs people use to consume the web, and include [Firefox](https://www.mozilla.org/en-US/firefox/), [Chrome](https://www.google.com/chrome/), [Opera](https://www.opera.com/), [Safari](https://www.apple.com/safari/), and [Edge](https://www.microsoft.com/en-us/edge).
 
 ### HTTP
 
@@ -86,22 +81,22 @@ The actual syntax for HTTP messages (called requests and responses) is not that 
 
 [HTML](/en-US/docs/Web/HTML), [CSS](/en-US/docs/Web/CSS), and [JavaScript](/en-US/docs/Web/JavaScript) are the main three technologies you'll use to build a website:
 
-- Hypertext markup language, or **HTML**, is a markup language consisting of different elements you can wrap (mark up) content in to give it meaning (semantics) and structure. Simple HTML looks like this:
+- HyperText Markup Language, or **HTML**, is a markup language consisting of different elements you can wrap (mark up) content in to give it meaning (semantics) and structure. Simple HTML looks like this:
 
   ```html
   <h1>This is a top-level heading</h1>
 
   <p>This is a paragraph of text.</p>
 
-  <img src="cat.jpg" alt="A picture of my cat">
+  <img src="cat.jpg" alt="A picture of my cat" />
   ```
 
   If we adopted a house-building analogy, HTML would be like the foundations and walls of the house, which give it structure and hold it together.
 
-- Cascading Style Sheets (**CSS**) is a rule-based language used to apply styles to your HTML, for example setting text and background colors, adding borders, animating things, or laying out a page in a certain way. As a simple example, the following code would turn our HTML paragraph red:
+- Cascading Style Sheets (**CSS**) is a rule-based language used to apply styles to your HTML — for example, setting text and background colors, adding borders, animating things, or laying out a page in a certain way. As a simple example, the following code would turn our HTML paragraph red:
 
   ```css
-  p  {
+  p {
     color: red;
   }
   ```
@@ -111,8 +106,8 @@ The actual syntax for HTTP messages (called requests and responses) is not that 
 - **JavaScript** is the programming language we use to add interactivity to web sites, from dynamic style switching, to fetching updates from the server, right through to complex 3D graphics. The following simple JavaScript will store a reference to our paragraph in memory and change the text inside it:
 
   ```js
-  let pElem = document.querySelector('p');
-  pElem.textContent =  'We changed the text!';
+  let pElem = document.querySelector("p");
+  pElem.textContent = "We changed the text!";
   ```
 
   In the house analogy, JavaScript is like the cooker, TV, Microwave, or hairdryer — the things that give your house useful functionality
@@ -121,7 +116,7 @@ The actual syntax for HTTP messages (called requests and responses) is not that 
 
 Once you've learned the "raw" technologies that can be used to build web pages (such as HTML, CSS, and JavaScript), you'll soon start to come across various tools that can be used to make your work easier or more efficient. Examples include:
 
-- The [developer tools](/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools) inside modern browsers that can be used to debug your code.
+- The [developer tools](/en-US/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools) inside modern browsers that can be used to debug your code.
 - [Testing tools](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing) that can be used to run tests to show whether your code is behaving as you intended it to.
 - Libraries and frameworks built on top of JavaScript that allow you to build certain types of web site much more quickly and effectively.
 - So-called "Linters", which take a set of rules, look at your code, and highlight places where you haven't followed the rules properly.
@@ -133,7 +128,7 @@ HTML, CSS, and JavaScript are front-end (or client-side) languages, which means 
 
 There are another class of languages called back-end (or server-side) languages, meaning that they are run on the server before the result is then sent to the browser to be displayed. A typical use for a server-side language is to get some data out of a database and generate some HTML to contain the data, before then sending the HTML over to the browser to display it to the user.
 
-Example server-side languages include ASP.NET, Python, PHP, and NodeJS.
+Example server-side frameworks include ASP.NET (in C#), Django (in Python), Laravel (in PHP), and Next.js (in JavaScript).
 
 ## Web best practices
 
@@ -143,7 +138,7 @@ When doing web development, the main cause of uncertainty comes from the fact th
 
 - User 1 might be looking at it on an iPhone, with a small, narrow screen.
 - User 2 might be looking at it on a Windows laptop with a widescreen monitor attached to it.
-- User 3 might be blind, and using a screenreader to read the web page out to them.
+- User 3 might be blind, and using a screen reader to read the web page out to them.
 - User 4 might be using a really old desktop machine that can't run modern browsers.
 
 Because you don't know exactly what your users will use, you need to design defensively — make your web site as flexible as possible, so that all of the above users can make use of it, even if they might not all get the same experience. In short, we are trying to make the web work for all, as much as possible.
@@ -160,4 +155,4 @@ You'll come across the below concepts at some point in your studies.
 ## See also
 
 - [History of the World Wide Web](https://en.wikipedia.org/wiki/History_of_the_World_Wide_Web)
-- [How does the internet work?](/en-US/docs/Learn/Common_questions/How_does_the_Internet_work)
+- [How does the internet work?](/en-US/docs/Learn/Common_questions/Web_mechanics/How_does_the_Internet_work)

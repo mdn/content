@@ -1,14 +1,9 @@
 ---
 title: Clickjacking
 slug: Glossary/Clickjacking
-tags:
-  - Clickjacking
-  - Interface-based attack
-  - Glossary
-  - Security
-  - vulnerability
-  - exploit
+page-type: glossary-definition
 ---
+
 Clickjacking is an interface-based attack that tricks website users into unwittingly clicking on malicious links. In clickjacking, the attackers embed their malicious links into buttons or legitimate pages in a website. In an infected {{glossary("Site")}}, whenever a user clicks on a legitimate link, the attacker gets the confidential information of that user, which ultimately compromises the user's privacy on the Internet.
 
 Clickjacking can be prevented by implementing a [Content Security Policy (frame-ancestors)](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/frame-ancestors) and implementing [Set-Cookie attributes](/en-US/docs/Web/HTTP/Headers/Set-Cookie#attributes).

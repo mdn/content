@@ -1,23 +1,21 @@
 ---
 title: SVGPointList.replaceItem()
 slug: Web/API/SVGPointList/replaceItem
-tags:
-  - API
-  - Method
-  - Reference
-  - replaceItem
-  - SVGPointList
+page-type: web-api-instance-method
 browser-compat: api.SVGPointList.replaceItem
 ---
+
 {{APIRef("SVG")}}
 
 The **`replaceItem()`** method of the {{domxref("SVGPointList")}} interface replaces a {{domxref("SVGPoint","point")}} in the list.
 
 ## Syntax
 
-```js
-SVGPointList.replaceItem(obj,index);
+```js-nolint
+replaceItem(obj, index)
 ```
+
+### Parameters
 
 - `obj`
   - : An {{domxref("SVGPoint","point")}} object containing the coordinates of the point to be inserted.
@@ -41,8 +39,12 @@ The following example shows an SVG which contains a {{SVGElement("polyline")}} w
 
 ```html
 <svg id="svg" viewBox="-10 -10 120 120" xmlns="http://www.w3.org/2000/svg">
-  <polyline id="example" stroke="black" fill="none"
-   points="50,0 21,90 98,35 2,35 79,90"/>
+  <polyline
+    id="example"
+    stroke="black"
+    fill="none"
+    points="50,0 21,90 98,35 2,35 79,90" />
+</svg>
 ```
 
 ```js
@@ -50,7 +52,7 @@ let example = document.getElementById("example");
 let svgpoint = document.getElementById("svg").createSVGPoint();
 svgpoint.y = 10;
 svgpoint.x = 10;
-console.log(example.points.replaceItem(svgpoint,1));
+console.log(example.points.replaceItem(svgpoint, 1));
 ```
 
 ## Specifications

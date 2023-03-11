@@ -1,16 +1,10 @@
 ---
 title: OfflineAudioContext.suspend()
 slug: Web/API/OfflineAudioContext/suspend
-tags:
-  - API
-  - Method
-  - NeedsExample
-  - OfflineAudioContext
-  - Reference
-  - Web Audio API
-  - suspend
+page-type: web-api-instance-method
 browser-compat: api.OfflineAudioContext.suspend
 ---
+
 {{ APIRef("Web Audio API") }}
 
 The **`suspend()`** method of the {{
@@ -27,16 +21,16 @@ precise suspension.
 
 ## Syntax
 
-```js
-OfflineAudioContext.suspend(suspendTime).then(function() { /* ... */ });
+```js-nolint
+suspend(suspendTime)
 ```
 
 ### Parameters
 
-- suspendTime
+- `suspendTime`
   - : A {{jsxref("double")}} specifying the suspend time, in seconds.
 
-### Returns
+### Return value
 
 A {{jsxref("Promise")}} resolving to {{jsxref('undefined')}}.
 

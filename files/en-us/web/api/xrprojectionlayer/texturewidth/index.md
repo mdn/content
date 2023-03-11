@@ -1,18 +1,13 @@
 ---
 title: XRProjectionLayer.textureWidth
 slug: Web/API/XRProjectionLayer/textureWidth
-tags:
-  - API
-  - Property
-  - Reference
-  - VR
-  - WebXR
-  - WebXR API
-  - WebXR Device API
-  - XR
+page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.XRProjectionLayer.textureWidth
 ---
-{{APIRef("WebXR Device API")}}
+
+{{APIRef("WebXR Device API")}}{{SeeCompatTable}}
 
 The read-only **`textureWidth`** property of the {{domxref("XRProjectionLayer")}} interface indicates the width in pixels of the color textures of this layer.
 

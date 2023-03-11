@@ -1,17 +1,10 @@
 ---
 title: sidebarAction.setTitle()
 slug: Mozilla/Add-ons/WebExtensions/API/sidebarAction/setTitle
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Reference
-  - WebExtensions
-  - setTitle
-  - sidebarAction
+page-type: webextension-api-function
 browser-compat: webextensions.api.sidebarAction.setTitle
 ---
+
 {{AddonSidebar()}}
 
 Sets the sidebar's title. The title is displayed anywhere the browser lists available sidebars. For example, Firefox will show it in the "View > Sidebar" menu. It's also shown at the top o the sidebar when the sidebar is open.
@@ -28,7 +21,7 @@ If you set a new title using `setTitle()`, and omit both the `tabId` and `window
 
 ## Syntax
 
-```js
+```js-nolint
 browser.sidebarAction.setTitle(
   details // object
 )
@@ -52,9 +45,9 @@ browser.sidebarAction.setTitle(
         - If `windowId` is specified, and the window has a window-specific title set, then the window will inherit the global title.
         - Otherwise, the global title will be reset to the manifest title.
 
-    - `tabId`{{optional_inline}}
+    - `tabId` {{optional_inline}}
       - : `integer`. Sets the title only for the given tab.
-    - `windowId`{{optional_inline}}
+    - `windowId` {{optional_inline}}
       - : `integer`. Sets the title only for the given window.
 
 <!---->
@@ -71,7 +64,7 @@ browser.sidebarAction.setTitle(
 This code changes the title for the sidebar when the user clicks a browser action, but only for the current tab:
 
 ```js
-var title = "A different title";
+let title = "A different title";
 
 function setTitleForTab(tab) {
   browser.sidebarAction.setTitle({title, tabId: tab.id});
@@ -84,7 +77,8 @@ browser.browserAction.onClicked.addListener(setTitleForTab);
 
 > **Note:** This API is based on Opera's [`chrome.sidebarAction`](https://dev.opera.com/extensions/sidebar-action-api/) API.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -111,4 +105,4 @@ browser.browserAction.onClicked.addListener(setTitleForTab);
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

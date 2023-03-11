@@ -1,13 +1,10 @@
 ---
 title: primitiveUnits
 slug: Web/SVG/Attribute/primitiveUnits
-tags:
-  - NeedsExample
-  - SVG
-  - SVG Attribute
-  - SVG Filter
+page-type: svg-attribute
 browser-compat: svg.elements.filter.primitiveUnits
 ---
+
 {{SVGRef}}
 
 The **`primitiveUnits`** attribute specifies the coordinate system for the various length values within the filter primitives and for the attributes that define the filter primitive subregion.
@@ -42,31 +39,7 @@ You can use this attribute with the following SVG elements:
 
 ## Specifications
 
-<table class="no-markdown">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        {{SpecName("Filters 1.0", "#element-attrdef-filter-primitiveunits", "primitiveUnits")}}
-      </td>
-      <td>{{Spec2("Filters 1.0")}}</td>
-      <td>No change</td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("SVG1.1", "filters.html#FilterElementPrimitiveUnitsAttribute", "primitiveUnits")}}
-      </td>
-      <td>{{Spec2("SVG1.1")}}</td>
-      <td>Initial definition</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 ## Browser compatibility
 

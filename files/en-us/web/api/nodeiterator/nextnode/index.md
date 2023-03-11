@@ -1,18 +1,15 @@
 ---
 title: NodeIterator.nextNode()
 slug: Web/API/NodeIterator/nextNode
-tags:
-  - API
-  - DOM
-  - Method
-  - NodeIterator
+page-type: web-api-instance-method
 browser-compat: api.NodeIterator.nextNode
 ---
+
 {{APIRef("DOM")}}
 
 The **`NodeIterator.nextNode()`** method returns the next node
 in the set represented by the {{domxref("NodeIterator")}} and advances the position of
-the iterator within the set.  The first call to `nextNode()` returns the
+the iterator within the set. The first call to `nextNode()` returns the
 first node in the set.
 
 This method returns `null` when there are no nodes left in the set.
@@ -24,18 +21,29 @@ throw.
 
 ## Syntax
 
-```js
-node = nodeIterator.nextNode();
+```js-nolint
+nextNode()
 ```
 
-## Example
+### Parameters
+
+None.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
+
+## Examples
 
 ```js
-var nodeIterator = document.createNodeIterator(
-    document.body,
-    NodeFilter.SHOW_ELEMENT,
-    { acceptNode: function(node) { return NodeFilter.FILTER_ACCEPT; } },
-    false // this optional argument is not used any more
+const nodeIterator = document.createNodeIterator(
+  document.body,
+  NodeFilter.SHOW_ELEMENT,
+  {
+    acceptNode(node) {
+      return NodeFilter.FILTER_ACCEPT;
+    },
+  }
 );
 currentNode = nodeIterator.nextNode(); // returns the next node
 ```

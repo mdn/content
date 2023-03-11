@@ -1,11 +1,9 @@
 ---
 title: Grid
 slug: Glossary/Grid
-tags:
-  - CSS
-  - CSS Grid
-  - Glossary
+page-type: glossary-definition
 ---
+
 A _CSS grid_ is defined using the `grid` value of the {{cssxref("display")}} property; you can define columns and rows on your grid using the {{cssxref("grid-template-rows")}} and {{cssxref("grid-template-columns")}} properties.
 
 The grid that you define using these properties is described as an _explicit grid_.
@@ -17,20 +15,22 @@ In the example below I have created an _explicit grid_ of three columns and two 
 ## Example
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
-    border: 2px solid #f76707;
-    border-radius: 5px;
-    background-color: #fff4e6;
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
 }
 
 .wrapper > div {
-    border: 2px solid #ffa94d;
-    border-radius: 5px;
-    background-color: #ffd8a8;
-    padding: 1em;
-    color: #d9480f;
+  border: 2px solid #ffa94d;
+  border-radius: 5px;
+  background-color: #ffd8a8;
+  padding: 1em;
+  color: #d9480f;
 }
 ```
 
@@ -44,14 +44,14 @@ In the example below I have created an _explicit grid_ of three columns and two 
 
 ```html
 <div class="wrapper">
-   <div>One</div>
-   <div>Two</div>
-   <div>Three</div>
-   <div>Four</div>
-   <div>Five</div>
-   <div>Six</div>
-   <div>Seven</div>
-   <div>Eight</div>
+  <div>One</div>
+  <div>Two</div>
+  <div>Three</div>
+  <div>Four</div>
+  <div>Five</div>
+  <div>Six</div>
+  <div>Seven</div>
+  <div>Eight</div>
 </div>
 ```
 

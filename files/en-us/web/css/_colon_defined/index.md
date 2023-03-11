@@ -1,16 +1,11 @@
 ---
-title: ':defined'
+title: ":defined"
 slug: Web/CSS/:defined
-tags:
-  - CSS
-  - Layout
-  - Pseudo-class
-  - Reference
-  - Selector
-  - Web
+page-type: css-pseudo-class
 browser-compat: css.selectors.defined
 ---
-{{ CSSRef }}
+
+{{CSSRef}}
 
 The **`:defined`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) represents any element that has been defined. This includes any standard element built in to the browser, and custom elements that have been successfully defined (i.e. with the {{domxref("CustomElementRegistry.define()")}} method).
 
@@ -28,29 +23,34 @@ simple-custom:defined {
 
 ## Syntax
 
-{{csssyntax}}
+```css
+:defined {
+  /* ... */
+}
+```
 
 ## Examples
 
 ### Hiding elements until they are defined
 
-The following snippets are taken from our [defined-pseudo-class](https://github.com/mdn/web-components-examples/tree/master/defined-pseudo-class) demo ([see it live also](https://mdn.github.io/web-components-examples/defined-pseudo-class/)).
+The following snippets are taken from our [defined-pseudo-class](https://github.com/mdn/web-components-examples/tree/main/defined-pseudo-class) demo ([see it live also](https://mdn.github.io/web-components-examples/defined-pseudo-class/)).
 
 In this demo we define a very simple trivial custom element:
 
 ```js
-customElements.define('simple-custom',
+customElements.define(
+  "simple-custom",
   class extends HTMLElement {
     constructor() {
       super();
 
-      let divElem = document.createElement('div');
-      divElem.textContent = this.getAttribute('text');
+      let divElem = document.createElement("div");
+      divElem.textContent = this.getAttribute("text");
 
-      let shadowRoot = this.attachShadow({mode: 'open'})
-        .appendChild(divElem);
+      let shadowRoot = this.attachShadow({ mode: "open" }).appendChild(divElem);
+    }
   }
-})
+);
 ```
 
 Then insert a copy of this element into the document, along with a standard `<p>`:

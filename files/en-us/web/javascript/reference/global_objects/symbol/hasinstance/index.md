@@ -1,19 +1,21 @@
 ---
 title: Symbol.hasInstance
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/hasInstance
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Property
-  - Reference
-  - Symbol
+page-type: javascript-static-data-property
 browser-compat: javascript.builtins.Symbol.hasInstance
 ---
+
 {{JSRef}}
 
-The **`Symbol.hasInstance`** well-known symbol is used to determine if a constructor object recognizes an object as its instance. The {{jsxref("Operators/instanceof", "instanceof")}} operator's behavior can be customized by this symbol.
+The **`Symbol.hasInstance`** static data property represents the well-known symbol specifying the method used to determine if a constructor object recognizes an object as its instance. The {{jsxref("Operators/instanceof", "instanceof")}} operator's behavior can be customized by this symbol.
 
-{{EmbedInteractiveExample("pages/js/symbol-hasinstance.html")}}{{js_property_attributes(0,0,0)}}
+{{EmbedInteractiveExample("pages/js/symbol-hasinstance.html")}}
+
+## Value
+
+The well-known symbol `@@hasInstance`.
+
+{{js_property_attributes(0, 0, 0)}}
 
 ## Examples
 
@@ -24,23 +26,25 @@ You could implement your custom `instanceof` behavior like this, for example:
 ```js
 class MyArray {
   static [Symbol.hasInstance](instance) {
-    return Array.isArray(instance)
+    return Array.isArray(instance);
   }
 }
 console.log([] instanceof MyArray); // true
 ```
 
 ```js
-function MyArray() { }
+function MyArray() {}
 Object.defineProperty(MyArray, Symbol.hasInstance, {
-  value: function(instance) { return Array.isArray(instance); }
+  value(instance) {
+    return Array.isArray(instance);
+  },
 });
 console.log([] instanceof MyArray); // true
 ```
 
 ### Checking the instance of an object
 
-Just in the same manner at which you can check if an object is an instance of a  class using the `instanceof` keyword, we can also use `Symbol.hasInstance` for such checks also.
+Just in the same manner at which you can check if an object is an instance of a class using the `instanceof` keyword, we can also use `Symbol.hasInstance` for such checks also.
 
 ```js
 class Animal {

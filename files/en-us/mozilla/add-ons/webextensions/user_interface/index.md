@@ -1,11 +1,9 @@
 ---
 title: User interface
 slug: Mozilla/Add-ons/WebExtensions/user_interface
-tags:
-  - Landing
-  - User Interface
-  - WebExtensions
+page-type: guide
 ---
+
 {{AddonSidebar}}
 
 Extensions that use WebExtension APIs are provided with several user interface options so that their functionality can be made available to the user. A summary of those options is provided below, with a more detailed introduction to each user interface option in this section.

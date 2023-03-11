@@ -1,18 +1,10 @@
 ---
 title: webNavigation.getAllFrames()
 slug: Mozilla/Add-ons/WebExtensions/API/webNavigation/getAllFrames
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - getAllFrames
-  - webNavigation
+page-type: webextension-api-function
 browser-compat: webextensions.api.webNavigation.getAllFrames
 ---
+
 {{AddonSidebar()}}
 
 Given a tab ID, retrieves information about all the frames it contains.
@@ -21,8 +13,8 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ## Syntax
 
-```js
-var gettingFrames = browser.webNavigation.getAllFrames(
+```js-nolint
+let gettingFrames = browser.webNavigation.getAllFrames(
   details                // object
 )
 ```
@@ -63,39 +55,39 @@ This code logs the URLs of all frames in the active tab, when the user clicks a 
 
 ```js
 function logFrameInfo(framesInfo) {
-  for (frameInfo of framesInfo) {
+  for (const frameInfo of framesInfo) {
     console.log(frameInfo);
   }
 }
 
 function onError(error) {
-  console.log(`Error: ${error}`);
+  console.error(`Error: ${error}`);
 }
 
 function logAllFrames(tabs) {
-  var gettingAllFrames = browser.webNavigation.getAllFrames({tabId: tabs[0].id});
-  gettingAllFrames.then(logFrameInfo, onError);
+  browser.webNavigation
+    .getAllFrames({
+      tabId: tabs[0].id,
+    })
+    .then(logFrameInfo, onError);
 }
 
-browser.browserAction.onClicked.addListener(function() {
-
-  var querying = browser.tabs.query({
-    currentWindow: true,
-    active: true
-  });
-
-  querying.then(logAllFrames, onError);
-
+browser.browserAction.onClicked.addListener(() => {
+  browser.tabs
+    .query({
+      currentWindow: true,
+      active: true,
+    })
+    .then(logAllFrames, onError);
 });
 ```
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.webNavigation`](https://developer.chrome.com/extensions/webNavigation#method-getAllFrames) API. This documentation is derived from [`web_navigation.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/web_navigation.json) in the Chromium code.
->
-> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
+> **Note:** This API is based on Chromium's [`chrome.webNavigation`](https://developer.chrome.com/docs/extensions/reference/webNavigation/#method-getAllFrames) API. This documentation is derived from [`web_navigation.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/web_navigation.json) in the Chromium code.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -122,4 +114,4 @@ browser.browserAction.onClicked.addListener(function() {
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

@@ -1,19 +1,13 @@
 ---
 title: PresentationConnection.send()
 slug: Web/API/PresentationConnection/send
-tags:
-  - API
-  - Experimental
-  - Method
-  - NeedsContent
-  - NeedsExample
-  - Presentation API
-  - PresentationConnection
-  - Reference
-  - send
+page-type: web-api-instance-method
+status:
+  - experimental
 browser-compat: api.PresentationConnection.send
 ---
-{{APIRef("Presentation")}}
+
+{{APIRef("Presentation")}}{{SeeCompatTable}}
 
 The **`send()`** method of the
 {{domxref("PresentationConnection")}} interface tells a controlling browsing context to
@@ -21,8 +15,8 @@ send binary or text data to a presenting browsing context.
 
 ## Syntax
 
-```js
-PresentationConnection.send(data);
+```js-nolint
+send(data)
 ```
 
 ### Parameters
@@ -37,7 +31,7 @@ PresentationConnection.send(data);
 
 ### Return value
 
-`undefined`.
+None ({{jsxref("undefined")}}).
 
 ## Specifications
 

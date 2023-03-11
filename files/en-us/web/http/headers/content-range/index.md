@@ -1,15 +1,9 @@
 ---
 title: Content-Range
 slug: Web/HTTP/Headers/Content-Range
-tags:
-  - HTTP
-  - HTTP Header
-  - Reference
-  - Response Header
-  - Header
-  - Payload header
 browser-compat: http.headers.Content-Range
 ---
+
 {{HTTPSidebar}}
 
 The **`Content-Range`** response HTTP header indicates where in
@@ -40,7 +34,7 @@ a full body message a partial message belongs.
 
 ## Syntax
 
-```
+```http
 Content-Range: <unit> <range-start>-<range-end>/<size>
 Content-Range: <unit> <range-start>-<range-end>/*
 Content-Range: <unit> */<size>
@@ -59,7 +53,7 @@ Content-Range: <unit> */<size>
 
 ## Examples
 
-```
+```http
 Content-Range: bytes 200-1000/67589
 ```
 

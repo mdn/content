@@ -1,16 +1,11 @@
 ---
-title: ident
+title: <ident>
 slug: Web/CSS/ident
-tags:
-  - CSS
-  - CSS Data Type
-  - Data Type
-  - Draft
-  - Layout
-  - Reference
-  - Web
-  - ident
+page-type: css-type
+spec-urls:
+  - https://drafts.csswg.org/css-values/#css-identifier
 ---
+
 {{CSSRef}}
 
 The **`<ident>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Types) denotes an arbitrary string used as an {{glossary("identifier")}}.
@@ -54,15 +49,13 @@ bili.bob  Only alphanumeric characters, _, and - needn't be escaped.
 
 ## Specifications
 
-| Specification                                                                                        | Status                           | Comment |
-| ---------------------------------------------------------------------------------------------------- | -------------------------------- | ------- |
-| {{SpecName('CSS4 Values', '#css-identifier', '<code>&lt;ident&gt;</code>')}} | {{Spec2('CSS4 Values')}} |         |
-| {{SpecName('CSS3 Values', '#css-identifier', '<code>&lt;ident&gt;</code>')}} | {{Spec2('CSS3 Values')}} |         |
+{{Specifications}}
 
 ## Browser compatibility
 
-_As this type is not a real type but a convenience type used to simplify the definition of other CSS syntax._
+_As this type is not a real type but a convenience type used to simplify the definition of other CSS syntax, there is no browser compatibility information as such._
 
 ## See also
 
-- {{CSSxRef("&lt;custom-ident&gt;")}} – A restricted subset of `<ident>` values excluding CSS-wide keywords, {{CSSxRef("--*", "custom properties")}} and other per-property values.
+- [&lt;custom-ident&gt;](/en-US/docs/Web/CSS/custom-ident)
+- [&lt;dashed-ident&gt;](/en-US/docs/Web/CSS/dashed-ident)

@@ -1,28 +1,23 @@
 ---
 title: URLSearchParams.values()
 slug: Web/API/URLSearchParams/values
-tags:
-  - API
-  - Iterator
-  - Method
-  - Reference
-  - URL API
-  - URLSearchParams
+page-type: web-api-instance-method
 browser-compat: api.URLSearchParams.values
 ---
+
 {{APIRef("URL API")}}
 
 The **`values()`** method of the {{domxref("URLsearchParams")}}
 interface returns an {{jsxref("Iteration_protocols",'iterator')}} allowing iteration
-through all values contained in this object. The values are {{domxref("USVString")}}
+through all values contained in this object. The values are string
 objects.
 
 {{availableinworkers}}
 
 ## Syntax
 
-```js
-searchParams.values();
+```js-nolint
+values()
 ```
 
 ### Parameters
@@ -35,12 +30,12 @@ Returns an {{jsxref("Iteration_protocols","iterator")}}.
 
 ## Examples
 
-```js
-// Create a test URLSearchParams object
-var searchParams = new URLSearchParams("key1=value1&key2=value2");
+The following example passes a URL search string to the `URLSearchParams` constructor, then uses the iterator returned by `values()` to print the values to the console.
 
-// Display the values
-for(var value of searchParams.values()) {
+```js
+const searchParams = new URLSearchParams("key1=value1&key2=value2");
+
+for (const value of searchParams.values()) {
   console.log(value);
 }
 ```
@@ -52,11 +47,11 @@ value1
 value2
 ```
 
-```js
-// Create a test URLSearchParams object
-var searchParams = new URLSearchParams("key1=value1&key2=value2");
+This example does much the same as above, but first casts the iterator into an array.
 
-// Display the values
+```js
+const searchParams = new URLSearchParams("key1=value1&key2=value2");
+
 console.log(Array.from(searchParams.values()));
 ```
 

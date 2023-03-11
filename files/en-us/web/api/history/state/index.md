@@ -1,30 +1,19 @@
 ---
 title: History.state
 slug: Web/API/History/state
-tags:
-  - API
-  - HTML DOM
-  - History
-  - History API
-  - Property
-  - Reference
+page-type: web-api-instance-property
 browser-compat: api.History.state
 ---
+
 {{APIRef("History API")}}
 
 The **`History.state`** property
 returns a value representing the state at the top of the history stack. This is
-a way to look at the state without having to wait for a {{event("popstate")}} event.
+a way to look at the state without having to wait for a {{domxref("Window/popstate_event", "popstate")}} event.
 
-## Syntax
+## Value
 
-```js
-const currentState = history.state
-```
-
-### Value
-
-The state at the top of the history stack. The value is {{jsxref("null")}} until the
+The state at the top of the history stack. The value is [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) until the
 {{domxref("History.pushState","pushState()")}} or
 {{domxref("History.replaceState","replaceState()")}} method is used.
 
@@ -40,10 +29,10 @@ The next line logs the value to the console again, showing that
 console.log(`History.state before pushState: ${history.state}`);
 
 // Now push something on the stack
-history.pushState({name: 'Example'}, "pushState example", 'page3.html');
+history.pushState({ name: "Example" }, "pushState example", "page3.html");
 
 // Now state has a value.
-console.log('History.state after pushState: ', history.state);
+console.log("History.state after pushState: ", history.state);
 ```
 
 ## Specifications

@@ -1,14 +1,10 @@
 ---
 title: ElementInternals.labels
 slug: Web/API/ElementInternals/labels
-tags:
-  - API
-  - Property
-  - Reference
-  - labels
-  - ElementInternals
+page-type: web-api-instance-property
 browser-compat: api.ElementInternals.labels
 ---
+
 {{DefaultAPISidebar("DOM")}}
 
 The **`labels`** read-only property of the {{domxref("ElementInternals")}} interface returns the labels associated with the element.

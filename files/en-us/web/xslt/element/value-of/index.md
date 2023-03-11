@@ -1,12 +1,8 @@
 ---
 title: <xsl:value-of>
 slug: Web/XSLT/Element/value-of
-tags:
-  - Element
-  - Reference
-  - XSLT
-  - value-of
 ---
+
 {{ XsltRef() }}
 
 The `<xsl:value-of>` element evaluates an XPath expression, converts it to a string, and writes that string to the result tree.

@@ -1,15 +1,11 @@
 ---
-title: '::-moz-list-bullet'
+title: "::-moz-list-bullet"
 slug: Web/CSS/:-moz-list-bullet
-tags:
-  - CSS
-  - CSS:Mozilla Extensions
-  - NeedsCompatTable
-  - Non-standard
-  - Pseudo-element
-  - Reference
-  - Selector
+page-type: css-pseudo-class
+status:
+  - non-standard
 ---
+
 {{CSSRef}}{{Non-standard_header}}
 
 The **`::-moz-list-bullet`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) is a [Mozilla extension](/en-US/docs/Web/CSS/Mozilla_Extensions) that represents the marker (typically a bullet) of a list item ({{htmlelement("li")}}) in an unordered list ({{htmlelement("ul")}}).
@@ -17,12 +13,16 @@ The **`::-moz-list-bullet`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/
 ## Syntax
 
 ```css
-li::-moz-list-bullet
+li::-moz-list-bullet {
+  /* ... */
+}
 ```
 
 ## Examples
 
-### HTML
+### Styling list item markers
+
+#### HTML
 
 ```html
 <ul>
@@ -32,7 +32,7 @@ li::-moz-list-bullet
 </ul>
 ```
 
-### CSS
+#### CSS
 
 ```css
 ::-moz-list-bullet {
@@ -41,9 +41,9 @@ li::-moz-list-bullet
 }
 ```
 
-### Result
+#### Result
 
-{{ EmbedLiveSample('Examples', '', '', '', 'Web/CSS/:-moz-list-bullet') }}
+{{ EmbedLiveSample('Styling list item markers') }}
 
 ## Specifications
 

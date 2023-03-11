@@ -1,23 +1,19 @@
 ---
-title: '-webkit-mask-box-image'
+title: "-webkit-mask-box-image"
 slug: Web/CSS/-webkit-mask-box-image
-tags:
-  - CSS
-  - Layout
-  - Non-standard
-  - Reference
-  - Web
-  - recipe:css-property
+page-type: css-property
+status:
+  - non-standard
 browser-compat: css.properties.-webkit-mask-box-image
 ---
-{{ CSSRef() }} {{ Non-standard_header() }}
+
+{{CSSRef}} {{ Non-standard_header() }}
 
 `-webkit-mask-box-image` sets the mask image for an element's border box.
 
 - {{ Xref_cssinitial() }}: none
 - Applies to: all elements
 - {{ Xref_cssinherited() }}: no
-- Media: {{ Xref_cssvisual() }}
 - {{ Xref_csscomputed() }}: as specified
 
 ## Syntax
@@ -29,7 +25,7 @@ browser-compat: css.properties.-webkit-mask-box-image
 Where:
 
 - \<mask-box-image>
-  - : `{{cssxref("&lt;uri&gt;")}} | <gradient> | none`
+  - : `{{cssxref("url", "&lt;uri&gt;")}} | <gradient> | none`
 - \<top> \<right> \<bottom> \<left>
   - : `<length> | <percentage>`
 - \<x-repeat> \<y-repeat>
@@ -70,7 +66,7 @@ Where:
 
 ```css
 .exampleone {
-  -webkit-mask-box-image: url('mask.png');
+  -webkit-mask-box-image: url("mask.png");
 }
 ```
 
@@ -78,7 +74,7 @@ Where:
 
 ```css
 .exampletwo {
-  -webkit-mask-box-image: url('logo.png') 100 100 0 0 round round;
+  -webkit-mask-box-image: url("logo.png") 100 100 0 0 round round;
 }
 ```
 
@@ -92,4 +88,4 @@ Not part of any standard.
 
 ## See also
 
-{{ cssxref("-webkit-mask") }}, {{ cssxref("-webkit-mask-origin") }}, {{ cssxref("-webkit-mask-attachment") }},{{ cssxref("-webkit-mask-clip") }},{{ cssxref("-webkit-mask-image") }},{{ cssxref("-webkit-mask-composite") }},{{ cssxref("-webkit-mask-repeat") }}
+{{ cssxref("mask") }}, {{ cssxref("mask-origin") }}, {{ cssxref("-webkit-mask-attachment") }}, {{ cssxref("mask-clip") }}, {{ cssxref("mask-image") }}, {{ cssxref("-webkit-mask-composite") }}, {{ cssxref("mask-repeat") }}

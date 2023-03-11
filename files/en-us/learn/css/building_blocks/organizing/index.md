@@ -1,20 +1,9 @@
 ---
 title: Organizing your CSS
 slug: Learn/CSS/Building_blocks/Organizing
-tags:
-  - Beginner
-  - CSS
-  - CodingScripting
-  - Learn
-  - comments
-  - formatting
-  - methodologies
-  - organizing
-  - post-processor
-  - pre-processor
-  - styleguide
 ---
-{{PreviousMenuNext("Learn/CSS/Building_blocks/Debugging_CSS", "Learn/CSS/Building_blocks/Fundamental_CSS_comprehension", "Learn/CSS/Building_blocks")}}
+
+{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Debugging_CSS", "Learn/CSS/Building_blocks/Fundamental_CSS_comprehension", "Learn/CSS/Building_blocks")}}
 
 As you start to work on larger stylesheets and big projects you will discover that maintaining a huge CSS file can be challenging. In this article we will take a brief look at some best practices for writing your CSS to make it easily maintainable, and some of the solutions you will find in use by others to help improve maintainability.
 
@@ -57,7 +46,7 @@ Here are some general suggestions for ways to keep your stylesheets organized an
 
 If you are working with a team on an existing project, the first thing to check is whether the project has an existing style guide for CSS. The team style guide should always win over your own personal preferences. There often isn't a right or wrong way to do things, but consistency is important.
 
-For example, have a look at the [CSS guidelines for MDN code examples](/en-US/docs/MDN/Guidelines/Code_guidelines/CSS).
+For example, have a look at the [CSS guidelines for MDN code examples](/en-US/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide/CSS).
 
 ### Keep it consistent
 
@@ -70,8 +59,8 @@ Having a set of rules you always follow reduces the amount of mental overhead ne
 There are a couple of ways you will see CSS formatted. Some developers put all of the rules onto a single line, like so:
 
 ```css
-.box { background-color: #567895; }
-h2 { background-color: black; color: white; }
+.box {background-color: #567895; }
+h2 {background-color: black; color: white; }
 ```
 
 Other developers prefer to break everything onto a new line:
@@ -103,15 +92,15 @@ A good tip is to add a block of comments between logical sections in your styles
 ```css
 /* || General styles */
 
-...
+/* … */
 
 /* || Typography */
 
-...
+/* … */
 
 /* || Header and Main Navigation */
 
-...
+/* … */
 ```
 
 You don't need to comment every single thing in your CSS, as much of it will be self-explanatory. What you should comment are the things where you made a particular decision for a reason.
@@ -143,13 +132,24 @@ In this section of the stylesheet we are providing default styling for the type 
 ```css
 /* || GENERAL STYLES */
 
-body { ... }
+body {
+  /* … */
+}
 
-h1, h2, h3, h4 { ... }
+h1,
+h2,
+h3,
+h4 {
+  /* … */
+}
 
-ul { ... }
+ul {
+  /* … */
+}
 
-blockquote { ... }
+blockquote {
+  /* … */
+}
 ```
 
 After this section, we could define a few utility classes, for example, a class that removes the default list style for lists we're going to display as flex items or in some other way. If you have a few styling choices you know you will want to apply to lots of different elements, they can be put in this section.
@@ -163,7 +163,7 @@ After this section, we could define a few utility classes, for example, a class 
   padding: 0;
 }
 
-...
+/* … */
 ```
 
 Then we can add everything that is used sitewide. That might be things like the basic page layout, the header, navigation styling, and so on.
@@ -171,9 +171,13 @@ Then we can add everything that is used sitewide. That might be things like the 
 ```css
 /* || SITEWIDE */
 
-.main-nav { ... }
+.main-nav {
+  /* … */
+}
 
-.logo { ... }
+.logo {
+  /* … */
+}
 ```
 
 Finally, we will include CSS for specific things, broken down by the context, page, or even component in which they are used.
@@ -181,9 +185,13 @@ Finally, we will include CSS for specific things, broken down by the context, pa
 ```css
 /* || STORE PAGES */
 
-.product-listing { ... }
+.product-listing {
+  /* … */
+}
 
-.product-box { ... }
+.product-box {
+  /* … */
+}
 ```
 
 By ordering things in this way, we at least have an idea in which part of the stylesheet we will be looking for something that we want to change.
@@ -243,7 +251,7 @@ If you are not taking an OOCSS approach you might create a custom CSS for the di
 }
 
 .comment .content {
-  font-size: .8rem;
+  font-size: 0.8rem;
 }
 
 .list-item {
@@ -253,7 +261,7 @@ If you are not taking an OOCSS approach you might create a custom CSS for the di
 }
 
 .list-item .content {
-  font-size: .8rem;
+  font-size: 0.8rem;
 }
 ```
 
@@ -266,7 +274,7 @@ In OOCSS, you would create one pattern called `media` that would have all of the
 }
 
 .media .content {
-  font-size: .8rem;
+  font-size: 0.8rem;
 }
 
 .comment img {
@@ -282,7 +290,7 @@ In your HTML, the comment would need both the `media` and `comment` classes appl
 
 ```html
 <div class="media comment">
-  <img />
+  <img src="" alt="" />
   <div class="content"></div>
 </div>
 ```
@@ -292,7 +300,7 @@ The list-item would have `media` and `list-item` applied:
 ```html
 <ul>
   <li class="media list-item">
-    <img />
+    <img src="" alt="" />
     <div class="content"></div>
   </li>
 </ul>
@@ -306,10 +314,13 @@ BEM stands for Block Element Modifier. In BEM a block is a stand-alone entity su
 
 ```html
 <form class="form form--theme-xmas form--simple">
-  <input class="form__input" type="text" />
+  <label class="label form__label" for="inputId"></label>
+  <input class="form__input" type="text" id="inputId" />
+
   <input
     class="form__submit form__submit--disabled"
-    type="submit" />
+    type="submit"
+    value="Submit" />
 </form>
 ```
 
@@ -339,7 +350,7 @@ CSS now has native [custom properties](/en-US/docs/Web/CSS/Using_CSS_custom_prop
 
 If we created a variable called `$base-color`, as in the first line below, we could then use it through the stylesheet anywhere that required that color.
 
-```css
+```scss
 $base-color: #c6538c;
 
 .alert {
@@ -361,19 +372,19 @@ I mentioned above that one way to organize CSS is to break down stylesheets into
 
 So, for example, with [partials](https://sass-lang.com/documentation/at-rules/use#partials), you could have several style files inside a directory, say `foundation/_code.scss`, `foundation/_lists.scss`, `foundation/_footer.scss`, `foundation/_links.scss`, etc. You could then use the Sass `@use` role to load them into other stylesheets:
 
-```css
-// foundation/_index.sass
-@use 'code'
-@use 'lists'
-@use 'footer'
-@use 'links'
+```scss
+// foundation/_index.scss
+@use "code";
+@use "lists";
+@use "footer";
+@use "links";
 ```
 
 If the partials are all loaded into an index file, as implied above, you can then load that entire directory into another stylesheet in one go:
 
-```css
-// style.sass
-@use 'foundation'
+```scss
+// style.scss
+@use "foundation";
 ```
 
 > **Note:** A simple way to try out Sass is to use [CodePen](https://codepen.io) — you can enable Sass for your CSS in the Settings for a Pen, and CodePen will then run the Sass parser for you in order that you can see the resulting webpage with regular CSS applied. Sometimes you will find that CSS tutorials have used Sass rather than plain CSS in their CodePen demos, so it is handy to know a little bit about it.
@@ -382,33 +393,12 @@ If the partials are all loaded into an index file, as implied above, you can the
 
 If you are concerned about adding size to your stylesheets, for example, by adding a lot of additional comments and whitespace, then a post-processing step could be to optimize the CSS by stripping out anything unnecessary in the production version. An example of a post-processor solution for doing this would be [cssnano](https://cssnano.co/).
 
-## Wrapping up
+## Summary
 
-This is the final part of our Learning CSS Guide, and as you can see there are many ways in which your exploration of CSS can continue from this point.
+This is the final part of our building blocks module, and as you can see there are many ways in which your exploration of CSS can continue from this point — but now you can go on to testing yourself with our assessments: the first one is linked below.
 
-To learn more about layout in CSS, see the [Learn CSS Layout](/en-US/docs/Learn/CSS/CSS_layout) section.
+To learn more about layout in CSS, see the [CSS Layout](/en-US/docs/Learn/CSS/CSS_layout) module.
 
 You should also now have the skills to explore the rest of the [MDN CSS](/en-US/docs/Web/CSS) material. You can look up properties and values, explore our [CSS Cookbook](/en-US/docs/Web/CSS/Layout_cookbook) for patterns to use, or continue reading in some of the specific guides, such as our [Guide to CSS Grid Layout](/en-US/docs/Web/CSS/CSS_Grid_Layout).
 
 {{PreviousMenuNext("Learn/CSS/Building_blocks/Debugging_CSS", "Learn/CSS/Building_blocks/Fundamental_CSS_comprehension", "Learn/CSS/Building_blocks")}}
-
-## In this module
-
-1. [Cascade and inheritance](/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
-2. [CSS selectors](/en-US/docs/Learn/CSS/Building_blocks/Selectors)
-
-    - [Type, class, and ID selectors](/en-US/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors)
-    - [Attribute selectors](/en-US/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors)
-    - [Pseudo-classes and pseudo-elements](/en-US/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements)
-    - [Combinators](/en-US/docs/Learn/CSS/Building_blocks/Selectors/Combinators)
-
-3. [The box model](/en-US/docs/Learn/CSS/Building_blocks/The_box_model)
-4. [Backgrounds and borders](/en-US/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)
-5. [Handling different text directions](/en-US/docs/Learn/CSS/Building_blocks/Handling_different_text_directions)
-6. [Overflowing content](/en-US/docs/Learn/CSS/Building_blocks/Overflowing_content)
-7. [Values and units](/en-US/docs/Learn/CSS/Building_blocks/Values_and_units)
-8. [Sizing items in CSS](/en-US/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS)
-9. [Images, media, and form elements](/en-US/docs/Learn/CSS/Building_blocks/Images_media_form_elements)
-10. [Styling tables](/en-US/docs/Learn/CSS/Building_blocks/Styling_tables)
-11. [Debugging CSS](/en-US/docs/Learn/CSS/Building_blocks/Debugging_CSS)
-12. [Organizing your CSS](/en-US/docs/Learn/CSS/Building_blocks/Organizing)

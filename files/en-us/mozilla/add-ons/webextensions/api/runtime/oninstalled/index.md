@@ -1,18 +1,10 @@
 ---
 title: runtime.onInstalled
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/onInstalled
-tags:
-  - API
-  - Add-ons
-  - Event
-  - Extensions
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - onInstalled
-  - runtime
+page-type: webextension-api-event
 browser-compat: webextensions.api.runtime.onInstalled
 ---
+
 {{AddonSidebar()}}
 
 Fired when the extension is first installed, when the extension is updated to a new version, and when the browser is updated to a new version.
@@ -21,7 +13,7 @@ Note that `runtime.onInstalled` is not the same as {{WebExtAPIRef("management.on
 
 ## Syntax
 
-```js
+```js-nolint
 browser.runtime.onInstalled.addListener(listener)
 browser.runtime.onInstalled.removeListener(listener)
 browser.runtime.onInstalled.hasListener(listener)
@@ -48,9 +40,9 @@ Events have three functions:
 
       - : An object with the following properties:
 
-        - `id`{{optional_inline}}
+        - `id` {{optional_inline}}
           - : `string`. The ID of the imported shared module extension that updated. This is present only if the `reason` value is `shared_module_update`.
-        - `previousVersion`{{optional_inline}}
+        - `previousVersion` {{optional_inline}}
           - : `string`. The previous version of the extension just updated. This is only present if the `reason` value is `update`.
         - `reason`
           - : An {{WebExtAPIRef('runtime.OnInstalledReason')}} value, stating the reason that this event is being dispatched.
@@ -78,11 +70,10 @@ browser.runtime.onInstalled.addListener(handleInstalled);
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.runtime`](https://developer.chrome.com/extensions/runtime#event-onInstalled) API. This documentation is derived from [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) in the Chromium code.
->
-> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
+> **Note:** This API is based on Chromium's [`chrome.runtime`](https://developer.chrome.com/docs/extensions/reference/runtime/#event-onInstalled) API. This documentation is derived from [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) in the Chromium code.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -109,4 +100,4 @@ browser.runtime.onInstalled.addListener(handleInstalled);
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

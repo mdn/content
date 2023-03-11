@@ -1,18 +1,15 @@
 ---
 title: SVGStringList
 slug: Web/API/SVGStringList
-tags:
-  - API
-  - Reference
-  - SVG
-  - SVG DOM
+page-type: web-api-interface
 browser-compat: api.SVGStringList
 ---
+
 {{APIRef("SVG")}}
 
 ## SVG string list interface
 
-The `SVGStringList` defines a list of {{domxref("DOMString")}} objects.
+The `SVGStringList` defines a list of strings.
 
 An `SVGStringList` object can be designated as read only, which means that attempts to modify the object will result in an exception being thrown.
 
@@ -30,40 +27,29 @@ An `SVGStringList` object can be designated as read only, which means that attem
         <ul>
           <li><code>void clear()</code></li>
           <li>
-            {{domxref("DOMString")}}
-            <code
-              >initialize(in {{domxref("DOMString")}}
-              <em>newItem</em>)</code
-            >
+            string
+            <code>initialize(string <em>newItem</em>)</code>
           </li>
           <li>
-            {{domxref("DOMString")}}
-            <code>getItem(in unsigned long <em>index</em>)</code>
+            string
+            <code>getItem(number <em>index</em>)</code>
           </li>
           <li>
-            {{domxref("DOMString")}}
-            <code
-              >insertItemBefore(in {{domxref("DOMString")}}
-              <em>newItem</em>, in unsigned long <em>index</em>)</code
-            >
+            string
+            <code>insertItemBefore(string <em>newItem</em>, number <em>index</em>)</code>
           </li>
           <li>
-            {{domxref("DOMString")}}
-            <code
-              >replaceItem(in {{domxref("DOMString")}} <em>newItem</em>,
-              in unsigned long <em>index</em>)</code
-            >
+            string
+            <code>replaceItem(string <em>newItem</em>,
+              number <em>index</em>)</code>
           </li>
           <li>
-            {{domxref("DOMString")}}
-            <code>removeItem(in unsigned long <em>index</em>)</code>
+            string
+            <code>removeItem(number <em>index</em>)</code>
           </li>
           <li>
-            {{domxref("DOMString")}}
-            <code
-              >appendItem(in {{domxref("DOMString")}}
-              <em>newItem</em>)</code
-            >
+            string
+            <code>appendItem(string <em>newItem</em>)</code>
           </li>
         </ul>
       </td>
@@ -91,7 +77,7 @@ An `SVGStringList` object can be designated as read only, which means that attem
   </tbody>
 </table>
 
-## Properties
+## Instance properties
 
 <table class="no-markdown">
   <thead>
@@ -118,7 +104,7 @@ An `SVGStringList` object can be designated as read only, which means that attem
   </tbody>
 </table>
 
-## Methods
+## Instance methods
 
 <table class="no-markdown">
   <thead>
@@ -152,12 +138,9 @@ An `SVGStringList` object can be designated as read only, which means that attem
     </tr>
     <tr>
       <td>
-        <code
-          ><strong>initialize</strong>(in {{domxref("DOMString")}}
-          <em>newItem</em>)</code
-        >
+        <code><strong>initialize</strong>(string <em>newItem</em>)</code>
       </td>
-      <td>{{domxref("DOMString")}}</td>
+      <td>string</td>
       <td>
         <p>
           Clears all existing current items from the list and re-initializes the
@@ -180,9 +163,9 @@ An `SVGStringList` object can be designated as read only, which means that attem
     </tr>
     <tr>
       <td>
-        <code><strong>getItem</strong>(in unsigned long <em>index</em>)</code>
+        <code><strong>getItem</strong>(number <em>index</em>)</code>
       </td>
-      <td>{{domxref("DOMString")}}</td>
+      <td>string</td>
       <td>
         <p>
           Returns the specified item from the list. The returned item is the
@@ -203,11 +186,9 @@ An `SVGStringList` object can be designated as read only, which means that attem
     <tr>
       <td>
         <code
-          ><strong>insertItemBefore</strong>(in {{domxref("DOMString")}}
-          <em>newItem</em>, in unsigned long <em>index</em>)</code
-        >
+          ><strong>insertItemBefore</strong>(string <em>newItem</em>, number <em>index</em>)</code>
       </td>
-      <td>{{domxref("DOMString")}}</td>
+      <td>string</td>
       <td>
         <p>
           Inserts a new item into the list at the specified position. The first
@@ -234,11 +215,10 @@ An `SVGStringList` object can be designated as read only, which means that attem
     <tr>
       <td>
         <code
-          ><strong>replaceItem</strong>(in {{domxref("DOMString")}}
-          <em>newItem</em>, in unsigned long <em>index</em>)</code
+          ><strong>replaceItem</strong>(string <em>newItem</em>, number <em>index</em>)</code
         >
       </td>
-      <td>{{domxref("DOMString")}}</td>
+      <td>string</td>
       <td>
         <p>
           Replaces an existing item in the list with a new item. If
@@ -270,7 +250,7 @@ An `SVGStringList` object can be designated as read only, which means that attem
           ><strong>removeItem</strong>(in unsigned long <em>index</em>)</code
         >
       </td>
-      <td>{{domxref("DOMString")}}</td>
+      <td>string</td>
       <td>
         <p>Removes an existing item from the list.</p>
         <p><strong>Exceptions:</strong></p>
@@ -292,11 +272,10 @@ An `SVGStringList` object can be designated as read only, which means that attem
     <tr>
       <td>
         <code
-          ><strong>appendItem</strong>(in {{domxref("DOMString")}}
-          <em>newItem</em>)</code
+          ><strong>appendItem</strong>(string <em>newItem</em>)</code
         >
       </td>
-      <td>{{domxref("DOMString")}}</td>
+      <td>string</td>
       <td>
         <p>
           Inserts a new item at the end of the list. If <code>newItem</code> is

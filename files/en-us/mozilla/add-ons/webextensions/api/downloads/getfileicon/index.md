@@ -1,18 +1,10 @@
 ---
 title: downloads.getFileIcon()
 slug: Mozilla/Add-ons/WebExtensions/API/downloads/getFileIcon
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - downloads
-  - getFileIcon
+page-type: webextension-api-function
 browser-compat: webextensions.api.downloads.getFileIcon
 ---
+
 {{AddonSidebar()}}
 
 The **`getFileIcon()`** function of the {{WebExtAPIRef("downloads")}} API retrieves an icon for the specified download.
@@ -25,8 +17,8 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ## Syntax
 
-```js
-var gettingIcon = browser.downloads.getFileIcon(
+```js-nolint
+let gettingIcon = browser.downloads.getFileIcon(
   downloadId,           // integer
   options               // optional object
 )
@@ -36,11 +28,11 @@ var gettingIcon = browser.downloads.getFileIcon(
 
 - `downloadId`
   - : An `integer` representing the ID of the download.
-- `options`{{optional_inline}}
+- `options` {{optional_inline}}
 
   - : An options `object` representing preferences for the icon to be retrieved. It can take the following properties:
 
-    - `size`{{optional_inline}}
+    - `size` {{optional_inline}}
       - : An `integer` representing the size of the icon. The returned icon's size will be the provided size squared (in pixels). If omitted, the default size for the icon is 32x32 pixels.
 
 ### Return value
@@ -67,12 +59,12 @@ function onError(error) {
 function getIcon(downloadItems) {
     if (downloadItems.length > 0) {
       latestDownloadId = downloadItems[0].id;
-      var gettingIcon = browser.downloads.getFileIcon(latestDownloadId);
+      let gettingIcon = browser.downloads.getFileIcon(latestDownloadId);
       gettingIcon.then(gotIcon, onError);
     }
   }
 
-var searching = browser.downloads.search({
+let searching = browser.downloads.search({
   limit: 1,
   orderBy: ["-startTime"]
 });
@@ -82,11 +74,10 @@ searching.then(getIcon, onError);
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.downloads`](https://developer.chrome.com/extensions/downloads#method-getFileIcon) API.
->
-> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
+> **Note:** This API is based on Chromium's [`chrome.downloads`](https://developer.chrome.com/docs/extensions/reference/downloads/#method-getFileIcon) API.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -113,4 +104,4 @@ searching.then(getIcon, onError);
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

@@ -1,29 +1,17 @@
 ---
 title: AudioParam.maxValue
 slug: Web/API/AudioParam/maxValue
-tags:
-  - API
-  - Audio
-  - AudioParam
-  - Property
-  - Reference
-  - Web Audio API
-  - maxValue
+page-type: web-api-instance-property
 browser-compat: api.AudioParam.maxValue
 ---
+
 {{APIRef("Web Audio API")}}
 
 The **`maxValue`**
 read-only property of the {{domxref("AudioParam")}} interface represents the maximum
 possible value for the parameter's nominal (effective) range.
 
-## Syntax
-
-```js
-var maxVal = audioParam.maxValue;
-```
-
-### Value
+## Value
 
 A floating-point {{jsxref("Number")}} indicating the maximum value permitted for the
 parameter's nominal range.
@@ -31,7 +19,7 @@ parameter's nominal range.
 The default value of `maxValue` is the maximum positive single-precision
 floating-point value (+340,282,346,638,528,859,811,704,183,484,516,925,440).
 
-## Example
+## Examples
 
 ```js
 const audioCtx = new AudioContext();

@@ -1,12 +1,10 @@
 ---
 title: Remote Playback API
 slug: Web/API/Remote_Playback_API
-tags:
-  - API
-  - Overview
-  - Reference
-  - Remote Playback API
+page-type: web-api-overview
+browser-compat: api.RemotePlayback
 ---
+
 {{DefaultAPISidebar("Remote Playback API")}}
 
 The Remote Playback API extends the {{domxref("HTMLMediaElement")}} to enable the control of remote playback of media from a webpage.
@@ -32,10 +30,11 @@ The following example demonstrates a player with custom controls that supports r
 
 ```html
 <video id="videoElement" src="https://example.org/media.ext">
-<button id="deviceBtn" style="display: none;">Pick device</button>
+  <button id="deviceBtn" style="display: none;">Pick device</button>
+</video>
 ```
 
-The {{domxref("RemotePlayback.watchAvailability()")}} method is watches for available remote playback devices. If a device is available, use the callback to show the button.
+The {{domxref("RemotePlayback.watchAvailability()")}} method watches for available remote playback devices. If a device is available, use the callback to show the button.
 
 ```js
 const deviceBtn = document.getElementById("deviceBtn");
@@ -55,8 +54,8 @@ videoElem.remote.watchAvailability(availabilityCallback).catch(() => {
 
 ## Specifications
 
-{{Specifications("api.RemotePlayback")}}
+{{Specifications}}
 
 ## Browser compatibility
 
-{{Compat("api.RemotePlayback")}}
+{{Compat}}

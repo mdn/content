@@ -1,13 +1,11 @@
 ---
 title: CSS.registerProperty()
 slug: Web/API/CSS/RegisterProperty
-tags:
-  - CSS
-  - Houdini
-  - Reference
+page-type: web-api-static-method
 browser-compat: api.CSS.registerProperty
 ---
-{{SeeCompatTable}}
+
+{{APIRef("CSSOM")}}
 
 The **`CSS.registerProperty()`** method registers
 {{cssxref('--*', 'custom properties')}}, allowing for property type checking, default
@@ -19,8 +17,8 @@ and what the default value of the custom property is.
 
 ## Syntax
 
-```js
-CSS.registerProperty(PropertyDefinition);
+```js-nolint
+CSS.registerProperty(PropertyDefinition)
 ```
 
 ### Parameters
@@ -29,16 +27,16 @@ A `PropertyDefinition` dictionary object, which can contain the following
 members:
 
 - `name`
-  - : A [`DOMString`](/en-US/docs/Web/API/DOMString) indicating the
+  - : A string representing the
     name of the property being defined.
 - `syntax` {{optional_inline}}
-  - : A [`DOMString`](/en-US/docs/Web/API/DOMString) representing
+  - : A string representing
     the expected syntax of the defined property. Defaults to `"*"`.
 - `inherits`
   - : A boolean value defining whether the defined property should be inherited
     (`true`), or not (`false`). Defaults to `false`.
 - `initialValue` {{optional_inline}}
-  - : A [`DOMString`](/en-US/docs/Web/API/DOMString) representing
+  - : A string representing
     the initial value of the defined property.
 
 ### Return value
@@ -47,12 +45,12 @@ members:
 
 ### Exceptions
 
-- `InvalidModificationError`
+- `InvalidModificationError` {{domxref("DOMException")}}
   - : The given `name` has already been registered.
-- `SyntaxError`
+- `SyntaxError` {{domxref("DOMException")}}
   - : The given `name` isn't a valid custom property name (starts with two
     dashes, e.g. `--foo`).
-- `TypeError`
+- {{jsxref("TypeError")}}
   - : The required `name` and/or `inherits` dictionary members were
     not provided.
 
@@ -64,15 +62,15 @@ default value, and have it not inherit its value:
 
 ```js
 window.CSS.registerProperty({
-  name: '--my-color',
-  syntax: '<color>',
+  name: "--my-color",
+  syntax: "<color>",
   inherits: false,
-  initialValue: '#c0ffee',
+  initialValue: "#c0ffee",
 });
 ```
 
 In this example, the custom property `--my-color` has been registered using
-the syntax `<color>` . We can now use that property to transition a
+the syntax `<color>`. We can now use that property to transition a
 gradient on hover or focus. Notice that with the registered property the transition
 works, but that it doesn't with the unregistered property!
 
@@ -122,8 +120,7 @@ We can add these styles to some buttons:
 
 ## See also
 
-- [Using the CSS
-  properties and values API](/en-US/docs/Web/API/CSS_Properties_and_Values_API/guide)
+- [Using the CSS properties and values API](/en-US/docs/Web/API/CSS_Properties_and_Values_API/guide)
 - {{DOMxRef("CSS")}}
 - {{DOMxRef("CSS.supports()")}}
 - {{DOMxRef("CSS.escape()")}}

@@ -1,19 +1,13 @@
 ---
 title: XRTransientInputHitTestResult.inputSource
 slug: Web/API/XRTransientInputHitTestResult/inputSource
-tags:
-  - API
-  - AR
-  - Augmented Reality
-  - Experimental
-  - Property
-  - Reference
-  - VR
-  - WebXR
-  - WebXR Device API
+page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.XRTransientInputHitTestResult.inputSource
 ---
-{{APIRef("WebXR Device API")}}
+
+{{APIRef("WebXR Device API")}}{{SeeCompatTable}}
 
 The _read-only_ **`inputSource`** property of the {{DOMxRef("XRTransientInputHitTestResult")}} interface represents an {{domxref("XRInputSource")}} object that was used to compute the {{domxref("XRTransientInputHitTestResult.results", "results")}} array.
 
@@ -32,13 +26,13 @@ The `inputSource` property allows you to filter hit test results by input source
 function onXRFrame(time, xrFrame) {
   let hitTestResults = xrFrame.getHitTestResultsForTransientInput(transientHitTestSource);
 
-  hitTestResults.forEach(resultsPerInputSource => {
-    if (resultsPerInputSource.inputSource == myPreferredInputSource) {
+  hitTestResults.forEach((resultsPerInputSource) => {
+    if (resultsPerInputSource.inputSource === myPreferredInputSource) {
       // act on hit test results from the preferred input source
     }
-  }
+  });
  }
- ```
+```
 
 ## Specifications
 

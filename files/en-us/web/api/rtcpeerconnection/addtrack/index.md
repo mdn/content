@@ -1,34 +1,24 @@
 ---
 title: RTCPeerConnection.addTrack()
 slug: Web/API/RTCPeerConnection/addTrack
-tags:
-  - API
-  - Audio
-  - Media
-  - Method
-  - RTCPeerConnection
-  - Reference
-  - Tracks
-  - Video
-  - WebRTC
-  - addTrack
+page-type: web-api-instance-method
 browser-compat: api.RTCPeerConnection.addTrack
 ---
 
 {{APIRef("WebRTC")}}
 
-The {{domxref("RTCPeerConnection")}} method
-**`addTrack()`** adds a new media track to the set of tracks
-which will be transmitted to the other peer.>
+The {{domxref("RTCPeerConnection")}} method **`addTrack()`** adds a new media track to the set of tracks which will be transmitted to the other peer.
 
-> **Note:** Adding a track to a connection triggers renegotiation by
-> firing a {{DOMxRef("RTCPeerConnection/negotiationneeded_event", "negotiationneeded")}} event. See
-> {{SectionOnPage("/en-US/docs/Web/API/WebRTC_API/Signaling_and_video_calling", "Starting negotiation")}} for details.
+> **Note:** Adding a track to a connection triggers renegotiation by firing a {{DOMxRef("RTCPeerConnection/negotiationneeded_event", "negotiationneeded")}} event.
+> See [Starting negotiation](/en-US/docs/Web/API/WebRTC_API/Signaling_and_video_calling#starting_negotiation) for details.
 
 ## Syntax
 
-```js
-rtpSender = rtcPeerConnection.addTrack(track, stream...);
+```js-nolint
+addTrack(track)
+addTrack(track, stream0)
+addTrack(track, stream0, stream1)
+addTrack(track, stream0, stream1, /* … ,*/ streamN)
 ```
 
 ### Parameters
@@ -36,7 +26,7 @@ rtpSender = rtcPeerConnection.addTrack(track, stream...);
 - `track`
   - : A {{domxref("MediaStreamTrack")}} object representing the media track to add to the
     peer connection.
-- `stream...` {{optional_inline}}
+- `stream0, …, streamN` {{optional_inline}}
   - : One or more local {{domxref("MediaStream")}} objects to which the track should be
     added.
 
@@ -90,9 +80,11 @@ each track from the stream to the peer connection, without specifying a stream f
 track:
 
 ```js
-async openCall(pc) {
-  const gumStream = await navigator.mediaDevices.getUserMedia(
-                          {video: true, audio: true});
+async function openCall(pc) {
+  const gumStream = await navigator.mediaDevices.getUserMedia({
+    video: true,
+    audio: true,
+  });
   for (const track of gumStream.getTracks()) {
     pc.addTrack(track);
   }
@@ -102,7 +94,7 @@ async openCall(pc) {
 The result is a set of tracks being sent to the remote peer, with no stream
 associations. The handler for the {{DOMxRef("RTCPeerConnection/track_event", "track")}} event on the remote peer will be
 responsible for determining what stream to add each track to, even if that means adding
-them all to the same stream. The {{domxref("RTCPeerConnection.ontrack", "ontrack")}}
+them all to the same stream. The {{domxref("RTCPeerConnection.track_event", "ontrack")}}
 handler might look like this:
 
 ```js
@@ -152,9 +144,11 @@ device's camera and microphone input over an {{domxref("RTCPeerConnection")}} to
 remote peer:
 
 ```js
-async openCall(pc) {
-  const gumStream = await navigator.mediaDevices.getUserMedia(
-                          {video: true, audio: true});
+async function openCall(pc) {
+  const gumStream = await navigator.mediaDevices.getUserMedia({
+    video: true,
+    audio: true,
+  });
   for (const track of gumStream.getTracks()) {
     pc.addTrack(track, gumStream);
   }
@@ -164,7 +158,7 @@ async openCall(pc) {
 The remote peer might then use a {{DOMxRef("RTCPeerConnection/track_event", "track")}} event handler that looks like this:
 
 ```js
-pc.ontrack = ({streams: [stream]} => videoElem.srcObject = stream;
+pc.ontrack = ({ streams: [stream] }) => (videoElem.srcObject = stream);
 ```
 
 This sets the video element's current stream to the one that contains the track that's
@@ -224,26 +218,23 @@ creating a new sender results in these changes:
 - The new transceiver is added to the `RTCPeerConnection`'s set of
   transceivers.
 
-## Example
+## Examples
 
-This example is drawn from the code presented in the article [Signaling and video
-calling](/en-US/docs/Web/API/WebRTC_API/Signaling_and_video_calling) and its corresponding sample code. It comes from the
+This example is drawn from the code presented in the article [Signaling and video calling](/en-US/docs/Web/API/WebRTC_API/Signaling_and_video_calling) and its corresponding sample code. It comes from the
 `handleVideoOfferMsg()` method there, which is called when an offer message
 is received from the remote peer.
 
 ```js
-var mediaConstraints = {
+const mediaConstraints = {
   audio: true, // We want an audio track
-  video: true, // ...and we want a video track
+  video: true, // And we want a video track
 };
 
-var desc = new RTCSessionDescription(sdp);
+const desc = new RTCSessionDescription(sdp);
 
 pc.setRemoteDescription(desc)
-  .then(function () {
-    return navigator.mediaDevices.getUserMedia(mediaConstraints);
-  })
-  .then(function (stream) {
+  .then(() => navigator.mediaDevices.getUserMedia(mediaConstraints))
+  .then((stream) => {
     previewElement.srcObject = stream;
 
     stream.getTracks().forEach((track) => pc.addTrack(track, stream));
@@ -276,7 +267,5 @@ returned by {{domxref("MediaStream.getTracks()")}} and passing them to
 ## See also
 
 - [WebRTC](/en-US/docs/Web/API/WebRTC_API)
-- [Introduction to the Real-time
-  Transport Protocol (RTP)](/en-US/docs/Web/API/WebRTC_API/Intro_to_RTP)
-- {{domxref("RTCPeerConnection.ontrack")}}
+- [Introduction to the Real-time Transport Protocol (RTP)](/en-US/docs/Web/API/WebRTC_API/Intro_to_RTP)
 - {{DOMxRef("RTCPeerConnection/track_event", "track")}}

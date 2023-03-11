@@ -1,14 +1,10 @@
 ---
 title: Date.prototype.getUTCHours()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getUTCHours
-tags:
-  - Date
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.Date.getUTCHours
 ---
+
 {{JSRef}}
 
 The **`getUTCHours()`** method returns the hours in the
@@ -18,16 +14,16 @@ specified date according to universal time.
 
 ## Syntax
 
-```js
+```js-nolint
 getUTCHours()
 ```
 
 ### Return value
 
-A `number`.
+A number.
 If the `Date` object represents a valid date, an integer between 0 and 23, representing the hours in the given date according
 to Coordinated Universal Time.
-Otherwise, [`NaN`](/en-us/docs/Web/JavaScript/Reference/Global_Objects/Number/NaN)
+Otherwise, [`NaN`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/NaN)
 if the `Date` object doesn't represent a valid date.
 
 ## Examples
@@ -38,8 +34,8 @@ The following example assigns the hours portion of the current time to the varia
 `hours`.
 
 ```js
-var today = new Date();
-var hours = today.getUTCHours();
+const today = new Date();
+const hours = today.getUTCHours();
 ```
 
 ## Specifications

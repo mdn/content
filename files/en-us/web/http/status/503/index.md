@@ -1,13 +1,9 @@
 ---
 title: 503 Service Unavailable
 slug: Web/HTTP/Status/503
-tags:
-  - 503 error
-  - HTTP
-  - Server error
-  - Status code
 browser-compat: http.status.503
 ---
+
 {{HTTPSidebar}}
 
 The HyperText Transfer Protocol (HTTP) **`503 Service Unavailable`** server error response code indicates that the server is not ready to handle the request.
@@ -20,7 +16,7 @@ Caching-related headers that are sent along with this response should be taken c
 
 ## Status
 
-```
+```http
 503 Service Unavailable
 ```
 
@@ -35,4 +31,4 @@ Caching-related headers that are sent along with this response should be taken c
 ## See also
 
 - {{HTTPHeader("Retry-After")}}
-- [HTTP/1.1: Status Code Definitions](https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html)
+- [HTTP Status Code Definitions](https://httpwg.org/specs/rfc9110.html#status.503)

@@ -1,12 +1,10 @@
 ---
 title: CharacterData.length
 slug: Web/API/CharacterData/length
-tags:
-  - Property
-  - Reference
-  - Read-only
+page-type: web-api-instance-property
 browser-compat: api.CharacterData.length
 ---
+
 {{APIRef("DOM")}}
 
 The read-only **`CharacterData.length`** property
@@ -26,8 +24,8 @@ Length of the string in the <code>Text</code> node: <output></output>
 ```
 
 ```js
-let output = document.getElementsByTagName("output")[0];
-let textnode = new Text("This text has been set using textnode.data.");
+const output = document.querySelector("output");
+const textnode = new Text("This text has been set using 'textnode.data'.");
 
 output.value = textnode.length;
 ```

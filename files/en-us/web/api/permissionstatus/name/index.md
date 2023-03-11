@@ -1,19 +1,11 @@
 ---
 title: PermissionStatus.name
 slug: Web/API/PermissionStatus/name
-tags:
-  - API
-  - Event Handler
-  - Experimental
-  - PermissionStatus
-  - Permissions
-  - Permissions API
-  - Property
-  - Reference
-  - status
+page-type: web-api-instance-property
 browser-compat: api.PermissionStatus.name
 ---
-{{APIRef("Permissions API")}}{{SeeCompatTable}}
+
+{{APIRef("Permissions API")}}
 
 The **`name`** read-only property of the {{domxref("PermissionStatus")}} interface returns the name of a requested permission.
 
@@ -21,20 +13,24 @@ The **`name`** read-only property of the {{domxref("PermissionStatus")}} interfa
 
 A read-only value that is identical to the `name` argument passed to {{domxref("Permissions.query", "navigator.permissions.query()")}}.
 
-## Example
+## Examples
 
 ```js
 function stateChangeListener() {
-  console.log(this.name, 'permission status changed to', this.state);
+  console.log(`${this.name} permission status changed to ${this.state}`);
 }
 function queryAndTrackPermission(permissionName) {
-  navigator.permissions.query({name: permissionName}).then(function(permissionStatus) {
-    console.log(permissionName, 'permission state is', permissionStatus.state);
-    permissionStatus.onchange = stateChangeListener;
-  });
-};
-queryAndTrackPermission('geolocation');
-queryAndTrackPermission('midi');
+  navigator.permissions
+    .query({ name: permissionName })
+    .then((permissionStatus) => {
+      console.log(
+        `${permissionName} permission state is ${permissionStatus.state}`
+      );
+      permissionStatus.onchange = stateChangeListener;
+    });
+}
+queryAndTrackPermission("geolocation");
+queryAndTrackPermission("midi");
 ```
 
 ## Specifications

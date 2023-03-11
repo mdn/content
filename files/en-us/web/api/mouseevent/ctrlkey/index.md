@@ -1,17 +1,11 @@
 ---
 title: MouseEvent.ctrlKey
 slug: Web/API/MouseEvent/ctrlKey
-tags:
-  - API
-  - DOM
-  - DOM Events
-  - MouseEvent
-  - Property
-  - Read-only
-  - Reference
+page-type: web-api-instance-property
 browser-compat: api.MouseEvent.ctrlKey
 ---
-{{APIRef("DOM Events")}}
+
+{{APIRef("UI Events")}}
 
 The **`MouseEvent.ctrlKey`** read-only property is a boolean value that indicates whether the <kbd>ctrl</kbd> key was pressed or not when a given mouse event occurs.
 
@@ -21,9 +15,9 @@ The **`MouseEvent.ctrlKey`** read-only property is a boolean value that indicate
 
 A boolean value, where `true` indicates that the key is pressed, and `false` indicates that the key is _not_ pressed.
 
-## Example
+## Examples
 
-This example logs the `ctrlKey` property when you trigger a {{Event("click")}} event.
+This example logs the `ctrlKey` property when you trigger a {{domxref("Element/click_event", "click")}} event.
 
 ### HTML
 
@@ -35,8 +29,8 @@ This example logs the `ctrlKey` property when you trigger a {{Event("click")}} e
 ### JavaScript
 
 ```js
-let log = document.querySelector('#log');
-document.addEventListener('click', logKey);
+let log = document.querySelector("#log");
+document.addEventListener("click", logKey);
 
 function logKey(e) {
   log.textContent = `The ctrl key is pressed: ${e.ctrlKey}`;
@@ -45,7 +39,7 @@ function logKey(e) {
 
 ### Result
 
-{{EmbedLiveSample("Example")}}
+{{EmbedLiveSample("Examples")}}
 
 ## Specifications
 

@@ -1,16 +1,12 @@
 ---
 title: USB.requestDevice()
 slug: Web/API/USB/requestDevice
-tags:
-  - API
-  - Method
-  - Reference
-  - USB
-  - WebUSB
-  - WebUSB API
-  - getDevices()
+page-type: web-api-instance-method
+status:
+  - experimental
 browser-compat: api.USB.requestDevice
 ---
+
 {{APIRef("WebUSB API")}}{{SeeCompatTable}}{{securecontext_header}}
 
 The **`requestDevice()`** method of the {{domxref("USB")}}
@@ -20,13 +16,13 @@ triggers the user agent's pairing flow.
 
 ## Syntax
 
-```js
-USB.requestDevice([filters])
+```js-nolint
+requestDevice(filters)
 ```
 
 ### Parameters
 
-- filters
+- `filters`
 
   - : An array of filter objects for possible devices you would like to pair. Each filter
     object can have the following properties:
@@ -42,7 +38,11 @@ USB.requestDevice([filters])
 
 A {{JSxRef("Promise")}} that resolves with an instance of {{DOMxRef("USBDevice")}}.
 
-## Example
+## Security
+
+[Transient user activation](/en-US/docs/Web/Security/User_activation) is required. The user has to interact with the page or a UI element in order for this feature to work.
+
+## Examples
 
 The following example looks for one of two USB devices. Notice that two product IDs are
 specified. Both are passed to `requestDevice()`. This triggers a user-agent
@@ -57,16 +57,17 @@ be listed.
 
 ```js
 const filters = [
-        {vendorId: 0x1209, productId: 0xa800},
-        {vendorId: 0x1209, productId: 0xa850}
-      ];
-navigator.usb.requestDevice({filters: filters})
-.then(usbDevice => {
-  console.log("Product name: " + usbDevice.productName);
-})
-.catch(e => {
-  console.log("There is no device. " + e);
-});
+  { vendorId: 0x1209, productId: 0xa800 },
+  { vendorId: 0x1209, productId: 0xa850 },
+];
+navigator.usb
+  .requestDevice({ filters })
+  .then((usbDevice) => {
+    console.log(`Product name: ${usbDevice.productName}`);
+  })
+  .catch((e) => {
+    console.error(`There is no device. ${e}`);
+  });
 ```
 
 ## Specifications

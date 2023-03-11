@@ -1,20 +1,13 @@
 ---
 title: PerformanceTiming.fetchStart
 slug: Web/API/PerformanceTiming/fetchStart
-tags:
-  - API
-  - Backwards compatibility
-  - Deprecated
-  - HTTP request
-  - Navigation Timing
-  - PerformanceTiming
-  - Property
-  - Read-only
-  - Reference
-  - legacy
+page-type: web-api-instance-property
+status:
+  - deprecated
 browser-compat: api.PerformanceTiming.fetchStart
 ---
-{{APIRef("Navigation Timing")}}{{Deprecated_Header}}
+
+{{APIRef("Performance API")}}{{Deprecated_Header}}
 
 > **Warning:** This interface of this property is deprecated in the [Navigation Timing Level 2 specification](https://w3c.github.io/navigation-timing/#obsolete). Please use the {{domxref("PerformanceNavigationTiming")}}
 > interface instead.
@@ -25,11 +18,9 @@ read-only property returns an `unsigned long long` representing the moment,
 in milliseconds since the UNIX epoch, the browser is ready to fetch the document using
 an HTTP request. This moment is _before_ the check to any application cache.
 
-## Syntax
+## Value
 
-```js
-time = performance.timing.fetchStart;
-```
+An `unsigned long long`.
 
 ## Specifications
 

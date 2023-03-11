@@ -1,14 +1,9 @@
 ---
 title: Work with the Bookmarks API
 slug: Mozilla/Add-ons/WebExtensions/Work_with_the_Bookmarks_API
-tags:
-  - Add-ons
-  - Beginner
-  - Bookmarks
-  - Extensions
-  - How-to
-  - WebExtensions
+page-type: guide
 ---
+
 {{AddonSidebar}}
 
 Bookmarks enable users to collect and organize lists of web pages, so they can easily get back to their favorites. Using the Bookmarks API, your extensions can manipulate bookmarks in much the same way users can.
@@ -117,14 +112,14 @@ Defines the background script that'll add and remove the page's bookmark and set
 
 ### background.js
 
-As with any background script, [background.js](https://github.com/mdn/webextensions-examples/blob/master/bookmark-it/background.js) is run as soon as the extension is started. Initially the script calls `updateActiveTab()` that starts by obtaining the `Tabs` object for the current tab, using {{WebExtAPIRef("tabs.query")}}, and passing the object to `updatetab()` with this code:
+As with any background script, [background.js](https://github.com/mdn/webextensions-examples/blob/master/bookmark-it/background.js) is run as soon as the extension is started. Initially the script calls `updateActiveTab()` that starts by obtaining the `Tabs` object for the current tab, using {{WebExtAPIRef("tabs.query")}}, and passing the object to `updateTab()` with this code:
 
 ```js
-  var gettingActiveTab = browser.tabs.query({active: true, currentWindow: true});
+  let gettingActiveTab = browser.tabs.query({active: true, currentWindow: true});
   gettingActiveTab.then(updateTab);
 ```
 
-`updatetab()` first passes the active tab's URL to `isSupportedProtocol()`:
+`updateTab()` first passes the active tab's URL to `isSupportedProtocol()`:
 
 ```js
   function updateTab(tabs) {
@@ -137,17 +132,17 @@ As with any background script, [background.js](https://github.com/mdn/webextensi
 
 ```js
   function isSupportedProtocol(urlString) {
-    var supportedProtocols = ["https:", "http:", "file:"];
-    var url = document.createElement('a');
+    let supportedProtocols = ["https:", "http:", "file:"];
+    let url = document.createElement('a');
     url.href = urlString;
-    return supportedProtocols.indexOf(url.protocol) != -1;
+    return supportedProtocols.includes(url.protocol);
   }
 ```
 
 If the protocol is one supported by bookmarks, the extension determines if the tab's URL is already bookmarked and if it is, calls `updateIcon()`:
 
 ```js
-      var searching = browser.bookmarks.search({url: currentTab.url});
+      let searching = browser.bookmarks.search({url: currentTab.url});
       searching.then((bookmarks) => {
         currentBookmark = bookmarks[0];
         updateIcon();

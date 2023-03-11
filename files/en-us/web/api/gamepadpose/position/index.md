@@ -1,18 +1,12 @@
 ---
 title: GamepadPose.position
 slug: Web/API/GamepadPose/position
-tags:
-  - API
-  - Experimental
-  - Gamepad API
-  - GamepadPose
-  - Position
-  - Property
-  - Reference
-  - Virtual Reality
-  - WebVR
+page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.GamepadPose.position
 ---
+
 {{APIRef("WebVR API")}}{{SeeCompatTable}}
 
 The **`position`** read-only property of the {{domxref("GamepadPose")}} interface returns the position of the {{domxref("Gamepad")}} as a 3D vector.
@@ -25,13 +19,7 @@ The coordinate system is as follows:
 
 Positions are measured in meters from an origin point — this point is the position the sensor was first read at.
 
-## Syntax
-
-```js
-var myGamepadPosition = gamepadPoseInstance.position;
-```
-
-### Value
+## Value
 
 A {{jsxref("Float32Array")}}, or `null` if the gamepad is not able to provide position data.
 

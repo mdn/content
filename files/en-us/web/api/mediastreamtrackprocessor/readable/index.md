@@ -1,25 +1,17 @@
 ---
 title: MediaStreamTrackProcessor.readable
 slug: Web/API/MediaStreamTrackProcessor/readable
-tags:
-  - API
-  - Property
-  - Reference
-  - readable
-  - MediaStreamTrackProcessor
+page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.MediaStreamTrackProcessor.readable
 ---
-{{DefaultAPISidebar("Insertable Streams for MediaStreamTrack API")}}
 
-The **`readable`**  property of the {{domxref("MediaStreamTrackProcessor")}} interface returns a {{domxref("ReadableStream")}}.
+{{APIRef("Insertable Streams for MediaStreamTrack API")}}{{SeeCompatTable}}
 
-## Syntax
+The **`readable`** property of the {{domxref("MediaStreamTrackProcessor")}} interface returns a {{domxref("ReadableStream")}}.
 
-```js
-let readable = MediaStreamTrackProcessor.readable;
-```
-
-### Value
+## Value
 
 A {{domxref("ReadableStream")}}.
 
@@ -29,11 +21,13 @@ In the following example video frames from the {{domxref("ReadableStream")}} are
 
 ```js
 const trackProcessor = new MediaStreamTrackProcessor({ track: videoTrack });
-const trackGenerator = new MediaStreamTrackGenerator({ kind: 'video' });
+const trackGenerator = new MediaStreamTrackGenerator({ kind: "video" });
 
 /* */
 
-trackProcessor.readable.pipeThrough(transformer).pipeTo(trackGenerator.writable);
+trackProcessor.readable
+  .pipeThrough(transformer)
+  .pipeTo(trackGenerator.writable);
 ```
 
 ## Specifications

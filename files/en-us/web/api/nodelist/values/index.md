@@ -1,16 +1,10 @@
 ---
 title: NodeList.values()
 slug: Web/API/NodeList/values
-tags:
-  - DOM
-  - Iterator
-  - Method
-  - NodeList
-  - Reference
-  - Web
-  - Polyfill
+page-type: web-api-instance-method
 browser-compat: api.NodeList.values
 ---
+
 {{APIRef("DOM")}}
 
 The **`NodeList.values()`** method returns an
@@ -19,8 +13,8 @@ in this object. The values are {{domxref("Node")}} objects.
 
 ## Syntax
 
-```js
-nodeList.values();
+```js-nolint
+values()
 ```
 
 ### Return value
@@ -30,26 +24,26 @@ Returns an {{jsxref("Iteration_protocols","iterator")}}.
 ## Example
 
 ```js
-var node = document.createElement("div");
-var kid1 = document.createElement("p");
-var kid2 = document.createTextNode("hey");
-var kid3 = document.createElement("span");
+const node = document.createElement("div");
+const kid1 = document.createElement("p");
+const kid2 = document.createTextNode("hey");
+const kid3 = document.createElement("span");
 
 node.appendChild(kid1);
 node.appendChild(kid2);
 node.appendChild(kid3);
 
-var list = node.childNodes;
+const list = node.childNodes;
 
-// Using for..of
-for(var value of list.values()) {
+// Using for...of
+for (const value of list.values()) {
   console.log(value);
 }
 ```
 
 The result is:
 
-```
+```plain
 <p>
 #text "hey"
 <span>

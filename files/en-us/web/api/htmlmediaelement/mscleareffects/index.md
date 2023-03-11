@@ -1,9 +1,9 @@
 ---
 title: HTMLMediaElement.msClearEffects
 slug: Web/API/HTMLMediaElement/msClearEffects
-tags:
-  - msClearEffects
+page-type: web-api-instance-property
 ---
+
 {{APIRef("HTMLMediaElement")}}
 
 {{Non-standard_header()}}
@@ -14,8 +14,8 @@ The **`msClearEffects`** method of the [_HTMLMediaElement_](/en-US/docs/Web/API/
 
 ### Syntax
 
-```js
-HTMLMediaElement.msClearEffects();
+```js-nolint
+msClearEffects()
 ```
 
 ### Parameters

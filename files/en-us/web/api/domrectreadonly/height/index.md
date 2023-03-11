@@ -1,26 +1,15 @@
 ---
 title: DOMRectReadOnly.height
 slug: Web/API/DOMRectReadOnly/height
-tags:
-  - API
-  - DOM
-  - DOMRectReadOnly
-  - Geometry
-  - Property
-  - Reference
+page-type: web-api-instance-property
 browser-compat: api.DOMRectReadOnly.height
 ---
+
 {{APIRef("Geometry Interfaces")}}
 
 The **`height`** read-only property of the **`DOMRectReadOnly`** interface represents the height of the `DOMRect`.
 
-## Syntax
-
-```js
-var recHeight = DOMRect.height;
-```
-
-### Value
+## Value
 
 A double.
 

@@ -1,22 +1,13 @@
 ---
 title: XRRenderState.baseLayer
 slug: Web/API/XRRenderState/baseLayer
-tags:
-  - API
-  - AR
-  - Augmented Reality
-  - Experimental
-  - Property
-  - Reference
-  - VR
-  - Virtual Reality
-  - WebXR
-  - WebXR Device API
-  - XRRenderState
-  - baseLayer
+page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.XRRenderState.baseLayer
 ---
-{{APIRef("WebXR Device API")}}
+
+{{APIRef("WebXR Device API")}}{{SeeCompatTable}}
 
 The read-only **`baseLayer`** property of the
 {{domxref("XRRenderState")}} interface returns the {{domxref("XRWebGLLayer")}} instance
@@ -24,7 +15,7 @@ that is the source of bitmap images and a description of how the image is to be 
 in the device.
 
 This property is read-only; however, you can indirectly change its
-value using  {{domxref("XRSession.updateRenderState")}}.
+value using {{domxref("XRSession.updateRenderState")}}.
 
 ## Value
 
@@ -52,7 +43,7 @@ function setNewWebGLLayer(gl) {
   }
 
   xrSession.updateRenderState({
-    baseLayer: new XRWebGLLayer(xrSession, gl);
+    baseLayer: new XRWebGLLayer(xrSession, gl)
   });
 };
 ```

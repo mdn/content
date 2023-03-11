@@ -1,14 +1,10 @@
 ---
 title: WeakMap.prototype.has()
 slug: Web/JavaScript/Reference/Global_Objects/WeakMap/has
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Prototype
-  - WeakMap
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.WeakMap.has
 ---
+
 {{JSRef}}
 
 The **`has()`** method returns a boolean indicating whether an
@@ -18,7 +14,7 @@ element with the specified key exists in the `WeakMap` object or not.
 
 ## Syntax
 
-```js
+```js-nolint
 has(key)
 ```
 
@@ -39,11 +35,11 @@ has(key)
 ### Using the has method
 
 ```js
-var wm = new WeakMap();
-wm.set(window, 'foo');
+const wm = new WeakMap();
+wm.set(window, "foo");
 
 wm.has(window); // returns true
-wm.has('baz');  // returns false
+wm.has("baz"); // returns false
 ```
 
 ## Specifications

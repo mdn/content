@@ -1,15 +1,10 @@
 ---
 title: HTMLSelectElement.checkValidity()
 slug: Web/API/HTMLSelectElement/checkValidity
-tags:
-  - API
-  - Constraint Validation API
-  - HTML DOM
-  - HTMLSelectElement
-  - Method
-  - Reference
+page-type: web-api-instance-method
 browser-compat: api.HTMLSelectElement.checkValidity
 ---
+
 {{ APIRef("HTML DOM") }}
 
 The **`HTMLSelectElement.checkValidity()`** method checks
@@ -19,9 +14,17 @@ element, and then returns `false`.
 
 ## Syntax
 
-```js
-var result = selectElt.checkValidity();
+```js-nolint
+checkValidity()
 ```
+
+### Parameters
+
+None.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ## Specifications
 
@@ -33,4 +36,4 @@ var result = selectElt.checkValidity();
 
 ## See also
 
-- [Form validation](/en-US/docs/Web/Guide/HTML/Constraint_validation)
+- [Form validation](/en-US/docs/Web/HTML/Constraint_validation)

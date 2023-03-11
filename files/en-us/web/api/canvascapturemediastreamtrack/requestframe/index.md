@@ -1,18 +1,10 @@
 ---
 title: CanvasCaptureMediaStreamTrack.requestFrame()
 slug: Web/API/CanvasCaptureMediaStreamTrack/requestFrame
-tags:
-  - Canvas
-  - CanvasCaptureMediaStream
-  - DOM
-  - Experimental
-  - Frame Capture
-  - Media
-  - Method
-  - Reference
-  - requestFrame
+page-type: web-api-instance-method
 browser-compat: api.CanvasCaptureMediaStreamTrack.requestFrame
 ---
+
 {{APIRef("Media Capture and Streams")}}
 
 The {{domxref("CanvasCaptureMediaStreamTrack")}} method
@@ -30,8 +22,8 @@ the stream.
 
 ## Syntax
 
-```js
-stream.requestFrame();
+```js-nolint
+stream.requestFrame()
 ```
 
 ### Return value
@@ -50,10 +42,10 @@ mentioned in the spec, this is a likely candidate).
 
 ```js
 // Find the canvas element to capture
-var canvasElt = document.getElementsByTagName("canvas")[0];
+const canvasElt = document.querySelector("canvas");
 
 // Get the stream
-var stream = canvasElt.captureStream(25); // 25 FPS
+const stream = canvasElt.captureStream(25); // 25 FPS
 
 // Send the current state of the canvas as a frame to the stream
 stream.getVideoTracks()[0].requestFrame();

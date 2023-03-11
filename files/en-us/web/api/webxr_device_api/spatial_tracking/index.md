@@ -1,28 +1,10 @@
 ---
 title: 'Spaces and reference spaces: Spatial tracking in WebXR'
 slug: Web/API/WebXR_Device_API/Spatial_tracking
-tags:
-  - 3D
-  - API
-  - AR
-  - Guide
-  - Motion
-  - NeedsContent
-  - NeedsExample
-  - Orientation
-  - Poses
-  - Position
-  - Spaces
-  - Spatial tracking
-  - VR
-  - WebXR
-  - WebXR API
-  - WebXR Device API
-  - XR
-  - movement
-  - tracking
+page-type: guide
 ---
-{{DefaultAPISidebar("WebXR Device API")}}{{draft("Most but not all of this article is complete; however, there are missing diagrams and examples yet to be added. Contributions and/or patience are welcome!")}}
+
+{{DefaultAPISidebar("WebXR Device API")}}
 
 The WebXR APIs used for implementing augmented and virtual reality is designed specifically to provide the ability to insert a human into a virtual environment. To accomplish this, software needs the ability to not only track the locations, orientation, and movements of objects in the virtual world, but the user's location, orientation, and movement as well. But WebXR goes beyond that by adding the ability to track the location, orientation, and motion of the input devices which generate data used to determine the position and movement of individual parts of the viewer's body (with appropriate equipment).
 
@@ -34,7 +16,7 @@ In this guide, we'll explore how WebXR uses **spaces** and, more specifically, *
 
 ## Representing a position using a reference space
 
-As covered in {{SectionOnPage("/en-US/docs/Web/API/WebXR_Device_API/Geometry", "Defining spatial relationships with reference spaces")}}, reference spaces establish a local coordinate system which is offset from another coordinate system that is itself defined by some other space. Thus, a reference space can be used to define the position and orientation of a point and by extension the entire object for which that point is the origin. While this is a little heavy-handed to be used for every single object in a scene, it can be very useful for a few specific objects to have their own coordinate system in this manner.
+As covered in [Defining spatial relationships with reference spaces](/en-US/docs/Web/API/WebXR_Device_API/Geometry#defining_spatial_relationships_with_reference_spaces), reference spaces establish a local coordinate system which is offset from another coordinate system that is itself defined by some other space. Thus, a reference space can be used to define the position and orientation of a point and by extension the entire object for which that point is the origin. While this is a little heavy-handed to be used for every single object in a scene, it can be very useful for a few specific objects to have their own coordinate system in this manner.
 
 - **The world space**; the origin of this space is the origin of the [WebGL coordinate system](/en-US/docs/Web/API/WebGL_API/WebGL_model_view_projection) underlying the entire 3D canvas.
 - The player, avatar, or camera; the origin of this space is used as the camera position for rendering the scene to be displayed to the user.
@@ -45,7 +27,7 @@ Because each of these is defined using a reference space as its foundation, the 
 
 ## Describing a position relative to a space
 
-There are two scenarios in which you may need to describe a position and/or orientation relative to a space.  The first is {{anch("Offsetting or moving reference spaces", "described above")}}: applying a reference space to an offset (or vice-versa, since the result is the same) to determine the transform matrix that represents the resulting location in the space's coordinate system.
+There are two scenarios in which you may need to describe a position and/or orientation relative to a space. The first is [described above](#offsetting_or_moving_reference_spaces): applying a reference space to an offset (or vice versa, since the result is the same) to determine the transform matrix that represents the resulting location in the space's coordinate system.
 
 ### Poses
 
@@ -87,7 +69,7 @@ function myDrawFrame(currentFrameTime, frame) {
   animationFrameRequestID = session.requestAnimationFrame(myDrawFrame);
 
   if (viewerPose) {
-    /* ... render the frame ... */
+    // render the frame
   }
 }
 ```

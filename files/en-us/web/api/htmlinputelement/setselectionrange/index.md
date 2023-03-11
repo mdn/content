@@ -1,15 +1,10 @@
 ---
 title: HTMLInputElement.setSelectionRange()
 slug: Web/API/HTMLInputElement/setSelectionRange
-tags:
-  - API
-  - HTML DOM
-  - HTMLInputElement
-  - Method
-  - Reference
-  - Text Field Selection API
+page-type: web-api-instance-method
 browser-compat: api.HTMLInputElement.setSelectionRange
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`HTMLInputElement.setSelectionRange()`** method sets the
@@ -24,8 +19,7 @@ toward the beginning.
 This method updates the `HTMLInputElement.selectionStart`,
 `selectionEnd`, and `selectionDirection` properties in one call.
 
-Note that according to the [WHATWG
-forms spec](https://html.spec.whatwg.org/multipage/forms.html#concept-input-apply) `selectionStart`, `selectionEnd` properties and
+Note that according to the [WHATWG forms spec](https://html.spec.whatwg.org/multipage/forms.html#concept-input-apply) `selectionStart`, `selectionEnd` properties and
 `setSelectionRange` method apply only to inputs of types text, search, URL,
 tel and password. Chrome, starting from version 33, throws an exception while accessing
 those properties and method on the rest of input types. For example, on input of type
@@ -37,8 +31,9 @@ method instead.
 
 ## Syntax
 
-```js
-element.setSelectionRange(selectionStart, selectionEnd [, selectionDirection]);
+```js-nolint
+setSelectionRange(selectionStart, selectionEnd)
+setSelectionRange(selectionStart, selectionEnd, selectionDirection)
 ```
 
 ### Parameters
@@ -62,7 +57,11 @@ treated as the value of `selectionEnd`.
     - `"backward"`
     - `"none"` if the direction is unknown or irrelevant. Default value.
 
-## Example
+### Return value
+
+None ({{jsxref("undefined")}}).
+
+## Examples
 
 Click the button in this example to select the third, fourth, and fifth characters in
 the text box ("zil" in the word "Mozilla").
@@ -70,7 +69,7 @@ the text box ("zil" in the word "Mozilla").
 ### HTML
 
 ```html
-<input type="text" id="text-box" size="20" value="Mozilla">
+<input type="text" id="text-box" size="20" value="Mozilla" />
 <button onclick="selectText()">Select text</button>
 ```
 
@@ -78,7 +77,7 @@ the text box ("zil" in the word "Mozilla").
 
 ```js
 function selectText() {
-  const input = document.getElementById('text-box');
+  const input = document.getElementById("text-box");
   input.focus();
   input.setSelectionRange(2, 5);
 }
@@ -86,7 +85,7 @@ function selectText() {
 
 ### Result
 
-{{EmbedLiveSample("Example")}}
+{{EmbedLiveSample("Examples")}}
 
 ## Specifications
 

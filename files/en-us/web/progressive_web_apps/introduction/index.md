@@ -1,18 +1,8 @@
 ---
 title: Introduction to progressive web apps
 slug: Web/Progressive_web_apps/Introduction
-tags:
-  - Applications
-  - Guide
-  - Intermediate
-  - Introduction
-  - PWA
-  - Progressive web apps
-  - Service Worker
-  - js13kGames
-  - progressive
-  - web manifest
 ---
+
 {{NextMenu("Web/Progressive_web_apps/App_structure", "Web/Progressive_web_apps")}}
 
 This article provides an introduction to Progressive Web Apps (PWAs), discussing what they are and the advantages they offer over regular web apps.
@@ -35,7 +25,7 @@ PWAs, however, provide all this and more without losing any of the existing feat
 
 As we hinted at above, PWAs are not created with a single technology. They represent a new philosophy for building web apps, involving some specific patterns, APIs, and other features. It's not that obvious if a web app is a PWA or not from first glance. An app could be considered a PWA when it meets certain requirements, or implements a set of given features: works offline, is installable, is easy to synchronize, can send push notifications, etc.
 
-In addition, there are tools to measure how complete (as a percentage) a web app is, such as [Lighthouse](https://developers.google.com/web/tools/lighthouse/). By implementing various technological advantages, we can make an app more progressive, thus ending up with a higher Lighthouse score. But this is only a rough indicator.
+In addition, there are tools to measure how complete (as a percentage) a web app is, such as [Lighthouse](https://developer.chrome.com/docs/lighthouse/overview/). By implementing various technological advantages, we can make an app more progressive, thus ending up with a higher Lighthouse score. But this is only a rough indicator.
 
 There are some key principles a web app should try to observe to be identified as a PWA. It should be:
 
@@ -48,7 +38,7 @@ There are some key principles a web app should try to observe to be identified a
 - [Responsively designed](#responsiveness), so it's usable on any device with a screen and a browser—mobile phones, tablets, laptops, TVs, refrigerators, etc.
 - [Secure](#secure), so the connections between the user, the app, and your server are secured against any third parties trying to get access to sensitive data.
 
-Offering these features and making use of all the {{anch("Advantages of web applications", "advantages")}} offered by web applications can create a compelling, highly flexible offering for your users and customers.
+Offering these features and making use of all the [advantages](#advantages_of_web_applications) offered by web applications can create a compelling, highly flexible offering for your users and customers.
 
 ### Is it worth doing all that?
 
@@ -123,7 +113,7 @@ Above all you should follow the progressive enhancement rule: use technologies t
 
 ## An example application
 
-In this series of articles we will examine the source code of a super simple website that lists information about games submitted to the [A-Frame category](https://js13kgames.com/aframe) in the [js13kGames 2017](https://2017.js13kgames.com/) competition. You don't have to think about what the actual content on the website is; the main point is to learn how to use PWA features in your own projects.
+In this series of articles we will examine the source code of a super simple website that lists information about games submitted to the _A-Frame_ category in the [js13kGames 2017](https://2017.js13kgames.com/) competition. You don't have to think about what the actual content on the website is; the main point is to learn how to use PWA features in your own projects.
 
 You can [see this app in action](https://mdn.github.io/pwa-examples/js13kpwa/) online, and the source code is [available on GitHub](https://github.com/mdn/pwa-examples/tree/master/js13kpwa). We'll be examining this code carefully over the course of this series of articles.
 

@@ -1,17 +1,10 @@
 ---
 title: SpeechSynthesisVoice.default
 slug: Web/API/SpeechSynthesisVoice/default
-tags:
-  - API
-  - Property
-  - Reference
-  - SpeechSynthesisVoice
-  - Web Speech API
-  - default
-  - speech
-  - synthesis
+page-type: web-api-instance-property
 browser-compat: api.SpeechSynthesisVoice.default
 ---
+
 {{APIRef("Web Speech API")}}
 
 The **`default`** read-only property of the
@@ -30,16 +23,16 @@ A boolean value.
 ## Examples
 
 ```js
-for(i = 0; i < voices.length ; i++) {
-  var option = document.createElement('option');
-  option.textContent = voices[i].name + ' (' + voices[i].lang + ')';
+for (let i = 0; i < voices.length; i++) {
+  const option = document.createElement("option");
+  option.textContent = `${voices[i].name} (${voices[i].lang})`;
 
-  if(voices[i].default) {
-    option.textContent += ' -- DEFAULT';
+  if (voices[i].default) {
+    option.textContent += " — DEFAULT";
   }
 
-  option.setAttribute('data-lang', voices[i].lang);
-  option.setAttribute('data-name', voices[i].name);
+  option.setAttribute("data-lang", voices[i].lang);
+  option.setAttribute("data-name", voices[i].name);
   voiceSelect.appendChild(option);
 }
 ```

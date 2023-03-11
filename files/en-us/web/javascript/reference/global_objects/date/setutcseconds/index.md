@@ -1,14 +1,10 @@
 ---
 title: Date.prototype.setUTCSeconds()
 slug: Web/JavaScript/Reference/Global_Objects/Date/setUTCSeconds
-tags:
-  - Date
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.Date.setUTCSeconds
 ---
+
 {{JSRef}}
 
 The **`setUTCSeconds()`** method sets the seconds for a
@@ -18,7 +14,7 @@ specified date according to universal time.
 
 ## Syntax
 
-```js
+```js-nolint
 setUTCSeconds(secondsValue)
 setUTCSeconds(secondsValue, msValue)
 ```
@@ -51,7 +47,7 @@ incremented by 1, and 40 will be used for seconds.
 ### Using setUTCSeconds()
 
 ```js
-var theBigDay = new Date();
+const theBigDay = new Date();
 theBigDay.setUTCSeconds(20);
 ```
 

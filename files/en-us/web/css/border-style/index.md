@@ -1,14 +1,10 @@
 ---
 title: border-style
 slug: Web/CSS/border-style
-tags:
-  - CSS
-  - CSS Borders
-  - CSS Property
-  - Reference
-  - recipe:css-shorthand-property
+page-type: css-shorthand-property
 browser-compat: css.properties.border-style
 ---
+
 {{CSSRef}}
 
 The **`border-style`** [shorthand](/en-US/docs/Web/CSS/Shorthand_properties) [CSS](/en-US/docs/Web/CSS) property sets the line style for all four sides of an element's border.
@@ -52,6 +48,7 @@ border-style: none solid dotted dashed;
 border-style: inherit;
 border-style: initial;
 border-style: revert;
+border-style: revert-layer;
 border-style: unset;
 ```
 

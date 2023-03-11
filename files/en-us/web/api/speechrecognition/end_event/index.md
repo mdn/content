@@ -1,12 +1,10 @@
 ---
-title: 'SpeechRecognition: end event'
+title: "SpeechRecognition: end event"
 slug: Web/API/SpeechRecognition/end_event
-tags:
-  - Event
-  - Reference
-  - Web Speech API
+page-type: web-api-event
 browser-compat: api.SpeechRecognition.end_event
 ---
+
 {{APIRef("Web Speech API")}}
 
 The **`end`** event of the [Web Speech API](/en-US/docs/Web/API/Web_Speech_API) {{domxref("SpeechRecognition")}} object is fired when the speech recognition service has disconnected.
@@ -16,9 +14,9 @@ The **`end`** event of the [Web Speech API](/en-US/docs/Web/API/Web_Speech_API) 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('end', event => { })
+addEventListener("end", (event) => {});
 
-onend = event => { }
+onend = (event) => {};
 ```
 
 ## Event type
@@ -30,19 +28,19 @@ A generic {{DOMxRef("Event")}} with no added properties.
 You can use the `end` event in an [`addEventListener`](/en-US/docs/Web/API/EventTarget/addEventListener) method:
 
 ```js
-var recognition = new webkitSpeechRecognition() || new SpeechRecognition();
+const recognition = new webkitSpeechRecognition() || new SpeechRecognition();
 
-recognition.addEventListener('end', function() {
-  console.log('Speech recognition service disconnected');
+recognition.addEventListener("end", () => {
+  console.log("Speech recognition service disconnected");
 });
 ```
 
 Or use the `onend` event handler property:
 
 ```js
-recognition.onend = function() {
-  console.log('Speech recognition service disconnected');
-}
+recognition.onend = () => {
+  console.log("Speech recognition service disconnected");
+};
 ```
 
 ## Specifications

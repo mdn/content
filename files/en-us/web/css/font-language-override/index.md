@@ -1,16 +1,10 @@
 ---
 title: font-language-override
 slug: Web/CSS/font-language-override
-tags:
-  - CSS
-  - CSS Fonts
-  - CSS Property
-  - Reference
-  - font-language-override
-  - l10n
-  - recipe:css-property
+page-type: css-property
 browser-compat: css.properties.font-language-override
 ---
+
 {{CSSRef}}
 
 The **`font-language-override`** CSS property controls the use of language-specific glyphs in a typeface.
@@ -20,13 +14,14 @@ The **`font-language-override`** CSS property controls the use of language-speci
 font-language-override: normal;
 
 /* <string> values */
-font-language-override: "ENG";  /* Use English glyphs */
-font-language-override: "TRK";  /* Use Turkish glyphs */
+font-language-override: "ENG"; /* Use English glyphs */
+font-language-override: "TRK"; /* Use Turkish glyphs */
 
 /* Global values */
-font-language-override: initial;
 font-language-override: inherit;
+font-language-override: initial;
 font-language-override: revert;
+font-language-override: revert-layer;
 font-language-override: unset;
 ```
 
@@ -43,7 +38,7 @@ The `font-language-override` property is specified as the keyword `normal` or a 
 - `normal`
   - : Tells the browser to use font glyphs that are appropriate for the language specified by the `lang` attribute. This is the default value.
 - {{cssxref("string")}}
-  - : Tells the browser to use font glyphs that are appropriate for the language specified by the string. The string must match a language tag found in the [OpenType language system](https://www.microsoft.com/typography/otspec/languagetags.htm). For example, "ENG" is English, and "KOR" is Korean.
+  - : Tells the browser to use font glyphs that are appropriate for the language specified by the string. The string must match a language tag found in the [OpenType language system](https://docs.microsoft.com/typography/opentype/spec/languagetags). For example, "ENG" is English, and "KOR" is Korean.
 
 ## Formal definition
 
@@ -61,7 +56,9 @@ The `font-language-override` property is specified as the keyword `normal` or a 
 
 ```html
 <p class="para1">Default language setting.</p>
-<p class="para2">This is a string with the <code>font-language-override</code> set to Danish.</p>
+<p class="para2">
+  This is a string with the <code>font-language-override</code> set to Danish.
+</p>
 ```
 
 #### CSS
@@ -78,7 +75,7 @@ p.para2 {
 
 #### Result
 
-{{ EmbedLiveSample('Using_Danish_glyphs', '600', '', '', 'Web/CSS/font-language-override') }}
+{{ EmbedLiveSample('Using Danish glyphs') }}
 
 ## Specifications
 

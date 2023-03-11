@@ -1,17 +1,10 @@
 ---
-title: 'TextTrackList: removeTrack event'
+title: "TextTrackList: removeTrack event"
 slug: Web/API/TextTrackList/removeTrack_event
-tags:
-  - API
-  - Media Streams API
-  - MediaStreamTrackEvent
-  - Reference
-  - Removing Tracks
-  - events
-  - Event
-  - removeTrack
+page-type: web-api-event
 browser-compat: api.TextTrackList.removetrack_event
 ---
+
 {{APIRef}}
 
 The **`removetrack`** event is fired when a track is removed from a [`TextTrackList`](/en-US/docs/Web/API/TextTrackList).
@@ -21,14 +14,14 @@ The **`removetrack`** event is fired when a track is removed from a [`TextTrackL
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('removetrack', event => { })
+addEventListener("removetrack", (event) => {});
 
-onremovetrack = event => { }
+onremovetrack = (event) => {};
 ```
 
 ## Event type
 
-An {{domxref("TrackEvent")}}. Inherits from {{domxref("Event")}}.
+A {{domxref("TrackEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("TrackEvent")}}
 
@@ -44,9 +37,9 @@ _In addition to the properties listed below, properties from the parent interfac
 Using `addEventListener()`:
 
 ```js
-const mediaElement = document.querySelector('video, audio');
+const mediaElement = document.querySelector("video, audio");
 
-mediaElement.textTracks.addEventListener('removetrack', event => {
+mediaElement.textTracks.addEventListener("removetrack", (event) => {
   console.log(`Text track: ${event.track.label} removed`);
 });
 ```
@@ -54,9 +47,9 @@ mediaElement.textTracks.addEventListener('removetrack', event => {
 Using the `onremovetrack` event handler property:
 
 ```js
-const mediaElement = document.querySelector('video, audio');
+const mediaElement = document.querySelector("video, audio");
 
-mediaElement.textTracks.onremovetrack = event => {
+mediaElement.textTracks.onremovetrack = (event) => {
   console.log(`Text track: ${event.track.label} removed`);
 };
 ```
@@ -75,5 +68,5 @@ mediaElement.textTracks.onremovetrack = event => {
 - This event on [`VideoTrackList`](/en-US/docs/Web/API/VideoTrackList) targets: [`removetrack`](/en-US/docs/Web/API/VideoTrackList/removetrack_event)
 - This event on [`AudioTrackList`](/en-US/docs/Web/API/AudioTrackList) targets: [`removetrack`](/en-US/docs/Web/API/AudioTrackList/removetrack_event)
 - This event on [`MediaStream`](/en-US/docs/Web/API/MediaStream) targets: [`removetrack`](/en-US/docs/Web/API/MediaStream/removetrack_event)
-- [Media Streams API](/en-US/docs/Web/API/Media_Streams_API)
+- [Media Capture and Streams API](/en-US/docs/Web/API/Media_Capture_and_Streams_API)
 - [WebRTC](/en-US/docs/Web/API/WebRTC_API)

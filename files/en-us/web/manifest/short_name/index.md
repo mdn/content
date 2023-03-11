@@ -1,12 +1,9 @@
 ---
 title: short_name
 slug: Web/Manifest/short_name
-tags:
-  - Manifest
-  - Web
-  - short_name
 browser-compat: html.manifest.short_name
 ---
+
 {{QuickLinksWithSubpages("/en-US/docs/Web/Manifest")}}
 
 <table class="properties">

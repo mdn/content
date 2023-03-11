@@ -1,12 +1,9 @@
 ---
 title: strikethrough-position
 slug: Web/SVG/Attribute/strikethrough-position
-tags:
-  - Attribute
-  - Reference
-  - SVG
-  - font
+page-type: svg-attribute
 ---
+
 « [SVG Attribute reference home](/en-US/docs/Web/SVG/Attribute)
 
 The `strikethrough-position` attribute represents the ideal vertical position of the strikethrough. The strikethrough position is expressed in the font's coordinate system.

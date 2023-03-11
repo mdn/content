@@ -1,19 +1,14 @@
 ---
 title: VideoPlaybackQuality.totalFrameDelay
 slug: Web/API/VideoPlaybackQuality/totalFrameDelay
-tags:
-  - API
-  - Experimental
-  - Media Source Extensions
-  - Deprecated
-  - Property
-  - Reference
-  - Video
-  - VideoPlaybackQuality
-  - totalFrameDelay
+page-type: web-api-instance-property
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.VideoPlaybackQuality.totalFrameDelay
 ---
-{{APIRef("Media Source Extensions")}}{{deprecated_header}}
+
+{{APIRef("Media Source Extensions")}}{{deprecated_header}}{{Non-standard_header}}
 
 The **`VideoPlaybackQuality.totalFrameDelay`** read-only
 property returns a `double` containing the sum of the frame delay since the
@@ -21,17 +16,15 @@ creation of the associated {{domxref("HTMLVideoElement")}}. The frame delay is t
 difference between a frame's theoretical presentation time and its effective display
 time.
 
-## Syntax
+## Value
+
+A number.
+
+## Examples
 
 ```js
-value = videoPlaybackQuality.totalFrameDelay;
-```
-
-## Example
-
-```js
-var videoElt = document.getElementById('my_vid');
-var quality = videoElt.getVideoPlaybackQuality();
+const videoElt = document.getElementById("my_vid");
+const quality = videoElt.getVideoPlaybackQuality();
 
 alert(quality.totalFrameDelay);
 ```

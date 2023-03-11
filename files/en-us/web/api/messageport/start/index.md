@@ -1,39 +1,34 @@
 ---
 title: MessagePort.start()
 slug: Web/API/MessagePort/start
-tags:
-  - API
-  - Channel messaging
-  - MessagePort
-  - Method
-  - Reference
-  - start
+page-type: web-api-instance-method
 browser-compat: api.MessagePort.start
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`start()`** method of the {{domxref("MessagePort")}}
 interface starts the sending of messages queued on the port. This method is only needed
 when using {{domxref("EventTarget.addEventListener")}}; it is implied when using
-{{domxref("MessageChannel.onmessage")}}.
+{{domxref("MessagePort.message_event", "onmessage")}}.
 
 {{AvailableInWorkers}}
 
 ## Syntax
 
-```js
-port.start()
+```js-nolint
+start()
 ```
-
-### Returns
-
-{{jsxref('undefined')}}.
 
 ### Parameters
 
 None.
 
-## Example
+### Return value
+
+None ({{jsxref("undefined")}}).
+
+## Examples
 
 In the following code block, you can see a `handleMessage` handler function,
 run when a message is sent back to this document using `onmessage`:
@@ -50,10 +45,10 @@ however, when this method is used, you need to explicitly call `start()` to
 begin the flow of messages to this document:
 
 ```js
-channel.port1.addEventListener('message', handleMessage, false);
+channel.port1.addEventListener("message", handleMessage, false);
 function handleMessage(e) {
   para.innerHTML = e.data;
-  textInput.value = '';
+  textInput.value = "";
 }
 
 channel.port1.start();
@@ -69,5 +64,4 @@ channel.port1.start();
 
 ## See also
 
-- [Using
-  channel messaging](/en-US/docs/Web/API/Channel_Messaging_API/Using_channel_messaging)
+- [Using channel messaging](/en-US/docs/Web/API/Channel_Messaging_API/Using_channel_messaging)

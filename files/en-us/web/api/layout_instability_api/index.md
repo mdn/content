@@ -1,14 +1,13 @@
 ---
 title: Layout Instability API
 slug: Web/API/Layout_Instability_API
-tags:
-  - API
-  - Layout Instability API
-  - Overview
-  - Reference
+page-type: web-api-overview
+status:
+  - experimental
 browser-compat: api.LayoutShift
 ---
-{{DefaultAPISidebar("Layout Instability API")}}
+
+{{DefaultAPISidebar("Layout Instability API")}}{{SeeCompatTable}}
 
 The **Layout Instability API** provides interfaces for measuring and reporting layout shifts.
 
@@ -32,7 +31,7 @@ The following example observes all layout shifts, and prints them to the console
 ```js
 new PerformanceObserver((list) => {
   console.log(list.getEntries());
-}).observe({type: 'layout-shift', buffered: true});
+}).observe({ type: "layout-shift", buffered: true });
 ```
 
 ## Specifications

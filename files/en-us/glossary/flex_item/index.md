@@ -1,12 +1,9 @@
 ---
 title: Flex Item
 slug: Glossary/Flex_Item
-tags:
-  - CSS
-  - Glossary
-  - flex item
-  - flexbox
+page-type: glossary-definition
 ---
+
 The direct children of a {{glossary("Flex Container")}} (elements with `display: flex` or `display: inline-flex` set on them) become **flex items**.
 
 Continuous runs of text inside flex containers will also become flex items.

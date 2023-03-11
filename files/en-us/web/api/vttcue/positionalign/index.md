@@ -1,28 +1,17 @@
 ---
 title: VTTCue.positionAlign
 slug: Web/API/VTTCue/positionAlign
-tags:
-  - API
-  - Property
-  - Reference
-  - positionAlign
-  - VTTCue
+page-type: web-api-instance-property
 browser-compat: api.VTTCue.positionAlign
 ---
+
 {{APIRef("WebVTT")}}
 
 The **`positionAlign`** property of the {{domxref("VTTCue")}} interface is used to determine what {{domxref("VTTCue.position")}} is anchored to.
 
-## Syntax
+## Value
 
-```js
-let positionAlign = VTTCue.position;
-VTTCue.position = a;
-```
-
-### Value
-
-A {{domxref("DOMString","string")}} containing one of the following values:
+A string containing one of the following values:
 
 - `"line-left"`
   - : Line-left alignment.
@@ -43,12 +32,12 @@ A {{domxref("DOMString","string")}} containing one of the following values:
 In the following example a new {{domxref("VTTCue")}} is created, then the value of `positionAlign` is set to `"line-right"`. The value is then printed to the console.
 
 ```js
-let video = document.querySelector('video');
+let video = document.querySelector("video");
 let track = video.addTextTrack("captions", "Captions", "en");
 track.mode = "showing";
 
-let cue1 = new VTTCue(0, 0.9, 'Hildy!');
-cue1.positionAlign = 'line-right';
+let cue1 = new VTTCue(0, 0.9, "Hildy!");
+cue1.positionAlign = "line-right";
 console.log(cue1.positionAlign);
 
 track.addCue(cue1);

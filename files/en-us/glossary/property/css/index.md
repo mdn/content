@@ -1,10 +1,9 @@
 ---
 title: Property (CSS)
-slug: Glossary/property/CSS
-tags:
-  - CodingScripting
-  - Glossary
+slug: Glossary/Property/CSS
+page-type: glossary-definition
 ---
+
 A **CSS property** is a characteristic (like color) whose associated value defines one aspect of how the browser should display the element.
 
 Here's an example of a CSS rule:

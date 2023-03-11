@@ -1,15 +1,10 @@
 ---
 title: Headers.keys()
 slug: Web/API/Headers/keys
-tags:
-  - API
-  - Experimental
-  - Fetch API
-  - Headers
-  - Method
-  - Reference
+page-type: web-api-instance-method
 browser-compat: api.Headers.keys
 ---
+
 {{APIRef}}
 
 The **`Headers.keys()`** method returns an
@@ -20,25 +15,29 @@ in this object. The keys are {{jsxref("String")}} objects.
 
 ## Syntax
 
-```js
-headers.keys();
+```js-nolint
+keys()
 ```
+
+### Parameters
+
+None.
 
 ### Return value
 
 Returns an {{jsxref("Iteration_protocols","iterator")}}.
 
-## Example
+## Examples
 
 ```js
 // Create a test Headers object
-var myHeaders = new Headers();
-myHeaders.append('Content-Type', 'text/xml');
-myHeaders.append('Vary', 'Accept-Language');
+const myHeaders = new Headers();
+myHeaders.append("Content-Type", "text/xml");
+myHeaders.append("Vary", "Accept-Language");
 
 // Display the keys
-for(var key of myHeaders.keys()) {
-   console.log(key);
+for (const key of myHeaders.keys()) {
+  console.log(key);
 }
 ```
 

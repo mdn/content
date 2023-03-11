@@ -1,15 +1,10 @@
 ---
 title: ReadableStreamDefaultController
 slug: Web/API/ReadableStreamDefaultController
-tags:
-  - API
-  - Fetch
-  - Interface
-  - ReadableStreamDefaultController
-  - Reference
-  - Streams
+page-type: web-api-interface
 browser-compat: api.ReadableStreamDefaultController
 ---
+
 {{APIRef("Streams")}}
 
 The **`ReadableStreamDefaultController`** interface of the [Streams API](/en-US/docs/Web/API/Streams_API) represents a controller allowing control of a {{domxref("ReadableStream")}}'s state and internal queue. Default controllers are for streams that are not byte streams.
@@ -18,12 +13,12 @@ The **`ReadableStreamDefaultController`** interface of the [Streams API](/en-US/
 
 None. `ReadableStreamDefaultController` instances are created automatically during `ReadableStream` construction.
 
-## Properties
+## Instance properties
 
-- {{domxref("ReadableStreamDefaultController.desiredSize")}} {{readonlyInline}}
+- {{domxref("ReadableStreamDefaultController.desiredSize")}} {{ReadOnlyInline}}
   - : Returns the desired size required to fill the stream's internal queue.
 
-## Methods
+## Instance methods
 
 - {{domxref("ReadableStreamDefaultController.close()")}}
   - : Closes the associated stream.
@@ -50,16 +45,16 @@ const stream = new ReadableStream({
       controller.enqueue(string);
 
       // show it on the screen
-      let listItem = document.createElement('li');
+      let listItem = document.createElement("li");
       listItem.textContent = string;
       list1.appendChild(listItem);
     }, 1000);
 
-    button.addEventListener('click', function() {
+    button.addEventListener("click", () => {
       clearInterval(interval);
       fetchStream();
       controller.close();
-    })
+    });
   },
   pull(controller) {
     // We don't really need a pull in this example
@@ -68,7 +63,7 @@ const stream = new ReadableStream({
     // This is called if the reader cancels,
     // so we should stop generating strings
     clearInterval(interval);
-  }
+  },
 });
 ```
 

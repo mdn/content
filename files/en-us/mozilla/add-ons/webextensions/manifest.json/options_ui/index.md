@@ -1,17 +1,10 @@
 ---
 title: options_ui
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/options_ui
-tags:
-  - Add-ons
-  - Extensions
-  - Manifest
-  - Options
-  - Reference
-  - Web
-  - WebExtensions
-  - options_ui
+page-type: webextension-manifest-key
 browser-compat: webextensions.manifest.options_ui
 ---
+
 {{AddonSidebar}}
 
 <table class="fullwidth-table standard-table">
@@ -23,6 +16,10 @@ browser-compat: webextensions.manifest.options_ui
     <tr>
       <th scope="row">Mandatory</th>
       <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Manifest version</th>
+      <td>2 or higher</td>
     </tr>
     <tr>
       <th scope="row">Example</th>

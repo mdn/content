@@ -1,24 +1,13 @@
 ---
 title: "Reason: Did not find method in CORS header 'Access-Control-Allow-Methods'"
 slug: Web/HTTP/CORS/Errors/CORSMethodNotFound
-tags:
-  - CORS
-  - CORSMethodNotFound
-  - Cross-Origin
-  - Error
-  - HTTP
-  - HTTPS
-  - Messages
-  - Reasons
-  - Security
-  - console
-  - troubleshooting
 ---
+
 {{HTTPSidebar}}
 
 ## Reason
 
-```
+```plain
 Reason: Did not find method in CORS header 'Access-Control-Allow-Methods'
 ```
 
@@ -33,7 +22,7 @@ occurs.
 
 For example, if the response includes:
 
-```
+```http
 Access-Control-Allow-Methods: GET,HEAD,POST
 ```
 

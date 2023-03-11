@@ -1,14 +1,10 @@
 ---
 title: ArrayBuffer.prototype.slice()
 slug: Web/JavaScript/Reference/Global_Objects/ArrayBuffer/slice
-tags:
-  - ArrayBuffer
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.ArrayBuffer.slice
 ---
+
 {{JSRef}}
 
 The **`slice()`** method returns a new `ArrayBuffer`
@@ -19,7 +15,7 @@ whose contents are a copy of this `ArrayBuffer`'s bytes from
 
 ## Syntax
 
-```js
+```js-nolint
 slice(begin)
 slice(begin, end)
 ```

@@ -1,14 +1,10 @@
 ---
 title: TransformStreamDefaultController.desiredSize
 slug: Web/API/TransformStreamDefaultController/desiredSize
-tags:
-  - API
-  - Property
-  - Reference
-  - desiredSize
-  - TransformStreamDefaultController
+page-type: web-api-instance-property
 browser-compat: api.TransformStreamDefaultController.desiredSize
 ---
+
 {{DefaultAPISidebar("Streams API")}}
 
 The **`desiredSize`** read-only property of the {{domxref("TransformStreamDefaultController")}} interface returns the desired size to fill the queue of the associated {{domxref("ReadableStream")}}.
@@ -17,13 +13,7 @@ The internal queue of a `ReadableStream` contains chunks that have been enqueued
 
 If the `desiredSize` is `0` then the queue is full. Therefore you can use this information to [manually apply backpressure](/en-US/docs/Web/API/Streams_API/Concepts#backpressure) to manage the queue.
 
-## Syntax
-
-```js
-let desiredSize = TransformStreamDefaultController.desiredSize;
-```
-
-### Value
+## Value
 
 The desired size.
 

@@ -1,24 +1,25 @@
 ---
 title: Number.NEGATIVE_INFINITY
 slug: Web/JavaScript/Reference/Global_Objects/Number/NEGATIVE_INFINITY
-tags:
-  - JavaScript
-  - Number
-  - Property
-  - Reference
+page-type: javascript-static-data-property
 browser-compat: javascript.builtins.Number.NEGATIVE_INFINITY
 ---
+
 {{JSRef}}
 
-The **`Number.NEGATIVE_INFINITY`** property represents the negative Infinity value.
+The **`Number.NEGATIVE_INFINITY`** static data property represents the negative Infinity value.
 
-{{EmbedInteractiveExample("pages/js/number-negative-infinity.html")}}{{js_property_attributes(0, 0, 0)}}
+{{EmbedInteractiveExample("pages/js/number-negative-infinity.html")}}
+
+## Value
+
+The same as the negative value of the global {{jsxref("Infinity")}} property.
+
+{{js_property_attributes(0, 0, 0)}}
 
 ## Description
 
-The value of `Number.NEGATIVE_INFINITY` is the same as the negative value of the global object's {{jsxref("Infinity")}} property.
-
-This value behaves slightly differently than mathematical infinity:
+The `Number.NEGATIVE_INFINITY` value behaves slightly differently than mathematical infinity:
 
 - Any positive value, including {{jsxref("Number.POSITIVE_INFINITY", "POSITIVE_INFINITY")}}, multiplied by `NEGATIVE_INFINITY` is `NEGATIVE_INFINITY`.
 - Any negative value, including `NEGATIVE_INFINITY`, multiplied by `NEGATIVE_INFINITY` is {{jsxref("Number.POSITIVE_INFINITY", "POSITIVE_INFINITY")}}.
@@ -31,9 +32,9 @@ This value behaves slightly differently than mathematical infinity:
 - `NEGATIVE_INFINITY`, divided by either `NEGATIVE_INFINITY` or {{jsxref("Number.POSITIVE_INFINITY", "POSITIVE_INFINITY")}}, is {{jsxref("NaN")}}.
 - `x > Number.NEGATIVE_INFINITY` is true for any number _x_ that isn't `NEGATIVE_INFINITY`.
 
-You might use the `Number.NEGATIVE_INFINITY` property to indicate an error condition that returns a finite number in case of success. Note, however, that {{jsxref("isFinite")}} would be more appropriate in such a case.
+You might use the `Number.NEGATIVE_INFINITY` property to indicate an error condition that returns a finite number in case of success. Note, however, that {{jsxref("NaN")}} would be more appropriate in such a case.
 
-Because `NEGATIVE_INFINITY` is a static property of {{jsxref("Number")}}, you always use it as `Number.NEGATIVE_INFINITY`, rather than as a property of a {{jsxref("Number")}} object you created.
+Because `NEGATIVE_INFINITY` is a static property of {{jsxref("Number")}}, you always use it as `Number.NEGATIVE_INFINITY`, rather than as a property of a number value.
 
 ## Examples
 
@@ -42,7 +43,7 @@ Because `NEGATIVE_INFINITY` is a static property of {{jsxref("Number")}}, you al
 In the following example, the variable `smallNumber` is assigned a value that is smaller than the minimum value. When the {{jsxref("Statements/if...else", "if")}} statement executes, `smallNumber` has the value `-Infinity`, so `smallNumber` is set to a more manageable value before continuing.
 
 ```js
-var smallNumber = (-Number.MAX_VALUE) * 2;
+let smallNumber = -Number.MAX_VALUE * 2;
 
 if (smallNumber === Number.NEGATIVE_INFINITY) {
   smallNumber = returnFinite();

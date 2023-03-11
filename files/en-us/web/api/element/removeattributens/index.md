@@ -1,15 +1,10 @@
 ---
 title: Element.removeAttributeNS()
 slug: Web/API/Element/removeAttributeNS
-tags:
-  - API
-  - DOM
-  - Element
-  - Method
-  - NeedsSpecTable
-  - Reference
+page-type: web-api-instance-method
 browser-compat: api.Element.removeAttributeNS
 ---
+
 {{ APIRef("DOM") }}
 
 The **`removeAttributeNS()`** method of the
@@ -17,8 +12,8 @@ The **`removeAttributeNS()`** method of the
 
 ## Syntax
 
-```js
-element.removeAttributeNS(namespace, attrName);
+```js-nolint
+removeAttributeNS(namespace, attrName)
 ```
 
 ### Parameters
@@ -27,7 +22,11 @@ element.removeAttributeNS(namespace, attrName);
 - `attrName` is a string that names the attribute to be removed from the
   current node.
 
-## Example
+### Return value
+
+None ({{jsxref("undefined")}}).
+
+## Examples
 
 ```js
 // Given:

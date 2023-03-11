@@ -1,0 +1,50 @@
+Content:Accessibility:
+  - '\/docs\/Web\/Accessibility'
+Content:CSS:
+  - '\/docs\/Web\/CSS'
+Content:Events:
+  - '\/docs\/Web\/Events'
+Content:Glossary:
+  - '\/docs\/Glossary'
+Content:HTML:
+  - '\/docs\/Web\/HTML'
+Content:HTTP:
+  - '\/docs\/Web\/HTTP'
+Content:JS:
+  - '\/docs\/Web\/JavaScript'
+Content:Learn:
+  - '\/docs\/Learn\/(Common|Front|Getting|Learning|Performance)'
+Content:Learn:Accessibility:
+  - '\/docs\/Learn\/Accessibility'
+Content:Learn:Client-side:
+  - '\/docs\/Learn\/Tools_and_testing\/(Client-side|Understanding_client-side)'
+Content:Learn:Cross-Browser-Testing:
+  - '\/docs\/Learn\/Tools_and_testing\/Cross_browser_testing'
+Content:Learn:CSS:
+  - '\/docs\/Learn\/CSS'
+Content:Learn:Django:
+  - '\/docs\/Learn\/Server-side\/Django'
+Content:Learn:Forms:
+  - '\/docs\/Learn\/Forms'
+Content:Learn:GitHub:
+  - '\/docs\/Learn\/Tools_and_testing\/GitHub'
+Content:Learn:HTML:
+  - '\/docs\/Learn\/HTML'
+Content:Learn:JavaScript:
+  - '\/docs\/Learn\/JavaScript'
+Content:Manifest:
+  - '\/docs\/Web\/Manifest'
+Content:Performance:
+  - '\/docs\/Web\/Performance'
+Content:Security:
+  - '\/docs\/Web\/Security'
+Content:SVG:
+  - '\/docs\/Web\/SVG'
+Content:wasm:
+  - '\/docs\/WebAssembly'
+Content:WebAPI:
+  - '\/docs\/Web\/API'
+Content:WebDriver:
+  - '\/docs\/Web\/WebDriver'
+Content:WebExt:
+  - '\/docs\/Mozilla\/Add-ons'

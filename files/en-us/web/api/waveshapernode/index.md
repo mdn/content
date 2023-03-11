@@ -1,14 +1,10 @@
 ---
 title: WaveShaperNode
 slug: Web/API/WaveShaperNode
-tags:
-  - API
-  - Interface
-  - Reference
-  - WaveShaperNode
-  - Web Audio API
+page-type: web-api-interface
 browser-compat: api.WaveShaperNode
 ---
+
 {{ APIRef("Web Audio API") }}
 
 The **`WaveShaperNode`** interface represents a non-linear distorter.
@@ -49,16 +45,16 @@ A `WaveShaperNode` always has exactly one input and one output.
 - {{domxref("WaveShaperNode.WaveShaperNode", "WaveShaperNode()")}}
   - : Creates a new instance of an `WaveShaperNode` object.
 
-## Properties
+## Instance properties
 
 _Inherits properties from its parent, {{domxref("AudioNode")}}_.
 
 - {{domxref("WaveShaperNode.curve")}}
-  - : Is a {{jsxref("Float32Array")}} of numbers describing the distortion to apply.
+  - : A {{jsxref("Float32Array")}} of numbers describing the distortion to apply.
 - {{domxref("WaveShaperNode.oversample")}}
-  - : Is an enumerated value indicating if oversampling must be used. Oversampling is a technique for creating more samples (up-sampling) before applying the distortion effect to the audio signal.
+  - : An enumerated value indicating if oversampling must be used. Oversampling is a technique for creating more samples (up-sampling) before applying the distortion effect to the audio signal.
 
-## Methods
+## Instance methods
 
 _No specific method; inherits methods from its parent, {{domxref("AudioNode")}}_.
 

@@ -1,26 +1,21 @@
 ---
 title: HTMLTableElement.caption
 slug: Web/API/HTMLTableElement/caption
-tags:
-  - API
-  - HTML DOM
-  - Property
-  - Reference
+page-type: web-api-instance-property
 browser-compat: api.HTMLTableElement.caption
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`HTMLTableElement.caption`** property represents the
 table caption. If no caption element is associated with the table, this property is
 `null`.
 
-## Syntax
+## Value
 
-```js
-var string = tableElement.caption;
-```
+A string.
 
-## Example
+## Examples
 
 ```js
 if (table.caption) {

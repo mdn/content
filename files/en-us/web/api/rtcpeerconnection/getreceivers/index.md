@@ -1,15 +1,7 @@
 ---
 title: RTCPeerConnection.getReceivers()
 slug: Web/API/RTCPeerConnection/getReceivers
-tags:
-  - Media
-  - Method
-  - RTCPeerConnection
-  - RTP
-  - Reference
-  - WebRTC
-  - WebRTC API
-  - getReceivers
+page-type: web-api-instance-method
 browser-compat: api.RTCPeerConnection.getReceivers
 ---
 
@@ -22,8 +14,8 @@ a {{domxref("MediaStreamTrack")}} on an {{domxref("RTCPeerConnection")}}
 
 ## Syntax
 
-```js
-var receivers = rtcPeerConnection.getReceivers();
+```js-nolint
+getReceivers()
 ```
 
 ### Return value

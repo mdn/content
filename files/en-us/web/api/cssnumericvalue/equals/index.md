@@ -1,18 +1,11 @@
 ---
 title: CSSNumericValue.equals()
 slug: Web/API/CSSNumericValue/equals
-tags:
-  - API
-  - CSS Typed Object Model API
-  - CSSNumericValue
-  - Experimental
-  - Houdini
-  - Method
-  - Reference
-  - equals()
+page-type: web-api-instance-method
 browser-compat: api.CSSNumericValue.equals
 ---
-{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
+
+{{APIRef("CSS Typed OM")}}
 
 The **`equals()`** method of the
 {{domxref("CSSNumericValue")}} interface returns a boolean indicating whether the passed
@@ -22,18 +15,18 @@ equality to be tested quickly.
 
 ## Syntax
 
-```js
-var boolean = CSSNumericValue.equals(number);
+```js-nolint
+equals(number)
 ```
 
 ### Parameters
 
-- number
-  - : Either a {{jsxref('Number')}} or a {{domxref('CSSNumericValue')}}.
+- `number`
+  - : Either a number or a {{domxref('CSSNumericValue')}}.
 
 ### Return value
 
-A {{jsxref('Boolean')}}.
+A boolean value.
 
 ### Exceptions
 

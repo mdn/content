@@ -1,13 +1,9 @@
 ---
 title: Expires
 slug: Web/HTTP/Headers/Expires
-tags:
-  - Caching
-  - HTTP
-  - Response
-  - header
 browser-compat: http.headers.Expires
 ---
+
 {{HTTPSidebar}}
 
 The **`Expires`** HTTP header contains the date/time after which the
@@ -41,7 +37,7 @@ resource is already expired.
 
 ## Syntax
 
-```
+```http
 Expires: <http-date>
 ```
 
@@ -52,7 +48,7 @@ Expires: <http-date>
 
 ## Examples
 
-```
+```http
 Expires: Wed, 21 Oct 2015 07:28:00 GMT
 ```
 

@@ -1,10 +1,10 @@
 ---
 title: ry
 slug: Web/SVG/Attribute/ry
-tags:
-  - SVG
-  - SVG Attribute
+page-type: svg-attribute
+spec-urls: https://svgwg.org/svg2-draft/geometry.html#RY
 ---
+
 {{SVGRef}}
 
 The **`ry`** attribute defines a radius on the y-axis.
@@ -17,18 +17,22 @@ You can use this attribute with the following SVG elements:
 ## Example
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
 <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
-  <ellipse cx="50"  cy="50" ry="0"  rx="25" />
+  <ellipse cx="50" cy="50" ry="0" rx="25" />
   <ellipse cx="150" cy="50" ry="25" rx="25" />
   <ellipse cx="250" cy="50" ry="50" rx="25" />
 
-  <rect x="20"  y="120" width="60" height="60" ry="0"   rx="15"/>
-  <rect x="120" y="120" width="60" height="60" ry="15"  rx="15"/>
-  <rect x="220" y="120" width="60" height="60" ry="150" rx="15"/>
+  <rect x="20" y="120" width="60" height="60" ry="0" rx="15" />
+  <rect x="120" y="120" width="60" height="60" ry="15" rx="15" />
+  <rect x="220" y="120" width="60" height="60" ry="150" rx="15" />
 </svg>
 ```
 
@@ -68,7 +72,7 @@ For {{SVGElement('ellipse')}}, `ry` defines the y-radius of the shape. With a va
   </tbody>
 </table>
 
-> **Note:** Starting with SVG2, `ry` is a *Geometry Property* meaning this attribute can also be used as a CSS property for ellipses.
+> **Note:** Starting with SVG2, `ry` is a _Geometry Property_ meaning this attribute can also be used as a CSS property for ellipses.
 
 ## rect
 
@@ -110,37 +114,8 @@ The way the value of the `ry` attribute is interpreted depend on both the {{SVGA
   </tbody>
 </table>
 
-> **Note:** Starting with SVG2, `ry` is a *Geometry Property* meaning this attribute can also be used as a CSS property for rects.
+> **Note:** Starting with SVG2, `ry` is a _Geometry Property_ meaning this attribute can also be used as a CSS property for rects.
 
 ## Specifications
 
-<table class="no-markdown">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName("SVG2", "geometry.html#RY", "ry")}}</td>
-      <td>{{Spec2("SVG2")}}</td>
-      <td>Definition as a geometry property</td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("SVG1.1", "shapes.html#EllipseElementRYAttribute", "ry")}}
-      </td>
-      <td>{{Spec2("SVG1.1")}}</td>
-      <td>Initial definition for <code>&#x3C;ellipse></code></td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("SVG1.1", "shapes.html#RectElementRYAttribute", "ry")}}
-      </td>
-      <td>{{Spec2("SVG1.1")}}</td>
-      <td>Initial definition for <code>&#x3C;rect></code></td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}

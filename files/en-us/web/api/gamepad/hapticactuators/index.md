@@ -1,27 +1,17 @@
 ---
 title: Gamepad.hapticActuators
 slug: Web/API/Gamepad/hapticActuators
-tags:
-  - API
-  - Experimental
-  - Gamepad
-  - Gamepad API
-  - Property
-  - Reference
-  - hapticActuators
+page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.Gamepad.hapticActuators
 ---
+
 {{APIRef("Gamepad")}}{{SeeCompatTable}}
 
 The **`hapticActuators`** read-only property of the {{domxref("Gamepad")}} interface returns an array containing {{domxref("GamepadHapticActuator")}} objects, each of which represents haptic feedback hardware available on the controller.
 
-## Syntax
-
-```js
-var myHapticActuators = gamepadInstance.hapticActuators;
-```
-
-### Value
+## Value
 
 An array containing {{domxref("GamepadHapticActuator")}} objects.
 
@@ -31,7 +21,7 @@ An array containing {{domxref("GamepadHapticActuator")}} objects.
 const gamepad = navigator.getGamepads()[0];
 
 gamepad.hapticActuators[0].pulse(1.0, 200);
-````
+```
 
 ## Specifications
 

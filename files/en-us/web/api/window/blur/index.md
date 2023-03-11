@@ -1,24 +1,29 @@
 ---
 title: Window.blur()
 slug: Web/API/Window/blur
-tags:
-  - API
-  - DOM
-  - Gecko
-  - Method
+page-type: web-api-instance-method
 browser-compat: api.Window.blur
 ---
+
 {{APIRef}}
 
 Shifts focus away from the window.
 
 ## Syntax
 
-```js
-window.blur()
+```js-nolint
+blur()
 ```
 
-## Example
+### Parameters
+
+None.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
+
+## Examples
 
 ```js
 window.blur();

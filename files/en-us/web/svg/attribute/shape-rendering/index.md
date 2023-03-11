@@ -1,11 +1,10 @@
 ---
 title: shape-rendering
 slug: Web/SVG/Attribute/shape-rendering
-tags:
-  - SVG
-  - SVG Attribute
+page-type: svg-attribute
 browser-compat: svg.attributes.presentation.shape-rendering
 ---
+
 {{SVGRef}}
 
 The **`shape-rendering`** attribute provides hints to the renderer about what tradeoffs to make when rendering shapes like paths, circles, or rectangles.
@@ -25,15 +24,17 @@ You can use this attribute with the following SVG elements:
 ## Example
 
 ```css hidden
-html, body, svg {
+html,
+body,
+svg {
   height: 100%;
 }
 ```
 
 ```html
 <svg viewBox="0 0 420 200" xmlns="http://www.w3.org/2000/svg">
-  <circle cx="100" cy="100" r="100" shape-rendering="geometricPrecision"/>
-  <circle cx="320" cy="100" r="100" shape-rendering="crispEdges"/>
+  <circle cx="100" cy="100" r="100" shape-rendering="geometricPrecision" />
+  <circle cx="320" cy="100" r="100" shape-rendering="crispEdges" />
 </svg>
 ```
 
@@ -72,31 +73,7 @@ html, body, svg {
 
 ## Specifications
 
-<table class="no-markdown">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        {{SpecName("SVG2", "painting.html#ShapeRenderingProperty", "shape-rendering")}}
-      </td>
-      <td>{{Spec2("SVG2")}}</td>
-      <td>No change</td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("SVG1.1", "painting.html#ShapeRenderingProperty", "shape-rendering")}}
-      </td>
-      <td>{{Spec2("SVG1.1")}}</td>
-      <td>Initial definition</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 ## Browser compatibility
 

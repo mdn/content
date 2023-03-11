@@ -1,24 +1,13 @@
 ---
-title: 'Reason: CORS preflight channel did not succeed'
+title: "Reason: CORS preflight channel did not succeed"
 slug: Web/HTTP/CORS/Errors/CORSPreflightDidNotSucceed
-tags:
-  - CORS
-  - CORSPreflightDidNotSucceed
-  - Cross-Origin
-  - Error
-  - HTTP
-  - HTTPS
-  - Messages
-  - Reasons
-  - Security
-  - console
-  - troubleshooting
 ---
+
 {{HTTPSidebar}}
 
 ## Reason
 
-```
+```plain
 Reason: CORS preflight channel did not succeed
 ```
 

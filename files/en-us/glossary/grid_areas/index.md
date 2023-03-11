@@ -1,11 +1,9 @@
 ---
 title: Grid Areas
 slug: Glossary/Grid_Areas
-tags:
-  - CSS
-  - CSS Grids
-  - Reference
+page-type: glossary-definition
 ---
+
 A **grid area** is one or more {{glossary("grid cell", "grid cells")}} that make up a rectangular area on the grid. Grid areas are created when you place an item using [line-based placement](/en-US/docs/Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid) or when defining areas using [named grid areas](/en-US/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas).
 
 ![Image showing a highlighted grid area](1_grid_area.png)
@@ -17,27 +15,29 @@ Grid areas _must_ be rectangular in nature; it is not possible to create, for ex
 In the example below I have a grid container with two grid items. I have named these with the {{cssxref("grid-area")}} property and then laid them out on the grid using {{cssxref("grid-template-areas")}}. This creates two grid areas, one covering four grid cells, the other two.
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
-    border: 2px solid #f76707;
-    border-radius: 5px;
-    background-color: #fff4e6;
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
 }
 
 .wrapper > div {
-    border: 2px solid #ffa94d;
-    border-radius: 5px;
-    background-color: #ffd8a8;
-    padding: 1em;
-    color: #d9480f;
+  border: 2px solid #ffa94d;
+  border-radius: 5px;
+  background-color: #ffd8a8;
+  padding: 1em;
+  color: #d9480f;
 }
 ```
 
 ```css
 .wrapper {
   display: grid;
-  grid-template-columns: repeat(3,1fr);
+  grid-template-columns: repeat(3, 1fr);
   grid-template-rows: 100px 100px;
   grid-template-areas:
     "a a b"
@@ -53,8 +53,8 @@ In the example below I have a grid container with two grid items. I have named t
 
 ```html
 <div class="wrapper">
-   <div class="item1">Item</div>
-   <div class="item2">Item</div>
+  <div class="item1">Item</div>
+  <div class="item2">Item</div>
 </div>
 ```
 

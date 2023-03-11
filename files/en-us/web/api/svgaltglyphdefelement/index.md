@@ -1,14 +1,12 @@
 ---
 title: SVGAltGlyphDefElement
 slug: Web/API/SVGAltGlyphDefElement
-tags:
-  - API
-  - Deprecated
-  - Reference
-  - SVG
-  - SVG DOM
+page-type: web-api-interface
+status:
+  - deprecated
 browser-compat: api.SVGAltGlyphDefElement
 ---
+
 {{APIRef("SVG")}}{{deprecated_header}}
 
 The **`SVGAltGlyphDefElement`** interface corresponds to the {{SVGElement("altGlyphDef")}} element.
@@ -17,11 +15,11 @@ The **`SVGAltGlyphDefElement`** interface corresponds to the {{SVGElement("altGl
 
 > **Warning:** This interface was removed in the SVG 2 specification.
 
-## Properties
+## Instance properties
 
 _This interface doesn't implement any specific properties, but inherits properties from its parent interface, {{domxref("SVGElement")}}._
 
-## Methods
+## Instance methods
 
 _This interface doesn't implement any specific methods, but inherits methods from its parent interface, {{domxref("SVGElement")}}._
 

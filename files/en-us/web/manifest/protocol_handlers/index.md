@@ -1,14 +1,12 @@
 ---
 title: protocol_handlers
 slug: Web/Manifest/protocol_handlers
-tags:
-  - protocol_handlers
-  - Manifest
-  - Web
-  - Non-standard
+status:
+  - experimental
 browser-compat: html.manifest.protocol_handlers
 ---
-{{QuickLinksWithSubpages("/en-US/docs/Web/Manifest")}}
+
+{{QuickLinksWithSubpages("/en-US/docs/Web/Manifest")}}{{SeeCompatTable}}
 
 <table class="properties">
   <tbody>

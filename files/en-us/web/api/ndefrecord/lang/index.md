@@ -1,13 +1,13 @@
 ---
 title: NDEFRecord.lang
 slug: Web/API/NDEFRecord/lang
-tags:
-  - NDEF
-  - Reference
-  - Web NFC
+page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.NDEFRecord.lang
 ---
-{{securecontext_header}}{{SeeCompatTable}}{{APIRef()}}
+
+{{SecureContext_Header}}{{SeeCompatTable}}{{APIRef("Web NFC API")}}
 
 The **`lang`**
 property of the {{DOMxRef("NDEFRecord")}} interface returns the language of
@@ -18,13 +18,13 @@ not locale-specific.
 
 ## Syntax
 
-```js
+```js-nolint
 NDEFRecord.lang
 ```
 
 ### Value
 
-A {{DOMxRef("USVString")}}.
+A string.
 
 ## Specifications
 

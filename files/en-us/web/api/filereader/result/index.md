@@ -1,16 +1,10 @@
 ---
 title: FileReader.result
 slug: Web/API/FileReader/result
-tags:
-  - API
-  - File API
-  - FileReader
-  - Files
-  - Property
-  - Reference
-  - result
+page-type: web-api-instance-property
 browser-compat: api.FileReader.result
 ---
+
 {{APIRef("File API")}}
 
 The {{domxref("FileReader")}} **`result`** property returns the
@@ -18,13 +12,7 @@ file's contents. This property is only valid after the read operation is complet
 the format of the data depends on which of the methods was used to initiate the read
 operation.
 
-## Syntax
-
-```js
-var file = instanceOfFileReader.result
-```
-
-### Value
+## Value
 
 An appropriate string or {{jsxref("ArrayBuffer")}} based on which of the reading methods
 was used to initiate the read operation. The value is `null` if the reading
@@ -78,7 +66,7 @@ The result types are described below.
   </tbody>
 </table>
 
-## Example
+## Examples
 
 This example presents a function, `read()`, which reads a file from a [file input](/en-US/docs/Web/HTML/Element/input/file). It works by creating a
 {{domxref("FileReader")}} object and creating a listener for
@@ -89,15 +77,15 @@ the `result` is obtained and passed to the callback function provided to
 The content is handled as raw text data.
 
 ```js
-var fileInput = document.querySelector('input[type="file"]');
+const fileInput = document.querySelector('input[type="file"]');
 
 function read(callback) {
-  var file = fileInput.files.item(0);
-  var reader = new FileReader();
+  const file = fileInput.files.item(0);
+  const reader = new FileReader();
 
-  reader.onload = function() {
+  reader.onload = () => {
     callback(reader.result);
-  }
+  };
 
   reader.readAsText(file);
 }

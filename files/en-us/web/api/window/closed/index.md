@@ -1,27 +1,16 @@
 ---
 title: Window.closed
 slug: Web/API/Window/closed
-tags:
-  - API
-  - HTML DOM
-  - NeedsCompatTable
-  - Property
-  - Reference
-  - Window
+page-type: web-api-instance-property
 browser-compat: api.Window.closed
 ---
+
 {{APIRef}}
 
 The **`Window.closed`** read-only property indicates whether
 the referenced window is closed or not.
 
-## Syntax
-
-```js
-const isClosed = windowRef.closed;
-```
-
-### Value
+## Value
 
 A boolean value. Possible values:
 
@@ -53,7 +42,7 @@ In this example the function `refreshPopupWindow()` calls the
 popup hasn't been opened yet or the user has closed it a new window is opened.
 
 ```js
-const popupWindow = null;
+let popupWindow = null;
 
 function refreshPopupWindow() {
   if (popupWindow && !popupWindow.closed) {

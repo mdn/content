@@ -1,15 +1,11 @@
 ---
 title: PictureInPictureEvent
 slug: Web/API/PictureInPictureEvent
-tags:
-  - API
-  - DOM
-  - DOM Events
-  - Event
-  - Reference
+page-type: web-api-interface
 browser-compat: api.PictureInPictureEvent
 ---
-{{APIRef("DOM Events")}}
+
+{{APIRef("Picture-in-Picture API")}}
 
 The **`PictureInPictureEvent`** interface represents picture-in-picture-related events, including {{domxref("HTMLVideoElement/enterpictureinpicture_event", "enterpictureinpicture")}}, {{domxref("HTMLVideoElement/leavepictureinpicture_event", "leavepictureinpicture")}} and {{domxref("PictureInPictureWindow/resize_event", "resize")}}
 
@@ -20,13 +16,16 @@ The **`PictureInPictureEvent`** interface represents picture-in-picture-related 
 - {{domxref("PictureInPictureEvent.PictureInPictureEvent", "PictureInPictureEvent()")}}
   - : Creates a `PictureInPictureEvent` event with the given parameters.
 
-## Properties
+## Instance properties
 
 _This interface also inherits properties from its parent {{domxref("Event")}}_.
 
-## Methods
+- {{domxref("PictureInPictureEvent.pictureInPictureWindow")}}
+  - : Returns the {{domxref("PictureInPictureWindow")}} the event relates to.
 
-_This interface also inherits properties from its parent {{domxref("Event")}}_.
+## Instance methods
+
+_This interface also inherits methods from its parent {{domxref("Event")}}_.
 
 ## Specifications
 

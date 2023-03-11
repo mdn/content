@@ -1,14 +1,12 @@
 ---
 title: display_override
 slug: Web/Manifest/display_override
-tags:
-  - Manifest
-  - Web
-  - display
-  - display_override
+status:
+  - experimental
 browser-compat: html.manifest.display_override
 ---
-{{QuickLinksWithSubpages("/en-US/docs/Web/Manifest")}}
+
+{{QuickLinksWithSubpages("/en-US/docs/Web/Manifest")}}{{SeeCompatTable}}
 
 <table class="properties">
   <tbody>
@@ -92,7 +90,7 @@ In the example below, the browser will consider the following display-mode fallb
 ```json
 {
   "display_override": ["fullscreen", "minimal-ui"],
-  "display": "standalone",
+  "display": "standalone"
 }
 ```
 

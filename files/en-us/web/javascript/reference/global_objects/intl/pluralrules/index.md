@@ -1,16 +1,10 @@
 ---
 title: Intl.PluralRules
 slug: Web/JavaScript/Reference/Global_Objects/Intl/PluralRules
-tags:
-  - Class
-  - Internationalization
-  - Intl
-  - JavaScript
-  - Localization
-  - PluralRules
-  - Reference
+page-type: javascript-class
 browser-compat: javascript.builtins.Intl.PluralRules
 ---
+
 {{JSRef}}
 
 The **`Intl.PluralRules`** object enables plural-sensitive formatting and plural-related language rules.
@@ -30,9 +24,9 @@ The **`Intl.PluralRules`** object enables plural-sensitive formatting and plural
 - {{jsxref("Intl/PluralRules/resolvedOptions", "Intl.PluralRules.prototype.resolvedOptions()")}}
   - : Returns a new object with properties reflecting the locale and collation options computed during initialization of the object.
 - {{jsxref("Intl/PluralRules/select", "Intl.PluralRules.prototype.select()")}}
-  - : Returns a {{jsxref("String")}} indicating which plural rule to use for locale-aware formatting.
+  - : Returns a string indicating which plural rule to use for locale-aware formatting.
 - {{jsxref("Intl/PluralRules/selectRange", "Intl.PluralRules.prototype.selectRange()")}}
-  - : This method receives two values and returns a {{jsxref("String")}} indicating which plural rule to use for locale-aware formatting.
+  - : This method receives two values and returns a string indicating which plural rule to use for locale-aware formatting.
 
 ## Examples
 
@@ -43,23 +37,17 @@ This example shows some of the variations in localized plural rules. In order to
 ```js
 // Arabic has different plural rules
 
-new Intl.PluralRules('ar-EG').select(0);
+new Intl.PluralRules("ar-EG").select(0);
 // → 'zero'
-new Intl.PluralRules('ar-EG').select(1);
+new Intl.PluralRules("ar-EG").select(1);
 // → 'one'
-new Intl.PluralRules('ar-EG').select(2);
+new Intl.PluralRules("ar-EG").select(2);
 // → 'two'
-new Intl.PluralRules('ar-EG').select(6);
+new Intl.PluralRules("ar-EG").select(6);
 // → 'few'
-new Intl.PluralRules('ar-EG').select(18);
+new Intl.PluralRules("ar-EG").select(18);
 // → 'many'
 ```
-
-### Using locales
-
-## Polyfill
-
-[formatjs Intl.PluralRules polyfill](https://formatjs.io/docs/polyfills/intl-pluralrules)
 
 ## Specifications
 
@@ -72,3 +60,4 @@ new Intl.PluralRules('ar-EG').select(18);
 ## See also
 
 - {{jsxref("Intl")}}
+- [A polyfill of `Intl.PluralRules` in FormatJS](https://formatjs.io/docs/polyfills/intl-pluralrules/)

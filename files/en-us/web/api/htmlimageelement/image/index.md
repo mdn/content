@@ -1,18 +1,10 @@
 ---
 title: Image()
 slug: Web/API/HTMLImageElement/Image
-tags:
-  - API
-  - Constructor
-  - DOM
-  - HTML
-  - HTML DOM
-  - HTMLImageElement
-  - Image()
-  - Reference
-  - img
+page-type: web-api-constructor
 browser-compat: api.HTMLImageElement.Image
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`Image()`**
@@ -20,20 +12,22 @@ constructor creates a new {{DOMxRef("HTMLImageElement")}} instance. It is functi
 equivalent to {{DOMxRef("Document.createElement()",
     "document.createElement('img')")}}.
 
-> **Note:** This function should not be confused with the CSS [`image()`](</en-US/docs/Web/CSS/image/image()>) function.
+> **Note:** This function should not be confused with the CSS [`image()`](/en-US/docs/Web/CSS/image/image) function.
 
 ## Syntax
 
-```js
-var htmlImageElement = new Image(width, height);
+```js-nolint
+new Image()
+new Image(width)
+new Image(width, height)
 ```
 
 ### Parameters
 
-- `width`
+- `width` {{optional_inline}}
   - : The width of the image (i.e., the value for the {{HTMLAttrxRef("width", "img")}}
     attribute).
-- `height`
+- `height` {{optional_inline}}
   - : The height of the image (i.e., the value for the {{HTMLAttrxRef("height", "img")}}
     attribute).
 
@@ -50,8 +44,8 @@ constructor both pairs of properties have the same values.
 ## Examples
 
 ```js
-var myImage = new Image(100, 200);
-myImage.src = 'picture.jpg';
+const myImage = new Image(100, 200);
+myImage.src = "picture.jpg";
 document.body.appendChild(myImage);
 ```
 
@@ -59,7 +53,7 @@ This would be the equivalent of defining the following HTML tag inside the
 {{HTMLElement("body")}}:
 
 ```html
-<img width="100" height="200" src="picture.jpg">
+<img width="100" height="200" src="picture.jpg" />
 ```
 
 ## Specifications

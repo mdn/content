@@ -1,18 +1,13 @@
 ---
 title: XRCylinderLayer.radius
 slug: Web/API/XRCylinderLayer/radius
-tags:
-  - API
-  - Property
-  - Reference
-  - VR
-  - WebXR
-  - WebXR API
-  - WebXR Device API
-  - XR
+page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.XRCylinderLayer.radius
 ---
-{{APIRef("WebXR Device API")}}
+
+{{APIRef("WebXR Device API")}}{{SeeCompatTable}}
 
 The **`radius`** property of the {{domxref("XRCylinderLayer")}} interface represents the radius of the cylinder.
 
@@ -34,7 +29,7 @@ const cylinderLayer = xrGlBinding.createCylinderLayer({
   centralAngle : 60 * Math.PI / 180,
   aspectRatio : 2,
   radius : 2,
-  transform : new XRRigidTransform(/* ... */),
+  transform : new XRRigidTransform(/* … */),
 });
 
 cylinderLayer.radius; // 2

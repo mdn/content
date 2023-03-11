@@ -1,15 +1,10 @@
 ---
 title: ReadableStreamDefaultController.error()
 slug: Web/API/ReadableStreamDefaultController/error
-tags:
-  - API
-  - Error
-  - Method
-  - ReadableStreamDefaultController
-  - Reference
-  - Streams
+page-type: web-api-instance-method
 browser-compat: api.ReadableStreamDefaultController.error
 ---
+
 {{APIRef("Streams")}}
 
 The **`error()`** method of the
@@ -21,29 +16,27 @@ with the associated stream to error.
 
 ## Syntax
 
-```js
-readableStreamDefaultController.error(e);
+```js-nolint
+error(e)
 ```
 
 ### Parameters
 
-- _e_
+- `e`
   - : The error you want future interactions to fail with.
 
 ### Return value
 
-`undefined`.
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 
-- TypeError
-  - : The source object is not a `ReadableStreamDefaultController`, or the
-    stream is not readable for some other reason.
+- {{jsxref("TypeError")}}
+  - : Thrown if the source object is not a `ReadableStreamDefaultController`.
 
 ## Examples
 
-The [A readable
-stream with an underlying push source and backpressure support](https://streams.spec.whatwg.org/#example-rs-push-backpressure) example in the spec
+The [A readable stream with an underlying push source and backpressure support](https://streams.spec.whatwg.org/#example-rs-push-backpressure) example in the spec
 provides a good example of using
 {{domxref("ReadablestreamDefaultController.desiredSize")}} to manually detect when the
 stream is full and apply backpressure, and also of using `error()` to

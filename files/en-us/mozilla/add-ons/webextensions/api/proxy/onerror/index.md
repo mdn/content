@@ -1,16 +1,10 @@
 ---
 title: proxy.onError
 slug: Mozilla/Add-ons/WebExtensions/API/proxy/onError
-tags:
-  - API
-  - Add-ons
-  - Event
-  - Proxy
-  - Reference
-  - WebExtensions
-  - onProxyError
+page-type: webextension-api-event
 browser-compat: webextensions.api.proxy.onError
 ---
+
 {{AddonSidebar()}}
 
 Fired when there is an error evaluating the PAC file or the `onRequest` listener.
@@ -19,7 +13,7 @@ The error can be triggered by throwing or returning an invalid value in the prox
 
 ## Syntax
 
-```js
+```js-nolint
 browser.proxy.onError.addListener(listener)
 browser.proxy.onError.removeListener(listener)
 browser.proxy.onError.hasListener(listener)

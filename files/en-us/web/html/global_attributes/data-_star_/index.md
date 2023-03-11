@@ -1,10 +1,7 @@
 ---
 title: data-*
 slug: Web/HTML/Global_attributes/data-*
-tags:
-  - Global attributes
-  - HTML
-  - Reference
+page-type: html-attribute
 browser-compat: html.global_attributes.data_attributes
 ---
 
@@ -28,10 +25,16 @@ Note that the {{domxref("HTMLElement.dataset")}} property is a {{domxref("DOMStr
 By adding `data-*` attributes, even ordinary HTML elements can become rather complex and powerful program-objects. For example, a space-ship "[sprite](<https://en.wikipedia.org/wiki/Sprite_(computer_graphics)>)_"_ in a game could be a simple {{HTMLElement("img")}} element with a [`class`](/en-US/docs/Web/HTML/Global_attributes/class) attribute and several `data-*` attributes:
 
 ```html
-<img class="spaceship cruiserX3" src="shipX3.png"
-  data-ship-id="324" data-weapons="laserI laserII" data-shields="72%"
-  data-x="414354" data-y="85160" data-z="31940"
-  onclick="spaceships[this.dataset.shipId].blasted()">
+<img
+  class="spaceship cruiserX3"
+  src="shipX3.png"
+  data-ship-id="324"
+  data-weapons="laserI laserII"
+  data-shields="72%"
+  data-x="414354"
+  data-y="85160"
+  data-z="31940"
+  onclick="spaceships[this.dataset.shipId].blasted()" />
 ```
 
 For a more in-depth tutorial about using HTML data attributes, see [Using data attributes](/en-US/docs/Learn/HTML/Howto/Use_data_attributes).

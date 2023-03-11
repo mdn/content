@@ -1,30 +1,43 @@
 ---
 title: VideoDecoder
 slug: Web/API/VideoDecoder
-tags:
-  - API
-  - Interface
-  - Reference
-  - VideoDecoder
+page-type: web-api-interface
 browser-compat: api.VideoDecoder
 ---
-{{securecontext_header}}{{DefaultAPISidebar("WebCodecs API")}}
+
+{{securecontext_header}}{{APIRef("WebCodecs API")}}
 
 The **`VideoDecoder`** interface of the {{domxref('WebCodecs API','','','true')}} decodes chunks of video.
 
+{{InheritanceDiagram}}
+
 ## Constructor
 
-- {{domxref("VideoDecoder.VideoDecoder()")}}
+- {{domxref("VideoDecoder.VideoDecoder", "VideoDecoder()")}}
   - : Creates a new `VideoDecoder` object.
 
-## Properties
+## Instance properties
 
-- {{domxref("VideoDecoder.decodeQueueSize")}}{{ReadOnlyInline}}
+_Inherits properties from its parent, {{DOMxRef("EventTarget")}}._
+
+- {{domxref("VideoDecoder.decodeQueueSize")}} {{ReadOnlyInline}}
   - : An integer representing the number of decode queue requests.
-- {{domxref("VideoDecoder.state")}}{{ReadOnlyInline}}
+- {{domxref("VideoDecoder.state")}} {{ReadOnlyInline}}
   - : Indicates whether the underlying codec is configured for decoding.
 
-## Methods
+### Events
+
+- {{domxref("VideoDecoder.dequeue_event", "dequeue")}}
+  - : Fires to signal a decrease in {{domxref("VideoDecoder.decodeQueueSize")}}.
+
+## Static methods
+
+- {{domxref("VideoDecoder.isConfigSupported()")}}
+  - : Returns a promise indicating whether the provided `VideoDecoderConfig` is supported.
+
+## Instance methods
+
+_Inherits methods from its parent, {{DOMxRef("EventTarget")}}._
 
 - {{domxref("VideoDecoder.configure()")}}
   - : Enqueues a control message to configure the video decoder for decoding chunks.

@@ -1,17 +1,10 @@
 ---
 title: MediaKeySession.close()
 slug: Web/API/MediaKeySession/close
-tags:
-  - API
-  - EncryptedMediaExtensions
-  - Experimental
-  - MediaKeySession
-  - Method
-  - NeedsExample
-  - Reference
-  - close
+page-type: web-api-instance-method
 browser-compat: api.MediaKeySession.close
 ---
+
 {{APIRef("EncryptedMediaExtensions")}}
 
 The `MediaKeySession.close()` method notifies that the current media session
@@ -20,9 +13,13 @@ associated with this object and close it. Then, it returns a {{jsxref('Promise')
 
 ## Syntax
 
-```js
-mediaKeySession.close().then(function() { /* ... */ });
+```js-nolint
+close()
 ```
+
+### Parameters
+
+None.
 
 ### Return value
 

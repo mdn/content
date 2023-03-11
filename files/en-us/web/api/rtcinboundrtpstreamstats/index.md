@@ -1,23 +1,15 @@
 ---
 title: RTCInboundRtpStreamStats
 slug: Web/API/RTCInboundRtpStreamStats
-tags:
-  - API
-  - Dictionary
-  - RTCInboundRtpStreamStats
-  - RTP
-  - Reference
-  - Statistics
-  - Stats
-  - local
-  - receiver
+page-type: web-api-interface
 browser-compat: api.RTCInboundRtpStreamStats
 ---
+
 {{APIRef("WebRTC")}}
 
 The [WebRTC API](/en-US/docs/Web/API/WebRTC_API)'s **`RTCInboundRtpStreamStats`** dictionary, based upon {{domxref("RTCReceivedRtpStreamStats")}} and {{domxref("RTCStats")}}, contains statistics related to the receiving end of an RTP stream on the local end of the {{domxref("RTCPeerConnection")}}.
 
-## Properties
+## Instance properties
 
 The `RTCInboundRtpStreamStats` dictionary is based on the {{domxref("RTCReceivedRtpStreamStats")}} dictionary, whose properties are also available.
 
@@ -53,7 +45,9 @@ The `RTCInboundRtpStreamStats` dictionary is based on the {{domxref("RTCReceived
   - : A string which identifies the {{domxref("RTCRemoteOutboundRtpStreamStats")}} object that provides statistics for the remote peer for this same SSRC. This ID is stable across multiple calls to `getStats()`.
 - {{domxref("RTCInboundRtpStreamStats.sliCount", "sliCount")}}
   - : An integer indicating the number of times the receiver sent a Slice Loss Indication (SLI) frame to the sender to tell it that one or more consecutive (in terms of scan order) video macroblocks have been lost or corrupted. Available only for video streams.
-- {{domxref("RTCInboundRtpStreamStats.trackId", "trackId")}}
+- `trackIdentifier`
+  - : A string that contains the {{domxref("MediaStreamTrack.id", "id")}} value of the `MediaStreamTrack` associated with the inbound stream.
+- {{domxref("RTCInboundRtpStreamStats.trackId", "trackId")}} {{deprecated_inline}}
   - : A string which identifies the statistics object representing the receiving track; this object is one of two types: {{domxref("RTCReceiverAudioTrackAttachmentStats")}} or {{domxref("RTCReceiverVideoTrackAttachmentStats")}}. This ID is stable across multiple calls to `getStats()`.
 
 ## Examples

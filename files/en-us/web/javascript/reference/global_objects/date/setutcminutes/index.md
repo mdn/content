@@ -1,14 +1,10 @@
 ---
 title: Date.prototype.setUTCMinutes()
 slug: Web/JavaScript/Reference/Global_Objects/Date/setUTCMinutes
-tags:
-  - Date
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.Date.setUTCMinutes
 ---
+
 {{JSRef}}
 
 The **`setUTCMinutes()`** method sets the minutes for a
@@ -18,7 +14,7 @@ specified date according to universal time.
 
 ## Syntax
 
-```js
+```js-nolint
 setUTCMinutes(minutesValue)
 setUTCMinutes(minutesValue, secondsValue)
 setUTCMinutes(minutesValue, secondsValue, msValue)
@@ -60,7 +56,7 @@ If a parameter you specify is outside of the expected range,
 ### Using setUTCMinutes()
 
 ```js
-var theBigDay = new Date();
+const theBigDay = new Date();
 theBigDay.setUTCMinutes(43);
 ```
 

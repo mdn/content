@@ -1,15 +1,10 @@
 ---
 title: text-transform
 slug: Web/CSS/text-transform
-tags:
-  - CSS
-  - CSS Property
-  - Layout
-  - Reference
-  - Text
-  - recipe:css-property
+page-type: css-property
 browser-compat: css.properties.text-transform
 ---
+
 {{CSSRef}}
 
 The **`text-transform`** CSS property specifies how to capitalize an element's text. It can be used to make text appear in all-uppercase or all-lowercase, or with each word capitalized. It also can help improve legibility for ruby.
@@ -44,6 +39,7 @@ text-transform: full-size-kana;
 text-transform: inherit;
 text-transform: initial;
 text-transform: revert;
+text-transform: revert-layer;
 text-transform: unset;
 ```
 
@@ -53,7 +49,7 @@ text-transform: unset;
 
     > **Note:** Authors should not expect `capitalize` to follow language-specific title casing conventions (such as skipping articles in English).
 
-    > **Note:** The `capitalize` keyword was under-specified in CSS 1 and CSS 2.1. This resulted in differences between browsers in the way the first letter was calculated (Firefox considered `-` and `_` as letters, but other browsers did not. Both Webkit and Gecko incorrectly considered letter-based symbols like `ⓐ` to be real letters. Internet Explorer 9 was the closest to the CSS 2 definition, but with some weird cases.) By precisely defining the correct behavior, CSS Text Level 3 cleans this mess up. The `capitalize` line in the browser compatibility table contains the version the different engines started to support this now precisely-defined behavior.
+    > **Note:** The `capitalize` keyword was under-specified in CSS 1 and CSS 2.1. This resulted in differences between browsers in the way the first letter was calculated (Firefox considered `-` and `_` as letters, but other browsers did not. Both Webkit and Gecko incorrectly considered letter-based symbols like `ⓐ` to be real letters.) By precisely defining the correct behavior, CSS Text Level 3 cleans this mess up. The `capitalize` line in the browser compatibility table contains the version the different engines started to support this now precisely-defined behavior.
 
 - `uppercase`
   - : Is a keyword that converts all characters to uppercase.
@@ -70,7 +66,7 @@ text-transform: unset;
 
 Large sections of text set with a `text-transform` value of `uppercase` may be difficult for people with cognitive concerns such as Dyslexia to read.
 
-- [MDN Understanding WCAG, Guideline 1.4 explanations](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.4_Make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
+- [MDN Understanding WCAG, Guideline 1.4 explanations](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
 - [W3C Understanding WCAG 2.1](https://www.w3.org/TR/WCAG21/#visual-presentation)
 
 ## Formal definition
@@ -86,11 +82,17 @@ Large sections of text set with a `text-transform` value of `uppercase` may be d
 ### Example using "none"
 
 ```html
-<p>Initial String
-  <strong>Lorem ipsum dolor sit amet, consectetur adipisicing elit, ...</strong>
+<p>
+  Initial String
+  <strong>Lorem ipsum dolor sit amet, consectetur adipisicing elit…</strong>
 </p>
-<p>text-transform: none
-  <strong><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, ...</span></strong>
+<p>
+  text-transform: none
+  <strong
+    ><span
+      >Lorem ipsum dolor sit amet, consectetur adipisicing elit…</span
+    ></strong
+  >
 </p>
 ```
 
@@ -98,7 +100,9 @@ Large sections of text set with a `text-transform` value of `uppercase` may be d
 span {
   text-transform: none;
 }
-strong { float: right; }
+strong {
+  float: right;
+}
 ```
 
 This demonstrates no text transformation.
@@ -108,11 +112,17 @@ This demonstrates no text transformation.
 ### Example using "capitalize" (general)
 
 ```html
-<p>Initial String
-  <strong>Lorem ipsum dolor sit amet, consectetur adipisicing elit, ...</strong>
+<p>
+  Initial String
+  <strong>Lorem ipsum dolor sit amet, consectetur adipisicing elit…</strong>
 </p>
-<p>text-transform: capitalize
-  <strong><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, ...</span></strong>
+<p>
+  text-transform: capitalize
+  <strong
+    ><span
+      >Lorem ipsum dolor sit amet, consectetur adipisicing elit…</span
+    ></strong
+  >
 </p>
 ```
 
@@ -120,7 +130,9 @@ This demonstrates no text transformation.
 span {
   text-transform: capitalize;
 }
-strong { float: right; }
+strong {
+  float: right;
+}
 ```
 
 This demonstrates text capitalization.
@@ -130,11 +142,21 @@ This demonstrates text capitalization.
 ### Example using "capitalize" (punctuation)
 
 ```html
-<p>Initial String
-  <strong>(this) "is" [a] –short– -test- «for» *the* _css_ ¿capitalize? ?¡transform!</strong>
+<p>
+  Initial String
+  <strong
+    >(this) "is" [a] –short– -test- «for» *the* _css_ ¿capitalize?
+    ?¡transform!</strong
+  >
 </p>
-<p>text-transform: capitalize
-  <strong><span>(this) "is" [a] –short– -test- «for» *the* _css_ ¿capitalize? ?¡transform!</span></strong>
+<p>
+  text-transform: capitalize
+  <strong
+    ><span
+      >(this) "is" [a] –short– -test- «for» *the* _css_ ¿capitalize?
+      ?¡transform!</span
+    ></strong
+  >
 </p>
 ```
 
@@ -142,7 +164,9 @@ This demonstrates text capitalization.
 span {
   text-transform: capitalize;
 }
-strong { float: right; }
+strong {
+  float: right;
+}
 ```
 
 This demonstrates how initial punctuations of a word are ignored. The keyword target the first letter, that is the first Unicode character part of the Letter or Number general category.
@@ -152,10 +176,12 @@ This demonstrates how initial punctuations of a word are ignored. The keyword ta
 ### Example using "capitalize" (Symbols)
 
 ```html
-<p>Initial String
+<p>
+  Initial String
   <strong>ⓐⓑⓒ (ⓓⓔⓕ) —ⓖⓗⓘ— ⓙkl</strong>
 </p>
-<p>text-transform: capitalize
+<p>
+  text-transform: capitalize
   <strong><span>ⓐⓑⓒ (ⓓⓔⓕ) —ⓖⓗⓘ— ⓙkl</span></strong>
 </p>
 ```
@@ -164,7 +190,9 @@ This demonstrates how initial punctuations of a word are ignored. The keyword ta
 span {
   text-transform: capitalize;
 }
-strong { float: right; }
+strong {
+  float: right;
+}
 ```
 
 This demonstrates how initial symbols are ignored. The keyword target the first letter, that is the first Unicode character part of the Letter or Number general category.
@@ -174,11 +202,17 @@ This demonstrates how initial symbols are ignored. The keyword target the first 
 ### Example using "capitalize" (Dutch ij digraph)
 
 ```html
-<p>Initial String
+<p>
+  Initial String
   <strong lang="nl">The Dutch word: "ijsland" starts with a digraph.</strong>
 </p>
-<p>text-transform: capitalize
-  <strong><span lang="nl">The Dutch word: "ijsland" starts with a digraph.</span></strong>
+<p>
+  text-transform: capitalize
+  <strong
+    ><span lang="nl"
+      >The Dutch word: "ijsland" starts with a digraph.</span
+    ></strong
+  >
 </p>
 ```
 
@@ -186,7 +220,9 @@ This demonstrates how initial symbols are ignored. The keyword target the first 
 span {
   text-transform: capitalize;
 }
-strong { float: right; }
+strong {
+  float: right;
+}
 ```
 
 This demonstrates how the Dutch _ij_ digraph must be handled like one single letter.
@@ -196,11 +232,17 @@ This demonstrates how the Dutch _ij_ digraph must be handled like one single let
 ### Example using "uppercase" (general)
 
 ```html
-<p>Initial String
-  <strong>Lorem ipsum dolor sit amet, consectetur adipisicing elit, ...</strong>
+<p>
+  Initial String
+  <strong>Lorem ipsum dolor sit amet, consectetur adipisicing elit…</strong>
 </p>
-<p>text-transform: uppercase
-  <strong><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, ...</span></strong>
+<p>
+  text-transform: uppercase
+  <strong
+    ><span
+      >Lorem ipsum dolor sit amet, consectetur adipisicing elit…</span
+    ></strong
+  >
 </p>
 ```
 
@@ -208,7 +250,9 @@ This demonstrates how the Dutch _ij_ digraph must be handled like one single let
 span {
   text-transform: uppercase;
 }
-strong { float: right; }
+strong {
+  float: right;
+}
 ```
 
 This demonstrates transforming the text to uppercase.
@@ -218,11 +262,15 @@ This demonstrates transforming the text to uppercase.
 ### Example using "uppercase" (Greek vowels)
 
 ```html
-<p>Initial String
+<p>
+  Initial String
   <strong>Θα πάμε στο "Θεϊκό φαΐ" ή στη "Νεράιδα"</strong>
 </p>
-<p>text-transform: uppercase
-  <strong><span lang="el">Θα πάμε στο "Θεϊκό φαΐ" ή στη "Νεράιδα"</span></strong>
+<p>
+  text-transform: uppercase
+  <strong
+    ><span lang="el">Θα πάμε στο "Θεϊκό φαΐ" ή στη "Νεράιδα"</span></strong
+  >
 </p>
 ```
 
@@ -230,7 +278,9 @@ This demonstrates transforming the text to uppercase.
 span {
   text-transform: uppercase;
 }
-strong { float: right; }
+strong {
+  float: right;
+}
 ```
 
 This demonstrates how Greek vowels except disjunctive _eta_ should have no accent, and the accent on the first vowel of a vowel pair becomes a diaeresis on the second vowel.
@@ -240,11 +290,17 @@ This demonstrates how Greek vowels except disjunctive _eta_ should have no accen
 ### Example using "lowercase" (general)
 
 ```html
-<p>Initial String
-  <strong>Lorem ipsum dolor sit amet, consectetur adipisicing elit, ...</strong>
+<p>
+  Initial String
+  <strong>Lorem ipsum dolor sit amet, consectetur adipisicing elit…</strong>
 </p>
-<p>text-transform: lowercase
-  <strong><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, ...</span></strong>
+<p>
+  text-transform: lowercase
+  <strong
+    ><span
+      >Lorem ipsum dolor sit amet, consectetur adipisicing elit…</span
+    ></strong
+  >
 </p>
 ```
 
@@ -252,7 +308,9 @@ This demonstrates how Greek vowels except disjunctive _eta_ should have no accen
 span {
   text-transform: lowercase;
 }
-strong { float: right; }
+strong {
+  float: right;
+}
 ```
 
 This demonstrates transforming the text to lowercase.
@@ -262,11 +320,17 @@ This demonstrates transforming the text to lowercase.
 ### Example using "lowercase" (Greek Σ)
 
 ```html
-<p>Initial String
+<p>
+  Initial String
   <strong>Σ IS A greek LETTER that appears SEVERAL TIMES IN ΟΔΥΣΣΕΥΣ.</strong>
 </p>
-<p>text-transform: lowercase
-  <strong><span>Σ IS A greek LETTER that appears SEVERAL TIMES IN ΟΔΥΣΣΕΥΣ.</span></strong>
+<p>
+  text-transform: lowercase
+  <strong
+    ><span
+      >Σ IS A greek LETTER that appears SEVERAL TIMES IN ΟΔΥΣΣΕΥΣ.</span
+    ></strong
+  >
 </p>
 ```
 
@@ -274,7 +338,9 @@ This demonstrates transforming the text to lowercase.
 span {
   text-transform: lowercase;
 }
-strong { float: right; }
+strong {
+  float: right;
+}
 ```
 
 This demonstrates how the Greek character sigma (`Σ`) is transformed into the regular lowercase sigma (`σ`) or the word-final variant (`ς`), according the context.
@@ -284,10 +350,12 @@ This demonstrates how the Greek character sigma (`Σ`) is transformed into the r
 ### Example using "lowercase" (Lithuanian)
 
 ```html
-<p>Initial String
+<p>
+  Initial String
   <strong>Ĩ is a Lithuanian LETTER as is J́</strong>
 </p>
-<p>text-transform: lowercase
+<p>
+  text-transform: lowercase
   <strong><span lang="lt">Ĩ is a Lithuanian LETTER as is J́</span></strong>
 </p>
 ```
@@ -296,7 +364,9 @@ This demonstrates how the Greek character sigma (`Σ`) is transformed into the r
 span {
   text-transform: lowercase;
 }
-strong { float: right; }
+strong {
+  float: right;
+}
 ```
 
 This demonstrates how the Lithuanian letters `Ĩ` and `J́` retain their dot when transformed to lowercase.
@@ -306,11 +376,19 @@ This demonstrates how the Lithuanian letters `Ĩ` and `J́` retain their dot whe
 ### Example using "full-width" (general)
 
 ```html
-<p>Initial String
-  <strong>0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!"#$%&()*+,-./:;<=>?@{|}~</strong>
+<p>
+  Initial String
+  <strong
+    >0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!"#$%&()*+,-./:;<=>?@{|}~</strong
+  >
 </p>
-<p>text-transform: full-width
-  <strong><span>0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!"#$%&()*+,-./:;<=>?@{|}~</span></strong>
+<p>
+  text-transform: full-width
+  <strong
+    ><span
+      >0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!"#$%&()*+,-./:;<=>?@{|}~</span
+    ></strong
+  >
 </p>
 ```
 
@@ -318,7 +396,10 @@ This demonstrates how the Lithuanian letters `Ĩ` and `J́` retain their dot whe
 span {
   text-transform: full-width;
 }
-strong { width: 100%; float: right; }
+strong {
+  width: 100%;
+  float: right;
+}
 ```
 
 Some characters exist in two formats: normal width and a full-width, with different Unicode code points. The full-width version is used to mix them smoothly with Asian ideographic characters.
@@ -328,10 +409,12 @@ Some characters exist in two formats: normal width and a full-width, with differ
 ### Example using "full-width" (Japanese half-width katakana)
 
 ```html
-<p>Initial String
+<p>
+  Initial String
   <strong>ｳｪﾌﾞﾌﾟﾛｸﾞﾗﾐﾝｸﾞの勉強</strong>
 </p>
-<p>text-transform: full-width
+<p>
+  text-transform: full-width
   <strong><span>ｳｪﾌﾞﾌﾟﾛｸﾞﾗﾐﾝｸﾞの勉強</span></strong>
 </p>
 ```
@@ -340,7 +423,10 @@ Some characters exist in two formats: normal width and a full-width, with differ
 span {
   text-transform: full-width;
 }
-strong { width: 100%; float: right; }
+strong {
+  width: 100%;
+  float: right;
+}
 ```
 
 The Japanese half-width katakana was used to represent katakana in 8-bit character codes. Unlike regular (full-width) katakana characters, a letter with dakuten (voiced sound mark) is represented as two code points, the body of letter and dakuten. The `full-width` combines these into a single code point when converting these characters into full-width.

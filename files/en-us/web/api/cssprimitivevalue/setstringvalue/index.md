@@ -1,15 +1,12 @@
 ---
 title: CSSPrimitiveValue.setStringValue()
 slug: Web/API/CSSPrimitiveValue/setStringValue
-tags:
-  - API
-  - CSSPrimitiveValue
-  - Method
-  - NeedsExample
-  - setStringValue
-  - Deprecated
+page-type: web-api-instance-method
+status:
+  - deprecated
 browser-compat: api.CSSPrimitiveValue.setStringValue
 ---
+
 {{APIRef("CSSOM")}}{{deprecated_header}}
 
 The **`setStringValue()`** method of the
@@ -27,30 +24,30 @@ value will be unchanged and a {{domxref("DOMException")}} will be raised.
 
 ## Syntax
 
-```js
-cssPrimitiveValue.setStringValue(stringType, stringValue);
+```js-nolint
+setStringValue(stringType, stringValue)
 ```
 
 ### Parameters
 
-- stringType
+- `stringType`
 
   - : An `unsigned short` representing the type of the value. Possible values
     are:
 
-    | Constant     | Description                                              |
-    | ------------ | -------------------------------------------------------- |
-    | `CSS_ATTR`   | The value is an {{cssxref("attr()")}} function.          |
-    | `CSS_IDENT`  | The value is an identifier.                              |
-    | `CSS_STRING` | The value is a {{cssxref("&lt;string&gt;")}}.            |
-    | `CSS_URI`    | The value is a {{cssxref("url()")}}.                     |
+    | Constant     | Description                                             |
+    | ------------ | ------------------------------------------------------- |
+    | `CSS_ATTR`   | The value is an {{cssxref("attr", "attr()")}} function. |
+    | `CSS_IDENT`  | The value is an identifier.                             |
+    | `CSS_STRING` | The value is a {{cssxref("&lt;string&gt;")}}.           |
+    | `CSS_URI`    | The value is a {{cssxref("url", "url()")}}.             |
 
-- stringValue
-  - : A {{domxref("DOMString")}} representing the new string value.
+- `stringValue`
+  - : A string representing the new string value.
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 
@@ -62,7 +59,7 @@ None.
 
 ## Specifications
 
-This feature was originally defined in the [DOM Style Level 2](https://www.w3.org/TR/DOM-Level-2-Style) specification, but has been dropped from any
+This feature was originally defined in the [DOM Style Level 2](https://www.w3.org/TR/DOM-Level-2-Style/) specification, but has been dropped from any
 standardization effort since then.
 
 It has been superseded by a modern, but incompatible, [CSS Typed Object Model API](/en-US/docs/Web/API/CSS_Typed_OM_API) that is now on the standard track.

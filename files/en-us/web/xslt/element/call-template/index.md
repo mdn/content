@@ -1,12 +1,8 @@
 ---
 title: <xsl:call-template>
 slug: Web/XSLT/Element/call-template
-tags:
-  - Element
-  - Reference
-  - XSLT
-  - call-template
 ---
+
 {{ XsltRef() }}
 
 The `<xsl:call-template>` element invokes a named template.

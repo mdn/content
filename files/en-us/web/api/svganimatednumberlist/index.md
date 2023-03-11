@@ -1,14 +1,10 @@
 ---
 title: SVGAnimatedNumberList
 slug: Web/API/SVGAnimatedNumberList
-tags:
-  - API
-  - NeedsExample
-  - Reference
-  - SVG
-  - SVG DOM
+page-type: web-api-interface
 browser-compat: api.SVGAnimatedNumberList
 ---
+
 {{APIRef("SVG")}}
 
 ## SVG animated number list interface
@@ -54,14 +50,14 @@ The `SVGAnimatedNumber` interface is used for attributes which take a list of nu
   </tbody>
 </table>
 
-## Properties
+## Instance properties
 
 - {{domxref("SVGAnimatedNumberList.baseVal")}} {{ReadOnlyInline}}
-  - : Is a {{domxref("SVGNumberList")}} that represents the base value of the given attribute before applying any animations.
+  - : A {{domxref("SVGNumberList")}} that represents the base value of the given attribute before applying any animations.
 - {{domxref("SVGAnimatedNumberList.animVal")}} {{ReadOnlyInline}}
-  - : Is a read only {{ domxref("SVGNumberList") }} that represents the current animated value of the given attribute. If the given attribute is not currently being animated, then the {{ domxref("SVGNumberList") }} will have the same contents as `baseVal`. The object referenced by `animVal` will always be distinct from the one referenced by `baseVal`, even when the attribute is not animated.
+  - : A read only {{ domxref("SVGNumberList") }} that represents the current animated value of the given attribute. If the given attribute is not currently being animated, then the {{ domxref("SVGNumberList") }} will have the same contents as `baseVal`. The object referenced by `animVal` will always be distinct from the one referenced by `baseVal`, even when the attribute is not animated.
 
-## Methods
+## Instance methods
 
 The `SVGAnimatedNumberList` interface do not provide any specific methods.
 

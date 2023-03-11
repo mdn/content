@@ -1,19 +1,15 @@
 ---
 title: VideoFrame.codedWidth
 slug: Web/API/VideoFrame/codedWidth
-tags:
-  - API
-  - Property
-  - Reference
-  - codedWidth
-  - VideoFrame
+page-type: web-api-instance-property
 browser-compat: api.VideoFrame.codedWidth
 ---
-{{DefaultAPISidebar("Web Codecs API")}}
+
+{{APIRef("Web Codecs API")}}
 
 The **`codedWidth`** property of the {{domxref("VideoFrame")}} interface returns the width of the `VideoFrame` in pixels, potentially including non-visible padding, and prior to considering potential ratio adjustments.
 
-### Value
+## Value
 
 An integer.
 

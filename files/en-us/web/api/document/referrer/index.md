@@ -1,27 +1,16 @@
 ---
 title: Document.referrer
 slug: Web/API/Document/referrer
-tags:
-  - API
-  - Document
-  - HTML DOM
-  - NeedsSpecTable
-  - Property
-  - Reference
+page-type: web-api-instance-property
 browser-compat: api.Document.referrer
 ---
+
 {{APIRef("DOM")}}
 
 The **`Document.referrer`** property returns the [URI](https://www.w3.org/Addressing/#background) of the page that linked to
 this page.
 
-## Syntax
-
-```js
-var referrer = document.referrer;
-```
-
-### Value
+## Value
 
 The value is an empty string if the user navigated to the page directly (not through a
 link, but, for example, by using a bookmark). Because this property returns only a

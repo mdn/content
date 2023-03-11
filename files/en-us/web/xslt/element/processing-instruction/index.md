@@ -1,12 +1,8 @@
 ---
 title: <xsl:processing-instruction>
 slug: Web/XSLT/Element/processing-instruction
-tags:
-  - Element
-  - Reference
-  - XSLT
-  - processing-instruction
 ---
+
 {{ XsltRef() }}
 
 The `<xsl:processing-instruction>` element writes a processing instruction to the output document.

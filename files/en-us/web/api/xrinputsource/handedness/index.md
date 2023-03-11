@@ -1,26 +1,10 @@
 ---
 title: XRInputSource.handedness
 slug: Web/API/XRInputSource/handedness
-tags:
-  - API
-  - AR
-  - Controller
-  - Handedness
-  - Input
-  - Property
-  - Read-only
-  - Reference
-  - VR
-  - WebXR
-  - WebXR API
-  - WebXR Device API
-  - XR
-  - XRInputSource
-  - hand
-  - left
-  - right
+page-type: web-api-instance-property
 browser-compat: api.XRInputSource.handedness
 ---
+
 {{APIRef("WebXR Device API")}}
 
 The read-only {{domxref("XRInputSource")}} property
@@ -43,7 +27,7 @@ the user's hands, and if it is, which hand. The value is one of the following:
 
 If the input source is not a device associated with a user's hand (whether by being
 held, attached, or worn), the value of `handedness` is `none`.
-This may indicate, for example, an  input source which isn't hand-held, such as controls
+This may indicate, for example, an input source which isn't hand-held, such as controls
 built into a headset or an input device attached to the head or body.
 
 ## Examples
@@ -52,9 +36,9 @@ One important usage scenario for `handedness` is to determine which hand a contr
 
 ```js
 function updateInputSources(session, frame, refSpace) {
-  for (let source of session.inputSources) {
+  for (const source of session.inputSources) {
     if (source.gripSpace) {
-      let gripPose = frame.getPose(source.gripSpace, refSpace);
+      const gripPose = frame.getPose(source.gripSpace, refSpace);
 
       if (gripPose) {
         myRenderHandObject(gripPose, inputSource.handedness);
@@ -80,5 +64,4 @@ If `gripSpace` is non-`null`, the function proceeds to get the pose for the `gri
 
 - [WebXR Device API](/en-US/docs/Web/API/WebXR_Device_API)
 - [Inputs and input sources](/en-US/docs/Web/API/WebXR_Device_API/Inputs)
-- [Using gamepads in WebXR
-  applications](/en-US/docs/Web/WebXR%20Device%20API/Gamepads)
+- [Using gamepads in WebXR applications](/en-US/docs/Web/WebXR%20Device%20API/Gamepads)

@@ -1,21 +1,18 @@
 ---
 title: DecompressionStream()
 slug: Web/API/DecompressionStream/DecompressionStream
-tags:
-  - API
-  - Constructor
-  - Reference
-  - DecompressionStream
+page-type: web-api-constructor
 browser-compat: api.DecompressionStream.DecompressionStream
 ---
-{{DefaultAPISidebar("Compression Streams API")}}
+
+{{APIRef("Compression Streams API")}}
 
 The **`DecompressionStream()`** constructor creates a new {{domxref("DecompressionStream")}} object which decompresses a stream of data.
 
 ## Syntax
 
-```js
-let DecompressionStream = new DecompressionStream(format);
+```js-nolint
+new DecompressionStream(format)
 ```
 
 ### Parameters
@@ -26,6 +23,7 @@ let DecompressionStream = new DecompressionStream(format);
 
     - `"gzip"`
     - `"deflate"`
+    - `"deflate-raw"`
 
 ## Exceptions
 
@@ -37,7 +35,7 @@ let DecompressionStream = new DecompressionStream(format);
 In this example a blob is decompressed using gzip compression.
 
 ```js
-const ds = new DecompressionStream('gzip');
+const ds = new DecompressionStream("gzip");
 const decompressedStream = blob.stream().pipeThrough(ds);
 ```
 

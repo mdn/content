@@ -1,17 +1,11 @@
 ---
-title: ':right'
+title: ":right"
 slug: Web/CSS/:right
-tags:
-  - '@page'
-  - CSS
-  - Layout
-  - Pseudo-class
-  - Reference
-  - Selector
-  - Web
+page-type: css-pseudo-class
 browser-compat: css.selectors.right
 ---
-{{ CSSRef() }}
+
+{{CSSRef}}
 
 The **`:right`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes), used with the {{cssxref("@page")}} [at-rule](/en-US/docs/Web/CSS/At-rule), represents all right-hand pages of a printed document.
 
@@ -28,7 +22,11 @@ Whether a given page is "left" or "right" is determined by the major writing dir
 
 ## Syntax
 
-{{csssyntax}}
+```css
+:right {
+  /* ... */
+}
+```
 
 ## Examples
 

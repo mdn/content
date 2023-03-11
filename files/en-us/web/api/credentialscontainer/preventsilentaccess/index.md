@@ -1,17 +1,11 @@
 ---
 title: CredentialsContainer.preventSilentAccess()
 slug: Web/API/CredentialsContainer/preventSilentAccess
-tags:
-  - API
-  - Credential Management API
-  - CredentialsContainer
-  - Method
-  - NeedsExample
-  - Reference
-  - credential management
+page-type: web-api-instance-method
 browser-compat: api.CredentialsContainer.preventSilentAccess
 ---
-{{APIRef("Credential Management API")}}{{SeeCompatTable}}
+
+{{APIRef("Credential Management API")}}
 
 The **`preventSilentAccess()`** method
 of the {{domxref("CredentialsContainer")}} interface sets a flag that specifies
@@ -24,21 +18,20 @@ account login status. This method is typically called after a user signs out of 
 website, ensuring this user's login information is not automatically passed on the next
 site visit.
 
-Earlier versions of the spec called this method`requireUserMediation()`.
-The [Browser
-compatibility](/en-US/docs/Web/API/CredentialsContainer#browser_compatibility) section has support details.
+Earlier versions of the spec called this method `requireUserMediation()`.
+The [Browser compatibility](/en-US/docs/Web/API/CredentialsContainer#browser_compatibility) section has support details.
 
 ## Syntax
 
-```js
-var Promise = CredentialsContainer.preventSilentAccess()
+```js-nolint
+preventSilentAccess()
 ```
 
 ### Parameters
 
 None.
 
-### Returns
+### Return value
 
 An empty {{jsxref("Promise")}}.
 

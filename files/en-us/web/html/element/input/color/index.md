@@ -1,21 +1,11 @@
 ---
 title: <input type="color">
 slug: Web/HTML/Element/input/color
-tags:
-  - Color Picker
-  - Element
-  - Form input
-  - Forms
-  - HTML
-  - HTML forms
-  - HTML input
-  - Input
-  - Reference
-  - color
-browser-compat: html.elements.input.input-color
+page-type: html-element
+browser-compat: html.elements.input.type_color
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 {{HTMLElement("input")}} elements of type **`color`** provide a user interface element that lets a user specify a color, either by using a visual color picker interface or by entering the color into a text field in `#rrggbb` hexadecimal format.
 
@@ -25,45 +15,9 @@ The element's presentation may vary substantially from one browser and/or platfo
 
 {{EmbedInteractiveExample("pages/tabbed/input-color.html", "tabbed-standard")}}
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <td><strong>{{anch("Value")}}</strong></td>
-      <td>
-        A 7-character {{domxref("DOMString")}} specifying a
-        {{cssxref("&lt;color&gt;")}} in lower-case hexadecimal notation
-      </td>
-    </tr>
-    <tr>
-      <td><strong>Events</strong></td>
-      <td>
-        {{domxref("HTMLElement/change_event", "change")}} and
-        {{domxref("HTMLElement/input_event", "input")}}
-      </td>
-    </tr>
-    <tr>
-      <td><strong>Supported common attributes</strong></td>
-      <td>
-        {{htmlattrxref("autocomplete", "input")}} and
-        {{htmlattrxref("list", "input")}}
-      </td>
-    </tr>
-    <tr>
-      <td><strong>IDL attributes</strong></td>
-      <td><code>list</code> and <code>value</code></td>
-    </tr>
-    <tr>
-      <td><strong>Methods</strong></td>
-      <td>
-        {{domxref("HTMLInputElement.select", "select()")}}
-      </td>
-    </tr>
-  </tbody>
-</table>
-
 ## Value
 
-The {{htmlattrxref("value", "input")}} of an {{HTMLElement("input")}} element of type `color` is always a {{domxref("DOMString")}} which contains a 7-character string specifying an RGB color in hexadecimal format. While you can input the color in either upper- or lower-case, it will be stored in lower-case form. The value is never in any other form, and is never empty.
+The {{htmlattrxref("value", "input")}} of an {{HTMLElement("input")}} element of type `color` is always a string which contains a 7-character string specifying an RGB color in hexadecimal format. While you can input the color in either upper- or lower-case, it will be stored in lower-case form. The value is never in any other form, and is never empty.
 
 > **Note:** Setting the value to anything that isn't a valid, fully-opaque, RGB color _in hexadecimal notation_ will result in the value being set to `#000000`. In particular, you can't use CSS's standardized color names, or any CSS function syntax, to set the value. This makes sense when you keep in mind that HTML and CSS are separate languages and specifications. In addition, colors with an alpha channel are not supported; specifying a color in 9-character hexadecimal notation (e.g. `#009900aa`) will also result in the color being set to `#000000`.
 
@@ -76,7 +30,7 @@ Inputs of type `color` are simple, due to the limited number of attributes they 
 You can update the simple example above to set a default value, so that the color well is pre-filled with the default color and the color picker (if any) will also default to that color:
 
 ```html
-<input type="color" value="#ff0000">
+<input type="color" value="#ff0000" />
 ```
 
 {{EmbedLiveSample("Providing_a_default_color", 700, 30)}}
@@ -94,7 +48,7 @@ colorPicker.addEventListener("input", updateFirst, false);
 colorPicker.addEventListener("change", watchColorPicker, false);
 
 function watchColorPicker(event) {
-  document.querySelectorAll("p").forEach(function(p) {
+  document.querySelectorAll("p").forEach((p) => {
     p.style.color = event.target.value;
   });
 }
@@ -123,18 +77,21 @@ Let's create an example which does a little more with the color input by trackin
 The HTML is fairly straightforward — a couple of paragraphs of descriptive material with an {{HTMLElement("input")}} of type `color` with the ID `colorWell`, which we'll use to change the color of the paragraphs' text.
 
 ```html
-<p>An example demonstrating the use of the <code>&lt;input type="color"&gt;</code>
-   control.</p>
+<p>
+  An example demonstrating the use of the
+  <code>&lt;input type="color"&gt;</code> control.
+</p>
 
 <label for="colorWell">Color:</label>
-<input type="color" value="#ff0000" id="colorWell">
+<input type="color" value="#ff0000" id="colorWell" />
 
-<p>Watch the paragraph colors change when you adjust the color picker.
-   As you make changes in the color picker, the first paragraph's
-   color changes, as a preview (this uses the <code>input</code>
-   event). When you close the color picker, the <code>change</code>
-   event fires, and we detect that to change every paragraph to
-   the selected color.</p>
+<p>
+  Watch the paragraph colors change when you adjust the color picker. As you
+  make changes in the color picker, the first paragraph's color changes, as a
+  preview (this uses the <code>input</code> event). When you close the color
+  picker, the <code>change</code> event fires, and we detect that to change
+  every paragraph to the selected color.
+</p>
 ```
 
 ### JavaScript
@@ -142,8 +99,8 @@ The HTML is fairly straightforward — a couple of paragraphs of descriptive mat
 First, there's some setup. Here we establish some variables, setting up a variable that contains the color we'll set the color well to when we first load up, and then setting up a {{domxref("Window/load_event", "load")}} handler to do the main startup work once the page is fully loaded.
 
 ```js
-var colorWell;
-var defaultColor = "#0000ff";
+let colorWell;
+const defaultColor = "#0000ff";
 
 window.addEventListener("load", startup, false);
 ```
@@ -172,19 +129,18 @@ We provide two functions that deal with color changes. The `updateFirst()` funct
 
 ```js
 function updateFirst(event) {
-  var p = document.querySelector("p");
-
+  const p = document.querySelector("p");
   if (p) {
     p.style.color = event.target.value;
   }
 }
 ```
 
-When the color picker is dismissed, indicating that the value will not be changing again (unless the user re-opens the color picker), a `change` event is sent to the element. We handle that event using the `updateAll()` function, using {{htmlattrxref("value", "input", "Event.target.value")}} to obtain the final selected color:
+When the color picker is dismissed, indicating that the value will not change again (unless the user re-opens the color picker), a `change` event is sent to the element. We handle that event using the `updateAll()` function, using [`Event.target.value`](/en-US/docs/Web/HTML/Element/input#value) to obtain the final selected color:
 
 ```js
 function updateAll(event) {
-  document.querySelectorAll("p").forEach(function(p) {
+  document.querySelectorAll("p").forEach((p) => {
     p.style.color = event.target.value;
   });
 }
@@ -197,6 +153,52 @@ This sets the color of every {{HTMLElement("p")}} block so that its {{cssxref("c
 The final result looks like this:
 
 {{EmbedLiveSample("Example", 700, 200)}}
+
+## Technical summary
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <td><strong><a href="#value">Value</a></strong></td>
+      <td>
+        A 7-character string specifying a
+        {{cssxref("&lt;color&gt;")}} in lower-case hexadecimal notation
+      </td>
+    </tr>
+    <tr>
+      <td><strong>Events</strong></td>
+      <td>
+        {{domxref("HTMLElement/change_event", "change")}} and
+        {{domxref("HTMLElement/input_event", "input")}}
+      </td>
+    </tr>
+    <tr>
+      <td><strong>Supported common attributes</strong></td>
+      <td>
+        {{htmlattrxref("autocomplete", "input")}} and
+        {{htmlattrxref("list", "input")}}
+      </td>
+    </tr>
+    <tr>
+      <td><strong>IDL attributes</strong></td>
+      <td><code>list</code> and <code>value</code></td>
+    </tr>
+    <tr>
+      <td><strong>DOM interface</strong></td>
+      <td><p>{{domxref("HTMLInputElement")}}</p></td>
+    </tr>
+    <tr>
+      <td><strong>Methods</strong></td>
+      <td>
+        {{domxref("HTMLInputElement.select", "select()")}}
+      </td>
+    </tr>
+    <tr>
+      <td><strong>Implicit ARIA Role</strong></td>
+      <td><a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"><code>no corresponding role</code></a></td>
+    </tr>
+  </tbody>
+</table>
 
 ## Specifications
 

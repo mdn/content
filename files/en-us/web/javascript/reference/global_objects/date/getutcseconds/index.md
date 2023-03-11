@@ -1,14 +1,10 @@
 ---
 title: Date.prototype.getUTCSeconds()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getUTCSeconds
-tags:
-  - Date
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.Date.getUTCSeconds
 ---
+
 {{JSRef}}
 
 The **`getUTCSeconds()`** method returns the seconds in the
@@ -18,16 +14,16 @@ specified date according to universal time.
 
 ## Syntax
 
-```js
+```js-nolint
 getUTCSeconds()
 ```
 
 ### Return value
 
-A `number`.
+A number.
 If the `Date` object represents a valid date, an integer between 0 and 59, representing
 the seconds in the given date according to universal time.
-Otherwise, [`NaN`](/en-us/docs/Web/JavaScript/Reference/Global_Objects/Number/NaN)
+Otherwise, [`NaN`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/NaN)
 if the `Date` object doesn't represent a valid date.
 
 ## Examples
@@ -38,8 +34,8 @@ The following example assigns the seconds portion of the current time to the var
 `seconds`.
 
 ```js
-var today = new Date();
-var seconds = today.getUTCSeconds();
+const today = new Date();
+const seconds = today.getUTCSeconds();
 ```
 
 ## Specifications

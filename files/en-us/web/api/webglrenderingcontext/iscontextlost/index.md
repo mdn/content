@@ -1,17 +1,10 @@
 ---
 title: WebGLRenderingContext.isContextLost()
 slug: Web/API/WebGLRenderingContext/isContextLost
-tags:
-  - API
-  - Context
-  - Lost
-  - Method
-  - Reference
-  - WebGL
-  - WebGLRenderingContext
-  - isContextLost
+page-type: web-api-instance-method
 browser-compat: api.WebGLRenderingContext.isContextLost
 ---
+
 {{APIRef("WebGL")}}
 
 The
@@ -21,9 +14,13 @@ must be re-established before rendering can resume.
 
 ## Syntax
 
-```js
-let isLost = gl.isContextLost();
+```js-nolint
+isContextLost()
 ```
+
+### Parameters
+
+None.
 
 ### Return value
 
@@ -57,8 +54,8 @@ context is not lost:
 gl.linkProgram(program);
 
 if (!gl.getProgramParameter(program, gl.LINK_STATUS) && !gl.isContextLost()) {
-  var info = gl.getProgramInfoLog(program);
-  console.log('Error linking program:\n' + info);
+  const info = gl.getProgramInfoLog(program);
+  console.log(`Error linking program:\n${info}`);
 }
 ```
 
@@ -73,5 +70,4 @@ if (!gl.getProgramParameter(program, gl.LINK_STATUS) && !gl.isContextLost()) {
 ## See also
 
 - The {{domxref("WebGLContextEvent")}} signals changes in the context state.
-- [Handling lost
-  context in WebGL](https://www.khronos.org/webgl/wiki/HandlingContextLost): Khronos WebGL wiki
+- [Handling lost context in WebGL](https://www.khronos.org/webgl/wiki/HandlingContextLost): Khronos WebGL wiki

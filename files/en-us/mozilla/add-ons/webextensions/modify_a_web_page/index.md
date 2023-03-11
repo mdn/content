@@ -1,9 +1,9 @@
 ---
 title: Modify a web page
 slug: Mozilla/Add-ons/WebExtensions/Modify_a_web_page
-tags:
-  - WebExtensions
+page-type: guide
 ---
+
 {{AddonSidebar}}
 
 One of the most common use cases for an extension is to modify a web page. For example, an extension might want to change the style applied to a page, hide particular DOM nodes, or inject extra DOM nodes into the page.
@@ -53,14 +53,14 @@ Next, create a file called "page-eater.js" inside the "modify-page" directory, a
 ```js
 document.body.textContent = "";
 
-var header = document.createElement('h1');
+let header = document.createElement('h1');
 header.textContent = "This page has been eaten";
 document.body.appendChild(header);
 ```
 
 Now [install the extension](https://extensionworkshop.com/documentation/develop/temporary-installation-in-firefox/), and visit [https://developer.mozilla.org/](/). The page should look like this:
 
-![developer.mozilla.org page "eaten" by the script](eaten_page.png )
+![developer.mozilla.org page "eaten" by the script](eaten_page.png)
 
 ## Modifying pages programmatically
 
@@ -100,8 +100,8 @@ browser.contextMenus.create({
   title: "Eat this page"
 });
 
-browser.contextMenus.onClicked.addListener(function(info, tab) {
-  if (info.menuItemId == "eat-page") {
+browser.contextMenus.onClicked.addListener((info, tab) => {
+  if (info.menuItemId === "eat-page") {
     browser.tabs.executeScript({
       file: "page-eater.js"
     });
@@ -202,8 +202,8 @@ function onExecuted(result) {
     querying.then(messageTab);
 }
 
-browser.contextMenus.onClicked.addListener(function(info, tab) {
-  if (info.menuItemId == "eat-page") {
+browser.contextMenus.onClicked.addListener((info, tab) => {
+  if (info.menuItemId === "eat-page") {
     let executing = browser.tabs.executeScript({
       file: "page-eater.js"
     });
@@ -230,11 +230,11 @@ Now, instead of just eating the page right away, the content script listens for 
 
 Since [`tabs.executeScript()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/executeScript) is an asynchronous function, and to ensure we send message only after listener has been added in `page-eater.js`, we use `onExecuted()` which will be called after `page-eater.js` executed.
 
-> **Note:** Press <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>J</kbd> (or <kbd>Cmd</kbd>+<kbd>Shift</kbd>+<kbd>J</kbd> on macOS) OR `web-ext run --bc` to open [Browser Console](/en-US/docs/Tools/Browser_Console) to view `console.log` in background script.
+> **Note:** Press <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>J</kbd> (or <kbd>Cmd</kbd>+<kbd>Shift</kbd>+<kbd>J</kbd> on macOS) OR `web-ext run --bc` to open [Browser Console](https://firefox-source-docs.mozilla.org/devtools-user/browser_console/index.html) to view `console.log` in background script.
 >
-> Alternatively, use [Add-on Debugger](/en-US/docs/Mozilla/Add-ons/Add-on_Debugger)  which allows you set breakpoint. There is currently no way to [start Add-on Debugger directly from web-ext](https://github.com/mozilla/web-ext/issues/759).
+> Alternatively, use [Add-on Debugger](/en-US/docs/Mozilla/Add-ons/Add-on_Debugger) which allows you set breakpoint. There is currently no way to [start Add-on Debugger directly from web-ext](https://github.com/mozilla/web-ext/issues/759).
 
-If we want send messages back from the content script to the background page,  we would use [`runtime.sendMessage()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/sendMessage) instead of [`tabs.sendMessage()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/sendMessage), e.g.:
+If we want send messages back from the content script to the background page, we would use [`runtime.sendMessage()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/sendMessage) instead of [`tabs.sendMessage()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/sendMessage), e.g.:
 
 ```js
 browser.runtime.sendMessage({

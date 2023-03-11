@@ -1,13 +1,12 @@
 ---
 title: background_color
 slug: Web/Manifest/background_color
-tags:
-  - Manifest
-  - Web
-  - background_color
+status:
+  - experimental
 browser-compat: html.manifest.background_color
 ---
-{{QuickLinksWithSubpages("/en-US/docs/Web/Manifest")}}
+
+{{QuickLinksWithSubpages("/en-US/docs/Web/Manifest")}}{{SeeCompatTable}}
 
 <table class="properties">
   <tbody>

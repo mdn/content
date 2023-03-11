@@ -1,27 +1,19 @@
 ---
 title: WorkerNavigator.serial
 slug: Web/API/WorkerNavigator/serial
-tags:
-  - API
-  - Property
-  - Reference
-  - serial
-  - WorkerNavigator
+page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.WorkerNavigator.serial
 ---
-{{APIRef("Web Workers API")}}
+
+{{APIRef("Web Workers API")}}{{SeeCompatTable}}
 
 The **`serial`** read-only property of the {{domxref("WorkerNavigator")}} interface returns a {{domxref("Serial")}} object which represents the entry point into the {{domxref("Web Serial API")}}.
 
 When getting, the same instance of the {{domxref("Serial")}} object will always be returned.
 
-## Syntax
-
-```js
-var serialObj = navigator.serial;
-```
-
-### Value
+## Value
 
 A {{domxref("Serial")}} object.
 

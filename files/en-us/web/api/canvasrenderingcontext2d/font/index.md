@@ -1,14 +1,10 @@
 ---
 title: CanvasRenderingContext2D.font
 slug: Web/API/CanvasRenderingContext2D/font
-tags:
-  - API
-  - Canvas
-  - CanvasRenderingContext2D
-  - Property
-  - Reference
+page-type: web-api-instance-property
 browser-compat: api.CanvasRenderingContext2D.font
 ---
+
 {{APIRef}}
 
 The
@@ -17,17 +13,9 @@ property of the Canvas 2D API specifies the current text style to use when drawi
 This string uses the same syntax as the [CSS font](/en-US/docs/Web/CSS/font)
 specifier.
 
-## Syntax
+## Value
 
-```js
-ctx.font = value;
-```
-
-### Options
-
-- `value`
-  - : A {{domxref("DOMString")}} parsed as CSS {{cssxref("font")}} value. The default font
-    is 10px sans-serif.
+A string parsed as CSS {{cssxref("font")}} value. The default font is 10px sans-serif.
 
 ## Examples
 
@@ -45,11 +33,11 @@ size, and family.
 #### JavaScript
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 
-ctx.font = 'bold 48px serif';
-ctx.strokeText('Hello world', 50, 100);
+ctx.font = "bold 48px serif";
+ctx.strokeText("Hello world", 50, 100);
 ```
 
 #### Result
@@ -62,9 +50,9 @@ With the help of the {{domxref("FontFace")}} API, you can explicitly load fonts 
 using them in a canvas.
 
 ```js
-let f = new FontFace('test', 'url(x)');
+let f = new FontFace("test", "url(x)");
 
-f.load().then(function() {
+f.load().then(() => {
   // Ready to use the font in a canvas context
 });
 ```
@@ -86,7 +74,7 @@ f.load().then(function() {
   {{domxref("CanvasRenderingContext2D.font", "font")}} (e.g., `menu`),
   getting the font value used to fail to return the expected font (it returns nothing).
   This is fixed in Firefox's [Quantum/Stylo](https://wiki.mozilla.org/Quantum/Stylo) parallel CSS engine,
-  released in Firefox 57 ({{bug(1374885)}}).
+  released in Firefox 57 ([Firefox bug 1374885](https://bugzil.la/1374885)).
 
 ## See also
 

@@ -1,17 +1,12 @@
 ---
 title: Sec-CH-UA-Full-Version
 slug: Web/HTTP/Headers/Sec-CH-UA-Full-Version
-tags:
-  - Sec-CH-UA-Full-Version
-  - Client hint
-  - HTTP
-  - HTTP Header
-  - Reference
-  - Request header
-  -  Experimental
+status:
+  - deprecated
 browser-compat: http.headers.Sec-CH-UA-Full-Version
 ---
-{{HTTPSidebar}} {{deprecated_header}} {{securecontext_header}}
+
+{{HTTPSidebar}}{{Deprecated_Header}}{{SecureContext_Header}}
 
 > **Note:** This is being replaced by the {{HTTPHeader("Sec-CH-UA-Full-Version-List")}}.
 

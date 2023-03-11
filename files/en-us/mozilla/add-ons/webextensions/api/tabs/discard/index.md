@@ -1,16 +1,10 @@
 ---
 title: tabs.discard()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/discard
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - WebExtensions
-  - discard
-  - tabs
+page-type: webextension-api-function
 browser-compat: webextensions.api.tabs.discard
 ---
+
 {{AddonSidebar()}}
 
 Discards one or more tabs.
@@ -25,8 +19,8 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ## Syntax
 
-```js
-var discarding = browser.tabs.discard(
+```js-nolint
+let discarding = browser.tabs.discard(
   tabIds          // integer or integer array
 )
 ```
@@ -55,7 +49,7 @@ function onError(error) {
   console.log(`Error: ${error}`);
 }
 
-var discarding = browser.tabs.discard(2);
+let discarding = browser.tabs.discard(2);
 discarding.then(onDiscarded, onError);
 ```
 
@@ -70,7 +64,7 @@ function onError(error) {
   console.log(`Error: ${error}`);
 }
 
-var discarding = browser.tabs.discard([15, 14, 1]);
+let discarding = browser.tabs.discard([15, 14, 1]);
 discarding.then(onDiscarded, onError);
 ```
 
@@ -80,9 +74,10 @@ discarding.then(onDiscarded, onError);
 
 {{Compat}}
 
-> **Note:** This API is based on Chromium's [`chrome.tabs`](https://developer.chrome.com/extensions/tabs#method-discard) API.
+> **Note:** This API is based on Chromium's [`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/tabs/#method-discard) API.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -109,4 +104,4 @@ discarding.then(onDiscarded, onError);
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

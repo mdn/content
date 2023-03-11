@@ -1,17 +1,13 @@
 ---
 title: <acronym>
 slug: Web/HTML/Element/acronym
-tags:
-  - Element
-  - HTML
-  - HTML:Flow content
-  - Deprecated
-  - Reference
-  - Web
+page-type: html-element
+status:
+  - deprecated
 browser-compat: html.elements.acronym
 ---
 
-{{deprecated_header}}
+{{HTMLSidebar}}{{deprecated_header}}
 
 ## Summary
 
@@ -30,18 +26,22 @@ This element implements the {{domxref('HTMLElement')}} interface.
 ## Example
 
 ```html
-<p>The <acronym title="World Wide Web">WWW</acronym> is only a component of the Internet.</p>
+<p>
+  The <acronym title="World Wide Web">WWW</acronym> is only a component of the
+  Internet.
+</p>
 ```
 
 ## Default styling
 
 Though the purpose of this tag is purely for the convenience of the author, its default styling varies from one browser to another:
 
-- Some browsers, like Internet Explorer, do not style it differently than a {{HTMLElement("span")}} element.
 - Opera, Firefox, Chrome, and some others add a dotted underline to the content of the element.
 - A few browsers not only add a dotted underline, but also put it in small caps; to avoid this styling, adding something like {{cssxref('font-variant')}}`: none` in the CSS takes care of this case.
 
 It is therefore recommended that web authors either explicitly style this element, or accept some cross-browser variation.
+
+<!-- ## Technical summary -->
 
 ## Specifications
 
@@ -54,5 +54,3 @@ It is therefore recommended that web authors either explicitly style this elemen
 ## See also
 
 - The {{HTMLElement("abbr")}} HTML element
-
-{{HTMLRef}}

@@ -1,19 +1,13 @@
 ---
 title: XRCompositionLayer.layout
 slug: Web/API/XRCompositionLayer/layout
-tags:
-  - API
-  - Property
-  - Reference
-  - VR
-  - WebXR
-  - WebXR API
-  - WebXR Device API
-  - XR
-
+page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.XRCompositionLayer.layout
 ---
-{{APIRef("WebXR Device API")}}
+
+{{APIRef("WebXR Device API")}}{{SeeCompatTable}}
 
 The read-only **`layout`** property of the {{domxref("XRCompositionLayer")}} interface is the layout type of the layer.
 

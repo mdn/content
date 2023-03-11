@@ -1,18 +1,10 @@
 ---
 title: alarms.getAll()
 slug: Mozilla/Add-ons/WebExtensions/API/alarms/getAll
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - alarms
-  - getAll
+page-type: webextension-api-function
 browser-compat: webextensions.api.alarms.getAll
 ---
+
 {{AddonSidebar()}}
 
 Gets all active alarms for the extension.
@@ -21,8 +13,8 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ## Syntax
 
-```js
-var getAlarms = browser.alarms.getAll()
+```js-nolint
+let getAlarms = browser.alarms.getAll()
 ```
 
 ### Parameters
@@ -37,13 +29,12 @@ A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that 
 
 ```js
 function gotAll(alarms) {
-  for (var alarm of alarms) {
+  for (const alarm of alarms) {
     console.log(alarm.name);
   }
 }
 
-var getAlarms = browser.alarms.getAll();
-getAlarms.then(gotAll);
+browser.alarms.getAll().then(gotAll);
 ```
 
 {{WebExtExamples}}
@@ -52,6 +43,4 @@ getAlarms.then(gotAll);
 
 {{Compat}}
 
-> **Note:** This API is based on Chromium's [`chrome.alarms`](https://developer.chrome.com/extensions/alarms) API.
->
-> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
+> **Note:** This API is based on Chromium's [`chrome.alarms`](https://developer.chrome.com/docs/extensions/reference/alarms/) API.

@@ -1,13 +1,9 @@
 ---
 title: Performance budgets
 slug: Web/Performance/Performance_budgets
-tags:
-  - Budget
-  - Performance
-  - Performance Budget
-  - Web Performance
 ---
 
+{{QuickLinksWithSubPages("Web/Performance")}}
 
 A performance budget is a limit to prevent regressions. It can apply to a file, a file type, all files loaded on a page, a specific metric (e.g. [Time to Interactive](/en-US/docs/Glossary/Time_to_interactive)), a custom metric (e.g. Time to Hero Element), or a threshold over a period of time.
 
@@ -49,13 +45,13 @@ The ultimate value of a Performance Budget is to correlate the impact of Perform
 During development, there are a few tools to run checks against new or modified assets:
 
 - A module bundler (e.g. [webpack](https://webpack.js.org/)), has [performance features](https://webpack.js.org/configuration/performance/) that will notify you when assets exceed specified limits.
-- [Bundlesize](https://github.com/siddharthkp/bundlesize), allows you to define and run file size checks in your [CI](/en-US/docs/Mozilla/Continuous_integration) pipeline.
+- [Bundlesize](https://github.com/siddharthkp/bundlesize), allows you to define and run file size checks in your continuous integration (CI) pipeline.
 
 File size checks are the first line of defense against regressions but translating size back into time metrics can be difficult since development environments could be missing 3rd party scripts, and optimizations commonly provided by a [CDN](/en-US/docs/Glossary/CDN).
 
 The first step is to define a development baseline for each branch to compare to and the precision of the difference between development and production can be used as a goal towards better match the live environment.
 
-The [Lighthouse Bot](https://github.com/GoogleChromeLabs/lighthousebot) integrates with [Travis CI](https://travis-ci.org/) and can be used to gather [Lighthouse](https://developers.google.com/web/tools/lighthouse/) and [Webpage Test](https://webpagetest.org) metrics from a development URL. The bot will pass or fail based on the provided minimum scores.
+The [Lighthouse Bot](https://github.com/GoogleChromeLabs/lighthousebot) integrates with [Travis CI](https://travis-ci.org/) and can be used to gather [Lighthouse](https://developer.chrome.com/docs/lighthouse/overview/) and [Webpage Test](https://webpagetest.org) metrics from a development URL. The bot will pass or fail based on the provided minimum scores.
 
 ## How do I enforce a performance budget?
 
@@ -68,5 +64,5 @@ A performance budget helps you protect optimal behavior for your current users w
 ## See also
 
 - [Start Performance Budgeting](https://addyosmani.com/blog/performance-budgets/) by Addy Osmani
-- [Performance Budgets 101](https://web.dev/fast/performance-budgets-101) by Milica Mihajlija
+- [Performance Budgets 101](https://web.dev/performance-budgets-101/) by Milica Mihajlija
 - [Performance Budgets That Stick](https://timkadlec.com/remembers/2019-03-07-performance-budgets-that-stick/) by Tim Kadlec

@@ -1,21 +1,11 @@
 ---
 title: DataTransferItem.webkitGetAsEntry()
 slug: Web/API/DataTransferItem/webkitGetAsEntry
-tags:
-  - API
-  - DataTransferItem
-  - File System API
-  - File and Directory Entries API
-  - Files
-  - Method
-  - Non-standard
-  - Offline
-  - Reference
-  - drag and drop
-  - getAsEntry
+page-type: web-api-instance-method
 browser-compat: api.DataTransferItem.webkitGetAsEntry
 ---
-{{APIRef("File System API")}}{{SeeCompatTable}}{{Non-standard_header}}
+
+{{APIRef("HTML Drag and Drop API")}}
 
 If the item described by the {{domxref("DataTransferItem")}} is a file, `webkitGetAsEntry()` returns a {{domxref("FileSystemFileEntry")}} or {{domxref("FileSystemDirectoryEntry")}} representing it. If the item isn't a file, `null` is returned.
 
@@ -24,7 +14,7 @@ If the item described by the {{domxref("DataTransferItem")}} is a file, `webkitG
 
 ## Syntax
 
-```js
+```js-nolint
 webkitGetAsEntry()
 ```
 
@@ -38,9 +28,9 @@ A {{domxref("FileSystemEntry")}}-based object describing the dropped item.
 This will be either {{domxref("FileSystemFileEntry")}} or {{domxref("FileSystemDirectoryEntry")}}.
 The method aborts and returns `null` if the dropped item isn't a file, or if the {{domxref("DataTransferItem")}} object is not in read or read/write mode.
 
-## Example
+## Examples
 
-In this example, a drop zone is created, which responds to the {{event("drop")}} event
+In this example, a drop zone is created, which responds to the {{domxref("HTMLElement/drop_event", "drop")}} event
 by scanning through the dropped files and directories, outputting a hierarchical
 directory listing.
 
@@ -52,15 +42,12 @@ The HTML establishes the drop zone itself, which is a {{HTMLElement("div")}} ele
 <p>Drag files and/or directories to the box below!</p>
 
 <div id="dropzone">
-  <div id="boxtitle">
-    Drop Files Here
-  </div>
+  <div id="boxtitle">Drop Files Here</div>
 </div>
 
 <h2>Directory tree:</h2>
 
-<ul id="listing">
-</ul>
+<ul id="listing"></ul>
 ```
 
 ### CSS content
@@ -110,13 +97,13 @@ function scanFiles(item, container) {
   elem.textContent = item.name;
   container.appendChild(elem);
 
- if (item.isDirectory) {
+  if (item.isDirectory) {
     let directoryReader = item.createReader();
     let directoryContainer = document.createElement("ul");
     container.appendChild(directoryContainer);
-    directoryReader.readEntries(function(entries) {
-        entries.forEach(function(entry) {
-          scanFiles(entry, directoryContainer);
+    directoryReader.readEntries((entries) => {
+      entries.forEach((entry) => {
+        scanFiles(entry, directoryContainer);
       });
     });
   }
@@ -136,38 +123,46 @@ After that, {{domxref("FileSystemDirectoryReader.readEntries", "directoryReader.
 These are each, in turn, passed into a recursive call to `scanFiles()` to process them.
 Any of them which are files are inserted into the list; any which are directories are inserted into the list and a new level of the list's hierarchy is added below, and so forth.
 
-Then come the event handlers. First, we prevent the {{event("dragover")}} event from being handled by the default handler, so that our drop zone can receive the drop:
+Then come the event handlers. First, we prevent the {{domxref("HTMLElement/dragover_event", "dragover")}} event from being handled by the default handler, so that our drop zone can receive the drop:
 
 ```js
-dropzone.addEventListener("dragover", function(event) {
+dropzone.addEventListener(
+  "dragover",
+  (event) => {
     event.preventDefault();
-}, false);
+  },
+  false
+);
 ```
 
-The event handler that kicks everything off, of course, is the handler for the {{event("drop")}} event:
+The event handler that kicks everything off, of course, is the handler for the {{domxref("HTMLElement/drop_event", "drop")}} event:
 
 ```js
-dropzone.addEventListener("drop", function(event) {
-  let items = event.dataTransfer.items;
+dropzone.addEventListener(
+  "drop",
+  (event) => {
+    let items = event.dataTransfer.items;
 
-  event.preventDefault();
-  listing.textContent = "";
+    event.preventDefault();
+    listing.textContent = "";
 
-  for (let i=0; i<items.length; i++) {
-    let item = items[i].webkitGetAsEntry();
+    for (let i = 0; i < items.length; i++) {
+      let item = items[i].webkitGetAsEntry();
 
-    if (item) {
+      if (item) {
         scanFiles(item, listing);
+      }
     }
-  }
-}, false);
+  },
+  false
+);
 ```
 
 This fetches the list of {{domxref("DataTransferItem")}} objects representing the items dropped from `event.dataTransfer.items`.
 Then we call {{domxref("Event.preventDefault()")}} to prevent the event from being handled further after we're done.
 
 Now it's time to start building the list. First, the list is emptied by setting {{domxref("Node.textContent", "listing.textContent")}} to be empty.
-That leaves us with an empty {{domxref("ul")}} to begin inserting directory entries into.
+That leaves us with an empty {{HTMLElement("ul")}} to begin inserting directory entries into.
 
 Then we iterate over the items in the list of dropped items.
 For each one, we call its {{domxref("DataTransferItem.webkitGetAsEntry", "webkitGetAsEntry()")}} method to obtain a {{domxref("FileSystemEntry")}} representing the file.
@@ -177,11 +172,9 @@ If that's successful, we call `scanFiles()` to process the item—either by addi
 
 You can see how this works by trying it out below. Find some files and directories and drag them in, and take a look at the resulting output.
 
-{{ EmbedLiveSample('Example', 600, 400) }}
+{{EmbedLiveSample('Examples', 600, 400)}}
 
 ## Specifications
-
-{{Specifications}}
 
 This API has no official W3C or WHATWG specification.
 
@@ -192,7 +185,7 @@ This API has no official W3C or WHATWG specification.
 ## See also
 
 - [File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API)
-- [Introduction to the File System API](/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction)
+- [Introduction to the File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction)
 - {{domxref("DataTransferItem")}}
 - {{domxref("FileSystemEntry")}}, {{domxref("FileSystemFileEntry")}}, and {{domxref("FileSystemDirectoryEntry")}}
-- Events: {{event("dragover")}} and {{event("drop")}}
+- Events: {{domxref("HTMLElement/dragover_event", "dragover")}} and {{domxref("HTMLElement/drop_event", "drop")}}

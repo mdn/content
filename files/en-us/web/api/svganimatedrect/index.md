@@ -1,14 +1,10 @@
 ---
 title: SVGAnimatedRect
 slug: Web/API/SVGAnimatedRect
-tags:
-  - API
-  - NeedsExample
-  - Reference
-  - SVG
-  - SVG DOM
+page-type: web-api-interface
 browser-compat: api.SVGAnimatedRect
 ---
+
 {{APIRef("SVG")}}
 
 The `SVGAnimatedRect` interface is used for attributes of basic {{ domxref("SVGRect") }} which can be animated.
@@ -50,7 +46,7 @@ The `SVGAnimatedRect` interface is used for attributes of basic {{ domxref("SVGR
   </tbody>
 </table>
 
-## Properties
+## Instance properties
 
 <table class="no-markdown">
   <thead>
@@ -83,7 +79,7 @@ The `SVGAnimatedRect` interface is used for attributes of basic {{ domxref("SVGR
   </tbody>
 </table>
 
-## Methods
+## Instance methods
 
 _The `SVGAnimatedRect` interface do not provide any specific methods._
 

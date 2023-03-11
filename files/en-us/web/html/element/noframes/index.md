@@ -1,23 +1,17 @@
 ---
 title: '<noframes>: The Frame Fallback element'
 slug: Web/HTML/Element/noframes
-tags:
-  - Element
-  - Frames
-  - HTML
-  - HTML frames
-  - Deprecated
-  - Reference
-  - Web
-  - noframes
+page-type: html-element
+status:
+  - deprecated
 browser-compat: html.elements.noframes
 ---
 
-{{deprecated_header}}
+{{HTMLSidebar}}{{deprecated_header}}
 
 The **`<noframes>`** [HTML](/en-US/docs/Web/HTML) element provides content to be presented in browsers that don't support (or have disabled support for) the {{HTMLElement("frame")}} element. Although most commonly-used browsers support frames, there are exceptions, including certain special-use browsers including some mobile browsers, as well as text-mode browsers.
 
-A `<noframes>` element can contain any HTML elements that are allowed within the body of an HTML document, with the exception of the {{HTMLElement("frameset")}} and {{HTMLElement("frame")}} elements, since using frames when they aren't supported doesn't make sense.
+A `<noframes>` element can contain any HTML elements that are allowed within the body of an HTML document, except for the {{HTMLElement("frameset")}} and {{HTMLElement("frame")}} elements, since using frames when they aren't supported doesn't make sense.
 
 `<noframes>` can be used to present a message explaining that the user's browser doesn't support frames, but ideally should be used to present an alternate form of the site that doesn't use frames but still offers the same or similar functionality.
 
@@ -35,8 +29,12 @@ In this example, we see a frameset with two frames. In addition, `<noframes>` is
 <frameset cols="50%,50%">
   <frame src="https://developer.mozilla.org/en/HTML/Element/frameset" />
   <frame src="https://developer.mozilla.org/en/HTML/Element/frame" />
-  <noframes><p>It seems your browser does not support frames or is
-  configured to not allow them.</p></noframes>
+  <noframes>
+    <p>
+      It seems your browser does not support frames or is configured to not
+      allow them.
+    </p>
+  </noframes>
 </frameset>
 ```
 
@@ -52,5 +50,3 @@ In this example, we see a frameset with two frames. In addition, `<noframes>` is
 
 - {{HTMLElement("frameset")}}
 - {{HTMLElement("frame")}}
-
-{{HTMLRef}}

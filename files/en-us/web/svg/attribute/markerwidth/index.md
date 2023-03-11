@@ -1,12 +1,10 @@
 ---
 title: markerWidth
 slug: Web/SVG/Attribute/markerWidth
-tags:
-  - NeedsExample
-  - SVG
-  - SVG Attribute
+page-type: svg-attribute
 browser-compat: svg.elements.marker.markerWidth
 ---
+
 {{SVGRef}}
 
 The **`markerWidth`** attribute represents the width of the viewport into which the {{SVGElement("marker")}} is to be fitted when it is rendered according to the {{SVGAttr("viewBox")}} and {{SVGAttr("preserveAspectRatio")}} attributes.
@@ -47,31 +45,7 @@ A value of zero disables rendering of the element and negative values are an err
 
 ## Specifications
 
-<table class="no-markdown">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        {{SpecName("SVG2", "painting.html#MarkerWidthAttribute", "markerWidth")}}
-      </td>
-      <td>{{Spec2("SVG2")}}</td>
-      <td>Allowed percentage and number values.</td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("SVG1.1", "painting.html#MarkerWidthAttribute", "markerWidth")}}
-      </td>
-      <td>{{Spec2("SVG1.1")}}</td>
-      <td>Initial definition</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 ## Browser compatibility
 

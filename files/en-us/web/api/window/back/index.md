@@ -1,17 +1,12 @@
 ---
 title: Window.back()
 slug: Web/API/Window/back
-tags:
-  - API
-  - Firefox
-  - Gecko
-  - HTML DOM
-  - Method
-  - Non-standard
-  - Deprecated
-  - Window
-  - back
+page-type: web-api-instance-method
+status:
+  - deprecated
+  - non-standard
 ---
+
 {{APIRef}}{{ Non-standard_header() }}{{deprecated_header}}
 
 The obsolete and non-standard method `back()` on the {{domxref("window")}}
@@ -22,8 +17,8 @@ Firefox-specific method and was removed in Firefox 31.
 
 ## Syntax
 
-```js
-window.back();
+```js-nolint
+back()
 ```
 
 ### Parameters
@@ -32,9 +27,9 @@ None.
 
 ### Return value
 
-`undefined`.
+None ({{jsxref("undefined")}}).
 
-## Example
+## Examples
 
 This simple example handles a click on a "Back" button by calling `back()`.
 

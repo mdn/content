@@ -1,26 +1,18 @@
 ---
 title: HTMLAnchorElement.username
 slug: Web/API/HTMLAnchorElement/username
-tags:
-  - API
-  - HTMLAnchorElement
-  - Property
-  - Reference
+page-type: web-api-instance-property
 browser-compat: api.HTMLAnchorElement.username
 ---
+
 {{ApiRef("HTML DOM")}}
 
 The **`HTMLAnchorElement.username`** property is a
-{{domxref("USVString")}} containing the username specified before the domain name.
+string containing the username specified before the domain name.
 
-## Syntax
+## Value
 
-```js
-// Getter
-string = anchor.username;
-// Setter
-anchor.username = string;
-```
+A string.
 
 ## Examples
 

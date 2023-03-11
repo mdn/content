@@ -1,17 +1,12 @@
 ---
 title: USBDevice.open()
 slug: Web/API/USBDevice/open
-tags:
-  - API
-  - Method
-  - Reference
-  - USB
-  - USBDevice
-  - WebUSB
-  - WebUSB API
-  - open
+page-type: web-api-instance-method
+status:
+  - experimental
 browser-compat: api.USBDevice.open
 ---
+
 {{APIRef("WebUSB API")}}{{SeeCompatTable}}
 
 The **`open()`** method of the {{domxref("USBDevice")}}
@@ -20,8 +15,8 @@ started.
 
 ## Syntax
 
-```js
-var promise = USBDevice.open()
+```js-nolint
+open()
 ```
 
 ### Parameters

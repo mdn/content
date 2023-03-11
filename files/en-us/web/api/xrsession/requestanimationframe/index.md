@@ -1,22 +1,13 @@
 ---
 title: XRSession.requestAnimationFrame()
 slug: Web/API/XRSession/requestAnimationFrame
-tags:
-  - API
-  - AR
-  - Augmented Reality
-  - Experimental
-  - Method
-  - Reference
-  - VR
-  - Virtual Reality
-  - WebXR
-  - WebXR Device API
-  - XRSession
-  - requestAnimationFrame()
+page-type: web-api-instance-method
+status:
+  - experimental
 browser-compat: api.XRSession.requestAnimationFrame
 ---
-{{APIRef("WebXR Device API")}}
+
+{{APIRef("WebXR Device API")}}{{SeeCompatTable}}
 
 The {{domxref("XRSession")}}
 method **`requestAnimationFrame()`**, much like the
@@ -28,7 +19,7 @@ call `requestAnimationFrame()` again. This can be done from within the
 callback itself.
 
 The callback takes two parameters as inputs: an {{DOMxRef("XRFrame")}} describing the
-state of all tracked objects for the session, and a time stamp you can use to compute
+state of all tracked objects for the session, and a timestamp you can use to compute
 any animation updates needed.
 
 You can cancel a previously scheduled animation by calling
@@ -36,13 +27,13 @@ You can cancel a previously scheduled animation by calling
 
 > **Note:** Despite the obvious similarities between these methods and the
 > global {{domxref("Window.requestAnimationFrame", "requestAnimationFrame()")}} function
-> provided by the `Window` interface, you *must not* treat these as
-> interchangeable. There is *no* guarantee that the latter will work at all while
+> provided by the `Window` interface, you _must not_ treat these as
+> interchangeable. There is _no_ guarantee that the latter will work at all while
 > an immersive XR session is underway.
 
 ## Syntax
 
-```js
+```js-nolint
 requestAnimationFrame(animationFrameCallback)
 ```
 
@@ -69,7 +60,7 @@ An integer value which serves as a unique, non-zero ID or handle you may pass to
 {{domxref("XRSession.cancelAnimationFrame", "cancelAnimationFrame()")}} if you need to
 remove the pending animation frame request.
 
-## Example
+## Examples
 
 The following example requests `XRSession` with "inline" mode so that it can
 be displayed in an HTML element (without the need for a separate AR or VR device).
@@ -85,11 +76,11 @@ const XR = navigator.xr
 // Request a new XRSession
 XR.requestSession("inline").then((xrSession) => {
   xrSession.requestAnimationFrame((time, xrFrame) => {
-    let viewer = xrFrame.getViewerPose(xrReferenceSpace)
+    const viewer = xrFrame.getViewerPose(xrReferenceSpace)
 
     gl.bindFramebuffer(xrWebGLLayer.framebuffer)
-    for (xrView of viewer.views) {
-      let xrViewport = xrWebGLLayer.getViewport(xrView)
+    for (const xrView of viewer.views) {
+      const xrViewport = xrWebGLLayer.getViewport(xrView)
       gl.viewport(xrViewport.x, xrViewport.y, xrViewport.width, xrViewport.height)
 
     // WebGL draw calls will now be rendered into the appropriate viewport.

@@ -1,19 +1,15 @@
 ---
 title: VideoFrame.visibleRect
 slug: Web/API/VideoFrame/visibleRect
-tags:
-  - API
-  - Property
-  - Reference
-  - visibleRect
-  - VideoFrame
+page-type: web-api-instance-property
 browser-compat: api.VideoFrame.visibleRect
 ---
-{{DefaultAPISidebar("Web Codecs API")}}
 
-The **`visibleRect`**  property of the {{domxref("VideoFrame")}} interface returns a {{domxref("DOMRectReadOnly")}} describing the visible rectangle of pixels for this `VideoFrame`.
+{{APIRef("Web Codecs API")}}
 
-### Value
+The **`visibleRect`** property of the {{domxref("VideoFrame")}} interface returns a {{domxref("DOMRectReadOnly")}} describing the visible rectangle of pixels for this `VideoFrame`.
+
+## Value
 
 A {{domxref("DOMRectReadOnly")}}.
 

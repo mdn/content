@@ -1,16 +1,10 @@
 ---
 title: management.onInstalled()
 slug: Mozilla/Add-ons/WebExtensions/API/management/onInstalled
-tags:
-  - API
-  - Add-ons
-  - Event
-  - Reference
-  - WebExtensions
-  - management
-  - onInstalled
+page-type: webextension-api-event
 browser-compat: webextensions.api.management.onInstalled
 ---
+
 {{AddonSidebar()}}
 
 Fired when an add-on is installed.
@@ -19,7 +13,7 @@ This API requires the "management" [API permission](/en-US/docs/Mozilla/Add-ons/
 
 ## Syntax
 
-```js
+```js-nolint
 browser.management.onInstalled.addListener(listener)
 browser.management.onInstalled.removeListener(listener)
 browser.management.onInstalled.hasListener(listener)
@@ -55,17 +49,16 @@ Log the names of add-ons when they are installed:
 
 ```js
 browser.management.onInstalled.addListener((info) => {
-  console.log(info.name + " was installed");
+  console.log(`${info.name} was installed`);
 });
 ```
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.management`](https://developer.chrome.com/extensions/management#event-onInstalled) API. This documentation is derived from [`management.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/management.json) in the Chromium code.
->
-> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
+> **Note:** This API is based on Chromium's [`chrome.management`](https://developer.chrome.com/docs/extensions/reference/management/#event-onInstalled) API. This documentation is derived from [`management.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/management.json) in the Chromium code.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -92,4 +85,4 @@ browser.management.onInstalled.addListener((info) => {
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

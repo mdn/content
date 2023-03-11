@@ -1,11 +1,10 @@
 ---
 title: font-variant
 slug: Web/SVG/Attribute/font-variant
-tags:
-  - SVG
-  - SVG Attribute
+page-type: svg-attribute
 browser-compat: svg.attributes.presentation.font-variant
 ---
+
 {{SVGRef}}
 
 The **`font-variant`** attribute indicates whether the text is to be rendered using variations of the font's {{Glossary("glyph", "glyphs")}}.
@@ -23,7 +22,9 @@ You can use this attribute with the following SVG elements:
 ## Example
 
 ```css hidden
-html, body, svg {
+html,
+body,
+svg {
   height: 100%;
 }
 ```
@@ -80,42 +81,11 @@ html, body, svg {
   </tbody>
 </table>
 
-For a description of the values, please refer to the [CSS `font-variant`](/en-US/docs/Web/CSS/font-variant#Values) property.
+For a description of the values, please refer to the [CSS `font-variant`](/en-US/docs/Web/CSS/font-variant#values) property.
 
 ## Specifications
 
-<table class="no-markdown">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        {{SpecName("CSS4 Fonts", "#font-variant-prop", "font-variant")}}
-      </td>
-      <td>{{Spec2("CSS4 Fonts")}}</td>
-      <td>No change</td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("CSS3 Fonts", "#font-variant-prop", "font-variant")}}
-      </td>
-      <td>{{Spec2("CSS3 Fonts")}}</td>
-      <td>Added many more keywords for different types of variations.</td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("SVG1.1", "text.html#FontVariantProperty", "font-variant")}}
-      </td>
-      <td>{{Spec2("SVG1.1")}}</td>
-      <td>Initial definition</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 ## Browser compatibility
 

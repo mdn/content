@@ -1,12 +1,10 @@
 ---
 title: AbstractRange.startOffset
 slug: Web/API/AbstractRange/startOffset
-tags:
-  - Property
-  - Read-only
-  - Reference
+page-type: web-api-instance-property
 browser-compat: api.AbstractRange.startOffset
 ---
+
 {{APIRef("DOM")}}
 
 The read-only **`startOffset`** property of the {{domxref("AbstractRange")}} interface returns the offset into the start node of the range's start position.

@@ -1,15 +1,10 @@
 ---
 title: flex-grow
 slug: Web/CSS/flex-grow
-tags:
-  - CSS
-  - CSS Flexible Boxes
-  - CSS Property
-  - NeedsContent
-  - Reference
-  - recipe:css-property
+page-type: css-property
 browser-compat: css.properties.flex-grow
 ---
+
 {{CSSRef}}
 
 The **`flex-grow`** [CSS](/en-US/docs/Web/CSS) property sets the flex grow factor of a flex item's [main size](https://www.w3.org/TR/css-flexbox/#main-size).
@@ -27,6 +22,7 @@ flex-grow: 0.6;
 flex-grow: inherit;
 flex-grow: initial;
 flex-grow: revert;
+flex-grow: revert-layer;
 flex-grow: unset;
 ```
 
@@ -87,18 +83,18 @@ The remaining space is the size of the flex container minus the size of all flex
 
 .box {
   flex-grow: 1;
-  border: 3px solid rgba(0,0,0,.2);
+  border: 3px solid rgba(0, 0, 0, 0.2);
 }
 
 .box1 {
   flex-grow: 2;
-  border: 3px solid rgba(0,0,0,.2);
+  border: 3px solid rgba(0, 0, 0, 0.2);
 }
 ```
 
 #### Result
 
-{{EmbedLiveSample('Setting_flex_item_grow_factor', '700px', '300px', '', 'Web/CSS/flex-grow')}}
+{{EmbedLiveSample('Setting flex item grow factor')}}
 
 ## Specifications
 
@@ -112,4 +108,4 @@ The remaining space is the size of the flex container minus the size of all flex
 
 - CSS Flexbox Guide: _[Basic Concepts of Flexbox](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)_
 - CSS Flexbox Guide: _[Controlling Ratios of flex items along the main axis](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Controlling_Ratios_of_Flex_Items_Along_the_Main_Ax)_
-- [\`flex-grow\` is weird. Or is it?](https://css-tricks.com/flex-grow-is-weird/) article by Manuel Matuzovic on CSS-Tricks, which illustrates how flex-grow works
+- [`flex-grow` is weird. Or is it?](https://css-tricks.com/flex-grow-is-weird/) article by Manuel Matuzovic on CSS-Tricks, which illustrates how flex-grow works

@@ -1,16 +1,8 @@
 ---
 title: Other form controls
 slug: Learn/Forms/Other_form_controls
-tags:
-  - Beginner
-  - Controls
-  - Example
-  - Forms
-  - Guide
-  - HTML
-  - Web
-  - Widgets
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Forms/HTML5_input_types","Learn/Forms/Styling_web_forms", "Learn/Forms")}}
 
 We now look at the functionality of non-`<input>` form elements in detail, from other control types such as drop-down lists and multi-line text fields, to other useful form features such as the {{htmlelement('output')}} element (which we saw in action in the previous article), and progress bars.
@@ -48,19 +40,19 @@ This renders like so:
 
 {{EmbedLiveSample("Multi-line_text_fields", 120, 160)}}
 
-The main difference between a `<textarea>` and a regular single line text field is that users are allowed to include hard line breaks (i.e. pressing return) that will be included when the data is submitted.
+The main difference between a `<textarea>` and a regular single-line text field is that users are allowed to include hard line breaks (i.e. pressing return) that will be included when the data is submitted.
 
-`<textarea>` also takes a closing tag, and any default text you want it to contain should be put between the opening and closing tags. In contrast, the {{HTMLElement("input")}} is an empty element with no closing tag — any default value is put inside the [`value`](/en-US/docs/Web/HTML/Attributes/value) attribute.
+`<textarea>` also takes a closing tag; any default text you want it to contain should be put between the opening and closing tags. In contrast, the {{HTMLElement("input")}} is a {{glossary("void element")}} with no closing tag — any default value is put inside the [`value`](/en-US/docs/Web/HTML/Element/input#value) attribute.
 
 Note that even though you can put anything inside a `<textarea>` element (including other HTML elements, CSS, and JavaScript), because of its nature, it is all rendered as if it was plain text content. (Using [`contenteditable`](/en-US/docs/Web/HTML/Global_attributes/contenteditable) on non-form controls provides an API for capturing HTML/"rich" content instead of plain text).
 
 Visually, the text entered wraps and the form control is by default resizable. Modern browsers provide a drag handle that you can drag to increase/decrease the size of the text area.
 
-The following screenshots show default, focused, and disabled `<textarea>` elements in Firefox 71 and Safari 13 on macOS, and Edge 18, Yandex 14, Firefox 71 and Chrome 79 on Windows 10.
+The following screenshots show default, focused, and disabled `<textarea>` elements in Firefox 71 and Safari 13 on macOS and in Edge 18, Yandex 14, Firefox 71, and Chrome 79 on Windows 10.
 
 ![The default, focused, and disabled \<textarea> element in Firefox 71 and Safari 13 on Mac OSX and Edge 18, Yandex 14, Firefox and Chrome on Windows 10.](textarea_basic.png)
 
-> **Note:** You can find a slightly more interesting example of text area usage in the [example](https://mdn.github.io/learning-area/html/forms/your-first-HTML-form/first-form-styled.html) we put together in the first article of the series ([see the source code also](https://github.com/mdn/learning-area/blob/master/html/forms/your-first-HTML-form/first-form-styled.html)).
+> **Note:** You can find a slightly more interesting example of text area usage in the [example](https://mdn.github.io/learning-area/html/forms/your-first-HTML-form/first-form-styled.html) we put together in the first article of the series ([see the source code also](https://github.com/mdn/learning-area/blob/main/html/forms/your-first-HTML-form/first-form-styled.html)).
 
 ### Controlling multi-line rendering
 
@@ -87,9 +79,9 @@ Play with the interactive example at the top of the {{cssxref("resize")}} refere
 
 ## Drop-down controls
 
-Drop-down controls are a simple way to let users select from many different options without taking up much space in the user interface. HTML has two forms of drop down content: the **select box**, and the **autocomplete box**. In both cases the interaction is the same — once the control is activated, the browser displays a list of values the user can select between.
+Drop-down controls are a simple way to let users select from many options without taking up much space in the user interface. HTML has two types of drop-down controls: the **select box** and the **autocomplete box**. The interaction is the same in both the types of drop-down controls — after the control is activated, the browser displays a list of values the user can select from.
 
-> **Note:** You can find examples of all the drop-down box types on GitHub at [drop-down-content.html](https://github.com/mdn/learning-area/blob/master/html/forms/native-form-widgets/drop-down-content.html) ([see it live also](https://mdn.github.io/learning-area/html/forms/native-form-widgets/drop-down-content.html)).
+> **Note:** You can find examples of all the drop-down box types on GitHub at [drop-down-content.html](https://github.com/mdn/learning-area/blob/main/html/forms/native-form-widgets/drop-down-content.html) ([see it live also](https://mdn.github.io/learning-area/html/forms/native-form-widgets/drop-down-content.html)).
 
 ### Select box
 
@@ -130,7 +122,7 @@ The {{HTMLElement("option")}} elements can be nested inside {{HTMLElement("optgr
 
 {{EmbedLiveSample("Using_optgroup", 120, 120)}}
 
-On the {{HTMLElement("optgroup")}} element, the value of the [`label`](/en-US/docs/Web/HTML/Element/optgroup#attr-label) attribute is displayed before the values of the nested options. The browser usually sets them visually apart from the options (i.e. by being bolded and at a different nesting level) so they are less likely to be confused for actual options.
+On the {{HTMLElement("optgroup")}} element, the value of the [`label`](/en-US/docs/Web/HTML/Element/optgroup#label) attribute is displayed before the values of the nested options. The browser usually sets them visually apart from the options (i.e. by being bolded and at a different nesting level) so they are less likely to be confused for actual options.
 
 #### Using the value attribute
 
@@ -150,20 +142,20 @@ By default, the height of the select box is enough to display a single value. Th
 
 ### Multiple choice select box
 
-By default, a select box only lets the user select a single value. By adding the {{htmlattrxref("multiple","select")}} attribute to the {{HTMLElement("select")}} element, you can allow users to select several values, by using the default mechanism provided by the operating system (e.g. holding down <kbd>Cmd</kbd>/<kbd>Ctrl</kbd> and clicking multiple values on desktop).
+By default, a select box lets a user select only one value. By adding the {{htmlattrxref("multiple","select")}} attribute to the {{HTMLElement("select")}} element, you can allow users to select several values. Users can select multiple values by using the default mechanism provided by the operating system (e.g., on the desktop, multiple values can be clicked while holding down <kbd>Cmd</kbd>/<kbd>Ctrl</kbd> keys).
 
 ```html
 <select id="multi" name="multi" multiple size="2">
   <optgroup label="fruits">
-     <option>Banana</option>
-     <option selected>Cherry</option>
-     <option>Lemon</option>
-   </optgroup>
-   <optgroup label="vegetables">
-     <option>Carrot</option>
-     <option>Eggplant</option>
-     <option>Potato</option>
-   </optgroup>
+    <option>Banana</option>
+    <option selected>Cherry</option>
+    <option>Lemon</option>
+  </optgroup>
+  <optgroup label="vegetables">
+    <option>Carrot</option>
+    <option>Eggplant</option>
+    <option>Potato</option>
+  </optgroup>
 </select>
 ```
 
@@ -187,7 +179,7 @@ Let's look at an example.
 
 ```html
 <label for="myFruit">What's your favorite fruit?</label>
-<input type="text" name="myFruit" id="myFruit" list="mySuggestion">
+<input type="text" name="myFruit" id="myFruit" list="mySuggestion" />
 <datalist id="mySuggestion">
   <option>Apple</option>
   <option>Banana</option>
@@ -208,7 +200,7 @@ Almost all browsers support datalist, but if you are still supporting older brow
 
 ```html
 <label for="myFruit">What is your favorite fruit? (With fallback)</label>
-<input type="text" id="myFruit" name="fruit" list="fruitList">
+<input type="text" id="myFruit" name="fruit" list="fruitList" />
 
 <datalist id="fruitList">
   <label for="suggestion">or pick a fruit</label>
@@ -237,9 +229,9 @@ If you use this fallback, ensure the data for both the `<input>` and the `<selec
 
 #### Less obvious datalist uses
 
-According to [the HTML specification](https://www.w3.org/TR/html5/common-input-element-attributes.html#attr-input-list), the {{htmlattrxref("list","input")}} attribute and the {{HTMLElement("datalist")}} element can be used with any kind of widget requiring a user input. This leads to some uses of it that might seem a little non-obvious.
+According to [the HTML specification](https://html.spec.whatwg.org/multipage/input.html#attr-input-list), the {{htmlattrxref("list","input")}} attribute and the {{HTMLElement("datalist")}} element can be used with any kind of widget requiring a user input. This leads to some uses of it that might seem a little non-obvious.
 
-For example, in browsers that support `{{htmlelement("datalist")}}` on `range` input types, a small tick mark will be displayed above the range for each datalist `{{htmlelement("option")}}` value. You can see an implementation [example of this on the `<input type="range">` reference page](/en-US/docs/Web/HTML/Element/input/range#a_range_control_with_hash_marks).
+For example, in browsers that support `{{htmlelement("datalist")}}` on `range` input types, a small tick mark will be displayed above the range for each datalist `{{htmlelement("option")}}` value. You can see an implementation [example of this on the `<input type="range">` reference page](/en-US/docs/Web/HTML/Element/input/range#adding_tick_marks).
 
 And browsers that support {{htmlelement('datalist')}}s and [`<input type="color">`](/en-US/docs/Web/HTML/Element/input/color) should display a customized palette of colors as the default, while still making the full color palette available.
 
@@ -249,7 +241,7 @@ In this case, different browsers behave differently from case to case, so consid
 
 There are a few other form features that are not as obvious as the ones we have already mentioned, but still useful in some situations, so we thought it would be worth giving them a brief mention.
 
-> **Note:** You can find the examples from this section on GitHub as [other-examples.html](https://github.com/mdn/learning-area/blob/master/html/forms/native-form-widgets/other-examples.html) ([see it live also](https://mdn.github.io/learning-area/html/forms/native-form-widgets/other-examples.html)).
+> **Note:** You can find the examples from this section on GitHub as [other-examples.html](https://github.com/mdn/learning-area/blob/main/html/forms/native-form-widgets/other-examples.html) ([see it live also](https://mdn.github.io/learning-area/html/forms/native-form-widgets/other-examples.html)).
 
 ### Meters and progress bars
 
@@ -273,7 +265,7 @@ The content inside the {{HTMLElement("progress")}} element is a fallback for bro
 
 A meter bar represents a fixed value in a range delimited by {{htmlattrxref("max","meter")}} and {{htmlattrxref("min","meter")}} values. This value is visually rendered as a bar, and to know how this bar looks, we compare the value to some other set values:
 
-- The {{htmlattrxref("low","meter")}} and {{htmlattrxref("high","meter")}} values divide the range in three parts:
+- The {{htmlattrxref("low","meter")}} and {{htmlattrxref("high","meter")}} values divide the range into the following three parts:
 
   - The lower part of the range is between the {{htmlattrxref("min","meter")}} and {{htmlattrxref("low","meter")}} values, inclusive.
   - The medium part of the range is between the {{htmlattrxref("low","meter")}} and {{htmlattrxref("high","meter")}} values, exclusive.
@@ -291,7 +283,7 @@ All browsers that implement the {{HTMLElement("meter")}} element use those value
 - If the current value is in the average part of the range, the bar is yellow.
 - If the current value is in the worst part of the range, the bar is red.
 
-Such a bar is created using a {{HTMLElement("meter")}} element. This is for implementing any kind of meter, for example a bar showing total space used on a disk, which turns red when it starts to get full.
+Such a bar is created by using the {{HTMLElement("meter")}} element. This is for implementing any kind of meter; for example, a bar showing the total space used on a disk, which turns red when it starts to get full.
 
 ```html
 <meter min="0" max="100" value="75" low="33" high="66" optimum="50">75</meter>
@@ -301,7 +293,7 @@ Such a bar is created using a {{HTMLElement("meter")}} element. This is for impl
 
 The content inside the {{HTMLElement("meter")}} element is a fallback for browsers that don't support the element and for assistive technologies to vocalize it.
 
-Support for {{HTMLElement("progress")}} and {{HTMLElement("meter")}} is fairly good — there is no support in Internet Explorer, but other browsers support it well.
+Support for {{HTMLElement("progress")}} and {{HTMLElement("meter")}} is available in all modern browsers.
 
 ## Test your skills!
 
@@ -309,24 +301,11 @@ You've reached the end of this article, but can you remember the most important 
 
 ## Summary
 
-As you'll have seen in the last few articles, there are many different types of form control. You don't need to remember all of these details at once, and can return to these articles as often as you like to check up on details.
+As you'll have seen in the last few articles, there are many types of form control. You don't need to remember all of these details at once, and can return to these articles as often as you like to check up on details.
 
 Now that you have a grasp of the HTML behind the different available form controls, we'll take a look at [Styling them](/en-US/docs/Learn/Forms/Styling_web_forms).
 
 {{PreviousMenuNext("Learn/Forms/HTML5_input_types","Learn/Forms/Styling_web_forms", "Learn/Forms")}}
-
-## In this module
-
-- [Your first form](/en-US/docs/Learn/Forms/Your_first_form)
-- [How to structure a web form](/en-US/docs/Learn/Forms/How_to_structure_a_web_form)
-- [Basic native form controls](/en-US/docs/Learn/Forms/Basic_native_form_controls)
-- [The HTML5 input types](/en-US/docs/Learn/Forms/HTML5_input_types)
-- [Other form controls](/en-US/docs/Learn/Forms/Other_form_controls)
-- [Styling web forms](/en-US/docs/Learn/Forms/Styling_web_forms)
-- [Advanced form styling](/en-US/docs/Learn/Forms/Advanced_form_styling)
-- [UI pseudo-classes](/en-US/docs/Learn/Forms/UI_pseudo-classes)
-- [Client-side form validation](/en-US/docs/Learn/Forms/Form_validation)
-- [Sending form data](/en-US/docs/Learn/Forms/Sending_and_retrieving_form_data)
 
 ### Advanced Topics
 

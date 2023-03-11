@@ -1,14 +1,14 @@
 ---
 title: Browser actions
 slug: Mozilla/Add-ons/WebExtensions/Browser_actions
-tags:
-  - WebExtensions
+page-type: guide
 ---
+
 {{AddonSidebar}}
 
 A browser action is a button you can add to the browser toolbar. Users can click the button to interact with your extension.
 
-![](browser-action.png)
+![Play button browser action in the browser toolbar: it looks like a play button](browser-action.png)
 
 There are two ways to specify a browser action: with a [popup](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Popups), or without a popup.
 
@@ -43,5 +43,5 @@ The only mandatory key is `default_icon`. You can change any of these properties
 
 The [webextensions-examples](https://github.com/mdn/webextensions-examples) repo on GitHub contains several examples of extensions that use browser actions:
 
-- [bookmark-it](https://github.com/mdn/webextensions-examples/blob/master/bookmark-it/) uses a browser action without a popup
+- [bookmark-it](https://github.com/mdn/webextensions-examples/tree/master/bookmark-it) uses a browser action without a popup
 - [beastify](https://github.com/mdn/webextensions-examples/tree/master/beastify) uses a browser action with a popup

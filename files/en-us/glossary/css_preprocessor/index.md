@@ -1,10 +1,9 @@
 ---
 title: CSS preprocessor
 slug: Glossary/CSS_preprocessor
-tags:
-  - CSS
-  - Glossary
+page-type: glossary-definition
 ---
+
 A **CSS preprocessor** is a program that lets you generate {{Glossary("CSS")}} from the preprocessor's own unique {{Glossary("syntax")}}.
 
 There are many CSS preprocessors to choose from, however most CSS preprocessors will add some features that don't exist in pure CSS, such as mixin, nesting selector, inheritance selector, and so on. These features make the CSS structure more readable and easier to maintain.

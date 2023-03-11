@@ -1,26 +1,10 @@
 ---
 title: RTCRtpEncodingParameters.scaleResolutionDownBy
 slug: Web/API/RTCRtpEncodingParameters/scaleResolutionDownBy
-tags:
-  - API
-  - Codec
-  - Encoding
-  - Media
-  - RTCRtpEncodingParameters
-  - RTP
-  - Reference
-  - Scale
-  - Scaling
-  - Settings
-  - Video
-  - WebRTC
-  - WebRTC API
-  - parameters
-  - rtc
-  - scaleResolutionDownBy
-  - size
+page-type: web-api-instance-property
 browser-compat: api.RTCRtpEncodingParameters.scaleResolutionDownBy
 ---
+
 {{APIRef("WebRTC")}}
 
 The {{domxref("RTCRtpEncodingParameters")}} dictionary's
@@ -32,12 +16,12 @@ This property is only available for tracks whose {{domxref("MediaStreamTrack.kin
 
 ## Syntax
 
-```js
-rtpEncodingParameters.scaleResolutionDownBy = scalingFactor;
+```js-nolint
+rtpEncodingParameters.scaleResolutionDownBy = scalingFactor
 
 rtpEncodingParameters = {
   scaleResolutionDownBy: scalingFactor
-};
+}
 ```
 
 ### Value
@@ -50,7 +34,7 @@ size.
 
 A value less than 1.0 would cause the video to get larger rather than smaller, which is
 not the intent of this property. Therefore, specifying a value less than 1.0 is not
-permitted and will cause a `RangeError` exception to be thrown by
+permitted and will cause a {{jsxref("RangeError")}} exception to be thrown by
 {{domxref("RTCPeerConnection.addTransceiver()")}} or
 {{domxref("RTCRtpSender.setParameters()")}}.
 

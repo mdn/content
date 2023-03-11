@@ -1,12 +1,9 @@
 ---
 title: theme_color
 slug: Web/Manifest/theme_color
-tags:
-  - Manifest
-  - Web
-  - theme_color
 browser-compat: html.manifest.theme_color
 ---
+
 {{QuickLinksWithSubpages("/en-US/docs/Web/Manifest")}}
 
 <table class="properties">

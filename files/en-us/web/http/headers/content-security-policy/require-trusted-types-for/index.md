@@ -1,14 +1,12 @@
 ---
-title: 'CSP: require-trusted-types-for'
+title: "CSP: require-trusted-types-for"
 slug: Web/HTTP/Headers/Content-Security-Policy/require-trusted-types-for
-tags:
-  - CSP
-  - Directive
-  - HTTP
-  - Security
-browser-compat: http.headers.csp.Content-Security-Policy.require-trusted-types-for
+status:
+  - experimental
+browser-compat: http.headers.Content-Security-Policy.require-trusted-types-for
 ---
-{{HTTPSidebar}}
+
+{{HTTPSidebar}}{{SeeCompatTable}}
 
 The HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) **`require-trusted-types-for`** {{experimental_inline}} directive instructs user agents to control the data passed to DOM XSS sink functions, like {{DOMxRef("Element.innerHTML")}} setter.
 
@@ -16,7 +14,7 @@ When used, those functions only accept non-spoofable, typed values created by Tr
 
 ## Syntax
 
-```
+```http
 Content-Security-Policy: require-trusted-types-for 'script';
 ```
 
@@ -29,23 +27,19 @@ Content-Security-Policy: require-trusted-types-for 'script';
 // Content-Security-Policy: require-trusted-types-for 'script'; trusted-types foo;
 
 const attackerInput = '<svg onload="alert(/cross-site-scripting/)" />';
-const el = document.createElement('div');
+const el = document.createElement("div");
 
-if (typeof trustedTypes !== 'undefined') {
+if (typeof trustedTypes !== "undefined") {
   // Create a policy that can create TrustedHTML values
   // after sanitizing the input strings with DOMPurify library.
-  const sanitizer = trustedTypes.createPolicy('foo', {
-    createHTML: (input) => DOMPurify.sanitize(input)
+  const sanitizer = trustedTypes.createPolicy("foo", {
+    createHTML: (input) => DOMPurify.sanitize(input),
   });
 
-  el.innerHTML = sanitizer.createHTML(attackerInput);  // Puts the sanitized value into the DOM.
-  el.innerHTML = attackerInput;                        // Rejects a string value; throws a TypeError.
+  el.innerHTML = sanitizer.createHTML(attackerInput); // Puts the sanitized value into the DOM.
+  el.innerHTML = attackerInput; // Rejects a string value; throws a TypeError.
 }
 ```
-
-## Polyfill
-
-A [polyfill for Trusted Types](https://github.com/w3c/webappsec-trusted-types#polyfill) is available on Github.
 
 ## Specifications
 
@@ -59,6 +53,7 @@ A [polyfill for Trusted Types](https://github.com/w3c/webappsec-trusted-types#po
 
 - {{HTTPHeader("Content-Security-Policy")}}
 - [Cross-Site Scripting (XSS)](/en-US/docs/Glossary/Cross-site_scripting)
-- [DOM XSS injection sinks covered by Trusted Types](https://w3c.github.io/webappsec-trusted-types/dist/spec/#injection-sinks)
-- [Prevent DOM-based cross-site scripting vulnerabilities with Trusted Types](https://web.dev/trusted-types)
+- [DOM XSS injection sinks covered by Trusted Types](https://w3c.github.io/trusted-types/dist/spec/#injection-sinks)
+- [Prevent DOM-based cross-site scripting vulnerabilities with Trusted Types](https://web.dev/trusted-types/)
 - Trusted Types with [DOMPurify](https://github.com/cure53/DOMPurify#what-about-dompurify-and-trusted-types) XSS sanitizer
+- [Trusted Types polyfill](https://github.com/w3c/trusted-types#polyfill)

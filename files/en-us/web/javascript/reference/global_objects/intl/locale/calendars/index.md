@@ -1,27 +1,21 @@
 ---
 title: Intl.Locale.prototype.calendars
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/calendars
-tags:
-  - Internationalization
-  - Intl
-  - JavaScript
-  - Property
-  - Locale
-  - Localization
-  - Prototype
-  - Reference
-  - Calendars
+page-type: javascript-instance-accessor-property
 browser-compat: javascript.builtins.Intl.Locale.calendars
 ---
+
 {{JSRef}}
 
-The **`Intl.Locale.prototype.calendars`** property is an accessor property which returns an array of one or more unique calendar identifiers for the `Locale`.
+The **`Intl.Locale.prototype.calendars`** accessor property returns a list of one or more unique calendar identifiers for the `Locale`.
 
 ## Description
 
-The `calendar` property returns an array of all supported calendars for the `Locale`. The array items indicate the `Locale` object's calendar era. The following table shows all valid Unicode calendar key strings, along with a description of the calendar era they represent.
+The `calendars` property returns an array of all calendars commonly used for the `Locale`, sorted in descending preference. If the `Locale` already has a [`calendar`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/calendar), then the returned array contains that single value.
 
-### Unicode calendar keys
+Below is a list of the supported calendar era types.
+
+### Supported calendar types
 
 - `buddhist`
   - : Thai Buddhist calendar
@@ -67,16 +61,16 @@ The `calendar` property returns an array of all supported calendars for the `Loc
 
 ### Obtaining supported calendars
 
-List supported calendars for a given `Locale`.
+If the `Locale` object doesn't have a `calendar` already, the `calendars` property lists all commonly-used calendars for the given `Locale`. For examples of explicitly setting a `calendar`, see [`calendar` examples](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/calendar#examples).
 
 ```js
-let arEG = new Intl.Locale("ar-EG");
-console.log(arEG.calendars); // logs ["gregory", "coptic", "islamic", "islamic-civil", "islamic-tbla"]
+const arEG = new Intl.Locale("ar-EG");
+console.log(arEG.calendars); // ["gregory", "coptic", "islamic", "islamic-civil", "islamic-tbla"]
 ```
 
 ```js
-let jaJP = new Intl.Locale("ja-JP");
-console.log(jaJP.calendars); // logs ["gregory", "japanese"]
+const jaJP = new Intl.Locale("ja-JP");
+console.log(jaJP.calendars); // ["gregory", "japanese"]
 ```
 
 ## Specifications
@@ -89,5 +83,6 @@ console.log(jaJP.calendars); // logs ["gregory", "japanese"]
 
 ## See also
 
-- {{jsxref("Intl/Locale", "Intl.Locale")}}
+- {{jsxref("Intl.Locale")}}
+- [`Intl.Locale.prototype.calendar`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/calendar)
 - [Unicode Calendar Identifiers](https://www.unicode.org/reports/tr35/#UnicodeCalendarIdentifier)

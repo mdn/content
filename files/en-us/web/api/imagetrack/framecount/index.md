@@ -1,19 +1,17 @@
 ---
 title: ImageTrack.frameCount
 slug: Web/API/ImageTrack/frameCount
-tags:
-  - API
-  - Property
-  - Reference
-  - frameCount
-  - ImageTrack
+page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.ImageTrack.frameCount
 ---
-{{DefaultAPISidebar("WebCodecs API")}}
+
+{{APIRef("WebCodecs API")}}{{SeeCompatTable}}
 
 The **`frameCount`** property of the {{domxref("ImageTrack")}} interface returns the number of frames in the track.
 
-### Value
+## Value
 
 An integer.
 

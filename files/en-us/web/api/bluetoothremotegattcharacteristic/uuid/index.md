@@ -1,34 +1,22 @@
 ---
 title: BluetoothRemoteGATTCharacteristic.uuid
 slug: Web/API/BluetoothRemoteGATTCharacteristic/uuid
-tags:
-  - API
-  - Bluetooth
-  - BluetoothRemoteGATTCharacteristic
-  - Experimental
-  - Property
-  - Reference
-  - Service
-  - Web Bluetooth API
-  - uuid
+page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.BluetoothRemoteGATTCharacteristic.uuid
 ---
-{{SeeCompatTable}}
+
+{{APIRef("Bluetooth API")}}{{SeeCompatTable}}
 
 The **`BluetoothRemoteGATTCharacteristic.uuid`** read-only
-property returns {{domxref("DOMString")}} containing the UUID of the characteristic, for
+property returns a string containing the UUID of the characteristic, for
 example `'00002a37-0000-1000-8000-00805f9b34fb'` for the Heart Rate
 Measurement characteristic.
 
-## Syntax
+## Value
 
-```js
-var uuid = BluetoothRemoteGATTCharacteristic.uuid
-```
-
-### Returns
-
-A {{domxref("DOMString")}}.
+A string.
 
 ## Specifications
 

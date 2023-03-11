@@ -1,18 +1,10 @@
 ---
 title: downloads.resume()
 slug: Mozilla/Add-ons/WebExtensions/API/downloads/resume
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - downloads
-  - resume
+page-type: webextension-api-function
 browser-compat: webextensions.api.downloads.resume
 ---
+
 {{AddonSidebar()}}
 
 The **`resume()`** function of the {{WebExtAPIRef("downloads")}} API resumes a paused download. If the request was successful, the download will be unpaused and progress will resume. The `resume()` call will fail if the download is not active: for example, because it has finished downloading.
@@ -21,8 +13,8 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ## Syntax
 
-```js
-var resuming = browser.downloads.resume(
+```js-nolint
+let resuming = browser.downloads.resume(
   downloadId      // integer
 )
 ```
@@ -43,7 +35,7 @@ A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise). If t
 ## Examples
 
 ```js
-var downloadId = 2;
+let downloadId = 2;
 
 function onResumed() {
   console.log(`Resumed download`);
@@ -53,17 +45,16 @@ function onError(error) {
   console.log(`Error: ${error}`);
 }
 
-var resuming = browser.downloads.resume(downloadId);
+let resuming = browser.downloads.resume(downloadId);
 resuming.then(onResumed, onError);
 ```
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.downloads`](https://developer.chrome.com/extensions/downloads#method-resume) API.
->
-> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
+> **Note:** This API is based on Chromium's [`chrome.downloads`](https://developer.chrome.com/docs/extensions/reference/downloads/#method-resume) API.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -90,4 +81,4 @@ resuming.then(onResumed, onError);
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

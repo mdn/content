@@ -1,17 +1,10 @@
 ---
 title: TypedArray.prototype.findIndex()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/findIndex
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - TypedArray
-  - TypedArrays
-  - Polyfill
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.TypedArray.findIndex
 ---
+
 {{JSRef}}
 
 The **`findIndex()`** method returns an **index**
@@ -25,7 +18,7 @@ See also the {{jsxref("TypedArray.find", "find()")}} method, which returns the
 
 ## Syntax
 
-```js
+```js-nolint
 // Arrow function
 findIndex((element) => { /* ... */ } )
 findIndex((element, index) => { /* ... */ } )
@@ -46,7 +39,9 @@ findIndex(function(element, index, array) { /* ... */ }, thisArg)
 
 - `callbackFn`
 
-  - : Function to execute on each value in the typed array, taking three arguments:
+  - : Function to execute on each value in the typed array.
+
+    The function is called with the following arguments:
 
     - `element`
       - : The current element being processed in the typed array.
@@ -100,7 +95,7 @@ number (or returns `-1` if there is no prime number).
 
 ```js
 function isPrime(element, index, array) {
-  var start = 2;
+  let start = 2;
   while (start <= Math.sqrt(element)) {
     if (element % start++ < 1) {
       return false;
@@ -109,49 +104,11 @@ function isPrime(element, index, array) {
   return element > 1;
 }
 
-var uint8 = new Uint8Array([4, 6, 8, 12]);
-var uint16 = new Uint16Array([4, 6, 7, 12]);
+const uint8 = new Uint8Array([4, 6, 8, 12]);
+const uint16 = new Uint16Array([4, 6, 7, 12]);
 
 console.log(uint8.findIndex(isPrime)); // -1, not found
 console.log(uint16.findIndex(isPrime)); // 2
-```
-
-## Polyfill
-
-```js
-TypedArray.prototype.findIndex = Array.prototype.findIndex = Array.prototype.findIndex || function(evaluator, thisArg) {
-        'use strict';
-        if (!this) {
-          throw new TypeError('Array.prototype.some called on null or undefined');
-        }
-
-        if (typeof(evaluator) !== 'function') {
-            if (typeof(evaluator) === 'string') {
-                // Attempt to convert it to a function
-                if ( ! (evaluator = eval(evaluator)) ){
-                    throw new TypeError();
-                }
-            } else {
-                throw new TypeError();
-            }
-        }
-
-        var i;
-        if (thisArg === undefined) {  // Optimize for thisArg
-            for (i in this) {
-                if (evaluator(this[i], i, this)) {
-                    return i;
-                }
-            }
-            return -1;
-        }
-        for (i in this) {
-            if (evaluator.call(thisArg, this[i], i, this)) {
-                return i;
-            }
-        }
-        return -1;
-};
 ```
 
 ## Specifications

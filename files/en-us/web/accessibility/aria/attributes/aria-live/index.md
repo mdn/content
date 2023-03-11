@@ -1,13 +1,7 @@
 ---
-title: 'aria-live'
+title: aria-live
 slug: Web/Accessibility/ARIA/Attributes/aria-live
-tags: 
-  - Accessibility
-  - ARIA
-  - ARIA attribute
-  - ARIA property
-  - aria-live
-  - Reference
+spec-urls: https://w3c.github.io/aria/#aria-live
 ---
 
 The global `aria-live` attribute indicates that an element will be updated, and describes the types of updates the user agents, assistive technologies, and user can expect from the live region.
@@ -48,7 +42,7 @@ When `aria-live`'s attribute is set to `polite`, assistive technologies will not
 
 Screen readers buffer content when the page is loaded. Because of this, content added after the initial accessibility tree is built may not be noticed as AT users start consuming content before dynamic widgets are populated—users may not know about the page or view content updating as widgets finish loading. In this situation you can let users know the page has been updated by setting `aria-live="polite"`.
 
-Fully populated pages may have updates too. Examples are content like real-time sports scores, news crawlers, and stock market tickers. Unless these kinds of updates are the main function of the page, you likely do want to inform the user every time it updates, but do want to inform them the widget does get updated. Here, you would set `aria-live="off"`. In these scenarios there is no reason to inform the user of updates unless they are focused on the live region.
+Fully populated pages may have updates too. Examples are content like real-time sports scores, news crawlers, and stock market tickers. Unless these kinds of updates are the main function of the page, you likely do not want to inform the user every time it updates, but do want to inform them the widget does get updated. Here, you would set `aria-live="off"`. In these scenarios there is no reason to inform the user of updates unless they are focused on the live region.
 
 Some live updates are important and time sensitive. For example, if you are selling concert tickets and the user has a limited time to make the purchase, you don't want to wait until a lull in activity to tell them their time is almost up (or already over). When being informed as soon as possible is necessary, set `aria-live="assertive"`. If the updated information is an [`alert`](/en-US/docs/Web/Accessibility/ARIA/Roles/alert_role), the `aria-live` attribute is not needed.
 
@@ -72,9 +66,9 @@ A live region includes the element and all its descendants. When not set on upda
 ## ARIAMixin API
 
 - {{domxref("Element.ariaLive")}}
-  - : The  [`ariaLive`](/en-US/docs/Web/API/Element/ariaLive) property, part of the {{domxref("Element")}} interface, reflects the value of the `aria-live` attribute.
+  - : The [`ariaLive`](/en-US/docs/Web/API/Element/ariaLive) property, part of the {{domxref("Element")}} interface, reflects the value of the `aria-live` attribute.
 - {{domxref("ElementInternals.aria-live")}}
-  - : The  [`ariaLive`](/en-US/docs/Web/API/ElementInternals/ariaLive) property, part of the {{domxref("ElementInternals")}} interface, reflects the value of the `aria-live` attribute.
+  - : The [`ariaLive`](/en-US/docs/Web/API/ElementInternals/ariaLive) property, part of the {{domxref("ElementInternals")}} interface, reflects the value of the `aria-live` attribute.
 
 ## Associated roles
 
@@ -82,9 +76,7 @@ Used in **ALL** roles.
 
 ## Specifications
 
-| Specification | Status |
-| ------------- | ------  |
-| {{SpecName("ARIA","#aria-live","ARIA: aria-live Attribute")}}  | {{Spec2('ARIA')}} |
+{{Specifications}}
 
 ## See Also
 

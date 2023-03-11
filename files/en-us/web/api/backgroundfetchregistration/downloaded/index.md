@@ -1,27 +1,19 @@
 ---
 title: BackgroundFetchRegistration.downloaded
 slug: Web/API/BackgroundFetchRegistration/downloaded
-tags:
-  - API
-  - Property
-  - Reference
-  - downloaded
-  - BackgroundFetchRegistration
+page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.BackgroundFetchRegistration.downloaded
 ---
-{{APIRef("Background Fetch API")}}
+
+{{APIRef("Background Fetch API")}}{{SeeCompatTable}}
 
 The **`downloaded`** read-only property of the {{domxref("BackgroundFetchRegistration")}} interface returns the size in bytes that has been downloaded, initially `0`.
 
-If the value of this property changes, the  [progress](/en-US/docs/Web/API/BackgroundFetchRegistration/progress_event) event is fired at the associated {{domxref("BackgroundFetchRegistration")}} object.
+If the value of this property changes, the [progress](/en-US/docs/Web/API/BackgroundFetchRegistration/progress_event) event is fired at the associated {{domxref("BackgroundFetchRegistration")}} object.
 
-## Syntax
-
-```js
-let downloaded = BackgroundFetchRegistration.downloaded;
-```
-
-### Value
+## Value
 
 A {{jsxref("number")}}.
 

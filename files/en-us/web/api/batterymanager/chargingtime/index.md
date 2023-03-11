@@ -1,12 +1,10 @@
 ---
 title: BatteryManager.chargingTime
 slug: Web/API/BatteryManager/chargingTime
-tags:
-  - API
-  - Property
-  - Reference
+page-type: web-api-instance-property
 browser-compat: api.BatteryManager.chargingTime
 ---
+
 {{APIRef("Battery API")}}
 
 The **`BatteryManager.chargingTime`** property indicates the amount of time, in seconds, that remain until the battery is fully charged or `0` if the battery is already fully charged. If the battery is currently
@@ -17,7 +15,11 @@ discharging, its value is
 > browsers round them to a higher interval
 > (typically to the closest 15 minutes) for privacy reasons.
 
-## Example
+## Value
+
+A number.
+
+## Examples
 
 ### HTML Content
 
@@ -28,14 +30,16 @@ discharging, its value is
 ### JavaScript Content
 
 ```js
-navigator.getBattery().then(battery => {
-   const time = battery.chargingTime;
+navigator.getBattery().then((battery) => {
+  const time = battery.chargingTime;
 
-   document.querySelector('#chargingTime').textContent = battery.chargingTime;
+  document.querySelector(
+    "#chargingTime"
+  ).textContent = `Time to fully charge the battery: ${time}s`;
 });
 ```
 
-{{ EmbedLiveSample('Example', '100%', 30) }}
+{{ EmbedLiveSample('Examples', '100%', 30) }}
 
 ## Specifications
 

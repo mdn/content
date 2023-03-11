@@ -1,14 +1,10 @@
 ---
 title: tab-size
 slug: Web/CSS/tab-size
-tags:
-  - CSS
-  - CSS Property
-  - CSS Text
-  - Reference
-  - recipe:css-property
+page-type: css-property
 browser-compat: css.properties.tab-size
 ---
+
 {{CSSRef}}
 
 The **`tab-size`** CSS property is used to customize the width of tab characters (U+0009).
@@ -30,6 +26,7 @@ tab-size: 2em;
 tab-size: inherit;
 tab-size: initial;
 tab-size: revert;
+tab-size: revert-layer;
 tab-size: unset;
 ```
 
@@ -105,4 +102,4 @@ p {
 
 ## See also
 
-- [Controlling size of a tab character (U+0009)](https://lists.w3.org/Archives/Public/www-style/2008Dec/0009.html), an email by Anne van Kesteren to the CSSWG.
+- {{cssxref('white-space')}}

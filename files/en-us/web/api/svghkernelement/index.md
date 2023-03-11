@@ -1,14 +1,12 @@
 ---
 title: SVGHKernElement
 slug: Web/API/SVGHKernElement
-tags:
-  - API
-  - Deprecated
-  - Reference
-  - SVG
-  - SVG DOM
+page-type: web-api-interface
+status:
+  - deprecated
 browser-compat: api.SVGHKernElement
 ---
+
 {{APIRef("SVG")}}{{deprecated_header}}
 
 The **`SVGHKernElement`** interface corresponds to the {{SVGElement("hkern")}} elements.
@@ -17,11 +15,11 @@ Object-oriented access to the attributes of the {{SVGElement("hkern")}} element 
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _This interface has no properties but inherits properties from its parent, {{domxref("SVGElement")}}._
 
-## Methods
+## Instance methods
 
 _This interface has no methods but inherits methods from its parent, {{domxref("SVGElement")}}._
 

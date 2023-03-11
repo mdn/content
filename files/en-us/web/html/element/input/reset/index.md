@@ -1,75 +1,36 @@
 ---
 title: <input type="reset">
 slug: Web/HTML/Element/input/reset
-tags:
-  - Element
-  - Form Button
-  - Form input
-  - Forms
-  - HTML
-  - HTML forms
-  - Input
-  - Input Types
-  - Reference
-  - Reset Button
-  - reset
-browser-compat: html.elements.input.input-reset
+page-type: html-element
+browser-compat: html.elements.input.type_reset
 ---
 
-{{HTMLRef("Input_types")}}
+{{HTMLSidebar}}
 
-{{HTMLElement("input")}} elements of type **`reset`** are rendered as buttons, with a default {{event("click")}} event handler that resets all of the inputs in the form to their initial values.
+{{HTMLElement("input")}} elements of type **`reset`** are rendered as buttons, with a default {{domxref("Element/click_event", "click")}} event handler that resets all inputs in the form to their initial values.
 
 {{EmbedInteractiveExample("pages/tabbed/input-reset.html", "tabbed-standard")}}
 
 > **Note:** You should usually avoid including reset buttons in your forms. They're rarely useful, and are instead more likely to frustrate users who click them by mistake (often while trying to click the [submit button](/en-US/docs/Web/HTML/Element/input/submit)).
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <td><strong>{{anch("Value")}}</strong></td>
-      <td>A {{domxref("DOMString")}} used as the button's label</td>
-    </tr>
-    <tr>
-      <td><strong>Events</strong></td>
-      <td>{{domxref("Element/click_event", "click")}}</td>
-    </tr>
-    <tr>
-      <td><strong>Supported common attributes</strong></td>
-      <td>
-        {{htmlattrxref("type", "input")}} and
-        {{htmlattrxref("value", "input")}}
-      </td>
-    </tr>
-    <tr>
-      <td><strong>IDL attributes</strong></td>
-      <td><code>value</code></td>
-    </tr>
-    <tr>
-      <td><strong>Methods</strong></td>
-      <td>None</td>
-    </tr>
-  </tbody>
-</table>
-
 ## Value
 
-An `<input type="reset">` element's {{htmlattrxref("value", "input")}} attribute contains a {{domxref("DOMString")}} that is used as the button's label. Buttons such as `reset` don't have a value otherwise.
+An `<input type="reset">` element's {{htmlattrxref("value", "input")}} attribute contains a string that is used as the button's label. Buttons such as `reset` don't have a value otherwise.
 
 ### Setting the value attribute
 
 ```html
-<input type="reset" value="Reset the form">
+<input type="reset" value="Reset the form" />
 ```
 
 {{EmbedLiveSample("Setting_the_value_attribute", 650, 30)}}
 
 ### Omitting the value attribute
 
-If you don't specify a `value`, you get an button with the default label (typically "Reset," but this will vary depending on the {{Glossary("user agent")}}):
+If you don't specify a `value`, you get a button with the default label (typically "Reset," but this will vary depending on the {{Glossary("user agent")}}):
 
 ```html
-<input type="reset">
+<input type="reset" />
 ```
 
 {{EmbedLiveSample("Omitting_the_value_attribute", 650, 30)}}
@@ -86,10 +47,10 @@ We'll begin by creating a simple reset button:
 <form>
   <div>
     <label for="example">Type in some sample text</label>
-    <input id="example" type="text">
+    <input id="example" type="text" />
   </div>
   <div>
-    <input type="reset" value="Reset the form">
+    <input type="reset" value="Reset the form" />
   </div>
 </form>
 ```
@@ -110,11 +71,10 @@ In this example, <kbd>r</kbd> is specified as the access key (you'll need to pre
 <form>
   <div>
     <label for="example">Type in some sample text</label>
-    <input id="example" type="text">
+    <input id="example" type="text" />
   </div>
   <div>
-    <input type="reset" value="Reset the form"
-     accesskey="r">
+    <input type="reset" value="Reset the form" accesskey="r" />
   </div>
 </form>
 ```
@@ -128,7 +88,7 @@ The problem with the above example is that there's no way for the user to know w
 To disable a reset button, specify the {{htmlattrxref("disabled")}} global attribute on it, like so:
 
 ```html
-<input type="reset" value="Disabled" disabled>
+<input type="reset" value="Disabled" disabled />
 ```
 
 You can enable and disable buttons at run time by setting `disabled` to `true` or `false`; in JavaScript this looks like `btn.disabled = true` or `btn.disabled = false`.
@@ -142,6 +102,44 @@ Buttons don't participate in constraint validation; they have no real value to b
 ## Examples
 
 We've included simple examples above. There isn't really anything more to say about reset buttons.
+
+## Technical summary
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <td><strong><a href="#value">Value</a></strong></td>
+      <td>A string used as the button's label</td>
+    </tr>
+    <tr>
+      <td><strong>Events</strong></td>
+      <td>{{domxref("Element/click_event", "click")}}</td>
+    </tr>
+    <tr>
+      <td><strong>Supported common attributes</strong></td>
+      <td>
+        {{htmlattrxref("type", "input")}} and
+        {{htmlattrxref("value", "input")}}
+      </td>
+    </tr>
+    <tr>
+      <td><strong>IDL attributes</strong></td>
+      <td><code>value</code></td>
+    </tr>
+    <tr>
+      <td><strong>DOM interface</strong></td>
+      <td><p>{{domxref("HTMLInputElement")}}</p></td>
+    </tr>
+    <tr>
+      <td><strong>Methods</strong></td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <td><strong>Implicit ARIA Role</strong></td>
+      <td><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/button_role"><code>button</code></a></td>
+    </tr>
+  </tbody>
+</table>
 
 ## Specifications
 

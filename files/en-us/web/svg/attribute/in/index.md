@@ -1,12 +1,10 @@
 ---
 title: in
 slug: Web/SVG/Attribute/in
-tags:
-  - Filters
-  - NeedsCompatTable
-  - SVG
-  - SVG Attribute
+page-type: svg-attribute
+spec-urls: https://drafts.fxtf.org/filter-effects/#element-attrdef-filter-primitive-in
 ---
+
 {{SVGRef}}
 
 The **`in`** attribute identifies input for the given filter primitive.
@@ -78,33 +76,59 @@ You can use this attribute with the following SVG elements:
 
 `BackgroundImage` is not supported as a filter source in modern browsers (see the [feComposite compatibility table](/en-US/docs/Web/SVG/Element/feComposite#browser_compatibility)). We therefore need to import one of the images to blend inside the filter itself, using an `<feImage>` element.
 
-> **Note:** Firefox [Bug 455986](https://bugzilla.mozilla.org/show_bug.cgi?id=455986) means that `feImage` cannot load partial images, including circles, rectangles, paths or other fragments defined in the document. So that this example works on more browsers, a full external image of the logo is loaded.
+> **Note:** Firefox [Bug 455986](https://bugzil.la/455986) means that `feImage` cannot load partial images, including circles, rectangles, paths or other fragments defined in the document. So that this example works on more browsers, a full external image of the logo is loaded.
 
 ### HTML
 
 ```html
 <div style="width: 420px; height: 220px;">
-<svg style="width:200px; height:200px; display: inline;" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-  <defs>
-    <filter id="backgroundMultiply">
-      <!-- This will not work. -->
-      <feBlend in="BackgroundImage" in2="SourceGraphic" mode="multiply"/>
-    </filter>
-  </defs>
-  <image xlink:href="mdn_logo_only_color.png" x="10%" y="10%" width="80%" height="80%"/>
-  <circle cx="50%" cy="40%" r="40%" fill="#c00" style="filter:url(#backgroundMultiply);" />
-</svg>
+  <svg
+    style="width:200px; height:200px; display: inline;"
+    xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+      <filter id="backgroundMultiply">
+        <!-- This will not work. -->
+        <feBlend in="BackgroundImage" in2="SourceGraphic" mode="multiply" />
+      </filter>
+    </defs>
+    <image
+      xlink:href="mdn_logo_only_color.png"
+      x="10%"
+      y="10%"
+      width="80%"
+      height="80%" />
+    <circle
+      cx="50%"
+      cy="40%"
+      r="40%"
+      fill="#c00"
+      style="filter:url(#backgroundMultiply);" />
+  </svg>
 
-<svg style="width:200px; height:200px; display: inline;" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-  <defs>
-    <filter id="imageMultiply">
-      <!-- This is a workaround. -->
-      <feImage xlink:href="mdn_logo_only_color.png" x="10%" y="10%" width="80%" height="80%"/>
-      <feBlend in2="SourceGraphic" mode="multiply"/>
-    </filter>
-  </defs>
-  <circle cx="50%" cy="40%" r="40%" fill="#c00" style="filter:url(#imageMultiply);"/>
-</svg>
+  <svg
+    style="width:200px; height:200px; display: inline;"
+    xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+      <filter id="imageMultiply">
+        <!-- This is a workaround. -->
+        <feImage
+          xlink:href="mdn_logo_only_color.png"
+          x="10%"
+          y="10%"
+          width="80%"
+          height="80%" />
+        <feBlend in2="SourceGraphic" mode="multiply" />
+      </filter>
+    </defs>
+    <circle
+      cx="50%"
+      cy="40%"
+      r="40%"
+      fill="#c00"
+      style="filter:url(#imageMultiply);" />
+  </svg>
 </div>
 ```
 
@@ -114,28 +138,4 @@ You can use this attribute with the following SVG elements:
 
 ## Specifications
 
-<table class="no-markdown">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        {{SpecName("Filters 1.0", "filters.html#FilterPrimitiveInAttribute", "in")}}
-      </td>
-      <td>{{Spec2("Filters 1.0")}}</td>
-      <td>No change</td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("SVG1.1", "#element-attrdef-filter-primitive-in", "in")}}
-      </td>
-      <td>{{Spec2("SVG1.1")}}</td>
-      <td>Initial definition</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}

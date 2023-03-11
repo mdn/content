@@ -1,19 +1,9 @@
 ---
-title: 'CSP: style-src'
+title: "CSP: style-src"
 slug: Web/HTTP/Headers/Content-Security-Policy/style-src
-tags:
-  - CSP
-  - Content
-  - Content-Security-Policy
-  - Directive
-  - HTTP
-  - Reference
-  - Security
-  - Style
-  - source
-  - style-src
-browser-compat: http.headers.csp.Content-Security-Policy.style-src
+browser-compat: http.headers.Content-Security-Policy.style-src
 ---
+
 {{HTTPSidebar}}
 
 The HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) **`style-src`** directive specifies valid sources for stylesheets.
@@ -66,10 +56,12 @@ Content-Security-Policy: style-src https://example.com/
 the following stylesheets are blocked and won't load:
 
 ```html
-<link href="https://not-example.com/styles/main.css" rel="stylesheet" type="text/css" />
+<link href="https://not-example.com/styles/main.css" rel="stylesheet" />
 
 <style>
-#inline-style { background: red; }
+  #inline-style {
+    background: red;
+  }
 </style>
 
 <style>
@@ -79,7 +71,7 @@ the following stylesheets are blocked and won't load:
 
 as well as styles loaded using the {{HTTPHeader("Link")}} header:
 
-```
+```http
 Link: <https://not-example.com/styles/stylesheet.css>;rel=stylesheet
 ```
 
@@ -92,17 +84,17 @@ Inline style attributes are also blocked:
 As well as styles that are applied in JavaScript by setting the `style` attribute directly, or by setting {{domxref("CSSStyleDeclaration.cssText", "cssText")}}:
 
 ```js
-document.querySelector('div').setAttribute('style', 'display:none;');
-document.querySelector('div').style.cssText = 'display:none;';
+document.querySelector("div").setAttribute("style", "display:none;");
+document.querySelector("div").style.cssText = "display:none;";
 ```
 
 However, styles properties that are set directly on the element's {{domxref("HTMLElement/style", "style")}} property will not be blocked, allowing users to safely manipulate styles via JavaScript:
 
 ```js
-document.querySelector('div').style.display = 'none';
+document.querySelector("div").style.display = "none";
 ```
 
-These types of manipulations can be prevented by disallowing Javascript via the {{CSP("script-src")}} CSP directive.
+These types of manipulations can be prevented by disallowing JavaScript via the {{CSP("script-src")}} CSP directive.
 
 ### Unsafe inline styles
 
@@ -118,7 +110,9 @@ The above Content Security Policy will allow inline styles like the {{HTMLElemen
 
 ```html
 <style>
-  #inline-style { background: red; }
+  #inline-style {
+    background: red;
+  }
 </style>
 
 <div style="display:none">Foo</div>
@@ -126,7 +120,7 @@ The above Content Security Policy will allow inline styles like the {{HTMLElemen
 
 You can use a nonce-source to only allow specific inline style blocks:
 
-```
+```http
 Content-Security-Policy: style-src 'nonce-2726c7f26c'
 ```
 
@@ -134,7 +128,9 @@ You will have to set the same nonce on the {{HTMLElement("style")}} element:
 
 ```html
 <style nonce="2726c7f26c">
-  #inline-style { background: red; }
+  #inline-style {
+    background: red;
+  }
 </style>
 ```
 
@@ -146,14 +142,18 @@ echo -n "#inline-style { background: red; }" | openssl dgst -sha256 -binary | op
 
 You can use a hash-source to only allow specific inline style blocks:
 
-```
+```http
 Content-Security-Policy: style-src 'sha256-ozBpjL6dxO8fsS4u6fwG1dFDACYvpNxYeBA6tzR+FY8='
 ```
 
 When generating the hash, don't include the {{HTMLElement("style")}} tags and note that capitalization and whitespace matter, including leading or trailing whitespace.
 
 ```html
-<style>#inline-style { background: red; }</style>
+<style>
+  #inline-style {
+    background: red;
+  }
+</style>
 ```
 
 ### Unsafe style expressions

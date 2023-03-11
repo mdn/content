@@ -1,15 +1,11 @@
 ---
 title: Tk
 slug: Web/HTTP/Headers/Tk
-tags:
-  - DNT
-  - HTTP
-  - Reference
-  - Response
-  - header
-  - tracking
+status:
+  - deprecated
 browser-compat: http.headers.Tk
 ---
+
 {{HTTPSidebar}}{{Deprecated_header}}
 
 The **`Tk`** response header indicates the tracking status that
@@ -30,7 +26,7 @@ applied to the corresponding request.
 
 ## Syntax
 
-```
+```http
 Tk: !  (under construction)
 Tk: ?  (dynamic)
 Tk: G  (gateway or multiple parties)
@@ -76,7 +72,7 @@ Tk: U  (updated)
 
 A `Tk` header for a resource that claims not to be tracking would look like:
 
-```
+```http
 Tk: N
 ```
 

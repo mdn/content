@@ -1,15 +1,10 @@
 ---
 title: ResizeObserverEntry.borderBoxSize
 slug: Web/API/ResizeObserverEntry/borderBoxSize
-tags:
-  - API
-  - Property
-  - Reference
-  - Resize Observer API
-  - ResizeObserverEntry
-  - borderBoxSize
+page-type: web-api-instance-property
 browser-compat: api.ResizeObserverEntry.borderBoxSize
 ---
+
 {{APIRef("Resize Observer API")}}
 
 The **`borderBoxSize`** read-only property of
@@ -32,25 +27,31 @@ multi-column scenarios. Each object in the array contains two properties:
     width; if the writing-mode is vertical, this is the vertical dimension, or height.
 
 > **Note:** For more explanation of writing modes and block and inline
-> dimensions, read [Handling
-> different text directions](/en-US/docs/Learn/CSS/Building_blocks/Handling_different_text_directions).
+> dimensions, read [Handling different text directions](/en-US/docs/Learn/CSS/Building_blocks/Handling_different_text_directions).
 
 ## Examples
 
 ```js
-const resizeObserver = new ResizeObserver(entries => {
-  for (let entry of entries) {
-    if(entry.borderBoxSize && entry.borderBoxSize.length > 0) {
-      entry.target.style.borderRadius = Math.min(100, (entry.borderBoxSize[0].inlineSize/10) +
-                                                      (entry.borderBoxSize[0].blockSize/10)) + 'px';
+const resizeObserver = new ResizeObserver((entries) => {
+  const calcBorderRadius = (size1, size2) =>
+    `${Math.min(100, size1 / 10 + size2 / 10)}px`;
+
+  for (const entry of entries) {
+    if (entry.borderBoxSize?.length > 0) {
+      entry.target.style.borderRadius = calcBorderRadius(
+        entry.borderBoxSize[0].inlineSize,
+        entry.borderBoxSize[0].blockSize
+      );
     } else {
-      entry.target.style.borderRadius = Math.min(100, (entry.contentRect.width/10) +
-                                                      (entry.contentRect.height/10)) + 'px';
+      entry.target.style.borderRadius = calcBorderRadius(
+        entry.contentRect.width,
+        entry.contentRect.height
+      );
     }
   }
 });
 
-resizeObserver.observe(document.querySelector('div'));
+resizeObserver.observe(document.querySelector("div"));
 ```
 
 ## Specifications

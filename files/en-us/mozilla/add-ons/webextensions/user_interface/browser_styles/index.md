@@ -1,14 +1,15 @@
 ---
 title: Browser styles
 slug: Mozilla/Add-ons/WebExtensions/user_interface/Browser_styles
-tags:
-  - Add-ons
-  - Browser style
-  - Example
-  - Extensions
-  - Guide
-  - WebExtensions
+page-type: guide
+browser-compat:
+  - webextensions.manifest.action
+  - webextensions.manifest.browser_action
+  - webextensions.manifest.page_action
+  - webextensions.manifest.sidebar_action
+  - webextensions.manifest.options_ui
 ---
+
 {{AddonSidebar}}
 
 Certain user interface components - browser and page action [popups](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Popups), [sidebars](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Sidebars), and [options pages](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Options_pages) - are specified by your extension in essentially the same way:
@@ -24,7 +25,7 @@ When considering using `browser_style: true`, you need to test your extension wi
 
 > **Note:** **Google Chrome** and **Opera** use `chrome_style` instead of `browser_style`, so if you wish to support them, you need to add both keys.
 
-In Firefox, the stylesheet can be seen at `chrome://browser/content/extension.css`. The extra stylesheet at `chrome://browser/content/extension-mac.css` is also included on OS X.
+In Firefox, the stylesheet can be seen at `chrome://browser/content/extension.css`. The extra stylesheet at `chrome://browser/content/extension-mac.css` is also included on macOS.
 
 Most styles are automatically applied, but some elements require you to add the non-standard `browser-style` class to get their styling, as detailed in the table below:
 
@@ -99,17 +100,18 @@ Most styles are automatically applied, but some elements require you to add the 
 &#x3C;label for="op2">Option 2&#x3C;/label>
 &#x3C;/div></pre
         >
+
 </td>
 </tr>
 
   </tbody>
 </table>
 
-> **Note:** See {{bug(1465256)}} for removal of this unnecessary requirement.
+> **Note:** See [Firefox bug 1465256](https://bugzil.la/1465256) for removal of this unnecessary requirement.
 
 ## Browser compatibility
 
-{{Compat("webextensions.browser_style")}}
+{{Compat}}
 
 ## Firefox Panel Components
 
@@ -230,6 +232,7 @@ The [legacy Firefox Style Guide](https://firefoxux.github.io/StyleGuide/#/naviga
 &#x3C;/div>
 &#x3C;/div></pre
         >
+
 </td>
 </tr>
 
@@ -316,8 +319,6 @@ button.panel-section-tabs-button {
   background-color: unset;
   font: inherit;
   text-shadow: inherit;
-  -webkit-appearance: none;
-  -moz-appearance: none;
   appearance: none;
   border: none;
 }
@@ -394,7 +395,7 @@ button.panel-section-tabs-button {
 .panel-list-item > .text-shortcut {
   color: #808080;
   font-family: "Lucida Grande", caption;
-  font-size: .847em;
+  font-size: 0.847em;
   justify-content: flex-end;
 }
 
@@ -425,7 +426,7 @@ button.panel-section-tabs-button {
 .panel-section-footer-button > .text-shortcut {
   color: #808080;
   font-family: "Lucida Grande", caption;
-  font-size: .847em;
+  font-size: 0.847em;
 }
 
 .panel-section-footer-button:hover {
@@ -464,10 +465,10 @@ button.panel-section-tabs-button {
 body {
   background: #fcfcfc;
   background-clip: padding-box;
-  border: 1px solid rgba(24,26,27,.2);
-  box-shadow: 0 3px 5px rgba(24,26,27,.1),0 0 7px rgba(24,26,27,.1);
+  border: 1px solid rgba(24, 26, 27, 0.2);
+  box-shadow: 0 3px 5px rgba(24, 26, 27, 0.1), 0 0 7px rgba(24, 26, 27, 0.1);
   box-sizing: content-box;
-  margin: 2em auto .5em;
+  margin: 2em auto 0.5em;
   width: 384px;
 }
 

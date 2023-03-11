@@ -1,11 +1,10 @@
 ---
 title: paint-order
 slug: Web/SVG/Attribute/paint-order
-tags:
-  - SVG
-  - SVG Attribute
+page-type: svg-attribute
 browser-compat: svg.attributes.paint-order
 ---
+
 {{SVGRef}}
 
 The **`paint-order`** attribute specifies the order that the fill, stroke, and markers of a given shape or text element are painted.
@@ -57,14 +56,23 @@ You can use this attribute with the following SVG elements:
 ```html
 <svg xmlns="http://www.w3.org/2000/svg" width="400" height="200">
   <linearGradient id="g" x1="0" y1="0" x2="0" y2="1">
-    <stop stop-color="#888"/>
-    <stop stop-color="#ccc" offset="1"/>
+    <stop stop-color="#888" />
+    <stop stop-color="#ccc" offset="1" />
   </linearGradient>
-  <rect width="400" height="200" fill="url(#g)"/>
-  <g fill="crimson" stroke="white" stroke-width="6" stroke-linejoin="round"
-     text-anchor="middle" font-family="sans-serif" font-size="50px" font-weight="bold">
+  <rect width="400" height="200" fill="url(#g)" />
+  <g
+    fill="crimson"
+    stroke="white"
+    stroke-width="6"
+    stroke-linejoin="round"
+    text-anchor="middle"
+    font-family="sans-serif"
+    font-size="50px"
+    font-weight="bold">
     <text x="200" y="75">stroke over</text>
-    <text x="200" y="150" paint-order="stroke" id="stroke-under">stroke under</text>
+    <text x="200" y="150" paint-order="stroke" id="stroke-under">
+      stroke under
+    </text>
   </g>
 </svg>
 ```
@@ -83,24 +91,7 @@ The stroke under effect could be achieved via the following CSS property:
 
 ## Specifications
 
-<table class="no-markdown">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        {{SpecName("SVG2", "painting.html#PaintOrderProperty", "paint-order")}}
-      </td>
-      <td>{{Spec2("SVG2")}}</td>
-      <td>Initial definition</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 ## Browser compatibility
 

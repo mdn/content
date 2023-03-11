@@ -1,27 +1,27 @@
 ---
 title: TrustedHTML.toJSON()
 slug: Web/API/TrustedHTML/toJSON
-tags:
-  - API
-  - Method
-  - Reference
-  - toJSON
-  - TrustedHTML
+page-type: web-api-instance-method
 browser-compat: api.TrustedHTML.toJSON
 ---
+
 {{DefaultAPISidebar("Trusted Types API")}}
 
 The **`toJSON()`** method of the {{domxref("TrustedHTML")}} interface returns a JSON representation of the stored data.
 
 ## Syntax
 
-```js
-var json = TrustedHTML.toJSON();
+```js-nolint
+toJSON()
 ```
+
+### Parameters
+
+None.
 
 ### Return value
 
-A {{domxref("DOMString","string")}} containing a JSON representation of the stored data.
+A string containing a JSON representation of the stored data.
 
 ## Examples
 
@@ -29,7 +29,7 @@ The constant `escaped` is an object created via the Trusted Types policy escapeH
 
 ```js
 const escapeHTMLPolicy = trustedTypes.createPolicy("myEscapePolicy", {
-  createHTML: (string) => string.replace(/\>/g, "<")
+  createHTML: (string) => string.replace(/>/g, "<"),
 });
 
 const escaped = escapeHTMLPolicy.createHTML("<img src=x onerror=alert(1)>");

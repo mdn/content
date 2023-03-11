@@ -1,13 +1,10 @@
 ---
 title: Class selectors
 slug: Web/CSS/Class_selectors
-tags:
-  - CSS
-  - Reference
-  - Selector
-  - Selectors
+page-type: css-selector
 browser-compat: css.selectors.class
 ---
+
 {{CSSRef}}
 
 The [CSS](/en-US/docs/Web/CSS) **class selector** matches elements based on the contents of their {{htmlattrxref("class")}} attribute.
@@ -65,7 +62,9 @@ Note that this is equivalent to the following {{Cssxref("Attribute_selectors", "
 
 ```html
 <p class="red">This paragraph has red text.</p>
-<p class="red yellow-bg">This paragraph has red text and a yellow background.</p>
+<p class="red yellow-bg">
+  This paragraph has red text and a yellow background.
+</p>
 <p class="red fancy">This paragraph has red text and "fancy" styling.</p>
 <p>This is just a regular paragraph.</p>
 ```

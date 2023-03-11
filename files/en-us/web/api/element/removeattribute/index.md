@@ -1,16 +1,10 @@
 ---
 title: Element.removeAttribute()
 slug: Web/API/Element/removeAttribute
-tags:
-  - API
-  - DOM
-  - Element
-  - Method
-  - Reference
-  - remove
-  - removeAttribute
+page-type: web-api-instance-method
 browser-compat: api.Element.removeAttribute
 ---
+
 {{ APIRef("DOM") }}
 
 The {{domxref("Element")}} method
@@ -19,20 +13,20 @@ specified name from the element.
 
 ## Syntax
 
-```js
-element.removeAttribute(attrName);
+```js-nolint
+removeAttribute(attrName)
 ```
 
 ### Parameters
 
 - `attrName`
-  - : A {{domxref("DOMString")}} specifying the name of the attribute to remove from the
+  - : A string specifying the name of the attribute to remove from the
     element. If the specified attribute does not exist, `removeAttribute()`
     returns without generating an error.
 
 ### Return value
 
-`undefined`.
+None ({{jsxref("undefined")}}).
 
 ## Usage notes
 
@@ -43,7 +37,7 @@ You should use `removeAttribute()` instead of setting the attribute value to
 
 {{ DOMAttributeMethods() }}
 
-## Example
+## Examples
 
 ```js
 // Given: <div id="div1" align="left" width="200px">

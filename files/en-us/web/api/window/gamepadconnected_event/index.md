@@ -1,20 +1,15 @@
 ---
 title: 'Window: gamepadconnected event'
 slug: Web/API/Window/gamepadconnected_event
-tags:
-  - API
-  - Event
-  - Reference
-  - Gamepad API
-  - Window
-  - gamepadconnected
+page-type: web-api-event
 browser-compat: api.Window.gamepadconnected_event
 ---
+
 {{APIRef}}
 
 The `gamepadconnected` event is fired when the browser detects that a gamepad has been connected or the first time a button/axis of the gamepad is used.
 
-The event will not fire if disallowed by the document's {{httpheader('Feature-Policy/gamepad','gamepad')}} [Feature Policy](/en-US/docs/Web/HTTP/Feature_Policy).
+The event will not fire if disallowed by the document's {{httpheader('Permissions-Policy/gamepad','gamepad')}} [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy).
 
 This event is not cancelable and does not bubble.
 
@@ -23,7 +18,7 @@ This event is not cancelable and does not bubble.
 To be informed when a gamepad is connected, you can add a handler to the window using {{domxref("EventTarget.addEventListener", "addEventListener()")}}, like this:
 
 ```js
-window.addEventListener('gamepadconnected', event => {
+window.addEventListener('gamepadconnected', (event) => {
     // All buttons and axes values can be accessed through
     const gamepad = event.gamepad;
 });
@@ -32,10 +27,10 @@ window.addEventListener('gamepadconnected', event => {
 Alternatively, you can use the `window.ongamepadconnected` event handler property to establish a handler for the `gamepadconnected` event:
 
 ```js
-window.ongamepadconnected = event => {
+window.ongamepadconnected = (event) => {
     // All buttons and axes values can be accessed through
     const gamepad = event.gamepad;
-});
+};
 ```
 
 ## Specifications

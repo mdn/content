@@ -1,15 +1,14 @@
 ---
-title: 'Element: MSGestureStart event'
+title: "Element: MSGestureStart event"
 slug: Web/API/Element/MSGestureStart_event
-tags:
-  - Event
-  - Non-standard
-  - Reference
-browser-compat: api.Element.MSGestureStart_event
+page-type: web-api-event
+status:
+  - non-standard
 ---
+
 {{APIRef}}{{Non-standard_header}}
 
-The **`MSGestureStart`** event is fired when there's a new point of contact on the touch surface, thus starting a new gesture. When the gesture has ended, a {{event("MSGestureEnd")}} event will be fired.
+The **`MSGestureStart`** event is fired when there's a new point of contact on the touch surface, thus starting a new gesture. When the gesture has ended, a {{domxref("Element/MSGestureEnd_event", "MSGestureEnd")}} event will be fired.
 
 It is a proprietary event specific to Microsoft Edge and Internet Explorer.
 
@@ -40,7 +39,7 @@ Not part of any specification.
 
 ## Browser compatibility
 
-{{Compat}}
+This was an IE-only feature. No modern browser supports it.
 
 ## See also
 

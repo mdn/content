@@ -1,31 +1,133 @@
 ---
 title: '<dialog>: The Dialog element'
 slug: Web/HTML/Element/dialog
-tags:
-  - Dialog
-  - Element
-  - HTML
-  - HTML interactive elements
-  - Reference
-  - Web
-  - polyfill
+page-type: html-element
 browser-compat: html.elements.dialog
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 The **`<dialog>`** [HTML](/en-US/docs/Web/HTML) element represents a dialog box or other interactive component, such as a dismissible alert, inspector, or subwindow.
+
+## Attributes
+
+This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
+
+> **Warning:** The `tabindex` attribute must not be used on the `<dialog>` element.
+
+- `open`
+  - : Indicates that the dialog is active and can be interacted with. When the `open` attribute is not set, the dialog _shouldn't_ be shown to the user.
+    It is recommended to use the `.show()` or `.showModal()` methods to render dialogs, rather than the `open` attribute. If a `<dialog>` is opened using the `open` attribute, it will be non-modal.
+
+## Accessibility considerations
+
+The native HTML `<dialog>` element should be used in creating modal dialogs as it provides usability and accessibility features that must be replicated if using other elements for a similar purpose. Use the appropriate `.showModal()` or `.show()` method to render dialogs. If creating a custom dialog implementation, ensure all expected default behaviors are supported and proper labeling recommendations are followed.
+
+When implementing a dialog, it is important to consider the most appropriate place to set user focus. Explicitly indicating the initial focus placement by use of the [autofocus](/en-US/docs/Web/HTML/Global_attributes/autofocus) attribute will help ensure initial focus is set to the element deemed the best initial focus placement for any particular dialog. When in doubt, as it may not always be known where initial focus could be set within a dialog, particularly for instances where a dialog's content is dynamically rendered when invoked, then if necessary authors may decide focusing the `<dialog>` element itself would provide the best initial focus placement. When using {{domxref("HTMLDialogElement.showModal()")}} to open a `<dialog>`, focus is set on the first nested focusable element.
+
+Ensure a mechanism is provided to allow users to close a dialog. The most robust way to ensure all users can close a dialog is to include an explicit button to do so. For instance, a confirmation, cancel or close button as appropriate. Additionally, for those using a device with a keyboard, the <kbd>Escape</kbd> key is commonly expected to close modal dialogs as well. By default, a `<dialog>` invoked by the `showModal()` method will allow for its dismissal by the <kbd>Escape</kbd>. A non-modal dialog does not dismiss via the <kbd>Escape</kbd> key by default, and depending on what the non-modal dialog represents, it may not be desired for this behavior. If multiple modal dialogs are open, <kbd>Escape</kbd> should only close the last shown dialog. When using `<dialog>`, this behavior is provided by the browser.
+
+The `<dialog>` element is exposed by browsers similarly to custom dialogs using the ARIA [role="dialog"](/en-US/docs/Web/Accessibility/ARIA/Roles/dialog_role) attribute. `<dialog>` elements invoked by the `showModal()` method will have an implicit [aria-modal="true"](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-modal), whereas `<dialog>` elements invoked by the `show()` method, or rendered by use of the `open` attribute or changing the default `display` of a `<dialog>` will be exposed as `[aria-modal="false"]`. When implementing modal dialogs, everything other than the `<dialog>` and its contents should be rendered inert using the [`inert`](/en-US/docs/Web/HTML/Global_attributes/inert) attribute. When using `<dialog>` along with the `HTMLDialogElement.showModal()` method, this behavior is provided by the browser.
+
+## Usage notes
+
+- {{HTMLElement("form")}} elements can close a `<dialog>` if they have the attribute `method="dialog"` or if the button used to submit the form has `formmethod="dialog"` set. In this case, the state of the form controls are saved, not submitted, the `<dialog>` closes, and the {{domxref("HTMLDialogElement.returnValue", "returnValue")}} property gets set to the `value` of the button that was used to save the form's state.
+- The {{cssxref('::backdrop')}} CSS pseudo-element can be used to style the backdrop that is displayed behind a `<dialog>` element when the dialog is displayed with {{domxref("HTMLDialogElement.showModal()")}}. For example, to dim unreachable content behind the modal dialog.
+
+## Examples
+
+### Simple example
+
+The following will render a non-modal, or modal-less, dialog. The "OK" button allows the dialog to be closed when activated.
+
+```html
+<dialog open>
+  <p>Greetings, one and all!</p>
+  <form method="dialog">
+    <button>OK</button>
+  </form>
+</dialog>
+```
+
+{{EmbedLiveSample("Simple_example", "100%", 200)}}
+
+Because this dialog was opened via the `open` attribute, it is non-modal. In this example, when the dialog is dismissed, no method is provided to re-open it. Opening dialogs via {{domxref("HTMLDialogElement.show()")}} is preferred over the toggling of the boolean `open` attribute.
+
+### Advanced example
+
+This example opens a modal dialog when the "Show the dialog" button is activated. The dialog contains a form. Updating the value of the {{HTMLElement('select')}} updates the value of the "confirm" button.
+
+#### HTML
+
+```html
+<!-- A modal dialog containing a form -->
+<dialog id="favDialog">
+  <form method="dialog">
+    <p>
+      <label>Favorite animal:
+        <select>
+          <option value="default">Choose…</option>
+          <option>Brine shrimp</option>
+          <option>Red panda</option>
+          <option>Spider monkey</option>
+        </select>
+      </label>
+    </p>
+    <div>
+      <button value="cancel">Cancel</button>
+      <button id="confirmBtn" value="default">Confirm</button>
+    </div>
+  </form>
+</dialog>
+<p>
+  <button id="showDialog">Show the dialog</button>
+</p>
+<output></output>
+```
+
+#### JavaScript
+
+```js
+const showButton = document.getElementById('showDialog');
+const favDialog = document.getElementById('favDialog');
+const outputBox = document.querySelector('output');
+const selectEl = favDialog.querySelector('select');
+const confirmBtn = favDialog.querySelector('#confirmBtn');
+
+// "Show the dialog" button opens the <dialog> modally
+showButton.addEventListener('click', () => {
+    favDialog.showModal();
+});
+// "Favorite animal" input sets the value of the submit button
+selectEl.addEventListener('change', (e) => {
+  confirmBtn.value = selectEl.value;
+});
+// "Confirm" button of form triggers "close" on dialog because of [method="dialog"]
+favDialog.addEventListener('close', () => {
+  outputBox.value = `ReturnValue: ${favDialog.returnValue}.`;
+});
+```
+
+### Result
+
+{{EmbedLiveSample("Advanced_example", "100%", 300)}}
+
+Note the JavaScript did not include the {{domxref("HTMLDialogElement.close()")}} method. When a form in a dialog is submitted, if the method is `dialog`, the current state of the form is saved, not submitted, and the dialog gets closed.
+
+It is important to provide a mechanism to close a dialog within the `dialog` element. For instance, the <kbd>Esc</kbd> key does not close non-modal dialogs by default, nor can one assume that a user will even have access to a physical keyboard (e.g., someone using a touch screen device without access to a keyboard).
+
+## Technical summary
 
 <table class="properties">
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories"
+        <a href="/en-US/docs/Web/HTML/Content_categories"
           >Content categories</a
         >
       </th>
       <td>
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
           >Flow content</a
         >,
         <a href="/en-US/docs/Web/HTML/Element/Heading_Elements#sectioning_roots"
@@ -36,7 +138,7 @@ The **`<dialog>`** [HTML](/en-US/docs/Web/HTML) element represents a dialog box 
     <tr>
       <th scope="row">Permitted content</th>
       <td>
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
           >Flow content</a
         >
       </td>
@@ -49,7 +151,7 @@ The **`<dialog>`** [HTML](/en-US/docs/Web/HTML) element represents a dialog box 
       <th scope="row">Permitted parents</th>
       <td>
         Any element that accepts
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
           >flow content</a
         >
       </td>
@@ -64,7 +166,7 @@ The **`<dialog>`** [HTML](/en-US/docs/Web/HTML) element represents a dialog box 
     </tr>
     <tr>
       <th scope="row">Permitted ARIA roles</th>
-      <td>{{ARIARole("alertdialog")}}</td>
+      <td><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/alertdialog_role"><code>alertdialog</code></a></td>
     </tr>
     <tr>
       <th scope="row">DOM interface</th>
@@ -72,93 +174,6 @@ The **`<dialog>`** [HTML](/en-US/docs/Web/HTML) element represents a dialog box 
     </tr>
   </tbody>
 </table>
-
-## Attributes
-
-This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
-
-> **Warning:** The `tabindex` attribute must not be used on the `<dialog>` element.
-
-- {{htmlattrdef("open")}}
-  - : Indicates that the dialog is active and can be interacted with. When the `open` attribute is not set, the dialog _shouldn't_ be shown to the user.
-
-## Usage notes
-
-- {{HTMLElement("form")}} elements can close a dialog if they have the attribute `method="dialog"`. When such a form is submitted, the dialog closes with its {{domxref("HTMLDialogElement.returnValue", "returnValue")}} property set to the `value` of the button that was used to submit the form.
-- The {{cssxref('::backdrop')}} CSS pseudo-element can be used to style behind a `<dialog>` element when the dialog is displayed with {{domxref("HTMLDialogElement.showModal()")}}. For example, to dim unreachable content behind the modal dialog.
-
-## Examples
-
-### Simple example
-
-```html
-<dialog open>
-  <p>Greetings, one and all!</p>
-</dialog>
-```
-
-### Advanced example
-
-This example opens a pop-up dialog box that contains a form, when the "Update details" button is clicked.
-
-#### HTML
-
-```html
-<!-- Simple pop-up dialog box containing a form -->
-<dialog id="favDialog">
-  <form method="dialog">
-    <p><label>Favorite animal:
-      <select>
-        <option></option>
-        <option>Brine shrimp</option>
-        <option>Red panda</option>
-        <option>Spider monkey</option>
-      </select>
-    </label></p>
-    <menu>
-      <button value="cancel">Cancel</button>
-      <button id="confirmBtn" value="default">Confirm</button>
-    </menu>
-  </form>
-</dialog>
-
-<menu>
-  <button id="updateDetails">Update details</button>
-</menu>
-
-<output aria-live="polite"></output>
-```
-
-#### JavaScript
-
-```js
-var updateButton = document.getElementById('updateDetails');
-var favDialog = document.getElementById('favDialog');
-var outputBox = document.querySelector('output');
-var selectEl = document.querySelector('select');
-var confirmBtn = document.getElementById('confirmBtn');
-
-// "Update details" button opens the <dialog> modally
-updateButton.addEventListener('click', function onOpen() {
-  if (typeof favDialog.showModal === "function") {
-    favDialog.showModal();
-  } else {
-    alert("The <dialog> API is not supported by this browser");
-  }
-});
-// "Favorite animal" input sets the value of the submit button
-selectEl.addEventListener('change', function onSelect(e) {
-  confirmBtn.value = selectEl.value;
-});
-// "Confirm" button of form triggers "close" on dialog because of [method="dialog"]
-favDialog.addEventListener('close', function onClose() {
-  outputBox.value = favDialog.returnValue + " button clicked - " + (new Date()).toString();
-});
-```
-
-### Result
-
-{{EmbedLiveSample("Advanced_example", "100%", 300)}}
 
 ## Specifications
 
@@ -168,15 +183,10 @@ favDialog.addEventListener('close', function onClose() {
 
 {{Compat}}
 
-## Polyfill
-
-Include this polyfill to provide support for browsers without `<dialog>` element.
-
-[dialog-polyfill](https://github.com/GoogleChrome/dialog-polyfill)
-
 ## See also
 
 - The {{domxref("HTMLDialogElement/close_event", "close")}} event
 - The {{domxref("HTMLDialogElement/cancel_event", "cancel")}} event
 - [HTML forms guide](/en-US/docs/Learn/Forms).
 - The {{cssxref("::backdrop")}} pseudo-element
+- [dialog-polyfill](https://github.com/GoogleChrome/dialog-polyfill)

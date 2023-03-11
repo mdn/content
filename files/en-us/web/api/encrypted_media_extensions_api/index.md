@@ -1,19 +1,15 @@
 ---
 title: Encrypted Media Extensions API
 slug: Web/API/Encrypted_Media_Extensions_API
-tags:
-  - API
-  - EME
-  - Encrypted Media Extensions
-  - Encrypted Media Extensions API
-  - EncryptedMediaExtensions
-  - NeedsContent
-  - Overview
-  - Reference
+page-type: web-api-overview
+browser-compat: api.Navigator.requestMediaKeySystemAccess
 ---
-{{DefaultAPISidebar("Encrypted Media Extensions")}}
+
+{{DefaultAPISidebar("Encrypted Media Extensions")}} {{securecontext_header}}
 
 The Encrypted Media Extensions API provides interfaces for controlling the playback of content which is subject to a digital restrictions management scheme.
+
+Access to this API is provided through {{domxref("Navigator.requestMediaKeySystemAccess()")}}.
 
 ## Interfaces
 
@@ -24,18 +20,14 @@ The Encrypted Media Extensions API provides interfaces for controlling the playb
 - {{domxref('MediaKeySession')}}
   - : Represents a context for message exchange with a content decryption module (CDM).
 - {{domxref('MediaKeyStatusMap')}}
-  - : Is a read-only map of media key statuses by key IDs.
+  - : A read-only map of media key statuses by key IDs.
 - {{domxref('MediaKeySystemAccess')}}
   - : Provides access to a Key System for decryption and/or a content protection provider.
 
 ## Specifications
 
-| Specification            | Status               | Comment            |
-| ------------------------ | -------------------- | ------------------ |
-| {{SpecName('EME')}} | {{Spec2('EME')}} | Initial definition |
+{{Specifications}}
 
 ## Browser compatibility
 
-### Navigator.requestMediaKeySystemAccess()
-
-{{Compat("api.Navigator.requestMediaKeySystemAccess")}}
+{{Compat}}

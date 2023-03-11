@@ -1,11 +1,9 @@
 ---
 title: JavaScript Guide
 slug: Web/JavaScript/Guide
-tags:
-  - Guide
-  - JavaScript
-  - l10n:priority
+page-type: guide
 ---
+
 {{jsSidebar("JavaScript Guide")}}
 
 The JavaScript Guide shows you how to use [JavaScript](/en-US/docs/Web/JavaScript) and gives an overview of the language. If you need exhaustive information about a language feature, have a look at the [JavaScript reference](/en-US/docs/Web/JavaScript/Reference).
@@ -52,8 +50,8 @@ Overview: [Loops and iteration](/en-US/docs/Web/JavaScript/Guide/Loops_and_itera
 - [`do...while`](/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration#do...while_statement)
 - [`continue`](/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration#continue_statement)
 - [`break`](/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration#break_statement)
-- [`for..in`](/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration#for...in_statement)
-- [`for..of`](/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration#for...of_statement)
+- [`for...in`](/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration#for...in_statement)
+- [`for...of`](/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration#for...of_statement)
 
 ## Functions
 
@@ -98,8 +96,8 @@ Overview: [Text formatting](/en-US/docs/Web/JavaScript/Guide/Text_formatting)
 
 Overview: [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections)
 
-- [Arrays](/en-US/docs/Web/JavaScript/Guide/Indexed_collections#array_object)
-- [Typed arrays](/en-US/docs/Web/JavaScript/Guide/Indexed_collections#typed_arrays)
+- [Arrays](/en-US/docs/Web/JavaScript/Guide/Indexed_collections)
+- [Typed arrays](/en-US/docs/Web/JavaScript/Typed_arrays)
 
 ## Keyed collections
 
@@ -119,13 +117,14 @@ Overview: [Working with objects](/en-US/docs/Web/JavaScript/Guide/Working_with_O
 - [Defining methods](/en-US/docs/Web/JavaScript/Guide/Working_with_Objects#defining_methods)
 - [Getter and setter](/en-US/docs/Web/JavaScript/Guide/Working_with_Objects#defining_getters_and_setters)
 
-## Details of the object model
+## Using classes
 
-Overview: [Details of the object model](/en-US/docs/Web/JavaScript/Guide/Details_of_the_Object_Model)
+Overview: [Using classes](/en-US/docs/Web/JavaScript/Guide/Using_Classes)
 
-- [Prototype-based OOP](/en-US/docs/Web/JavaScript/Guide/Details_of_the_Object_Model#class-based_vs._prototype-based_languages)
-- [Creating object hierarchies](/en-US/docs/Web/JavaScript/Guide/Details_of_the_Object_Model#creating_the_hierarchy)
-- [Inheritance](/en-US/docs/Web/JavaScript/Guide/Details_of_the_Object_Model#property_inheritance_revisited)
+- [Declaring a class](/en-US/docs/Web/JavaScript/Guide/Using_Classes#declaring_a_class)
+- [Various class features](/en-US/docs/Web/JavaScript/Guide/Using_Classes#constructor)
+- [Extends and inheritance](/en-US/docs/Web/JavaScript/Guide/Using_Classes#extends_and_inheritance)
+- [Why classes?](/en-US/docs/Web/JavaScript/Guide/Using_Classes#why_classes)
 
 ## Promises
 
@@ -133,7 +132,7 @@ Overview: [Promises](/en-US/docs/Web/JavaScript/Guide/Using_promises)
 
 - [Guarantees](/en-US/docs/Web/JavaScript/Guide/Using_promises#guarantees)
 - [Chaining](/en-US/docs/Web/JavaScript/Guide/Using_promises#chaining)
-- [Error propagation](/en-US/docs/Web/JavaScript/Guide/Using_promises#error_propagation)
+- [Error handling](/en-US/docs/Web/JavaScript/Guide/Using_promises#error_handling)
 - [Composition](/en-US/docs/Web/JavaScript/Guide/Using_promises#composition)
 - [Timing](/en-US/docs/Web/JavaScript/Guide/Using_promises#timing)
 
@@ -143,7 +142,7 @@ Overview: [Iterators and generators](/en-US/docs/Web/JavaScript/Guide/Iterators_
 
 - [Iterators](/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators#iterators)
 - [Iterables](/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators#iterables)
-- [Generators](/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators#generators)
+- [Generators](/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators#generator_functions)
 
 ## Meta programming
 

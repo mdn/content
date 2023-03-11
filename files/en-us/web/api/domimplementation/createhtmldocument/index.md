@@ -1,15 +1,10 @@
 ---
 title: DOMImplementation.createHTMLDocument()
 slug: Web/API/DOMImplementation/createHTMLDocument
-tags:
-  - API
-  - DOM
-  - DOM Reference
-  - DOMImplementation
-  - Method
-  - Reference
+page-type: web-api-instance-method
 browser-compat: api.DOMImplementation.createHTMLDocument
 ---
+
 {{ApiRef("DOM")}}
 
 The
@@ -18,16 +13,21 @@ new HTML {{ domxref("Document") }}.
 
 ## Syntax
 
-```js
-const newDoc = document.implementation.createHTMLDocument(title)
+```js-nolint
+createHTMLDocument()
+createHTMLDocument(title)
 ```
 
 ### Parameters
 
-- `title`  {{optional_inline}} (except in IE)
-  - : A {{domxref("DOMString")}} containing the title to give the new HTML document.
+- `title` {{optional_inline}}
+  - : A string containing the title to give the new HTML document.
 
-## Example
+### Return value
+
+A new HTML {{domxref("Document")}} object.
+
+## Examples
 
 This example creates a new HTML document and inserts it into an {{
   HTMLElement("iframe") }} in the current document.
@@ -36,7 +36,10 @@ Here's the HTML for this example:
 
 ```html
 <body>
-  <p>Click <a href="javascript:makeDocument()">here</a> to create a new document and insert it below.</p>
+  <p>
+    Click <a href="javascript:makeDocument()">here</a> to create a new document
+    and insert it below.
+  </p>
   <iframe id="theFrame" src="about:blank" />
 </body>
 ```
@@ -53,7 +56,7 @@ function makeDocument() {
 
   try {
     doc.body.appendChild(p);
-  } catch(e) {
+  } catch (e) {
     console.log(e);
   }
 
@@ -83,13 +86,15 @@ replaces the contents of the frame with the new document's contents.
 The returned document is pre-constructed with the following HTML:
 
 ```html
-<!doctype html>
-<html>
-<head>
-<title>title</title>
-</head>
-<body>
-</body>
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8" />
+    <title>title</title>
+  </head>
+  <body>
+    …
+  </body>
 </html>
 ```
 

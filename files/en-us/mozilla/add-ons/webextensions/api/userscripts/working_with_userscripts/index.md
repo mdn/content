@@ -1,13 +1,9 @@
 ---
 title: Working with userScripts
 slug: Mozilla/Add-ons/WebExtensions/API/userScripts/Working_with_userScripts
-tags:
-  - API
-  - Extensions
-  - How-to
-  - Tutorial
-  - userScripts
+page-type: guide
 ---
+
 {{AddonSidebar}}
 
 By implementing userScripts, extension developers can modify how sites look and/or work to better meet user needs.
@@ -36,13 +32,13 @@ The "api_script" property indicates the path to the JavaScript file that contain
 
 Once you have downloaded the example:
 
-Navigate to about:debugging, click on **Load Temporary Add-on...** and double-click on the extension's manifest.
+Navigate to about:debugging, click on **Load Temporary Add-on…** and double-click on the extension's manifest.
 
 The default code included with the example allows you to load a `userScript` which will "eat" the content of pages matching the Hosts entry. Make any changes you want to make before clicking the **Register script** button at the bottom of the panel.
 
 In the following image, the extension will "eat" the content of pages whose domain name ends in .org. This is the default behavior for this extension.
 
-![](userscriptexample.png)
+![User script example](userscriptexample.png)
 
 Nothing will happen until you click the **Register script** button. The button implements the user script according to the settings on this dialog. That means that you can experiment with the behavior of the script without having to implement an extensions yourself.
 
@@ -103,7 +99,7 @@ This code first initializes the params object to pass values to the [userScripts
 
 Once the script has been registered, navigate to a page whose domain name ends in .org, and you will see something like this:
 
-![](user_script_in_action.png)
+![Status message indicating that websites ending in .org have been eaten: "This page has been eaten. {"OldStoredValue:" "website address", "NewStoredValue:" "website address"}"](user_script_in_action.png)
 
 ## See also
 

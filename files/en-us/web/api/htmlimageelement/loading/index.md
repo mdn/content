@@ -1,26 +1,10 @@
 ---
 title: HTMLImageElement.loading
 slug: Web/API/HTMLImageElement/loading
-tags:
-  - API
-  - Content
-  - Eager
-  - Graphics
-  - HTML DOM
-  - HTMLImageElement
-  - Images
-  - Layout
-  - Lazy
-  - Lazy-loading
-  - Loading
-  - Performance
-  - Pictures
-  - Property
-  - Reference
-  - load
-  - rendering
+page-type: web-api-instance-property
 browser-compat: api.HTMLImageElement.loading
 ---
+
 {{APIRef("HTML DOM")}}
 
 The {{domxref("HTMLImageElement")}}
@@ -32,16 +16,9 @@ This helps
 to optimize the loading of the document's contents by postponing loading the image until
 it's expected to be needed, rather than immediately during the initial page load.
 
-## Syntax
+## Value
 
-```js
-let imageLoadScheduling = htmlImageElement.loading;
-htmlImageElement.loading = eagerOrLazy;
-```
-
-### Value
-
-A {{domxref("DOMString")}} providing a hint to the user agent as to how to best
+A string providing a hint to the user agent as to how to best
 schedule the loading of the image to optimize page performance. The possible values are:
 
 - `eager`
@@ -87,10 +64,10 @@ To prevent this reflow from occurring, you should explicitly specify the size of
 image's presentation using the image element's {{htmlattrxref("width", "img")}} and
 {{htmlattrxref("height", "img")}} attributes. By establishing the intrinsic aspect ratio
 in this manner, you prevent elements from shifting around while the document loads,
-which can be disconcerting or offputting at best and can cause users to click the wrong
+which can be disconcerting or off-putting at best and can cause users to click the wrong
 thing at worst, depending on the exact timing of the deferred loads and reflows.
 
-## Example
+## Examples
 
 The `addImageToList()` function shown below adds a photo thumbnail to a list
 of items, using lazy-loading to avoid loading the image from the network until it's
@@ -128,5 +105,3 @@ function addImageToList(url) {
 - [Web performance](/en-US/docs/Learn/Performance) in the MDN Learning Area
 - [Lazy loading](/en-US/docs/Web/Performance/Lazy_loading) in the MDN web
   performance guide
-- {{SectionOnPage("/en-US/docs/Learn/HTML/Howto/Author_fast-loading_HTML_pages", "Use
-    lazy loading for images")}}

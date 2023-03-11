@@ -1,13 +1,8 @@
 ---
 title: An overview of HTTP
 slug: Web/HTTP/Overview
-tags:
-  - HTML
-  - HTTP
-  - Overview
-  - WebMechanics
-  - l10n:priority
 ---
+
 {{HTTPSidebar}}
 
 **HTTP** is a {{Glossary("protocol")}} for fetching resources such as HTML documents.
@@ -82,7 +77,7 @@ Proxies may perform numerous functions:
 
 ### HTTP is simple
 
-HTTP is generally designed to be simple and human readable, even with the added complexity introduced in HTTP/2 by encapsulating HTTP messages into frames.
+HTTP is generally designed to be simple and human-readable, even with the added complexity introduced in HTTP/2 by encapsulating HTTP messages into frames.
 HTTP messages can be read and understood by humans, providing easier testing for developers, and reduced complexity for newcomers.
 
 ### HTTP is extensible
@@ -122,24 +117,24 @@ The ability to relax the _origin constraint_, by contrast, was only added in the
 
 Here is a list of common features controllable with HTTP:
 
-- _[Caching](/en-US/docs/Web/HTTP/Caching)_
+- _[Caching](/en-US/docs/Web/HTTP/Caching)_:
   How documents are cached can be controlled by HTTP.
   The server can instruct proxies and clients about what to cache and for how long.
   The client can instruct intermediate cache proxies to ignore the stored document.
-- _Relaxing the origin constraint_
+- _Relaxing the origin constraint_:
   To prevent snooping and other privacy invasions, Web browsers enforce strict separation between Web sites.
   Only pages from the **same origin** can access all the information of a Web page.
   Though such a constraint is a burden to the server, HTTP headers can relax this strict separation on the server side, allowing a document to become a patchwork of information sourced from different domains; there could even be security-related reasons to do so.
-- _Authentication_
+- _Authentication_:
   Some pages may be protected so that only specific users can access them.
   Basic authentication may be provided by HTTP, either using the {{HTTPHeader("WWW-Authenticate")}} and similar headers, or by setting a specific session using [HTTP cookies](/en-US/docs/Web/HTTP/Cookies).
-- _[Proxy and tunneling](/en-US/docs/Web/HTTP/Proxy_servers_and_tunneling)_
+- _[Proxy and tunneling](/en-US/docs/Web/HTTP/Proxy_servers_and_tunneling)_:
   Servers or clients are often located on intranets and hide their true IP address from other computers.
   HTTP requests then go through proxies to cross this network barrier.
   Not all proxies are HTTP proxies.
   The SOCKS protocol, for example, operates at a lower level.
   Other protocols, like ftp, can be handled by these proxies.
-- _Sessions_
+- _Sessions_:
   Using HTTP cookies allows you to link requests with the state of the server.
   This creates sessions, despite basic HTTP being a state-less protocol.
   This is useful not only for e-commerce shopping baskets, but also for any site allowing user configuration of the output.
@@ -173,7 +168,7 @@ When a client wants to communicate with a server, either the final server or an 
    Content-Length: 29769
    Content-Type: text/html
 
-   <!DOCTYPE html... (here come the 29769 bytes of the requested web page)
+   <!DOCTYPE html>… (here come the 29769 bytes of the requested web page)
    ```
 
 4. Close or reuse the connection for further requests.
@@ -197,7 +192,7 @@ An example HTTP request:
 
 ![A basic HTTP request](http_request.png)
 
-Requests consists of the following elements:
+Requests consist of the following elements:
 
 - An HTTP [method](/en-US/docs/Web/HTTP/Methods), usually a verb like {{HTTPMethod("GET")}}, {{HTTPMethod("POST")}}, or a noun like {{HTTPMethod("OPTIONS")}} or {{HTTPMethod("HEAD")}} that defines the operation the client wants to perform.
   Typically, a client wants to fetch a resource (using `GET`) or post the value of an [HTML form](/en-US/docs/Learn/Forms) (using `POST`), though more operations may be needed in other cases.
@@ -227,7 +222,7 @@ The modern {{domxref("Fetch API")}} provides the same features with a more power
 
 Another API, [server-sent events](/en-US/docs/Web/API/Server-sent_events), is a one-way service that allows a server to send events to the client, using HTTP as a transport mechanism.
 Using the {{domxref("EventSource")}} interface, the client opens a connection and establishes event handlers.
-The client browser automatically converts the messages that arrive on the HTTP stream into appropriate {{domxref("Event")}} objects, delivering them to the event handlers that have been registered for the events' {{domxref("Event.type", "type")}} if known, or to the {{domxref("EventSource.onmessage", "onmessage")}} event handler if no type-specific event handler was established.
+The client browser automatically converts the messages that arrive on the HTTP stream into appropriate {{domxref("Event")}} objects. Then it delivers them to the event handlers that have been registered for the events' {{domxref("Event.type", "type")}} if known, or to the {{domxref("EventSource.message_event", "onmessage")}} event handler if no type-specific event handler was established.
 
 ## Conclusion
 
@@ -235,4 +230,4 @@ HTTP is an extensible protocol that is easy to use.
 The client-server structure, combined with the ability to add headers, allows HTTP to advance along with the extended capabilities of the Web.
 
 Though HTTP/2 adds some complexity by embedding HTTP messages in frames to improve performance, the basic structure of messages has stayed the same since HTTP/1.0.
-Session flow remains simple, allowing it to be investigated and debugged with a simple [HTTP message monitor](/en-US/docs/Tools/Network_Monitor).
+Session flow remains simple, allowing it to be investigated and debugged with a simple [HTTP message monitor](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html).

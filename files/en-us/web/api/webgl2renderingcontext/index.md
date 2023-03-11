@@ -1,13 +1,10 @@
 ---
 title: WebGL2RenderingContext
 slug: Web/API/WebGL2RenderingContext
-tags:
-  - API
-  - Reference
-  - WebGL
-  - WebGL2
+page-type: web-api-interface
 browser-compat: api.WebGL2RenderingContext
 ---
+
 {{APIRef("WebGL")}}
 
 The **WebGL2RenderingContext** interface provides the OpenGL ES 3.0 rendering context for the drawing surface of an HTML {{HTMLElement("canvas")}} element.
@@ -15,8 +12,8 @@ The **WebGL2RenderingContext** interface provides the OpenGL ES 3.0 rendering co
 To get an object of this interface, call {{domxref("HTMLCanvasElement.getContext()", "getContext()")}} on a `<canvas>` element, supplying "webgl2" as the argument:
 
 ```js
-var canvas = document.getElementById('myCanvas');
-var gl = canvas.getContext('webgl2');
+const canvas = document.getElementById('myCanvas');
+const gl = canvas.getContext('webgl2');
 ```
 
 > **Note:** WebGL 2 is an extension to WebGL 1. The `WebGL2RenderingContext` interface implements all members of the {{domxref("WebGLRenderingContext")}} interface. Some methods of the WebGL 1 context can accept additional values when used in a WebGL 2 context. You will find this info noted on the WebGL 1 reference pages.
@@ -87,7 +84,7 @@ See the [WebGL constants](/en-US/docs/Web/API/WebGL_API/Constants) page.
 
 ## Uniforms and attributes
 
-- {{domxref("WebGL2RenderingContext.uniform()", "WebGL2RenderingContext.uniform[1234][uif][v]()")}}
+- [`WebGL2RenderingContext.uniform[1234][uif][v]()`](/en-US/docs/Web/API/WebGL2RenderingContext/uniform)
   - : Methods specifying values of uniform variables.
 - {{domxref("WebGL2RenderingContext.uniformMatrix()", "WebGL2RenderingContext.uniformMatrix[234]x[234]fv()")}}
   - : Methods specifying matrix values for uniform variables.

@@ -1,13 +1,10 @@
 ---
 title: edgeMode
 slug: Web/SVG/Attribute/edgeMode
-tags:
-  - Filters
-  - NeedsCompatTable
-  - NeedsExample
-  - SVG
-  - SVG Attribute
+page-type: svg-attribute
+spec-urls: https://drafts.fxtf.org/filter-effects/#element-attrdef-feconvolvematrix-edgemode
 ---
+
 {{SVGRef}}
 
 The **`edgeMode`** attribute determines how to extend the input image as necessary with color values so that the matrix operations can be applied when the kernel is positioned at or near the edge of the input image.
@@ -75,35 +72,4 @@ For {{SVGElement("feGaussianBlur")}}, `edgeMode` determines how to extend the in
 
 ## Specifications
 
-<table class="no-markdown">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        {{SpecName("Filters 1.0", "#element-attrdef-feconvolvematrix-edgemode", "edgeMode for &lt;feGaussianBlur&gt;")}}
-      </td>
-      <td>{{Spec2("Filters 1.0")}}</td>
-      <td>Initial definition for <code>&#x3C;feGaussianBlur></code></td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("Filters 1.0", "#element-attrdef-feconvolvematrix-edgemode", "edgeMode for &lt;feConvolveMatrix&gt;")}}
-      </td>
-      <td>{{Spec2("Filters 1.0")}}</td>
-      <td>No change</td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("SVG1.1", "filters.html#feConvolveMatrixElementEdgeModeAttribute", "edgeMode for &lt;feConvolveMatrix&gt;")}}
-      </td>
-      <td>{{Spec2("SVG1.1")}}</td>
-      <td>Initial definition for <code>&#x3C;feConvolveMatrix></code></td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}

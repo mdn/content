@@ -1,12 +1,8 @@
 ---
 title: <xsl:comment>
 slug: Web/XSLT/Element/comment
-tags:
-  - Comment
-  - Element
-  - Reference
-  - XSLT
 ---
+
 {{ XsltRef() }}
 
 The `<xsl:comment>` element writes a comment to the output document. It must include only text.

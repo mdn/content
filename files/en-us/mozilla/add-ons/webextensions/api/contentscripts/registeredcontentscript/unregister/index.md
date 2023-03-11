@@ -2,21 +2,17 @@
 title: contentScripts.RegisteredContentScript.unregister()
 slug: >-
   Mozilla/Add-ons/WebExtensions/API/contentScripts/RegisteredContentScript/unregister
-tags:
-  - API
-  - Extensions
-  - Reference
-  - RegisteredContentScript.unregister
-  - contentScripts
+page-type: webextension-api-function
 browser-compat: webextensions.api.contentScripts.RegisteredContentScript.unregister
 ---
+
 {{AddonSidebar()}}
 
 Unregisters the content scripts represented by this `RegisteredContentScript` object.
 
 ## Syntax
 
-```js
+```js-nolint
 registered.unregister()
 ```
 
@@ -37,7 +33,7 @@ None.
 This code toggles a registered content script on a browser action click:
 
 ```js
-var registered = null;
+let registered = null;
 
 async function register() {
 

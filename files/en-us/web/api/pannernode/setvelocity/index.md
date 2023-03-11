@@ -1,21 +1,13 @@
 ---
 title: PannerNode.setVelocity()
 slug: Web/API/PannerNode/setVelocity
-tags:
-  - API
-  - Audio
-  - Deprecated
-  - Doppler Effect
-  - Method
-  - PannerNode
-  - Reference
-  - Web Audio API
-  - setVelocity
+page-type: web-api-instance-method
+status:
+  - deprecated
 browser-compat: api.PannerNode.setVelocity
 ---
-{{ APIRef("Web Audio API") }}
 
-{{deprecated_header}}
+{{APIRef("Web Audio API")}}{{Deprecated_Header}}
 
 The `setVelocity()` method of the {{ domxref("PannerNode") }} Interface defines the velocity vector of the audio source — how fast it is moving and in what direction.
 
@@ -23,25 +15,15 @@ This method was removed from the specification because of gaps in its design and
 
 The velocity relative to the listener is used to control the pitch change needed to conform with the [Doppler effect](https://en.wikipedia.org/wiki/Doppler_effect) due to the relative speed.
 
-As the vector controls both the direction of travel and its velocity, the three parameters `x`, `y` and `z` are expressed in _meters per second`.`_ The default value of the velocity vector is `(0,` `0,` `0)`.
+As the vector controls both the direction of travel and its velocity, the three parameters `x`, `y` and `z` are expressed in _meters per second_. The default value of the velocity vector is `(0, 0, 0)`.
 
 ## Syntax
 
-```js
-var audioCtx = new AudioContext();
-var panner = audioCtx.createPanner();
-panner.setVelocity(0,0,17);
+```js-nolint
+setVelocity(x, y, z)
 ```
 
-### Returns
-
-{{jsxref('undefined')}}.
-
-## Example
-
-See [`BaseAudioContext.createPanner()`](/en-US/docs/Web/API/BaseAudioContext/createPanner#example) for example code.
-
-## Parameters
+### Parameters
 
 - `x`
   - : The x value of the panner's velocity vector.
@@ -49,6 +31,14 @@ See [`BaseAudioContext.createPanner()`](/en-US/docs/Web/API/BaseAudioContext/cre
   - : The y value of the panner's velocity vector.
 - `z`
   - : The z value of the panner's velocity vector.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
+
+## Examples
+
+See [`BaseAudioContext.createPanner()`](/en-US/docs/Web/API/BaseAudioContext/createPanner#example) for example code.
 
 ## Specifications
 

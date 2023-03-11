@@ -1,22 +1,15 @@
 ---
 title: IDBObjectStore.put()
 slug: Web/API/IDBObjectStore/put
-tags:
-  - API
-  - Database
-  - IDBObjectStore
-  - IndexedDB
-  - Method
-  - Reference
-  - Storage
-  - put
+page-type: web-api-instance-method
 browser-compat: api.IDBObjectStore.put
 ---
+
 {{ APIRef("IndexedDB") }}
 
 The **`put()`** method of the {{domxref("IDBObjectStore")}} interface updates a given record in a database, or inserts a new record if the given item does not already exist.
 
-It returns an {{domxref("IDBRequest")}} object, and, in a separate thread, creates a [structured clone](https://www.whatwg.org/specs/web-apps/current-work/multipage/common-dom-interfaces.html#structured-clone) of the value and stores the cloned value in the object store. This is for adding new records, or updating existing records in an object store when the transaction's mode is `readwrite`. If the record is successfully stored, then a success event is fired on the returned request object with the `result` set to the key for the stored record, and the `transaction` set to the transaction in which this object store is opened.
+It returns an {{domxref("IDBRequest")}} object, and, in a separate thread, creates a [structured clone](https://html.spec.whatwg.org/multipage/common-dom-interfaces.html#structured-clone) of the value and stores the cloned value in the object store. This is for adding new records, or updating existing records in an object store when the transaction's mode is `readwrite`. If the record is successfully stored, then a success event is fired on the returned request object with the `result` set to the key for the stored record, and the `transaction` set to the transaction in which this object store is opened.
 
 The put method is an _update or insert_ method.
 See the {{domxref("IDBObjectStore.add")}} method for an _insert only_ method.
@@ -30,16 +23,16 @@ record will be updated, instead of a new record being inserted.
 
 ## Syntax
 
-```js
-let request = objectStore.put(item);
-let request = objectStore.put(item, key);
+```js-nolint
+put(item)
+put(item, key)
 ```
 
 ### Parameters
 
-- item
+- `item`
   - : The item you wish to update (or insert).
-- key {{optional_inline}}
+- `key` {{optional_inline}}
   - : The primary key of the record you want to update (e.g. from
     {{domxref("IDBCursor.primaryKey")}}). This is only needed for object stores that have
     an `autoIncrement` primary key, therefore the key is not in a field on the
@@ -48,8 +41,9 @@ let request = objectStore.put(item, key);
 
 ### Return value
 
-An {{domxref("IDBRequest")}} object on which subsequent events related to this
-operation are fired.
+An {{domxref("IDBRequest")}} object on which subsequent events related to this operation are fired.
+
+If the operation is successful, the value of the request's {{domxref("IDBRequest.result", "result")}} property is the key for the new or updated record.
 
 ### Exceptions
 
@@ -70,16 +64,7 @@ This method may raise a {{domxref("DOMException")}} of one of the following type
 - `DataCloneError` {{domxref("DOMException")}}
   - : Thrown if the data being stored could not be cloned by the internal structured cloning algorithm.
 
-## Parameters
-
-- value
-  - : The value to be stored.
-- key
-  - : The key to use to identify the record. If unspecified, it results to null. If the
-    object store has a key generator (e.g. autoincrement) the key of the object must be
-    passed in to update the object.
-
-## Example
+## Examples
 
 The following example requests a given record title; when that request is successful
 the `onsuccess` function gets the associated record from the
@@ -87,14 +72,16 @@ the `onsuccess` function gets the associated record from the
 as `objectStoreTitleRequest.result`), updates
 one property of the record, and then puts the updated record back into the object
 store in another request with `put()`. For a full working example, see
-our [To-do Notifications](https://github.com/mdn/to-do-notifications/) app
-([view example live](https://mdn.github.io/to-do-notifications/).)
+our [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) app
+([view example live](https://mdn.github.io/dom-examples/to-do-notifications/)).
 
 ```js
 const title = "Walk dog";
 
 // Open up a transaction as usual
-const objectStore = db.transaction(['toDoList'], "readwrite").objectStore('toDoList');
+const objectStore = db
+  .transaction(["toDoList"], "readwrite")
+  .objectStore("toDoList");
 
 // Get the to-do list object that has this title as it's title
 const objectStoreTitleRequest = objectStore.get(title);
@@ -110,7 +97,9 @@ objectStoreTitleRequest.onsuccess = () => {
   const updateTitleRequest = objectStore.put(data);
 
   // Log the transaction that originated this request
-  console.log("The transaction that originated this request is " + updateTitleRequest.transaction);
+  console.log(
+    `The transaction that originated this request is ${updateTitleRequest.transaction}`
+  );
 
   // When this new request succeeds, run the displayData() function again to update the display
   updateTitleRequest.onsuccess = () => {
@@ -135,5 +124,4 @@ objectStoreTitleRequest.onsuccess = () => {
 - Setting a range of keys: {{domxref("IDBKeyRange")}}
 - Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}
 - Using cursors: {{domxref("IDBCursor")}}
-- Reference example: [To-do
-  Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](https://mdn.github.io/to-do-notifications/).)
+- Reference example: [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([View the example live](https://mdn.github.io/dom-examples/to-do-notifications/)).

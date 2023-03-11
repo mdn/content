@@ -1,23 +1,19 @@
 ---
 title: XRHitTestResult.createAnchor()
 slug: Web/API/XRHitTestResult/createAnchor
-tags:
-  - API
-  - Method
-  - Reference
-  - AR
-  - VR
-  - XR
-  - WebXR
+page-type: web-api-instance-method
+status:
+  - experimental
 browser-compat: api.XRHitTestResult.createAnchor
 ---
-{{APIRef("WebXR Device API")}}
 
-The **`createAnchor()`** method of the {{domxref("XRHitTestResult")}} interface creates an {{domxref("XRAnchor")}} from a hit test result that is attached to a real world object.
+{{APIRef("WebXR Device API")}}{{SeeCompatTable}}
+
+The **`createAnchor()`** method of the {{domxref("XRHitTestResult")}} interface creates an {{domxref("XRAnchor")}} from a hit test result that is attached to a real-world object.
 
 ## Syntax
 
-```js
+```js-nolint
 createAnchor()
 ```
 
@@ -39,7 +35,7 @@ The following example starts with an {{domxref("XRHitTestResult")}} retrieved by
 hitTestResult.createAnchor().then((anchor) => {
   // add anchored objects to the scene
 }, (error) => {
-  console.error("Could not create anchor: " + error);
+  console.error(`Could not create anchor: ${error}`);
 });
 ```
 

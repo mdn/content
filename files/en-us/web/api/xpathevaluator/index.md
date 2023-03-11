@@ -1,25 +1,17 @@
 ---
 title: XPathEvaluator
 slug: Web/API/XPathEvaluator
-tags:
-  - API
-  - DOM
-  - DOM XPath API
-  - Document
-  - Interface
-  - Reference
-  - XML
-  - XPath
-  - XPathEvaluator
+page-type: web-api-interface
 browser-compat: api.XPathEvaluator
 ---
+
 {{APIRef("DOM XPath")}}
 
 The `XPathEvaluator` interface allows to compile and evaluate {{Glossary("XPath")}} expressions.
 
 It is implemented by the {{domxref("Document")}} interface.
 
-## Methods
+## Instance methods
 
 - {{DOMxRef("XPathEvaluator.createExpression()")}}
   - : Creates a parsed XPath expression with resolved namespaces.
@@ -42,10 +34,10 @@ The following example shows the use of the `XPathEvaluator` interface.
 ### JavaScript
 
 ```js
-var xpath = "//div";
-var evaluator = new XPathEvaluator();
-var expression = evaluator.createExpression(xpath);
-var result = expression.evaluate(document, XPathResult.ORDERED_NODE_SNAPSHOT_TYPE);
+const xpath = "//div";
+const evaluator = new XPathEvaluator();
+const expression = evaluator.createExpression(xpath);
+const result = expression.evaluate(document, XPathResult.ORDERED_NODE_SNAPSHOT_TYPE);
 document.querySelector("output").textContent = result.snapshotLength;
 ```
 

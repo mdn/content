@@ -1,30 +1,10 @@
 ---
 title: XRPose.emulatedPosition
 slug: Web/API/XRPose/emulatedPosition
-tags:
-  - API
-  - AR
-  - Orientation
-  - Position
-  - Property
-  - Read-only
-  - Reality
-  - Reference
-  - VR
-  - Viewpoint
-  - Virtual
-  - WebXR
-  - WebXR API
-  - WebXR Device API
-  - XR
-  - XRPose
-  - augmented
-  - emulatedPosition
-  - offset
-  - pose
-  - tracking
+page-type: web-api-instance-property
 browser-compat: api.XRPose.emulatedPosition
 ---
+
 {{APIRef}}
 
 The `emulatedPosition` read-only attribute of the

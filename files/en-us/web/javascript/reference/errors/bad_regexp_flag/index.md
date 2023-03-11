@@ -1,11 +1,9 @@
 ---
 title: 'SyntaxError: invalid regular expression flag "x"'
 slug: Web/JavaScript/Reference/Errors/Bad_regexp_flag
-tags:
-  - Error
-  - JavaScript
-  - SyntaxError
+page-type: javascript-error
 ---
+
 {{jsSidebar("Errors")}}
 
 The JavaScript exception "invalid regular expression flag" occurs when the flags in a regular expression contain any flag that is not one of: `g`, `i`, `m`, `s`, `u`, `y` or `d`.
@@ -14,10 +12,10 @@ It may also be raised if the expression contains more than one instance of a val
 
 ## Message
 
-```js
-SyntaxError: Syntax error in regular expression (Edge)
-SyntaxError: invalid regular expression flag "x" (Firefox)
-SyntaxError: Invalid regular expression flags (Chrome)
+```
+SyntaxError: Invalid regular expression flags (V8-based)
+SyntaxError: invalid regular expression flag x (Firefox)
+SyntaxError: Invalid regular expression: invalid flags (Safari)
 ```
 
 ## Error type
@@ -31,14 +29,14 @@ The regular expression contains invalid flags, or valid flags have been used mor
 The valid (allowed) flags are listed in [Regular expressions > Advanced searching with flags](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions#advanced_searching_with_flags), and reproduced below:
 
 | Flag | Description                                                                                                                             |
-| ---- | ----------------------------------------------------------------------------------------------------------------------------------------|
-| `g`  | Global search. See {{jsxref("RegExp.global", "global")}}                                                                                |
-| `i`  | Case-insensitive search. See {{jsxref("RegExp.sticky", "ignoreCase")}}.                                                                 |
-| `m`  | Multi-line search. See {{jsxref("RegExp.multiline", "multiline")}}.                                                                     |
-| `s`  | Allow `.` to match newlines (added in ECMAScript 2018). See {{jsxref("RegExp.dotAll", "dotAll")}}.                                      |
-| `u`  | Unicode; treat pattern as a sequence of Unicode code points. See {{jsxref("RegExp.unicode", "unicode")}}.                               |
-| `y`  | Perform a "sticky" search that matches starting at the current position in the target string. See {{jsxref("RegExp.sticky", "sticky")}} |
-| `d`  | Indices. Generate indices for substring matches. See {{jsxref("RegExp.hasIndices", "hasIndices")}}                                      |
+| ---- | --------------------------------------------------------------------------------------------------------------------------------------- |
+| `g`  | Global search. See {{jsxref("RegExp/global", "global")}}                                                                                |
+| `i`  | Case-insensitive search. See {{jsxref("RegExp/sticky", "ignoreCase")}}.                                                                 |
+| `m`  | Multi-line search. See {{jsxref("RegExp/multiline", "multiline")}}.                                                                     |
+| `s`  | Allow `.` to match newlines. See {{jsxref("RegExp/dotAll", "dotAll")}}.                                                                 |
+| `u`  | Unicode; treat pattern as a sequence of Unicode code points. See {{jsxref("RegExp/unicode", "unicode")}}.                               |
+| `y`  | Perform a "sticky" search that matches starting at the current position in the target string. See {{jsxref("RegExp/sticky", "sticky")}} |
+| `d`  | Indices. Generate indices for substring matches. See {{jsxref("RegExp/hasIndices", "hasIndices")}}                                      |
 
 ## Examples
 
@@ -53,7 +51,7 @@ const re = /pattern/flags;
 They can also be defined in the constructor function of the {{jsxref("RegExp")}} object (second parameter):
 
 ```js
-const re = new RegExp('pattern', 'flags');
+const re = new RegExp("pattern", "flags");
 ```
 
 Here is an example showing use of only correct flags.
@@ -75,8 +73,8 @@ Below is an example showing the use of some invalid flags `b`, `a` and `r`:
 The code below is incorrect, because `W`, `e` and `b` are not valid flags.
 
 ```js example-bad
-let obj = {
-  url: /docs/Web
+const obj = {
+  url: /docs/Web,
 };
 
 // SyntaxError: invalid regular expression flag "W"
@@ -86,8 +84,8 @@ An expression containing two slashes is interpreted as a regular expression lite
 Most likely the intent was to create a string literal, using single or double quotes as shown below:
 
 ```js example-good
-let obj = {
-  url: '/docs/Web'
+const obj = {
+  url: "/docs/Web",
 };
 ```
 

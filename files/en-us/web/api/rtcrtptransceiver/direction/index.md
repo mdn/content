@@ -1,19 +1,10 @@
 ---
 title: RTCRtpTransceiver.direction
 slug: Web/API/RTCRtpTransceiver/direction
-tags:
-  - API
-  - Media
-  - Property
-  - RTCRtpTransceiver
-  - RTP
-  - Reference
-  - Transceiver
-  - Transceiver Direction
-  - WebRTC
-  - direction
+page-type: web-api-instance-property
 browser-compat: api.RTCRtpTransceiver.direction
 ---
+
 {{APIRef("WebRTC")}}
 
 The {{domxref("RTCRtpTransceiver")}} property
@@ -25,15 +16,9 @@ Its value must be one of the strings defined in the table below.
 The transceiver's _current_ direction is indicated by the
 {{domxref("RTCRtpTransceiver.currentDirection", "currentDirection")}} property.
 
-## Syntax
+## Value
 
-```js
-var direction = RTCRtpTransceiver.direction
-```
-
-### Value
-
-A {{domxref("DOMString")}} whose value is one of the strings which are a member of the following values, indicating the transceiver's preferred direction.
+A string whose value is one of the strings which are a member of the following values, indicating the transceiver's preferred direction.
 
 <table class="standard-table">
   <thead>
@@ -94,7 +79,7 @@ When you change the value of `direction`, an `InvalidStateError`
 exception will occur if the connection is closed or the receiver is stopped.
 
 If the new value of `direction` is in fact different from the existing
-value, renegotiation of the connection is required, so a {{event("negotiationneeded")}}
+value, renegotiation of the connection is required, so a {{domxref("RTCPeerConnection.negotiationneeded_event", "negotiationneeded")}}
 event is sent to the {{domxref("RTCPeerConnection")}}.
 
 ### Effect on offers and answers

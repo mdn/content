@@ -1,14 +1,10 @@
 ---
 title: DOMRect.fromRect()
 slug: Web/API/DOMRect/fromRect
-tags:
-  - API
-  - DOMRect
-  - Geometry
-  - Method
-  - Reference
+page-type: web-api-static-method
 browser-compat: api.DOMRect.fromRect
 ---
+
 {{APIRef("Geometry Interfaces")}}
 
 The **`fromRect()`** static method of the
@@ -17,8 +13,9 @@ object with a given location and dimensions.
 
 ## Syntax
 
-```js
-DOMRect.fromRect(rectangle)
+```js-nolint
+fromRect()
+fromRect(rectangle)
 ```
 
 ### Parameters

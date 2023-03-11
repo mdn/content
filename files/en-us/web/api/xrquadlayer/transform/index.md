@@ -1,18 +1,13 @@
 ---
 title: XRQuadLayer.transform
 slug: Web/API/XRQuadLayer/transform
-tags:
-  - API
-  - Property
-  - Reference
-  - VR
-  - WebXR
-  - WebXR API
-  - WebXR Device API
-  - XR
+page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.XRQuadLayer.transform
 ---
-{{APIRef("WebXR Device API")}}
+
+{{APIRef("WebXR Device API")}}{{SeeCompatTable}}
 
 The **`transform`** property of the {{domxref("XRQuadLayer")}} interface represents the offset and orientation relative to the layer's {{domxref("XRQuadLayer.space", "space")}}.
 

@@ -1,11 +1,10 @@
 ---
 title: stroke-dashoffset
 slug: Web/SVG/Attribute/stroke-dashoffset
-tags:
-  - SVG
-  - SVG Attribute
+page-type: svg-attribute
 browser-compat: svg.attributes.presentation.stroke-dashoffset
 ---
+
 {{SVGRef}}
 
 The **`stroke-dashoffset`** attribute is a presentation attribute defining an offset on the rendering of the associated dash array.
@@ -30,7 +29,11 @@ You can use this attribute with the following SVG elements:
 ## Example
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
@@ -39,33 +42,47 @@ html,body,svg { height:100% }
   <line x1="0" y1="1" x2="30" y2="1" stroke="black" />
 
   <!-- No dash offset -->
-  <line x1="0" y1="3" x2="30" y2="3" stroke="black"
-        stroke-dasharray="3 1" />
+  <line x1="0" y1="3" x2="30" y2="3" stroke="black" stroke-dasharray="3 1" />
 
   <!--
   The start of the dash array computation
   is pulled by 3 user units
   -->
-  <line x1="0" y1="5" x2="30" y2="5" stroke="black"
-        stroke-dasharray="3 1"
-        stroke-dashoffset="3" />
+  <line
+    x1="0"
+    y1="5"
+    x2="30"
+    y2="5"
+    stroke="black"
+    stroke-dasharray="3 1"
+    stroke-dashoffset="3" />
 
   <!--
   The start of the dash array computation
   is pushed by 3 user units
   -->
-  <line x1="0" y1="7" x2="30" y2="7" stroke="black"
-        stroke-dasharray="3 1"
-        stroke-dashoffset="-3" />
+  <line
+    x1="0"
+    y1="7"
+    x2="30"
+    y2="7"
+    stroke="black"
+    stroke-dasharray="3 1"
+    stroke-dashoffset="-3" />
 
   <!--
   The start of the dash array computation
   is pulled by 1 user units which ends up
   in the same rendering as the previous example
   -->
-  <line x1="0" y1="9" x2="30" y2="9" stroke="black"
-        stroke-dasharray="3 1"
-        stroke-dashoffset="1" />
+  <line
+    x1="0"
+    y1="9"
+    x2="30"
+    y2="9"
+    stroke="black"
+    stroke-dasharray="3 1"
+    stroke-dashoffset="1" />
 
   <!--
   the following red lines highlight the
@@ -110,34 +127,10 @@ html,body,svg { height:100% }
 
 The offset is usually expressed in user units resolved against the {{SVGAttr('pathLength')}} but if a [\<percentage>](/en-US/docs/Web/SVG/Content_type#percentage) is used, the value is resolved as a percentage of the current viewport.
 
+## Specifications
+
+{{Specifications}}
+
 ## Browser compatibility
 
 {{Compat}}
-
-## Specifications
-
-<table class="no-markdown">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        {{SpecName("SVG2", "painting.html#StrokeDashoffsetProperty", "stroke-dashoffset")}}
-      </td>
-      <td>{{Spec2("SVG2")}}</td>
-      <td>Definition for shapes and texts</td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("SVG1.1", "painting.html#StrokeDashoffsetProperty", "stroke-dashoffset")}}
-      </td>
-      <td>{{Spec2("SVG1.1")}}</td>
-      <td>Initial definition for shapes and texts</td>
-    </tr>
-  </tbody>
-</table>

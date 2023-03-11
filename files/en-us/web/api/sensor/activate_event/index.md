@@ -1,16 +1,10 @@
 ---
-title: 'Sensor: activate event'
+title: "Sensor: activate event"
 slug: Web/API/Sensor/activate_event
-tags:
-  - API
-  - Generic Sensor API
-  - Reference
-  - Sensor
-  - Sensor APIs
-  - Sensors
-  - Event
+page-type: web-api-event
 browser-compat: api.Sensor.activate_event
 ---
+
 {{APIRef("Sensor API")}}
 
 The **`activate`** event is fired when a sensor becomes activated. It means that it will start obtaining readings.
@@ -23,9 +17,9 @@ on one of the [derived classes](/en-US/docs/Web/API/Sensor#interfaces_based_on_s
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('activate', event => { })
+addEventListener("activate", (event) => {});
 
-onactivate = event => { }
+onactivate = (event) => {};
 ```
 
 ## Event type
@@ -39,8 +33,8 @@ A generic {{domxref("Event")}} with no added properties.
 This example adds an event listener to log the activation of an {{domxref("Accelerometer")}}.
 
 ```js
-const acl = new Accelerometer({frequency: 60});
-acl.addEventListener('activate', () => console.log('Ready to measure.'));
+const acl = new Accelerometer({ frequency: 60 });
+acl.addEventListener("activate", () => console.log("Ready to measure."));
 acl.start();
 ```
 

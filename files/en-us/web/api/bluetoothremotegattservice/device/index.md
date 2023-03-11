@@ -1,30 +1,19 @@
 ---
 title: BluetoothRemoteGATTService.device
 slug: Web/API/BluetoothRemoteGATTService/device
-tags:
-  - API
-  - Bluetooth
-  - BluetoothRemoteGATTService
-  - Device
-  - Experimental
-  - Property
-  - Reference
-  - Web Bluetooth API
+page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.BluetoothRemoteGATTService.device
 ---
-{{SeeCompatTable}}
+
+{{APIRef("Bluetooth API")}}{{SeeCompatTable}}
 
 The **`BluetoothGATTService.device`** read-only property
 returns information about a Bluetooth device through an instance of
 {{domxref("BluetoothDevice")}}.
 
-## Syntax
-
-```js
-var bluetoothDeviceInstance = BluetoothGATTService.device
-```
-
-### Returns
+## Value
 
 An instance of {{domxref("BluetoothDevice")}}.
 

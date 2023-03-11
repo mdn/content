@@ -1,23 +1,20 @@
 ---
-title: '-moz-outline-radius-bottomleft'
+title: "-moz-outline-radius-bottomleft"
 slug: Web/CSS/-moz-outline-radius-bottomleft
-tags:
-  - CSS
-  - CSS Property
-  - NeedsCompatTable
-  - NeedsContent
-  - Non-standard
-  - Reference
-  - recipe:css-property
+page-type: css-property
+status:
+  - deprecated
+  - non-standard
 browser-compat: css.properties.-moz-outline-radius-bottomleft
 ---
-{{CSSRef}}{{deprecated_header}}
+
+{{CSSRef}}{{deprecated_header}}{{Non-standard_header}}
 
 In Mozilla applications, the **`-moz-outline-radius-bottomleft`** [CSS](/en-US/docs/Web/CSS) property can be used to round the bottom-left corner of an element's {{cssxref("outline")}}.
 
 ## Syntax
 
-The value of `-moz-outline-radius-bottomleft` is either a CSS {{cssxref("length", "&lt;length&gt;")}} or a [percentage](/en-US/docs/Web/CSS/percentage) of the corresponding dimensions of the border box. The {{cssxref("calc()", "calc()")}} function may be used as well.
+The value of `-moz-outline-radius-bottomleft` is either a CSS {{cssxref("length", "&lt;length&gt;")}} or a [percentage](/en-US/docs/Web/CSS/percentage) of the corresponding dimensions of the border box. The {{cssxref("calc", "calc()")}} function may be used as well.
 
 ### Values
 
@@ -32,11 +29,14 @@ The value of `-moz-outline-radius-bottomleft` is either a CSS {{cssxref("length"
 
 ## Formal syntax
 
-{{csssyntax}}
+```plain
+ -moz-outline-radius-bottomleft =
+  <outline-radius>
+```
 
 ## Examples
 
-### Rounding a outline
+### Rounding an outline
 
 Since this is a Firefox-only property, this example will not display the desired effect if you are viewing this in a browser other than Firefox.
 

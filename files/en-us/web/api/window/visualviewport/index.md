@@ -1,15 +1,10 @@
 ---
 title: Window.visualViewport
 slug: Web/API/Window/visualViewport
-tags:
-  - API
-  - Property
-  - Reference
-  - Visual Viewport API
-  - VisualViewport
-  - Window
+page-type: web-api-instance-property
 browser-compat: api.Window.visualViewport
 ---
+
 {{APIRef("Visual Viewport")}}
 
 The **`visualViewport`** read-only property of the

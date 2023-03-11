@@ -1,22 +1,17 @@
 ---
 title: backdrop-filter
 slug: Web/CSS/backdrop-filter
-tags:
-  - CSS
-  - CSS Property
-  - Graphics
-  - Layout
-  - NeedsContent
-  - Reference
-  - SVG
-  - SVG Filter
-  - Web
-  - recipe:css-property
+page-type: css-property
 browser-compat: css.properties.backdrop-filter
 ---
+
 {{CSSRef}}
 
 The **`backdrop-filter`** [CSS](/en-US/docs/Web/CSS) property lets you apply graphical effects such as blurring or color shifting to the area behind an element. Because it applies to everything _behind_ the element, to see the effect you must make the element or its background at least partially transparent.
+
+{{EmbedInteractiveExample("pages/css/backdrop-filter.html")}}
+
+## Syntax
 
 ```css
 /* Keyword value */
@@ -44,10 +39,9 @@ backdrop-filter: url(filters.svg#filter) blur(4px) saturate(150%);
 backdrop-filter: inherit;
 backdrop-filter: initial;
 backdrop-filter: revert;
+backdrop-filter: revert-layer;
 backdrop-filter: unset;
 ```
-
-## Syntax
 
 ### Values
 
@@ -75,7 +69,7 @@ backdrop-filter: unset;
   font-family: sans-serif;
   text-align: center;
   line-height: 1;
- -webkit-backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
   max-width: 50%;
   max-height: 50%;
@@ -89,7 +83,7 @@ body {
 }
 
 body {
-  background-image: url(https://picsum.photos/id/1080/6858/4574), linear-gradient(rgb(219, 166, 166), rgb(0, 0, 172));
+  background-image: url("anemones.jpg"), linear-gradient(rgb(219, 166, 166), rgb(0, 0, 172));
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;

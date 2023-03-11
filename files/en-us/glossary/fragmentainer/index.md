@@ -1,12 +1,9 @@
 ---
 title: Fragmentainer
 slug: Glossary/Fragmentainer
-tags:
-  - CSS
-  - CSS Fragmentation Specification
-  - Glossary
-  - fragmentainer
+page-type: glossary-definition
 ---
+
 A fragmentainer is defined in the [CSS Fragmentation Specification](https://www.w3.org/TR/css-break-3/) as follows:
 
 > A box—such as a page box, column box, or region—that contains a portion (or all) of a fragmented flow. Fragmentainers can be pre-defined, or generated as needed. When breakable content would overflow a fragmentainer in the block dimension, it breaks into the next container in its fragmentation context instead.

@@ -1,14 +1,11 @@
 ---
 title: Navigator.msLaunchUri()
 slug: Web/API/Navigator/msLaunchUri
-tags:
-  - API
-  - API:Microsoft Extensions
-  - MSLaunchUri
-  - Method
-  - Non-standard
-  - Reference
+page-type: web-api-instance-method
+status:
+  - non-standard
 ---
+
 {{APIRef("Microsoft Extensions")}}{{Non-standard_header}}
 
 The **`msLaunchUri()`** method is a Microsoft extension to the {{DOMxRef("Navigator")}} interface, which starts a service or app, such as an email client, that handles a given protocol. The Uniform Resource Identifier (URI) contains the protocol for the default service or app, such as `mailto://test@contoso.com`.
@@ -17,22 +14,24 @@ This proprietary method is specific to Internet Explorer, and Microsoft Edge ver
 
 ## Syntax
 
-```js
-navigator.msLaunchUri(uri, successCallback, noHandlerCallback);
+```js-nolint
+msLaunchUri(uri)
+msLaunchUri(uri, successCallback)
+msLaunchUri(uri, successCallback, noHandlerCallback)
 ```
 
 ### Parameters
 
 - `uri`
-  - : A {{domxref("DOMString")}} specifying the URL containing including the protocol of the document or resource to be displayed.
-- `successCallback`{{Optional_Inline}}
-  - : A function matching the signature of {{DOMxRef("MSLaunchUriCallback")}} to be executed if the protocol handler is present.
-- `noHandlerCallback`{{Optional_Inline}}
-  - : A function matching {{DOMxRef("MSLaunchUriCallback")}} to be executed if the protocol handler is _not_ present.
+  - : A string specifying the URL containing including the protocol of the document or resource to be displayed.
+- `successCallback` {{optional_inline}}
+  - : A function without any parameters to be executed if the protocol handler is present.
+- `noHandlerCallback` {{optional_inline}}
+  - : A function without any parameters to be executed if the protocol handler is _not_ present.
 
 ### Return value
 
-`undefined`.
+None ({{jsxref("undefined")}}).
 
 ## Usage notes
 
@@ -44,5 +43,4 @@ If the user's system does not have a program registered to handle a specific pro
 
 ## See also
 
-- {{DOMxRef("MSLaunchUriCallback")}}
-- [Microsoft API extensions](/en-US/docs/Web/API/Microsoft_API_extensions)
+- [Microsoft API extensions](/en-US/docs/Web/API/Microsoft_Extensions)

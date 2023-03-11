@@ -1,10 +1,8 @@
 ---
 title: Perceived performance
 slug: Learn/Performance/Perceived_performance
-tags:
-  - Perceived Performance
-  - Web Performance
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Performance/what_is_web_performance", "Learn/Performance/Measuring_performance", "Learn/Performance")}}
 
 **[Perceived performance](/en-US/docs/Glossary/Perceived_performance)** is a subjective measure of website performance, responsiveness, and reliability. In other words, how fast a website seems to the user. It is harder to quantify and measure than the actual speed of operation, but perhaps even more important.
@@ -41,17 +39,17 @@ A good general rule for improving perceived performance is that it is usually be
 
 > **Note:** Time appears to pass more quickly for users who are actively engaged, distracted, or entertained, than for those who are waiting passively for something to happen. Where possible, actively engage and inform users who are waiting for a task to complete.
 
-Similarly, it is better to display a "loading animation" as soon as a user clicks a link to perform a long running operation. While this doesn't change the time taken to complete the operation, the site feels more responsive, and the user knows that it is working on something useful.
+Similarly, it is better to display a "loading animation" as soon as a user clicks a link to perform a long-running operation. While this doesn't change the time taken to complete the operation, the site feels more responsive, and the user knows that it is working on something useful.
 
 ## Performance metrics
 
-There is no single metric or test that can be run on a site to evaluate how a user "feels". However there are a number of metrics that can be "helpful indicators":
+There is no single metric or test that can be run on a site to evaluate how a user "feels". However, there are a number of metrics that can be "helpful indicators":
 
 - [First paint](/en-US/docs/Glossary/First_paint)
   - : The time to start of first paint operation. Note that this change may not be visible; it can be a simple background color update or something even less noticeable.
 - [First Contentful Paint](/en-US/docs/Glossary/First_contentful_paint) (FCP)
   - : The time until first significant rendering (e.g. of text, foreground or background image, canvas or SVG, etc.). Note that this content is not necessarily useful or meaningful.
-- [First Meaningful Paint](/en-US/docs/Glossary/first_meaningful_paint) (FMP)
+- [First Meaningful Paint](/en-US/docs/Glossary/First_meaningful_paint) (FMP)
   - : The time at which useful content is rendered to the screen.
 - [Largest Contentful Paint](https://wicg.github.io/largest-contentful-paint/) (LCP)
   - : The render time of the largest content element visible in the viewport.
@@ -95,16 +93,3 @@ Making a content request on `keydown` rather than waiting for `keyup` can shave 
 By reducing the time that a user has to wait for _useful_ content, and keeping the site responsive and engaging, the users will feel like the site performs better — even the actual time to load resources stays the same.
 
 {{PreviousMenuNext("Learn/Performance/what_is_web_performance", "Learn/Performance/Measuring_performance", "Learn/Performance")}}
-
-## In this module
-
-- [The "why" of web performance](/en-US/docs/Learn/Performance/why_web_performance)
-- [What is web performance?](/en-US/docs/Learn/Performance/What_is_web_performance)
-- [How do users perceive performance?](/en-US/docs/Learn/Performance/Perceived_performance)
-- [Measuring performance](/en-US/docs/Learn/Performance/Measuring_performance)
-- [Multimedia: images](/en-US/docs/Learn/Performance/Multimedia)
-- [Multimedia: video](/en-US/docs/Learn/Performance/video)
-- [JavaScript performance](/en-US/docs/Learn/Performance/javascript_performance)
-- [HTML performance features](/en-US/docs/Learn/Performance/HTML)
-- [CSS performance features](/en-US/docs/Learn/Performance/CSS)
-- [Business case for performance](/en-US/docs/Learn/Performance/business_case_for_performance)

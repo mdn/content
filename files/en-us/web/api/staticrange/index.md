@@ -1,18 +1,10 @@
 ---
 title: StaticRange
 slug: Web/API/StaticRange
-tags:
-  - API
-  - Content Range
-  - DOM
-  - DOM API
-  - DOM Tree
-  - Interface
-  - Reference
-  - Static Range API
-  - StaticRange
+page-type: web-api-interface
 browser-compat: api.StaticRange
 ---
+
 {{APIRef("DOM")}}
 
 The [DOM](/en-US/docs/Web/API/Document_Object_Model) **`StaticRange`** interface extends {{domxref("AbstractRange")}} to provide a method to specify a range of content in the DOM whose contents don't update to reflect changes which occur within the DOM tree.
@@ -28,7 +20,7 @@ This interface offers the same set of properties and methods as `AbstractRange`.
 - {{domxref("StaticRange.StaticRange", "StaticRange()")}}
   - : Creates a new `StaticRange` object given the {{domxref("StaticRangeInit")}} dictionary specifying the default values for its properties.
 
-## Properties
+## Instance properties
 
 _The properties below are inherited from its parent interface, {{domxref("AbstractRange")}}._
 
@@ -42,11 +34,6 @@ _The properties below are inherited from its parent interface, {{domxref("Abstra
   - : Returns the DOM {{domxref("Node")}} which contains the starting point of the range (which is in turn identified by `startOffset`.
 - {{domxref("StaticRange.startOffset")}} {{ReadOnlyInline}}
   - : Returns an integer value indicating the offset into the node specified by `startContainer` at which the first character of the range is located.
-
-## Methods
-
-- {{domxref("StaticRange.toRange()")}}
-  - : Returns a new {{domxref("Range")}} object which describes the same range as the source `StaticRange`, but is "live" with values that change to reflect changes in the contents of the DOM tree.
 
 ## Usage notes
 

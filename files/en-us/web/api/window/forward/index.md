@@ -1,17 +1,12 @@
 ---
 title: Window.forward()
 slug: Web/API/Window/forward
-tags:
-  - API
-  - Deprecated
-  - Firefox
-  - HTML DOM
-  - Method
-  - Non-standard
-  - Deprecated
-  - Window
-  - forward
+page-type: web-api-instance-method
+status:
+  - deprecated
+  - non-standard
 ---
+
 {{APIRef}}{{Non-standard_header}} {{deprecated_header}}
 
 Moves the window one document forward in history. This was a Firefox-specific method and was removed in Firefox 31.
@@ -20,19 +15,19 @@ Moves the window one document forward in history. This was a Firefox-specific me
 
 ## Syntax
 
-```js
-window.forward();
+```js-nolint
+forward()
 ```
 
 ### Parameters
 
-None
+None.
 
 ### Return value
 
-`undefined`.
+None ({{jsxref("undefined")}}).
 
-## Example
+## Examples
 
 ```js
 function goForward() {

@@ -1,31 +1,13 @@
 ---
 title: XRWebGLLayer.getNativeFramebufferScaleFactor() static method
 slug: Web/API/XRWebGLLayer/getNativeFramebufferScaleFactor
-tags:
-  - API
-  - AR
-  - Effective
-  - Factor
-  - Reality
-  - Reference
-  - Scaling
-  - Static
-  - Static Method
-  - VR
-  - Virtual
-  - WebXR
-  - WebXR API
-  - WebXR Device API
-  - XR
-  - XRWebGLLayer
-  - augmented
-  - framebuffer
-  - getNativeFramebufferScaleFactor
-  - native
-  - resolution
+page-type: web-api-static-method
+status:
+  - experimental
 browser-compat: api.XRWebGLLayer.getNativeFramebufferScaleFactor
 ---
-{{APIRef("WebXR Device API")}}
+
+{{APIRef("WebXR Device API")}}{{SeeCompatTable}}
 
 The static method
 **`XRWebGLLayer.getNativeFramebufferScaleFactor()`** returns a
@@ -36,7 +18,7 @@ device's frame buffer.
 This information can be used when creating a new `XRWebGLLayer` to configure
 the `framebufferScaleFactor` in the `layerInit` configuration object
 specified when calling the `XRWebGLLayer()` constructor. See the
-{{anch("Usage notes")}} and {{anch("Examples")}} for details.
+[Usage notes](#usage_notes) and [Examples](#examples) for details.
 
 If the scaling factor is 1.0, then the frame buffer pixels and the native display
 pixels are the same size. If the scaling factor is greater than zero, then the frame
@@ -49,8 +31,8 @@ superscaling or anti-aliasing techniques to improve perceived image quality.
 
 ## Syntax
 
-```js
-let nativeScaling = XRWebGLLayer.getNativeFramebufferScaleFactor(session);
+```js-nolint
+getNativeFramebufferScaleFactor(session)
 ```
 
 ### Parameters
@@ -96,15 +78,14 @@ in a total frame buffer size of 1280 by 720 pixels, with each eye's half of the 
 being 640x720 pixels. Now we can see the coordinates of each of the viewports
 representing these two views:
 
-![](twoviewsviewportcoords-scaledby2.svg)
+![Framebuffer and viewports with coordinates](twoviewsviewportcoords-scaledby2.svg)
 
 Since each eye gets half of the frame buffer, the result is that the left eye gets a
 640x720 portion of the buffer with the viewport's `x` and `y` at
 0, the width at 640, and the height set to 720. The right eye gets the other half of the
 frame buffer, with its viewport's `x` set at 639.
 
-While [rendering a
-frame for this scene](/en-US/docs/Web/API/XRWebGLLayer#rendering_every_view_in_a_frame), we get the viewport for the view and apply it to WebGL, then
+While [rendering a frame for this scene](/en-US/docs/Web/API/XRWebGLLayer#rendering_every_view_in_a_frame), we get the viewport for the view and apply it to WebGL, then
 render the scene. This ensures that the scene we render will not only match the
 viewpoint we need to express (which is defined by the position and orientation data in
 the pose), but that the rendered output will be constrained within the correct portion
@@ -128,8 +109,7 @@ function requestNativeScaleWebGLLayer(gl, xrSession) {
 };
 ```
 
-This starts by calling the [WebGL
-rendering context](/en-US/docs/Web/API/WebGLRenderingContext) function {{domxref("WebGLRenderingContext.makeXRCompatible",
+This starts by calling the [WebGL rendering context](/en-US/docs/Web/API/WebGLRenderingContext) function {{domxref("WebGLRenderingContext.makeXRCompatible",
   "makeXRCompatible()")}}. When the returned {{jsxref("promise")}} resolves, we proceed by
 calling `XRWebGLLayer`'s `getNativeFramebufferScaleFactor()`
 static function to get the scale factor needed to reach the native resolution, and we
@@ -144,7 +124,7 @@ we can use for the {{domxref("XRSession")}}; we set it as the rendering surface 
 {{domxref("XRRenderState")}} dictionary's {{domxref("XRRenderState.baseLayer")}}
 property. The result is a rendering context that looks like the diagram below:
 
-![](twoviewsviewportcoords.svg)
+![Framebuffer and viewports with coordinates](twoviewsviewportcoords.svg)
 
 Each time the {{domxref("XRViewerPose")}}'s {{domxref("XRViewerPose.views", "views")}}
 are iterated over for rendering, the rendering loop obtains an {{domxref("XRView")}} for
@@ -163,5 +143,4 @@ same width and height: 1280x1440.
 ## See also
 
 - [WebXR Device API](/en-US/docs/Web/API/WebXR_Device_API)
-- [WebXR performance
-  guide](/en-US/docs/Web/API/WebXR_Device_API/Performance)
+- [WebXR performance guide](/en-US/docs/Web/API/WebXR_Device_API/Performance)

@@ -1,13 +1,8 @@
 ---
 title: HTTP authentication
 slug: Web/HTTP/Authentication
-tags:
-  - Access Control
-  - Authentication
-  - Guide
-  - HTTP
-  - Security
 ---
+
 {{HTTPSidebar}}
 
 HTTP provides a general framework for access control and authentication.
@@ -47,13 +42,13 @@ In all cases, the server may prefer returning a {{HTTPStatus("404")}} `Not Found
 ### Authentication of cross-origin images
 
 A potential security hole (that has since been fixed in browsers) was authentication of cross-site images.
-From [Firefox 59](/en-US/docs/Mozilla/Firefox/Releases/59) onwards, image resources loaded from different origins to the current document are no longer able to trigger HTTP authentication dialogs ({{bug(1423146)}}), preventing user credentials being stolen if attackers were able to embed an arbitrary image into a third-party page.
+From [Firefox 59](/en-US/docs/Mozilla/Firefox/Releases/59) onwards, image resources loaded from different origins to the current document are no longer able to trigger HTTP authentication dialogs ([Firefox bug 1423146](https://bugzil.la/1423146)), preventing user credentials being stolen if attackers were able to embed an arbitrary image into a third-party page.
 
 ### Character encoding of HTTP authentication
 
 Browsers use `utf-8` encoding for usernames and passwords.
 
-Firefox once used `ISO-8859-1`, but changed to `utf-8` for parity with other browsers and to avoid potential problems as described in {{bug(1419658)}}.
+Firefox once used `ISO-8859-1`, but changed to `utf-8` for parity with other browsers and to avoid potential problems as described in [Firefox bug 1419658](https://bugzil.la/1419658).
 
 ### WWW-Authenticate and Proxy-Authenticate headers
 
@@ -90,7 +85,7 @@ Some common authentication schemes include:
 - **Bearer**
   - : See {{rfc(6750)}}, bearer tokens to access OAuth 2.0-protected resources
 - **Digest**
-  - : See {{rfc(7616)}}. Firefox 93 and later support SHA-256 encryption. Previous versions only support MD5 hashing (not recommended).
+  - : See {{rfc(7616)}}. Firefox 93 and later support the SHA-256 algorithm. Previous versions only support MD5 hashing (not recommended).
 - **HOBA**
   - : See {{rfc(7486)}}, Section 3, **H**TTP **O**rigin-**B**ound **A**uthentication, digital-signature-based
 - **Mutual**
@@ -123,7 +118,7 @@ To password-protect a directory on an Apache server, you will need a `.htaccess`
 
 The `.htaccess` file typically looks like this:
 
-```
+```plain
 AuthType Basic
 AuthName "Access to the staging site"
 AuthUserFile /path/to/.htpasswd
@@ -142,7 +137,7 @@ user2:$apr1$O04r.y2H$/vEkesPhVInBByJUkXitA/
 For Nginx, you will need to specify a location that you are going to protect and the `auth_basic` directive that provides the name to the password-protected area.
 The `auth_basic_user_file` directive then points to a `.htpasswd` file containing the encrypted user credentials, just like in the Apache example above.
 
-```
+```plain
 location /status {
     auth_basic           "Access to the staging site";
     auth_basic_user_file /etc/apache2/.htpasswd;
@@ -153,12 +148,12 @@ location /status {
 
 Many clients also let you avoid the login prompt by using an encoded URL containing the username and the password like this:
 
-```example-bad
+```plain example-bad
 https://username:password@www.example.com/
 ```
 
 **The use of these URLs is deprecated**.
-In Chrome, the `username:password@` part in URLs is even [stripped out](https://bugs.chromium.org/p/chromium/issues/detail?id=82250#c7) for security reasons. In Firefox, it is checked if the site actually requires authentication and if not, Firefox will warn the user with a prompt "You are about to log in to the site "www\.example.com" with the username "username", but the website does not require authentication. This may be an attempt to trick you."
+In Chrome, the `username:password@` part in URLs is even [stripped out](https://crbug.com/82250#c7) for security reasons. In Firefox, it is checked if the site actually requires authentication and if not, Firefox will warn the user with a prompt "You are about to log in to the site `www.example.com` with the username `username`, but the website does not require authentication. This may be an attempt to trick you."
 
 ## See also
 

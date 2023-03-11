@@ -1,14 +1,8 @@
 ---
 title: Making PWAs work offline with Service workers
 slug: Web/Progressive_web_apps/Offline_Service_workers
-tags:
-  - Offline
-  - PWAs
-  - Progressive web apps
-  - Service Workers
-  - js13kGames
-  - progressive
 ---
+
 {{PreviousMenuNext("Web/Progressive_web_apps/App_structure", "Web/Progressive_web_apps/Installable_PWAs", "Web/Progressive_web_apps")}}
 
 Now that we've seen what the structure of js13kPWA looks like and have seen the basic shell up and running, let's look at how the offline capabilities using Service Worker are implemented. In this article, we look at how it is used in our [js13kPWA example](https://mdn.github.io/pwa-examples/js13kpwa/) ([see the source code also](https://github.com/mdn/pwa-examples/tree/master/js13kpwa)). We examine how to add offline functionality.
@@ -41,12 +35,10 @@ Enough theory — let's see some source code!
 
 We'll start by looking at the code that registers a new Service Worker, in the app.js file:
 
-> **Note:** We're using the [es6](http://es6-features.org/) **arrow functions** syntax in the Service Worker Implementation
-
 ```js
-if('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('./pwa-examples/js13kpwa/sw.js');
-};
+if ("serviceWorker" in navigator) {
+  navigator.serviceWorker.register("./pwa-examples/js13kpwa/sw.js");
+}
 ```
 
 If the service worker API is supported in the browser, it is registered against the site using the {{domxref("ServiceWorkerContainer.register()")}} method. Its contents reside in the sw\.js file, and can be executed after the registration is successful. It's the only piece of Service Worker code that sits inside the app.js file; everything else that is Service Worker-specific is written in the sw\.js file itself.
@@ -60,8 +52,8 @@ When registration is complete, the sw\.js file is automatically downloaded, then
 The API allows us to add event listeners for key events we are interested in — the first one is the `install` event:
 
 ```js
-self.addEventListener('install', (e) => {
-  console.log('[Service Worker] Install');
+self.addEventListener("install", (e) => {
+  console.log("[Service Worker] Install");
 });
 ```
 
@@ -70,26 +62,26 @@ In the `install` listener, we can initialize the cache and add files to it for o
 First, a variable for storing the cache name is created, and the app shell files are listed in one array.
 
 ```js
-const cacheName = 'js13kPWA-v1';
+const cacheName = "js13kPWA-v1";
 const appShellFiles = [
-  '/pwa-examples/js13kpwa/',
-  '/pwa-examples/js13kpwa/index.html',
-  '/pwa-examples/js13kpwa/app.js',
-  '/pwa-examples/js13kpwa/style.css',
-  '/pwa-examples/js13kpwa/fonts/graduate.eot',
-  '/pwa-examples/js13kpwa/fonts/graduate.ttf',
-  '/pwa-examples/js13kpwa/fonts/graduate.woff',
-  '/pwa-examples/js13kpwa/favicon.ico',
-  '/pwa-examples/js13kpwa/img/js13kgames.png',
-  '/pwa-examples/js13kpwa/img/bg.png',
-  '/pwa-examples/js13kpwa/icons/icon-32.png',
-  '/pwa-examples/js13kpwa/icons/icon-64.png',
-  '/pwa-examples/js13kpwa/icons/icon-96.png',
-  '/pwa-examples/js13kpwa/icons/icon-128.png',
-  '/pwa-examples/js13kpwa/icons/icon-168.png',
-  '/pwa-examples/js13kpwa/icons/icon-192.png',
-  '/pwa-examples/js13kpwa/icons/icon-256.png',
-  '/pwa-examples/js13kpwa/icons/icon-512.png'
+  "/pwa-examples/js13kpwa/",
+  "/pwa-examples/js13kpwa/index.html",
+  "/pwa-examples/js13kpwa/app.js",
+  "/pwa-examples/js13kpwa/style.css",
+  "/pwa-examples/js13kpwa/fonts/graduate.eot",
+  "/pwa-examples/js13kpwa/fonts/graduate.ttf",
+  "/pwa-examples/js13kpwa/fonts/graduate.woff",
+  "/pwa-examples/js13kpwa/favicon.ico",
+  "/pwa-examples/js13kpwa/img/js13kgames.png",
+  "/pwa-examples/js13kpwa/img/bg.png",
+  "/pwa-examples/js13kpwa/icons/icon-32.png",
+  "/pwa-examples/js13kpwa/icons/icon-64.png",
+  "/pwa-examples/js13kpwa/icons/icon-96.png",
+  "/pwa-examples/js13kpwa/icons/icon-128.png",
+  "/pwa-examples/js13kpwa/icons/icon-168.png",
+  "/pwa-examples/js13kpwa/icons/icon-192.png",
+  "/pwa-examples/js13kpwa/icons/icon-256.png",
+  "/pwa-examples/js13kpwa/icons/icon-512.png",
 ];
 ```
 
@@ -106,13 +98,15 @@ const contentToCache = appShellFiles.concat(gamesImages);
 Then we can manage the `install` event itself:
 
 ```js
-self.addEventListener('install', (e) => {
-  console.log('[Service Worker] Install');
-  e.waitUntil((async () => {
-    const cache = await caches.open(cacheName);
-    console.log('[Service Worker] Caching all: app shell and content');
-    await cache.addAll(contentToCache);
-  })());
+self.addEventListener("install", (e) => {
+  console.log("[Service Worker] Install");
+  e.waitUntil(
+    (async () => {
+      const cache = await caches.open(cacheName);
+      console.log("[Service Worker] Caching all: app shell and content");
+      await cache.addAll(contentToCache);
+    })()
+  );
 });
 ```
 
@@ -122,7 +116,7 @@ The service worker does not install until the code inside `waitUntil` is execute
 
 `caches` is a special {{domxref("CacheStorage")}} object available in the scope of the given Service Worker to enable saving data — saving to [web storage](/en-US/docs/Web/API/Web_Storage_API) won't work, because web storage is synchronous. With Service Workers, we use the Cache API instead.
 
-Here, we open a cache with a given name, then add all the files our app uses to the cache, so they are available next time it loads (identified by request URL).
+Here, we open a cache with a given name, then add all the files our app uses to the cache, so they are available next time it loads. Resources are identified by their request URL, which is relative to the worker's {{domxref("WorkerGlobalScope.location", "location", "", 1)}}.
 
 You may notice we haven't cached `game.js`. This is the file that contains the data we use when displaying our games. In reality this data would most likely come from an API endpoint or database and caching the data would mean updating it periodically when there was network connectivity. We won't go into that here, but the {{domxref('Web Periodic Background Synchronization API','Periodic Background Sync API')}} is good further reading on this topic.
 
@@ -135,7 +129,7 @@ There is also an `activate` event, which is used in the same way as `install`. T
 We also have a `fetch` event at our disposal, which fires every time an HTTP request is fired off from our app. This is very useful, as it allows us to intercept requests and respond to them with custom responses. Here is a simple usage example:
 
 ```js
-self.addEventListener('fetch', (e) => {
+self.addEventListener("fetch", (e) => {
   console.log(`[Service Worker] Fetched resource ${e.request.url}`);
 });
 ```
@@ -145,17 +139,21 @@ The response can be anything we want: the requested file, its cached copy, or a 
 In our example app, we serve content from the cache instead of the network as long as the resource is actually in the cache. We do this whether the app is online or offline. If the file is not in the cache, the app adds it there first before then serving it:
 
 ```js
-self.addEventListener('fetch', (e) => {
-  e.respondWith((async () => {
-    const r = await caches.match(e.request);
-    console.log(`[Service Worker] Fetching resource: ${e.request.url}`);
-    if (r) { return r; }
-    const response = await fetch(e.request);
-    const cache = await caches.open(cacheName);
-    console.log(`[Service Worker] Caching new resource: ${e.request.url}`);
-    cache.put(e.request, response.clone());
-    return response;
-  })());
+self.addEventListener("fetch", (e) => {
+  e.respondWith(
+    (async () => {
+      const r = await caches.match(e.request);
+      console.log(`[Service Worker] Fetching resource: ${e.request.url}`);
+      if (r) {
+        return r;
+      }
+      const response = await fetch(e.request);
+      const cache = await caches.open(cacheName);
+      console.log(`[Service Worker] Caching new resource: ${e.request.url}`);
+      cache.put(e.request, response.clone());
+      return response;
+    })()
+  );
 });
 ```
 
@@ -170,21 +168,23 @@ That's it! Our app is caching its resources on install and serving them with fet
 There is still one point to cover: how do you upgrade a Service Worker when a new version of the app containing new assets is available? The version number in the cache name is key to this:
 
 ```js
-var cacheName = 'js13kPWA-v1';
+const cacheName = "js13kPWA-v1";
 ```
 
 When this updates to v2, we can then add all of our files (including our new files) to a new cache:
 
 ```js
-contentToCache.push('/pwa-examples/js13kpwa/icons/icon-32.png');
+contentToCache.push("/pwa-examples/js13kpwa/icons/icon-32.png");
 
 // ...
 
-self.addEventListener('install', (e) => {
-  e.waitUntil((async () => {
-    const cache = await caches.open(cacheName);
-    await cache.addAll(contentToCache);
-  })());
+self.addEventListener("install", (e) => {
+  e.waitUntil(
+    (async () => {
+      const cache = await caches.open(cacheName);
+      await cache.addAll(contentToCache);
+    })()
+  );
 });
 ```
 
@@ -195,13 +195,19 @@ A new service worker is installed in the background, and the previous one (v1) w
 Remember the `activate` event we skipped? It can be used to clear out the old cache we don't need anymore:
 
 ```js
-self.addEventListener('activate', (e) => {
-  e.waitUntil(caches.keys().then((keyList) => {
-    return Promise.all(keyList.map((key) => {
-      if (key === cacheName) { return; }
-      return caches.delete(key);
-    }))
-  }));
+self.addEventListener("activate", (e) => {
+  e.waitUntil(
+    caches.keys().then((keyList) => {
+      return Promise.all(
+        keyList.map((key) => {
+          if (key === cacheName) {
+            return;
+          }
+          return caches.delete(key);
+        })
+      );
+    })
+  );
 });
 ```
 

@@ -1,15 +1,12 @@
 ---
-title: '-webkit-mask-repeat-x'
+title: "-webkit-mask-repeat-x"
 slug: Web/CSS/-webkit-mask-repeat-x
-tags:
-  - CSS
-  - CSS Masking
-  - CSS Property
-  - Non-standard
-  - Reference
-  - recipe:css-property
+page-type: css-property
+status:
+  - non-standard
 browser-compat: css.properties.-webkit-mask-repeat-x
 ---
+
 {{CSSRef}}{{Non-standard_header}}
 
 The `-webkit-mask-repeat-x` property specifies whether and how a mask image is repeated (tiled) horizontally.
@@ -51,7 +48,10 @@ The `-webkit-mask-repeat-x` property specifies whether and how a mask image is r
 
 ## Formal syntax
 
-{{csssyntax}}
+```plain
+-webkit-mask-repeat-x =
+  repeat | no-repeat | space | round
+```
 
 ## Examples
 
@@ -59,12 +59,12 @@ The `-webkit-mask-repeat-x` property specifies whether and how a mask image is r
 
 ```css
 .exampleone {
-  -webkit-mask-image: url('mask.png');
+  -webkit-mask-image: url("mask.png");
   -webkit-mask-repeat-x: repeat;
 }
 
 .exampletwo {
-  -webkit-mask-image: url('mask.png');
+  -webkit-mask-image: url("mask.png");
   -webkit-mask-repeat-x: no-repeat;
 }
 ```
@@ -75,7 +75,7 @@ You can specify a different `<repeat-style>` for each mask image, separated by c
 
 ```css
 .examplethree {
-  -webkit-mask-image: url('mask1.png'), url('mask2.png');
+  -webkit-mask-image: url("mask1.png"), url("mask2.png");
   -webkit-mask-repeat-x: repeat, space;
 }
 ```
@@ -92,4 +92,4 @@ Not part of any standard.
 
 ## See also
 
-{{cssxref("-webkit-mask-repeat")}}, {{cssxref("-webkit-mask-repeat-y")}}
+{{cssxref("mask-repeat", "-webkit-mask-repeat")}}, {{cssxref("-webkit-mask-repeat-y")}}

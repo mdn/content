@@ -1,13 +1,9 @@
 ---
 title: Tips and Tricks
 slug: Mozilla/Add-ons/WebExtensions/Tips
-tags:
-  - ECMAScript
-  - Tips
-  - Tips and Tricks
-  - WebExtensions
-  - tricks
+page-type: guide
 ---
+
 {{AddonSidebar}}
 
 This page contains various tips and tricks which should be useful to many people developing extensions using WebExtension APIs.
@@ -20,7 +16,7 @@ Beware that anything below this line is outdated information and has been remove
 
 Babel provides transformations for the vast majority of ES2015 features, and enables them by default. Since Firefox already fully supports most of these, it's best to configure Babel to ignore them. We suggest creating a `.babelrc` file, or a `babel` section in your project's `package.json` file containing the following:
 
-```js
+```json
 {
   "env": {
     "firefox": {

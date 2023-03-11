@@ -1,18 +1,13 @@
 ---
 title: Width
 slug: Web/HTTP/Headers/Width
-tags:
-  - Width
-  - Client hints
-  - Device Memory API
-  - HTTP
-  - HTTP Header
-  - Request header
-  - Experimental
-  - Deprecated
+status:
+  - deprecated
+  - non-standard
 browser-compat: http.headers.Width
 ---
-{{HTTPSidebar}} {{deprecated_header}}{{securecontext_header}}
+
+{{HTTPSidebar}}{{Deprecated_Header}}{{SecureContext_header}}{{Non-standard_Header}}
 
 The **`Width`** [device client hint](/en-US/docs/Web/HTTP/Client_hints#device_client_hints) request header field indicates the desired resource width in physical pixels — the intrinsic size of an image. The provided pixel value is a number rounded to the smallest following integer (i.e. ceiling value).
 
@@ -47,7 +42,7 @@ If the `Width` header appears more than once in a message the last occurrence is
 
 ## Syntax
 
-```
+```http
 Width: <number>
 ```
 
@@ -60,13 +55,13 @@ Width: <number>
 
 The server first needs to opt in to receive the `Width` header by sending the response headers {{HTTPHeader("Accept-CH")}} containing `Width`.
 
-```
+```http
 Accept-CH: Width
 ```
 
 Then on subsequent requests the client might send `Width` header back:
 
-```
+```http
 Width: 1920
 ```
 

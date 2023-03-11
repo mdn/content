@@ -1,17 +1,17 @@
 ---
 title: EvalError
 slug: Web/JavaScript/Reference/Global_Objects/EvalError
-tags:
-  - Class
-  - EvalError
-  - JavaScript
-  - Object
-  - Reference
+page-type: javascript-class
 browser-compat: javascript.builtins.EvalError
 ---
+
 {{JSRef}}
 
 The **`EvalError`** object indicates an error regarding the global {{jsxref("Global_Objects/eval", "eval()")}} function. This exception is not thrown by JavaScript anymore, however the `EvalError` object remains for compatibility.
+
+`EvalError` is a {{Glossary("serializable object")}}, so it can be cloned with {{domxref("structuredClone()")}} or copied between [Workers](/en-US/docs/Web/API/Worker) using {{domxref("Worker/postMessage()", "postMessage()")}}.
+
+`EvalError` is a subclass of {{jsxref("Error")}}.
 
 ## Constructor
 
@@ -20,36 +20,32 @@ The **`EvalError`** object indicates an error regarding the global {{jsxref("Glo
 
 ## Instance properties
 
-- {{jsxref("Error.prototype.message", "EvalError.prototype.message")}}
-  - : Error message.
-- {{jsxref("Error.prototype.name", "EvalError.prototype.name")}}
-  - : Error name. Inherited from {{jsxref("Error")}}.
-- {{jsxref("Error.prototype.fileName", "EvalError.prototype.fileName")}}
-  - : Path to file that raised this error. Inherited from {{jsxref("Error")}}.
-- {{jsxref("Error.prototype.lineNumber", "EvalError.prototype.lineNumber")}}
-  - : Line number in file that raised this error. Inherited from {{jsxref("Error")}}.
-- {{jsxref("Error.prototype.columnNumber", "EvalError.prototype.columnNumber")}}
-  - : Column number in line that raised this error. Inherited from {{jsxref("Error")}}.
-- {{jsxref("Error.prototype.stack", "EvalError.prototype.stack")}}
-  - : Stack trace. Inherited from {{jsxref("Error")}}.
+_Also inherits instance properties from its parent {{jsxref("Error")}}_.
 
-## Examples
+These properties are defined on `EvalError.prototype` and shared by all `EvalError` instances.
 
-`EvalError` is not used in the current ECMAScript specification and will thus not be thrown by the runtime. However, the object itself remains for backwards compatibility with earlier versions of the specification.
+- {{jsxref("Object/constructor", "EvalError.prototype.constructor")}}
+  - : The constructor function that created the instance object. For `EvalError` instances, the initial value is the {{jsxref("EvalError/EvalError", "EvalError")}} constructor.
+- {{jsxref("Error/name", "EvalError.prototype.name")}}
+  - : Represents the name for the type of error. For `EvalError.prototype.name`, the initial value is `"EvalError"`.
+
+## Instance methods
+
+_Inherits instance methods from its parent {{jsxref("Error")}}_.
 
 ### Creating an EvalError
 
 ```js
 try {
-  throw new EvalError('Hello', 'someFile.js', 10);
+  throw new EvalError("Hello", "someFile.js", 10);
 } catch (e) {
   console.log(e instanceof EvalError); // true
-  console.log(e.message);              // "Hello"
-  console.log(e.name);                 // "EvalError"
-  console.log(e.fileName);             // "someFile.js"
-  console.log(e.lineNumber);           // 10
-  console.log(e.columnNumber);         // 0
-  console.log(e.stack);                // "@Scratchpad/2:2:9\n"
+  console.log(e.message); // "Hello"
+  console.log(e.name); // "EvalError"
+  console.log(e.fileName); // "someFile.js"
+  console.log(e.lineNumber); // 10
+  console.log(e.columnNumber); // 0
+  console.log(e.stack); // "@Scratchpad/2:2:9\n"
 }
 ```
 

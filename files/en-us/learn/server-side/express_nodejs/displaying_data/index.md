@@ -1,16 +1,8 @@
 ---
-title: 'Express Tutorial Part 5: Displaying library data'
+title: "Express Tutorial Part 5: Displaying library data"
 slug: Learn/Server-side/Express_Nodejs/Displaying_data
-tags:
-  - Beginner
-  - Controller
-  - Express
-  - Learn
-  - Template
-  - View
-  - nodejs
-  - pug
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Express_Nodejs/routes", "Learn/Server-side/Express_Nodejs/forms", "Learn/Server-side/Express_Nodejs")}}
 
 We're now ready to add the pages that display the [LocalLibrary](/en-US/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website) website books and other data. The pages will include a home page that shows how many records we have of each model type and list and detail pages for all of our models. Along the way, we'll gain practical experience in getting records from the database, and using templates.
@@ -20,17 +12,13 @@ We're now ready to add the pages that display the [LocalLibrary](/en-US/docs/Lea
     <tr>
       <th scope="row">Prerequisites:</th>
       <td>
-        Complete previous tutorial topics (including
-        <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/routes"
-          >Express Tutorial Part 4: Routes and controllers</a
-        >).
+        Complete previous tutorial topics (including<a href="/en-US/docs/Learn/Server-side/Express_Nodejs/routes">Express Tutorial Part 4: Routes and controllers</a>).
       </td>
     </tr>
     <tr>
       <th scope="row">Objective:</th>
       <td>
-        To understand how to use the async module and Pug template language, and
-        how to get data from the URL in our controller functions.
+        To understand how to use the async module and Pug template language, and how to get data from the URL in our controller functions.
       </td>
     </tr>
   </tbody>
@@ -74,18 +62,6 @@ In our next article, we'll build on our knowledge, creating HTML forms and form 
 - [Async module](https://caolan.github.io/async/) (Async docs)
 - [Using Template engines with Express](https://expressjs.com/en/guide/using-template-engines.html) (Express docs)
 - [Pug](https://pugjs.org/api/getting-started.html) (Pug docs)
-- [Luxon](https://moment.github.io/luxon/docs/) (Luxon docs)
+- [Luxon](https://moment.github.io/luxon/#/) (Luxon docs)
 
 {{PreviousMenuNext("Learn/Server-side/Express_Nodejs/routes", "Learn/Server-side/Express_Nodejs/forms", "Learn/Server-side/Express_Nodejs")}}
-
-## In this module
-
-- [Express/Node introduction](/en-US/docs/Learn/Server-side/Express_Nodejs/Introduction)
-- [Setting up a Node (Express) development environment](/en-US/docs/Learn/Server-side/Express_Nodejs/development_environment)
-- [Express Tutorial: The Local Library website](/en-US/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website)
-- [Express Tutorial Part 2: Creating a skeleton website](/en-US/docs/Learn/Server-side/Express_Nodejs/skeleton_website)
-- [Express Tutorial Part 3: Using a Database (with Mongoose)](/en-US/docs/Learn/Server-side/Express_Nodejs/mongoose)
-- [Express Tutorial Part 4: Routes and controllers](/en-US/docs/Learn/Server-side/Express_Nodejs/routes)
-- [Express Tutorial Part 5: Displaying library data](/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data)
-- [Express Tutorial Part 6: Working with forms](/en-US/docs/Learn/Server-side/Express_Nodejs/forms)
-- [Express Tutorial Part 7: Deploying to production](/en-US/docs/Learn/Server-side/Express_Nodejs/deployment)

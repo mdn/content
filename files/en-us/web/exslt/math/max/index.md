@@ -1,11 +1,8 @@
 ---
 title: math:max()
 slug: Web/EXSLT/math/max
-tags:
-  - EXSLT
-  - NeedsSpecTable
-  - Reference
 ---
+
 {{XSLTRef}}{{QuickLinksWithSubpages("/en-US/docs/Web/EXSLT")}}
 
 `math:max()` returns the maximum value of a node-set.
@@ -14,7 +11,7 @@ To compute the maximum value of the node-set, the node set is sorted into descen
 
 ## Syntax
 
-```js
+```plain
 math:max(nodeSet)
 ```
 
@@ -29,4 +26,4 @@ A result tree fragment representing the highest valued node's numeric value as a
 
 ## Specifications
 
-[EXSLT - MATH:MAX](http://www.exslt.org/math/functions/max/index.html)
+[EXSLT - MATH:MAX](http://exslt.org/math/functions/max/index.html)

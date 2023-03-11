@@ -1,30 +1,28 @@
 ---
 title: HTMLSlotElement.assign()
 slug: Web/API/HTMLSlotElement/assign
-tags:
-  - API
-  - HTMLSlotElement
-  - Method
-  - Reference
-  - Web Components
-  - assign
-  - shadow dom
+page-type: web-api-instance-method
 browser-compat: api.HTMLSlotElement.assign
 ---
+
 {{APIRef("Shadow DOM API")}}
 
 The **`assign()`** method of the
 {{domxref("HTMLSlotElement")}} interface sets the slot's **manually assigned nodes** to an ordered set of slottables. The manually assigned nodes set is initially empty until nodes are assigned using `assign()`.
 
+Please note that you cannot mix declarative and imperative slot assignment. Therefore, for this to work, the shadow tree needs to have been created with the `slotAssignment: "manual"` option.
+
 ## Syntax
 
-```js
-HTMLSlotElement.assign(...nodes)
+```js-nolint
+assign(node1)
+assign(node1, node2)
+assign(node1, node2, /* … ,*/ nodeN)
 ```
 
 ### Parameters
 
-- ...`nodes`
+- `node1`, …, `nodeN`
   - : A set of {{domxref("Element")}} or {{domxref("Text")}} nodes.
 
 ### Return value
@@ -39,9 +37,9 @@ In the below example, the `assign()` method is used to display the correct tab i
 function UpdateDisplayTab(elem, tabIdx) {
   const shadow = elem.shadowRoot;
   const slot = shadow.querySelector("slot");
-  const panels = elem.querySelectorAll('tab-panel');
-  if (panels.length && tabIdx && tabIdx <= panels.length ) {
-    slot.assign(panels[tabIdx-1]);
+  const panels = elem.querySelectorAll("tab-panel");
+  if (panels.length && tabIdx && tabIdx <= panels.length) {
+    slot.assign(panels[tabIdx - 1]);
   } else {
     slot.assign();
   }

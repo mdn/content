@@ -1,10 +1,10 @@
 ---
 title: contextualIdentities
 slug: Mozilla/Add-ons/WebExtensions/API/contextualIdentities
-tags:
-  - WebExtensions
+page-type: webextension-api
 browser-compat: webextensions.api.contextualIdentities
 ---
+
 {{AddonSidebar}}
 
 Work with contextual identities: list, create, remove, and update contextual identities.
@@ -13,7 +13,7 @@ Work with contextual identities: list, create, remove, and update contextual ide
 
 With the contextual identities feature, each contextual identity has a name, a color, and an icon. New tabs can be assigned to an identity, and the name, icon, and color will appear in the address bar. Internally, each identity gets its own cookie store which is not shared with other tabs.
 
-![](containers.png)Contextual identities are an experimental feature in Firefox and are only enabled by default in Firefox Nightly. To enable them in other versions of Firefox, set the `privacy.userContext.enabled` preference to `true`. Note that although contextual identities are available in Firefox for Android, there's no UI to work with them in this version of the browser.
+![A context menu with "open in new container tab" submenu highlighted. The submenu shows personal, work, banking, and shopping contextual identities.](containers.png)Contextual identities are an experimental feature in Firefox and are only enabled by default in Firefox Nightly. To enable them in other versions of Firefox, set the `privacy.userContext.enabled` preference to `true`. Note that although contextual identities are available in Firefox for Android, there's no UI to work with them in this version of the browser.
 
 Before Firefox 57, the `contextualIdentities` API is only available if the contextual identities feature is itself enabled. If an extension tried to use the `contextualIdentities` API without the feature being enabled, then method calls would resolve their promises with `false`.
 

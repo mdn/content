@@ -1,14 +1,10 @@
 ---
 title: table-layout
 slug: Web/CSS/table-layout
-tags:
-  - CSS
-  - CSS Property
-  - CSS Tables
-  - Reference
-  - recipe:css-property
+page-type: css-property
 browser-compat: css.properties.table-layout
 ---
+
 {{CSSRef}}
 
 The **`table-layout`** CSS property sets the algorithm used to lay out {{htmlelement("table")}} cells, rows, and columns.
@@ -25,6 +21,8 @@ table-layout: fixed;
 /* Global values */
 table-layout: inherit;
 table-layout: initial;
+table-layout: revert;
+table-layout: revert-layer;
 table-layout: unset;
 ```
 
@@ -56,10 +54,22 @@ This example uses a fixed table layout, combined with the {{cssxref("width")}} p
 
 ```html
 <table>
-  <tr><td>Ed</td><td>Wood</td></tr>
-  <tr><td>Albert</td><td>Schweitzer</td></tr>
-  <tr><td>Jane</td><td>Fonda</td></tr>
-  <tr><td>William</td><td>Shakespeare</td></tr>
+  <tr>
+    <td>Ed</td>
+    <td>Wood</td>
+  </tr>
+  <tr>
+    <td>Albert</td>
+    <td>Schweitzer</td>
+  </tr>
+  <tr>
+    <td>Jane</td>
+    <td>Fonda</td>
+  </tr>
+  <tr>
+    <td>William</td>
+    <td>Shakespeare</td>
+  </tr>
 </table>
 ```
 

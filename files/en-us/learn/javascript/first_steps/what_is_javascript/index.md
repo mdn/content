@@ -1,23 +1,8 @@
 ---
 title: What is JavaScript?
 slug: Learn/JavaScript/First_steps/What_is_JavaScript
-tags:
-  - 3rd party
-  - API
-  - Article
-  - Beginner
-  - Browser
-  - CodingScripting
-  - Core
-  - JavaScript
-  - Learn
-  - Script
-  - comments
-  - external
-  - inline
-  - l10n:priority
-  - what
 ---
+
 {{LearnSidebar}}{{NextMenu("Learn/JavaScript/First_steps/A_first_splash", "Learn/JavaScript/First_steps")}}
 
 Welcome to the MDN beginner's JavaScript course!
@@ -44,7 +29,7 @@ In this article we will look at JavaScript from a high level, answering question
 JavaScript is a scripting or programming language that allows you to implement complex features on web pages — every time a web page does more than just sit there and display static information for you to look at — displaying timely content updates, interactive maps, animated 2D/3D graphics, scrolling video jukeboxes, etc. — you can bet that JavaScript is probably involved.
 It is the third layer of the layer cake of standard web technologies, two of which ([HTML](/en-US/docs/Learn/HTML) and [CSS](/en-US/docs/Learn/CSS)) we have covered in much more detail in other parts of the Learning Area.
 
-![](cake.png)
+![The three layers of standard web technologies; HTML, CSS and JavaScript](cake.png)
 
 - {{glossary("HTML")}} is the markup language that we use to structure and give meaning to our web content, for example defining paragraphs, headings, and data tables, or embedding images and videos in the page.
 - {{glossary("CSS")}} is a language of style rules that we use to apply styling to our HTML content, for example setting background colors and fonts, and laying out our content in multiple columns.
@@ -56,20 +41,20 @@ The three layers build on top of one another nicely. Let's take a simple text la
 <p>Player 1: Chris</p>
 ```
 
-![](just-html.png)
+![Paragraph of Player 1: Chris as plain text](just-html.png)
 
 Then we can add some CSS into the mix to get it looking nice:
 
 ```css
 p {
-  font-family: 'helvetica neue', helvetica, sans-serif;
+  font-family: "helvetica neue", helvetica, sans-serif;
   letter-spacing: 1px;
   text-transform: uppercase;
   text-align: center;
-  border: 2px solid rgba(0,0,200,0.6);
-  background: rgba(0,0,200,0.3);
-  color: rgba(0,0,200,0.6);
-  box-shadow: 1px 1px 2px rgba(0,0,200,0.4);
+  border: 2px solid rgb(0 0 200 / 0.6);
+  background: rgb(0 0 200 / 0.6);
+  color: rgb(255 255 255 / 1);
+  box-shadow: 1px 1px 2px rgb(0 0 200 / 0.4);
   border-radius: 10px;
   padding: 3px 10px;
   display: inline-block;
@@ -77,24 +62,24 @@ p {
 }
 ```
 
-![](html-and-css.png)
+![Styled paragraph of Player 1: Chris](html-and-css.png)
 
 And finally, we can add some JavaScript to implement dynamic behavior:
 
 ```js
-const para = document.querySelector('p');
+const para = document.querySelector("p");
 
-para.addEventListener('click', updateName);
+para.addEventListener("click", updateName);
 
 function updateName() {
-  const name = prompt('Enter a new name');
+  const name = prompt("Enter a new name");
   para.textContent = `Player 1: ${name}`;
 }
 ```
 
 {{ EmbedLiveSample('A_high-level_definition', '100%', 80) }}
 
-Try clicking on this last version of the text label to see what happens (note also that you can find this demo on GitHub — see the [source code](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/what-is-js/javascript-label.html), or [run it live](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/what-is-js/javascript-label.html))!
+Try clicking on this last version of the text label to see what happens (note also that you can find this demo on GitHub — see the [source code](https://github.com/mdn/learning-area/blob/main/javascript/introduction-to-js-1/what-is-js/javascript-label.html), or [run it live](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/what-is-js/javascript-label.html))!
 
 JavaScript can do a lot more than that — let's explore what in more detail.
 
@@ -103,8 +88,8 @@ JavaScript can do a lot more than that — let's explore what in more detail.
 The core client-side JavaScript language consists of some common programming features that allow you to do things like:
 
 - Store useful values inside variables. In the above example for instance, we ask for a new name to be entered then store that name in a variable called `name`.
-- Operations on pieces of text (known as "strings" in programming). In the above example we take the string "Player 1: " and join it to the `name` variable to create the complete text label, e.g. ''Player 1: Chris".
-- Running code in response to certain events occurring on a web page. We used a {{Event("click")}} event in our example above to detect when the button is clicked and then run the code that updates the text label.
+- Operations on pieces of text (known as "strings" in programming). In the above example we take the string "Player 1: " and join it to the `name` variable to create the complete text label, e.g. "Player 1: Chris".
+- Running code in response to certain events occurring on a web page. We used a {{domxref("Element/click_event", "click")}} event in our example above to detect when the label is clicked and then run the code that updates the text label.
 - And much more!
 
 What is even more exciting however is the functionality built on top of the client-side JavaScript language. So-called **Application Programming Interfaces** (**APIs**) provide you with extra superpowers to use in your JavaScript code.
@@ -114,7 +99,7 @@ They do the same thing for programming that ready-made furniture kits do for hom
 
 They generally fall into two categories.
 
-![](browser.png)
+![Two categories of API; 3rd party APIs are shown to the side of the browser and browser APIs are in the browser](browser.png)
 
 **Browser APIs** are built into your web browser, and are able to expose data from the surrounding computer environment, or do useful complex things. For example:
 
@@ -131,7 +116,7 @@ They generally fall into two categories.
 
 **Third party APIs** are not built into the browser by default, and you generally have to grab their code and information from somewhere on the Web. For example:
 
-- The [Twitter API](https://dev.twitter.com/overview/documentation) allows you to do things like displaying your latest tweets on your website.
+- The [Twitter API](https://developer.twitter.com/en/docs) allows you to do things like displaying your latest tweets on your website.
 - The [Google Maps API](https://developers.google.com/maps/) and [OpenStreetMap API](https://wiki.openstreetmap.org/wiki/API) allows you to embed custom maps into your website, and other such functionality.
 
 > **Note:** These APIs are advanced, and we'll not be covering any of these in this module. You can find out much more about these in our [Client-side web APIs module](/en-US/docs/Learn/JavaScript/Client-side_web_APIs).
@@ -144,7 +129,7 @@ Here we'll actually start looking at some code, and while doing so, explore what
 
 Let's briefly recap the story of what happens when you load a web page in a browser (first talked about in our [How CSS works](/en-US/docs/Learn/CSS/First_steps/How_CSS_works#how_does_css_actually_work) article). When you load a web page in your browser, you are running your code (the HTML, CSS, and JavaScript) inside an execution environment (the browser tab). This is like a factory that takes in raw materials (the code) and outputs a product (the web page).
 
-![](execution.png)
+![HTML, CSS and JavaScript code come together to create the content in the browser tab when the page is loaded](execution.png)
 
 A very common use of JavaScript is to dynamically modify HTML and CSS to update a user interface, via the Document Object Model API (as mentioned above).
 Note that the code in your web documents is generally loaded and executed in the order it appears on the page.
@@ -165,19 +150,19 @@ This means that you need to be careful what order you put things in.
 For example, let's return to the block of JavaScript we saw in our first example:
 
 ```js
-const para = document.querySelector('p');
+const para = document.querySelector("p");
 
-para.addEventListener('click', updateName);
+para.addEventListener("click", updateName);
 
 function updateName() {
-  const name = prompt('Enter a new name');
+  const name = prompt("Enter a new name");
   para.textContent = `Player 1: ${name}`;
 }
 ```
 
 Here we are selecting a text paragraph (line 1), then attaching an event listener to it (line 3) so that when the paragraph is clicked, the `updateName()` code block (lines 5–8) is run. The `updateName()` code block (these types of reusable code blocks are called "functions") asks the user for a new name, and then inserts that name into the paragraph to update the display.
 
-If you swapped the order of the first two lines of code, it would no longer work — instead, you'd get an error returned in the [browser developer console](/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools) — `TypeError: para is undefined`.
+If you swapped the order of the first two lines of code, it would no longer work — instead, you'd get an error returned in the [browser developer console](/en-US/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools) — `TypeError: para is undefined`.
 This means that the `para` object does not exist yet, so we can't add an event listener to it.
 
 > **Note:** This is a very common error — you need to be careful that the objects referenced in your code exist before you try to do stuff to them.
@@ -207,7 +192,7 @@ Client-side code is code that is run on the user's computer — when a web page 
 In this module we are explicitly talking about **client-side JavaScript**.
 
 Server-side code on the other hand is run on the server, then its results are downloaded and displayed in the browser.
-Examples of popular server-side web languages include PHP, Python, Ruby, ASP.NET and... JavaScript!
+Examples of popular server-side web languages include PHP, Python, Ruby, ASP.NET, and even JavaScript!
 JavaScript can also be used as a server-side language, for example in the popular Node.js environment — you can find out more about server-side JavaScript in our [Dynamic Websites – Server-side programming](/en-US/docs/Learn/Server-side) topic.
 
 ### Dynamic versus static code
@@ -225,32 +210,30 @@ Whereas CSS uses {{htmlelement("link")}} elements to apply external stylesheets 
 
 ### Internal JavaScript
 
-1. First of all, make a local copy of our example file [apply-javascript.html](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/what-is-js/apply-javascript.html). Save it in a directory somewhere sensible.
+1. First of all, make a local copy of our example file [apply-javascript.html](https://github.com/mdn/learning-area/blob/main/javascript/introduction-to-js-1/what-is-js/apply-javascript.html). Save it in a directory somewhere sensible.
 2. Open the file in your web browser and in your text editor. You'll see that the HTML creates a simple web page containing a clickable button.
 3. Next, go to your text editor and add the following in your head — just before your closing `</head>` tag:
 
    ```html
    <script>
-
      // JavaScript goes here
-
    </script>
    ```
 
 4. Now we'll add some JavaScript inside our {{htmlelement("script")}} element to make the page do something more interesting — add the following code just below the "// JavaScript goes here" line:
 
    ```js
-   document.addEventListener('DOMContentLoaded', () => {
+   document.addEventListener("DOMContentLoaded", () => {
      function createParagraph() {
-       const para = document.createElement('p');
-       para.textContent = 'You clicked the button!';
+       const para = document.createElement("p");
+       para.textContent = "You clicked the button!";
        document.body.appendChild(para);
      }
 
-     const buttons = document.querySelectorAll('button');
+     const buttons = document.querySelectorAll("button");
 
      for (const button of buttons) {
-       button.addEventListener('click', createParagraph);
+       button.addEventListener("click", createParagraph);
      }
    });
    ```
@@ -262,7 +245,7 @@ Whereas CSS uses {{htmlelement("link")}} elements to apply external stylesheets 
 > Did you add your {{htmlelement("script")}} element just before the `</head>` tag?
 > Did you enter the JavaScript exactly as shown? **JavaScript is case sensitive, and very fussy, so you need to enter the syntax exactly as shown, otherwise it may not work.**
 
-> **Note:** You can see this version on GitHub as [apply-javascript-internal.html](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/what-is-js/apply-javascript-internal.html) ([see it live too](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/what-is-js/apply-javascript-internal.html)).
+> **Note:** You can see this version on GitHub as [apply-javascript-internal.html](https://github.com/mdn/learning-area/blob/main/javascript/introduction-to-js-1/what-is-js/apply-javascript-internal.html) ([see it live too](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/what-is-js/apply-javascript-internal.html)).
 
 ### External JavaScript
 
@@ -279,15 +262,15 @@ This works great, but what if we wanted to put our JavaScript in an external fil
 
    ```js
    function createParagraph() {
-     const para = document.createElement('p');
-     para.textContent = 'You clicked the button!';
+     const para = document.createElement("p");
+     para.textContent = "You clicked the button!";
      document.body.appendChild(para);
    }
 
-   const buttons = document.querySelectorAll('button');
+   const buttons = document.querySelectorAll("button");
 
    for (const button of buttons) {
-     button.addEventListener('click', createParagraph);
+     button.addEventListener("click", createParagraph);
    }
    ```
 
@@ -296,7 +279,7 @@ This works great, but what if we wanted to put our JavaScript in an external fil
    This is generally a good thing in terms of organizing your code and making it reusable across multiple HTML files.
    Plus, the HTML is easier to read without huge chunks of script dumped in it.
 
-> **Note:** You can see this version on GitHub as [apply-javascript-external.html](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/what-is-js/apply-javascript-external.html) and [script.js](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/what-is-js/script.js) ([see it live too](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/what-is-js/apply-javascript-external.html)).
+> **Note:** You can see this version on GitHub as [apply-javascript-external.html](https://github.com/mdn/learning-area/blob/main/javascript/introduction-to-js-1/what-is-js/apply-javascript-external.html) and [script.js](https://github.com/mdn/learning-area/blob/main/javascript/introduction-to-js-1/what-is-js/script.js) ([see it live too](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/what-is-js/apply-javascript-external.html)).
 
 ### Inline JavaScript handlers
 
@@ -305,8 +288,8 @@ It might look something like this:
 
 ```js example-bad
 function createParagraph() {
-  const para = document.createElement('p');
-  para.textContent = 'You clicked the button!';
+  const para = document.createElement("p");
+  para.textContent = "You clicked the button!";
   document.body.appendChild(para);
 }
 ```
@@ -331,10 +314,10 @@ You can then loop through the buttons, assigning a handler for each using `addEv
 The code for this is shown below:
 
 ```js
-const buttons = document.querySelectorAll('button');
+const buttons = document.querySelectorAll("button");
 
 for (const button of buttons) {
-  button.addEventListener('click', createParagraph);
+  button.addEventListener("click", createParagraph);
 }
 ```
 
@@ -357,8 +340,8 @@ This could cause an error, so we've used some constructs to get around it.
 In the internal example, you can see this structure around the code:
 
 ```js
-document.addEventListener('DOMContentLoaded', () => {
-  ...
+document.addEventListener("DOMContentLoaded", () => {
+  // …
 });
 ```
 
@@ -367,7 +350,7 @@ The JavaScript inside this block will not run until after that event is fired, t
 
 In the external example, we use a more modern JavaScript feature to solve the problem, the `defer` attribute, which tells the browser to continue downloading the HTML content once the `<script>` tag element has been reached.
 
-```js
+```html
 <script src="script.js" defer></script>
 ```
 
@@ -395,7 +378,7 @@ They won't run until the page content has all loaded, which is useful if your sc
 
 Here is a visual representation of the different script loading methods and what that means for your page:
 
-![async vs defer](async-defer.jpg)
+![How the three script loading method work: default has parsing blocked while JavaScript is fetched and executed. With async, the parsing pauses for execution only. With defer, parsing isn't paused, but execution on happens after everything is else is parsed.](async-defer.jpg)
 
 _This image is from the [HTML spec](https://html.spec.whatwg.org/images/asyncdefer.svg), copied and cropped to a reduced version, under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) license terms._
 
@@ -464,8 +447,8 @@ So for example, we could annotate our last demo's JavaScript with comments like 
 // Function: creates a new paragraph and appends it to the bottom of the HTML body.
 
 function createParagraph() {
-  const para = document.createElement('p');
-  para.textContent = 'You clicked the button!';
+  const para = document.createElement("p");
+  para.textContent = "You clicked the button!";
   document.body.appendChild(para);
 }
 
@@ -476,10 +459,10 @@ function createParagraph() {
   When any button is pressed, the createParagraph() function will be run.
 */
 
-const buttons = document.querySelectorAll('button');
+const buttons = document.querySelectorAll("button");
 
 for (const button of buttons) {
-  button.addEventListener('click', createParagraph);
+  button.addEventListener("click", createParagraph);
 }
 ```
 
@@ -495,15 +478,3 @@ JavaScript may seem a bit daunting right now, but don't worry — in this course
 In the next article, we will [plunge straight into the practical](/en-US/docs/Learn/JavaScript/First_steps/A_first_splash), getting you to jump straight in and build your own JavaScript examples.
 
 {{NextMenu("Learn/JavaScript/First_steps/A_first_splash", "Learn/JavaScript/First_steps")}}
-
-## In this module
-
-- [What is JavaScript?](/en-US/docs/Learn/JavaScript/First_steps/What_is_JavaScript)
-- [A first splash into JavaScript](/en-US/docs/Learn/JavaScript/First_steps/A_first_splash)
-- [What went wrong? Troubleshooting JavaScript](/en-US/docs/Learn/JavaScript/First_steps/What_went_wrong)
-- [Storing the information you need — Variables](/en-US/docs/Learn/JavaScript/First_steps/Variables)
-- [Basic math in JavaScript — numbers and operators](/en-US/docs/Learn/JavaScript/First_steps/Math)
-- [Handling text — strings in JavaScript](/en-US/docs/Learn/JavaScript/First_steps/Strings)
-- [Useful string methods](/en-US/docs/Learn/JavaScript/First_steps/Useful_string_methods)
-- [Arrays](/en-US/docs/Learn/JavaScript/First_steps/Arrays)
-- [Assessment: Silly story generator](/en-US/docs/Learn/JavaScript/First_steps/Silly_story_generator)

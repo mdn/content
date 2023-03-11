@@ -1,12 +1,12 @@
 ---
 title: vert-adv-y
 slug: Web/SVG/Attribute/vert-adv-y
-tags:
-  - Deprecated
-  - SVG
-  - SVG Attribute
+page-type: svg-attribute
+status:
+  - deprecated
 browser-compat: svg.elements.font.vert-adv-y
 ---
+
 {{SVGRef}}{{Deprecated_Header}}
 
 The **`vert-adv-y`** attribute indicates the vertical advance after rendering a {{Glossary("glyph")}} in vertical orientation.
@@ -81,34 +81,7 @@ For {{SVGElement("glyph")}} and {{SVGElement("missing-glyph")}} elements, `vert-
 
 ## Specifications
 
-<table class="no-markdown">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        {{SpecName("SVG1.1", "fonts.html#GlyphElementVertAdvYAttribute", "vert-adv-y for &lt;glyph&gt; and &lt;missing-glyph&gt;")}}
-      </td>
-      <td>{{Spec2("SVG1.1")}}</td>
-      <td>
-        Initial definition for <code>&#x3C;glyph></code> and
-        <code>&#x3C;missing-glyph></code>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("SVG1.1", "fonts.html#FontElementVertAdvYAttribute", "vert-adv-y for &lt;font&gt;")}}
-      </td>
-      <td>{{Spec2("SVG1.1")}}</td>
-      <td>Initial definition for <code>&#x3C;font></code></td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 ## Browser compatibility
 

@@ -1,20 +1,17 @@
 ---
 title: SVGRadialGradientElement
 slug: Web/API/SVGRadialGradientElement
-tags:
-  - API
-  - Reference
-  - SVG
-  - SVG DOM
+page-type: web-api-interface
 browser-compat: api.SVGRadialGradientElement
 ---
+
 {{APIRef("SVG")}}
 
 The **`SVGRadialGradientElement`** interface corresponds to the {{SVGElement("RadialGradient")}} element.
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _This interface also inherits properties from its parent, {{domxref("SVGGradientElement")}}._
 
@@ -29,7 +26,7 @@ _This interface also inherits properties from its parent, {{domxref("SVGGradient
 - {{domxref("SVGRadialGradientElement.fy")}} {{ReadOnlyInline}}
   - : An {{domxref("SVGAnimatedLength")}} corresponding to the {{SVGAttr("fy")}} attribute of the given {{SVGElement("RadialGradient")}} element.
 
-## Methods
+## Instance methods
 
 _This interface doesn't implement any specific methods, but inherits methods from its parent interface, {{domxref("SVGGradientElement")}}._
 

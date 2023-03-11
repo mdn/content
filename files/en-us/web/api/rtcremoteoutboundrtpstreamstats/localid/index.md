@@ -1,44 +1,23 @@
 ---
 title: RTCRemoteOutboundRtpStreamStats.localId
 slug: Web/API/RTCRemoteOutboundRtpStreamStats/localId
-tags:
-  - API
-  - Media
-  - Outbound
-  - Property
-  - RTCRemoteOutboundRtpStreamStats
-  - RTP
-  - Reference
-  - Remote
-  - Statistics
-  - Stats
-  - Streams
-  - WebRTC
-  - WebRTC API
-  - WebRTC Device API
-  - id
-  - localId
+page-type: web-api-instance-property
 browser-compat: api.RTCRemoteOutboundRtpStreamStats.localId
 ---
+
 {{APIRef("WebRTC")}}
 
 The {{domxref("RTCRemoteOutboundRtpStreamStats")}}
-dictionary's  **`localId`** property is a string which can be
+dictionary's **`localId`** property is a string which can be
 used to identify the {{domxref("RTCInboundRtpStreamStats")}} object whose
 {{domxref("RTCInboundRtpStreamStats.remoteId", "remoteId")}} matches this value.
 
 Together, these two objects provide statistics about the inbound and outbound
 sides of the same synchronization source (SSRC).
 
-## Syntax
+## Value
 
-```js
-let localId = rtcRemoteOutboundRtpStreamStats.localId;
-```
-
-### Value
-
-A {{domxref("DOMString")}} which can be compared to the value of an
+A string which can be compared to the value of an
 {{domxref("RTCInboundRtpStreamStats")}} object's
 {{domxref("RTCInboundRtpStreamStats.remoteId", "remoteId")}} property to see if the two
 represent statistics for each of the two sides of the same set of data received by the
@@ -49,22 +28,22 @@ local peer.
 You can think of the local and remote views of the same RTP stream as pairs, each of
 which has a reference back to the other one. Thus, if an {{domxref("RTCStatsReport")}}
 includes an `remote-outbound-rtp` statistics object (of type
-`RTCRemoteOutboundRtpStreamstats`), it should also have a corresponding
+`RTCRemoteOutboundRtpStreamStats`), it should also have a corresponding
 `inbound-rtp` object. Both of these provide information about the same batch
 of packets being transmitted from the remote peer to the local device. The difference is
 that `remote-outbound-rtp` describes statistics about the transmission(s)
 from the perspective of the remote peer, while `inbound-rtp` offers
 statistics about the incoming data from the local peer's perspective.
 
-You can {{anch("Try it and fork it", "examine, try out, and experiment")}} with this
+You can [examine, try out, and experiment](#try_it_and_fork_it) with this
 example on Glitch.
 
-## Example
+## Examples
 
 In this example, we have a pair of functions: the first,
 `networkTestStart()`, captures an initial report, and the second,
-`networkTestStop()`, captures a second report, then uses the two reports to
-output some information about the network conditions... XXX ...
+`networkTestStop()`, captures a second report.
+The second function uses the two reports to output some information about the network conditions.
 
 ### networkTestStart()
 
@@ -90,8 +69,7 @@ data has been collected by `networkTestStop()`.
 ### networkTestStop()
 
 The `networkTestStop()` function obtains a second report,
-`endReport`, then uses the two reports together to determine several... XXX
-...
+`endReport`, then computes and outputs the results.
 
 #### Finding paired statistics
 
@@ -141,22 +119,35 @@ appropriate HTML to the contents of the {{HTMLElement("div")}} element whose cla
 ```js
 async function networkTestStop(pc) {
   if (pc) {
-    let statsBox = document.querySelector(".stats-box");
-    let endReport = await pc.getStats();
+    const statsBox = document.querySelector(".stats-box");
+    const endReport = await pc.getStats();
 
-    for (let endRemoteOutbound of endReport.values()) {
+    for (const endRemoteOutbound of endReport.values()) {
       if (endRemoteOutbound.type === "remote-outbound-rtp") {
-        let startRemoteOutbound = startReport.get(endRemoteOutbound.id);
+        const startRemoteOutbound = startReport.get(endRemoteOutbound.id);
 
         if (startRemoteOutbound) {
-          let startInboundStats = findReportEntry(startReport, "remoteId", startRemoteOutbound.id);
-          let endInboundStats = findReportEntry(endReport, "remoteId", endRemoteOutbound.id);
-
-          let elapsedTime = (endRemoteOutbound.timestamp - startRemoteOutbound.timestamp) / 1000;    /* in seconds */
-          let packetsSent = endRemoteOutbound.packetsSent - startRemoteOutbound.packetsSent;
-          let bytesSent = endRemoteOutbound.bytesSent - startRemoteOutbound.bytesSent;
-          let framesDecoded = endInboundStats.framesDecoded - startInboundStats.framesDecoded;
-          let frameRate = framesDecoded / elapsedTime;
+          const startInboundStats = findReportEntry(
+            startReport,
+            "remoteId",
+            startRemoteOutbound.id
+          );
+          const endInboundStats = findReportEntry(
+            endReport,
+            "remoteId",
+            endRemoteOutbound.id
+          );
+          // Elapsed time in seconds
+          const elapsedTime =
+            (endRemoteOutbound.timestamp - startRemoteOutbound.timestamp) /
+            1000;
+          const packetsSent =
+            endRemoteOutbound.packetsSent - startRemoteOutbound.packetsSent;
+          const bytesSent =
+            endRemoteOutbound.bytesSent - startRemoteOutbound.bytesSent;
+          const framesDecoded =
+            endInboundStats.framesDecoded - startInboundStats.framesDecoded;
+          const frameRate = framesDecoded / elapsedTime;
 
           let timeString = "";
           if (!isNaN(elapsedTime)) {
@@ -165,16 +156,19 @@ async function networkTestStop(pc) {
 
           let frameString = "";
           if (!isNaN(framesDecoded)) {
-            frameString = `Decoded ${framesDecoded} frames for a frame rate of ${frameRate.toFixed(2)} FPS.<br>`;
+            frameString = `Decoded ${framesDecoded} frames for a frame rate of ${frameRate.toFixed(
+              2
+            )} FPS.<br>`;
           }
 
-          let logEntry = `<div class="stats-entry"><h2>Report ID: ${endRemoteOutbound.id}</h2>` +
-                         `Remote peer sent ${packetsSent} packets ${timeString}.<br>` +
-                         `${frameString}` +
-                         `Data size: ${bytesSent} bytes.</div>`;
+          const logEntry =
+            `<div class="stats-entry"><h2>Report ID: ${endRemoteOutbound.id}</h2>` +
+            `Remote peer sent ${packetsSent} packets ${timeString}.<br>` +
+            `${frameString}` +
+            `Data size: ${bytesSent} bytes.</div>`;
           statsBox.innerHTML += logEntry;
         } else {
-          statsBox.innerHTML += `<div class="stats-error">Unable to find initial statistics for ID ${endRemoteOutbound.id}.</div>`
+          statsBox.innerHTML += `<div class="stats-error">Unable to find initial statistics for ID ${endRemoteOutbound.id}.</div>`;
         }
       }
 
@@ -187,8 +181,8 @@ async function networkTestStop(pc) {
 Here's what's going on in the `networkTestStop()` function: after calling
 the {{domxref("RTCPeerConnection")}} method {{domxref("RTCPeerConnection.getStats",
   "getStats()")}} to get the latest statistics report for the connection and storing it in
-`endReport`,  This is an {{domxref("RTCStatsReport")}} object, which maps
-strings taken from the {{domxref("RTCStatsType")}} enumerated type to objects of the
+`endReport`. This is an {{domxref("RTCStatsReport")}} object, which maps
+strings to objects of the
 corresponding {{domxref("RTCStats")}}-based type.
 
 Now we can begin to process the results, starting with the ending statistics found in
@@ -249,9 +243,7 @@ and `networkTestStop()`).
 
 ### Try it and fork it
 
-This example is [available
-on Glitch for you to try out](https://websocket-webrtc-chat-with-stats.glitch.me), examine, or remix.  You can also [access
-it directly](https://33030790-3517-4d21-9b93-511347fa1ebd@api.glitch.com/git/websocket-webrtc-chat-with-stats) using Glitch's Git server.
+This example is [available on Glitch for you to try out](https://websocket-webrtc-chat-with-stats.glitch.me), examine, or remix.
 
 [Remix It](https://glitch.com/edit/?utm_content=project_websocket-webrtc-chat-with-stats&utm_source=remix_this&utm_medium=button&utm_campaign=glitchButton#!/remix/websocket-webrtc-chat-with-stats)
 

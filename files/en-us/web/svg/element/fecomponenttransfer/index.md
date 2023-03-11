@@ -1,17 +1,15 @@
 ---
 title: <feComponentTransfer>
 slug: Web/SVG/Element/feComponentTransfer
-tags:
-  - Element
-  - SVG
-  - SVG Filter
+page-type: svg-element
 browser-compat: svg.elements.feComponentTransfer
 ---
+
 {{SVGRef}}
 
 The **`<feComponentTransfer>`** [SVG](/en-US/docs/Web/SVG) filter primitive performs color-component-wise remapping of data for each pixel. It allows operations like brightness adjustment, contrast adjustment, color balance or thresholding.
 
-The calculations are performed on non-premultiplied color values. The colors are modified by changing each channel (R, G, B, and A) to the result of what the children {{SVGElement("feFuncR")}}, {{SVGElement("feFuncB")}}, {{SVGElement("feFuncG")}}, and {{SVGElement("feFuncA")}} return.
+The calculations are performed on non-premultiplied color values. The colors are modified by changing each channel (R, G, B, and A) to the result of what the children {{SVGElement("feFuncR")}}, {{SVGElement("feFuncB")}}, {{SVGElement("feFuncG")}}, and {{SVGElement("feFuncA")}} return. If more than one of the same element is provided, the last one specified is used, and if no element is supplied to modify one of the channels, the effect is the same is if an identity transformation had been given for that channel.
 
 ## Usage context
 
@@ -42,7 +40,13 @@ This element implements the {{domxref("SVGFEComponentTransferElement")}} interfa
 ```html
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 300">
   <defs>
-    <linearGradient id="rainbow" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="100%" y2="0">
+    <linearGradient
+      id="rainbow"
+      gradientUnits="userSpaceOnUse"
+      x1="0"
+      y1="0"
+      x2="100%"
+      y2="0">
       <stop offset="0" stop-color="#ff0000"></stop>
       <stop offset="0.2" stop-color="#ffff00"></stop>
       <stop offset="0.4" stop-color="#00ff00"></stop>
@@ -91,15 +95,40 @@ This element implements the {{domxref("SVGFEComponentTransferElement")}} interfa
     <text x="0" y="20">Default</text>
     <rect x="0" y="30" width="100%" height="20"></rect>
     <text x="0" y="70">Identity</text>
-    <rect x="0" y="80" width="100%" height="20" style="filter:url(#identity)"></rect>
+    <rect
+      x="0"
+      y="80"
+      width="100%"
+      height="20"
+      style="filter:url(#identity)"></rect>
     <text x="0" y="120">Table lookup</text>
-    <rect x="0" y="130" width="100%" height="20" style="filter:url(#table)"></rect>
+    <rect
+      x="0"
+      y="130"
+      width="100%"
+      height="20"
+      style="filter:url(#table)"></rect>
     <text x="0" y="170">Discrete table lookup</text>
-    <rect x="0" y="180" width="100%" height="20" style="filter:url(#discrete)"></rect>
+    <rect
+      x="0"
+      y="180"
+      width="100%"
+      height="20"
+      style="filter:url(#discrete)"></rect>
     <text x="0" y="220">Linear function</text>
-    <rect x="0" y="230" width="100%" height="20" style="filter:url(#linear)"></rect>
+    <rect
+      x="0"
+      y="230"
+      width="100%"
+      height="20"
+      style="filter:url(#linear)"></rect>
     <text x="0" y="270">Gamma function</text>
-    <rect x="0" y="280" width="100%" height="20" style="filter:url(#gamma)"></rect>
+    <rect
+      x="0"
+      y="280"
+      width="100%"
+      height="20"
+      style="filter:url(#gamma)"></rect>
   </g>
 </svg>
 ```

@@ -1,15 +1,10 @@
 ---
 title: Fetch API
 slug: Web/API/Fetch_API
-tags:
-  - API
-  - Fetch
-  - Landing
-  - Reference
-  - Response
-  - XMLHttpRequest
-  - request
+page-type: web-api-overview
+browser-compat: api.fetch
 ---
+
 {{DefaultAPISidebar("Fetch API")}}
 
 The Fetch API provides an interface for fetching resources (including across the network). It will seem familiar to anyone who has used {{DOMxRef("XMLHttpRequest")}}, but the new API provides a more powerful and flexible feature set.
@@ -38,13 +33,13 @@ The `fetch` specification differs from `jQuery.ajax()` in three main ways:
 - `fetch()` **won't send cross-origin cookies** unless you set the _credentials_ [init option](/en-US/docs/Web/API/fetch#parameters) (to `include`).
 
   - In [April 2018](https://github.com/whatwg/fetch/pull/585), the spec changed the default credentials policy to `'same-origin'`. The following browsers shipped an outdated native fetch, and were updated in these versions: Firefox 61.0b13, Safari 12, Chrome 68.
-  - If you are targeting older versions of these browsers, be sure to include `credentials: 'same-origin'` [init option](/en-US/docs/Web/API/fetch#parameters) on all api requests that may be affected by cookies/user login state.
+  - If you are targeting older versions of these browsers, be sure to include `credentials: 'same-origin'` [init option](/en-US/docs/Web/API/fetch#parameters) on all API requests that may be affected by cookies/user login state.
 
 > **Note:** Find out more about using the Fetch API features in [Using Fetch](/en-US/docs/Web/API/Fetch_API/Using_Fetch), and study concepts in [Fetch basic concepts](/en-US/docs/Web/API/Fetch_API/Basic_concepts).
 
 ### Aborting a fetch
 
-Browsers have started to add experimental support for the {{DOMxRef("AbortController")}} and {{DOMxRef("AbortSignal")}} interfaces (aka The Abort API), which allow operations like Fetch and XHR to be aborted if they have not already completed. See the interface pages for more details.
+To abort incomplete `fetch()`, and even `XMLHttpRequest`, operations, use the {{DOMxRef("AbortController")}} and {{DOMxRef("AbortSignal")}} interfaces.
 
 ## Fetch Interfaces
 
@@ -59,13 +54,11 @@ Browsers have started to add experimental support for the {{DOMxRef("AbortContro
 
 ## Specifications
 
-| Specification                | Status                   | Comment            |
-| ---------------------------- | ------------------------ | ------------------ |
-| {{SpecName("Fetch")}} | {{Spec2("Fetch")}} | Initial definition |
+{{Specifications}}
 
 ## Browser compatibility
 
-{{Compat("api.fetch")}}
+{{Compat}}
 
 ## See also
 

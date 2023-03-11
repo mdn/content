@@ -1,21 +1,11 @@
 ---
 title: '<meta>: The metadata element'
 slug: Web/HTML/Element/meta
-tags:
-  - Document
-  - Element
-  - HTML
-  - HTML charset
-  - HTML document metadata
-  - Reference
-  - Web
-  - charset
-  - http-equiv
-  - metadata
+page-type: html-element
 browser-compat: html.elements.meta
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 The **`<meta>`** [HTML](/en-US/docs/Web/HTML) element represents {{Glossary("Metadata","metadata")}} that cannot be represented by other HTML meta-related elements, like {{HTMLElement("base")}}, {{HTMLElement("link")}}, {{HTMLElement("script")}}, {{HTMLElement("style")}} or {{HTMLElement("title")}}.
 
@@ -23,25 +13,25 @@ The **`<meta>`** [HTML](/en-US/docs/Web/HTML) element represents {{Glossary("Met
   <tbody>
     <tr>
       <th>
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories"
+        <a href="/en-US/docs/Web/HTML/Content_categories"
           >Content categories</a
         >
       </th>
       <td>
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#metadata_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#metadata_content"
           >Metadata content</a
-        >. If the {{htmlattrxref("itemprop")}} attribute is present:
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+        >. If the <a href="/en-US/docs/Web/HTML/Global_attributes/itemprop"><code>itemprop</code></a> attribute is present:
+        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
           >flow content</a
         >,
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content"
           >phrasing content</a
         >.
       </td>
     </tr>
     <tr>
       <th>Permitted content</th>
-      <td>None, it is an {{Glossary("empty element")}}.</td>
+      <td>None; it is a {{Glossary("void element")}}.</td>
     </tr>
     <tr>
       <th>Tag omission</th>
@@ -66,18 +56,18 @@ The **`<meta>`** [HTML](/en-US/docs/Web/HTML) element represents {{Glossary("Met
           <li>
             <code>&#x3C;meta name></code>: any element that accepts
             <a
-              href="/en-US/docs/Web/Guide/HTML/Content_categories#metadata_content"
+              href="/en-US/docs/Web/HTML/Content_categories#metadata_content"
               >metadata content</a
             >.
           </li>
           <li>
             <code>&#x3C;meta itemprop></code>: any element that accepts
             <a
-              href="/en-US/docs/Web/Guide/HTML/Content_categories#metadata_content"
+              href="/en-US/docs/Web/HTML/Content_categories#metadata_content"
               >metadata content</a
             >
             or
-            <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+            <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
               >flow content</a
             >.
           </li>
@@ -108,19 +98,19 @@ The type of metadata provided by the `<meta>` element can be one of the followin
 - If the {{htmlattrxref("name", "meta")}} attribute is set, the `<meta>` element provides _document-level metadata_, applying to the whole page.
 - If the {{htmlattrxref("http-equiv", "meta")}} attribute is set, the `<meta>` element is a _pragma directive_, providing information equivalent to what can be given by a similarly-named HTTP header.
 - If the {{htmlattrxref("charset", "meta")}} attribute is set, the `<meta>` element is a _charset declaration_, giving the character encoding in which the document is encoded.
-- If the {{htmlattrxref("itemprop")}} attribute is set, the `<meta>` element provides _user-defined metadata_.
+- If the [`itemprop`](/en-US/docs/Web/HTML/Global_attributes/itemprop) attribute is set, the `<meta>` element provides _user-defined metadata_.
 
 ## Attributes
 
 This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 
-> **Note:** the attribute {{htmlattrxref("name", "meta")}} has a specific meaning for the `<meta>` element, and the {{htmlattrxref("itemprop")}} attribute must not be set on the same `<meta>` element that has any existing {{htmlattrxref("name", "meta")}}, {{htmlattrxref("http-equiv", "meta")}} or {{htmlattrxref("charset", "meta")}} attributes.
+> **Note:** the attribute {{htmlattrxref("name", "meta")}} has a specific meaning for the `<meta>` element, and the [`itemprop`](/en-US/docs/Web/HTML/Global_attributes/itemprop) attribute must not be set on the same `<meta>` element that has any existing {{htmlattrxref("name", "meta")}}, {{htmlattrxref("http-equiv", "meta")}} or {{htmlattrxref("charset", "meta")}} attributes.
 
-- {{htmlattrdef("charset")}}
+- `charset`
   - : This attribute declares the document's character encoding. If the attribute is present, its value must be an ASCII case-insensitive match for the string "`utf-8`", because UTF-8 is the only valid encoding for HTML5 documents. `<meta>` elements which declare a character encoding must be located entirely within the first 1024 bytes of the document.
-- {{htmlattrdef("content")}}
+- `content`
   - : This attribute contains the value for the {{htmlattrxref("http-equiv", "meta")}} or {{htmlattrxref("name", "meta")}} attribute, depending on which is used.
-- {{htmlattrdef("http-equiv")}}
+- `http-equiv`
 
   - : Defines a pragma directive. The attribute is named `http-equiv(alent)` because all the allowed values are names of particular HTTP headers:
 
@@ -145,17 +135,17 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
       - The number of seconds until the page should be reloaded - only if the {{htmlattrxref("content", "meta")}} attribute contains a non-negative integer.
       - The number of seconds until the page should redirect to another - only if the {{htmlattrxref("content", "meta")}} attribute contains a non-negative integer followed by the string '`;url=`', and a valid URL.
 
-      ##### Accessibility concerns
+      > **Warning:**
+      >
+      > Pages set with a `refresh` value run the risk of having the time interval being too short. People navigating with the aid of assistive technology such as a screen reader may be unable to read through and understand the page's content before being automatically redirected. The abrupt, unannounced updating of the page content may also be disorienting for people experiencing low vision conditions.
+      >
+      > - [MDN Understanding WCAG, Guideline 2.1 explanations](/en-US/docs/Web/Accessibility/Understanding_WCAG/Operable#guideline_2.2_—_enough_time_provide_users_enough_time_to_read_and_use_content)
+      > - [MDN Understanding WCAG, Guideline 3.1 explanations](/en-US/docs/Web/Accessibility/Understanding_WCAG/Understandable#guideline_3.2_—_predictable_make_web_pages_appear_and_operate_in_predictable_ways)
+      > - [Understanding Success Criterion 2.2.1 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/time-limits-required-behaviors.html)
+      > - [Understanding Success Criterion 2.2.4 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/time-limits-postponed.html)
+      > - [Understanding Success Criterion 3.2.5 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/consistent-behavior-no-extreme-changes-context.html)
 
-      Pages set with a `refresh` value run the risk of having the time interval being too short. People navigating with the aid of assistive technology such as a screen reader may be unable to read through and understand the page's content before being automatically redirected. The abrupt, unannounced updating of the page content may also be disorienting for people experiencing low vision conditions.
-
-      - [MDN Understanding WCAG, Guideline 2.1 explanations](/en-US/docs/Web/Accessibility/Understanding_WCAG/Operable#guideline_2.2_—_enough_time_provide_users_enough_time_to_read_and_use_content)
-      - [MDN Understanding WCAG, Guideline 3.1 explanations](/en-US/docs/Web/Accessibility/Understanding_WCAG/Understandable#guideline_3.2_—_predictable_make_web_pages_appear_and_operate_in_predictable_ways)
-      - [Understanding Success Criterion 2.2.1 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/time-limits-required-behaviors.html)
-      - [Understanding Success Criterion 2.2.4 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/time-limits-postponed.html)
-      - [Understanding Success Criterion 3.2.5 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/consistent-behavior-no-extreme-changes-context.html)
-
-- {{htmlattrdef("name")}}
+- `name`
 
   - : The `name` and `content` attributes can be used together to provide document metadata in terms of name-value pairs, with the `name` attribute giving the metadata name, and the `content` attribute giving the value.
 
@@ -164,10 +154,10 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 ## Examples
 
 ```html
-<meta charset="utf-8">
+<meta charset="utf-8" />
 
 <!-- Redirect page after 3 seconds -->
-<meta http-equiv="refresh" content="3;url=https://www.mozilla.org">
+<meta http-equiv="refresh" content="3;url=https://www.mozilla.org" />
 ```
 
 ## Specifications
@@ -177,3 +167,9 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- [Standard metadata names](/en-US/docs/Web/HTML/Element/meta/name)
+- [Learn: `<meta>`](/en-US/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML#metadata_the_meta_element)
+- [The viewport meta tag](/en-US/docs/Web/HTML/Viewport_meta_tag)
