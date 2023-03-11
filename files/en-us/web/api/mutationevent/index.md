@@ -26,7 +26,7 @@ The **`MutationEvent`** interface provides event properties that are specific to
 _This interface also inherits properties from its parent {{domxref("UIEvent")}}, and indirectly from {{domxref("Event")}}._
 
 - {{domxref("MutationEvent.attrChange")}} {{ReadOnlyInline}}
-  - : Indicates what kind of change triggered the `DOMAttrModified` event. It can be `MODIFICATION` (`1`), `ADDITION` (`2`) or `REMOVAL` (`3`). It has no meaning for other events and is then the set to `0`.
+  - : Indicates what kind of change triggered the `DOMAttrModified` event. It can be `MODIFICATION` (`1`), `ADDITION` (`2`) or `REMOVAL` (`3`). It has no meaning for other events and is then set to `0`.
 - {{domxref("MutationEvent.attrName")}} {{ReadOnlyInline}}
   - : Indicates the name of the node affected by the `DOMAttrModified` event. It has no meaning for other events and is then set to the empty string (`""`).
 - {{domxref("MutationEvent.newValue")}} {{ReadOnlyInline}}
