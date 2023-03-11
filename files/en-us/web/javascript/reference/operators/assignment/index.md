@@ -32,12 +32,14 @@ x = y; // x is 10
 x = y = z; // x, y and z are all 25
 ```
 
-### The assignment operator evaluates to the assigned value
+### Value of assignment expressions
+
+The assignment expression itself evaluates to the value of the right-hand side, so you can log the value and assign to a variable at the same time.
 
 ```js
 let x;
 console.log(x); // undefined
-console.log(x = 2) // 2
+console.log(x = 2); // 2
 console.log(x); // 2
 ```
 
