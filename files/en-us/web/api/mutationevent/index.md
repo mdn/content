@@ -39,7 +39,7 @@ _This interface also inherits properties from its parent {{domxref("UIEvent")}},
 ## Instance methods
 
 - {{domxref("MutationEvent.initMutationEvent()")}}
-  - : Constructor methods that returns a new `MutationEvent` configured with the parameters given.
+  - : Constructor method that returns a new `MutationEvent` configured with the parameters given.
 
 ## Mutation events list
 
