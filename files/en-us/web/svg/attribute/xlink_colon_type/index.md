@@ -16,7 +16,6 @@ You can use this attribute with the following SVG elements:
 - {{SVGElement("a")}}
 - {{SVGElement("altGlyph")}}
 - {{SVGElement("animate")}}
-- {{SVGElement("animateColor")}}
 - {{SVGElement("animateMotion")}}
 - {{SVGElement("animateTransform")}}
 - {{SVGElement("cursor")}}

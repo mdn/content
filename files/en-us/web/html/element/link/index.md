@@ -177,7 +177,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
     If the attribute is not present, the resource is fetched without a {{Glossary("CORS")}} request (i.e. without sending the `Origin` HTTP header), preventing its non-tainted usage. If invalid, it is handled as if the enumerated keyword **anonymous** was used.
     See [CORS settings attributes](/en-US/docs/Web/HTML/Attributes/crossorigin) for additional information.
 
-- `disabled` {{Deprecated_Inline}} {{Non-standard_Inline}}
+- `disabled` {{Non-standard_Inline}}
 
   - : For `rel="stylesheet"` only, the `disabled` Boolean attribute indicates whether the described stylesheet should be loaded and applied to the document.
     If `disabled` is specified in the HTML when it is loaded, the stylesheet will not be loaded during page load.
@@ -248,7 +248,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
     - `any`, meaning that the icon can be scaled to any size as it is in a vector format, like `image/svg+xml`.
     - a white-space separated list of sizes, each in the format `<width in pixels>x<height in pixels>` or `<width in pixels>X<height in pixels>`. Each of these sizes must be contained in the resource.
 
-    > **Note:** Most icon formats are only able to store one single icon; therefore most of the time the {{HTMLAttrxRef("sizes")}} attribute contains only one entry.
+    > **Note:** Most icon formats are only able to store one single icon; therefore, most of the time, the [`sizes`](#sizes) attribute contains only one entry.
     > MS's ICO format does, as well as Apple's ICNS. ICO is more ubiquitous, so you should use this format if cross-browser support is a concern (especially for old IE versions).
 
 - `title`

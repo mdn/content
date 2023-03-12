@@ -7,7 +7,7 @@ browser-compat: api.HTMLMediaElement.loop
 
 {{APIRef("HTML DOM")}}
 
-The **`HTMLMediaElement.loop`** property reflects the {{htmlattrxref("loop", "video")}} HTML attribute, which controls whether the media element should start over when it reaches the end.
+The **`HTMLMediaElement.loop`** property reflects the [`loop`](/en-US/docs/Web/HTML/Element/video#loop) HTML attribute, which controls whether the media element should start over when it reaches the end.
 
 ## Value
 

@@ -2,14 +2,6 @@
 title: management.getPermissionWarningsByManifest()
 slug: Mozilla/Add-ons/WebExtensions/API/management/getPermissionWarningsByManifest
 page-type: webextension-api-function
-tags:
-  - API
-  - Add-ons
-  - Method
-  - Reference
-  - WebExtensions
-  - getPermissionWarningsByManifest
-  - management
 browser-compat: webextensions.api.management.getPermissionWarningsByManifest
 ---
 

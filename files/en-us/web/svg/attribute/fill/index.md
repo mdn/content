@@ -23,7 +23,7 @@ You can use this attribute with the following SVG elements:
 - {{SVGElement('tref')}}
 - {{SVGElement('tspan')}}
 
-For animation, these elements are using this attribute: {{SVGElement('animate')}}, {{SVGElement('animateColor')}}, {{SVGElement('animateMotion')}}, {{SVGElement('animateTransform')}}, and {{SVGElement('set')}}.
+For animation, these elements are using this attribute: {{SVGElement('animate')}}, {{SVGElement('animateMotion')}}, {{SVGElement('animateTransform')}}, and {{SVGElement('set')}}.
 
 ## Example
 
@@ -100,34 +100,6 @@ For {{SVGElement('altGlyph')}}, `fill` is a presentation attribute that defines 
 ## animate
 
 For {{SVGElement('animate')}}, `fill` defines the final state of the animation.
-
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Value</th>
-      <td>
-        <code>freeze</code> (<em>Keep the state of the last animation frame</em
-        >) | <code>remove</code> (<em
-          >Keep the state of the first animation frame</em
-        >)
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Default value</th>
-      <td><code>remove</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Animatable</th>
-      <td>No</td>
-    </tr>
-  </tbody>
-</table>
-
-## animateColor
-
-> **Warning:** As of SVG Animation 2 {{SVGElement('animateColor')}} is deprecated and shouldn't be used. Use {{SVGElement('animate')}} instead.
-
-For {{SVGElement('animateColor')}}, `fill` defines the final state of the animation.
 
 <table class="properties">
   <tbody>

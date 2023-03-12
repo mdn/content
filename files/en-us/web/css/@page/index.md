@@ -28,6 +28,11 @@ The **`@page`** at-rule is a CSS at-rule used to modify different aspects of a p
   size: 11in;
   margin-top: 4in;
 }
+
+/* Targets all selectors with `page: wide;` set */
+@page wide {
+  size: a4 landscape;
+}
 ```
 
 ### Descriptors
@@ -44,6 +49,13 @@ You can't change all CSS properties with **`@page`**. You can only change the ma
 The `@page` at-rule can be accessed via the CSS object model interface {{domxref("CSSPageRule")}}.
 
 > **Note:** The W3C is discussing how to handle viewport-related {{cssxref("&lt;length&gt;")}} units, `vh`, `vw`, `vmin`, and `vmax`. Meanwhile do not use them within a `@page` at-rule.
+
+### Related properties
+
+The `@page` at-rule, allows the user to assign a name to the rule, which is then called in a declaration using the `page` property.
+
+- {{Cssxref("page")}}
+  - : Allows a selector to use a user defined **named page**
 
 ## Formal syntax
 
@@ -277,13 +289,24 @@ The page-margin properties are the set of CSS properties can be set in any indiv
 |                       | max-width             |
 | z-index               | z-index               |
 
+## Named pages
+
+Named pages enable performing per-page layout and adding [page-breaks](/en-US/docs/Web/CSS/CSS_Fragmentation) in a declarative manner when printing.
+
+Named pages can be applied using the {{Cssxref("page")}} property. This allows the user to create different page configurations for use in print layouts.
+
+An example of this can be found on the [`page`](/en-US/docs/Web/CSS/page#examples) examples.
+
 ## Examples
 
-The example below prints out 5 different sections in `landscape` size, and adds a 20% margin to each of them in the print-out.
+### Using the size property to change the page orientation
 
-HTML:
+This example shows how to split the `<section>`s into individual pages in `landscape` format with each page having a 20% margin when printed.
+
+#### HTML
 
 ```html
+<button>Print Webpage</button>
 <article>
   <section>
     <h2>Header</h2>
@@ -331,11 +354,9 @@ HTML:
     </p>
   </section>
 </article>
-
-<button>Print Webpage</button>
 ```
 
-CSS:
+#### CSS
 
 ```css
 @page {
@@ -370,9 +391,15 @@ section {
   page-break-after: always;
   break-after: page;
 }
+
+@media print {
+  button {
+    display: none;
+  }
+}
 ```
 
-JavaScript:
+#### JavaScript
 
 ```js
 const button = document.querySelector("button");
@@ -382,8 +409,10 @@ button.addEventListener("click", () => {
 });
 ```
 
-Print out the page below to see the output of this example:
-{{ EmbedLiveSample('Examples', '100%', 520) }}
+#### Result
+
+Clicking the print button will launch a print dialog with the html sections split into individual pages.
+{{ EmbedLiveSample('Using the size property to change the page orientation', '100%', 520) }}
 
 ### @page pseudo-class examples
 
@@ -404,4 +433,6 @@ Please refer to the various [pseudo-classes](/en-US/docs/Web/CSS/Pseudo-classes)
 
 ## See also
 
-- See the [\[META\] CSS Paged Media Module Level 3](https://bugzil.la/286443) ticket in Bugzilla for tracking progress on the subject (page-based counters, etc.)
+- The `@page` [`size`](/en-US/docs/Web/CSS/@page/size) descriptor
+- The {{Cssxref("page")}} property
+- See the [\[META\] CSS Paged Media Module Level 3](https://bugzilla.mozilla.org/show_bug.cgi?id=286443) ticket in Bugzilla for tracking progress on the subject (page-based counters, etc.)

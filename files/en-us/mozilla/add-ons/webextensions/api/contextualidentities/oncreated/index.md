@@ -2,15 +2,6 @@
 title: contextualIdentities.onCreated
 slug: Mozilla/Add-ons/WebExtensions/API/contextualIdentities/onCreated
 page-type: webextension-api-event
-tags:
-  - API
-  - APIReference
-  - Add-ons
-  - Event
-  - Extensions
-  - WebExtensions
-  - contextualIdentities
-  - onCreated
 browser-compat: webextensions.api.contextualIdentities.onCreated
 ---
 

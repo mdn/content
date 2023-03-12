@@ -82,7 +82,7 @@ The following attributes control behavior during form submission.
   - : Indicates where to display the response after submitting the form. It is a name/keyword for a _browsing context_ (for example, tab, window, or iframe). The following keywords have special meanings:
 
     - `_self` (default): Load into the same browsing context as the current one.
-    - `_blank`: Load into a new unnamed browsing context. This provides the same behavior as setting [`rel="noopener"`](#attr-rel) which does not set [`window.opener`](/en-US/docs/Web/API/Window/opener).
+    - `_blank`: Load into a new unnamed browsing context. This provides the same behavior as setting [`rel="noopener"`](#rel) which does not set [`window.opener`](/en-US/docs/Web/API/Window/opener).
     - `_parent`: Load into the parent browsing context of the current one. If no parent, behaves the same as `_self`.
     - `_top`: Load into the top-level browsing context (i.e., the browsing context that is an ancestor of the current one and has no parent). If no parent, behaves the same as `_self`.
 

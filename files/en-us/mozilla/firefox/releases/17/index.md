@@ -11,7 +11,7 @@ Firefox 17 shipped on November 20, 2012. This article lists key changes that are
 
 ### HTML
 
-- Support for the {{htmlattrxref("sandbox", "iframe")}} attribute on the {{HTMLElement("iframe")}} element has been added. ([Firefox bug 341604](https://bugzil.la/341604))
+- Support for the [`sandbox`](/en-US/docs/Web/HTML/Element/iframe#sandbox) attribute on the {{HTMLElement("iframe")}} element has been added. ([Firefox bug 341604](https://bugzil.la/341604))
 
 ### CSS
 

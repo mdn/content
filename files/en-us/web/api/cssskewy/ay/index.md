@@ -2,12 +2,10 @@
 title: CSSSkewY.ay
 slug: Web/API/CSSSkewY/ay
 page-type: web-api-instance-property
-status:
-  - experimental
 browser-compat: api.CSSSkewY.ay
 ---
 
-{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
+{{APIRef("CSS Typed OM")}}
 
 The **`ay`** property of the
 {{domxref("CSSSkewY")}} interface gets and sets the angle used to distort the element

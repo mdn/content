@@ -71,7 +71,7 @@ In addition to the basic HTML global attributes, the following global attributes
 - [`inert`](/en-US/docs/Web/HTML/Global_attributes/inert)
   - : A boolean value that makes the browser disregard user input events for the element. Useful when click events are present.
 - [`inputmode`](/en-US/docs/Web/HTML/Global_attributes/inputmode)
-  - : Provides a hint to browsers as to the type of virtual keyboard configuration to use when editing this element or its contents. Used primarily on {{HTMLElement("input")}} elements, but is usable on any element while in {{HTMLAttrxRef("contenteditable")}} mode.
+  - : Provides a hint to browsers about the type of virtual keyboard configuration to use when editing this element or its contents. Used primarily on {{HTMLElement("input")}} elements, but is usable on any element while in [`contenteditable`](#contenteditable) mode.
 - [`is`](/en-US/docs/Web/HTML/Global_attributes/is)
   - : Allows you to specify that a standard HTML element should behave like a registered custom built-in element (see [Using custom elements](/en-US/docs/Web/Web_Components/Using_custom_elements) for more details).
 
@@ -88,7 +88,7 @@ In addition to the basic HTML global attributes, the following global attributes
 - [`itemtype`](/en-US/docs/Web/HTML/Global_attributes/itemtype)
   - : Specifies the URL of the vocabulary that will be used to define `itemprop`s (item properties) in the data structure. [`itemscope`](/en-US/docs/Web/HTML/Global_attributes/itemscope) is used to set the scope of where in the data structure the vocabulary set by `itemtype` will be active.
 - [`lang`](/en-US/docs/Web/HTML/Global_attributes/lang)
-  - : Helps define the language of an element: the language that non-editable elements are in, or the language that editable elements should be written in by the user. The attribute contains one "language tag" (made of hyphen-separated "language subtags") in the format defined in {{RFC(5646, "Tags for Identifying Languages (also known as BCP 47)")}}. [**xml:lang**](#attr-xml:lang) has priority over it.
+  - : Helps define the language of an element: the language that non-editable elements are in, or the language that editable elements should be written in by the user. The attribute contains one "language tag" (made of hyphen-separated "language subtags") in the format defined in {{RFC(5646, "Tags for Identifying Languages (also known as BCP 47)")}}. [**xml:lang**](#xml:lang) has priority over it.
 - [`nonce`](/en-US/docs/Web/HTML/Global_attributes/nonce)
   - : A cryptographic nonce ("number used once") which can be used by [Content Security Policy](/en-US/docs/Web/HTTP/CSP) to determine whether or not a given fetch will be allowed to proceed.
 - [`part`](/en-US/docs/Web/HTML/Global_attributes/part)
@@ -124,7 +124,7 @@ In addition to the basic HTML global attributes, the following global attributes
     - `no`, which indicates that the element will not be translated.
 - [`virtualkeyboardpolicy`](/en-US/docs/Web/HTML/Global_attributes/virtualkeyboardpolicy)
 
-  - : An [enumerated](/en-US/docs/Glossary/Enumerated) attribute used to control the on-screen virtual keyboard behavior on devices such as tablets, mobile phones, or other devices where a hardware keyboard may not be available, for elements that also uses the {{htmlattrxref("contenteditable")}} attribute.
+  - : An [enumerated](/en-US/docs/Glossary/Enumerated) attribute used to control the on-screen virtual keyboard behavior on devices such as tablets, mobile phones, or other devices where a hardware keyboard may not be available for elements that also uses the [`contenteditable`](#contenteditable) attribute.
 
     - `auto` or an _empty string_, which automatically shows the virtual keyboard when the element is focused or tapped.
     - `manual`, which decouples focus and tap on the element from the virtual keyboard's state.

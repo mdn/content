@@ -6,7 +6,6 @@
 # FROM-URL	TO-URL
 /en-US/docs/-moz-locale-dir(ltr)	/en-US/docs/Web/CSS/:-moz-locale-dir_ltr
 /en-US/docs/-moz-locale-dir(rtl)	/en-US/docs/Web/CSS/:-moz-locale-dir_rtl
-/en-US/docs//Web/JavaScript/Reference/Errors/Dead_object	https://blog.mozilla.org/addons/2012/09/12/what-does-cant-access-dead-object-mean/
 /en-US/docs/::file-selector-button	/en-US/docs/Web/CSS/::file-selector-button
 /en-US/docs/<img>	/en-US/docs/Web/HTML/Element/Img
 /en-US/docs/AJAX	/en-US/docs/Web/Guide/AJAX
@@ -5479,7 +5478,7 @@
 /en-US/docs/MDN/Contribute/Howto/Migrate_external_content_to_MDN	/en-US/docs/MDN/Community/Issues/Content_suggestions_feature_proposals
 /en-US/docs/MDN/Contribute/Howto/Notices	/en-US/docs/MDN/Writing_guidelines/Page_structures
 /en-US/docs/MDN/Contribute/Howto/Report_a_problem	/en-US/docs/MDN/Community/Issues
-/en-US/docs/MDN/Contribute/Howto/Tag	/en-US/docs/MDN/Writing_guidelines/Howto/Tag
+/en-US/docs/MDN/Contribute/Howto/Tag	/en-US/docs/MDN/Writing_guidelines/Howto
 /en-US/docs/MDN/Contribute/Howto/Update_the_CSS_JSON_DB	https://github.com/mdn/data/blob/main/docs/updating_css_json.md
 /en-US/docs/MDN/Contribute/Howto/Write_a_new_entry_in_the_Glossary	/en-US/docs/MDN/Writing_guidelines/Howto/Write_a_new_entry_in_the_Glossary
 /en-US/docs/MDN/Contribute/Howto/Write_an_API_reference	/en-US/docs/MDN/Writing_guidelines/Howto/Write_an_API_reference
@@ -5533,7 +5532,7 @@
 /en-US/docs/MDN/Contribute/Style_guide/Macros	/en-US/docs/MDN/Writing_guidelines/Page_structures/Macros
 /en-US/docs/MDN/Contribute/Style_guide/Quicklinks	/en-US/docs/MDN/Writing_guidelines/Page_structures/Quicklinks
 /en-US/docs/MDN/Contribute/Style_guide/Specification_tables	/en-US/docs/MDN/Writing_guidelines/Page_structures/Specification_tables
-/en-US/docs/MDN/Contribute/Tagging	/en-US/docs/MDN/Writing_guidelines/Howto/Tag
+/en-US/docs/MDN/Contribute/Tagging	/en-US/docs/MDN/Writing_guidelines/Howto
 /en-US/docs/MDN/Contribute/Tasks	/en-US/docs/MDN/Community/Contributing/Getting_started
 /en-US/docs/MDN/Contribute/Tools	https://github.com/mdn/yari/tree/main/docs
 /en-US/docs/MDN/Contribute/Tools/Document_parameters	/en-US/docs/MDN
@@ -5611,6 +5610,7 @@
 /en-US/docs/MDN/User_guide	https://github.com/mdn/yari/tree/main/docs
 /en-US/docs/MDN/User_guide/Troubleshooting_KumaScript_errors	https://github.com/mdn/yari/tree/main/docs/kumascript/troubleshooting-errors.md
 /en-US/docs/MDN/Writing_guidelines/Creating_moving_deleting	/en-US/docs/MDN/Writing_guidelines/Howto/Creating_moving_deleting
+/en-US/docs/MDN/Writing_guidelines/Howto/Tag	/en-US/docs/MDN/Writing_guidelines/Howto
 /en-US/docs/MDN/Writing_guidelines/Research_technology	/en-US/docs/MDN/Writing_guidelines/Howto/Research_technology
 /en-US/docs/MDN/Writing_guidelines/What_we_write/Inclusion_criteria	/en-US/docs/MDN/Writing_guidelines/What_we_write/Criteria_for_inclusion
 /en-US/docs/MDN/Yari	https://github.com/mdn/yari/tree/main/docs
@@ -6627,8 +6627,8 @@
 /en-US/docs/SVG/Attribute/y2	/en-US/docs/Web/SVG/Attribute/y2
 /en-US/docs/SVG/Attribute/yChannelSelector	/en-US/docs/Web/SVG/Attribute/yChannelSelector
 /en-US/docs/SVG/Attribute/z	/en-US/docs/Web/SVG/Attribute/z
-/en-US/docs/SVG/Compatibility_sources	/en-US/docs/Web/SVG/Compatibility_sources
-/en-US/docs/SVG/Content_type	/en-US/docs/Web/SVG/Content_type
+/en-US/docs/SVG/Compatibility_sources	/en-US/docs/Web/SVG
+/en-US/docs/SVG/Content_type	/en-US/docs/Web/SVG
 /en-US/docs/SVG/Element	/en-US/docs/Web/SVG/Element
 /en-US/docs/SVG/Element/a	/en-US/docs/Web/SVG/Element/a
 /en-US/docs/SVG/Element/altGlyph	/en-US/docs/Web/SVG/Element/altGlyph
@@ -12238,6 +12238,7 @@
 /en-US/docs/Web/JavaScript/Reference/Data_types	/en-US/docs/Web/JavaScript/Data_structures
 /en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features/The_legacy_Iterator_protocol	/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features
 /en-US/docs/Web/JavaScript/Reference/Errors/Cant_access_property	/en-US/docs/Web/JavaScript/Reference/Errors/Unexpected_type
+/en-US/docs/Web/JavaScript/Reference/Errors/Dead_object	https://blog.mozilla.org/addons/2012/09/12/what-does-cant-access-dead-object-mean/
 /en-US/docs/Web/JavaScript/Reference/Functions_and_function_scope	/en-US/docs/Web/JavaScript/Reference/Functions
 /en-US/docs/Web/JavaScript/Reference/Functions_and_function_scope/Strict_mode	/en-US/docs/Web/JavaScript/Reference/Strict_mode
 /en-US/docs/Web/JavaScript/Reference/Functions_and_function_scope/Strict_mode/Transitioning_to_strict_mode	/en-US/docs/Web/JavaScript/Reference/Strict_mode
@@ -12675,6 +12676,7 @@
 /en-US/docs/Web/Reference/Functions_and classes_available_to_workers	/en-US/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers
 /en-US/docs/Web/Reference/Functions_and_classes_available_to_workers	/en-US/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers
 /en-US/docs/Web/SVG/Attribute/dataset	/en-US/docs/Web/API/HTMLElement/dataset
+/en-US/docs/Web/SVG/Compatibility_sources	/en-US/docs//Web/SVG
 /en-US/docs/Web/SVG/Element/animateColor	/en-US/docs/Web/SVG/Element/animate
 /en-US/docs/Web/SVG/Index	/en-US/docs/Web/SVG
 /en-US/docs/Web/SVG/Tutorial/Fill_Stroke_and_Gradients	/en-US/docs/Web/SVG/Tutorial/Fills_and_Strokes
