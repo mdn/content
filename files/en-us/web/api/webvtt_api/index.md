@@ -446,7 +446,7 @@ In addition to the three escape sequences mentioned above, there are fours other
 
 ### Cue payload text tags
 
-There are a number of tags, such as `<b>`, that can be used. However, if the WebVTT file is used in a {{HTMLElement("track")}} element where the attribute [`kind`](/en-US/docs/Web/HTML/Elements/track#kind) is `chapters` then you cannot use tags.
+There are a number of tags, such as `<b>`, that can be used. However, if the WebVTT file is used in a {{HTMLElement("track")}} element where the attribute [`kind`](/en-US/docs/Web/HTML/Element/track#kind) is `chapters` then you cannot use tags.
 
 - Timestamp tag
 
