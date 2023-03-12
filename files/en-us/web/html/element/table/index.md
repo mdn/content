@@ -662,7 +662,7 @@ Assistive technology such as screen readers may have difficulty parsing tables t
 
 Ideally, consider alternate ways to present the table's content, including breaking it apart into a collection of smaller, related tables that don't have to rely on using the `colspan` and `rowspan` attributes. In addition to helping people who use assistive technology understand the table's content, this may also benefit people with cognitive concerns who may have difficulty understanding the associations the table layout is describing.
 
-If the table cannot be broken apart, use a combination of the {{htmlattrxref("id")}} and {{htmlattrxref("headers", "td")}} attributes to programmatically associate each table cell with the header(s) the cell is associated with.
+If the table cannot be broken apart, use a combination of the [`id`](/en-US/docs/Web/HTML/Global_attributes#id) and {{htmlattrxref("headers", "td")}} attributes to programmatically associate each table cell with the header(s) the cell is associated with.
 
 - [MDN Tables for visually impaired users](/en-US/docs/Learn/HTML/Tables/Advanced#tables_for_visually_impaired_users)
 - [Tables with multi-level headers • Tables • W3C WAI Web Accessibility Tutorials](https://www.w3.org/WAI/tutorials/tables/multi-level/)

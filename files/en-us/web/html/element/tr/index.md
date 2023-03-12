@@ -149,8 +149,8 @@ Let's actually look at the output first this time:
 
 Notice how the heading area here is actually two rows, one with "Name", "ID", "Membership Dates", and "Balance" headings, and the other with "Joined" and "Canceled", which are subheadings below "Membership Dates". This is accomplished by:
 
-- Having the first row's "Name", "ID", and "Balance" heading cells span two rows using the {{htmlattrxref("rowspan")}} attribute, making them each be two rows tall.
-- Having the first row's "Membership Dates" heading cell span two columns using the {{htmlattrxref("colspan")}} attribute, which causes this heading to actually be two columns wide.
+- Having the first row's "Name", "ID", and "Balance" heading cells span two rows using the [`rowspan`](/en-US/docs/Web/HTML/Global_attributes#rowspan) attribute, making them each be two rows tall.
+- Having the first row's "Membership Dates" heading cell span two columns using the [`colspan`](/en-US/docs/Web/HTML/Global_attributes#colspan) attribute, which causes this heading to actually be two columns wide.
 - Having a second row of {{HTMLElement("th")}} elements that contains only the "Joined" and "Canceled" headings. Because the other columns are already occupied by first-row cells that span into the second row, these wind up correctly positioned under the "Membership Dates" heading.
 
 #### HTML

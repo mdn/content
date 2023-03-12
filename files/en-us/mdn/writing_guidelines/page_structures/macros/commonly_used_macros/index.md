@@ -87,7 +87,7 @@ Most macros will also take a second argument allowing you to change the display 
         if you only specify the attribute name.<br />Attribute associated with a specific HTML element if you specify an attribute name and an element name.
       </td>
       <td>
-        <code>\{{HTMLAttrxRef("lang")}} </code>links to the global attribute description {{HTMLAttrxRef("lang")}}.<br />
+        <code>\[`lang`](/en-US/docs/Web/HTML/Global_attributes#lang) </code>links to the global attribute description [`lang`](/en-US/docs/Web/HTML/Global_attributes#lang).<br />
         <code>\{{HTMLAttrxRef("type","input")}}</code> result in a link to the {{htmlattrxref("type","input")}} attribute (on the {{HTMLElement("input")}} element).
       </td>
     </tr>
