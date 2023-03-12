@@ -127,7 +127,7 @@ The **`HTMLTextAreaElement`** interface provides special properties and methods 
       <td><code>required</code></td>
       <td>
         <code><em>boolean</em>:</code> Returns / Sets the element's
-        [`required`](/en-US/docs/Web/HTML/Element/textarea#required) attribute,
+        <a href="/en-US/docs/Web/HTML/Element/textarea#required"><code>required</code></a>) attribute,
         indicating that the user must specify a value before submitting the
         form.
       </td>
