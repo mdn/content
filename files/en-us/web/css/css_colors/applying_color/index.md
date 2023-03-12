@@ -328,7 +328,7 @@ Finally, the `.boxRight` class describes the unique properties of the box that's
 
 ## Letting the user pick a color
 
-There are many situations in which your website may need to let the user select a color. Perhaps you have a customizable user interface, or you're implementing a drawing app. Maybe you have editable text and need to let the user choose the text color. Or perhaps your app lets the user assign colors to folders or items. Although historically it's been necessary to implement your own [color picker](https://en.wikipedia.org/wiki/Color_picker), HTML now provides support for browsers to provide one for your use through the {{HTMLElement("input")}} element, by using `"color"` as the value of its {{htmlattrxref("type", "input")}} attribute.
+There are many situations in which your website may need to let the user select a color. Perhaps you have a customizable user interface, or you're implementing a drawing app. Maybe you have editable text and need to let the user choose the text color. Or perhaps your app lets the user assign colors to folders or items. Although historically it's been necessary to implement your own [color picker](https://en.wikipedia.org/wiki/Color_picker), HTML now provides support for browsers to provide one for your use through the {{HTMLElement("input")}} element, by using `"color"` as the value of its [`type`](/en-US/docs/Web/HTML/Element/input#type) attribute.
 
 The `<input>` element represents a color only in the [hexadecimal string notation](#hexadecimal_string_notation) covered above.
 
