@@ -52,7 +52,7 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 - {{domxref("HTMLScriptElement.noModule")}}
   - : A boolean value that if true, stops the script's execution in browsers that support [ES modules](/en-US/docs/Web/JavaScript/Guide/Modules) — used to run fallback scripts in older browsers that do _not_ support JavaScript modules.
 - {{domxref("HTMLScriptElement.referrerPolicy")}}
-  - : A string that reflects the [`referrerPolicy`](/en-US/docs/Web/HTML/Element/script#referrerPolicy) HTML attribute indicating which referrer to use when fetching the script, and fetches done by that script.
+  - : A string that reflects the [`referrerPolicy`](/en-US/docs/Web/HTML/Element/script#referrerpolicy) HTML attribute indicating which referrer to use when fetching the script, and fetches done by that script.
 
 ## Static methods
 

@@ -50,7 +50,7 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}_.
 - {{domxref("HTMLIFrameElement.featurePolicy")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns the {{domxref("FeaturePolicy")}} interface which provides a simple API for introspecting the [Permissions Policies](/en-US/docs/Web/HTTP/Permissions_Policy) applied to a specific document.
 - {{domxref("HTMLIFrameElement.referrerPolicy")}}
-  - : A string that reflects the [`referrerPolicy`](/en-US/docs/Web/HTML/Element/iframe#referrerPolicy) HTML attribute indicating which referrer to use when fetching the linked resource.
+  - : A string that reflects the [`referrerPolicy`](/en-US/docs/Web/HTML/Element/iframe#referrerpolicy) HTML attribute indicating which referrer to use when fetching the linked resource.
 - {{domxref("HTMLIFrameElement.sandbox")}}
   - : A {{domxref("DOMTokenList")}} that reflects the [`sandbox`](/en-US/docs/Web/HTML/Element/iframe#sandbox) HTML attribute, indicating extra restrictions on the behavior of the nested content.
 - {{domxref("HTMLIFrameElement.scrolling")}} {{Deprecated_Inline}}

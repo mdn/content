@@ -33,7 +33,7 @@ _Inherits properties from its parent, {{DOMxRef("HTMLElement")}}._
 - {{DOMxRef("HTMLTableElement.align")}} {{deprecated_inline}}
   - : A string containing an enumerated value reflecting the [`align`](/en-US/docs/Web/HTML/Element/table#align) attribute. It indicates the alignment of the element's contents with respect to the surrounding context. The possible values are `"left"`, `"right"`, and `"center"`.
 - {{DOMxRef("HTMLTableElement.bgColor")}} {{deprecated_inline}}
-  - : A string containing the background color of the cells. It reflects the obsolete [`bgColor`](/en-US/docs/Web/HTML/Element/table#bgColor) attribute.
+  - : A string containing the background color of the cells. It reflects the obsolete [`bgColor`](/en-US/docs/Web/HTML/Element/table#bgcolor) attribute.
 - {{DOMxRef("HTMLTableElement.border")}} {{deprecated_inline}}
   - : A string containing the width in pixels of the border of the table. It reflects the obsolete [`border`](/en-US/docs/Web/HTML/Element/table#border) attribute.
 - {{DOMxRef("HTMLTableElement.cellPadding")}} {{deprecated_inline}}
