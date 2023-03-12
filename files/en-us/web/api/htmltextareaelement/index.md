@@ -47,7 +47,7 @@ The **`HTMLTextAreaElement`** interface provides special properties and methods 
       <td><code>cols</code></td>
       <td>
         <code><em>unsigned long</em>:</code> Returns / Sets the element's
-        [`cols`](/en-US/docs/Web/HTML/Element/textarea#cols) attribute, indicating
+        <a href="/en-US/docs/Web/HTML/Element/textarea#cols"><code>cols</code></a> attribute, indicating
         the visible width of the text area.
       </td>
     </tr>
