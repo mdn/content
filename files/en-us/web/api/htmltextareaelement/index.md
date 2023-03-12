@@ -232,7 +232,7 @@ The **`HTMLTextAreaElement`** interface provides special properties and methods 
       <td><code>wrap</code></td>
       <td>
         <code><em>string</em>:</code> Returns / Sets the
-        [`wrap`](/en-US/docs/Web/HTML/Element/textarea#wrap) HTML attribute,
+        <a href="/en-US/docs/Web/HTML/Element/textarea#wrap"><code>wrap</code></a> HTML attribute,
         indicating how the control wraps text.
       </td>
     </tr>
