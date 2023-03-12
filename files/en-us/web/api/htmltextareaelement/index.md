@@ -103,7 +103,7 @@ The **`HTMLTextAreaElement`** interface provides special properties and methods 
       <td><code>name</code></td>
       <td>
         <code><em>string</em>:</code> Returns / Sets the element's
-        [`name`](/en-US/docs/Web/HTML/Element/textarea#name) attribute, containing
+        <a href="/en-US/docs/Web/HTML/Element/textarea#name"><code>name</code></a> attribute, containing
         the name of the control.
       </td>
     </tr>
