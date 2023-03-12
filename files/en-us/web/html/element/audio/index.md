@@ -395,14 +395,14 @@ Also it's a good practice to provide some content (such as the direct download l
         <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
           >Flow content</a
         >, phrasing content, embedded content. If it has a
-        {{htmlattrxref("controls", "audio")}} attribute: interactive
+        [`controls`](/en-US/docs/Web/HTML/Element/audio#controls) attribute: interactive
         content and palpable content.
       </td>
     </tr>
     <tr>
       <th scope="row">Permitted content</th>
       <td>
-        If the element has a {{htmlattrxref("src", "audio")}}
+        If the element has a [`src`](/en-US/docs/Web/HTML/Element/audio#src)
         attribute: zero or more {{HTMLElement("track")}} elements
         followed by transparent content that contains no
         {{HTMLElement("audio")}} or {{HTMLElement("video")}}
