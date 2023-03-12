@@ -343,7 +343,7 @@ A better solution, is to use the HTML {{htmlelement("figure")}} and {{htmlelemen
 
 The {{htmlelement("figcaption")}} element tells browsers, and assistive technology that the caption describes the other content of the {{htmlelement("figure")}} element.
 
-> **Note:** From an accessibility viewpoint, captions and {{htmlattrxref('alt','img')}} text have distinct roles. Captions benefit even people who can see the image, whereas {{htmlattrxref('alt','img')}} text provides the same functionality as an absent image. Therefore, captions and `alt` text shouldn't just say the same thing, because they both appear when the image is gone. Try turning images off in your browser and see how it looks.
+> **Note:** From an accessibility viewpoint, captions and [`alt`](/en-US/docs/Web/HTML/Element/img#alt) text have distinct roles. Captions benefit even people who can see the image, whereas [`alt`](/en-US/docs/Web/HTML/Element/img#alt) text provides the same functionality as an absent image. Therefore, captions and `alt` text shouldn't just say the same thing, because they both appear when the image is gone. Try turning images off in your browser and see how it looks.
 
 A figure doesn't have to be an image. It is an independent unit of content that:
 

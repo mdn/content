@@ -11,9 +11,9 @@ Firefox 18 was released on January 8, 2013. This article lists key changes that 
 
 ### HTML
 
-- The {{htmlattrxref("reversed","ol")}} attribute of the {{HTMLElement("ol")}} element is now supported ([Firefox bug 601912](https://bugzil.la/601912)).
-- The {{htmlattrxref("crossorigin","link")}} attribute of the {{HTMLElement("link")}} element is now supported ([Firefox bug 786564](https://bugzil.la/786564)).
-- The {{htmlattrxref("allowfullscreen", "iframe")}} attribute of the {{HTMLElement("iframe")}} has been implemented and it's prefixed predecessor {{htmlattrxref("mozallowfullscreen", "iframe")}} is now deprecated.
+- The [`reversed`](/en-US/docs/Web/HTML/Element/ol#reversed) attribute of the {{HTMLElement("ol")}} element is now supported ([Firefox bug 601912](https://bugzil.la/601912)).
+- The [`crossorigin`](/en-US/docs/Web/HTML/Element/link#crossorigin) attribute of the {{HTMLElement("link")}} element is now supported ([Firefox bug 786564](https://bugzil.la/786564)).
+- The [`allowfullscreen`](/en-US/docs/Web/HTML/Element/iframe#allowfullscreen) attribute of the {{HTMLElement("iframe")}} has been implemented and it's prefixed predecessor [`mozallowfullscreen`](/en-US/docs/Web/HTML/Element/iframe#mozallowfullscreen) is now deprecated.
 
 ### CSS
 
