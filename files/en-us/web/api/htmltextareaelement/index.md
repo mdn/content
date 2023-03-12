@@ -39,7 +39,7 @@ The **`HTMLTextAreaElement`** interface provides special properties and methods 
       <td><code>autofocus</code></td>
       <td>
         <code><em>boolean</em>:</code> Returns / Sets the element's
-        [`autofocus`](/en-US/docs/Web/HTML/Element/textarea#autofocus) attribute,
+        <a href="/en-US/docs/Web/HTML/Element/textarea#autofocus"><code>autofocus</code></a> attribute,
         indicating that the control should have input focus when the page loads
       </td>
     </tr>
