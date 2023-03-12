@@ -136,7 +136,7 @@ The **`HTMLTextAreaElement`** interface provides special properties and methods 
       <td><code>rows</code></td>
       <td>
         <code><em>unsigned long</em>:</code> Returns / Sets the element's
-        [`rows`](/en-US/docs/Web/HTML/Element/textarea#rows) attribute, indicating
+        <a href="/en-US/docs/Web/HTML/Element/textarea#rows><code>rows</code></a> attribute, indicating
         the number of visible text lines for the control.
       </td>
     </tr>
