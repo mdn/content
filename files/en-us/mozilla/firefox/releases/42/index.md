@@ -96,7 +96,7 @@ Our experimental implementation of the [Shadow DOM](/en-US/docs/Web/Web_Componen
 
 - The {{domxref('IDBCursorWithValue')}} interface is now available in [Web workers](/en-US/docs/Web/API/Web_Workers_API) ([Firefox bug 1188115](https://bugzil.la/1188115)).
 - Error events sent in [Web workers](/en-US/docs/Web/API/Web_Workers_API) doesn't bubble anymore ([Firefox bug 1188141](https://bugzil.la/1188141)).
-- [Media Source Extensions](/en-US/docs/Web/API/Media_Source_Extensions_API) (MSE) has been activated for all Websites, and no more for a white list of sites ([Firefox bug 1185611](https://bugzil.la/1185611)).
+- [Media Source Extensions](/en-US/docs/Web/API/Media_Source_Extensions_API) (MSE) has been activated for all websites, and no more for a white list of sites ([Firefox bug 1185611](https://bugzil.la/1185611)).
 - The non-standard and deprecated `Window.mozRequestAnimationFrame()` has been removed ([Firefox bug 909154](https://bugzil.la/909154)). Use the standard {{domxref('Window.requestAnimationFrame()')}} instead.
 - Speech synthesis (text-to-speech) has been implemented in Firefox Desktop for Windows, hidden behind the `media.webspeech.synth.enabled` flag in `about:config` ([Firefox bug 1003457](https://bugzil.la/1003457).) See [Web Speech API](/en-US/docs/Web/API/Web_Speech_API) for more information.
 
