@@ -20,7 +20,7 @@ setUTCMilliseconds(millisecondsValue)
 ### Parameters
 
 - `millisecondsValue`
-  - : A integer between 0 and 999 representing the milliseconds.
+  - : An integer between 0 and 999 representing the milliseconds.
 
 ### Return value
 
