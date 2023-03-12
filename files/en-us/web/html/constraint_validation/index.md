@@ -16,19 +16,19 @@ For a basic introduction to these concepts, with examples, see the [Form validat
 
 In HTML, basic constraints are declared in two ways:
 
-- By choosing the most semantically appropriate value for the {{ htmlattrxref("type", "input") }} attribute of the {{ HTMLElement("input") }} element, e.g., choosing the `email` type automatically creates a constraint that checks whether the value is a valid email address.
+- By choosing the most semantically appropriate value for the [`type`](/en-US/docs/Web/HTML/Element/input#type) attribute of the {{ HTMLElement("input") }} element, e.g., choosing the `email` type automatically creates a constraint that checks whether the value is a valid email address.
 - By setting values on validation-related attributes, allowing basic constraints to be described in a simple way, without the need for JavaScript.
 
 ### Semantic input types
 
-The intrinsic constraints for the {{ htmlattrxref("type", "input") }} attribute are:
+The intrinsic constraints for the [`type`](/en-US/docs/Web/HTML/Element/input#type) attribute are:
 
 | Input type                                                         | Constraint description                                                                                                                                           | Associated violation                                                                    |
 | ------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
 | [`<input type="URL">`](/en-US/docs/Web/HTML/Element/input/url)     | The value must be an absolute [URL](/en-US/docs/Learn/Common_questions/Web_mechanics/What_is_a_URL), as defined in the [URL Living Standard](https://url.spec.whatwg.org/).    | **[TypeMismatch](/en-US/docs/Web/API/ValidityState/typeMismatch)** constraint violation |
 | [`<input type="email">`](/en-US/docs/Web/HTML/Element/input/email) | The value must be a syntactically valid email address, which generally has the format `username@hostname.tld` but can also be local such as `username@hostname`. | **[TypeMismatch](/en-US/docs/Web/API/ValidityState/typeMismatch)** constraint violation |
 
-For both of these input types, if the {{ htmlattrxref("multiple", "input") }} attribute is set, several values can be set, as a comma-separated list. If any of these do not satisfy the condition described here, the **Type mismatch** constraint violation is triggered.
+For both of these input types, if the [`multiple`](/en-US/docs/Web/HTML/Element/input#multiple) attribute is set, several values can be set, as a comma-separated list. If any of these do not satisfy the condition described here, the **Type mismatch** constraint violation is triggered.
 
 Note that most input types don't have intrinsic constraints, as some are barred from constraint validation or have a sanitization algorithm transforming incorrect values to a correct default.
 
@@ -274,7 +274,7 @@ Calling `checkValidity()` is called _statically_ validating the constraints, whi
 
 > **Note:**
 >
-> - If the {{ htmlattrxref("novalidate", "form") }} attribute is set on the {{ HTMLElement("form") }} element, interactive validation of the constraints doesn't happen.
+> - If the [`novalidate`](/en-US/docs/Web/HTML/Element/form#novalidate) attribute is set on the {{ HTMLElement("form") }} element, interactive validation of the constraints doesn't happen.
 > - Calling the `submit()` method on the [`HTMLFormElement`](/en-US/docs/Web/API/HTMLFormElement) interface doesn't trigger a constraint validation. In other words, this method sends the form data to the server even if it doesn't satisfy the constraints. Call the `click()` method on a submit button instead.
 
 ## Complex constraints using the Constraint Validation API

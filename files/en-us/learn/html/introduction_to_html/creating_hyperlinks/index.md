@@ -49,7 +49,7 @@ For example, the BBC homepage contains many links that point not only to multipl
 
 ## Anatomy of a link
 
-A basic link is created by wrapping the text or other content inside an {{htmlelement("a")}} element and using the {{htmlattrxref("href", "a")}} attribute, also known as a **Hypertext Reference**, or **target**, that contains the web address.
+A basic link is created by wrapping the text or other content inside an {{htmlelement("a")}} element and using the [`href`](/en-US/docs/Web/HTML/Element/a#href) attribute, also known as a **Hypertext Reference**, or **target**, that contains the web address.
 
 ```html
 <p>
@@ -327,7 +327,7 @@ In its most basic and commonly used form, a `mailto:` link indicates the email a
 
 This results in a link that looks like this: [Send email to nowhere](mailto:nowhere@mozilla.org).
 
-In fact, the email address is optional. If you omit it and your {{htmlattrxref("href", "a")}} is "mailto:", a new outgoing email window will be opened by the user's email client with no destination address.
+In fact, the email address is optional. If you omit it and your [`href`](/en-US/docs/Web/HTML/Element/a#href) is "mailto:", a new outgoing email window will be opened by the user's email client with no destination address.
 This is often useful as "Share" links that users can click to send an email to an address of their choosing.
 
 ### Specifying details
