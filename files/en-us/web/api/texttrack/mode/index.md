@@ -67,7 +67,7 @@ and manner of that performance varies depending on each text track's
   non-visual form (for example, the text might be spoken to describe the action in the
   video).
 - Tracks whose `kind` is `"chapters"` are used by the user agent
-  or the Website or Web app to construct and present an interface for navigating the
+  or the website or web app to construct and present an interface for navigating the
   named chapters, where each cue in the list represents a chapter in the media. The user
   can then navigate to the desired chapter, which begins at the cue's start position and
   ends at the cue's end position.
