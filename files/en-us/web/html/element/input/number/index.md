@@ -71,7 +71,7 @@ The default stepping value for `number` inputs is `1`, allowing only integers to
 
 ## Using number inputs
 
-The `number` input type should only be used for incremental numbers, especially when spinbutton incrementing and decrementing are helpful to user experience. The `number` input type is not appropriate for values that happen to only consist of numbers but aren't strictly speaking a number, such as postal codes in many countries or credit card numbers. For non-numeric inputs, consider using a different input type, such as [`<input type="tel">`](/en-US/docs/Web/HTML/Element/input/tel) or other {{HTMLElement('input')}} type with the {{HTMLAttrXref('inputmode')}} attribute:
+The `number` input type should only be used for incremental numbers, especially when spinbutton incrementing and decrementing are helpful to user experience. The `number` input type is not appropriate for values that happen to only consist of numbers but aren't strictly speaking a number, such as postal codes in many countries or credit card numbers. For non-numeric inputs, consider using a different input type, such as [`<input type="tel">`](/en-US/docs/Web/HTML/Element/input/tel) or other {{HTMLElement('input')}} type with the [`inputmode`](/en-US/docs/Web/HTML/Global_attributes#inputmode) attribute:
 
 ```html
 <input type="text" inputmode="numeric" pattern="\d*" />
@@ -152,7 +152,7 @@ See that this example allows any value between `0.0` and `10.0`, with decimals t
 
 {{HTMLElement("input")}} elements of type `number` don't support form sizing attributes such as {{htmlattrxref("size", "input")}}. You'll have to resort to [CSS](/en-US/docs/Web/CSS) to change the size of these controls.
 
-For example, to adjust the width of the input to be only as wide as is needed to enter a three-digit number, we can change our HTML to include an {{htmlattrxref("id")}} and to shorten our placeholder since the field will be too narrow for the text we have been using so far:
+For example, to adjust the width of the input to be only as wide as is needed to enter a three-digit number, we can change our HTML to include an [`id`](/en-US/docs/Web/HTML/Global_attributes#id) and to shorten our placeholder since the field will be too narrow for the text we have been using so far:
 
 ```html
 <input
@@ -178,7 +178,7 @@ The result looks like this:
 
 ### Offering suggested values
 
-You can provide a list of default options from which the user can select by specifying the {{htmlattrxref("list", "input")}} attribute, which contains as its value the {{htmlattrxref("id")}} of a {{HTMLElement("datalist")}}, which in turn contains one {{HTMLElement("option")}} element per suggested value. Each `option`'s `value` is the corresponding suggested value for the number entry box.
+You can provide a list of default options from which the user can select by specifying the {{htmlattrxref("list", "input")}} attribute, which contains as its value the [`id`](/en-US/docs/Web/HTML/Global_attributes#id) of a {{HTMLElement("datalist")}}, which in turn contains one {{HTMLElement("option")}} element per suggested value. Each `option`'s `value` is the corresponding suggested value for the number entry box.
 
 ```html
 <input id="ticketNum" type="number" name="ticketNum" list="defaultNumbers" />

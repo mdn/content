@@ -418,7 +418,7 @@ The look of elements can be controlled via CSS pseudo-classes.
 
 #### :required and :optional CSS pseudo-classes
 
-The {{cssxref(':required')}} and {{cssxref(':optional')}} [pseudo-classes](/en-US/docs/Web/CSS/Pseudo-classes) allow writing selectors that match form elements that have the {{ htmlattrxref("required") }} attribute, or that don't have it.
+The {{cssxref(':required')}} and {{cssxref(':optional')}} [pseudo-classes](/en-US/docs/Web/CSS/Pseudo-classes) allow writing selectors that match form elements that have the [`required`](/en-US/docs/Web/HTML/Element/input#required) attribute, or that don't have it.
 
 #### :placeholder-shown CSS pseudo-class
 

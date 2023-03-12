@@ -106,7 +106,7 @@ For example, to ask the user for a value between -10 and 10, you can use:
 
 ### Setting the value's granularity
 
-By default, the granularity, is 1, meaning that the value is always an integer. You can change the {{htmlattrxref("step")}} attribute to control the granularity. For example, If you need a value to be halfway between 5 and 10 you should set the value of `step` to 0.5:
+By default, the granularity is 1, meaning the value is always an integer. To control the granularity, you can change the [`step`](/en-US/docs/Web/HTML/Element/input#step) attribute. For example, If you need a value to be halfway between 5 and 10, you should set the value of `step` to 0.5:
 
 #### Setting the step attribute
 

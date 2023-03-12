@@ -171,7 +171,7 @@ There are also two directories inside our root — `pdfs` and `projects`. These 
 ### Document fragments
 
 It's possible to link to a specific part of an HTML document, known as a **document fragment**, rather than just to the top of the document.
-To do this you first have to assign an {{htmlattrxref("id")}} attribute to the element you want to link to.
+To do this you first have to assign an [`id`](/en-US/docs/Web/HTML/Global_attributes#id) attribute to the element you want to link to.
 It normally makes sense to link to a specific heading, so this would look something like the following:
 
 ```html
