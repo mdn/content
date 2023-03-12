@@ -53,7 +53,7 @@ _No specific method; inherits methods from its parent, {{domxref("HTMLElement")}
 - {{domxref("HTMLTableCellElement.axis")}} {{deprecated_inline}}
   - : A string containing a name grouping cells in virtual. It reflects the obsolete [`axis`](/en-US/docs/Web/HTML/Element/td#axis) attribute.
 - {{domxref("HTMLTableCellElement.bgColor")}} {{deprecated_inline}}
-  - : A string containing the background color of the cells. It reflects the obsolete [`bgColor`](/en-US/docs/Web/HTML/Element/td#bgColor) attribute.
+  - : A string containing the background color of the cells. It reflects the obsolete [`bgColor`](/en-US/docs/Web/HTML/Element/td#bgcolor) attribute.
 - {{domxref("HTMLTableCellElement.ch")}} {{deprecated_inline}}
   - : A string containing one single character. This character is the one to align all the cell of a column on. It reflects the [`char`](/en-US/docs/Web/HTML/Element/td#char) and default to the decimal points associated with the language, e.g. `'.'` for English, or `','` for French. This property was optional and was not very well supported.
 - {{domxref("HTMLTableCellElement.chOff")}} {{deprecated_inline}}
