@@ -40,7 +40,7 @@ Highlights:
 ### HTML
 
 - Support for [`<meta name="referrer">`](/en-US/docs/Web/HTML/Element/meta) has been added ([Firefox bug 704320](https://bugzil.la/704320)).
-- In Firefox, {{HTMLElement("input")}} filters specified in the {{htmlattrxref("accept", "input")}} attribute will always be selected by default, unless there is an unknown value, that is an unknown mime type or badly formatted value in the {{htmlattrxref("accept", "input")}} attribute. Previously specified filters were only selected by default for `image/*`, `video/*` and `audio/*` values ([Firefox bug 826185](https://bugzil.la/826185)).
+- In Firefox, {{HTMLElement("input")}} filters specified in the [`accept`](/en-US/docs/Web/HTML/Element/input#accept) attribute will always be selected by default, unless there is an unknown value, that is an unknown mime type or badly formatted value in the [`accept`](/en-US/docs/Web/HTML/Element/input#accept) attribute. Previously specified filters were only selected by default for `image/*`, `video/*` and `audio/*` values ([Firefox bug 826185](https://bugzil.la/826185)).
 
 ### JavaScript
 
@@ -148,7 +148,7 @@ New constants have been added to `nsIContentPolicy` to allow Gecko internals and
 - `TYPE_FETCH`
   - : Indicates a content load request initiated by the {{domxref("fetch()")}} method.
 - `TYPE_IMAGESET`
-  - : Indicates a request to load an {{HTMLElement("img")}} (with the {{htmlattrxref("srcset", "img")}} attribute or {{HTMLElement("picture")}} element.
+  - : Indicates a request to load an {{HTMLElement("img")}} (with the [`srcset`](/en-US/docs/Web/HTML/Element/img#srcset) attribute or {{HTMLElement("picture")}} element.
 
 ### XUL
 
