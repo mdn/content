@@ -84,7 +84,7 @@ slug: Mozilla/Firefox/Releases/48
 #### DOM & HTML DOM
 
 - Dropped the "Moz" prefix from the {{domxref("CSSKeyframeRule")}} and {{domxref("CSSKeyframesRule")}} interfaces ([Firefox bug 1256178](https://bugzil.la/1256178)).
-- The {{domxref("NavigatorConcurrentHardware")}} {{Glossary("mixin")}} has been implemented, which adds the {{domxref("NavigatorConcurrentHardware.hardwareConcurrency", "window.navigator.hardwareConcurrency")}} property to the {{domxref("Navigator")}} interface. This lets Websites and apps get at least an approximation of how many processing cores are available to run {{domxref("Worker")}}s in ([Firefox bug 1008453](https://bugzil.la/1008453)).
+- The {{domxref("NavigatorConcurrentHardware")}} {{Glossary("mixin")}} has been implemented, which adds the {{domxref("NavigatorConcurrentHardware.hardwareConcurrency", "window.navigator.hardwareConcurrency")}} property to the {{domxref("Navigator")}} interface. This lets websites and apps get at least an approximation of how many processing cores are available to run {{domxref("Worker")}}s in ([Firefox bug 1008453](https://bugzil.la/1008453)).
 - The {{domxref("Node.isSameNode()")}} method, which was removed in Firefox 10, has returned after being added back into the specification after a lengthy absence ([Firefox bug 1256299](https://bugzil.la/1256299)).
 - Firefox now returns proper exceptions instead of numbers when things go wrong during a call to {{domxref("Navigator.registerProtocolHandler()")}}.
 - {{domxref("Element.animate()")}} is now activated by default ([Firefox bug 1245000](https://bugzil.la/1245000)).
