@@ -12676,7 +12676,7 @@
 /en-US/docs/Web/Reference/Functions_and classes_available_to_workers	/en-US/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers
 /en-US/docs/Web/Reference/Functions_and_classes_available_to_workers	/en-US/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers
 /en-US/docs/Web/SVG/Attribute/dataset	/en-US/docs/Web/API/HTMLElement/dataset
-/en-US/docs/Web/SVG/Compatibility_sources	/en-US/docs//Web/SVG
+/en-US/docs/Web/SVG/Compatibility_sources	/en-US/docs/Web/SVG
 /en-US/docs/Web/SVG/Element/animateColor	/en-US/docs/Web/SVG/Element/animate
 /en-US/docs/Web/SVG/Index	/en-US/docs/Web/SVG
 /en-US/docs/Web/SVG/Tutorial/Fill_Stroke_and_Gradients	/en-US/docs/Web/SVG/Tutorial/Fills_and_Strokes
