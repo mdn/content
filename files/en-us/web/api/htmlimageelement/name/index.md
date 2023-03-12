@@ -20,7 +20,7 @@ A string providing a name by which the image can be referenced.
 
 > **Warning:** This property is deprecated and is only in the
 > specification still for backward compatibility purposes. Since it functions
-> identically to {{htmlattrxref("id")}}, you can and should use it instead.
+> identically to [`id`](/en-US/docs/Web/HTML/Global_attributes#id), you can and should use it instead.
 
 ## Specifications
 

@@ -374,7 +374,7 @@ screen readers will recognize markup structured like this, and allow their users
 
 ### The id and headers attributes
 
-An alternative to using the `scope` attribute is to use {{htmlattrxref("id")}} and {{htmlattrxref("headers", "td")}} attributes to create associations between headers and cells. The way they are used is as follows:
+An alternative to using the `scope` attribute is to use [`id`](/en-US/docs/Web/HTML/Global_attributes#id) and {{htmlattrxref("headers", "td")}} attributes to create associations between headers and cells. The way they are used is as follows:
 
 1. You add a unique `id` to each `<th>` element.
 2. You add a `headers` attribute to each `<td>` element. Each `headers` attribute has to contain a list of the `id`s of all the `<th>` elements that act as a header for that cell, separated by spaces.

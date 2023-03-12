@@ -18,7 +18,7 @@ Firefox 55 was released on August 8, 2017. This article lists key changes that a
 
 ### HTML
 
-- Elements on which {{htmlattrxref("contenteditable")}} has been set to `true` now use {{htmlelement("div")}} elements to separate different lines of text, to give Firefox parity with other modern browsers ([Firefox bug 1297414](https://bugzil.la/1297414)). See [Differences in markup generation](/en-US/docs/Web/Guide/HTML/Editable_content#differences_in_markup_generation) for more details.
+- Elements on which [`contenteditable`](/en-US/docs/Web/HTML/Global_attributes#contenteditable) has been set to `true` now use {{htmlelement("div")}} elements to separate different lines of text, to give Firefox parity with other modern browsers ([Firefox bug 1297414](https://bugzil.la/1297414)). See [Differences in markup generation](/en-US/docs/Web/Guide/HTML/Editable_content#differences_in_markup_generation) for more details.
 - Enable `dom.forms.datetime` by default on Nightly ([Firefox bug 1366188](https://bugzil.la/1366188)).
 
 ### CSS
@@ -137,7 +137,7 @@ Firefox 55 was released on August 8, 2017. This article lists key changes that a
 
 ### HTML
 
-- The `xml:base` attribute can no longer be used to set the base URL for paths appearing in the {{htmlattrxref("style")}} attribute, for example —
+- The `xml:base` attribute can no longer be used to set the base URL for paths appearing in the [`style`](/en-US/docs/Web/HTML/Global_attributes#style) attribute, for example —
 
   `<div xml:base="https://example.com/" style="background:url(picture.jpg)"></div>` ([Firefox bug 1350521](https://bugzil.la/1350521)).
 
