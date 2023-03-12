@@ -63,7 +63,7 @@ The **`HTMLTextAreaElement`** interface provides special properties and methods 
       <td><code>disabled</code></td>
       <td>
         <code><em>boolean</em>:</code> Returns / Sets the element's
-        [`disabled`](/en-US/docs/Web/HTML/Element/textarea#disabled) attribute,
+        <a href="/en-US/docs/Web/HTML/Element/textarea#disabled"><code>disabled</code></a> attribute,
         indicating that the control is not available for interaction.
       </td>
     </tr>
