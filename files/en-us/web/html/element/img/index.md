@@ -45,7 +45,7 @@ SVG remains the recommended format for images that must be drawn accurately at d
 
 ## Image loading errors
 
-If an error occurs while loading or rendering an image, and an [`onerror`](/en-US/docs/Web/HTML/Global_attributes#onerror) event handler has been set on the {{domxref("Element/error_event", "error")}} event, that event handler will get called. This can happen in a number of situations, including:
+If an error occurs while loading or rendering an image, and an `onerror` event handler has been set for the {{domxref("Element/error_event", "error")}} event, that event handler will get called. This can happen in several situations, including:
 
 - The `src` attribute is empty (`""`) or `null`.
 - The `src` {{glossary("URL")}} is the same as the URL of the page the user is currently on.

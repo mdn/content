@@ -85,7 +85,7 @@ The problem with the above example is that there's no way for the user to know w
 
 ### Disabling and enabling a reset button
 
-To disable a reset button, specify the [`disabled`](/en-US/docs/Web/HTML/Global_attributes#disabled) global attribute on it, like so:
+To disable a reset button, specify the [`disabled`](/en-US/docs/Web/HTML/Element/input#disabled) attribute on it, like so:
 
 ```html
 <input type="reset" value="Disabled" disabled />
