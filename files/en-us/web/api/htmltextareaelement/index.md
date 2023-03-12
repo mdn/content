@@ -111,7 +111,7 @@ The **`HTMLTextAreaElement`** interface provides special properties and methods 
       <td><code>placeholder</code></td>
       <td>
         <code><em>string</em>:</code> Returns / Sets the element's
-        [`placeholder`](/en-US/docs/Web/HTML/Element/textarea#placeholder) attribute,
+        <a href="/en-US/docs/Web/HTML/Element/textarea#placeholder"><code>placeholder</code></a> attribute,
         containing a hint to the user about what to enter in the control.
       </td>
     </tr>
