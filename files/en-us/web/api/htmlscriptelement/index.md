@@ -18,13 +18,13 @@ JavaScript files should be served with the `application/javascript` [MIME type](
 _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 
 - {{domxref("HTMLScriptElement.type")}}
-  - : A string representing the MIME type of the script. It reflects the {{htmlattrxref("type","script")}} attribute.
+  - : A string representing the MIME type of the script. It reflects the [`type`](/en-US/docs/Web/HTML/Element/script#type) attribute.
 - {{domxref("HTMLScriptElement.src")}}
-  - : A string representing the URL of an external script. It reflects the {{htmlattrxref("src","script")}} attribute.
+  - : A string representing the URL of an external script. It reflects the [`src`](/en-US/docs/Web/HTML/Element/script#src) attribute.
 - {{domxref("HTMLScriptElement.event")}} {{deprecated_inline}}
   - : A string; an obsolete way of registering event handlers on elements in an HTML document.
 - {{domxref("HTMLScriptElement.charset")}} {{deprecated_inline}}
-  - : A string representing the character encoding of an external script. It reflects the {{htmlattrxref("charset","script")}} attribute.
+  - : A string representing the character encoding of an external script. It reflects the [`charset`](/en-US/docs/Web/HTML/Element/script#charset) attribute.
 - {{domxref("HTMLScriptElement.async")}}, {{domxref("HTMLScriptElement.defer")}}
 
   - : The `async` and `defer` attributes are boolean attributes that control how the script should be executed. **The `defer` and `async` attributes must not be specified if the `src` attribute is absent.**
@@ -52,7 +52,7 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 - {{domxref("HTMLScriptElement.noModule")}}
   - : A boolean value that if true, stops the script's execution in browsers that support [ES modules](/en-US/docs/Web/JavaScript/Guide/Modules) — used to run fallback scripts in older browsers that do _not_ support JavaScript modules.
 - {{domxref("HTMLScriptElement.referrerPolicy")}}
-  - : A string that reflects the {{htmlattrxref("referrerPolicy", "script")}} HTML attribute indicating which referrer to use when fetching the script, and fetches done by that script.
+  - : A string that reflects the [`referrerPolicy`](/en-US/docs/Web/HTML/Element/script#referrerPolicy) HTML attribute indicating which referrer to use when fetching the script, and fetches done by that script.
 
 ## Static methods
 
