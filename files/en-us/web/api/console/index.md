@@ -26,6 +26,8 @@ gives a few [Usage](#usage) examples.
 
 {{AvailableInWorkers}}
 
+> **Note:** Certain online IDEs and editors may implement the console API differently than the browsers. As a result, certian functionality of the console API such as the timer methods, may not be outputted in the console of some online IDE or editors. Open your browser's DevTools console to see the logs as shown in this documentation.
+
 ## Instance methods
 
 - {{domxref("console.assert()")}}
@@ -242,7 +244,6 @@ Notice that the timer's name is displayed both when the timer is started and whe
 > **Note:** It's important to note that if you're using this to log the timing for network traffic, the timer will report the total time for the transaction, while the time listed in the network panel is just the amount of time required for the header.
 > If you have response body logging enabled, the time listed for the response header and body combined should match what you see in the console output.
 
-> **Note:** The timing methods do not log to the console of some online IDE. You must open DevTools to see the timing logs in the DevTools console.
 
 ### Stack traces
 
