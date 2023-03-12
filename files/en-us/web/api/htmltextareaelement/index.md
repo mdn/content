@@ -85,7 +85,7 @@ The **`HTMLTextAreaElement`** interface provides special properties and methods 
       <td><code>maxLength</code></td>
       <td>
         <code><em>long</em>:</code> Returns / Sets the element's
-        [`maxlength`](/en-US/docs/Web/HTML/Element/textarea#maxlength) attribute,
+        <a href="/en-US/docs/Web/HTML/Element/textarea#maxlength"><code>maxlength</code></a> attribute,
         indicating the maximum number of characters the user can enter. This
         constraint is evaluated only when the value changes.
       </td>
