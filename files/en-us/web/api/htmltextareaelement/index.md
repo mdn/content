@@ -94,7 +94,7 @@ The **`HTMLTextAreaElement`** interface provides special properties and methods 
       <td><code>minLength</code></td>
       <td>
         <code><em>long</em>:</code> Returns / Sets the element's
-        [`minlength`](/en-US/docs/Web/HTML/Element/textarea#minlength) attribute,
+        <a href="/en-US/docs/Web/HTML/Element/textarea#minlength"><code>minlength</code></a> attribute,
         indicating the minimum number of characters the user can enter. This
         constraint is evaluated only when the value changes.
       </td>
