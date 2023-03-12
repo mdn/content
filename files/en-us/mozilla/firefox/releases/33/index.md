@@ -67,7 +67,7 @@ For details please [see the hacks post](https://hacks.mozilla.org/2014/07/event-
 - For {{HTMLElement("canvas")}}, the method {{domxref("CanvasPattern.setTransform()")}}, allowing to modify a pattern using the {{domxref("DOMMatrix")}} representation of a linear transform ([Firefox bug 1019257](https://bugzil.la/1019257)).
 - Our experimental implementation of Media Source Extensions, behind the `media.mediasource.enabled` preference, enabled by default in Nightly and Aurora only, now supports MP4 ([Firefox bug 1000686](https://bugzil.la/1000686)).
 - The properties {{domxref("HTMLMediaElement.audioTracks")}} and {{domxref("HTMLMediaElement.videoTracks")}} have been experimentally implemented. They are controlled by the `media.track.enabled`, off by default ([Firefox bug 744896](https://bugzil.la/744896)).
-- The non-standard `XMLHttpRequest.mozBackgroundRequest()` is no more accessible from Websites. Only Firefox-internal code (Chrome code) can use it ([Firefox bug 1035242](https://bugzil.la/1035242)).
+- The non-standard `XMLHttpRequest.mozBackgroundRequest()` is no more accessible from websites. Only Firefox-internal code (Chrome code) can use it ([Firefox bug 1035242](https://bugzil.la/1035242)).
 - The `touchenter` and `touchleave` events, removed from the specification, have been removed ([Firefox bug 1036444](https://bugzil.la/1036444)).
 - The formerly called `loaded` event, sent on a {{domxref("HTMLTrackElement")}} has been renamed {{domxref("Window/load_event", "load")}} to match the specification ([Firefox bug 1035505](https://bugzil.la/1035505)).
 - The IndexedDB interface `FileHandle` has been renamed in {{domxref("IDBMutableFile")}} ([Firefox bug 1006485](https://bugzil.la/1006485)).
