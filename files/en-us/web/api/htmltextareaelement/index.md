@@ -19,7 +19,7 @@ The **`HTMLTextAreaElement`** interface provides special properties and methods 
       <td><code>accessKey</code></td>
       <td>
         <code><em>string</em>:</code> Returns / Sets the element's
-        [`accesskey`](/en-US/docs/Web/HTML/Element/textarea#accesskey) attribute.
+        <a href="/en-US/docs/Web/HTML/Element/textarea#accesskey"><code>accesskey</code></a> attribute.
       </td>
     </tr>
     <tr>
