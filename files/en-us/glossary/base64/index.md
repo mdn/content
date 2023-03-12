@@ -37,7 +37,7 @@ Since `window.btoa` only accepts characters within the `Latin1` Unicode range (c
 #### Solution 1 – `TextEncoder` and `TextDecoder`
 
 ```js
-const encodeB64 = (str) => {
+function encodeB64(str) {
   const utf8Bytes = new TextEncoder().encode(str);
   const asciiCodePoints = String.fromCodePoint(...utf8Bytes);
 
@@ -45,11 +45,11 @@ const encodeB64 = (str) => {
 }
 
 // usage
-encodeB64('á ü 文 🦄') // 'w6Egw7wg5paHIPCfpoQ='
+encodeB64("á ü 文 🦄"); // 'w6Egw7wg5paHIPCfpoQ='
 ```
 
 ```js
-const decodeB64 = (b64) => {
+function decodeB64(b64) {
   const asciiCodePoints = atob(b64);
   const utf8Bytes = new Uint8Array(asciiCodePoints.split('').map((char) => char.codePointAt(0)));
 
@@ -57,7 +57,7 @@ const decodeB64 = (b64) => {
 }
 
 // usage
-encodeB64('w6Egw7wg5paHIPCfpoQ=') // 'á ü 文 🦄'
+encodeB64("w6Egw7wg5paHIPCfpoQ="); // 'á ü 文 🦄'
 ```
 
 #### Solution 2 – rewriting `atob()` and `btoa()` using `TypedArray`s and UTF-8
