@@ -72,7 +72,7 @@ The **`HTMLTextAreaElement`** interface provides special properties and methods 
       <td>
         <code><em>object</em>:</code> Returns a reference to the parent form
         element. If this element is not contained in a form element, it can be
-        the [`id`](/en-US/docs/Web/HTML/Element/form#id) attribute of any
+        the <a href="/en-US/docs/Web/HTML/Element/form#id"><code>id</code></a> attribute of any
         {{HTMLElement("form")}} element in the same document or the
         value <code>null</code>.
       </td>
