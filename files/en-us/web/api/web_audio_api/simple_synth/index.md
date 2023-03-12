@@ -506,11 +506,11 @@ function playTone(freq) {
 }
 ```
 
-`playTone()` begins by creating a new {{domxref("OscillatorNode")}} by calling the {{domxref("BaseAudioContext.createOscillator()")}} method. We then connect it to the main gain node by calling the new oscillator's {{domxref("OscillatorNode.connect()")}} method;, which tells the oscillator where to send its output to. By doing this, changing the gain of the main gain node will affect the volume of all tones being generated.
+`playTone()` begins by creating a new {{domxref("OscillatorNode")}} by calling the {{domxref("BaseAudioContext.createOscillator()")}} method. We then connect it to the main gain node by calling the new oscillator's {{domxref("AudioNode/connect", "connect()")}} method;, which tells the oscillator where to send its output to. By doing this, changing the gain of the main gain node will affect the volume of all tones being generated.
 
 Then we get the type of waveform to use by checking the value of the waveform picker control in the settings bar. If the user has it set to `"custom"`, we call {{domxref("OscillatorNode.setPeriodicWave()")}} to configure the oscillator to use our custom waveform. Doing this automatically sets the oscillator's {{domxref("OscillatorNode.type", "type")}} to `custom`. If any other waveform type is selected in the wave picker, we set the oscillator's type to the value of the picker; that value will be one of `sine`, `square`, `triangle`, and `sawtooth`.
 
-The oscillator's frequency is set to the value specified in the `freq` parameter by setting the value of the {{domxref("Oscillator.frequency")}} {{domxref("AudioParam")}} object. Then, at last, the oscillator is started up so that it begins to produce sound by calling the oscillator's inherited {{domxref("AudioScheduledSourceNode.start()")}} method.
+The oscillator's frequency is set to the value specified in the `freq` parameter by setting the value of the {{domxref("OscillatorNode.frequency")}} {{domxref("AudioParam")}} object. Then, at last, the oscillator is started up so that it begins to produce sound by calling the oscillator's inherited {{domxref("AudioScheduledSourceNode.start()")}} method.
 
 #### Playing a note
 
