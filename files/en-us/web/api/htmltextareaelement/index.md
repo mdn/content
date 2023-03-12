@@ -119,7 +119,7 @@ The **`HTMLTextAreaElement`** interface provides special properties and methods 
       <td><code>readOnly</code></td>
       <td>
         <code><em>boolean</em>:</code> Returns / Sets the element's
-        [`readonly`](/en-US/docs/Web/HTML/Element/textarea#readonly) attribute,
+        <a href="/en-US/docs/Web/HTML/Element/textarea#readonly"><code>readonly</code></a> attribute,
         indicating that the user cannot modify the value of the control.
       </td>
     </tr>
