@@ -182,7 +182,7 @@ This example shows three images: the image with a `hue-rotate()` filter function
 
 ## See also
 
-- [CSS filter effects](/en-US/docs/Web/CSS/Filter_Effects/) module
+- [CSS filter effects](/en-US/docs/Web/CSS/Filter_Effects) module
 - The other {{cssxref("&lt;filter-function&gt;")}} functions available to be used in values of the {{cssxref("filter")}} and {{cssxref("backdrop-filter")}} properties include:
   - {{cssxref("filter-function/blur", "blur()")}}
   - {{cssxref("filter-function/brightness", "brightness()")}}
