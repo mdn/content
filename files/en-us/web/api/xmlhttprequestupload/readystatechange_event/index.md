@@ -1,8 +1,8 @@
 ---
-title: 'XMLHttpRequest: readystatechange event'
-slug: Web/API/XMLHttpRequest/readystatechange_event
+title: 'XMLHttpRequestUpload: readystatechange event'
+slug: Web/API/XMLHttpRequestUpload/readystatechange_event
 page-type: web-api-event
-browser-compat: api.XMLHttpRequest.readystatechange_event
+browser-compat: api.XMLHttpRequestUpload.readystatechange_event
 ---
 
 {{APIRef}}
