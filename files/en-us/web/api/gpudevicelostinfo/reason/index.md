@@ -14,7 +14,7 @@ The **`reason`** read-only property of the
 
 ## Value
 
-An enumerated value. At the moment the only value defined in the spec is `destroyed`, which indicates that the device was destroyed by a call to {{domxref("GPUDevice.destroy()")}}.
+An enumerated value. At the moment the only value defined in the spec is `"destroyed"`, which indicates that the device was destroyed by a call to {{domxref("GPUDevice.destroy()")}}.
 
 If the device was lost because of an unknown reason not covered in the available enumerated values, `reason` returns `undefined`.
 
