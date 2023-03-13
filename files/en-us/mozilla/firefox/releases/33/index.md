@@ -41,9 +41,9 @@ For details please [see the hacks post](https://hacks.mozilla.org/2014/07/event-
 ### HTML
 
 - Added the experimental support for {{htmlelement("picture")}} element ([Firefox bug 870022](https://bugzil.la/870022)), behind the `dom.image.picture.enabled` preference (off by default).
-- The {{HTMLElement("label")}}, especially without a {{htmlattrxref("for", "label")}} attribute, doesn't apply anymore to a `<input type=hidden>` field ([Firefox bug 597650](https://bugzil.la/597650)). The previous behavior wasn't spec compliant.
+- The {{HTMLElement("label")}}, especially without a [`for`](/en-US/docs/Web/HTML/Element/label#for) attribute, doesn't apply anymore to a `<input type=hidden>` field ([Firefox bug 597650](https://bugzil.la/597650)). The previous behavior wasn't spec compliant.
 - The link annotation `noreferrer` has been implemented on {{HTMLElement("a")}} elements. `<a rel="noreferrer">` will not include the URL of the referrer in the HTTP request sent to fetch it ([Firefox bug 530396](https://bugzil.la/530396)). Note that this work only for in-page links, not for linked clicked via the UI, like via contextual menus.
-- On Android, support for two new values for the {{htmlattrxref("name", "meta")}} attribute of {{HTMLElement("meta")}} has been added: `msapplication-TileImage` and `msapplication-TileColor` ([Firefox bug 1014712](https://bugzil.la/1014712)). Example:
+- On Android, support for two new values for the [`name`](/en-US/docs/Web/HTML/Element/meta#name) attribute of {{HTMLElement("meta")}} has been added: `msapplication-TileImage` and `msapplication-TileColor` ([Firefox bug 1014712](https://bugzil.la/1014712)). Example:
 
   ```html
   <meta name="msapplication-TileImage" content="images/benthepcguy-144.png" />
@@ -67,7 +67,7 @@ For details please [see the hacks post](https://hacks.mozilla.org/2014/07/event-
 - For {{HTMLElement("canvas")}}, the method {{domxref("CanvasPattern.setTransform()")}}, allowing to modify a pattern using the {{domxref("DOMMatrix")}} representation of a linear transform ([Firefox bug 1019257](https://bugzil.la/1019257)).
 - Our experimental implementation of Media Source Extensions, behind the `media.mediasource.enabled` preference, enabled by default in Nightly and Aurora only, now supports MP4 ([Firefox bug 1000686](https://bugzil.la/1000686)).
 - The properties {{domxref("HTMLMediaElement.audioTracks")}} and {{domxref("HTMLMediaElement.videoTracks")}} have been experimentally implemented. They are controlled by the `media.track.enabled`, off by default ([Firefox bug 744896](https://bugzil.la/744896)).
-- The non-standard `XMLHttpRequest.mozBackgroundRequest()` is no more accessible from Web sites. Only Firefox-internal code (Chrome code) can use it ([Firefox bug 1035242](https://bugzil.la/1035242)).
+- The non-standard `XMLHttpRequest.mozBackgroundRequest()` is no more accessible from websites. Only Firefox-internal code (Chrome code) can use it ([Firefox bug 1035242](https://bugzil.la/1035242)).
 - The `touchenter` and `touchleave` events, removed from the specification, have been removed ([Firefox bug 1036444](https://bugzil.la/1036444)).
 - The formerly called `loaded` event, sent on a {{domxref("HTMLTrackElement")}} has been renamed {{domxref("Window/load_event", "load")}} to match the specification ([Firefox bug 1035505](https://bugzil.la/1035505)).
 - The IndexedDB interface `FileHandle` has been renamed in {{domxref("IDBMutableFile")}} ([Firefox bug 1006485](https://bugzil.la/1006485)).

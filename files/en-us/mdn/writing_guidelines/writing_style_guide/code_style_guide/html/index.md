@@ -32,7 +32,7 @@ You should use the HTML5 doctype. It is short, easy to remember, and backwards c
 
 ### Document language
 
-Set the document language using the {{htmlattrxref('lang')}} attribute on your {{htmlelement("html")}} element:
+Set the document language using the [`lang`](/en-US/docs/Web/HTML/Global_attributes#lang) attribute on your {{htmlelement("html")}} element:
 
 ```html example-good
 <html lang="en-US"></html>
