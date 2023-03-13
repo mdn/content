@@ -46,7 +46,7 @@ Use dynamic import only when necessary. The static form is preferable for loadin
 If your file is not run as a module (if it's referenced in an HTML file, the script tag must have `type="module"`), you will not be able to use static import declarations, but the asynchronous dynamic import syntax will always be available, allowing you to import modules into non-module environments.
 
 Dynamic module import is not permitted in all execution contexts.
-For example, `import()` can be used in a share or dedicated worker, but will throw if called within a [service worker](/en-US/docs/Web/API/Service_Worker_API) or a [worklet](/en-US/docs/Web/API/Worklet).
+For example, `import()` can be used in a shared worker or a dedicated worker, but will throw if called within a [service worker](/en-US/docs/Web/API/Service_Worker_API) or a [worklet](/en-US/docs/Web/API/Worklet).
 
 ### Module namespace object
 
