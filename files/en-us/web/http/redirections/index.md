@@ -69,7 +69,7 @@ HTTP redirects aren't the only way to define redirections. There are two others:
 
 ### HTML redirections
 
-HTTP redirects are the best way to create redirections, but sometimes you don't have control over the server. In that case, try a {{HTMLElement("meta")}} element with its {{htmlattrxref("http-equiv", "meta")}} attribute set to `Refresh` in the {{HTMLElement("head")}} of the page. When displaying the page, the browser will go to the indicated URL.
+HTTP redirects are the best way to create redirections, but sometimes you don't have control over the server. In that case, try a {{HTMLElement("meta")}} element with its [`http-equiv`](/en-US/docs/Web/HTML/Element/meta#http-equiv) attribute set to `Refresh` in the {{HTMLElement("head")}} of the page. When displaying the page, the browser will go to the indicated URL.
 
 ```html
 <head>

@@ -13,7 +13,7 @@ browser-compat: html.elements.input.type_text
 
 ## Value
 
-The {{htmlattrxref("value", "input")}} attribute is a string that contains the current value of the text entered into the text field. You can retrieve this using the {{domxref("HTMLInputElement")}} `value` property in JavaScript.
+The [`value`](/en-US/docs/Web/HTML/Element/input#value) attribute is a string that contains the current value of the text entered into the text field. You can retrieve this using the {{domxref("HTMLInputElement")}} `value` property in JavaScript.
 
 ```js
 let theText = myTextInput.value;
@@ -27,7 +27,7 @@ In addition to the attributes that operate on all {{HTMLElement("input")}} eleme
 
 ### `list`
 
-The values of the list attribute is the {{domxref("Element.id", "id")}} of a {{HTMLElement("datalist")}} element located in the same document. The {{HTMLElement("datalist")}} provides a list of predefined values to suggest to the user for this input. Any values in the list that are not compatible with the {{htmlattrxref("type", "input")}} are not included in the suggested options. The values provided are suggestions, not requirements: users can select from this predefined list or provide a different value.
+The values of the list attribute is the {{domxref("Element.id", "id")}} of a {{HTMLElement("datalist")}} element located in the same document. The {{HTMLElement("datalist")}} provides a list of predefined values to suggest to the user for this input. Any values in the list that are not compatible with the [`type`](/en-US/docs/Web/HTML/Element/input#type) are not included in the suggested options. The values provided are suggestions, not requirements: users can select from this predefined list or provide a different value.
 
 ### `maxlength`
 
@@ -47,7 +47,7 @@ The `pattern` attribute, when specified, is a regular expression that the input'
 
 If the specified pattern is not specified or is invalid, no regular expression is applied and this attribute is ignored completely.
 
-> **Note:** Use the {{htmlattrxref("title", "input")}} attribute to specify text that most browsers will display as a tooltip to explain what the requirements are to match the pattern. You should also include other explanatory text nearby.
+> **Note:** Use the [`title`](/en-US/docs/Web/HTML/Element/input#title) attribute to specify text that most browsers will display as a tooltip to explain what the requirements are to match the pattern. You should also include other explanatory text nearby.
 
 See [Specifying a pattern](#specifying_a_pattern) for further details and an example.
 
@@ -127,11 +127,11 @@ This renders like so:
 
 {{EmbedLiveSample("Basic_example", 600, 80)}}
 
-When submitted, the data name/value pair sent to the server will be `name=Chris` (if "Chris" was entered as the input value before submission). You must remember to include {{htmlattrxref("name", "input")}} attribute on the {{HTMLElement("input")}} element, otherwise the text field's value won't be included with the submitted data.
+When submitted, the data name/value pair sent to the server will be `name=Chris` (if "Chris" was entered as the input value before submission). You must remember to include [`name`](/en-US/docs/Web/HTML/Element/input#name) attribute on the {{HTMLElement("input")}} element, otherwise the text field's value won't be included with the submitted data.
 
 ### Setting placeholders
 
-You can provide a useful placeholder inside your text input that can provide a hint as to what to enter by including using the {{htmlattrxref("placeholder","input")}} attribute. Look at the following example:
+You can provide a useful placeholder inside your text input that can provide a hint as to what to enter by including using the [`placeholder`](/en-US/docs/Web/HTML/Element/input#placeholder) attribute. Look at the following example:
 
 ```html
 <form>
@@ -157,7 +157,7 @@ The placeholder is typically rendered in a lighter color than the element's fore
 
 ### Physical input element size
 
-The physical size of the input box can be controlled using the {{htmlattrxref("size", "input")}} attribute. With it, you can specify the number of characters the text input can display at a time. This affects the width of the element, letting you specify the width in terms of characters rather than pixels. In this example, for instance, the input is 30 characters wide:
+The physical size of the input box can be controlled using the [`size`](/en-US/docs/Web/HTML/Element/input#size) attribute. With it, you can specify the number of characters the text input can display at a time. This affects the width of the element, letting you specify the width in terms of characters rather than pixels. In this example, for instance, the input is 30 characters wide:
 
 ```html
 <form>
@@ -215,7 +215,7 @@ The technique also requires a {{htmlelement("span")}} element to be placed after
 
 ### Making input required
 
-You can use the {{htmlattrxref("required","input")}} attribute as an easy way of making entering a value required before form submission is allowed:
+You can use the [`required`](/en-US/docs/Web/HTML/Element/input#required) attribute as an easy way of making entering a value required before form submission is allowed:
 
 ```html
 <form>
@@ -258,7 +258,7 @@ If you try to submit the form with no search term entered into it, the browser w
 
 ### Input value length
 
-You can specify a minimum length (in characters) for the entered value using the {{htmlattrxref("minlength", "input")}} attribute; similarly, use {{htmlattrxref("maxlength", "input")}} to set the maximum length of the entered value, in characters.
+You can specify a minimum length (in characters) for the entered value using the [`minlength`](/en-US/docs/Web/HTML/Element/input#minlength) attribute; similarly, use [`maxlength`](/en-US/docs/Web/HTML/Element/input#maxlength) to set the maximum length of the entered value, in characters.
 
 The example below requires that the entered value be 4–8 characters in length.
 
@@ -313,7 +313,7 @@ If you try to submit the form with less than 4 characters, you'll be given an ap
 
 ### Specifying a pattern
 
-You can use the {{htmlattrxref("pattern","input")}} attribute to specify a regular expression that the inputted value must match in order to be considered valid (see [Validating against a regular expression](/en-US/docs/Learn/Forms/Form_validation#validating_against_a_regular_expression) for a simple crash course on using regular expressions to validate inputs).
+You can use the [`pattern`](/en-US/docs/Web/HTML/Element/input#pattern) attribute to specify a regular expression that the inputted value must match in order to be considered valid (see [Validating against a regular expression](/en-US/docs/Learn/Forms/Form_validation#validating_against_a_regular_expression) for a simple crash course on using regular expressions to validate inputs).
 
 The example below restricts the value to 4-8 characters and requires that it contain only lower-case letters.
 
@@ -394,20 +394,20 @@ You can see good examples of text inputs used in context in our [Your first HTML
     <tr>
       <td><strong>Supported Common Attributes</strong></td>
       <td>
-        {{htmlattrxref("autocomplete", "input")}},
-        {{htmlattrxref("list", "input")}},
-        {{htmlattrxref("maxlength", "input")}},
-        {{htmlattrxref("minlength", "input")}},
-        {{htmlattrxref("pattern", "input")}},
-        {{htmlattrxref("placeholder", "input")}},
-        {{htmlattrxref("readonly", "input")}},
-        {{htmlattrxref("required", "input")}} and
-        {{htmlattrxref("size", "input")}}
+        <a href="/en-US/docs/Web/HTML/Element/input#autocomplete"><code>autocomplete</code></a>,
+        <a href="/en-US/docs/Web/HTML/Element/input#list"><code>list</code></a>,
+        <a href="/en-US/docs/Web/HTML/Element/input#maxlength"><code>maxlength</code></a>,
+        <a href="/en-US/docs/Web/HTML/Element/input#minlength"><code>minlength</code></a>,
+        <a href="/en-US/docs/Web/HTML/Element/input#pattern"><code>pattern</code></a>,
+        <a href="/en-US/docs/Web/HTML/Element/input#placeholder"><code>placeholder</code></a>,
+        <a href="/en-US/docs/Web/HTML/Element/input#readonly"><code>readonly</code></a>,
+        <a href="/en-US/docs/Web/HTML/Element/input#required"><code>required</code></a> and
+        <a href="/en-US/docs/Web/HTML/Element/input#size"><code>size</code></a>
       </td>
     </tr>
     <tr>
       <td><strong>IDL attributes</strong></td>
-      <td>{{htmlattrxref("list", "input")}}, <code>value</code></td>
+      <td><a href="/en-US/docs/Web/HTML/Element/input#list"><code>list</code></a>, <code>value</code></td>
     </tr>
     <tr>
       <td><strong>DOM interface</strong></td>

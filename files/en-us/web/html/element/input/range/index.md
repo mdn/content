@@ -19,14 +19,14 @@ If the user's browser doesn't support type `range`, it will fall back and treat 
 
 There is no pattern validation available; however, the following forms of automatic validation are performed:
 
-- If the {{htmlattrxref("value", "input")}} is set to something which can't be converted into a valid floating-point number, validation fails because the input is suffering from a bad input.
-- The value won't be less than {{htmlattrxref("min", "input")}}. The default is 0.
-- The value won't be greater than {{htmlattrxref("max", "input")}}. The default is 100.
-- The value will be a multiple of {{htmlattrxref("step", "input")}}. The default is 1.
+- If the [`value`](/en-US/docs/Web/HTML/Element/input#value) is set to something which can't be converted into a valid floating-point number, validation fails because the input is suffering from a bad input.
+- The value won't be less than [`min`](/en-US/docs/Web/HTML/Element/input#min). The default is 0.
+- The value won't be greater than [`max`](/en-US/docs/Web/HTML/Element/input#max). The default is 100.
+- The value will be a multiple of [`step`](/en-US/docs/Web/HTML/Element/input#step). The default is 1.
 
 ### Value
 
-The {{htmlattrxref("value", "input")}} attribute contains a string which contains a string representation of the selected number. The value is never an empty string (`""`). The default value is halfway between the specified minimum and maximum—unless the maximum is actually less than the minimum, in which case the default is set to the value of the `min` attribute. The algorithm for determining the default value is:
+The [`value`](/en-US/docs/Web/HTML/Element/input#value) attribute contains a string which contains a string representation of the selected number. The value is never an empty string (`""`). The default value is halfway between the specified minimum and maximum—unless the maximum is actually less than the minimum, in which case the default is set to the value of the `min` attribute. The algorithm for determining the default value is:
 
 ```js
 defaultValue =
@@ -43,19 +43,19 @@ In addition to the attributes shared by all {{HTMLElement("input")}} elements, r
 
 ### list
 
-The value of the `list` attribute is the {{domxref("Element.id", "id")}} of a {{HTMLElement("datalist")}} element located in the same document. The {{HTMLElement("datalist")}} provides a list of predefined values to suggest to the user for this input. Any values in the list that are not compatible with the {{htmlattrxref("type", "input")}} are not included in the suggested options. The values provided are suggestions, not requirements: users can select from this predefined list or provide a different value.
+The value of the `list` attribute is the {{domxref("Element.id", "id")}} of a {{HTMLElement("datalist")}} element located in the same document. The {{HTMLElement("datalist")}} provides a list of predefined values to suggest to the user for this input. Any values in the list that are not compatible with the [`type`](/en-US/docs/Web/HTML/Element/input#type) are not included in the suggested options. The values provided are suggestions, not requirements: users can select from this predefined list or provide a different value.
 
 See the [adding tick marks](#adding_tick_marks) below for an example of how the options on a range are denoted in supported browsers.
 
 ### max
 
-The greatest value in the range of permitted values. If the {{htmlattrxref("value", "input")}} entered into the element exceeds this, the element fails [constraint validation](/en-US/docs/Web/HTML/Constraint_validation). If the value of the [`max`](/en-US/docs/Web/HTML/Attributes/max) attribute isn't a number, then the element has no maximum value.
+The greatest value in the range of permitted values. If the [`value`](/en-US/docs/Web/HTML/Element/input#value) entered into the element exceeds this, the element fails [constraint validation](/en-US/docs/Web/HTML/Constraint_validation). If the value of the [`max`](/en-US/docs/Web/HTML/Attributes/max) attribute isn't a number, then the element has no maximum value.
 
 This value must be greater than or equal to the value of the [`min`](/en-US/docs/Web/HTML/Attributes/min) attribute. See the HTML [`max`](/en-US/docs/Web/HTML/Attributes/max) attribute.
 
 ### min
 
-The lowest value in the range of permitted values. If the {{htmlattrxref("value", "input")}} of the element is less than this, the element fails [constraint validation](/en-US/docs/Web/HTML/Constraint_validation). If a value is specified for `min` that isn't a valid number, the input has no minimum value.
+The lowest value in the range of permitted values. If the [`value`](/en-US/docs/Web/HTML/Element/input#value) of the element is less than this, the element fails [constraint validation](/en-US/docs/Web/HTML/Constraint_validation). If a value is specified for `min` that isn't a valid number, the input has no minimum value.
 
 This value must be less than or equal to the value of the [`max`](/en-US/docs/Web/HTML/Attributes/max) attribute. See the HTML [`min`](/en-US/docs/Web/HTML/Attributes/min) attribute.
 
@@ -63,7 +63,7 @@ This value must be less than or equal to the value of the [`max`](/en-US/docs/We
 
 ### step
 
-The `step` attribute is a number that specifies the granularity that the value must adhere to. Only values that match the specified stepping interval ([`min`](#min) if specified, {{htmlattrxref("value", "input")}} otherwise, or an appropriate default value if neither of those is provided) are valid.
+The `step` attribute is a number that specifies the granularity that the value must adhere to. Only values that match the specified stepping interval ([`min`](#min) if specified, [`value`](/en-US/docs/Web/HTML/Element/input#value) otherwise, or an appropriate default value if neither of those is provided) are valid.
 
 The `step` attribute can also be set to the `any` string value. This `step` value means that no stepping interval is implied and any value is allowed in the specified range (barring other constraints, such as [`min`](#min) and [`max`](#max)). See the [Setting step to the `any` value](#setting_step_to_the_any_value) example for how this works in supported browsers.
 
@@ -94,7 +94,7 @@ As a rule, if the user is more likely to be interested in the percentage of the 
 
 ### Specifying the minimum and maximum
 
-By default, the minimum is 0 and the maximum is 100. If that's not what you want, you can easily specify different bounds by changing the values of the {{htmlattrxref("min", "input")}} and/or {{htmlattrxref("max", "input")}} attributes. These can be any floating-point value.
+By default, the minimum is 0 and the maximum is 100. If that's not what you want, you can easily specify different bounds by changing the values of the [`min`](/en-US/docs/Web/HTML/Element/input#min) and/or [`max`](/en-US/docs/Web/HTML/Element/input#max) attributes. These can be any floating-point value.
 
 For example, to ask the user for a value between -10 and 10, you can use:
 
@@ -118,7 +118,7 @@ By default, the granularity is 1, meaning the value is always an integer. To con
 
 #### Setting step to "any"
 
-If you want to accept any value regardless of how many decimal places it extends to, you can specify a value of `any` for the {{htmlattrxref("step", "input")}} attribute:
+If you want to accept any value regardless of how many decimal places it extends to, you can specify a value of `any` for the [`step`](/en-US/docs/Web/HTML/Element/input#step) attribute:
 
 ##### HTML
 
@@ -144,7 +144,7 @@ This example lets the user select any value between 0 and π without any restric
 
 ### Adding tick marks
 
-To add tick marks to a range control, include the `list` attribute, giving it the `id` of a {{HTMLElement("datalist")}} element which defines a series of tick marks on the control. Each point is represented using an {{HTMLElement("option")}} element with its {{htmlattrxref("value", "option")}} set to the range's value at which a mark should be drawn.
+To add tick marks to a range control, include the `list` attribute, giving it the `id` of a {{HTMLElement("datalist")}} element which defines a series of tick marks on the control. Each point is represented using an {{HTMLElement("option")}} element with its [`value`](/en-US/docs/Web/HTML/Element/option#value) set to the range's value at which a mark should be drawn.
 
 #### HTML
 
@@ -357,11 +357,11 @@ input[type="range"][orient="vertical"] {
     <tr>
       <td><strong>Supported common attributes</strong></td>
       <td>
-        {{htmlattrxref("autocomplete", "input")}},
-        {{htmlattrxref("list", "input")}},
-        {{htmlattrxref("max", "input")}},
-        {{htmlattrxref("min", "input")}}, and
-        {{htmlattrxref("step", "input")}}
+        <a href="/en-US/docs/Web/HTML/Element/input#autocomplete"><code>autocomplete</code></a>,
+        <a href="/en-US/docs/Web/HTML/Element/input#list"><code>list</code></a>,
+        <a href="/en-US/docs/Web/HTML/Element/input#max"><code>max</code></a>,
+        <a href="/en-US/docs/Web/HTML/Element/input#min"><code>min</code></a>, and
+        <a href="/en-US/docs/Web/HTML/Element/input#step"><code>step</code></a>
       </td>
     </tr>
     <tr>

@@ -38,7 +38,7 @@ In the context of the `<cite>` element, a creative work that might be cited coul
 - An exhibition
 - A legal case report
 - A computer program
-- A web site
+- A website
 - A web page
 - A blog post or comment
 - A forum post or comment
@@ -47,7 +47,7 @@ In the context of the `<cite>` element, a creative work that might be cited coul
 - A written or oral statement
 - And so forth.
 
-To include a reference to the source of quoted material which is contained within a {{HTMLElement("blockquote")}} or {{HTMLElement("q")}} element, use the {{htmlattrxref("cite", "blockquote")}} attribute on the element.
+To include a reference to the source of quoted material which is contained within a {{HTMLElement("blockquote")}} or {{HTMLElement("q")}} element, use the [`cite`](/en-US/docs/Web/HTML/Element/blockquote#cite) attribute on the element.
 
 Typically, browsers style the contents of a `<cite>` element in italics by default. To avoid this, apply the CSS {{cssxref("font-style")}} property to the `<cite>` element.
 

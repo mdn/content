@@ -17,7 +17,7 @@ On browsers that don't support inputs of type `url`, a `url` input falls back to
 
 ## Value
 
-The {{HTMLElement("input")}} element's {{htmlattrxref("value", "input")}} attribute contains a string which is automatically validated as conforming to URL syntax. More specifically, there are two possible value formats that will pass validation:
+The {{HTMLElement("input")}} element's [`value`](/en-US/docs/Web/HTML/Element/input#value) attribute contains a string which is automatically validated as conforming to URL syntax. More specifically, there are two possible value formats that will pass validation:
 
 1. An empty string ("") indicating that the user did not enter a value or that the value was removed.
 2. A single properly-formed absolute URL. This doesn't necessarily mean the URL address exists, but it is at least formatted correctly. In simple terms, this means `urlscheme://restofurl`.
@@ -30,7 +30,7 @@ In addition to the attributes that operate on all {{HTMLElement("input")}} eleme
 
 ### list
 
-The values of the list attribute is the {{domxref("Element.id", "id")}} of a {{HTMLElement("datalist")}} element located in the same document. The {{HTMLElement("datalist")}} provides a list of predefined values to suggest to the user for this input. Any values in the list that are not compatible with the {{htmlattrxref("type", "input")}} are not included in the suggested options. The values provided are suggestions, not requirements: users can select from this predefined list or provide a different value.
+The values of the list attribute is the {{domxref("Element.id", "id")}} of a {{HTMLElement("datalist")}} element located in the same document. The {{HTMLElement("datalist")}} provides a list of predefined values to suggest to the user for this input. Any values in the list that are not compatible with the [`type`](/en-US/docs/Web/HTML/Element/input#type) are not included in the suggested options. The values provided are suggestions, not requirements: users can select from this predefined list or provide a different value.
 
 ### maxlength
 
@@ -50,7 +50,7 @@ The `pattern` attribute, when specified, is a regular expression that the input'
 
 If the specified pattern is not specified or is invalid, no regular expression is applied and this attribute is ignored completely.
 
-> **Note:** Use the {{htmlattrxref("title", "input")}} attribute to specify text that most browsers will display as a tooltip to explain what the requirements are to match the pattern. You should also include other explanatory text nearby.
+> **Note:** Use the [`title`](/en-US/docs/Web/HTML/Element/input#title) attribute to specify text that most browsers will display as a tooltip to explain what the requirements are to match the pattern. You should also include other explanatory text nearby.
 
 See the section [Pattern validation](#pattern_validation) for details and an example.
 
@@ -126,7 +126,7 @@ Currently, all browsers which implement this element implement it as a standard 
 
 {{ EmbedLiveSample('A_simple_URL_input', 600, 40) }}
 
-Notice that it's considered valid when empty and when a single validly-formatted URL address is entered, but is otherwise not considered valid. By adding the {{htmlattrxref("required", "input")}} attribute, only properly-formed URLs are allowed; the input is no longer considered valid when empty.
+Notice that it's considered valid when empty and when a single validly-formatted URL address is entered, but is otherwise not considered valid. By adding the [`required`](/en-US/docs/Web/HTML/Element/input#required) attribute, only properly-formed URLs are allowed; the input is no longer considered valid when empty.
 
 There is nothing magical going on here. Submitting this form would cause the following data to be sent to the server: `myURL=http%3A%2F%2Fwww.example.com`. Note how characters are escaped as necessary.
 
@@ -152,7 +152,7 @@ You can control not only the physical length of the input box, but also the mini
 
 #### Physical input element size
 
-The physical size of the input box can be controlled using the {{htmlattrxref("size", "input")}} attribute. With it, you can specify the number of characters the input box can display at a time. In this example, for instance, the `url` edit box is 30 characters wide:
+The physical size of the input box can be controlled using the [`size`](/en-US/docs/Web/HTML/Element/input#size) attribute. With it, you can specify the number of characters the input box can display at a time. In this example, for instance, the `url` edit box is 30 characters wide:
 
 ```html
 <input id="myURL" name="myURL" type="url" size="30" />
@@ -162,7 +162,7 @@ The physical size of the input box can be controlled using the {{htmlattrxref("s
 
 #### Element value length
 
-The `size` is separate from the length limitation on the entered URL itself. You can specify a minimum length, in characters, for the entered URL using the {{htmlattrxref("minlength", "input")}} attribute; similarly, use {{htmlattrxref("maxlength", "input")}} to set the maximum length of the entered URL. If `maxLength` exceeds `size`, the input box's contents will scroll as needed to show the current selection or insertion point as the content is manipulated.
+The `size` is separate from the length limitation on the entered URL itself. You can specify a minimum length, in characters, for the entered URL using the [`minlength`](/en-US/docs/Web/HTML/Element/input#minlength) attribute; similarly, use [`maxlength`](/en-US/docs/Web/HTML/Element/input#maxlength) to set the maximum length of the entered URL. If `maxLength` exceeds `size`, the input box's contents will scroll as needed to show the current selection or insertion point as the content is manipulated.
 
 The example below creates a 30-character wide URL address entry box, requiring that the contents be no shorter than 10 characters and no longer than 80 characters.
 
@@ -184,7 +184,7 @@ The example below creates a 30-character wide URL address entry box, requiring t
 
 #### Providing a single default using the value attribute
 
-As always, you can provide a default value for a `url` input box by setting its {{htmlattrxref("value", "input")}} attribute:
+As always, you can provide a default value for a `url` input box by setting its [`value`](/en-US/docs/Web/HTML/Element/input#value) attribute:
 
 ```html
 <input id="myURL" name="myURL" type="url" value="http://www.example.com" />
@@ -194,7 +194,7 @@ As always, you can provide a default value for a `url` input box by setting its 
 
 #### Offering suggested values
 
-Taking it a step further, you can provide a list of default options from which the user can select by specifying the {{htmlattrxref("list", "input")}} attribute. This doesn't limit the user to those options, but does allow them to select commonly-used URLs more quickly. This also offers hints to {{htmlattrxref("autocomplete", "input")}}. The `list` attribute specifies the ID of a {{HTMLElement("datalist")}}, which in turn contains one {{HTMLElement("option")}} element per suggested value; each `option`'s `value` is the corresponding suggested value for the URL entry box.
+Taking it a step further, you can provide a list of default options from which the user can select by specifying the [`list`](/en-US/docs/Web/HTML/Element/input#list) attribute. This doesn't limit the user to those options, but does allow them to select commonly-used URLs more quickly. This also offers hints to [`autocomplete`](/en-US/docs/Web/HTML/Element/input#autocomplete). The `list` attribute specifies the ID of a {{HTMLElement("datalist")}}, which in turn contains one {{HTMLElement("option")}} element per suggested value; each `option`'s `value` is the corresponding suggested value for the URL entry box.
 
 ```html
 <input id="myURL" name="myURL" type="url" list="defaultURLs" />
@@ -214,7 +214,7 @@ With the {{HTMLElement("datalist")}} element and its {{HTMLElement("option")}}s 
 
 #### Using labels for suggested values
 
-You can opt to include the {{htmlattrxref("label", "option")}} attribute on one or all of your `<option>` elements to provide textual labels. Some browsers may display only the labels, while others may display both the label and the URL.
+You can opt to include the [`label`](/en-US/docs/Web/HTML/Element/option#label) attribute on one or all of your `<option>` elements to provide textual labels. Some browsers may display only the labels, while others may display both the label and the URL.
 
 ```html
 <input id="myURL" name="myURL" type="url" list="defaultURLs" />
@@ -244,7 +244,7 @@ The syntax of a URL is fairly intricate. It's defined by WHATWG's [URL Living St
 
 ### Making a URL required
 
-As mentioned earlier, to make a URL entry required before the form can be submitted (you can't leave the field blank), you just need to include the {{htmlattrxref("required", "input")}} attribute on the input.
+As mentioned earlier, to make a URL entry required before the form can be submitted (you can't leave the field blank), you just need to include the [`required`](/en-US/docs/Web/HTML/Element/input#required) attribute on the input.
 
 ```html
 <form>
@@ -259,11 +259,11 @@ Try submitting the above form with no value entered to see what happens.
 
 ### Pattern validation
 
-If you need the entered URL to be restricted further than just "any string that looks like a URL," you can use the {{htmlattrxref("pattern", "input")}} attribute to specify a {{Glossary("regular expression")}} the value must match for the value to be valid.
+If you need the entered URL to be restricted further than just "any string that looks like a URL," you can use the [`pattern`](/en-US/docs/Web/HTML/Element/input#pattern) attribute to specify a {{Glossary("regular expression")}} the value must match for the value to be valid.
 
 For example, let's say you're building a support page for employees of Myco, Inc. which will let them contact their IT department for help if one of their pages has a problem. In our simplified form, the user needs to enter the URL of the page that has a problem, and a message describing what is wrong. But we want the URL to only successfully validate if the entered URL is in a Myco domain.
 
-Since inputs of type `url` validate against both the standard URL validation _and_ the specified {{htmlattrxref("pattern", "input")}}, you can implement this easily. Let's see how:
+Since inputs of type `url` validate against both the standard URL validation _and_ the specified [`pattern`](/en-US/docs/Web/HTML/Element/input#pattern), you can implement this easily. Let's see how:
 
 ```css hidden
 div {
@@ -318,7 +318,7 @@ input:valid + span::after {
 
 {{EmbedLiveSample("Pattern_validation", 700, 150)}}
 
-First of all, the {{htmlattrxref("required", "input")}} attribute is specified, making it mandatory that a valid URL be provided.
+First of all, the [`required`](/en-US/docs/Web/HTML/Element/input#required) attribute is specified, making it mandatory that a valid URL be provided.
 
 Second, in the `url` input we set `pattern` to `".*\.myco\..*"`. This simple regular expression requests a string that has any number of characters, followed by a dot, followed by "myco", followed by a dot, followed by any number of characters. And because the browser runs both the standard URL filter _and_ our custom pattern against the specified text, we wind up with a validation which says "make sure this is a valid URL, and also in a Myco domain."
 
@@ -354,15 +354,15 @@ You can also find our [pattern validation example on GitHub](https://github.com/
     <tr>
       <td><strong>Supported Common Attributes</strong></td>
       <td>
-        {{htmlattrxref("autocomplete", "input")}},
-        {{htmlattrxref("list", "input")}},
-        {{htmlattrxref("maxlength", "input")}},
-        {{htmlattrxref("minlength", "input")}},
-        {{htmlattrxref("pattern", "input")}},
-        {{htmlattrxref("placeholder", "input")}},
-        {{htmlattrxref("readonly", "input")}},
-        {{htmlattrxref("required", "input")}} and
-        {{htmlattrxref("size", "input")}}
+        <a href="/en-US/docs/Web/HTML/Element/input#autocomplete"><code>autocomplete</code></a>,
+        <a href="/en-US/docs/Web/HTML/Element/input#list"><code>list</code></a>,
+        <a href="/en-US/docs/Web/HTML/Element/input#maxlength"><code>maxlength</code></a>,
+        <a href="/en-US/docs/Web/HTML/Element/input#minlength"><code>minlength</code></a>,
+        <a href="/en-US/docs/Web/HTML/Element/input#pattern"><code>pattern</code></a>,
+        <a href="/en-US/docs/Web/HTML/Element/input#placeholder"><code>placeholder</code></a>,
+        <a href="/en-US/docs/Web/HTML/Element/input#readonly"><code>readonly</code></a>,
+        <a href="/en-US/docs/Web/HTML/Element/input#required"><code>required</code></a> and
+        <a href="/en-US/docs/Web/HTML/Element/input#size"><code>size</code></a>
       </td>
     </tr>
     <tr>
