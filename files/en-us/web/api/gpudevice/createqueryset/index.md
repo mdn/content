@@ -55,7 +55,7 @@ The following criteria must be met when calling **`createQuerySet()`**, otherwis
 The following snippet creates a {{domxref("GPUQuerySet")}} that holds 32 occlusion query results:
 
 ```js
-const querySet = gpuDevice.createQuerySet({
+const querySet = device.createQuerySet({
   type: "occlusion",
   count: 32,
 });
