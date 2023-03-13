@@ -26,7 +26,7 @@ gives a few [Usage](#usage) examples.
 
 {{AvailableInWorkers}}
 
-> **Note:** Certain online IDEs and editors may implement the console API differently than the browsers. As a result, certian functionality of the console API such as the timer methods, may not be outputted in the console of some online IDE or editors. Open your browser's DevTools console to see the logs as shown in this documentation.
+> **Note:** Certain online IDEs and editors may implement the console API differently than the browsers. As a result, certain functionality of the console API, such as the timer methods, may not be outputted in the console of online IDEs or editors. Always open your browser's DevTools console to see the logs as shown in this documentation.
 
 ## Instance methods
 
