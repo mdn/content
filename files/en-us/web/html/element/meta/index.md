@@ -48,7 +48,7 @@ The **`<meta>`** [HTML](/en-US/docs/Web/HTML) element represents {{Glossary("Met
             <code>&#x3C;meta charset></code>,
             <code>&#x3C;meta http-equiv></code>: a
             {{HTMLElement("head")}} element. If the
-            {{htmlattrxref("http-equiv", "meta")}} is not an
+            <a href="/en-US/docs/Web/HTML/Element/meta#http-equiv"><code>http-equiv</code></a> is not an
             encoding declaration, it can also be inside a
             {{HTMLElement("noscript")}} element, itself inside a
             <code>&#x3C;head></code> element.
@@ -95,21 +95,21 @@ The **`<meta>`** [HTML](/en-US/docs/Web/HTML) element represents {{Glossary("Met
 
 The type of metadata provided by the `<meta>` element can be one of the following:
 
-- If the {{htmlattrxref("name", "meta")}} attribute is set, the `<meta>` element provides _document-level metadata_, applying to the whole page.
-- If the {{htmlattrxref("http-equiv", "meta")}} attribute is set, the `<meta>` element is a _pragma directive_, providing information equivalent to what can be given by a similarly-named HTTP header.
-- If the {{htmlattrxref("charset", "meta")}} attribute is set, the `<meta>` element is a _charset declaration_, giving the character encoding in which the document is encoded.
+- If the [`name`](#name) attribute is set, the `<meta>` element provides _document-level metadata_, applying to the whole page.
+- If the [`http-equiv`](#http-equiv) attribute is set, the `<meta>` element is a _pragma directive_, providing information equivalent to what can be given by a similarly-named HTTP header.
+- If the [`charset`](#charset) attribute is set, the `<meta>` element is a _charset declaration_, giving the character encoding in which the document is encoded.
 - If the [`itemprop`](/en-US/docs/Web/HTML/Global_attributes/itemprop) attribute is set, the `<meta>` element provides _user-defined metadata_.
 
 ## Attributes
 
 This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 
-> **Note:** the attribute {{htmlattrxref("name", "meta")}} has a specific meaning for the `<meta>` element, and the [`itemprop`](/en-US/docs/Web/HTML/Global_attributes/itemprop) attribute must not be set on the same `<meta>` element that has any existing {{htmlattrxref("name", "meta")}}, {{htmlattrxref("http-equiv", "meta")}} or {{htmlattrxref("charset", "meta")}} attributes.
+> **Note:** the attribute [`name`](#name) has a specific meaning for the `<meta>` element, and the [`itemprop`](/en-US/docs/Web/HTML/Global_attributes/itemprop) attribute must not be set on the same `<meta>` element that has any existing [`name`](#name), [`http-equiv`](#http-equiv) or [`charset`](#charset) attributes.
 
 - `charset`
   - : This attribute declares the document's character encoding. If the attribute is present, its value must be an ASCII case-insensitive match for the string "`utf-8`", because UTF-8 is the only valid encoding for HTML5 documents. `<meta>` elements which declare a character encoding must be located entirely within the first 1024 bytes of the document.
 - `content`
-  - : This attribute contains the value for the {{htmlattrxref("http-equiv", "meta")}} or {{htmlattrxref("name", "meta")}} attribute, depending on which is used.
+  - : This attribute contains the value for the [`http-equiv`](#http-equiv) or [`name`](#name) attribute, depending on which is used.
 - `http-equiv`
 
   - : Defines a pragma directive. The attribute is named `http-equiv(alent)` because all the allowed values are names of particular HTTP headers:
@@ -120,7 +120,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
     - `content-type`
 
-      Declares the [MIME type](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types) and character encoding of the document. If specified, the `content` attribute must have the value "`text/html; charset=utf-8`". This is equivalent to a `<meta>` element with the {{htmlattrxref("charset", "meta")}} attribute specified, and carries the same restriction on placement within the document. **Note:** Can only be used in documents served with a `text/html` — not in documents served with an XML MIME type.
+      Declares the [MIME type](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types) and the document's character encoding. The `content` attribute must have the value "`text/html; charset=utf-8`" if specified. This is equivalent to a `<meta>` element with the [`charset`](#charset) attribute specified and carries the same restriction on placement within the document. **Note:** Can only be used in documents served with a `text/html` — not in documents served with an XML MIME type.
 
     - `default-style`
 
@@ -132,8 +132,8 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
     - `refresh` This instruction specifies:
 
-      - The number of seconds until the page should be reloaded - only if the {{htmlattrxref("content", "meta")}} attribute contains a non-negative integer.
-      - The number of seconds until the page should redirect to another - only if the {{htmlattrxref("content", "meta")}} attribute contains a non-negative integer followed by the string '`;url=`', and a valid URL.
+      - The number of seconds until the page should be reloaded - only if the [`content`](#content) attribute contains a non-negative integer.
+      - The number of seconds until the page should redirect to another - only if the [`content`](#content) attribute contains a non-negative integer followed by the string '`;url=`', and a valid URL.
 
       > **Warning:**
       >

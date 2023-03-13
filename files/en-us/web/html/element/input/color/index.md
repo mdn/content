@@ -17,7 +17,7 @@ The element's presentation may vary substantially from one browser and/or platfo
 
 ## Value
 
-The {{htmlattrxref("value", "input")}} of an {{HTMLElement("input")}} element of type `color` is always a string which contains a 7-character string specifying an RGB color in hexadecimal format. While you can input the color in either upper- or lower-case, it will be stored in lower-case form. The value is never in any other form, and is never empty.
+The [`value`](/en-US/docs/Web/HTML/Element/input#value) of an {{HTMLElement("input")}} element of type `color` is always a string which contains a 7-character string specifying an RGB color in hexadecimal format. While you can input the color in either upper- or lower-case, it will be stored in lower-case form. The value is never in any other form, and is never empty.
 
 > **Note:** Setting the value to anything that isn't a valid, fully-opaque, RGB color _in hexadecimal notation_ will result in the value being set to `#000000`. In particular, you can't use CSS's standardized color names, or any CSS function syntax, to set the value. This makes sense when you keep in mind that HTML and CSS are separate languages and specifications. In addition, colors with an alpha channel are not supported; specifying a color in 9-character hexadecimal notation (e.g. `#009900aa`) will also result in the color being set to `#000000`.
 
@@ -39,7 +39,7 @@ If you don't specify a value, the default is `#000000`, which is black. The valu
 
 ### Tracking color changes
 
-As is the case with other {{HTMLElement("input")}} types, there are two events that can be used to detect changes to the color value: {{domxref("HTMLElement/input_event", "input")}} and {{domxref("HTMLElement/change_event", "change")}}. `input` is fired on the `<input>` element every time the color changes. The `change` event is fired when the user dismisses the color picker. In both cases, you can determine the new value of the element by looking at its {{htmlattrxref("value", "input")}}.
+As is the case with other {{HTMLElement("input")}} types, there are two events that can be used to detect changes to the color value: {{domxref("HTMLElement/input_event", "input")}} and {{domxref("HTMLElement/change_event", "change")}}. `input` is fired on the `<input>` element every time the color changes. The `change` event is fired when the user dismisses the color picker. In both cases, you can determine the new value of the element by looking at its [`value`](/en-US/docs/Web/HTML/Element/input#value).
 
 Here's an example that watches changes over time to the color value:
 
@@ -175,8 +175,8 @@ The final result looks like this:
     <tr>
       <td><strong>Supported common attributes</strong></td>
       <td>
-        {{htmlattrxref("autocomplete", "input")}} and
-        {{htmlattrxref("list", "input")}}
+        <a href="/en-US/docs/Web/HTML/Element/input#autocomplete"><code>autocomplete</code></a> and
+        <a href="/en-US/docs/Web/HTML/Element/input#list"><code>list</code></a>
       </td>
     </tr>
     <tr>

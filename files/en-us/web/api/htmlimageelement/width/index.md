@@ -28,8 +28,8 @@ screen or printer:
 ## Examples
 
 In this example, two different sizes are provided for an image of a clock using the
-{{htmlattrxref("srcset", "img")}} attribute. One is 200px wide and the other is 400px
-wide. The {{htmlattrxref("sizes", "img")}} attribute is used to specify the width at
+[`srcset`](/en-US/docs/Web/HTML/Element/img#srcset) attribute. One is 200px wide and the other is 400px
+wide. The [`sizes`](/en-US/docs/Web/HTML/Element/img#sizes) attribute is used to specify the width at
 which the image should be drawn given the viewport's width.
 
 ### HTML

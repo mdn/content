@@ -11,8 +11,7 @@ browser-compat: api.HTMLFontElement.face
 
 The obsolete
 **`HTMLFontElement.face`**
-property is a string that reflects the {{ htmlattrxref("face",
-    "font") }} HTML attribute, containing a comma-separated list of one or more font
+property is a string that reflects the [`face`](/en-US/docs/Web/HTML/Element/font#face) HTML attribute, containing a comma-separated list of one or more font
 names.
 
 The document text, in the default style, is rendered as the first font face that the

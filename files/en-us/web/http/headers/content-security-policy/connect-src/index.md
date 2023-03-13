@@ -10,7 +10,7 @@ The HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP)
 **`connect-src`** directive restricts the URLs which can be
 loaded using script interfaces. The APIs that are restricted are:
 
-- {{HTMLElement("a")}} {{htmlattrxref("ping", "a")}},
+- {{HTMLElement("a")}} [`ping`](/en-US/docs/Web/HTML/Element/a#ping),
 - {{domxref("fetch()")}},
 - {{domxref("XMLHttpRequest")}},
 - {{domxref("WebSocket")}},
@@ -102,7 +102,7 @@ The following connections are blocked and won't load:
 ## See also
 
 - {{HTTPHeader("Content-Security-Policy")}}
-- {{HTMLElement("a")}} {{htmlattrxref("ping", "a")}}
+- {{HTMLElement("a")}} [`ping`](/en-US/docs/Web/HTML/Element/a#ping)
 - {{domxref("fetch()")}}
 - {{domxref("XMLHttpRequest")}}
 - {{domxref("WebSocket")}}
