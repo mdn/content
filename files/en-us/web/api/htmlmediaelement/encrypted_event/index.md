@@ -1,8 +1,8 @@
 ---
-title: "HTMLMediaElement: emptied event"
-slug: Web/API/HTMLMediaElement/emptied_event
+title: "HTMLMediaElement: encrypted event"
+slug: Web/API/HTMLMediaElement/encrypted_event
 page-type: web-api-event
-browser-compat: api.HTMLMediaElement.emptied_event
+browser-compat: api.HTMLMediaElement.encrypted_event
 ---
 
 {{APIRef("EncryptedMediaExtensions")}}
