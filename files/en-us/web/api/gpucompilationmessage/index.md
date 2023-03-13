@@ -24,7 +24,7 @@ An array of `GPUCompilationMessage` objects is available in the `messages` prope
 - {{domxref("GPUCompilationMessage.linePos", "linePos")}} {{Experimental_Inline}} {{readonlyinline}}
   - : A number representing the position in the code line that the message corresponds to. This could be an exact point, or the start of the relevant substring.
 - {{domxref("GPUCompilationMessage.message", "message")}} {{Experimental_Inline}} {{readonlyinline}}
-  - : A string representing human-readable, localizable message text.
+  - : A string representing human-readable message text.
 - {{domxref("GPUCompilationMessage.offset", "offset")}} {{Experimental_Inline}} {{readonlyinline}}
   - : A number representing the offset from the start of the shader code to the exact point, or the start of the relevant substring, that the message corresponds to.
 - {{domxref("GPUCompilationMessage.type", "type")}} {{Experimental_Inline}} {{readonlyinline}}

@@ -21,7 +21,7 @@ A enumerated value. Possible values are:
 - `"info"`
   - : A purely informative message, which is low severity.
 - `"warning"`
-  - : A warning about an issue that will not stop successful compilation, but which should be handled before it causes any problems.
+  - : A warning about an issue that will not stop successful compilation, but merits attention by the developer. An example is usage of deprecated functions or syntax.
 
 ## Examples
 

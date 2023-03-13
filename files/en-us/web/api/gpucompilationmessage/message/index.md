@@ -10,7 +10,7 @@ browser-compat: api.GPUCompilationMessage.message
 {{APIRef("WebGPU API")}}{{SeeCompatTable}}
 
 The **`message`** read-only property of the
-{{domxref("GPUCompilationMessage")}} interface is a string representing human-readable, localizable message text.
+{{domxref("GPUCompilationMessage")}} interface is a string representing human-readable message text.
 
 ## Value
 
