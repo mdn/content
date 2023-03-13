@@ -14,7 +14,7 @@ This article describes the web technologies that can be used to store data, the 
 
 ## How browsers separate data from different websites?
 
-Browsers store the data from websites in different places to reduce risks of user being tracked across the web. In most cases, browsers manage stored data _per origin_.
+Browsers store the data from websites in different places, also called buckets, to reduce risks of user being tracked across the web. In most cases, browsers manage stored data _per origin_.
 
 The term _{{Glossary("origin")}}_ is therefore important to understand this article. An origin is defined by a scheme (such as HTTPS), a hostname, and a port. For example, `https://example.com` and `https://example.com/app/index.html` belong to the same origin because they have the same scheme (`https`), hostname (`example.com`), and default port.
 
@@ -45,7 +45,7 @@ Data for an origin can be stored in two ways in a browser, _persistent_ and _bes
 
 The data stored in the browser by a origin is best-effort by default. When using web technologies such as IndexedDB or Cache, the data is stored transparently without asking for the user's permission. Similarly, when the browser needs to evict best-effort data, it does so without interrupting the user.
 
-If, for any reason, developers need persistent storage (e.g., when building a web app that relies on critical data that isn't persisted anywhere else), they can do so by using the {{domxref("StorageManager.persist()")}} method of the {{domxref("Storage_API", "Storage API", "", "nocode")}}.
+If, for any reason, developers need persistent storage (e.g., when building a web app that relies on critical data that isn't persisted anywhere else), they can do so by using the {{domxref("StorageManager.persist()", "navigator.storage.persist()")}} method of the {{domxref("Storage_API", "Storage API", "", "nocode")}}.
 
 In Firefox, when a site chooses to use persistent storage, the user is notified with a UI popup that their permission is requested.
 
@@ -109,7 +109,7 @@ In Safari, an origin is given an initial 1 GiB quota. Once the origin reaches th
 
 ## How to check the available space?
 
-Web developers can check how much space is available for their origin and how much is being used by the origin with the {{domxref("StorageManager.estimate()")}} method of the {{domxref("Storage_API", "Storage API", "", "nocode")}}.
+Web developers can check how much space is available for their origin and how much is being used by the origin with the {{domxref("StorageManager.estimate()", "navigator.storage.estimate()")}} method of the {{domxref("Storage_API", "Storage API", "", "nocode")}}.
 
 Note that this method only returns the estimated usage value, not the actual value. Some of the resources that are stored by an origin may be coming from other origins and browsers voluntarily pad the size of the cross-origin data when reporting total usage value.
 
@@ -135,7 +135,7 @@ When a device is running low on storage space, also known as _storage pressure_,
 
 Browsers use a Least Recently Used (LRU) policy to deal with this scenario. The data from the least recently used origin is deleted. If storage pressure continues, the browser moves on to the second least recently used origin, and so on, until the problem is resolved.
 
-This eviction mechanism only applies to origins that are not persistent and skips over origins that have been granted data persistence by using {{domxref("StorageManager.persist()")}}.
+This eviction mechanism only applies to origins that are not persistent and skips over origins that have been granted data persistence by using {{domxref("StorageManager.persist()", "navigator.storage.persist()")}}.
 
 ### Browser maximum storage exceeded eviction
 
@@ -157,7 +157,6 @@ Only deleting some of the origin's data could cause inconsistency problems.
 
 ## See also
 
-- [Storage for the web](https://web.dev/storage-for-the-web/)
-- [Persistent storage](https://web.dev/persistent-storage/)
+- [Storage for the web on web.dev](https://web.dev/storage-for-the-web/)
+- [Persistent storage on web.dev](https://web.dev/persistent-storage/)
 - [Chrome Web Storage and Quota Concepts](https://docs.google.com/document/d/19QemRTdIxYaJ4gkHYf2WWBNPbpuZQDNMpUVf8dQxj4U/edit)
-- [(Almost) everything about storing data on the web](https://patrickbrosset.com/articles/2023-01-17-web-storage/)
