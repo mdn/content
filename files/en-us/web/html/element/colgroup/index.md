@@ -50,7 +50,7 @@ The following attributes are deprecated and should not be used. They are documen
     To achieve a similar effect, use the CSS {{cssxref("background-color")}} property.
 
 - `char` {{deprecated_inline}}
-  - : This attribute specifies the alignment of the content in a column group to a character. Typical values for this include a period (.) when attempting to align numbers or monetary values. If [`align`](/en-US/docs/Web/HTML/Element/colgroup#align) is not set to `char`, this attribute is ignored, though it will still be used as the default value for the [`align`](/en-US/docs/Web/HTML/Element/col#align) of the {{HTMLElement("col")}} which are members of this column group.
+  - : This attribute specifies the alignment of the content in a column group to a character. Typical values for this include a period (.) when attempting to align numbers or monetary values. If [`align`](#align) is not set to `char`, this attribute is ignored, though it will still be used as the default value for the [`align`](/en-US/docs/Web/HTML/Element/col#align) of the {{HTMLElement("col")}} which are members of this column group.
 - `charoff` {{deprecated_inline}}
   - : This attribute is used to indicate the number of characters to offset the column data from the alignment character specified by the `char` attribute.
 - `valign` {{deprecated_inline}}

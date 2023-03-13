@@ -242,7 +242,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 - `sizes` {{Experimental_Inline}}
 
   - : This attribute defines the sizes of the icons for visual media contained in the resource.
-    It must be present only if the [`rel`](/en-US/docs/Web/HTML/Element/link#rel) contains a value of `icon` or a non-standard type such as Apple's `apple-touch-icon`.
+    It must be present only if the [`rel`](#rel) contains a value of `icon` or a non-standard type such as Apple's `apple-touch-icon`.
     It may have the following values:
 
     - `any`, meaning that the icon can be scaled to any size as it is in a vector format, like `image/svg+xml`.
@@ -286,11 +286,11 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
 - `rev` {{deprecated_inline}}
 
-  - : The value of this attribute shows the relationship of the current document to the linked document, as defined by the [`href`](/en-US/docs/Web/HTML/Element/link#href) attribute.
+  - : The value of this attribute shows the relationship of the current document to the linked document, as defined by the [`href`](#href) attribute.
     The attribute thus defines the reverse relationship compared to the value of the `rel` attribute.
-    [Link type values](/en-US/docs/Web/HTML/Attributes/rel) for the attribute are similar to the possible values for [`rel`](/en-US/docs/Web/HTML/Element/link#rel).
+    [Link type values](/en-US/docs/Web/HTML/Attributes/rel) for the attribute are similar to the possible values for [`rel`](#rel).
 
-    > **Note:** Instead of `rev`, you should use the [`rel`](/en-US/docs/Web/HTML/Element/link#rel) attribute with the opposite [link type value](/en-US/docs/Web/HTML/Attributes/rel).
+    > **Note:** Instead of `rev`, you should use the [`rel`](#rel) attribute with the opposite [link type value](/en-US/docs/Web/HTML/Attributes/rel).
     > For example, to establish the reverse link for `made`, specify `author`. Also, this attribute doesn't stand for "revision" and must not be used with a version number, even though many sites misuse it in this way.
 
 ## Examples

@@ -20,7 +20,7 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
 - `alt`
   - : A text string alternative to display on browsers that do not display images.
     The text should be phrased so that it presents the user with the same kind of choice as the image would offer when displayed without the alternative text.
-    This attribute is required only if the [`href`](/en-US/docs/Web/HTML/Element/area#href) attribute is used.
+    This attribute is required only if the [`href`](#href) attribute is used.
 - `coords`
 
   - : The `coords` attribute details the coordinates of the [`shape`](#shape) attribute in size, shape, and placement of an `<area>`.
@@ -45,7 +45,7 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
     This attribute may be omitted; if so, the `<area>` element does not represent a hyperlink.
 - `hreflang` {{Deprecated_Inline}}
   - : Indicates the language of the linked resource. Allowed values are defined by {{RFC(5646, "Tags for Identifying Languages (also known as BCP 47)")}}.
-    Use this attribute only if the [`href`](/en-US/docs/Web/HTML/Element/area#href) attribute is present.
+    Use this attribute only if the [`href`](#href) attribute is present.
 - `ping`
   - : Contains a space-separated list of URLs to which, when the hyperlink is followed, {{HTTPMethod("POST")}} requests with the body `PING` will be sent by the browser (in the background).
     Typically used for tracking.
@@ -64,10 +64,10 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
       **This value is unsafe**, because it leaks origins and paths from TLS-protected resources to insecure origins.
 
 - `rel`
-  - : For anchors containing the [`href`](/en-US/docs/Web/HTML/Element/area#href) attribute, this attribute specifies the relationship of the target object to the link object.
+  - : For anchors containing the [`href`](#href) attribute, this attribute specifies the relationship of the target object to the link object.
     The value is a space-separated list of link types.
     The values and their semantics will be registered by some authority that might have meaning to the document author.
-    The default relationship, if no other is given, is void. Use this attribute only if the [`href`](/en-US/docs/Web/HTML/Element/area#href) attribute is present.
+    The default relationship, if no other is given, is void. Use this attribute only if the [`href`](#href) attribute is present.
 - `shape`
   - : The shape of the associated hot spot. The specifications for HTML defines the values `rect`, which defines a rectangular region; `circle`, which defines a circular region; `poly`, which defines a polygon; and `default`, which indicates the entire region beyond any defined shapes.
 - `target`
@@ -82,7 +82,7 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
     - `_top`: Show the resource in the topmost browsing context (the browsing context that is an ancestor of the current one and has no parent).
       If there is no parent, acts the same as `_self`.
 
-    Use this attribute only if the [`href`](/en-US/docs/Web/HTML/Element/area#href) attribute is present.
+    Use this attribute only if the [`href`](#href) attribute is present.
 
     > **Note:** Setting `target="_blank"` on `<area>` elements implicitly provides the same `rel` behavior as setting [`rel="noopener"`](/en-US/docs/Web/HTML/Attributes/rel/noopener) which does not set `window.opener`. See [browser compatibility](#browser_compatibility) for support status.
 
