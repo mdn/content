@@ -2,8 +2,6 @@
 title: Submit button
 slug: Glossary/Submit_button
 page-type: glossary-definition
-tags:
-  - HTML
 ---
 
 A **submit button** is an {{Glossary("element")}} in HTML that can be used to submit a {{HTMLElement("form")}}. The native submit button elements are:
