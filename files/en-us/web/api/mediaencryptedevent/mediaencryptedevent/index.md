@@ -28,7 +28,7 @@ new MediaEncryptedEvent(type, options)
     - `initDataType`
       - : A string with the type of the initialization data contained in this object
     - `message`
-      - : An {{domxref("ArrayBuffer")}} with the initialization data, or `null` if there is none.
+      - : An {{jsxref("ArrayBuffer")}} with the initialization data, or `null` if there is none.
 
 ### Return value
 

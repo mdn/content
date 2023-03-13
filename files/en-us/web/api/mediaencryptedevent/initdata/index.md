@@ -11,7 +11,7 @@ The read-only **`initData`** property of the {{domxref("MediaKeyMessageEvent")}}
 
 ## Value
 
-A {{domxref("ArrayBuffer")}} with the initialization data, or `null` if there are none.
+A {{jsxref("ArrayBuffer")}} with the initialization data, or `null` if there are none.
 
 ## Specifications
 

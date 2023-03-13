@@ -23,7 +23,7 @@ onencrypted = (event) => {};
 
 ## Event type
 
-A {{domxref("MediaEncrypteEvent")}}. Inherits from {{domxref("Event")}}.
+A {{domxref("MediaEncryptedEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("MediaEncryptedEvent")}}
 
@@ -48,4 +48,4 @@ A {{domxref("MediaEncrypteEvent")}}. Inherits from {{domxref("Event")}}.
 - {{domxref("HTMLVideoElement")}}
 - {{HTMLElement("audio")}}
 - {{HTMLElement("video")}}
-- {{domxref("MediaEncrypteEvent")}}
+- {{domxref("MediaEncryptedEvent")}}
