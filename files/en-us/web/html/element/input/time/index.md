@@ -511,10 +511,10 @@ function populateMinutes() {
     <tr>
       <td><strong>Supported common attributes</strong></td>
       <td>
-        [`autocomplete`](/en-US/docs/Web/HTML/Element/input#autocomplete),
-        [`list`](/en-US/docs/Web/HTML/Element/input#list),
-        [`readonly`](/en-US/docs/Web/HTML/Element/input#readonly), and
-        [`step`](/en-US/docs/Web/HTML/Element/input#step)
+        <a href="/en-US/docs/Web/HTML/Element/input#autocomplete"><code>autocomplete</code></a>,
+        <a href="/en-US/docs/Web/HTML/Element/input#list"><code>list</code></a>,
+        <a href="/en-US/docs/Web/HTML/Element/input#readonly"><code>readonly</code></a>, and
+        <a href="/en-US/docs/Web/HTML/Element/input#step"><code>step</code></a>
       </td>
     </tr>
     <tr>

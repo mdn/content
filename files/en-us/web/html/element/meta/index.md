@@ -48,7 +48,7 @@ The **`<meta>`** [HTML](/en-US/docs/Web/HTML) element represents {{Glossary("Met
             <code>&#x3C;meta charset></code>,
             <code>&#x3C;meta http-equiv></code>: a
             {{HTMLElement("head")}} element. If the
-            [`http-equiv`](/en-US/docs/Web/HTML/Element/meta#http-equiv) is not an
+            <a href="/en-US/docs/Web/HTML/Element/meta#http-equiv"><code>http-equiv</code></a> is not an
             encoding declaration, it can also be inside a
             {{HTMLElement("noscript")}} element, itself inside a
             <code>&#x3C;head></code> element.

@@ -357,11 +357,11 @@ input[type="range"][orient="vertical"] {
     <tr>
       <td><strong>Supported common attributes</strong></td>
       <td>
-        [`autocomplete`](/en-US/docs/Web/HTML/Element/input#autocomplete),
-        [`list`](/en-US/docs/Web/HTML/Element/input#list),
-        [`max`](/en-US/docs/Web/HTML/Element/input#max),
-        [`min`](/en-US/docs/Web/HTML/Element/input#min), and
-        [`step`](/en-US/docs/Web/HTML/Element/input#step)
+        <a href="/en-US/docs/Web/HTML/Element/input#autocomplete"><code>autocomplete</code></a>,
+        <a href="/en-US/docs/Web/HTML/Element/input#list"><code>list</code></a>,
+        <a href="/en-US/docs/Web/HTML/Element/input#max"><code>max</code></a>,
+        <a href="/en-US/docs/Web/HTML/Element/input#min"><code>min</code></a>, and
+        <a href="/en-US/docs/Web/HTML/Element/input#step"><code>step</code></a>
       </td>
     </tr>
     <tr>

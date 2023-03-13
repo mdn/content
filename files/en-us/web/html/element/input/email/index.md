@@ -345,17 +345,17 @@ As an added touch, the {{HTMLElement("label")}} element is used to establish a l
     <tr>
       <td><strong>Supported Common Attributes</strong></td>
       <td>
-        [`autocomplete`](/en-US/docs/Web/HTML/Element/input#autocomplete),
-        [`list`](/en-US/docs/Web/HTML/Element/input#list),
-        [`maxlength`](/en-US/docs/Web/HTML/Element/input#maxlength),
-        [`minlength`](/en-US/docs/Web/HTML/Element/input#minlength),
-        [`multiple`](/en-US/docs/Web/HTML/Element/input#multiple),
-        [`name`](/en-US/docs/Web/HTML/Element/input#name), [`pattern`](/en-US/docs/Web/HTML/Element/input#pattern),
-        [`placeholder`](/en-US/docs/Web/HTML/Element/input#placeholder),
-        [`readonly`](/en-US/docs/Web/HTML/Element/input#readonly),
-        [`required`](/en-US/docs/Web/HTML/Element/input#required),
-        [`size`](/en-US/docs/Web/HTML/Element/input#size), and
-        [`type`](/en-US/docs/Web/HTML/Element/input#type)
+        <a href="/en-US/docs/Web/HTML/Element/input#autocomplete"><code>autocomplete</code></a>,
+        <a href="/en-US/docs/Web/HTML/Element/input#list"><code>list</code></a>,
+        <a href="/en-US/docs/Web/HTML/Element/input#maxlength"><code>maxlength</code></a>,
+        <a href="/en-US/docs/Web/HTML/Element/input#minlength"><code>minlength</code></a>,
+        <a href="/en-US/docs/Web/HTML/Element/input#multiple"><code>multiple</code></a>,
+        <a href="/en-US/docs/Web/HTML/Element/input#pattern"><code>name`](/en-US/docs/Web/HTML/Element/input#name), [`pattern</code></a>,
+        <a href="/en-US/docs/Web/HTML/Element/input#placeholder"><code>placeholder</code></a>,
+        <a href="/en-US/docs/Web/HTML/Element/input#readonly"><code>readonly</code></a>,
+        <a href="/en-US/docs/Web/HTML/Element/input#required"><code>required</code></a>,
+        <a href="/en-US/docs/Web/HTML/Element/input#size"><code>size</code></a>, and
+        <a href="/en-US/docs/Web/HTML/Element/input#type"><code>type</code></a>
       </td>
     </tr>
     <tr>

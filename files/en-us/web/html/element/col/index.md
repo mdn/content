@@ -99,7 +99,7 @@ Please see the {{HTMLElement("table")}} page for examples on `<col>`.
         {{HTMLElement("colgroup")}} only, though it can be implicitly
         defined as its start tag is not mandatory. The
         {{HTMLElement("colgroup")}} must not have a
-        [`span`](/en-US/docs/Web/HTML/Element/colgroup#span) attribute.
+        <a href="/en-US/docs/Web/HTML/Element/colgroup#span"><code>span</code></a> attribute.
       </td>
     </tr>
     <tr>

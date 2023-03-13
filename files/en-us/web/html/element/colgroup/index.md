@@ -87,7 +87,7 @@ Please see the {{HTMLElement("table")}} page for examples on `<colgroup>`.
     <tr>
       <th scope="row">Permitted content</th>
       <td>
-        If the [`span`](/en-US/docs/Web/HTML/Element/colgroup#span) attribute is
+        If the <a href="/en-US/docs/Web/HTML/Element/colgroup#span"><code>span</code></a> attribute is
         present: none.<br />If
         the attribute is not present: zero or more {{HTMLElement("col")}}
         element

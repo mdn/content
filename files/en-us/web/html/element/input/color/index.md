@@ -175,8 +175,8 @@ The final result looks like this:
     <tr>
       <td><strong>Supported common attributes</strong></td>
       <td>
-        [`autocomplete`](/en-US/docs/Web/HTML/Element/input#autocomplete) and
-        [`list`](/en-US/docs/Web/HTML/Element/input#list)
+        <a href="/en-US/docs/Web/HTML/Element/input#autocomplete"><code>autocomplete</code></a> and
+        <a href="/en-US/docs/Web/HTML/Element/input#list"><code>list</code></a>
       </td>
     </tr>
     <tr>
