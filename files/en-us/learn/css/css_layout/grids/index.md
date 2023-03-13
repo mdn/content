@@ -114,7 +114,7 @@ Change your track listing to the following definition, creating three `1fr` trac
 }
 ```
 
-You should have flexible tracks. The `fr` unit distributes space proportionally. You can specify different positive values for your tracks like so:
+You now have flexible tracks. The `fr` unit distributes space proportionally. You can specify different positive values for your tracks like so:
 
 ```css
 .container {
@@ -123,9 +123,7 @@ You should have flexible tracks. The `fr` unit distributes space proportionally.
 }
 ```
 
-The first track gets `2fr` of the available space and the other two tracks get `1fr`, making the first track larger.
-
-You can mix `fr` units with fixed length units — in such a case the space needed for the fixed tracks is used up first; the remaining space is then distributed to the other tracks.
+The first track gets `2fr` of the available space and the other two tracks get `1fr`, making the first track larger. You can mix `fr` units with fixed length units. In this case, the space needed for the fixed tracks is used up first before the remaining space is distributed to the other tracks.
 
 ```css hidden
 body {
@@ -165,7 +163,7 @@ To create gaps between tracks, we use the properties:
 
 - {{cssxref("column-gap")}} for gaps between columns
 - {{cssxref("row-gap")}} for gaps between rows
-- {{cssxref("gap")}} as a shorthand for both.
+- {{cssxref("gap")}} as a shorthand for both
 
 ```css
 .container {
@@ -207,7 +205,7 @@ body {
 
 {{ EmbedLiveSample('Gaps_between_tracks', '100%', 400) }}
 
-> **Note:** The `gap` properties (`column-gap`, `row-gap` and `gap`) used to be prefixed by `grid-`. This has been changed in the spec but the prefixed versions will be maintained as an alias. To be on the safe side, you could double up and add both properties to make your code more bulletproof:
+> **Note:** The `gap` properties (`column-gap`, `row-gap` and `gap`) used to be prefixed by `grid-`. The spec has changed but the prefixed versions will be maintained as an alias. To be on the safe side and make your code more bulletproof, you can add both properties:
 >
 > ```css
 > .container {
