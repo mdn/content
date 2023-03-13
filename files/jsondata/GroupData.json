@@ -641,7 +641,8 @@
         "RadioNodeList",
         "UserActivation",
         "ValidityState",
-        "Window"
+        "Window",
+        "WorkletGlobalScope"
       ],
       "methods": [],
       "properties": [],
