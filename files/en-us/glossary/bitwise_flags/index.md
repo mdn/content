@@ -37,5 +37,5 @@ Because of the values chosen for the different flags, each combination of values
 
 ## See also
 
-- [Bitwise Flags are Beautiful, and Here’s Why](https://www.hendrik-erz.de/post/bitwise-flags-are-beautiful-and-heres-why)
+- [Bitwise Flags are Beautiful, and Here's Why](https://www.hendrik-erz.de/post/bitwise-flags-are-beautiful-and-heres-why)
 - [Bitwise operation](https://en.wikipedia.org/wiki/Bitwise_operation) on Wikipedia
