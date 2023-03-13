@@ -608,6 +608,12 @@ The following non-standard attributes are also available on some browsers. As a 
   </thead>
   <tbody>
     <tr>
+      <td><a href="#autocapitalize"><code>autocapitalize</code></a></td>
+      <td>
+        A string indicating how auto-capitalization should be applied to the content of text elements. <strong>Safari only.</strong>
+      </td>
+    </tr>
+    <tr>
       <td><a href="#autocorrect"><code>autocorrect</code></a></td>
       <td>
         A string indicating whether autocorrect is <code>on</code> or <code>off</code>. <strong>Safari only.</strong>
@@ -653,6 +659,19 @@ The following non-standard attributes are also available on some browsers. As a 
     </tr>
   </tbody>
 </table>
+
+- `autocapitalize` {{non-standard_inline}}
+
+  - : (Safari only). A string which indicates how auto-capitalization should be applied while the user is editing this field. Permitted values are:
+
+    - `none`
+      - : Do not automatically capitalize any text
+    - `sentences`
+      - : Automatically capitalize the first character of each sentence.
+    - `words`
+      - : Automatically capitalize the first character of each word.
+    - `characters`
+      - : Automatically capitalize every character.
 
 - `autocorrect` {{non-standard_inline}}
 
