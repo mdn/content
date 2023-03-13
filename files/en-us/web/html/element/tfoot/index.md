@@ -27,14 +27,14 @@ The following attributes are deprecated and should not be used. They are documen
     - `center`, centering the content in the cell
     - `right`, aligning the content to the right of the cell
     - `justify`, inserting spaces into the textual content so that the content is justified in the cell
-    - `char`, aligning the textual content on a special character with a minimal offset, defined by the [`char`](/en-US/docs/Web/HTML/Element/tfoot#char) and [`charoff`](/en-US/docs/Web/HTML/Element/tfoot#charoff) attributes.
+    - `char`, aligning the textual content on a special character with a minimal offset, defined by the [`char`](#char) and [`charoff`](#charoff) attributes.
 
     If this attribute is not set, the `left` value is assumed.
 
     > **Note:**
     >
     > - To achieve the same effect as the `left`, `center`, `right` or `justify` values, use the CSS {{cssxref("text-align")}} property on it.
-    > - To achieve the same effect as the `char` value, in CSS, you can use the value of the [`char`](/en-US/docs/Web/HTML/Element/tfoot#char) as the value of the {{cssxref("text-align")}} property.
+    > - To achieve the same effect as the `char` value, in CSS, you can use the value of the [`char`](#char) as the value of the {{cssxref("text-align")}} property.
 
 - `bgcolor` {{Deprecated_inline}}
 

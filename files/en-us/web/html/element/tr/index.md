@@ -36,7 +36,7 @@ The following attributes may still be implemented in browsers but are no longer 
     - `justify`
       - : Widen whitespaces within the text of each cell so that the text fills the full width of each cell (full justification).
     - `char`
-      - : Align each cell in the row on a specific character (such that each row in the column that is configured this way will horizontally align its cells on that character). This uses the [`char`](/en-US/docs/Web/HTML/Element/tr#char) and [`charoff`](/en-US/docs/Web/HTML/Element/tr#charoff) to establish the alignment character (typically "." or "," when aligning numerical data) and the number of characters that should follow the alignment character. This alignment type was never widely supported.
+      - : Align each cell in the row on a specific character (such that each row in the column that is configured this way will horizontally align its cells on that character). This uses the [`char`](#char) and [`charoff`](#charoff) to establish the alignment character (typically "." or "," when aligning numerical data) and the number of characters that should follow the alignment character. This alignment type was never widely supported.
 
     If no value is expressly set for `align`, the parent node's value is inherited.
 
@@ -50,9 +50,9 @@ The following attributes may still be implemented in browsers but are no longer 
 
 - `char` {{deprecated_inline}}
 
-  - : A string which sets the character to align the cells in each of the row's columns on (each row's centering that uses the same character gets aligned with others using the same character. Typical values for this include a period (`"."`) or comma (`","`) when attempting to align numbers or monetary values. If [`align`](/en-US/docs/Web/HTML/Element/tr#align) is not set to `char`, this attribute is ignored.
+  - : A string that sets the character to align the cells in each row's columns (each row's centering that uses the same character gets aligned with others using the same character. Typical values for this include a period (`"."`) or comma (`","`) when attempting to align numbers or monetary values. If [`align`](#align) is not set to `char`, this attribute is ignored.
 
-    > **Note:** This attribute is not only obsolete, but was rarely implemented anyway. To achieve the same effect as the [`char`](/en-US/docs/Web/HTML/Element/tr#char) attribute, set the CSS {{CSSxRef("text-align")}} property to the same string you would specify for the `char` property, such as `text-align: "."`.
+    > **Note:** This attribute is obsolete and rarely implemented anyway. To achieve the same effect as the [`char`](#char) attribute, set the CSS {{CSSxRef("text-align")}} property to the same string you would specify for the `char` property, such as `text-align: "."`.
 
 - `charoff` {{deprecated_inline}}
 

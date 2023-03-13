@@ -97,7 +97,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
 - `border` {{Deprecated_inline}}
 
-  - : This integer attribute defines, in pixels, the size of the frame surrounding the table. If set to 0, the [`frame`](/en-US/docs/Web/HTML/Element/table#frame) attribute is set to void.
+  - : This integer attribute defines, in pixels, the size of the frame surrounding the table. If set to 0, the [`frame`](#frame) attribute is set to void.
 
     To achieve a similar effect, use the CSS {{cssxref("border")}} shorthand property.
 
