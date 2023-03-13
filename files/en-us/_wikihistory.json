@@ -9313,22 +9313,6 @@
       "utkarshbhatt12"
     ]
   },
-  "Learn/JavaScript/Client-side_web_APIs/Browser_storage_limits_and_eviction_criteria": {
-    "modified": "2019-05-16T10:57:17.310Z",
-    "contributors": [
-      "holmberd",
-      "Sheppy",
-      "jamesdhurd",
-      "chrisdavidmills",
-      "johannh",
-      "shawn_huang",
-      "Brettz9",
-      "fscholz",
-      "agektmr",
-      "Sole",
-      "jryans"
-    ]
-  },
   "Learn/JavaScript/Client-side_web_APIs/Client-side_storage": {
     "modified": "2020-09-16T10:15:50.995Z",
     "contributors": [
@@ -60711,6 +60695,22 @@
       "chrisdavidmills",
       "shawn_huang",
       "Sheppy"
+    ]
+  },
+  "Web/API/Storage_API/Storage_quotas_and_eviction_criteria": {
+    "modified": "2019-05-16T10:57:17.310Z",
+    "contributors": [
+      "holmberd",
+      "Sheppy",
+      "jamesdhurd",
+      "chrisdavidmills",
+      "johannh",
+      "shawn_huang",
+      "Brettz9",
+      "fscholz",
+      "agektmr",
+      "Sole",
+      "jryans"
     ]
   },
   "Web/API/Storage_Access_API": {

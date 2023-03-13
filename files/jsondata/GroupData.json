@@ -1252,6 +1252,9 @@
     },
     "Storage": {
       "overview": ["Storage API"],
+      "guides": [
+        "/docs/Web/API/Storage_API/Storage_quotas_and_eviction_criteria"
+      ],
       "interfaces": ["StorageManager"],
       "methods": [],
       "properties": ["Navigator.storage", "WorkerNavigator.storage"],

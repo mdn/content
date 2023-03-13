@@ -1,7 +1,6 @@
 ---
 title: Browser storage limits and eviction criteria
-slug: >-
-  Learn/JavaScript/Client-side_web_APIs/Browser_storage_limits_and_eviction_criteria
+slug: Web/API/Storage_API/Storage_quotas_and_eviction_criteria
 page-type: guide
 ---
 
@@ -27,13 +26,13 @@ In some cases, however, browsers can decide to further separate the data stored 
 
 Web developers can use the following web technologies to store data in the browser:
 
-| Technology | Description |
-| ---------- | ----------- |
-| [Cookies](/en-US/docs/Web/HTTP/Cookies) | An HTTP cookie is a small piece of data that the web server and browser send each other to remember stateful information across page navigation. |
-| [Web Storage](/en-US/docs/Web/API/Web_Storage_API) | The Web Storage API provides mechanisms for webpages to store string-only key/value pairs, including [`localStorage`](/en-US/docs/Web/API/Window/localStorage) and [`sessionStorage`](/en-US/docs/Web/API/Window/sessionStorage). |
-| [IndexedDB](/en-US/docs/Web/API/IndexedDB_API) | IndexedDB is a Web API for storing large data structures in the browser and indexing them for high-performance searching. |
-| [Cache API](/en-US/docs/Web/API/Cache) | The Cache API provides a persistent storage mechanism for HTTP request and response object pairs that's used to make webpages load faster. |
-| [Origin Private File System Access API (OPFS)](/en-US/docs/Web/API/File_System_Access_API#origin_private_file_system) | OPFS provides a file system that's private to the origin of the page and can be used to read and write directories and files. |
+| Technology                                                                                                            | Description                                                                                                                                                                                                                       |
+| --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [Cookies](/en-US/docs/Web/HTTP/Cookies)                                                                               | An HTTP cookie is a small piece of data that the web server and browser send each other to remember stateful information across page navigation.                                                                                  |
+| [Web Storage](/en-US/docs/Web/API/Web_Storage_API)                                                                    | The Web Storage API provides mechanisms for webpages to store string-only key/value pairs, including [`localStorage`](/en-US/docs/Web/API/Window/localStorage) and [`sessionStorage`](/en-US/docs/Web/API/Window/sessionStorage). |
+| [IndexedDB](/en-US/docs/Web/API/IndexedDB_API)                                                                        | IndexedDB is a Web API for storing large data structures in the browser and indexing them for high-performance searching.                                                                                                         |
+| [Cache API](/en-US/docs/Web/API/Cache)                                                                                | The Cache API provides a persistent storage mechanism for HTTP request and response object pairs that's used to make webpages load faster.                                                                                        |
+| [Origin Private File System Access API (OPFS)](/en-US/docs/Web/API/File_System_Access_API#origin_private_file_system) | OPFS provides a file system that's private to the origin of the page and can be used to read and write directories and files.                                                                                                     |
 
 Note that, in addition to the above, browsers will store other types of data in the browser for an origin, such as [WebAssembly](/en-US/docs/WebAssembly) code caching.
 
