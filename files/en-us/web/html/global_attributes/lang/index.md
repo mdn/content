@@ -13,7 +13,7 @@ The **`lang`** [global attribute](/en-US/docs/Web/HTML/Global_attributes) helps 
 
 {{EmbedInteractiveExample("pages/tabbed/attribute-lang.html","tabbed-shorter")}}
 
-If the attribute value is the _empty string_ (`lang=""`), the language is set to _unknown_; if the language tag is not valid according to BCP47, it is set to _invalid_.
+If the attribute value is an _empty string_ (`lang=""`), the language is set to _unknown_; if the language tag is not valid according to BCP47, it is set to _invalid_.
 
 Even if the **lang** attribute is set, it may not be taken into account, as the [**xml:lang**](/en-US/docs/Web/HTML/Global_attributes#lang) attribute has priority.
 
