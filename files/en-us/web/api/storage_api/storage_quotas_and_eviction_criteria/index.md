@@ -4,7 +4,7 @@ slug: Web/API/Storage_API/Storage_quotas_and_eviction_criteria
 page-type: guide
 ---
 
-{{LearnSidebar}}
+{{DefaultAPISidebar("Storage")}}
 
 There are a number of web technologies that developers can use in their websites or apps to store data in the user's browser (i.e., on the local disk of the device the user is using to view the website).
 
