@@ -172,9 +172,7 @@ fetch("http://example.com/somefile.txt")
 > **Note:** The function looks as if `pump()` calls itself and leads to a potentially deep recursion.
 > However, because `pump` is asynchronous and each `pump()` call is at the end of the promise handler, it's actually analogous to a chain of promise handlers.
 
-## Consuming a fetch() using asynchronous iteration
-
-The pattern shown in the previous section easier to understand when written using async/await rather than promises:
+Reading the stream is even easier when written using async/await rather than promises:
 
 ```js
 async function readData(url) {
@@ -191,8 +189,12 @@ async function readData(url) {
 }
 ```
 
-However there is another even simpler option, which is to iterate the `response.body` returned by `fetch()` using the [for await...of](/en-US/docs/Web/JavaScript/Reference/Statements/for-await...of) syntax.
-Using this approach, the method above can be written as shown:
+## Consuming a fetch() using asynchronous iteration
+
+There is another even simpler way to consume a `fetch()`, which is to iterate the returned `response.body` using the [for await...of](/en-US/docs/Web/JavaScript/Reference/Statements/for-await...of) syntax.
+This works because the `response.body` returns a `ReadableStream`, which is an [async iterator](/en-US/docs/Web/API/ReadableStream#async_iteration).
+
+Using this approach, the example code in the previous section can be rewritten as shown:
 
 ```js
 async function readData(url) {
@@ -204,13 +206,13 @@ async function readData(url) {
 }
 ```
 
-This works because the `response.body` returns a `ReadableStream`, which is an [async iterator](/en-US/docs/Web/API/ReadableStream#async_iteration).
-Not every browser supports this feature at time of writing.
-
-If you want to cancel the operation you can either abort the fetch, or break out of the loop based on some trigger.
-Note that code in the loop is only run when there is new data to process, so if you use the second option there may be some delay before the loop exits.
+If you want to cancel the operation you can use an [`AbortController`](/en-US/docs/Web/API/AbortController), passing its associated [`AbortSignal`](/en-US/docs/Web/API/AbortSignal) to the `fetch()` function.
+Alternatively, you can use the `AbortSignal` within the `for await...of` loop to call `break`, which will exit the loop.
+Note however that code in the loop is only run when there is new data to process, so there may be some delay between the signal being triggered and the `break` being called.
 
 ### Example async reader
+
+<!-- most of the code below is deliberately hidden as it is not relevant to the example -->
 
 ```js hidden
 // A mock push source.
@@ -353,28 +355,30 @@ function makePushSourceStream() {
 }
 ```
 
-<!-- 
+```js hidden
+// Monkeypatch fetch() so it returns a response that is a mocked stream
+window.fetch = async (...args) => {
+  return { body: stream };
+};
+```
 
-The following code creates a `ReadableStreamBYOBReader` for the socket byte stream and uses it read data into a buffer.
-Note `processText()` is called recursively to read more data until the buffer is filled.
-When the underlying source signals that it has no more data, the `reader.read()` will have `done` set to true, which in turn completes the read operation.
-
-This code is almost exactly the same as for the [Underlying pull source with byte reader](#underlying_pull_source_with_byte_reader) example above.
-The only difference is that the reader includes some code to slow down reading, so the log output can demonstrate that data will be enqueued if not read fast enough.
-
--->
+The code below shows a more complete example.
+Here the fetch stream is consumed using the iterator inside a try/catch block.
+On each iteration of the loop the code simply logs and counts the received bytes.
+If there is an error it logs the issue.
+The `fetch()` operation can be cancelled using an `AbortSignal`, which would also be logged as an error.
 
 ```js
 let bytes = 0;
-logChunks(stream);
 
 const aborter = new AbortController();
 button.addEventListener("click", () => aborter.abort());
-logChunks(stream, { signal: aborter.signal });
+logChunks("http://example.com/somefile.txt", { signal: aborter.signal });
 
-async function logChunks(readableStream, { signal }) {
+async function logChunks(url, { signal }) {
   try {
-    for await (const chunk of readableStream) {
+    const response = await fetch(url, signal);
+    for await (const chunk of response.body) {
       if (signal.aborted) throw signal.reason;
       bytes += chunk.length;
       logConsumer(`Chunk: ${chunk}. Read ${bytes} characters.`);
@@ -389,8 +393,12 @@ async function logChunks(readableStream, { signal }) {
 }
 ```
 
-The logging from the underlying push source (left) and consumer (right) are shown below.
-Not the period in the middle where data is enqueued rather than transferred as a zero-copy operation.
+The example log below shows the code running or reports that your browser does not support async iteration of `ReadableStream`.
+The right hand side shows the received chunks; you can press the cancel button to stop the fetch.
+
+> **Note:** This fetch operation is _mocked_ for the purpose of demonstration, and just returns a `ReadableStream` that generates random chunks of text.
+> The "Underlying source" on the left below is the data being generated in the mocked source, while the column on the right is log from the consumer.
+> (The code for the mocked source is not displayed as it is not relevant to the example).
 
 {{EmbedLiveSample("Example async reader","100%","400px")}}
 
