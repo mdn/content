@@ -100,3 +100,10 @@ function print(info) {
 
 - [Automatic semicolon insertion (ASI)](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#automatic_semicolon_insertion)
 - [JavaScript statements](/en-US/docs/Web/JavaScript/Reference/Statements)
+function print(info) {
+  console.log(info);
+}
+![aq2 1](https://user-images.githubusercontent.com/22421714/224839063-343d6c78-bcda-4ec0-85dc-110349dcd2ab.svg)
+![MostlyCloudyNight 1](https://user-images.githubusercontent.com/22421714/224839067-d567113e-a2f7-4b59-8918-12ac6186e4a2.svg)
+![Rain rb 1](https://user-images.githubusercontent.com/22421714/224839069-9aa56a7e-7400-4ae1-b9ea-43a24905050d.svg)
+![tempdrop1 1](https://user-images.githubusercontent.com/22421714/224839071-81d858a1-ae96-452a-a08a-dda4542d1261.svg)
