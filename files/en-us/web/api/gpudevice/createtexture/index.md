@@ -64,13 +64,7 @@ createTexture(descriptor)
 
     - `usage`
 
-      - : The allowed usages for the `GPUTexture`. Possible values are:
-
-        - `GPUTextureUsage.COPY_SRC`: The texture can be used as the source of a copy operation, for example the source argument of a {{domxref("GPUCommandEncoder.copyTextureToBuffer()")}} call.
-        - `GPUTextureUsage.COPY_DST`: The texture can be used as the destination of a copy/write operation, for example the destination argument of a {{domxref("GPUCommandEncoder.copyBufferToTexture()")}} call.
-        - `GPUTextureUsage.RENDER_ATTACHMENT`: The texture can be used as a color or depth/stencil attachment in a render pass, for example as the `view` property of the descriptor object in a {{domxref("GPUCommandEncoder.beginRenderPass()")}} call.
-        - `GPUTextureUsage.STORAGE_BINDING`: The texture can be bound for use as a storage texture in a shader, for example as a resource in a bind group entry when creating a {{domxref("GPUBindGroup")}} (via {{domxref("GPUDevice.createBindGroup()")}}), which adheres to a {{domxref("GPUBindGroupLayout")}} entry with a specified storage texture binding layout.
-        - `GPUTextureUsage.TEXTURE_BINDING`: The texture can be bound for use as a sampled texture in a shader, for example as a resource in a bind group entry when creating a {{domxref("GPUBindGroup")}} (via {{domxref("GPUDevice.createBindGroup()")}}), which adheres to a {{domxref("GPUBindGroupLayout")}} entry with a specified texture binding layout.
+      - : The {{glossary("bitwise flags")}} representing the allowed usages for the `GPUTexture`. The possible values can be found in the [`GPUTexture.usage` value table](/en-US/docs/Web/API/GPUTexture/usage#value).
 
         Note that multiple possible usages can be specified by separating values with pipe symbols, for example:
 

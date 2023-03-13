@@ -36,18 +36,7 @@ createBuffer(descriptor)
       - : A number representing the size of the buffer, in bytes.
     - `usage`
 
-      - : The allowed usages for the `GPUBuffer`. Possible values are:
-
-        - `GPUBufferUsage.COPY_SRC`: The buffer can be used as the source of a copy operation, for example the source argument of a {{domxref("GPUCommandEncoder.copyBufferToBuffer()")}} call.
-        - `GPUBufferUsage.COPY_DST`: The buffer can be used as the destination of a copy/write operation, for example the destination argument of a {{domxref("GPUCommandEncoder.copyTextureToBuffer()")}} call.
-        - `GPUBufferUsage.INDEX`: The buffer can be used as an index buffer, for example as the `buffer` argument passed to {{domxref("GPURenderPassEncoder.setIndexBuffer()")}}.
-        - `GPUBufferUsage.INDIRECT`: The buffer can be used to store indirect command arguments, for example as the `indirectBuffer` argument of a {{domxref("GPURenderPassEncoder.drawIndirect()")}} or {{domxref("GPURenderPassEncoder.dispatchWorkgroupsIndirect()")}} call.
-        - `GPUBufferUsage.MAP_READ`: The buffer can be mapped for reading, for example when calling {{domxref("GPUBuffer.mapAsync()")}} with a `mode` of `GPUMapMode.READ`. This flag may only be combined with `GPUBufferUsage.COPY_DST`.
-        - `GPUBufferUsage.MAP_WRITE`: The buffer can be mapped for writing, for example when calling {{domxref("GPUBuffer.mapAsync()")}} with a `mode` of `GPUMapMode.WRITE`. This flag may only be combined with `GPUBufferUsage.COPY_SRC`.
-        - `GPUBufferUsage.QUERY_RESOLVE`: The buffer can be used to to capture query results, for example as the destination argument of a {{domxref("GPUCommandEncoder.resolveQuerySet()")}} call.
-        - `GPUBufferUsage.STORAGE`: The buffer can be used as a storage buffer, for example as a resource in a bind group entry when creating a {{domxref("GPUBindGroup")}} (via {{domxref("GPUDevice.createBindGroup()")}}), which adheres to a {{domxref("GPUBindGroupLayout")}} entry with a buffer binding layout `type` of `"storage"` or `"read-only-storage"`.
-        - `GPUBufferUsage.UNIFORM`: The buffer can be used as a uniform buffer, for example as a resource in a bind group entry when creating a {{domxref("GPUBindGroup")}} (via {{domxref("GPUDevice.createBindGroup()")}}), which adheres to a {{domxref("GPUBindGroupLayout")}} entry with a buffer binding layout `type` of `"uniform"`.
-        - `GPUBufferUsage.VERTEX`: The buffer can be used as a vertex buffer, for example as the `buffer` argument passed to {{domxref("GPURenderPassEncoder.setVertexBuffer()")}}.
+      - : The {{glossary("bitwise flags")}} representing the allowed usages for the `GPUBuffer`. The possible values can be found in the [`GPUBuffer.usage` value table](/en-US/docs/Web/API/GPUBuffer/usage#value).
 
         Note that multiple possible usages can be specified by separating values with pipe symbols, for example:
 
