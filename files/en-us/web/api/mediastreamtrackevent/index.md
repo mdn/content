@@ -18,7 +18,7 @@ The events based on this interface are {{domxref("MediaStream/addtrack_event", "
 _Also inherits properties from its parent interface, {{domxref("Event")}}._
 
 - {{domxref("MediaStreamTrackEvent.track")}} {{ReadOnlyInline}}
-  - : Returns a {{domxref("MediaStreamTrack")}} object representing the track which is concerned by the event.
+  - : Returns a {{domxref("MediaStreamTrack")}} object representing the track associated with the event.
 
 ## Constructor
 
