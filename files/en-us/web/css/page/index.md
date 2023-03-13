@@ -88,8 +88,8 @@ The print controls allow the user to select how the `section`s in the `article` 
       <li>Conclusion</li>
     </ul>
   </section>
-  <section id="foreward">
-    <h2>Foreward</h2>
+  <section id="foreword">
+    <h2>Foreword</h2>
     <p>
       This book is all about how the CSS <code>@page</code> at-rule can help
       with printing HTML books.
@@ -212,9 +212,9 @@ The sections with `class="chapter"` are concurrent and appear as one page. The `
     page: toc;
     font-family: Courier;
   }
-  [data-print="grouped"] > #foreward,
-  [data-print="paged"] > #foreward {
-    page: foreward;
+  [data-print="grouped"] > #foreword,
+  [data-print="paged"] > #foreword {
+    page: foreword;
     font-family: Courier;
   }
   [data-print="grouped"] > #introduction,
