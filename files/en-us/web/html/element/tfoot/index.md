@@ -43,7 +43,7 @@ The following attributes are deprecated and should not be used. They are documen
     To achieve a similar effect, use the CSS {{cssxref("background-color")}} property.
 
 - `char` {{deprecated_inline}}
-  - : This attribute specifies the alignment of the content in a column to a character. Typical values for this include a period (.) when attempting to align numbers or monetary values. If [`align`](/en-US/docs/Web/HTML/Element/tfoot#align) is not set to `char`, this attribute is ignored.
+  - : This attribute specifies the alignment of the content in a column to a character. Typical values for this include a period (.) when attempting to align numbers or monetary values. If [`align`](#align) is not set to `char`, this attribute is ignored.
 - `charoff` {{deprecated_inline}}
   - : This attribute is used to indicate the number of characters to offset the column data from the alignment characters specified by the `char` attribute.
 - `valign` {{deprecated_inline}}
