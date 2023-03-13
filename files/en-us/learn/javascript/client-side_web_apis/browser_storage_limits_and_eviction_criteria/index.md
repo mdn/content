@@ -21,7 +21,7 @@ The term _{{Glossary("origin")}}_ is therefore important to understand this arti
 
 The quotas and eviction criteria described in this article apply to an entire origin, even if this origin is used to run several websites, such as `https://example.com/site1/` and `https://example.com/site2/`.
 
-In some cases, however, browsers can decide to further separate the data stored by an origin in different partitions. For example, Chrome uses [Storage Partitioning](https://developer.chrome.com/en/docs/privacy-sandbox/storage-partitioning/) in cases where an origin is loaded within {{HTMLElement('iframe')}} elements in different third-party origins. For simplicity reasons, this article assumes that data is always stored per origin.
+In some cases, however, browsers can decide to further separate the data stored by an origin in different partitions, for example in cases where an origin is loaded within an {{HTMLElement('iframe')}} element in multiple different third-party origins. However, for simplicity reasons, this article assumes that data is always stored per origin.
 
 ## What technologies store data in the browser?
 
@@ -37,10 +37,6 @@ Web developers can use the following web technologies to store data in the brows
 
 Note that, in addition to the above, browsers will store other types of data in the browser for an origin, such as [WebAssembly](/en-US/docs/WebAssembly) code caching.
 
-Browsers use different storage management systems for different types of data. For example, in most browsers today, Web Storage and cookies are not managed by the same system that's used to manage IndexedDB and Cache. Also note that that way browsers manage data changes over time. For example, in Firefox, Web Storage will soon start to use the same storage management system as the one used for IndexedDB.
-
-Browsers use different storage management systems for different types of data. For example, Web Storage and cookies are not managed by the same system that's used to manage IndexedDB and Cache in most browsers. Also, note the way browsers manage data can change over time. For example, some browsers are changing how Web Storage is managed to reuse the same storage management system as IndexedDB.
-
 ## Does browser-stored data persist?
 
 Data for an origin can be stored in two ways in a browser, _persistent_ and _best-effort_:
@@ -54,7 +50,7 @@ If, for any reason, developers need persistent storage (e.g., when building a we
 
 In Firefox, when a site chooses to use persistent storage, the user is notified with a UI popup that their permission is requested.
 
-Safari and most Chromium-based browsers, such as Chrome or Edge, automatically handle the permission request, and do not show any prompts to the user.
+Safari and most Chromium-based browsers, such as Chrome or Edge, automatically approve or deny the request based on the user's history of interaction with the site and do not show any prompts to the user.
 
 Note that [research from the Chrome team](https://web.dev/persistent-storage/) shows that data is very rarely deleted by the browser. If a user visits a website regularly, there is very little chance that its stored data, even in best-effort mode, will get evicted by the browser.
 
@@ -64,7 +60,7 @@ Note that in private browsing mode (also called _Incognito_ in Chrome, and _InPr
 
 ## How much data can be stored?
 
-> **Note:** The quotas documented below only apply to non private browser windows. In a private browser window, quotas are calculated differently and are usually much lower.
+> **Note:** The quotas documented below only apply to non private browser windows. Browsers may apply different quotas in private browser windows.
 
 ### Cookies
 
@@ -92,9 +88,9 @@ Each browser determines, using whatever mechanism it chooses, the maximum amount
 
 #### Firefox
 
-In Firefox, the maximum storage space an origin can use is calculated as 50% of the total disk space where the profile of the user is stored, capped at 8 TiB.
+In Firefox, the maximum storage space an origin can use in best-effort mode is calculated as 10% of the total disk space where the profile of the user is stored, capped at 8 TiB. In persistent mode the percentage is raised to 50%.
 
-For example, if the device has a 500 GiB hard drive, Firefox will allow an origin to store up to 250 GiB of data.
+For example, if the device has a 500 GiB hard drive, Firefox will allow an origin in best-effort mode to store up to 50 GiB of data. In persistent mode, 250 GiB of data is allowed to be stored.
 
 Note that it might not actually be possible for the origin to reach this quota because it is calculated based on the **total** disk space, not the currently available disk space. This is done for security reasons, to avoid {{Glossary("fingerprinting")}}.
 
