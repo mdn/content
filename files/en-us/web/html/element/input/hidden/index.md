@@ -145,7 +145,7 @@ Even though the hidden input cannot be seen at all, its data is still submitted.
     </tr>
     <tr>
       <td><strong>Supported Common Attributes</strong></td>
-      <td><a href="/en-US/docs/Web/HTML/Element/input#autocomplete">`autocomplete`</a></td>
+      <td><a href="/en-US/docs/Web/HTML/Element/input#autocomplete"><code>autocomplete</code></a></td>
     </tr>
     <tr>
       <td><strong>IDL attributes</strong></td>

@@ -407,7 +407,7 @@ You can see good examples of text inputs used in context in our [Your first HTML
     </tr>
     <tr>
       <td><strong>IDL attributes</strong></td>
-      <td><a href="/en-US/docs/Web/HTML/Element/input#list">`list`</a>, <code>value</code></td>
+      <td><a href="/en-US/docs/Web/HTML/Element/input#list"><code>list</code></a>, <code>value</code></td>
     </tr>
     <tr>
       <td><strong>DOM interface</strong></td>

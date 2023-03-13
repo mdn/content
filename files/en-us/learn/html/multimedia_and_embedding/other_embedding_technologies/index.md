@@ -318,16 +318,16 @@ If you find yourself needing to embed plugin content, this is the kind of inform
   <tbody>
     <tr>
       <td>{{glossary("URL")}} of the embedded content</td>
-      <td><a href="/en-US/docs/Web/HTML/Element/src#embed">`embed`</a></td>
-      <td><a href="/en-US/docs/Web/HTML/Element/data#object">`object`</a></td>
+      <td><a href="/en-US/docs/Web/HTML/Element/src#embed"><code>embed</code></a></td>
+      <td><a href="/en-US/docs/Web/HTML/Element/data#object"><code>object</code></a></td>
     </tr>
     <tr>
       <td>
         <em>accurate </em>{{glossary("MIME type", 'media type')}}
         of the embedded content
       </td>
-      <td><a href="/en-US/docs/Web/HTML/Element/type#embed">`embed`</a></td>
-      <td><a href="/en-US/docs/Web/HTML/Element/type#object">`object`</a></td>
+      <td><a href="/en-US/docs/Web/HTML/Element/type#embed"><code>embed</code></a></td>
+      <td><a href="/en-US/docs/Web/HTML/Element/type#object"><code>object</code></a></td>
     </tr>
     <tr>
       <td>

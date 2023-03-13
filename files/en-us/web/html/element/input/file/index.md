@@ -400,7 +400,7 @@ The example looks like this; have a play:
     </tr>
     <tr>
       <td><strong>Supported common attributes</strong></td>
-      <td><a href="/en-US/docs/Web/HTML/Element/input#required">`required`</a></td>
+      <td><a href="/en-US/docs/Web/HTML/Element/input#required"><code>required</code></a></td>
     </tr>
     <tr>
       <td><strong>Additional Attributes</strong></td>
