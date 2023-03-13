@@ -32,7 +32,7 @@ A `GPUTexture` object instance is created using the {{domxref("GPUDevice.createT
 - {{domxref("GPUTexture.sampleCount", "sampleCount")}} {{Experimental_Inline}} {{readonlyinline}}
   - : A number representing the sample count of the `GPUTexture`.
 - {{domxref("GPUTexture.usage", "usage")}} {{Experimental_Inline}} {{readonlyinline}}
-  - : A number representing the allowed usages of the `GPUTexture`.
+  - : The bitwise flags representing the allowed usages of the `GPUTexture`.
 - {{domxref("GPUTexture.width", "width")}} {{Experimental_Inline}} {{readonlyinline}}
   - : A number representing the width of the `GPUTexture` in pixels.
 

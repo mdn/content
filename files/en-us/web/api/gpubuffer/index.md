@@ -25,7 +25,7 @@ A `GPUBuffer` object instance is created using the {{domxref("GPUDevice.createBu
 - {{domxref("GPUBuffer.size", "size")}} {{Experimental_Inline}} {{readonlyinline}}
   - : A number representing the length of the `GPUBuffer`'s memory allocation, in bytes.
 - {{domxref("GPUBuffer.usage", "usage")}} {{Experimental_Inline}} {{readonlyinline}}
-  - : A number representing the allowed usages of the `GPUBuffer`.
+  - : The bitwise flags representing the allowed usages of the `GPUBuffer`.
 
 ## Instance methods
 
