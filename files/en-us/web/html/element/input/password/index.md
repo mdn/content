@@ -259,15 +259,15 @@ ssn.oninput = (event) => {
     <tr>
       <td><strong>Supported Common Attributes</strong></td>
       <td>
-        {{htmlattrxref("autocomplete", "input")}},
-        {{htmlattrxref("inputmode", "input")}},
-        {{htmlattrxref("maxlength", "input")}},
-        {{htmlattrxref("minlength", "input")}},
-        {{htmlattrxref("pattern", "input")}},
-        {{htmlattrxref("placeholder", "input")}},
-        {{htmlattrxref("readonly", "input")}},
-        {{htmlattrxref("required", "input")}}, and
-        {{htmlattrxref("size", "input")}}
+         <a href="en-US/docs/Web/HTML/Element/input#autocomplete"><code>autocomplete</code></a>,
+         <a href="en-US/docs/Web/HTML/Element/input#inputmode"><code>inputmode</code></a>,
+         <a href="en-US/docs/Web/HTML/Element/input#maxlength"><code>maxlength</code></a>,
+         <a href="en-US/docs/Web/HTML/Element/input#minlength"><code>minlength</code></a>,
+         <a href="en-US/docs/Web/HTML/Element/input#pattern"><code>pattern</code></a>,
+         <a href="en-US/docs/Web/HTML/Element/input#placeholder"><code>placeholder</code></a>,
+         <a href="en-US/docs/Web/HTML/Element/input#readonly"><code>readonly</code></a>,
+         <a href="en-US/docs/Web/HTML/Element/input#required"><code>required</code></a>, and
+         <a href="en-US/docs/Web/HTML/Element/input#size"><code>size</code></a>
       </td>
     </tr>
     <tr>

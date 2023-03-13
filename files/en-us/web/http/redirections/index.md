@@ -77,7 +77,7 @@ HTTP redirects are the best way to create redirections, but sometimes you don't 
 </head>
 ```
 
-The {{htmlattrxref("content")}} attribute should start with a number indicating how many seconds the browser should wait before redirecting to the given URL. Always set it to `0` for accessibility compliance.
+The [`content`](/en-US/docs/Web/HTML/Element/meta#content) attribute should start with a number indicating how many seconds the browser should wait before redirecting to the given URL. Always set it to `0` for accessibility compliance.
 
 Obviously, this method only works with HTML, and cannot be used for images or other types of content.
 
