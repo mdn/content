@@ -244,7 +244,6 @@ Notice that the timer's name is displayed both when the timer is started and whe
 > **Note:** It's important to note that if you're using this to log the timing for network traffic, the timer will report the total time for the transaction, while the time listed in the network panel is just the amount of time required for the header.
 > If you have response body logging enabled, the time listed for the response header and body combined should match what you see in the console output.
 
-
 ### Stack traces
 
 The console object also supports outputting a stack trace; this will show you the call path taken to reach the point at which you call {{domxref("console.trace()")}}. Given code like this:
