@@ -78,7 +78,7 @@ loaded over {{glossary("HTTPS")}}. On Firefox, this can be changed by setting th
 ### Turning on and off prefetching
 
 You can either send the `X-DNS-Prefetch-Control` header server-side, or from
-individual documents, using the {{ htmlattrxref("http-equiv", "meta") }} attribute on
+individual documents, using the [`http-equiv`](/en-US/docs/Web/HTML/Element/meta#http-equiv) attribute on
 the {{ HTMLElement("meta") }} element, like this:
 
 ```html
@@ -90,7 +90,7 @@ You can reverse this setting by setting `content` to "`on`".
 ### Forcing lookup of specific hostnames
 
 You can force the lookup of specific hostnames without providing specific anchors using
-that hostname by using the {{ htmlattrxref("rel","link") }} attribute on the {{
+that hostname by using the [`rel`](/en-US/docs/Web/HTML/Element/link#rel) attribute on the {{
   HTMLElement("link") }} element with a [link type](/en-US/docs/Web/HTML/Attributes/rel) of `dns-prefetch`:
 
 ```html

@@ -25,7 +25,7 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
 - `disabled`
   - : This Boolean attribute prevents the user from interacting with the button: it cannot be pressed or focused.
 
-    Firefox, unlike other browsers, [persists the dynamic disabled state](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing) of a {{HTMLElement("button")}} across page loads. Use the {{htmlattrxref("autocomplete","button")}} attribute to control this feature.
+    Firefox, unlike other browsers, [persists the dynamic disabled state](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing) of a {{HTMLElement("button")}} across page loads. To control this feature, use the [`autocomplete`]] (#autocomplete) attribute.
 
 - `form`
 
@@ -34,16 +34,16 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
     This attribute lets you associate `<button>` elements to `<form>`s anywhere in the document, not just inside a `<form>`. It can also override an ancestor `<form>` element.
 
 - `formaction`
-  - : The URL that processes the information submitted by the button. Overrides the {{htmlattrxref("action","form")}} attribute of the button's form owner. Does nothing if there is no form owner.
+  - : The URL that processes the information submitted by the button. Overrides the [`action`](/en-US/docs/Web/HTML/Element/form#action) attribute of the button's form owner. Does nothing if there is no form owner.
 - `formenctype`
 
   - : If the button is a submit button (it's inside/associated with a `<form>` and doesn't have `type="button"`), specifies how to encode the form data that is submitted. Possible values:
 
     - `application/x-www-form-urlencoded`: The default if the attribute is not used.
-    - `multipart/form-data`: Used to submit {{HTMLElement("input")}} elements with their {{htmlattrxref("type","input")}} attributes set to `file`.
+    - `multipart/form-data`: Used to submit {{HTMLElement("input")}} elements with their [`type`](/en-US/docs/Web/HTML/Element/input#type) attributes set to `file`.
     - `text/plain`: Specified as a debugging aid; shouldn't be used for real form submission.
 
-    If this attribute is specified, it overrides the {{htmlattrxref("enctype","form")}} attribute of the button's form owner.
+    If this attribute is specified, it overrides the [`enctype`](/en-US/docs/Web/HTML/Element/form#enctype) attribute of the button's form owner.
 
 - `formmethod`
 
@@ -52,17 +52,17 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
     - `post`: The data from the form are included in the body of the HTTP request when sent to the server. Use when the form contains information that shouldn't be public, like login credentials.
     - `get`: The form data are appended to the form's `action` URL, with a `?` as a separator, and the resulting URL is sent to the server. Use this method when the form [has no side effects](/en-US/docs/Glossary/Idempotent), like search forms.
 
-    If specified, this attribute overrides the {{htmlattrxref("method","form")}} attribute of the button's form owner.
+    If specified, this attribute overrides the [`method`](/en-US/docs/Web/HTML/Element/form#method) attribute of the button's form owner.
 
 - `formnovalidate`
 
-  - : If the button is a submit button, this Boolean attribute specifies that the form is not to be [validated](/en-US/docs/Learn/Forms/Form_validation) when it is submitted. If this attribute is specified, it overrides the {{htmlattrxref("novalidate","form")}} attribute of the button's form owner.
+  - : If the button is a submit button, this Boolean attribute specifies that the form is not to be [validated](/en-US/docs/Learn/Forms/Form_validation) when it is submitted. If this attribute is specified, it overrides the [`novalidate`](/en-US/docs/Web/HTML/Element/form#novalidate) attribute of the button's form owner.
 
     This attribute is also available on [`<input type="image">`](/en-US/docs/Web/HTML/Element/input/image) and [`<input type="submit">`](/en-US/docs/Web/HTML/Element/input/submit) elements.
 
 - `formtarget`
 
-  - : If the button is a submit button, this attribute is an author-defined name or standardized, underscore-prefixed keyword indicating where to display the response from submitting the form. This is the `name` of, or keyword for, a _browsing context_ (a tab, window, or {{HTMLElement("iframe")}}). If this attribute is specified, it overrides the {{htmlattrxref("target", "form")}} attribute of the button's form owner. The following keywords have special meanings:
+  - : If the button is a submit button, this attribute is an author-defined name or standardized, underscore-prefixed keyword indicating where to display the response from submitting the form. This is the `name` of, or keyword for, a _browsing context_ (a tab, window, or {{HTMLElement("iframe")}}). If this attribute is specified, it overrides the [`target`](/en-US/docs/Web/HTML/Element/form#target) attribute of the button's form owner. The following keywords have special meanings:
 
     - `_self`: Load the response into the same browsing context as the current one. This is the default if the attribute is not specified.
     - `_blank`: Load the response into a new unnamed browsing context — usually a new tab or window, depending on the user's browser settings.

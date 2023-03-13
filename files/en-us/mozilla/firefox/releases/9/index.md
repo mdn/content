@@ -17,7 +17,7 @@ Firefox 9 was released for Windows on December 20, 2011. Mac and Linux version 9
 - Firefox on Android now lets users snap photos with their phone's camera without leaving the browser when the {{ HTMLElement("input") }} element is used with `type="file"` and `accept="image/*"`.
 - Windows Vista style PNG ICO images are now supported.
 - Drawing images that use the [`crossorigin`](/en-US/docs/Web/HTML/Attributes/crossorigin) attribute to request CORS access no longer incorrectly [taint the canvas](/en-US/docs/Web/HTML/CORS_enabled_image#what_is_a_.22tainted.22_canvas.3f) when CORS is granted.
-- The value of the {{ htmlattrxref("rowspan", "td") }} attribute may now be as large as 65,534, up from 8190.
+- The value of the [`rowspan`](/en-US/docs/Web/HTML/Element/td#rowspan) attribute may now be as large as 65,534, up from 8190.
 
 ### CSS
 

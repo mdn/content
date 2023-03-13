@@ -25,7 +25,7 @@ user-modify: revert;
 user-modify: unset;
 ```
 
-> **Warning:** This property has been replaced by the {{HTMLAttrxRef("contenteditable")}} attribute.
+> **Warning:** This property has been replaced by the [`contenteditable`](/en-US/docs/Web/HTML/Global_attributes#contenteditable) attribute.
 
 ## Syntax
 

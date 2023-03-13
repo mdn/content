@@ -361,8 +361,8 @@ The [`AvailableInWorkers`](https://github.com/mdn/yari/blob/main/kumascript/macr
 
 - {{SVGElement("feGaussianBlur")}}
 - {{SVGAttr("keySplines")}} SVG attribute
-- {{htmlattrxref("dir")}}
-- {{htmlattrxref("lang")}}
+- [dir](/en-US/docs/Web/HTML/Global_attributes#dir)
+- [lang](/en-US/docs/Web/HTML/Global_attributes#lang)
 - {{cssxref(":dir")}}
 - {{cssxref("direction")}}
 
