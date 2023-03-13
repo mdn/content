@@ -1,15 +1,6 @@
 ---
 title: declarativeNetRequest.Redirect
 slug: Mozilla/Add-ons/WebExtensions/API/declarativeNetRequest/Redirect
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Reference
-  - WebExtensions
-  - Type
-  - declarativeNetRequest
-  - Redirect
 browser-compat: webextensions.api.declarativeNetRequest.Redirect
 ---
 

@@ -1,15 +1,6 @@
 ---
 title: "ARIA: structure role"
 slug: Web/Accessibility/ARIA/Roles/structure_role
-tags:
-  - Accessibility
-  - ARIA
-  - roles
-  - structure
-  - ARIA Role
-  - Abstract Role
-  - ARIA structure
-  - Reference
 spec-urls: https://w3c.github.io/aria/#structure
 ---
 

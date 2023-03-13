@@ -1,12 +1,6 @@
 ---
 title: Using shadow DOM
 slug: Web/Web_Components/Using_shadow_DOM
-tags:
-  - API
-  - DOM
-  - Guide
-  - Web Components
-  - shadow dom
 ---
 
 {{DefaultAPISidebar("Web Components")}}

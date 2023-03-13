@@ -23,7 +23,7 @@ A number.
 ## Examples
 
 ```js
-const videoElt = document.getElementById('my_vid');
+const videoElt = document.getElementById("my_vid");
 const quality = videoElt.getVideoPlaybackQuality();
 
 alert(quality.totalFrameDelay);

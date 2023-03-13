@@ -40,7 +40,7 @@ A trivial examples is shown below.
 A lock is created as soon as the reader is created on the stream.
 
 ```js
-const reader = stream.getReader({mode: "byob"});
+const reader = stream.getReader({ mode: "byob" });
 reader.releaseLock();
 ```
 

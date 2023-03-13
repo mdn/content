@@ -51,19 +51,19 @@ Either one of these promises rejects if the navigation has failed for some reaso
 function initHomeBtn() {
   // Get the key of the first loaded entry
   // so the user can always go back to this view.
-  const {key} = navigation.currentEntry;
+  const { key } = navigation.currentEntry;
   backToHomeButton.onclick = () => {
     navigation.traverseTo(key);
-  }
+  };
 }
 // Intercept navigate events, such as link clicks, and
 // replace them with single-page navigations
-navigation.addEventListener("navigate", event => {
+navigation.addEventListener("navigate", (event) => {
   event.intercept({
-      async handler() {
-        // Navigate to a different view,
-        // but the "home" button will always work.
-      }
+    async handler() {
+      // Navigate to a different view,
+      // but the "home" button will always work.
+    },
   });
 });
 ```

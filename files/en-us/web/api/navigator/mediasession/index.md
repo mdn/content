@@ -39,12 +39,12 @@ that the code begins by ensuring that the {{domxref("navigator.mediaSession")}} 
 is available before attempting to use it.
 
 ```js
-if ("mediaSession" in navigator){
+if ("mediaSession" in navigator) {
   navigator.mediaSession.metadata = new MediaMetadata({
     title: "Podcast Episode Title",
     artist: "Podcast Host",
     album: "Podcast Name",
-    artwork: [{src: "podcast.jpg"}]
+    artwork: [{ src: "podcast.jpg" }],
   });
 }
 ```

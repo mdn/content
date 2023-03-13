@@ -98,7 +98,8 @@ function readStream(reader) {
 
   while (offset < buffer.byteLength) {
     // read() returns a promise that fulfills when a value has been received
-    reader.read(new Uint8Array(buffer, offset, buffer.byteLength - offset))
+    reader
+      .read(new Uint8Array(buffer, offset, buffer.byteLength - offset))
       .then(function processBytes({ done, value }) {
         // Result objects contain two properties:
         // done  - true if the stream has already given all its data.
@@ -115,7 +116,9 @@ function readStream(reader) {
 
         // Read some more, and call this function again
         // Note that here we create a new view over the original buffer.
-        return reader.read(new Uint8Array(buffer, offset, buffer.byteLength - offset)).then(processBytes);
+        return reader
+          .read(new Uint8Array(buffer, offset, buffer.byteLength - offset))
+          .then(processBytes);
       });
   }
 }

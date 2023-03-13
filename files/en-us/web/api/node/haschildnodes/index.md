@@ -29,7 +29,7 @@ A boolean value that is `true` if the node has child nodes, and
 ## Example
 
 ```js
-let foo = document.getElementById('foo');
+let foo = document.getElementById("foo");
 
 if (foo.hasChildNodes()) {
   // Do something with 'foo.childNodes'

@@ -1,13 +1,8 @@
 ---
 title: "Permissions-Policy: serial"
 slug: Web/HTTP/Headers/Permissions-Policy/serial
-tags:
-  - Directive
-  - Permissions Policy
-  - Permissions-Policy
-  - HTTP
-  - Reference
-  - Experimental
+status:
+  - experimental
 browser-compat: http.headers.Permissions-Policy.serial
 ---
 

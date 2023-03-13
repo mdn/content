@@ -33,7 +33,7 @@ _The `WorkerNavigator` interface doesn't inherit any property._
   - : Returns a {{domxref("MediaCapabilities")}} object that can expose information about the decoding and encoding capabilities for a given format and output capabilities.
 - {{DOMxRef("WorkerNavigator.onLine")}} {{ReadOnlyInline}}
   - : Returns a boolean value indicating whether the browser is online.
-- {{DOMxRef("WorkerNavigator.permissions")}} {{Experimental_Inline}} {{ReadOnlyInline}}
+- {{DOMxRef("WorkerNavigator.permissions")}} {{ReadOnlyInline}}
   - : Returns a {{DOMxRef("Permissions")}} object that can be used to query and update permission status of APIs covered by the [Permissions API](/en-US/docs/Web/API/Permissions_API).
 - {{DOMxRef("WorkerNavigator.platform")}} {{Deprecated_Inline}} {{ReadOnlyInline}}
   - : Returns a string representing the platform of the browser. Do not rely on this property to return the correct value.

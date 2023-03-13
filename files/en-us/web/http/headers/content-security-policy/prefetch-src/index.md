@@ -1,14 +1,8 @@
 ---
 title: "CSP: prefetch-src"
 slug: Web/HTTP/Headers/Content-Security-Policy/prefetch-src
-tags:
-  - CSP
-  - Content Security Policy
-  - Directive
-  - HTTP
-  - Reference
-  - prefetch-src
-  - Experimental
+status:
+  - experimental
 browser-compat: http.headers.Content-Security-Policy.prefetch-src
 ---
 

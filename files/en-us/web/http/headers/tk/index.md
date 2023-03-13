@@ -1,14 +1,8 @@
 ---
 title: Tk
 slug: Web/HTTP/Headers/Tk
-tags:
-  - DNT
-  - HTTP
-  - Reference
-  - Response
-  - header
-  - tracking
-  - Deprecated
+status:
+  - deprecated
 browser-compat: http.headers.Tk
 ---
 

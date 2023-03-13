@@ -33,16 +33,28 @@ that were activated and then invokes different handlers depending on the number 
 points.
 
 ```js
-someElement.addEventListener('touchstart', (e) => {
-   // Invoke the appropriate handler depending on the
-   // number of touch points.
-   switch (e.touches.length) {
-     case 1: handle_one_touch(e); break;
-     case 2: handle_two_touches(e); break;
-     case 3: handle_three_touches(e); break;
-     default: console.log("Not supported"); break;
-   }
- }, false);
+someElement.addEventListener(
+  "touchstart",
+  (e) => {
+    // Invoke the appropriate handler depending on the
+    // number of touch points.
+    switch (e.touches.length) {
+      case 1:
+        handle_one_touch(e);
+        break;
+      case 2:
+        handle_two_touches(e);
+        break;
+      case 3:
+        handle_three_touches(e);
+        break;
+      default:
+        console.log("Not supported");
+        break;
+    }
+  },
+  false
+);
 ```
 
 ## Specifications

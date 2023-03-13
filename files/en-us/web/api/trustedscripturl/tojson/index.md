@@ -28,8 +28,10 @@ A string containing a JSON representation of the stored data.
 The constant `sanitized` is an object created via a Trusted Types policy. The `toString()` method returns a string to safely use to load a third party script.
 
 ```js
-const sanitized = scriptPolicy.createScriptURL("https://example.com/my-script.js");
-  console.log(sanitized.toJSON());
+const sanitized = scriptPolicy.createScriptURL(
+  "https://example.com/my-script.js"
+);
+console.log(sanitized.toJSON());
 ```
 
 ## Specifications

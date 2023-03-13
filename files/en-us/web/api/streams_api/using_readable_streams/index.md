@@ -31,9 +31,9 @@ As our [Simple stream pump](https://github.com/mdn/dom-examples/tree/main/stream
 
 ```js
 // Fetch the original image
-fetch('./tortoise.png')
+fetch("./tortoise.png")
   // Retrieve its body as ReadableStream
-  .then((response) => response.body)
+  .then((response) => response.body);
 ```
 
 This provides us with a {{domxref("ReadableStream")}} object.
@@ -44,7 +44,7 @@ Now we've got our streaming body, reading the stream requires attaching a reader
 
 ```js
 // Fetch the original image
-fetch('./tortoise.png')
+fetch("./tortoise.png")
   // Retrieve its body as ReadableStream
   .then((response) => response.body)
   .then((body) => {
@@ -59,7 +59,7 @@ Also note that the previous example can be reduced by one step, as `response.bod
 
 ```js
 // Fetch the original image
-fetch('./tortoise.png')
+fetch("./tortoise.png")
   // Retrieve its body as ReadableStream
   .then((response) => {
     const reader = response.body.getReader();
@@ -73,7 +73,7 @@ Now you've got your reader attached, you can read data chunks out of the stream 
 
 ```js
 // Fetch the original image
-fetch('./tortoise.png')
+fetch("./tortoise.png")
   // Retrieve its body as ReadableStream
   .then((response) => {
     const reader = response.body.getReader();
@@ -92,8 +92,8 @@ fetch('./tortoise.png')
             return pump();
           });
         }
-      }
-    })
+      },
+    });
   })
   // Create a new response out of the stream
   .then((stream) => new Response(stream))
@@ -101,14 +101,16 @@ fetch('./tortoise.png')
   .then((response) => response.blob())
   .then((blob) => URL.createObjectURL(blob))
   // Update image
-  .then((url) => console.log(image.src = url))
+  .then((url) => console.log((image.src = url)))
   .catch((err) => console.error(err));
 ```
 
 Let's look in detail at how `read()` is used. In the `pump()` function seen above we first invoke `read()`, which returns a promise containing a results object — this has the results of our read in it, in the form `{ done, value }`:
 
 ```js
-reader.read().then(({ done, value }) => { /* … */ });
+reader.read().then(({ done, value }) => {
+  /* … */
+});
 ```
 
 The results can be one of three different types:
@@ -156,22 +158,19 @@ It is easy to read from a stream when the browser provides it for you as in the 
 The generic syntax skeleton looks like this:
 
 ```js
-const stream = new ReadableStream({
-  start(controller) {
-
+const stream = new ReadableStream(
+  {
+    start(controller) {},
+    pull(controller) {},
+    cancel() {},
+    type,
+    autoAllocateChunkSize,
   },
-  pull(controller) {
-
-  },
-  cancel() {
-
-  },
-  type,
-  autoAllocateChunkSize,
-}, {
-  highWaterMark: 3,
-  size: () => 1,
-});
+  {
+    highWaterMark: 3,
+    size: () => 1,
+  }
+);
 ```
 
 The constructor takes two objects as parameters. The first object is required, and creates a model in JavaScript of the underlying source the data is being read from. The second object is optional, and allows you to specify a [custom queuing strategy](/en-US/docs/Web/API/Streams_API/Concepts#internal_queues_and_queuing_strategies) to use for your stream. You'll rarely have to do this, so we'll just concentrate on the first one for now.
@@ -188,7 +187,7 @@ Looking at our simple example code again, you can see that our `ReadableStream()
 
 ```js
 // Fetch the original image
-fetch('./tortoise.png')
+fetch("./tortoise.png")
   // Retrieve its body as ReadableStream
   .then((response) => {
     const reader = response.body.getReader();
@@ -207,8 +206,8 @@ fetch('./tortoise.png')
             return pump();
           });
         }
-      }
-    })
+      },
+    });
   });
 ```
 
@@ -229,7 +228,7 @@ readableStream
   .then((stream) => new Response(stream))
   .then((response) => response.blob())
   .then((blob) => URL.createObjectURL(blob))
-  .then((url) => console.log(image.src = url))
+  .then((url) => console.log((image.src = url)))
   .catch((err) => console.error(err));
 ```
 
@@ -247,15 +246,15 @@ const stream = new ReadableStream({
       // Add the string to the stream
       controller.enqueue(string);
       // show it on the screen
-      const listItem = document.createElement('li');
+      const listItem = document.createElement("li");
       listItem.textContent = string;
       list1.appendChild(listItem);
     }, 1000);
-    button.addEventListener('click', () => {
+    button.addEventListener("click", () => {
       clearInterval(interval);
       readStream();
       controller.close();
-    })
+    });
   },
   pull(controller) {
     // We don't really need a pull in this example
@@ -264,7 +263,7 @@ const stream = new ReadableStream({
     // This is called if the reader cancels,
     // so we should stop generating strings
     clearInterval(interval);
-  }
+  },
 });
 ```
 
@@ -274,7 +273,7 @@ In the `readStream()` function itself, we lock a reader to the stream using {{do
 function readStream() {
   const reader = stream.getReader();
   let charsReceived = 0;
-  let result = '';
+  let result = "";
 
   // read() returns a promise that resolves
   // when a value has been received
@@ -290,7 +289,7 @@ function readStream() {
 
     charsReceived += value.length;
     const chunk = value;
-    const listItem = document.createElement('li');
+    const listItem = document.createElement("li");
     listItem.textContent = `Read ${charsReceived} characters so far. Current chunk = ${chunk}`;
     list2.appendChild(listItem);
 
@@ -332,13 +331,13 @@ We do have a simple example called [Unpack Chunks of a PNG](https://github.com/m
 
 ```js
 // Fetch the original image
-fetch('png-logo.png')
+fetch("png-logo.png")
   // Retrieve its body as ReadableStream
   .then((response) => response.body)
   // Create a gray-scaled PNG stream out of the original
-  .then((rs) => logReadableStream('Fetch Response Stream', rs))
+  .then((rs) => logReadableStream("Fetch Response Stream", rs))
   .then((body) => body.pipeThrough(new PNGTransformStream()))
-  .then((rs) => logReadableStream('PNG Chunk Stream', rs))
+  .then((rs) => logReadableStream("PNG Chunk Stream", rs));
 ```
 
 We don't yet have an example that uses {{domxref("TransformStream")}}.

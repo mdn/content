@@ -2,13 +2,6 @@
 title: types
 slug: Mozilla/Add-ons/WebExtensions/API/types
 page-type: webextension-api
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Reference
-  - Types
-  - WebExtensions
 ---
 
 {{AddonSidebar}}

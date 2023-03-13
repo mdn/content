@@ -1,12 +1,6 @@
 ---
 title: Handling different text directions
 slug: Learn/CSS/Building_blocks/Handling_different_text_directions
-tags:
-  - Beginner
-  - CSS
-  - Learn
-  - logical properties
-  - writing modes
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Backgrounds_and_borders", "Learn/CSS/Building_blocks/Overflowing_content", "Learn/CSS/Building_blocks")}}

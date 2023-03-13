@@ -1,19 +1,6 @@
 ---
 title: Creating fancy letterheaded paper
 slug: Learn/CSS/Building_blocks/Creating_fancy_letterheaded_paper
-tags:
-  - Assessment
-  - Background
-  - Beginner
-  - Boxes
-  - CSS
-  - CodingScripting
-  - border
-  - box
-  - letter
-  - letterhead
-  - letterheaded
-  - paper
 ---
 
 {{LearnSidebar}}

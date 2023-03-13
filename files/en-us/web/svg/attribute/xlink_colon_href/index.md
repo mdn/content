@@ -2,11 +2,8 @@
 title: xlink:href
 slug: Web/SVG/Attribute/xlink:href
 page-type: svg-attribute
-tags:
-  - NeedsCompatTable
-  - SVG
-  - SVG Attribute
-  - Deprecated
+status:
+  - deprecated
 browser-compat: svg.elements.a.xlink_href
 ---
 
@@ -21,7 +18,6 @@ You can use this attribute with the following SVG elements:
 - {{SVGElement("a")}}
 - {{SVGElement("altGlyph")}}
 - {{SVGElement("animate")}}
-- {{SVGElement("animateColor")}}
 - {{SVGElement("animateMotion")}}
 - {{SVGElement("animateTransform")}}
 - {{SVGElement("cursor")}}
@@ -114,9 +110,9 @@ If the reference is to an `<altGlyphDef>` element, then if an appropriate set of
   </tbody>
 </table>
 
-## animate, animateColor, animateMotion, animateTransform, set
+## animate, animateMotion, animateTransform, set
 
-For {{SVGElement("animate")}}, {{SVGElement("animateColor")}}, {{SVGElement("animateMotion")}}, {{SVGElement("animateTransform")}}, and {{SVGElement("set")}}, `xlink:href` defines the reference to the element which is the target of this animation and which therefore will be modified over time.
+For {{SVGElement("animate")}}, {{SVGElement("animateMotion")}}, {{SVGElement("animateTransform")}}, and {{SVGElement("set")}}, `xlink:href` defines the reference to the element which is the target of this animation and which therefore will be modified over time.
 
 The target element must be part of the current SVG document fragment.
 

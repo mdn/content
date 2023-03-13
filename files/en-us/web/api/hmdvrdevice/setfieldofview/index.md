@@ -38,13 +38,13 @@ None ({{jsxref("undefined")}}).
 The following simple example shows a function that can be used to set a custom field of view with four specified degree values for up, right, down and left. The {{domxref("VRFieldOfView.VRFieldOfView","VRFieldOfView()")}} constructor is used to create a {{domxref("VRFieldOfView")}} object from the supplied values, which is then fed into the `setFieldOfView()` method (the default `zNear` and `zFar` values are always used, in this case.)
 
 ```js
-function setCustomFOV(up,right,down,left) {
-  const testFOV = new VRFieldOfView(up,right,down,left);
+function setCustomFOV(up, right, down, left) {
+  const testFOV = new VRFieldOfView(up, right, down, left);
 
-  gHMD.setFieldOfView(testFOV,testFOV,0.01,10000.0);
+  gHMD.setFieldOfView(testFOV, testFOV, 0.01, 10000.0);
 
-  const lEye = gHMD.getEyeParameters('left');
-  const rEye = gHMD.getEyeParameters('right');
+  const lEye = gHMD.getEyeParameters("left");
+  const rEye = gHMD.getEyeParameters("right");
   console.log(lEye.currentFieldOfView);
   console.log(rEye.currentFieldOfView);
 }

@@ -1,11 +1,8 @@
 ---
 title: share_target
 slug: Web/Manifest/share_target
-tags:
-  - Manifest
-  - Web
-  - share_target
-  - Experimental
+status:
+  - experimental
 browser-compat: html.manifest.share_target
 ---
 

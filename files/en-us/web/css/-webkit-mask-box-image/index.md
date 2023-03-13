@@ -14,7 +14,6 @@ browser-compat: css.properties.-webkit-mask-box-image
 - {{ Xref_cssinitial() }}: none
 - Applies to: all elements
 - {{ Xref_cssinherited() }}: no
-- Media: {{ Xref_cssvisual() }}
 - {{ Xref_csscomputed() }}: as specified
 
 ## Syntax

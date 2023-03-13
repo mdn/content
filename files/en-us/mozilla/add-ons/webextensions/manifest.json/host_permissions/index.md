@@ -2,14 +2,6 @@
 title: host_permissions
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/host_permissions
 page-type: webextension-manifest-key
-tags:
-  - Add-ons
-  - Extensions
-  - Permissions
-  - host_permissions
-  - Reference
-  - WebExtensions
-  - manifest.json
 browser-compat: webextensions.manifest.host_permissions
 ---
 

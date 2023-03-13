@@ -1,15 +1,6 @@
 ---
 title: "ARIA: tree role"
 slug: Web/Accessibility/ARIA/Roles/tree_role
-tags:
-  - Accessibility
-  - ARIA
-  - roles
-  - Reference
-  - ARIA roles
-  - Tree role
-  - composite widget role
-  - needs example
 spec-urls:
   - https://w3c.github.io/aria/#tree
   - https://w3c.github.io/aria-practices/#TreeView

@@ -62,8 +62,8 @@ in which media segments are appended.
 
 ```js
 const curMode = sourceBuffer.mode;
-if (curMode === 'segments') {
-  sourceBuffer.mode = 'sequence';
+if (curMode === "segments") {
+  sourceBuffer.mode = "sequence";
 }
 ```
 

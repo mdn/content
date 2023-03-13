@@ -1,11 +1,6 @@
 ---
 title: Resource URLs
 slug: Web/HTTP/Basics_of_HTTP/Resource_URLs
-tags:
-  - Guide
-  - HTTP
-  - Intermediate
-  - Resource
 ---
 
 {{HTTPSidebar}}{{non-standard_header}}
@@ -69,7 +64,7 @@ this information.
 ## Solution
 
 In order to fix this problem, Mozilla changed the behavior of loading resource: URIs in
-{{bug(863246)}}, which landed in [Firefox 57 (Quantum)](/en-US/docs/Mozilla/Firefox/Releases/57).
+[Firefox bug 863246](https://bugzil.la/863246), which landed in [Firefox 57 (Quantum)](/en-US/docs/Mozilla/Firefox/Releases/57).
 
 In the past, web content was able to access whatever `resource:` URIs were
 desired — not only Firefox's internal resources, but also extensions' assets. Now this

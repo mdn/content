@@ -24,7 +24,7 @@ value of the resulting `MediaQueryList`'s `media` property in a
 ### JavaScript
 
 ```js
-let mql = window.matchMedia('(max-width: 600px)');
+let mql = window.matchMedia("(max-width: 600px)");
 
 document.querySelector(".mq-value").innerText = mql.media;
 ```

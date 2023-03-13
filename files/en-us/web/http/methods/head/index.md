@@ -1,10 +1,6 @@
 ---
 title: HEAD
 slug: Web/HTTP/Methods/HEAD
-tags:
-  - HTTP
-  - Reference
-  - Request method
 browser-compat: http.methods.HEAD
 ---
 

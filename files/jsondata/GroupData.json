@@ -797,6 +797,13 @@
       "interfaces": ["Keyboard", "KeyboardLayoutMap"],
       "methods": ["Navigator.keyboard"]
     },
+    "Launch Handler API": {
+      "overview": ["Launch Handler API"],
+      "interfaces": ["LaunchParams", "LaunchQueue"],
+      "methods": [],
+      "properties": ["Window.launchQueue"],
+      "events": []
+    },
     "Layout Instability API": {
       "overview": ["Layout Instability API"],
       "interfaces: ": ["LayoutShift", "LayoutShiftAttribution"],
@@ -1529,6 +1536,13 @@
       "properties": [],
       "events": []
     },
+    "View Transitions API": {
+      "overview": ["View Transitions API"],
+      "interfaces": ["ViewTransition"],
+      "methods": ["Document.startViewTransition()"],
+      "properties": [],
+      "events": []
+    },
     "VirtualKeyboard API": {
       "overview": ["VirtualKeyboard API"],
       "interfaces": ["VirtualKeyboard"],
@@ -1889,6 +1903,7 @@
       "guides": [
         "/docs/Web/API/WebRTC_API/Protocols",
         "/docs/Web/API/WebRTC_API/Connectivity",
+        "/docs/Web/API/WebRTC_API/Perfect_negotiation",
         "/docs/Web/API/WebRTC_API/Session_lifetime",
         "/docs/Web/API/WebRTC_API/Signaling_and_video_calling",
         "/docs/Web/API/WebRTC_API/Using_data_channels",

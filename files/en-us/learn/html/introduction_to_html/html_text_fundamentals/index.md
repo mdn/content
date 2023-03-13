@@ -1,17 +1,6 @@
 ---
 title: HTML text fundamentals
 slug: Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals
-tags:
-  - Beginner
-  - CodingScripting
-  - Guide
-  - HTML
-  - Introduction to HTML
-  - Learn
-  - Text
-  - headings
-  - paragraphs
-  - semantics
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML", "Learn/HTML/Introduction_to_HTML/Creating_hyperlinks", "Learn/HTML/Introduction_to_HTML")}}

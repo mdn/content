@@ -1,5 +1,5 @@
 ---
-title: 'IDBOpenDBRequest: blocked event'
+title: "IDBOpenDBRequest: blocked event"
 slug: Web/API/IDBOpenDBRequest/blocked_event
 page-type: web-api-event
 browser-compat: api.IDBOpenDBRequest.blocked_event
@@ -16,9 +16,9 @@ This event is not cancelable and does not bubble.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('blocked', (event) => { });
+addEventListener("blocked", (event) => {});
 
-onblocked = (event) => { };
+onblocked = (event) => {};
 ```
 
 ## Event type
@@ -42,35 +42,36 @@ Using `addEventListener()`:
 
 ```js
 // Open the database
-const DBOpenRequest = window.indexedDB.open('toDoList', 4);
+const DBOpenRequest = window.indexedDB.open("toDoList", 4);
 
 DBOpenRequest.onupgradeneeded = (event) => {
   const db = event.target.result;
 
   db.onerror = () => {
-    console.log('Error creating database');
+    console.log("Error creating database");
   };
 
   // Create an objectStore for this database
-  const objectStore = db.createObjectStore('toDoList', { keyPath: 'taskTitle' });
+  const objectStore = db.createObjectStore("toDoList", {
+    keyPath: "taskTitle",
+  });
 
   // define what data items the objectStore will contain
-  objectStore.createIndex('hours', 'hours', { unique: false });
-  objectStore.createIndex('minutes', 'minutes', { unique: false });
-  objectStore.createIndex('day', 'day', { unique: false });
-  objectStore.createIndex('month', 'month', { unique: false });
-  objectStore.createIndex('year', 'year', { unique: false });
+  objectStore.createIndex("hours", "hours", { unique: false });
+  objectStore.createIndex("minutes", "minutes", { unique: false });
+  objectStore.createIndex("day", "day", { unique: false });
+  objectStore.createIndex("month", "month", { unique: false });
+  objectStore.createIndex("year", "year", { unique: false });
 };
 
 DBOpenRequest.onsuccess = (event) => {
   // Let's try to open the same database with a higher revision version
-  const req2 = indexedDB.open('toDoList', 5);
+  const req2 = indexedDB.open("toDoList", 5);
 
   // In this case the onblocked handler will be executed
-  req2.addEventListener('blocked', () => {
-    console.log('Request was blocked');
+  req2.addEventListener("blocked", () => {
+    console.log("Request was blocked");
   });
-
 };
 ```
 
@@ -78,35 +79,36 @@ Using the `onblocked` property:
 
 ```js
 // Open the database
-const DBOpenRequest = window.indexedDB.open('toDoList', 4);
+const DBOpenRequest = window.indexedDB.open("toDoList", 4);
 
 DBOpenRequest.onupgradeneeded = (event) => {
   const db = event.target.result;
 
   db.onerror = () => {
-    console.log('Error creating database');
+    console.log("Error creating database");
   };
 
   // Create an objectStore for this database
-  const objectStore = db.createObjectStore('toDoList', { keyPath: 'taskTitle' });
+  const objectStore = db.createObjectStore("toDoList", {
+    keyPath: "taskTitle",
+  });
 
   // define what data items the objectStore will contain
-  objectStore.createIndex('hours', 'hours', { unique: false });
-  objectStore.createIndex('minutes', 'minutes', { unique: false });
-  objectStore.createIndex('day', 'day', { unique: false });
-  objectStore.createIndex('month', 'month', { unique: false });
-  objectStore.createIndex('year', 'year', { unique: false });
+  objectStore.createIndex("hours", "hours", { unique: false });
+  objectStore.createIndex("minutes", "minutes", { unique: false });
+  objectStore.createIndex("day", "day", { unique: false });
+  objectStore.createIndex("month", "month", { unique: false });
+  objectStore.createIndex("year", "year", { unique: false });
 };
 
 DBOpenRequest.onsuccess = (event) => {
   // Let's try to open the same database with a higher revision version
-  const req2 = indexedDB.open('toDoList', 5);
+  const req2 = indexedDB.open("toDoList", 5);
 
   // In this case the onblocked handler will be executed
   req2.onblocked = () => {
-    console.log('Request was blocked');
+    console.log("Request was blocked");
   };
-
 };
 ```
 

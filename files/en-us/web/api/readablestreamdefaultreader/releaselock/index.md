@@ -41,7 +41,7 @@ function fetchStream() {
 
   // ...
 
-  reader.releaseLock()
+  reader.releaseLock();
 
   // ...
 }

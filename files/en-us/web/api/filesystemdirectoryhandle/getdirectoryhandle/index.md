@@ -54,10 +54,10 @@ The following example returns a directory handle with the specified name, if the
 directory does not exist it is created.
 
 ```js
-const dirName = 'directoryToGetName';
+const dirName = "directoryToGetName";
 
 // assuming we have a directory handle: 'currentDirHandle'
-const subDir = currentDirHandle.getDirectoryHandle(dirName, {create: true});
+const subDir = currentDirHandle.getDirectoryHandle(dirName, { create: true });
 ```
 
 ## Specifications

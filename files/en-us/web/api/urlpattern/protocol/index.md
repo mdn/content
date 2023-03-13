@@ -26,7 +26,7 @@ The below example creates a {{domxref("URLPattern")}} object with `http{s}?` for
 the `protocol` part. This pattern matches the `http` and `https` protocols.
 
 ```js
-const pattern = new URLPattern({ protocol: 'http{s}?' });
+const pattern = new URLPattern({ protocol: "http{s}?" });
 console.log(pattern.protocol); // 'http{s}?'
 ```
 

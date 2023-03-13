@@ -23,7 +23,7 @@ A {{domxref('ContactsManager')}} object. Two successive calls return the same ob
 The following code checks whether the Contact Picker API is supported.
 
 ```js
-const supported = ('contacts' in navigator && 'ContactsManager' in window);
+const supported = "contacts" in navigator && "ContactsManager" in window;
 ```
 
 ## Specifications

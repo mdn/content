@@ -1,12 +1,6 @@
 ---
 title: Introduction to client-side frameworks
 slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Introduction
-tags:
-  - Beginner
-  - Frameworks
-  - JavaScript
-  - Learn
-  - client-side
 ---
 
 {{LearnSidebar}}{{NextMenu("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}

@@ -1,20 +1,6 @@
 ---
 title: Useful string methods
 slug: Learn/JavaScript/First_steps/Useful_string_methods
-tags:
-  - Article
-  - Beginner
-  - CodingScripting
-  - JavaScript
-  - Learn
-  - case
-  - indexOf
-  - "l10n:priority"
-  - length
-  - lower
-  - replace
-  - split
-  - upper
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/First_steps/Strings", "Learn/JavaScript/First_steps/Arrays", "Learn/JavaScript/First_steps")}}
@@ -52,7 +38,7 @@ your variable becomes a string object instance, and as a result has a large numb
 
 **Now, before your brain starts melting, don't worry!** You really don't need to know about most of these early on in your learning journey. But there are a few that you'll potentially use quite often that we'll look at here.
 
-Let's enter some examples into the [browser developer console](/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools).
+Let's enter some examples into the [browser developer console](/en-US/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools).
 
 ## Finding the length of a string
 

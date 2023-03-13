@@ -8,7 +8,7 @@ browser-compat: api.HTMLCanvasElement.height
 {{APIRef("Canvas API")}}
 
 The **`HTMLCanvasElement.height`** property is a
-positive `integer` reflecting the {{htmlattrxref("height", "canvas")}} HTML
+positive `integer` reflecting the [`height`](/en-US/docs/Web/HTML/Element/canvas#height) HTML
 attribute of the {{HTMLElement("canvas")}} element interpreted in CSS pixels. When the
 attribute is not specified, or if it is set to an invalid value, like a negative, the
 default value of `150` is used.
@@ -31,7 +31,7 @@ Given this {{HTMLElement("canvas")}} element:
 You can get the height of the canvas with the following code:
 
 ```js
-const canvas = document.getElementById('canvas');
+const canvas = document.getElementById("canvas");
 console.log(canvas.height); // 300
 ```
 

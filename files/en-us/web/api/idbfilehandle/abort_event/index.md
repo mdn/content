@@ -1,5 +1,5 @@
 ---
-title: 'IDFileHandle: abort event'
+title: "IDFileHandle: abort event"
 slug: Web/API/IDBFileHandle/abort_event
 page-type: web-api-event
 status:
@@ -22,8 +22,8 @@ This event is not cancelable and does not bubble.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('abort', (event) => { });
-onabort = (event) => { };
+addEventListener("abort", (event) => {});
+onabort = (event) => {};
 ```
 
 ## Event type

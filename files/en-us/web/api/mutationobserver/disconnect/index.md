@@ -49,8 +49,8 @@ possible reuse.
 const targetNode = document.querySelector("#someElement");
 const observerOptions = {
   childList: true,
-  attributes: true
-}
+  attributes: true,
+};
 
 const observer = new MutationObserver(callback);
 observer.observe(targetNode, observerOptions);

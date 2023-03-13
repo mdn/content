@@ -1,14 +1,6 @@
 ---
 title: Cascade layers
 slug: Learn/CSS/Building_blocks/Cascade_layers
-tags:
-  - Advanced
-  - CSS
-  - Cascade
-  - Learn
-  - rules
-  - source order
-  - specificity
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Cascade_and_inheritance", "Learn/CSS/Building_blocks/The_box_model", "Learn/CSS/Building_blocks")}}
