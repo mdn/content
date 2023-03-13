@@ -1,5 +1,5 @@
 ---
-title: Browser storage limits and eviction criteria
+title: Browser storage quotas and eviction criteria
 slug: Web/API/Storage_API/Storage_quotas_and_eviction_criteria
 page-type: guide
 ---
