@@ -71,7 +71,7 @@ In addition to the basic HTML global attributes, the following global attributes
 - [`inert`](/en-US/docs/Web/HTML/Global_attributes/inert)
   - : A boolean value that makes the browser disregard user input events for the element. Useful when click events are present.
 - [`inputmode`](/en-US/docs/Web/HTML/Global_attributes/inputmode)
-  - : Provides a hint to browsers as to the type of virtual keyboard configuration to use when editing this element or its contents. Used primarily on {{HTMLElement("input")}} elements, but is usable on any element while in {{HTMLAttrxRef("contenteditable")}} mode.
+  - : Provides a hint to browsers about the type of virtual keyboard configuration to use when editing this element or its contents. Used primarily on {{HTMLElement("input")}} elements, but is usable on any element while in [`contenteditable`](#contenteditable) mode.
 - [`is`](/en-US/docs/Web/HTML/Global_attributes/is)
   - : Allows you to specify that a standard HTML element should behave like a registered custom built-in element (see [Using custom elements](/en-US/docs/Web/Web_Components/Using_custom_elements) for more details).
 
@@ -124,7 +124,7 @@ In addition to the basic HTML global attributes, the following global attributes
     - `no`, which indicates that the element will not be translated.
 - [`virtualkeyboardpolicy`](/en-US/docs/Web/HTML/Global_attributes/virtualkeyboardpolicy)
 
-  - : An [enumerated](/en-US/docs/Glossary/Enumerated) attribute used to control the on-screen virtual keyboard behavior on devices such as tablets, mobile phones, or other devices where a hardware keyboard may not be available, for elements that also uses the {{htmlattrxref("contenteditable")}} attribute.
+  - : An [enumerated](/en-US/docs/Glossary/Enumerated) attribute used to control the on-screen virtual keyboard behavior on devices such as tablets, mobile phones, or other devices where a hardware keyboard may not be available for elements that also uses the [`contenteditable`](#contenteditable) attribute.
 
     - `auto` or an _empty string_, which automatically shows the virtual keyboard when the element is focused or tapped.
     - `manual`, which decouples focus and tap on the element from the virtual keyboard's state.

@@ -7,7 +7,7 @@ browser-compat: html.elements.span
 
 {{HTMLSidebar}}
 
-The **`<span>`** [HTML](/en-US/docs/Web/HTML) element is a generic inline container for phrasing content, which does not inherently represent anything. It can be used to group elements for styling purposes (using the {{htmlattrxref("class")}} or {{htmlattrxref("id")}} attributes), or because they share attribute values, such as {{htmlattrxref("lang")}}. It should be used only when no other semantic element is appropriate. `<span>` is very much like a {{HTMLElement("div")}} element, but {{HTMLElement("div")}} is a [block-level element](/en-US/docs/Web/HTML/Block-level_elements) whereas a `<span>` is an [inline element](/en-US/docs/Web/HTML/Inline_elements).
+The **`<span>`** [HTML](/en-US/docs/Web/HTML) element is a generic inline container for phrasing content, which does not inherently represent anything. It can be used to group elements for styling purposes (using the [`class`](/en-US/docs/Web/HTML/Global_attributes#class) or [`id`](/en-US/docs/Web/HTML/Global_attributes#id) attributes), or because they share attribute values, such as [`lang`](/en-US/docs/Web/HTML/Global_attributes#lang). It should be used only when no other semantic element is appropriate. `<span>` is very much like a {{HTMLElement("div")}} element, but {{HTMLElement("div")}} is a [block-level element](/en-US/docs/Web/HTML/Block-level_elements) whereas a `<span>` is an [inline element](/en-US/docs/Web/HTML/Inline_elements).
 
 {{EmbedInteractiveExample("pages/tabbed/span.html", "tabbed-shorter")}}
 

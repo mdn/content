@@ -9,7 +9,7 @@ browser-compat: api.HTMLAnchorElement.referrerPolicy
 
 The
 **`HTMLAnchorElement.referrerPolicy`**
-property reflect the HTML {{htmlattrxref("referrerpolicy","a")}} attribute of the
+property reflect the HTML [`referrerpolicy`](/en-US/docs/Web/HTML/Element/a#referrerpolicy) attribute of the
 {{HTMLElement("a")}} element defining which referrer is sent when fetching the resource.
 
 ## Value

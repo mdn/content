@@ -23,7 +23,7 @@ Both approaches help a user check that they entered the intended password, which
 
 ## Value
 
-The {{htmlattrxref("value", "input")}} attribute contains a string whose value is the current contents of the text editing control being used to enter the password. If the user hasn't entered anything yet, this value is an empty string (`""`). If the {{htmlattrxref("required")}} property is specified, then the password edit box must contain a value other than an empty string to be valid.
+The {{htmlattrxref("value", "input")}} attribute contains a string whose value is the current contents of the text editing control being used to enter the password. If the user hasn't entered anything yet, this value is an empty string (`""`). If the [`required`](/en-US/docs/Web/HTML/Element/input#required) property is specified, then the password edit box must contain a value other than an empty string to be valid.
 
 If the {{htmlattrxref("pattern", "input")}} attribute is specified, the content of a `password` control is only considered valid if the value passes validation; see [Validation](#validation) for more information.
 
@@ -47,7 +47,7 @@ The input will fail [constraint validation](/en-US/docs/Web/HTML/Constraint_vali
 
 ### pattern
 
-The `pattern` attribute, when specified, is a regular expression that the input's {{htmlattrxref("value")}} must match in order for the value to pass [constraint validation](/en-US/docs/Web/HTML/Constraint_validation). It must be a valid JavaScript regular expression, as used by the {{jsxref("RegExp")}} type, and as documented in our [guide on regular expressions](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions); the `'u'` flag is specified when compiling the regular expression, so that the pattern is treated as a sequence of Unicode code points, instead of as ASCII. No forward slashes should be specified around the pattern text.
+The `pattern` attribute, when specified, is a regular expression that the input's [`value`](/en-US/docs/Web/HTML/Element/input#value) must match for the value to pass [constraint validation](/en-US/docs/Web/HTML/Constraint_validation). It must be a valid JavaScript regular expression, as used by the {{jsxref("RegExp")}} type, and as documented in our [guide on regular expressions](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions); the `'u'` flag is specified when compiling the regular expression so that the pattern is treated as a sequence of Unicode code points, instead of as ASCII. No forward slashes should be specified around the pattern text.
 
 If the specified pattern is not specified or is invalid, no regular expression is applied and this attribute is ignored completely.
 

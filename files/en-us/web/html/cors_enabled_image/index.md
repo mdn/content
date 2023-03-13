@@ -54,7 +54,7 @@ In short, this configures the server to allow graphic files (those with the exte
 
 Now that the server has been configured to allow retrieval of the images cross-origin, we can write the code that allows the user to save them to [local storage](/en-US/docs/Web/API/Web_Storage_API), just as if they were being served from the same domain the code is running on.
 
-The key is to use the {{htmlattrxref("crossorigin")}} attribute by setting {{domxref("HTMLImageElement.crossOrigin", "crossOrigin")}} on the {{domxref("HTMLImageElement")}} into which the image will be loaded. This tells the browser to request cross-origin access when trying to download the image data.
+The key is to use the [`crossorigin`](/en-US/docs/Web/HTML/Element/image#crossorigin) attribute by setting {{domxref("HTMLImageElement.crossOrigin", "crossOrigin")}} on the {{domxref("HTMLImageElement")}} into which the image will be loaded. This tells the browser to request cross-origin access when downloading the image data.
 
 #### Starting the download
 

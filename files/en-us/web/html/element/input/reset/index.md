@@ -63,9 +63,9 @@ Try entering some text into the text field, and then pressing the reset button.
 
 ### Adding a reset keyboard shortcut
 
-To add a keyboard shortcut to a reset button — just as you would with any {{HTMLElement("input")}} for which it makes sense — you use the {{htmlattrxref("accesskey")}} global attribute.
+To add a keyboard shortcut to a reset button — just as you would with any {{HTMLElement("input")}} for which it makes sense — you use the [`accesskey`](/en-US/docs/Web/HTML/Global_attributes#accesskey) global attribute.
 
-In this example, <kbd>r</kbd> is specified as the access key (you'll need to press <kbd>r</kbd> plus the particular modifier keys for your browser/OS combination; see {{htmlattrxref("accesskey")}} for a useful list of those).
+In this example, <kbd>r</kbd> is specified as the access key (you'll need to press <kbd>r</kbd> plus the particular modifier keys for your browser/OS combination; see [`accesskey`](/en-US/docs/Web/HTML/Global_attributes#accesskey) for a useful list of those).
 
 ```html
 <form>
@@ -81,11 +81,11 @@ In this example, <kbd>r</kbd> is specified as the access key (you'll need to pre
 
 {{EmbedLiveSample("Adding_a_reset_keyboard_shortcut", 650, 100)}}
 
-The problem with the above example is that there's no way for the user to know what the access key is! This is especially true since the modifiers are typically non-standard to avoid conflicts. When building a site, be sure to provide this information in a way that doesn't interfere with the site design (for example by providing an easily accessible link that points to information on what the site access keys are). Adding a tooltip to the button (using the {{htmlattrxref("title")}} attribute) can also help, although it's not a complete solution for accessibility purposes.
+The problem with the above example is that there's no way for the user to know what the access key is! This is especially true since the modifiers are typically non-standard to avoid conflicts. When building a site, be sure to provide this information in a way that doesn't interfere with the site design (for example by providing an easily accessible link that points to information on what the site access keys are). Adding a tooltip to the button (using the [`title`](/en-US/docs/Web/HTML/Global_attributes#title) attribute) can also help, although it's not a complete solution for accessibility purposes.
 
 ### Disabling and enabling a reset button
 
-To disable a reset button, specify the {{htmlattrxref("disabled")}} global attribute on it, like so:
+To disable a reset button, specify the [`disabled`](/en-US/docs/Web/HTML/Element/input#disabled) attribute on it, like so:
 
 ```html
 <input type="reset" value="Disabled" disabled />

@@ -33,12 +33,12 @@ slug: Mozilla/Firefox/Releases/49
 ### HTML
 
 - Added support for the {{HTMLElement("details")}} and {{HTMLElement("summary")}} elements ([Firefox bug 1226455](https://bugzil.la/1226455)).
-- The {{htmlattrxref("pattern", "input")}} attribute of the {{HTMLElement("input")}} element now uses the `'u'` parameter in the underlying JavaScript {{jsxref("RegExp")}} ([Firefox bug 1227906](https://bugzil.la/1227906)).
-- To match a spec change, an invalid value of the {{htmlattrxref("kind", "track")}} attribute of the {{HTMLElement('track')}} element is now treated like `"metadata"` instead of `"subtitles"` ([Firefox bug 1269712](https://bugzil.la/1269712)).
-- The {{HTMLElement("iframe")}} element's {{htmlattrxref("sandbox", "iframe")}} attribute now supports the `'allow-popups-to-escape-sandbox'` and `'allow-modals'` values ([Firefox bug 1190641](https://bugzil.la/1190641)).
+- The [`pattern`](/en-US/docs/Web/HTML/Element/input#pattern) attribute of the {{HTMLElement("input")}} element now uses the `'u'` parameter in the underlying JavaScript {{jsxref("RegExp")}} ([Firefox bug 1227906](https://bugzil.la/1227906)).
+- To match a spec change, an invalid value of the [`kind`](/en-US/docs/Web/HTML/Element/track#kind) attribute of the {{HTMLElement('track')}} element is now treated like `"metadata"` instead of `"subtitles"` ([Firefox bug 1269712](https://bugzil.la/1269712)).
+- The {{HTMLElement("iframe")}} element's [`sandbox`](/en-US/docs/Web/HTML/Element/iframe#sandbox) attribute now supports the `'allow-popups-to-escape-sandbox'` and `'allow-modals'` values ([Firefox bug 1190641](https://bugzil.la/1190641)).
 - Support for microdata attributes and the Microdata API have been removed ([Firefox bug 909633](https://bugzil.la/909633)).
-- The {{htmlattrxref("referrerpolicy", "a")}} attribute on the {{HTMLElement("a")}} element now supports the `'no-referrer-when-downgrade`' and `'origin-when-cross-origin'` ([Firefox bug 1178337](https://bugzil.la/1178337)).
-- The {{htmlattrxref("form", "label")}} content attribute of the {{HTMLElement("label")}} element has been removed. The {{domxref("HTMLLabelElement.form")}} property still exists, but now returns the form with which the label's control is associated, if there is a control (and if that control is associated with a form) ([Firefox bug 1268852](https://bugzil.la/1268852)).
+- The [`referrerpolicy`](/en-US/docs/Web/HTML/Element/a#referrerpolicy) attribute on the {{HTMLElement("a")}} element now supports the `'no-referrer-when-downgrade`' and `'origin-when-cross-origin'` ([Firefox bug 1178337](https://bugzil.la/1178337)).
+- The [`form`](/en-US/docs/Web/HTML/Element/label#form) content attribute of the {{HTMLElement("label")}} element has been removed. The {{domxref("HTMLLabelElement.form")}} property still exists, but now returns the form with which the label's control is associated, if there is a control (and if that control is associated with a form) ([Firefox bug 1268852](https://bugzil.la/1268852)).
 
 ### CSS
 
