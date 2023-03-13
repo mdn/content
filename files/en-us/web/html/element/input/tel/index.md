@@ -17,7 +17,7 @@ Despite the fact that inputs of type `tel` are functionally identical to standar
 
 ## Value
 
-The {{HTMLElement("input")}} element's {{htmlattrxref("value", "input")}} attribute contains a string that either represents a telephone number or is an empty string (`""`).
+The {{HTMLElement("input")}} element's [`value`](/en-US/docs/Web/HTML/Element/input#value) attribute contains a string that either represents a telephone number or is an empty string (`""`).
 
 ## Additional attributes
 
@@ -25,7 +25,7 @@ In addition to the attributes that operate on all {{HTMLElement("input")}} eleme
 
 ### list
 
-The values of the list attribute is the {{domxref("Element.id", "id")}} of a {{HTMLElement("datalist")}} element located in the same document. The {{HTMLElement("datalist")}} provides a list of predefined values to suggest to the user for this input. Any values in the list that are not compatible with the {{htmlattrxref("type", "input")}} are not included in the suggested options. The values provided are suggestions, not requirements: users can select from this predefined list or provide a different value.
+The values of the list attribute is the {{domxref("Element.id", "id")}} of a {{HTMLElement("datalist")}} element located in the same document. The {{HTMLElement("datalist")}} provides a list of predefined values to suggest to the user for this input. Any values in the list that are not compatible with the [`type`](/en-US/docs/Web/HTML/Element/input#type) are not included in the suggested options. The values provided are suggestions, not requirements: users can select from this predefined list or provide a different value.
 
 ### maxlength
 
@@ -45,7 +45,7 @@ The `pattern` attribute, when specified, is a regular expression that the input'
 
 If the specified pattern is not specified or is invalid, no regular expression is applied and this attribute is ignored completely.
 
-> **Note:** Use the {{htmlattrxref("title", "input")}} attribute to specify text that most browsers will display as a tooltip to explain what the requirements are to match the pattern. You should also include other explanatory text nearby.
+> **Note:** Use the [`title`](/en-US/docs/Web/HTML/Element/input#title) attribute to specify text that most browsers will display as a tooltip to explain what the requirements are to match the pattern. You should also include other explanatory text nearby.
 
 See [Pattern validation](#pattern_validation) below for details and an example.
 
@@ -133,7 +133,7 @@ You can control not only the physical length of the input box, but also the mini
 
 #### Physical input element size
 
-The physical size of the input box can be controlled using the {{htmlattrxref("size", "input")}} attribute. With it, you can specify the number of characters the input box can display at a time. In this example, for instance, the `tel` edit box is 20 characters wide:
+The physical size of the input box can be controlled using the [`size`](/en-US/docs/Web/HTML/Element/input#size) attribute. With it, you can specify the number of characters the input box can display at a time. In this example, for instance, the `tel` edit box is 20 characters wide:
 
 ```html
 <input id="telNo" name="telNo" type="tel" size="20" />
@@ -143,7 +143,7 @@ The physical size of the input box can be controlled using the {{htmlattrxref("s
 
 #### Element value length
 
-The `size` is separate from the length limitation on the entered telephone number. You can specify a minimum length, in characters, for the entered telephone number using the {{htmlattrxref("minlength", "input")}} attribute; similarly, use {{htmlattrxref("maxlength", "input")}} to set the maximum length of the entered telephone number.
+The `size` is separate from the length limitation on the entered telephone number. You can specify a minimum length, in characters, for the entered telephone number using the [`minlength`](/en-US/docs/Web/HTML/Element/input#minlength) attribute; similarly, use [`maxlength`](/en-US/docs/Web/HTML/Element/input#maxlength) to set the maximum length of the entered telephone number.
 
 The example below creates a 20-character wide telephone number entry box, requiring that the contents be no shorter than 9 characters and no longer than 14 characters.
 
@@ -165,7 +165,7 @@ The example below creates a 20-character wide telephone number entry box, requir
 
 #### Providing a single default using the value attribute
 
-As always, you can provide a default value for an `tel` input box by setting its {{htmlattrxref("value", "input")}} attribute:
+As always, you can provide a default value for an `tel` input box by setting its [`value`](/en-US/docs/Web/HTML/Element/input#value) attribute:
 
 ```html
 <input id="telNo" name="telNo" type="tel" value="333-4444-4444" />
@@ -175,7 +175,7 @@ As always, you can provide a default value for an `tel` input box by setting its
 
 #### Offering suggested values
 
-Taking it a step further, you can provide a list of default phone number values from which the user can select. To do this, use the {{htmlattrxref("list", "input")}} attribute. This doesn't limit the user to those options, but does allow them to select commonly-used telephone numbers more quickly. This also offers hints to {{htmlattrxref("autocomplete", "input")}}. The `list` attribute specifies the ID of a {{HTMLElement("datalist")}} element, which in turn contains one {{HTMLElement("option")}} element per suggested value; each `option`'s `value` is the corresponding suggested value for the telephone number entry box.
+Taking it a step further, you can provide a list of default phone number values from which the user can select. To do this, use the [`list`](/en-US/docs/Web/HTML/Element/input#list) attribute. This doesn't limit the user to those options, but does allow them to select commonly-used telephone numbers more quickly. This also offers hints to [`autocomplete`](/en-US/docs/Web/HTML/Element/input#autocomplete). The `list` attribute specifies the ID of a {{HTMLElement("datalist")}} element, which in turn contains one {{HTMLElement("option")}} element per suggested value; each `option`'s `value` is the corresponding suggested value for the telephone number entry box.
 
 ```html
 <label for="telNo">Phone number: </label>
@@ -205,7 +205,7 @@ As we've touched on before, it's quite difficult to provide a one-size-fits-all 
 
 ### Making telephone numbers required
 
-You can make it so that an empty input is invalid and won't be submitted to the server using the {{htmlattrxref("required", "input")}} attribute. For example, let's use this HTML:
+You can make it so that an empty input is invalid and won't be submitted to the server using the [`required`](/en-US/docs/Web/HTML/Element/input#required) attribute. For example, let's use this HTML:
 
 ```html
 <form>
@@ -257,7 +257,7 @@ The output looks like this:
 
 ### Pattern validation
 
-If you want to further restrict entered numbers so they also have to conform to a specific pattern, you can use the {{htmlattrxref("pattern","input")}} attribute, which takes as its value a {{Glossary("regular expression")}} that entered values have to match.
+If you want to further restrict entered numbers so they also have to conform to a specific pattern, you can use the [`pattern`](/en-US/docs/Web/HTML/Element/input#pattern) attribute, which takes as its value a {{Glossary("regular expression")}} that entered values have to match.
 
 In this example we'll use the same CSS as before, but our HTML is changed to look like this:
 
@@ -318,7 +318,7 @@ Notice how the entered value is reported as invalid unless the pattern xxx-xxx-x
 
 In this example, we present a simple interface with a {{htmlelement("select")}} element that lets the user choose which country they're in, and a set of `<input type="tel">` elements to let them enter each part of their phone number; there is no reason why you can't have multiple `tel` inputs.
 
-Each input has a {{htmlattrxref("placeholder","input")}} attribute to show a hint to sighted users about what to enter into it, a {{htmlattrxref("pattern","input")}} to enforce a specific number of characters for the desired section, and an [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label) attribute to contain a hint to be read out to screen reader users about what to enter into it.
+Each input has a [`placeholder`](/en-US/docs/Web/HTML/Element/input#placeholder) attribute to show a hint to sighted users about what to enter into it, a [`pattern`](/en-US/docs/Web/HTML/Element/input#pattern) to enforce a specific number of characters for the desired section, and an [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label) attribute to contain a hint to be read out to screen reader users about what to enter into it.
 
 ```html
 <form>
@@ -480,14 +480,14 @@ input:valid + span::after {
     <tr>
       <td><strong>Supported common attributes</strong></td>
       <td>
-        {{htmlattrxref("autocomplete", "input")}},
-        {{htmlattrxref("list", "input")}},
-        {{htmlattrxref("maxlength", "input")}},
-        {{htmlattrxref("minlength", "input")}},
-        {{htmlattrxref("pattern", "input")}},
-        {{htmlattrxref("placeholder", "input")}},
-        {{htmlattrxref("readonly", "input")}}, and
-        {{htmlattrxref("size", "input")}}
+        <a href="/en-US/docs/Web/HTML/Element/input#autocomplete"><code>autocomplete</code></a>,
+        <a href="/en-US/docs/Web/HTML/Element/input#list"><code>list</code></a>,
+        <a href="/en-US/docs/Web/HTML/Element/input#maxlength"><code>maxlength</code></a>,
+        <a href="/en-US/docs/Web/HTML/Element/input#minlength"><code>minlength</code></a>,
+        <a href="/en-US/docs/Web/HTML/Element/input#pattern"><code>pattern</code></a>,
+        <a href="/en-US/docs/Web/HTML/Element/input#placeholder"><code>placeholder</code></a>,
+        <a href="/en-US/docs/Web/HTML/Element/input#readonly"><code>readonly</code></a>, and
+        <a href="/en-US/docs/Web/HTML/Element/input#size"><code>size</code></a>
       </td>
     </tr>
     <tr>
