@@ -298,7 +298,7 @@ That's why, instead, we specify the string "Please provide only a Best Startup E
 
 ## Examples
 
-Here we have an email input with the ID `emailAddress` which is allowed to be up to a maximum of 256 characters long. The input box itself is physically 64 characters wide, and displays the text `user@example.gov` as a placeholder anytime the field is empty. In addition, by using the [`multiple`](/en-US/docs/Web/HTML/Attributes/multiple) attribute, the box is configured to allow the user to enter zero or more email addresses, separated by commas, as described in [Allowing multiple email addresses](#allowing_multiple_email_addresses). As a final touch, the [`list`](/en-US/docs/Web/HTML/Attributes/list) attribute contains the ID of a {{HTMLElement("datalist")}} whose {{HTMLElement("option")}}s specify a set of suggested values the user can choose from.
+Here we have an email input with the ID `emailAddress` which is allowed to be up to a maximum of 256 characters long. The input box itself is physically 64 characters wide, and displays the text `user@example.gov` as a placeholder anytime the field is empty. In addition, by using the [`multiple`](/en-US/docs/Web/HTML/Attributes/multiple) attribute, the box is configured to allow the user to enter zero or more email addresses, separated by commas, as described in [Allowing multiple email addresses](#allowing_multiple_email_addresses). As a final touch, the [`list`](/en-US/docs/Web/HTML/Element/input#list) attribute contains the ID of a {{HTMLElement("datalist")}} whose {{HTMLElement("option")}}s specify a set of suggested values the user can choose from.
 
 As an added touch, the {{HTMLElement("label")}} element is used to establish a label for the email entry box, with its [`for`](/en-US/docs/Web/HTML/Element/label#for) attribute referencing the `emailAddress` ID of the {{HTMLElement("input")}} element. By associating the two elements in this way, clicking on the label will focus the input element.
 
@@ -397,12 +397,12 @@ As an added touch, the {{HTMLElement("label")}} element is used to establish a l
 - [`<input type="url">`](/en-US/docs/Web/HTML/Element/input/url)
 - Attributes:
 
-  - [`list`](/en-US/docs/Web/HTML/Attributes/list)
+  - [`list`](/en-US/docs/Web/HTML/Element/input#list)
   - [`minlength`](/en-US/docs/Web/HTML/Attributes/minlength)
   - [`maxlength`](/en-US/docs/Web/HTML/Attributes/maxlength)
   - [`multiple`](/en-US/docs/Web/HTML/Attributes/multiple)
   - [`pattern`](/en-US/docs/Web/HTML/Attributes/pattern)
-  - [`placeholder`](/en-US/docs/Web/HTML/Attributes/placeholder)
+  - [`placeholder`](/en-US/docs/Web/HTML/Element/input#placeholder)
   - [`readonly`](/en-US/docs/Web/HTML/Attributes/readonly)
   - [`size`](/en-US/docs/Web/HTML/Attributes/size)
 
