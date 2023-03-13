@@ -202,7 +202,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
   - : This attribute indicates the language of the linked resource.
     It is purely advisory.
     Allowed values are specified by {{RFC(5646, "Tags for Identifying Languages (also known as BCP 47)")}}.
-    Use this attribute only if the {{HTMLAttrxRef("href", "a")}} attribute is present.
+    Use this attribute only if the [`href`](/en-US/docs/Web/HTML/Element/a#href) attribute is present.
 - `imagesizes`
   - : For `rel="preload"` and `as="image"` only, the `imagesizes` attribute is [a sizes attribute](https://html.spec.whatwg.org/multipage/images.html#sizes-attribute) that indicates to preload the appropriate resource used by an `img` element with corresponding values for its `srcset` and `sizes` attributes.
 - `imagesrcset`
@@ -242,7 +242,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 - `sizes` {{Experimental_Inline}}
 
   - : This attribute defines the sizes of the icons for visual media contained in the resource.
-    It must be present only if the {{HTMLAttrxRef("rel", "link")}} contains a value of `icon` or a non-standard type such as Apple's `apple-touch-icon`.
+    It must be present only if the [`rel`](#rel) contains a value of `icon` or a non-standard type such as Apple's `apple-touch-icon`.
     It may have the following values:
 
     - `any`, meaning that the icon can be scaled to any size as it is in a vector format, like `image/svg+xml`.
@@ -286,11 +286,11 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
 - `rev` {{deprecated_inline}}
 
-  - : The value of this attribute shows the relationship of the current document to the linked document, as defined by the {{HTMLAttrxRef("href", "link")}} attribute.
+  - : The value of this attribute shows the relationship of the current document to the linked document, as defined by the [`href`](#href) attribute.
     The attribute thus defines the reverse relationship compared to the value of the `rel` attribute.
-    [Link type values](/en-US/docs/Web/HTML/Attributes/rel) for the attribute are similar to the possible values for {{HTMLAttrxRef("rel", "link")}}.
+    [Link type values](/en-US/docs/Web/HTML/Attributes/rel) for the attribute are similar to the possible values for [`rel`](#rel).
 
-    > **Note:** Instead of `rev`, you should use the {{HTMLAttrxRef("rel", "link")}} attribute with the opposite [link type value](/en-US/docs/Web/HTML/Attributes/rel).
+    > **Note:** Instead of `rev`, you should use the [`rel`](#rel) attribute with the opposite [link type value](/en-US/docs/Web/HTML/Attributes/rel).
     > For example, to establish the reverse link for `made`, specify `author`. Also, this attribute doesn't stand for "revision" and must not be used with a version number, even though many sites misuse it in this way.
 
 ## Examples

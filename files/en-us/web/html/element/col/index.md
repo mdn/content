@@ -33,13 +33,13 @@ The following attributes are deprecated and should not be used. They are documen
     - `right`, aligning the content to the right of the cell
     - `justify`, inserting spaces into the textual content so that the content is justified in the cell
 
-    If this attribute is not set, its value is inherited from the {{htmlattrxref("align", "colgroup")}} of the {{HTMLElement("colgroup")}} element this `<col>` element belongs too. If there are none, the `left` value is assumed.
+    If this attribute is not set, its value is inherited from the [`align`](/en-US/docs/Web/HTML/Element/colgroup#align) of the {{HTMLElement("colgroup")}} element this `<col>` element belongs too. If there are none, the `left` value is assumed.
 
     > **Note:** To achieve the same effect as the `left`, `center`, `right` or `justify` values, do not try to set the {{cssxref("text-align")}} property on a selector giving a `<col>` element. Because {{HTMLElement("td")}} elements are not descendant of the `<col>` element, they won't inherit it.
     >
-    > If the table doesn't use a {{htmlattrxref("colspan", "td")}} attribute, use the `td:nth-child(an+b)` CSS selector. Set `a` to zero and `b` to the position of the column in the table, e.g. `td:nth-child(2) { text-align: right; }` to right-align the second column.
+    > If the table doesn't use a [`colspan`](/en-US/docs/Web/HTML/Element/td#colspan) attribute, use the `td:nth-child(an+b)` CSS selector. Set `a` to zero and `b` to the position of the column in the table, e.g. `td:nth-child(2) { text-align: right; }` to right-align the second column.
     >
-    > If the table does use a {{htmlattrxref("colspan", "td")}} attribute, the effect can be achieved by combining adequate CSS attribute selectors like `[colspan=n]`, though this is not trivial.
+    > If the table does use a [`colspan`](/en-US/docs/Web/HTML/Element/td#colspan) attribute, the effect can be achieved by combining adequate CSS attribute selectors like `[colspan=n]`, though this is not trivial.
 
 - `bgcolor` {{Deprecated_inline}}
 
@@ -48,7 +48,7 @@ The following attributes are deprecated and should not be used. They are documen
     To achieve a similar effect, use the CSS {{cssxref("background-color")}} property.
 
 - `char` {{deprecated_inline}}
-  - : This attribute is used to set the character to align the cells in a column on. Typical values for this include a period (.) when attempting to align numbers or monetary values. If {{htmlattrxref("align", "col")}} is not set to `char`, this attribute is ignored.
+  - : This attribute sets the character to align the cells in a column on. Typical values for this include a period (.) when attempting to align numbers or monetary values. If [`align`](#align) is not set to `char`, this attribute is ignored.
 - `charoff` {{deprecated_inline}}
   - : This attribute is used to indicate the number of characters to offset the column data from the alignment characters specified by the `char` attribute.
 - `valign` {{deprecated_inline}}
@@ -62,9 +62,9 @@ The following attributes are deprecated and should not be used. They are documen
 
     > **Note:** Do not try to set the {{cssxref("vertical-align")}} property on a selector giving a `<col>` element. Because {{HTMLElement("td")}} elements are not descendant of the `<col>` element, they won't inherit it.
     >
-    > If the table doesn't use a {{htmlattrxref("colspan", "td")}} attribute, use the `td:nth-child(an+b)` CSS selector where 'a' is the total number of the columns in the table and 'b' is the ordinal position of the column in the table. Only after this selector the `vertical-align` property can be used.
+    > If the table doesn't use a [`colspan`](/en-US/docs/Web/HTML/Element/td#colspan) attribute, use the `td:nth-child(an+b)` CSS selector where 'a' is the total number of the columns in the table and 'b' is the ordinal position of the column in the table. Only after this selector the `vertical-align` property can be used.
     >
-    > If the table does use a {{htmlattrxref("colspan", "td")}} attribute, the effect can be achieved by combining adequate CSS attribute selectors like `[colspan=n]`, though this is not trivial.
+    > If the table does use a [`colspan`](/en-US/docs/Web/HTML/Element/td#colspan) attribute, the effect can be achieved by combining adequate CSS attribute selectors like `[colspan=n]`, though this is not trivial.
 
 - `width` {{deprecated_inline}}
   - : This attribute specifies a default width for each column in the current column group. In addition to the standard pixel and percentage values, this attribute might take the special form `0*`, which means that the width of each column in the group should be the minimum width necessary to hold the column's contents. Relative widths such as `5*` also can be used.
@@ -99,7 +99,7 @@ Please see the {{HTMLElement("table")}} page for examples on `<col>`.
         {{HTMLElement("colgroup")}} only, though it can be implicitly
         defined as its start tag is not mandatory. The
         {{HTMLElement("colgroup")}} must not have a
-        {{htmlattrxref("span", "colgroup")}} attribute.
+        <a href="/en-US/docs/Web/HTML/Element/colgroup#span"><code>span</code></a> attribute.
       </td>
     </tr>
     <tr>
