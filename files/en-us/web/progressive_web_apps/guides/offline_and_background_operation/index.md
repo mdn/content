@@ -227,13 +227,3 @@ addEventListener("backgroundfetchclick", (event) => {
 ## Notifications
 
 ## Permissions
-
----
-
-SErvice workers
-
--background sync
--Background Fetch API
--Web Periodic Background Synchronization API
--push notifications api
--notificationds
