@@ -15,7 +15,7 @@ An integer number.
 
 ## Examples
 
-The {{domxref("AudioWorkletProcessor")}} has accesses to the specific {{domxref("AudioWorkletGlobalScope")}} properties:
+The {{domxref("AudioWorkletProcessor")}} has access to the specific {{domxref("AudioWorkletGlobalScope")}} properties:
 
 ```js
 // AudioWorkletProcessor defined in : test-processor.js
