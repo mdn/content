@@ -16,12 +16,24 @@ The **`FormData()`** constructor creates a new {{domxref("FormData")}} object.
 ```js-nolint
 new FormData()
 new FormData(form)
+new FormData(form, submitter)
 ```
 
 ### Parameters
 
 - `form` {{optional_inline}}
-  - : An HTML {{HTMLElement("form")}} element — when specified, the {{domxref("FormData")}} object will be populated with the form's current keys/values using the name property of each element for the keys and their submitted value for the values. It will also encode file input content.
+  - : An HTML {{HTMLElement("form")}} element — when specified, the {{domxref("FormData")}} object will be populated with the `form`'s current keys/values using the name property of each element for the keys and their submitted value for the values. It will also encode file input content.
+- `submitter` {{optional_inline}}
+  - : A {{Glossary("submit button")}} that is a member of the `form`. If the `submitter` has a `name` attribute or is an `{{HtmlElement('input/image', '&lt;input type="image"&gt;')}}`, its data [will be included](/en-US/docs/Glossary/Submit_button#Form_data_entries) in the {{domxref("FormData")}} object (e.g. `btnName=btnValue`).
+
+### Exceptions
+
+- {{jsxref("TypeError")}}
+  - : Thrown if the specified `submitter` is not a {{Glossary("submit button")}}.
+- `NotFoundError` {{domxref("DOMException")}}
+  - : Thrown if the specified `submitter` isn't a member of the `form`. The `submitter` must be either a
+    descendant of the form element or must have a {{htmlattrxref("form", "input")}}
+    attribute referring to the form.
 
 ## Examples
 
@@ -41,7 +53,7 @@ formData.append("username", "Chris");
 
 ### Prepopulating from a HTML form element
 
-You can specify the optional `form` argument when creating the `FormData` object, to prepopulate it with values from the specified form.
+You can specify the optional `form` and `submitter` arguments when creating the `FormData` object, to prepopulate it with values from the specified form.
 
 > **Note:** Only successful form controls are included in a FormData object, i.e. those with a name and not in a disabled state.
 
@@ -53,6 +65,8 @@ You can specify the optional `form` argument when creating the `FormData` object
   <input type="text" name="text2" value="bar" />
   <input type="text" name="text2" value="baz" />
   <input type="checkbox" name="check" checked disabled />
+  <button name="intent" value="save">Save</button>
+  <button name="intent" value="saveAsCopy">Save As Copy</button>
 </form>
 
 <output id="output"></output>
@@ -73,7 +87,8 @@ output {
 
 ```js
 const form = document.getElementById("form");
-const formData = new FormData(form);
+const submitter = document.querySelector("button[value=save]");
+const formData = new FormData(form, submitter);
 
 const output = document.getElementById("output");
 

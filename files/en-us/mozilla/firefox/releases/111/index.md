@@ -59,6 +59,8 @@ This article provides information about the changes in Firefox 111 that affect d
 
 #### DOM
 
+- The {{domxref("FormData")}} constructor now accepts a second optional `submitter` parameter to specify a submit button. If the button has a name or is an image button, it will contribute to the form data set. This makes it possible to create a {{domxref("FormData")}} object with the same data set as a vanilla form submission triggered by the button. See [Firefox bug 1812696](https://bugzil.la/1812696) for more details.
+
 #### Media, WebRTC, and Web Audio
 
 - [`RTCInboundRtpStreamStats.trackIdentifier`](/en-US/docs/Web/API/RTCInboundRtpStreamStats#trackidentifier) is now supported.
