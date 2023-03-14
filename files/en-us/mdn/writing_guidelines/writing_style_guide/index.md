@@ -528,23 +528,22 @@ To maintain consistency across MDN Web Docs, keep the following guidelines in mi
 #### Link text
 
 - The link text should be the same as the title of the page or the section being linked to. For example, the link text to this [ARIA](/en-US/docs/Web/Accessibility/ARIA/Attributes) page will be:
-  - [ARIA states and properties](/en-US/docs/Web/Accessibility/ARIA/Attributes)
+  - **Correct**: [ARIA states and properties](/en-US/docs/Web/Accessibility/ARIA/Attributes)
 - Use sentence casing in the link text even if it is different from the linked page title or section title. It might be that the case used in the page or section title is incorrect. For example, the link text to the [WAI-ARIA Roles](/en-US/docs/Web/Accessibility/ARIA/Roles) page will be:
-  - [WAI-ARIA roles](/en-US/docs/Web/Accessibility/ARIA/Roles)
+  - **Correct**: [WAI-ARIA roles](/en-US/docs/Web/Accessibility/ARIA/Roles)
 - For external links as well, use sentence casing even if the casing on the target article page is different. This is to ensure consistency across MDN Web Docs. Exceptions include names of books.
-- Follow up the feature name with the appropriate word such as property, function, expression. For example, the cross-reference to the {{cssxref("revert-layer")}} page will be:
-  - {{cssxref("revert-layer")}} keyword
 - Use the appropriate macro to link to a page as defined in the [Linking to pages in references](/en-US/docs/MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros#linking_to_pages_in_references) section. The use of macro will add code formatting to the keyword in the link text, as shown in the previous example.
-- No article ("A", "An", "The") is needed at the beginning of the link list item.
-  - **Incorrect**: The {{cssxref("revert-layer")}} keyword
-- No punctuation is required after a link text because it will invariably be a phrase.
+- No article ("A", "An", "The") is needed at the beginning of the link list item. No punctuation is required after a link text because it will invariably be a term or a phrase.
+  - **Correct**: {{cssxref("revert-layer")}}
+  - **Incorrect**: The {{cssxref("revert-layer")}} keyword.
 
 #### Descriptive text
 
-- Keep the descriptive text surrounding the link minimal. As far as possible, the list should be a list of links.
+- Keep the descriptive text surrounding the link minimal. In case of a description, add it after the link text and a colon. Word the description as a phrase with no ending punctuation. Keep all linked text at the beginning to aid in scanning the list of links.
+  - **Correct**: {{cssxref(":checked")}}, {{cssxref(":indeterminate")}}: CSS selectors for styling checkboxes
 - If the links can be grouped by a theme, add a lead-in sentence to describe the list of links. End the lead-in sentence with a colon.
-- A single item in a list can be a series of comma-separated links, in which case, a lead-in phrase can be added, ending in a colon. Don't use the conjunction "and" before the last item in the series. For example, to provide a reference to related color properties, the list item would be (notice that the common word "properties" is included in the lead-in phrase and so it is not added after the name of each property):
-  - Other color-related properties: {{cssxref("background-color")}}, {{cssxref("border-color")}}, {{cssxref("color")}}, {{cssxref("caret-color")}}, {{cssxref("column-rule-color")}}, {{cssxref("outline-color")}}, {{cssxref("text-decoration-color")}}, {{cssxref("text-emphasis-color")}}, {{cssxref("text-shadow")}}
+- Don't use the conjunction "and" before the last item in the series.
+  - **Correct**: {{cssxref("background-color")}}, {{cssxref("border-color")}}, {{cssxref("color")}}, {{cssxref("caret-color")}}, {{cssxref("column-rule-color")}}, {{cssxref("outline-color")}}, {{cssxref("text-decoration-color")}}, {{cssxref("text-emphasis-color")}}, {{cssxref("text-shadow")}}: Other color-related properties
 - After an external link and the source website, mention the date or year when the article was published within parentheses. Specify date using the format "January 1, 1900". The publication date not only helps to inform the readers about the relevance of the linked content but also helps authors to review links that are very old. For example, to link to the [Top-level await](https://v8.dev/features/top-level-await) external article, the reference will be:
   - [Top-level await](https://v8.dev/features/top-level-await) on v8.dev (October 8, 2019)
 
@@ -622,7 +621,7 @@ If you're interested in improving your writing and editing skills, you may find 
 
 - [Common errors in English usage](https://brians.wsu.edu/common-errors-in-english-usage/) on brians.wsu.edu
 - [English grammar FAQ](https://www-personal.umich.edu/~jlawler/aue.html) on alt-usage-english.org
-- [English language and usage](https://english.stackexchange.com/) on english.stackexchange.com: Question and answer site for English language usage.
+- [English language and usage](https://english.stackexchange.com/) on english.stackexchange.com: Question and answer site for English language usage
 - [Merriam-Webster's Concise Dictionary of English Usage, 1st Edition](https://www.amazon.com/Merriam-Websters-Concise-Dictionary-English-Usage/dp/B004L2KNI2) (book link on amazon.com): Scholarly but user-friendly, evidence-based advice; very good for non-native speakers, especially for preposition usage
 - [On Writing Well](https://www.amazon.com/Writing-Well-30th-Anniversary-Nonfiction/dp/0060891548) by William Zinsser (book link on amazon.com)
 - [Style: The Basics of Clarity and Grace, 4th Edition](https://www.amazon.com/Style-Basics-Clarity-Grace-4th/dp/0205830765/) by Joseph Williams and Gregory Colomb (book link on amazon.com)
