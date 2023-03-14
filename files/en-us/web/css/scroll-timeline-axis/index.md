@@ -76,7 +76,7 @@ The HTML for the example is shown below.
 The CSS for the container sets it as the source of a scroll timeline named `squareTimeline` using the `scroll-timeline-name` property.
 The scroll axis is set by `scroll-timeline-axis: horizontal;` so that the _horizontal scrollbar_ position will determine the animation timeline.
 
-The height and width of the container are set to `200px`. The container is also set to create scrollbars if it overflows (the CSS `height` and `width` rules on the `stretcher` element below do make the content overflow its container).
+The height and width of the container are set to `200px`. The container is also set to create scrollbars if it overflows (the CSS `height` and `width` rules on the `stretcher` element below make the content overflow its container).
 
 ```css
 #container {
