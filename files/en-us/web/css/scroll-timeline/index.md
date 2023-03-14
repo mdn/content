@@ -42,7 +42,7 @@ scroll-timeline: custom_name_for_timeline;
 
 The `scroll-timeline` shorthand property can be applied to a container element as a combination of the `<scroll-timeline-name>` and `<scroll-timeline-axis>` values. At least one of the values must be specified. If both the values are specified, the order followed must be the `<scroll-timeline-name>` value followed by the `<scroll-timeline-axis>` value.
 
-> **Note:** When only one value is specified, the `scroll-timeline` shorthand property treats it as the `<scroll-timeline-name>` value. As a best practice, avoid using `<scroll-timeline-axis>` keywords as a `<scroll-timeline-name>` value.
+> **Note:** When only one value is specified, the `scroll-timeline` shorthand property treats it as the `<scroll-timeline-name>` value. As a best practice, avoid using `<scroll-timeline-axis>` keyword values as a `<scroll-timeline-name>` value.
 
 ### Values
 
