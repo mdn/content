@@ -15,7 +15,13 @@ Therefore, to add specific styles to an element without altering other style val
 
 A style declaration is reset by setting it to `null` or an empty string, e.g., `elt.style.color = null`.
 
-> **Note:** See the [CSS Properties Reference](/en-US/docs/Web/CSS/CSS_Properties_Reference) for a list of the CSS properties accessible via `style`. The `style` property has the same priority in the CSS cascade as an inline style declaration set via the `style` attribute.
+> **Note:** Properties name are converted to JavaScript identifier with these rules:
+>
+> - If the property is made of one work, it remains as it is: `height` stays as is (in lowercase).
+> - If the property is made of several words, separated by dashes, the dashes are removed and it is converted to _camelCase_: `background-attachment` becomes `backgroundAttachement`.
+> - The property `float`, being a reserved JavaScript keyword, is converted to `cssFloat`.
+>
+> The `style` property has the same priority in the CSS cascade as an inline style declaration set via the `style` attribute.
 
 ## Value
 
