@@ -11,7 +11,6 @@ The **`WorkletGlobalScope`** interface is an abstract class that specific workle
 
 > **Note:** You don't normally need to interact with this interface. It is a base interface intended to be subclassed. You will encounter the subclasses {{domxref("AudioWorkletGlobalScope")}} inside {{domxref("AudioWorklet")}} objects, or {{domxref("PaintWorkletGlobalScope")}} inside {{domxref("PaintWorklet")}} objects.
 
-{{InheritanceDiagram}}
 
 ## Instance properties
 
