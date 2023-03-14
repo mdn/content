@@ -73,7 +73,7 @@ Because cookies should not be used for storing data in the browser, cookie stora
 
 Web Storage, which can be accessed by using the {{domxref("Window.localStorage", "localStorage")}} and {{domxref("Window.sessionStorage", "sessionStorage")}} properties of the {{domxref("window")}} object, is limited to 10 MiB of data maximum on all browsers.
 
-Browsers can store up to 10 MiB of local storage, and 10 MiB of session storage per origin.
+Browsers can store up to 5 MiB of local storage, and 5 MiB of session storage per origin.
 
 Once this limit is reached, browsers throw a `QuotaExceededError` exception which should be handled by using a {{jsxref("Statements/try...catch","try...catch")}} block.
 
