@@ -188,7 +188,7 @@ const counter = (function () {
       return privateCounter;
     },
   };
-})();
+}());
 
 console.log(counter.value()); // 0.
 
