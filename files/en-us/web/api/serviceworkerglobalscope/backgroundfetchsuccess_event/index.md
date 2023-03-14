@@ -38,7 +38,7 @@ _Inherits properties from its parent, {{domxref("BackgroundFetchEvent")}}._
 
 When a [background fetch](/en-US/docs/Web/API/Background_Fetch_API) operation completes successfully (meaning that all individual network requests have completed successfully), the browser starts the service worker, if necessary, and fires the `backgroundfetchsuccess` event in the service worker's global scope.
 
-In the handler for this event, the service worker can retrieve and store the responses (for example, using the {{domxref("Cache")}} API). To access the response data the service worker uses the event's {{domxref("BackgroundFetchEvent/registration", "registration")}} property.
+In the handler for this event, the service worker can retrieve and store the responses (for example, using the {{domxref("Cache")}} API). To access the response data, the service worker uses the event's {{domxref("BackgroundFetchEvent/registration", "registration")}} property.
 
 In the background fetch API, the browser shows a UI element to the user to indicate the progress of the operation. In the `backgroundfetchsuccess` handler, the service worker can update that UI to show that the operation has completed successfully. To do this the handler calls the event's {{domxref("BackgroundFetchUpdateUIEvent/updateUI", "updateUI()")}} method, passing in a new title and/or icons.
 
