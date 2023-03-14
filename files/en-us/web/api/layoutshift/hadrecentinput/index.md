@@ -30,8 +30,11 @@ const observer = new PerformanceObserver((list) => {
     if (!entry.hadRecentInput) {
       console.log("LayoutShift value:", entry.value);
       if (entry.sources) {
-        for (const { node, curRect, prevRect } of entry.sources)
-          console.log("LayoutShift source:", node, { curRect, prevRect });
+        for (const { node, currentRect, previousRect } of entry.sources)
+          console.log("LayoutShift source:", node, {
+            currentRect,
+            previousRect,
+          });
       }
     }
   }
