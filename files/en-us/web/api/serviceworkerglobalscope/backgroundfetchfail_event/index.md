@@ -40,7 +40,7 @@ When a [background fetch](/en-US/docs/Web/API/Background_Fetch_API) operation fa
 
 In the background fetch API, the browser shows a UI element to the user to indicate the progress of the operation. In the `backgroundfetchfail` handler, the service worker can update that UI to show that the operation has failed. To do this, the handler calls the event's {{domxref("BackgroundFetchUpdateUIEvent/updateUI", "updateUI()")}} method, passing in a new title and/or icons.
 
-In the handler for this `backgroundfetchfail`, the service worker can also clean up any related data for the operation. It can also retrieve and store any successful responses (for example, using the {{domxref("Cache")}} API). To access the response data the service worker uses the event's {{domxref("BackgroundFetchEvent/registration", "registration")}} property.
+In the handler for this `backgroundfetchfail`, the service worker can also clean up any related data for the operation. It can also retrieve and store any successful responses (for example, using the {{domxref("Cache")}} API). To access the response data, the service worker uses the event's {{domxref("BackgroundFetchEvent/registration", "registration")}} property.
 
 ## Examples
 
