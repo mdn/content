@@ -65,7 +65,7 @@ A {{jsxref("Promise")}} that resolves with a {{domxref("BackgroundFetchRegistrat
 
 ## Examples
 
-The following examples shows how to use `fetch()` to initiate a background fetch operation. With an active
+The following example shows how to use `fetch()` to initiate a background fetch operation. With an active
 {{domxref('ServiceWorker', 'service worker', "", "nocode")}}, use the
 {{domxref('ServiceWorkerRegistration.backgroundFetch')}} property to access the
 `BackgroundFetchManager` object and call its `fetch()`

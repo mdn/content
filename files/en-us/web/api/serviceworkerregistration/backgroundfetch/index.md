@@ -11,7 +11,7 @@ browser-compat: api.ServiceWorkerRegistration.backgroundFetch
 
 The **`backgroundFetch`** property of the
 {{domxref("ServiceWorkerRegistration")}} interface returns a reference to a
-{{domxref("BackgroundFetchManager")}} object, which can be used to initiate background fetch operations
+{{domxref("BackgroundFetchManager")}} object, which can be used to initiate background fetch operations.
 
 ## Value
 
