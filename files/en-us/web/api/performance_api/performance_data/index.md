@@ -1,0 +1,189 @@
+---
+title: Performance data
+slug: Web/API/Performance_API/Performance_data
+page-type: guide
+---
+
+{{DefaultAPISidebar("Performance API")}}
+
+The Performance API measures and exposes performance data that can be collected as performance metrics of your web application. It provides methods to observe aspects of application performance of browser features and Web APIs. It doesn't provide performance data analysis, visualizations, or stochastic evaluation. However, the Performance API is integrated well with developer tools in browsers and its data is often sent to analytics end points and libraries to record performance metrics which help you to evaluate the data as needed and find performance bottlenecks affecting your users.
+
+This page provides an overview about what sorts of Performance API data exists, how it is collected, and how it can be accessed.
+
+## Collecting data
+
+The Performance APIs help you to collect [high-precision performance timings](/en-US/docs/Web/API/Performance_API/High_precision_timing). We can differentiate between two kinds of performance metrics that are collected:
+
+1. **Browser metrics** collected by the browser to records various aspects of its performance, such as:
+
+   - How long event handlers take to run (Event Timing).
+   - How long it takes the browser to fetch resources such as images, videos, fonts, and scripts (Resource Timing).
+   - Which paint operations take a long time to execute (Paint Timing).
+
+2. **Custom metrics** collected as decided by the developer to measure specific performance aspects custom to your web site or application, such as:
+
+   - How long a specific function in the code takes to run (User Timing).
+   - How long the server takes to perform a certain task (Server Timing).
+   - How long rendering of critical elements on a page tool (Element Timing).
+
+While collecting browser metrics can happen automatically mostly, you have to implement the recording of custom metrics yourself.
+
+## Performance data structure
+
+The Performance API collects performance data for each global object (`window.performance` or `self.performance` in workers). See [`self.performance`](/en-US/docs/Web/API/performance_property) for which APIs are available in window and worker contexts. If you are collecting performance metrics for multiple contexts, also take a look at [`performance.timeOrigin`](/en-US/docs/Web/API/Performance/timeOrigin) to synchronize time origins between contexts.
+
+Within these contexts, individual performance data is represented by performance entries.
+
+### Performance entries
+
+A single recorded performance data point is called a _performance entry_ and is represented by an instance of the {{domxref("PerformanceEntry")}} interface.
+
+The Performance API records various different types of performance data, and the `PerformanceEntry` has an {{domxref("PerformanceEntry.entryType", "entryType")}} property which is a string describing the type of this performance entry:
+
+- `"element"` records how long it takes an element to load and render.
+- `"event"` records how long it took the browser to start running an event handler in response to its trigger, and how long the event handler took to run.
+- `"first-input"` records the {{Glossary("First input delay")}}.
+- `"largest-contentful-paint"` records the largest paint during page load.
+- `"layout-shift"` records a metric representing how much the page layout has shifted in each animation frame.
+- `"longtask"` records tasks that took 50ms or more.
+- `"mark"` records a custom timestamp made by the developer.
+- `"measure"` records a custom measurement between two timestamps made by the developer.
+- `"navigation"` records metrics associated with navigating to and initial load of the page.
+- `"paint"` records key moments of rendering during page load.
+- `"resource"` records how long it took the browser to fetch a resource.
+
+### Performance entry subclasses
+
+Particular entry types typically include extra type-specific data: for example, the `"resource"` type captures the time at which DNS lookup started and ended. So entries are represented by subclasses that extend the basic `PerformanceEntry` interface. For example, a `"resource"` entry is represented by an instance of {{domxref("PerformanceResourceTiming")}}, which inherits from `PerformanceEntry`, and which adds properties to record DNS lookup timestamps.
+
+The subclasses of `PerformanceEntry` also define the semantics of the properties belonging to `PerformanceEntry` itself: for example, `PerformanceEntry` has a {{domxref("PerformanceEntry.name", "name")}} property whose meaning depends on the subclass.
+
+The following interfaces inherit from `PerformanceEntry`:
+
+- {{domxref("LargestContentfulPaint")}}
+- {{domxref("LayoutShift")}}
+- {{domxref("PerformanceElementTiming")}}
+- {{domxref("PerformanceEventTiming")}}
+- {{domxref("PerformanceLongTaskTiming")}}
+- {{domxref("PerformanceMark")}}
+- {{domxref("PerformanceMeasure")}}
+- {{domxref("PerformancePaintTiming")}}
+- {{domxref("PerformanceResourceTiming")}}
+  - {{domxref("PerformanceNavigationTiming")}} inherits from `PerformanceResourceTiming`
+- {{domxref("TaskAttributionTiming")}}
+
+## Accessing data
+
+You can access performance entries in one of two ways. The preferred way is to use the {{domxref("PerformanceObserver")}} interface, which is constructed with a callback function to be called when particular performance entries are recorded. You then call its {{domxref("PerformanceObserver.observe", "observe")}} method, passing in the types to observe:
+
+```js
+function logEventDuration(entries) {
+  const events = entries.getEntriesByType("event");
+  for (const event of events) {
+    console.log(
+      `Event handler took: ${
+        event.processingEnd - event.processingStart
+      } milliseconds`
+    );
+  }
+}
+
+const observer = new PerformanceObserver(logEventDuration);
+observer.observe({ type: "event", buffered: true });
+```
+
+Alternatively, you can use the {{domxref("Performance.getEntries()")}}, {{domxref("Performance.getEntriesByName()")}}, and {{domxref("Performance.getEntriesByType()")}} methods to retrieve all performance entries for a page, or entries matching the given name or type.
+
+```js
+const events = performance.getEntriesByType("event");
+
+for (const event of events) {
+  console.log(
+    `Event handler took: ${
+      event.processingEnd - event.processingStart
+    } milliseconds`
+  );
+}
+```
+
+The `PerformanceObserver` option is preferred because:
+
+- The `getEntries*` methods will always return all relevant entries since the start of the timeline, so if you call it twice, you will see the same entries again and will need to filter out entries that you've seen before.
+- Observer notifications are delivered asynchronously, so the browser can dispatch them during idle time to minimize their performance impact.
+- Not all entry types work with the `getEntries*` methods. For `"element"`, `"event"`, `"largest-contentful-paint"`, `"layout-shift"`, and `"longtask"` you have to use performance observers to access them.
+
+## Managing buffer sizes
+
+There is a buffer limit for performance entries per document. It ensures that the browser doesn't consume indefinite memory when holding performance data. Especially when your website or application fetches a lot of resources (e.g. when using polling), you might need to look into the limits for the buffers:
+
+| {{domxref("PerformanceEntry.entryType", "entryType")}} identifier | Interface                                  | Maximum buffer size         |
+| ----------------------------------------------------------------- | ------------------------------------------ | --------------------------- |
+| `"mark"`                                                          | {{domxref("PerformanceMark")}}             | Infinite                    |
+| `"measure"`                                                       | {{domxref("PerformanceMeasure")}}          | Infinite                    |
+| `"navigation"`                                                    | {{domxref("PerformanceNavigationTiming")}} | Infinite                    |
+| `"resource"`                                                      | {{domxref("PerformanceResourceTiming")}}   | 250 (adjustable, see below) |
+| `"longtask"`                                                      | {{domxref("PerformanceLongTaskTiming")}}   | 200                         |
+| `"paint"`                                                         | {{domxref("PerformancePaintTiming")}}      | 2                           |
+| `"element"`                                                       | {{domxref("PerformanceElementTiming")}}    | 150                         |
+| `"event"`                                                         | {{domxref("PerformanceEventTiming")}}      | 150                         |
+| `"first-input"`                                                   | {{domxref("PerformanceEventTiming")}}      | 1                           |
+| `"layout-shift"`                                                  | {{domxref("LayoutShift")}}                 | 150                         |
+| `"largest-contentful-paint"`                                      | {{domxref("LargestContentfulPaint")}}      | 150                         |
+
+Table 1. Buffer sizes ([source](https://w3c.github.io/timing-entrytypes-registry/#registry)).
+
+For `"resource"` entry types, see [Managing resource buffer sizes](/en-US/docs/Web/API/Performance_API/Resource_timing#managing_resource_buffer_sizes) for how to set a different buffer size.
+
+The [performance observer callback](/en-US/docs/Web/API/PerformanceObserver/PerformanceObserver) contains an optional `droppedEntriesCount` parameter that informs you about the amount of lost entries due to the buffer storage being full.
+
+```js
+function perfObserver(list, observer, droppedEntriesCount) {
+  list.getEntries().forEach((entry) => {
+    // do something with the entries
+  });
+  if (droppedEntriesCount > 0) {
+    console.warn(
+      `${droppedEntriesCount} entries got dropped due to the buffer being full.`
+    );
+  }
+}
+const observer = new PerformanceObserver(perfObserver);
+observer.observe({ type: "resource", buffered: true });
+```
+
+Another useful method is {{domxref("PerformanceObserver.takeRecords()")}} which returns the current list of performance entries stored in the performance observer while also emptying it out.
+
+## JSON data
+
+All performance entries provide a `toJSON()` {{Glossary("Serialization","serializer")}} which returns a {{jsxref("JSON")}} representation of the entry. This can be useful if you want to collect all of the available data and store it somewhere.
+
+```js
+const observer = new PerformanceObserver((list) => {
+  list.getEntries().forEach((entry) => {
+    console.log(entry.toJSON());
+  });
+});
+
+observer.observe({ type: "event", buffered: true });
+```
+
+This would log a JSON object like so:
+
+```json
+{
+  "name": "dragover",
+  "entryType": "event",
+  "startTime": 67090751.599999905,
+  "duration": 128,
+  "processingStart": 67090751.70000005,
+  "processingEnd": 67090751.900000095,
+  "cancelable": true
+}
+```
+
+To get a JSON string, you can use [`JSON.stringify(entry)`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify) with any `PerformanceEntry` object directly; it will call the entry's `toJSON()` method automatically.
+
+## See also
+
+- {{domxref("PerformanceEntry")}}
+- {{domxref("PerformanceObserver.observe()")}}
