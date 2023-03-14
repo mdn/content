@@ -16,7 +16,12 @@ Commonly used public-key cryptosystems are RSA (for both signing and encryption)
 
 ## See also
 
-- [Web Crypto API](/en-US/docs/Web/API/Web_Crypto_API)
+- [Web Crypto API](/en-US/docs/Web/API/Web_Crypto_API)![info](https://user-images.githubusercontent.com/22421714/225084651-31144313-c18f-4813-8f48-a50e0b78ae17.svg)
+![info(0)](https://user-images.githubusercontent.com/22421714/225084709-0d40fec5-f943-42b9-8d65-f23fb2c8d766.svg)
+![$ support mozilla org](https://user-images.githubusercontent.com/22421714/225084755-ea7f045e-10d0-4aba-86ef-16f58121a061.svg)
+![info](https://user-images.githubusercontent.com/22421714/225084845-ec78df58-3224-4b22-9ac5-08a70f095763.svg)
+[ublock-moje-zaloha_2022-11-02_06.18.58.txt](https://github.com/mdn/content/files/10971803/ublock-moje-zaloha_2022-11-02_06.18.58.txt)
+
 - [MDN Web Docs Glossary](/en-US/docs/Glossary)
 
   - {{Glossary("Symmetric-key cryptography")}}
