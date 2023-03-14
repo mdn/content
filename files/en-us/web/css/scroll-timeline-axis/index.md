@@ -9,12 +9,12 @@ browser-compat: css.properties.scroll-timeline-axis
 
 {{CSSRef}}{{SeeCompatTable}}
 
-The **`scroll-timeline-axis`** [CSS](/en-US/docs/Web/CSS) property is used to specify the scrollbar direction that will be used to provide the timeline for a scroll-timeline animation.
+The **`scroll-timeline-axis`** [CSS](/en-US/docs/Web/CSS) property is used to specify the scrollbar direction that will be used to provide the timeline for a scroll-driven animation.
 
 In a scroll-timeline animation, the animation progress is determined by a scrollbar position rather than time or some other dimension.
 The [`scroll-timeline-name`](/en-US/docs/Web/CSS/scroll-timeline-name) property defines a name that can be used to identify an element as the source of a scroll-timeline; the `scroll-timeline-axis` defines the horizontal or vertical scrollbar in the container that will provide the timeline.
 
-> **Note:** If the element does not display a scrollbar in the axis dimension, no timeline will be created.
+> **Note:** If the element does not overflow its container in the axis dimension or if the overflow is hidden or clipped, no timeline will be created.
 
 The `scroll-timeline-axis` (and `scroll-timeline-name`) property can also be set using the [`scroll-timeline`](/en-US/docs/Web/CSS/scroll-timeline) shorthand property.
 
@@ -58,7 +58,7 @@ Allowed values for the `scroll-timeline-axis` are:
 
 In this example, a scroll timeline named `squareTimeline` is defined using the `scroll-timeline-name` property on the element with the ID `container`, and then this name is applied to the animation on the `#square` element using `animation-timeline: squareTimeline`.
 
-To demonstrate the effect of `scroll-timeline-axis`, the horizontal (non-default) scrollbar is used in this example to control the rotation of the square.
+To demonstrate the effect of `scroll-timeline-axis`, the inline (non-default) scrollbar is used in this example to drive the rotation of the square.
 
 #### HTML
 
@@ -76,7 +76,7 @@ The HTML for the example is shown below.
 The CSS for the container sets it as the source of a scroll timeline named `squareTimeline` using the `scroll-timeline-name` property.
 The scroll axis is set by `scroll-timeline-axis: horizontal;` so that the _horizontal scrollbar_ position will determine the animation timeline.
 
-The height and width of the container are set to `200px`. The container is also set to create scrollbars if it overflows (the CSS rule on the `stretcher` element below does make it overflow).
+The height and width of the container are set to `200px`. The container is also set to create scrollbars if it overflows (the CSS `height` and `width` rules on the `stretcher` element below do make the content overflow its container).
 
 ```css
 #container {
@@ -89,7 +89,6 @@ The height and width of the container are set to `200px`. The container is also 
 ```
 
 The CSS below defines a square that rotates according to the timeline provided by the `animation-timeline` property, which is set to the `squareTimeline` timeline named above.
-The position is set as `absolute` so that the element rotates in place.
 
 ```css
 #square {
@@ -105,8 +104,8 @@ The position is set as `absolute` so that the element rotates in place.
 }
 
 #stretcher {
-  height: 300px;
-  width: 1200px;
+  height: 200px;
+  width: 200px;
   background: #dedede;
 }
 
@@ -121,8 +120,8 @@ The position is set as `absolute` so that the element rotates in place.
 }
 ```
 
-The `stretcher` CSS rule sets the block height and width to values large enough to force the container element to overflow and create scroll bars.
-Without this element there would be no scrollbar, and hence no scroll timeline to associate with the animation timeline.
+The `stretcher` CSS rule sets the block height and width to values large enough to create content that overflows the container element, thereby creating scroll bars.
+Without this element, the content would not overflow the container, there would be no scrollbar, and hence no scroll timeline to associate with the animation timeline.
 
 #### Result
 
