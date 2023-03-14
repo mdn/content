@@ -612,7 +612,7 @@ Keep the following guidelines in mind when writing titles:
 
 ### Preferred style guides
 
-If you have questions about usage and style not covered here, we recommend referring to the [Microsoft Writing Style Guide](https://docs.microsoft.com/style-guide/welcome/) or the [Chicago Manual of Style](https://www.amazon.com/Chicago-Manual-Style-16th/dp/0226104206).
+If you have questions about usage and style not covered here, we recommend referring to the [Microsoft Writing Style Guide](https://docs.microsoft.com/style-guide/welcome/) or the [Chicago Manual of Style](https://www.chicagomanualofstyle.org).
 An [unofficial crib sheet for the Chicago Manual of Style](https://faculty.cascadia.edu/cma/HIST148/cmscrib.pdf) is available online.
 
 ### Preferred dictionary
@@ -627,6 +627,6 @@ If you're interested in improving your writing and editing skills, you may find 
 - [Common errors in English usage](https://brians.wsu.edu/common-errors-in-english-usage/) on brians.wsu.edu
 - [English grammar FAQ](https://www-personal.umich.edu/~jlawler/aue.html) on alt-usage-english.org
 - [English language and usage](https://english.stackexchange.com/) on english.stackexchange.com: Question and answer site for English language usage
-- [Merriam-Webster's Concise Dictionary of English Usage, 1st Edition](https://www.amazon.com/Merriam-Websters-Concise-Dictionary-English-Usage/dp/B004L2KNI2) (book link on amazon.com): Scholarly but user-friendly, evidence-based advice; very good for non-native speakers, especially for preposition usage
-- [On Writing Well](https://www.amazon.com/Writing-Well-30th-Anniversary-Nonfiction/dp/0060891548) by William Zinsser (book link on amazon.com)
-- [Style: The Basics of Clarity and Grace, 4th Edition](https://www.amazon.com/Style-Basics-Clarity-Grace-4th/dp/0205830765/) by Joseph Williams and Gregory Colomb (book link on amazon.com)
+- [Merriam-Webster's Concise Dictionary of English Usage](https://www.google.com/books/edition/Merriam_Webster_s_Dictionary_of_English/UDIjAQAAIAAJ) on google.com/books (published 2002): Scholarly but user-friendly, evidence-based advice; very good for non-native speakers, especially for preposition usage
+- [On Writing Well](https://www.harpercollins.com/products/on-writing-well-william-zinsser) by William Zinsser on harpercollins.com (published 2016)
+- [Style: Lessons in Clarity and Grace](https://www.google.ca/books/edition/Style/QjskvgEACAAJ) by Joseph Williams and Gregory Colomb on google.com/books (published 2019)
