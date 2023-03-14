@@ -38,7 +38,7 @@ _Inherits properties from its parent, {{domxref("ExtendableEvent")}}._
 
 In the background fetch API, the browser shows a UI element to the user to indicate the progress of the operation. This element also enables the user to cancel the fetch. The app itself can also cancel the fetch by calling {{domxref("BackgroundFetchRegistration.abort()")}}.
 
-If fetch is canceled, the browser aborts the fetch, starts the service worker, if necessary, and fires the `backgroundfetchabort` event in the service worker's global scope.
+If the fetch is canceled, the browser aborts the fetch, starts the service worker, if necessary, and fires the `backgroundfetchabort` event in the service worker's global scope.
 
 In the handler for this event, the service worker can clean up any related data for the operation. It can also retrieve and store any successful responses (for example, using the {{domxref("Cache")}} API). To access the response data the service worker uses the event's {{domxref("BackgroundFetchEvent/registration", "registration")}} property.
 
