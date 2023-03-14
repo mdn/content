@@ -7,7 +7,7 @@ browser-compat: http.headers.Content-Security-Policy
 {{HTTPSidebar}}
 
 The HTTP **`Content-Security-Policy`** response header allows
-web site administrators to control resources the user agent is allowed to load for a
+website administrators to control resources the user agent is allowed to load for a
 given page. With a few exceptions, policies mostly involve specifying server origins and
 script endpoints. This helps guard against cross-site scripting attacks
 ({{Glossary("Cross-site_scripting")}}).
@@ -109,7 +109,7 @@ applies.
     element.
 - {{CSP("sandbox")}}
   - : Enables a sandbox for the requested resource similar to the
-    {{HTMLElement("iframe")}} {{htmlattrxref("sandbox", "iframe")}} attribute.
+    {{HTMLElement("iframe")}} [`sandbox`](/en-US/docs/Web/HTML/Element/iframe#sandbox) attribute.
 
 ### Navigation directives
 

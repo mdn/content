@@ -470,7 +470,7 @@ Captions should not obstruct the main subject of the video. They can be position
         <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
           >Flow content</a
         >, phrasing content, embedded content. If it has a
-        {{htmlattrxref("controls", "video")}} attribute: interactive
+        <a href="/en-US/docs/Web/HTML/Element/video#controls"><code>controls</code></a> attribute: interactive
         content and palpable content.
       </td>
     </tr>
@@ -478,7 +478,7 @@ Captions should not obstruct the main subject of the video. They can be position
       <th scope="row">Permitted content</th>
       <td>
         <p>
-          If the element has a {{htmlattrxref("src", "video")}}
+          If the element has a <a href="/en-US/docs/Web/HTML/Element/video#src"><code>src</code></a>
           attribute: zero or more {{HTMLElement("track")}} elements,
           followed by transparent content that contains no media elements–that
           is no {{HTMLElement("audio")}} or

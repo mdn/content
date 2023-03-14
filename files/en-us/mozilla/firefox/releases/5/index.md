@@ -95,7 +95,7 @@ For a guide to updating your add-on for Firefox 5, please see [Updating add-ons 
 ### Interface changes
 
 - The `nsIHttpChannelInternal` interface has new attributes providing access to information about the channels' endpoints' addresses and ports. This information is provided primarily for debugging purposes.
-- The {{ HTMLElement("canvas") }} element's {{ htmlattrxref("width", "canvas") }} and {{ htmlattrxref("height", "canvas") }} attributes are now reflected in IDL as unsigned integers instead of signed (see [`HTMLCanvasElement`](/en-US/docs/Web/API/HTMLCanvasElement)).
+- The {{ HTMLElement("canvas") }} element's [`width`](/en-US/docs/Web/HTML/Element/canvas#width) and [`height`](/en-US/docs/Web/HTML/Element/canvas#height) attributes are now reflected in IDL as unsigned integers instead of signed (see [`HTMLCanvasElement`](/en-US/docs/Web/API/HTMLCanvasElement)).
 - The `nsIAppStartup2` and `nsIAppStartup_MOZILLA_2_0` interfaces have been merged into the `nsIAppStartup` interface.
 - The `nsIDocShell_MOZILLA_2_0_BRANCH` interface has been merged into the `nsIDocShell` interface.
 - The `nsIFocusManager_MOZILLA_2_0_BRANCH` interface has been merged into the `nsIFocusManager` interface.

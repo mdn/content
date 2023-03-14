@@ -112,7 +112,7 @@ On Google Chrome, the resulting meter looks like this:
 
 ### High and Low range example
 
-Note that in this example the {{htmlattrxref("min", "meter")}} attribute is omitted. This is allowed, as it will default to `0`.
+Note that in this example the [`min`](#min) attribute is omitted. This is allowed, as it will default to `0`.
 
 #### HTML
 

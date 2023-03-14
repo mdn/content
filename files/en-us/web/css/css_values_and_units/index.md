@@ -113,7 +113,7 @@ A {{cssxref("&lt;number&gt;")}} represents a real number, which may or may not h
 
 ### Dimensions
 
-A {{cssxref("&lt;dimension&gt;")}} is a `<number>` with a unit attached to it, for example `45deg`, `100ms`, or `10px`. The attached unit identifier is case insensitive. There is never a space or any other characters between a the number and the unit identifier: i.e. `1 cm` is not valid.
+A {{cssxref("&lt;dimension&gt;")}} is a `<number>` with a unit attached to it, for example `45deg`, `100ms`, or `10px`. The attached unit identifier is case insensitive. There is never a space or any other characters between the number and the unit identifier: i.e. `1 cm` is not valid.
 
 CSS uses dimensions to specify:
 

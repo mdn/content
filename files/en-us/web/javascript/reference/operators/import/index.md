@@ -9,7 +9,7 @@ browser-compat: javascript.operators.import
 
 The **`import()`** syntax, commonly called _dynamic import_, is a function-like expression that allows loading an ECMAScript module asynchronously and dynamically into a potentially non-module environment.
 
-Unlike the [declaration-style counterpart](/en-US/docs/Web/JavaScript/Reference/Statements/import), dynamic imports are only evaluated when needed, and permits greater syntactic flexibility.
+Unlike the [declaration-style counterpart](/en-US/docs/Web/JavaScript/Reference/Statements/import), dynamic imports are only evaluated when needed, and permit greater syntactic flexibility.
 
 ## Syntax
 
@@ -32,7 +32,7 @@ The evaluation of `import()` never synchronously throws an error. `moduleName` i
 
 ## Description
 
-The import declaration syntax (`import something from "somewhere"`) is static and will always result in the imported module being evaluated at load time. Dynamic imports allows one to circumvent the syntactic rigidity of import declarations and load a module conditionally or on demand. The following are some reasons why you might need to use dynamic import:
+The import declaration syntax (`import something from "somewhere"`) is static and will always result in the imported module being evaluated at load time. Dynamic imports allow one to circumvent the syntactic rigidity of import declarations and load a module conditionally or on demand. The following are some reasons why you might need to use dynamic import:
 
 - When importing statically significantly slows the loading of your code and there is a low likelihood that you will need the code you are importing, or you will not need it until a later time.
 - When importing statically significantly increases your program's memory usage and there is a low likelihood that you will need the code you are importing.
@@ -44,6 +44,9 @@ The import declaration syntax (`import something from "somewhere"`) is static an
 Use dynamic import only when necessary. The static form is preferable for loading initial dependencies, and can benefit more readily from static analysis tools and [tree shaking](/en-US/docs/Glossary/Tree_shaking).
 
 If your file is not run as a module (if it's referenced in an HTML file, the script tag must have `type="module"`), you will not be able to use static import declarations, but the asynchronous dynamic import syntax will always be available, allowing you to import modules into non-module environments.
+
+Dynamic module import is not permitted in all execution contexts.
+For example, `import()` can be used in the main thread, a shared worker, or a dedicated worker, but will throw if called within a [service worker](/en-US/docs/Web/API/Service_Worker_API) or a [worklet](/en-US/docs/Web/API/Worklet).
 
 ### Module namespace object
 

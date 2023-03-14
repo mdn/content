@@ -9,7 +9,7 @@ browser-compat: api.HTMLObjectElement.name
 
 The **`name`** property of the
 {{domxref("HTMLObjectElement")}} interface returns a string that
-reflects the {{htmlattrxref("name", "object")}} HTML attribute, specifying the name of
+reflects the [`name`](/en-US/docs/Web/HTML/Element/object#name) HTML attribute, specifying the name of
 the browsing context.
 
 ## Value

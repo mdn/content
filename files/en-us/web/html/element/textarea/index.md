@@ -31,7 +31,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
     - `off`: The user must explicitly enter a value into this field for every use, or the document provides its own auto-completion method; the browser does not automatically complete the entry.
     - `on`: The browser can automatically complete the value based on values that the user has entered during previous uses.
 
-    If the `autocomplete` attribute is not specified on a `<textarea>` element, then the browser uses the `autocomplete` attribute value of the `<textarea>` element's form owner. The form owner is either the {{HTMLElement("form")}} element that this `<textarea>` element is a descendant of or the form element whose `id` is specified by the `form` attribute of the input element. For more information, see the {{htmlattrxref("autocomplete", "form")}} attribute in {{HTMLElement("form")}}.
+    If the `autocomplete` attribute is not specified on a `<textarea>` element, then the browser uses the `autocomplete` attribute value of the `<textarea>` element's form owner. The form owner is either the {{HTMLElement("form")}} element that this `<textarea>` element is a descendant of or the form element whose `id` is specified by the `form` attribute of the input element. For more information, see the [`autocomplete`](/en-US/docs/Web/HTML/Element/form#autocomplete) attribute in {{HTMLElement("form")}}.
 
 - `autocorrect` {{non-standard_inline}}
 
