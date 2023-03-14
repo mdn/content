@@ -2,7 +2,6 @@
 title: CSSLayerBlockRule
 slug: Web/API/CSSLayerBlockRule
 page-type: web-api-interface
-
 browser-compat: api.CSSLayerBlockRule
 ---
 
