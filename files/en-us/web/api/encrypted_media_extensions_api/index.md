@@ -13,16 +13,18 @@ Access to this API is provided through {{domxref("Navigator.requestMediaKeySyste
 
 ## Interfaces
 
-- {{domxref('MediaKeyMessageEvent')}}
+- {{domxref("MediaEncryptedEvent")}}
+  - : Represents a specific {{domxref("HTMLMediaElement/encrypted_event", "encrypted")}} event thrown when a {{domxref('HTMLMediaElement')}} encounters some initilization data.
+- {{domxref("MediaKeyMessageEvent")}}
   - : Contains the content and related data when the content decryption module (CDM) generates a message for the session.
-- {{domxref('MediaKeys')}}
+- {{domxref("MediaKeys")}}
   - : Represents a set of keys that an associated {{domxref('HTMLMediaElement')}} can use for decryption of media data during playback.
-- {{domxref('MediaKeySession')}}
+- {{domxref("MediaKeySession")}}
   - : Represents a context for message exchange with a content decryption module (CDM).
-- {{domxref('MediaKeyStatusMap')}}
+- {{domxref("MediaKeyStatusMap")}}
   - : A read-only map of media key statuses by key IDs.
-- {{domxref('MediaKeySystemAccess')}}
-  - : Provides access to a Key System for decryption and/or a content protection provider.
+- {{domxref("MediaKeySystemAccess")}}
+  - : Provides access to a key system for decryption and/or a content protection provider.
 
 ## Specifications
 
