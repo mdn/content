@@ -59,7 +59,7 @@ This section is a summary of the basic steps to add drag-and-drop functionality 
 
 ### Identify what is draggable
 
-Making an element _draggable_ requires adding the {{htmlattrxref("draggable")}} attribute and the {{domxref("HTMLElement.dragstart_event","ondragstart")}} event handler, as shown in the following code sample:
+Making an element _draggable_ requires adding the [`draggable`](/en-US/docs/Web/HTML/Global_attributes#draggable) attribute and the {{domxref("HTMLElement.dragstart_event","ondragstart")}} event handler, as shown in the following code sample:
 
 ```html
 <script>

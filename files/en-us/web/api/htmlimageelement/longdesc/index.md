@@ -13,7 +13,7 @@ The _deprecated_ property **`longDesc`** on
 the {{domxref("HTMLImageElement")}} interface specifies the URL of a text or HTML file
 which contains a long-form description of the image. This can be used to
 provide optional added details beyond the short description provided in the
-{{htmlattrxref("title")}} attribute.
+[`title`](/en-US/docs/Web/HTML/Global_attributes#title) attribute.
 
 ## Value
 
