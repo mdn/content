@@ -43,7 +43,7 @@ fetch(id, requests, options)
         - `type`
           - : A string representing the {{Glossary("MIME")}} type of the icon. {{optional_inline}}
         - `label`
-          - : A string representing the accessible name of the icon.
+          - : A string representing the accessible name of the icon. {{optional_inline}}
     - `downloadTotal`
 
       - : A number representing the estimated total download size, in bytes, for the fetch operation. This is used to show the user how big the download is and to show the user download progress.
@@ -83,6 +83,7 @@ navigator.serviceWorker.ready.then(async (swReg) => {
           sizes: "300x300",
           src: "/ep-5-icon.png",
           type: "image/png",
+          label: "Downloading a show",
         },
       ],
       downloadTotal: 60 * 1024 * 1024,
