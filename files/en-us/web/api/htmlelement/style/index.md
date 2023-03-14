@@ -15,7 +15,7 @@ Therefore, to add specific styles to an element without altering other style val
 
 A style declaration is reset by setting it to `null` or an empty string, e.g., `elt.style.color = null`.
 
-> **Note:** Properties name are converted to JavaScript identifier with these rules:
+> **Note:** CSS property names are converted to JavaScript identifier with these rules:
 >
 > - If the property is made of one work, it remains as it is: `height` stays as is (in lowercase).
 > - If the property is made of several words, separated by dashes, the dashes are removed and it is converted to _camelCase_: `background-attachment` becomes `backgroundAttachement`.
