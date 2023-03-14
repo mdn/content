@@ -53,23 +53,9 @@ class Animal {
 
 const cat = new Animal();
 
+console.log(cat instanceof Animal); // true
 console.log(Animal[Symbol.hasInstance](cat)); // true
-```
-
-### Calling the `@@hasInstance` method
-
-The default `@@hasInstance` method uses the `this` context as the constructor object to compare against. To invoke it you have to provide the `this` context, for example via binding:
-
-```js
-function MyArray() {}
-const originalHasInstance = MyArray[Symbol.hasInstance].bind(MyArray);
-Object.defineProperty(MyArray, Symbol.hasInstance, {
-  value(instance) {
-    return originalHasInstance(instance) || Array.isArray(instance);
-  },
-});
-console.log(new MyArray() instanceof MyArray); // true
-console.log([] instanceof MyArray); // true
+console.log(Animal[Symbol.hasInstance].call(Animal, cat)); // true
 ```
 
 ## Specifications
