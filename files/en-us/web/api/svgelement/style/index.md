@@ -1,13 +1,13 @@
 ---
-title: HTMLElement.style
-slug: Web/API/HTMLElement/style
+title: SVGlement.style
+slug: Web/API/SVGElement/style
 page-type: web-api-instance-property
-browser-compat: api.HTMLElement.style
+browser-compat: api.SVGElement.style
 ---
 
 {{APIRef("CSSOM")}}
 
-The read-only **`style`** property of the {{domxref("HTMLElement")}} returns the _inline_ style of an element in the form of a live {{domxref("CSSStyleDeclaration")}} object that contains a list of all styles properties for that element with values assigned for the attributes that are defined in the element's inline [`style`](/en-US/docs/Web/HTML/Global_attributes/style) attribute.
+he read-only **`style`** property of the {{domxref("HTMLElement")}} returns the _inline_ style of an element in the form of a live {{domxref("CSSStyleDeclaration")}} object that contains a list of all styles properties for that element with values assigned for the attributes that are defined in the element's inline [`style`](/en-US/docs/Web/HTML/Global_attributes/style) attribute.
 
 This property is read-only, meaning it is not possible to assign a {{domxref("CSSStyleDeclaration")}} object to it. Nevertheless, it is possible to set an inline style by assigning a _string_ directly to the `style` property. In this case the string is forwarded to {{domxref("CSSStyleDeclaration.cssText")}}. Using `style` in this manner will completely overwrite all inline styles on the element.
 
@@ -30,16 +30,22 @@ The `style` property is not useful for completely learning about the styles appl
 The following code snippet demonstrates the difference between the values obtained using the element's `style` property and that obtained using the `getComputedStyle()` method:
 
 ```html
-<!DOCTYPE html>
-<html lang="en-US">
-  <body style="font-weight:bold">
-    <div style="color:red" id="elt">…</div>
-  </body>
-</html>
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 250 250"
+  width="250"
+  height="250">
+  <circle
+    cx="100"
+    cy="100"
+    r="50"
+    id="circle"
+    style="fill: red; stroke: black; stroke-width: 2px;" />
+</svg>
 ```
 
 ```js
-const element = document.getElementById("elt");
+const element = document.querySelector("circle");
 let out = "";
 const elementStyle = element.style;
 const computedStyle = window.getComputedStyle(element, null);
@@ -56,17 +62,17 @@ for (const prop in computedStyle) {
 console.log(out);
 ```
 
-The output is a long list of properties. The two interesting properties have the following values:
+The output is a long list of properties. The three interesting properties have the following values:
 
 ```
 …
-color = 'red' > 'rgb(255, 0, 0)'
+fill = 'red' > 'rgb(255, 0, 0)'
 …
-font-weight = '' > '700'
+stroke = 'black' > 'rgb(0, 0, 0)'
+…
+stroke-width = '2px' > '2px'
 …
 ```
-
-Note the absence of a value `font-weight` for `elementStyle` as it is not defined `style` attribute of the element, but on its parent. Nevertheless, it is taken into account for the calculation of the computed style, though (`computedStyle["font-weight"])` returns `700` which means bold).
 
 ## Specifications
 
@@ -79,4 +85,4 @@ Note the absence of a value `font-weight` for `elementStyle` as it is not define
 ## See also
 
 - [Using dynamic styling information](/en-US/docs/Web/API/CSS_Object_Model/Using_dynamic_styling_information)
-- {{domxref("SVGElement.style")}}
+- {{domxref("HTMLElement.style")}}
