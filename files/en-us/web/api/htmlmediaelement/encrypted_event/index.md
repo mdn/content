@@ -32,7 +32,7 @@ A {{domxref("MediaEncryptedEvent")}}. Inherits from {{domxref("Event")}}.
 - {{domxref("MediaEncryptedEvent.initDataType")}} {{ReadOnlyInline}}
   - : Returns a case-sensitive string with the _type_ of the format of the initialization data found.
 - {{domxref("MediaEncryptedEvent.initData")}} {{ReadOnlyInline}}
-  - : Returns an {{jsxref("ArrayBuffer")}} containing the initialization data found. If there is no initialisation data associated with the format, it returns `null`.
+  - : Returns an {{jsxref("ArrayBuffer")}} containing the initialization data found. If there is no initialization data associated with the format, it returns `null`.
 
 ## Specifications
 
