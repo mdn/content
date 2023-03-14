@@ -26,13 +26,11 @@ WebGL 1:
 
 WebGL 2:
 
-- {{domxref("WebGLQuery")}}
+- {{domxref("WebGLQuery")}} (and `WebGLTimerQueryEXT`)
 - {{domxref("WebGLSampler")}}
 - {{domxref("WebGLSync")}}
-- {{domxref("WebGLTimerQueryEXT")}}
 - {{domxref("WebGLTransformFeedback")}}
-- {{domxref("WebGLVertexArrayObject")}}
-- {{domxref("WebGLVertexArrayObjectOES")}}
+- {{domxref("WebGLVertexArrayObject")}} (and `WebGLVertexArrayObjectOES`)
 
 ## See also
 
