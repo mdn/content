@@ -58,7 +58,7 @@ Allowed values for the `scroll-timeline-axis` are:
 
 In this example, a scroll timeline named `squareTimeline` is defined using the `scroll-timeline-name` property on the element with the ID `container`, and then this name is applied to the animation on the `#square` element using `animation-timeline: squareTimeline`.
 
-To demonstrate the effect of `scroll-timeline-axis`, the inline (non-default) scrollbar is used in this example to drive the rotation of the square.
+To demonstrate the effect of `scroll-timeline-axis`, a `horizontal` (non-default) scrollbar is used in this example to drive the rotation of the square.
 
 #### HTML
 
