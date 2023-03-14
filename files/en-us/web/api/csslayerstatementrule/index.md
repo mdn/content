@@ -9,7 +9,7 @@ browser-compat: api.CSSLayerStatementRule
 
 The **`CSSLayerStatementRule`** represents a {{cssxref("@layer")}} statement rule. Unlike {{domxref("CSSLayerBlockRule")}}, it doesn't contain other rules and merely defines one or several layers by providing their names.
 
-This rule allows to declare the ordering layer, explicitly, that is in a apparent way at the beginning of a CSS file: the layer order is defined by the order of first occurence of each layer name. Declaring them with a statement allow the reader to understand the layer order, as well to allow inline and imported layers to be interleaved, which is not possible when using the `CSSLayerBlockRule` syntax.
+This rule allows to explicitly declare the ordering layer that is in an apparent way at the beginning of a CSS file: the layer order is defined by the order of first occurence of each layer name. Declaring them with a statement allows the reader to understand the layer order. It also allows inline and imported layers to be interleaved, which is not possible when using the `CSSLayerBlockRule` syntax.
 
 {{InheritanceDiagram}}
 
