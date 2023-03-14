@@ -16,16 +16,16 @@ These values are defined inside the same namespace, and each one has a hexadecim
 
 | Usage flag                     | Hexadecimal representation | Decimal equivalent |
 | ------------------------------ | -------------------------- | ------------------ |
+| `GPUBufferUsage.MAP_READ`      | 0x0001                     | 1                  |
+| `GPUBufferUsage.MAP_WRITE`     | 0x0002                     | 2                  |
 | `GPUBufferUsage.COPY_SRC`      | 0x0004                     | 4                  |
 | `GPUBufferUsage.COPY_DST`      | 0x0008                     | 8                  |
 | `GPUBufferUsage.INDEX`         | 0x0010                     | 16                 |
-| `GPUBufferUsage.INDIRECT`      | 0x0100                     | 256                |
-| `GPUBufferUsage.MAP_READ`      | 0x0001                     | 1                  |
-| `GPUBufferUsage.MAP_WRITE`     | 0x0002                     | 2                  |
-| `GPUBufferUsage.QUERY_RESOLVE` | 0x0200                     | 512                |
-| `GPUBufferUsage.STORAGE`       | 0x0080                     | 128                |
-| `GPUBufferUsage.UNIFORM`       | 0x0040                     | 64                 |
 | `GPUBufferUsage.VERTEX`        | 0x0020                     | 32                 |
+| `GPUBufferUsage.UNIFORM`       | 0x0040                     | 64                 |
+| `GPUBufferUsage.STORAGE`       | 0x0080                     | 128                |
+| `GPUBufferUsage.INDIRECT`      | 0x0100                     | 256                |
+| `GPUBufferUsage.QUERY_RESOLVE` | 0x0200                     | 512                |
 
 When you query the {{domxref("GPUBuffer.usage")}} property, you get a single decimal number returned, which is the sum of the different decimal values for the different usage flags. Returning to the above example, querying `GPUBuffer.usage` for the `GPUBuffer` created with the usage specified earlier would return the following:
 
@@ -33,7 +33,13 @@ When you query the {{domxref("GPUBuffer.usage")}} property, you get a single dec
 - Add `GPUBufferUsage.MAP_WRITE`'s decimal equivalent, 2
 - Equals 6.
 
-Because of the values chosen for the different flags, each combination of values is unique, so the program can tell at a glance which flags are set from a single value.
+Because of the values chosen for the different flags, each combination of values is unique, so the program can tell at a glance which flags are set from a single value. In addition, you can easily test which flags are set in the combined value using the bitwise and operator:
+
+```js
+if (buffer.usage & GPUBufferUsage.MAP_WRITE) {
+  // Buffer has MAP_WRITE usage
+}
+```
 
 ## See also
 
