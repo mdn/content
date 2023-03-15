@@ -31,12 +31,11 @@ parseFromString(string, mimeType)
     - `application/xhtml+xml`
     - `image/svg+xml`
 
-    A value of `text/html` will invoke the HTML parser, and the method will return an {{domxref("HTMLDocument")}}.
+    A value of `text/html` will invoke the HTML parser, and the method will return an {{domxref("HTMLDocument")}}. Any {{HTMLElement("script")}} element gets marked non-executable, and the contents of {{HTMLElement("noscript")}} are parsed as markup.
 
     The other valid values (`text/xml`, `application/xml`, `application/xhtml+xml`, and `image/svg+xml`) are functionally equivalent. They all invoke the XML parser, and the method will return a {{domxref("XMLDocument")}}.
 
     Any other value is invalid and will cause a [`TypeError`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypeError) to be thrown.
-Any {{HTMLElement("script")}} element gets marked non-executable, and the contents of {{HTMLElement("noscript")}} are parsed as markup.
 
 ### Return value
 
