@@ -88,7 +88,7 @@ In this example, the colors in the area behind the `<p>` element shift linearly.
 
 ### Applying brightness using the filter property
 
-This example applies a `brightness()` filter via the `filter` CSS property linearly color shifting the entire element, including content, border, and background image.
+In this example, a `brightness()` filter is applied to the entire element, including content, border, and background image via the [`filter`](/en-US/docs/Web/CSS/filter) CSS property. The result shows three variations of different brightness values.
 
 ```css
 p:first-of-type {
