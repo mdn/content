@@ -185,4 +185,4 @@ div {
 
 ## See also
 
-- [`<color>`](/en-US/docs/Web/CSS/color_value) the data type these values belong to.
+- [`<color>`](/en-US/docs/Web/CSS/color_value)
