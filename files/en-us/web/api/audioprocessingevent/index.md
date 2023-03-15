@@ -40,7 +40,7 @@ _Also implements the properties inherited from its parent, {{domxref("Event")}}_
     of the factory method {{domxref("BaseAudioContext/createScriptProcessor", "AudioContext.createScriptProcessor()")}}.
     Note that the returned <code>AudioBuffer</code> is only valid in the scope of the event handler.
 
-## Example
+## Examples
 
 The following example shows how to use of a `ScriptProcessorNode` to take a
 track loaded via {{domxref("BaseAudioContext/decodeAudioData", "AudioContext.decodeAudioData()")}}, process it, adding a bit
