@@ -13,7 +13,6 @@ The **`brightness()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS
 
 ## Syntax
 
-The `brightness()` function applies a linear multiplier to the elements on which it is applied.
 
 ```css
 brightness(amount)
