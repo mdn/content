@@ -87,7 +87,7 @@ In Firefox, the maximum storage space an origin can use in best-effort mode is c
 
 For example, if the device has a 500 GiB hard drive, Firefox will allow an origin in best-effort mode to store up to 50 GiB of data. In persistent mode, 250 GiB of data is allowed to be stored.
 
-Note that it might not actually be possible for the origin to reach this quota because it is calculated based on the **total** disk space, not the currently available disk space. This is done for security reasons, to avoid {{Glossary("fingerprinting")}}.
+Note that it might not actually be possible for the origin to reach this quota because it is calculated based on the hard drive **total** size, not the currently available disk space. This is done for security reasons, to avoid {{Glossary("fingerprinting")}}.
 
 Firefox has a second quota called _group limit_ that applies to all origins that are part of the same eTLD+1 domain. For example: `mozilla.org`, `www.mozilla.org`, and `joe.blogs.mozilla.org` are three different origins that are part of the same eTLD+1 group. This group maximum storage limit is 10 GiB, but is going to be removed as part of [this bug](https://bugzilla.mozilla.org/show_bug.cgi?id=1305665).
 
@@ -97,7 +97,7 @@ In browsers based on the [Chromium open-source project](https://www.chromium.org
 
 For example, if the device has a 1 TiB hard drive, the browser will allow an origin to use up to 600 GiB.
 
-Like with Firefox, because this quota is calculated based on the total disk space to avoid fingerprinting, an origin might not actually be able to reach its quota.
+Like with Firefox, because this quota is calculated based on the hard drive total size to avoid fingerprinting, an origin might not actually be able to reach its quota.
 
 #### Safari
 
