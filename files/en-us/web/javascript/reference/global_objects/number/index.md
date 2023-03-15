@@ -13,12 +13,15 @@ The `Number` constructor contains constants and methods for working with numbers
 
 ## Description
 
-Numbers are most commonly expressed in literal forms like `0b101`, `0o13`, `0x0A`. The [lexical grammar](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#numeric_literals) contains a more detailed reference.
+Numbers are most commonly expressed in literal forms like `255` or `3.14159`. The [lexical grammar](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#numeric_literals) contains a more detailed reference.
 
 ```js
-123; // one-hundred twenty-three
-123.0; // same
-123 === 123.0; // true
+255; // two-hundred and fifty-five
+255.0; // same number
+255 === 255.0; // true
+255 === 0xff; // true (hexadecimal notation)
+255 === 0b11111111; // true (binary notation)
+255 === 0.255e+3; // true (decimal exponential notation)
 ```
 
 A number literal like `37` in JavaScript code is a floating-point value, not an integer. There is no separate integer type in common everyday use. (JavaScript also has a {{jsxref("BigInt")}} type, but it's not designed to replace Number for everyday uses. `37` is still a number, not a BigInt.)

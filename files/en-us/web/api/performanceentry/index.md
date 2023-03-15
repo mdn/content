@@ -16,6 +16,7 @@ A performance entry can also be created by calling the {{domxref("Performance.ma
 The `PerformanceEntry` instances will always be one of the following subclasses:
 
 - {{domxref("LargestContentfulPaint")}}
+- {{domxref("LayoutShift")}}
 - {{domxref("PerformanceEventTiming")}}
 - {{domxref("PerformanceLongTaskTiming")}}
 - {{domxref("PerformanceMark")}}

@@ -2,12 +2,10 @@
 title: FileSystemWritableFileStream
 slug: Web/API/FileSystemWritableFileStream
 page-type: web-api-interface
-status:
-  - experimental
 browser-compat: api.FileSystemWritableFileStream
 ---
 
-{{securecontext_header}}{{APIRef("File System Access API")}}{{SeeCompatTable}}
+{{securecontext_header}}{{APIRef("File System Access API")}}
 
 The **`FileSystemWritableFileStream`** interface of the {{domxref('File System Access API')}} is a {{domxref('WritableStream')}} object with additional convenience methods, which operates on a single file on disk. The interface is accessed through the {{domxref('FileSystemFileHandle.createWritable()')}} method.
 
@@ -21,11 +19,11 @@ _Inherits properties from its parent, {{DOMxRef("WritableStream")}}._
 
 _Inherits methods from its parent, {{DOMxRef("WritableStream")}}._
 
-- {{domxref('FileSystemWritableFileStream.write')}} {{Experimental_Inline}}
+- {{domxref('FileSystemWritableFileStream.write')}}
   - : Writes content into the file the method is called on, at the current file cursor offset.
-- {{domxref('FileSystemWritableFileStream.seek')}} {{Experimental_Inline}}
+- {{domxref('FileSystemWritableFileStream.seek')}}
   - : Updates the current file cursor offset to the position (in bytes) specified.
-- {{domxref('FileSystemWritableFileStream.truncate')}} {{Experimental_Inline}}
+- {{domxref('FileSystemWritableFileStream.truncate')}}
   - : Resizes the file associated with the stream to be the specified size in bytes.
 
 ## Examples

@@ -96,7 +96,7 @@ definition phrase or sentence.</p>
 this project.</p>
 ```
 
-Here we see the definition — now with an [`id`](/en-US/docs/Web/HTML/Global_attributes#id) attribute, `"definition-dfn"`, which can be used as the target of a link. Later on, a link is created using `<a>` with the {{htmlattrxref("href", "a")}} attribute set to `"#definition-dfn"` to set up the link back to the definition.
+Here we see the definition — now with an [`id`](/en-US/docs/Web/HTML/Global_attributes#id) attribute, `"definition-dfn"`, which can be used as the target of a link. Later on, a link is created using `<a>` with the [`href`](/en-US/docs/Web/HTML/Element/a#href) attribute set to `"#definition-dfn"` to set up the link back to the definition.
 
 #### Result
 

@@ -46,7 +46,7 @@ An HTML form on a web page is nothing more than a convenient user-friendly way t
 
 ## On the client side: defining how to send the data
 
-The {{HTMLElement("form")}} element defines how the data will be sent. All of its attributes are designed to let you configure the request to be sent when a user hits a submit button. The two most important attributes are [`action`](/en-US/docs/Web/HTML/Element/form#action) and [`method`](/en-US/docs/Web/HTML/Element/form#method).
+The {{HTMLElement("form")}} element defines how the data will be sent. All of its attributes are designed to let you configure the request to be sent when a user hits a {{Glossary("submit button")}}. The two most important attributes are [`action`](/en-US/docs/Web/HTML/Element/form#action) and [`method`](/en-US/docs/Web/HTML/Element/form#method).
 
 ### The action attribute
 

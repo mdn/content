@@ -579,7 +579,7 @@ Elements in HTML have **attributes**; these are additional values that configure
         {{ HTMLElement("input") }}
       </td>
       <td>
-        If the button/input is a submit button (<code>type="submit"</code>),
+        If the button/input is a {{Glossary("submit button")}} (e.g. <code>type="submit"</code>),
         this attribute sets the encoding type to use during form submission. If
         this attribute is specified, it overrides the
         <code>enctype</code> attribute of the button's
@@ -595,7 +595,7 @@ Elements in HTML have **attributes**; these are additional values that configure
         {{ HTMLElement("input") }}
       </td>
       <td>
-        If the button/input is a submit button (<code>type="submit"</code>),
+        If the button/input is a {{Glossary("submit button")}} (e.g. <code>type="submit"</code>),
         this attribute sets the submission method to use during form submission
         (<code>GET</code>, <code>POST</code>, etc.). If this attribute is
         specified, it overrides the <code>method</code> attribute of the
@@ -611,7 +611,7 @@ Elements in HTML have **attributes**; these are additional values that configure
         {{ HTMLElement("input") }}
       </td>
       <td>
-        If the button/input is a submit button (<code>type="submit"</code>),
+        If the button/input is a {{Glossary("submit button")}} (e.g. <code>type="submit"</code>),
         this boolean attribute specifies that the form is not to be validated
         when it is submitted. If this attribute is specified, it overrides the
         <code>novalidate</code> attribute of the button's
@@ -627,7 +627,7 @@ Elements in HTML have **attributes**; these are additional values that configure
         {{ HTMLElement("input") }}
       </td>
       <td>
-        If the button/input is a submit button (<code>type="submit"</code>),
+        If the button/input is a {{Glossary("submit button")}} (e.g. <code>type="submit"</code>),
         this attribute specifies the browsing context (for example, tab, window,
         or inline frame) in which to display the response that is received after
         submitting the form. If this attribute is specified, it overrides the

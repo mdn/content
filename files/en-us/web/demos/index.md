@@ -84,4 +84,4 @@ If you know of a good demonstration or application of open web technology, pleas
 - [Photo editor](https://ondras.github.io/photo/)
 - [Coral generator](https://ondras.github.io/coral/)
 - [Raytracer](https://nerget.com/rayjs-mt/rayjs.html)
-- [Fibonacci](https://mdn.github.io/fibonacci-worker/)
+- [Fibonacci](https://mdn.github.io/dom-examples/web-workers/fibonacci-worker/)

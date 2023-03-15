@@ -75,7 +75,7 @@ The two limits react differently to limits being reached:
 - The group limit is also called the "hard limit": it doesn't trigger origin eviction.
 - The global limit is a "soft limit" since there's a chance that some space will be freed and the operation can continue.
 
-> **Note:** The group limit can't be more than the global limit, despite the minimum group limit mentioned above. If you had a really low memory situation where the global limit was, say, 8 MB, then the group limit would also be 8 MB.
+> **Note:** The group limit can't be more than the global limit, despite the minimum group limit mentioned above. If there was very little disk space available so that the global limit was, say, 8 MB, then the group limit would also be 8 MB.
 
 > **Note:** If the group limit is exceeded, or if origin eviction couldn't free enough space, the browser will throw a `QuotaExceededError`.
 

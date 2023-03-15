@@ -178,5 +178,5 @@ The specification allows linking `<datalist>` with a {{HTMLElement("input/passwo
 
 ## See also
 
-- The {{HTMLElement("input")}} element, and more specifically its {{htmlattrxref("list", "input")}} attribute;
+- The {{HTMLElement("input")}} element, and more specifically its [`list`](/en-US/docs/Web/HTML/Element/input#list) attribute;
 - The {{HTMLElement("option")}} element.

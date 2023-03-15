@@ -193,7 +193,7 @@ First of all, we use the {{HTMLElement("slot")}} element within a {{HTMLElement(
 That {{HTMLElement("template")}} element has several features:
 
 - The {{HTMLElement("template")}} has a {{HTMLElement("style")}} element with a set of CSS styles that are scoped just to the document fragment the {{HTMLElement("template")}} creates.
-- The {{HTMLElement("template")}} uses {{HTMLElement("slot")}} and its {{htmlattrxref("name", "slot")}} attribute to make three [named slots](/en-US/docs/Web/HTML/Element/slot#name):
+- The {{HTMLElement("template")}} uses {{HTMLElement("slot")}} and its [`name`](/en-US/docs/Web/HTML/Element/slot#name) attribute to make three [named slots](/en-US/docs/Web/HTML/Element/slot#name):
 
   - `<slot name="element-name">`
   - `<slot name="description">`
