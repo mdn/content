@@ -2,7 +2,9 @@
 title: CSS Colors
 slug: Web/CSS/CSS_Colors
 page-type: css-module
-spec-urls: https://drafts.csswg.org/css-color/
+spec-urls:
+  - https://drafts.csswg.org/css-color/
+  - https://drafts.csswg.org/css-color-5/
 ---
 
 {{CSSRef}}
@@ -29,9 +31,28 @@ Not all CSS properties that take a {{cssxref("&lt;color&gt;")}} as a value are p
 
 ### Functions
 
+- Absolute color functions, including:
+  - [`rgb()`](/en-US/docs/Web/CSS/color_value/rgb) and its `rgba()` alias
+  - [`hsl()`](/en-US/docs/Web/CSS/color_value/hsl) and its `hsla()` alias
+  - [`hwb()`](/en-US/docs/Web/CSS/color_value/hwb)
+  - [`lab()`](/en-US/docs/Web/CSS/color_value/lab)
+  - [`lch()`](/en-US/docs/Web/CSS/color_value/lch)
+  - [`oklab()`](/en-US/docs/Web/CSS/color_value/oklab)
+  - [`oklch()`](/en-US/docs/Web/CSS/color_value/oklch)
+  - [`color()`](/en-US/docs/Web/CSS/color_value/color)
+
 ### Data types
 
 - {{cssxref("&lt;color&gt;")}}
+- `<absolute-color-function>`
+- `<hex-color>`
+- `<named-color>`
+- `<alpha-value>`
+- `<hue>`
+- `<system-color>`
+- `<colorspace-params>`
+- `transparent`
+- `currentcolor`
 
 ## Guides
 
