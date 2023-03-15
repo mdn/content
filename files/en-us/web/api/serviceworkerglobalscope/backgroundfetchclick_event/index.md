@@ -2,10 +2,12 @@
 title: "ServiceWorkerGlobalScope: backgroundfetchclick event"
 slug: Web/API/ServiceWorkerGlobalScope/backgroundfetchclick_event
 page-type: web-api-event
+status:
+  - experimental
 browser-compat: api.ServiceWorkerGlobalScope.backgroundfetchclick_event
 ---
 
-{{APIRef("Background Fetch API")}}
+{{APIRef("Background Fetch API")}}{{SeeCompatTable}}
 
 The **`backgroundfetchclick`** event of the {{domxref("ServiceWorkerGlobalScope")}} interface is fired when the user clicks on the UI that the browser provides to show the user the progress of the [background fetch](/en-US/docs/Web/API/Background_Fetch_API) operation.
 

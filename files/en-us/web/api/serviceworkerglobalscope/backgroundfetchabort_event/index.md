@@ -2,10 +2,12 @@
 title: "ServiceWorkerGlobalScope: backgroundfetchabort event"
 slug: Web/API/ServiceWorkerGlobalScope/backgroundfetchabort_event
 page-type: web-api-event
+status:
+  - experimental
 browser-compat: api.ServiceWorkerGlobalScope.backgroundfetchabort_event
 ---
 
-{{APIRef("Background Fetch API")}}
+{{APIRef("Background Fetch API")}}{{SeeCompatTable}}
 
 The **`backgroundfetchabort`** event of the {{domxref("ServiceWorkerGlobalScope")}} interface is fired when the user or the app itself cancels a [background fetch](/en-US/docs/Web/API/Background_Fetch_API) operation.
 
