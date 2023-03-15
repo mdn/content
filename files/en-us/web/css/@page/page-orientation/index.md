@@ -2,14 +2,6 @@
 title: page-orientation
 slug: Web/CSS/@page/page-orientation
 page-type: css-at-rule-descriptor
-tags:
-  - "@page"
-  - At-rule descriptor
-  - CSS
-  - CSS Property
-  - NeedsBrowserCompatibility
-  - Reference
-  - Web
 browser-compat: css.at-rules.page.page-orientation
 ---
 
