@@ -334,7 +334,7 @@ p {
 }
 ```
 
-The following second part of the CSS code declares a named page rule defined above for the selectors.
+The following second part of the CSS code declares a named page rule defined above for the selectors, such as `<section class="left">…</section>`.
 
 ```css
 @media print {
