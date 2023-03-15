@@ -27,7 +27,13 @@ Not all CSS properties that take a {{cssxref("&lt;color&gt;")}} as a value are p
 
 - {{cssxref("color")}}
 - {{cssxref("opacity")}}
-- {{cssxref("print-color-adjust")}}
+
+### At-rules and descriptors
+
+- {{cssxref("color-profile")}}
+  - `components` descriptor
+  - `rendering-intent` descriptor
+  - `src` descriptor
 
 ### Functions
 
@@ -54,6 +60,10 @@ Not all CSS properties that take a {{cssxref("&lt;color&gt;")}} as a value are p
 - `transparent`
 - `currentcolor`
 
+### Interfaces
+
+- `CSSColorProfileRule`
+
 ## Guides
 
 - [Applying color to HTML elements using CSS](/en-US/docs/Web/CSS/CSS_Colors/Applying_color)
@@ -70,5 +80,6 @@ Not all CSS properties that take a {{cssxref("&lt;color&gt;")}} as a value are p
 
 ## See also
 
-- Color-related properties that are part of other specifications: {{cssxref("background-color")}}, {{cssxref("border-color")}}, {{cssxref("outline-color")}}, {{cssxref("text-decoration-color")}}, {{cssxref("text-emphasis-color")}}, {{cssxref("text-shadow")}}, {{cssxref("caret-color")}}, and {{cssxref("column-rule-color")}}
-- In CSS, gradients aren't colors but [images](/en-US/docs/Web/CSS/CSS_Images).
+- Color-related properties that are part of other specifications: {{{cssxref("accent-color")}}, {{cssxref("background-color")}}, {{cssxref("background-image")}}, {{cssxref("border-color")}}, {{cssxref("box-shadow")}}, {{cssxref("caret-color")}}, {{cssxref("color")}}, {{cssxref("color-scheme")}}, {{cssxref("column-rule-color")}}, [`fill`](/en-US/docs/Web/SVG/Attribute/fill), [`flood-color`](/en-US/docs/Web/SVG/Attribute/flood-color), [`lighting-color`](/en-US/docs/Web/SVG/Attribute/lighting-color), {{cssxref("outline-color")}}, {{cssxref("scrollbar-color")}}, [`stop-color`](/en-US/docs/Web/SVG/Attribute/stop-color), [`stroke`](/en-US/docs/Web/SVG/Attribute/stroke), {{cssxref("text-decoration-color")}}, {{cssxref("text-emphasis-color")}}, {{cssxref("text-shadow")}}, and {{cssxref("-webkit-tap-highlight-color")}}.
+- [CSS color adjustment](/en-us/web/css/css_color_adjustment) module, and the {{cssxref("print-color-adjust")}} property.
+- [CSS images](/en-US/docs/Web/CSS/CSS_Images) module, which is where CSS [`<gradient>`](/en-US/docs/Web/CSS/) images are defined.
