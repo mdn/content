@@ -7,7 +7,7 @@ browser-compat: api.SVGClipPathElement.transform
 
 {{APIRef("SVG")}}
 
-The read-only **`transform`** property of the {{domxref("SVGClipPathElement")}} interface reflects the {{SVGAttr("transform")}} attribute of a {{SVGElement("clipPath")}} element, that is a list of transformation applied to the element.
+The read-only **`transform`** property of the {{domxref("SVGClipPathElement")}} interface reflects the {{SVGAttr("transform")}} attribute of a {{SVGElement("clipPath")}} element, that is a list of transformations applied to the element.
 
 ## Value
 
