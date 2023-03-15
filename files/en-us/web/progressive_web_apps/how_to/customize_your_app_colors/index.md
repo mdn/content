@@ -3,7 +3,7 @@ title: Customize your app's theme and background colors
 slug: Web/Progressive_web_apps/How_to/Customize_your_app_colors
 ---
 
-When building Progressive Web Apps (PWAs), it's important to not only consider the appearance of the content your app displays but also the way the app appears on the user's device once the app is installed. One way to customize the window in which your app appears is by using the [`theme_color`](/en-US/docs/Web/Manifest/theme_color) and [`background_color`](/en-US/docs/Web/Manifest/background_color) [web app manifest](/en-US/docs/Web/Manifest) members.
+When building Progressive Web Apps (PWAs), it's important to not only consider the appearance of your app's content, but also the way the app appears on the user's device once the app is installed. One way to customize the window in which your app appears is by using the [`theme_color`](/en-US/docs/Web/Manifest/theme_color) and [`background_color`](/en-US/docs/Web/Manifest/background_color) [web app manifest](/en-US/docs/Web/Manifest) members.
 
 By defining the `theme_color` and `background_color` members in your PWA manifest, you can create a more polished experience for your users. These small details can help make your PWA feel more like an OS-native app, and more familiar to your users.
 
