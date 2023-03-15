@@ -7,7 +7,7 @@ browser-compat: api.CSSLayerBlockRule
 
 {{APIRef("CSSOM")}}
 
-The **`CSSLayerBlockRule`** represents a {{cssxref("@layer")}} block rule. It is a grouping at-rule, that is a rule containing other rules, and is associated to a given cascade layer, identified by its _name_.
+The **`CSSLayerBlockRule`** represents a {{cssxref("@layer")}} block rule. It is a grouping at-rule meaning that it can contain other rules, and is associated to a given cascade layer, identified by its _name_.
 
 {{InheritanceDiagram}}
 
