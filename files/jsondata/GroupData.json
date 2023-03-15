@@ -806,13 +806,6 @@
       "properties": ["Window.launchQueue"],
       "events": []
     },
-    "Layout Instability API": {
-      "overview": ["Layout Instability API"],
-      "interfaces: ": ["LayoutShift", "LayoutShiftAttribution"],
-      "methods": [],
-      "properties": [],
-      "events": []
-    },
     "Local Font Access API": {
       "overview": ["Local Font Access API"],
       "interfaces": ["FontData"],
@@ -987,6 +980,8 @@
       "interfaces": [
         "EventCounts",
         "LargestContentfulPaint",
+        "LayoutShift",
+        "LayoutShiftAttribution",
         "Performance",
         "PerformanceEntry",
         "PerformanceElementTiming",
