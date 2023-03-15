@@ -341,9 +341,11 @@ The following second part of the CSS code declares a named page rule defined abo
   .upright {
     page: upright;
   }
+  
   .left {
     page: left;
   }
+  
   .right {
     page: right;
   }
