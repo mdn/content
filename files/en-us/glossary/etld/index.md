@@ -8,7 +8,7 @@ The term **eTLD** stands for "effective top-level domain" and is a domain under 
 
 A top level domain is the part of the domain name following the final dot: so for example, the top-level domain in `crookedtimber.org` is `org`.
 
-Suppose only top-level domains were registrable by single organizations. Then you would know that the following domains all belonged to the same organization:
+Suppose only domains directly under top-level domains were registrable by single organizations. Then you would know that the following domains all belonged to the same organization:
 
 ```plain
     xyz.org
