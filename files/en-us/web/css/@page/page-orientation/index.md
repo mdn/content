@@ -334,7 +334,7 @@ p {
 }
 ```
 
-The second part of the [CSS](/en-US/docs/Web/CSS) declares which [named pages](/en-US/docs/Web/CSS/@page#named_pages) are used for which [selectors](/en-US/docs/Web/CSS/CSS_Selectors).
+The following second part of the CSS code declares a named page rule defined above for the selectors.
 
 ```css
 @media print {
