@@ -98,7 +98,7 @@ The following criteria must be met when calling **`writeTexture()`**, otherwise 
 - The `destination` {{domxref("GPUTexture.height")}} is a multiple of the texel block height of the destination {{domxref("GPUTexture.format")}}.
 - `destination.aspect` refers to a single aspect of the destination {{domxref("GPUTexture.format")}}.
 - That aspect is a valid image copy destination according to [depth-or-stencil formats](https://gpuweb.github.io/gpuweb/#combined-depth-stencil-format).
-- The overall `dataLayout` is otherwise compatible with the {{domxref("GPUTexture.format")}}.
+- The `destination` is otherwise compatible with the {{domxref("GPUTexture.format")}}.
 
 ## Examples
 
