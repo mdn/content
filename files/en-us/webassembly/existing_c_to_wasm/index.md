@@ -64,7 +64,7 @@ And you will see the correct version number in the [output](https://googlechrome
 
 Getting the encoder's version number is great, but encoding an actual image would be more impressive. How do we do that?
 
-The first question you need to answer is: how do I get the image into wasm? Looking at the [encoding API of libwebp](https://developers.google.com/speed/webp/docs/api#simple_encoding_api), you'll find that it expects an array of bytes in RGB, RGBA, BGR or BGRA. Luckily, the Canvas API has {{domxref("CanvasRenderingContext2D.getImageData")}} — that gives you an {{jsxref("Uint8ClampedArray")}} containing the image data in RGBA:
+The first question you need to answer is: how do I get the image into wasm? Looking at the [encoding API of libwebp](https://developers.google.com/speed/webp/docs/api#simple_encoding_api), you'll find that it expects an array of bytes in RGB, RGBA, BGR or BGRA. Luckily, the Canvas API has {{domxref("CanvasRenderingContext2D.getImageData")}} — that gives you a {{jsxref("Uint8ClampedArray")}} containing the image data in RGBA:
 
 ```js
 async function loadImage(src) {

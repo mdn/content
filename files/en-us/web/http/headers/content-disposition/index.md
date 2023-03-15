@@ -60,7 +60,7 @@ Content-Disposition: form-data; name="fieldName"; filename="filename.jpg"
     containing the name of the HTML field in the form
     that the content of this subpart refers to.
     When dealing with multiple files in the same field
-    (for example, the {{htmlattrxref("multiple", "input")}} attribute of an `{{HTMLElement("input","&lt;input type=\"file\"&gt;")}}` element),
+    (for example, the [`multiple`](/en-US/docs/Web/HTML/Element/input#multiple) attribute of an `{{HTMLElement("input","&lt;input type=\"file\"&gt;")}}` element),
     there can be several subparts with the same name.
 
     A `name` with a value of `'_charset_'` indicates

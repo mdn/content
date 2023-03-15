@@ -29,7 +29,7 @@ Highlights:
 
 ### HTML
 
-- Experimental support for the {{htmlattrxref("referrer", "input")}} attribute of the {{HTMLElement("img")}} ([Firefox bug 1166910](https://bugzil.la/1166910)), {{htmlElement("iframe")}} ([Firefox bug 1175736](https://bugzil.la/1175736)), {{HTMLElement("a")}} and {{HTMLElement("area")}} ([Firefox bug 1174913](https://bugzil.la/1174913)) has been added. There is no effect by default, the `network.http.enablePerElementReferrer` being `false` by default.
+- Experimental support for the [`referrer`](/en-US/docs/Web/HTML/Element/input#referrer) attribute of the {{HTMLElement("img")}} ([Firefox bug 1166910](https://bugzil.la/1166910)), {{htmlElement("iframe")}} ([Firefox bug 1175736](https://bugzil.la/1175736)), {{HTMLElement("a")}} and {{HTMLElement("area")}} ([Firefox bug 1174913](https://bugzil.la/1174913)) has been added. There is no effect by default, the `network.http.enablePerElementReferrer` being `false` by default.
 
 ### JavaScript
 
@@ -41,7 +41,7 @@ Highlights:
 
 #### DOM & HTML DOM
 
-- Images with an {{HTMLattrxref('id', 'img')}} are no more listed as property of the {{domxref("Window")}} interface: `<img id="login">` isn't accessible as `window.login` anymore. This behavior was introduced in Firefox 26 and has been removed to match a later change in the spec. ([Firefox bug 959992](https://bugzil.la/959992))
+- Images with an [`id`](/en-US/docs/Web/HTML/Element/img#id) are no more listed as property of the {{domxref("Window")}} interface: `<img id="login">` isn't accessible as `window.login` anymore. This behavior was introduced in Firefox 26 and has been removed to match a later change in the spec. ([Firefox bug 959992](https://bugzil.la/959992))
 - {{domxref('MouseEvent.offsetX')}} and {{domxref('MouseEvent.offsetY')}} have been added ([Firefox bug 69787](https://bugzil.la/69787)).
 - The {{domxref("HTMLInputElement")}} interface has been experimentally extended to handle the upload of directories ([Firefox bug 1164310](https://bugzil.la/1164310)). These four members can be exposed by setting the `dom.input.dirpicker` preference to `true`:
 
@@ -96,7 +96,7 @@ Our experimental implementation of the [Shadow DOM](/en-US/docs/Web/Web_Componen
 
 - The {{domxref('IDBCursorWithValue')}} interface is now available in [Web workers](/en-US/docs/Web/API/Web_Workers_API) ([Firefox bug 1188115](https://bugzil.la/1188115)).
 - Error events sent in [Web workers](/en-US/docs/Web/API/Web_Workers_API) doesn't bubble anymore ([Firefox bug 1188141](https://bugzil.la/1188141)).
-- [Media Source Extensions](/en-US/docs/Web/API/Media_Source_Extensions_API) (MSE) has been activated for all Web sites, and no more for a white list of sites ([Firefox bug 1185611](https://bugzil.la/1185611)).
+- [Media Source Extensions](/en-US/docs/Web/API/Media_Source_Extensions_API) (MSE) has been activated for all websites, and no more for a white list of sites ([Firefox bug 1185611](https://bugzil.la/1185611)).
 - The non-standard and deprecated `Window.mozRequestAnimationFrame()` has been removed ([Firefox bug 909154](https://bugzil.la/909154)). Use the standard {{domxref('Window.requestAnimationFrame()')}} instead.
 - Speech synthesis (text-to-speech) has been implemented in Firefox Desktop for Windows, hidden behind the `media.webspeech.synth.enabled` flag in `about:config` ([Firefox bug 1003457](https://bugzil.la/1003457).) See [Web Speech API](/en-US/docs/Web/API/Web_Speech_API) for more information.
 

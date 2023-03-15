@@ -14,7 +14,7 @@ Firefox 10 shipped on January 31, 2012. This article provides information about 
 ### HTML
 
 - The new HTML5 {{ HTMLElement("bdi") }} element, bi-directional isolation, allowing isolation of parts of text with a different directionality has been implemented. This is especially useful when displaying text with an unknown directionality, coming from a database for example, in the middle of text with a known, and potentially, different one.
-- You may now specify a fragment of "top" for the {{ htmlattrxref("href", "a") }} attribute to create a link to the top of the page. This used to work, then went away for a while, and now it's back, for compatibility with the HTML5 specification. For example: `<a href="#top">Return to top of page</a>`.
+- You may now specify a fragment of "top" for the [`href`](/en-US/docs/Web/HTML/Element/a#href) attribute to create a link to the top of the page. This used to work, then went away for a while, and now it's back, for compatibility with the HTML5 specification. For example: `<a href="#top">Return to top of page</a>`.
 
 ### JavaScript
 

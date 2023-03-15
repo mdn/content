@@ -20,7 +20,7 @@ _Inherits properties from its parent, {{DOMxRef("Element")}}._
 - {{DOMxRef("HTMLElement.accessKeyLabel")}} {{ReadOnlyInline}}
   - : Returns a string containing the element's assigned access key.
 - {{DOMxRef("HTMLElement.attributeStyleMap")}} {{ReadOnlyInline}}
-  - : A {{DOMxRef("StylePropertyMap")}} representing the declarations of the element's {{htmlattrxref("style")}} attribute.
+  - : A {{DOMxRef("StylePropertyMap")}} representing the declarations of the element's [`style`](/en-US/docs/Web/HTML/Global_attributes#style) attribute.
 - {{DOMxRef("HTMLElement.contentEditable")}}
   - : A string, where a value of `true` means the element is editable and a value of `false` means it isn't.
 - {{DOMxRef("HTMLElement.isContentEditable")}} {{ReadOnlyInline}}
@@ -68,7 +68,7 @@ _Inherits properties from its parent, {{DOMxRef("Element")}}._
 - {{DOMxRef("HTMLElement.spellcheck")}}
   - : A boolean value that controls [spell-checking](/en-US/docs/Web/HTML/Global_attributes/spellcheck). It is present on all HTML elements, though it doesn't have an effect on all of them.
 - {{DOMxRef("HTMLElement.style")}}
-  - : A {{DOMxRef("CSSStyleDeclaration")}} representing the declarations of the element's {{htmlattrxref("style")}} attribute.
+  - : A {{DOMxRef("CSSStyleDeclaration")}} representing the declarations of the element's [`style`](/en-US/docs/Web/HTML/Global_attributes#style) attribute.
 - {{DOMxRef("HTMLElement.tabIndex")}}
   - : A `long` representing the position of the element in the tabbing order.
 - {{DOMxRef("HTMLElement.title")}}

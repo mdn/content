@@ -39,6 +39,12 @@ A string. The return value depends on the subtype of the `PerformanceEntry` obje
 
     The entry instance will be a {{domxref("LargestContentfulPaint")}} object.
 
+- `layout-shift`
+
+  - : Reports layout stability of web pages based on movements of the elements on the page.
+
+    The entry instance will be a {{domxref("LayoutShift")}} object.
+
 - `longtask`
 
   - : Reports instances of long tasks.

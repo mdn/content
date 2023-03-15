@@ -18,11 +18,11 @@ that indicates the conditions under which that candidate should be used instead 
 image specified by the {{domxref("HTMLImageElement.src", "src")}} property.
 
 The `srcset` property, along with the {{domxref("HTMLImageElement.sizes",
-  "sizes")}} property, are a crucial component in designing responsive web sites, as they
+  "sizes")}} property, are a crucial component in designing responsive websites, as they
 can be used together to make pages that use appropriate images for the rendering
 situation.
 
-> **Note:** If the {{htmlattrxref("srcset", "img")}} attribute uses width descriptors, the `sizes` attribute must also be present, or the `srcset` itself will be ignored.
+> **Note:** If the [`srcset`](/en-US/docs/Web/HTML/Element/img#srcset) attribute uses width descriptors, the `sizes` attribute must also be present, or the `srcset` itself will be ignored.
 
 ## Value
 

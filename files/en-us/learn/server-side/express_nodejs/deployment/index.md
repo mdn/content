@@ -201,6 +201,45 @@ app.use(helmet());
 
 > **Note:** The command above adds a _subset_ of the available headers (these make sense for most sites). You can add/disable specific headers as needed by following the [instructions for using helmet here](https://www.npmjs.com/package/helmet).
 
+### Add rate limiting to the API routes
+
+[Express-rate-limit](https://www.npmjs.com/package/express-rate-limit) is a middleware package that can be used to limit repeated requests to APIs and endpoints.
+There are many reasons why excessive requests might be made to your site, such as denial of service attacks, brute force attacks, or even just a client or script that is not behaving as expected.
+Aside from performance issues that can arise from too many requests causing your server to slow down, you may also be charged for the additional traffic.
+This package can be used to limit the number of requests that can be made to a particular route or set of routes.
+
+Install this at the root of your project by running the following command:
+
+```bash
+npm install express-rate-limit
+```
+
+Open **./app.js** and require the _express-rate-limit_ library as shown.
+Then add the module to the middleware chain with the `use()` method.
+
+```js
+const compression = require("compression");
+const helmet = require("helmet");
+
+var app = express();
+
+// Set up rate limiter: maximum of twenty requests per minute
+var RateLimit = require("express-rate-limit");
+var limiter = RateLimit({
+  windowMs: 1 * 60 * 1000, // 1 minute
+  max: 20,
+});
+// Apply rate limiter to all requests
+app.use(limiter);
+
+// …
+```
+
+> **Note:**
+>
+> - The command above limits all requests to 20 per minute. You can change this as needed.
+> - Third-party services like [Cloudflare](https://www.cloudflare.com/) can also be used if you need more advanced protection against denial of service or other types of attacks.
+
 ## Example: Installing LocalLibrary on Railway
 
 This section provides a practical demonstration of how to install _LocalLibrary_ on [Railway](https://railway.app/).

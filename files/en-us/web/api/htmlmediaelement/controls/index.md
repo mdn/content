@@ -8,7 +8,7 @@ browser-compat: api.HTMLMediaElement.controls
 {{APIRef("HTML DOM")}}
 
 The **`HTMLMediaElement.controls`** property reflects the
-{{htmlattrxref("controls", "video")}} HTML attribute, which controls whether user
+[`controls`](/en-US/docs/Web/HTML/Element/video#controls) HTML attribute, which controls whether user
 interface controls for playing the media item will be displayed.
 
 ## Value
