@@ -33,7 +33,7 @@ new AudioProcessingEvent(type, options)
     - `outputBuffer`
       - : An {{domxref("AudioBuffer")}} where the output audio data will be written.
 
-## Return Value
+### Return value
 
 A new {{domxref("AudioProcessingEvent")}}.
 
