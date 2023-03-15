@@ -30,7 +30,7 @@ Not all CSS properties that take a {{cssxref("&lt;color&gt;")}} as a value are p
 
 ### At-rules and descriptors
 
-- {{cssxref("color-profile")}}
+- {{cssxref("@color-profile")}}
   - `components` descriptor
   - `rendering-intent` descriptor
   - `src` descriptor
@@ -50,13 +50,13 @@ Not all CSS properties that take a {{cssxref("&lt;color&gt;")}} as a value are p
 ### Data types
 
 - {{cssxref("&lt;color&gt;")}}
-- `<absolute-color-function>`
-- `<hex-color>`
-- `<named-color>`
-- `<alpha-value>`
-- `<hue>`
-- `<system-color>`
-- `<colorspace-params>`
+- [`<absolute-color-function>`](#Functions)
+- {{cssxref("hex-color")}}
+- {{cssxref("named-color")}}
+- {{cssxref("alpha-value")}}
+- {{cssxref("hue")}}
+- {{cssxref("system-color")}}
+- {{cssxref("colorspace-params")}}
 - `transparent`
 - `currentcolor`
 
