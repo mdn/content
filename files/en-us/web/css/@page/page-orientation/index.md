@@ -51,9 +51,9 @@ This descriptor helps with the layout and orientation of printed documents, espe
 
 ## Examples
 
-### Example of rotating printed pages
+### Rotating printed pages
 
-This example shows how the contents of a print document can be rotated, to suit the page content and the page position.
+This example shows how the contents of a print document can be rotated to suit the page content and the page position.
 
 ```html hidden
 <fieldset id="printStyle">
