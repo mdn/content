@@ -27,7 +27,7 @@ Here is a web app manifest file example, showing how to define a background colo
     }
   ],
   "display": "standalone",
-  "background_color: "peachpuff"
+  "background_color": "peachpuff"
 }
 ```
 
