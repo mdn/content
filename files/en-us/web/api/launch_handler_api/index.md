@@ -36,7 +36,7 @@ If not specified, the default `client_mode` value is `auto`. Available values ar
 When `focus-existing` is used, you can include code inside the {{domxref("LaunchQueue.setConsumer", "window.launchQueue.setConsumer()")}}'s callback function to provide custom handling of the {{domxref("LaunchParams.targetURL", "targetURL")}}
 
 ```js
-window.launchQueue.setConsumer(launchParams => {
+window.launchQueue.setConsumer((launchParams) => {
   // Do something with launchParams.targetURL
 });
 ```
@@ -58,13 +58,13 @@ window.launchQueue.setConsumer(launchParams => {
 ## Examples
 
 ```js
-if ('launchQueue' in window) {
-  window.launchQueue.setConsumer(launchParams => {
+if ("launchQueue" in window) {
+  window.launchQueue.setConsumer((launchParams) => {
     if (launchParams.targetURL) {
       const params = new URL(launchParams.targetURL).searchParams;
 
       // Assuming a music player app that gets a track passed to it to be played
-      const track = params.get('track');
+      const track = params.get("track");
       if (track) {
         audio.src = track;
         title.textContent = new URL(track).pathname.substr(1);

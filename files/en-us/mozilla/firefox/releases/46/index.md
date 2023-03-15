@@ -59,7 +59,7 @@ Highlights:
 
 - The deprecated {{domxref("Window.showModalDialog()")}} method is no more available when Firefox runs in multi-process mode (e10s) ([Firefox bug 1234700](https://bugzil.la/1234700)).
 - Added support for {{domxref("Document.elementsFromPoint()")}} ([Firefox bug 1164427](https://bugzil.la/1164427)).
-- When a non-existent option of a {{HTMLElement("select")}} element is programmatically selected, instead of being incorrectly left unchanged, the {{htmlattrxref("selectedIndex", "select")}} value is now set to `-1`, the {{htmlattrxref("selectedOptions", "select")}} to an empty {{domxref("HTMLCollection")}}, and {{htmlattrxref("value", "select")}} to an empty string ([Firefox bug 1203668](https://bugzil.la/1203668)).
+- When a non-existent option of a {{HTMLElement("select")}} element is programmatically selected, instead of being incorrectly left unchanged, the [`selectedIndex`](/en-US/docs/Web/HTML/Element/select#selectedIndex) value is now set to `-1`, the [`selectedOptions`](/en-US/docs/Web/HTML/Element/select#selectedOptions) to an empty {{domxref("HTMLCollection")}}, and [`value`](/en-US/docs/Web/HTML/Element/select#value) to an empty string ([Firefox bug 1203668](https://bugzil.la/1203668)).
 
 #### Canvas
 

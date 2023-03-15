@@ -2,35 +2,33 @@
 title: StylePropertyMapReadOnly
 slug: Web/API/StylePropertyMapReadOnly
 page-type: web-api-interface
-status:
-  - experimental
 browser-compat: api.StylePropertyMapReadOnly
 ---
 
-{{SeeCompatTable}}{{APIRef("CSS Typed Object Model API")}}
+{{APIRef("CSS Typed Object Model API")}}
 
 The **`StylePropertyMapReadOnly`** interface of the [CSS Typed Object Model API](/en-US/docs/Web/API/CSS_Object_Model#css_typed_object_model) provides a read-only representation of a CSS declaration block that is an alternative to {{domxref("CSSStyleDeclaration")}}. Retrieve an instance of this interface using {{domxref('Element.computedStyleMap','Element.computedStyleMap()')}}.
 
 ## Instance properties
 
-- {{domxref('StylePropertyMapReadOnly.size')}} {{Experimental_Inline}}
+- {{domxref('StylePropertyMapReadOnly.size')}}
   - : Returns an unsigned long integer containing the size of the `StylePropertyMapReadOnly` object.
 
 ## Instance methods
 
-- {{domxref('StylePropertyMapReadOnly.entries()')}} {{Experimental_Inline}}
+- {{domxref('StylePropertyMapReadOnly.entries()')}}
   - : Returns an array of a given object's own enumerable property `[key, value]` pairs, in the same order as that provided by a {{jsxref("Statements/for...in", "for...in")}} loop (the difference being that a for-in loop enumerates properties in the prototype chain as well).
-- {{domxref('StylePropertyMapReadOnly.forEach()')}} {{Experimental_Inline}}
+- {{domxref('StylePropertyMapReadOnly.forEach()')}}
   - : Executes a provided function once for each element of `StylePropertyMapReadOnly`.
-- {{domxref('StylePropertyMapReadOnly.get()')}} {{Experimental_Inline}}
+- {{domxref('StylePropertyMapReadOnly.get()')}}
   - : Returns the value of the specified property.
-- {{domxref('StylePropertyMapReadOnly.getAll()')}} {{Experimental_Inline}}
+- {{domxref('StylePropertyMapReadOnly.getAll()')}}
   - : Returns an array of {{domxref("CSSStyleValue")}} objects containing the values for the provided property.
-- {{domxref('StylePropertyMapReadOnly.has()')}} {{Experimental_Inline}}
+- {{domxref('StylePropertyMapReadOnly.has()')}}
   - : Indicates whether the specified property is in the `StylePropertyMapReadOnly` object.
-- {{domxref('StylePropertyMapReadOnly.keys()')}} {{Experimental_Inline}}
+- {{domxref('StylePropertyMapReadOnly.keys()')}}
   - : Returns a new _array iterator_ containing the keys for each item in `StylePropertyMapReadOnly`.
-- {{domxref('StylePropertyMapReadOnly.values()')}} {{Experimental_Inline}}
+- {{domxref('StylePropertyMapReadOnly.values()')}}
   - : Returns a new _array iterator_ containing the values for each index in the `StylePropertyMapReadOnly` object.
 
 ## Examples

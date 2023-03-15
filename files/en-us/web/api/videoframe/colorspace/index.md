@@ -2,12 +2,10 @@
 title: VideoFrame.colorSpace
 slug: Web/API/VideoFrame/colorSpace
 page-type: web-api-instance-property
-status:
-  - experimental
 browser-compat: api.VideoFrame.colorSpace
 ---
 
-{{APIRef("Web Codecs API")}}{{SeeCompatTable}}
+{{APIRef("Web Codecs API")}}
 
 The **`colorSpace`** property of the {{domxref("VideoFrame")}} interface returns a {{domxref("VideoColorSpace")}} object representing the color space of the video.
 

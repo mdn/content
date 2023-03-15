@@ -150,7 +150,7 @@ Also, note that icons need sufficient contrast for perception. See [WCAG 2.1 tec
 
 ### Luminance
 
-It is the difference in the luminance of a color that enables us to see the contrast. Relative luminance is defined in WCAG as “the relative brightness of any point in a colorspace, normalized to 0 for darkest black and 1 for lightest white.”
+It is the difference in the luminance of a color that enables us to see the contrast. Relative luminance is defined in WCAG as "the relative brightness of any point in a colorspace, normalized to 0 for darkest black and 1 for lightest white."
 
 This statement is of course accurate, but may be confusing when used in reference to the RGB color space, which is an integer between 0 and 255. White has 100% relative luminance, black has 0% relative luminance (in most but not all literature). Interpreting for the W3C standard above, that would mean that white, normalized to 1, would have an RGB value of `rgb(255 255 255)` and black, normalized to 0, would have an RGB value of `rgb(0 0 0)`. Note that black and white can also be written as `rgb(100% 100% 100%)` and `rgb(0% 0% 0%)` respectively, which may be more intuitive.
 
@@ -164,17 +164,23 @@ Where human perception is concerned, a difference in luminance matters more than
 
 Calculations for relative luminance are not casual ones. Luckily, there are [online luminance and contrast checkers](https://contrast-ratio.com/) available, and even instructions on how to [build your own contrast checker](https://alvaromontoro.com/blog/67854/building-your-own-color-contrast-checker).
 
-## Color perception
+## Perceiving color
 
-When _perceiving_ colors, not all colors are created equal: Our [eyes](https://www.verywellhealth.com/eye-cones-5088699) are tuned to perceive specific colors, red, blue, and green, but we do not perceive these colors with equal strength. The [minority of cones are blue-sensitive](https://www.aao.org/eye-health/anatomy/cones). About 60% of cones are red-sensitive, 30% green sensitive, and about 10% are blue sensitive. Surprisingly, although blue-sensitive cones typically make up the fewest cones, they are also the most _sensitive_ to color.
+Color is our perception of the narrow band of visible light, from red through yellow and green to blue. Our sensitivity to these various hues of color are not equal. The light sensitive cells in our [eyes](https://www.verywellhealth.com/eye-cones-5088699), called cones, are tuned to perceive some colors more than others. About 65% of cones are _most_ sensitive to a yellow/green, but also respond to red (we'll call these "red" cones). 30% are green sensitive, and only [5% are blue sensitive](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0144891#sec001). While there are far fewer blue-sensitive cones than the other two types, these cones are very sensitive, which partially makes up for their smaller numbers.
 
-Put another way, as humans, blue is perceived differently than other colors for multiple reasons. First, because the blue cones are the most sensitive of the three; second, we have fewer blue cones than red or green; and third, it so happens that these blue-sensitive cones tend to be located at the rims of our eyeballs, away from the center ([fovea centralis](https://en.wikipedia.org/wiki/Fovea_centralis)) of the back of the eyeball, where the red and green cones tend to cluster.
+Deep, pure blue is perceived differently than other colors as blue cones do not contribute to luminance and we have far fewer blue cones than red or green.
 
-There is software that takes advantage of that fact. Because we do not perceive blue as well as other colors, for example, some algorithms for compressing image sizes remove the parts of the image with "blue" more heavily than other parts. Television signals also use this fact to allocate less bandwidth to the yellow-blue part of their signal, thus saving bandwidth.
+![On the left is a cone mosaic of standard vision, and on the right is that of someone with protanopia where they are missing the red cones.](conemosaics.jpg)
 
-Another essential point to consider is the ambiance of light surrounding the color. The color will appear differently if the background lighting is dark or light.
+On the left is the central cone mosaic of standard vision, and on the right is that of someone with protanopia, a form of color vision deficiency, where they are missing the red cones. (Illustration by Mark Fairchild of RIT, [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:ConeMosaics.jpg))
 
-Internal and external factors impact color contrast and perception. In the following image both the yellow dots and the grey of the square they are on, are identical in terms of the sRGB color value that is being displayed on your monitor. Your context-sensitive perception of these colors makes them appear so different, as your brain's image processing adjusts the perception based on what it thinks is in shadow or not.
+The red and the green cones join together to create luminance, which we can think of as lightness/darkness without regard to hue. Separately, the red, green, and blue cones allow for standard vision to perceive millions of colors. For accessibility, it's important to know that our brain processes luminance separately from color (hue and colorfulness).
+
+Luminance provides for fine vision details, including differentiating edges and text. Hue and colorfulness carry a third of the detail of luminance. Image data compression takes advantage of this fact. As an example, [h.264 video codec](/en-US/docs/Web/Media/Formats/Video_codecs) samples color at a fourth of the resolution of the luminance.
+
+For accessibility, this means that luminance contrast is critically important for text. Color, as in hue and colorfulness, is important for _distinguishing_ items such as different lines on a map or bars in a graph.
+
+Another essential point to consider is the color or luminance that is surrounding a color. Colors appear differently depending on what is surrounding them. In the following image, both the yellow dots and the grey squares they are are the same sRGB color. Context-sensitive color perception makes them appear different; your brain's image processing adjusts the perception based on what it thinks is in shadow or not.
 
 ![An image of a checkerboard, where identical colors look different if they are in shadow](yellowdotcheckershadow_dlyon.png)
 
@@ -184,7 +190,7 @@ Our contrast, lightness, and color perception are affected by the context of the
 
 To summarize, color is as much about human physiology and perception in the brain as it is about measuring light from a computer screen. It's also important to understand that the ambient light environment affects the ability to perceive color and contrast. Light and its measurements are linear, but human vision and perception are not.
 
-## Adaption
+## Adaptation
 
 Our eyes don't adapt equally, in the same way, going from light areas to dark ones and vice versa. This is due to the physiological ways our eyes are built. This affects the ability of a user to read text against a background. At least two kinds of adaptation take place: local adaptation and adaptation to an ambient environment.
 
@@ -241,7 +247,7 @@ The nature of blue light causes it to focus at a different location on the retin
 
 ## The special case of red
 
-Not all colors ("hue") are processed similarly by our brains. Human physiology and psychology are affected by the color red, generally speaking, in ways different from that of other colors. We respond physiologically as well as psychologically to colors. For example, it has been demonstrated that [some colors are more likely to cause epileptic fits than others](https://www.sciencedaily.com/releases/2009/09/090925092858.htm). Some devices offer a ["grayscale" setting as an accessibility option](https://ask.metafilter.com/312049/What-is-the-grayscale-setting-for-in-accessibility-options)" which can help people who are photo-sensitive. To mimick the grayscale setting, use the CSS {{cssxref("filter")}} property with a [`grayscale()`](/en-US/docs/Web/CSS/filter-function/grayscale) or [`saturate()`](/en-US/docs/Web/CSS/filter-function/saturate) [`<filter-function>`](/en-US/docs/Web/CSS/filter-function).
+Not all colors ("hue") are processed similarly by our brains. Human physiology and psychology are affected by the color red, generally speaking, in ways different from that of other colors. We respond physiologically as well as psychologically to colors. For example, it has been demonstrated that [some colors are more likely to cause epileptic fits than others](https://www.sciencedaily.com/releases/2009/09/090925092858.htm). Some devices offer a ["grayscale" setting as an accessibility option](https://ask.metafilter.com/312049/What-is-the-grayscale-setting-for-in-accessibility-options)" which can help people who are photo-sensitive. To mimic the grayscale setting, use the CSS {{cssxref("filter")}} property with a [`grayscale()`](/en-US/docs/Web/CSS/filter-function/grayscale) or [`saturate()`](/en-US/docs/Web/CSS/filter-function/saturate) [`<filter-function>`](/en-US/docs/Web/CSS/filter-function).
 
 ### Saturated red
 
@@ -298,5 +304,5 @@ Color as in hues and saturation can affect our mood, and enhance — or de-enhan
 - [`<color>`](/en-US/docs/Web/CSS/color_value) data type
 - [Web accessibility for seizures and physical reactions](/en-US/docs/Web/Accessibility/Seizure_disorders)
 - [How the Color Red Influences Our Behavior](https://www.scientificamerican.com/article/how-the-color-red-influences-our-behavior/) Scientific American By Susana Martinez-Conde, Stephen L. Macknik on November 1, 2014
-- [Red Desaturation](https://www.smart-optometry.com/red-desaturation/) The human eye is so sensitively "tuned" to red, that opthamolegists set up a test using it, assessing the integrity of the optic nerve.
+- [Red Desaturation](https://www.smart-optometry.com/red-desaturation/) The human eye is so sensitively "tuned" to red, that ophthalmologists set up a test using it, assessing the integrity of the optic nerve.
 - [Photic- and pattern-induced seizures: expert consensus of the Epilepsy Foundation of America Working Group](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.532.7063&rep=rep1&type=pdf)

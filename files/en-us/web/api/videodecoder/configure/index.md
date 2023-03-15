@@ -2,12 +2,10 @@
 title: VideoDecoder.configure()
 slug: Web/API/VideoDecoder/configure
 page-type: web-api-instance-method
-status:
-  - experimental
 browser-compat: api.VideoDecoder.configure
 ---
 
-{{APIRef("WebCodecs API")}}{{SecureContext_Header}}{{SeeCompatTable}}
+{{APIRef("WebCodecs API")}}{{SecureContext_Header}}
 
 The **`configure()`** method of the {{domxref("VideoDecoder")}} interface enqueues a control message to configure the video decoder for decoding chunks.
 

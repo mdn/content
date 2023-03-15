@@ -16,9 +16,9 @@ The **`HTMLModElement`** interface provides special properties (beyond the regul
 _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 
 - {{domxref("HTMLModElement.cite")}}
-  - : A string reflecting the {{htmlattrxref("cite", "del")}} HTML attribute, containing a URI of a resource explaining the change.
+  - : A string reflecting the [`cite`](/en-US/docs/Web/HTML/Element/del#cite) HTML attribute, containing a URI of a resource explaining the change.
 - {{domxref("HTMLModElement.dateTime")}}
-  - : A string reflecting the {{htmlattrxref("datetime", "del")}} HTML attribute, containing a date-and-time string representing a timestamp for the change.
+  - : A string reflecting the [`datetime`](/en-US/docs/Web/HTML/Element/del#datetime) HTML attribute, containing a date-and-time string representing a timestamp for the change.
 
 ## Specifications
 

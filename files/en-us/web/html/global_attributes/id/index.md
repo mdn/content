@@ -13,7 +13,7 @@ The **`id`** [global attribute](/en-US/docs/Web/HTML/Global_attributes) defines 
 
 > **Warning:** This attribute's value is an opaque string: this means that web authors should not rely on it to convey human-readable information (although having your IDs somewhat human-readable can be useful for code comprehension, e.g. consider `ticket-18659` versus `r45tgfe-freds&$@`).
 
-`id`'s value must not contain {{glossary("whitespace")}} (spaces, tabs etc.). Browsers treat non-conforming IDs that contain whitespace as if the whitespace is part of the ID. In contrast to the {{htmlattrxref("class")}} attribute, which allows space-separated values, elements can only have one single ID value.
+`id`'s value must not contain {{glossary("whitespace")}} (spaces, tabs etc.). Browsers treat non-conforming IDs that contain whitespace as if the whitespace is part of the ID. In contrast to the [`class`](/en-US/docs/Web/HTML/Global_attributes#class) attribute, which allows space-separated values, elements can only have one single ID value.
 
 > **Note:** Technically, the value for an `id` attribute may contain any character, except {{glossary("whitespace")}} characters. However, to avoid inadvertent errors, only {{glossary("ASCII")}} letters, digits, `'_'`, and `'-'` should be used and the value for an `id` attribute should start with a letter. For example, `.` has a special meaning in CSS (it acts as a [class selector](/en-US/docs/Web/CSS/Class_selectors)). Unless you are careful to escape it in the CSS, it won't be recognized as part of the value of an `id` attribute. It is easy to forget to do this, resulting in bugs in your code that could be hard to detect.
 

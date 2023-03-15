@@ -18,7 +18,7 @@ CSS property {{cssxref("vertical-align")}}, which does in fact also work on imag
 despite its name. You can also use the {{cssxref("float")}} property to float the image
 to the left or right margin.
 
-The `align` property reflects the HTML {{htmlattrxref("align", "img")}}
+The `align` property reflects the HTML [`align`](/en-US/docs/Web/HTML/Element/img#align)
 content attribute.
 
 ## Value
