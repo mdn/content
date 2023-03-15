@@ -128,7 +128,7 @@ scriptNode.onaudioprocess = (audioProcessingEvent) => {
 
 getData();
 
-// wire up play button
+// Wire up the play button
 playButton.onclick = () => {
   source.connect(scriptNode);
   scriptNode.connect(audioCtx.destination);
