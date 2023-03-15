@@ -23,7 +23,7 @@ The storage system described by the Storage Standard, where site data is stored,
 
 In essence, every website has its own storage space into which its data gets placed. In some cases however, user agents may decide to store a single origin's data in multiple different buckets, for example when this origin is embedded in different third-party origins.
 
-To learn more, see [How browsers separate data from different websites? on the Browser storage quotas and eviction criteria page](/en-US/docs/Web/API/Storage_API/Storage_quotas_and_eviction_criteria#how_browsers_separate_data_from_different_websites)
+To learn more, see [How browsers separate data from different websites?](/en-US/docs/Web/API/Storage_API/Storage_quotas_and_eviction_criteria#how_browsers_separate_data_from_different_websites)
 
 ## Bucket modes
 
@@ -34,9 +34,9 @@ Each site storage bucket has a _mode_ that describes the data retention policy f
 - `"persistent"`
   - : The user agent will retain the data as long as possible, clearing all `"best-effort"` buckets before considering clearing a bucket marked `"persistent"`. If it becomes necessary to consider clearing persistent buckets, the user agent will notify the user and provide a way to clear one or more persistent buckets as needed.
 
-You can change an origin's storage bucket mode by using the {{domxref("StorageManager.persist", "navigator.storage.persist()")}} method, which requires the `"persistent-storage"` {{domxref("Permissions_API", "user permission", "", "nocode")}}:
+You can change an origin's storage bucket mode by using the {{domxref("StorageManager.persist", "navigator.storage.persist()")}} method, which requires the `"persistent-storage"` [user permission](/en-US/docs/Web/API/Permissions_API).
 
-```javascript
+```js
 if (navigator.storage && navigator.storage.persist) {
   navigator.storage.persist().then((persistent) => {
     if (persistent) {
@@ -50,7 +50,7 @@ if (navigator.storage && navigator.storage.persist) {
 
 You can also use the {{domxref("StorageManager.persisted", "navigator.storage.persisted()")}} method to know whether an origin's storage is persistent or not:
 
-```javascript
+```js
 if (navigator.storage && navigator.storage.persist) {
   navigator.storage.persisted().then((persistent) => {
     if (persistent) {
@@ -62,7 +62,7 @@ if (navigator.storage && navigator.storage.persist) {
 }
 ```
 
-To learn more, see [Does browser-stored data persist? on the Browser storage quotas and eviction criteria page](/en-US/docs/Web/API/Storage_API/Storage_quotas_and_eviction_criteria#does_browser-stored_data_persist).
+To learn more, see [Does browser-stored data persist?](/en-US/docs/Web/API/Storage_API/Storage_quotas_and_eviction_criteria#does_browser-stored_data_persist).
 
 ## Quotas and usage estimates
 
@@ -81,17 +81,17 @@ navigator.storage.estimate().then((estimate) => {
 });
 ```
 
-For more information about how much data an origin can store, see [How much data can be stored? on the Browser storage quotas and eviction criteria page](/en-US/docs/Web/API/Storage_API/Storage_quotas_and_eviction_criteria#how_much_data_can_be_stored).
+For more information about how much data an origin can store, see [How much data can be stored?](/en-US/docs/Web/API/Storage_API/Storage_quotas_and_eviction_criteria#how_much_data_can_be_stored).
 
 ## Data eviction
 
-Data eviction is the process by which a user agent deletes an origin's stored data. This can happen when the device used to store the data is running low on storage space for example.
+Data eviction is the process by which a user agent deletes an origin's stored data. This can happen, for example, when the device used to store the data is running low on storage space.
 
 When clearing the data stored by an origin, the origin's bucket is treated as a single entity. The entire data stored by this origin is cleared.
 
 If a bucket is marked as `"persistent"`, the contents won't be cleared by the user agent without either the data's origin itself or the user specifically doing so. This includes scenarios such as the user selecting a "Clear Caches" or "Clear Recent History" option. The user will be asked specifically for permission to remove persistent site storage buckets.
 
-To learn more, see [When is data evicted? on the Browser storage quotas and eviction criteria page](/en-US/docs/Web/API/Storage_API/Storage_quotas_and_eviction_criteria#when_is_data_evicted).
+To learn more, see [When is data evicted?](/en-US/docs/Web/API/Storage_API/Storage_quotas_and_eviction_criteria#when_is_data_evicted).
 
 ## Specifications
 
