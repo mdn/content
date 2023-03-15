@@ -42,7 +42,7 @@ _Also implements the properties inherited from its parent, {{domxref("Event")}}_
 
 ## Example
 
-The following example shows basic usage of a `ScriptProcessorNode` to take a
+The following example shows how to use of a `ScriptProcessorNode` to take a
 track loaded via {{domxref("BaseAudioContext/decodeAudioData", "AudioContext.decodeAudioData()")}}, process it, adding a bit
 of white noise to each audio sample of the input track (buffer) and play it through the
 {{domxref("AudioDestinationNode")}}. For each channel and each sample frame, the
