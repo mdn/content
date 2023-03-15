@@ -22,23 +22,22 @@ brightness(amount)
 ### Values
 
 - `amount`
-  - : The brightness of the result, specified as a {{cssxref("&lt;number&gt;")}} or a {{cssxref("&lt;percentage&gt;")}}. A value under `100%` darkens the image, while a value over `100%` brightens it. A value of `0%` will create an image that is completely black, while a value of `100%` leaves the input unchanged. Other values are linear multipliers on the effect. Values of an amount over `100%` are allowed, providing brighter results. The initial value for {{Glossary("interpolation")}} is `1`.
+  - : Brightness specified as a {{cssxref("&lt;number&gt;")}} or a {{cssxref("&lt;percentage&gt;")}}. A value less than `100%` darkens the input image or element, while a value over `100%` brightens it. A value of `0%` creates a completely black image or element, while a value of `100%` leaves the input unchanged. Other values between `0%` to `100%` have a linear multiplier effect. Values greater than `100%` are allowed, providing brighter results. The initial value for {{Glossary("interpolation")}} is `1`. Negative values are not allowed. The default value, when nothing is specified, is `1`.
 
 The following are pairs of equivalent values:
 
 ```css
-brightness(0) /* Completely black */
+brightness(0) /* Brightness is reduced to zero, so input turns black */
 brightness(0%)
 
-brightness(0.4) /* 40% brightness, which is 60% darker */
+brightness(0.4) /* Brightness of input is reduced to 40%, so input is 60% darker */
 brightness(40%)
 
-brightness(1) /* No effect */
+brightness(1) /* Brightness of input is not changed */
 brightness(100%)
 
-brightness(2) /* Double brightness */
+brightness(2) /* Brightness of input is doubled */
 brightness(200%)
-```
 
 ### Formal syntax
 
@@ -46,9 +45,11 @@ brightness(200%)
 
 ## Examples
 
-### With the backdrop-filter property
+### Applying brightness using the backdrop-filter property
 
-This example applies a `brightness()` filter via the `backdrop-filter` CSS property to the paragraph, linearly shifting the colors of area behind the `<p>`.
+This example shows how to apply the `brightness()` filter to a paragraph via the [`backdrop-filter`](/en-US/docs/Web/CSS/backdrop-filter) CSS property.
+
+#### CSS
 
 ```css
 .container {
@@ -92,7 +93,7 @@ p:first-of-type {
   filter: brightness(50%);
 }
 p:last-of-type {
-  filter: contrast(200%);
+  filter: brightness(200%);
 }
 ```
 
@@ -116,11 +117,13 @@ p {
 <p>This paragraph has increased brightness.</p>
 ```
 
-{{EmbedLiveSample('With_the_filter_property','100%','280')}}
+{{EmbedLiveSample('Applying_brightness_using_the_filter_property','100%','280')}}
 
-### With url() SVG brightness filter
+### Applying brightness using the url() SVG brightness filter
 
-The SVG {{SVGElement("filter")}} element is used to define custom filter effects that can then be referenced by {{htmlattrxref("id")}}. The `<filter>`'s {{SVGElement("feComponentTransfer")}} primitive enables pixel-level color remapping. To create a filter that darkens the content on which it is applied by 25%, we set the `slope` attribute to 0.75, for 75% of the original brightness. We can then reference the filter by `id`.
+The SVG {{SVGElement("filter")}} element is used to define custom filter effects that can then be referenced by {{htmlattrxref("id")}}. The `<filter>` element's {{SVGElement("feComponentTransfer")}} primitive enables pixel-level color remapping.
+
+In this example, to create a filter that darkens the content on which it is applied by 25% (i.e., 75% of the original brightness), the `slope` attribute is set to `0.75`. We can then reference the filter by `id`.
 
 Given the following:
 
@@ -153,7 +156,7 @@ filter: url(#darken25); /* with embedded SVG */
 filter: url(folder/fileName.svg#darken25); /* external svg filter definition */
 ```
 
-This example shows three images: the image with a `brightness()` filter function applied, the image with a similar SVG brightness function applied, and the original image for comparison:
+In the images below, the first one has a `brightness()` filter function applied, the second one has a similar SVG brightness function applied, and the third is the original image for comparison.
 
 ```html hidden
 <table cellpadding="5">
@@ -193,7 +196,7 @@ This example shows three images: the image with a `brightness()` filter function
 
 ## See also
 
-- [CSS filter effects](/en-US/docs/Web/CSS/filter_effects/) module
+- [CSS filter effects](/en-US/docs/Web/CSS/filter_effects) module
 - The other {{cssxref("&lt;filter-function&gt;")}} functions available to be used in values of the {{cssxref("filter")}} and {{cssxref("backdrop-filter")}} properties include:
   - {{cssxref("filter-function/blur", "blur()")}}
   - {{cssxref("filter-function/contrast", "contrast()")}}
