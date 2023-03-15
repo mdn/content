@@ -37,9 +37,9 @@ This descriptor helps with the layout and orientation of printed documents, espe
 - `upright`
   - : No orientation is applied and the page is laid out and formatted as normal.
 - `rotate-left`
-  - : After the page has been laid out this value indicates that the page must be displayed rotated a quarter turn to the left (counter-clockwise) of how it was laid out.
+  - : After a page is laid out, the page must be displayed rotated a quarter turn to the left (counter-clockwise).
 - `rotate-right`
-  - : After the page has been laid out this value indicates that the page must be displayed rotated a quarter turn to the right (clockwise) of how it was laid out.
+  - : After the page is laid out, the page must be displayed rotated a quarter turn to the right (clockwise).
 
 ## Formal definition
 
