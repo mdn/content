@@ -58,7 +58,7 @@ This example shows how the contents of a print document can be rotated to suit t
 ```html hidden
 <fieldset id="printStyle">
   <legend>
-    Click print and your page will laid out in portrait and landscape
+    Click Print. The page will be laid out in the defined orientation.
   </legend>
   <button id="print">Print</button>
 </fieldset>
