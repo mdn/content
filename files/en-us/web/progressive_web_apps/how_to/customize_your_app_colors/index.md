@@ -9,11 +9,11 @@ By defining the `theme_color` and `background_color` members in your PWA manifes
 
 ## Customize the app window background color
 
-Use the [`background_color`](/en-US/docs/Web/Manifest/background_color) manifest member in your PWA to define the color that appears in the application window before the app's stylesheets have loaded.
+The [`background_color`](/en-US/docs/Web/Manifest/background_color) manifest member defines the color that appears in the application window before the app's stylesheets have loaded.
 
-The color you choose should match the `background-color` CSS property in your app's stylesheet for a smooth transition between launching the web application and loading its content.
+To theme your PWA, set the value of the `background_color` manifest member to the same color values as the `background-color` CSS property as set in your application's stylesheet. This will ensure a smooth visual transition between launching the web application and loading its content.
 
-Here is a web app manifest file example, showing how to define a background color:
+The value set can be any valid CSS [`<color>`](/en-US/docs/Web/CSS/color_value) value. In this web app manifest file example, the application's background color is set to the [named color](/en-US/docs/Web/CSS/named-color) `peachpuff`. :
 
 ```json
 {
