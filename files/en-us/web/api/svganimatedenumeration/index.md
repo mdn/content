@@ -14,7 +14,7 @@ The **`SVGAnimatedEnumeration`** interface descrobes attributes value which are 
 - {{domxref("SVGAnimatedEnumeration.baseVal", "baseVal")}}
   - : An integer that is the base value of the given attribute before applying any animations.
 - {{domxref("SVGAnimatedEnumeration.animVal", "animVal")}}
-  - : If the given attribute or property is being animated, contains thecurrent animated value of the attribute or property. If the given attribute or property is not currently being animated, contains the same value as `baseVal`.
+  - : If the given attribute or property is being animated, it contains the current animated value of the attribute or property. If the given attribute or property is not currently being animated, it contains the same value as `baseVal`.
 
 ## Instance methods
 
