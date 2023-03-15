@@ -363,7 +363,7 @@ printButton.addEventListener("click", () => {
 
 Click the print button to see the pages rotated.
 
-{{ EmbedLiveSample('Example_of_rotating_printed_pages', '100%', 520) }}
+{{ EmbedLiveSample('Rotating_printed_pages', '100%', 520) }}
 
 ## Specifications
 
