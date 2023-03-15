@@ -142,7 +142,7 @@ as well as custom color spaces, defined via the [`@color-profile`](/en-US/docs/W
 
 In animations and [gradients](/en-US/docs/Web/CSS/CSS_Images/Using_CSS_gradients), `<color>` values are {{Glossary("interpolation", "interpolated")}} on each of their red, green, and blue components. Each component is interpolated as a real, floating-point number. Note that interpolation of colors happens in the [alpha-premultiplied sRGBA color space](https://www.w3.org/TR/css-color-4/#interpolation-alpha) to prevent unexpected gray colors from appearing. In animations, the interpolation's speed is determined by the [timing function](/en-US/docs/Web/CSS/easing-function).
 
-Interpolating the {{cssxref("hue")}} of two colors in functions that accept a hue angle is also possible and is described in more detail in the [`color-mix()`](/en-US/docs/Web/CSS/color_value/color-mix) functional notation documentation.
+Interpolating the {{cssxref("&lt;hue&gt;")}} of two colors in functions that accept a hue angle is also possible and is described in more detail in the [`color-mix()`](/en-US/docs/Web/CSS/color_value/color-mix) functional notation documentation.
 
 ## Accessibility considerations
 
@@ -511,6 +511,6 @@ hsl(240 100% 50% / 5%)       /*   5% opaque blue */
 ## See also
 
 - The {{Cssxref("opacity")}} property lets you define transparency at the element level.
-- {{cssxref("hue")}} data type that represents a color by hue angle.
+- {{cssxref("&lt;hue&gt;")}} data type that represents a color by hue angle.
 - Some common properties that use this data type: {{Cssxref("color")}}, {{Cssxref("background-color")}}, {{Cssxref("border-color")}}, {{Cssxref("box-shadow")}}, {{Cssxref("outline-color")}}, {{Cssxref("text-shadow")}}
 - [Applying color to HTML elements using CSS](/en-US/docs/Web/CSS/CSS_Colors/Applying_color)

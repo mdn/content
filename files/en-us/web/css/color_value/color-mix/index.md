@@ -91,7 +91,7 @@ li:nth-child(3) {
 
 ### Using hue interpolation methods
 
-Hue interpolation methods can be used to control how the {{cssxref("hue")}} is interpolated between two colors.
+Hue interpolation methods can be used to control how the {{cssxref("&lt;hue&gt;")}} is interpolated between two colors.
 For `shorter` the result will be the shortest distance between the two angles (the default) and conversely, `longer` uses the larger value between the two angles in a circle.
 
 For `increasing`, the result will be the angle between 0 and 360 degrees and for `decreasing` the result will be the angle between -360 and 0 degrees.
@@ -164,4 +164,4 @@ div {
 ## See also
 
 - {{cssxref("color_value")}}
-- {{cssxref("hue")}}
+- {{cssxref("&lt;hue&gt;")}}
