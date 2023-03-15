@@ -14,7 +14,7 @@ The **`playbackTime`** read-only property of the {{domxref("AudioProcessingEvent
 
 A number that doesn't need to be an integer.
 
-## Example
+## Examples
 
 ```js
 const audioContext = new AudioContext();
