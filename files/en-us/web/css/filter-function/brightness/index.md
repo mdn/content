@@ -84,7 +84,7 @@ p {
 
 {{EmbedLiveSample('With_the_backdrop-filter_property','100%','280')}}
 
-### With the filter property
+### Applying brightness using the filter property
 
 This example applies a `brightness()` filter via the `filter` CSS property linearly color shifting the entire element, including content, border, and background image.
 
