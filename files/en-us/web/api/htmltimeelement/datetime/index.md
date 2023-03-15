@@ -9,8 +9,7 @@ browser-compat: api.HTMLTimeElement.dateTime
 
 The
 **`HTMLTimeElement.dateTime`**
-property is a string that reflects the {{ htmlattrxref("datetime",
-  "time") }} HTML attribute, containing a machine-readable form of the element's date and
+property is a string that reflects the [`datetime`](/en-US/docs/Web/HTML/Element/time#datetime) HTML attribute, containing a machine-readable form of the element's date and
 time value.
 
 The format of the string must follow one of the following HTML microsyntaxes:

@@ -7,15 +7,15 @@ status:
 browser-compat: api.LayoutShiftAttribution
 ---
 
-{{APIRef("Layout Instability API")}}{{SeeCompatTable}}
+{{APIRef("Performance API")}}{{SeeCompatTable}}
 
-The `LayoutShiftAttribution` interface of the [Layout Instability API](/en-US/docs/Web/API/Layout_Instability_API) provides debugging information about elements which have shifted.
+The `LayoutShiftAttribution` interface provides debugging information about elements which have shifted.
 
 Instances of `LayoutShiftAttribution` are returned in an array by calling {{domxref("LayoutShift.sources")}}.
 
 ## Instance properties
 
-- {{domxref("LayoutShiftAttribution.Node")}} {{ReadOnlyInline}}
+- {{domxref("LayoutShiftAttribution.node")}} {{ReadOnlyInline}}
   - : Returns the element that has shifted (null if it has been removed).
 - {{domxref("LayoutShiftAttribution.previousRect")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns a {{domxref("DOMRectReadOnly")}} object representing the position of the element before the shift.
@@ -29,7 +29,7 @@ Instances of `LayoutShiftAttribution` are returned in an array by calling {{domx
 
 ## Examples
 
-The following example finds the element that is causing the largest layout shift, and prints that `node` to the console. For more detail on this see [Debug Web Vitals in the field](https://web.dev/debug-web-vitals-in-the-field/).
+The following example finds the element with the highest layout shift score, and returns the element in that entry with the largest size prior to the shift (`previousRect`). For more detail on this see [Debug Web Vitals in the field](https://web.dev/debug-web-vitals-in-the-field/).
 
 ```js
 function getCLSDebugTarget(entries) {

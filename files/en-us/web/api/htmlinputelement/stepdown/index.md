@@ -15,7 +15,7 @@ to `n` multiples of the step attribute if a number is passed as the
 parameter.
 
 The method, when invoked, decrements the
-{{htmlattrxref("value","input")}} by ({{htmlattrxref("step","input")}} \* n), where n
+[`value`](/en-US/docs/Web/HTML/Element/input#value) by ([`step`](/en-US/docs/Web/HTML/Element/input#step) \* n), where n
 defaults to 1 if not specified, and
 [`step`](/en-US/docs/Web/HTML/Attributes/step) defaults to the
 default value for `step` if not specified.
@@ -88,16 +88,16 @@ support the `step` attribute (see the list of supported input types above), or i
 
 - {{domxref("HTMLInputElement.stepDown()")}}
 
-  - : Decrements the {{htmlattrxref("value","input")}} by
-    ({{htmlattrxref("step","input")}} \* n), where n defaults to 1 if not specified. Throws
+  - : Decrements the [`value`](/en-US/docs/Web/HTML/Element/input#value) by
+    ([`step`](/en-US/docs/Web/HTML/Element/input#step) \* n), where n defaults to 1 if not specified. Throws
     an `InvalidStateError` exception:
 
     - if the method is not applicable to for the current
-      {{htmlattrxref("type","input")}} value,
-    - if the element has no {{htmlattrxref("step","input")}} value,
-    - if the {{htmlattrxref("value","input")}} cannot be converted to a number,
-    - if the resulting value is above the {{htmlattrxref("max","input")}} or below the
-      {{htmlattrxref("min","input")}}.
+      [`type`](/en-US/docs/Web/HTML/Element/input#type) value,
+    - if the element has no [`step`](/en-US/docs/Web/HTML/Element/input#step) value,
+    - if the [`value`](/en-US/docs/Web/HTML/Element/input#value) cannot be converted to a number,
+    - if the resulting value is above the [`max`](/en-US/docs/Web/HTML/Element/input#max) or below the
+      [`min`](/en-US/docs/Web/HTML/Element/input#min).
 
 ## Syntax
 

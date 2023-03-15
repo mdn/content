@@ -153,7 +153,7 @@ An example of [how to use execCommand with contentEditable elements](https://cod
 
 ### Using insertText
 
-This example shows two very basic HTML editors, one using a {{HTMLElement("textarea")}} element and one using a {{HTMLElement("pre")}} element with the {{htmlattrxref("contenteditable")}} attribute set.
+This example shows two very basic HTML editors, one using a {{HTMLElement("textarea")}} element and one using a {{HTMLElement("pre")}} element with the [`contenteditable`](/en-US/docs/Web/HTML/Global_attributes#contenteditable) attribute set.
 
 Clicking the "Bold" or "Italic" buttons inserts the appropriate tags in the element, using `insertText` to preserve the edit history, so the user can undo the action.
 
