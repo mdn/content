@@ -2,11 +2,6 @@
 title: Your first extension
 slug: Mozilla/Add-ons/WebExtensions/Your_first_WebExtension
 page-type: guide
-tags:
-  - Add-ons
-  - Extensions
-  - Guide
-  - WebExtensions
 ---
 
 {{AddonSidebar}}

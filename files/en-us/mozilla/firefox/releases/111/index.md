@@ -5,7 +5,7 @@ slug: Mozilla/Firefox/Releases/111
 
 {{FirefoxSidebar}}
 
-This article provides information about the changes in Firefox 111 that affect developers. Firefox 111 is the current [Beta version of Firefox](https://www.mozilla.org/en-US/firefox/channel/desktop/#beta) and ships on [March 14, 2023](https://wiki.mozilla.org/RapidRelease/Calendar#Future_branch_dates).
+This article provides information about the changes in Firefox 111 that affect developers. Firefox 111 was released on March 14, 2023.
 
 ## Changes for web developers
 
@@ -19,6 +19,10 @@ This article provides information about the changes in Firefox 111 that affect d
 #### Removals
 
 ### CSS
+
+- CSS color functions `color()`, `lab()`, `lch()`, `oklab()`, and `oklch()` are now supported.
+  These features are disabled by default and can be enabled by setting the preference `layout.css.more_color_4.enabled` to true.
+  For more information, see the [CSS color value](/en-US/docs/Web/CSS/color_value) documentation ([Firefox bug 1352757](https://bugzil.la/1352757) and [Firefox bug 1128204](https://bugzil.la/1128204)).
 
 #### Removals
 
@@ -35,6 +39,9 @@ This article provides information about the changes in Firefox 111 that affect d
 
 ### HTTP
 
+- The HTTP [`Authorization`](/en-US/docs/Web/HTTP/Headers/Authorization) header is removed from cross origin redirects.
+  See [Firefox bug 1802086](https://bugzil.la/1802086) for more details.
+
 #### Removals
 
 ### Security
@@ -47,8 +54,12 @@ This article provides information about the changes in Firefox 111 that affect d
   The data in this file system is origin-specific: permission prompts are not required to access files, and clearing data for the site/origin deletes the storage.
   The OPFS is accessed with the {{domxref("StorageManager.getDirectory()")}} method, by calling `navigator.storage.getDirectory()` in a worker or the main thread.
   See [Firefox bug 1785123](https://bugzil.la/1785123) for more details.
+- The HTTP [`Authorization`](/en-US/docs/Web/HTTP/Headers/Authorization) header is removed from [`fetch()`](/en-US/docs/Web/API/fetch) and [`XMLHttpRequest`](/en-US/docs/Web/API/XMLHttpRequest) requests that are redirected cross-origin (`fetch()` headers may be added by developers using the [`option.headers`](/en-US/docs/Web/API/fetch#headers) argument).
+  See [Firefox bug 1802086](https://bugzil.la/1802086) for more details.
 
 #### DOM
+
+- The {{domxref("FormData")}} constructor now accepts a second optional `submitter` parameter to specify a submit button. If the button has a name or is an image button, it will contribute to the form data set. This makes it possible to create a {{domxref("FormData")}} object with the same data set as a vanilla form submission triggered by the button. See [Firefox bug 1812696](https://bugzil.la/1812696) for more details.
 
 #### Media, WebRTC, and Web Audio
 
@@ -66,7 +77,11 @@ This article provides information about the changes in Firefox 111 that affect d
 
 #### WebDriver BiDi
 
+- Changed the behaviors for handling stale elements checks based on recently updated WebDriver classic specification. See [Firefox bug 1808894](https://bugzil.la/1808894) for more details.
+
 #### Marionette
+
+- Fixed an issue where returning a ShadowRoot from `WebDriver:ExecuteScript` causes a `cyclic object value` error. See [Firefox bug 1764594](https://bugzil.la/1764594) for more details.
 
 ## Changes for add-on developers
 

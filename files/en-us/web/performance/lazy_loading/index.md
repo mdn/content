@@ -60,7 +60,7 @@ See also: [Element Link](/en-US/docs/Web/HTML/Element/link).
 Very often, webpages contain many images that contribute to data-usage and how fast a page can load. Most of those images are off-screen ([non-critical](/en-US/docs/Web/Performance/Critical_rendering_path)), requiring a user interaction, like scrolling, in order to view them.
 
 **Loading attribute**
-The {{htmlattrxref("loading", "img")}} attribute on an {{HTMLElement("img")}} element (or the {{htmlattrxref("loading", "iframe")}} attribute on an {{HTMLElement("iframe")}}) can be used to instruct the browser to defer loading of images/iframes that are off-screen until the user scrolls near them.
+The [`loading`](/en-US/docs/Web/HTML/Element/img#loading) attribute on an {{HTMLElement("img")}} element (or the [`loading`](/en-US/docs/Web/HTML/Element/iframe#loading) attribute on an {{HTMLElement("iframe")}}) can be used to instruct the browser to defer loading of images/iframes that are off-screen until the user scrolls near them.
 
 ```html
 <img src="image.jpg" alt="..." loading="lazy" />

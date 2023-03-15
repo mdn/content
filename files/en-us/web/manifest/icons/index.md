@@ -61,7 +61,7 @@ Image objects may contain the following values:
       <td><code>sizes</code></td>
       <td>
         A string containing space-separated image dimensions using the same syntax as the
-        {{ htmlattrxref("sizes", "link") }}
+        <a href="/en-US/docs/Web/HTML/Element/link#sizes"><code>sizes</code></a>
         attribute.
       </td>
     </tr>

@@ -1,6 +1,9 @@
 ---
 title: <mfenced>
 slug: Web/MathML/Element/mfenced
+status:
+  - deprecated
+  - non-standard
 browser-compat: mathml.elements.mfenced
 ---
 

@@ -7,7 +7,7 @@ status:
 browser-compat: css.selectors.view-transition-group
 ---
 
-{{CSSRef}}{{seecompattable}}
+{{CSSRef}}{{SeeCompatTable}}
 
 The **`::view-transition-group`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) represents a single view transition group.
 

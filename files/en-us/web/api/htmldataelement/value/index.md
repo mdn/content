@@ -8,8 +8,7 @@ browser-compat: api.HTMLDataElement.value
 {{APIRef("HTML DOM")}}
 
 The **`value`** property of the {{domxref("HTMLDataElement")}}
-interface returns a string reflecting the {{htmlattrxref("value",
-  "data")}} HTML attribute.
+interface returns a string reflecting the [`value`](/en-US/docs/Web/HTML/Element/data#value) HTML attribute.
 
 ## Value
 

@@ -2,12 +2,10 @@
 title: CSSStyleValue.parseAll()
 slug: Web/API/CSSStyleValue/parseAll
 page-type: web-api-instance-method
-status:
-  - experimental
 browser-compat: api.CSSStyleValue.parseAll
 ---
 
-{{APIRef("CSS Typed Object Model API")}}{{SeeCompatTable}}
+{{APIRef("CSS Typed Object Model API")}}
 
 The **`parseAll()`** method of the {{domxref("CSSStyleValue")}}
 interface sets all occurrences of a specific CSS property to the specified value and

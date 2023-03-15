@@ -2,12 +2,9 @@
 title: CSS.registerProperty()
 slug: Web/API/CSS/RegisterProperty
 page-type: web-api-static-method
-status:
-  - experimental
 browser-compat: api.CSS.registerProperty
 ---
 
-{{SeeCompatTable}}
 {{APIRef("CSSOM")}}
 
 The **`CSS.registerProperty()`** method registers

@@ -406,7 +406,7 @@ Create the template referenced in the view (**/catalog/templates/catalog/book_re
 {% block content %}
   <h1>Renew: \{{ book_instance.book.title }}</h1>
   <p>Borrower: \{{ book_instance.borrower }}</p>
-  <p{% if book_instance.is_overdue %} class="text-danger"{% endif %}>Due date: \{{ book_instance.due_back }}</p>
+  <p>{% if book_instance.is_overdue %} class="text-danger"{% endif %}>Due date: \{{ book_instance.due_back }}</p>
 
   <form action="" method="post">
     {% csrf_token %}

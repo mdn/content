@@ -2,16 +2,6 @@
 title: webNavigation.onTabReplaced
 slug: Mozilla/Add-ons/WebExtensions/API/webNavigation/onTabReplaced
 page-type: webextension-api-event
-tags:
-  - API
-  - Add-ons
-  - Event
-  - Extensions
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - onTabReplaced
-  - webNavigation
 browser-compat: webextensions.api.webNavigation.onTabReplaced
 ---
 

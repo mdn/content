@@ -4,9 +4,7 @@ slug: Web/MathML/Attribute/Values
 browser-compat: mathml.attribute_values
 ---
 
-<section id="Quick_links">
-  {{ListSubpagesForSidebar("/en-US/docs/Web/MathML")}}
-</section>
+{{MathMLRef}}
 
 ## MathML-specific types
 

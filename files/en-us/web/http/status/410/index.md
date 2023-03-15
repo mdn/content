@@ -29,4 +29,4 @@ If you don't know whether this condition is temporary or permanent, a {{HTTPStat
 ## See also
 
 - {{HTTPStatus(404)}}
-- [410 gone](https://www.exai.com/blog/410-gone-client-error)
+- [410 gone](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes#410)
