@@ -47,7 +47,7 @@ In addition to the common attributes shared by all {{HTMLElement("input")}} elem
 
   - : A Boolean attribute indicating whether this checkbox is checked by default (when the page loads). It does _not_ indicate whether this checkbox is currently checked: if the checkbox's state is changed, this content attribute does not reflect the change. (Only the {{domxref("HTMLInputElement")}}'s `checked` IDL attribute is updated.)
     > **Note:** Unlike other input controls, a checkbox's value is only included in the submitted data if the checkbox is currently `checked`. If it is, then the value of the checkbox's `value` attribute is reported as the input's value.
-    > Unlike other browsers, Firefox by default [persists the dynamic checked state](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing) of an `<input>` across page loads. Use the {{htmlattrxref("autocomplete","input")}} attribute to control this feature.
+    > Unlike other browsers, Firefox by default [persists the dynamic checked state](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing) of an `<input>` across page loads. Use the [`autocomplete`](/en-US/docs/Web/HTML/Element/input#autocomplete) attribute to control this feature.
 
 - `value`
 
@@ -166,7 +166,7 @@ function updateDisplay() {
 
 ## Validation
 
-Checkboxes do support [validation](/en-US/docs/Web/HTML/Constraint_validation) (offered to all {{HTMLElement("input")}}s). However, most of the {{domxref("ValidityState")}}s will always be `false`. If the checkbox has the {{htmlattrxref("required", "input")}} attribute, but is not checked, then {{domxref("ValidityState.valueMissing")}} will be `true`.
+Checkboxes do support [validation](/en-US/docs/Web/HTML/Constraint_validation) (offered to all {{HTMLElement("input")}}s). However, most of the {{domxref("ValidityState")}}s will always be `false`. If the checkbox has the [`required`](/en-US/docs/Web/HTML/Element/input#required) attribute, but is not checked, then {{domxref("ValidityState.valueMissing")}} will be `true`.
 
 ## Examples
 

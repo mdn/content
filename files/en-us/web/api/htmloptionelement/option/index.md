@@ -33,7 +33,7 @@ new Option(text, value, defaultSelected, selected)
     value, e.g. for the associated {{htmlelement("select")}} element's value when the form
     is submitted to the server.
 - `defaultSelected` {{optional_inline}}
-  - : A value of either `true` or `false` that sets the {{htmlattrxref("selected", "option")}}
+  - : A value of either `true` or `false` that sets the [`selected`](/en-US/docs/Web/HTML/Element/option#selected)
     attribute value, i.e. so that this {{htmlelement("option")}} will be the default value
     selected in the {{htmlelement("select")}} element when the page is first loaded. If
     this is not specified, a default value of false is used. Note that a value of true

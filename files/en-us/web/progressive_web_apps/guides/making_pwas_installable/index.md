@@ -130,7 +130,7 @@ By default, the install prompt contains the name and icon for the PWA. If you pr
 
 The screenshot below shows what the install prompt for the [PWAmp demo](https://github.com/MicrosoftEdge/Demos/tree/main/pwamp) looks like on Google Chrome, running on Android:
 
-![Install prompt for pwamp on Android](pwamp-install-prompt-android.png)
+![Install prompt for PWAmp on Android](pwamp-install-prompt-android.png)
 
 ## Launching the app
 
