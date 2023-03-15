@@ -91,12 +91,15 @@ Some CSS properties can take a dimension or a percentage value. In this case the
 
 ## Color
 
-[The CSS Color Specification](https://www.w3.org/TR/css-color-3/) defines the {{cssxref("&lt;color&gt;")}} data type, and other types which relate to color in CSS.
+[The CSS Color Specification](https://www.w3.org/TR/css-color-4/) defines the {{cssxref("&lt;color&gt;")}} data type, and other types which relate to color in CSS.
 
 - {{cssxref("&lt;color&gt;")}}
   - : Specified as a keyword or a numerical color value.
 - {{cssxref("&lt;alpha-value&gt;")}}
   - : Specifies the transparency of a color. May be a `<number>`, in which case 0 is fully transparent and 1 is fully opaque, or a `<percentage>`, in which case 0% is fully transparent and 100% fully opaque.
+- {{cssxref("&lt;hue&gt;")}}
+  - : Specifies the angle of the color circle (the rainbow, twisted around into a circle, and with purple added between violet and red).
+    May be a `<number>` between 0 and 360, or an `<angle>` with a unit identifier of `deg`, `grad`, `rad`, or `turn`.
 
 ## Images
 
