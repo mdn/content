@@ -56,7 +56,7 @@ Here is a web app manifest file example, showing how to define a theme color:
     }
   ],
   "display": "standalone",
-  "theme_color: "peachpuff"
+  "theme_color": "peachpuff"
 }
 ```
 
