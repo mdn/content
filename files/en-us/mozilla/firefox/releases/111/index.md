@@ -5,7 +5,7 @@ slug: Mozilla/Firefox/Releases/111
 
 {{FirefoxSidebar}}
 
-This article provides information about the changes in Firefox 111 that affect developers. Firefox 111 is the current [Beta version of Firefox](https://www.mozilla.org/en-US/firefox/channel/desktop/#beta) and ships on [March 14, 2023](https://wiki.mozilla.org/RapidRelease/Calendar#Future_branch_dates).
+This article provides information about the changes in Firefox 111 that affect developers. Firefox 111 was released on March 14, 2023.
 
 ## Changes for web developers
 
@@ -59,6 +59,8 @@ This article provides information about the changes in Firefox 111 that affect d
 
 #### DOM
 
+- The {{domxref("FormData")}} constructor now accepts a second optional `submitter` parameter to specify a submit button. If the button has a name or is an image button, it will contribute to the form data set. This makes it possible to create a {{domxref("FormData")}} object with the same data set as a vanilla form submission triggered by the button. See [Firefox bug 1812696](https://bugzil.la/1812696) for more details.
+
 #### Media, WebRTC, and Web Audio
 
 - [`RTCInboundRtpStreamStats.trackIdentifier`](/en-US/docs/Web/API/RTCInboundRtpStreamStats#trackidentifier) is now supported.
@@ -75,7 +77,11 @@ This article provides information about the changes in Firefox 111 that affect d
 
 #### WebDriver BiDi
 
+- Changed the behaviors for handling stale elements checks based on recently updated WebDriver classic specification. See [Firefox bug 1808894](https://bugzil.la/1808894) for more details.
+
 #### Marionette
+
+- Fixed an issue where returning a ShadowRoot from `WebDriver:ExecuteScript` causes a `cyclic object value` error. See [Firefox bug 1764594](https://bugzil.la/1764594) for more details.
 
 ## Changes for add-on developers
 
