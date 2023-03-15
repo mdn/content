@@ -293,7 +293,7 @@ This example shows how the contents of a print document can be rotated to suit t
 
 #### CSS
 
-The first part of the [CSS](/en-US/docs/Web/CSS) sets up the [named pages](/en-US/docs/Web/CSS/@page#named_pages) and these to dictate which direction the content should be rotated.
+In this first part of the CSS code, [named pages](/en-US/docs/Web/CSS/@page#named_pages) are set up to define the direction in which to rotate the content.
 
 ```css
 @page upright {
