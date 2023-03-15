@@ -13,7 +13,7 @@ The read-only **`clipPathUnits`** property of the {{domxref("SVGClipPathElement"
 
 ## Value
 
-An {{domxref("SVGAnimatedEnumeration")}} representing the coordinate system. The possible values are the one defined in the {{domxref("SVGUnitTypes")}} interface:
+An {{domxref("SVGAnimatedEnumeration")}} representing the coordinate system. The possible values are defined in the {{domxref("SVGUnitTypes")}} interface:
 
 - `0` (`SVG_UNIT_TYPE_UNKWOWN`)
   - : The type is not one of the predefined type.
