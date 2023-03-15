@@ -17,7 +17,7 @@ The output buffer is represented by an {{domxref("AudioBuffer")}} object, which 
 
 An {{domxref("AudioBuffer")}} object.
 
-## Example
+## Examples
 
 In this example, a {{domxref("ScriptProcessorNode")}} is created with a buffer size of 256 samples, 2 input channels, and 2 output channels. When an {{domxref("ScriptProcessorNode/audioprocess_event", "audioprocess")}} event is fired, the input and output buffers are retrieved from the event object. The audio data in the input buffer is processed, and the result is written to the output buffer. In this case, the audio data is scaled down by a factor of 0.5.
 
