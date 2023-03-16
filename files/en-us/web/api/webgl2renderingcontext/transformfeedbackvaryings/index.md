@@ -38,7 +38,7 @@ None ({{jsxref("undefined")}}).
 ```js
 const transformFeedback = gl.createTransformFeedback();
 gl.bindTransformFeedback(gl.TRANSFORM_FEEDBACK, transformFeedback);
-const transformFeedbackOutputs = ['gl_Position', 'anotherOutput'];
+const transformFeedbackOutputs = ["gl_Position", "anotherOutput"];
 
 gl.transformFeedbackVaryings(
   shaderProg,

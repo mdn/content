@@ -35,7 +35,7 @@ otherwise.
 ```js
 // program is a linked WebGLProgram
 
-gl.getFragDataLocation(program, 'fragColor');
+gl.getFragDataLocation(program, "fragColor");
 ```
 
 ## Specifications

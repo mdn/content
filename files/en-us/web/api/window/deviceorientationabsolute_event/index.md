@@ -1,5 +1,5 @@
 ---
-title: 'Window: deviceorientationabsolute event'
+title: "Window: deviceorientationabsolute event"
 slug: Web/API/Window/deviceorientationabsolute_event
 page-type: web-api-event
 browser-compat: api.Window.deviceorientationabsolute_event
@@ -16,9 +16,9 @@ This event is not cancelable and does not bubble.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('deviceorientationabsolute', (event) => { });
+addEventListener("deviceorientationabsolute", (event) => {});
 
-ondeviceorientationabsolute = (event) => { };
+ondeviceorientationabsolute = (event) => {};
 ```
 
 ## Event type

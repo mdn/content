@@ -1575,4 +1575,4 @@ You can specify as many `<source>`s as you wish, though typically 2 or 3 is all 
 - [Guide to video codecs used on the web](/en-US/docs/Web/Media/Formats/Video_codecs)
 - The {{Glossary("HTML")}} {{HTMLElement("img")}} and {{HTMLElement("picture")}} elements
 - The CSS {{cssxref("background-image")}} property
-- The {{domxref("HTMLImageElement.Image()")}} constructor and the {{domxref("HTMLImageElement")}} interface
+- The {{domxref("HTMLImageElement.Image()", "Image()")}} constructor and the {{domxref("HTMLImageElement")}} interface

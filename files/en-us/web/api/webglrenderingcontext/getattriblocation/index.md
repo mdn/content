@@ -33,7 +33,7 @@ Returns -1 otherwise.
 ## Examples
 
 ```js
-gl.getAttribLocation(program, 'vColor');
+gl.getAttribLocation(program, "vColor");
 ```
 
 ## Specifications

@@ -196,6 +196,7 @@ In the following example, two layers are created with no rules applied, then CSS
 ## See also
 
 - [`@import`](/en-US/docs/Web/CSS/@import)
+- The two associated interfaces: {{domxref("CSSLayerBlockRule")}} and {{domxref("CSSLayerStatementRule")}}
 - [The `!important` flag](/en-US/docs/Web/CSS/important)
 - [The `revert-layer` keyword](/en-US/docs/Web/CSS/revert-layer)
 - [Introducing the CSS Cascade](/en-US/docs/Web/CSS/Cascade)

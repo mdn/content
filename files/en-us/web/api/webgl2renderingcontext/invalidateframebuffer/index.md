@@ -55,8 +55,10 @@ None ({{jsxref("undefined")}}).
 ## Examples
 
 ```js
-gl.invalidateFramebuffer(gl.READ_FRAMEBUFFER,
-                         [gl.COLOR_ATTACHMENT0, gl.COLOR_ATTACHMENT1]);
+gl.invalidateFramebuffer(gl.READ_FRAMEBUFFER, [
+  gl.COLOR_ATTACHMENT0,
+  gl.COLOR_ATTACHMENT1,
+]);
 ```
 
 ## Specifications

@@ -60,9 +60,12 @@ fetch(resource, options)
         (This behavior was corrected in Firefox 65 — see [Firefox bug 1508661](https://bugzil.la/1508661).)
         Any string which is a case-insensitive match for one of the methods in [RFC 9110](https://www.rfc-editor.org/rfc/rfc9110#name-overview) will be uppercased automatically. If you want to use a custom method (like `PATCH`), you should uppercase it yourself.
     - `headers`
-      - : Any headers you want to add to your request, contained within a
-        {{domxref("Headers")}} object or an object literal with {{jsxref("String")}}
-        values. Note that [some names are forbidden](/en-US/docs/Glossary/Forbidden_header_name).
+
+      - : Any headers you want to add to your request, contained within a {{domxref("Headers")}} object or an object literal with {{jsxref("String")}} values.
+        Note that [some names are forbidden](/en-US/docs/Glossary/Forbidden_header_name).
+
+        > **Note:** The [`Authorization`](/en-US/docs/Web/HTTP/Headers/Authorization) HTTP header may be added to a request, but will be removed if the request is redirected cross-origin.
+
     - `body`
       - : Any body that you want to add to your request:
         this can be a {{domxref("Blob")}}, an {{jsxref("ArrayBuffer")}}, a {{jsxref("TypedArray")}}, a {{jsxref("DataView")}},
