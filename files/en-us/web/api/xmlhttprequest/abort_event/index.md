@@ -111,15 +111,15 @@ function runXHR(url) {
 }
 
 xhrButtonSuccess.addEventListener("click", () => {
-  runXHR("dgszyjnxcaipwzy.jpg");
+  runXHR("my-picture.jpg");
 });
 
 xhrButtonError.addEventListener("click", () => {
-  runXHR("https://somewhere.org/i-dont-exist");
+  runXHR("https://example.com/some-path");
 });
 
 xhrButtonAbort.addEventListener("click", () => {
-  runXHR("dgszyjnxcaipwzy.jpg").abort();
+  runXHR("my-picture.jpg").abort();
 });
 ```
 
