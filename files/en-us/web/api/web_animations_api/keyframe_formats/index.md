@@ -16,25 +16,30 @@ There are two different ways to format keyframes:
 1. An `array` of objects (keyframes) consisting of properties and values to iterate over. This is the canonical format returned by the {{domxref("KeyframeEffect.getKeyframes()", "getKeyframes()")}} method.
 
    ```js
-   element.animate([
-     { // from
-       opacity: 0,
-       color: "#fff"
-     },
-     { // to
-       opacity: 1,
-       color: "#000"
-     }
-   ], 2000);
+   element.animate(
+     [
+       {
+         // from
+         opacity: 0,
+         color: "#fff",
+       },
+       {
+         // to
+         opacity: 1,
+         color: "#000",
+       },
+     ],
+     2000
+   );
    ```
 
    Offsets for each keyframe can be specified by providing an `offset` value.
 
    ```js
-   element.animate([ { opacity: 1 },
-                     { opacity: 0.1, offset: 0.7 },
-                     { opacity: 0 } ],
-                   2000);
+   element.animate(
+     [{ opacity: 1 }, { opacity: 0.1, offset: 0.7 }, { opacity: 0 }],
+     2000
+   );
    ```
 
    > **Note:** `offset` values, if provided, must be between 0.0 and 1.0 (inclusive) and arranged in ascending order.
@@ -44,10 +49,14 @@ There are two different ways to format keyframes:
    The easing to apply between keyframes can be specified by providing an `easing` value as illustrated below.
 
    ```js
-   element.animate([ { opacity: 1, easing: 'ease-out' },
-                     { opacity: 0.1, easing: 'ease-in' },
-                     { opacity: 0 } ],
-                   2000);
+   element.animate(
+     [
+       { opacity: 1, easing: "ease-out" },
+       { opacity: 0.1, easing: "ease-in" },
+       { opacity: 0 },
+     ],
+     2000
+   );
    ```
 
    In this example, the specified easing only applies from the keyframe where it is specified until the next keyframe. Any `easing` value specified on the `options` argument, however, applies across a single iteration of the animation — for the entire duration.
@@ -55,29 +64,38 @@ There are two different ways to format keyframes:
 2. An `object` containing key-value pairs consisting of the property to animate and an `array` of values to iterate over.
 
    ```js
-   element.animate({
-     opacity: [ 0, 1 ],          // [ from, to ]
-     color:   [ "#fff", "#000" ] // [ from, to ]
-   }, 2000);
+   element.animate(
+     {
+       opacity: [0, 1], // [ from, to ]
+       color: ["#fff", "#000"], // [ from, to ]
+     },
+     2000
+   );
    ```
 
    Using this format, the number of elements in each array does not need to be equal. The provided values will be spaced out independently.
 
    ```js
-   element.animate({
-     opacity: [ 0, 1 ], // offset: 0, 1
-     backgroundColor: [ "red", "yellow", "green" ], // offset: 0, 0.5, 1
-   }, 2000);
+   element.animate(
+     {
+       opacity: [0, 1], // offset: 0, 1
+       backgroundColor: ["red", "yellow", "green"], // offset: 0, 0.5, 1
+     },
+     2000
+   );
    ```
 
    The special keys `offset`, `easing`, and `composite` (described below) may be specified alongside the property values.
 
    ```js
-   element.animate({
-     opacity: [ 0, 0.9, 1 ],
-     offset: [ 0, 0.8 ], // Shorthand for [ 0, 0.8, 1 ]
-     easing: [ 'ease-in', 'ease-out' ],
-   }, 2000);
+   element.animate(
+     {
+       opacity: [0, 0.9, 1],
+       offset: [0, 0.8], // Shorthand for [ 0, 0.8, 1 ]
+       easing: ["ease-in", "ease-out"],
+     },
+     2000
+   );
    ```
 
    After generating a suitable set of keyframes from the property value lists, each supplied offset is applied to the corresponding keyframe. If there are insufficient values, or if the list contains `null` values, the keyframes without specified offsets will be evenly spaced as with the array format described above.
@@ -89,9 +107,7 @@ There are two different ways to format keyframes:
 In newer browser versions, you are able to set a beginning or end state for an animation only (i.e. a single keyframe), and the browser will infer the other end of the animation if it is able to. For example, consider [this simple animation](https://mdn.github.io/dom-examples/web-animations-api/implicit-keyframes.html) — the Keyframe object looks like so:
 
 ```js
-let rotate360 = [
-  { transform: 'rotate(360deg)' }
-];
+let rotate360 = [{ transform: "rotate(360deg)" }];
 ```
 
 We have only specified the end state of the animation, and the beginning state is implied.

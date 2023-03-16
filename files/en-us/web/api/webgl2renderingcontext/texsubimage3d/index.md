@@ -137,7 +137,19 @@ None ({{jsxref("undefined")}}).
 ## Examples
 
 ```js
-gl.texSubImage3D(gl.TEXTURE_3D, 0, 0, 0, 0, image.width, image.height, 1, gl.RGBA, gl.UNSIGNED_BYTE, image);
+gl.texSubImage3D(
+  gl.TEXTURE_3D,
+  0,
+  0,
+  0,
+  0,
+  image.width,
+  image.height,
+  1,
+  gl.RGBA,
+  gl.UNSIGNED_BYTE,
+  image
+);
 ```
 
 ## Specifications
