@@ -42,7 +42,7 @@ A string or `null`.
 const log = document.getElementById("log");
 const text = document.getElementById("text");
 
-// Create the keyyframe and launch the animation
+// Create the keyframe and launch the animation
 const animation = text.animate(
   [
     { transform: "rotate(0)" },
