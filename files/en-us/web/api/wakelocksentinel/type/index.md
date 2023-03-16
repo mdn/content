@@ -23,7 +23,7 @@ This example shows an asynchronous function that acquires a
 
 ```js
 const requestWakeLock = async () => {
-  wakeLock = await navigator.wakeLock.request('screen');
+  wakeLock = await navigator.wakeLock.request("screen");
   console.log(wakeLock.type); // logs 'screen'
 };
 

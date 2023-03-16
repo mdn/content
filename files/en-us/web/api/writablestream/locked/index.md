@@ -16,23 +16,26 @@ A boolean value indicating whether or not the writable stream is locked.
 ## Examples
 
 ```js
-const writableStream = new WritableStream({
-  write(chunk) {
-    // ...
+const writableStream = new WritableStream(
+  {
+    write(chunk) {
+      // ...
+    },
+    close() {
+      // ...
+    },
+    abort(err) {
+      // ...
+    },
   },
-  close() {
-    // ...
-  },
-  abort(err) {
-    // ...
-  }
-}, queuingStrategy);
+  queuingStrategy
+);
 
 // ...
 
 const writer = writableStream.getWriter();
 
-writableStream.locked
+writableStream.locked;
 // should return true, as the stream has been locked to a writer
 ```
 

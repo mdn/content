@@ -21,7 +21,7 @@ override-colors: 0 red;
 /* using hex-color */
 override-colors: 0 #f00;
 
-/* using rbg */
+/* using rgb */
 override-colors: 0 rgb(255, 0, 0);
 
 /* overriding multiple colors */

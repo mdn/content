@@ -29,8 +29,8 @@ A {{domxref("WebGLBuffer")}} storing data such as vertices or colors.
 ### Creating a buffer
 
 ```js
-const canvas = document.getElementById('canvas');
-const gl = canvas.getContext('webgl');
+const canvas = document.getElementById("canvas");
+const gl = canvas.getContext("webgl");
 const buffer = gl.createBuffer();
 ```
 
