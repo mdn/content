@@ -44,7 +44,7 @@ Each object in the file handler array must contain the following values (`action
     <tr>
       <td><code>action</code></td>
       <td>
-        A required string containing the URL to navigate to when a file is handled. This URL should be within the <a href="/en-US/docs/Web/Manifest/scope">scope</a> of the PWA.
+        A string containing the URL to navigate to when a file is handled. This URL should be within the <a href="/en-US/docs/Web/Manifest/scope">scope</a> of the PWA.
       </td>
     </tr>
     <tr>
