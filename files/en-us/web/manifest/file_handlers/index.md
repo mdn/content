@@ -21,13 +21,13 @@ browser-compat: html.manifest.file_handlers
   </tbody>
 </table>
 
-The `file_handlers` member specifies an array of objects representing the types of files the installed [progressive web app (PWA)](/en-US/docs/Web/Progressive_web_apps) can handle.
+The `file_handlers` member specifies an array of objects representing the types of files an installed [progressive web app (PWA)](/en-US/docs/Web/Progressive_web_apps) can handle.
 
-The `file_handlers` member is used by the browser when the PWA is installed to register the application in the operating system's file association registry.
+The `file_handlers` member is read by the browser when the PWA is installed, and used to associate the application with a given set of file types, at the operating system level.
 
-For example, a PWA can be registered to handle files that match the `text/plain` [MIME type](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types). Once installed, the operating system might use the PWA to handle text files.
+For example, a PWA can be registered to handle files that match the `text/plain` [MIME type](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types). Once installed, the operating system might use the PWA to handle text files. Note that the way operating systems manage the association between file types and applications, and the way they let users select an application to handle a given file can vary.
 
-Note that the way operating systems manage and let users select an application to handle a given file varies.
+> **Note:** While the `file_handlers` member is used to register a PWA with a given set of file types, this only results in the operating system launching the PWA when a matching file is opened. The PWA then needs to actually handle the file using JavaScript code. See [Handling the files](#handling_the_files) for more information.
 
 ## Values
 
@@ -74,16 +74,21 @@ In this example, a web app manifest declares one file handler that registers the
         "audio/ogg": [".ogg"],
         "application/ogg": [".ogg"],
         "audio/webm": [".webm"],
-        "audio/flac": [".flac"]
+        "audio/flac": [".flac"],
+        "audio/mid": [".rmi", ".mid"]
       }
     }
   ]
 }
 ```
 
-To actually implement file handling in a PWA, web developers also need to use {{domxref("window.launchQueue")}} to handle the incoming file.
+### Handling the files
 
-In this example, {{domxref("LaunchQueue.setConsumer", "window.launchQueue.setConsumer()")}} is used to specify a callback function that plays the handled audio file:
+To actually implement file handling in a PWA, web developers also need to use {{domxref("window.launchQueue")}} to handle the incoming files in their application JavaScript code.
+
+Handling files is done in the application code that runs on the {{Glossary("main thread")}}, not in the application's [service worker](/en-US/docs/Web/API/Service_Worker_API).
+
+In the following example, {{domxref("LaunchQueue.setConsumer", "window.launchQueue.setConsumer()")}} is used to specify a callback function that receives incoming audio files and plays the first one using an {{domxref("HTMLAudioElement.Audio", "Audio")}} element:
 
 ```js
 async function playSong(handledFile) {
@@ -114,4 +119,3 @@ if ("launchQueue" in window) {
 
 - [Handle files in Progressive Web Apps on learn.microsoft.com](https://learn.microsoft.com/microsoft-edge/progressive-web-apps-chromium/how-to/handle-files)
 - [Let installed web applications be file handlers on developer.chrome.com](https://developer.chrome.com/articles/file-handling/)
-

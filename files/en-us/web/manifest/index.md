@@ -8,11 +8,11 @@ browser-compat: html.manifest
 
 **Web app manifests** are part of a collection of web technologies called [progressive web apps](/en-US/docs/Web/Progressive_web_apps) (PWAs).
 
-PWAs are web apps that can be installed on a device without an app store. Unlike browser or home screen bookmarks, installed PWAs can work offline, use regular [Web APIs](/en-US/docs/Web/API), and integrate in the operating system they're installed on more deeply than websites can.
+PWAs are web apps that can be installed on a device without an app store. Unlike browser or home screen bookmarks, installed PWAs can work offline, can use regular [Web APIs](/en-US/docs/Web/API), and can be fully integrated into the operating system they're installed on.
 
 A web application manifest, as defined in the [Web Application Manifest](https://w3c.github.io/manifest/) specification, provides information about a web application in a {{Glossary("JSON")}} text file. A web application manifest is necessary for the web app to be installed on a device and behave like other OS-native apps.
 
-A PWA's manifest includes its name, icon(s), description, and ways that the PWA appears and integrates in the operating system where it's installed.
+A PWA's manifest includes its [name](/en-US/docs/Web/Manifest/name), [icon(s)](/en-US/docs/Web/Manifest/icons), [description](/en-US/docs/Web/Manifest/description), and ways that the PWA appears and integrates into the operating system where it's installed.
 
 ## Members
 
