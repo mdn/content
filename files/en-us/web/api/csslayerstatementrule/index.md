@@ -63,6 +63,6 @@ item.textContent = `The CSS @layer statement declares the following layers: ${la
 
 ## See also
 
-- {{cssxref("@layer")}} 
+- {{cssxref("@layer")}}
 - [The `@layer` statement at-rule for named layers](/en-US/docs/Learn/CSS/Building_blocks/Cascade_layers#the_layer_statement_at-rule_for_named_layers)
 - {{DOMxRef("CSSLayerBlockRule")}}
