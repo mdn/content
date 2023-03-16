@@ -1,14 +1,6 @@
 ---
 title: Using custom elements
 slug: Web/Web_Components/Using_custom_elements
-tags:
-  - Classes
-  - Guide
-  - HTML
-  - Web Components
-  - autonomous
-  - custom elements
-  - customized
 ---
 
 {{DefaultAPISidebar("Web Components")}}

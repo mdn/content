@@ -1,10 +1,6 @@
 ---
 title: Capabilities
 slug: Web/WebDriver/Capabilities
-tags:
-  - Reference
-  - WebDriver
-  - capabilities
 ---
 
 {{QuickLinksWithSubpages("/en-US/docs/Web/WebDriver")}}

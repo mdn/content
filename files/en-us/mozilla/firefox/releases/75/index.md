@@ -19,7 +19,7 @@ This article provides information about the changes in Firefox 75 that will affe
 
 ### HTML
 
-- The {{htmlattrxref("loading", "img")}} attribute of the {{HTMLElement("img")}} element has now been implemented. This string value can be used to specify that the image should be [lazily loaded](/en-US/docs/Web/Performance/Lazy_loading), by setting its value to `lazy` ([Firefox bug 1542784](https://bugzil.la/1542784)).
+- The [`loading`](/en-US/docs/Web/HTML/Element/img#loading) attribute of the {{HTMLElement("img")}} element has now been implemented. This string value can be used to specify that the image should be [lazily loaded](/en-US/docs/Web/Performance/Lazy_loading), by setting its value to `lazy` ([Firefox bug 1542784](https://bugzil.la/1542784)).
 - The value of the [`<style>`](/en-US/docs/Web/HTML/Element/style) element's `type` attribute is now restricted to `text/css` only, as per the spec ([Firefox bug 1614329](https://bugzil.la/1614329)).
 
 ### CSS

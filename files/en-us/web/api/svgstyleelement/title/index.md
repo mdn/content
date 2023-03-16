@@ -44,7 +44,7 @@ We also define a text area for logging the current title.
 The code below gets the `style` element (an `SVGStyleElement`) using its tag name, logs the title, then changes and logs the title again.
 
 ```js
-const log = document.getElementById("log")
+const log = document.getElementById("log");
 
 const svg = document.querySelector("svg");
 const style = svg.querySelector("style");

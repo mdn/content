@@ -1,11 +1,6 @@
 ---
 title: <mover>
 slug: Web/MathML/Element/mover
-tags:
-  - MathML
-  - MathML Reference
-  - MathML:Element
-  - MathML:Script and Limit Schemata
 browser-compat: mathml.elements.mover
 ---
 

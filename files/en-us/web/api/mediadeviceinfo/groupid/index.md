@@ -35,8 +35,7 @@ use the built-in camera and microphone on the same display at the same time.
 const getDeviceGroup = (mainDevInfo) => {
   let devList = [];
 
-  navigator.mediaDevices.enumerateDevices()
-  .then((devices) => {
+  navigator.mediaDevices.enumerateDevices().then((devices) => {
     devices.forEach((device) => {
       if (device.groupId === mainDevInfo.groupId) {
         devList.push(device);
@@ -75,11 +74,12 @@ then adds any other members of the group that are found:
 const getDeviceGroup = (mainDevInfo) => {
   let devList = [mainDevInfo];
 
-  navigator.mediaDevices.enumerateDevices()
-  .then((devices) => {
+  navigator.mediaDevices.enumerateDevices().then((devices) => {
     devices.forEach((device) => {
-      if ((device.groupId === mainDevInfo.groupId) &&
-          (device.deviceId !== mainDevInfo.deviceId)) {
+      if (
+        device.groupId === mainDevInfo.groupId &&
+        device.deviceId !== mainDevInfo.deviceId
+      ) {
         devList.push(device);
       }
     });

@@ -105,14 +105,15 @@ offer and sends it to the remote system over a signaling channel.
 > fulfillment handler, depend entirely on your design.
 
 ```js
-myPeerConnection.createOffer()
+myPeerConnection
+  .createOffer()
   .then((offer) => myPeerConnection.setLocalDescription(offer))
   .then(() => {
     sendToServer({
       name: myUsername,
       target: targetUsername,
       type: "video-offer",
-      sdp: myPeerConnection.localDescription
+      sdp: myPeerConnection.localDescription,
     });
   })
   .catch((reason) => {

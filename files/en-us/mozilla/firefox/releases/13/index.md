@@ -11,7 +11,7 @@ Firefox 13 was shipped on June 5, 2012. This page summarizes the changes in Fire
 
 ### HTML
 
-- Tables' {{htmlattrxref("cellspacing", "table")}} attributes are now parsed the same outside quirks mode as they are in quirks mode. That is, if a value is specified as a percentage, it's treated as a number of pixels instead, since percentage values are not actually permitted according to the specification.
+- Tables' [`cellspacing`](/en-US/docs/Web/HTML/Element/table#cellspacing) attributes are now parsed the same outside quirks mode as they are in quirks mode. That is, if a value is specified as a percentage, it's treated as a number of pixels instead, since percentage values are not actually permitted according to the specification.
 - The {{htmlelement("wbr")}} element has seen its bidirectional behavior fixed. It now behaves like the Unicode `U+200B ZERO-WIDTH SPACE` and therefore doesn't affect bi-directionality of its parent element anymore.
 - The {{Cssxref(":invalid")}} pseudo-class can now be applied to the {{htmlelement("form")}} element.
 

@@ -35,7 +35,7 @@ A {{jsxref("Promise")}} that resolves with {{jsxref("undefined")}}.
 Once all messages in an application have been read, call `clearAppBadge()` to clear the badge and remove the notification.
 
 ```js
-navigator.clearAppBadge()
+navigator.clearAppBadge();
 ```
 
 ## Specifications

@@ -1,12 +1,6 @@
 ---
 title: Cookie
 slug: Web/HTTP/Headers/Cookie
-tags:
-  - Cookies
-  - HTTP
-  - Reference
-  - header
-  - request
 browser-compat: http.headers.Cookie
 ---
 

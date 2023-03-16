@@ -1,14 +1,9 @@
 ---
 title: DPR
 slug: Web/HTTP/Headers/DPR
-tags:
-  - DPR
-  - Client hints
-  - HTTP
-  - HTTP Header
-  - Request header
-  - Deprecated
-  - Non-standard
+status:
+  - deprecated
+  - non-standard
 browser-compat: http.headers.DPR
 ---
 

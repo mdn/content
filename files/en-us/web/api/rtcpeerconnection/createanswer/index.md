@@ -77,11 +77,12 @@ to another peer across the signaling channel.
 > fulfillment handler, depend entirely on your design
 
 ```js
-pc.createAnswer().then((answer) => pc.setLocalDescription(answer))
-.then(() => {
-  // Send the answer to the remote peer through the signaling server.
-})
-.catch(handleGetUserMediaError);
+pc.createAnswer()
+  .then((answer) => pc.setLocalDescription(answer))
+  .then(() => {
+    // Send the answer to the remote peer through the signaling server.
+  })
+  .catch(handleGetUserMediaError);
 ```
 
 This asks {{domxref("RTCPeerConnection")}} to create and return a new answer. In our

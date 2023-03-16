@@ -52,7 +52,7 @@ let resolver;
 let client;
 
 // `self` is the global object in service worker
-self.addEventListener('paymentrequest', async e => {
+self.addEventListener("paymentrequest", async (e) => {
   if (payment_request_event) {
     // If there's an ongoing payment transaction, reject it.
     resolver.reject();
@@ -61,7 +61,6 @@ self.addEventListener('paymentrequest', async e => {
   payment_request_event = e;
 
   // ...
-
 });
 ```
 

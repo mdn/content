@@ -32,8 +32,8 @@ The code snippet below creates and registers two new highlights, and then logs t
 const myHighlight1 = new Highlight();
 const myHighlight2 = new Highlight();
 
-CSS.highlights.set('first-highlight', myHighlight1);
-CSS.highlights.set('second-highlight', myHighlight2);
+CSS.highlights.set("first-highlight", myHighlight1);
+CSS.highlights.set("second-highlight", myHighlight2);
 
 const iter = CSS.highlights.entries();
 
@@ -47,8 +47,8 @@ The following code example shows how to iterate over the highlights in the regis
 const myHighlight1 = new Highlight();
 const myHighlight2 = new Highlight();
 
-CSS.highlights.set('first-highlight', myHighlight1);
-CSS.highlights.set('second-highlight', myHighlight2);
+CSS.highlights.set("first-highlight", myHighlight1);
+CSS.highlights.set("second-highlight", myHighlight2);
 
 for (const [name, highlight] of CSS.highlights.entries()) {
   console.log(`Highlight ${name}`, highlight);

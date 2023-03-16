@@ -1,5 +1,5 @@
 ---
-title: 'MediaStream: removetrack event'
+title: "MediaStream: removetrack event"
 slug: Web/API/MediaStream/removetrack_event
 page-type: web-api-event
 browser-compat: api.MediaStream.removetrack_event
@@ -16,9 +16,9 @@ This event is not cancelable and does not bubble.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('removetrack', (event) => { });
+addEventListener("removetrack", (event) => {});
 
-onremovetrack = (event) => { };
+onremovetrack = (event) => {};
 ```
 
 ## Event type
@@ -31,7 +31,7 @@ A {{domxref("MediaStreamTrackEvent")}}. Inherits from {{domxref("Event")}}.
 
 _Also inherits properties from its parent interface, {{domxref("Event")}}._
 
-- `track` {{ReadOnlyInline}}
+- {{domxref("MediaStreamTrackEvent.track")}} {{ReadOnlyInline}}
   - : A {{domxref("MediaStreamTrack")}} object representing the track which was removed from the stream.
 
 ## Examples
@@ -39,9 +39,9 @@ _Also inherits properties from its parent interface, {{domxref("Event")}}._
 Using `addEventListener()`:
 
 ```js
-let stream = new MediaStream();
+const stream = new MediaStream();
 
-stream.addEventListener('removetrack', (event) => {
+stream.addEventListener("removetrack", (event) => {
   console.log(`${event.track.kind} track removed`);
 });
 ```
@@ -49,7 +49,7 @@ stream.addEventListener('removetrack', (event) => {
 Using the `onremovetrack` event handler property:
 
 ```js
-let stream = new MediaStream();
+const stream = new MediaStream();
 
 stream.onremovetrack = (event) => {
   console.log(`${event.track.kind} track removed`);

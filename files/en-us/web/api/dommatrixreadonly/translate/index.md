@@ -62,8 +62,7 @@ document
 ```
 
 {{ EmbedLiveSample('Examples', '250', '250',
-  'screen_shot_2019-02-19_at_11.20.40.png',
-  'Web/API/DOMMatrixReadOnly/translate') }}
+  'screen_shot_2019-02-19_at_11.20.40.png') }}
 
 ## Specifications
 

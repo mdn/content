@@ -46,7 +46,10 @@ This simple example creates a new WebSocket, connecting to the server at `wss://
 A custom protocol of "protocolOne" is named in the request for the socket in this example, though this can be omitted.
 
 ```js
-const exampleSocket = new WebSocket("wss://www.example.com/socketserver", "protocolOne");
+const exampleSocket = new WebSocket(
+  "wss://www.example.com/socketserver",
+  "protocolOne"
+);
 ```
 
 On return, {{domxref("WebSocket.readyState", "exampleSocket.readyState")}} is `CONNECTING`. The `readyState` will become `OPEN` once
@@ -55,7 +58,10 @@ the connection is ready to transfer data.
 If you want to open a connection and are flexible about the protocols you support, you can specify an array of protocols:
 
 ```js
-const exampleSocket = new WebSocket("wss://www.example.com/socketserver", ["protocolOne", "protocolTwo"]);
+const exampleSocket = new WebSocket("wss://www.example.com/socketserver", [
+  "protocolOne",
+  "protocolTwo",
+]);
 ```
 
 Once the connection is established (that is, `readyState` is `OPEN`), {{domxref("WebSocket.protocol", "exampleSocket.protocol")}} will tell you which protocol the server selected.
@@ -95,8 +101,8 @@ function sendText() {
   const msg = {
     type: "message",
     text: document.getElementById("text").value,
-    id:   clientID,
-    date: Date.now()
+    id: clientID,
+    date: Date.now(),
   };
 
   // Send the msg object as a JSON-formatted string.
@@ -118,7 +124,7 @@ like this:
 ```js
 exampleSocket.onmessage = (event) => {
   console.log(event.data);
-}
+};
 ```
 
 ### Receiving and interpreting JSON objects

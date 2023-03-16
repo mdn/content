@@ -30,11 +30,9 @@ Here is an example from the main script:
 const registration = await navigator.serviceWorker.ready;
 
 // feature detection
-if ('periodicSync' in registration) {
-
+if ("periodicSync" in registration) {
   // Background Periodic Sync functionality
   const periodicSync = registration.periodicSync;
-
 }
 ```
 

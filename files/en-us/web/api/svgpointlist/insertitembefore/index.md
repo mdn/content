@@ -50,7 +50,7 @@ let example = document.getElementById("example");
 let svgpoint = document.getElementById("svg").createSVGPoint();
 svgpoint.y = 10;
 svgpoint.x = 10;
-console.log(example.points.insertItemBefore(svgpoint,2));
+console.log(example.points.insertItemBefore(svgpoint, 2));
 ```
 
 ## Specifications
