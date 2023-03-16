@@ -24,7 +24,7 @@ It is used in color functions that accept hue expressed as a single value, speci
 hsl(270 100% 50%);
 hsl(270.5 100% 50%);
 hsl(270deg 100% 50%);
-hsl(4.7rad 100% 50%);
+hsl(2rad 100% 50%);
 hsl(0.75turn 100% 50%);
 hsl(270grad 100% 50%);
 
