@@ -18,7 +18,7 @@ A `<color>` can be defined in any of the following ways:
 
   - {{cssxref("color_value/rgb","rgb()")}} functional notation or `#` hexadecimal using the [RGB cubic-coordinate](https://en.wikipedia.org/wiki/RGB_color_model#Geometric_representation) system.
 
-  - {{cssxref("color_value/hsl","hsl()")}}functional notation using the [HSL cylindrical-coordinate](https://en.wikipedia.org/wiki/HSL_and_HSV) system.
+  - {{cssxref("color_value/hsl","hsl()")}} functional notation using the [HSL cylindrical-coordinate](https://en.wikipedia.org/wiki/HSL_and_HSV) system.
 
   - {{cssxref("color_value/hwb","hwb()")}} functional notation using the [HWB cylindrical-coordinate](https://en.wikipedia.org/wiki/HWB_color_model) system.
 
