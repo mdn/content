@@ -71,7 +71,7 @@ In addition to the basic HTML global attributes, the following global attributes
 - [`inert`](/en-US/docs/Web/HTML/Global_attributes/inert)
   - : A boolean value that makes the browser disregard user input events for the element. Useful when click events are present.
 - [`inputmode`](/en-US/docs/Web/HTML/Global_attributes/inputmode)
-  - : Provides a hint to browsers as to the type of virtual keyboard configuration to use when editing this element or its contents. Used primarily on {{HTMLElement("input")}} elements, but is usable on any element while in {{HTMLAttrxRef("contenteditable")}} mode.
+  - : Provides a hint to browsers about the type of virtual keyboard configuration to use when editing this element or its contents. Used primarily on {{HTMLElement("input")}} elements, but is usable on any element while in [`contenteditable`](#contenteditable) mode.
 - [`is`](/en-US/docs/Web/HTML/Global_attributes/is)
   - : Allows you to specify that a standard HTML element should behave like a registered custom built-in element (see [Using custom elements](/en-US/docs/Web/Web_Components/Using_custom_elements) for more details).
 
@@ -96,7 +96,7 @@ In addition to the basic HTML global attributes, the following global attributes
 - [`role`](/en-US/docs/Web/Accessibility/ARIA/Roles)
   - : Roles define the semantic meaning of content, allowing screen readers and other tools to present and support interaction with an object in a way that is consistent with user expectations of that type of object. `roles` are added to HTML elements using `role="role_type"`, where `role_type` is the name of a role in the ARIA specification.
 - [`slot`](/en-US/docs/Web/HTML/Global_attributes/slot)
-  - : Assigns a slot in a [shadow DOM](/en-US/docs/Web/Web_Components/Using_shadow_DOM) shadow tree to an element: An element with a `slot` attribute is assigned to the slot created by the {{HTMLElement("slot")}} element whose {{HTMLAttrxRef("name", "slot")}} attribute's value matches that `slot` attribute's value.
+  - : Assigns a slot in a [shadow DOM](/en-US/docs/Web/Web_Components/Using_shadow_DOM) shadow tree to an element: An element with a `slot` attribute is assigned to the slot created by the {{HTMLElement("slot")}} element whose [`name`](/en-US/docs/Web/HTML/Element/slot#name) attribute's value matches that `slot` attribute's value.
 - [`spellcheck`](/en-US/docs/Web/HTML/Global_attributes/spellcheck)
 
   - : An enumerated attribute defines whether the element may be checked for spelling errors. It may have the following values:
@@ -124,7 +124,7 @@ In addition to the basic HTML global attributes, the following global attributes
     - `no`, which indicates that the element will not be translated.
 - [`virtualkeyboardpolicy`](/en-US/docs/Web/HTML/Global_attributes/virtualkeyboardpolicy)
 
-  - : An [enumerated](/en-US/docs/Glossary/Enumerated) attribute used to control the on-screen virtual keyboard behavior on devices such as tablets, mobile phones, or other devices where a hardware keyboard may not be available, for elements that also uses the {{htmlattrxref("contenteditable")}} attribute.
+  - : An [enumerated](/en-US/docs/Glossary/Enumerated) attribute used to control the on-screen virtual keyboard behavior on devices such as tablets, mobile phones, or other devices where a hardware keyboard may not be available for elements that also uses the [`contenteditable`](#contenteditable) attribute.
 
     - `auto` or an _empty string_, which automatically shows the virtual keyboard when the element is focused or tapped.
     - `manual`, which decouples focus and tap on the element from the virtual keyboard's state.
