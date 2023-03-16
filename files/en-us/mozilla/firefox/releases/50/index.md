@@ -12,7 +12,7 @@ slug: Mozilla/Firefox/Releases/50
 ### HTML
 
 - The default style of {{HTMLElement("bdo")}} now sets {{cssxref("unicode-bidi")}} with the `isolate-override` value ([Firefox bug 1249497](https://bugzil.la/1249497)).
-- Setting the {{HTMLElement("track")}} element's {{htmlattrxref("src", "track")}} attribute now works correctly ([Firefox bug 1281418](https://bugzil.la/1281418)).
+- Setting the {{HTMLElement("track")}} element's [`src`](/en-US/docs/Web/HTML/Element/track#src) attribute now works correctly ([Firefox bug 1281418](https://bugzil.la/1281418)).
 - The `referrerpolicy` attribute on {{HTMLElement("area")}}, {{HTMLElement("a")}}, {{HTMLElement("img")}}, {{HTMLElement("iframe")}} and {{HTMLElement("link")}} elements is now available by default ([Firefox bug 1223838](https://bugzil.la/1223838), [Firefox bug 1264165](https://bugzil.la/1264165)).
 
 ### CSS
@@ -51,7 +51,7 @@ slug: Mozilla/Firefox/Releases/50
 
 ### Security
 
-- The {{htmlattrxref("ping", "a")}} attribute of {{htmlelement("a")}} element now abides by the [`connect-src`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy#connect-src) [CSP 1.1 policy directive](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy) ([Firefox bug 1100181](https://bugzil.la/1100181)).
+- The [`ping`](/en-US/docs/Web/HTML/Element/a#ping) attribute of {{htmlelement("a")}} element now abides by the [`connect-src`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy#connect-src) [CSP 1.1 policy directive](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy) ([Firefox bug 1100181](https://bugzil.la/1100181)).
 - Support for the [`sandbox`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy#sandbox) [CSP](/en-US/docs/Web/HTTP/CSP) directive has been added ([Firefox bug 671389](https://bugzil.la/671389)).
 - It's now possible to set a [content security policy for workers](/en-US/docs/Web/API/Web_Workers_API/Using_web_workers#content_security_policy) ([Firefox bug 959388](https://bugzil.la/959388)).
 - The {{domxref("Navigator.sendBeacon()")}} method no longer throws an exception if the beacon data couldn't be sent due to a [Content Security Policy](/en-US/docs/Web/HTTP/CSP) restriction; instead, it returns `false` as expected ([Firefox bug 1234813](https://bugzil.la/1234813)).
@@ -136,7 +136,7 @@ slug: Mozilla/Firefox/Releases/50
     - {{domxref("FileSystemDirectoryEntry")}} (except for {{domxref("FileSystemDirectoryEntry.removeRecursively", "removeRecursively()")}})
     - {{domxref("FileSystemDirectoryReader")}}
 
-  - {{domxref("HTMLInputElement.webkitdirectory")}} as well as the {{HTMLattrxref("webkitdirectory", "input")}} attribute of the {{HTMLElement("input")}} element have been implemented; this lets you configure a file input to accept directories instead of files ([Firefox bug 1258489](https://bugzil.la/1258489)).
+  - {{domxref("HTMLInputElement.webkitdirectory")}} as well as the [`webkitdirectory`](/en-US/docs/Web/HTML/Element/input#webkitdirectory) attribute of the {{HTMLElement("input")}} element have been implemented; this lets you configure a file input to accept directories instead of files ([Firefox bug 1258489](https://bugzil.la/1258489)).
   - {{domxref("HTMLInputElement.webkitEntries")}} has been implemented; this returns an array of {{domxref("FileSystemEntry")}}-based objects representing the selected items.
   - {{domxref("File.webkitRelativePath")}} has been implemented; this contains the path of the file relative to the root of the containing {{domxref("FileSystemDirectoryEntry")}} that was among the items in the list returned by {{domxref("HTMLInputElement.webkitGetEntries()")}}.
   - See [File and Directory Entries API support in Firefox](/en-US/docs/Web/API/File_and_Directory_Entries_API/Firefox_support) for details about what we do and do not support in this API.

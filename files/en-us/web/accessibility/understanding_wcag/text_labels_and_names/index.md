@@ -128,7 +128,7 @@ The following example shows code for a figure with a caption. The `alt` attribut
 ```html
 <figure>
   <img
-    src="milkweed.jgp"
+    src="milkweed.jpg"
     alt="Black and white close-up photo of milkweed flowers" />
   <figcaption>Asclepias verticillata</figcaption>
 </figure>

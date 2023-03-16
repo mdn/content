@@ -25,7 +25,7 @@ This article provides information about the changes in Firefox 65 that will affe
 
 - Events are now dispatched on disabled HTML elements, i.e. {{htmlelement("button")}}, {{htmlelement("fieldset")}}, {{htmlelement("input")}}, {{htmlelement("select")}}, and {{htmlelement("textarea")}} elements with `disabled` attributes set on them ([Firefox bug 329509](https://bugzil.la/329509)).
 - Removing the `src` attribute of an {{htmlelement("iframe")}} element now causes `about:blank` to be loaded into it, giving it parity with Chrome and Safari ([Firefox bug 1507842](https://bugzil.la/1507842)). Previously removing `src` had no effect on the `iframe` content.
-- We have added support for the {{htmlattrxref("referrerpolicy", "script")}} attribute on {{htmlelement("script")}} elements ([Firefox bug 1460920](https://bugzil.la/1460920)).
+- We have added support for the [`referrerpolicy`](/en-US/docs/Web/HTML/Element/script#referrerpolicy) attribute on {{htmlelement("script")}} elements ([Firefox bug 1460920](https://bugzil.la/1460920)).
 
 ### CSS
 

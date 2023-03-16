@@ -282,6 +282,9 @@
         "CSSImportRule",
         "CSSKeyframeRule",
         "CSSKeyframesRule",
+        "CSSImportRule",
+        "CSSLayoutBlockRule",
+        "CSSLayoutStatementRule",
         "CSSMediaRule",
         "CSSNamespaceRule",
         "CSSPageRule",
@@ -409,6 +412,7 @@
     "Encrypted Media Extensions": {
       "overview": ["Encrypted Media Extensions API"],
       "interfaces": [
+        "MediaEncryptedEvent",
         "MediaKeyMessageEvent",
         "MediaKeys",
         "MediaKeySession",
@@ -641,7 +645,8 @@
         "RadioNodeList",
         "UserActivation",
         "ValidityState",
-        "Window"
+        "Window",
+        "WorkletGlobalScope"
       ],
       "methods": [],
       "properties": [],
@@ -802,13 +807,6 @@
       "interfaces": ["LaunchParams", "LaunchQueue"],
       "methods": [],
       "properties": ["Window.launchQueue"],
-      "events": []
-    },
-    "Layout Instability API": {
-      "overview": ["Layout Instability API"],
-      "interfaces: ": ["LayoutShift", "LayoutShiftAttribution"],
-      "methods": [],
-      "properties": [],
       "events": []
     },
     "Local Font Access API": {
@@ -985,6 +983,8 @@
       "interfaces": [
         "EventCounts",
         "LargestContentfulPaint",
+        "LayoutShift",
+        "LayoutShiftAttribution",
         "Performance",
         "PerformanceEntry",
         "PerformanceElementTiming",
@@ -1903,6 +1903,7 @@
       "guides": [
         "/docs/Web/API/WebRTC_API/Protocols",
         "/docs/Web/API/WebRTC_API/Connectivity",
+        "/docs/Web/API/WebRTC_API/Perfect_negotiation",
         "/docs/Web/API/WebRTC_API/Session_lifetime",
         "/docs/Web/API/WebRTC_API/Signaling_and_video_calling",
         "/docs/Web/API/WebRTC_API/Using_data_channels",

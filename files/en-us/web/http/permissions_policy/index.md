@@ -17,7 +17,7 @@ Examples of what you can do with Permissions Policy:
 - Allow iframes to use the [Fullscreen API](/en-US/docs/Web/API/Fullscreen_API).
 - Stop items from being scripted if they are not visible in the viewport, to improve performance.
 
-> **Note:** Permissions Policy used to be called Feature Policy. The name has changed, and so has the HTTP header syntax, so bear this in in mind if you have used Feature Policy in the past, and check the browser support tables. The `<iframe allow=" ... ">` syntax has stayed the same.
+> **Note:** Permissions Policy used to be called Feature Policy. The name has changed, and so has the HTTP header syntax, so bear this in mind if you have used Feature Policy in the past, and check the browser support tables. The `<iframe allow=" ... ">` syntax has stayed the same.
 
 ## Concepts and usage
 

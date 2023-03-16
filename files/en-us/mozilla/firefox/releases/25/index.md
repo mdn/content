@@ -25,7 +25,7 @@ slug: Mozilla/Firefox/Releases/25
 
 ### HTML
 
-- The {{htmlattrxref("srcdoc", "iframe")}} attribute of {{HTMLElement("iframe")}}, allowing the inline specification of the content of an {{HTMLElement("iframe")}}, is now supported ([Firefox bug 802895](https://bugzil.la/802895)).
+- The [`srcdoc`](/en-US/docs/Web/HTML/Element/iframe#srcdoc) attribute of {{HTMLElement("iframe")}}, allowing the inline specification of the content of an {{HTMLElement("iframe")}}, is now supported ([Firefox bug 802895](https://bugzil.la/802895)).
 - When used with a `"image/jpeg"` type, the method `HTMLCanvasElement.toBlob` now accepts a third attribute defining the quality of the image ([Firefox bug 891884](https://bugzil.la/891884)).
 
 ### JavaScript
