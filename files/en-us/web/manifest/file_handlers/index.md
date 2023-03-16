@@ -25,7 +25,7 @@ The `file_handlers` member specifies an array of objects representing the types 
 
 The `file_handlers` member is used by the browser when the PWA is installed to register the application in the operating system's file association registry.
 
-For example, a PWA can register to handle files that match the `text/plain` [MIME type](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types). Once installed, the operating system might use the PWA to handle text files.
+For example, a PWA can be registered to handle files that match the `text/plain` [MIME type](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types). Once installed, the operating system might use the PWA to handle text files.
 
 Note that the way operating systems manage and let users select an application to handle a given file varies.
 
