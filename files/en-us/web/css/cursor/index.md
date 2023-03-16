@@ -354,6 +354,10 @@ Desktop browsers also broadly support the `.cur` file format.
 The specification further indicates that user agents _should_ also support SVG v1.1 files in secure animated mode that contain a natural size, along with any other animated images file formats they support for images in other properties.
 User agents _may_ support both static and animated SVG images that do not contain a natural size.
 
+### iPadOS
+
+iPadOS supports pointer devices like trackpads and mouses. By default, the iPad cursor is displayed as a circle, and the only supported value that will change an appearance of the pointer is `text`.
+
 ### Other notes
 
 Cursor changes that intersect toolbar areas are commonly blocked to avoid spoofing.
