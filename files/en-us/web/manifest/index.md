@@ -16,7 +16,7 @@ A PWA's manifest includes its name, icon(s), description, and ways that the PWA 
 
 ## Members
 
-A web application manifest contains a single JSON object where the top-level keys are called _members_. The members that a web application manifest can contain are listed below. Click on each one to find more information about it:
+A web application manifest contains a single JSON object where the top-level keys are called _members_. The following are members that a web application manifest can contain:
 
 {{ListSubpages("/en-US/docs/Web/Manifest")}}
 
