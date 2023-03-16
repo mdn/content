@@ -26,7 +26,11 @@ A `<color>` can be defined in any of the following ways:
 
   - {{cssxref("color_value/lch","lch()")}} functional notation using the [LCH cylindrical coordinate system](https://en.wikipedia.org/wiki/CIELAB_color_space#Cylindrical_representation:_CIELCh_or_CIEHLC).
 
-  - {{cssxref("color_value/hwb","lab()")}} functional notation using the [CIELAB](https://en.wikipedia.org/wiki/CIELAB_color_space) color space.
+  - {{cssxref("color_value/oklch","oklch()")}} functional notation using the [Oklch cylindrical coordinate system](https://bottosson.github.io/posts/oklab/).
+
+  - {{cssxref("color_value/lab","lab()")}} functional notation using the [CIELAB](https://en.wikipedia.org/wiki/CIELAB_color_space) color space.
+
+  - {{cssxref("color_value/oklab","oklab()")}} functional notation using the [Oklab](https://bottosson.github.io/posts/oklab/) color space.
 
 - The {{cssxref("color_value/color","color()")}} functional notation, using a variety of predefined or custom color spaces.
 

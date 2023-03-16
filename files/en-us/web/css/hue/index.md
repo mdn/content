@@ -2,11 +2,8 @@
 title: <hue>
 slug: Web/CSS/hue
 page-type: css-type
-browser-compat:
-  - css.types.color.oklch
-  - css.types.color.lch
-  - css.types.color.hwb
-  - css.types.color.hsl
+browser-compat: css.types.angle
+spec-urls: https://drafts.csswg.org/css-color/#typedef-hue
 ---
 
 {{CSSRef}}
