@@ -51,7 +51,7 @@ default.** To make the window resizable, you must open it with the
 ```js
 // Create resizable window
 myExternalWindow = window.open(
-  "https://example.com
+  "https://example.com",
   "myWindowName",
   "resizable"
 );
