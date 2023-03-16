@@ -31,7 +31,7 @@ Note that the way operating systems manage and let users select an application t
 
 ## Values
 
-Each file handler object contains the following values:
+Each object in the file handler array must contain the following values (`action` and `accept` are required):
 
 <table class="fullwidth-table standard-table">
   <thead>
