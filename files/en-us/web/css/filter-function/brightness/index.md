@@ -13,7 +13,6 @@ The **`brightness()`** [CSS](/en-US/docs/Web/CSS) {{cssxref("&lt;filter-function
 
 ## Syntax
 
-
 ```css
 brightness(amount)
 ```
