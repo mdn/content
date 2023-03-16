@@ -30,7 +30,7 @@ A string or `null`.
 ```css
 #text::after {
   content: "⭐";
-  display: inline-block; /* Needed as transform: can't be used on an inline element */
+  display: inline-block; /* Needed as the `transform` property does not apply to inline elements */
 }
 #text::before {
   content: "😊";
