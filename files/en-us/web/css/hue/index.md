@@ -131,7 +131,7 @@ div {
 
 ### Interpolating hue values
 
-The [`color-mix()`](/en-US/docs/web/CSS/color_value/color-mix) functional notation can be used to interpolate the hue of two colors.
+The [`color-mix()`](/en-US/docs/Web/CSS/color_value/color-mix) functional notation can be used to interpolate the hue of two colors.
 Four methods are available for interpolating the hue value: `shorter`, `longer`, `increasing`, and `decreasing`.
 The `shorter` method is the default for interpolation and the result will be the shortest distance between the two angles in degrees.
 Conversely, `longer` uses the larger value between the two hue angles.
