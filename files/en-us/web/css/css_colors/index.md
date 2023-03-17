@@ -105,7 +105,7 @@ To see the code for this color syntax converter, [view the source on Github](htt
   - [`lighting-color`](/en-US/docs/Web/SVG/Attribute/lighting-color)
   - [`stop-color`](/en-US/docs/Web/SVG/Attribute/stop-color)
   - [`stroke`](/en-US/docs/Web/SVG/Attribute/stroke)
-- SVG [`color`](/en-US/Web/SVG/Attribute/color) attribute
+- SVG [`color`](/en-US/docs/Web/SVG/Attribute/color) attribute
 - {{glossary("Color wheel")}} glossary term
 - {{glossary("Interpolation")}} glossary term
 - The [`@font-palette-values`](/en-US/docs/Web/CSS/@font-palette-values) at-rule [`override-colors`](/en-US/docs/Web/CSS/@font-palette-values/override-colors) descriptor
