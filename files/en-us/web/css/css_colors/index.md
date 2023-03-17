@@ -15,11 +15,11 @@ Not all CSS properties that take a {{cssxref("&lt;color&gt;")}} as a value are p
 
 ### Colors in action
 
-```html
-<label for="color"
-  >Use the color picker to pick a color: <input type="color" id="color"
-/></label>
-```
+To view a new color, along with the color value written in [red-green-blue](/en-US/docs/Web/CSS/color_value/rgb), [hexadecimal](/en-US/docs/Web/CSS/hex-color), [hue, saturation, and lightness](/en-US/docs/Web/CSS/color_value/hsl), and [hue, whiteness, and blackness](/en-US/docs/Web/CSS/color_value/hwb) CSS color formats, open the [color picker](/en-US/docs/Web/HTML/Element/input/color) and select a new color in the box below. Change the opacity of the color with the opacity [slider](/en-US/docs/Web/HTML/Element/Input/range).
+
+{{EmbedGHLiveSample("css-examples/modules/colors.html", '100%', 450)}}
+
+To see the code for this color syntax converter, [view the source on Github](https://github.com/mdn/css-examples/blob/main/modules/colors.html).
 
 ## Reference
 
