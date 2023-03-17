@@ -104,7 +104,7 @@ const args = Array.from(arguments);
 const args = [...arguments];
 ```
 
-For common use cases, using it as an array-like object is sufficient, since it both [is iterable](/en-US/docs/Web/JavaScript/Reference/Functions/arguments/@@iterator) and has `length` and number indices. For example, [`Function.prototype.apply()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/apply) accepts array-like objects.
+For common use cases, using it as an array-like object is sufficient, since it is both [iterable](/en-US/docs/Web/JavaScript/Reference/Functions/arguments/@@iterator) and has `length` and number indices. For example, [`Function.prototype.apply()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/apply) accepts array-like objects.
 
 ```js
 function midpoint() {
