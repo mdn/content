@@ -21,7 +21,7 @@ oklch(59.69% 0.156 49.77 / .5)
 
 - Functional notation: `oklch(L C H [/ A])`
 
-  - `L` is a {{cssxref("&lt;number&gt;")}} between `0` and `100` or a {{cssxref("&lt;percentage&gt;")}} between `0%` and `100%` that specifies the CIE Lightness where the number `0` corresponds to `0%` (black) and the number `100` corresponds to `100%` (white).
+  - `L` is a {{cssxref("&lt;number&gt;")}} between `0` and `1` or a {{cssxref("&lt;percentage&gt;")}} between `0%` and `100%` that specifies the CIE Lightness where the number `0` corresponds to `0%` (black) and the number `1` corresponds to `100%` (white).
 
   - `C` is a {{cssxref("&lt;number&gt;")}} or a {{cssxref("&lt;percentage&gt;")}} where `0%` is `0` and `100%` is the number `0.4`. It is a measure of the chroma (roughly representing the "amount of color"). Its minimum useful value is `0`, while its maximum is theoretically unbounded (but in practice does not exceed `0.5`).
 
