@@ -7,7 +7,7 @@ browser-compat: api.SVGAnimatedEnumeration.baseVal
 
 {{APIRef("SVG")}}
 
-The **`baseVal`** property of the {{domxref("SVGAnimatedLength")}} interface contains the initial value of a SVG enumeration.
+The **`baseVal`** property of the {{domxref("SVGAnimatedLength")}} interface contains the initial value of an SVG enumeration.
 
 ## Value
 

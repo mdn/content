@@ -16,11 +16,11 @@ The read-only **`maskContentUnits`** property of the {{domxref("SVGMaskElement")
 An {{domxref("SVGAnimatedEnumeration")}} representing the coordinate system. The possible values are defined in the {{domxref("SVGUnitTypes")}} interface:
 
 - `0` (`SVG_UNIT_TYPE_UNKWOWN`)
-  - : The type is not one of the predefined type.
+  - : The type is not one of the predefined types.
 - `1` (`SVG_UNIT_TYPE_USERSPACEONUSE`)
-  - : Corresponding to a value of `userSpaceOnUse` for the {{SVGAttr("maskContentUnits")}} attribute and means that all coordinates inside the element refer to the user coordinate system as defined when the mask was created. It is the default value.
+  - : Corresponds to a value of `userSpaceOnUse` for the {{SVGAttr("maskContentUnits")}} attribute and means that all coordinates inside the element refer to the user coordinate system as defined when the mask was created. It is the default value.
 - `2` (`SVG_UNIT_TYPE_OBJECTBOUNDINGBOX`)
-  - : Corresponding to a value of `objectBoundingBox` for the attribute and means that all coordinates inside the element are relative to the bounding box of the element the mask is applied to. It means that the origin of the coordinate system is the top left corner of the object bounding box and the width and height of the object bounding box are considered to have a length of 1 unit value.
+  - : Corresponds to a value of `objectBoundingBox` for the attribute and means that all coordinates inside the element are relative to the bounding box of the element the mask is applied to. It means that the origin of the coordinate system is the top left corner of the object bounding box and the width and height of the object bounding box are considered to have a length of 1 unit value.
 
 ## Examples
 
