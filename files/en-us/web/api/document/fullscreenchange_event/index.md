@@ -71,15 +71,17 @@ document.onfullscreenchange = fullscreenchanged;
 // When the toggle button is clicked, enter/exit fullscreen
 document
   .getElementById("toggle-fullscreen")
-  .addEventListener("click", (event) => {
+  .addEventListener("click", function () {
     if (document.fullscreenElement) {
       // exitFullscreen is only available on the Document object.
       document.exitFullscreen();
     } else {
-      el.requestFullscreen();
+      this.requestFullscreen();
     }
   });
 ```
+
+{{EmbedLiveSample("Examples", 640, 800, "", "", "", "display-capture")}}
 
 ## Specifications
 
