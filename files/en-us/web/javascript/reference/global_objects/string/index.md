@@ -220,7 +220,7 @@ const longString =
 
 Or you can use the backslash character (`\`) at the end of each line to
 indicate that the string will continue on the next line. Make sure there is no space or
-any other character after the backslash (except for a line break), or as an indent;
+any other character after the backslash (except for a line break), or has an indent;
 otherwise it will not work.
 
 ```js
