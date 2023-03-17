@@ -43300,36 +43300,6 @@
       "chrisdavidmills"
     ]
   },
-  "Web/API/IDBMutableFile": {
-    "modified": "2019-03-23T23:25:08.081Z",
-    "contributors": [
-      "teoli",
-      "chrisdavidmills",
-      "Jeremie",
-      "fscholz",
-      "pbmj5233",
-      "kscarfone"
-    ]
-  },
-  "Web/API/IDBMutableFile/name": {
-    "modified": "2019-03-23T23:24:53.695Z",
-    "contributors": [
-      "chrisdavidmills",
-      "teoli",
-      "bmroberts1987",
-      "Jeremie",
-      "fscholz",
-      "kscarfone"
-    ]
-  },
-  "Web/API/IDBMutableFile/open": {
-    "modified": "2019-03-23T23:24:51.897Z",
-    "contributors": ["chrisdavidmills", "fscholz", "kscarfone", "Jeremie"]
-  },
-  "Web/API/IDBMutableFile/type": {
-    "modified": "2019-03-23T23:24:55.006Z",
-    "contributors": ["chrisdavidmills", "Jeremie", "fscholz", "kscarfone"]
-  },
   "Web/API/IDBObjectStore": {
     "modified": "2020-10-15T21:10:03.883Z",
     "contributors": [
