@@ -18,6 +18,7 @@ slug: Games/Introduction_to_HTML5_Game_Development
 ## Web Technologies
 
 <table class="no-markdown standard-table">
+  <caption> Game Development components</caption>
   <thead>
     <tr>
       <th scope="col"><strong>Function</strong></th>
