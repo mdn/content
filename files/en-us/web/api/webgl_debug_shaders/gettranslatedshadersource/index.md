@@ -34,14 +34,19 @@ returned, if:
 ## Examples
 
 ```js
-const canvas = document.getElementById('canvas');
-const gl = canvas.getContext('webgl');
+const canvas = document.getElementById("canvas");
+const gl = canvas.getContext("webgl");
 
 const shader = gl.createShader(gl.FRAGMENT_SHADER);
-gl.shaderSource(shader, 'void main() { gl_FragColor = vec4(gl_FragCoord.x, 0.0, 0.0, 1.0); }');
+gl.shaderSource(
+  shader,
+  "void main() { gl_FragColor = vec4(gl_FragCoord.x, 0.0, 0.0, 1.0); }"
+);
 gl.compileShader(shader);
 
-const src = gl.getExtension('WEBGL_debug_shaders').getTranslatedShaderSource(shader);
+const src = gl
+  .getExtension("WEBGL_debug_shaders")
+  .getTranslatedShaderSource(shader);
 console.log(src);
 // "void main(){
 // (gl_FragColor = vec4(gl_FragCoord.x, 0.0, 0.0, 1.0));

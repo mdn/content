@@ -1,5 +1,5 @@
 ---
-title: 'Window: beforeprint event'
+title: "Window: beforeprint event"
 slug: Web/API/Window/beforeprint_event
 page-type: web-api-event
 browser-compat: api.Window.beforeprint_event
@@ -16,8 +16,8 @@ The {{domxref("Window.afterprint_event", "afterprint")}} and `beforeprint` event
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('beforeprint', (event) => { });
-onbeforeprint = (event) => { };
+addEventListener("beforeprint", (event) => {});
+onbeforeprint = (event) => {};
 ```
 
 ## Event type
@@ -29,8 +29,8 @@ A generic {{domxref("Event")}}.
 Using `addEventListener()`:
 
 ```js
-window.addEventListener('beforeprint', (event) => {
-  console.log('Before print');
+window.addEventListener("beforeprint", (event) => {
+  console.log("Before print");
 });
 ```
 
@@ -38,7 +38,7 @@ Using the `onbeforeprint` event handler property:
 
 ```js
 window.onbeforeprint = (event) => {
-  console.log('Before print');
+  console.log("Before print");
 };
 ```
 

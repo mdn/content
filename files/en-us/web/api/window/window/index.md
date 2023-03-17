@@ -12,9 +12,9 @@ The **`window`** property of a {{domxref("Window")}} object points to the window
 Thus, the following expressions all return the same window object:
 
 ```js
-window.window
-window.window.window
-window.window.window.window
+window.window;
+window.window.window;
+window.window.window.window;
 // …
 ```
 

@@ -63,7 +63,7 @@ ext.drawBuffersWEBGL([
   ext.COLOR_ATTACHMENT0_WEBGL, // gl_FragData[0]
   ext.COLOR_ATTACHMENT1_WEBGL, // gl_FragData[1]
   ext.COLOR_ATTACHMENT2_WEBGL, // gl_FragData[2]
-  ext.COLOR_ATTACHMENT3_WEBGL  // gl_FragData[3]
+  ext.COLOR_ATTACHMENT3_WEBGL, // gl_FragData[3]
 ]);
 ```
 
