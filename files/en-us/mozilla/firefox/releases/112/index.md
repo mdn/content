@@ -37,6 +37,9 @@ This article provides information about the changes in Firefox 112 that affect d
 
 ### APIs
 
+- {{domxref("navigator.getAutoplayPolicy()")}} is now supported, allowing developers to configure [autoplay](/en-US/docs/Web/Media/Autoplay_guide) of media elements and audio contexts based on whether autoplay is allowed, disallowed, or only allowed if the audio is muted.
+  See [Firefox bug 1773551](https://bugzil.la/1773551) for more details.
+
 #### DOM
 
 #### Media, WebRTC, and Web Audio
