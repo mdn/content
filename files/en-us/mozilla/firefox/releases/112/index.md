@@ -37,6 +37,10 @@ This article provides information about the changes in Firefox 112 that affect d
 
 ### APIs
 
+- Removes support for `IDBMutableFile`, `IDBFileRequest`, `IDBFileHandle`, and `IDBDatabase.createMutableFile()`.
+  These interfaces are not present in any specification, have been behind a preference since version 102, and have been removed from the other main browser engines for some years.
+  ([Firefox bug 1500343](https://bugzil.la/1500343).)
+
 #### DOM
 
 #### Media, WebRTC, and Web Audio
