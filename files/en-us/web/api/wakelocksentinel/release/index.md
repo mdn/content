@@ -37,9 +37,9 @@ In this example, when a user clicks a button the {{domxref("WakeLockSentinel")}}
 released.
 
 ```js
-wakeLockOffButton.addEventListener('click', () => {
+wakeLockOffButton.addEventListener("click", () => {
   WakeLockSentinel.release();
-})
+});
 ```
 
 ## Specifications

@@ -54,11 +54,11 @@ Next we use the SubtleCrypto interface to process them. This works by:
 - Convert the resulting hash (another ArrayBuffer) into a string so it can be displayed
 
 ```js
-const output = document.querySelector('output');
-const file = document.getElementById('file');
+const output = document.querySelector("output");
+const file = document.getElementById("file");
 
 // Run the hashing function when the user selects one or more file
-file.addEventListener('change', hashTheseFiles);
+file.addEventListener("change", hashTheseFiles);
 
 // The digest function is asynchronous, it returns a promise, we use the async/await syntax to
 // simplify the code.
@@ -67,24 +67,25 @@ async function fileHash(file) {
 
   // Use the subtle crypto API to perform a SHA256 Sum of the file's Array Buffer
   // The resulting hash is stored in an array buffer
-  const hashAsArrayBuffer = await crypto.subtle.digest('SHA-256', arrayBuffer);
+  const hashAsArrayBuffer = await crypto.subtle.digest("SHA-256", arrayBuffer);
 
   // To display it as a string we will get the hexadecimal value of each byte of the array buffer
   // This gets us an array where each byte of the array buffer becomes one item in the array
   const uint8ViewOfHash = new Uint8Array(hashAsArrayBuffer);
   // We then convert it to a regular array so we can convert each item to hexadecimal strings
   // Where to characters of 0-9 or a-f represent a number between 0 and 16, containing 4 bits of information, so 2 of them is 8 bits (1 byte).
-  const hashAsString = Array.from(uint8ViewOfHash).map((b) => b.toString(16).padStart(2, '0')).join('');
+  const hashAsString = Array.from(uint8ViewOfHash)
+    .map((b) => b.toString(16).padStart(2, "0"))
+    .join("");
   return hashAsString;
 }
 
 async function hashTheseFiles(e) {
-  let outHTML = ''
+  let outHTML = "";
   // iterate over each file in file select input
   for (const file of this.files) {
-
     // calculate it's hash and list it in the output element.
-    outHTML += `${file.name}    ${await fileHash(file)}`
+    outHTML += `${file.name}    ${await fileHash(file)}`;
   }
   output.innerHTML = outHTML;
 }
@@ -143,9 +144,9 @@ The code below, like our SHA256 example, can be used to generate these hashes fr
 ```
 
 ```js
-const output = document.querySelector('output');
-const file = document.getElementById('file');
-file.addEventListener('change', hashTheseFiles);
+const output = document.querySelector("output");
+const file = document.getElementById("file");
+file.addEventListener("change", hashTheseFiles);
 
 async function fileHash(file) {
   const arrayBuffer = await file.arrayBuffer();
@@ -165,25 +166,27 @@ async function fileHash(file) {
 
   // We then combine the 2 Array Buffers together into a new Array Buffer.
   const newBlob = new Blob([view.buffer, arrayBuffer], {
-      type: 'text/plain'
+    type: "text/plain",
   });
   const arrayBufferToHash = await newBlob.arrayBuffer();
 
   // Finally we perform the hash this time as SHA1 which is what Git uses.
   // Then we return it as a string to be displayed.
-  return hashToString(await crypto.subtle.digest('SHA-1', arrayBufferToHash));
+  return hashToString(await crypto.subtle.digest("SHA-1", arrayBufferToHash));
 }
 
 function hashToString(arrayBuffer) {
   const uint8View = new Uint8Array(arrayBuffer);
-  return Array.from(uint8View).map((b) => b.toString(16).padStart(2, '0')).join('');
+  return Array.from(uint8View)
+    .map((b) => b.toString(16).padStart(2, "0"))
+    .join("");
 }
 
 // like before we iterate over the files
 async function hashTheseFiles(e) {
-  let outHTML = ''
+  let outHTML = "";
   for (const file of this.files) {
-    outHTML += `${file.name}    ${await fileHash(file)}`
+    outHTML += `${file.name}    ${await fileHash(file)}`;
   }
   output.innerHTML = outHTML;
 }

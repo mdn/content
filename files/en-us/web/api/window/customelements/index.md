@@ -15,21 +15,23 @@ The most common example you'll see of this property being used is to get access 
 
 ```js
 let customElementRegistry = window.customElements;
-customElementRegistry.define('my-custom-element', MyCustomElement);
+customElementRegistry.define("my-custom-element", MyCustomElement);
 ```
 
 However, it is usually shortened to something like the following:
 
 ```js
-customElements.define('element-details',
+customElements.define(
+  "element-details",
   class extends HTMLElement {
     constructor() {
       super();
-      const template = document
-        .getElementById('element-details-template')
-        .content;
-      const shadowRoot = this.attachShadow({mode: 'open'})
-        .appendChild(template.cloneNode(true));
+      const template = document.getElementById(
+        "element-details-template"
+      ).content;
+      const shadowRoot = this.attachShadow({ mode: "open" }).appendChild(
+        template.cloneNode(true)
+      );
     }
   }
 );

@@ -48,8 +48,8 @@ A `gl.INVALID_ENUM` error is thrown if `target` is not
 ### Binding a texture
 
 ```js
-const canvas = document.getElementById('canvas');
-const gl = canvas.getContext('webgl');
+const canvas = document.getElementById("canvas");
+const gl = canvas.getContext("webgl");
 const texture = gl.createTexture();
 
 gl.bindTexture(gl.TEXTURE_2D, texture);

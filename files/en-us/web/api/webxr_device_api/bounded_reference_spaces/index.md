@@ -64,13 +64,15 @@ Before actually attempting to create a bounded reference space, you need to crea
 ```js
 async function onActivateXRButton(event) {
   if (!xrSession) {
-    navigator.xr.requestSession("immersive-vr", {
-      requiredFeatures: ["local-floor"],
-      optionalFeatures: ["bounded-floor"]
-    }).then((session) => {
-      xrSession = session;
-      startSessionAnimation();
-    });
+    navigator.xr
+      .requestSession("immersive-vr", {
+        requiredFeatures: ["local-floor"],
+        optionalFeatures: ["bounded-floor"],
+      })
+      .then((session) => {
+        xrSession = session;
+        startSessionAnimation();
+      });
   }
 }
 ```
@@ -94,19 +96,21 @@ function onSessionStarted(session) {
   xrSession = session;
 
   spaceType = "bounded-floor";
-  xrSession.requestReferenceSpace(spaceType)
-  .then(onRefSpaceCreated)
-  .catch(() => {
-    spaceType = "local-floor";
-    xrSession.requestReferenceSpace(spaceType)
+  xrSession
+    .requestReferenceSpace(spaceType)
     .then(onRefSpaceCreated)
-    .catch(handleError);
-  });
+    .catch(() => {
+      spaceType = "local-floor";
+      xrSession
+        .requestReferenceSpace(spaceType)
+        .then(onRefSpaceCreated)
+        .catch(handleError);
+    });
 }
 
 function onRefSpaceCreated(refSpace) {
   xrSession.updateRenderState({
-    baseLayer: new XRWebGLLayer(xrSession, gl)
+    baseLayer: new XRWebGLLayer(xrSession, gl),
   });
 
   // Now set up matrices, create a secondary reference space to
@@ -133,13 +137,14 @@ This would change the `onRefSpaceCreated()` method from the above snippet to:
 ```js
 function onRefSpaceCreated(refSpace) {
   xrSession.updateRenderState({
-    baseLayer: new XRWebGLLayer(xrSession, gl)
+    baseLayer: new XRWebGLLayer(xrSession, gl),
   });
 
   let startPosition = vec3.fromValues(0, 1.5, 0);
   const startOrientation = vec3.fromValues(0, 0, 1.0);
   xrReferenceSpace = xrReferenceSpace.getOffsetReferenceSpace(
-          new XRRigidTransform(startPosition, startOrientation));
+    new XRRigidTransform(startPosition, startOrientation)
+  );
 
   xrSession.requestAnimationFrame(onDrawFrame);
 }

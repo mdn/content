@@ -64,12 +64,15 @@ A `window` can listen for dispatched messages by executing the following
 JavaScript:
 
 ```js
-window.addEventListener("message", (event) => {
-  if (event.origin !== "http://example.org:8080")
-    return;
+window.addEventListener(
+  "message",
+  (event) => {
+    if (event.origin !== "http://example.org:8080") return;
 
-  // …
-}, false);
+    // …
+  },
+  false
+);
 ```
 
 The properties of the dispatched message are:
@@ -132,7 +135,7 @@ To check if cross origin isolation has been successful, you can test against the
 property available to window and worker contexts:
 
 ```js
-const myWorker = new Worker('worker.js');
+const myWorker = new Worker("worker.js");
 
 if (crossOriginIsolated) {
   const buffer = new SharedArrayBuffer(16);
@@ -155,22 +158,27 @@ const popup = window.open(/* popup details */);
 // When the popup has fully loaded, if not blocked by a popup blocker:
 
 // This does nothing, assuming the window hasn't changed its location.
-popup.postMessage("The user is 'bob' and the password is 'secret'",
-                  "https://secure.example.net");
+popup.postMessage(
+  "The user is 'bob' and the password is 'secret'",
+  "https://secure.example.net"
+);
 
 // This will successfully queue a message to be sent to the popup, assuming
 // the window hasn't changed its location.
 popup.postMessage("hello there!", "http://example.com");
 
-window.addEventListener("message", (event) => {
-  // Do we trust the sender of this message?  (might be
-  // different from what we originally opened, for example).
-  if (event.origin !== "http://example.com")
-    return;
+window.addEventListener(
+  "message",
+  (event) => {
+    // Do we trust the sender of this message?  (might be
+    // different from what we originally opened, for example).
+    if (event.origin !== "http://example.com") return;
 
-  // event.source is popup
-  // event.data is "hi there yourself!  the secret response is: rheeeeet!"
-}, false);
+    // event.source is popup
+    // event.data is "hi there yourself!  the secret response is: rheeeeet!"
+  },
+  false
+);
 ```
 
 ```js
@@ -181,8 +189,7 @@ window.addEventListener("message", (event) => {
 // Called sometime after postMessage is called
 window.addEventListener("message", (event) => {
   // Do we trust the sender of this message?
-  if (event.origin !== "http://example.com:8080")
-    return;
+  if (event.origin !== "http://example.com:8080") return;
 
   // event.source is window.opener
   // event.data is "hello there!"
@@ -191,9 +198,10 @@ window.addEventListener("message", (event) => {
   // you must do in any case), a convenient idiom for replying to a
   // message is to call postMessage on event.source and provide
   // event.origin as the targetOrigin.
-  event.source.postMessage("hi there yourself!  the secret response " +
-                           "is: rheeeeet!",
-                           event.origin);
+  event.source.postMessage(
+    "hi there yourself!  the secret response " + "is: rheeeeet!",
+    event.origin
+  );
 });
 ```
 

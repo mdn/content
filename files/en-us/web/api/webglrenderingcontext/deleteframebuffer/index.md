@@ -32,8 +32,8 @@ None ({{jsxref("undefined")}}).
 ### Deleting a frame buffer
 
 ```js
-const canvas = document.getElementById('canvas');
-const gl = canvas.getContext('webgl');
+const canvas = document.getElementById("canvas");
+const gl = canvas.getContext("webgl");
 const framebuffer = gl.createFramebuffer();
 
 // …
