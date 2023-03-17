@@ -16,7 +16,9 @@ The **`SVGClipPathElement`** interface provides access to the properties of {{SV
 _This interface also inherits properties from its parent, {{domxref("SVGElement")}}._
 
 - {{domxref("SVGClipPathElement.clipPathUnits")}} {{ReadOnlyInline}}
-  - : An {{domxref("SVGAnimatedEnumeration")}} corresponding to the {{SVGAttr("clipPathUnits")}} attribute of the given {{SVGElement("clipPath")}} element. Takes one of the constants defined in {{domxref("SVGUnitTypes")}}.
+  - : Returns an {{domxref("SVGAnimatedEnumeration")}} corresponding to the {{SVGAttr("clipPathUnits")}} attribute of the associated {{SVGElement("clipPath")}} element. Takes one of the constants defined in {{domxref("SVGUnitTypes")}}.
+- {{domxref("SVGClipPathElement.transform")}} {{ReadOnlyInline}}
+  - : Returns an {{domxref("SVGAnimatedTransformList")}} corresponding to the {{SVGAttr("transform")}} attribute of the associated {{SVGElement("clipPath")}} element.
 
 ## Instance methods
 
