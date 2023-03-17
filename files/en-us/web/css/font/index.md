@@ -457,8 +457,7 @@ function getCheckedValue(radioName) {
 }
 
 function setCss() {
-  let shortText = getProperties();
-  injectCss(shortText);
+  injectCss(getProperties());
 }
 
 function injectCss(cssFragment) {
