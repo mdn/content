@@ -81,6 +81,8 @@ document
   });
 ```
 
+{{EmbedLiveSample("Examples", 640, 800, "", "", "", "display-capture")}}
+
 ## Specifications
 
 {{Specifications}}
