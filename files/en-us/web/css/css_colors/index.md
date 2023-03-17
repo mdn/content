@@ -53,7 +53,7 @@ To see the code for this color syntax converter, [view the source on Github](htt
 ### Data types
 
 - {{cssxref("&lt;color&gt;")}}
-- [`<absolute-color-function>`](#Functions)
+- [`<absolute-color-function>`](#functions)
 - {{cssxref("hex-color")}}
 - {{cssxref("named-color")}}
 - {{cssxref("alpha-value")}}
