@@ -31,9 +31,9 @@ To see the code for this color syntax converter, [view the source on Github](htt
 ### At-rules and descriptors
 
 - {{cssxref("@color-profile")}}
-  - `components` descriptor
-  - `rendering-intent` descriptor
-  - `src` descriptor
+  - [`components`](/en-US/docs/Web/CSS/@color-profile#descriptors) descriptor
+  - [`rendering-intent`](/en-US/docs/Web/CSS/@color-profile#descriptors) descriptor
+  - [`src`](/en-US/docs/Web/CSS/@color-profile#descriptors) descriptor
 
 ### Functions
 
