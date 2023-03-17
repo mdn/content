@@ -7,7 +7,7 @@ browser-compat: api.SVGAnimatedEnumeration.animVal
 
 {{APIRef("SVG")}}
 
-The **`animVal`** property of the {{domxref("SVGAnimatedEnumeration")}} interface contains the current value of a SVG enumeration. If there is no animation, it is the same value as the {{domxref("SVGAnimatedEnumeration.baseVal", "baseVal")}}.
+The **`animVal`** property of the {{domxref("SVGAnimatedEnumeration")}} interface contains the current value of an SVG enumeration. If there is no animation, it is the same value as the {{domxref("SVGAnimatedEnumeration.baseVal", "baseVal")}}.
 
 ## Value
 

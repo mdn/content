@@ -7,7 +7,7 @@ browser-compat: api.SVGAnimatedEnumeration
 
 {{APIRef("SVG")}}
 
-The **`SVGAnimatedEnumeration`** interface descrobes attributes value which are constants from a particular enumeration and which can be animated.
+The **`SVGAnimatedEnumeration`** interface describes attribute values which are constants from a particular enumeration and which can be animated.
 
 ## Instance properties
 
@@ -22,7 +22,7 @@ The `SVGAnimatedEnumeration` interface do not provide any specific methods.
 
 ## Examples
 
-Considering this snippet with a {{SVGElement("clipPath")}} element. Its {{SVGAttr("clipPathUnits")}} is associated with a `SVGAnimatedEnumeration` object.
+Considering this snippet with a {{SVGElement("clipPath")}} element: Its {{SVGAttr("clipPathUnits")}} is associated with a `SVGAnimatedEnumeration` object.
 
 ```html
 <svg viewbox="0 0 100 100" width="200" height="200">
