@@ -8175,8 +8175,8 @@
 /en-US/docs/Web/API/FileReader/onabort	/en-US/docs/Web/API/FileReader/abort_event
 /en-US/docs/Web/API/FileReader/onerror	/en-US/docs/Web/API/FileReader/error_event
 /en-US/docs/Web/API/FileReader/onload	/en-US/docs/Web/API/FileReader/load_event
-/en-US/docs/Web/API/FileRequest.locked	/en-US/docs/Web/API/IDBFileRequest/lockedFile
-/en-US/docs/Web/API/FileRequest/lockedFile	/en-US/docs/Web/API/IDBFileRequest/lockedFile
+/en-US/docs/Web/API/FileRequest.locked	/en-US/docs/Web/API/IndexedDB_API
+/en-US/docs/Web/API/FileRequest/lockedFile	/en-US/docs/Web/API/IndexedDB_API
 /en-US/docs/Web/API/FileSystemEntrySync	/en-US/docs/Web/API/File_and_Directory_Entries_API
 /en-US/docs/Web/API/FileSystemFileEntry/FileSystemFileEntry.createWriter	/en-US/docs/Web/API/FileSystemFileEntry/createWriter
 /en-US/docs/Web/API/FileSystemFileEntry/FileSystemFileEntry.createWriter()	/en-US/docs/Web/API/FileSystemFileEntry/createWriter
@@ -8620,6 +8620,9 @@
 /en-US/docs/Web/API/IDBFactory.open	/en-US/docs/Web/API/IDBFactory/open
 /en-US/docs/Web/API/IDBFactory.open-obsolete	/en-US/docs/Web/API/IDBFactory/open
 /en-US/docs/Web/API/IDBFactory/open-obsolete	/en-US/docs/Web/API/IDBFactory/open
+/en-US/docs/Web/API/IDBFileRequest	/en-US/docs/Web/API/IndexedDB_API
+/en-US/docs/Web/API/IDBFileRequest/lockedFile	/en-US/docs/Web/API/IndexedDB_API
+/en-US/docs/Web/API/IDBFileRequest/progress_event	/en-US/docs/Web/API/IndexedDB_API
 /en-US/docs/Web/API/IDBIndex.count	/en-US/docs/Web/API/IDBIndex/count
 /en-US/docs/Web/API/IDBIndex.createIndex	/en-US/docs/Web/API/IDBObjectStore/createIndex
 /en-US/docs/Web/API/IDBIndex.get	/en-US/docs/Web/API/IDBIndex/get
