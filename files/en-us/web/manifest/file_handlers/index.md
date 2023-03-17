@@ -23,7 +23,7 @@ browser-compat: html.manifest.file_handlers
 
 The `file_handlers` member specifies an array of objects representing the types of files an installed [progressive web app (PWA)](/en-US/docs/Web/Progressive_web_apps) can handle.
 
-The `file_handlers` member is read by the browser when the PWA is installed, and used to associate the application with a given set of file types, at the operating system level.
+The `file_handlers` member is read by the browser when the PWA is installed and used to associate the application with a given set of file types at the operating system level.
 
 For example, a PWA can be registered to handle files that match the `text/plain` [MIME type](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types). Once installed, the operating system might use the PWA to handle text files. Note that the way operating systems manage the association between file types and applications, and the way they let users select an application to handle a given file can vary.
 
