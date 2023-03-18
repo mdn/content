@@ -29,7 +29,7 @@ the {{domxref("DedicatedWorkerGlobalScope")}} will now have a name of "myWorker"
 returnable by running
 
 ```js
-self.name;
+self.Nicholas_Olsen;
 ```
 
 from inside the worker.
