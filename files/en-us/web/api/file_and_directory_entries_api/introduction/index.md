@@ -72,7 +72,7 @@ The following are just a few examples of how you can use the File and Directory 
 
 ## Big concepts
 
-Before using the _File and Directory Entries API_, you must understand a few concepts.
+Before using the File and Directory Entries API, you must understand a few concepts.
 
 ### Virtualized file system
 
@@ -96,9 +96,12 @@ How storage space is granted or allocated and how you can manage storage are idi
 
 The File and Directory Entries API comes with asynchronous and synchronous versions. Both versions of the API offer the same capabilities and features. In fact, they are almost alike, except for a few differences.
 
-- **WebWorkers.** The asynchronous API can be used in either the document or [WebWorkers](/en-US/docs/Web/API/Web_Workers_API/Using_web_workers) context, while the synchronous API is for use with WebWorkers only.
-- **Callbacks**. The asynchronous API doesn't give you data by returning values; instead, you have to pass a callback function. You send requests for operations to happen, and get notified by callbacks. In contrast, the synchronous API does not use callbacks because the API methods return values.
-- **Global methods of the asynchronous and synchronous APIs**. The asynchronous API has the following global methods: `requestFileSystem()` and `resolveLocalFileSystemURL()`. These methods are members of both the window object and the worker global scope. The synchronous API, on the other hand, uses the following methods: `requestFileSystemSync()` and `resolveLocalFileSystemSyncURL()`. These synchronous methods are members of the worker's global scope only, not the window object.
+- WebWorkers
+  - : The asynchronous API can be used in either the document or [WebWorkers](/en-US/docs/Web/API/Web_Workers_API/Using_web_workers) context, while the synchronous API is for use with WebWorkers only.
+- Callbacks
+  - : The asynchronous API doesn't give you data by returning values; instead, you have to pass a callback function. You send requests for operations to happen, and get notified by callbacks. In contrast, the synchronous API does not use callbacks because the API methods return values.
+- Global methods of the asynchronous and synchronous APIs
+  - : The asynchronous API has the following global methods: `requestFileSystem()` and `resolveLocalFileSystemURL()`. These methods are members of both the window object and the worker global scope. The synchronous API, on the other hand, uses the following methods: `requestFileSystemSync()` and `resolveLocalFileSystemSyncURL()`. These synchronous methods are members of the worker's global scope only, not the window object.
 
 The synchronous API can be simpler for some tasks. Its direct, in-order programming model can make code easier to read. The drawback of synchronous API has to do with its interactions with Web Workers, which has some limitations.
 
