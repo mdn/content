@@ -115,13 +115,13 @@ For much more detail about setting up service workers and using them to add offl
 
 While offine operation is probably the most common use for service workers, they also enable a PWA to operate even while the main app is closed. This is possible because the service worker is allowed to run while the main app is not running.
 
-This doesn't mean service workers run all the time: browsers may close service workers when they think it is appropriate. For example, if a service worker has been inactive for a while it will be closed. However, the browser will restart the service worker when an event has happened that it needs to take care of. This enables a PWA to implement background operations in the following way:
+This doesn't mean service workers run all the time: browsers may close service workers when they think it is appropriate. For example, if a service worker has been inactive for a while, it will be closed. However, the browser will restart the service worker when an event has happened that it needs to take care of. This enables a PWA to implement background operations in the following way:
 
 - in the main app, register a request for the service worker to perform some operation
 - at the appropriate time, the service worker will be restarted if necessary, and an event will fire in the service worker's scope
 - the service worker will perform the operation
 
-In the next sections we'll discuss a few different features that use this pattern to enable a PWA to work while the main app isn't open.
+In the next sections, we'll discuss a few different features that use this pattern to enable a PWA to work while the main app isn't open.
 
 ## Background sync
 
@@ -170,7 +170,7 @@ With background fetch:
 
 - the request is initiated from the main app UI
 - whether or not the main app is open, the browser displays a persistent UI element that notifies the user about the ongoing request, and enables them to cancel it or check its progress
-- when the request has completed with success or failure, or the user has asked to check the request's progress, then the browser starts the service worker (if necessary) and fires the appropriate event in the service worker's scope.
+- when the request is completed with success or failure, or the user has asked to check the request's progress, then the browser starts the service worker (if necessary) and fires the appropriate event in the service worker's scope.
 
 ### Making a background fetch request
 
@@ -210,7 +210,7 @@ When something happens that the app might need to take care of, the browser star
 - `backgroundfetchsuccess`: all requests were successful
 - `backgroundfetchfail`: at least one request failed
 - `backgroundfetchabort`: the fetch was canceled by the user or by the main app
-- `backgroundfetchclick`: the user clicked on the UI the browser is showing for the fetch
+- `backgroundfetchclick`: the user clicked on the UI element that the browser is showing
 
 #### Retrieving response data
 
@@ -321,7 +321,7 @@ Inside `updateNews()`, the service worker can fetch and cache the latest stories
 
 ### Unregistering a periodic sync
 
-When the PWA no longer needs periodic background updates, (for example, because the user has switched the off in the app's settings) then the PWA should ask the browser to stop generation periodic sync events, by calling the {{domxref("PeriodicSyncManager/unregister", "unregister()")}} method of {{domxref("serviceWorkerRegistration.periodicSync", "periodicSync")}}:
+When the PWA no longer needs periodic background updates, (for example, because the user has switched them off in the app's settings) then the PWA should ask the browser to stop generation periodic sync events, by calling the {{domxref("PeriodicSyncManager/unregister", "unregister()")}} method of {{domxref("serviceWorkerRegistration.periodicSync", "periodicSync")}}:
 
 ```js
 // main.js
@@ -371,7 +371,7 @@ When an event happens on the server that the server wants the app to handle, the
 ![Diagram showing push message sending and delivery steps](push-messaging-2.svg)
 
 1. The app server signs the message using its private signing key and encrypts the message using the public encryption key for the push service. The app server can use a library such as [web-push](https://github.com/web-push-libs/web-push) to simplify this.
-2. The app server sends the message to the endpoint for the push service, using the [HTTP Push](https://datatracker.ietf.org/doc/html/rfc8030) protocol, and again optionally using a library like web-push.
+2. The app server sends the message to the endpoint for the push service, using the [HTTP Push](https://datatracker.ietf.org/doc/html/rfc8030) protocol, and again optionally using a library, like web-push.
 3. The push service checks the signature on the message, and if the signature is valid, the push service queues the message for delivery.
 4. When the device has network connectivity, the push service delivers the encrypted message to the browser.
 5. When the browser receives the encrypted message, it decrypts the message.
