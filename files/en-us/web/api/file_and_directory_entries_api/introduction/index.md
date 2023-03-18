@@ -74,7 +74,6 @@ The following are just a few examples of how you can use the File and Directory 
 
 Before using the _File and Directory Entries API_, you must understand a few concepts.
 
-
 ### Virtualized file system
 
 The API doesn't give you access to the local file system, nor is the sandbox really a section of the file system. Instead, it is a virtualized file system that looks like a full-fledged file system to the web app. It does not necessarily have a relationship to the local file system outside the browser.
