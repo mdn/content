@@ -34,24 +34,80 @@ A [worker](/en-US/docs/Web/API/Web_Workers_API) is a part of a web app that runs
 
 A [service worker](/en-US/docs/Web/API/Service_Worker_API) is a specific type of worker. It is said to _control_ some subset of the pages under the app origin (by default, all pages under the app origin).
 
-When the service worker is installed, it can fetch the resources from the server for the pages it controls (including pages, styles, scripts, and images, for example) and add them to a local cache. Then whenever the app requests a resource (for example, because the user opened the app or clicked an internal link), the request can be intercepted by the service worker. The service worker can then respond to the request with a caching strategy, such as:
+When the service worker is installed, it can fetch the resources from the server for the pages it controls (including pages, styles, scripts, and images, for example) and add them to a local cache. The {{domxref("Cache")}} interface is used to add resources to the cache. `Cache` instances are accessible through the {{domxref("caches")}} property in the service worker global scope.
 
-1. If the resource exists in the cache, get the resource from the cache and return the resource to the app.
-2. If the resource does not exist in the cache, try to fetch the resource from the network.
+Then whenever the app requests a resource (for example, because the user opened the app or clicked an internal link), the browser fires an event called {{domxref("ServiceWorkerGlobalScope.fetch_event", "fetch")}} in the service worker's global scope. By listening for this event, the service worker can intercept the request.
+
+The event handler for the `fetch` event is passed a {{domxref("FetchEvent")}} object, which:
+
+- provides access to the request as a {{domxref("Request")}} instance
+- provides a {{domxref("FetchEvent.respondWith", "respondWith()")}} method to send a response to the request.
+
+One way a service worker can handle requests is a "cache-first" strategy. In this strategy:
+
+1. If the requested resource exists in the cache, get the resource from the cache and return the resource to the app.
+2. If the requested resource does not exist in the cache, try to fetch the resource from the network.
    1. If the resource could be fetched, add the resource to the cache for next time, and return the resource to the app.
    2. If the resource could not be fetched, return some default fallback resource.
 
-This means that in many situations, the web app will function well even if network connectivity is intermittent. From the point of view of the main app code, this is completely transparent: it just makes network requests and gets responses. Also, because the service worker is in a separate thread, the main app code can stay responsive to user input while resources are fetched and cached.
+The following code sample shows an implementation of this:
 
-> **Note:** The strategy described here is just one way a service worker could implement caching. The optimal caching strategy is dependent on the particular web app and how it is used.
+```js
+const putInCache = async (request, response) => {
+  const cache = await caches.open("v1");
+  await cache.put(request, response);
+};
 
-The following web platform features are especially relevant to using service workers in this way:
+const cacheFirst = async ({ request, fallbackUrl }) => {
+  // First try to get the resource from the cache.
+  const responseFromCache = await caches.match(request);
+  if (responseFromCache) {
+    return responseFromCache;
+  }
 
-- the {{domxref("Cache")}} interface is used to add resources to the cache. `Cache` instances are accessible through the {{domxref("caches")}} property in the service worker global scope.
-- when the web app makes a network request, an event called {{domxref("ServiceWorkerGlobalScope.fetch_event", "fetch")}} is fired in the service worker's global scope. By listening for this event, the service worker can intercept the request.
-- the event handler for the `fetch` event is passed a {{domxref("FetchEvent")}} object, which:
-  - provides access to the request as a {{domxref("Request")}} instance
-  - provides a {{domxref("FetchEvent.respondWith", "respondWith()")}} method to send a response to the request.
+  // If the response was not found in the cache,
+  // try to get the resource from the network.
+  try {
+    const responseFromNetwork = await fetch(request);
+    // If the network request succeeded, clone the response:
+    // - put one copy in the cache, for the next time
+    // - return the other copy to the app
+    putInCache(request, responseFromNetwork.clone());
+    return responseFromNetwork;
+  } catch (error) {
+    // If the network request failed,
+    // get the fallback response from the cache.
+    const fallbackResponse = await caches.match(fallbackUrl);
+    if (fallbackResponse) {
+      return fallbackResponse;
+    }
+    // When even the fallback response is not available,
+    // there is nothing we can do, but we must always
+    // return a Response object.
+    return new Response("Network error happened", {
+      status: 408,
+      headers: { "Content-Type": "text/plain" },
+    });
+  }
+};
+
+self.addEventListener("fetch", (event) => {
+  event.respondWith(
+    cacheFirst({
+      request: event.request,
+      fallbackUrl: "/fallback.html",
+    })
+  );
+});
+```
+
+This means that in many situations, the web app will function well even if network connectivity is intermittent. From the point of view of the main app code, it is completely transparent: the app just makes network requests and gets responses. Also, because the service worker is in a separate thread, the main app code can stay responsive to user input while resources are fetched and cached.
+
+> **Note:** The strategy described here is just one way a service worker could implement caching. Specifically, in a cache first strategy, we check the cache first before the network, meaning that we are more likely to return a quick response without incurring a network cost, but are more likely to return a stale response.
+>
+> An alternative would be a _network first_ strategy, in which we try to fetch the resource from the server first, and fall back to the cache if the device is offline.
+>
+> The optimal caching strategy is dependent on the particular web app and how it is used.
 
 For much more detail about setting up service workers and using them to add offline functionality, see our [guide to using service workers](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers).
 
@@ -167,7 +223,7 @@ Each `BackgroundFetchRecord` has a {{domxref("BackgroundFetchRecord/responseRead
 So to access response data, the handler could do something like:
 
 ```js
-addEventListener("backgroundfetchsuccess", (event) => {
+self.addEventListener("backgroundfetchsuccess", (event) => {
   const registration = event.registration;
 
   event.waitUntil(async () => {
@@ -190,14 +246,14 @@ Since the response data won't be available after the handler exits, the handler 
 The event object passed into `backgroundfetchsuccess` and `backgroundfetchfail` also has an {{domxref("BackgroundFetchUpdateUIEvent/updateUI", "updateUI()")}} method, which can be used to update the UI that the browser shows to keep the user informed about the fetch operation. With `updateUI()`, the handler can update the UI element's title and icon:
 
 ```js
-addEventListener("backgroundfetchsuccess", (event) => {
+self.addEventListener("backgroundfetchsuccess", (event) => {
   // retrieve and store response data
   // ...
 
   event.updateUI({ title: "Finished your download!" });
 });
 
-addEventListener("backgroundfetchfail", (event) => {
+self.addEventListener("backgroundfetchfail", (event) => {
   event.updateUI({ title: "Could not complete download" });
 });
 ```
@@ -209,7 +265,7 @@ The `backgroundfetchclick` event is fired when the user has clicked on the UI el
 The expected response here is to open a window giving the user more information about the fetch operation, which can be done from the service worker using {{domxref("Clients/openWindow", "clients.openWindow()")}}. For example:
 
 ```js
-addEventListener("backgroundfetchclick", (event) => {
+self.addEventListener("backgroundfetchclick", (event) => {
   const registration = event.registration;
 
   if (registration.result === "success") {
@@ -222,8 +278,106 @@ addEventListener("backgroundfetchclick", (event) => {
 
 ## Periodic background sync
 
+The [Periodic Background Synchronization API](/en-US/docs/Web/API/Web_Periodic_Background_Synchronization_API) enables a PWA to periodically update its data in the background, while the main app is closed.
+
+This can greatly improve the offline experience offered by a PWA. Consider an app that depends on reasonably fresh content, like a news app. If the device is offline when the user opens the app, then even with service worker-based caching the stories will only be as fresh as the last time the app was opened. With periodic background sync, the app could have refreshed its stories in the background, when the device had connectivity, and so could be able to show relatively fresh content to the user.
+
+This takes advantage of the fact that on a mobile device especially, connectivity is not poor so much as _intermittent_: by taking advantage of the times that the device has connectivity, the app can smooth over the connectivity gaps.
+
+### Registering a periodic sync event
+
+The code for registering a periodic sync event follows the same pattern as that for [registering a sync event](#registering_a_sync_event). The {{domxref("ServiceWorkerRegistration")}} has a {{domxref("ServiceWorkerRegistration.periodicSync", "periodicSync")}} property, which has a {{domxref("PeriodicSyncManager/register", "register()")}} method taking the name of the periodic sync as a parameter.
+
+However, `periodicSync.register()` takes an extra argument, which is an object with a `minInterval` property. This represents the minimum interval, in milliseconds, between synchronization attempts:
+
+```js
+// main.js
+async function registerPeriodicSync() {
+  const swRegistration = await navigator.serviceWorker.ready;
+  swRegistration.periodicSync.register("update-news", {
+    // try to update every 2 hours
+    minInterval: 2 * 60 * 60 * 1000,
+  });
+}
+```
+
+### Handling a periodic sync event
+
+Although the PWA asks for a particular interval in the `register()` call, it's up to the browser how often to generate periodic sync events. Apps that users open and interact with often will be more likely to receive periodic sync events, and will receive them more often, than apps which the user rarely or never interacts with.
+
+When the browser has decided to generate a periodic sync event, the pattern is again familiar: it starts the service worker, if necessary, and fires a {{domxref("ServiceWorkerGlobalScope.periodicsync_event", "periodicSync")}} event in the service worker's global scope.
+
+The service worker's event handler checks the name of the event, and calls the appropriate function inside the event's {{domxref("ExtendableEvent/waitUntil", "waitUntil()")}} method
+
+```js
+self.addEventListener("periodicsync", (event) => {
+  if (event.tag === "update-news") {
+    event.waitUntil(updateNews());
+  }
+});
+```
+
+Inside `updateNews()`, the service worker can fetch and cache the latest stories. The `updateNews()` function should complete relatively quickly: if the service worker takes too long updating its content, the browser will stop it.
+
+### Unregistering a periodic sync
+
+When the PWA no longer needs periodic background updates, (for example, because the user has switched the off in the app's settings) then the PWA should ask the browser to stop generation periodic sync events, by calling the {{domxref("PeriodicSyncManager/unregister", "unregister()")}} method of {{domxref("serviceWorkerRegistration.periodicSync", "periodicSync")}}:
+
+```js
+// main.js
+async function registerPeriodicSync() {
+  const swRegistration = await navigator.serviceWorker.ready;
+  swRegistration.periodicSync.unregister("update-news");
+}
+```
+
 ## Push
 
-## Notifications
+The [Push API](/en-US/docs/Web/API/Push_API) enables a PWA to receive messages pushed from the server, whether the app is running or not. When the message is received by the device, the app's service worker is started and handles the message, and a [notification](/en-US/docs/Web/API/Notifications_API) is shown to the user (the specification allows for "silent push" in which no notification is shown, but no browsers support this).
+
+Displaying a notification to the user distracts them from whatever they were doing and has the potential to be very annoying, so use push messages with care. In general, they are suitable for situations in which you need to alert the user about something, and can't wait until the next time they open your app.
+
+Push messages are not sent directly from the app server to the device. Instead, your app server sends messages to a push service, from which the device can retrieve them and deliver them to the app.
+
+This also means that messages from your server to the push service need to be {{Glossary("Encryption", "encrypted")}} (so the push service can't read them) and {{Glossary("Signature/Security", "signed")}} (so the push service knows that the messages are really from your server, and not from someone impersonating your server).
+
+The push service is operated by the browser vendor or by a third party, and the app server communicates with it using the [HTTP Push](https://datatracker.ietf.org/doc/html/rfc8030) protocol. The app server can use a third-party library such as [web-push](https://github.com/web-push-libs/web-push) to take care of the protocol details.
+
+### Subscribing to push messages
+
+The pattern for subscribing to push messages looks like this:
+
+![Diagram showing push message subscription steps](push-messaging-1.svg)
+
+1. The app server needs to be provisioned with a {{Glossary("Public-key_cryptography", "public/private key pair")}}, so it can sign push messages. Signing messages needs to follow the [VAPID](https://datatracker.ietf.org/doc/html/draft-thomson-webpush-vapid-02) specification.
+
+2. On the device, the app uses the {{domxref("PushManager.subscribe()")}} method to subscribe to messages from the server. The `subscribe()` method:
+
+   - takes the app server's public key as an argument: this is what the push service will use to verify the signature on messages from the app server.
+
+   - returns a `Promise` that resolves to a {{domxref("PushSubscription")}} object. This object includes:
+
+     - the [endpoint](/en-US/docs/Web/API/PushSubscription/endpoint) for the push service: this is how the app server knows where to send push messages.
+     - the [public encryption key](/en-US/docs/Web/API/PushSubscription/getKey) that your server will use to encrypt messages to the push service.
+
+3. The app sends the endpoint and public encryption key to your server (for example, using {{domxref("fetch()")}}).
+
+After this, the app server is able to start sending push messages.
+
+### Sending, delivering, and handling push messages
+
+When an event happens on the server that the server wants the app to handle, the server can send messages, and the sequence of steps is like this:
+
+![Diagram showing push message sending and delivery steps](push-messaging-2.svg)
+
+1. The app server signs the message using its private signing key and encrypts the message using the public encryption key for the push service. The app server can use a library such as [web-push](https://github.com/web-push-libs/web-push) to simplify this.
+2. The app server sends the message to the endpoint for the push service, using the [HTTP Push](https://datatracker.ietf.org/doc/html/rfc8030) protocol, and again optionally using a library like web-push.
+3. The push service checks the signature on the message, and if the signature is valid, the push service queues the message for delivery.
+4. When the device has network connectivity, the push service delivers the encrypted message to the browser.
+5. When the browser receives the encrypted message, it decrypts the message.
+6. The browser starts the service worker if necessary, and fires an event called {{domxref("ServiceWorkerGlobalScope.push_event", "push")}} in the service worker's global scope. The event handler is passed a {{domxref("PushEvent")}} object, which contains the message data.
+7. In its event handler, the service worker does any processing of the message. As usual, the event handler calls `event.waitUntil()` to ask the browser to keep the service worker running.
+8. In its event handler, the service worker creates a notification using {{domxref("ServiceWorkerRegistration/showNotification", "registration.showNotification()")}}.
+9. If the user clicks the notification or closes it, the {{domxref("ServiceWorkerGlobalScope.notificationclick_event", "notificationclick")}} and {{domxref("ServiceWorkerGlobalScope.notificationclose_event", "notificationclose")}}, respectively, are fired in the service worker's global scope. These enable the app to handle the user's response to the notification.
 
 ## Permissions
