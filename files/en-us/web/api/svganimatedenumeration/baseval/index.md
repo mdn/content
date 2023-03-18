@@ -18,7 +18,7 @@ An integer containing the initial value of the enumeration
 Considering this snippet with a {{SVGElement("clipPath")}} element: Its {{SVGAttr("clipPathUnits")}} is associated with a {{domxref("SVGAnimatedEnumeration")}} object.
 
 ```html
-<svg viewbox="0 0 100 100" width="200" height="200">
+<svg viewBox="0 0 100 100" width="200" height="200">
   <clipPath id="clip1" clipPathUnits="userSpaceOnUse">
     <circle cx="50" cy="50" r="35" />
   </clipPath>
