@@ -11,7 +11,9 @@ spec-urls:
 
 The **CSS color** module defines colors, color types, color blending, opacity, and how you can apply these colors and effects to HTML content.
 
-Not all CSS properties that take a {{cssxref("&lt;color&gt;")}} as a value are part of this module, but they do depend upon it.
+While this module only two CSS properties, {{cssxref("color")}}
+
+- {{cssxref("opacity")}}, over 20 CSS and SVG properties, CSS images, at-rules, and @media rules depend on the CSS color and opacity values defined in this module.
 
 ### Colors in action
 
