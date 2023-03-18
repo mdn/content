@@ -111,3 +111,14 @@ This section lists `page-type` values for pages under [Web/API](/en-US/docs/Web/
 - `web-api-event`: an event, like [`Notification.click`](/en-US/docs/Web/API/Notification/click_event). See [API reference subpage](#api_reference_subpage).
 - `webgl-extension`: a WebGL extension, like [`WEBGL_draw_buffers`](/en-US/docs/Web/API/WEBGL_draw_buffers).
 - `webgl-extension-method`: a WebGL extension method, like [`OES_vertex_array_object.bindVertexArrayOES()`](/en-US/docs/Web/API/OES_vertex_array_object/bindVertexArrayOES).
+
+### WebExtensions page types
+
+This section lists `page-type` values for pages under [Mozilla/Add-ons/WebExtensions](/en-US/docs/Mozilla/Add-ons/WebExtensions). Every page in that part of the tree must have a `page-type`, and its value must be one of those listed below or one of the generic page type values.
+
+- `webextension-api`: a WebExtension API, like [`alarms`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/alarms).
+- `webextension-api-event`: a WebExtension API event, like [`action.onClicked`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/action/onClicked).
+- `webextension-api-function`: a WebExtension function, like [`action.setBadgeText()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/action/setBadgeText).
+- `webextension-api-property`: a WebExtension property, like [`browserSettings.openBookmarksInNewTabs`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/browserSettings/openBookmarksInNewTabs).
+- `webextension-api-type`: a WebExtension type, like [`contextualIdentities.ContextualIdentity`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/contextualIdentities/ContextualIdentity).
+- `webextension-manifest-key`: a WebExtension manifest key, like [`user_scripts`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/user_scripts).

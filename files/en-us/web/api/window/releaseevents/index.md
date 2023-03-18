@@ -38,7 +38,7 @@ None ({{jsxref("undefined")}}).
 ## Examples
 
 ```js
-window.releaseEvents(Event.KEYPRESS)
+window.releaseEvents(Event.KEYPRESS);
 ```
 
 ## Notes

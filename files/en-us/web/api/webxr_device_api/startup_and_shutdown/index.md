@@ -77,7 +77,7 @@ let webxrPolyfill = null;
 function getXR(usePolyfill) {
   let tempXR;
 
-  switch(usePolyfill) {
+  switch (usePolyfill) {
     case "if-needed":
       tempXR = navigator.xr;
       if (!tempXR) {
@@ -98,7 +98,7 @@ function getXR(usePolyfill) {
   return tempXR;
 }
 
-const nativeXr = getXR("no");  // Get the native XRSystem object
+const nativeXr = getXR("no"); // Get the native XRSystem object
 const polyfilledXr = getXR("yes"); // Always returns an XRSystem from the polyfill
 const xr = getXR("if-needed"); // Use the polyfill only if navigator.xr missing
 ```
@@ -169,7 +169,7 @@ For example, if you need an `unbounded` reference space, you can specify that as
 ```js
 async function createImmersiveSession(xr) {
   session = await xr.requestSession("immersive-vr", {
-    requiredFeatures: [ "unbounded" ]
+    requiredFeatures: ["unbounded"],
   });
   return session;
 }
@@ -180,7 +180,7 @@ On the other hand, if you need an _inline_ session and would prefer a `local` re
 ```js
 async function createInlineSession(xr) {
   session = await xr.requestSession("inline", {
-    optionalFeatures: [ "local" ]
+    optionalFeatures: ["local"],
   });
   return session;
 }
@@ -222,15 +222,20 @@ async function runSession(session) {
   // Finish configuring WebGL
 
   worldData.session.updateRenderState({
-    baseLayer: new XRWebGLLayer(worldData.session, gl)
+    baseLayer: new XRWebGLLayer(worldData.session, gl),
   });
 
   // Start rendering the scene
 
   referenceSpace = await worldData.session.requestReferenceSpace("unbounded");
   worldData.referenceSpace = referenceSpace.getOffsetReferenceSpace(
-        new XRRigidTransform(worldData.playerSpawnPosition, worldData.playerSpawnOrientation));
-  worldData.animationFrameRequestID = worldData.session.requestAnimationFrame(onDrawFrame);
+    new XRRigidTransform(
+      worldData.playerSpawnPosition,
+      worldData.playerSpawnOrientation
+    )
+  );
+  worldData.animationFrameRequestID =
+    worldData.session.requestAnimationFrame(onDrawFrame);
 
   return worldData;
 }
@@ -270,7 +275,7 @@ When the state of the `XRSession`'s visibility changes—such as when the sessio
 
 ```js
 session.onvisibilitychange = (event) => {
-  switch(event.session.visibilityState) {
+  switch (event.session.visibilityState) {
     case "hidden":
       myFrameRate = 10;
       break;
