@@ -126,7 +126,6 @@ The filesystem API is case-sensitive, and case-preserving.
 
 For security reasons, browsers impose restrictions on file access. If you ignore them, you will get security errors.
 
-
 ### Adhering to the same-origin policy
 
 An origin is the domain, application layer protocol, and port of a URL of the document where the script is being executed. Each origin has its own associated set of file systems.
