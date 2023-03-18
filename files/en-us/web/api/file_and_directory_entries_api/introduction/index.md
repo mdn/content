@@ -72,15 +72,8 @@ The following are just a few examples of how you can use the File and Directory 
 
 ## Big concepts
 
-Before you start using the File and Directory Entries API, you need to understand a few concepts:
+Before using the _File and Directory Entries API_, you must understand a few concepts.
 
-- [Virtualized file system](#virtualized_file_system)
-- [Different storage types](#different_storage_types)
-- [Storage quotas](#storage_quotas)
-- [Asynchronous and synchronous versions](#asynchronous_and_synchronous_versions)
-- [Using the error callbacks for asynchronous API](#using_the_error_callbacks_for_asynchronous_api)
-- [Interacting with other APIs](#interacting_with_other_apis)
-- [Case-sensitive](#case-sensitive)
 
 ### Virtualized file system
 
@@ -131,10 +124,6 @@ The filesystem API is case-sensitive, and case-preserving.
 
 For security reasons, browsers impose restrictions on file access. If you ignore them, you will get security errors.
 
-- [Adhering to the same-origin policy](#adhering_to_the_same-origin_policy)
-- [Unable to create and rename executable files](#unable_to_create_and_rename_executable_files)
-- [Sandboxed file system](#sandboxed_file_system)
-- [You cannot run your app from file://](#you_cannot_run_your_app_from_file)
 
 ### Adhering to the same-origin policy
 
