@@ -471,7 +471,7 @@ a.x = 1;
 console.log(b.x); // undefined
 ```
 
-Unlike accessor properties, value properties are always set on the object itself, not on a prototype. However, if a non-writable value property is inherited, it is still prevented from being modified on the object.
+Unlike accessor properties, data properties are always set on the object itself, not on a prototype. However, if a non-writable data property is inherited, it is still prevented from being modified on the object.
 
 ```js
 function MyClass() {}
