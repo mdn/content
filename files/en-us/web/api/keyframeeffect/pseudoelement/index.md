@@ -18,7 +18,7 @@ A string or `null`.
 ## Exceptions
 
 - `SyntaxError` {{domxref("DOMException")}}
-  - : Thrown when trying to set this property to an invalid pseudo-element. The property is then left unchanged.
+  - : Thrown when trying to set this property to an element, an invalid pseudo-element (either non-existent or misspelled). The property is then left unchanged.
 
 ## Examples
 
