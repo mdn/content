@@ -15,8 +15,8 @@ The **`padding-inline`** [CSS](/en-US/docs/Web/CSS) [shorthand property](/en-US/
 
 This property is a shorthand for the following CSS properties:
 
-- [`padding-inline-end`](/en-US/docs/Web/CSS/padding-inline-end)
-- [`padding-inline-start`](/en-US/docs/Web/CSS/padding-inline-start)
+- {{CSSXref("padding-inline-end")}}
+- {{CSSXref("padding-inline-start")}}
 
 ## Syntax
 
@@ -40,10 +40,7 @@ The `padding-inline` property may be specified with one or two values. If one va
 
 ### Values
 
-- {{cssxref("&lt;length&gt;")}}
-  - : The size of the padding as a fixed value. Must be nonnegative.
-- {{cssxref("&lt;percentage&gt;")}}
-  - : The size of the padding as a percentage, relative to the inline size (_width_ in a horizontal language, defined by {{cssxref("writing-mode")}}) of the [containing block](/en-US/docs/Web/CSS/Containing_block). Must be nonnegative.
+The `padding-inline` property takes the same values as the {{cssxref("padding-left")}} property.
 
 ## Description
 
