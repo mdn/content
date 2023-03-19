@@ -68,7 +68,7 @@ const p2 = Promise.all([1, 2, 3, Promise.resolve(444)]);
 // so the returned promise gets rejected
 const p3 = Promise.all([1, 2, 3, Promise.reject(555)]);
 
-// Using setTimeout, we can execute code after the queue is empty
+// Using setTimeout, we can execute code after the stack is empty
 setTimeout(() => {
   console.log(p);
   console.log(p2);
@@ -94,15 +94,15 @@ const p = Promise.all(resolvedPromisesArray);
 // Immediately logging the value of p
 console.log(p);
 
-// Using setTimeout, we can execute code after the queue is empty
+// Using setTimeout, we can execute code after the stack is empty
 setTimeout(() => {
-  console.log("the queue is now empty");
+  console.log("the stack is now empty");
   console.log(p);
 });
 
 // Logs, in order:
 // Promise { <state>: "pending" }
-// the queue is now empty
+// the stack is now empty
 // Promise { <state>: "fulfilled", <value>: Array[2] }
 ```
 
@@ -113,13 +113,13 @@ const mixedPromisesArray = [Promise.resolve(33), Promise.reject(44)];
 const p = Promise.all(mixedPromisesArray);
 console.log(p);
 setTimeout(() => {
-  console.log("the queue is now empty");
+  console.log("the stack is now empty");
   console.log(p);
 });
 
 // Logs:
 // Promise { <state>: "pending" }
-// the queue is now empty
+// the stack is now empty
 // Promise { <state>: "rejected", <reason>: 44 }
 ```
 
@@ -131,14 +131,14 @@ const p2 = Promise.all([1337, "hi"]); // Non-promise values are ignored, but the
 console.log(p);
 console.log(p2);
 setTimeout(() => {
-  console.log("the queue is now empty");
+  console.log("the stack is now empty");
   console.log(p2);
 });
 
 // Logs:
 // Promise { <state>: "fulfilled", <value>: Array[0] }
 // Promise { <state>: "pending" }
-// the queue is now empty
+// the stack is now empty
 // Promise { <state>: "fulfilled", <value>: Array[2] }
 ```
 
