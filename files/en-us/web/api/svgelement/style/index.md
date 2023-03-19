@@ -31,12 +31,12 @@ A live {{domxref("CSSStyleDeclaration")}} object.
 
 ### Getting style information
 
-The `style` property is not useful for completely learning about the styles applied on the element, since it represents only the CSS declarations set in the element's inline `style` attribute, not those that come from style rules elsewhere, such as style rules in the {{HTMLElement("head")}} section, or external style sheets. To get the values of all CSS properties for an element you should use {{domxref("Window.getComputedStyle()")}} instead.
-
-The following code snippet demonstrates the difference between the values obtained using the element's `style` property and that obtained using the `getComputedStyle()` method:
+The following code snippet show how the `style` attribute is translated into a list of entries in {{domxref("CSSStyleDeclaration")}} :
 
 ```html
 <svg
+  width="50"
+  height="50"
   xmlns="http://www.w3.org/2000/svg"
   viewBox="0 0 250 250"
   width="250"
@@ -48,37 +48,25 @@ The following code snippet demonstrates the difference between the values obtain
     id="circle"
     style="fill: red; stroke: black; stroke-width: 2px;" />
 </svg>
+<pre id="out"></pre>
 ```
 
 ```js
 const element = document.querySelector("circle");
-let out = "";
+const out = document.getElementById("out");
 const elementStyle = element.style;
-const computedStyle = window.getComputedStyle(element, null);
 
-// We loop all styles (for…of doesn't work with CSStyleDeclaration)
-for (const prop in computedStyle) {
-  if (Object.hasOwn(computedStyle, prop)) {
-    out += `${computedStyle[prop]} = '${elementStyle.getPropertyValue(
-      computedStyle[prop]
-    )}' > '${computedStyle[computedStyle[prop]]}'\n`;
+// We loop through all styles (for…of doesn't work with CSStyleDeclaration)
+for (const prop in elementStyle) {
+  if (Object.hasOwn(elementStyle, prop)) {
+    out.textContent += `${
+      elementStyle[prop]
+    } = '${elementStyle.getPropertyValue(elementStyle[prop])}'\n`;
   }
 }
-
-console.log(out);
 ```
 
-The output is a long list of properties. The three interesting properties have the following values:
-
-```
-…
-fill = 'red' > 'rgb(255, 0, 0)'
-…
-stroke = 'black' > 'rgb(0, 0, 0)'
-…
-stroke-width = '2px' > '2px'
-…
-```
+{{EmbedLiveSample("Getting_style_information", "100", "130")}}
 
 ## Specifications
 
