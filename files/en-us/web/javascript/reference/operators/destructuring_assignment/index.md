@@ -592,7 +592,7 @@ Same as accessing properties, destructuring `null` or `undefined` throws a {{jsx
 
 ```js example-bad
 const { a } = undefined; // TypeError: Cannot destructure property 'a' of 'undefined' as it is undefined.
-const { a } = null; // TypeError: Cannot destructure property 'b' of 'null' as it is null.
+const { b } = null; // TypeError: Cannot destructure property 'b' of 'null' as it is null.
 ```
 
 This happens even when the pattern is empty.
