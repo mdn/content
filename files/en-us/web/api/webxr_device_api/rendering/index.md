@@ -290,9 +290,12 @@ This maintains a global (or an object property) called `lastFrameTime` which con
 With the elapsed time in hand, your rendering code has the means to compute just how much every moving object has moved in the time elapsed. For instance, if an object is rotating, you might apply the rotation like this:
 
 ```js
-const xDeltaRotation = (xRotationDegreesPerSecond * RADIANS_PER_DEGREE) * deltaTime;
-const yDeltaRotation = (yRotationDegreesPerSecond * RADIANS_PER_DEGREE) * deltaTime;
-const zDeltaRotation = (zRotationDegreesPerSecond * RADIANS_PER_DEGREE) * deltaTime;
+const xDeltaRotation =
+  xRotationDegreesPerSecond * RADIANS_PER_DEGREE * deltaTime;
+const yDeltaRotation =
+  yRotationDegreesPerSecond * RADIANS_PER_DEGREE * deltaTime;
+const zDeltaRotation =
+  zRotationDegreesPerSecond * RADIANS_PER_DEGREE * deltaTime;
 ```
 
 This computes the amount by which the object has rotated around each of the three axes since the last time the frame was drawn. Without this, the shape would rotate by the given amount every frame, regardless of the elapsed time. This could cause substantial stutter in many cases.

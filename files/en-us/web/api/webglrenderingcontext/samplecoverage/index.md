@@ -46,7 +46,7 @@ To check the sample coverage values, query the `SAMPLE_COVERAGE_VALUE` and
 `SAMPLE_COVERAGE_INVERT` constants.
 
 ```js
-gl.getParameter(gl.SAMPLE_COVERAGE_VALUE);  // 0.5
+gl.getParameter(gl.SAMPLE_COVERAGE_VALUE); // 0.5
 gl.getParameter(gl.SAMPLE_COVERAGE_INVERT); // false
 ```
 

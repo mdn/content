@@ -65,12 +65,17 @@ vertex buffer into the vertex shader function.
 ```js
 gl.bindBuffer(gl.ARRAY_BUFFER, vertexBuffer);
 
-aVertexPosition =
-    gl.getAttribLocation(shaderProgram, "aVertexPosition");
+aVertexPosition = gl.getAttribLocation(shaderProgram, "aVertexPosition");
 
 gl.enableVertexAttribArray(aVertexPosition);
-gl.vertexAttribPointer(aVertexPosition, vertexNumComponents,
-      gl.FLOAT, false, 0, 0);
+gl.vertexAttribPointer(
+  aVertexPosition,
+  vertexNumComponents,
+  gl.FLOAT,
+  false,
+  0,
+  0
+);
 
 gl.drawArrays(gl.TRIANGLES, 0, vertexCount);
 ```

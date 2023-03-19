@@ -23,9 +23,9 @@ Both approaches help a user check that they entered the intended password, which
 
 ## Value
 
-The {{htmlattrxref("value", "input")}} attribute contains a string whose value is the current contents of the text editing control being used to enter the password. If the user hasn't entered anything yet, this value is an empty string (`""`). If the [`required`](/en-US/docs/Web/HTML/Element/input#required) property is specified, then the password edit box must contain a value other than an empty string to be valid.
+The [`value`](/en-US/docs/Web/HTML/Element/input#value) attribute contains a string whose value is the current contents of the text editing control being used to enter the password. If the user hasn't entered anything yet, this value is an empty string (`""`). If the [`required`](/en-US/docs/Web/HTML/Element/input#required) property is specified, then the password edit box must contain a value other than an empty string to be valid.
 
-If the {{htmlattrxref("pattern", "input")}} attribute is specified, the content of a `password` control is only considered valid if the value passes validation; see [Validation](#validation) for more information.
+If the [`pattern`](/en-US/docs/Web/HTML/Element/input#pattern) attribute is specified, the content of a `password` control is only considered valid if the value passes validation; see [Validation](#validation) for more information.
 
 > **Note:** The line feed (U+000A) and carriage return (U+000D) characters are not permitted in a `password` value. When setting the value of a password control, line feed and carriage return characters are stripped out of the value.
 
@@ -47,11 +47,11 @@ The input will fail [constraint validation](/en-US/docs/Web/HTML/Constraint_vali
 
 ### pattern
 
-The `pattern` attribute, when specified, is a regular expression that the input's [`value`](/en-US/docs/Web/HTML/Element/input#value) must match for the value to pass [constraint validation](/en-US/docs/Web/HTML/Constraint_validation). It must be a valid JavaScript regular expression, as used by the {{jsxref("RegExp")}} type, and as documented in our [guide on regular expressions](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions); the `'u'` flag is specified when compiling the regular expression so that the pattern is treated as a sequence of Unicode code points, instead of as ASCII. No forward slashes should be specified around the pattern text.
+The `pattern` attribute, when specified, is a regular expression that the input's [`value`](/en-US/docs/Web/HTML/Element/input#value) must match for the value to pass [constraint validation](/en-US/docs/Web/HTML/Constraint_validation). It must be a valid JavaScript regular expression, as used by the {{jsxref("RegExp")}} type, and as documented in our [guide on regular expressions](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions); the `'u'` flag is specified when compiling the regular expression, so that the pattern is treated as a sequence of Unicode code points, instead of as ASCII. No forward slashes should be specified around the pattern text.
 
 If the specified pattern is not specified or is invalid, no regular expression is applied and this attribute is ignored completely.
 
-> **Note:** Use the {{htmlattrxref("title", "input")}} attribute to specify text that most browsers will display as a tooltip to explain what the requirements are to match the pattern. You should also include other explanatory text nearby.
+> **Note:** Use the [`title`](/en-US/docs/Web/HTML/Element/input#title) attribute to specify text that most browsers will display as a tooltip to explain what the requirements are to match the pattern. You should also include other explanatory text nearby.
 
 Use of a pattern is strongly recommended for password inputs, in order to help ensure that valid passwords using a wide assortment of character classes are selected and used by your users. With a pattern, you can mandate case rules, require the use of some number of digits and/or punctuation characters, and so forth. See the section [Validation](#validation) for details and an example.
 
@@ -92,7 +92,7 @@ Here we see the most basic password input, with a label established using the {{
 
 ### Allowing autocomplete
 
-To allow the user's password manager to automatically enter the password, specify the {{htmlattrxref("autocomplete", "input")}} attribute. For passwords, this should typically be one of the following:
+To allow the user's password manager to automatically enter the password, specify the [`autocomplete`](/en-US/docs/Web/HTML/Element/input#autocomplete) attribute. For passwords, this should typically be one of the following:
 
 - `on`
   - : Allow the browser or a password manager to automatically fill out the password field. This isn't as informative as using either `current-password` or `new-password`.
@@ -112,7 +112,7 @@ To allow the user's password manager to automatically enter the password, specif
 
 ### Making the password mandatory
 
-To tell the user's browser that the password field must have a valid value before the form can be submitted, specify the Boolean {{htmlattrxref("required", "input")}} attribute.
+To tell the user's browser that the password field must have a valid value before the form can be submitted, specify the Boolean [`required`](/en-US/docs/Web/HTML/Element/input#required) attribute.
 
 ```html
 <label for="userPassword">Password: </label>
@@ -124,7 +124,7 @@ To tell the user's browser that the password field must have a valid value befor
 
 ### Specifying an input mode
 
-If your recommended (or required) password syntax rules would benefit from an alternate text entry interface than the standard keyboard, you can use the {{htmlattrxref("inputmode", "input")}} attribute to request a specific one. The most obvious use case for this is if the password is required to be numeric (such as a PIN). Mobile devices with virtual keyboards, for example, may opt to switch to a numeric keypad layout instead of a full keyboard, to make entering the password easier. If the PIN is for one-time use, set the {{htmlattrxref("autocomplete", "input")}} attribute to either `off` or `one-time-code` to suggest that it's not saved.
+If your recommended (or required) password syntax rules would benefit from an alternate text entry interface than the standard keyboard, you can use the [`inputmode`](/en-US/docs/Web/HTML/Element/input#inputmode) attribute to request a specific one. The most obvious use case for this is if the password is required to be numeric (such as a PIN). Mobile devices with virtual keyboards, for example, may opt to switch to a numeric keypad layout instead of a full keyboard, to make entering the password easier. If the PIN is for one-time use, set the [`autocomplete`](/en-US/docs/Web/HTML/Element/input#autocomplete) attribute to either `off` or `one-time-code` to suggest that it's not saved.
 
 ```html
 <label for="pin">PIN: </label>
@@ -135,7 +135,7 @@ If your recommended (or required) password syntax rules would benefit from an al
 
 ### Setting length requirements
 
-As usual, you can use the {{htmlattrxref("minlength", "input")}} and {{htmlattrxref("maxlength", "input")}} attributes to establish minimum and maximum acceptable lengths for the password. This example expands on the previous one by specifying that the user's PIN must be at least four and no more than eight digits. The {{htmlattrxref("size", "input")}} attribute is used to ensure that the password entry control is eight characters wide.
+As usual, you can use the [`minlength`](/en-US/docs/Web/HTML/Element/input#minlength) and [`maxlength`](/en-US/docs/Web/HTML/Element/input#maxlength) attributes to establish minimum and maximum acceptable lengths for the password. This example expands on the previous one by specifying that the user's PIN must be at least four and no more than eight digits. The [`size`](/en-US/docs/Web/HTML/Element/input#size) attribute is used to ensure that the password entry control is eight characters wide.
 
 ```html
 <label for="pin">PIN:</label>
@@ -178,7 +178,7 @@ You can also use {{domxref("HTMLInputElement.selectionStart", "selectionStart")}
 
 ## Validation
 
-If your application has character set restrictions or any other requirement for the actual content of the entered password, you can use the {{htmlattrxref("pattern", "input")}} attribute to establish a regular expression to be used to automatically ensure that your passwords meet those requirements.
+If your application has character set restrictions or any other requirement for the actual content of the entered password, you can use the [`pattern`](/en-US/docs/Web/HTML/Element/input#pattern) attribute to establish a regular expression to be used to automatically ensure that your passwords meet those requirements.
 
 In this example, only values consisting of at least four and no more than eight hexadecimal digits are valid.
 
@@ -218,9 +218,9 @@ This example only accepts input which matches the format for a [valid United Sta
 <span id="current"></span>
 ```
 
-This uses a {{htmlattrxref("pattern", "input")}} which limits the entered value to strings representing legal Social Security numbers. Obviously, this regexp doesn't guarantee a valid SSN (since we don't have access to the Social Security Administration's database), but it does ensure the number could be one; it generally avoids values that cannot be valid. In addition, it allows the three groups of digits to be separated by a space, a dash ("-"), or nothing.
+This uses a [`pattern`](/en-US/docs/Web/HTML/Element/input#pattern) which limits the entered value to strings representing legal Social Security numbers. Obviously, this regexp doesn't guarantee a valid SSN (since we don't have access to the Social Security Administration's database), but it does ensure the number could be one; it generally avoids values that cannot be valid. In addition, it allows the three groups of digits to be separated by a space, a dash ("-"), or nothing.
 
-The {{htmlattrxref("inputmode", "input")}} is set to `numeric` to encourage devices with virtual keyboards to switch to a numeric keypad layout for easier entry. The {{htmlattrxref("minlength", "input")}} and {{htmlattrxref("maxlength", "input")}} attributes are set to 9 and 12, respectively, to require that the value be at least nine and no more than 12 characters (the former without separating characters between the groups of digits and the latter with them). The {{htmlattrxref("required", "input")}} attribute is used to indicate that this control must have a value. Finally, {{htmlattrxref("autocomplete", "input")}} is set to `off` to avoid password managers and session restore features trying to set its value, since this isn't a password at all.
+The [`inputmode`](/en-US/docs/Web/HTML/Element/input#inputmode) is set to `numeric` to encourage devices with virtual keyboards to switch to a numeric keypad layout for easier entry. The [`minlength`](/en-US/docs/Web/HTML/Element/input#minlength) and [`maxlength`](/en-US/docs/Web/HTML/Element/input#maxlength) attributes are set to 9 and 12, respectively, to require that the value be at least nine and no more than 12 characters (the former without separating characters between the groups of digits and the latter with them). The [`required`](/en-US/docs/Web/HTML/Element/input#required) attribute is used to indicate that this control must have a value. Finally, [`autocomplete`](/en-US/docs/Web/HTML/Element/input#autocomplete) is set to `off` to avoid password managers and session restore features trying to set its value, since this isn't a password at all.
 
 #### JavaScript
 
@@ -259,15 +259,15 @@ ssn.oninput = (event) => {
     <tr>
       <td><strong>Supported Common Attributes</strong></td>
       <td>
-        {{htmlattrxref("autocomplete", "input")}},
-        {{htmlattrxref("inputmode", "input")}},
-        {{htmlattrxref("maxlength", "input")}},
-        {{htmlattrxref("minlength", "input")}},
-        {{htmlattrxref("pattern", "input")}},
-        {{htmlattrxref("placeholder", "input")}},
-        {{htmlattrxref("readonly", "input")}},
-        {{htmlattrxref("required", "input")}}, and
-        {{htmlattrxref("size", "input")}}
+         <a href="en-US/docs/Web/HTML/Element/input#autocomplete"><code>autocomplete</code></a>,
+         <a href="en-US/docs/Web/HTML/Element/input#inputmode"><code>inputmode</code></a>,
+         <a href="en-US/docs/Web/HTML/Element/input#maxlength"><code>maxlength</code></a>,
+         <a href="en-US/docs/Web/HTML/Element/input#minlength"><code>minlength</code></a>,
+         <a href="en-US/docs/Web/HTML/Element/input#pattern"><code>pattern</code></a>,
+         <a href="en-US/docs/Web/HTML/Element/input#placeholder"><code>placeholder</code></a>,
+         <a href="en-US/docs/Web/HTML/Element/input#readonly"><code>readonly</code></a>,
+         <a href="en-US/docs/Web/HTML/Element/input#required"><code>required</code></a>, and
+         <a href="en-US/docs/Web/HTML/Element/input#size"><code>size</code></a>
       </td>
     </tr>
     <tr>

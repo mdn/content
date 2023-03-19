@@ -55,7 +55,7 @@ all client-side state by the
 _[origin](https://html.spec.whatwg.org/#origin)_
 of the resource being loaded and by the _top-level
 [site](https://html.spec.whatwg.org/multipage/origin.html#site)_.
-In most instances, the top-level site is the scheme and eTLD+1 of the top-level
+In most instances, the top-level site is the scheme and {{Glossary("eTLD", "eTLD+1")}} of the top-level
 page being visited by the user.
 
 In the example below `example.com` is embedded in

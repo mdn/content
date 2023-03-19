@@ -25,11 +25,12 @@ A boolean. A value of `true` indicates that the document was loaded inside a cre
 You can specify a credentialless `<iframe>` like so:
 
 ```html
-<iframe src="https://en.wikipedia.org/wiki/Spectre_(security_vulnerability)"
-        title="Spectre vulnerability Wikipedia page"
-        width="960"
-        height="600"
-        credentialless>
+<iframe
+  src="https://en.wikipedia.org/wiki/Spectre_(security_vulnerability)"
+  title="Spectre vulnerability Wikipedia page"
+  width="960"
+  height="600"
+  credentialless></iframe>
 ```
 
 In supporting browsers, if the document loaded in the `<iframe>` were to run the following line, it would return `true`:

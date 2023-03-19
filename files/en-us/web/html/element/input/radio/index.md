@@ -25,7 +25,7 @@ The `value` attribute is a string containing the radio button's value. The value
 
 ### Defining a radio group
 
-A radio group is defined by giving each of radio buttons in the group the same {{htmlattrxref("name", "input")}}. Once a radio group is established, selecting any radio button in that group automatically deselects any currently-selected radio button in the same group.
+A radio group is defined by giving each of radio buttons in the group the same [`name`](/en-US/docs/Web/HTML/Element/input#name). Once a radio group is established, selecting any radio button in that group automatically deselects any currently-selected radio button in the same group.
 
 You can have as many radio groups on a page as you like, as long as each has its own unique `name`.
 
@@ -54,7 +54,7 @@ The resulting HTML looks like this:
 </form>
 ```
 
-Here you see the three radio buttons, each with the `name` set to `contact` and each with a unique `value` that uniquely identifies that individual radio button within the group. They each also have a unique {{domxref("Element.id", "id")}}, which is used by the {{HTMLElement("label")}} element's {{htmlattrxref("for", "label")}} attribute to associate the labels with the radio buttons.
+Here you see the three radio buttons, each with the `name` set to `contact` and each with a unique `value` that uniquely identifies that individual radio button within the group. They each also have a unique {{domxref("Element.id", "id")}}, which is used by the {{HTMLElement("label")}} element's [`for`](/en-US/docs/Web/HTML/Element/label#for) attribute to associate the labels with the radio buttons.
 
 You can try out this example here:
 
@@ -125,7 +125,7 @@ In addition to the common attributes shared by all {{HTMLElement("input")}} elem
 
   - : A Boolean attribute which, if present, indicates that this radio button is the default selected one in the group.
 
-    Unlike other browsers, Firefox by default [persists the dynamic checked state](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing) of an `<input>` across page loads. Use the {{htmlattrxref("autocomplete","input")}} attribute to control this feature.
+    Unlike other browsers, Firefox by default [persists the dynamic checked state](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing) of an `<input>` across page loads. Use the [`autocomplete`](/en-US/docs/Web/HTML/Element/input#autocomplete) attribute to control this feature.
 
 - `value`
 

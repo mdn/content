@@ -52,8 +52,8 @@ should be added to allow for a sharper image.
 #### JavaScript
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 
 // Set display size (css pixels).
 const size = 200;
@@ -71,9 +71,9 @@ ctx.scale(scale, scale);
 ctx.fillStyle = "#bada55";
 ctx.fillRect(10, 10, 300, 300);
 ctx.fillStyle = "#ffffff";
-ctx.font = '18px Arial';
-ctx.textAlign = 'center';
-ctx.textBaseline = 'middle';
+ctx.font = "18px Arial";
+ctx.textAlign = "center";
+ctx.textBaseline = "middle";
 
 const x = size / 2;
 const y = size / 2;
@@ -100,15 +100,17 @@ let remove = null;
 
 const updatePixelRatio = () => {
   if (remove != null) {
-      remove();
+    remove();
   }
   let mqString = `(resolution: ${window.devicePixelRatio}dppx)`;
   let media = matchMedia(mqString);
   media.addListener(updatePixelRatio);
-  remove = function() {media.removeListener(updatePixelRatio)};
+  remove = function () {
+    media.removeListener(updatePixelRatio);
+  };
 
   console.log("devicePixelRatio: " + window.devicePixelRatio);
-}
+};
 updatePixelRatio();
 ```
 

@@ -41,5 +41,5 @@ Not part of any current specifications.
 
   - The {{cssxref('list-style')}} property, useful to choose the way the ordinal is displayed.
   - [CSS counters](/en-US/docs/Web/CSS/CSS_Counter_Styles/Using_CSS_counters), useful to handle complex nested lists.
-  - The {{Cssxref('line-height')}} property, useful to simulate the deprecated {{htmlattrxref("compact", "dir")}} attribute.
+  - The {{Cssxref('line-height')}} property, useful to simulate the deprecated [`compact`](#compact) attribute.
   - The {{cssxref('margin')}} property, useful to control the indent of the list.

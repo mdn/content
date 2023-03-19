@@ -41,7 +41,7 @@ The {{domxref("WebTransportDatagramDuplexStream.readable")}} property returns a 
 async function readData() {
   const reader = transport.datagrams.readable.getReader();
   while (true) {
-    const {value, done} = await reader.read();
+    const { value, done } = await reader.read();
     if (done) {
       break;
     }
