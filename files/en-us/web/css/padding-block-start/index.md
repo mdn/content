@@ -31,16 +31,11 @@ padding-block-start: unset;
 
 ### Values
 
-- {{cssxref("&lt;length&gt;")}}
-  - : The size of the padding as a fixed value. Must be nonnegative.
-- {{cssxref("&lt;percentage&gt;")}}
-  - : The size of the padding as a percentage, relative to the [inline-size](/en-US/docs/Web/CSS/CSS_Flow_Layout/Block_and_Inline_Layout_in_Normal_Flow) (_width_ in a horizontal language) of the [containing block](/en-US/docs/Web/CSS/Containing_block). Must be nonnegative.
+The `padding-block-start` property takes the same values as the {{CSSXref("padding-left")}} property.
 
 ## Description
 
-The `padding-block-start` property is defined in the specification as taking the same values as the {{cssxref("padding-top")}} property. However, the physical property it maps to depends on the values set for {{cssxref("writing-mode")}}, {{cssxref("direction")}}, and {{cssxref("text-orientation")}}. Therefore, it could map to {{cssxref("padding-top")}}, {{cssxref("padding-right")}}, or {{cssxref("padding-left")}}
-
-It relates to {{cssxref("padding-block-end")}}, {{cssxref("padding-inline-start")}}, and {{cssxref("padding-inline-end")}}, which define the other paddings of the element.
+This property corresponds to the {{CSSXref("padding-top")}}, {{CSSXref("padding-right")}}, {{CSSXref("padding-bottom")}}, or {{CSSXref("padding-left")}} property depending on the values defined for {{CSSXref("writing-mode")}}, {{CSSXref("direction")}}, and {{CSSXref("text-orientation")}}.
 
 ## Formal definition
 
