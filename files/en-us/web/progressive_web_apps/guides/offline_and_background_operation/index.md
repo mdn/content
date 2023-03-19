@@ -349,7 +349,7 @@ The pattern for subscribing to push messages looks like this:
 
 ![Diagram showing push message subscription steps](push-messaging-1.svg)
 
-1. The app server needs to be provisioned with a {{Glossary("Public-key_cryptography", "public/private key pair")}}, so it can sign push messages. Signing messages needs to follow the [VAPID](https://datatracker.ietf.org/doc/html/draft-thomson-webpush-vapid-02) specification.
+1. As a prerequisite, the app server needs to be provisioned with a {{Glossary("Public-key_cryptography", "public/private key pair")}}, so it can sign push messages. Signing messages needs to follow the [VAPID](https://datatracker.ietf.org/doc/html/draft-thomson-webpush-vapid-02) specification.
 
 2. On the device, the app uses the {{domxref("PushManager.subscribe()")}} method to subscribe to messages from the server. The `subscribe()` method:
 
@@ -380,4 +380,16 @@ When an event happens on the server that the server wants the app to handle, the
 8. In its event handler, the service worker creates a notification using {{domxref("ServiceWorkerRegistration/showNotification", "registration.showNotification()")}}.
 9. If the user clicks the notification or closes it, the {{domxref("ServiceWorkerGlobalScope.notificationclick_event", "notificationclick")}} and {{domxref("ServiceWorkerGlobalScope.notificationclose_event", "notificationclose")}}, respectively, are fired in the service worker's global scope. These enable the app to handle the user's response to the notification.
 
-## Permissions
+## Permissions and restrictions
+
+Browsers have to find a balance in which they can provide powerful APIs to web developers while protecting users from malicious, exploitative, or poorly-written websites. One of the main protections they offer is that users can close the website's pages, and it's then not active on their device any more. The APIs described in this article tend to violate that assurance, so browsers have to take extra steps to help ensure that users are aware of this, and that the APIs are used in ways that align with the interests of users.
+
+In this section we'll outline these steps. Several of these APIs require explicit [user permission](/en-US/docs/Web/API/Permissions_API), and various other restrictions and design choices to help protect users.
+
+- The Background Sync API does not need an explicit user permission, but issuing a background sync request may only be made while the main app is open, and the broweser limits the number of retries and the length of time background sync operations can take.
+
+- The Background Fetch API requires the `"background-fetch"` permission, and the browser displays the ongoing progress of the fetch operation, enabling the user to cancel it.
+
+- The Periodic Background Sync API requires the `"periodic-background-sync"` permission, and browsers should allow users to disable periodic background sync completely. Also, browsers may tie the frequency of sync events to the extent to which the user chooses to interact with the app: so an app that the user rarely uses may receive few events (or even no events at all).
+
+- The Push API requires the `"push"` permission, and all browsers require push events to be user visible, meaning that they generate a user-visible notification.
