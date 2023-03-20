@@ -7,7 +7,7 @@ browser-compat: api.CSSFontPaletteValuesRule.name
 
 {{APIRef("CSSOM")}}
 
-The read-only **`name`** property of the {{domxref("CSSFontPaletteValuesRule")}} interface represents the name identifying the associated {{CSSxRef("@font-palette-values")}} at-rule. A valid name always start with two dashes, like `--Alternate`
+The read-only **`name`** property of the {{domxref("CSSFontPaletteValuesRule")}} interface represents the name identifying the associated {{CSSxRef("@font-palette-values")}} at-rule. A valid name always starts with two dashes, such as `--Alternate`.
 
 ## Value
 
