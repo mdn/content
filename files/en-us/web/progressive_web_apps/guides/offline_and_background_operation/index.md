@@ -305,7 +305,7 @@ async function registerPeriodicSync() {
 
 Although the PWA asks for a particular interval in the `register()` call, it's up to the browser how often to generate periodic sync events. Apps that users open and interact with often will be more likely to receive periodic sync events, and will receive them more often, than apps which the user rarely or never interacts with.
 
-When the browser has decided to generate a periodic sync event, the pattern is again familiar: it starts the service worker, if necessary, and fires a {{domxref("ServiceWorkerGlobalScope.periodicsync_event", "periodicSync")}} event in the service worker's global scope.
+When the browser has decided to generate a periodic sync event, the pattern is the following: it starts the service worker, if necessary, and fires a {{domxref("ServiceWorkerGlobalScope.periodicsync_event", "periodicSync")}} event in the service worker's global scope.
 
 The service worker's event handler checks the name of the event, and calls the appropriate function inside the event's {{domxref("ExtendableEvent/waitUntil", "waitUntil()")}} method
 
