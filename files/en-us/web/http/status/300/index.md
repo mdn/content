@@ -6,13 +6,11 @@ spec-urls: https://httpwg.org/specs/rfc9110.html#status.300
 
 {{HTTPSidebar}}
 
-The HTTP **`300 Multiple Choices`** redirect status response
-code indicates that the request has more than one possible responses. The user-agent
-or the user should choose one of them. As there is no standardized way of choosing one
-of the responses, this response code is very rarely used.
+The HTTP **`300 Multiple Choices`** redirect status response code indicates that the request has more than one possible response.
+The user-agent or the user should choose one of them.
+As there is no standardized way of choosing one of the responses, this response code is very rarely used.
 
-If the server has a preferred choice, it should generate a {{HTTPHeader("Location")}}
-header.
+If the server has a preferred choice, it should generate a {{HTTPHeader("Location")}} header.
 
 ## Status
 

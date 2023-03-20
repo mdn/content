@@ -375,7 +375,7 @@ where `objectName` is an existing object, `methodName` is the name you are assig
 You can then call the method in the context of the object as follows:
 
 ```js
-object.methodName(params);
+objectName.methodName(params);
 ```
 
 Methods are typically defined on the `prototype` object of the constructor, so that all objects of the same type share the same method. For example, you can define a function that formats and displays the properties of the previously-defined `Car` objects.
