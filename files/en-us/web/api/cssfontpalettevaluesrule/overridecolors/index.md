@@ -11,7 +11,7 @@ The read-only **`overrideColors`** property of the {{domxref("CSSFontPaletteValu
 
 ## Value
 
-A string containing a comma-separated list of pairs of color indices and colors.
+A string containing a comma-separated list of color index and color pair
 
 ## Examples
 
