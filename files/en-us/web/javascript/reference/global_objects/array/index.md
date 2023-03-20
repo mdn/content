@@ -125,14 +125,14 @@ These methods treat empty slots as if they are `undefined`:
 
 ### Copying methods and mutating methods
 
-Some methods do not mutate the existing array that the method was called on, but instead return a new array. They do so by first accessing [`this.constructor[Symbol.species]`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/@@species) to determine the constructor to use for the new array. The newly constructed array is then populated with elements. The copy always happens [_shallowly_](/en-US/docs/Glossary/Shallow_copy) — the method never copies anything beyond the initially created array. Elements of the original array(s) are copied into the new array as follows:
+Some methods do not mutate the existing array that the method was called on, but instead return a new array. They do so by first constructing a new array and then populating it with elements. The copy always happens [_shallowly_](/en-US/docs/Glossary/Shallow_copy) — the method never copies anything beyond the initially created array. Elements of the original array(s) are copied into the new array as follows:
 
 - Objects: the object reference is copied into the new array. Both the original and new array refer to the same object. That is, if a referenced object is modified, the changes are visible to both the new and original arrays.
 - Primitive types such as strings, numbers and booleans (not {{jsxref("Global_Objects/String", "String")}}, {{jsxref("Global_Objects/Number", "Number")}}, and {{jsxref("Global_Objects/Boolean", "Boolean")}} objects): their values are copied into the new array.
 
 Other methods mutate the array that the method was called on, in which case their return value differs depending on the method: sometimes a reference to the same array, sometimes the length of the new array.
 
-The following methods create new arrays with `@@species`:
+The following methods create new arrays by accessing [`this.constructor[Symbol.species]`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/@@species) to determine the constructor to use:
 
 - {{jsxref("Array/concat", "concat()")}}
 - {{jsxref("Array/filter", "filter()")}}
@@ -142,19 +142,36 @@ The following methods create new arrays with `@@species`:
 - {{jsxref("Array/slice", "slice()")}}
 - {{jsxref("Array/splice", "splice()")}} (to construct the array of removed elements that's returned)
 
-Note that {{jsxref("Array/group", "group()")}} and {{jsxref("Array/groupToMap", "groupToMap()")}} do not use `@@species` to create new arrays for each group entry, but always use the plain `Array` constructor. Conceptually, they are not copying methods either.
+The following methods always create new arrays with the `Array` base constructor:
 
-The following methods mutate the original array:
+- {{jsxref("Array/toReversed", "toReversed()")}}
+- {{jsxref("Array/toSorted", "toSorted()")}}
+- {{jsxref("Array/toSpliced", "toSpliced()")}}
+- {{jsxref("Array/with", "with()")}}
 
-- {{jsxref("Array/copyWithin", "copyWithin()")}}
-- {{jsxref("Array/fill", "fill()")}}
-- {{jsxref("Array/pop", "pop()")}}
-- {{jsxref("Array/push", "push()")}}
-- {{jsxref("Array/reverse", "reverse()")}}
-- {{jsxref("Array/shift", "shift()")}}
-- {{jsxref("Array/sort", "sort()")}}
-- {{jsxref("Array/splice", "splice()")}}
-- {{jsxref("Array/unshift", "unshift()")}}
+{{jsxref("Array/group", "group()")}} and {{jsxref("Array/groupToMap", "groupToMap()")}} do not use `@@species` to create new arrays for each group entry, but always use the plain `Array` constructor. Conceptually, they are not copying methods either.
+
+The following table lists the methods that mutate the original array, and the corresponding non-mutating alternative:
+
+| Mutating method                                | Non-mutating alternative                              |
+| ---------------------------------------------- | ----------------------------------------------------- |
+| {{jsxref("Array/copyWithin", "copyWithin()")}} | No one-method alternative                                |
+| {{jsxref("Array/fill", "fill()")}}             | No one-method alternative                                |
+| {{jsxref("Array/pop", "pop()")}}               | {{jsxref("Array/slice", "slice(0, -1)")}}             |
+| {{jsxref("Array/push", "push(v1, v2)")}}       | {{jsxref("Array/concat", "concat([v1, v2])")}}        |
+| {{jsxref("Array/reverse", "reverse()")}}       | {{jsxref("Array/toReversed", "toReversed()")}}        |
+| {{jsxref("Array/shift", "shift()")}}           | {{jsxref("Array/slice", "slice(1)")}}                 |
+| {{jsxref("Array/sort", "sort()")}}             | {{jsxref("Array/toSorted", "toSorted()")}}            |
+| {{jsxref("Array/splice", "splice()")}}         | {{jsxref("Array/toSpliced", "toSpliced()")}}          |
+| {{jsxref("Array/unshift", "unshift(v1, v2)")}} | {{jsxref("Array/concat", "toSpliced(0, 0, v1, v2)")}} |
+
+An easy way to change a mutating method into a non-mutating alternative is to use the [spread syntax](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax) or {{jsxref("Array/slice", "slice()")}} to create a copy first:
+
+```js-nolint
+arr.copyWithin(0, 1, 2); // mutates arr
+const arr2 = arr.slice().copyWithin(0, 1, 2); // does not mutate arr
+const arr3 = [...arr].copyWithin(0, 1, 2); // does not mutate arr
+```
 
 ### Iterative methods
 
@@ -351,12 +368,20 @@ These properties are own properties of each `Array` instance.
   - : Adds and/or removes elements from an array.
 - {{jsxref("Array.prototype.toLocaleString()")}}
   - : Returns a localized string representing the calling array and its elements. Overrides the {{jsxref("Object.prototype.toLocaleString()")}} method.
+- {{jsxref("Array.prototype.toReversed()")}}
+  - : Returns a new array with the elements in reversed order, without modifying the original array.
+- {{jsxref("Array.prototype.toSorted()")}}
+  - : Returns a new array with the elements sorted in ascending order, without modifying the original array.
+- {{jsxref("Array.prototype.toSpliced()")}}
+  - : Returns a new array with some elements removed and/or replaced at a given index, without modifying the original array.
 - {{jsxref("Array.prototype.toString()")}}
   - : Returns a string representing the calling array and its elements. Overrides the {{jsxref("Object.prototype.toString()")}} method.
 - {{jsxref("Array.prototype.unshift()")}}
   - : Adds one or more elements to the front of an array, and returns the new `length` of the array.
 - {{jsxref("Array.prototype.values()")}}
   - : Returns a new [_array iterator_](/en-US/docs/Web/JavaScript/Guide/Iterators_and_generators) object that contains the values for each index in the array.
+- {{jsxref("Array.prototype.with()")}}
+  - : Returns a new array with the element at the given index replaced with the given value, without modifying the original array.
 - [`Array.prototype[@@iterator]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/@@iterator)
   - : An alias for the [`values()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/values) method by default.
 
