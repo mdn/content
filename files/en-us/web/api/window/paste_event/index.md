@@ -1,5 +1,5 @@
 ---
-title: 'Window: paste event'
+title: "Window: paste event"
 slug: Web/API/Window/paste_event
 page-type: web-api-event
 browser-compat: api.Element.paste_event
@@ -16,9 +16,9 @@ The original target for this event is the {{domxref("Element")}} that was the in
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('paste', (event) => { });
+addEventListener("paste", (event) => {});
 
-onpaste = (event) => { };
+onpaste = (event) => {};
 ```
 
 ## Event type
@@ -30,8 +30,8 @@ A {{domxref("ClipboardEvent")}}. Inherits from {{domxref("Event")}}.
 ## Examples
 
 ```js
-window.addEventListener('paste', (event) => {
-    console.log('paste action initiated')
+window.addEventListener("paste", (event) => {
+  console.log("paste action initiated");
 });
 ```
 

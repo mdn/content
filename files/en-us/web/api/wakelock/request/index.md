@@ -52,15 +52,13 @@ to account for if the browser refuses the request for any reason.
 ```js
 const requestWakeLock = async () => {
   try {
-
-    const wakeLock = await navigator.wakeLock.request('screen');
-
+    const wakeLock = await navigator.wakeLock.request("screen");
   } catch (err) {
     // The wake lock request fails - usually system-related, such as low battery.
 
     console.log(`${err.name}, ${err.message}`);
   }
-}
+};
 
 requestWakeLock();
 ```

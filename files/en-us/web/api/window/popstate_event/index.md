@@ -1,5 +1,5 @@
 ---
-title: 'Window: popstate event'
+title: "Window: popstate event"
 slug: Web/API/Window/popstate_event
 page-type: web-api-event
 browser-compat: api.Window.popstate_event
@@ -14,8 +14,8 @@ The **`popstate`** event of the {{domxref("Window")}} interface is fired when th
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('popstate', (event) => { });
-onpopstate = (event) => { };
+addEventListener("popstate", (event) => {});
+onpopstate = (event) => {};
 ```
 
 ## Event type
@@ -81,29 +81,33 @@ As you can see, the `popstate` event is nearly the last thing done in the proces
 A page at `http://example.com/example.html` running the following code will generate logs as indicated:
 
 ```js
-window.addEventListener('popstate', (event) => {
-  console.log(`location: ${document.location}, state: ${JSON.stringify(event.state)}`);
+window.addEventListener("popstate", (event) => {
+  console.log(
+    `location: ${document.location}, state: ${JSON.stringify(event.state)}`
+  );
 });
 history.pushState({ page: 1 }, "title 1", "?page=1");
 history.pushState({ page: 2 }, "title 2", "?page=2");
 history.replaceState({ page: 3 }, "title 3", "?page=3");
 history.back(); // Logs "location: http://example.com/example.html?page=1, state: {"page":1}"
 history.back(); // Logs "location: http://example.com/example.html, state: null"
-history.go(2);  // Logs "location: http://example.com/example.html?page=3, state: {"page":3}"
+history.go(2); // Logs "location: http://example.com/example.html?page=3, state: {"page":3}"
 ```
 
 The same example using the `onpopstate` event handler property:
 
 ```js
 window.onpopstate = (event) => {
-  console.log(`location: ${document.location}, state: ${JSON.stringify(event.state)}`);
+  console.log(
+    `location: ${document.location}, state: ${JSON.stringify(event.state)}`
+  );
 };
 history.pushState({ page: 1 }, "title 1", "?page=1");
 history.pushState({ page: 2 }, "title 2", "?page=2");
 history.replaceState({ page: 3 }, "title 3", "?page=3");
 history.back(); // Logs "location: http://example.com/example.html?page=1, state: {"page":1}"
 history.back(); // Logs "location: http://example.com/example.html, state: null"
-history.go(2);  // Logs "location: http://example.com/example.html?page=3, state: {"page":3}"
+history.go(2); // Logs "location: http://example.com/example.html?page=3, state: {"page":3}"
 ```
 
 Note that even though the original history entry (for `http://example.com/example.html`) has no state object associated with it, a `popstate` event is still fired when we activate that entry after the second call to `history.back()`.

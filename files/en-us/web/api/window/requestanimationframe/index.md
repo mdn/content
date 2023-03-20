@@ -69,14 +69,14 @@ milliseconds) with `0.1 * elapsed`. The element's final position is 200px
 (`0.1 * 2000`) to the right of its initial position.
 
 ```js
-const element = document.getElementById('some-element-you-want-to-animate');
+const element = document.getElementById("some-element-you-want-to-animate");
 let start, previousTimeStamp;
-let done = false
+let done = false;
 
 function step(timestamp) {
   if (start === undefined) {
     start = timestamp;
-    }
+  }
   const elapsed = timestamp - start;
 
   if (previousTimeStamp !== timestamp) {
@@ -86,7 +86,8 @@ function step(timestamp) {
     if (count === 200) done = true;
   }
 
-  if (elapsed < 2000) { // Stop the animation after 2 seconds
+  if (elapsed < 2000) {
+    // Stop the animation after 2 seconds
     previousTimeStamp = timestamp;
     if (!done) {
       window.requestAnimationFrame(step);

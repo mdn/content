@@ -26,8 +26,7 @@ A boolean value with `true` meaning that the window is in full-screen mode and `
 ```js
 if (window.fullScreen) {
   // it's fullscreen!
-}
-else {
+} else {
   // not fullscreen!
 }
 ```

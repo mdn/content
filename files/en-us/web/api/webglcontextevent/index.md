@@ -27,14 +27,18 @@ _This interface doesn't define any own methods, but inherits methods from its pa
 With the help of the {{domxref("WEBGL_lose_context")}} extension, you can simulate the {{domxref("HTMLCanvasElement/webglcontextlost_event", "webglcontextlost")}} and {{domxref("HTMLCanvasElement/webglcontextrestored_event", "webglcontextrestored")}} events:
 
 ```js
-const canvas = document.getElementById('canvas');
-const gl = canvas.getContext('webgl');
+const canvas = document.getElementById("canvas");
+const gl = canvas.getContext("webgl");
 
-canvas.addEventListener('webglcontextlost', (e) => {
-  console.log(e);
-}, false);
+canvas.addEventListener(
+  "webglcontextlost",
+  (e) => {
+    console.log(e);
+  },
+  false
+);
 
-gl.getExtension('WEBGL_lose_context').loseContext();
+gl.getExtension("WEBGL_lose_context").loseContext();
 
 // WebGLContextEvent event with type "webglcontextlost" is logged.
 ```

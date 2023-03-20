@@ -14,7 +14,7 @@ Access to this API is provided through {{domxref("Navigator.requestMediaKeySyste
 ## Interfaces
 
 - {{domxref("MediaEncryptedEvent")}}
-  - : Represents a specific {{domxref("HTMLMediaElement/encrypted_event", "encrypted")}} event thrown when a {{domxref('HTMLMediaElement')}} encounters some initilization data.
+  - : Represents a specific {{domxref("HTMLMediaElement/encrypted_event", "encrypted")}} event thrown when a {{domxref('HTMLMediaElement')}} encounters some initialization data.
 - {{domxref("MediaKeyMessageEvent")}}
   - : Contains the content and related data when the content decryption module (CDM) generates a message for the session.
 - {{domxref("MediaKeys")}}

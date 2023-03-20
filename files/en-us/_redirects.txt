@@ -3611,6 +3611,7 @@
 /en-US/docs/Glossary/POP3	/en-US/docs/Glossary/POP
 /en-US/docs/Glossary/Property_(CSS)	/en-US/docs/Glossary/property/CSS
 /en-US/docs/Glossary/Random_Number_Generator	/en-US/docs/Glossary/RNG
+/en-US/docs/Glossary/Reference	/en-US/docs/Glossary/Object_reference
 /en-US/docs/Glossary/Responsive_design	/en-US/docs/Glossary/Responsive_web_design
 /en-US/docs/Glossary/Round_Trip_Time_(RTT)	/en-US/docs/Glossary/Round_Trip_Time
 /en-US/docs/Glossary/SRTP	/en-US/docs/Glossary/RTP
@@ -8771,6 +8772,7 @@
 /en-US/docs/Web/API/KeyframeEffectReadOnly/iterationComposite	/en-US/docs/Web/API/KeyframeEffect/iterationComposite
 /en-US/docs/Web/API/KeyframeEffectReadOnly/target	/en-US/docs/Web/API/KeyframeEffect/target
 /en-US/docs/Web/API/Largest_Contentful_Paint_API	/en-US/docs/Web/API/LargestContentfulPaint
+/en-US/docs/Web/API/Layout_Instability_API	/en-US/docs/Web/API/LayoutShift
 /en-US/docs/Web/API/LinearAccelerationSensor/x	/en-US/docs/Web/API/Accelerometer/x
 /en-US/docs/Web/API/LinearAccelerationSensor/y	/en-US/docs/Web/API/Accelerometer/y
 /en-US/docs/Web/API/LinearAccelerationSensor/z	/en-US/docs/Web/API/Accelerometer/z
