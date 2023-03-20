@@ -307,7 +307,7 @@ Although the PWA asks for a particular interval in the `register()` call, it's u
 
 When the browser has decided to generate a periodic sync event, the pattern is the following: it starts the service worker, if necessary, and fires a {{domxref("ServiceWorkerGlobalScope.periodicsync_event", "periodicSync")}} event in the service worker's global scope.
 
-The service worker's event handler checks the name of the event, and calls the appropriate function inside the event's {{domxref("ExtendableEvent/waitUntil", "waitUntil()")}} method
+The service worker's event handler checks the name of the event, and calls the appropriate function inside the event's {{domxref("ExtendableEvent/waitUntil", "waitUntil()")}} method:
 
 ```js
 self.addEventListener("periodicsync", (event) => {
