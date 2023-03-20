@@ -11,13 +11,13 @@ However, consider the following scenarios:
 - The user composes a long email, presses "Send", and then loses network connectivity. The device sends the email in the background, as soon as the network is available again.
 - The user's chat app receives a message from one of their contacts, and although the app is not open, it displays a badge on the app icon to let the user know they have a new message.
 
-These are the kinds of features that users expect from platform-specific apps. If PWAs are to compete with platform-specific apps, they need to support scenarios like this. In this guide, we'll introduce a set of technologies which enable a PWA to:
+These are the kinds of features that users expect from platform-specific apps. If PWAs are to compete with platform-specific apps, they need to support these kinds of scenarios. In this guide, we'll introduce a set of technologies that enable a PWA to:
 
 - provide a good user experience even when the device has intermittent network connectivity
 - update its state when the app is not running
 - notify the user about important events that have happened while the app was not running.
 
-The techologies introduced in this guide are:
+The technologies introduced in this guide are:
 
 - [Service Worker API](/en-US/docs/Web/API/Service_Worker_API)
 - [Background Synchronization API](/en-US/docs/Web/API/Background_Synchronization_API)
@@ -28,11 +28,11 @@ The techologies introduced in this guide are:
 
 ## Offline operation
 
-Offline operation means that the PWA can give as good an experience as possible when the device does not have network connectivity. The foundation of this, and of the other technologies in this guide, is the service worker.
+Offline operation allows a PWA to provide a good user experience even when the device does not have network connectivity. The foundation of this, and of the other technologies in this guide, is the service worker.
 
 A [worker](/en-US/docs/Web/API/Web_Workers_API) is a part of a web app that runs in a separate thread to the main JavaScript code. The main code creates the worker, passing in a URL to the worker's script. The worker and the main code can't directly access each other's state, but can communicate by sending each other messages. Workers can be used to run computationally expensive tasks in the background: because they run in a separate thread, the main JavaScript code in the app, that implements the app's UI, can stay responsive to the user.
 
-A [service worker](/en-US/docs/Web/API/Service_Worker_API) is a specific type of worker. It is said to _control_ some subset of the pages under the app origin (by default, all pages under the app origin).
+A [service worker](/en-US/docs/Web/API/Service_Worker_API) is a specific type of worker that _controls_ some subset of the pages under the app origin (by default, all pages under the app origin).
 
 When the service worker is installed, it can fetch the resources from the server for the pages it controls (including pages, styles, scripts, and images, for example) and add them to a local cache. The {{domxref("Cache")}} interface is used to add resources to the cache. `Cache` instances are accessible through the {{domxref("caches")}} property in the service worker global scope.
 
@@ -386,7 +386,7 @@ Browsers have to find a balance in which they can provide powerful APIs to web d
 
 In this section we'll outline these steps. Several of these APIs require explicit [user permission](/en-US/docs/Web/API/Permissions_API), and various other restrictions and design choices to help protect users.
 
-- The Background Sync API does not need an explicit user permission, but issuing a background sync request may only be made while the main app is open, and the broweser limits the number of retries and the length of time background sync operations can take.
+- The Background Sync API does not need an explicit user permission, but issuing a background sync request may only be made while the main app is open, and browsers limit the number of retries and the length of time background sync operations can take.
 
 - The Background Fetch API requires the `"background-fetch"` permission, and the browser displays the ongoing progress of the fetch operation, enabling the user to cancel it.
 
