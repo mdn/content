@@ -15,10 +15,11 @@ While this module has only two CSS properties, {{cssxref("color")}} and {{cssxre
 
 ### Colors in action
 
-The box below contains a color syntax converter. When you choose a color and an opacity, it shows the corresponding values of the color in [red-green-blue](/en-US/docs/Web/CSS/color_value/rgb) (RGB), [hexadecimal](/en-US/docs/Web/CSS/hex-color) (HEX), [hue, saturation, and lightness](/en-US/docs/Web/CSS/color_value/hsl) (HSL), and [hue, whiteness, and blackness](/en-US/docs/Web/CSS/color_value/hwb) (HWB) CSS color formats.
-To view a new color, click the color box next to "Select a color" and choose a color from the [color picker](/en-US/docs/Web/HTML/Element/input/color). Close the color picker and change the opacity of the color using the "Select an opacity" [slider](/en-US/docs/Web/HTML/Element/input/range). Notice the values for RGB, HEX, HSL, and HWB corresponding to the colors and opacity you choose.
+This color syntax converter shows the values of the currently selected color in [red-green-blue](/en-US/docs/Web/CSS/color_value/rgb) (RGB), [hexadecimal](/en-US/docs/Web/CSS/hex-color) (HEX), [hue, saturation, and lightness](/en-US/docs/Web/CSS/color_value/hsl) (HSL), and [hue, whiteness, and blackness](/en-US/docs/Web/CSS/color_value/hwb) (HWB) CSS color formats. The RGB, HEX, HSL, and HWB color values, which written differently, all represent the same colors value.
 
 {{EmbedGHLiveSample("css-examples/modules/colors.html", '100%', 450)}}
+
+Selecting a color or opacity, via the [color picker](/en-US/docs/Web/HTML/Element/input/color) opacity [range](/en-US/docs/Web/HTML/Element/input/range) updates the values. When you choose a new color or opacity value, color of the background and the slider are updating via the CSS {{cssxref("background-color")}} and {{cssxref("accent-color")}} properties, respectively.
 
 To see the code for this color syntax converter, [view the source on Github](https://github.com/mdn/css-examples/blob/main/modules/colors.html).
 
