@@ -15,7 +15,7 @@ While this module has only two CSS properties, {{cssxref("color")}} and {{cssxre
 
 ### Colors in action
 
-This color syntax converter shows the values of the currently selected color in [red-green-blue](/en-US/docs/Web/CSS/color_value/rgb) (RGB), [hexadecimal](/en-US/docs/Web/CSS/hex-color) (HEX), [hue, saturation, and lightness](/en-US/docs/Web/CSS/color_value/hsl) (HSL), and [hue, whiteness, and blackness](/en-US/docs/Web/CSS/color_value/hwb) (HWB) CSS color formats. The RGB, HEX, HSL, and HWB color values, which written differently, all represent the same colors value.
+This color syntax converter shows the values of the currently selected color in [red-green-blue](/en-US/docs/Web/CSS/color_value/rgb) (RGB), [hexadecimal](/en-US/docs/Web/CSS/hex-color) (HEX), [hue, saturation, and lightness](/en-US/docs/Web/CSS/color_value/hsl) (HSL), and [hue, whiteness, and blackness](/en-US/docs/Web/CSS/color_value/hwb) (HWB) CSS color formats. The RGB, HEX, HSL, and HWB color values, while written differently, all represent the same color value.
 
 {{EmbedGHLiveSample("css-examples/modules/colors.html", '100%', 450)}}
 
