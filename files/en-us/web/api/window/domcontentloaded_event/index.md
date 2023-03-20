@@ -1,5 +1,5 @@
 ---
-title: 'Window: DOMContentLoaded event'
+title: "Window: DOMContentLoaded event"
 slug: Web/API/Window/DOMContentLoaded_event
 page-type: web-api-event
 browser-compat: api.Window.DOMContentLoaded_event
@@ -22,9 +22,9 @@ This event is not cancelable.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('DOMContentLoaded', (event) => {});
+addEventListener("DOMContentLoaded", (event) => {});
 
-onDOMContentLoaded = (event) => { };
+onDOMContentLoaded = (event) => {};
 ```
 
 ## Event type
@@ -36,8 +36,8 @@ A generic {{domxref("Event")}}.
 ### Basic usage
 
 ```js
-window.addEventListener('DOMContentLoaded', (event) => {
-    console.log('DOM fully loaded and parsed');
+window.addEventListener("DOMContentLoaded", (event) => {
+  console.log("DOM fully loaded and parsed");
 });
 ```
 

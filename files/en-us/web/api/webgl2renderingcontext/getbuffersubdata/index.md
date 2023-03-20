@@ -88,7 +88,9 @@ const buffer = gl.createBuffer();
 gl.bindBuffer(gl.ARRAY_BUFFER, buffer);
 gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(vertices), gl.STATIC_DRAW);
 
-const arrBuffer = new ArrayBuffer(vertices.length * Float32Array.BYTES_PER_ELEMENT);
+const arrBuffer = new ArrayBuffer(
+  vertices.length * Float32Array.BYTES_PER_ELEMENT
+);
 gl.getBufferSubData(gl.ARRAY_BUFFER, 0, new Float32Array(arrBuffer));
 ```
 

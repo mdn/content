@@ -32,17 +32,20 @@ A {{jsxref("Promise")}}, which fulfills with the value given in the `reason` par
 ## Examples
 
 ```js
-const writableStream = new WritableStream({
-  write(chunk) {
-    // ...
+const writableStream = new WritableStream(
+  {
+    write(chunk) {
+      // ...
+    },
+    close() {
+      // ...
+    },
+    abort(err) {
+      // ...
+    },
   },
-  close() {
-    // ...
-  },
-  abort(err) {
-    // ...
-  }
-}, queuingStrategy);
+  queuingStrategy
+);
 
 // ...
 

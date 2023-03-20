@@ -1106,6 +1106,10 @@ This section lists events that have _their own_ reference pages on MDN. If you a
   - [mute event](/en-US/docs/Web/API/MediaStreamTrack/mute_event)
   - [unmute event](/en-US/docs/Web/API/MediaStreamTrack/unmute_event)
 
+- {{DOMxRef("MediaQueryList")}}
+
+  - [change event](/en-US/docs/Web/API/MediaQueryList/change_event)
+
 - {{DOMxRef("MessagePort")}}
 
   - [messageerror event](/en-US/docs/Web/API/MessagePort/messageerror_event)
