@@ -1,16 +1,16 @@
 ---
-title: GPUCommandEncoder.insertDebugMarker()
-slug: Web/API/GPUCommandEncoder/insertDebugMarker
+title: GPUComputePassEncoder.insertDebugMarker()
+slug: Web/API/GPUComputePassEncoder/insertDebugMarker
 page-type: web-api-instance-method
 status:
   - experimental
-browser-compat: api.GPUCommandEncoder.insertDebugMarker
+browser-compat: api.GPUComputePassEncoder.insertDebugMarker
 ---
 
 {{APIRef("WebGPU API")}}{{SeeCompatTable}}
 
 The **`insertDebugMarker()`** method of the
-{{domxref("GPUCommandEncoder")}} interface marks a specific point in a series of encoded commands with a label.
+{{domxref("GPUComputePassEncoder")}} interface marks a specific point in a series of encoded compute pass commands with a label.
 
 This could be used for telemetry, or may be utilized in {{domxref("GPUError")}} messages, browser dev tools, or other services in the future to help with debugging.
 
@@ -34,7 +34,7 @@ None ({{domxref("Undefined")}}).
 ```js
 // ...
 
-commandEncoder.insertDebugMarker("mymarker");
+passEncoder.insertDebugMarker("mymarker");
 
 // ...
 ```

@@ -53,7 +53,7 @@ A `GPUCommandEncoder` object instance is created via the {{domxref("GPUDevice.cr
 
 ## Examples
 
-In our [basic render demo](https://webgpu-basic-render.glitch.me/), a number of commands are recorded via a {{domxref("GPUCommandEncoder")}}:
+In our [basic render demo](https://webgpu-basic-render.glitch.me/), several commands are recorded via a {{domxref("GPUCommandEncoder")}}:
 
 ```js
 // ...

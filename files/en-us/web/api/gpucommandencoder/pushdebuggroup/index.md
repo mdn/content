@@ -23,7 +23,7 @@ pushDebugGroup(groupLabel)
 ### Parameters
 
 - `groupLabel`
-  - : A string representing the label for the command group.
+  - : A string representing the label for the debug group.
 
 ### Return value
 
