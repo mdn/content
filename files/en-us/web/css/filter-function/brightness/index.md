@@ -7,7 +7,7 @@ browser-compat: css.types.filter-function.brightness
 
 {{CSSRef}}
 
-The **`brightness()`** [CSS](/en-US/docs/Web/CSS) {{cssxref("&lt;filter-function&gt;")}} applies a linear multiplier value on the element or input image, making the image appear brighter or darker.
+The **`brightness()`** [CSS](/en-US/docs/Web/CSS) {{cssxref("&lt;filter-function&gt;")}} applies a linear multiplier value on an element or an input image, making the image appear brighter or darker.
 
 {{EmbedInteractiveExample("pages/css/function-brightness.html")}}
 
