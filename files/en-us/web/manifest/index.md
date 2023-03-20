@@ -89,7 +89,7 @@ If the manifest requires credentials to fetch, the [`crossorigin`](/en-US/docs/W
 
 ## Splash screens
 
-In some browsers and operating systems, a splash screen is displayed when an installed PWA is launched. This splash screen is auto-generated from members in the web app manifest, specifically:
+In some browsers and operating systems, a splash screen is displayed when an installed PWA is launched. This splash screen is automatically generated and its appearance is defined by members in the web app manifest, specifically:
 
 - [`name`](/en-US/docs/Web/Manifest/name)
 - [`background_color`](/en-US/docs/Web/Manifest/background_color)
