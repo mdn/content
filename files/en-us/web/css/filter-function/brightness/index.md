@@ -36,6 +36,7 @@ brightness(100%)
 
 brightness(2) /* Brightness of input is doubled */
 brightness(200%)
+```
 
 ### Formal syntax
 
@@ -78,6 +79,7 @@ p {
     Text on images can be illegible and inaccessible even with a drop shadow.
   </p>
 </div>
+```
 
 #### Result
 
