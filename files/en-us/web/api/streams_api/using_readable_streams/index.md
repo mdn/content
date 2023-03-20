@@ -206,9 +206,37 @@ async function readData(url) {
 }
 ```
 
-If you want to cancel the operation, you can use an [`AbortController`](/en-US/docs/Web/API/AbortController), passing its associated [`AbortSignal`](/en-US/docs/Web/API/AbortSignal) to the `fetch()` function.
-Alternatively, you can use the `AbortSignal` within the `for await...of` loop to call `break`, which will exit the loop.
-Note however that code in the loop is only run when there is new data to process, so there may be some delay between the signal being triggered and the `break` being called.
+If you want to stop iterating the stream you can cancel the `fetch()` operation using an [`AbortController`](/en-US/docs/Web/API/AbortController) and its associated [`AbortSignal`](/en-US/docs/Web/API/AbortSignal):
+
+```js
+const aborter = new AbortController();
+button.addEventListener("click", () => aborter.abort());
+logChunks("http://example.com/somefile.txt", { signal: aborter.signal });
+
+async function logChunks(url, { signal }) {
+  const response = await fetch(url, signal);
+  for await (const chunk of response.body) {
+    // Do something with the chunk
+  }
+}
+```
+
+Alternatively, you can exit the loop using `break`, as shown in the code below.
+Note that code in the loop is only run when the stream has new data to process, so there may be some delay between the signal being aborted and `break` being called.
+
+```js
+const aborter = new AbortController();
+button.addEventListener("click", () => aborter.abort());
+logChunks("http://example.com/somefile.txt", { signal: aborter.signal });
+
+async function logChunks(url, { signal }) {
+  const response = await fetch(url);
+  for await (const chunk of response.body) {
+    if (signal.aborted) break; //just break out of loop
+    // Do something with the chunk
+  }
+}
+```
 
 ### Example async reader
 
