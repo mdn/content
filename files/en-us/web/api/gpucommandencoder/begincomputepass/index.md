@@ -59,7 +59,7 @@ In our [basic compute demo](https://webgpu-compute-render.glitch.me/), a number 
 // ...
 
 // Create GPUCommandEncoder to encode commands to issue to the GPU
-nst commandEncoder = device.createCommandEncoder();
+const commandEncoder = device.createCommandEncoder();
 
 // Initiate render pass
 const passEncoder = commandEncoder.beginComputePass();

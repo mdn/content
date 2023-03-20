@@ -92,7 +92,7 @@ Color attachment objects can have the following properties:
 
   - : A {{domxref("GPUTextureView")}} object representing the texture subresource that will be output to for this color attachment.
 
-    > **Note:** No color attachment may alias another attachment or any other resource used inside the same render pass.
+    > **Note:** Each color or depth/stencil attachment must be a unique texture subresource, and texture subresources used as attachments cannot be used inside the render pass.
 
 ### Depth/stencil attachment object structure
 

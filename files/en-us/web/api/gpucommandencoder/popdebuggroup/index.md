@@ -12,7 +12,7 @@ browser-compat: api.GPUCommandEncoder.popDebugGroup
 The **`popDebugGroup()`** method of the
 {{domxref("GPUCommandEncoder")}} interface ends a debug group, which is begun with a {{domxref("GPUCommandEncoder.pushDebugGroup", "pushDebugGroup()")}} call.
 
-This could be used for telemetry, or may be utilized by browser dev tools or other services in the future to help with debugging.
+This could be used for telemetry, or may be utilized in {{domxref("GPUError")}} messages, browser dev tools, or other services in the future to help with debugging.
 
 ## Syntax
 

@@ -12,7 +12,7 @@ browser-compat: api.GPUCommandEncoder.pushDebugGroup
 The **`pushDebugGroup()`** method of the
 {{domxref("GPUCommandEncoder")}} interface begins a debug group, which is marked with a specified label, and will contain all subsequent encoded commands up until a {{domxref("GPUCommandEncoder.popDebugGroup", "popDebugGroup()")}} method is invoked.
 
-This could be used for telemetry, or may be utilized by browser dev tools or other services in the future to help with debugging.
+This could be used for telemetry, or may be utilized in {{domxref("GPUError")}} messages, browser dev tools, or other services in the future to help with debugging.
 
 ## Syntax
 

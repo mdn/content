@@ -24,7 +24,7 @@ finish(descriptor)
 - `descriptor` {{optional_inline}}
   - : An object that can contain the following properties:
     - `label` {{optional_inline}}
-      - : A string providing a label that can be used to identify the object, for example in {{domxref("GPUError")}} messages or console warnings.
+      - : A string providing a label for the returned {{domxref("GPUCommandBuffer")}} that can be used to identify it, for example in {{domxref("GPUError")}} messages or console warnings.
 
 ### Return value
 

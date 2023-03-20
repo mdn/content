@@ -11,6 +11,8 @@ The **`GPUCommandBuffer`** interface of the {{domxref("WebGPU API", "WebGPU API"
 
 A `GPUCommandBuffer` is created via the {{domxref("GPUCommandEncoder.finish()")}} method; the GPU commands recorded within are submitted for execution by passing the `GPUCommandBuffer` into the parameter of a {{domxref("GPUQueue.submit()")}} call.
 
+> **Note:** Once a `GPUCommandBuffer` object has been submitted, it cannot be used again.
+
 {{InheritanceDiagram}}
 
 ## Instance properties
