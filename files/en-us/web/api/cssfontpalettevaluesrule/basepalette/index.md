@@ -11,7 +11,7 @@ The read-only **`basePalette`** property of the {{domxref("CSSFontPaletteValuesR
 
 ## Value
 
-A string, that can be one of the following colors:
+A string that can be one of the following color values:
 
 - `light`
   - : Matches the first palette in the font file that is marked as applicable to a light background, that is, _close to white_. If there is no palette in the font or if no palette has the required metadata, the value is equivalent to `"0"`, that is, the first palette in the font.
