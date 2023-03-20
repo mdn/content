@@ -13,7 +13,7 @@ An import map is a JSON object that allows developers to control how the browser
 It provides a mapping between the text used as the module specifier in an [`import` statement](/en-US/docs/Web/JavaScript/Reference/Statements/import) or [`import()` operator](/en-US/docs/Web/JavaScript/Reference/Operators/import), and the corresponding value that will replace the text when resolving the specifier.
 The JSON object must conform to the [Import map JSON representation format](#import_map_json_representation).
   
-Import maps are used to resolve module specifiers in static and dynamic imports, and therefore must be processed before any `<script>` elements that import modules.
+Import maps are used to resolve module specifiers in static and dynamic imports, and therefore must be delcared and processed before any `<script>` elements that import modules.
 Note that the import map applies only to module specifiers in the [`import` statement](/en-US/docs/Web/JavaScript/Reference/Statements/import) or [`import()` operator](/en-US/docs/Web/JavaScript/Reference/Operators/import); it does not apply to the path specified in the `src` attribute of a `<script>` element.
 
 For more information, see the [Importing modules using import maps](/en-US/docs/Web/JavaScript/Guide/Modules#importing_modules_using_import_maps) section in the JavaScript modules guide.
