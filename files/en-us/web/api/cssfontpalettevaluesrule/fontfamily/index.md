@@ -11,7 +11,7 @@ The read-only **`fontFamily`** property of the {{domxref("CSSFontPaletteValuesRu
 
 ## Value
 
-A string, listing the different font families the rule can be applied to, separated by spaces.
+A string containing a space-separated list of the font families on which the rule can be applied
 
 ## Examples
 
