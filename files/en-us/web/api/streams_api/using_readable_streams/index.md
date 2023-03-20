@@ -191,8 +191,8 @@ async function readData(url) {
 
 ## Consuming a fetch() using asynchronous iteration
 
-There is another even simpler way to consume a `fetch()`, which is to iterate the returned `response.body` using the [for await...of](/en-US/docs/Web/JavaScript/Reference/Statements/for-await...of) syntax.
-This works because the `response.body` returns a `ReadableStream`, which is an [async iterator](/en-US/docs/Web/API/ReadableStream#async_iteration).
+There is another even simpler way to consume a `fetch()`, which is to iterate the returned `response.body` using the [`for await...of`](/en-US/docs/Web/JavaScript/Reference/Statements/for-await...of) syntax.
+This works because the `response.body` returns a `ReadableStream`, which is an [async iterable](/en-US/docs/Web/API/ReadableStream#async_iteration).
 
 Using this approach, the example code in the previous section can be rewritten as shown:
 
@@ -200,13 +200,13 @@ Using this approach, the example code in the previous section can be rewritten a
 async function readData(url) {
   const response = await fetch(url);
   for await (const chunk of response.body) {
-    // Do something with each 'chunk'
+    // Do something with each "chunk"
   }
-  //Exit when done
+  // Exit when done
 }
 ```
 
-If you want to cancel the operation you can use an [`AbortController`](/en-US/docs/Web/API/AbortController), passing its associated [`AbortSignal`](/en-US/docs/Web/API/AbortSignal) to the `fetch()` function.
+If you want to cancel the operation, you can use an [`AbortController`](/en-US/docs/Web/API/AbortController), passing its associated [`AbortSignal`](/en-US/docs/Web/API/AbortSignal) to the `fetch()` function.
 Alternatively, you can use the `AbortSignal` within the `for await...of` loop to call `break`, which will exit the loop.
 Note however that code in the loop is only run when there is new data to process, so there may be some delay between the signal being triggered and the `break` being called.
 
