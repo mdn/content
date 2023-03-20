@@ -111,10 +111,31 @@ This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_a
 ## Examples
 
 ```html
-<footer>
-  Some copyright info or perhaps some author info for an &lt;article&gt;?
-</footer>
+<body>
+<h3>Top Goal Scorers of the 1954 World Cup</h3>
+<ol>
+<li>Sándor Kocsis, 11</li>
+<li>Josef Hügi, 6</li>
+<li>Max Morlock, 6</li>
+  </ol>
+
+<footer> <small>Copyright © 2023 Football History Archives . All Rights Reserved.</small></footer>
+
+</body>
 ```
+
+```css
+footer {
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+    background-color: #abbaba;
+    color: #fff;
+}
+
+```
+
+{{EmbedLiveSample('Examples')}}
 
 ## Accessibility concerns
 
