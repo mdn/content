@@ -41,7 +41,7 @@ scrollIntoView(scrollIntoViewOptions)
 
     - `behavior` {{optional_inline}}
       - : Defines the transition animation.
-        One of `auto` or `smooth`. Defaults to `auto`.
+        One of `auto`, `smooth` or `instant`. Defaults to `auto`.
     - `block` {{optional_inline}}
       - : Defines vertical alignment.
         One of `start`, `center`, `end`, or
