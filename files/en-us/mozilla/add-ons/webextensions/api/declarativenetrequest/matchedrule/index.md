@@ -1,6 +1,7 @@
 ---
 title: declarativeNetRequest.MatchedRule
 slug: Mozilla/Add-ons/WebExtensions/API/declarativeNetRequest/MatchedRule
+page-type: webextension-api-type
 tags:
   - API
   - Add-ons

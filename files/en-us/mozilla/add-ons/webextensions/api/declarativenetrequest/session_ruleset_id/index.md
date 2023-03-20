@@ -1,6 +1,7 @@
 ---
 title: declarativeNetRequest.SESSION_RULESET_ID
 slug: Mozilla/Add-ons/WebExtensions/API/declarativeNetRequest/SESSION_RULESET_ID
+page-type: webextension-api-property
 tags:
   - SESSION_RULESET_ID
   - API

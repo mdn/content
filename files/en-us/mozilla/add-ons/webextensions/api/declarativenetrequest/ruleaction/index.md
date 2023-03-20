@@ -1,6 +1,7 @@
 ---
 title: declarativeNetRequest.RuleAction
 slug: Mozilla/Add-ons/WebExtensions/API/declarativeNetRequest/RuleAction
+page-type: webextension-api-type
 tags:
   - API
   - Add-ons

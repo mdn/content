@@ -1,6 +1,7 @@
 ---
 title: declarativeNetRequest.ModifyHeaderInfo
 slug: Mozilla/Add-ons/WebExtensions/API/declarativeNetRequest/ModifyHeaderInfo
+page-type: webextension-api-type
 tags:
   - API
   - Add-ons

@@ -1,6 +1,7 @@
 ---
 title: declarativeNetRequest.getEnabledRulesets
 slug: Mozilla/Add-ons/WebExtensions/API/declarativeNetRequest/getEnabledRulesets
+page-type: webextension-api-function
 tags:
   - API
   - Add-ons
