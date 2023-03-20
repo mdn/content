@@ -41,7 +41,7 @@ None ({{jsxref("undefined")}}).
 The following constants can be used for _sfactor_ and _dfactor_.
 
 The formula for the blending color can be described like this: color(RGBA) =
-(sourceColor \* _sfactor_) + (destinationColor \* _dfactor_). The RBGA
+(sourceColor \* _sfactor_) + (destinationColor \* _dfactor_). The RGBA
 values are between 0 and 1.
 
 In the following table, R<sub>S</sub>, G<sub>S</sub>, B<sub>S</sub>, A<sub>S</sub> represent respectively

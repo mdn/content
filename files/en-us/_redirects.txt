@@ -3611,6 +3611,7 @@
 /en-US/docs/Glossary/POP3	/en-US/docs/Glossary/POP
 /en-US/docs/Glossary/Property_(CSS)	/en-US/docs/Glossary/property/CSS
 /en-US/docs/Glossary/Random_Number_Generator	/en-US/docs/Glossary/RNG
+/en-US/docs/Glossary/Reference	/en-US/docs/Glossary/Object_reference
 /en-US/docs/Glossary/Responsive_design	/en-US/docs/Glossary/Responsive_web_design
 /en-US/docs/Glossary/Round_Trip_Time_(RTT)	/en-US/docs/Glossary/Round_Trip_Time
 /en-US/docs/Glossary/SRTP	/en-US/docs/Glossary/RTP

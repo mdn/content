@@ -27,7 +27,7 @@ another document, or if the document into which it's embedded has a different
 const frameEl = window.frameElement;
 // If we're embedded, change the containing element's URL to 'https://mozilla.org/'
 if (frameEl) {
-  frameEl.src = 'https://mozilla.org/';
+  frameEl.src = "https://mozilla.org/";
 }
 ```
 

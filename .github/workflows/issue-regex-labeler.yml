@@ -12,4 +12,3 @@ jobs:
           repo-token: "${{ secrets.GITHUB_TOKEN }}"
           configuration-path: .github/issue-regex-labeler.yml
           enable-versioned-regex: 0
-          sync-labels: 1

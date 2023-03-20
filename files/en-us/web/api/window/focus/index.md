@@ -26,7 +26,9 @@ None ({{jsxref("undefined")}}).
 ## Examples
 
 ```js
-if (clicked) { window.focus(); }
+if (clicked) {
+  window.focus();
+}
 ```
 
 ## Specifications
