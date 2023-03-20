@@ -65,7 +65,7 @@ change the values is by calling this function again.
 ## Examples
 
 ```js
-const a_foobar = gl.getAttribLocation(shaderProgram, 'foobar');
+const a_foobar = gl.getAttribLocation(shaderProgram, "foobar");
 //either set each component individually:
 gl.vertexAttrib3f(a_foobar, 10.0, 5.0, 2.0);
 //or provide a Float32Array:
@@ -78,8 +78,8 @@ gl.vertexAttrib3fv(a_foobar, floatArray);
 // 0 1 2
 // 3 4 5
 // 6 7 8
-const matrix3x3Location = gl.getAttribLocation(shaderProgram, 'matrix3x3');
-gl.vertexAttrib3f(matrix3x3Location,     0, 3, 6);
+const matrix3x3Location = gl.getAttribLocation(shaderProgram, "matrix3x3");
+gl.vertexAttrib3f(matrix3x3Location, 0, 3, 6);
 gl.vertexAttrib3f(matrix3x3Location + 1, 1, 4, 7);
 gl.vertexAttrib3f(matrix3x3Location + 2, 2, 5, 8);
 ```

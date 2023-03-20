@@ -35,7 +35,7 @@ None ({{jsxref("undefined")}}).
 ## Examples
 
 ```js
-gl.bindAttribLocation(program, colorLocation, 'vColor');
+gl.bindAttribLocation(program, colorLocation, "vColor");
 ```
 
 ## Specifications

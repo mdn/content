@@ -31,8 +31,8 @@ source or target of an rendering operation.
 ### Creating a render buffer
 
 ```js
-const canvas = document.getElementById('canvas');
-const gl = canvas.getContext('webgl');
+const canvas = document.getElementById("canvas");
+const gl = canvas.getContext("webgl");
 const renderBuffer = gl.createRenderbuffer();
 ```
 
