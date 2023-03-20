@@ -83,17 +83,23 @@ Each browser determines, using whatever mechanism it chooses, the maximum amount
 
 #### Firefox
 
-In Firefox, the maximum storage space an origin can use in best-effort mode is calculated as 10% of the total disk space where the profile of the user is stored, capped at 8 TiB. In persistent mode the percentage is raised to 50%.
+In Firefox, the maximum storage space an origin can use in best-effort mode is whichever is the smaller of:
 
-For example, if the device has a 500 GiB hard drive, Firefox will allow an origin in best-effort mode to store up to 50 GiB of data. In persistent mode, 250 GiB of data is allowed to be stored.
+- 10% of the total disk size where the profile of the user is stored.
+- Or 10 GiB, which is the _group limit_ that Firefox applies to all origins that are part of the same {{Glossary("eTLD", "eTLD+1 domain")}}.
 
-Note that it might not actually be possible for the origin to reach this quota because it is calculated based on the hard drive **total** size, not the currently available disk space. This is done for security reasons, to avoid {{Glossary("fingerprinting")}}.
+Origins for which persistent storage has been granted can store up to 50% of the total disk size, capped at 8 TiB, and are not subject to the eTLD+1 group limit.
 
-Firefox has a second quota called _group limit_ that applies to all origins that are part of the same eTLD+1 domain. For example: `mozilla.org`, `www.mozilla.org`, and `joe.blogs.mozilla.org` are three different origins that are part of the same eTLD+1 group. This group maximum storage limit is 10 GiB, but is going to be removed as part of [this bug](https://bugzilla.mozilla.org/show_bug.cgi?id=1305665).
+For example, if the device has a 500 GiB hard drive, Firefox will allow an origin to store up to:
+
+- In best-effort mode: 10 GiB of data, which is the eTLD+1 group limit.
+- In persistent modeL: 250 GiB, which is 50% of the total disk size.
+
+Note that it might not actually be possible for the origin to reach its quota because it is calculated based on the hard drive **total** size, not the currently available disk space. This is done for security reasons, to avoid {{Glossary("fingerprinting")}}.
 
 #### Chrome and Chromium-based browsers
 
-In browsers based on the [Chromium open-source project](https://www.chromium.org/Home/), including Chrome and Edge, an origin can store up to 60% of the total disk space in both persistent and best-effort modes.
+In browsers based on the [Chromium open-source project](https://www.chromium.org/Home/), including Chrome and Edge, an origin can store up to 60% of the total disk size in both persistent and best-effort modes.
 
 For example, if the device has a 1 TiB hard drive, the browser will allow an origin to use up to 600 GiB.
 
