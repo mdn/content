@@ -8,6 +8,7 @@ browser-compat: api.AudioProcessingEvent.playbackTime
 ---
 
 {{APIRef}}{{Deprecated_header}}
+
 The **`playbackTime`** read-only property of the {{domxref("AudioProcessingEvent")}} interface represents the time when the audio will be played. It is in the same coordinate system as the time used by the {{domxref("AudioContext")}}.
 
 ## Value
