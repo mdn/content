@@ -103,6 +103,18 @@ Often their functions are similar to those provided by an intranet: information 
 
 Both intranets and extranets run on the same kind of infrastructure as the Internet, and use the same protocols.
 They can therefore be accessed by authorized members from different physical locations.
+<div class="basics-internet">
+<h3> The Basics of Internet</h3>
+<p> To understand the internet, it's important to be familiar with some basic concepts and terminology. Here are some key terms and concepts to be aware of</p>
+<ul>
+  <li><b>Packet:</b> A small unit of data that is transmitted over the internet.</li>
+<li><b>Router:</b> A device that directs packets of data between different networks.</li>
+  <li> <b>IP Address:</b> A unique identifier assigned to each device on a network, used to route data to the correct destination.</li>
+  <li><b>Domain Name:</b> A human-readable name that is used to identify a website, such as google.com.</li>
+  <li> <b>DNS: </b>The Domain Name System is responsible for translating domain names into IP addresses.</li>
+  <li> <b>HTTP:</b> The Hypertext Transfer Protocol is used to transfer data between a client (such as a web browser) and a server (such as a website).</li>
+  <li><b>HTTPS:</b> An encrypted version of HTTP that is used to provide secure communication between a client and server.</li>
+<li><b>SSL/TLS:</b> The Secure Sockets Layer and Transport Layer Security protocols are used to provide secure communication over the internet.<li>
 
 ![Graphical Representation of how Extranet and Intranet work](internet-schema-8.png)
 
