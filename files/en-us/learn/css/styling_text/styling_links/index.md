@@ -194,7 +194,7 @@ Putting the two together gives us this result:
 So what did we do here? This certainly looks different to the default styling, but it still provides a familiar enough experience for users to know what's going on:
 
 - The first two rules are not that interesting to this discussion.
-- The third rule uses the `a` selector to get rid of the focus outline (which varies across browsers anyway), and adds a tiny amount of padding to each link — all of this will become clear later on.
+- The third rule uses the `a` selector to get rid of the focus outline (which varies across browsers anyway).
 - Next, we use the `a:link` and `a:visited` selectors to set a couple of color variations on unvisited and visited links, so they are distinct.
 - The next two rules use `a:focus` and `a:hover` to set focused and hovered links to have no underline and different background colors.
 - Finally, `a:active` is used to give the links an inverted color scheme while they are being activated, to make it clear something important is happening!
