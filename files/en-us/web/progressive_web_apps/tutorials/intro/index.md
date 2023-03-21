@@ -5,11 +5,11 @@ slug: Web/Progressive_web_apps/tutorials/intro
 
 Progressive web applications, known as PWAs, are a way to build applications for all devices using the web technologies we all know and love: HTML, CSS, and JavaScript.
 
-## The benefit of PWA
+## PWA benefits
 
 Using the languages of the web, we can create fully functioning applications that work both online and offline, both in the browsers and on the user's operating systems.
 
-### A single code base installable everywhere
+### Code once. Install everywhere
 
 Historically, operating system specific applications needed to be written in operating system targeted programming languages, then compiled and packaged based on OS language and application requirement, which differ by operating system, and distributed to users thru downloads, often in proprietary app stores, and then installed by the user.
 
@@ -21,7 +21,7 @@ Like regular web sites, PWA are hosted on and downloable from web servers. They 
 
 While PWAs don't require an intermediary, the Play store and App Store do distribute PWAs, undifferentiated from other iOS or Android apps.
 
-### Regular websites that are progressively enhanced
+### Regular website that's progressively enhanced
 
 PWAs are a way of progressively enhancing websites to make them available on a user's device, even offline. By including a manifest file and service worker, and serving the website over SSL, any website can become a PWA.
 
@@ -29,7 +29,7 @@ By default, PWAs are regular websites. They use the same technologies as regular
 
 What makes a PWA different from a regular web applications is that they are progressively enhanced to be able to be installed.
 
-### Similarities to installed applications
+### Compared to OED applications
 
 Once installed, PWAs can be made to appear and act similar to other applications installed on the user's device:
 
