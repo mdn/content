@@ -17,33 +17,26 @@ The **`setBindGroup()`** method of the
 ```js-nolint
 setBindGroup(index, bindGroup)
 setBindGroup(index, bindGroup, dynamicOffsets)
-setBindGroup(index, bindGroup, dynamicOffsetsData, dynamicOffsetsStart,
+setBindGroup(index, bindGroup, dynamicOffsets, dynamicOffsetsStart,
              dynamicOffsetsLength)
 ```
 
-### Parameters
+#### Parameters
 
 - `index`
   - : The index to set the bind group at. This corresponds to the `binding` value of the relevant entry object in the descriptor of the originating {{domxref("GPUDevice.createBindGroup()")}} call that created the `bindGroup`.
 - `bindGroup`
   - : The {{domxref("GPUBindGroup")}} to use for subsequent render commands.
-
-The other parameters taken by `setBindGroup` specify dynamic buffer offsets for entries in the {{domxref("GPUBindGroup")}} that require them (i.e. the `entries` specified with `hasDynamicOffset: true` in the descriptor of the {{domxref("GPUDevice.createBindGroupLayout()")}} call that created the {{domxref("GPUBindGroupLayout")}} object that the `bindGroup` is based on). These parameters can take one of two possible forms:
-
-#### Form 1
-
 - `dynamicOffsets` {{optional_inline}}
-  - : An array of numbers specifying the offset, in bytes, for each entry in `bindGroup` with `hasDynamicOffset: true` set.
+  - : A value specifying the offset, in bytes, for each entry in `bindGroup` with `hasDynamicOffset: true` set (i.e. in the descriptor of the {{domxref("GPUDevice.createBindGroupLayout()")}} call that created the {{domxref("GPUBindGroupLayout")}} object that the `bindGroup` is based on). This value can be:
+    - An array of numbers specifying the different offsets.
+    - A {{jsxref("Uint32Array")}} containing numbers specifying the offsets.
 
-#### Form 2
+If a {{jsxref("Uint32Array")}} value is specified for `dynamicOffsets`, both of the following parameters are also required:
 
-(if this form is used, all the below parameters are required)
-
-- `dynamicOffsetsData`
-  - : A {{jsxref("Uint32Array")}} containing numbers specifying the offset, in bytes, for each entry in `bindGroup` with `hasDynamicOffset: true` set.
 - `dynamicOffsetsStart`
   - : A number specifying the offset, in array elements, into `dynamicOffsetsData`, where the dynamic offset data begins.
-- `dynamicOffsetsStart`
+- `dynamicOffsetsLength`
   - : A number specifying the number of dynamic offset values to be read from in `dynamicOffsetsData`.
 
 ### Return value
@@ -52,19 +45,16 @@ None ({{jsxref("Undefined")}}).
 
 ### Exceptions
 
-For `setBindGroup()` calls that use the three parameters starting with `dynamicOffsetsData` (option 2. above), the call will throw with a `RangeError` {{domxref("DOMException")}} if:
+For `setBindGroup()` calls that use a {{jsxref("Uint32Array")}} value for `dynamicOffsets`, the call will throw with a `RangeError` {{domxref("DOMException")}} if:
 
 - `dynamicOffsetsStart` is less than 0.
-- `dynamicOffsetsStart` + `dynamicOffsetsLength` is greater than `dynamicOffsetsData.length`.
+- `dynamicOffsetsStart` + `dynamicOffsetsLength` is greater than `dynamicOffsets.length`.
 
 ### Validation
 
-The following criteria must be met when calling **`dispatchWorkgroups()`**, otherwise a {{domxref("GPUValidationError")}} is generated and the {{domxref("GPUComputePassEncoder")}} becomes invalid:
+The following criteria must be met when calling **`dispatchWorkgroups()`**, otherwise a {{domxref("GPUValidationError")}} is generated and the {{domxref("GPURenderPassEncoder")}} becomes invalid:
 
 - `index` is less than or equal to the {{domxref("GPUDevice")}}'s `maxBindGroups` {{domxref("GPUSupportedLimits", "limit", "", "nocode")}}.
-
-For `setBindGroup()` calls that use the `dynamicOffsets` parameter (option 1. above):
-
 - `dynamicOffsets.length` is the same as the number of entries in `bindGroup` with `hasDynamicOffset: true` set.
 - For `bindGroup` entries where the bound `buffer`'s `type` is `"uniform"` (see {{domxref("GPUDevice.createBindGroupLayout()")}}), each number in `dynamicOffsets` is a multiple of the {{domxref("GPUDevice")}}'s `minUniformBufferOffsetAlignment` {{domxref("GPUSupportedLimits", "limit", "", "nocode")}}.
 - For `bindGroup` entries where the bound `buffer`'s `type` is `"storage"` or `"read-only-storage"` (see {{domxref("GPUDevice.createBindGroupLayout()")}}), each number in `dynamicOffsets` is a multiple of the {{domxref("GPUDevice")}}'s `minStorageBufferOffsetAlignment` {{domxref("GPUSupportedLimits", "limit", "", "nocode")}}.

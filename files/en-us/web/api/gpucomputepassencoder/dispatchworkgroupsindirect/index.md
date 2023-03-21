@@ -54,7 +54,19 @@ The following criteria must be met when calling **`dispatchWorkgroupsIndirect()`
 ## Examples
 
 ```js
+// Set global buffer size
 const BUFFER_SIZE = 1000;
+
+// Compute shader; note workgroup size of 64
+const shader = `
+@group(0) @binding(0)
+var<storage, read_write> output: array<f32>;
+
+@compute @workgroup_size(64)
+
+...
+
+`;
 
 // ...
 
@@ -69,6 +81,7 @@ passEncoder.setPipeline(computePipeline);
 passEncoder.setBindGroup(0, bindGroup);
 
 const uint32 = new Uint32Array(3);
+// Note workgroupCountX is set based on the global buffer size and the shader workgroup count.
 uint32[0] = Math.ceil(BUFFER_SIZE / 64);
 uint32[1] = 1;
 uint32[2] = 1;

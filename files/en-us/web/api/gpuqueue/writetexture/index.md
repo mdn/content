@@ -12,7 +12,7 @@ browser-compat: api.GPUQueue.writeTexture
 The **`writeTexture()`** method of the
 {{domxref("GPUQueue")}} interface writes a provided data source into a given {{domxref("GPUTexture")}}.
 
-This is a convenience function, which lets the user agent determine most efficient way to copy the data over.
+This is a convenience function, which provides an alternative to setting texture data via buffer mapping and buffer-to-texture copies. It lets the user agent determine the most efficient way to copy the data over.
 
 ## Syntax
 

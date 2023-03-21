@@ -51,7 +51,7 @@ const vertexBuffer = device.createBuffer({
 });
 ```
 
-To get the data into the buffer we can use the {{domxref("GPUQueue.writeBuffer", "writeBuffer()")}} convenience function, which lets the user agent determine most efficient way to copy the data over:
+To get the data into the buffer we can use the {{domxref("GPUQueue.writeBuffer", "writeBuffer()")}} function, which lets the user agent determine most efficient way to copy the data over:
 
 ```js
 device.queue.writeBuffer(vertexBuffer, 0, vertices, 0, vertices.length);

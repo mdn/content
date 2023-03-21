@@ -43,11 +43,28 @@ The following criteria must be met when calling **`dispatchWorkgroups()`**, othe
 
 ## Examples
 
-In our [basic compute demo](https://webgpu-basic-compute.glitch.me/), several commands are recorded via a {{domxref("GPUCommandEncoder")}}. Most of these commands originate from the {{domxref("GPUComputePassEncoder")}} created via `beginComputePass()`. The `dispatchWorkgroups()` `workgroupCountX` parameter is set based on the global buffer size set at the start of the code.
+In our [basic compute demo](https://webgpu-basic-compute.glitch.me/), several commands are recorded via a {{domxref("GPUCommandEncoder")}}. Most of these commands originate from the {{domxref("GPUComputePassEncoder")}} created via `beginComputePass()`.
+
+At the start of the code, we set a global buffer size of 1000. Also, note that the workgroup size in the shader is set to 64.
 
 ```js
 const BUFFER_SIZE = 1000;
 
+// Compute shader
+const shader = `
+@group(0) @binding(0)
+var<storage, read_write> output: array<f32>;
+
+@compute @workgroup_size(64)
+
+...
+
+`;
+```
+
+Later in the code, the `dispatchWorkgroups()` `workgroupCountX` parameter is set based on the global buffer size and the shader workgroup count.
+
+```js
 // ...
 
 // Create GPUCommandEncoder to encode commands to issue to the GPU

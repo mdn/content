@@ -12,7 +12,7 @@ browser-compat: api.GPUQueue.copyExternalImageToTexture
 The **`copyExternalImageToTexture()`** method of the
 {{domxref("GPUQueue")}} interface copies a snapshot taken from a source image, video, or canvas into a given {{domxref("GPUTexture")}}.
 
-This is a convenience function, which lets the user agent determine most efficient way to copy the data over.
+Using this function allows the user agent to determine the most efficient way to copy the data over for each source type.
 
 ## Syntax
 
@@ -105,7 +105,7 @@ copyExternalImageToTexture(source, destination, copySize)
       - : A {{domxref("GPUTexture")}} object representing the texture to write the data to.
 
 - `copySize`
-  - : An object or array specifying the the extent of the copy — the far corner of the texture region to write the image data to. See `destination.origin` for examples of the object/array structure.
+  - : An object or array specifying the width, height, and depth of the copy. See `destination.origin` for examples of the object/array structure.
 
 ### Return value
 
@@ -148,9 +148,9 @@ The following criteria must be met when calling **`writeTexture()`**, otherwise 
   - `"rgb10a2unorm"`
   - `"rgba16float"`
   - `"rgba32float"`
-- `destination.origin.x` + the `destination` {{domxref("GPUTexture.width")}} is less than or equal to the width of the image capture to write to the `destination` {{domxref("GPUTexture")}}.
-- `destination.origin.y` + the `destination` {{domxref("GPUTexture.height")}} is less than or equal to the height of the image capture to write to the `destination` {{domxref("GPUTexture")}}.
-- `destination.origin.z` + the `destination` {{domxref("GPUTexture.depthOrArrayLayers")}} is less than or equal to the depthOrArrayLayers of the image capture to write to the `destination` {{domxref("GPUTexture")}}.
+- `destination.origin.x` + `copySize.x` is less than or equal to the `destination` {{domxref("GPUTexture")}} {{domxref("GPUTexture.width", "width")}}.
+- `destination.origin.y` + `copySize.y` is less than or equal to the `destination` {{domxref("GPUTexture")}} {{domxref("GPUTexture.height", "height")}}.
+- `destination.origin.z` + `copySize.z` is less than or equal to the `destination` {{domxref("GPUTexture")}} {{domxref("GPUTexture.depthOrArrayLayers", "depthOrArrayLayers")}}.
 - The `destination` {{domxref("GPUTexture.width")}} is a multiple of the texel block width of the destination {{domxref("GPUTexture.format")}}.
 - The `destination` {{domxref("GPUTexture.height")}} is a multiple of the texel block height of the destination {{domxref("GPUTexture.format")}}.
 
