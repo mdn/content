@@ -15,7 +15,7 @@ Historically, operating system specific applications needed to be written in ope
 
 For an application to be installable on an operating system, such as Windows, iOS, MacOS, Linux, and Android, the application had to be developed in a programming languages, like C#, .Net, Objective C, Swift, Kotlin, Java, or Python. PWAs solve this problem: they use a single code base, written using regular open web technologies.
 
-Historically, in most cases, the application code had to be compiled and packaged using the operating system's SDK into downloadable .exe, .dmg, or other installable files or were made available through a vendor like the Apple App Store, [Goole Play](https://play.google.com/store/apps), [Microsoft Store App](https://apps.microsoft.com/store/apps), or similar. PWAs don't have these requirements.
+Historically, in most cases, the application code had to be compiled and packaged using the operating system's SDK into downloadable .exe, .dmg, or other installable files or were made available through a vendor like the Apple App Store, [Google Play](https://play.google.com/store/apps), [Microsoft Store App](https://apps.microsoft.com/store/apps), or similar. PWAs don't have these requirements.
 
 Like regular web sites, PWA are hosted on and downloable from web servers. They don't require any packaging. They can be seamlessly installed on any operating system without the need of app stores (nor app store approval and fees). PWA don't require any additional programming language knowledge, any proprietary SDK, or even an app store.
 
@@ -27,26 +27,26 @@ PWAs are a way of progressively enhancing websites to make them available on a u
 
 By default, PWAs are regular websites. They use the same technologies as regular websites. They are also linkable, discoverable via search engines, and visible in a browser, just like regular websites.
 
-What makes a PWA different from a regular web applications is that they are progressively enhanced to be able to be installed.
+PWA are regular web applications that are progressively enhanced to be able to be installed.
 
 ### Compared to OED applications
 
-Once installed, PWAs can be made to appear and act similar to other applications installed on the user's device:
+Once installed, PWAs can be made to appear and act similarly to other applications installed on the user's device:
 
 - Application window
 
   - : Similar to other installed applications, depending on PWA settings defined by the developer and set with user preferences, the PWA can be made to open in its own application window.
 
 - Application icon
-  - : PWA display an application icon in the same location as other installed applications installed on the users' operating system: this can be an icon on the homescreen, in the tool bar, in the applications folder, or wherever the devics displays the icons of available applications.
+  - : PWAs display an application icon in the same location as other installed applications installed on the users' operating system: this can be an icon on the homescreen, in the toolbar, in the application's folder, or wherever the device displays application icons.
 - Works offline
   - : Internet access is initially required to download the application and is also required when syncing data with the server or other users. This is required of all applications, not just PWAs. When [service workers] are set to create an offline experience, the application will keep working should the user lose or not have internet access. As the user makes changes while offline, the application can update local and session storage, and service workers can then sync the data once connectivity is restored. The user doesn't need to be actively engaging with the PWA, in fact, the PWA doesn't even need to be open, for it to send and retrieve server data.
 
 ## Creating your first PWA
 
-In this tutorial, we will create a basic "Cat viewer" progressive web application.
+In this tutorial, we will create "pets unlimited," a basic kitten and puppy viewer progressive web application.
 
-To complete this tutorial, it is helpful to have a basic level understanding of HTML, CSS and JavaScript. The tutorial provides the instructions on creaing the manifest file and initiating the service worker. The tutorial will cover checking for internet access, defining both an online and offline experience.
+To complete this tutorial, it is helpful to have a basic level of understanding of HTML, CSS, and JavaScript. The tutorial provides instructions on creating the manifest file and initiating the service worker. The tutorial will cover checking for internet access, defining both an online and offline experience.
 
 You will be installing node.js, MAMP, or other local server to create a local secure connection. While the secure connection is a requirement, nodejs, MAMP, or any application other than a text editor and browser is not a requirement for creating a PWA.
 
@@ -67,6 +67,6 @@ The steps include:
 
 ## See Also
 
-Possible other intro level tutorial topics:
+Possible other introductory level tutorial topics:
 
 - [Splash page](/en-US/Docs/Web/Progressive_web_apps/tutorials/intro/splash)
