@@ -1,16 +1,16 @@
 ---
-title: GPUComputePassEncoder.setBindGroup()
-slug: Web/API/GPUComputePassEncoder/setBindGroup
+title: GPURenderPassEncoder.setBindGroup()
+slug: Web/API/GPURenderPassEncoder/setBindGroup
 page-type: web-api-instance-method
 status:
   - experimental
-browser-compat: api.GPUComputePassEncoder.setBindGroup
+browser-compat: api.GPURenderPassEncoder.setBindGroup
 ---
 
 {{APIRef("WebGPU API")}}{{SeeCompatTable}}
 
 The **`setBindGroup()`** method of the
-{{domxref("GPUComputePassEncoder")}} interface sets the {{domxref("GPUBindGroup")}} to use for subsequent compute commands, for a given index.
+{{domxref("GPURenderPassEncoder")}} interface sets the {{domxref("GPUBindGroup")}} to use for subsequent render commands, for a given index.
 
 ## Syntax
 
@@ -26,7 +26,7 @@ setBindGroup(index, bindGroup, dynamicOffsetsData, dynamicOffsetsStart,
 - `index`
   - : The index to set the bind group at. This corresponds to the `binding` value of the relevant entry object in the descriptor of the originating {{domxref("GPUDevice.createBindGroup()")}} call that created the `bindGroup`.
 - `bindGroup`
-  - : The {{domxref("GPUBindGroup")}} to use for subsequent compute commands.
+  - : The {{domxref("GPUBindGroup")}} to use for subsequent render commands.
 
 The other parameters taken by `setBindGroup` specify dynamic buffer offsets for entries in the {{domxref("GPUBindGroup")}} that require them (i.e. the `entries` specified with `hasDynamicOffset: true` in the descriptor of the {{domxref("GPUDevice.createBindGroupLayout()")}} call that created the {{domxref("GPUBindGroupLayout")}} object that the `bindGroup` is based on). These parameters can take one of two possible forms:
 
@@ -72,41 +72,24 @@ For `setBindGroup()` calls that use the `dynamicOffsets` parameter (option 1. ab
 
 ## Examples
 
-In our [basic compute demo](https://webgpu-basic-compute.glitch.me/), several commands are recorded via a {{domxref("GPUCommandEncoder")}}. Most of these commands originate from the {{domxref("GPUComputePassEncoder")}} created via `beginComputePass()`. The `setBindGroup()` call used here is the simplest form, just specifying index and bind group.
+In the WebGPU Samples [Textured Cube example](https://webgpu.github.io/webgpu-samples/samples/texturedCube), `setBindGroup()` is used to bind the `uniformBindGroup` to index position 0. Check out the example for the full context.
 
 ```js
-const BUFFER_SIZE = 1000;
-
 // ...
 
-// Create GPUCommandEncoder to encode commands to issue to the GPU
 const commandEncoder = device.createCommandEncoder();
-
-// Initiate render pass
-const passEncoder = commandEncoder.beginComputePass();
-
-// Issue commands
-passEncoder.setPipeline(computePipeline);
-passEncoder.setBindGroup(0, bindGroup);
-passEncoder.dispatchWorkgroups(Math.ceil(BUFFER_SIZE / 64));
-
-// End the render pass
+const passEncoder = commandEncoder.beginRenderPass(renderPassDescriptor);
+passEncoder.setPipeline(pipeline);
+passEncoder.setBindGroup(0, uniformBindGroup);
+passEncoder.setVertexBuffer(0, verticesBuffer);
+passEncoder.draw(cubeVertexCount, 1, 0, 0);
 passEncoder.end();
-
-// Copy output buffer to staging buffer
-commandEncoder.copyBufferToBuffer(
-  output,
-  0, // Source offset
-  stagingBuffer,
-  0, // Destination offset
-  BUFFER_SIZE
-);
-
-// End frame by passing array of command buffers to command queue for execution
 device.queue.submit([commandEncoder.finish()]);
 
 // ...
 ```
+
+> **Note:** Study the other [WebGPU Samples](https://webgpu.github.io/webgpu-samples) for more examples of `setBindGroup()` usage.
 
 ## Specifications
 

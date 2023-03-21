@@ -21,7 +21,19 @@ dispatchWorkgroupsIndirect(indirectBuffer, indirectOffset)
 ### Parameters
 
 - `indirectBuffer`
-  - : A {{domxref("GPUBuffer")}} containing the X, Y, and Z dimensions of the grid of workgroups to dispatch. The buffer must contain a tightly packed block of three 32-bit unsigned integer values representing the dimensions (12 bytes total), given in the same order as the arguments for {{domxref("GPUCommandEncoder.dispatchWorkgroups()")}}
+
+  - : A {{domxref("GPUBuffer")}} containing the X, Y, and Z dimensions of the grid of workgroups to dispatch. The buffer must contain a tightly packed block of three 32-bit unsigned integer values representing the dimensions (12 bytes total), given in the same order as the arguments for {{domxref("GPUComputePassEncoder.dispatchWorkgroups()")}}. So for example:
+
+    ```js
+    const uint32 = new Uint32Array(3);
+    uint32[0] = 25; // The X value
+    uint32[1] = 1; // The Y value
+    uint32[2] = 1; // The Z value
+
+    // Write values into a GPUBuffer
+    device.queue.writeBuffer(buffer, 0, uint32, 0, uint32.length);
+    ```
+
 - `indirectOffset`
   - : The offset, in bytes, into `indirectBuffer` where the dimension data begins.
 

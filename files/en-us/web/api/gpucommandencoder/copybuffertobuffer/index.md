@@ -48,7 +48,7 @@ The following criteria must be met when calling **`copyBufferToBuffer()`**, othe
 
 ## Examples
 
-In our [basic compute demo](https://webgpu-compute-render.glitch.me/), we use `copyBufferToBuffer()` to copy the contents of our `output` buffer to the `stagingBuffer`.
+In our [basic compute demo](https://webgpu-basic-compute.glitch.me/), we use `copyBufferToBuffer()` to copy the contents of our `output` buffer to the `stagingBuffer`.
 
 ```js
 // ...

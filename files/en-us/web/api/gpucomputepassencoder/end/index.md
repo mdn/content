@@ -15,7 +15,7 @@ The **`end()`** method of the
 ## Syntax
 
 ```js-nolint
-end(indirectBuffer, indirectOffset)
+end()
 ```
 
 ### Parameters
@@ -34,7 +34,7 @@ The following criteria must be met when calling **`end()`**, otherwise a {{domxr
 
 ## Examples
 
-In our [basic compute demo](https://webgpu-compute-render.glitch.me/), several commands are recorded via a {{domxref("GPUCommandEncoder")}}. Most of these commands originate from the {{domxref("GPUComputePassEncoder")}} created via {{domxref("GPUCommandEncoder.beginComputePass()")}}.
+In our [basic compute demo](https://webgpu-basic-compute.glitch.me/), several commands are recorded via a {{domxref("GPUCommandEncoder")}}. Most of these commands originate from the {{domxref("GPUComputePassEncoder")}} created via {{domxref("GPUCommandEncoder.beginComputePass()")}}.
 
 ```js
 const BUFFER_SIZE = 1000;

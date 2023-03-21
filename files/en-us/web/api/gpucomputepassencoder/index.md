@@ -41,7 +41,7 @@ A `GPUComputePassEncoder` object instance is created via the {{domxref("GPUComma
 
 ## Examples
 
-In our [basic compute demo](https://webgpu-compute-render.glitch.me/), several commands are recorded via a {{domxref("GPUCommandEncoder")}}. Most of these commands originate from the `GPUComputePassEncoder` created via {{domxref("GPUCommandEncoder.beginComputePass()")}}.
+In our [basic compute demo](https://webgpu-basic-compute.glitch.me/), several commands are recorded via a {{domxref("GPUCommandEncoder")}}. Most of these commands originate from the `GPUComputePassEncoder` created via {{domxref("GPUCommandEncoder.beginComputePass()")}}.
 
 ```js
 // ...

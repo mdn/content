@@ -100,7 +100,7 @@ The `depthStencilAttachment` object can have the following properties:
 
 - `depthClearValue` {{optional_inline}}
 
-  - : A number indicating the value to clear `view`'s depth component to prior to executing the render pass. This is ignored if `depthLoadOp` is not set to `"clear"`.
+  - : A number indicating the value to clear `view`'s depth component prior to executing the render pass. This is ignored if `depthLoadOp` is not set to `"clear"`.
 
     The value must be between 0.0 and 1.0, inclusive.
 
@@ -154,7 +154,7 @@ The following criteria must be met when calling **`beginRenderPass()`**, otherwi
 General:
 
 - `colorAttachments.length` is less than or equal to the {{domxref("GPUDevice")}}'s `maxColorAttachments` {{domxref("GPUSupportedLimits", "limit", "", "nocode")}}.
-- If `colorAttachments` contains only null values, `depthStencilAttachment` is provided.
+- If `colorAttachments` contains only `null` values, `depthStencilAttachment` is provided.
 - All `view`s in `colorAttachments` and `depthStencilAttachment` have equal {{domxref("GPUTexture.sampleCount")}} values and render extents ({{domxref("GPUTexture.height")}}, {{domxref("GPUTexture.width")}}, and {{domxref("GPUTexture.depthOrArrayLayers")}}).
 - If `occlusionQuerySet` is set, the referenced {{domxref("GPUQuerySet")}} has a `type` of `"occlusion"`.
 

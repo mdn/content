@@ -1,16 +1,16 @@
 ---
-title: GPUCommandEncoder.popDebugGroup()
-slug: Web/API/GPUCommandEncoder/popDebugGroup
+title: GPURenderPassEncoder.popDebugGroup()
+slug: Web/API/GPURenderPassEncoder/popDebugGroup
 page-type: web-api-instance-method
 status:
   - experimental
-browser-compat: api.GPUCommandEncoder.popDebugGroup
+browser-compat: api.GPURenderPassEncoder.popDebugGroup
 ---
 
 {{APIRef("WebGPU API")}}{{SeeCompatTable}}
 
 The **`popDebugGroup()`** method of the
-{{domxref("GPUCommandEncoder")}} interface ends a debug group, which is begun with a {{domxref("GPUCommandEncoder.pushDebugGroup", "pushDebugGroup()")}} call.
+{{domxref("GPURenderPassEncoder")}} interface ends a render pass debug group, which is begun with a {{domxref("GPURenderPassEncoder.pushDebugGroup", "pushDebugGroup()")}} call.
 
 This could be used for telemetry, or may be utilized in {{domxref("GPUError")}} messages, browser dev tools, or other services in the future to help with debugging.
 
@@ -30,26 +30,24 @@ None ({{domxref("Undefined")}}).
 
 ### Validation
 
-The following criteria must be met when calling **`popDebugGroup()`**, otherwise a {{domxref("GPUValidationError")}} is generated and the {{domxref("GPUCommandEncoder")}} becomes invalid:
+The following criteria must be met when calling **`popDebugGroup()`**, otherwise a {{domxref("GPUValidationError")}} is generated and the {{domxref("GPURenderPassEncoder")}} becomes invalid:
 
-- The command encoder's debug stack is not empty (i.e. at least one debug group was previously started with {{domxref("GPUCommandEncoder.pushDebugGroup", "pushDebugGroup()")}}).
+- The render pass encoder's debug stack is not empty (i.e. at least one render pass debug group was previously started with {{domxref("GPURenderPassEncoder.pushDebugGroup", "pushDebugGroup()")}}).
 
 ## Examples
 
 ```js
 // ...
 
-commandEncoder.pushDebugGroup("mygroupmarker"); // Start labeled debug group
-
 const passEncoder = commandEncoder.beginRenderPass(renderPassDescriptor);
+
+passEncoder.pushDebugGroup("mygroupmarker"); // Start labeled debug group
 
 passEncoder.setPipeline(renderPipeline);
 passEncoder.setVertexBuffer(0, vertexBuffer);
 passEncoder.draw(3);
 
-passEncoder.end();
-
-commandEncoder.popDebugGroup(); // End labeled debug group
+passEncoder.popDebugGroup();
 
 // ...
 ```
