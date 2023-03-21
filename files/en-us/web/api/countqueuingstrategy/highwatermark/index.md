@@ -1,6 +1,6 @@
 ---
 title: CountQueuingStrategy.highWaterMark
-slug: Web/API/CountStrategy/highWaterMark
+slug: Web/API/CountQueuingStrategy/highWaterMark
 page-type: web-api-instance-property
 browser-compat: api.CountQueuingStrategy.highWaterMark
 ---
