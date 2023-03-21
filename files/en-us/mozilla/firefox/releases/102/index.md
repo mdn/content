@@ -23,7 +23,7 @@ No notable changes.
 
 ### APIs
 
-- The Non-standard interfaces [IDBMutableFile](/en-US/docs/Web/API/IDBMutableFile), [IDBFileHandle](/en-US/docs/Web/API/IDBFileHandle), [IDBFileRequest](/en-US/docs/Web/API/IDBFileRequest), and the method [IDBDatabase.createMutableFile()](/en-US/docs/Web/API/IDBDatabase#idbdatabase.createmutablefile) have been disabled by default in preparation for removal in a future release ([Firefox bug 1764771](https://bugzil.la/1764771)).
+- The non-standard interfaces `IDBMutableFile`, `IDBFileHandle`, `IDBFileRequest`, and the method `IDBDatabase.createMutableFile()` have been disabled by default in preparation for removal in a future release ([Firefox bug 1764771](https://bugzil.la/1764771)).
 
 - [Transform streams](/en-US/docs/Web/API/TransformStream) are now supported, allowing you to pipe from {{domxref("ReadableStream")}} to a {{domxref("WritableStream")}}, executing a transformation on the chunks.
   The update includes the new interfaces [`TransformStream`](/en-US/docs/Web/API/TransformStream) and [`TransformStreamDefaultController`](/en-US/docs/Web/API/TransformStreamDefaultController) and the method [`ReadableStream.pipeThrough()`](/en-US/docs/Web/API/ReadableStream/pipeThrough) ([Firefox bug 1767507](https://bugzil.la/1767507)).
