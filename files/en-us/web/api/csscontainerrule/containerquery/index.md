@@ -23,7 +23,7 @@ For example, the value of `containerQuery` for the {{cssxref("@container")}} bel
 
 A string containing the container query.
 
-Note that the value may not be identical to the original string, as normalizations such as removing whitespace are allowed.
+Note that the value may not be identical to the original string, as normalizations such as removing whitespace may happen.
 
 ## Examples
 

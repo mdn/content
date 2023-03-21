@@ -22,7 +22,7 @@ For example, the value of `containerName` for the {{cssxref("@container")}} belo
 ## Value
 
 A string that contains the [`container-name`](/en-US/docs/Web/CSS/container-name) of the {{cssxref("@container")}} associated with this {{domxref("CSSContainerRule")}}.
-This will be an empty string if the `@container` is not named.
+If the `@container` is not [named](/Web/API/CSSContainerRule#unnamed_container_rule), the function returns the empty string (`""`).
 
 ## Examples
 
@@ -82,10 +82,10 @@ The card has a default font size, which is overridden for the `@container` named
 </style>
 ```
 
-The code below gets the {{domxref("HTMLStyleElement")}} associated with the example using its id, and then uses its `sheet` property to get the {{domxref("StyleSheet")}}.
+The code below gets the {{domxref("HTMLStyleElement")}} associated with the example using its `id`, and then uses its `sheet` property to get the {{domxref("StyleSheet")}}.
 From the `StyleSheet` we get the set of `cssRules` added to the sheet.
-Since we added added the `@container` as the third rule above, we can access the associated `CSSContainerRule` using the third entry (index "2"), in the `cssRules`.
-Last of all, we log the container name and query properties (the code do do the logging is not shown).
+Since we added the `@container` as the third rule above, we can access the associated `CSSContainerRule` using the third entry (index "2"), in the `cssRules`.
+Last of all, we log the container name and query properties (the code that does the logging is not shown).
 
 ```js
 const exampleStylesheet = document.getElementById("examplestyles").sheet;
