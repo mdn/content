@@ -319,7 +319,7 @@ At this point, you should have a better idea about how to structure a web page/s
 
 ## See also
 
-- [Using HTML sections and outlines](/en-US/docs/Web/HTML/Element/Heading_Elements): Advanced guide to HTML semantic elements and the HTML outline algorithm.
+- Using HTML [sections](/en-US/docs/Web/HTML/Element/section) and [outlines](/en-US/docs/Web/CSS/outline): Advanced guide to HTML semantic elements and the HTML outline algorithm.
 
 {{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/Advanced_text_formatting", "Learn/HTML/Introduction_to_HTML/Debugging_HTML", "Learn/HTML/Introduction_to_HTML")}}
 
