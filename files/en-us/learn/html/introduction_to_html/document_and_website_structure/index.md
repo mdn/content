@@ -317,10 +317,6 @@ Try carrying out the above exercise for a website of your own creation. What wou
 
 At this point, you should have a better idea about how to structure a web page/site. In the last article of this module, we'll learn how to [debug HTML](/en-US/docs/Learn/HTML/Introduction_to_HTML/Debugging_HTML).
 
-## See also
-
-- Using HTML [sections](/en-US/docs/Web/HTML/Element/section) and [outlines](/en-US/docs/Web/CSS/outline): Advanced guide to HTML semantic elements and the HTML outline algorithm.
-
 {{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/Advanced_text_formatting", "Learn/HTML/Introduction_to_HTML/Debugging_HTML", "Learn/HTML/Introduction_to_HTML")}}
 
 ## In this module
