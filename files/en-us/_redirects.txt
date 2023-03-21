@@ -8745,6 +8745,7 @@
 /en-US/docs/Web/API/ImageData.width	/en-US/docs/Web/API/ImageData/width
 /en-US/docs/Web/API/Index	/en-US/docs/Web/API
 /en-US/docs/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB	/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology
+/en-US/docs/Web/API/IndexedDB_API/Browser_storage_limits_and_eviction_criteria	/en-US/docs/Web/API/Storage_API/Storage_quotas_and_eviction_criteria
 /en-US/docs/Web/API/IndexedDB_API/Cursor	/en-US/docs/Web/API/IDBCursor
 /en-US/docs/Web/API/IndexedDB_API/Index	/en-US/docs/Web/API/IDBIndex
 /en-US/docs/Web/API/IndexedDB_API/IndexedDB_primer	/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB

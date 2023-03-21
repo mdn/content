@@ -44063,22 +44063,6 @@
       "hansw"
     ]
   },
-  "Web/API/IndexedDB_API/Browser_storage_limits_and_eviction_criteria": {
-    "modified": "2019-05-16T10:57:17.310Z",
-    "contributors": [
-      "holmberd",
-      "Sheppy",
-      "jamesdhurd",
-      "chrisdavidmills",
-      "johannh",
-      "shawn_huang",
-      "Brettz9",
-      "fscholz",
-      "agektmr",
-      "Sole",
-      "jryans"
-    ]
-  },
   "Web/API/IndexedDB_API/Checking_when_a_deadline_is_due": {
     "modified": "2019-03-18T21:00:23.903Z",
     "contributors": ["chrisdavidmills", "fscholz", "Sheppy", "Jeremie"]
@@ -60600,6 +60584,22 @@
       "chrisdavidmills",
       "shawn_huang",
       "Sheppy"
+    ]
+  },
+  "Web/API/Storage_API/Storage_quotas_and_eviction_criteria": {
+    "modified": "2019-05-16T10:57:17.310Z",
+    "contributors": [
+      "holmberd",
+      "Sheppy",
+      "jamesdhurd",
+      "chrisdavidmills",
+      "johannh",
+      "shawn_huang",
+      "Brettz9",
+      "fscholz",
+      "agektmr",
+      "Sole",
+      "jryans"
     ]
   },
   "Web/API/Storage_Access_API": {

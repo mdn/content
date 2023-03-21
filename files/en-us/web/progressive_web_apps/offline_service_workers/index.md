@@ -211,7 +211,7 @@ self.addEventListener("activate", (e) => {
 });
 ```
 
-This ensures we have only the files we need in the cache, so we don't leave any garbage behind; the [available cache space in the browser is limited](/en-US/docs/Web/API/IndexedDB_API/Browser_storage_limits_and_eviction_criteria), so it is a good idea to clean up after ourselves.
+This ensures we have only the files we need in the cache, so we don't leave any garbage behind; the [available cache space in the browser is limited](/en-US/docs/Web/API/Storage_API/Storage_quotas_and_eviction_criteria), so it is a good idea to clean up after ourselves.
 
 ## Other use cases
 
