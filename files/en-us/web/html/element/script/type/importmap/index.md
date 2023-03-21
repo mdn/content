@@ -13,6 +13,7 @@ An import map is a JSON object that allows developers to control how the browser
 It provides a mapping between the text used as the module specifier in an [`import` statement](/en-US/docs/Web/JavaScript/Reference/Statements/import) or [`import()` operator](/en-US/docs/Web/JavaScript/Reference/Operators/import), and the corresponding value that will replace the text when resolving the specifier.
 The JSON object must conform to the [Import map JSON representation format](#import_map_json_representation).
 
+An import map is used to resolve module specifiers in static and dynamic imports, and therefore must be declared and processed before any `<script>` elements that import modules using specifiers declared in the map.
 Note that the import map applies only to module specifiers in the [`import` statement](/en-US/docs/Web/JavaScript/Reference/Statements/import) or [`import()` operator](/en-US/docs/Web/JavaScript/Reference/Operators/import); it does not apply to the path specified in the `src` attribute of a `<script>` element.
 
 For more information, see the [Importing modules using import maps](/en-US/docs/Web/JavaScript/Guide/Modules#importing_modules_using_import_maps) section in the JavaScript modules guide.
@@ -28,7 +29,6 @@ For more information, see the [Importing modules using import maps](/en-US/docs/
 The `src`, `async`, `nomodule`, `defer`, `crossorigin`, `integrity`, and `referrerpolicy` attributes must not be specified.
 
 Only the first import map in the document with an inline definition is processed; any additional import maps and external import maps are ignored.
-An [`error` event](/en-US/docs/Web/API/Element/error_event) is fired at script elements with `type="importmap"` that are not processed (are ignored).
 
 ### Exceptions
 
@@ -36,6 +36,9 @@ An [`error` event](/en-US/docs/Web/API/Element/error_event) is fired at script e
   - : The import map definition is not a JSON object, the `importmap` key is defined but its value is not a JSON object, or the `scopes` key is defined but its value is not a JSON object.
 
 Browsers generate console warnings for other cases where the import map JSON does not conform to the [import map](#import_map_json_representation) schema.
+
+An [`error` event](/en-US/docs/Web/API/Element/error_event) is fired at script elements with `type="importmap"` that are not processed.
+This might occur, for example, if module loading has already started when an import map is processed, or if multiple import maps are defined in the page.
 
 ## Description
 

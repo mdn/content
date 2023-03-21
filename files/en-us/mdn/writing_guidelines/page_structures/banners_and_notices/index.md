@@ -32,9 +32,7 @@ For more information on the definitions of **deprecated**, see the [Experimental
 You can mark pages as deprecated using the [`deprecated_header`](https://github.com/mdn/yari/blob/main/kumascript/macros/Deprecated_Header.ejs) macro.
 As with obsolete content, you can specify the Gecko version in which the technology was deprecated as a parameter, if the technology is Gecko-specific.
 
-You should also add the tag "Deprecated" to the page.
-
 ## Non-standard content
 
 Non-standard content is any content not yet part of a Web standard; this includes any technology that isn't even proposed as a draft specification, even if it's implemented by multiple browsers.
-You should use the [`non-standard_header`](https://github.com/mdn/yari/blob/main/kumascript/macros/Non-standard_Header.ejs) macro on these pages, and tag the pages with "Non-standard".
+You should use the [`non-standard_header`](https://github.com/mdn/yari/blob/main/kumascript/macros/Non-standard_Header.ejs) macro on these pages.

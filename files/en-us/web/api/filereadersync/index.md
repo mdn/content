@@ -41,4 +41,3 @@ This interface does not have any properties.
 - {{DOMxRef("FileReader")}}
 - {{DOMxRef("Blob")}}
 - {{DOMxRef("File")}}
-- {{DOMxRef("FileReader")}}
