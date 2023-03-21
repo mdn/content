@@ -42,7 +42,7 @@ The `finally()` method is very similar to calling {{jsxref("Promise/then", "then
 - The `onFinally` callback does not receive any argument. This use case is for precisely when you _do not care_ about the rejection reason or the fulfillment value, and so there's no need to provide it.
 - A `finally()` call is usually transparent and does not change the eventual state of the original promise. So for example:
   - Unlike `Promise.resolve(2).then(() => 77, () => {})`, which returns a promise eventually fulfilled with the value `77`, `Promise.resolve(2).finally(() => 77)` returns a promise eventually fulfilled with the value `2`.
-  - Similarly, unlike `Promise.reject(3).then(() => {}, () => 88)`, which returns a promise eventually fulfilled with the value `88`, `Promise.reject(3).finally(() => 88)` returns a promise eventually rejected with the reason `3`.
+  - Similarly, unlike `Promise.reject(3).catch(() => {}, () => 88)`, which returns a promise eventually fulfilled with the value `88`, `Promise.reject(3).finally(() => 88)` returns a promise eventually rejected with the reason `3`.
 
 > **Note:** A `throw` (or returning a rejected promise) in the `finally` callback still rejects the returned promise. For example, both `Promise.reject(3).finally(() => { throw 99; })` and `Promise.reject(3).finally(() => Promise.reject(99))` reject the returned promise with the reason `99`.
 
