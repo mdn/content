@@ -94,3 +94,5 @@ Browse the complete [JavaScript reference](/en-US/docs/Web/JavaScript/Reference)
   - : Learn how to work with JavaScript's functions to develop your applications.
 - [Classes](/en-US/docs/Web/JavaScript/Reference/Classes)
   - : JavaScript classes are the most appropriate way to do object-oriented programming.
+
+![JavaScript mascot](https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/JavaScript_mascot.svg/595px-JavaScript_mascot.svg.png)
