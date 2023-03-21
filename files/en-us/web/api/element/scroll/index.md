@@ -37,9 +37,9 @@ scroll(options)
       - : Specifies the number of pixels along the X axis to scroll the window or element.
     - `behavior`
       - : Determines whether scrolling is instant or animates smoothly. This option is a string which must take one of the following values:
-          - `smooth`: scrolling should animate smoothly
-          - `instant`: scrolling should happen instantly in a single jump
-          - `auto`: scroll behavior is determined by the computed value of {{cssxref("scroll-behavior")}}
+        - `smooth`: scrolling should animate smoothly
+        - `instant`: scrolling should happen instantly in a single jump
+        - `auto`: scroll behavior is determined by the computed value of {{cssxref("scroll-behavior")}}
 
 ### Return value
 
