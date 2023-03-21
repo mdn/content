@@ -51,7 +51,7 @@ const heightOutput = document.querySelector("#height");
 const widthOutput = document.querySelector("#width");
 
 function resize(evt) {
-  heightOutput.textContent = evt.target.width;
+  heightOutput.textContent = evt.target.height;
   widthOutput.textContent = evt.target.width;
 }
 
