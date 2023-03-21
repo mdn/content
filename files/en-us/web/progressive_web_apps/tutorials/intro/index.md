@@ -55,7 +55,7 @@ The steps include:
 - [Basic site](/en-US/Docs/Web/Progressive_web_apps/tutorials/intro/html)
   - : We will create a website that shows a picture of a cat with an installation button, using HTML, CSS, and JavaScript.
 - [Icon and appearance](/en-US/Docs/Web/Progressive_web_apps/tutorials/intro/manifest)
-  - :A PWA requires a manifest is a JSON file that describes the name, icon, description, and other definitions of how the application works within the operating system on which the PWA is installed. We will create a manifest file that defines the appearance of the application when installed, including which icons should be used depending on the user's device, and parameters for the application viewport.
+  - : A PWA requires a manifest is a JSON file that describes the name, icon, description, and other definitions of how the application works within the operating system on which the PWA is installed. We will create a manifest file that defines the appearance of the application when installed, including which icons should be used depending on the user's device, and parameters for the application viewport.
 - [Secure connection](/en-US/Docs/Web/Progressive_web_apps/tutorials/intro/secure)
   - : While no frameworks are needed to create a PWA, we will link to options for creating a secure localhost connection so you can test your application and install it.
 - [Service worker](/en-US/Docs/Web/Progressive_web_apps/tutorials/intro/service_worker)
