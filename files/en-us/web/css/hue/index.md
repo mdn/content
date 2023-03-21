@@ -11,11 +11,12 @@ spec-urls: https://drafts.csswg.org/css-color/#typedef-hue
 The **`<hue>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Types) represents a value that can be either a {{cssxref("&lt;number&gt;")}} or an {{cssxref("&lt;angle&gt;")}} specifying a hue angle (a cylindrical polar color) in degrees of a full circle.
 It is used in color functions that accept hue expressed as a single value, specifically [`hsl()`](/en-US/docs/Web/CSS/color_value/hsl), [`hwb()`](/en-US/docs/Web/CSS/color_value/hwb), [`lch()`](/en-US/docs/Web/CSS/color_value/lch), and [`oklch()`](/en-US/docs/Web/CSS/color_value/oklch) functional notations.
 
-> **Note:** The angles corresponding to particular hues depend on the color space.
-> For example, green in [`hsl()`](/en-US/docs/Web/CSS/color_value/hsl) and  [`hsl()`](/en-US/docs/Web/CSS/color_value/hwb) which use the [sRGB](https://en.wikipedia.org/wiki/SRGB) color space, is at `120deg`, while in [`lch()`](/en-US/docs/Web/CSS/color_value/lch), which uses the CIELAB color wheel, it is at `134.39deg`.
+> **Note:** The angles corresponding to particular hues depend on the color space. For example, green in [`hsl()`](/en-US/docs/Web/CSS/color_value/hsl) and  [`hsl()`](/en-US/docs/Web/CSS/color_value/hwb) which use the [sRGB](https://en.wikipedia.org/wiki/SRGB) color space, is at `120deg`, while in [`lch()`](/en-US/docs/Web/CSS/color_value/lch), which uses the CIELAB color wheel, it is at `134.39deg`.
+
 ![A color wheel indicating the angle for the hue of the primary (red-green-blue) and secondary (yellow-cyan-magenta) colors](hue-wheel.png)
 
 In [`hsl()`](/en-US/docs/Web/CSS/color_value/hsl), _red_ is `0deg`, with the other colors spread around the circle, so _yellow_ is `60deg`, _green_ is `120deg`, _cyan_ is `180deg`, _blue_ is `240deg`, and _magenta_ is `300deg`.
+
 ## Syntax
 
 ```css
