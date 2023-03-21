@@ -87,4 +87,3 @@ On Ubuntu Linux, for Brave, this can be done by opening the PWA, navigating into
 ## See also
 
 - [Install, manage, or uninstall apps in Microsoft Edge](https://support.microsoft.com/en-us/topic/install-manage-or-uninstall-apps-in-microsoft-edge-0c156575-a94a-45e4-a54f-3a84846f6113)
-
