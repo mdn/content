@@ -151,7 +151,6 @@ p {
 
 a {
   outline: none;
-  padding: 2px 1px 0;
 }
 
 a:link {
