@@ -33,13 +33,10 @@ oklab(59.69% 0.1007 0.1191 / 0.5);
 ### Values
 
 - Functional notation: `oklab(L a b [/ A])`
-  - `L` is a {{cssxref("&lt;number&gt;")}} between `0` and `100` or a {{cssxref("&lt;percentage&gt;")}} between `0%` and `100%` that specifies perceived lightness where the number `0` corresponds to `0%` (black) and the number `100` corresponds to `100%` (white).
-  - `a` is a {{cssxref("&lt;number&gt;")}} between `-0.4` and `0.4` or a {{cssxref("&lt;percentage&gt;")}} between `-100%` and `100%`, specifying the distance along the `a` axis in the Oklab colorspace, that is how green/red the color is.
-  - `b` is a {{cssxref("&lt;number&gt;")}} between `-0.4` and `0.4` or a {{cssxref("&lt;percentage&gt;")}} between `-100%` and `100%`, specifying the distance along the `b` axis in the Oklab colorspace, that is how blue/yellow the color is.
-  - `A` is a {{cssxref("&lt;number&gt;")}} between `0` and `1`, or a {{cssxref("&lt;percentage&gt;")}}, where the number `1` corresponds to `100%` (full opacity), representing the transparency (or alpha channel) of the color.
-
-> **Note:** Usually when percentage values have a numeric equivalent in CSS, `100%` is equal to the number `1`.
-> This case is notable in that `100%` is equal to the number `100` for the `L` value and `0.4` for the `a` and `b` values.
+  - `L` is a {{cssxref("&lt;number&gt;")}} between `0` and `1` or a {{cssxref("&lt;percentage&gt;")}} between `0%` and `100%`, where the number `0` corresponds to `0%` (black) and the number `1` corresponds to `100%` (white). `L` specifies the perceived lightness.
+  - `a` is a {{cssxref("&lt;number&gt;")}} between `-0.4` and `0.4` or a {{cssxref("&lt;percentage&gt;")}} between `-100%` and `100%`. It specifies the distance along the `a` axis in the Oklab colorspace, that is, how green or red the color is.
+  - `b` is a {{cssxref("&lt;number&gt;")}} between `-0.4` and `0.4` or a {{cssxref("&lt;percentage&gt;")}} between `-100%` and `100%`. It specifies the distance along the `b` axis in the Oklab colorspace, that is, how blue or yellow the color is.
+  - `A` is a {{cssxref("&lt;number&gt;")}} between `0` and `1` or a {{cssxref("&lt;percentage&gt;")}}, where the number `1` corresponds to `100%` (full opacity). `A` represents the transparency (or alpha channel) of the color.
 
 ### Formal syntax
 
