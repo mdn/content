@@ -40,7 +40,7 @@ Therefore, the API can be used for musical and non-musical uses, with any MIDI d
 Access to the API is requested using the {{domxref("navigator.requestMIDIAccess()")}} method.
 
 - The method must be called in a [secure context](/en-US/docs/Web/Security/Secure_Contexts).
-- Access may be gated by the [`midi`](/en-US/docs/Web/HTTP/Headers/Permissions-Policy/midi) HTTP [Permission Policy](/en-US/docs/Web/HTTP/Feature_Policy).
+- Access may be gated by the [`midi`](/en-US/docs/Web/HTTP/Headers/Permissions-Policy/midi) HTTP [Permission Policy](/en-US/docs/Web/HTTP/Permissions_Policy).
 - The user must explicitly grant permission to use the API through a user-agent specific mechanism, or have previously granted permission.
   Note that if access is denied by a permission policy it cannot be granted by a user permission.
 

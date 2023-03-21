@@ -39,7 +39,7 @@ A {{jsxref("Promise")}} that resolves to {{jsxref("undefined")}}.
 Access to the API is subject to the following constraints:
 
 - The method must be called in a [secure context](/en-US/docs/Web/Security/Secure_Contexts).
-- Access may be gated by the [`speaker-selection`](/en-US/docs/Web/HTTP/Headers/Permissions-Policy/midi) HTTP [Permission Policy](/en-US/docs/Web/HTTP/Feature_Policy).
+- Access may be gated by the [`speaker-selection`](/en-US/docs/Web/HTTP/Headers/Permissions-Policy/midi) HTTP [Permission Policy](/en-US/docs/Web/HTTP/Permissions_Policy).
 
 ## Examples
 
