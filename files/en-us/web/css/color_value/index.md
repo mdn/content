@@ -72,7 +72,7 @@ RGB colors can be expressed through both hexadecimal (prefixed with `#`) and fun
 
 - [Hexadecimal notation](/en-US/docs/Web/CSS/hex-color): `#RGB[A]` or`#RRGGBB[AA]`
   - : `R` (red), `G` (green), `B` (blue), and `A` (alpha) are hexadecimal characters (0–9, A–F). `A` is optional. For example, `#ff0000` is equivalent to `#ff0000ff`. The three-digit notation (`#RGB`) is a shorter version of the six-digit form (`#RRGGBB`). For example, `#f09` is the same color as `#ff0099`. Likewise, the four-digit RGB notation (`#RGBA`) is a shorter version of the eight-digit form (`#RRGGBBAA`). For example, `#0f38` is the same color as `#00ff3388`.
-- [`rgb()`](/en-US/docs/Web/CSS/color_value/rgb) (and the legacy `rgba()`):  `rgb(R G B[ / A])` (or `rgb[a](R, G, B[, A])`
+- [`rgb()`](/en-US/docs/Web/CSS/color_value/rgb) (and the legacy `rgba()`): `rgb(R G B[ / A])` (or `rgb[a](R, G, B[, A])`
   - : `R` (red), `G` (green), and `B` (blue) can be either {{cssxref("&lt;number&gt;")}}s or {{cssxref("&lt;percentage&gt;")}}s, where the number `255` corresponds to `100%`. `A` (alpha) can be a {{cssxref("&lt;number&gt;")}} between `0` and `1`, or a {{cssxref("&lt;percentage&gt;")}}, where the number `1` corresponds to `100%` (full opacity).
 
 ### HSL color model
