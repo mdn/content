@@ -184,7 +184,6 @@ export class ItemComponent {
   editable = false;
 
   @Input() item!: Item;
-  @Input() newItem!: string;
   @Output() remove = new EventEmitter<Item>();
 
   saveItem(description: string) {
