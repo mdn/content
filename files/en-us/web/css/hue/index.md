@@ -2,7 +2,7 @@
 title: <hue>
 slug: Web/CSS/hue
 page-type: css-type
-browser-compat: css.types.angle
+browser-compat: css.types.hue
 spec-urls: https://drafts.csswg.org/css-color/#typedef-hue
 ---
 
@@ -12,31 +12,35 @@ The **`<hue>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_T
 It is used in color functions that accept hue expressed as a single value, specifically [`hsl()`](/en-US/docs/Web/CSS/color_value/hsl), [`hwb()`](/en-US/docs/Web/CSS/color_value/hwb), [`lch()`](/en-US/docs/Web/CSS/color_value/lch), and [`oklch()`](/en-US/docs/Web/CSS/color_value/oklch) functional notations.
 
 > **Note:** The angles corresponding to particular hues depend on the color space.
-> For example, [sRGB](https://en.wikipedia.org/wiki/SRGB) green in [`hsl()`](/en-US/docs/Web/CSS/color_value/hsl) is at `120deg`, while in [`lch()`](/en-US/docs/Web/CSS/color_value/lch) it is at `134.39deg`.
+> For example, green in [`hsl()`](/en-US/docs/Web/CSS/color_value/hsl) and  [`hsl()`](/en-US/docs/Web/CSS/color_value/hwb) which use the [sRGB](https://en.wikipedia.org/wiki/SRGB) color space, is at `120deg`, while in [`lch()`](/en-US/docs/Web/CSS/color_value/lch), which uses the CIELAB color wheel, it is at `134.39deg`.
+![A color wheel indicating the angle for the hue of the primary (red-green-blue) and secondary (yellow-cyan-magenta) colors](hue-wheel.png)
 
+In [`hsl()`](/en-US/docs/Web/CSS/color_value/hsl), _red_ is `0deg`, with the other colors spread around the circle, so _yellow_ is `60deg`, _green_ is `120deg`, _cyan_ is `180deg`, _blue_ is `240deg`, and _magenta_ is `300deg`.
 ## Syntax
 
 ```css
 /* hsl(<hue> <saturation> <lightness>) */
 hsl(270 100% 50%);
-hsl(270.5 100% 50%);
 hsl(270deg 100% 50%);
-hsl(2rad 100% 50%);
+hsl(300grad 100% 50%);
 hsl(0.75turn 100% 50%);
-hsl(270grad 100% 50%);
+hsl(4.71rad 100% 50%);
 
 /* hwb(<hue> <whiteness> <blackness>) */
-hwb(90 0% 0%);
+hwb(270 0% 0%);
 /* lch(<hue> <chroma> <lightness>) */
-lch(134.39 100% 50%);
+lch(39.35 121.2% -51.94%);
 /* … */
 ```
 
 ### Values
 
-- `<angle>` is a number followed by a unit (e.g. `deg`, `grad`, `rad`, or `turn`) specifying an {{cssxref("&lt;angle&gt;")}} between `0` to `360` degrees.
-- `<number>` is a number between `0` and `360` degrees representing a hue angle.
-  May be an integer or a floating point number.
+- `<angle>`
+  - : An {{cssxref("&lt;angle&gt;")}} values expressed in degrees, gradians, radians, or turns using the `deg`, `grad`, `rad`, or `turn`, respectively. 
+- `<number>
+  - : An integer or floating point number, representing degrees of the hue angle.
+
+As an `<angle>` is periodic, normalized to the range of `0deg` to `360deg`. It implicitly wraps around such that `480deg` is the same as `120deg`, `-120deg` is the same as `240deg`, `-1turn` is the same as `1turn`, and so on.
 
 ### Formal syntax
 
@@ -89,10 +93,10 @@ The following example shows a similar red color in different color spaces.
 The values in the `lch()` and `oklch()` functions are rounded for readability.
 
 ```html
-<div data-color="hsl-red"></div>
-<div data-color="hwb-red"></div>
-<div data-color="lch-red"></div>
-<div data-color="oklch-red"></div>
+<div data-color="hsl-red">hsl()</div>
+<div data-color="hwb-red">hwb()</div>
+<div data-color="lch-red">lch()</div>
+<div data-color="oklch-red">oklch()</div>
 ```
 
 ```css
@@ -116,6 +120,7 @@ The values in the `lch()` and `oklch()` functions are rounded for readability.
 
 ```css hidden
 div {
+  font-family: monospace;
   width: 100px;
   height: 100px;
   margin: 10px;

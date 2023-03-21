@@ -22,7 +22,7 @@ color-mix(in hsl longer hue, hsl(120 100% 50%) 20%, white);
 
 ### Values
 
-- Functional notation: `color-mix( <color-interpolation-method> , [ <color> && <percentage [0,100]>? ]#{2} )`
+- Functional notation: `color-mix( <color-interpolation-method> , [ [<color>](/en-US/docs/Web/CSS/color_value) && [<percentage [0,100]>](/en-US/docs/Web/CSS/percentage)? ]#{2} )`
 
   - `<color-interpolation-method>` is the keyword `in` (for interpolation) followed by either:
 
@@ -97,10 +97,10 @@ For `shorter` the result will be the shortest distance between the two angles (t
 For `increasing`, the result will be the angle between 0 and 360 degrees and for `decreasing` the result will be the angle between -360 and 0 degrees.
 
 ```html
-<div id="shorter"></div>
-<div id="longer"></div>
-<div id="increasing"></div>
-<div id="decreasing"></div>
+<div id="shorter">shorter</div>
+<div id="longer">longer</div>
+<div id="increasing">increasing</div>
+<div id="decreasing">decreasing</div>
 ```
 
 ```css hidden

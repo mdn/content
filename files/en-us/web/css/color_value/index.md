@@ -16,7 +16,7 @@ A `<color>` can be defined in any of the following ways:
 
   - A predefined keyword (such as `blue` or `pink`) as described in the [`<named-color>` page](/en-US/docs/Web/CSS/named-color).
 
-  - {{cssxref("color_value/rgb","rgb()")}} functional notation or `#` hexadecimal using the [RGB cubic-coordinate](https://en.wikipedia.org/wiki/RGB_color_model#Geometric_representation) system.
+  - {{cssxref("color_value/rgb","rgb()")}} functional notation or [`#` hexadecimal](/en-US/docs/Web/CSS/hex-color) using the [RGB cubic-coordinate](https://en.wikipedia.org/wiki/RGB_color_model#Geometric_representation) system.
 
   - {{cssxref("color_value/hsl","hsl()")}} functional notation using the [HSL cylindrical-coordinate](https://en.wikipedia.org/wiki/HSL_and_HSV) system.
 
@@ -34,7 +34,7 @@ A `<color>` can be defined in any of the following ways:
 
 - The {{cssxref("color_value/color","color()")}} functional notation, using a variety of predefined or custom color spaces.
 
-> **Note:** To learn more about using color in HTML, see [Applying color to HTML elements using CSS](/en-US/docs/Web/CSS/CSS_Colors/Applying_color).
+> **Note:** These color values can be used to [apply color to HTML elements using CSS](/en-US/docs/Web/CSS/CSS_Colors/Applying_color).
 
 ## Syntax
 
@@ -72,15 +72,15 @@ RGB colors can be expressed through both hexadecimal (prefixed with `#`) and fun
 
 - [Hexadecimal notation](/en-US/docs/Web/CSS/hex-color): `#RGB[A]` or`#RRGGBB[AA]`
   - : `R` (red), `G` (green), `B` (blue), and `A` (alpha) are hexadecimal characters (0–9, A–F). `A` is optional. For example, `#ff0000` is equivalent to `#ff0000ff`. The three-digit notation (`#RGB`) is a shorter version of the six-digit form (`#RRGGBB`). For example, `#f09` is the same color as `#ff0099`. Likewise, the four-digit RGB notation (`#RGBA`) is a shorter version of the eight-digit form (`#RRGGBBAA`). For example, `#0f38` is the same color as `#00ff3388`.
-- [`rgb()`](/en-US/docs/Web/CSS/color_value/rgb) or `rgba()`: `rgb[a](R, G, B[, A])` or `rgb[a](R G B[ / A])`
+- [`rgb()`](/en-US/docs/Web/CSS/color_value/rgb) (and the legacy `rgba()`):  `rgb(R G B[ / A])` (or `rgb[a](R, G, B[, A])`
   - : `R` (red), `G` (green), and `B` (blue) can be either {{cssxref("&lt;number&gt;")}}s or {{cssxref("&lt;percentage&gt;")}}s, where the number `255` corresponds to `100%`. `A` (alpha) can be a {{cssxref("&lt;number&gt;")}} between `0` and `1`, or a {{cssxref("&lt;percentage&gt;")}}, where the number `1` corresponds to `100%` (full opacity).
 
 ### HSL color model
 
 The HSL color model defines a given color in the [sRGB color space](https://en.wikipedia.org/wiki/SRGB) according to its hue, saturation, and lightness components. An optional alpha component represents the color's transparency.
 
-- {{cssxref("color_value/hsl","hsl()")}}: `hsl(H S L [ / A])` or `hsl(H, S, L [, A])`
-  - : Where the `H` is the hue, taking as a value an {{cssxref("&lt;angle&gt;")}} of the color circle given in `deg`s, `rad`s, `grad`s, or `turn`s in the [CSS Color](https://drafts.csswg.org/css-color/#the-hsl-notation) specification. When written as a unitless {{cssxref("&lt;number&gt;")}}, it is interpreted as degrees. The `S` is the saturation as a `<percentage>` value where 100% is completely saturated, while 0% is completely unsaturated (gray). The `L` is the lightness as a `<percentage>` value where 100% is white, 0% is black, and 50% is "normal". The optional `A` is alpha transparency as a `<percentage>` or a `<number>` between 0 and 1, where the number 1 or 100% and means full opacity and 0 or 0% and means fully transparent.
+- {{cssxref("color_value/hsl","hsl()")}}: `hsl(H S L [ / A])` (or legacy `hsl(H, S, L [, A])`)
+  - : Where the `H` is the hue, taking as a value an {{cssxref("&lt;angle&gt;")}} of the [color circle](/en-US/docs/Web/CSS/color_value/hsl#values) given in `deg`s, `rad`s, `grad`s, or `turn`s. By definition, red is `0deg`, yellow is `60deg`, green is `120deg`, cyan is `180deg`, blue is `240deg`, and magenta is `300deg`. When written as a unitless {{cssxref("&lt;number&gt;")}}, it is interpreted as degrees. The `S` is the saturation as a `<percentage>` value where 100% is completely saturated, while 0% is completely unsaturated (gray). The `L` is the lightness as a `<percentage>` value where 100% is white, 0% is black, and 50% is "normal". The optional `A` is alpha transparency as a `<percentage>` or a `<number>` between 0 and 1, where the number 1 or 100% and means full opacity and 0 or 0% and means fully transparent.
 
 Many designers find HSL more intuitive than RGB, since it allows hue, saturation, and lightness to each be adjusted independently. HSL can also make it easier to create a set of matching colors (such as when you want multiple shades of a single hue).
 However, using HSL to create color variations can produce surprising results, as it is not [perceptually uniform](https://en.wikipedia.org/wiki/Color_difference#Tolerance). For example, both `hsl(240 100% 50%)` and `hsl(60 100% 50%)` have the same lightness, even though the former is much darker than the latter.
@@ -131,7 +131,7 @@ They are not limited to a specific color space, and can represent the entire spe
 
 In fact, LCH is the polar form of Lab. It is more human friendly than Lab, as its chroma and hue components specify qualities of the desired color, as opposed to mixing.
 It is similar to HSL in that way, although it is far more perceptually uniform.
-Unlike HSL that describes both `hsl(60 100% 50%)` and `hsl(240 100% 50%)` as having the same lightness, LCH (and Lab) correctly ascribes different lightness to them:
+Unlike HSL which describes both `hsl(60 100% 50%)` and `hsl(240 100% 50%)` as having the same lightness, LCH (and Lab) correctly ascribes different lightness to them:
 the former (yellow) has an L of 97.6 and the latter (blue) an L of 29.6.
 Therefore, LCH can be used to create palettes across entirely different colors, with predictable results.
 Please note that LCH hue is not the same as HSL hue and LCH chroma is not the same as HSL saturation, although they do share some conceptual similarities.
@@ -144,13 +144,13 @@ as well as custom color spaces, defined via the [`@color-profile`](/en-US/docs/W
 
 ## Interpolation
 
-In animations and [gradients](/en-US/docs/Web/CSS/CSS_Images/Using_CSS_gradients), `<color>` values are {{Glossary("interpolation", "interpolated")}} on each of their red, green, and blue components. Each component is interpolated as a real, floating-point number. Note that interpolation of colors happens in the [alpha-premultiplied sRGBA color space](https://www.w3.org/TR/css-color-4/#interpolation-alpha) to prevent unexpected gray colors from appearing. In animations, the interpolation's speed is determined by the [timing function](/en-US/docs/Web/CSS/easing-function).
+In animations and [gradients](/en-US/docs/Web/CSS/CSS_Images/Using_CSS_gradients), `<color>` values are {{Glossary("interpolation", "interpolated")}} on each of their red, green, and blue components. By default, animation occurs in an RGBA color space, with interpolation's speed being determined by the [timing function](/en-US/docs/Web/CSS/easing-function) in transitions and animations.. To prevent unexpected colors from appearing, consider using [`color-mix()`](/en-us/web/css/color_value/color-mix) functional notation. 
 
 Interpolating the {{cssxref("&lt;hue&gt;")}} of two colors in functions that accept a hue angle is also possible and is described in more detail in the [`color-mix()`](/en-US/docs/Web/CSS/color_value/color-mix) functional notation documentation.
 
 ## Accessibility considerations
 
-Some people have difficulty distinguishing colors. The [WCAG 2.0](https://www.w3.org/TR/WCAG/#visual-audio-contrast) recommendation strongly advises against using color as the only means of conveying a specific message, action, or result. See [Color and color contrast](/en-US/docs/Learn/Accessibility/CSS_and_JavaScript#color_and_color_contrast) for more information.
+Some people have difficulty distinguishing colors. The [WCAG 2.0](en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable/Use_of_color) recommendation strongly advises against using color as the only means of conveying a specific message, action, or result. See [color and color contrast](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable/Color_contrast) for more information.
 
 ## Formal syntax
 
@@ -515,6 +515,6 @@ hsl(240 100% 50% / 5%)       /*   5% opaque blue */
 ## See also
 
 - The {{Cssxref("opacity")}} property lets you define transparency at the element level.
-- {{cssxref("&lt;hue&gt;")}} data type that represents a color by hue angle.
+- The {{cssxref("&lt;hue&gt;")}} data type represents a color by hue angle.
 - Some common properties that use this data type: {{Cssxref("color")}}, {{Cssxref("background-color")}}, {{Cssxref("border-color")}}, {{Cssxref("box-shadow")}}, {{Cssxref("outline-color")}}, {{Cssxref("text-shadow")}}
 - [Applying color to HTML elements using CSS](/en-US/docs/Web/CSS/CSS_Colors/Applying_color)
