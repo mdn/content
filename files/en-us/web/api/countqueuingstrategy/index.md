@@ -16,7 +16,7 @@ The **`CountQueuingStrategy`** interface of the [Streams API](/en-US/docs/Web/AP
 
 ## Instance properties
 
-- {{domxref("highWaterMark")}} {{ReadOnlyInline}}
+- {{domxref("CountQueuingStrategy.highWaterMark")}} {{ReadOnlyInline}}
   - : The total number of chunks that can be contained in the internal queue before [backpressure](/en-US/docs/Web/API/Streams_API/Concepts#backpressure) is applied.
 
 ## Instance methods
