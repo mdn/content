@@ -39,7 +39,7 @@ For each {{domxref("GPURenderBundle")}}:
 
 ## Examples
 
-In the WebGPU Samples [Animometer example](https://webgpu.github.io/webgpu-samples/samples/animometer), a lot of like operations are done on many different objects simultaneously. `executeBundles()` is used to reuse the work on subsequent rendering passes to improve performance. Study the example code listing for the full context.
+In the WebGPU Samples [Animometer example](https://webgpu.github.io/webgpu-samples/samples/animometer), a lot of like operations are done on many different objects simultaneously. `executeBundles()` is used to reuse the work on multiple render passes to improve performance. Study the example code listing for the full context.
 
 ```js
 // ...

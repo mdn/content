@@ -58,7 +58,7 @@ A `GPUComputePassEncoder` object instance is created via the {{domxref("GPUComma
 
 - {{domxref("GPURenderPassEncoder.setIndexBuffer", "setIndexBuffer()")}} {{Experimental_Inline}}
 
-  - : Sets the current {{domxref("GPUBuffer")}} that willl provide index data for subsequent drawing commands.
+  - : Sets the current {{domxref("GPUBuffer")}} that will provide index data for subsequent drawing commands.
 
 - {{domxref("GPURenderPassEncoder.setPipeline", "setPipeline()")}} {{Experimental_Inline}}
   - : Sets the {{domxref("GPURenderPipeline")}} to use for this render pass.
