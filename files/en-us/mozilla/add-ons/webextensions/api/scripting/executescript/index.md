@@ -60,7 +60,7 @@ Each `InjectionResult` object has these properties:
   - : `any`. The result of the script execution.
 - `error` {{optional_inline}}
   - : `any`. If an error occurs, contains the value the script threw or rejected with. Typically this is an error object with a message property but it could be any value (including primitives and undefined).
-  
+
     Unsupported by Chrome, it just sets `result` to `null` hiding any details of an exception thrown by a function or a script file. Alternatevely exception is thrown or `runtime.lastError` is passed to the callback when a script file is not found.
 
 The result of the script is the last evaluated statement, which is similar to the results seen if you executed the script in the [Web Console](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html) (not any `console.log()` output). For example, consider a script like this:
