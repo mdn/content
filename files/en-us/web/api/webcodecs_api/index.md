@@ -14,7 +14,7 @@ For example, video or audio editors, and video conferencing.
 
 Many Web APIs use media codecs internally.
 For example, the {{domxref("Web Audio API")}}, and the {{domxref("WebRTC API")}}.
-However these APIs do not allow developers to work with individual frames of a video stream and unmuxed chunks of encoded audio or video.
+However these APIs do not allow developers to work with individual frames of a video stream and unmixed chunks of encoded audio or video.
 
 Web developers have typically used WebAssembly in order to get around this limitation,
 and to work with media codecs in the browser.
