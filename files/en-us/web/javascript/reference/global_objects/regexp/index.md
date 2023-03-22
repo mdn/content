@@ -74,7 +74,7 @@ This choice was made because `@@match` is the most indicative property that some
 For example, [`String.prototype.endsWith()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/endsWith) would coerce all inputs to strings, but it would throw if the argument is a regex, because it's only designed to match strings, and using a regex is likely a developer mistake.
 
 ```js
-"foobar".endsWith({ toString: () => "bar" }); // true
+"foobar".endsWith("bar" ); // true
 "foobar".endsWith(/bar/); // TypeError: First argument to String.prototype.endsWith must not be a regular expression
 ```
 
