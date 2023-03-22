@@ -45,7 +45,7 @@ If you are issuing calls to action through notifications, you will also want to 
 
 ## Icons
 
-For details on how to create icons to use with your notification, see [Iconography](https://design.firefox.com/photon/visuals/iconography.html) in the [Photon Design System](https://design.firefox.com/photon/index.html) documentation.
+For details on how to create icons to use with your notification, see [Iconography](https://acorn.firefox.com/latest/styles/iconography.html) in the [Acorn Design System](https://acorn.firefox.com/latest/acorn.html) documentation.
 
 ## Examples
 
