@@ -767,7 +767,7 @@ select.addEventListener('change', () => {
       update('purple','white');
       break;
     case 'yellow':
-      update('yellow','darkgray');
+      update('yellow','purple');
       break;
     case 'psychedelic':
       update('lime','purple');
