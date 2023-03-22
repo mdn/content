@@ -1,21 +1,21 @@
 ---
-title: Selection.collapse()
-slug: Web/API/Selection/collapse
+title: Selection.setPosition()
+slug: Web/API/Selection/setPosition
 page-type: web-api-instance-method
-browser-compat: api.Selection.collapse
+browser-compat: api.Selection.setPosition
 ---
 
 {{ApiRef("DOM")}}
 
-The **`Selection.collapse()`** method collapses the current selection to a single point. The document is not modified. If the content is focused and editable, the caret will blink there.
+The **`Selection.setPosition()`** method collapses the current selection to a single point. The document is not modified. If the content is focused and editable, the caret will blink there.
 
-> **Note:** This method is an alias for the {{domxref("Selection.setPosition()")}} method.
+> **Note:** This method is an alias for the {{domxref("Selection.collapse()")}} method.
 
 ## Syntax
 
 ```js-nolint
-collapse(node)
-collapse(node, offset)
+setPosition(node)
+setPosition(node, offset)
 ```
 
 ### Parameters
@@ -38,7 +38,7 @@ None ({{jsxref("undefined")}}).
 ```js
 // Place the caret at the beginning of an HTML document's body.
 const body = document.querySelector("body");
-window.getSelection().collapse(body, 0);
+window.getSelection().setPosition(body, 0);
 ```
 
 ## Specifications
@@ -51,4 +51,4 @@ window.getSelection().collapse(body, 0);
 
 ## See also
 
-- {{domxref("Selection.setPosition()")}}
+- {{domxref("Selection.collapse()")}}
