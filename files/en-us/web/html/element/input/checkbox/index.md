@@ -311,6 +311,6 @@ otherCheckbox.addEventListener('change', () => {
 
 ## See also
 
-- {{HTMLElement("input")}} and the {{domxref("HTMLInputElement")}} interface which implements it.
-- The {{cssxref(":checked")}} and {{cssxref(":indeterminate")}} CSS selectors let you style checkboxes based on their current state
-- [Compatibility of CSS properties](/en-US/docs/Learn/Forms/Property_compatibility_table_for_form_controls)
+- {{cssxref(":checked")}}, {{cssxref(":indeterminate")}}: CSS selectors that let you style checkboxes based on their current state
+- {{domxref("HTMLInputElement")}}: HTML DOM API that implements the `<input>` element
+- [CSS property compatibility table for form controls](/en-US/docs/Learn/Forms/Property_compatibility_table_for_form_controls)
