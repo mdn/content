@@ -9592,8 +9592,6 @@
 /en-US/docs/Web/API/Selection.removeRange	/en-US/docs/Web/API/Selection/removeRange
 /en-US/docs/Web/API/Selection.selectAllChildren	/en-US/docs/Web/API/Selection/selectAllChildren
 /en-US/docs/Web/API/Selection.toString	/en-US/docs/Web/API/Selection/toString
-/en-US/docs/Web/API/Selection/empty	/en-US/docs/Web/API/Selection/removeAllRanges
-/en-US/docs/Web/API/Selection/setPosition	/en-US/docs/Web/API/Selection/collapse
 /en-US/docs/Web/API/Sensor/onactivate	/en-US/docs/Web/API/Sensor/activate_event
 /en-US/docs/Web/API/Sensor/onerror	/en-US/docs/Web/API/Sensor/error_event
 /en-US/docs/Web/API/Sensor/onreading	/en-US/docs/Web/API/Sensor/reading_event

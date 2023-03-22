@@ -21,6 +21,8 @@ For users, the experience of a seemingly-native PWA is more comfortable and conv
 
 Installation is supported on all modern desktop and mobile devices. Whether the PWA can be installed by the browser on the operating system differs by browser / operating system combination. Most browsers support installing PWAs direction on all operating systems -- Chrome OS, MacOS, Windows, Android, Linux, etc. -- directly or when an extension is installed. Apple is unique when it comes to PWAs: PWAs can be installed on macOS from any browser **except** Safari. The opposite is true for iOS, where PWAs can **only** be installed in Safari.
 
+PWA installation is also confirmed to work on Ubuntu Linux 22.04, for example in Brave 111 and Edge 111 or later.
+
 ## The installation user experience
 
 We've written a very simple example website ([see our demo live](https://mdn.github.io/pwa-examples/a2hs/), and also [see the source code](https://github.com/mdn/pwa-examples/tree/master/a2hs)) that doesn't do much, but was developed with the necessary code to allow it to be installed, as well as a service worker to enable it to be used offline.
@@ -82,3 +84,11 @@ Regardless of which browser and device you're using, when you choose to add the 
 ![Screenshot of an Android home screen with the "Foxes" app displayed](a2hs-on-home-screen.png)
 
 When you tap the web app's icon on the home screen, it opens up in a full screen web environment, without the browser's UI around it.
+
+### Uninstalling
+
+On Ubuntu Linux, for Brave, this can be done by opening the PWA, navigating into more details (right side of top bar > hamburger icon), and finding the `Uninstall <app name> ...`. Edge is a bit different, open a new tab, navigate to `edge://apps`, and use the `...` > `🗑️ Uninstall` menu on the app list.
+
+## See also
+
+- [Install, manage, or uninstall apps in Microsoft Edge](https://support.microsoft.com/en-us/topic/install-manage-or-uninstall-apps-in-microsoft-edge-0c156575-a94a-45e4-a54f-3a84846f6113)
