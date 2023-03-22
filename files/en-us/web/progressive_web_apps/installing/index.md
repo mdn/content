@@ -5,36 +5,29 @@ slug: Web/Progressive_web_apps/Installing
 
 {{QuickLinksWithSubpages("/en-US/docs/Web/Progressive_web_apps/")}}
 
-Web application installation is a feature available in modern browsers that allows users to choose to easily and conveniently "install" a web application on their device so they can access it in the same way they would any other installed app. Depending on the device and features of the operating system and browser, this can result in what is essentially a fully featured application (for example, using [WebAPK](https://web.dev/webapks/) on Android) or as a shortcut added to their device's screen. This guide explains how installation is performed, what it means, and what you need to do as a developer to let your users take advantage of it.
+Web application installation is a feature available in modern browsers that allows users to choose to easily and conveniently "install" a web application on their device so they can access it in the same way they would any other installed app. Depending on the PWA, device, and features of the operating system and browser, installation may be just a shortcut added to a device's home screen all the way to what is essentially a fully featured application with operating system integration and uninstall functionality. 
+
+This guide explains how installation is performed in different browsers on different operating systems and how to uninstall those same PWAs. First, it's important to understand what installation means and what you need to do as a developer to let your users take advantage of it.
 
 ## Why installation?
 
-The option to install a web application is part of the [Progressive Web App](/en-US/docs/Web/Progressive_web_apps) philosophy—giving web apps the same user experience advantages as native apps so they can be competitive. Installed applications are more conveniently invoked as they have a presence in a device's home screen or app list or bar. This makes it simple for a user to use a gesture to access an app by tapping or clicking its icon. The application itself may then manifest as in a chromeless view (without the full browser chrome) but it nevertheless is executing effectively as a tab within the browser.
+The option to install a web application is part of the [Progressive Web App](/en-US/docs/Web/Progressive_web_apps) philosophy—giving web apps the same user experience advantages as native apps so they can be competitive. Installed applications are more conveniently invoked as they have a presence in a device's home screen or app list or bar. This makes it simple for a user to use a gesture or keystrokes to access an app by tabbing to, tapping, or clicking its icon. 
+
+When the application is launched via the icon, it may then manifest as in a chromeless view (without the full browser chrome) but it nevertheless is executing effectively as a tab within the browser.
 
 For users, the experience of a seemingly-native PWA is more comfortable and convenient than a typical website. By reducing the user experience differential between the web app and native apps on the user's device, you reduce both the loss of any muscle memory they have revolving around the native interface of the device and the sensation of "something isn't quite right" that users can experience when switching between native and web-based apps.
 
 ## What browsers support installation?
 
-Installation is supported by Chrome for Android and Android WebView version 31 and later, Opera for Android 32 onward, Samsung Internet from version 4 onward, and Firefox for Android [version 58](/en-US/docs/Mozilla/Firefox/Releases/58) and later.
-
-Safari on iOS is a little different. Some parts of the PWA ecosystem are supported, while others are not. iOS 13 introduced a much more comparable installation experience, which is also described here.
+Installation is supported on all modern desktop and mobile devices. Whether the PWA can be installed by the browser on the operating system differs by browser / operating system combination. Most browsers support installing PWAs direction on all operating systems -- Chrome OS, MacOS, Windows, Android, Linux, etc. -- directly or when an extension is installed. Apple is unique when it comes to PWAs: PWAs can be installed on macOS from any browser **except** Safari. The opposite is true for iOS, where PWAs can **only** be installed in Safari.
 
 ## The installation user experience
 
 We've written a very simple example website ([see our demo live](https://mdn.github.io/pwa-examples/a2hs/), and also [see the source code](https://github.com/mdn/pwa-examples/tree/master/a2hs)) that doesn't do much, but was developed with the necessary code to allow it to be installed, as well as a service worker to enable it to be used offline.
-The example displays a series of fox pictures. If you have a web application compatible device available, use it to navigate to our demo at `https://mdn.github.io/pwa-examples/a2hs/`. You'll see fox pictures, but more importantly, some form of user interface will be available to let you install the site as a web app.
 
-The UI for this varies from browser to browser, but the general idea is the same. Unfortunately, there isn't a standard for icons and symbols used for operations such as this.
+The example displays a series of fox pictures. If you have a web application compatible device available, use it to navigate to our demo at [`https://mdn.github.io/pwa-examples/a2hs/`](https://mdn.github.io/pwa-examples/a2hs/). You'll see fox pictures, but more importantly, some form of user interface will be available to let you install the site as a web app. 
 
-### Firefox for Android
-
-On an Android device using Firefox, you'll see a "home" icon with a plus (+) icon inside it—this is the "Add to Home screen" icon displayed for any site that has the necessary features in place.
-
-![A screenshot of a web browser displaying the Add to Home Screen icon at the top](android-a2hs-icon.png)
-
-Tapping this will show a confirmation banner—pressing the banner's big "+ ADD TO HOME SCREEN" button completes the action, adding the app to the Home screen. Note that in Android 8 and higher, a system-level "Add to Home screen" permission dialog will be shown first.
-
-![A screenshot of Firefox for Android requesting confirmation before installing a web app](fx-a2hs-banner.png)
+The PWA itself includes an "install" button. The button is displayed with JavaScript when the [`beforeinstallprompt`](/en-US/docs/Web/API/Window/beforeinstallprompt_event) event fires in browsers that support the event.
 
 ### Samsung Internet Browser
 
@@ -53,6 +46,18 @@ If you have Google Chrome for Android available, the experience is slightly diff
 > **Note:** You can find out a lot more about Chrome install banners from the article [How to provide your own in-app installation experience](https://web.dev/customize-install/).
 
 If you choose not to add it to your Home screen at this point, you can do so later using the "Add to Home Screen" icon in the main Chrome menu.
+
+### Chrome and Edge for Desktop
+
+### Firefox for Android
+
+On an Android device using Firefox, you'll see a "home" icon with a plus (+) icon inside it—this is the "Add to Home screen" icon displayed for any site that has the necessary features in place.
+
+![A screenshot of a web browser displaying the Add to Home Screen icon at the top](android-a2hs-icon.png)
+
+Tapping this will show a confirmation banner—pressing the banner's big "+ ADD TO HOME SCREEN" button completes the action, adding the app to the Home screen. Note that in Android 8 and higher, a system-level "Add to Home screen" permission dialog will be shown first.
+
+![A screenshot of Firefox for Android requesting confirmation before installing a web app](fx-a2hs-banner.png)
 
 ### Safari for iOS / iPhoneOS / iPadOS
 
