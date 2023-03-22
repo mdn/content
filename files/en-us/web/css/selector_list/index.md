@@ -46,12 +46,7 @@ When applying the same styles to elements matching different criteria, grouping 
 This example shows grouping selectors in a single line using a comma-separated list.
 
 ```css
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1, h2, h3, h4, h5, h6 {
   font-family: helvetica;
 }
 ```
