@@ -32,19 +32,21 @@ Relying parties (RPs) can call `navigator.credentials.get()` with the `identity`
 async function signIn() {
   const identityCredential = await navigator.credentials.get({
     identity: {
-      providers: [{
-        configURL: 'https://accounts.idp.example/config.json',
-        clientId: '********',
-        nonce: '******'
-      }]
-    }
+      providers: [
+        {
+          configURL: "https://accounts.idp.example/config.json",
+          clientId: "********",
+          nonce: "******",
+        },
+      ],
+    },
   });
 }
 ```
 
 A successful {{domxref("CredentialsContainer.get", "navigator.credentials.get()")}} call that includes an `identity` option fulfills with an `IdentityCredential` instance.
 
-Check out [Federated Credential Management API (FedCM)](/en-US/docs/Web/API/FedCM_API#fedcm_sign-in_flow) for more details on how this works. This call will start off the sign-in flow described in [FedCM sign-in flow](http://localhost:5042/en-US/docs/Web/API/FedCM_API#fedcm_sign-in_flow).
+Check out [Federated Credential Management API (FedCM)](/en-US/docs/Web/API/FedCM_API) for more details on how this works. This call will start off the sign-in flow described in [FedCM sign-in flow](/en-US/docs/Web/API/FedCM_API#fedcm_sign-in_flow).
 
 ## Specifications
 
