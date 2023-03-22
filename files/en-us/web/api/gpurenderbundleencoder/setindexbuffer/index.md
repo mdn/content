@@ -1,16 +1,16 @@
 ---
-title: GPURenderPassEncoder.setIndexBuffer()
-slug: Web/API/GPURenderPassEncoder/setIndexBuffer
+title: GPURenderBundleEncoder.setIndexBuffer()
+slug: Web/API/GPURenderBundleEncoder/setIndexBuffer
 page-type: web-api-instance-method
 status:
   - experimental
-browser-compat: api.GPURenderPassEncoder.setIndexBuffer
+browser-compat: api.GPURenderBundleEncoder.setIndexBuffer
 ---
 
 {{APIRef("WebGPU API")}}{{SeeCompatTable}}
 
 The **`setIndexBuffer()`** method of the
-{{domxref("GPURenderPassEncoder")}} interface sets the current {{domxref("GPUBuffer")}} that will provide index data for subsequent drawing commands.
+{{domxref("GPURenderBundleEncoder")}} interface sets the current {{domxref("GPUBuffer")}} that will provide index data for subsequent drawing commands.
 
 ## Syntax
 
@@ -43,7 +43,7 @@ None ({{jsxref("Undefined")}}).
 
 ### Validation
 
-The following criteria must be met when calling **`setIndexBuffer()`**, otherwise a {{domxref("GPUValidationError")}} is generated and the {{domxref("GPURenderPassEncoder")}} becomes invalid:
+The following criteria must be met when calling **`setIndexBuffer()`**, otherwise a {{domxref("GPUValidationError")}} is generated and the {{domxref("GPURenderBundleEncoder")}} becomes invalid:
 
 - `buffer`'s {{domxref("GPUBuffer.usage")}} contains the `GPUBufferUsage.INDEX` flag.
 - `offset` + `size` is less than or equal to the `buffer`'s {{domxref("GPUBuffer.size")}}.
@@ -51,34 +51,19 @@ The following criteria must be met when calling **`setIndexBuffer()`**, otherwis
 
 ## Examples
 
-In the WebGPU Samples [Shadow Mapping](https://webgpu.github.io/webgpu-samples/samples/shadowMapping) example, `setIndexBuffer()` is used in two separate render passes in each animation frame, one to draw the main model and one to draw its shadow. Study the example code listing for the full context.
-
 ```js
 // ...
 
-const commandEncoder = device.createCommandEncoder();
-{
-  const shadowPass = commandEncoder.beginRenderPass(shadowPassDescriptor);
-  shadowPass.setPipeline(shadowPipeline);
-  shadowPass.setBindGroup(0, sceneBindGroupForShadow);
-  shadowPass.setBindGroup(1, modelBindGroup);
-  shadowPass.setVertexBuffer(0, vertexBuffer);
-  shadowPass.setIndexBuffer(indexBuffer, "uint16");
-  shadowPass.drawIndexed(indexCount);
+const bundleEncoder = device.createRenderBundleEncoder(descriptor);
 
-  shadowPass.end();
-}
-{
-  const renderPass = commandEncoder.beginRenderPass(renderPassDescriptor);
-  renderPass.setPipeline(pipeline);
-  renderPass.setBindGroup(0, sceneBindGroupForRender);
-  renderPass.setBindGroup(1, modelBindGroup);
-  renderPass.setVertexBuffer(0, vertexBuffer);
-  renderPass.setIndexBuffer(indexBuffer, "uint16");
-  renderPass.drawIndexed(indexCount);
+bundleEncoder.setPipeline(pipeline);
+bundleEncoder.setBindGroup(0, sceneBindGroupForRender);
+bundleEncoder.setBindGroup(1, modelBindGroup);
+bundleEncoder.setVertexBuffer(0, vertexBuffer);
+bundleEncoder.setIndexBuffer(indexBuffer, "uint16");
+bundleEncoder.drawIndexed(indexCount);
 
-  renderPass.end();
-}
+const renderBundle = bundleEncoder.finish();
 
 // ...
 ```

@@ -48,9 +48,12 @@ function recordRenderPass(
 }
 ```
 
-The function is invoked and the render bundle is recorded later on in the code using {{domxref("GPURenderBundleEncoder.finish()")}}:
+Later on, a {{domxref("GPURenderBundleEncoder")}} is created, the function is invoked, and the render bundle is recorded using {{domxref("GPURenderBundleEncoder.finish()")}}:
 
 ```js
+const renderBundleEncoder = device.createRenderBundleEncoder({
+  colorFormats: [presentationFormat],
+});
 recordRenderPass(renderBundleEncoder);
 const renderBundle = renderBundleEncoder.finish();
 ```

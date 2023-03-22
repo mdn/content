@@ -1,16 +1,16 @@
 ---
-title: GPURenderPassEncoder.setBindGroup()
-slug: Web/API/GPURenderPassEncoder/setBindGroup
+title: GPURenderBundleEncoder.setBindGroup()
+slug: Web/API/GPURenderBundleEncoder/setBindGroup
 page-type: web-api-instance-method
 status:
   - experimental
-browser-compat: api.GPURenderPassEncoder.setBindGroup
+browser-compat: api.GPURenderBundleEncoder.setBindGroup
 ---
 
 {{APIRef("WebGPU API")}}{{SeeCompatTable}}
 
 The **`setBindGroup()`** method of the
-{{domxref("GPURenderPassEncoder")}} interface sets the {{domxref("GPUBindGroup")}} to use for subsequent render commands, for a given index.
+{{domxref("GPURenderBundleEncoder")}} interface sets the {{domxref("GPUBindGroup")}} to use for subsequent render bundle commands, for a given index.
 
 ## Syntax
 
@@ -26,7 +26,7 @@ setBindGroup(index, bindGroup, dynamicOffsets, dynamicOffsetsStart,
 - `index`
   - : The index to set the bind group at. This corresponds to the `binding` value of the relevant entry object in the descriptor of the originating {{domxref("GPUDevice.createBindGroup()")}} call that created the `bindGroup`.
 - `bindGroup`
-  - : The {{domxref("GPUBindGroup")}} to use for subsequent render commands.
+  - : The {{domxref("GPUBindGroup")}} to use for subsequent render bundle commands.
 - `dynamicOffsets` {{optional_inline}}
   - : A value specifying the offset, in bytes, for each entry in `bindGroup` with `hasDynamicOffset: true` set (i.e. in the descriptor of the {{domxref("GPUDevice.createBindGroupLayout()")}} call that created the {{domxref("GPUBindGroupLayout")}} object that the `bindGroup` is based on). This value can be:
     - An array of numbers specifying the different offsets.
@@ -52,7 +52,7 @@ For `setBindGroup()` calls that use a {{jsxref("Uint32Array")}} value for `dynam
 
 ### Validation
 
-The following criteria must be met when calling **`setBindGroup()`**, otherwise a {{domxref("GPUValidationError")}} is generated and the {{domxref("GPURenderPassEncoder")}} becomes invalid:
+The following criteria must be met when calling **`setBindGroup()`**, otherwise a {{domxref("GPUValidationError")}} is generated and the {{domxref("GPURenderBundleEncoder")}} becomes invalid:
 
 - `index` is less than or equal to the {{domxref("GPUDevice")}}'s `maxBindGroups` {{domxref("GPUSupportedLimits", "limit", "", "nocode")}}.
 - `dynamicOffsets.length` is the same as the number of entries in `bindGroup` with `hasDynamicOffset: true` set.
@@ -62,24 +62,31 @@ The following criteria must be met when calling **`setBindGroup()`**, otherwise 
 
 ## Examples
 
-In the WebGPU Samples [Textured Cube example](https://webgpu.github.io/webgpu-samples/samples/texturedCube), `setBindGroup()` is used to bind the `uniformBindGroup` to index position 0. Check out the example for the full context.
-
 ```js
-// ...
-
-const commandEncoder = device.createCommandEncoder();
-const passEncoder = commandEncoder.beginRenderPass(renderPassDescriptor);
-passEncoder.setPipeline(pipeline);
-passEncoder.setBindGroup(0, uniformBindGroup);
-passEncoder.setVertexBuffer(0, verticesBuffer);
-passEncoder.draw(cubeVertexCount, 1, 0, 0);
-passEncoder.end();
-device.queue.submit([commandEncoder.finish()]);
-
-// ...
+function recordRenderPass(
+  passEncoder: GPURenderBundleEncoder | GPURenderPassEncoder // TypeScript
+) {
+  if (settings.dynamicOffsets) {
+    passEncoder.setPipeline(dynamicPipeline);
+  } else {
+    passEncoder.setPipeline(pipeline);
+  }
+  passEncoder.setVertexBuffer(0, vertexBuffer);
+  passEncoder.setBindGroup(0, timeBindGroup);
+  const dynamicOffsets = [0];
+  for (let i = 0; i < numTriangles; ++i) {
+    if (settings.dynamicOffsets) {
+      dynamicOffsets[0] = i * alignedUniformBytes;
+      passEncoder.setBindGroup(1, dynamicBindGroup, dynamicOffsets);
+    } else {
+      passEncoder.setBindGroup(1, bindGroups[i]);
+    }
+    passEncoder.draw(3, 1, 0, 0);
+  }
+}
 ```
 
-> **Note:** Study the other [WebGPU Samples](https://webgpu.github.io/webgpu-samples) for more examples of `setBindGroup()` usage.
+The above snippet is taken from the WebGPU Samples [Animometer example](https://webgpu.github.io/webgpu-samples/samples/animometer).
 
 ## Specifications
 

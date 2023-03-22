@@ -21,7 +21,7 @@ A `GPUComputePassEncoder` object instance is created via the {{domxref("GPUComma
 
 ## Instance properties
 
-- {{domxref("GPUComputePassEncoder.label", "label")}} {{Experimental_Inline}}
+- {{domxref("GPURenderPassEncoder.label", "label")}} {{Experimental_Inline}}
   - : A string providing a label that can be used to identify the object, for example in {{domxref("GPUError")}} messages or console warnings.
 
 ## Instance methods
