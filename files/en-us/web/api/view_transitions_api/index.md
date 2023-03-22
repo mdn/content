@@ -30,7 +30,7 @@ The View Transitions API provides a much easier way of handling the required DOM
 
 ### Creating a basic view transition
 
-An SPA will include functionality to fetch new content and update the DOM in response to an event of some kind, such as a navigation link being clicked or an update being pushed from the server. In our [Basic View Transitions demo](https://mdn.github.io/dom-examples/view-transitions/) we've simplified this to a `displayNewImage()` function that shows a new full-size image based on the thumbnail that was clicked. We've encapsulated this inside an `updateView()` function that handles both browsers that do and don't support the View Transitions API:
+A SPA will include functionality to fetch new content and update the DOM in response to an event of some kind, such as a navigation link being clicked or an update being pushed from the server. In our [Basic View Transitions demo](https://mdn.github.io/dom-examples/view-transitions/) we've simplified this to a `displayNewImage()` function that shows a new full-size image based on the thumbnail that was clicked. We've encapsulated this inside an `updateView()` function that handles both browsers that do and don't support the View Transitions API:
 
 ```js
 function updateView(event) {
