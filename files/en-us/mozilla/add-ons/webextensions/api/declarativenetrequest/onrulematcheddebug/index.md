@@ -1,6 +1,7 @@
 ---
 title: declarativeNetRequest.onRuleMatchedDebug
 slug: Mozilla/Add-ons/WebExtensions/API/declarativeNetRequest/onRuleMatchedDebug
+page-type: webextension-api-event
 browser-compat: webextensions.api.declarativeNetRequest.onRuleMatchedDebug
 ---
 
