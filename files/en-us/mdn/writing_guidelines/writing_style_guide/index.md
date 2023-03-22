@@ -550,7 +550,6 @@ To maintain consistency across MDN Web Docs, keep the following guidelines in mi
 
 - Keep the descriptive text surrounding the link minimal. In case of a description, add it after the link text and a colon. Word the description as a phrase with no ending punctuation. Keep all linked text at the beginning to aid in scanning the list of links.
   - **Correct**: {{cssxref(":checked")}}, {{cssxref(":indeterminate")}}: CSS selectors for styling checkboxes
-- If the links can be grouped by a theme, add a lead-in sentence to describe the list of links. End the lead-in sentence with a colon.
 - Don't use the conjunction "and" before the last item in the series.
   - **Correct**: {{cssxref("background-color")}}, {{cssxref("border-color")}}, {{cssxref("color")}}, {{cssxref("caret-color")}}, {{cssxref("column-rule-color")}}, {{cssxref("outline-color")}}, {{cssxref("text-decoration-color")}}, {{cssxref("text-emphasis-color")}}, {{cssxref("text-shadow")}}: Other color-related properties
 - After an external link and the source website, mention the date or year when the article was published within parentheses. Specify date using the format "January 1, 1900". The publication date not only helps to inform the readers about the relevance of the linked content but also helps authors to review links that are very old. For example, to link to the [Top-level await](https://v8.dev/features/top-level-await) external article, the reference will be:
