@@ -112,11 +112,11 @@ This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_a
 
 ```html
 <body>
-<h3>Top Goal Scorers of the 1954 World Cup</h3>
+<h3>FIFA World Cup top goalscorers</h3>
 <ol>
-<li>Sándor Kocsis, 11</li>
-<li>Josef Hügi, 6</li>
-<li>Max Morlock, 6</li>
+<li>Miroslav Klose, 16</li>
+<li>Ronaldo Nazário, 15</li>
+<li>Gerd Müller, 14</li>
   </ol>
 
 <footer> <small>Copyright © 2023 Football History Archives . All Rights Reserved.</small></footer>
@@ -126,11 +126,10 @@ This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_a
 
 ```css
 footer {
-    display: flex;
-    justify-content: center;
+    text-align:center;
     padding: 5px;
     background-color: #abbaba;
-    color: #fff;
+    color: #000;
 }
 
 ```
