@@ -151,30 +151,28 @@ p {
 
 a {
   outline: none;
-  text-decoration: none;
-  padding: 2px 1px 0;
 }
 
 a:link {
-  color: #265301;
+  color: #6900ff;
 }
 
 a:visited {
-  color: #437a16;
+  color: #a5c300;
 }
 
 a:focus {
-  border-bottom: 1px solid;
+  text-decoration: none;
   background: #bae498;
 }
 
 a:hover {
-  border-bottom: 1px solid;
+  text-decoration: none;
   background: #cdfeaa;
 }
 
 a:active {
-  background: #265301;
+  background: #6900ff;
   color: #cdfeaa;
 }
 ```
@@ -195,13 +193,9 @@ Putting the two together gives us this result:
 So what did we do here? This certainly looks different to the default styling, but it still provides a familiar enough experience for users to know what's going on:
 
 - The first two rules are not that interesting to this discussion.
-- The third rule uses the `a` selector to get rid of the default text underline and focus outline (which varies across browsers anyway), and adds a tiny amount of padding to each link — all of this will become clear later on.
+- The third rule uses the `a` selector to get rid of the focus outline (which varies across browsers anyway).
 - Next, we use the `a:link` and `a:visited` selectors to set a couple of color variations on unvisited and visited links, so they are distinct.
-- The next two rules use `a:focus` and `a:hover` to set focused and hovered links to have different background colors, plus an underline to make the link stand out even more. Two points to note here are:
-
-  - The underline has been created using {{cssxref("border-bottom")}}, not {{cssxref("text-decoration")}} — some people prefer this because the former has better styling options than the latter. It's also drawn a bit lower so it doesn't cut across the descenders of the word being underlined (e.g., the tails on g and y).
-  - The {{cssxref("border-bottom")}} value has been set as `1px solid`, with no color specified. Doing this makes the border adopt the same color as the element's text, which is useful in cases like this where the text is a different color in each case.
-
+- The next two rules use `a:focus` and `a:hover` to set focused and hovered links to have no underline and different background colors.
 - Finally, `a:active` is used to give the links an inverted color scheme while they are being activated, to make it clear something important is happening!
 
 ### Active learning: Style your own links
