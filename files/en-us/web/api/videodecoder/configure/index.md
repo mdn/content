@@ -20,7 +20,7 @@ configure(config)
 - `config`
   - : An object containing the following members:
     - `codec`
-      - : A string containing a [valid codec string](https://www.w3.org/TR/webcodecs-codec-registry/#video-codec-registry). See ["codec" parameters](https://developer.mozilla.org/en-US/docs/Web/Media/Formats/codecs_parameter) for more information.
+      - : A string containing a [valid codec string](https://www.w3.org/TR/webcodecs-codec-registry/#video-codec-registry). See ["codec" parameters](/en-US/docs/Web/Media/Formats/codecs_parameter) for more information.
     - `description` {{optional_inline}}
       - : An {{jsxref("ArrayBuffer")}}, a {{jsxref("TypedArray")}}, or a {{jsxref("DataView")}} containing a sequence of codec specific bytes, commonly known as extradata.
     - `codedWidth` {{optional_inline}}
