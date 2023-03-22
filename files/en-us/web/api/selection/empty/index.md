@@ -1,20 +1,20 @@
 ---
-title: Selection.removeAllRanges()
-slug: Web/API/Selection/removeAllRanges
+title: Selection.empty()
+slug: Web/API/Selection/empty
 page-type: web-api-instance-method
-browser-compat: api.Selection.removeAllRanges
+browser-compat: api.Selection.empty
 ---
 
 {{ ApiRef("DOM") }}
 
-The **`Selection.removeAllRanges()`** method removes all ranges from the selection, leaving the {{domxref("Selection.anchorNode", "anchorNode")}} and {{domxref("Selection.focusNode","focusNode")}} properties equal to `null` and nothing selected. When this method is called, a {{domxref("Document/selectionchange_event", "selectionchange")}} event is fired at the document.
+The **`Selection.empty()`** method removes all ranges from the selection, leaving the {{domxref("Selection.anchorNode", "anchorNode")}} and {{domxref("Selection.focusNode","focusNode")}} properties equal to `null` and nothing selected. When this method is called, a {{domxref("Document/selectionchange_event", "selectionchange")}} event is fired at the document.
 
-> **Note:** This method is an alias for the {{domxref("Selection.empty()")}} method.
+> **Note:** This method is an alias for the {{domxref("Selection.removeAllRanges()")}} method.
 
 ## Syntax
 
 ```js-nolint
-removeAllRanges()
+empty()
 ```
 
 ### Parameters
@@ -27,7 +27,7 @@ None ({{jsxref("undefined")}}).
 
 ## Examples
 
-This example displays a message when something is selected on the page or not. It does this by listening to the {{domxref("Document/selectionchange_event", "selectionchange")}} event on the document. There also is a button that clears any selection by calling `Selection.removeAllRanges()`. When this happens, the selection is changed and the message is updated.
+This example displays a message when something is selected on the page or not. It does this by listening to the {{domxref("Document/selectionchange_event", "selectionchange")}} event on the document. There also is a button that clears any selection by calling `Selection.empty()`. When this happens, the selection is changed and the message is updated.
 
 ```html
 <p>
@@ -62,7 +62,7 @@ newSelectionHandler();
 // The button cancel all selection ranges
 const button = document.querySelector("button");
 button.addEventListener("click", () => {
-  selection.removeAllRanges();
+  selection.empty();
 });
 ```
 
@@ -78,5 +78,5 @@ button.addEventListener("click", () => {
 
 ## See also
 
-- {{domxref("Selection.empty()")}}
+- {{domxref("Selection.removeAllRanges()")}}
 - {{domxref("Document/selectionchange_event", "selectionchange")}}
