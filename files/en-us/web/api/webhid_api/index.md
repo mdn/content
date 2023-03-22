@@ -2,12 +2,8 @@
 title: WebHID API
 slug: Web/API/WebHID_API
 page-type: web-api-overview
-tags:
-  - API
-  - Advanced
-  - WebHID
-  - WebHID API
-  - Experimental
+status:
+  - experimental
 browser-compat: api.HID
 ---
 
@@ -31,7 +27,7 @@ A Human Interface Device (HID) is a type of device that takes input from or prov
 You can connect to a device with the {{domxref("HID.requestDevice","requestDevice()")}} method. In this case, we select from all the available devices.
 
 ```js
-const device = await navigator.hid.requestDevice({filters: []})
+const device = await navigator.hid.requestDevice({ filters: [] });
 // A popup titled `... wants to connect to a HID Device` with `Cancel` and `Connect` buttons will show up with a device list to select from.
 // Select one and click on `Connect` button. Then the device will be an array with the selected device in it.
 ```
@@ -41,16 +37,16 @@ We can retrieve all the devices the website has been granted access to previousl
 ```js
 let devices = await navigator.hid.getDevices();
 devices.forEach((device) => {
-    console.log(`HID: ${device.productName}`);
+  console.log(`HID: ${device.productName}`);
 });
 ```
 
 We can register event listeners for disconnection of any HID devices.
 
 ```js
-navigator.hid.addEventListener('disconnect', (event) => {
-    console.log(`HID disconnected: ${event.device.productName}`);
-    console.dir(event)
+navigator.hid.addEventListener("disconnect", (event) => {
+  console.log(`HID disconnected: ${event.device.productName}`);
+  console.dir(event);
 });
 // For example, when my connected keyboard gets disconnected, the log in the console will show:
 // HID disconnected: USB Keyboard

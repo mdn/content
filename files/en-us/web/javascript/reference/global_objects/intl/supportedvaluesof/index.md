@@ -2,13 +2,6 @@
 title: Intl.supportedValuesOf()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/supportedValuesOf
 page-type: javascript-static-method
-tags:
-  - Internationalization
-  - Intl
-  - JavaScript
-  - Method
-  - Reference
-  - supportedValuesOf
 browser-compat: javascript.builtins.Intl.supportedValuesOf
 ---
 
@@ -75,7 +68,7 @@ The other values are all obtained in the same way:
 
 ```js
 Intl.supportedValuesOf("collation").forEach((collation) => {
-  // "big5han", "compat", "dict", "emoji", etc.
+  // "compat", "dict", "emoji", etc.
 });
 
 Intl.supportedValuesOf("currency").forEach((currency) => {

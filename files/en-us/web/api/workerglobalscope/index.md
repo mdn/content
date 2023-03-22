@@ -2,12 +2,6 @@
 title: WorkerGlobalScope
 slug: Web/API/WorkerGlobalScope
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Reference
-  - WorkerGlobalScope
-  - Workers
 browser-compat: api.WorkerGlobalScope
 ---
 
@@ -36,7 +30,7 @@ _This interface inherits properties from the {{domxref("EventTarget")}} interfac
 
 ### Non-standard properties
 
-- {{domxref("WorkerGlobalScope.performance")}} {{ReadOnlyInline}} {{Non-standard_inline}}
+- {{domxref("performance_property", "WorkerGlobalScope.performance")}} {{ReadOnlyInline}} {{Non-standard_inline}}
   - : Returns the {{domxref("Performance")}} associated with the worker. It is a regular performance object, except that only a subset of its property and methods are available to workers.
 - {{domxref("WorkerGlobalScope.console")}} {{ReadOnlyInline}} {{Non-standard_inline}}
   - : Returns the {{domxref("console")}} associated with the worker.
@@ -110,7 +104,7 @@ _This interface inherits methods from the {{domxref("EventTarget")}} interface._
 You won't access `WorkerGlobalScope` directly in your code; however, its properties and methods are inherited by more specific global scopes such as {{domxref("DedicatedWorkerGlobalScope")}} and {{domxref("SharedWorkerGlobalScope")}}. For example, you could import another script into the worker and print out the contents of the worker scope's `navigator` object using the following two lines:
 
 ```js
-importScripts('foo.js');
+importScripts("foo.js");
 console.log(navigator);
 ```
 

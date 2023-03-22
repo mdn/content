@@ -1,18 +1,6 @@
 ---
 title: "Express Tutorial Part 3: Using a Database (with Mongoose)"
 slug: Learn/Server-side/Express_Nodejs/mongoose
-tags:
-  - Beginner
-  - CodingScripting
-  - Database
-  - Express
-  - Learn
-  - Node
-  - ODM
-  - mongoose
-  - nodejs
-  - orm
-  - server-side
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Express_Nodejs/skeleton_website", "Learn/Server-side/Express_Nodejs/routes", "Learn/Server-side/Express_Nodejs")}}
@@ -117,11 +105,14 @@ This section provides an overview of how to connect Mongoose to a MongoDB databa
 
 ### Installing Mongoose and MongoDB
 
-Mongoose is installed in your project (**package.json**) like any other dependency — using npm. To install it, use the following command inside your project folder:
+Mongoose is installed in your project (**package.json**) like any other dependency — using npm.
+To install it, use the following command inside your project folder:
 
 ```bash
-npm install mongoose
+npm install mongoose@6.9.0
 ```
+
+> **Note:** Mongoose 7 and later are incompatible with this tutorial.
 
 Installing _Mongoose_ adds all its dependencies, including the MongoDB database driver, but it does not install MongoDB itself. If you want to install a MongoDB server then you can [download installers from here](https://www.mongodb.com/try/download/community) for various operating systems and install it locally. You can also use cloud-based MongoDB instances.
 
@@ -593,10 +584,10 @@ This will look something like: `mongodb+srv://your_user_name:your_password@clust
 ## Install Mongoose
 
 Open a command prompt and navigate to the directory where you created your [skeleton Local Library website](/en-US/docs/Learn/Server-side/Express_Nodejs/skeleton_website).
-Enter the following command to install Mongoose (and its dependencies) and add it to your **package.json** file, unless you have already done so when reading the [Mongoose Primer](#installing_mongoose_and_mongodb) above.
+Enter the following command to install Mongoose 6 (and its dependencies) and add it to your **package.json** file, unless you have already done so when reading the [Mongoose Primer](#installing_mongoose_and_mongodb) above.
 
 ```bash
-npm install mongoose
+npm install mongoose@6.9.0
 ```
 
 ## Connect to MongoDB
@@ -811,15 +802,3 @@ Last of all, we tested our models by creating a number of instances (using a sta
 - [Population](https://mongoosejs.com/docs/populate.html) (Mongoose docs)
 
 {{PreviousMenuNext("Learn/Server-side/Express_Nodejs/skeleton_website", "Learn/Server-side/Express_Nodejs/routes", "Learn/Server-side/Express_Nodejs")}}
-
-## In this module
-
-- [Express/Node introduction](/en-US/docs/Learn/Server-side/Express_Nodejs/Introduction)
-- [Setting up a Node (Express) development environment](/en-US/docs/Learn/Server-side/Express_Nodejs/development_environment)
-- [Express Tutorial: The Local Library website](/en-US/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website)
-- [Express Tutorial Part 2: Creating a skeleton website](/en-US/docs/Learn/Server-side/Express_Nodejs/skeleton_website)
-- **Express Tutorial Part 3: Using a Database (with Mongoose)**
-- [Express Tutorial Part 4: Routes and controllers](/en-US/docs/Learn/Server-side/Express_Nodejs/routes)
-- [Express Tutorial Part 5: Displaying library data](/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data)
-- [Express Tutorial Part 6: Working with forms](/en-US/docs/Learn/Server-side/Express_Nodejs/forms)
-- [Express Tutorial Part 7: Deploying to production](/en-US/docs/Learn/Server-side/Express_Nodejs/deployment)

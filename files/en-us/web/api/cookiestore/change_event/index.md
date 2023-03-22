@@ -2,14 +2,8 @@
 title: "CookieStore: change event"
 slug: Web/API/CookieStore/change_event
 page-type: web-api-event
-tags:
-  - API
-  - Reference
-  - Event
-  - change
-  - onchange
-  - CookieStore
-  - Experimental
+status:
+  - experimental
 browser-compat: api.CookieStore.change_event
 ---
 

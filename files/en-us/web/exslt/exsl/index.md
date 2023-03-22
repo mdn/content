@@ -1,10 +1,6 @@
 ---
 title: Common (exsl)
 slug: Web/EXSLT/exsl
-tags:
-  - EXSLT
-  - Overview
-  - Reference
 ---
 
 {{XSLTRef}}{{QuickLinksWithSubpages("/en-US/docs/Web/EXSLT")}}

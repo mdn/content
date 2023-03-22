@@ -2,12 +2,8 @@
 title: Window.captureEvents()
 slug: Web/API/Window/captureEvents
 page-type: web-api-instance-method
-tags:
-  - API
-  - Gecko
-  - HTML DOM
-  - Method
-  - Non-standard
+status:
+  - non-standard
 ---
 
 {{ ApiRef() }} {{Deprecated_Header}} {{Non-standard_header}}

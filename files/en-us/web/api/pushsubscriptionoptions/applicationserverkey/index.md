@@ -2,12 +2,6 @@
 title: PushSubscriptionOptions.applicationServerKey
 slug: Web/API/PushSubscriptionOptions/applicationServerKey
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - applicationServerKey
-  - PushSubscriptionOptions
 browser-compat: api.PushSubscriptionOptions.applicationServerKey
 ---
 
@@ -28,7 +22,7 @@ navigator.serviceWorker.ready.then((reg) => {
   reg.pushManager.getSubscription().then((subscription) => {
     const options = subscription.options;
     console.log(options.applicationServerKey); // the public key
-  })
+  });
 });
 ```
 

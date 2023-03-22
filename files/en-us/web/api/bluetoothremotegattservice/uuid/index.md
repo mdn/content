@@ -2,15 +2,8 @@
 title: BluetoothRemoteGATTService.uuid
 slug: Web/API/BluetoothRemoteGATTService/uuid
 page-type: web-api-instance-property
-tags:
-  - API
-  - Bluetooth
-  - BluetoothRemoteGATTService
-  - Experimental
-  - Property
-  - Reference
-  - Web Bluetooth API
-  - uuid
+status:
+  - experimental
 browser-compat: api.BluetoothRemoteGATTService.uuid
 ---
 

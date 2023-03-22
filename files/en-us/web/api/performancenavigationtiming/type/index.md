@@ -2,11 +2,6 @@
 title: PerformanceNavigationTiming.type
 slug: Web/API/PerformanceNavigationTiming/type
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - Web Performance
 browser-compat: api.PerformanceNavigationTiming.type
 ---
 

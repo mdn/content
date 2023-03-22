@@ -1,16 +1,7 @@
 ---
 title: idle.setDetectionInterval()
 slug: Mozilla/Add-ons/WebExtensions/API/idle/setDetectionInterval
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Idle
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - setDetectionInterval
+page-type: webextension-api-function
 browser-compat: webextensions.api.idle.setDetectionInterval
 ---
 

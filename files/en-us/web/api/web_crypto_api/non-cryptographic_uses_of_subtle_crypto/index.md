@@ -2,8 +2,6 @@
 title: Non-cryptographic uses of SubtleCrypto
 slug: Web/API/Web_Crypto_API/Non-cryptographic_uses_of_subtle_crypto
 page-type: guide
-tags:
-  - Web Crypto API
 ---
 
 {{APIRef("Web Crypto API")}}
@@ -11,7 +9,7 @@ This article will focus on uses of the [`digest`](/en-US/docs/Web/API/SubtleCryp
 
 This article does not discuss the cryptographic uses of the [SubtleCrypto interface](/en-US/docs/Web/API/SubtleCrypto). An important thing to take away from this article is **don't use this API** for production cryptographic purposes because it is powerful and low level. To use it correctly you will need to take many context specific steps to accomplish cryptographic tasks correctly. If any of those steps are taken incorrectly at best your code won't run, at worse it _will_ run and you will unknowingly be putting your users at risk with an insecure product.
 
-You may not even need to use the [Web Crypto API](/en-US/docs/Web/API/Web_Crypto_API) at all. Many of the things you would want to use cryptography for are already solved and part of the Web platform. For example, if you are worried about man-in-the-middle attacks, such as Wi-Fi hotspots reading the information between the client and the server, this is solved by ensuring correct use of [HTTPS](/en-US/docs/Glossary/https). Do you want to securely send information between users? Then you can set up a data connection between users using [WebRTC Data Channels](/en-US/docs/Web/API/WebRTC_API/Using_data_channels) which is encrypted as part of the standard.
+You may not even need to use the [Web Crypto API](/en-US/docs/Web/API/Web_Crypto_API) at all. Many of the things you would want to use cryptography for are already solved and part of the Web platform. For example, if you are worried about man-in-the-middle attacks, such as Wi-Fi hotspots reading the information between the client and the server, this is solved by ensuring correct use of [HTTPS](/en-US/docs/Glossary/HTTPS). Do you want to securely send information between users? Then you can set up a data connection between users using [WebRTC Data Channels](/en-US/docs/Web/API/WebRTC_API/Using_data_channels) which is encrypted as part of the standard.
 
 The [SubtleCrypto interface](/en-US/docs/Web/API/SubtleCrypto) provides low level primitives for working with cryptography, but implementing a system using these tools is a complicated task. Mistakes are hard to notice and the results can mean your user's data is not as secure as you think it is. Which could have catastrophic results if your users are sharing sensitive or valuable data.
 
@@ -56,11 +54,11 @@ Next we use the SubtleCrypto interface to process them. This works by:
 - Convert the resulting hash (another ArrayBuffer) into a string so it can be displayed
 
 ```js
-const output = document.querySelector('output');
-const file = document.getElementById('file');
+const output = document.querySelector("output");
+const file = document.getElementById("file");
 
 // Run the hashing function when the user selects one or more file
-file.addEventListener('change', hashTheseFiles);
+file.addEventListener("change", hashTheseFiles);
 
 // The digest function is asynchronous, it returns a promise, we use the async/await syntax to
 // simplify the code.
@@ -69,24 +67,25 @@ async function fileHash(file) {
 
   // Use the subtle crypto API to perform a SHA256 Sum of the file's Array Buffer
   // The resulting hash is stored in an array buffer
-  const hashAsArrayBuffer = await crypto.subtle.digest('SHA-256', arrayBuffer);
+  const hashAsArrayBuffer = await crypto.subtle.digest("SHA-256", arrayBuffer);
 
   // To display it as a string we will get the hexadecimal value of each byte of the array buffer
   // This gets us an array where each byte of the array buffer becomes one item in the array
   const uint8ViewOfHash = new Uint8Array(hashAsArrayBuffer);
   // We then convert it to a regular array so we can convert each item to hexadecimal strings
   // Where to characters of 0-9 or a-f represent a number between 0 and 16, containing 4 bits of information, so 2 of them is 8 bits (1 byte).
-  const hashAsString = Array.from(uint8ViewOfHash).map((b) => b.toString(16).padStart(2, '0')).join('');
+  const hashAsString = Array.from(uint8ViewOfHash)
+    .map((b) => b.toString(16).padStart(2, "0"))
+    .join("");
   return hashAsString;
 }
 
 async function hashTheseFiles(e) {
-  let outHTML = ''
+  let outHTML = "";
   // iterate over each file in file select input
   for (const file of this.files) {
-
     // calculate it's hash and list it in the output element.
-    outHTML += `${file.name}    ${await fileHash(file)}`
+    outHTML += `${file.name}    ${await fileHash(file)}`;
   }
   output.innerHTML = outHTML;
 }
@@ -145,9 +144,9 @@ The code below, like our SHA256 example, can be used to generate these hashes fr
 ```
 
 ```js
-const output = document.querySelector('output');
-const file = document.getElementById('file');
-file.addEventListener('change', hashTheseFiles);
+const output = document.querySelector("output");
+const file = document.getElementById("file");
+file.addEventListener("change", hashTheseFiles);
 
 async function fileHash(file) {
   const arrayBuffer = await file.arrayBuffer();
@@ -167,25 +166,27 @@ async function fileHash(file) {
 
   // We then combine the 2 Array Buffers together into a new Array Buffer.
   const newBlob = new Blob([view.buffer, arrayBuffer], {
-      type: 'text/plain'
+    type: "text/plain",
   });
   const arrayBufferToHash = await newBlob.arrayBuffer();
 
   // Finally we perform the hash this time as SHA1 which is what Git uses.
   // Then we return it as a string to be displayed.
-  return hashToString(await crypto.subtle.digest('SHA-1', arrayBufferToHash));
+  return hashToString(await crypto.subtle.digest("SHA-1", arrayBufferToHash));
 }
 
 function hashToString(arrayBuffer) {
   const uint8View = new Uint8Array(arrayBuffer);
-  return Array.from(uint8View).map((b) => b.toString(16).padStart(2, '0')).join('');
+  return Array.from(uint8View)
+    .map((b) => b.toString(16).padStart(2, "0"))
+    .join("");
 }
 
 // like before we iterate over the files
 async function hashTheseFiles(e) {
-  let outHTML = ''
+  let outHTML = "";
   for (const file of this.files) {
-    outHTML += `${file.name}    ${await fileHash(file)}`
+    outHTML += `${file.name}    ${await fileHash(file)}`;
   }
   output.innerHTML = outHTML;
 }

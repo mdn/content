@@ -1,16 +1,7 @@
 ---
 title: action.setBadgeBackgroundColor()
 slug: Mozilla/Add-ons/WebExtensions/API/action/setBadgeBackgroundColor
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - action
-  - setBadgeBackgroundColor
+page-type: webextension-api-function
 browser-compat: webextensions.api.action.setBadgeBackgroundColor
 ---
 

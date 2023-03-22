@@ -2,18 +2,6 @@
 title: HTMLMediaElement.textTracks
 slug: Web/API/HTMLMediaElement/textTracks
 page-type: web-api-instance-property
-tags:
-  - API
-  - Audio
-  - HTML DOM
-  - HTMLMediaElement
-  - Media
-  - Property
-  - Reference
-  - Tracks
-  - Video
-  - Web
-  - textTracks
 browser-compat: api.HTMLMediaElement.textTracks
 ---
 
@@ -78,12 +66,12 @@ The `HTMLMediaElement.textTracks` returns a
 of each English track to the console.
 
 ```js
-const tracks = document.querySelector('video').textTracks;
+const tracks = document.querySelector("video").textTracks;
 
 for (const track of tracks) {
-   if (track.language === 'en') {
-      console.dir(track);
-   }
+  if (track.language === "en") {
+    console.dir(track);
+  }
 }
 ```
 

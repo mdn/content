@@ -2,13 +2,8 @@
 title: Window.showOpenFilePicker()
 slug: Web/API/Window/showOpenFilePicker
 page-type: web-api-instance-method
-tags:
-  - File
-  - File System Access API
-  - Method
-  - Window
-  - working with files
-  - Experimental
+status:
+  - experimental
 browser-compat: api.Window.showOpenFilePicker
 ---
 
@@ -73,14 +68,14 @@ selection.
 const pickerOpts = {
   types: [
     {
-      description: 'Images',
+      description: "Images",
       accept: {
-        'image/*': ['.png', '.gif', '.jpeg', '.jpg']
-      }
+        "image/*": [".png", ".gif", ".jpeg", ".jpg"],
+      },
     },
   ],
   excludeAcceptAllOption: true,
-  multiple: false
+  multiple: false,
 };
 ```
 

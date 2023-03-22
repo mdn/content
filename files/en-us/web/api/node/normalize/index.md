@@ -2,9 +2,6 @@
 title: Node.normalize()
 slug: Web/API/Node/normalize
 page-type: web-api-instance-method
-tags:
-  - Method
-  - Reference
 browser-compat: api.Node.normalize
 ---
 

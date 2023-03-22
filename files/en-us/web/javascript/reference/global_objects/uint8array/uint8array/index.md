@@ -2,12 +2,6 @@
 title: Uint8Array() constructor
 slug: Web/JavaScript/Reference/Global_Objects/Uint8Array/Uint8Array
 page-type: javascript-constructor
-tags:
-  - Constructor
-  - JavaScript
-  - Reference
-  - TypedArray
-  - Polyfill
 browser-compat: javascript.builtins.Uint8Array.Uint8Array
 ---
 

@@ -81,7 +81,7 @@
       "impl": []
     },
     "AudioDecoder": {
-      "inh": "",
+      "inh": "EventTarget",
       "impl": []
     },
     "AudioDestinationNode": {
@@ -89,7 +89,7 @@
       "impl": []
     },
     "AudioEncoder": {
-      "inh": "",
+      "inh": "EventTarget",
       "impl": []
     },
     "AudioListener": {
@@ -412,7 +412,7 @@
       "inh": "ExtendableEvent",
       "impl": []
     },
-    "ContentVisibilityAutoStateChangedEvent": {
+    "ContentVisibilityAutoStateChangeEvent": {
       "inh": "Event",
       "impl": []
     },
@@ -682,6 +682,10 @@
     },
     "CSSScale": {
       "inh": "CSSTransformComponent",
+      "impl": []
+    },
+    "CSSScopeRule": {
+      "inh": "CSSGroupingRule",
       "impl": []
     },
     "CSSSkew": {
@@ -1734,10 +1738,6 @@
     },
     "IdentityCredential": {
       "inh": "Credential",
-      "impl": []
-    },
-    "IdentityProvider": {
-      "inh": "",
       "impl": []
     },
     "IdleDeadline": {
@@ -3585,11 +3585,11 @@
       "impl": []
     },
     "VideoDecoder": {
-      "inh": "",
+      "inh": "EventTarget",
       "impl": []
     },
     "VideoEncoder": {
-      "inh": "",
+      "inh": "EventTarget",
       "impl": []
     },
     "VideoFrame": {
@@ -3805,7 +3805,7 @@
       "impl": []
     },
     "WebTransport": {
-      "inh": "",
+      "inh": "EventTarget",
       "impl": []
     },
     "WebTransportBidirectionalStream": {
@@ -3818,6 +3818,10 @@
     },
     "WebTransportError": {
       "inh": "DOMException",
+      "impl": []
+    },
+    "WebTransportRateControlFeedback": {
+      "inh": "",
       "impl": []
     },
     "WebTransportReceiveStream": {

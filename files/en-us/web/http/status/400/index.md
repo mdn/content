@@ -1,12 +1,6 @@
 ---
 title: 400 Bad Request
 slug: Web/HTTP/Status/400
-tags:
-  - Client error
-  - HTTP
-  - HTTP Status Code
-  - Reference
-  - Status code
 spec-urls: https://httpwg.org/specs/rfc9110.html#status.400
 ---
 

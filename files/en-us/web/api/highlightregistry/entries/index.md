@@ -2,17 +2,13 @@
 title: HighlightRegistry.entries()
 slug: Web/API/HighlightRegistry/entries
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - CSS Custom Highlight API
-  - Reference
-  - entries
+status:
+  - experimental
 browser-compat: api.HighlightRegistry.entries
 spec-urls: https://tc39.es/ecma262/multipage/keyed-collections.html#sec-map.prototype.entries
 ---
 
-{{APIRef("CSS Custom Highlight API")}}
+{{APIRef("CSS Custom Highlight API")}}{{SeeCompatTable}}
 
 The **`entries()`** method of the {{domxref("HighlightRegistry")}} interface returns a new [Iterator](/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators) object that contains the `[name, highlight]` pairs for each element in the `HighlightRegistry` object, in insertion order.
 
@@ -36,8 +32,8 @@ The code snippet below creates and registers two new highlights, and then logs t
 const myHighlight1 = new Highlight();
 const myHighlight2 = new Highlight();
 
-CSS.highlights.set('first-highlight', myHighlight1);
-CSS.highlights.set('second-highlight', myHighlight2);
+CSS.highlights.set("first-highlight", myHighlight1);
+CSS.highlights.set("second-highlight", myHighlight2);
 
 const iter = CSS.highlights.entries();
 
@@ -51,8 +47,8 @@ The following code example shows how to iterate over the highlights in the regis
 const myHighlight1 = new Highlight();
 const myHighlight2 = new Highlight();
 
-CSS.highlights.set('first-highlight', myHighlight1);
-CSS.highlights.set('second-highlight', myHighlight2);
+CSS.highlights.set("first-highlight", myHighlight1);
+CSS.highlights.set("second-highlight", myHighlight2);
 
 for (const [name, highlight] of CSS.highlights.entries()) {
   console.log(`Highlight ${name}`, highlight);

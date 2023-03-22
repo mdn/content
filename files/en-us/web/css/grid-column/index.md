@@ -2,12 +2,6 @@
 title: grid-column
 slug: Web/CSS/grid-column
 page-type: css-shorthand-property
-tags:
-  - CSS
-  - CSS Grid
-  - CSS Property
-  - Reference
-  - recipe:css-shorthand-property
 browser-compat: css.properties.grid-column
 ---
 

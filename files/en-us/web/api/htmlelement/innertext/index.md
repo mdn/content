@@ -2,12 +2,6 @@
 title: HTMLElement.innerText
 slug: Web/API/HTMLElement/innerText
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTML DOM
-  - HTMLElement
-  - Property
-  - Reference
 browser-compat: api.HTMLElement.innerText
 ---
 

@@ -2,12 +2,6 @@
 title: transition-timing-function
 slug: Web/CSS/transition-timing-function
 page-type: css-property
-tags:
-  - CSS
-  - CSS Property
-  - CSS Transitions
-  - Reference
-  - recipe:css-property
 browser-compat: css.properties.transition-timing-function
 ---
 

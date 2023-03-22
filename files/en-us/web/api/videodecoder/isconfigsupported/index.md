@@ -2,17 +2,10 @@
 title: VideoDecoder.isConfigSupported()
 slug: Web/API/VideoDecoder/isConfigSupported
 page-type: web-api-static-method
-tags:
-  - API
-  - Method
-  - Reference
-  - isConfigSupported
-  - VideoDecoder
-  - Experimental
 browser-compat: api.VideoDecoder.isConfigSupported
 ---
 
-{{APIRef("WebCodecs API")}}{{SecureContext_Header}}{{SeeCompatTable}}
+{{APIRef("WebCodecs API")}}{{SecureContext_Header}}
 
 The **`isConfigSupported()`** static method of the {{domxref("VideoDecoder")}} interface checks if the given config is supported (that is, if {{domxref("VideoDecoder")}} objects can be successfully configured with the given config).
 
@@ -47,8 +40,8 @@ The following example tests if the browser supports accelerated and un-accelerat
 versions of several video codecs.
 
 ```js
-const codecs = ['avc1.42001E', 'vp8', 'vp09.00.10.08', 'av01.0.04M.08'];
-const accelerations = ['prefer-hardware', 'prefer-software']
+const codecs = ["avc1.42001E", "vp8", "vp09.00.10.08", "av01.0.04M.08"];
+const accelerations = ["prefer-hardware", "prefer-software"];
 
 const configs = [];
 for (const codec of codecs) {
@@ -58,14 +51,18 @@ for (const codec of codecs) {
       hardwareAcceleration: acceleration,
       codedWidth: 1280,
       codedHeight: 720,
-      not_supported_field: 123
+      not_supported_field: 123,
     });
   }
 }
 
 for (const config of configs) {
   const support = await VideoDecoder.isConfigSupported(config);
-  console.log(`VideoDecoder's config ${JSON.stringify(support.config)} support: ${support.supported}`);
+  console.log(
+    `VideoDecoder's config ${JSON.stringify(support.config)} support: ${
+      support.supported
+    }`
+  );
 }
 ```
 

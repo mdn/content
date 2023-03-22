@@ -1,13 +1,7 @@
 ---
 title: contentScripts
 slug: Mozilla/Add-ons/WebExtensions/API/contentScripts
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Interface
-  - WebExtensions
-  - contentScripts
+page-type: webextension-api
 browser-compat: webextensions.api.contentScripts
 ---
 

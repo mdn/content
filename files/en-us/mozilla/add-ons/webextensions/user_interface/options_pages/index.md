@@ -1,8 +1,7 @@
 ---
 title: Options page
 slug: Mozilla/Add-ons/WebExtensions/user_interface/Options_pages
-tags:
-  - WebExtensions
+page-type: guide
 ---
 
 {{AddonSidebar}}

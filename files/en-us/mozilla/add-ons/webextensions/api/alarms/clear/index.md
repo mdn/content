@@ -1,16 +1,7 @@
 ---
 title: alarms.clear()
 slug: Mozilla/Add-ons/WebExtensions/API/alarms/clear
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - alarms
-  - clear
+page-type: webextension-api-function
 browser-compat: webextensions.api.alarms.clear
 ---
 

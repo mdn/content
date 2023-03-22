@@ -2,10 +2,6 @@
 title: end
 slug: Web/SVG/Attribute/end
 page-type: svg-attribute
-tags:
-  - NeedsCompatTable
-  - SVG
-  - SVG Attribute
 spec-urls: https://svgwg.org/specs/animations/#EndAttribute
 ---
 
@@ -16,7 +12,6 @@ The **`end`** attribute defines an end value for the animation that can constrai
 You can use this attribute with the following SVG elements:
 
 - {{SVGElement("animate")}}
-- {{SVGElement("animateColor")}}
 - {{SVGElement("animateMotion")}}
 - {{SVGElement("animateTransform")}}
 - {{SVGElement("set")}}

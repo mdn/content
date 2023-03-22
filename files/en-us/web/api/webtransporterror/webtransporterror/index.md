@@ -2,13 +2,8 @@
 title: WebTransportError()
 slug: Web/API/WebTransportError/WebTransportError
 page-type: web-api-constructor
-tags:
-  - API
-  - Constructor
-  - Experimental
-  - Reference
-  - WebTransportError
-  - WebTransport API
+status:
+  - experimental
 browser-compat: api.WebTransportError.WebTransportError
 ---
 
@@ -42,7 +37,6 @@ A developer would not use this constructor manually. A new `WebTransportError` o
 const url = "notaurl";
 
 async function initTransport(url) {
-
   try {
     // Initialize transport connection
     const transport = new WebTransport(url);
@@ -51,11 +45,11 @@ async function initTransport(url) {
     await transport.ready;
 
     // ...
-  } catch(error) {
+  } catch (error) {
     const msg = `Transport initialization failed.
                  Reason: ${error.message}.
                  Source: ${error.source}.
-                 Error code: ${error.streamErrorCode}.`
+                 Error code: ${error.streamErrorCode}.`;
     console.log(msg);
   }
 }

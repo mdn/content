@@ -1,18 +1,6 @@
 ---
 title: CSS and JavaScript accessibility best practices
 slug: Learn/Accessibility/CSS_and_JavaScript
-tags:
-  - Accessibility
-  - Article
-  - CSS
-  - CodingScripting
-  - Guide
-  - JavaScript
-  - Learn
-  - color
-  - contrast
-  - hiding
-  - unobtrusive
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Accessibility/HTML","Learn/Accessibility/WAI-ARIA_basics", "Learn/Accessibility")}}
@@ -225,7 +213,7 @@ On the other hand, you shouldn't use {{cssxref("visibility")}}`:hidden` or {{css
 
 It is possible for users to override your styles with their own custom styles, for example:
 
-- See Sarah Maddox's [How to use a custom style sheet (CSS) with Firefox](https://www.itsupportguides.com/knowledge-base/computer-accessibility/how-to-use-a-custom-style-sheet-css-with-firefox/) for a useful guide covering how to do this manually in Firefox, and [How to use a custom style sheet (CSS) with Internet Explorer](https://www.itsupportguides.com/knowledge-base/computer-accessibility/how-to-use-a-custom-style-sheet-css-with-internet-explorer/) by Adrian Gordon for the equivalent IE instructions.
+- See Sarah Maddox's [How to use a custom style sheet (CSS) with Firefox](https://www.itsupportguides.com/knowledge-base/computer-accessibility/how-to-use-a-custom-style-sheet-css-with-firefox/) for a useful guide covering how to do this manually in Firefox.
 - It is probably easier to do it using an extension. For example, the Stylus extension is available for [Firefox](https://addons.mozilla.org/en-US/firefox/addon/styl-us/), with Stylish being a [Chrome](https://chrome.google.com/webstore/detail/stylish-custom-themes-for/fjnbnpbmkenffdnngjfgmeleoegfcffe) equivalent.
 
 Users might do this for a variety of reasons. A visually impaired user might want to make the text bigger on all websites they visit, or a user with severe color deficiency might want to put all websites in high contrast colors that are easy for them to see. Whatever the need, you should be comfortable with this, and make your designs flexible enough so that such changes will work in your design. As an example, you might want to make sure your main content area can handle bigger text (maybe it will start to scroll to allow it all to be seen), and won't just hide it, or break completely.
@@ -320,7 +308,7 @@ function createLink(testItem) {
 
 Each link serves a dual purpose — it tells you what the error is, plus you can click on it/activate it to jump straight to the input element in question and correct your entry.
 
-> **Note:** The `focus()` part of this example is a bit tricky. Chrome and Edge (and newer versions of IE) will focus the element when the link is clicked, without needing the `onclick`/`focus()` block. Safari will only highlight the form element with the link on its own, so needs the `onclick`/`focus()` block to actually focus it. Firefox doesn't focus the inputs properly at all in this context, so Firefox users can't take advantage of this at present (although everything else works fine). The Firefox issue should be fixed soon — work is being done to give Firefox behavior parity with other browsers (see {{bug(277178)}}).
+> **Note:** The `focus()` part of this example is a bit tricky. Chrome and Edge (and newer versions of IE) will focus the element when the link is clicked, without needing the `onclick`/`focus()` block. Safari will only highlight the form element with the link on its own, so needs the `onclick`/`focus()` block to actually focus it. Firefox doesn't focus the inputs properly at all in this context, so Firefox users can't take advantage of this at present (although everything else works fine). The Firefox issue should be fixed soon — work is being done to give Firefox behavior parity with other browsers (see [Firefox bug 277178](https://bugzil.la/277178)).
 
 In addition, the `errorField` is placed at the top of the source order (although it is positioned differently in the UI using CSS), meaning that users can find out exactly what's wrong with their form submissions and get to the input elements in question by going back up to the start of the page.
 
@@ -375,13 +363,3 @@ We hope this article has given you a good amount of detail and understanding abo
 Next up, WAI-ARIA!
 
 {{PreviousMenuNext("Learn/Accessibility/HTML","Learn/Accessibility/WAI-ARIA_basics", "Learn/Accessibility")}}
-
-## In this module
-
-- [What is accessibility?](/en-US/docs/Learn/Accessibility/What_is_accessibility)
-- [HTML: A good basis for accessibility](/en-US/docs/Learn/Accessibility/HTML)
-- [CSS and JavaScript accessibility best practices](/en-US/docs/Learn/Accessibility/CSS_and_JavaScript)
-- [WAI-ARIA basics](/en-US/docs/Learn/Accessibility/WAI-ARIA_basics)
-- [Accessible multimedia](/en-US/docs/Learn/Accessibility/Multimedia)
-- [Mobile accessibility](/en-US/docs/Learn/Accessibility/Mobile)
-- [Accessibility troubleshooting](/en-US/docs/Learn/Accessibility/Accessibility_troubleshooting)

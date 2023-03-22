@@ -2,13 +2,8 @@
 title: CookieStore.delete()
 slug: Web/API/CookieStore/delete
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - delete()
-  - CookieStore
-  - Experimental
+status:
+  - experimental
 browser-compat: api.CookieStore.delete
 ---
 

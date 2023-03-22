@@ -1,16 +1,6 @@
 ---
 title: "CSP: media-src"
 slug: Web/HTTP/Headers/Content-Security-Policy/media-src
-tags:
-  - CSP
-  - Content-Security-Policy
-  - Directive
-  - HTTP
-  - Media
-  - Reference
-  - Security
-  - media-src
-  - source
 browser-compat: http.headers.Content-Security-Policy.media-src
 ---
 

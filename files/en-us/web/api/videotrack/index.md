@@ -2,15 +2,6 @@
 title: VideoTrack
 slug: Web/API/VideoTrack
 page-type: web-api-interface
-tags:
-  - HTML
-  - HTML DOM
-  - Interface
-  - Media
-  - Reference
-  - Video
-  - VideoTrack
-  - track
 browser-compat: api.VideoTrack
 ---
 
@@ -60,7 +51,7 @@ for (const track of tracks) {
     track.selected = true;
     break;
   }
-};
+}
 ```
 
 The {{domxref("VideoTrack.language", "language")}} is in standard ({{RFC(5646)}}) format. For US English, this would be `"en-US"`, for example.

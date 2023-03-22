@@ -2,16 +2,7 @@
 title: devtools.panels.ElementsPanel.createSidebarPane()
 slug: >-
   Mozilla/Add-ons/WebExtensions/API/devtools/panels/ElementsPanel/createSidebarPane
-tags:
-  - API
-  - Add-ons
-  - DevTools
-  - Method
-  - Extensions
-  - Reference
-  - WebExtensions
-  - createSidebarPane
-  - devtools.panels
+page-type: webextension-api-function
 browser-compat: webextensions.api.devtools.panels.ElementsPanel.createSidebarPane
 ---
 

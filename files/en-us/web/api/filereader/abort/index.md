@@ -2,14 +2,6 @@
 title: FileReader.abort()
 slug: Web/API/FileReader/abort
 page-type: web-api-instance-method
-tags:
-  - API
-  - File API
-  - FileReader
-  - Files
-  - Method
-  - Reference
-  - abort
 browser-compat: api.FileReader.abort
 ---
 

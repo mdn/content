@@ -1,8 +1,6 @@
 ---
 title: Firefox security guidelines
 slug: Web/Security/Firefox_Security_Guidelines
-tags:
-  - Security
 ---
 
 {{QuickLinksWithSubpages("/en-US/docs/Web/Security")}}

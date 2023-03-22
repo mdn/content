@@ -2,17 +2,9 @@
 title: HTMLIFrameElement.allowPaymentRequest
 slug: Web/API/HTMLIFrameElement/allowPaymentRequest
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTML DOM
-  - Payment Request
-  - PaymentRequest
-  - Property
-  - Reference
-  - Reference HTMLIFrameElement
-  - allowPaymentRequest
-  - Deprecated
-  - Non-standard
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.HTMLIFrameElement.allowPaymentRequest
 ---
 

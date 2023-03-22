@@ -2,15 +2,8 @@
 title: align-tracks
 slug: Web/CSS/align-tracks
 page-type: css-property
-tags:
-  - CSS
-  - CSS Property
-  - Experimental
-  - Property
-  - Reference
-  - align-tracks
-  - grid
-  - masonry
+status:
+  - experimental
 browser-compat: css.properties.align-tracks
 ---
 

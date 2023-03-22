@@ -2,12 +2,6 @@
 title: "-webkit-text-stroke-color"
 slug: Web/CSS/-webkit-text-stroke-color
 page-type: css-property
-tags:
-  - CSS
-  - CSS Property
-  - Reference
-  - WebKit
-  - recipe:css-property
 browser-compat: css.properties.-webkit-text-stroke-color
 ---
 

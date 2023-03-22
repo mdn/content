@@ -2,16 +2,8 @@
 title: Window.mozInnerScreenX
 slug: Web/API/Window/mozInnerScreenX
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTML DOM
-  - NeedsExample
-  - NeedsMarkupWork
-  - NeedsSpecTable
-  - Property
-  - Reference
-  - Window
-  - Non-standard
+status:
+  - non-standard
 browser-compat: api.Window.mozInnerScreenX
 ---
 

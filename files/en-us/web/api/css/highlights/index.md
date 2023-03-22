@@ -2,12 +2,8 @@
 title: CSS.highlights
 slug: Web/API/CSS/highlights
 page-type: web-api-static-property
-tags:
-  - API
-  - CSS
-  - CSS Custom Highlight API
-  - Property
-  - Reference
+status:
+  - experimental
 browser-compat: api.CSS.highlights
 ---
 

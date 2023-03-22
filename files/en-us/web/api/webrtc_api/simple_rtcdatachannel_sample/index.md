@@ -2,12 +2,6 @@
 title: A simple RTCDataChannel sample
 slug: Web/API/WebRTC_API/Simple_RTCDataChannel_sample
 page-type: guide
-tags:
-  - API
-  - Communication
-  - Example
-  - Tutorial
-  - WebRTC
 ---
 
 {{DefaultAPISidebar("WebRTC")}}
@@ -277,7 +271,7 @@ function sendMessage() {
 }
 ```
 
-First, the text of the message is fetched from the input box's {{htmlattrxref("value", "input")}} attribute. This is then sent to the remote peer by calling {{domxref("RTCDataChannel.send", "sendChannel.send()")}}. That's all there is to it! The rest of this method is just some user experience sugar — the input box is emptied and re-focused so the user can immediately begin typing another message.
+First, the text of the message is fetched from the input box's [`value`](/en-US/docs/Web/HTML/Element/input#value) attribute. This is then sent to the remote peer by calling {{domxref("RTCDataChannel.send", "sendChannel.send()")}}. That's all there is to it! The rest of this method is just some user experience sugar — the input box is emptied and re-focused so the user can immediately begin typing another message.
 
 ### Receiving messages
 

@@ -2,8 +2,6 @@
 title: Gutters
 slug: Glossary/Gutters
 page-type: glossary-definition
-tags:
-  - CSS Grids
 ---
 
 **Gutters** or _alleys_ are spacing between content tracks. These can be created in [CSS Grid Layout](/en-US/docs/Web/CSS/CSS_Grid_Layout) using the {{cssxref("column-gap")}}, {{cssxref("row-gap")}}, or {{cssxref("gap")}} properties.

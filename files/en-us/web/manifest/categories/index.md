@@ -1,11 +1,8 @@
 ---
 title: categories
 slug: Web/Manifest/categories
-tags:
-  - Manifest
-  - Web
-  - categories
-  - Experimental
+status:
+  - experimental
 browser-compat: html.manifest.categories
 ---
 

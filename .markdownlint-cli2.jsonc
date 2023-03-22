@@ -187,6 +187,13 @@
           "search": "](https://developer.mozilla.org/",
           "replace": "](/",
           "skipCode": true
+        },
+        {
+          "name": "incorrect-spelling",
+          "message": "Incorrect spelling",
+          "searchPattern": ["/e-mail/ig"],
+          "replace": ["email"],
+          "skipCode": false
         }
       ]
     }

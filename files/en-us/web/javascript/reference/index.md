@@ -2,18 +2,6 @@
 title: JavaScript reference
 slug: Web/JavaScript/Reference
 page-type: landing-page
-tags:
-  - Code
-  - ECMAScript
-  - ECMAScript6
-  - ES6
-  - JS
-  - JavaScript
-  - Landing page
-  - Reference
-  - es
-  - "l10n:priority"
-  - programming
 ---
 
 {{JsSidebar}}

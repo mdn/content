@@ -2,11 +2,6 @@
 title: "@font-feature-values"
 slug: Web/CSS/@font-feature-values
 page-type: css-at-rule
-tags:
-  - At-rule
-  - CSS
-  - CSS Fonts
-  - Reference
 browser-compat: css.at-rules.font-feature-values
 ---
 

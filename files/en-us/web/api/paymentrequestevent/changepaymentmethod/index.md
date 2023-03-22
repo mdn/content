@@ -2,15 +2,8 @@
 title: PaymentRequestEvent.changePaymentMethod()
 slug: Web/API/PaymentRequestEvent/changePaymentMethod
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Payment Request API
-  - PaymentRequestEvent
-  - Reference
-  - changePaymentMethod()
-  - payment
-  - Experimental
+status:
+  - experimental
 browser-compat: api.PaymentRequestEvent.changePaymentMethod
 ---
 
@@ -53,11 +46,13 @@ The following shows a trivial code snippet that could be used in a service worke
 
 ```js
 function notifyPaymentMethodChanged(e) {
-  e.changePaymentMethod('someMethod').then((paymentMethodChangeResponse) => {
-    paymentHandlerWindow.postMessage(paymentMethodChangeResponse);
-  }).catch((error) => {
-    sendMessage({error: error.message});
-  });
+  e.changePaymentMethod("someMethod")
+    .then((paymentMethodChangeResponse) => {
+      paymentHandlerWindow.postMessage(paymentMethodChangeResponse);
+    })
+    .catch((error) => {
+      sendMessage({ error: error.message });
+    });
 }
 ```
 

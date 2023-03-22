@@ -2,19 +2,6 @@
 title: RTCError
 slug: Web/API/RTCError
 page-type: web-api-interface
-tags:
-  - API
-  - Audio
-  - Error
-  - Error Handling
-  - Interface
-  - Media
-  - RTCError
-  - Reference
-  - Video
-  - WebRTC
-  - WebRTC API
-  - WebRTC Device API
 browser-compat: api.RTCError
 ---
 

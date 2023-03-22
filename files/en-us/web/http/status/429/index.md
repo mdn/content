@@ -1,12 +1,6 @@
 ---
 title: 429 Too Many Requests
 slug: Web/HTTP/Status/429
-tags:
-  - Client error
-  - HTTP
-  - HTTP Status Code
-  - Reference
-  - Status code
 spec-urls: https://www.rfc-editor.org/rfc/rfc6585#section-4
 ---
 

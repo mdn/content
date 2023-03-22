@@ -2,10 +2,6 @@
 title: CharacterData.previousElementSibling
 slug: Web/API/CharacterData/previousElementSibling
 page-type: web-api-instance-property
-tags:
-  - Property
-  - Read-only
-  - Reference
 browser-compat: api.Element.previousElementSibling
 ---
 

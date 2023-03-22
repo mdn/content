@@ -2,14 +2,6 @@
 title: FileSystemFileEntry
 slug: Web/API/FileSystemFileEntry
 page-type: web-api-interface
-tags:
-  - API
-  - File and Directory Entries API
-  - FileEntry
-  - Files
-  - Interface
-  - Offline
-  - Reference
 browser-compat: api.FileSystemFileEntry
 ---
 

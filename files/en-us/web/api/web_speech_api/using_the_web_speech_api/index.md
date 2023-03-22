@@ -2,15 +2,6 @@
 title: Using the Web Speech API
 slug: Web/API/Web_Speech_API/Using_the_Web_Speech_API
 page-type: guide
-tags:
-  - API
-  - Guide
-  - Tutorial
-  - Using
-  - Web Speech API
-  - recognition
-  - speech
-  - synthesis
 ---
 
 {{DefaultAPISidebar("Web Speech API")}}
@@ -61,7 +52,8 @@ As mentioned earlier, Chrome currently supports speech recognition with prefixed
 ```js
 const SpeechRecognition = window.SpeechRecognition || webkitSpeechRecognition;
 const SpeechGrammarList = window.SpeechGrammarList || webkitSpeechGrammarList;
-const SpeechRecognitionEvent = window.SpeechRecognitionEvent || webkitSpeechRecognitionEvent;
+const SpeechRecognitionEvent =
+  window.SpeechRecognitionEvent || webkitSpeechRecognitionEvent;
 ```
 
 #### The grammar
@@ -69,8 +61,20 @@ const SpeechRecognitionEvent = window.SpeechRecognitionEvent || webkitSpeechReco
 The next part of our code defines the grammar we want our app to recognize. The following variable is defined to hold our grammar:
 
 ```js
-const colors = [ 'aqua', 'azure', 'beige', 'bisque', 'black', 'blue', 'brown', 'chocolate', 'coral', /* … */ ];
-const grammar = `#JSGF V1.0; grammar colors; public <color> = ${colors.join(' | ')};`
+const colors = [
+  "aqua",
+  "azure",
+  "beige",
+  "bisque",
+  "black",
+  "blue",
+  "brown",
+  "chocolate",
+  "coral" /* … */,
+];
+const grammar = `#JSGF V1.0; grammar colors; public <color> = ${colors.join(
+  " | "
+)};`;
 ```
 
 The grammar format used is [JSpeech Grammar Format](https://www.w3.org/TR/jsgf/) (**JSGF**) — you can find a lot more about it at the previous link to its spec. However, for now let's just run through it quickly:
@@ -105,7 +109,7 @@ We then add the {{domxref("SpeechGrammarList")}} to the speech recognition insta
 ```js
 recognition.grammars = speechRecognitionList;
 recognition.continuous = false;
-recognition.lang = 'en-US';
+recognition.lang = "en-US";
 recognition.interimResults = false;
 recognition.maxAlternatives = 1;
 ```
@@ -115,11 +119,11 @@ recognition.maxAlternatives = 1;
 After grabbing references to the output {{htmlelement("div")}} and the HTML element (so we can output diagnostic messages and update the app background color later on), we implement an onclick handler so that when the screen is tapped/clicked, the speech recognition service will start. This is achieved by calling {{domxref("SpeechRecognition.start()")}}. The `forEach()` method is used to output colored indicators showing what colors to try saying.
 
 ```js
-const diagnostic = document.querySelector('.output');
-const bg = document.querySelector('html');
-const hints = document.querySelector('.hints');
+const diagnostic = document.querySelector(".output");
+const bg = document.querySelector("html");
+const hints = document.querySelector(".hints");
 
-let colorHTML = '';
+let colorHTML = "";
 colors.forEach((color, i) => {
   console.log(color, i);
   colorHTML += `<span style="background-color:${color};"> ${color} </span>`;
@@ -128,7 +132,7 @@ hints.innerHTML = `Tap or click then say a color to change the background color 
 
 document.body.onclick = () => {
   recognition.start();
-  console.log('Ready to receive a color command.');
+  console.log("Ready to receive a color command.");
 };
 ```
 
@@ -142,7 +146,7 @@ recognition.onresult = (event) => {
   diagnostic.textContent = `Result received: ${color}.`;
   bg.style.backgroundColor = color;
   console.log(`Confidence: ${event.results[0][0].confidence}`);
-}
+};
 ```
 
 The second line here is a bit complex-looking, so let's explain it step by step. The {{domxref("SpeechRecognitionEvent.results")}} property returns a {{domxref("SpeechRecognitionResultList")}} object containing {{domxref("SpeechRecognitionResult")}} objects. It has a getter so it can be accessed like an array — so the first `[0]` returns the `SpeechRecognitionResult` at position 0. Each `SpeechRecognitionResult` object contains {{domxref("SpeechRecognitionAlternative")}} objects that contain individual recognized words. These also have getters so they can be accessed like arrays — the second `[0]` therefore returns the `SpeechRecognitionAlternative` at position 0. We then return its `transcript` property to get a string containing the individual recognized result as a string, set the background color to that color, and report the color recognized as a diagnostic message in the UI.
@@ -152,7 +156,7 @@ We also use the {{domxref("SpeechRecognition.speechend_event", "speechend")}} ev
 ```js
 recognition.onspeechend = () => {
   recognition.stop();
-}
+};
 ```
 
 #### Handling errors and unrecognized speech
@@ -162,7 +166,7 @@ The last two handlers are there to handle cases where speech was recognized that
 ```js
 recognition.onnomatch = (event) => {
   diagnostic.textContent = "I didn't recognize that color.";
-}
+};
 ```
 
 The {{domxref("SpeechRecognition.error_event", "error")}} event handles cases where there is an actual error with the recognition successfully — the {{domxref("SpeechRecognitionErrorEvent.error")}} property contains the actual error returned:
@@ -170,7 +174,7 @@ The {{domxref("SpeechRecognition.error_event", "error")}} event handles cases wh
 ```js
 recognition.onerror = (event) => {
   diagnostic.textContent = `Error occurred in recognition: ${event.error}`;
-}
+};
 ```
 
 ## Speech synthesis
@@ -236,14 +240,14 @@ First of all, we capture references to all the DOM elements involved in the UI, 
 ```js
 const synth = window.speechSynthesis;
 
-const inputForm = document.querySelector('form');
-const inputTxt = document.querySelector('.txt');
-const voiceSelect = document.querySelector('select');
+const inputForm = document.querySelector("form");
+const inputTxt = document.querySelector(".txt");
+const voiceSelect = document.querySelector("select");
 
-const pitch = document.querySelector('#pitch');
-const pitchValue = document.querySelector('.pitch-value');
-const rate = document.querySelector('#rate');
-const rateValue = document.querySelector('.rate-value');
+const pitch = document.querySelector("#pitch");
+const pitchValue = document.querySelector(".pitch-value");
+const rate = document.querySelector("#rate");
+const rateValue = document.querySelector(".rate-value");
 
 const voices = [];
 ```
@@ -259,15 +263,15 @@ function populateVoiceList() {
   voices = synth.getVoices();
 
   for (const voice of voices) {
-    const option = document.createElement('option');
+    const option = document.createElement("option");
     option.textContent = `${voice.name} (${voice.lang})`;
 
     if (voice.default) {
-      option.textContent += ' — DEFAULT';
+      option.textContent += " — DEFAULT";
     }
 
-    option.setAttribute('data-lang', voice.lang);
-    option.setAttribute('data-name', voice.name);
+    option.setAttribute("data-lang", voice.lang);
+    option.setAttribute("data-name", voice.name);
     voiceSelect.appendChild(option);
   }
 }
@@ -309,12 +313,12 @@ inputForm.onsubmit = (event) => {
 In the final part of the handler, we include an {{domxref("SpeechSynthesisUtterance.pause_event", "pause")}} event to demonstrate how {{domxref("SpeechSynthesisEvent")}} can be put to good use. When {{domxref("SpeechSynthesis.pause()")}} is invoked, this returns a message reporting the character number and name that the speech was paused at.
 
 ```js
-   utterThis.onpause = (event) => {
-    const char = event.utterance.text.charAt(event.charIndex);
-    console.log(
-      `Speech paused at character ${event.charIndex} of "${event.utterance.text}", which is "${char}".`
-    );
-  }
+utterThis.onpause = (event) => {
+  const char = event.utterance.text.charAt(event.charIndex);
+  console.log(
+    `Speech paused at character ${event.charIndex} of "${event.utterance.text}", which is "${char}".`
+  );
+};
 ```
 
 Finally, we call [blur()](/en-US/docs/Web/API/HTMLElement/blur) on the text input. This is mainly to hide the keyboard on Firefox OS.
@@ -331,9 +335,9 @@ The last part of the code updates the `pitch`/`rate` values displayed in the UI,
 ```js
 pitch.onchange = () => {
   pitchValue.textContent = pitch.value;
-}
+};
 
 rate.onchange = () => {
   rateValue.textContent = rate.value;
-}
+};
 ```

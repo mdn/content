@@ -1,23 +1,6 @@
 ---
 title: Using HTTP cookies
 slug: Web/HTTP/Cookies
-tags:
-  - Advertising
-  - Browser
-  - Cookies
-  - Cookies Article
-  - Guide
-  - HTTP
-  - History
-  - JavaScript
-  - Privacy
-  - Protocols
-  - Server
-  - Storage
-  - Web Development
-  - data
-  - request
-  - tracking
 ---
 
 {{HTTPSidebar}}

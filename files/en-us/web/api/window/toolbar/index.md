@@ -2,14 +2,6 @@
 title: Window.toolbar
 slug: Web/API/Window/toolbar
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTML DOM
-  - NeedsExample
-  - NeedsMarkupWork
-  - Property
-  - Reference
-  - Window
 browser-compat: api.Window.toolbar
 ---
 

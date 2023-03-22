@@ -2,12 +2,6 @@
 title: StyleSheetList.length
 slug: Web/API/StyleSheetList/length
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - length
-  - StyleSheetList
 browser-compat: api.StyleSheetList.length
 ---
 

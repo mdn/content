@@ -2,10 +2,6 @@
 title: NaN
 slug: Web/JavaScript/Reference/Global_Objects/NaN
 page-type: javascript-global-property
-tags:
-  - JavaScript
-  - Property
-  - Reference
 browser-compat: javascript.builtins.NaN
 ---
 

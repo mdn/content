@@ -1,16 +1,7 @@
 ---
 title: runtime.id
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/id
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Non-standard
-  - Property
-  - Reference
-  - WebExtensions
-  - id
-  - runtime
+page-type: webextension-api-property
 browser-compat: webextensions.api.runtime.id
 ---
 

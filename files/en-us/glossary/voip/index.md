@@ -2,9 +2,6 @@
 title: VoIP
 slug: Glossary/VoIP
 page-type: glossary-definition
-tags:
-  - Infrastructure
-  - VoIP
 ---
 
 VoIP (Voice over Internet Protocol) is a technology used to transmit voice messages over IP (Internet Protocol) networks. Common VoIP packages include Skype, MSN Messenger, Yahoo and many more. Everything transferred through VoIP is digital. It is also known as IP telephony, or broadband telephony. The main reason for using VoIP technology is because of cost.

@@ -2,9 +2,6 @@
 title: Guidelines for styling JavaScript code examples
 slug: MDN/Writing_guidelines/Writing_style_guide/Code_style_guide/JavaScript
 page-type: mdn-writing-guide
-tags:
-  - meta
-  - writing-guide
 ---
 
 {{MDNSidebar}}
@@ -757,7 +754,7 @@ When declaring variables and constants, use the [`let`](/en-US/docs/Web/JavaScri
 
   ```js example-bad
   let name = "Shilpa";
-  console.log(myName);
+  console.log(name);
   ```
 
 - The example below uses `const` for a variable that gets reassigned. The reassignment will throw an error.

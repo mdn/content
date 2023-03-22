@@ -2,11 +2,6 @@
 title: Using classes
 slug: Web/JavaScript/Guide/Using_Classes
 page-type: guide
-tags:
-  - Guide
-  - Intermediate
-  - JavaScript
-  - Object
 ---
 
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Working_with_Objects", "Web/JavaScript/Guide/Using_promises")}}
@@ -548,7 +543,7 @@ With the `Date` example, we have also encountered the [`Date.now()`](/en-US/docs
 - Static fields
 - Static getters and setters
 
-Everything also have private counterparts. For example, for our `Color` class, we can create a static method that checks whether a given triplet is a valid RGB value:
+Everything also has private counterparts. For example, for our `Color` class, we can create a static method that checks whether a given triplet is a valid RGB value:
 
 ```js
 class Color {

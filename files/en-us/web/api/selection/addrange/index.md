@@ -2,12 +2,6 @@
 title: Selection.addRange()
 slug: Web/API/Selection/addRange
 page-type: web-api-instance-method
-tags:
-  - API
-  - HTML Editing
-  - Method
-  - Reference
-  - Selection
 browser-compat: api.Selection.addRange
 ---
 
@@ -50,11 +44,11 @@ None ({{jsxref("undefined")}}).
 ### JavaScript
 
 ```js
-let button = document.querySelector('button');
+let button = document.querySelector("button");
 
-button.addEventListener('click', () => {
+button.addEventListener("click", () => {
   const selection = window.getSelection();
-  const strongs = document.getElementsByTagName('strong');
+  const strongs = document.getElementsByTagName("strong");
 
   if (selection.rangeCount > 0) {
     selection.removeAllRanges();

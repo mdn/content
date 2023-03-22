@@ -2,12 +2,6 @@
 title: Promise() constructor
 slug: Web/JavaScript/Reference/Global_Objects/Promise/Promise
 page-type: javascript-constructor
-tags:
-  - Constructor
-  - JavaScript
-  - Promise
-  - Reference
-  - Polyfill
 browser-compat: javascript.builtins.Promise.Promise
 ---
 

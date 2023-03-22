@@ -2,13 +2,6 @@
 title: ShadowRoot.pointerLockElement
 slug: Web/API/ShadowRoot/pointerLockElement
 page-type: web-api-instance-property
-tags:
-  - API
-  - DOM
-  - ShadowRoot
-  - Property
-  - Reference
-  - mouse lock
 browser-compat: api.ShadowRoot.pointerLockElement
 ---
 
@@ -27,7 +20,7 @@ An {{domxref("Element")}} or `null`.
 ## Examples
 
 ```js
-let customElem = document.querySelector('my-shadow-dom-element');
+let customElem = document.querySelector("my-shadow-dom-element");
 let shadow = customElem.shadowRoot;
 let pleElem = shadow.pointerLockElement;
 ```
