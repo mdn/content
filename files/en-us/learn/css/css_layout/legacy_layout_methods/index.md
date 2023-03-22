@@ -331,7 +331,7 @@ Update the bottom block of CSS rules with the following:
 
 Now save your code, load it in a browser, and try changing the viewport width — you should see the column widths adjust nicely to suit.
 
-> **Note:** If you are having trouble getting the above example to work, try comparing it against our [finished version on GitHub](https://github.com/mdn/learning-area/blob/main/css/css-layout/grids/fluid-grid.html) ([see it running live](https://mdn.github.io/learning-area/css/css-layout/grids/fluid-grid.html) also).
+> **Note:** If you are having trouble getting the above example to work, seeing only a new font a margin applied to your content, widen the window you're using to view the page. If that doesn't work, try comparing it against our [finished version on GitHub](https://github.com/mdn/learning-area/blob/main/css/css-layout/grids/fluid-grid.html) ([see it running live](https://mdn.github.io/learning-area/css/css-layout/grids/fluid-grid.html) also).
 
 ### Easier calculations using the calc() function
 
