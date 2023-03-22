@@ -29,7 +29,7 @@ This element also accepts the [global attributes](/en-US/docs/Web/HTML/Global_at
     - `I` for uppercase Roman numerals
     - `1` for numbers (default)
 
-    The specified type is used for the entire list unless a different {{HTMLAttrxRef("type", "li")}} attribute is used on an enclosed {{HTMLElement("li")}} element.
+    The specified type is used for the entire list unless a different [`type`](/en-US/docs/Web/HTML/Element/li#type) attribute is used on an enclosed {{HTMLElement("li")}} element.
 
     > **Note:** Unless the type of the list number matters (like legal or technical documents where items are referenced by their number/letter), use the CSS {{CSSxRef("list-style-type")}} property instead.
 
@@ -224,5 +224,5 @@ The above HTML will output:
 
   - the {{CSSxRef("list-style")}} property, to choose the way the ordinal displays
   - [CSS counters](/en-US/docs/Web/CSS/CSS_Counter_Styles/Using_CSS_counters), to handle complex nested lists
-  - the {{CSSxRef("line-height")}} property, to simulate the deprecated {{HTMLAttrxRef("compact", "ol")}} attribute
+  - the {{CSSxRef("line-height")}} property, to simulate the deprecated [`compact`](#compact) attribute
   - the {{CSSxRef("margin")}} property, to control the list indentation

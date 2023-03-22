@@ -40,7 +40,7 @@ Or, null.
 
 ## Examples
 
-In this example, passing the {{htmlelement("script")}} element and {{htmlattrxref("src")}} attribute to `getAttributeType` returns "TrustedScriptURL".
+In this example, passing the {{htmlelement("script")}} element and [`src`](/en-US/docs/Web/HTML/Global_attributes#src) attribute to `getAttributeType` returns "TrustedScriptURL".
 
 ```js
 console.log(trustedTypes.getAttributeType("script", "src")); // "TrustedScriptURL"

@@ -28,7 +28,7 @@ async function receiveUnidirectional() {
   const uds = transport.incomingUnidirectionalStreams;
   const reader = uds.getReader();
   while (true) {
-    const {done, value} = await reader.read();
+    const { done, value } = await reader.read();
     if (done) {
       break;
     }
@@ -40,7 +40,7 @@ async function receiveUnidirectional() {
 async function readData(receiveStream) {
   const reader = receiveStream.getReader();
   while (true) {
-    const {done, value} = await reader.read();
+    const { done, value } = await reader.read();
     if (done) {
       break;
     }

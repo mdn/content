@@ -71,7 +71,9 @@ person.name;
 person.name[0];
 person.age;
 person.bio();
+// "Bob Smith is 32 years old."
 person.introduceSelf();
+// "Hi! I'm Bob."
 ```
 
 You have now got some data and functionality inside your object, and are now able to access them with some nice simple syntax!
@@ -235,6 +237,7 @@ You can now test out your new members:
 ```js
 person["eyes"];
 person.farewell();
+// "Bye everybody!"
 ```
 
 One useful aspect of bracket notation is that it can be used to set not only member values dynamically, but member names too. Let's say we wanted users to be able to store custom value types in their people data, by typing the member name and value into two text inputs. We could get those values like this:
@@ -332,10 +335,12 @@ Now we can create as many objects as we like, reusing the definition:
 const salva = createPerson("Salva");
 salva.name;
 salva.introduceSelf();
+// "Hi! I'm Salva."
 
 const frankie = createPerson("Frankie");
 frankie.name;
 frankie.introduceSelf();
+// "Hi! I'm Frankie."
 ```
 
 This works fine but is a bit long-winded: we have to create an empty object, initialize it, and return it. A better way is to use a **constructor**. A constructor is just a function called using the {{jsxref("operators/new", "new")}} keyword. When you call a constructor, it will:
@@ -362,10 +367,12 @@ To call `Person()` as a constructor, we use `new`:
 const salva = new Person("Salva");
 salva.name;
 salva.introduceSelf();
+// "Hi! I'm Salva."
 
 const frankie = new Person("Frankie");
 frankie.name;
 frankie.introduceSelf();
+// "Hi! I'm Frankie."
 ```
 
 ## You've been using objects all along
