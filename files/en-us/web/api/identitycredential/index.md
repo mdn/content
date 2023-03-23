@@ -2,12 +2,8 @@
 title: IdentityCredential
 slug: Web/API/IdentityCredential
 page-type: web-api-interface
-tags:
-  - API
-  - Experimental
-  - IdentityCredential
-  - Interface
-  - Reference
+status:
+  - experimental
 browser-compat: api.IdentityCredential
 ---
 
