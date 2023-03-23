@@ -11,7 +11,7 @@ spec-urls: https://drafts.csswg.org/css-color/#typedef-hue
 The **`<hue>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Types) represents a value that can be either a {{cssxref("&lt;number&gt;")}} or an {{cssxref("&lt;angle&gt;")}} specifying a hue angle (a cylindrical polar color) in degrees of a full circle.
 It is used in color functions that accept hue expressed as a single value, specifically [`hsl()`](/en-US/docs/Web/CSS/color_value/hsl), [`hwb()`](/en-US/docs/Web/CSS/color_value/hwb), [`lch()`](/en-US/docs/Web/CSS/color_value/lch), and [`oklch()`](/en-US/docs/Web/CSS/color_value/oklch) functional notations.
 
-> **Note:** The angles corresponding to particular hues depend on the color space. For example, green in [`hsl()`](/en-US/docs/Web/CSS/color_value/hsl) and  [`hsl()`](/en-US/docs/Web/CSS/color_value/hwb) which use the [sRGB](https://en.wikipedia.org/wiki/SRGB) color space, is at `120deg`, while in [`lch()`](/en-US/docs/Web/CSS/color_value/lch), which uses the CIELAB color wheel, it is at `134.39deg`.
+> **Note:** The angles corresponding to particular hues depend on the color space. For example, green in [`hsl()`](/en-US/docs/Web/CSS/color_value/hsl) and [`hsl()`](/en-US/docs/Web/CSS/color_value/hwb) which use the [sRGB](https://en.wikipedia.org/wiki/SRGB) color space, is at `120deg`, while in [`lch()`](/en-US/docs/Web/CSS/color_value/lch), which uses the CIELAB color wheel, it is at `134.39deg`.
 
 ![A color wheel indicating the angle for the hue of the primary (red-green-blue) and secondary (yellow-cyan-magenta) colors](hue-wheel.png)
 
@@ -37,8 +37,8 @@ lch(39.35 121.2% -51.94%);
 ### Values
 
 - `<angle>`
-  - : An {{cssxref("&lt;angle&gt;")}} values expressed in degrees, gradians, radians, or turns using the `deg`, `grad`, `rad`, or `turn`, respectively. 
-- `<number>
+  - : An {{cssxref("&lt;angle&gt;")}} values expressed in degrees, gradians, radians, or turns using the `deg`, `grad`, `rad`, or `turn`, respectively.
+- `<number>`
   - : An integer or floating point number, representing degrees of the hue angle.
 
 As an `<angle>` is periodic, normalized to the range of `0deg` to `360deg`. It implicitly wraps around such that `480deg` is the same as `120deg`, `-120deg` is the same as `240deg`, `-1turn` is the same as `1turn`, and so on.
