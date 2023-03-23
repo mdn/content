@@ -7,7 +7,7 @@ browser-compat: api.WritableStreamDefaultWriterController.signal
 
 {{APIRef("Streams")}}
 
-The read-only **`signal`** property of the {{domxref("WritableStreamDefaultWriterController")}} interface returns the {{domxref("AbortSignal")}} associated with the controller.
+The read-only **`signal`** property of the {{domxref("WritableStreamDefaultController")}} interface returns the {{domxref("AbortSignal")}} associated with the controller.
 
 ## Value
 
