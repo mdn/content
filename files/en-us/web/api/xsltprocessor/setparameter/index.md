@@ -23,7 +23,7 @@ setParameter(namespaceURI, localName, value)
   - : The name of the parameter in the associated namespace.
 - `value`
   - : The value of the parameter.
-  > **Note:** Firefox supports any kind of parameter. Chrome, Edge and Safari only supports parameters that are strings.
+  > **Note:** Firefox supports any kind of parameter. Chrome, Edge and Safari only support string parameters.
 
 ### Return value
 
