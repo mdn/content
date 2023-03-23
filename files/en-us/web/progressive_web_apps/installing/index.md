@@ -5,15 +5,15 @@ slug: Web/Progressive_web_apps/Installing
 
 {{QuickLinksWithSubpages("/en-US/docs/Web/Progressive_web_apps/")}}
 
-Browsers have always enabled saving shortcuts to websites within the browsers itself. Smartphones enhanced this capablity by enabling saving these bookmarks to the homescreen with an icon launching the site in the operating systems default browser. With Progressive Web Applications (PWAs), web applications can be installed on (and uninstalled from) a user's device. 
+Browsers have always enabled saving shortcuts to websites within the browser itself. Smartphones enhanced this capablity by enabling saving these bookmarks to the homescreen with an icon launching the site in the operating systems default browser. With [Progressive Web Applications (PWAs)](/en-us/docs/web/progressive_web_apps), web apps can be installed on (and uninstalled from) a user's device, fully integrating into the operating systems in a manner similar to any other native application. 
 
-In this guide, we discuss how to save sites, and how to install and uninstall PWAs.
+In this guide, we discuss how to save links to sites, and how to install and uninstall PWAs.
 
-### Bookmarks
+### Bookmarking websites
 
-All browsers have site bookmarking functionality. A bookmark, or favorite, is a clickable short cut for a web page enabling quick access sites without the user having to enter a URL or otherwise search for the content. Bookmarking is especially useful for long URLs and accessing frequently visited content  that in not the site's homepage.
+All browsers have bookmarking functionality. A bookmark, or favorite, is a clickable short cut for a web page, enabling quick access to a web site without the user having to enter a URL or otherwise search for the content. Bookmarking is especially useful for long URLs and accessing frequently visited content that is not the site's homepage.
 
-All browsers enable the user to view and manage their bookmarks, including renaming and deleting favorites. By default, the text of a bookmark is the content's of a pages {{HTMLElement("title")}} element, along with an icon made up of the site's [favicon](/en-US/docs/Glossary/Favicon). 
+All browsers enable users to view and manage their bookmarks, including renaming and deleting favorites. By default, the bookmark display includes the text content of a page's {{HTMLElement("title")}} element along with an icon consisting of the site's [favicon](/en-US/docs/Glossary/Favicon). 
 
 ### Add to homescreen
 
