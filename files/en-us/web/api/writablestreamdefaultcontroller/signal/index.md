@@ -1,6 +1,6 @@
 ---
 title: WritableStreamDefaultController.signal
-slug: Web/API/WritableStreamDefaultWriterController/signal
+slug: Web/API/WritableStreamDefaultController/signal
 page-type: web-api-instance-property
 browser-compat: api.WritableStreamDefaultWriterController.signal
 ---
