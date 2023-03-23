@@ -2262,6 +2262,9 @@
       "methods": [],
       "properties": [],
       "events": []
+    },
+    "XSLT": {
+      "interfaces": ["XSLTProcessor"]
     }
   }
 ]

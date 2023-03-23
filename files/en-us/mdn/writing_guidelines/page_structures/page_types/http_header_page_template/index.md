@@ -159,7 +159,7 @@ See our guide on how to add [code examples](/en-US/docs/MDN/Writing_guidelines/P
 
 ## See also
 
-- Include list of
-- other links related to
-- this header that might
-- be useful
+Include links to reference pages and guides related to the current HTTP header. For more guidelines, see the [See also section](/en-US/docs/MDN/Writing_guidelines/Writing_style_guide#see_also_section) in the _Writing style guide_.
+
+- link1
+- link2
