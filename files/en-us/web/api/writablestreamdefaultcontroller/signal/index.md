@@ -11,7 +11,7 @@ The read-only **`signal`** property of the {{domxref("WritableStreamDefaultContr
 
 ## Value
 
-An {{domxref("AbortSignal")}}
+An {{domxref("AbortSignal")}} object.
 
 ## Examples
 
