@@ -2,13 +2,9 @@
 title: Federated Credential Management API (FedCM)
 slug: Web/API/FedCM_API
 page-type: web-api-overview
-tags:
-  - API
-  - Experimental
-  - Overview
-  - Reference
-browser-compat:
-  - api.IdentityCredential
+status:
+  - experimental
+browser-compat: api.IdentityCredential
 ---
 
 {{SeeCompatTable}}{{DefaultAPISidebar("FedCM API")}}
