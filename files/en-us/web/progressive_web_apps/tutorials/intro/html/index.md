@@ -53,3 +53,10 @@ PWAs require a manifest file. The web manifest is an external JSON file. To incl
 The `<link>` element is most commonly used to link to stylesheets and, with PWAs, the required manifest file, but is also used to establish site icons (both "favicon" style icons and icons for the home screen and apps on mobile devices) among other things.
 
 The {{HTMLelement("body")}} element contains all the content we want displayed to our users when they visit the site on the Internet.
+
+that work both online and offline, both in the browsers and on the user's operating systems.
+PWA don't require any additional programming language knowledge
+
+PWAs are a way of progressively enhancing websites to make them available on a user's device, even offline. By including a manifest file and service worker, and serving the website over SSL, any website can become a PWA.
+
+By default, PWAs are regular websites. They use the same technologies as regular websites. They are also linkable, discoverable via search engines, and visible in a browser, just like regular websites.
