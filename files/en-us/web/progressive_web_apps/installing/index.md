@@ -7,7 +7,9 @@ slug: Web/Progressive_web_apps/Installing
 
 Browsers have always enabled saving shortcuts to websites within the browser itself. Smartphones enhanced this capablity by enabling saving these bookmarks to the homescreen with an icon launching the site in the operating systems default browser. With [Progressive Web Applications (PWAs)](/en-us/docs/web/progressive_web_apps), web apps can be installed on (and uninstalled from) a user's device, fully integrating into the operating systems in a manner similar to any other native application. 
 
-In this guide, we discuss how to save links to sites, and how to install and uninstall PWAs.
+This guide is only about how you and your users can install and uninstall PWAs. There is an excellent [guide on makine PWAs installable](/en-US/docs/Web/Progressive_web_apps/guides/making_pwas_installable) for developers.
+
+First, let's discuss bookmarking add adding links to web sites on a device home screen
 
 ### Bookmarking websites
 
@@ -23,9 +25,17 @@ Adding to homescreen does not install the website on the device. Rather, it adds
 
 ## Installing and uninstalling PWAs
 
-When the user installs a PWA, the application is actually installed on the users device. This is a step, or several, beyond a link to the site provided via bookmarking or adding to homescreen. Depending on the PWA, device, and features of the operating system and browser, installing a PWA may  mean installing an essentially fully featured application with operating system integration. This also means uninstalling a PWA is more than uninstalling a bookmark or icon. 
+While installing a PWA only takes a couple of clicks, the result is much greater than just adding a icon'ed shortcut to a website. Installing a PWA actually installs the web application on the users device. This is a step, or several, beyond a link to the site provided via bookmarking or adding to homescreen. 
+
+Depending on the PWA, device, and features of the operating system and browser, installing a PWA may mean installing an essentially fully featured application with operating system integration. This also means uninstalling a PWA is more than uninstalling a bookmark or icon. 
 
 ### Installing PWAs
+
+The UI for installing a PWA from the web varies from one browser to another, and from one platform to another. For example, a browser might include an “Install” icon in the URL bar when the user navigates to the page:
+
+![]
+
+When the user selects the icon, the browser displays a prompt asking if they want to install the PWA, and if they accept, the PWA is installed.
 
 When an installed PWA is launched, it may then manifest as in a chromeless view (without the full browser chrome) but it nevertheless is executing effectively as a tab within the browser.
 
@@ -33,7 +43,6 @@ Installation is supported on all modern desktop and mobile devices. Whether the 
 
 ## The installation user experience
 
-To experience the installation user experience, try installing a PWA. 
 
 > **Note:** You can find out a lot more about Chrome install banners from the article [How to provide your own in-app installation experience](https://web.dev/customize-install/).
 
