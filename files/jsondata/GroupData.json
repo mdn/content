@@ -2264,12 +2264,6 @@
       "events": []
     },
     "XSLT": {
-      "guides": [
-        "/docs//Web/API/XSLTProcessor/Introduction",
-        "/docs/Web/API/XSLTProcessor/Basic_Example",
-        "/docs/Web/API/XSLTProcessor/Generating_HTML",
-        "/docs/Web/API/XSLTProcessor/Resources"
-      ],
       "interfaces": ["XSLTProcessor"]
     }
   }
