@@ -7,7 +7,7 @@ browser-compat: api.XSLTProcessor.importStylesheet
 
 {{APIRef("XSLT")}}
 
-The `importStylesheet()` method of the {{domxref("XSLTProcessor")}} interface imports an XSLT stylesheet inside the processor.
+The `importStylesheet()` method of the {{domxref("XSLTProcessor")}} interface imports an XSLT stylesheet for the processor.
 
 ## Syntax
 
