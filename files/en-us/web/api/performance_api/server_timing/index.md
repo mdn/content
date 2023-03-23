@@ -35,7 +35,7 @@ Trailer: Server-Timing
 Server-Timing: total;dur=123.4
 ```
 
-To calculate real server-side metrics, consult the documentation of your server-side CMS, framework, or programming language for how to measure performance within the backend application. If your server uses Node.js, the performance measurement APIs will look very familiar to the Performance API in browsers as the Node.js performance module is a subset of the W3C Web Performance APIs as well as additional APIs for Node.js-specific performance measurements. See the [Node.js performance documentation] (https://nodejs.org/api/perf_hooks.html#performance-measurement-apis) for more information.
+To calculate real server-side metrics, consult the documentation of your server-side CMS, framework, or programming language for how to measure performance within the backend application. If your server uses Node.js, the performance measurement APIs will look very familiar to the Performance API in browsers as the Node.js performance module is a subset of the W3C Web Performance APIs as well as additional APIs for Node.js-specific performance measurements. See the [Node.js performance documentation](https://nodejs.org/api/perf_hooks.html#performance-measurement-apis) for more information.
 
 Note that there is no clock synchronization between the server, the client and any intermediate proxies. This means that if your server sends timestamps or a `startTime` it might not meaningfully map to the {{domxref("PerformanceEntry.startTime", "startTime")}} of the clients timeline.
 
