@@ -57,9 +57,10 @@ No notable changes.
 
 ## Changes for add-on developers
 
-- The {{WebExtAPIRef("scripting")}} API, which provides features to execute script, insert and remove CSS, and manage the registration of content scripts is now available to Manifest V2 extensions ([Firefox bug 1766615](https://bugzil.la/1766615)).
-- With the introduction of support for the 'wasm-unsafe-eval' CSP keyword in Firefox ([Firefox bug 1740263](https://bugzil.la/1740263)), Manifest V3 extensions are now required to specify this keyword in the [content_security_policy](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_security_policy) manifest key to use [WebAssembly](/en-US/docs/WebAssembly). For backwards-compatibility, Manifest V2 extensions can still use WebAssembly without the keyword ([Firefox bug 1766027](https://bugzil.la/1766027)).
+- The {{WebExtAPIRef("scripting")}} API, which provides features to execute script, insert and remove CSS, and manage the registration of content scripts is available to Manifest V2 extensions ([Firefox bug 1766615](https://bugzil.la/1766615)).
 - The `nonPersistentCookies` option of the {{WebExtAPIRef("privacy.websites")}} `cookieConfig` property has been deprecated ([Firefox bug 1754924](https://bugzil.la/1754924)).
+- Manifest V3 [preview](https://blog.mozilla.org/addons/2022/06/08/manifest-v3-firefox-developer-preview-how-to-get-involved/) features:
+  - With the introduction of support for the 'wasm-unsafe-eval' CSP keyword in Firefox ([Firefox bug 1740263](https://bugzil.la/1740263)), Manifest V3 extensions are now required to specify this keyword in the [content_security_policy](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_security_policy) manifest key to use [WebAssembly](/en-US/docs/WebAssembly). For backwards-compatibility, Manifest V2 extensions can still use WebAssembly without the keyword ([Firefox bug 1766027](https://bugzil.la/1766027)).
 
 ## Older versions
 
