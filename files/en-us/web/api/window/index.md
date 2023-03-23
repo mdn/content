@@ -294,8 +294,6 @@ _This interface inherits methods from the {{domxref("EventTarget")}} interface a
   - : Registers the window to capture all events of the specified type.
 - {{domxref("Window.forward()")}} {{Non-standard_Inline}} {{Deprecated_Inline}}
   - : Moves the window one document forward in the history. This method is deprecated; you should instead use {{domxref("History.forward", "window.history.forward()")}}.
-- {{domxref("Window.home()")}} {{Non-standard_Inline}} {{Deprecated_Inline}}
-  - : Returns the browser to the home page.
 - {{domxref("Window.releaseEvents()")}} {{Deprecated_Inline}}
   - : Releases the window from trapping events of a specific type.
 - {{domxref("Window.showModalDialog()")}} {{Non-standard_Inline}} {{Deprecated_Inline}}
