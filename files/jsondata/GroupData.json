@@ -433,6 +433,13 @@
       "properties": [],
       "events": []
     },
+    "FedCM API": {
+      "overview": ["FedCM API"],
+      "interfaces": ["IdentityCredential"],
+      "methods": ["CredentialsContainer.get()"],
+      "properties": [],
+      "events": []
+    },
     "Fetch API": {
       "overview": ["Fetch API"],
       "guides": [
@@ -2255,6 +2262,9 @@
       "methods": [],
       "properties": [],
       "events": []
+    },
+    "XSLT": {
+      "interfaces": ["XSLTProcessor"]
     }
   }
 ]

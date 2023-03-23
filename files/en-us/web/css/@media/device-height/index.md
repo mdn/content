@@ -11,7 +11,7 @@ browser-compat: css.at-rules.media.device-height
 
 > **Note:** To query for the height of the viewport, developers should use the [`height`](/en-US/docs/Web/CSS/@media/height) media feature instead.
 
-The **`device-height`** [CSS](/en-US/docs/Web/CSS) [media feature](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#media_features) can be used to test the height of an output device's rendering surface.
+The **`device-height`** [CSS](/en-US/docs/Web/CSS) [media feature](/en-US/docs/Web/CSS/@media#media_features) can be used to test the height of an output device's rendering surface.
 
 ## Syntax
 

@@ -1,6 +1,7 @@
 ---
 title: declarativeNetRequest.RuleCondition
 slug: Mozilla/Add-ons/WebExtensions/API/declarativeNetRequest/RuleCondition
+page-type: webextension-api-type
 browser-compat: webextensions.api.declarativeNetRequest.RuleCondition
 ---
 
