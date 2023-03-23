@@ -4,11 +4,10 @@ slug: Web/API/Window/captureEvents
 page-type: web-api-instance-method
 status:
   - deprecated
-  - non-standard
 browser-compat: api.Window.captureEvents
 ---
 
-{{ ApiRef() }} {{Deprecated_Header}} {{Non-standard_Header}}
+{{ ApiRef() }} {{Deprecated_Header}}
 
 The **`Window.captureEvents()`** method does nothing.
 
