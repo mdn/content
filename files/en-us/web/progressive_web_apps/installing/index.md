@@ -11,15 +11,15 @@ In this guide, we discuss how to save links to sites, and how to install and uni
 
 ### Bookmarking websites
 
-All browsers have bookmarking functionality. A bookmark, or favorite, is a clickable short cut for a web page, enabling quick access to a web site without the user having to enter a URL or otherwise search for the content. Bookmarking is especially useful for long URLs and accessing frequently visited content that is not the site's homepage.
+All browsers have add to favorites bookmark functionality. A bookmark, or favorite, is a clickable short cut for a web page, enabling quick access to a web site without the user having to enter a URL or otherwise search for the content. Bookmarking is especially useful for long URLs and accessing frequently visited content that is not the site's homepage.
 
-All browsers enable users to view and manage their bookmarks, including renaming and deleting favorites. By default, the bookmark display includes the text content of a page's {{HTMLElement("title")}} element along with an icon consisting of the site's [favicon](/en-US/docs/Glossary/Favicon). 
+All browsers enable users to view and manage their bookmarks, including renaming and deleting favorites. By default, the bookmark's display includes the text content of the bookmarked page's {{HTMLElement("title")}} element along with an icon consisting of the site's [favicon](/en-US/docs/Glossary/Favicon). 
 
 ### Add to homescreen
 
-Smartphones, starting with the iPhone in 2007, added "Save to homescreen" functionality. This feature is the same as a bookmark, but instead of adding the favicon and title of the page to the browser bookmarks menu, this functionality [adds an icon](/en-US/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML#adding_custom_icons_to_your_site) to the homescreen. 
+Smartphones, starting with the iPhone in 2007, added "Save to homescreen" functionality. This feature is the same as a bookmark, but instead of adding the favicon and title of the page to the browser bookmarks menu, favoriting in this manner [adds an icon](/en-US/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML#adding_custom_icons_to_your_site) to the homescreen. 
 
-Adding to homescreen does not install the website on the device. Rather, it just adds the developer defined icon to the homescreen, that, when clicked, opens the bookmarked link in the default browser. 
+Adding to homescreen does not install the website on the device. Rather, it adds the developer defined icon to the homescreen, that, when clicked, opens the bookmarked link in the default browser. 
 
 ## Installing and uninstalling PWAs
 
