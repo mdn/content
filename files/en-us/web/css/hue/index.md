@@ -9,13 +9,13 @@ spec-urls: https://drafts.csswg.org/css-color/#typedef-hue
 {{CSSRef}}
 
 The **`<hue>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Types) represents a value that can be either a {{cssxref("&lt;number&gt;")}} or an {{cssxref("&lt;angle&gt;")}} specifying a hue angle (a cylindrical polar color) in degrees of a full circle.
-It is used in color functions that accept hue expressed as a single value, specifically [`hsl()`](/en-US/docs/Web/CSS/color_value/hsl), [`hwb()`](/en-US/docs/Web/CSS/color_value/hwb), [`lch()`](/en-US/docs/Web/CSS/color_value/lch), and [`oklch()`](/en-US/docs/Web/CSS/color_value/oklch) functional notations.
+It is used in the color functions that accept hue expressed as a single value, specifically [`hsl()`](/en-US/docs/Web/CSS/color_value/hsl), [`hwb()`](/en-US/docs/Web/CSS/color_value/hwb), [`lch()`](/en-US/docs/Web/CSS/color_value/lch), and [`oklch()`](/en-US/docs/Web/CSS/color_value/oklch) functional notations.
 
-> **Note:** The angles corresponding to particular hues depend on the color space. For example, green in [`hsl()`](/en-US/docs/Web/CSS/color_value/hsl) and [`hsl()`](/en-US/docs/Web/CSS/color_value/hwb) which use the [sRGB](https://en.wikipedia.org/wiki/SRGB) color space, is at `120deg`, while in [`lch()`](/en-US/docs/Web/CSS/color_value/lch), which uses the CIELAB color wheel, it is at `134.39deg`.
+> **Note:** The angles corresponding to particular hues depend on the color space. For example, green in [`hsl()`](/en-US/docs/Web/CSS/color_value/hsl) and [`hwb()`](/en-US/docs/Web/CSS/color_value/hwb), which use the [sRGB](https://en.wikipedia.org/wiki/SRGB) color space, is at `120deg`. In [`lch()`](/en-US/docs/Web/CSS/color_value/lch), which uses the CIELAB color wheel, green is at `134.39deg`.
 
-![A color wheel indicating the angle for the hue of the primary (red-green-blue) and secondary (yellow-cyan-magenta) colors](hue-wheel.png)
+![A sRGB color wheel indicating the angle for the hue of the primary (red-green-blue) and secondary (yellow-cyan-magenta) colors](hue-wheel.png)
 
-In [`hsl()`](/en-US/docs/Web/CSS/color_value/hsl), _red_ is `0deg`, with the other colors spread around the circle, so _yellow_ is `60deg`, _green_ is `120deg`, _cyan_ is `180deg`, _blue_ is `240deg`, and _magenta_ is `300deg`.
+In the sRGB color space, for [`hsl()`](/en-US/docs/Web/CSS/color_value/hsl) and [`hwb()`](/en-US/docs/Web/CSS/color_value/hwb), _red_ is `0deg`, _yellow_ is `60deg`, _green_ is `120deg`, _cyan_ is `180deg`, _blue_ is `240deg`, and _magenta_ is `300deg`.
 
 ## Syntax
 
@@ -54,8 +54,8 @@ As an `<angle>` is periodic, normalized to the range of `0deg` to `360deg`. It i
 The following example shows the effect of changing the `hue` value of the [`hsl()`](/en-US/docs/Web/CSS/color_value/hsl) functional notation on a color.
 
 ```html
-<input type="range" min="0" max="360" value="0" step="0.1" id="hue-slider" />
-<p>Hue: <span id="hue-value">0</span></p>
+<input type="range" min="0" max="360" value="0" id="hue-slider" />
+<p>Hue: <span id="hue-value">0deg</span></p>
 <div id="box"></div>
 ```
 
@@ -65,6 +65,14 @@ div {
   height: 100px;
   margin: 10px;
   border: 1px solid black;
+}
+p {
+  font-family: sans-serif;
+}
+span {
+  font-family: monospace;
+  background: rgb(0 0 0 / 0.1);
+  padding: 3px;
 }
 #hue-slider {
   width: 90%;
@@ -82,7 +90,7 @@ const hue = document.querySelector("#hue-slider");
 const box = document.querySelector("#box");
 hue.addEventListener("input", () => {
   box.style.backgroundColor = `hsl(${hue.value} 100% 50%)`;
-  document.querySelector("#hue-value").textContent = hue.value;
+  document.querySelector("#hue-value").textContent = `${hue.value}deg`;
 });
 ```
 
