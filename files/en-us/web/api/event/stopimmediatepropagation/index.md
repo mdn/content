@@ -8,13 +8,9 @@ browser-compat: api.Event.stopImmediatePropagation
 {{APIRef("DOM")}}
 
 The **`stopImmediatePropagation()`** method of the
-{{domxref("Event")}} interface prevents other listeners of the same event from being
-called.
+{{domxref("Event")}} interface prevents other listeners of the same event from being called.
 
-If several listeners are attached to the same element for the same event type, they are
-called in the order in which they were added. If `stopImmediatePropagation()`
-is invoked during one such call, no remaining listeners will be called, either on that
-element or any other element.
+If several listeners are attached to the same element for the same event type, they are called in the order in which they were added. If `stopImmediatePropagation()` is invoked during one such call, no remaining listeners will be called, either on that element or any other element.
 
 ## Syntax
 
@@ -22,96 +18,141 @@ element or any other element.
 event.stopImmediatePropagation()
 ```
 
+## Examples
+
 ### Comparing event stopping functions
 
-The example below has three buttons inside of three nested divs. Each button has two
-event listeners registered for click events, and each div has an event listener, also
-registered for click events. The top button allows normal event propagation while the
-middle button calls `stopPropagation()` in its first callback function and the bottom
-button calls `stopImmediatePropagation()` in its first callback function.
+The example below has three buttons inside of three nested divs. Each button has three event listeners registered for click events, and each div has an event listener, also registered for click events.
+
+- The top button allows normal event propagation.
+- The middle button calls `stopPropagation()` in its first event handler.
+- The bottom button calls `stopImmediatePropagation()` in its first event handler.
 
 #### HTML
 
 ```html
-  <h2>Click on the buttons</h2>
-  <div id="div1">div1<br><div id="div2">div2<br><div id="div3">div3<br>
-    <button id="allow">allow propagation</button><br>
-    <button id="stop">stop propagation</button><br>
-    <button id="istop">immediate stop propagation</button>
-  </div></div></div>
-  <div id="output"></div>
-  <script>
-    const outElem = document.getElementById("output");
-
-    /* Clear the output */
-    document.addEventListener("click", () => outElem.innerHTML = "", true);
-
-    [1, 2, 3].forEach(value => {
-      const id = "div" + value;
-      document.getElementById(id).addEventListener("click", () =>
-          outElem.innerHTML += "click event processed on " + id + "<br>"
-          );
-    });
-
-    const allowElem = document.getElementById("allow");
-    allowElem.addEventListener("click", () =>
-        outElem.innerHTML += "click event 1 processed on " +
-            "\"allow propagation\" button <br>"
-        );
-    allowElem.addEventListener("click", () =>
-        outElem.innerHTML += "click event 2 processed on " +
-            "\"allow propagation\" button <br>"
-        );
-
-    const stopElem = document.getElementById("stop");
-    stopElem.addEventListener("click",
-        evt => {
-          outElem.innerHTML += "click event 1 processed on " +
-              "\"stop propagation\" button<br>" +
-              "&nbsp;&nbsp;calling stopPropagation()<br>";
-          evt.stopPropagation();
-        });
-    stopElem.addEventListener("click", () =>
-        outElem.innerHTML += "click event 2 processed on " +
-            "\"stop propagation\" button <br>"
-        );
-
-    const istopElem = document.getElementById("istop");
-    istopElem.addEventListener("click",
-        evt => {
-          outElem.innerHTML += "click event 1 processed on " +
-              "\"immediate stop propagation\" button<br>" +
-              "&nbsp;&nbsp;calling stopImmediatePropagation()<br>";
-          evt.stopImmediatePropagation();
-        });
-    istopElem.addEventListener("click", () =>
-        outElem.innerHTML += "click event 2 processed on " +
-            "\"immediate stop propagation\" button <br>"
-        );
-
-  </script>
+<h2>Click on the buttons</h2>
+<div>
+  outer div<br />
+  <div>
+    middle div<br />
+    <div>
+      inner div<br />
+      <button id="allow">allow propagation</button><br />
+      <button id="stop">stop propagation</button><br />
+      <button id="immediate-stop">immediate stop propagation</button>
+    </div>
+  </div>
+</div>
+<pre></pre>
 ```
 
+#### CSS
+
 ```css
-    #div1, #div2, #div3 {
-      display: inline-block;
-      padding: 20px;
-      border: 2px solid #000;
-    }
-    button {
-      width: 100px;
-      color: #008;
-      padding: 5px;
-      margin: 5px;
-    }
+div {
+  display: inline-block;
+  padding: 20px;
+  background-color: #fff;
+  border: 2px solid #000;
+}
+
+button {
+  width: 100px;
+  color: #008;
+  padding: 5px;
+  margin: 5px;
+  background-color: #fff;
+  border: 2px solid #000;
+  border-radius: 30px;
+}
+
+@keyframes flash {
+  50% {
+    background-color: #0b1;
+  }
+}
+```
+
+#### JavaScript
+
+```js
+function addButtonActions(id, isImmediateStop) {
+  function addButtonElementAction(elem, indexAction, isImmediateStop) {
+    /* 2023-03-22: This value determines the time in ms for the animation
+     * to be reset before it is applied again. For small values, reapplying
+     * the animation sometimes fails. 12 ms empirically has been found to
+     * be a value that is large enough for animation to be reliable in
+     * FF and Chrome */
+    const resetOffset = 25;
+
+    elem.addEventListener("click", (evt) => {
+      /* Special processing for any propagation stopping */
+      if (isImmediateStop !== null) {
+        if (isImmediateStop) {
+          evt.stopImmediatePropagation();
+          outElem.textContent += `Event handler for event ${indexAction} calling stopImmediatePropagation()\n`;
+        } else {
+          evt.stopPropagation();
+          outElem.textContent += `Event handler for event ${indexAction} calling stopPropagation()\n`;
+        }
+      }
+
+      setTimeout(() => {
+        elem.style.animation = `flash ${animationTime}ms 2 alternate ease-in`;
+        outElem.textContent += `Click event ${indexAction} processed on "${elem.textContent}" button\n`;
+      }, delayTotal);
+      delayTotal += animationTime;
+      setTimeout(() => {
+        elem.style.animation = "";
+      }, delayTotal - resetOffset);
+    });
+  } // end of function addButtonElementAction
+
+  const elem = document.getElementById(id);
+  addButtonElementAction(elem, 1, isImmediateStop);
+  addButtonElementAction(elem, 2, null);
+  addButtonElementAction(elem, 3, null);
+} // end of function addButtonActions
+
+const animationTime = 500; // animation duration in ms
+let delayTotal;
+const outElem = document.querySelector("pre");
+
+/* Clear the output */
+document.addEventListener(
+  "click",
+  () => {
+    outElem.textContent = "";
+    delayTotal = animationTime;
+  },
+  true
+);
+
+/* Set event listeners for the divs */
+document.querySelectorAll("div").forEach((elem) => {
+  elem.addEventListener("click", () => {
+    setTimeout(() => {
+      elem.style.animation = `flash ${animationTime}ms 2 alternate ease-out`;
+      outElem.textContent += `Click event processed on ${elem.firstChild.data}\n`;
+    }, delayTotal);
+    delayTotal += animationTime;
+    setTimeout(
+      () => (elem.style.animation = ""), // allow next animation
+      delayTotal
+    );
+  });
+});
+
+/* Set event listeners for the buttons */
+addButtonActions("allow", null);
+addButtonActions("stop", false);
+addButtonActions("immediate-stop", true);
 ```
 
 #### Result
 
-The click callback functions display messages when they are called.
-It is seen that calling `stopPropagation()` allows the other callback
-function registered for clicks on the button to execute while calling
-`stopImmediatePropagation()` does not.
+Each click event handler displays a message when it is called. It also causes the background of its owning element to briefly flash green. You will see that calling `stopPropagation()` allows the other event handlers registered for clicks on the button to execute while calling `stopImmediatePropagation()` does not.
 
 {{ EmbedLiveSample("Comparing event stopping functions", 500, 550) }}
 
