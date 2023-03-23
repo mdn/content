@@ -3,10 +3,11 @@ title: Window.captureEvents()
 slug: Web/API/Window/captureEvents
 page-type: web-api-instance-method
 status:
-  - non-standard
+  - deprecated
+browser-compat: api.Window.captureEvents
 ---
 
-{{ ApiRef() }} {{Deprecated_Header}} {{Non-standard_header}}
+{{ ApiRef() }} {{Deprecated_Header}}
 
 The **`Window.captureEvents()`** method registers the window to
 capture all events of the specified type.
@@ -75,4 +76,8 @@ Note that you can pass a list of events to this method using the following synta
 
 ## Specifications
 
-This is not part of any specification.
+{{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}
