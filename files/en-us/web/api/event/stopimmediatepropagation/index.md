@@ -134,7 +134,7 @@ document.querySelectorAll("div").forEach((elem) => {
   elem.addEventListener("click", () => {
     setTimeout(() => {
       elem.style.animation = `flash ${animationTime}ms 2 alternate ease-out`;
-      outElem.textContent += `Click event processed on ${elem.firstChild.data}\n`;
+      outElem.textContent += `Click event processed on ${elem.firstChild.data.trim()}\n`;
     }, delayTotal);
     delayTotal += animationTime;
     setTimeout(
