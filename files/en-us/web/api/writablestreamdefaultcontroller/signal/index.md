@@ -15,7 +15,7 @@ An {{domxref("AbortSignal")}} object.
 
 ## Examples
 
-## Aborting a long write operation
+### Aborting a long write operation
 
 In this example, we simulate a slow operation using a local sink: We do nothing when somedata is written but to wait for a second. This gives us enough time to call the `writer.abort()` method and to immediately reject the promise.
 
