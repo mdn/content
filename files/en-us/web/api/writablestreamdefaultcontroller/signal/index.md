@@ -42,7 +42,7 @@ writer.write("Lorem ipsum test data");
 await writer.abort("Manual abort!");
 ```
 
-## Transferring the `AbortSignal` to the underlying layer
+### Transferring the `AbortSignal` to the underlying layer
 
 In this example, we use the [Fetch API](/en-US/docs/Web/API/Fetch_API) to actually send the message to a server. The Fetch API also support {{domxref("AbortSignal")}}: It is possible to use the same object for both the `fetch` method and the {{domxref("WritableStreamDefaultController")}}.
 
