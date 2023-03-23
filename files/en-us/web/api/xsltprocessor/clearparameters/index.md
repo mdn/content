@@ -9,7 +9,6 @@ browser-compat: api.XSLTProcessor.clearParameters
 
 The `clearParameters()` method of the {{domxref("XSLTProcessor")}} interface removes all parameters (`<xsl:param>`) and their values from the stylesheet imported in the processor. The `XSLTProcessor` will then use the default values specified in the XSLT stylesheet.
 
-
 ## Syntax
 
 ```js-nolint
