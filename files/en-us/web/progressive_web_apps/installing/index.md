@@ -57,7 +57,9 @@ To uninstall a PWA, open the PWA. In the top right corner of the opened app, the
 
 ![App settings in MS Edge with an uninstall link](remove.jpg)
 
-In Edge, navigate to `edge://apps`, and use the `...` > `🗑️ Uninstall` menu on the app list.
+Selecting app setting from the opened drop down menu in Edge, opened the MS Edge browser `edge://apps` tab. There we are provided a list of installed applications with options for each, including `🗑️ Uninstall`.
+
+Confirm the uninstall. That's it!
 
 ## See also
 
