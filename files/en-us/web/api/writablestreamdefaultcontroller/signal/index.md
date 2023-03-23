@@ -1,5 +1,5 @@
 ---
-title: WritableStreamDefaultWriterController.signal
+title: WritableStreamDefaultController.signal
 slug: Web/API/WritableStreamDefaultWriterController/signal
 page-type: web-api-instance-property
 browser-compat: api.WritableStreamDefaultWriterController.signal
