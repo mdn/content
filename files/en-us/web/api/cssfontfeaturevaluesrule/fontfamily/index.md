@@ -2,7 +2,7 @@
 title: CSSFontFeatureValuesRule.fontFamily
 slug: Web/API/CSSFontFeatureValuesRule/fontFamily
 page-type: web-api-instance-property
-browser-compat: api.CSSCFontFeatureValuesRule.fontFamily
+browser-compat: api.CSSFontFeatureValuesRule.fontFamily
 ---
 
 {{ APIRef("CSSOM") }}
