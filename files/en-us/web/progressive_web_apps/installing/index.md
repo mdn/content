@@ -5,29 +5,29 @@ slug: Web/Progressive_web_apps/Installing
 
 {{QuickLinksWithSubpages("/en-US/docs/Web/Progressive_web_apps/")}}
 
-Browsers have always enabled saving shortcuts to websites within the browser itself. Smartphones enhanced this capablity by enabling saving these bookmarks to the homescreen with an icon launching the site in the operating systems default browser. With [Progressive Web Applications (PWAs)](/en-us/docs/web/progressive_web_apps), web apps can be installed on (and uninstalled from) a user's device, fully integrating into the operating systems in a manner similar to any other native application. 
+Browsers have always enabled saving shortcuts to websites within the browser itself. Smartphones enhanced this capability by enabling saving bookmarks to the home screen with an icon launching the site in the operating system's default browser. With [Progressive Web Applications (PWAs)](/en-us/docs/web/progressive_web_apps), web apps can be installed on (and uninstalled from) a user's device, fully integrating into the operating systems like native applications.
 
-This guide is only about how you and your users can install and uninstall PWAs. There is an excellent [guide on makine PWAs installable](/en-US/docs/Web/Progressive_web_apps/guides/making_pwas_installable) for developers.
+This guide is only about how you and your users can install and uninstall PWAs. There is an excellent [guide on making PWAs installable](/en-US/docs/Web/Progressive_web_apps/guides/making_pwas_installable) for developers.
 
-First, let's discuss bookmarking add adding links to web sites on a device home screen
+First, let's discuss bookmarking add adding links to websites on a device's home screen
 
 ### Bookmarking websites
 
-All browsers have add to favorites bookmark functionality. A bookmark, or favorite, is a clickable short cut for a web page, enabling quick access to a web site without the user having to enter a URL or otherwise search for the content. Bookmarking is especially useful for long URLs and accessing frequently visited content that is not the site's homepage.
+All browsers have add-to-favorites bookmark functionality. A bookmark, or favorite, is a clickable shortcut for a web page, enabling quick access to a website without the user having to enter a URL or otherwise search for the content. Bookmarking is especially useful for long URLs and accessing frequently visited content that is not the site's homepage.
 
-All browsers enable users to view and manage their bookmarks, including renaming and deleting favorites. By default, the bookmark's display includes the text content of the bookmarked page's {{HTMLElement("title")}} element along with an icon consisting of the site's [favicon](/en-US/docs/Glossary/Favicon). 
+All browsers enable users to view and manage their bookmarks, including renaming and deleting favorites. By default, the bookmark's display includes the text content of the bookmarked page's {{HTMLElement("title")}} element along with an icon consisting of the site's [favicon](/en-US/docs/Glossary/Favicon).
 
-### Add to homescreen
+### Add to home screen
 
-Smartphones, starting with the iPhone in 2007, added "Save to homescreen" functionality. This feature is the same as a bookmark, but instead of adding the favicon and title of the page to the browser bookmarks menu, favoriting in this manner [adds an icon](/en-US/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML#adding_custom_icons_to_your_site) to the homescreen. 
+Smartphones, starting with the iPhone in 2007, added "Save to home screen" functionality. This feature is the same as a bookmark, but instead of adding the favicon and title of the page to the browser bookmarks menu, favoriting in this manner [adds an icon](/en-US/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML#adding_custom_icons_to_your_site) to the home screen.
 
-Adding to homescreen does not install the website on the device. Rather, it adds the developer defined icon to the homescreen, that, when clicked, opens the bookmarked link in the default browser. 
+Adding a site to the home screen does not install the website on the device. Rather, it adds the developer-defined icon to the home screen, that, when clicked, opens the bookmarked link in the default browser.
 
 ## Installing and uninstalling PWAs
 
-While installing a PWA only takes a couple of clicks, the result is much greater than just adding a icon'ed shortcut to a website. Installing a PWA actually installs the web application on the users device. This is a step, or several, beyond a link to the site provided via bookmarking or adding to homescreen. 
+While installing a PWA only takes a couple of clicks, the result is much greater than just adding an icon'ed shortcut to a website. Installing a PWA actually installs the web application on the user's device. This is a step, or several, beyond a link to the site provided via bookmarking or adding to the home screen.
 
-Depending on the PWA, device, and features of the operating system and browser, installing a PWA may mean installing an essentially fully featured application with operating system integration. This also means uninstalling a PWA is more than uninstalling a bookmark or icon. 
+Depending on the PWA, device, and features of the operating system and browser, installing a PWA may mean installing an essentially fully featured application with operating system integration. This also means uninstalling a PWA is more than uninstalling a bookmark or icon.
 
 ### Installing PWAs
 
@@ -39,10 +39,9 @@ When the user selects the icon, the browser displays a prompt asking if they wan
 
 When an installed PWA is launched, it may then manifest as in a chromeless view (without the full browser chrome) but it nevertheless is executing effectively as a tab within the browser.
 
-Installation is supported on all modern desktop and mobile devices. Whether the PWA can be installed by the browser on the operating system differs by browser / operating system combination. Most browsers support installing PWAs direction on all operating systems—Chrome OS, MacOS, Windows, Android, Linux, etc.—directly or when an extension is installed. Apple is unique when it comes to PWAs: PWAs can be installed on macOS from any browser **except** Safari. The opposite is true for iOS, where PWAs can **only** be installed in Safari.
+Installation is supported on all modern desktop and mobile devices. Whether the PWA can be installed by the browser on the operating system differs by browser / operating system combination. Most browsers support installing PWAs on all operating systems—Chrome OS, MacOS, Windows, Android, Linux, etc.—directly or when an extension is installed. Apple is unique when it comes to PWAs: PWAs can be installed on macOS from any browser **except** Safari. The opposite is true for iOS, where PWAs can **only** be installed in Safari.
 
 ## The installation user experience
-
 
 > **Note:** You can find out a lot more about Chrome install banners from the article [How to provide your own in-app installation experience](https://web.dev/customize-install/).
 
@@ -52,11 +51,11 @@ Regardless of which browser and device you're using, when you choose to add the 
 
 ![Screenshot of an Android home screen with the "Foxes" app displayed](a2hs-on-home-screen.png)
 
-When you tap the web app's icon on the home screen, it opens up in a full screen web environment, without the browser's UI around it.
+When you tap the web app's icon on the home screen, it opens up in a full-screen web environment, without the browser's UI around it.
 
 ### Uninstalling
 
-To uninstall a PWA, open the PWA. In the top right corner of the opened app, there will be an icon that must be expanded to see more tools. Click on the `Uninstall <app name>`. 
+To uninstall a PWA, open the PWA. In the top right corner of the opened app, there will be an icon that must be expanded to see more tools. Click on the `Uninstall <app name>`.
 
 In Edge, navigate to `edge://apps`, and use the `...` > `🗑️ Uninstall` menu on the app list.
 
