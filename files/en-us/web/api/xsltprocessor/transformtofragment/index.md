@@ -7,7 +7,7 @@ browser-compat: api.XSLTProcessor.transformToFragment
 
 {{APIRef("XSLT")}}
 
-The `transformToFragment()` method of the {{domxref("XSLTProcessor")}} interface transforms the {{DOMxRef("Node")}} source given in parameter using the XSLT stylesheet associated with `XSLTProcessor` with the {{domxref("XSLTProcessor.importStylesheet")}}.
+The `transformToFragment()` method of the {{domxref("XSLTProcessor")}} interface transforms a provided {{DOMxRef("Node")}} source to a {{domxref("DocumentFragment")}} using the XSLT stylesheet associated with the `XSLTProcessor`.
 
 ## Syntax
 
