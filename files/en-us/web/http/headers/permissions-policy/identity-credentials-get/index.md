@@ -1,13 +1,8 @@
 ---
 title: 'Permissions-Policy: identity-credentials-get'
 slug: Web/HTTP/Headers/Permissions-Policy/identity-credentials-get
-tags:
-  - Directive
-  - Permissions Policy
-  - Permissions-Policy
-  - HTTP
-  - Reference
-  - Experimental
+status:
+  - experimental
 browser-compat: http.headers.Permissions-Policy.identity-credentials-get
 ---
 
