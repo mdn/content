@@ -30,7 +30,7 @@ _Inherits methods from its ancestor {{domxref("CSSRule")}}._
 
 ## Examples
 
-This example uses the CSS found as an example on the {{cssxref("@font-palette-values")}} page. The first {{domxref("CSSRule")}} returned will be a `CSSFontFaceRule`.
+This example uses the same CSS as in the example on the {{cssxref("@font-palette-values")}} page. The first {{domxref("CSSRule")}} returned will be a `CSSFontFaceRule`.
 
 ```css
 @font-face {
