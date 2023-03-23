@@ -35,7 +35,7 @@ Trailer: Server-Timing
 Server-Timing: total;dur=123.4
 ```
 
-To calculate real server-side metrics, consult the documentation of your server-side CMS, framework, or programming language for how to measure performance within the backend application. If your server uses Node.js, the performance measurement APIs will look very familiar to the Performance API in browsers as the Node.js perf module is a of a subset of the W3C Web Performance APIs as well as additional APIs for Node.js-specific performance measurements. See the [Node.js performance documentation](https://nodejs.org/api/perf_hooks.html#performance-measurement-apis) for more information.
+To calculate real server-side metrics, consult the documentation of your server-side CMS, framework, or programming language for how to measure performance within the backend application. If your server uses Node.js, the performance measurement APIs will look very familiar to the Performance API in browsers as the Node.js performance module is a subset of the W3C Web Performance APIs as well as additional APIs for Node.js-specific performance measurements. See the [Node.js performance documentation] (https://nodejs.org/api/perf_hooks.html#performance-measurement-apis) for more information.
 
 Note that there is no clock synchronization between the server, the client and any intermediate proxies. This means that if your server sends timestamps or a `startTime` it might not meaningfully map to the {{domxref("PerformanceEntry.startTime", "startTime")}} of the clients timeline.
 
@@ -66,6 +66,6 @@ const observer = new PerformanceObserver((list) => {
 
 ## Privacy and security considerations
 
-The `Server-Timing` header may expose potentially sensitive application and infrastructure information. Consider to control which metrics are returned when and to whom on the server side. For example, you could only show metrics to authenticated users and nothing to the public.
+The `Server-Timing` header may expose potentially sensitive application and infrastructure information. Consider controlling which metrics are returned when and to whom on the server side. For example, you could only show metrics to authenticated users and nothing to the public.
 
 The `PerformanceServerTiming` interface is restricted to the same origin, but you can use the {{HTTPHeader("Timing-Allow-Origin")}} header to specify the domains that are allowed to access the server metrics. Also, note that this interface is only available in secure contexts (HTTPS) in some browsers.
