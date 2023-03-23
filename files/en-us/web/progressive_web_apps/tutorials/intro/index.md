@@ -1,6 +1,6 @@
 ---
 title: Creating your first PWA
-slug: Web/Progressive_web_apps/tutorials/intro
+slug: Web/Progressive_web_apps/Tutorials/Intro
 ---
 
 Progressive web applications, known as PWAs, are a way to build applications for all devices using the web technologies we all know and love: HTML, CSS, and JavaScript.
