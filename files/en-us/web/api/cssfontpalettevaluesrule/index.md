@@ -18,11 +18,11 @@ _Inherits properties from its ancestor {{domxref("CSSRule")}}._
 - {{domxref("CSSFontPaletteValuesRule.name")}} {{ReadOnlyInline}}
   - : A string with the name of the font palette.
 - {{domxref("CSSFontPaletteValuesRule.fontFamily")}} {{ReadOnlyInline}}
-  - : A string indicating which font families the rule has to be applied to.
+  - : A string indicating the font families on which the rule has to be applied.
 - {{domxref("CSSFontPaletteValuesRule.basePalette")}} {{ReadOnlyInline}}
   - : A string indicating the base palette associated with the rule.
 - {{domxref("CSSFontPaletteValuesRule.overrideColors")}} {{ReadOnlyInline}}
-  - : A string indicating which colors of the base palette are overwritten, and by what colors.
+  - : A string indicating the colors of the base palette that are overwritten and the new colors.
 
 ## Instance methods
 
