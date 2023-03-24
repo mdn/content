@@ -32,7 +32,7 @@ This technique is often used by sites that let you download executables, to ensu
 3. Run `sha256sum /path/to/the/file` in the terminal to generate your own code. If you are using a Mac you may have to [install it separately](https://unix.stackexchange.com/questions/426837/no-sha256sum-in-macos).
 4. Compare the two strings - they should match unless the file has been compromised.
 
-![Examples of SHA256 from the download for the software "Blender". These look like 32 hexadecimal numbers followed by a file name like "blender.zip"](blender-sha256-example.png)
+![Examples of SHA256 from the download for the software "Blender". These look like 64 hexadecimal digits followed by a file name like "blender.zip"](blender-sha256-example.png)
 
 The [`digest()`](/en-US/docs/Web/API/SubtleCrypto/digest) method of SubtleCrypto is useful for this. To generate a checksum of a file you can do it like so:
 
