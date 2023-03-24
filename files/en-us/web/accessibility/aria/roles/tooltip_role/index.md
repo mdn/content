@@ -26,7 +26,7 @@ The tooltip is not considered a popup in terms of the [`aria-haspopup`](/en-US/d
 
 Though a tooltip may appear and disappear, as its appearance is automatic and not intentionally controlled by the user, the [`aria-expanded`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-expanded) role is not supported.
 
-The accessible name of a tooltip can come from the contents, or from an [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label) or [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby).
+The accessible name of a tooltip can comes from the contents. While, in theory, they could come from an [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label) or [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby), these are only supported on interactive elements.
 
 ### Associated WAI-ARIA roles, states, and properties
 
@@ -95,6 +95,8 @@ The above hides the tooltip with CSS in the default state or if the hidetooltip 
 ## Accessibility Concerns
 
 If the information is important enough for a tooltip, isn't it important enough to always be visible?
+
+As content which appears on hover can be difficult or impossible to perceive if a user is required to keep their mouse pointer over the trigger, [WCAG 1.4.13](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background) states that content mad visible should be persistent, meaning it should does not disappear without user action. Tooltips fail this criteria
 
 ## Best Practices
 
