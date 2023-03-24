@@ -1,19 +1,6 @@
 ---
 title: The "codecs" parameter in common media types
 slug: Web/Media/Formats/codecs_parameter
-tags:
-  - Audio
-  - Codecs
-  - Containers
-  - MIME
-  - MIME Types
-  - Media
-  - Media Types
-  - Parameter
-  - Types
-  - Video
-  - Web
-  - formats
 ---
 
 {{QuickLinksWithSubpages("/en-US/docs/Web/Media")}}
@@ -151,7 +138,7 @@ This codec parameter string's components are described in more detail in the tab
       <td>
         The one-digit monochrome flag; if this is 0, the video includes the U and V planes in addition to the Y plane.
         Otherwise, the video data is entirely in the Y plane and is therefore monochromatic.
-        See {{SectionOnPage("/en-US/docs/Web/Media/Formats/Video_concepts", "YUV")}} for details on how the YUV color system works.
+        See [YUV](/en-US/docs/Web/Media/Formats/Video_concepts#yuv) for details on how the YUV color system works.
         The default value is 0 (not monochrome).
       </td>
     </tr>
@@ -277,9 +264,9 @@ Thus, the syntaxes for each of the supported codecs look like this:
   - : Where `oo` is the Object Type Indication value describing the contents of the media more precisely and `A` is the one-digit _audio_ OTI. The possible values for the OTI can be found on the MP4 Registration Authority web site's [Object Types page](https://mp4ra.org/#/object_types). For example, Opus audio in an MP4 file is `mp4a.ad`. For further details, see [MPEG-4 audio](#mpeg-4_audio).
 - `mp4v.oo[.V]` (MPEG-4 video)
   - : Here, `oo` is again the OTI describing the contents more precisely, while `V` is the one-digit _video_ OTI.
-- `avc1.oo[.PPCCLL]` (AVC video)
+- `avc1[.PPCCLL]` (AVC video)
 
-  - : `oo` is the OTI describing the contents, while `PPCCLL` is six hexadecimal digits specifying the profile number (`PP`), constraint set flags (`CC`), and level (`LL`). See [AVC profiles](#avc_profiles) for the possible values of `PP`.
+  - : `PPCCLL` are six hexadecimal digits specifying the profile number (`PP`), constraint set flags (`CC`), and level (`LL`). See [AVC profiles](#avc_profiles) for the possible values of `PP`.
 
     The constraint set flags byte is comprised of one-bit Boolean flags, with the most significant bit being referred to as flag 0 (or `constraint_set0_flag`, in some resources), and each successive bit being numbered one higher. Currently, only flags 0 through 2 are used; the other five bits _must_ be zero. The meanings of the flags vary depending on the profile being used.
 
@@ -730,7 +717,7 @@ The first four components are required; everything from `CC` (chroma subsampling
       <td>
         <p>
           A two-digit value indicating which chroma subsampling format to use.
-          The following table lists permitted values; see {{SectionOnPage("en-US/docs/Web/Media/Formats/Video_concepts", "Chroma subsampling")}} for additional information about this topic and others.
+          The following table lists permitted values; see [Chroma subsampling](/en-US/docs/Web/Media/Formats/Video_concepts#chroma_subsampling) in our "Digital video concepts" guide for additional information about this topic and others.
         </p>
         <table class="standard-table">
           <caption>

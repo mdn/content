@@ -1,25 +1,11 @@
 ---
 title: Grids
 slug: Learn/CSS/CSS_layout/Grids
-tags:
-  - Article
-  - Beginner
-  - CSS
-  - CSS Grids
-  - CodingScripting
-  - Grids
-  - Guide
-  - Layout
-  - Learn
-  - Tutorial
-  - grid design
-  - grid framework
-  - grid system
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/CSS_layout/Flexbox", "Learn/CSS/CSS_layout/Floats", "Learn/CSS/CSS_layout")}}
 
-CSS Grid Layout is a two-dimensional layout system for the web. It lets you lay content out in rows and columns. It has many features that make building complex layouts straightforward. This article will explain all you need to know to get started with page layout.
+CSS Grid Layout is a two-dimensional layout system for the web. It lets you lay content out in rows and columns. It has many features that make building complex layouts straightforward. This article will explain all you need to know to get started with grid layout.
 
 <table>
   <tbody>
@@ -117,9 +103,9 @@ body {
 
 ### Flexible grids with the fr unit
 
-In addition to creating grids using lengths and percentages, we can use the `fr` unit to flexibly size grid rows and columns. This unit represents one fraction of the available space in the grid container.
+In addition to creating grids using lengths and percentages, we can use `fr`. The `fr` unit represents one fraction of the available space in the grid container to flexibly size grid rows and columns.
 
-Change your track listing to the following definition, creating three `1fr` tracks.
+Change your track listing to the following definition, creating three `1fr` tracks:
 
 ```css
 .container {
@@ -128,7 +114,7 @@ Change your track listing to the following definition, creating three `1fr` trac
 }
 ```
 
-You should now see that you have flexible tracks. The `fr` unit distributes space proportionally. So if you specify different positive values for your tracks like so:
+You now have flexible tracks. The `fr` unit distributes space proportionally. You can specify different positive values for your tracks like so:
 
 ```css
 .container {
@@ -137,7 +123,7 @@ You should now see that you have flexible tracks. The `fr` unit distributes spac
 }
 ```
 
-The first track now gets `2fr` of the available space and the other two tracks get `1fr`, making the first track larger. You can mix `fr` units with fixed length units — in such a case the space needed for the fixed tracks is used up first; the remaining space is then distributed to the other tracks.
+The first track gets `2fr` of the available space and the other two tracks get `1fr`, making the first track larger. You can mix `fr` units with fixed length units. In this case, the space needed for the fixed tracks is used up first before the remaining space is distributed to the other tracks.
 
 ```css hidden
 body {
@@ -173,7 +159,11 @@ body {
 
 ### Gaps between tracks
 
-To create gaps between tracks we use the properties {{cssxref("column-gap")}} for gaps between columns, {{cssxref("row-gap")}} for gaps between rows, and {{cssxref("gap")}} as a shorthand for both.
+To create gaps between tracks, we use the properties:
+
+- {{cssxref("column-gap")}} for gaps between columns
+- {{cssxref("row-gap")}} for gaps between rows
+- {{cssxref("gap")}} as a shorthand for both
 
 ```css
 .container {
@@ -215,7 +205,7 @@ body {
 
 {{ EmbedLiveSample('Gaps_between_tracks', '100%', 400) }}
 
-> **Note:** The `gap` properties (`column-gap`, `row-gap` and `gap`) used to be prefixed by `grid-`, but this has been changed in the spec in order to make them usable in multiple layout methods. The prefixed versions will be maintained as an alias, so they'll be safe to use for some time. To be on the safe side, you could double up and add both properties to make your code more bulletproof:
+> **Note:** The `gap` properties (`column-gap`, `row-gap` and `gap`) used to be prefixed by `grid-`. The spec has changed but the prefixed versions will be maintained as an alias. To be on the safe side and make your code more bulletproof, you can add both properties:
 >
 > ```css
 > .container {
@@ -243,7 +233,12 @@ You'll now get three `1fr` tracks just as before. The first value passed to the 
 
 ### The implicit and explicit grid
 
-We've only specified column tracks so far, yet rows are being created to hold our content. This is an example of the _explicit_ versus the _implicit_ grid. The explicit grid is the one that you create using `grid-template-columns` or `grid-template-rows`. The implicit grid extends the defined explicit grid when content is placed outside of that grid, such as into our rows by drawing additional grid lines.
+We've only specified column tracks so far, yet rows are being created to hold our content. This is an example of the _explicit_ versus the _implicit_ grid.
+
+The difference:
+
+- Explicit grid: Created using `grid-template-columns` or `grid-template-rows`.
+- Implicit grid: Extends the defined explicit grid when content is placed outside of that grid, such as into our rows by drawing additional grid lines.
 
 By default, tracks created in the implicit grid are `auto` sized, which in general means that they're large enough to accommodate their content. If you wish to give implicit grid tracks a size, you can use the {{cssxref("grid-auto-rows")}} and {{cssxref("grid-auto-columns")}} properties. If you add `grid-auto-rows` with a value of `100px` to your CSS, you'll see that those created rows are now 100 pixels tall.
 
@@ -685,18 +680,3 @@ In this overview, we've toured the main features of CSS Grid Layout. You should 
 - [Grid Garden](https://cssgridgarden.com/) — an educational game to learn and better understand the basics of Grid
 
 {{PreviousMenuNext("Learn/CSS/CSS_layout/Flexbox", "Learn/CSS/CSS_layout/Floats", "Learn/CSS/CSS_layout")}}
-
-## In this module
-
-- [Introduction to CSS layout](/en-US/docs/Learn/CSS/CSS_layout/Introduction)
-- [Normal flow](/en-US/docs/Learn/CSS/CSS_layout/Normal_Flow)
-- [Flexbox](/en-US/docs/Learn/CSS/CSS_layout/Flexbox)
-- [Grid](/en-US/docs/Learn/CSS/CSS_layout/Grids)
-- [Floats](/en-US/docs/Learn/CSS/CSS_layout/Floats)
-- [Positioning](/en-US/docs/Learn/CSS/CSS_layout/Positioning)
-- [Multiple-column layout](/en-US/docs/Learn/CSS/CSS_layout/Multiple-column_Layout)
-- [Responsive design](/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design)
-- [Beginner's guide to media queries](/en-US/docs/Learn/CSS/CSS_layout/Media_queries)
-- [Legacy layout methods](/en-US/docs/Learn/CSS/CSS_layout/Legacy_Layout_Methods)
-- [Supporting older browsers](/en-US/docs/Learn/CSS/CSS_layout/Supporting_Older_Browsers)
-- [Fundamental layout comprehension](/en-US/docs/Learn/CSS/CSS_layout/Fundamental_Layout_Comprehension)

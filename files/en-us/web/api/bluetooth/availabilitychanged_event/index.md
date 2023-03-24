@@ -2,13 +2,8 @@
 title: "Bluetooth: availabilitychanged event"
 slug: Web/API/Bluetooth/availabilitychanged_event
 page-type: web-api-event
-tags:
-  - API
-  - Bluetooth
-  - Web Bluetooth API
-  - Event
-  - Reference
-  - Experimental
+status:
+  - experimental
 browser-compat: api.Bluetooth.availabilitychanged_event
 ---
 

@@ -1,12 +1,6 @@
 ---
 title: "ARIA: section role"
 slug: Web/Accessibility/ARIA/Roles/section_role
-tags:
-  - Accessibility
-  - ARIA
-  - roles
-  - Reference
-  - ARIA roles
 spec-urls: https://w3c.github.io/aria/#section
 ---
 

@@ -2,11 +2,6 @@
 title: Unary plus (+)
 slug: Web/JavaScript/Reference/Operators/Unary_plus
 page-type: javascript-operator
-tags:
-  - JavaScript
-  - Language feature
-  - Operator
-  - Reference
 browser-compat: javascript.operators.unary_plus
 ---
 
@@ -54,6 +49,7 @@ console.log(+y);
 +true  // 1
 +false // 0
 +null  // 0
++[]    // 0
 +function (val) { return val; } // NaN
 +1n    // throws TypeError: Cannot convert BigInt value to number
 ```

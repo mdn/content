@@ -1,9 +1,7 @@
 ---
 title: Example extensions
 slug: Mozilla/Add-ons/WebExtensions/Examples
-tags:
-  - Interface
-  - WebExtensions
+page-type: guide
 ---
 
 {{AddonSidebar}}

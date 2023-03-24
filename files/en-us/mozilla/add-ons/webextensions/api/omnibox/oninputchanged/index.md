@@ -1,15 +1,7 @@
 ---
 title: omnibox.onInputChanged
 slug: Mozilla/Add-ons/WebExtensions/API/omnibox/onInputChanged
-tags:
-  - API
-  - Add-ons
-  - Event
-  - Extensions
-  - Reference
-  - WebExtensions
-  - omnibox
-  - onInputChanged
+page-type: webextension-api-event
 browser-compat: webextensions.api.omnibox.onInputChanged
 ---
 

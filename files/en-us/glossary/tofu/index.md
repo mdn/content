@@ -1,10 +1,7 @@
 ---
 title: TOFU
 slug: Glossary/TOFU
-tags:
-  - HTTP
-  - SSH
-  - Security
+page-type: glossary-definition
 ---
 
 **Trust On First Use** **(TOFU**) is a security model in which a client needs to create a trust relationship with an unknown server. To do that, clients will look for identifiers (for example public keys) stored locally. If an identifier is found, the client can establish the connection. If no identifier is found, the client can prompt the user to determine if the client should trust the identifier.

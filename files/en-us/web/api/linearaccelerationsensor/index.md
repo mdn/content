@@ -2,17 +2,6 @@
 title: LinearAccelerationSensor
 slug: Web/API/LinearAccelerationSensor
 page-type: web-api-interface
-tags:
-  - API
-  - Accelerometer
-  - Accelerometer API
-  - Generic Sensor API
-  - Interface
-  - LinearAccelerationSensor
-  - Reference
-  - Sensor
-  - Sensor APIs
-  - Sensors
 browser-compat: api.LinearAccelerationSensor
 ---
 
@@ -46,9 +35,9 @@ _`LinearAccelerationSensor` doesn't have own events. However, it inherits events
 Linear acceleration is typically read in the {{domxref('Sensor.reading_event', 'reading')}} event callback. In the example below this occurs sixty times a second.
 
 ```js
-let laSensor = new LinearAccelerationSensor({frequency: 60});
+let laSensor = new LinearAccelerationSensor({ frequency: 60 });
 
-laSensor.addEventListener('reading', (e) => {
+laSensor.addEventListener("reading", (e) => {
   console.log(`Linear acceleration along the X-axis ${laSensor.x}`);
   console.log(`Linear acceleration along the Y-axis ${laSensor.y}`);
   console.log(`Linear acceleration along the Z-axis ${laSensor.z}`);

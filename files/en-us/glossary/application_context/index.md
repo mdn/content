@@ -1,8 +1,7 @@
 ---
 title: Application Context
 slug: Glossary/Application_context
-tags:
-  - CodingScripting
+page-type: glossary-definition
 ---
 
 An **application context** is a top-level [browsing context](/en-US/docs/Glossary/Browsing_context) that has a [manifest](/en-US/docs/Web/Manifest) applied to it.

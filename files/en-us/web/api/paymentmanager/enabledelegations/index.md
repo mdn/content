@@ -2,16 +2,13 @@
 title: PaymentManager.enableDelegations()
 slug: Web/API/PaymentManager/enableDelegations
 page-type: web-api-instance-method
-tags:
-  - API
-  - enableDelegations
-  - Experimental
-  - Method
-  - Reference
+status:
+  - experimental
+  - non-standard
 browser-compat: api.PaymentManager.enableDelegations
 ---
 
-{{APIRef("Payment Handler API")}}{{SeeCompatTable}}
+{{APIRef("Payment Handler API")}}{{SeeCompatTable}}{{Non-standard_header}}
 
 The **`enableDelegations()`** method of the {{domxref("PaymentManager")}} interface delegates responsibility for providing various parts of the required payment information to the payment app rather than collecting it from the browser (for example, via autofill).
 
@@ -41,23 +38,22 @@ enableDelegations(delegations)
 
 ### Return value
 
-A {{domxref("Promise")}} that resolves with a value of `undefined`.
+A {{jsxref("Promise")}} that resolves with a value of `undefined`.
 
 ## Examples
 
 ```js
-navigator.serviceWorker.register("serviceworker.js")
-  .then(registration => {
-    registration.paymentManager.userHint = "Card number should be 16 digits";
+navigator.serviceWorker.register("serviceworker.js").then((registration) => {
+  registration.paymentManager.userHint = "Card number should be 16 digits";
 
-    registration.paymentManager.enableDelegations(['shippingAddress', 'payerName']) 
-      .then(() => {
-          // ...
-      });
+  registration.paymentManager
+    .enableDelegations(["shippingAddress", "payerName"])
+    .then(() => {
+      // ...
+    });
 
-    // ...
-
-  });
+  // ...
+});
 ```
 
 ## Specifications

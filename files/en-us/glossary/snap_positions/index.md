@@ -1,8 +1,7 @@
 ---
 title: Snap positions
 slug: Glossary/Snap_positions
-tags:
-  - snap positions
+page-type: glossary-definition
 ---
 
 Snap positions are points where the [scrollport](/en-US/docs/Glossary/Scrollport) stops moving after the scrolling operation completes. Setting up snap positions allows to create a scrolling experience of paging through content instead of needing to drag content into view.

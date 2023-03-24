@@ -1,9 +1,6 @@
 ---
 title: How to implement a promise-based API
 slug: Learn/JavaScript/Asynchronous/Implementing_a_promise-based_API
-tags:
-  - JavaScript
-  - Learn
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Asynchronous/Promises", "Learn/JavaScript/Asynchronous/Introducing_workers", "Learn/JavaScript/Asynchronous")}}
@@ -217,11 +214,3 @@ button.addEventListener('click', async () => {
 - [Using promises](/en-US/docs/Web/JavaScript/Guide/Using_promises)
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Asynchronous/Promises", "Learn/JavaScript/Asynchronous/Introducing_workers", "Learn/JavaScript/Asynchronous")}}
-
-## In this module
-
-- [Introducing asynchronous JavaScript](/en-US/docs/Learn/JavaScript/Asynchronous/Introducing)
-- [How to use promises](/en-US/docs/Learn/JavaScript/Asynchronous/Promises)
-- **Implementing a promise-based API**
-- [Introducing workers](/en-US/docs/Learn/JavaScript/Asynchronous/Introducing_workers)
-- [Assessment: sequencing animations](/en-US/docs/Learn/JavaScript/Asynchronous/Sequencing_animations)

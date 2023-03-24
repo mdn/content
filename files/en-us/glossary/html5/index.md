@@ -1,10 +1,7 @@
 ---
 title: HTML5
 slug: Glossary/HTML5
-tags:
-  - CodingScripting
-  - HTML
-  - Markup
+page-type: glossary-definition
 ---
 
 The term HTML5 is essentially a buzzword that refers to a set of modern web technologies. This includes the {{Glossary("HTML")}} Living Standard, along with {{glossary("JavaScript")}} {{glossary("API","APIs")}} to enhance storage, multimedia, and hardware access.

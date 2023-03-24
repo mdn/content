@@ -2,13 +2,6 @@
 title: Window.location
 slug: Web/API/Window/location
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTML
-  - NeedsExample
-  - Property
-  - Reference
-  - Window
 browser-compat: api.Window.location
 ---
 
@@ -72,9 +65,14 @@ function reloadPageWithHash() {
 
 ```js
 function showLoc() {
-  const logLines = ["Property (Typeof): Value", `location (${typeof location}): ${location}`];
+  const logLines = [
+    "Property (Typeof): Value",
+    `location (${typeof location}): ${location}`,
+  ];
   for (const prop in location) {
-    logLines.push(`${prop} (${typeof location[prop]}): ${location[prop] || "n/a"}`);
+    logLines.push(
+      `${prop} (${typeof location[prop]}): ${location[prop] || "n/a"}`
+    );
   }
   alert(logLines.join("\n"));
 }
@@ -402,8 +400,12 @@ const showBookmark = (() => {
       return;
     }
     _isBot = true;
-    document.documentElement.scrollTop = Math.round(_scrollY + (_nodeY - _scrollY) * _itFrame / frames);
-    document.documentElement.scrollLeft = Math.round(_scrollX + (_nodeX - _scrollX) * _itFrame / frames);
+    document.documentElement.scrollTop = Math.round(
+      _scrollY + ((_nodeY - _scrollY) * _itFrame) / frames
+    );
+    document.documentElement.scrollLeft = Math.round(
+      _scrollX + ((_nodeX - _scrollX) * _itFrame) / frames
+    );
     if (_useHash && _itFrame === frames) {
       location.hash = _bookMark;
     }

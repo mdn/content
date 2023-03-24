@@ -1,11 +1,6 @@
 ---
 title: Transforming XML with XSLT
 slug: Web/XSLT/Transforming_XML_with_XSLT
-tags:
-  - NeedsMigration
-  - Transforming_XML_with_XSLT
-  - XML
-  - XSLT
 ---
 
 {{XSLTRef}}
@@ -132,7 +127,7 @@ Our focus here is on the second type of stylesheet that Gecko supports: the XSLT
 
   - [Websites](/en-US/docs/Web/XSLT/Transforming_XML_with_XSLT/For_Further_Reading#websites)
   - [Articles](/en-US/docs/Web/XSLT/Transforming_XML_with_XSLT/For_Further_Reading#articles)
-  - [Tutorials/Examples](/en-US/docs/Web/XSLT/Transforming_XML_with_XSLT/For_Further_Reading#tutorials.2fexamples)
+  - [Tutorials/Examples](/en-US/docs/Web/XSLT/Transforming_XML_with_XSLT/For_Further_Reading#tutorialsexamples)
   - [Other](/en-US/docs/Web/XSLT/Transforming_XML_with_XSLT/For_Further_Reading#other)
 
 ## Original Document Information

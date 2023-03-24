@@ -1,12 +1,6 @@
 ---
-title: 'Referer header: privacy and security concerns'
+title: "Referer header: privacy and security concerns"
 slug: Web/Security/Referer_header:_privacy_and_security_concerns
-tags:
-  - Privacy
-  - Referrer Policy
-  - Security
-  - referer
-  - referrer
 ---
 
 {{QuickLinksWithSubpages("/en-US/docs/Web/Security")}}
@@ -35,8 +29,8 @@ You can also mitigate such risks using:
 
 - The {{httpheader("Referrer-Policy")}} header on your server to control what information is sent through the {{httpheader("Referer")}} header. For example, a directive of `no-referrer` would omit the Referer header entirely.
 - The `referrerpolicy` attribute on HTML elements that are in danger of leaking such information (such as {{HTMLElement("img")}} and {{HTMLElement("a")}}). This can for example be set to `no-referrer` to stop the `Referer` header being sent altogether.
-- The `rel` attribute set to `noreferrer` on HTML elements that are in danger of leaking such information (such as {{HTMLElement("img")}} and {{HTMLElement("a")}}). See [Link types](/en-US/docs/Web/HTML/Link_types) and search for `noreferrer` for more information.
-- A {{HTMLElement("meta")}} element with a [name](/en-US/docs/Web/HTML/Element/meta#attr-name) of `referrer` and the content set to `no-referrer` to disable the Referer header for the whole document. See [Referrer-Policy Integration with HTML](/en-US/docs/Web/HTTP/Headers/Referrer-Policy#integration_with_html).
+- The [`rel`](/en-US/docs/Web/HTML/Attributes/rel) attribute set to [`noreferrer`](/en-US/docs/Web/HTML/Attributes/rel/noreferrer) on HTML elements that are in danger of leaking such information (such as {{HTMLElement("img")}} and {{HTMLElement("a")}}).
+- A {{HTMLElement("meta")}} element with a [name](/en-US/docs/Web/HTML/Element/meta#name) of `referrer` and the content set to `no-referrer` to disable the Referer header for the whole document. See [Referrer-Policy Integration with HTML](/en-US/docs/Web/HTTP/Headers/Referrer-Policy#integration_with_html).
 - The [Exit page](https://geekthis.net/post/hide-http-referer-headers/#exit-page-redirect) technique.
 
 Security-conscious server-side frameworks tend to have built in mitigations for such problems, for example:

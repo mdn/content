@@ -2,14 +2,6 @@
 title: Array.prototype.sort()
 slug: Web/JavaScript/Reference/Global_Objects/Array/sort
 page-type: javascript-instance-method
-tags:
-  - Array
-  - Array method
-  - JavaScript
-  - Method
-  - Prototype
-  - Sorting
-  - Polyfill
 browser-compat: javascript.builtins.Array.sort
 ---
 
@@ -77,8 +69,8 @@ elements are sorted according to the return value of the compare function (all
 
 | `compareFn(a, b)` return value | sort order                         |
 | ------------------------------ | ---------------------------------- |
-| > 0                            | sort `a` after `b`                 |
-| < 0                            | sort `a` before `b`                |
+| > 0                            | sort `a` after `b`, e.g. `[b, a]`  |
+| < 0                            | sort `a` before `b`, e.g. `[a, b]` |
 | === 0                          | keep original order of `a` and `b` |
 
 So, the compare function has the following form:

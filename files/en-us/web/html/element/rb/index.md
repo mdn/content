@@ -1,14 +1,9 @@
 ---
 title: '<rb>: The Ruby Base element'
 slug: Web/HTML/Element/rb
-tags:
-  - Deprecated
-  - Element
-  - HTML
-  - Reference
-  - Ruby
-  - Text
-  - Web
+page-type: html-element
+status:
+  - deprecated
 browser-compat: html.elements.rb
 ---
 
@@ -62,7 +57,7 @@ See the article about the {{HTMLElement("ruby")}} element for further examples.
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories"
+        <a href="/en-US/docs/Web/HTML/Content_categories"
           >Content categories</a
         >
       </th>

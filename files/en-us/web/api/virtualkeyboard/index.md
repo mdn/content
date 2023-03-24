@@ -2,13 +2,8 @@
 title: VirtualKeyboard
 slug: Web/API/VirtualKeyboard
 page-type: web-api-interface
-tags:
-  - API
-  - Experimental
-  - Interface
-  - VirtualKeyboard API
-  - Reference
-  - keyboard
+status:
+  - experimental
 browser-compat: api.VirtualKeyboard
 ---
 
@@ -50,10 +45,10 @@ _The `VirtualKeyboard` interface doesn't inherit any methods_.
 The following example demonstrates how to opt out of the automatic virtual keyboard behavior, and detect the geometry of the virtual keyboard in the web page:
 
 ```js
-if("virtualKeyboard" in navigator) {
+if ("virtualKeyboard" in navigator) {
   navigator.overlaysContent = true;
 
-  navigator.virtualKeyboard.addEventListener("geometrychange", event => {
+  navigator.virtualKeyboard.addEventListener("geometrychange", (event) => {
     const { x, y, width, height } = event.target.boundingRect;
   });
 }

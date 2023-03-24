@@ -2,14 +2,6 @@
 title: Element.ariaSelected
 slug: Web/API/Element/ariaSelected
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - ariaSelected
-  - AriaAttributes
-  - AriaMixin
-  - Element
 browser-compat: api.Element.ariaSelected
 ---
 
@@ -39,7 +31,7 @@ In this example the `aria-selected` attribute on the element with an ID of `tab-
 ```
 
 ```js
-let el = document.getElementById('tab-id');
+let el = document.getElementById("tab-id");
 console.log(el.ariaSelected); // true
 el.ariaSelected = "false";
 console.log(el.ariaSelected); // false

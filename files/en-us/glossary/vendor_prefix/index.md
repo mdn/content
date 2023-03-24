@@ -1,8 +1,7 @@
 ---
 title: Vendor Prefix
 slug: Glossary/Vendor_Prefix
-tags:
-  - CodingScripting
+page-type: glossary-definition
 ---
 
 Browser vendors used to add prefixes to experimental or nonstandard CSS properties and JavaScript APIs, so developers could experiment with new ideas. This, in theory, helped to prevent their experiments from being relied upon and then breaking web developers' code during the standardization process.

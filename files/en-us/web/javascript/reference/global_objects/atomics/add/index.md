@@ -2,11 +2,6 @@
 title: Atomics.add()
 slug: Web/JavaScript/Reference/Global_Objects/Atomics/add
 page-type: javascript-static-method
-tags:
-  - Atomics
-  - JavaScript
-  - Method
-  - Shared Memory
 browser-compat: javascript.builtins.Atomics.add
 ---
 

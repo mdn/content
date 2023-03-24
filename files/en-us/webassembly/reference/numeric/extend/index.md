@@ -1,12 +1,6 @@
 ---
 title: Extend
 slug: WebAssembly/Reference/Numeric/Extend
-tags:
-  - WebAssembly
-  - wasm
-  - Reference
-  - Numeric
-  - Conversion
 ---
 
 {{WebAssemblySidebar}}

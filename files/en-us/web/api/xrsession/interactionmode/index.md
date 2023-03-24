@@ -2,21 +2,8 @@
 title: XRSession.interactionMode
 slug: Web/API/XRSession/interactionMode
 page-type: web-api-instance-property
-tags:
-  - API
-  - AR
-  - Property
-  - Read-only
-  - Reality
-  - Reference
-  - VR
-  - Virtual
-  - WebXR Augmented Reality
-  - WebXR Augmented Reality API
-  - XRSession
-  - augmented
-  - interactionMode
-  - Experimental
+status:
+  - experimental
 browser-compat: api.XRSession.interactionMode
 ---
 

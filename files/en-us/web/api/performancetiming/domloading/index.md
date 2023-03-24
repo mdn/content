@@ -2,16 +2,8 @@
 title: PerformanceTiming.domLoading
 slug: Web/API/PerformanceTiming/domLoading
 page-type: web-api-instance-property
-tags:
-  - API
-  - Backwards compatibility
-  - Deprecated
-  - Navigation Timing
-  - PerformanceTiming
-  - Property
-  - Reference
-  - domxref
-  - legacy
+status:
+  - deprecated
 browser-compat: api.PerformanceTiming.domLoading
 ---
 

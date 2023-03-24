@@ -1,12 +1,6 @@
 ---
 title: Demote
 slug: WebAssembly/Reference/Numeric/Demote
-tags:
-  - WebAssembly
-  - wasm
-  - Reference
-  - Numeric
-  - Conversion
 ---
 
 {{WebAssemblySidebar}}

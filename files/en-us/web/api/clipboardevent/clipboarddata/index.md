@@ -2,16 +2,6 @@
 title: ClipboardEvent.clipboardData
 slug: Web/API/ClipboardEvent/clipboardData
 page-type: web-api-instance-property
-tags:
-  - API
-  - Clipboard
-  - Clipboard API
-  - ClipboardEvent
-  - Cut
-  - Property
-  - Read-only
-  - copy
-  - paste
 browser-compat: api.ClipboardEvent.clipboardData
 ---
 

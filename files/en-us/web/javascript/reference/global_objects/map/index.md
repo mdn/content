@@ -2,13 +2,6 @@
 title: Map
 slug: Web/JavaScript/Reference/Global_Objects/Map
 page-type: javascript-class
-tags:
-  - Class
-  - ECMAScript 2015
-  - JavaScript
-  - Map
-  - Reference
-  - Polyfill
 browser-compat: javascript.builtins.Map
 ---
 
@@ -146,8 +139,7 @@ cases:
         {{jsxref("Map.prototype.size", "size")}} property.
       </td>
       <td>
-        The number of items in an <code>Object</code> must be determined
-        manually.
+        Determining the number of items in an <code>Object</code> is more roundabout and less efficient. A common way to do it is through the {{jsxref("Array/length", "length")}} of the array returned from {{jsxref("Object.keys()")}}.
       </td>
     </tr>
     <tr>
@@ -289,10 +281,14 @@ console.log(contacts.size) // 1
 
 ## Instance properties
 
-- `Map.prototype[@@toStringTag]`
-  - : The initial value of the [`@@toStringTag`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) property is the string `"Map"`. This property is used in {{jsxref("Object.prototype.toString()")}}.
+These properties are defined on `Map.prototype` and shared by all `Map` instances.
+
+- {{jsxref("Object/constructor", "Map.prototype.constructor")}}
+  - : The constructor function that created the instance object. For `Map` instances, the initial value is the {{jsxref("Map/Map", "Map")}} constructor.
 - {{jsxref("Map.prototype.size")}}
   - : Returns the number of key/value pairs in the `Map` object.
+- `Map.prototype[@@toStringTag]`
+  - : The initial value of the [`@@toStringTag`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) property is the string `"Map"`. This property is used in {{jsxref("Object.prototype.toString()")}}.
 
 ## Instance methods
 

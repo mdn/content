@@ -2,13 +2,6 @@
 title: white-space
 slug: Web/CSS/white-space
 page-type: css-property
-tags:
-  - CSS
-  - CSS Property
-  - CSS Text
-  - Reference
-  - recipe:css-property
-  - white-space
 browser-compat: css.properties.white-space
 ---
 
@@ -226,11 +219,11 @@ pre {
 ```
 
 ```js hidden
-const select  = document.querySelector("#css-code select");
+const select = document.querySelector("#css-code select");
 const results = document.querySelector("#results p");
 select.addEventListener("change", (e) => {
   results.setAttribute("style", `white-space: ${e.target.value}`);
-})
+});
 ```
 
 ```html

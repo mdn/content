@@ -1,11 +1,7 @@
 ---
 title: is
 slug: Web/HTML/Global_attributes/is
-tags:
-  - Global attributes
-  - HTML
-  - Reference
-  - is
+page-type: html-attribute
 browser-compat: html.global_attributes.is
 ---
 

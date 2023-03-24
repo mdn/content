@@ -1,16 +1,10 @@
 ---
 title: aria-colindextext
 slug: Web/Accessibility/ARIA/Attributes/aria-colindextext
-tags:
-  - Accessibility
-  - ARIA
-  - ARIA attribute
-  - ARIA property
-  - aria-colindextext
 spec-urls: https://w3c.github.io/aria/#aria-colindextext
 ---
 
-The `aria-colindextext` attribute defines a human readable text alternative of the numeric [`aria-colindex`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-colindex).
+The `aria-colindextext` attribute defines a human-readable text alternative of the numeric [`aria-colindex`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-colindex).
 
 ## Description
 
@@ -32,7 +26,7 @@ In the following HTML snippet, our table has 8 columns, but we are only displayi
 </table>
 ```
 
-This table is not very complex. Had this been a 100+ column spreadsheet or a grid without column headers, such as a chess board, the provided or calculated value of `aria-colindex` might not be meaningful or may not reflect the displayed index. When this is the case, `aria-colindextext` can be included. The value is a string that is a human readable text alternative to the numeric `aria-colindex`.
+This table is not very complex. Had this been a 100+ column spreadsheet or a grid without column headers, such as a chess board, the provided or calculated value of `aria-colindex` might not be meaningful or may not reflect the displayed index. When this is the case, `aria-colindextext` can be included. The value is a string that is a human-readable text alternative to the numeric `aria-colindex`.
 
 ```html
 <table aria-colcount="128">
@@ -60,7 +54,7 @@ This table is not very complex. Had this been a 100+ column spreadsheet or a gri
 </table>
 ```
 
-In the above example, the table has 128 columns of which only 4 columns are shown. The `aria-colindextext` is used in three columns to provide human readable text alternatives. By including `aria-colindextext="Value at start of 2021"`, assistive technologies can announce "Value at start of 2021" instead of "Column 110".
+In the above example, the table has 128 columns of which only 4 columns are shown. The `aria-colindextext` is used in three columns to provide human-readable text alternatives. By including `aria-colindextext="Value at start of 2021"`, assistive technologies can announce "Value at start of 2021" instead of "Column 110".
 
 Only use `aria-colindextext` when the provided or calculated value of `aria-colindex` is not meaningful or does not reflect the displayed index. Whenever you include `aria-colindextext`, also keep the `aria-colindex` as some assistive technologies rely on the numeric column index for the purpose of keeping track of the user's position and in providing alternative table navigation.
 
@@ -71,7 +65,7 @@ See related [`aria-rowindextext`](/en-US/docs/Web/Accessibility/ARIA/Attributes/
 ## Values
 
 - `<string>`
-  - The human readable text alternative of the numeric [`aria-colindex`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-colindex)
+  - The human-readable text alternative of the numeric [`aria-colindex`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-colindex)
 
 ## Associated roles
 
@@ -96,3 +90,11 @@ Inherits into roles:
 - [`cell` role](/en-US/docs/Web/Accessibility/ARIA/Roles/cell_role)
 - [`columnheader` role](/en-US/docs/Web/Accessibility/ARIA/Roles/columnheader_role)
 - [`rowheader` role](/en-US/docs/Web/Accessibility/ARIA/Roles/columnheader_role)
+
+<section id="Quick_links">
+
+1. [**WAI-ARIA states and properties**](/en-US/docs/Web/Accessibility/ARIA/Attributes)
+
+   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Attributes")}}
+
+</section>

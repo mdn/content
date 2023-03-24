@@ -2,14 +2,9 @@
 title: "-moz-outline-radius"
 slug: Web/CSS/-moz-outline-radius
 page-type: css-shorthand-property
-tags:
-  - CSS
-  - CSS Property
-  - CSS:Mozilla Extensions
-  - Non-standard
-  - Reference
-  - recipe:css-shorthand-property
-  - Deprecated
+status:
+  - deprecated
+  - non-standard
 browser-compat: css.properties.-moz-outline-radius
 ---
 
@@ -105,8 +100,8 @@ p {
 
 ## Notes
 
-- `dotted` or `dashed` radiused corners were rendered as solid until Firefox 50, {{bug("382721")}}
-- Future versions of Gecko/Firefox may drop this property completely. See {{bug("593717")}}.
+- `dotted` or `dashed` radiused corners were rendered as solid until Firefox 50, [Firefox bug 382721](https://bugzil.la/382721)
+- Future versions of Gecko/Firefox may drop this property completely. See [Firefox bug 593717](https://bugzil.la/593717).
 
 ## Specifications
 

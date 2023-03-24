@@ -1,8 +1,7 @@
 ---
 title: Sidebars
 slug: Mozilla/Add-ons/WebExtensions/user_interface/Sidebars
-tags:
-  - WebExtensions
+page-type: guide
 ---
 
 {{AddonSidebar}}
@@ -54,7 +53,7 @@ Title and icon are shown to the user in any UI provided by the browser to list s
 
 ## Sidebar design
 
-For details on how to design a sidebar's web page to match the style of Firefox, see the [Photon Design System](https://design.firefox.com/photon/index.html) documentation.
+For details on how to design a sidebar's web page to match the style of Firefox, see the [Acorn Design System](https://acorn.firefox.com/latest/acorn.html) documentation.
 
 ## Example
 

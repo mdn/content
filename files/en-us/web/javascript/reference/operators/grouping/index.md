@@ -2,11 +2,6 @@
 title: Grouping operator ( )
 slug: Web/JavaScript/Reference/Operators/Grouping
 page-type: javascript-operator
-tags:
-  - JavaScript
-  - Language feature
-  - Operator
-  - Primary Expressions
 browser-compat: javascript.operators.grouping
 ---
 
@@ -37,7 +32,7 @@ The grouping operator consists of a pair of parentheses around an expression tha
 
 Evaluating addition and subtraction before multiplication and division.
 
-```js
+```js-nolint
 const a = 1;
 const b = 2;
 const c = 3;

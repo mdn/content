@@ -2,17 +2,6 @@
 title: Window
 slug: Web/API/Window
 page-type: web-api-interface
-tags:
-  - API
-  - Browser
-  - HTML DOM
-  - Interface
-  - Reference
-  - Tab
-  - Window
-  - global
-  - global scope
-  - scope
 browser-compat: api.Window
 ---
 
@@ -87,6 +76,8 @@ Note that properties which are objects (e.g., for overriding the prototype of bu
   - : Gets the width of the content area of the browser window including, if rendered, the vertical scrollbar.
 - {{domxref("isSecureContext")}} {{Experimental_Inline}} {{ReadOnlyInline}}
   - : Returns a boolean indicating whether the current context is secure (`true`) or not (`false`).
+- {{domxref("Window.launchQueue")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+  - : When a [progressive web app](/en-US/docs/Web/Progressive_web_apps) (PWA) is launched with a [`launch_handler`](/en-US/docs/Web/Manifest/launch_handler) `client_mode` value of `focus-existing`, `navigate-new`, or `navigate-existing`, the `launchQueue` provides access to the {{domxref("LaunchQueue")}} class, which allows custom launch navigation handling to be implemented for the PWA.
 - {{domxref("Window.length")}} {{ReadOnlyInline}}
   - : Returns the number of frames in the window. See also {{domxref("window.frames")}}.
 - {{domxref("Window.location")}}
@@ -121,7 +112,7 @@ Note that properties which are objects (e.g., for overriding the prototype of bu
   - : An alias for {{domxref("window.scrollY")}}.
 - {{domxref("Window.parent")}} {{ReadOnlyInline}}
   - : Returns a reference to the parent of the current window or subframe.
-- {{domxref("Window.performance")}} {{ReadOnlyInline}}
+- {{domxref("performance_property", "Window.performance")}} {{ReadOnlyInline}}
   - : Returns a {{domxref("Performance")}} object, which includes the {{domxref("Performance.timing", "timing")}} and {{domxref("Performance.navigation", "navigation")}} attributes, each of which is an object providing [performance-related](/en-US/docs/Web/API/Navigation_timing_API) data. See also [Using Navigation Timing](/en-US/docs/Web/API/Navigation_timing_API/Using_Navigation_Timing) for additional information and examples.
 - {{domxref("Window.personalbar")}} {{ReadOnlyInline}}
   - : Returns the personalbar object.
@@ -303,8 +294,6 @@ _This interface inherits methods from the {{domxref("EventTarget")}} interface a
   - : Registers the window to capture all events of the specified type.
 - {{domxref("Window.forward()")}} {{Non-standard_Inline}} {{Deprecated_Inline}}
   - : Moves the window one document forward in the history. This method is deprecated; you should instead use {{domxref("History.forward", "window.history.forward()")}}.
-- {{domxref("Window.home()")}} {{Non-standard_Inline}} {{Deprecated_Inline}}
-  - : Returns the browser to the home page.
 - {{domxref("Window.releaseEvents()")}} {{Deprecated_Inline}}
   - : Releases the window from trapping events of a specific type.
 - {{domxref("Window.showModalDialog()")}} {{Non-standard_Inline}} {{Deprecated_Inline}}

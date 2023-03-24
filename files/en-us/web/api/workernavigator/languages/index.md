@@ -2,13 +2,6 @@
 title: WorkerNavigator.languages
 slug: Web/API/WorkerNavigator/languages
 page-type: web-api-instance-property
-tags:
-  - API
-  - WorkerNavigator
-  - Property
-  - Read-only
-  - Reference
-  - languages
 browser-compat: api.WorkerNavigator.languages
 ---
 
@@ -39,8 +32,8 @@ An array or strings.
 You can run this insert a web worker:
 
 ```js
-navigator.language   //"en-US"
-navigator.languages  //["en-US", "zh-CN", "ja-JP"]
+navigator.language; //"en-US"
+navigator.languages; //["en-US", "zh-CN", "ja-JP"]
 ```
 
 ## Specifications

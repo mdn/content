@@ -2,13 +2,6 @@
 title: <display-outside>
 slug: Web/CSS/display-outside
 page-type: css-type
-tags:
-  - CSS
-  - CSS Data Type
-  - CSS Display
-  - Data Type
-  - Reference
-  - display-outside
 browser-compat: css.properties.display.display-outside
 ---
 

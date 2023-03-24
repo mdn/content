@@ -2,20 +2,8 @@
 title: NavigateEvent.downloadRequest
 slug: Web/API/NavigateEvent/downloadRequest
 page-type: web-api-instance-property
-tags:
-  - API
-  - downloadRequest
-  - Experimental
-  - History
-  - Navigate
-  - NavigateEvent
-  - Navigation
-  - Navigation API
-  - Property
-  - Read-only
-  - Reference
-  - Scroll
-  - Traversal
+status:
+  - experimental
 browser-compat: api.NavigateEvent.downloadRequest
 ---
 
@@ -50,7 +38,7 @@ navigation.addEventListener("navigate", (event) => {
       } else {
         doSinglePageAppNav(event.destination, event.signal);
       }
-    }
+    },
   });
 });
 ```

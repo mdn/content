@@ -1,14 +1,9 @@
 ---
-title: 'VirtualKeyboard: geometrychange event'
+title: "VirtualKeyboard: geometrychange event"
 slug: Web/API/VirtualKeyboard/geometrychange_event
 page-type: web-api-event
-tags:
-  - API
-  - Event
-  - Reference
-  - VirtualKeyboard
-  - geometrychange
-  - Experimental
+status:
+  - experimental
 browser-compat: api.VirtualKeyboard.geometrychange_event
 ---
 
@@ -24,9 +19,9 @@ The `geometrychange` event is useful to detect when the virtual keyboard appears
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-navigator.virtualKeyboard.addEventListener('geometrychange', (event) => { });
+navigator.virtualKeyboard.addEventListener("geometrychange", (event) => {});
 
-navigator.virtualKeyboard.ongeometrychange = (event) => { };
+navigator.virtualKeyboard.ongeometrychange = (event) => {};
 ```
 
 ## Event type
@@ -38,10 +33,10 @@ A generic {{domxref("Event")}}.
 The following code snippet uses the `geometrychange` event to detect when the virtual keyboard geometry changes, and then accesses the {{domxref("VirtualKeyboard.boundingRect", "boundingRect")}} property to query the size and position of the virtual keyboard:
 
 ```js
-if("virtualKeyboard" in navigator) {
+if ("virtualKeyboard" in navigator) {
   navigator.overlaysContent = true;
 
-  navigator.virtualKeyboard.addEventListener("geometrychange", event => {
+  navigator.virtualKeyboard.addEventListener("geometrychange", (event) => {
     const { x, y, width, height } = event.target.boundingRect;
   });
 }

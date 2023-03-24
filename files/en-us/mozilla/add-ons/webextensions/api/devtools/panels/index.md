@@ -1,14 +1,7 @@
 ---
 title: devtools.panels
 slug: Mozilla/Add-ons/WebExtensions/API/devtools/panels
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Property
-  - Reference
-  - WebExtensions
-  - devtools.panels
+page-type: webextension-api-property
 browser-compat: webextensions.api.devtools.panels
 ---
 

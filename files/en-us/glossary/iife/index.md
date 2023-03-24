@@ -1,11 +1,7 @@
 ---
 title: IIFE
 slug: Glossary/IIFE
-tags:
-  - CodingScripting
-  - DesignPattern
-  - Functions
-  - JavaScript
+page-type: glossary-definition
 ---
 
 An **IIFE** (Immediately Invoked Function Expression) is a {{glossary("JavaScript")}} {{glossary("function")}} that runs as soon as it is defined.
@@ -127,7 +123,7 @@ for (var i = 0; i < 2; i++) {
   const button = document.createElement("button");
   button.innerText = `Button ${i}`;
   button.onclick = (function (copyOfI) {
-    return () => {
+    return function () {
       console.log(copyOfI);
     };
   })(i);

@@ -2,10 +2,6 @@
 title: TaskPriorityChangeEvent.previousPriority
 slug: Web/API/TaskPriorityChangeEvent/previousPriority
 page-type: web-api-instance-property
-tags:
-  - Property
-  - Reference
-  - TaskPriorityChangeEvent
 browser-compat: api.TaskPriorityChangeEvent.previousPriority
 ---
 
@@ -28,10 +24,12 @@ The code below shows the `previousPriority` being obtained in a handler for a `p
 
 ```js
 // Listen for 'prioritychange' events on the controller's signal.
-controller.signal.addEventListener('prioritychange', (event) => {
+controller.signal.addEventListener("prioritychange", (event) => {
   const previousPriority = event.previousPriority;
   const newPriority = event.target.priority;
-  console.log(`The priority changed from ${previousPriority} to ${newPriority}.`);
+  console.log(
+    `The priority changed from ${previousPriority} to ${newPriority}.`
+  );
 });
 ```
 

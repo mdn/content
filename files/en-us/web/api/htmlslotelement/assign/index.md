@@ -2,14 +2,6 @@
 title: HTMLSlotElement.assign()
 slug: Web/API/HTMLSlotElement/assign
 page-type: web-api-instance-method
-tags:
-  - API
-  - HTMLSlotElement
-  - Method
-  - Reference
-  - Web Components
-  - assign
-  - shadow DOM
 browser-compat: api.HTMLSlotElement.assign
 ---
 
@@ -45,9 +37,9 @@ In the below example, the `assign()` method is used to display the correct tab i
 function UpdateDisplayTab(elem, tabIdx) {
   const shadow = elem.shadowRoot;
   const slot = shadow.querySelector("slot");
-  const panels = elem.querySelectorAll('tab-panel');
-  if (panels.length && tabIdx && tabIdx <= panels.length ) {
-    slot.assign(panels[tabIdx-1]);
+  const panels = elem.querySelectorAll("tab-panel");
+  if (panels.length && tabIdx && tabIdx <= panels.length) {
+    slot.assign(panels[tabIdx - 1]);
   } else {
     slot.assign();
   }

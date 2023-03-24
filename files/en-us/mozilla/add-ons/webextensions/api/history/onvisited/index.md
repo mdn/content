@@ -1,16 +1,7 @@
 ---
 title: history.onVisited
 slug: Mozilla/Add-ons/WebExtensions/API/history/onVisited
-tags:
-  - API
-  - Add-ons
-  - Event
-  - Extensions
-  - History
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - onVisited
+page-type: webextension-api-event
 browser-compat: webextensions.api.history.onVisited
 ---
 

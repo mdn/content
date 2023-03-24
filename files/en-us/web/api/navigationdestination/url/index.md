@@ -2,19 +2,8 @@
 title: NavigationDestination.url
 slug: Web/API/NavigationDestination/url
 page-type: web-api-instance-property
-tags:
-  - API
-  - Experimental
-  - History
-  - Navigate
-  - Navigation
-  - Navigation API
-  - Property
-  - Read-only
-  - Reference
-  - Scroll
-  - Traversal
-  - url
+status:
+  - experimental
 browser-compat: api.NavigationDestination.url
 ---
 
@@ -32,8 +21,8 @@ A string.
 ### Handling a navigation using `intercept()`
 
 ```js
-navigation.addEventListener('navigate', (event) => {
-  // Exit early if this navigation shouldn't be intercepted, 
+navigation.addEventListener("navigate", (event) => {
+  // Exit early if this navigation shouldn't be intercepted,
   // e.g. if the navigation is cross-origin, or a download request
   if (shouldNotIntercept(event)) {
     return;
@@ -41,7 +30,7 @@ navigation.addEventListener('navigate', (event) => {
 
   const url = new URL(event.destination.url);
 
-  if (url.pathname.startsWith('/articles/')) {
+  if (url.pathname.startsWith("/articles/")) {
     event.intercept({
       async handler() {
         // The URL has already changed, so show a placeholder while

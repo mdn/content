@@ -2,14 +2,6 @@
 title: Using FormData Objects
 slug: Web/API/FormData/Using_FormData_Objects
 page-type: guide
-tags:
-  - AJAX
-  - Blob
-  - File
-  - FormData
-  - Forms
-  - XHR
-  - XMLHttpRequest
 ---
 
 {{APIRef("XMLHttpRequest")}}
@@ -31,7 +23,7 @@ formData.append("userfile", fileInputElement.files[0]);
 
 // JavaScript file-like object
 const content = '<q id="a"><span id="b">hey!</span></q>'; // the body of the new file…
-const blob = new Blob([content], { type: "text/xml"});
+const blob = new Blob([content], { type: "text/xml" });
 
 formData.append("webmasterfile", blob);
 
@@ -111,7 +103,7 @@ You can also send files using `FormData`. Include an {{ HTMLElement("input") }} 
     <input type="submit" value="Stash the file!" />
   </p>
 </form>
-<div></div>
+<div id="output"></div>
 ```
 
 Then you can send it using code like the following:
@@ -121,7 +113,7 @@ const form = document.forms.namedItem("fileinfo");
 form.addEventListener(
   "submit",
   (event) => {
-    const output = document.querySelector("output");
+    const output = document.querySelector("#output");
     const formData = new FormData(form);
 
     formData.append("CustomField", "This is some extra data");
@@ -163,13 +155,13 @@ This allows a {{domxref("FormData")}} object to be quickly obtained in response 
 Typically this is used as shown in our [simple formdata event demo](https://long-impatiens.glitch.me/) — in the JavaScript we reference a form:
 
 ```js
-const formElem = document.querySelector('form');
+const formElem = document.querySelector("form");
 ```
 
 In our [`submit` event](/en-US/docs/Web/API/HTMLFormElement/submit_event) handler we use [`preventDefault`](/en-US/docs/Web/API/Event/preventDefault) to stop the default form submission, then invoke a {{domxref("FormData")}} constructor to trigger the `formdata` event:
 
 ```js
-formElem.addEventListener('submit', (e) => {
+formElem.addEventListener("submit", (e) => {
   // on form submission, prevent default
   e.preventDefault();
 
@@ -181,8 +173,8 @@ formElem.addEventListener('submit', (e) => {
 When the `formdata` event fires we can access the {{domxref("FormData")}} object using {{domxref("FormDataEvent.formData")}}, then do what we like with it (below we post it to the server using {{domxref("XMLHttpRequest")}}).
 
 ```js
-formElem.addEventListener('formdata', (e) => {
-  console.log('formdata fired');
+formElem.addEventListener("formdata", (e) => {
+  console.log("formdata fired");
 
   // Get the form data from the event object
   const data = e.formData;

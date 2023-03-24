@@ -2,14 +2,6 @@
 title: ServiceWorkerGlobalScope.registration
 slug: Web/API/ServiceWorkerGlobalScope/registration
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - Service Workers
-  - ServiceWorker
-  - ServiceWorkerGlobalScope
-  - registration
 browser-compat: api.ServiceWorkerGlobalScope.registration
 ---
 

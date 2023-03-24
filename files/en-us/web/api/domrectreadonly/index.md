@@ -2,15 +2,6 @@
 title: DOMRectReadOnly
 slug: Web/API/DOMRectReadOnly
 page-type: web-api-interface
-tags:
-  - API
-  - DOMRectReadOnly
-  - Geometry
-  - Geometry Interfaces
-  - Interface
-  - Read-only
-  - Rectangle
-  - Reference
 browser-compat: api.DOMRectReadOnly
 ---
 

@@ -2,9 +2,6 @@
 title: FileReaderSync
 slug: Web/API/FileReaderSync
 page-type: web-api-interface
-tags:
-  - API
-  - NeedsMarkupWork
 browser-compat: api.FileReaderSync
 ---
 
@@ -44,4 +41,3 @@ This interface does not have any properties.
 - {{DOMxRef("FileReader")}}
 - {{DOMxRef("Blob")}}
 - {{DOMxRef("File")}}
-- {{DOMxRef("FileReader")}}

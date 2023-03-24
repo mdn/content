@@ -1,8 +1,7 @@
 ---
 title: Context menu items
 slug: Mozilla/Add-ons/WebExtensions/user_interface/Context_menu_items
-tags:
-  - WebExtensions
+page-type: guide
 ---
 
 {{AddonSidebar}}
@@ -53,7 +52,7 @@ browser.contextMenus.onClicked.addListener((info, tab) => {
 
 ## Icons
 
-For details on how to create icons to use with your context menu, see [Iconography](https://design.firefox.com/photon/visuals/iconography.html) in the [Photon Design System](https://design.firefox.com/photon/index.html) documentation.
+For details on how to create icons to use with your context menu, see [Iconography](https://acorn.firefox.com/latest/styles/iconography.html) in the [Acorn Design System](https://acorn.firefox.com/latest/acorn.html) documentation.
 
 ## Examples
 

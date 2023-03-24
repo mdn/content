@@ -1,10 +1,7 @@
 ---
 title: Crawler
 slug: Glossary/Crawler
-tags:
-  - Browser
-  - Crawler
-  - Infrastructure
+page-type: glossary-definition
 ---
 
 A web crawler is a program, often called a bot or robot, which systematically browses the {{glossary("World Wide Web","Web")}} to collect data from webpages. Typically search engines (e.g. Google, Bing, etc.) use crawlers to build indexes.

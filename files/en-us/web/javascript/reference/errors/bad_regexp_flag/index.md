@@ -2,10 +2,6 @@
 title: 'SyntaxError: invalid regular expression flag "x"'
 slug: Web/JavaScript/Reference/Errors/Bad_regexp_flag
 page-type: javascript-error
-tags:
-  - Error
-  - JavaScript
-  - SyntaxError
 ---
 
 {{jsSidebar("Errors")}}
@@ -55,7 +51,7 @@ const re = /pattern/flags;
 They can also be defined in the constructor function of the {{jsxref("RegExp")}} object (second parameter):
 
 ```js
-const re = new RegExp('pattern', 'flags');
+const re = new RegExp("pattern", "flags");
 ```
 
 Here is an example showing use of only correct flags.
@@ -89,7 +85,7 @@ Most likely the intent was to create a string literal, using single or double qu
 
 ```js example-good
 const obj = {
-  url: '/docs/Web',
+  url: "/docs/Web",
 };
 ```
 

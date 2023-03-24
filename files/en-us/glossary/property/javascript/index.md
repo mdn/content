@@ -1,8 +1,7 @@
 ---
 title: Property (JavaScript)
 slug: Glossary/Property/JavaScript
-tags:
-  - CodingScripting
+page-type: glossary-definition
 ---
 
 A **JavaScript property** is a member of an [object](/en-US/docs/Web/JavaScript/Data_structures#objects) that associates a key with a value. A JavaScript object is a data structure that stores a collection of properties.

@@ -2,13 +2,9 @@
 title: box-ordinal-group
 slug: Web/CSS/box-ordinal-group
 page-type: css-property
-tags:
-  - CSS
-  - CSS Property
-  - Non-standard
-  - Reference
-  - recipe:css-property
-  - Deprecated
+status:
+  - deprecated
+  - non-standard
 browser-compat: css.properties.box-ordinal-group
 ---
 

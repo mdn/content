@@ -1,11 +1,6 @@
 ---
 title: Commands
 slug: Web/WebDriver/Commands
-tags:
-  - Reference
-  - Web
-  - WebDriver
-  - commands
 browser-compat: webdriver.commands
 ---
 

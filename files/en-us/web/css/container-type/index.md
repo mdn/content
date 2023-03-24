@@ -2,12 +2,6 @@
 title: container-type
 slug: Web/CSS/container-type
 page-type: css-property
-tags:
-  - container
-  - CSS
-  - CSS Containment
-  - Reference
-  - Property
 browser-compat: css.properties.container-type
 ---
 
@@ -23,13 +17,18 @@ container-type: <type>;
 
 ### Values
 
-- `size`: Establishes a query container for container size queries on both the inline and block axis in both the [inline and block](/en-US/docs/Web/CSS/CSS_Logical_Properties/Basic_concepts#block_and_inline_dimensions) dimensions.
-  Applies layout containment, style containment, and size containment to the container.
+- `size`
 
-- `inline-size`: Establishes a query container for dimensional queries on the [inline axis](/en-US/docs/Web/CSS/CSS_Logical_Properties/Basic_concepts#block_and_inline_dimensions) of the container.
-  Applies layout, style, and inline-size containment to the element.
+  - : Establishes a query container for container size queries on both the inline and block axis in both the [inline and block](/en-US/docs/Web/CSS/CSS_Logical_Properties/Basic_concepts#block_and_inline_dimensions) dimensions.
+    Applies layout containment, style containment, and size containment to the container.
 
-- `normal`: The element is not a query container for any container size queries, but remains a query container for container style queries.
+- `inline-size`
+
+  - : Establishes a query container for dimensional queries on the [inline axis](/en-US/docs/Web/CSS/CSS_Logical_Properties/Basic_concepts#block_and_inline_dimensions) of the container.
+    Applies layout, style, and inline-size containment to the element.
+
+- `normal`
+  - : The element is not a query container for any container size queries, but remains a query container for container style queries.
 
 > **Note:** to understand what happens when you apply layout, style, and size containment to a box, see the {{cssxref("contain")}} property.
 

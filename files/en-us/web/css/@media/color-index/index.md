@@ -2,18 +2,12 @@
 title: color-index
 slug: Web/CSS/@media/color-index
 page-type: css-media-feature
-tags:
-  - "@media"
-  - CSS
-  - Media Queries
-  - Reference
-  - media feature
 browser-compat: css.at-rules.media.color-index
 ---
 
 {{CSSRef}}
 
-The **`color-index`** [CSS](/en-US/docs/Web/CSS) [media feature](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#media_features) can be used to test the number of entries in the output device's color lookup table.
+The **`color-index`** [CSS](/en-US/docs/Web/CSS) [media feature](/en-US/docs/Web/CSS/@media#media_features) can be used to test the number of entries in the output device's color lookup table.
 
 ## Syntax
 

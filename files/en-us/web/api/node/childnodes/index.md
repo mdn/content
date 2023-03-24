@@ -2,10 +2,6 @@
 title: Node.childNodes
 slug: Web/API/Node/childNodes
 page-type: web-api-instance-property
-tags:
-  - Property
-  - Reference
-  - Read-only
 browser-compat: api.Node.childNodes
 ---
 
@@ -61,8 +57,8 @@ if (parg.hasChildNodes()) {
 // This is one way to remove all children from a node
 // box is an object reference to an element
 while (box.firstChild) {
-    //The list is LIVE so it will re-index each call
-    box.removeChild(box.firstChild);
+  // The list is LIVE so it will re-index each call
+  box.removeChild(box.firstChild);
 }
 ```
 

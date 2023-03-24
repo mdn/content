@@ -2,14 +2,6 @@
 title: PictureInPictureWindow.height
 slug: Web/API/PictureInPictureWindow/height
 page-type: web-api-instance-property
-tags:
-  - API
-  - Interface
-  - Media
-  - Picture-in-Picture
-  - Picture-in-Picture API
-  - Video
-  - pip
 browser-compat: api.PictureInPictureWindow.height
 ---
 

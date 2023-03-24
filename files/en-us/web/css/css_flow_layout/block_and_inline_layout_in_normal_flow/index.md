@@ -2,14 +2,6 @@
 title: Block and inline layout in normal flow
 slug: Web/CSS/CSS_Flow_Layout/Block_and_Inline_Layout_in_Normal_Flow
 page-type: guide
-tags:
-  - CSS
-  - CSS Flow Layout
-  - Guide
-  - Intermediate
-  - Layout
-  - Margins
-  - flow
 ---
 
 {{CSSRef}}
@@ -78,7 +70,7 @@ In the following example, we have three inline boxes created by a paragraph with
 
 The boxes around the words before the `<strong>` element and after the `<strong>` element are referred to as anonymous boxes, boxes introduced to ensure that everything is wrapped in a box, but ones that we cannot target directly.
 
-The line box size in the block direction (so the height when working in English) is defined by the tallest box inside it. In the next example, I have made the `<strong>` element 300%; that content now defines the height of the line box on that line.
+The line box size in the block direction (so the height when working in English) is defined by the tallest box inside it. In the next example, the `<strong>` element is 300%; since that content spans two lines, it now defines the height of the line boxes of those two lines.
 
 {{EmbedGHLiveSample("css-examples/flow/block-inline/line-box.html", '100%', 500)}}
 

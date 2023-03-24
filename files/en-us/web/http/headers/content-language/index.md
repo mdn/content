@@ -1,10 +1,6 @@
 ---
 title: Content-Language
 slug: Web/HTTP/Headers/Content-Language
-tags:
-  - HTTP
-  - Headers
-  - Reference
 browser-compat: http.headers.Content-Language
 ---
 
@@ -67,7 +63,9 @@ Content-Language: de-DE, en-CA
 The global [`lang`](/en-US/docs/Web/HTML/Global_attributes/lang) attribute is used on HTML elements to indicate the language of an entire [HTML](/en-US/docs/Web/HTML) document or parts of it.
 
 ```html
-<html lang="de">…</html>
+<html lang="de">
+  …
+</html>
 ```
 
 Do **not** use this meta element like this for stating a document language:

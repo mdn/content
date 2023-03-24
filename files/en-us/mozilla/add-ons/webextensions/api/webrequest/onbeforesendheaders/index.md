@@ -1,16 +1,7 @@
 ---
 title: webRequest.onBeforeSendHeaders
 slug: Mozilla/Add-ons/WebExtensions/API/webRequest/onBeforeSendHeaders
-tags:
-  - API
-  - Add-ons
-  - Event
-  - Extensions
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - onBeforeSendHeaders
-  - webRequest
+page-type: webextension-api-event
 browser-compat: webextensions.api.webRequest.onBeforeSendHeaders
 ---
 

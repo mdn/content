@@ -1,9 +1,7 @@
 ---
 title: Hoisting
 slug: Glossary/Hoisting
-tags:
-  - CodingScripting
-  - JavaScript
+page-type: glossary-definition
 ---
 
 JavaScript **Hoisting** refers to the process whereby the interpreter appears to move the _declaration_ of functions, variables or classes to the top of their scope, prior to execution of the code.

@@ -1,12 +1,7 @@
 ---
 title: Contact us
 slug: Mozilla/Add-ons/Contact_us
-tags:
-  - Add-ons
-  - Extension
-  - Extensions
-  - Landing
-  - Mozilla
+page-type: guide
 ---
 
 {{AddonSidebar}}

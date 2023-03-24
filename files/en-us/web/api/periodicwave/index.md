@@ -2,16 +2,6 @@
 title: PeriodicWave
 slug: Web/API/PeriodicWave
 page-type: web-api-interface
-tags:
-  - API
-  - Audio
-  - Interface
-  - Media
-  - PeriodicWave
-  - Reference
-  - Web Audio
-  - Web Audio API
-  - waveform
 browser-compat: api.PeriodicWave
 ---
 

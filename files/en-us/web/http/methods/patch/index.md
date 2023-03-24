@@ -1,10 +1,6 @@
 ---
 title: PATCH
 slug: Web/HTTP/Methods/PATCH
-tags:
-  - HTTP
-  - Reference
-  - Request method
 spec-urls: https://www.rfc-editor.org/rfc/rfc5789
 ---
 
@@ -32,7 +28,7 @@ Another (implicit) indication that `PATCH` is allowed, is the presence of the {{
     </tr>
     <tr>
       <th scope="row">Successful response has body</th>
-      <td>Yes</td>
+      <td>May</td>
     </tr>
     <tr>
       <th scope="row">{{Glossary("Safe/HTTP", "Safe")}}</th>

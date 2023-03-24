@@ -2,13 +2,6 @@
 title: HTMLMediaElement.currentSrc
 slug: Web/API/HTMLMediaElement/currentSrc
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTML DOM
-  - HTMLMediaElement
-  - Property
-  - Read-only
-  - Web
 browser-compat: api.HTMLMediaElement.currentSrc
 ---
 
@@ -30,7 +23,7 @@ if no {{HTMLElement("source")}} element is provided.
 ## Examples
 
 ```js
-const obj = document.createElement('video');
+const obj = document.createElement("video");
 console.log(obj.currentSrc); // ""
 ```
 

@@ -2,11 +2,6 @@
 title: Selection
 slug: Web/API/Selection
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Reference
-  - Selection
 browser-compat: api.Selection
 ---
 
@@ -85,7 +80,7 @@ A selection object represents the {{DOMxRef("Range")}}s that the user has select
 
 ```js
 const selObj = window.getSelection();
-const range  = selObj.getRangeAt(0);
+const range = selObj.getRangeAt(0);
 ```
 
 - `selObj` is a Selection object
@@ -97,7 +92,7 @@ As the [Selection API specification notes](https://www.w3.org/TR/selection-api/#
 
 Selection and input focus (indicated by {{DOMxRef("Document.activeElement")}}) have a complex relationship that varies by browser. In cross-browser compatible code, it's better to handle them separately.
 
-Safari and Chrome (unlike Firefox) currently focus the element containing selection when modifying the selection programmatically; it's possible that this may change in the future (see [W3C bug 14383](https://www.w3.org/Bugs/Public/show_bug.cgi?id=14383) and {{WebKitBug("38696")}}).
+Safari and Chrome (unlike Firefox) currently focus the element containing selection when modifying the selection programmatically; it's possible that this may change in the future (see [W3C bug 14383](https://www.w3.org/Bugs/Public/show_bug.cgi?id=14383) and [Webkit bug 38696](https://webkit.org/b/38696)).
 
 ### Behavior of Selection API in terms of editing host focus changes
 
@@ -140,7 +135,7 @@ Other key terms used in this section.
 - `anchor`
   - : The anchor of a selection is the beginning point of the selection. When making a selection with a mouse, the anchor is where in the document the mouse button is initially pressed. As the user changes the selection using the mouse or the keyboard, the anchor does not move.
 - `editing host`
-  - : An editable element (e.g., an HTML element with {{htmlattrxref("contenteditable")}} set, or the HTML child of a document that has {{DOMxRef("Document.designMode", "designMode")}} enabled).
+  - : An editable element (e.g., an HTML element with [`contenteditable`](/en-US/docs/Web/HTML/Global_attributes#contenteditable) set, or the HTML child of a document that has {{DOMxRef("Document.designMode", "designMode")}} enabled).
 - `focus of a selection`
 
   - : The _focus_ of a selection is the end point of the selection. When making a selection with a mouse, the focus is where in the document the mouse button is released. As the user changes the selection using the mouse or the keyboard, the focus is the end of the selection that moves.

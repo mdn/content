@@ -1,10 +1,7 @@
 ---
 title: data-*
 slug: Web/HTML/Global_attributes/data-*
-tags:
-  - Global attributes
-  - HTML
-  - Reference
+page-type: html-attribute
 browser-compat: html.global_attributes.data_attributes
 ---
 

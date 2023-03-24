@@ -2,14 +2,6 @@
 title: Window.window
 slug: Web/API/Window/window
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTML DOM
-  - NeedsExample
-  - NeedsMarkupWork
-  - Property
-  - Reference
-  - Window
 browser-compat: api.Window.window
 ---
 
@@ -20,9 +12,9 @@ The **`window`** property of a {{domxref("Window")}} object points to the window
 Thus, the following expressions all return the same window object:
 
 ```js
-window.window
-window.window.window
-window.window.window.window
+window.window;
+window.window.window;
+window.window.window.window;
 // …
 ```
 

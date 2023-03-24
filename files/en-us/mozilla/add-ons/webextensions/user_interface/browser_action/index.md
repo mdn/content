@@ -1,8 +1,7 @@
 ---
 title: Toolbar button
 slug: Mozilla/Add-ons/WebExtensions/user_interface/Browser_action
-tags:
-  - WebExtension
+page-type: guide
 ---
 
 {{AddonSidebar}}
@@ -42,7 +41,7 @@ You can change many of the browser action properties programmatically using the 
 
 ## Icons
 
-For details on how to create icons to use with your browser action, see [Iconography](https://design.firefox.com/photon/visuals/iconography.html) in the [Photon Design System](https://design.firefox.com/photon/index.html) documentation.
+For details on how to create icons to use with your browser action, see [Iconography](https://acorn.firefox.com/latest/styles/iconography.html) in the [Acorn Design System](https://acorn.firefox.com/latest/acorn.html) documentation.
 
 ## Examples
 

@@ -1,15 +1,7 @@
 ---
 title: scripting.InjectionTarget
 slug: Mozilla/Add-ons/WebExtensions/API/scripting/InjectionTarget
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - InjectionTarget
-  - Reference
-  - Type
-  - WebExtensions
-  - scripting
+page-type: webextension-api-type
 browser-compat: webextensions.api.scripting.InjectionTarget
 ---
 
