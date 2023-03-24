@@ -69,7 +69,7 @@ console.log(obj.canPlayType('video/mp4')); // "maybe"
 
 ## See also
 
-- The interface defining it, {{domxref("HTMLMediaElement")}}
+- {{domxref("HTMLMediaElement")}}: Interface used to define the `HTMLMediaElement.canPlayType()` method
 - {{domxref("MediaCapabilities")}} in the Media Capabilities API
 - [Handling media support issues in web content](/en-US/docs/Web/Media/Formats/Support_issues)
 - [Guide to media types and formats on the web](/en-US/docs/Web/Media/Formats)

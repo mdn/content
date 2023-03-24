@@ -48,4 +48,4 @@ console.log(obj.src); // ""
 
 ## See also
 
-- The interface defining it, {{domxref("HTMLMediaElement")}}
+- {{domxref("HTMLMediaElement")}}: Interface used to define the `HTMLMediaElement.src` property

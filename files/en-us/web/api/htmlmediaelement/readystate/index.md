@@ -105,4 +105,4 @@ obj.addEventListener('loadeddata', () => {
 
 ## See also
 
-- The interface defining it, {{domxref("HTMLMediaElement")}}
+- {{domxref("HTMLMediaElement")}}: Interface used to define the `HTMLMediaElement.readyState` property
