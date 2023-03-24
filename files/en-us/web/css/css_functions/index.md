@@ -301,8 +301,12 @@ CSS font functions are used with the {{CSSxRef("font-variant-alternates")}} prop
 
 ## Animation functions
 
-This function can be used to provide the timeline for an animation.
+The following functions are used as a value of different {{CSSxRef("animation")}} properties.
 
+- {{cssxref("easing-function#cubic_b%C3%A9zier_easing_function", "cubic-bezier()")}}
+  - : Animation easing function that defines a cubic Bézier curve.
+- {{cssxref("easing-function#step_easing_function", "steps()")}}
+  - : Animation iteration along n stops along the transition, displaying each stop for equal lengths of time.
 - {{cssxref("animation-timeline/scroll", "scroll()")}} {{Experimental_Inline}}
   - : Sets the {{cssxref("animation-timeline")}} of an element to depend on scrollbar on a particular axis of either the nearest parent (with that scrollbar), or the root container.
 
