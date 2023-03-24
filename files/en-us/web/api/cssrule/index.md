@@ -21,7 +21,7 @@ The **`CSSRule`** interface represents a single CSS rule. There are several type
 - {{DOMXRef("CSSCounterStyleRule")}}
 - {{DOMXRef("CSSSupportsRule")}}
 - {{DOMXRef("CSSFontFeatureValuesRule")}}
-- {{DOMXRef("CSSFontPalettteValuesRule")}}
+- {{DOMXRef("CSSFontPaletteValuesRule")}}
 - {{DOMXRef("CSSLayerBlockRule")}}
 - {{DOMXRef("CSSLayerStatementRule")}}
 - {{DOMXRef("CSSPropertyRule")}}
