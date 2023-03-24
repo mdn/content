@@ -170,7 +170,7 @@ Checkboxes do support [validation](/en-US/docs/Web/HTML/Constraint_validation) (
 
 ## Examples
 
-The following example is an extended version of the "multiple checkboxes" example we saw above — it has more standard options, plus an "other" checkbox that when checked causes a text field to appear to enter a value for the "other" option. This is achieved with a simple block of JavaScript. The example also includes some CSS to improve the styling.
+The following example is an extended version of the "multiple checkboxes" example we saw above — it has more standard options, plus an "other" checkbox that when checked causes a text field to appear to enter a value for the "other" option. This is achieved with a simple block of JavaScript. The example includes implicit labels, with the `<input>` directly inside the `<label>`. The text input, without a visible label, includes the [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label) attribute which provides its accessible name. This example also includes some CSS to improve the styling.
 
 ### HTML
 
@@ -179,29 +179,41 @@ The following example is an extended version of the "multiple checkboxes" exampl
   <fieldset>
     <legend>Choose your interests</legend>
     <div>
-      <input type="checkbox" id="coding" name="interest" value="coding" />
-      <label for="coding">Coding</label>
+      <label>
+        <input type="checkbox" id="coding" name="interest" value="coding" />
+        Coding
+      </label>
     </div>
     <div>
-      <input type="checkbox" id="music" name="interest" value="music" />
-      <label for="music">Music</label>
+      <label>
+        <input type="checkbox" id="music" name="interest" value="music" />
+        Music
+      </label>
     </div>
     <div>
-      <input type="checkbox" id="art" name="interest" value="art" />
-      <label for="art">Art</label>
+      <label>
+        <input type="checkbox" id="art" name="interest" value="art" />
+        Art
+      </label>
     </div>
     <div>
-      <input type="checkbox" id="sports" name="interest" value="sports" />
-      <label for="sports">Sports</label>
+      <label>
+        <input type="checkbox" id="sports" name="interest" value="sports" />
+        Sports
+      </label>
     </div>
     <div>
-      <input type="checkbox" id="cooking" name="interest" value="cooking" />
-      <label for="cooking">Cooking</label>
+      <label>
+        <input type="checkbox" id="cooking" name="interest" value="cooking" />
+        Cooking
+      </label>
     </div>
     <div>
-      <input type="checkbox" id="other" name="interest" value="other" />
-      <label for="other">Other</label>
-      <input type="text" id="otherValue" name="other" />
+      <label>
+        <input type="checkbox" id="other" name="interest" value="other" />
+        Other
+      </label>
+      <input type="text" id="otherValue" name="other" aria-label="Other interest" />
     </div>
     <div>
       <button type="submit">Submit form</button>
