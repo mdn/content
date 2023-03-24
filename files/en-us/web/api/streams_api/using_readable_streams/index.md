@@ -232,7 +232,7 @@ logChunks("http://example.com/somefile.txt", { signal: aborter.signal });
 async function logChunks(url, { signal }) {
   const response = await fetch(url);
   for await (const chunk of response.body) {
-    if (signal.aborted) break; //just break out of loop
+    if (signal.aborted) break; // just break out of loop
     // Do something with the chunk
   }
 }
@@ -246,34 +246,33 @@ async function logChunks(url, { signal }) {
 // A mock push source.
 // Used to simulate some random data arriving
 class MockPushSource {
-  constructor() {
-    this.max_data = 90; // total amount of data to to stream from the push source
-    //this.max_per_read = 100; // max data per read
-    //this.min_per_read = 40; // min data per read
-    this.data_read = 0; // total data read so far (capped to maxdata)
-  }
+  // total amount of data to to stream from the push source
+  static #maxData = 90;
+  // total data read so far (capped to maxData)
+  #dataRead = 0;
 
   // Method returning promise when this push source is readable.
   dataRequest() {
-    // Object used to resolve promise
-    const resultobj = {};
-    resultobj["bytesRead"] = 8;
+    const result = {
+      bytesRead: 8,
+      data: "",
+    };
 
-    return new Promise((resolve /*, reject*/) => {
-      if (this.data_read >= this.max_data) {
-        //out of data
-        resultobj["bytesRead"] = 0;
-        resultobj["data"] = "";
-        resolve(resultobj);
+    return new Promise((resolve) => {
+      if (this.#dataRead >= MockPushSource.#maxData) {
+        // Out of data
+        result.bytesRead = 0;
+        result.data = "";
+        resolve(result);
         return;
       }
 
       // Emulate slow read of data
       setTimeout(() => {
         const numberBytesReceived = 8;
-        this.data_read += numberBytesReceived;
-        resultobj["data"] = this.randomChars();
-        resolve(resultobj);
+        this.#dataRead += numberBytesReceived;
+        result.data = MockPushSource.#randomChars();
+        resolve(result);
       }, 500);
     });
   }
@@ -284,13 +283,13 @@ class MockPushSource {
   }
 
   // Return random character string
-  randomChars(length = 8) {
+  static #randomChars(length = 8) {
     let string = "";
-    let choices =
+    const choices =
       "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()";
 
     for (let i = 0; i < length; i++) {
-      string += choices.charAt(Math.floor(Math.random() * choices.length));
+      string += choices[Math.floor(Math.random() * choices.length)];
     }
     return string;
   }
@@ -361,14 +360,13 @@ function makePushSourceStream() {
       readRepeatedly().catch((e) => controller.error(e));
       function readRepeatedly() {
         return pushSource.dataRequest().then((result) => {
-          //logSource(`chunk length: ${result.data.length} bytes`);
           if (result.data.length == 0) {
             logSource(`No data from source: closing`);
             controller.close();
             return;
           }
 
-          logSource(`enqueue() ${result.data} bytes`);
+          logSource(`Enqueue data: ${result.data}`);
           controller.enqueue(result.data);
           return readRepeatedly();
         });
@@ -384,7 +382,7 @@ function makePushSourceStream() {
 ```
 
 ```js hidden
-// Monkeypatch fetch() so it returns a response that is a mocked stream
+// Monkey patch fetch() so it returns a response that is a mocked stream
 window.fetch = async (...args) => {
   return { body: stream };
 };
@@ -413,6 +411,7 @@ async function logChunks(url, { signal }) {
     }
   } catch (e) {
     if (e instanceof TypeError) {
+      console.log(e);
       logConsumer("TypeError: Browser may not support async iteration");
     } else {
       logConsumer(`Error in async iterator: ${e}.`);
@@ -426,7 +425,7 @@ The right hand side shows the received chunks; you can press the cancel button t
 
 > **Note:** This fetch operation is _mocked_ for the purpose of demonstration, and just returns a `ReadableStream` that generates random chunks of text.
 > The "Underlying source" on the left below is the data being generated in the mocked source, while the column on the right is log from the consumer.
-> (The code for the mocked source is not displayed as it is not relevant to the example).
+> (The code for the mocked source is not displayed as it is not relevant to the example.)
 
 {{EmbedLiveSample("Example async reader","100%","400px")}}
 
