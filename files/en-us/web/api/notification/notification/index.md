@@ -84,19 +84,41 @@ new Notification(title, options)
 
 ## Examples
 
-In our
-[`Emogotchi demo`](https://chrisdavidmills.github.io/emogotchi/)
-([see source code](https://github.com/chrisdavidmills/emogotchi)), we run a
-`spawnNotification()` function when we want to trigger a notification. The
-function is passed parameters to specify the body, icon, and title we want, and then it
-creates the necessary `options` object and triggers the notification by using
-the `Notification()` constructor.
+### Displaying a notification
+
+This example includes two buttons: the first requests permission for the site to show notifications, and the second creates a notification if permission was given.
+
+#### HTML
+
+```html
+<button id="request-permission">Request permission</button>
+
+<button id="notify-me">Notify me!</button>
+```
+
+#### JavaScript
 
 ```js
-function spawnNotification(body, icon, title) {
-  const notification = new Notification(title, { body, icon });
-}
+const requestPermission = document.querySelector("#request-permission");
+requestPermission.addEventListener("click", () => {
+  Notification.requestPermission();
+});
+
+const notifyMe = document.querySelector("#notify-me");
+notifyMe.addEventListener("click", async () => {
+  if (Notification.permission === "granted") {
+    const notification = new Notification("Time for pizza!", {
+      icon: "pizza.png",
+      // The pizza icon is from the "bitsies" icon set by Recep Kütük
+      // https://www.iconfinder.com/iconsets/bitsies
+    });
+  }
+});
 ```
+
+#### Result
+
+{{EmbedLiveSample("Displaying a notification")}}
 
 ## Specifications
 
