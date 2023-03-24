@@ -59,7 +59,7 @@ async function sendMessage(message, writableStream) {
     await defaultWriter.close();
     console.log("All chunks written");
   } catch (err) {
-    console.log("Chunk error:", err);
+    console.log("Error:", err);
   }
 }
 
@@ -88,7 +88,7 @@ const writableStream = new WritableStream(
       list.appendChild(listItem);
     },
     abort(err) {
-      console.log(`Sink error: ${err}`);
+      console.log("Sink error:", err);
     },
   },
   queuingStrategy
