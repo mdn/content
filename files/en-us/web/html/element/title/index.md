@@ -130,4 +130,3 @@ If a form submission contains errors and the submission re-renders the current p
 ## See also
 
 - SVG [`<title>`](/en-US/docs/Web/SVG/Element/title) element
-
