@@ -20,7 +20,7 @@ event.stopImmediatePropagation()
 
 ## Examples
 
-### Comparing event stopping functions
+### Comparing event-stopping functions
 
 The example below has three buttons inside of three nested divs. Each button has three event listeners registered for click events, and each div has an event listener, also registered for click events.
 
@@ -52,9 +52,10 @@ The example below has three buttons inside of three nested divs. Each button has
 ```css
 div {
   display: inline-block;
-  padding: 20px;
+  padding: 10px;
   background-color: #fff;
   border: 2px solid #000;
+  margin: 10px;
 }
 
 button {
@@ -154,7 +155,7 @@ addButtonActions("immediate-stop", true);
 
 Each click event handler displays a message when it is called. It also causes the background of its owning element to briefly flash green. You will see that calling `stopPropagation()` allows the other event handlers registered for clicks on the button to execute while calling `stopImmediatePropagation()` does not.
 
-{{ EmbedLiveSample("Comparing event stopping functions", 500, 550) }}
+{{ EmbedLiveSample("Comparing event-stopping functions", 500, 550) }}
 
 ## Specifications
 
