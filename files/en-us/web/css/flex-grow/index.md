@@ -9,7 +9,7 @@ browser-compat: css.properties.flex-grow
 
 The **`flex-grow`** [CSS](/en-US/docs/Web/CSS) property sets the flex grow factor, which specifies how much of the flex containers remaining space should be assigned to the flex item's [main size](https://www.w3.org/TR/css-flexbox/#main-size).
 
-When the flex-container's main size is larger than the combined main size's of the flex items, the extra space is distributed among the flex items, with each item growth being their growth factor value as a proportion of the sum total of all the container's items' flex grow factors. 
+When the flex-container's main size is larger than the combined main size's of the flex items, the extra space is distributed among the flex items, with each item growth being their growth factor value as a proportion of the sum total of all the container's items' flex grow factors.
 
 {{EmbedInteractiveExample("pages/css/flex-grow.html")}}
 
@@ -57,7 +57,7 @@ The remaining space is the size of the flex container minus the size of all flex
 
 ### Setting flex item grow factor
 
-In this example, there is a total of 8 growth factors distributed among the 6 flex items, meaning each growth factor is 12.5% of the remaining space. 
+In this example, there is a total of 8 growth factors distributed among the 6 flex items, meaning each growth factor is 12.5% of the remaining space.
 
 #### HTML
 
