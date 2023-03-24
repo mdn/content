@@ -30,21 +30,44 @@ _Inherits methods from its ancestor {{domxref("CSSRule")}}._
 
 ## Examples
 
-This example uses the same CSS as in the example on the {{cssxref("@font-palette-values")}} page. The first {{domxref("CSSRule")}} returned will be a `CSSFontFaceRule`.
+### Read associated font family using CSSOM
+
+This example first defines an {{cssxref("@import")}} and an {{cssxref("@font-palette-values")}} at-rule. Then it reads the {{cssxref("@font-palette-values")}} rule and displays its name. As these rules live in the last stylesheet added to the document, the palette will be the second {{domxref("CSSRule")}} returned by the \_last: stylesheet in the document (`document.styleSheets[document.styleSheets.length-1].cssRules`). So, `rules[1]` returns a {{domxref("CSSFontPaletteValuesRule")}} object, from which we can access `fontFamily`.
+
+#### HTML
+
+```html
+<pre id="log">The @font-palette-values at-rule font families:</pre>
+```
+
+#### CSS
 
 ```css
-@font-face {
-  font-family: MyHelvetica;
-  src: local("Helvetica Neue Bold"), local("HelveticaNeue-Bold"),
-    url(MgOpenModernaBold.ttf);
-  font-weight: bold;
+@import url(https://fonts.googleapis.com/css2?family=Bungee+Spice);
+
+@font-palette-values --Alternate {
+  font-family: "Bungee Spice";
+  override-colors: 0 #00ffbb, 1 #007744;
+}
+
+.alternate {
+  font-palette: --Alternate;
 }
 ```
 
+#### JavaScript
+
 ```js
-let myRules = document.styleSheets[0].cssRules;
-console.log(myRules[0]); //a CSSFontFaceRule
+const log = document.getElementById("log");
+
+const rules = document.styleSheets[document.styleSheets.length - 1].cssRules;
+const fontPaletteValuesRule = rules[1]; // aA CSSFontPaletteValuesRule interface
+log.textContent += ` ${fontPaletteValuesRule.fontFamily}`;
 ```
+
+#### Result
+
+{{EmbedLiveSample("Read associated font family using CSSOM", "100", "40")}}
 
 ## Specifications
 

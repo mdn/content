@@ -15,9 +15,11 @@ A string containing a comma-separated list of color index and color pair
 
 ## Examples
 
+### Read the overriden colors
+
 This example first defines a few at-rules, among them two {{cssxref("@font-palette-values")}}. As these rules live in the last stylesheet added to the document, the palette will be the second {{domxref("CSSRule")}} returned by the \_last: stylesheet in the document (`document.styleSheets[document.styleSheets.length-1].cssRules`).
 
-### HTML
+#### HTML
 
 ```html
 <div class="hat">
@@ -27,7 +29,7 @@ This example first defines a few at-rules, among them two {{cssxref("@font-palet
 <pre id="log"></pre>
 ```
 
-### CSS
+#### CSS
 
 ```css
 @font-face {
@@ -58,7 +60,7 @@ This example first defines a few at-rules, among them two {{cssxref("@font-palet
 }
 ```
 
-### JavaScript
+#### JavaScript
 
 ```js
 const log = document.getElementById("log");
@@ -80,9 +82,9 @@ button.addEventListener("click", (event) => {
 });
 ```
 
-### Result
+#### Result
 
-{{EmbedLiveSample("Examples", "100", "125")}}
+{{EmbedLiveSample("Read the overriden colors", "100", "125")}}
 
 ## Specifications
 

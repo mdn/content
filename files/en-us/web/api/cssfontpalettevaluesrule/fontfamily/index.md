@@ -15,9 +15,11 @@ A string containing a space-separated list of the font families on which the rul
 
 ## Examples
 
+### Read the associated font family
+
 This example first defines an {{cssxref("@import")}} and an {{cssxref("@font-palette-values")}} at-rule. Then it reads the {{cssxref("@font-palette-values")}} rule and displays its name. As these rules live in the last stylesheet added to the document, the palette will be the second {{domxref("CSSRule")}} returned by the \_last: stylesheet in the document (`document.styleSheets[document.styleSheets.length-1].cssRules`). So, `rules[1]` returns a {{domxref("CSSFontPaletteValuesRule")}} object, from which we can access `fontFamily`.
 
-### HTML
+#### HTML
 
 ```html
 <pre id="log">
@@ -25,7 +27,7 @@ The @font-palette-values at-rule's applies to the font families:</pre
 >
 ```
 
-### CSS
+#### CSS
 
 ```css
 @import url(https://fonts.googleapis.com/css2?family=Bungee+Spice);
@@ -40,7 +42,7 @@ The @font-palette-values at-rule's applies to the font families:</pre
 }
 ```
 
-### JavaScript
+#### JavaScript
 
 ```js
 const log = document.getElementById("log");
@@ -50,9 +52,9 @@ const fontPaletteValuesRule = rules[1]; // a CSSFontPaletteValuesRule interface
 log.textContent += ` ${fontPaletteValuesRule.fontFamily}`;
 ```
 
-### Result
+#### Result
 
-{{EmbedLiveSample("Examples", "100", "40")}}
+{{EmbedLiveSample("Read the associated font family", "100", "40")}}
 
 ## Specifications
 

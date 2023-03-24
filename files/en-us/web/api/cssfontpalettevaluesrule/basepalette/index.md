@@ -22,9 +22,11 @@ A string that can be one of the following color values:
 
 ## Examples
 
+### Read the associated base palette
+
 This example rules in the last stylesheet added to the document, returned by the \_last: stylesheet in the document (`document.styleSheets[document.styleSheets.length-1].cssRules`). So, `rules[2]` returns the first {{domxref("CSSFontPaletteValuesRule")}} object, and `rules[3]` the second one.
 
-### HTML
+#### HTML
 
 ```html
 <h2>default base-palette</h2>
@@ -33,7 +35,7 @@ This example rules in the last stylesheet added to the document, returned by the
 <pre id="log"></pre>
 ```
 
-### CSS
+#### CSS
 
 ```css
 @import url("https://fonts.googleapis.com/css2?family=Nabla&display=swap");
@@ -61,22 +63,22 @@ h2 {
 }
 ```
 
-### JavaScript
+#### JavaScript
 
 ```js
 const log = document.getElementById("log");
 
 const rules = document.styleSheets[document.styleSheets.length - 1].cssRules;
-const twoRule = rules[2]; // a CSSFontPaletteValuesRule interface
-const fiveRule = rules[3]; // a CSSFontPaletteValuesRule interface
+const twoRule = rules[2]; // A CSSFontPaletteValuesRule interface
+const fiveRule = rules[3]; // A CSSFontPaletteValuesRule interface
 
 log.textContent = `The ${twoRule.name} @font-palette-values base palette is: ${twoRule.basePalette}\n`;
 log.textContent += `The ${fiveRule.name} @font-palette-values base palette is: ${fiveRule.basePalette}`;
 ```
 
-### Result
+#### Result
 
-{{EmbedLiveSample("Examples", "100", "255")}}
+{{EmbedLiveSample("Read the associated base palette", "100", "255")}}
 
 ## Specifications
 
