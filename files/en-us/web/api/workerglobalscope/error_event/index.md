@@ -1,5 +1,5 @@
 ---
-title: 'WorkerGlobalScope: error event'
+title: "WorkerGlobalScope: error event"
 slug: Web/API/WorkerGlobalScope/error_event
 page-type: web-api-event
 browser-compat: api.WorkerGlobalScope.error_event
@@ -14,9 +14,9 @@ The **`error`** event of the {{domxref("WorkerGlobalScope")}} interface fires wh
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('error', (event) => { });
+addEventListener("error", (event) => {});
 
-onerror = (event) => { };
+onerror = (event) => {};
 ```
 
 ## Event type
@@ -29,15 +29,15 @@ The following code snippet shows an `onerror` handler set inside a worker:
 
 ```js
 self.onerror = () => {
-  console.log('There is an error inside your worker!');
-}
+  console.log("There is an error inside your worker!");
+};
 ```
 
 The same snippet, but using `addEventListener()`:
 
 ```js
-self.addEventListener('error', () => {
-  console.log('There is an error inside your worker!');
+self.addEventListener("error", () => {
+  console.log("There is an error inside your worker!");
 });
 ```
 

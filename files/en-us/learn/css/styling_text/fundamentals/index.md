@@ -98,7 +98,7 @@ To set a different font for your text, you use the {{cssxref("font-family")}} pr
 
 ```css
 p {
-  font-family: arial;
+  font-family: Arial;
 }
 ```
 

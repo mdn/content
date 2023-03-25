@@ -344,12 +344,13 @@ class PrivateConstructor {
     if (!PrivateConstructor.#isInternalConstructing) {
       throw new TypeError("PrivateConstructor is not constructable");
     }
+    PrivateConstructor.#isInternalConstructing = false;
+    // More initialization logic
   }
 
   static create() {
     PrivateConstructor.#isInternalConstructing = true;
     const instance = new PrivateConstructor();
-    PrivateConstructor.#isInternalConstructing = false;
     return instance;
   }
 }

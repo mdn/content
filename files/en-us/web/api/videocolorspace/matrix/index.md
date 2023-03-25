@@ -13,8 +13,8 @@ The **`matrix`** read-only property of the {{domxref("VideoColorSpace")}} interf
 
 A string containing one of the following values:
 
-- `"rbg"`
-  - : Matrix coefficients used by sRBG.
+- `"rgb"`
+  - : Matrix coefficients used by sRGB.
 - `"bt709"`
   - : Matrix coefficients used by BT.709.
 - `"bt470bg"`

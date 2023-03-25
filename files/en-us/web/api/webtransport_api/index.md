@@ -37,7 +37,7 @@ To open a connection to an HTTP/3 server, you pass its URL to the {{domxref("Web
 Also note that you can respond to the connection closing by waiting for the {{domxref("WebTransport.closed")}} promise to fulfill. Errors returned by WebTransport operations are of type {{domxref("WebTransportError")}}, and contain additional data on top of the standard {{domxref("DOMException")}} set.
 
 ```js
-const url = 'https://example.com:4999/wt';
+const url = "https://example.com:4999/wt";
 
 async function initTransport(url) {
   // Initialize transport connection
@@ -52,11 +52,11 @@ async function initTransport(url) {
 // ...
 
 async function closeTransport(transport) {
-    // Respond to connection closing
+  // Respond to connection closing
   try {
     await transport.closed;
     console.log(`The HTTP/3 connection to ${url} closed gracefully.`);
-  } catch(error) {
+  } catch (error) {
     console.error(`The HTTP/3 connection to ${url} closed due to ${error}.`);
   }
 }
@@ -84,7 +84,7 @@ The {{domxref("WebTransportDatagramDuplexStream.readable")}} property returns a 
 async function readData() {
   const reader = transport.datagrams.readable.getReader();
   while (true) {
-    const {value, done} = await reader.read();
+    const { value, done } = await reader.read();
     if (done) {
       break;
     }
@@ -113,7 +113,7 @@ async function writeData() {
 
   try {
     await writer.close();
-    console.log('All data has been sent.');
+    console.log("All data has been sent.");
   } catch (error) {
     console.error(`An error occurred: ${error}`);
   }
@@ -130,7 +130,7 @@ In this case, the first thing to do is set up a function to read a `WebTransport
 async function readData(receiveStream) {
   const reader = receiveStream.getReader();
   while (true) {
-    const {done, value} = await reader.read();
+    const { done, value } = await reader.read();
     if (done) {
       break;
     }
@@ -147,7 +147,7 @@ async function receiveUnidirectional() {
   const uds = transport.incomingUnidirectionalStreams;
   const reader = uds.getReader();
   while (true) {
-    const {done, value} = await reader.read();
+    const { done, value } = await reader.read();
     if (done) {
       break;
     }
@@ -180,7 +180,7 @@ Reading from the `ReadableStream` can then be done as follows:
 async function readData(readable) {
   const reader = readable.getReader();
   while (true) {
-    const {value, done} = await reader.read();
+    const { value, done } = await reader.read();
     if (done) {
       break;
     }
@@ -209,7 +209,7 @@ async function receiveBidirectional() {
   const bds = transport.incomingBidirectionalStreams;
   const reader = bds.getReader();
   while (true) {
-    const {done, value} = await reader.read();
+    const { done, value } = await reader.read();
     if (done) {
       break;
     }

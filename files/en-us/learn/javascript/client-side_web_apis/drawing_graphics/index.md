@@ -359,7 +359,7 @@ It is possible to render external images onto your canvas. These can be simple i
    image.src = "firefox.png";
    ```
 
-   Here we create a new {{domxref("HTMLImageElement")}} object using the {{domxref("HTMLImageElement.Image()", "Image()")}} constructor. The returned object is the same type as that which is returned when you grab a reference to an existing {{htmlelement("img")}} element. We then set its {{htmlattrxref("src", "img")}} attribute to equal our Firefox logo image. At this point, the browser starts loading the image.
+   Here we create a new {{domxref("HTMLImageElement")}} object using the {{domxref("HTMLImageElement.Image()", "Image()")}} constructor. The returned object is the same type as that which is returned when you grab a reference to an existing {{htmlelement("img")}} element. We then set its [`src`](/en-US/docs/Web/HTML/Element/img#src) attribute to equal our Firefox logo image. At this point, the browser starts loading the image.
 
 3. We could now try to embed the image using `drawImage()`, but we need to make sure the image file has been loaded first, otherwise the code will fail. We can achieve this using the `load` event, which will only be fired when the image has finished loading. Add the following block below the previous one:
 
@@ -536,7 +536,7 @@ Now let's create our own simple animation — we'll get a character from a certa
    ctx.translate(width / 2, height / 2);
    ```
 
-4. Now let's create a new {{domxref("HTMLImageElement")}} object, set its {{htmlattrxref("src", "img")}} to the image we want to load, and add an `onload` event handler that will cause the `draw()` function to fire when the image is loaded:
+4. Now let's create a new {{domxref("HTMLImageElement")}} object, set its [`src`](/en-US/docs/Web/HTML/Element/img#src) to the image we want to load, and add an `onload` event handler that will cause the `draw()` function to fire when the image is loaded:
 
    ```js
    const image = new Image();

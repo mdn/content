@@ -69,8 +69,8 @@ Paragraphs are [block-level elements](/en-US/docs/Web/HTML/Block-level_elements)
     <tr>
       <th scope="row">Implicit ARIA role</th>
       <td>
-        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
-          >No corresponding role</a
+        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/structural_roles"
+          >paragraph</a
         >
       </td>
     </tr>

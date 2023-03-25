@@ -1,5 +1,5 @@
 ---
-title: 'Window: pagehide event'
+title: "Window: pagehide event"
 slug: Web/API/Window/pagehide_event
 page-type: web-api-event
 browser-compat: api.Window.pagehide_event
@@ -16,8 +16,8 @@ For example, when the user clicks the browser's Back button, the current page re
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('pagehide', (event) => { });
-onpagehide = (event) => { };
+addEventListener("pagehide", (event) => {});
+onpagehide = (event) => {};
 ```
 
 ## Event type
@@ -62,11 +62,15 @@ See the [Page Lifecycle API](https://developer.chrome.com/blog/page-lifecycle-ap
 In this example, an event handler is established to watch for `pagehide` events and to perform special handling if the page is being persisted for possible reuse.
 
 ```js
-window.addEventListener("pagehide", (event) => {
-  if (event.persisted) {
-    /* the page isn't being discarded, so it can be reused later */
-  }
-}, false);
+window.addEventListener(
+  "pagehide",
+  (event) => {
+    if (event.persisted) {
+      /* the page isn't being discarded, so it can be reused later */
+    }
+  },
+  false
+);
 ```
 
 This can also be written using the `onpagehide` event handler property on the {{domxref("Window")}}:
@@ -76,7 +80,7 @@ window.onpagehide = (event) => {
   if (event.persisted) {
     /* the page isn't being discarded, so it can be reused later */
   }
-}
+};
 ```
 
 ## Specifications

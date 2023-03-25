@@ -50,7 +50,7 @@ The user's DNT preference can also be read from JavaScript using the
 {{domxref("Navigator.doNotTrack")}} property:
 
 ```js
-navigator.doNotTrack; // "0" or "1"
+navigator.doNotTrack; // "0", "1" or null
 ```
 
 ## Specifications
