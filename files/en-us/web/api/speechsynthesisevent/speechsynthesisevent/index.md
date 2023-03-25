@@ -23,7 +23,7 @@ new SpeechSynthesisEvent(type, options)
   - : A string with the name of the event.
     It is case-sensitive and browsers set it to `start`, `end`, `error`, `pause`, `resume`, `mark`, or `boundary`.
 - `options`
-  - : An object that, _in addition of the properties defined in {{domxref("Event/Event", "Event()")}}_, has the following properties:
+  - : An object that, _in addition to the properties defined in {{domxref("Event/Event", "Event()")}}_, has the following properties:
     - `utterance`
       - : A {{domxref("SpeechSynthesisUtterance")}} object, that is the speech request the event was triggered on.
     - `charIndex` {{Optional_inline}}
