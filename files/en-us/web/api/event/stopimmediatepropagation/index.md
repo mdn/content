@@ -78,51 +78,45 @@ button {
 #### JavaScript
 
 ```js
-function addElementAction(
-  elem,
-  identifyElement,
-  indexAction,
-  eventAction = null
-) {
-  /* 2023-03-22: This value determines the time in ms for the annimation
-   * to be reset before it is applied again. For small values, reapplying
-   * the annimation sometimes fails. 12 ms empirically has been found to
-   * be a value that is large enough for annimation to be reliable in
-   * FF and Chrome */
-  const resetOffset = 25;
+function addButtonActions(id, isImmediateStop) {
+  function addButtonElementAction(elem, indexAction, isImmediateStop) {
+    /* 2023-03-22: This value determines the time in ms for the animation
+     * to be reset before it is applied again. For small values, reapplying
+     * the animation sometimes fails. 12 ms empirically has been found to
+     * be a value that is large enough for animation to be reliable in
+     * FF and Chrome */
+    const resetOffset = 25;
 
-  elem.addEventListener("click", (evt) => {
-    /* Special processing for any propagation stopping */
-    if (eventAction !== null) {
-      evt[eventAction]();
-      outElem.textContent += `Event handler for event ${indexAction} calling ${eventAction}()\n`;
-    }
+    elem.addEventListener("click", (evt) => {
+      /* Special processing for any propagation stopping */
+      if (isImmediateStop !== null) {
+        if (isImmediateStop) {
+          evt.stopImmediatePropagation();
+          outElem.textContent += `Event handler for event ${indexAction} calling stopImmediatePropagation()\n`;
+        } else {
+          evt.stopPropagation();
+          outElem.textContent += `Event handler for event ${indexAction} calling stopPropagation()\n`;
+        }
+      }
 
-    setTimeout(() => {
-      elem.style.animation = `flash ${annimationTime}ms 2 alternate ease-in`;
-      outElem.textContent += `Click event ${indexAction} processed on ${identifyElement(
-        elem
-      )}\n`;
-    }, delayTotal);
-    delayTotal += annimationTime;
-    setTimeout(() => {
-      elem.style.animation = "";
-    }, delayTotal - resetOffset);
-  });
-} // end of function addElementAction
-
-function addButtonActions(id, action = null) {
-  function identifyElement(elem) {
-    return `"${elem.textContent}" button`;
-  }
+      setTimeout(() => {
+        elem.style.animation = `flash ${animationTime}ms 2 alternate ease-in`;
+        outElem.textContent += `Click event ${indexAction} processed on "${elem.textContent}" button\n`;
+      }, delayTotal);
+      delayTotal += animationTime;
+      setTimeout(() => {
+        elem.style.animation = "";
+      }, delayTotal - resetOffset);
+    });
+  } // end of function addButtonElementAction
 
   const elem = document.getElementById(id);
-  addElementAction(elem, identifyElement, 1, action);
-  addElementAction(elem, identifyElement, 2);
-  addElementAction(elem, identifyElement, 3);
+  addButtonElementAction(elem, 1, isImmediateStop);
+  addButtonElementAction(elem, 2, null);
+  addButtonElementAction(elem, 3, null);
 } // end of function addButtonActions
 
-const annimationTime = 500; // annimation duration in ms
+const animationTime = 500; // animation duration in ms
 let delayTotal;
 const outElem = document.querySelector("pre");
 
@@ -131,22 +125,30 @@ document.addEventListener(
   "click",
   () => {
     outElem.textContent = "";
-    delayTotal = annimationTime;
+    delayTotal = animationTime;
   },
   true
 );
 
 /* Set event listeners for the divs */
-document
-  .querySelectorAll("div")
-  .forEach((elem) =>
-    addElementAction(elem, (e) => `${e.firstChild.data.trim()}`, 1)
-  );
+document.querySelectorAll("div").forEach((elem) => {
+  elem.addEventListener("click", () => {
+    setTimeout(() => {
+      elem.style.animation = `flash ${animationTime}ms 2 alternate ease-out`;
+      outElem.textContent += `Click event processed on ${elem.firstChild.data.trim()}\n`;
+    }, delayTotal);
+    delayTotal += animationTime;
+    setTimeout(
+      () => (elem.style.animation = ""), // allow next animation
+      delayTotal
+    );
+  });
+});
 
 /* Set event listeners for the buttons */
 addButtonActions("allow", null);
-addButtonActions("stop", "stopPropagation");
-addButtonActions("immediate-stop", "stopImmediatePropagation");
+addButtonActions("stop", false);
+addButtonActions("immediate-stop", true);
 ```
 
 #### Result
