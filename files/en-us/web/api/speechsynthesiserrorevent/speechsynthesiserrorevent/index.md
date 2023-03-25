@@ -23,7 +23,7 @@ new SpeechSynthesisErrorEvent(type, options)
   - : A string with the name of the event.
     It is case-sensitive and browsers set it to `error`.
 - `options`
-  - : An object that, _in addition of the properties defined in {{domxref("SpeechSynthesisEvent/SpeechSynthesisEvent", "SpeechSynthesisEvent()")}}_, has the following properties:
+  - : An object that, _in addition to the properties defined in {{domxref("SpeechSynthesisEvent/SpeechSynthesisEvent", "SpeechSynthesisEvent()")}}_, has the following properties:
     - `error`
       - : A string containing the reason of the error. Possible values are:
         - `canceled`
