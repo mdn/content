@@ -72,14 +72,15 @@ For more information, see the [full bug list](https://bugzilla.mozilla.org/bugli
 
 ## Changes for add-on developers
 
-- Addition of the {{WebExtAPIRef("scripting")}} API, which provides features to execute a script, insert and remove CSS, and manage the registration of content scripts ([Firefox bug 1687764](https://bugzil.la/1687764)). This API is available to Manifest V3 extensions and takes over the execute script and insert and remove CSS features from the {{WebExtAPIRef("tabs")}} API.
-- Addition of the {{WebExtAPIRef("action")}} API, which takes over the features of the {{WebExtAPIRef("browserAction")}} API in Manifest V3 extensions. Corresponding addition of the [`"action"`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/action) manifest key and [`_execute_action` special shortcut](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/commands#special_shortcuts) to the manifest `commands` key. Note that the {{WebExtAPIRef("browserAction")}} API and [`"browser_action"`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action) manifest key are only available in Manifest V2 extensions.
-- The [`"background"`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/background) manifest key property `"persistent"` can be set to `false` under the control of preferences: for Manifest V2, the <code>extensions.eventPages.enabled</code> preference, and in Manifest V3, the <code>extensions.manifestV3.enabled</code> preference.
-- Addition of the [`"host_permissions"`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/host_permissions) manifest key, which is available for Manifest V3 extensions.
-- The content script execution environment has changed for Manifest V3 extensions:
-  - Content scripts can no longer rely on host permissions to perform cross-origin requests. Cross-origin requests from content scripts are possible with [CORS](/en-US/docs/Web/HTTP/CORS).
-  - The `content` object (that offered `content.fetch`, `content.XMLHttpRequest`, and `content.WebSocket`) is removed from the content script execution environment.
 - Addition of the {{WebExtAPIRef("storage.StorageArea.onChanged")}} event that enables you to listen for changes in content in the `local` and `sync` storage areas ([Firefox bug 1758475](https://bugzil.la/1758475)).
+- Manifest V3 [preview](https://blog.mozilla.org/addons/2022/06/08/manifest-v3-firefox-developer-preview-how-to-get-involved/) features:
+  - Addition of the {{WebExtAPIRef("scripting")}} API, which provides features to execute a script, insert and remove CSS, and manage the registration of content scripts ([Firefox bug 1687764](https://bugzil.la/1687764)). This API is available to Manifest V3 extensions and takes over the execute script and insert and remove CSS features from the {{WebExtAPIRef("tabs")}} API.
+  - Addition of the {{WebExtAPIRef("action")}} API, which takes over the features of the {{WebExtAPIRef("browserAction")}} API in Manifest V3 extensions. Corresponding addition of the [`"action"`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/action) manifest key and [`_execute_action` special shortcut](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/commands#special_shortcuts) to the manifest `commands` key. Note that the {{WebExtAPIRef("browserAction")}} API and [`"browser_action"`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action) manifest key are only available in Manifest V2 extensions.
+  - The [`"background"`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/background) manifest key property `"persistent"` can be set to `false` under the control of preferences: for Manifest V2, the <code>extensions.eventPages.enabled</code> preference, and in Manifest V3, the <code>extensions.manifestV3.enabled</code> preference.
+  - Addition of the [`"host_permissions"`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/host_permissions) manifest key, which is available for Manifest V3 extensions.
+  - The content script execution environment has changed for Manifest V3 extensions:
+    - Content scripts can no longer rely on host permissions to perform cross-origin requests. Cross-origin requests from content scripts are possible with [CORS](/en-US/docs/Web/HTTP/CORS).
+    - The `content` object (that offered `content.fetch`, `content.XMLHttpRequest`, and `content.WebSocket`) is removed from the content script execution environment.
 
 ### Removals
 
