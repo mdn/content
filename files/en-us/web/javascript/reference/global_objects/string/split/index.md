@@ -81,12 +81,12 @@ number of elements in the array, and the individual array elements.
 function splitString(stringToSplit, separator) {
   const arrayOfStrings = stringToSplit.split(separator);
 
-  console.log("The original string is: ", stringToSplit);
-  console.log("The separator is: ", separator);
+  console.log("The original string is:", stringToSplit);
+  console.log("The separator is:", separator);
   console.log(
-    "The array has ",
+    "The array has",
     arrayOfStrings.length,
-    " elements: ",
+    "elements:",
     arrayOfStrings.join(" / "),
   );
 }
