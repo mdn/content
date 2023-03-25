@@ -23,7 +23,7 @@ new WebGLContextEvent(type, options)
   - : A string with the name of the event.
     It is case-sensitive and browsers set it to `webglcontextcreationerror`, `webglcontextlost`, or `weblcontextrestored`.
 - `options` {{Optional_inline}}
-  - : An object that, _in addition of the properties defined in {{domxref("Event/Event", "Event()")}}_, has the following properties:
+  - : An object that, _in addition to the properties defined in {{domxref("Event/Event", "Event()")}}_, has the following properties:
     - `status` {{Optional_inline}}
       - : A string with some additional status information. It defaults to the empty string (`""`).
 
