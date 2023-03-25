@@ -78,42 +78,48 @@ button {
 #### JavaScript
 
 ```js
-function addButtonActions(id, isImmediateStop) {
-  function addButtonElementAction(elem, indexAction, isImmediateStop) {
-    /* 2023-03-22: This value determines the time in ms for the animation
-     * to be reset before it is applied again. For small values, reapplying
-     * the animation sometimes fails. 12 ms empirically has been found to
-     * be a value that is large enough for animation to be reliable in
-     * FF and Chrome */
-    const resetOffset = 25;
+function addElementAction(
+  elem,
+  identifyElement,
+  indexAction,
+  eventAction = null
+) {
+  /* 2023-03-22: This value determines the time in ms for the animation
+   * to be reset before it is applied again. For small values, reapplying
+   * the animation sometimes fails. 12 ms empirically has been found to
+   * be a value that is large enough for animation to be reliable in
+   * FF and Chrome */
+  const resetOffset = 25;
 
-    elem.addEventListener("click", (evt) => {
-      /* Special processing for any propagation stopping */
-      if (isImmediateStop !== null) {
-        if (isImmediateStop) {
-          evt.stopImmediatePropagation();
-          outElem.textContent += `Event handler for event ${indexAction} calling stopImmediatePropagation()\n`;
-        } else {
-          evt.stopPropagation();
-          outElem.textContent += `Event handler for event ${indexAction} calling stopPropagation()\n`;
-        }
-      }
+  elem.addEventListener("click", (evt) => {
+    /* Special processing for any propagation stopping */
+    if (eventAction !== null) {
+      evt[eventAction]();
+      outElem.textContent += `Event handler for event ${indexAction} calling ${eventAction}()\n`;
+    }
 
-      setTimeout(() => {
-        elem.style.animation = `flash ${animationTime}ms 2 alternate ease-in`;
-        outElem.textContent += `Click event ${indexAction} processed on "${elem.textContent}" button\n`;
-      }, delayTotal);
-      delayTotal += animationTime;
-      setTimeout(() => {
-        elem.style.animation = "";
-      }, delayTotal - resetOffset);
-    });
-  } // end of function addButtonElementAction
+    setTimeout(() => {
+      elem.style.animation = `flash ${animationTime}ms 2 alternate ease-in`;
+      outElem.textContent += `Click event ${indexAction} processed on ${identifyElement(
+        elem
+      )}\n`;
+    }, delayTotal);
+    delayTotal += animationTime;
+    setTimeout(() => {
+      elem.style.animation = "";
+    }, delayTotal - resetOffset);
+  });
+} // end of function addElementAction
+
+function addButtonActions(id, action = null) {
+  function identifyElement(elem) {
+    return `"${elem.textContent}" button`;
+  }
 
   const elem = document.getElementById(id);
-  addButtonElementAction(elem, 1, isImmediateStop);
-  addButtonElementAction(elem, 2, null);
-  addButtonElementAction(elem, 3, null);
+  addElementAction(elem, identifyElement, 1, action);
+  addElementAction(elem, identifyElement, 2);
+  addElementAction(elem, identifyElement, 3);
 } // end of function addButtonActions
 
 const animationTime = 500; // animation duration in ms
@@ -131,24 +137,16 @@ document.addEventListener(
 );
 
 /* Set event listeners for the divs */
-document.querySelectorAll("div").forEach((elem) => {
-  elem.addEventListener("click", () => {
-    setTimeout(() => {
-      elem.style.animation = `flash ${animationTime}ms 2 alternate ease-out`;
-      outElem.textContent += `Click event processed on ${elem.firstChild.data.trim()}\n`;
-    }, delayTotal);
-    delayTotal += animationTime;
-    setTimeout(
-      () => (elem.style.animation = ""), // allow next animation
-      delayTotal
-    );
-  });
-});
+document
+  .querySelectorAll("div")
+  .forEach((elem) =>
+    addElementAction(elem, (e) => `${e.firstChild.data.trim()}`, 1)
+  );
 
 /* Set event listeners for the buttons */
 addButtonActions("allow", null);
-addButtonActions("stop", false);
-addButtonActions("immediate-stop", true);
+addButtonActions("stop", "stopPropagation");
+addButtonActions("immediate-stop", "stopImmediatePropagation");
 ```
 
 #### Result
