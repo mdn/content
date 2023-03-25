@@ -62,7 +62,7 @@ const global = this;
 
 const sillyFunction = function (recursed) {
   if (this !== global) {
-    console.log("This is: ", this);
+    console.log("This is:", this);
   } else {
     console.log("This is the global");
   }
