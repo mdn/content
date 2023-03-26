@@ -32,7 +32,7 @@ The following parameters are passed to the `deleteProperty()` method.
 
 ### Return value
 
-The `deleteProperty()` method must return a {{jsxref("Boolean")}} indicating
+The `deleteProperty()` method must return a [boolean value](/en-US/docs/Web/JavaScript/Data_structures#boolean_type) indicating
 whether or not the property has been successfully deleted.
 
 ## Description
