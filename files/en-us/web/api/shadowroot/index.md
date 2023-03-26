@@ -29,13 +29,15 @@ You can retrieve a reference to an element's shadow root using its {{domxref("El
 - {{domxref("ShadowRoot.innerHTML")}}
   - : Sets or returns a reference to the DOM tree inside the `ShadowRoot`.
 - {{domxref("ShadowRoot.mode")}} {{ReadOnlyInline}}
-  - : The mode of the `ShadowRoot` — either `open` or `closed`.
+  - : The mode of the `ShadowRoot`, either `open` or `closed`.
     This defines whether or not the shadow root's internal features are accessible from JavaScript.
 - {{DOMxRef("ShadowRoot.pictureInPictureElement")}} {{ReadOnlyInline}}
   - : Returns the {{DOMxRef('Element')}} within the shadow tree that is currently being presented in picture-in-picture mode.
 - {{DOMxRef("ShadowRoot.pointerLockElement")}} {{ReadOnlyInline}}
   - : Returns the {{DOMxRef('Element')}} set as the target for mouse events while the pointer is locked.
     `null` if lock is pending, pointer is unlocked, or if the target is in another tree.
+- {{DOMxRef("ShadowRoot.slotAssignment")}} {{ReadOnlyInline}}
+  - : Returns a string containing the type of slot assignement, either `manual` or `named`.
 - {{domxref("ShadowRoot.styleSheets")}} {{ReadOnlyInline}}
   - : Returns a {{domxref('StyleSheetList')}} of {{domxref('CSSStyleSheet')}} objects for stylesheets explicitly linked into, or embedded in a shadow tree.
 
