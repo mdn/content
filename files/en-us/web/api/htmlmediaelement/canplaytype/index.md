@@ -55,4 +55,4 @@ console.log(obj.canPlayType("video/mp4")); // "maybe"
 - {{domxref("MediaCapabilities")}} in the Media Capabilities API
 - [Handling media support issues in web content](/en-US/docs/Web/Media/Formats/Support_issues)
 - [Guide to media types and formats on the web](/en-US/docs/Web/Media/Formats)
-- [The `codecs` parameter](/en-US/docs/Web/Media/Formats/codecs_parameter)
+- [Codecs in common media types](/en-US/docs/Web/Media/Formats/codecs_parameter)

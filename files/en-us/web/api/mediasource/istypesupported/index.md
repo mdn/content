@@ -79,6 +79,6 @@ function sourceOpen() {
 
 - [Media Source Extensions API](/en-US/docs/Web/API/Media_Source_Extensions_API)
 - [Guide to media types and formats on the web](/en-US/docs/Web/Media/Formats)
-- [The "codecs" parameter in common media types](/en-US/docs/Web/Media/Formats/codecs_parameter)
+- [Codecs in common media types](/en-US/docs/Web/Media/Formats/codecs_parameter)
 - {{domxref("SourceBuffer")}}
 - {{domxref("SourceBufferList")}}
