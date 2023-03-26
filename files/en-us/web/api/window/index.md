@@ -19,23 +19,6 @@ In a tabbed browser, each tab is represented by its own `Window` object; the glo
 
 {{InheritanceDiagram}}
 
-## Constructors
-
-See also the [DOM Interfaces](/en-US/docs/Web/API/Document_Object_Model).
-
-- {{domxref("DOMParser")}}
-  - : `DOMParser` can parse XML or HTML source stored in a string into a DOM [Document](/en-US/docs/Web/API/Document). `DOMParser` is specified in [DOM Parsing and Serialization](https://w3c.github.io/DOM-Parsing/).
-- {{domxref("HTMLImageElement.Image")}}
-  - : Used for creating an {{domxref("HTMLImageElement")}}.
-- {{domxref("HTMLOptionElement.Option")}}
-  - : Used for creating an {{domxref("HTMLOptionElement")}}.
-- {{domxref("StaticRange")}} {{Experimental_Inline}} {{ReadOnlyInline}}
-  - : Returns a {{domxref("StaticRange.StaticRange","StaticRange()")}} constructor which creates a {{domxref("StaticRange")}} object.
-- {{domxref("Worker")}}
-  - : Used for creating a [Web worker](/en-US/docs/Web/API/Web_Workers_API/Using_web_workers).
-- {{domxref("XMLSerializer")}}
-  - : Converts a DOM tree into XML or HTML source.
-
 ## Instance properties
 
 _This interface inherits properties from the {{domxref("EventTarget")}} interface._
