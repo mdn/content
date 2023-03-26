@@ -48,7 +48,7 @@ document.querySelector("output").textContent = result.snapshotLength;
 
 #### Result
 
-{{EmbedLiveSample("count_the_number_of_div_elements", "100%", "40")}}
+{{EmbedLiveSample("count_the_number_of_div_elements", "100%", "50")}}
 
 ## Specifications
 
