@@ -116,9 +116,9 @@ Intl.DateTimeFormat(locales, options)
     - `numberingSystem`
       - : Numbering System. Possible values include: `"arab"`,
         `"arabext"`, `"bali"`, `"beng"`,
-        `"deva"`, `"fullwide"`, " `gujr`",
-        `"guru"`, `"hanidec"`, `"khmr"`, "
-        `knda`", `"laoo"`, `"latn"`,
+        `"deva"`, `"fullwide"`, `"gujr"`,
+        `"guru"`, `"hanidec"`, `"khmr"`,
+        `"knda"`, `"laoo"`, `"latn"`,
         `"limb"`, `"mlym"`, `"mong"`,
         `"mymr"`, `"orya"`, `"tamldec"`, `"telu"`, `"thai"`, `"tibt"`.
     - `localeMatcher`
