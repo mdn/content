@@ -187,7 +187,7 @@ These methods are defined on the `TypedArray` constructor object and are thus sh
 
 ## Instance properties
 
-These properties are defined on the `TypedArray` prototype object and shared by all `TypedArray` subclass instances.
+These properties are defined on `TypedArray.prototype` and shared by all `TypedArray` subclass instances.
 
 - {{jsxref("TypedArray.prototype.buffer")}}
   - : Returns the {{jsxref("ArrayBuffer")}} referenced by the typed array.

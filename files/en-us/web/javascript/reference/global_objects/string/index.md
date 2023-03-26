@@ -392,7 +392,7 @@ These properties are own properties of each `String` instance.
   - : Returns a new iterator object that iterates over the code points of a String value,
     returning each code point as a String value.
 
-## HTML wrapper methods
+### HTML wrapper methods
 
 > **Warning:** Deprecated. Avoid these methods.
 >
