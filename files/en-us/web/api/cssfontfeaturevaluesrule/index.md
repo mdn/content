@@ -26,7 +26,7 @@ _Inherits methods from its ancestor {{domxref("CSSRule")}}._
 
 ### Read font family
 
-In this example, we declared two {{cssxref("@font-feature-values")}} one for the _Font One_ font family, and the other for _Font Two_. We then use the CSSOM to read these font families, displaying them into the log.
+In this example, we declare two {{cssxref("@font-feature-values")}} one for the _Font One_ font family, and the other for _Font Two_. We then use the CSSOM to read these font families, displaying them into the log.
 
 #### HTML
 
