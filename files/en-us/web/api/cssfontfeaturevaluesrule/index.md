@@ -16,7 +16,7 @@ The **`CSSFontFeatureValuesRule`** interface represents an {{cssxref("@font-feat
 _Inherits properties from its ancestor {{domxref("CSSRule")}}._
 
 - {{domxref("CSSFontFeatureValuesRule.fontFamily")}}
-  - : A string that identifies the font-family this rule applies to.
+  - : A string that identifies the font family this rule applies to.
 
 ## Instance methods
 
