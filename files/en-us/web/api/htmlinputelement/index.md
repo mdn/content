@@ -221,29 +221,15 @@ Some properties only apply to input element types that support the corresponding
 
 - {{domxref("HTMLInputElement.selectionEnd", "selectionEnd")}}
 
-  - : `unsigned long`: **Returns / Sets** the index of the end
-        of selected text. If no text is selected, contains the index of the
-        character that follows the input cursor. On being set, the control
-        behaves as if `setSelectionRange()` had been called with this
-        as the second argument, and `selectionStart` as the first
-        argument.
+  - : `unsigned long`: **Returns / Sets** the index of the end of selected text. If no text is selected, contains the index of the character that follows the input cursor. On being set, the control behaves as if `setSelectionRange()` had been called with this as the second argument, and `selectionStart` as the first argument.
 
 - {{domxref("HTMLInputElement.selectionStart", "selectionStart")}}
 
-  - : `unsigned long`: **Returns / Sets** the index of the
-        beginning of selected text. If no text is selected, contains the index
-        of the character that follows the input cursor. On being set, the
-        control behaves as if `setSelectionRange()` had been called
-        with this as the first argument, and `selectionEnd` as the
-        second argument.
+  - : `unsigned long`: **Returns / Sets** the index of the beginning of selected text. If no text is selected, contains the index of the character that follows the input cursor. On being set, the control behaves as if `setSelectionRange()` had been called with this as the first argument, and `selectionEnd` as the second argument.
 
 - {{domxref("HTMLInputElement.selectionDirection", "selectionDirection")}}
 
-  - : `string`: **Returns / Sets** the direction in which
-        selection occurred. This is `forward` if selection was
-        performed in the start-to-end direction of the current locale, or
-        `backward` for the opposite direction. This can also be
-        `none` if the direction is unknown.
+  - : `string`: **Returns / Sets** the direction in which selection occurred. This is `forward` if selection was performed in the start-to-end direction of the current locale, or `backward` for the opposite direction. This can also be `none` if the direction is unknown.
 
 - {{domxref("HTMLInputElement.size", "size")}}
   - : `unsigned long`: **Returns / Sets** the element's [`size`](/en-US/docs/Web/HTML/Element/input#size) attribute, containing visual size of the control. This value is in pixels unless the value of [`type`](/en-US/docs/Web/HTML/Element/input#type) is `text` or `password`, in which case, it is an integer number of characters. Applies only when [`type`](/en-US/docs/Web/HTML/Element/input#type) is set to `text`, `search`, `tel`, `url`, `email`, or `password`.
