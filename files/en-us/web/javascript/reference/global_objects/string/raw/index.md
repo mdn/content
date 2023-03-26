@@ -53,12 +53,12 @@ If `String.raw()` is called with an object whose `raw` property doesn't have a `
 
 ```js
 String.raw`Hi\n${2 + 3}!`;
-// 'Hi\\n5!', the character after 'Hi'
+// 'Hi\n5!', the character after 'Hi'
 // is not a newline character,
 // '\' and 'n' are two characters.
 
 String.raw`Hi\u000A!`;
-// 'Hi\\u000A!', same here, this time we will get the
+// 'Hi\u000A!', same here, this time we will get the
 // \, u, 0, 0, 0, A, 6 characters.
 // All kinds of escape characters will be ineffective
 // and backslashes will be present in the output string.
@@ -67,10 +67,10 @@ String.raw`Hi\u000A!`;
 
 const name = "Bob";
 String.raw`Hi\n${name}!`;
-// 'Hi\\nBob!', substitutions are processed.
+// 'Hi\nBob!', substitutions are processed.
 
 String.raw`Hi \${name}!`;
-// 'Hi \\${name}!', the dollar sign is escaped; there's no interpolation.
+// 'Hi \${name}!', the dollar sign is escaped; there's no interpolation.
 ```
 
 ### Building an identity tag
