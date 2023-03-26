@@ -141,7 +141,7 @@ p2.then((value) => {
   console.log(value); // 1
   return value + 1;
 }).then((value) => {
-  console.log(value, " - A synchronous value works"); // 2 - A synchronous value works
+  console.log(value, "- A synchronous value works"); // 2 - A synchronous value works
 });
 
 p2.then((value) => {
