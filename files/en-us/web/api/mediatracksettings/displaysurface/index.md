@@ -2,24 +2,6 @@
 title: MediaTrackSettings.displaySurface
 slug: Web/API/MediaTrackSettings/displaySurface
 page-type: web-api-instance-property
-tags:
-  - API
-  - Capture
-  - Media
-  - Media Capture and Streaming
-  - Media Capture and Streaming API
-  - Monitor
-  - Property
-  - Reference
-  - Screen Capture
-  - Screen Capture API
-  - Screen Sharing
-  - Sharing
-  - Surface
-  - Video
-  - display
-  - displaySurface
-  - screen
 browser-compat: api.MediaTrackSettings.displaySurface
 ---
 

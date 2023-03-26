@@ -2,15 +2,8 @@
 title: Content Index API
 slug: Web/API/Content_Index_API
 page-type: web-api-overview
-tags:
-  - API
-  - Content
-  - Content Index API
-  - Indexing
-  - Landing
-  - PWA
-  - content indexing
-  - Experimental
+status:
+  - experimental
 browser-compat: api.ContentIndex
 ---
 
@@ -57,11 +50,9 @@ Here we get a reference to the {{domxref('ServiceWorkerRegistration')}}, then ch
 const registration = await navigator.serviceWorker.ready;
 
 // feature detection
-if ('index' in registration) {
-
+if ("index" in registration) {
   // Content Index API functionality
   const contentIndex = registration.index;
-
 }
 ```
 
@@ -72,16 +63,19 @@ Here we're declaring an item in the correct format and creating an asynchronous 
 ```js
 // our content
 const item = {
-  id: 'post-1',
-  url: '/posts/amet.html',
-  title: 'Amet consectetur adipisicing',
-  description: 'Repellat et quia iste possimus ducimus aliquid a aut eaque nostrum.',
-  icons: [{
-    src: '/media/dark.png',
-    sizes: '128x128',
-    type: 'image/png',
-  }],
-  category: 'article'
+  id: "post-1",
+  url: "/posts/amet.html",
+  title: "Amet consectetur adipisicing",
+  description:
+    "Repellat et quia iste possimus ducimus aliquid a aut eaque nostrum.",
+  icons: [
+    {
+      src: "/media/dark.png",
+      sizes: "128x128",
+      type: "image/png",
+    },
+  ],
+  category: "article",
 };
 
 // our asynchronous function to add indexed content
@@ -97,7 +91,7 @@ async function registerContent(data) {
   try {
     await registration.index.add(data);
   } catch (e) {
-    console.log('Failed to register content: ', e.message);
+    console.log("Failed to register content: ", e.message);
   }
 }
 ```
@@ -115,36 +109,32 @@ async function createReadingList() {
   const entries = await registration.index.getAll();
 
   // create a containing element
-  const readingListElem = document.createElement('div');
+  const readingListElem = document.createElement("div");
 
   // test for entries
   if (!Array.length) {
-
     // if there are no entries, display a message
-    const message = document.createElement('p');
-    message.innerText = 'You currently have no articles saved for offline reading.'
+    const message = document.createElement("p");
+    message.innerText =
+      "You currently have no articles saved for offline reading.";
 
     readingListElem.append(message);
-
   } else {
-
     // if entries are present, display in a list of links to the content
-    const listElem = document.createElement('ul');
+    const listElem = document.createElement("ul");
 
     for (const entry of entries) {
-      const listItem = document.createElement('li');
+      const listItem = document.createElement("li");
 
-      const anchorElem = document.createElement('a');
+      const anchorElem = document.createElement("a");
       anchorElem.innerText = entry.title;
-      anchorElem.setAttribute('href', entry.url);
+      anchorElem.setAttribute("href", entry.url);
 
       listElem.append(listItem);
-
     }
 
     readingListElem.append(listElem);
   }
-
 }
 ```
 
@@ -154,13 +144,11 @@ Below is an asynchronous function, that removes an item from the content index.
 
 ```js
 async function unregisterContent(article) {
-
   // reference registration
   const registration = await navigator.serviceWorker.ready;
 
   // feature detect Content Index
-  if (!registration.index)
-    return;
+  if (!registration.index) return;
 
   // unregister content from index
   await registration.index.delete(article.id);
@@ -184,11 +172,10 @@ const contentIndexItems = self.registration.index.getAll();
 When an item is removed from the user agent interface, a `contentdelete` event is received by the service worker.
 
 ```js
-self.addEventListener('contentdelete', (event) => {
+self.addEventListener("contentdelete", (event) => {
   console.log(event.id);
 
   // logs content index id, which can then be used to determine what content to delete from your cache
-
 });
 ```
 

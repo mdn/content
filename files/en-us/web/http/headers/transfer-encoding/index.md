@@ -1,13 +1,6 @@
 ---
 title: Transfer-Encoding
 slug: Web/HTTP/Headers/Transfer-Encoding
-tags:
-  - HTTP
-  - HTTP Header
-  - Request header
-  - Response header
-  - Reference
-  - Payload header
 browser-compat: http.headers.Transfer-Encoding
 ---
 

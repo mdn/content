@@ -2,9 +2,6 @@
 title: paint-order
 slug: Web/SVG/Attribute/paint-order
 page-type: svg-attribute
-tags:
-  - SVG
-  - SVG Attribute
 browser-compat: svg.attributes.paint-order
 ---
 

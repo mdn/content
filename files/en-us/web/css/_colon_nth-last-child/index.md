@@ -2,13 +2,6 @@
 title: ":nth-last-child()"
 slug: Web/CSS/:nth-last-child
 page-type: css-pseudo-class
-tags:
-  - CSS
-  - Layout
-  - Pseudo-class
-  - Reference
-  - Selector
-  - Web
 browser-compat: css.selectors.nth-last-child
 ---
 
@@ -22,8 +15,10 @@ The **`:nth-last-child()`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/doc
 
 The `nth-last-child` pseudo-class is specified with a single argument, which represents the pattern for matching elements, counting from the end.
 
-```
-:nth-last-child( <nth> [ of <complex-selector-list> ]? )
+```css-nolint
+:nth-last-child(<nth> [of <complex-selector-list>]?) {
+  /* ... */
+}
 ```
 
 ### Keyword values

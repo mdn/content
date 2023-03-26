@@ -2,19 +2,6 @@
 title: shape-outside
 slug: Web/CSS/shape-outside
 page-type: css-property
-tags:
-  - Boundaries
-  - CSS
-  - CSS Property
-  - CSS Shapes
-  - Float Area
-  - Property
-  - Reference
-  - Shape
-  - margin
-  - recipe:css-property
-  - shape-outside
-  - wrapping
 browser-compat: css.properties.shape-outside
 ---
 
@@ -134,18 +121,14 @@ When animating between one `<basic-shape>` and a second, the rules below are app
 }
 
 .left {
-  -webkit-shape-outside: polygon(0 0, 100% 100%, 0 100%);
   shape-outside: polygon(0 0, 100% 100%, 0 100%);
   float: left;
-  -webkit-clip-path: polygon(0 0, 100% 100%, 0 100%);
   clip-path: polygon(0 0, 100% 100%, 0 100%);
 }
 
 .right {
-  -webkit-shape-outside: polygon(100% 0, 100% 100%, 0 100%);
   shape-outside: polygon(100% 0, 100% 100%, 0 100%);
   float: right;
-  -webkit-clip-path: polygon(100% 0, 100% 100%, 0 100%);
   clip-path: polygon(100% 0, 100% 100%, 0 100%);
 }
 

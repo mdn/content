@@ -2,11 +2,6 @@
 title: StyleSheet.media
 slug: Web/API/StyleSheet/media
 page-type: web-api-instance-property
-tags:
-  - API
-  - CSSOM
-  - Property
-  - Reference
 browser-compat: api.StyleSheet.media
 ---
 

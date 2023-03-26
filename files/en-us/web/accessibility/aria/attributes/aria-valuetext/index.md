@@ -1,13 +1,6 @@
 ---
-title: "aria-valuetext"
+title: aria-valuetext
 slug: Web/Accessibility/ARIA/Attributes/aria-valuetext
-tags:
-  - Accessibility
-  - ARIA
-  - ARIA attribute
-  - ARIA property
-  - aria-valuetext
-  - Reference
 spec-urls: https://w3c.github.io/aria/#aria-valuetext
 ---
 

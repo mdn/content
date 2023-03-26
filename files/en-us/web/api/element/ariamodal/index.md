@@ -2,14 +2,6 @@
 title: Element.ariaModal
 slug: Web/API/Element/ariaModal
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - ariaModal
-  - AriaAttributes
-  - AriaMixin
-  - Element
 browser-compat: api.Element.ariaModal
 ---
 
@@ -40,9 +32,9 @@ In this example the `aria-modal` attribute on the element with an ID of `address
 ```
 
 ```js
-let el = document.getElementById('address-modal');
+let el = document.getElementById("address-modal");
 console.log(el.ariaModal); // "true"
-el.ariaModal = "false"
+el.ariaModal = "false";
 console.log(el.ariaModal); // "false"
 ```
 

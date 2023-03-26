@@ -2,14 +2,6 @@
 title: FileSystemDirectoryEntry.createReader()
 slug: Web/API/FileSystemDirectoryEntry/createReader
 page-type: web-api-instance-method
-tags:
-  - API
-  - File and Directory Entries API
-  - FileSystemDirectoryEntry
-  - Files
-  - Method
-  - Reference
-  - createReader
 browser-compat: api.FileSystemDirectoryEntry.createReader
 ---
 
@@ -47,14 +39,17 @@ function readDirectory(directory) {
   let entries = [];
 
   let getEntries = () => {
-    dirReader.readEntries((results) => {
-      if (results.length) {
-        entries = entries.concat(toArray(results));
-        getEntries();
+    dirReader.readEntries(
+      (results) => {
+        if (results.length) {
+          entries = entries.concat(toArray(results));
+          getEntries();
+        }
+      },
+      (error) => {
+        /* handle error — error is a FileError object */
       }
-    }, (error) => {
-      /* handle error — error is a FileError object */
-    });
+    );
   };
 
   getEntries();

@@ -1,14 +1,7 @@
 ---
 title: management.uninstallSelf()
 slug: Mozilla/Add-ons/WebExtensions/API/management/uninstallSelf
-tags:
-  - API
-  - Add-ons
-  - Method
-  - Reference
-  - WebExtensions
-  - management
-  - uninstallSelf
+page-type: webextension-api-function
 browser-compat: webextensions.api.management.uninstallSelf
 ---
 

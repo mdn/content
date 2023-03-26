@@ -1,10 +1,7 @@
 ---
 title: author
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/author
-tags:
-  - Add-ons
-  - Extensions
-  - WebExtensions
+page-type: webextension-manifest-key
 browser-compat: webextensions.manifest.author
 ---
 

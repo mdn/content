@@ -2,11 +2,6 @@
 title: PerformanceNavigationTiming.domContentLoadedEventStart
 slug: Web/API/PerformanceNavigationTiming/domContentLoadedEventStart
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - Web Performance
 browser-compat: api.PerformanceNavigationTiming.domContentLoadedEventStart
 ---
 

@@ -2,23 +2,6 @@
 title: RTCInboundRtpStreamStats.framesDecoded
 slug: Web/API/RTCInboundRtpStreamStats/framesDecoded
 page-type: web-api-instance-property
-tags:
-  - API
-  - Decode
-  - Frames
-  - Media
-  - Property
-  - RTCInboundRtpStreamStats
-  - RTP
-  - Reference
-  - Statistics
-  - Stats
-  - Video
-  - WebRTC
-  - WebRTC API
-  - decoding
-  - framesDecoded
-  - stream
 browser-compat: api.RTCInboundRtpStreamStats.framesDecoded
 ---
 

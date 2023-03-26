@@ -2,14 +2,8 @@
 title: HTMLHtmlElement.version
 slug: Web/API/HTMLHtmlElement/version
 page-type: web-api-instance-property
-tags:
-  - API
-  - Deprecated
-  - HTML DOM
-  - NeedsContent
-  - NeedsLayout
-  - Property
-  - Reference
+status:
+  - deprecated
 browser-compat: api.HTMLHtmlElement.version
 ---
 

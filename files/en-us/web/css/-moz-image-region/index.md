@@ -2,13 +2,8 @@
 title: "-moz-image-region"
 slug: Web/CSS/-moz-image-region
 page-type: css-property
-tags:
-  - CSS
-  - CSS Property
-  - CSS:Mozilla Extensions
-  - Non-standard
-  - Reference
-  - recipe:css-property
+status:
+  - non-standard
 browser-compat: css.properties.-moz-image-region
 ---
 

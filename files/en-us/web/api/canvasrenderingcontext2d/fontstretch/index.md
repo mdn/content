@@ -2,13 +2,8 @@
 title: CanvasRenderingContext2D.fontStretch
 slug: Web/API/CanvasRenderingContext2D/fontStretch
 page-type: web-api-instance-property
-tags:
-  - API
-  - Canvas
-  - CanvasRenderingContext2D
-  - Property
-  - Reference
-  - Experimental
+status:
+  - experimental
 browser-compat: api.CanvasRenderingContext2D.fontStretch
 ---
 

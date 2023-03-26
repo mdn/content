@@ -2,14 +2,6 @@
 title: WindowClient
 slug: Web/API/WindowClient
 page-type: web-api-interface
-tags:
-  - API
-  - Client
-  - Interface
-  - Reference
-  - Service Workers
-  - ServiceWorker
-  - WindowClient
 browser-compat: api.WindowClient
 ---
 

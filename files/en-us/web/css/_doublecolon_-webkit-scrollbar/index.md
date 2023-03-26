@@ -1,16 +1,9 @@
 ---
-title: '::-webkit-scrollbar'
+title: "::-webkit-scrollbar"
 slug: Web/CSS/::-webkit-scrollbar
 page-type: css-pseudo-element
-tags:
-  - '::-webkit-scrollbar'
-  - CSS
-  - CSS Selectors
-  - CSS:WebKit Extensions
-  - Non-standard
-  - Pseudo-element
-  - Reference
-  - Selector
+status:
+  - non-standard
 browser-compat:
   - css.selectors.-webkit-scrollbar
   - css.selectors.-webkit-scrollbar-button

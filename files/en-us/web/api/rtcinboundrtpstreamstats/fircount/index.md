@@ -2,21 +2,6 @@
 title: RTCInboundRtpStreamStats.firCount
 slug: Web/API/RTCInboundRtpStreamStats/firCount
 page-type: web-api-instance-property
-tags:
-  - API
-  - FIR
-  - Frames
-  - Property
-  - RTCIncomingRtpStreamStats
-  - RTP
-  - Reference
-  - Statistics
-  - Stats
-  - Video
-  - WebRTC
-  - WebRTC API
-  - firCount
-  - stream
 browser-compat: api.RTCInboundRtpStreamStats.firCount
 ---
 

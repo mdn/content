@@ -1,16 +1,6 @@
 ---
 title: "ARIA: rowheader role"
 slug: Web/Accessibility/ARIA/Roles/rowheader_role
-tags:
-  - Accessibility
-  - ARIA
-  - roles
-  - Reference
-  - ARIA roles
-  - table
-  - document structure role
-  - Accessibility
-  - ARIA role
 spec-urls: https://w3c.github.io/aria/#rowheader
 ---
 

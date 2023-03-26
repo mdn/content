@@ -2,13 +2,6 @@
 title: PointerEvent.pointerType
 slug: Web/API/PointerEvent/pointerType
 page-type: web-api-instance-property
-tags:
-  - API
-  - DOM
-  - Interface
-  - PointerEvent
-  - Property
-  - Reference
 browser-compat: api.PointerEvent.pointerType
 ---
 
@@ -40,22 +33,26 @@ This example illustrates using the value of the `pointerType` property to
 call the appropriate pointer type processing function.
 
 ```js
-targetElement.addEventListener('pointerdown', (event) => {
-  // Call the appropriate pointer type handler
-  switch (event.pointerType) {
-    case 'mouse':
-      process_pointer_mouse(event);
-      break;
-    case 'pen':
-      process_pointer_pen(event);
-      break;
-    case 'touch':
-      process_pointer_touch(event);
-      break;
-    default:
-      console.log(`pointerType ${event.pointerType} is not supported`);
-  }
-}, false);
+targetElement.addEventListener(
+  "pointerdown",
+  (event) => {
+    // Call the appropriate pointer type handler
+    switch (event.pointerType) {
+      case "mouse":
+        process_pointer_mouse(event);
+        break;
+      case "pen":
+        process_pointer_pen(event);
+        break;
+      case "touch":
+        process_pointer_touch(event);
+        break;
+      default:
+        console.log(`pointerType ${event.pointerType} is not supported`);
+    }
+  },
+  false
+);
 ```
 
 ## Specifications

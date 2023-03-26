@@ -2,12 +2,6 @@
 title: all
 slug: Web/CSS/all
 page-type: css-shorthand-property
-tags:
-  - CSS
-  - CSS Cascade
-  - CSS Property
-  - Reference
-  - recipe:css-property
 browser-compat: css.properties.all
 ---
 

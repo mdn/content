@@ -2,13 +2,6 @@
 title: DynamicsCompressorNode.threshold
 slug: Web/API/DynamicsCompressorNode/threshold
 page-type: web-api-instance-property
-tags:
-  - API
-  - DynamicsCompressorNode
-  - Property
-  - Reference
-  - Web Audio API
-  - threshold
 browser-compat: api.DynamicsCompressorNode.threshold
 ---
 

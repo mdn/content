@@ -2,12 +2,6 @@
 title: HTMLDialogElement
 slug: Web/API/HTMLDialogElement
 page-type: web-api-interface
-tags:
-  - API
-  - HTML DOM
-  - HTMLDialogElement
-  - Interface
-  - Reference
 browser-compat: api.HTMLDialogElement
 ---
 
@@ -22,7 +16,7 @@ The **`HTMLDialogElement`** interface provides methods to manipulate {{HTMLEleme
 _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 
 - {{domxref("HTMLDialogElement.open")}}
-  - : A boolean value reflecting the {{htmlattrxref("open", "dialog")}} HTML attribute, indicating whether the dialog is available for interaction.
+  - : A boolean value reflecting the [`open`](/en-US/docs/Web/HTML/Element/dialog#open) HTML attribute, indicating whether the dialog is available for interaction.
 - {{domxref("HTMLDialogElement.returnValue")}}
   - : A string that sets or returns the return value for the dialog.
 
@@ -42,7 +36,7 @@ _Inherits methods from its parent, {{domxref("HTMLElement")}}._
 - {{domxref("HTMLDialogElement/cancel_event", "cancel")}}
   - : Fired when the user dismisses the current open dialog with the escape key.
 - {{domxref("HTMLDialogElement/close_event", "close")}}
-  - : Fired when the dialog is closed, whether with the escape key, the `HTMLDialogElement.close()` method, or via submitting a form within the dialog with [`method="dialog"`](/en-US/docs/Web/HTML/Element/form#attr-method).
+  - : Fired when the dialog is closed, whether with the escape key, the `HTMLDialogElement.close()` method, or via submitting a form within the dialog with [`method="dialog"`](/en-US/docs/Web/HTML/Element/form#method).
 
 ## Examples
 

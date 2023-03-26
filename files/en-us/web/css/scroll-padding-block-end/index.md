@@ -2,14 +2,6 @@
 title: scroll-padding-block-end
 slug: Web/CSS/scroll-padding-block-end
 page-type: css-property
-tags:
-  - CSS
-  - CSS Property
-  - Reference
-  - Web
-  - recipe:css-property
-  - scroll-padding-block
-  - scroll-padding-block-end
 browser-compat: css.properties.scroll-padding-block-end
 ---
 

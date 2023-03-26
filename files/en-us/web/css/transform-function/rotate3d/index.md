@@ -2,12 +2,6 @@
 title: rotate3d()
 slug: Web/CSS/transform-function/rotate3d
 page-type: css-function
-tags:
-  - CSS
-  - CSS Function
-  - CSS Transforms
-  - Function
-  - Reference
 browser-compat: css.types.transform-function.rotate3d
 ---
 
@@ -69,7 +63,7 @@ rotate3d(x, y, z, a)
       <th scope="col">Cartesian coordinates on ℝ^3</th>
       <td>
         <a
-          href="/en-US/docs/Web/CSS/transform-function/rotate3d()/transform-functions-rotate3d_cart.png"
+          href="/en-US/docs/Web/CSS/transform-function/rotate3d/transform-functions-rotate3d_cart.png"
           ><img src="transform-functions-rotate3d_cart.png" /></a
         ><math>
           <mrow><mo>(</mo
@@ -253,7 +247,7 @@ rotate3d(x, y, z, a)
       <th scope="col">Homogeneous coordinates on ℝℙ^3</th>
       <td>
         <a
-          href="/en-US/docs/Web/CSS/transform-function/rotate3d()/transform-functions-rotate3d_hom4.png"
+          href="/en-US/docs/Web/CSS/transform-function/rotate3d/transform-functions-rotate3d_hom4.png"
           ><img src="transform-functions-rotate3d_hom4.png"
         /></a>
       </td>

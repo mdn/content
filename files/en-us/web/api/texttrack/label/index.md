@@ -2,12 +2,6 @@
 title: TextTrack.label
 slug: Web/API/TextTrack/label
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - label
-  - TextTrack
 browser-compat: api.TextTrack.label
 ---
 
@@ -24,7 +18,7 @@ A string containing the `label`, or an empty string.
 In the following example the value of `label` is printed to the console.
 
 ```js
-let video = document.querySelector('video');
+let video = document.querySelector("video");
 let track = video.addTextTrack("captions", "Captions", "en");
 track.mode = "showing";
 console.log(track.label);

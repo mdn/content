@@ -2,16 +2,8 @@
 title: GamepadPose
 slug: Web/API/GamepadPose
 page-type: web-api-interface
-tags:
-  - API
-  - Experimental
-  - Gamepad
-  - GamepadPose
-  - Interface
-  - Reference
-  - VR
-  - Virtual Reality
-  - WebVR
+status:
+  - experimental
 browser-compat: api.GamepadPose
 ---
 

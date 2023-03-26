@@ -2,19 +2,6 @@
 title: RTCRtpCodecCapability
 slug: Web/API/RTCRtpCodecCapability
 page-type: web-api-interface
-tags:
-  - API
-  - Capability
-  - Codecs
-  - Dictionary
-  - Media
-  - Negotiation
-  - RTCRtpCodecCapability
-  - RTP
-  - Reference
-  - WebRTC
-  - WebRTC API
-  - WebRTC Device API
 browser-compat: api.RTCRtpCodecCapability
 ---
 

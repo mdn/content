@@ -2,18 +2,8 @@
 title: HTMLImageElement.longDesc
 slug: Web/API/HTMLImageElement/longDesc
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTML
-  - HTML DOM
-  - HTMLImageElement
-  - Long description
-  - Property
-  - Reference
-  - description
-  - img
-  - longDesc
-  - Deprecated
+status:
+  - deprecated
 browser-compat: api.HTMLImageElement.longDesc
 ---
 
@@ -23,7 +13,7 @@ The _deprecated_ property **`longDesc`** on
 the {{domxref("HTMLImageElement")}} interface specifies the URL of a text or HTML file
 which contains a long-form description of the image. This can be used to
 provide optional added details beyond the short description provided in the
-{{htmlattrxref("title")}} attribute.
+[`title`](/en-US/docs/Web/HTML/Global_attributes#title) attribute.
 
 ## Value
 

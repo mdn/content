@@ -2,15 +2,6 @@
 title: CSS value functions
 slug: Web/CSS/CSS_Functions
 page-type: guide
-tags:
-  - CSS
-  - CSS Data Type
-  - CSS Function
-  - Functional Notation
-  - Functions
-  - Reference
-  - Types
-  - data types
 ---
 
 {{CSSRef}}

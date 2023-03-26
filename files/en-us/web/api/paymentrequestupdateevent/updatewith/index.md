@@ -2,19 +2,6 @@
 title: PaymentRequestUpdateEvent.updateWith()
 slug: Web/API/PaymentRequestUpdateEvent/updateWith
 page-type: web-api-instance-method
-tags:
-  - API
-  - Change
-  - Method
-  - Payment Change
-  - Payment Details
-  - Payment Request API
-  - PaymentRequestUpdateEvent
-  - Reference
-  - Secure context
-  - Web Payments
-  - payment
-  - updateWith
 browser-compat: api.PaymentRequestUpdateEvent.updateWith
 ---
 

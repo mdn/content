@@ -2,16 +2,8 @@
 title: USBDevice.close()
 slug: Web/API/USBDevice/close
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - USB
-  - USBDevice
-  - WebUSB
-  - WebUSB API
-  - close
-  - Experimental
+status:
+  - experimental
 browser-compat: api.USBDevice.close
 ---
 

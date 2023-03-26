@@ -2,13 +2,6 @@
 title: Request.body
 slug: Web/API/Request/body
 page-type: web-api-instance-property
-tags:
-  - API
-  - Fetch
-  - Property
-  - Reference
-  - Streams
-  - Request
 browser-compat: api.Request.body
 ---
 
@@ -27,9 +20,9 @@ A {{domxref("ReadableStream")}} or [`null`](/en-US/docs/Web/JavaScript/Reference
 ## Examples
 
 ```js
-const request = new Request('/myEndpoint', {
-  method: 'POST',
-  body: 'Hello world'
+const request = new Request("/myEndpoint", {
+  method: "POST",
+  body: "Hello world",
 });
 
 request.body; // ReadableStream

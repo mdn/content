@@ -1,10 +1,6 @@
 ---
 title: Text labels and names
 slug: Web/Accessibility/Understanding_WCAG/Text_labels_and_names
-tags:
-  - Accessibility
-  - WCAG
-  - text labels
 ---
 
 {{QuicklinksWithSubPages("Web/Accessibility/Understanding_WCAG")}}
@@ -132,7 +128,7 @@ The following example shows code for a figure with a caption. The `alt` attribut
 ```html
 <figure>
   <img
-    src="milkweed.jgp"
+    src="milkweed.jpg"
     alt="Black and white close-up photo of milkweed flowers" />
   <figcaption>Asclepias verticillata</figcaption>
 </figure>

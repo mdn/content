@@ -2,12 +2,6 @@
 title: ElementInternals.shadowRoot
 slug: Web/API/ElementInternals/shadowRoot
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - shadowRoot
-  - ElementInternals
 browser-compat: api.ElementInternals.shadowRoot
 ---
 

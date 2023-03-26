@@ -2,12 +2,6 @@
 title: WorkerLocation.port
 slug: Web/API/WorkerLocation/port
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Read-only
-  - Reference
-  - WorkerLocation
 browser-compat: api.WorkerLocation.port
 ---
 

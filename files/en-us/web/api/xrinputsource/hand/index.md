@@ -2,21 +2,6 @@
 title: XRInputSource.hand
 slug: Web/API/XRInputSource/hand
 page-type: web-api-instance-property
-tags:
-  - API
-  - Controller
-  - Hand
-  - Input
-  - Property
-  - Read-only
-  - Reference
-  - VR
-  - WebXR
-  - WebXR API
-  - WebXR Device API
-  - XR
-  - XRInputSource
-
 browser-compat: api.XRInputSource.hand
 ---
 

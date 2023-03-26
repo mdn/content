@@ -2,12 +2,8 @@
 title: PerformanceElementTiming
 slug: Web/API/PerformanceElementTiming
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Reference
-  - PerformanceElementTiming
-  - Experimental
+status:
+  - experimental
 browser-compat: api.PerformanceElementTiming
 ---
 
@@ -23,7 +19,7 @@ The API supports timing information on the following elements:
 
 - {{htmlelement("img")}} elements,
 - {{SVGElement("image")}} elements inside an {{SVGElement("svg")}},
-- [poster](/en-US/docs/Web/HTML/Element/video#attr-poster) images of {{htmlelement("video")}} elements,
+- [poster](/en-US/docs/Web/HTML/Element/video#poster) images of {{htmlelement("video")}} elements,
 - elements which have a {{cssxref("background-image")}}, and
 - groups of text nodes, such as a {{htmlelement("p")}}.
 
@@ -51,7 +47,7 @@ This interface also supports the following properties:
 - {{domxref("PerformanceElementTiming.element")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : An {{domxref("Element")}} representing the element we are returning information about.
 - {{domxref("PerformanceElementTiming.id")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - : A string which is the {{htmlattrxref("id")}} of the element.
+  - : A string which is the [`id`](/en-US/docs/Web/HTML/Global_attributes#id) of the element.
 - {{domxref("PerformanceElementTiming.identifier")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : A string which is the value of the [`elementtiming`](/en-US/docs/Web/HTML/Attributes/for) attribute on the element.
 - {{domxref("PerformanceElementTiming.intersectionRect")}} {{ReadOnlyInline}} {{Experimental_Inline}}

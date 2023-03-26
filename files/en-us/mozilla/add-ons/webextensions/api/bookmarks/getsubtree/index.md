@@ -1,16 +1,7 @@
 ---
 title: bookmarks.getSubTree()
 slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/getSubTree
-tags:
-  - API
-  - Add-ons
-  - Bookmarks
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - getSubTree
+page-type: webextension-api-function
 browser-compat: webextensions.api.bookmarks.getSubTree
 ---
 

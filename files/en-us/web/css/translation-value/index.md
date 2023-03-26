@@ -2,12 +2,6 @@
 title: <translation-value>
 slug: Web/CSS/translation-value
 page-type: css-type
-tags:
-  - CSS
-  - CSS Data Type
-  - CSS Transforms
-  - Data Type
-  - Reference
 browser-compat: css.types.transform-function
 ---
 
@@ -122,19 +116,19 @@ main {
 #### JavaScript
 
 ```js
-const selectElem = document.querySelector('select');
-const example = document.querySelector('#example-element');
+const selectElem = document.querySelector("select");
+const example = document.querySelector("#example-element");
 
-selectElem.addEventListener('change', () => {
-  if (selectElem.value === 'Choose a function') {
+selectElem.addEventListener("change", () => {
+  if (selectElem.value === "Choose a function") {
     return;
   } else {
     example.style.transform = `rotate3d(1, 1, 1, 30deg) ${selectElem.value}`;
     setTimeout(() => {
-      example.style.transform = 'rotate3d(1, 1, 1, 30deg)';
-    }, 2000)
+      example.style.transform = "rotate3d(1, 1, 1, 30deg)";
+    }, 2000);
   }
-})
+});
 ```
 
 #### Result

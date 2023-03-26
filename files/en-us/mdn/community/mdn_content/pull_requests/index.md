@@ -2,11 +2,6 @@
 title: Pull request etiquette and process for MDN Web Docs
 slug: MDN/Community/MDN_content/Pull_requests
 page-type: mdn-community-guide
-tags:
-  - meta
-  - community-guidelines
-  - governance
-  - mdn-content
 ---
 
 {{MDNSidebar}}

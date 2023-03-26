@@ -2,11 +2,6 @@
 title: additive
 slug: Web/SVG/Attribute/additive
 page-type: svg-attribute
-tags:
-  - NeedsCompatTable
-  - NeedsExample
-  - SVG
-  - SVG Attribute
 spec-urls: https://svgwg.org/specs/animations/#AdditiveAttribute
 ---
 
@@ -19,7 +14,6 @@ It is frequently useful to define animation as an offset or delta to an attribut
 You can use this attribute with the following SVG elements:
 
 - {{SVGElement("animate")}}
-- {{SVGElement("animateColor")}}
 - {{SVGElement("animateMotion")}}
 - {{SVGElement("animateTransform")}}
 

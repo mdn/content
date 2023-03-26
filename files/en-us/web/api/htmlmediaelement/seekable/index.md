@@ -2,18 +2,6 @@
 title: HTMLMediaElement.seekable
 slug: Web/API/HTMLMediaElement/seekable
 page-type: web-api-instance-property
-tags:
-  - API
-  - Audio
-  - Extensions
-  - HTMLMediaElement
-  - MSE
-  - Media
-  - Property
-  - Reference
-  - Video
-  - seekable
-  - source
 browser-compat: api.HTMLMediaElement.seekable
 ---
 

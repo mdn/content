@@ -1,11 +1,8 @@
 ---
 title: screenshots
 slug: Web/Manifest/screenshots
-tags:
-  - Manifest
-  - Screenshots
-  - Web
-  - Experimental
+status:
+  - experimental
 browser-compat: html.manifest.screenshots
 ---
 

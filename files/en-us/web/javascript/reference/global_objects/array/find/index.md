@@ -2,14 +2,6 @@
 title: Array.prototype.find()
 slug: Web/JavaScript/Reference/Global_Objects/Array/find
 page-type: javascript-instance-method
-tags:
-  - Array
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - Polyfill
 browser-compat: javascript.builtins.Array.find
 ---
 
@@ -147,7 +139,7 @@ const array = [0, 1, , , , 5, 6];
 
 // Shows all indexes, not just those with assigned values
 array.find((value, index) => {
-  console.log("Visited index ", index, " with value ", value);
+  console.log("Visited index", index, "with value", value);
 });
 // Visited index 0 with value 0
 // Visited index 1 with value 1
@@ -161,11 +153,11 @@ array.find((value, index) => {
 array.find((value, index) => {
   // Delete element 5 on first iteration
   if (index === 0) {
-    console.log("Deleting array[5] with value ", array[5]);
+    console.log("Deleting array[5] with value", array[5]);
     delete array[5];
   }
   // Element 5 is still visited even though deleted
-  console.log("Visited index ", index, " with value ", value);
+  console.log("Visited index", index, "with value", value);
 });
 // Deleting array[5] with value 5
 // Visited index 0 with value 0
