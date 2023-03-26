@@ -112,7 +112,7 @@ document
 
 #### Result
 
-Each click event handler displays a status message when it is called. If you press the middle button, you will see that `stopPropagation()` allows all of the event handlers registered for clicks on that button to execute but prevents execution of the click-event handlers for the divs, which would normally follow. However, if you press the bottom button, `stopImmediatePropagation()` stops all propagation after the event that called it.
+Each click-event handler displays a status message when it is called. If you press the middle button, you will see that `stopPropagation()` allows all of the event handlers registered for clicks on that button to execute but prevents execution of the click-event handlers for the divs, which would normally follow. However, if you press the bottom button, `stopImmediatePropagation()` stops all propagation after the event that called it.
 
 {{ EmbedLiveSample("Comparing event-stopping functions", 500, 550) }}
 
