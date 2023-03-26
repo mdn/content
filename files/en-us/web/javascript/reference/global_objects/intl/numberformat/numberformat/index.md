@@ -62,7 +62,6 @@ Intl.NumberFormat(locales, options)
       - : How to display the currency in currency formatting. The default is `"symbol"`.
 
         - `"symbol"`: use a localized currency symbol such as €.
-        - `"narrowSymbol"`: use a narrow format symbol ("$100" rather than "US$100").
         - `"code"`: use the ISO currency code.
         - `"name"`: use a localized currency name such as `"dollar"`.
 
