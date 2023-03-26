@@ -4336,7 +4336,7 @@
 /en-US/docs/JavaScript/Reference/Global_Objects/DateTimeFormat/resolvedOptions	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/resolvedOptions
 /en-US/docs/JavaScript/Reference/Global_Objects/DateTimeFormat/supportedLocalesOf	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/supportedLocalesOf
 /en-US/docs/JavaScript/Reference/Global_Objects/Error	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error
-/en-US/docs/JavaScript/Reference/Global_Objects/Error/Stack	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error/Stack
+/en-US/docs/JavaScript/Reference/Global_Objects/Error/Stack	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error/stack
 /en-US/docs/JavaScript/Reference/Global_Objects/Error/message	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error/message
 /en-US/docs/JavaScript/Reference/Global_Objects/Error/name	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error/name
 /en-US/docs/JavaScript/Reference/Global_Objects/Error/prototype	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error
@@ -4512,7 +4512,7 @@
 /en-US/docs/JavaScript/Reference/Global_Objects/RegExp/toString	/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/toString
 /en-US/docs/JavaScript/Reference/Global_Objects/Set	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set
 /en-US/docs/JavaScript/Reference/Global_Objects/String	/en-US/docs/Web/JavaScript/Reference/Global_Objects/String
-/en-US/docs/JavaScript/Reference/Global_Objects/String/String/Trim	/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/Trim
+/en-US/docs/JavaScript/Reference/Global_Objects/String/String/Trim	/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/trim
 /en-US/docs/JavaScript/Reference/Global_Objects/String/String/TrimLeft	/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/trimStart
 /en-US/docs/JavaScript/Reference/Global_Objects/String/String/TrimRight	/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/trimEnd
 /en-US/docs/JavaScript/Reference/Global_Objects/String/String/charAt	/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/charAt
@@ -4593,7 +4593,7 @@
 /en-US/docs/JavaScript/Reference/Global_Objects/String/toString	/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/toString
 /en-US/docs/JavaScript/Reference/Global_Objects/String/toString-redirect-1	/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/toString
 /en-US/docs/JavaScript/Reference/Global_Objects/String/toUppercase	/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/toUpperCase
-/en-US/docs/JavaScript/Reference/Global_Objects/String/trim	/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/Trim
+/en-US/docs/JavaScript/Reference/Global_Objects/String/trim	/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/trim
 /en-US/docs/JavaScript/Reference/Global_Objects/String/trimLeft	/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/trimStart
 /en-US/docs/JavaScript/Reference/Global_Objects/String/trimRight	/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/trimEnd
 /en-US/docs/JavaScript/Reference/Global_Objects/String/valueOf	/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/valueOf
@@ -4926,7 +4926,7 @@
 /en-US/docs/JavaScript_Documention/Reference/Global_Objects/Date/toUTCString	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toUTCString
 /en-US/docs/JavaScript_Documention/Reference/Global_Objects/Date/valueOf	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/valueOf
 /en-US/docs/JavaScript_Documention/Reference/Global_Objects/Error	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error
-/en-US/docs/JavaScript_Documention/Reference/Global_Objects/Error/Stack	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error/Stack
+/en-US/docs/JavaScript_Documention/Reference/Global_Objects/Error/Stack	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error/stack
 /en-US/docs/JavaScript_Documention/Reference/Global_Objects/Error/message	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error/message
 /en-US/docs/JavaScript_Documention/Reference/Global_Objects/Error/name	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error/name
 /en-US/docs/JavaScript_Documention/Reference/Global_Objects/Error/prototype	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error
@@ -5042,7 +5042,7 @@
 /en-US/docs/JavaScript_Documention/Reference/Global_Objects/RegExp/toString	/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/toString
 /en-US/docs/JavaScript_Documention/Reference/Global_Objects/Set	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set
 /en-US/docs/JavaScript_Documention/Reference/Global_Objects/String	/en-US/docs/Web/JavaScript/Reference/Global_Objects/String
-/en-US/docs/JavaScript_Documention/Reference/Global_Objects/String/Trim	/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/Trim
+/en-US/docs/JavaScript_Documention/Reference/Global_Objects/String/Trim	/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/trim
 /en-US/docs/JavaScript_Documention/Reference/Global_Objects/String/TrimLeft	/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/trimStart
 /en-US/docs/JavaScript_Documention/Reference/Global_Objects/String/TrimRight	/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/trimEnd
 /en-US/docs/JavaScript_Documention/Reference/Global_Objects/String/anchor	/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/anchor
