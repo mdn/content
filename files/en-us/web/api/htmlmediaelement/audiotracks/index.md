@@ -64,6 +64,6 @@ for (let i = 0; i < video.audioTracks.length; i += 1) {
 
 ## See also
 
-- {{domxref("HTMLMediaElement")}}: Interface used to define the `HTMLCanvasElement.audioTracks` property
+- {{domxref("HTMLMediaElement")}}: Interface used to define the `HTMLMediaElement.audioTracks` property
 - {{HTMLElement("audio")}}, {{HTMLElement("video")}}
 - {{domxref("AudioTrack")}}, {{domxref("AudioTrackList")}}

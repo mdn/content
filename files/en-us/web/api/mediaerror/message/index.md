@@ -96,4 +96,4 @@ You can try out this example below, and can [see the example in action outside t
 ## See also
 
 - {{domxref("MediaError")}}: Interface used to define the `MediaError.message` property
-- {{HTMLElement("video")}}, {{HTMLElement("audio")}}
+- {{HTMLElement("audio")}}, {{HTMLElement("video")}}

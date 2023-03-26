@@ -36,5 +36,5 @@ for (let count = 0; count < timeRangesObject.length; count++) {
 ## See also
 
 - {{domxref("HTMLMediaElement")}}: Interface used to define the `HTMLMediaElement.seekable` property
-- [Media Source Extensions API](/en-US/docs/Web/API/Media_Source_Extensions_API)
+- [Media Source API](/en-US/docs/Web/API/Media_Source_Extensions_API)
 - [Media buffering, seeking, and time ranges](/en-US/docs/Web/Guide/Audio_and_video_delivery/buffering_seeking_time_ranges)

@@ -88,12 +88,12 @@ for (const track of tracks) {
 ## See also
 
 - {{domxref("HTMLMediaElement")}}: Interface used to define the `HTMLMediaElement.textTracks` property
-- {{HTMLElement("video")}}, {{HTMLElement("audio")}}
-- {{DOMxRef("VideoTrack")}}, {{DOMxRef("VideoTrackList")}}
+- {{HTMLElement("audio")}}, {{HTMLElement("video")}}
 - {{DOMxRef("AudioTrack")}}, {{DOMxRef("AudioTrackList")}}
-- [`addtrack`](/en-US/docs/Web/API/VideoTrackList/addtrack_event),
-  [`change`](/en-US/docs/Web/API/VideoTrackList/change_event),
-  [`removetrack`](/en-US/docs/Web/API/VideoTrackList/removetrack_event): VideoTrackList events
+- {{DOMxRef("VideoTrack")}}, {{DOMxRef("VideoTrackList")}}
 - [`addtrack`](/en-US/docs/Web/API/VideoTrackList/addtrack_event),
   [`change`](/en-US/docs/Web/API/VideoTrackList/change_event),
   [`removetrack`](/en-US/docs/Web/API/VideoTrackList/removetrack_event): AudioTrackList events
+- [`addtrack`](/en-US/docs/Web/API/VideoTrackList/addtrack_event),
+  [`change`](/en-US/docs/Web/API/VideoTrackList/change_event),
+  [`removetrack`](/en-US/docs/Web/API/VideoTrackList/removetrack_event): VideoTrackList events
