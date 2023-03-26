@@ -7,7 +7,7 @@ slug: Web/XSLT/PI_Parameters
 
 XSLT supports the concept of passing parameters to a stylesheet when executing it. This has been possible for a while when using the {{domxref("XSLTProcessor")}} in JavaScript. However when using an `<?xml-stylesheet?>` processing instruction (PI) there used to be no way to provide parameters.
 
-To solve this two new PIs are implemented in [Firefox 2](//en-US/docs/Mozilla/Firefox/Releases/2) (see [Supported versions](#supported_versions) below for details), `<?xslt-param?>` and `<?xslt-param-namespace?>`. Both PIs can contain "pseudo attributes" the same way that the `xml-stylesheet` PI does.
+To solve this two new PIs are implemented in [Firefox 2](/en-US/docs/Mozilla/Firefox/Releases/2) (see [Supported versions](#supported_versions) below for details), `<?xslt-param?>` and `<?xslt-param-namespace?>`. Both PIs can contain "pseudo attributes" the same way that the `xml-stylesheet` PI does.
 
 The following document passes the two parameters "color" and "size" to the stylesheet "style.xsl".
 
