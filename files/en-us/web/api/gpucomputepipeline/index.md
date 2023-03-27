@@ -11,7 +11,7 @@ browser-compat: api.GPUComputePipeline
 
 The **`GPUComputePipeline`** interface of the {{domxref("WebGPU API", "WebGPU API", "", "nocode")}} represents a pipeline that controls the compute shader stage and can be used in a {{domxref("GPUComputePassEncoder")}}.
 
-A `GPUPipelineLayout` object instance can be created using the {{domxref("GPUDevice.createComputePipeline()")}} or {{domxref("GPUDevice.createComputePipelineAsync()")}} methods.
+A `GPUComputePipeline` object instance can be created using the {{domxref("GPUDevice.createComputePipeline()")}} or {{domxref("GPUDevice.createComputePipelineAsync()")}} methods.
 
 {{InheritanceDiagram}}
 
