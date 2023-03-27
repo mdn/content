@@ -2,15 +2,6 @@
 title: <input type="checkbox">
 slug: Web/HTML/Element/input/checkbox
 page-type: html-element
-tags:
-  - Element
-  - HTML
-  - HTML forms
-  - Input
-  - Input Types
-  - Reference
-  - checkbox
-  - form
 browser-compat: html.elements.input.type_checkbox
 ---
 
@@ -52,13 +43,13 @@ If the `value` attribute was omitted, the default value for the checkbox is `on`
 
 In addition to the common attributes shared by all {{HTMLElement("input")}} elements, "`checkbox`" inputs support the following attributes.
 
-- {{htmlattrdef("checked")}}
+- `checked`
 
   - : A Boolean attribute indicating whether this checkbox is checked by default (when the page loads). It does _not_ indicate whether this checkbox is currently checked: if the checkbox's state is changed, this content attribute does not reflect the change. (Only the {{domxref("HTMLInputElement")}}'s `checked` IDL attribute is updated.)
     > **Note:** Unlike other input controls, a checkbox's value is only included in the submitted data if the checkbox is currently `checked`. If it is, then the value of the checkbox's `value` attribute is reported as the input's value.
-    > Unlike other browsers, Firefox by default [persists the dynamic checked state](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing) of an `<input>` across page loads. Use the {{htmlattrxref("autocomplete","input")}} attribute to control this feature.
+    > Unlike other browsers, Firefox by default [persists the dynamic checked state](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing) of an `<input>` across page loads. Use the [`autocomplete`](/en-US/docs/Web/HTML/Element/input#autocomplete) attribute to control this feature.
 
-- {{htmlattrdef("value")}}
+- `value`
 
   - : The `value` attribute is one which all {{HTMLElement("input")}}s share; however, it serves a special purpose for inputs of type `checkbox`: when a form is submitted, only checkboxes which are currently checked are submitted to the server, and the reported value is the value of the `value` attribute. If the `value` is not otherwise specified, it is the string `on` by default. This is demonstrated in the section [Value](#value) above.
 
@@ -175,11 +166,11 @@ function updateDisplay() {
 
 ## Validation
 
-Checkboxes do support [validation](/en-US/docs/Web/Guide/HTML/Constraint_validation) (offered to all {{HTMLElement("input")}}s). However, most of the {{domxref("ValidityState")}}s will always be `false`. If the checkbox has the {{htmlattrxref("required", "input")}} attribute, but is not checked, then {{domxref("ValidityState.valueMissing")}} will be `true`.
+Checkboxes do support [validation](/en-US/docs/Web/HTML/Constraint_validation) (offered to all {{HTMLElement("input")}}s). However, most of the {{domxref("ValidityState")}}s will always be `false`. If the checkbox has the [`required`](/en-US/docs/Web/HTML/Element/input#required) attribute, but is not checked, then {{domxref("ValidityState.valueMissing")}} will be `true`.
 
 ## Examples
 
-The following example is an extended version of the "multiple checkboxes" example we saw above — it has more standard options, plus an "other" checkbox that when checked causes a text field to appear to enter a value for the "other" option. This is achieved with a simple block of JavaScript. The example also includes some CSS to improve the styling.
+The following example is an extended version of the "multiple checkboxes" example we saw above — it has more standard options, plus an "other" checkbox that when checked causes a text field to appear to enter a value for the "other" option. This is achieved with a simple block of JavaScript. The example includes implicit labels, with the `<input>` directly inside the `<label>`. The text input, without a visible label, includes the [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label) attribute which provides its accessible name. This example also includes some CSS to improve the styling.
 
 ### HTML
 
@@ -188,29 +179,41 @@ The following example is an extended version of the "multiple checkboxes" exampl
   <fieldset>
     <legend>Choose your interests</legend>
     <div>
-      <input type="checkbox" id="coding" name="interest" value="coding" />
-      <label for="coding">Coding</label>
+      <label>
+        <input type="checkbox" id="coding" name="interest" value="coding" />
+        Coding
+      </label>
     </div>
     <div>
-      <input type="checkbox" id="music" name="interest" value="music" />
-      <label for="music">Music</label>
+      <label>
+        <input type="checkbox" id="music" name="interest" value="music" />
+        Music
+      </label>
     </div>
     <div>
-      <input type="checkbox" id="art" name="interest" value="art" />
-      <label for="art">Art</label>
+      <label>
+        <input type="checkbox" id="art" name="interest" value="art" />
+        Art
+      </label>
     </div>
     <div>
-      <input type="checkbox" id="sports" name="interest" value="sports" />
-      <label for="sports">Sports</label>
+      <label>
+        <input type="checkbox" id="sports" name="interest" value="sports" />
+        Sports
+      </label>
     </div>
     <div>
-      <input type="checkbox" id="cooking" name="interest" value="cooking" />
-      <label for="cooking">Cooking</label>
+      <label>
+        <input type="checkbox" id="cooking" name="interest" value="cooking" />
+        Cooking
+      </label>
     </div>
     <div>
-      <input type="checkbox" id="other" name="interest" value="other" />
-      <label for="other">Other</label>
-      <input type="text" id="otherValue" name="other" />
+      <label>
+        <input type="checkbox" id="other" name="interest" value="other" />
+        Other
+      </label>
+      <input type="text" id="otherValue" name="other" aria-label="Other interest" />
     </div>
     <div>
       <button type="submit">Submit form</button>
@@ -288,9 +291,9 @@ otherCheckbox.addEventListener('change', () => {
     <tr>
       <td><strong>IDL attributes</strong></td>
       <td>
-        <code><a href="#attr-checked">checked</a></code>,
-        <code><a href="#attr-indeterminate">indeterminate</a></code> and
-        <code><a href="#attr-value">value</a></code>
+        <code><a href="#checked">checked</a></code>,
+        <code><a href="#indeterminate">indeterminate</a></code> and
+        <code><a href="#value">value</a></code>
       </td>
     </tr>
     <tr>
@@ -302,6 +305,10 @@ otherCheckbox.addEventListener('change', () => {
       <td>
         {{domxref("HTMLInputElement.select", "select()")}}
       </td>
+    </tr>
+    <tr>
+      <td><strong>Implicit ARIA Role</strong></td>
+      <td><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/checkbox_role"><code>checkbox</code></a></td>
     </tr>
   </tbody>
 </table>
@@ -316,6 +323,6 @@ otherCheckbox.addEventListener('change', () => {
 
 ## See also
 
-- {{HTMLElement("input")}} and the {{domxref("HTMLInputElement")}} interface which implements it.
-- The {{cssxref(":checked")}} and {{cssxref(":indeterminate")}} CSS selectors let you style checkboxes based on their current state
-- [Compatibility of CSS properties](/en-US/docs/Learn/Forms/Property_compatibility_table_for_form_controls)
+- {{cssxref(":checked")}}, {{cssxref(":indeterminate")}}: CSS selectors that let you style checkboxes based on their current state
+- {{domxref("HTMLInputElement")}}: HTML DOM API that implements the `<input>` element
+- [CSS property compatibility table for form controls](/en-US/docs/Learn/Forms/Property_compatibility_table_for_form_controls)

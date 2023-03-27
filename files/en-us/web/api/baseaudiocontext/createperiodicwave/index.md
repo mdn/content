@@ -2,16 +2,6 @@
 title: BaseAudioContext.createPeriodicWave()
 slug: Web/API/BaseAudioContext/createPeriodicWave
 page-type: web-api-instance-method
-tags:
-  - API
-  - Audio
-  - AudioContext
-  - BaseAudioContext
-  - Media
-  - Method
-  - Reference
-  - Web Audio API
-  - createPeriodicWave
 browser-compat: api.BaseAudioContext.createPeriodicWave
 ---
 

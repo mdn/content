@@ -2,11 +2,6 @@
 title: Intl
 slug: Web/JavaScript/Reference/Global_Objects/Intl
 page-type: javascript-namespace
-tags:
-  - Internationalization
-  - Intl
-  - JavaScript
-  - Namespace
 browser-compat: javascript.builtins.Intl
 ---
 
@@ -71,7 +66,7 @@ The list of locales specified by the `locales` argument, after Unicode extension
 
 If the selected locale identifier had a Unicode extension sequence, that extension is now used to customize the constructed object or the behavior of the function. Each constructor or function supports only a subset of the keys defined for the Unicode extension, and the supported values often depend on the locale identifier. For example, the `"co"` key (collation) is only supported by {{jsxref("Intl.Collator")}}, and its `"phonebk"` value is only supported for German.
 
-## Constructor properties
+## Static properties
 
 - {{jsxref("Global_Objects/Intl/Collator/Collator", "Intl.Collator()")}}
   - : Constructor for collators, which are objects that enable language-sensitive string comparison.
@@ -111,7 +106,9 @@ const date = new Date("2012-05-24");
 
 function log(locale) {
   console.log(
-    `${new Intl.DateTimeFormat(locale).format(date)} ${new Intl.NumberFormat(locale).format(count)}`
+    `${new Intl.DateTimeFormat(locale).format(date)} ${new Intl.NumberFormat(
+      locale,
+    ).format(count)}`,
   );
 }
 

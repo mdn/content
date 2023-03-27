@@ -2,13 +2,6 @@
 title: <display-inside>
 slug: Web/CSS/display-inside
 page-type: css-type
-tags:
-  - CSS
-  - CSS Data Type
-  - CSS Display
-  - Data Type
-  - Reference
-  - display-inside
 spec-urls: https://drafts.csswg.org/css-display/#typedef-display-inside
 browser-compat:
   - css.properties.display.multi-keyword_values

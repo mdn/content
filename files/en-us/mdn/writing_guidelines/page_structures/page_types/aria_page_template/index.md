@@ -2,9 +2,6 @@
 title: ARIA page template
 slug: MDN/Writing_guidelines/Page_structures/Page_types/ARIA_Page_Template
 page-type: mdn-writing-guide
-tags:
-  - meta
-  - writing-guide
 ---
 
 {{MDNSidebar}}
@@ -135,7 +132,7 @@ What are the related properties, and in what order will this attribute or proper
 
 ## See also
 
-- Include list of
-- other links related to
-- this role or attribute that might
-- be useful
+Include links to reference pages and guides related to the current role or attribute. For more guidelines, see the [See also section](/en-US/docs/MDN/Writing_guidelines/Writing_style_guide#see_also_section) in the _Writing style guide_.
+
+- link1
+- link2

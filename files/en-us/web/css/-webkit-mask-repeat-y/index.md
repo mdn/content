@@ -2,13 +2,8 @@
 title: "-webkit-mask-repeat-y"
 slug: Web/CSS/-webkit-mask-repeat-y
 page-type: css-property
-tags:
-  - CSS
-  - CSS Masking
-  - CSS Property
-  - Non-standard
-  - Reference
-  - recipe:css-property
+status:
+  - non-standard
 browser-compat: css.properties.-webkit-mask-repeat-y
 ---
 
@@ -97,4 +92,4 @@ Not part of any standard.
 
 ## See also
 
-{{cssxref("-webkit-mask-repeat")}}, {{cssxref("-webkit-mask-repeat-x")}}
+{{cssxref("mask-repeat", "-webkit-mask-repeat")}}, {{cssxref("-webkit-mask-repeat-x")}}

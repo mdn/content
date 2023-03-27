@@ -2,13 +2,6 @@
 title: Element.clientTop
 slug: Web/API/Element/clientTop
 page-type: web-api-instance-property
-tags:
-  - API
-  - CSSOM View
-  - NeedsAgnostify
-  - NeedsMarkupWork
-  - Property
-  - Reference
 browser-compat: api.Element.clientTop
 ---
 

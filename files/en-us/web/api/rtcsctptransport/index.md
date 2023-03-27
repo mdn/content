@@ -2,13 +2,6 @@
 title: RTCSctpTransport
 slug: Web/API/RTCSctpTransport
 page-type: web-api-interface
-tags:
-  - Interface
-  - NeedsExample
-  - RTCSctpTransport
-  - Reference
-  - Unimplemented
-  - WebRTC
 browser-compat: api.RTCSctpTransport
 ---
 

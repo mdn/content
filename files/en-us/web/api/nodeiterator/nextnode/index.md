@@ -2,11 +2,6 @@
 title: NodeIterator.nextNode()
 slug: Web/API/NodeIterator/nextNode
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - Method
-  - NodeIterator
 browser-compat: api.NodeIterator.nextNode
 ---
 
@@ -42,9 +37,13 @@ None ({{jsxref("undefined")}}).
 
 ```js
 const nodeIterator = document.createNodeIterator(
-    document.body,
-    NodeFilter.SHOW_ELEMENT,
-    { acceptNode(node) { return NodeFilter.FILTER_ACCEPT; } }
+  document.body,
+  NodeFilter.SHOW_ELEMENT,
+  {
+    acceptNode(node) {
+      return NodeFilter.FILTER_ACCEPT;
+    },
+  }
 );
 currentNode = nodeIterator.nextNode(); // returns the next node
 ```

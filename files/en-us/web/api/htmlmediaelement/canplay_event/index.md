@@ -1,13 +1,7 @@
 ---
-title: 'HTMLMediaElement: canplay event'
+title: "HTMLMediaElement: canplay event"
 slug: Web/API/HTMLMediaElement/canplay_event
 page-type: web-api-event
-tags:
-  - Audio
-  - Event
-  - HTMLMediaElement
-  - Reference
-  - Video
 browser-compat: api.HTMLMediaElement.canplay_event
 ---
 
@@ -22,9 +16,9 @@ This event is not cancelable and does not bubble.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('canplay', (event) => { });
+addEventListener("canplay", (event) => {});
 
-oncanplay = (event) => { };
+oncanplay = (event) => {};
 ```
 
 ## Event type
@@ -38,20 +32,20 @@ These examples add an event listener for the HTMLMediaElement's `canplay` event,
 Using `addEventListener()`:
 
 ```js
-const video = document.querySelector('video');
+const video = document.querySelector("video");
 
-video.addEventListener('canplay', (event) => {
-  console.log('Video can start, but not sure it will play through.');
+video.addEventListener("canplay", (event) => {
+  console.log("Video can start, but not sure it will play through.");
 });
 ```
 
 Using the `oncanplay` event handler property:
 
 ```js
-const video = document.querySelector('video');
+const video = document.querySelector("video");
 
 video.oncanplay = (event) => {
-  console.log('Video can start, but not sure it will play through.');
+  console.log("Video can start, but not sure it will play through.");
 };
 ```
 

@@ -1,15 +1,12 @@
 ---
 title: Cookies Having Independent Partitioned State (CHIPS)
 slug: Web/Privacy/Partitioned_cookies
-tags:
-  - Cookies Having Independent Partitioned State
-  - CHIPS
-  - Partitioned cookies
-  - Privacy
+status:
+  - experimental
 browser-compat: http.headers.Set-Cookie.Partitioned
 ---
 
-{{QuicklinksWithSubPages("Web/Privacy")}}{{seecompattable}}
+{{QuicklinksWithSubPages("Web/Privacy")}}{{SeeCompatTable}}
 
 **Cookies Having Independent Partitioned State** (**CHIPS**, also know as **Partitioned cookies**) allows developers to opt a cookie into partitioned storage, with a separate cookie jar per top-level site.
 
@@ -17,7 +14,7 @@ A partitioned third-party cookie is tied to the top-level site where it's initia
 
 ## Cross-site tracking in a nutshell
 
-Historically, when a site embeds content via an {{htmlelement("iframe")}}, the embeded content can set a cookie on the user's device in response to the cross-site request. If the user visits other sites that embed the same content, the embedded content can access the same cookie originally set by the first instance of the embedded content. This enables the content owner to track user activity across these sites, and any other sites that embed the same content.
+Historically, when a site embeds content via an {{htmlelement("iframe")}}, the embedded content can set a cookie on the user's device in response to the cross-site request. If the user visits other sites that embed the same content, the embedded content can access the same cookie originally set by the first instance of the embedded content. This enables the content owner to track user activity across these sites, and any other sites that embed the same content.
 
 For example:
 
@@ -38,7 +35,7 @@ Set-Cookie: __Host-example=34d8g; SameSite=None; Secure; Path=/; Partitioned;
 
 > **Note:** Partitioned cookies must be set with `Secure` and `Path=/`. In addition, it is recommended to use the `__Host` prefix when setting partitioned cookies to make them bound to the hostname and not the registrable domain.
 
-With `Partitioned` set, the cookie is stored using two keys, the host key and a new **partition key**. The partition key is based on the scheme and [eTLD+1](https://web.dev/same-site-same-origin/#site) of the top-level URL the browser was visiting when the request was made to the URL endpoint that set the cookie.
+With `Partitioned` set, the cookie is stored using two keys, the host key and a new **partition key**. The partition key is based on the scheme and {{Glossary("eTLD", "eTLD+1")}} of the top-level URL the browser was visiting when the request was made to the URL endpoint that set the cookie.
 
 Revisiting the example we described in the previous section:
 

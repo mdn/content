@@ -2,13 +2,6 @@
 title: ReadableStreamDefaultReader.releaseLock()
 slug: Web/API/ReadableStreamDefaultReader/releaseLock
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - ReadableStreamDefaultReader
-  - Reference
-  - Streams
-  - releaseLock
 browser-compat: api.ReadableStreamDefaultReader.releaseLock
 ---
 
@@ -48,7 +41,7 @@ function fetchStream() {
 
   // ...
 
-  reader.releaseLock()
+  reader.releaseLock();
 
   // ...
 }

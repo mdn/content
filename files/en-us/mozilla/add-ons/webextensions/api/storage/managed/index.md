@@ -1,16 +1,7 @@
 ---
 title: storage.managed
 slug: Mozilla/Add-ons/WebExtensions/API/storage/managed
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Non-standard
-  - Property
-  - Reference
-  - Storage
-  - WebExtensions
-  - managed
+page-type: webextension-api-property
 browser-compat: webextensions.api.storage.managed
 ---
 

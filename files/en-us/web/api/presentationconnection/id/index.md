@@ -2,19 +2,8 @@
 title: PresentationConnection.id
 slug: Web/API/PresentationConnection/id
 page-type: web-api-instance-property
-tags:
-  - API
-  - NeedsBrowserCompatibility
-  - NeedsContent
-  - NeedsExample
-  - NeedsMarkupWork
-  - Presentation
-  - Presentation API
-  - PresentationConnection
-  - Reference
-  - Web
-  - id
-  - Experimental
+status:
+  - experimental
 browser-compat: api.PresentationConnection.id
 ---
 

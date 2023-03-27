@@ -2,18 +2,8 @@
 title: NavigateEvent()
 slug: Web/API/NavigateEvent/NavigateEvent
 page-type: web-api-constructor
-tags:
-  - API
-  - Constructor
-  - Experimental
-  - History
-  - Navigate
-  - NavigateEvent
-  - Navigation
-  - Navigation API
-  - Reference
-  - Scroll
-  - Traversal
+status:
+  - experimental
 browser-compat: api.NavigateEvent.NavigateEvent
 ---
 
@@ -58,8 +48,8 @@ new NavigateEvent(type, init)
 A developer would not use this constructor manually. A new `NavigateEvent` object is constructed when a handler is invoked as a result of the {{domxref("Navigation.navigate_event", "navigate")}} event firing.
 
 ```js
-navigation.addEventListener('navigate', (event) => {
-  // Exit early if this navigation shouldn't be intercepted, 
+navigation.addEventListener("navigate", (event) => {
+  // Exit early if this navigation shouldn't be intercepted,
   // e.g. if the navigation is cross-origin, or a download request
   if (shouldNotIntercept(event)) {
     return;
@@ -67,7 +57,7 @@ navigation.addEventListener('navigate', (event) => {
 
   const url = new URL(event.destination.url);
 
-  if (url.pathname.startsWith('/articles/')) {
+  if (url.pathname.startsWith("/articles/")) {
     event.intercept({
       async handler() {
         // The URL has already changed, so show a placeholder while

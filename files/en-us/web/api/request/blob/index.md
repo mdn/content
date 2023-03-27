@@ -2,13 +2,6 @@
 title: Request.blob()
 slug: Web/API/Request/blob
 page-type: web-api-instance-method
-tags:
-  - API
-  - Blob
-  - Fetch
-  - Method
-  - Reference
-  - Request
 browser-compat: api.Request.blob
 ---
 
@@ -34,14 +27,13 @@ A promise that resolves with a {{domxref("Blob")}}.
 ## Examples
 
 ```js
-const obj = { hello: 'world' };
-const myBlob = new Blob(
-  [JSON.stringify(obj, null, 2)],
-  { type : 'application/json' },
-);
+const obj = { hello: "world" };
+const myBlob = new Blob([JSON.stringify(obj, null, 2)], {
+  type: "application/json",
+});
 
-const request = new Request('/myEndpoint', {
-  method: 'POST',
+const request = new Request("/myEndpoint", {
+  method: "POST",
   body: myBlob,
 });
 

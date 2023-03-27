@@ -2,20 +2,6 @@
 title: CanvasRenderingContext2D.getImageData()
 slug: Web/API/CanvasRenderingContext2D/getImageData
 page-type: web-api-instance-method
-tags:
-  - API
-  - Canvas
-  - Canvas API
-  - CanvasRenderingContext2D
-  - Cut
-  - Graphics
-  - Image
-  - ImageData
-  - Method
-  - Reference
-  - copy
-  - getImageData
-  - img
 browser-compat: api.CanvasRenderingContext2D.getImageData
 ---
 
@@ -127,7 +113,7 @@ context.fillRect(0, 0, 10, 10);
 
 // Get ImageData converted to sRGB
 const imageData = context.getImageData(0, 0, 1, 1, { colorSpace: "srgb" });
-console.log(imageData.colorSpace);  // "srgb"
+console.log(imageData.colorSpace); // "srgb"
 ```
 
 ## Specifications

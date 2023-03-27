@@ -2,19 +2,6 @@
 title: Clipboard API
 slug: Web/API/Clipboard_API
 page-type: web-api-overview
-tags:
-  - API
-  - Async Clipboard API
-  - Clipboard
-  - Clipboard API
-  - Clipboard Event API
-  - ClipboardEvent
-  - ClipboardItem
-  - Cut
-  - Landing
-  - Reference
-  - copy
-  - paste
 browser-compat:
   - api.Clipboard
   - api.ClipboardEvent

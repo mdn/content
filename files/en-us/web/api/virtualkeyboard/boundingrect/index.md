@@ -2,13 +2,8 @@
 title: VirtualKeyboard.boundingRect
 slug: Web/API/VirtualKeyboard/boundingRect
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - VirtualKeyboard
-  - boundingRect
-  - Experimental
+status:
+  - experimental
 browser-compat: api.VirtualKeyboard.boundingRect
 ---
 

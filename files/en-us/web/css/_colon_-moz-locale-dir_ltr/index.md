@@ -1,16 +1,9 @@
 ---
-title: ':-moz-locale-dir(ltr)'
+title: ":-moz-locale-dir(ltr)"
 slug: Web/CSS/:-moz-locale-dir_ltr
 page-type: css-pseudo-class
-tags:
-  - CSS
-  - CSS:Mozilla Extensions
-  - Localization
-  - NeedsCompatTable
-  - Non-standard
-  - Pseudo-class
-  - Reference
-  - Selector
+status:
+  - non-standard
 ---
 
 {{CSSRef}}{{Non-standard_header}}
@@ -24,12 +17,14 @@ The **`:-moz-locale-dir(ltr)`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US
 ## Syntax
 
 ```css
-:-moz-locale-dir(ltr)
+:-moz-locale-dir(ltr) {
+  /* ... */
+}
 ```
 
 ## Examples
 
-This example doesn't work if you're not using Firefox, and may not work even in Firefox due to an issue with the selector not working properly with HTML content. It was designed for use with [XUL](/en-US/docs/Archive/Mozilla/XUL).
+This example doesn't work if you're not using Firefox, and may not work even in Firefox due to an issue with the selector not working properly with HTML content. It was designed for use with `XUL`.
 
 ### HTML
 
@@ -56,4 +51,4 @@ Not part of any standard.
 ## See also
 
 - {{CSSxRef(":dir", ":dir(…)")}}
-- {{CSSxRef(":-moz-locale-dir(rtl)")}}
+- {{CSSxRef(":-moz-locale-dir_rtl", ":-moz-locale-dir(rtl)")}}

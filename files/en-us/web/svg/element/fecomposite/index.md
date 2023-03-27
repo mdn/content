@@ -2,11 +2,6 @@
 title: <feComposite>
 slug: Web/SVG/Element/feComposite
 page-type: svg-element
-tags:
-  - Element
-  - NeedsExample
-  - SVG
-  - SVG Filter
 browser-compat: svg.elements.feComposite
 ---
 

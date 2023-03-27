@@ -2,15 +2,8 @@
 title: hypot()
 slug: Web/CSS/hypot
 page-type: css-function
-tags:
-  - CSS
-  - CSS Function
-  - Function
-  - Layout
-  - Reference
-  - Web
-  - hypot
-  - Experimental
+status:
+  - experimental
 browser-compat: css.types.hypot
 ---
 
@@ -24,10 +17,10 @@ While {{CSSxRef("pow")}} and {{CSSxRef("sqrt")}} only work on unitless numbers, 
 
 ```css
 /* A <number> value */
-width: hypot(2em);           /* 2em */
-width: hypot(3em, 4em);      /* 5em */
-width: hypot(30px, 40px);    /* 50px */
-width: hypot(48px, 64px);    /* 80px */
+width: hypot(2em); /* 2em */
+width: hypot(3em, 4em); /* 5em */
+width: hypot(30px, 40px); /* 50px */
+width: hypot(48px, 64px); /* 80px */
 width: hypot(3px, 4px, 5px); /* 7.0710678118654755px */
 ```
 

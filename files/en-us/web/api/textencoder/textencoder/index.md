@@ -2,12 +2,6 @@
 title: TextEncoder()
 slug: Web/API/TextEncoder/TextEncoder
 page-type: web-api-constructor
-tags:
-  - API
-  - Constructor
-  - Encoding
-  - Reference
-  - TextEncoder
 browser-compat: api.TextEncoder.TextEncoder
 ---
 

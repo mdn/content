@@ -2,12 +2,6 @@
 title: HTMLTextAreaElement.labels
 slug: Web/API/HTMLTextAreaElement/labels
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTML DOM
-  - HTMLTextAreaElement
-  - Property
-  - Reference
 browser-compat: api.HTMLTextAreaElement.labels
 ---
 

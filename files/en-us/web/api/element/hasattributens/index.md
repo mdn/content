@@ -2,12 +2,6 @@
 title: Element.hasAttributeNS()
 slug: Web/API/Element/hasAttributeNS
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - Element
-  - Method
-  - Reference
 browser-compat: api.Element.hasAttributeNS
 ---
 
@@ -35,9 +29,9 @@ A boolean.
 ```js
 // Check that the attribute exists before you set a value
 const d = document.getElementById("div1");
-if (d.hasAttributeNS(
-        "http://www.mozilla.org/ns/specialspace/",
-        "special-align")) {
+if (
+  d.hasAttributeNS("http://www.mozilla.org/ns/specialspace/", "special-align")
+) {
   d.setAttribute("align", "center");
 }
 ```

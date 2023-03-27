@@ -2,15 +2,6 @@
 title: IDBFactory.cmp()
 slug: Web/API/IDBFactory/cmp
 page-type: web-api-instance-method
-tags:
-  - API
-  - Database
-  - IDBFactory
-  - IndexedDB
-  - Method
-  - Reference
-  - Storage
-  - cmp
 browser-compat: api.IDBFactory.cmp
 ---
 

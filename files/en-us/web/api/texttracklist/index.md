@@ -2,17 +2,6 @@
 title: TextTrackList
 slug: Web/API/TextTrackList
 page-type: web-api-interface
-tags:
-  - API
-  - HTML DOM
-  - HTMLMediaElement
-  - Interface
-  - Media
-  - Reference
-  - TextTrackList
-  - Track List
-  - Tracks
-  - list
 browser-compat: api.TextTrackList
 ---
 

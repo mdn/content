@@ -2,15 +2,6 @@
 title: RTCRtpReceiver
 slug: Web/API/RTCRtpReceiver
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Media
-  - RTCRtpReceiver
-  - Reference
-  - WebRTC
-  - WebRTC Statistics
-  - WebRTC Statistics API
 browser-compat: api.RTCRtpReceiver
 ---
 
@@ -40,7 +31,7 @@ The **`RTCRtpReceiver`** interface of the [WebRTC API](/en-US/docs/Web/API/WebRT
 - {{domxref("RTCRtpReceiver.getContributingSources()")}}
   - : Returns an array of {{domxref("RTCRtpContributingSource")}} instances for each unique CSRC (contributing source) identifier received by the current `RTCRtpReceiver` in the last ten seconds.
 - {{domxref("RTCRtpReceiver.getParameters()")}}
-  - : Returns an `RTCRtpParameters` object which contains information about how the RTC data is to be decoded.
+  - : Returns an object that contains information about how the RTC data is to be decoded.
 - {{domxref("RTCRtpReceiver.getStats()")}}
   - : Returns a {{jsxref("Promise")}} whose fulfillment handler receives a {{domxref("RTCStatsReport")}} which contains statistics about the incoming streams and their dependencies.
 - {{domxref("RTCRtpReceiver.getSynchronizationSources()")}}

@@ -2,17 +2,6 @@
 title: DOMPointReadOnly()
 slug: Web/API/DOMPointReadOnly/DOMPointReadOnly
 page-type: web-api-constructor
-tags:
-  - API
-  - Constructor
-  - Coordinates
-  - DOM
-  - DOMPointReadOnly
-  - Geometry
-  - Geometry Interfaces
-  - Point
-  - Position
-  - Reference
 browser-compat: api.DOMPointReadOnly.DOMPointReadOnly
 ---
 

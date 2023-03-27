@@ -2,17 +2,6 @@
 title: StorageManager
 slug: Web/API/StorageManager
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Persistence
-  - Quotas
-  - Reference
-  - Secure context
-  - Storage
-  - Storage API
-  - StorageManager
-  - Usage
 browser-compat: api.StorageManager
 ---
 

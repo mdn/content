@@ -2,14 +2,6 @@
 title: KeyframeEffect()
 slug: Web/API/KeyframeEffect/KeyframeEffect
 page-type: web-api-constructor
-tags:
-  - API
-  - Animation
-  - Constructor
-  - KeyframeEffect
-  - Reference
-  - waapi
-  - web animations api
 browser-compat: api.KeyframeEffect.KeyframeEffect
 ---
 
@@ -73,6 +65,8 @@ The multi-argument constructor (see above) creates a completely new {{domxref("K
       - : Determines how values build from iteration to iteration in this animation. Can be
         set to `accumulate` or `replace` (see above). Defaults
         to `replace`.
+    - `pseudoElement` {{optional_inline}}
+      - : A `string` containing a {{cssxref("pseudo-elements","pseudo-element")}} selector, such as `"::before"`. If present, the effect is applied to the selected pseudo-element of `target`, rather than to `target` itself.
 
 The single argument constructor (see above) creates a clone of an existing {{domxref("KeyframeEffect")}} object instance. Its parameter is as follows:
 
@@ -84,18 +78,21 @@ The single argument constructor (see above) creates a clone of an existing {{dom
 In the [Follow the White Rabbit example](https://codepen.io/rachelnabors/pen/eJyWzm/?editors=0010), the `KeyframeEffect` constructor is used to create a set of keyframes that dictate how the White Rabbit should animate down the hole:
 
 ```js
-const whiteRabbit = document.getElementById('rabbit');
+const whiteRabbit = document.getElementById("rabbit");
 
 const rabbitDownKeyframes = new KeyframeEffect(
-    whiteRabbit, // element to animate
-    [
-      { transform: 'translateY(0%)' }, // keyframe
-      { transform: 'translateY(100%)' } // keyframe
-    ],
-    { duration: 3000, fill: 'forwards' } // keyframe options
-  );
+  whiteRabbit, // element to animate
+  [
+    { transform: "translateY(0%)" }, // keyframe
+    { transform: "translateY(100%)" }, // keyframe
+  ],
+  { duration: 3000, fill: "forwards" } // keyframe options
+);
 
-const rabbitDownAnimation = new Animation(rabbitDownKeyframes, document.timeline);
+const rabbitDownAnimation = new Animation(
+  rabbitDownKeyframes,
+  document.timeline
+);
 
 // Play rabbit animation
 rabbitDownAnimation.play();

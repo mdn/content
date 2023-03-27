@@ -1,9 +1,6 @@
 ---
 title: Livestreaming web audio and video
 slug: Web/Guide/Audio_and_video_delivery/Live_streaming_web_audio_and_video
-tags:
-  - Guide
-  - adaptive streaming
 ---
 
 {{QuickLinksWithSubPages("/en-US/docs/Web/Guide/Audio_and_video_delivery")}}
@@ -92,24 +89,24 @@ DASH stands for Dynamic Adaptive Streaming over HTTP. It is supported via Media 
 
 HLS or HTTP Live Streaming is a protocol invented by Apple Inc and supported on iOS, Safari and the latest versions of Android browser / Chrome. HLS is also adaptive.
 
-HLS can also be decoded using JavaScript, which means we can support the latest versions of Firefox, Chrome and Internet Explorer 10+. See this [HTTP Live Streaming JavaScript player](https://github.com/dailymotion/hls.js).
+HLS can also be decoded using JavaScript, which means we can support the latest versions of Firefox, Chrome and Safari. See this [HTTP Live Streaming JavaScript player](https://github.com/dailymotion/hls.js).
 
 At the start of the streaming session, an [extended M3U (m3u8) playlist](https://en.wikipedia.org/wiki/M3U8#Extended_M3U_directives) is downloaded. This contains the metadata for the various sub-streams that are provided.
 
 ### Streaming File Format Support
 
-| Browser                  | DASH  | HLS   | Opus (Audio) |
-| ------------------------ | ----- | ----- | ------------ |
-| Firefox 32               | ✓ [1] | ✓ [2] | ✓ 14+        |
-| Safari 6+                |       | ✓     |              |
-| Chrome 24+               | ✓ [1] | ✓     |              |
-| Opera 20+                | ✓ [1] |       |              |
-| Internet Explorer 10+    | ✓ 11  | ✓ [2] |              |
-| Firefox Mobile           | ✓     | ✓     | ✓            |
-| Safari iOS6+             |       | ✓     |              |
-| Chrome Mobile            | ✓     | ✓ [2] |              |
-| Opera Mobile             | ✓ [1] | ✓     |              |
-| Android                  | ✓     |       |              |
+| Browser               | DASH  | HLS   | Opus (Audio) |
+| --------------------- | ----- | ----- | ------------ |
+| Firefox 32            | ✓ [1] | ✓ [2] | ✓ 14+        |
+| Safari 6+             |       | ✓     |              |
+| Chrome 24+            | ✓ [1] | ✓     |              |
+| Opera 20+             | ✓ [1] |       |              |
+| Internet Explorer 10+ | ✓ 11  | ✓ [2] |              |
+| Firefox Mobile        | ✓     | ✓     | ✓            |
+| Safari iOS6+          |       | ✓     |              |
+| Chrome Mobile         | ✓     | ✓ [2] |              |
+| Opera Mobile          | ✓ [1] | ✓     |              |
+| Android               | ✓     |       |              |
 
 \[1] Via JavaScript and MSE
 

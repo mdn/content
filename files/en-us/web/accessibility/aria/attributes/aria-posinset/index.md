@@ -1,13 +1,6 @@
 ---
-title: "aria-posinset"
+title: aria-posinset
 slug: Web/Accessibility/ARIA/Attributes/aria-posinset
-tags:
-  - Accessibility
-  - ARIA
-  - ARIA attribute
-  - ARIA property
-  - aria-posinset
-  - Reference
 spec-urls: https://w3c.github.io/aria/#aria-posinset
 ---
 

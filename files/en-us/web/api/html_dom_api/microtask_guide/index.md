@@ -2,21 +2,6 @@
 title: Using microtasks in JavaScript with queueMicrotask()
 slug: Web/API/HTML_DOM_API/Microtask_guide
 page-type: guide
-tags:
-  - API
-  - Batch
-  - Guide
-  - HTML DOM
-  - JavaScript
-  - Microtask
-  - Queue
-  - Reference
-  - ServiceWorker
-  - SharedWorker
-  - Window
-  - Worker
-  - asynchronous
-  - queueMicrotask
 ---
 
 {{APIRef("HTML DOM")}}
@@ -93,11 +78,13 @@ customElement.prototype.getData = (url) => {
     this.data = this.cache[url];
     this.dispatchEvent(new Event("load"));
   } else {
-    fetch(url).then((result) => result.arrayBuffer()).then((data) => {
-      this.cache[url] = data;
-      this.data = data;
-      this.dispatchEvent(new Event("load"));
-    });
+    fetch(url)
+      .then((result) => result.arrayBuffer())
+      .then((data) => {
+        this.cache[url] = data;
+        this.data = data;
+        this.dispatchEvent(new Event("load"));
+      });
   }
 };
 ```
@@ -141,11 +128,13 @@ customElement.prototype.getData = (url) => {
       this.dispatchEvent(new Event("load"));
     });
   } else {
-    fetch(url).then((result) => result.arrayBuffer()).then((data) => {
-      this.cache[url] = data;
-      this.data = data;
-      this.dispatchEvent(new Event("load"));
-    });
+    fetch(url)
+      .then((result) => result.arrayBuffer())
+      .then((data) => {
+        this.cache[url] = data;
+        this.data = data;
+        this.dispatchEvent(new Event("load"));
+      });
   }
 };
 ```
@@ -198,7 +187,7 @@ In this simple example, we see that enqueueing a microtask causes the microtask'
 
 ```js hidden
 let logElem = document.getElementById("log");
-let log = (s) => logElem.innerHTML += `${s}<br>`;
+let log = (s) => (logElem.innerHTML += `${s}<br>`);
 ```
 
 In the following code, we see a call to {{domxref("queueMicrotask()")}} used to schedule a microtask to run. This call is bracketed by calls to `log()`, a custom function that outputs text to the screen.
@@ -206,7 +195,7 @@ In the following code, we see a call to {{domxref("queueMicrotask()")}} used to 
 ```js
 log("Before enqueueing the microtask");
 queueMicrotask(() => {
-  log("The microtask has run.")
+  log("The microtask has run.");
 });
 log("After enqueueing the microtask");
 ```
@@ -227,7 +216,7 @@ In this example, a timeout is scheduled to fire after zero milliseconds (or "as 
 
 ```js hidden
 let logElem = document.getElementById("log");
-let log = (s) => logElem.innerHTML += `${s}<br>`;
+let log = (s) => (logElem.innerHTML += `${s}<br>`);
 ```
 
 In the following code, we see a call to {{domxref("queueMicrotask()")}} used to schedule a microtask to run. This call is bracketed by calls to `log()`, a custom function that outputs text to the screen.
@@ -263,7 +252,7 @@ This example expands slightly on the previous one by adding a function that does
 
 ```js hidden
 let logElem = document.getElementById("log");
-let log = (s) => logElem.innerHTML += `${s}<br>`;
+let log = (s) => (logElem.innerHTML += `${s}<br>`);
 ```
 
 The main program code follows. The `doWork()` function here calls `queueMicrotask()`, yet the microtask still doesn't fire until the entire program exits, since that's when the task exits and there's nothing else on the execution stack.
@@ -278,7 +267,7 @@ let doWork = () => {
 
   queueMicrotask(urgentCallback);
 
-  for (let i=2; i<=10; i++) {
+  for (let i = 2; i <= 10; i++) {
     result *= i;
   }
   return result;

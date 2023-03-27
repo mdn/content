@@ -2,13 +2,6 @@
 title: Intl.ListFormat.supportedLocalesOf()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/ListFormat/supportedLocalesOf
 page-type: javascript-static-method
-tags:
-  - Internationalization
-  - Intl
-  - JavaScript
-  - ListFormat
-  - Method
-  - Reference
 browser-compat: javascript.builtins.Intl.ListFormat.supportedLocalesOf
 ---
 
@@ -65,9 +58,9 @@ adequate match for Balinese since most Balinese speakers also understand Indones
 and therefore return the Balinese language tag as well.
 
 ```js
-const locales = ['ban', 'id-u-co-pinyin', 'de-ID'];
-const options = { localeMatcher: 'lookup' };
-console.log(Intl.ListFormat.supportedLocalesOf(locales, options).join(', '));
+const locales = ["ban", "id-u-co-pinyin", "de-ID"];
+const options = { localeMatcher: "lookup" };
+console.log(Intl.ListFormat.supportedLocalesOf(locales, options).join(", "));
 // "id-u-co-pinyin, de-ID"
 ```
 

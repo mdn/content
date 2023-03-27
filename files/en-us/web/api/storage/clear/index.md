@@ -2,12 +2,6 @@
 title: Storage.clear()
 slug: Web/API/Storage/clear
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - Storage
-  - Web Storage
 browser-compat: api.Storage.clear
 ---
 
@@ -37,9 +31,9 @@ them by using `clear()`.
 
 ```js
 function populateStorage() {
-  localStorage.setItem('bgcolor', 'red');
-  localStorage.setItem('font', 'Helvetica');
-  localStorage.setItem('image', 'miGato.png');
+  localStorage.setItem("bgcolor", "red");
+  localStorage.setItem("font", "Helvetica");
+  localStorage.setItem("image", "miGato.png");
 
   localStorage.clear();
 }

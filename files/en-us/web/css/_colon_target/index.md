@@ -2,19 +2,12 @@
 title: ":target"
 slug: Web/CSS/:target
 page-type: css-pseudo-class
-tags:
-  - CSS
-  - Layout
-  - Pseudo-class
-  - Reference
-  - Selector
-  - Web
 browser-compat: css.selectors.target
 ---
 
 {{CSSRef}}
 
-The **`:target`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) represents a unique element (the _target element_) with an {{htmlattrxref("id")}} matching the URL's fragment.
+The **`:target`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) represents a unique element (the _target element_) with an [`id`](/en-US/docs/Web/HTML/Global_attributes#id) matching the URL's fragment.
 
 ```css
 /* Selects an element with an ID matching the current URL's fragment */
@@ -37,8 +30,10 @@ The following element would be selected by a `:target` selector when the current
 
 ## Syntax
 
-```
-:target
+```css
+:target {
+  /* ... */
+}
 ```
 
 ## Examples

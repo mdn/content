@@ -2,13 +2,6 @@
 title: OffscreenCanvas()
 slug: Web/API/OffscreenCanvas/OffscreenCanvas
 page-type: web-api-constructor
-tags:
-  - API
-  - Canvas
-  - Constructor
-  - OffscreenCanvas
-  - Reference
-  - WebGL
 browser-compat: api.OffscreenCanvas.OffscreenCanvas
 ---
 
@@ -36,7 +29,7 @@ We then initialize a [WebGL](/en-US/docs/Web/API/WebGL_API) context on it using 
 
 ```js
 const offscreen = new OffscreenCanvas(256, 256);
-const gl = offscreen.getContext('webgl');
+const gl = offscreen.getContext("webgl");
 ```
 
 ## Specifications

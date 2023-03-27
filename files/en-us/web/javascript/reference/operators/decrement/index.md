@@ -2,11 +2,6 @@
 title: Decrement (--)
 slug: Web/JavaScript/Reference/Operators/Decrement
 page-type: javascript-operator
-tags:
-  - Decrement
-  - JavaScript
-  - Language feature
-  - Operator
 browser-compat: javascript.operators.decrement
 ---
 

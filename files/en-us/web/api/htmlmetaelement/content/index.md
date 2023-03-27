@@ -2,19 +2,13 @@
 title: HTMLMetaElement.content
 slug: Web/API/HTMLMetaElement/content
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTML DOM
-  - HTMLMetaElement
-  - Property
-  - Reference
 browser-compat: api.HTMLMetaElement.content
 ---
 
 {{APIRef("HTML DOM")}}
 
 The **`HTMLMetaElement.content`** property gets or sets the `content` attribute of pragma directives and named {{htmlelement("meta")}} data in conjunction with {{domxref("HTMLMetaElement.name")}} or {{domxref("HTMLMetaElement.httpEquiv")}}.
-For more information, see the [content](/en-US/docs/Web/HTML/Element/meta#attr-content) attribute.
+For more information, see the [content](/en-US/docs/Web/HTML/Element/meta#content) attribute.
 
 ## Value
 

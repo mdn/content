@@ -2,12 +2,6 @@
 title: HTMLSelectElement.item()
 slug: Web/API/HTMLSelectElement/item
 page-type: web-api-instance-method
-tags:
-  - API
-  - HTML DOM
-  - HTMLSelectElement
-  - Method
-  - Reference
 browser-compat: api.HTMLSelectElement.item
 ---
 

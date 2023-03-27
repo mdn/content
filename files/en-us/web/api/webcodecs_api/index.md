@@ -2,11 +2,6 @@
 title: WebCodecs API
 slug: Web/API/WebCodecs_API
 page-type: web-api-overview
-tags:
-  - API
-  - WebCodecs
-  - Overview
-  - Reference
 ---
 
 {{DefaultAPISidebar("WebCodecs API")}}
@@ -19,7 +14,7 @@ For example, video or audio editors, and video conferencing.
 
 Many Web APIs use media codecs internally.
 For example, the {{domxref("Web Audio API")}}, and the {{domxref("WebRTC API")}}.
-However these APIs do not allow developers to work with individual frames of a video stream and unmuxed chunks of encoded audio or video.
+However these APIs do not allow developers to work with individual frames of a video stream and unmixed chunks of encoded audio or video.
 
 Web developers have typically used WebAssembly in order to get around this limitation,
 and to work with media codecs in the browser.
@@ -67,20 +62,19 @@ const track = stream.getVideoTracks()[0];
 const media_processor = new MediaStreamTrackProcessor(track);
 const reader = media_processor.readable.getReader();
 while (true) {
-    const result = await reader.read();
-    if (result.done)
-      break;
-    let frame = result.value;
-    if (encoder.encodeQueueSize > 2) {
-      // Too many frames in flight, encoder is overwhelmed
-      // let's drop this frame.
-      frame.close();
-    } else {
-      frame_counter++;
-      const insert_keyframe = frame_counter % 150 === 0;
-      encoder.encode(frame, { keyFrame: insert_keyframe });
-      frame.close();
-    }
+  const result = await reader.read();
+  if (result.done) break;
+  let frame = result.value;
+  if (encoder.encodeQueueSize > 2) {
+    // Too many frames in flight, encoder is overwhelmed
+    // let's drop this frame.
+    frame.close();
+  } else {
+    frame_counter++;
+    const insert_keyframe = frame_counter % 150 === 0;
+    encoder.encode(frame, { keyFrame: insert_keyframe });
+    frame.close();
+  }
 }
 ```
 

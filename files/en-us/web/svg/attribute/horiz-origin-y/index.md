@@ -2,10 +2,8 @@
 title: horiz-origin-y
 slug: Web/SVG/Attribute/horiz-origin-y
 page-type: svg-attribute
-tags:
-  - Deprecated
-  - SVG
-  - SVG Attribute
+status:
+  - deprecated
 browser-compat: svg.elements.font.horiz-origin-y
 ---
 

@@ -1,12 +1,6 @@
 ---
 title: Interfaces moved in Firefox 3.6
 slug: Mozilla/Firefox/Releases/3.6/Interfaces_moved
-tags:
-  - DOM
-  - Gecko
-  - Gecko 1.9.2
-  - Interfaces
-  - XPCOM
 ---
 
 {{FirefoxSidebar}}

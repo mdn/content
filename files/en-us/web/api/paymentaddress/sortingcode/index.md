@@ -2,20 +2,9 @@
 title: PaymentAddress.sortingCode
 slug: Web/API/PaymentAddress/sortingCode
 page-type: web-api-instance-property
-tags:
-  - API
-  - Address
-  - Payment Request
-  - Payment Request API
-  - Property
-  - Read-only
-  - Reference
-  - Sorting Code
-  - payment
-  - paymentAddress
-  - sortingCode
-  - Deprecated
-  - Non-standard
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.PaymentAddress.sortingCode
 ---
 

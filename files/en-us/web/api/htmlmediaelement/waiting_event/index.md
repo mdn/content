@@ -1,14 +1,7 @@
 ---
-title: 'HTMLMediaElement: waiting event'
+title: "HTMLMediaElement: waiting event"
 slug: Web/API/HTMLMediaElement/waiting_event
 page-type: web-api-event
-tags:
-  - Audio
-  - Event
-  - HTMLMediaElement
-  - Reference
-  - Video
-  - Web
 browser-compat: api.HTMLMediaElement.waiting_event
 ---
 
@@ -23,9 +16,9 @@ This event is not cancelable and does not bubble.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('waiting', (event) => {});
+addEventListener("waiting", (event) => {});
 
-onwaiting = (event) => { };
+onwaiting = (event) => {};
 ```
 
 ## Event type
@@ -39,20 +32,20 @@ These examples add an event listener for the HTMLMediaElement's `waiting` event,
 Using `addEventListener()`:
 
 ```js
-const video = document.querySelector('video');
+const video = document.querySelector("video");
 
-video.addEventListener('waiting', (event) => {
-  console.log('Video is waiting for more data.');
+video.addEventListener("waiting", (event) => {
+  console.log("Video is waiting for more data.");
 });
 ```
 
 Using the `onwaiting` event handler property:
 
 ```js
-const video = document.querySelector('video');
+const video = document.querySelector("video");
 
 video.onwaiting = (event) => {
-  console.log('Video is waiting for more data.');
+  console.log("Video is waiting for more data.");
 };
 ```
 

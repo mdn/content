@@ -2,12 +2,8 @@
 title: <strike>
 slug: Web/HTML/Element/strike
 page-type: html-element
-tags:
-  - Element
-  - HTML
-  - Deprecated
-  - Reference
-  - Web
+status:
+  - deprecated
 browser-compat: html.elements.strike
 ---
 

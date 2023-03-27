@@ -1,11 +1,6 @@
 ---
 title: 508 Loop Detected
 slug: Web/HTTP/Status/508
-tags:
-  - "508"
-  - HTTP
-  - Server error
-  - Status code
 spec-urls: https://www.rfc-editor.org/rfc/rfc5842#section-7.2
 ---
 

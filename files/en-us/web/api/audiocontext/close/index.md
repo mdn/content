@@ -2,14 +2,6 @@
 title: AudioContext.close()
 slug: Web/API/AudioContext/close
 page-type: web-api-instance-method
-tags:
-  - API
-  - AudioContext
-  - Media
-  - Method
-  - Reference
-  - Web Audio API
-  - close
 browser-compat: api.AudioContext.close
 ---
 

@@ -2,17 +2,8 @@
 title: ImageCapture.grabFrame()
 slug: Web/API/ImageCapture/grabFrame
 page-type: web-api-instance-method
-tags:
-  - API
-  - Experimental
-  - Image
-  - Image Capture
-  - ImageCapture
-  - Media
-  - MediaStream Image Capture API
-  - Method
-  - Reference
-  - grabFrame
+status:
+  - experimental
 browser-compat: api.ImageCapture.grabFrame
 ---
 
@@ -45,22 +36,23 @@ element. For simplicity it does not show how to instantiate the
 {{domxref("ImageCapture")}} object.
 
 ```js
-let grabFrameButton = document.querySelector('button#grabFrame');
-let canvas = document.querySelector('canvas');
+let grabFrameButton = document.querySelector("button#grabFrame");
+let canvas = document.querySelector("canvas");
 
 grabFrameButton.onclick = grabFrame;
 
 function grabFrame() {
-  imageCapture.grabFrame()
+  imageCapture
+    .grabFrame()
     .then((imageBitmap) => {
-      console.log('Grabbed frame:', imageBitmap);
+      console.log("Grabbed frame:", imageBitmap);
       canvas.width = imageBitmap.width;
       canvas.height = imageBitmap.height;
-      canvas.getContext('2d').drawImage(imageBitmap, 0, 0);
-      canvas.classList.remove('hidden');
+      canvas.getContext("2d").drawImage(imageBitmap, 0, 0);
+      canvas.classList.remove("hidden");
     })
     .catch((error) => {
-      console.error('grabFrame() error: ', error);
+      console.error("grabFrame() error: ", error);
     });
 }
 ```

@@ -1,11 +1,6 @@
 ---
 title: <munderover>
 slug: Web/MathML/Element/munderover
-tags:
-  - MathML
-  - MathML Reference
-  - MathML:Element
-  - MathML:Script and Limit Schemata
 browser-compat: mathml.elements.munderover
 ---
 

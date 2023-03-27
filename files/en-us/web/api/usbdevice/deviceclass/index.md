@@ -2,16 +2,8 @@
 title: USBDevice.deviceClass
 slug: Web/API/USBDevice/deviceClass
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - USB
-  - USBDevice
-  - WebUSB
-  - WebUSB API
-  - deviceClass
-  - Experimental
+status:
+  - experimental
 browser-compat: api.USBDevice.deviceClass
 ---
 

@@ -2,17 +2,9 @@
 title: VRDisplayCapabilities.hasExternalDisplay
 slug: Web/API/VRDisplayCapabilities/hasExternalDisplay
 page-type: web-api-instance-property
-tags:
-  - API
-  - Deprecated
-  - Property
-  - Reference
-  - VR
-  - VRDisplayCapabilities
-  - Virtual Reality
-  - WebVR
-  - hasExternalDisplay
-  - Non-standard
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.VRDisplayCapabilities.hasExternalDisplay
 ---
 

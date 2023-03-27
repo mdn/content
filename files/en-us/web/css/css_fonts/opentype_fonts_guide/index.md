@@ -2,13 +2,6 @@
 title: OpenType font features guide
 slug: Web/CSS/CSS_Fonts/OpenType_fonts_guide
 page-type: guide
-tags:
-  - CSS
-  - Fonts
-  - Guide
-  - Text
-  - font-feature-settings
-  - opentype
 ---
 
 {{CSSRef}}

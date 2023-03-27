@@ -2,13 +2,8 @@
 title: BluetoothDevice.gatt
 slug: Web/API/BluetoothDevice/gatt
 page-type: web-api-instance-property
-tags:
-  - API
-  - BluetoothDevice
-  - Experimental
-  - GATT server
-  - Property
-  - Reference
+status:
+  - experimental
 browser-compat: api.BluetoothDevice.gatt
 ---
 

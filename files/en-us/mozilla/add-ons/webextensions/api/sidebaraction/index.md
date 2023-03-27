@@ -1,14 +1,7 @@
 ---
 title: sidebarAction
 slug: Mozilla/Add-ons/WebExtensions/API/sidebarAction
-tags:
-  - API
-  - Extensions
-  - Non-standard
-  - Reference
-  - Sidebar
-  - WebExtensions
-  - sidebarAction
+page-type: webextension-api
 browser-compat: webextensions.api.sidebarAction
 ---
 

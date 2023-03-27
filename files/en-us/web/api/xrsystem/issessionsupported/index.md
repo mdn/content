@@ -2,19 +2,8 @@
 title: 'XRSystem: isSessionSupported()'
 slug: Web/API/XRSystem/isSessionSupported
 page-type: web-api-instance-method
-tags:
-  - API
-  - AR
-  - Augmented Reality
-  - Experimental
-  - Method
-  - Reference
-  - VR
-  - Virtual Reality
-  - WebXR
-  - WebXR Device API
-  - XR
-  - isSessionSupported
+status:
+  - experimental
 browser-compat: api.XRSystem.isSessionSupported
 ---
 

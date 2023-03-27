@@ -2,17 +2,8 @@
 title: Accelerometer
 slug: Web/API/Accelerometer
 page-type: web-api-interface
-tags:
-  - API
-  - Accelerometer
-  - Accelerometer API
-  - Generic Sensor API
-  - Interface
-  - Reference
-  - Sensor
-  - Sensor APIs
-  - Sensors
-  - Experimental
+status:
+  - experimental
 browser-compat: api.Accelerometer
 ---
 

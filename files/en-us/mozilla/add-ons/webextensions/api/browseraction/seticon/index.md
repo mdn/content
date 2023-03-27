@@ -1,16 +1,7 @@
 ---
 title: browserAction.setIcon()
 slug: Mozilla/Add-ons/WebExtensions/API/browserAction/setIcon
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - browserAction
-  - setIcon
+page-type: webextension-api-function
 browser-compat: webextensions.api.browserAction.setIcon
 ---
 

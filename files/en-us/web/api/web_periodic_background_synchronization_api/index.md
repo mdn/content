@@ -2,18 +2,8 @@
 title: Web Periodic Background Synchronization API
 slug: Web/API/Web_Periodic_Background_Synchronization_API
 page-type: web-api-overview
-tags:
-  - API
-  - Background
-  - Landing
-  - Offline
-  - Overview
-  - PWA
-  - Service Workers
-  - Sync
-  - Web Periodic Background Synchronization API
-  - periodic
-  - Experimental
+status:
+  - experimental
 browser-compat: api.PeriodicSyncManager
 ---
 
@@ -61,11 +51,11 @@ The following asynchronous function registers a periodic background sync at a mi
 async function registerPeriodicNewsCheck() {
   const registration = await navigator.serviceWorker.ready;
   try {
-    await registration.periodicSync.register('get-latest-news', {
+    await registration.periodicSync.register("get-latest-news", {
       minInterval: 24 * 60 * 60 * 1000,
     });
   } catch {
-    console.log('Periodic Sync could not be registered!');
+    console.log("Periodic Sync could not be registered!");
   }
 }
 ```
@@ -77,8 +67,7 @@ This code checks to see if a Periodic Background Sync task with a given tag is r
 ```js
 navigator.serviceWorker.ready.then((registration) => {
   registration.periodicSync.getTags().then((tags) => {
-    if (tags.includes('get-latest-news'))
-      skipDownloadingLatestNewsOnPageLoad();
+    if (tags.includes("get-latest-news")) skipDownloadingLatestNewsOnPageLoad();
   });
 });
 ```
@@ -89,7 +78,7 @@ The following code removes a Periodic Background Sync task to stop articles sync
 
 ```js
 navigator.serviceWorker.ready.then((registration) => {
-  registration.periodicSync.unregister('get-latest-news');
+  registration.periodicSync.unregister("get-latest-news");
 });
 ```
 
@@ -98,8 +87,8 @@ navigator.serviceWorker.ready.then((registration) => {
 The following example shows how to respond to a periodic sync event in the service worker.
 
 ```js
-self.addEventListener('periodicsync', (event) => {
-  if (event.tag === 'get-latest-news') {
+self.addEventListener("periodicsync", (event) => {
+  if (event.tag === "get-latest-news") {
     event.waitUntil(fetchAndCacheLatestNews());
   }
 });

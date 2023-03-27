@@ -2,13 +2,6 @@
 title: WheelEvent.deltaY
 slug: Web/API/WheelEvent/deltaY
 page-type: web-api-instance-property
-tags:
-  - API
-  - DOM
-  - Property
-  - Read-only
-  - Reference
-  - WheelEvent
 browser-compat: api.WheelEvent.deltaY
 ---
 
@@ -25,7 +18,10 @@ A number.
 ## Examples
 
 ```js
-const syntheticEvent = new WheelEvent("syntheticWheel", { "deltaY": 4, "deltaMode": 0 });
+const syntheticEvent = new WheelEvent("syntheticWheel", {
+  deltaY: 4,
+  deltaMode: 0,
+});
 
 console.log(syntheticEvent.deltaY);
 ```
