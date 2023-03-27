@@ -25,7 +25,7 @@ new WebGLContextEvent(type, options)
 - `options` {{Optional_inline}}
   - : An object that, _in addition to the properties defined in {{domxref("Event/Event", "Event()")}}_, has the following properties:
     - `statusMessage` {{Optional_inline}}
-      - : A string with some additional status information. It defaults to the empty string (`""`).
+      - : A string with additional status information. It defaults to the empty string (`""`).
 
 ### Return value
 
