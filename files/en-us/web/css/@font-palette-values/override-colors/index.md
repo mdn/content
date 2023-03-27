@@ -170,3 +170,4 @@ This example shows the that in `base-palette` `3`, the color at index 0 is overr
 - {{cssxref("@font-palette-values/base-palette", "base-palette")}}
 - {{cssxref("@font-palette-values/font-family", "font-family")}}
 - {{cssxref("font-palette/", "font-palette")}}
+- {{domxref("CSSFontPaletteValuesRule.overrideColors")}}

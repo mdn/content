@@ -7,8 +7,7 @@ browser-compat: javascript.builtins.Proxy.Proxy
 
 {{JSRef}}
 
-The **`Proxy()`** constructor is used to create
-{{jsxref("Proxy")}} objects.
+The **`Proxy()`** constructor creates {{jsxref("Proxy")}} objects.
 
 ## Syntax
 
