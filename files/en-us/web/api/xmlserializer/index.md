@@ -31,7 +31,7 @@ This example just serializes an entire document into a string containing XML.
  saveXML(str);
 ```
 
-This involves creating a new `XMLSerializer` object, then passing the {{domxref("Document")}} to be serialized into {{domxref("XMLSerializer.serializeToString", "serializeToString()")}}, which returns the XML equivalent of the document. The function `saveXML()` stands for the subsequent action on the serialized string.
+This involves creating a new `XMLSerializer` object, then passing the {{domxref("Document")}} to be serialized into {{domxref("XMLSerializer.serializeToString", "serializeToString()")}}, which returns the XML equivalent of the document. `saveXML()` represents a function that would then save the serialized string.
 
 ### Inserting nodes into a DOM based on XML
 
