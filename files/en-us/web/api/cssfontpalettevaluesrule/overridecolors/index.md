@@ -17,7 +17,7 @@ A string containing a comma-separated list of color index and color pair
 
 ### Read the overriden colors
 
-This example first defines a few at-rules, among them two {{cssxref("@font-palette-values")}}. As these rules live in the last stylesheet added to the document, the palette will be the second {{domxref("CSSRule")}} returned by the \_last: stylesheet in the document (`document.styleSheets[document.styleSheets.length-1].cssRules`).
+This example first defines a few at-rules, among them two {{cssxref("@font-palette-values")}}. As these rules live in the last stylesheet added to the document, the palette will be the second {{domxref("CSSRule")}} returned by the last stylesheet in the document (`document.styleSheets[document.styleSheets.length-1].cssRules`).
 
 #### HTML
 
