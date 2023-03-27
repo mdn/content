@@ -5782,6 +5782,7 @@
 /en-US/docs/Mozilla/Add-ons/WebExtensions/web-ext	https://extensionworkshop.com/documentation/develop/getting-started-with-web-ext/
 /en-US/docs/Mozilla/Command_Line_Options	https://wiki.mozilla.org/Firefox/CommandLineOptions
 /en-US/docs/Mozilla/Debugging/HTTP_logging	https://firefox-source-docs.mozilla.org/networking/http/logging.html
+/en-US/docs/Mozilla/Developer_guide/Build_Instructions/Build_Instructions	https://firefox-source-docs.mozilla.org/setup/index.html
 /en-US/docs/Mozilla/Developer_guide/Build_Instructions/Simple_Firefox_build/Linux_and_MacOS_build_preparation	https://firefox-source-docs.mozilla.org/setup/linux_build.html
 /en-US/docs/Mozilla/Developer_guide/ESLint	https://firefox-source-docs.mozilla.org/code-quality/lint/index.html
 /en-US/docs/Mozilla/Developer_guide/Source_Code/Directory_structure	https://firefox-source-docs.mozilla.org/contributing/directory_structure.html
