@@ -115,7 +115,7 @@ For much more detail about setting up service workers and using them to add offl
 
 While offine operation is probably the most common use for service workers, they also enable a PWA to operate even while the main app is closed. This is possible because the service worker is allowed to run while the main app is not running.
 
-This doesn't mean service workers run all the time: browsers may close service workers when they think it is appropriate. For example, if a service worker has been inactive for a while, it will be closed. However, the browser will restart the service worker when an event has happened that it needs to take care of. This enables a PWA to implement background operations in the following way:
+This doesn't mean service workers run all the time: browsers may stop service workers when they think it is appropriate. For example, if a service worker has been inactive for a while, it will be stopped. However, the browser will restart the service worker when an event has happened that it needs to take care of. This enables a PWA to implement background operations in the following way:
 
 - In the main app, register a request for the service worker to perform some operation
 - At the appropriate time, the service worker will be restarted if necessary, and an event will fire in the service worker's scope
@@ -158,7 +158,7 @@ self.addEventListener("sync", (event) => {
 
 Note that we pass the result of the `sendMessage()` function into the event's {{domxref("ExtendableEvent/waitUntil", "waitUntil()")}} method. The `waitUntil()` method takes a {{jsxref("Promise")}} as a parameter and asks the browser not to stop the service worker until the promise has settled. This is also how the browser knows whether the operation succeeded or not: if the promise rejects, then the browser may retry by firing the `sync` event again.
 
-The `waitUntil()` method is not a guarantee that the browser will not stop the service worker: if the operation takes too long, the service worker will be stopped anyway.
+The `waitUntil()` method is not a guarantee that the browser will not stop the service worker: if the operation takes too long, the service worker will be stopped anyway. If this happens, then the operation is aborted, and next time a `sync` event is fired, then the handler runs again from the start - it does not resume from where it left off.
 
 ## Background fetch
 
