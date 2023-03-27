@@ -25,7 +25,7 @@ new SpeechSynthesisErrorEvent(type, options)
 - `options`
   - : An object that, _in addition to the properties defined in {{domxref("SpeechSynthesisEvent/SpeechSynthesisEvent", "SpeechSynthesisEvent()")}}_, has the following properties:
     - `error`
-      - : A string containing the reason of the error. Possible values are:
+      - : A string containing the error reason. Possible values are:
         - `canceled`
           - : A {{domxref("SpeechSynthesis.cancel")}} method call caused the {{domxref("SpeechSynthesisUtterance")}} to be removed from the queue before it had begun being spoken.
         - `interrupted`
