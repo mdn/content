@@ -12,7 +12,7 @@ The **`error`** property of the
 
 ## Value
 
-A string containing the reason of the error. Possible values are:
+A string containing the error reason. Possible values are:
 
 - `canceled`
   - : A {{domxref("SpeechSynthesis.cancel")}} method call caused the
