@@ -12,7 +12,7 @@ browser-compat: api.GPUTexture.usage
 The **`usage`** read-only property of the
 {{domxref("GPUTexture")}} interface is the {{glossary("bitwise flags")}} representing the allowed usages of the `GPUTexture`.
 
-This is set via the `usage` property in the descriptor object passed into the originating {{domxref("GPUDevice.createTexture()")}} call. If omitted, this defaults to 1.
+This is set via the `usage` property in the descriptor object passed into the originating {{domxref("GPUDevice.createTexture()")}} call.
 
 ## Value
 

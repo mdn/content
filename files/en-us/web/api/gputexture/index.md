@@ -32,7 +32,7 @@ A `GPUTexture` object instance is created using the {{domxref("GPUDevice.createT
 - {{domxref("GPUTexture.sampleCount", "sampleCount")}} {{Experimental_Inline}} {{readonlyinline}}
   - : A number representing the sample count of the `GPUTexture`.
 - {{domxref("GPUTexture.usage", "usage")}} {{Experimental_Inline}} {{readonlyinline}}
-  - : The bitwise flags representing the allowed usages of the `GPUTexture`.
+  - : The {{glossary("bitwise flags")}} representing the allowed usages of the `GPUTexture`.
 - {{domxref("GPUTexture.width", "width")}} {{Experimental_Inline}} {{readonlyinline}}
   - : A number representing the width of the `GPUTexture` in pixels.
 
@@ -56,12 +56,16 @@ In the WebGPU samples [Textured Cube sample](https://webgpu.github.io/webgpu-sam
 let cubeTexture: GPUTexture; // Sample is written in TypeScript
 {
   const img = document.createElement("img");
+
   img.src = new URL(
     "../../../assets/img/Di-3d.png",
     import.meta.url
   ).toString();
+
   await img.decode();
+
   const imageBitmap = await createImageBitmap(img);
+
   cubeTexture = device.createTexture({
     size: [imageBitmap.width, imageBitmap.height, 1],
     format: "rgba8unorm",
@@ -70,6 +74,7 @@ let cubeTexture: GPUTexture; // Sample is written in TypeScript
       GPUTextureUsage.COPY_DST |
       GPUTextureUsage.RENDER_ATTACHMENT,
   });
+
   device.queue.copyExternalImageToTexture(
     { source: imageBitmap },
     { texture: cubeTexture },

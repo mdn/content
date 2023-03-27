@@ -12,7 +12,7 @@ browser-compat: api.GPUBuffer.mapAsync
 The **`mapAsync()`** method of the
 {{domxref("GPUBuffer")}} interface maps the specified range of the `GPUBuffer`. It returns a {{jsxref("Promise")}} that resolves when the `GPUBuffer`'s content is ready to be accessed. While the `GPUBuffer` is mapped it cannot be used in any GPU commands.
 
-Once the buffer is mapped, calls to {{domxref("GPUBuffer.getMappedRange()")}} will return an {{jsxref("ArrayBuffer")}} containing the `GPUBuffer`'s current values, to be read and updated by JavaScript as required.
+Once the buffer is successfully mapped (which can be checked via {{domxref("GPUBuffer.mapState")}}), calls to {{domxref("GPUBuffer.getMappedRange()")}} will return an {{jsxref("ArrayBuffer")}} containing the `GPUBuffer`'s current values, to be read and updated by JavaScript as required.
 
 When you have finished working with the `GPUBuffer` values, call {{domxref("GPUBuffer.unmap()")}} to unmap it, making it accessible to the GPU again.
 
@@ -27,7 +27,7 @@ mapAsync(mode, offset, size)
 
 - `mode`
 
-  - : A usage flag that specifies whether the `GPUBuffer` is mapped for reading or writing. Possible values are:
+  - : A {{glossary("bitwise flags", "bitwise flag")}} that specifies whether the `GPUBuffer` is mapped for reading or writing. Possible values are:
 
     - `GPUMapMode.READ`
 

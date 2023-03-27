@@ -76,7 +76,7 @@ createView(descriptor)
 
         If `format` is omitted, it will be given a value as follows:
 
-        - If `aspect` is `"depth-only"` or `"stencil-only"`, and {domxref("GPUTexture.format")}} is a [depth-or-stencil format](https://gpuweb.github.io/gpuweb/#combined-depth-stencil-format), `format` will be set equal to the appropriate [aspect-specific format](https://gpuweb.github.io/gpuweb/#aspect-specific-format).
+        - If `aspect` is `"depth-only"` or `"stencil-only"`, and {{domxref("GPUTexture.format")}} is a [depth-or-stencil format](https://gpuweb.github.io/gpuweb/#combined-depth-stencil-format), `format` will be set equal to the appropriate [aspect-specific format](https://gpuweb.github.io/gpuweb/#aspect-specific-format).
         - Otherwise it will be set equal to {{domxref("GPUTexture.format")}}.
 
     - `label` {{optional_inline}}
@@ -114,18 +114,18 @@ The following criteria must be met when calling **`createView()`**, otherwise a 
   - `"cube"`
     - {{domxref("GPUTexture.dimension")}} is `"2d"`
     - `arrayLayerCount` is 6
-    - {{domxref("GPUTexture.width")}} is qual to {{domxref("GPUTexture.height")}}
+    - {{domxref("GPUTexture.width")}} is equal to {{domxref("GPUTexture.height")}}
   - `"cube-array"`
     - {{domxref("GPUTexture.dimension")}} is `"2d"`
     - `arrayLayerCount` is a multiple of 6
-    - {{domxref("GPUTexture.width")}} is qual to {{domxref("GPUTexture.height")}}
+    - {{domxref("GPUTexture.width")}} is equal to {{domxref("GPUTexture.height")}}
   - `"3d"`
     - {{domxref("GPUTexture.dimension")}} is `"3d"`
     - `arrayLayerCount` is 1
 
 ## Examples
 
-In the WebGPU Samples [Cubemap demo](https://webgpu.github.io/webgpu-samples/samples/cubemap), you will see multiple examples of how `createView()` is used, both as a `resource` in a {{domxref("GPUDevice.createBindGroup()")}} call, and as a provided `view` in the `depthStencilAttachment` object of a {{domxref("GPUCommandEncoder.beginRenderPass()")}} descriptor.
+In the WebGPU Samples [Cubemap demo](https://webgpu.github.io/webgpu-samples/samples/cubemap), you will see multiple examples of how `createView()` is used, both as to create a view `resource` for a {{domxref("GPUDevice.createBindGroup()")}} call, and to provide a `view` in the `depthStencilAttachment` object of a {{domxref("GPUCommandEncoder.beginRenderPass()")}} descriptor.
 
 ```js
 const uniformBindGroup = device.createBindGroup({

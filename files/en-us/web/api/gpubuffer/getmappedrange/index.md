@@ -12,7 +12,7 @@ browser-compat: api.GPUBuffer.getMappedRange
 The **`getMappedRange()`** method of the
 {{domxref("GPUBuffer")}} interface returns an {{jsxref("ArrayBuffer")}} containing the mapped contents of the `GPUBuffer` in the specified range.
 
-This can only happen once the `GPUBuffer` has been successfully mapped with {{domxref("GPUBuffer.mapAsync()")}}. While the `GPUBuffer` is mapped it cannot be used in any GPU commands.
+This can only happen once the `GPUBuffer` has been successfully mapped with {{domxref("GPUBuffer.mapAsync()")}} (this can be checked via {{domxref("GPUBuffer.mapState")}}). While the `GPUBuffer` is mapped it cannot be used in any GPU commands.
 
 When you have finished working with the `GPUBuffer` values, call {{domxref("GPUBuffer.unmap()")}} to unmap it, making it accessible to the GPU again.
 

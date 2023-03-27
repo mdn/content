@@ -10,7 +10,7 @@ browser-compat: api.GPUBuffer.usage
 {{APIRef("WebGPU API")}}{{SeeCompatTable}}
 
 The **`usage`** read-only property of the
-{{domxref("GPUBuffer")}} interface is the {{glossary("bitwise flags")}} representing the allowed usages of the `GPUBuffer`.
+{{domxref("GPUBuffer")}} interface contains the {{glossary("bitwise flags")}} representing the allowed usages of the `GPUBuffer`.
 
 `usage` is set via the `usage` property in the descriptor object passed into the originating {{domxref("GPUDevice.createBuffer()")}} call.
 

@@ -9,7 +9,7 @@ browser-compat: api.GPUTextureView
 
 {{APIRef("WebGPU API")}}{{SeeCompatTable}}
 
-The **`GPUTextureView`** interface of the {{domxref("WebGPU API", "WebGPU API", "", "nocode")}} represents a view into some subset of the texture resources defined by a particular {{domxref("GPUTexture")}}.
+The **`GPUTextureView`** interface of the {{domxref("WebGPU API", "WebGPU API", "", "nocode")}} represents a view into a subset of the texture resources defined by a particular {{domxref("GPUTexture")}}.
 
 A `GPUTextureView` object instance is created using the {{domxref("GPUTexture.createView()")}} method.
 
@@ -59,7 +59,6 @@ const renderPassDescriptor: GPURenderPassDescriptor = {
   ],
   depthStencilAttachment: {
     view: depthTexture.createView(),
-
     depthClearValue: 1.0,
     depthLoadOp: "clear",
     depthStoreOp: "store",
