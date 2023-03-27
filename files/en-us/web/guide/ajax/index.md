@@ -17,8 +17,6 @@ slug: Web/Guide/AJAX
   </ol>
 </section>
 
-## Getting Started
-
 **Asynchronous JavaScript and XML**, or [**Ajax**](https://www.semanticscholar.org/paper/Ajax%3A-A-New-Approach-to-Web-Applications-Garrett/c440ae765ff19ddd3deda24a92ac39cef9570f1e?p2df), is not a technology in itself, but rather an approach to using a number of existing technologies together, including [HTML](/en-US/docs/Web/HTML) or [XHTML](/en-US/docs/Glossary/XHTML), [CSS](/en-US/docs/Web/CSS), [JavaScript](/en-US/docs/Web/JavaScript), [DOM](/en-US/docs/Web/API/Document_Object_Model), [XML](/en-US/docs/Web/XML), [XSLT](/en-US/docs/Web/XSLT), and most importantly the {{domxref("XMLHttpRequest")}} object.
 When these technologies are combined in the Ajax model, web applications are able to make quick, incremental updates to the user interface without reloading the entire browser page. This makes the application faster and more responsive to user actions.
 

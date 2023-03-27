@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Error.Error
 
 {{JSRef}}
 
-The **`Error()`** constructor creates an error object.
+The **`Error()`** constructor creates {{jsxref("Error")}} objects.
 
 ## Syntax
 

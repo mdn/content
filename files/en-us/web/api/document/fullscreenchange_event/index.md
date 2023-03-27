@@ -106,7 +106,7 @@ document.getElementById("toggle-fullscreen").addEventListener("click", () => {
 });
 ```
 
-{{EmbedLiveSample("Logging fullscreenchange events", 640, 250, "", "", "", "display-capture")}}
+{{EmbedLiveSample("Logging fullscreenchange events", 640, 250, "", "", "", "fullscreen")}}
 
 ## Specifications
 
