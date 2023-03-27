@@ -143,7 +143,7 @@ output.append(
 
 ### Result
 
-{{EmbedLiveSample('Examples', '', '500')}}
+{{EmbedLiveSample('Examples', '100%', '500')}}
 
 ## Specifications
 
