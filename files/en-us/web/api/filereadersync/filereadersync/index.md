@@ -24,14 +24,10 @@ None.
 The following code snippet shows creation of a [`FileReaderSync`](/en-US/docs/Web/API/FileReaderSync) object using the `FileReaderSync()` constructor and subsequent usage of the object:
 
 ```js
-function printFile(file) {
-  const reader = new FileReader();
-  reader.onload = (evt) => {
-    console.log(evt.target.result);
-  };
-  reader.readAsText(file);
+function readFile(blob) {
+  const reader = new FileReaderSync();
+  postMessage(reader.readAsDataURL(blob));
 }
-```
 
 > **Note:** This snippet must be used inside a {{domxref("Worker")}}, as synchronous interfaces can't be used on the main thread.
 
