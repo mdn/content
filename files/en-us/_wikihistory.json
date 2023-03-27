@@ -110978,28 +110978,6 @@
     "modified": "2020-10-15T22:26:23.087Z",
     "contributors": ["fgirardey", "fscholz", "wbamberg"]
   },
-  "Web/JavaScript/Reference/Global_Objects/Error/Stack": {
-    "modified": "2020-10-30T10:55:19.555Z",
-    "contributors": [
-      "mfuji09",
-      "fscholz",
-      "wbamberg",
-      "mormegil",
-      "schlagi123",
-      "JamesGreene",
-      "szabolcs-szilagyi",
-      "jurko.gospodnetic",
-      "ttromey",
-      "Mingun",
-      "Nickolay",
-      "lydell",
-      "Sheppy",
-      "paul.irish",
-      "evilpie",
-      "user01",
-      "Brettz9"
-    ]
-  },
   "Web/JavaScript/Reference/Global_Objects/Error/columnNumber": {
     "modified": "2020-10-30T11:16:09.958Z",
     "contributors": ["mfuji09", "fscholz", "wbamberg", "schlagi123", "Mingun"]
@@ -111050,6 +111028,28 @@
       "evilpie",
       "Sevenspade",
       "Waldo"
+    ]
+  },
+  "Web/JavaScript/Reference/Global_Objects/Error/stack": {
+    "modified": "2020-10-30T10:55:19.555Z",
+    "contributors": [
+      "mfuji09",
+      "fscholz",
+      "wbamberg",
+      "mormegil",
+      "schlagi123",
+      "JamesGreene",
+      "szabolcs-szilagyi",
+      "jurko.gospodnetic",
+      "ttromey",
+      "Mingun",
+      "Nickolay",
+      "lydell",
+      "Sheppy",
+      "paul.irish",
+      "evilpie",
+      "user01",
+      "Brettz9"
     ]
   },
   "Web/JavaScript/Reference/Global_Objects/Error/toString": {
@@ -117978,41 +117978,6 @@
     "modified": "2020-11-27T11:31:24.196Z",
     "contributors": ["mfuji09", "gregprice", "wbamberg", "fscholz"]
   },
-  "Web/JavaScript/Reference/Global_Objects/String/Trim": {
-    "modified": "2020-10-15T21:07:53.701Z",
-    "contributors": [
-      "wbamberg",
-      "Zearin_Galaurum",
-      "fscholz",
-      "Bezoo",
-      "ngtritham",
-      "rwaldron",
-      "Frantic1048",
-      "jameshkramer",
-      "kdex",
-      "eduardoboucas",
-      "alexlur",
-      "madarche",
-      "cliffordfajardo",
-      "Mingun",
-      "spender",
-      "stevemao",
-      "john.watts",
-      "siberiawolf0307",
-      "George",
-      "mitar",
-      "Brettz9",
-      "Sheppy",
-      "ethertank",
-      "Ruakh",
-      "ziyunfei",
-      "Nesk",
-      "evilpie",
-      "Potappo",
-      "Midnightaz",
-      "Chris Chittleborough"
-    ]
-  },
   "Web/JavaScript/Reference/Global_Objects/String/anchor": {
     "modified": "2020-11-27T10:17:06.805Z",
     "contributors": [
@@ -119452,6 +119417,41 @@
       "Ptak82",
       "Maian",
       "Dria"
+    ]
+  },
+  "Web/JavaScript/Reference/Global_Objects/String/trim": {
+    "modified": "2020-10-15T21:07:53.701Z",
+    "contributors": [
+      "wbamberg",
+      "Zearin_Galaurum",
+      "fscholz",
+      "Bezoo",
+      "ngtritham",
+      "rwaldron",
+      "Frantic1048",
+      "jameshkramer",
+      "kdex",
+      "eduardoboucas",
+      "alexlur",
+      "madarche",
+      "cliffordfajardo",
+      "Mingun",
+      "spender",
+      "stevemao",
+      "john.watts",
+      "siberiawolf0307",
+      "George",
+      "mitar",
+      "Brettz9",
+      "Sheppy",
+      "ethertank",
+      "Ruakh",
+      "ziyunfei",
+      "Nesk",
+      "evilpie",
+      "Potappo",
+      "Midnightaz",
+      "Chris Chittleborough"
     ]
   },
   "Web/JavaScript/Reference/Global_Objects/String/trimEnd": {

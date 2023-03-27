@@ -84,7 +84,7 @@ The properties are as follows:
 - `id_assertion_endpoint`
   - : The URL for the ID assertion endpoint, which when sent valid user credentials should respond with a validation token that the RP can use to validate the authentication.
 - `branding` {{optional_inline}}
-  - : Contains branding information that will be used in the browser-supplied sign-in UI to customize its appearence as desired by the IdP.
+  - : Contains branding information that will be used in the browser-supplied sign-in UI to customize its appearance as desired by the IdP.
 
 #### The accounts list endpoint
 
