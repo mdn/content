@@ -26,9 +26,7 @@ has(key)
 
 ### Return value
 
-- Boolean
-  - : Returns `true` if an element with the specified key exists in the
-    `WeakMap` object; otherwise `false`.
+Returns `true` if an element with the specified key exists in the `WeakMap` object; otherwise `false`.
 
 ## Examples
 

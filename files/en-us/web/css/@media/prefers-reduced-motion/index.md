@@ -9,7 +9,7 @@ browser-compat: css.at-rules.media.prefers-reduced-motion
 
 > **Warning:** An embedded example at the bottom of this page has a scaling movement that may be problematic for some readers. Readers with vestibular motion disorders may wish to enable the reduce motion feature on their device before viewing the animation.
 
-The **`prefers-reduced-motion`** [CSS](/en-US/docs/Web/CSS) [media feature](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#media_features) is used to detect if the user has requested that the system minimize the amount of non-essential motion it uses.
+The **`prefers-reduced-motion`** [CSS](/en-US/docs/Web/CSS) [media feature](/en-US/docs/Web/CSS/@media#media_features) is used to detect if the user has requested that the system minimize the amount of non-essential motion it uses.
 
 ```css
 @media (prefers-reduced-motion) {

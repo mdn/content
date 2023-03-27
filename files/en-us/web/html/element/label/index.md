@@ -43,7 +43,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
 - `for`
 
-  - : The value of the `for` attribute must be a single {{htmlattrxref("id")}} for a [labelable](/en-US/docs/Web/HTML/Content_categories#labelable) form-related element in the same document as the `<label>` element. So, any given `label` element can be associated with only one form control.
+  - : The value of the `for` attribute must be a single [`id`](/en-US/docs/Web/HTML/Global_attributes#id) for a [labelable](/en-US/docs/Web/HTML/Content_categories#labelable) form-related element in the same document as the `<label>` element. So, any given `label` element can be associated with only one form control.
 
     > **Note:** To programmatically set the `for` attribute, use [`htmlFor`](/en-US/docs/Web/API/HTMLLabelElement/htmlFor).
 

@@ -85,7 +85,7 @@ None ({{jsxref("undefined")}}).
 ## Examples
 
 ```js
-gl.renderbufferStorageMultisample(gl.RENDERBUFFER, 4, gl.RBGA4, 256, 256);
+gl.renderbufferStorageMultisample(gl.RENDERBUFFER, 4, gl.RGBA4, 256, 256);
 ```
 
 ## Specifications

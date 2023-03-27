@@ -25,7 +25,7 @@ An origin will be cleared if it fulfills the following conditions:
 
 1. It has stored cookies or accessed other site storage (e.g. [localStorage](/en-US/docs/Web/API/Web_Storage_API), [IndexedDB](/en-US/docs/Web/API/IndexedDB_API), or the [Cache API](/en-US/docs/Web/API/CacheStorage)) within the last 72 hours. Since cookies are per-host, we will clear both the `http` and `https` origin variants of a cookie host.
 2. The origin is [classified as a tracker](/en-US/docs/Web/Privacy/Storage_Access_Policy#tracking_protection_explained) in our Tracking Protection list.
-3. No origin with the same base domain (eTLD+1) has a user-interaction permission.
+3. No origin with the same base domain ({{Glossary("eTLD", "eTLD+1")}}) has a user-interaction permission.
 
    - This permission is granted to an origin for 45 days once a user interacts with a top-level document from that origin. "Interacting" includes scrolling.
    - Although this permission is stored on a per-origin level, we will check whether any origin with the same base domain has it, to avoid breaking sites with subdomains and a corresponding cookie setup.

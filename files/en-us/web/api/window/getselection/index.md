@@ -37,10 +37,10 @@ browsers will return a {{domxref("Selection")}} object with
 
 ```js
 function foo() {
-    const selObj = window.getSelection();
-    alert(selObj);
-    const selRange = selObj.getRangeAt(0);
-    // do stuff with the range
+  const selObj = window.getSelection();
+  alert(selObj);
+  const selRange = selObj.getRangeAt(0);
+  // do stuff with the range
 }
 ```
 

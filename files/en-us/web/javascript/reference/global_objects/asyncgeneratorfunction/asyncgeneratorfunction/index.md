@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.AsyncGeneratorFunction.AsyncGeneratorFunctio
 
 {{JSRef}}
 
-The **`AsyncGeneratorFunction()`** constructor creates a new {{jsxref("AsyncGeneratorFunction")}} object. In JavaScript, every [async generator function](/en-US/docs/Web/JavaScript/Reference/Statements/async_function*) is actually an `AsyncGeneratorFunction` object.
+The **`AsyncGeneratorFunction()`** constructor creates {{jsxref("AsyncGeneratorFunction")}} objects.
 
 Note that `AsyncGeneratorFunction` is not a global object. It could be obtained by evaluating the following code.
 

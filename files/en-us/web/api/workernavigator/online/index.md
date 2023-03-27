@@ -30,9 +30,9 @@ To check if you are online in a worker, query `navigator.onLine`, as in the foll
 
 ```js
 if (navigator.onLine) {
-  console.log('online');
+  console.log("online");
 } else {
-  console.log('offline');
+  console.log("offline");
 }
 ```
 
@@ -43,9 +43,13 @@ If the browser doesn't support `navigator.onLine` the above example will always 
 To see changes in the network state, use [`addEventListener`](/en-US/docs/Web/API/EventTarget/addEventListener) to listen for the events on `online` and `offline`, as in the following example:
 
 ```js
-addEventListener('offline', (e) => { console.log('offline'); });
+addEventListener("offline", (e) => {
+  console.log("offline");
+});
 
-addEventListener('online', (e) => { console.log('online'); });
+addEventListener("online", (e) => {
+  console.log("online");
+});
 ```
 
 ## Specifications
