@@ -7,9 +7,7 @@ browser-compat: javascript.builtins.Intl.DateTimeFormat.DateTimeFormat
 
 {{JSRef}}
 
-The **`Intl.DateTimeFormat()`** constructor creates
-{{jsxref("Intl/DateTimeFormat", "Intl.DateTimeFormat")}} objects that enable
-language-sensitive date and time formatting.
+The **`Intl.DateTimeFormat()`** constructor creates {{jsxref("Intl.DateTimeFormat")}} objects.
 
 {{EmbedInteractiveExample("pages/js/intl-datetimeformat.html", "taller")}}
 
@@ -116,9 +114,9 @@ Intl.DateTimeFormat(locales, options)
     - `numberingSystem`
       - : Numbering System. Possible values include: `"arab"`,
         `"arabext"`, `"bali"`, `"beng"`,
-        `"deva"`, `"fullwide"`, " `gujr`",
-        `"guru"`, `"hanidec"`, `"khmr"`, "
-        `knda`", `"laoo"`, `"latn"`,
+        `"deva"`, `"fullwide"`, `"gujr"`,
+        `"guru"`, `"hanidec"`, `"khmr"`,
+        `"knda"`, `"laoo"`, `"latn"`,
         `"limb"`, `"mlym"`, `"mong"`,
         `"mymr"`, `"orya"`, `"tamldec"`, `"telu"`, `"thai"`, `"tibt"`.
     - `localeMatcher`

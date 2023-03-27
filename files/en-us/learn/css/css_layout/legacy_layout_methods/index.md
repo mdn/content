@@ -572,7 +572,7 @@ Next, give the containers on the second row classes explaining the number of col
 
 Try saving your HTML file and loading it in your browser to see the effect.
 
-> **Note:** If you are having trouble getting this example to work, try comparing it to our [html-skeleton-finished.html](https://github.com/mdn/learning-area/blob/main/css/css-layout/grids/html-skeleton-finished.html) file (see it [running live](https://mdn.github.io/learning-area/css/css-layout/grids/html-skeleton-finished.html) also).
+> **Note:** If you are having trouble getting this example to work, try widening the window you're using to view it (the grid won't be displayed as described here if the window is too narrow). If that doesn't work, try comparing it to our [html-skeleton-finished.html](https://github.com/mdn/learning-area/blob/main/css/css-layout/grids/html-skeleton-finished.html) file (see it [running live](https://mdn.github.io/learning-area/css/css-layout/grids/html-skeleton-finished.html) also).
 
 If you look in the skeleton.css file you can see how this works. For example, Skeleton has the following defined to style elements with "three columns" classes added to them.
 

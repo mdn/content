@@ -25,9 +25,7 @@ has(value)
 
 ### Return value
 
-- Boolean
-  - : Returns `true` if an element with the specified value exists in the
-    `WeakSet` object; otherwise `false`.
+Returns `true` if an element with the specified value exists in the `WeakSet` object; otherwise `false`.
 
 ## Examples
 

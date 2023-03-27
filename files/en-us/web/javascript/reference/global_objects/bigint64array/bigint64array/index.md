@@ -7,12 +7,7 @@ browser-compat: javascript.builtins.BigInt64Array.BigInt64Array
 
 {{JSRef}}
 
-The **`BigInt64Array()`** typed array constructor creates a new
-{{jsxref("BigInt64Array")}} object, which is, an array of 64-bit signed integers in the
-platform byte order. If control over byte order is needed, use {{jsxref("DataView")}}
-instead. The contents are initialized to `0n`. Once established, you can
-reference elements in the array using the object's methods, or by using standard array
-index syntax (that is, using bracket notation).
+The **`BigInt64Array()`** constructor creates {{jsxref("BigInt64Array")}} objects. The contents are initialized to `0n`.
 
 ## Syntax
 
