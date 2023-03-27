@@ -37,7 +37,7 @@ new SpeechSynthesisErrorEvent(type, options)
         - `network`
           - : The operation couldn't be completed at this time because some required network communication failed.
         - `synthesis-unavailable`
-          - : The operation couldn't be completed at this time because no synthesis engine was available (For example, the user may need to install or configure a synthesis engine.)
+          - : The operation couldn't be completed at this time because no synthesis engine was available (for example, the user may need to install or configure a synthesis engine).
         - `synthesis-failed`
           - : The operation failed because the synthesis engine raised an error.
         - `language-unavailable`
