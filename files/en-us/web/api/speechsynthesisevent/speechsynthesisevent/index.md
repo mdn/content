@@ -31,7 +31,7 @@ new SpeechSynthesisEvent(type, options)
     - `charLength` {{Optional_inline}}
       - : The number of characters left to be spoken after the character at the {{DOMxRef("SpeechSynthesisEvent.charIndex", "charIndex")}} position. Its default value is `0`.
     - `elapsedTime` {{Optional_inline}}
-      - : The elapsed time in seconds, after the {{domxref("SpeechSynthesisUtterance.text")}} started being spoken, at which the event was triggered.Its default value is `0`.
+      - : The elapsed time in seconds, after the {{domxref("SpeechSynthesisUtterance.text")}} started being spoken, at which the event was triggered. Its default value is `0`.
     - `name` {{Optional_inline}}
       - : The name associated with certain types of events: the name of the [SSML](https://www.w3.org/TR/speech-synthesis/#S3.3.2) marker reached in the case of a {{domxref("SpeechSynthesisUtterance.mark_event", "mark")}} event, or the type of boundary reached in the case of a {{domxref("SpeechSynthesisUtterance.boundary_event", "boundary")}} event. It defaults to the empty string (`""`).
 
