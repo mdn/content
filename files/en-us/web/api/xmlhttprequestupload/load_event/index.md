@@ -1,13 +1,13 @@
 ---
-title: "XMLHttpRequest: load event"
-slug: Web/API/XMLHttpRequest/load_event
+title: "XMLHttpRequestUpload: load event"
+slug: Web/API/XMLHttpRequestUpload/load_event
 page-type: web-api-event
 browser-compat: api.XMLHttpRequest.load_event
 ---
 
 {{APIRef}}
 
-The `load` event is fired when an {{domxref("XMLHttpRequest")}} transaction completes successfully.
+The `load` event is fired when an {{domxref("XMLHttpRequestUpload")}} transaction completes successfully.
 
 ## Syntax
 
