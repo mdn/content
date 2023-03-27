@@ -40,7 +40,7 @@ Supporting a two-pointer gesture requires preserving a pointer's event state dur
 ```js
 // Global vars to cache event state
 const evCache = [];
-const prevDiff = -1;
+let prevDiff = -1;
 ```
 
 ### Register event handlers
