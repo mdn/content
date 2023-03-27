@@ -440,7 +440,7 @@ def book_detail_view(request, primary_key):
 
 The view first tries to get the specific book record from the model. If this fails the view should raise an `Http404` exception to indicate that the book is "not found". The final step is then, as usual, to call `render()` with the template name and the book data in the `context` parameter (as a dictionary).
 
-Another way you could do this is you were not using a generic view would be to call the `get_object_or_404()` function.
+Another way you could do this if you were not using a generic view would be to call the `get_object_or_404()` function.
 This is a shortcut to raise an `Http404` exception if the record is not found.
 
 ```python
