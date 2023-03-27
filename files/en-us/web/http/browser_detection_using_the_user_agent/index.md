@@ -43,10 +43,7 @@ if (navigator.userAgent.includes("Chrome")) {
   splitUpString = (str) => String(str).split(camelCaseExpression);
 } else {
   // This fallback code is much less performant, but works
-  splitUpString = (str) =>
-    String(str)
-      .split(/(.*?[A-Z])/)
-      .filter(Boolean);
+  splitUpString = (str) => String(str).split(/(.*?[A-Z])/).filter(Boolean);
 }
 
 console.log(splitUpString("fooBar")); // ["fooB", "ar"]
