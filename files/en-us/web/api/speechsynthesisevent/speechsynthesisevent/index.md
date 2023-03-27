@@ -25,7 +25,7 @@ new SpeechSynthesisEvent(type, options)
 - `options`
   - : An object that, _in addition to the properties defined in {{domxref("Event/Event", "Event()")}}_, has the following properties:
     - `utterance`
-      - : A {{domxref("SpeechSynthesisUtterance")}} object, that is the speech request the event was triggered on.
+      - : A {{domxref("SpeechSynthesisUtterance")}} object, which is the speech request the event was triggered on.
     - `charIndex` {{Optional_inline}}
       - : The index position of the character in {{domxref("SpeechSynthesisUtterance.text")}} that was being spoken when the event was triggered. Its default value is `0`.
     - `charLength` {{Optional_inline}}
