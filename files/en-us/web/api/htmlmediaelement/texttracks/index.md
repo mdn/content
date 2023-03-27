@@ -87,19 +87,13 @@ for (const track of tracks) {
 
 ## See also
 
-- The interface defining it, {{DOMxRef("HTMLMediaElement")}}.
-- {{HTMLElement("video")}} and {{HTMLElement("audio")}}
-- {{DOMxRef("VideoTrack")}} and {{DOMxRef("VideoTrackList")}}
-- {{DOMxRef("AudioTrack")}} and {{DOMxRef("AudioTrackList")}}
-- VideoTrackList
+- {{domxref("HTMLMediaElement")}}: Interface used to define the `HTMLMediaElement.textTracks` property
+- {{HTMLElement("audio")}}, {{HTMLElement("video")}}
+- {{DOMxRef("AudioTrack")}}, {{DOMxRef("AudioTrackList")}}
+- {{DOMxRef("VideoTrack")}}, {{DOMxRef("VideoTrackList")}}
+- [`addtrack`](/en-US/docs/Web/API/VideoTrackList/addtrack_event),
   [`change`](/en-US/docs/Web/API/VideoTrackList/change_event),
-  [`addtrack`](/en-US/docs/Web/API/VideoTrackList/addtrack_event)
-  and
-  [`removetrack`](/en-US/docs/Web/API/VideoTrackList/removetrack_event)
-  events
-- Audio TrackList
-  [`change`](/en-US/docs/Web/API/AudioTrackList/change_event),
-  [`addtrack`](/en-US/docs/Web/API/AudioTrackList/addtrack_event)
-  and
-  [`removetrack`](/en-US/docs/Web/API/AudioTrackList/removetrack_event)
-  events
+  [`removetrack`](/en-US/docs/Web/API/VideoTrackList/removetrack_event): AudioTrackList events
+- [`addtrack`](/en-US/docs/Web/API/VideoTrackList/addtrack_event),
+  [`change`](/en-US/docs/Web/API/VideoTrackList/change_event),
+  [`removetrack`](/en-US/docs/Web/API/VideoTrackList/removetrack_event): VideoTrackList events
