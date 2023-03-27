@@ -31,7 +31,7 @@ new SpeechSynthesisErrorEvent(type, options)
         - `interrupted`
           - : A {{domxref("SpeechSynthesis.cancel")}} method call caused the {{domxref("SpeechSynthesisUtterance")}}  to be interrupted after speech had started but before it completed.
         - `audio-busy`
-          - : The operation couldn't be completed at this time because the user-agent couldn't access the audio output device (for example, the user may need to correct this by closing another application.)
+          - : The operation couldn't be completed at this time because the user-agent couldn't access the audio output device (for example, the user may need to correct this by closing another application).
         - `audio-hardware`
           - : The operation couldn't be completed at this time because the user-agent couldn't identify an audio output device (for example, the user may need to connect a speaker or configure system settings.)
         - `network`
