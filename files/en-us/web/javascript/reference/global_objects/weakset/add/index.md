@@ -20,7 +20,7 @@ add(value)
 
 ### Parameters
 
-- value
+- `value`
   - : Required. The object to add to the `WeakSet` collection.
 
 ### Return value
