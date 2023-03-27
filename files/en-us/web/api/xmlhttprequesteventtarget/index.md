@@ -13,8 +13,6 @@ You don't use `XMLHttpRequestEventTarget` directly; instead you interact with th
 
 ## Inheritance for `XMLHttpRequest`
 
-{{InheritanceDiagram("XMLHttpRequest")}}
-
 The following events are made available to {{domxref("XMLHttpRequest")}}:
 
 - {{domxref("XMLHttpRequest/abort_event", "abort")}}
@@ -27,8 +25,6 @@ The following events are made available to {{domxref("XMLHttpRequest")}}:
 - {{domxref("XMLHttpRequest/timeout_event", "timeout")}}
 
 ## Inheritance for `XMLHttpRequestUpload`
-
-{{InheritanceDiagram("XMLHttpRequestUpload")}}
 
 The following events are made available to {{domxref("XMLHttpRequestUpload")}}:
 

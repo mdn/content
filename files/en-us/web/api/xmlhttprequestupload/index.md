@@ -11,6 +11,8 @@ The **`XMLHttpRequestUpload`** interface represents the upload process, allowing
 
 {{AvailableInWorkers("notservice")}}
 
+{{InheritanceDiagram}}
+
 ## Instance properties
 
 _This interface has no specific property, but inherits the properties of {{domxref("XMLHttpRequestEventTarget")}} and of {{domxref("EventTarget")}}._
