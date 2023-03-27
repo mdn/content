@@ -13,9 +13,9 @@ However, consider the following scenarios:
 
 These are the kinds of features that users expect from platform-specific apps. If PWAs are to compete with platform-specific apps, they need to support these kinds of scenarios. In this guide, we'll introduce a set of technologies that enable a PWA to:
 
-- provide a good user experience even when the device has intermittent network connectivity
-- update its state when the app is not running
-- notify the user about important events that have happened while the app was not running.
+- Provide a good user experience even when the device has intermittent network connectivity
+- Update its state when the app is not running
+- Notify the user about important events that have happened while the app was not running
 
 The technologies introduced in this guide are:
 
@@ -40,8 +40,8 @@ Then whenever the app requests a resource (for example, because the user opened 
 
 The event handler for the `fetch` event is passed a {{domxref("FetchEvent")}} object, which:
 
-- provides access to the request as a {{domxref("Request")}} instance
-- provides a {{domxref("FetchEvent.respondWith", "respondWith()")}} method to send a response to the request.
+- Provides access to the request as a {{domxref("Request")}} instance
+- Provides a {{domxref("FetchEvent.respondWith", "respondWith()")}} method to send a response to the request.
 
 One way a service worker can handle requests is a "cache-first" strategy. In this strategy:
 
@@ -117,9 +117,9 @@ While offine operation is probably the most common use for service workers, they
 
 This doesn't mean service workers run all the time: browsers may close service workers when they think it is appropriate. For example, if a service worker has been inactive for a while, it will be closed. However, the browser will restart the service worker when an event has happened that it needs to take care of. This enables a PWA to implement background operations in the following way:
 
-- in the main app, register a request for the service worker to perform some operation
-- at the appropriate time, the service worker will be restarted if necessary, and an event will fire in the service worker's scope
-- the service worker will perform the operation
+- In the main app, register a request for the service worker to perform some operation
+- At the appropriate time, the service worker will be restarted if necessary, and an event will fire in the service worker's scope
+- The service worker will perform the operation
 
 In the next sections, we'll discuss a few different features that use this pattern to enable a PWA to work while the main app isn't open.
 
@@ -168,9 +168,9 @@ This makes background sync unsuitable for longer operations - downloading a movi
 
 With background fetch:
 
-- the request is initiated from the main app UI
-- whether or not the main app is open, the browser displays a persistent UI element that notifies the user about the ongoing request, and enables them to cancel it or check its progress
-- when the request is completed with success or failure, or the user has asked to check the request's progress, then the browser starts the service worker (if necessary) and fires the appropriate event in the service worker's scope.
+- The request is initiated from the main app UI
+- Whether or not the main app is open, the browser displays a persistent UI element that notifies the user about the ongoing request, and enables them to cancel it or check its progress
+- When the request is completed with success or failure, or the user has asked to check the request's progress, then the browser starts the service worker (if necessary) and fires the appropriate event in the service worker's scope.
 
 ### Making a background fetch request
 
@@ -195,9 +195,9 @@ async function requestBackgroundFetch(movieData) {
 
 We're passing three arguments into `backgroundFetch.fetch()`:
 
-1. an identifier for this fetch request
-2. an array of {{domxref("Request")}} objects or URLs. A single background fetch request can include multiple network requests.
-3. an object containing data for the UI that the browser uses to show the existence and progress of the request.
+1. An identifier for this fetch request
+2. An array of {{domxref("Request")}} objects or URLs. A single background fetch request can include multiple network requests.
+3. An object containing data for the UI that the browser uses to show the existence and progress of the request.
 
 The `backgroundFetch.fetch()` call returns a {{jsxref("Promise")}} that resolves to a {{domxref("BackgroundFetchRegistration")}} object. This enables the main app to update its own UI as the request progresses. However, if the main app is closed, the fetch will continue in the background.
 
@@ -353,12 +353,12 @@ The pattern for subscribing to push messages looks like this:
 
 2. On the device, the app uses the {{domxref("PushManager.subscribe()")}} method to subscribe to messages from the server. The `subscribe()` method:
 
-   - takes the app server's public key as an argument: this is what the push service will use to verify the signature on messages from the app server.
+   - Takes the app server's public key as an argument: this is what the push service will use to verify the signature on messages from the app server.
 
-   - returns a `Promise` that resolves to a {{domxref("PushSubscription")}} object. This object includes:
+   - Returns a `Promise` that resolves to a {{domxref("PushSubscription")}} object. This object includes:
 
-     - the [endpoint](/en-US/docs/Web/API/PushSubscription/endpoint) for the push service: this is how the app server knows where to send push messages.
-     - the [public encryption key](/en-US/docs/Web/API/PushSubscription/getKey) that your server will use to encrypt messages to the push service.
+     - The [endpoint](/en-US/docs/Web/API/PushSubscription/endpoint) for the push service: this is how the app server knows where to send push messages.
+     - The [public encryption key](/en-US/docs/Web/API/PushSubscription/getKey) that your server will use to encrypt messages to the push service.
 
 3. The app sends the endpoint and public encryption key to your server (for example, using {{domxref("fetch()")}}).
 
