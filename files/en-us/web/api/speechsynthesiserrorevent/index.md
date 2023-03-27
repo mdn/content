@@ -11,6 +11,11 @@ The **`SpeechSynthesisErrorEvent`** interface of the [Web Speech API](/en-US/doc
 
 {{InheritanceDiagram}}
 
+## Constructor
+
+- {{domxref("SpeechSynthesisErrorEvent.SpeechSynthesisErrorEvent", "SpeechSynthesisErrorEvent()")}}
+  - : Creates a new `SpeechSynthesisErrorEvent`.
+
 ## Instance properties
 
 _`SpeechSynthesisErrorEvent` extends the {{domxref("SpeechSynthesisEvent")}} interface, which inherits properties from its parent interface, {{domxref("Event")}}._
