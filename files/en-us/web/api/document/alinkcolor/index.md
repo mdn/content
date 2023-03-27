@@ -25,8 +25,7 @@ hexadecimal).
 
 Another alternative is `document.body.aLink`, although this is [deprecated in HTML 4.01](https://www.w3.org/TR/html401/struct/global.html#adef-alink) in favor of the CSS alternative.
 
-[Gecko](/en-US/docs/Mozilla/Gecko) supports both
-`alinkColor`/`:active` and {{Cssxref(":focus")}}. Internet
+Firefox supports both `alinkColor`/`:active` and {{Cssxref(":focus")}}. Internet
 Explorer 6 and 7 support `alinkColor`/`:active` only for [HTML anchor (\<a>) links](/en-US/docs/Web/HTML/Element/a) and the
 behavior is the same as `:focus` under Gecko. There is no support for
 `:focus` in IE.

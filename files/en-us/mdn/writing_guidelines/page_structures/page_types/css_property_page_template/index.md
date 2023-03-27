@@ -175,7 +175,7 @@ _Remember to remove the backticks and backslash to use this macro._
 
 ## See also
 
-Include guides relating to the current property or a list of other properties here.
+Include links to reference pages and guides related to the current property. For more guidelines, see the [See also section](/en-US/docs/MDN/Writing_guidelines/Writing_style_guide#see_also_section) in the _Writing style guide_.
 
 - link1
 - link2

@@ -7,8 +7,7 @@ browser-compat: javascript.builtins.URIError.URIError
 
 {{JSRef}}
 
-The **`URIError()`** constructor creates an error when a global
-URI handling function was used in a wrong way.
+The **`URIError()`** constructor creates {{jsxref("URIError")}} objects.
 
 ## Syntax
 
