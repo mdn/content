@@ -13,6 +13,8 @@ You don't use `XMLHttpRequestEventTarget` directly; instead you interact with th
 
 ## Inheritance for `XMLHttpRequest`
 
+{{InheritanceDiagram("XMLHttpRequest")}}
+
 The following events are made available to {{domxref("XMLHttpRequest")}}:
 
 - {{domxref("XMLHttpRequest/abort_event", "abort")}}
@@ -21,10 +23,12 @@ The following events are made available to {{domxref("XMLHttpRequest")}}:
 - {{domxref("XMLHttpRequest/loadend_event", "loadend")}}
 - {{domxref("XMLHttpRequest/loadstart_event", "loadstart")}}
 - {{domxref("XMLHttpRequest/progress_event", "progress")}}
-- {{domxref("XMLHTTPRequest/readystatechange_event", "readystatechange)}}
+- {{domxref("XMLHttpRequest/readystatechange_event", "readystatechange)}}
 - {{domxref("XMLHttpRequest/timeout_event", "timeout")}}
 
 ## Inheritance for `XMLHttpRequestUpload`
+
+{{InheritanceDiagram("XMLHttpRequestUpload")}}
 
 The following events are made available to {{domxref("XMLHttpRequestUpload")}}:
 
@@ -34,7 +38,7 @@ The following events are made available to {{domxref("XMLHttpRequestUpload")}}:
 - {{domxref("XMLHttpRequestUpload/loadend_event", "loadend")}}
 - {{domxref("XMLHttpRequestUpload/loadstart_event", "loadstart")}}
 - {{domxref("XMLHttpRequestUpload/progress_event", "progress")}}
-- {{domxref("XMLHTTPRequest/readystatechange_event", "readystatechange)}}
+- {{domxref("XMLHttpRequest/readystatechange_event", "readystatechange)}}
 - {{domxref("XMLHttpRequestUpload/timeout_event", "timeout")}}
 
 ## Specifications
