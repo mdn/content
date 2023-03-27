@@ -12,7 +12,7 @@ The **`FileReaderSync()`** constructor creates a new {{domxref("FileReaderSync")
 ## Syntax
 
 ```js-nolint
-new FileReader()
+new FileReaderSync()
 ```
 
 ### Parameters
