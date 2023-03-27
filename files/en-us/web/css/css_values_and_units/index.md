@@ -78,7 +78,7 @@ The `initial` keyword represents the value specified as the property's initial v
 
 The `unset` keyword acts as either `inherit` or `initial`, depending on whether the property is inherited or not.
 
-A fourth value of {{cssxref("revert")}} resets the property to its inherited value if it inherits from its parent or to the default value established by the user agent's stylesheet (or by user styles, if any exist)
+Thef {{cssxref("revert")}} keyword resets the property to its inherited value if it inherits from its parent or to the default value established by the user agent's stylesheet (or by user styles, if any exist)
 
 ### URLs
 
