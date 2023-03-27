@@ -24,7 +24,7 @@ A string that can be one of the following color values:
 
 ### Read the associated base palette
 
-This example example add rules in an extra stylesheet added to the document, returned as the last stylesheet in the document (`document.styleSheets[document.styleSheets.length-1].cssRules`). So, `rules[2]` returns the first {{domxref("CSSFontPaletteValuesRule")}} object, and `rules[3]` the second one.
+This example adds rules in an extra stylesheet added to the document, returned as the last stylesheet in the document (`document.styleSheets[document.styleSheets.length-1].cssRules`). So, `rules[2]` returns the first {{domxref("CSSFontPaletteValuesRule")}} object, and `rules[3]` the second one.
 
 #### HTML
 
