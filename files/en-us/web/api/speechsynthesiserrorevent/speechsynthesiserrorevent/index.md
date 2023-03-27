@@ -27,9 +27,9 @@ new SpeechSynthesisErrorEvent(type, options)
     - `error`
       - : A string containing the error reason. Possible values are:
         - `canceled`
-          - : A {{domxref("SpeechSynthesis.cancel")}} method call caused the {{domxref("SpeechSynthesisUtterance")}} to be removed from the queue before it had begun being spoken.
+          - : A {{domxref("SpeechSynthesis.cancel")}} method call caused the {{domxref("SpeechSynthesisUtterance")}} to be removed from the queue before speech started.
         - `interrupted`
-          - : A {{domxref("SpeechSynthesis.cancel")}} method call caused the {{domxref("SpeechSynthesisUtterance")}} to be interrupted after it had begun being spoken and before it completed.
+          - : A {{domxref("SpeechSynthesis.cancel")}} method call caused the {{domxref("SpeechSynthesisUtterance")}}  to be interrupted after speech had started but before it completed.
         - `audio-busy`
           - : The operation couldn't be completed at this time because the user-agent couldn't access the audio output device (for example, the user may need to correct this by closing another application.)
         - `audio-hardware`
