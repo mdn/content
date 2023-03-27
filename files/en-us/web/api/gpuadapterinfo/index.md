@@ -9,9 +9,9 @@ browser-compat: api.GPUAdapterInfo
 
 {{APIRef("WebGPU API")}}{{SeeCompatTable}}
 
-The **`GPUAdapterInfo`** interface of the {{domxref("WebGPU API", "WebGPU API", "", "nocode")}} represents a {{domxref("GPUAdapterInfo")}} object containing identifying information about a {{domxref("GPUAdapter")}}.
+The **`GPUAdapterInfo`** interface of the {{domxref("WebGPU API", "WebGPU API", "", "nocode")}} contains identifying information about a {{domxref("GPUAdapter")}}.
 
-A `GPUAdapterInfo` object is requested using the {{domxref("GPUAdapter.requestAdapterInfo()")}} method.
+A `GPUAdapterInfo` object instance is requested using the {{domxref("GPUAdapter.requestAdapterInfo()")}} method.
 
 {{InheritanceDiagram}}
 
@@ -31,12 +31,12 @@ A `GPUAdapterInfo` object is requested using the {{domxref("GPUAdapter.requestAd
 ```js
 async function init() {
   if (!navigator.gpu) {
-    throw Error('WebGPU not supported.');
+    throw Error("WebGPU not supported.");
   }
 
   const adapter = await navigator.gpu.requestAdapter();
   if (!adapter) {
-    throw Error('Couldn\'t request WebGPU adapter.');
+    throw Error("Couldn't request WebGPU adapter.");
   }
 
   const adapterInfo = await adapter.requestAdapterInfo();
@@ -44,7 +44,6 @@ async function init() {
   console.log(adapterInfo.vendor);
 
   // ...
-
 }
 ```
 

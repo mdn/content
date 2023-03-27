@@ -40,12 +40,12 @@ A validation error can occur if any of the following are false:
 
 - For `depthStencil` objects:
   - `format` is a [`depth-or-stencil`](https://gpuweb.github.io/gpuweb/#depth-or-stencil-format) format.
-  - If `depthWriteEnabled` is `true` or `depthCompare` is not `"always"`, `format` must have a depth component.
+  - If `depthWriteEnabled` is `true` or `depthCompare` is not `"always"`, `format` has a depth component.
   - If `stencilFront` or `stencilBack`'s properties are not at their default values, `format` has a stencil component.
 - For `fragment` objects:
   - `targets.length` is less than or equal to the {{domxref("GPUDevice")}}'s `maxColorAttachments` {{domxref("GPUSupportedLimits", "limit", "", "nocode")}}.
   - For each `target`, `writeMask`'s numeric equivalent is less than 16.
-  - If any of the used blend factor operations use the source alpha channel (for example `"src-alpha-saturated"`), the output must have an alpha channel (that is, it must be a `vec4`).
+  - If any of the used blend factor operations use the source alpha channel (for example `"src-alpha-saturated"`), the output has an alpha channel (that is, it must be a `vec4`).
 
 ## Examples
 

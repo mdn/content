@@ -12,7 +12,7 @@ browser-compat: api.GPU.getPreferredCanvasFormat
 The **`getPreferredCanvasFormat()`** method of the
 {{domxref("GPU")}} interface returns the optimal canvas texture format for displaying 8-bit depth, standard dynamic range content on the current system.
 
-This is commonly used to provide a {{domxref("GPUCanvasContext.configure()")}} call with the optimal `format` value for the current system. This is recommended — if you don't use the preferred format when configuring the canvas context, you may incur additional overhead, such as a texture copy, depending on the platform.
+This is commonly used to provide a {{domxref("GPUCanvasContext.configure()")}} call with the optimal `format` value for the current system. This is recommended — if you don't use the preferred format when configuring the canvas context, you may incur additional overhead, such as additional texture copies, depending on the platform.
 
 ## Syntax
 
@@ -35,13 +35,13 @@ None.
 ## Examples
 
 ```js
-const canvas = document.querySelector('#gpuCanvas');
-const context = canvas.getContext('webgpu');
+const canvas = document.querySelector("#gpuCanvas");
+const context = canvas.getContext("webgpu");
 
 context.configure({
   device: device,
   format: navigator.gpu.getPreferredCanvasFormat(),
-  alphaMode: 'premultiplied'
+  alphaMode: "premultiplied",
 });
 ```
 

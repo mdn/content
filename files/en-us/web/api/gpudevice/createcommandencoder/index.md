@@ -32,27 +32,46 @@ A {{domxref("GPUCommandEncoder")}} object instance.
 
 ## Examples
 
+In our [basic render demo](https://webgpu-basic-render.glitch.me/), several commands are recorded via a {{domxref("GPUCommandEncoder")}} created via `createCommandEncoder()`:
+
 ```js
-async function init() {
-  if (!navigator.gpu) {
-    throw Error("WebGPU not supported.");
-  }
+// ...
 
-  const adapter = await navigator.gpu.requestAdapter();
-  if (!adapter) {
-    throw Error("Couldn't request WebGPU adapter.");
-  }
+// Create GPUCommandEncoder
+const commandEncoder = device.createCommandEncoder();
 
-  let device = await adapter.requestDevice();
+// Create GPURenderPassDescriptor to tell WebGPU which texture to draw into, then initiate render pass
+const renderPassDescriptor = {
+  colorAttachments: [
+    {
+      clearValue: clearColor,
+      loadOp: "clear",
+      storeOp: "store",
+      view: context.getCurrentTexture().createView(),
+    },
+  ],
+};
 
-  // ...
-  // later on
+const passEncoder = commandEncoder.beginRenderPass(renderPassDescriptor);
 
-  const commandEncoder = device.createCommandEncoder();
+// Draw a triangle
+passEncoder.setPipeline(renderPipeline);
+passEncoder.setVertexBuffer(0, vertexBuffer);
+passEncoder.draw(3);
 
-  // ...
-}
+// End the render pass
+passEncoder.end();
+
+// ...
 ```
+
+The commands encoded by the {{domxref("GPUCommandEncoder")}} are recoded into a {{domxref("GPUCommandBuffer")}} using the {{domxref("GPUCommandEncoder.finish()")}} method. The command buffer is then passed into the queue via a {{domxref("GPUQueue.submit", "submit()")}} call, ready to be processed by the GPU.
+
+```js
+device.queue.submit([commandEncoder.finish()]);
+```
+
+> **Note:** Study the [WebGPU samples](https://webgpu.github.io/webgpu-samples/) to find more command encoding examples.
 
 ## Specifications
 

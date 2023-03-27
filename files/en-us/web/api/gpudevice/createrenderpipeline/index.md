@@ -37,7 +37,7 @@ createRenderPipeline(descriptor)
     - `primitive` {{optional_inline}}
       - : An object (see [`primitive` object structure](/en-US/docs/Web/API/GPUDevice/createRenderPipeline#primitive_object_structure)) describing how a pipeline constructs and rasterizes primitives from its vertex inputs.
     - `vertex`
-      - : An object (see [`vertex` object structure](/en-US/docs/Web/API/GPUDevice/createRenderPipeline#depthstencil_object_structure)) describing the vertex shader entry point of the pipeline and its input buffer layouts.
+      - : An object (see [`vertex` object structure](/en-US/docs/Web/API/GPUDevice/createRenderPipeline#vertex_object_structure)) describing the vertex shader entry point of the pipeline and its input buffer layouts.
 
 ### depthStencil object structure
 
@@ -189,7 +189,7 @@ The `fragment` object contains an array of objects, each of which can contain th
       - : An enumerated value specifying the required format for output colors. See the specification's [Texture Formats](https://gpuweb.github.io/gpuweb/#enumdef-gputextureformat) section for all the available `format` values.
     - `writeMask` {{optional_inline}}
 
-      - : One or more flags defining the write mask to apply to the color target state. Possible flag values are:
+      - : One or more {{glossary("bitwise flags")}} defining the write mask to apply to the color target state. Possible flag values are:
 
         - `GPUFlagsConstant.RED`
         - `GPUFlagsConstant.GREEN`
@@ -334,12 +334,12 @@ The following criteria must be met when calling **`createRenderPipeline()`**, ot
 
 - For `depthStencil` objects:
   - `format` is a [`depth-or-stencil`](https://gpuweb.github.io/gpuweb/#depth-or-stencil-format) format.
-  - If `depthWriteEnabled` is `true` or `depthCompare` is not `"always"`, `format` must have a depth component.
+  - If `depthWriteEnabled` is `true` or `depthCompare` is not `"always"`, `format` has a depth component.
   - If `stencilFront` or `stencilBack`'s properties are not at their default values, `format` has a stencil component.
 - For `fragment` objects:
   - `targets.length` is less than or equal to the {{domxref("GPUDevice")}}'s `maxColorAttachments` {{domxref("GPUSupportedLimits", "limit", "", "nocode")}}.
   - For each `target`, `writeMask`'s numeric equivalent is less than 16.
-  - If any of the used blend factor operations use the source alpha channel (for example `"src-alpha-saturated"`), the output must have an alpha channel (that is, it must be a `vec4`).
+  - If any of the used blend factor operations use the source alpha channel (for example `"src-alpha-saturated"`), the output has an alpha channel (that is, it must be a `vec4`).
 
 ## Examples
 

@@ -45,7 +45,7 @@ device.addEventListener("uncapturederror", (event) => {
 });
 ```
 
-See [WebGPU Error Handling best practices](https://toji.dev/webgpu-best-practices/error-handling) for a lot more examples and information.
+See [WebGPU Error Handling best practices](https://toji.dev/webgpu-best-practices/error-handling) for more examples and information.
 
 ## Specifications
 

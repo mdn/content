@@ -23,12 +23,12 @@ Basic {{domxref("GPUQueue")}} access:
 ```js
 async function init() {
   if (!navigator.gpu) {
-    throw Error('WebGPU not supported.');
+    throw Error("WebGPU not supported.");
   }
 
   const adapter = await navigator.gpu.requestAdapter();
   if (!adapter) {
-    throw Error('Couldn\'t request WebGPU adapter.');
+    throw Error("Couldn't request WebGPU adapter.");
   }
 
   // Create a GPUDevice
@@ -41,7 +41,6 @@ async function init() {
   device.queue.submit([commandEncoder.finish()]);
 
   // ...
-
 }
 ```
 

@@ -47,7 +47,6 @@ async function init() {
 
   let device = await adapter.requestDevice();
 
-  // ...
   // Some time later
 
   device.destroy();

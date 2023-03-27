@@ -21,25 +21,24 @@ A string. If no label value has previously been set, getting the label returns a
 ```js
 async function init() {
   if (!navigator.gpu) {
-    throw Error('WebGPU not supported.');
+    throw Error("WebGPU not supported.");
   }
 
   const adapter = await navigator.gpu.requestAdapter();
   if (!adapter) {
-    throw Error('Couldn\'t request WebGPU adapter.');
+    throw Error("Couldn't request WebGPU adapter.");
   }
 
   // Create a GPUDevice
   const device = await adapter.requestDevice();
 
   // Set a label
-  device.label = 'mylabel';
+  device.label = "mylabel";
 
   // Get a label
   console.log(device.label);
 
   // ...
-
 }
 ```
 

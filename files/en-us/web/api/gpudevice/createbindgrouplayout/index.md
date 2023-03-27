@@ -35,7 +35,7 @@ An entry object includes the following properties:
   - : A number representing a unique identifier for this particular entry, which matches the `binding` value of a corresponding {{domxref("GPUBindGroup")}} entry. In addition, it corresponds to a [`@binding`](https://gpuweb.github.io/gpuweb/wgsl/#attribute-binding) attribute in the shader code contained in the {{domxref("GPUShaderModule")}} used in a related pipeline.
 - `visibility`
 
-  - : Defines the shader stages that a {{domxref("GPUBindGroup")}} entry corresponding to this entry is will be visible to. Possible values are:
+  - : One or more {{glossary("bitwise flags")}} defining the shader stages that a {{domxref("GPUBindGroup")}} entry corresponding to this entry will be visible to. Possible values are:
 
     - `GPUShaderStage.COMPUTE`: The bind group entry will be accessible to compute shaders.
     - `GPUShaderStage.FRAGMENT`: The bind group entry will be accessible to fragment shaders.
@@ -48,11 +48,11 @@ An entry object includes the following properties:
     ```
 
 - "Resource layout object"
-  - : An object that defines the required binding resource type and structure of the {{domxref("GPUBindGroup")}} entry corresponding to this entry. This property can be one of `buffer`, `sampler`, `texture`, `storageTexture`, or `externalTexture`, the object structures of which are described in the next section.
+  - : An object that defines the required binding resource type and structure of the {{domxref("GPUBindGroup")}} entry corresponding to this entry. This property can be one of `buffer`, `externalTexture`, `sampler`, `storageTexture`, or `texture`, the object structures of which are described in the next section.
 
 ### Resource layout objects
 
-The resource layout object can be one of the following (see also {{domxref("Device.createBindGroup()")}} for further related details):
+The resource layout object can be one of the following (see also {{domxref("GPUDevice.createBindGroup()")}} for details of how the required resources for each entry are structured):
 
 - `buffer`: Indicates that the corresponding {{domxref("GPUBindGroup")}} entry will be a `GPUBufferBinding` object, which contains a {{domxref("GPUBuffer")}} plus `offset` and `size` values. A `buffer` resource layout object can contain the following properties:
 
@@ -98,12 +98,12 @@ The resource layout object can be one of the following (see also {{domxref("Devi
 
     - : An enumerated value specifying the required dimension for texture views bound to this binding. Possible values are:
 
-      - `"1d"`: The texture is viewed as a 1-dimensional image.
-      - `"2d"`: The texture is viewed as a single 2-dimensional image.
-      - `"2d-array"`: The texture is viewed as an array of 2-dimensional images.
+      - `"1d"`: The texture is viewed as a one-dimensional image.
+      - `"2d"`: The texture is viewed as a single two-dimensional image.
+      - `"2d-array"`: The texture is viewed as an array of two-dimensional images.
       - `"cube"`: The texture is viewed as a cubemap. The view has 6 array layers, corresponding to the `[+X, -X, +Y, -Y, +Z, -Z]` faces of the cube. Sampling is done seamlessly across the faces of the cubemap.
       - `"cube-array"`: The texture is viewed as a packed array of `n` cubemaps, each with 6 array layers corresponding to the `[+X, -X, +Y, -Y, +Z, -Z]` faces of the cube. Sampling is done seamlessly across the faces of the cubemaps.
-      - `"3d"`: The texture is viewed as a 3-dimensional image.
+      - `"3d"`: The texture is viewed as a three-dimensional image.
 
       If omitted, `viewDimension` defaults to `"2d"`.
 

@@ -27,30 +27,29 @@ We then log all items in the `GPUDevice.features` set to the console. This set s
 ```js
 async function init() {
   if (!navigator.gpu) {
-    throw Error('WebGPU not supported.');
+    throw Error("WebGPU not supported.");
   }
 
   const adapter = await navigator.gpu.requestAdapter();
   if (!adapter) {
-    throw Error('Couldn\'t request WebGPU adapter.');
+    throw Error("Couldn't request WebGPU adapter.");
   }
 
   const requiredFeatures = [];
 
-  if (adapter.features.has('texture-compression-astc')) {
-    requiredFeatures.push('texture-compression-astc')
+  if (adapter.features.has("texture-compression-astc")) {
+    requiredFeatures.push("texture-compression-astc");
   }
 
   const device = await adapter.requestDevice({
-    requiredFeatures
+    requiredFeatures,
   });
 
   device.features.forEach((value) => {
     console.log(value);
-  })
+  });
 
   // ...
-
 }
 ```
 

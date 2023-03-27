@@ -9,7 +9,7 @@ browser-compat: api.GPUDevice
 
 {{APIRef("WebGPU API")}}{{SeeCompatTable}}
 
-The **`GPUDevice** interface of the {{domxref("WebGPU API", "WebGPU API", "", "nocode")}} represents a logical GPU device. This is the main interface through which the majority of WebGPU functionality is accessed.
+The **`GPUDevice`** interface of the {{domxref("WebGPU API", "WebGPU API", "", "nocode")}} represents a logical GPU device. This is the main interface through which the majority of WebGPU functionality is accessed.
 
 A `GPUDevice` object is requested using the {{domxref("GPUAdapter.requestDevice()")}} method.
 
@@ -56,7 +56,7 @@ _Inherits methods from its parent, {{DOMxRef("EventTarget")}}._
 
 - {{domxref("GPUDevice.createCommandEncoder", "createCommandEncoder()")}} {{Experimental_Inline}}
 
-  - : Creates a {{domxref("GPUCommandEncoder")}}, used to encode commands to be issued to the GPU.
+  - : Creates a {{domxref("GPUCommandEncoder")}}, which is used to encode commands to be issued to the GPU.
 
 - {{domxref("GPUDevice.createComputePipeline", "createComputePipeline()")}} {{Experimental_Inline}}
 

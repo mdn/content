@@ -29,13 +29,13 @@ A {{domxref("GPUTexture")}} object instance.
 ## Examples
 
 ```js
-const canvas = document.querySelector('#gpuCanvas');
-const context = canvas.getContext('webgpu');
+const canvas = document.querySelector("#gpuCanvas");
+const context = canvas.getContext("webgpu");
 
 context.configure({
   device: device,
   format: navigator.gpu.getPreferredCanvasFormat(),
-  alphaMode: 'premultiplied'
+  alphaMode: "premultiplied",
 });
 
 //...
@@ -43,12 +43,14 @@ context.configure({
 const commandEncoder = device.createCommandEncoder();
 
 const renderPassDescriptor = {
-  colorAttachments: [{
-    clearValue: [0, 0, 0, 1], // Opaque black
-    loadOp: 'clear',
-    storeOp: 'store',
-    view: context.getCurrentTexture().createView()
-  }]
+  colorAttachments: [
+    {
+      clearValue: [0, 0, 0, 1], // Opaque black
+      loadOp: "clear",
+      storeOp: "store",
+      view: context.getCurrentTexture().createView(),
+    },
+  ],
 };
 
 const passEncoder = commandEncoder.beginRenderPass(renderPassDescriptor);

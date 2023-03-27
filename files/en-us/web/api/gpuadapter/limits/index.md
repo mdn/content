@@ -12,7 +12,7 @@ browser-compat: api.GPUAdapter.limits
 The **`limits`** read-only property of the
 {{domxref("GPUAdapter")}} interface returns a {{domxref("GPUSupportedLimits")}} object that describes the limits supported by the adapter.
 
-You should note that, rather than reporting the exact limits of each GPU, browsers will likely report different tier values of different limits to reduce the unique information available to drive-by fingerprinting. For example, the tiers of a certain limit might be 2048, 8192, and 32768. If your GPU's actual limit is 16384, the browser would still report 8192.
+You should note that, rather than reporting the exact limits of each GPU, browsers will likely report different tier values of different limits to reduce the unique information available to drive-by fingerprinting. For example, the tiers of a certain limit might be 2048, 8192, and 32768. If your GPU's actual limit is 16384, the browser will still report 8192.
 
 Given that different browsers will handle this differently and the tier values may change over time, it is hard to provide an accurate account of what limit values to expect — thorough testing is advised.
 
@@ -27,12 +27,12 @@ In the following code we query the `GPUAdapter.limits` value of `maxBindGroups` 
 ```js
 async function init() {
   if (!navigator.gpu) {
-    throw Error('WebGPU not supported.');
+    throw Error("WebGPU not supported.");
   }
 
   const adapter = await navigator.gpu.requestAdapter();
   if (!adapter) {
-    throw Error('Couldn\'t request WebGPU adapter.');
+    throw Error("Couldn't request WebGPU adapter.");
   }
 
   const requiredLimits = {};
@@ -43,11 +43,10 @@ async function init() {
   }
 
   const device = await adapter.requestDevice({
-      requiredLimits
+    requiredLimits,
   });
 
   // ...
-
 }
 ```
 

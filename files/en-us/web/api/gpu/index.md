@@ -18,7 +18,7 @@ The `GPU` object for the current context is accessed via the {{domxref("Navigato
 ## Instance methods
 
 - {{domxref("GPU.requestAdapter", "requestAdapter()")}} {{Experimental_Inline}}
-  - : Returns a {{jsxref("Promise")}} that fulfills with a {{domxref("GPUAdapter")}} object instance. From this you can request a {{domxref("GPUDevice")}}, which is the primary interface for communicating with the GPU.
+  - : Returns a {{jsxref("Promise")}} that fulfills with a {{domxref("GPUAdapter")}} object instance. From this you can request a {{domxref("GPUDevice")}}, which is the primary interface for using WebGPU functionality.
 - {{domxref("GPU.getPreferredCanvasFormat", "getPreferredCanvasFormat()")}} {{Experimental_Inline}}
   - : Returns the optimal canvas texture format for displaying 8-bit depth, standard dynamic range content on the current system.
 
@@ -29,31 +29,30 @@ The `GPU` object for the current context is accessed via the {{domxref("Navigato
 ```js
 async function init() {
   if (!navigator.gpu) {
-    throw Error('WebGPU not supported.');
+    throw Error("WebGPU not supported.");
   }
 
   const adapter = await navigator.gpu.requestAdapter();
   if (!adapter) {
-    throw Error('Couldn\'t request WebGPU adapter.');
+    throw Error("Couldn't request WebGPU adapter.");
   }
 
   const device = await adapter.requestDevice();
 
   //...
-
 }
 ```
 
 ### Configuring a GPUCanvasContext with the optimal texture format
 
 ```js
-const canvas = document.querySelector('#gpuCanvas');
-const context = canvas.getContext('webgpu');
+const canvas = document.querySelector("#gpuCanvas");
+const context = canvas.getContext("webgpu");
 
 context.configure({
   device: device,
   format: navigator.gpu.getPreferredCanvasFormat(),
-  alphaMode: 'premultiplied'
+  alphaMode: "premultiplied",
 });
 ```
 

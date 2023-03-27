@@ -30,7 +30,7 @@ createShaderModule(descriptor)
 
       - : A sequence of record types, with the structure `("string", compilationHint)`. These behave like [ordered maps](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map). In each case, the `"string"` is a key used to identify or select the record, and the `compilationHint` is either a {{domxref("GPUPipelineLayout")}} object instance or an enumerated value of `"auto"`.
 
-        The point of `hints` is to provide information about the pipeline layout as early as possible to improve performance. The idea is that more compilation can be done a single time by `createShaderModule()`, rather than multiple times in multiple calls to {{domxref("GPUDevice.createComputePipeline()")}} and {{domxref("GPUDevice.createRenderPipeline()")}}.
+        The point of `hints` is to provide information about the pipeline layout as early as possible to improve performance. The idea is to maximize the amount of compilation that can be done once by `createShaderModule()`, rather than multiple times in multiple calls to {{domxref("GPUDevice.createComputePipeline()")}} and {{domxref("GPUDevice.createRenderPipeline()")}}.
 
         > **Note:** Different implementations may handle `hints` in different ways, including possibly ignoring them entirely. Providing hints does not guarantee improved shader compilation performance on all browsers/systems.
 

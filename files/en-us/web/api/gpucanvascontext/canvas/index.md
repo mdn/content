@@ -19,11 +19,11 @@ An {{domxref("HTMLCanvasElement")}} or {{domxref("OffscreenCanvas")}} object ins
 ## Examples
 
 ```js
-const canvas = document.querySelector('#gpuCanvas');
-const context = canvas.getContext('webgpu');
+const canvas = document.querySelector("#gpuCanvas");
+const context = canvas.getContext("webgpu");
 
 // returns an HTMLCanvasElement reference
-context.canvas
+context.canvas;
 ```
 
 ## Specifications

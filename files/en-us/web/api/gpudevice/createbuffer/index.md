@@ -57,7 +57,7 @@ The following criteria must be met when calling **`createBuffer()`**, otherwise 
 - `GPUBufferUsage.MAP_WRITE` is specified, and no additional flags are specified other than `GPUBufferUsage.COPY_SRC`.
 - `mappedAtCreation: true` is specified, and the specified `size` is a multiple of 4.
 
-> **Note:** If the buffer allocation fails without any specific side-effects, an {{domxref("GPUOutOfMemoryError")}} is generated.
+> **Note:** If the buffer allocation fails without any specific side-effects, a {{domxref("GPUOutOfMemoryError")}} object is generated.
 
 ## Examples
 

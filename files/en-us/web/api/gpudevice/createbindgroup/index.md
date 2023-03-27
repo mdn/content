@@ -28,7 +28,7 @@ createBindGroup(descriptor)
           - : A number representing a unique identifier for this resource binding, which matches the `binding` value of a corresponding {{domxref("GPUBindGroupLayout")}} entry. In addition, it corresponds to a [`@binding`](https://gpuweb.github.io/gpuweb/wgsl/#attribute-binding) attribute in the shader code contained in the {{domxref("GPUShaderModule")}} used in a related pipeline.
         - `resource`
           - : The resource to bind. This can be one of the following:
-            - `GPUBufferBinding` (which wraps a {{domxref("GPUBuffer")}}; see the next section for a definition)
+            - `GPUBufferBinding` (which wraps a {{domxref("GPUBuffer")}}; see [GPUBufferBinding objects](/en-US/docs/Web/API/GPUDevice/createBindGroup#gpubufferbinding_objects) for a definition)
             - {{domxref("GPUExternalTexture")}}
             - {{domxref("GPUSampler")}}
             - {{domxref("GPUTextureView")}}
@@ -80,7 +80,7 @@ The following criteria must be met when calling **`createBindGroup()`**, otherwi
   - Has a `dimension` equal to the resource layout object's `viewDimension` (see {{domxref("GPUTexture.createView()")}} for more details of a texture view's settings).
   - Has a `format` compatible with the resource layout object's `sampleType`.
   - Is a view of a {{domxref("GPUTexture")}} with a `usage` that includes `GPUTextureUsage.TEXTURE_BINDING`.
-  - is a view of a {{domxref("GPUTexture")}} with a `sampleCount` greater than 1 if the resource layout object's `multisampled` property is `true`, or equal to 1 if it is false.
+  - is a view of a {{domxref("GPUTexture")}} with a `sampleCount` greater than 1 if the resource layout object's `multisampled` property is `true`, or equal to 1 if it is `false`.
 
 ## Examples
 

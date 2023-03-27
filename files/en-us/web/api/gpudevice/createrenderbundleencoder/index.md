@@ -41,10 +41,72 @@ A {{domxref("GPURenderBundleEncoder")}} object instance.
 
 ## Examples
 
+In the WebGPU Samples [Animometer example](https://webgpu.github.io/webgpu-samples/samples/animometer), numerous similar operations are done on many different objects simultaneously. A bundle of commands is encoded using the following function:
+
 ```js
-device.createRenderBundleEncoder({
-  colorFormats: ["r16float"],
+function recordRenderPass(
+  passEncoder: GPURenderBundleEncoder | GPURenderPassEncoder
+) {
+  if (settings.dynamicOffsets) {
+    passEncoder.setPipeline(dynamicPipeline);
+  } else {
+    passEncoder.setPipeline(pipeline);
+  }
+  passEncoder.setVertexBuffer(0, vertexBuffer);
+  passEncoder.setBindGroup(0, timeBindGroup);
+  const dynamicOffsets = [0];
+  for (let i = 0; i < numTriangles; ++i) {
+    if (settings.dynamicOffsets) {
+      dynamicOffsets[0] = i * alignedUniformBytes;
+      passEncoder.setBindGroup(1, dynamicBindGroup, dynamicOffsets);
+    } else {
+      passEncoder.setBindGroup(1, bindGroups[i]);
+    }
+    passEncoder.draw(3, 1, 0, 0);
+  }
+}
+```
+
+Later on, a {{domxref("GPURenderBundleEncoder")}} is created using `createRenderBundleEncoder()`, the function is invoked, and the command bundle is recorded into a {{domxref("GPURenderBundle")}} using {{domxref("GPURenderBundleEncoder.finish()")}}:
+
+```js
+const renderBundleEncoder = device.createRenderBundleEncoder({
+  colorFormats: [presentationFormat],
 });
+recordRenderPass(renderBundleEncoder);
+const renderBundle = renderBundleEncoder.finish();
+```
+
+{{domxref("GPURenderPassEncoder.executeBundles()")}} is then used to reuse the work across multiple render passes to improve performance. Study the example code listing for the full context.
+
+```js
+// ...
+
+return function doDraw(timestamp) {
+  if (startTime === undefined) {
+    startTime = timestamp;
+  }
+  uniformTime[0] = (timestamp - startTime) / 1000;
+  device.queue.writeBuffer(uniformBuffer, timeOffset, uniformTime.buffer);
+
+  renderPassDescriptor.colorAttachments[0].view = context
+    .getCurrentTexture()
+    .createView();
+
+  const commandEncoder = device.createCommandEncoder();
+  const passEncoder = commandEncoder.beginRenderPass(renderPassDescriptor);
+
+  if (settings.renderBundles) {
+    passEncoder.executeBundles([renderBundle]);
+  } else {
+    recordRenderPass(passEncoder);
+  }
+
+  passEncoder.end();
+  device.queue.submit([commandEncoder.finish()]);
+};
+
+// ...
 ```
 
 ## Specifications

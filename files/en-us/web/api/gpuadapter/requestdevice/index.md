@@ -26,7 +26,7 @@ requestDevice(descriptor)
     - `defaultQueue` {{optional_inline}}
       - : An object that provides information for the device's default {{domxref("GPUQueue")}} (as returned by {{domxref("GPUDevice.queue")}}). This object has a single property — `label` — which provides the default queue with a {{domxref("GPUQueue.label", "label")}} value. If no value is provided, this defaults to an empty object, and the default queue's label will be an empty string.
     - `label` {{optional_inline}}
-      - : A string providing a label that can be used to identify the object, for example in {{domxref("GPUError")}} messages or console warnings.
+      - : A string providing a label that can be used to identify the {{domxref("GPUDevice")}}, for example in {{domxref("GPUError")}} messages or console warnings.
     - `requiredFeatures` {{optional_inline}}
       - : An array of strings representing additional functionality that you want supported by the returned {{domxref("GPUDevice")}}. The `requestDevice()` call will fail if the `GPUAdapter` cannot provide these features. See {{domxref("GPUSupportedFeatures")}} for a full list of possible features. This defaults to an empty array if no value is provided.
     - `requiredLimits` {{optional_inline}}
@@ -52,18 +52,17 @@ A {{jsxref("Promise")}} that fulfills with a {{domxref("GPUDevice")}} object ins
 ```js
 async function init() {
   if (!navigator.gpu) {
-    throw Error('WebGPU not supported.');
+    throw Error("WebGPU not supported.");
   }
 
   const adapter = await navigator.gpu.requestAdapter();
   if (!adapter) {
-    throw Error('Couldn\'t request WebGPU adapter.');
+    throw Error("Couldn't request WebGPU adapter.");
   }
 
   const device = await adapter.requestDevice();
 
   // ...
-
 }
 ```
 
@@ -73,23 +72,23 @@ In the following code we:
 
 1. Check whether a {{domxref("GPUAdapter")}} has the `texture-compression-astc` feature available. If so, we push it into the array of `requiredFeatures`.
 2. Query the `GPUAdapter.limits` value of `maxBindGroups` to see if it is equal to or greater than 6. Our theoretical example app ideally needs 6 bind groups, so if the returned value is >= 6, we add a maximum limit of 6 to the `requiredLimits` object.
-3. Request a device with those feature and limit requirements, plus a `defaultQueue` object.
+3. Request a device with those feature and limit requirements, plus a `defaultQueue` label.
 
 ```js
 async function init() {
   if (!navigator.gpu) {
-    throw Error('WebGPU not supported.');
+    throw Error("WebGPU not supported.");
   }
 
   const adapter = await navigator.gpu.requestAdapter();
   if (!adapter) {
-    throw Error('Couldn\'t request WebGPU adapter.');
+    throw Error("Couldn't request WebGPU adapter.");
   }
 
   const requiredFeatures = [];
 
-  if (adapter.features.has('texture-compression-astc')) {
-    requiredFeatures.push('texture-compression-astc')
+  if (adapter.features.has("texture-compression-astc")) {
+    requiredFeatures.push("texture-compression-astc");
   }
 
   const requiredLimits = {};
@@ -101,14 +100,13 @@ async function init() {
 
   const device = await adapter.requestDevice({
     defaultQueue: {
-      label: "myqueue"
+      label: "myqueue",
     },
     requiredFeatures,
-    requiredLimits
+    requiredLimits,
   });
 
   // ...
-
 }
 ```
 

@@ -9,7 +9,7 @@ browser-compat: api.WorkerNavigator.gpu
 
 {{APIRef("Web Workers API")}}{{SeeCompatTable}}
 
-The **`gpu`** read-only property of the {{domxref("WorkerNavigator")}} interface returns the {{domxref("GPU")}} object for the current worker context. This is the entry point for the {{domxref("WebGPU_API", "WebGPU API", "", "nocode")}}.
+The **`gpu`** read-only property of the {{domxref("WorkerNavigator")}} interface returns the {{domxref("GPU")}} object for the current worker context, which is the entry point for the {{domxref("WebGPU_API", "WebGPU API", "", "nocode")}}.
 
 ## Value
 
@@ -21,18 +21,17 @@ A {{domxref("GPU")}} object.
 // Can be run inside a web worker
 async function init() {
   if (!navigator.gpu) {
-    throw Error('WebGPU not supported.');
+    throw Error("WebGPU not supported.");
   }
 
   const adapter = await navigator.gpu.requestAdapter();
   if (!adapter) {
-    throw Error('Couldn\'t request WebGPU adapter.');
+    throw Error("Couldn't request WebGPU adapter.");
   }
 
   const device = await adapter.requestDevice();
 
   //...
-
 }
 ```
 

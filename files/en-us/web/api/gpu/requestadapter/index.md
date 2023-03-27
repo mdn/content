@@ -24,16 +24,21 @@ requestAdapter(options)
 ### Parameters
 
 - `options` {{optional_inline}}
+
   - : An object containing the following properties:
+
     - `powerPreference` {{optional_inline}}
-      - : An emumerated value that can be used to provide a hint to the user agent indicating what class of adapter should be chosen from the system's available adapters. Available values are:
+
+      - : An enumerated value that can be used to provide a hint to the user agent indicating what class of adapter should be chosen from the system's available adapters. Available values are:
 
         - `undefined` (or not specified), which provides no hint.
         - `"low-power"`, which provides a hint to prioritize power savings over performance. If your app runs OK with this setting, it is recommended to use it, as it can significantly improve battery life on portable devices. This is usually the default if no options are provided.
-        - `"high-performance"`, which provides a hint to prioritize performance over power consumption. You are encouraged to only specify this value if absolutely necessary, since it may significantly decrease battery life on portable devices. It may also result in increased device loss — devices will sometimes elect to switch to a lower-power adapter to save power.
+        - `"high-performance"`, which provides a hint to prioritize performance over power consumption. You are encouraged to only specify this value if absolutely necessary, since it may significantly decrease battery life on portable devices. It may also result in increased {{domxref("GPUDevice")}} loss — the system will sometimes elect to switch to a lower-power adapter to save power.
 
-         This hint's primary purpose is to influence which GPU is used in a multi-GPU system. For instance, some laptops have a low-power integrated GPU and a high-performance discrete GPU. Different factors may affect which adapter is returned including battery status, attached displays, or removable GPUs.
+        This hint's primary purpose is to influence which GPU is used in a multi-GPU system. For instance, some laptops have a low-power integrated GPU and a high-performance discrete GPU. Different factors may affect which adapter is returned including battery status, attached displays, or removable GPUs.
+
     - `forceFallbackAdapter` {{optional_inline}}
+
       - : A boolean value that indicates whether a fallback adapter must be returned.
 
         - If set to `true`, a fallback adapter will be returned unless one is not available, in which case `requestAdapter()` will resolve to `null`.
@@ -60,18 +65,17 @@ None.
 ```js
 async function init() {
   if (!navigator.gpu) {
-    throw Error('WebGPU not supported.');
+    throw Error("WebGPU not supported.");
   }
 
   const adapter = await navigator.gpu.requestAdapter();
   if (!adapter) {
-    throw Error('Couldn\'t request WebGPU adapter.');
+    throw Error("Couldn't request WebGPU adapter.");
   }
 
   const device = await adapter.requestDevice();
 
   //...
-
 }
 ```
 

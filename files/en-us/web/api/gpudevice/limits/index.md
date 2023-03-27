@@ -27,12 +27,12 @@ We then check that the expected limit has been set on the resulting device by lo
 ```js
 async function init() {
   if (!navigator.gpu) {
-    throw Error('WebGPU not supported.');
+    throw Error("WebGPU not supported.");
   }
 
   const adapter = await navigator.gpu.requestAdapter();
   if (!adapter) {
-    throw Error('Couldn\'t request WebGPU adapter.');
+    throw Error("Couldn't request WebGPU adapter.");
   }
 
   const requiredLimits = {};
@@ -43,13 +43,12 @@ async function init() {
   }
 
   const device = await adapter.requestDevice({
-      requiredLimits
+    requiredLimits,
   });
 
   console.log(device.limits.maxBindGroups);
 
   // ...
-
 }
 ```
 
