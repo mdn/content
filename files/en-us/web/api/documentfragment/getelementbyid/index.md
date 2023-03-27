@@ -51,7 +51,8 @@ Console: <button id="find">Find elements</button>
 ```
 
 ```css hidden
-#reset, #add {
+#reset,
+#add {
   display: block;
   margin-bottom: 10px;
 }
@@ -87,8 +88,12 @@ addButton.addEventListener("click", () => {
 const findButton = document.getElementById("find");
 findButton.addEventListener("click", () => {
   const log = document.getElementById("log");
-  log.textContent = `Found 'Apple' in the list? ${document.getElementById("Apple") ? "Yes" : "No"}`;
-  log.textContent += `\nFound 'Cherry' in the list? ${document.getElementById("Cherry") ? "Yes" : "No"}`;
+  log.textContent = `Found 'Apple' in the list? ${
+    document.getElementById("Apple") ? "Yes" : "No"
+  }\n`;
+  log.textContent += `Found 'Cherry' in the list? ${
+    document.getElementById("Cherry") ? "Yes" : "No"
+  }`;
 });
 
 // Reset the example
