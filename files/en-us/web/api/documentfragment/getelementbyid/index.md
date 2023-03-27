@@ -32,118 +32,88 @@ An {{domxref("Element")}} object describing the DOM element object matching the 
 
 ## Examples
 
-### HTML
+### Extend a list of elements
+
+This example creates a list with one element, `Cherry`, while a `Find elements` button will look for `Apple` and `Cherry` and logs it. The button `Add fragment to document` will insert four extra elements in the list, changing the results of pressing the `Find elements` button. Finally, a `Reset` button sets the example in its original state.
+
+#### HTML
 
 ```html
-Durian is initially the only entry in this list. The other list items have been
-added to a fragment, subsequently added to this unordered list:
+<button id="reset">Reset example</button>
+Basket content:
 <ul>
-  <li id="Durian">Durian</li>
+  <li id="Cherry">Cherry</li>
 </ul>
+<button id="add">Add fragment to document</button>
 
-Before appending the fragment to the document, we find Durian in the document
-and Apple in the document fragment:<br />
-<output></output>
-<br /><br />
-After appending the fragment to the document, we find both in the document:<br />
-<output></output>
+Console: <button id="find">Find elements</button>
+<pre id="log" />
 ```
 
-### JavaScript
+```css hidden
+#reset, #add {
+  display: block;
+  margin-bottom: 10px;
+}
+```
+
+#### JavaScript
 
 ```js
 // Obtain the unordered list in the document
 const ul = document.querySelector("ul");
 
-// Create the document fragment
-const fruits = ["Apple", "Orange", "Banana", "Melon"];
+// Add fragment to document
+const addButton = document.getElementById("add");
+addButton.addEventListener("click", () => {
+  // Create the document fragment
+  const fruits = ["Apple", "Orange", "Banana", "Melon"];
+  const fragment = new DocumentFragment();
+  for (const fruit of fruits) {
+    const li = document.createElement("li");
+    li.textContent = fruit;
+    li.id = fruit;
+    fragment.append(li);
+  }
 
-const fragment = new DocumentFragment();
+  // Insert the fragment inside the document's unordered list
+  ul.append(fragment);
 
-for (const fruit of fruits) {
+  // We only add once: disable the button
+  addButton.disabled = true;
+});
+
+// Search for Cherry and Apple
+const findButton = document.getElementById("find");
+findButton.addEventListener("click", () => {
+  const log = document.getElementById("log");
+  log.textContent = `Found 'Apple' in the list? ${document.getElementById("Apple") ? "Yes" : "No"}`;
+  log.textContent += `\nFound 'Cherry' in the list? ${document.getElementById("Cherry") ? "Yes" : "No"}`;
+});
+
+// Reset the example
+const resetButton = document.getElementById("reset");
+resetButton.addEventListener("click", () => {
+  // Empty the list
+  while (ul.firstChild) {
+    // The list is LIVE so it will re-index each call
+    ul.removeChild(ul.firstChild);
+  }
+
+  // Create 'Cherry` entry and adds it to the list
   const li = document.createElement("li");
-  li.textContent = fruit;
-  li.id = fruit;
-  fragment.append(li);
-}
+  li.textContent = "Cherry";
+  li.id = "Cherry";
+  ul.append(li);
 
-// Perform the searches
-let output = document.querySelectorAll("output")[0];
-output.append(document.createElement("br"));
-output.append(
-  document.createTextNode(
-    `Found Apple in the fragment? ${
-      fragment.getElementById("Apple") ? "Yes" : "No"
-    }`
-  )
-);
-output.append(document.createElement("br"));
-output.append(
-  document.createTextNode(
-    `Found Apple in the document? ${
-      document.getElementById("Apple") ? "Yes" : "No"
-    }`
-  )
-);
-output.append(document.createElement("br"));
-output.append(
-  document.createTextNode(
-    `Found Durian in the fragment? ${
-      fragment.getElementById("Durian") ? "Yes" : "No"
-    }`
-  )
-);
-output.append(document.createElement("br"));
-output.append(
-  document.createTextNode(
-    `Found Durian in the document? ${
-      document.getElementById("Durian") ? "Yes" : "No"
-    }`
-  )
-);
-
-// Insert the fragment inside the document's unordered list
-ul.append(fragment);
-
-// Perform the searches
-output = document.querySelectorAll("output")[1];
-output.append(document.createElement("br"));
-output.append(
-  document.createTextNode(
-    `Found Apple in the fragment? ${
-      fragment.getElementById("Apple") ? "Yes" : "No"
-    }`
-  )
-);
-output.append(document.createElement("br"));
-output.append(
-  document.createTextNode(
-    `Found Apple in the document? ${
-      document.getElementById("Apple") ? "Yes" : "No"
-    }`
-  )
-);
-output.append(document.createElement("br"));
-output.append(
-  document.createTextNode(
-    `Found Durian in the fragment? ${
-      fragment.getElementById("Durian") ? "Yes" : "No"
-    }`
-  )
-);
-output.append(document.createElement("br"));
-output.append(
-  document.createTextNode(
-    `Found Durian in the document? ${
-      document.getElementById("Durian") ? "Yes" : "No"
-    }`
-  )
-);
+  // (Re-)Activate the 'add' button
+  addButton.disabled = false;
+});
 ```
 
-### Result
+#### Result
 
-{{EmbedLiveSample('Examples', '100%', '500')}}
+{{EmbedLiveSample('Examples', '100%', '320')}}
 
 ## Specifications
 
@@ -156,4 +126,3 @@ output.append(
 ## See also
 
 - {{domxref("Document.getElementById()")}}
-- {{domxref("DocumentFragment.querySelector()")}} and {{domxref("DocumentFragment.querySelectorAll()")}} for selectors via queries like `'div.myclass'`
