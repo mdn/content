@@ -9,7 +9,7 @@ browser-compat: api.WebGLContextEvent.WebGLContextEvent
 
 The **`WebGLContextEvent()`** constructor creates a new {{domxref("WebGLContextEvent")}} object.
 
-> **Note:** A web developer doesn't typically need to call this constructor, as the browser creates these objects itself when firing events.
+> **Note:** You typically don't need to call this constructor; the browser creates these objects automatically when WebGL context events get fired. To manually trigger a `webglcontextlost` event, use {{domxref("WEBGL_lose_context.loseContext()")}}.
 
 ## Syntax
 
