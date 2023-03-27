@@ -64,6 +64,9 @@ Console: <button id="find">Find elements</button>
 // Obtain the unordered list in the document
 const ul = document.querySelector("ul");
 
+// Log
+const log = document.getElementById("log");
+
 // Add fragment to document
 const addButton = document.getElementById("add");
 addButton.addEventListener("click", () => {
@@ -87,7 +90,6 @@ addButton.addEventListener("click", () => {
 // Search for Cherry and Apple
 const findButton = document.getElementById("find");
 findButton.addEventListener("click", () => {
-  const log = document.getElementById("log");
   log.textContent = `Found 'Apple' in the list? ${
     document.getElementById("Apple") ? "Yes" : "No"
   }\n`;
@@ -110,6 +112,9 @@ resetButton.addEventListener("click", () => {
   li.textContent = "Cherry";
   li.id = "Cherry";
   ul.append(li);
+
+  // Empty log
+  log.textContent = "";
 
   // (Re-)Activate the 'add' button
   addButton.disabled = false;
