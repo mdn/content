@@ -20,12 +20,15 @@ container-name: <container-name>;
 ### Values
 
 - `<container-name>`
+
   - : A case-sensitive string that is used to identify the container.
+
     The following conditions apply:
-  - The name can be any valid {{cssxref("custom-ident")}}, but must not equal `default`.
-  - The name value must not be in quotes.
-  - The dashed ident intended to denote author-defined identifiers (e.g., `--container-name`) is permitted.
-  - A list of multiple names separated by a space is allowed.
+
+    - The name can be any valid {{cssxref("custom-ident")}}, but must not equal `default`.
+    - The name value must not be in quotes.
+    - The dashed ident intended to denote author-defined identifiers (e.g., `--container-name`) is permitted.
+    - A list of multiple names separated by a space is allowed.
 
 ## Examples
 

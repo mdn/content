@@ -17,7 +17,7 @@ Get the Emscripten SDK, using these instructions: <https://emscripten.org/docs/g
 
 ## Compiling an example
 
-With the environment set up, let's look at how to use it to compile a C example to Emscripten. There are a number of options available when compiling with Emscripten, but the main two scenarios we'll cover are:
+With the environment set up, let's look at how to use it to compile a C example to wasm. There are a number of options available when compiling with Emscripten, but the main two scenarios we'll cover are:
 
 - Compiling to wasm and creating HTML to run our code in, plus all the JavaScript "glue" code needed to run the wasm in the web environment.
 - Compiling to wasm and just creating the JavaScript.
@@ -129,7 +129,7 @@ If you have a function defined in your C code that you want to call as needed fr
    > **Note:** We are including the `#ifdef` blocks so that if you are trying to include this in C++ code, the example will still work. Due to C versus C++ name mangling rules, this would otherwise break, but here we are setting it so that it treats it as an external C function if you are using C++.
 
 2. Now add `html_template/shell_minimal.html` with `\{\{{ SCRIPT }}}` as content into this new directory too, just for convenience (you'd obviously put this in a central place in your real dev environment).
-3. Now let's run the compilation step again. From inside your latest directory (and while inside your Emscripten compiler environment terminal window), compile your C code with the following command. (Note that we need to compile with `NO_EXIT_RUNTIME`, which is necessary as otherwise when `main()` exits the runtime would be shut down — necessary for proper C emulation, e.g., atexits are called — and it wouldn't be valid to call compiled code.)
+3. Now let's run the compilation step again. From inside your latest directory (and while inside your Emscripten compiler environment terminal window), compile your C code with the following command. Note that we need to compile with `NO_EXIT_RUNTIME`: otherwise, when `main()` exits, the runtime would be shut down and it wouldn't be valid to call compiled code. This is necessary for proper C emulation: for example, to ensure that [`atexit()`](https://en.cppreference.com/w/c/program/atexit) functions are called.
 
    ```bash
    emcc -o hello3.html hello3.c --shell-file html_template/shell_minimal.html -s NO_EXIT_RUNTIME=1 -s "EXPORTED_RUNTIME_METHODS=['ccall']"

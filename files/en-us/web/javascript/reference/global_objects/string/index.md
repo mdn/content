@@ -220,8 +220,7 @@ const longString =
 
 Or you can use the backslash character (`\`) at the end of each line to
 indicate that the string will continue on the next line. Make sure there is no space or
-any other character after the backslash (except for a line break), or as an indent;
-otherwise it will not work.
+any other character after the backslash (except for a line break), otherwise it will not work. If the next line is indented, the extra spaces will also be present in the string's value.
 
 ```js
 const longString =
@@ -393,7 +392,7 @@ These properties are own properties of each `String` instance.
   - : Returns a new iterator object that iterates over the code points of a String value,
     returning each code point as a String value.
 
-## HTML wrapper methods
+### HTML wrapper methods
 
 > **Warning:** Deprecated. Avoid these methods.
 >

@@ -94,7 +94,7 @@ document.getElementById("restart").addEventListener("click", (evt) => {
 - `whenNotActive`
   - : This value indicates that the animation can only be restarted when it is not active (i.e. after the active end). Attempts to restart the animation during its active duration are ignored.
 - `never`
-  - : This value indicates that the animation cannot be restarted for the time the document is loaded.
+  - : This value indicates that the animation cannot be restarted.
 
 ## Specifications
 
