@@ -7,12 +7,7 @@ browser-compat: javascript.builtins.Uint32Array.Uint32Array
 
 {{JSRef}}
 
-The **`Uint32Array()`** typed array constructor creates an
-array of 32-bit unsigned integers in the platform byte order. If control over byte order
-is needed, use {{jsxref("DataView")}} instead. The contents are initialized to
-`0`. Once established, you can reference elements in the array using the
-object's methods, or using standard array index syntax (that is, using bracket
-notation).
+The **`Uint32Array()`** constructor creates {{jsxref("Uint32Array")}} objects. The contents are initialized to `0`.
 
 ## Syntax
 
