@@ -136,7 +136,7 @@ function pointerupHandler(ev) {
   log(ev.type, ev);
   // Remove this pointer from the cache and reset the target's
   // background and border
-  remove_event(ev);
+  removeEvent(ev);
   ev.target.style.background = "white";
   ev.target.style.border = "1px solid black";
 
