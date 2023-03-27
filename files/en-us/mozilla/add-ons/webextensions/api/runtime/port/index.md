@@ -102,13 +102,9 @@ Values of this type are objects. They contain the following properties:
 
 ## Lifecycle
 
-The lifecycle of a `Port` is described [in the Chrome docs.](https://developer.chrome.com/docs/extensions/mv3/messaging/#port-lifetime)
+The lifecycle of a `Port` is described [in the Chrome docs](https://developer.chrome.com/docs/extensions/mv3/messaging/#port-lifetime).
 
-There is, however, one important difference between Firefox and Chrome, stemming from the fact that
-the `runtime.connect` and `tabs.connect` APIs are broadcast channels. This means that there may be potentially more than
-one recipient, and this results in ambiguity when one of the contexts with a `runtime.onConnect` call is closed. In Chrome,
-a port stays active as long as there is any other recipient. In Firefox, the port closes when any of the contexts unloads.
-In other words, the disconnection condition,
+There is, however, one important difference between Firefox and Chrome, stemming from the fact that the `runtime.connect` and `tabs.connect` APIs are broadcast channels. This means that there may be potentially more than one recipient, and this results in ambiguity when one of the contexts with a `runtime.onConnect` call is closed. In Chrome, a port stays active as long as there is any other recipient. In Firefox, the port closes when any of the contexts unloads. In other words, the disconnection condition,
 
 - All frames that received the port (via `runtime.onConnect`) have unloaded.
 
@@ -116,7 +112,7 @@ which holds in Chrome, is replaced by
 
 - *Any* frame that received the port (via `runtime.onConnect`) has unloaded.
 
-in Firefox. ([bug 1465514](https://bugzilla.mozilla.org/show_bug.cgi?id=1465514)).
+in Firefox (see [bug 1465514](https://bugzil.la/1465514)).
 
 ## Browser compatibility
 
