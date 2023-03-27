@@ -252,7 +252,7 @@ The `primitive` object can contain the following properties:
     - `"uint16"`: Indicates a byte size of 2 and a primitive restart value of `0xFFFF`.
     - `"uint32"`: Indicates a byte size of 4 and a primitive restart value of `0xFFFFFFFF`.
 
-    A `stripIndexFormat` value should not be specified for pipelines with list topologies (`"line-list"`, `"point-list"`, or `"triangle-list"`). These will use the index format passed to `setIndexBuffer()` when doing indexed rendering (for example, see {{domxref("GPURenderPassEncoder.setIndexBuffer()")}}).
+    GPU primitive states that specify a strip primitive topology must specify a strip index format if they are used for indexed draws (for example, via {{domxref("GPURenderPassEncoder.drawIndexed()")}}) so that the primitive restart value that will be used is known at pipeline creation time. Pipelines with list primitive topologies (`"line-list"`, `"point-list"`, or `"triangle-list"`) should not specify a `stripIndexFormat` value. They will instead use the index format passed to, for example, {{domxref("GPURenderPassEncoder.setIndexBuffer()")}} when doing indexed rendering.
 
 - `topology` {{optional_inline}}
 
