@@ -9,13 +9,13 @@ browser-compat: css.types.color.color-mix
 
 {{CSSRef}}{{SeeCompatTable}}
 
-The **`color-mix()`** functional notation takes two {{cssxref("color_value","color")}} values and returns the result of mixing them in a given colorspace by a given amount.
+The **`color-mix()`** functional notation takes two {{cssxref("color_value","&lt;color>")}} values and returns the result of mixing them in a given colorspace by a given amount.
 
 ## Syntax
 
 ```css
-color-mix(in lch, peru, pink);
-color-mix(in lch, peru 40%, pink);
+color-mix(in lch, plum, pink);
+color-mix(in lch, plum 40%, pink);
 color-mix(in srgb, #34c9eb 20%, white);
 color-mix(in hsl longer hue, hsl(120 100% 50%) 20%, white);
 ```
@@ -48,13 +48,16 @@ color-mix(in hsl longer hue, hsl(120 100% 50%) 20%, white);
 
 ### Mixing two colors
 
-In a supporting browser the three items become more blue as a higher percentage of `#34c9eb` is mixed in.
+In a supporting browser, the items have more blue, and therefore less white, as a higher percentage of `#34c9eb` is mixed in. When no value is given, the percentage defaults to 50%.
 
 ```html
 <ul>
-  <li>10% #34c9eb</li>
-  <li>40% #34c9eb</li>
-  <li>70% #34c9eb</li>
+  <li>0%</li>
+  <li>25%</li>
+  <li>50%</li>
+  <li>75%</li>
+  <li>100%</li>
+  <li></li>
 </ul>
 ```
 
@@ -70,20 +73,37 @@ ul {
 
 li {
   padding: 10px;
+  flex: 1;
+  box-sizing: border-box;
+  font-family: monospace;
+  outline: 1px solid #34c9eb;
+  text-align: center;
 }
 ```
 
 ```css
 li:nth-child(1) {
-  background-color: color-mix(in srgb, #34c9eb 10%, white);
+  background-color: color-mix(in srgb, #34c9eb 0%, white);
 }
 
 li:nth-child(2) {
-  background-color: color-mix(in srgb, #34c9eb 40%, white);
+  background-color: color-mix(in srgb, #34c9eb 25%, white);
 }
 
 li:nth-child(3) {
-  background-color: color-mix(in srgb, #34c9eb 70%, white);
+  background-color: color-mix(in srgb, #34c9eb 50%, white);
+}
+
+li:nth-child(4) {
+  background-color: color-mix(in srgb, #34c9eb 75%, white);
+}
+
+li:nth-child(5) {
+  background-color: color-mix(in srgb, #34c9eb 100%, white);
+}
+
+li:nth-child(6) {
+  background-color: color-mix(in srgb, #34c9eb, white);
 }
 ```
 
