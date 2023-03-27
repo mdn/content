@@ -9,11 +9,17 @@ browser-compat: api.GPURenderBundleEncoder
 
 The **`GPURenderBundleEncoder`** interface of the {{domxref("WebGPU API", "WebGPU API", "", "nocode")}} is used to pre-record bundles of commands.
 
-The command bundles are encoded by calling the methods of `GPURenderBundleEncoder`; once the desired commends have been encoded, they are recorded into a {{domxref("GPURenderBundle")}} object instance using the {{domxref("GPURenderBundleEncoder.finish()")}} method.
+The command bundles are encoded by calling the methods of `GPURenderBundleEncoder`; once the desired commands have been encoded, they are recorded into a {{domxref("GPURenderBundle")}} object instance using the {{domxref("GPURenderBundleEncoder.finish()")}} method. These render bundles can then be reused across multiple render passes by passing the `GPURenderBundle` objects into {{domxref("GPURenderPassEncoder.executeBundles()")}} calls.
 
-These command bundles can then be reused across multiple render passes by passing the `GPURenderBundle` objects into {{domxref("GPURenderPassEncoder.executeBundles()")}} calls. Reusing pre-recoded commands can significantly improve app performance in situations where multiple similar objects are being rendered simultaneously, with the only differences being in the buffers/textures that are being used. A good example is VR rendering. Recording the rendering as a render bundle and then tweaking the view matrix and replaying it for each eye is a more efficient way to draw the scene twice.
+In effect, this is like a partial render pass — `GPURenderBundleEncoder`s have all the same functionality available as {{domxref("GPURenderPassEncoder")}}s, except that they can't begin and end occlusion queries, and can't set the scissor rect, viewport, blend constant, and stencil reference. The `GPURenderBundle` will inherit all these values from the {{domxref("GPURenderPassEncoder")}} that executes it.
+
+> **Note:** Currently set vertex buffers, index buffers, bind groups, and pipeline are all cleared prior to executing a render bundle, and once the render bundle has finished executing.
+
+Reusing pre-recoded commands can significantly improve app performance in situations where JavaScript draw call overhead is a bottleneck. Render bundles are most effective in situations where a batch of objects will be drawn the same way across multiple views or frames, with the only differences being the buffer content being used (such as updated matrix uniforms). A good example is VR rendering. Recording the rendering as a render bundle and then tweaking the view matrix and replaying it for each eye is a more efficient way to issue draw calls for both renderings of the scene.
 
 A `GPURenderBundleEncoder` object instance is created via the {{domxref("GPUDevice.createRenderBundleEncoder()")}} property.
+
+> **Note:** The methods of `GPURenderBundleEncoder` are functionally identical to their equivalents available on {{domxref("GPURenderPassEncoder")}}, except for {{domxref("GPURenderBundleEncoder.finish()")}}, which is similar in purpose to {{domxref("GPUCommandEncoder.finish()")}}.
 
 {{InheritanceDiagram}}
 

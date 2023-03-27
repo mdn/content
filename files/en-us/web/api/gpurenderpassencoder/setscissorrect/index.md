@@ -15,6 +15,8 @@ The **`setScissorRect()`** method of the
 ## Syntax
 
 ```js-nolint
+setScissorRect()
+setScissorRect(x, y)
 setScissorRect(x, y, width, height)
 ```
 
@@ -28,6 +30,8 @@ setScissorRect(x, y, width, height)
   - : A number representing the width of the scissor rectangle, in pixels.
 - `height` {{optional_inline}}
   - : A number representing the height of the scissor rectangle, in pixels.
+
+> **Note:** If any values are omitted, or if a `setScissorRect()` call is not made, the default values are `(0, 0, attachment width, attachment height)` for each render pass.
 
 ### Return value
 

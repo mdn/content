@@ -10,7 +10,9 @@ browser-compat: api.GPURenderBundleEncoder.setPipeline
 {{APIRef("WebGPU API")}}{{SeeCompatTable}}
 
 The **`setPipeline()`** method of the
-{{domxref("GPURenderBundleEncoder")}} interface sets the {{domxref("GPURenderPipeline")}} to use for this render bundle.
+{{domxref("GPURenderBundleEncoder")}} interface sets the {{domxref("GPURenderPipeline")}} to use for subsequent render bundle commands.
+
+> **Note:** This method is functionally identical to its equivalent on {{domxref("GPURenderPassEncoder")}} — {{domxref("GPURenderPassEncoder.setPipeline", "setPipeline()")}}.
 
 ## Syntax
 
@@ -21,7 +23,7 @@ setPipeline(pipeline)
 ### Parameters
 
 - `pipeline`
-  - : The {{domxref("GPURenderPipeline")}} to use for this render bundle.
+  - : The {{domxref("GPURenderPipeline")}} to use for subsequent render bundle commands.
 
 ### Return value
 

@@ -12,6 +12,8 @@ browser-compat: api.GPURenderBundleEncoder.draw
 The **`draw()`** method of the
 {{domxref("GPURenderBundleEncoder")}} interface draws primitives based on the vertex buffers provided by {{domxref("GPURenderBundleEncoder.setVertexBuffer", "setVertexBuffer()")}}.
 
+> **Note:** This method is functionally identical to its equivalent on {{domxref("GPURenderPassEncoder")}} — {{domxref("GPURenderPassEncoder.draw", "draw()")}}.
+
 ## Syntax
 
 ```js-nolint

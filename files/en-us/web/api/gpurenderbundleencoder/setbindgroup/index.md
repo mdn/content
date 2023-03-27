@@ -12,6 +12,8 @@ browser-compat: api.GPURenderBundleEncoder.setBindGroup
 The **`setBindGroup()`** method of the
 {{domxref("GPURenderBundleEncoder")}} interface sets the {{domxref("GPUBindGroup")}} to use for subsequent render bundle commands, for a given index.
 
+> **Note:** This method is functionally identical to its equivalent on {{domxref("GPURenderPassEncoder")}} — {{domxref("GPURenderPassEncoder.setBindGroup", "setBindGroup()")}}.
+
 ## Syntax
 
 ```js-nolint

@@ -31,11 +31,9 @@ setIndexBuffer(buffer, indexFormat, offset, size)
 - `size` {{optional_inline}}
   - : A number representing the size, in bytes, of the index data contained in `buffer`. If omitted, `size` defaults to the `buffer`'s {{domxref("GPUBuffer.size")}} - `offset`.
 
-#### Notes on indexFormat
+#### Note on indexFormat
 
-`indexFormat` determines both the data type of index values in a buffer and, when used with strip primitive topologies (`"line-strip"` or `"triangle-strip"`) also specifies the primitive restart value. The primitive restart value indicates which index value indicates that a new primitive should be started rather than continuing to construct the triangle strip with the prior indexed vertices.
-
-GPU primitive states that specify a strip primitive topology must specify a strip index format if they are used for indexed draws so that the primitive restart value that will be used is known at pipeline creation time. GPU primitive states that specify a list primitive topology (for example `"triangle-list"`) will use the index format passed to `setIndexBuffer()` when doing indexed rendering. See [`GPUDevice.createRenderPipeline()` > primitive object structure](/en-US/docs/Web/API/GPUDevice/createRenderPipeline#primitive_object_structure) for more details.
+`indexFormat` determines both the data type of index values in a buffer and, when used with a pipeline that specifies a strip primitive topology (`"line-strip"` or `"triangle-strip"`), also determines the primitive restart value. The primitive restart value is an index value indicating that a new primitive should be started rather than continuing to construct the strip with the prior indexed vertices. The value is `0xFFFF` for `"uint16"`, or `0xFFFFFFFF` for `"uint32"`.
 
 ### Return value
 

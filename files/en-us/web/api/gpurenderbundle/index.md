@@ -9,9 +9,11 @@ browser-compat: api.GPURenderBundle
 
 The **`GPURenderBundle`** interface of the {{domxref("WebGPU API", "WebGPU API", "", "nocode")}} represents a container for pre-recorded bundles of commands.
 
-The command bundles are encoded using a {{domxref("GPURenderBundleEncoder")}}; once the desired commends have been encoded, they are recorded into a `GPURenderBundle` object instance using the {{domxref("GPURenderBundleEncoder.finish()")}} method.
+The command bundles are encoded using a {{domxref("GPURenderBundleEncoder")}}; once the desired commands have been encoded, they are recorded into a `GPURenderBundle` object instance using the {{domxref("GPURenderBundleEncoder.finish()")}} method.
 
-These command bundles can then be reused across multiple render passes by passing the `GPURenderBundle` objects into {{domxref("GPURenderPassEncoder.executeBundles()")}} calls. Reusing pre-recoded commands can significantly improve app performance in situations where multiple similar objects are being rendered simultaneously, with the only differences being in the buffers/textures that are being used. A good example is VR rendering. Recording the rendering as a render bundle and then tweaking the view matrix and replaying it for each eye is a more efficient way to draw the scene twice.
+These command bundles can then be reused across multiple render passes by passing the `GPURenderBundle` objects into {{domxref("GPURenderPassEncoder.executeBundles()")}} calls. Reusing pre-recoded commands can significantly improve app performance in situations where JavaScript draw call overhead is a bottleneck. Render bundles are most effective in situations where a batch of objects will be drawn the same way across multiple views or frames, with the only differences being the buffer content being used (such as updated matrix uniforms).
+
+A good example is VR rendering. Recording the rendering as a render bundle and then tweaking the view matrix and replaying it for each eye is a more efficient way to issue draw calls for both renderings of the scene.
 
 {{InheritanceDiagram}}
 

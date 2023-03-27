@@ -105,7 +105,26 @@ copyExternalImageToTexture(source, destination, copySize)
       - : A {{domxref("GPUTexture")}} object representing the texture to write the data to.
 
 - `copySize`
-  - : An object or array specifying the width, height, and depth of the copy. See `destination.origin` for examples of the object/array structure.
+
+  - : An object or array specifying `width`, `height`, and `depthOrArrayLayers` — of the region to copy from/to.
+
+    What follows is a sample array:
+
+    ```js
+    origin: [16, 1, 1];
+    ```
+
+    The object equivalent would look like this:
+
+    ```js
+    origin: {
+      width: 16,
+      height: 1,
+      depthOrArrayLayers: 1
+    }
+    ```
+
+    The `width` value has to be included. If the `height` or `depthOrArrayLayers` values are omitted, they default to 1.
 
 ### Return value
 
@@ -148,9 +167,9 @@ The following criteria must be met when calling **`writeTexture()`**, otherwise 
   - `"rgb10a2unorm"`
   - `"rgba16float"`
   - `"rgba32float"`
-- `destination.origin.x` + `copySize.x` is less than or equal to the `destination` {{domxref("GPUTexture")}} {{domxref("GPUTexture.width", "width")}}.
-- `destination.origin.y` + `copySize.y` is less than or equal to the `destination` {{domxref("GPUTexture")}} {{domxref("GPUTexture.height", "height")}}.
-- `destination.origin.z` + `copySize.z` is less than or equal to the `destination` {{domxref("GPUTexture")}} {{domxref("GPUTexture.depthOrArrayLayers", "depthOrArrayLayers")}}.
+- `destination.origin.x` + `copySize.width` is less than or equal to the `destination` {{domxref("GPUTexture")}} {{domxref("GPUTexture.width", "width")}}.
+- `destination.origin.y` + `copySize.height` is less than or equal to the `destination` {{domxref("GPUTexture")}} {{domxref("GPUTexture.height", "height")}}.
+- `destination.origin.z` + `copySize.depthOrArrayLayers` is less than or equal to the `destination` {{domxref("GPUTexture")}} {{domxref("GPUTexture.depthOrArrayLayers", "depthOrArrayLayers")}}.
 - The `destination` {{domxref("GPUTexture.width")}} is a multiple of the texel block width of the destination {{domxref("GPUTexture.format")}}.
 - The `destination` {{domxref("GPUTexture.height")}} is a multiple of the texel block height of the destination {{domxref("GPUTexture.format")}}.
 

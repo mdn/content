@@ -12,6 +12,8 @@ browser-compat: api.GPURenderPassEncoder.setBlendConstant
 The **`setBlendConstant()`** method of the
 {{domxref("GPURenderPassEncoder")}} interface sets the constant blend color and alpha values used with `"constant"` and `"one-minus-constant"` blend factors (as set in the descriptor of the {{domxref("GPUDevice.createRenderPipeline()")}} method, in the `blend` property).
 
+> **Note:** If a `setBlendConstant()` call is not made, the blend constant value defaults to `(0, 0, 0, 0)`.
+
 ## Syntax
 
 ```js-nolint

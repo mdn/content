@@ -9,11 +9,11 @@ browser-compat: api.GPURenderPassEncoder
 
 The **`GPURenderPassEncoder`** interface of the {{domxref("WebGPU API", "WebGPU API", "", "nocode")}} encodes commands related to controlling the vertex and fragment shader stages, as issued by a {{domxref("GPURenderPipeline")}}. It forms part of the overall encoding activity of a {{domxref("GPUCommandEncoder")}}.
 
-A render pipeline renders graphics, typically into a {{htmlelement("canvas")}} element, but it could also render graphics offscreen. It has two main stages:
+A render pipeline renders graphics to {{domxref("GPUTexture")}} attachments, typically intended for display in a {{htmlelement("canvas")}} element, but it could also render to textures used for other purposes that never appear onscreen. It has two main stages:
 
-- A vertex stage, in which a vertex shader takes positioning data fed into the GPU and uses it to position the vertices of triangles (the basic building block of rendered graphics) in 3D space by applying specified effects like rotation, translation, or perspective. The vertices are then assembled into triangles and rasterized by the GPU to figure out what pixels each one should cover on the drawing canvas.
+- A vertex stage, in which a vertex shader takes positioning data fed into the GPU and uses it to position a series of vertices in 3D space by applying specified effects like rotation, translation, or perspective. The vertices are then assembled into primitives such as triangles (the basic building block of rendered graphics) and rasterized by the GPU to figure out what pixels each one should cover on the drawing canvas.
 
-- A fragment stage, in which a fragment shader computes the color for each pixel covered by the triangles produced by the vertex shader. These computations frequently use inputs such as images (in the form of textures) that provide surface details and the position and color of virtual lights.
+- A fragment stage, in which a fragment shader computes the color for each pixel covered by the primitives produced by the vertex shader. These computations frequently use inputs such as images (in the form of textures) that provide surface details and the position and color of virtual lights.
 
 A `GPUComputePassEncoder` object instance is created via the {{domxref("GPUCommandEncoder.beginComputePass()")}} property.
 
