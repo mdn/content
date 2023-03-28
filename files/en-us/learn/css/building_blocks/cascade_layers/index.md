@@ -1,17 +1,9 @@
 ---
 title: Cascade layers
 slug: Learn/CSS/Building_blocks/Cascade_layers
-tags:
-  - Advanced
-  - CSS
-  - Cascade
-  - Learn
-  - rules
-  - source order
-  - specificity
 ---
 
-{{LearnSidebar}}{{NextMenu("Learn/CSS/Building_blocks/Selectors", "Learn/CSS/Building_blocks")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Cascade_and_inheritance", "Learn/CSS/Building_blocks/The_box_model", "Learn/CSS/Building_blocks")}}
 
 This lesson aims to introduce you to [cascade layers](/en-US/docs/Web/CSS/@layer), a more advanced feature that builds on the fundamental concepts of the [CSS cascade](/en-US/docs/Web/CSS/Cascade) and [CSS specificity](/en-US/docs/Web/CSS/Specificity).
 
@@ -325,7 +317,7 @@ The order of layers determines their order of precedence. Therefore, the order o
 @import url(C.css);
 ```
 
-The layer order precedence is the order in which layers are created. If the author styles have two declared layers, and assuming there are no layers in `C.css`, the order of precedence would be as follows:
+The above code creates two named layers and one unnamed layer. Let us assume that the three files (`A.css`, `B.css`, and `C.css`) do not contain any additional layers within them. The following list shows where styles declared inside and outside of these files will be sorted from least (1) precedence to highest (10).
 
 1. firstLayer normal styles (`A.css`)
 2. secondLayer normal styles (`B.css`)
@@ -338,7 +330,19 @@ The layer order precedence is the order in which layers are created. If the auth
 9. inline important styles
 10. transitioning styles
 
-The order of layers is the order in which the layers were created which is the order in which they first appeared for normal styles, with unlayered styles coming last. For normal styles, later declared layers take precedence over earlier declared layers, with unlayered styles being in a final implicit unnamed layer. This order is inverted for important styles. Then inline styles, declared using the [`style` attribute](/en-US/docs/Web/HTML/Global_attributes/style) directly on an element, take precedence over layered and unlayered styles.
+Normal styles declared inside layers receive the lowest priority and are sorted by the order in which the layers were created. Normal styles in the first created layer have the lowest precedence, and normal styles in the layer created last have the highest precedence among the layers. In other words, normal styles declared within `firstLayer` will be overridden by any subsequent stylings on the list if any conflicts exist.
+
+Next up are any styles declared outside of layers. The styles in `C.css` were not imported into a layer and will override any conflicting styles from `firstLayer` and `secondLayer`. Normal styles not declared in a layer always have higher precedence than normal-importance layered styles.
+
+Inline styles are declared using the [`style` attribute](/en-US/docs/Web/HTML/Global_attributes/style). Normal styles declared in this way will take precedence over normal styles found in the unlayered and layered style sheets (`firstLayer – A.css`, `secondLayer – B.css`, and `C.css`).
+
+Animating styles have higher precedence than all normal styles, including inline normal styles.
+
+Important styles—property values that include the `!important` flag—take precedence over any styles previously mentioned on our list. They are sorted in reverse order of normal styles. Any important styles declared outside of a layer have less precedence than those declared within a layer. Important styles found within layers are also sorted in order of layer creation. For important styles, the last created layer has the lowest precedence, and the first created layer has the highest precedence among declared. layers.
+
+Inline important styles again have higher precedence than important styles declared elsewhere.
+
+Transitioning styles have the highest precedence. When a normal property value is being transitioned, it takes precedence over all other property value declarations, even inline important styles; but only while transitioning.
 
 {{EmbedGHLiveSample("css-examples/learn/layers/layer-precedence.html", '100%', 500)}}
 
@@ -408,30 +412,6 @@ You've reached the end of this article, but can you remember the most important 
 
 ## Summary
 
-If you understood most of this article, then well done — you're now familiar with the fundamental mechanics of CSS cascade layers. Next up, we'll look at [selectors](/en-US/docs/Learn/CSS/Building_blocks/Selectors) in detail.
+If you understood most of this article, then well done — you're now familiar with the fundamental mechanics of CSS cascade layers. Next up, we'll look at [the box model](/en-US/docs/Learn/CSS/Building_blocks/The_box_model) in detail.
 
-{{NextMenu("Learn/CSS/Building_blocks/Selectors", "Learn/CSS/Building_blocks")}}
-
-## In this module
-
-- [Cascade and inheritance](/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
-- [CSS selectors](/en-US/docs/Learn/CSS/Building_blocks/Selectors)
-
-  - [Type, class, and ID selectors](/en-US/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors)
-  - [Attribute selectors](/en-US/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors)
-  - [Pseudo-classes and pseudo-elements](/en-US/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements)
-  - [Combinators](/en-US/docs/Learn/CSS/Building_blocks/Selectors/Combinators)
-
-- [The box model](/en-US/docs/Learn/CSS/Building_blocks/The_box_model)
-- [Backgrounds and borders](/en-US/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)
-- [Handling different text directions](/en-US/docs/Learn/CSS/Building_blocks/Handling_different_text_directions)
-- [Overflowing content](/en-US/docs/Learn/CSS/Building_blocks/Overflowing_content)
-- [Values and units](/en-US/docs/Learn/CSS/Building_blocks/Values_and_units)
-- [Sizing items in CSS](/en-US/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS)
-- [Images, media, and form elements](/en-US/docs/Learn/CSS/Building_blocks/Images_media_form_elements)
-- [Styling tables](/en-US/docs/Learn/CSS/Building_blocks/Styling_tables)
-- [Debugging CSS](/en-US/docs/Learn/CSS/Building_blocks/Debugging_CSS)
-- [Organizing your CSS](/en-US/docs/Learn/CSS/Building_blocks/Organizing)
-- [Fundamental CSS comprehension](/en-US/docs/Learn/CSS/Building_blocks/Fundamental_CSS_comprehension)
-- [Creating fancy letterheaded paper](/en-US/docs/Learn/CSS/Building_blocks/Creating_fancy_letterheaded_paper)
-- [A cool-looking box](/en-US/docs/Learn/CSS/Building_blocks/A_cool_looking_box)
+{{PreviousMenuNext("Learn/CSS/Building_blocks/Cascade_and_inheritance", "Learn/CSS/Building_blocks/The_box_model", "Learn/CSS/Building_blocks")}}

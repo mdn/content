@@ -2,10 +2,6 @@
 title: Multi-touch interaction
 slug: Web/API/Pointer_events/Multi-touch_interaction
 page-type: guide
-tags:
-  - Guide
-  - Pointer Events
-  - touch
 ---
 
 {{DefaultAPISidebar("Pointer Events")}}
@@ -176,10 +172,14 @@ These functions manage the global event caches `evCache1`, `evCache2` and `evCac
 function getCache(ev) {
   // Return the cache for this event's target element
   switch (ev.target.id) {
-    case "target1": return evCache1;
-    case "target2": return evCache2;
-    case "target3": return evCache3;
-    default: log("Error with cache handling", ev);
+    case "target1":
+      return evCache1;
+    case "target2":
+      return evCache2;
+    case "target3":
+      return evCache3;
+    default:
+      log("Error with cache handling", ev);
   }
 }
 
@@ -192,7 +192,9 @@ function pushEvent(ev) {
 function removeEvent(ev) {
   // Remove this event from the target's cache
   const evCache = getCache(ev);
-  const index = evCache.findIndex((cachedEv) => cachedEv.pointerId === ev.pointerId);
+  const index = evCache.findIndex(
+    (cachedEv) => cachedEv.pointerId === ev.pointerId
+  );
   evCache.splice(index, 1);
 }
 ```
@@ -243,16 +245,17 @@ function enableLog(ev) {
 }
 
 function log(name, ev) {
-  const o = document.getElementsByTagName('output')[0];
-  const s = `${name}:<br>`
-    + `  pointerID   = ${ev.pointerId}<br>`
-    + `  pointerType = ${ev.pointerType}<br>`
-    + `  isPrimary   = ${ev.isPrimary}`;
+  const o = document.getElementsByTagName("output")[0];
+  const s =
+    `${name}:<br>` +
+    `  pointerID   = ${ev.pointerId}<br>` +
+    `  pointerType = ${ev.pointerType}<br>` +
+    `  isPrimary   = ${ev.isPrimary}`;
   o.innerHTML += `${s}<br>`;
 }
 
 function clearLog(event) {
-  const o = document.getElementsByTagName('output')[0];
+  const o = document.getElementsByTagName("output")[0];
   o.innerHTML = "";
 }
 ```

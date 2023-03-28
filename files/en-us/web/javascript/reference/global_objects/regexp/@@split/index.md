@@ -1,14 +1,7 @@
 ---
 title: RegExp.prototype[@@split]()
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/@@split
-tags:
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - RegExp
-  - Regular Expressions
-  - Polyfill
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.RegExp.@@split
 ---
 
@@ -21,7 +14,8 @@ The **`[@@split]()`** method of a regular expression specifies how [`String.prot
 ## Syntax
 
 ```js-nolint
-regexp[Symbol.split](str[, limit])
+regexp[Symbol.split](str)
+regexp[Symbol.split](str, limit)
 ```
 
 ### Parameters

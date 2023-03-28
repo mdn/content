@@ -1,13 +1,6 @@
 ---
-title: 'Apache Configuration: .htaccess'
+title: "Apache Configuration: .htaccess"
 slug: Learn/Server-side/Apache_Configuration_htaccess
-tags:
-  - 301 redirect
-  - Cache control
-  - Custom Error pages
-  - HTACCESS
-  - Permanent Redirect
-  - Redirect
 ---
 
 {{LearnSidebar}}
@@ -85,7 +78,7 @@ One alternative is to explicitly state what domains have access to the content o
 
 ### Cross-origin images
 
-As reported in the [Chromium Blog](https://blog.chromium.org/2011/07/using-cross-domain-images-in-webgl-and.html) and documented in [Allowing cross-origin use of images and canvas](/en-US/docs/Web/HTML/CORS_enabled_image) can lead to fingerprinting attacks.
+As reported in the [Chromium Blog](https://blog.chromium.org/2011/07/using-cross-domain-images-in-webgl-and.html) and documented in [Allowing cross-origin use of images and canvas](/en-US/docs/Web/HTML/CORS_enabled_image) can lead to [fingerprinting](/en-US/docs/Glossary/Fingerprinting) attacks.
 
 To mitigate the possibility of these attacks, you should use the `crossorigin` attribute in the images you request and the code snippet below in your `.htaccess` to set the CORS header from the server.
 
@@ -268,7 +261,7 @@ Serve the following file types with the `charset` parameter set to `UTF-8` using
 
 [mod_rewrite](https://httpd.apache.org/docs/current/mod/mod_rewrite.html) provides a way to modify incoming URL requests, dynamically, based on regular expression rules. This allows you to map arbitrary URLs onto your internal URL structure in any way you like.
 
-It supports an unlimited number of rules and an unlimited number of attached rule conditions for each rule to provide a really flexible and powerful URL manipulation mechanism. The URL manipulations can depend on various tests: server variables, environment variables, HTTP headers, time stamps, external database lookups, and various other external programs or handlers, can be used to achieve granular URL matching.
+It supports an unlimited number of rules and an unlimited number of attached rule conditions for each rule to provide a really flexible and powerful URL manipulation mechanism. The URL manipulations can depend on various tests: server variables, environment variables, HTTP headers, timestamps, external database lookups, and various other external programs or handlers, can be used to achieve granular URL matching.
 
 ### Enable mod_rewrite
 

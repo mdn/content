@@ -2,14 +2,6 @@
 title: HTMLObjectElement.contentDocument
 slug: Web/API/HTMLObjectElement/contentDocument
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTML DOM
-  - HTMLObjectElement
-  - NeedsExample
-  - Property
-  - Reference
-  - contentDocument
 browser-compat: api.HTMLObjectElement.contentDocument
 ---
 

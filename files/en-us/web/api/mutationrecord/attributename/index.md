@@ -2,11 +2,6 @@
 title: MutationRecord.attributeName
 slug: Web/API/MutationRecord/attributeName
 page-type: web-api-instance-property
-tags:
-  - attributeName
-  - MutationRecord
-  - Property
-  - Reference
 browser-compat: api.MutationRecord.attributeName
 ---
 
@@ -24,7 +19,7 @@ If the record's [`type`](/en-US/docs/Web/API/MutationRecord/type) is not `attrib
 
 ### Get last updated attribute name
 
-In the following example, there are four buttons: two change the style attribute of the `h1` element, and two change the class attribute of the `h1` element. The script uses a {{domxref("MutationObserver")}} to detect the changes and will update the text below to the name of the last attribute that was changed.
+In the following example, there are four buttons: two change the `style` attribute of the `h1` element, and two change the `class` attribute of the `h1` element. The script uses a {{domxref("MutationObserver")}} to detect the changes and will update the text below to the name of the last attribute that was changed.
 
 #### HTML
 
@@ -43,11 +38,11 @@ In the following example, there are four buttons: two change the style attribute
 
 ```css
 .red {
-  background-color:red;
+  background-color: red;
 }
 
 .blue {
-  background-color:blue;
+  background-color: blue;
 }
 ```
 
@@ -72,7 +67,7 @@ blueButton.addEventListener("click", () => {
 });
 
 whiteButton.addEventListener("click", () => {
-    hiMom.style.color = "white";
+  hiMom.style.color = "white";
 });
 
 blackButton.addEventListener("click", () => {

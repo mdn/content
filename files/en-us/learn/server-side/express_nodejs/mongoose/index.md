@@ -1,18 +1,6 @@
 ---
 title: "Express Tutorial Part 3: Using a Database (with Mongoose)"
 slug: Learn/Server-side/Express_Nodejs/mongoose
-tags:
-  - Beginner
-  - CodingScripting
-  - Database
-  - Express
-  - Learn
-  - Node
-  - ODM
-  - mongoose
-  - nodejs
-  - orm
-  - server-side
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Express_Nodejs/skeleton_website", "Learn/Server-side/Express_Nodejs/routes", "Learn/Server-side/Express_Nodejs")}}
@@ -117,11 +105,14 @@ This section provides an overview of how to connect Mongoose to a MongoDB databa
 
 ### Installing Mongoose and MongoDB
 
-Mongoose is installed in your project (**package.json**) like any other dependency — using npm. To install it, use the following command inside your project folder:
+Mongoose is installed in your project (**package.json**) like any other dependency — using npm.
+To install it, use the following command inside your project folder:
 
 ```bash
-npm install mongoose
+npm install mongoose@6.9.0
 ```
+
+> **Note:** Mongoose 7 and later are incompatible with this tutorial.
 
 Installing _Mongoose_ adds all its dependencies, including the MongoDB database driver, but it does not install MongoDB itself. If you want to install a MongoDB server then you can [download installers from here](https://www.mongodb.com/try/download/community) for various operating systems and install it locally. You can also use cloud-based MongoDB instances.
 
@@ -136,20 +127,25 @@ You can `require()` and connect to a locally hosted database with `mongoose.conn
 // Import the mongoose module
 const mongoose = require("mongoose");
 
-// Set up default mongoose connection
+// Set `strictQuery: false` to globally opt into filtering by properties that aren't in the schema
+// Included because it removes preparatory warnings for Mongoose 7.
+// See: https://mongoosejs.com/docs/migrating_to_6.html#strictquery-is-removed-and-replaced-by-strict
+mongoose.set('strictQuery', false);
+
+// Define the database URL to connect to.
 const mongoDB = "mongodb://127.0.0.1/my_database";
-mongoose.connect(mongoDB, { useNewUrlParser: true, useUnifiedTopology: true });
 
-// Get the default connection
-const db = mongoose.connection;
-
-// Bind connection to error event (to get notification of connection errors)
-db.on("error", console.error.bind(console, "MongoDB connection error:"));
+// Wait for database to connect, logging an error if there is a problem 
+main().catch(err => console.log(err));
+async function main() {
+  await mongoose.connect(mongoDB);
+}
 ```
 
-You can get the default `Connection` object with `mongoose.connection`. Once connected, the open event is fired on the `Connection` instance.
-
-> **Note:** If you need to create additional connections you can use `mongoose.createConnection()`. This takes the same form of database URI (with host, database, port, options, etc.) as `connect()` and returns a `Connection` object).
+You can get the default `Connection` object with `mongoose.connection`.
+If you need to create additional connections you can use `mongoose.createConnection()`.
+This takes the same form of database URI (with host, database, port, options, etc.) as `connect()` and returns a `Connection` object).
+Note that `createConnection()` returns immediately; if you need to wait on the connection to be established you can call it with `asPromise()` to return a promise (`mongoose.createConnection(mongoDB).asPromise()`).
 
 ### Defining and creating models
 
@@ -568,42 +564,49 @@ After logging in, you'll be taken to the [home](https://cloud.mongodb.com/v2) sc
 10. From the Cluster0 _Overview_ screen click the **Connect** button.
     ![Configure connection after setting up a cluster in MongoDB Atlas.](mongodb_atlas_-_connectbutton.jpg)
 
-11. This will open the _Connect to Cluster_ screen. Click the **Connect your application** option.
+11. This will open the _Connect to Cluster_ screen.
+    Click the **Connect your application** option.
     ![Choose a connection type when connecting with MongoDB Atlas.](mongodb_atlas_-_chooseaconnectionmethod.jpg)
 
 12. You will now be shown the _Connect_ screen.
     ![Choose the Short SRV connection when setting up a connection on MongoDB Atlas.](mongodb_atlas_-_connectforshortsrv.jpg)
 
+    - Select the Node driver and version as shown.
     - Click the **Copy** icon to copy the connection string.
     - Paste this in your local text editor.
-    - Update the password with your user's password.
-    - Replace `myFirstDatabase` with `local_library`.
+    - Update the username and password with your user's password.
+    - Insert the database name "local_library" in the path before the options (`...mongodb.net/local_library?retryWrites...`)
     - Save the file containing this string somewhere safe.
 
-You have now created the database, and have a URL (with username and password) that can be used to access it. This will look something like: `mongodb+srv://your_user_name:your_password@cluster0.upbx7.mongodb.net/local_library?retryWrites=true&w=majority`
+You have now created the database, and have a URL (with username and password) that can be used to access it.
+This will look something like: `mongodb+srv://your_user_name:your_password@cluster0.lz91hw2.mongodb.net/local_library?retryWrites=true&w=majority`
 
 ## Install Mongoose
 
-Open a command prompt and navigate to the directory where you created your [skeleton Local Library website](/en-US/docs/Learn/Server-side/Express_Nodejs/skeleton_website). Enter the following command to install Mongoose (and its dependencies) and add it to your **package.json** file, unless you have already done so when reading the [Mongoose Primer](#installing_mongoose_and_mongodb) above.
+Open a command prompt and navigate to the directory where you created your [skeleton Local Library website](/en-US/docs/Learn/Server-side/Express_Nodejs/skeleton_website).
+Enter the following command to install Mongoose 6 (and its dependencies) and add it to your **package.json** file, unless you have already done so when reading the [Mongoose Primer](#installing_mongoose_and_mongodb) above.
 
 ```bash
-npm install mongoose
+npm install mongoose@6.9.0
 ```
 
 ## Connect to MongoDB
 
-Open **/app.js** (in the root of your project) and copy the following text below where you declare the _Express application object_ (after the line `const app = express();`). Replace the database URL string ('_insert_your_database_url_here_') with the location URL representing your own database (i.e. using the information from _mongoDB Atlas_).
+Open **/app.js** (in the root of your project) and copy the following text below where you declare the _Express application object_ (after the line `var app = express();`). Replace the database URL string ('_insert_your_database_url_here_') with the location URL representing your own database (i.e. using the information from _mongoDB Atlas_).
 
 ```js
 // Set up mongoose connection
 const mongoose = require("mongoose");
+mongoose.set('strictQuery', false);
 const mongoDB = "insert_your_database_url_here";
-mongoose.connect(mongoDB, { useNewUrlParser: true, useUnifiedTopology: true });
-const db = mongoose.connection;
-db.on("error", console.error.bind(console, "MongoDB connection error:"));
+
+main().catch(err => console.log(err));
+async function main() {
+  await mongoose.connect(mongoDB);
+}
 ```
 
-As discussed [in the Mongoose primer above](#connecting_to_mongodb), this code creates the default connection to the database and binds to the error event (so that errors will be printed to the console).
+As discussed [in the Mongoose primer above](#connecting_to_mongodb), this code creates the default connection to the database and reports any errors to the console.
 
 ## Defining the LocalLibrary Schema
 
@@ -773,11 +776,13 @@ In order to test the models (and to create some example books and other items th
    node populatedb <your mongodb url>
    ```
 
-   > **Note:** On some operating systems/terminals, you may need to wrap the database URL inside double (") or single (') quotation marks.
+   > **Note:** On Windows you need to wrap the database URL inside double (").
+   > On other operating systems you may need single (') quotation marks.
 
 4. The script should run through to completion, displaying items as it creates them in the terminal.
 
-> **Note:** Go to your database on mongoDB Atlas (in the _Collections_ tab). You should now be able to drill down into individual collections of Books, Authors, Genres and BookInstances, and check out individual documents.
+> **Note:** Go to your database on mongoDB Atlas (in the _Collections_ tab).
+> You should now be able to drill down into individual collections of Books, Authors, Genres and BookInstances, and check out individual documents.
 
 ## Summary
 
@@ -797,15 +802,3 @@ Last of all, we tested our models by creating a number of instances (using a sta
 - [Population](https://mongoosejs.com/docs/populate.html) (Mongoose docs)
 
 {{PreviousMenuNext("Learn/Server-side/Express_Nodejs/skeleton_website", "Learn/Server-side/Express_Nodejs/routes", "Learn/Server-side/Express_Nodejs")}}
-
-## In this module
-
-- [Express/Node introduction](/en-US/docs/Learn/Server-side/Express_Nodejs/Introduction)
-- [Setting up a Node (Express) development environment](/en-US/docs/Learn/Server-side/Express_Nodejs/development_environment)
-- [Express Tutorial: The Local Library website](/en-US/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website)
-- [Express Tutorial Part 2: Creating a skeleton website](/en-US/docs/Learn/Server-side/Express_Nodejs/skeleton_website)
-- **Express Tutorial Part 3: Using a Database (with Mongoose)**
-- [Express Tutorial Part 4: Routes and controllers](/en-US/docs/Learn/Server-side/Express_Nodejs/routes)
-- [Express Tutorial Part 5: Displaying library data](/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data)
-- [Express Tutorial Part 6: Working with forms](/en-US/docs/Learn/Server-side/Express_Nodejs/forms)
-- [Express Tutorial Part 7: Deploying to production](/en-US/docs/Learn/Server-side/Express_Nodejs/deployment)

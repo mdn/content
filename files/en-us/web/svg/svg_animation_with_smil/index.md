@@ -1,13 +1,10 @@
 ---
 title: SVG animation with SMIL
 slug: Web/SVG/SVG_animation_with_SMIL
-tags:
-  - Animation
-  - Firefox 4
-  - Gecko 2.0
-  - SVG
-  - SVG Animation
+page-type: guide
 ---
+
+{{SVGRef}}
 
 > **Warning:** Although Chrome 45 deprecated SMIL in favor of CSS animations and Web animations, the Chrome developers have since [suspended](https://groups.google.com/a/chromium.org/d/msg/blink-dev/5o0yiO440LM/YGEJBsjUAwAJ) that deprecation.
 

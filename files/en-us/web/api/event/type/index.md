@@ -2,10 +2,6 @@
 title: Event.type
 slug: Web/API/Event/type
 page-type: web-api-instance-property
-tags:
-  - Property
-  - Read-only
-  - Reference
 browser-compat: api.Event.type
 ---
 
@@ -36,19 +32,19 @@ button.
 
 ```js
 function getEventType(event) {
-  const log = document.getElementById('log');
+  const log = document.getElementById("log");
   log.innerText = `${event.type}\n${log.innerText}`;
 }
 
 // Keyboard events
-document.addEventListener('keydown', getEventType, false);  // first
-document.addEventListener('keypress', getEventType, false); // second
-document.addEventListener('keyup', getEventType, false);    // third
+document.addEventListener("keydown", getEventType, false); // first
+document.addEventListener("keypress", getEventType, false); // second
+document.addEventListener("keyup", getEventType, false); // third
 
 // Mouse events
-document.addEventListener('mousedown', getEventType, false); // first
-document.addEventListener('mouseup', getEventType, false);   // second
-document.addEventListener('click', getEventType, false);     // third
+document.addEventListener("mousedown", getEventType, false); // first
+document.addEventListener("mouseup", getEventType, false); // second
+document.addEventListener("click", getEventType, false); // third
 ```
 
 ### Result

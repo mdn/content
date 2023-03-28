@@ -1,16 +1,6 @@
 ---
 title: Video and Audio APIs
 slug: Learn/JavaScript/Client-side_web_APIs/Video_and_audio_APIs
-tags:
-  - API
-  - Article
-  - Audio
-  - Beginner
-  - CodingScripting
-  - Guide
-  - JavaScript
-  - Learn
-  - Video
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Client-side_web_APIs/Drawing_graphics", "Learn/JavaScript/Client-side_web_APIs/Client-side_storage", "Learn/JavaScript/Client-side_web_APIs")}}
@@ -62,7 +52,7 @@ This creates a video player inside the browser like so:
 
 {{EmbedGHLiveSample("learning-area/html/multimedia-and-embedding/video-and-audio-content/multiple-video-formats.html", '100%', 380)}}
 
-You can review what all the HTML features do in the article linked above; for our purposes here, the most interesting attribute is {{htmlattrxref("controls", "video")}}, which enables the default set of playback controls. If you don't specify this, you get no playback controls:
+You can review what all the HTML features do in the article linked above; for our purposes here, the most interesting attribute is [`controls`](/en-US/docs/Web/HTML/Element/video#controls), which enables the default set of playback controls. If you don't specify this, you get no playback controls:
 
 {{EmbedGHLiveSample("learning-area/html/multimedia-and-embedding/video-and-audio-content/multiple-video-formats-no-controls.html", '100%', 380)}}
 
@@ -209,7 +199,7 @@ Last but not least, let's look at the CSS for the timer:
 }
 ```
 
-- We set the outer `.timer` `<div>` to have flex: 5, so it takes up most of the width of the controls bar. We also give it {{cssxref("position")}}`: relative`, so that we can position elements inside it conveniently according to its boundaries, and not the boundaries of the {{htmlelement("body")}} element.
+- We set the outer `.timer` element to have `flex: 5`, so it takes up most of the width of the controls bar. We also give it {{cssxref("position")}}`: relative`, so that we can position elements inside it conveniently according to its boundaries, and not the boundaries of the {{htmlelement("body")}} element.
 - The inner `<div>` is absolutely positioned to sit directly on top of the outer `<div>`. It is also given an initial width of 0, so you can't see it at all. As the video plays, the width will be increased via JavaScript as the video elapses.
 - The `<span>` is also absolutely positioned to sit near the left-hand side of the timer bar.
 - We also give our inner `<div>` and `<span>` the right amount of {{cssxref("z-index")}} so that the timer will be displayed on top, and the inner `<div>` below that. This way, we make sure we can see all the information — one box is not obscuring another.
@@ -471,13 +461,3 @@ Here are some suggestions for ways you could enhance the existing example we've 
 - [Guide to media types and formats on the web](/en-US/docs/Web/Media/Formats)
 
 {{PreviousMenuNext("Learn/JavaScript/Client-side_web_APIs/Drawing_graphics", "Learn/JavaScript/Client-side_web_APIs/Client-side_storage", "Learn/JavaScript/Client-side_web_APIs")}}
-
-## In this module
-
-- [Introduction to web APIs](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Introduction)
-- [Manipulating documents](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents)
-- [Fetching data from the server](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data)
-- [Third party APIs](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Third_party_APIs)
-- [Drawing graphics](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics)
-- [Video and audio APIs](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Video_and_audio_APIs)
-- [Client-side storage](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Client-side_storage)

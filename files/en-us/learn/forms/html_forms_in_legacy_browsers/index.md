@@ -1,18 +1,11 @@
 ---
 title: HTML forms in legacy browsers
 slug: Learn/Forms/HTML_forms_in_legacy_browsers
-tags:
-  - Example
-  - Forms
-  - Guide
-  - HTML
-  - Intermediate
-  - Web
 ---
 
 {{LearnSidebar}}
 
-All web developers learn very quickly (and sometimes painfully) that the Web is a very rough place for them. Our worst curse is legacy browsers. Okay, let's admit it, when we said "legacy browser" we all have in mind Safari and Internet Explorer, but they are far from the only ones. In the mobile world, when neither the browser nor the OS can be updated such as on older Android phones or iPhones, the stock browsers that don't update are also legacy browsers.
+All web developers learn very quickly (and sometimes painfully) that the Web is a very rough place for them. Our worst curse is legacy browsers. Okay, let's admit it, when we said "legacy browser" we all have in mind "Internet Explorer", but they are far from the only ones. In the mobile world, when neither the browser nor the OS can be updated such as on older Android phones or iPhones, the stock browsers that don't update are also legacy browsers.
 
 Dealing with this wilderness is part of the job. Fortunately, there are a few tricks to know that can help you to solve most of the problems caused by legacy browsers. If a browser doesn't support an HTML {{htmlelement('input')}} type, it doesn't fail: it just uses the default value of `type=text`.
 
@@ -30,7 +23,7 @@ Let's see some examples related to HTML forms.
 
 #### HTML input types
 
-All HTML input types are useable in all browsers, even ancient ones, because the way they degrade is highly predictable. If a browser does not know the value of the {{htmlattrxref("type","input")}} attribute of an {{HTMLElement("input")}} element, it will fall back as if the value were `text`.
+All HTML input types are useable in all browsers, even ancient ones, because the way they degrade is highly predictable. If a browser does not know the value of the [`type`](/en-US/docs/Web/HTML/Element/input#type) attribute of an {{HTMLElement("input")}} element, it will fall back as if the value were `text`.
 
 ```html
 <label for="myColor">
@@ -68,7 +61,7 @@ All HTML input types are useable in all browsers, even ancient ones, because the
 
 There are two ways to define buttons within HTML forms:
 
-- The {{HTMLElement("input")}} element with its attribute {{htmlattrxref("type","input")}} set to the values `button`, `submit`, `reset` or `image`
+- The {{HTMLElement("input")}} element with its attribute [`type`](/en-US/docs/Web/HTML/Element/input#type) set to the values `button`, `submit`, `reset` or `image`
 - The {{HTMLElement("button")}} element
 
 ##### {{HTMLElement("input")}}
@@ -108,8 +101,8 @@ See the global CSS {{cssxref('revert')}} value for more information.
 
 The {{HTMLElement("button")}} element suffered from two issues that are now resolved:
 
-- A bug in old versions of Internet Explorer sent the HTML content available between the starting and ending tag of the {{HTMLElement("button")}} element instead of the content of the {{htmlattrxref("value","button")}} attribute when clicked. This was only an issue if that value needed to be sent, such as when data processing depends on which button a user clicked.
-- Some very old browsers did not use `submit` as the default value for the {{htmlattrxref("type","button")}} attribute. While resolved in all modern browsers, it is still recommended to always set the {{htmlattrxref("type","button")}} attribute on {{HTMLElement("button")}} elements.
+- A bug in old versions of Internet Explorer sent the HTML content available between the starting and ending tag of the {{HTMLElement("button")}} element instead of the content of the [`value`](/en-US/docs/Web/HTML/Element/button#value) attribute when clicked. This was only an issue if that value needed to be sent, such as when data processing depends on which button a user clicked.
+- Some very old browsers did not use `submit` as the default value for the [`type`](/en-US/docs/Web/HTML/Element/button#type) attribute. While resolved in all modern browsers, it is still recommended to always set the [`type`](/en-US/docs/Web/HTML/Element/button#type) attribute on {{HTMLElement("button")}} elements.
 
 ```html
 <!-- Clicking this button sent "<em>Do A</em>" instead of "A" in some cases -->
@@ -214,6 +207,6 @@ If you read all the articles of this [HTML Forms guide](/en-US/docs/Learn/Forms)
 
 - [Sending forms through JavaScript](/en-US/docs/Learn/Forms/Sending_forms_through_JavaScript)
 - [How to build custom form widgets](/en-US/docs/Learn/Forms/How_to_build_custom_form_controls)
-- [HTML forms in legacy browsers](/en-US/docs/Learn/Forms/HTML_forms_in_legacy_browsers)
+- **HTML forms in legacy browsers**
 - [Advanced styling for HTML forms](/en-US/docs/Learn/Forms/Advanced_form_styling)
 - [Property compatibility table for form widgets](/en-US/docs/Learn/Forms/Property_compatibility_table_for_form_controls)

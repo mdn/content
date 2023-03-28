@@ -2,13 +2,6 @@
 title: Compression Streams API
 slug: Web/API/Compression_Streams_API
 page-type: web-api-overview
-tags:
-  - API
-  - Compression_Streams_API
-  - Compression
-  - Decompression
-  - Reference
-  - Overview
 browser-compat: api.CompressionStream
 ---
 

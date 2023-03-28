@@ -1,12 +1,7 @@
 ---
 title: WeakSet.prototype.has()
 slug: Web/JavaScript/Reference/Global_Objects/WeakSet/has
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Prototype
-  - WeakSet
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.WeakSet.has
 ---
 
@@ -30,9 +25,7 @@ has(value)
 
 ### Return value
 
-- Boolean
-  - : Returns `true` if an element with the specified value exists in the
-    `WeakSet` object; otherwise `false`.
+Returns `true` if an element with the specified value exists in the `WeakSet` object; otherwise `false`.
 
 ## Examples
 

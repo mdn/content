@@ -1,14 +1,7 @@
 ---
 title: management.uninstallSelf()
 slug: Mozilla/Add-ons/WebExtensions/API/management/uninstallSelf
-tags:
-  - API
-  - Add-ons
-  - Method
-  - Reference
-  - WebExtensions
-  - management
-  - uninstallSelf
+page-type: webextension-api-function
 browser-compat: webextensions.api.management.uninstallSelf
 ---
 
@@ -85,8 +78,6 @@ uninstalling.then(null, onCanceled);
 > **Note:**
 >
 > This API is based on Chromium's [`chrome.management`](https://developer.chrome.com/docs/extensions/reference/management/#method-uninstallSelf) API. This documentation is derived from [`management.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/management.json) in the Chromium code.
->
-> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

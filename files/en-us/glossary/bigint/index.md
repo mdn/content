@@ -1,11 +1,7 @@
 ---
 title: BigInt
 slug: Glossary/BigInt
-tags:
-  - BigInt
-  - JavaScript
-  - Reference
-  - arbitrary precision format
+page-type: glossary-definition
 ---
 
 In {{Glossary("JavaScript")}}, **BigInt** is a numeric data type that can represent integers in the [arbitrary precision format](https://en.wikipedia.org/wiki/Arbitrary-precision_arithmetic). In other programming languages different numeric types can exist, for examples: Integers, Floats, Doubles, or Bignums.

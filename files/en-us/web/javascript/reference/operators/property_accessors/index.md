@@ -1,11 +1,7 @@
 ---
 title: Property accessors
 slug: Web/JavaScript/Reference/Operators/Property_Accessors
-tags:
-  - JavaScript
-  - Language feature
-  - Operator
-  - Reference
+page-type: javascript-operator
 browser-compat: javascript.operators.property_accessors
 ---
 
@@ -24,7 +20,7 @@ object[expression]
 
 ## Description
 
-One can think of an object as an _associative array_ (a.k.a. _map_, _dictionary_, _hash_, _lookup table_). The _keys_ in this array are the names of the object's [properties](/en-US/docs/Glossary/property/JavaScript).
+One can think of an object as an _associative array_ (a.k.a. _map_, _dictionary_, _hash_, _lookup table_). The _keys_ in this array are the names of the object's [properties](/en-US/docs/Glossary/Property/JavaScript).
 
 There are two ways to access properties: _dot notation_ and _bracket notation_.
 

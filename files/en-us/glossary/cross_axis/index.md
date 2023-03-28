@@ -1,10 +1,7 @@
 ---
 title: Cross Axis
 slug: Glossary/Cross_Axis
-tags:
-  - CSS
-  - cross axis
-  - flexbox
+page-type: glossary-definition
 ---
 
 The cross axis in {{glossary("flexbox")}} runs perpendicular to the {{glossary("main axis")}}, therefore if your {{cssxref("flex-direction")}} is either `row` or `row-reverse` then the cross axis runs down the columns.

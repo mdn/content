@@ -1,14 +1,7 @@
 ---
 title: TypedArray.prototype.join()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/join
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Prototype
-  - TypedArray
-  - TypedArrays
-  - Polyfill
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.TypedArray.join
 ---
 

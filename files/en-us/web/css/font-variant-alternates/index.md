@@ -2,12 +2,6 @@
 title: font-variant-alternates
 slug: Web/CSS/font-variant-alternates
 page-type: css-property
-tags:
-  - CSS
-  - CSS Fonts
-  - CSS Property
-  - Reference
-  - recipe:css-property
 browser-compat: css.properties.font-variant-alternates
 ---
 
@@ -84,8 +78,8 @@ This property may take one of two forms:
 #### HTML
 
 ```html
-<p> A Fancy Swash</p>
-<p class="variant"> A Fancy Swash</p>
+<p>A Fancy Swash</p>
+<p class="variant">A Fancy Swash</p>
 ```
 
 #### CSS
@@ -125,11 +119,13 @@ p {
 
 {{Compat}}
 
-## See Also
+## See also
 
-- {{cssxref("font-variant")}}
-- {{cssxref("font-variant-caps")}}
-- {{cssxref("font-variant-east-asian")}}
-- {{cssxref("font-variant-ligatures")}}
-- {{cssxref("font-variant-numeric")}}
-- {{cssxref("@font-feature-values")}}
+- [`font-variant`](/en-US/docs/Web/CSS/font-variant)
+- [`font-variant-caps`](/en-US/docs/Web/CSS/font-variant-caps)
+- [`font-variant-east-asian`](/en-US/docs/Web/CSS/font-variant-east-asian)
+- [`font-variant-emoji`](/en-US/docs/Web/CSS/font-variant-emoji)
+- [`font-variant-ligatures`](/en-US/docs/Web/CSS/font-variant-ligatures)
+- [`font-variant-numeric`](/en-US/docs/Web/CSS/font-variant-numeric)
+- [`font-variant-position`](/en-US/docs/Web/CSS/font-variant-position)
+- [`@font-feature-values`](/en-US/docs/Web/CSS/@font-feature-values)

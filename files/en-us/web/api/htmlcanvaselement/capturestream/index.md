@@ -2,17 +2,6 @@
 title: HTMLCanvasElement.captureStream()
 slug: Web/API/HTMLCanvasElement/captureStream
 page-type: web-api-instance-method
-tags:
-  - Canvas
-  - Frame Capture
-  - HTMLCanvasElement
-  - Interface
-  - Media
-  - Media Capture DOM Elements
-  - Method
-  - Reference
-  - Web
-  - captureStream
 browser-compat: api.HTMLCanvasElement.captureStream
 ---
 
@@ -56,7 +45,7 @@ A reference to a {{domxref("MediaStream")}} object, which has a single
 
 ```js
 // Find the canvas element to capture
-const canvasElt = document.querySelector('canvas');
+const canvasElt = document.querySelector("canvas");
 
 // Get the stream
 const stream = canvasElt.captureStream(25); // 25 FPS

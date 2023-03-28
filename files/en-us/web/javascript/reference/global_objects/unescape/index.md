@@ -1,35 +1,17 @@
 ---
 title: unescape()
 slug: Web/JavaScript/Reference/Global_Objects/unescape
-tags:
-  - Deprecated
-  - JavaScript
-  - Method
-  - Polyfill
+page-type: javascript-function
+status:
+  - deprecated
 browser-compat: javascript.builtins.unescape
 ---
 
 {{jsSidebar("Objects")}}{{Deprecated_Header}}
 
-> **Warning:** Although `unescape()` is not strictly deprecated
-> (as in "removed from the Web standards"), it is defined in
-> [Annex B](https://tc39.es/ecma262/#sec-additional-ecmascript-features-for-web-browsers)
-> of the ECMA-262 standard, whose introduction states:
->
-> > … All of the language features and behaviors specified in this annex have
-> > one or more undesirable characteristics and in the absence of legacy usage would be
-> > removed from this specification. …
-> > … Programmers should not use or assume the existence of these features and behaviors
-> > when writing new ECMAScript code. …
+> **Note:** `unescape()` is a non-standard function implemented by browsers and was only standardized for cross-engine compatibility. It is not required to be implemented by all JavaScript engines and may not work everywhere. Use {{jsxref("decodeURIComponent()")}} or {{jsxref("decodeURI()")}} if possible.
 
-The **`unescape()`** function computes a new string in which
-hexadecimal escape sequences are replaced with the character that it represents. The
-escape sequences might be introduced by a function like {{jsxref("escape")}}. Usually,
-{{jsxref("decodeURI")}} or {{jsxref("decodeURIComponent")}} are preferred over
-`unescape`.
-
-> **Note:** Do not use `unescape` to decode URIs,
-> use `decodeURI` instead.
+The **`unescape()`** function computes a new string in which hexadecimal escape sequences are replaced with the characters that they represent. The escape sequences might be introduced by a function like {{jsxref("escape()")}}.
 
 ## Syntax
 
@@ -48,11 +30,15 @@ A new string in which certain characters have been unescaped.
 
 ## Description
 
-The `unescape` function is a property of the _global object_.
+`unescape()` is a function property of the global object.
+
+The `unescape()` function replaces any escape sequence with the character that it represents. Specifically, it replaces any escape sequence of the form `%XX` or `%uXXXX` (where `X` represents one hexadecimal digit) with the character that has the hexadecimal value `XX`/`XXXX`. If the escape sequence is not a valid escape sequence (for example, if `%` is followed by one or no hex digit), it is left as-is.
+
+> **Note:** This function was used mostly for [URL encoding](https://en.wikipedia.org/wiki/URL_encoding) and is partly based on the escape format in {{rfc(1738)}}. The `unescape()` function does _not_ evaluate [escape sequences](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#escape_sequences) in string literals. You can replace `\xXX` with `%XX` and `\uXXXX` with `%uXXXX` to get a string that can be handled by `unescape()`.
 
 ## Examples
 
-### Using unescape
+### Using unescape()
 
 ```js
 unescape("abc123"); // "abc123"

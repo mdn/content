@@ -1,19 +1,13 @@
 ---
 title: Reflect.isExtensible()
 slug: Web/JavaScript/Reference/Global_Objects/Reflect/isExtensible
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Reference
-  - Reflect
-  - Polyfill
+page-type: javascript-static-method
 browser-compat: javascript.builtins.Reflect.isExtensible
 ---
 
 {{JSRef}}
 
-The static **`Reflect.isExtensible()`** method determines if an object is extensible (whether it can have new properties added to it). It is similar to {{jsxref("Object.isExtensible()")}}, but with [some differences](#difference_with_object.isextensible).
+The **`Reflect.isExtensible()`** static method is like {{jsxref("Object.isExtensible()")}}. It determines if an object is extensible (whether it can have new properties added to it).
 
 {{EmbedInteractiveExample("pages/js/reflect-isextensible.html", "taller")}}
 
@@ -34,7 +28,14 @@ A {{jsxref("Boolean")}} indicating whether or not the target is extensible.
 
 ### Exceptions
 
-A {{jsxref("TypeError")}}, if `target` is not an {{jsxref("Object")}}.
+- {{jsxref("TypeError")}}
+  - : Thrown if `target` is not an object.
+
+## Description
+
+`Reflect.isExtensible()` provides the reflective semantic of checking if an object is extensible. The only difference with {{jsxref("Object.isExtensible()")}} is how non-object targets are handled. `Reflect.isExtensible()` throws a {{jsxref("TypeError")}} if the target is not an object, while `Object.isExtensible()` always returns `false` for non-object targets.
+
+`Reflect.isExtensible()` invokes the `[[IsExtensible]]` [object internal method](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy#object_internal_methods) of `target`.
 
 ## Examples
 
@@ -85,3 +86,4 @@ Object.isExtensible(1);
 - [Polyfill of `Reflect.isExtensible` in `core-js`](https://github.com/zloirock/core-js#ecmascript-reflect)
 - {{jsxref("Reflect")}}
 - {{jsxref("Object.isExtensible()")}}
+- [`Proxy`'s `isExtensible` handler](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/isExtensible)

@@ -2,11 +2,6 @@
 title: Document.lastElementChild
 slug: Web/API/Document/lastElementChild
 page-type: web-api-instance-property
-tags:
-  - API
-  - DOM
-  - Element
-  - Property
 browser-compat: api.Document.lastElementChild
 ---
 

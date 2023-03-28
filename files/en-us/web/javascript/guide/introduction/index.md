@@ -1,12 +1,7 @@
 ---
 title: Introduction
 slug: Web/JavaScript/Guide/Introduction
-tags:
-  - Beginner
-  - Guide
-  - Introduction
-  - JavaScript
-  - "l10n:priority"
+page-type: guide
 ---
 
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide", "Web/JavaScript/Guide/Grammar_and_types")}}
@@ -95,7 +90,7 @@ The Web Console appears at the bottom of the browser window. Along the bottom of
 The console works the exact same way as `eval`: the last expression entered is returned. For the sake of simplicity, it can be imagined that every time something is entered into the console, it is actually surrounded by `console.log` around `eval`, like so:
 
 ```js
-console.log(eval('3 + 5'))
+console.log(eval("3 + 5"));
 ```
 
 ### Multi-line input in the Web Console
@@ -107,14 +102,14 @@ The single-line input mode of the Web Console is great for quick testing of Java
 To get started with writing JavaScript, open the Web Console in multi-line mode, and write your first "Hello world" JavaScript code:
 
 ```js
-(function(){
+(function () {
   "use strict";
   /* Start of your code */
   function greetMe(yourName) {
     alert(`Hello ${yourName}`);
   }
 
-  greetMe('World');
+  greetMe("World");
   /* End of your code */
 })();
 ```
@@ -126,6 +121,6 @@ In the following pages, this guide introduces you to the JavaScript syntax and l
 But for now, remember to always include the `(function(){"use strict";` before your code, and add `})();` to the end of your code. The [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode) and [IIFE](/en-US/docs/Glossary/IIFE) articles explain what those do, but for now they can be thought of as doing the following:
 
 1. Prevent semantics in JavaScript that trip up beginners.
-2. Prevent code snippets executed in the console from interacting with one-another (e.g., having something created in one console execution being used for a different console execution).
+2. Prevent code snippets executed in the console from interacting with one another (e.g., having something created in one console execution being used for a different console execution).
 
 {{PreviousNext("Web/JavaScript/Guide", "Web/JavaScript/Guide/Grammar_and_types")}}

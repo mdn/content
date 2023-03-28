@@ -1,10 +1,7 @@
 ---
 title: azimuth
 slug: Web/SVG/Attribute/azimuth
-tags:
-  - Filters
-  - SVG
-  - SVG Attribute
+page-type: svg-attribute
 browser-compat: svg.elements.feDistantLight.azimuth
 ---
 

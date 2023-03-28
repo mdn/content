@@ -1,10 +1,7 @@
 ---
 title: stitchTiles
 slug: Web/SVG/Attribute/stitchTiles
-tags:
-  - Filters
-  - SVG
-  - SVG Attribute
+page-type: svg-attribute
 browser-compat: svg.elements.feTurbulence.stitchTiles
 ---
 

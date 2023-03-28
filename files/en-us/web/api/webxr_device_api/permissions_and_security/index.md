@@ -6,13 +6,13 @@ page-type: guide
 
 {{DefaultAPISidebar("WebXR Device API")}}
 
-The [WebXR Device API](/en-US/docs/Web/API/WebXR_Device_API) has several areas of security to contend with, from establishing feature-policy to ensuring the user intends to use the mixed reality presentation before activating it. Among other things, you need to confirm access to device features such as the microphone and/or camera, get permission to use immersive VR mode (if applicable), and so forth. The variety of hardware and software involved in XR brings multiple APIs and technologies into play. In this guide, we'll cover how to ensure your app has the permissions it needs to provide a secure and private XR experience.
+The [WebXR Device API](/en-US/docs/Web/API/WebXR_Device_API) has several areas of security to contend with, from establishing [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy) to ensuring the user intends to use the mixed reality presentation before activating it. Among other things, you need to confirm access to device features such as the microphone and/or camera, get permission to use immersive VR mode (if applicable), and so forth. The variety of hardware and software involved in XR brings multiple APIs and technologies into play. In this guide, we'll cover how to ensure your app has the permissions it needs to provide a secure and private XR experience.
 
 The WebXR Device API is subject to a number of permission and security controls. While not onerous, they are worth being aware of. These mostly revolve around the fully-immersive `immersive-vr` session mode, but there are things to be aware of when setting up an AR session, as well.
 
 ## Immersive presentation of VR
 
-First, any requests to activate the `immersive-vr` mode are rejected if the domain issuing the request does not have permission to enable an immersive session. This permission comes from the `xr-spatial-tracking` [feature policy](/en-US/docs/Web/HTTP/Feature_Policy).
+First, any requests to activate the `immersive-vr` mode are rejected if the domain issuing the request does not have permission to enable an immersive session. This permission comes from the `xr-spatial-tracking` [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy).
 
 Once that check is passed, the request to enter `immersive-vr` mode is allowed if all of the following are true:
 

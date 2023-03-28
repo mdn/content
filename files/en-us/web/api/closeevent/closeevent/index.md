@@ -2,11 +2,6 @@
 title: CloseEvent()
 slug: Web/API/CloseEvent/CloseEvent
 page-type: web-api-constructor
-tags:
-  - API
-  - CloseEvent
-  - Constructor
-  - Reference
 browser-compat: api.CloseEvent.CloseEvent
 ---
 

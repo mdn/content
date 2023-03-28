@@ -1,14 +1,7 @@
 ---
 title: String.prototype.replaceAll()
 slug: Web/JavaScript/Reference/Global_Objects/String/replaceAll
-tags:
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - String
-  - regex
-  - Polyfill
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.String.replaceAll
 ---
 

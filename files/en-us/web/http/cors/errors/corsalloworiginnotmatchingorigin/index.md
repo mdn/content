@@ -1,25 +1,13 @@
 ---
-title: 'Reason: CORS header ''Access-Control-Allow-Origin'' does not match ''xyz'''
+title: "Reason: CORS header 'Access-Control-Allow-Origin' does not match 'xyz'"
 slug: Web/HTTP/CORS/Errors/CORSAllowOriginNotMatchingOrigin
-tags:
-  - CORS
-  - CORSAllowOriginNotMatchingOrigin
-  - Cross-Origin
-  - Error
-  - HTTP
-  - HTTPS
-  - Messages
-  - Reasons
-  - Security
-  - console
-  - troubleshooting
 ---
 
 {{HTTPSidebar}}
 
 ## Reason
 
-```
+```plain
 Reason: CORS header 'Access-Control-Allow-Origin' does not match 'xyz'
 ```
 

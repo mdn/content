@@ -1,13 +1,7 @@
 ---
 title: this
 slug: Web/JavaScript/Reference/Operators/this
-tags:
-  - JavaScript
-  - Language feature
-  - Operator
-  - Primary Expressions
-  - Reference
-  - this
+page-type: javascript-language-feature
 browser-compat: javascript.operators.this
 ---
 
@@ -122,7 +116,7 @@ In typical function calls, `this` is implicitly passed like a parameter through 
 
 #### Callbacks
 
-When a function is passed as a callback, the value of `this` depends on how the callback is called, which is determined by the implementor of the API. Callbacks are _typically_ called with a `this` value of `undefined` (calling it directly without attaching it to any object), which means if the function is non–strict, the value of `this` is the global object ({{jsxref("globalThis")}}). This is the case for [iterative array methods](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#iterative_methods), the [`Promise()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/Promise) constructor, [`setTimeout()`](/en-US/docs/Web/API/setTimeout), etc.
+When a function is passed as a callback, the value of `this` depends on how the callback is called, which is determined by the implementor of the API. Callbacks are _typically_ called with a `this` value of `undefined` (calling it directly without attaching it to any object), which means if the function is non–strict, the value of `this` is the global object ({{jsxref("globalThis")}}). This is the case for [iterative array methods](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#iterative_methods), the [`Promise()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/Promise) constructor, etc.
 
 ```js
 function logThis() {
@@ -131,7 +125,6 @@ function logThis() {
 }
 
 [1, 2, 3].forEach(logThis); // undefined, undefined, undefined
-setTimeout(logThis, 1000); // undefined
 ```
 
 Some APIs allow you to set a `this` value for invocations of the callback. For example, all iterative array methods and related ones like {{jsxref("Set.prototype.forEach()")}} accept an optional `thisArg` parameter.
@@ -266,7 +259,7 @@ console.log(b); // "MDN"
 
 If the source is loaded as a [module](/en-US/docs/Web/JavaScript/Guide/Modules) (for HTML, this means adding `type="module"` to the `<script>` tag), `this` is always `undefined` at the top level.
 
-If the source is executed with [`eval()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval), `this` is the same as the enclosing context for direct eval, or `globalThis` (as if it's run in a separate global script) for indirect eval.
+If the source is executed with [`eval()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval), `this` is the same as the enclosing context for [direct eval](/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval#direct_and_indirect_eval), or `globalThis` (as if it's run in a separate global script) for indirect eval.
 
 ```js
 function test() {

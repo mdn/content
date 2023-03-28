@@ -2,12 +2,6 @@
 title: ExtendableMessageEvent()
 slug: Web/API/ExtendableMessageEvent/ExtendableMessageEvent
 page-type: web-api-constructor
-tags:
-  - API
-  - Constructor
-  - ExtendableMessageEvent
-  - Reference
-  - Service Workers
 browser-compat: api.ExtendableMessageEvent.ExtendableMessageEvent
 ---
 
@@ -50,11 +44,13 @@ A new {{domxref("ExtendableMessageEvent")}} object.
 ## Examples
 
 ```js
-const options = { data : 'hello message',
-                  source : MessagePortReference,
-                  ports : MessagePortListReference };
+const options = {
+  data: "hello message",
+  source: MessagePortReference,
+  ports: MessagePortListReference,
+};
 
-const myEME = new ExtendableMessageEvent('message', init);
+const myEME = new ExtendableMessageEvent("message", init);
 ```
 
 ## Specifications

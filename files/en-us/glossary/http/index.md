@@ -1,12 +1,7 @@
 ---
 title: HTTP
 slug: Glossary/HTTP
-tags:
-  - Beginner
-  - HTTP
-  - Infrastructure
-  - Web Performance
-  - "l10n:priority"
+page-type: glossary-definition
 ---
 
 The HyperText Transfer Protocol (**HTTP**) is the underlying network {{glossary("protocol")}} that enables transfer of hypermedia documents on the {{glossary("World Wide Web","Web")}}, typically between a browser and a server so that humans can read them. The current version of the HTTP specification is called {{glossary("HTTP_2", "HTTP/2")}}.

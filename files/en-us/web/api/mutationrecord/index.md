@@ -2,16 +2,6 @@
 title: MutationRecord
 slug: Web/API/MutationRecord
 page-type: web-api-interface
-tags:
-  - API
-  - DOM
-  - DOM Reference
-  - Interface
-  - MutationRecord
-  - NeedsContent
-  - NeedsUpdate
-  - Reference
-  - mutation
 browser-compat: api.MutationRecord
 ---
 
@@ -31,12 +21,9 @@ The {{domxref("MutationRecord")}} is a read-only interface that represents an in
   - : The next sibling of the added or removed nodes, or `null`.
 - {{domxref("MutationRecord.oldValue")}} {{ReadOnlyInline}}
   - : The value depends on the {{domxref("MutationRecord.type")}}:
-    - For `attributes`, it is the value of the changed attribute before the change
+    - For `attributes`, it is the value of the changed attribute before the change.
     - For `characterData`, it is the data of the changed node before the change.
     - For `childList`, it is `null`.
-
-> **Note:** For {{domxref("MutationRecord.oldValue")}} to work as expected, the `attributeOldValue` or `characterDataOldValue` parameters of the {{domxref("MutationObserver.observe()")}} must be set to `true`.
-
 - {{domxref("MutationRecord.previousSibling")}} {{ReadOnlyInline}}
   - : The previous sibling of the added or removed nodes, or `null`.
 - {{domxref("MutationRecord.removedNodes")}} {{ReadOnlyInline}}
@@ -47,7 +34,7 @@ The {{domxref("MutationRecord")}} is a read-only interface that represents an in
     - For `characterData`, it is the `CharacterData` node.
     - For `childList`, it is the node whose children changed.
 - {{domxref("MutationRecord.type")}} {{ReadOnlyInline}}
-  - : A string representing the type of mutation: ```"Attributes"``` if the mutation was an attribute mutation, `"characterData"` if it was a mutation to a `CharacterData` node, and `"childList"` if it was a mutation to the tree of nodes.
+  - : A string representing the type of mutation: `attributes` if the mutation was an attribute mutation, `characterData` if it was a mutation to a `CharacterData` node, and `childList` if it was a mutation to the tree of nodes.
 
 ## Specifications
 

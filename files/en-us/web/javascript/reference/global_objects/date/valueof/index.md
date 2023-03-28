@@ -1,12 +1,7 @@
 ---
 title: Date.prototype.valueOf()
 slug: Web/JavaScript/Reference/Global_Objects/Date/valueOf
-tags:
-  - Date
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.Date.valueOf
 ---
 
@@ -44,7 +39,7 @@ This method is usually called internally by JavaScript and not explicitly in cod
 
 ```js
 const x = new Date(56, 6, 17);
-const myVar = x.valueOf();      // assigns -424713600000 to myVar
+const myVar = x.valueOf(); // assigns -424713600000 to myVar
 ```
 
 ## Specifications

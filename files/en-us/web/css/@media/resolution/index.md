@@ -2,18 +2,12 @@
 title: resolution
 slug: Web/CSS/@media/resolution
 page-type: css-media-feature
-tags:
-  - "@media"
-  - CSS
-  - Media Queries
-  - Reference
-  - media feature
 browser-compat: css.at-rules.media.resolution
 ---
 
 {{CSSRef}}
 
-The **`resolution`** [CSS](/en-US/docs/Web/CSS) [media feature](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#media_features) can be used to test the pixel density of the output device.
+The **`resolution`** [CSS](/en-US/docs/Web/CSS) [media feature](/en-US/docs/Web/CSS/@media#media_features) can be used to test the pixel density of the output device.
 
 ## Syntax
 

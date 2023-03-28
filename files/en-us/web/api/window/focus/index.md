@@ -2,12 +2,6 @@
 title: Window.focus()
 slug: Web/API/Window/focus
 page-type: web-api-instance-method
-tags:
-  - API
-  - Gecko
-  - HTML DOM
-  - Method
-  - Window
 browser-compat: api.Window.focus
 ---
 
@@ -32,7 +26,9 @@ None ({{jsxref("undefined")}}).
 ## Examples
 
 ```js
-if (clicked) { window.focus(); }
+if (clicked) {
+  window.focus();
+}
 ```
 
 ## Specifications

@@ -1,9 +1,10 @@
 ---
 title: SVG Filters Tutorial
 slug: Web/SVG/Tutorial/SVG_Filters_Tutorial
-tags:
-  - SVG filters primitives
+page-type: guide
 ---
+
+{{SVGRef}}
 
 ## Filters
 
@@ -18,12 +19,12 @@ This element has different attributes that help us create the clipping region. B
 ```html
 <defs>
   <filter id="drop-shadow">
-  <feGaussianBlur in="SourceAlpha" stdDeviation="3"/>
+    <feGaussianBlur in="SourceAlpha" stdDeviation="3" />
   </filter>
 </defs>
 
 <g id="ghost" style="filter: url(#drop-shadow);">
- <!--Ghost drawing in here-->
+  <!--Ghost drawing in here-->
 </g>
 ```
 

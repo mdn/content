@@ -1,14 +1,7 @@
 ---
 title: Array.prototype.map()
 slug: Web/JavaScript/Reference/Global_Objects/Array/map
-tags:
-  - Array
-  - ECMAScript 5
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - Polyfill
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.Array.map
 ---
 
@@ -172,7 +165,7 @@ console.log(
   [1, , 3].map((x, index) => {
     console.log(`Visit ${index}`);
     return x * 2;
-  })
+  }),
 );
 // Visit 0
 // Visit 2

@@ -1,9 +1,7 @@
 ---
 title: Grid Axis
 slug: Glossary/Grid_Axis
-tags:
-  - CSS
-  - CSS Grids
+page-type: glossary-definition
 ---
 
 CSS Grid Layout is a two-dimensional layout method enabling the laying out of content in _rows_ and _columns_. Therefore in any grid we have two axes. The _block or column axis_, and the _inline or row axis_.

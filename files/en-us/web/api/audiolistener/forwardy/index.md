@@ -2,14 +2,6 @@
 title: AudioListener.forwardY
 slug: Web/API/AudioListener/forwardY
 page-type: web-api-instance-property
-tags:
-  - API
-  - Audio
-  - AudioListener
-  - Property
-  - Reference
-  - Web Audio API
-  - forwardY
 browser-compat: api.AudioListener.forwardY
 ---
 

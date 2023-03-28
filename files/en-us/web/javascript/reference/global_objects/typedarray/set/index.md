@@ -1,13 +1,7 @@
 ---
 title: TypedArray.prototype.set()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/set
-tags:
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - TypedArray
-  - Polyfill
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.TypedArray.set
 ---
 

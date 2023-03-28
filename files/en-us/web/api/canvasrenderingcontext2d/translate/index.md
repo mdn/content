@@ -2,12 +2,6 @@
 title: CanvasRenderingContext2D.translate()
 slug: Web/API/CanvasRenderingContext2D/translate
 page-type: web-api-instance-method
-tags:
-  - API
-  - Canvas
-  - CanvasRenderingContext2D
-  - Method
-  - Reference
 browser-compat: api.CanvasRenderingContext2D.translate
 ---
 
@@ -62,19 +56,19 @@ The `translate()` method translates the context by 110 horizontally and 30
 vertically. The first square is shifted by those amounts from its default position.
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 
 // Moved square
 ctx.translate(110, 30);
-ctx.fillStyle = 'red';
+ctx.fillStyle = "red";
 ctx.fillRect(0, 0, 80, 80);
 
 // Reset current transformation matrix to the identity matrix
 ctx.setTransform(1, 0, 0, 1, 0, 0);
 
 // Unmoved square
-ctx.fillStyle = 'gray';
+ctx.fillStyle = "gray";
 ctx.fillRect(0, 0, 80, 80);
 ```
 

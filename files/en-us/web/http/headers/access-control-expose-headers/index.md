@@ -1,11 +1,6 @@
 ---
 title: Access-Control-Expose-Headers
 slug: Web/HTTP/Headers/Access-Control-Expose-Headers
-tags:
-  - CORS
-  - HTTP
-  - Reference
-  - header
 browser-compat: http.headers.Access-Control-Expose-Headers
 ---
 

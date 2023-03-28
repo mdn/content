@@ -1,10 +1,7 @@
 ---
 title: baseFrequency
 slug: Web/SVG/Attribute/baseFrequency
-tags:
-  - Filters
-  - SVG
-  - SVG Attribute
+page-type: svg-attribute
 browser-compat: svg.elements.feTurbulence.baseFrequency
 ---
 

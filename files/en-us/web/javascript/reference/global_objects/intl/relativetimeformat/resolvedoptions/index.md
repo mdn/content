@@ -2,15 +2,7 @@
 title: Intl.RelativeTimeFormat.prototype.resolvedOptions()
 slug: >-
   Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/resolvedOptions
-tags:
-  - Internationalization
-  - Intl
-  - JavaScript
-  - Localization
-  - Method
-  - Prototype
-  - Reference
-  - RelativeTimeFormat
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.Intl.RelativeTimeFormat.resolvedOptions
 ---
 
@@ -61,12 +53,12 @@ The resulting object has the following properties:
 ### Using the resolvedOptions() method
 
 ```js
-const de = new Intl.RelativeTimeFormat('de-DE');
+const de = new Intl.RelativeTimeFormat("de-DE");
 const usedOptions = de.resolvedOptions();
 
-usedOptions.locale;          // "de-DE"
-usedOptions.style;           // "long"
-usedOptions.numeric;         // "always"
+usedOptions.locale; // "de-DE"
+usedOptions.style; // "long"
+usedOptions.numeric; // "always"
 usedOptions.numberingSystem; // "latn"
 ```
 

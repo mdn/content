@@ -1,16 +1,7 @@
 ---
 title: Internationalization
 slug: Mozilla/Add-ons/WebExtensions/Internationalization
-tags:
-  - Article
-  - Guide
-  - Internationalization
-  - Localization
-  - WebExtensions
-  - i18n
-  - messages.json
-  - placeholders
-  - predefined messages
+page-type: guide
 ---
 
 {{AddonSidebar}}
@@ -306,7 +297,7 @@ The following table shows the different available predefined messages:
           the
           <a
             href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings"
-            >applications</a
+            >browser_specific_settings</a
           >
           key in manifest.json. It's the generated UUID that appears in the
           add-on's URL. This means that you can't use this value as the

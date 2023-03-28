@@ -1,10 +1,7 @@
 ---
 title: <feTurbulence>
 slug: Web/SVG/Element/feTurbulence
-tags:
-  - Element
-  - SVG
-  - SVG Filter
+page-type: svg-element
 browser-compat: svg.elements.feTurbulence
 ---
 

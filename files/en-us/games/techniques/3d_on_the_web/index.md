@@ -1,14 +1,6 @@
 ---
 title: 3D games on the Web
 slug: Games/Techniques/3D_on_the_web
-tags:
-  - Games
-  - Graphics
-  - NeedsContent
-  - NeedsExample
-  - WebGL
-  - WebVR
-  - three.js
 ---
 
 {{GamesSidebar}}

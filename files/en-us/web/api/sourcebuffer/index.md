@@ -2,15 +2,6 @@
 title: SourceBuffer
 slug: Web/API/SourceBuffer
 page-type: web-api-interface
-tags:
-  - API
-  - Audio
-  - Interface
-  - MSE
-  - Media Source Extensions
-  - Reference
-  - SourceBuffer
-  - Video
 browser-compat: api.SourceBuffer
 ---
 
@@ -32,12 +23,12 @@ The **`SourceBuffer`** interface represents a chunk of media to be passed into a
   - : Returns the time ranges that are currently buffered in the `SourceBuffer`.
 - {{domxref("SourceBuffer.mode")}}
   - : Controls how the order of media segments in the `SourceBuffer` is handled, in terms of whether they can be appended in any order, or they have to be kept in a strict sequence.
-- {{domxref("SourceBuffer.textTracks")}} {{ReadOnlyInline}}
+- {{domxref("SourceBuffer.textTracks")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : A list of the text tracks currently contained inside the `SourceBuffer`.
 - {{domxref("SourceBuffer.timestampOffset")}}
   - : Controls the offset applied to timestamps inside media segments that are subsequently appended to the `SourceBuffer`.
 - {{domxref("SourceBuffer.updating")}} {{ReadOnlyInline}}
-  - : A boolean indicating whether the `SourceBuffer` is currently being updated — i.e. whether an {{domxref("SourceBuffer.appendBuffer()")}}, {{domxref("SourceBuffer.appendStream()")}}, or {{domxref("SourceBuffer.remove()")}} operation is currently in progress.
+  - : A boolean indicating whether the `SourceBuffer` is currently being updated — i.e. whether an {{domxref("SourceBuffer.appendBuffer()")}} or {{domxref("SourceBuffer.remove()")}} operation is currently in progress.
 - {{domxref("SourceBuffer.videoTracks")}} {{ReadOnlyInline}}
   - : A list of the video tracks currently contained inside the `SourceBuffer`.
 
@@ -51,8 +42,6 @@ _Inherits methods from its parent interface, {{domxref("EventTarget")}}._
   - : Appends media segment data from an {{jsxref("ArrayBuffer")}}, a {{jsxref("TypedArray")}} or a {{jsxref("DataView")}} object to the `SourceBuffer`.
 - {{domxref("SourceBuffer.appendBufferAsync()")}} {{Non-standard_Inline}} {{Experimental_Inline}}
   - : Starts the process of asynchronously appending the specified buffer to the `SourceBuffer`. Returns a {{jsxref("Promise")}} which is fulfilled once the buffer has been appended.
-- {{domxref("SourceBuffer.appendStream()")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
-  - : Appends media segment data from a `ReadableStream` object to the `SourceBuffer`.
 - {{domxref("SourceBuffer.changeType()")}}
   - : Changes the {{Glossary("MIME type")}} that future calls to {{domxref("SourceBuffer.appendBuffer", "appendBuffer()")}} will expect the new data to conform to.
 - {{domxref("SourceBuffer.remove()")}}
@@ -78,18 +67,18 @@ _Inherits methods from its parent interface, {{domxref("EventTarget")}}._
 The following simple example loads a video chunk by chunk as fast as possible, playing it as soon as it can. This example was written by Nick Desaulniers and can be [viewed live here](https://nickdesaulniers.github.io/netfix/demo/bufferAll.html) (you can also [download the source](https://github.com/nickdesaulniers/netfix/blob/gh-pages/demo/bufferAll.html) for further investigation).
 
 ```js
-const video = document.querySelector('video');
+const video = document.querySelector("video");
 
-const assetURL = 'frag_bunny.mp4';
+const assetURL = "frag_bunny.mp4";
 // Need to be specific for Blink regarding codecs
 // ./mp4info frag_bunny.mp4 | grep Codec
 const mimeCodec = 'video/mp4; codecs="avc1.42E01E, mp4a.40.2"';
 
-if ('MediaSource' in window && MediaSource.isTypeSupported(mimeCodec)) {
+if ("MediaSource" in window && MediaSource.isTypeSupported(mimeCodec)) {
   const mediaSource = new MediaSource();
   console.log(mediaSource.readyState); // closed
   video.src = URL.createObjectURL(mediaSource);
-  mediaSource.addEventListener('sourceopen', sourceOpen);
+  mediaSource.addEventListener("sourceopen", sourceOpen);
 } else {
   console.error(`Unsupported MIME type or codec: ${mimeCodec}`);
 }
@@ -99,7 +88,7 @@ function sourceOpen() {
   const mediaSource = this;
   const sourceBuffer = mediaSource.addSourceBuffer(mimeCodec);
   fetchAB(assetURL, (buf) => {
-    sourceBuffer.addEventListener('updateend', () => {
+    sourceBuffer.addEventListener("updateend", () => {
       mediaSource.endOfStream();
       video.play();
       console.log(mediaSource.readyState); // ended
@@ -108,11 +97,11 @@ function sourceOpen() {
   });
 }
 
-function fetchAB (url, cb) {
+function fetchAB(url, cb) {
   console.log(url);
-  const xhr = new XMLHttpRequest;
-  xhr.open('get', url);
-  xhr.responseType = 'arraybuffer';
+  const xhr = new XMLHttpRequest();
+  xhr.open("get", url);
+  xhr.responseType = "arraybuffer";
   xhr.onload = () => {
     cb(xhr.response);
   };

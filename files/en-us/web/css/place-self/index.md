@@ -2,12 +2,6 @@
 title: place-self
 slug: Web/CSS/place-self
 page-type: css-shorthand-property
-tags:
-  - CSS
-  - CSS Box Alignment
-  - CSS Property
-  - Reference
-  - recipe:css-shorthand-property
 browser-compat: css.properties.place-self
 ---
 
@@ -39,8 +33,6 @@ place-self: self-start auto;
 place-self: self-end normal;
 place-self: flex-start auto;
 place-self: flex-end normal;
-place-self: left auto;
-place-self: right normal;
 
 /* Baseline alignment */
 place-self: baseline normal;

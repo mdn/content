@@ -1,18 +1,11 @@
 ---
 title: Audio and video manipulation
 slug: Web/Guide/Audio_and_video_manipulation
-tags:
-  - Audio
-  - Canvas
-  - Examples
-  - Guide
-  - HTML
-  - Media
-  - Video
-  - Web Audio API
-  - WebGL
-  - developer recommendation
 ---
+
+<section id="Quick_links">
+  {{ListSubpagesForSidebar("/en-US/docs/Web/Guide")}}
+</section>
 
 The beauty of the web is that you can combine technologies to create new forms. Having native audio and video in the browser means we can use these data streams with technologies such as {{htmlelement("canvas")}}, [WebGL](/en-US/docs/Web/API/WebGL_API) or [Web Audio API](/en-US/docs/Web/API/Web_Audio_API) to modify audio and video directly, for example adding reverb/compression effects to audio, or grayscale/sepia filters to video. This article provides a reference to explain what you need to do.
 
@@ -76,11 +69,15 @@ const processor = {
     this.c1 = document.getElementById("my-canvas");
     this.ctx1 = this.c1.getContext("2d");
 
-    this.video.addEventListener("play", () => {
-      this.width = this.video.width;
-      this.height = this.video.height;
-      this.timerCallback();
-    }, false);
+    this.video.addEventListener(
+      "play",
+      () => {
+        this.width = this.video.width;
+        this.height = this.video.height;
+        this.timerCallback();
+      },
+      false
+    );
   },
 
   computeFrame() {
@@ -89,7 +86,11 @@ const processor = {
     const l = frame.data.length / 4;
 
     for (let i = 0; i < l; i++) {
-      const grey = (frame.data[i * 4 + 0] + frame.data[i * 4 + 1] + frame.data[i * 4 + 2]) / 3;
+      const grey =
+        (frame.data[i * 4 + 0] +
+          frame.data[i * 4 + 1] +
+          frame.data[i * 4 + 2]) /
+        3;
 
       frame.data[i * 4 + 0] = grey;
       frame.data[i * 4 + 1] = grey;
@@ -98,14 +99,14 @@ const processor = {
     this.ctx1.putImageData(frame, 0, 0);
 
     return;
-  }
+  },
 };
 ```
 
 Once the page has loaded you can call
 
 ```js
-processor.doLoad()
+processor.doLoad();
 ```
 
 #### Result
@@ -144,7 +145,7 @@ Note that the `playbackRate` property works with both `<audio>` and `<video>`, b
 #### JavaScript
 
 ```js
-const myVideo = document.getElementById('my-video');
+const myVideo = document.getElementById("my-video");
 myVideo.playbackRate = 2;
 ```
 
@@ -170,26 +171,26 @@ myVideo.playbackRate = 2;</textarea
 ```
 
 ```js hidden
-const textarea = document.getElementById('code');
-const reset = document.getElementById('reset');
-const edit = document.getElementById('edit');
+const textarea = document.getElementById("code");
+const reset = document.getElementById("reset");
+const edit = document.getElementById("edit");
 const code = textarea.value;
 
 function setPlaybackRate() {
   eval(textarea.value);
 }
 
-reset.addEventListener('click', () => {
+reset.addEventListener("click", () => {
   textarea.value = code;
   setPlaybackRate();
 });
 
-edit.addEventListener('click', () => {
+edit.addEventListener("click", () => {
   textarea.focus();
-})
+});
 
-textarea.addEventListener('input', setPlaybackRate);
-window.addEventListener('load', setPlaybackRate);
+textarea.addEventListener("input", setPlaybackRate);
+window.addEventListener("load", setPlaybackRate);
 ```
 
 {{ EmbedLiveSample('Editable_example', 700, 450) }}
@@ -225,7 +226,9 @@ The Web Audio API has a lot of different filter/effects that can be applied to a
 
 ```js
 const context = new AudioContext();
-const audioSource = context.createMediaElementSource(document.getElementById("my-video"));
+const audioSource = context.createMediaElementSource(
+  document.getElementById("my-video")
+);
 const filter = context.createBiquadFilter();
 audioSource.connect(filter);
 filter.connect(context.destination);
@@ -265,31 +268,33 @@ filter.gain.value = 25;
 
 ```js hidden
 const context = new AudioContext();
-const audioSource = context.createMediaElementSource(document.getElementById("my-video"));
-const filter  = context.createBiquadFilter();
+const audioSource = context.createMediaElementSource(
+  document.getElementById("my-video")
+);
+const filter = context.createBiquadFilter();
 audioSource.connect(filter);
 filter.connect(context.destination);
 
-const textarea = document.getElementById('code');
-const reset = document.getElementById('reset');
-const edit = document.getElementById('edit');
+const textarea = document.getElementById("code");
+const reset = document.getElementById("reset");
+const edit = document.getElementById("edit");
 const code = textarea.value;
 
 function setFilter() {
   eval(textarea.value);
 }
 
-reset.addEventListener('click', () => {
+reset.addEventListener("click", () => {
   textarea.value = code;
   setFilter();
 });
 
-edit.addEventListener('click', () => {
+edit.addEventListener("click", () => {
   textarea.focus();
-})
+});
 
-textarea.addEventListener('input', setFilter);
-window.addEventListener('load', setFilter);
+textarea.addEventListener("input", setFilter);
+window.addEventListener("load", setFilter);
 ```
 
 {{ EmbedLiveSample('Editable_example_2', 700, 450) }}
@@ -298,7 +303,7 @@ window.addEventListener('load', setFilter);
 
 #### Common audio filters
 
-These are some of the common types of audio filter you can apply:
+These are some common types of audio filter you can apply:
 
 - Low Pass: Allows frequencies below the cutoff frequency to pass through and attenuates frequencies above the cutoff.
 - High Pass: Allows frequencies above the cutoff frequency to pass through and attenuates frequencies below the cutoff.
@@ -353,7 +358,7 @@ context.listener.setPosition(0, 0, 0);
 
 It's also possible to manipulate audio at a low level using JavaScript. This can be useful should you want to create audio codecs.
 
-Libraries currently exist for the following formats :
+Libraries currently exist for the following formats:
 
 - AAC: [AAC.js](https://github.com/audiocogs/aac.js)
 - ALAC: [alac.js](https://github.com/audiocogs/alac.js)

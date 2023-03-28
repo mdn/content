@@ -1,11 +1,6 @@
 ---
 title: Get Element Attribute
 slug: Web/WebDriver/Commands/GetElementAttribute
-tags:
-  - Command
-  - Get Element Tag Name
-  - Reference
-  - WebDriver
 browser-compat: webdriver.commands.GetElementAttribute
 ---
 
@@ -53,7 +48,7 @@ print(search_box.get_attribute("id"))
 
 Output:
 
-```
+```plain
 q
 ```
 

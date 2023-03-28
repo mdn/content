@@ -2,13 +2,6 @@
 title: MessageEvent()
 slug: Web/API/MessageEvent/MessageEvent
 page-type: web-api-constructor
-tags:
-  - API
-  - Constructor
-  - DOM
-  - MessageEvent
-  - Reference
-  - messaging
 browser-compat: api.MessageEvent.MessageEvent
 ---
 
@@ -56,8 +49,8 @@ A new {{domxref("MessageEvent")}} object.
 ## Examples
 
 ```js
-const myMessage = new MessageEvent('message', {
-  data : 'hello'
+const myMessage = new MessageEvent("message", {
+  data: "hello",
 });
 ```
 

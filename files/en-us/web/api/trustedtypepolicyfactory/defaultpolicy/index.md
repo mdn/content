@@ -2,12 +2,6 @@
 title: TrustedTypePolicyFactory.defaultPolicy
 slug: Web/API/TrustedTypePolicyFactory/defaultPolicy
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - defaultPolicy
-  - TrustedTypePolicyFactory
 browser-compat: api.TrustedTypePolicyFactory.defaultPolicy
 ---
 
@@ -27,7 +21,7 @@ The first line below returns null as no default policy has been created. Once a 
 
 ```js
 console.log(trustedTypes.defaultPolicy); // null
-const dp = trustedTypes.createPolicy('default', {});
+const dp = trustedTypes.createPolicy("default", {});
 console.log(trustedTypes.defaultPolicy); // a TrustedTypePolicy object
 ```
 

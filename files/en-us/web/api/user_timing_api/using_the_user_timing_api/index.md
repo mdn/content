@@ -2,9 +2,6 @@
 title: Using the User Timing API
 slug: Web/API/User_Timing_API/Using_the_User_Timing_API
 page-type: guide
-tags:
-  - Guide
-  - Web Performance
 ---
 
 {{DefaultAPISidebar("Performance API")}}
@@ -32,10 +29,10 @@ As a first step to start measuring the performance of your app's functionality, 
 The {{domxref("Performance.mark","performance.mark()")}} method is used to create a {{domxref("PerformanceMark")}}. The method takes one argument, the `name` of the mark, as shown in the following example.
 
 ```js
-// Place at a location in the code that starts login 
+// Place at a location in the code that starts login
 performance.mark("login-started");
 
-// Place at a location in the code that finishes login 
+// Place at a location in the code that finishes login
 performance.mark("login-finished");
 ```
 
@@ -44,7 +41,7 @@ If the `name` argument isn't enough, `mark()` is configurable using an options o
 ```js
 performance.mark("login-started", {
   startTime: 12.5,
-  detail: { htmlElement: myElement.id }
+  detail: { htmlElement: myElement.id },
 });
 ```
 
@@ -71,8 +68,8 @@ The {{domxref("Performance.measure()")}} method is also configurable using an op
 For example, you can use the [`event.timestamp`](/en-US/docs/Web/API/Event/timeStamp) property from a [`click` event](/en-US/docs/Web/API/Element/click_event) to know exactly when a user clicked login and measure that to the point in time when the UI was updated, which is the `"login-finished"` marker here.
 
 ```js
-loginButton.addEventListener('click', (clickEvent) => {
-  fetch(loginURL).then(data => {
+loginButton.addEventListener("click", (clickEvent) => {
+  fetch(loginURL).then((data) => {
     renderLoggedInUser(data);
 
     const marker = performance.mark("login-finished");
@@ -92,13 +89,13 @@ The preferred way to get notified about your custom performance measures is the 
 
 ```js
 function perfObserver(list, observer) {
-  list.getEntries().forEach((entry) =>  {
+  list.getEntries().forEach((entry) => {
     if (entry.entryType === "mark") {
       console.log(`${entry.name}'s startTime: ${entry.startTime}`);
-    };
+    }
     if (entry.entryType === "measure") {
       console.log(`${entry.name}'s duration: ${entry.duration}`);
-    };
+    }
   });
 }
 const observer = new PerformanceObserver(perfObserver);
@@ -123,10 +120,10 @@ const entries = performance.getEntries();
 entries.forEach((entry) => {
   if (entry.entryType === "mark") {
     console.log(`${entry.name}'s startTime: ${entry.startTime}`);
-  };
+  }
   if (entry.entryType === "measure") {
     console.log(`${entry.name}'s duration: ${entry.duration}`);
-  };
+  }
 });
 ```
 

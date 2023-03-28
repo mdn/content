@@ -1,16 +1,6 @@
 ---
 title: Client-side storage
 slug: Learn/JavaScript/Client-side_web_APIs/Client-side_storage
-tags:
-  - API
-  - Article
-  - Beginner
-  - CodingScripting
-  - Guide
-  - IndexedDB
-  - JavaScript
-  - Learn
-  - Storage
 ---
 
 {{LearnSidebar}}
@@ -58,7 +48,7 @@ Client-side storage works on similar principles, but has different uses. It cons
 
 Often client-side and server-side storage are used together. For example, you could download a batch of music files (perhaps used by a web game or music player application), store them inside a client-side database, and play them as needed. The user would only have to download the music files once — on subsequent visits they would be retrieved from the database instead.
 
-> **Note:** There are limits to the amount of data you can store using client-side storage APIs (possibly both per individual API and cumulatively); the exact limit varies depending on the browser and possibly based on user settings. See [Browser storage limits and eviction criteria](/en-US/docs/Web/API/IndexedDB_API/Browser_storage_limits_and_eviction_criteria) for more information.
+> **Note:** There are limits to the amount of data you can store using client-side storage APIs (possibly both per individual API and cumulatively); the exact limit varies depending on the browser and possibly based on user settings. See [Browser storage quotas and eviction criteria](/en-US/docs/Web/API/Storage_API/Storage_quotas_and_eviction_criteria) for more information.
 
 ### Old school: Cookies
 
@@ -778,13 +768,3 @@ That's it for now. We hope you've found our rundown of client-side storage techn
 - [Service worker API](/en-US/docs/Web/API/Service_Worker_API)
 
 {{PreviousMenu("Learn/JavaScript/Client-side_web_APIs/Video_and_audio_APIs", "Learn/JavaScript/Client-side_web_APIs")}}
-
-## In this module
-
-- [Introduction to web APIs](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Introduction)
-- [Manipulating documents](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents)
-- [Fetching data from the server](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data)
-- [Third party APIs](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Third_party_APIs)
-- [Drawing graphics](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics)
-- [Video and audio APIs](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Video_and_audio_APIs)
-- **Client-side storage**

@@ -1,10 +1,6 @@
 ---
 title: scope
 slug: Web/Manifest/scope
-tags:
-  - Manifest
-  - Web
-  - scope
 browser-compat: html.manifest.scope
 ---
 

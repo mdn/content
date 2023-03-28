@@ -2,13 +2,6 @@
 title: AuthenticatorAssertionResponse.signature
 slug: Web/API/AuthenticatorAssertionResponse/signature
 page-type: web-api-instance-property
-tags:
-  - API
-  - AuthenticatorAssertionResponse
-  - Property
-  - Reference
-  - Web Authentication API
-  - WebAuthn
 browser-compat: api.AuthenticatorAssertionResponse.signature
 ---
 

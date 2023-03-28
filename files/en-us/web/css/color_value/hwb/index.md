@@ -2,14 +2,6 @@
 title: hwb()
 slug: Web/CSS/color_value/hwb
 page-type: css-function
-tags:
-  - CSS
-  - CSS Data Type
-  - Data Type
-  - Reference
-  - Web
-  - color
-  - hwb
 browser-compat: css.types.color.hwb
 ---
 
@@ -39,6 +31,10 @@ hwb(194 0% 0% / .5) /* #00c3ff with 50% opacity */
     `B` (blackness) specifies the amount of black to mix in, also from 0% (no blackness) to 100% (full blackness).
 
     `A` (alpha) can be a {{cssxref("&lt;number&gt;")}} between `0` and `1`, or a {{cssxref("&lt;percentage&gt;")}}, where the number `1` corresponds to `100%` (full opacity).
+
+### Formal syntax
+
+{{csssyntax}}
 
 ## Specifications
 

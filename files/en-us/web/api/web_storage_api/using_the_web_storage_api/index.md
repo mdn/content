@@ -2,13 +2,6 @@
 title: Using the Web Storage API
 slug: Web/API/Web_Storage_API/Using_the_Web_Storage_API
 page-type: guide
-tags:
-  - API
-  - Guide
-  - Storage
-  - Web Storage API
-  - localStorage
-  - sessionStorage
 browser-compat:
   - api.Window.localStorage
   - api.Window.sessionStorage
@@ -25,9 +18,9 @@ This article provides a walkthrough of how to make use of this technology.
 Storage objects are simple key-value stores, similar to objects, but they stay intact through page loads. The keys and the values are always strings (note that, as with objects, integer keys will be automatically converted to strings). You can access these values like an object, or with the {{domxref("Storage.getItem()")}} and {{domxref("Storage.setItem()")}} methods. These three lines all set the (same) colorSetting entry:
 
 ```js
-localStorage.colorSetting = '#a4509b';
-localStorage['colorSetting'] = '#a4509b';
-localStorage.setItem('colorSetting', '#a4509b');
+localStorage.colorSetting = "#a4509b";
+localStorage["colorSetting"] = "#a4509b";
+localStorage.setItem("colorSetting", "#a4509b");
 ```
 
 > **Note:** It's recommended to use the Web Storage API (`setItem`, `getItem`, `removeItem`, `key`, `length`) to prevent the [pitfalls](https://2ality.com/2012/01/objects-as-maps.html) associated with using plain objects as key-value stores.
@@ -47,7 +40,7 @@ To be able to use localStorage, we should first verify that it is supported and 
 
 ### Testing for availability
 
-> **Note:** This API is available in current versions of all major browsers. Testing for availability is necessary only if you must support very old browsers, such as Internet Explorer 6 or 7, or in the limited circumstances described below.
+> **Note:** This API is available in current versions of all major browsers. Testing for availability is necessary only if you must support very old browsers, or in the limited circumstances described below.
 
 Browsers that support localStorage have a property on the window object named `localStorage`. However, just asserting that the property exists may throw exceptions. If the `localStorage` object does exist, there is still no guarantee that the localStorage API is actually available, as various browsers offer settings that disable localStorage. So a browser may _support_ localStorage, but not make it _available_ to the scripts on the page.
 
@@ -57,38 +50,39 @@ Here is a function that detects whether localStorage is both supported and avail
 
 ```js
 function storageAvailable(type) {
-    let storage;
-    try {
-        storage = window[type];
-        const x = '__storage_test__';
-        storage.setItem(x, x);
-        storage.removeItem(x);
-        return true;
-    }
-    catch (e) {
-        return e instanceof DOMException && (
-            // everything except Firefox
-            e.code === 22 ||
-            // Firefox
-            e.code === 1014 ||
-            // test name field too, because code might not be present
-            // everything except Firefox
-            e.name === 'QuotaExceededError' ||
-            // Firefox
-            e.name === 'NS_ERROR_DOM_QUOTA_REACHED') &&
-            // acknowledge QuotaExceededError only if there's something already stored
-            (storage && storage.length !== 0);
-    }
+  let storage;
+  try {
+    storage = window[type];
+    const x = "__storage_test__";
+    storage.setItem(x, x);
+    storage.removeItem(x);
+    return true;
+  } catch (e) {
+    return (
+      e instanceof DOMException &&
+      // everything except Firefox
+      (e.code === 22 ||
+        // Firefox
+        e.code === 1014 ||
+        // test name field too, because code might not be present
+        // everything except Firefox
+        e.name === "QuotaExceededError" ||
+        // Firefox
+        e.name === "NS_ERROR_DOM_QUOTA_REACHED") &&
+      // acknowledge QuotaExceededError only if there's something already stored
+      storage &&
+      storage.length !== 0
+    );
+  }
 }
 ```
 
 And here is how you would use it:
 
 ```js
-if (storageAvailable('localStorage')) {
+if (storageAvailable("localStorage")) {
   // Yippee! We can use localStorage awesomeness
-}
-else {
+} else {
   // Too bad, no localStorage for us
 }
 ```
@@ -114,7 +108,7 @@ We have also provided an [event output page](https://mdn.github.io/dom-examples/
 To start with, in [main.js](https://github.com/mdn/dom-examples/blob/main/web-storage/main.js), we test whether the storage object has already been populated (i.e., the page was previously accessed):
 
 ```js
-if (!localStorage.getItem('bgcolor')) {
+if (!localStorage.getItem("bgcolor")) {
   populateStorage();
 } else {
   setStyles();
@@ -134,17 +128,17 @@ For example:
 
 ```js
 function setStyles() {
-  const currentColor = localStorage.getItem('bgcolor');
-  const currentFont = localStorage.getItem('font');
-  const currentImage = localStorage.getItem('image');
+  const currentColor = localStorage.getItem("bgcolor");
+  const currentFont = localStorage.getItem("font");
+  const currentImage = localStorage.getItem("image");
 
-  document.getElementById('bgcolor').value = currentColor;
-  document.getElementById('font').value = currentFont;
-  document.getElementById('image').value = currentImage;
+  document.getElementById("bgcolor").value = currentColor;
+  document.getElementById("font").value = currentFont;
+  document.getElementById("image").value = currentImage;
 
   htmlElem.style.backgroundColor = `#${currentColor}`;
   pElem.style.fontFamily = currentFont;
-  imgElem.setAttribute('src', currentImage);
+  imgElem.setAttribute("src", currentImage);
 }
 ```
 
@@ -158,9 +152,9 @@ Finally, we update the styles/decorative image on the page, so your customizatio
 
 ```js
 function populateStorage() {
-  localStorage.setItem('bgcolor', document.getElementById('bgcolor').value);
-  localStorage.setItem('font', document.getElementById('font').value);
-  localStorage.setItem('image', document.getElementById('image').value);
+  localStorage.setItem("bgcolor", document.getElementById("bgcolor").value);
+  localStorage.setItem("font", document.getElementById("font").value);
+  localStorage.setItem("image", document.getElementById("image").value);
 
   setStyles();
 }
@@ -183,12 +177,14 @@ The {{domxref("StorageEvent")}} is fired whenever a change is made to the {{domx
 On the events page (see [events.js](https://github.com/mdn/dom-examples/blob/main/web-storage/event.js)) the only JavaScript is as follows:
 
 ```js
-window.addEventListener('storage', (e) => {
-  document.querySelector('.my-key').textContent = e.key;
-  document.querySelector('.my-old').textContent = e.oldValue;
-  document.querySelector('.my-new').textContent = e.newValue;
-  document.querySelector('.my-url').textContent = e.url;
-  document.querySelector('.my-storage').textContent = JSON.stringify(e.storageArea);
+window.addEventListener("storage", (e) => {
+  document.querySelector(".my-key").textContent = e.key;
+  document.querySelector(".my-old").textContent = e.oldValue;
+  document.querySelector(".my-new").textContent = e.newValue;
+  document.querySelector(".my-url").textContent = e.url;
+  document.querySelector(".my-storage").textContent = JSON.stringify(
+    e.storageArea
+  );
 });
 ```
 
@@ -208,8 +204,6 @@ Web Storage also provides a couple of simple methods to remove data. We don't us
 ## Browser compatibility
 
 {{Compat}}
-
-All browsers have varying capacity levels for both localStorage and sessionStorage. Here is a [detailed rundown of all the storage capacities for various browsers](http://dev-test.nemikor.com/web-storage/support-test/).
 
 ## See also
 

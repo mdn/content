@@ -1,12 +1,7 @@
 ---
 title: String
 slug: Web/JavaScript/Reference/Global_Objects/String
-tags:
-  - Class
-  - ECMAScript 2015
-  - JavaScript
-  - Reference
-  - String
+page-type: javascript-class
 browser-compat: javascript.builtins.String
 ---
 
@@ -30,7 +25,7 @@ with the {{jsxref("String.prototype.substring()", "substring()")}} method.
 Strings can be created as primitives, from string literals, or as objects, using the
 {{jsxref("String/String", "String()")}} constructor:
 
-```js
+```js-nolint
 const string1 = "A string primitive";
 const string2 = 'Also a string primitive';
 const string3 = `Yet another string primitive`;
@@ -53,13 +48,13 @@ There are two ways to access an individual character in a string. The first is t
 {{jsxref("String.prototype.charAt()", "charAt()")}} method:
 
 ```js
-'cat'.charAt(1) // gives value "a"
+"cat".charAt(1); // gives value "a"
 ```
 
 The other way is to treat the string as an array-like object, where individual characters correspond to a numerical index:
 
 ```js
-'cat'[1] // gives value "a"
+"cat"[1]; // gives value "a"
 ```
 
 When using bracket notation for character access, attempting to delete or assign a
@@ -68,18 +63,18 @@ nor configurable. (See {{jsxref("Object.defineProperty()")}} for more informatio
 
 ### Comparing strings
 
-In C, the `strcmp()` function is used for comparing strings. In JavaScript,
-you just use the [less-than and greater-than operators](/en-US/docs/Web/JavaScript/Reference/Operators):
+Use the [less-than and greater-than operators](/en-US/docs/Web/JavaScript/Reference/Operators) to compare strings:
 
 ```js
-const a = 'a';
-const b = 'b';
-if (a < b) { // true
-  console.log(`${a} is less than ${b}`)
+const a = "a";
+const b = "b";
+if (a < b) {
+  // true
+  console.log(`${a} is less than ${b}`);
 } else if (a > b) {
-  console.log(`${a} is greater than ${b}`)
+  console.log(`${a} is greater than ${b}`);
 } else {
-  console.log(`${a} and ${b} are equal.`)
+  console.log(`${a} and ${b} are equal.`);
 }
 ```
 
@@ -148,10 +143,10 @@ using {{jsxref("Global_Objects/eval", "eval()")}}. Primitives passed to
 all other objects are, by returning the object. For example:
 
 ```js
-const s1 = '2 + 2';              // creates a string primitive
-const s2 = new String('2 + 2');  // creates a String object
-console.log(eval(s1));           // returns the number 4
-console.log(eval(s2));           // returns the string "2 + 2"
+const s1 = "2 + 2"; // creates a string primitive
+const s2 = new String("2 + 2"); // creates a String object
+console.log(eval(s1)); // returns the number 4
+console.log(eval(s2)); // returns the string "2 + 2"
 ```
 
 For these reasons, the code may break when it encounters `String` objects
@@ -162,7 +157,7 @@ A `String` object can always be converted to its primitive counterpart with
 the {{jsxref("String.prototype.valueOf()", "valueOf()")}} method.
 
 ```js
-console.log(eval(s2.valueOf()))  // returns the number 4
+console.log(eval(s2.valueOf())); // returns the number 4
 ```
 
 ### String coercion
@@ -217,20 +212,21 @@ You can use the [`+`](/en-US/docs/Web/JavaScript/Reference/Operators/Addition)
 operator to append multiple strings together, like this:
 
 ```js
-const longString = "This is a very long string which needs " +
-                   "to wrap across multiple lines because " +
-                   "otherwise my code is unreadable."
+const longString =
+  "This is a very long string which needs " +
+  "to wrap across multiple lines because " +
+  "otherwise my code is unreadable.";
 ```
 
 Or you can use the backslash character (`\`) at the end of each line to
 indicate that the string will continue on the next line. Make sure there is no space or
-any other character after the backslash (except for a line break), or as an indent;
-otherwise it will not work.
+any other character after the backslash (except for a line break), otherwise it will not work. If the next line is indented, the extra spaces will also be present in the string's value.
 
 ```js
-const longString = "This is a very long string which needs \
+const longString =
+  "This is a very long string which needs \
 to wrap across multiple lines because \
-otherwise my code is unreadable."
+otherwise my code is unreadable.";
 ```
 
 Both of the above methods result in identical strings.
@@ -280,7 +276,14 @@ You must be careful which level of characters you are iterating on. For example,
 
 ## Instance properties
 
-- {{jsxref("String.prototype.length")}}
+These properties are defined on `String.prototype` and shared by all `String` instances.
+
+- {{jsxref("Object/constructor", "String.prototype.constructor")}}
+  - : The constructor function that created the instance object. For `String` instances, the initial value is the {{jsxref("String/String", "String")}} constructor.
+
+These properties are own properties of each `String` instance.
+
+- {{jsxref("String/length", "length")}}
   - : Reflects the `length` of the string. Read-only.
 
 ## Instance methods
@@ -389,14 +392,14 @@ You must be careful which level of characters you are iterating on. For example,
   - : Returns a new iterator object that iterates over the code points of a String value,
     returning each code point as a String value.
 
-## HTML wrapper methods
+### HTML wrapper methods
 
 > **Warning:** Deprecated. Avoid these methods.
 >
 > They are of limited use, as they are based on a very old HTML standard and provide only a subset of the currently available HTML tags and attributes. Many of them create deprecated or non-standard markup today. In addition, they do simple string concatenation without any validation or sanitation, which makes them a potential security threat when directly inserted using [`innerHTML`](/en-US/docs/Web/API/Element/innerHTML). Use [DOM APIs](/en-US/docs/Web/API/Document_Object_Model) such as [`document.createElement()`](/en-US/docs/Web/API/Document/createElement) instead.
 
 - {{jsxref("String.prototype.anchor()")}} {{Deprecated_Inline}}
-  - : {{htmlattrxref("name", "a", "&lt;a name=\"name\"&gt;")}} (hypertext target)
+  - : [`<a name="name">`](/en-US/docs/Web/HTML/Element/a#name) (hypertext target)
 - {{jsxref("String.prototype.big()")}} {{Deprecated_Inline}}
   - : {{HTMLElement("big")}}
 - {{jsxref("String.prototype.blink()")}} {{Deprecated_Inline}}
@@ -406,13 +409,13 @@ You must be careful which level of characters you are iterating on. For example,
 - {{jsxref("String.prototype.fixed()")}} {{Deprecated_Inline}}
   - : {{HTMLElement("tt")}}
 - {{jsxref("String.prototype.fontcolor()")}} {{Deprecated_Inline}}
-  - : {{htmlattrxref("color", "font", "&lt;font color=\"color\"&gt;")}}
+  - : [`<font color="color">`](/en-US/docs/Web/HTML/Element/font#color)
 - {{jsxref("String.prototype.fontsize()")}} {{Deprecated_Inline}}
-  - : {{htmlattrxref("size", "font", "&lt;font size=\"size\"&gt;")}}
+  - : [`<font size="size">`](/en-US/docs/Web/HTML/Element/font#size)
 - {{jsxref("String.prototype.italics()")}} {{Deprecated_Inline}}
   - : {{HTMLElement("i")}}
 - {{jsxref("String.prototype.link()")}} {{Deprecated_Inline}}
-  - : {{htmlattrxref("href", "a", "&lt;a href=\"url\"&gt;")}} (link to URL)
+  - : [`<a href="url">`](/en-US/docs/Web/HTML/Element/a#href) (link to URL)
 - {{jsxref("String.prototype.small()")}} {{Deprecated_Inline}}
   - : {{HTMLElement("small")}}
 - {{jsxref("String.prototype.strike()")}} {{Deprecated_Inline}}
@@ -444,12 +447,12 @@ used on [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) and {{jsxr
 
 ```js
 const nullVar = null;
-nullVar.toString();       // TypeError: nullVar is null
-String(nullVar);          // "null"
+nullVar.toString(); // TypeError: nullVar is null
+String(nullVar); // "null"
 
 const undefinedVar = undefined;
-undefinedVar.toString();  // TypeError: undefinedVar is undefined
-String(undefinedVar);     // "undefined"
+undefinedVar.toString(); // TypeError: undefinedVar is undefined
+String(undefinedVar); // "undefined"
 ```
 
 ## Specifications

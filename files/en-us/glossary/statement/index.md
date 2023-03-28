@@ -1,9 +1,7 @@
 ---
 title: Statement
 slug: Glossary/Statement
-tags:
-  - Beginner
-  - CodingScripting
+page-type: glossary-definition
 ---
 
 In a computer programming language, a **statement** is a line of code commanding a task. Every program consists of a sequence of statements.

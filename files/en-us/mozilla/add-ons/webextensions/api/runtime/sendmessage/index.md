@@ -1,16 +1,7 @@
 ---
 title: runtime.sendMessage()
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/sendMessage
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - runtime
-  - sendMessage
+page-type: webextension-api-function
 browser-compat: webextensions.api.runtime.sendMessage
 ---
 
@@ -42,7 +33,7 @@ let sending = browser.runtime.sendMessage(
 
 - `extensionId` {{optional_inline}}
 
-  - : `string`. The ID of the extension to send the message to. Include this to send the message to a different extension. If the intended recipient has set an ID explicitly using the [applications](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings) key in manifest.json, then `extensionId` should have that value. Otherwise it should have the ID that was generated for the intended recipient.
+  - : `string`. The ID of the extension to send the message to. Include this to send the message to a different extension. If the intended recipient has set an ID explicitly using the [browser_specific_settings](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings) key in manifest.json, then `extensionId` should have that value. Otherwise it should have the ID that was generated for the intended recipient.
 
     If `extensionId` is omitted, the message is sent to your extension.
 
@@ -126,8 +117,6 @@ browser.runtime.onMessage.addListener(handleMessage);
 {{WebExtExamples}}
 
 > **Note:** This API is based on Chromium's [`chrome.runtime`](https://developer.chrome.com/docs/extensions/reference/runtime/#method-sendMessage) API. This documentation is derived from [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) in the Chromium code.
->
-> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

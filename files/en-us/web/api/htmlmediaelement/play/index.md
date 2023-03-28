@@ -2,16 +2,6 @@
 title: HTMLMediaElement.play()
 slug: Web/API/HTMLMediaElement/play
 page-type: web-api-instance-method
-tags:
-  - API
-  - Audio
-  - HTMLMediaElement
-  - Interface
-  - Media
-  - Method
-  - Reference
-  - Video
-  - play
 browser-compat: api.HTMLMediaElement.play
 ---
 
@@ -51,8 +41,8 @@ thrown). Possible errors include:
 
 - `NotAllowedError` {{domxref("DOMException")}}
   - : Provided if the user agent (browser) or operating system doesn't allow playback of media in the
-    current context or situation. This may happen, for example, if the browser requires
-    the user to explicitly start media playback by clicking a "play" button.
+    current context or situation. The browser may require the user to explicitly start
+    media playback by clicking a "play" button, for example because of a [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy).
 - `NotSupportedError` {{domxref("DOMException")}}
   - : Provided if the media source (which may be specified as a {{domxref("MediaStream")}},
     {{domxref("MediaSource")}}, {{domxref("Blob")}}, or {{domxref("File")}}, for example)

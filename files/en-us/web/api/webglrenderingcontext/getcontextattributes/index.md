@@ -2,12 +2,6 @@
 title: WebGLRenderingContext.getContextAttributes()
 slug: Web/API/WebGLRenderingContext/getContextAttributes
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.getContextAttributes
 ---
 
@@ -43,8 +37,8 @@ Given this {{HTMLElement("canvas")}} element
 and given this WebGL context
 
 ```js
-const canvas = document.getElementById('canvas');
-const gl = canvas.getContext('webgl');
+const canvas = document.getElementById("canvas");
+const gl = canvas.getContext("webgl");
 gl.getContextAttributes();
 ```
 
@@ -69,9 +63,7 @@ The context attributes can be set when creating the context using the
 {{domxref("HTMLCanvasElement.getContext()")}} method:
 
 ```js
-canvas.getContext('webgl',
-                 { antialias: false,
-                   depth: false });
+canvas.getContext("webgl", { antialias: false, depth: false });
 ```
 
 See {{domxref("HTMLCanvasElement.getContext()", "getContext()")}} for more information

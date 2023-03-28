@@ -1,20 +1,13 @@
 ---
 title: Array.prototype.find()
 slug: Web/JavaScript/Reference/Global_Objects/Array/find
-tags:
-  - Array
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - Polyfill
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.Array.find
 ---
 
 {{JSRef}}
 
-The `find()` method returns the first element in the provided array that satisfies the provided testing function.
+The **`find()`** method returns the first element in the provided array that satisfies the provided testing function.
 If no values satisfy the testing function, {{jsxref("undefined")}} is returned.
 
 {{EmbedInteractiveExample("pages/js/array-find.html","shorter")}}
@@ -146,7 +139,7 @@ const array = [0, 1, , , , 5, 6];
 
 // Shows all indexes, not just those with assigned values
 array.find((value, index) => {
-  console.log("Visited index ", index, " with value ", value);
+  console.log("Visited index", index, "with value", value);
 });
 // Visited index 0 with value 0
 // Visited index 1 with value 1
@@ -160,11 +153,11 @@ array.find((value, index) => {
 array.find((value, index) => {
   // Delete element 5 on first iteration
   if (index === 0) {
-    console.log("Deleting array[5] with value ", array[5]);
+    console.log("Deleting array[5] with value", array[5]);
     delete array[5];
   }
   // Element 5 is still visited even though deleted
-  console.log("Visited index ", index, " with value ", value);
+  console.log("Visited index", index, "with value", value);
 });
 // Deleting array[5] with value 5
 // Visited index 0 with value 0
@@ -187,9 +180,8 @@ const arrayLike = {
   1: 7.3,
   2: 4,
 };
-console.log(
-  Array.prototype.find.call(arrayLike, (x) => !Number.isInteger(x)),
-); // 7.3
+console.log(Array.prototype.find.call(arrayLike, (x) => !Number.isInteger(x)));
+// 7.3
 ```
 
 ## Specifications

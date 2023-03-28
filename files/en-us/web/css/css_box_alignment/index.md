@@ -2,15 +2,6 @@
 title: CSS Box Alignment
 slug: Web/CSS/CSS_Box_Alignment
 page-type: css-module
-tags:
-  - CSS
-  - CSS Box Alignment
-  - Grid Layout
-  - Guide
-  - alignment
-  - box alignment
-  - flexbox
-  - multi-column
 ---
 
 {{CSSRef}}
@@ -43,7 +34,7 @@ In this example, three flex items are aligned on the main axis using `justify-co
 
 ## Key concepts and terminology
 
-The specification details some alignment terminology to make it easier to discuss these alignment properties outside of their implementation within a particular layout method. There are also some key concepts which are common to all layout methods.
+The specification details some alignment terminology to make it easier to discuss these alignment properties outside their implementation within a particular layout method. There are also some key concepts which are common to all layout methods.
 
 ### Relationship to writing modes
 
@@ -148,7 +139,7 @@ There needs to be space available in the dimension you wish to align the items i
 
 ## Overflow alignment
 
-The `safe` and `unsafe` keywords help define behavior when an alignment subject is larger than the alignment container. The `safe` keyword will align to `start` in the case of a specified alignment causing an overflow, the aim being to avoid "data loss" where part of the item is outside of the boundaries of the alignment container and can't be scrolled to.
+The `safe` and `unsafe` keywords help define behavior when an alignment subject is larger than the alignment container. The `safe` keyword will align to `start` in the case of a specified alignment causing an overflow, the aim being to avoid "data loss" where part of the item is outside the boundaries of the alignment container and can't be scrolled to.
 
 If you specify `unsafe` then the alignment will be honoured even if it would cause such data loss.
 
@@ -212,6 +203,5 @@ As the CSS box alignment properties are implemented differently depending on the
 
 ## External Resources
 
-- [Box alignment cheatsheet](https://rachelandrew.co.uk/css/cheatsheets/box-alignment)
 - [CSS Grid, Flexbox and Box alignment](https://www.smashingmagazine.com/2016/11/css-grids-flexbox-box-alignment-new-layout-standard/)
 - [Thoughts on partial implementations of Box alignment](https://blogs.igalia.com/jfernandez/2017/05/03/can-i-use-css-box-alignment/)

@@ -2,13 +2,6 @@
 title: "@namespace"
 slug: Web/CSS/@namespace
 page-type: css-at-rule
-tags:
-  - At-rule
-  - CSS
-  - CSS Namespaces
-  - Layout
-  - Reference
-  - Web
 browser-compat: css.at-rules.namespace
 ---
 

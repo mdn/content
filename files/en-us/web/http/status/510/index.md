@@ -1,10 +1,6 @@
 ---
 title: 510 Not Extended
 slug: Web/HTTP/Status/510
-tags:
-  - HTTP
-  - Server error
-  - Status code
 spec-urls: https://www.rfc-editor.org/rfc/rfc2774#section-7
 ---
 
@@ -21,7 +17,7 @@ responds with the 510 status code.
 
 ## Status
 
-```
+```http
 510 Not Extended
 ```
 

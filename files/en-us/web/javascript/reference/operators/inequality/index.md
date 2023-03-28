@@ -1,11 +1,7 @@
 ---
 title: Inequality (!=)
 slug: Web/JavaScript/Reference/Operators/Inequality
-tags:
-  - JavaScript
-  - Language feature
-  - Operator
-  - Reference
+page-type: javascript-operator
 browser-compat: javascript.operators.inequality
 ---
 

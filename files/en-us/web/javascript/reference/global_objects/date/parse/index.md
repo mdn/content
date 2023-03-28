@@ -1,17 +1,13 @@
 ---
 title: Date.parse()
 slug: Web/JavaScript/Reference/Global_Objects/Date/parse
-tags:
-  - Date
-  - JavaScript
-  - Method
-  - Reference
+page-type: javascript-static-method
 browser-compat: javascript.builtins.Date.parse
 ---
 
 {{JSRef}}
 
-The **`Date.parse()`** method parses a string representation of
+The **`Date.parse()`** static method parses a string representation of
 a date, and returns the number of milliseconds since January 1, 1970, 00:00:00 UTC or
 `NaN` if the string is unrecognized or, in some cases, contains illegal date
 values (e.g. 2015-02-31).
@@ -86,7 +82,7 @@ and values provided, e.g.:
 
 ```js
 // Non-ISO string with invalid date values
-new Date('23/25/2014');
+new Date("23/25/2014");
 ```
 
 will be treated as a local date of 25 November, 2015 in Firefox 30 and an invalid date
@@ -97,17 +93,17 @@ values, it will return {{jsxref("NaN")}}:
 
 ```js
 // ISO string with invalid values
-new Date('2014-25-23').toISOString();
+new Date("2014-25-23").toISOString();
 // throws "RangeError: invalid date"
 ```
 
 SpiderMonkey's implementation-specific heuristic can be found in [`jsdate.cpp`](https://searchfox.org/mozilla-central/source/js/src/jsdate.cpp?rev=64553c483cd1#889).
 The string `"10 06 2014"` is an example of a non-conforming ISO format and
-thus falls back to a custom routine. See also this [rough outline](https://bugzilla.mozilla.org/show_bug.cgi?id=1023155#c6) on
+thus falls back to a custom routine. See also this [rough outline](https://bugzil.la/1023155#c6) on
 how the parsing works.
 
 ```js
-new Date('10 06 2014');
+new Date("10 06 2014");
 ```
 
 will be treated as a local date of 6 October, 2014, and not 10 June, 2014.
@@ -115,10 +111,10 @@ will be treated as a local date of 6 October, 2014, and not 10 June, 2014.
 Other examples:
 
 ```js
-new Date('foo-bar 2014').toString();
+new Date("foo-bar 2014").toString();
 // returns: "Invalid Date"
 
-Date.parse('foo-bar 2014');
+Date.parse("foo-bar 2014");
 // returns: NaN
 ```
 
@@ -136,16 +132,16 @@ Given a non-standard date string of `"March 7, 2014"`, `parse()` assumes a local
 The following calls all return `1546300800000`. The first will imply UTC time, and the others are specifying UTC timezone via the ISO date specification (`Z` and `+00:00`).
 
 ```js
-Date.parse("2019-01-01")
-Date.parse("2019-01-01T00:00:00.000Z")
-Date.parse("2019-01-01T00:00:00.000+00:00")
+Date.parse("2019-01-01");
+Date.parse("2019-01-01T00:00:00.000Z");
+Date.parse("2019-01-01T00:00:00.000+00:00");
 ```
 
 The following call, which does not specify a time zone will be set to 2019-01-01 at
 00:00:00 in the local timezone of the system.
 
 ```js
-Date.parse("2019-01-01T00:00:00")
+Date.parse("2019-01-01T00:00:00");
 ```
 
 ### Non-standard date strings
@@ -157,13 +153,13 @@ If `ipoDate` is an existing {{jsxref("Date")}} object, it can be set to
 August 9, 1995 (local time) as follows:
 
 ```js
-ipoDate.setTime(Date.parse('Aug 9, 1995'));
+ipoDate.setTime(Date.parse("Aug 9, 1995"));
 ```
 
 Some other examples of parsing non-standard date strings:
 
 ```js
-Date.parse('Aug 9, 1995');
+Date.parse("Aug 9, 1995");
 ```
 
 Returns `807937200000` in time zone GMT-0300, and other values in other time
@@ -171,14 +167,14 @@ zones, since the string does not specify a time zone and is not ISO format, ther
 the time zone defaults to local.
 
 ```js
-Date.parse('Wed, 09 Aug 1995 00:00:00 GMT');
+Date.parse("Wed, 09 Aug 1995 00:00:00 GMT");
 ```
 
 Returns `807926400000` no matter the local time zone as GMT (UTC) is
 provided.
 
 ```js
-Date.parse('Wed, 09 Aug 1995 00:00:00');
+Date.parse("Wed, 09 Aug 1995 00:00:00");
 ```
 
 Returns `807937200000` in time zone GMT-0300, and other values in other time
@@ -186,14 +182,14 @@ zones, since there is no time zone specifier in the argument and it is not ISO f
 so is treated as local.
 
 ```js
-Date.parse('Thu, 01 Jan 1970 00:00:00 GMT');
+Date.parse("Thu, 01 Jan 1970 00:00:00 GMT");
 ```
 
 Returns `0` no matter the local time zone as a time zone GMT (UTC) is
 provided.
 
 ```js
-Date.parse('Thu, 01 Jan 1970 00:00:00');
+Date.parse("Thu, 01 Jan 1970 00:00:00");
 ```
 
 Returns `14400000` in time zone GMT-0400, and other values in other time
@@ -201,7 +197,7 @@ zones, since no time zone is provided and the string is not in ISO format, there
 local time zone is used.
 
 ```js
-Date.parse('Thu, 01 Jan 1970 00:00:00 GMT-0400');
+Date.parse("Thu, 01 Jan 1970 00:00:00 GMT-0400");
 ```
 
 Returns `14400000` no matter the local time zone as a time zone GMT (UTC) is
@@ -217,12 +213,11 @@ provided.
 
 ### Compatibility notes
 
-- Firefox 49 changed the parsing of 2-digit years to be aligned with the Google Chrome
-  browser instead of Internet Explorer. Now, 2-digit years that are less than
-  `50` are parsed as 21st century years. For example,
-  `04/16/17`, previously parsed as April 16, 1917, will be April 16, 2017
+- Firefox 49 changed the parsing of 2-digit years to be aligned with Google Chrome.
+  Now, 2-digit years that are less than `50` are parsed as 21st century years. For
+  example, `04/16/17`, previously parsed as April 16, 1917, will be April 16, 2017
   now. To avoid any interoperability issues or ambiguous years, it is recommended to use
-  the ISO 8601 format like `"2017-04-16"` ([bug 1265136](https://bugzilla.mozilla.org/show_bug.cgi?id=1265136)).
+  the ISO 8601 format like `"2017-04-16"` ([bug 1265136](https://bugzil.la/1265136)).
 - Google Chrome will accept a numerical string as a valid
   `dateString` parameter. This means that, for instance, while
   `!!Date.parse("42")` evaluates to `false` in Firefox, it

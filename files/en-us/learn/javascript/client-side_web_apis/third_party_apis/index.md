@@ -1,16 +1,6 @@
 ---
 title: Third-party APIs
 slug: Learn/JavaScript/Client-side_web_APIs/Third_party_APIs
-tags:
-  - 3rd party
-  - API
-  - Beginner
-  - CodingScripting
-  - Google Maps
-  - Learn
-  - NYTimes
-  - Third party
-  - youtube
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Client-side_web_APIs/Fetching_data", "Learn/JavaScript/Client-side_web_APIs/Drawing_graphics", "Learn/JavaScript/Client-side_web_APIs")}}
@@ -251,7 +241,7 @@ First, you'll need to make a connection between the API and your app. In the cas
 - The search term, which has to be specified in the `q` URL parameter (the value is taken from the value of the `searchTerm` text {{htmlelement("input")}}).
 - The document type to return results for, as specified in an expression passed in via the `fq` URL parameter. In this case, we want to return articles.
 
-Next, we use a couple of [`if ()`](/en-US/docs/Web/JavaScript/Reference/Statements/if...else) statements to check whether the `startDate` and `endDate` `<input>`s have had values filled in on them. If they do, we append their values to the URL, specified in `begin_date` and `end_date` URL parameters respectively.
+Next, we use a couple of [`if ()`](/en-US/docs/Web/JavaScript/Reference/Statements/if...else) statements to check whether the `startDate` and `endDate` elements have had values filled in on them. If they do, we append their values to the URL, specified in `begin_date` and `end_date` URL parameters respectively.
 
 So, a complete URL would end up looking something like this:
 
@@ -409,13 +399,3 @@ To get it running, you'll need to:
 This article has given you a useful introduction to using third-party APIs to add functionality to your websites.
 
 {{PreviousMenuNext("Learn/JavaScript/Client-side_web_APIs/Fetching_data", "Learn/JavaScript/Client-side_web_APIs/Drawing_graphics", "Learn/JavaScript/Client-side_web_APIs")}}
-
-## In this module
-
-- [Introduction to web APIs](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Introduction)
-- [Manipulating documents](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents)
-- [Fetching data from the server](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data)
-- **Third party APIs**
-- [Drawing graphics](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics)
-- [Video and audio APIs](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Video_and_audio_APIs)
-- [Client-side storage](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Client-side_storage)

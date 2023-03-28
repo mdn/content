@@ -1,14 +1,7 @@
 ---
 title: Array.prototype.copyWithin()
 slug: Web/JavaScript/Reference/Global_Objects/Array/copyWithin
-tags:
-  - Array
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - Polyfill
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.Array.copyWithin
 ---
 
@@ -114,5 +107,4 @@ console.log(Array.prototype.copyWithin.call(arrayLike, 3, 1));
 ## See also
 
 - [Polyfill of `Array.prototype.copyWithin` in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
-- [A polyfill](https://github.com/behnammodi/polyfill/blob/master/array.polyfill.js)
 - {{jsxref("Array")}}

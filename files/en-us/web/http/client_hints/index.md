@@ -1,11 +1,6 @@
 ---
 title: HTTP Client hints
 slug: Web/HTTP/Client_hints
-tags:
-  - Client hints
-  - Guide
-  - HTTP
-  - Performance
 ---
 
 {{HTTPSidebar}}
@@ -29,9 +24,9 @@ Accept-CH: Width, Downlink, Sec-CH-UA
 This approach is efficient in that the server only requests the information that it is able to usefully handle.
 It is also relatively "privacy-preserving", in that it is up to the client to decide what information it can safely share.
 
-There is a small set of [low entropy client hint headers](#low_entropy_hints) that may be sent by a client event if not requested.
+There is a small set of [low entropy client hint headers](#low_entropy_hints) that may be sent by a client even if not requested.
 
-> **Note:** Client hints can also be specified in HTML using the {{HTMLElement("meta")}} element with the [`http-equiv`](/en-US/docs/Web/HTML/Element/meta#attr-http-equiv) attribute.
+> **Note:** Client hints can also be specified in HTML using the {{HTMLElement("meta")}} element with the [`http-equiv`](/en-US/docs/Web/HTML/Element/meta#http-equiv) attribute.
 >
 > ```html
 > <meta http-equiv="Accept-CH" content="Width, Downlink, Sec-CH-UA" />
@@ -64,7 +59,7 @@ For example, to stop requesting any hints it would send `Accept-CH` with an empt
 
 Client hints are broadly divided into high and low entropy hints.
 
-The low entropy hints are those that don't give away much information that might be used to "fingerprint" (identify) a particular user.
+The low entropy hints are those that don't give away much information that might be used to create a [fingerprinting](/en-US/docs/Glossary/Fingerprinting) for a user.
 They may be sent by default on every client request, irrespective of the server `Accept-CH` response header, depending on the permission policy.
 These hints include: {{HTTPHeader("Save-Data")}}, {{HTTPHeader("Sec-CH-UA")}}, {{HTTPHeader("Sec-CH-UA-Mobile")}}, {{HTTPHeader("Sec-CH-UA-Platform")}}.
 
@@ -87,8 +82,11 @@ For example, in this case, the server tells a client via {{httpheader("Accept-CH
 HTTP/1.1 200 OK
 Content-Type: text/html
 Accept-CH: Sec-CH-Prefers-Reduced-Motion
+Vary: Sec-CH-Prefers-Reduced-Motion
 Critical-CH: Sec-CH-Prefers-Reduced-Motion
 ```
+
+> **Note:** We've also specified `Sec-CH-Prefers-Reduced-Motion` in the {{httpheader("Vary")}} header to indicate to the browser that the served content will differ based on this header value, even if the URL stays the same, so the browser shouldn't just use an existing cached response and instead should cache this response separately. Each header listed in the `Critical-CH` header should also be present in the `Accept-CH` and `Vary` headers.
 
 As `Sec-CH-Prefers-Reduced-Motion` is a critical hint that was not in the original request, the client automatically retries the request — this time telling the server via `Sec-CH-Prefers-Reduced-Motion` that it has a user preference for reduced-motion animations.
 

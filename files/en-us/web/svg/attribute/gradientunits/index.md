@@ -1,11 +1,7 @@
 ---
 title: gradientUnits
 slug: Web/SVG/Attribute/gradientUnits
-tags:
-  - NeedsCompatTable
-  - NeedsExample
-  - SVG
-  - SVG Attribute
+page-type: svg-attribute
 spec-urls:
   - https://svgwg.org/svg2-draft/pservers.html#RadialGradientElementGradientUnitsAttribute
   - https://svgwg.org/svg2-draft/pservers.html#LinearGradientElementGradientUnitsAttribute

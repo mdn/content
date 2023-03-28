@@ -1,12 +1,7 @@
 ---
 title: Date.prototype.toTimeString()
 slug: Web/JavaScript/Reference/Global_Objects/Date/toTimeString
-tags:
-  - Date
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.Date.toTimeString
 ---
 
@@ -24,7 +19,7 @@ toTimeString()
 
 ### Return value
 
-A string representing the time portion of the given date in human readable form in English.
+A string representing the time portion of the given date in human-readable form in English.
 
 ## Description
 
@@ -52,7 +47,7 @@ For example: "04:42:04 GMT+0000 (Coordinated Universal Time)".
 ```js
 const d = new Date(1993, 6, 28, 14, 39, 7);
 
-console.log(d.toString());     // Wed Jul 28 1993 14:39:07 GMT-0600 (PDT)
+console.log(d.toString()); // Wed Jul 28 1993 14:39:07 GMT-0600 (PDT)
 console.log(d.toTimeString()); // 14:39:07 GMT-0600 (PDT)
 ```
 

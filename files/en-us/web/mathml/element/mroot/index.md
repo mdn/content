@@ -1,11 +1,6 @@
 ---
 title: <mroot>
 slug: Web/MathML/Element/mroot
-tags:
-  - MathML
-  - MathML Reference
-  - MathML:Element
-  - MathML:General Layout Schemata
 browser-compat: mathml.elements.mroot
 ---
 
@@ -18,13 +13,6 @@ The **`<mroot>`** [MathML](/en-US/docs/Web/MathML) element is used to display ro
 This element accepts the [global MathML attributes](/en-US/docs/Web/MathML/Global_attributes).
 
 ## Examples
-
-```html hidden
- <link
-   rel="stylesheet"
-   href="https://fred-wang.github.io/MathFonts/LatinModern/mathfonts.css"
-  />
-```
 
 ```html
 <math display="block">

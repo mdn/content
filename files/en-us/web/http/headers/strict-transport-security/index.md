@@ -1,12 +1,6 @@
 ---
 title: Strict-Transport-Security
 slug: Web/HTTP/Headers/Strict-Transport-Security
-tags:
-  - HSTS
-  - HTTP
-  - HTTPS
-  - Security
-  - header
 browser-compat: http.headers.Strict-Transport-Security
 ---
 
@@ -83,8 +77,8 @@ By following the guidelines and successfully submitting your domain, you can ens
 While the service is hosted by Google, all browsers are using this preload list.
 However, it is not part of the HSTS specification and should not be treated as official.
 
-- Information regarding the HSTS preload list in Chrome : <https://www.chromium.org/hsts>
-- Consultation of the Firefox HSTS preload list : [nsSTSPreloadList.inc](https://hg.mozilla.org/mozilla-central/raw-file/tip/security/manager/ssl/nsSTSPreloadList.inc)
+- Information regarding the HSTS preload list in Chrome: <https://www.chromium.org/hsts>
+- Consultation of the Firefox HSTS preload list: [nsSTSPreloadList.inc](https://hg.mozilla.org/mozilla-central/raw-file/tip/security/manager/ssl/nsSTSPreloadList.inc)
 
 ## Examples
 
@@ -95,7 +89,7 @@ This blocks access to pages or subdomains that can only be served over HTTP.
 Strict-Transport-Security: max-age=31536000; includeSubDomains
 ```
 
-If a `max-age` of 1 year is acceptable for a domain, however, two years is the recommended value as explained on <https://hstspreload.org>.
+Although a `max-age` of 1 year is acceptable for a domain, two years is the recommended value as explained on <https://hstspreload.org>.
 
 In the following example, `max-age` is set to 2 years, and is suffixed with `preload`, which is necessary for inclusion in all major web browsers' HSTS preload lists, like Chromium, Edge, and Firefox.
 

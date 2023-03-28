@@ -1,12 +1,10 @@
 ---
 title: Content type
 slug: Web/SVG/Content_type
-tags:
-  - NeedsTechnicalReview
-  - SVG
-  - Types
-  - data types
+page-type: guide
 ---
+
+{{SVGRef}}
 
 SVG makes use of a number of data types. This article lists these types along with their syntax and descriptions of what they're used for.
 
@@ -16,7 +14,7 @@ SVG makes use of a number of data types. This article lists these types along wi
 
   - : Angles are specified in one of two ways. When used in the value of a property in a stylesheet, an \<angle> is defined as follows:
 
-    ```
+    ```plain
     angle ::= number (~"deg" | ~"grad" | ~"rad")?
     ```
 
@@ -26,13 +24,13 @@ SVG makes use of a number of data types. This article lists these types along wi
 
     When angles are used in an SVG attribute, \<angle> is instead defined as follows:
 
-    ```
+    ```plain
     angle ::= number ("deg" | "grad" | "rad")?
     ```
 
     The unit identifiers in such \<angle> values must be in lower case.
 
-    In the SVG DOM, \<angle> values are represented using {{domxref("SVGAngle")}} or {{domxref("SVGAnimatedAngle objects")}}.
+    In the SVG DOM, \<angle> values are represented using {{domxref("SVGAngle")}} or {{domxref("SVGAnimatedAngle")}} objects.
 
 ## Anything
 
@@ -40,7 +38,7 @@ SVG makes use of a number of data types. This article lists these types along wi
 
   - : The basic type \<anything> is a sequence of zero or more characters. Specifically:
 
-    ```
+    ```plain
     anything ::= Char*
     ```
 
@@ -52,7 +50,7 @@ SVG makes use of a number of data types. This article lists these types along wi
 
   - : Clock values have the same syntax as in [SMIL Animation](https://www.w3.org/TR/2001/REC-smil-animation-20010904/) specification. The grammar for clock values is repeated here:
 
-    ```
+    ```plain
     Clock-val         ::= Full-clock-val | Partial-clock-val
                           | Timecount-val
     Full-clock-val    ::= Hours ":" Minutes ":" Seconds ("." Fraction)?
@@ -102,7 +100,7 @@ SVG makes use of a number of data types. This article lists these types along wi
 
     The format of an RGB value in hexadecimal notation is a "`#`" immediately followed by either three or six hexadecimal characters. The three-digit RGB notation (`#rgb`) is converted into six-digit form (`#rrggbb`) by replicating digits, not by adding zeros. For example, `#fb0` expands to `#ffbb00`. This ensures that white (`#ffffff`) can be specified with the short notation (`#fff`) and removes any dependencies on the color depth of the display. The format of an RGB value in the functional notation is an RGB start-function, followed by a comma-separated list of three numerical values (either three integer values or three percentage values) followed by "`)`". An RGB start-function is the case-insensitive string "`rgb(`", for example "`RGB(`" or "`rGb(`". For compatibility, the all-lowercase form "`rgb(`" is preferred. The integer value `255` corresponds to `100%`, and to `F` or `FF` in the hexadecimal notation: `rgb(255,255,255)` = `rgb(100%,100%,100%)` = `#FFF`. White space characters are allowed around the numerical values. All RGB colors are specified in the sRGB color space. Using sRGB provides an unambiguous and objectively measurable definition of the color, which can be related to international standards.
 
-    ```
+    ```plain
     color    ::= "#" hexdigit hexdigit hexdigit (hexdigit hexdigit hexdigit)?
                   | "rgb("integer, integer, integer")"
                   | "rgb("integer "%", integer "%", integer "%)"
@@ -144,7 +142,7 @@ SVG makes use of a number of data types. This article lists these types along wi
 
   - : An \<integer> is specified as an optional sign character (`+` or `-`) followed by one or more digits `0` to `9`:
 
-    ```
+    ```plain
     integer ::= [+-]? [0-9]+
     ```
 
@@ -162,13 +160,13 @@ SVG makes use of a number of data types. This article lists these types along wi
 
     On the Internet, resources are identified using _IRIs_ (Internationalized Resource Identifiers). For example, an SVG file called `someDrawing.svg` located at `http://example.com` might have the following _IRI_:
 
-    ```
+    ```plain
     http://example.com/someDrawing.svg
     ```
 
     An _IRI_ can also address a particular element within an XML document by including an _IRI_ fragment identifier as part of the _IRI_. An _IRI_ which includes an _IRI_ fragment identifier consists of an optional base _IRI_, followed by a "`#`" character, followed by the _IRI_ fragment identifier. For example, the following _IRI_ can be used to specify the element whose ID is "`Lamppost`" within file `someDrawing.svg`:
 
-    ```
+    ```plain
     http://example.com/someDrawing.svg#Lamppost
     ```
 
@@ -199,7 +197,7 @@ SVG makes use of a number of data types. This article lists these types along wi
 
   - : A length is a distance measurement, given as a number along with a unit. Lengths are specified in one of two ways. When used in a stylesheet, a \<length> is defined as follows:
 
-    ```
+    ```plain
     length ::= number (~"em" | ~"ex" | ~"px" | ~"in" | ~"cm" | ~"mm" | ~"pt" | ~"pc")?
     ```
 
@@ -209,7 +207,7 @@ SVG makes use of a number of data types. This article lists these types along wi
 
     When lengths are used in an SVG attribute, a \<length> is instead defined as follows:
 
-    ```
+    ```plain
     length ::= number ("em" | "ex" | "px" | "in" | "cm" | "mm" | "pt" | "pc" | "%")?
     ```
 
@@ -232,7 +230,7 @@ SVG makes use of a number of data types. This article lists these types along wi
 
     The following is a template for an EBNF grammar describing the \<list-of-Ts> syntax:
 
-    ```
+    ```plain
     list-of-Ts ::= T
                     | T, list-of-Ts
     ```
@@ -245,7 +243,7 @@ SVG makes use of a number of data types. This article lists these types along wi
 
   - : A name, which is a string where a few characters of syntactic significance are disallowed.
 
-    ```
+    ```plain
     name  ::= [^,()#x20#x9#xD#xA] /* any char except ",", "(", ")" or wsp */
     ```
 
@@ -255,7 +253,7 @@ SVG makes use of a number of data types. This article lists these types along wi
 
   - : Real numbers are specified in one of two ways. When used in a stylesheet, a \<number> is defined as follows:
 
-    ```
+    ```plain
     number ::= integer
                 | [+-]? [0-9]* "." [0-9]+
     ```
@@ -264,7 +262,7 @@ SVG makes use of a number of data types. This article lists these types along wi
 
     When used in an SVG attribute, a \<number> is defined differently, to allow numbers with large magnitudes to be specified more concisely:
 
-    ```
+    ```plain
     number ::= integer ([Ee] integer)?
                 | [+-]? [0-9]* "." [0-9]+ ([Ee] integer)?
     ```
@@ -277,7 +275,7 @@ SVG makes use of a number of data types. This article lists these types along wi
 
   - : A pair of \<number>s, where the second \<number> is optional.
 
-    ```
+    ```plain
     number-optional-number ::= number
                                 | number, number
     ```
@@ -293,7 +291,14 @@ SVG makes use of a number of data types. This article lists these types along wi
 
 - \<paint>
 
-  - : The values for properties {{SVGAttr("fill")}} and {{SVGAttr("stroke")}} are specifications of the type of paint to use when filling or stroking a given graphics element. The available options and syntax for \<paint> are described in [Specifying paint](https://www.w3.org/TR/SVG/painting.html#SpecifyingPaint).
+  - : The values for properties {{SVGAttr("fill")}} and {{SVGAttr("stroke")}} define the type of paint to use when filling or stroking a given graphics element.
+    The available options and syntax for \<paint> are:
+
+    ```plain
+    paint ::= none | <color> | <url> [none | <color>]? | context-fill | context-stroke
+    ```
+
+    The `context-fill` and `context-stroke` values allow for inheriting values in [marker](/en-US/docs/Web/SVG/Element/marker) and [use](/en-US/docs/Web/SVG/Element/use) elements.
 
     Within the SVG DOM, \<paint> values are represented using {{domxref("SVGPaint")}} objects.
 
@@ -303,7 +308,7 @@ SVG makes use of a number of data types. This article lists these types along wi
 
   - : Percentages are specified as a number followed by a "`%`" character:
 
-    ```
+    ```plain
     percentage ::= number "%"
     ```
 

@@ -1,25 +1,25 @@
 ---
 title: Number.POSITIVE_INFINITY
 slug: Web/JavaScript/Reference/Global_Objects/Number/POSITIVE_INFINITY
-tags:
-  - JavaScript
-  - Number
-  - Property
-  - Reference
+page-type: javascript-static-data-property
 browser-compat: javascript.builtins.Number.POSITIVE_INFINITY
 ---
 
 {{JSRef}}
 
-The **`Number.POSITIVE_INFINITY`** property represents the positive Infinity value.
+The **`Number.POSITIVE_INFINITY`** static data property represents the positive Infinity value.
 
-{{EmbedInteractiveExample("pages/js/number-positive-infinity.html")}}{{js_property_attributes(0, 0, 0)}}
+{{EmbedInteractiveExample("pages/js/number-positive-infinity.html")}}
+
+## Value
+
+The same as the value of the global {{jsxref("Infinity")}} property.
+
+{{js_property_attributes(0, 0, 0)}}
 
 ## Description
 
-The value of `Number.POSITIVE_INFINITY` is the same as the value of the global object's {{jsxref("Infinity")}} property.
-
-This value behaves slightly differently than mathematical infinity:
+The `Number.POSITIVE_INFINITY` value behaves slightly differently than mathematical infinity:
 
 - Any positive value, including `POSITIVE_INFINITY`, multiplied by `POSITIVE_INFINITY` is `POSITIVE_INFINITY`.
 - Any negative value, including {{jsxref("Number.NEGATIVE_INFINITY", "NEGATIVE_INFINITY")}}, multiplied by `POSITIVE_INFINITY` is {{jsxref("Number.NEGATIVE_INFINITY", "NEGATIVE_INFINITY")}}.

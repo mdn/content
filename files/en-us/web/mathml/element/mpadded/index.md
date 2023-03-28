@@ -1,11 +1,6 @@
 ---
 title: <mpadded>
 slug: Web/MathML/Element/mpadded
-tags:
-  - MathML
-  - MathML Reference
-  - MathML:Element
-  - MathML:General Layout Schemata
 browser-compat: mathml.elements.mpadded
 ---
 
@@ -44,7 +39,7 @@ For the `depth`, `height`, `lspace`, `voffset` and `width` attributes, some brow
 
 ### Dimensions and offsets
 
-```html
+```html-nolint
 <math display="block">
   <mpadded width="400px" height="5em" depth="4em"
            lspace="300px" voffset="-2em"

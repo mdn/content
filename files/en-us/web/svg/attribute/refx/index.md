@@ -1,9 +1,7 @@
 ---
 title: refX
 slug: Web/SVG/Attribute/refX
-tags:
-  - NeedsBrowserCompatibility
-  - NeedsExample
+page-type: svg-attribute
 spec-urls:
   - https://svgwg.org/svg2-draft/painting.html#MarkerElementRefXAttribute
   - https://svgwg.org/svg2-draft/struct.html#SymbolElementRefXAttribute

@@ -2,16 +2,6 @@
 title: Basic concepts behind Web Audio API
 slug: Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API
 page-type: guide
-tags:
-  - Audio
-  - Beginner
-  - Guide
-  - Introduction
-  - Media
-  - Web Audio
-  - Web Audio API
-  - concepts
-  - sound
 ---
 
 {{DefaultAPISidebar("Web Audio API")}}
@@ -81,7 +71,7 @@ const context = new AudioContext();
 const buffer = new AudioBuffer(context, {
   numberOfChannels: 2,
   length: 22050,
-  sampleRate: 44100
+  sampleRate: 44100,
 });
 ```
 

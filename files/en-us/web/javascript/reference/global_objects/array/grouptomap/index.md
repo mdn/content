@@ -1,14 +1,9 @@
 ---
 title: Array.prototype.groupToMap()
 slug: Web/JavaScript/Reference/Global_Objects/Array/groupToMap
-tags:
-  - Array
-  - groupToMap
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - Experimental
+page-type: javascript-instance-method
+status:
+  - experimental
 browser-compat: javascript.builtins.Array.groupToMap
 ---
 
@@ -106,11 +101,11 @@ Each food has a `type` and a `quantity`.
 
 ```js
 const inventory = [
-  { name: 'asparagus', type: 'vegetables', quantity: 9 },
-  { name: 'bananas', type: 'fruit', quantity: 5 },
-  { name: 'goat', type: 'meat', quantity: 23 },
-  { name: 'cherries', type: 'fruit', quantity: 12 },
-  { name: 'fish', type: 'meat', quantity: 22 }
+  { name: "asparagus", type: "vegetables", quantity: 9 },
+  { name: "bananas", type: "fruit", quantity: 5 },
+  { name: "goat", type: "meat", quantity: 23 },
+  { name: "cherries", type: "fruit", quantity: 12 },
+  { name: "fish", type: "meat", quantity: 22 },
 ];
 ```
 
@@ -120,7 +115,9 @@ The returned `result` object is a `Map` so we need to call `get()` with the key 
 ```js
 const restock = { restock: true };
 const sufficient = { restock: false };
-const result = inventory.groupToMap(({ quantity }) => quantity < 6 ? restock : sufficient);
+const result = inventory.groupToMap(({ quantity }) =>
+  quantity < 6 ? restock : sufficient,
+);
 console.log(result.get(restock));
 // [{ name: "bananas", type: "fruit", quantity: 5 }]
 ```
@@ -135,7 +132,7 @@ For this reason it is important that anything that needs to use the map keeps a 
 
 ```js
 // The key can be modified and still used
-restock['fast'] = true;
+restock["fast"] = true;
 console.log(result.get(restock));
 // [{ name: "bananas", type: "fruit", quantity: 5 }]
 

@@ -2,12 +2,6 @@
 title: list-style-type
 slug: Web/CSS/list-style-type
 page-type: css-property
-tags:
-  - CSS
-  - CSS Lists
-  - CSS Property
-  - Reference
-  - recipe:css-property
 browser-compat: css.properties.list-style-type
 ---
 
@@ -52,9 +46,9 @@ list-style-type: unset;
 
 The `list-style-type` property may be defined as any one of:
 
-- a `<custom-ident>` value
-- a `symbols()` value
-- a `<string>` value
+- a `<custom-ident>` value,
+- a `symbols()` value,
+- a `<string>` value, or
 - the keyword `none`.
 
 Note that:
@@ -65,7 +59,7 @@ Note that:
 ### Values
 
 - {{cssxref("custom-ident", "&lt;custom-ident&gt;")}}
-  - : A identifier matching the value of a {{cssxref("@counter-style")}} or one of the predefined styles:
+  - : An identifier matching the value of a {{cssxref("@counter-style")}} or one of the predefined styles:
 - {{cssxref("symbols", "symbols()")}}
   - : Defines an anonymous style of the list.
 - {{cssxref("&lt;string&gt;")}}
@@ -119,11 +113,11 @@ Note that:
 - `gurmukhi`, `-moz-gurmukhi`
   - : Gurmukhi numbering.
 - `hebrew`
-  - : Traditional Hebrew numbering
+  - : Traditional Hebrew numbering.
 - `hiragana`
   - : Dictionary-order hiragana lettering.
 - `hiragana-iroha`
-  - : [Iroha-order](https://en.wikipedia.org/wiki/Iroha) hiragana lettering
+  - : [Iroha-order](https://en.wikipedia.org/wiki/Iroha) hiragana lettering.
 - `japanese-formal`
   - : Japanese formal numbering to be used in legal or financial documents. The kanjis are designed so that they can't be modified to look like another correct one.
 - `japanese-informal`
@@ -131,9 +125,9 @@ Note that:
 - `kannada`, `-moz-kannada`
   - : Kannada numbering.
 - `katakana`
-  - : Dictionary-order katakana lettering
+  - : Dictionary-order katakana lettering.
 - `katakana-iroha`
-  - : [Iroha-order](https://en.wikipedia.org/wiki/Iroha) katakana lettering
+  - : [Iroha-order](https://en.wikipedia.org/wiki/Iroha) katakana lettering.
 - `korean-hangul-formal`
   - : Korean hangul numbering.
 - `korean-hanja-formal`
@@ -153,7 +147,7 @@ Note that:
 - `oriya`, `-moz-oriya`
   - : Oriya numbering.
 - `persian`, `-moz-persian`
-  - : Persian numbering
+  - : Persian numbering.
 - `simp-chinese-formal`
   - : Simplified Chinese formal numbering.
 - `simp-chinese-informal`
@@ -179,7 +173,7 @@ Note that:
 
 ### Non-standard extensions
 
-A few more predefined types are provided by Mozilla (Firefox), Blink (Chrome and Opera) and WebKit (Safari) to support list types in other languages. See the compatibility table to check which browsers supports which extension.
+A few more predefined types are provided by Mozilla (Firefox), Blink (Chrome and Opera) and WebKit (Safari) to support list types in other languages. See the compatibility table to check which browsers support which extension.
 
 - `-moz-ethiopic-halehame`
 - `-moz-ethiopic-halehame-am`

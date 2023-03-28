@@ -1,20 +1,15 @@
 ---
 title: BigUint64Array
 slug: Web/JavaScript/Reference/Global_Objects/BigUint64Array
-tags:
-  - BigInt
-  - BigUInt64Array
-  - Class
-  - JavaScript
-  - Reference
-  - TypedArray
-  - TypedArrays
+page-type: javascript-class
 browser-compat: javascript.builtins.BigUint64Array
 ---
 
 {{JSRef}}
 
 The **`BigUint64Array`** typed array represents an array of 64-bit unsigned integers in the platform byte order. If control over byte order is needed, use {{jsxref("DataView")}} instead. The contents are initialized to `0n`. Once established, you can reference elements in the array using the object's methods, or by using standard array index syntax (that is, using bracket notation).
+
+`BigUint64Array` is a subclass of the hidden {{jsxref("TypedArray")}} class.
 
 ## Constructor
 
@@ -38,8 +33,12 @@ _Inherits static methods from its parent {{jsxref("TypedArray")}}_.
 
 _Also inherits instance properties from its parent {{jsxref("TypedArray")}}_.
 
+These properties are defined on `BigUint64Array.prototype` and shared by all `BigUint64Array` instances.
+
 - {{jsxref("TypedArray.BYTES_PER_ELEMENT", "BigUint64Array.prototype.BYTES_PER_ELEMENT")}}
   - : Returns a number value of the element size. `8` in the case of a `BigUint64Array`.
+- {{jsxref("Object/constructor", "BigUint64Array.prototype.constructor")}}
+  - : The constructor function that created the instance object. For `BigUint64Array` instances, the initial value is the {{jsxref("BigUint64Array/BigUint64Array", "BigUint64Array")}} constructor.
 
 ## Instance methods
 

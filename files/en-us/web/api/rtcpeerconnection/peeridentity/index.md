@@ -2,18 +2,6 @@
 title: RTCPeerConnection.peerIdentity
 slug: Web/API/RTCPeerConnection/peerIdentity
 page-type: web-api-instance-property
-tags:
-  - API
-  - Authentication
-  - Identification
-  - Identity
-  - Peer
-  - Property
-  - RTCPeerConnection
-  - Read-only
-  - Reference
-  - WebRTC
-  - WebRTC API
 browser-compat: api.RTCPeerConnection.peerIdentity
 ---
 

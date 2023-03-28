@@ -1,10 +1,7 @@
 ---
 title: pointsAtZ
 slug: Web/SVG/Attribute/pointsAtZ
-tags:
-  - Filters
-  - SVG
-  - SVG Attribute
+page-type: svg-attribute
 browser-compat: svg.elements.feSpotLight.pointsAtZ
 ---
 

@@ -1,11 +1,7 @@
 ---
-title: 'TypeError: cyclic object value'
+title: "TypeError: cyclic object value"
 slug: Web/JavaScript/Reference/Errors/Cyclic_object_value
-tags:
-  - Error
-  - Errors
-  - JavaScript
-  - TypeError
+page-type: javascript-error
 ---
 
 {{jsSidebar("Errors")}}
@@ -39,7 +35,7 @@ hence {{jsxref("JSON.stringify()")}} doesn't try to solve them and fails accordi
 In a circular structure like the following
 
 ```js
-const circularReference = {otherData: 123};
+const circularReference = { otherData: 123 };
 circularReference.myself = circularReference;
 ```
 

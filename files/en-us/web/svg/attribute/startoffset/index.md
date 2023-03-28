@@ -1,9 +1,7 @@
 ---
 title: startOffset
 slug: Web/SVG/Attribute/startOffset
-tags:
-  - SVG
-  - SVG Attribute
+page-type: svg-attribute
 browser-compat: svg.elements.textPath.startOffset
 ---
 

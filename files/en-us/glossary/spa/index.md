@@ -1,9 +1,7 @@
 ---
 title: SPA (Single-page application)
 slug: Glossary/SPA
-tags:
-  - SPA
-  - single-page app
+page-type: glossary-definition
 ---
 
 An SPA (Single-page application) is a web app implementation that loads only a single web document, and then updates the body content of that single document via JavaScript APIs such as {{domxref("XMLHttpRequest")}} and [Fetch](/en-US/docs/Web/API/Fetch_API) when different content is to be shown.

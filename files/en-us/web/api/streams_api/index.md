@@ -2,13 +2,6 @@
 title: Streams API
 slug: Web/API/Streams_API
 page-type: web-api-overview
-tags:
-  - API
-  - Experimental
-  - JavaScript
-  - Landing
-  - Reference
-  - Streams
 browser-compat:
   - api.ReadableStream
   - api.WritableStream

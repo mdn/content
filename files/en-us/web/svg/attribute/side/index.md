@@ -1,10 +1,9 @@
 ---
 title: side
 slug: Web/SVG/Attribute/side
-tags:
-  - SVG
-  - SVG Attribute
-  - Experimental
+page-type: svg-attribute
+status:
+  - experimental
 browser-compat: svg.elements.textPath.side
 ---
 

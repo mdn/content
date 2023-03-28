@@ -1,21 +1,13 @@
 ---
 title: Intl.Locale() constructor
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/Locale
-tags:
-  - Constructor
-  - Internationalization
-  - Intl
-  - JavaScript
-  - Locale
-  - Reference
+page-type: javascript-constructor
 browser-compat: javascript.builtins.Intl.Locale.Locale
 ---
 
 {{JSRef}}
 
-The **`Intl.Locale`** constructor is a
-standard built-in property of the Intl object that represents a Unicode locale
-identifier.
+The **`Intl.Locale()`** constructor creates {{jsxref("Intl.Locale")}} objects.
 
 {{EmbedInteractiveExample("pages/js/intl-locale.html")}}
 
@@ -35,8 +27,7 @@ new Intl.Locale(tag, options)
 - `tag`
   - : The Unicode locale identifier string.
 - `options`
-  - : An object that contains configuration for the Locale. Keys are Unicode locale tags,
-    values are valid Unicode tag values.
+  - : An object that contains configuration for the Locale. Keys are Unicode locale tags, values are valid Unicode tag values. Option values here take priority over extension keys in the locale identifier.
 
 ## Examples
 
@@ -46,7 +37,7 @@ At its very simplest, the {{jsxref("Intl/Locale/Locale", "Intl.Locale()")}} cons
 a locale identifier string as its argument:
 
 ```js
-const us = new Intl.Locale('en-US');
+const us = new Intl.Locale("en-US");
 ```
 
 ### Using the Locale constructor with an options object
@@ -59,7 +50,7 @@ into the constructor:
 
 ```js
 const locale = new Intl.Locale("en-US", { hourCycle: "h12" });
-console.log(locale.hourCycle); // Prints "h12"
+console.log(locale.hourCycle); // "h12"
 ```
 
 ## Specifications
