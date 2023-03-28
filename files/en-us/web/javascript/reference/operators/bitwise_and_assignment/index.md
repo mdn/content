@@ -7,17 +7,19 @@ browser-compat: javascript.operators.bitwise_and_assignment
 
 {{jsSidebar("Operators")}}
 
-The **bitwise AND assignment (`&=`)** operator uses the binary
-representation of both operands, does a bitwise AND operation on them and assigns the
-result to the variable.
+The **bitwise AND assignment (`&=`)** operator performs [bitwise AND](/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_AND) on the two operands and assigns the result to the left operand.
 
 {{EmbedInteractiveExample("pages/js/expressions-bitwise-and-assignment.html", "shorter")}}
 
 ## Syntax
 
 ```js-nolint
-x &= y // x = x & y
+x &= y
 ```
+
+## Description
+
+`x &= y` is equivalent to `x = x & y`.
 
 ## Examples
 
@@ -28,6 +30,9 @@ let a = 5;
 // 5:     00000000000000000000000000000101
 // 2:     00000000000000000000000000000010
 a &= 2; // 0
+
+let b = 5n;
+b &= 2n; // 0n
 ```
 
 ## Specifications
