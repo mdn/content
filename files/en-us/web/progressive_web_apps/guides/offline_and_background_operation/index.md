@@ -388,8 +388,8 @@ In this section we'll outline these steps. Several of these APIs require explici
 
 - The Background Sync API does not need an explicit user permission, but issuing a background sync request may only be made while the main app is open, and browsers limit the number of retries and the length of time background sync operations can take.
 
-- The Background Fetch API requires the `"background-fetch"` permission, and the browser displays the ongoing progress of the fetch operation, enabling the user to cancel it.
+- The Background Fetch API requires the `"background-fetch"` user permission, and the browser displays the ongoing progress of the fetch operation, enabling the user to cancel it.
 
-- The Periodic Background Sync API requires the `"periodic-background-sync"` permission, and browsers should allow users to disable periodic background sync completely. Also, browsers may tie the frequency of sync events to the extent to which the user chooses to interact with the app: so an app that the user rarely uses may receive few events (or even no events at all).
+- The Periodic Background Sync API requires the `"periodic-background-sync"` user permission, and browsers should allow users to disable periodic background sync completely. Also, browsers may tie the frequency of sync events to the extent to which the user chooses to interact with the app: so an app that the user rarely uses may receive few events (or even no events at all).
 
-- The Push API requires the `"push"` permission, and all browsers require push events to be user visible, meaning that they generate a user-visible notification.
+- The Push API requires the `"push"` user permission, and all browsers require push events to be user visible, meaning that they generate a user-visible notification.
