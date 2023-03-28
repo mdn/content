@@ -18,7 +18,7 @@ You can create an object using an [object initializer](/en-US/docs/Web/JavaScrip
 
 ### Using object initializers
 
-Object initializers are also called _object literals_. "Object initializer" is consistent with the terminology used by C++。
+Object initializers are also called _object literals_. "Object initializer" is consistent with the terminology used by C++.
 
 The syntax for an object using an object initializer is:
 

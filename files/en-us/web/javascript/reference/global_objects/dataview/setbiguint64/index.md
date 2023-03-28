@@ -22,16 +22,16 @@ setBigUint64(byteOffset, value, littleEndian)
 
 ### Parameters
 
-- byteOffset
+- `byteOffset`
   - : The offset, in bytes, from the start of the view to store the data from.
-- value
+- `value`
   - : The value to set as a {{jsxref("BigInt")}}. The highest possible value that fits in
     an unsigned 64-bit integer is
     `2n ** 64n - 1n`
     (`18446744073709551615n`). Upon overflow, it will be zero
     (`0n`).
-- littleEndian
-  - : {{optional_inline}} Indicates whether the 64-bit int is stored in [little- or big-endian](/en-US/docs/Glossary/Endianness) format. If
+- `littleEndian` {{optional_inline}}
+  - : Indicates whether the 64-bit int is stored in [little- or big-endian](/en-US/docs/Glossary/Endianness) format. If
     `false` or `undefined`, a big-endian value is written.
 
 ### Return value

@@ -7,9 +7,7 @@ browser-compat: javascript.builtins.Intl.DisplayNames.DisplayNames
 
 {{JSRef}}
 
-The **`Intl.DisplayNames()`** constructor creates
-{{jsxref("Intl/DisplayNames", "Intl.DisplayNames")}} objects that enable the consistent
-translation of language, region and script display names.
+The **`Intl.DisplayNames()`** constructor creates {{jsxref("Intl.DisplayNames")}} objects.
 
 {{EmbedInteractiveExample("pages/js/intl-displaynames.html")}}
 

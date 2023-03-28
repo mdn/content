@@ -45,6 +45,5 @@ console.log(canvas.width); // 300
 
 ## See also
 
-- The interface defining it, {{domxref("HTMLCanvasElement")}}.
-- The other property controlling the size of the canvas,
-  {{domxref("HTMLCanvasElement.height")}}.
+- {{domxref("HTMLCanvasElement")}}: Interface used to define the `HTMLCanvasElement.width` property
+- {{domxref("HTMLCanvasElement.height")}}: Other property used to control the size of the canvas

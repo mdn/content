@@ -106,7 +106,7 @@ const updatePixelRatio = () => {
   let media = matchMedia(mqString);
   media.addEventListener("change", updatePixelRatio);
   remove = function () {
-    media.removeListener(updatePixelRatio);
+    media.removeEventListener("change", updatePixelRatio);
   };
 
   console.log("devicePixelRatio: " + window.devicePixelRatio);

@@ -7,8 +7,7 @@ browser-compat: javascript.builtins.WeakRef.WeakRef
 
 {{JSRef}}
 
-The **`WeakRef`** constructor creates a {{jsxref("WeakRef")}}
-object referring to a given target object.
+The **`WeakRef()`** constructor creates {{jsxref("WeakRef")}} objects.
 
 ## Syntax
 

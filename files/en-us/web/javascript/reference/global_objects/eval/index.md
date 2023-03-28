@@ -385,7 +385,7 @@ const str = `if (x === 5) {
   z = 0;
 }`;
 
-console.log("x is ", eval(str)); // z is 42  x is 420
+console.log("x is", eval(str)); // z is 42  x is 420
 ```
 
 ### eval() as a string defining function requires "(" and ")" as prefix and suffix

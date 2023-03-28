@@ -32,4 +32,4 @@ console.log(obj.buffered); // TimeRanges { length: 0 }
 
 ## See also
 
-- The interface defining it, {{domxref("HTMLMediaElement")}}.
+- {{domxref("HTMLMediaElement")}}: Interface used to define the `HTMLMediaElement.buffered` property
