@@ -180,7 +180,7 @@ How long is "too long" is browser-specific. For Chrome, the service worker is li
 
 - It has been idle for 30 seconds
 - It has been running synchronous JavaScript for 30 seconds
-- The promise passed to `waitUntil()` has taken more than 5 minutes to settle.
+- The promise passed to `waitUntil()` has taken more than 5 minutes to settle
 
 ## Background fetch
 
@@ -426,3 +426,21 @@ In this section we'll outline these steps. Several of these APIs require explici
 - The Periodic Background Sync API requires the `"periodic-background-sync"` user permission, and browsers should allow users to disable periodic background sync completely. Also, browsers may tie the frequency of sync events to the extent to which the user chooses to interact with the app: so an app that the user rarely uses may receive few events (or even no events at all).
 
 - The Push API requires the `"push"` user permission, and all browsers require push events to be user visible, meaning that they generate a user-visible notification.
+
+## See also
+
+### Reference
+
+- [Service Worker API](/en-US/docs/Web/API/Service_Worker_API)
+- [Background Synchronization API](/en-US/docs/Web/API/Background_Synchronization_API)
+- [Background Fetch API](/en-US/docs/Web/API/Background_Fetch_API)
+- [Periodic Background Synchronization API](/en-US/docs/Web/API/Web_Periodic_Background_Synchronization_API)
+- [Push API](/en-US/docs/Web/API/Push_API)
+- [Notifications API](/en-US/docs/Web/API/Notifications_API)
+
+### Guides
+
+- [Introducing Background Sync](https://developer.chrome.com/blog/background-sync/) on web.dev (September 22, 2017)
+- [Introducing Background Fetch](https://developer.chrome.com/blog/background-fetch/) on web.dev (July 28, 2022)
+- [The Periodic Background Sync API](https://developer.chrome.com/articles/periodic-background-sync/) on web.dev (August 18, 2020)
+- [PWA with offline streaming](https://web.dev/pwa-with-offline-streaming/) on web.dev (July 5, 2021)
