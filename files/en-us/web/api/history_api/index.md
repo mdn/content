@@ -70,7 +70,7 @@ const numberOfEntries = history.length;
 - {{domxref("History")}}
   - : Allows manipulation of the browser _session history_ (that is, the pages visited in the tab or frame that the current page is loaded in).
 - {{domxref("PopStateEvent")}}
-  - : The interfave of the {{domxref("Window.popstate_event", "popstate")}} event.
+  - : The interface of the {{domxref("Window.popstate_event", "popstate")}} event.
 
 ## Examples
 
