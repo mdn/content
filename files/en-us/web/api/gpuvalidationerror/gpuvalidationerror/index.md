@@ -27,7 +27,7 @@ new GPUValidationError(message)
 
 A developer would not manually use the constructor to create a `GPUValidationError` object. The user agent uses this constructor to create an appropriate object when a validation error is surfaced by {{domxref("GPUDevice.popErrorScope")}} or the {{domxref("GPUDevice.uncapturederror_event", "uncapturederror")}} event.
 
-See the main [`GPUValidationError`](/en-US/docs/Web/API/GPUValidationError#examples) page for a specific example involving a `GPUValidationError`.
+See the main [`GPUValidationError`](/en-US/docs/Web/API/GPUValidationError#examples) page for a specific example involving a `GPUValidationError` object instance.
 
 ## Specifications
 

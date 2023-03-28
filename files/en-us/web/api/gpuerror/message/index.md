@@ -22,6 +22,7 @@ For usage examples of error objects based on `GPUError`, see:
 
 - [`GPUDevice.popErrorScope`](/en-US/docs/Web/API/GPUDevice/popErrorScope#examples)
 - [The `GPUDevice uncapturederror` event](/en-US/docs/Web/API/GPUDevice/uncapturederror_event#examples)
+- {{domxref("GPUInternalError")}}, {{domxref("GPUOutOfMemoryError")}}, and {{domxref("GPUValidationError")}}
 
 ## Specifications
 

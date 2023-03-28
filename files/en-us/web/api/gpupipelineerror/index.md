@@ -45,7 +45,7 @@ try {
     },
   });
 } catch (error) {
-  // error is a GPUPipelineError
+  // error is a GPUPipelineError object instance
   console.error(error.reason);
   console.error(`Pipeline creation failed: ${error.message}`);
 }

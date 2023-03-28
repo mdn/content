@@ -43,7 +43,7 @@ let buffer = device.createBuffer({
 
 device.popErrorScope().then((error) => {
   if (error) {
-    // error is a GPUOutOfMemoryError
+    // error is a GPUOutOfMemoryError object instance
     buffer = null;
     console.error(`Out of memory, buffer too large. Error: ${error.message}`);
   }

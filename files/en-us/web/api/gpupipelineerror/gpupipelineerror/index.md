@@ -33,7 +33,7 @@ new GPUPipelineError(message, options)
 
 A developer would not manually use the constructor to create a `GPUPipelineError` object. The user agent uses this constructor to create an appropriate object when a {{jsxref("Promise")}} returned by a {{domxref("GPUDevice.createComputePipelineAsync()")}} or {{domxref("GPUDevice.createRenderPipelineAsync()")}} call rejects, signalling a pipeline failure.
 
-See the main [`GPUPipelineError`](/en-US/docs/Web/API/GPUPipelineError#examples) page for an example involving a `GPUPipelineError`.
+See the main [`GPUPipelineError`](/en-US/docs/Web/API/GPUPipelineError#examples) page for an example involving a `GPUPipelineError` object instance.
 
 ## Specifications
 

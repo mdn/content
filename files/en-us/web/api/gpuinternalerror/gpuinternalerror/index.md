@@ -27,7 +27,7 @@ new GPUInternalError(message)
 
 A developer would not manually use the constructor to create a `GPUInternalError` object. The user agent uses this constructor to create an appropriate object when an internal error is surfaced by {{domxref("GPUDevice.popErrorScope")}} or the {{domxref("GPUDevice.uncapturederror_event", "uncapturederror")}} event.
 
-See the main [`GPUInternalError`](/en-US/docs/Web/API/GPUInternalError#examples) page for an example involving a `GPUInternalError`.
+See the main [`GPUInternalError`](/en-US/docs/Web/API/GPUInternalError#examples) page for an example involving a `GPUInternalError` object instance.
 
 ## Specifications
 

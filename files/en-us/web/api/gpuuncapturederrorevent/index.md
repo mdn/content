@@ -35,8 +35,8 @@ You could use something like the following as a global mechanism to pick up any 
 // ...
 
 device.addEventListener("uncapturederror", (event) => {
-  // Re-surface the error.
-  console.error("A WebGPU error was not captured:", event.error);
+  // Re-surface the error
+  console.error("A WebGPU error was not captured:", event.error.message);
   reportErrorToServer({
     type: event.error.constructor.name,
     message: event.error.message,

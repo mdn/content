@@ -10,7 +10,7 @@ browser-compat: api.GPUPipelineError.reason
 {{APIRef("WebGPU API")}}{{SeeCompatTable}}
 
 The **`reason`** read-only property of the
-{{domxref("GPUPipelineError")}} interface defines the pipeline creation failed in a machine-readable way.
+{{domxref("GPUPipelineError")}} interface defines the reason the pipeline creation failed in a machine-readable way.
 
 ## Value
 
@@ -23,7 +23,7 @@ An enumerated value that can be one of:
 
 ## Examples
 
-See the main [`GPUPipelineError`](/en-US/docs/Web/API/GPUPipelineError#examples) page for an example involving a `GPUPipelineError`.
+See the main [`GPUPipelineError`](/en-US/docs/Web/API/GPUPipelineError#examples) page for an example involving a `GPUPipelineError` object instance.
 
 ## Specifications
 

@@ -42,7 +42,7 @@ const module = device.createShaderModule({
 
 device.popErrorScope().then((error) => {
   if (error) {
-    // error is a GPUInternalError
+    // error is a GPUInternalError object instance
     module = null;
     console.error(`An error occured while creating shader: ${error.message}`);
   }

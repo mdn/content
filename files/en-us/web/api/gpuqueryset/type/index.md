@@ -10,7 +10,7 @@ browser-compat: api.GPUQuerySet.type
 {{APIRef("WebGPU API")}}{{SeeCompatTable}}
 
 The **`type`** read-only property of the
-{{domxref("GPUQuerySet")}} interface is an emumerated value specifying the type of queries managed by the `GPUQuerySet`.
+{{domxref("GPUQuerySet")}} interface is an enumerated value specifying the type of queries managed by the `GPUQuerySet`.
 
 ## Value
 
