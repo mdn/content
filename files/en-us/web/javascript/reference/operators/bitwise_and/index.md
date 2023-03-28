@@ -7,38 +7,25 @@ browser-compat: javascript.operators.bitwise_and
 
 {{jsSidebar("Operators")}}
 
-The **bitwise AND (`&`)** operator returns a `1` in each bit
-position for which the corresponding bits of both operands are `1`s.
+The **bitwise AND (`&`)** operator returns a number or BigInt whose binary representation has a `1` in each bit position for which the corresponding bits of both operands are `1`.
 
 {{EmbedInteractiveExample("pages/js/expressions-bitwise-and.html", "shorter")}}
 
 ## Syntax
 
 ```js-nolint
-a & b
+x & y
 ```
 
 ## Description
 
-The operands are converted to 32-bit integers and expressed by a series of bits (zeroes
-and ones). Numbers with more than 32 bits get their most significant bits discarded. For
-example, the following integer with more than 32 bits will be converted to a 32-bit
-integer:
+The `&` operator is overloaded for two types of operands: number and [BigInt](/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt). For numbers, the operator returns a 32-bit integer. For BigInts, the operator returns a BigInt. It first [coerces both operands to numeric values](/en-US/docs/Web/JavaScript/Data_structures#numeric_coercion) and tests the types of them. It performs BigInt AND if both operands becomes BigInts; otherwise, it converts both operands to [32-bit integers](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#fixed-width_number_conversion) and performs number bitwise AND. A {{jsxref("TypeError")}} is thrown if one operand becomes a BigInt but the other becomes a number.
 
-```plain
-Before: 11100110111110100000000000000110000000000001
-After:              10100000000000000110000000000001
-```
-
-Each bit in the first operand is paired with the corresponding bit in the second
-operand: _first bit_ to _first bit_, _second bit_ to _second
-bit_, and so on.
-
-The operator is applied to each pair of bits, and the result is constructed bitwise.
+The operator operates on the operands' bit representations in [two's complement](https://en.wikipedia.org/wiki/Two's_complement). Each bit in the first operand is paired with the corresponding bit in the second operand: _first bit_ to _first bit_, _second bit_ to _second bit_, and so on. The operator is applied to each pair of bits, and the result is constructed bitwise.
 
 The truth table for the AND operation is:
 
-| a   | b   | a AND b |
+| x   | y   | x AND y |
 | --- | --- | ------- |
 | 0   | 0   | 0       |
 | 0   | 1   | 0       |
@@ -52,6 +39,15 @@ The truth table for the AND operation is:
 14 & 9 (base 10) = 00000000000000000000000000001000 (base 2) = 8 (base 10)
 ```
 
+Numbers with more than 32 bits get their most significant bits discarded. For example, the following integer with more than 32 bits will be converted to a 32-bit integer:
+
+```plain
+Before: 11100110111110100000000000000110000000000001
+After:              10100000000000000110000000000001
+```
+
+For BigInts, there's no truncation. Conceptually, understand positive BigInts as having an infinite number of leading `0` bits, and negative BigInts having an infinite number of leading `1` bits.
+
 Bitwise ANDing any number `x` with `-1` returns `x` converted to a 32-bit integer. Do not use `& -1` to truncate numbers to integers; use [`Math.trunc()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/trunc#using_bitwise_no-ops_to_truncate_numbers) instead.
 
 ## Examples
@@ -62,6 +58,8 @@ Bitwise ANDing any number `x` with `-1` returns `x` converted to a 32-bit intege
 // 5: 00000000000000000000000000000101
 // 2: 00000000000000000000000000000010
 5 & 2; // 0
+
+5n & 2n; // 0n
 ```
 
 ## Specifications
