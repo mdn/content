@@ -75,7 +75,7 @@ Such values are used without quotes:
 In addition to the pre-defined keywords that are part of the specification for a property, all CSS properties accept the CSS-wide property values {{cssxref("initial")}}, {{cssxref("inherit")}}, {{cssxref("unset")}}, and {{cssxref("revert")}}, which explicitly specify defaulting behaviors.
 
 - {{cssxref("initial")}}
-  - : Represents the value specified as the property's initial value. 
+  - : Represents the value specified as the property's initial value.
 - {{cssxref("inherit")}}
   - : Represents the computed value of the property on the element's parent, provided it is inherited.
 - {{cssxref("unset")}}
