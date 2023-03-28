@@ -15,23 +15,21 @@ The **`setScissorRect()`** method of the
 ## Syntax
 
 ```js-nolint
-setScissorRect()
-setScissorRect(x, y)
 setScissorRect(x, y, width, height)
 ```
 
 ### Parameters
 
-- `x` {{optional_inline}}
+- `x`
   - : A number representing the minimum X value of the scissor rectangle, in pixels.
-- `y` {{optional_inline}}
+- `y`
   - : A number representing the minimum Y value of the scissor rectangle, in pixels.
-- `width` {{optional_inline}}
+- `width`
   - : A number representing the width of the scissor rectangle, in pixels.
-- `height` {{optional_inline}}
+- `height`
   - : A number representing the height of the scissor rectangle, in pixels.
 
-> **Note:** If any values are omitted, or if a `setScissorRect()` call is not made, the default values are `(0, 0, attachment width, attachment height)` for each render pass.
+> **Note:** If a `setScissorRect()` call is not made, the default values are `(0, 0, attachment width, attachment height)` for each render pass.
 
 ### Return value
 

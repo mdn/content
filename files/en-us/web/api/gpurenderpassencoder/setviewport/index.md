@@ -15,27 +15,25 @@ The **`setViewport()`** method of the
 ## Syntax
 
 ```js-nolint
-setViewport(x, y)
-setViewport(x, y, width, height)
 setViewport(x, y, width, height, minDepth, maxDepth)
 ```
 
 ### Parameters
 
-- `x` {{optional_inline}}
+- `x`
   - : A number representing the minimum X value of the viewport, in pixels.
-- `y` {{optional_inline}}
+- `y`
   - : A number representing the minimum Y value of the viewport, in pixels.
-- `width` {{optional_inline}}
+- `width`
   - : A number representing the width of the viewport, in pixels.
-- `height` {{optional_inline}}
+- `height`
   - : A number representing the height of the viewport, in pixels.
-- `minDepth` {{optional_inline}}
+- `minDepth`
   - : A number representing the minimum depth value of the viewport.
-- `maxDepth` {{optional_inline}}
+- `maxDepth`
   - : A number representing the maximum depth value of the viewport.
 
-> **Note:** If any values are omitted, or if a `setViewport()` call is not made, the default values are `(0, 0, attachment width, attachment height, 0, 1)` for each render pass.
+> **Note:** If a `setViewport()` call is not made, the default values are `(0, 0, attachment width, attachment height, 0, 1)` for each render pass.
 
 ### Return value
 

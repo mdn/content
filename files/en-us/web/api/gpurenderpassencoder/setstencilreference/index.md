@@ -12,8 +12,6 @@ browser-compat: api.GPURenderPassEncoder.setStencilReference
 The **`setStencilReference()`** method of the
 {{domxref("GPURenderPassEncoder")}} interface sets the stencil reference value using during stencil tests with the `"replace"` stencil operation (as set in the descriptor of the {{domxref("GPUDevice.createRenderPipeline()")}} method, in the properties defining the various stencil operations).
 
-> **Note:** If a `setStencilReference()` call is not made, the stencil reference value defaults to 0.
-
 ## Syntax
 
 ```js-nolint
@@ -24,6 +22,8 @@ setStencilReference(reference)
 
 - `reference`
   - : A number representing the new stencil reference value to set for the render pass.
+
+> **Note:** If a `setStencilReference()` call is not made, the stencil reference value defaults to 0 for each render pass.
 
 ### Return value
 
