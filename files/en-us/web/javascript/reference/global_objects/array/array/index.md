@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Array.Array
 
 {{JSRef}}
 
-The **`Array()`** constructor is used to create {{jsxref("Array")}} objects.
+The **`Array()`** constructor creates {{jsxref("Array")}} objects.
 
 ## Syntax
 

@@ -41,7 +41,7 @@ This example displays a message when something is selected on the page or not. I
 ```js
 const log = document.getElementById("log");
 
-// The selection object is a singleton associated with the docuemnt
+// The selection object is a singleton associated with the document
 const selection = document.getSelection();
 
 // Logs if there is a selection or not

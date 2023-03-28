@@ -35,6 +35,5 @@ A string.
 
 ## See also
 
-- [Making content editable](/en-US/docs/Web/Guide/HTML/Editable_content)
 - {{domxref("HTMLElement.isContentEditable")}}
 - The [`contenteditable`](/en-US/docs/Web/HTML/Global_attributes#contenteditable) global attribute.
