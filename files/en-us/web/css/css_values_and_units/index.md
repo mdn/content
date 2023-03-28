@@ -81,7 +81,7 @@ In addition to the pre-defined keywords that are part of the specification for a
 - {{cssxref("unset")}}
   - : Acts as either `inherit` or `initial`, depending on whether the property is inherited or not.
 - {{cssxref("revert")}}
-  - : Resets the property to its inherited value if it inherits from its parent or to the default value established by the user agent's stylesheet (or by user styles, if any exist)
+  - : Resets the property to its inherited value if it inherits from its parent or to the default value established by the user agent's stylesheet (or by user styles, if any exist).
 
 ### URLs
 
