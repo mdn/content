@@ -6,7 +6,7 @@ browser-compat: html.manifest
 
 {{QuickLinksWithSubpages("/en-US/docs/Web/Manifest")}}
 
-**Web app manifests** are part of a collection of web technologies called [progressive web apps](/en-US/docs/Web/Progressive_web_apps) (PWAs).
+**Web app manifests** are part of a collection of web technologies that enable [progressive web apps](/en-US/docs/Web/Progressive_web_apps) (PWAs).
 
 PWAs are web applications, written using web technologies, that can be installed on a device without an app store. Unlike browser or home screen bookmarks, installed PWAs can work offline, can use regular [Web APIs](/en-US/docs/Web/API), and can be fully integrated into the operating system they're installed on.
 
