@@ -19,23 +19,6 @@ In a tabbed browser, each tab is represented by its own `Window` object; the glo
 
 {{InheritanceDiagram}}
 
-## Constructors
-
-See also the [DOM Interfaces](/en-US/docs/Web/API/Document_Object_Model).
-
-- {{domxref("DOMParser")}}
-  - : `DOMParser` can parse XML or HTML source stored in a string into a DOM [Document](/en-US/docs/Web/API/Document). `DOMParser` is specified in [DOM Parsing and Serialization](https://w3c.github.io/DOM-Parsing/).
-- {{domxref("HTMLImageElement.Image")}}
-  - : Used for creating an {{domxref("HTMLImageElement")}}.
-- {{domxref("HTMLOptionElement.Option")}}
-  - : Used for creating an {{domxref("HTMLOptionElement")}}.
-- {{domxref("StaticRange")}} {{Experimental_Inline}} {{ReadOnlyInline}}
-  - : Returns a {{domxref("StaticRange.StaticRange","StaticRange()")}} constructor which creates a {{domxref("StaticRange")}} object.
-- {{domxref("Worker")}}
-  - : Used for creating a [Web worker](/en-US/docs/Web/API/Web_Workers_API/Using_web_workers).
-- {{domxref("XMLSerializer")}}
-  - : Converts a DOM tree into XML or HTML source.
-
 ## Instance properties
 
 _This interface inherits properties from the {{domxref("EventTarget")}} interface._
@@ -58,10 +41,6 @@ Note that properties which are objects (e.g., for overriding the prototype of bu
   - : Returns the ratio between physical pixels and device independent pixels in the current display.
 - {{domxref("Window.document")}} {{ReadOnlyInline}}
   - : Returns a reference to the document that the window contains.
-- {{domxref("Window.event")}} {{Deprecated_Inline}} {{ReadOnlyInline}}
-  - : Returns the **current event**, which is the event currently being handled by the JavaScript code's context, or `undefined` if no event is currently being handled. The {{domxref("Event")}} object passed directly to event handlers should be used instead whenever possible.
-- {{domxref("Window.external")}} {{Deprecated_Inline}} {{ReadOnlyInline}}
-  - : Returns an object with functions for adding external search providers to the browser.
 - {{domxref("Window.frameElement")}} {{ReadOnlyInline}}
   - : Returns the element in which the window is embedded, or null if the window is not embedded.
 - {{domxref("Window.frames")}} {{ReadOnlyInline}}
@@ -88,8 +67,6 @@ Note that properties which are objects (e.g., for overriding the prototype of bu
   - : Returns a reference to the local storage object used to store data that may only be accessed by the origin that created it.
 - {{domxref("Window.menubar")}} {{ReadOnlyInline}}
   - : Returns the menubar object.
-- {{domxref("Window.messageManager")}} {{Non-standard_Inline}}
-  - : Returns the [message manager](/en-US/docs/The_message_manager) object for this window.
 - {{domxref("Window.mozInnerScreenX")}} {{ReadOnlyInline}} {{Non-standard_Inline}}
   - : Returns the horizontal (X) coordinate of the top-left corner of the window's viewport, in screen coordinates. This value is reported in CSS pixels. See `mozScreenPixelsPerCSSPixel` in `nsIDOMWindowUtils` for a conversion factor to adapt to screen pixels if needed.
 - {{domxref("Window.mozInnerScreenY")}} {{ReadOnlyInline}} {{Non-standard_Inline}}
@@ -136,12 +113,8 @@ Note that properties which are objects (e.g., for overriding the prototype of bu
   - : Returns an object reference to the window object itself.
 - {{domxref("Window.sessionStorage")}}
   - : Returns a reference to the session storage object used to store data that may only be accessed by the origin that created it.
-- {{domxref("Window.sidebar")}} {{Deprecated_Inline}} {{Non-standard_Inline}} {{ReadOnlyInline}}
-  - : Returns a reference to the window object of the sidebar.
 - {{domxref("Window.speechSynthesis")}} {{ReadOnlyInline}}
   - : Returns a {{domxref("SpeechSynthesis")}} object, which is the entry point into using [Web Speech API](/en-US/docs/Web/API/Web_Speech_API) speech synthesis functionality.
-- {{domxref("Window.status")}} {{Deprecated_Inline}}
-  - : Gets/sets the text in the statusbar at the bottom of the browser.
 - {{domxref("Window.statusbar")}} {{ReadOnlyInline}}
   - : Returns the statusbar object.
 - {{domxref("Window.toolbar")}} {{ReadOnlyInline}}
@@ -169,14 +142,22 @@ Note that properties which are objects (e.g., for overriding the prototype of bu
 
 ### Deprecated properties
 
-- {{domxref("Window.content")}} and `Window._content` {{Non-standard_Inline}} {{Deprecated_Inline}} {{ReadOnlyInline}}
+- {{domxref("Window.content")}} and `Window._content` {{Deprecated_Inline}} {{Non-standard_Inline}} {{ReadOnlyInline}}
   - : Returns a reference to the content element in the current window. Since Firefox 57 (initially Nightly-only), both versions are only available from chrome (privileged) code, and not available to the web anymore.
 - {{domxref("Window.defaultStatus")}} {{Deprecated_Inline}}
   - : Gets/sets the status bar text for the given window.
-- {{domxref("Window.orientation")}} {{ReadOnlyInline}} {{Deprecated_Inline}}
+- {{domxref("Window.event")}} {{Deprecated_Inline}} {{ReadOnlyInline}}
+  - : Returns the **current event**, which is the event currently being handled by the JavaScript code's context, or `undefined` if no event is currently being handled. The {{domxref("Event")}} object passed directly to event handlers should be used instead whenever possible.
+- {{domxref("Window.external")}} {{Deprecated_Inline}} {{ReadOnlyInline}}
+  - : Returns an object with functions for adding external search providers to the browser.
+- {{domxref("Window.orientation")}} {{Deprecated_Inline}} {{ReadOnlyInline}}
   - : Returns the orientation in degrees (in 90 degree increments) of the viewport relative to the device's natural orientation.
 - {{domxref("Window.returnValue")}} {{Deprecated_Inline}}
   - : The return value to be returned to the function that called {{domxref("window.showModalDialog()")}} to display the window as a modal dialog.
+- {{domxref("Window.sidebar")}} {{Deprecated_Inline}} {{Non-standard_Inline}} {{ReadOnlyInline}}
+  - : Returns a reference to the window object of the sidebar
+- {{domxref("Window.status")}} {{Deprecated_Inline}}
+  - : Gets/sets the text in the statusbar at the bottom of the browser.
 
 ## Instance methods
 
@@ -294,8 +275,6 @@ _This interface inherits methods from the {{domxref("EventTarget")}} interface a
   - : Registers the window to capture all events of the specified type.
 - {{domxref("Window.forward()")}} {{Non-standard_Inline}} {{Deprecated_Inline}}
   - : Moves the window one document forward in the history. This method is deprecated; you should instead use {{domxref("History.forward", "window.history.forward()")}}.
-- {{domxref("Window.home()")}} {{Non-standard_Inline}} {{Deprecated_Inline}}
-  - : Returns the browser to the home page.
 - {{domxref("Window.releaseEvents()")}} {{Deprecated_Inline}}
   - : Releases the window from trapping events of a specific type.
 - {{domxref("Window.showModalDialog()")}} {{Non-standard_Inline}} {{Deprecated_Inline}}
@@ -309,8 +288,6 @@ Listen to these events using [`addEventListener()`](/en-US/docs/Web/API/EventTar
   - : Fired when a resource failed to load, or can't be used. For example, if a script has an execution error or an image can't be found or is invalid.
 - {{domxref("Window/languagechange_event", "languagechange")}}
   - : Fired at the global scope object when the user's preferred language changes.
-- {{domxref("Window/orientationchange_event", "orientationchange")}} {{Deprecated_Inline}}
-  - : Fired when the orientation of the device has changed.
 - {{domxref("Window.devicemotion_event", "devicemotion")}}
   - : Fired at a regular interval, indicating the amount of physical force of acceleration the device is receiving and the rate of rotation, if available.
 - {{domxref("Window.deviceorientation_event", "deviceorientation")}}
@@ -319,16 +296,6 @@ Listen to these events using [`addEventListener()`](/en-US/docs/Web/API/EventTar
   - : Fired when the window has been resized.
 - {{domxref("Window/storage_event", "storage")}}
   - : Fired when a storage area (`localStorage` or `sessionStorage`) has been modified in the context of another document.
-- {{domxref("Window.vrdisplayconnect_event", "vrdisplayconnect")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
-  - : Fired when a compatible VR device has been connected to the computer.
-- {{domxref("Window.vrdisplaydisconnect_event", "vrdisplaydisconnect")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
-  - : Fired when a compatible VR device has been disconnected from the computer.
-- {{domxref("Window.vrdisplayactivate_event", "vrdisplayactivate")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
-  - : Fired when a display is able to be presented to.
-- {{domxref("Window.vrdisplaydeactivate_event", "vrdisplaydeactivate")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
-  - : Fired when a display can no longer be presented to.
-- {{domxref("Window.vrdisplaypresentchange_event", "vrdisplaypresentchange")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
-  - : Fired when the presenting state of a VR device changes — i.e. goes from presenting to not presenting, or vice versa.
 
 ### Animation events
 
@@ -435,29 +402,20 @@ Listen to these events using [`addEventListener()`](/en-US/docs/Web/API/EventTar
 - {{domxref("Window/transitionstart_event", "transitionstart")}}
   - : Fired when a [CSS transition](/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions) has actually started.
 
-### WebVR events
+### Deprecated events
 
-- {{domxref("Window/vrdisplayactivate_event", "vrdisplayactivate")}}
-  - : Fired when a VR display becomes available to be presented to, for example if an HMD has been moved to bring it out of standby, or woken up by being put on.
-    Also available via the {{domxref("Window/onvrdisplayactivate", "onvrdisplayactivate")}} property.
-- {{domxref("Window/vrdisplayblur_event", "vrdisplayblur")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
-  - : Fired when presentation to a VR display has been paused for some reason by the browser, OS, or VR hardware.
-    Also available via the {{domxref("Window/onvrdisplayblur", "onvrdisplayblur")}} property.
-- {{domxref("Window/vrdisplayconnect_event", "vrdisplayconnect")}}
-  - : Fired when a compatible VR display is connected to the computer.
-    Also available via the {{domxref("Window/onvrdisplayconnect", "onvrdisplayconnect")}} property.
-- {{domxref("Window/vrdisplaydeactivate_event", "vrdisplaydeactivate")}}
-  - : Fired when a VR display can no longer be presented to, for example if an HMD has gone into standby or sleep mode due to a period of inactivity.
-    Also available via the {{domxref("Window/onvrdisplaydeactivate", "onvrdisplaydeactivate")}} property.
-- {{domxref("Window/vrdisplaydisconnect_event", "vrdisplaydisconnect")}}
-  - : Fired when a compatible VR display is disconnected from the computer.
-    Also available via the {{domxref("Window/onvrdisplaydisconnect", "onvrdisplaydisconnect")}} property.
-- {{domxref("Window/vrdisplayfocus_event", "vrdisplayfocus")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
-  - : Fired when presentation to a VR display has resumed after being blurred.
-    Also available via the {{domxref("Window/onvrdisplayfocus", "onvrdisplayfocus")}} property.
-- {{domxref("Window/vrdisplaypresentchange_event", "vrdisplaypresentchange")}}
-  - : Fired when the presenting state of a VR display changes — i.e. goes from presenting to not presenting, or vice versa.
-    Also available via the {{domxref("Window/onvrdisplaypresentchange", "onvrdisplaypresentchange")}} property.
+- {{domxref("Window/orientationchange_event", "orientationchange")}} {{Deprecated_Inline}}
+  - : Fired when the orientation of the device has changed.
+- {{domxref("Window/vrdisplayactivate_event", "vrdisplayactivate")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
+  - : Fired when a display is able to be presented to.
+- {{domxref("Window/vrdisplayconnect_event", "vrdisplayconnect")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
+  - : Fired when a compatible VR device has been connected to the computer.
+- {{domxref("Window/vrdisplaydisconnect_event", "vrdisplaydisconnect")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
+  - : Fired when a compatible VR device has been disconnected from the computer.
+- {{domxref("Window/vrdisplaydeactivate_event", "vrdisplaydeactivate")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
+  - : Fired when a display can no longer be presented to.
+- {{domxref("Window/vrdisplaypresentchange_event", "vrdisplaypresentchange")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
+  - : Fired when the presenting state of a VR device changes — i.e. goes from presenting to not presenting, or vice versa.
 
 ## Interfaces
 

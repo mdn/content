@@ -7,9 +7,7 @@ browser-compat: javascript.builtins.Intl.Collator.Collator
 
 {{JSRef}}
 
-The **`Intl.Collator()`** constructor creates
-{{jsxref("Intl/Collator", "Intl.Collator")}} objects that enable language-sensitive string
-comparison.
+The **`Intl.Collator()`** constructor creates {{jsxref("Intl.Collator")}} objects.
 
 {{EmbedInteractiveExample("pages/js/intl-collator.html")}}
 

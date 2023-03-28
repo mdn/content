@@ -47,7 +47,7 @@ const mediaList = myRules[0]; // a CSSMediaRule representing the media query.
 log.textContent += ` ${mediaList.media.mediaText}`;
 ```
 
-{{EmbedLiveSample("Examples","100%","300px")}}
+{{EmbedLiveSample("Examples","100%","50px")}}
 
 ## Specifications
 
