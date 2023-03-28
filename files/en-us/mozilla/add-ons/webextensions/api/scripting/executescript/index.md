@@ -58,6 +58,8 @@ Each `InjectionResult` object has these properties:
   - : `number`. The frame ID associated with the injection.
 - `result` {{optional_inline}}
   - : `any`. The result of the script execution.
+- `documentId` {{optional_inline}}
+  - : `string`. The document associated with the injection.
 - `error` {{optional_inline}}
   - : `any`. If an error occurs, contains the value the script threw or rejected with. Typically this is an error object with a message property but it could be any value (including primitives and undefined).
 
