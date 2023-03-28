@@ -11,7 +11,7 @@ However, consider the following scenarios:
 - The user composes a long email, presses "Send", and then loses network connectivity. The device sends the email in the background, as soon as the network is available again.
 - The user's chat app receives a message from one of their contacts, and although the app is not open, it displays a badge on the app icon to let the user know they have a new message.
 
-These are the kinds of features that users expect from platform-specific apps. If PWAs are to compete with platform-specific apps, they need to support these kinds of scenarios. In this guide, we'll introduce a set of technologies that enable a PWA to:
+These are the kinds of features that users expect from installed apps. In this guide, we'll introduce a set of technologies that enable a PWA to:
 
 - Provide a good user experience even when the device has intermittent network connectivity
 - Update its state when the app is not running
