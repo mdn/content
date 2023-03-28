@@ -222,12 +222,12 @@ The browser will display a persistent UI element reminding the user that the req
 
 ### Handling request outcomes
 
-When something happens that the app might need to take care of, the browser starts the app's service worker, if necessary, and fires an event in the service worker's scope. The following events can be fired:
+When the fetch has finished with success or failure, or the user has clicked the progress UI, then the browser starts the app's service worker, if necessary, and fires an event in the service worker's scope. The following events can be fired:
 
 - `backgroundfetchsuccess`: all requests were successful
 - `backgroundfetchfail`: at least one request failed
 - `backgroundfetchabort`: the fetch was canceled by the user or by the main app
-- `backgroundfetchclick`: the user clicked on the UI element that the browser is showing
+- `backgroundfetchclick`: the user clicked on the progress UI element that the browser is showing
 
 #### Retrieving response data
 
