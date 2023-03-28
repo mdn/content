@@ -31,7 +31,7 @@ For example, a PWA can be registered to handle files that match the `text/plain`
 
 ## Values
 
-Each object in the file handler array must contain the following values (`action` and `accept` are required):
+An array of objects. Each object in the array must contain the following values (`action` and `accept` are required):
 
 <table class="fullwidth-table standard-table">
   <thead>
