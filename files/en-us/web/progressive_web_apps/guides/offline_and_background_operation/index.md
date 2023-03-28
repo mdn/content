@@ -26,15 +26,26 @@ The technologies introduced in this guide are:
 - [Push API](/en-US/docs/Web/API/Push_API)
 - [Notifications API](/en-US/docs/Web/API/Notifications_API)
 
+## Websites and workers
+
+The foundation of all the technologies we'll discuss in this guide is the _service worker_. In this section we'll provide a little background about workers and how they change the architecture of a web app.
+
+Normally, an entire website runs in a single thread. This includes the website's own JavaScript, and all the work to render the website's UI. One consequence of this is that if your JavaScript runs some long-running operation, the website's main UI is blocked, and the website appears unresponsive to the user.
+
+A [service worker](/en-US/docs/Web/API/Service_Worker_API) is a specific type of [web worker](/en-US/docs/Web/API/Web_Workers_API) that's used to implement PWAs. Like all web workers, a service worker runs in a separate thread to the main JavaScript code. The main code creates the worker, passing in a URL to the worker's script. The worker and the main code can't directly access each other's state, but can communicate by sending each other messages. Workers can be used to run computationally expensive tasks in the background: because they run in a separate thread, the main JavaScript code in the app, that implements the app's UI, can stay responsive to the user.
+
+So a PWA always has a high level architecture split between:
+
+- The _main app_, with the HTML, CSS, and the part of the JavaScript that implements the app's UI (by handling user events, for example)
+- The _service worker_, which handles offline and background tasks
+
+In this guide, when we show code samples, we'll indicate which part of the app the code belongs in with a comment like `// main.js` or `// service-worker.js`.
+
 ## Offline operation
 
-Offline operation allows a PWA to provide a good user experience even when the device does not have network connectivity. The foundation of this, and of the other technologies in this guide, is the service worker.
+Offline operation allows a PWA to provide a good user experience even when the device does not have network connectivity. This is enabled by adding a service worker to an app.
 
-A [worker](/en-US/docs/Web/API/Web_Workers_API) is a part of a web app that runs in a separate thread to the main JavaScript code. The main code creates the worker, passing in a URL to the worker's script. The worker and the main code can't directly access each other's state, but can communicate by sending each other messages. Workers can be used to run computationally expensive tasks in the background: because they run in a separate thread, the main JavaScript code in the app, that implements the app's UI, can stay responsive to the user.
-
-A [service worker](/en-US/docs/Web/API/Service_Worker_API) is a specific type of worker that _controls_ some subset of the pages under the app origin (by default, all pages under the app origin).
-
-When the service worker is installed, it can fetch the resources from the server for the pages it controls (including pages, styles, scripts, and images, for example) and add them to a local cache. The {{domxref("Cache")}} interface is used to add resources to the cache. `Cache` instances are accessible through the {{domxref("caches")}} property in the service worker global scope.
+A service worker _controls_ some or all of the app's pages. When the service worker is installed, it can fetch the resources from the server for the pages it controls (including pages, styles, scripts, and images, for example) and add them to a local cache. The {{domxref("Cache")}} interface is used to add resources to the cache. `Cache` instances are accessible through the {{domxref("caches")}} property in the service worker global scope.
 
 Then whenever the app requests a resource (for example, because the user opened the app or clicked an internal link), the browser fires an event called {{domxref("ServiceWorkerGlobalScope.fetch_event", "fetch")}} in the service worker's global scope. By listening for this event, the service worker can intercept the request.
 
@@ -53,6 +64,8 @@ One way a service worker can handle requests is a "cache-first" strategy. In thi
 The following code sample shows an implementation of this:
 
 ```js
+// service-worker.js
+
 const putInCache = async (request, response) => {
   const cache = await caches.open("v1");
   await cache.put(request, response);
@@ -135,6 +148,7 @@ To ask the service worker to perform a task, the main app can access {{domxref("
 
 ```js
 // main.js
+
 async function registerSync() {
   const swRegistration = await navigator.serviceWorker.ready;
   swRegistration.sync.register("send-message");
@@ -149,6 +163,7 @@ As soon as the device has network connectivity, the `sync` event fires in the se
 
 ```js
 // service-worker.js
+
 self.addEventListener("sync", (event) => {
   if (event.tag == "send-message") {
     event.waitUntil(sendMessage());
@@ -178,6 +193,7 @@ A background fetch request is initiated in the main app code, by calling {{domxr
 
 ```js
 // main.js
+
 async function requestBackgroundFetch(movieData) {
   const swRegistration = await navigator.serviceWorker.ready;
   const fetchRegistration = await swRegistration.backgroundFetch.fetch(
@@ -223,6 +239,8 @@ Each `BackgroundFetchRecord` has a {{domxref("BackgroundFetchRecord/responseRead
 So to access response data, the handler could do something like:
 
 ```js
+// service-worker.js
+
 self.addEventListener("backgroundfetchsuccess", (event) => {
   const registration = event.registration;
 
@@ -246,6 +264,8 @@ Since the response data won't be available after the handler exits, the handler 
 The event object passed into `backgroundfetchsuccess` and `backgroundfetchfail` also has an {{domxref("BackgroundFetchUpdateUIEvent/updateUI", "updateUI()")}} method, which can be used to update the UI that the browser shows to keep the user informed about the fetch operation. With `updateUI()`, the handler can update the UI element's title and icon:
 
 ```js
+// service-worker.js
+
 self.addEventListener("backgroundfetchsuccess", (event) => {
   // retrieve and store response data
   // ...
@@ -265,6 +285,8 @@ The `backgroundfetchclick` event is fired when the user has clicked on the UI el
 The expected response here is to open a window giving the user more information about the fetch operation, which can be done from the service worker using {{domxref("Clients/openWindow", "clients.openWindow()")}}. For example:
 
 ```js
+// service-worker.js
+
 self.addEventListener("backgroundfetchclick", (event) => {
   const registration = event.registration;
 
@@ -292,6 +314,7 @@ However, `periodicSync.register()` takes an extra argument, which is an object w
 
 ```js
 // main.js
+
 async function registerPeriodicSync() {
   const swRegistration = await navigator.serviceWorker.ready;
   swRegistration.periodicSync.register("update-news", {
@@ -310,6 +333,8 @@ When the browser has decided to generate a periodic sync event, the pattern is t
 The service worker's event handler checks the name of the event, and calls the appropriate function inside the event's {{domxref("ExtendableEvent/waitUntil", "waitUntil()")}} method:
 
 ```js
+// service-worker.js
+
 self.addEventListener("periodicsync", (event) => {
   if (event.tag === "update-news") {
     event.waitUntil(updateNews());
@@ -325,6 +350,7 @@ When the PWA no longer needs periodic background updates, (for example, because 
 
 ```js
 // main.js
+
 async function registerPeriodicSync() {
   const swRegistration = await navigator.serviceWorker.ready;
   swRegistration.periodicSync.unregister("update-news");
