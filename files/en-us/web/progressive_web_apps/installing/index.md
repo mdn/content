@@ -23,7 +23,7 @@ All browsers enable users to view and manage their bookmarks, including renaming
 
 Smartphones, starting with the iPhone in 2007, added "save to home screen" functionality. This feature is similar to bookmarks, but instead of adding the favicon and title of the page to the bookmarks menu — a browser feature — favoriting in this manner [adds an icon](/en-US/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML#adding_custom_icons_to_your_site) to the OS's home screen.
 
-Adding a site to the home screen does not install the website on the device. Rather, it adds the developer-defined icon to the home screen, that, when clicked, opens the bookmarked link in the default browser. Removing the icon from the home screen removes the bookmark.
+On iOS, adding a site to the home screen does not install the website on the device. Rather, it adds the developer-defined icon to the home screen, that, when clicked, opens the bookmarked link in the default browser. Removing the icon from the home screen removes the bookmark.
 
 ## Installing and uninstalling PWAs
 
@@ -45,7 +45,11 @@ Once installed, the PWA will behave like other applications that are installed o
 
 ![PWA icon in the doc on MacOS](dock.jpg)
 
-Installation is supported on all modern desktop and mobile devices. Whether the PWA can be installed by the browser on the operating system differs by browser / operating system combination. Most browsers support installing PWAs on all operating systems—Chrome OS, MacOS, Windows, Android, Linux, etc.—directly or when an extension is installed. Firefox requires a [PWA extension](https://addons.mozilla.org/en-US/firefox/addon/pwas-for-firefox/). Apple is unique when it comes to PWAs: PWAs can be installed on macOS from any browser **except** Safari. The opposite is true for iOS, where PWAs can **only** be installed in Safari.
+Installation is supported on all modern desktop and mobile devices. Whether the PWA can be installed by the browser on the operating system differs by browser / operating system combination. Most browsers support installing PWAs on all operating systems—Chrome OS, MacOS, Windows, Android, Linux, etc.—directly or when an extension is installed.
+
+Firefox requires a [PWA extension](https://addons.mozilla.org/en-US/firefox/addon/pwas-for-firefox/).
+
+Apple is unique when it comes to PWAs: PWAs can be installed on macOS from any browser **except** Safari. The opposite is true for iOS, where PWAs can **only** be installed in Safari.
 
 When an installed PWA is launched, it may then manifest as in a chromeless view (without the full browser chrome) but it nevertheless is executing effectively as a tab within the browser. The application will be found where the OS saves other applications, within a folder specific to the browser.
 
@@ -55,7 +59,9 @@ The browser used to install the PWA will know the PWA is installed, but other br
 
 When you tap the web app's icon on the home screen, it opens up in the browser environment that installed the PWA, generally without the browser's UI around it, though that depends on the way the developer configured the web app manifest. Similarly, the method used to uninstall the PWA depends on the browser that was used to install it.
 
-To uninstall a PWA, open the PWA. In the top right corner of the opened app, there will be an icon that must be expanded to see more tools. Depending on the browser used to install the PWA, there will either be a link to uninstall the PWA, or a settings link which will open a browser settings page with an uninstall link. Either click on the `Uninstall <app name>` in the drop down menu, if there, or navigate to the app settings in a browser tab and click unintall.
+On many mobile operating systems, PWAs appear in the "Add or remove programs" control panel. Uninstalling a PWA is accomplished in the same way as uninstalling other applications.
+
+In most deskop operating systems, To uninstall a PWA, open the PWA. In the top right corner of the opened app, there will be an icon that must be expanded to see more tools. Depending on the browser used to install the PWA, there will either be a link to uninstall the PWA, or a settings link which will open a browser settings page with an uninstall link. Either click on the `Uninstall <app name>` in the drop down menu, if there, or navigate to the app settings in a browser tab and click unintall.
 
 ![App settings in MS Edge with an uninstall link](remove.jpg)
 
