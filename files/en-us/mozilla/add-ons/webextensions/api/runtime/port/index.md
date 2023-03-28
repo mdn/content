@@ -101,7 +101,7 @@ There is, however, one important difference between Firefox and Chrome, stemming
 
 which holds in Chrome, is replaced by
 
-- *Any* frame that received the port (via `runtime.onConnect`) has unloaded.
+- _Any_ frame that received the port (via `runtime.onConnect`) has unloaded.
 
 in Firefox (see [bug 1465514](https://bugzil.la/1465514)).
 
