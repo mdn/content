@@ -61,11 +61,11 @@ When you tap the web app's icon on the home screen, it opens up in the browser e
 
 On many mobile operating systems, PWAs appear in the "Add or remove programs" control panel. Uninstalling a PWA is accomplished in the same way as uninstalling other applications.
 
-In most deskop operating systems, To uninstall a PWA, open the PWA. In the top right corner of the opened app, there will be an icon that must be expanded to see more tools. Depending on the browser used to install the PWA, there will either be a link to uninstall the PWA, or a settings link which will open a browser settings page with an uninstall link. Either click on the `Uninstall <app name>` in the drop down menu, if there, or navigate to the app settings in a browser tab and click unintall.
+In most desktop operating systems, To uninstall a PWA, open the PWA. In the top right corner of the opened app, there will be an icon that must be expanded to see more tools. Depending on the browser used to install the PWA, there will either be a link to uninstall the PWA, or a settings link that opens a browser settings page with an uninstall link. Either click on the `Uninstall <app name>` in the drop-down menu, if there, or navigate to the app settings in a browser tab and click uninstall.
 
 ![App settings in MS Edge with an uninstall link](remove.jpg)
 
-Selecting app setting from the opened drop down menu in Edge, opened the MS Edge browser `edge://apps` tab. There we are provided a list of installed applications with options for each, including `🗑️ Uninstall`.
+Selecting app setting from the opened drop-down menu in Edge, opened the MS Edge browser `edge://apps` tab. There we are provided a list of installed applications with options for each, including `🗑️ Uninstall`.
 
 Confirm the uninstall. That's it!
 
