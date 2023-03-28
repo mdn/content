@@ -13,6 +13,8 @@ One side initiates the connection, using a `connect()` API. This returns a `Port
 
 Once both sides have `Port` objects, they can exchange messages using `Port.postMessage()` and `Port.onMessage`. When they are finished, either end can disconnect using `Port.disconnect()`, which will generate a `Port.onDisconnect` event at the other end, enabling the other end to do any cleanup required.
 
+A `Port` can also become disconnected in response to various events. See [Lifecycle](#lifecycle).
+
 You can use this pattern to communicate between:
 
 - different parts of your extension (for example, between [content scripts](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts) and [background scripts](/en-US/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#background_scripts))
@@ -88,6 +90,20 @@ Values of this type are objects. They contain the following properties:
   - : `function`. Send a message to the other end. This takes one argument, which is a serializable value (see [Data cloning algorithm](/en-US/docs/Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities#data_cloning_algorithm)) representing the message to send. It will be delivered to any script listening to the port's `onMessage` event, or to the native application if this port is connected to a native application.
 - `sender` {{optional_inline}}
   - : {{WebExtAPIRef('runtime.MessageSender')}}. Contains information about the sender of the message. This property will only be present on ports passed to `onConnect`/`onConnectExternal` listeners.
+
+## Lifecycle
+
+The lifecycle of a `Port` is described [in the Chrome docs](https://developer.chrome.com/docs/extensions/mv3/messaging/#port-lifetime).
+
+There is, however, one important difference between Firefox and Chrome, stemming from the fact that the `runtime.connect` and `tabs.connect` APIs are broadcast channels. This means that there may be potentially more than one recipient, and this results in ambiguity when one of the contexts with a `runtime.onConnect` call is closed. In Chrome, a port stays active as long as there is any other recipient. In Firefox, the port closes when any of the contexts unloads. In other words, the disconnection condition,
+
+- All frames that received the port (via `runtime.onConnect`) have unloaded.
+
+which holds in Chrome, is replaced by
+
+- _Any_ frame that received the port (via `runtime.onConnect`) has unloaded.
+
+in Firefox (see [bug 1465514](https://bugzil.la/1465514)).
 
 ## Browser compatibility
 
