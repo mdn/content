@@ -37,18 +37,13 @@ requestAdapter(options)
 
         This hint's primary purpose is to influence which GPU is used in a multi-GPU system. For instance, some laptops have a low-power integrated GPU and a high-performance discrete GPU. Different factors may affect which adapter is returned including battery status, attached displays, or removable GPUs.
 
-    - `forceFallbackAdapter` {{optional_inline}}
-
-      - : A boolean value that indicates whether a fallback adapter must be returned.
-
-        - If set to `true`, a fallback adapter will be returned unless one is not available, in which case `requestAdapter()` will resolve to `null`.
-        - If set to `false` or not specified, a fallback adapter will not be returned unless no other more appropriate adapter is available.
-
 ### Fallback adapters
 
-A fallback adapter generally has significant performance caveats in exchange for some combination of wider compatibility, more predictable behavior, or improved privacy. For example, some browsers may offer a software-based implementation of the API via a fallback adapter. A fallback adapter will not be available on every system.
+The adapter provided by the user agent may be a **fallback adapter**, if it determines it to be the most appropriate option available. A fallback adapter generally has significant performance caveats in exchange for some combination of wider compatibility, more predictable behavior, or improved privacy. For example, some browsers may offer a software-based implementation of the API via a fallback adapter. A fallback adapter will not be available on every system.
 
 If you wish to prevent your apps from running on fallback adapters, you should check the {{domxref("GPUAdapter.isFallbackAdapter")}} attribute prior to requesting a {{domxref("GPUDevice")}}.
+
+> **Note:** The specification includes a `forceFallbackAdapter` option for `requestAdapter()`. This is a boolean that, if set to `true`, forces the user agent to return a fallback adapter if one is available. This is not yet supported by any browser.
 
 ### Return value
 
