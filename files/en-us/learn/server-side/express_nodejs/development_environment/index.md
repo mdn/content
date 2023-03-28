@@ -99,7 +99,7 @@ After `nvm` has installed, open a terminal enter the following command to downlo
 nvm install --lts
 ```
 
-At time of writing the LTS version of nodejs is 18.15.0.
+At the time of writing, the LTS version of nodejs is 18.15.0.
 The command `nvm list` shows the downloaded set of version and the current version.
 You can set a particular version as the _current version_ with the command below (the same as for `npm-windows`)
 
@@ -112,7 +112,8 @@ These are often similar but not exactly the same as offered by `npm-windows`.
 
 ### Testing your Nodejs and npm installation
 
-Once you have set NVM to use a particular ndoe version, you can test that node is installed is to run the "version" command in your terminal/command prompt and check that a version string is returned:
+Once you have set `nvm` to use a particular node version, you can test the installation.
+A good way to do this is to use the "version" command in your terminal/command prompt and check that the expected version string is returned:
 
 ```bash
 > node -v
