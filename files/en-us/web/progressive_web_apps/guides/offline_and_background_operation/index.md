@@ -84,7 +84,8 @@ const cacheFirst = async ({ request, fallbackUrl }) => {
     const responseFromNetwork = await fetch(request);
     // If the network request succeeded, clone the response:
     // - put one copy in the cache, for the next time
-    // - return the other copy to the app
+    // - return the original to the app
+    // Cloning is needed because a response can only be consumed once.
     putInCache(request, responseFromNetwork.clone());
     return responseFromNetwork;
   } catch (error) {
