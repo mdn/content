@@ -176,6 +176,12 @@ Note that we pass the result of the `sendMessage()` function into the event's {{
 
 The `waitUntil()` method is not a guarantee that the browser will not stop the service worker: if the operation takes too long, the service worker will be stopped anyway. If this happens, then the operation is aborted, and next time a `sync` event is fired, then the handler runs again from the start - it does not resume from where it left off.
 
+How long is "too long" is browser-specific. For Chrome, the service worker is likely to be closed if:
+
+- It has been idle for 30 seconds
+- It has been running synchronous JavaScript for 30 seconds
+- The promise passed to `waitUntil()` has taken more than 5 minutes to settle.
+
 ## Background fetch
 
 Background sync is useful for relatively short background operations, but as we just saw: if a service worker doesn't finish handling a sync event in a relatively short time, the browser will stop the service worker. This is an intentional measure to conserve battery life and protect the user's privacy by minimizing the time for which the user's IP address is exposed to the server while the app is in the background.
