@@ -33,7 +33,7 @@ browser-compat: path.to.feature.NameOfTheHeader
 > - **slug**
 >   - : The end of the URL path after `https://developer.mozilla.org/en-US/docs/`). This will be formatted like `Web/HTTP/Headers/NameOfTheHeader`. For example, the [Cache-Control](/en-US/docs/Web/HTTP/Headers/Cache-Control) slug is `Web/HTTP/Headers/Cache-Control`.
 > - **status**
->   - : Include (appropriate) technology status keys: [**experimental**](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#experimental), [**deprecated**](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#deprecated_and_obsolete), **non-standard** (if not on a standards track).
+>   - : Include (appropriate) technology status keys: [**experimental**](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#experimental), [**deprecated**](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#deprecated), **non-standard** (if not on a standards track).
 > - **browser-compat**
 >
 >   - : Replace the placeholder value <code>path.to.feature.NameOfTheHeader</code> with the query string for the header in the [Browser compat data repo](https://github.com/mdn/browser-compat-data).
@@ -49,10 +49,10 @@ browser-compat: path.to.feature.NameOfTheHeader
 > A number of macro calls appear at the top of the content section (immediately below the page frontmatter).
 > You should update or delete them according to the advice below:
 >
-> - `\{{SeeCompatTable}}` — this generates a **This is an experimental technology** banner that indicates the header is [experimental](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#experimental)).
+> - `\{{SeeCompatTable}}` — this generates a **This is an experimental technology** banner that indicates the header is [experimental](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#experimental).
 >   If the header you are documenting is not experimental, you can remove this.
 >   If it is experimental, and the technology is hidden behind a pref in Firefox, you should also fill in an entry for it in the [Experimental features in Firefox](/en-US/docs/Mozilla/Firefox/Experimental_features) page.
-> - `\{{deprecated_header}}` — this generates a **Deprecated** banner that indicates that use of the header is [discouraged](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#deprecated_and_obsolete).
+> - `\{{deprecated_header}}` — this generates a **Deprecated** banner that indicates that use of the header is [discouraged](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#deprecated).
 >   If it isn't, then you can remove the macro call.
 > - `\{{httpsidebar}}` — this generates the HTTP sidebar that must appear on every HTTP reference page.
 >   Remember to remove the `\{{MDNSidebar}}` macro when you copy this page.

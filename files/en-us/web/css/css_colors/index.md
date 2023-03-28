@@ -121,7 +121,7 @@ To see the code for this color syntax converter, [view the source on Github](htt
 
 ## See also
 
-- [CSS color adjustment](/en-us/docs/web/css/css_color_adjustment) module, and the {{cssxref("print-color-adjust")}} property.
+- [CSS color adjustment](/en-US/docs/Web/CSS/CSS_color_adjustment) module and the {{cssxref("print-color-adjust")}} property.
 - [CSS images](/en-US/docs/Web/CSS/CSS_Images) module, which is where CSS [`<gradient>`](/en-US/docs/Web/CSS/gradient) images are defined.
 - The [`VideoColorSpace`](/en-US/docs/Web/API/VideoColorSpace) interface
 - The SVG [`<feColorMatrix>`](/en-US/docs/Web/SVG/Element/feColorMatrix) element

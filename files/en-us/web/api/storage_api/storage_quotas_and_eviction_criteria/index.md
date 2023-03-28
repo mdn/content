@@ -6,7 +6,7 @@ page-type: guide
 
 {{DefaultAPISidebar("Storage")}}
 
-There are a number of web technologies that developers can use in their websites or apps to store data in the user's browser (i.e., on the local disk of the device the user is using to view the website).
+Web developers can use a number of technologies to store data in the user's browser (i.e., on the local disk of the device the user is using to view the website).
 
 The amount of data browsers allow websites to store and the mechanisms they use to delete data when that limit is reached differs between browsers.
 
