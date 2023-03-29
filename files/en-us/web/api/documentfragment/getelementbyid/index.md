@@ -34,7 +34,13 @@ An {{domxref("Element")}} object describing the DOM element object matching the 
 
 ### Extend a list of elements
 
-This example creates a list with one element, `Cherry`, while a `Find elements` button will look for `Apple` and `Cherry` and logs it. The button `Add fragment to document` will insert four extra elements in the list, changing the results of pressing the `Find elements` button. Finally, a `Reset` button sets the example in its original state.
+In this example, the document contains a list with a single item `Cherry`. We also create a document fragment containing four more items, `Apple`, `Orange`, `Banana`, and `Melon`.
+
+We then log the result of using `getElementById()` to look for `Apple` and `Cherry` in the document and in the fragment. At this point, `Cherry` appears only in the document while `Apple` appears only in the fragment.
+
+If you click "Add fragment to document", we append the fragment to the list inside the document, and again log the result of looking for both `Apple` and `Cherry` in the document and in the fragment. This time, both `Apple` and `Cherry` appear in the document, and neither appear in the fragment.
+
+This is because appending a fragment to a document moves the fragment's nodes into the DOM, leaving behind an empty `DocumentFragment`.
 
 #### HTML
 
