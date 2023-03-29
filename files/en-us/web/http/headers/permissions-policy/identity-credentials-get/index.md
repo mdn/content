@@ -1,5 +1,5 @@
 ---
-title: "Permissions-Policy: identity-credentials-get"
+title: 'Permissions-Policy: identity-credentials-get'
 slug: Web/HTTP/Headers/Permissions-Policy/identity-credentials-get
 status:
   - experimental

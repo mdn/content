@@ -43,10 +43,7 @@ if (navigator.userAgent.includes("Chrome")) {
   splitUpString = (str) => String(str).split(camelCaseExpression);
 } else {
   // This fallback code is much less performant, but works
-  splitUpString = (str) =>
-    String(str)
-      .split(/(.*?[A-Z])/)
-      .filter(Boolean);
+  splitUpString = (str) => String(str).split(/(.*?[A-Z])/).filter(Boolean);
 }
 
 console.log(splitUpString("fooBar")); // ["fooB", "ar"]
@@ -74,10 +71,7 @@ try {
 
 const splitUpString = isLookBehindSupported
   ? (str) => String(str).split(new RegExp("(?<=[A-Z])"))
-  : (str) =>
-      String(str)
-        .split(/(.*?[A-Z])/)
-        .filter(Boolean);
+  : (str) => String(str).split(/(.*?[A-Z])/).filter(Boolean);
 
 console.log(splitUpString("fooBar")); // ["fooB", "ar"]
 console.log(splitUpString("jQWhy")); // ["jQ", "W", "hy"]
