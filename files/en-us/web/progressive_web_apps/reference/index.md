@@ -108,7 +108,7 @@ The following APIs can be used by a service worker to perform tasks in the backg
 - [IndexedDB](/en-US/docs/Web/API/IndexedDB_API)
   - : A client-side storage API for significant amounts of structured data, including files.
 - [Badging API](/en-US/docs/Web/API/Badging_API)
-  - : A method of setting a badge on the application icon, to act as a low distraction notification.
+  - : A method of setting a badge on the application icon, providing a low-distraction notification.
 - [Notifications API](/en-US/docs/Web/API/Notifications_API)
   - : A way to send notifications that are displayed at the operating system level.
 - [Web Share API](/en-US/docs/Web/API/Web_Share_API)
