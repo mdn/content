@@ -39,21 +39,20 @@ This example creates a list with one element, `Cherry`, while a `Find elements` 
 #### HTML
 
 ```html
-<button id="reset">Reset example</button>
-Basket content:
+<button id="add">Add fragment to document</button>
+<button id="reset">Reset example</button> <br />
+List content:
 <ul>
   <li id="Cherry">Cherry</li>
 </ul>
-<button id="add">Add fragment to document</button>
-
-Console: <button id="find">Find elements</button>
+Fragment content:
+<ul id="fragment"></ul>
+Current status:
 <pre id="log" />
 ```
 
 ```css hidden
-#reset,
-#add {
-  display: block;
+button {
   margin-bottom: 10px;
 }
 ```
@@ -61,69 +60,56 @@ Console: <button id="find">Find elements</button>
 #### JavaScript
 
 ```js
-// Obtain the unordered list in the document
-const ul = document.querySelector("ul");
-
-// Log
-const log = document.getElementById("log");
-
-// Add fragment to document
-const addButton = document.getElementById("add");
-addButton.addEventListener("click", () => {
-  // Create the document fragment
-  const fruits = ["Apple", "Orange", "Banana", "Melon"];
-  const fragment = new DocumentFragment();
-  for (const fruit of fruits) {
-    const li = document.createElement("li");
-    li.textContent = fruit;
-    li.id = fruit;
-    fragment.append(li);
-  }
-
-  // Insert the fragment inside the document's unordered list
-  ul.append(fragment);
-
-  // We only add once: disable the button
-  addButton.disabled = true;
-});
-
-// Search for Cherry and Apple
-const findButton = document.getElementById("find");
-findButton.addEventListener("click", () => {
-  log.textContent = `Found 'Apple' in the list? ${
-    document.getElementById("Apple") ? "Yes" : "No"
-  }\n`;
-  log.textContent += `Found 'Cherry' in the list? ${
-    document.getElementById("Cherry") ? "Yes" : "No"
-  }`;
-});
-
-// Reset the example
-const resetButton = document.getElementById("reset");
-resetButton.addEventListener("click", () => {
-  // Empty the list
-  while (ul.firstChild) {
-    // The list is LIVE so it will re-index each call
-    ul.removeChild(ul.firstChild);
-  }
-
-  // Create 'Cherry` entry and adds it to the list
+// Create the document fragment with its initial content
+const fragment = new DocumentFragment();
+["Apple", "Orange", "Banana", "Melon"].forEach((fruit) => {
   const li = document.createElement("li");
-  li.textContent = "Cherry";
-  li.id = "Cherry";
-  ul.append(li);
+  li.textContent = fruit;
+  li.id = fruit;
+  fragment.append(li);
+});
 
-  // Empty log
+// When the button is clicked, add the fragment to the list
+document.getElementById("add").addEventListener("click", () => {
+  document.querySelector("ul").append(fragment);
+  displayStatus();
+});
+
+// Log the results of both getElementById()
+function displayStatus() {
+  const log = document.getElementById("log");
   log.textContent = "";
+  ["Apple", "Cherry"].forEach((id) => {
+    log.textContent += `document.getElementById("${id}") ${
+      document.getElementById(id) ? "Yes" : "No"
+    }\n`;
+    log.textContent += `fragment.getElementById("${id}") ${
+      fragment.getElementById(id) ? "Yes" : "No"
+    }\n`;
+  });
 
-  // (Re-)Activate the 'add' button
-  addButton.disabled = false;
+  // Empty the fragment viewer and fill it with the current content
+  const fragmentViewer = document.getElementById("fragment");
+  while (fragmentViewer.hasChildNodes()) {
+    fragmentViewer.removeChild(fragmentViewer.lastChild);
+  }
+  for (entry of fragment.children) {
+    fragmentViewer.appendChild(entry.cloneNode(true));
+  }
+}
+
+// Log the initial state
+displayStatus();
+
+// Hook the reset button
+document.getElementById("reset").addEventListener("click", () => {
+  document.location.reload();
 });
 ```
 
 #### Result
 
-{{EmbedLiveSample('Examples', '100%', '320')}}
+{{EmbedLiveSample('Examples', '100%', '410px')}}
 
 ## Specifications
 
