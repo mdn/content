@@ -26,7 +26,7 @@ The tooltip is not considered a popup in terms of the [`aria-haspopup`](/en-US/d
 
 Though a tooltip may appear and disappear, as its appearance is automatic and not intentionally controlled by the user, the [`aria-expanded`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-expanded) role is not supported.
 
-The accessible name of a tooltip can come from the contents. While, in theory, they could come from an [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label) or [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby), in most cases, using ARIA properties to provide a tooltip with an accessible name is not recommended. 
+The accessible name of a tooltip can come from the contents. While, in theory, they could come from an [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label) or [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby), in most cases, using ARIA properties to provide a tooltip with an accessible name is not recommended.
 
 Tooltips provide additional information, generally with no direct interaction on the tooltip itself. They are generally associated with the content they're defining via an [`aria-describedby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-describedby) with the `id` of the primary element. Therefore, if the tooltip has an accessible name explicitly set, that name is exposed as the primary element's description rather than the contents of the tooltip, meaning the tooltip contents may never be discovered by a screen reader user.
 
