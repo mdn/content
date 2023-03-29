@@ -49,15 +49,15 @@ The following manifest members are used to control the appearance of your app:
 The following manifest members can be used to more deeply integrate your PWA in the operating system it's installed on:
 
 - [`file_handlers`](/en-US/docs/Web/Manifest/file_handlers)
-  - : File types that this web app is associated with.
+  - : File types this web app is associated with.
 - [`protocol_handlers`](/en-US/docs/Web/Manifest/protocol_handlers)
-  - : Protocols which this web app handles.
+  - : URL protocols this web app handles and the URLs for each protocol.
 - [`share_target`](/en-US/docs/Web/Manifest/share_target)
-  - : Used to register the app as a share target in the system's share dialog.
+  - : Registers the app as a share target, defining the actions and parameters for the OS's share dialog.
 - [`shortcuts`](/en-US/docs/Web/Manifest/shortcuts)
-  - : Links to key tasks or pages within the web app that can be displayed by the operating system when a user engages with the web app's icon.
+  - : Links to key tasks or pages within the web app the OS can display when a user engages with the web app's icon.
 - [`launch_handler`](/en-US/docs/Web/Manifest/launch_handler)
-  - : The context in which the app should be loaded when launched.
+  - : The context in which the app should be loaded when launched or relaunched.
 
 ### Other
 
