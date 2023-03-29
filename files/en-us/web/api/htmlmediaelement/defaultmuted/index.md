@@ -31,6 +31,6 @@ console.log(videoEle.outerHTML); // <video muted=""></video>
 
 ## See also
 
-- The interface defining it, {{domxref("HTMLMediaElement")}}.
+- {{domxref("HTMLMediaElement")}}: Interface used to define the `HTMLMediaElement.defaultMuted` property
 - {{domxref("HTMLMediaElement.muted")}}
 - {{domxref("HTMLMediaElement.volume")}}

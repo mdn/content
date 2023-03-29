@@ -14,19 +14,31 @@ The **`color-mix()`** functional notation takes two {{cssxref("color_value","col
 ## Syntax
 
 ```css
-color-mix(in lch, peru 40%, lightgoldenrod);
+color-mix(in lch, peru, pink);
+color-mix(in lch, peru 40%, pink);
 color-mix(in srgb, #34c9eb 20%, white);
+color-mix(in hsl longer hue, hsl(120 100% 50%) 20%, white);
 ```
 
 ### Values
 
-- Functional notation: `color-mix( in <colorspace> , [ <color> && <percentage>? ]#{2})`
+- Functional notation: `color-mix( <color-interpolation-method> , [ [<color>](/en-US/docs/Web/CSS/color_value) && [<percentage [0,100]>](/en-US/docs/Web/CSS/percentage)? ]#{2} )`
 
-  - : `<colorspace>` is one of `srgb`, `srgb-linear`, `lab`, `oklab`, `xyz`, `xyz-d50`, `xyz-d65`, `hsl`, `hwb`, `lch`, `oklch`. There is no default.
+  - `<color-interpolation-method>` is the keyword `in` (for interpolation) followed by either:
 
-    `<color>` is any valid {{cssxref("color_value","color")}}.
+    - `<rectangular-color-space>` or
+    - `<polar-color-space>` and an optional `<hue-interpolation-method>`.
 
-    `<percentage>` is the percentage of that color to mix.
+  - `<rectangular-color-space>` is one of `srgb`, `srgb-linear`, `lab`, `oklab`, `xyz`, `xyz-d50`, `xyz-d65`.
+
+  - `<polar-color-space>` is one of `hsl`, `hwb`, `lch`, `oklch`.
+
+  - `<hue-interpolation-method>` is one of `shorter`, `longer`, `increasing`, `decreasing` followed by the keyword `hue`.
+
+  - `<color>` is any valid {{cssxref("color_value","color")}}
+
+  - `<percentage>` is a number between 0 and 100 with an optional `%` sign.
+    If no percentage is specified, the default is 50%.
 
 ### Formal syntax
 
@@ -34,7 +46,9 @@ color-mix(in srgb, #34c9eb 20%, white);
 
 ## Examples
 
-### HTML
+### Mixing two colors
+
+In a supporting browser the three items become more blue as a higher percentage of `#34c9eb` is mixed in.
 
 ```html
 <ul>
@@ -44,15 +58,13 @@ color-mix(in srgb, #34c9eb 20%, white);
 </ul>
 ```
 
-### CSS
-
 ```css hidden
 ul {
   display: flex;
   list-style-type: none;
   font-size: 150%;
   gap: 10px;
-  border: 2px solid #34c9eb;
+  border: 2px solid;
   padding: 10px;
 }
 
@@ -75,11 +87,71 @@ li:nth-child(3) {
 }
 ```
 
-#### Result
+{{EmbedLiveSample('Mixing two colors','100%', 150)}}
 
-In a supporting browser the three items become more blue as a higher percentage of `#34c9eb` is mixed in.
+### Using hue interpolation methods
 
-{{EmbedLiveSample('Examples','100%', 200)}}
+Hue interpolation methods can be used to control how the {{cssxref("&lt;hue&gt;")}} is interpolated between two colors.
+For `shorter` the result will be the shortest distance between the two angles (the default) and conversely, `longer` uses the larger value between the two angles in a circle.
+
+For `increasing`, the result will be the angle between 0 and 360 degrees and for `decreasing` the result will be the angle between -360 and 0 degrees.
+
+```html
+<div id="shorter">shorter</div>
+<div id="longer">longer</div>
+<div id="increasing">increasing</div>
+<div id="decreasing">decreasing</div>
+```
+
+```css hidden
+div {
+  width: 100px;
+  height: 100px;
+  margin: 10px;
+  border: 1px solid;
+  display: inline-block;
+}
+```
+
+```css
+/* 20 degrees */
+#shorter {
+  background-color: color-mix(
+    in hsl shorter hue,
+    hsl(10 100% 50%),
+    hsl(350 100% 50%)
+  );
+}
+
+/* 340 degrees */
+#longer {
+  background-color: color-mix(
+    in hsl longer hue,
+    hsl(10 100% 50%),
+    hsl(350 100% 50%)
+  );
+}
+
+/* The resulting angle is between 0 and 360 degrees */
+#increasing {
+  background-color: color-mix(
+    in hsl increasing hue,
+    hsl(10 100% 50%),
+    hsl(350 100% 50%)
+  );
+}
+
+/* The resulting angle is between -360 and 0 degrees */
+#decreasing {
+  background-color: color-mix(
+    in hsl decreasing hue,
+    hsl(10 100% 50%),
+    hsl(350 100% 50%)
+  );
+}
+```
+
+{{EmbedLiveSample('Using hue interpolation methods','100%', 150)}}
 
 ## Specifications
 
@@ -88,3 +160,8 @@ In a supporting browser the three items become more blue as a higher percentage 
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{cssxref("color_value")}}
+- {{cssxref("&lt;hue&gt;")}}
