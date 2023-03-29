@@ -2,13 +2,6 @@
 title: ":nth-child()"
 slug: Web/CSS/:nth-child
 page-type: css-pseudo-class
-tags:
-  - CSS
-  - Layout
-  - Pseudo-class
-  - Reference
-  - Selector
-  - Web
 browser-compat: css.selectors.nth-child
 ---
 
@@ -24,8 +17,10 @@ Note that, in the `element:nth-child()` syntax, the child count includes childre
 
 `:nth-child()` takes a single argument that describes a pattern for matching element indices in a list of siblings. Element indices are 1-based.
 
-```
-:nth-child( <nth> [ of <complex-selector-list> ]? )
+```css-nolint
+:nth-child(<nth> [of <complex-selector-list>]?) {
+  /* ... */
+}
 ```
 
 ### Keyword values
@@ -39,13 +34,13 @@ Note that, in the `element:nth-child()` syntax, the child count includes childre
 
 - `<An+B>`
 
-  - : Represents elements in a list whose indices match those found in a custom pattern of numbers, defined by `An+B`, where:
+  - : Represents elements whose numeric position in a series of siblings matches the pattern `An+B`, for every positive integer or zero value of `n`, where:
 
     - `A` is an integer step size,
     - `B` is an integer offset,
     - `n` is all nonnegative integers, starting from 0.
 
-    It can be read as the `An+B`-th element of a list.
+    It can be read as the `An+B`-th element of a list. The `A` and `B` must both have {{cssxref("&lt;integer&gt;")}} values.
 
 ## Examples
 

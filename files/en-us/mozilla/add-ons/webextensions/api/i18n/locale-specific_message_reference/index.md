@@ -1,16 +1,7 @@
 ---
 title: Locale-specific message reference
 slug: Mozilla/Add-ons/WebExtensions/API/i18n/Locale-Specific_Message_reference
-tags:
-  - Internationalization
-  - Localization
-  - Reference
-  - String
-  - WebExtensions
-  - i18n
-  - message
-  - messages.json
-  - placeholders
+page-type: guide
 ---
 
 {{AddonSidebar()}}

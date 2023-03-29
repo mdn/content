@@ -1,16 +1,6 @@
 ---
 title: CORS errors
 slug: Web/HTTP/CORS/Errors
-tags:
-  - CORS
-  - Errors
-  - HTTP
-  - HTTPS
-  - Messages
-  - Same-origin
-  - Security
-  - console
-  - troubleshooting
 ---
 
 {{HTTPSidebar}}

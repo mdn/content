@@ -1,17 +1,13 @@
 ---
 title: Increment (++)
 slug: Web/JavaScript/Reference/Operators/Increment
-tags:
-  - JavaScript
-  - Language feature
-  - Operator
-  - Reference
+page-type: javascript-operator
 browser-compat: javascript.operators.increment
 ---
 
 {{jsSidebar("Operators")}}
 
-The increment operator (`++`) increments (adds one to) its operand and returns the value before or after the increment, depending on where the operator is placed.
+The **increment (`++`)** operator increments (adds one to) its operand and returns the value before or after the increment, depending on where the operator is placed.
 
 {{EmbedInteractiveExample("pages/js/expressions-increment.html")}}
 
@@ -23,6 +19,8 @@ x++
 ```
 
 ## Description
+
+The `++` operator is overloaded for two types of operands: number and [BigInt](/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt). It first [coerces the operand to a numeric value](/en-US/docs/Web/JavaScript/Data_structures#numeric_coercion) and tests the type of it. It performs BigInt increment if the operand becomes a BigInt; otherwise, it performs number increment.
 
 If used postfix, with operator after operand (for example, `x++`), the increment operator increments and returns the value before incrementing.
 
@@ -41,9 +39,11 @@ The increment operator can only be applied on operands that are references (vari
 ```js
 let x = 3;
 const y = x++;
+// x is 4; y is 3
 
-// x = 4
-// y = 3
+let x2 = 3n;
+const y2 = x2++;
+// x2 is 4n; y2 is 3n
 ```
 
 ### Prefix increment
@@ -51,9 +51,11 @@ const y = x++;
 ```js
 let x = 3;
 const y = ++x;
+// x is 4; y is 4
 
-// x = 4
-// y = 4
+let x2 = 3n;
+const y2 = ++x2;
+// x2 is 4n; y2 is 4n
 ```
 
 ## Specifications

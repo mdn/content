@@ -2,12 +2,6 @@
 title: "@counter-style"
 slug: Web/CSS/@counter-style
 page-type: css-at-rule
-tags:
-  - At-rule
-  - CSS
-  - CSS Counter
-  - Reference
-  - counter
 browser-compat: css.at-rules.counter-style
 ---
 
@@ -70,9 +64,7 @@ Each `@counter-style` is identified by a name and has a set of descriptors.
 
 ## Formal syntax
 
-```
-@counter-style <counter-style-name> { <declaration-list> }
-```
+{{csssyntax}}
 
 ## Examples
 

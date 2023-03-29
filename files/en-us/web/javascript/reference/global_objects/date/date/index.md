@@ -1,17 +1,13 @@
 ---
 title: Date() constructor
 slug: Web/JavaScript/Reference/Global_Objects/Date/Date
-tags:
-  - Constructor
-  - Date
-  - JavaScript
-  - Reference
+page-type: javascript-constructor
 browser-compat: javascript.builtins.Date.Date
 ---
 
 {{JSRef}}
 
-The **`Date()`** constructor can create a {{jsxref("Date")}} instance or return a string representing the current time.
+The **`Date()`** constructor creates {{jsxref("Date")}} objects. When called as a function, it returns a string representing the current time.
 
 {{EmbedInteractiveExample("pages/js/date-constructor.html")}}
 
@@ -63,7 +59,7 @@ When no parameters are provided, the newly-created `Date` object represents the 
 - `dateObject`
   - : An existing `Date` object. This effectively makes a copy of the existing `Date` object with the same date and time. This is equivalent to `new Date(dateObject.valueOf())`, except the `valueOf()` method is not called.
 
-When one parameter is passed to the `Date()` constructor, `Date` instances are specially treated. All other values will be converted to a primitive (calling `[@@toPrimitive]("default")`, `valueOf()`, and `toString()`, in that order). If the result is a string, it will be parsed as a date string. Otherwise, the resulting primitive is further coerced to a number and treated as a timestamp.
+When one parameter is passed to the `Date()` constructor, `Date` instances are specially treated. All other values are [converted to primitives](/en-US/docs/Web/JavaScript/Data_structures#primitive_coercion). If the result is a string, it will be parsed as a date string. Otherwise, the resulting primitive is further coerced to a number and treated as a timestamp.
 
 #### Individual date and time component values
 
@@ -101,12 +97,12 @@ Calling the `Date()` function (without the `new` keyword) returns a string repre
 The following examples show several ways to create JavaScript dates:
 
 ```js
-const today = new Date()
-const birthday = new Date('December 17, 1995 03:24:00') // DISCOURAGED: may not work in all runtimes
-const birthday = new Date('1995-12-17T03:24:00')   // This is ISO-8601-compliant and will work reliably
-const birthday = new Date(1995, 11, 17)            // the month is 0-indexed
-const birthday = new Date(1995, 11, 17, 3, 24, 0)
-const birthday = new Date(628021800000)            // passing epoch timestamp
+const today = new Date();
+const birthday = new Date("December 17, 1995 03:24:00"); // DISCOURAGED: may not work in all runtimes
+const birthday = new Date("1995-12-17T03:24:00"); // This is ISO-8601-compliant and will work reliably
+const birthday = new Date(1995, 11, 17); // the month is 0-indexed
+const birthday = new Date(1995, 11, 17, 3, 24, 0);
+const birthday = new Date(628021800000); // passing epoch timestamp
 ```
 
 ### Passing a non-Date, non-string, non-number value

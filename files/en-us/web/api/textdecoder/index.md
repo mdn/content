@@ -2,13 +2,6 @@
 title: TextDecoder
 slug: Web/API/TextDecoder
 page-type: web-api-interface
-tags:
-  - API
-  - DOM
-  - Encoding
-  - Interface
-  - Reference
-  - TextDecoder
 browser-compat: api.TextDecoder
 ---
 
@@ -28,7 +21,7 @@ The **`TextDecoder`** interface represents a decoder for a specific text encodin
 _The `TextDecoder` interface doesn't inherit any properties._
 
 - {{DOMxRef("TextDecoder.encoding")}} {{ReadOnlyInline}}
-  - : A string containing the name of the decoder, that is a string describing the method the `TextDecoder` will use.
+  - : A string containing the name of the decoder, which is a string describing the method the `TextDecoder` will use.
 - {{DOMxRef("TextDecoder.fatal")}} {{ReadOnlyInline}}
   - : A {{jsxref('Boolean')}} indicating whether the error mode is fatal.
 - {{DOMxRef("TextDecoder.ignoreBOM")}} {{ReadOnlyInline}}
@@ -45,7 +38,7 @@ _The `TextDecoder` interface doesn't inherit any methods_.
 
 ### Representing text with typed arrays
 
-This example shows how to decode a Chinese/Japanese character ![](2019-05-21_191907.png), as represented by five different typed arrays: {{jsxref("Uint8Array")}}, {{jsxref("Int8Array")}}, {{jsxref("Uint16Array")}}, {{jsxref("Int16Array")}}, and {{jsxref("Int32Array")}}.
+This example shows how to decode a Chinese/Japanese character ![Chinese character meaning lucky](2019-05-21_191907.png), as represented by five different typed arrays: {{jsxref("Uint8Array")}}, {{jsxref("Int8Array")}}, {{jsxref("Uint16Array")}}, {{jsxref("Int16Array")}}, and {{jsxref("Int32Array")}}.
 
 ```js
 let utf8decoder = new TextDecoder(); // default 'utf-8' or 'utf8'
@@ -86,5 +79,5 @@ console.log(win1251decoder.decode(bytes)); // Привет, мир!
 ## See also
 
 - The {{DOMxRef("TextEncoder")}} interface describing the inverse operation.
-- A [shim](https://github.com/inexorabletash/text-encoding) allowing to use this interface in browsers that don't support it.
+- A [shim](https://github.com/inexorabletash/text-encoding) allowing to use this interface in browsers that do not support it.
 - [Node.js supports global export from v11.0.0](https://nodejs.org/api/util.html#util_class_util_textdecoder)

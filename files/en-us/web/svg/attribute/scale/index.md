@@ -1,10 +1,7 @@
 ---
 title: scale
 slug: Web/SVG/Attribute/scale
-tags:
-  - Filters
-  - SVG
-  - SVG Attribute
+page-type: svg-attribute
 browser-compat: svg.elements.feDisplacementMap.scale
 ---
 

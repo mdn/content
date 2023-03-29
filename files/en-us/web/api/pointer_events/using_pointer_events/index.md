@@ -2,13 +2,6 @@
 title: Using Pointer Events
 slug: Web/API/Pointer_events/Using_Pointer_Events
 page-type: guide
-tags:
-  - Guide
-  - Input
-  - Pointer Events
-  - PointerEvent
-  - events
-  - touch
 browser-compat: api.PointerEvent
 ---
 
@@ -75,7 +68,7 @@ We'll keep track of the touches in-progress.
 const ongoingTouches = [];
 ```
 
-When a {{domxref("HTMLElement/pointerdown_event", "pointerdown")}} event occurs, indicating that a new touch on the surface has occurred, the `handleStart()` function below is called.
+When a {{domxref("Element/pointerdown_event", "pointerdown")}} event occurs, indicating that a new touch on the surface has occurred, the `handleStart()` function below is called.
 
 ```js
 function handleStart(evt) {
@@ -87,8 +80,8 @@ function handleStart(evt) {
   ongoingTouches.push(copyTouch(evt));
   const color = colorForTouch(evt);
   ctx.beginPath();
-  ctx.arc(touches[i].pageX, touches[i].pageY, 4, 0, 2 * Math.PI, false);  // a circle at the start
-  ctx.arc(evt.clientX, evt.clientY, 4, 0, 2 * Math.PI, false);  // a circle at the start
+  ctx.arc(touches[i].pageX, touches[i].pageY, 4, 0, 2 * Math.PI, false); // a circle at the start
+  ctx.arc(evt.clientX, evt.clientY, 4, 0, 2 * Math.PI, false); // a circle at the start
   ctx.fillStyle = color;
   ctx.fill();
 }
@@ -98,7 +91,7 @@ After storing some of the event's processing in the `ongoingTouches` for later p
 
 #### Drawing as the pointers move
 
-Each time one or more pointers moves, a {{domxref("HTMLElement/pointermove_event", "pointermove")}} event is delivered, resulting in our `handleMove()` function being called. Its responsibility in this example is to update the cached touch information and to draw a line from the previous position to the current position of each touch.
+Each time one or more pointers moves, a {{domxref("Element/pointermove_event", "pointermove")}} event is delivered, resulting in our `handleMove()` function being called. Its responsibility in this example is to update the cached touch information and to draw a line from the previous position to the current position of each touch.
 
 ```js
 function handleMove(evt) {
@@ -110,7 +103,9 @@ function handleMove(evt) {
   log(`continuing touch: idx =  ${idx}`);
   if (idx >= 0) {
     ctx.beginPath();
-    log(`ctx.moveTo(${ongoingTouches[idx].pageX}, ${ongoingTouches[idx].pageY});`);
+    log(
+      `ctx.moveTo(${ongoingTouches[idx].pageX}, ${ongoingTouches[idx].pageY});`
+    );
     ctx.moveTo(ongoingTouches[idx].pageX, ongoingTouches[idx].pageY);
     log(`ctx.lineTo(${evt.clientX}, ${evt.clientY});`);
     ctx.lineTo(evt.clientX, evt.clientY);
@@ -118,7 +113,7 @@ function handleMove(evt) {
     ctx.strokeStyle = color;
     ctx.stroke();
 
-    ongoingTouches.splice(idx, 1, copyTouch(evt));  // swap in the new touch record
+    ongoingTouches.splice(idx, 1, copyTouch(evt)); // swap in the new touch record
     log(".");
   } else {
     log(`can't figure out which touch to continue: idx = ${idx}`);
@@ -134,7 +129,7 @@ After drawing the line, we call [`Array.splice()`](/en-US/docs/Web/JavaScript/Re
 
 #### Handling the end of a touch
 
-When the user lifts a finger off the surface, a {{domxref("HTMLElement/pointerup_event", "pointerup")}} event is sent. We handle this event by calling the `handleEnd()` function below. Its job is to draw the last line segment for the touch that ended and remove the touch point from the ongoing touch list.
+When the user lifts a finger off the surface, a {{domxref("Element/pointerup_event", "pointerup")}} event is sent. We handle this event by calling the `handleEnd()` function below. Its job is to draw the last line segment for the touch that ended and remove the touch point from the ongoing touch list.
 
 ```js
 function handleEnd(evt) {
@@ -150,8 +145,8 @@ function handleEnd(evt) {
     ctx.beginPath();
     ctx.moveTo(ongoingTouches[idx].pageX, ongoingTouches[idx].pageY);
     ctx.lineTo(evt.clientX, evt.clientY);
-    ctx.fillRect(evt.clientX - 4, evt.clientY - 4, 8, 8);  // and a square at the end
-    ongoingTouches.splice(idx, 1);  // remove it; we're done
+    ctx.fillRect(evt.clientX - 4, evt.clientY - 4, 8, 8); // and a square at the end
+    ongoingTouches.splice(idx, 1); // remove it; we're done
   } else {
     log("can't figure out which touch to end");
   }
@@ -162,13 +157,13 @@ This is very similar to the previous function; the only real differences are tha
 
 #### Handling canceled touches
 
-If the user's finger wanders into browser UI, or the touch otherwise needs to be canceled, the {{domxref("HTMLElement/pointercancel_event", "pointercancel")}} event is sent, and we call the `handleCancel()` function below.
+If the user's finger wanders into browser UI, or the touch otherwise needs to be canceled, the {{domxref("Element/pointercancel_event", "pointercancel")}} event is sent, and we call the `handleCancel()` function below.
 
 ```js
 function handleCancel(evt) {
   log(`pointercancel: id = ${evt.pointerId}`);
   const idx = ongoingTouchIndexById(evt.pointerId);
-  ongoingTouches.splice(idx, 1);  // remove it; we're done
+  ongoingTouches.splice(idx, 1); // remove it; we're done
 }
 ```
 
@@ -204,7 +199,11 @@ Some browsers may re-use touch objects between events, so it's best to copy the 
 
 ```js
 function copyTouch(touch) {
-  return { identifier: touch.pointerId, pageX: touch.clientX, pageY: touch.clientY };
+  return {
+    identifier: touch.pointerId,
+    pageX: touch.clientX,
+    pageY: touch.clientY,
+  };
 }
 ```
 
@@ -221,7 +220,7 @@ function ongoingTouchIndexById(idToFind) {
       return i;
     }
   }
-  return -1;    // not found
+  return -1; // not found
 }
 ```
 
@@ -229,7 +228,7 @@ function ongoingTouchIndexById(idToFind) {
 
 ```js
 function log(msg) {
-  const p = document.getElementById('log');
+  const p = document.getElementById("log");
   p.innerHTML = `${msg}\n${p.innerHTML}`;
 }
 ```

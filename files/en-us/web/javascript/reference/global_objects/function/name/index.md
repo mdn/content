@@ -1,20 +1,21 @@
 ---
-title: Function.prototype.name
+title: "Function: name"
 slug: Web/JavaScript/Reference/Global_Objects/Function/name
-tags:
-  - ECMAScript 2015
-  - Function
-  - JavaScript
-  - Property
-  - Polyfill
+page-type: javascript-instance-data-property
 browser-compat: javascript.builtins.Function.name
 ---
 
 {{JSRef}}
 
-A {{jsxref("Function")}} object's read-only **`name`** property indicates the function's name as specified when it was created, or it may be either `anonymous` or `''` (an empty string) for functions created anonymously.
+The **`name`** property of a {{jsxref("Function")}} instance indicates the function's name as specified when it was created, or it may be either `anonymous` or `''` (an empty string) for functions created anonymously.
 
-{{EmbedInteractiveExample("pages/js/function-name.html")}}{{js_property_attributes(0,0,1)}}
+{{EmbedInteractiveExample("pages/js/function-name.html")}}
+
+## Value
+
+A string.
+
+{{js_property_attributes(0, 0, 1)}}
 
 > **Note:** In non-standard, pre-ES2015 implementations the `configurable` attribute was `false` as well.
 
@@ -227,7 +228,7 @@ You can use `obj.constructor.name` to check the "class" of an object.
 function Foo() {}  // Or: class Foo {}
 
 const fooInstance = new Foo();
-console.log(fooInstance.constructor.name); // logs "Foo"
+console.log(fooInstance.constructor.name); // "Foo"
 ```
 
 However, because static members will become own properties of the class, we can't obtain the class name for virtually any class with a static method property `name()`:
@@ -243,7 +244,7 @@ With a `static name()` method `Foo.name` no longer holds the actual class name b
 
 ```js
 const fooInstance = new Foo();
-console.log(fooInstance.constructor.name); // logs function name()
+console.log(fooInstance.constructor.name); // ƒ name() {}
 ```
 
 Due to the existence of static fields, `name` may not be a function either.
@@ -259,7 +260,7 @@ If a class has a static property called `name`, it will also become _writable_. 
 
 ```js
 Foo.name = 'Hello';
-console.log(Foo.name); // logs "Hello" if class Foo has a static name() property but "Foo" if not.
+console.log(Foo.name); // "Hello" if class Foo has a static "name" property, but "Foo" if not.
 ```
 
 Therefore you may not rely on the built-in `name` property to always hold a class's name.

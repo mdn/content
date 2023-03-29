@@ -1,10 +1,7 @@
 ---
 title: Alignment subject
 slug: Glossary/Alignment_Subject
-tags:
-  - Alignment subject
-  - CSS
-  - alignment
+page-type: glossary-definition
 ---
 
 In [CSS Box Alignment](/en-US/docs/Web/CSS/CSS_Box_Alignment) the **alignment subject** is the thing (or things) being aligned by the property.

@@ -1,13 +1,7 @@
 ---
 title: RegExp.prototype.global
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/global
-tags:
-  - JavaScript
-  - Property
-  - Prototype
-  - Reference
-  - RegExp
-  - Regular Expressions
+page-type: javascript-instance-accessor-property
 browser-compat: javascript.builtins.RegExp.global
 ---
 
@@ -31,20 +25,15 @@ The set accessor of `global` is `undefined`. You cannot change this property dir
 
 ```js
 const regex = /foo/g;
+console.log(regex.global); // true
 
-console.log(regex.global);  // true
-
-const str = 'fooexamplefoo';
-
-const str1 = str.replace(regex, '');
-
-console.log(str1);  // Output: example
+const str = "fooexamplefoo";
+const str1 = str.replace(regex, "");
+console.log(str1); // example
 
 const regex1 = /foo/;
-
-const str2 = str.replace(regex1, '');
-
-console.log(str2);  // Output: examplefoo
+const str2 = str.replace(regex1, "");
+console.log(str2); // examplefoo
 ```
 
 ## Specifications

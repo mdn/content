@@ -2,12 +2,6 @@
 title: translateY()
 slug: Web/CSS/transform-function/translateY
 page-type: css-function
-tags:
-  - CSS
-  - CSS Function
-  - CSS Transforms
-  - Function
-  - Reference
 browser-compat: css.types.transform-function.translateY
 ---
 
@@ -179,3 +173,4 @@ div {
 
 - {{cssxref("transform")}}
 - {{cssxref("&lt;transform-function&gt;")}}
+- {{cssxref("translate")}}

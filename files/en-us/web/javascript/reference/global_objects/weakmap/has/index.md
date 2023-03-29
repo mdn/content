@@ -1,12 +1,7 @@
 ---
 title: WeakMap.prototype.has()
 slug: Web/JavaScript/Reference/Global_Objects/WeakMap/has
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Prototype
-  - WeakMap
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.WeakMap.has
 ---
 
@@ -31,9 +26,7 @@ has(key)
 
 ### Return value
 
-- Boolean
-  - : Returns `true` if an element with the specified key exists in the
-    `WeakMap` object; otherwise `false`.
+Returns `true` if an element with the specified key exists in the `WeakMap` object; otherwise `false`.
 
 ## Examples
 
@@ -41,10 +34,10 @@ has(key)
 
 ```js
 const wm = new WeakMap();
-wm.set(window, 'foo');
+wm.set(window, "foo");
 
 wm.has(window); // returns true
-wm.has('baz');  // returns false
+wm.has("baz"); // returns false
 ```
 
 ## Specifications

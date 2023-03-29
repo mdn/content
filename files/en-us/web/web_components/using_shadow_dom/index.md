@@ -1,12 +1,6 @@
 ---
 title: Using shadow DOM
 slug: Web/Web_Components/Using_shadow_DOM
-tags:
-  - API
-  - DOM
-  - Guide
-  - Web Components
-  - shadow dom
 ---
 
 {{DefaultAPISidebar("Web Components")}}
@@ -139,6 +133,9 @@ const img = document.createElement("img");
 img.src = this.hasAttribute("img")
   ? this.getAttribute("img")
   : "img/default.png";
+img.alt = this.hasAttribute("alt")
+  ? this.getAttribute("alt")
+  : "";
 icon.appendChild(img);
 ```
 

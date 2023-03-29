@@ -2,12 +2,6 @@
 title: Location
 slug: Web/API/Location
 page-type: web-api-interface
-tags:
-  - API
-  - HTML DOM
-  - Interface
-  - Location
-  - Reference
 browser-compat: api.Location
 ---
 
@@ -16,6 +10,8 @@ browser-compat: api.Location
 The **`Location`** interface represents the location (URL) of the object it is linked to. Changes done on it are reflected on the object it relates to. Both the {{domxref("Document")}} and {{domxref("Window")}} interface have such a linked `Location`, accessible via {{domxref("Document.location")}} and {{domxref("Window.location")}} respectively.
 
 ## Location anatomy
+
+Hover over the URL segments below to highlight their meaning:
 
 ```html hidden
 <span id="href" title="href"
@@ -46,7 +42,7 @@ body {
   text-align: center;
   vertical-align: middle;
   font-family: Georgia;
-  font-size: 200%;
+  font-size: 175%;
   line-height: 1em;
   white-space: nowrap;
 }
@@ -57,6 +53,7 @@ body {
   box-sizing: border-box;
   line-height: 2em;
   cursor: pointer;
+  color: gray;
 }
 
 [title]::before {
@@ -67,7 +64,7 @@ body {
   width: 100%;
   left: 50%;
   margin-left: -50%;
-  font-size: 40%;
+  font-size: 60%;
   line-height: 1.5;
   background: black;
 }
@@ -99,16 +96,16 @@ body {
 ```
 
 ```js hidden
-document.body.addEventListener('click', (evt) => {
-    evt.preventDefault();
+document.body.addEventListener("click", (event) => {
+  event.preventDefault();
 
-    window.location.hash = evt.target.hasAttribute('id')
-        ? `#${evt.target.getAttribute('id')}`
-        : '';
+  window.location.hash = event.target.hasAttribute("id")
+    ? `#${event.target.getAttribute("id")}`
+    : "";
 });
 ```
 
-{{EmbedLiveSample('Location anatomy', '85ch', '160px')}}
+{{EmbedLiveSample('Location anatomy', '85ch', '180px')}}
 
 ## Instance properties
 
@@ -149,17 +146,17 @@ document.body.addEventListener('click', (evt) => {
 ```js
 // location: https://developer.mozilla.org:8080/en-US/search?q=URL#search-results-close-container
 const loc = document.location;
-console.log(loc.href);      // https://developer.mozilla.org:8080/en-US/search?q=URL#search-results-close-container
-console.log(loc.protocol);  // https:
-console.log(loc.host);      // developer.mozilla.org:8080
-console.log(loc.hostname);  // developer.mozilla.org
-console.log(loc.port);      // 8080
-console.log(loc.pathname);  // /en-US/search
-console.log(loc.search);    // ?q=URL
-console.log(loc.hash);      // #search-results-close-container
-console.log(loc.origin);    // https://developer.mozilla.org:8080
+console.log(loc.href); // https://developer.mozilla.org:8080/en-US/search?q=URL#search-results-close-container
+console.log(loc.protocol); // https:
+console.log(loc.host); // developer.mozilla.org:8080
+console.log(loc.hostname); // developer.mozilla.org
+console.log(loc.port); // 8080
+console.log(loc.pathname); // /en-US/search
+console.log(loc.search); // ?q=URL
+console.log(loc.hash); // #search-results-close-container
+console.log(loc.origin); // https://developer.mozilla.org:8080
 
-location.assign('http://another.site') // load another page
+location.assign("http://another.site"); // load another page
 ```
 
 ## Specifications

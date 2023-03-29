@@ -1,18 +1,13 @@
 ---
 title: FinalizationRegistry.prototype.unregister()
 slug: Web/JavaScript/Reference/Global_Objects/FinalizationRegistry/unregister
-tags:
-  - FinalizationRegistry
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.FinalizationRegistry.unregister
 ---
 
 {{JSRef}}
 
-The `unregister()` method unregisters a target object from a
+The **`unregister()`** method unregisters a target object from a
 {{jsxref("FinalizationRegistry")}} instance.
 
 ## Syntax
@@ -35,7 +30,7 @@ A boolean value that is `true` if at least one cell was unregistered and `false`
 - {{jsxref("TypeError")}}
   - : Thrown when `unregisterToken` is not an object.
 
-## Notes
+## Description
 
 When a target object has been reclaimed, it is no longer registered in the registry.
 There is no need to call `unregister` in your cleanup callback. Only call
@@ -52,7 +47,7 @@ token, then later unregistering it via `unregister`:
 ```js
 class Thingy {
   static #cleanup = (label) => {
-  //                 ^^^^^−−−−− held value
+    //               ^^^^^−−−−− held value
     console.error(
       `The "release" method was never called for the object with the label "${label}"`
     );
@@ -87,7 +82,7 @@ unregister token:
 ```js
 class Thingy {
   static #cleanup = (file) => {
-  //                 ^^^^−−−−− held value
+    //               ^^^^−−−−− held value
     console.error(
       `The "release" method was never called for the "Thingy" for the file "${file.name}"`
     );

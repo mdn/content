@@ -2,18 +2,13 @@
 title: BeforeInstallPromptEvent
 slug: Web/API/BeforeInstallPromptEvent
 page-type: web-api-interface
-tags:
-  - API
-  - BeforeInstallPromptEvent
-  - Event
-  - Experimental
-  - Interface
-  - Reference
-  - Non-standard
+status:
+  - experimental
+  - non-standard
 browser-compat: api.BeforeInstallPromptEvent
 ---
 
-{{SeeCompatTable}}{{Non-standard_header}}
+{{APIRef}}{{SeeCompatTable}}{{Non-standard_header}}
 
 The **`BeforeInstallPromptEvent`** is the interface of the {{domxref("Window.beforeinstallprompt_event", "beforeinstallprompt")}} event fired at the {{domxref("Window")}} object before a user is prompted to "install" a website to a home screen on mobile.
 

@@ -2,13 +2,6 @@
 title: border-image-slice
 slug: Web/CSS/border-image-slice
 page-type: css-property
-tags:
-  - CSS
-  - CSS Borders
-  - CSS Property
-  - NeedsExample
-  - Reference
-  - recipe:css-property
 browser-compat: css.properties.border-image-slice
 ---
 
@@ -36,10 +29,10 @@ The {{cssxref("border-image-repeat")}}, {{cssxref("border-image-width")}}, and {
 /* All sides */
 border-image-slice: 30%;
 
-/* vertical | horizontal */
+/* top and bottom | left and right */
 border-image-slice: 10% 30%;
 
-/* top | horizontal | bottom */
+/* top | left and right | bottom */
 border-image-slice: 30 30% 45;
 
 /* top | right | bottom | left */

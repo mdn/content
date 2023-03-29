@@ -2,15 +2,8 @@
 title: Document.bgColor
 slug: Web/API/Document/bgColor
 page-type: web-api-instance-property
-tags:
-  - API
-  - Deprecated
-  - Document
-  - HTML DOM
-  - NeedsMarkupWork
-  - NeedsSpecTable
-  - Property
-  - Reference
+status:
+  - deprecated
 browser-compat: api.Document.bgColor
 ---
 

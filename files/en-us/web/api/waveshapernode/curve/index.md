@@ -2,13 +2,6 @@
 title: WaveShaperNode.curve
 slug: Web/API/WaveShaperNode/curve
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - WaveShaperNode
-  - Web Audio API
-  - curve
 browser-compat: api.WaveShaperNode.curve
 ---
 

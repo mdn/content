@@ -1,10 +1,7 @@
 ---
 title: Extension pages
 slug: Mozilla/Add-ons/WebExtensions/user_interface/Extension_pages
-tags:
-  - Beginner
-  - User Interface
-  - WebExtensions
+page-type: guide
 ---
 
 {{AddonSidebar()}}
@@ -39,7 +36,7 @@ let createData = {
   type: "detached_panel",
   url: "panel.html",
   width: 250,
-  height: 100
+  height: 100,
 };
 let creating = browser.windows.create(createData);
 ```
@@ -62,7 +59,7 @@ By default, pages you open in this way will be stored in the user's history, jus
 ```js
 function onVisited(historyItem) {
   if (historyItem.url === browser.extension.getURL(myPage)) {
-    browser.history.deleteUrl({url: historyItem.url});
+    browser.history.deleteUrl({ url: historyItem.url });
   }
 }
 
@@ -73,7 +70,7 @@ To use the history API, you must request the "`history`" [permission](/en-US/doc
 
 ## Web page design
 
-For details on how to design your web page's to match the style of Firefox, see the [Photon Design System](https://design.firefox.com/photon/index.html) and [browser styles](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_styles) documentation.
+For details on how to design your web page's to match the style of Firefox, see the [Acorn Design System](https://acorn.firefox.com/latest/acorn.html) and [browser styles](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_styles) documentation.
 
 ## Examples
 

@@ -1,9 +1,6 @@
 ---
-title: 'Element: pointerover event'
+title: "Element: pointerover event"
 slug: Web/API/Element/pointerover_event
-tags:
-  - Event
-  - PointerEvent
 browser-compat: api.Element.pointerover_event
 page-type: web-api-event
 ---
@@ -17,9 +14,9 @@ The `pointerover` event is fired when a pointing device is moved into an element
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('pointerover', (event) => {});
+addEventListener("pointerover", (event) => {});
 
-onpointerover = (event) => { };
+onpointerover = (event) => {};
 ```
 
 ## Event type
@@ -58,20 +55,20 @@ _This interface inherits properties from {{domxref("MouseEvent")}} and {{domxref
 Using `addEventListener()`:
 
 ```js
-const para = document.querySelector('p');
+const para = document.querySelector("p");
 
-para.addEventListener('pointerover', (event) => {
-  console.log('Pointer moved in');
+para.addEventListener("pointerover", (event) => {
+  console.log("Pointer moved in");
 });
 ```
 
 Using the `onpointerover` event handler property:
 
 ```js
-const para = document.querySelector('p');
+const para = document.querySelector("p");
 
 para.onpointerover = (event) => {
-  console.log('Pointer moved in');
+  console.log("Pointer moved in");
 };
 ```
 
@@ -85,13 +82,14 @@ para.onpointerover = (event) => {
 
 ## See also
 
-- [`gotpointercapture`](/en-US/docs/Web/API/HTMLElement/gotpointercapture_event)
-- [`lostpointercapture`](/en-US/docs/Web/API/HTMLElement/lostpointercapture_event)
-- [`pointerenter`](/en-US/docs/Web/API/Element/pointerenter_event)
-- [`pointerdown`](/en-US/docs/Web/API/Element/pointerdown_event)
-- [`pointermove`](/en-US/docs/Web/API/Element/pointermove_event)
-- [`pointerup`](/en-US/docs/Web/API/Element/pointerup_event)
-- [`pointercancel`](/en-US/docs/Web/API/Element/pointercancel_event)
-- [`pointerout`](/en-US/docs/Web/API/Element/pointerout_event)
-- [`pointerleave`](/en-US/docs/Web/API/Element/pointerleave_event)
-- This event on `Document` targets: [`pointerover`](/en-US/docs/Web/API/Document/pointerover_event) event
+- Related events
+
+  - [`gotpointercapture`](/en-US/docs/Web/API/Element/gotpointercapture_event)
+  - [`lostpointercapture`](/en-US/docs/Web/API/Element/lostpointercapture_event)
+  - [`pointerenter`](/en-US/docs/Web/API/Element/pointerenter_event)
+  - [`pointerdown`](/en-US/docs/Web/API/Element/pointerdown_event)
+  - [`pointermove`](/en-US/docs/Web/API/Element/pointermove_event)
+  - [`pointerup`](/en-US/docs/Web/API/Element/pointerup_event)
+  - [`pointercancel`](/en-US/docs/Web/API/Element/pointercancel_event)
+  - [`pointerout`](/en-US/docs/Web/API/Element/pointerout_event)
+  - [`pointerleave`](/en-US/docs/Web/API/Element/pointerleave_event)

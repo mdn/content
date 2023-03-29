@@ -2,12 +2,6 @@
 title: TransformStream.readable
 slug: Web/API/TransformStream/readable
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - readable
-  - TransformStream
 browser-compat: api.TransformStream.readable
 ---
 
@@ -25,7 +19,7 @@ The following example creates a new {{domxref("TransformStream")}} as `textEncod
 
 ```js
 const textEncoderStream = new TransformStream();
-console.log(textEncoderStream.readable) // a ReadableStream
+console.log(textEncoderStream.readable); // a ReadableStream
 ```
 
 ## Specifications

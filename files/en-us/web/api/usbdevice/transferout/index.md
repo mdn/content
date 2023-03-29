@@ -2,16 +2,8 @@
 title: USBDevice.transferOut()
 slug: Web/API/USBDevice/transferOut
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - USB
-  - USBDevice
-  - WebUSB
-  - WebUSB API
-  - transferOut
-  - Experimental
+status:
+  - experimental
 browser-compat: api.USBDevice.transferOut
 ---
 
@@ -33,7 +25,7 @@ transferOut(endpointNumber, data)
 - `endpointNumber`
   - : The number of a device-specific endpoint (buffer).
 - `data`
-  - : A {{domxref("TypedArray")}} containing the data to send to the device.
+  - : A {{jsxref("TypedArray")}} containing the data to send to the device.
 
 ### Return value
 

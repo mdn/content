@@ -1,11 +1,7 @@
 ---
 title: block
 slug: Web/JavaScript/Reference/Statements/block
-tags:
-  - JavaScript
-  - Language feature
-  - Reference
-  - Statement
+page-type: javascript-statement
 browser-compat: javascript.statements.block
 ---
 

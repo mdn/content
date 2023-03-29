@@ -2,12 +2,6 @@
 title: TransformStream.writable
 slug: Web/API/TransformStream/writable
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - writable
-  - TransformStream
 browser-compat: api.TransformStream.writable
 ---
 
@@ -25,7 +19,7 @@ The following example creates a new {{domxref("TransformStream")}} as a `textEnc
 
 ```js
 const textEncoderStream = new TransformStream();
-console.log(textEncoderStream.writable) // a WritableStream
+console.log(textEncoderStream.writable); // a WritableStream
 ```
 
 ## Specifications

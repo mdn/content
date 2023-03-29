@@ -1,11 +1,7 @@
 ---
 title: Proxy.revocable()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/revocable
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Proxy
+page-type: javascript-static-method
 browser-compat: javascript.builtins.Proxy.revocable
 ---
 

@@ -2,15 +2,6 @@
 title: HTMLFormElement.action
 slug: Web/API/HTMLFormElement/action
 page-type: web-api-instance-property
-tags:
-  - API
-  - Forms
-  - HTML DOM
-  - HTMLFormElement
-  - NeedsSpecTable
-  - NeedsUpdate
-  - Property
-  - Reference
 browser-compat: api.HTMLFormElement.action
 ---
 
@@ -29,7 +20,7 @@ A string.
 ## Examples
 
 ```js
-form.action = '/cgi-bin/publish';
+form.action = "/cgi-bin/publish";
 ```
 
 ## Specifications

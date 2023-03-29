@@ -1,13 +1,7 @@
 ---
 title: itemprop
 slug: Web/HTML/Global_attributes/itemprop
-tags:
-  - Attribute
-  - Global attribute
-  - HTML
-  - HTML Microdata
-  - Microdata
-  - Reference
+page-type: html-attribute
 browser-compat: html.global_attributes.itemprop
 ---
 
@@ -71,7 +65,7 @@ The example below shows the source for a set of elements marked up with `itempro
 
 ## Properties
 
-Properties have values that are either a string or a URL. When a string value is a URL, it is expressed using the {{HTMLElement("a")}} element and its {{htmlattrxref("href", "a")}} attribute, the {{HTMLElement("img")}} element and its {{htmlattrxref("src", "img")}} attribute, or other elements that link to or embed external resources.
+Properties have values that are either a string or a URL. When a string value is a URL, it is expressed using the {{HTMLElement("a")}} element and its [`href`](/en-US/docs/Web/HTML/Element/a#href) attribute, the {{HTMLElement("img")}} element and its [`src`](/en-US/docs/Web/HTML/Element/img#src) attribute, or other elements that link to or embed external resources.
 
 ### Three properties with values that are strings
 
@@ -131,7 +125,7 @@ Similarly, for date- and time-related data, the time element and its datetime at
 ```html
 <div itemscope>
   I was born on
-  <time itemprop="birthday" datetime="2009-05-10">May 10th 2009</time>.
+  <time itemprop="birthday" datetime="1984-05-10">May 10th 1984</time>.
 </div>
 ```
 

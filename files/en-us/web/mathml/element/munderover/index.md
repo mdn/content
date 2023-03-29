@@ -1,11 +1,6 @@
 ---
 title: <munderover>
 slug: Web/MathML/Element/munderover
-tags:
-  - MathML
-  - MathML Reference
-  - MathML:Element
-  - MathML:Script and Limit Schemata
 browser-compat: mathml.elements.munderover
 ---
 
@@ -25,13 +20,6 @@ This element's attributes include the [global MathML attributes](/en-US/docs/Web
   - : A [`<boolean>`](/en-US/docs/Web/MathML/Attribute/Values#mathml-specific_types) indicating whether the under script should be treated as an accent (i.e. drawn bigger and closer to the base expression).
 
 ## Examples
-
-```html hidden
- <link
-   rel="stylesheet"
-   href="https://fred-wang.github.io/MathFonts/LatinModern/mathfonts.css"
-  />
-```
 
 ```html
 <math display="block">

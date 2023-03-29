@@ -1,13 +1,9 @@
 ---
 title: <altGlyphItem>
 slug: Web/SVG/Element/altGlyphItem
-tags:
-  - Deprecated
-  - Element
-  - NeedsExample
-  - Reference
-  - SVG
-  - SVG Text Content
+page-type: svg-element
+status:
+  - deprecated
 browser-compat: svg.elements.altGlyphItem
 ---
 

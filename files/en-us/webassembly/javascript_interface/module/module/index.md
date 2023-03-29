@@ -1,12 +1,6 @@
 ---
 title: WebAssembly.Module() constructor
 slug: WebAssembly/JavaScript_interface/Module/Module
-tags:
-  - Constructor
-  - JavaScript
-  - Module
-  - Reference
-  - WebAssembly
 browser-compat: javascript.builtins.WebAssembly.Module.Module
 ---
 

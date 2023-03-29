@@ -2,12 +2,6 @@
 title: EcdhKeyDeriveParams
 slug: Web/API/EcdhKeyDeriveParams
 page-type: web-api-interface
-tags:
-  - API
-  - Dictionary
-  - EcdhKeyDeriveParams
-  - Reference
-  - Web Crypto API
 spec-urls: https://w3c.github.io/webcrypto/#dfn-EcdhKeyDeriveParams
 ---
 

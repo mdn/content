@@ -2,12 +2,6 @@
 title: WebGL2RenderingContext.invalidateSubFramebuffer()
 slug: Web/API/WebGL2RenderingContext/invalidateSubFramebuffer
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGL2
 browser-compat: api.WebGL2RenderingContext.invalidateSubFramebuffer
 ---
 
@@ -72,9 +66,14 @@ None ({{jsxref("undefined")}}).
 ## Examples
 
 ```js
-gl.invalidateSubFramebuffer(gl.READ_FRAMEBUFFER,
-                            [gl.COLOR_ATTACHMENT0, gl.COLOR_ATTACHMENT1],
-                            0, 0, 256, 256);
+gl.invalidateSubFramebuffer(
+  gl.READ_FRAMEBUFFER,
+  [gl.COLOR_ATTACHMENT0, gl.COLOR_ATTACHMENT1],
+  0,
+  0,
+  256,
+  256
+);
 ```
 
 ## Specifications

@@ -1,18 +1,15 @@
 ---
 title: Number.prototype.toLocaleString()
 slug: Web/JavaScript/Reference/Global_Objects/Number/toLocaleString
-tags:
-  - Internationalization
-  - JavaScript
-  - Method
-  - Number
-  - Prototype
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.Number.toLocaleString
 ---
 
 {{JSRef}}
 
 The **`toLocaleString()`** method returns a string with a language-sensitive representation of this number. In implementations with [`Intl.NumberFormat` API](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat) support, this method simply calls `Intl.NumberFormat`.
+
+When formatting large numbers of numbers, it is better to create a {{jsxref("Intl.NumberFormat")}} object and use the function provided by its {{jsxref("Intl/NumberFormat/format", "format()")}} method.
 
 {{EmbedInteractiveExample("pages/js/number-tolocalestring.html")}}
 
@@ -50,12 +47,6 @@ A string with a language-sensitive representation of the given number.
 
 In implementations with `Intl.NumberFormat`, this is equivalent to `new Intl.NumberFormat(locales, options).format(number)`.
 
-## Performance
-
-When formatting large numbers of numbers, it is better to create a
-{{jsxref("Intl.NumberFormat")}} object and use the function provided by its
-{{jsxref("Intl/NumberFormat/format", "format")}} property.
-
 ## Examples
 
 ### Using toLocaleString()
@@ -66,7 +57,7 @@ with default options is returned.
 ```js
 const number = 3500;
 
-console.log(number.toLocaleString()); // Displays "3,500" if in U.S. English locale
+console.log(number.toLocaleString()); // "3,500" if in U.S. English locale
 ```
 
 ### Checking for support for locales and options arguments

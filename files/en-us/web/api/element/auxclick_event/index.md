@@ -1,15 +1,7 @@
 ---
-title: 'Element: auxclick event'
+title: "Element: auxclick event"
 slug: Web/API/Element/auxclick_event
 page-type: web-api-event
-tags:
-  - Element
-  - Event
-  - MouseEvent
-  - Reference
-  - UI
-  - auxclick
-  - mouse
 browser-compat: api.Element.auxclick_event
 ---
 
@@ -24,9 +16,9 @@ The **`auxclick`** event is fired at an {{domxref("Element")}} when a non-primar
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('auxclick', (event) => {});
+addEventListener("auxclick", (event) => {});
 
-onauxclick = (event) => { };
+onauxclick = (event) => {};
 ```
 
 ## Event type
@@ -94,7 +86,7 @@ _This interface also inherits properties of its parents, {{domxref("UIEvent")}} 
 
 For the vast majority of browsers that map middle click to opening a link in a new tab, including Firefox, it is possible to cancel this behavior by calling {{domxref("Event.preventDefault()", "preventDefault()")}} from within an `auxclick` event handler.
 
-When listening for `auxclick` events originating on elements that do not support input or navigation, you will often want to explicitly prevent other default actions mapped to the down action of the middle mouse button. On Windows this is usually autoscroll, and on macOS and Linux this is usually clipboard paste. This can be done by preventing the default behavior of the {{domxref("Element/mousedown_event", "mousedown")}} or {{domxref("HTMLElement/pointerdown_event", "pointerdown")}} event.
+When listening for `auxclick` events originating on elements that do not support input or navigation, you will often want to explicitly prevent other default actions mapped to the down action of the middle mouse button. On Windows this is usually autoscroll, and on macOS and Linux this is usually clipboard paste. This can be done by preventing the default behavior of the {{domxref("Element/mousedown_event", "mousedown")}} or {{domxref("Element/pointerdown_event", "pointerdown")}} event.
 
 Additionally, you may need to avoid opening a system context menu after a right click. Due to timing differences between operating systems, this too is not a preventable default behavior of `auxclick`. Instead, this can be done by preventing the default behavior of the {{domxref("Element/contextmenu_event", "contextmenu")}} event.
 
@@ -105,15 +97,15 @@ In this example we define functions for two event handlers — {{domxref("Elemen
 ### JavaScript
 
 ```js
-let button = document.querySelector('button');
-let html = document.querySelector('html');
+let button = document.querySelector("button");
+let html = document.querySelector("html");
 
 function random(number) {
   return Math.floor(Math.random() * number);
 }
 
 function randomColor() {
-    return `rgb(${random(255)}, ${random(255)}, ${random(255)})`;
+  return `rgb(${random(255)}, ${random(255)}, ${random(255)})`;
 }
 
 button.onclick = () => {
@@ -123,11 +115,11 @@ button.onclick = () => {
 button.onauxclick = (e) => {
   e.preventDefault();
   button.style.color = randomColor();
-}
+};
 
 button.oncontextmenu = (e) => {
   e.preventDefault();
-}
+};
 ```
 
 Notice that in addition to capturing the `auxclick` event using `onauxclick`, the {{domxref("Element.contextmenu_event", "contextmenu")}} event is also captured, and {{domxref("Event.preventDefault", "preventDefault()")}} called on that event, in order to prevent the context menu from popping up after the color change is applied.
@@ -186,5 +178,5 @@ h1 {
 - {{domxref("Element/dblclick_event", "dblclick")}}
 - {{domxref("Element/mousedown_event", "mousedown")}}
 - {{domxref("Element/mouseup_event", "mouseup")}}
-- {{domxref("HTMLElement/pointerdown_event", "pointerdown")}}
-- {{domxref("HTMLElement/pointerup_event", "pointerup")}}
+- {{domxref("Element/pointerdown_event", "pointerdown")}}
+- {{domxref("Element/pointerup_event", "pointerup")}}

@@ -2,16 +2,6 @@
 title: Navigator.sendBeacon()
 slug: Web/API/Navigator/sendBeacon
 page-type: web-api-instance-method
-tags:
-  - API
-  - Beacon
-  - Method
-  - Navigator
-  - NeedsExample
-  - Networking
-  - Reference
-  - Web Performance
-  - sendBeacon
 browser-compat: api.Navigator.sendBeacon
 ---
 
@@ -24,6 +14,8 @@ It's intended to be used for
 sending analytics data to a web server, and avoids some of the problems with
 legacy techniques for sending analytics, such as the use of
 {{domxref("XMLHttpRequest","XMLHttpRequest")}}.
+
+> **Note:** For use cases that need the ability to send requests with methods other than `POST`, or to change any request properties, or that need access to the server response, instead use the [`fetch()`](/en-US/docs/Web/API/fetch) method with [`keepalive`](/en-US/docs/Web/API/fetch#keepalive) set to true.
 
 ## Syntax
 
@@ -84,9 +76,9 @@ Web sites often want to send analytics or diagnostics to the server when the use
 The most reliable way to do this is to send the data on the [`visibilitychange`](/en-US/docs/Web/API/Document/visibilitychange_event) event:
 
 ```js
-document.addEventListener('visibilitychange', function logData() {
-  if (document.visibilityState === 'hidden') {
-    navigator.sendBeacon('/log', analyticsData);
+document.addEventListener("visibilitychange", function logData() {
+  if (document.visibilityState === "hidden") {
+    navigator.sendBeacon("/log", analyticsData);
   }
 });
 ```
@@ -118,9 +110,9 @@ Like `beforeunload` and `unload`, this event is not reliably fired, especially o
 The following example specifies a handler for the {{domxref("document.visibilitychange_event", "visibilitychange")}} event. The handler calls `sendBeacon()` to send analytics.
 
 ```js
-document.addEventListener('visibilitychange', function logData() {
-  if (document.visibilityState === 'hidden') {
-    navigator.sendBeacon('/log', analyticsData);
+document.addEventListener("visibilitychange", function logData() {
+  if (document.visibilityState === "hidden") {
+    navigator.sendBeacon("/log", analyticsData);
   }
 });
 ```

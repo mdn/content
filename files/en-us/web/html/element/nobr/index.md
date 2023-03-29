@@ -1,17 +1,13 @@
 ---
 title: '<nobr>: The Non-Breaking Text element'
 slug: Web/HTML/Element/nobr
-tags:
-  - Element
-  - HTML
-  - Deprecated
-  - Reference
-  - Web
-  - nobr
+page-type: html-element
+status:
+  - deprecated
 browser-compat: html.elements.nobr
 ---
 
-{{HTMLRef}}{{deprecated_header}}
+{{HTMLSidebar}}{{deprecated_header}}
 
 The **`<nobr>`** [HTML](/en-US/docs/Web/HTML) element prevents the text it contains from automatically wrapping across multiple lines, potentially resulting in the user having to scroll horizontally to see the entire width of the text.
 

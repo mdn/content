@@ -2,20 +2,10 @@
 title: CSSVariableReferenceValue.variable
 slug: Web/API/CSSVariableReferenceValue/variable
 page-type: web-api-instance-property
-tags:
-  - API
-  - CSS Typed Object Model API
-  - CSSVariableReferenceValue
-  - Houdini
-  - NeedsExample
-  - Property
-  - Reference
-  - variable
-  - Experimental
 browser-compat: api.CSSVariableReferenceValue.variable
 ---
 
-{{APIRef("CSSOM")}}{{SeeCompatTable}}
+{{APIRef("CSSOM")}}
 
 The **`variable`** property of the
 {{domxref("CSSVariableReferenceValue")}} interface returns the [custom property name](/en-US/docs/Web/CSS/--*) of the

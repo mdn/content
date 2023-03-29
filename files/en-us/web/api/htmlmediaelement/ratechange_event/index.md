@@ -1,14 +1,7 @@
 ---
-title: 'HTMLMediaElement: ratechange event'
+title: "HTMLMediaElement: ratechange event"
 slug: Web/API/HTMLMediaElement/ratechange_event
 page-type: web-api-event
-tags:
-  - API
-  - Audio
-  - Event
-  - HTMLMediaElement
-  - Reference
-  - Video
 browser-compat: api.HTMLMediaElement.ratechange_event
 ---
 
@@ -23,9 +16,9 @@ This event is not cancelable and does not bubble.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('ratechange', (event) => {});
+addEventListener("ratechange", (event) => {});
 
-onratechange = (event) => { };
+onratechange = (event) => {};
 ```
 
 ## Event type
@@ -39,20 +32,20 @@ These examples add an event listener for the HTMLMediaElement's `ratechange` eve
 Using `addEventListener()`:
 
 ```js
-const video = document.querySelector('video');
+const video = document.querySelector("video");
 
-video.addEventListener('ratechange', (event) => {
-  console.log('The playback rate changed.');
+video.addEventListener("ratechange", (event) => {
+  console.log("The playback rate changed.");
 });
 ```
 
 Using the `onratechange` event handler property:
 
 ```js
-const video = document.querySelector('video');
+const video = document.querySelector("video");
 
 video.onratechange = (event) => {
-  console.log('The playback rate changed.');
+  console.log("The playback rate changed.");
 };
 ```
 

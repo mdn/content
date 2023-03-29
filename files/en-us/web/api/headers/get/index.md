@@ -2,13 +2,6 @@
 title: Headers.get()
 slug: Web/API/Headers/get
 page-type: web-api-instance-method
-tags:
-  - API
-  - Fetch
-  - Headers
-  - Method
-  - Reference
-  - get
 browser-compat: api.Headers.get
 ---
 
@@ -20,9 +13,8 @@ with a given name. If the requested header doesn't exist in the `Headers`
 object, it returns `null`.
 
 For security reasons, some headers can only be controlled by the user agent. These
-headers include the {{Glossary("Forbidden_header_name", "forbidden header names", 1)}}
-and {{Glossary("Forbidden_response_header_name", "forbidden response header names",
-  1)}}.
+headers include the {{Glossary("Forbidden_header_name", "forbidden header names")}}
+and {{Glossary("Forbidden_response_header_name", "forbidden response header names")}}.
 
 ## Syntax
 
@@ -48,25 +40,28 @@ Creating an empty `Headers` object is simple:
 
 ```js
 const myHeaders = new Headers(); // Currently empty
-myHeaders.get('Not-Set'); // Returns null
+myHeaders.get("Not-Set"); // Returns null
 ```
 
 You could add a header to this using {{domxref("Headers.append")}}, then retrieve it
 using `get()`:
 
 ```js
-myHeaders.append('Content-Type', 'image/jpeg');
-myHeaders.get('Content-Type'); // Returns "image/jpeg"
+myHeaders.append("Content-Type", "image/jpeg");
+myHeaders.get("Content-Type"); // Returns "image/jpeg"
 ```
 
 If the header has multiple values associated with it, the byte string will contain all
 the values, in the order they were added to the Headers object:
 
 ```js
-myHeaders.append('Accept-Encoding', 'deflate');
-myHeaders.append('Accept-Encoding', 'gzip');
-myHeaders.get('Accept-Encoding'); // Returns "deflate, gzip"
-myHeaders.get('Accept-Encoding').split(',').map((v) => v.trimStart()); // Returns [ "deflate", "gzip" ]
+myHeaders.append("Accept-Encoding", "deflate");
+myHeaders.append("Accept-Encoding", "gzip");
+myHeaders.get("Accept-Encoding"); // Returns "deflate, gzip"
+myHeaders
+  .get("Accept-Encoding")
+  .split(",")
+  .map((v) => v.trimStart()); // Returns [ "deflate", "gzip" ]
 ```
 
 ## Specifications

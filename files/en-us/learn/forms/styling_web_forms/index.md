@@ -1,20 +1,11 @@
 ---
 title: Styling web forms
 slug: Learn/Forms/Styling_web_forms
-tags:
-  - Beginner
-  - CSS
-  - Example
-  - Forms
-  - Guide
-  - HTML
-  - Learn
-  - Web
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Forms/Other_form_controls","Learn/Forms/Advanced_form_styling","Learn/Forms")}}
 
-In the previous few articles we looked at all the HTML you'll need to create and structure your web forms. In this article we will move on to looking at how to use [CSS](/en-US/docs/Web/CSS) to style your form controls. This has historically been difficult — form controls vary greatly in how easy they are to customize with CSS — but it is getting easier as old browsers are retired and modern browsers give us more features to use.
+In the previous few articles, we showed how to create web forms in HTML. Now, we'll show how to style them in [CSS](/en-US/docs/Web/CSS).
 
 <table>
   <tbody>
@@ -36,21 +27,17 @@ In the previous few articles we looked at all the HTML you'll need to create and
   </tbody>
 </table>
 
-## Why is styling form widgets challenging?
+## Challenges in styling form widgets
 
-Form controls were added to HTML in [the HTML 2 specification](https://www.ietf.org/rfc/rfc1866.txt) in 1995; CSS wasn't released until late 1996, and wasn't supported very well by browsers for a few years after that. Browsers relied on the underlying operating system to manage and render form controls.
+### History
 
-And even with CSS available to style HTML, browser vendors have historically been reluctant to make form controls stylable because users were so accustomed to the visual appearance of their respective platforms. But this has changed. Website owners want form styles that fit in with their overall site design more than ever, and the web platform has changed to make this more possible.
+In 1995, [the HTML 2 specification](https://www.ietf.org/rfc/rfc1866.txt) introduced form controls (a.k.a. "form widgets", or "form elements"). But CSS wasn't released until late 1996, and wasn't supported by most browsers until years afterward; so, in the interim, browsers relied on the underlying operating system to render form widgets.
 
-For some form widgets, it is still difficult to rebuild controls to make them stylable, but we can now use CSS to style many form features, though we do need to take extra care to ensure we don't break usability.
+Even with CSS available, browser vendors were reluctant at first to make form elements stylable, because users were so accustomed to the looks of their respective browsers. But things have changed, and forms widgets are now mostly stylable, with a few exceptions.
 
-### Not all widgets are created equal when CSS is involved
+### Types of widgets
 
-At present, some difficulties remain when using CSS with forms. These problems can be divided into three categories:
-
-#### The good
-
-Some elements can be styled with few if any problems across platforms. These include the following elements:
+#### Easy-to-style
 
 1. {{HTMLElement("form")}}
 2. {{HTMLElement("fieldset")}} and {{HTMLElement("legend")}}
@@ -60,18 +47,14 @@ Some elements can be styled with few if any problems across platforms. These inc
 6. {{HTMLElement("label")}}
 7. {{HTMLElement("output")}}
 
-#### The bad
-
-Some elements are more difficult to style, requiring more complex CSS or some more specific tricks:
+#### Harder-to-style
 
 - Checkboxes and radio buttons
 - [`<input type="search">`](/en-US/docs/Web/HTML/Element/input/search)
 
-We describe how to handle these more specific features in the article [Advanced form styling](/en-US/docs/Learn/Forms/Advanced_form_styling).
+The article [Advanced form styling](/en-US/docs/Learn/Forms/Advanced_form_styling) shows how to style these.
 
-#### The ugly
-
-Some elements can't be styled thoroughly using CSS. These include:
+#### Having internals can't be styled in CSS alone
 
 - [`<input type="color">`](/en-US/docs/Web/HTML/Element/input/color)
 - Date-related controls such as [`<input type="datetime-local">`](/en-US/docs/Web/HTML/Element/input/datetime-local)
@@ -80,25 +63,21 @@ Some elements can't be styled thoroughly using CSS. These include:
 - Elements involved in creating dropdown widgets, including {{HTMLElement("select")}}, {{HTMLElement("option")}}, {{HTMLElement("optgroup")}} and {{HTMLElement("datalist")}}.
 - {{HTMLElement("progress")}} and {{HTMLElement("meter")}}
 
-Again, we'll describe what can be done in terms of styling these elements in [Advanced form styling](/en-US/docs/Learn/Forms/Advanced_form_styling).
+For example, the date picker calendar, and the button on \<select> that displays an options list when clicked, can't be styled using CSS alone.
 
-The real problem with all these controls is that they have a very complex structure, and beyond some basic styling (such as changing the width or margin of the control) you generally don't have the ability to style the controls' internal components (such as the date picker calendar, or the button on the \<select> that causes the options list to display) making up those widgets.
+The articles [Advanced form styling](/en-US/docs/Learn/Forms/Advanced_form_styling) and [How to build custom form controls](/en-US/docs/Learn/Forms/How_to_build_custom_form_controls) describe how to style these.
 
-If you want to thoroughly customize those widgets, you really have to create your own using HTML, CSS, and JavaScript. This is beyond the scope of the core form articles, but we do look at this in an advanced article [How to build custom form controls](/en-US/docs/Learn/Forms/How_to_build_custom_form_controls).
+> **Note:** some proprietary CSS pseudo-elements, such as {{cssxref('::-moz-range-track')}}, are capable of styling such internal components, but these aren't consistent across browsers, so aren't very reliable. We will mention these later.
 
-> **Note:** there are some proprietary CSS pseudo-elements available that allow you to style internal components of these form controls, such as {{cssxref('::-moz-range-track')}}, but these are not consistent across browsers, so can't be relied upon. We will mention these later as well.
+## Styling simple form widgets
 
-## The good
+The "easy-to-style" widgets in the previous section may be styled using techniques from the articles [Your first form](/en-US/docs/Learn/Forms/Your_first_form) and [CSS building blocks](/en-US/docs/Learn/CSS/Building_blocks). There are also special selectors — [UI pseudo-classes](/en-US/docs/Learn/Forms/UI_pseudo-classes) — that enable styling based on the current state of the UI.
 
-To style form controls that are easy to style with CSS, you shouldn't face much if any difficulties, since they mostly behave like any other HTML element. We already looked at some simple form styling in [Your first form](/en-US/docs/Learn/Forms/Your_first_form), and the [CSS building blocks](/en-US/docs/Learn/CSS/Building_blocks) module contains some [useful form styling essentials](/en-US/docs/Learn/CSS/Building_blocks/Images_media_form_elements#form_elements) too.
-
-As well as the basic CSS tools covered above, we've also been provided with several selectors — UI pseudo-classes — that enable styling based on the current state of the UI. We cover these in detail in the next article, [UI pseudo-classes](/en-US/docs/Learn/Forms/UI_pseudo-classes).
-
-We'll walk through an example at the end of this article to give you some more ideas on basic form control styling and placement. Before we do that however, we'd like to say a few words about specific aspects of form styling that are worth knowing about.
+We'll walk through an example at the end of this article — but first, here are some special aspects of form styling that are worth knowing about.
 
 ### Fonts and text
 
-CSS font and text features can be used easily with any widget (and yes, you can use {{cssxref("@font-face")}} with form widgets). However, browser behavior is often inconsistent. By default, some widgets do not inherit {{cssxref("font-family")}} and {{cssxref("font-size")}} from their parents. Many browsers use the system default appearance instead. To make your forms' appearance consistent with the rest of your content, you can add the following rules to your stylesheet:
+CSS font and text features can be used easily with any widget (and yes, you can use {{cssxref("@font-face")}} with form widgets). However, browser behavior is often inconsistent. By default, some widgets do not inherit {{cssxref("font-family")}} and {{cssxref("font-size")}} from their parents. Many browsers use the system's default appearance instead. To make your forms' appearance consistent with the rest of your content, you can add the following rules to your stylesheet:
 
 ```css
 button,
@@ -116,7 +95,7 @@ The screenshots below show the difference. On the left is the default rendering 
 
 ![Form controls with default and inherited font families. By default, some types are serif and others are sans serif. Inheriting should change the fonts of all to the parent's font family - in this case a paragraph. Oddly, input of type submit does not inherit from the parent paragraph.](forms_fontfamily.png)
 
-The defaults differed in a number of ways. Inheriting should change their fonts to that of the parent's font family — in this case the default serif font of the parent container. They all do, with a strange exception — `<input type="submit">` does not inherit from the parent paragraph in Chrome. Rather, it uses the {{cssxref('font-family#Values', 'font-family: system-ui')}}. This is another reason to use `<button>` elements over their equivalent input types!
+The defaults differed in a number of ways. Inheriting should change their fonts to that of the parent's font family — in this case, the default serif font of the parent container. They all do, with a strange exception — `<input type="submit">` does not inherit from the parent paragraph in Chrome. Rather, it uses the {{cssxref('font-family#Values', 'font-family: system-ui')}}. This is another reason to use `<button>` elements over their equivalent input types!
 
 There's a lot of debate as to whether forms look better using the system default styles, or customized styles designed to match your content. This decision is yours to make, as the designer of your site, or web application.
 
@@ -124,7 +103,7 @@ There's a lot of debate as to whether forms look better using the system default
 
 All text fields have complete support for every property related to the CSS box model, such as {{cssxref("width")}}, {{cssxref("height")}}, {{cssxref("padding")}}, {{cssxref("margin")}}, and {{cssxref("border")}}. As before, however, browsers rely on the system default styles when displaying these widgets. It's up to you to define how you wish to blend them into your content. If you want to keep the native look and feel of the widgets, you'll face a little difficulty if you want to give them a consistent size.
 
-**This is because each widget has their own rules for border, padding and margin.** To give the same size to several different widgets, you can use the {{cssxref("box-sizing")}} property along with some consistent values for other properties:
+**This is because each widget has its own rules for border, padding, and margin.** To give the same size to several different widgets, you can use the {{cssxref("box-sizing")}} property along with some consistent values for other properties:
 
 ```css
 input,
@@ -146,7 +125,7 @@ What may not be apparent via the screenshot is that the radio and checkbox contr
 
 ### Legend placement
 
-The {{HTMLElement("legend")}} element is okay to style, but it can be a bit tricky to control placement of it. By default it is always positioned over the top border of its {{HTMLElement("fieldset")}} parent, near the top left corner. To position it somewhere else, for example inside the fieldset somewhere, or near the bottom left corner, you need to rely on positioning.
+The {{HTMLElement("legend")}} element is okay to style, but it can be a bit tricky to control the placement of it. By default, it is always positioned over the top border of its {{HTMLElement("fieldset")}} parent, near the top left corner. To position it somewhere else, for example inside the fieldset somewhere, or near the bottom left corner, you need to rely on the positioning.
 
 Take the following example:
 
@@ -215,7 +194,7 @@ This is where the fun begins! Before we start coding, we need three additional a
 
 1. [The postcard background](background.jpg) — download this image and save it in the same directory as your working HTML file.
 2. A typewriter font: [The "Mom's Typewriter" font from dafont.com](https://www.dafont.com/moms-typewriter.font?back=theme) — download the TTF file into the same directory as above.
-3. A hand drawn font: [The "Journal" font from dafont.com](https://www.dafont.com/journal.font) — download the TTF file into the same directory as above.
+3. A hand-drawn font: [The "Journal" font from dafont.com](https://www.dafont.com/journal.font) — download the TTF file into the same directory as above.
 
 Your fonts need some more processing before you start:
 
@@ -230,7 +209,7 @@ Now we can dig into the CSS for the example. Add all the code blocks shown below
 
 #### Overall layout
 
-First, we prepare by defining our {{cssxref("@font-face")}} rules, and all the basic styles set on the {{HTMLElement("body")}} and {{HTMLElement("form")}} elements. If the fontsquirrel output was different to what we described above, you can find the correct `@font-face` blocks inside your downloaded webfont kit, in the `stylesheet.css` file (you'll need to replace the below `@font-face` blocks with them, and update the paths to the font files):
+First, we prepare by defining our {{cssxref("@font-face")}} rules, and all the basic styles set on the {{HTMLElement("body")}} and {{HTMLElement("form")}} elements. If the fontsquirrel output was different from what we described above, you can find the correct `@font-face` blocks inside your downloaded webfont kit, in the `stylesheet.css` file (you'll need to replace the below `@font-face` blocks with them, and update the paths to the font files):
 
 ```css
 @font-face {
@@ -243,7 +222,7 @@ First, we prepare by defining our {{cssxref("@font-face")}} rules, and all the b
 
 @font-face {
   font-family: "typewriter";
-  src: url("fonts/momt___-webfont.woff2") format("woff2"), url("fonts/momt___-webfont.woff")
+  src: url("fonts/momot___-webfont.woff2") format("woff2"), url("fonts/momot___-webfont.woff")
       format("woff");
   font-weight: normal;
   font-style: normal;
@@ -325,11 +304,11 @@ textarea:focus {
 }
 ```
 
-Now that our text fields are complete, we need to adjust the display of the single and multiple line text fields to match, since they won't typically look the same using the defaults.
+Now that our text fields are complete, we need to adjust the display of the single and multiple-line text fields to match, since they won't typically look the same using the defaults.
 
 #### Tweaking the textareas
 
-{{HTMLElement("textarea")}} elements default to being rendered as an inline-block element. The two important things here are the {{cssxref("resize")}} and {{cssxref("overflow")}} properties. While our design is a fixed-size design, and we could use the `resize` property to prevent users from resizing our multi-line text field, it is best to not prevent users from resizing a textarea if they so choose. The {{cssxref("overflow")}} property is used to make the field render more consistently across browsers. Some browsers default to the value `auto`, while some default to the value `scroll`. In our case, it's better to be sure every one will use `auto`:
+{{HTMLElement("textarea")}} elements default to being rendered as an inline-block element. The two important things here are the {{cssxref("resize")}} and {{cssxref("overflow")}} properties. While our design is a fixed-size design, and we could use the `resize` property to prevent users from resizing our multi-line text field, it is best to not prevent users from resizing a textarea if they so choose. The {{cssxref("overflow")}} property is used to make the field render more consistently across browsers. Some browsers default to the value `auto`, while some default to the value `scroll`. In our case, it's better to be sure everyone will use `auto`:
 
 ```css
 textarea {
@@ -376,11 +355,11 @@ button:focus {
 
 ### The final result
 
-And voila! Your form should now look like this:
+And voilà! Your form should now look like this:
 
 ![The final look and layout of the form after applying all styling and tweaking to it as described above](updated-form-screenshot.jpg)
 
-> **Note:** If your example does not work quite like you expected and you want to check it against our version, you can find it on GitHub — see it [running live](https://mdn.github.io/learning-area/html/forms/postcard-example/) (also see [the source code](https://github.com/mdn/learning-area/tree/main/html/forms/postcard-example)).
+> **Note:** If your example does not work quite as you expected and you want to check it against our version, you can find it on GitHub — see it [running live](https://mdn.github.io/learning-area/html/forms/postcard-example/) (also see [the source code](https://github.com/mdn/learning-area/tree/main/html/forms/postcard-example)).
 
 ## Test your skills
 
@@ -391,19 +370,6 @@ You've reached the end of this article, but can you remember the most important 
 As you can see, as long as we want to build forms with just text fields and buttons, it's easy to style them using CSS. [In the next article](/en-US/docs/Learn/Forms/Advanced_form_styling), we will see how to handle form widgets which fall into the "bad" and "ugly" categories.
 
 {{PreviousMenuNext("Learn/Forms/Other_form_controls","Learn/Forms/Advanced_form_styling","Learn/Forms")}}
-
-## In this module
-
-- [Your first form](/en-US/docs/Learn/Forms/Your_first_form)
-- [How to structure a web form](/en-US/docs/Learn/Forms/How_to_structure_a_web_form)
-- [Basic native form controls](/en-US/docs/Learn/Forms/Basic_native_form_controls)
-- [The HTML5 input types](/en-US/docs/Learn/Forms/HTML5_input_types)
-- [Other form controls](/en-US/docs/Learn/Forms/Other_form_controls)
-- [Styling web forms](/en-US/docs/Learn/Forms/Styling_web_forms)
-- [Advanced form styling](/en-US/docs/Learn/Forms/Advanced_form_styling)
-- [UI pseudo-classes](/en-US/docs/Learn/Forms/UI_pseudo-classes)
-- [Client-side form validation](/en-US/docs/Learn/Forms/Form_validation)
-- [Sending form data](/en-US/docs/Learn/Forms/Sending_and_retrieving_form_data)
 
 ### Advanced Topics
 

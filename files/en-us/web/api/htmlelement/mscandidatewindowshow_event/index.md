@@ -1,10 +1,9 @@
 ---
-title: 'HTMLElement: mscandidatewindowshow event'
+title: "HTMLElement: mscandidatewindowshow event"
 slug: Web/API/HTMLElement/mscandidatewindowshow_event
 page-type: web-api-event
-tags:
-  - Non-standard
-  - Event
+status:
+  - non-standard
 ---
 
 {{APIRef("HTML DOM")}}
@@ -15,8 +14,6 @@ The **`mscandidatewindowshow`** event is thrown immediately after the Input Meth
 
 This proprietary method is specific to Internet Explorer.
 
-> **Note:** Windows 8.1 and Windows 7 IMEs for certain languages on Internet Explorer for the desktop might not support this event. On Internet Explorer in the new Windows UI, this event is supported in Windows 8.1 IMEs of all languages.
-
 This event fires after the positioning information of the IME candidate window has been determined. You can obtain the positioning information using the [getCandidateWindowClientRect](/en-US/docs/Web/API/getCandidateWindowClientRect) method, and adjust your layout as needed to avoid any occlusions with the IME candidate window.
 
 Web applications need only register for this event once per element (the handler will remain valid for the lifetime of the element).
@@ -26,9 +23,9 @@ Web applications need only register for this event once per element (the handler
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('mscandidatewindowshow', (event) => { })
+addEventListener("mscandidatewindowshow", (event) => {});
 
-onmscandidatewindowshow = (event) => { }
+onmscandidatewindowshow = (event) => {};
 ```
 
 ## Event type
@@ -44,9 +41,11 @@ const context = document.getElementById("mySearchBox").msGetInputContext();
 context.addEventListener("MSCandidateWindowShow", candidateWindowShowHandler);
 
 function candidateWindowShowHandler(e) {
-   const imeRect = context.getCandidateWindowClientRect();
-   const suggestionRect = document.getElementById("mySuggestionList").getBoundingClientRect();
-   // Check if the two rects intersect, and position them away from each other.
+  const imeRect = context.getCandidateWindowClientRect();
+  const suggestionRect = document
+    .getElementById("mySuggestionList")
+    .getBoundingClientRect();
+  // Check if the two rects intersect, and position them away from each other.
 }
 ```
 

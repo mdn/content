@@ -2,13 +2,6 @@
 title: Request.bodyUsed
 slug: Web/API/Request/bodyUsed
 page-type: web-api-instance-property
-tags:
-  - API
-  - Fetch
-  - Property
-  - Reference
-  - bodyUsed
-  - Request
 browser-compat: api.Request.bodyUsed
 ---
 
@@ -25,9 +18,9 @@ A boolean value.
 ## Examples
 
 ```js
-const request = new Request('/myEndpoint', {
-  method: 'POST',
-  body: 'Hello world'
+const request = new Request("/myEndpoint", {
+  method: "POST",
+  body: "Hello world",
 });
 
 request.bodyUsed; // false

@@ -2,14 +2,8 @@
 title: "@property"
 slug: Web/CSS/@property
 page-type: css-at-rule
-tags:
-  - At-rule
-  - CSS
-  - Reference
-  - Web
-  - Property
-  - Houdini
-  - Experimental
+status:
+  - experimental
 browser-compat: css.at-rules.property
 ---
 
@@ -71,11 +65,7 @@ window.CSS.registerProperty({
 
 ## Formal syntax
 
-```
-@property <custom-property-name> {
-  <declaration-list>
-}
-```
+{{csssyntax}}
 
 ## Specifications
 

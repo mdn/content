@@ -3,6 +3,8 @@ title: Types of attacks
 slug: Web/Security/Types_of_attacks
 ---
 
+{{QuickLinksWithSubpages("/en-US/docs/Web/Security")}}
+
 This article describes various types of security attacks and techniques to mitigate them.
 
 ## Click-jacking
@@ -48,14 +50,14 @@ Now, if you are logged into your bank account and your cookies are still valid (
   <input type="hidden" name="for" value="mallory" />
 </form>
 <script>
-  window.addEventListener('DOMContentLoaded', (e) => { document.querySelector('form').submit(); }
+  window.addEventListener('DOMContentLoaded', () => { document.querySelector('form').submit(); }
 </script>
 ```
 
 There are a few techniques that should be used to prevent this from happening:
 
 - GET endpoints should be idempotent—actions that enact a change and do not retrieve data should require sending a POST (or other HTTP method) request. POST endpoints should not interchangeably accept GET requests with parameters in the query string.
-- A CSRF token should be included in \<form> elements via a hidden input field. This token should be unique per user and stored (for example, in a cookie) such that the server can look up the expected value when the request is sent. For all non-GET requests that have the potential to perform an action, this input field should be compared against the expected value. If there is a mismatch, the request should be aborted.
+- A session-unique CSRF token should be provided by the server to the browser. This token can then be included whenever a form is posted by the browser (in a hidden input field in the `<form>` element). For all non-GET requests that have the potential to perform an action, the server compares the sent token against its stored value for the session. If there is a mismatch, the request is aborted.
 - This method of protection relies on an attacker being unable to predict the user's assigned CSRF token. The token should be regenerated on sign-in.
 - Cookies that are used for sensitive actions (such as session cookies) should have a short lifetime with the SameSite attribute set to Strict or Lax. (See SameSite cookies above). In supporting browsers, this will have the effect of ensuring that the session cookie is not sent along with cross-site requests and so the request is effectively unauthenticated to the application server.
 - Both CSRF tokens and SameSite cookies should be deployed. This ensures all browsers are protected and provides protection where SameSite cookies cannot help (such as attacks originating from a separate subdomain).
@@ -64,7 +66,7 @@ For more prevention tips, see the OWASP CSRF prevention cheat sheet.
 
 ## Man-in-the-middle (MitM)
 
-A third party intercepts traffic between a web server and a client (browser), and impersonates the web server in order to capture data (such as login credentials or credit card information). The traffic is passed through, possibly with alterations. Open Wi-Fi networks are a typically means of executing this attack.
+A third party intercepts traffic between a web server and a client (browser), and impersonates the web server in order to capture data (such as login credentials or credit card information). The traffic is passed through, possibly with alterations. Open Wi-Fi networks are typical means of executing this attack.
 
 ## Session hijacking
 
@@ -76,16 +78,16 @@ Exfiltration avenues can be limited by deploying a strict Content-Security-Polic
 
 A third party is able to determine a user's session identifier (i.e., by reading it or setting it), and therefore interact with the server as that user. Stealing cookies is one way to do this.
 
-Recall that a subdomain such as application.example.com can set a cookie to be sent with requests to example.com or other sub-domains by setting the `Domain` attribute:
+Recall that a subdomain such as application.example.com can set a cookie to be sent with requests to example.com or other subdomains by setting the `Domain` attribute:
 
 ```http
 Set-Cookie: CSRF=e8b667; Secure; Domain=example.com
 ```
 
-If a vulnerable application is available on a sub-domain, this mechanism can be abused in a session fixation attack. When the user visits a page on the parent domain (or another subdomain), the application may trust the existing value sent in the user's cookie. This could allow an attacker to bypass CSRF protection or hijack a session after the user logs in.
-Alternatively, if the parent domain does not use [HTTP Strict-Transport-Security](/en-US/docs/Glossary/HSTS) with `includeSubdomains` set, a user subject to an active MitM (perhaps connected to an open Wi-Fi network) could be served a response with a Set-Cookie header from a non-existent sub-domain. The end result would be much the same, with the browser storing the illegitimate cookie and sending it to all other pages under example.com.
+If a vulnerable application is available on a subdomain, this mechanism can be abused in a session fixation attack. When the user visits a page on the parent domain (or another subdomain), the application may trust the existing value sent in the user's cookie. This could allow an attacker to bypass CSRF protection or hijack a session after the user logs in.
+Alternatively, if the parent domain does not use [HTTP Strict-Transport-Security](/en-US/docs/Glossary/HSTS) with `includeSubdomains` set, a user subject to an active MitM (perhaps connected to an open Wi-Fi network) could be served a response with a Set-Cookie header from a non-existent subdomain. The end result would be much the same, with the browser storing the illegitimate cookie and sending it to all other pages under example.com.
 
-Session fixation should primarily be mitigated by regenerating session cookie values when the user authenticates (even if a cookie already exists) and by tieing any CSRF token to the user.
+Session fixation should primarily be mitigated by regenerating session cookie values when the user authenticates (even if a cookie already exists) and by tying any CSRF token to the user.
 
 ### Session side-jacking
 

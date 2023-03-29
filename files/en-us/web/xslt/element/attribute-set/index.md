@@ -1,11 +1,6 @@
 ---
 title: <xsl:attribute-set>
 slug: Web/XSLT/Element/attribute-set
-tags:
-  - Element
-  - Reference
-  - XSLT
-  - attribute-set
 ---
 
 {{ XsltRef() }}

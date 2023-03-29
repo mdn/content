@@ -2,14 +2,6 @@
 title: unicode-range
 slug: Web/CSS/@font-face/unicode-range
 page-type: css-at-rule-descriptor
-tags:
-  - At-rule descriptor
-  - CSS
-  - CSS Fonts
-  - CSS Property
-  - Layout
-  - Reference
-  - Web
 browser-compat: css.at-rules.font-face.unicode-range
 ---
 
@@ -47,9 +39,7 @@ The purpose of this descriptor is to allow the font resources to be segmented so
 
 ## Formal syntax
 
-```
-<unicode-range>#
-```
+{{csssyntax}}
 
 ## Examples
 

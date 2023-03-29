@@ -2,12 +2,6 @@
 title: DOMRectReadOnly.fromRect()
 slug: Web/API/DOMRectReadOnly/fromRect
 page-type: web-api-static-method
-tags:
-  - API
-  - DOMRectReadOnly
-  - Geometry
-  - Method
-  - Reference
 browser-compat: api.DOMRectReadOnly.fromRect
 ---
 

@@ -1,32 +1,16 @@
 ---
 title: Date and time formats used in HTML
 slug: Web/HTML/Date_and_time_formats
-tags:
-  - Date
-  - Element
-  - Format
-  - HTML
-  - ISO 8601
-  - Input
-  - Reference
-  - String
-  - Time
-  - Week
-  - datetime
-  - del
-  - ins
-  - month
-  - month-year
-  - week-year
+page-type: guide
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 Certain HTML elements use date and/or time values. The formats of the strings that specify these values are described in this article.
 
-Elements that use such formats include certain forms of the {{HTMLElement("input")}} element that let the user choose or specify a date, time, or both, as well as the {{HTMLElement("ins")}} and {{HTMLElement("del")}} elements, whose {{htmlattrxref("datetime", "ins")}} attribute specifies the date or date and time at which the insertion or deletion of content occurred.
+Elements that use such formats include certain forms of the {{HTMLElement("input")}} element that let the user choose or specify a date, time, or both, as well as the {{HTMLElement("ins")}} and {{HTMLElement("del")}} elements, whose [`datetime`](/en-US/docs/Web/HTML/Element/ins#datetime) attribute specifies the date or date and time at which the insertion or deletion of content occurred.
 
-For `<input>`, the values of {{htmlattrxref("type", "input")}} that return a {{htmlattrxref("value")}} which contains a string representing a date and/or time are:
+For `<input>`, the values of [`type`](/en-US/docs/Web/HTML/Element/input#type) that return a [`value`](/en-US/docs/Web/HTML/Global_attributes#value) which contains a string representing a date and/or time are:
 
 - [`date`](/en-US/docs/Web/HTML/Element/input/date)
 - [`datetime-local`](/en-US/docs/Web/HTML/Element/input/datetime-local)
@@ -287,7 +271,7 @@ A time string can specify a time with precision to the minute, second, or to the
 
 There are some additional basic rules:
 
-- The hour is always specified using the 24-hour clock, with `00` being midnight and 11 PM being `23`. No values outside the range `00`–`23` are permitted.
+- The hour is always specified using the 24-hour clock, with `00` being midnight and 11 PM being `23`. No values outside the range `00` – `23` are permitted.
 - The minute must be a two-digit number between `00` and `59`. No values outside that range are allowed.
 - If the number of seconds is omitted (to specify a time accurate only to the minute), no colon should follow the number of minutes.
 - If specified, the integer portion of the number of seconds must be between `00` and `59`. You _cannot_ specify leap seconds by using values like `60` or `61`.
@@ -304,7 +288,7 @@ There are some additional basic rules:
 
 A valid [`datetime-local`](/en-US/docs/Web/HTML/Element/input/datetime-local) string consists of a `date` string and a `time` string concatenated together with either the letter "`T`" or a space character separating them. No information about the time zone is included in the string; the date and time is presumed to be in the user's local time zone.
 
-When you set the {{htmlattrxref("value", "input")}} of a `datetime-local` input, the string is **normalized** into a standard form. Normalized `datetime` strings always use the letter "`T`" to separate the date and the time, and the time portion of the string is as short as possible. This is done by leaving out the seconds component if its value is `:00`.
+When you set the [`value`](/en-US/docs/Web/HTML/Element/input#value) of a `datetime-local` input, the string is **normalized** into a standard form. Normalized `datetime` strings always use the letter "`T`" to separate the date and the time, and the time portion of the string is as short as possible. This is done by leaving out the seconds component if its value is `:00`.
 
 <table class="standard-table">
   <caption>

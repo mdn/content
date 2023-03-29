@@ -1,14 +1,6 @@
 ---
 title: WebAssembly.Exception.prototype.getArg()
 slug: WebAssembly/JavaScript_interface/Exception/getArg
-tags:
-  - API
-  - JavaScript
-  - Method
-  - Reference
-  - WebAssembly
-  - getArg
-  - Exception
 browser-compat: javascript.builtins.WebAssembly.Exception.getArg
 ---
 
@@ -85,9 +77,9 @@ const tagToImport = new WebAssembly.Tag({ parameters: ["i32"] });
 
 // Note: the import object properties match the import statement in WebAssembly code!
 const importObject = {
-  "extmod": {
-    "exttag": tagToImport
-  }
+  extmod: {
+    exttag: tagToImport,
+  },
 };
 
 WebAssembly.instantiateStreaming(fetch("example.wasm"), importObject)

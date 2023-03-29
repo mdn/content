@@ -2,10 +2,6 @@
 title: WebGLFramebuffer
 slug: Web/API/WebGLFramebuffer
 page-type: web-api-interface
-tags:
-  - API
-  - Reference
-  - WebGL
 browser-compat: api.WebGLFramebuffer
 ---
 
@@ -29,8 +25,8 @@ The `WebGLFramebuffer` object does not define any methods or properties of its o
 ### Creating a frame buffer
 
 ```js
-const canvas = document.getElementById('canvas');
-const gl = canvas.getContext('webgl');
+const canvas = document.getElementById("canvas");
+const gl = canvas.getContext("webgl");
 const buffer = gl.createFramebuffer();
 ```
 

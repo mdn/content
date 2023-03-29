@@ -2,12 +2,6 @@
 title: WebGLRenderingContext.checkFramebufferStatus()
 slug: Web/API/WebGLRenderingContext/checkFramebufferStatus
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.checkFramebufferStatus
 ---
 
@@ -39,8 +33,7 @@ checkFramebufferStatus(target)
 
     - `gl.DRAW_FRAMEBUFFER`
       - : Equivalent to `gl.FRAMEBUFFER`.
-          Used as a destination for drawing, rendering, clearing, and writing
-          operations.
+        Used as a destination for drawing, rendering, clearing, and writing operations.
     - `gl.READ_FRAMEBUFFER`
       - : Used as a source for reading operations.
 
@@ -76,8 +69,8 @@ A {{domxref("WebGL_API/Types", "GLenum")}} indicating the completeness status of
 ## Examples
 
 ```js
-const canvas = document.getElementById('canvas');
-const gl = canvas.getContext('webgl');
+const canvas = document.getElementById("canvas");
+const gl = canvas.getContext("webgl");
 const framebuffer = gl.createFramebuffer();
 
 // …

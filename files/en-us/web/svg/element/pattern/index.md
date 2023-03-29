@@ -1,10 +1,7 @@
 ---
 title: <pattern>
 slug: Web/SVG/Element/pattern
-tags:
-  - Element
-  - SVG
-  - SVG Container
+page-type: svg-element
 browser-compat: svg.elements.pattern
 ---
 
@@ -54,6 +51,7 @@ svg {
   - : This attribute reference a template pattern that provides default values for the `<pattern>` attributes.
     _Value type_: [**\<URL>**](/en-US/docs/Web/SVG/Content_type#url); _Default value_: _none_; _Animatable_: **yes**
 - {{SVGAttr("patternContentUnits")}}
+
   - : This attribute defines the coordinate system for the contents of the {{SVGElement("pattern")}}.
     _Value type_: `userSpaceOnUse`|`objectBoundingBox`; _Default value_: `userSpaceOnUse`; _Animatable_: **yes**
 
@@ -79,7 +77,7 @@ svg {
     _Value type_: [**\<length>**](/en-US/docs/Web/SVG/Content_type#length)|[**\<percentage>**](/en-US/docs/Web/SVG/Content_type#percentage) ; _Default value_: `0`; _Animatable_: **yes**
 - {{SVGAttr("xlink:href")}} {{deprecated_inline}}
 
-  - : This attribute reference a template pattern that provides default values for the `<pattern>` attributes.
+  - : This attribute references a template pattern that provides default values for the `<pattern>` attributes.
     _Value type_: [**\<URL>**](/en-US/docs/Web/SVG/Content_type#url); _Default value_: _none_; _Animatable_: **yes**
 
     > **Note:** For browsers implementing `href`, if both `href` and `xlink:href` are set, `xlink:href` will be ignored and only `href` will be used.

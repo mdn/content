@@ -2,18 +2,9 @@
 title: Manipulating video using canvas
 slug: Web/API/Canvas_API/Manipulating_video_using_canvas
 page-type: guide
-tags:
-  - API
-  - Canvas
-  - Chroma-Key
-  - Editing
-  - Guide
-  - Manipulating
-  - Video
-  - effects
 ---
 
-{{CanvasSidebar}}
+{{DefaultAPISidebar("Canvas API")}}
 
 By combining the capabilities of the [`video`](/en-US/docs/Web/HTML/Element/video) element with a [`canvas`](/en-US/docs/Web/HTML/Element/canvas), you can manipulate video data in real time to incorporate a variety of visual effects to the video being displayed. This tutorial demonstrates how to perform chroma-keying (also known as the "green screen effect") using JavaScript code.
 
@@ -79,24 +70,28 @@ The JavaScript code in `processor.js` consists of three methods.
 The `doLoad()` method is called when the HTML document initially loads. This method's job is to prepare the variables needed by the chroma-key processing code, and to set up an event listener so we can detect when the user starts playing the video.
 
 ```js
-  const processor = {};
+const processor = {};
 
-  processor.doLoad = function doLoad() {
-    const video = document.getElementById('video');
-    this.video = video;
+processor.doLoad = function doLoad() {
+  const video = document.getElementById("video");
+  this.video = video;
 
-    this.c1 = document.getElementById('c1');
-    this.ctx1 = this.c1.getContext('2d');
+  this.c1 = document.getElementById("c1");
+  this.ctx1 = this.c1.getContext("2d");
 
-    this.c2 = document.getElementById('c2');
-    this.ctx2 = this.c2.getContext('2d');
+  this.c2 = document.getElementById("c2");
+  this.ctx2 = this.c2.getContext("2d");
 
-    video.addEventListener('play', () => {
-        this.width = video.videoWidth / 2;
-        this.height = video.videoHeight / 2;
-        this.timerCallback();
-      }, false);
-  };
+  video.addEventListener(
+    "play",
+    () => {
+      this.width = video.videoWidth / 2;
+      this.height = video.videoHeight / 2;
+      this.timerCallback();
+    },
+    false
+  );
+};
 ```
 
 This code grabs references to the elements in the HTML document that are of particular interest, namely the `video` element and the two `canvas` elements. It also fetches references to the graphics contexts for each of the two canvases. These will be used when we're actually doing the chroma-keying effect.
@@ -108,15 +103,15 @@ Then `addEventListener()` is called to begin watching the `video` element so tha
 The timer callback is called initially when the video starts playing (when the "play" event occurs), then takes responsibility for establishing itself to be called periodically in order to launch the keying effect for each frame.
 
 ```js
-  processor.timerCallback = function timerCallback() {
-    if (this.video.paused || this.video.ended) {
-      return;
-    }
-    this.computeFrame();
-    setTimeout(() => {
-        this.timerCallback();
-      }, 0);
-  };
+processor.timerCallback = function timerCallback() {
+  if (this.video.paused || this.video.ended) {
+    return;
+  }
+  this.computeFrame();
+  setTimeout(() => {
+    this.timerCallback();
+  }, 0);
+};
 ```
 
 The first thing the callback does is check to see if the video is even playing; if it's not, the callback returns immediately without doing anything.
@@ -130,21 +125,21 @@ The last thing the callback does is call `setTimeout()` to schedule itself to be
 The `computeFrame()` method, shown below, is responsible for actually fetching a frame of data and performing the chroma-keying effect.
 
 ```js
-  processor.computeFrame = function () {
-    this.ctx1.drawImage(this.video, 0, 0, this.width, this.height);
-    const frame = this.ctx1.getImageData(0, 0, this.width, this.height);
-    const data = frame.data;
+processor.computeFrame = function () {
+  this.ctx1.drawImage(this.video, 0, 0, this.width, this.height);
+  const frame = this.ctx1.getImageData(0, 0, this.width, this.height);
+  const data = frame.data;
 
-    for (let i = 0; i < data.length; i += 4) {
-      const red = data[i + 0];
-      const green = data[i + 1];
-      const blue = data[i + 2];
-      if (green > 100 && red > 100 && blue < 43) {
-        data[i + 3] = 0;
-      }
+  for (let i = 0; i < data.length; i += 4) {
+    const red = data[i + 0];
+    const green = data[i + 1];
+    const blue = data[i + 2];
+    if (green > 100 && red > 100 && blue < 43) {
+      data[i + 3] = 0;
     }
-    this.ctx2.putImageData(frame, 0, 0);
-  };
+  }
+  this.ctx2.putImageData(frame, 0, 0);
+};
 ```
 
 When this routine is called, the video element is displaying the most recent frame of video data, which looks like this:

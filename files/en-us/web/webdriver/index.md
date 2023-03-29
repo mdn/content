@@ -1,14 +1,6 @@
 ---
 title: WebDriver
 slug: Web/WebDriver
-tags:
-  - Automation
-  - Index
-  - Landing
-  - Reference
-  - Testing
-  - Web
-  - WebDriver
 ---
 
 {{QuickLinksWithSubpages}}
@@ -36,15 +28,14 @@ from selenium.webdriver.support.expected_conditions import presence_of_element_l
 
 with webdriver.Firefox() as driver:
 
-    wait = WebDriverWait(driver, 10)
     driver.get("http://google.com/ncr")
-    driver.find_element_by_name("q").send_keys("cheese" + Keys.RETURN)
+    wait = WebDriverWait(driver, 10)
+    driver.find_element(By.NAME, "q").send_keys("cheese" + Keys.RETURN)
+    wait.until(presence_of_element_located((By.XPATH, '//*[@id="rcnt"]')))
+    results = driver.find_elements(By.XPATH, "//a[@href]")
 
-    wait.until(presence_of_element_located((By.CSS_SELECTOR, "h3>a")))
-
-    results = driver.find_elements_by_css_selector("h3>a")
-    for i, result in results.iteritems():
-        print(f"#{i}: {result.text} ({result.get_property('href')})")
+    for i, elem in enumerate(results):
+        print(f'#{i} {elem.text} ({elem.get_attribute("href")})')
 ```
 
 This might produce output akin to this:

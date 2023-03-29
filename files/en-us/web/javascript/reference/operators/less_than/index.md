@@ -1,17 +1,13 @@
 ---
 title: Less than (<)
 slug: Web/JavaScript/Reference/Operators/Less_than
-tags:
-  - JavaScript
-  - Language feature
-  - Operator
-  - Reference
+page-type: javascript-operator
 browser-compat: javascript.operators.less_than
 ---
 
 {{jsSidebar("Operators")}}
 
-The less than operator (`<`) returns `true` if the left operand is less than the right operand, and `false` otherwise.
+The **less than (`<`)** operator returns `true` if the left operand is less than the right operand, and `false` otherwise.
 
 {{EmbedInteractiveExample("pages/js/expressions-less-than.html")}}
 
@@ -25,7 +21,7 @@ x < y
 
 The operands are compared with multiple rounds of coercion, which can be summarized as follows:
 
-- First, objects are converted to primitives using [`@@toPrimitive()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toPrimitive) (with `"number"` as hint), [`valueOf()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/valueOf), and [`toString()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/toString) methods, in that order. The left operand is always coerced before the right one.
+- First, objects are [converted to primitives](/en-US/docs/Web/JavaScript/Data_structures#primitive_coercion) by calling its [`[@@toPrimitive]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toPrimitive) (with `"number"` as hint), [`valueOf()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/valueOf), and [`toString()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/toString) methods, in that order. The left operand is always coerced before the right one. Note that although `[@@toPrimitive]()` is called with the `"number"` hint (meaning there's a slight preference for the object to become a number), the return value is not [converted to a number](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#number_coercion), since strings are still specially handled.
 - If both values are strings, they are compared as strings, based on the values of the Unicode code points they contain.
 - Otherwise JavaScript attempts to convert non-numeric types to numeric values:
   - Boolean values `true` and `false` are converted to 1 and 0 respectively.
@@ -56,57 +52,57 @@ x >= y === y <= x;
 ### String to string comparison
 
 ```js
-console.log("a" < "b");        // true
-console.log("a" < "a");        // false
-console.log("a" < "3");        // false
+"a" < "b"; // true
+"a" < "a"; // false
+"a" < "3"; // false
 ```
 
 ### String to number comparison
 
 ```js
-console.log("5" < 3);          // false
-console.log("3" < 3);          // false
-console.log("3" < 5);          // true
+"5" < 3; // false
+"3" < 3; // false
+"3" < 5; // true
 
-console.log("hello" < 5);      // false
-console.log(5 < "hello");      // false
+"hello" < 5; // false
+5 < "hello"; // false
 
-console.log("5" < 3n);         // false
-console.log("3" < 5n);         // true
+"5" < 3n; // false
+"3" < 5n; // true
 ```
 
 ### Number to Number comparison
 
 ```js
-console.log(5 < 3);            // false
-console.log(3 < 3);            // false
-console.log(3 < 5);            // true
+5 < 3; // false
+3 < 3; // false
+3 < 5; // true
 ```
 
 ### Number to BigInt comparison
 
 ```js
-console.log(5n < 3);           // false
-console.log(3 < 5n);           // true
+5n < 3; // false
+3 < 5n; // true
 ```
 
 ### Comparing Boolean, null, undefined, NaN
 
 ```js
-console.log(true < false);     // false
-console.log(false < true);     // true
+true < false; // false
+false < true; // true
 
-console.log(0 < true);         // true
-console.log(true < 1);         // false
+0 < true; // true
+true < 1; // false
 
-console.log(null < 0);         // false
-console.log(null < 1);         // true
+null < 0; // false
+null < 1; // true
 
-console.log(undefined < 3);    // false
-console.log(3 < undefined);    // false
+undefined < 3; // false
+3 < undefined; // false
 
-console.log(3 < NaN);          // false
-console.log(NaN < 3);          // false
+3 < NaN; // false
+NaN < 3; // false
 ```
 
 ### Comparison with side effects

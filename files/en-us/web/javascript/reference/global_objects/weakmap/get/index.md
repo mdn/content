@@ -1,12 +1,7 @@
 ---
 title: WeakMap.prototype.get()
 slug: Web/JavaScript/Reference/Global_Objects/WeakMap/get
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Prototype
-  - WeakMap
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.WeakMap.get
 ---
 
@@ -39,10 +34,10 @@ the key can't be found, {{jsxref("undefined")}} is returned.
 
 ```js
 const wm = new WeakMap();
-wm.set(window, 'foo');
+wm.set(window, "foo");
 
 wm.get(window); // Returns "foo".
-wm.get('baz');  // Returns undefined.
+wm.get("baz"); // Returns undefined.
 ```
 
 ## Specifications

@@ -2,17 +2,9 @@
 title: SpeechRecognitionEvent.interpretation
 slug: Web/API/SpeechRecognitionEvent/interpretation
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - SpeechRecognitionEvent
-  - Web Speech API
-  - interpretation
-  - recognition
-  - speech
-  - Deprecated
-  - Non-standard
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.SpeechRecognitionEvent.interpretation
 ---
 
@@ -40,7 +32,7 @@ recognition.onresult = (event) => {
   diagnostic.textContent = `Result received: ${color}.`;
   bg.style.backgroundColor = color;
   console.log(event.interpretation);
-}
+};
 ```
 
 ## Browser compatibility

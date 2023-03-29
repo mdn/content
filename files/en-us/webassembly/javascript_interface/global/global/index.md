@@ -1,11 +1,6 @@
 ---
 title: WebAssembly.Global() constructor
 slug: WebAssembly/JavaScript_interface/Global/Global
-tags:
-  - Constructor
-  - JavaScript
-  - Reference
-  - WebAssembly
 browser-compat: javascript.builtins.WebAssembly.Global.Global
 ---
 

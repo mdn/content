@@ -1,10 +1,7 @@
 ---
 title: class
 slug: Web/HTML/Global_attributes/class
-tags:
-  - Global attributes
-  - HTML
-  - Reference
+page-type: html-attribute
 browser-compat: html.global_attributes.class
 ---
 

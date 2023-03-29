@@ -2,12 +2,6 @@
 title: tab-size
 slug: Web/CSS/tab-size
 page-type: css-property
-tags:
-  - CSS
-  - CSS Property
-  - CSS Text
-  - Reference
-  - recipe:css-property
 browser-compat: css.properties.tab-size
 ---
 
@@ -109,4 +103,3 @@ p {
 ## See also
 
 - {{cssxref('white-space')}}
-- [Controlling size of a tab character (U+0009)](https://lists.w3.org/Archives/Public/www-style/2008Dec/0009.html), an email by Anne van Kesteren to the CSSWG.

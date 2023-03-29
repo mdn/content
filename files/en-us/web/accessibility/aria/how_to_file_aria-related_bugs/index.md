@@ -1,9 +1,6 @@
 ---
 title: How to file ARIA-related bugs
 slug: Web/Accessibility/ARIA/How_to_file_ARIA-related_bugs
-tags:
-  - ARIA
-  - Bugzilla
 ---
 
 <section id="Quick_links">
@@ -78,11 +75,6 @@ The state of ARIA technology has always depended on the community. If you notice
   <tr>
    <td>Google Chrome</td>
    <td><a href="https://code.google.com/p/chromium/issues/list">File Chromium bugs</a></td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>Microsoft Internet Explorer</td>
-   <td><a href="https://developer.microsoft.com/en-us/microsoft-edge/platform/issues/">File IE bugs</a></td>
    <td></td>
   </tr>
   <tr>

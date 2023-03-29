@@ -1,10 +1,6 @@
 ---
 title: 406 Not Acceptable
 slug: Web/HTTP/Status/406
-tags:
-  - HTTP
-  - Reference
-  - Status code
 browser-compat: http.status.406
 ---
 
@@ -32,7 +28,7 @@ among them.
 
 ## Status
 
-```
+```http
 406 Not Acceptable
 ```
 

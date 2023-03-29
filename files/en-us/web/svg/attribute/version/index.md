@@ -1,10 +1,9 @@
 ---
 title: version
 slug: Web/SVG/Attribute/version
-tags:
-  - Deprecated
-  - SVG
-  - SVG Attribute
+page-type: svg-attribute
+status:
+  - deprecated
 browser-compat: svg.elements.svg.version
 ---
 

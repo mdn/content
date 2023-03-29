@@ -2,16 +2,6 @@
 title: Navigator.mediaDevices
 slug: Web/API/Navigator/mediaDevices
 page-type: web-api-instance-property
-tags:
-  - Media
-  - Media Capture and Streams API
-  - Media Streams API
-  - MediaDevices
-  - Navigator
-  - Property
-  - Read-only
-  - Reference
-  - Web
 browser-compat: api.Navigator.mediaDevices
 ---
 
@@ -43,7 +33,7 @@ members directly, such as by calling
 
 ## See also
 
-- [Media Capture and Streams API](/en-US/docs/Web/API/Media_Streams_API):
-  The entry point to the documentation about the entire media stream API.
+- [Media Capture and Streams API](/en-US/docs/Web/API/Media_Capture_and_Streams_API):
+  The entry point to the documentation about the entire Media Capture and Streams API.
 - [WebRTC API](/en-US/docs/Web/API/WebRTC_API): Documentation about the
   WebRTC API, which is closely related.

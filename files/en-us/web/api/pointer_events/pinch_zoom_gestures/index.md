@@ -2,10 +2,6 @@
 title: Pinch zoom gestures
 slug: Web/API/Pointer_events/Pinch_zoom_gestures
 page-type: guide
-tags:
-  - Guide
-  - PointerEvent
-  - touch
 ---
 
 {{DefaultAPISidebar("Pointer Events")}}
@@ -44,12 +40,12 @@ Supporting a two-pointer gesture requires preserving a pointer's event state dur
 ```js
 // Global vars to cache event state
 const evCache = [];
-const prevDiff = -1;
+let prevDiff = -1;
 ```
 
 ### Register event handlers
 
-Event handlers are registered for the following pointer events: {{domxref("HTMLElement/pointerdown_event", "pointerdown")}}, {{domxref("HTMLElement/pointermove_event", "pointermove")}} and {{domxref("HTMLElement/pointerup_event", "pointerup")}}. The handler for {{domxref("HTMLElement/pointerup_event", "pointerup")}} is used for the {{domxref("HTMLElement/pointercancel_event", "pointercancel")}}, {{domxref("HTMLElement/pointerout_event", "pointerout")}} and {{domxref("HTMLElement/pointerleave_event", "pointerleave")}} events since these four events have the same semantics in this application.
+Event handlers are registered for the following pointer events: {{domxref("Element/pointerdown_event", "pointerdown")}}, {{domxref("Element/pointermove_event", "pointermove")}} and {{domxref("Element/pointerup_event", "pointerup")}}. The handler for {{domxref("Element/pointerup_event", "pointerup")}} is used for the {{domxref("Element/pointercancel_event", "pointercancel")}}, {{domxref("Element/pointerout_event", "pointerout")}} and {{domxref("Element/pointerleave_event", "pointerleave")}} events since these four events have the same semantics in this application.
 
 ```js
 function init() {
@@ -69,7 +65,7 @@ function init() {
 
 ### Pointer down
 
-The {{domxref("HTMLElement/pointerdown_event", "pointerdown")}} event is fired when a pointer (mouse, pen/stylus or touch point on a touchscreen) makes contact with the _contact surface_. In this application, the event's state must be cached in case this down event is part of a two-pointer pinch/zoom gesture.
+The {{domxref("Element/pointerdown_event", "pointerdown")}} event is fired when a pointer (mouse, pen/stylus or touch point on a touchscreen) makes contact with the _contact surface_. In this application, the event's state must be cached in case this down event is part of a two-pointer pinch/zoom gesture.
 
 ```js
 function pointerdownHandler(ev) {
@@ -82,7 +78,7 @@ function pointerdownHandler(ev) {
 
 ### Pointer move
 
-The {{domxref("HTMLElement/pointermove_event", "pointermove")}} event handler detects if a user is invoking a two-pointer pinch/zoom gesture. If two pointers are down, and the distance between the pointers is increasing (signifying a pinch out or zoom in), the element's background color is changed to `pink`, and if the distance between the pointers is decreasing (a pinch in or zoom out), the background color is changed to `lightblue`. In a more sophisticated application, pinch in or pinch out determination could be used to apply application-specific semantics.
+The {{domxref("Element/pointermove_event", "pointermove")}} event handler detects if a user is invoking a two-pointer pinch/zoom gesture. If two pointers are down, and the distance between the pointers is increasing (signifying a pinch out or zoom in), the element's background color is changed to `pink`, and if the distance between the pointers is decreasing (a pinch in or zoom out), the background color is changed to `lightblue`. In a more sophisticated application, pinch in or pinch out determination could be used to apply application-specific semantics.
 
 When this event is processed, the target's border is set to `dashed` to provide a clear visual indication the element has received a move event.
 
@@ -100,7 +96,9 @@ function pointermoveHandler(ev) {
   ev.target.style.border = "dashed";
 
   // Find this event in the cache and update its record with this event
-  const index = evCache.findIndex((cachedEv) => cachedEv.pointerId === ev.pointerId);
+  const index = evCache.findIndex(
+    (cachedEv) => cachedEv.pointerId === ev.pointerId
+  );
   evCache[index] = ev;
 
   // If two pointers are down, check for pinch gestures
@@ -110,13 +108,13 @@ function pointermoveHandler(ev) {
 
     if (prevDiff > 0) {
       if (curDiff > prevDiff) {
-         // The distance between the two pointers has increased
-         log("Pinch moving OUT -> Zoom in", ev);
-         ev.target.style.background = "pink";
+        // The distance between the two pointers has increased
+        log("Pinch moving OUT -> Zoom in", ev);
+        ev.target.style.background = "pink";
       }
       if (curDiff < prevDiff) {
         // The distance between the two pointers has decreased
-        log("Pinch moving IN -> Zoom out",ev);
+        log("Pinch moving IN -> Zoom out", ev);
         ev.target.style.background = "lightblue";
       }
     }
@@ -129,16 +127,16 @@ function pointermoveHandler(ev) {
 
 ### Pointer up
 
-The {{domxref("HTMLElement/pointerup_event", "pointerup")}} event is fired when a pointer is raised from the _contact surface_. When this occurs, the event is removed from the event cache and the target element's background color and border are restored to their original values.
+The {{domxref("Element/pointerup_event", "pointerup")}} event is fired when a pointer is raised from the _contact surface_. When this occurs, the event is removed from the event cache and the target element's background color and border are restored to their original values.
 
-In this application, this handler is also used for {{domxref("HTMLElement/pointercancel_event", "pointercancel")}}, {{domxref("HTMLElement/pointerleave_event", "pointerleave")}} and {{domxref("HTMLElement/pointerout_event", "pointerout")}} events.
+In this application, this handler is also used for {{domxref("Element/pointercancel_event", "pointercancel")}}, {{domxref("Element/pointerleave_event", "pointerleave")}} and {{domxref("Element/pointerout_event", "pointerout")}} events.
 
 ```js
 function pointerupHandler(ev) {
   log(ev.type, ev);
   // Remove this pointer from the cache and reset the target's
   // background and border
-  remove_event(ev);
+  removeEvent(ev);
   ev.target.style.background = "white";
   ev.target.style.border = "1px solid black";
 
@@ -181,7 +179,9 @@ This function helps manage the global event caches `evCache`.
 ```js
 function removeEvent(ev) {
   // Remove this event from the target's cache
-  const index = evCache.findIndex((cachedEv) => cachedEv.pointerId === ev.pointerId);
+  const index = evCache.findIndex(
+    (cachedEv) => cachedEv.pointerId === ev.pointerId
+  );
   evCache.splice(index, 1);
 }
 ```
@@ -201,16 +201,17 @@ function enableLog(ev) {
 
 function log(prefix, ev) {
   if (!logEvents) return;
-  const o = document.getElementsByTagName('output')[0];
-  const s = `${name}:<br>`
-    + `  pointerID   = ${ev.pointerId}<br>`
-    + `  pointerType = ${ev.pointerType}<br>`
-    + `  isPrimary   = ${ev.isPrimary}`;
+  const o = document.getElementsByTagName("output")[0];
+  const s =
+    `${prefix}:<br>` +
+    `  pointerID   = ${ev.pointerId}<br>` +
+    `  pointerType = ${ev.pointerType}<br>` +
+    `  isPrimary   = ${ev.isPrimary}`;
   o.innerHTML += `${s}<br>`;
 }
 
 function clearLog(event) {
-  const o = document.getElementsByTagName('output')[0];
+  const o = document.getElementsByTagName("output")[0];
   o.innerHTML = "";
 }
 ```

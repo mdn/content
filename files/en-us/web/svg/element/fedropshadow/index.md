@@ -1,11 +1,7 @@
 ---
 title: <feDropShadow>
 slug: Web/SVG/Element/feDropShadow
-tags:
-  - Element
-  - Filters
-  - Reference
-  - SVG
+page-type: svg-element
 browser-compat: svg.elements.feDropShadow
 ---
 

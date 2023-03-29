@@ -1,14 +1,7 @@
 ---
 title: Generator
 slug: Web/JavaScript/Reference/Global_Objects/Generator
-tags:
-  - Class
-  - ECMAScript 2015
-  - Generator
-  - JavaScript
-  - Legacy Generator
-  - Legacy Iterator
-  - Reference
+page-type: javascript-class
 browser-compat: javascript.builtins.Generator
 ---
 
@@ -35,6 +28,19 @@ console.log(gen.next().value); // 1
 console.log(gen.next().value); // 2
 console.log(gen.next().value); // 3
 ```
+
+## Instance properties
+
+These properties are defined on `Generator.prototype` and shared by all `Generator` instances.
+
+- {{jsxref("Object/constructor", "Generator.prototype.constructor")}}
+
+  - : The constructor function that created the instance object. For `Generator` instances, the initial value is [`GeneratorFunction.prototype`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/GeneratorFunction).
+
+    > **Note:** `Generator` objects do not store a reference to the generator function that created them.
+
+- `Generator.prototype[@@toStringTag]`
+  - : The initial value of the [`@@toStringTag`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) property is the string `"Generator"`. This property is used in {{jsxref("Object.prototype.toString()")}}.
 
 ## Instance methods
 

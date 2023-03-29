@@ -1,11 +1,6 @@
 ---
 title: <mtd>
 slug: Web/MathML/Element/mtd
-tags:
-  - MathML
-  - MathML Reference
-  - MathML:Element
-  - MathML:Tabular Math
 browser-compat: mathml.elements.mtd
 ---
 
@@ -24,10 +19,10 @@ This element's attributes include the [global MathML attributes](/en-US/docs/Web
 
 Some browsers may also support the following attributes:
 
-- `columnalign`
+- `columnalign` {{Non-standard_Inline}}
   - : Specifies the horizontal alignment of this cell and overrides values specified by {{ MathMLElement("mtable") }} or {{ MathMLElement("mtr") }}.
     Possible values are: `left`, `center` and `right`.
-- `rowalign`
+- `rowalign` {{Non-standard_Inline}}
   - : Specifies the vertical alignment of this cell and overrides values specified by {{ MathMLElement("mtable") }} or {{ MathMLElement("mtr") }}.
     Possible values are: `axis`, `baseline`, `bottom`, `center` and `top`.
 

@@ -1,16 +1,7 @@
 ---
 title: bookmarks.onChildrenReordered
 slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/onChildrenReordered
-tags:
-  - API
-  - Add-ons
-  - Bookmarks
-  - Event
-  - Extensions
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - onChildrenReordered
+page-type: webextension-api-event
 browser-compat: webextensions.api.bookmarks.onChildrenReordered
 ---
 
@@ -46,7 +37,7 @@ Events have three functions:
     - `id`
       - : `string`. ID of the folder whose children were reordered.
     - `reorderInfo`
-      - : [`object`](#reorderinfo). Object containing Additional objects.
+      - : `object`. Object containing Additional objects. See the [reorderInfo](#reorderinfo_2) section for more details.
 
 ## Additional objects
 
@@ -77,8 +68,6 @@ browser.browserAction.onClicked.addListener(handleClick);
 {{WebExtExamples}}
 
 > **Note:** This API is based on Chromium's [`chrome.bookmarks`](https://developer.chrome.com/docs/extensions/reference/bookmarks/#event-onChildrenReordered) API. This documentation is derived from [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json) in the Chromium code.
->
-> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

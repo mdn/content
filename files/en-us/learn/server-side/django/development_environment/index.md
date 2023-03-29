@@ -1,14 +1,6 @@
 ---
 title: Setting up a Django development environment
 slug: Learn/Server-side/Django/development_environment
-tags:
-  - Beginner
-  - Development environment
-  - Installing
-  - Intro
-  - Learn
-  - Python
-  - django
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Introduction", "Learn/Server-side/Django/Tutorial_local_library_website", "Learn/Server-side/Django")}}
@@ -40,9 +32,9 @@ Django makes it very easy to set up your own computer so that you can start deve
 
 The development environment is an installation of Django on your local computer that you can use for developing and testing Django apps prior to deploying them to a production environment.
 
-The main tools that Django itself provides are a set of Python scripts for creating and working with Django projects, along with a simple _development webserver_ that you can use to test local (i.e. on your computer, not on an external web server) Django web applications on your computer's web browser.
+The main tools that Django itself provides are a set of Python scripts for creating and working with Django projects, along with a simple _development web server_ that you can use to test local (i.e. on your computer, not on an external web server) Django web applications on your computer's web browser.
 
-There are other peripheral tools, which form part of the development environment, that we won't be covering here. These include things like a [text editor](/en-US/docs/Learn/Common_questions/Available_text_editors) or IDE for editing code, and a source control management tool like [Git](https://git-scm.com/) for safely managing different versions of your code. We are assuming that you've already got a text editor installed.
+There are other peripheral tools, which form part of the development environment, that we won't be covering here. These include things like a [text editor](/en-US/docs/Learn/Common_questions/Tools_and_setup/Available_text_editors) or IDE for editing code, and a source control management tool like [Git](https://git-scm.com/) for safely managing different versions of your code. We are assuming that you've already got a text editor installed.
 
 ### What are the Django setup options?
 
@@ -53,7 +45,7 @@ Django is extremely flexible in terms of how and where it can be installed and c
 - Configured to use one of several databases, which may also need to be separately installed and configured.
 - Run in the main system Python environment or within separate Python virtual environments.
 
-Each of these options requires a slightly different configuration and setup. The following subsections explain some of your choices. For the rest of the article, we'll show you how to setup Django on a small number of operating systems, and that setup will be assumed throughout the rest of this module.
+Each of these options requires a slightly different configuration and setup. The following subsections explain some of your choices. For the rest of the article, we'll show you how to set up Django on a small number of operating systems, and that setup will be assumed throughout the rest of this module.
 
 > **Note:** Other possible installation options are covered in the official Django documentation. We link to the [appropriate documents below](#see_also).
 
@@ -162,7 +154,7 @@ You can similarly check that _pip3_ is installed by listing the available packag
 pip3 list
 ```
 
-### Windows 10
+### Windows 10 or 11
 
 Windows doesn't include Python by default, but you can easily install it (along with the _pip3_ tool) from [python.org](https://www.python.org/):
 
@@ -295,7 +287,7 @@ At this point, you may see a bunch of scripts being run (the same scripts as for
 > # Use Ctrl+X to exit nano, choose Y to save the file.
 > ```
 
-#### Windows 10 virtual environment setup
+#### Windows virtual environment setup
 
 Installing [virtualenvwrapper-win](https://pypi.org/project/virtualenvwrapper-win/) is even simpler than setting up _virtualenvwrapper_ because you don't need to configure where the tool stores virtual environment information (there is a default value). All you need to do is run the following command in the command prompt:
 
@@ -423,21 +415,3 @@ In the testing section you also briefly saw how we can create a new Django websi
 - [How to install Django on Windows](https://docs.djangoproject.com/en/4.0/howto/windows/) (Django docs)
 
 {{PreviousMenuNext("Learn/Server-side/Django/Introduction", "Learn/Server-side/Django/Tutorial_local_library_website", "Learn/Server-side/Django")}}
-
-## In this module
-
-- [Django introduction](/en-US/docs/Learn/Server-side/Django/Introduction)
-- **Setting up a Django development environment**
-- [Django Tutorial: The Local Library website](/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website)
-- [Django Tutorial Part 2: Creating a skeleton website](/en-US/docs/Learn/Server-side/Django/skeleton_website)
-- [Django Tutorial Part 3: Using models](/en-US/docs/Learn/Server-side/Django/Models)
-- [Django Tutorial Part 4: Django admin site](/en-US/docs/Learn/Server-side/Django/Admin_site)
-- [Django Tutorial Part 5: Creating our home page](/en-US/docs/Learn/Server-side/Django/Home_page)
-- [Django Tutorial Part 6: Generic list and detail views](/en-US/docs/Learn/Server-side/Django/Generic_views)
-- [Django Tutorial Part 7: Sessions framework](/en-US/docs/Learn/Server-side/Django/Sessions)
-- [Django Tutorial Part 8: User authentication and permissions](/en-US/docs/Learn/Server-side/Django/Authentication)
-- [Django Tutorial Part 9: Working with forms](/en-US/docs/Learn/Server-side/Django/Forms)
-- [Django Tutorial Part 10: Testing a Django web application](/en-US/docs/Learn/Server-side/Django/Testing)
-- [Django Tutorial Part 11: Deploying Django to production](/en-US/docs/Learn/Server-side/Django/Deployment)
-- [Django web application security](/en-US/docs/Learn/Server-side/Django/web_application_security)
-- [DIY Django mini blog](/en-US/docs/Learn/Server-side/Django/django_assessment_blog)

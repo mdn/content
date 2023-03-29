@@ -1,15 +1,10 @@
 ---
 title: Inline elements
 slug: Web/HTML/Inline_elements
-tags:
-  - Beginner
-  - Elements
-  - HTML
-  - HTML Elements
-  - HTML:Element Reference
-  - Layout
-  - Reference
+page-type: guide
 ---
+
+{{HTMLSidebar}}
 
 In this article, we'll examine HTML inline-level elements and how they differ from [block-level elements](/en-US/docs/Web/HTML/Block-level_elements).
 
@@ -106,7 +101,7 @@ In brief, here are the basic conceptual differences between inline and block-lev
 
 ## List of "inline" elements
 
-The following elements are inline by default (although block and inline elements are no longer defined in HTML 5, use [content categories](/en-US/docs/Web/Guide/HTML/Content_categories) instead):
+The following elements are inline by default (although block and inline elements are no longer defined in HTML 5, use [content categories](/en-US/docs/Web/HTML/Content_categories) instead):
 
 - {{ HTMLElement("a") }}
 - {{ HTMLElement("abbr") }}
@@ -169,7 +164,5 @@ The following elements are inline by default (although block and inline elements
 - [Block-level elements](/en-US/docs/Web/HTML/Block-level_elements)
 - [HTML element reference](/en-US/docs/Web/HTML/Element)
 - {{cssxref("display")}}
-- [Content categories](/en-US/docs/Web/Guide/HTML/Content_categories)
+- [Content categories](/en-US/docs/Web/HTML/Content_categories)
 - [Block and Inline Layout in Normal Flow](/en-US/docs/Web/CSS/CSS_Flow_Layout/Block_and_Inline_Layout_in_Normal_Flow)
-
-{{QuickLinksWithSubpages("/en-US/docs/Web/HTML/")}}

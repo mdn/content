@@ -1,23 +1,14 @@
 ---
 title: '<content>: The Shadow DOM Content Placeholder element'
 slug: Web/HTML/Element/content
-tags:
-  - Content
-  - DOM
-  - Deprecated
-  - Element
-  - HTML
-  - HTML Web Components
-  - Placeholder
-  - Reference
-  - Web
-  - Web Components
-  - shadow dom
-  - Non-standard
+page-type: html-element
+status:
+  - deprecated
+  - non-standard
 browser-compat: html.elements.content
 ---
 
-{{Deprecated_Header}}{{Non-standard_header}}
+{{HTMLSidebar}}{{Deprecated_Header}}{{Non-standard_header}}
 
 The **`<content>`** [HTML](/en-US/docs/Web/HTML) element—an obsolete part of the [Web Components](/en-US/docs/Web/Web_Components) suite of technologies—was used inside of [Shadow DOM](/en-US/docs/Web/Web_Components/Using_shadow_DOM) as an {{glossary("insertion point")}}, and wasn't meant to be used in ordinary HTML. It has now been replaced by the {{HTMLElement("slot")}} element, which creates a point in the DOM at which a shadow DOM can be inserted.
 
@@ -27,13 +18,13 @@ The **`<content>`** [HTML](/en-US/docs/Web/HTML) element—an obsolete part of t
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories"
+        <a href="/en-US/docs/Web/HTML/Content_categories"
           >Content categories</a
         >
       </th>
       <td>
         <a
-          href="/en-US/docs/Web/Guide/HTML/Content_categories#transparent_content_model"
+          href="/en-US/docs/Web/HTML/Content_categories#transparent_content_model"
           >Transparent content</a
         >.
       </td>
@@ -41,7 +32,7 @@ The **`<content>`** [HTML](/en-US/docs/Web/HTML) element—an obsolete part of t
     <tr>
       <th scope="row">Permitted content</th>
       <td>
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
           >Flow content</a
         >.
       </td>
@@ -116,5 +107,3 @@ This element is no longer defined by any specifications.
 
 - [Web Components](/en-US/docs/Web/Web_Components)
 - {{HTMLElement("shadow")}}, {{HTMLElement("slot")}}, {{HTMLElement("template")}}, {{HTMLElement("element")}}
-
-{{HTMLRef}}

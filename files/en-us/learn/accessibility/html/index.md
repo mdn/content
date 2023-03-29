@@ -1,22 +1,6 @@
 ---
 title: "HTML: A good basis for accessibility"
 slug: Learn/Accessibility/HTML
-tags:
-  - AT
-  - Accessibility
-  - Article
-  - Beginner
-  - Buttons
-  - CodingScripting
-  - Forms
-  - HTML
-  - Learn
-  - Links
-  - a11y
-  - assistive technology
-  - keyboard
-  - screenreader
-  - semantics
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Accessibility/What_is_Accessibility","Learn/Accessibility/CSS_and_JavaScript", "Learn/Accessibility")}}
@@ -63,7 +47,7 @@ But as you'll see in greater detail later on, it makes sense to use the correct 
 <button>Play video</button>
 ```
 
-Not only do HTML `<button>`s have some suitable styling applied by default (which you will probably want to override), they also have built-in keyboard accessibility — users can navigate between buttons using the <kbd>Tab</kbd> key and activate their selection using <kbd>Return</kbd> or <kbd>Enter</kbd>.
+Not only do HTML `<button>`s have some suitable styling applied by default (which you will probably want to override), they also have built-in keyboard accessibility — users can navigate between buttons using the <kbd>Tab</kbd> key and activate their selection using <kbd>Space</kbd>, <kbd>Return</kbd> or <kbd>Enter</kbd>.
 
 Semantic HTML doesn't take any longer to write than non-semantic (bad) markup if you do it consistently from the start of your project. Even better, semantic markup has other benefits beyond accessibility:
 
@@ -361,7 +345,7 @@ Adding such advantages back in takes a bit of work (you can see an example in ou
 </div>
 ```
 
-Basically, the {{htmlattrxref("tabindex")}} attribute is primarily intended to allow tabbable elements to have a custom tab order (specified in positive numerical order), instead of just being tabbed through in their default source order. This is nearly always a bad idea, as it can cause major confusion. Use it only if you really need to, for example, if the layout shows things in a very different visual order to the source code, and you want to make things work more logically. There are two other options for `tabindex`:
+Basically, the [`tabindex`](/en-US/docs/Web/HTML/Global_attributes#tabindex) attribute is primarily intended to allow tabbable elements to have a custom tab order (specified in positive numerical order), instead of just being tabbed through in their default source order. This is nearly always a bad idea, as it can cause major confusion. Use it only if you really need to, for example, if the layout shows things in a very different visual order to the source code, and you want to make things work more logically. There are two other options for `tabindex`:
 
 - `tabindex="0"` — as indicated above, this value allows elements that are not normally tabbable to become tabbable. This is the most useful value of `tabindex`.
 - `tabindex="-1"` — this allows not normally tabbable elements to receive focus programmatically, e.g., via JavaScript, or as the target of links.
@@ -447,22 +431,22 @@ A basic data table can be written with very simple markup, for example:
   <tr>
     <td>Name</td>
     <td>Age</td>
-    <td>Gender</td>
+    <td>Pronouns</td>
   </tr>
   <tr>
     <td>Gabriel</td>
     <td>13</td>
-    <td>Male</td>
+    <td>he/him</td>
   </tr>
   <tr>
     <td>Elva</td>
     <td>8</td>
-    <td>Female</td>
+    <td>she/her</td>
   </tr>
   <tr>
     <td>Freida</td>
     <td>5</td>
-    <td>Female</td>
+    <td>she/her</td>
   </tr>
 </table>
 ```
@@ -472,7 +456,7 @@ But this has problems — there is no way for a screen reader user to associate 
 Now have a look at our [punk bands table example](https://github.com/mdn/learning-area/blob/main/css/styling-boxes/styling-tables/punk-bands-complete.html) — you can see a few accessibility aids at work here:
 
 - Table headers are defined using {{htmlelement("th")}} elements — you can also specify if they are headers for rows or columns using the `scope` attribute. This gives you complete groups of data that can be consumed by screen readers as single units.
-- The {{htmlelement("caption")}} element and `<table>` `summary` attribute both do similar jobs — they act as alt text for a table, giving a screen reader user a useful quick summary of the table's contents. The `<caption>` element is generally preferred as it makes it's content accessible to sighted users too, who might also find it useful. You don't really need both.
+- The {{htmlelement("caption")}} element and the `<table>` element's `summary` attribute both do similar jobs — they act as alt text for a table, giving a screen reader user a useful quick summary of the table's contents. The `<caption>` element is generally preferred as it makes it's content accessible to sighted users too, who might also find it useful. You don't really need both.
 
 > **Note:** See our [HTML table advanced features and accessibility](/en-US/docs/Learn/HTML/Tables/Advanced) article for more details about accessible data tables.
 
@@ -608,7 +592,7 @@ People experiencing low vision conditions, who are navigating with the aid of sc
 >
 ```
 
-If an icon is used in place of text to signify this kind of links behavior, make sure it includes an {{HTMLAttrxRef("alt", "img", "alternate description", "true")}}.
+If an icon is used in place of text to signify this kind of links behavior, make sure it includes an [alternate description](/en-US/docs/Web/HTML/Element/img#alt).
 
 - [WebAIM: Links and Hypertext - Hypertext Links](https://webaim.org/techniques/hypertext/hypertext_links)
 - [MDN Understanding WCAG, Guideline 3.2 explanations](/en-US/docs/Web/Accessibility/Understanding_WCAG/Understandable#guideline_3.2_—_predictable_make_web_pages_appear_and_operate_in_predictable_ways)
@@ -643,13 +627,3 @@ You've reached the end of this article, but can you remember the most important 
 You should now be well-versed in writing accessible HTML for most occasions. Our WAI-ARIA basics article will help to fill gaps in this knowledge, but this article has taken care of the basics. Next up we'll explore CSS and JavaScript, and how accessibility is affected by their good or bad use.
 
 {{PreviousMenuNext("Learn/Accessibility/What_is_Accessibility","Learn/Accessibility/CSS_and_JavaScript", "Learn/Accessibility")}}
-
-## In this module
-
-- [What is accessibility?](/en-US/docs/Learn/Accessibility/What_is_accessibility)
-- [HTML: A good basis for accessibility](/en-US/docs/Learn/Accessibility/HTML)
-- [CSS and JavaScript accessibility best practices](/en-US/docs/Learn/Accessibility/CSS_and_JavaScript)
-- [WAI-ARIA basics](/en-US/docs/Learn/Accessibility/WAI-ARIA_basics)
-- [Accessible multimedia](/en-US/docs/Learn/Accessibility/Multimedia)
-- [Mobile accessibility](/en-US/docs/Learn/Accessibility/Mobile)
-- [Accessibility troubleshooting](/en-US/docs/Learn/Accessibility/Accessibility_troubleshooting)

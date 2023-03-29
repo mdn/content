@@ -2,13 +2,8 @@
 title: CanvasRenderingContext2D.reset()
 slug: Web/API/CanvasRenderingContext2D/reset
 page-type: web-api-instance-method
-tags:
-  - API
-  - Canvas
-  - CanvasRenderingContext2D
-  - Method
-  - Reference
-  - Experimental
+status:
+  - experimental
 browser-compat: api.CanvasRenderingContext2D.reset
 ---
 

@@ -1,10 +1,6 @@
 ---
 title: Authoring MathML
 slug: Web/MathML/Authoring
-tags:
-  - Beginner
-  - MathML
-  - MathML Project
 ---
 
 {{MathMLRef}}
@@ -182,16 +178,8 @@ Instead of generating MathML expression at page load, you can instead rely on co
   </head>
   <body>
     <h1>MathML in HTML5</h1>
-
-    <p>
-      One over square root of two (inline style):
-      $\frac{1}{\sqrt{2}}$
-    </p>
-
-    <p>
-      One over square root of two (display style):
-      $$\frac{1}{\sqrt{2}}$$
-    </p>
+    <p>One over square root of two (inline style): $\frac{1}{\sqrt{2}}$</p>
+    <p>One over square root of two (display style): $$\frac{1}{\sqrt{2}}$$</p>
   </body>
 </html>
 ```
@@ -204,7 +192,7 @@ cat input.html | node TeXZilla.js streamfilter > output.html
 
 After running that command, a file `output.html` containing the following HTML output is created. The formulas delimited by dollars have been converted into MathML:
 
-```html
+```html-nolint
 <!DOCTYPE html>
 <html lang="en-US">
   <head>
@@ -227,7 +215,7 @@ After running that command, a file `output.html` containing the following HTML o
 </html>
 ```
 
-There are more sophisticated tools that aim at converting an arbitrary LaTeX document into a document with MathML content. For example, using [LaTeXML](https://math.nist.gov/~BMiller/LaTeXML/) the following commands will convert `foo.tex` into a HTML or EPUB document:
+There are more sophisticated tools that aim at converting an arbitrary LaTeX document into a document with MathML content. For example, using [LaTeXML](https://math.nist.gov/~BMiller/LaTeXML/) the following commands will convert `foo.tex` into an HTML or EPUB document:
 
 ```bash
 latexmlc --dest foo.html foo.tex # Generate a HTML document foo.html

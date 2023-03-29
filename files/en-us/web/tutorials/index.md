@@ -1,20 +1,6 @@
 ---
 title: Tutorials
 slug: Web/Tutorials
-tags:
-  - Beginner
-  - Browser
-  - CSS
-  - Code
-  - Coding
-  - GitHub
-  - Guide
-  - HTML
-  - JavaScript
-  - MDN
-  - Tutorial
-  - Web Article
-  - Web Development
 ---
 
 The links on this page lead to a variety of tutorials and training materials. Whether you are just starting, learning the basics, or are an old hand at web development, you can find helpful resources here for best practices.
@@ -68,12 +54,15 @@ These resources are created by forward-thinking companies and web developers who
     The aim here is to provide you with a toolkit for writing competent CSS and help you understand all the essential theory, before moving on to more specific disciplines like [text styling](/en-US/docs/Learn/CSS/Styling_text) and [CSS layout](/en-US/docs/Learn/CSS/CSS_layout).
 
 - [Selectors](/en-US/docs/Learn/CSS/Building_blocks/Selectors)
+
   - : Target HTML elements, including based on element state, with CSS.
 
 - [Specificity](/en-US/docs/Web/CSS/Specificity)
+
   - : Understanding the browser algorithm to determine which CSS declarations get applied to an element when there are competing declarations, with a [specificity quiz](https://estelle.github.io/CSS/selectors/exercises/specificity.html)
 
 - [Cascade & Inheritance](/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
+
   - : The cascade, specificity, and inheritance control how CSS is applied to HTML and how conflicts between style declarations are resolved.
 
 - [Styling text](/en-US/docs/Learn/CSS/Styling_text)
@@ -126,7 +115,7 @@ These resources are created by forward-thinking companies and web developers who
   - : A recap of the JavaScript programming language aimed at intermediate-level developers.
 - [Eloquent JavaScript](https://eloquentjavascript.net/)
   - : A comprehensive guide to intermediate and advanced JavaScript methodologies.
-- [Speaking JavaScript](http://speakingjs.com/es5/)
+- [Speaking JavaScript](https://exploringjs.com/es5/)
   - : For programmers who want to learn JavaScript quickly and properly, and for JavaScript programmers who want to deepen their skills and/or look up specific topics.
 - [Essential JavaScript Design Patterns](https://addyosmani.com/resources/essentialjsdesignpatterns/book/)
   - : An introduction to essential JavaScript design patterns.
@@ -139,12 +128,12 @@ These resources are created by forward-thinking companies and web developers who
   - : A comprehensive, regularly updated guide to JavaScript for all levels of learning from beginner to advanced.
 - [You Don't Know JS](https://github.com/getify/You-Dont-Know-JS)
   - : A series of books diving deep into the core mechanisms of the JavaScript language.
-- [JavaScript Garden](https://bonsaiden.github.io/JavaScript-Garden/)
+- [JavaScript Garden](https://github.com/BonsaiDen/JavaScript-Garden)
   - : Documentation of the most quirky parts of JavaScript.
 - [Exploring ES6](https://exploringjs.com/es6/)
   - : Reliable and in-depth information on ECMAScript 2015.
 - [JavaScript Patterns](https://shichuan.github.io/javascript-patterns/)
-  - : A JavaScript pattern and antipattern collection that covers function patterns, jQuery patterns, jQuery plugin patterns, design patterns, general patterns, literals and constructor patterns, object creation patterns, code reuse patterns, DOM.
+  - : A JavaScript pattern and anti-pattern collection that covers function patterns, jQuery patterns, jQuery plugin patterns, design patterns, general patterns, literals and constructor patterns, object creation patterns, code reuse patterns, DOM.
 - [How browsers work](https://www.html5rocks.com/en/tutorials/internals/howbrowserswork/)
   - : A detailed research article describing different modern browsers, their engines, page rendering etc.
 - [JavaScript Videos](https://github.com/bolshchikov/js-must-watch)

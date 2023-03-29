@@ -1,16 +1,7 @@
 ---
 title: menus.create()
 slug: Mozilla/Add-ons/WebExtensions/API/menus/create
-tags:
-  - API
-  - Add-ons
-  - Create
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - contextMenus
+page-type: webextension-api-function
 browser-compat: webextensions.api.menus.create
 ---
 
@@ -41,13 +32,16 @@ browser.menus.create(
       - : `boolean`. The initial state of a checkbox or radio item: `true` for selected and `false` for unselected. Only one radio item can be selected at a time in a given group of radio items.
     - `command` {{optional_inline}}
 
-      - : `string`. String describing an action that should be taken when the user clicks the item. Possible values are:
+      - : `string`. String describing an action that should be taken when the user clicks the item. The recognized values are:
 
-        - `"_execute_browser_action"`: simulate a click on the extension's browser action, opening its popup if it has one
+        - `"_execute_browser_action"`: simulate a click on the extension's browser action, opening its popup if it has one (Manifest V2 only)
+        - `"_execute_action"`: simulate a click on the extension's action, opening its popup if it has one (Manifest V3 only)
         - `"_execute_page_action"`: simulate a click on the extension's page action, opening its popup if it has one
         - `"_execute_sidebar_action"`: open the extension's sidebar
 
-        Clicking the item will still trigger the {{WebExtAPIRef("menus.onClicked")}} event, but there's no guarantee of the ordering here: the command may be executed before `onClicked` fires.
+        See the documentation of special shortcuts in the manifest.json key [`commands`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/commands#special_shortcuts) for details.
+
+        When one of the recognized values is specified, clicking the item does not trigger the {{WebExtAPIRef("menus.onClicked")}} event; instead, the default action triggers, such as opening a pop-up. Otherwise, clicking the item triggers {{WebExtAPIRef("menus.onClicked")}} and the event can be used to implement fallback behavior.
 
     - `contexts` {{optional_inline}}
 
@@ -103,7 +97,7 @@ browser.menus.create(
 
         Only the first ampersand will be used to set an access key: subsequent ampersands will not be displayed but will not set keys. So "\&A and \&B" will be shown as "A and B" and set "A" as the access key.
 
-        In some localized versions of Firefox (Japanese and Chinese), the access key is surrounded by parentheses and appended to the menu label, _unless_ the menu title itself already ends with the access key (`"toolkit(&K)"` for example). For more details, see {{bug(1647373)}}.
+        In some localized versions of Firefox (Japanese and Chinese), the access key is surrounded by parentheses and appended to the menu label, _unless_ the menu title itself already ends with the access key (`"toolkit(&K)"` for example). For more details, see [Firefox bug 1647373](https://bugzil.la/1647373).
 
     - `type` {{optional_inline}}
       - : `{{WebExtAPIRef('menus.ItemType')}}`. The type of menu item: "normal", "checkbox", "radio", "separator". Defaults to "normal".

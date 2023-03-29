@@ -1,15 +1,7 @@
 ---
 title: Intl.RelativeTimeFormat.prototype.formatToParts()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/formatToParts
-tags:
-  - Internationalization
-  - Intl
-  - JavaScript
-  - Localization
-  - Method
-  - Prototype
-  - Reference
-  - RelativeTimeFormat
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.Intl.RelativeTimeFormat.formatToParts
 ---
 
@@ -18,8 +10,6 @@ browser-compat: javascript.builtins.Intl.RelativeTimeFormat.formatToParts
 The **`Intl.RelativeTimeFormat.prototype.formatToParts()`** method returns an {{jsxref("Array")}} of objects representing the relative time format in parts that can be used for custom locale-aware formatting.
 
 {{EmbedInteractiveExample("pages/js/intl-relativetimeformat-prototype-formattoparts.html")}}
-
-<!-- The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone https://github.com/mdn/interactive-examples and send us a pull request. -->
 
 ## Syntax
 
@@ -51,12 +41,14 @@ const rtf = new Intl.RelativeTimeFormat("en", { numeric: "auto" });
 
 // Format relative time using the day unit
 rtf.formatToParts(-1, "day");
-// > [{ type: "literal", value: "yesterday"}]
+// [{ type: "literal", value: "yesterday"}]
 
 rtf.formatToParts(100, "day");
-// > [{ type: "literal", value: "in " },
-// >  { type: "integer", value: "100", unit: "day" },
-// >  { type: "literal", value: " days" }]
+// [
+//   { type: "literal", value: "in " },
+//   { type: "integer", value: "100", unit: "day" },
+//   { type: "literal", value: " days" }
+// ]
 ```
 
 ## Specifications

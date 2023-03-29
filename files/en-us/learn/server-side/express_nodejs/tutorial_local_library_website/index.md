@@ -1,16 +1,6 @@
 ---
 title: "Express Tutorial: The Local Library website"
 slug: Learn/Server-side/Express_Nodejs/Tutorial_local_library_website
-tags:
-  - Beginner
-  - CodingScripting
-  - Express
-  - Intro
-  - Learn
-  - Node
-  - Tutorial
-  - nodejs
-  - server-side
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Express_Nodejs/development_environment", "Learn/Server-side/Express_Nodejs/skeleton_website", "Learn/Server-side/Express_Nodejs")}}
@@ -69,22 +59,10 @@ Instead of copying and pasting all the code snippets, try typing them out, It'll
 
 If you get stuck, you can find the fully developed version of the website [on GitHub here](https://github.com/mdn/express-locallibrary-tutorial).
 
-> **Note:** The specific versions of node, Express, and the other modules that this documentation was tested against are listed in the project [package.json](https://github.com/mdn/express-locallibrary-tutorial/blob/master/package.json).
+> **Note:** The specific versions of node, Express, and the other modules that this documentation was tested against are listed in the project [package.json](https://github.com/mdn/express-locallibrary-tutorial/blob/main/package.json).
 
 ## Summary
 
 Now that you know a bit more about the _LocalLibrary_ website and what you're going to learn, it's time to start creating a [skeleton project](/en-US/docs/Learn/Server-side/Express_Nodejs/skeleton_website) to contain our example.
 
 {{PreviousMenuNext("Learn/Server-side/Express_Nodejs/development_environment", "Learn/Server-side/Express_Nodejs/skeleton_website", "Learn/Server-side/Express_Nodejs")}}
-
-## In this module
-
-- [Express/Node introduction](/en-US/docs/Learn/Server-side/Express_Nodejs/Introduction)
-- [Setting up a Node (Express) development environment](/en-US/docs/Learn/Server-side/Express_Nodejs/development_environment)
-- [Express Tutorial: The Local Library website](/en-US/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website)
-- [Express Tutorial Part 2: Creating a skeleton website](/en-US/docs/Learn/Server-side/Express_Nodejs/skeleton_website)
-- [Express Tutorial Part 3: Using a Database (with Mongoose)](/en-US/docs/Learn/Server-side/Express_Nodejs/mongoose)
-- [Express Tutorial Part 4: Routes and controllers](/en-US/docs/Learn/Server-side/Express_Nodejs/routes)
-- [Express Tutorial Part 5: Displaying library data](/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data)
-- [Express Tutorial Part 6: Working with forms](/en-US/docs/Learn/Server-side/Express_Nodejs/forms)
-- [Express Tutorial Part 7: Deploying to production](/en-US/docs/Learn/Server-side/Express_Nodejs/deployment)

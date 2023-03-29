@@ -2,12 +2,6 @@
 title: rotate()
 slug: Web/CSS/transform-function/rotate
 page-type: css-function
-tags:
-  - CSS
-  - CSS Function
-  - CSS Transforms
-  - Function
-  - Reference
 browser-compat: css.types.transform-function.rotate
 ---
 
@@ -294,6 +288,7 @@ div {
 
 ## See also
 
-- {{cssxref("transform")}}
+- {{cssxref("transform")}} property
+- {{cssxref("rotate")}} property
 - {{cssxref("&lt;transform-function&gt;")}}
 - [`rotate3d()`](/en-US/docs/Web/CSS/transform-function/rotate3d)

@@ -2,19 +2,14 @@
 title: "@layer"
 slug: Web/CSS/@layer
 page-type: css-at-rule
-tags:
-  - At-rule
-  - CSS
-  - Reference
-  - Web
-  - layer
-  - cascade
 browser-compat: css.at-rules.layer
 ---
 
 {{CSSRef}}
 
 The **`@layer`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/At-rule) is used to declare a cascade layer and can also be used to define the order of precedence in case of multiple cascade layers.
+
+{{EmbedInteractiveExample("pages/tabbed/at-rule-layer.html", "tabbed-standard")}}
 
 ## Syntax
 
@@ -82,7 +77,7 @@ The third way is to create a cascade layer with no name. For example:
 
 This creates an _anonymous cascade layer_. This layer functions in the same way as named layers; however, rules cannot be assigned to it later. The order of precedence for anonymous layers is the order in which layers are declared, named or not, and lower than the styles declared outside of a layer.
 
-Another way to create a cascade layer is by using {{cssxref("@import")}}. In this case, the rules would be in the imported stylesheet. Remember that the `@import` at-rule must precede all other types of rules, except the `@charset` rules.
+Another way to create a cascade layer is by using {{cssxref("@import")}}. In this case, the rules would be in the imported stylesheet. Remember that the `@import` at-rule must precede all other types of rules, except `@charset` and `@layer` rules.
 
 ```css
 @import "theme.css" layer(utilities);
@@ -111,11 +106,7 @@ To append rules to the `layout` layer inside `framework`, join the two names wit
 
 ## Formal syntax
 
-```
-@layer [ <layer-name># | <layer-name>?  {
-  <stylesheet>
-} ]
-```
+{{csssyntax}}
 
 ## Examples
 
@@ -204,4 +195,12 @@ In the following example, two layers are created with no rules applied, then CSS
 
 ## See also
 
-- [The Future of CSS: Cascade Layers](https://www.bram.us/2021/09/15/the-future-of-css-cascade-layers-css-at-layer/)
+- [`@import`](/en-US/docs/Web/CSS/@import)
+- {{domxref("CSSLayerBlockRule")}}
+- {{domxref("CSSLayerStatementRule")}}
+- [`!important`](/en-US/docs/Web/CSS/important)
+- [`revert-layer`](/en-US/docs/Web/CSS/revert-layer)
+- [Introducing the CSS cascade](/en-US/docs/Web/CSS/Cascade)
+- [Cascade, specificity, and inheritance](/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
+- [Cascade layers](/en-US/docs/Learn/CSS/Building_blocks/Cascade_layers)
+- [The future of CSS: Cascade layers](https://www.bram.us/2021/09/15/the-future-of-css-cascade-layers-css-at-layer/) on bram.us (September 15, 2021)

@@ -2,12 +2,6 @@
 title: speak-as
 slug: Web/CSS/@counter-style/speak-as
 page-type: css-at-rule-descriptor
-tags:
-  - "@counter-style"
-  - At-rule descriptor
-  - CSS
-  - CSS Descriptor
-  - Reference
 browser-compat: css.at-rules.counter-style.speak-as
 ---
 
@@ -63,16 +57,7 @@ Assistive technology support is very limited for the `speak-as` property. Do not
 
 ## Formal syntax
 
-```
-auto                 |
-bullets              |
-numbers              |
-words                |
-spell-out            |
-<counter-style-name>
-
-<counter-style-name> = <custom-ident>
-```
+{{csssyntax}}
 
 ## Examples
 

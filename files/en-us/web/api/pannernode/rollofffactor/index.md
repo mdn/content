@@ -2,13 +2,6 @@
 title: PannerNode.rolloffFactor
 slug: Web/API/PannerNode/rolloffFactor
 page-type: web-api-instance-property
-tags:
-  - API
-  - PannerNode
-  - Property
-  - Reference
-  - Web Audio API
-  - rollOffFactor
 browser-compat: api.PannerNode.rolloffFactor
 ---
 
@@ -56,8 +49,7 @@ const scheduleTestTone = (rolloffFactor, startTime) => {
   panner.positionZ.setValueAtTime(0, startTime);
   panner.positionZ.linearRampToValueAtTime(Z_DISTANCE, startTime + NOTE_LENGTH);
 
-  osc.connect(panner)
-     .connect(context.destination);
+  osc.connect(panner).connect(context.destination);
 
   osc.start(startTime);
   osc.stop(startTime + NOTE_LENGTH);

@@ -1,12 +1,7 @@
 ---
 title: Date.prototype.setTime()
 slug: Web/JavaScript/Reference/Global_Objects/Date/setTime
-tags:
-  - Date
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.Date.setTime
 ---
 
@@ -44,7 +39,7 @@ Use the `setTime()` method to help assign a date and time to another
 ### Using setTime()
 
 ```js
-const theBigDay = new Date('July 1, 1999');
+const theBigDay = new Date("July 1, 1999");
 const sameAsBigDay = new Date();
 sameAsBigDay.setTime(theBigDay.getTime());
 ```

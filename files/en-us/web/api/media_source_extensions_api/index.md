@@ -2,16 +2,8 @@
 title: Media Source API
 slug: Web/API/Media_Source_Extensions_API
 page-type: web-api-overview
-tags:
-  - API
-  - Audio
-  - Experimental
-  - Landing
-  - MSE
-  - Media Source Extensions
-  - Reference
-  - Video
-  - streaming
+status:
+  - experimental
 spec-urls: https://w3c.github.io/media-source/
 ---
 
@@ -25,7 +17,7 @@ Playing video and audio has been available in web applications without plugins f
 
 ### The MSE standard
 
-With Media Source Extensions (MSE), this is changing. MSE allows us to replace the usual single track `src` value fed to media elements with a reference to a `MediaSource` object, which is a container for information like the ready state of the media for being played, and references to multiple `SourceBuffer` objects that represent the different chunks of media that make up the entire stream. MSE gives us finer grained control over how much and how often content is fetched, and some control over memory usage details, such as when buffers are evicted. It lays the groundwork for adaptive bitrate streaming clients (such as those using DASH or HLS) to be built on its extensible API.
+With Media Source Extensions (MSE), this is changing. MSE allows us to replace the usual single progressive `src` URI fed to media elements with a reference to a `MediaSource` object, which is a container for information like the ready state of the media for being played, and references to multiple `SourceBuffer` objects that represent the different chunks of media that make up the entire stream. MSE gives us finer-grained control over how much and how often content is fetched, and some control over memory usage details, such as when buffers are evicted. It lays the groundwork for adaptive bitrate streaming clients (such as those using DASH or HLS) to be built on its extensible API.
 
 Creating assets that work with MSE in modern browsers is a laborious process, taking significant time, computing power, and energy. The usage of external utilities to massage the content into a suitable format is required. While browser support for the various media containers with MSE is spotty, usage of the H.264 video codec, AAC audio codec, and MP4 container format is a common baseline. MSE also provides an API for runtime detection of container and codec support.
 
@@ -42,6 +34,12 @@ The two most common use cases for DASH involve watching content "on demand" or "
 Live profile content can introduce latency due to its transcoding and broadcasting, so DASH is not suitable for real time communication like [WebRTC](/en-US/docs/Web/API/WebRTC_API) is. It can however support significantly more client connections than WebRTC.
 
 There are numerous available free and open source tools for transcoding content and preparing it for use with DASH, DASH file servers, and DASH client libraries written in JavaScript.
+
+### Availability in workers
+
+Starting with Chrome 108, MSE features are available in dedicated {{domxref("Web Workers API", "web workers", "", "nocode")}}, which allows for improved performance when manipulating {{domxref("MediaSource")}}s and {{domxref("SourceBuffer")}}s. To play back the media, the {{domxref("MediaSource.handle")}} property is used to get a reference to a {{domxref("MediaSourceHandle")}} object, a proxy for the `MediaSource` that can be transferred back to the main thread and attached to a media element via its {{domxref("HTMLMediaElement.srcObject")}} property.
+
+See [MSE-in-Workers Demo by Matt Wolenetz](https://wolenetz.github.io/mse-in-workers-demo/mse-in-workers-demo.html) for a live example.
 
 ## Interfaces
 

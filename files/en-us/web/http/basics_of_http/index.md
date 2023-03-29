@@ -1,10 +1,6 @@
 ---
 title: Basics of HTTP
 slug: Web/HTTP/Basics_of_HTTP
-tags:
-  - Guide
-  - HTTP
-  - Overview
 ---
 
 {{HTTPSidebar}}

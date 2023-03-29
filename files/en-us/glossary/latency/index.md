@@ -1,14 +1,7 @@
 ---
 title: Latency
 slug: Glossary/Latency
-tags:
-  - Audio
-  - Media
-  - Networking
-  - Reference
-  - Video
-  - Web Performance
-  - latency
+page-type: glossary-definition
 ---
 
 **Latency** is the network time it takes for a requested resource to reach its destination. Low latency is good, meaning there is little or no delay. High latency is bad, meaning it takes a long time for the requested resource to reach its destination.

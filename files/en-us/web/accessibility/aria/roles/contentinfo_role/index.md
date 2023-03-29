@@ -1,12 +1,6 @@
 ---
 title: "ARIA: contentinfo role"
 slug: Web/Accessibility/ARIA/Roles/contentinfo_role
-tags:
-  - ARIA
-  - ARIA Role
-  - Reference
-  - contentinfo role
-  - Accessibility
 spec-urls:
   - https://w3c.github.io/aria/#contentinfo
   - https://w3c.github.io/aria-practices/#aria_lh_contentinfo
@@ -53,7 +47,7 @@ Each page should only include one `contentinfo` landmark, created by either usin
       <li><a href="#">Feedback</a></li>
     </ul>
     <p>
-      © 2005-2018 Mozilla and individual contributors. Content is available
+      © 2005-2012 Mozilla and individual contributors. Content is available
       under <a href="#">these licenses</a>.
     </p>
   </div>

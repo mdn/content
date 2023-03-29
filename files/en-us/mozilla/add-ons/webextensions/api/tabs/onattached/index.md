@@ -1,16 +1,7 @@
 ---
 title: tabs.onAttached
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/onAttached
-tags:
-  - API
-  - Add-ons
-  - Event
-  - Extensions
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - onAttached
-  - tabs
+page-type: webextension-api-event
 browser-compat: webextensions.api.tabs.onAttached
 ---
 
@@ -46,7 +37,7 @@ Events have three functions:
     - `tabId`
       - : `integer`. ID of the tab that was attached to a new window.
     - `attachInfo`
-      - : [`object`](#attachinfo). ID of the new window, and index of the tab within it.
+      - : `object`. ID of the new window, and index of the tab within it. See the [attachInfo](#attachinfo_2) section for more details.
 
 ## Additional objects
 
@@ -78,8 +69,6 @@ browser.tabs.onAttached.addListener(handleAttached);
 {{Compat}}
 
 > **Note:** This API is based on Chromium's [`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/tabs/#event-onAttached) API. This documentation is derived from [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) in the Chromium code.
->
-> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

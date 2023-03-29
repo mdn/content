@@ -2,15 +2,6 @@
 title: DeviceMotionEvent
 slug: Web/API/DeviceMotionEvent
 page-type: web-api-interface
-tags:
-  - API
-  - Device Orientation
-  - DeviceMotionEvent
-  - Interface
-  - Mobile
-  - Motion
-  - Orientation
-  - Reference
 browser-compat: api.DeviceMotionEvent
 ---
 
@@ -41,7 +32,7 @@ The **`DeviceMotionEvent`** interface provides web developers with information a
 ## Example
 
 ```js
-window.addEventListener('devicemotion', (event) => {
+window.addEventListener("devicemotion", (event) => {
   console.log(`${event.acceleration.x} m/s2`);
 });
 ```

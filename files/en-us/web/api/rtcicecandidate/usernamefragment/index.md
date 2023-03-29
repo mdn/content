@@ -2,19 +2,6 @@
 title: RTCIceCandidate.usernameFragment
 slug: Web/API/RTCIceCandidate/usernameFragment
 page-type: web-api-instance-property
-tags:
-  - API
-  - Candidate
-  - NeedsExample
-  - Property
-  - RTCIceCandidate
-  - Read-only
-  - Reference
-  - SDP
-  - WebRTC
-  - WebRTC API
-  - ufrag
-  - usernameFragment
 browser-compat: api.RTCIceCandidate.usernameFragment
 ---
 
@@ -93,9 +80,8 @@ const ssNewCandidate = (signalMsg) => {
     }
   });
 
-  pc.addIceCandidate(candidate)
-    .catch(reportError);
-}
+  pc.addIceCandidate(candidate).catch(reportError);
+};
 ```
 
 This walks through the list of the {{domxref("RTCRtpReceiver")}} objects being used to

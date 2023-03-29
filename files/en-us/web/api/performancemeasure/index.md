@@ -2,16 +2,10 @@
 title: PerformanceMeasure
 slug: Web/API/PerformanceMeasure
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Performance Timeline API
-  - Reference
-  - Web Performance
 browser-compat: api.PerformanceMeasure
 ---
 
-{{APIRef("User Timing API")}}
+{{APIRef("Performance API")}}
 
 **`PerformanceMeasure`** is an _abstract_ interface for {{domxref("PerformanceEntry")}} objects with an {{domxref("PerformanceEntry.entryType","entryType")}} of "`measure`". Entries of this type are created by calling {{domxref("Performance.measure","performance.measure()")}} to add a _named_ {{domxref("DOMHighResTimeStamp")}} (the _measure_) between two _marks_ to the browser's _performance timeline_.
 
@@ -23,9 +17,8 @@ browser-compat: api.PerformanceMeasure
 
 This interface defines:
 
-- `PerformanceMeasure.detail`
+- {{domxref("PerformanceMeasure.detail")}}
   - : Contains arbitrary metadata about the measure.
-    This may be passed in as a property of the {{domxref("Performance.measure()","performance.measure()")}} argument `MeasureOptions`.
 
 In addition, it extends the following {{domxref("PerformanceEntry")}} properties by qualifying/constraining the properties as follows:
 

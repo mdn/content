@@ -1,12 +1,7 @@
 ---
 title: <discard>
 slug: Web/SVG/Element/discard
-tags:
-  - Element
-  - NeedsExample
-  - Reference
-  - SVG
-  - SVG Animation
+page-type: svg-element
 browser-compat: svg.elements.discard
 ---
 

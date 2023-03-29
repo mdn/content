@@ -1,8 +1,7 @@
 ---
 title: Parser
 slug: Glossary/Parser
-tags:
-  - CodingScripting
+page-type: glossary-definition
 ---
 
 A **parser** is the module of a compiler or interpreter that {{glossary("parse","parses")}} a source code file.

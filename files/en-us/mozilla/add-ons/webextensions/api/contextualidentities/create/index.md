@@ -1,15 +1,7 @@
 ---
 title: contextualIdentities.create()
 slug: Mozilla/Add-ons/WebExtensions/API/contextualIdentities/create
-tags:
-  - API
-  - Add-ons
-  - Create
-  - Extensions
-  - Method
-  - Reference
-  - WebExtensions
-  - contextualIdentities
+page-type: webextension-api-function
 browser-compat: webextensions.api.contextualIdentities.create
 ---
 

@@ -2,12 +2,6 @@
 title: Specificity
 slug: Web/CSS/Specificity
 page-type: guide
-tags:
-  - CSS
-  - Example
-  - Guide
-  - Reference
-  - Web
 spec-urls: https://drafts.csswg.org/selectors/#specificity-rules
 ---
 
@@ -19,7 +13,7 @@ spec-urls: https://drafts.csswg.org/selectors/#specificity-rules
 
 ## How is specificity calculated?
 
-Specificity is an algorithm that calculates the weight that is applied to a given CSS declaration. The weight is determined by the number of [selectors of each weight category](#selector-weight-categories) in the selector matching the element (or pseudo-element). If there are two or more declarations providing different property values for the same element, the declaration value in the style block having the matching selector with the greatest algorithmic weight gets applied.
+Specificity is an algorithm that calculates the weight that is applied to a given CSS declaration. The weight is determined by the number of [selectors of each weight category](#selector_weight_categories) in the selector matching the element (or pseudo-element). If there are two or more declarations providing different property values for the same element, the declaration value in the style block having the matching selector with the greatest algorithmic weight gets applied.
 
 The specificity algorithm is basically a three-column value of three categories or weights - ID, CLASS, and TYPE - corresponding to the three types of selectors. The value represents the count of selector components in each weight category and is written as _ID - CLASS - TYPE_. The three columns are created by counting the number of selector components for each selector weight category in the selectors that match the element.
 
@@ -38,7 +32,7 @@ The selector weight categories are listed here in the order of decreasing specif
 
 Combinators, such as {{CSSxRef("Adjacent_sibling_combinator", "+")}}, {{CSSxRef("Child_combinator", "&gt;")}}, {{CSSxRef("General_sibling_combinator", "~")}}, [" "](/en-US/docs/Web/CSS/Descendant_combinator), and {{CSSxRef("Column_combinator", "||")}}, may make a selector more specific in what is selected but they don't add any value to the specificity weight.
 
-The negation pseudo-class, {{CSSxRef(":not", ":not()")}}, itself has no weight. Neither does the {{CSSxRef(":is", ":is()")}} pseudo-class. The parameters in these selectors, however, do. The values of both come from the parameter in the list of parameters that has the highest specificity. The [`:not()` and `:is()` exceptions](#the-is-and-not-exceptions) are discussed below.
+The negation pseudo-class, {{CSSxRef(":not", ":not()")}}, itself has no weight. Neither do the {{CSSxRef(":is", ":is()")}} or the {{CSSxRef(":has", ":has()")}} pseudo-classes. The parameters in these selectors, however, do. The values of both come from the parameter in the list of parameters that has the highest specificity. The [`:not()`, `:is()` and `:has()` exceptions](#the_is_not_and_has_exceptions) are discussed below.
 
 #### Matching selector
 
@@ -116,9 +110,9 @@ input.myClass {
 }
 ```
 
-### The `:is()` and `:not()` exceptions
+### The `:is()`, `:not()` and `:has()` exceptions
 
-The matches-any pseudo-class {{CSSxRef(":is", ":is()")}} and the negation pseudo-class {{CSSxRef(":not", ":not()")}} are _not_ considered as pseudo-classes in the specificity weight calculation. They themselves don't add any weight to the specificity equation. However, the selector parameters passed into the pseudo-class parenthesis are part of the specificity algorithm; the weight of the matches-any and negation pseudo-class in the specificity value calculation is the weight of the parameter's [weight](#selector_weight_categories).
+The matches-any pseudo-class {{CSSxRef(":is", ":is()")}}, the relational pseudo-class {{CSSxRef(":has", ":has()")}}, and the negation pseudo-class {{CSSxRef(":not", ":not()")}} are _not_ considered as pseudo-classes in the specificity weight calculation. They themselves don't add any weight to the specificity equation. However, the selector parameters passed into the pseudo-class parenthesis are part of the specificity algorithm; the weight of the matches-any and negation pseudo-class in the specificity value calculation is the weight of the parameter's [weight](#selector_weight_categories).
 
 ```css
 p {
@@ -126,6 +120,13 @@ p {
 }
 :is(p) {
   /* 0-0-1 */
+}
+
+h2:nth-last-of-type(n + 2) {
+  /* 0-1-1 */
+}
+h2:has(~ h2) {
+  /* 0-0-2 */
 }
 
 div.outer p {
@@ -136,13 +137,16 @@ div:not(.inner) p {
 }
 ```
 
-Note that in the above CSS pairing, the specificity weight provided by the `:is()` and `:not()` pseudo-classes is the value of the selector parameter, not of the pseudo-class.
+Note that in the above CSS pairing, the specificity weight provided by the `:is()`, `:has()` and `:not()` pseudo-classes is the value of the selector parameter, not of the pseudo-class.
 
-Both of these pseudo-classes accept complex selector lists, a list of comma-separated selectors, as a parameter. This feature can be used to increase a selector's specificity:
+All three of these pseudo-classes accept complex selector lists, a list of comma-separated selectors, as a parameter. This feature can be used to increase a selector's specificity:
 
 ```css
 :is(p, #fakeId) {
   /* 1-0-0 */
+}
+h1:has(+ h2, > #fakeId) {
+  /* 1-0-1 */
 }
 p:not(#fakeId) {
   /* 1-0-1 */
@@ -154,7 +158,7 @@ div:not(.inner, #fakeId) p {
 
 In the above CSS code block, we have included `#fakeId` in the selectors. This `#fakeId` adds `1-0-0` to the specificity weight of each paragraph.
 
-Generally, you want to keep specificity down to a minimum, but if you need to increase an element's specificity for a particular reason, these two pseudo-classes can help.
+Generally, you want to keep specificity down to a minimum, but if you need to increase an element's specificity for a particular reason, these three pseudo-classes can help.
 
 ```css
 a:not(#fakeId#fakeId#fakeID) {
@@ -162,7 +166,7 @@ a:not(#fakeId#fakeId#fakeID) {
 }
 ```
 
-In this example, all links will be blue, unless overridden by a link declaration with 3 or more IDs, a color value matching an `a` includes the [`!important` flag](#the-important-exception), or if the link has an [inline style](#inline-styles) color declaration. If you use such a technique, add a comment to explain why the hack was needed.
+In this example, all links will be blue, unless overridden by a link declaration with 3 or more IDs, a color value matching an `a` includes the [`!important` flag](#the_!important_exception), or if the link has an [inline style](#inline_styles) color declaration. If you use such a technique, add a comment to explain why the hack was needed.
 
 ### Inline styles
 
@@ -265,7 +269,7 @@ As a special case for increasing specificity, you can duplicate weights from the
 
 Use this sparingly, if at all. If using selector duplication, always comment your CSS.
 
-By using `:is()` and `:not()`, you can increase specificity even if you can't add an `id` to a parent element:
+By using `:is()` and `:not()` (and also `:has()`), you can increase specificity even if you can't add an `id` to a parent element:
 
 ```css
 :not(#fakeID#fakeId#fakeID) span {
@@ -310,7 +314,7 @@ All these methods are covered in preceding sections.
 
 If you're unable to remove `!important` flags from an authors style sheet, the only solution to overriding the important styles is by using `!important`. Creating a [cascade layer](/en-US/docs/Web/CSS/@layer) of important declaration overrides is an excellent solution. Two ways of doing this include:
 
-#### Method #1
+#### Method 1
 
 1. Create a separate, short style sheet containing only important declarations specifically overriding any important declarations you were unable to remove.
 2. Import this stylesheet as the first import in your CSS using `layer()`, including the `@import` statement, before linking to other stylesheets. This is to ensure that the important overrides is imported as the first layer.
@@ -321,7 +325,7 @@ If you're unable to remove `!important` flags from an authors style sheet, the o
 </style>
 ```
 
-#### Method #2
+#### Method 2
 
 1. At the beginning of your stylesheet declarations, create a named cascade layer, like so:
 

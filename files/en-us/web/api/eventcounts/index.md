@@ -2,15 +2,10 @@
 title: EventCounts
 slug: Web/API/EventCounts
 page-type: web-api-interface
-tags:
-  - API
-  - Reference
-  - Interface
-  - Maplike
 browser-compat: api.EventCounts
 ---
 
-{{APIRef("Event Timing")}}
+{{APIRef("Performance API")}}
 
 The **`EventCounts`** interface is a read-only map where the keys are event types and the values are the number of events that have been dispatched for that event type.
 
@@ -52,7 +47,7 @@ for (entry of performance.eventCounts.entries()) {
   const count = entry[1];
 }
 
-const clickCount = performance.eventCounts.get("click"); 
+const clickCount = performance.eventCounts.get("click");
 
 const isExposed = performance.eventCounts.has("mousemove");
 const exposedEventsCount = performance.eventCounts.size;

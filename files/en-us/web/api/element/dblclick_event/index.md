@@ -1,21 +1,7 @@
 ---
-title: 'Element: dblclick event'
+title: "Element: dblclick event"
 slug: Web/API/Element/dblclick_event
 page-type: web-api-event
-tags:
-  - API
-  - DOM
-  - Double Click
-  - Double-Click
-  - Element
-  - Event
-  - Input
-  - Interface
-  - MouseEvent
-  - Reference
-  - button
-  - dblclick
-  - mouse
 browser-compat: api.Element.dblclick_event
 ---
 
@@ -30,9 +16,9 @@ The **`dblclick`** event fires when a pointing device button (such as a mouse's 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('dblclick', (event) => {});
+addEventListener("dblclick", (event) => {});
 
-ondblclick = (event) => { };
+ondblclick = (event) => {};
 ```
 
 ## Event type
@@ -103,10 +89,10 @@ This example toggles the size of a card when you double click on it.
 ### JavaScript
 
 ```js
-const card = document.querySelector('aside');
+const card = document.querySelector("aside");
 
-card.addEventListener('dblclick', (e) => {
-  card.classList.toggle('large');
+card.addEventListener("dblclick", (e) => {
+  card.classList.toggle("large");
 });
 ```
 
@@ -158,5 +144,5 @@ aside {
 - {{domxref("Element/contextmenu_event", "contextmenu")}}
 - {{domxref("Element/mousedown_event", "mousedown")}}
 - {{domxref("Element/mouseup_event", "mouseup")}}
-- {{domxref("HTMLElement/pointerdown_event", "pointerdown")}}
-- {{domxref("HTMLElement/pointerup_event", "pointerup")}}
+- {{domxref("Element/pointerdown_event", "pointerdown")}}
+- {{domxref("Element/pointerup_event", "pointerup")}}

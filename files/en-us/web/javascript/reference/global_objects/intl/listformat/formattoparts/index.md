@@ -1,15 +1,7 @@
 ---
 title: Intl.ListFormat.prototype.formatToParts()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/ListFormat/formatToParts
-tags:
-  - Internationalization
-  - Intl
-  - JavaScript
-  - ListFormat
-  - Localization
-  - Method
-  - Prototype
-  - Reference
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.Intl.ListFormat.formatToParts
 ---
 
@@ -57,8 +49,11 @@ The locale and style options used for formatting are given when constructing the
 ### Using formatToParts
 
 ```js
-const fruits = ['Apple', 'Orange', 'Pineapple'];
-const myListFormat = new Intl.ListFormat('en-GB', { style: 'long', type: 'conjunction' });
+const fruits = ["Apple", "Orange", "Pineapple"];
+const myListFormat = new Intl.ListFormat("en-GB", {
+  style: "long",
+  type: "conjunction",
+});
 
 console.table(myListFormat.formatToParts(fruits));
 // [

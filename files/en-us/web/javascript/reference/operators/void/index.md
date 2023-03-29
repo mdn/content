@@ -1,18 +1,13 @@
 ---
 title: void operator
 slug: Web/JavaScript/Reference/Operators/void
-tags:
-  - JavaScript
-  - Language feature
-  - Operator
-  - Reference
-  - Unary
+page-type: javascript-operator
 browser-compat: javascript.operators.void
 ---
 
 {{jsSidebar("Operators")}}
 
-The **`void` operator** evaluates the given
+The **`void`** operator evaluates the given
 `expression` and then returns {{jsxref("undefined")}}.
 
 {{EmbedInteractiveExample("pages/js/expressions-voidoperator.html", "taller")}}
@@ -39,15 +34,15 @@ parentheses can help clarify the resolution of the expression following the
 `void` operator:
 
 ```js
-void 2 === '2';   // (void 2) === '2', returns false
-void (2 === '2'); // void (2 === '2'), returns undefined
+void 2 === "2"; // (void 2) === '2', returns false
+void (2 === "2"); // void (2 === '2'), returns undefined
 ```
 
 ## Examples
 
 ### Immediately Invoked Function Expressions
 
-When using an [immediately-invoked function expression](/en-US/docs/Glossary/IIFE), the `function` keyword cannot be at the immediate start of the statement, because that would be parsed as a [function declaration](/en-US/docs/Web/JavaScript/Reference/Statements/function), and would generate a syntax error when the parentheses representing invocation is reached — if the function is unnamed, it would immediately be a syntax error if the function is parsed as a declaration.
+When using an [immediately-invoked function expression](/en-US/docs/Glossary/IIFE), the `function` keyword cannot be at the immediate start of the [statement](/en-US/docs/Web/JavaScript/Reference/Statements/Expression_statement), because that would be parsed as a [function declaration](/en-US/docs/Web/JavaScript/Reference/Statements/function), and would generate a syntax error when the parentheses representing invocation is reached — if the function is unnamed, it would immediately be a syntax error if the function is parsed as a declaration.
 
 ```js example-bad
 function iife() {
@@ -63,12 +58,12 @@ In order for the function to be parsed as an [expression](/en-US/docs/Web/JavaSc
 
 Of all the unary operators, `void` offers the best semantic, because it clearly signals that the return value of the function invocation should be discarded.
 
-```js
+```js-nolint
 void function () {
   console.log("Executed!");
 }();
 
-// Output: "Executed!"
+// Logs "Executed!"
 ```
 
 This is a bit longer than wrapping the function expression in parentheses, which has the same effect of forcing the `function` keyword to be parsed as the start of an expression instead of a statement.
@@ -87,9 +82,7 @@ value is {{jsxref("undefined")}}. The `void` operator can be used to return
 `undefined`. For example:
 
 ```html
-<a href="javascript:void(0);">
-  Click here to do nothing
-</a>
+<a href="javascript:void(0);">Click here to do nothing</a>
 
 <a href="javascript:void(document.body.style.backgroundColor='green');">
   Click here for green background

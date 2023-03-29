@@ -1,12 +1,6 @@
 ---
 title: aria-colspan
 slug: Web/Accessibility/ARIA/Attributes/aria-colspan
-tags:
-  - Accessibility
-  - ARIA
-  - ARIA attribute
-  - ARIA property
-  - aria-colspan
 spec-urls: https://w3c.github.io/aria/#aria-colspan
 ---
 
@@ -172,3 +166,11 @@ Inherits into roles:
 - [`cell`](/en-US/docs/Web/Accessibility/ARIA/Roles/cell_role) role
 - [`columnheader`](/en-US/docs/Web/Accessibility/ARIA/Roles/columnheader_role) role
 - [`rowheader`](/en-US/docs/Web/Accessibility/ARIA/Roles/columnheader_role) role
+
+<section id="Quick_links">
+
+1. [**WAI-ARIA states and properties**](/en-US/docs/Web/Accessibility/ARIA/Attributes)
+
+   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Attributes")}}
+
+</section>

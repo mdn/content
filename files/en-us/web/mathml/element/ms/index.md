@@ -1,11 +1,6 @@
 ---
 title: <ms>
 slug: Web/MathML/Element/ms
-tags:
-  - MathML
-  - MathML Reference
-  - MathML:Element
-  - MathML:Token Elements
 browser-compat: mathml.elements.ms
 ---
 
@@ -20,6 +15,7 @@ This element's attributes include the [global MathML attributes](/en-US/docs/Web
 Some browsers may also support the following deprecated attributes and will render the content of the `<ms>` element surrounded by the specified opening and closing quotes:
 
 - `lquote`
+
   - : The opening quote to enclose the content. The default value is `&quot;`.
 
 - `rquote`

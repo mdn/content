@@ -1,12 +1,6 @@
 ---
 title: aria-colcount
 slug: Web/Accessibility/ARIA/Attributes/aria-colcount
-tags:
-  - Accessibility
-  - ARIA
-  - ARIA attribute
-  - ARIA property
-  - aria-colcount
 spec-urls: https://w3c.github.io/aria/#aria-colcount
 ---
 
@@ -91,3 +85,11 @@ Inherits into roles:
 ## See Also
 
 - [`aria-colindex`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-colindex)
+
+<section id="Quick_links">
+
+1. [**WAI-ARIA states and properties**](/en-US/docs/Web/Accessibility/ARIA/Attributes)
+
+   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Attributes")}}
+
+</section>

@@ -1,13 +1,7 @@
 ---
 title: Set.prototype.values()
 slug: Web/JavaScript/Reference/Global_Objects/Set/values
-tags:
-  - ECMAScript 2015
-  - Iterator
-  - JavaScript
-  - Method
-  - Prototype
-  - set
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.Set.values
 ---
 
@@ -40,9 +34,9 @@ A new iterator object containing the values for each element in the given
 
 ```js
 const mySet = new Set();
-mySet.add('foo');
-mySet.add('bar');
-mySet.add('baz');
+mySet.add("foo");
+mySet.add("bar");
+mySet.add("baz");
 
 const setIter = mySet.values();
 

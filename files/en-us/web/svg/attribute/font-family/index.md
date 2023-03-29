@@ -1,9 +1,7 @@
 ---
 title: font-family
 slug: Web/SVG/Attribute/font-family
-tags:
-  - SVG
-  - SVG Attribute
+page-type: svg-attribute
 browser-compat: svg.attributes.presentation.font-family
 ---
 

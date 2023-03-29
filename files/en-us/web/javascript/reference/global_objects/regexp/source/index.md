@@ -1,13 +1,7 @@
 ---
 title: RegExp.prototype.source
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/source
-tags:
-  - JavaScript
-  - Property
-  - Prototype
-  - Reference
-  - RegExp
-  - Regular Expressions
+page-type: javascript-instance-accessor-property
 browser-compat: javascript.builtins.RegExp.source
 ---
 
@@ -26,9 +20,9 @@ Conceptually, the `source` property is the text between the two forward slashes 
 ### Using source
 
 ```js
-const regex = /fooBar/ig;
+const regex = /fooBar/gi;
 
-console.log(regex.source); // "fooBar", doesn't contain /.../ and "ig".
+console.log(regex.source); // "fooBar", doesn't contain /.../ and "gi".
 ```
 
 ### Empty regular expressions and escaping
@@ -36,7 +30,7 @@ console.log(regex.source); // "fooBar", doesn't contain /.../ and "ig".
 ```js
 new RegExp().source; // "(?:)"
 
-new RegExp('\n').source === '\\n'; // true, starting with ES5
+new RegExp("\n").source === "\\n"; // true, starting with ES5
 ```
 
 ## Specifications

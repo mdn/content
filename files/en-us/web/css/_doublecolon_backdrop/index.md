@@ -1,19 +1,7 @@
 ---
-title: '::backdrop'
+title: "::backdrop"
 slug: Web/CSS/::backdrop
 page-type: css-pseudo-element
-tags:
-  - API
-  - CSS
-  - Dialog
-  - Fullscreen
-  - Fullscreen API
-  - HTML DOM
-  - Layout
-  - Pseudo-element
-  - Reference
-  - Selector
-  - fullscreen
 browser-compat: css.selectors.backdrop
 ---
 
@@ -36,8 +24,10 @@ All fullscreen elements are placed in a last-in/first out (LIFO) stack in the to
 
 ## Syntax
 
-```
-::backdrop
+```css
+::backdrop {
+  /* ... */
+}
 ```
 
 ## Examples

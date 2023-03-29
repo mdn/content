@@ -2,12 +2,8 @@
 title: Navigator.vendor
 slug: Web/API/Navigator/vendor
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTML DOM
-  - Property
-  - Read-only
-  - Deprecated
+status:
+  - deprecated
 browser-compat: api.Navigator.vendor
 ---
 

@@ -1,15 +1,7 @@
 ---
 title: TypedArray.prototype[@@iterator]()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/@@iterator
-tags:
-  - Iterator
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - TypedArray
-  - TypedArrays
-  - Polyfill
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.TypedArray.@@iterator
 ---
 
@@ -21,7 +13,7 @@ The initial value of this property is the same function object as the initial va
 
 ## Syntax
 
-```js
+```js-nolint
 typedArray[Symbol.iterator]()
 ```
 

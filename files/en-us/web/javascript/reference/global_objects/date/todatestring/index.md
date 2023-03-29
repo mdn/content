@@ -1,12 +1,7 @@
 ---
 title: Date.prototype.toDateString()
 slug: Web/JavaScript/Reference/Global_Objects/Date/toDateString
-tags:
-  - Date
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.Date.toDateString
 ---
 
@@ -24,7 +19,7 @@ toDateString()
 
 ### Return value
 
-A string representing the date portion of the given {{jsxref("Date")}} object in human readable form in English.
+A string representing the date portion of the given {{jsxref("Date")}} object in human-readable form in English.
 
 ## Description
 
@@ -49,8 +44,8 @@ For example: "Thu Jan 01 1970".
 ```js
 const d = new Date(1993, 5, 28, 14, 39, 7);
 
-console.log(d.toString());     // logs Mon Jun 28 1993 14:39:07 GMT-0600 (PDT)
-console.log(d.toDateString()); // logs Mon Jun 28 1993
+console.log(d.toString()); // Mon Jun 28 1993 14:39:07 GMT-0600 (PDT)
+console.log(d.toDateString()); // Mon Jun 28 1993
 ```
 
 > **Note:** Month are 0-indexed when used as an argument of {{jsxref("Date")}} (thus 0 corresponds to January and 11 to December).

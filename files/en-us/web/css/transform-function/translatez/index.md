@@ -2,13 +2,6 @@
 title: translateZ()
 slug: Web/CSS/transform-function/translateZ
 page-type: css-function
-tags:
-  - 3D
-  - CSS
-  - CSS Function
-  - CSS Transforms
-  - Function
-  - Reference
 browser-compat: css.types.transform-function.translateZ
 ---
 
@@ -146,3 +139,4 @@ the user is to the element and the larger the translated element will seem.
 
 - {{cssxref("transform")}}
 - {{cssxref("&lt;transform-function&gt;")}}
+- {{cssxref("translate")}}

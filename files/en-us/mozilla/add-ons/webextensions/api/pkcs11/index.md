@@ -1,16 +1,7 @@
 ---
 title: pkcs11
 slug: Mozilla/Add-ons/WebExtensions/API/pkcs11
-tags:
-  - API
-  - API Extensions
-  - Add-ons
-  - Extensions
-  - Reference
-  - Web
-  - Web Development
-  - WebExtensions
-  - pkcs11
+page-type: webextension-api
 browser-compat: webextensions.api.pkcs11
 ---
 
@@ -28,9 +19,9 @@ Perform the following steps:
 2. Select **Tools > Options** or select the **Firefox menu** and then **Options**
 3. Once the Options page opens, select **Privacy & Security**
 4. Scroll down to the bottom of the page and under **Certificates** click or tap on **Security Devices…**
-   ![](device_manager.png)
+   ![Security modules and devices](device_manager.png)
 5. Click or tap the **Load** button
-   ![](load_device_driver.png)
+   ![Load PKCS#11 device driver](load_device_driver.png)
 6. Enter a name for the security module, such as "_My Client Database_"
 
    > **Warning:** Be careful about using international characters as there is currently a bug in Firefox where international characters may cause problems.
@@ -39,7 +30,7 @@ Perform the following steps:
 
 ## Provisioning PKCS #11 modules
 
-> **Note:** Starting with Firefox 58, extensions can use the [pkcs11](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/pkcs11) API to enumerate PKCS #11 modules and make them accessible to the browser as sources of keys and certificates.
+> **Note:** Starting with Firefox 58, extensions can use this API to enumerate PKCS #11 modules and make them accessible to the browser as sources of keys and certificates.
 
 There are two environmental prerequisites for using this **API**:
 

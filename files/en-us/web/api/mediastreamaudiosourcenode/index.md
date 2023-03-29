@@ -2,23 +2,6 @@
 title: MediaStreamAudioSourceNode
 slug: Web/API/MediaStreamAudioSourceNode
 page-type: web-api-interface
-tags:
-  - API
-  - Audio
-  - AudioNode
-  - Interface
-  - Media
-  - MediaStream
-  - MediaStreamAudioSourceNode
-  - MediaStreamTrack
-  - Reference
-  - Web
-  - Web Audio API
-  - WebRTC
-  - getusermedia
-  - sound
-  - stream
-  - track
 browser-compat: api.MediaStreamAudioSourceNode
 ---
 
@@ -104,5 +87,5 @@ See [`AudioContext.createMediaStreamSource()`](/en-US/docs/Web/API/AudioContext/
 
 - [Using the Web Audio API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
 - [WebRTC API](/en-US/docs/Web/API/WebRTC_API)
-- [Media Capture and Streams API (Media Streams)](/en-US/docs/Web/API/Media_Streams_API)
+- [Media Capture and Streams API (Media Streams)](/en-US/docs/Web/API/Media_Capture_and_Streams_API)
 - {{domxref("MediaStreamTrackAudioSourceNode")}}

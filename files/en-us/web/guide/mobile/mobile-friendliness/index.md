@@ -1,29 +1,28 @@
 ---
 title: Mobile-friendliness
 slug: Web/Guide/Mobile/Mobile-friendliness
-tags:
-  - Mobile
-  - Web Development
 ---
+
+{{QuickLinksWithSubPages("/en-US/docs/Web/Guide/Mobile")}}
 
 ## What is Mobile Friendliness?
 
 Mobile friendliness can mean a multitude of things, depending on who you're talking to. It can be helpful to think of it in terms of three goals for improving your site's user experience: Presentation, Content, and Performance.
 
-### Goal #1 (Presentation)
+### Goal 1 (Presentation)
 
 **Make websites that work well on a variety of screen sizes.**
 
 These days, users can access the web on devices in a wide range of form factors, including phones, tablets, and eReaders. Needless to say, a fixed-width, three-column layout filled with complex JavaScript animations and mouse-over effects is not going to look or feel quite right on a phone with a 2-inch-wide screen and a diminutive processor. A slimmed-down, linearized page layout with elements [sized for a touchscreen](https://www.lukew.com/ff/entry.asp?1085) would be much more appropriate. That's why this first goal is all about presenting your content in a way that makes life easy for users on mobile device.
 
-### Goal #2 (Content)
+### Goal 2 (Content)
 
 **Adjust your content for mobile users.**
 ![Screen shot of the Alaska Air desktop site on the left, and an iPhone showing the mobile version of the same page](alaska_air_mobile_and_desktop-300x225.png)
 
 Think about what your users want to do at your site if they are on a phone. A great example of this is [Alaska Air's website](https://www.alaskaair.com/). Their desktop site focuses on getting visitors to book trips. Mobile users, however, are probably more interested in checking-in for a flight or seeing if their flight is delayed. They've adjusted their site's content to reflect this, and it meets the needs of mobile users.
 
-### Goal #3 (Performance)
+### Goal 3 (Performance)
 
 **Give your users a smooth experience, even on a slow connection.**
 
@@ -37,7 +36,6 @@ While not strictly a part of the definition of being mobile friendly, defining w
 
 The following approaches aim to achieve each of these goals by different means.
 
-- [Separate sites](/en-US/docs/Web/Guide/Mobile/Separate_sites)
 - [Responsive design](/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design)
 - [A hybrid approach](/en-US/docs/Web/Guide/Mobile/A_hybrid_approach)
 

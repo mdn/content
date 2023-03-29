@@ -1,13 +1,7 @@
 ---
 title: WeakMap.prototype.delete()
 slug: Web/JavaScript/Reference/Global_Objects/WeakMap/delete
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - WeakMap
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.WeakMap.delete
 ---
 
@@ -41,11 +35,11 @@ if the key is not an object.
 
 ```js
 const wm = new WeakMap();
-wm.set(window, 'foo');
+wm.set(window, "foo");
 
 wm.delete(window); // Returns true. Successfully removed.
 
-wm.has(window);    // Returns false. The window object is no longer in the WeakMap.
+wm.has(window); // Returns false. The window object is no longer in the WeakMap.
 ```
 
 ## Specifications

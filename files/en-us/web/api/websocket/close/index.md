@@ -2,12 +2,6 @@
 title: WebSocket.close()
 slug: Web/API/WebSocket/close
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - Web API
-  - WebSocket
 browser-compat: api.WebSocket.close
 ---
 
@@ -51,7 +45,7 @@ None ({{jsxref("undefined")}}).
 ### Exceptions
 
 - `InvalidAccessError` {{domxref("DOMException")}}
-  - : Thrown if [`code`](#code) is neither an integer equal to `1000` nor an integer in the range `3000`–`4999`.
+  - : Thrown if [`code`](#code) is neither an integer equal to `1000` nor an integer in the range `3000` – `4999`.
 - `SyntaxError` {{domxref("DOMException")}}
   - : Thrown if the UTF-8-encoded [`reason`](#reason) value is longer than 123 bytes.
 

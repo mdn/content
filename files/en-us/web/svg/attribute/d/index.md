@@ -1,9 +1,7 @@
 ---
 title: d
 slug: Web/SVG/Attribute/d
-tags:
-  - SVG
-  - SVG Attribute
+page-type: svg-attribute
 browser-compat: svg.elements.path.d
 ---
 
@@ -91,7 +89,7 @@ For {{SVGElement('glyph')}}, `d` is a string containing a series of path command
   </tbody>
 </table>
 
-> **Note:** The point of origin (the coordinate `0`,`0`) is usually the _upper left corner_ of the context. However the {{SVGElement("glyph")}} element has its origin in the _bottom left corner_ of its letterbox.
+> **Note:** The point of origin (the coordinate `0`, `0`) is usually the _upper left corner_ of the context. However the {{SVGElement("glyph")}} element has its origin in the _bottom left corner_ of its letterbox.
 
 ## missing-glyph
 

@@ -2,13 +2,6 @@
 title: DocumentFragment.prepend()
 slug: Web/API/DocumentFragment/prepend
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - Method
-  - Node
-  - DocumentFragment
-  - Reference
 browser-compat: api.DocumentFragment.prepend
 ---
 

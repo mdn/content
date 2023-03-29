@@ -2,12 +2,6 @@
 title: WebGLRenderingContext.hint()
 slug: Web/API/WebGLRenderingContext/hint
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.hint
 ---
 
@@ -37,8 +31,8 @@ hint(target, mode)
 
     - `ext.FRAGMENT_SHADER_DERIVATIVE_HINT_OES`
       - : Accuracy of the
-          derivative calculation for the GLSL built-in functions: `dFdx`,
-          `dFdy`, and `fwidth`.
+        derivative calculation for the GLSL built-in functions: `dFdx`,
+        `dFdy`, and `fwidth`.
 
     When using a {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}},
     the following values are available additionally:

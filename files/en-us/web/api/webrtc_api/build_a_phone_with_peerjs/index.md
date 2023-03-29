@@ -4,7 +4,7 @@ slug: Web/API/WebRTC_API/Build_a_phone_with_peerjs
 page-type: guide
 ---
 
-{{WebRTCSidebar}}
+{{DefaultAPISidebar("WebRTC")}}
 
 {{NextMenu("Web/API/WebRTC_API/Build_a_phone_with_peerjs/Setup")}}
 

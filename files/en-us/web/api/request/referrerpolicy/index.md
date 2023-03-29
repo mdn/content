@@ -2,13 +2,6 @@
 title: Request.referrerPolicy
 slug: Web/API/Request/referrerPolicy
 page-type: web-api-instance-property
-tags:
-  - API
-  - Fetch
-  - Property
-  - Reference
-  - referrerPolicy
-  - request
 browser-compat: api.Request.referrerPolicy
 ---
 
@@ -32,7 +25,7 @@ In the following snippet, we create a new request using the
 the script), then save the request referrer policy in a variable:
 
 ```js
-const myRequest = new Request('flowers.jpg');
+const myRequest = new Request("flowers.jpg");
 const myReferrer = myRequest.referrerPolicy; // returns "" by default
 ```
 

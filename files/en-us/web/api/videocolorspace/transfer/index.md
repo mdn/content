@@ -2,12 +2,6 @@
 title: VideoColorSpace.transfer
 slug: Web/API/VideoColorSpace/transfer
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - transfer
-  - VideoColorSpace
 browser-compat: api.VideoColorSpace.transfer
 ---
 
@@ -31,7 +25,7 @@ A string containing one of the following values:
 In the following example, `colorSpace` is a `VideoColorSpace` object returned from {{domxref("VideoFrame")}}. The value of `transfer` is printed to the console.
 
 ```js
-let colorSpace = VideoFrame.colorSpace
+let colorSpace = VideoFrame.colorSpace;
 console.log(colorSpace.transfer);
 ```
 

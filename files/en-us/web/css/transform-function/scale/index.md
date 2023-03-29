@@ -2,12 +2,6 @@
 title: scale()
 slug: Web/CSS/transform-function/scale
 page-type: css-function
-tags:
-  - CSS
-  - CSS Function
-  - CSS Transforms
-  - Function
-  - Reference
 browser-compat: css.types.transform-function.scale
 ---
 
@@ -222,5 +216,7 @@ div {
 ## See also
 
 - {{cssxref("transform")}}
+- {{cssxref("scale")}}
 - {{cssxref("&lt;transform-function&gt;")}}
 - {{cssxref("transform-function/scale3d", "scale3d()")}}
+- Other individual transform properties {{cssxref("translate")}} and {{cssxref("rotate")}}

@@ -2,13 +2,6 @@
 title: PannerNode.panningModel
 slug: Web/API/PannerNode/panningModel
 page-type: web-api-instance-property
-tags:
-  - API
-  - PannerNode
-  - Property
-  - Reference
-  - Web Audio API
-  - panningModel
 browser-compat: api.PannerNode.panningModel
 ---
 
@@ -23,7 +16,7 @@ The possible values are:
 
 ## Value
 
-A enum — see [`PanningModelType`](https://webaudio.github.io/web-audio-api/#idl-def-PanningModelType).
+An enum — see [`PanningModelType`](https://webaudio.github.io/web-audio-api/#idl-def-PanningModelType).
 
 ## Examples
 

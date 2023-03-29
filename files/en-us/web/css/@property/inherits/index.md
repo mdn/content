@@ -2,13 +2,8 @@
 title: inherits
 slug: Web/CSS/@property/inherits
 page-type: css-at-rule-descriptor
-tags:
-  - CSS
-  - Reference
-  - Web
-  - Property
-  - Houdini
-  - Experimental
+status:
+  - experimental
 browser-compat: css.at-rules.property.inherits
 ---
 
@@ -45,9 +40,7 @@ The **`inherits`** [CSS](/en-US/docs/Web/CSS) descriptor is required when using 
 
 ## Formal syntax
 
-```
-true | false
-```
+{{csssyntax}}
 
 ## Examples
 

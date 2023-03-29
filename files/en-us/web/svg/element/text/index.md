@@ -1,11 +1,7 @@
 ---
 title: <text>
 slug: Web/SVG/Element/text
-tags:
-  - Element
-  - Reference
-  - SVG
-  - SVG Text Content
+page-type: svg-element
 browser-compat: svg.elements.text
 ---
 

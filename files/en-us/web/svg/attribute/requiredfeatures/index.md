@@ -1,10 +1,9 @@
 ---
 title: requiredFeatures
 slug: Web/SVG/Attribute/requiredFeatures
-tags:
-  - SVG
-  - SVG Attribute
-  - Deprecated
+page-type: svg-attribute
+status:
+  - deprecated
 browser-compat: svg.attributes.conditional_processing.requiredFeatures
 ---
 
@@ -16,14 +15,11 @@ If the attribute is not present, then its implicit evaluated value is `true`. If
 
 `requiredFeatures` is often used in conjunction with the {{SVGElement("switch")}} element. If `requiredFeatures` is used in other situations, it represents a simple switch on the given element whether to render the element or not.
 
-To detect availability of an SVG feature from script, there is the (also deprecated) {{domxref("DOMImplementation.hasFeature()")}} method.
-
 You can use this attribute with the following SVG elements:
 
 - {{SVGElement("a")}}
 - {{SVGElement("altGlyph")}}
 - {{SVGElement("animate")}}
-- {{SVGElement("animateColor")}}
 - {{SVGElement("animateMotion")}}
 - {{SVGElement("animateTransform")}}
 - {{SVGElement("circle")}}
@@ -115,6 +111,7 @@ text {
 The following are the feature strings for the `requiredFeatures` attribute. These same feature strings apply to the [hasFeature](/en-US/docs/DOM/DOMImplementation.hasFeature) method call that is part of the SVG DOM's support for the {{domxref("DOMImplementation")}} interface. In some cases the feature strings map directly to a set of attributes, properties or elements, in others they represent some functionality of the browser. Note that the format and naming for feature strings changed from SVG 1.0 to SVG 1.1. The SVG 1.0 feature strings are not listed here but can be found in the [SVG Specification](https://www.w3.org/TR/SVG/feature.html). Some browser support SVG 1.0 Feature strings for compatibility reasons. However, the SVG 1.0 feature strings are considered deprecated.
 
 - `http://www.w3.org/TR/SVG11/feature#SVG`
+
   - : At least one of the following feature is supported:
 
     - `http://www.w3.org/TR/SVG11/feature#SVG-static`
@@ -129,7 +126,9 @@ The following are the feature strings for the `requiredFeatures` attribute. Thes
     - `http://www.w3.org/TR/SVG11/feature#SVGDOM-static`
     - `http://www.w3.org/TR/SVG11/feature#SVGDOM-animation`
     - `http://www.w3.org/TR/SVG11/feature#SVGDOM-dynamic`
+
 - `http://www.w3.org/TR/SVG11/feature#SVG-static`
+
   - : The browser supports all the following features:
 
     - `http://www.w3.org/TR/SVG11/feature#CoreAttribute`
@@ -154,6 +153,7 @@ The following are the feature strings for the `requiredFeatures` attribute. Thes
     - `http://www.w3.org/TR/SVG11/feature#XlinkAttribute`
     - `http://www.w3.org/TR/SVG11/feature#Font`
     - `http://www.w3.org/TR/SVG11/feature#Extensibility`
+
 - `http://www.w3.org/TR/SVG11/feature#SVGDOM-static`
   - : The browser supports all DOM interfaces and methods to the language features for `http://www.w3.org/TR/SVG11/feature#SVG-static`.
 - `http://www.w3.org/TR/SVG11/feature#SVG-animation`
@@ -161,6 +161,7 @@ The following are the feature strings for the `requiredFeatures` attribute. Thes
 - `http://www.w3.org/TR/SVG11/feature#SVGDOM-animation`
   - : The browser supports all DOM interfaces and methods corresponding to the language features for `http://www.w3.org/TR/SVG11/feature#SVG-animation`.
 - `http://www.w3.org/TR/SVG11/feature#SVG-dynamic`
+
   - : The browser supports all of the language features from `http://www.w3.org/TR/SVG11/feature#SVG-animation` plus the following features:
 
     - `http://www.w3.org/TR/SVG11/feature#Hyperlinking`
@@ -170,6 +171,7 @@ The following are the feature strings for the `requiredFeatures` attribute. Thes
     - `http://www.w3.org/TR/SVG11/feature#GraphicalEventsAttribute`
     - `http://www.w3.org/TR/SVG11/feature#DocumentEventsAttribute`
     - `http://www.w3.org/TR/SVG11/feature#AnimationEventsAttribute`
+
 - `http://www.w3.org/TR/SVG11/feature#SVGDOM-dynamic`
   - : The browser supports all DOM interfaces and methods to the language features for `http://www.w3.org/TR/SVG11/feature#SVG-dynamic`.
 - `http://www.w3.org/TR/SVG11/feature#CoreAttribute`
@@ -237,7 +239,7 @@ The following are the feature strings for the `requiredFeatures` attribute. Thes
 - `http://www.w3.org/TR/SVG11/feature#Script`
   - : The browser supports the {{SVGElement("script")}} element
 - `http://www.w3.org/TR/SVG11/feature#Animation`
-  - : The browser supports the {{SVGElement("animate")}}, {{SVGElement("set")}}, {{SVGElement("animateMotion")}}, {{SVGElement("animateTransform")}}, {{SVGElement("animateColor")}} and {{SVGElement("mpath")}} elements
+  - : The browser supports the {{SVGElement("animate")}}, {{SVGElement("set")}}, {{SVGElement("animateMotion")}}, {{SVGElement("animateTransform")}}, and {{SVGElement("mpath")}} elements
 - `http://www.w3.org/TR/SVG11/feature#Font`
   - : The browser supports the {{SVGElement("font")}}, {{SVGElement("font-face")}}, {{SVGElement("glyph")}}, {{SVGElement("missing-glyph")}}, {{SVGElement("hkern")}}, {{SVGElement("vkern")}}, {{SVGElement("font-face-src")}}, {{SVGElement("font-face-uri")}}, {{SVGElement("font-face-format")}} and {{SVGElement("font-face-name")}} elements
 - `http://www.w3.org/TR/SVG11/feature#BasicFont`
@@ -803,7 +805,3 @@ text {
 ## Browser compatibility
 
 {{Compat}}
-
-## See also
-
-- {{domxref("DOMImplementation.hasFeature()")}}

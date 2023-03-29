@@ -1,13 +1,7 @@
 ---
 title: Map.prototype.forEach()
 slug: Web/JavaScript/Reference/Global_Objects/Map/forEach
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Map
-  - Method
-  - Prototype
-  - Reference
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.Map.forEach
 ---
 
@@ -92,7 +86,7 @@ function logMapElements(value, key, map) {
   console.log(`map.get('${key}') = ${value}`);
 }
 new Map([['foo', 3], ['bar', {}], ['baz', undefined]]).forEach(logMapElements);
-// logs:
+// Logs:
 // "map.get('foo') = 3"
 // "map.get('bar') = [object Object]"
 // "map.get('baz') = undefined"

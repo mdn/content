@@ -2,15 +2,6 @@
 title: ":picture-in-picture"
 slug: Web/CSS/:picture-in-picture
 page-type: css-pseudo-class
-tags:
-  - CSS
-  - Picture-in-Picture
-  - Picture-in-Picture API
-  - Pseudo-class
-  - Reference
-  - Selector
-  - Video
-  - pip
 browser-compat: css.selectors.picture-in-picture
 ---
 
@@ -20,8 +11,10 @@ The **`:picture-in-picture`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/d
 
 ## Syntax
 
-```
-:picture-in-picture
+```css
+:picture-in-picture {
+  /* ... */
+}
 ```
 
 ## Usage notes

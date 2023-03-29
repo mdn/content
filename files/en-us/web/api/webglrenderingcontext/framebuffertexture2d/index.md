@@ -2,12 +2,6 @@
 title: WebGLRenderingContext.framebufferTexture2D()
 slug: Web/API/WebGLRenderingContext/framebufferTexture2D
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.framebufferTexture2D
 ---
 
@@ -39,7 +33,7 @@ framebufferTexture2D(target, attachment, textarget, texture, level)
 
     - `gl.DRAW_FRAMEBUFFER`
       - : Used as a destination for drawing,
-          rendering, clearing, and writing operations.
+        rendering, clearing, and writing operations.
     - `gl.READ_FRAMEBUFFER`
       - : Used as a source for reading operations.
 
@@ -119,7 +113,13 @@ None ({{jsxref("undefined")}}).
 ## Examples
 
 ```js
-gl.framebufferTexture2D(gl.FRAMEBUFFER, gl.COLOR_ATTACHMENT0, gl.TEXTURE_2D, texture, 0);
+gl.framebufferTexture2D(
+  gl.FRAMEBUFFER,
+  gl.COLOR_ATTACHMENT0,
+  gl.TEXTURE_2D,
+  texture,
+  0
+);
 ```
 
 ## Specifications

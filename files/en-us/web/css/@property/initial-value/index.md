@@ -2,13 +2,8 @@
 title: initial-value
 slug: Web/CSS/@property/initial-value
 page-type: css-at-rule-descriptor
-tags:
-  - CSS
-  - Reference
-  - Web
-  - Property
-  - Houdini
-  - Experimental
+status:
+  - experimental
 browser-compat: css.at-rules.property.initial-value
 ---
 
@@ -44,9 +39,7 @@ A string with a value which is a correct value for the chosen `syntax`.
 
 ## Formal syntax
 
-```
-<string>
-```
+{{csssyntax}}
 
 ## Examples
 

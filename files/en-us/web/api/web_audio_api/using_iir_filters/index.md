@@ -2,13 +2,6 @@
 title: Using IIR filters
 slug: Web/API/Web_Audio_API/Using_IIR_filters
 page-type: guide
-tags:
-  - API
-  - Audio
-  - Guide
-  - IIRFilter
-  - Using
-  - Web Audio API
 ---
 
 {{DefaultAPISidebar("Web Audio API")}}
@@ -33,7 +26,7 @@ The Web Audio API now comes with an {{domxref("IIRFilterNode")}} interface. But 
 
 An IIR filter is a **infinite impulse response filter**. It's one of two primary types of filters used in audio and digital signal processing. The other type is FIR — **finite impulse response filter**. There's a really good overview to [IIF filters and FIR filters here](https://dspguru.com/dsp/faqs/iir/basics/).
 
-A biquad filter is actually a _specific type_ of infinite impulse response filter. It's a commonly-used type and we already have it as a node in the Web Audio API. If you choose this node the hard work is done for you. For instance, if you want to filter lower frequencies from your sound, you can set the [type](/en-US/docs/Web/API/BiquadFilterNode/type) to `highpass` and then set which frequency to filter from (or cut off). [There's more information on how biquad filters work here](https://www.earlevel.com/main/2003/02/28/biquads/).
+A [biquad filter](https://www.mathworks.com/help/dsphdl/ref/biquadfilter.html) is actually a _specific type_ of infinite impulse response filter. It's a commonly-used type and we already have it as a node in the Web Audio API. If you choose this node the hard work is done for you. For instance, if you want to filter lower frequencies from your sound, you can set the [type](/en-US/docs/Web/API/BiquadFilterNode/type) to `highpass` and then set which frequency to filter from (or cut off).
 
 When you are using an {{domxref("IIRFilterNode")}} instead of a {{domxref("BiquadFilterNode")}} you are creating the filter yourself, rather than just choosing a pre-programmed type. So you can create a highpass filter, or a lowpass filter, or a more bespoke one. And this is where the IIR filter node is useful — you can create your own if none of the already available settings is right for what you want. As well as this, if your audio graph needed a highpass and a bandpass filter within it, you could just use one IIR filter node in place of the two biquad filter nodes you would otherwise need for this.
 
@@ -100,12 +93,16 @@ This function is called when the play button is pressed. The play button HTML lo
 And the `click` event listener starts like so:
 
 ```js
-playButton.addEventListener('click', () => {
-  if (playButton.dataset.playing === 'false') {
-    srcNode = playSourceNode(audioCtx, sample);
-     // …
-  }
-}, false);
+playButton.addEventListener(
+  "click",
+  () => {
+    if (playButton.dataset.playing === "false") {
+      srcNode = playSourceNode(audioCtx, sample);
+      // …
+    }
+  },
+  false
+);
 ```
 
 The toggle that turns the IIR filter on and off is set up in the similar way. First, the HTML:
@@ -123,13 +120,17 @@ The toggle that turns the IIR filter on and off is set up in the similar way. Fi
 The filter button's `click` handler then connects the `IIRFilter` up to the graph, between the source and the destination:
 
 ```js
-filterButton.addEventListener('click', () => {
-  if (filterButton.dataset.filteron === 'false') {
-    srcNode.disconnect(audioCtx.destination);
-    srcNode.connect(iirfilter).connect(audioCtx.destination);
-    // …
-  }
-}, false);
+filterButton.addEventListener(
+  "click",
+  () => {
+    if (filterButton.dataset.filteron === "false") {
+      srcNode.disconnect(audioCtx.destination);
+      srcNode.connect(iirfilter).connect(audioCtx.destination);
+      // …
+    }
+  },
+  false
+);
 ```
 
 ### Frequency response
@@ -159,26 +160,30 @@ We could go for a linear approach, but it's far better when working with frequen
 Now let's get our response data:
 
 ```js
-iirFilter.getFrequencyResponse(myFrequencyArray, magResponseOutput, phaseResponseOutput);
+iirFilter.getFrequencyResponse(
+  myFrequencyArray,
+  magResponseOutput,
+  phaseResponseOutput
+);
 ```
 
 We can use this data to draw a filter frequency plot. We'll do so on a 2d canvas context.
 
 ```js
 // Create a canvas element and append it to our DOM
-const canvasContainer = document.querySelector('.filter-graph');
-const canvasEl = document.createElement('canvas');
+const canvasContainer = document.querySelector(".filter-graph");
+const canvasEl = document.createElement("canvas");
 canvasContainer.appendChild(canvasEl);
 
 // Set 2d context and set dimensions
-const canvasCtx = canvasEl.getContext('2d');
+const canvasCtx = canvasEl.getContext("2d");
 const width = canvasContainer.offsetWidth;
 const height = canvasContainer.offsetHeight;
 canvasEl.width = width;
 canvasEl.height = height;
 
 // Set background fill
-canvasCtx.fillStyle = 'white';
+canvasCtx.fillStyle = "white";
 canvasCtx.fillRect(0, 0, width, height);
 
 // Set up some spacing based on size
@@ -187,36 +192,33 @@ const fontSize = Math.floor(spacing / 1.5);
 
 // Draw our axis
 canvasCtx.lineWidth = 2;
-canvasCtx.strokeStyle = 'grey';
+canvasCtx.strokeStyle = "grey";
 
 canvasCtx.beginPath();
 canvasCtx.moveTo(spacing, spacing);
-canvasCtx.lineTo(spacing, height-spacing);
-canvasCtx.lineTo(width-spacing, height-spacing);
+canvasCtx.lineTo(spacing, height - spacing);
+canvasCtx.lineTo(width - spacing, height - spacing);
 canvasCtx.stroke();
 
 // Axis is gain by frequency -> make labels
 canvasCtx.font = `${fontSize}px sans-serif`;
-canvasCtx.fillStyle = 'grey';
-canvasCtx.fillText('1', spacing - fontSize, spacing + fontSize);
-canvasCtx.fillText('g', spacing - fontSize, (height - spacing + fontSize) / 2);
-canvasCtx.fillText('0', spacing - fontSize, height - spacing + fontSize);
-canvasCtx.fillText('Hz', width / 2, height - spacing + fontSize);
-canvasCtx.fillText('20k', width - spacing, height - spacing + fontSize);
+canvasCtx.fillStyle = "grey";
+canvasCtx.fillText("1", spacing - fontSize, spacing + fontSize);
+canvasCtx.fillText("g", spacing - fontSize, (height - spacing + fontSize) / 2);
+canvasCtx.fillText("0", spacing - fontSize, height - spacing + fontSize);
+canvasCtx.fillText("Hz", width / 2, height - spacing + fontSize);
+canvasCtx.fillText("20k", width - spacing, height - spacing + fontSize);
 
 // Loop over our magnitude response data and plot our filter
 canvasCtx.beginPath();
 
 magResponseOutput.forEach((magResponseData, i) => {
   if (i === 0) {
-    canvasCtx.moveTo(
-      spacing,
-      height - magResponseData * 100 - spacing,
-    );
+    canvasCtx.moveTo(spacing, height - magResponseData * 100 - spacing);
   } else {
     canvasCtx.lineTo(
-      width / totalArrayItems * i,
-      height - magResponseData * 100 - spacing,
+      (width / totalArrayItems) * i,
+      height - magResponseData * 100 - spacing
     );
   }
 });
