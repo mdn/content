@@ -1,8 +1,7 @@
 ---
 title: CSRF
 slug: Glossary/CSRF
-tags:
-  - Security
+page-type: glossary-definition
 ---
 
 **CSRF** (Cross-Site Request Forgery) is an attack that impersonates a trusted user and sends a website unwanted commands.

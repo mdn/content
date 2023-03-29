@@ -1,8 +1,6 @@
 ---
 title: Community
 slug: Web/Accessibility/Community
-tags:
-  - Accessibility
 ---
 
 <section id="Quick_links">

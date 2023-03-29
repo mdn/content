@@ -2,29 +2,30 @@
 title: DOMStringList
 slug: Web/API/DOMStringList
 page-type: web-api-interface
-tags:
-  - API
-  - DOM
-  - DOMStringList
-  - Reference
 browser-compat: api.DOMStringList
 ---
 
-{{ APIRef("DOM") }}
+{{APIRef("DOM")}}
 
-A type returned by some APIs which contains a list of [DOMString](/en-US/docs/Web/API/DOMString) (strings).
+The **`DOMString`** interface is a legacy type returned by some APIs and represents a non-modifiable list of strings (`DOMString`). Modern APIs use {{jsxref("Array")}} objects (in WebIDL: `sequence<DOMString>`) instead.
+
+This interface is used in [IndexedDB](/en-US/docs/Web/API/IndexedDB_API) and in the {{domxref("Location")}} API:
+
+- {{domxref("IDBDatabase.objectStoreNames")}}
+- {{domxref("IDBObjectStore.indexNames")}}
+- {{domxref("Location.ancestorOrigins")}}
 
 ## Instance properties
 
 - {{domxref("DOMStringList.length")}} {{ReadOnlyInline}}
-  - : Returns the length of the list.
+  - : Returns the size of the list.
 
 ## Instance methods
 
 - {{domxref("DOMStringList.item()")}}
-  - : Returns a string.
+  - : Returns a string from the list with the given index.
 - {{domxref("DOMStringList.contains()")}}
-  - : Returns a boolean value indicating if the given string is in the list
+  - : Returns a boolean indicating whether the given string is in the list.
 
 ## Specifications
 

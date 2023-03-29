@@ -1,17 +1,13 @@
 ---
 title: Object.getOwnPropertyDescriptor()
 slug: Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyDescriptor
-tags:
-  - ECMAScript 5
-  - JavaScript
-  - Method
-  - Object
+page-type: javascript-static-method
 browser-compat: javascript.builtins.Object.getOwnPropertyDescriptor
 ---
 
 {{JSRef}}
 
-The **`Object.getOwnPropertyDescriptor()`** method returns an
+The **`Object.getOwnPropertyDescriptor()`** static method returns an
 object describing the configuration of a specific property on a given object (that is,
 one directly present on an object and not in the object's prototype chain). The object
 returned is mutable but mutating it has no effect on the original property's
@@ -73,8 +69,12 @@ A _property descriptor_ is a record with some of the following attributes:
 ```js
 let o, d;
 
-o = { get foo() { return 17; } };
-d = Object.getOwnPropertyDescriptor(o, 'foo');
+o = {
+  get foo() {
+    return 17;
+  },
+};
+d = Object.getOwnPropertyDescriptor(o, "foo");
 console.log(d);
 // {
 //   configurable: true,
@@ -84,7 +84,7 @@ console.log(d);
 // }
 
 o = { bar: 42 };
-d = Object.getOwnPropertyDescriptor(o, 'bar');
+d = Object.getOwnPropertyDescriptor(o, "bar");
 console.log(d);
 // {
 //   configurable: true,
@@ -93,8 +93,8 @@ console.log(d);
 //   writable: true
 // }
 
-o = { [Symbol.for('baz')]: 73 }
-d = Object.getOwnPropertyDescriptor(o, Symbol.for('baz'));
+o = { [Symbol.for("baz")]: 73 };
+d = Object.getOwnPropertyDescriptor(o, Symbol.for("baz"));
 console.log(d);
 // {
 //   configurable: true,
@@ -104,12 +104,12 @@ console.log(d);
 // }
 
 o = {};
-Object.defineProperty(o, 'qux', {
+Object.defineProperty(o, "qux", {
   value: 8675309,
   writable: false,
-  enumerable: false
+  enumerable: false,
 });
-d = Object.getOwnPropertyDescriptor(o, 'qux');
+d = Object.getOwnPropertyDescriptor(o, "qux");
 console.log(d);
 // {
 //   value: 8675309,
@@ -126,10 +126,10 @@ will cause a {{jsxref("TypeError")}}. In ES2015, a non-object first argument wil
 coerced to an object at first.
 
 ```js
-Object.getOwnPropertyDescriptor('foo', 0);
+Object.getOwnPropertyDescriptor("foo", 0);
 // TypeError: "foo" is not an object  // ES5 code
 
-Object.getOwnPropertyDescriptor('foo', 0);
+Object.getOwnPropertyDescriptor("foo", 0);
 // Object returned by ES2015 code: {
 //   configurable: false,
 //   enumerable: true,

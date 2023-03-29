@@ -1,14 +1,6 @@
 ---
 title: "ARIA: composite role"
 slug: Web/Accessibility/ARIA/Roles/composite_role
-tags:
-  - Accessibility
-  - ARIA
-  - roles
-  - Composite Role
-  - Abstract Role
-  - Reference
-  - NeedsContent
 spec-urls: https://w3c.github.io/aria/#composite
 ---
 

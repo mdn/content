@@ -2,18 +2,8 @@
 title: 'XRSystem: devicechange event'
 slug: Web/API/XRSystem/devicechange_event
 page-type: web-api-event
-tags:
-  - API
-  - AR
-  - Augmented Reality
-  - Reference
-  - Virtual Reality
-  - WebXR
-  - WebXR Device API
-  - XR
-  - XRSystem
-  - devicechange
-  - Experimental
+status:
+  - experimental
 browser-compat: api.XRSystem.devicechange_event
 ---
 
@@ -32,6 +22,8 @@ addEventListener('devicechange', (event) => { })
 
 ondevicechange = (event) => { }
 ```
+
+If the use of WebXR has been blocked by an `xr-spatial-tracking` [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy), `devicechange` events will not fire.
 
 ## Event type
 

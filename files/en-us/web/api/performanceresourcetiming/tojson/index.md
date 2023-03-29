@@ -2,11 +2,6 @@
 title: PerformanceResourceTiming.toJSON()
 slug: Web/API/PerformanceResourceTiming/toJSON
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - Web Performance
 browser-compat: api.PerformanceResourceTiming.toJSON
 ---
 
@@ -41,7 +36,7 @@ const observer = new PerformanceObserver((list) => {
   });
 });
 
-observer.observe({ entryTypes: ["resource"] });
+observer.observe({ type: "resource", buffered: true });
 ```
 
 This would log a JSON object like so:

@@ -2,13 +2,8 @@
 title: IdleDetector.screenState
 slug: Web/API/IdleDetector/screenState
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - screenState
-  - IdleDetector
-  - Experimental
+status:
+  - experimental
 browser-compat: api.IdleDetector.screenState
 ---
 
@@ -27,10 +22,10 @@ Either `"locked"` or `"unlocked"` if {{domxref("IdleDetector.start()")}} has bee
 In the following example, the `change` callback prints the status of `userState` and `screenState` to the console.
 
 ```js
-idleDetector.addEventListener('change', () => {
-    const userState = idleDetector.userState;
-    const screenState = idleDetector.screenState;
-    console.log(`Idle change: ${userState}, ${screenState}.`);
+idleDetector.addEventListener("change", () => {
+  const userState = idleDetector.userState;
+  const screenState = idleDetector.screenState;
+  console.log(`Idle change: ${userState}, ${screenState}.`);
 });
 ```
 

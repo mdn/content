@@ -2,13 +2,6 @@
 title: ":nth-last-child()"
 slug: Web/CSS/:nth-last-child
 page-type: css-pseudo-class
-tags:
-  - CSS
-  - Layout
-  - Pseudo-class
-  - Reference
-  - Selector
-  - Web
 browser-compat: css.selectors.nth-last-child
 ---
 
@@ -22,8 +15,10 @@ The **`:nth-last-child()`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/doc
 
 The `nth-last-child` pseudo-class is specified with a single argument, which represents the pattern for matching elements, counting from the end.
 
-```
-:nth-last-child( <nth> [ of <complex-selector-list> ]? )
+```css-nolint
+:nth-last-child(<nth> [of <complex-selector-list>]?) {
+  /* ... */
+}
 ```
 
 ### Keyword values
@@ -36,7 +31,14 @@ The `nth-last-child` pseudo-class is specified with a single argument, which rep
 ### Functional notation
 
 - `<An+B>`
-  - : Represents elements whose numeric position in a series of siblings matches the pattern `An+B`, for every positive integer or zero value of `n`. The index of the first element, counting from the end, is `1`. The values `A` and `B` must both be {{cssxref("&lt;integer&gt;")}}s.
+
+  - : Represents elements whose numeric position in a series of siblings matches the pattern `An+B`, for every positive integer or zero value of `n`, where:
+
+    - `A` is an integer step size,
+    - `B` is an integer offset,
+    - `n` is all nonnegative integers, starting from 0.
+
+    It can be read as the `An+B`-th element of a list. The index of the first element, counting from the end, is `1`. The `A` and `B` must both have {{cssxref("&lt;integer&gt;")}} values.
 
 ## Examples
 

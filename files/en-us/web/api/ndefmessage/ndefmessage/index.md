@@ -2,12 +2,8 @@
 title: NDEFMessage()
 slug: Web/API/NDEFMessage/NDEFMessage
 page-type: web-api-constructor
-tags:
-  - API
-  - Constructor
-  - Reference
-  - NDEFMessage
-  - Experimental
+status:
+  - experimental
 browser-compat: api.NDEFMessage.NDEFMessage
 ---
 

@@ -1,19 +1,7 @@
 ---
 title: <input type="datetime-local">
 slug: Web/HTML/Element/input/datetime-local
-tags:
-  - Date
-  - Date and Time
-  - Element
-  - Form input
-  - HTML
-  - HTML forms
-  - Input
-  - Input Element
-  - Input Type
-  - Reference
-  - Time
-  - datetime-local
+page-type: html-element
 browser-compat: html.elements.input.type_datetime-local
 ---
 
@@ -31,57 +19,11 @@ Because of the limited browser support for `datetime-local`, and the variations 
 
 Some browsers may resort to a text-only input element that validates that the results are legitimate date/time values before letting them be delivered to the server, as well, but you shouldn't rely on this behavior since you can't easily predict it.
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <td><strong><a href="#value">Value</a></strong></td>
-      <td>
-        A string representing a date and time (in the
-        local time zone), or empty.
-      </td>
-    </tr>
-    <tr>
-      <td><strong>Events</strong></td>
-      <td>
-        {{domxref("HTMLElement/change_event", "change")}} and
-        {{domxref("HTMLElement/input_event", "input")}}
-      </td>
-    </tr>
-    <tr>
-      <td><strong>Supported common attributes</strong></td>
-      <td>
-        {{htmlattrxref("autocomplete", "input")}},
-        {{htmlattrxref("list", "input")}},
-        {{htmlattrxref("readonly", "input")}}, and
-        {{htmlattrxref("step", "input")}}
-      </td>
-    </tr>
-    <tr>
-      <td><strong>IDL attributes</strong></td>
-      <td>
-        <code>list</code>, <code>value</code>, <code>valueAsNumber</code>.
-      </td>
-    </tr>
-    <tr>
-      <td><strong>DOM interface</strong></td>
-      <td><p>{{domxref("HTMLInputElement")}}</p></td>
-    </tr>
-    <tr>
-      <td><strong>Methods</strong></td>
-      <td>
-        {{domxref("HTMLInputElement.select", "select()")}},
-        {{domxref("HTMLInputElement.stepDown", "stepDown()")}},
-        {{domxref("HTMLInputElement.stepUp", "stepUp()")}}
-      </td>
-    </tr>
-  </tbody>
-</table>
-
 ## Value
 
-A string representing the value of the date entered into the input. The format of the date and time value used by this input type is described in {{SectionOnPage("/en-US/docs/Web/HTML/Date_and_time_formats", "Local date and time strings")}}.
+A string representing the value of the date entered into the input. The format of the date and time value used by this input type is described in [Local date and time strings](/en-US/docs/Web/HTML/Date_and_time_formats#local_date_and_time_strings).
 
-You can set a default value for the input by including a date and time inside the {{htmlattrxref("value", "input")}} attribute, like so:
+You can set a default value for the input by including a date and time inside the [`value`](/en-US/docs/Web/HTML/Element/input#value) attribute, like so:
 
 ```html
 <label for="party">Enter a date and time for your party booking:</label>
@@ -113,19 +55,19 @@ In addition to the attributes common to all {{HTMLElement("input")}} elements, d
 
 ### max
 
-The latest date and time to accept. If the {{htmlattrxref("value", "input")}} entered into the element is later than this timestamp, the element fails [constraint validation](/en-US/docs/Web/Guide/HTML/Constraint_validation). If the value of the `max` attribute isn't a valid string which follows the format `YYYY-MM-DDThh:mm`, then the element has no maximum value.
+The latest date and time to accept. If the [`value`](/en-US/docs/Web/HTML/Element/input#value) entered into the element is later than this timestamp, the element fails [constraint validation](/en-US/docs/Web/HTML/Constraint_validation). If the value of the `max` attribute isn't a valid string which follows the format `YYYY-MM-DDThh:mm`, then the element has no maximum value.
 
 This value must specify a date string later than or equal to the one specified by the `min` attribute.
 
 ### min
 
-The earliest date and time to accept; timestamps earlier than this will cause the element to fail [constraint validation](/en-US/docs/Web/Guide/HTML/Constraint_validation). If the value of the `min` attribute isn't a valid string which follows the format `YYYY-MM-DDThh:mm`, then the element has no minimum value.
+The earliest date and time to accept; timestamps earlier than this will cause the element to fail [constraint validation](/en-US/docs/Web/HTML/Constraint_validation). If the value of the `min` attribute isn't a valid string which follows the format `YYYY-MM-DDThh:mm`, then the element has no minimum value.
 
 This value must specify a date string earlier than or equal to the one specified by the `max` attribute.
 
 ### step
 
-The `step` attribute is a number that specifies the granularity that the value must adhere to, or the special value `any`, which is described below. Only values which are equal to the basis for stepping ([`min`](#min) if specified, {{htmlattrxref("value", "input")}} otherwise, and an appropriate default value if neither of those is provided) are valid.
+The `step` attribute is a number that specifies the granularity that the value must adhere to, or the special value `any`, which is described below. Only values which are equal to the basis for stepping ([`min`](#min) if specified, [`value`](/en-US/docs/Web/HTML/Element/input#value) otherwise, and an appropriate default value if neither of those is provided) are valid.
 
 A string value of `any` means that no stepping is implied, and any value is allowed (barring other constraints, such as [`min`](#min) and [`max`](#max)).
 
@@ -156,7 +98,7 @@ The simplest use of `<input type="datetime-local">` involves a basic `<input>` a
 
 ### Setting maximum and minimum dates and times
 
-You can use the {{htmlattrxref("min", "input")}} and {{htmlattrxref("max", "input")}} attributes to restrict the dates/times that can be chosen by the user. In the following example we are setting a minimum datetime of `2017-06-01T08:30` and a maximum datetime of `2017-06-30T16:30`:
+You can use the [`min`](/en-US/docs/Web/HTML/Element/input#min) and [`max`](/en-US/docs/Web/HTML/Element/input#max) attributes to restrict the dates/times that can be chosen by the user. In the following example we are setting a minimum datetime of `2017-06-01T08:30` and a maximum datetime of `2017-06-30T16:30`:
 
 ```html
 <form>
@@ -177,11 +119,11 @@ The result here is that:
 - Only days in June 2017 can be selected — only the "days" part of the date value will be editable, and dates outside June can't be scrolled to in the datepicker widget.
 - Depending on what browser you are using, you might find that times outside the specified values might not be selectable in the time picker (e.g. Edge), or invalid (see [Validation](#validation)) but still available (e.g. Chrome).
 
-> **Note:** You should be able to use the {{htmlattrxref("step", "input")}} attribute to vary the number of days jumped each time the date is incremented (e.g. maybe you only want to make Saturdays selectable). However, this does not seem to work effectively in any implementation at the time of writing.
+> **Note:** You should be able to use the [`step`](/en-US/docs/Web/HTML/Element/input#step) attribute to vary the number of days jumped each time the date is incremented (e.g. maybe you only want to make Saturdays selectable). However, this does not seem to work effectively in any implementation at the time of writing.
 
 ### Controlling input size
 
-`<input type="datetime-local">` doesn't support form control sizing attributes such as {{htmlattrxref("size", "input")}}. You'll have to resort to [CSS](/en-US/docs/Web/CSS) for customizing the sizes of these elements.
+`<input type="datetime-local">` doesn't support form control sizing attributes such as [`size`](/en-US/docs/Web/HTML/Element/input#size). You'll have to resort to [CSS](/en-US/docs/Web/CSS) for customizing the sizes of these elements.
 
 ### Setting timezones
 
@@ -211,7 +153,7 @@ In either case, the date/time and time zone values would be submitted to the ser
 
 By default, `<input type="datetime-local">` does not apply any validation to entered values. The UI implementations generally don't let you enter anything that isn't a date/time — which is helpful — but a user might still fill in no value and submit, or enter an invalid date and/or time (e.g. the 32nd of April).
 
-You can use {{htmlattrxref("min", "input")}} and {{htmlattrxref("max", "input")}} to restrict the available dates (see [Setting maximum and minimum dates](#setting_maximum_and_minimum_dates)), and you can use the {{htmlattrxref("required", "input")}} attribute to make filling in the date/time mandatory. As a result, supporting browsers will display an error if you try to submit a date that is outside the set bounds, or an empty date field.
+You can use [`min`](/en-US/docs/Web/HTML/Element/input#min) and [`max`](/en-US/docs/Web/HTML/Element/input#max) to restrict the available dates (see [Setting maximum and minimum dates](#setting_maximum_and_minimum_dates)), and you can use the [`required`](/en-US/docs/Web/HTML/Element/input#required) attribute to make filling in the date/time mandatory. As a result, supporting browsers will display an error if you try to submit a date that is outside the set bounds, or an empty date field.
 
 Let's look at an example; here we've set minimum and maximum date/time values, and also made the field required:
 
@@ -283,7 +225,7 @@ The second problem is the most serious; as we mentioned earlier, with a `datetim
 - `MM-DD-YYYY HH:mm` (24 hour clock)
 - etc.
 
-One way around this is to put a {{htmlattrxref("pattern", "input")}} attribute on your `datetime-local` input. Even though the `datetime-local` input doesn't use it, the text input fallback will. For example, try viewing the following demo in a non-supporting browser:
+One way around this is to put a [`pattern`](/en-US/docs/Web/HTML/Element/input#pattern) attribute on your `datetime-local` input. Even though the `datetime-local` input doesn't use it, the text input fallback will. For example, try viewing the following demo in a non-supporting browser:
 
 ```html
 <form>
@@ -607,6 +549,58 @@ daySelect.onchange = () => {
 ```
 
 > **Note:** Remember that some years have 53 weeks in them (see [Weeks per year](https://en.wikipedia.org/wiki/ISO_week_date#Weeks_per_year))! You'll need to take this into consideration when developing production apps.
+
+## Technical summary
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <td><strong><a href="#value">Value</a></strong></td>
+      <td>
+        A string representing a date and time (in the
+        local time zone), or empty.
+      </td>
+    </tr>
+    <tr>
+      <td><strong>Events</strong></td>
+      <td>
+        {{domxref("HTMLElement/change_event", "change")}} and
+        {{domxref("HTMLElement/input_event", "input")}}
+      </td>
+    </tr>
+    <tr>
+      <td><strong>Supported common attributes</strong></td>
+      <td>
+        <a href="/en-US/docs/Web/HTML/Element/input#autocomplete"><code>autocomplete</code></a>,
+        <a href="/en-US/docs/Web/HTML/Element/input#list"><code>list</code></a>,
+        <a href="/en-US/docs/Web/HTML/Element/input#readonly"><code>readonly</code></a>, and
+        <a href="/en-US/docs/Web/HTML/Element/input#step"><code>step</code></a>
+      </td>
+    </tr>
+    <tr>
+      <td><strong>IDL attributes</strong></td>
+      <td>
+        <code>list</code>, <code>value</code>, <code>valueAsNumber</code>.
+      </td>
+    </tr>
+    <tr>
+      <td><strong>DOM interface</strong></td>
+      <td><p>{{domxref("HTMLInputElement")}}</p></td>
+    </tr>
+    <tr>
+      <td><strong>Methods</strong></td>
+      <td>
+        {{domxref("HTMLInputElement.select", "select()")}},
+        {{domxref("HTMLInputElement.stepDown", "stepDown()")}},
+        {{domxref("HTMLInputElement.stepUp", "stepUp()")}}
+      </td>
+    </tr>
+    <tr>
+      <td><strong>Implicit ARIA Role</strong></td>
+      <td><a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"><code>no corresponding role</code></a></td>
+    </tr>
+  </tbody>
+</table>
 
 ## Specifications
 

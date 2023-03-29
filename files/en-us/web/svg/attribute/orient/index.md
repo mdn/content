@@ -1,9 +1,7 @@
 ---
 title: orient
 slug: Web/SVG/Attribute/orient
-tags:
-  - SVG
-  - SVG Attr
+page-type: svg-attribute
 browser-compat: svg.elements.marker.orient
 ---
 

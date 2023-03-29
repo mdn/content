@@ -2,16 +2,8 @@
 title: XRWebGLDepthInformation.texture
 slug: Web/API/XRWebGLDepthInformation/texture
 page-type: web-api-instance-property
-tags:
-  - API
-  - AR
-  - Augmented Reality
-  - Experimental
-  - Property
-  - Reference
-  - VR
-  - WebXR
-  - WebXR Device API
+status:
+  - experimental
 browser-compat: api.XRWebGLDepthInformation.texture
 ---
 

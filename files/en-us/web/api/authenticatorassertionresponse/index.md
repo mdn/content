@@ -2,14 +2,6 @@
 title: AuthenticatorAssertionResponse
 slug: Web/API/AuthenticatorAssertionResponse
 page-type: web-api-interface
-tags:
-  - API
-  - Authentication
-  - AuthenticatorAssertionResponse
-  - Interface
-  - Reference
-  - Web Authentication API
-  - WebAuthn
 browser-compat: api.AuthenticatorAssertionResponse
 ---
 
@@ -25,8 +17,8 @@ This interface inherits from {{domxref("AuthenticatorResponse")}}.
 
 ## Instance properties
 
-- `AuthenticatorAssertionResponse.clientDataJSON` {{securecontext_inline}} {{ReadOnlyInline}}
-  - : The client data for the authentication, such as origin and challenge. The {{domxref("AuthenticatorAttestationResponse.clientDataJSON","clientDataJSON")}} property is inherited from the {{domxref("AuthenticatorResponse")}}.
+_Also inherits properties from its parent, {{domxref("AuthenticatorResponse")}}._
+
 - {{domxref("AuthenticatorAssertionResponse.authenticatorData")}} {{securecontext_inline}} {{ReadOnlyInline}}
   - : An {{jsxref("ArrayBuffer")}} containing information from the authenticator such as the Relying Party ID Hash (rpIdHash), a signature counter, test of user presence and user verification flags, and any extensions processed by the authenticator.
 - {{domxref("AuthenticatorAssertionResponse.signature")}} {{securecontext_inline}} {{ReadOnlyInline}}

@@ -1,12 +1,6 @@
 ---
 title: "ARIA: complementary role"
 slug: Web/Accessibility/ARIA/Roles/complementary_role
-tags:
-  - ARIA
-  - ARIA Role
-  - Reference
-  - complementary role
-  - Accessibility
 spec-urls:
   - https://w3c.github.io/aria/#complementary
   - https://w3c.github.io/aria-practices/#aria_lh_complementary

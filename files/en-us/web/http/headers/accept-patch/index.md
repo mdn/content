@@ -1,9 +1,6 @@
 ---
 title: Accept-Patch
 slug: Web/HTTP/Headers/Accept-Patch
-tags:
-  - HTTP
-  - Reference
 spec-urls: https://www.rfc-editor.org/rfc/rfc5789#section-3.1
 ---
 

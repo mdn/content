@@ -1,17 +1,13 @@
 ---
 title: Function() constructor
 slug: Web/JavaScript/Reference/Global_Objects/Function/Function
-tags:
-  - Constructor
-  - Function
-  - JavaScript
-  - Reference
+page-type: javascript-constructor
 browser-compat: javascript.builtins.Function.Function
 ---
 
 {{JSRef}}
 
-The **`Function()`** constructor creates a new [`Function`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function) object. Calling the constructor directly can create functions dynamically, but suffers from security and similar (but far less significant) performance issues as {{jsxref("Global_Objects/eval", "eval()")}}. However, unlike `eval` (which may have access to the local scope), the `Function` constructor creates functions which execute in the global scope only.
+The **`Function()`** constructor creates {{jsxref("Function")}} objects. Calling the constructor directly can create functions dynamically, but suffers from security and similar (but far less significant) performance issues as {{jsxref("Global_Objects/eval", "eval()")}}. However, unlike `eval` (which may have access to the local scope), the `Function` constructor creates functions which execute in the global scope only.
 
 {{EmbedInteractiveExample("pages/js/function-constructor.html", "shorter")}}
 
@@ -135,10 +131,6 @@ sayHello('world');
 
 ## See also
 
-- {{jsxref("Functions", "Functions and function scope", "", 1)}}
-- {{jsxref("Statements/function", "function")}} statement
-- {{jsxref("Operators/function", "function")}} expression
-- {{jsxref("Statements/function*", "function*")}} statement
-- {{jsxref("Operators/function*", "function*")}} expression
-- {{jsxref("AsyncFunction")}}
-- {{jsxref("GeneratorFunction")}}
+- [`function` declaration](/en-US/docs/Web/JavaScript/Reference/Statements/function)
+- [`function` expression](/en-US/docs/Web/JavaScript/Reference/Operators/function)
+- {{jsxref("Functions", "Functions", "", 1)}}

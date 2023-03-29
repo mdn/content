@@ -1,26 +1,25 @@
 ---
 title: Number.MIN_SAFE_INTEGER
 slug: Web/JavaScript/Reference/Global_Objects/Number/MIN_SAFE_INTEGER
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Number
-  - Property
-  - Polyfill
+page-type: javascript-static-data-property
 browser-compat: javascript.builtins.Number.MIN_SAFE_INTEGER
 ---
 
 {{JSRef}}
 
-The **`Number.MIN_SAFE_INTEGER`** constant represents the minimum safe integer in JavaScript, or -(2<sup>53</sup> - 1).
+The **`Number.MIN_SAFE_INTEGER`** static data property represents the minimum safe integer in JavaScript, or -(2<sup>53</sup> - 1).
 
 To represent integers smaller than this, consider using {{jsxref("BigInt")}}.
 
-{{EmbedInteractiveExample("pages/js/number-min-safe-integer.html")}}{{js_property_attributes(0, 0, 0)}}
+{{EmbedInteractiveExample("pages/js/number-min-safe-integer.html")}}
+
+## Value
+
+`-9007199254740991` (-9,007,199,254,740,991, or about -9 quadrillion).
+
+{{js_property_attributes(0, 0, 0)}}
 
 ## Description
-
-The `MIN_SAFE_INTEGER` constant has a value of `-9007199254740991` (-9,007,199,254,740,991, or about -9 quadrillion).
 
 [Double precision floating point format](https://en.wikipedia.org/wiki/Double_precision_floating-point_format) only has 52 bits to represent the [mantissa](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#number_encoding), so it can only safely represent integers between -(2<sup>53</sup> – 1) and 2<sup>53</sup> – 1. Safe in this context refers to the ability to represent integers exactly and to correctly compare them. For example, `Number.MIN_SAFE_INTEGER - 1 === Number.MIN_SAFE_INTEGER - 2` will evaluate to true, which is mathematically incorrect. See {{jsxref("Number.isSafeInteger()")}} for more information.
 

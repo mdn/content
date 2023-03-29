@@ -2,9 +2,6 @@
 title: Writing style guide
 slug: MDN/Writing_guidelines/Writing_style_guide
 page-type: mdn-writing-guide
-tags:
-  - meta
-  - writing-guide
 ---
 
 {{MDNSidebar}}
@@ -19,7 +16,16 @@ After listing the general writing guidelines, this guide describes the recommend
 
 ## General writing guidelines
 
-The goal is to write pages that include all the information that readers may need for understanding the topic at hand. Following are some recommendations to achieve this.
+The goal is to write pages that include all the information that readers may need for understanding the topic at hand.
+
+The following subsections provide the recommendations to achieve this:
+
+- [Consider your target audience](#consider_your_target_audience)
+- [Consider the three Cs of writing](#consider_the_three_cs_of_writing)
+- [Include relevant examples](#include_relevant_examples)
+- [Provide a descriptive introduction](#provide_a_descriptive_introduction)
+- [Use inclusive language](#use_inclusive_language)
+- [Write with SEO in mind](#write_with_seo_in_mind)
 
 ### Consider your target audience
 
@@ -73,10 +79,10 @@ In a guide or tutorial, the introductory paragraph(s) should inform the reader a
 
 - **Example of an appropriate introduction**: Here we see a much better overview for the `strokeText()` method.
 
-  > The {{domxref("CanvasRenderingContext2D")}} method **`strokeText()`**, part of the [Canvas 2D API](/en-US/docs/Web/API/Canvas_API), strokes—that is, draws the outlines of—the characters of a specified string, anchored at the position indicated by the given X and Y coordinates.
+  > The {{domxref("CanvasRenderingContext2D")}} method **`strokeText()`**, part of the [Canvas 2D API](/en-US/docs/Web/API/Canvas_API), strokes (draws the outlines of) the characters of a specified string, anchored at the position indicated by the given X and Y coordinates.
   > The text is drawn using the context's current {{domxref("CanvasRenderingContext2D.font", "font")}}, and is justified and aligned according to the {{domxref("CanvasRenderingContext2D.textAlign", "textAlign")}}, {{domxref("CanvasRenderingContext2D.textBaseline", "textBaseline")}}, and {{domxref("CanvasRenderingContext2D.direction", "direction")}} properties.
   >
-  > For more details and further examples, see {{SectionOnPage("/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics", "Text")}} in the Learning Area as well as our main article on the subject, [Drawing text](/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_text).
+  > For more details and examples, see the [Text](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics#text) section on the Drawing graphics page as well as our main article on the subject, [Drawing text](/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_text).
 
 ### Use inclusive language
 
@@ -142,11 +148,11 @@ The following checklist is good to keep in mind while writing and reviewing cont
 
   - **Avoid stubs**: Obviously, if the article is a stub or is missing content, add it. We try to avoid outright "stub" pages on MDN web Docs, although they do exist, but there are plenty of pages that are missing large portions of their content.
   - **Review page structure**: Review the page to ensure that it's structured properly for the [type of page](/en-US/docs/MDN/Writing_guidelines/Page_structures/Page_types) it is <!--link to be revised-->. Be sure every section that it should have is present and has appropriate content.
-  - **Ensure completeness**: Review sections to ensure that no information is missing. Ensure that all parameters listed and explained. Ensure that any exceptions are covered — this is a particularly common place where content is missing.
+  - **Ensure completeness**: Review sections to ensure that no information is missing. Ensure that all parameters are listed and explained. Ensure that any exceptions are covered — this is a particularly common place where content is missing.
   - **Ensure all concepts are fully fleshed-out**: It's easy to give a quick explanation of something, but make sure that all the nuances are covered. Are there special cases? Are there any known restrictions that the reader might need to know about?
   - **Add examples**: There should be examples covering all parameters or at least the parameters (or properties, or attributes) that users from the beginner-through-intermediate range are likely to use, as well as any advanced ones that require extra explanation. Each example should be preceded with an overview of what the example will do, what additional knowledge might be needed to understand it, and so forth. After the example (or interspersed among pieces of the example) should be text explaining how the code works. Don't skimp on the details and the handling of errors in examples. Keep in mind that users _will_ copy and paste your example to use in their own projects, and your code _will_ wind up used on production sites! See our [code example guidelines](/en-US/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide) for more useful information. <!--link to be revised-->
   - **Explain use cases**: If there are particularly common use cases for the feature being described, talk about them! Instead of assuming that a user will figure out that the method being documented can be used to solve a common development problem, actually add a section about that use case with an example and text explaining how the example works.
-  - **Add image information**: Include proper {{htmlattrxref("alt", "img")}} text on all images and diagrams. This text, as well as captions on tables and other figures, counts because spiders can't crawl images, and so `alt` text tells search engine crawlers what content the embedded media contains.
+  - **Add image information**: Include proper [`alt`](/en-US/docs/Web/HTML/Element/img#alt) text on all images and diagrams. This text, as well as captions on tables and other figures, counts because spiders can't crawl images, and so `alt` text tells search engine crawlers what content the embedded media contains.
     > **Note:** It is not recommended to include too many keywords or keywords not related to the feature in an attempt to manipulate search engine rankings; this type of behavior is easy to spot and tends to be penalized.
     > Likewise, **do not** add repetitive, unhelpful material or blobs of keywords within the actual page, in an attempt to improve the page's size and search ranking. This does more harm than good, both to content readability and to our search results.
   - **Focus on topic content**: With Google's Hummingbird update in 2013 <!--do we need to retain this-->, there has been an increasing focus on the use of natural language to convey information. This means that it is far better to write content around the topic of the page than a specific keyword. It is highly likely that there will be many keywords you could include for a given topic; in fact, many SEOs compile a list of 5-100 different keywords (varying between short, medium, and long-tail keywords) to include within their article, depending on the length. Doing so will diversify your wording, leading to less repetition.
@@ -155,9 +161,21 @@ The following checklist is good to keep in mind while writing and reviewing cont
 
 Other than writing grammatically correct sentences in English, we recommend you follow these guidelines to keep content consistent across MDN Web Docs.
 
+- [Abbreviations and acronyms](#abbreviations_and_acronyms)
+- [Capitalization](#capitalization)
+- [Contractions](#contractions)
+- [Numbers and numerals](#numbers_and_numerals)
+- [Pluralization](#pluralization)
+- [Apostrophes and quotation marks](#apostrophes_and_quotation_marks)
+- [Commas](#commas)
+- [Hyphens](#hyphens)
+- [Spelling](#spelling)
+- [Terminology](#terminology)
+- [Voice](#voice)
+
 ### Abbreviations and acronyms
 
-An abbreviation is a shortened version of a longer word, while an acronym is a new word created using the first letter of each word from a phrase. This section describes are guidelines for abbreviations and acronyms.
+An abbreviation is a shortened version of a longer word, while an acronym is a new word created using the first letter of each word from a phrase. This section describes guidelines for abbreviations and acronyms.
 
 - **Expansions**: On the first mention of a term on a page, expand acronyms that are likely to be unfamiliar to users. When in doubt, expand it—or better yet, link it to the article or [glossary](/en-US/docs/Glossary) entry describing the technology.
 
@@ -205,11 +223,11 @@ An abbreviation is a shortened version of a longer word, while an acronym is a n
   - **Correct**: CD-ROMs
   - **Incorrect**: CD-ROM's
 
-- **"Versus", "vs.", and "v."**: The contraction "vs." is preferred.
+- **"Versus", "vs.", and "v."**: If using the contraction, "vs." is preferred over "v." and can be used in headings. Elsewhere in text, use the spelled-out form "versus".
 
   - **Correct**: this vs. that
   - **Incorrect**: this v. that
-  - **Incorrect**: this versus that
+  - **Correct**: this versus that
 
 ### Capitalization
 
@@ -222,7 +240,7 @@ Keyboard keys should use sentence-style capitalization, not all-caps capitalizat
 For example, "<kbd>Enter</kbd>" not "<kbd>ENTER</kbd>".
 The only exception is that you can use "<kbd>ESC</kbd>" to abbreviate the "<kbd>Escape</kbd>" key.
 
-Certain words should always be capitalized (such as trademarks which include capital letters), or words derived from the name of a person (unless it's being used within code, and code's syntax requires lower-casing).
+Certain words should always be capitalized, such as trademarks that include capital letters or words that derive from the name of a person (unless the word is being used within code and the code syntax requires lower-casing).
 Some examples include:
 
 - Boolean (named for English mathematician and logician [George Boole](https://en.wikipedia.org/wiki/George_Boole))
@@ -331,21 +349,21 @@ The list below describes some of the common situations where we need to be aware
 
 ### Hyphens
 
-Hyphenated compounds should be used when the last letter of the prefix is a vowel and is the same as the first letter of the root.
+Compound words should be hyphenated only when the last letter of the prefix is a vowel and is the same as the first letter of the root.
 
-- **Correct**: email, re-elect, co-op
-- **Incorrect**: e-mail, reelect, coop
+- **Correct**: re-elect, co-op, email
+- **Incorrect**: reelect, coop, e&#45;mail
 
 ### Spelling
 
 Use American-English spelling.
 
 In general, use the first entry at [Dictionary.com](https://www.dictionary.com/), unless that entry is listed as a variant spelling or as being primarily used in a non-American form of English.
-For example, if you [look up "behaviour"](https://www.dictionary.com/browse/behaviour)(with a additional _u_ added to the American standard form), you find the phrase "Chiefly British" followed by a link to the American standard form, ["behavior"](https://www.dictionary.com/browse/behavior).
-Do not use variant spellings.
+For example, if you [look up "behaviour"](https://www.dictionary.com/browse/behaviour)(with an additional _u_ added to the American standard form), you find the phrase "Chiefly British" followed by a link to the American standard form, ["behavior"](https://www.dictionary.com/browse/behavior).
+Do not use variant spelling.
 
-- **Correct**: localize, behavior
-- **Incorrect**: localise, behaviour
+- **Correct**: localize, behavior, color
+- **Incorrect**: localise, behaviour, colour
 
 ### Terminology
 
@@ -374,13 +392,24 @@ Try to be consistent, though.
 
 This section lists the guidelines to follow for components such as headings, notes, links, and examples that commonly appear on a page.
 
+- [Code examples](#code_examples)
+- [External links](#external_links)
+- [Shortened URLs (shortlinks)](#shortened_urls_shortlinks)
+- [Heading levels](#heading_levels)
+- [Images and other media](#images_and_other_media)
+- [Lists](#lists)
+- [See also section](#see_also_section)
+- [Subpages](#subpages)
+- [Slugs](#slugs)
+- [Titles](#titles)
+
 ### Code examples
 
 A page on MDN Web Docs can contain more than one code example. The following list presents some recommended practices when writing a code example for MDN Web Docs:
 
 - Each piece of example code should include:
   - **Heading**: A short `###` (`<h3>`) heading to describe the scenario being demonstrated through the code example. For example, "Using offset printing" and "Reverting to style in previous layer".
-  - **Description**: A short description preceding the example code that states the specifics of the example to which you want to draw reader's attention. For example, "In the example below, two cascade layers are defined in the CSS, `base` and `special`."
+  - **Description**: A short description preceding the example code that states the specifics of the example to which you want to draw the reader's attention. For example, "In the example below, two cascade layers are defined in the CSS, `base` and `special`."
   - **Result explanation**: An explanation after the example code that describes the result and how the code works.
 - In general, the code example should not only demonstrate the syntax of the feature and how it is used, but also highlight the purpose and situations in which a web developer might want or need to use the feature.
 - If you are working with a large piece of example code, it may make sense to break it up into smaller logical parts so that they can be described individually.
@@ -397,6 +426,7 @@ In general, if you're considering adding an external link, you need to ensure th
 - Broken or outdated links
 - Appearance of endorsement, especially for commercial products or services
 - Attempt to use MDN Web Docs to distribute spam
+- Shortlinks that obfuscate the link destination
 
 > **Note:** Before adding an external link, consider cross-referencing content within MDN Web Docs. Internal links are easier to maintain and make the entirety of MDN Web Docs more valuable to readers.
 
@@ -421,6 +451,14 @@ In general, if you're considering adding an external link, you need to ensure th
 
   Sometimes such links are relevant and appropriate. For example, if you're the editor of a specification and you're contributing to documentation related to that specification, then linking to that specification is expected and acceptable. But you must disclose the relationship between you and the link.
 
+### Shortened URLs (shortlinks)
+
+A URL shortener (such as TinyURL or Bitly) can be great for shortening long links into small, easier-to-remember URLs (also known as "shortlinks"). However, they also obfuscate the destination of the URL. Additionally, with certain shorteners, the destination can be changed after their creation, a feature that could be utilized for malicious purposes.
+
+Do not use links created via third-party (user-generatable) URL shorteners. For example, if `https://myshort.link/foobar` is a short URL generated by a random user and redirects to `https://example.com/somelongURL/details/show?page_id=foobar`, use the longer `example.com` URL.
+
+On the other hand, first-party shorteners that are maintained by the organizations that also maintain the destination URLs are encouraged. `https://bugzil.la` is owned and operated by Mozilla and is a URL shortener that redirects to `https://bugzilla.mozilla.org/`, which is also a Mozilla-owned domain. In this case, use the shorter URL. For example, use `https://bugzil.la/1682349` instead of `https://bugzilla.mozilla.org/show_bug.cgi?id=1682349`.
+
 ### Heading levels
 
 When a new paragraph starts a new section, a header should be added.
@@ -439,7 +477,7 @@ Keep the following dos and don'ts in mind while creating headings for subsection
 
 ### Images and other media
 
-If you include images or other media in on a page, follow these guidelines:
+If you include images or other media on a page, follow these guidelines:
 
 - Make sure the media license allows you to use them. Try to use media that has a very permissive license such as [CC0](https://creativecommons.org/share-your-work/public-domain/cc0/) or at least one that is compatible with our general content license — [Creative Commons Attribution-ShareAlike license](https://creativecommons.org/licenses/by-sa/2.5/) (CC-BY-SA).
 - For images, run them through <https://tinypng.com> or <https://imageoptim.com> to reduce the page weight.
@@ -450,19 +488,28 @@ If you include images or other media in on a page, follow these guidelines:
 
 Lists should be formatted and structured consistently across all pages.
 Individual list items should be written with suitable punctuation, regardless of the list format.
-However, depending on the type of list you are creating, you will want to adjust your writing as described in the sections below. In both the cases, include a lead-in sentence that describes the information in the list.
+However, depending on the type of list you are creating, you will want to adjust your writing as described in the sections below. In both cases, include a lead-in sentence that describes the information in the list.
 
-- **Bulleted lists**: Bulleted lists should be used to group related pieces of concise information. Each item in the list should follow a similar sentence structure. Phrases and sentences in bulleted lists should include standard punctuation. A period must appear at the end of each sentence in a bulleted list, including the item's final sentence, just as would be expected in a paragraph.
+- **Bulleted lists**: Bulleted lists should be used to group related pieces of concise information. Each item in the list should follow a similar sentence structure. Sentences and phrases (i.e., sentence fragments missing a verb or a subject or both) in bulleted lists should include standard punctuation — sentences end with periods, phrases don't.
 
-  This is an example of a correctly structured bulleted list:
+If there are multiple sentences in a list item, a period must appear at the end of each sentence, including the item's final sentence, just as would be expected in a paragraph. This is an example of a correctly structured bulleted list:
 
-  > In this example, we should include:
-  >
-  > - A condition, with a brief explanation.
-  > - A similar condition, with a brief explanation.
-  > - Yet another condition, with some further explanation.
+> In this example, we should include:
+>
+> - A condition, with a brief explanation.
+> - A similar condition, with a brief explanation.
+> - Yet another condition, with some further explanation.
 
-  Notice how the same sentence structure repeats from bullet to bullet. In this example, each bullet point states a condition followed by a comma and a brief explanation, and each item in the list ends with a period.
+Notice how the same sentence structure repeats from bullet to bullet. In this example, each bullet point states a condition followed by a comma and a brief explanation, and each item in the list ends with a period.
+
+If the list items include incomplete sentences, no period is required at the end. For example:
+
+> The following color-related properties will be helpful in this scenario:
+>
+> - propertyA: Sets the background color
+> - propertyB: Adds shadow to text
+
+If one or more list items are complete sentences, use a period after every list item, even if a list item contains three or fewer words. However, as far as possible, follow the same structure for all items in a list; ensure all list items are either complete sentences or phrases.
 
 - **Numbered lists**: Numbered lists are used primarily to enumerate steps in a set of instructions. Because instructions can be complex, clarity is a priority, especially if the text in each list item is lengthy. As with bulleted lists, follow standard punctuation usage. This is an example of a correctly structured numbered list:
 
@@ -478,6 +525,41 @@ However, depending on the type of list you are creating, you will want to adjust
   > We have created a short numbered list that provides instructive steps to produce a numbered list with the correct formatting.
 
   Notice how the items in numbered lists read like short paragraphs. Because numbered lists are routinely used for instructional purposes or to walk someone through an orderly procedure, be sure to keep each item focused: one numbered item per step.
+
+### See also section
+
+Most of the guides, reference pages, and even glossary pages on MDN Web Docs contain a _See also_ section at the end of the article. This is a reference section containing cross-references to related topics within MDN and sometimes links to related external articles. For example, this is the [See also section](/en-US/docs/Web/CSS/@layer#see_also) for the `@layer` page.
+
+In general, present the links in a See also section in a [bulleted list](#lists) format with each item in the list as a phrase. In the [Learn web development](/en-US/docs/Learn) area on MDN, however, the See also section follows the [definition list](/en-US/docs/MDN/Writing_guidelines/Howto/Markdown_in_MDN#definition_lists) format.
+
+To maintain consistency across MDN Web Docs, keep the following guidelines in mind while adding or updating a See also section.
+
+#### Link text
+
+- The link text should be the same as the title of the page or the section being linked to. For example, the link text to this [ARIA](/en-US/docs/Web/Accessibility/ARIA/Attributes) page will be:
+  - **Correct**: [ARIA states and properties](/en-US/docs/Web/Accessibility/ARIA/Attributes)
+- Use sentence casing in the link text even if it is different from the linked page title or section title. It might be that the case used in the page or section title is incorrect. For example, the link text to the [WAI-ARIA Roles](/en-US/docs/Web/Accessibility/ARIA/Roles) page will be:
+  - **Correct**: [WAI-ARIA roles](/en-US/docs/Web/Accessibility/ARIA/Roles)
+- For external links as well, use sentence casing even if the casing on the target article page is different. This is to ensure consistency across MDN Web Docs. Exceptions include names of books.
+- Use the appropriate macro to link to a page as defined in the [Linking to pages in references](/en-US/docs/MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros#linking_to_pages_in_references) section. The use of macro will add code formatting to the keyword in the link text, as shown in the previous example.
+- No article ("A", "An", "The") is needed at the beginning of the link list item. No punctuation is required after a link text because it will invariably be a term or a phrase.
+  - **Correct**: {{cssxref("revert-layer")}}
+  - **Incorrect**: The {{cssxref("revert-layer")}} keyword.
+
+#### Descriptive text
+
+- Keep the descriptive text surrounding the link minimal. In case of a description, add it after the link text and a colon. Word the description as a phrase with no ending punctuation. Keep all linked text at the beginning to aid in scanning the list of links.
+  - **Correct**: {{cssxref(":checked")}}, {{cssxref(":indeterminate")}}: CSS selectors for styling checkboxes
+- Don't use the conjunction "and" before the last item in the series.
+  - **Correct**: {{cssxref("background-color")}}, {{cssxref("border-color")}}, {{cssxref("color")}}, {{cssxref("caret-color")}}, {{cssxref("column-rule-color")}}, {{cssxref("outline-color")}}, {{cssxref("text-decoration-color")}}, {{cssxref("text-emphasis-color")}}, {{cssxref("text-shadow")}}: Other color-related properties
+- After an external link and the source website, mention the date or year when the article was published within parentheses. Specify date using the format "January 1, 1900". The publication date not only helps to inform the readers about the relevance of the linked content but also helps authors to review links that are very old. For example, to link to the [Top-level await](https://v8.dev/features/top-level-await) external article, the reference will be:
+  - [Top-level await](https://v8.dev/features/top-level-await) on v8.dev (October 8, 2019)
+
+#### Order of links
+
+- For cross-referencing within MDN, list the links to reference pages first and then the links to the related guide, and tutorial pages.
+- If the list is a mix of internal and external links, list the internal links first and then the external ones.
+- Within each group of internal and external links, follow alphabetical or simple-to-advanced order, whatever makes more sense for the context.
 
 ### Subpages
 
@@ -529,28 +611,25 @@ Keep the following guidelines in mind when writing titles:
   - **Don't begin with article**: Avoid starting titles with articles "a", "an", or "the".
   - **Add lead-in information**: After a title, add some introductory text to explain what will be covered in the section.
 
-## See also
+## Further reading
 
 ### Preferred style guides
 
-If you have questions about usage and style not covered here, we recommend referring to the [Microsoft Writing Style Guide](https://docs.microsoft.com/style-guide/welcome/)—or, failing that, the [Chicago Manual of Style](https://www.amazon.com/Chicago-Manual-Style-16th/dp/0226104206).
+If you have questions about usage and style not covered here, we recommend referring to the [Microsoft Writing Style Guide](https://docs.microsoft.com/style-guide/welcome/) or the [Chicago Manual of Style](https://www.chicagomanualofstyle.org).
 An [unofficial crib sheet for the Chicago Manual of Style](https://faculty.cascadia.edu/cma/HIST148/cmscrib.pdf) is available online.
 
 ### Preferred dictionary
 
-For questions of spelling, please refer to [Dictionary.com](https://www.dictionary.com/).
+For questions about spelling, refer to [Dictionary.com](https://www.dictionary.com/).
 The spelling checker for this site uses American English.
-Please do not use variant spellings (e.g., use _color_ rather than _colour_).
-
-We will be expanding the guide over time, so if you have specific questions that aren't covered in this document, [please get in touch](/en-US/docs/MDN/Community/Contributing/Getting_started#step_4_ask_for_help), so we know what should be added.
 
 ### Language, grammar, and spelling
 
 If you're interested in improving your writing and editing skills, you may find the following resources to be helpful.
 
-- [On Writing Well](https://www.amazon.com/Writing-Well-30th-Anniversary-Nonfiction/dp/0060891548), by William Zinsser (Amazon link)
-- [Style: The Basics of Clarity and Grace](https://www.amazon.com/Style-Basics-Clarity-Grace-4th/dp/0205830765/), by Joseph Williams and Gregory Colomb (Amazon link)
-- [Common Errors in English](https://brians.wsu.edu/common-errors-in-english-usage/)
-- [English Grammar FAQ](https://www-personal.umich.edu/~jlawler/aue.html) (alt.usage.english)
-- [Merriam-Webster's Concise Dictionary of English Usage](https://www.amazon.com/Merriam-Websters-Concise-Dictionary-English-Usage/dp/B004L2KNI2) (Amazon link): Scholarly but user-friendly, evidence-based advice; very good for non-native speakers, especially for preposition usage.
-- [English Language and Usage StackExchange](https://english.stackexchange.com/): Question and answer site for English language usage.
+- [Common errors in English usage](https://brians.wsu.edu/common-errors-in-english-usage/) on brians.wsu.edu
+- [English grammar FAQ](https://www-personal.umich.edu/~jlawler/aue.html) on alt-usage-english.org
+- [English language and usage](https://english.stackexchange.com/) on english.stackexchange.com: Question and answer site for English language usage
+- [Merriam-Webster's Concise Dictionary of English Usage](https://www.google.com/books/edition/Merriam_Webster_s_Dictionary_of_English/UDIjAQAAIAAJ) on google.com/books (published 2002): Scholarly but user-friendly, evidence-based advice; very good for non-native speakers, especially for preposition usage
+- [On Writing Well](https://www.harpercollins.com/products/on-writing-well-william-zinsser) by William Zinsser on harpercollins.com (published 2016)
+- [Style: Lessons in Clarity and Grace](https://www.google.ca/books/edition/Style/QjskvgEACAAJ) by Joseph Williams and Gregory Colomb on google.com/books (published 2019)

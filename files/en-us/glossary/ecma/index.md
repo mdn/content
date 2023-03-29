@@ -1,9 +1,7 @@
 ---
 title: ECMA
 slug: Glossary/ECMA
-tags:
-  - Stub
-  - WebMechanics
+page-type: glossary-definition
 ---
 
 **Ecma International** (formally _European Computer Manufacturers Association_) is a non-profit organization that develops standards in computer hardware, communications, and programming languages.

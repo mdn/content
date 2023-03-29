@@ -2,13 +2,6 @@
 title: ShadowRoot.host
 slug: Web/API/ShadowRoot/host
 page-type: web-api-instance-property
-tags:
-  - API
-  - Host
-  - Property
-  - Reference
-  - ShadowRoot
-  - shadow dom
 browser-compat: api.ShadowRoot.host
 ---
 
@@ -25,7 +18,7 @@ A DOM {{domxref('Element')}}.
 ## Examples
 
 ```js
-let customElem = document.querySelector('my-shadow-dom-element');
+let customElem = document.querySelector("my-shadow-dom-element");
 let shadow = customElem.shadowRoot;
 
 // ...

@@ -1,10 +1,7 @@
 ---
 title: markerWidth
 slug: Web/SVG/Attribute/markerWidth
-tags:
-  - NeedsExample
-  - SVG
-  - SVG Attribute
+page-type: svg-attribute
 browser-compat: svg.elements.marker.markerWidth
 ---
 

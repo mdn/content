@@ -1,15 +1,7 @@
 ---
 title: for await...of
 slug: Web/JavaScript/Reference/Statements/for-await...of
-tags:
-  - Iterate
-  - Iteration
-  - JavaScript
-  - Language feature
-  - Reference
-  - Statement
-  - asynchronous
-  - await
+page-type: javascript-statement
 browser-compat: javascript.statements.for_await_of
 ---
 
@@ -18,8 +10,6 @@ browser-compat: javascript.statements.for_await_of
 The **`for await...of`** statement creates a loop iterating over [async iterable objects](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_async_iterator_and_async_iterable_protocols) as well as [sync iterables](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterable_protocol). This statement can only be used in contexts where [`await`](/en-US/docs/Web/JavaScript/Reference/Operators/await) can be used, which includes inside an [async function](/en-US/docs/Web/JavaScript/Reference/Statements/async_function) body and in a [module](/en-US/docs/Web/JavaScript/Guide/Modules).
 
 {{EmbedInteractiveExample("pages/js/statement-forawaitof.html", "taller")}}
-
-> **Note:** `for await...of` doesn't work with async iterators that are not async iterables.
 
 ## Syntax
 

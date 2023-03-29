@@ -1,10 +1,7 @@
 ---
 title: flood-opacity
 slug: Web/SVG/Attribute/flood-opacity
-tags:
-  - SVG
-  - SVG Attribute
-  - SVG Filter
+page-type: svg-attribute
 browser-compat: svg.attributes.presentation.flood-opacity
 ---
 

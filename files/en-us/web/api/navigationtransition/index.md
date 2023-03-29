@@ -2,18 +2,8 @@
 title: NavigationTransition
 slug: Web/API/NavigationTransition
 page-type: web-api-interface
-tags:
-  - API
-  - Experimental
-  - History
-  - Interface
-  - Landing
-  - Navigate
-  - NavigationTransition
-  - Navigation API
-  - Reference
-  - Scroll
-  - Traversal
+status:
+  - experimental
 browser-compat: api.NavigationTransition
 ---
 

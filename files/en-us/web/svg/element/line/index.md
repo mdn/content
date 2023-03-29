@@ -1,11 +1,7 @@
 ---
 title: <line>
 slug: Web/SVG/Element/line
-tags:
-  - Element
-  - Reference
-  - SVG
-  - SVG Graphics
+page-type: svg-element
 browser-compat: svg.elements.line
 ---
 

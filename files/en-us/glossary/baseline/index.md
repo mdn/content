@@ -1,11 +1,7 @@
 ---
 title: Baseline
-slug: Glossary/baseline
-tags:
-  - CSS
-  - SVG
-  - alignment
-  - typography
+slug: Glossary/Baseline
+page-type: glossary-definition
 ---
 
 The **baseline** is a term used in European and West Asian typography meaning an imaginary line upon which the characters of a font rest.

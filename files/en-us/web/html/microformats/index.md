@@ -1,15 +1,7 @@
 ---
 title: Microformats
 slug: Web/HTML/microformats
-tags:
-  - Composing
-  - HTML
-  - Microformats
-  - NeedsContent
-  - NeedsMarkupWork
-  - Reference
-  - SEO
-  - Search
+page-type: guide
 ---
 
 {{HTMLSidebar}}

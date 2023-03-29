@@ -1,14 +1,7 @@
 ---
 title: Date
 slug: Web/JavaScript/Reference/Global_Objects/Date
-tags:
-  - Class
-  - Date
-  - Epoch
-  - JavaScript
-  - Time
-  - Unix Epoch
-  - timeStamp
+page-type: javascript-class
 browser-compat: javascript.builtins.Date
 ---
 
@@ -53,6 +46,13 @@ In addition to methods to read and alter individual components of the local date
 
 - {{jsxref("Date.UTC()")}}
   - : Accepts the same parameters as the longest form of the constructor (i.e. 2 to 7) and returns the number of milliseconds since January 1, 1970, 00:00:00 UTC, with leap seconds ignored.
+
+## Instance properties
+
+These properties are defined on `Date.prototype` and shared by all `Date` instances.
+
+- {{jsxref("Object/constructor", "Date.prototype.constructor")}}
+  - : The constructor function that created the instance object. For `Date` instances, the initial value is the {{jsxref("Date/Date", "Date")}} constructor.
 
 ## Instance methods
 
@@ -132,8 +132,6 @@ In addition to methods to read and alter individual components of the local date
   - : Converts a date to a string following the ISO 8601 Extended Format.
 - {{jsxref("Date.prototype.toJSON()")}}
   - : Returns a string representing the {{jsxref("Date")}} using {{jsxref("Date.prototype.toISOString()", "toISOString()")}}. Intended for use by {{jsxref("JSON.stringify()")}}.
-- {{jsxref("Date.prototype.toGMTString()")}} {{Deprecated_Inline}}
-  - : Returns a string representing the {{jsxref("Date")}} based on the GMT (UTC) time zone. Use {{jsxref("Date.prototype.toUTCString()", "toUTCString()")}} instead.
 - {{jsxref("Date.prototype.toLocaleDateString()")}}
   - : Returns a string with a locality sensitive representation of the date portion of this date based on system settings.
 - {{jsxref("Date.prototype.toLocaleString()")}}
@@ -175,7 +173,6 @@ date.toDateString(); // Tue May 12 2020
 date.toTimeString(); // 18:50:21 GMT-0500 (Central Daylight Time)
 date.toISOString(); // 2020-05-12T23:50:21.817Z
 date.toUTCString(); // Tue, 12 May 2020 23:50:21 GMT
-date.toGMTString(); // Tue, 12 May 2020 23:50:21 GMT
 date.toJSON(); // 2020-05-12T23:50:21.817Z
 date.toLocaleString(); // 5/12/2020, 6:50:21 PM
 date.toLocaleDateString(); // 5/12/2020

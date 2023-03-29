@@ -2,13 +2,6 @@
 title: MIDIMessageEvent
 slug: Web/API/MIDIMessageEvent
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - MIDI
-  - MIDIMessageEvent
-  - Reference
-  - Web MIDI API
 browser-compat: api.MIDIMessageEvent
 ---
 
@@ -41,8 +34,10 @@ The following example prints all MIDI messages to the console.
 ```js
 navigator.requestMIDIAccess().then((midiAccess) => {
   Array.from(midiAccess.inputs).forEach((input) => {
-    input[1].onmidimessage = (msg) => { console.log(msg); }
-  })
+    input[1].onmidimessage = (msg) => {
+      console.log(msg);
+    };
+  });
 });
 ```
 

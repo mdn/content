@@ -1,14 +1,7 @@
 ---
 title: Array.prototype.some()
 slug: Web/JavaScript/Reference/Global_Objects/Array/some
-tags:
-  - Array
-  - ECMAScript 5
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - Polyfill
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.Array.some
 ---
 

@@ -2,16 +2,8 @@
 title: USBDevice.usbVersionMajor
 slug: Web/API/USBDevice/usbVersionMajor
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - USB
-  - USBDevice
-  - WebUSB
-  - WebUSB API
-  - usbVersionMajor
-  - Experimental
+status:
+  - experimental
 browser-compat: api.USBDevice.usbVersionMajor
 ---
 

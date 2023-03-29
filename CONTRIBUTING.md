@@ -4,25 +4,25 @@ Thanks for taking the time to contribute to [MDN Web Docs](https://developer.moz
 
 This document covers project setup steps along with a set of guidelines for contributing to MDN Web Docs content.
 Everyone participating in this project is expected to follow our [Code of Conduct](CODE_OF_CONDUCT.md).
-If you want to jump right in, see [Getting started on MDN][] for an overview of how to join, and the [Contribute page][] on MDN for a filtered list of tasks.
+If you want to jump right in, see [Getting started with MDN Web Docs][] for an overview of how to join, and the [Contribute page][] on MDN for a filtered list of tasks.
 
 ## Getting started
 
 Before contributing, make sure you're familiar with the project guidelines and conventions:
 
-- [MDN guidelines][] - This page covers everything from how and what we write to general project guidelines.
+- [Writing guidelines][] - This page covers everything from how and what we write to general project guidelines.
 - [Writing style guide][] - This covers the language and style we use and how we write and format code examples.
-- [Guide to writing Markdown for MDN][] - Which Markdown features we support and custom extensions we've added.
+- [How to write in Markdown][] - This covers the Markdown features we support on MDN and custom extensions we've added.
 
 ### Prerequisite knowledge
 
 We expect contributors to MDN to have some knowledge of web technologies before working on content.
 We've put together relevant resources to get up to speed on specific topics before contributing:
 
-- **Open source:** If you're new to open source projects, see the [open source etiquette][] page.
-- **Git and GitHub:** If you are unfamiliar with these, [GitHub for complete beginners][] is a good primer.
+- **Open source:** If you're new to open source projects, see the [Open source etiquette][] page.
+- **Git and GitHub:** If you are unfamiliar with these, see the section [Getting ready to contribute][] to get pointers on where to start.
 - **Web technologies:** HTML, CSS, JavaScript, and more are covered in our [Learn web development][] tutorials.
-- **MDN repository:** To find out where everything lives, see [Where is everything on MDN?][].
+- **MDN repositories:** To find out where everything lives in various MDN repositories, see our [MDN Web Docs repositories][] page.
 
 ### Documentation conventions
 
@@ -42,19 +42,13 @@ Each document's `index.md` starts with front-matter, which is written in [YAML](
 The YAML is read by the MDN build system and is used to read the metadata of a document.
 
 The front-matter must be the first thing in the file and must take the form of valid YAML set between triple-dashed lines (`---`).
-Front-matter defines the document's `title`, `slug`, and optional [`tags`][].
+Front-matter defines the document's `title` and `slug`, and may also include `status`, `browser-compat` and specification information.
 Here's an example of front-matter from the [JavaScript page](files/en-us/web/javascript/index.md):
 
 ```yaml
 ---
 title: JavaScript
 slug: Web/JavaScript
-tags:
-  - JavaScript
-  - Landing
-  - Landing page
-  - Learn
-  - "l10n:priority"
 ---
 ```
 
@@ -70,7 +64,7 @@ If you've created a new GitHub account and want to know what to do next, you can
 - [GitHub CLI](https://docs.github.com/en/github-cli/github-cli/about-github-cli) - A command-line wrapper for interacting with GitHub.
 - [`git`](https://git-scm.com/downloads) - You can use `git` from the command line to interact with GitHub.
   The examples in this document assume you are using this method.
-  The [`git` cheatsheet](https://training.github.com/) and [Using Git](https://docs.github.com/en/get-started) guide are useful resources for beginners and advanced users.
+  The [`git` cheat sheet](https://training.github.com/) and [Using Git](https://docs.github.com/en/get-started) guide are useful resources for beginners and advanced users.
 
 ### Simple changes
 
@@ -88,14 +82,13 @@ After you have made changes to your branch, the goal is to open a [pull request]
 A pull request represents the work you want to be reviewed, approved, and merged into the `main` branch of the MDN repository.
 See the [Creating a pull request](#creating-a-pull-request) for more details on creating and handling pull requests successfully.
 
-If you're not certain of the changes that you want to make, get in touch with us!
-You can [chat with us](https://chat.mozilla.org/#/room/#mdn:mozilla.org) or [file an issue](https://github.com/mdn/content/issues).
+If you're not certain of the changes that you want to make, [get in touch with us][]!
 
-> **Tip:** You can click the **Source on GitHub** link at the bottom of an MDN page to jump directly to the page source on GitHub.
+> **Note:** You can click the **View the source on GitHub** link at the bottom of an MDN page to jump directly to the page source on GitHub.
 
 ### Forking and cloning the repository
 
-If you want make changes to more than one file, the GitHub UI is not very efficient because you have to make separate pull requests for each file you want to change.
+If you want to make changes to more than one file, the GitHub UI is not very efficient because you have to make separate pull requests for each file you want to change.
 Instead of using the GitHub UI, you need to use `git` or a client like the [GitHub Desktop](https://docs.github.com/en/get-started/using-github/github-desktop) or [GitHub CLI](https://docs.github.com/en/github-cli/github-cli/about-github-cli).
 The following examples are using plain `git` commands, but you can use any of the clients mentioned above to perform the equivalent actions.
 
@@ -191,7 +184,8 @@ To edit files and track your changes, you should use feature branches.
 Feature branches are created from the `main` branch and should be named after the feature you're working on.
 This will make it easier to submit a pull request for your changes.
 
-> **Note:** Open a discussion if your changes will contain large, complex or structural changes.
+> **Note**
+> Open a discussion if your changes will contain large, complex or structural changes.
 > Ask for feedback before embarking on large tasks.
 
 1. When the server is running, make the changes you would like to make to one or more `index.md` files.
@@ -226,20 +220,21 @@ There are a few things to keep in mind:
 - Documents must be written in Markdown.
 - A document is represented by an `index.md` file.
 - If you're creating a new CSS document for a property called `foo`, create a new folder `files/en-us/web/css/foo/` and put the Markdown file in this folder (`files/en-us/web/css/foo/index.md`).
-- A document's `index.md` file must start with front-matter that defines the `title`, `slug`, and optional [`tags`][].
+- A document's `index.md` file must start with front-matter that defines the `title`, `slug`, and, most of the time, `page-type`.
   You might find it helpful to refer to the front-matter within a similar document's `index.md`.
 
 ### Moving documents
 
-Moving one or more documents, or an entire tree of documents is made easier due to a special command that takes care of the details:
+Moving one or more documents (or an entire tree of documents) is made easier with the `yarn content move` command.
+This command moves the file and fixes up redirects automatically. You can use this command as shown below:
 
 ```sh
 yarn content move <from-slug> <to-slug> [locale]
 ```
 
-> **Important:** `yarn content move` automatically adds redirect rules for moved content.
-> Don't edit the `_redirects.txt` file manually!
-> If you need to add a redirect without moving a file, talk to us about it.
+> **Warning**
+> Don't edit the `_redirects.txt` file manually.
+> See the [Redirecting a document](#redirecting-a-document) section for more information.
 
 To use `yarn content move`, provide the slug of the document you'd like to move (e.g., `Learn/Accessibility`), and the slug of its new location (e.g., `Learn/A11y`).
 The locale of the existing document can be provided as an optional third argument (this defaults to `en-US`).
@@ -277,22 +272,28 @@ Let's say you want to move the entire `/en-US/Learn/Accessibility` tree to `/en-
 
 ### Deleting a document
 
-Deleting documents or a tree of documents is easy with the help of the `yarn content delete` command:
+Similar to moving files, you can delete documents or a tree of documents easily by using the `yarn content delete` command.
+
+> **Warning:**
+> Don't delete files or directories from the repository manually; the `yarn content delete` command handles the necessary changes such as updating the `_wikihistory.json` file.
+
+You can use this command as shown below:
 
 ```sh
-yarn content delete <document-slug> [locale]
+yarn content delete <document-slug> [locale] --redirect <redirect-slug-or-url>
 ```
 
-> **Important:** you need to use the `yarn content delete` command to delete MDN documents.
-> Don't delete directories from the repo, as `yarn content delete` also handles other necessary changes such as updating the `_wikihistory.json` file.
-
 To use `yarn content delete`, provide the slug of the document you'd like to delete (e.g., `Learn/Accessibility`), and the locale as an optional second argument (this defaults to `en-US`).
-If the document has child documents (i.e. it represents a document tree), you must specify the `-r, --recursive` option, or
-the command will fail.
+If the slug of the page you wish to delete contains special characters, include it in quotes. For example:
 
-Say you want to delete the entire `/en-US/Learn/Accessibility` tree:
+```sh
+yarn content delete "Glossary/Round_Trip_Time_(RTT)" --redirect Glossary/Latency
+```
 
-1. Starting from a fresh branch:
+If the document has child documents (i.e., the document represents a document tree), you must specify the `-r, --recursive` option, else the command will fail.
+Say you want to delete the entire `/en-US/Learn/Accessibility` tree and redirect all the deleted documents to `Web/Accessibility`. You can perform the following steps:
+
+1. Start from a fresh branch.
 
    ```sh
    cd ~/repos/content
@@ -304,21 +305,17 @@ Say you want to delete the entire `/en-US/Learn/Accessibility` tree:
    git checkout -b deleting-a11y
    ```
 
-2. Perform the delete:
+2. Run the `yarn content delete` command and redirect all deleted documents.
 
    ```sh
-   yarn content delete Learn/Accessibility --recursive
+   yarn content delete Learn/Accessibility --recursive --redirect Web/Accessibility
    ```
 
-   > If the slug of the page you wish to delete contains special characters, include it in quotes:
-   >
-   > ```sh
-   > yarn content delete "Mozilla/Add-ons/WebExtensions/Debugging_(before_Firefox_50)"
-   > ```
+   > **Warning:**
+   > You should always add a redirect when deleting documents. If there is no obvious alternative, redirect to the nearest "parent" of the deleted topic.
+   > If you forget to redirect when deleting a file, you can do it afterwards. See the [Redirecting a document](#redirecting-a-document) section.
 
-3. [Add a redirect](#redirecting-a-document) (if needed).
-
-4. Commit all of the changes and push your branch to the remote:
+3. Commit all of the changes and push your branch to the remote.
 
    ```sh
    git add .
@@ -330,9 +327,9 @@ Say you want to delete the entire `/en-US/Learn/Accessibility` tree:
 ### Redirecting a document
 
 If you are [moving a document](#moving-one-or-more-documents) as shown above you don't need to create a redirect.
-However, you may need to when [deleting a document](#deleting-a-document) or otherwise fixing up a broken link.
+However, you may need to do so when fixing a broken link or after [deleting a document](#deleting-a-document) without the `--redirect` flag.
 
-The best way to do this is to use the `yarn content add-redirect` command:
+You may do this by using the `yarn content add-redirect` command.
 
 1. Start a fresh branch to work in:
 
@@ -346,7 +343,7 @@ The best way to do this is to use the `yarn content add-redirect` command:
    git checkout -b deleting-a11y
    ```
 
-2. Add a redirect. The target page can a page on MDN or an external URL.
+2. Add a redirect with `yarn content add-redirect`. The target page can be a page on MDN or an external URL:
 
    ```sh
    yarn content add-redirect /en-US/path/of/deleted/page /en-US/path/of/target/page
@@ -381,7 +378,7 @@ During reviews, you may be asked to answer questions about your work or to make 
 This is a common part of the process of making changes in open source projects.
 There are some important rules of etiquette to remember that will help during the review stage.
 
-1. **Check tests** that are run automatically run for pull requests (see [.github/workflows](.github/workflows)).
+1. **Check tests** that are run automatically for pull requests (see [.github/workflows](.github/workflows)).
    If one or more of these tests fail, you must fix them.
    Your pull request will not be approved and merged if there are failing tests.
    If you don't know how to resolve the underlying issue(s), you can ask for help.
@@ -403,14 +400,14 @@ There are some important rules of etiquette to remember that will help during th
 When contributing to the content you agree to license your contributions
 according to [our license](LICENSE.md).
 
-[`tags`]: https://developer.mozilla.org/en-US/docs/MDN/Writing_guidelines/Howto/Tag
 [contribute page]: https://developer.mozilla.org/en-US/docs/MDN/Contribute
-[getting started on mdn]: https://developer.mozilla.org/en-US/docs/MDN/Community/Contributing/Getting_started
-[github for complete beginners]: https://developer.mozilla.org/en-US/docs/MDN/Contribute/GitHub_beginners
-[guide to writing markdown for mdn]: https://developer.mozilla.org/en-US/docs/MDN/Writing_guidelines/Howto/Markdown_in_MDN
+[getting started with mdn web docs]: https://developer.mozilla.org/en-US/docs/MDN/Community/Contributing/Getting_started
+[getting ready to contribute]: https://developer.mozilla.org/en-US/docs/MDN/Community/Contributing/Getting_started#getting_ready_to_contribute
+[how to write in markdown]: https://developer.mozilla.org/en-US/docs/MDN/Writing_guidelines/Howto/Markdown_in_MDN
 [javascript landing page]: https://developer.mozilla.org/en-US/docs/Web/JavaScript
 [learn web development]: https://developer.mozilla.org/en-US/docs/Learn
-[mdn guidelines]: https://developer.mozilla.org/en-US/docs/MDN/Guidelines
-[open source etiquette]: https://developer.mozilla.org/en-US/docs/MDN/Contribute/Open_source_etiquette
-[where is everything on mdn?]: https://developer.mozilla.org/en-US/docs/MDN/Contribute/Where_is_everything
-[writing style guide]: https://developer.mozilla.org/en-US/docs/MDN/Guidelines/Writing_style_guide
+[writing guidelines]: https://developer.mozilla.org/en-US/docs/MDN/Writing_guidelines
+[open source etiquette]: https://developer.mozilla.org/en-US/docs/MDN/Community/Open_source_etiquette
+[mdn web docs repositories]: https://developer.mozilla.org/en-US/docs/MDN/Community/Contributing/Our_repositories
+[writing style guide]: https://developer.mozilla.org/en-US/docs/MDN/Writing_guidelines/Writing_style_guide
+[get in touch with us]: https://developer.mozilla.org/en-US/docs/MDN/Community/Communication_channels

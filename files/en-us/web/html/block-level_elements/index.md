@@ -1,12 +1,7 @@
 ---
 title: Block-level elements
 slug: Web/HTML/Block-level_elements
-tags:
-  - Beginner
-  - Development
-  - Guide
-  - HTML
-  - Web
+page-type: guide
 ---
 
 {{HTMLSidebar}}
@@ -55,7 +50,11 @@ There are a couple of key differences between block-level elements and inline el
 - Default formatting
   - : By default, block-level elements begin on new lines, but inline elements can start anywhere in a line.
 
-The distinction of block-level vs. inline elements was used in HTML specifications up to 4.01. Later, this binary distinction is replaced with a more complex set of [content categories](/en-US/docs/Web/Guide/HTML/Content_categories). While the "inline" category roughly corresponds to the category of [phrasing content](/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content), the "block-level" category doesn't directly correspond to any HTML content category, but _"block-level" and "inline" elements combined_ correspond to the [flow content](/en-US/docs/Web/Guide/HTML/Content_categories#flow_content) in HTML. There are also additional categories, e.g. [interactive content](/en-US/docs/Web/Guide/HTML/Content_categories#interactive_content).
+The distinction of block-level vs. inline elements was used in HTML specifications up to 4.01. Later, this binary distinction is replaced with a more complex set of [content categories](/en-US/docs/Web/HTML/Content_categories). While the "inline" category roughly corresponds to the category of [phrasing content](/en-US/docs/Web/HTML/Content_categories#phrasing_content), the "block-level" category doesn't directly correspond to any HTML content category, but _"block-level" and "inline" elements combined_ correspond to the [flow content](/en-US/docs/Web/HTML/Content_categories#flow_content) in HTML. There are also additional categories, e.g. [interactive content](/en-US/docs/Web/HTML/Content_categories#interactive_content).
+
+### Changing element levels
+
+You can change the _visual presentation_ of an element using the CSS {{cssxref("display")}} property. For example, by changing the value of `display` from `inline` to `block`, the browser will render the inline element as a block box rather than an inline box, and vice versa. However, doing this will not change the _category_ and the _content model_ of the element. For example, even if the `display` of the `span` element is changed to `block`, it should still only contain [phrasing content](/en-US/docs/Web/HTML/Content_categories#phrasing_content).
 
 ## Elements
 
@@ -91,7 +90,7 @@ The following is a complete list of all HTML "block-level" elements (although "b
   - : Section or page footer.
 - {{ HTMLElement("form") }}
   - : Input form.
-- {{ HTMLElement("h1") }}, {{ HTMLElement("h2") }}, {{ HTMLElement("h3") }}, {{ HTMLElement("h4") }}, {{ HTMLElement("h5") }}, {{ HTMLElement("h6") }}
+- {{ HTMLElement("Heading_Elements", "h1")}}, {{ HTMLElement("Heading_Elements", "h2")}}, {{ HTMLElement("Heading_Elements", "h3")}}, {{ HTMLElement("Heading_Elements", "h4")}}, {{ HTMLElement("Heading_Elements", "h5")}}, {{ HTMLElement("Heading_Elements", "h6")}}
   - : Heading levels 1-6.
 - {{ HTMLElement("header") }}
   - : Section or page header.

@@ -1,14 +1,9 @@
 ---
 title: RegExp.rightContext ($')
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/rightContext
-tags:
-  - JavaScript
-  - Deprecated
-  - Property
-  - Read-only
-  - Reference
-  - RegExp
-  - Regular Expressions
+page-type: javascript-static-accessor-property
+status:
+  - deprecated
 browser-compat: javascript.builtins.RegExp.rightContext
 ---
 

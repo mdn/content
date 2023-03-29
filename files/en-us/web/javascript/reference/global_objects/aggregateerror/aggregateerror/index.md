@@ -1,17 +1,13 @@
 ---
 title: AggregateError() constructor
 slug: Web/JavaScript/Reference/Global_Objects/AggregateError/AggregateError
-tags:
-  - Constructor
-  - JavaScript
-  - Reference
-  - Polyfill
+page-type: javascript-constructor
 browser-compat: javascript.builtins.AggregateError.AggregateError
 ---
 
 {{JSRef}}
 
-The **`AggregateError()`** constructor creates an error for several errors that need to be wrapped in a single error.
+The **`AggregateError()`** constructor creates {{jsxref("AggregateError")}} objects.
 
 ## Syntax
 

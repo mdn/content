@@ -1,9 +1,7 @@
 ---
 title: dur
 slug: Web/SVG/Attribute/dur
-tags:
-  - SVG
-  - SVG Attribute
+page-type: svg-attribute
 browser-compat: svg.elements.animate.dur
 ---
 
@@ -14,7 +12,6 @@ The **`dur`** attribute indicates the simple duration of an animation.
 You can use this attribute with the following SVG elements:
 
 - {{SVGElement("animate")}}
-- {{SVGElement("animateColor")}}
 - {{SVGElement("animateMotion")}}
 - {{SVGElement("animateTransform")}}
 - {{SVGElement("set")}}

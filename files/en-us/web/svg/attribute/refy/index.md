@@ -1,9 +1,7 @@
 ---
 title: refY
 slug: Web/SVG/Attribute/refY
-tags:
-  - NeedsBrowserCompatibility
-  - NeedsExample
+page-type: svg-attribute
 spec-urls:
   - https://svgwg.org/svg2-draft/painting.html#MarkerElementRefYAttribute
   - https://svgwg.org/svg2-draft/struct.html#SymbolElementRefYAttribute

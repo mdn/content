@@ -2,13 +2,6 @@
 title: PushSubscription.options
 slug: Web/API/PushSubscription/options
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Push API
-  - PushManager
-  - Reference
-  - Service Worker
 browser-compat: api.PushSubscription.options
 ---
 

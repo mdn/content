@@ -2,12 +2,6 @@
 title: text-combine-upright
 slug: Web/CSS/text-combine-upright
 page-type: css-property
-tags:
-  - CSS
-  - CSS Property
-  - CSS Writing Modes
-  - Reference
-  - recipe:css-property
 browser-compat: css.properties.text-combine-upright
 ---
 
@@ -27,8 +21,8 @@ text-combine-upright: none;
 text-combine-upright: all;
 
 /* Digits values */
-text-combine-upright: digits;     /* fits 2 consecutive digits horizontally inside vertical text */
-text-combine-upright: digits 4;   /* fits up to 4 consecutive digits horizontally inside vertical text */
+text-combine-upright: digits; /* fits 2 consecutive digits horizontally inside vertical text */
+text-combine-upright: digits 4; /* fits up to 4 consecutive digits horizontally inside vertical text */
 
 /* Global values */
 text-combine-upright: inherit;

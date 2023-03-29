@@ -1,9 +1,6 @@
 ---
 title: Firefox 8 for developers
 slug: Mozilla/Firefox/Releases/8
-tags:
-  - Firefox
-  - Firefox 8
 ---
 
 {{FirefoxSidebar}}
@@ -14,14 +11,14 @@ Firefox 8 was released on November 8, 2011. This article provides information bo
 
 ### HTML
 
-- The {{ domxref("HTMLImageElement") }} `crossOrigin` property has been added and the {{ htmlattrxref("crossorigin", "img") }} attribute has been added to the {{ HTMLElement("img") }} element. (see {{ bug("664299") }})
-- The {{ domxref("HTMLSelectElement","","add()") }} method now supports either an item or index of an item that the new item should be inserted before. Previously it only supported an item. (see {{ bug("666200") }})
+- The {{ domxref("HTMLImageElement") }} `crossOrigin` property has been added and the [`crossorigin`](/en-US/docs/Web/HTML/Element/img#crossorigin) attribute has been added to the {{ HTMLElement("img") }} element. (see [Firefox bug 664299](https://bugzil.la/664299))
+- The {{ domxref("HTMLSelectElement","","add()") }} method now supports either an item or index of an item that the new item should be inserted before. Previously it only supported an item. (see [Firefox bug 666200](https://bugzil.la/666200))
 - The `HTMLIsIndexElement` constructor has been removed. No elements have implemented this interface since before Firefox 4.
-- The HTML5 "context menu" feature (`contextmenu` attribute), which lets you add custom element specific items to native context menu, is now supported (the implementation is still experimental awaiting changes in the specification; see {{ bug("617528") }}).
+- The HTML5 "context menu" feature (`contextmenu` attribute), which lets you add custom element specific items to native context menu, is now supported (the implementation is still experimental awaiting changes in the specification; see [Firefox bug 617528](https://bugzil.la/617528)).
 - Support for the {{ domxref("HTMLElement.accessKeyLabel") }} attribute has been added to all elements.
 - The {{ HTMLElement("input") }} and {{ HTMLElement("textarea") }} elements now support the `selectionDirection` attribute, and their `setSelectionRange()` methods have been updated to support optionally specifying a direction.
 - Most elements now get a focus ring drawn around them if they've been made focusable by using the `tabindex` attribute and the user then focuses the element.
-- In a set of nested {{ HTMLElement("label") }} elements click events do no longer trigger multiple \<label> elements, which caused Firefox to stop responding in the past (see {{ bug(646157) }}).
+- In a set of nested {{ HTMLElement("label") }} elements click events do no longer trigger multiple \<label> elements, which caused Firefox to stop responding in the past (see [Firefox bug 646157](https://bugzil.la/646157)).
 
 ### DOM
 
@@ -52,7 +49,7 @@ Firefox 8 was released on November 8, 2011. This article provides information bo
 - Hyphenation rules have been added for many new languages when using {{ cssxref("hyphens") }}.
 - Handling of {{ cssxref("background-size") }} has been revised to more closely match the specification.
 - In the past, {{ cssxref("text-decoration") }} in quirks mode had line thickness and position adjusted on descendant text to match the descendant. Now standards mode and quirks mode rendering are more similar.
-- Horizontal positioning for elements has been brought more in line with the specification in many cases. Documentation for this is forthcoming, but for now, see {{ bug(682780) }}, comment 23 for details.
+- Horizontal positioning for elements has been brought more in line with the specification in many cases. Documentation for this is forthcoming, but for now, see [Firefox bug 682780](https://bugzil.la/682780), comment 23 for details.
 - [SVG images are now scaled properly](/en-US/docs/Web/CSS/Scaling_of_SVG_backgrounds) when used as background images.
 
 ### Network
@@ -70,7 +67,7 @@ Firefox 8 was released on November 8, 2011. This article provides information bo
 - The WebSocket constructor now supports an array of protocols as well as a single protocol string.
 - Mixed content is not allowed with WebSockets; that is, you can no longer open a connection to a non-secure WebSocket server from secure content.
 - Connection errors with WebSockets now trigger the `onerror` handler.
-- [WebSocket](/en-US/docs/Web/API/WebSockets_API) API has been updated to the latest draft of the specification (see {{ bug("674890") }}, {{ bug("674527") }}, and {{ bug("674716") }}).
+- [WebSocket](/en-US/docs/Web/API/WebSockets_API) API has been updated to the latest draft of the specification (see [Firefox bug 674890](https://bugzil.la/674890), [Firefox bug 674527](https://bugzil.la/674527), and [Firefox bug 674716](https://bugzil.la/674716)).
 - The deflate-stream extension to WebSockets has been disabled; it has been deprecated, and was breaking compatibility with some sites.
 
 ### WebGL
@@ -105,7 +102,7 @@ See [Updating add-ons for Firefox 8](/en-US/docs/Mozilla/Firefox/Updating_add-on
 
 ### Workers
 
-It is no longer possible to access XPCOM objects from ChromeWorkers. XPConnect has been disabled in worker contexts as of {{ bug(649537) }}.
+It is no longer possible to access XPCOM objects from ChromeWorkers. XPConnect has been disabled in worker contexts as of [Firefox bug 649537](https://bugzil.la/649537).
 
 ### XUL
 
@@ -157,7 +154,7 @@ The `nsIWorkerFactory` interface has been removed as well. Workers can still be 
 
 - When a window is minimized, un-minimized, or switches between full screen and windowed mode, it receives a `sizemodechange` event.
 - You can now [use the `extensions.autoDisableScopes` preference](https://extensionworkshop.com/documentation/publish/signing-and-distribution-overview/#preventing_automatic_install_from_specific_locations) to disable automatic installation of add-ons from specific add-on install locations.
-- The new {{ domxref("document.mozSyntheticDocument") }} property on {{ domxref("Document") }} objects lets you determine whether a document is synthetic (that is, something like a standalone image, video, or audio file) rather than a full, standard DOM document. This can be useful, for example, if you want to present different user interface in this situation (such as adding contextual items differently depending on this case).
+- The new `mozSyntheticDocument` property on {{ domxref("Document") }} objects lets you determine whether a document is synthetic (that is, something like a standalone image, video, or audio file) rather than a full, standard DOM document. This can be useful, for example, if you want to present different user interface in this situation (such as adding contextual items differently depending on this case).
 - You can now specify a filter when opening `about:config`; for example, "about:config?filter=sessionstore" will show only session storage related preferences.
 
 ## See also

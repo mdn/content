@@ -1,15 +1,7 @@
 ---
 title: Array.prototype.at()
 slug: Web/JavaScript/Reference/Global_Objects/Array/at
-tags:
-  - Array
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - polyfill
-  - at
-  - Polyfill
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.Array.at
 ---
 
@@ -116,3 +108,4 @@ console.log(Array.prototype.at.call(arrayLike, -1)); // "b"
 - {{jsxref("Array.prototype.find()")}} – return a value based on a given test.
 - {{jsxref("Array.prototype.includes()")}} – test whether a value exists in the array.
 - {{jsxref("Array.prototype.indexOf()")}} – return the index of a given element.
+- [Indexed Collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections)

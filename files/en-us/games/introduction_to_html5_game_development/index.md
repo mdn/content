@@ -1,11 +1,6 @@
 ---
 title: Introduction to HTML Game Development
 slug: Games/Introduction_to_HTML5_Game_Development
-tags:
-  - Firefox OS
-  - Games
-  - HTML
-  - Mobile
 ---
 
 {{GamesSidebar}}

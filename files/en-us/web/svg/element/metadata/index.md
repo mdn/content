@@ -1,10 +1,7 @@
 ---
 title: <metadata>
 slug: Web/SVG/Element/metadata
-tags:
-  - Element
-  - SVG
-  - SVG Descriptive
+page-type: svg-element
 browser-compat: svg.elements.metadata
 ---
 

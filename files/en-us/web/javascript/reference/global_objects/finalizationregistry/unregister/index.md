@@ -1,18 +1,13 @@
 ---
 title: FinalizationRegistry.prototype.unregister()
 slug: Web/JavaScript/Reference/Global_Objects/FinalizationRegistry/unregister
-tags:
-  - FinalizationRegistry
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.FinalizationRegistry.unregister
 ---
 
 {{JSRef}}
 
-The `unregister()` method unregisters a target object from a
+The **`unregister()`** method unregisters a target object from a
 {{jsxref("FinalizationRegistry")}} instance.
 
 ## Syntax

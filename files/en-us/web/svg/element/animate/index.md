@@ -1,10 +1,7 @@
 ---
 title: <animate>
 slug: Web/SVG/Element/animate
-tags:
-  - Element
-  - SVG
-  - SVG Animation
+page-type: svg-element
 browser-compat: svg.elements.animate
 ---
 

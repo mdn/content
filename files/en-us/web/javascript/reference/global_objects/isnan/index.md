@@ -1,10 +1,7 @@
 ---
 title: isNaN()
 slug: Web/JavaScript/Reference/Global_Objects/isNaN
-tags:
-  - JavaScript
-  - Method
-  - Reference
+page-type: javascript-function
 browser-compat: javascript.builtins.isNaN
 ---
 
@@ -40,6 +37,8 @@ This behavior of `isNaN()` for non-numeric arguments can be confusing! For examp
 {{jsxref("Number.isNaN()")}} is a more reliable way to test whether a value is the number value `NaN` or not. Alternatively, the expression `x !== x` can be used, and neither of the solutions is subject to the false positives that make the global `isNaN()` unreliable. To test if a value is a number, use [`typeof x === "number"`](/en-US/docs/Web/JavaScript/Reference/Operators/typeof).
 
 The `isNaN()` function answers the question "is the input functionally equivalent to {{jsxref("NaN")}} when used in a number context". If `isNaN(x)` returns `false`, you can use `x` in an arithmetic expression as if it's a valid number that's not `NaN`. If `isNaN(x)` returns `true`, `x` will get coerced to `NaN` and make most arithmetic expressions return `NaN` (because `NaN` propagates). You can use this, for example, to test whether an argument to a function is arithmetically processable (usable "like" a number), and handle values that are not number-like by throwing an error, providing a default value, etc. This way, you can have a function that makes use of the full versatility JavaScript provides by implicitly converting values depending on context.
+
+> **Note:** The [`+` operator](/en-US/docs/Web/JavaScript/Reference/Operators/Addition) performs both number addition and string concatenation. Therefore, even if `isNaN()` returns `false` for both operands, the `+` operator may still return a string, because it's not used as an arithmetic operator. For example, `isNaN("1")` returns `false`, but `"1" + 1` returns `"11"`. To be sure that you are working with numbers, [coerce the value to a number](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#number_coercion) and use {{jsxref("Number.isNaN()")}} to test the result.
 
 ## Examples
 

@@ -1,16 +1,7 @@
 ---
 title: <input type="number">
 slug: Web/HTML/Element/input/number
-tags:
-  - Element
-  - Forms
-  - HTML
-  - HTML forms
-  - Input
-  - Input Element
-  - Input Type
-  - Number
-  - Reference
+page-type: html-element
 browser-compat: html.elements.input.type_number
 ---
 
@@ -24,50 +15,9 @@ The browser may opt to provide stepper arrows to let the user increase and decre
 
 On browsers that don't support inputs of type `number`, a `number` input falls back to type `text`.
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <td><strong><a href="#value">Value</a></strong></td>
-      <td>A {{jsxref("Number")}} representing a number, or empty</td>
-    </tr>
-    <tr>
-      <td><strong>Events</strong></td>
-      <td>
-        {{domxref("HTMLElement/change_event", "change")}} and
-        {{domxref("HTMLElement/input_event", "input")}}
-      </td>
-    </tr>
-    <tr>
-      <td><strong>Supported common attributes</strong></td>
-      <td>
-        {{htmlattrxref("autocomplete", "input")}},
-        {{htmlattrxref("list", "input")}},
-        {{htmlattrxref("placeholder", "input")}},
-        {{htmlattrxref("readonly", "input")}}
-      </td>
-    </tr>
-    <tr>
-      <td><strong>IDL attributes</strong></td>
-      <td><code>list</code>, <code>value</code>, <code>valueAsNumber</code></td>
-    </tr>
-    <tr>
-      <td><strong>DOM interface</strong></td>
-      <td><p>{{domxref("HTMLInputElement")}}</p></td>
-    </tr>
-    <tr>
-      <td><strong>Methods</strong></td>
-      <td>
-        {{domxref("HTMLInputElement.select", "select()")}},
-        {{domxref("HTMLInputElement.stepUp", "stepUp()")}},
-        {{domxref("HTMLInputElement.stepDown", "stepDown()")}}
-      </td>
-    </tr>
-  </tbody>
-</table>
-
 ## Value
 
-A number representing the value of the number entered into the input. You can set a default value for the input by including a number inside the {{htmlattrxref("value", "input")}} attribute, like so:
+A number representing the value of the number entered into the input. You can set a default value for the input by including a number inside the [`value`](/en-US/docs/Web/HTML/Element/input#value) attribute, like so:
 
 ```html
 <input id="number" type="number" value="42" />
@@ -81,17 +31,17 @@ In addition to the attributes commonly supported by all {{HTMLElement("input")}}
 
 ### `list`
 
-The values of the list attribute is the {{domxref("Element.id", "id")}} of a {{HTMLElement("datalist")}} element located in the same document. The {{HTMLElement("datalist")}} provides a list of predefined values to suggest to the user for this input. Any values in the list that are not compatible with the {{htmlattrxref("type", "input")}} are not included in the suggested options. The values provided are suggestions, not requirements: users can select from this predefined list or provide a different value.
+The values of the list attribute is the {{domxref("Element.id", "id")}} of a {{HTMLElement("datalist")}} element located in the same document. The {{HTMLElement("datalist")}} provides a list of predefined values to suggest to the user for this input. Any values in the list that are not compatible with the [`type`](/en-US/docs/Web/HTML/Element/input#type) are not included in the suggested options. The values provided are suggestions, not requirements: users can select from this predefined list or provide a different value.
 
 ### `max`
 
-The maximum value to accept for this input. If the {{htmlattrxref("value", "input")}} entered into the element exceeds this, the element fails [constraint validation](/en-US/docs/Web/Guide/HTML/Constraint_validation). If the value of the `max` attribute isn't a number, then the element has no maximum value.
+The maximum value to accept for this input. If the [`value`](/en-US/docs/Web/HTML/Element/input#value) entered into the element exceeds this, the element fails [constraint validation](/en-US/docs/Web/HTML/Constraint_validation). If the value of the `max` attribute isn't a number, then the element has no maximum value.
 
 This value must be greater than or equal to the value of the `min` attribute.
 
 ### `min`
 
-The minimum value to accept for this input. If the {{htmlattrxref("value", "input")}} of the element is less than this, the element fails [constraint validation](/en-US/docs/Web/Guide/HTML/Constraint_validation). If a value is specified for `min` that isn't a valid number, the input has no minimum value.
+The minimum value to accept for this input. If the [`value`](/en-US/docs/Web/HTML/Element/input#value) of the element is less than this, the element fails [constraint validation](/en-US/docs/Web/HTML/Constraint_validation). If a value is specified for `min` that isn't a valid number, the input has no minimum value.
 
 This value must be less than or equal to the value of the `max` attribute.
 
@@ -101,7 +51,7 @@ The `placeholder` attribute is a string that provides a brief hint to the user a
 
 If the control's content has one directionality ({{Glossary("LTR")}} or {{Glossary("RTL")}}) but needs to present the placeholder in the opposite directionality, you can use Unicode bidirectional algorithm formatting characters to override directionality within the placeholder; see [How to use Unicode controls for bidi text](https://www.w3.org/International/questions/qa-bidi-unicode-controls) for more information.
 
-> **Note:** Avoid using the `placeholder` attribute if you can. It is not as semantically useful as other ways to explain your form, and can cause unexpected technical issues with your content. See {{SectionOnPage("/en-US/docs/Web/HTML/Element/input", "Labels and placeholders")}} for more information.
+> **Note:** Avoid using the `placeholder` attribute if you can. It is not as semantically useful as other ways to explain your form, and can cause unexpected technical issues with your content. See [`<input>` labels](/en-US/docs/Web/HTML/Element/input#labels) for more information.
 
 ### `readonly`
 
@@ -111,7 +61,7 @@ A Boolean attribute which, if present, means this field cannot be edited by the 
 
 ### `step`
 
-The `step` attribute is a number that specifies the granularity that the value must adhere to, or the special value `any`, which is described below. Only values which are equal to the basis for stepping ([`min`](#min) if specified, {{htmlattrxref("value", "input")}} otherwise, and an appropriate default value if neither of those is provided) are valid.
+The `step` attribute is a number that specifies the granularity that the value must adhere to, or the special value `any`, which is described below. Only values which are equal to the basis for stepping ([`min`](#min) if specified, [`value`](/en-US/docs/Web/HTML/Element/input#value) otherwise, and an appropriate default value if neither of those is provided) are valid.
 
 A string value of `any` means that no stepping is implied, and any value is allowed (barring other constraints, such as [`min`](#min) and [`max`](#max)).
 
@@ -121,7 +71,7 @@ The default stepping value for `number` inputs is `1`, allowing only integers to
 
 ## Using number inputs
 
-The `number` input type should only be used for incremental numbers, especially when spinbutton incrementing and decrementing are helpful to user experience. The `number` input type is not appropriate for values that happen to only consist of numbers but aren't strictly speaking a number, such as postal codes in many countries or credit card numbers. For non-numeric inputs, consider using a different input type, such as [`<input type="tel">`](/en-US/docs/Web/HTML/Element/input/tel) or other {{HTMLElement('input')}} type with the {{HTMLAttrXref('inputmode')}} attribute:
+The `number` input type should only be used for incremental numbers, especially when spinbutton incrementing and decrementing are helpful to user experience. The `number` input type is not appropriate for values that happen to only consist of numbers but aren't strictly speaking a number, such as postal codes in many countries or credit card numbers. For non-numeric inputs, consider using a different input type, such as [`<input type="tel">`](/en-US/docs/Web/HTML/Element/input/tel) or other {{HTMLElement('input')}} type with the [`inputmode`](/en-US/docs/Web/HTML/Global_attributes#inputmode) attribute:
 
 ```html
 <input type="text" inputmode="numeric" pattern="\d*" />
@@ -129,7 +79,7 @@ The `number` input type should only be used for incremental numbers, especially 
 
 `<input type="number">` elements can help simplify your work when building the user interface and logic for entering numbers into a form. When you create a number input with the proper `type` value, `number`, you get automatic validation that the entered text is a number, and usually a set of up and down buttons to step the value up and down.
 
-> **Warning:** Logically, you should not be able to enter characters inside a number input other than numbers. Some browsers allow invalid characters, others do not; see {{bug(1398528)}}.
+> **Warning:** Logically, you should not be able to enter characters inside a number input other than numbers. Some browsers allow invalid characters, others do not; see [Firefox bug 1398528](https://bugzil.la/1398528).
 
 > **Note:** A user can tinker with your HTML behind the scenes, so your site _must not_ use simple client-side validation for any security purposes. You _must_ verify on the server side any transaction in which the provided value may have security implications of any kind.
 
@@ -146,7 +96,7 @@ In its most basic form, a number input can be implemented like this:
 
 {{EmbedLiveSample('A_simple_number_input', 600, 40)}}
 
-A number input is considered valid when empty and when a single number is entered, but is otherwise invalid. If the {{htmlattrxref("required", "input")}} attribute is used, the input is no longer considered valid when empty.
+A number input is considered valid when empty and when a single number is entered, but is otherwise invalid. If the [`required`](/en-US/docs/Web/HTML/Element/input#required) attribute is used, the input is no longer considered valid when empty.
 
 > **Note:** Any number is an acceptable value, as long as it is a [valid floating point number](https://html.spec.whatwg.org/multipage/infrastructure.html#valid-floating-point-number) (that is, not [NaN](/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN) or [Infinity](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Infinity)).
 
@@ -164,7 +114,7 @@ Here, we have an `number` input with the placeholder "`Multiple of 10`". Note ho
 
 ### Controlling step size
 
-By default, the up and down buttons provided for you to step the number up and down will step the value up and down by 1. You can change this by providing a {{htmlattrxref("step", "input")}} attribute, which takes as its value a number specifying the step amount. Our above example contains a placeholder saying that the value should be a multiple of 10, so it makes sense to add a `step` value of `10`:
+By default, the up and down buttons provided for you to step the number up and down will step the value up and down by 1. You can change this by providing a [`step`](/en-US/docs/Web/HTML/Element/input#step) attribute, which takes as its value a number specifying the step amount. Our above example contains a placeholder saying that the value should be a multiple of 10, so it makes sense to add a `step` value of `10`:
 
 ```html
 <input type="number" placeholder="multiple of 10" step="10" />
@@ -176,7 +126,7 @@ In this example, you should find that the up and down step arrows will increase 
 
 ### Specifying minimum and maximum values
 
-You can use the {{htmlattrxref("min", "input")}} and {{htmlattrxref("max", "input")}} attributes to specify a minimum and maximum value that the field can have. For example, let's give our example a minimum of `0`, and a maximum of `100`:
+You can use the [`min`](/en-US/docs/Web/HTML/Element/input#min) and [`max`](/en-US/docs/Web/HTML/Element/input#max) attributes to specify a minimum and maximum value that the field can have. For example, let's give our example a minimum of `0`, and a maximum of `100`:
 
 ```html
 <input type="number" placeholder="multiple of 10" step="10" min="0" max="100" />
@@ -200,9 +150,9 @@ See that this example allows any value between `0.0` and `10.0`, with decimals t
 
 ### Controlling input size
 
-{{HTMLElement("input")}} elements of type `number` don't support form sizing attributes such as {{htmlattrxref("size", "input")}}. You'll have to resort to [CSS](/en-US/docs/Web/CSS) to change the size of these controls.
+{{HTMLElement("input")}} elements of type `number` don't support form sizing attributes such as [`size`](/en-US/docs/Web/HTML/Element/input#size). You'll have to resort to [CSS](/en-US/docs/Web/CSS) to change the size of these controls.
 
-For example, to adjust the width of the input to be only as wide as is needed to enter a three-digit number, we can change our HTML to include an {{htmlattrxref("id")}} and to shorten our placeholder since the field will be too narrow for the text we have been using so far:
+For example, to adjust the width of the input to be only as wide as is needed to enter a three-digit number, we can change our HTML to include an [`id`](/en-US/docs/Web/HTML/Global_attributes#id) and to shorten our placeholder since the field will be too narrow for the text we have been using so far:
 
 ```html
 <input
@@ -228,7 +178,7 @@ The result looks like this:
 
 ### Offering suggested values
 
-You can provide a list of default options from which the user can select by specifying the {{htmlattrxref("list", "input")}} attribute, which contains as its value the {{htmlattrxref("id")}} of a {{HTMLElement("datalist")}}, which in turn contains one {{HTMLElement("option")}} element per suggested value. Each `option`'s `value` is the corresponding suggested value for the number entry box.
+You can provide a list of default options from which the user can select by specifying the [`list`](/en-US/docs/Web/HTML/Element/input#list) attribute, which contains as its value the [`id`](/en-US/docs/Web/HTML/Global_attributes#id) of a {{HTMLElement("datalist")}}, which in turn contains one {{HTMLElement("option")}} element per suggested value. Each `option`'s `value` is the corresponding suggested value for the number entry box.
 
 ```html
 <input id="ticketNum" type="number" name="ticketNum" list="defaultNumbers" />
@@ -250,9 +200,9 @@ You can provide a list of default options from which the user can select by spec
 We have already mentioned a number of validation features of `number` inputs, but let's review them now:
 
 - `<input type="number">` elements automatically invalidate any entry that isn't a number (or empty, unless `required` is specified).
-- You can use the {{htmlattrxref("required", "input")}} attribute to make an empty entry invalid. (In other words, the input _must_ be filled in.)
-- You can use the {{htmlattrxref("step", "input")}} attribute to constrain valid values to a certain set of steps (e.g., multiples of 10).
-- You can use the {{htmlattrxref("min", "input")}} and {{htmlattrxref("max", "input")}} attributes to constrain valid values to lower and upper bounds.
+- You can use the [`required`](/en-US/docs/Web/HTML/Element/input#required) attribute to make an empty entry invalid. (In other words, the input _must_ be filled in.)
+- You can use the [`step`](/en-US/docs/Web/HTML/Element/input#step) attribute to constrain valid values to a certain set of steps (e.g., multiples of 10).
+- You can use the [`min`](/en-US/docs/Web/HTML/Element/input#min) and [`max`](/en-US/docs/Web/HTML/Element/input#max) attributes to constrain valid values to lower and upper bounds.
 
 The following example exhibits all of the above features, as well as using some CSS to display valid and invalid icons, depending on the `input`'s value:
 
@@ -310,13 +260,13 @@ We put it on a separate `<span>` element for added flexibility. Some browsers do
 
 ### Pattern validation
 
-`<input type="number">` elements do not support use of the {{htmlattrxref("pattern", "input")}} attribute for making entered values conform to a specific regex pattern.
+`<input type="number">` elements do not support use of the [`pattern`](/en-US/docs/Web/HTML/Element/input#pattern) attribute for making entered values conform to a specific regex pattern.
 
-The rationale for this is that number inputs won't be valid if they contain anything except numbers, and you can constrain the minimum and maximum number of valid digits using the {{htmlattrxref("min", "input")}} and {{htmlattrxref("max", "input")}} attributes (as explained above).
+The rationale for this is that number inputs won't be valid if they contain anything except numbers, and you can constrain the minimum and maximum number of valid digits using the [`min`](/en-US/docs/Web/HTML/Element/input#min) and [`max`](/en-US/docs/Web/HTML/Element/input#max) attributes (as explained above).
 
 ## Examples
 
-We've already covered the fact that by default, the increment is `1`, and you can use the {{htmlattrxref("step", "input")}} attribute to allow decimal inputs. Let's take a closer look.
+We've already covered the fact that by default, the increment is `1`, and you can use the [`step`](/en-US/docs/Web/HTML/Element/input#step) attribute to allow decimal inputs. Let's take a closer look.
 
 In the following example is a form for entering the user's height. It defaults to accepting a height in meters, but you can click the relevant button to change the form to accept feet and inches instead. The input for the height in meters accepts decimals to two places.
 
@@ -445,6 +395,55 @@ After declaring a few variables, an event listener is added to the `button` to c
 The implicit [role](/en-US/docs/Web/Accessibility/ARIA/Roles) for the `<input type="number">` element is [`spinbutton`](/en-US/docs/Web/Accessibility/ARIA/Roles/spinbutton_role). If spinbutton is not an important feature for your form control, consider _not_ using `type="number"`. Instead, use [`inputmode="numeric"`](/en-US/docs/Web/HTML/Global_attributes/inputmode) along with a [`pattern`](/en-US/docs/Web/HTML/Attributes/pattern) attribute that limits the characters to numbers and associated characters. With `<input type="number">`, there is a risk of users accidentally incrementing a number when they're trying to do something else. Additionally, if users try to enter something that's not a number, there's no explicit feedback about what they're doing wrong.
 
 Also consider using the [`autocomplete`](/en-US/docs/Web/HTML/Attributes/autocomplete) attribute to help users complete forms more quickly and with fewer chances of errors. For example, to enable autofill on a zip code field, set `autocomplete="postal-code"`.
+
+## Technical summary
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <td><strong><a href="#value">Value</a></strong></td>
+      <td>A {{jsxref("Number")}} representing a number, or empty</td>
+    </tr>
+    <tr>
+      <td><strong>Events</strong></td>
+      <td>
+        {{domxref("HTMLElement/change_event", "change")}} and
+        {{domxref("HTMLElement/input_event", "input")}}
+      </td>
+    </tr>
+    <tr>
+      <td><strong>Supported common attributes</strong></td>
+      <td>
+         <a href="en-US/docs/Web/HTML/Element/input#autocomplete"><code>autocomplete</code></a>,
+         <a href="en-US/docs/Web/HTML/Element/input#list"><code>list</code></a>,
+         <a href="en-US/docs/Web/HTML/Element/input#placeholder"><code>placeholder</code></a>,
+         <a href="en-US/docs/Web/HTML/Element/input#readonly"><code>readonly</code></a>
+      </td>
+    </tr>
+    <tr>
+      <td><strong>IDL attributes</strong></td>
+      <td><code>list</code>, <code>value</code>, <code>valueAsNumber</code></td>
+    </tr>
+    <tr>
+      <td><strong>DOM interface</strong></td>
+      <td><p>{{domxref("HTMLInputElement")}}</p></td>
+    </tr>
+    <tr>
+      <td><strong>Methods</strong></td>
+      <td>
+        {{domxref("HTMLInputElement.select", "select()")}},
+        {{domxref("HTMLInputElement.stepUp", "stepUp()")}},
+        {{domxref("HTMLInputElement.stepDown", "stepDown()")}}
+      </td>
+    </tr>
+    <tr>
+      <td><strong>Implicit ARIA Role</strong></td>
+      <td>
+        <code><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/spinbutton_role">spinbutton</a></code>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
 ## Specifications
 

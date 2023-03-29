@@ -2,13 +2,6 @@
 title: ServiceWorkerContainer.getRegistrations()
 slug: Web/API/ServiceWorkerContainer/getRegistrations
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - Service Workers
-  - ServiceWorker
-  - ServiceWorkerContainer
 browser-compat: api.ServiceWorkerContainer.getRegistrations
 ---
 
@@ -40,7 +33,8 @@ A {{jsxref("Promise")}} that resolves to an array of
 
 ```js
 navigator.serviceWorker.getRegistrations().then((registrations) => {
-  document.querySelector('#status').textContent = 'ServiceWorkerRegistrations found.';
+  document.querySelector("#status").textContent =
+    "ServiceWorkerRegistrations found.";
 });
 ```
 

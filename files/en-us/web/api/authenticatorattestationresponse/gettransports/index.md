@@ -2,13 +2,6 @@
 title: AuthenticatorAttestationResponse.getTransports()
 slug: Web/API/AuthenticatorAttestationResponse/getTransports
 page-type: web-api-instance-method
-tags:
-  - API
-  - AuthenticatorAttestationResponse
-  - Method
-  - Reference
-  - Web Authentication API
-  - WebAuthn
 browser-compat: api.AuthenticatorAttestationResponse.getTransports
 ---
 

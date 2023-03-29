@@ -1,21 +1,13 @@
 ---
 title: String.fromCodePoint()
 slug: Web/JavaScript/Reference/Global_Objects/String/fromCodePoint
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Reference
-  - String
-  - UTF-32
-  - Unicode
-  - Polyfill
+page-type: javascript-static-method
 browser-compat: javascript.builtins.String.fromCodePoint
 ---
 
 {{JSRef}}
 
-The static **`String.fromCodePoint()`** method returns a string
+The **`String.fromCodePoint()`** static method returns a string
 created by using the specified sequence of code points.
 
 {{EmbedInteractiveExample("pages/js/string-fromcodepoint.html","shorter")}}

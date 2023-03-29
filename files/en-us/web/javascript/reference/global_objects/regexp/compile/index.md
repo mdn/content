@@ -1,14 +1,9 @@
 ---
 title: RegExp.prototype.compile()
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/compile
-tags:
-  - Deprecated
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - RegExp
-  - Regular Expressions
+page-type: javascript-instance-method
+status:
+  - deprecated
 browser-compat: javascript.builtins.RegExp.compile
 ---
 

@@ -1,9 +1,7 @@
 ---
 title: ry
 slug: Web/SVG/Attribute/ry
-tags:
-  - SVG
-  - SVG Attribute
+page-type: svg-attribute
 spec-urls: https://svgwg.org/svg2-draft/geometry.html#RY
 ---
 

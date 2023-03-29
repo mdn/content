@@ -2,24 +2,6 @@
 title: MediaTrackSettings.logicalSurface
 slug: Web/API/MediaTrackSettings/logicalSurface
 page-type: web-api-instance-property
-tags:
-  - API
-  - Capture
-  - Logical Surface
-  - Media
-  - Media Capture and Streaming
-  - Media Capture and Streaming API
-  - MediaTrackSettings
-  - Reference
-  - Screen Capture
-  - Screen Capture API
-  - Sharing
-  - Surface
-  - Video
-  - display
-  - logicalSurface
-  - screen
-  - Property
 browser-compat: api.MediaTrackSettings.logicalSurface
 ---
 

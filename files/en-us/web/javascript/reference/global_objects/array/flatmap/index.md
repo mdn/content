@@ -1,15 +1,7 @@
 ---
 title: Array.prototype.flatMap()
 slug: Web/JavaScript/Reference/Global_Objects/Array/flatMap
-tags:
-  - Array
-  - JavaScript
-  - Map
-  - Method
-  - Prototype
-  - Reference
-  - flatMap
-  - Polyfill
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.Array.flatMap
 ---
 
@@ -200,4 +192,3 @@ console.log(
 - {{jsxref("Array.prototype.map()")}}
 - {{jsxref("Array.prototype.reduce()")}}
 - {{jsxref("Array.prototype.concat()")}}
-- [A polyfill](https://github.com/behnammodi/polyfill/blob/master/array.polyfill.js)

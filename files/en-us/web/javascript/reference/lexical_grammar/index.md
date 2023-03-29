@@ -1,18 +1,13 @@
 ---
 title: Lexical grammar
 slug: Web/JavaScript/Reference/Lexical_grammar
-tags:
-  - Guide
-  - JavaScript
-  - Keyword
-  - Lexical Grammar
-  - Literal
+page-type: guide
 browser-compat: javascript.grammar
 ---
 
 {{JsSidebar("More")}}
 
-This page describes JavaScript's lexical grammar. JavaScript source text is just a sequence of characters — in order for the interpreter to understand it, the string has to be _parsed_ to a more structured representation. The initial step of parsing is called [lexical analysis](https://en.wikipedia.org/wiki/Lexical_analysis), in which the text gets scanned from left to right and is converted into a sequence of individual, atomic input elements. Some input elements are insignificant to the interpreter, and will be stripped after this step — they include [white space](#white_space) and [comments](#comments). The others, including [identifiers](#identfiers), [keywords](#keywords), [literals](#literals), and punctuators (mostly [operators](/en-US/docs/Web/JavaScript/Reference/Operators)), will be used for further syntax analysis. [Line terminators](#line_terminators) and multiline comments are also syntactically insignificant, but they guide the process for [automatic semicolons insertion](#automatic_semicolon_insertion) to make certain invalid token sequences become valid.
+This page describes JavaScript's lexical grammar. JavaScript source text is just a sequence of characters — in order for the interpreter to understand it, the string has to be _parsed_ to a more structured representation. The initial step of parsing is called [lexical analysis](https://en.wikipedia.org/wiki/Lexical_analysis), in which the text gets scanned from left to right and is converted into a sequence of individual, atomic input elements. Some input elements are insignificant to the interpreter, and will be stripped after this step — they include [white space](#white_space) and [comments](#comments). The others, including [identifiers](#identifiers), [keywords](#keywords), [literals](#literals), and punctuators (mostly [operators](/en-US/docs/Web/JavaScript/Reference/Operators)), will be used for further syntax analysis. [Line terminators](#line_terminators) and multiline comments are also syntactically insignificant, but they guide the process for [automatic semicolons insertion](#automatic_semicolon_insertion) to make certain invalid token sequences become valid.
 
 ## Format-control characters
 
@@ -354,7 +349,7 @@ The decimal exponential literal is specified by the following format: `beN`; whe
 
 #### Binary
 
-Binary number syntax uses a leading zero followed by a lowercase or uppercase Latin letter "B" (`0b` or `0B`). If the digits after the `0b` are not 0 or 1, the following {{jsxref("SyntaxError")}} is thrown: "Missing binary digits after 0b".
+Binary number syntax uses a leading zero followed by a lowercase or uppercase Latin letter "B" (`0b` or `0B`). Any character after the `0b` that is not 0 or 1 will terminate the literal sequence.
 
 ```js-nolint
 0b10000000000000000000000000000000 // 2147483648
@@ -364,7 +359,7 @@ Binary number syntax uses a leading zero followed by a lowercase or uppercase La
 
 #### Octal
 
-Octal number syntax uses a leading zero followed by a lowercase or uppercase Latin letter "O" (`0o` or `0O)`. If the digits after the `0o` are outside the range (01234567), the following {{jsxref("SyntaxError")}} is thrown: "Missing octal digits after 0o".
+Octal number syntax uses a leading zero followed by a lowercase or uppercase Latin letter "O" (`0o` or `0O)`. Any character after the `0o` that is outside the range (01234567) will terminate the literal sequence.
 
 ```js-nolint
 0O755 // 493
@@ -373,7 +368,7 @@ Octal number syntax uses a leading zero followed by a lowercase or uppercase Lat
 
 #### Hexadecimal
 
-Hexadecimal number syntax uses a leading zero followed by a lowercase or uppercase Latin letter "X" (`0x` or `0X`). If the digits after 0x are outside the range (0123456789ABCDEF), the following {{jsxref("SyntaxError")}} is thrown: "Identifier starts immediately after numeric literal".
+Hexadecimal number syntax uses a leading zero followed by a lowercase or uppercase Latin letter "X" (`0x` or `0X`). Any character after the `0x` that is outside the range (0123456789ABCDEF) will terminate the literal sequence.
 
 ```js-nolint
 0xFFFFFFFFFFFFFFFFF // 295147905179352830000
@@ -516,7 +511,7 @@ tag`string text ${expression} string text`
 Some [JavaScript statements](/en-US/docs/Web/JavaScript/Reference/Statements)' syntax definitions require semicolons (`;`) at the end. They include:
 
 - [`var`](/en-US/docs/Web/JavaScript/Reference/Statements/var), [`let`](/en-US/docs/Web/JavaScript/Reference/Statements/let), [`const`](/en-US/docs/Web/JavaScript/Reference/Statements/const)
-- Expression statements
+- [Expression statements](/en-US/docs/Web/JavaScript/Reference/Statements/Expression_statement)
 - [`do...while`](/en-US/docs/Web/JavaScript/Reference/Statements/do...while)
 - [`continue`](/en-US/docs/Web/JavaScript/Reference/Statements/continue), [`break`](/en-US/docs/Web/JavaScript/Reference/Statements/break), [`return`](/en-US/docs/Web/JavaScript/Reference/Statements/return), [`throw`](/en-US/docs/Web/JavaScript/Reference/Statements/throw)
 - [`debugger`](/en-US/docs/Web/JavaScript/Reference/Statements/debugger)
@@ -652,12 +647,134 @@ And therefore will be a syntax error around `{`.
 There are the following rules-of-thumb for dealing with ASI, if you want to enforce semicolon-less style:
 
 - Write postfix `++` and `--` on the same line as their operands.
+
+  ```js-nolint example-bad
+  const a = b
+  ++
+  console.log(a) // ReferenceError: Invalid left-hand side expression in prefix operation
+  ```
+
+  ```js-nolint example-good
+  const a = b++
+  console.log(a)
+  ```
+
 - The expressions after `return`, `throw`, or `yield` should be on the same line as the keyword.
+
+  ```js-nolint example-bad
+  function foo() {
+    return
+      1 + 1 // Returns undefined; 1 + 1 is ignored
+  }
+  ```
+
+  ```js-nolint example-good
+  function foo() {
+    return 1 + 1
+  }
+
+  function foo() {
+    return (
+      1 + 1
+    )
+  }
+  ```
+
 - Similarly, the label identifier after `break` or `continue` should be on the same line as the keyword.
+
+  ```js-nolint example-bad
+  outerBlock: {
+    innerBlock: {
+      break
+        outerBlock // SyntaxError: Illegal break statement
+    }
+  }
+  ```
+
+  ```js-nolint example-good
+  outerBlock: {
+    innerBlock: {
+      break outerBlock
+    }
+  }
+  ```
+
 - The `=>` of an arrow function should be on the same line as the end of its parameters.
+
+  ```js-nolint example-bad
+  const foo = (a, b)
+    => a + b
+  ```
+
+  ```js-nolint example-good
+  const foo = (a, b) =>
+    a + b
+  ```
+
 - The `async` of async functions, methods, etc. cannot be directly followed by a line terminator.
+
+  ```js-nolint example-bad
+  async
+  function foo() {}
+  ```
+
+  ```js-nolint example-good
+  async function
+  foo() {}
+  ```
+
 - If a line starts with one of `(`, `[`, `` ` ``, `+`, `-`, `/` (as in regex literals), prefix it with a semicolon, or end the previous line with a semicolon.
+
+  ```js-nolint example-bad
+  // The () may be merged with the previous line as a function call
+  (() => {
+    // ...
+  })()
+
+  // The [ may be merged with the previous line as a property access
+  [1, 2, 3].forEach(console.log)
+
+  // The ` may be merged with the previous line as a tagged template literal
+  `string text ${data}`.match(pattern).forEach(console.log)
+
+  // The + may be merged with the previous line as a binary + expression
+  +a.toString()
+
+  // The - may be merged with the previous line as a binary - expression
+  -a.toString()
+
+  // The / may be merged with the previous line as a division expression
+  /pattern/.exec(str).forEach(console.log)
+  ```
+
+  ```js-nolint example-good
+  ;(() => {
+    // ...
+  })()
+  ;[1, 2, 3].forEach(console.log)
+  ;`string text ${data}`.match(pattern).forEach(console.log)
+  ;+a.toString()
+  ;-a.toString()
+  ;/pattern/.exec(str).forEach(console.log)
+  ```
+
 - Class fields should preferably always be ended with semicolons — in addition to the previous rule (which includes a field declaration followed by a [computed property](/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer#computed_property_names), since the latter starts with `[`), semicolons are also required between a field declaration and a generator method.
+
+  ```js-nolint example-bad
+  class A {
+    a = 1
+    [b] = 2
+    *gen() {} // Seen as a = 1[b] = 2 * gen() {}
+  }
+  ```
+
+  ```js-nolint example-good
+  class A {
+    a = 1;
+    [b] = 2;
+    *gen() {}
+  }
+  ```
 
 ## Browser compatibility
 

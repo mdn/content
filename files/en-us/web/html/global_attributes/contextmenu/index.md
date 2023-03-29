@@ -1,13 +1,10 @@
 ---
 title: contextmenu
 slug: Web/HTML/Global_attributes/contextmenu
-tags:
-  - Deprecated
-  - Global attributes
-  - HTML
-  - Reference
-  - contextmenu
-  - Non-standard
+page-type: html-attribute
+status:
+  - deprecated
+  - non-standard
 browser-compat: html.global_attributes.contextmenu
 ---
 
@@ -104,4 +101,3 @@ The [contextmenu attribute is obsolete](https://html.spec.whatwg.org/multipage/o
 ## See also
 
 - All [global attributes](/en-US/docs/Web/HTML/Global_attributes)
-- {{domxref("HTMLElement.contextMenu")}}

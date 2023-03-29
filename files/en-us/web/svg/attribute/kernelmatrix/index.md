@@ -1,10 +1,7 @@
 ---
 title: kernelMatrix
 slug: Web/SVG/Attribute/kernelMatrix
-tags:
-  - Filters
-  - SVG
-  - SVG Attribute
+page-type: svg-attribute
 browser-compat: svg.elements.feConvolveMatrix.kernelMatrix
 ---
 

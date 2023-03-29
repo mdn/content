@@ -1,24 +1,25 @@
 ---
 title: Number.EPSILON
 slug: Web/JavaScript/Reference/Global_Objects/Number/EPSILON
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Number
-  - Property
-  - Polyfill
+page-type: javascript-static-data-property
 browser-compat: javascript.builtins.Number.EPSILON
 ---
 
 {{JSRef}}
 
-The **`Number.EPSILON`** property represents the difference between 1 and the smallest floating point number greater than 1.
+The **`Number.EPSILON`** static data property represents the difference between 1 and the smallest floating point number greater than 1.
 
-{{EmbedInteractiveExample("pages/js/number-epsilon.html")}}{{js_property_attributes(0, 0, 0)}}
+{{EmbedInteractiveExample("pages/js/number-epsilon.html")}}
+
+## Value
+
+2<sup>-52</sup>, or approximately `2.2204460492503130808472633361816E-16`.
+
+{{js_property_attributes(0, 0, 0)}}
 
 ## Description
 
-The `EPSILON` property has a value of approximately `2.2204460492503130808472633361816E-16`, or 2<sup>-52</sup>. This is the smallest value that can be added to 1 to get a distinct number, because [double precision floating point format](https://en.wikipedia.org/wiki/Double_precision_floating-point_format) only has 52 bits to represent the [mantissa](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#number_encoding), and the lowest bit has a significance of 2<sup>-52</sup>.
+`Number.EPSILON` is the difference between 1 and the next greater number representable in the Number format, because [double precision floating point format](https://en.wikipedia.org/wiki/Double_precision_floating-point_format) only has 52 bits to represent the [mantissa](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#number_encoding), and the lowest bit has a significance of 2<sup>-52</sup>.
 
 Note that the absolute accuracy of floating numbers decreases as the number gets larger, because the exponent grows while the mantissa's accuracy stays the same. {{jsxref("Number.MIN_VALUE")}} is the smallest representable positive number, which is much smaller than `Number.EPSILON`.
 

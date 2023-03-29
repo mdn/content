@@ -2,17 +2,6 @@
 title: border-block-start
 slug: Web/CSS/border-block-start
 page-type: css-shorthand-property
-tags:
-  - CSS
-  - CSS Logical Property
-  - CSS Property
-  - Reference
-  - border-block
-  - border-block-start
-  - border-block-start-color
-  - border-block-start-style
-  - border-block-start-width
-  - recipe:css-shorthand-property
 browser-compat: css.properties.border-block-start
 ---
 

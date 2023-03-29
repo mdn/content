@@ -2,13 +2,6 @@
 title: ReadableByteStreamController.byobRequest
 slug: Web/API/ReadableByteStreamController/byobRequest
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - ReadableByteStreamController
-  - Reference
-  - Streams
-  - byobRequest
 browser-compat: api.ReadableByteStreamController.byobRequest
 ---
 

@@ -1,9 +1,7 @@
 ---
 title: font-variant
 slug: Web/SVG/Attribute/font-variant
-tags:
-  - SVG
-  - SVG Attribute
+page-type: svg-attribute
 browser-compat: svg.attributes.presentation.font-variant
 ---
 

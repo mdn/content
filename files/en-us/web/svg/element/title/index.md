@@ -1,11 +1,7 @@
 ---
 title: <title> — the SVG accessible name element
 slug: Web/SVG/Element/title
-tags:
-  - Element
-  - Reference
-  - SVG
-  - SVG Descriptive
+page-type: svg-element
 browser-compat: svg.elements.title
 ---
 

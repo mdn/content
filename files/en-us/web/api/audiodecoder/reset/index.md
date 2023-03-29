@@ -2,13 +2,8 @@
 title: AudioDecoder.reset()
 slug: Web/API/AudioDecoder/reset
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - reset
-  - AudioDecoder
-  - Experimental
+status:
+  - experimental
 browser-compat: api.AudioDecoder.reset
 ---
 

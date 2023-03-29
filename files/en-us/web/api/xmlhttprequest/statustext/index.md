@@ -2,14 +2,6 @@
 title: XMLHttpRequest.statusText
 slug: Web/API/XMLHttpRequest/statusText
 page-type: web-api-instance-property
-tags:
-  - AJAX
-  - API
-  - Property
-  - Read-only
-  - Reference
-  - XMLHttpRequest
-  - XMLHttpRequest Status
 browser-compat: api.XMLHttpRequest.statusText
 ---
 
@@ -19,7 +11,7 @@ The read-only **`XMLHttpRequest.statusText`** property returns a string containi
 
 If the server response doesn't explicitly specify a status text, `statusText` will assume the default value "OK".
 
-> **Note:** Responses over an HTTP/2 connection will always have a empty string as status message as HTTP/2 does not support them.
+> **Note:** Responses over an HTTP/2 connection will always have an empty string as status message as HTTP/2 does not support them.
 
 ## Value
 

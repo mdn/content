@@ -2,16 +2,8 @@
 title: FontFace.variationSettings
 slug: Web/API/FontFace/variationSettings
 page-type: web-api-instance-property
-tags:
-  - API
-  - CSS Font Loading API
-  - CSSOM
-  - FontFace
-  - Fonts
-  - Property
-  - Reference
-  - variationSettings
-  - Experimental
+status:
+  - experimental
 browser-compat: api.FontFace.variationSettings
 ---
 

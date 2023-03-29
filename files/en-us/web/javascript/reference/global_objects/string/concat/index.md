@@ -1,12 +1,7 @@
 ---
 title: String.prototype.concat()
 slug: Web/JavaScript/Reference/Global_Objects/String/concat
-tags:
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - String
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.String.concat
 ---
 

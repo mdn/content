@@ -2,12 +2,6 @@
 title: SVGViewElement
 slug: Web/API/SVGViewElement
 page-type: web-api-interface
-tags:
-  - API
-  - NeedsExample
-  - Reference
-  - SVG
-  - SVG DOM
 browser-compat: api.SVGViewElement
 ---
 
@@ -20,9 +14,6 @@ The **`SVGViewElement`** interface provides access to the properties of {{SVGEle
 ## Instance properties
 
 _This interface also inherits properties from its parent interface, {{domxref("SVGElement")}}._
-
-- {{domxref("SVGViewElement.viewTarget")}} {{deprecated_inline}}
-  - : An {{domxref("SVGStringList")}} corresponding to the {{SVGAttr("viewTarget")}} attribute of the given {{SVGElement("view")}} element. A list of string values which contain the names listed in the {{SVGAttr("viewTarget")}} attribute. Each of the string values can be associated with the corresponding element using the {{domxref("Document.getElementById()", "getElementById()")}} method call.
 
 ## Instance methods
 

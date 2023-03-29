@@ -1,8 +1,7 @@
 ---
 title: Node (DOM)
 slug: Glossary/Node/DOM
-tags:
-  - CodingScripting
+page-type: glossary-definition
 ---
 
 In the context of the {{Glossary("DOM")}}, a **node** is a single point in the node tree. Various things that are nodes are the document itself, elements, text, and comments.

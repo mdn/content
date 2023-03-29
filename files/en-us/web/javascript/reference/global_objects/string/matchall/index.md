@@ -1,14 +1,7 @@
 ---
 title: String.prototype.matchAll()
 slug: Web/JavaScript/Reference/Global_Objects/String/matchAll
-tags:
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - Regular Expressions
-  - String
-  - Polyfill
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.String.matchAll
 ---
 

@@ -1,12 +1,6 @@
 ---
 title: Negate
 slug: WebAssembly/Reference/Numeric/Negate
-tags:
-  - WebAssembly
-  - wasm
-  - Reference
-  - Numeric
-  - Something
 ---
 
 {{WebAssemblySidebar}}

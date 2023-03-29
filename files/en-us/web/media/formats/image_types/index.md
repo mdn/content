@@ -1,30 +1,6 @@
 ---
 title: Image file type and format guide
 slug: Web/Media/Formats/Image_types
-tags:
-  - APNG
-  - BMP
-  - Bitmap
-  - Diagrams
-  - File
-  - File Types
-  - Filetype
-  - Graphics
-  - Guide
-  - ICO
-  - Icons
-  - Image
-  - Images
-  - JPEG
-  - JPG
-  - Media
-  - PNG
-  - Photos
-  - SVG
-  - WebP
-  - AVIF
-  - gif
-  - icon
 ---
 
 {{QuickLinksWithSubpages("/en-US/docs/Web/Media")}}
@@ -70,7 +46,7 @@ The image file formats that are most commonly used on the web are listed below.
           It offers much better compression than PNG or JPEG with support for higher color depths, animated frames, transparency, etc.
           Note that when using AVIF, you should include fallbacks to formats with better browser support (i.e. using the
           <code><a href="/en-US/docs/Web/HTML/Element/picture">&#x3C;picture></a></code> element).<br />
-          <strong>Supported:</strong> Chrome, Opera, Firefox (still images only: animated images not implemented).
+          <strong>Supported:</strong> Chrome, Firefox (still images only: animated images not implemented), Opera, Safari.
         </p>
       </td>
     </tr>
@@ -185,7 +161,7 @@ The following list includes image formats that appear on the web, but which shou
 
 > **Note:** Safari 11.1 added the ability to use a video format, as an animated gif replacement.
 > No other browser supports this.
-> See the [Chromium bug](https://bugs.chromium.org/p/chromium/issues/detail?id=791658), and [Firefox bug](https://bugzilla.mozilla.org/show_bug.cgi?id=895131) for more information.
+> See the [Chromium bug](https://crbug.com/791658), and [Firefox bug](https://bugzil.la/895131) for more information.
 
 ## Image file type details
 
@@ -312,7 +288,7 @@ However it also has disadvantages for some cases, as video and image encoding ha
 The format offers:
 
 - Excellent lossy compression compared to JPG and PNG for visually similar compression levels (e.g. lossy AVIF images are around 50% smaller than JPEG images).
-- Generally AVIF has better compression than WebP — median 50% vs 30% compression for the same JPG set (source: [AVIF WebP Comparison](https://www.ctrl.blog/entry/webp-avif-comparison.html) (CTRL Blog)).
+- Generally, AVIF has better compression than WebP — median 50% vs. 30% compression for the same JPG set (source: [AVIF WebP Comparison](https://www.ctrl.blog/entry/webp-avif-comparison.html) (CTRL Blog)).
 - Lossless compression.
 - Animation/multi-image storage (similar to animated GIFs, but with much better compression)
 - Alpha channel support (i.e. for transparency).
@@ -323,7 +299,7 @@ AVIF does not support progressive rendering, so files must be fully downloaded b
 This often has little impact on real-world user experience because AVIF files are much smaller than the equivalent JPEG or PNG files, and hence can be downloaded and displayed much faster.
 For larger file size the impact can become significant, and you should consider using a format that supports progressive rendering.
 
-AVIF is supported on desktop in Chrome, Opera and Firefox (Firefox supports still images but not animations).
+AVIF is supported in Chrome, Opera, Safari and Firefox (Firefox supports still images but not animations), but not on Edge or IE.
 As support is not yet comprehensive (and has little historical depth) you should provide a fallback in [WebP](#webp_image), [JPEG](#jpeg_joint_photographic_experts_group_image) or [PNG](#png_portable_network_graphics) format using [the `<picture>` element](/en-US/docs/Web/HTML/Element/picture) (or some other approach).
 
 <table class="standard-table">
@@ -349,7 +325,7 @@ As support is not yet comprehensive (and has little historical depth) you should
     <tr>
       <th scope="row">Browser compatibility</th>
       <td>
-        Chrome 85, Opera 71, and Firefox 93.
+        Chrome 85, Opera 71, Firefox 93, and Safari 16.1.
         <ul>
           <li>
             Firefox 93 supports still images, with colorspace support for both full and limited range colors, image transforms for mirroring and rotation.
@@ -623,7 +599,7 @@ Typically, modern content should use [PNG](#png_portable_network_graphics) for l
 ### ICO (Microsoft Windows icon)
 
 The ICO (Microsoft Windows icon) file format was designed by Microsoft for desktop icons of Windows systems.
-However, early versions of Internet Explorer introduced the ability for a web site to provide a ICO file named `favicon.ico` in a web site's root directory to specify a **[favicon](/en-US/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML#adding_custom_icons_to_your_site)** — an icon to be displayed in the Favorites menu, and other places where an iconic representation of the site would be useful.
+However, early versions of Internet Explorer introduced the ability for a web site to provide an ICO file named `favicon.ico` in a web site's root directory to specify a **[favicon](/en-US/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML#adding_custom_icons_to_your_site)** — an icon to be displayed in the Favorites menu, and other places where an iconic representation of the site would be useful.
 
 An ICO file can contain multiple icons, and begins with a directory listing details about each.
 Following the directory comes the data for the icons.
@@ -631,7 +607,7 @@ Each icon's data can be either a [BMP](#bmp_bitmap_file) image without the file 
 If you use ICO files, you should use the BMP format, as support for PNG inside ICO files wasn't added until Windows Vista and may not be well supported.
 
 > **Warning:** ICO files _should not_ be used in web content.
-> Additionally, their use for favicons has subsided in favor of using a PNG file and the {{HTMLElement("link")}} element, as described in {{SectionOnPage("/en-US/docs/Web/HTML/Element/link", "Providing icons for different usage contexts")}}.
+> Additionally, their use for favicons has subsided in favor of using a PNG file and the {{HTMLElement("link")}} element, as described in [Providing icons for different usage contexts](/en-US/docs/Web/HTML/Element/link#providing_icons_for_different_usage_contexts).
 
 <table class="standard-table">
   <tbody>
@@ -1289,7 +1265,7 @@ As such, TIFF files are not useful within the context of web content, _but_ it's
 ### WebP image
 
 WebP supports lossy compression via predictive coding based on the VP8 video codec, and lossless compression that uses substitutions for repeating data.
-Lossy WebP images average 25–35% smaller than JPEG images of visually similar compression levels.
+Lossy WebP images are on average 25–35% smaller than JPEG images of visually similar compression levels.
 Lossless WebP images are typically 26% smaller than the same images in PNG format.
 
 WebP also supports animation: in a lossy WebP file, the image data is represented by a VP8 bitstream, which may contain multiple frames.
@@ -1599,4 +1575,4 @@ You can specify as many `<source>`s as you wish, though typically 2 or 3 is all 
 - [Guide to video codecs used on the web](/en-US/docs/Web/Media/Formats/Video_codecs)
 - The {{Glossary("HTML")}} {{HTMLElement("img")}} and {{HTMLElement("picture")}} elements
 - The CSS {{cssxref("background-image")}} property
-- The {{domxref("HTMLImageElement.Image()")}} constructor and the {{domxref("HTMLImageElement")}} interface
+- The {{domxref("HTMLImageElement.Image()", "Image()")}} constructor and the {{domxref("HTMLImageElement")}} interface

@@ -2,14 +2,8 @@
 title: "::-moz-list-bullet"
 slug: Web/CSS/:-moz-list-bullet
 page-type: css-pseudo-class
-tags:
-  - CSS
-  - CSS:Mozilla Extensions
-  - NeedsCompatTable
-  - Non-standard
-  - Pseudo-element
-  - Reference
-  - Selector
+status:
+  - non-standard
 ---
 
 {{CSSRef}}{{Non-standard_header}}
@@ -19,7 +13,9 @@ The **`::-moz-list-bullet`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/
 ## Syntax
 
 ```css
-li::-moz-list-bullet
+li::-moz-list-bullet {
+  /* ... */
+}
 ```
 
 ## Examples

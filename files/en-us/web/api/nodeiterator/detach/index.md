@@ -2,12 +2,8 @@
 title: NodeIterator.detach()
 slug: Web/API/NodeIterator/detach
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - Method
-  - NodeIterator
-  - Deprecated
+status:
+  - deprecated
 browser-compat: api.NodeIterator.detach
 ---
 
@@ -39,9 +35,13 @@ None ({{jsxref("undefined")}}).
 
 ```js
 const nodeIterator = document.createNodeIterator(
-    document.body,
-    NodeFilter.SHOW_ELEMENT,
-    { acceptNode(node) { return NodeFilter.FILTER_ACCEPT; } }
+  document.body,
+  NodeFilter.SHOW_ELEMENT,
+  {
+    acceptNode(node) {
+      return NodeFilter.FILTER_ACCEPT;
+    },
+  }
 );
 nodeIterator.detach(); // detaches the iterator
 

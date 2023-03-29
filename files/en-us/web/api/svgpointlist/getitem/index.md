@@ -2,12 +2,6 @@
 title: SVGPointList.getItem()
 slug: Web/API/SVGPointList/getItem
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - getItem
-  - SVGPointList
 browser-compat: api.SVGPointList.getItem
 ---
 

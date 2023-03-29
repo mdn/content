@@ -1,15 +1,7 @@
 ---
 title: Array.prototype.keys()
 slug: Web/JavaScript/Reference/Global_Objects/Array/keys
-tags:
-  - Array
-  - ECMAScript 2015
-  - Iterator
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - Polyfill
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.Array.keys
 ---
 
@@ -80,4 +72,3 @@ for (const entry of Array.prototype.keys.call(arrayLike)) {
 - {{jsxref("Array.prototype.values()")}}
 - {{jsxref("Array.prototype.entries()")}}
 - [Iteration protocols](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols)
-- [A polyfill](https://github.com/behnammodi/polyfill/blob/master/array.polyfill.js)

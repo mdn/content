@@ -1,14 +1,7 @@
 ---
 title: String.prototype.normalize()
 slug: Web/JavaScript/Reference/Global_Objects/String/normalize
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - String
-  - Unicode
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.String.normalize
 ---
 

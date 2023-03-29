@@ -1,16 +1,7 @@
 ---
 title: downloads.BooleanDelta
 slug: Mozilla/Add-ons/WebExtensions/API/downloads/BooleanDelta
-tags:
-  - API
-  - Add-ons
-  - BooleanDelta
-  - Extensions
-  - Non-standard
-  - Reference
-  - Type
-  - WebExtensions
-  - downloads
+page-type: webextension-api-type
 browser-compat: webextensions.api.downloads.BooleanDelta
 ---
 

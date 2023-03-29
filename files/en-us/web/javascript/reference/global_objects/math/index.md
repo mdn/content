@@ -1,11 +1,7 @@
 ---
 title: Math
 slug: Web/JavaScript/Reference/Global_Objects/Math
-tags:
-  - JavaScript
-  - Math
-  - Namespace
-  - Reference
+page-type: javascript-namespace
 browser-compat: javascript.builtins.Math
 ---
 

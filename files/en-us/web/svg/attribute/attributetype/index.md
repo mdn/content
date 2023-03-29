@@ -1,11 +1,9 @@
 ---
 title: attributeType
 slug: Web/SVG/Attribute/attributeType
-tags:
-  - Deprecated
-  - NeedsCompatTable
-  - SVG
-  - SVG Attribute
+page-type: svg-attribute
+status:
+  - deprecated
 spec-urls: https://www.w3.org/TR/SVG11/animate.html#AttributeTypeAttribute
 ---
 
@@ -16,7 +14,6 @@ The **`attributeType`** attribute specifies the namespace in which the target at
 You can use this attribute with the following SVG elements:
 
 - {{SVGElement("animate")}}
-- {{SVGElement("animateColor")}}
 - {{SVGElement("animateTransform")}}
 - {{SVGElement("set")}}
 

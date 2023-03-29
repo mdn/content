@@ -1,13 +1,7 @@
 ---
 title: Date.prototype.toLocaleString()
 slug: Web/JavaScript/Reference/Global_Objects/Date/toLocaleString
-tags:
-  - Date
-  - Internationalization
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.Date.toLocaleString
 ---
 
@@ -50,6 +44,8 @@ See the [`Intl.DateTimeFormat()` constructor](/en-US/docs/Web/JavaScript/Referen
 A string representing the given date according to language-specific conventions.
 
 In implementations with `Intl.DateTimeFormat`, this is equivalent to `new Intl.DateTimeFormat(locales, options).format(date)`.
+
+> **Note:** Most of the time, the formatting returned by `toLocaleString()` is consistent. However, the output may vary with time, language, and implementation — output variations are by design and allowed by the specification. You should not compare the results of `toLocaleString()` to static values.
 
 ## Examples
 
@@ -155,29 +151,6 @@ console.log(date.toLocaleString("en-US", options));
 console.log(date.toLocaleString("en-US", { hour12: false }));
 // "12/19/2012, 19:00:00"
 ```
-
-### Avoid comparing formatted date values to static values
-
-Most of the time, the formatting returned by `toLocaleString()` is
-consistent. However, this might change in the future, and isn't guaranteed for all
-languages; output variations are by design, and allowed by the specification.
-
-Most notably, the IE and Edge browsers insert bidirectional control characters around
-dates, so the output text will flow properly when concatenated with other text.
-
-For this reason, you cannot expect to be able to compare the results of
-`toLocaleString()` to a static value:
-
-```js example-bad
-"1/1/2019, 01:00:00" ===
-  new Date("2019-01-01T01:00:00Z").toLocaleString("en-US");
-// true in Firefox and others
-// false in IE and Edge
-```
-
-> **Note:** See also this
-> [StackOverflow thread](https://stackoverflow.com/questions/25574963/ies-tolocalestring-has-strange-characters-in-results)
-> for more details and examples.
 
 ## Specifications
 

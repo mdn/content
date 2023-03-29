@@ -2,17 +2,10 @@
 title: ReportBody.toJSON()
 slug: Web/API/ReportBody/toJSON
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - Experimental
-  - toJSON
-  - ReportBody
 browser-compat: api.ReportBody.toJSON
 ---
 
-{{APIRef("Reporting API")}}{{SeeCompatTable}}
+{{APIRef("Reporting API")}}
 
 The **`toJSON()`** method of the {{domxref("ReportBody")}} interface is a _serializer_, and returns a JSON representation of the `ReportBody` object.
 
@@ -36,9 +29,9 @@ In this example we create a new {{domxref("ReportingObserver")}} to observe inte
 
 ```js
 const options = {
-  types: ['intervention'],
-  buffered: true
-}
+  types: ["intervention"],
+  buffered: true,
+};
 
 const observer = new ReportingObserver(([firstReport], observer) => {
   console.log(firstReport.toJSON());

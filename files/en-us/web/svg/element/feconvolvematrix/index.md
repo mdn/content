@@ -1,11 +1,7 @@
 ---
 title: <feConvolveMatrix>
 slug: Web/SVG/Element/feConvolveMatrix
-tags:
-  - Element
-  - Filters
-  - SVG
-  - SVG Filter
+page-type: svg-element
 browser-compat: svg.elements.feConvolveMatrix
 ---
 
@@ -27,7 +23,7 @@ where "orderX" and "orderY" represent the X and Y values for the ['order'](https
 
 Note in the above formulas that the values in the kernel matrix are applied such that the kernel matrix is rotated 180 degrees relative to the source and destination images in order to match convolution theory as described in many computer graphics textbooks.
 
-To illustrate, suppose you have a input image which is 5 pixels by 5 pixels, whose color values for one of the color channels are as follows:
+To illustrate, suppose you have an input image which is 5 pixels by 5 pixels, whose color values for one of the color channels are as follows:
 
 ```plain
 0    20  40 235 235

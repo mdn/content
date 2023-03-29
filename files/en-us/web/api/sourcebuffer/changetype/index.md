@@ -2,17 +2,6 @@
 title: SourceBuffer.changeType()
 slug: Web/API/SourceBuffer/changeType
 page-type: web-api-instance-method
-tags:
-  - API
-  - Audio
-  - MSE
-  - Media
-  - Media Source
-  - Media Source Extensions
-  - Method
-  - SourceBuffer
-  - Video
-  - changeType
 browser-compat: api.SourceBuffer.changeType
 ---
 

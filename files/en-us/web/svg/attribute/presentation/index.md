@@ -1,12 +1,7 @@
 ---
 title: SVG Presentation Attributes
 slug: Web/SVG/Attribute/Presentation
-tags:
-  - Attribute
-  - Beginner
-  - Draft
-  - Reference
-  - SVG
+page-type: svg-attribute
 browser-compat: svg.attributes.presentation
 ---
 

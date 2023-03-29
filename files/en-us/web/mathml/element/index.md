@@ -1,14 +1,9 @@
 ---
 title: MathML element reference
 slug: Web/MathML/Element
-tags:
-  - MathML
-  - MathML Reference
 ---
 
-<section id="Quick_links">
-  {{MathMLRef}}
-</section>
+{{MathMLRef}}
 
 This is an alphabetical list of MathML elements. All of them implement the {{domxref("MathMLElement")}} class.
 
@@ -47,7 +42,6 @@ This is an alphabetical list of MathML elements. All of them implement the {{dom
 ### N
 
 - {{MathMLElement("mn")}} (Number)
-- {{MathMLElement("none")}} (empty scripts)
 
 ### O
 
@@ -126,7 +120,6 @@ This is an alphabetical list of MathML elements. All of them implement the {{dom
 - {{MathMLElement("msup")}}
 - {{MathMLElement("munder")}}
 - {{MathMLElement("munderover")}}
-- {{MathMLElement("none")}}
 
 ### Tabular math
 

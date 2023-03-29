@@ -1,15 +1,7 @@
 ---
 title: sessions.removeWindowValue()
 slug: Mozilla/Add-ons/WebExtensions/API/sessions/removeWindowValue
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Reference
-  - WebExtensions
-  - removeWindowValue
-  - sessions
+page-type: webextension-api-function
 browser-compat: webextensions.api.sessions.removeWindowValue
 ---
 

@@ -1,15 +1,7 @@
 ---
 title: Array.prototype.includes()
 slug: Web/JavaScript/Reference/Global_Objects/Array/includes
-tags:
-  - Array
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - inArray
-  - in_array
-  - Polyfill
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.Array.includes
 ---
 

@@ -2,13 +2,6 @@
 title: Element.ariaLive
 slug: Web/API/Element/ariaLive
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - ariaLive
-  - AriaAttributes
-  - Element
 browser-compat: api.Element.ariaLive
 ---
 
@@ -39,7 +32,7 @@ In this example the [`aria-live`](/en-US/docs/Web/Accessibility/ARIA/Attributes/
 ```
 
 ```js
-let el = document.getElementById('planetInfo');
+let el = document.getElementById("planetInfo");
 console.log(el.ariaLive); // "polite"
 el.ariaLive = "assertive";
 console.log(el.ariaLive); // assertive

@@ -1,8 +1,7 @@
 ---
 title: Second-level Domain
 slug: Glossary/Second-level_Domain
-tags:
-  - Infrastructure
+page-type: glossary-definition
 ---
 
 A Second Level Domain ({{Glossary("SLD")}}) is the part of the domain name that is located right before a Top Level Domain ({{Glossary("TLD")}}).

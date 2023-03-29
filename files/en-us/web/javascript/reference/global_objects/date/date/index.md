@@ -1,17 +1,13 @@
 ---
 title: Date() constructor
 slug: Web/JavaScript/Reference/Global_Objects/Date/Date
-tags:
-  - Constructor
-  - Date
-  - JavaScript
-  - Reference
+page-type: javascript-constructor
 browser-compat: javascript.builtins.Date.Date
 ---
 
 {{JSRef}}
 
-The **`Date()`** constructor can create a {{jsxref("Date")}} instance or return a string representing the current time.
+The **`Date()`** constructor creates {{jsxref("Date")}} objects. When called as a function, it returns a string representing the current time.
 
 {{EmbedInteractiveExample("pages/js/date-constructor.html")}}
 

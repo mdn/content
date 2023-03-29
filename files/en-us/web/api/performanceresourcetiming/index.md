@@ -2,11 +2,6 @@
 title: PerformanceResourceTiming
 slug: Web/API/PerformanceResourceTiming
 page-type: web-api-interface
-tags:
-  - DOM
-  - Interface
-  - Reference
-  - Web Performance
 browser-compat: api.PerformanceResourceTiming
 ---
 
@@ -28,7 +23,7 @@ The properties of this interface allow you to calculate certain resource timing 
 - Measuring DNS lookup time (`domainLookupEnd` - `domainLookupStart`)
 - Measuring redirection time (`redirectEnd` - `redirectStart`)
 - Measuring request time (`responseStart` - `requestStart`)
-- Measuring SSL negotiation time (`requestStart` - `secureConnectionStart`)
+- Measuring TLS negotiation time (`requestStart` - `secureConnectionStart`)
 - Measuring time to fetch (without redirects) (`responseEnd` - `fetchStart`)
 - Measuring ServiceWorker processing time (`fetchStart` - `workerStart`)
 - Checking if content was compressed (`decodedBodySize` should not be `encodedBodySize`)
@@ -53,7 +48,7 @@ This interface extends the following {{domxref("PerformanceEntry")}} properties 
 
 ### Timestamps
 
-The interface supports the following timestamp properties which you can see in the diagram and and are listed in the order in which they are recorded for the fetching of a resource. An alphabetical listing is shown in the navigation, at left.
+The interface supports the following timestamp properties which you can see in the diagram and are listed in the order in which they are recorded for the fetching of a resource. An alphabetical listing is shown in the navigation, at left.
 
 ![Timestamp diagram listing timestamps in the order in which they are recorded for the fetching of a resource](timestamp-diagram.svg)
 
@@ -91,7 +86,7 @@ Additionally, this interface exposes the following properties containing more in
 - {{domxref('PerformanceResourceTiming.encodedBodySize')}} {{ReadOnlyInline}}
   - : A number representing the size (in octets) received from the fetch (HTTP or cache), of the payload body, before removing any applied content encodings.
 - {{domxref('PerformanceResourceTiming.initiatorType')}} {{ReadOnlyInline}}
-  - : A string representing the type of resource that initiated the performance entry.
+  - : A string representing the web platform feature that initiated the performance entry.
 - {{domxref('PerformanceResourceTiming.nextHopProtocol')}} {{ReadOnlyInline}}
   - : A string representing the network protocol used to fetch the resource, as identified by the [ALPN Protocol ID (RFC7301)](https://datatracker.ietf.org/doc/html/rfc7301).
 - {{domxref('PerformanceResourceTiming.renderBlockingStatus')}} {{ReadOnlyInline}}
@@ -112,7 +107,7 @@ Additionally, this interface exposes the following properties containing more in
 
 ### Logging resource timing information
 
-Here's an example using a {{domxref("PerformanceObserver")}}, which notifies of new `resource` performance entries as they are recorded in the browser's performance timeline:
+Example using a {{domxref("PerformanceObserver")}}, which notifies of new `resource` performance entries as they are recorded in the browser's performance timeline. Use the `buffered` option to access entries from before the observer creation.
 
 ```js
 const observer = new PerformanceObserver((list) => {
@@ -124,7 +119,7 @@ const observer = new PerformanceObserver((list) => {
 observer.observe({ type: "resource", buffered: true });
 ```
 
-Here's an example using {{domxref("Performance.getEntriesByType()")}}, which only shows `resource` performance entries present in the browser's performance timeline at the time you call this method:
+Example using {{domxref("Performance.getEntriesByType()")}}, which only shows `resource` performance entries present in the browser's performance timeline at the time you call this method:
 
 ```js
 const resources = performance.getEntriesByType("resource");

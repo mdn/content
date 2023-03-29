@@ -1,12 +1,7 @@
 ---
 title: Date.prototype.getHours()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getHours
-tags:
-  - Date
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.Date.getHours
 ---
 

@@ -2,12 +2,6 @@
 title: AudioNode
 slug: Web/API/AudioNode
 page-type: web-api-interface
-tags:
-  - API
-  - AudioNode
-  - Interface
-  - Reference
-  - Web Audio API
 browser-compat: api.AudioNode
 ---
 
@@ -55,7 +49,7 @@ _Also implements methods from the interface_ {{domxref("EventTarget")}}.
 
 ### The audio routing graph
 
-![AudioNodes participating in an AudioContext create a audio routing graph.](webaudiobasics.png)
+![AudioNodes participating in an AudioContext create an audio routing graph.](webaudiobasics.png)
 
 Each `AudioNode` has inputs and outputs, and multiple audio nodes are connected to build a _processing graph_. This graph is contained in an {{domxref("AudioContext")}}, and each audio node can only belong to one audio context.
 

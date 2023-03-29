@@ -2,11 +2,6 @@
 title: Permissions.query()
 slug: Web/API/Permissions/query
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Permissions
-  - Reference
 browser-compat: api.Permissions.query
 ---
 
@@ -66,13 +61,13 @@ A {{jsxref("Promise")}} that resolves to a {{domxref("PermissionStatus")}} objec
 ## Examples
 
 ```js
-navigator.permissions.query({ name: 'geolocation' }).then((result) => {
- if (result.state === 'granted') {
-   showLocalNewsWithGeolocation();
- } else if (result.state === 'prompt') {
-   showButtonToEnableLocalNews();
- }
- // Don't do anything if the permission was denied.
+navigator.permissions.query({ name: "geolocation" }).then((result) => {
+  if (result.state === "granted") {
+    showLocalNewsWithGeolocation();
+  } else if (result.state === "prompt") {
+    showButtonToEnableLocalNews();
+  }
+  // Don't do anything if the permission was denied.
 });
 ```
 

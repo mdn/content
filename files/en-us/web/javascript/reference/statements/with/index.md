@@ -1,11 +1,9 @@
 ---
 title: with
 slug: Web/JavaScript/Reference/Statements/with
-tags:
-  - Deprecated
-  - JavaScript
-  - Language feature
-  - Statement
+page-type: javascript-statement
+status:
+  - deprecated
 browser-compat: javascript.statements.with
 ---
 
@@ -144,7 +142,7 @@ const namespace = new Proxy(
     get(target, key) {
       return key;
     },
-  }
+  },
 );
 
 with (namespace) {

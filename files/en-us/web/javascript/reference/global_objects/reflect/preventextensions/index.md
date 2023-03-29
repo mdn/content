@@ -1,19 +1,13 @@
 ---
 title: Reflect.preventExtensions()
 slug: Web/JavaScript/Reference/Global_Objects/Reflect/preventExtensions
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Reference
-  - Reflect
-  - Polyfill
+page-type: javascript-static-method
 browser-compat: javascript.builtins.Reflect.preventExtensions
 ---
 
 {{JSRef}}
 
-The static **`Reflect.preventExtensions()`** method prevents new properties from ever being added to an object (i.e., prevents future extensions to the object). It is similar to {{jsxref("Object.preventExtensions()")}}, but with [some differences](#difference_with_object.preventextensions).
+The **`Reflect.preventExtensions()`** static method is like {{jsxref("Object.preventExtensions()")}}. It prevents new properties from ever being added to an object (i.e., prevents future extensions to the object).
 
 {{EmbedInteractiveExample("pages/js/reflect-preventextensions.html")}}
 
@@ -34,7 +28,17 @@ A {{jsxref("Boolean")}} indicating whether or not the target was successfully se
 
 ### Exceptions
 
-A {{jsxref("TypeError")}}, if `target` is not an {{jsxref("Object")}}.
+- {{jsxref("TypeError")}}
+  - : Thrown if `target` is not an object.
+
+## Description
+
+`Reflect.preventExtensions()` provides the reflective semantic of preventing extensions of an object. The differences with {{jsxref("Object.isExtensible()")}} are:
+
+- `Reflect.preventExtensions()` throws a {{jsxref("TypeError")}} if the target is not an object, while `Object.preventExtensions()` always returns non-object targets as-is.
+- `Reflect.preventExtensions()` returns a {{jsxref("Boolean")}} indicating whether or not the target was successfully set to prevent extensions, while `Object.preventExtensions()` returns the target object.
+
+`Reflect.preventExtensions()` invokes the `[[PreventExtensions]]` [object internal method](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy#object_internal_methods) of `target`.
 
 ## Examples
 
@@ -76,4 +80,5 @@ Object.preventExtensions(1);
 
 - [Polyfill of `Reflect.preventExtensions` in `core-js`](https://github.com/zloirock/core-js#ecmascript-reflect)
 - {{jsxref("Reflect")}}
-- {{jsxref("Object.isExtensible()")}}
+- {{jsxref("Object.preventExtensions()")}}
+- [`Proxy`'s `preventExtensions` handler](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/preventExtensions)

@@ -2,14 +2,6 @@
 title: margin-inline-start
 slug: Web/CSS/margin-inline-start
 page-type: css-property
-tags:
-  - CSS
-  - CSS Logical Property
-  - CSS Property
-  - Reference
-  - margin-inline
-  - margin-inline-start
-  - recipe:css-property
 browser-compat: css.properties.margin-inline-start
 ---
 
@@ -23,9 +15,9 @@ The **`margin-inline-start`** [CSS](/en-US/docs/Web/CSS) property defines the lo
 
 ```css
 /* <length> values */
-margin-inline-start: 10px;  /* An absolute length */
-margin-inline-start: 1em;   /* relative to the text size */
-margin-inline-start: 5%;    /* relative to the nearest block container's width */
+margin-inline-start: 10px; /* An absolute length */
+margin-inline-start: 1em; /* relative to the text size */
+margin-inline-start: 5%; /* relative to the nearest block container's width */
 
 /* Keyword values */
 margin-inline-start: auto;

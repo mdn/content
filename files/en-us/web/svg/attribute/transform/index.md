@@ -1,9 +1,7 @@
 ---
 title: transform
 slug: Web/SVG/Attribute/transform
-tags:
-  - SVG
-  - SVG Attribute
+page-type: svg-attribute
 spec-urls:
   - https://drafts.csswg.org/css-transforms/#svg-transform
   - https://drafts.csswg.org/css-transforms/#svg-transform

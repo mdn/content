@@ -2,16 +2,6 @@
 title: HTMLAudioElement
 slug: Web/API/HTMLAudioElement
 page-type: web-api-interface
-tags:
-  - API
-  - Audio
-  - HTML
-  - HTML DOM
-  - HTMLAudioElement
-  - Interface
-  - Media
-  - Reference
-  - sound
 browser-compat: api.HTMLAudioElement
 ---
 
@@ -36,17 +26,6 @@ _No specific properties; inherits properties from its parent, {{domxref("HTMLMed
 
 _Inherits methods from its parent, {{domxref("HTMLMediaElement")}}, and from {{domxref("HTMLElement")}}. It offers no methods of its own._
 
-### Obsolete Mozilla-only methods
-
-_The following methods are non-standard and should not be used._
-
-- {{domxref("HTMLAudioElement.mozCurrentSampleOffset", "mozCurrentSampleOffset()")}} {{non-standard_inline}} {{deprecated_inline}}
-  - : Returns the number of samples from the beginning of the stream that have been written so far into the audio stream created by calling {{domxref("HTMLAudioElement.mozWriteAudio", "mozWriteAudio()")}}.
-- {{domxref("HTMLAudioElement.mozSetup", "mozSetup()")}} {{non-standard_inline}} {{deprecated_inline}}
-  - : Sets up the audio stream to allow writing, given the number of audio channels (1 or 2) and the sample rate in kHz.
-- {{domxref("HTMLAudioElement.mozWriteAudio", "mozWriteAudio()")}} {{non-standard_inline}} {{deprecated_inline}}
-  - : Writes a batch of audio frames to the stream at the current offset, returning the number of bytes actually written to the stream.
-
 ## Examples
 
 ### Basic usage
@@ -54,7 +33,7 @@ _The following methods are non-standard and should not be used._
 You can create a `HTMLAudioElement` entirely with JavaScript using the {{domxref("HTMLAudioElement.Audio", "Audio()")}} constructor:
 
 ```js
-const audioElement = new Audio('car_horn.wav');
+const audioElement = new Audio("car_horn.wav");
 ```
 
 then you can invoke the `play()` method on the element
@@ -68,11 +47,11 @@ audioElement.play();
 Some of the more commonly used properties of the audio element include {{domxref("HTMLMediaElement.src", "src")}}, {{domxref("HTMLMediaElement.currentTime", "currentTime")}}, {{domxref("HTMLMediaElement.duration", "duration")}}, {{domxref("HTMLMediaElement.paused", "paused")}}, {{domxref("HTMLMediaElement.muted", "muted")}}, and {{domxref("HTMLMediaElement.volume", "volume")}}. This snippet copies the audio file's duration to a variable:
 
 ```js
-const audioElement = new Audio('car_horn.wav');
-audioElement.addEventListener('loadeddata', () => {
+const audioElement = new Audio("car_horn.wav");
+audioElement.addEventListener("loadeddata", () => {
   let duration = audioElement.duration;
   // The duration variable now holds the duration (in seconds) of the audio clip
-})
+});
 ```
 
 ## Events

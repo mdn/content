@@ -1,13 +1,7 @@
 ---
 title: Set.prototype.values()
 slug: Web/JavaScript/Reference/Global_Objects/Set/values
-tags:
-  - ECMAScript 2015
-  - Iterator
-  - JavaScript
-  - Method
-  - Prototype
-  - set
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.Set.values
 ---
 

@@ -2,17 +2,9 @@
 title: VRFrameData.leftProjectionMatrix
 slug: Web/API/VRFrameData/leftProjectionMatrix
 page-type: web-api-instance-property
-tags:
-  - API
-  - Deprecated
-  - Property
-  - Reference
-  - VR
-  - VRFrameData
-  - Virtual Reality
-  - WebVR
-  - leftProjectionMatrix
-  - Non-standard
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.VRFrameData.leftProjectionMatrix
 ---
 

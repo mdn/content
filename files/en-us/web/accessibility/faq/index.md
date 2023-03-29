@@ -1,9 +1,6 @@
 ---
 title: Accessibility FAQ
 slug: Web/Accessibility/FAQ
-tags:
-  - Accessibility
-  - FAQ
 ---
 
 <section id="Quick_links">

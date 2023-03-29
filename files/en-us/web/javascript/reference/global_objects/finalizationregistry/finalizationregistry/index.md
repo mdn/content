@@ -2,17 +2,13 @@
 title: FinalizationRegistry() constructor
 slug: >-
   Web/JavaScript/Reference/Global_Objects/FinalizationRegistry/FinalizationRegistry
-tags:
-  - Constructor
-  - FinalizationRegistry
-  - JavaScript
-  - Reference
+page-type: javascript-constructor
 browser-compat: javascript.builtins.FinalizationRegistry.FinalizationRegistry
 ---
 
 {{JSRef}}
 
-The **`FinalizationRegistry`** constructor creates a {{jsxref("FinalizationRegistry")}} object that uses the given callback.
+The **`FinalizationRegistry()`** constructor creates {{jsxref("FinalizationRegistry")}} objects.
 
 ## Syntax
 

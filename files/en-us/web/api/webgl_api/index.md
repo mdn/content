@@ -1,29 +1,17 @@
 ---
-title: 'WebGL: 2D and 3D graphics for the web'
+title: "WebGL: 2D and 3D graphics for the web"
 slug: Web/API/WebGL_API
 page-type: web-api-overview
-tags:
-  - 3D
-  - 3D Graphics
-  - API
-  - Advanced
-  - Graphics
-  - JavaScript
-  - Media
-  - Overview
-  - Reference
-  - WebGL
-  - WebGL API
 browser-compat:
   - api.WebGLRenderingContext
   - api.WebGL2RenderingContext
 ---
 
-{{WebGLSidebar}}
+{{DefaultAPISidebar("WebGL")}}
 
 **WebGL** (Web Graphics Library) is a JavaScript API for rendering high-performance interactive 3D and 2D graphics within any compatible web browser without the use of plug-ins. WebGL does so by introducing an API that closely conforms to OpenGL ES 2.0 that can be used in HTML {{HTMLElement("canvas")}} elements. This conformance makes it possible for the API to take advantage of hardware graphics acceleration provided by the user's device.
 
-Support for WebGL is present in [Firefox](/en-US/docs/Mozilla/Firefox) 4+, [Google Chrome](https://www.google.com/chrome/) 9+, [Opera](https://www.opera.com/) 12+, [Safari](https://www.apple.com/safari/) 5.1+, [Internet Explorer](https://support.microsoft.com/en-us/windows/internet-explorer-help-23360e49-9cd3-4dda-ba52-705336cc0de2) 11+, and [Microsoft Edge](https://www.microsoft.com/en-us/edge) build 10240+; however, the user's device must also have hardware that supports these features.
+Support for WebGL is present in all modern browsers (see the [compatibility tables](#browser-compatibility) below); however, the user's device must also have hardware that supports these features.
 
 The [WebGL 2](#webgl_2) API introduces support for much of the OpenGL ES 3.0 feature set; it's provided through the {{domxref("WebGL2RenderingContext")}} interface.
 
@@ -67,6 +55,7 @@ The {{HTMLElement("canvas")}} element is also used by the [Canvas API](/en-US/do
 - {{domxref("EXT_texture_filter_anisotropic")}}
 - {{domxref("EXT_texture_norm16")}}
 - {{domxref("KHR_parallel_shader_compile")}}
+- {{domxref("OES_draw_buffers_indexed")}}
 - {{domxref("OES_element_index_uint")}}
 - {{domxref("OES_fbo_render_mipmap")}}
 - {{domxref("OES_standard_derivatives")}}

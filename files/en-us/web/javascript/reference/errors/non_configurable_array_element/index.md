@@ -1,11 +1,7 @@
 ---
-title: 'TypeError: can''t delete non-configurable array element'
+title: "TypeError: can't delete non-configurable array element"
 slug: Web/JavaScript/Reference/Errors/Non_configurable_array_element
-tags:
-  - Error
-  - Errors
-  - JavaScript
-  - TypeError
+page-type: javascript-error
 ---
 
 {{jsSidebar("Errors")}}

@@ -1,12 +1,7 @@
 ---
 title: WeakSet
 slug: Web/JavaScript/Reference/Global_Objects/WeakSet
-tags:
-  - Class
-  - ECMAScript 2015
-  - JavaScript
-  - WeakSet
-  - Polyfill
+page-type: javascript-class
 browser-compat: javascript.builtins.WeakSet
 ---
 
@@ -45,6 +40,7 @@ function execRecursively(fn, subject, _refs = new WeakSet()) {
     for (const key in subject) {
       execRecursively(fn, subject[key], _refs);
     }
+    _refs.delete(subject);
   }
 }
 
@@ -70,6 +66,10 @@ The number of objects or their traversal order is immaterial, so a `WeakSet` is 
 
 ## Instance properties
 
+These properties are defined on `WeakSet.prototype` and shared by all `WeakSet` instances.
+
+- {{jsxref("Object/constructor", "WeakSet.prototype.constructor")}}
+  - : The constructor function that created the instance object. For `WeakSet` instances, the initial value is the {{jsxref("WeakSet/WeakSet", "WeakSet")}} constructor.
 - `WeakSet.prototype[@@toStringTag]`
   - : The initial value of the [`@@toStringTag`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) property is the string `"WeakSet"`. This property is used in {{jsxref("Object.prototype.toString()")}}.
 

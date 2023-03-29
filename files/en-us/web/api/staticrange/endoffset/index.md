@@ -2,18 +2,6 @@
 title: StaticRange.endOffset
 slug: Web/API/StaticRange/endOffset
 page-type: web-api-instance-property
-tags:
-  - API
-  - DOM
-  - DOM API
-  - Property
-  - Read-only
-  - Reference
-  - Static Range API
-  - StaticRange
-  - endOffset
-  - offset
-  - startContainer
 browser-compat: api.StaticRange.endOffset
 ---
 

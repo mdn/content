@@ -1,14 +1,9 @@
 ---
-title: 'WindowControlsOverlay: geometrychange event'
+title: "WindowControlsOverlay: geometrychange event"
 slug: Web/API/WindowControlsOverlay/geometrychange_event
 page-type: web-api-event
-tags:
-  - Event
-  - Reference
-  - Progressive Web Apps
-  - Window Controls Overlay
-  - events
-  - Experimental
+status:
+  - experimental
 browser-compat: api.WindowControlsOverlay.geometrychange_event
 ---
 
@@ -23,9 +18,9 @@ This only applies to Progressive Web Apps installed on desktop operating systems
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('geometrychange', (event) => { })
+addEventListener("geometrychange", (event) => {});
 
-ongeometrychange = (event) => { }
+ongeometrychange = (event) => {};
 ```
 
 ## Event type
@@ -48,9 +43,11 @@ _In addition to the properties listed below, properties from the parent interfac
 Using `addEventListener()`:
 
 ```js
-navigator.windowControlsOverlay.addEventListener('geometrychange', (event) => {
-  const {x, y, width, height} = event.titlebarAreaRect;
-  console.log(`The titlebar area coordinates are x:${x}, y:${y}, width:${width}, height:${height}`);
+navigator.windowControlsOverlay.addEventListener("geometrychange", (event) => {
+  const { x, y, width, height } = event.titlebarAreaRect;
+  console.log(
+    `The titlebar area coordinates are x:${x}, y:${y}, width:${width}, height:${height}`
+  );
 });
 ```
 
@@ -58,8 +55,10 @@ Using the `ongeometrychange` event handler property:
 
 ```js
 navigator.windowControlsOverlay.ongeometrychange = (event) => {
-  const {x, y, width, height} = event.titlebarAreaRect;
-  console.log(`The titlebar area coordinates are x:${x}, y:${y}, width:${width}, height:${height}`);
+  const { x, y, width, height } = event.titlebarAreaRect;
+  console.log(
+    `The titlebar area coordinates are x:${x}, y:${y}, width:${width}, height:${height}`
+  );
 };
 ```
 

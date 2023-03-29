@@ -1,8 +1,7 @@
 ---
 title: Fetch metadata request header
 slug: Glossary/Fetch_metadata_request_header
-tags:
-  - Fetch Metadata Request Headers
+page-type: glossary-definition
 ---
 
 A **fetch metadata request header** is an {{Glossary("Request header", "HTTP request header")}} that provides additional information about the context from which the request originated. This allows the server to make decisions about whether a request should be allowed based on where the request came from and how the resource will be used.

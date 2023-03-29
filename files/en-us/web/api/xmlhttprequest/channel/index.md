@@ -2,15 +2,8 @@
 title: XMLHttpRequest.channel
 slug: Web/API/XMLHttpRequest/channel
 page-type: web-api-instance-property
-tags:
-  - API
-  - Non-standard
-  - Property
-  - Reference
-  - XHR
-  - XMLHttpRequest
-  - channel
-  - nsIChannel
+status:
+  - non-standard
 ---
 
 {{APIRef('XMLHttpRequest')}}

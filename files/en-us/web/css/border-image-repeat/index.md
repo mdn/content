@@ -2,12 +2,6 @@
 title: border-image-repeat
 slug: Web/CSS/border-image-repeat
 page-type: css-property
-tags:
-  - CSS
-  - CSS Borders
-  - CSS Property
-  - Reference
-  - recipe:css-property
 browser-compat: css.properties.border-image-repeat
 ---
 
@@ -94,7 +88,8 @@ The `border-image-repeat` property may be specified using one or two values chos
 ```js hidden
 const repetition = document.getElementById("repetition");
 repetition.addEventListener("change", (evt) => {
-  document.getElementById("bordered").style.borderImageRepeat = evt.target.value;
+  document.getElementById("bordered").style.borderImageRepeat =
+    evt.target.value;
 });
 ```
 

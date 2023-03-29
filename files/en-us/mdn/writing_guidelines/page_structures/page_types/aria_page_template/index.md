@@ -2,9 +2,6 @@
 title: ARIA page template
 slug: MDN/Writing_guidelines/Page_structures/Page_types/ARIA_Page_Template
 page-type: mdn-writing-guide
-tags:
-  - meta
-  - writing-guide
 ---
 
 {{MDNSidebar}}
@@ -19,12 +16,12 @@ An ARIA role page should have a `title` and `slug` of `ARIA: Name Of The Role`. 
 
 A number of macro calls appear at the top of the content section. You should update or delete them according to the advice below:
 
-- \\{{deprecated_header}}—generates a **Deprecated** banner that indicates the technology is [deprecated](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#deprecated_and_obsolete). If it isn't, then you can remove the macro call.
+- \\{{deprecated_header}}—generates a **Deprecated** banner that indicates the technology is [deprecated](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#deprecated). If it isn't, then you can remove the macro call.
 - \\{{ariaref}}—generates a suitable ARIA sidebar, depending on what tags are included on the page.
 
 ### Tags
 
-In ARIA role or attribute subpages, you need to include the following tags (see the _Tags_ section at the bottom of the editor UI): **ARIA**, **Reference**, **ARIA Role** or **ARIA Attribute**, _the name of the Role or Attribute_ (e.g. **ARIA button** or **aria-labelledby**), **ARIA widget,** **Experimental** (if the role or attribute is [experimental](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#experimental)), and **Deprecated** (if it is [deprecated](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#deprecated_and_obsolete)).
+In ARIA role or attribute subpages, you need to include the following tags (see the _Tags_ section at the bottom of the editor UI): **ARIA**, **Reference**, **ARIA Role** or **ARIA Attribute**, _the name of the Role or Attribute_ (e.g. **ARIA button** or **aria-labelledby**), **ARIA widget,** **Experimental** (if the role or attribute is [experimental](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#experimental)), and **Deprecated** (if it is [deprecated](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#deprecated)).
 
 ### Specifications
 
@@ -129,13 +126,13 @@ Any additional benefits this feature has for non-typical screen reader users, li
 
 ## Precedence order
 
-What are the related properties, and in what order will this attribute or property be read (which property will take precedence over this one, and which property will be overwritten.
+What are the related properties, and in what order will this attribute or property be read (which property will take precedence over this one, and which property will be overwritten.)
 
 ## Screen reader support
 
 ## See also
 
-- Include list of
-- other links related to
-- this role or attribute that might
-- be useful
+Include links to reference pages and guides related to the current role or attribute. For more guidelines, see the [See also section](/en-US/docs/MDN/Writing_guidelines/Writing_style_guide#see_also_section) in the _Writing style guide_.
+
+- link1
+- link2
