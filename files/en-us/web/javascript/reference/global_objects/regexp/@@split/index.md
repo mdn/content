@@ -14,7 +14,8 @@ The **`[@@split]()`** method of a regular expression specifies how [`String.prot
 ## Syntax
 
 ```js-nolint
-regexp[Symbol.split](str[, limit])
+regexp[Symbol.split](str)
+regexp[Symbol.split](str, limit)
 ```
 
 ### Parameters

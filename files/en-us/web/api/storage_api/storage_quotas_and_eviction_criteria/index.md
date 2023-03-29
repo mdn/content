@@ -149,7 +149,7 @@ When this happens, the browser starts evicting best-effort origins as described 
 
 ### Proactive eviction
 
-Currently, Safari is the only browser that proactively evicts data. The data from any origin that hasn't been accessed by the user over the last seven days is deleted.
+Safari proactively evicts data when cross-site tracking prevention is turned on. If an origin has no user interaction, such as click or tap, in the last seven days of browser use, its data created from script will be deleted. Cookies set by server are exempt from this eviction.
 
 ## How is data evicted?
 

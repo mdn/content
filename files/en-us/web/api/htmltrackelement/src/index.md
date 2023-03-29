@@ -31,5 +31,5 @@ A string object containing the URL of the text track data.
 
 ## See also
 
-- The interface defining it, {{domxref("HTMLTrackElement")}}.
+- {{domxref("HTMLTrackElement")}}: Interface used to define the `HTMLTrackElement.src` property
 - {{HTMLElement("track")}}
