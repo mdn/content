@@ -114,4 +114,4 @@ The following APIs can be used by a service worker to perform tasks in the backg
 - [Web Share API](/en-US/docs/Web/API/Web_Share_API)
   - : A mechanism for sharing text, links, files, and other content to other apps selected by the user on their device.
 - [Window Controls Overlay API](/en-US/docs/Web/API/Window_Controls_Overlay_API)
-  - : An API for PWAs installed on desktop operating systems to hide the default window title bar and display their own content over the full surface area of the app window instead.
+  - : An API for PWAs installed on desktop operating systems that enables hiding the default window title bar, enabling displaying the app over the full surface area of the app window.
