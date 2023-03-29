@@ -27,9 +27,8 @@ The {{domxref("HTMLFormElement.requestSubmit()")}} method is identical to activa
 form's submit {{HtmlElement("button")}} and does not have these differences.
 
 If a form control (such as a submit button) has a `name` or `id`
-of `submit`, this will mask the form's submit method. Trying to call `document.forms["myform"].submit();` will
-throw an error `.submit is not a function` because in this case `submit` will refer to the form control which has a `name` or `id`
-of `submit`.
+of `submit`, this will mask the form's submit method. Trying to call `document.forms["myform"].submit();`
+throws an error `.submit is not a function` because in this case `submit` refers to the form control which has a `name` or `id` of `submit`.
 
 {{HtmlElement("input")}} with attribute type="submit" will not be submitted with the
 form when using **`HTMLFormElement.submit()`**, but it would be
