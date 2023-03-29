@@ -266,7 +266,7 @@ h1 + ul + p {
 You can combine multiple types together, too. Try adding the following into your code:
 
 ```css
-body h1 + p .special {
+body h1 + p.special {
   color: yellow;
   background-color: black;
   padding: 5px;
