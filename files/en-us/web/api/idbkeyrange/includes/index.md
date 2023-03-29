@@ -36,12 +36,12 @@ A boolean value.
 ## Examples
 
 ```js
-const keyRangeValue = IDBKeyRange.bound('A', 'K', false, false);
+const keyRangeValue = IDBKeyRange.bound("A", "K", false, false);
 
-keyRangeValue.includes('F');
+keyRangeValue.includes("F");
 // Returns true
 
-keyRangeValue.includes('W');
+keyRangeValue.includes("W");
 // Returns false
 ```
 

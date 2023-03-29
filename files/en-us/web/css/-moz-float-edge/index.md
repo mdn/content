@@ -44,7 +44,10 @@ The non-standard **`-moz-float-edge`** [CSS](/en-US/docs/Web/CSS) property speci
 
 ## Formal syntax
 
-{{csssyntax}}
+```plain
+-moz-float-edge =
+  border-box | content-box | margin-box | padding-box
+```
 
 ## Examples
 
@@ -83,4 +86,4 @@ Not part of any standard.
 
 ## See also
 
-- {{bug(432891)}}
+- [Firefox bug 432891](https://bugzil.la/432891)

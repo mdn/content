@@ -2,12 +2,10 @@
 title: CSSTransformValue.toMatrix()
 slug: Web/API/CSSTransformValue/toMatrix
 page-type: web-api-instance-method
-status:
-  - experimental
 browser-compat: api.CSSTransformValue.toMatrix
 ---
 
-{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
+{{APIRef("CSS Typed OM")}}
 
 The **`toMatrix()`** method of the
 {{domxref("CSSTransformValue")}} interface returns a {{domxref('DOMMatrix')}} object.

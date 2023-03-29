@@ -44,26 +44,29 @@ Returns `true` if the indicated script type is supported and `false` otherwise.
 
 The code below shows how to check if `HTMLScriptElement.supports()` is defined, and if so, to use it to test whether particular types of scripts are supported.
 
-```html hidden
-<textarea id="log" rows="5" cols="110"></textarea>
+```js
+const log = document.getElementById("log");
+
+function checkSupport(type) {
+  const result = HTMLScriptElement.supports(type) ? "true" : "false";
+  log.textContent += `HTMLScriptElement.supports('${type}') is ${result}\n`;
+}
+
+if (typeof HTMLScriptElement.supports === "undefined") {
+  log.textContent = "HTMLScriptElement.supports() method is not supported";
+} else {
+  // Check if various script types are supported
+  checkSupport("module");
+  checkSupport("classic");
+  checkSupport("importmap");
+  checkSupport("speculationrules");
+  // Any other value will cause the method to return false
+  checkSupport("anything else");
+}
 ```
 
-```js
-if (typeof HTMLScriptElement.supports === 'undefined') {
-  //Check if method is defined
-  console.log("HTMLScriptElement.supports() method is not supported");
-}
-else
-{
-  //Returns true for the supported values
-  console.log(`HTMLScriptElement.supports('module'): ${HTMLScriptElement.supports('module')}`);
-  console.log(`HTMLScriptElement.supports('classic'): ${HTMLScriptElement.supports('classic')}`);
-  console.log(`HTMLScriptElement.supports('importmap'): ${HTMLScriptElement.supports('importmap')}`);
-  console.log(`HTMLScriptElement.supports('speculationrules'): ${HTMLScriptElement.supports('speculationrules')}`);
-
-  //Returns false for any other values
-  console.log(`HTMLScriptElement.supports('anything else'): ${HTMLScriptElement.supports('anything else')}`);
-}
+```html hidden
+<textarea id="log" rows="6" cols="80"></textarea>
 ```
 
 {{ EmbedLiveSample('Examples') }}

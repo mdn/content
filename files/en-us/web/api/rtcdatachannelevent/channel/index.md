@@ -27,7 +27,7 @@ pc.ondatachannel = (event) => {
   inboundDataChannel.onmessage = handleIncomingMessage;
   inboundDataChannel.onopen = handleChannelOpen;
   inboundDataChannel.onclose = handleChannelClose;
-}
+};
 ```
 
 ## Specifications

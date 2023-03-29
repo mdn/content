@@ -2,24 +2,12 @@
 title: "<a>: The Anchor element"
 slug: Web/HTML/Element/a
 page-type: html-element
-tags:
-  - Content
-  - Element
-  - HTML
-  - HTML text-level semantics
-  - HTML:Flow content
-  - HTML:Interactive content
-  - HTML:Palpable Content
-  - HTML:Phrasing content
-  - Inline element
-  - Reference
-  - Web
 browser-compat: html.elements.a
 ---
 
 {{HTMLSidebar}}
 
-The **`<a>`** [HTML](/en-US/docs/Web/HTML) element (or _anchor_ element), with [its `href` attribute](#attr-href), creates a hyperlink to web pages, files, email addresses, locations in the same page, or anything else a URL can address.
+The **`<a>`** [HTML](/en-US/docs/Web/HTML) element (or _anchor_ element), with [its `href` attribute](#href), creates a hyperlink to web pages, files, email addresses, locations in the same page, or anything else a URL can address.
 
 Content within each `<a>` _should_ indicate the link's destination. If the `href` attribute is present, pressing the enter key while focused on the `<a>` element will activate it.
 
@@ -29,7 +17,7 @@ Content within each `<a>` _should_ indicate the link's destination. If the `href
 
 This element's attributes include the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 
-- {{HTMLAttrDef("download")}}
+- `download`
 
   - : Causes the browser to treat the linked URL as a download. Can be used with or without a `filename` value:
 
@@ -50,7 +38,7 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
     >   - If the header specifies a `filename`, it takes priority over a filename specified in the `download` attribute.
     >   - If the header specifies a disposition of `inline`, Chrome and Firefox prioritize the attribute and treat it as a download. Old Firefox versions (before 82) prioritize the header and will display the content inline.
 
-- {{HTMLAttrDef("href")}}
+- `href`
 
   - : The URL that the hyperlink points to. Links are not restricted to HTTP-based URLs — they can use any URL scheme supported by browsers:
 
@@ -61,11 +49,11 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
     - Email addresses with `mailto:` URLs
     - While web browsers may not support other URL schemes, websites can with [`registerProtocolHandler()`](/en-US/docs/Web/API/Navigator/registerProtocolHandler)
 
-- {{HTMLAttrDef("hreflang")}}
+- `hreflang`
   - : Hints at the human language of the linked URL. No built-in functionality. Allowed values are the same as [the global `lang` attribute](/en-US/docs/Web/HTML/Global_attributes/lang).
-- {{HTMLAttrDef("ping")}}
+- `ping`
   - : A space-separated list of URLs. When the link is followed, the browser will send {{HTTPMethod("POST")}} requests with the body `PING` to the URLs. Typically for tracking.
-- {{HTMLAttrDef("referrerpolicy")}}
+- `referrerpolicy`
 
   - : How much of the [referrer](/en-US/docs/Web/HTTP/Headers/Referer) to send when following the link.
 
@@ -78,9 +66,9 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
     - `strict-origin-when-cross-origin` (default): Send a full URL when performing a same-origin request, only send the origin when the protocol security level stays the same (HTTPS→HTTPS), and send no header to a less secure destination (HTTPS→HTTP).
     - `unsafe-url`: The referrer will include the origin _and_ the path (but not the [fragment](/en-US/docs/Web/API/HTMLAnchorElement/hash), [password](/en-US/docs/Web/API/HTMLAnchorElement/password), or [username](/en-US/docs/Web/API/HTMLAnchorElement/username)). **This value is unsafe**, because it leaks origins and paths from TLS-protected resources to insecure origins.
 
-- {{HTMLAttrDef("rel")}}
+- `rel`
   - : The relationship of the linked URL as space-separated link types.
-- {{HTMLAttrDef("target")}}
+- `target`
 
   - : Where to display the linked URL, as the name for a _browsing context_ (a tab, window, or {{HTMLElement("iframe")}}). The following keywords have special meanings for where to load the URL:
 
@@ -91,28 +79,28 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
 
     > **Note:** Setting `target="_blank"` on `<a>` elements implicitly provides the same `rel` behavior as setting [`rel="noopener"`](/en-US/docs/Web/HTML/Attributes/rel/noopener) which does not set `window.opener`.
 
-- {{HTMLAttrDef("type")}}
+- `type`
   - : Hints at the linked URL's format with a {{Glossary("MIME type")}}. No built-in functionality.
 
 ### Deprecated attributes
 
-- {{HTMLAttrDef("charset")}} {{Deprecated_Inline}}
+- `charset` {{Deprecated_Inline}}
 
   - : Hinted at the {{Glossary("character encoding")}} of the linked URL.
 
     > **Note:** This attribute is deprecated and **should not be used by authors**. Use the HTTP {{HTTPHeader("Content-Type")}} header on the linked URL.
 
-- {{HTMLAttrDef("coords")}} {{Deprecated_Inline}}
+- `coords` {{Deprecated_Inline}}
   - : Used with [the `shape` attribute](#shape). A comma-separated list of coordinates.
-- {{HTMLAttrDef("name")}} {{Deprecated_Inline}}
+- `name` {{Deprecated_Inline}}
 
   - : Was required to define a possible target location in a page. In HTML 4.01, `id` and `name` could both be used on `<a>`, as long as they had identical values.
 
-    > **Note:** Use the global attribute {{HTMLAttrxRef("id")}} instead.
+    > **Note:** Use the global attribute [`id`](/en-US/docs/Web/HTML/Global_attributes#id) instead.
 
-- {{HTMLAttrDef("rev")}} {{Deprecated_Inline}}
+- `rev` {{Deprecated_Inline}}
   - : Specified a reverse link; the opposite of [the `rel` attribute](#rel). Deprecated for being very confusing.
-- {{HTMLAttrDef("shape")}} {{Deprecated_Inline}}
+- `shape` {{Deprecated_Inline}}
 
   - : The shape of the hyperlink's region in an image map.
 
@@ -163,6 +151,10 @@ a {
 <h2 id="Section_further_down">Section further down</h2>
 ```
 
+#### Result
+
+{{EmbedLiveSample('Linking to an element on the same page')}}
+
 > **Note:** You can use `href="#top"` or the empty fragment (`href="#"`) to link to the top of the current page, [as defined in the HTML specification](https://html.spec.whatwg.org/multipage/browsing-the-web.html#scroll-to-the-fragment-identifier).
 
 ### Linking to an email address
@@ -173,6 +165,10 @@ To create links that open in the user's email program to let them send a new mes
 <a href="mailto:nowhere@mozilla.org">Send email to nowhere</a>
 ```
 
+#### Result
+
+{{EmbedLiveSample('Linking to an email address')}}
+
 For details about `mailto:` URLs, such as including a subject or body, see [Email links](/en-US/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks#email_links) or {{RFC(6068)}}.
 
 ### Linking to telephone numbers
@@ -181,6 +177,10 @@ For details about `mailto:` URLs, such as including a subject or body, see [Emai
 <a href="tel:+49.157.0156">+49 157 0156</a>
 <a href="tel:+1(800)555-0123">(800) 555-0123</a>
 ```
+
+#### Result
+
+{{EmbedLiveSample('Linking to telephone numbers')}}
 
 `tel:` link behavior varies with device capabilities:
 
@@ -280,6 +280,10 @@ A sadly common mistake is to only link the words "click here" or "here":
 <p>Learn more about our products <a href="/products">here</a>.</p>
 ```
 
+##### Result
+
+{{EmbedLiveSample('Inaccessible, weak link text')}}
+
 #### Strong link text
 
 Luckily, this is an easy fix, and it's actually shorter than the inaccessible version!
@@ -287,6 +291,10 @@ Luckily, this is an easy fix, and it's actually shorter than the inaccessible ve
 ```html example-good
 <p>Learn more <a href="/products">about our products</a>.</p>
 ```
+
+##### Result
+
+{{EmbedLiveSample('Strong link text')}}
 
 Assistive software has shortcuts to list all links on a page. However, strong link text benefits all users — the "list all links" shortcut emulates how sighted users quickly scan pages.
 
@@ -312,13 +320,17 @@ People experiencing low vision conditions, navigating with the aid of screen rea
 </a>
 ```
 
+##### Result
+
+{{EmbedLiveSample('Link that opens a new tab/window')}}
+
 #### Link to a non-HTML resource
 
 ```html
 <a href="2017-annual-report.ppt"> 2017 Annual Report (PowerPoint) </a>
 ```
 
-If an icon is used to signify link behavior, make sure it has {{HTMLAttrxRef("alt", "img", "alt text", "true")}}:
+If an icon is used to signify link behavior, make sure it has an [_alt text_](/en-US/docs/Web/HTML/Element/img#alt):
 
 ```html
 <a target="_blank" href="https://www.wikipedia.org">
@@ -331,6 +343,10 @@ If an icon is used to signify link behavior, make sure it has {{HTMLAttrxRef("al
   <img alt="(PowerPoint file)" src="ppt-icon.svg" />
 </a>
 ```
+
+##### Result
+
+{{EmbedLiveSample('Link to a non-HTML resource')}}
 
 - [WebAIM: Links and Hypertext - Hypertext Links](https://webaim.org/techniques/hypertext/hypertext_links)
 - [MDN / Understanding WCAG, Guideline 3.2](/en-US/docs/Web/Accessibility/Understanding_WCAG/Understandable#guideline_3.2_—_predictable_make_web_pages_appear_and_operate_in_predictable_ways)
@@ -362,6 +378,10 @@ A **skip link** is a link placed as early as possible in {{HTMLElement("body")}}
   top: 0;
 }
 ```
+
+#### Result
+
+{{EmbedLiveSample('Skip links')}}
 
 Skip links let keyboard users bypass content repeated throughout multiple pages, such as header navigation.
 
@@ -398,19 +418,19 @@ Spacing may be created using CSS properties like {{CSSxRef("margin")}}.
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories"
+        <a href="/en-US/docs/Web/HTML/Content_categories"
           >Content categories</a
         >
       </th>
       <td>
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
           >Flow content</a
         >,
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content"
           >phrasing content</a
         >,
         <a
-          href="/en-US/docs/Web/Guide/HTML/Content_categories#interactive_content"
+          href="/en-US/docs/Web/HTML/Content_categories#interactive_content"
           >interactive content</a
         >, palpable content.
       </td>
@@ -419,11 +439,11 @@ Spacing may be created using CSS properties like {{CSSxRef("margin")}}.
       <th scope="row">Permitted content</th>
       <td>
         <a
-          href="/en-US/docs/Web/Guide/HTML/Content_categories#transparent_content_model"
+          href="/en-US/docs/Web/HTML/Content_categories#transparent_content_model"
           >Transparent</a
         >, except that no descendant may be
         <a
-          href="/en-US/docs/Web/Guide/HTML/Content_categories#interactive_content"
+          href="/en-US/docs/Web/HTML/Content_categories#interactive_content"
           >interactive content</a
         > or an
         <a href="/en-US/docs/Web/HTML/Element/a"
@@ -443,10 +463,10 @@ Spacing may be created using CSS properties like {{CSSxRef("margin")}}.
       <th scope="row">Permitted parents</th>
       <td>
         Any element that accepts
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content"
           >phrasing content</a
         >, or any element that accepts
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
           >flow content</a
         >, but not other <code>&#x3C;a></code> elements.
       </td>

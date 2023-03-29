@@ -12,7 +12,7 @@ immediately after the browser has completed other operations such as events and 
 updates.
 
 > **Note:** This method is not expected to become standard, and is nowadays only implemented
-> by Node.js 0.10+. It meets resistance both from [Gecko](https://bugzilla.mozilla.org/show_bug.cgi?id=686201) (Firefox) and [Chromium/WebKit](https://bugs.chromium.org/p/chromium/issues/detail?id=146172) (Chrome/Safari).
+> by Node.js 0.10+. It meets resistance both from [Gecko](https://bugzil.la/686201) (Firefox) and [Chromium/WebKit](https://crbug.com/146172) (Chrome/Safari).
 
 ## Syntax
 
@@ -48,8 +48,6 @@ This method can be used instead of the `setTimeout(fn, 0)` method to execute
 The feature can be emulated in a few different ways:
 
 - {{DOMxRef("Window.postMessage", "postMessage")}} can be used to trigger an immediate but yielding callback.
-  Do note that Internet Explorer 8 includes a synchronous version of
-  `postMessage`, which means it cannot be used as a fallback.
 - {{DOMxRef("MessageChannel")}} can be used reliably inside of Web Workers whereas the
   semantics of postMessage mean it cannot be used there.
 - `setTimeout(fn, 0)` _can_ potentially be used, however as it is
@@ -71,5 +69,6 @@ specification is no longer being worked on.
 ## See also
 
 - [Polyfill of `setImmediate` in `core-js`](https://github.com/zloirock/core-js#setimmediate)
-- {{DOMxRef("Window.clearImmediate()")}}
 - [Microsoft `setImmediate` API Demo](https://jphpsf.github.io/setImmediate-shim-demo/)
+- {{DOMxRef("Window.clearImmediate()")}}
+- {{DOMxRef("Window.requestIdleCallback()")}}

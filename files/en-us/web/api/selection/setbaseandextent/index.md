@@ -22,6 +22,7 @@ setBaseAndExtent(anchorNode, anchorOffset, focusNode, focusOffset)
 - `anchorNode`
   - : The node at the start of the selection.
 - `anchorOffset`
+
   - : The number of child nodes from the start of the anchor node that should be excluded
     from the selection. So for example, if the value is 0 the whole node is included. If
     the value is 1, the whole node minus the first child node is included. And so on.
@@ -33,6 +34,7 @@ setBaseAndExtent(anchorNode, anchorOffset, focusNode, focusOffset)
 - `focusNode`
   - : The node at the end of the selection.
 - `focusOffset`
+
   - : The number of child nodes from the start of the focus node that should be included
     in the selection. So for example, if the value is 0 the whole node is excluded. If the
     value is 1, the first child node is included. And so on.
@@ -73,9 +75,13 @@ selection into the output paragraph at the very bottom of the HTML.
 ```html
 <h1>setBaseAndExtent example</h1>
 <div>
-  <p class="one"><span>Fish</span><span>Dog</span><span>Cat</span><span>Bird</span></p>
+  <p class="one">
+    <span>Fish</span><span>Dog</span><span>Cat</span><span>Bird</span>
+  </p>
   <p>MIDDLE</p>
-  <p class="two"><span>Car</span><span>Bike</span><span>Boat</span><span>Plane</span></p>
+  <p class="two">
+    <span>Car</span><span>Bike</span><span>Boat</span><span>Plane</span>
+  </p>
 </div>
 
 <div>
@@ -98,15 +104,15 @@ selection into the output paragraph at the very bottom of the HTML.
 The JavaScript looks like so:
 
 ```js
-const one = document.querySelector('.one');
-const two = document.querySelector('.two');
+const one = document.querySelector(".one");
+const two = document.querySelector(".two");
 
-const aOffset = document.getElementById('aOffset');
-const fOffset = document.getElementById('fOffset');
+const aOffset = document.getElementById("aOffset");
+const fOffset = document.getElementById("fOffset");
 
-const button = document.querySelector('button');
+const button = document.querySelector("button");
 
-const output = document.querySelector('.output');
+const output = document.querySelector(".output");
 
 let selection;
 
@@ -119,7 +125,7 @@ button.onclick = () => {
   } catch (e) {
     output.textContent = e.message;
   }
-}
+};
 ```
 
 Play with the live example below, setting different offset values to see how this

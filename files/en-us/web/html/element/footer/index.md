@@ -2,17 +2,12 @@
 title: <footer>
 slug: Web/HTML/Element/footer
 page-type: html-element
-tags:
-  - Element
-  - HTML
-  - HTML sections
-  - Reference
 browser-compat: html.elements.footer
 ---
 
 {{HTMLSidebar}}
 
-The **`<footer>`** [HTML](/en-US/docs/Web/HTML) element represents a footer for its nearest ancestor [sectioning content](/en-US/docs/Web/Guide/HTML/Content_categories#sectioning_content) or [sectioning root](/en-US/docs/Web/HTML/Element/Heading_Elements#sectioning_root) element. A `<footer>` typically contains information about the author of the section, copyright data or links to related documents.
+The **`<footer>`** [HTML](/en-US/docs/Web/HTML) element represents a footer for its nearest ancestor [sectioning content](/en-US/docs/Web/HTML/Content_categories#sectioning_content) or [sectioning root](/en-US/docs/Web/HTML/Element/Heading_Elements#sectioning_root) element. A `<footer>` typically contains information about the author of the section, copyright data or links to related documents.
 
 {{EmbedInteractiveExample("pages/tabbed/footer.html", "tabbed-standard")}}
 
@@ -20,12 +15,12 @@ The **`<footer>`** [HTML](/en-US/docs/Web/HTML) element represents a footer for 
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories"
+        <a href="/en-US/docs/Web/HTML/Content_categories"
           >Content categories</a
         >
       </th>
       <td>
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
           >Flow content</a
         >, palpable content.
       </td>
@@ -33,7 +28,7 @@ The **`<footer>`** [HTML](/en-US/docs/Web/HTML) element represents a footer for 
     <tr>
       <th scope="row">Permitted content</th>
       <td>
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
           >Flow content</a
         >, but with no <code>&#x3C;footer></code> or
         {{HTMLElement("header")}} descendants.
@@ -47,7 +42,7 @@ The **`<footer>`** [HTML](/en-US/docs/Web/HTML) element represents a footer for 
       <th scope="row">Permitted parents</th>
       <td>
         Any element that accepts
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
           >flow content</a
         >. Note that a <code>&#x3C;footer></code> element must not be a
         descendant of an {{HTMLElement("address")}},
@@ -116,16 +111,36 @@ This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_a
 ## Examples
 
 ```html
-<footer>
-  Some copyright info or perhaps some author info for an &lt;article&gt;?
-</footer>
+<body>
+<h3>FIFA World Cup top goalscorers</h3>
+<ol>
+<li>Miroslav Klose, 16</li>
+<li>Ronaldo Nazário, 15</li>
+<li>Gerd Müller, 14</li>
+  </ol>
+
+<footer> <small>Copyright © 2023 Football History Archives . All Rights Reserved.</small></footer>
+
+</body>
 ```
+
+```css
+footer {
+    text-align:center;
+    padding: 5px;
+    background-color: #abbaba;
+    color: #000;
+}
+
+```
+
+{{EmbedLiveSample('Examples')}}
 
 ## Accessibility concerns
 
 Prior to the release of Safari 13, the `contentinfo` [landmark role](/en-US/docs/Learn/Accessibility/WAI-ARIA_basics#signpostslandmarks) was not properly exposed by [VoiceOver](https://help.apple.com/voiceover/info/guide/). If needing to support legacy Safari browsers, add `role="contentinfo"` to the `footer` element to ensure the landmark will be properly exposed.
 
-- Related: [WebKit Bugzilla: 146930 – AX: HTML native elements (header, footer, main, aside, nav) should work the same as ARIA landmarks, sometimes they don't](https://bugs.webkit.org/show_bug.cgi?id=146930)
+- Related: [WebKit Bugzilla: 146930 – AX: HTML native elements (header, footer, main, aside, nav) should work the same as ARIA landmarks, sometimes they don't](https://webkit.org/b/146930)
 
 ## Specifications
 

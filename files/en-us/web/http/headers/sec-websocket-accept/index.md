@@ -1,15 +1,6 @@
 ---
 title: Sec-WebSocket-Accept
 slug: Web/HTTP/Headers/Sec-WebSocket-Accept
-tags:
-  - Draft
-  - HTTP
-  - NeedsCompatTable
-  - NeedsContent
-  - Reference
-  - Sec-WebSocket-Accept
-  - WebSockets
-  - header
 browser-compat: http.headers.Sec-WebSocket-Accept
 ---
 

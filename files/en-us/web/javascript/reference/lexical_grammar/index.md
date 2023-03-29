@@ -647,12 +647,134 @@ And therefore will be a syntax error around `{`.
 There are the following rules-of-thumb for dealing with ASI, if you want to enforce semicolon-less style:
 
 - Write postfix `++` and `--` on the same line as their operands.
+
+  ```js-nolint example-bad
+  const a = b
+  ++
+  console.log(a) // ReferenceError: Invalid left-hand side expression in prefix operation
+  ```
+
+  ```js-nolint example-good
+  const a = b++
+  console.log(a)
+  ```
+
 - The expressions after `return`, `throw`, or `yield` should be on the same line as the keyword.
+
+  ```js-nolint example-bad
+  function foo() {
+    return
+      1 + 1 // Returns undefined; 1 + 1 is ignored
+  }
+  ```
+
+  ```js-nolint example-good
+  function foo() {
+    return 1 + 1
+  }
+
+  function foo() {
+    return (
+      1 + 1
+    )
+  }
+  ```
+
 - Similarly, the label identifier after `break` or `continue` should be on the same line as the keyword.
+
+  ```js-nolint example-bad
+  outerBlock: {
+    innerBlock: {
+      break
+        outerBlock // SyntaxError: Illegal break statement
+    }
+  }
+  ```
+
+  ```js-nolint example-good
+  outerBlock: {
+    innerBlock: {
+      break outerBlock
+    }
+  }
+  ```
+
 - The `=>` of an arrow function should be on the same line as the end of its parameters.
+
+  ```js-nolint example-bad
+  const foo = (a, b)
+    => a + b
+  ```
+
+  ```js-nolint example-good
+  const foo = (a, b) =>
+    a + b
+  ```
+
 - The `async` of async functions, methods, etc. cannot be directly followed by a line terminator.
+
+  ```js-nolint example-bad
+  async
+  function foo() {}
+  ```
+
+  ```js-nolint example-good
+  async function
+  foo() {}
+  ```
+
 - If a line starts with one of `(`, `[`, `` ` ``, `+`, `-`, `/` (as in regex literals), prefix it with a semicolon, or end the previous line with a semicolon.
+
+  ```js-nolint example-bad
+  // The () may be merged with the previous line as a function call
+  (() => {
+    // ...
+  })()
+
+  // The [ may be merged with the previous line as a property access
+  [1, 2, 3].forEach(console.log)
+
+  // The ` may be merged with the previous line as a tagged template literal
+  `string text ${data}`.match(pattern).forEach(console.log)
+
+  // The + may be merged with the previous line as a binary + expression
+  +a.toString()
+
+  // The - may be merged with the previous line as a binary - expression
+  -a.toString()
+
+  // The / may be merged with the previous line as a division expression
+  /pattern/.exec(str).forEach(console.log)
+  ```
+
+  ```js-nolint example-good
+  ;(() => {
+    // ...
+  })()
+  ;[1, 2, 3].forEach(console.log)
+  ;`string text ${data}`.match(pattern).forEach(console.log)
+  ;+a.toString()
+  ;-a.toString()
+  ;/pattern/.exec(str).forEach(console.log)
+  ```
+
 - Class fields should preferably always be ended with semicolons — in addition to the previous rule (which includes a field declaration followed by a [computed property](/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer#computed_property_names), since the latter starts with `[`), semicolons are also required between a field declaration and a generator method.
+
+  ```js-nolint example-bad
+  class A {
+    a = 1
+    [b] = 2
+    *gen() {} // Seen as a = 1[b] = 2 * gen() {}
+  }
+  ```
+
+  ```js-nolint example-good
+  class A {
+    a = 1;
+    [b] = 2;
+    *gen() {}
+  }
+  ```
 
 ## Browser compatibility
 

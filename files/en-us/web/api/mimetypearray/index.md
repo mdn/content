@@ -31,7 +31,7 @@ The following example tests whether a plugin is available for the 'application/p
 
 ```js
 const mimeTypes = navigator.mimeTypes;
-const pdf = mimeTypes.namedItem('application/pdf');
+const pdf = mimeTypes.namedItem("application/pdf");
 
 if (pdf) {
   console.log(pdf.description);

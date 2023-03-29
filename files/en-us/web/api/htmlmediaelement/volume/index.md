@@ -18,7 +18,7 @@ loudest possible value.
 ## Examples
 
 ```js
-const obj = document.createElement('audio');
+const obj = document.createElement("audio");
 console.log(obj.volume); // 1
 obj.volume = 0.75;
 ```
@@ -33,5 +33,5 @@ obj.volume = 0.75;
 
 ## See also
 
-- The interface defining it, {{domxref("HTMLMediaElement")}}.
+- {{domxref("HTMLMediaElement")}}: Interface used to define the `HTMLMediaElement.volume` property
 - {{domxref("HTMLMediaElement.muted")}}

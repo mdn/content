@@ -156,6 +156,11 @@ const o = Object(0n)
 o === o                    // true
 ```
 
+Because coercing between Number values and BigInt values can lead to loss of precision, the following are recommended:
+
+- Only use a BigInt value when values greater than 2<sup>53</sup> are reasonably expected.
+- Don't coerce between BigInt values and Number values.
+
 ### Conditionals
 
 A BigInt value follows the same conversion rules as Numbers when:
@@ -193,61 +198,6 @@ Boolean(12n)
 !0n
 // true
 ```
-
-### BigInt coercion
-
-Many built-in operations that expect BigInts first coerce their arguments to BigInts. [The operation](https://tc39.es/ecma262/#sec-tobigint) can be summarized as follows:
-
-- BigInts are returned as-is.
-- [`undefined`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined) and [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) throw a {{jsxref("TypeError")}}.
-- `true` turns into `1n`; `false` turns into `0n`.
-- Strings are converted by parsing them as if they contain an integer literal. Any parsing failure results in a {{jsxref("SyntaxError")}}. The syntax is a subset of [string numeric literals](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#number_coercion), where decimal points or exponent indicators are not allowed.
-- [Numbers](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number) throw a {{jsxref("TypeError")}} to prevent unintended implicit coercion causing loss of precision.
-- [Symbols](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol) throw a {{jsxref("TypeError")}}.
-- Objects are first [converted to a primitive](/en-US/docs/Web/JavaScript/Data_structures#primitive_coercion) by calling their [`[@@toPrimitive]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toPrimitive) (with `"number"` as hint), `valueOf()`, and `toString()` methods, in that order. The resulting primitive is then converted to a BigInt.
-
-The best way to achieve nearly the same effect in JavaScript is through the [`BigInt()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt/BigInt) function: `BigInt(x)` uses the same algorithm to convert `x`, except that [Numbers](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number) don't throw a {{jsxref("TypeError")}}, but are converted to BigInts if they are integers.
-
-Note that built-in operations expecting BigInts often truncate the BigInt to a fixed width after coercion. This includes {{jsxref("BigInt.asIntN()")}}, {{jsxref("BigInt.asUintN()")}}, and methods of {{jsxref("BigInt64Array")}} and {{jsxref("BigUint64Array")}}.
-
-## Constructor
-
-- [`BigInt()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt/BigInt)
-  - : Creates a new BigInt value.
-
-## Static methods
-
-- [`BigInt.asIntN()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt/asIntN)
-  - : Clamps a BigInt value to a signed integer value, and returns that value.
-- [`BigInt.asUintN()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt/asUintN)
-  - : Clamps a BigInt value to an unsigned integer value, and returns that value.
-
-## Instance properties
-
-These properties are defined on `BigInt.prototype` and shared by all `BigInt` instances.
-
-- {{jsxref("Object/constructor", "BigInt.prototype.constructor")}}
-  - : The constructor function that created the instance object. For `BigInt` instances, the initial value is the {{jsxref("BigInt/BigInt", "BigInt")}} constructor.
-- `BigInt.prototype[@@toStringTag]`
-  - : The initial value of the [`@@toStringTag`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) property is the string `"BigInt"`. This property is used in {{jsxref("Object.prototype.toString()")}}. However, because `BigInt` also has its own [`toString()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt/toString) method, this property is not used unless you call [`Object.prototype.toString.call()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/call) with a BigInt as `thisArg`.
-
-## Instance methods
-
-- [`BigInt.prototype.toLocaleString()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt/toLocaleString)
-  - : Returns a string with a language-sensitive representation of this BigInt value. Overrides the [`Object.prototype.toLocaleString()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/toLocaleString) method.
-- [`BigInt.prototype.toString()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt/toString)
-  - : Returns a string representing this BigInt value in the specified radix (base). Overrides the [`Object.prototype.toString()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/toString) method.
-- [`BigInt.prototype.valueOf()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt/valueOf)
-  - : Returns this BigInt value. Overrides the [`Object.prototype.valueOf()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/valueOf) method.
-
-## Usage recommendations
-
-### Coercion
-
-Because coercing between Number values and BigInt values can lead to loss of precision, the following are recommended:
-
-- Only use a BigInt value when values greater than 2^53 are reasonably expected.
-- Don't coerce between BigInt values and Number values.
 
 ### Cryptography
 
@@ -299,6 +249,52 @@ console.log(parsed);
 ```
 
 > **Note:** While it's possible to make the replacer of `JSON.stringify()` generic and properly serialize BigInt values for all objects, the reviver of `JSON.parse()` must be specific to the payload shape you expect, because the serialization is _lossy_: it's not possible to distinguish between a string that represents a BigInt and a normal string.
+
+### BigInt coercion
+
+Many built-in operations that expect BigInts first coerce their arguments to BigInts. [The operation](https://tc39.es/ecma262/#sec-tobigint) can be summarized as follows:
+
+- BigInts are returned as-is.
+- [`undefined`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined) and [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) throw a {{jsxref("TypeError")}}.
+- `true` turns into `1n`; `false` turns into `0n`.
+- Strings are converted by parsing them as if they contain an integer literal. Any parsing failure results in a {{jsxref("SyntaxError")}}. The syntax is a subset of [string numeric literals](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#number_coercion), where decimal points or exponent indicators are not allowed.
+- [Numbers](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number) throw a {{jsxref("TypeError")}} to prevent unintended implicit coercion causing loss of precision.
+- [Symbols](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol) throw a {{jsxref("TypeError")}}.
+- Objects are first [converted to a primitive](/en-US/docs/Web/JavaScript/Data_structures#primitive_coercion) by calling their [`[@@toPrimitive]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toPrimitive) (with `"number"` as hint), `valueOf()`, and `toString()` methods, in that order. The resulting primitive is then converted to a BigInt.
+
+The best way to achieve nearly the same effect in JavaScript is through the [`BigInt()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt/BigInt) function: `BigInt(x)` uses the same algorithm to convert `x`, except that [Numbers](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number) don't throw a {{jsxref("TypeError")}}, but are converted to BigInts if they are integers.
+
+Note that built-in operations expecting BigInts often truncate the BigInt to a fixed width after coercion. This includes {{jsxref("BigInt.asIntN()")}}, {{jsxref("BigInt.asUintN()")}}, and methods of {{jsxref("BigInt64Array")}} and {{jsxref("BigUint64Array")}}.
+
+## Constructor
+
+- [`BigInt()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt/BigInt)
+  - : Creates a new BigInt value.
+
+## Static methods
+
+- [`BigInt.asIntN()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt/asIntN)
+  - : Clamps a BigInt value to a signed integer value, and returns that value.
+- [`BigInt.asUintN()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt/asUintN)
+  - : Clamps a BigInt value to an unsigned integer value, and returns that value.
+
+## Instance properties
+
+These properties are defined on `BigInt.prototype` and shared by all `BigInt` instances.
+
+- {{jsxref("Object/constructor", "BigInt.prototype.constructor")}}
+  - : The constructor function that created the instance object. For `BigInt` instances, the initial value is the {{jsxref("BigInt/BigInt", "BigInt")}} constructor.
+- `BigInt.prototype[@@toStringTag]`
+  - : The initial value of the [`@@toStringTag`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) property is the string `"BigInt"`. This property is used in {{jsxref("Object.prototype.toString()")}}. However, because `BigInt` also has its own [`toString()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt/toString) method, this property is not used unless you call [`Object.prototype.toString.call()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/call) with a BigInt as `thisArg`.
+
+## Instance methods
+
+- [`BigInt.prototype.toLocaleString()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt/toLocaleString)
+  - : Returns a string with a language-sensitive representation of this BigInt value. Overrides the [`Object.prototype.toLocaleString()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/toLocaleString) method.
+- [`BigInt.prototype.toString()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt/toString)
+  - : Returns a string representing this BigInt value in the specified radix (base). Overrides the [`Object.prototype.toString()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/toString) method.
+- [`BigInt.prototype.valueOf()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt/valueOf)
+  - : Returns this BigInt value. Overrides the [`Object.prototype.valueOf()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/valueOf) method.
 
 ## Examples
 

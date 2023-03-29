@@ -1,16 +1,6 @@
 ---
 title: Video and Audio APIs
 slug: Learn/JavaScript/Client-side_web_APIs/Video_and_audio_APIs
-tags:
-  - API
-  - Article
-  - Audio
-  - Beginner
-  - CodingScripting
-  - Guide
-  - JavaScript
-  - Learn
-  - Video
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Client-side_web_APIs/Drawing_graphics", "Learn/JavaScript/Client-side_web_APIs/Client-side_storage", "Learn/JavaScript/Client-side_web_APIs")}}
@@ -62,7 +52,7 @@ This creates a video player inside the browser like so:
 
 {{EmbedGHLiveSample("learning-area/html/multimedia-and-embedding/video-and-audio-content/multiple-video-formats.html", '100%', 380)}}
 
-You can review what all the HTML features do in the article linked above; for our purposes here, the most interesting attribute is {{htmlattrxref("controls", "video")}}, which enables the default set of playback controls. If you don't specify this, you get no playback controls:
+You can review what all the HTML features do in the article linked above; for our purposes here, the most interesting attribute is [`controls`](/en-US/docs/Web/HTML/Element/video#controls), which enables the default set of playback controls. If you don't specify this, you get no playback controls:
 
 {{EmbedGHLiveSample("learning-area/html/multimedia-and-embedding/video-and-audio-content/multiple-video-formats-no-controls.html", '100%', 380)}}
 

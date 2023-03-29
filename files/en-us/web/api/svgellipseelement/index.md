@@ -54,7 +54,7 @@ function outputSize() {
   console.log(
     `horizontal radius: ${ellipse.rx.baseVal.valueAsString}`,
     `vertical radius: ${ellipse.ry.baseVal.valueAsString}`
-  )
+  );
 }
 ```
 

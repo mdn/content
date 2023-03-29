@@ -1,10 +1,6 @@
 ---
 title: set:difference()
 slug: Web/EXSLT/set/difference
-tags:
-  - EXSLT
-  - NeedsSpecTable
-  - Reference
 ---
 
 {{XSLTRef}}{{QuickLinksWithSubpages("/en-US/docs/Web/EXSLT")}}

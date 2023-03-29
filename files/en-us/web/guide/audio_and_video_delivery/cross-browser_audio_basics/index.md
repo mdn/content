@@ -1,13 +1,6 @@
 ---
 title: Cross-browser audio basics
 slug: Web/Guide/Audio_and_video_delivery/Cross-browser_audio_basics
-tags:
-  - Apps
-  - Audio
-  - Guide
-  - HTML
-  - Media
-  - events
 ---
 
 {{QuickLinksWithSubPages("/en-US/docs/Web/Guide/Audio_and_video_delivery")}}

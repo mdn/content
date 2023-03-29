@@ -1,20 +1,6 @@
 ---
 title: Creating hyperlinks
 slug: Learn/HTML/Introduction_to_HTML/Creating_hyperlinks
-tags:
-  - Beginner
-  - CodingScripting
-  - Guide
-  - HTML
-  - HTTP
-  - Learn
-  - Links
-  - Title
-  - absolute
-  - href
-  - hyperlinks
-  - relative
-  - urls
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals", "Learn/HTML/Introduction_to_HTML/Advanced_text_formatting", "Learn/HTML/Introduction_to_HTML")}}
@@ -63,7 +49,7 @@ For example, the BBC homepage contains many links that point not only to multipl
 
 ## Anatomy of a link
 
-A basic link is created by wrapping the text or other content inside an {{htmlelement("a")}} element and using the {{htmlattrxref("href", "a")}} attribute, also known as a **Hypertext Reference**, or **target**, that contains the web address.
+A basic link is created by wrapping the text or other content inside an {{htmlelement("a")}} element and using the [`href`](/en-US/docs/Web/HTML/Element/a#href) attribute, also known as a **Hypertext Reference**, or **target**, that contains the web address.
 
 ```html
 <p>
@@ -185,7 +171,7 @@ There are also two directories inside our root — `pdfs` and `projects`. These 
 ### Document fragments
 
 It's possible to link to a specific part of an HTML document, known as a **document fragment**, rather than just to the top of the document.
-To do this you first have to assign an {{htmlattrxref("id")}} attribute to the element you want to link to.
+To do this you first have to assign an [`id`](/en-US/docs/Web/HTML/Global_attributes#id) attribute to the element you want to link to.
 It normally makes sense to link to a specific heading, so this would look something like the following:
 
 ```html
@@ -341,7 +327,7 @@ In its most basic and commonly used form, a `mailto:` link indicates the email a
 
 This results in a link that looks like this: [Send email to nowhere](mailto:nowhere@mozilla.org).
 
-In fact, the email address is optional. If you omit it and your {{htmlattrxref("href", "a")}} is "mailto:", a new outgoing email window will be opened by the user's email client with no destination address.
+In fact, the email address is optional. If you omit it and your [`href`](/en-US/docs/Web/HTML/Element/a#href) is "mailto:", a new outgoing email window will be opened by the user's email client with no destination address.
 This is often useful as "Share" links that users can click to send an email to an address of their choosing.
 
 ### Specifying details

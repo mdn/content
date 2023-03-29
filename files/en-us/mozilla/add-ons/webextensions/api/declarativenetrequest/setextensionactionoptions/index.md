@@ -1,15 +1,7 @@
 ---
 title: declarativeNetRequest.setExtensionActionOptions
 slug: Mozilla/Add-ons/WebExtensions/API/declarativeNetRequest/setExtensionActionOptions
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Reference
-  - WebExtensions
-  - Method
-  - declarativeNetRequest
-  - setExtensionActionOptions
+page-type: webextension-api-function
 browser-compat: webextensions.api.declarativeNetRequest.setExtensionActionOptions
 ---
 

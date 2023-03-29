@@ -7,8 +7,7 @@ browser-compat: javascript.builtins.Intl.PluralRules.PluralRules
 
 {{JSRef}}
 
-The **`Intl.PluralRules()`** constructor creates
-{{jsxref("Intl/PluralRules", "Intl.PluralRules")}} objects.
+The **`Intl.PluralRules()`** constructor creates {{jsxref("Intl.PluralRules")}} objects.
 
 ## Syntax
 

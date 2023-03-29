@@ -17,7 +17,7 @@ The **`HTMLContentElement`** interface represents a {{HTMLElement("content")}} H
 _This interface inherits the properties of {{domxref("HTMLElement")}}._
 
 - {{domxref("HTMLContentElement.select")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
-  - : A string that reflects the {{ htmlattrxref("select", "content") }} HTML attribute. The value is a comma-separated list of CSS selectors that select the content to insert in place of the `<content>` element.
+  - : A string that reflects the [`select`](/en-US/docs/Web/HTML/Element/content#select) HTML attribute. The value is a comma-separated list of CSS selectors that select the content to insert in place of the `<content>` element.
 
 ## Instance methods
 

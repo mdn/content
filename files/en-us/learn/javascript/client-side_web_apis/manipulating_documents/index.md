@@ -1,19 +1,6 @@
 ---
 title: Manipulating documents
 slug: Learn/JavaScript/Client-side_web_APIs/Manipulating_documents
-tags:
-  - API
-  - Article
-  - Beginner
-  - CodingScripting
-  - DOM
-  - Document
-  - Document Object Model
-  - JavaScript
-  - Learn
-  - Navigator
-  - WebAPI
-  - Window
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Client-side_web_APIs/Introduction", "Learn/JavaScript/Client-side_web_APIs/Fetching_data", "Learn/JavaScript/Client-side_web_APIs")}}

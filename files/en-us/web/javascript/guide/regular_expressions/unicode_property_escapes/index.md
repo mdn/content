@@ -8,11 +8,11 @@ page-type: guide
 
 **Unicode property escapes** [Regular Expressions](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions) allows for matching characters based on their Unicode properties. A character is described by several properties which are either binary ("boolean-like") or non-binary. For instance, unicode property escapes can be used to match emojis, punctuations, letters (even letters from specific languages or scripts), etc.
 
-{{EmbedInteractiveExample("pages/js/regexp-unicode-property-escapes.html", "taller")}}
-
 > **Note:** For Unicode property escapes to work, a regular expression must use [the `u` flag](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions#advanced_searching_with_flags) which indicates a string must be considered as a series of Unicode code points. See also [`RegExp.prototype.unicode`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode).
 
 > **Note:** Some Unicode properties encompasses many more characters than some [character classes](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Character_Classes) (such as `\w` which matches only latin letters, `a` to `z`) but the latter is better supported among browsers (as of January 2020).
+
+{{EmbedInteractiveExample("pages/js/regexp-unicode-property-escapes.html", "taller")}}
 
 ## Syntax
 

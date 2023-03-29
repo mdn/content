@@ -11,8 +11,6 @@ The **`Intl.DateTimeFormat`** object enables language-sensitive date and time fo
 
 {{EmbedInteractiveExample("pages/js/intl-datetimeformat.html", "taller")}}
 
-<!-- The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone https://github.com/mdn/interactive-examples and send us a pull request. -->
-
 ## Constructor
 
 - {{jsxref("Intl/DateTimeFormat/DateTimeFormat", "Intl.DateTimeFormat()")}}
@@ -22,6 +20,15 @@ The **`Intl.DateTimeFormat`** object enables language-sensitive date and time fo
 
 - {{jsxref("Intl/DateTimeFormat/supportedLocalesOf", "Intl.DateTimeFormat.supportedLocalesOf()")}}
   - : Returns an array containing those of the provided locales that are supported without having to fall back to the runtime's default locale.
+
+## Instance properties
+
+These properties are defined on `Intl.DateTimeFormat.prototype` and shared by all `Intl.DateTimeFormat` instances.
+
+- {{jsxref("Object/constructor", "Intl.DateTimeFormat.prototype.constructor")}}
+  - : The constructor function that created the instance object. For `Intl.DateTimeFormat` instances, the initial value is the {{jsxref("Intl/DateTimeFormat/DateTimeFormat", "Intl.DateTimeFormat")}} constructor.
+- `Intl.DateTimeFormat.prototype[@@toStringTag]`
+  - : The initial value of the [`@@toStringTag`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) property is the string `"Intl.DateTimeFormat"`. This property is used in {{jsxref("Object.prototype.toString()")}}.
 
 ## Instance methods
 

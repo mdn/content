@@ -3,12 +3,11 @@ title: GamepadHapticActuator.playEffect()
 slug: Web/API/GamepadHapticActuator/playEffect
 page-type: web-api-instance-method
 status:
-  - experimental
   - non-standard
 browser-compat: api.GamepadHapticActuator.playEffect
 ---
 
-{{APIRef("Gamepad")}}{{SeeCompatTable}}{{Non-standard_Header}}
+{{APIRef("Gamepad")}}{{Non-standard_Header}}
 
 The **`playEffect()`** method of the {{domxref("GamepadHapticActuator")}} interface makes the hardware play a specific vibration pattern.
 
@@ -50,7 +49,7 @@ A promise that resolves with `true` when the playEffect successfully completes.
 ```js
 const gamepad = navigator.getGamepads()[0];
 
-gamepad.vibrationActuator.playEffect('dual-rumble', {
+gamepad.vibrationActuator.playEffect("dual-rumble", {
   startDelay: 0,
   duration: 200,
   weakMagnitude: 1.0,

@@ -20,7 +20,7 @@ A {{domxref("USBDevice")}} object.
 Connecting a USB device fires the `connect` event. The current {{domxref("USBDevice")}} is returned by calling `event.device`.
 
 ```js
-navigator.usb.addEventListener('connect', (event) => {
+navigator.usb.addEventListener("connect", (event) => {
   console.log(event.device);
 });
 ```

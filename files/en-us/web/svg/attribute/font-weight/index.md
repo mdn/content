@@ -2,9 +2,6 @@
 title: font-weight
 slug: Web/SVG/Attribute/font-weight
 page-type: svg-attribute
-tags:
-  - SVG
-  - SVG Attribute
 browser-compat: svg.attributes.presentation.font-weight
 ---
 

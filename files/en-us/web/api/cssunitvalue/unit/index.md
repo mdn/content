@@ -2,12 +2,10 @@
 title: CSSUnitValue.unit
 slug: Web/API/CSSUnitValue/unit
 page-type: web-api-instance-property
-status:
-  - experimental
 browser-compat: api.CSSUnitValue.unit
 ---
 
-{{APIRef("CSS Typed Object Model API")}}{{SeeCompatTable}}
+{{APIRef("CSS Typed Object Model API")}}
 
 The **`CSSUnitValue.unit`** read-only property
 of the {{domxref("CSSUnitValue")}} interface returns a string

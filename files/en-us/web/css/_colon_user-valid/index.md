@@ -1,6 +1,6 @@
 ---
 title: ":user-valid (:-moz-ui-valid)"
-slug: web/css/:user-valid
+slug: Web/CSS/:user-valid
 page-type: css-pseudo-class
 status:
   - experimental

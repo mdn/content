@@ -1,11 +1,6 @@
 ---
 title: Define terms with HTML
 slug: Learn/HTML/Howto/Define_terms_with_HTML
-tags:
-  - Beginner
-  - Guide
-  - HTML
-  - Learn
 ---
 
 {{QuickLinksWithSubpages("/en-US/docs/Learn/HTML/Howto")}}
@@ -83,7 +78,7 @@ It's best to [mark abbreviations specially](/en-US/docs/Learn/HTML/Introduction_
 </p>
 ```
 
-Assistive technology can often use this attribute to find a text alternative to a given term. You can use `aria-describedby` on any tag enclosing a keyword to be defined (not just the `<dfn>` element). `aria-describedby` references the {{htmlattrxref('id')}} of the element containing the description.
+Assistive technology can often use this attribute to find a text alternative to a given term. You can use `aria-describedby` on any tag enclosing a keyword to be defined (not just the `<dfn>` element). `aria-describedby` references the [`id`](/en-US/docs/Web/HTML/Global_attributes#id) of the element containing the description.
 
 ## How to build a description list
 

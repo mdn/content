@@ -23,7 +23,7 @@ and whatever else you might wish to include.
 ```js
 window.onunhandledrejection = (e) => {
   console.log(e.reason);
-}
+};
 ```
 
 ## Specifications

@@ -1,11 +1,6 @@
 ---
 title: MathML first steps overview
 slug: Learn/MathML/First_steps
-tags:
-  - Beginner
-  - MathML
-  - Landing
-  - first steps
 ---
 
 {{LearnSidebar}}

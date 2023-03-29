@@ -1,5 +1,5 @@
 ---
-title: 'MediaStreamTrack: overconstrained event'
+title: "MediaStreamTrack: overconstrained event"
 slug: Web/API/MediaStreamTrack/overconstrained_event
 page-type: web-api-event
 status:
@@ -17,9 +17,9 @@ The **`overconstrained`** event fires when the track has too many conflicting co
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('overconstrained', (event) => { });
+addEventListener("overconstrained", (event) => {});
 
-onoverconstrained = (event) => { };
+onoverconstrained = (event) => {};
 ```
 
 ## Event type

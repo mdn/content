@@ -7,6 +7,7 @@ spec-urls:
   - https://w3c.github.io/event-timing/
   - https://w3c.github.io/hr-time/
   - https://w3c.github.io/largest-contentful-paint/
+  - https://wicg.github.io/layout-instability/
   - https://w3c.github.io/longtasks/
   - https://w3c.github.io/navigation-timing/
   - https://w3c.github.io/paint-timing/
@@ -22,7 +23,7 @@ The Performance API is a group of standards used to measure the performance of w
 
 ## Concepts and usage
 
-To ensure web applications are fast, it's important to measure and analyze various performance metrics. The Performance API provides important built-in metrics and the ability to add you own measurements to the browser's performance timeline. The performance timeline contains high precision timestamps and can be displayed in developer tools. You can also send its data to analytics end points to record performance metrics over time.
+To ensure web applications are fast, it's important to measure and analyze various performance metrics. The Performance API provides important built-in metrics and the ability to add your own measurements to the browser's performance timeline. The performance timeline contains high precision timestamps and can be displayed in developer tools. You can also send its data to analytics end points to record performance metrics over time.
 
 Each performance metric is represented by a single {{domxref("PerformanceEntry")}}. A performance entry has a `name`, a `duration`, a `startTime`, and a `type`. All performance metrics extend the `PerformanceEntry` interface and qualify it further.
 
@@ -40,6 +41,10 @@ The {{domxref("PerformanceObserver")}} interface enables you to listen for vario
   - : A read-only map returned by {{domxref("performance.eventCounts")}} containing the number of events which have been dispatched per event type.
 - {{domxref("LargestContentfulPaint")}}
   - : Measures the render time of the largest image or text block visible within the viewport, recorded from when the page first begins to load.
+- {{domxref("LayoutShift")}}
+  - : Provides insights into the layout stability of web pages based on movements of the elements on the page.
+- {{domxref("LayoutShiftAttribution")}}
+  - : Provides debugging information about elements which have shifted.
 - {{domxref("Performance")}}
   - : Main interface to access performance measurements. Available to window and worker contexts using {{domxref("performance_property", "self.performance")}}.
 - {{domxref("PerformanceElementTiming")}}

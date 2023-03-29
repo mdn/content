@@ -126,15 +126,16 @@ For example, in the snippet of HTML below, a toolbar which uses icon images as l
 ```html
 <li class="toolbar" aria-role="toolbar">
   <a href="songs.html" aria-role="button">
-    <img src="songicon.svg" alt="Songs">
+    <img src="songicon.svg" alt="Songs" />
   </a>
   <a href="albums.html" aria-role="button">
-    <img src="albumicon.svg" alt="Albums"></a>
+    <img src="albumicon.svg" alt="Albums"
+  /></a>
   <a href="artists.html" aria-role="button">
-    <img src="artisticon.svg" alt="Artists">
+    <img src="artisticon.svg" alt="Artists" />
   </a>
   <a href="playlists.html" aria-role="button">
-    <img src="playlisticon.svg" alt="Playlists">
+    <img src="playlisticon.svg" alt="Playlists" />
   </a>
 </li>
 ```

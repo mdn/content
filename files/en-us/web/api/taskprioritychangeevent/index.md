@@ -34,7 +34,7 @@ The code below shows a handler in which the `newPriority` and `previousPriority`
 
 ```js
 // Listen for 'prioritychange' events on the controller's signal.
-controller.signal.addEventListener('prioritychange', (event) => {
+controller.signal.addEventListener("prioritychange", (event) => {
   const previousPriority = event.previousPriority;
   const newPriority = event.target.priority;
   console.log(`Priority changed from ${previousPriority} to ${newPriority}.`);

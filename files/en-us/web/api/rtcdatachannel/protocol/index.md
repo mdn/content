@@ -29,11 +29,11 @@ channel. If none has been established, this is an empty string ("").
 ```js
 const pc = new RTCPeerConnection();
 const dc = pc.createDataChannel("my channel", {
-           protocol: "json"
+  protocol: "json",
 });
 
 function handleChannelMessage(dataChannel, msg) {
-  switch(dataChannel.protocol) {
+  switch (dataChannel.protocol) {
     case "json":
       /* process JSON data */
       break;

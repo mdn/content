@@ -1,15 +1,12 @@
 ---
 title: mathcolor
 slug: Web/MathML/Global_attributes/mathcolor
-tags:
-  - Global attributes
-  - MathML
-  - Reference
-  - Deprecated
+status:
+  - deprecated
 browser-compat: mathml.global_attributes.mathcolor
 ---
 
-{{QuickLinksWithSubPages("/en-us/docs/Web/MathML/Global_attributes")}}{{Deprecated_Header}}
+{{MathMLRef}}{{Deprecated_Header}}
 
 The **`mathcolor`** [global attribute](/en-US/docs/Web/MathML/Global_attributes) sets the [color](/en-US/docs/Web/CSS/color) of a MathML element.
 
