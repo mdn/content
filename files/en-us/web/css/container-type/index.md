@@ -12,7 +12,17 @@ The **container-type** [CSS](/en-US/docs/Web/CSS) property is used to define the
 ## Syntax
 
 ```css
-container-type: <type>;
+/* Keyword values */
+container-type: normal;
+container-type: size;
+container-type: inline-size;
+
+/* Global Values */
+container-type: inherit;
+container-type: initial;
+container-type: revert;
+container-type: revert-layer;
+container-type: unset;
 ```
 
 ### Values
@@ -31,6 +41,14 @@ container-type: <type>;
   - : The element is not a query container for any container size queries, but remains a query container for container style queries.
 
 > **Note:** to understand what happens when you apply layout, style, and size containment to a box, see the {{cssxref("contain")}} property.
+
+## Formal definition
+
+{{CSSInfo}}
+
+## Formal syntax
+
+{{CSSSyntax}}
 
 ## Example
 
