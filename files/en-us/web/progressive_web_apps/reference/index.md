@@ -1,5 +1,6 @@
 ---
 title: Progressive Web Apps reference
+short-title: Reference
 slug: Web/Progressive_web_apps/Reference
 page-type: landing-page
 ---
