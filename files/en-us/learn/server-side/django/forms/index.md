@@ -482,13 +482,39 @@ For more examples of how to manually render forms in templates and dynamically l
 
 ### Testing the page
 
-If you accepted the "challenge" in [Django Tutorial Part 8: User authentication and permissions](/en-US/docs/Learn/Server-side/Django/Authentication#challenge_yourself) you'll have a list of all books on loan in the library, which is only visible to library staff. We can add a link to our renew page next to each item using the template code below.
+If you accepted the "challenge" in [Django Tutorial Part 8: User authentication and permissions](/en-US/docs/Learn/Server-side/Django/Authentication#challenge_yourself) you'll have a view showing all books on loan in the library, which is only visible to library staff.
+The view might look similar to this:
 
-```html
-{% if perms.catalog.can_mark_returned %}- <a href="{% url 'renew-book-librarian' bookinst.id %}">Renew</a>  {% endif %}
+```pug
+{% extends "base_generic.html" %}
+
+{% block content %}
+    <h1>All Borrowed Books</h1>
+
+    {% if bookinstance_list %}
+    <ul>
+
+      {% for bookinst in bookinstance_list %} 
+      <li class="{% if bookinst.is_overdue %}text-danger{% endif %}">
+        <a href="{% url 'book-detail' bookinst.book.pk %}">{{bookinst.book.title}}</a> ({{ bookinst.due_back }}) {% if user.is_staff %}- {{ bookinst.borrower }}{% endif %}
+      </li>
+      {% endfor %}
+    </ul>
+
+    {% else %}
+      <p>There are no books borrowed.</p>
+    {% endif %}
+{% endblock %}
 ```
 
-> **Note:** Remember that your test login will need to have the permission "`catalog.can_mark_returned`" in order to access the renew book page (perhaps use your superuser account).
+We can add a link to the book renew page next to each item by appending the following template code to the list item text above.
+Note that this template code can only run inside the `{% for %}` loop, because that is where the `bookinst` value is defined.
+
+```pug
+{% if perms.catalog.can_mark_returned %}- <a href="{% url 'renew-book-librarian' bookinst.id %}">Renew</a>{% endif %}
+```
+
+> **Note:** Remember that your test login will need to have the permission "`catalog.can_mark_returned`" in order to see the new "Renew" link added above, and to access the linked page (perhaps use your superuser account).
 
 You can alternatively manually construct a test URL like this — `http://127.0.0.1:8000/catalog/book/<bookinstance_id>/renew/` (a valid `bookinstance_id` can be obtained by navigating to a book detail page in your library, and copying the `id` field).
 

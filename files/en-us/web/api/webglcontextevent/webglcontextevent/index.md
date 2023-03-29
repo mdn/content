@@ -21,7 +21,7 @@ new WebGLContextEvent(type, options)
 
 - `type`
   - : A string indicating the type of the event.
-    It is case-sensitive and should be one of `webglcontextcreationerror`, `webglcontextlost`, or `weblcontextrestored`.
+    It is case-sensitive and should be one of `webglcontextcreationerror`, `webglcontextlost`, or `webglcontextrestored`.
 - `options` {{Optional_inline}}
   - : An object that, _in addition to the properties defined in {{domxref("Event/Event", "Event()")}}_, has the following properties:
     - `statusMessage` {{Optional_inline}}

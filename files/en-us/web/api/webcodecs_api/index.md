@@ -24,6 +24,10 @@ reducing performance and power efficiency, and adding additional development ove
 The WebCodecs API provides access to codecs that are already in the browser.
 It gives access to raw video frames, chunks of audio data, image decoders, audio and video encoders and decoders.
 
+Note: There is currently no API for demuxing media containers. Developers working with containerized media will need to implement their own
+or use third party libraries. E.g., [MP4Box.js](https://github.com/gpac/mp4box.js/) or [jswebm](https://github.com/jscodec/jswebm) can be
+used to demux audio and video data into {{domxref("EncodedAudioChunk")}} and {{domxref("EncodedVideoChunk")}} objects respectively.
+
 ## Interfaces
 
 - {{domxref("AudioDecoder")}}
@@ -81,3 +85,6 @@ while (true) {
 ## See also
 
 - [Video processing with WebCodecs](https://web.dev/webcodecs/)
+- [WebCodecs API Samples](https://w3c.github.io/webcodecs/samples/)
+- [Real-Time Video Processing with WebCodecs and Streams: Processing Pipelines](https://webrtchacks.com/real-time-video-processing-with-webcodecs-and-streams-processing-pipelines-part-1/)
+- [Video Frame Processing on the Web – WebAssembly, WebGPU, WebGL, WebCodecs, WebNN, and WebTransport](https://webrtchacks.com/video-frame-processing-on-the-web-webassembly-webgpu-webgl-webcodecs-webnn-and-webtransport/)

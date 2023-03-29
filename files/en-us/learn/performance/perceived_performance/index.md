@@ -33,7 +33,7 @@ This article provides a brief introduction to the factors that affect perceived 
 
 ## Overview
 
-The perception of how quickly (and smoothly) pages load and respond to user interaction is even more important that the actual time required to fetch the resources. While you may not be able to physically make your site run faster, you may well be able to improve how fast it _feels_ for your users.
+The perception of how quickly (and smoothly) pages load and respond to user interaction is even more important than the actual time required to fetch the resources. While you may not be able to physically make your site run faster, you may well be able to improve how fast it _feels_ for your users.
 
 A good general rule for improving perceived performance is that it is usually better to provide a quick response and regular status updates than make the user wait until an operation fully completes (before providing any information). For example, when loading a page it is better to display the text when it arrives rather than wait for all the images and other resources. Even though the content has not fully downloaded the user can see something is happening and they can start interacting with the content.
 
