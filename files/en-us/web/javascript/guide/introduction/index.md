@@ -105,8 +105,8 @@ console.log(eval("3 + 5"));
 
 By default, if you press <kbd>Return</kbd> after entering a line of code, then the string you typed is executed. To enter multi-line input:
 
-- If the string you typed was incomplete (for example, you typed `function foo() {`) then the console will treat <kbd>Return</kbd> as a return, and let you type another line.
-- If you hold down <kbd>Shift</kbd> while pressing <kbd>Return</kbd>, then the console will treat this as a return, and let you type another line.
+- If the string you typed was incomplete (for example, you typed `function foo() {`) then the console will treat <kbd>Return</kbd> as a line break, and let you type another line.
+- If you hold down <kbd>Shift</kbd> while pressing <kbd>Return</kbd>, then the console will treat this as a line break, and let you type another line.
 - In Firefox only, you can activate [multi-line input mode](https://firefox-source-docs.mozilla.org/devtools-user/web_console/the_command_line_interpreter/index.html#multi-line-mode), in which you can enter multiple lines in a mini-editor, then run the whole thing when you are ready.
 
 To get started with writing JavaScript, open the Firefox Web Console in multi-line mode, and write your first "Hello world" JavaScript code:
