@@ -35,7 +35,7 @@ The following manifest members are used to control the appearance of your app:
 - [`theme_color`](/en-US/docs/Web/Manifest/theme_color)
   - : The default theme color for the application, which sometimes affects how the operating system displays the app.
 - [`display`](/en-US/docs/Web/Manifest/display)
-  - : The developers' preferred display mode for the website.
+  - : The developers' preferred display mode for the browser UI.
 - [`display_override`](/en-US/docs/Web/Manifest/display_override)
   - : A sequence of display mode fallbacks for the `display` member.
 - [`start_url`](/en-US/docs/Web/Manifest/start_url)
@@ -50,20 +50,20 @@ The following manifest members are used to control the appearance of your app:
 The following manifest members can be used to more deeply integrate your PWA in the operating system it's installed on:
 
 - [`file_handlers`](/en-US/docs/Web/Manifest/file_handlers)
-  - : File types that this web app is associated with.
+  - : File types this web app is associated with.
 - [`protocol_handlers`](/en-US/docs/Web/Manifest/protocol_handlers)
-  - : Protocols which this web app handles.
+  - : URL protocols this web app handles and the URLs for each protocol.
 - [`share_target`](/en-US/docs/Web/Manifest/share_target)
-  - : Used to register the app as a share target in the system's share dialog.
+  - : Registers the app as a share target, defining the actions and parameters for the OS's share dialog.
 - [`shortcuts`](/en-US/docs/Web/Manifest/shortcuts)
-  - : Links to key tasks or pages within the web app that can be displayed by the operating system when a user engages with the web app's icon.
+  - : Links to key tasks or pages within the web app the OS can display when a user engages with the web app's icon.
 - [`launch_handler`](/en-US/docs/Web/Manifest/launch_handler)
-  - : The context in which the app should be loaded when launched.
+  - : The context in which the app should be loaded when launched or relaunched.
 
 ### Other
 
 - [`scope`](/en-US/docs/Web/Manifest/scope)
-  - : The navigation scope of this web application, which restricts what web pages can be viewed while the manifest is applied.
+  - : The navigation scope of this web application, which defines the content viewed with the manifest applied versus out-of-scope normal web page content.
 - [`related_applications`](/en-US/docs/Web/Manifest/related_applications)
   - : Alternative applications that provide similar or equivalent functionality to this app. Developers can specify that these alternative applications are preferred by using the `prefer_related_applications` member.
 - [`prefer_related_applications`](/en-US/docs/Web/Manifest/prefer_related_applications)
@@ -102,17 +102,17 @@ The following APIs can be used by a service worker to perform tasks in the backg
 - [Web Periodic Background Synchronization API](/en-US/docs/Web/API/Web_Periodic_Background_Synchronization_API)
   - : A way to register tasks to be run in a service worker at periodic intervals with network connectivity.
 - [Background Fetch API](/en-US/docs/Web/API/Background_Fetch_API)
-  - : A method for a service worker to manage downloads that may take a significant amount of time such as video or audio files.
+  - : A method for a service worker to manage downloads that may take a significant amount of time, such as video or audio files.
 
 ## Other web APIs
 
 - [IndexedDB](/en-US/docs/Web/API/IndexedDB_API)
   - : A client-side storage API for significant amounts of structured data, including files.
 - [Badging API](/en-US/docs/Web/API/Badging_API)
-  - : A method of setting a badge on the application icon, to act as a low distraction notification.
+  - : A method of setting a badge on the application icon, providing a low-distraction notification.
 - [Notifications API](/en-US/docs/Web/API/Notifications_API)
   - : A way to send notifications that are displayed at the operating system level.
 - [Web Share API](/en-US/docs/Web/API/Web_Share_API)
   - : A mechanism for sharing text, links, files, and other content to other apps selected by the user on their device.
 - [Window Controls Overlay API](/en-US/docs/Web/API/Window_Controls_Overlay_API)
-  - : An API for PWAs installed on desktop operating systems to hide the default window title bar and display their own content over the full surface area of the app window instead.
+  - : An API for PWAs installed on desktop operating systems that enables hiding the default window title bar, enabling displaying the app over the full surface area of the app window.
