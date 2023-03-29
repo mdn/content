@@ -65,7 +65,7 @@ The following manifest members can be used to more deeply integrate your PWA in 
 - [`scope`](/en-US/docs/Web/Manifest/scope)
   - : The navigation scope of this web application, which defines the content viewed with the manifest applied versus out-of-scope normal web page content.
 - [`related_applications`](/en-US/docs/Web/Manifest/related_applications)
-  - : Alternative applications that provide similar or equivalent functionality to this app. Developers can specify that these alternative applications are preferred by using the `prefer_related_applications` member.
+  - : Alternative device-native applications that provide similar or equivalent functionality to this app. Used in conjunction with the `prefer_related_applications` member if the alternative applications should be preferred over the PWA.
 - [`prefer_related_applications`](/en-US/docs/Web/Manifest/prefer_related_applications)
   - : Whether the applications listed in the `related_applications` member should be preferred over this app.
 - [`serviceworker`](/en-US/docs/Web/Manifest/serviceworker)
@@ -75,12 +75,12 @@ The following manifest members can be used to more deeply integrate your PWA in 
 
 ### Communication with the app
 
-The following APIs can be used to communicate between the service worker and the client app:
+The following APIs can be used by a service worker to communicate with its associated client PWA:
 
 - [`Client.postMessage()`](/en-US/docs/Web/API/Client/postMessage)
-  - : Allows a service worker to send a message to its client app.
+  - : Allows a service worker to send a message to its client PWA.
 - [Broadcast Channel API](/en-US/docs/Web/API/Broadcast_Channel_API)
-  - : Allows a service worker and its client app to establish a basic two-way communication channel.
+  - : Allows a service worker and its client PWA to establish a basic two-way communication channel.
 
 ### Offline operation
 
@@ -91,7 +91,7 @@ The following APIs can be used by a service worker to make your app work offline
 - [`Clients`](/en-US/docs/Web/API/Clients)
   - : An interface used to provide access to the documents that are controlled by the service worker.
 - [`FetchEvent`](/en-US/docs/Web/API/FetchEvent)
-  - : An event, dispatched in the service worker with every HTTP request made by a client, that can be used to cache a response or respond with another resource.
+  - : An event, dispatched in the service worker with every HTTP request made by the client PWA. The event can be used to either send the request to the server as normal and save the response for future use, or intercept the request and immediately respond with a response cached previously.
 
 ### Background operation
 
