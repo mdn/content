@@ -23,7 +23,7 @@ const p = new Proxy(
   {
     deleteProperty(targetObject, property) {
       // Custom functionality: log the deletion
-      console.log("Deleting property: ", property);
+      console.log("Deleting property:", property);
 
       // Execute the default introspection behavior
       return Reflect.deleteProperty(targetObject, property);

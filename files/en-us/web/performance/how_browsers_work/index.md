@@ -200,7 +200,7 @@ In our example, maybe the image loaded quickly, but perhaps the `anotherscript.j
 
 ![The main thread is occupied by the downloading, parsing and execution of a JavaScript file - over a fast connection](visa_network.png)
 
-In this example, the DOM content load process took over 1.5 seconds, and the main thread was fully occupied that entire time, unresponsive to click events or screen taps.
+In this example, JavaScript execution took over 1.5 seconds, and the main thread was fully occupied that entire time, unresponsive to click events or screen taps.
 
 ## See also
 

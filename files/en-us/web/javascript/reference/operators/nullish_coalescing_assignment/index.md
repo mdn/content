@@ -7,14 +7,14 @@ browser-compat: javascript.operators.nullish_coalescing_assignment
 
 {{jsSidebar("Operators")}}
 
-The **nullish coalescing assignment (`x ??= y`)** operator, also known as the **logical nullish assignment** operator, only assigns if `x` is {{Glossary("nullish")}} (`null` or `undefined`).
+The **nullish coalescing assignment (`??=`)** operator, also known as the **logical nullish assignment** operator, only assigns if `x` is {{Glossary("nullish")}} (`null` or `undefined`).
 
 {{EmbedInteractiveExample("pages/js/expressions-logical-nullish-assignment.html")}}
 
 ## Syntax
 
 ```js-nolint
-expr1 ??= expr2
+x ??= y
 ```
 
 ## Description
