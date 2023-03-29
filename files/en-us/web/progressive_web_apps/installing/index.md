@@ -1,88 +1,89 @@
 ---
-title: Installing and uninstalling web apps
+title: Installing and uninstalling bookmarks and PWAs
 slug: Web/Progressive_web_apps/Installing
 ---
 
 {{QuickLinksWithSubpages("/en-US/docs/Web/Progressive_web_apps/")}}
 
-Web application installation is a feature available in modern browsers that allows users to choose to easily and conveniently "install" a web application on their device so they can access it in the same way they would any other installed app. Depending on the device and features of the operating system and browser, this can result in what is essentially a fully featured application (for example, using [WebAPK](https://web.dev/webapks/) on Android) or as a shortcut added to their device's screen. This guide explains how installation is performed, what it means, and what you need to do as a developer to let your users take advantage of it.
+Browsers have always enabled saving shortcuts to websites, known as "bookmarking." These are just links to websites.
 
-## Why installation?
+Some operating systems (OS) have enhanced bookmarking capabilities, enabling saving bookmarks to the home screen with an icon launching the site in the OS's default browser. For many websites, this is also just a link to the site. If the site is a [Progressive Web Applications (PWA)](/en-us/docs/web/progressive_web_apps), saving to home screen installs the PWA on the user's device, fully integrating it into the operating systems like native applications on most devices. Just like PWAs can be installed, they can also be uninstalled.
 
-The option to install a web application is part of the [Progressive Web App](/en-US/docs/Web/Progressive_web_apps) philosophy—giving web apps the same user experience advantages as native apps so they can be competitive. Installed applications are more conveniently invoked as they have a presence in a device's home screen or app list or bar. This makes it simple for a user to use a gesture to access an app by tapping or clicking its icon. The application itself may then manifest as in a chromeless view (without the full browser chrome) but it nevertheless is executing effectively as a tab within the browser.
+This guide covers how to install and uninstall PWAs. A separate [guide on making PWAs installable](/en-US/docs/Web/Progressive_web_apps/guides/making_pwas_installable) covers how to make web apps installable.
 
-For users, the experience of a seemingly-native PWA is more comfortable and convenient than a typical website. By reducing the user experience differential between the web app and native apps on the user's device, you reduce both the loss of any muscle memory they have revolving around the native interface of the device and the sensation of "something isn't quite right" that users can experience when switching between native and web-based apps.
+We'll first cover the precursors — saving links to websites.
 
-## What browsers support installation?
+### Bookmarking websites
 
-Installation is supported by Chrome for Android and Android WebView version 31 and later, Opera for Android 32 onward, Samsung Internet from version 4 onward, and Firefox for Android [version 58](/en-US/docs/Mozilla/Firefox/Releases/58) and later.
+All browsers have add-to-favorites bookmark functionality. A bookmark, or favorite, is a clickable shortcut for a web page. Bookmarks enable quick access to websites without the user having to enter a URL or otherwise search for content. Bookmarking is especially useful for long URLs and accessing frequently visited content that is not the site's homepage.
 
-Safari on iOS is a little different. Some parts of the PWA ecosystem are supported, while others are not. iOS 13 introduced a much more comparable installation experience, which is also described here.
+All browsers enable users to view and manage their bookmarks, including renaming and deleting favorites. By default, the bookmark's display includes the text content of the bookmarked page's {{HTMLElement("title")}} element along with an icon consisting of the site's [favicon](/en-US/docs/Glossary/Favicon).
 
-PWA installation is also confirmed to work on Ubuntu Linux 22.04, for example in Brave 111 and Edge 111 or later.
+Browsers enable saving, editing, moving, deleting, and otherwise managing bookmarks. The UI for bookmark management menus differ by browser.
 
-## The installation user experience
+### Add to home screen
 
-We've written a very simple example website ([see our demo live](https://mdn.github.io/pwa-examples/a2hs/), and also [see the source code](https://github.com/mdn/pwa-examples/tree/master/a2hs)) that doesn't do much, but was developed with the necessary code to allow it to be installed, as well as a service worker to enable it to be used offline.
-The example displays a series of fox pictures. If you have a web application compatible device available, use it to navigate to our demo at `https://mdn.github.io/pwa-examples/a2hs/`. You'll see fox pictures, but more importantly, some form of user interface will be available to let you install the site as a web app.
+Smartphones, starting with the iPhone in 2007, added "save to home screen" functionality. For regular (non-PWA) websites feature is similar to bookmarks, but instead of adding the favicon and title of the page to the bookmarks menu — a browser feature — favoriting in this manner [adds an icon](/en-US/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML#adding_custom_icons_to_your_site) to the OS's home screen. Adding a non-PWA site to the home screen does not install the website on the device. Rather, it adds the developer-defined icon to the home screen, that, when clicked, opens the bookmarked link in the default browser.
 
-The UI for this varies from browser to browser, but the general idea is the same. Unfortunately, there isn't a standard for icons and symbols used for operations such as this.
+![iPhone add to home screen, install prompt, icon, and delete functionality.](iphone_pwa.jpg)
 
-### Firefox for Android
+Deleting the icon from the home screen removes the bookmark.
 
-On an Android device using Firefox, you'll see a "home" icon with a plus (+) icon inside it—this is the "Add to Home screen" icon displayed for any site that has the necessary features in place.
+If the site being added to the home screen is a PWA, the PWA will be installed on the device.
 
-![A screenshot of a web browser displaying the Add to Home Screen icon at the top](android-a2hs-icon.png)
+## Installing and uninstalling PWAs
 
-Tapping this will show a confirmation banner—pressing the banner's big "+ ADD TO HOME SCREEN" button completes the action, adding the app to the Home screen. Note that in Android 8 and higher, a system-level "Add to Home screen" permission dialog will be shown first.
+While installing a PWA only takes a couple of clicks, depending on the web application features, the result of installing a PWA usually goes well beyond creating a link to a page on the Internet; installing a PWA actually installs the web application on the user's device.
 
-![A screenshot of Firefox for Android requesting confirmation before installing a web app](fx-a2hs-banner.png)
+Depending on the PWA, device, and features of the operating system and browser, installing a PWA may mean installing an essentially fully featured application with operating system integration. This also means uninstalling a PWA, which also only requires a couple of clicks, does more than just removing the PWA's icon.
 
-### Samsung Internet Browser
+### Installing PWAs
 
-If you have Samsung Internet in your mobile device you will see a different icon.
+The UI for installing a PWA from the web varies from one browser to another, and from one platform to another.
 
-![A screenshot of Samsung Internet Browser showing its Add to Home Screen icon](samsung-internet-add-app.png)
+As mentioned above, "Add to homes screen" installs PWAs on device/OS combinations that provide that user interface.
 
-Tapping that icon should then take you to the same confirmation banner shown in Firefox above.
+For example, a browser might include an "Install" icon in the URL bar when the user navigates to the page:
 
-### Google Chrome for Android
+![PWA install prompt in URL bar](pwa-install.png)
 
-If you have Google Chrome for Android available, the experience is slightly different; upon loading our site, you'll see a banner pop-up asking whether you want to add this app to your Home screen.
+When the user selects the icon, the browser displays a prompt asking if they want to install the PWA, and if they accept, the PWA is installed.
 
-![Screenshot of a Chrome banner requesting permission to install the Foxes sample app](chrome-a2hs-banner.png)
+![PWA installation confirmation prompt](installconfirm.jpg)
 
-> **Note:** You can find out a lot more about Chrome install banners from the article [How to provide your own in-app installation experience](https://web.dev/customize-install/).
+Once installed, the PWA will behave like other applications that are installed on the OS. For example, on MacOS, the icon will appear in the doc, with the same "Keep in dock" options as other applications:
 
-If you choose not to add it to your Home screen at this point, you can do so later using the "Add to Home Screen" icon in the main Chrome menu.
+![PWA icon in the doc on MacOS](dock.jpg)
 
-### Safari for iOS / iPhoneOS / iPadOS
+On most desktop browsers, the install prompt is in the URL bar. On mobile, the install prompt is generally found in the menu of browser options. No matter the browser or OS, the installation needs to be confirmed.
 
-On Apple's iOS (including iPhoneOS and iPadOS), the Safari browser built into the device has some support for web applications, including support for the add to home screen feature. To add a web app to the home screen (also known as the launcher or springboard), tap the sharing button at the bottom of the screen:
+![PWA installation on Chrome for Android, with confirmation, home screen icon, and offline experience.](android_pwa.jpg)
 
-![Screenshot showing the location of the Share button in Safari on iOS 13](safari-ios-a2hs-icon.png)
+Once installed, clicking on the application icon opens the PWA, even when the user is offline, just as happens with other installed applications on the device.
 
-This calls up the sharing panel. Among the options should be the "Add to Home Screen" option, unless it's been specifically removed from the list by the user editing the options displayed:
+Installation is supported on all modern desktop and mobile devices. Whether the PWA can be installed by the browser on the operating system differs by browser/operating system combination. Most browsers support installing PWAs on all operating systems—Chrome OS, MacOS, Windows, Android, Linux, etc.—directly or when an extension is installed.
 
-![Screenshot of Safari iOS's sharing panel, showing the "Add to Home Screen" option](safari-ios-share-menu.png)
+Firefox requires a [PWA extension](https://addons.mozilla.org/en-US/firefox/addon/pwas-for-firefox/).
 
-Choosing "Add to Home Screen" here presents the confirmation dialog box, which not only confirms that the user wants to add the app to the home screen, but also lets the user customize its name.
+Apple is unique when it comes to PWAs: PWAs can be installed on macOS from any browser **except** Safari. The opposite is true for iOS, where PWAs can **only** be installed in Safari.
 
-![A screenshot of iOS Safari showing its "Add to Home Screen" setup and confirmation panel](safari-ios-a2hs-banner.png)
+When an installed PWA is launched, it may then manifest as in a chromeless view (without the full browser chrome) but it nevertheless is executing effectively as a tab within the browser. The application will be found where the OS saves other applications, within a folder specific to the browser.
 
-Upon clicking "Add," the app is included on the home screen.
-
-### The installed web application
-
-Regardless of which browser and device you're using, when you choose to add the app to your home screen or app launcher, it'll show up there looking just like any application. Typically this means you'll see the app's icon along with a short title.
-
-![Screenshot of an Android home screen with the "Foxes" app displayed](a2hs-on-home-screen.png)
-
-When you tap the web app's icon on the home screen, it opens up in a full screen web environment, without the browser's UI around it.
+The browser used to install the PWA will know the PWA is installed, but other browsers will not have access to the installed status. For example, if you install a PWA using MS Edge, Edge will prompt you to open the PWA when you visit the site while Chrome will continue to prompt you to install the application. If you install the PWA using Chrome as well, you will have two copies of the PWA: one instance in "Chrome Apps" and a separate instance in "Edge Apps". Even if both are open, data is not shared between instances installed from different browsers.
 
 ### Uninstalling
 
-On Ubuntu Linux, for Brave, this can be done by opening the PWA, navigating into more details (right side of top bar > hamburger icon), and finding the `Uninstall <app name> ...`. Edge is a bit different, open a new tab, navigate to `edge://apps`, and use the `...` > `🗑️ Uninstall` menu on the app list.
+When you tap the web app's icon on the home screen, it opens up in the browser environment that installed the PWA, generally without the browser's UI around it, though that depends on the way the developer configured the web app manifest. Similarly, the method used to uninstall the PWA depends on the browser that was used to install it.
+
+On many mobile operating systems, PWAs appear in the "Add or remove programs" control panel. Uninstalling a PWA is accomplished in the same way as uninstalling other applications.
+
+In most desktop operating systems, To uninstall a PWA, open the PWA. In the top right corner of the opened app, there will be an icon that must be expanded to see more tools. Depending on the browser used to install the PWA, there will either be a link to uninstall the PWA, or a settings link that opens a browser settings page with an uninstall link. Either click on the `Uninstall <app name>` in the drop-down menu, if there, or navigate to the app settings in a browser tab and click uninstall.
+
+![App settings in MS Edge with an uninstall link](remove.jpg)
+
+Selecting app setting from the opened drop-down menu in Edge, opened the MS Edge browser `edge://apps` tab. There we are provided a list of installed applications with options for each, including `🗑️ Uninstall`.
+
+Confirm the uninstall. That's it!
 
 ## See also
 
