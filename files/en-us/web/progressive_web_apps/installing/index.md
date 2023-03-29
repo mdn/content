@@ -41,7 +41,7 @@ Depending on the PWA, device, and features of the operating system and browser, 
 
 The UI for installing a PWA from the web varies from one browser to another, and from one platform to another.
 
-As mentioned above, "Add to homes creen" installs PWAs on device/OS combinations that provide that user interface.
+As mentioned above, "Add to homes screen" installs PWAs on device/OS combinations that provide that user interface.
 
 For example, a browser might include an "Install" icon in the URL bar when the user navigates to the page:
 
@@ -55,7 +55,11 @@ Once installed, the PWA will behave like other applications that are installed o
 
 ![PWA icon in the doc on MacOS](dock.jpg)
 
-Installation is supported on all modern desktop and mobile devices. Whether the PWA can be installed by the browser on the operating system differs by browser / operating system combination. Most browsers support installing PWAs on all operating systems—Chrome OS, MacOS, Windows, Android, Linux, etc.—directly or when an extension is installed.
+On most desktop browsers, the install prompt is in the URL bar. On mobile, the install prompt is generally found in the pop menu of browser options. No matter the browser or OS, the installation needs to be confirmed.
+
+![PWA installation on Chrome for android, with confirmation, home screen icon, and offline experience.](android_pwa.jpg)
+
+Installation is supported on all modern desktop and mobile devices. Whether the PWA can be installed by the browser on the operating system differs by browser/operating system combination. Most browsers support installing PWAs on all operating systems—Chrome OS, MacOS, Windows, Android, Linux, etc.—directly or when an extension is installed.
 
 Firefox requires a [PWA extension](https://addons.mozilla.org/en-US/firefox/addon/pwas-for-firefox/).
 
