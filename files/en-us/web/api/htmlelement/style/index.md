@@ -20,7 +20,7 @@ A style declaration is reset by setting it to `null` or an empty string, e.g., `
 > **Note:** CSS property names are converted to JavaScript identifier with these rules:
 >
 > - If the property is made of one word, it remains as it is: `height` stays as is (in lowercase).
-> - If the property is made of several words, separated by dashes, the dashes are removed and it is converted to _camelCase_: `background-attachment` becomes `backgroundAttachement`.
+> - If the property is made of several words, separated by dashes, the dashes are removed and it is converted to _camelCase_: `background-attachment` becomes `backgroundAttachment`.
 > - The property `float`, being a reserved JavaScript keyword, is converted to `cssFloat`.
 >
 > The `style` property has the same priority in the CSS cascade as an inline style declaration set via the `style` attribute.

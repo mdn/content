@@ -12,8 +12,6 @@ The **`Intl.RelativeTimeFormat.supportedLocalesOf()`** static method returns an 
 
 {{EmbedInteractiveExample("pages/js/intl-relativetimeformat-prototype-supportedlocalesof.html","shorter")}}
 
-<!-- The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone https://github.com/mdn/interactive-examples and send us a pull request. -->
-
 ## Syntax
 
 ```js-nolint
