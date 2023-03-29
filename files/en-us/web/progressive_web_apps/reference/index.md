@@ -97,7 +97,7 @@ The following APIs can be used by a service worker to make your app work offline
 The following APIs can be used by a service worker to perform tasks in the background, even when your app is not running:
 
 - [Background Synchronization API](/en-US/docs/Web/API/Background_Synchronization_API)
-  - : A way to defer tasks so that they can be run in a service worker once the user has a stable network connection.
+  - : A way to defer tasks to run in a service worker once there is a stable network connection.
 - [Web Periodic Background Synchronization API](/en-US/docs/Web/API/Web_Periodic_Background_Synchronization_API)
   - : A way to register tasks to be run in a service worker at periodic intervals with network connectivity.
 - [Background Fetch API](/en-US/docs/Web/API/Background_Fetch_API)
