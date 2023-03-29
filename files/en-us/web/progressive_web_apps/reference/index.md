@@ -36,7 +36,7 @@ The following manifest members are used to control the appearance of your app:
 - [`display`](/en-US/docs/Web/Manifest/display)
   - : The developers' preferred display mode for the website.
 - [`display_override`](/en-US/docs/Web/Manifest/display_override)
-  - : A sequence of display modes that the browser will consider before using the `display` member.
+  - : A sequence of display mode fallbacks for the `display` member.
 - [`start_url`](/en-US/docs/Web/Manifest/start_url)
   - : The preferred URL that should be loaded when the user launches the web application.
 - [`screenshots`](/en-US/docs/Web/Manifest/screenshots)
