@@ -25,6 +25,8 @@ _This interface inherits properties from the {{domxref("EventTarget")}} interfac
 
 Note that properties which are objects (e.g., for overriding the prototype of built-in elements) are listed in a separate section below.
 
+- {{domxref("caches", "Window.caches")}} {{ReadOnlyInline}}
+  - : Returns the {{domxref("CacheStorage")}} object associated with the current context. This object enables functionality such as storing assets for offline use, and generating custom responses to requests.
 - {{domxref("Window.navigator", "Window.clientInformation")}} {{ReadOnlyInline}}
   - : An alias for {{domxref("Window.navigator")}}.
 - {{domxref("Window.closed")}} {{ReadOnlyInline}}
@@ -33,10 +35,10 @@ Note that properties which are objects (e.g., for overriding the prototype of bu
   - : Returns a reference to the console object which provides access to the browser's debugging console.
 - {{domxref("Window.credentialless")}} {{ReadOnlyInline}} {{Experimental_Inline}} {{Non-standard_Inline}}
   - : Returns a boolean that indicates whether the current document was loaded inside a credentialless {{htmlelement("iframe")}}. See [IFrame credentialless](/en-US/docs/Web/Security/IFrame_credentialless) for more details.
-- {{domxref("Window.customElements")}} {{ReadOnlyInline}}
-  - : Returns a reference to the {{domxref("CustomElementRegistry")}} object, which can be used to register new [custom elements](/en-US/docs/Web/Web_Components/Using_custom_elements) and get information about previously registered custom elements.
 - {{domxref("crypto_property", "Window.crypto")}} {{ReadOnlyInline}}
   - : Returns the browser crypto object.
+- {{domxref("Window.customElements")}} {{ReadOnlyInline}}
+  - : Returns a reference to the {{domxref("CustomElementRegistry")}} object, which can be used to register new [custom elements](/en-US/docs/Web/Web_Components/Using_custom_elements) and get information about previously registered custom elements.
 - {{domxref("Window.devicePixelRatio")}} {{ReadOnlyInline}}
   - : Returns the ratio between physical pixels and device independent pixels in the current display.
 - {{domxref("Window.document")}} {{ReadOnlyInline}}
@@ -49,11 +51,13 @@ Note that properties which are objects (e.g., for overriding the prototype of bu
   - : This property indicates whether the window is displayed in full screen or not.
 - {{domxref("Window.history")}} {{ReadOnlyInline}}
   - : Returns a reference to the history object.
+- {{domxref("indexedDB", "Window.indexedDB")}} {{ReadOnlyInline}}
+  - : Provides a mechanism for applications to asynchronously access capabilities of indexed databases; returns an {{domxref("IDBFactory")}} object.
 - {{domxref("Window.innerHeight")}} {{ReadOnlyInline}}
   - : Gets the height of the content area of the browser window including, if rendered, the horizontal scrollbar.
 - {{domxref("Window.innerWidth")}} {{ReadOnlyInline}}
   - : Gets the width of the content area of the browser window including, if rendered, the vertical scrollbar.
-- {{domxref("isSecureContext")}} {{Experimental_Inline}} {{ReadOnlyInline}}
+- {{domxref("isSecureContext", "Window.isSecureContext")}} {{ReadOnlyInline}}
   - : Returns a boolean indicating whether the current context is secure (`true`) or not (`false`).
 - {{domxref("Window.launchQueue")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : When a [progressive web app](/en-US/docs/Web/Progressive_web_apps) (PWA) is launched with a [`launch_handler`](/en-US/docs/Web/Manifest/launch_handler) `client_mode` value of `focus-existing`, `navigate-new`, or `navigate-existing`, the `launchQueue` provides access to the {{domxref("LaunchQueue")}} class, which allows custom launch navigation handling to be implemented for the PWA.
@@ -79,6 +83,8 @@ Note that properties which are objects (e.g., for overriding the prototype of bu
   - : Returns a reference to the navigator object.
 - {{domxref("Window.opener")}}
   - : Returns a reference to the window that opened this current window.
+- {{domxref("origin", "Window.origin")}} {{ReadOnlyInline}}
+  - : Returns the global object's origin, serialized as a string.
 - {{domxref("Window.outerHeight")}} {{ReadOnlyInline}}
   - : Gets the height of the outside of the browser window.
 - {{domxref("Window.outerWidth")}} {{ReadOnlyInline}}
@@ -93,6 +99,8 @@ Note that properties which are objects (e.g., for overriding the prototype of bu
   - : Returns a {{domxref("Performance")}} object, which includes the {{domxref("Performance.timing", "timing")}} and {{domxref("Performance.navigation", "navigation")}} attributes, each of which is an object providing [performance-related](/en-US/docs/Web/API/Navigation_timing_API) data. See also [Using Navigation Timing](/en-US/docs/Web/API/Navigation_timing_API/Using_Navigation_Timing) for additional information and examples.
 - {{domxref("Window.personalbar")}} {{ReadOnlyInline}}
   - : Returns the personalbar object.
+- {{domxref("Window.scheduler")}} {{ReadOnlyInline}}
+  - : Returns the {{domxref("Scheduler")}} object associated with the current context. This is the entry point for using the [Prioritized Task Scheduling API](/en-US/docs/Web/API/Prioritized_Task_Scheduling_API).
 - {{domxref("Window.screen")}} {{ReadOnlyInline}}
   - : Returns a reference to the screen object associated with the window.
 - {{domxref("Window.screenX")}} and {{domxref("Window.screenLeft")}} {{ReadOnlyInline}}
@@ -128,18 +136,6 @@ Note that properties which are objects (e.g., for overriding the prototype of bu
 - `window[0]`, `window[1]`, etc.
   - : Returns a reference to the `window` object in the frames. See {{domxref("Window.frames")}} for more details.
 
-### Instance properties implemented from elsewhere
-
-- {{domxref("caches")}} {{ReadOnlyInline}}
-  - : Returns the {{domxref("CacheStorage")}} object associated with the current context. This object enables functionality such as storing assets for offline use, and generating custom responses to requests.
-- {{domxref("indexedDB")}} {{ReadOnlyInline}}
-  - : Provides a mechanism for applications to asynchronously access capabilities of indexed databases; returns an {{domxref("IDBFactory")}} object.
-- {{domxref("origin")}} {{ReadOnlyInline}}
-  - : Returns the global object's origin, serialized as a string.
-- {{domxref("Window.scheduler")}} {{ReadOnlyInline}}
-  - : Returns the {{domxref("Scheduler")}} object associated with the current context.
-    This is the entry point for using the [Prioritized Task Scheduling API](/en-US/docs/Web/API/Prioritized_Task_Scheduling_API).
-
 ### Deprecated properties
 
 - {{domxref("Window.content")}} and `Window._content` {{Deprecated_Inline}} {{Non-standard_Inline}} {{ReadOnlyInline}}
@@ -161,24 +157,40 @@ Note that properties which are objects (e.g., for overriding the prototype of bu
 
 ## Instance methods
 
-_This interface inherits methods from the {{domxref("EventTarget")}} interface and implements methods from `WindowOrWorkerGlobalScope` and {{domxref("EventTarget")}}._
+_This interface inherits methods from the {{domxref("EventTarget")}} interface._
 
+- {{domxref("EventTarget.addEventListener", "Window.addEventListener()")}}
+  - : Register an event handler to a specific event type on the window.
+- {{domxref("atob", "Window.atob()")}}
+  - : Decodes a string of data which has been encoded using base-64 encoding.
 - {{domxref("Window.alert()")}}
   - : Displays an alert dialog.
 - {{domxref("Window.blur()")}}
   - : Sets focus away from the window.
+- {{domxref("btoa", "Window.btoa()")}}
+  - : Creates a base-64 encoded ASCII string from a string of binary data.
 - {{domxref("Window.cancelAnimationFrame()")}}
   - : Enables you to cancel a callback previously scheduled with {{domxref("Window.requestAnimationFrame")}}.
 - {{domxref("Window.cancelIdleCallback()")}}
   - : Enables you to cancel a callback previously scheduled with {{domxref("Window.requestIdleCallback")}}.
 - {{domxref("Window.clearImmediate()")}}
   - : Cancels the repeated execution set using `setImmediate`.
+- {{domxref("clearInterval", "Window.clearInterval()")}}
+  - : Cancels the repeated execution set using {{domxref("setInterval()")}}.
+- {{domxref("clearTimeout()", "Window.clearTimeout()")}}
+  - : Cancels the delayed execution set using {{domxref("setTimeout()")}}.
 - {{domxref("Window.close()")}}
   - : Closes the current window.
 - {{domxref("Window.confirm()")}}
   - : Displays a dialog with a message that the user needs to respond to.
+- {{domxref("createImageBitmap", "Window.createImageBitmap()")}}
+  - : Accepts a variety of different image sources, and returns a {{jsxref("Promise")}} which resolves to an {{domxref("ImageBitmap")}}. Optionally the source is cropped to the rectangle of pixels originating at _(sx, sy)_ with width sw, and height sh.
+- {{domxref("EventTarget.dispatchEvent", "Window.dispatchEvent()")}}
+  - : Used to trigger an event.
 - {{domxref("Window.dump()")}} {{Non-standard_Inline}}
   - : Writes a message to the console.
+- {{domxref("fetch", "Window.fetch()")}}
+  - : Starts the process of fetching a resource from the network.
 - {{domxref("Window.find()")}} {{Non-standard_Inline}}
   - : Searches for a given string in a window.
 - {{domxref("Window.focus()")}}
@@ -205,6 +217,10 @@ _This interface inherits methods from the {{domxref("EventTarget")}} interface a
   - : Returns the text entered by the user in a prompt dialog.
 - {{DOMxRef("Window.queryLocalFonts()")}} {{Experimental_Inline}}
   - : Returns a {{jsxref("Promise")}} that fulfills with an array of {{domxref("FontData")}} objects representing the font faces available locally.
+- {{domxref("EventTarget.removeEventListener", "Window.removeEventListener()")}}
+  - : Removes an event listener from the window.
+- {{domxref("reportError", "Window.reportError()")}}
+  - : Reports an error in a script, emulating an unhandled exception.
 - {{domxref("Window.requestAnimationFrame()")}}
   - : Tells the browser that an animation is in progress, requesting that the browser schedule a repaint of the window for the next animation frame.
 - {{domxref("Window.requestIdleCallback()")}}
@@ -225,8 +241,12 @@ _This interface inherits methods from the {{domxref("EventTarget")}} interface a
   - : Scrolls to a particular set of coordinates in the document.
 - {{domxref("Window.setImmediate()")}}
   - : Executes a function after the browser has finished other heavy tasks.
+- {{domxref("setInterval", "Window.setInterval()")}}
+  - : Schedules a function to execute every time a given number of milliseconds elapses.
 - {{domxref("Window.setResizable()")}} {{Non-standard_Inline}}
   - : Toggles a user's ability to resize a window.
+- {{domxref("setTimeout", "Window.setTimeout()")}}
+  - : Schedules a function to execute in a given amount of time.
 - {{domxref("Window.sizeToContent()")}} {{Non-standard_Inline}}
   - : Sizes the window according to its content.
 - {{domxref("Window.showOpenFilePicker()")}} {{Experimental_Inline}}
@@ -239,33 +259,6 @@ _This interface inherits methods from the {{domxref("EventTarget")}} interface a
   - : This method stops window loading.
 - {{domxref("Window.updateCommands()")}} {{Non-standard_Inline}}
   - : Updates the state of commands of the current chrome window (UI).
-
-### Instance methods implemented from elsewhere
-
-- {{domxref("EventTarget.addEventListener()")}}
-  - : Register an event handler to a specific event type on the window.
-- {{domxref("EventTarget.dispatchEvent()")}}
-  - : Used to trigger an event.
-- {{domxref("atob", "atob()")}}
-  - : Decodes a string of data which has been encoded using base-64 encoding.
-- {{domxref("btoa", "btoa()")}}
-  - : Creates a base-64 encoded ASCII string from a string of binary data.
-- {{domxref("clearInterval()")}}
-  - : Cancels the repeated execution set using {{domxref("setInterval()")}}.
-- {{domxref("clearTimeout()")}}
-  - : Cancels the delayed execution set using {{domxref("setTimeout()")}}.
-- {{domxref("createImageBitmap()")}}
-  - : Accepts a variety of different image sources, and returns a {{jsxref("Promise")}} which resolves to an {{domxref("ImageBitmap")}}. Optionally the source is cropped to the rectangle of pixels originating at _(sx, sy)_ with width sw, and height sh.
-- {{domxref("fetch()")}}
-  - : Starts the process of fetching a resource from the network.
-- {{domxref("EventTarget.removeEventListener()")}}
-  - : Removes an event listener from the window.
-- {{domxref("setInterval()")}}
-  - : Schedules a function to execute every time a given number of milliseconds elapses.
-- {{domxref("setTimeout()")}}
-  - : Schedules a function to execute in a given amount of time.
-- {{domxref("reportError()")}}
-  - : Reports an error in a script, emulating an unhandled exception.
 
 ### Deprecated methods
 
