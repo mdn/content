@@ -6,17 +6,17 @@ browser-compat: html.manifest
 
 {{QuickLinksWithSubpages("/en-US/docs/Web/Manifest")}}
 
-**Web app manifests** are part of a collection of web technologies that enable [progressive web apps](/en-US/docs/Web/Progressive_web_apps) (PWAs).
+A **web application manifest**, defined in the [Web Application Manifest](https://w3c.github.io/manifest/) specification, is a {{Glossary("JSON")}} text file that provides information about a web application.
 
-PWAs are web applications, written using web technologies, that can be installed on a device. Installed PWAs can work offline, use regular [Web APIs](/en-US/docs/Web/API), and be fully integrated into the operating system they're installed on.
+The most common use for a web application manifest is to provide information that the browser needs to install a [progressive web app](/en-US/docs/Web/Progressive_web_apps) (PWA) on a device, such as the app's name and icon.
 
-A web application manifest, as defined in the [Web Application Manifest](https://w3c.github.io/manifest/) specification, provides information about a web application in a {{Glossary("JSON")}} text file. A web application manifest is necessary for the web app to be installed on a device and behave like other OS-native apps.
-
-A PWA's manifest includes its [name](/en-US/docs/Web/Manifest/name), [icon(s)](/en-US/docs/Web/Manifest/icons), [description](/en-US/docs/Web/Manifest/description), and ways that the PWA appears and integrates into the operating system where it's installed.
+A web application manifest contains a single JSON object where the top-level keys are called _members_.
 
 ## Members
 
-A web application manifest contains a single JSON object where the top-level keys are called _members_. A web application manifest can contain the following members:
+This section lists the members that may appear in the manifest.
+
+All members are optional in the specification, but some applications require some members to be present. For example, [PWAs must provide certain manifest members](/en-US/docs/Web/Progressive_web_apps/guides/making_pwas_installable#required_manifest_members).
 
 {{ListSubpages("/en-US/docs/Web/Manifest")}}
 

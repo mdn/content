@@ -52,6 +52,8 @@ The manifest contains a single JSON object containing a collection of members, e
 }
 ```
 
+#### Required manifest members
+
 Chromium-based browsers, including Google Chrome, Samsung Internet, and Microsoft Edge, require that the manifest includes the following members:
 
 - [`name`](/en-US/docs/Web/Manifest/name)
