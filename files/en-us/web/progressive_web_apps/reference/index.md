@@ -34,7 +34,7 @@ The following manifest members are used to control the appearance of your app:
 - [`theme_color`](/en-US/docs/Web/Manifest/theme_color)
   - : The default theme color for the application, which sometimes affects how the operating system displays the app.
 - [`display`](/en-US/docs/Web/Manifest/display)
-  - : The developers' preferred display mode for the website.
+  - : The developers' preferred display mode for the browser UI.
 - [`display_override`](/en-US/docs/Web/Manifest/display_override)
   - : A sequence of display mode fallbacks for the `display` member.
 - [`start_url`](/en-US/docs/Web/Manifest/start_url)
