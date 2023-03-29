@@ -21,7 +21,7 @@ The following manifest members are used to name and describe your PWA:
 - [`id`](/en-US/docs/Web/Manifest/id)
   - : A unique identifier for the web application.
 - [`categories`](/en-US/docs/Web/Manifest/categories)
-  - : Names of categories that the application belongs to.
+  - : Names of categories the application belongs to.
 
 ### Appearance
 
