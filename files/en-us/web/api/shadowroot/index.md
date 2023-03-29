@@ -37,7 +37,7 @@ You can retrieve a reference to an element's shadow root using its {{domxref("El
   - : Returns the {{DOMxRef('Element')}} set as the target for mouse events while the pointer is locked.
     `null` if lock is pending, pointer is unlocked, or if the target is in another tree.
 - {{DOMxRef("ShadowRoot.slotAssignment")}} {{ReadOnlyInline}}
-  - : Returns a string containing the type of slot assignement, either `manual` or `named`.
+  - : Returns a string containing the type of slot assignment, either `manual` or `named`.
 - {{domxref("ShadowRoot.styleSheets")}} {{ReadOnlyInline}}
   - : Returns a {{domxref('StyleSheetList')}} of {{domxref('CSSStyleSheet')}} objects for stylesheets explicitly linked into, or embedded in a shadow tree.
 
