@@ -2,18 +2,12 @@
 title: inverted-colors
 slug: Web/CSS/@media/inverted-colors
 page-type: css-media-feature
-tags:
-  - "@media"
-  - CSS
-  - Media Queries
-  - Reference
-  - media feature
 browser-compat: css.at-rules.media.inverted-colors
 ---
 
 {{CSSRef}}
 
-The **`inverted-colors`** [CSS](/en-US/docs/Web/CSS) [media feature](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#media_features) can be used to test whether the {{glossary("user agent")}} or underlying OS is inverting colors.
+The **`inverted-colors`** [CSS](/en-US/docs/Web/CSS) [media feature](/en-US/docs/Web/CSS/@media#media_features) can be used to test whether the {{glossary("user agent")}} or underlying OS is inverting colors.
 
 ## Syntax
 

@@ -1,10 +1,7 @@
 ---
 title: omnibox
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/omnibox
-tags:
-  - Add-ons
-  - Extensions
-  - WebExtensions
+page-type: webextension-manifest-key
 browser-compat: webextensions.manifest.omnibox
 ---
 

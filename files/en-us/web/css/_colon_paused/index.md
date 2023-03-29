@@ -2,11 +2,6 @@
 title: ":paused"
 slug: Web/CSS/:paused
 page-type: css-pseudo-class
-tags:
-  - CSS
-  - Pseudo-class
-  - Reference
-  - paused
 browser-compat: css.selectors.paused
 ---
 
@@ -16,15 +11,12 @@ The **`:paused`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/
 
 A resource is paused if the user explicitly paused it, or if it is in a non-activated state.
 
-```css
-:paused {
-}
-```
-
 ## Syntax
 
-```
-:paused
+```css
+:paused {
+  /* ... */
+}
 ```
 
 ## Examples

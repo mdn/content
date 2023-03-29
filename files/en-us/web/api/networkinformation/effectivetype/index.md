@@ -2,15 +2,8 @@
 title: NetworkInformation.effectiveType
 slug: Web/API/NetworkInformation/effectiveType
 page-type: web-api-instance-property
-tags:
-  - API
-  - Experimental
-  - Network Information API
-  - NetworkInformation
-  - Property
-  - Read-only
-  - Reference
-  - effectiveType
+status:
+  - experimental
 browser-compat: api.NetworkInformation.effectiveType
 ---
 

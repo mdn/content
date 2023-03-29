@@ -2,15 +2,6 @@
 title: KeyframeEffect.target
 slug: Web/API/KeyframeEffect/target
 page-type: web-api-instance-property
-tags:
-  - API
-  - Animation
-  - KeyframeEffect
-  - Property
-  - Reference
-  - target
-  - waapi
-  - web animations api
 browser-compat: api.KeyframeEffect.target
 ---
 
@@ -20,22 +11,19 @@ The **`target`** property of a {{domxref("KeyframeEffect")}} interface represent
 
 ## Value
 
-An {{domxref("Element")}}, {{domxref("CSSPseudoElement")}}, or `null`.
+An {{domxref("Element")}} or `null`.
 
 ## Examples
 
-In the [Follow the White Rabbit example](https://codepen.io/rachelnabors/pen/eJyWzm/?editors=0010), `whiteRabbit` sets the **`target`** element to be animated:
+In the [Follow the White Rabbit example](https://codepen.io/rachelnabors/pen/eJyWzm/?editors=0010), `whiteRabbit` sets the `target` element to be animated:
 
 ```js
 const whiteRabbit = document.getElementById("rabbit");
 
 const rabbitDownKeyframes = new KeyframeEffect(
   whiteRabbit,
-  [
-    { transform: 'translateY(0%)' },
-    { transform: 'translateY(100%)' }
-  ],
-  { duration: 3000, fill: 'forwards' }
+  [{ transform: "translateY(0%)" }, { transform: "translateY(100%)" }],
+  { duration: 3000, fill: "forwards" }
 );
 
 // returns <div id="rabbit">Click the rabbit's ears!</div>

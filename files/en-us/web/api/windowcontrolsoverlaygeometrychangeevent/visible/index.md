@@ -2,11 +2,8 @@
 title: WindowControlsOverlayGeometryChangeEvent.visible
 slug: Web/API/WindowControlsOverlayGeometryChangeEvent/visible
 page-type: web-api-instance-property
-tags:
-  - API
-  - WindowControlsOverlayGeometryChangeEvent
-  - Property
-  - Experimental
+status:
+  - experimental
 browser-compat: api.WindowControlsOverlayGeometryChangeEvent.visible
 ---
 

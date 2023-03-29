@@ -2,15 +2,8 @@
 title: PresentationConnection.url
 slug: Web/API/PresentationConnection/url
 page-type: web-api-instance-property
-tags:
-  - API
-  - Experimental
-  - Presentation
-  - Presentation API
-  - PresentationConnection
-  - Property
-  - Reference
-  - URL
+status:
+  - experimental
 browser-compat: api.PresentationConnection.url
 ---
 

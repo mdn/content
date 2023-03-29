@@ -1,8 +1,7 @@
 ---
 title: Anatomy of an extension
 slug: Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension
-tags:
-  - WebExtensions
+page-type: guide
 ---
 
 {{AddonSidebar}}

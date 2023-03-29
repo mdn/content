@@ -1,12 +1,6 @@
 ---
 title: Population count
 slug: WebAssembly/Reference/Numeric/Population_count
-tags:
-  - WebAssembly
-  - wasm
-  - Reference
-  - Numeric
-  - Bitwise
 ---
 
 {{WebAssemblySidebar}}

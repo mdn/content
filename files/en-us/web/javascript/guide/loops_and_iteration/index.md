@@ -2,12 +2,6 @@
 title: Loops and iteration
 slug: Web/JavaScript/Guide/Loops_and_iteration
 page-type: guide
-tags:
-  - Guide
-  - JavaScript
-  - Loop
-  - Syntax
-  - "l10n:priority"
 ---
 
 {{jsSidebar("JavaScript Guide")}}
@@ -284,11 +278,11 @@ for (let i = 0; i < a.length; i++) {
 let x = 0;
 let z = 0;
 labelCancelLoops: while (true) {
-  console.log("Outer loops: ", x);
+  console.log("Outer loops:", x);
   x += 1;
   z = 1;
   while (true) {
-    console.log("Inner loops: ", z);
+    console.log("Inner loops:", z);
     z += 1;
     if (z === 10 && x === 10) {
       break labelCancelLoops;
@@ -372,10 +366,10 @@ checkiandj: while (i < 4) {
     if (j % 2 === 0) {
       continue checkj;
     }
-    console.log(j, " is odd.");
+    console.log(j, "is odd.");
   }
-  console.log("i = ", i);
-  console.log("j = ", j);
+  console.log("i =", i);
+  console.log("j =", j);
 }
 ```
 

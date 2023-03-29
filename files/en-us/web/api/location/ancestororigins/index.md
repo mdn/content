@@ -2,11 +2,6 @@
 title: location.ancestorOrigins
 slug: Web/API/Location/ancestorOrigins
 page-type: web-api-instance-property
-tags:
-  - API
-  - Location
-  - Property
-  - Reference
 browser-compat: api.Location.ancestorOrigins
 ---
 

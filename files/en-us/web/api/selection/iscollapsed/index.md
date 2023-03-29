@@ -2,14 +2,6 @@
 title: Selection.isCollapsed
 slug: Web/API/Selection/isCollapsed
 page-type: web-api-instance-property
-tags:
-  - API
-  - DOM
-  - HTML Editing
-  - Property
-  - Read-only
-  - Reference
-  - Selection
 browser-compat: api.Selection.isCollapsed
 ---
 

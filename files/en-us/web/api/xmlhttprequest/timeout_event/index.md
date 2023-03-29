@@ -2,14 +2,6 @@
 title: 'XMLHttpRequest: timeout event'
 slug: Web/API/XMLHttpRequest/timeout_event
 page-type: web-api-event
-tags:
-  - API
-  - Event
-  - Reference
-  - XHR
-  - XMLHttpRequest
-  - events
-  - timeout
 browser-compat: api.XMLHttpRequest.timeout_event
 ---
 

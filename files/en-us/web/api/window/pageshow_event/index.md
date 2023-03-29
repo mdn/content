@@ -2,18 +2,6 @@
 title: "Window: pageshow event"
 slug: Web/API/Window/pageshow_event
 page-type: web-api-event
-tags:
-  - API
-  - Document
-  - Event
-  - History
-  - Navigation
-  - Page
-  - PageTransitionEvent
-  - Reference
-  - Window
-  - pageshow
-  - show
 browser-compat: api.Window.pageshow_event
 ---
 
@@ -35,8 +23,8 @@ This includes:
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('pageshow', (event) => { });
-onpageshow = (event) => { };
+addEventListener("pageshow", (event) => {});
+onpageshow = (event) => {};
 ```
 
 ## Event type

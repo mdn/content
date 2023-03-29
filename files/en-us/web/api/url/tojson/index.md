@@ -2,13 +2,6 @@
 title: URL.toJSON()
 slug: Web/API/URL/toJSON
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - URL
-  - URL API
-  - Polyfill
 browser-compat: api.URL.toJSON
 ---
 
@@ -38,7 +31,9 @@ A string.
 ## Examples
 
 ```js
-const url = new URL("https://developer.mozilla.org/en-US/docs/Web/API/URL/toString");
+const url = new URL(
+  "https://developer.mozilla.org/en-US/docs/Web/API/URL/toString"
+);
 url.toJSON(); // should return the URL as a string
 ```
 

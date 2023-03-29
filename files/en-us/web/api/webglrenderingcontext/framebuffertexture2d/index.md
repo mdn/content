@@ -2,12 +2,6 @@
 title: WebGLRenderingContext.framebufferTexture2D()
 slug: Web/API/WebGLRenderingContext/framebufferTexture2D
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.framebufferTexture2D
 ---
 

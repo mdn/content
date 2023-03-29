@@ -1,14 +1,7 @@
 ---
 title: devtools_page
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/devtools_page
-tags:
-  - Add-ons
-  - DevTools
-  - Extensions
-  - Manifest
-  - Reference
-  - WebExtensions
-  - devtools_page
+page-type: webextension-manifest-key
 browser-compat: webextensions.manifest.devtools_page
 ---
 

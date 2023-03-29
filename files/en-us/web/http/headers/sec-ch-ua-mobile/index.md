@@ -1,14 +1,8 @@
 ---
 title: Sec-CH-UA-Mobile
 slug: Web/HTTP/Headers/Sec-CH-UA-Mobile
-tags:
-  - Sec-CH-UA-Mobile
-  - Client hint
-  - HTTP
-  - HTTP Header
-  - Reference
-  - Request header
-  - Experimental
+status:
+  - experimental
 browser-compat: http.headers.Sec-CH-UA-Mobile
 ---
 

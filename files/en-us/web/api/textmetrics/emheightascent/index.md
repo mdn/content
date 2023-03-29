@@ -2,12 +2,8 @@
 title: TextMetrics.emHeightAscent
 slug: Web/API/TextMetrics/emHeightAscent
 page-type: web-api-instance-property
-tags:
-  - API
-  - Experimental
-  - Property
-  - Reference
-  - TextMetrics
+status:
+  - experimental
 browser-compat: api.TextMetrics.emHeightAscent
 ---
 
@@ -18,9 +14,9 @@ The read-only `emHeightAscent` property of the {{domxref("TextMetrics")}} interf
 ## Examples
 
 ```js
-const canvas = document.createElement('canvas');
-const ctx = canvas.getContext('2d');
-const text = ctx.measureText('foo'); // returns TextMetrics object
+const canvas = document.createElement("canvas");
+const ctx = canvas.getContext("2d");
+const text = ctx.measureText("foo"); // returns TextMetrics object
 
 text.emHeightAscent; // 7.59765625;
 ```

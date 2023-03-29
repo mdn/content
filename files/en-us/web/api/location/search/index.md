@@ -2,10 +2,6 @@
 title: location.search
 slug: Web/API/Location/search
 page-type: web-api-instance-property
-tags:
-  - API
-  - Location
-  - Property
 browser-compat: api.Location.search
 ---
 

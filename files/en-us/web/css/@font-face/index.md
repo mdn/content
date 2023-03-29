@@ -2,15 +2,6 @@
 title: "@font-face"
 slug: Web/CSS/@font-face
 page-type: css-at-rule
-tags:
-  - "@font-face"
-  - At-rule
-  - CSS
-  - CSS Fonts
-  - Fonts
-  - Nick Names
-  - Reference
-  - typography
 browser-compat: css.at-rules.font-face
 ---
 
@@ -49,7 +40,7 @@ The **`@font-face`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/At
 
     > **Note:** The font-variant descriptor was removed from the specification in 2018. The {{cssxref("font-variant")}} value property is supported, but there is no descriptor equivalent.
 
-- {{cssxref("font-feature-settings", "font-feature-settings")}}
+- {{cssxref("@font-face/font-feature-settings", "font-feature-settings")}}
   - : Allows control over advanced typographic features in OpenType fonts.
 - {{cssxref("@font-face/font-variation-settings", "font-variation-settings")}}
   - : Allows low-level control over OpenType or TrueType font variations, by specifying the four letter axis names of the features to vary, along with their variation values.
@@ -142,7 +133,7 @@ The output of this example code looks like so:
 
 ### Specifying local font alternatives
 
-In this example, the user's local copy of "Helvetica Neue Bold" is used; if the user does not have that font installed (two different names are tried), then the downloadable font named "MgOpenModernaBold.ttf" is used instead:
+In this example, the user's local copy of "Helvetica Neue Bold" is used; if the user does not have that font installed (both the full font name and the Postscript name are tried), then the downloadable font named "MgOpenModernaBold.ttf" is used instead:
 
 ```css
 @font-face {

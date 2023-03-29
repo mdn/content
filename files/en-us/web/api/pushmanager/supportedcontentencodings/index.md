@@ -2,13 +2,6 @@
 title: PushManager.supportedContentEncodings
 slug: Web/API/PushManager/supportedContentEncodings
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - PushManager
-  - Reference
-  - Service Workers
-  - supportedContentEncodings
 browser-compat: api.PushManager.supportedContentEncodings
 ---
 

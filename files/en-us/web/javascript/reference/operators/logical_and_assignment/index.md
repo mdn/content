@@ -2,12 +2,6 @@
 title: Logical AND assignment (&&=)
 slug: Web/JavaScript/Reference/Operators/Logical_AND_assignment
 page-type: javascript-operator
-tags:
-  - JavaScript
-  - Language feature
-  - Logical assignment
-  - Operator
-  - Reference
 browser-compat: javascript.operators.logical_and_assignment
 ---
 
@@ -20,7 +14,7 @@ The **logical AND assignment (`x &&= y`)** operator only assigns if `x` is {{Glo
 ## Syntax
 
 ```js-nolint
-expr1 &&= expr2
+x &&= y
 ```
 
 ## Description

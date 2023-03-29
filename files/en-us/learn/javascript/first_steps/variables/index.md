@@ -1,19 +1,6 @@
 ---
 title: Storing the information you need — Variables
 slug: Learn/JavaScript/First_steps/Variables
-tags:
-  - Arrays
-  - Booleans
-  - JavaScript
-  - Numbers
-  - Objects
-  - Updating
-  - Variables
-  - declaring
-  - initializing
-  - "l10n:priority"
-  - loose typing
-  - strings
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/First_steps/What_went_wrong", "Learn/JavaScript/First_steps/Math", "Learn/JavaScript/First_steps")}}
@@ -38,7 +25,7 @@ After reading the last couple of articles you should now know what JavaScript is
 
 ## Tools you need
 
-Throughout this article, you'll be asked to type in lines of code to test your understanding of the content. If you are using a desktop browser, the best place to type your sample code is your browser's JavaScript console (see [What are browser developer tools](/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools) for more information on how to access this tool).
+Throughout this article, you'll be asked to type in lines of code to test your understanding of the content. If you are using a desktop browser, the best place to type your sample code is your browser's JavaScript console (see [What are browser developer tools](/en-US/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools) for more information on how to access this tool).
 
 ## What is a variable?
 
@@ -207,7 +194,7 @@ myName = 'Bob';
 
 Again, this is a sensible language decision. There is no reason to redeclare variables — it just makes things more confusing.
 
-For these reasons and more, we recommend that you use `let` in your code, rather than `var`. There is no longer any reason to use `var`, as it has been supported since Internet Explorer 11.
+For these reasons and more, we recommend that you use `let` in your code, rather than `var`. Unless you are explicitly writing support for ancient browsers, there is no longer any reason to use `var` as all modern browsers have supported `let` since 2015.
 
 > **Note:** If you are trying this code in your browser's console, prefer to copy & paste each of the code blocks here as a whole. There's a [feature in Chrome's console](https://goo.gle/devtools-const-repl) where variable re-declarations with `let` and `const` are allowed:
 >
@@ -435,15 +422,3 @@ You've reached the end of this article, but can you remember the most important 
 By now you should know a reasonable amount about JavaScript variables and how to create them. In the next article, we'll focus on numbers in more detail, looking at how to do basic math in JavaScript.
 
 {{PreviousMenuNext("Learn/JavaScript/First_steps/What_went_wrong", "Learn/JavaScript/First_steps/Maths", "Learn/JavaScript/First_steps")}}
-
-## In this module
-
-- [What is JavaScript?](/en-US/docs/Learn/JavaScript/First_steps/What_is_JavaScript)
-- [The first splash into JavaScript](/en-US/docs/Learn/JavaScript/First_steps/A_first_splash)
-- [What went wrong? Troubleshooting JavaScript](/en-US/docs/Learn/JavaScript/First_steps/What_went_wrong)
-- [Storing the information you need — Variables](/en-US/docs/Learn/JavaScript/First_steps/Variables)
-- [Basic math in JavaScript — numbers and operators](/en-US/docs/Learn/JavaScript/First_steps/Math)
-- [Handling text — strings in JavaScript](/en-US/docs/Learn/JavaScript/First_steps/Strings)
-- [Useful string methods](/en-US/docs/Learn/JavaScript/First_steps/Useful_string_methods)
-- [Arrays](/en-US/docs/Learn/JavaScript/First_steps/Arrays)
-- [Assessment: Silly story generator](/en-US/docs/Learn/JavaScript/First_steps/Silly_story_generator)

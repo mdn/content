@@ -2,12 +2,6 @@
 title: HTMLAreaElement.referrerPolicy
 slug: Web/API/HTMLAreaElement/referrerPolicy
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTMLAreaElement
-  - Property
-  - Reference
-  - Referrer Policy
 browser-compat: api.HTMLAreaElement.referrerPolicy
 ---
 
@@ -15,7 +9,7 @@ browser-compat: api.HTMLAreaElement.referrerPolicy
 
 The
 **`HTMLAreaElement.referrerPolicy`**
-property reflect the HTML {{htmlattrxref("referrerpolicy","area")}} attribute of the
+property reflect the HTML [`referrerpolicy`](/en-US/docs/Web/HTML/Element/area#referrerpolicy) attribute of the
 {{HTMLElement("area")}} element defining which referrer is sent when fetching the
 resource.
 

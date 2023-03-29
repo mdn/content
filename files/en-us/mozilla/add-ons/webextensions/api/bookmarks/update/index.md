@@ -1,16 +1,7 @@
 ---
 title: bookmarks.update()
 slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/update
-tags:
-  - API
-  - Add-ons
-  - Bookmarks
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - Update
-  - WebExtensions
+page-type: webextension-api-function
 browser-compat: webextensions.api.bookmarks.update
 ---
 

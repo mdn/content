@@ -2,14 +2,6 @@
 title: Array.prototype.filter()
 slug: Web/JavaScript/Reference/Global_Objects/Array/filter
 page-type: javascript-instance-method
-tags:
-  - Array
-  - ECMAScript 5
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - Polyfill
 browser-compat: javascript.builtins.Array.filter
 ---
 
@@ -143,7 +135,7 @@ console.log("Filtered Array\n", arrByID);
 // Filtered Array
 // [{ id: 15 }, { id: -1 }, { id: 3 }, { id: 12.2 }]
 
-console.log("Number of Invalid Entries = ", invalidEntries);
+console.log("Number of Invalid Entries =", invalidEntries);
 // Number of Invalid Entries = 5
 ```
 

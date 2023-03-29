@@ -1,16 +1,7 @@
 ---
 title: i18n.getMessage()
 slug: Mozilla/Add-ons/WebExtensions/API/i18n/getMessage
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - getMessage
-  - i18n
+page-type: webextension-api-function
 browser-compat: webextensions.api.i18n.getMessage
 ---
 

@@ -2,17 +2,12 @@
 title: BigInt() constructor
 slug: Web/JavaScript/Reference/Global_Objects/BigInt/BigInt
 page-type: javascript-constructor
-tags:
-  - BigInt
-  - Constructor
-  - JavaScript
-  - Reference
 browser-compat: javascript.builtins.BigInt.BigInt
 ---
 
 {{JSRef}}
 
-The **`BigInt()`** function returns a value of type **bigint**.
+The **`BigInt()`** function returns primitive values of type BigInt.
 
 ## Syntax
 

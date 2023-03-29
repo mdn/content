@@ -2,12 +2,6 @@
 title: HTMLTableElement.tFoot
 slug: Web/API/HTMLTableElement/tFoot
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTML DOM
-  - HTMLTableElement
-  - Property
-  - Reference
 browser-compat: api.HTMLTableElement.tFoot
 ---
 

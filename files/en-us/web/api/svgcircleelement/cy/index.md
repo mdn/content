@@ -2,13 +2,6 @@
 title: SVGCircleElement.cy
 slug: Web/API/SVGCircleElement/cy
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - SVG
-  - SVGCircleElement
-  - cy
 browser-compat: api.SVGCircleElement.cy
 ---
 
@@ -39,7 +32,7 @@ An {{domxref("SVGAnimatedLength")}} representing the y-coordinate of the circle'
 ### JavaScript
 
 ```js
-const circle = document.getElementById('circle');
+const circle = document.getElementById("circle");
 console.log(circle.cy);
 ```
 

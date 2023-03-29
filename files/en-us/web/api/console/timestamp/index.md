@@ -2,14 +2,8 @@
 title: console.timeStamp()
 slug: Web/API/console/timeStamp
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - Debugging
-  - Method
-  - Non-standard
-  - Web Development
-  - web console
+status:
+  - non-standard
 browser-compat: api.console.timeStamp
 ---
 

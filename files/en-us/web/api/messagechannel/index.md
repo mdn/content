@@ -2,13 +2,6 @@
 title: MessageChannel
 slug: Web/API/MessageChannel
 page-type: web-api-interface
-tags:
-  - API
-  - Channel Messaging API
-  - Interface
-  - MessageChannel
-  - Reference
-  - web messaging
 browser-compat: api.MessageChannel
 ---
 
@@ -40,8 +33,8 @@ When a message is received back from the IFrame, the `onMessage` function output
 
 ```js
 const channel = new MessageChannel();
-const output = document.querySelector('.output');
-const iframe = document.querySelector('iframe');
+const output = document.querySelector(".output");
+const iframe = document.querySelector("iframe");
 
 // Wait for the iframe to load
 iframe.addEventListener("load", onLoad);
@@ -51,7 +44,9 @@ function onLoad() {
   channel.port1.onmessage = onMessage;
 
   // Transfer port2 to the iframe
-  iframe.contentWindow.postMessage('Hello from the main page!', '*', [channel.port2]);
+  iframe.contentWindow.postMessage("Hello from the main page!", "*", [
+    channel.port2,
+  ]);
 }
 
 // Handle messages received on port1

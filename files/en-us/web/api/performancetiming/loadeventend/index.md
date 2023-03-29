@@ -2,17 +2,8 @@
 title: PerformanceTiming.loadEventEnd
 slug: Web/API/PerformanceTiming/loadEventEnd
 page-type: web-api-instance-property
-tags:
-  - API
-  - Backwards compatibility
-  - Deprecated
-  - Event Handler
-  - Navigation Timing
-  - PerformanceTiming
-  - Property
-  - Read-only
-  - Reference
-  - legacy
+status:
+  - deprecated
 browser-compat: api.PerformanceTiming.loadEventEnd
 ---
 

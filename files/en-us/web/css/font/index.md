@@ -2,12 +2,6 @@
 title: font
 slug: Web/CSS/font
 page-type: css-shorthand-property
-tags:
-  - CSS
-  - CSS Fonts
-  - CSS Property
-  - Reference
-  - recipe:css-shorthand-property
 browser-compat: css.properties.font
 ---
 
@@ -439,12 +433,14 @@ input {
 const textAreas = document.getElementsByClassName("curCss");
 
 function getProperties() {
-  return `${getCheckedValue("font_style")} `
-    + `${getCheckedValue("font_variant")} `
-    + `${getCheckedValue("font_weight")} `
-    + `${getCheckedValue("font_size")}`
-    + `${getCheckedValue("line_height")} `
-    + `${getCheckedValue("font_family")}`;
+  return (
+    `${getCheckedValue("font_style")} ` +
+    `${getCheckedValue("font_variant")} ` +
+    `${getCheckedValue("font_weight")} ` +
+    `${getCheckedValue("font_size")}` +
+    `${getCheckedValue("line_height")} ` +
+    `${getCheckedValue("font_family")}`
+  );
 }
 
 function getCheckedValue(radioName) {
@@ -461,8 +457,7 @@ function getCheckedValue(radioName) {
 }
 
 function setCss() {
-  getProperties();
-  injectCss(shortText);
+  injectCss(getProperties());
 }
 
 function injectCss(cssFragment) {

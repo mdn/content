@@ -1,16 +1,6 @@
 ---
-title: 'Django Tutorial Part 9: Working with forms'
+title: "Django Tutorial Part 9: Working with forms"
 slug: Learn/Server-side/Django/Forms
-tags:
-  - Beginner
-  - CodingScripting
-  - Django Forms
-  - Forms
-  - HTML forms
-  - Learn
-  - Tutorial
-  - django
-  - server side
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/authentication_and_sessions", "Learn/Server-side/Django/Testing", "Learn/Server-side/Django")}}
@@ -403,7 +393,7 @@ def renew_book_librarian(request, pk):
         'book_instance': book_instance,
     }
 
-    return render(request, 'book_renew_librarian.html', context)
+    return render(request, 'catalog/book_renew_librarian.html', context)
 ```
 
 ### The template
@@ -416,7 +406,7 @@ Create the template referenced in the view (**/catalog/templates/catalog/book_re
 {% block content %}
   <h1>Renew: \{{ book_instance.book.title }}</h1>
   <p>Borrower: \{{ book_instance.borrower }}</p>
-  <p{% if book_instance.is_overdue %} class="text-danger"{% endif %}>Due date: \{{ book_instance.due_back }}</p>
+  <p {% if book_instance.is_overdue %} class="text-danger"{% endif %} >Due date: \{{ book_instance.due_back }}</p>
 
   <form action="" method="post">
     {% csrf_token %}
@@ -492,13 +482,39 @@ For more examples of how to manually render forms in templates and dynamically l
 
 ### Testing the page
 
-If you accepted the "challenge" in [Django Tutorial Part 8: User authentication and permissions](/en-US/docs/Learn/Server-side/Django/Authentication#challenge_yourself) you'll have a list of all books on loan in the library, which is only visible to library staff. We can add a link to our renew page next to each item using the template code below.
+If you accepted the "challenge" in [Django Tutorial Part 8: User authentication and permissions](/en-US/docs/Learn/Server-side/Django/Authentication#challenge_yourself) you'll have a view showing all books on loan in the library, which is only visible to library staff.
+The view might look similar to this:
 
-```html
-{% if perms.catalog.can_mark_returned %}- <a href="{% url 'renew-book-librarian' bookinst.id %}">Renew</a>  {% endif %}
+```pug
+{% extends "base_generic.html" %}
+
+{% block content %}
+    <h1>All Borrowed Books</h1>
+
+    {% if bookinstance_list %}
+    <ul>
+
+      {% for bookinst in bookinstance_list %} 
+      <li class="{% if bookinst.is_overdue %}text-danger{% endif %}">
+        <a href="{% url 'book-detail' bookinst.book.pk %}">{{bookinst.book.title}}</a> ({{ bookinst.due_back }}) {% if user.is_staff %}- {{ bookinst.borrower }}{% endif %}
+      </li>
+      {% endfor %}
+    </ul>
+
+    {% else %}
+      <p>There are no books borrowed.</p>
+    {% endif %}
+{% endblock %}
 ```
 
-> **Note:** Remember that your test login will need to have the permission "`catalog.can_mark_returned`" in order to access the renew book page (perhaps use your superuser account).
+We can add a link to the book renew page next to each item by appending the following template code to the list item text above.
+Note that this template code can only run inside the `{% for %}` loop, because that is where the `bookinst` value is defined.
+
+```pug
+{% if perms.catalog.can_mark_returned %}- <a href="{% url 'renew-book-librarian' bookinst.id %}">Renew</a>{% endif %}
+```
+
+> **Note:** Remember that your test login will need to have the permission "`catalog.can_mark_returned`" in order to see the new "Renew" link added above, and to access the linked page (perhaps use your superuser account).
 
 You can alternatively manually construct a test URL like this — `http://127.0.0.1:8000/catalog/book/<bookinstance_id>/renew/` (a valid `bookinstance_id` can be obtained by navigating to a book detail page in your library, and copying the `id` field).
 
@@ -722,21 +738,3 @@ There is a lot more that can be done with forms (check out our [See also](#see_a
 - [Generic editing views](https://docs.djangoproject.com/en/4.0/ref/class-based-views/generic-editing/) (Django docs)
 
 {{PreviousMenuNext("Learn/Server-side/Django/authentication_and_sessions", "Learn/Server-side/Django/Testing", "Learn/Server-side/Django")}}
-
-## In this module
-
-- [Django introduction](/en-US/docs/Learn/Server-side/Django/Introduction)
-- [Setting up a Django development environment](/en-US/docs/Learn/Server-side/Django/development_environment)
-- [Django Tutorial: The Local Library website](/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website)
-- [Django Tutorial Part 2: Creating a skeleton website](/en-US/docs/Learn/Server-side/Django/skeleton_website)
-- [Django Tutorial Part 3: Using models](/en-US/docs/Learn/Server-side/Django/Models)
-- [Django Tutorial Part 4: Django admin site](/en-US/docs/Learn/Server-side/Django/Admin_site)
-- [Django Tutorial Part 5: Creating our home page](/en-US/docs/Learn/Server-side/Django/Home_page)
-- [Django Tutorial Part 6: Generic list and detail views](/en-US/docs/Learn/Server-side/Django/Generic_views)
-- [Django Tutorial Part 7: Sessions framework](/en-US/docs/Learn/Server-side/Django/Sessions)
-- [Django Tutorial Part 8: User authentication and permissions](/en-US/docs/Learn/Server-side/Django/Authentication)
-- **Django Tutorial Part 9: Working with forms**
-- [Django Tutorial Part 10: Testing a Django web application](/en-US/docs/Learn/Server-side/Django/Testing)
-- [Django Tutorial Part 11: Deploying Django to production](/en-US/docs/Learn/Server-side/Django/Deployment)
-- [Django web application security](/en-US/docs/Learn/Server-side/Django/web_application_security)
-- [DIY Django mini blog](/en-US/docs/Learn/Server-side/Django/django_assessment_blog)

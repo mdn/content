@@ -2,12 +2,6 @@
 title: SVGMarkerElement.orientAngle
 slug: Web/API/SVGMarkerElement/orientAngle
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - orientAngle
-  - SVGMarkerElement
 browser-compat: api.SVGMarkerElement.orientAngle
 ---
 

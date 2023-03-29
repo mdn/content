@@ -2,13 +2,6 @@
 title: Element.prefix
 slug: Web/API/Element/prefix
 page-type: web-api-instance-property
-tags:
-  - API
-  - DOM
-  - NeedsBrowserCompatibility
-  - NeedsMobileBrowserCompatibility
-  - Property
-  - Reference
 browser-compat: api.Element.prefix
 ---
 

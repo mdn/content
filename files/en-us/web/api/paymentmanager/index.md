@@ -2,13 +2,8 @@
 title: PaymentManager
 slug: Web/API/PaymentManager
 page-type: web-api-interface
-tags:
-  - API
-  - Experimental
-  - Interface
-  - Landing
-  - PaymentManager
-  - Reference
+status:
+  - experimental
 browser-compat: api.PaymentManager
 ---
 
@@ -33,18 +28,17 @@ It is accessed via the {{domxref("ServiceWorkerRegistration.paymentManager")}} p
 ## Examples
 
 ```js
-navigator.serviceWorker.register("serviceworker.js")
-  .then(registration => {
-    registration.paymentManager.userHint = "Card number should be 16 digits";
+navigator.serviceWorker.register("serviceworker.js").then((registration) => {
+  registration.paymentManager.userHint = "Card number should be 16 digits";
 
-    registration.paymentManager.enableDelegations(['shippingAddress', 'payerName']) 
-      .then(() => {
-          // ...
-      });
+  registration.paymentManager
+    .enableDelegations(["shippingAddress", "payerName"])
+    .then(() => {
+      // ...
+    });
 
-    // ...
-
-  });
+  // ...
+});
 ```
 
 ## Specifications

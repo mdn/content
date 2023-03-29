@@ -2,11 +2,6 @@
 title: operator
 slug: Web/SVG/Attribute/operator
 page-type: svg-attribute
-tags:
-  - Filters
-  - NeedsCompatTable
-  - SVG
-  - SVG Attribute
 spec-urls:
   - https://drafts.fxtf.org/filter-effects/#element-attrdef-femorphology-operator
   - https://drafts.fxtf.org/filter-effects/#element-attrdef-fecomposite-operator

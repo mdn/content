@@ -2,14 +2,9 @@
 title: "-webkit-transition"
 slug: Web/CSS/@media/-webkit-transition
 page-type: css-media-feature
-tags:
-  - "@media"
-  - CSS
-  - Deprecated
-  - Non-standard
-  - Reference
-  - WebKit
-  - media feature
+status:
+  - deprecated
+  - non-standard
 browser-compat: css.at-rules.media.-webkit-transition
 ---
 
@@ -17,7 +12,7 @@ browser-compat: css.at-rules.media.-webkit-transition
 
 > **Note:** All browsers support the [`transition`](/en-US/docs/Web/CSS/animation#browser_compatibility) property without vendor prefixes. Only WebKit (Safari), and not Chromium, based browsers support the `-webkit-transition` media feature. No browsers support `transition` without the prefix as a media query (though some browsers do support - {{cssxref("@media/-webkit-transform-3d", "-webkit-transform-3d")}}). Use the [`@supports (transition)`](/en-US/docs/Web/CSS/@supports) feature query instead.
 
-The **`-webkit-transition`** Boolean non-standard[CSS](/en-US/docs/Web/CSS) [media feature](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#media_features) is a [WebKit extension](/en-US/docs/Web/CSS/WebKit_Extensions) whose value is `true` if the browsing context supports [CSS transitions](/en-US/docs/Web/CSS/CSS_Transitions).
+The **`-webkit-transition`** Boolean non-standard[CSS](/en-US/docs/Web/CSS) [media feature](/en-US/docs/Web/CSS/@media#media_features) is a [WebKit extension](/en-US/docs/Web/CSS/WebKit_Extensions) whose value is `true` if the browsing context supports [CSS transitions](/en-US/docs/Web/CSS/CSS_Transitions).
 
 Apple has [a description in Safari CSS Reference](https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariCSSRef/Articles/OtherStandardCSS3Features.html#//apple_ref/doc/uid/TP40007601-SW3); this is now called `transition` there.
 

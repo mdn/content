@@ -2,14 +2,6 @@
 title: encodeURI()
 slug: Web/JavaScript/Reference/Global_Objects/encodeURI
 page-type: javascript-function
-tags:
-  - Encoding
-  - JavaScript
-  - Method
-  - Text
-  - URI
-  - URL
-  - encodeURI
 browser-compat: javascript.builtins.encodeURI
 ---
 

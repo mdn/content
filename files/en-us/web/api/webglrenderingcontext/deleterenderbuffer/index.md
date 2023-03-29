@@ -2,12 +2,6 @@
 title: WebGLRenderingContext.deleteRenderbuffer()
 slug: Web/API/WebGLRenderingContext/deleteRenderbuffer
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.deleteRenderbuffer
 ---
 
@@ -38,8 +32,8 @@ None ({{jsxref("undefined")}}).
 ### Deleting a renderbuffer
 
 ```js
-const canvas = document.getElementById('canvas');
-const gl = canvas.getContext('webgl');
+const canvas = document.getElementById("canvas");
+const gl = canvas.getContext("webgl");
 const renderbuffer = gl.createRenderbuffer();
 
 // …

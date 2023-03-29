@@ -2,23 +2,8 @@
 title: HTMLImageElement.vspace
 slug: Web/API/HTMLImageElement/vspace
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTML
-  - HTML DOM
-  - HTMLImageElement
-  - Image
-  - Property
-  - Reference
-  - Vertical
-  - bottom
-  - img
-  - margin
-  - space
-  - spacing
-  - top
-  - vspace
-  - Deprecated
+status:
+  - deprecated
 browser-compat: api.HTMLImageElement.vspace
 ---
 

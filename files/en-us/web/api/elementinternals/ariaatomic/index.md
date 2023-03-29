@@ -2,14 +2,6 @@
 title: ElementInternals.ariaAtomic
 slug: Web/API/ElementInternals/ariaAtomic
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - ariaAtomic
-  - AriaAttributes
-  - AriaMixin
-  - ElementInternals
 browser-compat: api.ElementInternals.ariaAtomic
 ---
 

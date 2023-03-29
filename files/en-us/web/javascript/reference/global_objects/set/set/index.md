@@ -2,20 +2,12 @@
 title: Set() constructor
 slug: Web/JavaScript/Reference/Global_Objects/Set/Set
 page-type: javascript-constructor
-tags:
-  - Constructor
-  - JavaScript
-  - Reference
-  - set
-  - Polyfill
 browser-compat: javascript.builtins.Set.Set
 ---
 
 {{JSRef}}
 
-The **`Set` constructor** lets you
-create `Set` objects that store unique values of any type, whether [primitive values](/en-US/docs/Glossary/Primitive) or object
-references.
+The **`Set()`** constructor creates {{jsxref("Set")}} objects.
 
 {{EmbedInteractiveExample("pages/js/set-prototype-constructor.html")}}
 

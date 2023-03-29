@@ -2,15 +2,8 @@
 title: Window.navigation
 slug: Web/API/Window/navigation
 page-type: web-api-instance-property
-tags:
-  - API
-  - Experimental
-  - Navigate
-  - Navigation
-  - Navigation API
-  - Property
-  - Reference
-  - Window
+status:
+  - experimental
 browser-compat: api.Window.navigation
 ---
 

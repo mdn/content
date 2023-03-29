@@ -2,20 +2,12 @@
 title: Intl.Segmenter() constructor
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/Segmenter
 page-type: javascript-constructor
-tags:
-  - Constructor
-  - Segmenter
-  - Internationalization
-  - Intl
-  - JavaScript
-  - Localization
-  - Reference
 browser-compat: javascript.builtins.Intl.Segmenter.Segmenter
 ---
 
 {{JSRef}}
 
-The **`Intl.Segmenter()`** constructor creates [`Intl.Segmenter`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter) objects that enable locale-sensitive text segmentation.
+The **`Intl.Segmenter()`** constructor creates {{jsxref("Intl.Segmenter")}} objects.
 
 {{EmbedInteractiveExample("pages/js/intl-segmenter.html")}}
 
@@ -62,8 +54,11 @@ The following example shows how to count words in a string using the Japanese la
 
 ```js
 const text = "吾輩は猫である。名前はたぬき。";
-const japaneseSegmenter = new Intl.Segmenter("ja-JP", {granularity: "word"});
-console.log([...japaneseSegmenter.segment(text)].filter((segment) => segment.isWordLike).length);
+const japaneseSegmenter = new Intl.Segmenter("ja-JP", { granularity: "word" });
+console.log(
+  [...japaneseSegmenter.segment(text)].filter((segment) => segment.isWordLike)
+    .length,
+);
 // 8, as the text is segmented as '吾輩'|'は'|'猫'|'で'|'ある'|'。'|'名前'|'は'|'たぬき'|'。'
 ```
 

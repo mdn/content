@@ -1,13 +1,7 @@
 ---
-title: 'RegExp: lastIndex'
+title: "RegExp: lastIndex"
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/lastIndex
 page-type: javascript-instance-data-property
-tags:
-  - JavaScript
-  - Property
-  - Reference
-  - RegExp
-  - Regular Expressions
 browser-compat: javascript.builtins.RegExp.lastIndex
 ---
 

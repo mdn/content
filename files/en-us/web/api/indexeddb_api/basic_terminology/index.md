@@ -2,10 +2,6 @@
 title: IndexedDB key characteristics and basic terminology
 slug: Web/API/IndexedDB_API/Basic_Terminology
 page-type: guide
-tags:
-  - Advanced
-  - IndexedDB
-  - terminology
 ---
 
 {{DefaultAPISidebar("IndexedDB")}}
@@ -16,7 +12,7 @@ You'll also find the following articles useful:
 
 - For a detailed tutorial on how to use the API, see [Using IndexedDB](/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB).
 - For the reference documentation on the IndexedDB API, refer back to the main [IndexedDB API](/en-US/docs/Web/API/IndexedDB_API) article and its subpages, which document the types of objects used by IndexedDB.
-- For more information on how the browser handles storing your data in the background, read [Browser storage limits and eviction criteria](/en-US/docs/Web/API/IndexedDB_API/Browser_storage_limits_and_eviction_criteria).
+- For more information on how the browser handles storing your data in the background, read [Browser storage quotas and eviction criteria](/en-US/docs/Web/API/Storage_API/Storage_quotas_and_eviction_criteria).
 
 ## Key characteristics
 
@@ -43,7 +39,7 @@ If you have assumptions from working with other types of databases, you might ge
 
   The security boundary imposed on IndexedDB prevents applications from accessing data with a different origin. For example, while an app or a page in `http://www.example.com/app/` can retrieve data from `http://www.example.com/dir/`, because they have the same origin, it cannot retrieve data from `http://www.example.com:8080/dir/` (different port) or `https://www.example.com/dir/` (different protocol), because they have different origins.
 
-  > **Note:** Third party window content (e.g. {{htmlelement("iframe")}} content) can access the IndexedDB store for the origin it is embedded into, unless the browser is set to [never accept third party cookies](https://support.mozilla.org/en-US/kb/third-party-cookies-firefox-tracking-protection) (see {{bug("1147821")}}.)
+  > **Note:** Third party window content (e.g. {{htmlelement("iframe")}} content) can access the IndexedDB store for the origin it is embedded into, unless the browser is set to [never accept third party cookies](https://support.mozilla.org/en-US/kb/third-party-cookies-firefox-tracking-protection) (see [Firefox bug 1147821](https://bugzil.la/1147821).)
 
 ### Limitations
 
@@ -84,7 +80,7 @@ An operation created by opening a _[database](#database)_. A given database can 
 
 In Firefox, IndexedDB used to be **durable**, meaning that in a readwrite transaction a {{domxref("IDBTransaction.complete_event", "complete")}} event was fired only when all data was guaranteed to have been flushed to disk.
 
-As of Firefox 40, IndexedDB transactions have relaxed durability guarantees to increase performance (see {{Bug("1112702")}}), which is the same behavior as other IndexedDB-supporting browsers. In this case the {{domxref("IDBTransaction.complete_event", "complete")}} event is fired after the OS has been told to write the data but potentially before that data has actually been flushed to disk. The event may thus be delivered quicker than before, however, there exists a small chance that the entire transaction will be lost if the OS crashes or there is a loss of system power before the data is flushed to disk. Since such catastrophic events are rare, most consumers should not need to concern themselves further.
+As of Firefox 40, IndexedDB transactions have relaxed durability guarantees to increase performance (see [Webkit bug 1112702](https://bugzil.la/1112702)), which is the same behavior as other IndexedDB-supporting browsers. In this case the {{domxref("IDBTransaction.complete_event", "complete")}} event is fired after the OS has been told to write the data but potentially before that data has actually been flushed to disk. The event may thus be delivered quicker than before, however, there exists a small chance that the entire transaction will be lost if the OS crashes or there is a loss of system power before the data is flushed to disk. Since such catastrophic events are rare, most consumers should not need to concern themselves further.
 
 > **Note:** In Firefox, if you wish to ensure durability for some reason (e.g. you're storing critical data that cannot be recomputed later) you can force a transaction to flush to disk before delivering the `complete` event by creating a transaction using the experimental (non-standard) `readwriteflush` mode (see {{domxref("IDBDatabase.transaction")}}.) This is currently experimental, and can only be used if the `dom.indexedDB.experimental` pref is set to `true` in `about:config`.
 

@@ -1,12 +1,6 @@
 ---
 title: State Partitioning
 slug: Web/Privacy/State_Partitioning
-tags:
-  - Firefox
-  - Privacy
-  - Mozilla
-  - Storage
-  - tracking
 ---
 
 {{QuicklinksWithSubPages("Web/Privacy")}}
@@ -61,7 +55,7 @@ all client-side state by the
 _[origin](https://html.spec.whatwg.org/#origin)_
 of the resource being loaded and by the _top-level
 [site](https://html.spec.whatwg.org/multipage/origin.html#site)_.
-In most instances, the top-level site is the scheme and eTLD+1 of the top-level
+In most instances, the top-level site is the scheme and {{Glossary("eTLD", "eTLD+1")}} of the top-level
 page being visited by the user.
 
 In the example below `example.com` is embedded in
@@ -152,7 +146,7 @@ Details about automatic grants are provided in the
 
 [Service Workers](/en-US/docs/Web/API/Service_Worker_API)
 are currently disabled in partitioned contexts when dynamic partitioning is
-enabled. In [Bug 1495241](https://bugzilla.mozilla.org/show_bug.cgi?id=1495241)
+enabled. In [Bug 1495241](https://bugzil.la/1495241)
 we are exploring options to enable Service Workers in partitioned contexts.
 
 #### Storage Access Heuristics

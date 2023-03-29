@@ -1,5 +1,14 @@
 [
   {
+    "Audio Output Devices API": {
+      "overview": ["Audio Output Devices API"],
+      "methods": [
+        "MediaDevices.selectAudioOutput",
+        "HTMLMediaElement.setSinkId"
+      ],
+      "properties": ["HTMLMediaElement.sinkId"],
+      "events": []
+    },
     "Background Fetch API": {
       "overview": ["Background Fetch API"],
       "interfaces": [
@@ -158,10 +167,17 @@
       "events": ["ServiceWorkerGlobalScope: contentdelete"]
     },
     "CSS Containment": {
-      "interfaces": ["ContentVisibilityAutoStateChangedEvent"],
+      "interfaces": ["ContentVisibilityAutoStateChangeEvent"],
       "methods": [],
       "properties": [],
-      "events": ["Element: contentvisibilityautostatechanged"]
+      "events": ["Element: contentvisibilityautostatechange"]
+    },
+    "CSS Custom Highlight API": {
+      "overview": ["CSS Custom Highlight API"],
+      "interfaces": ["Highlight", "HighlightRegistry"],
+      "methods": [],
+      "properties": ["CSS.highlights"],
+      "events": []
     },
     "Console API": {
       "overview": ["Console API"],
@@ -259,27 +275,33 @@
         "/docs/Web/API/CSS_Object_Model/Using_dynamic_styling_information"
       ],
       "interfaces": [
-        "AnimationEvent",
         "CaretPosition",
         "CSS",
         "CSSConditionRule",
         "CSSGroupingRule",
+        "CSSImportRule",
         "CSSKeyframeRule",
         "CSSKeyframesRule",
+        "CSSImportRule",
+        "CSSLayerBlockRule",
+        "CSSLayerStatementRule",
         "CSSMediaRule",
         "CSSNamespaceRule",
         "CSSPageRule",
+        "CSSFontFeatureValuesRule",
+        "CSSFontPaletteValuesRule",
+        "CSSPropertyRule",
         "CSSRule",
         "CSSRuleList",
         "CSSStyleDeclaration",
         "CSSStyleRule",
         "CSSStyleSheet",
         "CSSSupportsRule",
+        "MediaList",
         "MediaQueryList",
         "Screen",
         "StyleSheet",
-        "StyleSheetList",
-        "TransitionEvent"
+        "StyleSheetList"
       ],
       "dictionaries": ["ScrollToOptions"],
       "methods": [],
@@ -393,6 +415,7 @@
     "Encrypted Media Extensions": {
       "overview": ["Encrypted Media Extensions API"],
       "interfaces": [
+        "MediaEncryptedEvent",
         "MediaKeyMessageEvent",
         "MediaKeys",
         "MediaKeySession",
@@ -410,6 +433,13 @@
       "overview": ["EyeDropper API"],
       "interfaces": ["EyeDropper"],
       "methods": [],
+      "properties": [],
+      "events": []
+    },
+    "FedCM API": {
+      "overview": ["FedCM API"],
+      "interfaces": ["IdentityCredential"],
+      "methods": ["CredentialsContainer.get()"],
       "properties": [],
       "events": []
     },
@@ -530,10 +560,10 @@
     "History API": {
       "overview": ["History API"],
       "guides": ["/docs/Web/API/History_API/Working_with_the_History_API"],
-      "interfaces": ["History"],
+      "interfaces": ["History", "PopStateEvent"],
       "methods": [],
       "properties": [],
-      "events": []
+      "events": ["Window: popstate"]
     },
     "HTML DOM": {
       "overview": ["HTML DOM API"],
@@ -620,12 +650,12 @@
         "PageTransitionEvent",
         "Plugin",
         "PluginArray",
-        "PopStateEvent",
         "PromiseRejectionEvent",
         "RadioNodeList",
         "UserActivation",
         "ValidityState",
-        "Window"
+        "Window",
+        "WorkletGlobalScope"
       ],
       "methods": [],
       "properties": [],
@@ -680,7 +710,6 @@
         "Window: online",
         "Window: pagehide",
         "Window: pageshow",
-        "Window: popstate",
         "Window: rejectionhandled",
         "Window: storage",
         "Window: unload",
@@ -781,11 +810,11 @@
       "interfaces": ["Keyboard", "KeyboardLayoutMap"],
       "methods": ["Navigator.keyboard"]
     },
-    "Layout Instability API": {
-      "overview": ["Layout Instability API"],
-      "interfaces: ": ["LayoutShift", "LayoutShiftAttribution"],
+    "Launch Handler API": {
+      "overview": ["Launch Handler API"],
+      "interfaces": ["LaunchParams", "LaunchQueue"],
       "methods": [],
-      "properties": [],
+      "properties": ["Window.launchQueue"],
       "events": []
     },
     "Local Font Access API": {
@@ -821,7 +850,6 @@
         "MediaStream",
         "MediaStreamTrack",
         "MediaStreamTrackEvent",
-        "MediaTrackCapabilities",
         "MediaTrackConstraints",
         "MediaTrackSettings",
         "MediaTrackSupportedConstraints"
@@ -963,6 +991,8 @@
       "interfaces": [
         "EventCounts",
         "LargestContentfulPaint",
+        "LayoutShift",
+        "LayoutShiftAttribution",
         "Performance",
         "PerformanceEntry",
         "PerformanceElementTiming",
@@ -1230,6 +1260,9 @@
     },
     "Storage": {
       "overview": ["Storage API"],
+      "guides": [
+        "/docs/Web/API/Storage_API/Storage_quotas_and_eviction_criteria"
+      ],
       "interfaces": ["StorageManager"],
       "methods": [],
       "properties": ["Navigator.storage", "WorkerNavigator.storage"],
@@ -1287,7 +1320,6 @@
         "SVGAnimatedLengthList",
         "SVGAnimatedNumber",
         "SVGAnimatedNumberList",
-        "SVGAnimatedPathData",
         "SVGAnimatedPreserveAspectRatio",
         "SVGAnimatedRect",
         "SVGAnimatedString",
@@ -1352,34 +1384,12 @@
         "SVGLinearGradientElement",
         "SVGLineElement",
         "SVGMaskElement",
-        "SVGMatrix",
         "SVGMetadataElement",
         "SVGMissingGlyphElement",
         "SVGMPathElement",
         "SVGNumber",
         "SVGNumberList",
         "SVGPathElement",
-        "SVGPathSeg",
-        "SVGPathSegClosePath",
-        "SVGPathSegMovetoAbs",
-        "SVGPathSegMovetoRel",
-        "SVGPathSegLinetoAbs",
-        "SVGPathSegLinetoRel",
-        "SVGPathSegCurvetoCubicAbs",
-        "SVGPathSegCurvetoCubicRel",
-        "SVGPathSegCurvetoQuadraticAbs",
-        "SVGPathSegCurvetoQuadraticRel",
-        "SVGPathSegArcAbs",
-        "SVGPathSegArcRel",
-        "SVGPathSegLinetoHorizontalAbs",
-        "SVGPathSegLinetoHorizontalRel",
-        "SVGPathSegLinetoVerticalAbs",
-        "SVGPathSegLinetoVerticalRel",
-        "SVGPathSegCurvetoCubicSmoothAbs",
-        "SVGPathSegCurvetoCubicSmoothRel",
-        "SVGPathSegCurvetoQuadraticSmoothAbs",
-        "SVGPathSegCurvetoQuadraticSmoothRel",
-        "SVGPathSegList",
         "SVGPatternElement",
         "SVGPoint",
         "SVGPointList",
@@ -1534,6 +1544,13 @@
       "overview": ["Vibration API"],
       "interfaces": [],
       "methods": ["Navigator.vibrate()"],
+      "properties": [],
+      "events": []
+    },
+    "View Transitions API": {
+      "overview": ["View Transitions API"],
+      "interfaces": ["ViewTransition"],
+      "methods": ["Document.startViewTransition()"],
       "properties": [],
       "events": []
     },
@@ -1828,7 +1845,8 @@
         "OES_vertex_array_object",
         "ANGLE_instanced_arrays",
         "EXT_blend_minmax",
-        "EXT_disjoint_timer_query"
+        "EXT_disjoint_timer_query",
+        "OES_draw_buffers_indexed"
       ],
       "methods": [],
       "properties": [],
@@ -1896,6 +1914,7 @@
       "guides": [
         "/docs/Web/API/WebRTC_API/Protocols",
         "/docs/Web/API/WebRTC_API/Connectivity",
+        "/docs/Web/API/WebRTC_API/Perfect_negotiation",
         "/docs/Web/API/WebRTC_API/Session_lifetime",
         "/docs/Web/API/WebRTC_API/Signaling_and_video_calling",
         "/docs/Web/API/WebRTC_API/Using_data_channels",
@@ -2244,6 +2263,9 @@
       "methods": [],
       "properties": [],
       "events": []
+    },
+    "XSLT": {
+      "interfaces": ["XSLTProcessor"]
     }
   }
 ]

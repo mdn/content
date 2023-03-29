@@ -2,10 +2,6 @@
 title: Void element
 slug: Glossary/Void_element
 page-type: glossary-definition
-tags:
-  - CodingScripting
-  - HTML
-  - Intermediate
 ---
 
 A **void element** is an {{Glossary("element")}} in HTML that **cannot** have any child nodes (i.e., nested elements or text nodes). Void elements only have a start tag; end tags must not be specified for void elements.
@@ -26,10 +22,10 @@ The void elements in HTML are as follows:
 - {{HTMLElement("hr")}}
 - {{HTMLElement("img")}}
 - {{HTMLElement("input")}}
-- {{HTMLElement("keygen")}}(HTML 5.2 Draft removed)
+- {{HTMLElement("keygen")}} {{deprecated_inline}}
 - {{HTMLElement("link")}}
 - {{HTMLElement("meta")}}
-- {{HTMLElement("param")}}
+- {{HTMLElement("param")}} {{deprecated_inline}}
 - {{HTMLElement("source")}}
 - {{HTMLElement("track")}}
 - {{HTMLElement("wbr")}}

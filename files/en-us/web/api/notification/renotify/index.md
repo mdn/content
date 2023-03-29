@@ -2,13 +2,8 @@
 title: Notification.renotify
 slug: Web/API/Notification/renotify
 page-type: web-api-instance-property
-tags:
-  - API
-  - Experimental
-  - Notifications
-  - Property
-  - Reference
-  - renotify
+status:
+  - experimental
 browser-compat: api.Notification.renotify
 ---
 
@@ -32,13 +27,13 @@ notification is fired using the `Notification()` constructor.
 
 ```js
 const options = {
-  body: 'Do you like my Notification?',
-  renotify: true
-}
+  body: "Your code submission has received 3 new review comments.",
+  renotify: true,
+};
 
-const n = new Notification('Test notification', options);
+const n = new Notification("New review activity", options);
 
-console.log(n.renotify) // should log true
+console.log(n.renotify); // "true"
 ```
 
 ## Specifications

@@ -2,14 +2,6 @@
 title: Gamepad.buttons
 slug: Web/API/Gamepad/buttons
 page-type: web-api-instance-property
-tags:
-  - API
-  - Gamepad API
-  - Games
-  - NeedsBetterSpecLink
-  - NeedsMarkupWork
-  - Property
-  - Reference
 browser-compat: api.Gamepad.buttons
 ---
 
@@ -80,7 +72,7 @@ function gameLoop() {
   ball.style.top = `${b * 2}px`;
 
   const start = rAF(gameLoop);
-};
+}
 ```
 
 ## Specifications

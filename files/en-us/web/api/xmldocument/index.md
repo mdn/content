@@ -2,12 +2,6 @@
 title: XMLDocument
 slug: Web/API/XMLDocument
 page-type: web-api-interface
-tags:
-  - API
-  - DOM
-  - Interface
-  - Reference
-  - XMLDocument
 browser-compat: api.XMLDocument
 ---
 
