@@ -23,7 +23,7 @@ Browsers enable saving, editing, moving, deleting, and otherwise managing bookma
 
 ### Add to home screen
 
-Smartphones, starting with the iPhone in 2007, added "save to home screen" functionality. For regular (non-PWA) websites feature is similar to bookmarks, but instead of adding the favicon and title of the page to the bookmarks menu — a browser feature — favoriting in this manner [adds an icon](/en-US/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML#adding_custom_icons_to_your_site) to the OS's home screen. Adding a non-PWA site to the home screen does not install the website on the device. Rather, it adds the developer-defined icon to the home screen, that, when clicked, opens the bookmarked link in the default browser. 
+Smartphones, starting with the iPhone in 2007, added "save to home screen" functionality. For regular (non-PWA) websites feature is similar to bookmarks, but instead of adding the favicon and title of the page to the bookmarks menu — a browser feature — favoriting in this manner [adds an icon](/en-US/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML#adding_custom_icons_to_your_site) to the OS's home screen. Adding a non-PWA site to the home screen does not install the website on the device. Rather, it adds the developer-defined icon to the home screen, that, when clicked, opens the bookmarked link in the default browser.
 
 ![iPhone add to home screen, install prompt, icon, and delete functionality.](iphone_pwa.jpg)
 
@@ -39,7 +39,7 @@ Depending on the PWA, device, and features of the operating system and browser, 
 
 ### Installing PWAs
 
-The UI for installing a PWA from the web varies from one browser to another, and from one platform to another. 
+The UI for installing a PWA from the web varies from one browser to another, and from one platform to another.
 
 As mentioned above, "Add to homes creen" installs PWAs on device/OS combinations that provide that user interface.
 
