@@ -2,13 +2,6 @@
 title: ReadableStream.tee()
 slug: Web/API/ReadableStream/tee
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - ReadableStream
-  - Reference
-  - Streams
-  - tee
 browser-compat: api.ReadableStream.tee
 ---
 
@@ -47,7 +40,7 @@ will generally lock it for the duration, preventing other readers from locking i
 
 ## Syntax
 
-```js
+```js-nolint
 tee()
 ```
 
@@ -96,7 +89,7 @@ function fetchStream(stream, list) {
     // value for fetch streams is a Uint8Array
     charsReceived += value.length;
     const chunk = value;
-    let listItem = document.createElement('li');
+    let listItem = document.createElement("li");
     listItem.textContent = `Read ${charsReceived} characters so far. Current chunk = ${chunk}`;
     list.appendChild(listItem);
 

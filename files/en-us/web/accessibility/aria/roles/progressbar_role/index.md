@@ -1,15 +1,6 @@
 ---
-title: 'ARIA: progressbar role'
+title: "ARIA: progressbar role"
 slug: Web/Accessibility/ARIA/Roles/progressbar_role
-tags:
-  - Accessibility
-  - ARIA
-  - roles
-  - Reference
-  - ARIA roles
-  - widget role
-  - widget
-  - progressbar role
 spec-urls: https://w3c.github.io/aria/#progressbar
 ---
 
@@ -19,7 +10,7 @@ The `progressbar` role defines an element that displays the progress status for 
 
 The `progressbar` range widget indicates that a request has been received and the application is making progress toward completing the requested action.
 
-Authors **may** set aria-valuemin and aria-valuemax to indicate the minimum and maximum progress indicator values. Otherwise, their implicit values follow the same rules as HTML's [`<input type="range"`>]():
+Authors **may** set aria-valuemin and aria-valuemax to indicate the minimum and maximum progress indicator values. Otherwise, their implicit values follow the same rules as HTML's [`<input type="range"`>](/en-US/docs/Web/HTML/Element/input/range):
 
 - If [`aria-valuemin`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-valuemin) is missing or not a number, it defaults to `0` (zero).
 - If [`aria-valuemax`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-valuemax) is missing or not a number, it defaults to `100`.
@@ -41,7 +32,9 @@ For example, consider the following `progressbar` element, which contains a head
 Because descendants of `progressbar` are presentational, the following code is equivalent:
 
 ```html
-<div role="progressbar"><h3 role="presentation">Title of my progressbar</h3></div>
+<div role="progressbar">
+  <h3 role="presentation">Title of my progressbar</h3>
+</div>
 ```
 
 From the assistive technology user's perspective, the heading does not exist since the previous code snippets are equivalent to the following in the [accessibility tree](/en-US/docs/Glossary/Accessibility_tree):
@@ -72,11 +65,9 @@ In the example below, the progress bar uses the default values of 0 and 100 for 
 ```html
 <div>
   <span id="loadinglabel">Loading:</span>
-  <span role="progressbar"
-        aria-labelledby="loadinglabel"
-        aria-valuenow="23" >
+  <span role="progressbar" aria-labelledby="loadinglabel" aria-valuenow="23">
     <svg width="100" height="10">
-      <rect height="10" width="100" stroke="black" fill="black"/>
+      <rect height="10" width="100" stroke="black" fill="black" />
       <rect height="10" width="23" fill="white" />
     </svg>
   </span>
@@ -116,6 +107,6 @@ It is recommended to use a native {{HTMLElement("progress")}} or [`<input type="
 
 1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
 
-    {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
+   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
 
 </section>

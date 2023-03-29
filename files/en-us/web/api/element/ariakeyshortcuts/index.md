@@ -2,14 +2,6 @@
 title: Element.ariaKeyShortcuts
 slug: Web/API/Element/ariaKeyShortcuts
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - ariaKeyShortcuts
-  - AriaAttributes
-  - AriaMixin
-  - Element
 browser-compat: api.Element.ariaKeyShortcuts
 ---
 
@@ -26,13 +18,15 @@ A string.
 In this example the `aria-keyshortcuts` attribute on the element with an ID of `skip-link` is set to "Alt+Shift+A". Using `ariaKeyShortcuts` we update the value to "Alt+Shift+M".
 
 ```html
-<a id="skip-link" href="#content" aria-keyshortcuts="Alt+Shift+A">Skip to content</a>
+<a id="skip-link" href="#content" aria-keyshortcuts="Alt+Shift+A">
+  Skip to content
+</a>
 ```
 
 ```js
-let el = document.getElementById('saveChanges');
+let el = document.getElementById("saveChanges");
 console.log(el.ariaKeyShortcuts); // "Alt+Shift+A"
-el.ariaKeyShortcuts = "Alt+Shift+M"
+el.ariaKeyShortcuts = "Alt+Shift+M";
 console.log(el.ariaKeyShortcuts); // "Alt+Shift+M"
 ```
 

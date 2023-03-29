@@ -2,12 +2,6 @@
 title: FontFaceSet.forEach()
 slug: Web/API/FontFaceSet/forEach
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - forEach
-  - FontFaceSet
 browser-compat: api.FontFaceSet.forEach
 ---
 
@@ -17,7 +11,7 @@ The **`forEach()`** method of the {{domxref("FontFaceSet")}} interface executes 
 
 ## Syntax
 
-```js
+```js-nolint
 forEach(callbackFn)
 forEach(callbackFn, thisArg)
 ```

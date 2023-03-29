@@ -2,13 +2,6 @@
 title: Window.confirm()
 slug: Web/API/Window/confirm
 page-type: web-api-instance-method
-tags:
-  - API
-  - HTML DOM
-  - Method
-  - Reference
-  - Window
-  - confirm
 browser-compat: api.Window.confirm
 ---
 
@@ -20,7 +13,7 @@ Under some conditions — for example, when the user switches tabs — the brows
 
 ## Syntax
 
-```js
+```js-nolint
 confirm(message)
 ```
 
@@ -45,7 +38,7 @@ if (window.confirm("Do you really want to leave?")) {
 
 Produces:
 
-![Firefox confirm](firefoxcomfirmdialog_zpsf00ec381.png)
+![Firefox confirm](firefox_confirm_dialog.png)
 
 ## Notes
 

@@ -1,10 +1,7 @@
 ---
 title: Global scope
 slug: Glossary/Global_scope
-tags:
-  - CodingScripting
-  - Glossary
-  - NeedsContent
+page-type: glossary-definition
 ---
 
 In a programming environment, the _global scope_ is the {{glossary("scope")}} that contains, and is visible in, all other scopes.

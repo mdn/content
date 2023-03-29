@@ -2,12 +2,6 @@
 title: location.assign()
 slug: Web/API/Location/assign
 page-type: web-api-instance-method
-tags:
-  - API
-  - HTML DOM
-  - Location
-  - Method
-  - Reference
 browser-compat: api.Location.assign
 ---
 
@@ -29,7 +23,7 @@ If the provided URL is not valid, a {{domxref("DOMException")}} of the
 
 ## Syntax
 
-```js
+```js-nolint
 assign(url)
 ```
 
@@ -46,7 +40,9 @@ None ({{jsxref("undefined")}}).
 
 ```js
 // Navigate to the Location.reload article
-window.location.assign('https://developer.mozilla.org/en-US/docs/Web/API/Location/reload');
+window.location.assign(
+  "https://developer.mozilla.org/en-US/docs/Web/API/Location/reload"
+);
 ```
 
 ## Specifications

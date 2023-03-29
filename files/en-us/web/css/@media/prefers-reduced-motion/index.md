@@ -1,21 +1,21 @@
 ---
 title: prefers-reduced-motion
 slug: Web/CSS/@media/prefers-reduced-motion
-tags:
-  - '@media'
-  - Accessibility
-  - CSS
-  - Media Queries
-  - Reference
-  - media feature
+page-type: css-media-feature
 browser-compat: css.at-rules.media.prefers-reduced-motion
 ---
 
-{{QuickLinksWithSubpages("/en-US/docs/Web/CSS/@media/")}}
-
-The **`prefers-reduced-motion`** [CSS](/en-US/docs/Web/CSS) [media feature](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#media_features) is used to detect if the user has requested that the system minimize the amount of non-essential motion it uses.
+{{CSSRef}}
 
 > **Warning:** An embedded example at the bottom of this page has a scaling movement that may be problematic for some readers. Readers with vestibular motion disorders may wish to enable the reduce motion feature on their device before viewing the animation.
+
+The **`prefers-reduced-motion`** [CSS](/en-US/docs/Web/CSS) [media feature](/en-US/docs/Web/CSS/@media#media_features) is used to detect if the user has requested that the system minimize the amount of non-essential motion it uses.
+
+```css
+@media (prefers-reduced-motion) {
+  /* styles to apply if the user's settings are set to reduced motion */
+}
+```
 
 ## Syntax
 
@@ -35,9 +35,8 @@ For Firefox, the `reduce` request is honoured if:
 - In Plasma/KDE: System Settings > Workspace Behavior -> General Behavior > "Animation speed" is set all the way to right to "Instant".
 - In Windows 10: Settings > Ease of Access > Display > Show animations in Windows.
 - In Windows 11: Settings > Accessibility > Visual Effects > Animation Effects
-- In Windows 7: Control Panel > Ease of Access > Make the computer easier to see > Turn off all unnecessary animations (when possible).
 - In macOS: System Preferences > Accessibility > Display > Reduce motion.
-- In iOS: Settings > General > Accessibility > Reduce Motion.
+- In iOS: Settings > Accessibility > Motion.
 - In Android 9+: Settings > Accessibility > Remove animations.
 - In Firefox `about:config`: Add a number preference called `ui.prefersReducedMotion` and set its value to either `0` for full animation or to `1` to indicate a preference for reduced motion. Changes to this preference take effect immediately.
 
@@ -61,7 +60,7 @@ This example has a scaling animation by default. If Reduce Motion is enabled in 
 /* Tone down the animation to avoid vestibular motion triggers like scaling or panning large objects. */
 @media (prefers-reduced-motion) {
   .animation {
-    animation-name: dissolve;
+    animation: dissolve 2s linear infinite both;
   }
 }
 ```
@@ -78,17 +77,33 @@ This example has a scaling animation by default. If Reduce Motion is enabled in 
 }
 
 @keyframes pulse {
-  0% { transform: scale(1); }
-  25% { transform: scale(.9); }
-  50% { transform: scale(1); }
-  75% { transform: scale(1.1); }
-  100% { transform: scale(1); }
+  0% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(0.9);
+  }
+  50% {
+    transform: scale(1);
+  }
+  75% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
 @keyframes dissolve {
-  0% { opacity: 1; }
-  50% { opacity: 0.8; }
-  100% { opacity: 1; }
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 ```
 

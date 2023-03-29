@@ -2,14 +2,6 @@
 title: AudioContext.resume()
 slug: Web/API/AudioContext/resume
 page-type: web-api-instance-method
-tags:
-  - API
-  - Audio
-  - AudioContext
-  - Method
-  - Reference
-  - Web Audio API
-  - resume
 browser-compat: api.AudioContext.resume
 ---
 
@@ -24,7 +16,7 @@ called on an {{domxref("OfflineAudioContext")}}.
 
 ## Syntax
 
-```js
+```js-nolint
 resume()
 ```
 
@@ -47,16 +39,16 @@ the button is updated as appropriate once the promise resolves.
 
 ```js
 susresBtn.onclick = () => {
-  if (audioCtx.state === 'running') {
+  if (audioCtx.state === "running") {
     audioCtx.suspend().then(() => {
-      susresBtn.textContent = 'Resume context';
+      susresBtn.textContent = "Resume context";
     });
-  } else if (audioCtx.state === 'suspended') {
+  } else if (audioCtx.state === "suspended") {
     audioCtx.resume().then(() => {
-      susresBtn.textContent = 'Suspend context';
+      susresBtn.textContent = "Suspend context";
     });
   }
-}
+};
 ```
 
 ## Specifications

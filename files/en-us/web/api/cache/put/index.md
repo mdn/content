@@ -2,16 +2,6 @@
 title: Cache.put()
 slug: Web/API/Cache/put
 page-type: web-api-instance-method
-tags:
-  - API
-  - Cache
-  - Method
-  - NeedsExample
-  - Reference
-  - Service Workers
-  - Service worker API
-  - ServiceWorker
-  - put
 browser-compat: api.Cache.put
 ---
 
@@ -47,7 +37,7 @@ fetch(url).then((response) => {
 
 ## Syntax
 
-```js
+```js-nolint
 put(request, response)
 ```
 

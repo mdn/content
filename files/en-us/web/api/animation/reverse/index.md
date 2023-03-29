@@ -2,16 +2,6 @@
 title: Animation.reverse()
 slug: Web/API/Animation/reverse
 page-type: web-api-instance-method
-tags:
-  - API
-  - Animation
-  - Interface
-  - Method
-  - Reference
-  - Web Animations
-  - reverse
-  - waapi
-  - web animations api
 browser-compat: api.Animation.reverse
 ---
 
@@ -21,7 +11,7 @@ The **`Animation.reverse()`** method of the {{ domxref("Animation") }} Interface
 
 ## Syntax
 
-```js
+```js-nolint
 reverse()
 ```
 
@@ -44,8 +34,8 @@ const shrinkAlice = () => {
   aliceChange.play();
 
   // play the bottle's animation
-  drinking.play()
-}
+  drinking.play();
+};
 ```
 
 But it could also have been done by calling `reverse()` on `aliceChange` like so:
@@ -56,8 +46,8 @@ const shrinkAlice = () => {
   aliceChange.reverse();
 
   // play the bottle's animation
-  drinking.play()
-}
+  drinking.play();
+};
 ```
 
 ## Specifications

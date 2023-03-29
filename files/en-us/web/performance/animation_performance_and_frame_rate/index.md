@@ -1,10 +1,9 @@
 ---
 title: Animation performance and frame rate
 slug: Web/Performance/Animation_performance_and_frame_rate
-tags:
-  - CSS animation
-  - Web Performance
 ---
+
+{{QuickLinksWithSubPages("Web/Performance")}}
 
 Animation on the web can be done via {{domxref('SVGAnimationElement', 'SVG')}}, {{domxref('window.requestAnimationFrame','JavaScript')}}, including {{htmlelement('canvas')}} and {{domxref('WebGL_API', 'WebGL')}}, CSS {{cssxref('animation')}}, {{htmlelement('video')}}, animated gifs and even animated PNGs and other image types. The performance cost of animating a CSS property can vary from one property to another, and animating expensive CSS properties can result in {{glossary('jank')}} as the browser struggles to hit a smooth {{glossary("FPS", "frame rate")}}.
 
@@ -22,7 +21,7 @@ However, the performance cost of modifying a CSS property can vary from one prop
 
 The process a browser uses to paint changes to a page when an element is animating CSS properties can be described as a waterfall consisting of the following steps:
 
-![](css-rendering-waterfall.png)
+![Flowchart of the CSS rendering waterfall. In order, the steps are recalculate style, layout, and paint.](css-rendering-waterfall.png)
 
 1. **Recalculate Style**: when a property for an element changes, the browser must recalculate computed styles.
 2. **Layout**: next, the browser uses the computed styles to figure out the position and geometry for the elements. This operation is labeled "layout" but is also sometimes called "reflow".
@@ -103,8 +102,6 @@ In the context of the rendering waterfall, some properties are more expensive th
     </tr>
   </tbody>
 </table>
-
-> **Note:** The [CSS Triggers](https://csstriggers.com/) website shows how much of the waterfall is triggered for each CSS property, with information for most CSS properties by browser engine.
 
 ## Developer tools
 

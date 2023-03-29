@@ -2,12 +2,6 @@
 title: HTMLCanvasElement.getContext()
 slug: Web/API/HTMLCanvasElement/getContext
 page-type: web-api-instance-method
-tags:
-  - API
-  - Canvas
-  - HTMLCanvasElement
-  - Method
-  - Reference
 browser-compat: api.HTMLCanvasElement.getContext
 ---
 
@@ -25,7 +19,7 @@ different drawing context object on a given canvas element.
 
 ## Syntax
 
-```js
+```js-nolint
 getContext(contextType)
 getContext(contextType, contextAttributes)
 ```
@@ -55,7 +49,7 @@ getContext(contextType, contextAttributes)
     > in new implementations of WebGL. These implementations have either not reached
     > test suite conformance, or the graphics drivers on the platform are not yet
     > stable. The [Khronos Group](https://www.khronos.org/) certifies WebGL
-    > implementations under certain [conformance > rules](https://www.khronos.org/registry/webgl/sdk/tests/CONFORMANCE_RULES.txt).
+    > implementations under certain [conformance rules](https://www.khronos.org/registry/webgl/sdk/tests/CONFORMANCE_RULES.txt).
 
 - `contextAttributes` {{optional_inline}}
 
@@ -63,9 +57,9 @@ getContext(contextType, contextAttributes)
     example:
 
     ```js
-    const gl = canvas.getContext('webgl', {
+    const gl = canvas.getContext("webgl", {
       antialias: false,
-      depth: false
+      depth: false,
     });
     ```
 
@@ -76,6 +70,10 @@ getContext(contextType, contextAttributes)
         contains an alpha channel. If set to `false`, the browser now knows
         that the backdrop is always opaque, which can speed up drawing of transparent
         content and images.
+    - `colorSpace` {{optional_inline}}
+      - : Specifies the color space of the rendering context. Possible values are:
+        - `"srgb"` selects the [sRGB color space](https://en.wikipedia.org/wiki/SRGB). This is the default value.
+        - `"display-p3"` selects the [display-p3 color space](https://en.wikipedia.org/wiki/DCI-P3).
     - `desynchronized`
       - : A boolean value that hints the user agent
         to reduce the latency by desynchronizing the canvas paint cycle from the event
@@ -110,6 +108,7 @@ getContext(contextType, contextAttributes)
         indicates if a context will be created if the system performance is low or if no
         hardware GPU is available.
     - `powerPreference`
+
       - : A hint to the user agent
         indicating what configuration of GPU is suitable for the WebGL context. Possible
         values are:
@@ -164,8 +163,8 @@ Given this {{HTMLElement("canvas")}} element:
 You can get a `2d` context of the canvas with the following code:
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 console.log(ctx); // CanvasRenderingContext2D { /* … */ }
 ```
 
@@ -181,10 +180,10 @@ Now you have the [2D rendering context](/en-US/docs/Web/API/CanvasRenderingConte
 
 ## See also
 
-- {{domxref("CanvasRenderingContext2D.getContextAttributes()")}}
-- {{domxref("WebGLRenderingContext.getContextAttributes()")}}
-- The interface defining it, {{domxref("HTMLCanvasElement")}}.
+- {{domxref("HTMLCanvasElement")}}: Interface used to define the `HTMLCanvasElement.getContext()` method
 - {{domxref("OffscreenCanvas.getContext()")}}
-- Available rendering contexts: {{domxref("CanvasRenderingContext2D")}},
-  {{domxref("WebGLRenderingContext")}} and {{domxref("WebGL2RenderingContext")}} and
-  {{domxref("ImageBitmapRenderingContext")}}.
+- {{domxref("CanvasRenderingContext2D.getContextAttributes()")}}, {{domxref("WebGLRenderingContext.getContextAttributes()")}}
+- {{domxref("CanvasRenderingContext2D")}}, {{domxref("ImageBitmapRenderingContext")}},
+  {{domxref("WebGLRenderingContext")}}, {{domxref("WebGL2RenderingContext")}}: Available rendering contexts
+- [DCI-P3 color space](https://en.wikipedia.org/wiki/DCI-P3) on Wikipedia
+- [sRGB color space](https://en.wikipedia.org/wiki/SRGB) on Wikipedia

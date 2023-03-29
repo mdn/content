@@ -1,12 +1,7 @@
 ---
 title: unicode-bidi
 slug: Web/CSS/unicode-bidi
-tags:
-  - BiDi
-  - CSS
-  - CSS Property
-  - Reference
-  - recipe:css-property
+page-type: css-property
 browser-compat: css.properties.unicode-bidi
 ---
 
@@ -77,12 +72,8 @@ unicode-bidi: unset;
 ### HTML
 
 ```html
-<div class="bible-quote">
-  A line of text
-</div>
-<div>
-  Another line of text
-</div>
+<div class="bible-quote">A line of text</div>
+<div>Another line of text</div>
 ```
 
 ### Result

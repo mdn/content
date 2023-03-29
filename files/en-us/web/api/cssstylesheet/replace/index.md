@@ -2,12 +2,6 @@
 title: CSSStyleSheet.replace()
 slug: Web/API/CSSStyleSheet/replace
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - replace
-  - CSSStyleSheet
 browser-compat: api.CSSStyleSheet.replace
 ---
 
@@ -19,13 +13,14 @@ The `replace()` and {{domxref("CSSStyleSheet.replaceSync()")}} methods can only 
 
 ## Syntax
 
-```js
+```js-nolint
 replace(text)
 ```
 
 ### Parameters
 
 - `text`
+
   - : A string containing the style rules to replace the content of the stylesheet. If the string does not contain a parseable list of rules, then the value will be set to an empty string.
 
     > **Note:** If any of the rules passed in `text` are an external stylesheet imported with the {{cssxref("@import")}} rule, those rules will be removed, and a warning printed to the console.
@@ -48,12 +43,13 @@ In the following example a new stylesheet is created and two CSS rules are added
 ```js
 const stylesheet = new CSSStyleSheet();
 
-stylesheet.replace('body { font-size: 1.4em; } p { color: red; }')
+stylesheet
+  .replace("body { font-size: 1.4em; } p { color: red; }")
   .then(() => {
     console.log(stylesheet.cssRules[0].cssText);
   })
   .catch((err) => {
-    console.error('Failed to replace styles:', err);
+    console.error("Failed to replace styles:", err);
   });
 ```
 

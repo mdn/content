@@ -1,16 +1,7 @@
 ---
 title: runtime.onStartup
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/onStartup
-tags:
-  - API
-  - Add-ons
-  - Event
-  - Extensions
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - onStartup
-  - runtime
+page-type: webextension-api-event
 browser-compat: webextensions.api.runtime.onStartup
 ---
 
@@ -20,7 +11,7 @@ Fired when a profile that has this extension installed first starts up. This eve
 
 ## Syntax
 
-```js
+```js-nolint
 browser.runtime.onStartup.addListener(listener)
 browser.runtime.onStartup.removeListener(listener)
 browser.runtime.onStartup.hasListener(listener)
@@ -65,8 +56,6 @@ browser.runtime.onStartup.addListener(handleStartup);
 {{WebExtExamples}}
 
 > **Note:** This API is based on Chromium's [`chrome.runtime`](https://developer.chrome.com/docs/extensions/reference/runtime/#event-onStartup) API. This documentation is derived from [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) in the Chromium code.
->
-> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

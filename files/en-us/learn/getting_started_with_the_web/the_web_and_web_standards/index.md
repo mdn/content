@@ -1,12 +1,6 @@
 ---
 title: The web and web standards
 slug: Learn/Getting_started_with_the_web/The_web_and_web_standards
-tags:
-  - Beginner
-  - Front-end
-  - Learn
-  - Web
-  - Web Standards
 ---
 
 {{learnsidebar}}
@@ -94,7 +88,7 @@ The actual syntax for HTTP messages (called requests and responses) is not that 
 
   <p>This is a paragraph of text.</p>
 
-  <img src="cat.jpg" alt="A picture of my cat">
+  <img src="cat.jpg" alt="A picture of my cat" />
   ```
 
   If we adopted a house-building analogy, HTML would be like the foundations and walls of the house, which give it structure and hold it together.
@@ -112,8 +106,8 @@ The actual syntax for HTTP messages (called requests and responses) is not that 
 - **JavaScript** is the programming language we use to add interactivity to web sites, from dynamic style switching, to fetching updates from the server, right through to complex 3D graphics. The following simple JavaScript will store a reference to our paragraph in memory and change the text inside it:
 
   ```js
-  let pElem = document.querySelector('p');
-  pElem.textContent =  'We changed the text!';
+  let pElem = document.querySelector("p");
+  pElem.textContent = "We changed the text!";
   ```
 
   In the house analogy, JavaScript is like the cooker, TV, Microwave, or hairdryer — the things that give your house useful functionality
@@ -122,7 +116,7 @@ The actual syntax for HTTP messages (called requests and responses) is not that 
 
 Once you've learned the "raw" technologies that can be used to build web pages (such as HTML, CSS, and JavaScript), you'll soon start to come across various tools that can be used to make your work easier or more efficient. Examples include:
 
-- The [developer tools](/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools) inside modern browsers that can be used to debug your code.
+- The [developer tools](/en-US/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools) inside modern browsers that can be used to debug your code.
 - [Testing tools](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing) that can be used to run tests to show whether your code is behaving as you intended it to.
 - Libraries and frameworks built on top of JavaScript that allow you to build certain types of web site much more quickly and effectively.
 - So-called "Linters", which take a set of rules, look at your code, and highlight places where you haven't followed the rules properly.
@@ -134,7 +128,7 @@ HTML, CSS, and JavaScript are front-end (or client-side) languages, which means 
 
 There are another class of languages called back-end (or server-side) languages, meaning that they are run on the server before the result is then sent to the browser to be displayed. A typical use for a server-side language is to get some data out of a database and generate some HTML to contain the data, before then sending the HTML over to the browser to display it to the user.
 
-Example server-side languages include ASP.NET, Python, PHP, and NodeJS.
+Example server-side frameworks include ASP.NET (in C#), Django (in Python), Laravel (in PHP), and Next.js (in JavaScript).
 
 ## Web best practices
 
@@ -161,4 +155,4 @@ You'll come across the below concepts at some point in your studies.
 ## See also
 
 - [History of the World Wide Web](https://en.wikipedia.org/wiki/History_of_the_World_Wide_Web)
-- [How does the internet work?](/en-US/docs/Learn/Common_questions/How_does_the_Internet_work)
+- [How does the internet work?](/en-US/docs/Learn/Common_questions/Web_mechanics/How_does_the_Internet_work)

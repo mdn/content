@@ -2,12 +2,6 @@
 title: CanvasRenderingContext2D.rect()
 slug: Web/API/CanvasRenderingContext2D/rect
 page-type: web-api-instance-method
-tags:
-  - API
-  - Canvas
-  - CanvasRenderingContext2D
-  - Method
-  - Reference
 browser-compat: api.CanvasRenderingContext2D.rect
 ---
 
@@ -18,7 +12,7 @@ The
 method of the Canvas 2D API adds a rectangle to the current path.
 
 Like other methods that modify the current path, this method does not directly render
-anything.  To draw the rectangle onto a canvas, you can use the
+anything. To draw the rectangle onto a canvas, you can use the
 {{domxref("CanvasRenderingContext2D.fill", "fill()")}} or
 {{domxref("CanvasRenderingContext2D.stroke", "stroke()")}} methods.
 
@@ -28,7 +22,7 @@ anything.  To draw the rectangle onto a canvas, you can use the
 
 ## Syntax
 
-```js
+```js-nolint
 rect(x, y, width, height)
 ```
 
@@ -70,8 +64,8 @@ The rectangle's corner is located at (10, 20). It has a width of 150 and a heigh
 100\.
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 ctx.rect(10, 20, 150, 100);
 ctx.fill();
 ```

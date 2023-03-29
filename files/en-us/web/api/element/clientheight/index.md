@@ -2,12 +2,6 @@
 title: Element.clientHeight
 slug: Web/API/Element/clientHeight
 page-type: web-api-instance-property
-tags:
-  - API
-  - CSSOM View
-  - NeedsMarkupWork
-  - Property
-  - Reference
 browser-compat: api.Element.clientHeight
 ---
 
@@ -34,7 +28,7 @@ A number.
 
 ## Examples
 
-![](dimensions-client.png)
+![How clientHeight property determines the inner height of an element considering the height and padding](dimensions-client.png)
 
 ## Specifications
 

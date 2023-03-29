@@ -2,12 +2,6 @@
 title: VTTCue.getCueAsHTML()
 slug: Web/API/VTTCue/getCueAsHTML
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - getCueAsHTML
-  - VTTCue
 browser-compat: api.VTTCue.getCueAsHTML
 ---
 
@@ -17,7 +11,7 @@ The **`getCueAsHTML()`** method of the {{domxref("VTTCue")}} interface returns a
 
 ## Syntax
 
-```js
+```js-nolint
 getCueAsHTML()
 ```
 
@@ -34,11 +28,11 @@ A {{domxref("DocumentFragment")}} .
 In the following example a new {{domxref("VTTCue")}} is created. The value as a document fragment is then printed to the console.
 
 ```js
-let video = document.querySelector('video');
+let video = document.querySelector("video");
 let track = video.addTextTrack("captions", "Captions", "en");
 track.mode = "showing";
 
-let cue1 = new VTTCue(0, 0.9, 'Hildy!');
+let cue1 = new VTTCue(0, 0.9, "Hildy!");
 console.log(cue1.getCueAsHTML());
 
 track.addCue(cue1);

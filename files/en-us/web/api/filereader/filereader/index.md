@@ -2,11 +2,6 @@
 title: FileReader()
 slug: Web/API/FileReader/FileReader
 page-type: web-api-constructor
-tags:
-  - API
-  - Constructor
-  - FileReader
-  - Reference
 browser-compat: api.FileReader.FileReader
 ---
 
@@ -18,7 +13,7 @@ For details about how to use `FileReader`, see [Using files from web application
 
 ## Syntax
 
-```js
+```js-nolint
 new FileReader()
 ```
 

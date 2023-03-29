@@ -1,15 +1,9 @@
 ---
 title: Proving the Pythagorean theorem
 slug: Web/MathML/Examples/MathML_Pythagorean_Theorem
-tags:
-  - Beginner
-  - Example
-  - Guide
-  - HTML Math
-  - Math education
-  - MathML
-  - NeedsBeginnerUpdate
 ---
+
+{{MathMLRef}}
 
 We will now prove the [Pythagorean theorem](https://en.wikipedia.org/wiki/Pythagorean_theorem):
 
@@ -17,6 +11,8 @@ We will now prove the [Pythagorean theorem](https://en.wikipedia.org/wiki/Pythag
 the sum of the squares of the other two sides.
 
 i.e., If a and b are the legs and c is the hypotenuse then
+
+<!-- @prettier-ignore -->
 <math>
   <mrow>
     <msup>
@@ -36,7 +32,7 @@ i.e., If a and b are the legs and c is the hypotenuse then
   </mrow>
 </math>.
 
-**Proof:**  We can prove the theorem algebraically by showing that on
+**Proof:** We can prove the theorem algebraically by showing that on
 [this figure](http://www.cut-the-knot.org/pythagoras/proof31.gif)
 the area of the big square equals the area of the inner square (hypotenuse
 squared) plus the area of the four triangles:

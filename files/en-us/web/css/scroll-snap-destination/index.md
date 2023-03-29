@@ -1,14 +1,10 @@
 ---
 title: scroll-snap-destination
 slug: Web/CSS/scroll-snap-destination
-tags:
-  - CSS
-  - CSS Property
-  - CSS Scroll Snap
-  - Deprecated
-  - Reference
-  - recipe:css-property
-  - Non-standard
+page-type: css-property
+status:
+  - deprecated
+  - non-standard
 browser-compat: css.properties.scroll-snap-destination
 ---
 
@@ -88,7 +84,7 @@ scroll-snap-destination =
   display: flex;
 }
 
-#container > div:nth-child(-n+2) {
+#container > div:nth-child(-n + 2) {
   margin-right: 20px;
 }
 
@@ -124,11 +120,11 @@ scroll-snap-destination =
 }
 
 .scrollContainer > div:nth-child(even) {
-  background-color: #87EA87;
+  background-color: #87ea87;
 }
 
 .scrollContainer > div:nth-child(odd) {
-  background-color: #87CCEA;
+  background-color: #87ccea;
 }
 ```
 

@@ -2,13 +2,6 @@
 title: PaymentResponse
 slug: Web/API/PaymentResponse
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Payment Request
-  - PaymentResponse
-  - Reference
-  - Secure context
 browser-compat: api.PaymentResponse
 ---
 
@@ -18,7 +11,7 @@ The **`PaymentResponse`** interface of the [Payment Request API](/en-US/docs/Web
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 - {{domxref('PaymentResponse.details')}} {{ReadOnlyInline}} {{SecureContext_Inline}}
   - : Returns a JSON-serializable object that provides a payment method specific message used by the merchant to process the transaction and determine successful fund transfer. The contents of the object depend on the payment method being used. Developers need to consult whomever controls the URL for the expected shape of the details object.
@@ -37,12 +30,14 @@ The **`PaymentResponse`** interface of the [Payment Request API](/en-US/docs/Web
 - {{domxref('PaymentResponse.shippingOption')}} {{ReadOnlyInline}} {{SecureContext_Inline}} {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : Returns the ID attribute of the shipping option selected by the user. This option is only present when the `requestShipping` option is set to `true` in the `options` parameter of the {{domxref('PaymentRequest.PaymentRequest','PaymentRequest()')}} constructor.
 
-## Methods
+## Instance methods
 
 - {{domxref('PaymentResponse.retry()')}} {{SecureContext_Inline}}
   - : If something is wrong with the payment response's data (and there is a recoverable error), this method allows a merchant to request that the user retry the payment. The method takes an object as argument, which is used to signal to the user exactly what is wrong with the payment response so they can try to correct any issues.
 - {{domxref('PaymentResponse.complete()')}} {{SecureContext_Inline}}
   - : Notifies the user agent that the user interaction is over. This causes any remaining user interface to be closed. This method should only be called after the Promise returned by the {{domxref('PaymentRequest.show()')}} method.
+- {{domxref("PaymentResponse.toJSON()")}} {{SecureContext_Inline}}
+  - : Returns a [JSON object](/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON) representing this `PaymentResponse` object.
 
 ## Events
 

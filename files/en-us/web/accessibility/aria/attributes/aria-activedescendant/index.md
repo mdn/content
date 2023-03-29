@@ -1,13 +1,6 @@
 ---
-title: 'aria-activedescendant'
+title: aria-activedescendant
 slug: Web/Accessibility/ARIA/Attributes/aria-activedescendant
-tags:
-  - Accessibility
-  - ARIA
-  - ARIA attribute
-  - ARIA property
-  - aria-activedescendant
-  - NeedsExample
 spec-urls:
   - https://w3c.github.io/aria/#aria-activedescendant
   - https://w3c.github.io/aria-practices/#kbd_focus_activedescendant
@@ -60,6 +53,6 @@ Relevant only as an attribute on elements with the following roles:
 
 1. [**WAI-ARIA states and properties**](/en-US/docs/Web/Accessibility/ARIA/Attributes)
 
-    {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/aria/Attributes")}}
+   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/aria/Attributes")}}
 
 </section>

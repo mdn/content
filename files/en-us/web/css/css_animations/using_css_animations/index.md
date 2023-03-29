@@ -1,12 +1,7 @@
 ---
 title: Using CSS animations
 slug: Web/CSS/CSS_Animations/Using_CSS_animations
-tags:
-  - Advanced
-  - CSS
-  - CSS Animations
-  - Example
-  - Guide
+page-type: guide
 ---
 
 {{CSSRef}}
@@ -29,6 +24,7 @@ The sub-properties of the {{cssxref("animation")}} property are:
 - {{cssxref("animation-composition")}}
   - : Specifies the {{Glossary("Composite operation")}} to use when multiple animations affect the same property simultaneously.
 -->
+
 - {{cssxref("animation-delay")}}
   - : Specifies the delay between an element loading and the start of an animation sequence and whether the animation should start immediately from its beginning or partway through the animation.
 - {{cssxref("animation-direction")}}
@@ -45,10 +41,6 @@ The sub-properties of the {{cssxref("animation")}} property are:
   - : Specifies whether to pause or play an animation sequence.
 - {{cssxref("animation-timing-function")}}
   - : Specifies how an animation transitions through keyframes by establishing acceleration curves.
-<!--
-- {{cssxref("animation-timeline")}}
-  - : Specifies the names of one or more {{cssxref("@scroll-timeline")}} at-rules describing the scroll animations.
--->
 
 ## Defining animation sequence using keyframes
 
@@ -149,9 +141,11 @@ The keyframes are defined using the {{cssxref("@keyframes")}} at-rule. In this c
 The second (and final) keyframe occurs at 100% (using the alias `to`). The left margin is set to 0% and the width of the element is set to 100%. This causes the header to finish its animation flush against the left edge of the content area.
 
 ```html
-<p>The Caterpillar and Alice looked at each other for some time in silence:
-at last the Caterpillar took the hookah out of its mouth, and addressed
-her in a languid, sleepy voice.</p>
+<p>
+  The Caterpillar and Alice looked at each other for some time in silence: at
+  last the Caterpillar took the hookah out of its mouth, and addressed her in a
+  languid, sleepy voice.
+</p>
 ```
 
 > **Note:** Reload page to see the animation.
@@ -198,9 +192,11 @@ p {
 ```
 
 ```html
-<p>The Caterpillar and Alice looked at each other for some time in silence:
-at last the Caterpillar took the hookah out of its mouth, and addressed
-her in a languid, sleepy voice.</p>
+<p>
+  The Caterpillar and Alice looked at each other for some time in silence: at
+  last the Caterpillar took the hookah out of its mouth, and addressed her in a
+  languid, sleepy voice.
+</p>
 ```
 
 This tells the browser that 75% of the way through the animation sequence, the header should have its left margin at 25% and the width should be 150%.
@@ -238,9 +234,11 @@ Adding it to the existing code:
 ```
 
 ```html
-<p>The Caterpillar and Alice looked at each other for some time in silence:
-at last the Caterpillar took the hookah out of its mouth, and addressed
-her in a languid, sleepy voice.</p>
+<p>
+  The Caterpillar and Alice looked at each other for some time in silence: at
+  last the Caterpillar took the hookah out of its mouth, and addressed her in a
+  languid, sleepy voice.
+</p>
 ```
 
 {{EmbedLiveSample("Repeating_the_animation","100%","250")}}
@@ -275,9 +273,11 @@ And the rest of the code:
 ```
 
 ```html
-<p>The Caterpillar and Alice looked at each other for some time in silence:
-at last the Caterpillar took the hookah out of its mouth, and addressed
-her in a languid, sleepy voice.</p>
+<p>
+  The Caterpillar and Alice looked at each other for some time in silence: at
+  last the Caterpillar took the hookah out of its mouth, and addressed her in a
+  languid, sleepy voice.
+</p>
 ```
 
 {{EmbedLiveSample("Making_the_animation_move_back_and_forth","100%","250")}}
@@ -302,13 +302,13 @@ We start with creating the CSS for the animation. This animation will last for 3
 
 @keyframes slidein {
   from {
-    margin-left:100%;
-    width:300%
+    margin-left: 100%;
+    width: 300%;
   }
 
   to {
-    margin-left:0%;
-    width:100%;
+    margin-left: 0%;
+    width: 100%;
   }
 }
 ```
@@ -337,7 +337,7 @@ The events get delivered to the `listener()` function, which is shown below.
 ```js
 function listener(event) {
   const l = document.createElement("li");
-  switch(event.type) {
+  switch (event.type) {
     case "animationstart":
       l.textContent = `Started: elapsed time is ${event.elapsedTime}`;
       break;
@@ -372,11 +372,10 @@ Just for the sake of completeness, here's the HTML that displays the page conten
   elements move across the page.
 </p>
 <p>
-  In addition, we output some text each time an animation event fires,
-  so you can see them in action.
+  In addition, we output some text each time an animation event fires, so you
+  can see them in action.
 </p>
-<ul id="output">
-</ul>
+<ul id="output"></ul>
 ```
 
 And here's the live output.

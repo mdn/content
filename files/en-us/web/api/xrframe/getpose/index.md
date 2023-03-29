@@ -2,20 +2,8 @@
 title: XRFrame.getPose()
 slug: Web/API/XRFrame/getPose
 page-type: web-api-instance-method
-tags:
-  - API
-  - AR
-  - Augmented Reality
-  - Interface
-  - Method
-  - Reference
-  - VR
-  - Virtual Reality
-  - WebXR
-  - WebXR Device API
-  - XRFrame
-  - getPose
-  - Experimental
+status:
+  - experimental
 browser-compat: api.XRFrame.getPose
 ---
 
@@ -28,7 +16,7 @@ For example, to get the position of a controller relative to the viewer's head, 
 
 ## Syntax
 
-```js
+```js-nolint
 getPose(space, baseSpace)
 ```
 

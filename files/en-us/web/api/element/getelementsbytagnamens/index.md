@@ -2,12 +2,6 @@
 title: Element.getElementsByTagNameNS()
 slug: Web/API/Element/getElementsByTagNameNS
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - Element
-  - Method
-  - Reference
 browser-compat: api.Element.getElementsByTagNameNS
 ---
 
@@ -20,7 +14,7 @@ that its search is restricted to descendants of the specified element.
 
 ## Syntax
 
-```js
+```js-nolint
 getElementsByTagNameNS(namespaceURI, localName)
 ```
 
@@ -43,7 +37,10 @@ A live {{domxref("HTMLCollection")}} of found elements in the order they appear 
 ```js
 // Check the alignment on a number of cells in a table in an XHTML document.
 const table = document.getElementById("forecast-table");
-const cells = table.getElementsByTagNameNS("http://www.w3.org/1999/xhtml", "td");
+const cells = table.getElementsByTagNameNS(
+  "http://www.w3.org/1999/xhtml",
+  "td"
+);
 
 for (const cell of cells) {
   const axis = cell.getAttribute("axis");

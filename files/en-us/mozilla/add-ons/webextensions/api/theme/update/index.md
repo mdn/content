@@ -1,15 +1,7 @@
 ---
 title: theme.update()
 slug: Mozilla/Add-ons/WebExtensions/API/theme/update
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Reference
-  - Theme
-  - Update
-  - WebExtensions
+page-type: webextension-api-function
 browser-compat: webextensions.api.theme.update
 ---
 
@@ -19,7 +11,7 @@ Updates the browser theme according to the content of given {{WebExtAPIRef("them
 
 ## Syntax
 
-```js
+```js-nolint
 browser.theme.update(
   windowId,    // integer
   theme        // object

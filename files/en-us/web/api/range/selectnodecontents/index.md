@@ -2,12 +2,6 @@
 title: Range.selectNodeContents()
 slug: Web/API/Range/selectNodeContents
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - Method
-  - Range
-  - Reference
 browser-compat: api.Range.selectNodeContents
 ---
 
@@ -22,7 +16,7 @@ node.
 
 ## Syntax
 
-```js
+```js-nolint
 selectNodeContents(referenceNode)
 ```
 

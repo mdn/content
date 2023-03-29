@@ -2,25 +2,18 @@
 title: XRHitTestResult.createAnchor()
 slug: Web/API/XRHitTestResult/createAnchor
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - AR
-  - VR
-  - XR
-  - WebXR
-  - Experimental
+status:
+  - experimental
 browser-compat: api.XRHitTestResult.createAnchor
 ---
 
 {{APIRef("WebXR Device API")}}{{SeeCompatTable}}
 
-The **`createAnchor()`** method of the {{domxref("XRHitTestResult")}} interface creates an {{domxref("XRAnchor")}} from a hit test result that is attached to a real world object.
+The **`createAnchor()`** method of the {{domxref("XRHitTestResult")}} interface creates an {{domxref("XRAnchor")}} from a hit test result that is attached to a real-world object.
 
 ## Syntax
 
-```js
+```js-nolint
 createAnchor()
 ```
 

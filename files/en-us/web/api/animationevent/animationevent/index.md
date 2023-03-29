@@ -2,13 +2,6 @@
 title: AnimationEvent()
 slug: Web/API/AnimationEvent/AnimationEvent
 page-type: web-api-constructor
-tags:
-  - API
-  - AnimationEvent
-  - CSSOM
-  - Constructor
-  - Reference
-  - Web Animations
 browser-compat: api.AnimationEvent.AnimationEvent
 ---
 
@@ -18,7 +11,7 @@ The **`AnimationEvent()`** constructor returns a new {{domxref("AnimationEvent")
 
 ## Syntax
 
-```js
+```js-nolint
 new AnimationEvent(type)
 new AnimationEvent(type, options)
 ```

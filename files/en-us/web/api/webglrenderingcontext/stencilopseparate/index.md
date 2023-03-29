@@ -2,12 +2,6 @@
 title: WebGLRenderingContext.stencilOpSeparate()
 slug: Web/API/WebGLRenderingContext/stencilOpSeparate
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.stencilOpSeparate
 ---
 
@@ -19,7 +13,7 @@ back-facing stencil test actions.
 
 ## Syntax
 
-```js
+```js-nolint
 stencilOpSeparate(face, fail, zfail, zpass)
 ```
 

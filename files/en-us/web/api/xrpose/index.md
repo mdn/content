@@ -2,27 +2,6 @@
 title: XRPose
 slug: Web/API/XRPose
 page-type: web-api-interface
-tags:
-  - 3DoF
-  - 6DoF
-  - API
-  - AR
-  - Interface
-  - Orientation
-  - Position
-  - Reality
-  - Reference
-  - VR
-  - Virtual
-  - WebXR
-  - WebXR API
-  - WebXR Device API
-  - XR
-  - XRPose
-  - augmented
-  - pose
-  - space
-  - transform
 browser-compat: api.XRPose
 ---
 
@@ -36,7 +15,7 @@ To obtain the `XRPose` for the `XRSpace` used as the local coordinate system of 
 thePose = xrFrame.getPose(localSpace, baseSpace);
 ```
 
-The pose for a viewer (or camera) is represented by the {{domxref("XRViewerPose")}} subclass of `XRPose`. This is obtained using {{domxref("XRFrame.getViewerPose()")}}  instead of `getPose()`, specifying a reference space which has been adjusted to position and orient the node to provide the desired viewing position and angle:
+The pose for a viewer (or camera) is represented by the {{domxref("XRViewerPose")}} subclass of `XRPose`. This is obtained using {{domxref("XRFrame.getViewerPose()")}} instead of `getPose()`, specifying a reference space which has been adjusted to position and orient the node to provide the desired viewing position and angle:
 
 ```js
 viewerPose = xrFrame.getViewerPose(adjReferenceSpace);
@@ -46,7 +25,7 @@ Here, `adjReferenceSpace` is a reference space which has been updated using the 
 
 See the article [Movement, orientation, and motion](/en-US/docs/Web/API/WebXR_Device_API/Movement_and_motion) for further details and an example with thorough explanations of what's going on.
 
-## Properties
+## Instance properties
 
 - {{DOMxRef("XRPose.angularVelocity")}} {{ReadOnlyInline}}
   - : A {{DOMxRef("DOMPointReadOnly")}} describing the angular velocity in radians per second relative to the base {{DOMxRef("XRSpace")}}.

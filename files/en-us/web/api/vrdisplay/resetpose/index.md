@@ -2,17 +2,9 @@
 title: VRDisplay.resetPose()
 slug: Web/API/VRDisplay/resetPose
 page-type: web-api-instance-method
-tags:
-  - API
-  - Deprecated
-  - Method
-  - Reference
-  - VR
-  - VRDevice
-  - Virtual Reality
-  - WebVR
-  - resetPose()
-  - Non-standard
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.VRDisplay.resetPose
 ---
 
@@ -28,7 +20,7 @@ The VRDisplay's reported roll and pitch do not change when `resetPose()` is call
 
 ## Syntax
 
-```js
+```js-nolint
 resetPose()
 ```
 
@@ -45,9 +37,9 @@ None ({{jsxref("undefined")}}).
 ```js
 // Assuming vrDisplay already contains a VRDisplay object,
 // and we have a <button> referenced inside btn
-btn.addEventListener('click', () => {
+btn.addEventListener("click", () => {
   vrDisplay.resetPose();
-  console.log('Current pose set as origin/center');
+  console.log("Current pose set as origin/center");
 });
 ```
 

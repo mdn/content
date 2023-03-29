@@ -1,11 +1,7 @@
 ---
 title: is
 slug: Web/HTML/Global_attributes/is
-tags:
-  - Global attributes
-  - HTML
-  - Reference
-  - is
+page-type: html-attribute
 browser-compat: html.global_attributes.is
 ---
 
@@ -28,12 +24,11 @@ class WordCount extends HTMLParagraphElement {
 
     // Constructor contents omitted for brevity
     // …
-
   }
 }
 
 // Define the new element
-customElements.define('word-count', WordCount, { extends: 'p' });
+customElements.define("word-count", WordCount, { extends: "p" });
 ```
 
 ```html

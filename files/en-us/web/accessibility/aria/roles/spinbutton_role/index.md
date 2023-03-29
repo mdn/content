@@ -1,15 +1,6 @@
 ---
-title: 'ARIA: spinbutton role'
+title: "ARIA: spinbutton role"
 slug: Web/Accessibility/ARIA/Roles/spinbutton_role
-tags:
-  - Accessibility
-  - ARIA
-  - roles
-  - Reference
-  - ARIA roles
-  - range role
-  - spinbutton role
-  - spinbutton
 spec-urls: https://w3c.github.io/aria/#spinbutton
 ---
 
@@ -23,7 +14,7 @@ The spinbutton represents the range of possible values. The value of the spinbut
 
 Spinbuttons often have three components, including a text field that displays the current value, an increment button, and a decrement button. The text field is usually the only focusable component because the increment and decrement functions are keyboard accessible via arrow keys. Typically, the text field also allows users to directly edit the value.
 
-In addition to including the {{htmlattrxref('tabindex')}} attribute to enable spinbutton focus, keyboard and pointer device support must be implemented. Directional keys such as the arrow keys must be supported for keyboard users. Changing the value when increment and decrement buttons are clicked must be supported for pointing devices. See [keyboard interactions](#keyboard_interactions) below.
+In addition to including the [`tabindex`](/en-US/docs/Web/HTML/Global_attributes#tabindex) attribute to enable spinbutton focus, keyboard and pointer device support must be implemented. Directional keys such as the arrow keys must be supported for keyboard users. Changing the value when increment and decrement buttons are clicked must be supported for pointing devices. See [keyboard interactions](#keyboard_interactions) below.
 
 > **Note:** It is recommended to use [`<input type="number">`](/en-US/docs/Web/HTML/Element/input/number) element, or other input types for dates and time that also implicitly have the `role="spinbutton"` semantic, rather than the `spinbutton` role. User agents provide stylized widget for the these input elements which provide default increment, decrement, and native range limiting functionality. When using non-semantic elements, all features of the native semantic element need to be recreated with ARIA attributes, JavaScript, and CSS.
 
@@ -56,26 +47,30 @@ The optional [`aria-valuetext`](/en-US/docs/Web/Accessibility/ARIA/Attributes/ar
 
 The `aria-valuetext` value must be updated as the value or `aria-valuenow` is updated. ARIA attributes are supported on semantic HTML elements. While there is no equivalent HTML attribute for `<input>`, you can include `aria-valuetext` on any {{htmlelement('input')}} type. When `aria-valuetext` is an important feature for a spinbutton, consider using {{HTMLElement('select')}} with {{HTMLElement('option')}} elements instead.
 
-An accessible name is **required**. If the `spinbutton` role is applied to an HTML {{HTMLElement('input')}} element, the accessible name can come from the associated {{HTMLElement('label')}}. Otherwise, use [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) if a visible label is present or  [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label) if a visible label is not present.
+An accessible name is **required**. If the `spinbutton` role is applied to an HTML {{HTMLElement('input')}} element, the accessible name can come from the associated {{HTMLElement('label')}}. Otherwise, use [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) if a visible label is present or [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label) if a visible label is not present.
 
-When not using the HTML {{HTMLElement('input')}} element to create your spinbutton, include the {{htmlattrxref('tabindex')}} attribute to make the spinbutton focusable. The `spinbutton` role is user-interactive, and therefore, requires being able to receive focus. Focus should be placed on the spinbutton input and not on the associated buttons that increment and decrement the spinbutton value.
+When not using the HTML {{HTMLElement('input')}} element to create your spinbutton, include the [`tabindex`](/en-US/docs/Web/HTML/Global_attributes#tabindex) attribute to make the spinbutton focusable. The `spinbutton` role is user-interactive, and therefore, requires being able to receive focus. Focus should be placed on the spinbutton input and not on the associated buttons that increment and decrement the spinbutton value.
 
 ### Descendants limited to buttons or text
 
-There are some types of user interface components that, when represented in a platform accessibility API, can only contain specific content. The children or owned elements of `spinbutton` are limited to a  textbox and two buttons. Alternatively, the `spinbutton` role can be applied to a `text` input and sibling buttons can be used to support the increment and decrement functions.
+There are some types of user interface components that, when represented in a platform accessibility API, can only contain specific content. The children or owned elements of `spinbutton` are limited to a textbox and two buttons. Alternatively, the `spinbutton` role can be applied to a `text` input and sibling buttons can be used to support the increment and decrement functions.
 
 ## Associated roles, states, and properties
 
 - [`aria-valuenow`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-valuenow) (required)
+
   - : Set to a decimal value between `aria-valuemin` and `aria-valuemax`, indicating the current value of the spinbutton. If not present, there is no default value.
 
 - [`aria-valuetext`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-valuetext)
+
   - : Assistive technologies often present the value of `aria-valuenow` as a number. If `aria-valuenow` cannot be accurate, use `aria-valuetext` to provide the spinbutton with a more understandable value.
 
 - [`aria-valuemin`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-valuemin)
+
   - : Set to a decimal value representing the minimum value and less than `aria-valuemax`. If not present, there is no default value.
 
 - [`aria-valuemax`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-valuemax)
+
   - : Set to a decimal value representing the maximum value and greater than `aria-valuemin`. If not present, there is no default value.
 
 - [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby)
@@ -89,19 +84,18 @@ In the example below, a `spinbutton` role has been defined to allow users to sel
 
 ```html
 <p id="day">Enter the day of the month</p>
-<button type="button"
-        tabindex="-1"
-        aria-label="previous day">˱</button>
-<div role="spinbutton"
-     tabindex="0"
-     aria-valuenow="1"
-     aria-valuetext="first"
-     aria-valuemin="1"
-     aria-valuemax="31"
-     aria-labelledby="day">1</div>
-<button type="button"
-        tabindex="-1"
-        aria-label="next day">˲</button>
+<button type="button" tabindex="-1" aria-label="previous day">˱</button>
+<div
+  role="spinbutton"
+  tabindex="0"
+  aria-valuenow="1"
+  aria-valuetext="first"
+  aria-valuemin="1"
+  aria-valuemax="31"
+  aria-labelledby="day">
+  1
+</div>
+<button type="button" tabindex="-1" aria-label="next day">˲</button>
 ```
 
 In this example, we included a negative `tabindex` to remove the buttons from the default tabbing order. We also added `tabindex` to a normally non-interactive {{HTMLElement('div')}} to add the `spinbutton` itself to the tabbing order. This example requires JavaScript to handle keyboard actions when the spinbutton has focus and when a mouse user clicks on the buttons.
@@ -112,12 +106,13 @@ This could have also been written using semantic HTML, removing the need for any
 
 ```html
 <label for="day">Enter the day of the month</label>
-<input type="number"
+<input
+  type="number"
   value="1"
   aria-valuetext="first"
   min="1"
   max="31"
-  id="day">
+  id="day" />
 ```
 
 {{EmbedLiveSample("With_semantic_HTML", 50, 50)}}
@@ -126,14 +121,14 @@ In this case, the only JavaScript needed would be to update the `aria-valuetext`
 
 ## Keyboard interactions
 
-| Key(s) | Action |
-| ---- | ---- |
-| Right and Up arrows | Increase the selected value by one step |
-| Left and Down arrows | Decrease the selected value by one step|
-| Page Up | (Optional) Increase the value by a set amount greater than or equal to one step |
-| Page Down | (Optional) Decrease the value by a set amount greater than or equal to one step |
-| Home | Set the spinbutton to the minimum value |
-| End | Set the spinbutton to the maximum value |
+| Key(s)               | Action                                                                          |
+| -------------------- | ------------------------------------------------------------------------------- |
+| Right and Up arrows  | Increase the selected value by one step                                         |
+| Left and Down arrows | Decrease the selected value by one step                                         |
+| Page Up              | (Optional) Increase the value by a set amount greater than or equal to one step |
+| Page Down            | (Optional) Decrease the value by a set amount greater than or equal to one step |
+| Home                 | Set the spinbutton to the minimum value                                         |
+| End                  | Set the spinbutton to the maximum value                                         |
 
 For the optional <kbd>Page Up</kbd> and <kbd>Page Down</kbd> keys, the change in spinbutton value should preferably be by an amount larger than the step changes made by Up and Down arrow keys.
 
@@ -168,6 +163,6 @@ It is recommended to use the native {{HTMLElement("input")}} element of type `nu
 
 1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
 
-    {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
+   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
 
 </section>

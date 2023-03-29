@@ -2,13 +2,6 @@
 title: HTMLTableElement.createTBody()
 slug: Web/API/HTMLTableElement/createTBody
 page-type: web-api-instance-method
-tags:
-  - API
-  - HTML DOM
-  - HTMLTableElement
-  - Method
-  - NeedsSpecTable
-  - Reference
 browser-compat: api.HTMLTableElement.createTBody
 ---
 
@@ -26,7 +19,7 @@ The **`createTBody()`** method of
 
 ## Syntax
 
-```js
+```js-nolint
 createTBody()
 ```
 

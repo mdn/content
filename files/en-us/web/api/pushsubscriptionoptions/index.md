@@ -2,11 +2,6 @@
 title: PushSubscriptionOptions
 slug: Web/API/PushSubscriptionOptions
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Reference
-  - PushSubscriptionOptions
 browser-compat: api.PushSubscriptionOptions
 ---
 
@@ -16,7 +11,7 @@ The **`PushSubscriptionOptions`** interface of the {{domxref('Push API','','',' 
 
 The read-only `PushSubscriptionOptions` object is returned by calling {{domxref("PushSubscription.options")}} on a {{domxref("PushSubscription")}}. This interface has no constructor of its own.
 
-## Properties
+## Instance properties
 
 - {{domxref("PushSubscriptionOptions.userVisibleOnly")}} {{ReadOnlyInline}}
   - : A boolean value indicating that the returned push
@@ -34,7 +29,7 @@ navigator.serviceWorker.ready.then((reg) => {
   reg.pushManager.getSubscription().then((subscription) => {
     const options = subscription.options;
     console.log(options); // a PushSubscriptionOptions object
-  })
+  });
 });
 ```
 

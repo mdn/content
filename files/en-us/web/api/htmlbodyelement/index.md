@@ -2,12 +2,6 @@
 title: HTMLBodyElement
 slug: Web/API/HTMLBodyElement
 page-type: web-api-interface
-tags:
-  - API
-  - HTML DOM
-  - Interface
-  - NeedsNewLayout
-  - Reference
 browser-compat: api.HTMLBodyElement
 ---
 
@@ -17,7 +11,7 @@ The **`HTMLBodyElement`** interface provides special properties (beyond those in
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 
@@ -34,7 +28,7 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 - {{domxref("HTMLBodyElement.vLink")}} {{deprecated_inline}}
   - : A string that represents the color of visited links.
 
-## Methods
+## Instance methods
 
 _No specific methods; inherits methods from its parent, {{domxref("HTMLElement")}}._
 

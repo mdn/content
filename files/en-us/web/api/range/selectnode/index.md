@@ -2,11 +2,6 @@
 title: Range.selectNode()
 slug: Web/API/Range/selectNode
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - Method
-  - Range
 browser-compat: api.Range.selectNode
 ---
 
@@ -19,7 +14,7 @@ the parent of the _referenceNode_.
 
 ## Syntax
 
-```js
+```js-nolint
 selectNode(referenceNode)
 ```
 
@@ -36,7 +31,7 @@ None ({{jsxref("undefined")}}).
 
 ```js
 let range = document.createRange();
-let referenceNode = document.getElementsByTagName('div').item(0);
+let referenceNode = document.getElementsByTagName("div").item(0);
 
 range.selectNode(referenceNode);
 ```

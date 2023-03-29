@@ -2,15 +2,6 @@
 title: DOMParser
 slug: Web/API/DOMParser
 page-type: web-api-interface
-tags:
-  - API
-  - DOM
-  - DOM Parsing
-  - Document
-  - HTML
-  - HTMLDocument
-  - Parsing
-  - Reference
 browser-compat: api.DOMParser
 ---
 
@@ -41,7 +32,7 @@ from a URL-addressable resource, returning a `Document` in its
 - {{domxref("DOMParser.DOMParser","DOMParser()")}}
   - : Creates a new `DOMParser` object.
 
-## Methods
+## Instance methods
 
 - {{domxref("DOMParser.parseFromString()")}}
   - : Parses a string using either the HTML parser or the XML parser, returning an {{domxref("HTMLDocument")}} or {{domxref("XMLDocument")}}.

@@ -1,16 +1,7 @@
 ---
 title: downloads.onErased
 slug: Mozilla/Add-ons/WebExtensions/API/downloads/onErased
-tags:
-  - API
-  - Add-ons
-  - Event
-  - Extensions
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - downloads
-  - onErased
+page-type: webextension-api-event
 browser-compat: webextensions.api.downloads.onErased
 ---
 
@@ -22,7 +13,7 @@ The listener is passed the `downloadId` of the {{WebExtAPIRef('downloads.Downloa
 
 ## Syntax
 
-```js
+```js-nolint
 browser.downloads.onErased.addListener(listener)
 browser.downloads.onErased.removeListener(listener)
 browser.downloads.onErased.hasListener(listener)
@@ -72,8 +63,6 @@ let erasing = browser.downloads.erase({
 {{WebExtExamples}}
 
 > **Note:** This API is based on Chromium's [`chrome.downloads`](https://developer.chrome.com/docs/extensions/reference/downloads/#event-onErased) API.
->
-> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

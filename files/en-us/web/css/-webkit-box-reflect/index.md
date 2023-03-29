@@ -1,14 +1,9 @@
 ---
-title: '-webkit-box-reflect'
+title: "-webkit-box-reflect"
 slug: Web/CSS/-webkit-box-reflect
-tags:
-  - '-webkit-box-reflect'
-  - CSS
-  - CSS Property
-  - CSS:WebKit Extensions
-  - Non-standard
-  - Reference
-  - recipe:css-property
+page-type: css-property
+status:
+  - non-standard
 browser-compat: css.properties.-webkit-box-reflect
 ---
 
@@ -34,8 +29,6 @@ The **`-webkit-box-reflect`** [CSS](/en-US/docs/Web/CSS) property lets you refle
 -webkit-box-reflect: initial;
 -webkit-box-reflect: unset;
 ```
-
-> **Warning:** This feature is **not intended to be used by Web sites**. To achieve reflection on the Web, the standard way is to use the CSS {{CSSxRef("element", "element()")}} function.
 
 ## Syntax
 

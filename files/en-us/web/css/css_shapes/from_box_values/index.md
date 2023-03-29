@@ -1,21 +1,7 @@
 ---
 title: Shapes from box values
 slug: Web/CSS/CSS_Shapes/From_box_values
-tags:
-  - Boundaries
-  - Boxes
-  - CSS
-  - CSS Shapes
-  - Guide
-  - Margins
-  - border-box
-  - border-radius
-  - box values
-  - content-box
-  - float
-  - margin-box
-  - padding-box
-  - shapes
+page-type: guide
 ---
 
 {{CSSRef}}

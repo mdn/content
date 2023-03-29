@@ -2,17 +2,12 @@
 title: BeforeInstallPromptEvent.prompt()
 slug: Web/API/BeforeInstallPromptEvent/prompt
 page-type: web-api-instance-method
-tags:
-  - API
-  - BeforeInstallPromptEvent
-  - Experimental
-  - Method
-  - Reference
-  - prompt
+status:
+  - experimental
 browser-compat: api.BeforeInstallPromptEvent.prompt
 ---
 
-{{SeeCompatTable}}
+{{APIRef}}{{SeeCompatTable}}
 
 The **`prompt()`** method of the
 {{domxref("BeforeInstallPromptEvent")}} interface allows a developer to show the
@@ -20,7 +15,7 @@ install prompt at a time of their own choosing.
 
 ## Syntax
 
-```js
+```js-nolint
 prompt()
 ```
 
@@ -33,6 +28,7 @@ None.
 A {{jsxref("Promise")}} resolving to an object containing:
 
 - `userChoice` {{experimental_inline}}
+
   - : A string, either `"accepted"` or `"dismissed"`, reflecting the {{jsxref("BeforeInstallPromptEvent.userChoice")}} property.
 
 - `platform` {{non-standard_inline}}

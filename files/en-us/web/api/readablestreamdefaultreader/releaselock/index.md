@@ -2,13 +2,6 @@
 title: ReadableStreamDefaultReader.releaseLock()
 slug: Web/API/ReadableStreamDefaultReader/releaseLock
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - ReadableStreamDefaultReader
-  - Reference
-  - Streams
-  - releaseLock
 browser-compat: api.ReadableStreamDefaultReader.releaseLock
 ---
 
@@ -23,7 +16,7 @@ Unread chunks remain in the stream's internal queue and can be read later by acq
 
 ## Syntax
 
-```js
+```js-nolint
 releaseLock()
 ```
 
@@ -48,7 +41,7 @@ function fetchStream() {
 
   // ...
 
-  reader.releaseLock()
+  reader.releaseLock();
 
   // ...
 }

@@ -2,12 +2,6 @@
 title: URLSearchParams.forEach()
 slug: Web/API/URLSearchParams/forEach
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - URLSearchParams
-  - forEach
 browser-compat: api.URLSearchParams.forEach
 ---
 
@@ -21,7 +15,7 @@ in this object via a callback function.
 
 ## Syntax
 
-```js
+```js-nolint
 forEach(callback)
 forEach(callback, thisArg)
 ```

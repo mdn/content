@@ -1,16 +1,11 @@
 ---
 title: '<ruby>: The Ruby Annotation element'
 slug: Web/HTML/Element/ruby
-tags:
-  - Element
-  - HTML
-  - HTML text-level semantics
-  - Reference
-  - Web
+page-type: html-element
 browser-compat: html.elements.ruby
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 The **`<ruby>`** [HTML](/en-US/docs/Web/HTML) element represents small annotations that are rendered above, below, or next to base text, usually used for showing the pronunciation of East Asian characters. It can also be used for annotating other kinds of text, but this usage is less common.
 
@@ -22,15 +17,15 @@ The term _ruby_ originated as [a unit of measurement used by typesetters](<https
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories"
+        <a href="/en-US/docs/Web/HTML/Content_categories"
           >Content categories</a
         >
       </th>
       <td>
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
           >Flow content</a
         >,
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content"
           >phrasing content</a
         >, palpable content.
       </td>
@@ -38,7 +33,7 @@ The term _ruby_ originated as [a unit of measurement used by typesetters](<https
     <tr>
       <th scope="row">Permitted content</th>
       <td>
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content"
           >Phrasing content</a
         >.
       </td>
@@ -51,7 +46,7 @@ The term _ruby_ originated as [a unit of measurement used by typesetters](<https
       <th scope="row">Permitted parents</th>
       <td>
         Any element that accepts
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content"
           >phrasing content</a
         >.
       </td>
@@ -112,5 +107,4 @@ This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_a
 - {{HTMLElement("rp")}}
 - {{HTMLElement("rb")}}
 - {{HTMLElement("rtc")}}
-- {{HTMLElement("rbc")}}
 - {{CSSxRef("text-transform")}}: full-size-kana

@@ -2,15 +2,6 @@
 title: XMLHttpRequest.open()
 slug: Web/API/XMLHttpRequest/open
 page-type: web-api-instance-method
-tags:
-  - API
-  - HTTP
-  - Method
-  - NeedsExample
-  - Reference
-  - XHR
-  - XMLHttpRequest
-  - open
 browser-compat: api.XMLHttpRequest.open
 ---
 
@@ -25,7 +16,7 @@ initializes a newly-created request, or re-initializes an existing one.
 
 ## Syntax
 
-```js
+```js-nolint
 open(method, url)
 open(method, url, async)
 open(method, url, async, user)

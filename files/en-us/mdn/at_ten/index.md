@@ -1,11 +1,9 @@
 ---
 title: MDN at 10
 slug: MDN/At_ten
-tags:
-  - History
-  - Landing
-  - MDN Meta
 ---
+
+{{MDNSidebar}}
 
 Celebrate 10 years of documenting your Web.
 

@@ -2,16 +2,8 @@
 title: USBDevice.selectAlternateInterface()
 slug: Web/API/USBDevice/selectAlternateInterface
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - USB
-  - USBDevice
-  - WebUSB
-  - WebUSB API
-  - selectAlternateInterface
-  - Experimental
+status:
+  - experimental
 browser-compat: api.USBDevice.selectAlternateInterface
 ---
 
@@ -23,7 +15,7 @@ the specified alternative endpoint is selected.
 
 ## Syntax
 
-```js
+```js-nolint
 selectAlternateInterface(interfaceNumber, alternateSetting)
 ```
 

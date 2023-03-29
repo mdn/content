@@ -2,10 +2,6 @@
 title: BatteryManager.level
 slug: Web/API/BatteryManager/level
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
 browser-compat: api.BatteryManager.level
 ---
 
@@ -36,12 +32,12 @@ A number.
 #### JavaScript
 
 ```js
-const getLevel = document.querySelector('#get-level');
-const output = document.querySelector('#output');
+const getLevel = document.querySelector("#get-level");
+const output = document.querySelector("#output");
 
-getLevel.addEventListener('click', async () => {
+getLevel.addEventListener("click", async () => {
   if (!navigator.getBattery) {
-    output.textContent = 'Battery manager is unsupported';
+    output.textContent = "Battery manager is unsupported";
   } else {
     const manager = await navigator.getBattery();
     const level = manager.level;

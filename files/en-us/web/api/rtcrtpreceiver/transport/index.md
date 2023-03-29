@@ -2,21 +2,6 @@
 title: RTCRtpReceiver.transport
 slug: Web/API/RTCRtpReceiver/transport
 page-type: web-api-instance-property
-tags:
-  - API
-  - Communications
-  - DTLS
-  - Media
-  - Networking
-  - RTCP
-  - RTCRtpReceiver
-  - RTP
-  - Reference
-  - Transport
-  - WebRTC
-  - WebRTC API
-  - WebRTC Device API
-  - receiver
 browser-compat: api.RTCRtpReceiver.transport
 ---
 
@@ -32,8 +17,8 @@ This transport is responsible for receiving the data for the media on the receiv
 
 ## Syntax
 
-```js
-let transport = rtcRtpReceiver.transport;
+```js-nolint
+rtcRtpReceiver.transport
 ```
 
 ### Value

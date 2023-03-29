@@ -1,15 +1,7 @@
 ---
 title: contextualIdentities.onUpdated
 slug: Mozilla/Add-ons/WebExtensions/API/contextualIdentities/onUpdated
-tags:
-  - API
-  - Add-ons
-  - Event
-  - Extensions
-  - Reference
-  - WebExtensions
-  - contextualIdentities
-  - onUpdated
+page-type: webextension-api-event
 browser-compat: webextensions.api.contextualIdentities.onUpdated
 ---
 
@@ -19,7 +11,7 @@ Fired when the properties of a contextual identity, such as its name, icon, or c
 
 ## Syntax
 
-```js
+```js-nolint
 browser.contextualIdentities.onUpdated.addListener(listener)
 browser.contextualIdentities.onUpdated.removeListener(listener)
 browser.contextualIdentities.onUpdated.hasListener(listener)

@@ -2,12 +2,6 @@
 title: NavigationPreloadManager.getState()
 slug: Web/API/NavigationPreloadManager/getState
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - NavigationPreloadManager
-  - Service Workers
 browser-compat: api.NavigationPreloadManager.getState
 ---
 
@@ -17,7 +11,7 @@ The **`getState()`** method of the {{domxref("NavigationPreloadManager")}} inter
 
 ## Syntax
 
-```js
+```js-nolint
 getState()
 ```
 
@@ -51,7 +45,9 @@ navigator.serviceWorker.ready
     console.log(state.enabled); // boolean
     console.log(state.headerValue); // string
   })
-  .catch((e) => console.error(`NavigationPreloadManager not supported: ${e.message}`));
+  .catch((e) =>
+    console.error(`NavigationPreloadManager not supported: ${e.message}`)
+  );
 ```
 
 ## Specifications

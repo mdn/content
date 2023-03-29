@@ -2,14 +2,6 @@
 title: Document.hasStorageAccess()
 slug: Web/API/Document/hasStorageAccess
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - Document
-  - Method
-  - Reference
-  - Storage Access API
-  - hasStorageAccess
 browser-compat: api.Document.hasStorageAccess
 ---
 
@@ -21,7 +13,7 @@ This method is part of the [Storage Access API](/en-US/docs/Web/API/Storage_Acce
 
 ## Syntax
 
-```js
+```js-nolint
 hasStorageAccess()
 ```
 

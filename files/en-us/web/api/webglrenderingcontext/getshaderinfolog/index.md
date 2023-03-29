@@ -2,12 +2,6 @@
 title: WebGLRenderingContext.getShaderInfoLog()
 slug: Web/API/WebGLRenderingContext/getShaderInfoLog
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.getShaderInfoLog
 ---
 
@@ -19,7 +13,7 @@ compile information.
 
 ## Syntax
 
-```js
+```js-nolint
 getShaderInfoLog(shader)
 ```
 

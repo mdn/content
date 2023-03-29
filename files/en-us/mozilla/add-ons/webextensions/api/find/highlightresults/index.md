@@ -1,15 +1,7 @@
 ---
 title: find.highlightResults()
 slug: Mozilla/Add-ons/WebExtensions/API/find/highlightResults
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Reference
-  - WebExtensions
-  - find
-  - highlightResults
+page-type: webextension-api-function
 browser-compat: webextensions.api.find.highlightResults
 ---
 
@@ -23,7 +15,7 @@ Note that the stored results are global across all extensions, so for example, i
 
 ## Syntax
 
-```js
+```js-nolint
 browser.find.highlightResults(
   options // optional object
 )

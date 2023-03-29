@@ -1,12 +1,7 @@
 ---
 title: Number.prototype.toLocaleString()
 slug: Web/JavaScript/Reference/Global_Objects/Number/toLocaleString
-tags:
-  - Internationalization
-  - JavaScript
-  - Method
-  - Number
-  - Prototype
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.Number.toLocaleString
 ---
 
@@ -14,11 +9,13 @@ browser-compat: javascript.builtins.Number.toLocaleString
 
 The **`toLocaleString()`** method returns a string with a language-sensitive representation of this number. In implementations with [`Intl.NumberFormat` API](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat) support, this method simply calls `Intl.NumberFormat`.
 
+When formatting large numbers of numbers, it is better to create a {{jsxref("Intl.NumberFormat")}} object and use the function provided by its {{jsxref("Intl/NumberFormat/format", "format()")}} method.
+
 {{EmbedInteractiveExample("pages/js/number-tolocalestring.html")}}
 
 ## Syntax
 
-```js
+```js-nolint
 toLocaleString()
 toLocaleString(locales)
 toLocaleString(locales, options)
@@ -31,10 +28,13 @@ The `locales` and `options` parameters customize the behavior of the function an
 In implementations that support the [`Intl.NumberFormat` API](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat), these parameters correspond exactly to the [`Intl.NumberFormat()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat) constructor's parameters. Implementations without `Intl.NumberFormat` support are asked to ignore both parameters, making the locale used and the form of the string returned entirely implementation-dependent.
 
 - `locales` {{optional_inline}}
+
   - : A string with a BCP 47 language tag, or an array of such strings. Corresponds to the [`locales`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat#locales) parameter of the `Intl.NumberFormat()` constructor.
 
     In implementations without `Intl.NumberFormat` support, this parameter is ignored and the host's locale is usually used.
+
 - `options` {{optional_inline}}
+
   - : An object adjusting the output format. Corresponds to the [`options`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat#options) parameter of the `Intl.NumberFormat()` constructor.
 
     In implementations without `Intl.NumberFormat` support, this parameter is ignored.
@@ -47,12 +47,6 @@ A string with a language-sensitive representation of the given number.
 
 In implementations with `Intl.NumberFormat`, this is equivalent to `new Intl.NumberFormat(locales, options).format(number)`.
 
-## Performance
-
-When formatting large numbers of numbers, it is better to create a
-{{jsxref("Intl.NumberFormat")}} object and use the function provided by its
-{{jsxref("Intl/NumberFormat/format", "format")}} property.
-
 ## Examples
 
 ### Using toLocaleString()
@@ -63,7 +57,7 @@ with default options is returned.
 ```js
 const number = 3500;
 
-console.log(number.toLocaleString()); // Displays "3,500" if in U.S. English locale
+console.log(number.toLocaleString()); // "3,500" if in U.S. English locale
 ```
 
 ### Checking for support for locales and options arguments

@@ -2,17 +2,8 @@
 title: HTMLImageElement.border
 slug: Web/API/HTMLImageElement/border
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTML
-  - HTML DOM
-  - HTMLImageElement
-  - Image
-  - Property
-  - Reference
-  - border
-  - img
-  - Deprecated
+status:
+  - deprecated
 browser-compat: api.HTMLImageElement.border
 ---
 
@@ -53,21 +44,21 @@ images.
 For example, if you have the following HTML:
 
 ```html
-<img src="image.png" border="2">
+<img src="image.png" border="2" />
 ```
 
 The following will provide the same appearance using CSS instead of this obsolete
 property:
 
 ```html
-<img src="image.png" style="border: 2px;">
+<img src="image.png" style="border: 2px;" />
 ```
 
 You can further provide additional information to change the color and other features
 of the border:
 
 ```html
-<img src="image.png" style="border: dashed 2px #333388;">
+<img src="image.png" style="border: dashed 2px #333388;" />
 ```
 
 ## Specifications

@@ -1,17 +1,13 @@
 ---
 title: '<blink>: The Blinking Text element'
 slug: Web/HTML/Element/blink
-tags:
-  - Blink
-  - Element
-  - HTML
-  - Deprecated
-  - Reference
-  - Web
+page-type: html-element
+status:
+  - deprecated
 browser-compat: html.elements.blink
 ---
 
-{{HTMLRef}}{{Deprecated_header}}
+{{HTMLSidebar}}{{Deprecated_header}}
 
 The **`<blink>`** [HTML](/en-US/docs/Web/HTML) element is a non-standard element which causes the enclosed text to flash slowly.
 

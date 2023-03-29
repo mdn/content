@@ -2,11 +2,6 @@
 title: BluetoothUUID
 slug: Web/API/BluetoothUUID
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Reference
-  - BluetoothUUID
 browser-compat: api.BluetoothUUID
 ---
 
@@ -22,7 +17,7 @@ The Bluetooth registry contains lists of descriptors, services, and characterist
 
 The `BluetoothUUID` interface provides methods to retrieve these 128-bit UUIDs.
 
-## Properties
+## Instance properties
 
 None.
 
@@ -30,7 +25,7 @@ None.
 
 None.
 
-## Methods
+## Instance methods
 
 - {{domxref("BluetoothUUID.canonicalUUID()")}} {{Experimental_Inline}}
   - : Returns the 128-bit UUID when passed the 16- or 32-bit UUID alias.
@@ -46,7 +41,7 @@ None.
 In the following example the UUID representing the service named `device_information` is returned and printed to the console.
 
 ```js
-let result = BluetoothUUID.getService('device_information');
+let result = BluetoothUUID.getService("device_information");
 console.log(result); // "0000180a-0000-1000-8000-00805f9b34fb"
 ```
 

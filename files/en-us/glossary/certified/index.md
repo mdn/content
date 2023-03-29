@@ -1,13 +1,7 @@
 ---
 title: Certified
 slug: Glossary/Certified
-tags:
-  - Apps
-  - B2G
-  - Firefox OS
-  - Glossary
-  - Security
-  - Trustworthy
+page-type: glossary-definition
 ---
 
 **Certified** means that an application, content or data transmission has successfully undergone evaluation by professionals with expertise in the relevant field, thereby indicating completeness, security and trustworthiness.

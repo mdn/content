@@ -2,15 +2,8 @@
 title: PeriodicSyncManager.unregister()
 slug: Web/API/PeriodicSyncManager/unregister
 page-type: web-api-instance-method
-tags:
-  - Background Sync
-  - Method
-  - Offline
-  - PWA
-  - PeriodicSyncManager
-  - Service Worker
-  - Web Periodic Background Synchronization API
-  - Experimental
+status:
+  - experimental
 browser-compat: api.PeriodicSyncManager.unregister
 ---
 
@@ -23,7 +16,7 @@ when unregistration completes.
 
 ## Syntax
 
-```js
+```js-nolint
 unregister(tag)
 ```
 
@@ -47,7 +40,7 @@ background.
 
 ```js
 navigator.serviceWorker.ready.then((registration) => {
-  registration.periodicSync.unregister('get-latest-news');
+  registration.periodicSync.unregister("get-latest-news");
 });
 ```
 

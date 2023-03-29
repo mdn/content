@@ -2,13 +2,6 @@
 title: Document.location
 slug: Web/API/Document/location
 page-type: web-api-instance-property
-tags:
-  - API
-  - Document
-  - HTML DOM
-  - Property
-  - Read-only
-  - Reference
 browser-compat: api.Document.location
 ---
 
@@ -52,6 +45,6 @@ console.log(document.location);
 
 ## See also
 
-- The interface of the returned value, {{domxref("Location")}}.
+- The interface of the returned value, {{domxref("Location")}}
 - A similar information, but attached to the {{Glossary("browsing context")}},
-  {{domxref("Window.location")}}.
+  {{domxref("Window.location")}}

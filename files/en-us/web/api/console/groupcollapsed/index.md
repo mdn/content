@@ -2,15 +2,6 @@
 title: console.groupCollapsed()
 slug: Web/API/console/groupCollapsed
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - DOM Reference
-  - Debugging
-  - Method
-  - Reference
-  - Web Development
-  - web console
 browser-compat: api.console.groupCollapsed
 ---
 
@@ -29,7 +20,7 @@ examples.
 
 ## Syntax
 
-```js
+```js-nolint
 groupCollapsed()
 groupCollapsed(label)
 ```

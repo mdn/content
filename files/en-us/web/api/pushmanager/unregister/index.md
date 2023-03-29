@@ -2,12 +2,8 @@
 title: PushManager.unregister()
 slug: Web/API/PushManager/unregister
 page-type: web-api-instance-method
-tags:
-  - API
-  - Deprecated
-  - Method
-  - Reference
-  - Simple Push API
+status:
+  - deprecated
 browser-compat: api.PushManager.unregister
 ---
 
@@ -20,7 +16,7 @@ unregister and delete the specified endpoint.
 
 ## Syntax
 
-```js
+```js-nolint
 unregister(pushEndpoint)
 ```
 
@@ -54,11 +50,11 @@ const req = navigator.push.unregister(pushEndpoint);
 req.onsuccess = (e) => {
   const endpoint = req.result;
   console.log(`Unregistered endpoint: ${endpoint}`);
-}
+};
 
 req.onerror = (e) => {
   console.error(`Error unregistering the endpoint: ${e.error}`);
-}
+};
 ```
 
 ## Specifications

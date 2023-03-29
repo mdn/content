@@ -2,12 +2,6 @@
 title: Pbkdf2Params
 slug: Web/API/Pbkdf2Params
 page-type: web-api-interface
-tags:
-  - API
-  - Dictionary
-  - Pbkdf2Params
-  - Reference
-  - Web Crypto API
 spec-urls: https://w3c.github.io/webcrypto/#dfn-Pbkdf2Params
 ---
 
@@ -15,7 +9,7 @@ spec-urls: https://w3c.github.io/webcrypto/#dfn-Pbkdf2Params
 
 The **`Pbkdf2Params`** dictionary of the [Web Crypto API](/en-US/docs/Web/API/Web_Crypto_API) represents the object that should be passed as the `algorithm` parameter into {{domxref("SubtleCrypto.deriveKey()")}}, when using the [PBKDF2](/en-US/docs/Web/API/SubtleCrypto/deriveKey#pbkdf2) algorithm.
 
-## Properties
+## Instance properties
 
 - `name`
   - : A string. This should be set to `PBKDF2`.

@@ -1,15 +1,7 @@
 ---
 title: browsingData.removeCookies()
 slug: Mozilla/Add-ons/WebExtensions/API/browsingData/removeCookies
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Reference
-  - WebExtensions
-  - browsingData
-  - removeCookies
+page-type: webextension-api-function
 browser-compat: webextensions.api.browsingData.removeCookies
 ---
 
@@ -26,7 +18,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ## Syntax
 
-```js
+```js-nolint
 let removing = browser.browsingData.removeCookies(
   removalOptions            // RemovalOptions object
 )
@@ -58,11 +50,11 @@ function weekInMilliseconds() {
   return 1000 * 60 * 60 * 24 * 7;
 }
 
-let oneWeekAgo = (new Date()).getTime() - weekInMilliseconds();
+let oneWeekAgo = new Date().getTime() - weekInMilliseconds();
 
-browser.browsingData.removeCookies(
-  {since: oneWeekAgo}).
-then(onRemoved, onError);
+browser.browsingData
+  .removeCookies({ since: oneWeekAgo })
+  .then(onRemoved, onError);
 ```
 
 Remove all cookies:
@@ -80,8 +72,7 @@ function onError(error) {
   console.error(error);
 }
 
-browser.browsingData.removeCookies({}).
-then(onRemoved, onError);
+browser.browsingData.removeCookies({}).then(onRemoved, onError);
 ```
 
 ## Browser compatibility
@@ -91,8 +82,6 @@ then(onRemoved, onError);
 {{WebExtExamples}}
 
 > **Note:** This API is based on Chromium's [`chrome.browsingData`](https://developer.chrome.com/docs/extensions/reference/browsingData/) API.
->
-> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

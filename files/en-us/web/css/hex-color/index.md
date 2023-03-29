@@ -1,10 +1,7 @@
 ---
 title: <hex-color>
 slug: Web/CSS/hex-color
-tags:
-  - Reference
-  - CSS
-  - CSS Data Type
+page-type: css-type
 browser-compat: css.types.color.rgb_hexadecimal_notation
 ---
 
@@ -39,19 +36,43 @@ A `<hex-color>` value can be used everywhere where a [`<color>`](/en-US/docs/Web
 ## Examples
 
 ```html
-/* Hexadecimal syntax for a fully opaque hot pink */
-#f09 <div class="c1"></div>
-#F09 <div class="c2"></div>
-#ff0099 <div class="c3"></div>
-#FF0099 <div class="c4"></div>
+<p>Hexadecimal syntax for a fully opaque hot pink</p>
+
+<span>
+  #f09
+  <div class="c1"></div>
+</span>
+<span>
+  #F09
+  <div class="c2"></div>
+</span>
+<span>
+  #ff0099
+  <div class="c3"></div>
+</span>
+<span>
+  #FF0099
+  <div class="c4"></div>
+</span>
 ```
 
 ```css
-div {width: 40px; height: 40px;}
-.c1 { background: #f09}
-.c2 { background: #F09}
-.c3 { background: #ff0099}
-.c4 { background: #FF0099}
+div {
+  width: 40px;
+  height: 40px;
+}
+.c1 {
+  background: #f09;
+}
+.c2 {
+  background: #f09;
+}
+.c3 {
+  background: #ff0099;
+}
+.c4 {
+  background: #ff0099;
+}
 ```
 
 {{EmbedLiveSample("Examples", "100%", "450")}}

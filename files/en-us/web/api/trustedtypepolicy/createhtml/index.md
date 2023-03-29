@@ -2,12 +2,6 @@
 title: TrustedTypePolicy.createHTML()
 slug: Web/API/TrustedTypePolicy/createHTML
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - createHTML
-  - TrustedTypePolicy
 browser-compat: api.TrustedTypePolicy.createHTML
 ---
 
@@ -17,7 +11,7 @@ The **`createHTML()`** method of the {{domxref("TrustedTypePolicy")}} interface 
 
 ## Syntax
 
-```js
+```js-nolint
 createHTML(input)
 createHTML(input, args)
 ```

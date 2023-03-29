@@ -1,9 +1,7 @@
 ---
 title: word-spacing
 slug: Web/SVG/Attribute/word-spacing
-tags:
-  - SVG
-  - SVG Attribute
+page-type: svg-attribute
 browser-compat: svg.attributes.presentation.word-spacing
 ---
 
@@ -28,7 +26,9 @@ You can use this attribute with the following SVG elements:
 ## Example
 
 ```css hidden
-html, body, svg {
+html,
+body,
+svg {
   height: 100%;
 }
 ```

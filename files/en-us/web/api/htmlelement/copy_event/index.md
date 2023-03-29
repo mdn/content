@@ -1,15 +1,7 @@
 ---
-title: 'HTMLElement: copy event'
+title: "HTMLElement: copy event"
 slug: Web/API/HTMLElement/copy_event
 page-type: web-api-event
-tags:
-  - API
-  - Clipboard API
-  - HTMLElement
-  - Event
-  - Reference
-  - Web
-  - copy
 browser-compat: api.Element.copy_event
 ---
 
@@ -22,9 +14,9 @@ The **`copy`** event fires when the user initiates a copy action through the bro
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('copy', (event) => { });
+addEventListener("copy", (event) => {});
 
-oncopy = (event) => { };
+oncopy = (event) => {};
 ```
 
 ## Event type
@@ -48,7 +40,9 @@ This example blocks every copy and paste attempt from the {{htmlElement("textare
 
 ```html
 <h3>Play with this text area:</h3>
-<textarea id="editor" rows="3">Try copying and pasting text into this field!</textarea>
+<textarea id="editor" rows="3">
+Try copying and pasting text into this field!
+</textarea>
 
 <h3>Log:</h3>
 <p id="log"></p>
@@ -57,7 +51,7 @@ This example blocks every copy and paste attempt from the {{htmlElement("textare
 ### JavaScript
 
 ```js
-const log = document.getElementById('log');
+const log = document.getElementById("log");
 
 function logCopy(event) {
   log.innerText = `Copy blocked!\n${log.innerText}`;
@@ -69,7 +63,7 @@ function logPaste(event) {
   event.preventDefault();
 }
 
-const editor = document.getElementById('editor');
+const editor = document.getElementById("editor");
 
 editor.oncopy = logCopy;
 editor.onpaste = logPaste;

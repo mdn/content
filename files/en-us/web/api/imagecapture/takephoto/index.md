@@ -2,16 +2,8 @@
 title: ImageCapture.takePhoto()
 slug: Web/API/ImageCapture/takePhoto
 page-type: web-api-instance-method
-tags:
-  - API
-  - Experimental
-  - Image
-  - ImageCapture
-  - Media
-  - MediaStream Image Capture
-  - Method
-  - Reference
-  - takePhoto
+status:
+  - experimental
 browser-compat: api.ImageCapture.takePhoto
 ---
 
@@ -24,7 +16,7 @@ that resolves with a {{domxref("Blob")}} containing the data.
 
 ## Syntax
 
-```js
+```js-nolint
 takePhoto()
 takePhoto(photoSettings)
 ```
@@ -62,19 +54,22 @@ This example is extracted from this [Simple Image Capture demo](https://simpl.in
 {{domxref("ImageCapture")}} object.
 
 ```js
-let takePhotoButton = document.querySelector('button#takePhoto');
-let canvas = document.querySelector('canvas');
+let takePhotoButton = document.querySelector("button#takePhoto");
+let canvas = document.querySelector("canvas");
 
 takePhotoButton.onclick = takePhoto;
 
 function takePhoto() {
-  imageCapture.takePhoto().then((blob) => {
-    console.log('Took photo:', blob);
-    img.classList.remove('hidden');
-    img.src = URL.createObjectURL(blob);
-  }).catch((error) => {
-    console.error('takePhoto() error: ', error);
-  });
+  imageCapture
+    .takePhoto()
+    .then((blob) => {
+      console.log("Took photo:", blob);
+      img.classList.remove("hidden");
+      img.src = URL.createObjectURL(blob);
+    })
+    .catch((error) => {
+      console.error("takePhoto() error: ", error);
+    });
 }
 ```
 

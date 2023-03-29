@@ -1,10 +1,6 @@
 ---
 title: "IMSC: subtitles and captioning for the Web"
 slug: Related/IMSC
-tags:
-  - IMSC
-  - captions
-  - subtitles
 ---
 
 IMSC (TTML Profiles for Internet Media Subtitles and Captions) is a file format for representing subtitles and captions. It uses XML to describe content, timing, layout, and styling. IMSC is very similar to HTML and CSS in concept — in fact, most IMSC styles have a direct equivalent in CSS.
@@ -86,11 +82,11 @@ Below is an example that uses `tts:fillLineGap`:
 </tt>
 ```
 
-{{EmbedGHLiveSample("imsc/fillLineGap/fillLineGap.html", '100%', '256px')}}
+{{EmbedGHLiveSample("imsc-examples/fillLineGap/fillLineGap.html", '100%', '256px')}}
 
 … and an example that uses `ebutts:linePadding`:
 
-{{EmbedGHLiveSample("imsc/linePadding/linePadding.html", '100%', '256px')}}
+{{EmbedGHLiveSample("imsc-examples/linePadding/linePadding.html", '100%', '256px')}}
 
 Last but not least, IMSC is compatible with SMPTE-TT and EBU-TT-D, which are widely used in the USA and in Europe. IMSC is also actively used in the authoring of TV and movie content. Implementing IMSC support therefore removes the need for conversion to WebVTT.
 

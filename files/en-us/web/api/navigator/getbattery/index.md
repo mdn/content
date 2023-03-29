@@ -2,14 +2,6 @@
 title: Navigator.getBattery()
 slug: Web/API/Navigator/getBattery
 page-type: web-api-instance-method
-tags:
-  - API
-  - Battery API
-  - Device API
-  - Method
-  - Navigator
-  - Reference
-  - getBattery
 browser-compat: api.Navigator.getBattery
 ---
 
@@ -21,11 +13,11 @@ system's battery. It returns a battery promise, which is resolved in a
 monitor the battery status. This implements the [Battery Status API](/en-US/docs/Web/API/Battery_Status_API); see that
 documentation for additional details, a guide to using the API, and sample code.
 
-> **Note:** In some browsers access to this feature is controlled by the {{HTTPHeader("Feature-Policy")}} directive {{HTTPHeader("Feature-Policy/battery","battery")}}.
+> **Note:** Access to this feature may be controlled by the {{HTTPHeader("Permissions-Policy")}} directive {{HTTPHeader("Permissions-Policy/battery","battery")}}.
 
 ## Syntax
 
-```js
+```js-nolint
 getBattery()
 ```
 
@@ -43,17 +35,13 @@ information about the battery's state.
 
 This method doesn't throw true exceptions; instead, it rejects the returned promise, passing into it a {{domxref("DOMException")}} whose `name` is one of the following:
 
+- `NotAllowedError` {{domxref("DOMException")}}
+
+  - : Use of this feature was blocked by a [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy).
+
 - `SecurityError`
 
-  - : The User Agent does not expose battery information to insecure contexts and this method was called from insecure context.
-
-    > **Note:** Old versions of some User Agents might allow use of this feature in insecure contexts.
-
-- `NotAllowedError`
-
-  - : No User Agent currently throws this exception, but the specification describes the following behaviors:
-    > This document is not allowed to use this feature.
-    > For example, it might not be explicitly allowed or restricted via {{HTTPHeader("Feature-Policy")}} {{HTTPHeader("Feature-Policy/battery", "battery")}} feature.
+  - : The User Agent does not expose battery information to insecure contexts and this method was called from an insecure context.
 
 ## Examples
 
@@ -67,7 +55,7 @@ let batteryIsCharging = false;
 navigator.getBattery().then((battery) => {
   batteryIsCharging = battery.charging;
 
-  battery.addEventListener('chargingchange', () => {
+  battery.addEventListener("chargingchange", () => {
     batteryIsCharging = battery.charging;
   });
 });
@@ -86,5 +74,5 @@ For more examples and details, see [Battery Status API](/en-US/docs/Web/API/Batt
 ## See also
 
 - [Battery Status API](/en-US/docs/Web/API/Battery_Status_API)
-- `Feature-Policy` {{HTTPHeader("Feature-Policy/battery", "battery")}}
+- `Permissions-Policy` {{HTTPHeader("Permissions-Policy/battery", "battery")}}
   feature

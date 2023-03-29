@@ -2,18 +2,13 @@
 title: HTMLSelectElement.disabled
 slug: Web/API/HTMLSelectElement/disabled
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTML DOM
-  - HTMLSelectElement
-  - Property
 browser-compat: api.HTMLSelectElement.disabled
 ---
 
 {{ APIRef("HTML DOM") }}
 
-The **`HTMLSelectElement.disabled`** is a boolean value that reflects the
-[`disabled`](/en-US/docs/Web/HTML/Element/select#attr-disabled)
+The **`HTMLSelectElement.disabled`** property is a boolean value that reflects the
+[`disabled`](/en-US/docs/Web/HTML/Element/select#disabled)
 HTML attribute, which indicates whether the control is disabled. If it is disabled, it
 does not accept clicks. A disabled element is unusable and un-clickable.
 
@@ -28,7 +23,7 @@ A boolean value.
 ```html
 <label>
   Allow drinks?
-  <input id="allow-drinks" type="checkbox"/>
+  <input id="allow-drinks" type="checkbox" />
 </label>
 
 <label for="drink-select">Drink selection:</label>
@@ -46,9 +41,13 @@ A boolean value.
 const allowDrinksCheckbox = document.getElementById("allow-drinks");
 const drinkSelect = document.getElementById("drink-select");
 
-allowDrinksCheckbox.addEventListener("change", (event) => {
-  drinkSelect.disabled = !event.target.checked;
-}, false);
+allowDrinksCheckbox.addEventListener(
+  "change",
+  (event) => {
+    drinkSelect.disabled = !event.target.checked;
+  },
+  false
+);
 ```
 
 ### Result

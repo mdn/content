@@ -1,10 +1,6 @@
 ---
 title: 506 Variant Also Negotiates
 slug: Web/HTTP/Status/506
-tags:
-  - HTTP
-  - Server error
-  - Status code
 spec-urls: https://www.rfc-editor.org/rfc/rfc2295#section-8.1
 ---
 
@@ -16,7 +12,7 @@ The **`Variant Also Negotiates`** status code indicates an internal server confi
 
 ## Status
 
-```
+```http
 506 Variant Also Negotiates
 ```
 

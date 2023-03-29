@@ -1,15 +1,7 @@
 ---
 title: webRequest.getSecurityInfo()
 slug: Mozilla/Add-ons/WebExtensions/API/webRequest/getSecurityInfo
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Reference
-  - WebExtensions
-  - getSecurityInfo
-  - webRequest
+page-type: webextension-api-function
 browser-compat: webextensions.api.webRequest.getSecurityInfo
 ---
 
@@ -25,7 +17,7 @@ You must also pass the "blocking" option to `webRequest.onHeadersReceived.addLis
 
 ## Syntax
 
-```js
+```js-nolint
 let gettingInfo = browser.webRequest.getSecurityInfo(
   requestId,       // string
   options          // object

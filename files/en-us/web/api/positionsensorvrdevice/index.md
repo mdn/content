@@ -2,16 +2,9 @@
 title: PositionSensorVRDevice
 slug: Web/API/PositionSensorVRDevice
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Deprecated
-  - PositionSensorVRDevice
-  - Reference
-  - VR
-  - Virtual Reality
-  - WebVR
-  - Non-standard
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.PositionSensorVRDevice
 ---
 
@@ -19,7 +12,7 @@ browser-compat: api.PositionSensorVRDevice
 
 The **`PositionSensorVRDevice`** interface of the [WebVR API](/en-US/docs/Web/API/WebVR_API) represents VR hardware's position sensor. You can access information such as the current position and orientation of the sensor in relation to the head mounted display through the {{domxref("PositionSensorVRDevice.getState()")}} method.
 
-## Methods
+## Instance methods
 
 - {{domxref("PositionSensorVRDevice.getState()")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : Returns the current state of the position sensor for the current frame (e.g. within the current {{domxref("window.requestAnimationFrame")}} callback) or for the previous frame, contained with a {{domxref("VRPose")}} object. This is the method you'd normally want to use, versus `getImmediateState()`.
@@ -28,7 +21,7 @@ The **`PositionSensorVRDevice`** interface of the [WebVR API](/en-US/docs/Web/AP
 - {{domxref("PositionSensorVRDevice.resetSensor()")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : _Can be used to reset the sensor if desired, returning the_ position and orientation values to zero.
 
-## Properties
+## Instance properties
 
 _This interface doesn't define any properties of its own, but it does inherit the properties of its parent interface, {{domxref("VRDisplay")}}._
 
@@ -47,18 +40,23 @@ The following example uses the WebVR API to update the view of a simple {{domxre
 function setView() {
   const posState = gPositionSensor.getState();
   if (posState.hasPosition) {
-    posPara.textContent = `Position: x${roundToTwo(posState.position.x)} y${roundToTwo(posState.position.y)} z${roundToTwo(posState.position.z)}`;
+    posPara.textContent = `Position: x${roundToTwo(
+      posState.position.x
+    )} y${roundToTwo(posState.position.y)} z${roundToTwo(posState.position.z)}`;
     xPos = -posState.position.x * WIDTH * 2;
     yPos = posState.position.y * HEIGHT * 2;
     zPos = -posState.position.z > 0.01 ? -posState.position.z : 0.01;
   }
 
   if (posState.hasOrientation) {
-    orientPara.textContent = `Orientation: x${roundToTwo(posState.orientation.x)} y${roundToTwo(posState.orientation.y)} z${roundToTwo(posState.orientation.z)}`;
+    orientPara.textContent = `Orientation: x${roundToTwo(
+      posState.orientation.x
+    )} y${roundToTwo(posState.orientation.y)} z${roundToTwo(
+      posState.orientation.z
+    )}`;
     xOrient = posState.orientation.x * WIDTH;
     yOrient = -posState.orientation.y * HEIGHT * 2;
     zOrient = posState.orientation.z * 180;
-
   }
 }
 ```

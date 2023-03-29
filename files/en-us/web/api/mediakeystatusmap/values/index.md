@@ -2,13 +2,6 @@
 title: MediaKeyStatusMap.values()
 slug: Web/API/MediaKeyStatusMap/values
 page-type: web-api-instance-method
-tags:
-  - API
-  - EncryptedMediaExtensions
-  - MediaKeyStatusMap
-  - Method
-  - Reference
-  - values()
 browser-compat: api.MediaKeyStatusMap.values
 ---
 
@@ -20,7 +13,7 @@ values for each element in the status map, in insertion order.
 
 ## Syntax
 
-```js
+```js-nolint
 values()
 ```
 

@@ -2,14 +2,6 @@
 title: MediaCapabilities
 slug: Web/API/MediaCapabilities
 page-type: web-api-interface
-tags:
-  - API
-  - Audio
-  - Interface
-  - Media
-  - MediaCapabilities
-  - Reference
-  - Video
 browser-compat: api.MediaCapabilities
 ---
 
@@ -19,7 +11,7 @@ The **`MediaCapabilities`** interface of the [Media Capabilities API](/en-US/doc
 
 The information is accessed through the **`mediaCapabilities`** property of the {{domxref("Navigator")}} interface.
 
-## Methods
+## Instance methods
 
 - {{domxref("MediaCapabilities.encodingInfo()")}}
   - : When passed a valid media configuration, it returns a promise with information as to whether the media type is supported, and whether encoding such media would be smooth and power efficient.

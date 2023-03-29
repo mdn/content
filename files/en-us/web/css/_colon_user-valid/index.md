@@ -1,13 +1,9 @@
 ---
-title: ':user-valid (:-moz-ui-valid)'
-slug: web/css/:user-valid
-tags:
-  - CSS
-  - CSS Selectors
-  - Pseudo-class
-  - Reference
-  - Selector
-  - Experimental
+title: ":user-valid (:-moz-ui-valid)"
+slug: Web/CSS/:user-valid
+page-type: css-pseudo-class
+status:
+  - experimental
 browser-compat: css.selectors.user-valid
 ---
 
@@ -28,8 +24,10 @@ The result is that if the control was valid when the user started interacting wi
 
 ## Syntax
 
-```
-:user-valid
+```css
+:user-valid {
+  /* ... */
+}
 ```
 
 ## Examples
@@ -42,7 +40,12 @@ Try changing the email address to another valid email to see it in action.
 ```html
 <form>
   <label for="email">Email *: </label>
-  <input id="email" name="email" type="email" value="test@example.com" required>
+  <input
+    id="email"
+    name="email"
+    type="email"
+    value="test@example.com"
+    required />
   <span></span>
 </form>
 ```
@@ -53,7 +56,7 @@ input:user-valid {
 }
 
 input:user-valid + span::before {
-  content: '✓';
+  content: "✓";
   color: green;
 }
 ```

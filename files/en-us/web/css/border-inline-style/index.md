@@ -1,12 +1,7 @@
 ---
 title: border-inline-style
 slug: Web/CSS/border-inline-style
-tags:
-  - CSS
-  - CSS Logical Property
-  - CSS Property
-  - Reference
-  - recipe:css-property
+page-type: css-property
 browser-compat: css.properties.border-inline-style
 ---
 
@@ -49,7 +44,9 @@ border-inline-style: unset;
 
 ## Examples
 
-### HTML Content
+### Setting border-inline-style
+
+#### HTML
 
 ```html
 <div>
@@ -57,7 +54,7 @@ border-inline-style: unset;
 </div>
 ```
 
-### CSS Content
+#### CSS
 
 ```css
 div {
@@ -73,7 +70,7 @@ div {
 }
 ```
 
-{{EmbedLiveSample("Examples", 140, 140)}}
+{{EmbedLiveSample("Setting border-inline-style", 140, 140)}}
 
 ## Specifications
 
@@ -85,5 +82,6 @@ div {
 
 ## See also
 
+- [CSS Logical Properties and Values](/en-US/docs/Web/CSS/CSS_Logical_Properties)
 - This property maps to one of the physical border properties: {{cssxref("border-top-style")}}, {{cssxref("border-right-style")}}, {{cssxref("border-bottom-style")}}, or {{cssxref("border-left-style")}}.
 - {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}}

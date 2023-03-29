@@ -1,10 +1,7 @@
 ---
 title: Ruby
 slug: Glossary/Ruby
-tags:
-  - CodingScripting
-  - Glossary
-  - Ruby
+page-type: glossary-definition
 ---
 
 **Ruby** is an open-source programming language. In a {{glossary("world wide web","Web")}} context, Ruby is often used server-side with the _Ruby On Rails_ (ROR) framework to produce websites/apps.

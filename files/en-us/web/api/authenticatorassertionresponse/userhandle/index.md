@@ -2,13 +2,6 @@
 title: AuthenticatorAssertionResponse.userHandle
 slug: Web/API/AuthenticatorAssertionResponse/userHandle
 page-type: web-api-instance-property
-tags:
-  - API
-  - AuthenticatorAssertionResponse
-  - Property
-  - Reference
-  - Web Authentication API
-  - WebAuthn
 browser-compat: api.AuthenticatorAssertionResponse.userHandle
 ---
 
@@ -20,9 +13,9 @@ object which is an opaque identifier for the given user. Such an identifier can 
 by the relying party's server to link the user account with its corresponding
 credentials and other data.
 
-The same value may be found on the `id` property of the
-{{domxref("PublicKeyCredentialCreationOptions.user","options.user")}} object (used for
-the creation of the `PublicKeyCredential` instance).
+This value is set in the `id` field of the `user` options object passed in parameter of
+{{domxref("CredentialsContainer.create()")}}
+(used for the creation of the `PublicKeyCredential` instance).
 
 > **Note:** An `AuthenticatorAssertionResponse` instance is
 > available on {{domxref("PublicKeyCredential.response")}} after calling
@@ -35,23 +28,23 @@ the creation of the `PublicKeyCredential` instance).
 
 An {{jsxref("ArrayBuffer")}} object which is an opaque identifier for the current user.
 This is not human-readable and does **not** contain any personally
-identifying information (e.g. username, e-mail, phone number, etc.)
+identifying information (e.g. username, email, phone number, etc.)
 
 ## Examples
 
 ```js
 const options = {
   challenge: new Uint8Array(26), // will be another value, provided by the relying party server
-  timeout: 60000
+  timeout: 60000,
 };
 
-navigator.credentials.get({  publicKey: options })
+navigator.credentials
+  .get({ publicKey: options })
   .then((assertionPKCred) => {
     const userHandle = assertionPKCred.response.userHandle;
 
     // Send response and client extensions to the server so that it can
     // go on with the authentication
-
   })
   .catch((err) => console.error(err));
 ```
@@ -66,5 +59,4 @@ navigator.credentials.get({  publicKey: options })
 
 ## See also
 
-- {{domxref("PublicKeyCredentialCreationOptions.user")}} and its `id`
-  property which contains the same data
+- {{domxref("CredentialsContainer.create()")}} that sets the value of this property

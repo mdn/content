@@ -2,12 +2,6 @@
 title: location.replace()
 slug: Web/API/Location/replace
 page-type: web-api-instance-method
-tags:
-  - API
-  - HTML DOM
-  - Location
-  - Method
-  - Reference
 browser-compat: api.Location.replace
 ---
 
@@ -31,7 +25,7 @@ If the provided URL is not valid, a {{domxref("DOMException")}} of the
 
 ## Syntax
 
-```js
+```js-nolint
 replace(url)
 ```
 
@@ -48,7 +42,9 @@ None ({{jsxref("undefined")}}).
 
 ```js
 // Navigate to the Location.reload article by replacing this page
-window.location.replace('https://developer.mozilla.org/en-US/docs/Web/API/Location.reload');
+window.location.replace(
+  "https://developer.mozilla.org/en-US/docs/Web/API/Location.reload"
+);
 ```
 
 ## Specifications

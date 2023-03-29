@@ -2,14 +2,6 @@
 title: PushEvent()
 slug: Web/API/PushEvent/PushEvent
 page-type: web-api-constructor
-tags:
-  - API
-  - Constructor
-  - Push
-  - Push API
-  - PushEvent
-  - Reference
-  - Service Workers
 browser-compat: api.PushEvent.PushEvent
 ---
 
@@ -21,7 +13,7 @@ service worker context.
 
 ## Syntax
 
-```js
+```js-nolint
 new PushEvent(type)
 new PushEvent(type, options)
 ```
@@ -46,10 +38,10 @@ A new {{domxref("PushEvent")}} object.
 
 ```js
 const dataInit = {
-  data : 'Some sample text'
-}
+  data: "Some sample text",
+};
 
-const myPushEvent = new PushEvent('push', dataInit);
+const myPushEvent = new PushEvent("push", dataInit);
 
 myPushEvent.data.text(); // should return 'Some sample text'
 ```

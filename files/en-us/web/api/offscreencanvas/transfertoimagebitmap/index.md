@@ -2,25 +2,16 @@
 title: OffscreenCanvas.transferToImageBitmap()
 slug: Web/API/OffscreenCanvas/transferToImageBitmap
 page-type: web-api-instance-method
-tags:
-  - API
-  - Canvas
-  - Experimental
-  - Method
-  - OffscreenCanvas
-  - Reference
 browser-compat: api.OffscreenCanvas.transferToImageBitmap
 ---
 
-{{APIRef("Canvas API")}} {{SeeCompatTable}}
+{{APIRef("Canvas API")}}
 
-The **`OffscreenCanvas.transferToImageBitmap()`** method
-creates an {{domxref("ImageBitmap")}} object from the most recently rendered image of
-the `OffscreenCanvas`.
+The **`OffscreenCanvas.transferToImageBitmap()`** method creates an {{domxref("ImageBitmap")}} object from the most recently rendered image of the `OffscreenCanvas`.
 
 ## Syntax
 
-```js
+```js-nolint
 transferToImageBitmap()
 ```
 

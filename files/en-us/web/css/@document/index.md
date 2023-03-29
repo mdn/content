@@ -1,12 +1,10 @@
 ---
-title: '@document'
+title: "@document"
 slug: Web/CSS/@document
-tags:
-  - At-rule
-  - CSS
-  - Reference
-  - Deprecated
-  - Non-standard
+page-type: css-at-rule
+status:
+  - deprecated
+  - non-standard
 browser-compat: css.at-rules.document
 ---
 
@@ -15,7 +13,8 @@ browser-compat: css.at-rules.document
 The **`@document`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/At-rule) restricts the style rules contained within it based on the URL of the document. It is designed primarily for user-defined style sheets, though it can be used on author-defined style sheets, too.
 
 ```css
-@document url("https://www.example.com/") {
+@document url("https://www.example.com/")
+{
   h1 {
     color: green;
   }
@@ -43,7 +42,7 @@ Escaped values provided to the `regexp()` function must additionally be escaped 
 
 `@document` is currently only supported in Firefox; if you wanted to replicate using such functionality in your own non-Firefox browser, you could try using [this polyfill](https://github.com/An-Error94/Handy-Scripts/tree/master/%40document-polyfill) by @An-Error94, which uses a combination of a user script, [data-\* attributes](/en-US/docs/Web/HTML/Global_attributes/data-*), and [attribute selectors](/en-US/docs/Web/CSS/Attribute_selectors).
 
-> **Note:** There is a -moz-prefixed version of this property — `@-moz-document`. This has been limited to use only in user and UA sheets in Firefox 59 in Nightly and Beta — an experiment designed to mitigate potential CSS injection attacks (See {{bug(1035091)}}).
+> **Note:** There is a -moz-prefixed version of this property — `@-moz-document`. This has been limited to use only in user and UA sheets in Firefox 59 in Nightly and Beta — an experiment designed to mitigate potential CSS injection attacks (See [Firefox bug 1035091](https://bugzil.la/1035091)).
 
 ## Formal syntax
 

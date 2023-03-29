@@ -2,16 +2,6 @@
 title: HTMLElement.focus()
 slug: Web/API/HTMLElement/focus
 page-type: web-api-instance-method
-tags:
-  - API
-  - Focus
-  - HTML DOM
-  - HTMLElement
-  - Method
-  - Reference
-  - Scroll
-  - View
-  - activate
 browser-compat: api.HTMLElement.focus
 ---
 
@@ -25,7 +15,7 @@ Parameter options are provided to disable the default scrolling and force visibl
 
 ## Syntax
 
-```js
+```js-nolint
 focus()
 focus(options)
 ```
@@ -58,7 +48,7 @@ This example uses a button to set the focus on a text field.
 #### HTML
 
 ```html
-<input id="myTextField" value="Text field.">
+<input id="myTextField" value="Text field." />
 <button id="focusButton">Click to set focus on the text field</button>
 ```
 
@@ -92,7 +82,9 @@ The right right-most button will also specify `focusVisible`.
 ```html
 <button id="myButton">Button</button>
 <button id="focusButton">Click to set focus on "Button"</button>
-<button id="focusButtonVisibleIndication">Click to set focus and focusVisible on "Button"</button>
+<button id="focusButtonVisibleIndication">
+  Click to set focus and focusVisible on "Button"
+</button>
 ```
 
 #### JavaScript
@@ -104,9 +96,11 @@ document.getElementById("focusButton").addEventListener("click", () => {
   document.getElementById("myButton").focus();
 });
 
-document.getElementById("focusButtonVisibleIndication").addEventListener("click", () => {
-  document.getElementById("myButton").focus({focusVisible: true});
-});
+document
+  .getElementById("focusButtonVisibleIndication")
+  .addEventListener("click", () => {
+    document.getElementById("myButton").focus({ focusVisible: true });
+  });
 ```
 
 #### Result
@@ -128,10 +122,12 @@ The HTML defines two buttons that will be used to set the focus of a third butto
 
 ```html
 <button id="focus_scroll">Click to set focus on off-screen button</button>
-<button id="focus_no_scroll">Click to set focus on offscreen button without scrolling</button>
+<button id="focus_no_scroll">
+  Click to set focus on offscreen button without scrolling
+</button>
 
 <div id="container">
-<button id="myButton" style="margin-top: 500px;">Button</button>
+  <button id="myButton" style="margin-top: 500px;">Button</button>
 </div>
 ```
 
@@ -142,12 +138,11 @@ Note that the first handler doesn't specify the `preventScroll` option so scroll
 
 ```js
 document.getElementById("focus_scroll").addEventListener("click", () => {
-  document.getElementById("myButton").focus();  // default: {preventScroll:false}
+  document.getElementById("myButton").focus(); // default: {preventScroll:false}
 });
 
-
 document.getElementById("focus_no_scroll").addEventListener("click", () => {
-  document.getElementById("myButton").focus({preventScroll:true});
+  document.getElementById("myButton").focus({ preventScroll: true });
 });
 ```
 
@@ -165,7 +160,7 @@ Selecting the second button set's the focus, but scrolling is disabled.
 ## Notes
 
 - If you call `HTMLElement.focus()` from a mousedown event handler, you must call `event.preventDefault()` to keep the focus from leaving the `HTMLElement`
-- Behavior of the focus in relation to different HTML features like [`tabindex`](/en-US/docs/Web/HTML/Global_attributes/tabindex) or {{Glossary("shadow tree","shadow dom", 1)}}, which previously remained under-specified, were updated in October 2019).
+- Behavior of the focus in relation to different HTML features like [`tabindex`](/en-US/docs/Web/HTML/Global_attributes/tabindex) or {{Glossary("shadow tree", "shadow dom")}}, which previously remained under-specified, were updated in October 2019.
   See the [WHATWG blog](https://blog.whatwg.org/focusing-on-focus) for more information.
 
 ## Browser compatibility
@@ -176,5 +171,3 @@ Selecting the second button set's the focus, but scrolling is disabled.
 
 - {{domxref("HTMLElement.blur")}} to remove the focus from an element.
 - {{domxref("document.activeElement")}} to know which is the currently focused element.
-- {{domxref("Element/focusin_event", "focusin")}} event: fired when an element is about to gain focus.
-- {{domxref("Element/focusout_event", "focusout")}} event: fired when an element is about to lose focus.

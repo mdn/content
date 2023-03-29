@@ -1,17 +1,7 @@
 ---
-title: 'HTMLElement: dragenter event'
+title: "HTMLElement: dragenter event"
 slug: Web/API/HTMLElement/dragenter_event
 page-type: web-api-event
-tags:
-  - API
-  - DOM
-  - HTMLElement
-  - DragEvent
-  - Event
-  - Reference
-  - Web
-  - drag and drop
-  - dragenter
 browser-compat: api.HTMLElement.dragenter_event
 ---
 
@@ -26,9 +16,9 @@ The target object is the _immediate user selection_ (the element directly indica
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('dragenter', (event) => {});
+addEventListener("dragenter", (event) => {});
 
-ondragenter = (event) => { };
+ondragenter = (event) => {};
 ```
 
 ## Event type
@@ -58,9 +48,7 @@ Note though that in this partial example we haven't implemented dropping: for a 
 
 ```html
 <div class="dropzone">
-  <div id="draggable" draggable="true">
-    This div is draggable
-  </div>
+  <div id="draggable" draggable="true">This div is draggable</div>
 </div>
 <div class="dropzone" id="droptarget"></div>
 ```

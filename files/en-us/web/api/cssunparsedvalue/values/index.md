@@ -2,21 +2,10 @@
 title: CSSUnparsedValue.values()
 slug: Web/API/CSSUnparsedValue/values
 page-type: web-api-instance-method
-tags:
-  - API
-  - CSS Typed Object Model API
-  - CSSUnparsedValue
-  - Constructor
-  - Experimental
-  - Houdini
-  - Method
-  - NeedsExample
-  - Reference
-  - values()
 browser-compat: api.CSSUnparsedValue.values
 ---
 
-{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
+{{APIRef("CSS Typed OM")}}
 
 The **`CSSUnparsedValue.values()`** method
 returns a new _array iterator_ object that contains the
@@ -24,7 +13,7 @@ values for each index in the CSSUnparsedValue object.
 
 ## Syntax
 
-```js
+```js-nolint
 values()
 ```
 

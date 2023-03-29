@@ -2,12 +2,6 @@
 title: WebGLRenderingContext.blendFuncSeparate()
 slug: Web/API/WebGLRenderingContext/blendFuncSeparate
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.blendFuncSeparate
 ---
 
@@ -19,7 +13,7 @@ for blending pixel arithmetic for RGB and alpha components separately.
 
 ## Syntax
 
-```js
+```js-nolint
 blendFuncSeparate(srcRGB, dstRGB, srcAlpha, dstAlpha)
 ```
 

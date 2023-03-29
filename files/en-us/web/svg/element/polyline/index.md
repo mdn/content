@@ -1,11 +1,7 @@
 ---
 title: <polyline>
 slug: Web/SVG/Element/polyline
-tags:
-  - Element
-  - Reference
-  - SVG
-  - SVG Graphics
+page-type: svg-element
 browser-compat: svg.elements.polyline
 ---
 
@@ -16,7 +12,11 @@ The **`<polyline>`** [SVG](/en-US/docs/Web/SVG) element is an SVG basic shape th
 ## Example
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
@@ -25,8 +25,7 @@ html,body,svg { height:100% }
   <polyline points="0,100 50,25 50,75 100,0" />
 
   <!-- Example of the same polyline shape with stroke and no fill -->
-  <polyline points="100,100 150,25 150,75 200,0"
-            fill="none" stroke="black" />
+  <polyline points="100,100 150,25 150,75 200,0" fill="none" stroke="black" />
 </svg>
 ```
 

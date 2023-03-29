@@ -1,14 +1,7 @@
 ---
 title: Array.prototype.entries()
 slug: Web/JavaScript/Reference/Global_Objects/Array/entries
-tags:
-  - Array
-  - ECMAScript 2015
-  - Iterator
-  - JavaScript
-  - Method
-  - Prototype
-  - Polyfill
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.Array.entries
 ---
 
@@ -22,13 +15,19 @@ array.
 
 ## Syntax
 
-```js
-entries();
+```js-nolint
+entries()
 ```
 
 ### Return value
 
 A new {{jsxref("Array")}} iterator object.
+
+## Description
+
+When used on [sparse arrays](/en-US/docs/Web/JavaScript/Guide/Indexed_collections#sparse_arrays), the `entries()` method iterates empty slots as if they have the value `undefined`.
+
+The `entries()` method is [generic](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#generic_array_methods). It only expects the `this` value to have a `length` property and integer-keyed properties.
 
 ## Examples
 
@@ -61,6 +60,37 @@ for (const element of arrayEntries) {
 // [2, 'c']
 ```
 
+### Iterating sparse arrays
+
+`entries()` will visit empty slots as if they are `undefined`.
+
+```js
+for (const element of [, "a"].entries()) {
+  console.log(element);
+}
+// [0, undefined]
+// [1, 'a']
+```
+
+### Calling entries() on non-array objects
+
+The `entries()` method reads the `length` property of `this` and then accesses each integer index.
+
+```js
+const arrayLike = {
+  length: 3,
+  0: "a",
+  1: "b",
+  2: "c",
+};
+for (const entry of Array.prototype.entries.call(arrayLike)) {
+  console.log(entry);
+}
+// [ 0, 'a' ]
+// [ 1, 'b' ]
+// [ 2, 'c' ]
+```
+
 ## Specifications
 
 {{Specifications}}
@@ -79,4 +109,3 @@ for (const element of arrayEntries) {
 - {{jsxref("Array.prototype.some()")}}
 - [for...of](/en-US/docs/Web/JavaScript/Reference/Statements/for...of)
 - [Iteration protocols](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols)
-- [A polyfill](https://github.com/behnammodi/polyfill/blob/master/array.polyfill.js)

@@ -2,17 +2,6 @@
 title: SubmitEvent()
 slug: Web/API/SubmitEvent/SubmitEvent
 page-type: web-api-constructor
-tags:
-  - API
-  - Allocate
-  - Constructor
-  - Event
-  - Forms
-  - HTML DOM
-  - Initialize
-  - Reference
-  - SubmitEvent
-  - submit
 browser-compat: api.SubmitEvent.SubmitEvent
 ---
 
@@ -24,7 +13,7 @@ fired at an {{Glossary("HTML")}} [form](/en-US/docs/Learn/Forms).
 
 ## Syntax
 
-```js
+```js-nolint
 new SubmitEvent(type)
 new SubmitEvent(type, options)
 ```

@@ -2,11 +2,6 @@
 title: ReadableStream()
 slug: Web/API/ReadableStream/ReadableStream
 page-type: web-api-constructor
-tags:
-  - API
-  - Constructor
-  - ReadableStream
-  - Reference
 browser-compat: api.ReadableStream.ReadableStream
 ---
 
@@ -18,7 +13,7 @@ Note that while all parameters are technically optional, omitting the `underlyin
 
 ## Syntax
 
-```js
+```js-nolint
 new ReadableStream()
 new ReadableStream(underlyingSource)
 new ReadableStream(underlyingSource, queuingStrategy)
@@ -31,7 +26,7 @@ new ReadableStream(underlyingSource, queuingStrategy)
   - : An object containing methods and properties that define how the constructed stream instance will behave.
     `underlyingSource` can contain the following:
 
-    - `start`(controller) {{optional_inline}}
+    - `start` (controller) {{optional_inline}}
       - : This is a method, called immediately when the object is constructed. The
         contents of this method are defined by the developer, and should aim to get access
         to the stream source, and do anything else required to set up the stream
@@ -41,7 +36,7 @@ new ReadableStream(underlyingSource, queuingStrategy)
         {{domxref("ReadableByteStreamController")}}, depending on the value of the
         `type` property. This can be used by the developer to control the
         stream during set up.
-    - `pull`(controller) {{optional_inline}}
+    - `pull` (controller) {{optional_inline}}
       - : This method, also defined by the developer, will be called repeatedly when the
         stream's internal queue of chunks is not full, up until it reaches its high water
         mark. If `pull()` returns a promise, then it won't be called again
@@ -51,7 +46,7 @@ new ReadableStream(underlyingSource, queuingStrategy)
         {{domxref("ReadableByteStreamController")}}, depending on the value of the
         `type` property. This can be used by the developer to control the
         stream as more chunks are fetched.
-    - `cancel`(reason) {{optional_inline}}
+    - `cancel` (reason) {{optional_inline}}
       - : This method, also defined by the developer, will be called if the app signals
         that the stream is to be cancelled (e.g. if {{domxref("ReadableStream.cancel()")}}
         is called). The contents should do whatever is necessary to release access to the
@@ -65,11 +60,13 @@ new ReadableStream(underlyingSource, queuingStrategy)
         (bring your own buffer)/byte stream. If it is not included, the passed controller
         will be a {{domxref("ReadableStreamDefaultController")}}.
     - `autoAllocateChunkSize` {{optional_inline}}
+
       - : For byte streams, the developer can set the `autoAllocateChunkSize` with a positive integer value to turn on the stream's auto-allocation feature.
         With this is set, the stream implementation will automatically allocate a view buffer of the specified size in {{domxref("ReadableByteStreamController.byobRequest")}} when required.
 
         This must be set to enable zero-copy transfers to be used with a default {{domxref("ReadableStreamDefaultReader")}}.
         If not set, a default reader will still stream data, but {{domxref("ReadableByteStreamController.byobRequest")}} will always be `null` and transfers to the consumer must be via the stream's internal queues.
+
 - `queuingStrategy` {{optional_inline}}
 
   - : An object that optionally defines a queuing strategy for the stream. This takes two
@@ -120,16 +117,16 @@ const stream = new ReadableStream({
       controller.enqueue(string);
 
       // show it on the screen
-      let listItem = document.createElement('li');
+      let listItem = document.createElement("li");
       listItem.textContent = string;
       list1.appendChild(listItem);
     }, 1000);
 
-    button.addEventListener('click', () => {
+    button.addEventListener("click", () => {
       clearInterval(interval);
       fetchStream();
       controller.close();
-    })
+    });
   },
   pull(controller) {
     // We don't really need a pull in this example
@@ -138,7 +135,7 @@ const stream = new ReadableStream({
     // This is called if the reader cancels,
     // so we should stop generating strings
     clearInterval(interval);
-  }
+  },
 });
 ```
 

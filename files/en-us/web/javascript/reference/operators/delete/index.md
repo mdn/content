@@ -1,28 +1,19 @@
 ---
 title: delete operator
 slug: Web/JavaScript/Reference/Operators/delete
-tags:
-  - JavaScript
-  - Language feature
-  - Memory Management
-  - Object
-  - Operator
-  - Reference
-  - Release
-  - Unary
-  - delete
+page-type: javascript-operator
 browser-compat: javascript.operators.delete
 ---
 
 {{jsSidebar("Operators")}}
 
-The **`delete` operator** removes a property from an object. If the property's value is an object and there are no more references to the object, the object held by that property is eventually released automatically.
+The **`delete`** operator removes a property from an object. If the property's value is an object and there are no more references to the object, the object held by that property is eventually released automatically.
 
 {{EmbedInteractiveExample("pages/js/expressions-deleteoperator.html")}}
 
 ## Syntax
 
-```js
+```js-nolint
 delete object.property
 delete object[property]
 ```
@@ -75,12 +66,6 @@ It is important to consider the following scenarios:
 - Deleting variables, including function parameters, never works. `delete variable` will throw a {{jsxref("SyntaxError")}} in strict mode, and will have no effect in non-strict mode.
   - Any variable declared with {{jsxref("Statements/var", "var")}} cannot be deleted from the global scope or from a function's scope, because while they may be attached to the [global object](/en-US/docs/Glossary/Global_object), they are not configurable.
   - Any variable declared with {{jsxref("Statements/let","let")}} or {{jsxref("Statements/const","const")}} cannot be deleted from the scope within which they were defined, because they are not attached to an object.
-
-### Cross-browser notes
-
-As of modern ECMAScript specification, the traversal order of object properties is well-defined and stable across implementations. However, in the case of Internet Explorer, when one uses `delete` on a property, some confusing behavior results, preventing other browsers from using simple objects like object literals as ordered associative arrays. In Explorer, while the property _value_ is indeed set to `undefined`, if one later adds back a property with the same name, the property will be iterated in its _old_ position — not at the end of the iteration sequence as one might expect after having deleted the property and then added it back.
-
-If you want to use an ordered associative array with support of old runtimes, use a {{jsxref("Map")}} object if available (through a polyfill, for example), or simulate this structure with two separate arrays (one for the keys and the other for the values), or build an array of single-property objects, etc.
 
 ## Examples
 
@@ -208,7 +193,7 @@ var nameOther = "XYZ";
 
 // We can access this global property using:
 Object.getOwnPropertyDescriptor(globalThis, "nameOther");
-// Object {
+// {
 //   value: "XYZ",
 //   writable: true,
 //   enumerable: true,

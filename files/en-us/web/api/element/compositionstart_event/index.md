@@ -1,13 +1,7 @@
 ---
-title: 'Element: compositionstart event'
+title: "Element: compositionstart event"
 slug: Web/API/Element/compositionstart_event
 page-type: web-api-event
-tags:
-  - Element
-  - Event
-  - Input method
-  - Reference
-  - compositionstart
 browser-compat: api.Element.compositionstart_event
 ---
 
@@ -22,9 +16,9 @@ For example, this event could be fired after a user starts entering a Chinese ch
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('compositionstart', (event) => {});
+addEventListener("compositionstart", (event) => {});
 
-oncompositionstart = (event) => { };
+oncompositionstart = (event) => {};
 ```
 
 ## Event type
@@ -47,7 +41,7 @@ _This interface also inherits properties of its parent, {{domxref("UIEvent")}}, 
 ```js
 const inputElement = document.querySelector('input[type="text"]');
 
-inputElement.addEventListener('compositionstart', (event) => {
+inputElement.addEventListener("compositionstart", (event) => {
   console.log(`generated characters were: ${event.data}`);
 });
 ```
@@ -58,20 +52,31 @@ inputElement.addEventListener('compositionstart', (event) => {
 
 ```html
 <div class="control">
-  <label for="name">First select textbox, then to open IME:<ul><li>on macOS type <kbd>option</kbd> + <kbd>`</kbd></li><li>on Windows type <kbd>windows</kbd> + <kbd>.</kbd></li></ul></label>
-  <input type="text" id="example" name="example">
+  <label for="example">
+    First select textbox, then to open IME:
+    <ul>
+      <li>on macOS type <kbd>option</kbd> + <kbd>`</kbd></li>
+      <li>on Windows type <kbd>windows</kbd> + <kbd>.</kbd></li>
+    </ul>
+  </label>
+  <input type="text" id="example" name="example" />
 </div>
 
 <div class="event-log">
   <label for="eventLog">Event log:</label>
-  <textarea readonly class="event-log-contents" rows="8" cols="25" id="eventLog"></textarea>
+  <textarea
+    readonly
+    class="event-log-contents"
+    rows="8"
+    cols="25"
+    id="eventLog"></textarea>
   <button class="clear-log">Clear</button>
 </div>
 ```
 
 ```css hidden
 body {
-  padding: .2rem;
+  padding: 0.2rem;
   display: grid;
   grid-template-areas: "control log";
 }
@@ -88,12 +93,13 @@ body {
   resize: none;
 }
 
-label, button {
+label,
+button {
   display: block;
 }
 
 input[type="text"] {
-  margin: .5rem 0;
+  margin: 0.5rem 0;
 }
 
 kbd {
@@ -107,20 +113,20 @@ kbd {
 
 ```js
 const inputElement = document.querySelector('input[type="text"]');
-const log = document.querySelector('.event-log-contents');
-const clearLog = document.querySelector('.clear-log');
+const log = document.querySelector(".event-log-contents");
+const clearLog = document.querySelector(".clear-log");
 
-clearLog.addEventListener('click', () => {
-    log.textContent = '';
+clearLog.addEventListener("click", () => {
+  log.textContent = "";
 });
 
 function handleEvent(event) {
-    log.textContent += `${event.type}: ${event.data}\n`;
+  log.textContent += `${event.type}: ${event.data}\n`;
 }
 
-inputElement.addEventListener('compositionstart', handleEvent);
-inputElement.addEventListener('compositionupdate', handleEvent);
-inputElement.addEventListener('compositionend', handleEvent);
+inputElement.addEventListener("compositionstart", handleEvent);
+inputElement.addEventListener("compositionupdate", handleEvent);
+inputElement.addEventListener("compositionend", handleEvent);
 ```
 
 #### Result

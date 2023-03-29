@@ -1,12 +1,7 @@
 ---
 title: Date.prototype.getUTCMilliseconds()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getUTCMilliseconds
-tags:
-  - Date
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.Date.getUTCMilliseconds
 ---
 
@@ -19,7 +14,7 @@ portion of the time object's value according to universal time.
 
 ## Syntax
 
-```js
+```js-nolint
 getUTCMilliseconds()
 ```
 

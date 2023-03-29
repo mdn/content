@@ -2,12 +2,6 @@
 title: WebGL2RenderingContext.endQuery()
 slug: Web/API/WebGL2RenderingContext/endQuery
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGL2
 browser-compat: api.WebGL2RenderingContext.endQuery
 ---
 
@@ -18,7 +12,7 @@ target.
 
 ## Syntax
 
-```js
+```js-nolint
 endQuery(target)
 ```
 

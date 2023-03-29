@@ -1,26 +1,19 @@
 ---
 title: Intl.Segmenter() constructor
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/Segmenter
-tags:
-  - Constructor
-  - Segmenter
-  - Internationalization
-  - Intl
-  - JavaScript
-  - Localization
-  - Reference
+page-type: javascript-constructor
 browser-compat: javascript.builtins.Intl.Segmenter.Segmenter
 ---
 
 {{JSRef}}
 
-The **`Intl.Segmenter()`** constructor creates [`Intl.Segmenter`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter) objects that enable locale-sensitive text segmentation.
+The **`Intl.Segmenter()`** constructor creates {{jsxref("Intl.Segmenter")}} objects.
 
 {{EmbedInteractiveExample("pages/js/intl-segmenter.html")}}
 
 ## Syntax
 
-```js
+```js-nolint
 new Intl.Segmenter()
 new Intl.Segmenter(locales)
 new Intl.Segmenter(locales, options)
@@ -35,7 +28,7 @@ new Intl.Segmenter(locales, options)
 - `options` {{optional_inline}}
   - : An object with some or all of the following properties:
     - `granularity` {{optional_inline}}
-      - : A string.  Possible values are:
+      - : A string. Possible values are:
         - `"grapheme"` (default)
           - : Split the input into segments at grapheme cluster (user-perceived character) boundaries, as determined by the locale.
         - `"word"`
@@ -51,7 +44,7 @@ new Intl.Segmenter(locales, options)
 
 ### Return value
 
-A new [`Intl.Segments`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segments) instance.
+A new [`Intl.Segmenter`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter) instance.
 
 ## Examples
 
@@ -61,9 +54,12 @@ The following example shows how to count words in a string using the Japanese la
 
 ```js
 const text = "吾輩は猫である。名前はたぬき。";
-const japaneseSegmenter = new Intl.Segmenter("ja-JP", {granularity: "word"});
-console.log([...japaneseSegmenter.segment(text)].filter((segment) => segment.isWordLike).length);
-// logs 8 as the text is segmented as '吾輩'|'は'|'猫'|'で'|'ある'|'。'|'名前'|'は'|'たぬき'|'。'
+const japaneseSegmenter = new Intl.Segmenter("ja-JP", { granularity: "word" });
+console.log(
+  [...japaneseSegmenter.segment(text)].filter((segment) => segment.isWordLike)
+    .length,
+);
+// 8, as the text is segmented as '吾輩'|'は'|'猫'|'で'|'ある'|'。'|'名前'|'は'|'たぬき'|'。'
 ```
 
 ## Specifications

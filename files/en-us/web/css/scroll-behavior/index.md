@@ -1,12 +1,7 @@
 ---
 title: scroll-behavior
 slug: Web/CSS/scroll-behavior
-tags:
-  - CSS
-  - CSS Property
-  - CSSOM View
-  - Reference
-  - recipe:css-property
+page-type: css-property
 browser-compat: css.properties.scroll-behavior
 ---
 
@@ -79,7 +74,8 @@ a {
   width: 50px;
   text-decoration: none;
 }
-nav, .scroll-container {
+nav,
+.scroll-container {
   display: block;
   margin: 0 auto;
   text-align: center;

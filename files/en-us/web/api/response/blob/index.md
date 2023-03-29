@@ -2,13 +2,6 @@
 title: Response.blob()
 slug: Web/API/Response/blob
 page-type: web-api-instance-method
-tags:
-  - API
-  - Blob
-  - Fetch
-  - Method
-  - Reference
-  - Response
 browser-compat: api.Response.blob
 ---
 
@@ -20,7 +13,7 @@ resolves with a {{domxref("Blob")}}.
 
 ## Syntax
 
-```js
+```js-nolint
 blob()
 ```
 
@@ -48,9 +41,9 @@ out of the response using `blob()`, put it into an object URL using
 {{htmlelement("img")}} element to display the image.
 
 ```js
-const myImage = document.querySelector('img');
+const myImage = document.querySelector("img");
 
-const myRequest = new Request('flowers.jpg');
+const myRequest = new Request("flowers.jpg");
 
 fetch(myRequest)
   .then((response) => response.blob())

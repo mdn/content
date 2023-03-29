@@ -2,17 +2,6 @@
 title: DOMPointReadOnly
 slug: Web/API/DOMPointReadOnly
 page-type: web-api-interface
-tags:
-  - API
-  - Coordinate
-  - DOM
-  - DOM Reference
-  - DOMPointReadOnly
-  - Geometry
-  - Geometry Interfaces
-  - Interface
-  - Point
-  - Reference
 browser-compat: api.DOMPointReadOnly
 ---
 
@@ -38,7 +27,7 @@ const point3DPerspective = new DOMPointReadOnly(100, 100, 100, 1.0);
 The other option is to use the static {{domxref("DOMPointReadOnly.fromPoint()")}} method:
 
 ```js
-const point = DOMPointReadOnly.fromPoint({x: 100, y: 100, z: 50, w: 1.0});
+const point = DOMPointReadOnly.fromPoint({ x: 100, y: 100, z: 50, w: 1.0 });
 ```
 
 ## Constructor
@@ -46,7 +35,7 @@ const point = DOMPointReadOnly.fromPoint({x: 100, y: 100, z: 50, w: 1.0});
 - {{domxref("DOMPointReadOnly.DOMPointReadOnly","DOMPointReadOnly()")}}
   - : Creates a new `DOMPointReadOnly` object given the values of its coordinates and perspective. To create a point using an object, you can instead use {{domxref("DOMPointReadOnly.fromPoint()")}}.
 
-## Properties
+## Instance properties
 
 - {{domxref("DOMPointReadOnly.x")}} {{ReadOnlyInline}}
   - : The point's horizontal coordinate, `x`.
@@ -62,7 +51,7 @@ const point = DOMPointReadOnly.fromPoint({x: 100, y: 100, z: 50, w: 1.0});
 - {{domxref("DOMPointReadOnly.fromPoint()")}}
   - : A static method that creates a new `DOMPointReadOnly` object given the coordinates provided in the specified object.
 
-## Methods
+## Instance methods
 
 - {{domxref("DOMPointReadOnly.matrixTransform", "matrixTransform()")}}
   - : Applies a matrix transform specified as an object to the `DOMPointReadOnly` object.

@@ -2,12 +2,6 @@
 title: WebGLRenderingContext.getSupportedExtensions()
 slug: Web/API/WebGLRenderingContext/getSupportedExtensions
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.getSupportedExtensions
 ---
 
@@ -19,7 +13,7 @@ extensions.
 
 ## Syntax
 
-```js
+```js-nolint
 getSupportedExtensions()
 ```
 
@@ -34,8 +28,8 @@ An {{jsxref("Array")}} of strings with all the supported WebGL extensions.
 ## Examples
 
 ```js
-const canvas = document.getElementById('canvas');
-gl = canvas.getContext('webgl');
+const canvas = document.getElementById("canvas");
+gl = canvas.getContext("webgl");
 
 const extensions = gl.getSupportedExtensions();
 // Array [ 'ANGLE_instanced_arrays', 'EXT_blend_minmax', … ]

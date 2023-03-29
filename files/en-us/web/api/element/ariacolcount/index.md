@@ -2,14 +2,6 @@
 title: Element.ariaColCount
 slug: Web/API/Element/ariaColCount
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - ariaColCount
-  - AriaAttributes
-  - AriaMixin
-  - Element
 browser-compat: api.Element.ariaColCount
 ---
 
@@ -26,12 +18,22 @@ A string.
 In this example the `aria-colcount` attribute on the element with an ID of `semantic-table` is set to "2". Using `ariaColCount` we update the value to "3".
 
 ```html
-<table id="semantic-table" role="table" aria-label="Semantic Elements" aria-describedby="semantic_elements_table_desc" aria-rowcount="100" aria-colcount="2">
-  <caption id="semantic_elements_table_desc">Semantic Elements to use instead of ARIA's roles</caption>
+<table
+  id="semantic-table"
+  role="table"
+  aria-label="Semantic Elements"
+  aria-describedby="semantic_elements_table_desc"
+  aria-rowcount="100"
+  aria-colcount="2">
+  <caption id="semantic_elements_table_desc">
+    Semantic Elements to use instead of ARIA's roles
+  </caption>
   <thead role="rowgroup">
     <tr role="row">
       <th role="columnheader" aria-sort="none" aria-rowindex="1">ARIA Role</th>
-      <th role="columnheader" aria-sort="none" aria-rowindex="1">Semantic Element</th>
+      <th role="columnheader" aria-sort="none" aria-rowindex="1">
+        Semantic Element
+      </th>
     </tr>
   </thead>
   <tbody role="rowgroup">
@@ -56,9 +58,9 @@ In this example the `aria-colcount` attribute on the element with an ID of `sema
 ```
 
 ```js
-let el = document.getElementById('semantic-table');
+let el = document.getElementById("semantic-table");
 console.log(el.ariaColCount); // 2
-el.ariaColCount = "3"
+el.ariaColCount = "3";
 console.log(el.ariaColCount); // 3
 ```
 

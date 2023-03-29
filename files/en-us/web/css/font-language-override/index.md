@@ -1,14 +1,7 @@
 ---
 title: font-language-override
 slug: Web/CSS/font-language-override
-tags:
-  - CSS
-  - CSS Fonts
-  - CSS Property
-  - Reference
-  - font-language-override
-  - l10n
-  - recipe:css-property
+page-type: css-property
 browser-compat: css.properties.font-language-override
 ---
 
@@ -21,8 +14,8 @@ The **`font-language-override`** CSS property controls the use of language-speci
 font-language-override: normal;
 
 /* <string> values */
-font-language-override: "ENG";  /* Use English glyphs */
-font-language-override: "TRK";  /* Use Turkish glyphs */
+font-language-override: "ENG"; /* Use English glyphs */
+font-language-override: "TRK"; /* Use Turkish glyphs */
 
 /* Global values */
 font-language-override: inherit;
@@ -63,7 +56,9 @@ The `font-language-override` property is specified as the keyword `normal` or a 
 
 ```html
 <p class="para1">Default language setting.</p>
-<p class="para2">This is a string with the <code>font-language-override</code> set to Danish.</p>
+<p class="para2">
+  This is a string with the <code>font-language-override</code> set to Danish.
+</p>
 ```
 
 #### CSS

@@ -2,15 +2,6 @@
 title: MediaCapabilities.encodingInfo()
 slug: Web/API/MediaCapabilities/encodingInfo
 page-type: web-api-instance-method
-tags:
-  - API
-  - Audio
-  - Media Capabilities API
-  - MediaCapabilities
-  - Method
-  - Reference
-  - Video
-  - encodingInfo
 browser-compat: api.MediaCapabilities.encodingInfo
 ---
 
@@ -21,16 +12,18 @@ This contains the three boolean properties `supported`, `smooth`, and `powereffi
 
 ## Syntax
 
-```js
+```js-nolint
 encodingInfo(configuration)
 ```
 
 ### Parameters
 
 - `configuration`
+
   - : An object with a property `type` and _either_ a `video` or `audio` property containing a configuration of the appropriate type: <!-- MediaEncodingConfiguration in the spec -->
 
     - `type`
+
       - : The type of media being tested. This takes one of two values:
 
         - `record`
@@ -39,6 +32,7 @@ encodingInfo(configuration)
           - : Represents a configuration meant to be transmitted over electronic means (e.g. using {{domxref("RTCPeerConnection")}}).
 
     - `video`
+
       - : Configuration object for a video media source.
         This has the following properties: <!-- VideoConfiguration in the spec -->
 
@@ -94,21 +88,23 @@ All supported audio codecs are reported to be power efficient.
 ```js
 //Create media configuration to be tested
 const mediaConfig = {
-    type : 'record', // or 'transmission'
-    video : {
-        contentType : "video/webm;codecs=vp8.0", // valid content type
-        width : 1920,     // width of the video
-        height : 1080,    // height of the video
-        bitrate : 120000, // number of bits used to encode 1s of video
-        framerate : 48   // number of frames making up that 1s.
-     }
+  type: "record", // or 'transmission'
+  video: {
+    contentType: "video/webm;codecs=vp8.0", // valid content type
+    width: 1920, // width of the video
+    height: 1080, // height of the video
+    bitrate: 120000, // number of bits used to encode 1s of video
+    framerate: 48, // number of frames making up that 1s.
+  },
 };
 
 // check support and performance
 navigator.mediaCapabilities.encodingInfo(mediaConfig).then((result) => {
-    console.log(`This configuration is ${result.supported ? '' : 'not '}supported,`);
-    console.log(`${result.smooth ? '' : 'not '}smooth, and`);
-    console.log(`${result.powerEfficient ? '' : 'not '}power efficient.`);
+  console.log(
+    `This configuration is ${result.supported ? "" : "not "}supported,`
+  );
+  console.log(`${result.smooth ? "" : "not "}smooth, and`);
+  console.log(`${result.powerEfficient ? "" : "not "}power efficient.`);
 });
 ```
 

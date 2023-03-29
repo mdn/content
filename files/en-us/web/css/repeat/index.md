@@ -1,14 +1,7 @@
 ---
 title: repeat()
 slug: Web/CSS/repeat
-tags:
-  - CSS
-  - CSS Function
-  - CSS Grid
-  - Function
-  - Layout
-  - Reference
-  - Web
+page-type: css-function
 browser-compat: css.properties.grid-template-columns.repeat
 ---
 
@@ -74,8 +67,9 @@ Then if a property declaration uses `<auto-repeat>`, it is only allowed to use `
 
 ```css example-bad
 .wrapper {
-  grid-template-columns:  repeat(auto-fill, 10px)
-                          repeat(2, minmax(min-content, max-content));
+  grid-template-columns:
+    repeat(auto-fill, 10px)
+    repeat(2, minmax(min-content, max-content));
 }
 ```
 
@@ -86,10 +80,10 @@ There is a fourth form, `<name-repeat>`, which is used to add line names to subg
 - `<fixed-size>`
   - : One of the following forms:
     - a {{cssxref("&lt;length-percentage&gt;")}} value
-    - a {{cssxref("minmax()")}} function with:
+    - a {{cssxref("minmax", "minmax()")}} function with:
       - `min` given as a {{cssxref("&lt;length-percentage&gt;")}} value
       - `max` given as one of a {{cssxref("&lt;length-percentage&gt;")}} value, a {{cssxref("&lt;flex&gt;")}} value, or one of the following keywords: [`min-content`](#min-content), [`max-content`](#max-content), or [`auto`](#auto)
-    - a {{cssxref("minmax()")}} function with:
+    - a {{cssxref("minmax", "minmax()")}} function with:
       - `min` given as a {{cssxref("&lt;length-percentage&gt;")}} value or one of the following keywords: [`min-content`](#min-content), [`max-content`](#max-content), or [`auto`](#auto)
       - `max` given as a {{cssxref("&lt;length-percentage&gt;")}} value.
 - {{cssxref("&lt;flex&gt;")}}
@@ -103,20 +97,22 @@ There is a fourth form, `<name-repeat>`, which is used to add line names to subg
 - `<track-size>`
   - : One of the following forms:
     - a {{cssxref("&lt;length-percentage&gt;")}} value, a {{cssxref("&lt;flex&gt;")}} value, or one of the following keywords: [`min-content`](#min-content), [`max-content`](#max-content), or [`auto`](#auto)
-    - a {{cssxref("minmax()")}} function with:
+    - a {{cssxref("minmax", "minmax()")}} function with:
       - `min` given as a {{cssxref("&lt;length-percentage&gt;")}} value, or one of the following keywords: [`min-content`](#min-content), [`max-content`](#max-content), or [`auto`](#auto)
       - `max` given as a {{cssxref("&lt;length-percentage&gt;")}} value, a {{cssxref("&lt;flex&gt;")}} value, or one of the following keywords: [`min-content`](#min-content), [`max-content`](#max-content), or [`auto`](#auto)
-    - a {{cssxref("fit-content()")}} function, passed a {{cssxref("&lt;length-percentage&gt;")}} value.
+    - a {{cssxref("fit-content_function", "fit-content()")}} function, passed a {{cssxref("&lt;length-percentage&gt;")}} value.
 - `auto`
   - : As a maximum, identical to `max-content`. As a minimum it represents the largest minimum size (as specified by {{cssxref("min-width")}}/{{cssxref("min-height")}}) of the grid items occupying the grid track.
 - `auto-fill`
   - : If the grid container has a definite or maximal size in the relevant axis, then the number of repetitions is the largest possible positive integer that does not cause the grid to overflow its grid container. Treating each track as its maximal track sizing function (each independent value used to define `grid-template-rows` or `grid-template-columns`), if that is definite. Otherwise, as its minimum track sizing function, and taking grid-gap into account. If any number of repetitions would overflow, then the repetition is `1`. Otherwise, if the grid container has a definite minimal size in the relevant axis, the number of repetitions is the smallest possible positive integer that fulfills that minimum requirement. Otherwise, the specified track list repeats only once.
 - `auto-fit`
+
   - : Behaves the same as `auto-fill`, except that after placing the grid items any empty repeated tracks are collapsed. An empty track is one with no in-flow grid items placed into or spanning across it. (This can result in all tracks being collapsed, if they're all empty.)
 
     A collapsed track is treated as having a single fixed track sizing function of `0px`, and the gutters on either side of it collapse.
 
     For the purpose of finding the number of auto-repeated tracks, the user agent floors the track size to a user agent specified value (e.g., `1px`), to avoid division by zero.
+
 - `max-content`
   - : Represents the largest max-content contribution of the grid items occupying the grid track.
 - `min-content`
@@ -130,21 +126,11 @@ There is a fourth form, `<name-repeat>`, which is used to add line names to subg
 
 ```html
 <div id="container">
-  <div>
-    This item is 50 pixels wide.
-  </div>
-  <div>
-    Item with flexible width.
-  </div>
-  <div>
-    This item is 50 pixels wide.
-  </div>
-  <div>
-    Item with flexible width.
-  </div>
-  <div>
-    Inflexible item of 100 pixels width.
-  </div>
+  <div>This item is 50 pixels wide.</div>
+  <div>Item with flexible width.</div>
+  <div>This item is 50 pixels wide.</div>
+  <div>Item with flexible width.</div>
+  <div>Inflexible item of 100 pixels width.</div>
 </div>
 ```
 

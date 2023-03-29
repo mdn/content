@@ -1,13 +1,6 @@
 ---
-title: 'CSP: worker-src'
+title: "CSP: worker-src"
 slug: Web/HTTP/Headers/Content-Security-Policy/worker-src
-tags:
-  - CSP
-  - Content-Security-Policy
-  - Directive
-  - HTTP
-  - Reference
-  - Security
 browser-compat: http.headers.Content-Security-Policy.worker-src
 ---
 
@@ -73,9 +66,9 @@ blocked and won't load:
 
 ```html
 <script>
-  const blockedWorker = new Worker("data:application/javascript,…");
+  let blockedWorker = new Worker("data:application/javascript,…");
   blockedWorker = new SharedWorker("https://not-example.com/");
-  navigator.serviceWorker.register('https://not-example.com/sw.js');
+  navigator.serviceWorker.register("https://not-example.com/sw.js");
 </script>
 ```
 

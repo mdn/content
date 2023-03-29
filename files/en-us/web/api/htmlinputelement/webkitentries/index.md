@@ -2,14 +2,6 @@
 title: HTMLInputElement.webkitEntries
 slug: Web/API/HTMLInputElement/webkitEntries
 page-type: web-api-instance-property
-tags:
-  - API
-  - File and Directory Entries API
-  - Files
-  - HTML DOM
-  - HTMLInputElement
-  - Property
-  - webkitEntries
 browser-compat: api.HTMLInputElement.webkitEntries
 ---
 
@@ -45,7 +37,7 @@ and process the selected files.
 ### HTML
 
 ```html
-<input id="files" type="file" multiple>
+<input id="files" type="file" multiple />
 ```
 
 ### JavaScript

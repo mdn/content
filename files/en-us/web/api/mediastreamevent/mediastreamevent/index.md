@@ -2,13 +2,9 @@
 title: MediaStreamEvent()
 slug: Web/API/MediaStreamEvent/MediaStreamEvent
 page-type: web-api-constructor
-tags:
-  - Constructor
-  - Deprecated
-  - Non-standard
-  - MediaStreamEvent
-  - Reference
-  - WebRTC
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.MediaStreamEvent.MediaStreamEvent
 ---
 
@@ -18,7 +14,7 @@ The **`MediaStreamEvent()`** constructor creates a new {{domxref("MediaStreamEve
 
 ## Syntax
 
-```js
+```js-nolint
  new MediaStreamEvent(type, options)
 ```
 
@@ -39,7 +35,7 @@ A new {{domxref("MediaStreamEvent")}} object.
 
 ```js
 // s is a MediaStream
-const event = new MediaStreamEvent("addstream", {"stream": s});
+const event = new MediaStreamEvent("addstream", { stream: s });
 ```
 
 ## Specifications

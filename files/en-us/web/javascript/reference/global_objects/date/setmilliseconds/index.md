@@ -1,12 +1,7 @@
 ---
 title: Date.prototype.setMilliseconds()
 slug: Web/JavaScript/Reference/Global_Objects/Date/setMilliseconds
-tags:
-  - Date
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.Date.setMilliseconds
 ---
 
@@ -19,7 +14,7 @@ specified date according to local time.
 
 ## Syntax
 
-```js
+```js-nolint
 setMilliseconds(millisecondsValue)
 ```
 

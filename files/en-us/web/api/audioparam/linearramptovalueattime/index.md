@@ -2,14 +2,6 @@
 title: AudioParam.linearRampToValueAtTime()
 slug: Web/API/AudioParam/linearRampToValueAtTime
 page-type: web-api-instance-method
-tags:
-  - API
-  - Audio
-  - AudioParam
-  - Method
-  - Reference
-  - Web Audio API
-  - linearRampToValueAtTime
 browser-compat: api.AudioParam.linearRampToValueAtTime
 ---
 
@@ -24,7 +16,7 @@ _previous_ event, follows a linear ramp to the new value given in the
 
 ## Syntax
 
-```js
+```js-nolint
 linearRampToValueAtTime(value, endTime)
 ```
 
@@ -55,10 +47,10 @@ natural.
 const audioCtx = new AudioContext();
 
 // set basic variables for example
-const myAudio = document.querySelector('audio');
+const myAudio = document.querySelector("audio");
 
-const linearRampPlus = document.querySelector('.linear-ramp-plus');
-const linearRampMinus = document.querySelector('.linear-ramp-minus');
+const linearRampPlus = document.querySelector(".linear-ramp-plus");
+const linearRampMinus = document.querySelector(".linear-ramp-minus");
 
 // Create a MediaElementAudioSourceNode
 // Feed the HTMLMediaElement into it
@@ -76,11 +68,11 @@ gainNode.connect(audioCtx.destination);
 // set buttons to do something onclick
 linearRampPlus.onclick = () => {
   gainNode.gain.linearRampToValueAtTime(1.0, audioCtx.currentTime + 2);
-}
+};
 
 linearRampMinus.onclick = () => {
   gainNode.gain.linearRampToValueAtTime(0, audioCtx.currentTime + 2);
-}
+};
 ```
 
 ## Specifications

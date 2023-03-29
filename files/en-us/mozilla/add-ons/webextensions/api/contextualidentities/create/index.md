@@ -1,15 +1,7 @@
 ---
 title: contextualIdentities.create()
 slug: Mozilla/Add-ons/WebExtensions/API/contextualIdentities/create
-tags:
-  - API
-  - Add-ons
-  - Create
-  - Extensions
-  - Method
-  - Reference
-  - WebExtensions
-  - contextualIdentities
+page-type: webextension-api-function
 browser-compat: webextensions.api.contextualIdentities.create
 ---
 
@@ -21,7 +13,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ## Syntax
 
-```js
+```js-nolint
 let createContext = browser.contextualIdentities.create(
   details                  // object
 )

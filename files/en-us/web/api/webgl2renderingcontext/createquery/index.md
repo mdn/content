@@ -2,12 +2,6 @@
 title: WebGL2RenderingContext.createQuery()
 slug: Web/API/WebGL2RenderingContext/createQuery
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGL2
 browser-compat: api.WebGL2RenderingContext.createQuery
 ---
 
@@ -19,7 +13,7 @@ information.
 
 ## Syntax
 
-```js
+```js-nolint
 createQuery()
 ```
 

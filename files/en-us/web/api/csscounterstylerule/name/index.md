@@ -2,12 +2,6 @@
 title: CSSCounterStyleRule.name
 slug: Web/API/CSSCounterStyleRule/name
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - name
-  - CSSCounterStyleRule
 browser-compat: api.CSSCounterStyleRule.name
 ---
 
@@ -27,7 +21,7 @@ The following example shows a {{cssxref("@counter-style")}} rule. In JavaScript,
 @counter-style box-corner {
   system: fixed;
   symbols: ◰ ◳ ◲ ◱;
-  suffix: ': ';
+  suffix: ": ";
   fallback: disc;
 }
 ```

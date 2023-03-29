@@ -1,16 +1,6 @@
 ---
 title: Mobile accessibility
 slug: Learn/Accessibility/Mobile
-tags:
-  - Accessibility
-  - Article
-  - Beginner
-  - CodingScripting
-  - Learn
-  - Mobile
-  - responsive
-  - screenreader
-  - touch
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Accessibility/Multimedia","Learn/Accessibility/Accessibility_troubleshooting", "Learn/Accessibility")}}
@@ -93,7 +83,7 @@ You can also explore by touch to find the _Unlock_ button at the bottom middle o
 
 #### Global and local menus
 
-TalkBack allows you to access global and local context menus, wherever you have navigated to on the device. The former provides global options relating to the device as a whole, and the latter provides options relating just to the current app/screen you are in.
+TalkBack allows you to access global and local context menus, wherever you have navigated on the device. The former provides global options relating to the device as a whole, and the latter provides options relating just to the current app/screen you are in.
 
 To get to these menus:
 
@@ -114,9 +104,9 @@ For example, with TalkBack turned on:
 2. Activate the URL bar.
 3. Enter a web page that has a bunch of headings on it, such as the front page of bbc.co.uk. To enter the text of the URL:
 
-    - Select the URL bar by swiping left/right till you get to it, and then double-tapping.
-    - Hold your finger down on the virtual keyboard until you get the character you want, and then release your finger to type it. Repeat for each character.
-    - Once you've finished, find the Enter key and press it.
+   - Select the URL bar by swiping left/right till you get to it, and then double-tapping.
+   - Hold your finger down on the virtual keyboard until you get the character you want, and then release your finger to type it. Repeat for each character.
+   - Once you've finished, find the Enter key and press it.
 
 4. Swipe left and right to move between different items on the page.
 5. Swipe up and right with a smooth motion to enter the local content menu.
@@ -130,7 +120,7 @@ For example, with TalkBack turned on:
 
 A mobile version of VoiceOver is built into the iOS operating system.
 
-To turn it on, go to Your _Settings_ app and select _Accessibility > VoiceOver_. Press the _VoiceOver_ slider to enable it (you'll also see a number of other options related to VoiceOver on this page).
+To turn it on, go to Your _Settings_ app and select _Accessibility > VoiceOver_. Press the _VoiceOver_ slider to enable it (you'll also see several other options related to VoiceOver on this page).
 
 > **Note:** Some older iOS devices have the VoiceOver menu at _Settings app_ > _General_ > _Accessibility_ > _VoiceOver_.
 
@@ -155,8 +145,8 @@ When VoiceOver is turned on, you have a navigation feature called the Rotor avai
 1. Twist two fingers around on the screen like you are turning a dial. Each option will be read aloud as you twist further around. You can go back and forth to cycle through the options.
 2. Once you've found the option you want:
 
-    - Release your fingers to select it.
-    - If it is an option you can iterate the value of (such as Volume or Speaking Rate), you can do a swipe up or down to increase or decrease the value of the selected item.
+   - Release your fingers to select it.
+   - If it is an option you can iterate the value of (such as Volume or Speaking Rate), you can do a swipe up or down to increase or decrease the value of the selected item.
 
 The options available under the Rotor are context-sensitive — they will differ depending on what app or view you are in (see below for an example).
 
@@ -168,20 +158,20 @@ Let's have a go at web browsing with VoiceOver:
 2. Activate the URL bar.
 3. Enter a web page that has a bunch of headings on it, such as the front page of bbc.co.uk. To enter the text of the URL:
 
-    - Select the URL bar by swiping left/right until you get to it, and then double-tapping.
-    - For each character, hold your finger down on the virtual keyboard until you get the character you want, and then release your finger to select it. Double-tap to type it.
-    - Once you've finished, find the Enter key and press it.
+   - Select the URL bar by swiping left/right until you get to it, and then double-tapping.
+   - For each character, hold your finger down on the virtual keyboard until you get the character you want, and then release your finger to select it. Double-tap to type it.
+   - Once you've finished, find the Enter key and press it.
 
 4. Swipe left and right to move between items on the page. You can double-tap an item to select it (e.g., follow a link).
 5. By default, the selected Rotor option will be Speaking Rate; you can currently swipe up and down to increase or decrease the speaking rate.
 6. Now turn two fingers around the screen like a dial to show the rotor and move between its options. Here are a few examples of the options available:
 
-    - _Speaking Rate_: Change the speaking rate.
-    - _Containers_: Move between different semantic containers on the page.
-    - _Headings_: Move between headings on the page.
-    - _Links_: Move between links on the page.
-    - _Form Controls_: Move between form controls on the page.
-    - _Language_: Move between different translations, if they are available.
+   - _Speaking Rate_: Change the speaking rate.
+   - _Containers_: Move between different semantic containers on the page.
+   - _Headings_: Move between headings on the page.
+   - _Links_: Move between links on the page.
+   - _Form Controls_: Move between form controls on the page.
+   - _Language_: Move between different translations, if they are available.
 
 7. Select _Headings_. Now you'll be able to swipe up and down to move between headings on the page.
 
@@ -202,7 +192,7 @@ div.onmousedown = () => {
   initialBoxX = div.offsetLeft;
   initialBoxY = div.offsetTop;
   movePanel();
-}
+};
 
 document.onmouseup = stopMove;
 ```
@@ -215,7 +205,7 @@ div.ontouchstart = (e) => {
   initialBoxY = div.offsetTop;
   positionHandler(e);
   movePanel();
-}
+};
 
 panel.ontouchend = stopMove;
 ```
@@ -231,10 +221,10 @@ We've provided a simple example that shows how to use the mouse and touch events
 In particular, the most common problems that need to be addressed for mobile are:
 
 - Suitability of layouts for mobile devices. A multi-column layout won't work as well on a narrow screen, for example, and the text size may need to be increased so it is legible. Such issues can be solved by creating a responsive layout using technologies such as [media queries](/en-US/docs/Web/CSS/Media_Queries), [viewport](/en-US/docs/Web/HTML/Viewport_meta_tag), and [flexbox](/en-US/docs/Learn/CSS/CSS_layout/Flexbox).
-- Conserving image sizes downloaded. In general, small screen devices won't need images that are as large as their desktop counterparts, and they are more likely to be on slow network connections. Therefore, it is wise to serve smaller images to narrow screen devices as appropriate. You can handle this using [responsive image techniques](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images).
-- Thinking about high resolutions. Many mobile devices have high-resolution screens, and therefore need higher-resolution images so that the display can continue to look crisp and sharp. Again, you can serve images as appropriate using responsive image techniques. In addition, many image requirements can be fulfilled using the SVG vector images format, which is well-supported across browsers today. SVG has a small file size and will stay sharp regardless of whatever size is being displayed  (see [Adding vector graphics to the web](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web) for more details).
+- Conserving image sizes downloaded. In general, small-screen devices won't need images that are as large as their desktop counterparts, and they are more likely to be on slow network connections. Therefore, it is wise to serve smaller images to narrow screen devices as appropriate. You can handle this using [responsive image techniques](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images).
+- Thinking about high resolutions. Many mobile devices have high-resolution screens, and therefore need higher-resolution images so that the display can continue to look crisp and sharp. Again, you can serve images as appropriate using responsive image techniques. In addition, many image requirements can be fulfilled using the SVG vector images format, which is well-supported across browsers today. SVG has a small file size and will stay sharp regardless of whatever size is being displayed (see [Adding vector graphics to the web](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web) for more details).
 
-> **Note:** We won't provide a full discussion of responsive design techniques here, as they are covered in other places around MDN (see above links).
+> **Note:** We won't provide a full discussion of responsive design techniques here, as they are covered in other places around MDN (see the above links).
 
 ### Specific mobile considerations
 
@@ -245,10 +235,10 @@ There are other important issues to consider when making sites more accessible o
 Using [viewport](/en-US/docs/Web/HTML/Viewport_meta_tag), it is possible to disable zoom. Always ensure resizing is enabled, and set the width to the device's width in the {{htmlelement("head")}}:
 
 ```html
-<meta name="viewport" content="width=device-width; user-scalable=yes">
+<meta name="viewport" content="width=device-width; user-scalable=yes" />
 ```
 
-You should never set `user-scalable=no` if at all possible — many people rely on zoom to be able to see the content of your website, so taking this functionality away is a really bad idea. There are certain situations where zooming might break the UI; in such cases, if you feel that you absolutely need to disable zoom, you should provide some other kind of equivalent, such as a control for increasing the text size in a way that doesn't break your UI.
+You should never set `user-scalable=no` if at all possible — many people rely on zoom to be able to see the content of your website, so taking this functionality away is a really bad idea. There are certain situations where zooming might break the UI; in such cases, if you feel that you need to disable zoom, you should provide some other kind of equivalent, such as a control for increasing the text size in a way that doesn't break your UI.
 
 #### Keeping menus accessible
 
@@ -262,7 +252,7 @@ Click here for a [good hamburger menu example](https://fritz-weisshart.de/meg_me
 
 On mobile devices, inputting data tends to be more annoying for users than the equivalent experience on desktop computers. It is more convenient to type text into form inputs using a desktop or laptop keyboard than a touchscreen virtual keyboard or a tiny mobile physical keyboard.
 
-For this reason, it is worth trying to minimize the amount of typing needed. As an example, instead of getting users to fill out their job title each time using a regular text input, you could instead offer a {{htmlelement("select")}} menu containing the most common options (which also helps with consistency in data entry), and offer an "Other" option that displays a text field to type any outliers into. You can see a simple example of this idea in action in [common-job-types.html](https://github.com/mdn/learning-area/blob/main/accessibility/mobile/common-job-types.html) (see the [common jobs example live](https://mdn.github.io/learning-area/accessibility/mobile/common-job-types.html)).
+For this reason, it is worth trying to minimize the amount of typing needed. As an example, instead of getting users to fill out their job title each time using a regular text input, you could instead offer a {{htmlelement("select")}} menu containing the most common options (which also helps with consistency in data entry) and offer an "Other" option that displays a text field to type any outliers into. You can see a simple example of this idea in action in [common-job-types.html](https://github.com/mdn/learning-area/blob/main/accessibility/mobile/common-job-types.html) (see the [common jobs example live](https://mdn.github.io/learning-area/accessibility/mobile/common-job-types.html)).
 
 It is also worth considering the use of HTML form input types such as the date on mobile platforms as they handle them well — both Android and iOS, for example, display usable widgets that fit well with the device experience. See [html5-form-examples.html](https://github.com/mdn/learning-area/blob/main/accessibility/mobile/html5-form-examples.html) for some examples (see the [HTML5 form examples live](https://mdn.github.io/learning-area/accessibility/mobile/html5-form-examples.html)) — try loading these and manipulating them on mobile devices. For example:
 
@@ -281,13 +271,3 @@ In this article, we have provided you with some details about common mobile acce
 - [Make your site work on touch devices](https://www.creativebloq.com/javascript/make-your-site-work-touch-devices-51411644) — Useful article about using touch events to get interactions working on mobile devices.
 
 {{PreviousMenuNext("Learn/Accessibility/Multimedia","Learn/Accessibility/Accessibility_troubleshooting", "Learn/Accessibility")}}
-
-## In this module
-
-- [What is accessibility?](/en-US/docs/Learn/Accessibility/What_is_accessibility)
-- [HTML: A good basis for accessibility](/en-US/docs/Learn/Accessibility/HTML)
-- [CSS and JavaScript accessibility best practices](/en-US/docs/Learn/Accessibility/CSS_and_JavaScript)
-- [WAI-ARIA basics](/en-US/docs/Learn/Accessibility/WAI-ARIA_basics)
-- [Accessible multimedia](/en-US/docs/Learn/Accessibility/Multimedia)
-- [Mobile accessibility](/en-US/docs/Learn/Accessibility/Mobile)
-- [Accessibility troubleshooting](/en-US/docs/Learn/Accessibility/Accessibility_troubleshooting)

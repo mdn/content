@@ -1,17 +1,6 @@
 ---
 title: Django web application security
 slug: Learn/Server-side/Django/web_application_security
-tags:
-  - Article
-  - Beginner
-  - CodingScripting
-  - Learn
-  - Python
-  - Security
-  - Server-side programming
-  - Web security
-  - django
-  - server-side
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Deployment", "Learn/Server-side/Django/django_assessment_blog", "Learn/Server-side/Django")}}
@@ -92,18 +81,33 @@ They would then send the file to all the Librarians and suggest that they open t
 ```html
 <html lang="en">
   <body onload="document.EvilForm.submit()">
-    <form action="http://127.0.0.1:8000/catalog/author/create/" method="post" name="EvilForm">
+    <form
+      action="http://127.0.0.1:8000/catalog/author/create/"
+      method="post"
+      name="EvilForm">
       <table>
         <tr>
           <th><label for="id_first_name">First name:</label></th>
           <td>
-            <input id="id_first_name" maxlength="100" name="first_name" type="text" value="Mad" required>
+            <input
+              id="id_first_name"
+              maxlength="100"
+              name="first_name"
+              type="text"
+              value="Mad"
+              required />
           </td>
         </tr>
         <tr>
           <th><label for="id_last_name">Last name:</label></th>
           <td>
-            <input id="id_last_name" maxlength="100" name="last_name" type="text" value="Man" required>
+            <input
+              id="id_last_name"
+              maxlength="100"
+              name="last_name"
+              type="text"
+              value="Man"
+              required />
           </td>
         </tr>
         <tr>
@@ -115,11 +119,15 @@ They would then send the file to all the Librarians and suggest that they open t
         <tr>
           <th><label for="id_date_of_death">Died:</label></th>
           <td>
-            <input id="id_date_of_death" name="date_of_death" type="text" value="12/10/2016">
+            <input
+              id="id_date_of_death"
+              name="date_of_death"
+              type="text"
+              value="12/10/2016" />
           </td>
         </tr>
       </table>
-      <input type="submit" value="Submit">
+      <input type="submit" value="Submit" />
     </form>
   </body>
 </html>
@@ -130,7 +138,10 @@ Run the development web server, and log in with your superuser account. Copy the
 The way the protection is enabled is that you include the `{% csrf_token %}` template tag in your form definition. This token is then rendered in your HTML as shown below, with a value that is specific to the user on the current browser.
 
 ```html
-<input type="hidden" name="csrfmiddlewaretoken" value="0QRWHnYVg776y2l66mcvZqp8alrv4lb8S8lZ4ZJUWGZFA5VHrVfL2mpH29YZ39PW">
+<input
+  type="hidden"
+  name="csrfmiddlewaretoken"
+  value="0QRWHnYVg776y2l66mcvZqp8alrv4lb8S8lZ4ZJUWGZFA5VHrVfL2mpH29YZ39PW" />
 ```
 
 Django generates a user/browser specific key and will reject forms that do not contain the field, or that contain an incorrect field value for the user/browser.
@@ -179,21 +190,3 @@ The next and final step in this module about Django is to complete the [assessme
 - [Securing your site](/en-US/docs/Web/Security/Securing_your_site) (MDN)
 
 {{PreviousMenuNext("Learn/Server-side/Django/Deployment", "Learn/Server-side/Django/django_assessment_blog", "Learn/Server-side/Django")}}
-
-## In this module
-
-- [Django introduction](/en-US/docs/Learn/Server-side/Django/Introduction)
-- [Setting up a Django development environment](/en-US/docs/Learn/Server-side/Django/development_environment)
-- [Django Tutorial: The Local Library website](/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website)
-- [Django Tutorial Part 2: Creating a skeleton website](/en-US/docs/Learn/Server-side/Django/skeleton_website)
-- [Django Tutorial Part 3: Using models](/en-US/docs/Learn/Server-side/Django/Models)
-- [Django Tutorial Part 4: Django admin site](/en-US/docs/Learn/Server-side/Django/Admin_site)
-- [Django Tutorial Part 5: Creating our home page](/en-US/docs/Learn/Server-side/Django/Home_page)
-- [Django Tutorial Part 6: Generic list and detail views](/en-US/docs/Learn/Server-side/Django/Generic_views)
-- [Django Tutorial Part 7: Sessions framework](/en-US/docs/Learn/Server-side/Django/Sessions)
-- [Django Tutorial Part 8: User authentication and permissions](/en-US/docs/Learn/Server-side/Django/Authentication)
-- [Django Tutorial Part 9: Working with forms](/en-US/docs/Learn/Server-side/Django/Forms)
-- [Django Tutorial Part 10: Testing a Django web application](/en-US/docs/Learn/Server-side/Django/Testing)
-- [Django Tutorial Part 11: Deploying Django to production](/en-US/docs/Learn/Server-side/Django/Deployment)
-- **Django web application security**
-- [DIY Django mini blog](/en-US/docs/Learn/Server-side/Django/django_assessment_blog)

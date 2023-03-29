@@ -2,9 +2,6 @@
 title: Text.splitText()
 slug: Web/API/Text/splitText
 page-type: web-api-instance-method
-tags:
-  - Method
-  - Reference
 browser-compat: api.Text.splitText
 ---
 
@@ -27,7 +24,7 @@ method.
 
 ## Syntax
 
-```js
+```js-nolint
 newNode = textNode.splitText(offset)
 ```
 
@@ -59,7 +56,7 @@ In this example, the text of a {{HTMLElement("p")}} is split into two text nodes
 ```
 
 ```js
-const p = document.querySelector('p');
+const p = document.querySelector("p");
 
 // Get contents of <p> as a text node
 const foobar = p.firstChild;
@@ -69,8 +66,8 @@ const foobar = p.firstChild;
 const bar = foobar.splitText(3);
 
 // Create a <u> element containing ' new content '
-const u = document.createElement('u');
-u.appendChild(document.createTextNode(' new content '));
+const u = document.createElement("u");
+u.appendChild(document.createTextNode(" new content "));
 
 // Add <u> before 'bar'
 p.insertBefore(u, bar);

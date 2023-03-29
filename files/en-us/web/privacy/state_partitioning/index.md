@@ -1,13 +1,9 @@
 ---
 title: State Partitioning
 slug: Web/Privacy/State_Partitioning
-tags:
-  - Firefox
-  - Privacy
-  - Mozilla
-  - Storage
-  - tracking
 ---
+
+{{QuicklinksWithSubPages("Web/Privacy")}}
 
 State Partitioning is a broad effort to rework how Firefox manages client-side
 state (i.e., data stored in the browser) to mitigate the ability of websites
@@ -59,7 +55,7 @@ all client-side state by the
 _[origin](https://html.spec.whatwg.org/#origin)_
 of the resource being loaded and by the _top-level
 [site](https://html.spec.whatwg.org/multipage/origin.html#site)_.
-In most instances, the top-level site is the scheme and eTLD+1 of the top-level
+In most instances, the top-level site is the scheme and {{Glossary("eTLD", "eTLD+1")}} of the top-level
 page being visited by the user.
 
 In the example below `example.com` is embedded in
@@ -67,7 +63,7 @@ In the example below `example.com` is embedded in
 partitioned, there are three distinct storage buckets (instead of one). The
 tracker can still access storage, but since every storage bucket is
 additionally keyed under the top-level site, the data it has access to on A
-will be different than the data on B. This will prevent a tracker from storing
+will be different from the data on B. This will prevent a tracker from storing
 an identifier in their cookies when visited directly and then retrieving that
 identifier when embedded in other websites.
 
@@ -150,7 +146,7 @@ Details about automatic grants are provided in the
 
 [Service Workers](/en-US/docs/Web/API/Service_Worker_API)
 are currently disabled in partitioned contexts when dynamic partitioning is
-enabled. In [Bug 1495241](https://bugzilla.mozilla.org/show_bug.cgi?id=1495241)
+enabled. In [Bug 1495241](https://bugzil.la/1495241)
 we are exploring options to enable Service Workers in partitioned contexts.
 
 #### Storage Access Heuristics
@@ -244,7 +240,7 @@ the [Site Information Panel](https://support.mozilla.org/en-US/kb/site-informati
 Setting `privacy.antitracking.enableWebcompat` to `false` will **disable** all
 ETP and State Partitioning web-compatibility features. Disabling these features
 can be useful when testing, to ensure your website is fully compatible with the
-State Partitioning mechanism in Firefox and it does not rely on temporary
+State Partitioning mechanism in Firefox, and it does not rely on temporary
 heuristics.
 
 Features disabled by the pref include:

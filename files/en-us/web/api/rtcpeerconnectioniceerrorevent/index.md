@@ -2,21 +2,6 @@
 title: RTCPeerConnectionIceErrorEvent
 slug: Web/API/RTCPeerConnectionIceErrorEvent
 page-type: web-api-interface
-tags:
-  - API
-  - Communication
-  - Error
-  - Interface
-  - Media
-  - Networking
-  - RTCPeerConnectionIceErrorEvent
-  - Reference
-  - STUN
-  - TURN
-  - WebRTC
-  - WebRTC API
-  - WebRTC Device API
-  - rtc
 browser-compat: api.RTCPeerConnectionIceErrorEvent
 ---
 
@@ -31,7 +16,7 @@ The **`RTCPeerConnectionIceErrorEvent`** interface—based upon the {{domxref("E
 - {{domxref("RTCPeerConnectionIceErrorEvent.RTCPeerConnectionIceErrorEvent", "RTCPeerConnectionIceErrorEvent()")}}
   - : Creates and returns a new `RTCPeerConnectionIceErrorEvent` object, with its `type` and other properties initialized as specified in the parameters. You will not normally create an object of this type yourself.
 
-## Properties
+## Instance properties
 
 _The `RTCPeerConnectionIceErrorEvent` interface includes the properties found on the {{domxref("Event")}} interface, as well as the following properties:_
 
@@ -46,7 +31,7 @@ _The `RTCPeerConnectionIceErrorEvent` interface includes the properties found on
 - {{domxref("RTCPeerConnectionIceErrorEvent.url", "url")}} {{ReadOnlyInline}}
   - : A string indicating the URL of the STUN or TURN server with which the error occurred.
 
-## Methods
+## Instance methods
 
 _`RTCPeerConnectionIceErrorEvent` has no methods other than any provided by the parent interface, {{domxref("Event")}}._
 

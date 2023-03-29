@@ -1,8 +1,7 @@
 ---
 title: Options page
 slug: Mozilla/Add-ons/WebExtensions/user_interface/Options_pages
-tags:
-  - WebExtensions
+page-type: guide
 ---
 
 {{AddonSidebar}}
@@ -26,13 +25,13 @@ To create an options page, write an HTML file defining the page. This page can i
 
 <html lang="en">
   <head>
-    <meta charset="utf-8"/>
+    <meta charset="utf-8" />
   </head>
 
   <body>
     <form>
       <label for="color">Favorite color</label>
-      <input type="text" id="color" name="color"/>
+      <input type="text" id="color" name="color" />
       <button type="submit">Save</button>
     </form>
     <script src="options.js"></script>
@@ -59,7 +58,7 @@ See the [`options_ui`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/o
 
 ## Options content design
 
-For details on how to design your options content to match the style of Firefox, see the [Photon Design System](https://design.firefox.com/photon/index.html) and [browser styles](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_styles) documentation.
+For details on how to design your options content to match the style of Firefox, see the [Acorn Design System](https://acorn.firefox.com/latest/acorn.html) and [browser styles](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_styles) documentation.
 
 ## Examples
 

@@ -2,24 +2,9 @@
 title: MediaRecorderErrorEvent
 slug: Web/API/MediaRecorderErrorEvent
 page-type: web-api-interface
-tags:
-  - AV
-  - Audio
-  - Error
-  - Event
-  - Interface
-  - Media
-  - MediaRecorderErrorEvent
-  - MediaStream
-  - MediaStream Recording
-  - MediaStream Recording API
-  - Recording Audio
-  - Recording Media
-  - Recording Video
-  - Video
-  - WebRTC
-  - Deprecated
-  - Non-standard
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.MediaRecorderErrorEvent
 ---
 
@@ -29,7 +14,7 @@ The `MediaRecorderErrorEvent` interface represents errors returned by the [Media
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _Inherits properties from its parent interface, {{domxref("Event")}}_.
 
@@ -41,7 +26,7 @@ _Inherits properties from its parent interface, {{domxref("Event")}}_.
 - {{domxref("MediaRecorderErrorEvent.MediaRecorderErrorEvent", "MediaStreamRecorderEvent()")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : Creates and returns a new `MediaRecorderErrorEvent` event object with the given parameters.
 
-## Methods
+## Instance methods
 
 _Inherits methods from its parent interface, {{domxref("Event")}}_.
 

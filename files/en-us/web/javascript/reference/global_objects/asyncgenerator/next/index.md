@@ -1,13 +1,7 @@
 ---
 title: AsyncGenerator.prototype.next()
 slug: Web/JavaScript/Reference/Global_Objects/AsyncGenerator/next
-tags:
-  - ECMAScript 2018
-  - AsyncGenerator
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.AsyncGenerator.next
 ---
 
@@ -17,7 +11,7 @@ The **`next()`** method returns the next value in the sequence.
 
 ## Syntax
 
-```js
+```js-nolint
 asyncGeneratorObject.next()
 asyncGeneratorObject.next(value)
 ```

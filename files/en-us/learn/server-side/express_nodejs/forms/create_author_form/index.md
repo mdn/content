@@ -1,12 +1,6 @@
 ---
 title: Create Author form
 slug: Learn/Server-side/Express_Nodejs/forms/Create_author_form
-tags:
-  - Express
-  - Forms
-  - Node
-  - part 6
-  - server-side
 ---
 
 This subarticle shows how to define a page for creating `Author` objects.
@@ -29,7 +23,6 @@ Find the exported `author_create_get()` controller method and replace it with th
 // Display Author create form on GET.
 exports.author_create_get = (req, res, next) => {
   res.render("author_form", { title: "Create Author" });
-
 };
 ```
 
@@ -148,9 +141,9 @@ block content
   form(method='POST' action='')
     div.form-group
       label(for='first_name') First Name:
-      input#first_name.form-control(type='text' placeholder='First name (Christian)' name='first_name' required='true' value=(undefined===author ? '' : author.first_name) )
+      input#first_name.form-control(type='text' placeholder='First name' name='first_name' required='true' value=(undefined===author ? '' : author.first_name) )
       label(for='family_name') Family Name:
-      input#family_name.form-control(type='text' placeholder='Family name (Surname)' name='family_name' required='true' value=(undefined===author ? '' : author.family_name))
+      input#family_name.form-control(type='text' placeholder='Family name' name='family_name' required='true' value=(undefined===author ? '' : author.family_name))
     div.form-group
       label(for='date_of_birth') Date of birth:
       input#date_of_birth.form-control(type='date' name='date_of_birth' value=(undefined===author ? '' : author.date_of_birth) )

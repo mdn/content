@@ -1,12 +1,7 @@
 ---
 title: Date.prototype.toString()
 slug: Web/JavaScript/Reference/Global_Objects/Date/toString
-tags:
-  - Date
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.Date.toString
 ---
 
@@ -18,7 +13,7 @@ The **`toString()`** method returns a string representing the specified {{jsxref
 
 ## Syntax
 
-```js
+```js-nolint
 toString()
 ```
 

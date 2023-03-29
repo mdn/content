@@ -1,10 +1,9 @@
 ---
 title: format
 slug: Web/SVG/Attribute/format
-tags:
-  - Deprecated
-  - SVG
-  - SVG Attribute
+page-type: svg-attribute
+status:
+  - deprecated
 browser-compat: svg.elements.altGlyph.format
 ---
 
@@ -37,6 +36,7 @@ You can use this attribute with the following SVG elements:
 </table>
 
 - `<string>`
+
   - : This value specifies the format of the given font.
 
     Here is a list of font formats and their strings that can be used as values for this attribute:

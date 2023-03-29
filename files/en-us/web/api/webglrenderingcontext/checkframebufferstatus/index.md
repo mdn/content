@@ -2,12 +2,6 @@
 title: WebGLRenderingContext.checkFramebufferStatus()
 slug: Web/API/WebGLRenderingContext/checkFramebufferStatus
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.checkFramebufferStatus
 ---
 
@@ -19,7 +13,7 @@ status of the {{domxref("WebGLFramebuffer")}} object.
 
 ## Syntax
 
-```js
+```js-nolint
 checkFramebufferStatus(target)
 ```
 
@@ -30,17 +24,18 @@ checkFramebufferStatus(target)
   - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the binding point (target). Possible values:
 
     - `gl.FRAMEBUFFER`
+
       - : Collection buffer data storage of color, alpha,
         depth and stencil buffers used to render an image.
-    When using a {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}},
-      the following values are available additionally:
 
-      - `gl.DRAW_FRAMEBUFFER`
-        - : Equivalent to `gl.FRAMEBUFFER`.
-          Used as a destination for drawing, rendering, clearing, and writing
-          operations.
-      - `gl.READ_FRAMEBUFFER`
-        - : Used as a source for reading operations.
+    When using a {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}},
+    the following values are available additionally:
+
+    - `gl.DRAW_FRAMEBUFFER`
+      - : Equivalent to `gl.FRAMEBUFFER`.
+        Used as a destination for drawing, rendering, clearing, and writing operations.
+    - `gl.READ_FRAMEBUFFER`
+      - : Used as a source for reading operations.
 
 ### Return value
 
@@ -74,8 +69,8 @@ A {{domxref("WebGL_API/Types", "GLenum")}} indicating the completeness status of
 ## Examples
 
 ```js
-const canvas = document.getElementById('canvas');
-const gl = canvas.getContext('webgl');
+const canvas = document.getElementById("canvas");
+const gl = canvas.getContext("webgl");
 const framebuffer = gl.createFramebuffer();
 
 // …

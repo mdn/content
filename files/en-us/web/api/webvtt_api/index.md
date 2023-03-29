@@ -2,19 +2,6 @@
 title: Web Video Text Tracks Format (WebVTT)
 slug: Web/API/WebVTT_API
 page-type: web-api-overview
-tags:
-  - API
-  - Intermediate
-  - Media
-  - NeedsMarkupWork
-  - NeedsUpdate
-  - Reference
-  - Video
-  - Web Video Text Tracks
-  - WebVTT
-  - captions
-  - subtitles
-  - text tracks
 browser-compat:
   - api.VTTCue
   - api.TextTrack
@@ -198,7 +185,7 @@ The HTML snippet below actually handles displaying the media itself.
 
 ```html
 <video controls autoplay src="video.webm">
- <track default src="track.vtt">
+  <track default src="track.vtt" />
 </video>
 ```
 
@@ -244,8 +231,12 @@ Transcrit par Célestes™
 ```
 
 ```css
-::cue(#\31) { color: lime; }
-::cue(#crédit\ de\ transcription) { color: red; }
+::cue(#\31) {
+  color: lime;
+}
+::cue(#crédit\ de\ transcription) {
+  color: red;
+}
 ```
 
 Positioning of text tracks is also supported, by including positioning information after the timings in a cue, as seen below (see [Cue settings](#cue_settings) for more information):
@@ -283,7 +274,7 @@ Some time ago in a place rather distant....
 
 ### Cue identifier
 
-The identifier is a name that identifies the cue. It can be used to reference the cue from a script. It must not contain a newline and cannot contain the string "`-->"`. It must end with a single new line. They do not have to be unique, although it is common to number them (e.g., 1, 2, 3).
+The identifier is a name that identifies the cue. It can be used to reference the cue from a script. It must not contain a newline and cannot contain the string "`-->`". It must end with a single new line. They do not have to be unique, although it is common to number them (e.g., 1, 2, 3).
 
 Here are a few examples:
 
@@ -315,7 +306,7 @@ Here are a few examples:
 
 A cue timing indicates when the cue is shown. It has a start and end time which are represented by timestamps. The end time must be greater than the start time, and the start time must be greater than or equal to all previous start times. Cues may have overlapping timings.
 
-If the WebVTT file is being used for chapters ({{HTMLElement("track")}} {{htmlattrxref("kind")}} is `chapters`) then the file cannot have overlapping timings.
+If the WebVTT file is being used for chapters ({{HTMLElement("track")}} [`kind`](/en-US/docs/Web/HTML/Element/track#kind) is `chapters`) then the file cannot have overlapping timings.
 
 Each cue timing contains five components:
 
@@ -380,42 +371,47 @@ The cue settings are added to the right of the cue timings. There must be one or
     - `rl`
       - : The writing direction is right to left
     - `lr`
-      - : The writing direction is left ot right
+      - : The writing direction is left to right
 - `line`
+
   - : If vertical is not set, specifies where the text appears vertically. If vertical is set, line specifies where text appears horizontally. Its value can be:
+
     - a line number
       - : The number is the height of the first line of the cue as it appears on the video. Positive numbers indicate top down and negative numbers indicate bottom up.
     - a percentage
       - : It must be an integer (i.e., no decimals) between 0 and 100 inclusive and must be followed by a percent sign (%).
 
     | Line        | `vertical` omitted | `vertical:rl` | `vertical:lr` |
-    |-------------|--------------------|---------------|---------------|
+    | ----------- | ------------------ | ------------- | ------------- |
     | `line:0`    | top                | right         | left          |
     | `line:-1`   | bottom             | left          | right         |
     | `line:0%`   | top                | right         | left          |
     | `line:100%` | bottom             | left          | right         |
 
 - `position`
+
   - : Specifies where the text will appear horizontally. If vertical is set, position specifies where the text will appear vertically. The value is a percentage, that is an integer (no decimals) between 0 and 100 inclusive followed by a percent sign (%).
 
     | Position        | `vertical` omitted | `vertical:rl` | `vertical:lr` |
-    |-----------------|--------------------|---------------|---------------|
+    | --------------- | ------------------ | ------------- | ------------- |
     | `position:0%`   | left               | top           | top           |
     | `position:100%` | right              | bottom        | bottom        |
 
 - `size`
+
   - : Specifies the width of the text area. If vertical is set, size specifies the height of the text area. The value is a percentage, that is an integer (no decimals) between 0 and 100 inclusive followed by a percent sign (%).
 
     | Size        | `vertical` omitted | `vertical:rl` | `vertical:lr` |
-    |-------------|--------------------|---------------|---------------|
+    | ----------- | ------------------ | ------------- | ------------- |
     | `size:100%` | full width         | full height   | full height   |
     | `size:50%`  | half width         | half height   | half height   |
 
 - `align`
+
   - : Specifies the alignment of the text. Text is aligned within the space given by the size cue setting if it is set.
 
     | Align          | `vertical` omitted    | `vertical:rl`       | `vertical:lr`       |
-    |----------------|-----------------------|---------------------|---------------------|
+    | -------------- | --------------------- | ------------------- | ------------------- |
     | `align:start`  | left                  | top                 | top                 |
     | `align:center` | centered horizontally | centered vertically | centered vertically |
     | `align:end`    | right                 | bottom              | bottom              |
@@ -440,7 +436,7 @@ A cue text payload cannot contain the string `-->`, the ampersand character (`&`
 In addition to the three escape sequences mentioned above, there are fours others. They are listed in the table below.
 
 | Name               | Character | Escape sequence |
-|--------------------|-----------|-----------------|
+| ------------------ | --------- | --------------- |
 | Ampersand          | `&`       | `&amp;`         |
 | Less-than          | `<`       | `&lt;`          |
 | Greater-than       | `>`       | `&gt;`          |
@@ -450,9 +446,10 @@ In addition to the three escape sequences mentioned above, there are fours other
 
 ### Cue payload text tags
 
-There are a number of tags, such as `<b>`, that can be used. However, if the WebVTT file is used in a {{HTMLElement("track")}} element where the attribute {{htmlattrxref("kind")}} is `chapters` then you cannot use tags.
+There are a number of tags, such as `<b>`, that can be used. However, if the WebVTT file is used in a {{HTMLElement("track")}} element where the attribute [`kind`](/en-US/docs/Web/HTML/Element/track#kind) is `chapters` then you cannot use tags.
 
 - Timestamp tag
+
   - : The timestamp must be greater that the cue's start timestamp, greater than any previous timestamp in the cue payload, and less than the cue's end timestamp. The _active text_ is the text between the timestamp and the next timestamp or to the end of the payload if there is not another timestamp in the payload. Any text before the _active text_ in the payload is _previous text_. Any text beyond the _active text_ is _future text_. This enables karaoke style captions.
 
     ```plain
@@ -472,6 +469,7 @@ There are a number of tags, such as `<b>`, that can be used. However, if the Web
 The following tags are the HTML tags allowed in a cue and require opening and closing tags (e.g., `<b>text</b>`).
 
 - Class tag (`<c></c>`)
+
   - : Style the contained text using a CSS class.
 
     ```xml
@@ -479,6 +477,7 @@ The following tags are the HTML tags allowed in a cue and require opening and cl
     ```
 
 - Italics tag (`<i></i>`)
+
   - : Italicize the contained text.
 
     ```xml
@@ -486,6 +485,7 @@ The following tags are the HTML tags allowed in a cue and require opening and cl
     ```
 
 - Bold tag (`<b></b>`)
+
   - : Bold the contained text.
 
     ```xml
@@ -493,6 +493,7 @@ The following tags are the HTML tags allowed in a cue and require opening and cl
     ```
 
 - Underline tag (`<u></u>`)
+
   - : Underline the contained text.
 
     ```xml
@@ -500,6 +501,7 @@ The following tags are the HTML tags allowed in a cue and require opening and cl
     ```
 
 - Ruby tag (`<ruby></ruby>`)
+
   - : Used with ruby text tags to display [ruby characters](https://en.wikipedia.org/wiki/Ruby_character) (i.e., small annotative characters above other characters).
 
     ```xml
@@ -507,6 +509,7 @@ The following tags are the HTML tags allowed in a cue and require opening and cl
     ```
 
 - Ruby text tag (`<rt></rt>`)
+
   - : Used with ruby tags to display [ruby characters](https://en.wikipedia.org/wiki/Ruby_character) (i.e., small annotative characters above other characters).
 
     ```xml
@@ -514,13 +517,14 @@ The following tags are the HTML tags allowed in a cue and require opening and cl
     ```
 
 - Voice tag (`<v></v>`)
+
   - : Similar to class tag, also used to style the contained text using CSS.
 
     ```xml
     <v Bob>text</v>
     ```
 
-## Methods and properties
+## Instance methods and properties
 
 The methods used in WebVTT are those which are used to alter the cue or region as the attributes for both interfaces are different. We can categorize them for better understanding relating to each interface in WebVTT:
 
@@ -531,7 +535,7 @@ The methods which are available in the {{domxref("VTTCue")}} interface are:
 - {{domxref("VTTCue.getCueAsHTML", "getCueAsHTML()")}} to get the HTML of that cue.
 - A constructor, {{domxref("VTTCue.VTTCue", "VTTCue()")}} for creating new instances of this interface.
 
-Different properties allowing to read and set the characteristics of the cue, like its position, alignment or size are also available. Check {{domxref("VTTCue")}}) for a complete list.
+Different properties allowing to read and set the characteristics of the cue, like its position, alignment or size are also available. Check {{domxref("VTTCue")}} for a complete list.
 
 ### VTTRegion
 
@@ -598,7 +602,7 @@ Prior to Firefox 50, the `AlignSetting` enum (representing possible values for {
 
 WebVTT was implemented in Firefox 24 behind the preference `media.webvtt.enabled`, which is disabled by default; you can enable it by setting this preference to `true`. WebVTT is enabled by default starting in Firefox 31 and can be disabled by setting the preference to `false`.
 
-Prior to Firefox 58, the `REGION` keyword was creating {{domxref("VTTRegion")}} objects, but they were not being used. Firefox 58 now fully supports `VTTRegion` and its use; however, this feature is disabled by default behind the preference `media.webvtt.regions.enabled`; set it to `true` to enable region support in Firefox 58. Regions are enabled by default starting in Firefox 59 (see bugs {{bug(1338030)}} and {{bug(1415805)}}).
+Prior to Firefox 58, the `REGION` keyword was creating {{domxref("VTTRegion")}} objects, but they were not being used. Firefox 58 now fully supports `VTTRegion` and its use; however, this feature is disabled by default behind the preference `media.webvtt.regions.enabled`; set it to `true` to enable region support in Firefox 58. Regions are enabled by default starting in Firefox 59 (see bugs [Firefox bug 1338030](https://bugzil.la/1338030) and [Firefox bug 1415805](https://bugzil.la/1415805)).
 
 ## See also
 

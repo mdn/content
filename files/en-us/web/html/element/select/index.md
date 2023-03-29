@@ -1,17 +1,11 @@
 ---
 title: '<select>: The HTML Select element'
 slug: Web/HTML/Element/select
-tags:
-  - Element
-  - Forms
-  - HTML
-  - HTML forms
-  - Reference
-  - Web
+page-type: html-element
 browser-compat: html.elements.select
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 The **`<select>`** [HTML](/en-US/docs/Web/HTML) element represents a control that provides a menu of options.
 
@@ -19,7 +13,7 @@ The **`<select>`** [HTML](/en-US/docs/Web/HTML) element represents a control tha
 
 The above example shows typical `<select>` usage. It is given an `id` attribute to enable it to be associated with a {{htmlelement("label")}} for accessibility purposes, as well as a `name` attribute to represent the name of the associated data point submitted to the server. Each menu option is defined by an {{htmlelement("option")}} element nested inside the `<select>`.
 
-Each `<option>` element should have a {{htmlattrxref("value", "option")}} attribute containing the data value to submit to the server when that option is selected. If no `value` attribute is included, the value defaults to the text contained inside the element. You can include a {{htmlattrxref("selected", "option")}} attribute on an `<option>` element to make it selected by default when the page first loads.
+Each `<option>` element should have a [`value`](/en-US/docs/Web/HTML/Element/option#value) attribute containing the data value to submit to the server when that option is selected. If no `value` attribute is included, the value defaults to the text contained inside the element. You can include a [`selected`](/en-US/docs/Web/HTML/Element/option#selected) attribute on an `<option>` element to make it selected by default when the page first loads.
 
 The `<select>` element has some unique attributes you can use to control it, such as `multiple` to specify whether multiple options can be selected, and `size` to specify how many options should be shown at once. It also accepts most of the general form input attributes such as `required`, `disabled`, `autofocus`, etc.
 
@@ -31,29 +25,29 @@ For further examples, see [The native form widgets: Drop-down content](/en-US/do
 
 This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 
-- {{htmlattrdef("autocomplete")}}
+- `autocomplete`
   - : A string providing a hint for a {{Glossary("user agent", "user agent's")}} autocomplete feature. See [The HTML autocomplete attribute](/en-US/docs/Web/HTML/Attributes/autocomplete) for a complete list of values and details on how to use autocomplete.
-- {{htmlattrdef("autofocus")}}
+- `autofocus`
   - : This Boolean attribute lets you specify that a form control should have input focus when the page loads. Only one form element in a document can have the `autofocus` attribute.
-- {{htmlattrdef("disabled")}}
+- `disabled`
   - : This Boolean attribute indicates that the user cannot interact with the control. If this attribute is not specified, the control inherits its setting from the containing element, for example {{htmlelement("fieldset")}}; if there is no containing element with the `disabled` attribute set, then the control is enabled.
-- {{htmlattrdef("form")}}
+- `form`
 
-  - : The {{HTMLElement("form")}} element to associate the `<select>` with (its _form owner_). The value of this attribute must be the {{htmlattrxref("id")}} of a `<form>` in the same document. (If this attribute is not set, the `<select>` is associated with its ancestor `<form>` element, if any.)
+  - : The {{HTMLElement("form")}} element to associate the `<select>` with (its _form owner_). The value of this attribute must be the [`id`](/en-US/docs/Web/HTML/Global_attributes#id) of a `<form>` in the same document. (If this attribute is not set, the `<select>` is associated with its ancestor `<form>` element, if any.)
 
     This attribute lets you associate `<select>` elements to `<form>`s anywhere in the document, not just inside a `<form>`. It can also override an ancestor `<form>` element.
 
-- {{htmlattrdef("multiple")}}
+- `multiple`
   - : This Boolean attribute indicates that multiple options can be selected in the list. If it is not specified, then only one option can be selected at a time. When `multiple` is specified, most browsers will show a scrolling list box instead of a single line dropdown.
-- {{htmlattrdef("name")}}
+- `name`
   - : This attribute is used to specify the name of the control.
-- {{htmlattrdef("required")}}
+- `required`
   - : A Boolean attribute indicating that an option with a non-empty string value must be selected.
-- {{htmlattrdef("size")}}
+- `size`
 
   - : If the control is presented as a scrolling list box (e.g. when `multiple` is specified), this attribute represents the number of rows in the list that should be visible at one time. Browsers are not required to present a select element as a scrolled list box. The default value is `0`.
 
-    > **Note:** According to the HTML specification, the default value for size should be `1`; however, in practice, this has been found to break some web sites, and no other browser currently does that, so Mozilla has opted to continue to return `0` for the time being with Firefox.
+    > **Note:** According to the HTML specification, the default value for size should be `1`; however, in practice, this has been found to break some websites, and no other browser currently does that, so Mozilla has opted to continue to return `0` for the time being with Firefox.
 
 ## Usage notes
 
@@ -227,7 +221,7 @@ This example basically:
 
 ```css
 body {
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
 }
 
 .select:focus {
@@ -239,15 +233,22 @@ html body form fieldset#custom div.select[data-multiple] div.header {
 }
 
 html body form fieldset#custom div.select div.header {
-  content: '↓';
-  display: inline-flex;
+  content: "↓";
+  display: flex;
+  flex: 1;
   align-items: center;
   padding: 0;
   position: relative;
+  width: auto;
+  box-sizing: border-box;
+  border-width: 1px;
+  border-style: inherit;
+  border-color: inherit;
+  border-radius: inherit;
 }
 
 html body form fieldset#custom div.select div.header::after {
-  content: '↓';
+  content: "↓";
   align-self: stretch;
   display: flex;
   align-content: center;
@@ -292,10 +293,7 @@ html body form fieldset#custom div.select {
   display: inline-block;
 }
 
-html body form fieldset#custom div.select:focus {
-  border-color: blue;
-}
-
+html body form fieldset#custom div.select:focus,
 html body form fieldset#custom div.select:hover {
   border-color: blue;
 }
@@ -332,16 +330,8 @@ html body form fieldset#custom div.select datalist div.option {
   border-width: 0;
 }
 
-html body form fieldset#custom div.select datalist div.option:hover {
-  background-color: blue;
-  color: white;
-}
-
-html body form fieldset#custom div.select datalist div.option:focus {
-  background-color: blue;
-  color: white;
-}
-
+html body form fieldset#custom div.select datalist div.option:hover,
+html body form fieldset#custom div.select datalist div.option:focus,
 html body form fieldset#custom div.select datalist div.option:checked {
   background-color: blue;
   color: white;
@@ -375,17 +365,6 @@ html body form fieldset#custom div.select div.optgroup div.label {
 html body form fieldset#custom div.select div.optgroup div.option div.label {
   font-weight: normal;
   padding: 0.25em;
-}
-
-html body form fieldset#custom div.select div.header {
-  flex: 1;
-  display: flex;
-  width: auto;
-  box-sizing: border-box;
-  border-width: 1px;
-  border-style: inherit;
-  border-color: inherit;
-  border-radius: inherit;
 }
 
 html body form fieldset#custom div.select div.header span {
@@ -559,34 +538,34 @@ document.forms[0].onsubmit = (e) => {
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories"
+        <a href="/en-US/docs/Web/HTML/Content_categories"
           >Content categories</a
         >
       </th>
       <td>
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
           >Flow content</a
         >,
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content"
           >phrasing content</a
         >,
         <a
-          href="/en-US/docs/Web/Guide/HTML/Content_categories#interactive_content"
+          href="/en-US/docs/Web/HTML/Content_categories#interactive_content"
           >interactive content</a
         >,
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#form_listed"
+        <a href="/en-US/docs/Web/HTML/Content_categories#form_listed"
           >listed</a
         >,
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#form_labelable"
+        <a href="/en-US/docs/Web/HTML/Content_categories#form_labelable"
           >labelable</a
         >,
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#form_resettable"
+        <a href="/en-US/docs/Web/HTML/Content_categories#form_resettable"
           >resettable</a
         >, and
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#form_submittable"
+        <a href="/en-US/docs/Web/HTML/Content_categories#form_submittable"
           >submittable</a
         >
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#form-associated_"
+        <a href="/en-US/docs/Web/HTML/Content_categories#form-associated_"
           >form-associated </a
         >element
       </td>
@@ -606,7 +585,7 @@ document.forms[0].onsubmit = (e) => {
       <th scope="row">Permitted parents</th>
       <td>
         Any element that accepts
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content"
           >phrasing content</a
         >.
       </td>
@@ -614,16 +593,16 @@ document.forms[0].onsubmit = (e) => {
     <tr>
       <th scope="row">Implicit ARIA role</th>
       <td>
-        {{ARIARole("combobox")}} with <strong>no</strong>
+        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/combobox_role"><code>combobox</code></a> with <strong>no</strong>
         <code>multiple</code> attribute and <strong>no</strong>
         <code>size</code> attribute greater than 1, otherwise
-        {{ARIARole("listbox")}}
+        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/listbox_role"><code>listbox</code></a>
       </td>
     </tr>
     <tr>
       <th scope="row">Permitted ARIA roles</th>
       <td>
-        {{ARIARole("menu")}} with <strong>no</strong>
+        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/menu_role"><code>menu</code></a> with <strong>no</strong>
         <code>multiple</code> attribute and <strong>no</strong>
         <code>size</code> attribute greater than 1, otherwise no
         <code>role</code> permitted

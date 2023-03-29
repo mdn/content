@@ -2,14 +2,6 @@
 title: AudioBufferSourceNode()
 slug: Web/API/AudioBufferSourceNode/AudioBufferSourceNode
 page-type: web-api-constructor
-tags:
-  - API
-  - Audio
-  - AudioBufferSourceNode
-  - Constructor
-  - Media
-  - Reference
-  - Web Audio API
 browser-compat: api.AudioBufferSourceNode.AudioBufferSourceNode
 ---
 
@@ -20,7 +12,7 @@ constructor creates a new {{domxref("AudioBufferSourceNode")}} object instance.
 
 ## Syntax
 
-```js
+```js-nolint
 new AudioBufferSourceNode(context, options)
 ```
 
@@ -29,6 +21,7 @@ new AudioBufferSourceNode(context, options)
 - `context`
   - : A reference to an {{domxref("AudioContext")}}.
 - `options` {{optional_inline}}
+
   - : Options are as follows:
 
     - `buffer`

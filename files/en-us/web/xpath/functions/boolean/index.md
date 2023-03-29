@@ -1,9 +1,6 @@
 ---
 title: boolean
 slug: Web/XPath/Functions/boolean
-tags:
-  - XSLT
-  - XSLT_Reference
 ---
 
 {{XsltRef()}}
@@ -12,7 +9,7 @@ The `boolean` function evaluates an expression and returns true or false.
 
 ## Syntax
 
-```js
+```js-nolint
 boolean( expression )
 ```
 

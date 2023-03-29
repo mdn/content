@@ -2,12 +2,6 @@
 title: WebGLRenderingContext.cullFace()
 slug: Web/API/WebGLRenderingContext/cullFace
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.cullFace
 ---
 
@@ -18,7 +12,7 @@ and/or back-facing polygons can be culled.
 
 ## Syntax
 
-```js
+```js-nolint
 cullFace(mode)
 ```
 

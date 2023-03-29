@@ -1,19 +1,17 @@
 ---
 title: content
 slug: Web/CSS/content
-tags:
-  - CSS
-  - CSS Counter
-  - CSS Property
-  - Generated Content
-  - Reference
-  - recipe:css-property
+page-type: css-property
 browser-compat: css.properties.content
 ---
 
 {{CSSRef}}
 
 The **`content`** [CSS](/en-US/docs/Web/CSS) property replaces an element with a generated value. Objects inserted using the `content` property are **anonymous [replaced elements](/en-US/docs/Web/CSS/Replaced_element)**.
+
+{{EmbedInteractiveExample("pages/tabbed/content.html", "tabbed-shorter")}}
+
+## Syntax
 
 ```css
 /* Keywords that cannot be combined with other values */
@@ -30,6 +28,11 @@ content: url("http://www.example.com/test.png") / "This is the alt text";
 
 /* <string> value */
 content: "prefix";
+
+/* list of content values */
+content: "prefix" url("http://www.example.com/test.png");
+content: "prefix" url("http://www.example.com/test.png") "suffix" /
+  "This is some alt text";
 
 /* <counter> values, optionally with <list-style-type> */
 content: counter(chapter_counter);
@@ -57,8 +60,6 @@ content: revert-layer;
 content: unset;
 ```
 
-## Syntax
-
 ### Values
 
 - `none`
@@ -67,6 +68,9 @@ content: unset;
   - : Computes to `none` for the `::before` and `::after` pseudo-elements.
 - {{cssxref("&lt;string&gt;")}}
   - : Specifies the "alt text" for the element. This value can be any number of text characters. Non-Latin characters must be encoded using their Unicode escape sequences: for example, `\000A9` represents the copyright symbol.
+- `<content-list>`
+  - : A list of anonymous inline boxes that will replace the content of the selected element (in the specified order).
+    This list can include strings, images, counters, and so on.
 - {{cssxref("&lt;image&gt;")}}
   - : An {{cssxref("&lt;image&gt;")}}, denoted by the {{cssxref("url", "url()")}} or {{cssxref("&lt;gradient&gt;")}} data type, or part of the webpage, defined by the {{cssxref("element", "element()")}} function, denoting the content to display.
 - {{cssxref("counter", "counter()")}}
@@ -83,6 +87,10 @@ content: unset;
   - : These values are replaced by the appropriate string from the {{cssxref("quotes")}} property.
 - `no-open-quote` | `no-close-quote`
   - : Introduces no content, but increments (decrements) the level of nesting for quotes.
+- `<content-list> / "Alternative text"`
+  - : Alternative text may be specified for an image (or list of content items) by appending a forward slash and then the text.
+    The alternative text is intended for speech output by screen-readers, but may also be displayed in some browsers.
+    Note that if the browser does not support alternative text, neither the content or alternative text will be used.
 
 ## Accessibility concerns
 
@@ -110,21 +118,25 @@ This example inserts quotation marks around quotes, and adds the word "Chapter" 
 
 ```html
 <h1>5</h1>
-<p>According to Sir Tim Berners-Lee,
-  <q cite="http://www.w3.org/People/Berners-Lee/FAQ.html#Internet">I was
-    lucky enough to invent the Web at the time when the Internet
-    already existed - and had for a decade and a half.</q>
-  We must understand that there is nothing fundamentally wrong
-  with building on the contributions of others.
+<p>
+  According to Sir Tim Berners-Lee,
+  <q cite="http://www.w3.org/People/Berners-Lee/FAQ.html#Internet">
+    I was lucky enough to invent the Web at the time when the Internet already
+    existed - and had for a decade and a half.
+  </q>
+  We must understand that there is nothing fundamentally wrong with building on
+  the contributions of others.
 </p>
 
 <h1>6</h1>
-<p>According to the Mozilla Manifesto,
-  <q cite="http://www.mozilla.org/en-US/about/manifesto/">Individuals
-    must have the ability to shape the Internet and
-    their own experiences on the Internet.</q>
-  Therefore, we can infer that contributing to the open web
-  can protect our own individual experiences on it.
+<p>
+  According to the Mozilla Manifesto,
+  <q cite="http://www.mozilla.org/en-US/about/manifesto/">
+    Individuals must have the ability to shape the Internet and their own
+    experiences on the Internet.
+  </q>
+  Therefore, we can infer that contributing to the open web can protect our own
+  individual experiences on it.
 </p>
 ```
 
@@ -144,9 +156,9 @@ q::after {
 }
 
 h1::before {
-  content: "Chapter ";  /* The trailing space creates separation
-                           between the added content and the
-                           rest of the content */
+  content: "Chapter "; /* The trailing space creates separation
+                          between the added content and the
+                          rest of the content */
 }
 ```
 
@@ -154,9 +166,10 @@ h1::before {
 
 {{EmbedLiveSample('Headings_and_quotes', '100%', 200)}}
 
-### Image combined with text
+### Image combined with alternative text
 
-This example inserts an image before the link. If the image is not found, it inserts text instead.
+This example inserts an image before the link and provides alternative text that a screen reader can output as speech.
+Some browsers may also display the alternative text.
 
 #### HTML
 
@@ -166,9 +179,14 @@ This example inserts an image before the link. If the image is not found, it ins
 
 #### CSS
 
+The CSS to show the image and set the alternative text is shown below.
+This also sets the font and color for the content.
+This will only be used on browsers that _display_ the alternative text.
+
 ```css
 a::before {
-  content: url("https://mozorg.cdn.mozilla.net/media/img/favicon.ico") / " MOZILLA: ";
+  content: url("https://mozorg.cdn.mozilla.net/media/img/favicon.ico") /
+    " MOZILLA: ";
   font: x-small Arial, sans-serif;
   color: gray;
 }
@@ -176,7 +194,14 @@ a::before {
 
 #### Result
 
+The browser should display the icon before the link below.
+If using a screen reader, it should speak the word "MOZILLA" when it reaches the image.
+
 {{EmbedLiveSample('Image_combined_with_text', '100%', 60)}}
+
+Note that on a browser that does not support the alternative text syntax, the whole line is invalid.
+In this case neither the image or alternative text will be used!
+You could partially address this issue by including CSS that adds the image before the line with them both.
 
 ### Targeting classes
 
@@ -198,9 +223,9 @@ This example inserts additional text after special items in a list.
 
 ```css
 .new-entry::after {
-  content: " New!";  /* The leading space creates separation
-                        between the added content and the
-                        rest of the content */
+  content: " New!"; /* The leading space creates separation
+                       between the added content and the
+                       rest of the content */
   color: red;
 }
 ```
@@ -217,10 +242,12 @@ This example inserts an image before each link, and adds its `id` attribute afte
 
 ```html
 <ul>
-  <li><a id="moz" href="https://www.mozilla.org/">
-    Mozilla Home Page</a></li>
-  <li><a id="mdn" href="https://developer.mozilla.org/">
-    Mozilla Developer Network</a></li>
+  <li><a id="moz" href="https://www.mozilla.org/"> Mozilla Home Page</a></li>
+  <li>
+    <a id="mdn" href="https://developer.mozilla.org/">
+      Mozilla Developer Network</a
+    >
+  </li>
 </ul>
 ```
 
@@ -270,7 +297,8 @@ This example replaces an element's content with an image. You can replace the co
   content: url("mdn.svg");
 }
 
-#replaced::after { /* will not show if element replacement is supported */
+/* will not show if element replacement is supported */
+#replaced::after {
   content: " (" attr(id) ")";
 }
 ```

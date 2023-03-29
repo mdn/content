@@ -1,12 +1,7 @@
 ---
 title: Date.prototype.getDate()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getDate
-tags:
-  - Date
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.Date.getDate
 ---
 
@@ -19,7 +14,7 @@ specified date according to local time.
 
 ## Syntax
 
-```js
+```js-nolint
 getDate()
 ```
 
@@ -36,7 +31,7 @@ The second statement below assigns the value 25 to the variable `day`, based
 on the value of the {{jsxref("Date")}} object `xmas95`.
 
 ```js
-const xmas95 = new Date('December 25, 1995 23:15:30');
+const xmas95 = new Date("December 25, 1995 23:15:30");
 const day = xmas95.getDate();
 
 console.log(day); // 25

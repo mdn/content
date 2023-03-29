@@ -1,11 +1,7 @@
 ---
 title: Styling columns
 slug: Web/CSS/CSS_Columns/Styling_Columns
-tags:
-  - CSS
-  - CSS Multi-column Layout
-  - Guide
-  - Layout
+page-type: guide
 ---
 
 {{CSSRef}}

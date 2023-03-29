@@ -2,14 +2,6 @@
 title: GamepadHapticActuator.pulse()
 slug: Web/API/GamepadHapticActuator/pulse
 page-type: web-api-instance-method
-tags:
-  - API
-  - Gamepad
-  - Gamepad API
-  - GamepadHapticActuator
-  - Method
-  - Reference
-  - pulse
 browser-compat: api.GamepadHapticActuator.pulse
 ---
 
@@ -19,7 +11,7 @@ The **`pulse()`** method of the {{domxref("GamepadHapticActuator")}} interface m
 
 ## Syntax
 
-```js
+```js-nolint
 pulse(value, duration)
 ```
 

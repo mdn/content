@@ -2,12 +2,6 @@
 title: WebGLRenderingContext.polygonOffset()
 slug: Web/API/WebGLRenderingContext/polygonOffset
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.polygonOffset
 ---
 
@@ -22,7 +16,7 @@ into the depth buffer.
 
 ## Syntax
 
-```js
+```js-nolint
 polygonOffset(factor, units)
 ```
 
@@ -57,7 +51,7 @@ To check the current polygon offset factor or units, query the
 
 ```js
 gl.getParameter(gl.POLYGON_OFFSET_FACTOR); // 2
-gl.getParameter(gl.POLYGON_OFFSET_UNITS);  // 3
+gl.getParameter(gl.POLYGON_OFFSET_UNITS); // 3
 ```
 
 ## Specifications

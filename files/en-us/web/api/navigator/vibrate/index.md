@@ -2,12 +2,6 @@
 title: Navigator.vibrate()
 slug: Web/API/Navigator/vibrate
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Navigator
-  - Reference
-  - Vibration API
 browser-compat: api.Navigator.vibrate
 ---
 
@@ -24,7 +18,7 @@ long vibration, it is truncated: the max length depends on the implementation.
 
 ## Syntax
 
-```js
+```js-nolint
 vibrate(pattern)
 ```
 
@@ -43,11 +37,17 @@ will cancel any currently ongoing vibration pattern.
 
 A boolean.
 
+## Security
+
+[Sticky user activation](/en-US/docs/Web/Security/User_activation) is required. The user has to interact with the page or a UI element in order for this feature to work.
+
 ## Examples
 
 ```js
 navigator.vibrate(200); // vibrate for 200ms
-navigator.vibrate([100,30,100,30,100,30,200,30,200,30,200,30,100,30,100,30,100]); // Vibrate 'SOS' in Morse.
+navigator.vibrate([
+  100, 30, 100, 30, 100, 30, 200, 30, 200, 30, 200, 30, 100, 30, 100, 30, 100,
+]); // Vibrate 'SOS' in Morse.
 ```
 
 ## Specifications

@@ -2,14 +2,6 @@
 title: WorkerNavigator
 slug: Web/API/WorkerNavigator
 page-type: web-api-interface
-tags:
-  - API
-  - HTML DOM
-  - Interface
-  - Reference
-  - Web Workers
-  - WorkerNavigator
-  - Workers
 browser-compat: api.WorkerNavigator
 ---
 
@@ -17,7 +9,7 @@ browser-compat: api.WorkerNavigator
 
 The **`WorkerNavigator`** interface represents a subset of the {{DOMxRef("Navigator")}} interface allowed to be accessed from a {{DOMxRef("Worker")}}. Such an object is initialized for each worker and is available via the {{DOMxRef("WorkerGlobalScope.navigator", "self.navigator")}} property.
 
-## Properties
+## Instance properties
 
 _The `WorkerNavigator` interface doesn't inherit any property._
 
@@ -37,9 +29,11 @@ _The `WorkerNavigator` interface doesn't inherit any property._
   - : Returns an array of strings representing the languages known to the user, by order of preference.
 - {{DOMxRef("WorkerNavigator.locks")}} {{ReadOnlyInline}}
   - : Returns a {{DOMxRef("LockManager")}} object which provides methods for requesting a new {{DOMxRef('Lock')}} object and querying for an existing `Lock` object.
+- {{DOMxRef("WorkerNavigator.mediaCapabilities")}} {{ReadOnlyInline}}
+  - : Returns a {{domxref("MediaCapabilities")}} object that can expose information about the decoding and encoding capabilities for a given format and output capabilities.
 - {{DOMxRef("WorkerNavigator.onLine")}} {{ReadOnlyInline}}
   - : Returns a boolean value indicating whether the browser is online.
-- {{DOMxRef("WorkerNavigator.permissions")}} {{Experimental_Inline}} {{ReadOnlyInline}}
+- {{DOMxRef("WorkerNavigator.permissions")}} {{ReadOnlyInline}}
   - : Returns a {{DOMxRef("Permissions")}} object that can be used to query and update permission status of APIs covered by the [Permissions API](/en-US/docs/Web/API/Permissions_API).
 - {{DOMxRef("WorkerNavigator.platform")}} {{Deprecated_Inline}} {{ReadOnlyInline}}
   - : Returns a string representing the platform of the browser. Do not rely on this property to return the correct value.
@@ -54,7 +48,7 @@ _The `WorkerNavigator` interface doesn't inherit any property._
 - {{domxref("WorkerNavigator.userAgentData")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns a {{domxref("NavigatorUAData")}} object, which gives access to information about the browser and operating system of the user.
 
-## Methods
+## Instance methods
 
 _The `WorkerNavigator` interface neither inherits nor implements any method._
 

@@ -2,16 +2,6 @@
 title: TouchEvent.touches
 slug: Web/API/TouchEvent/touches
 page-type: web-api-instance-property
-tags:
-  - API
-  - DOM
-  - DOM Reference
-  - Mobile
-  - Property
-  - Read-only
-  - Reference
-  - TouchEvent
-  - touch
 browser-compat: api.TouchEvent.touches
 ---
 
@@ -28,7 +18,7 @@ the screen.
 ## Value
 
 A {{ domxref("TouchList") }} listing all the {{ domxref("Touch") }} objects for touch points that are still in contact with the touch surface, regardless of whether or not they've changed or what their target element was at `touchstart`
-    time.
+time.
 
 ## Examples
 
@@ -43,16 +33,28 @@ that were activated and then invokes different handlers depending on the number 
 points.
 
 ```js
-someElement.addEventListener('touchstart', (e) => {
-   // Invoke the appropriate handler depending on the
-   // number of touch points.
-   switch (e.touches.length) {
-     case 1: handle_one_touch(e); break;
-     case 2: handle_two_touches(e); break;
-     case 3: handle_three_touches(e); break;
-     default: console.log("Not supported"); break;
-   }
- }, false);
+someElement.addEventListener(
+  "touchstart",
+  (e) => {
+    // Invoke the appropriate handler depending on the
+    // number of touch points.
+    switch (e.touches.length) {
+      case 1:
+        handle_one_touch(e);
+        break;
+      case 2:
+        handle_two_touches(e);
+        break;
+      case 3:
+        handle_three_touches(e);
+        break;
+      default:
+        console.log("Not supported");
+        break;
+    }
+  },
+  false
+);
 ```
 
 ## Specifications

@@ -1,12 +1,7 @@
 ---
 title: mask-origin
 slug: Web/CSS/mask-origin
-tags:
-  - CSS
-  - CSS Masking
-  - CSS Property
-  - Reference
-  - recipe:css-property
+page-type: css-property
 browser-compat: css.properties.mask-origin
 ---
 

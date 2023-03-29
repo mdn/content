@@ -1,15 +1,10 @@
 ---
 title: Inline elements
 slug: Web/HTML/Inline_elements
-tags:
-  - Beginner
-  - Elements
-  - HTML
-  - HTML Elements
-  - HTML:Element Reference
-  - Layout
-  - Reference
+page-type: guide
 ---
+
+{{HTMLSidebar}}
 
 In this article, we'll examine HTML inline-level elements and how they differ from [block-level elements](/en-US/docs/Web/HTML/Block-level_elements).
 
@@ -25,7 +20,7 @@ This is most easily demonstrated with a simple example. First, some simple CSS t
 
 ```css
 .highlight {
-  background-color:#ee3;
+  background-color: #ee3;
 }
 ```
 
@@ -34,9 +29,11 @@ This is most easily demonstrated with a simple example. First, some simple CSS t
 Let's look at the following example which demonstrates an inline element:
 
 ```html
-<div>The following span is an <span class="highlight">inline element</span>;
-its background has been colored to display both the beginning and end of
-the inline element's influence.</div>
+<div>
+  The following span is an <span class="highlight">inline element</span>; its
+  background has been colored to display both the beginning and end of the
+  inline element's influence.
+</div>
 ```
 
 In this example, the {{HTMLElement("div")}} block-level element contains some text. Within that text is a {{HTMLElement("span")}} element, which is an inline element. Because the `<span>` element is inline, the paragraph correctly renders as a single, unbroken text flow, like this:
@@ -49,7 +46,7 @@ body {
 }
 
 .highlight {
-  background-color:#ee3;
+  background-color: #ee3;
 }
 ```
 
@@ -60,9 +57,12 @@ body {
 Now let's change that `<span>` into a block-level element, such as {{HTMLElement("p")}}:
 
 ```html
-<div>The following paragraph is a <p class="highlight">block-level element;</p>
-its background has been colored to display both the beginning and end of
-the block-level element's influence.</div>
+<div>
+  The following paragraph is a
+  <p class="highlight">block-level element;</p>
+  its background has been colored to display both the beginning and end of the
+  block-level element's influence.
+</div>
 ```
 
 ```css hidden
@@ -73,7 +73,7 @@ body {
 }
 
 .highlight {
-  background-color:#ee3;
+  background-color: #ee3;
 }
 ```
 
@@ -92,6 +92,7 @@ You can change the _visual presentation_ of an element using the CSS {{cssxref("
 In brief, here are the basic conceptual differences between inline and block-level elements:
 
 - Content model
+
   - : Generally, inline elements may contain only data and other inline elements. An exception is the inline `a` element which may contain block level elements such as `div`.
     > **Note:** Links that wrap multiple lines of block-level content make for a poor-to-unusable experience for some assistive technologies and should be avoided.
 
@@ -100,7 +101,7 @@ In brief, here are the basic conceptual differences between inline and block-lev
 
 ## List of "inline" elements
 
-The following elements are inline by default (although block and inline elements are no longer defined in HTML 5, use [content categories](/en-US/docs/Web/Guide/HTML/Content_categories) instead):
+The following elements are inline by default (although block and inline elements are no longer defined in HTML 5, use [content categories](/en-US/docs/Web/HTML/Content_categories) instead):
 
 - {{ HTMLElement("a") }}
 - {{ HTMLElement("abbr") }}
@@ -163,7 +164,5 @@ The following elements are inline by default (although block and inline elements
 - [Block-level elements](/en-US/docs/Web/HTML/Block-level_elements)
 - [HTML element reference](/en-US/docs/Web/HTML/Element)
 - {{cssxref("display")}}
-- [Content categories](/en-US/docs/Web/Guide/HTML/Content_categories)
+- [Content categories](/en-US/docs/Web/HTML/Content_categories)
 - [Block and Inline Layout in Normal Flow](/en-US/docs/Web/CSS/CSS_Flow_Layout/Block_and_Inline_Layout_in_Normal_Flow)
-
-{{QuickLinksWithSubpages("/en-US/docs/Web/HTML/")}}

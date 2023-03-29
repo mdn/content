@@ -1,13 +1,7 @@
 ---
 title: RegExp
 slug: Web/JavaScript/Reference/Global_Objects/RegExp
-tags:
-  - Class
-  - JavaScript
-  - Reference
-  - RegExp
-  - Regular Expressions
-  - Polyfill
+page-type: javascript-class
 browser-compat: javascript.builtins.RegExp
 ---
 
@@ -31,9 +25,9 @@ The following three expressions create the same regular expression object:
 ```js
 const re = /ab+c/i; // literal notation
 // OR
-const re = new RegExp('ab+c', 'i'); // constructor with string pattern as first argument
+const re = new RegExp("ab+c", "i"); // constructor with string pattern as first argument
 // OR
-const re = new RegExp(/ab+c/, 'i'); // constructor with regular expression literal as first argument
+const re = new RegExp(/ab+c/, "i"); // constructor with regular expression literal as first argument
 ```
 
 Before regular expressions can be used, they have to be compiled. This process allows them to perform matches more efficiently. More about the process can be found in [dotnet docs](https://docs.microsoft.com/dotnet/standard/base-types/compilation-and-reuse-in-regular-expressions).
@@ -53,7 +47,7 @@ For example, the following are equivalent:
 ```js
 const re = /\w+/;
 // OR
-const re = new RegExp('\\w+');
+const re = new RegExp("\\w+");
 ```
 
 ### Special handling for regexes
@@ -96,7 +90,7 @@ re.exec("bar"); // [ 'bar', index: 0, input: 'bar', groups: undefined ]
 
 ### Perl-like RegExp properties
 
-Note that several of the {{JSxRef("RegExp")}} properties have both long and short (Perl-like) names. Both names always refer to the same value. (Perl is the programming language from which JavaScript modeled its regular expressions.) See also [deprecated `RegExp` properties](/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features#regexp_properties).
+Note that several of the {{JSxRef("RegExp")}} properties have both long and short (Perl-like) names. Both names always refer to the same value. (Perl is the programming language from which JavaScript modeled its regular expressions.) See also [deprecated `RegExp` properties](/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features#regexp).
 
 ## Constructor
 
@@ -107,9 +101,25 @@ Note that several of the {{JSxRef("RegExp")}} properties have both long and shor
 
 - {{jsxref("RegExp.@@species", "get RegExp[@@species]")}}
   - : The constructor function that is used to create derived objects.
+- {{JSxRef("RegExp.n", "RegExp.$1, …, RegExp.$9")}} {{deprecated_inline}}
+  - : Static read-only properties that contain parenthesized substring matches.
+- {{JSxRef("RegExp.input", "RegExp.input ($_)")}} {{deprecated_inline}}
+  - : A static property that contains the last string against which a regular expression was successfully matched.
+- {{JSxRef("RegExp.lastMatch", "RegExp.lastMatch ($&)")}} {{deprecated_inline}}
+  - : A static read-only property that contains the last matched substring.
+- {{JSxRef("RegExp.lastParen", "RegExp.lastParen ($+)")}} {{deprecated_inline}}
+  - : A static read-only property that contains the last parenthesized substring match.
+- {{JSxRef("RegExp.leftContext", "RegExp.leftContext ($`)")}} {{deprecated_inline}}
+  - : A static read-only property that contains the substring preceding the most recent match.
+- {{JSxRef("RegExp.rightContext", "RegExp.rightContext ($')")}} {{deprecated_inline}}
+  - : A static read-only property that contains the substring following the most recent match.
 
 ## Instance properties
 
+These properties are defined on `RegExp.prototype` and shared by all `RegExp` instances.
+
+- {{jsxref("Object/constructor", "RegExp.prototype.constructor")}}
+  - : The constructor function that created the instance object. For `RegExp` instances, the initial value is the {{jsxref("RegExp/RegExp", "RegExp")}} constructor.
 - {{JSxRef("RegExp.prototype.flags")}}
   - : A string that contains the flags of the `RegExp` object.
 - {{JSxRef("RegExp.prototype.dotAll")}}
@@ -128,7 +138,10 @@ Note that several of the {{JSxRef("RegExp")}} properties have both long and shor
   - : Whether or not the search is sticky.
 - {{JSxRef("RegExp.prototype.unicode")}}
   - : Whether or not Unicode features are enabled.
-- {{jsxref("RegExp.prototype.lastIndex")}}
+
+These properties are own properties of each `RegExp` instance.
+
+- {{jsxref("RegExp/lastIndex", "lastIndex")}}
   - : The index at which to start the next match.
 
 ## Instance methods
@@ -162,21 +175,21 @@ In the replacement text, the script uses `$1` and `$2` to indicate the results o
 
 ```js
 const re = /(\w+)\s(\w+)/;
-const str = 'John Smith';
-const newstr = str.replace(re, '$2, $1');
+const str = "Maria Cruz";
+const newstr = str.replace(re, "$2, $1");
 console.log(newstr);
 ```
 
-This displays `"Smith, John"`.
+This displays `"Cruz, Maria"`.
 
 ### Using regular expression to split lines with different line endings/ends of line/line breaks
 
 The default line ending varies depending on the platform (Unix, Windows, etc.). The line splitting provided in this example works on all platforms.
 
 ```js
-const text = 'Some text\nAnd some more\r\nAnd yet\rThis is the end';
+const text = "Some text\nAnd some more\r\nAnd yet\rThis is the end";
 const lines = text.split(/\r\n|\r|\n/);
-console.log(lines); // logs [ 'Some text', 'And some more', 'And yet', 'This is the end' ]
+console.log(lines); // [ 'Some text', 'And some more', 'And yet', 'This is the end' ]
 ```
 
 Note that the order of the patterns in the regular expression matters.
@@ -184,7 +197,7 @@ Note that the order of the patterns in the regular expression matters.
 ### Using regular expression on multiple lines
 
 ```js
-const s = 'Please yes\nmake my day!';
+const s = "Please yes\nmake my day!";
 
 s.match(/yes.*day/);
 // Returns null
@@ -198,14 +211,14 @@ s.match(/yes[^]*day/);
 The {{JSxRef("Global_Objects/RegExp/sticky", "sticky")}} flag indicates that the regular expression performs sticky matching in the target string by attempting to match starting at {{jsxref("RegExp.prototype.lastIndex")}}.
 
 ```js
-const str = '#foo#';
+const str = "#foo#";
 const regex = /foo/y;
 
 regex.lastIndex = 1;
-regex.test(str)      // true
+regex.test(str); // true
 regex.lastIndex = 5;
-regex.test(str)      // false (lastIndex is taken into account with sticky flag)
-regex.lastIndex      // 0 (reset after match failure)
+regex.test(str); // false (lastIndex is taken into account with sticky flag)
+regex.lastIndex; // 0 (reset after match failure)
 ```
 
 ### The difference between the sticky flag and the global flag
@@ -222,7 +235,7 @@ while ((r = re.exec("123 456"))) {
 // [ '1', index: 0, input: '123 456', groups: undefined ] AND re.lastIndex 1
 // [ '2', index: 1, input: '123 456', groups: undefined ] AND re.lastIndex 2
 // [ '3', index: 2, input: '123 456', groups: undefined ] AND re.lastIndex 3
-//   ... and no more match.
+//  … and no more match.
 ```
 
 With the global flag `g`, all 6 digits would be matched, not just 3.
@@ -236,27 +249,27 @@ To match characters from other languages such as Cyrillic or Hebrew, use `\uhhhh
 This example demonstrates how one can separate out Unicode characters from a word.
 
 ```js
-const text = 'Образец text на русском языке';
+const text = "Образец text на русском языке";
 const regex = /[\u0400-\u04FF]+/g;
 
 const match = regex.exec(text);
-console.log(match[0]); // logs 'Образец'
-console.log(regex.lastIndex); // logs '7'
+console.log(match[0]); // 'Образец'
+console.log(regex.lastIndex); // 7
 
 const match2 = regex.exec(text);
-console.log(match2[0]); // logs 'на' [did not log 'text']
-console.log(regex.lastIndex); // logs '15'
+console.log(match2[0]); // 'на' (did not log 'text')
+console.log(regex.lastIndex); // 15
 
 // and so on
 ```
 
-The [Unicode property escapes](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Unicode_Property_Escapes) feature introduces a solution, by allowing for a statement as simple as `\p{scx=Cyrl}`.
+The [Unicode property escapes](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Unicode_Property_Escapes) feature provides a simpler way to target particular Unicode ranges, by allowing for statements like `\p{scx=Cyrl}` (to match any Cyrillic letter), or `\p{L}/u` (to match a letter from any language).
 
-### Extracting sub-domain name from URL
+### Extracting subdomain name from URL
 
 ```js
 const url = "http://xxx.domain.com";
-console.log(/^https?:\/\/(.+?)\./.exec(url)[1]); // logs 'xxx'
+console.log(/^https?:\/\/(.+?)\./.exec(url)[1]); // 'xxx'
 ```
 
 > **Note:** Instead of using regular expressions for parsing URLs, it is usually better to use the browsers built-in URL parser by using the [URL API](/en-US/docs/Web/API/URL_API).
@@ -264,10 +277,10 @@ console.log(/^https?:\/\/(.+?)\./.exec(url)[1]); // logs 'xxx'
 ### Building a regular expression from dynamic inputs
 
 ```js
-const breakfasts = ['bacon', 'eggs', 'oatmeal', 'toast', 'cereal'];
-const order = 'Let me get some bacon and eggs, please';
+const breakfasts = ["bacon", "eggs", "oatmeal", "toast", "cereal"];
+const order = "Let me get some bacon and eggs, please";
 
-order.match(new RegExp(`\\b(${breakfasts.join('|')})\\b`, 'g'));
+order.match(new RegExp(`\\b(${breakfasts.join("|")})\\b`, "g"));
 // Returns ['bacon', 'eggs']
 ```
 
@@ -285,19 +298,19 @@ Starting with Firefox 34, in the case of a capturing group with quantifiers prev
 
 ```js
 // Firefox 33 or older
-'x'.replace(/x(.)?/g, (m, group) => {
+"x".replace(/x(.)?/g, (m, group) => {
   console.log(`group: ${JSON.stringify(group)}`);
 });
 // group: ""
 
 // Firefox 34 or newer
-'x'.replace(/x(.)?/g, (m, group) => {
+"x".replace(/x(.)?/g, (m, group) => {
   console.log(`group: ${group}`);
 });
 // group: undefined
 ```
 
-Note that due to web compatibility, `RegExp.$N` will still return an empty string instead of `undefined` ([bug 1053944](https://bugzilla.mozilla.org/show_bug.cgi?id=1053944)).
+Note that due to web compatibility, `RegExp.$N` will still return an empty string instead of `undefined` ([bug 1053944](https://bugzil.la/1053944)).
 
 ## See also
 

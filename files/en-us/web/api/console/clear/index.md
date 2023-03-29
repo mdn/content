@@ -2,13 +2,6 @@
 title: console.clear()
 slug: Web/API/console/clear
 page-type: web-api-instance-method
-tags:
-  - API
-  - Debugging
-  - Method
-  - Reference
-  - console
-  - web console
 browser-compat: api.console.clear
 ---
 
@@ -18,7 +11,7 @@ The **`console.clear()`** method clears the console if the console allows it. A 
 
 ## Syntax
 
-```js
+```js-nolint
 clear()
 ```
 

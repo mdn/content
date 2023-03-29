@@ -1,19 +1,17 @@
 ---
 title: 'HTML attribute: accept'
 slug: Web/HTML/Attributes/accept
-tags:
-  - Accept
-  - Attribute
-  - File
-  - HTML
-  - Input
-  - Reference
+page-type: html-attribute
 browser-compat: html.elements.input.accept
 ---
 
 {{HTMLSidebar}}
 
 The **`accept`** attribute takes as its value a comma-separated list of one or more file types, or [unique file type specifiers](#unique_file_type_specifiers), describing which file types to allow.
+
+{{EmbedInteractiveExample("pages/tabbed/attribute-accept.html", "tabbed-shorter")}}
+
+## Overview
 
 The accept property is an attribute of the {{HTMLElement("input/file", "file")}} {{htmlelement("input")}} type. It was supported on the {{htmlelement("form")}} element, but was removed in favor of {{HTMLElement("input/file", "file")}}.
 
@@ -22,16 +20,18 @@ Because a given file type may be identified in more than one manner, it's useful
 For instance, there are a number of ways Microsoft Word files can be identified, so a site that accepts Word files might use an `<input>` like this:
 
 ```html
-<input type="file" id="docpicker"
-  accept=".doc,.docx,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document">
+<input
+  type="file"
+  id="docpicker"
+  accept=".doc,.docx,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document" />
 ```
 
 Whereas if you're accepting a media file, you may want to be include any format of that media type:
 
 ```html
-<input type="file" id="soundFile" accept="audio/*">
-<input type="file" id="videoFile" accept="video/*">
-<input type="file" id="imageFile" accept="image/*">
+<input type="file" id="soundFile" accept="audio/*" />
+<input type="file" id="videoFile" accept="video/*" />
+<input type="file" id="imageFile" accept="image/*" />
 ```
 
 The `accept` attribute doesn't validate the types of the selected files; it provides hints for browsers to guide users towards selecting the correct file types. It is still possible (in most cases) for users to toggle an option in the file chooser that makes it possible to override this and select any file they wish, and then choose incorrect file types.
@@ -45,15 +45,15 @@ When set on a file input type, the native file picker that opens up should only 
 ```html
 <p>
   <label for="soundFile">Select an audio file:</label>
-  <input type="file" id="soundFile" accept="audio/*">
+  <input type="file" id="soundFile" accept="audio/*" />
 </p>
 <p>
   <label for="videoFile">Select a video file:</label>
-  <input type="file" id="videoFile" accept="video/*">
+  <input type="file" id="videoFile" accept="video/*" />
 </p>
 <p>
   <label for="imageFile">Select some images:</label>
-  <input type="file" id="imageFile" accept="image/*" multiple>
+  <input type="file" id="imageFile" accept="image/*" multiple />
 </p>
 ```
 
@@ -74,7 +74,7 @@ A **unique file type specifier** is a string that describes a type of file that 
 The `accept` attribute takes as its value a string containing one or more of these unique file type specifiers, separated by commas. For example, a file picker that needs content that can be presented as an image, including both standard image formats and PDF files, might look like this:
 
 ```html
-<input type="file" accept="image/*,.pdf">
+<input type="file" accept="image/*,.pdf" />
 ```
 
 ## Using file inputs
@@ -83,13 +83,13 @@ The `accept` attribute takes as its value a string containing one or more of the
 
 ```html
 <form method="post" enctype="multipart/form-data">
- <div>
-   <label for="file">Choose file to upload</label>
-   <input type="file" id="file" name="file" multiple>
- </div>
- <div>
-   <button>Submit</button>
- </div>
+  <div>
+    <label for="file">Choose file to upload</label>
+    <input type="file" id="file" name="file" multiple />
+  </div>
+  <div>
+    <button>Submit</button>
+  </div>
 </form>
 ```
 
@@ -113,7 +113,7 @@ Including the [`multiple`](multiple) attribute, as shown above, specifies that m
 
 Often you won't want the user to be able to pick any arbitrary type of file; instead, you often want them to select files of a specific type or types. For example, if your file input lets users upload a profile picture, you probably want them to select web-compatible image formats, such as {{Glossary("JPEG")}} or {{Glossary("PNG")}}.
 
-Acceptable file types can be specified with the {{htmlattrxref("accept","input/file")}} attribute, which takes a comma-separated list of allowed file extensions or MIME types. Some examples:
+Acceptable file types can be specified with the [`accept`](/en-US/docs/Web/HTML/Element/input/file#accept) attribute, which takes a comma-separated list of allowed file extensions or MIME types. Some examples:
 
 - `accept="image/png"` or `accept=".png"` — Accepts PNG files.
 - `accept="image/png, image/jpeg"` or `accept=".png, .jpg, .jpeg"` — Accept PNG or JPEG files.
@@ -126,8 +126,11 @@ Let's look at a more complete example:
 <form method="post" enctype="multipart/form-data">
   <div>
     <label for="profile_pic">Choose file to upload</label>
-    <input type="file" id="profile_pic" name="profile_pic"
-          accept=".jpg, .jpeg, .png">
+    <input
+      type="file"
+      id="profile_pic"
+      name="profile_pic"
+      accept=".jpg, .jpeg, .png" />
   </div>
   <div>
     <button>Submit</button>

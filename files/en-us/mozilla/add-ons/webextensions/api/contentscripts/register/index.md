@@ -1,13 +1,7 @@
 ---
 title: contentScripts.register()
 slug: Mozilla/Add-ons/WebExtensions/API/contentScripts/register
-tags:
-  - API
-  - Extensions
-  - Method
-  - Reference
-  - contentScripts
-  - register
+page-type: webextension-api-function
 browser-compat: webextensions.api.contentScripts.register
 ---
 
@@ -21,7 +15,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ## Syntax
 
-```js
+```js-nolint
 let registering = browser.contentScripts.register(
   contentScriptOptions       // object
 )

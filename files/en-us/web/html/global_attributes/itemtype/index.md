@@ -1,13 +1,7 @@
 ---
 title: itemtype
 slug: Web/HTML/Global_attributes/itemtype
-tags:
-  - Attribute
-  - Global attribute
-  - HTML
-  - HTML Microdata
-  - Microdata
-  - Reference
+page-type: html-attribute
 browser-compat: html.global_attributes.itemtype
 ---
 
@@ -141,36 +135,52 @@ This example uses microdata attributes to represent structured data for a produc
 
 ```html
 <div itemscope itemtype="http://schema.org/Product">
-  <span itemprop="brand">ACME<br></span>
-  <span itemprop="name">Executive Anvil<br></span>
-  <img itemprop="image" src="https://pixabay.com/static/uploads/photo/2015/09/05/18/15/suitcase-924605_960_720.png" width="50" height="50" alt="Executive Anvil logo" /><br>
+  <span itemprop="brand">ACME<br /></span>
+  <span itemprop="name">Executive Anvil<br /></span>
+  <img
+    itemprop="image"
+    src="https://pixabay.com/static/uploads/photo/2015/09/05/18/15/suitcase-924605_960_720.png"
+    width="50"
+    height="50"
+    alt="Executive Anvil logo" /><br />
 
-<span itemprop="description">Sleeker than ACME's Classic Anvil, the
-    Executive Anvil is perfect for the business traveler
-    looking for something to drop from a height.
-  <br>
-</span>
+  <span itemprop="description">
+    Sleeker than ACME's Classic Anvil, the Executive Anvil is perfect for the
+    business traveler looking for something to drop from a height.
+    <br />
+  </span>
 
-  Product #: <span itemprop="mpn">925872<br></span>
-  <span itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
-    Rating: <span itemprop="ratingValue">4.4</span> stars, based on <span itemprop="reviewCount">89
-      </span> reviews
-  </span><p>
-
-<span itemprop="offers" itemscope itemtype="http://schema.org/Offer">
-    Regular price: $179.99<br>
-    <meta itemprop="priceCurrency" content="USD" />
-    <span itemprop="price">Sale price: $119.99<br></span>
-    (Sale ends <time itemprop="priceValidUntil" datetime="2020-11-05">
-      5 November!</time>)<br>
-    Available from: <span itemprop="seller" itemscope itemtype="http://schema.org/Organization">
-                      <span itemprop="name">Executive Objects<br></span>
-                    </span>
-    Condition: <link itemprop="itemCondition" href="http://schema.org/UsedCondition"/>Previously owned,
-      in excellent condition<br>
-    <link itemprop="availability" href="http://schema.org/InStock"/>In stock! Order now!
-</span>
-
+  Product #: <span itemprop="mpn">925872<br /></span>
+  <span
+    itemprop="aggregateRating"
+    itemscope
+    itemtype="http://schema.org/AggregateRating">
+    Rating: <span itemprop="ratingValue">4.4</span> stars, based on
+    <span itemprop="reviewCount">89 </span> reviews
+  </span>
+  <p>
+    <span itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+      Regular price: $179.99<br />
+      <meta itemprop="priceCurrency" content="USD" />
+      <span itemprop="price">Sale price: $119.99<br /></span>
+      (Sale ends
+      <time itemprop="priceValidUntil" datetime="2020-11-05"> 5 November!</time>)<br />
+      Available from:
+      <span
+        itemprop="seller"
+        itemscope
+        itemtype="http://schema.org/Organization">
+        <span itemprop="name">Executive Objects<br /></span>
+      </span>
+      Condition:
+      <link
+        itemprop="itemCondition"
+        href="http://schema.org/UsedCondition" />Previously owned, in excellent
+      condition<br />
+      <link itemprop="availability" href="http://schema.org/InStock" />In stock!
+      Order now!
+    </span>
+  </p>
 </div>
 ```
 

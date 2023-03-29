@@ -2,15 +2,8 @@
 title: XRTransientInputHitTestSource.cancel()
 slug: Web/API/XRTransientInputHitTestSource/cancel
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - AR
-  - VR
-  - XR
-  - WebXR
-  - Experimental
+status:
+  - experimental
 browser-compat: api.XRTransientInputHitTestSource.cancel
 ---
 
@@ -20,7 +13,7 @@ The **`cancel()`** method of the {{domxref("XRTransientInputHitTestSource")}} in
 
 ## Syntax
 
-```js
+```js-nolint
 cancel()
 ```
 

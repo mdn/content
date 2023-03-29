@@ -2,12 +2,6 @@
 title: WebSocket
 slug: Web/API/WebSocket
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - NeedsContent
-  - WebSocket
-  - WebSockets
 browser-compat: api.WebSocket
 ---
 
@@ -26,7 +20,7 @@ To construct a `WebSocket`, use the [`WebSocket()`](/en-US/docs/Web/API/WebSocke
 - {{domxref("WebSocket.WebSocket", "WebSocket()")}}
   - : Returns a newly created `WebSocket` object.
 
-## Properties
+## Instance properties
 
 - {{domxref("WebSocket.binaryType")}}
   - : The binary data type used by the connection.
@@ -41,7 +35,7 @@ To construct a `WebSocket`, use the [`WebSocket()`](/en-US/docs/Web/API/WebSocke
 - {{domxref("WebSocket.url")}} {{ReadOnlyInline}}
   - : The absolute URL of the WebSocket.
 
-## Methods
+## Instance methods
 
 - {{domxref("WebSocket.close()")}}
   - : Closes the connection.
@@ -69,16 +63,16 @@ Listen to these events using `addEventListener()` or by assigning an event liste
 
 ```js
 // Create WebSocket connection.
-const socket = new WebSocket('ws://localhost:8080');
+const socket = new WebSocket("ws://localhost:8080");
 
 // Connection opened
-socket.addEventListener('open', (event) => {
-    socket.send('Hello Server!');
+socket.addEventListener("open", (event) => {
+  socket.send("Hello Server!");
 });
 
 // Listen for messages
-socket.addEventListener('message', (event) => {
-    console.log('Message from server ', event.data);
+socket.addEventListener("message", (event) => {
+  console.log("Message from server ", event.data);
 });
 ```
 

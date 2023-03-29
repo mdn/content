@@ -2,11 +2,6 @@
 title: HTMLAreaElement.toString()
 slug: Web/API/HTMLAreaElement/toString
 page-type: web-api-instance-method
-tags:
-  - API
-  - HTMLAreaElement
-  - Method
-  - Stringifier
 browser-compat: api.HTMLAreaElement.toString
 ---
 
@@ -18,7 +13,7 @@ version of {{domxref("HTMLAreaElement.href")}}.
 
 ## Syntax
 
-```js
+```js-nolint
 toString()
 ```
 

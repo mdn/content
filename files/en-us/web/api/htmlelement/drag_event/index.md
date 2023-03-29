@@ -1,17 +1,7 @@
 ---
-title: 'HTMLElement: drag event'
+title: "HTMLElement: drag event"
 slug: Web/API/HTMLElement/drag_event
 page-type: web-api-event
-tags:
-  - API
-  - DOM
-  - Element
-  - Drag
-  - DragEvent
-  - Event
-  - Reference
-  - Web
-  - drag and drop
 browser-compat: api.HTMLElement.drag_event
 ---
 
@@ -24,9 +14,9 @@ The `drag` event is fired every few hundred milliseconds as an element or text s
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('drag', (event) => {});
+addEventListener("drag", (event) => {});
 
-ondrag = (event) => { };
+ondrag = (event) => {};
 ```
 
 ## Event type
@@ -50,9 +40,7 @@ _In addition to the properties listed below, properties from the parent interfac
 
 ```html
 <div class="dropzone">
-  <div id="draggable" draggable="true">
-    This div is draggable
-  </div>
+  <div id="draggable" draggable="true">This div is draggable</div>
 </div>
 <div class="dropzone" id="droptarget"></div>
 ```
@@ -83,7 +71,7 @@ body {
 }
 
 .dragging {
-  opacity: .5;
+  opacity: 0.5;
 }
 ```
 
@@ -112,10 +100,14 @@ source.addEventListener("dragend", (event) => {
 
 /* events fired on the drop targets */
 const target = document.getElementById("droptarget");
-target.addEventListener("dragover", (event) => {
-  // prevent default to allow drop
-  event.preventDefault();
-}, false);
+target.addEventListener(
+  "dragover",
+  (event) => {
+    // prevent default to allow drop
+    event.preventDefault();
+  },
+  false
+);
 
 target.addEventListener("dragenter", (event) => {
   // highlight potential drop target when the draggable element enters it
@@ -137,7 +129,6 @@ target.addEventListener("drop", (event) => {
   // move dragged element to the selected drop target
   if (event.target.classList.contains("dropzone")) {
     event.target.classList.remove("dragover");
-    dragged.parentNode.removeChild(dragged);
     event.target.appendChild(dragged);
   }
 });

@@ -1,14 +1,7 @@
 ---
 title: TypedArray.prototype.reduce()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/reduce
-tags:
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - TypedArray
-  - TypedArrays
-  - Polyfill
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.TypedArray.reduce
 ---
 
@@ -24,7 +17,7 @@ single value. This method has the same algorithm as
 
 ## Syntax
 
-```js
+```js-nolint
 // Arrow function
 reduce((accumulator, currentValue) => { /* ... */ } )
 reduce((accumulator, currentValue, index) => { /* ... */ } )

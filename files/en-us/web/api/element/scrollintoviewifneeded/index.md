@@ -2,13 +2,8 @@
 title: Element.scrollIntoViewIfNeeded()
 slug: Web/API/Element/scrollIntoViewIfNeeded
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - Element
-  - Method
-  - Non-standard
-  - Reference
+status:
+  - non-standard
 browser-compat: api.Element.scrollIntoViewIfNeeded
 ---
 
@@ -18,7 +13,7 @@ The **`Element.scrollIntoViewIfNeeded()`** method scrolls the current element in
 
 ## Syntax
 
-```js
+```js-nolint
 scrollIntoViewIfNeeded()
 scrollIntoViewIfNeeded(centerIfNeeded)
 ```

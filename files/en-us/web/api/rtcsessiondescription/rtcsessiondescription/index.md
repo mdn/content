@@ -2,14 +2,8 @@
 title: RTCSessionDescription()
 slug: Web/API/RTCSessionDescription/RTCSessionDescription
 page-type: web-api-constructor
-tags:
-  - Constructor
-  - Deprecated
-  - Media
-  - RTCSessionDescription
-  - Reference
-  - SDP
-  - WebRTC
+status:
+  - deprecated
 browser-compat: api.RTCSessionDescription.RTCSessionDescription
 ---
 
@@ -27,13 +21,13 @@ specified object.
 
 ## Syntax
 
-```js
-new RTCSessionDescription(rtcSessionDescriptionInit);
+```js-nolint
+new RTCSessionDescription(options)
 ```
 
 ### Values
 
-- `rtcSessionDescriptionInit` {{optional_inline}}
+- `options` {{optional_inline}}
 
   - : An object providing the default values for the session description; the object
     conforms to the `RTCSessionDescriptionInit` dictionary. That dictionary has
@@ -62,9 +56,13 @@ navigator.getUserMedia({ video: true }, (stream) => {
   pc.addStream(stream);
 
   pc.createOffer((offer) => {
-    pc.setLocalDescription(new RTCSessionDescription(offer), () => {
-      // send the offer to a server to be forwarded to the friend you're calling.
-    }, error);
+    pc.setLocalDescription(
+      new RTCSessionDescription(offer),
+      () => {
+        // send the offer to a server to be forwarded to the friend you're calling.
+      },
+      error
+    );
   }, error);
 });
 ```

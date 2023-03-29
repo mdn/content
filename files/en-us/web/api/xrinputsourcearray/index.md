@@ -2,26 +2,8 @@
 title: XRInputSourceArray
 slug: Web/API/XRInputSourceArray
 page-type: web-api-interface
-tags:
-  - API
-  - AR
-  - Input Sources
-  - Inputs
-  - Interface
-  - Mixed
-  - Reality
-  - Reference
-  - Sources
-  - VR
-  - Virtual
-  - WebXR
-  - WebXR API
-  - WebXR Device API
-  - XR
-  - XRInputSourceArray
-  - augmented
-  - list
-  - Experimental
+status:
+  - experimental
 browser-compat: api.XRInputSourceArray
 ---
 
@@ -31,14 +13,14 @@ The interface **`XRInputSourceArray`** represents a _live_ list of WebXR input s
 
 In addition to being able to access the input sources in the list using standard array notation (that is, with index numbers inside square brackets), methods are available to allow the use of iterators and the {{domxref("XRInputSourceArray.forEach", "forEach()")}} method is also available.
 
-## Properties
+## Instance properties
 
 _The following properties are available on `XRInputSourceArray` objects._
 
 - {{domxref("XRInputSourceArray.length", "length")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : The number of {{domxref("XRInputSource")}} objects in the list.
 
-## Methods
+## Instance methods
 
 _The following methods are available on `XRInputSourceArray` objects. You may also use the features of the [`Symbol`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol) type._
 

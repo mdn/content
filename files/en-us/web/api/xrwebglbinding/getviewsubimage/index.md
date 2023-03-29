@@ -2,14 +2,8 @@
 title: XRWebGLBinding.getViewSubImage()
 slug: Web/API/XRWebGLBinding/getViewSubImage
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - AR
-  - XR
-  - WebXR
-  - Experimental
+status:
+  - experimental
 browser-compat: api.XRWebGLBinding.getViewSubImage
 ---
 
@@ -19,7 +13,7 @@ The **`getViewSubImage()`** method of the {{domxref("XRWebGLBinding")}} interfac
 
 ## Syntax
 
-```js
+```js-nolint
 getViewSubImage(layer, view)
 ```
 

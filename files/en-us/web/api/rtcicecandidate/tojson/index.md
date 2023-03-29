@@ -2,18 +2,6 @@
 title: RTCIceCandidate.toJSON()
 slug: Web/API/RTCIceCandidate/toJSON
 page-type: web-api-instance-method
-tags:
-  - API
-  - Candidate
-  - ICE
-  - JSON
-  - Method
-  - RTCIceCandidate
-  - Reference
-  - SDP
-  - WebRTC
-  - WebRTC API
-  - toJSON
 browser-compat: api.RTCIceCandidate.toJSON
 ---
 
@@ -25,7 +13,7 @@ A stringified version of the object can then be obtained by calling {{jsxref("JS
 
 ## Syntax
 
-```js
+```js-nolint
 toJSON()
 ```
 

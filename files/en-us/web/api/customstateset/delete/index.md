@@ -2,13 +2,8 @@
 title: CustomStateSet.delete()
 slug: Web/API/CustomStateSet/delete
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - delete
-  - CustomStateSet
-  - Experimental
+status:
+  - experimental
 browser-compat: api.CustomStateSet.delete
 ---
 
@@ -18,7 +13,7 @@ The **`delete()`** method of the {{domxref("CustomStateSet")}} interface deletes
 
 ## Syntax
 
-```js
+```js-nolint
 delete(value)
 ```
 

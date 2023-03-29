@@ -2,11 +2,6 @@
 title: TrustedScript
 slug: Web/API/TrustedScript
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Reference
-  - TrustedScript
 browser-compat: api.TrustedScript
 ---
 
@@ -16,7 +11,7 @@ The **`TrustedScript`** interface of the {{domxref('Trusted Types API')}} repres
 
 The value of a **TrustedScript** object is set when the object is created and cannot be changed by JavaScript as there is no setter exposed.
 
-## Methods
+## Instance methods
 
 - {{domxref("TrustedScript.toJSON()")}}
   - : Returns a JSON representation of the stored data.

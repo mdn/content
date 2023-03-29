@@ -1,12 +1,7 @@
 ---
 title: Date.prototype.getMilliseconds()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getMilliseconds
-tags:
-  - Date
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.Date.getMilliseconds
 ---
 
@@ -19,7 +14,7 @@ the specified date according to local time.
 
 ## Syntax
 
-```js
+```js-nolint
 getMilliseconds()
 ```
 

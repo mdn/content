@@ -2,14 +2,6 @@
 title: Element.ariaPosInSet
 slug: Web/API/Element/ariaPosInSet
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - ariaPosInSet
-  - AriaAttributes
-  - AriaMixin
-  - Element
 browser-compat: api.Element.ariaPosInSet
 ---
 
@@ -26,14 +18,14 @@ A string containing an integer.
 In this example the `aria-posinset` attribute on the element with an ID of `article2` is set to "2". Using `ariaPosInSet` we update the value to "3".
 
 ```html
-<article id="article1" aria-posinset="1"> … </article>
-<article id="article2" aria-posinset="2"> … </article>
+<article id="article1" aria-posinset="1">…</article>
+<article id="article2" aria-posinset="2">…</article>
 ```
 
 ```js
-let el = document.getElementById('article2');
+let el = document.getElementById("article2");
 console.log(el.ariaPosInSet); // "2"
-el.ariaPosInSet = "3"
+el.ariaPosInSet = "3";
 console.log(el.ariaPosInSet); // "3"
 ```
 

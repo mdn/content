@@ -1,26 +1,19 @@
 ---
 title: onCommand
 slug: Mozilla/Add-ons/WebExtensions/API/commands/onCommand
-tags:
-  - API
-  - Add-ons
-  - Event
-  - Extensions
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - commands
-  - onCommand
+page-type: webextension-api-event
 browser-compat: webextensions.api.commands.onCommand
 ---
 
-{{AddonSidebar()}}Fired when a command is executed using its associated keyboard shortcut.
+{{AddonSidebar()}}
+
+Fired when a command is executed using its associated keyboard shortcut.
 
 The listener is passed the command's name. This matches the name given to the command in its [manifest.json entry](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/commands).
 
 ## Syntax
 
-```js
+```js-nolint
 browser.commands.onCommand.addListener(listener)
 browser.commands.onCommand.removeListener(listener)
 browser.commands.onCommand.hasListener(listener)

@@ -1,17 +1,7 @@
 ---
 title: Effective connection type
 slug: Glossary/Effective_connection_type
-tags:
-  - Glossary
-  - Navigator
-  - Network Information API
-  - NetworkInformation
-  - Performance
-  - Reference
-  - Web Performance
-  - connect
-  - effective connection type
-  - effectiveType
+page-type: glossary-definition
 ---
 
 **Effective connection type** (ECT) refers to the measured network performance, returning a cellular connection type, like 3G, even if the actual connection is tethered broadband or Wi-Fi, based on the time between the browser requesting a page and effective type of the connection.

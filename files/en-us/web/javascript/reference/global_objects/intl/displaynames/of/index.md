@@ -1,15 +1,7 @@
 ---
 title: Intl.DisplayNames.prototype.of()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/DisplayNames/of
-tags:
-  - DisplayNames
-  - Internationalization
-  - Intl
-  - JavaScript
-  - Localization
-  - Method
-  - Prototype
-  - Reference
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.Intl.DisplayNames.of
 ---
 
@@ -19,11 +11,9 @@ The **`Intl.DisplayNames.prototype.of()`** method receives a code and returns a 
 
 {{EmbedInteractiveExample("pages/js/intl-displaynames.html")}}
 
-<!-- The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone https://github.com/mdn/interactive-examples and send us a pull request. -->
-
 ## Syntax
 
-```js
+```js-nolint
 of(code)
 ```
 
@@ -72,11 +62,11 @@ When the `Intl.DisplayNames` is constructed with `fallback: "code"`, the `of()` 
 
 ```js
 console.log(
-  new Intl.DisplayNames("en", { type: "region", fallback: "code" }).of("ZL")
+  new Intl.DisplayNames("en", { type: "region", fallback: "code" }).of("ZL"),
 ); // "ZL"
 
 console.log(
-  new Intl.DisplayNames("en", { type: "region", fallback: "none" }).of("ZL")
+  new Intl.DisplayNames("en", { type: "region", fallback: "none" }).of("ZL"),
 ); // undefined
 ```
 
@@ -84,7 +74,7 @@ However, this only applies if the `code` is structurally valid. For example, if 
 
 ```js
 console.log(
-  new Intl.DisplayNames("en", { type: "region", fallback: "code" }).of("ZLC")
+  new Intl.DisplayNames("en", { type: "region", fallback: "code" }).of("ZLC"),
 ); // throws RangeError: invalid value "ZLC" for option region
 ```
 

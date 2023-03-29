@@ -2,12 +2,6 @@
 title: Storage.clear()
 slug: Web/API/Storage/clear
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - Storage
-  - Web Storage
 browser-compat: api.Storage.clear
 ---
 
@@ -18,7 +12,7 @@ interface clears all keys stored in a given `Storage` object.
 
 ## Syntax
 
-```js
+```js-nolint
 clear()
 ```
 
@@ -37,15 +31,15 @@ them by using `clear()`.
 
 ```js
 function populateStorage() {
-  localStorage.setItem('bgcolor', 'red');
-  localStorage.setItem('font', 'Helvetica');
-  localStorage.setItem('image', 'miGato.png');
+  localStorage.setItem("bgcolor", "red");
+  localStorage.setItem("font", "Helvetica");
+  localStorage.setItem("image", "miGato.png");
 
   localStorage.clear();
 }
 ```
 
-> **Note:** For a real world example, see our [Web Storage Demo](https://mdn.github.io/dom-examples/web-storage/).
+> **Note:** For a real-world example, see our [Web Storage Demo](https://mdn.github.io/dom-examples/web-storage/).
 
 ## Specifications
 

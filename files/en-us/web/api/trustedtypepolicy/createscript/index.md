@@ -2,12 +2,6 @@
 title: TrustedTypePolicy.createScript()
 slug: Web/API/TrustedTypePolicy/createScript
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - createScript
-  - TrustedTypePolicy
 browser-compat: api.TrustedTypePolicy.createScript
 ---
 
@@ -17,7 +11,7 @@ The **`createScript()`** method of the {{domxref("TrustedTypePolicy")}} interfac
 
 ## Syntax
 
-```js
+```js-nolint
 createScript(input)
 createScript(input, args)
 ```

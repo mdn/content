@@ -1,12 +1,7 @@
 ---
 title: outline-style
 slug: Web/CSS/outline-style
-tags:
-  - CSS
-  - CSS Outline
-  - CSS Property
-  - Reference
-  - recipe:css-property
+page-type: css-property
 browser-compat: css.properties.outline-style
 ---
 
@@ -96,7 +91,10 @@ The `auto` value indicates a custom outline style, described in [the specificati
 }
 
 /* To make the Demo clearer */
-* { outline-width: 10px; padding: 15px; }
+* {
+  outline-width: 10px;
+  padding: 15px;
+}
 ```
 
 #### Result
@@ -126,7 +124,10 @@ The `auto` value indicates a custom outline style, described in [the specificati
 }
 
 /* To make the Demo clearer */
-* { outline-width: 10px; padding: 15px; }
+* {
+  outline-width: 10px;
+  padding: 15px;
+}
 ```
 
 #### Result
@@ -156,7 +157,10 @@ The `auto` value indicates a custom outline style, described in [the specificati
 }
 
 /* To make the Demo clearer */
-* { outline-width: 10px; padding: 15px; }
+* {
+  outline-width: 10px;
+  padding: 15px;
+}
 ```
 
 #### Result
@@ -186,7 +190,10 @@ The `auto` value indicates a custom outline style, described in [the specificati
 }
 
 /* To make the Demo clearer */
-* { outline-width: 10px; padding: 15px; }
+* {
+  outline-width: 10px;
+  padding: 15px;
+}
 ```
 
 #### Result
@@ -216,7 +223,10 @@ The `auto` value indicates a custom outline style, described in [the specificati
 }
 
 /* To make the Demo clearer */
-* { outline-width: 10px; padding: 15px; }
+* {
+  outline-width: 10px;
+  padding: 15px;
+}
 ```
 
 #### Result

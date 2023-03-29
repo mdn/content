@@ -2,12 +2,6 @@
 title: Document.elementFromPoint()
 slug: Web/API/Document/elementFromPoint
 page-type: web-api-instance-method
-tags:
-  - API
-  - Coordinates
-  - Document
-  - Method
-  - Reference
 browser-compat: api.Document.elementFromPoint
 ---
 
@@ -38,7 +32,7 @@ If you need to find the specific position inside the element, use
 
 ## Syntax
 
-```js
+```js-nolint
 elementFromPoint(x, y)
 ```
 

@@ -2,13 +2,6 @@
 title: ReadableStreamBYOBRequest.respond()
 slug: Web/API/ReadableStreamBYOBRequest/respond
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - ReadableStreamBYOBRequest
-  - Reference
-  - Streams
-  - respond
 browser-compat: api.ReadableStreamBYOBRequest.respond
 ---
 
@@ -20,7 +13,7 @@ After this method is called, the {{domxref("ReadableStreamBYOBRequest/view","vie
 
 ## Syntax
 
-```js
+```js-nolint
 respond(bytesWritten)
 ```
 

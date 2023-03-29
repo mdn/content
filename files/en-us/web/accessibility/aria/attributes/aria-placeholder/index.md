@@ -1,13 +1,6 @@
 ---
-title: 'aria-placeholder'
+title: aria-placeholder
 slug: Web/Accessibility/ARIA/Attributes/aria-placeholder
-tags:
-  - Accessibility
-  - ARIA
-  - ARIA attribute
-  - ARIA property
-  - aria-placeholder
-  - Reference
 spec-urls: https://w3c.github.io/aria/#aria-placeholder
 ---
 
@@ -21,7 +14,13 @@ If you are creating a `textbox` using any other element, `placeholder` is not su
 
 ```html
 <span id="date-of-birth">Birthday</span>
-<div contenteditable role="textbox" aria-labelledby="date-of-birth" aria-placeholder="MM-DD-YYYY">MM-DD-YYYY</div>
+<div
+  contenteditable
+  role="textbox"
+  aria-labelledby="date-of-birth"
+  aria-placeholder="MM-DD-YYYY">
+  MM-DD-YYYY
+</div>
 ```
 
 The placeholder hint should be shown to the user whenever the control's value is empty, including when a value is deleted.

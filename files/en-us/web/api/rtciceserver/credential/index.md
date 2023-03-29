@@ -2,13 +2,6 @@
 title: RTCIceServer.credential
 slug: Web/API/RTCIceServer/credential
 page-type: web-api-instance-property
-tags:
-  - Credential
-  - Property
-  - RTCIceServer
-  - Reference
-  - TURN
-  - WebRTC
 browser-compat: api.RTCIceServer.credential
 ---
 
@@ -24,7 +17,7 @@ other secret.
 
 ## Syntax
 
-```js
+```js-nolint
 const iceServer = {
   // ...
   credential: someCredential,
@@ -47,11 +40,11 @@ password "turnpassword".
 myPeerConnection = new RTCPeerConnection({
   iceServers: [
     {
-      urls: "turn:turnserver.example.org",  // A TURN server
+      urls: "turn:turnserver.example.org", // A TURN server
       username: "webrtc",
-      credential: "turnpassword"
-    }
-  ]
+      credential: "turnpassword",
+    },
+  ],
 });
 ```
 

@@ -2,13 +2,6 @@
 title: WebGLRenderingContext.copyTexSubImage2D()
 slug: Web/API/WebGLRenderingContext/copyTexSubImage2D
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - Textures
-  - WebGL
-  - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.copyTexSubImage2D
 ---
 
@@ -20,7 +13,7 @@ the [WebGL API](/en-US/docs/Web/API/WebGL_API) copies pixels from the current
 
 ## Syntax
 
-```js
+```js-nolint
 copyTexSubImage2D(target, level, xoffset, yoffset, x, y, width, height)
 ```
 
@@ -70,7 +63,7 @@ None ({{jsxref("undefined")}}).
 ## Examples
 
 ```js
-gl.copyTexSubImage2D(gl.TEXTURE_2D, 0, 0,0, 0, 0, 16, 16);
+gl.copyTexSubImage2D(gl.TEXTURE_2D, 0, 0, 0, 0, 0, 16, 16);
 ```
 
 ## Specifications

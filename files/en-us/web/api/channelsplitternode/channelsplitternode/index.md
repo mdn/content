@@ -2,15 +2,6 @@
 title: ChannelSplitterNode()
 slug: Web/API/ChannelSplitterNode/ChannelSplitterNode
 page-type: web-api-constructor
-tags:
-  - API
-  - Audio
-  - ChannelSplitterNode
-  - Constructor
-  - Reference
-  - Splitter
-  - Web Audio
-  - Web Audio API
 browser-compat: api.ChannelSplitterNode.ChannelSplitterNode
 ---
 
@@ -20,7 +11,7 @@ The **`ChannelSplitterNode()`** constructor of the [Web Audio API](/en-US/docs/W
 
 ## Syntax
 
-```js
+```js-nolint
 new ChannelSplitterNode(context)
 new ChannelSplitterNode(context, options)
 ```
@@ -57,8 +48,8 @@ A new {{domxref("ChannelSplitterNode")}} object instance.
 const ac = new AudioContext();
 
 const options = {
-  numberOfOutputs : 2
-}
+  numberOfOutputs: 2,
+};
 
 const mySplitter = new ChannelSplitterNode(ac, options);
 ```

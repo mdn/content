@@ -1,13 +1,10 @@
 ---
-title: '-moz-force-broken-image-icon'
+title: "-moz-force-broken-image-icon"
 slug: Web/CSS/-moz-force-broken-image-icon
-tags:
-  - CSS
-  - NeedsCompatTable
-  - Non-standard
-  - Reference
-  - recipe:css-property
-  - Deprecated
+page-type: css-property
+status:
+  - deprecated
+  - non-standard
 browser-compat: css.properties.-moz-force-broken-image-icon
 ---
 
@@ -20,7 +17,7 @@ The **`-moz-force-broken-image-icon`** extended CSS property can be used to forc
 ### Values
 
 - {{cssxref("&lt;integer&gt;")}}
-  - : A value of `1` means that the broken image icon is shown even if the image has an {{HTMLElement("img", "<code>alt</code>", "#attr-alt")}} attribute. When the value `0` is used the image will act as usual and only display the `alt` attribute.
+  - : A value of `1` means that the broken image icon is shown even if the image has an [`alt`](/en-US/docs/Web/HTML/Element/img#alt) attribute. When the value `0` is used, the image will act as usual and only display the `alt` attribute.
 
 > **Note:** Even if the value is set to `1` the `alt` attribute will still be displayed, alongside the broken image icon.
 
@@ -37,7 +34,7 @@ The **`-moz-force-broken-image-icon`** extended CSS property can be used to forc
 ### HTML
 
 ```html
-<img src='/broken/image/link.png' alt='Broken image link'>
+<img src="/broken/image/link.png" alt="Broken image link" />
 ```
 
 ### CSS
@@ -71,4 +68,4 @@ Not part of any standard.
 
 ## See also
 
-- {{ Bug(58646) }}
+- [Webkit bug 58646](https://bugzil.la/58646)

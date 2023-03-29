@@ -1,13 +1,9 @@
 ---
 title: <altGlyphItem>
 slug: Web/SVG/Element/altGlyphItem
-tags:
-  - Deprecated
-  - Element
-  - NeedsExample
-  - Reference
-  - SVG
-  - SVG Text Content
+page-type: svg-element
+status:
+  - deprecated
 browser-compat: svg.elements.altGlyphItem
 ---
 
@@ -29,7 +25,7 @@ The **`<altGlyphItem>`** element provides a set of candidates for glyph substitu
 
 ### Specific attributes
 
-_None._
+None.
 
 ## DOM Interface
 

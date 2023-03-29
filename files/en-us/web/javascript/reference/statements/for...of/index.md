@@ -1,25 +1,19 @@
 ---
 title: for...of
 slug: Web/JavaScript/Reference/Statements/for...of
-tags:
-  - ECMAScript 2015
-  - ES6
-  - JavaScript
-  - Language feature
-  - Reference
-  - Statement
+page-type: javascript-statement
 browser-compat: javascript.statements.for_of
 ---
 
 {{jsSidebar("Statements")}}
 
-The **`for...of` statement** executes a loop that operates on a sequence of values sourced from an [iterable object](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterable_protocol). Iterable objects include instances of built-ins such as {{jsxref("Array")}}, {{jsxref("String")}}, {{jsxref("TypedArray")}}, {{jsxref("Map")}}, {{jsxref("Set")}}, {{domxref("NodeList")}} (and other DOM collections), as well as the {{jsxref("Functions/arguments", "arguments")}} object, [generators](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Generator) produced by [generator functions](/en-US/docs/Web/JavaScript/Reference/Statements/function*), and user-defined iterables.
+The **`for...of`** statement executes a loop that operates on a sequence of values sourced from an [iterable object](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterable_protocol). Iterable objects include instances of built-ins such as {{jsxref("Array")}}, {{jsxref("String")}}, {{jsxref("TypedArray")}}, {{jsxref("Map")}}, {{jsxref("Set")}}, {{domxref("NodeList")}} (and other DOM collections), as well as the {{jsxref("Functions/arguments", "arguments")}} object, [generators](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Generator) produced by [generator functions](/en-US/docs/Web/JavaScript/Reference/Statements/function*), and user-defined iterables.
 
 {{EmbedInteractiveExample("pages/js/statement-forof.html")}}
 
 ## Syntax
 
-```js
+```js-nolint
 for (variable of iterable)
   statement
 ```
@@ -343,18 +337,21 @@ const iterable = [3, 5, 7];
 iterable.foo = "hello";
 
 for (const i in iterable) {
-  console.log(i); // logs "0", "1", "2", "foo", "arrCustom", "objCustom"
+  console.log(i);
 }
+// "0", "1", "2", "foo", "arrCustom", "objCustom"
 
 for (const i in iterable) {
   if (Object.hasOwn(iterable, i)) {
-    console.log(i); // logs "0", "1", "2", "foo"
+    console.log(i);
   }
 }
+// "0" "1" "2" "foo"
 
 for (const i of iterable) {
-  console.log(i); // logs 3, 5, 7
+  console.log(i);
 }
+// 3 5 7
 ```
 
 The object `iterable` inherits the properties `objCustom` and `arrCustom` because it contains both `Object.prototype` and `Array.prototype` in its [prototype chain](/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain).

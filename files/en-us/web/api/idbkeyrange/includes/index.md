@@ -2,15 +2,6 @@
 title: IDBKeyRange.includes()
 slug: Web/API/IDBKeyRange/includes
 page-type: web-api-instance-method
-tags:
-  - API
-  - Database
-  - IDBKeyRange
-  - IndexedDB
-  - Method
-  - Reference
-  - Storage
-  - includes
 browser-compat: api.IDBKeyRange.includes
 ---
 
@@ -24,7 +15,7 @@ range.
 
 ## Syntax
 
-```js
+```js-nolint
 includes(key)
 ```
 
@@ -45,12 +36,12 @@ A boolean value.
 ## Examples
 
 ```js
-const keyRangeValue = IDBKeyRange.bound('A', 'K', false, false);
+const keyRangeValue = IDBKeyRange.bound("A", "K", false, false);
 
-keyRangeValue.includes('F');
+keyRangeValue.includes("F");
 // Returns true
 
-keyRangeValue.includes('W');
+keyRangeValue.includes("W");
 // Returns false
 ```
 
@@ -70,4 +61,4 @@ keyRangeValue.includes('W');
 - Setting a range of keys: {{domxref("IDBKeyRange")}}
 - Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}
 - Using cursors: {{domxref("IDBCursor")}}
-- Reference example: [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](https://mdn.github.io/to-do-notifications/).)
+- Reference example: [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([View the example live](https://mdn.github.io/dom-examples/to-do-notifications/)).

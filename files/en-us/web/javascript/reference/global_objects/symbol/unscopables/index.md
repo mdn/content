@@ -1,31 +1,31 @@
 ---
 title: Symbol.unscopables
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/unscopables
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Property
-  - Symbol
+page-type: javascript-static-data-property
 browser-compat: javascript.builtins.Symbol.unscopables
 ---
 
 {{JSRef}}
 
-The **`Symbol.unscopables`** well-known symbol is used to specify an object value of whose own and inherited property names are excluded from the [`with`](/en-US/docs/Web/JavaScript/Reference/Statements/with) environment bindings of the associated object.
+The **`Symbol.unscopables`** static data property represents the well-known symbol used to specify properties of the associated object that should not become bindings within the [`with`](/en-US/docs/Web/JavaScript/Reference/Statements/with) environment.
 
 {{EmbedInteractiveExample("pages/js/symbol-unscopables.html")}}
 
+## Value
+
+The well-known symbol `@@unscopables`.
+
+{{js_property_attributes(0, 0, 0)}}
+
 ## Description
 
-The `@@unscopables` property (accessed via `Symbol.unscopables`) can be defined on any object to exclude property names from being exposed as lexical variables in [`with`](/en-US/docs/Web/JavaScript/Reference/Statements/with) environment bindings. Note that when using [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode), `with` statements are not available, and this symbol is likely not needed.
+The `@@unscopables` symbol (accessed via `Symbol.unscopables`) can be defined on any object to exclude property names from being exposed as lexical variables in [`with`](/en-US/docs/Web/JavaScript/Reference/Statements/with) environment bindings. Note that when using [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode), `with` statements are not available, and this symbol is likely not needed.
 
 Setting a property of the `@@unscopables` object to `true` (or any [truthy](/en-US/docs/Glossary/Truthy) value) will make the corresponding property of the `with` scope object _unscopable_ and therefore won't be introduced to the `with` body scope. Setting a property to `false` (or any [falsy](/en-US/docs/Glossary/Falsy) value) will make it _scopable_ and thus appear as lexical scope variables.
 
 When deciding whether `x` is unscopable, the entire prototype chain of the `@@unscopables` property is looked up for a property called `x`. This means if you declared `@@unscopables` as a plain object, `Object.prototype` properties like [`toString`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/toString) would become unscopable as well, which may cause backward incompatibility for legacy code assuming those properties are normally scoped (see [an example below](#avoid_using_a_non-null-prototype_object_as_unscopables)). You are advised to make your custom `@@unscopables` property have `null` as its prototype, like [`Array.prototype[@@unscopables]`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/@@unscopables) does.
 
 This protocol is also utilized by DOM APIs, such as [`Element.prototype.append()`](/en-US/docs/Web/API/Element/append).
-
-{{js_property_attributes(0,0,0)}}
 
 ## Examples
 
@@ -34,21 +34,11 @@ This protocol is also utilized by DOM APIs, such as [`Element.prototype.append()
 The following code works fine in ES5 and below. However, in ECMAScript 2015 and later, the {{jsxref("Array.prototype.keys()")}} method was introduced. That means that inside a `with` environment, "keys" would now be the method and not the variable. That's why the `@@unscopables` symbol was introduced. A built-in `@@unscopables` setting is implemented as {{jsxref("Array.@@unscopables", "Array.prototype[@@unscopables]")}} to prevent some of the Array methods being scoped into the `with` statement.
 
 ```js
-const keys = [];
+var keys = [];
 
 with (Array.prototype) {
   keys.push("something");
 }
-
-Object.keys(Array.prototype[Symbol.unscopables]);
-// [
-//   'copyWithin', 'entries',
-//   'fill',       'find',
-//   'findIndex',  'flat',
-//   'flatMap',    'includes',
-//   'keys',       'values',
-//   'at'
-// ]
 ```
 
 ### Unscopables in objects

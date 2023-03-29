@@ -1,21 +1,9 @@
 ---
-title: Web Performance
+title: Web performance
 slug: Web/Performance
-tags:
-  - API
-  - App
-  - App Performance
-  - HTML
-  - JavaScript
-  - Landing
-  - Mobile
-  - Mobile Performance
-  - Performance
-  - Performance Budget
-  - Start-Up Performance
-  - Web
-  - Web Performance
 ---
+
+{{QuickLinksWithSubPages}}
 
 Web performance is the objective measurements and the perceived user experience of load time and runtime. Web performance is how long a site takes to load, become interactive and responsive, and how smooth the content is during user interactions - is the scrolling smooth? are buttons clickable? Are pop-ups quick to load and display, and do they animate smoothly as they do so? Web performance includes both objective measurements like time to load, frames per second, and time to become interactive, and subjective experiences of how long it felt like it took the content to load.
 
@@ -40,7 +28,7 @@ The MDN [Web Performance Learning Area](/en-US/docs/Learn/Performance) contains 
 - [Web performance basics](/en-US/docs/Learn/Performance/Web_Performance_Basics)
   - : In addition to the front end components of HTML, CSS, JavaScript, and media files, there are features that can make applications slower and features that can make applications subjectively and objectively faster. There are many APIs, developer tools, best practices, and bad practices relating to web performance. Here we'll introduce many of these features ad the basic level and provide links to deeper dives to improve performance for each topic.
 - [HTML performance features](/en-US/docs/Learn/Performance/HTML)
-  - : Some attributes and the source order of your mark-up can impact the performance or your website. By minimizing the number of DOM nodes, making sure the best order and attributes are used for including content such as styles, scripts, media, and third-party scripts, you can drastically improve the user experience. This article looks in detail at how HTML can be used to ensure maximum performance.
+  - : Some attributes and the source order of your markup can impact the performance or your website. By minimizing the number of DOM nodes, making sure the best order and attributes are used for including content such as styles, scripts, media, and third-party scripts, you can drastically improve the user experience. This article looks in detail at how HTML can be used to ensure maximum performance.
 - [Multimedia: images and video](/en-US/docs/Learn/Performance/Multimedia)
   - : The lowest hanging fruit of web performance is often media optimization. Serving different media files based on each user agent's capability, size, and pixel density is possible. Additional tips like removing audio tracks from background videos can improve performance even further. In this article we discuss the impact video, audio, and image content has on performance, and the methods to ensure that impact is as minimal as possible.
 - [CSS performance features](/en-US/docs/Learn/Performance/CSS)
@@ -76,7 +64,7 @@ The MDN [Web Performance Learning Area](/en-US/docs/Learn/Performance) contains 
 
 - {{glossary('Beacon')}}
 - {{glossary('Brotli compression')}}
-- {{glossary('Client hints')}}
+- [Client hints](/en-US/docs/Web/HTTP/Client_hints)
 - {{glossary('Code splitting')}}
 - {{glossary('CSSOM')}}
 - {{glossary('Domain sharding')}}
@@ -135,7 +123,8 @@ HTML
 
   - [Responsive images](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)
 
-- [Preloading content with `rel="preload"`](/en-US/docs/Web/HTML/Link_types/preload) - <https://w3c.github.io/preload/>
+- [Preloading content with `rel="preload"`](/en-US/docs/Web/HTML/Attributes/rel/preload)
+- <https://w3c.github.io/preload/>
 
 CSS
 
@@ -161,7 +150,6 @@ APIs
 - [Navigator.deviceMemory](/en-US/docs/Web/API/Navigator/deviceMemory)
 - [Intersection Observer](/en-US/docs/Web/API/Intersection_Observer_API)
 - [Using the User Timing API](/en-US/docs/Web/API/User_Timing_API/Using_the_User_Timing_API)
-- [Long Tasks API](/en-US/docs/Web/API/Long_Tasks_API)
 - [High Resolution Timing API](/en-US/docs/Web/API/DOMHighResTimeStamp) ([https://w3c.github.io/hr-time/)](https://w3c.github.io/hr-time/)
 - [Resource Timing API](/en-US/docs/Web/API/Resource_Timing_API/Using_the_Resource_Timing_API)
 - [Page Visibility](/en-US/docs/Web/API/Page_Visibility_API)

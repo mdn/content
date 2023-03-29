@@ -1,12 +1,7 @@
 ---
 title: 'HTML attribute: size'
 slug: Web/HTML/Attributes/size
-tags:
-  - Attribute
-  - HTML
-  - Input
-  - Reference
-  - Select
+page-type: html-attribute
 browser-compat: html.elements.attribute.size
 ---
 
@@ -16,13 +11,17 @@ The **`size`** attribute defines the width of the {{htmlelement('input')}} and t
 
 The `size` attribute has no impact on constraint validation.
 
+{{EmbedInteractiveExample("pages/tabbed/attribute-size.html", "tabbed-standard")}}
+
 ## Examples
 
 By adding `size` on some input types, the width of the input can be controlled. Adding size on a select changes the height, defining how many options are visible in the closed state.
 
 ```html
-<label for="fruit">Enter a fruit</label> <input type="text" size="15" id="fruit">
-<label for="vegetable">Enter a vegetable</label> <input type="text" id="vegetable">
+<label for="fruit">Enter a fruit</label>
+<input type="text" size="15" id="fruit" />
+<label for="vegetable">Enter a vegetable</label>
+<input type="text" id="vegetable" />
 
 <select name="fruits" size="5">
   <option>banana</option>
@@ -33,11 +32,11 @@ By adding `size` on some input types, the width of the input can be controlled. 
 </select>
 
 <select name="vegetables" size="5">
-<option>carrot</option>
-<option>cucumber</option>
-<option>cauliflower</option>
-<option>celery</option>
-<option>collard greens</option>
+  <option>carrot</option>
+  <option>cucumber</option>
+  <option>cauliflower</option>
+  <option>celery</option>
+  <option>collard greens</option>
 </select>
 ```
 

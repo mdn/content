@@ -2,13 +2,6 @@
 title: ReadableByteStreamController.enqueue()
 slug: Web/API/ReadableByteStreamController/enqueue
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - ReadableByteStreamController
-  - Reference
-  - Streams
-  - enqueue
 browser-compat: api.ReadableByteStreamController.enqueue
 ---
 
@@ -20,7 +13,7 @@ This should only be used to transfer data to the queue when {{domxref("ReadableB
 
 ## Syntax
 
-```js
+```js-nolint
 enqueue(chunk)
 ```
 

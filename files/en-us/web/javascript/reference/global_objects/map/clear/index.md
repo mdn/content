@@ -1,13 +1,7 @@
 ---
 title: Map.prototype.clear()
 slug: Web/JavaScript/Reference/Global_Objects/Map/clear
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Map
-  - Method
-  - Prototype
-  - Reference
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.Map.clear
 ---
 
@@ -19,7 +13,7 @@ The **`clear()`** method removes all elements from a `Map` object.
 
 ## Syntax
 
-```js
+```js-nolint
 clear()
 ```
 

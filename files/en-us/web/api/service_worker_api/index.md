@@ -2,18 +2,10 @@
 title: Service Worker API
 slug: Web/API/Service_Worker_API
 page-type: web-api-overview
-tags:
-  - API
-  - Landing
-  - Offline
-  - Overview
-  - Reference
-  - Service Workers
-  - Workers
 spec-urls: https://w3c.github.io/ServiceWorker/
 ---
 
-{{ServiceWorkerSidebar}}
+{{DefaultAPISidebar("Service Workers API")}}
 
 Service workers essentially act as proxy servers that sit between web applications, the browser, and the network (when available). They are intended, among other things, to enable the creation of effective offline experiences, intercept network requests and take appropriate action based on whether the network is available, and update assets residing on the server. They will also allow access to push notifications and background sync APIs.
 
@@ -23,7 +15,10 @@ A service worker is an event-driven [worker](/en-US/docs/Web/API/Worker) registe
 
 A service worker is run in a worker context: it therefore has no DOM access, and runs on a different thread to the main JavaScript that powers your app, so it is non-blocking. It is designed to be fully async; as a consequence, APIs such as synchronous [XHR](/en-US/docs/Web/API/XMLHttpRequest) and [Web Storage](/en-US/docs/Web/API/Web_Storage_API) can't be used inside a service worker.
 
-Service workers only run over HTTPS, for security reasons. Having modified network requests, wide open to _man in the middle_ attacks would be really bad. In Firefox, Service Worker APIs are also hidden and cannot be used when the user is in [private browsing mode](https://support.mozilla.org/en-US/kb/private-browsing-use-firefox-without-history).
+Service workers can't import JavaScript module dynamically, and [`import()`](/en-US/docs/Web/JavaScript/Reference/Operators/import#browser_compatibility) will throw if it is called in a service worker global scope.
+Static import using the [`import`](/en-US/docs/Web/JavaScript/Reference/Statements/import) statement is allowed.
+
+Service workers only run over HTTPS, for security reasons. Most significantly, HTTP connections are susceptible to malicious code injection by {{Glossary("MitM", "man in the middle")}} attacks, and such attacks could be worse if allowed access to these powerful APIs. In Firefox, service worker APIs are also hidden and cannot be used when the user is in [private browsing mode](https://support.mozilla.org/en-US/kb/private-browsing-use-firefox-without-history).
 
 > **Note:** On Firefox, for testing you can run service workers over HTTP (insecurely); simply check the **Enable Service Workers over HTTP (when toolbox is open)** option in the Firefox Devtools options/gear menu.
 
@@ -87,43 +82,43 @@ In the future, service workers will be able to do a number of other useful thing
 
 ## Interfaces
 
-- {{DOMxRef("Cache")}} {{Experimental_Inline}}
+- {{DOMxRef("Cache")}}
   - : Represents the storage for {{DOMxRef("Request")}} / {{DOMxRef("Response")}} object pairs that are cached as part of the {{DOMxRef("ServiceWorker")}} life cycle.
-- {{DOMxRef("CacheStorage")}} {{Experimental_Inline}}
+- {{DOMxRef("CacheStorage")}}
   - : Represents the storage for {{DOMxRef("Cache")}} objects. It provides a master directory of all the named caches that a {{DOMxRef("ServiceWorker")}} can access, and maintains a mapping of string names to corresponding {{DOMxRef("Cache")}} objects.
-- {{DOMxRef("Client")}} {{Experimental_Inline}}
+- {{DOMxRef("Client")}}
   - : Represents the scope of a service worker client. A service worker client is either a document in a browser context or a {{DOMxRef("SharedWorker")}}, which is controlled by an active worker.
-- {{DOMxRef("Clients")}} {{Experimental_Inline}}
+- {{DOMxRef("Clients")}}
   - : Represents a container for a list of {{DOMxRef("Client")}} objects; the main way to access the active service worker clients at the current origin.
-- {{DOMxRef("ExtendableEvent")}} {{Experimental_Inline}}
+- {{DOMxRef("ExtendableEvent")}}
   - : Extends the lifetime of the `install` and `activate` events dispatched on the {{DOMxRef("ServiceWorkerGlobalScope")}}, as part of the service worker lifecycle. This ensures that any functional events (like {{DOMxRef("FetchEvent")}}) are not dispatched to the {{DOMxRef("ServiceWorker")}}, until it upgrades database schemas, and deletes outdated cache entries, etc.
-- {{DOMxRef("ExtendableMessageEvent")}} {{Experimental_Inline}}
+- {{DOMxRef("ExtendableMessageEvent")}}
   - : The event object of a {{domxref("ServiceWorkerGlobalScope/message_event", "message")}} event fired on a service worker (when a channel message is received on the {{DOMxRef("ServiceWorkerGlobalScope")}} from another context) — extends the lifetime of such events.
-- {{DOMxRef("FetchEvent")}} {{Experimental_Inline}}
+- {{DOMxRef("FetchEvent")}}
   - : The parameter passed into the {{DOMxRef("ServiceWorkerGlobalScope.fetch_event", "onfetch")}} handler, `FetchEvent` represents a fetch action that is dispatched on the {{DOMxRef("ServiceWorkerGlobalScope")}} of a {{DOMxRef("ServiceWorker")}}. It contains information about the request and resulting response, and provides the {{DOMxRef("FetchEvent.respondWith", "FetchEvent.respondWith()")}} method, which allows us to provide an arbitrary response back to the controlled page.
-- {{DOMxRef("InstallEvent")}} {{Experimental_Inline}}
+- {{DOMxRef("InstallEvent")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : The parameter passed into the {{DOMxRef("ServiceWorkerGlobalScope.install_event", "oninstall")}} handler, the `InstallEvent` interface represents an install action that is dispatched on the {{DOMxRef("ServiceWorkerGlobalScope")}} of a {{DOMxRef("ServiceWorker")}}. As a child of {{DOMxRef("ExtendableEvent")}}, it ensures that functional events such as {{DOMxRef("FetchEvent")}} are not dispatched during installation.
-- {{DOMxRef("NavigationPreloadManager")}} {{Experimental_Inline}}
+- {{DOMxRef("NavigationPreloadManager")}}
   - : Provides methods for managing the preloading of resources with a service worker.
 - {{DOMxRef("Navigator.serviceWorker")}}
   - : Returns a {{DOMxRef("ServiceWorkerContainer")}} object, which provides access to registration, removal, upgrade, and communication with the {{DOMxRef("ServiceWorker")}} objects for the [associated document](https://html.spec.whatwg.org/multipage/browsers.html#concept-document-window).
-- {{DOMxRef("NotificationEvent")}} {{Experimental_Inline}}
+- {{DOMxRef("NotificationEvent")}}
   - : The parameter passed into the {{DOMxRef("ServiceWorkerGlobalScope.notificationclick_event", "onnotificationclick")}} handler, the `NotificationEvent` interface represents a notification click event that is dispatched on the {{DOMxRef("ServiceWorkerGlobalScope")}} of a {{DOMxRef("ServiceWorker")}}.
-- {{DOMxRef("ServiceWorker")}} {{Experimental_Inline}}
+- {{DOMxRef("ServiceWorker")}}
   - : Represents a service worker. Multiple browsing contexts (e.g. pages, workers, etc.) can be associated with the same `ServiceWorker` object.
-- {{DOMxRef("ServiceWorkerContainer")}} {{Experimental_Inline}}
+- {{DOMxRef("ServiceWorkerContainer")}}
   - : Provides an object representing the service worker as an overall unit in the network ecosystem, including facilities to register, unregister, and update service workers, and access the state of service workers and their registrations.
 - {{DOMxRef("ServiceWorkerGlobalScope")}}
   - : Represents the global execution context of a service worker.
 - {{DOMxRef("MessageEvent")}}
   - : Represents a message sent to a {{DOMxRef("ServiceWorkerGlobalScope")}}.
-- {{DOMxRef("ServiceWorkerRegistration")}} {{Experimental_Inline}}
+- {{DOMxRef("ServiceWorkerRegistration")}}
   - : Represents a service worker registration.
-- {{DOMxRef("SyncEvent")}} {{Non-standard_Inline}}
+- {{DOMxRef("SyncEvent")}} {{Experimental_Inline}}
   - : The SyncEvent interface represents a sync action that is dispatched on the {{DOMxRef("ServiceWorkerGlobalScope")}} of a ServiceWorker.
-- {{DOMxRef("SyncManager")}} {{Non-standard_Inline}}
+- {{DOMxRef("SyncManager")}} {{Experimental_Inline}}
   - : Provides an interface for registering and listing sync registrations.
-- {{DOMxRef("WindowClient")}} {{Experimental_Inline}}
+- {{DOMxRef("WindowClient")}}
   - : Represents the scope of a service worker client that is a document in a browser context, controlled by an active worker. This is a special type of {{DOMxRef("Client")}} object, with some additional methods and properties available.
 
 ## Specifications

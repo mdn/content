@@ -1,13 +1,9 @@
 ---
 title: CSS Houdini
 slug: Web/CSS/CSS_Houdini
-tags:
-  - CSS
-  - Houdini
-  - Experimental
-  - Guide
-  - Overview
-  - Reference
+page-type: guide
+status:
+  - experimental
 ---
 
 {{CSSRef}}
@@ -36,7 +32,7 @@ Using {{cssxref("@property")}} however, we can declare the custom property with 
 
 ```css
 @property --background-color {
-  syntax: '<color>';
+  syntax: "<color>";
   inherits: false;
   initial-value: blue;
 }
@@ -61,9 +57,9 @@ The {{CSSxRef("@property")}} at-rule allows you to register an advanced custom p
 
 ### Houdini API references
 
-- {{domxref("CSS_Properties_and_Values_API")}}
-- {{domxref("CSS_Typed_OM_API")}}
-- {{domxref("CSS_Painting_API")}}
+- [CSS Properties and Values API](/en-US/docs/Web/API/CSS_Properties_and_Values_API)
+- [CSS Typed Object Model API](/en-US/docs/Web/API/CSS_Typed_OM_API)
+- [CSS Painting API](/en-US/docs/Web/API/CSS_Painting_API)
 - {{domxref("Worklet")}} reference
 
 ### Houdini guides

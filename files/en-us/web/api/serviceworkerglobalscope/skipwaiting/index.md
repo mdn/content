@@ -2,14 +2,6 @@
 title: ServiceWorkerGlobalScope.skipWaiting()
 slug: Web/API/ServiceWorkerGlobalScope/skipWaiting
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - Service Workers
-  - Service worker API
-  - ServiceWorker
-  - skipWaiting
 browser-compat: api.ServiceWorkerGlobalScope.skipWaiting
 ---
 
@@ -21,7 +13,7 @@ Use this method with {{domxref("Clients.claim()")}} to ensure that updates to th
 
 ## Syntax
 
-```js
+```js-nolint
 skipWaiting()
 ```
 
@@ -31,7 +23,7 @@ None.
 
 ### Return value
 
-A {{jsxref("Promise")}} that immediately resolves with `undefined`.
+A {{jsxref("Promise")}} that resolves with `undefined` after trying to activate the newly installed service worker.
 
 ## Examples
 

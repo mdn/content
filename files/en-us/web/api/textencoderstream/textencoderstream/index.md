@@ -2,11 +2,6 @@
 title: TextEncoderStream()
 slug: Web/API/TextEncoderStream/TextEncoderStream
 page-type: web-api-constructor
-tags:
-  - API
-  - Constructor
-  - Reference
-  - TextEncoderStream
 browser-compat: api.TextEncoderStream.TextEncoderStream
 ---
 
@@ -16,7 +11,7 @@ The **`TextEncoderStream()`** constructor creates a new {{domxref("TextEncoderSt
 
 ## Syntax
 
-```js
+```js-nolint
 new TextEncoderStream()
 ```
 
@@ -30,7 +25,11 @@ In this example a `TextEncoderStream` is created and used to upload a stream of 
 
 ```js
 const body = textStream.pipeThrough(new TextEncoderStream());
-fetch('/dest', { method: 'POST', body, headers: {'Content-Type': 'text/plain; charset=UTF-8'} });
+fetch("/dest", {
+  method: "POST",
+  body,
+  headers: { "Content-Type": "text/plain; charset=UTF-8" },
+});
 ```
 
 ## Specifications

@@ -2,14 +2,6 @@
 title: NodeList.keys()
 slug: Web/API/NodeList/keys
 page-type: web-api-instance-method
-tags:
-  - DOM
-  - Iterator
-  - Method
-  - NodeList
-  - Reference
-  - Web
-  - Polyfill
 browser-compat: api.NodeList.keys
 ---
 
@@ -21,8 +13,8 @@ in this object. The keys are `unsigned integer`.
 
 ## Syntax
 
-```js
-nodeList.keys();
+```js-nolint
+keys()
 ```
 
 ### Return value
@@ -45,7 +37,7 @@ let list = node.childNodes;
 
 // Using for...of
 for (const key of list.keys()) {
-   console.log(key);
+  console.log(key);
 }
 ```
 

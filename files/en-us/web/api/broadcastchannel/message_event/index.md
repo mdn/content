@@ -1,10 +1,7 @@
 ---
-title: 'BroadcastChannel: message event'
+title: "BroadcastChannel: message event"
 slug: Web/API/BroadcastChannel/message_event
 page-type: web-api-event
-tags:
-  - Event
-  - Reference
 browser-compat: api.BroadcastChannel.message_event
 ---
 
@@ -16,8 +13,8 @@ The `message` event is fired on a {{domxref('BroadcastChannel')}} object when a 
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener('message', (event) => { })
+```js-nolint
+addEventListener("message", (event) => { })
 onmessage = (event) => { }
 ```
 
@@ -50,46 +47,47 @@ In this example there's a "sender" [`<iframe>`](/en-US/docs/Web/HTML/Element/ifr
 
 ```html hidden
 <h1>Sender</h1>
-<label for="message">Type a message to broadcast:</label><br/>
+<label for="message">Type a message to broadcast:</label><br />
 <textarea id="message" name="message" rows="1" cols="40">Hello</textarea>
 <button id="broadcast-message" type="button">Broadcast message</button>
 ```
 
 ```css hidden
 body {
-     border: 1px solid black;
-     padding: .5rem;
-     height: 150px;
-     font-family: "Fira Sans", sans-serif;
+  border: 1px solid black;
+  padding: 0.5rem;
+  height: 150px;
+  font-family: "Fira Sans", sans-serif;
 }
 
 h1 {
-    font: 1.6em "Fira Sans", sans-serif;
-    margin-bottom: 1rem;
+  font: 1.6em "Fira Sans", sans-serif;
+  margin-bottom: 1rem;
 }
 
 textarea {
-    padding: .2rem;
+  padding: 0.2rem;
 }
 
-label, br {
-    margin: .5rem 0;
+label,
+br {
+  margin: 0.5rem 0;
 }
 
 button {
-    vertical-align: top;
-    height: 1.5rem;
+  vertical-align: top;
+  height: 1.5rem;
 }
 ```
 
 ```js
-const channel = new BroadcastChannel('example-channel');
-const messageControl = document.querySelector('#message');
-const broadcastMessageButton = document.querySelector('#broadcast-message');
+const channel = new BroadcastChannel("example-channel");
+const messageControl = document.querySelector("#message");
+const broadcastMessageButton = document.querySelector("#broadcast-message");
 
-broadcastMessageButton.addEventListener('click', () => {
-    channel.postMessage(messageControl.value);
-})
+broadcastMessageButton.addEventListener("click", () => {
+  channel.postMessage(messageControl.value);
+});
 ```
 
 ### Receiver 1
@@ -101,21 +99,21 @@ broadcastMessageButton.addEventListener('click', () => {
 
 ```css hidden
 body {
-    border: 1px solid black;
-    padding: .5rem;
-    height: 100px;
-    font-family: "Fira Sans", sans-serif;
+  border: 1px solid black;
+  padding: 0.5rem;
+  height: 100px;
+  font-family: "Fira Sans", sans-serif;
 }
 
 h1 {
-    font: 1.6em "Fira Sans",
-    sans-serif; margin-bottom: 1rem;
+  font: 1.6em "Fira Sans", sans-serif;
+  margin-bottom: 1rem;
 }
 ```
 
 ```js
-const channel = new BroadcastChannel('example-channel');
-channel.addEventListener('message', (event) => {
+const channel = new BroadcastChannel("example-channel");
+channel.addEventListener("message", (event) => {
   received.textContent = event.data;
 });
 ```
@@ -129,21 +127,21 @@ channel.addEventListener('message', (event) => {
 
 ```css hidden
 body {
-    border: 1px solid black;
-    padding: .5rem;
-    height: 100px;
-    font-family: "Fira Sans", sans-serif;
+  border: 1px solid black;
+  padding: 0.5rem;
+  height: 100px;
+  font-family: "Fira Sans", sans-serif;
 }
 
 h1 {
-    font: 1.6em "Fira Sans", sans-serif;
-    margin-bottom: 1rem;
+  font: 1.6em "Fira Sans", sans-serif;
+  margin-bottom: 1rem;
 }
 ```
 
 ```js
-const channel = new BroadcastChannel('example-channel');
-channel.addEventListener('message', (event) => {
+const channel = new BroadcastChannel("example-channel");
+channel.addEventListener("message", (event) => {
   received.textContent = event.data;
 });
 ```

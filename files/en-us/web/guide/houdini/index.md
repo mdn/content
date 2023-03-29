@@ -1,14 +1,11 @@
 ---
 title: CSS Houdini
 slug: Web/Guide/Houdini
-tags:
-  - API
-  - CSS
-  - Houdini
-  - JavaScript
-  - Landing
-  - Web
 ---
+
+<section id="Quick_links">
+  {{ListSubpagesForSidebar("/en-US/docs/Web/Guide")}}
+</section>
 
 Houdini is a set of low-level APIs that exposes parts of the CSS engine,
 giving developers the power to extend CSS by hooking into the styling and layout process of a browser's rendering engine.
@@ -37,7 +34,7 @@ requiring a single line of JavaScript to import configurable components:
 no pre-processors, post-processors or JavaScript frameworks needed.
 
 ```js
-CSS.paintWorklet.addModule('csscomponent.js');
+CSS.paintWorklet.addModule("csscomponent.js");
 ```
 
 This added module contains {{domxref("PaintWorklet.registerPaint")}} functions,
@@ -46,6 +43,7 @@ which register completely configurable worklets.
 > **Note:** You can write your own worklets, or install components created by other people.
 > The [Houdini.how](https://houdini.how/) website is a collection of worklets,
 > with [instructions on how to use them](https://houdini.how/usage/).
+
 The CSS `paint()` function is an additional function supported by the {{cssxref("image")}} type.
 It takes parameters that include the name of the worklet,
 plus additional parameters needed by the worklet.
@@ -56,9 +54,9 @@ In the following example the `paint()` function is passed a worklet called `myCo
 
 ```css
 li {
-    background-image: paint(myComponent, stroke, 10px);
-    --highlights: blue;
-    --lowlights: green;
+  background-image: paint(myComponent, stroke, 10px);
+  --highlights: blue;
+  --lowlights: green;
 }
 ```
 

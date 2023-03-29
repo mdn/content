@@ -2,12 +2,6 @@
 title: WebGLRenderingContext.getUniform()
 slug: Web/API/WebGLRenderingContext/getUniform
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.getUniform
 ---
 
@@ -18,7 +12,7 @@ variable at a given location.
 
 ## Syntax
 
-```js
+```js-nolint
 getUniform(program, location)
 ```
 
@@ -178,7 +172,7 @@ The returned type depends on the uniform type:
 ## Examples
 
 ```js
-const loc = gl.getUniformLocation(program, 'u_foobar');
+const loc = gl.getUniformLocation(program, "u_foobar");
 gl.getUniform(program, loc);
 ```
 

@@ -1,20 +1,6 @@
 ---
 title: Identifying resources on the Web
 slug: Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web
-tags:
-  - Domain
-  - HTTP
-  - Path
-  - Scheme
-  - Syntax
-  - URI
-  - URL
-  - URL Syntax
-  - Web
-  - fragment
-  - port
-  - query
-  - resources
 spec-urls: https://httpwg.org/specs/rfc9110.html#uri
 ---
 
@@ -67,7 +53,7 @@ The two URNs correspond to
 | ----------- | -------------------------------------------------------------------- |
 | data        | [Data URLs](/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URLs)           |
 | file        | Host-specific file names                                             |
-| ftp         | {{Glossary("FTP","File Transfer Protocol")}}         |
+| ftp         | {{Glossary("FTP","File Transfer Protocol")}}                         |
 | http/https  | [Hyper text transfer protocol (Secure)](/en-US/docs/Glossary/HTTP)   |
 | javascript  | URL-embedded JavaScript code                                         |
 | mailto      | Electronic mail address                                              |
@@ -125,5 +111,5 @@ mailto:help@supercyberhelpdesk.info
 
 ## See also
 
-- [What is a URL?](/en-US/docs/Learn/Common_questions/What_is_a_URL)
+- [What is a URL?](/en-US/docs/Learn/Common_questions/Web_mechanics/What_is_a_URL)
 - [IANA list of URI schemes](https://www.iana.org/assignments/uri-schemes/uri-schemes.xhtml)

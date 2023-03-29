@@ -2,12 +2,6 @@
 title: GamepadEvent()
 slug: Web/API/GamepadEvent/GamepadEvent
 page-type: web-api-constructor
-tags:
-  - API
-  - Constructor
-  - Gamepad API
-  - Games
-  - Reference
 browser-compat: api.GamepadEvent.GamepadEvent
 ---
 
@@ -17,7 +11,7 @@ The **`GamepadEvent()`** constructor creates a new {{domxref("GamepadEvent")}} o
 
 ## Syntax
 
-```js
+```js-nolint
 new GamepadEvent(type, options)
 ```
 

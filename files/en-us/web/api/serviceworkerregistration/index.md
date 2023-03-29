@@ -2,15 +2,6 @@
 title: ServiceWorkerRegistration
 slug: Web/API/ServiceWorkerRegistration
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Offline
-  - Reference
-  - Service Workers
-  - Service worker API
-  - ServiceWorkerRegistration
-  - Workers
 browser-compat: api.ServiceWorkerRegistration
 ---
 
@@ -24,18 +15,22 @@ The lifetime of a service worker registration is beyond that of the `ServiceWork
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _Also implements properties from its parent interface,_ {{domxref("EventTarget")}}.
 
 - {{domxref("ServiceWorkerRegistration.active")}} {{ReadOnlyInline}}
   - : Returns a service worker whose state is `activating` or `activated`. This is initially set to `null`. An active worker will control a {{domxref("Client")}} if the client's URL falls within the scope of the registration (the `scope` option set when {{domxref("ServiceWorkerContainer.register")}} is first called.)
+- {{domxref("ServiceWorkerRegistration.backgroundFetch")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+  - : Returns a reference to a {{domxref("BackgroundFetchManager")}} object, which manages background fetch operations.
 - {{domxref("ServiceWorkerRegistration.index")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns a reference to the {{domxref("ContentIndex")}} interface, for managing indexed content for offline viewing.
 - {{domxref("ServiceWorkerRegistration.installing")}} {{ReadOnlyInline}}
   - : Returns a service worker whose state is `installing`. This is initially set to `null`.
 - {{domxref("ServiceWorkerRegistration.navigationPreload")}} {{ReadOnlyInline}}
   - : Returns the instance of {{domxref("NavigationPreloadManager")}} associated with the current service worker registration.
+- {{domxref("ServiceWorkerRegistration.paymentManager")}} {{Experimental_Inline}}
+  - : Returns a payment app's {{domxref("PaymentManager")}} instance, which is used to manage various payment app functionality.
 - {{domxref("ServiceWorkerRegistration.pushManager")}} {{ReadOnlyInline}}
   - : Returns a reference to the {{domxref("PushManager")}} interface for managing push subscriptions including subscribing, getting an active subscription, and accessing push permission status.
 - {{domxref("ServiceWorkerRegistration.scope")}} {{ReadOnlyInline}}
@@ -47,7 +42,7 @@ _Also implements properties from its parent interface,_ {{domxref("EventTarget")
 - {{domxref("ServiceWorkerRegistration.updateViaCache")}} {{ReadOnlyInline}}
   - : Returns a string indicating what is the cache strategy to use when updating the service worker scripts. It can be one of the following: `imports`, `all`, or `none`.
 
-## Methods
+## Instance methods
 
 _Also implements methods from its parent interface,_ {{domxref("EventTarget")}}.
 

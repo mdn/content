@@ -1,15 +1,7 @@
 ---
 title: Intl.RelativeTimeFormat.prototype.format()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/format
-tags:
-  - Internationalization
-  - Intl
-  - JavaScript
-  - Localization
-  - Method
-  - Prototype
-  - Reference
-  - RelativeTimeFormat
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.Intl.RelativeTimeFormat.format
 ---
 
@@ -19,11 +11,9 @@ The **`Intl.RelativeTimeFormat.prototype.format()`** method formats a `value` an
 
 {{EmbedInteractiveExample("pages/js/intl-relativetimeformat-prototype-format.html")}}
 
-<!-- The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone https://github.com/mdn/interactive-examples and send us a pull request. -->
-
 ## Syntax
 
-```js
+```js-nolint
 format(value, unit)
 ```
 
@@ -54,12 +44,10 @@ const rtf = new Intl.RelativeTimeFormat("en", {
 });
 
 // Format relative time using negative value (-1).
-rtf.format(-1, "day");
-// > "1 day ago"
+rtf.format(-1, "day"); // "1 day ago"
 
 // Format relative time using positive value (1).
-rtf.format(1, "day");
-// > "in 1 day"
+rtf.format(1, "day"); // "in 1 day"
 ```
 
 ### Using the auto option
@@ -72,15 +60,12 @@ If `numeric:auto` option is passed, it will produce the string `yesterday`, `tod
 const rtf = new Intl.RelativeTimeFormat("en", { numeric: "auto" });
 
 // Format relative time using negative value (-1).
-rtf.format(-1, "day");
-// > "yesterday"
+rtf.format(-1, "day"); // "yesterday"
 
-rtf.format(0, "day");
-// > "today"
+rtf.format(0, "day"); // "today"
 
 // Format relative time using positive day unit (1).
-rtf.format(1, "day");
-// > "tomorrow"
+rtf.format(1, "day"); // "tomorrow"
 ```
 
 ## Specifications

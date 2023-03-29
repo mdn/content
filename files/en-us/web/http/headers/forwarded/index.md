@@ -1,12 +1,6 @@
 ---
 title: Forwarded
 slug: Web/HTTP/Headers/Forwarded
-tags:
-  - HTTP
-  - HTTP Header
-  - Reference
-  - Request header
-  - header
 browser-compat: http.headers.Forwarded
 ---
 
@@ -51,6 +45,7 @@ This can be done by adding a new `Forwarded` header to the end of the header blo
 ## Directives
 
 - `by` {{optional_inline}}
+
   - : The interface where the request came in to the proxy server.
     The identifier can be:
 

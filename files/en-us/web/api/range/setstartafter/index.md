@@ -2,11 +2,6 @@
 title: Range.setStartAfter()
 slug: Web/API/Range/setStartAfter
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - Method
-  - Range
 browser-compat: api.Range.setStartAfter
 ---
 
@@ -19,7 +14,7 @@ for the `referenceNode`.
 
 ## Syntax
 
-```js
+```js-nolint
 setStartAfter(referenceNode)
 ```
 

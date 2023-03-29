@@ -2,16 +2,8 @@
 title: ContentIndex.add()
 slug: Web/API/ContentIndex/add
 page-type: web-api-instance-method
-tags:
-  - Content
-  - Content Index API
-  - Index
-  - Interface
-  - Method
-  - PWA
-  - content index
-  - content indexing
-  - Experimental
+status:
+  - experimental
 browser-compat: api.ContentIndex.add
 ---
 
@@ -22,7 +14,7 @@ The **`add()`** method of the
 
 ## Syntax
 
-```js
+```js-nolint
 add(contentDescription)
 ```
 
@@ -48,6 +40,7 @@ add(contentDescription)
         HTML document. Needs to be under the scope of the current
         {{domxref('ServiceWorker','service worker')}}.
     - `category` {{Optional_Inline}}
+
       - : A {{jsxref('String')}} defining the
         category of content. Can be:
 
@@ -57,7 +50,8 @@ add(contentDescription)
         - `video`
         - `audio`
 
-    - `icons`  {{Optional_Inline}}
+    - `icons` {{Optional_Inline}}
+
       - : An {{jsxref('Array')}} of image
         resources, defined as an {{jsxref('Object')}} with the following data:
 
@@ -93,16 +87,19 @@ function which uses the `add` method to register it with the
 ```js
 // our content
 const item = {
-  id: 'post-1',
-  url: '/posts/amet.html',
-  title: 'Amet consectetur adipisicing',
-  description: 'Repellat et quia iste possimus ducimus aliquid a aut eaque nostrum.',
-  icons: [{
-    src: '/media/dark.png',
-    sizes: '128x128',
-    type: 'image/png',
-  }],
-  category: 'article'
+  id: "post-1",
+  url: "/posts/amet.html",
+  title: "Amet consectetur adipisicing",
+  description:
+    "Repellat et quia iste possimus ducimus aliquid a aut eaque nostrum.",
+  icons: [
+    {
+      src: "/media/dark.png",
+      sizes: "128x128",
+      type: "image/png",
+    },
+  ],
+  category: "article",
 };
 
 // our asynchronous function to add indexed content
@@ -118,7 +115,7 @@ async function registerContent(data) {
   try {
     await registration.index.add(data);
   } catch (e) {
-    console.log('Failed to register content: ', e.message);
+    console.log("Failed to register content: ", e.message);
   }
 }
 ```
@@ -129,16 +126,19 @@ The `add` method can also be used within the
 ```js
 // our content
 const item = {
-  id: 'post-1',
-  url: '/posts/amet.html',
-  title: 'Amet consectetur adipisicing',
-  description: 'Repellat et quia iste possimus ducimus aliquid a aut eaque nostrum.',
-  icons: [{
-    src: '/media/dark.png',
-    sizes: '128x128',
-    type: 'image/png',
-  }],
-  category: 'article'
+  id: "post-1",
+  url: "/posts/amet.html",
+  title: "Amet consectetur adipisicing",
+  description:
+    "Repellat et quia iste possimus ducimus aliquid a aut eaque nostrum.",
+  icons: [
+    {
+      src: "/media/dark.png",
+      sizes: "128x128",
+      type: "image/png",
+    },
+  ],
+  category: "article",
 };
 
 self.registration.index.add(item);

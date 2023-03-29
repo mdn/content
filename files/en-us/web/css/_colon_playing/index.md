@@ -1,11 +1,7 @@
 ---
-title: ':playing'
+title: ":playing"
 slug: Web/CSS/:playing
-tags:
-  - CSS
-  - Pseudo-class
-  - Reference
-  - playing
+page-type: css-pseudo-class
 browser-compat: css.selectors.playing
 ---
 
@@ -15,16 +11,12 @@ The **`:playing`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS
 
 A resource is playing even if in buffering state or paused for any reason other than a user interaction to cause it to be paused.
 
-```css
-:playing {
-
-}
-```
-
 ## Syntax
 
-```
-:playing
+```css
+:playing {
+  /* ... */
+}
 ```
 
 ## Examples

@@ -2,12 +2,6 @@
 title: TrustedScript.toString()
 slug: Web/API/TrustedScript/toString
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - toString
-  - TrustedScript
 browser-compat: api.TrustedScript.toString
 ---
 
@@ -17,7 +11,7 @@ The **`toString()`** method of the {{domxref("TrustedScript")}} interface return
 
 ## Syntax
 
-```js
+```js-nolint
 toString()
 ```
 

@@ -2,12 +2,6 @@
 title: WebGLRenderingContext.compileShader()
 slug: Web/API/WebGLRenderingContext/compileShader
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.compileShader
 ---
 
@@ -18,7 +12,7 @@ data so that it can be used by a {{domxref("WebGLProgram")}}.
 
 ## Syntax
 
-```js
+```js-nolint
 compileShader(shader)
 ```
 

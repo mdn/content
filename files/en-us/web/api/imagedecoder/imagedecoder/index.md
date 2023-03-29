@@ -2,12 +2,8 @@
 title: ImageDecoder()
 slug: Web/API/ImageDecoder/ImageDecoder
 page-type: web-api-constructor
-tags:
-  - API
-  - Constructor
-  - Reference
-  - ImageDecoder
-  - Experimental
+status:
+  - experimental
 browser-compat: api.ImageDecoder.ImageDecoder
 ---
 
@@ -17,7 +13,7 @@ The **`ImageDecoder()`** constructor creates a new {{domxref("ImageDecoder")}} o
 
 ## Syntax
 
-```js
+```js-nolint
 new ImageDecoder(init)
 ```
 
@@ -52,7 +48,7 @@ The following example creates a new `ImageDecoder` with the required options.
 ```js
 let init = {
   type: "image/png",
-  data: imageByteStream
+  data: imageByteStream,
 };
 
 let imageDecoder = new ImageDecoder(init);

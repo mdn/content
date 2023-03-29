@@ -2,17 +2,8 @@
 title: SpeechGrammarList.item()
 slug: Web/API/SpeechGrammarList/item
 page-type: web-api-instance-method
-tags:
-  - API
-  - Experimental
-  - Getter
-  - Method
-  - Reference
-  - SpeechGrammarList
-  - Web Speech API
-  - item
-  - recognition
-  - speech
+status:
+  - experimental
 browser-compat: api.SpeechGrammarList.item
 ---
 
@@ -24,7 +15,7 @@ objects to be retrieved from the `SpeechGrammarList` using array syntax.
 
 ## Syntax
 
-```js
+```js-nolint
 item(index)
 ```
 
@@ -40,7 +31,8 @@ A {{domxref("SpeechGrammar")}} object.
 ## Examples
 
 ```js
-const grammar = '#JSGF V1.0; grammar colors; public <color> = aqua | azure | beige | bisque | black | blue | brown | chocolate | coral | crimson | cyan | fuchsia | ghostwhite | gold | goldenrod | gray | green | indigo | ivory | khaki | lavender | lime | linen | magenta | maroon | moccasin | navy | olive | orange | orchid | peru | pink | plum | purple | red | salmon | sienna | silver | snow | tan | teal | thistle | tomato | turquoise | violet | white | yellow ;'
+const grammar =
+  "#JSGF V1.0; grammar colors; public <color> = aqua | azure | beige | bisque | black | blue | brown | chocolate | coral | crimson | cyan | fuchsia | ghostwhite | gold | goldenrod | gray | green | indigo | ivory | khaki | lavender | lime | linen | magenta | maroon | moccasin | navy | olive | orange | orchid | peru | pink | plum | purple | red | salmon | sienna | silver | snow | tan | teal | thistle | tomato | turquoise | violet | white | yellow ;";
 const recognition = new SpeechRecognition();
 const speechRecognitionList = new SpeechGrammarList();
 speechRecognitionList.addFromString(grammar, 1);

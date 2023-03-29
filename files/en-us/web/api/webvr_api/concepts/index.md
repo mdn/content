@@ -2,18 +2,6 @@
 title: WebVR concepts
 slug: Web/API/WebVR_API/Concepts
 page-type: guide
-tags:
-  - Acceleration
-  - Apps
-  - FOV
-  - Guide
-  - Orientation
-  - Position
-  - VR
-  - Virtual Reality
-  - WebVR
-  - concepts
-  - velocity
 ---
 
 {{APIRef("WebVR API")}}{{deprecated_header}}
@@ -73,13 +61,13 @@ The output information falls into four categories:
 2. Orientation — The rotation of the HMD around three axes in a 3D coordinate space. Pitch is rotation around the x axis, yaw is rotation around the y axis, and roll is rotation around the z axis. In WebVR, the pitch, yaw, and roll are represented by the first three elements of the array contained in {{domxref("VRPose.orientation")}}.
 3. Velocity — There are two types of velocity to consider in VR:
 
-    - Linear — The speed along any one of the axes that the HMD is traveling. This information can be accessed using {{domxref("VRPose.linearVelocity")}}.
-    - Angular — The speed at which the HMD is rotating around any one of the axes. This information can be accessed using {{domxref("VRPose.angularVelocity")}}.
+   - Linear — The speed along any one of the axes that the HMD is traveling. This information can be accessed using {{domxref("VRPose.linearVelocity")}}.
+   - Angular — The speed at which the HMD is rotating around any one of the axes. This information can be accessed using {{domxref("VRPose.angularVelocity")}}.
 
 4. Acceleration — There are two types of acceleration to consider in VR:
 
-    - Linear — The acceleration of travel along any one of the axes that the HMD is traveling. This information can be accessed using {{domxref("VRPose.linearAcceleration")}}.
-    - Angular — The acceleration of rotation of the HMD around any one of the axes. This information can be accessed using {{domxref("VRPose.angularAcceleration")}}.
+   - Linear — The acceleration of travel along any one of the axes that the HMD is traveling. This information can be accessed using {{domxref("VRPose.linearAcceleration")}}.
+   - Angular — The acceleration of rotation of the HMD around any one of the axes. This information can be accessed using {{domxref("VRPose.angularAcceleration")}}.
 
 ## Field of view
 
@@ -138,7 +126,7 @@ If developers do not take utmost care, VR apps can actually cause their users to
 To avoid bringing on motion sickness in our users (or at least minimize the effects), we need to:
 
 - Always maintain head tracking (this is the most important of all, especially if it occurs in middle of the experience.)
-- Use constant velocity; avoid acceleration or deceleration camera movements (use linear acceleration, and avoid vs easing if you can.)
+- Use constant velocity; avoid acceleration or deceleration camera movements (use linear acceleration, and avoid easing if you can.)
 - Keep the frame rate up (less than 30fps is uncomfortable.)
 - Avoid sharp and/or unexpected camera rotations.
 - Add fixed points of reference for fixed objects (otherwise the user will believe they are on the move.)

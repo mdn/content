@@ -2,12 +2,8 @@
 title: Window.dump()
 slug: Web/API/Window/dump
 page-type: web-api-instance-method
-tags:
-  - API
-  - HTML DOM
-  - Method
-  - Non-standard
-  - Window
+status:
+  - non-standard
 browser-compat: api.Window.dump
 ---
 
@@ -19,7 +15,7 @@ Output from `dump()` is _not_ sent to the browser's developer tools console. To 
 
 ## Syntax
 
-```js
+```js-nolint
 dump(message)
 ```
 

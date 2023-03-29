@@ -2,17 +2,6 @@
 title: Animation.updatePlaybackRate()
 slug: Web/API/Animation/updatePlaybackRate
 page-type: web-api-instance-method
-tags:
-  - API
-  - Animation
-  - Interface
-  - Method
-  - Reference
-  - Web Animations
-  - playbackRate
-  - updatePlaybackRate
-  - waapi
-  - web animations api
 browser-compat: api.Animation.updatePlaybackRate
 ---
 
@@ -38,7 +27,7 @@ animation's {{domxref("Animation.ready", "ready")}} promise is resolved.
 
 ## Syntax
 
-```js
+```js-nolint
 updatePlaybackRate(playbackRate)
 ```
 
@@ -59,7 +48,7 @@ A speed selector component would benefit from smooth updating of
 `updatePlaybackRate()`, as demonstrated below:
 
 ```js
-speedSelector.addEventListener('input', (evt) => {
+speedSelector.addEventListener("input", (evt) => {
   cartoon.updatePlaybackRate(parseFloat(evt.target.value));
   cartoon.ready.then(() => {
     console.log(`Playback rate set to ${cartoon.playbackRate}`);

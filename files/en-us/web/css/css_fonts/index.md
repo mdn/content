@@ -1,12 +1,7 @@
 ---
 title: CSS Fonts
 slug: Web/CSS/CSS_Fonts
-tags:
-  - CSS
-  - CSS Fonts
-  - Guide
-  - Overview
-  - Reference
+page-type: css-module
 spec-urls: https://drafts.csswg.org/css-fonts/
 ---
 
@@ -32,10 +27,12 @@ p {
 ```
 
 ```html
-<p>Three hundred years ago<br>
-  I thought I might get some sleep<br>
-  I stretched myself out on an antique bed<br>
-  An' my spirit did a midnite creep</p>
+<p>
+  Three hundred years ago<br />
+  I thought I might get some sleep<br />
+  I stretched myself out on an antique bed<br />
+  An' my spirit did a midnite creep
+</p>
 ```
 
 The result is as follows:

@@ -1,10 +1,7 @@
 ---
 title: kernelMatrix
 slug: Web/SVG/Attribute/kernelMatrix
-tags:
-  - Filters
-  - SVG
-  - SVG Attribute
+page-type: svg-attribute
 browser-compat: svg.elements.feConvolveMatrix.kernelMatrix
 ---
 
@@ -21,7 +18,9 @@ You can use this attribute with the following SVG elements:
 ## Example
 
 ```css hidden
-html, body, svg {
+html,
+body,
+svg {
   height: 100%;
 }
 ```
@@ -29,16 +28,22 @@ html, body, svg {
 ```html
 <svg viewBox="0 0 420 200" xmlns="http://www.w3.org/2000/svg">
   <filter id="convolveMatrix1" x="0" y="0" width="100%" height="100%">
-    <feConvolveMatrix kernelMatrix="1 1 0 0 0 0 0 0 -1"/>
+    <feConvolveMatrix kernelMatrix="1 1 0 0 0 0 0 0 -1" />
   </filter>
   <filter id="convolveMatrix2" x="0" y="0" width="100%" height="100%">
-    <feConvolveMatrix kernelMatrix="-1 0 0 0 0 0 0 0 1"/>
+    <feConvolveMatrix kernelMatrix="-1 0 0 0 0 0 0 0 1" />
   </filter>
 
-  <image xlink:href="mdn_logo_only_color.png" width="200" height="200"
-      style="filter:url(#convolveMatrix1);"/>
-  <image xlink:href="mdn_logo_only_color.png" width="200" height="200"
-      style="filter:url(#convolveMatrix2); transform:translateX(220px);"/>
+  <image
+    xlink:href="mdn_logo_only_color.png"
+    width="200"
+    height="200"
+    style="filter:url(#convolveMatrix1);" />
+  <image
+    xlink:href="mdn_logo_only_color.png"
+    width="200"
+    height="200"
+    style="filter:url(#convolveMatrix2); transform:translateX(220px);" />
 </svg>
 ```
 
@@ -70,6 +75,7 @@ html, body, svg {
 </table>
 
 - `<list of numbers>`
+
   - : The list of {{cssxref("number")}}s that make up the kernel matrix for the convolution. Values are separated by space characters and/or a comma. The number of entries in the list must equal `<orderX>` times `<orderY>`.
 
     If the result of `orderX` \* `orderY` is not equal to the number of entries in the value list, the filter primitive acts as a pass through filter.

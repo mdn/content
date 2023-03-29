@@ -1,12 +1,9 @@
 ---
 title: Define terms with HTML
 slug: Learn/HTML/Howto/Define_terms_with_HTML
-tags:
-  - Beginner
-  - Guide
-  - HTML
-  - Learn
 ---
+
+{{QuickLinksWithSubpages("/en-US/docs/Learn/HTML/Howto")}}
 
 HTML provides several ways to convey description semantics, whether inline or as structured glossaries. In this article, we'll cover how to properly mark up keywords when you're defining them.
 
@@ -61,7 +58,7 @@ It's best to [mark abbreviations specially](/en-US/docs/Learn/HTML/Introduction_
 ```html
 <p>
   <dfn><abbr>HTML</abbr> (hypertext markup language)</dfn>
-   is a description language used to structure documents on the web.
+  is a description language used to structure documents on the web.
 </p>
 ```
 
@@ -81,7 +78,7 @@ It's best to [mark abbreviations specially](/en-US/docs/Learn/HTML/Introduction_
 </p>
 ```
 
-Assistive technology can often use this attribute to find a text alternative to a given term. You can use `aria-describedby` on any tag enclosing a keyword to be defined (not just the `<dfn>` element). `aria-describedby` references the {{htmlattrxref('id')}} of the element containing the description.
+Assistive technology can often use this attribute to find a text alternative to a given term. You can use `aria-describedby` on any tag enclosing a keyword to be defined (not just the `<dfn>` element). `aria-describedby` references the [`id`](/en-US/docs/Web/HTML/Global_attributes#id) of the element containing the description.
 
 ## How to build a description list
 
@@ -98,21 +95,18 @@ Here's a simple example describing kinds of food and drink:
 ```html
 <dl>
   <dt>jambalaya</dt>
-    <dd>
-      rice-based entree typically containing chicken,
-      sausage, seafood, and spices
-    </dd>
+  <dd>
+    rice-based entree typically containing chicken, sausage, seafood, and spices
+  </dd>
 
   <dt>sukiyaki</dt>
-    <dd>
-      Japanese specialty consisting of thinly sliced meat,
-      vegetables, and noodles, cooked in sake and soy sauce
-    </dd>
+  <dd>
+    Japanese specialty consisting of thinly sliced meat, vegetables, and
+    noodles, cooked in sake and soy sauce
+  </dd>
 
   <dt>chianti</dt>
-    <dd>
-      dry Italian red wine originating in Tuscany
-    </dd>
+  <dd>dry Italian red wine originating in Tuscany</dd>
 </dl>
 ```
 

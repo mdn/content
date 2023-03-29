@@ -2,12 +2,6 @@
 title: CanvasRenderingContext2D.putImageData()
 slug: Web/API/CanvasRenderingContext2D/putImageData
 page-type: web-api-instance-method
-tags:
-  - API
-  - Canvas
-  - CanvasRenderingContext2D
-  - Method
-  - Reference
 browser-compat: api.CanvasRenderingContext2D.putImageData
 ---
 
@@ -26,7 +20,7 @@ manipulation of canvas contents in the article [Pixel manipulation with canvas](
 
 ## Syntax
 
-```js
+```js-nolint
 putImageData(imageData, dx, dy)
 putImageData(imageData, dx, dy, dirtyX, dirtyY, dirtyWidth, dirtyHeight)
 ```
@@ -79,25 +73,34 @@ of {{domxref("CanvasRenderingContext2D.fillRect()")}}.
 #### JavaScript
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 
-function putImageData(ctx, imageData, dx, dy,
-    dirtyX, dirtyY, dirtyWidth, dirtyHeight) {
+function putImageData(
+  ctx,
+  imageData,
+  dx,
+  dy,
+  dirtyX,
+  dirtyY,
+  dirtyWidth,
+  dirtyHeight
+) {
   const data = imageData.data;
   const height = imageData.height;
   const width = imageData.width;
   dirtyX = dirtyX || 0;
   dirtyY = dirtyY || 0;
-  dirtyWidth = dirtyWidth !== undefined? dirtyWidth: width;
-  dirtyHeight = dirtyHeight !== undefined? dirtyHeight: height;
+  dirtyWidth = dirtyWidth !== undefined ? dirtyWidth : width;
+  dirtyHeight = dirtyHeight !== undefined ? dirtyHeight : height;
   const limitBottom = dirtyY + dirtyHeight;
   const limitRight = dirtyX + dirtyWidth;
   for (let y = dirtyY; y < limitBottom; y++) {
     for (let x = dirtyX; x < limitRight; x++) {
       const pos = y * width + x;
-      ctx.fillStyle =
-        `rgba(${data[pos*4+0]}, ${data[pos*4+1]}, ${data[pos*4+2]}, ${data[pos*4+3]/255})`;
+      ctx.fillStyle = `rgba(${data[pos * 4 + 0]}, ${data[pos * 4 + 1]}, ${
+        data[pos * 4 + 2]
+      }, ${data[pos * 4 + 3] / 255})`;
       ctx.fillRect(x + dx, y + dy, 1, 1);
     }
   }

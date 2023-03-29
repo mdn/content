@@ -2,15 +2,6 @@
 title: SourceBufferList
 slug: Web/API/SourceBufferList
 page-type: web-api-interface
-tags:
-  - API
-  - Audio
-  - Interface
-  - MSE
-  - Media Source Extensions
-  - Reference
-  - SourceBufferList
-  - Video
 browser-compat: api.SourceBufferList
 ---
 
@@ -24,12 +15,12 @@ The individual source buffers can be accessed using the [array operator](/en-US/
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 - {{domxref("SourceBufferList.length")}} {{ReadOnlyInline}}
   - : Returns the number of {{domxref("SourceBuffer")}} objects in the list.
 
-## Methods
+## Instance methods
 
 _Inherits methods from its parent interface, {{domxref("EventTarget")}}._
 
@@ -46,7 +37,7 @@ This example shows how to access the active source buffers of the {{domxref("Med
 
 ```js
 // Video is an already playing video using a MediaSource srcObject
-const video = document.querySelector('video');
+const video = document.querySelector("video");
 const mediaSource = video.srcObject;
 const sourceBufferList = mediaSource.activeSourceBuffers;
 for (const sourceBuffer of sourceBufferList) {

@@ -2,14 +2,6 @@
 title: NodeList.values()
 slug: Web/API/NodeList/values
 page-type: web-api-instance-method
-tags:
-  - DOM
-  - Iterator
-  - Method
-  - NodeList
-  - Reference
-  - Web
-  - Polyfill
 browser-compat: api.NodeList.values
 ---
 
@@ -21,8 +13,8 @@ in this object. The values are {{domxref("Node")}} objects.
 
 ## Syntax
 
-```js
-nodeList.values();
+```js-nolint
+values()
 ```
 
 ### Return value
@@ -51,7 +43,7 @@ for (const value of list.values()) {
 
 The result is:
 
-```
+```plain
 <p>
 #text "hey"
 <span>

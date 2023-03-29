@@ -2,11 +2,6 @@
 title: Element.remove()
 slug: Web/API/Element/remove
 page-type: web-api-instance-method
-tags:
-  - API
-  - Element
-  - DOM
-  - Method
 browser-compat: api.Element.remove
 ---
 
@@ -16,7 +11,7 @@ The **`Element.remove()`** method removes the element from the DOM.
 
 ## Syntax
 
-```js
+```js-nolint
 remove()
 ```
 
@@ -39,7 +34,7 @@ None ({{jsxref("undefined")}}).
 ```
 
 ```js
-const element = document.getElementById('div-02');
+const element = document.getElementById("div-02");
 element.remove(); // Removes the div with the 'div-02' id
 ```
 
@@ -49,7 +44,7 @@ The `remove()` method is not scoped into the `with` statement.
 See {{jsxref("Symbol.unscopables")}} for more information.
 
 ```js
-with(node) {
+with (node) {
   remove();
 }
 // ReferenceError: remove is not defined

@@ -2,14 +2,6 @@
 title: XPathEvaluator.createExpression()
 slug: Web/API/XPathEvaluator/createExpression
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - DOM XPath API
-  - Method
-  - Reference
-  - XPath
-  - XPathEvaluator
 browser-compat: api.XPathEvaluator.createExpression
 ---
 
@@ -20,7 +12,7 @@ This method compiles an {{domxref("XPathExpression")}} which can then be used fo
 
 ## Syntax
 
-```js
+```js-nolint
 createExpression(expression)
 createExpression(expression, resolver)
 ```

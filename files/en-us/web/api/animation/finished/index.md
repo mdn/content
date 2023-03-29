@@ -2,14 +2,6 @@
 title: Animation.finished
 slug: Web/API/Animation/finished
 page-type: web-api-instance-property
-tags:
-  - API
-  - Animation
-  - Property
-  - Reference
-  - Web Animations
-  - finished
-  - web animations api
 browser-compat: api.Animation.finished
 ---
 
@@ -28,9 +20,9 @@ A {{jsxref("Promise")}} object which will resolve once the animation has finishe
 The following code waits until all animations running on the element `elem` have finished, then deletes the element from the DOM tree:
 
 ```js
-Promise.all(
-  elem.getAnimations().map((animation) => animation.finished),
-).then(() => elem.remove());
+Promise.all(elem.getAnimations().map((animation) => animation.finished)).then(
+  () => elem.remove()
+);
 ```
 
 ## Specifications

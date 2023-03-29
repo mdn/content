@@ -2,13 +2,6 @@
 title: Response.clone()
 slug: Web/API/Response/clone
 page-type: web-api-instance-method
-tags:
-  - API
-  - Fetch
-  - Method
-  - Reference
-  - Response
-  - clone
 browser-compat: api.Response.clone
 ---
 
@@ -36,7 +29,7 @@ In fact, the main reason `clone()` exists is to allow multiple uses of body obje
 
 ## Syntax
 
-```js
+```js-nolint
 clone()
 ```
 
@@ -56,10 +49,10 @@ When the fetch resolves successfully, we clone it, extract a blob from both resp
 {{domxref("URL.createObjectURL")}}, and display them in two separate {{htmlelement("img")}} elements.
 
 ```js
-const image1 = document.querySelector('.img1');
-const image2 = document.querySelector('.img2');
+const image1 = document.querySelector(".img1");
+const image2 = document.querySelector(".img2");
 
-const myRequest = new Request('flowers.jpg');
+const myRequest = new Request("flowers.jpg");
 
 fetch(myRequest).then((response) => {
   const response2 = response.clone();

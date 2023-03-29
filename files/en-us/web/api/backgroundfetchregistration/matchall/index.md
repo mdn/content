@@ -2,13 +2,8 @@
 title: BackgroundFetchRegistration.matchAll()
 slug: Web/API/BackgroundFetchRegistration/matchAll
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - matchAll
-  - BackgroundFetchRegistration
-  - Experimental
+status:
+  - experimental
 browser-compat: api.BackgroundFetchRegistration.matchAll
 ---
 
@@ -18,7 +13,7 @@ The **`matchAll()`** method of the {{domxref("BackgroundFetchRegistration")}} in
 
 ## Syntax
 
-```js
+```js-nolint
 matchAll(request)
 matchAll(request,options)
 ```

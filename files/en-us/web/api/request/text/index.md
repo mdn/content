@@ -2,13 +2,6 @@
 title: Request.text()
 slug: Web/API/Request/text
 page-type: web-api-instance-method
-tags:
-  - API
-  - Fetch
-  - Method
-  - Reference
-  - Text
-  - Request
 browser-compat: api.Request.text
 ---
 
@@ -20,7 +13,7 @@ The response is _always_ decoded using UTF-8.
 
 ## Syntax
 
-```js
+```js-nolint
 text()
 ```
 
@@ -37,9 +30,9 @@ A Promise that resolves with a {{jsxref("String")}}.
 ```js
 const text = "Hello world";
 
-const request = new Request('/myEndpoint', {
-  method: 'POST',
-  body: text
+const request = new Request("/myEndpoint", {
+  method: "POST",
+  body: text,
 });
 
 request.text().then((text) => {

@@ -2,11 +2,6 @@
 title: SVGAElement
 slug: Web/API/SVGAElement
 page-type: web-api-interface
-tags:
-  - API
-  - Reference
-  - SVG
-  - SVGAElement
 browser-compat: api.SVGAElement
 ---
 
@@ -16,7 +11,7 @@ The **`SVGAElement`** interface provides access to the properties of an {{SVGEle
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _This interface also inherits properties from its parent, {{domxref("SVGGraphicsElement")}}, and implements properties from {{domxref("HTMLHyperlinkElementUtils")}}._
 
@@ -41,7 +36,7 @@ _This interface also inherits properties from its parent, {{domxref("SVGGraphics
 - {{domxref("SVGAElement.type")}}
   - : A string that reflects the `type` attribute, indicating the MIME type of the linked resource.
 
-## Methods
+## Instance methods
 
 _This interface has no methods but inherits methods from its parent, {{domxref("SVGGraphicsElement")}}._
 
@@ -60,7 +55,7 @@ linkRef.onclick = () => {
   } else {
     console.log("SORRY! not _blank");
   }
-}
+};
 ```
 
 ## Specifications

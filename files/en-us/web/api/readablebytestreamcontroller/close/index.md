@@ -2,13 +2,6 @@
 title: ReadableByteStreamController.close()
 slug: Web/API/ReadableByteStreamController/close
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - ReadableByteStreamController
-  - Reference
-  - Streams
-  - close
 browser-compat: api.ReadableByteStreamController.close
 ---
 
@@ -23,7 +16,7 @@ This might be called by the underlying source when its data source has been exha
 
 ## Syntax
 
-```js
+```js-nolint
 close()
 ```
 

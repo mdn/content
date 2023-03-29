@@ -2,14 +2,6 @@
 title: IDBDatabase.transaction()
 slug: Web/API/IDBDatabase/transaction
 page-type: web-api-instance-method
-tags:
-  - API
-  - Database
-  - IDBDatabase
-  - IndexedDB
-  - Method
-  - Reference
-  - Storage
 browser-compat: api.IDBDatabase.transaction
 ---
 
@@ -24,7 +16,7 @@ object store.
 
 ## Syntax
 
-```js
+```js-nolint
 transaction(storeNames)
 transaction(storeNames, mode)
 transaction(storeNames, mode, options)
@@ -40,8 +32,8 @@ transaction(storeNames, mode, options)
     Therefore the following lines are equivalent:
 
     ```js
-    db.transaction(['my-store-name']);
-    db.transaction('my-store-name');
+    db.transaction(["my-store-name"]);
+    db.transaction("my-store-name");
     ```
 
     If you need to access all object stores in the database, you can use the property
@@ -67,11 +59,11 @@ transaction(storeNames, mode, options)
     you would use the following:
 
     ```js
-    const transaction = db.transaction('my-store-name', "readwrite");
+    const transaction = db.transaction("my-store-name", "readwrite");
     ```
 
     As of Firefox 40, IndexedDB transactions have relaxed durability guarantees to
-    increase performance (see {{Bug("1112702")}}), which is the same behavior as other
+    increase performance (see [Webkit bug 1112702](https://bugzil.la/1112702)), which is the same behavior as other
     IndexedDB-supporting browsers. Previously in a `readwrite` transaction, a
     {{domxref("IDBTransaction.complete_event", "complete")}} event was fired only when all data was guaranteed
     to have been flushed to disk. In Firefox 40+ the `complete` event is
@@ -122,7 +114,7 @@ An {{domxref("IDBTransaction")}} object.
 
 In this example we open a database connection, then use transaction() to open a
 transaction on the database. For a complete example, see our
-[To-do Notifications](https://github.com/mdn/to-do-notifications/) app ([view example live](https://mdn.github.io/to-do-notifications/).)
+[To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) app ([view example live](https://mdn.github.io/dom-examples/to-do-notifications/)).
 
 ```js
 let db;
@@ -131,7 +123,7 @@ let db;
 const DBOpenRequest = window.indexedDB.open("toDoList", 4);
 
 DBOpenRequest.onsuccess = (event) => {
-  note.innerHTML += '<li>Database initialized.</li>';
+  note.innerHTML += "<li>Database initialized.</li>";
 
   // store the result of opening the database in the db variable.
   // This is used a lot below
@@ -140,7 +132,6 @@ DBOpenRequest.onsuccess = (event) => {
   // Run the displayData() function to populate the task list with
   // all the to-do list data already in the IDB
   displayData();
-
 };
 
 // open a read/write db transaction, ready for adding the data
@@ -148,11 +139,13 @@ const transaction = db.transaction(["toDoList"], "readwrite");
 
 // report on the success of opening the transaction
 transaction.oncomplete = (event) => {
-  note.innerHTML += '<li>Transaction completed: database modification finished.</li>';
+  note.innerHTML +=
+    "<li>Transaction completed: database modification finished.</li>";
 };
 
 transaction.onerror = (event) => {
-  note.innerHTML += '<li>Transaction not opened due to error. Duplicate items not allowed.</li>';
+  note.innerHTML +=
+    "<li>Transaction not opened due to error. Duplicate items not allowed.</li>";
 };
 
 // you would then go on to do something to this database
@@ -177,4 +170,4 @@ const objectStore = transaction.objectStore("toDoList");
 - Setting a range of keys: {{domxref("IDBKeyRange")}}
 - Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}
 - Using cursors: {{domxref("IDBCursor")}}
-- Reference example: [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](https://mdn.github.io/to-do-notifications/).)
+- Reference example: [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([View the example live](https://mdn.github.io/dom-examples/to-do-notifications/)).

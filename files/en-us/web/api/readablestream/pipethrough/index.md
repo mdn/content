@@ -2,13 +2,6 @@
 title: ReadableStream.pipeThrough()
 slug: Web/API/ReadableStream/pipeThrough
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - ReadableStream
-  - Reference
-  - Streams
-  - pipeThrough
 browser-compat: api.ReadableStream.pipeThrough
 ---
 
@@ -20,7 +13,7 @@ Piping a stream will generally lock it for the duration of the pipe, preventing 
 
 ## Syntax
 
-```js
+```js-nolint
 pipeThrough(transformStream)
 pipeThrough(transformStream, options)
 ```
@@ -28,6 +21,7 @@ pipeThrough(transformStream, options)
 ### Parameters
 
 - `transformStream`
+
   - : A {{domxref("TransformStream")}} (or an object with the structure
     `{writable, readable}`) consisting of a readable stream and a writable
     stream working together to transform some data from one form to another. Data written
@@ -79,13 +73,13 @@ Next, we log the contents of the readable stream, use `pipeThrough()` to send it
 
 ```js
 // Fetch the original image
-fetch('png-logo.png')
-// Retrieve its body as ReadableStream
-.then((response) => response.body)
-.then((rs) => logReadableStream('Fetch Response Stream', rs))
-// Create a gray-scaled PNG stream out of the original
-.then((body) => body.pipeThrough(new PNGTransformStream()))
-.then((rs) => logReadableStream('PNG Chunk Stream', rs))
+fetch("png-logo.png")
+  // Retrieve its body as ReadableStream
+  .then((response) => response.body)
+  .then((rs) => logReadableStream("Fetch Response Stream", rs))
+  // Create a gray-scaled PNG stream out of the original
+  .then((body) => body.pipeThrough(new PNGTransformStream()))
+  .then((rs) => logReadableStream("PNG Chunk Stream", rs));
 ```
 
 ## Specifications

@@ -1,14 +1,6 @@
 ---
-title: 'ARIA: alertdialog role'
+title: "ARIA: alertdialog role"
 slug: Web/Accessibility/ARIA/Roles/alertdialog_role
-tags:
-  - Alert
-  - Alertdialog
-  - Accessibility
-  - ARIA
-  - roles
-  - Reference
-  - ARIA roles
 spec-urls:
   - https://w3c.github.io/aria/#alertdialog
   - https://w3c.github.io/aria-practices/#alertdialog
@@ -44,7 +36,10 @@ The `alertdialog` must have an accessible name, defined with [`aria-labelledby`]
 ### Example 1: A basic alert dialog
 
 ```html
-<div role="alertdialog" aria-labelledby="dialog1Title" aria-describedby="dialog1Desc">
+<div
+  role="alertdialog"
+  aria-labelledby="dialog1Title"
+  aria-describedby="dialog1Desc">
   <div role="document" tabindex="0">
     <h2 id="dialog1Title">Your login session is about to expire</h2>
     <p id="dialog1Desc">To extend your session, click the OK button</p>
@@ -78,10 +73,11 @@ The code snippet above shows how to mark up an alert dialog that only provides a
 ### Associated WAI-ARIA roles, states, and properties
 
 - [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby)
+
   - : Use this attribute to label the alertdialog. The `aria-labelledby` attribute is generally the id of the element used to title the alertdialog.
 
 - [`aria-describedby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-describedby)
-  - :  Use this attribute to encompass the description of the contents of the alert dialog. The value of the `aria-describedby` attribute is generally the ID of the element containing the alert dialog's messaging, usually coming right after the title.
+  - : Use this attribute to encompass the description of the contents of the alert dialog. The value of the `aria-describedby` attribute is generally the ID of the element containing the alert dialog's messaging, usually coming right after the title.
 
 ## Specifications
 
@@ -89,6 +85,7 @@ The code snippet above shows how to mark up an alert dialog that only provides a
 
 ## See Also
 
+- HTML {{HTMLElement("dialog")}} element
 - [The `dialog` role](/en-US/docs/Web/Accessibility/ARIA/Roles/dialog_role)
 - [The `alert` role](/en-US/docs/Web/Accessibility/ARIA/Roles/alert_role)
 - [`aria-modal` attribute](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-modal)
@@ -99,6 +96,6 @@ The code snippet above shows how to mark up an alert dialog that only provides a
 
 1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
 
-    {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
+   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
 
 </section>

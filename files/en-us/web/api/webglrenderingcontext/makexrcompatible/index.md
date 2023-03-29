@@ -2,27 +2,6 @@
 title: WebGLRenderingContext.makeXRCompatible()
 slug: Web/API/WebGLRenderingContext/makeXRCompatible
 page-type: web-api-instance-method
-tags:
-  - 3D
-  - API
-  - AR
-  - Context
-  - Mixed
-  - Reality
-  - Reference
-  - VR
-  - Virtual
-  - WebGL
-  - WebGL API
-  - WebGLRenderingContext
-  - WebXR
-  - WebXR API
-  - WebXR Device API
-  - XR
-  - XRWebGLLayer
-  - augmented
-  - makeXRCompatible
-  - Method
 browser-compat: api.WebGLRenderingContext.makeXRCompatible
 ---
 
@@ -41,7 +20,7 @@ standard 2D display but can then be transitioned to a 3D immersion system.
 
 ## Syntax
 
-```js
+```js-nolint
 makeXRCompatible()
 ```
 
@@ -88,11 +67,13 @@ on its main menu that offers an option to start the game in WebXR mode.
 
 ### HTML
 
-The HTML for the buttons looks lke this:
+The HTML for the buttons looks like this:
 
 ```html
 <button class="green button" type="button">Start Game</button>
-<button class="blue button use-webxr" type="button">Start Game (VR mode)</button>
+<button class="blue button use-webxr" type="button">
+  Start Game (VR mode)
+</button>
 ```
 
 The first button starts the game, continuing to present the game onscreen as usual. The
@@ -136,12 +117,18 @@ async function onStartedXRSession(xrSession) {
   try {
     await gl.makeXRCompatible();
   } catch (err) {
-    switch(err) {
+    switch (err) {
       case AbortError:
-        showSimpleMessageBox("Unable to transfer the game to your XR headset.", "Cancel");
+        showSimpleMessageBox(
+          "Unable to transfer the game to your XR headset.",
+          "Cancel"
+        );
         break;
       case InvalidStateError:
-        showSimpleMessageBox("You don't appear to have a compatible XR headset available.", "Cancel");
+        showSimpleMessageBox(
+          "You don't appear to have a compatible XR headset available.",
+          "Cancel"
+        );
         break;
       default:
         handleFatalError(err);

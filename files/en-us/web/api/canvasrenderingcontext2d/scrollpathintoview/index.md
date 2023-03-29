@@ -2,13 +2,8 @@
 title: CanvasRenderingContext2D.scrollPathIntoView()
 slug: Web/API/CanvasRenderingContext2D/scrollPathIntoView
 page-type: web-api-instance-method
-tags:
-  - API
-  - Canvas
-  - CanvasRenderingContext2D
-  - Experimental
-  - Method
-  - Reference
+status:
+  - experimental
 browser-compat: api.CanvasRenderingContext2D.scrollPathIntoView
 ---
 
@@ -21,7 +16,7 @@ to {{domxref("Element.scrollIntoView()")}}.
 
 ## Syntax
 
-```js
+```js-nolint
 scrollPathIntoView()
 scrollPathIntoView(path)
 ```
@@ -50,8 +45,8 @@ This example demonstrates the `scrollPathIntoView()` method.
 #### JavaScript
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 
 ctx.beginPath();
 ctx.fillRect(10, 10, 30, 30);
@@ -64,7 +59,7 @@ Edit the code below to see your changes update live in the canvas:
 
 ```html hidden
 <canvas id="canvas" width="400" height="200" class="playable-canvas">
-<input id="button" type="range" min="1" max="12">
+  <input id="button" type="range" min="1" max="12" />
 </canvas>
 <div class="playable-buttons">
   <input id="edit" type="button" value="Edit" />
@@ -102,7 +97,7 @@ reset.addEventListener("click", () => {
 
 edit.addEventListener("click", () => {
   textarea.focus();
-})
+});
 
 textarea.addEventListener("input", drawCanvas);
 window.addEventListener("load", drawCanvas);

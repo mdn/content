@@ -2,12 +2,6 @@
 title: BiquadFilterNode
 slug: Web/API/BiquadFilterNode
 page-type: web-api-interface
-tags:
-  - API
-  - BiquadFilterNode
-  - Interface
-  - Reference
-  - Web Audio API
 browser-compat: api.BiquadFilterNode
 ---
 
@@ -47,7 +41,7 @@ The `BiquadFilterNode` interface represents a simple low-order filter, and is cr
 - {{domxref("BiquadFilterNode.BiquadFilterNode", "BiquadFilterNode()")}}
   - : Creates a new instance of a `BiquadFilterNode` object.
 
-## Properties
+## Instance properties
 
 _Inherits properties from its parent, {{domxref("AudioNode")}}_.
 
@@ -213,7 +207,7 @@ _Inherits properties from its parent, {{domxref("AudioNode")}}_.
       </tbody>
     </table>
 
-## Methods
+## Instance methods
 
 _Inherits methods from its parent, {{domxref("AudioNode")}}_.
 

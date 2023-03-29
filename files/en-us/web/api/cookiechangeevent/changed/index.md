@@ -2,13 +2,8 @@
 title: CookieChangeEvent.changed
 slug: Web/API/CookieChangeEvent/changed
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - changed
-  - CookieChangeEvent
-  - Experimental
+status:
+  - experimental
 browser-compat: api.CookieChangeEvent.changed
 ---
 
@@ -29,7 +24,7 @@ An array of objects containing the changed cookie(s). Each object contains the f
 - `path`
   - : A string containing the path of the cookie.
 - `expires`
-  - : A {{domxref("DOMTimeStamp")}} containing the expiration date of the cookie.
+  - : A timestamp, given as [Unix time](/en-US/docs/Glossary/Unix_time) in milliseconds, containing the expiration date of the cookie.
 - `secure`
   - : A {{jsxref("boolean")}} indicating whether the cookie is from a site with a secure context (HTTPS rather than HTTP).
 - `sameSite`
@@ -50,7 +45,7 @@ An array of objects containing the changed cookie(s). Each object contains the f
 In this example when the cookie is set, the event listener logs the `changed` property to the console. The first item in that array contains an object representing the cookie that has just been set.
 
 ```js
-cookieStore.addEventListener('change', (event) => {
+cookieStore.addEventListener("change", (event) => {
   console.log(event.changed[0]);
 });
 
@@ -59,7 +54,7 @@ cookieStore.set({
   name: "cookie1",
   value: "cookie1-value",
   expires: Date.now() + one_day,
-  domain: "example.com"
+  domain: "example.com",
 });
 ```
 

@@ -2,13 +2,8 @@
 title: RTCIceServer.url
 slug: Web/API/RTCIceServer/url
 page-type: web-api-instance-property
-tags:
-  - Deprecated
-  - Property
-  - RTCIceServer
-  - Reference
-  - URL
-  - WebRTC
+status:
+  - deprecated
 browser-compat: api.RTCIceServer.url
 ---
 
@@ -28,7 +23,7 @@ property instead.
 
 ## Syntax
 
-```js
+```js-nolint
 const iceServer = {
   // ...
   url: iceServerUrl,
@@ -53,9 +48,9 @@ connections.
 myPeerConnection = new RTCPeerConnection({
   iceServers: [
     {
-      url: "stun:stunserver.example.org"
-    }
-  ]
+      url: "stun:stunserver.example.org",
+    },
+  ],
 });
 ```
 

@@ -2,15 +2,6 @@
 title: IIRFilterNode.getFrequencyResponse()
 slug: Web/API/IIRFilterNode/getFrequencyResponse
 page-type: web-api-instance-method
-tags:
-  - API
-  - Audio
-  - IIRFilterNode
-  - Method
-  - Reference
-  - Web Audio API
-  - filter
-  - getFrequencyResponse
 browser-compat: api.IIRFilterNode.getFrequencyResponse
 ---
 
@@ -27,7 +18,7 @@ must be the same size as the array of input frequency values
 
 ## Syntax
 
-```js
+```js-nolint
 getFrequencyResponse(frequencyArray, magResponseOutput, phaseResponseOutput)
 ```
 
@@ -77,13 +68,12 @@ Next we create a {{ htmlelement("ul") }} element in our HTML to contain our resu
 and grab a reference to it in our JavaScript:
 
 ```html
-<p>IIR filter frequency response for: </p>
-<ul class="freq-response-output">
-</ul>
+<p>IIR filter frequency response for:</p>
+<ul class="freq-response-output"></ul>
 ```
 
 ```js
-const freqResponseOutput = document.querySelector('.freq-response-output');
+const freqResponseOutput = document.querySelector(".freq-response-output");
 ```
 
 Finally, after creating our filter, we use `getFrequencyResponse()` to
@@ -94,15 +84,22 @@ output them in a human-readable list at the bottom of the page:
 const feedforwardCoefficients = [0.1, 0.2, 0.3, 0.4, 0.5];
 const feedbackCoefficients = [0.5, 0.4, 0.3, 0.2, 0.1];
 
-const iirFilter = audioCtx.createIIRFilter(feedforwardCoefficients, feedbackCoefficients);
+const iirFilter = audioCtx.createIIRFilter(
+  feedforwardCoefficients,
+  feedbackCoefficients
+);
 
 // …
 
 function calcFrequencyResponse() {
-  iirFilter.getFrequencyResponse(myFrequencyArray, magResponseOutput, phaseResponseOutput);
+  iirFilter.getFrequencyResponse(
+    myFrequencyArray,
+    magResponseOutput,
+    phaseResponseOutput
+  );
 
-  for (i = 0; i <= myFrequencyArray.length-1;i++){
-    const listItem = document.createElement('li');
+  for (let i = 0; i < myFrequencyArray.length; i++) {
+    const listItem = document.createElement("li");
     listItem.textContent = `${myFrequencyArray[i]}Hz: Magnitude ${magResponseOutput[i]}, Phase ${phaseResponseOutput[i]} radians.`;
     freqResponseOutput.appendChild(listItem);
   }

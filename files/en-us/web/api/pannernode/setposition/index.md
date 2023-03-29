@@ -2,14 +2,8 @@
 title: PannerNode.setPosition()
 slug: Web/API/PannerNode/setPosition
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - PannerNode
-  - Reference
-  - Web Audio API
-  - setPosition
-  - Deprecated
+status:
+  - deprecated
 browser-compat: api.PannerNode.setPosition
 ---
 
@@ -19,11 +13,11 @@ browser-compat: api.PannerNode.setPosition
 
 The `setPosition()` method of the {{ domxref("PannerNode") }} Interface defines the position of the audio source relative to the listener (represented by an {{domxref("AudioListener")}} object stored in the {{domxref("BaseAudioContext.listener")}} attribute.) The three parameters `x`, `y` and `z` are unitless and describe the source's position in 3D space using the right-hand Cartesian coordinate system.
 
-The `setPosition()` method's default value of the position is `(0,` `0,` `0)`.
+The `setPosition()` method's default value of the position is `(0, 0, 0)`.
 
 ## Syntax
 
-```js
+```js-nolint
 setPosition(x, y, z)
 ```
 

@@ -2,13 +2,6 @@
 title: ServiceWorkerContainer.getRegistration()
 slug: Web/API/ServiceWorkerContainer/getRegistration
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - Service Workers
-  - ServiceWorker
-  - ServiceWorkerContainer
 browser-compat: api.ServiceWorkerContainer.getRegistration
 ---
 
@@ -17,12 +10,12 @@ browser-compat: api.ServiceWorkerContainer.getRegistration
 The **`getRegistration()`** method of the
 {{domxref("ServiceWorkerContainer")}} interface gets a
 {{domxref("ServiceWorkerRegistration")}} object whose scope URL matches the provided
-client URL.  The method returns a {{jsxref("Promise")}} that resolves to
+client URL. The method returns a {{jsxref("Promise")}} that resolves to
 a {{domxref("ServiceWorkerRegistration")}} or `undefined`.
 
 ## Syntax
 
-```js
+```js-nolint
 getRegistration()
 getRegistration(clientURL)
 ```
@@ -40,9 +33,10 @@ object or `undefined`.
 ## Examples
 
 ```js
-navigator.serviceWorker.getRegistration('/app').then((registration) => {
+navigator.serviceWorker.getRegistration("/app").then((registration) => {
   if (registration) {
-    document.querySelector('#status').textContent = 'ServiceWorkerRegistration found.';
+    document.querySelector("#status").textContent =
+      "ServiceWorkerRegistration found.";
   }
 });
 ```

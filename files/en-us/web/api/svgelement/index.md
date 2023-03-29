@@ -2,14 +2,6 @@
 title: SVGElement
 slug: Web/API/SVGElement
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - NeedsExample
-  - Reference
-  - SVG
-  - SVG DOM
-  - SVGElement
 browser-compat: api.SVGElement
 ---
 
@@ -19,7 +11,7 @@ All of the SVG DOM interfaces that correspond directly to elements in the SVG la
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _Also inherits properties from: {{DOMxRef("DocumentAndElementEventHandlers")}}, {{DOMxRef("Element")}}, {{DOMxRef("SVGElementInstance")}}._
 
@@ -40,7 +32,7 @@ _Also inherits properties from: {{DOMxRef("DocumentAndElementEventHandlers")}}, 
 - {{DOMxRef("SVGElement.viewportElement")}} {{ReadOnlyInline}}
   - : The {{DOMxRef("SVGElement")}} which established the current viewport. Often the nearest ancestor {{SVGElement("svg")}} element. `null` if the given element is the outermost `<svg>` element.
 
-## Methods
+## Instance methods
 
 _This interface has no methods, but inherits methods from: {{DOMxRef("DocumentAndElementEventHandlers")}}, {{DOMxRef("Element")}}, {{DOMxRef("SVGElementInstance")}}_.
 

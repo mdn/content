@@ -2,12 +2,6 @@
 title: OfflineAudioCompletionEvent
 slug: Web/API/OfflineAudioCompletionEvent
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - OfflineAudioCompletionEvent
-  - Reference
-  - Web Audio API
 browser-compat: api.OfflineAudioCompletionEvent
 ---
 
@@ -24,14 +18,14 @@ The [Web Audio API](/en-US/docs/Web/API/Web_Audio_API) `OfflineAudioCompletionEv
 - {{domxref("OfflineAudioCompletionEvent.OfflineAudioCompletionEvent", "OfflineAudioCompletionEvent()")}}
   - : Creates a new `OfflineAudioCompletionEvent` object instance.
 
-## Properties
+## Instance properties
 
 _Also inherits properties from its parent, {{domxref("Event")}}_.
 
 - {{domxref("OfflineAudioCompletionEvent.renderedBuffer")}} {{ReadOnlyInline}}
   - : An {{domxref("AudioBuffer")}} containing the result of processing an {{domxref("OfflineAudioContext")}}.
 
-## Methods
+## Instance methods
 
 _Inherits methods from its parent, {{domxref("Event")}}_.
 

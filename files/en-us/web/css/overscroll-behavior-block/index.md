@@ -1,14 +1,7 @@
 ---
 title: overscroll-behavior-block
 slug: Web/CSS/overscroll-behavior-block
-tags:
-  - CSS
-  - CSS Box Model
-  - CSS Logical Properties
-  - CSS Property
-  - Reference
-  - overscroll-behavior-block
-  - recipe:css-property
+page-type: css-property
 browser-compat: css.properties.overscroll-behavior-block
 ---
 
@@ -67,7 +60,11 @@ By default, when the inner box is scrolled and a scroll boundary is reached, the
 <main>
   <div>
     <div>
-      <p><code>overscroll-behavior-block</code> has been used to make it so that when the scroll boundaries of the yellow inner box are reached, the whole page does not begin to scroll.</p>
+      <p>
+        <code>overscroll-behavior-block</code> has been used to make it so that
+        when the scroll boundaries of the yellow inner box are reached, the
+        whole page does not begin to scroll.
+      </p>
     </div>
   </div>
 </main>
@@ -80,7 +77,12 @@ main {
   height: 3000px;
   width: 500px;
   background-color: white;
-  background-image: repeating-linear-gradient(to bottom, rgba(0,0,0,0) 0px, rgba(0,0,0,0) 19px, rgba(0,0,0,0.5) 20px);
+  background-image: repeating-linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 0px,
+    rgba(0, 0, 0, 0) 19px,
+    rgba(0, 0, 0, 0.5) 20px
+  );
 }
 
 main > div {
@@ -97,12 +99,17 @@ div > div {
   height: 1500px;
   width: 100%;
   background-color: yellow;
-  background-image: repeating-linear-gradient(to bottom, rgba(0,0,0,0) 0px, rgba(0,0,0,0) 19px, rgba(0,0,0,0.5) 20px);
+  background-image: repeating-linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 0px,
+    rgba(0, 0, 0, 0) 19px,
+    rgba(0, 0, 0, 0.5) 20px
+  );
 }
 
 p {
   padding: 10px;
-  background-color: rgba(255,0,0,0.5);
+  background-color: rgba(255, 0, 0, 0.5);
   margin: 0;
   width: 340px;
   position: relative;

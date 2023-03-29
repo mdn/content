@@ -1,24 +1,19 @@
 ---
 title: new operator
 slug: Web/JavaScript/Reference/Operators/new
-tags:
-  - JavaScript
-  - Language feature
-  - Left-hand-side expressions
-  - Operator
-  - Reference
+page-type: javascript-operator
 browser-compat: javascript.operators.new
 ---
 
 {{jsSidebar("Operators")}}
 
-The **`new` operator** lets developers create an instance of a user-defined object type or of one of the built-in object types that has a constructor function.
+The **`new`** operator lets developers create an instance of a user-defined object type or of one of the built-in object types that has a constructor function.
 
 {{EmbedInteractiveExample("pages/js/expressions-newoperator.html")}}
 
 ## Syntax
 
-```js
+```js-nolint
 new constructor
 new constructor()
 new constructor(arg1)
@@ -40,7 +35,7 @@ When a function is called with the **`new`** keyword, the function will be used 
 1. Creates a blank, plain JavaScript object. For convenience, let's call it `newInstance`.
 2. Points `newInstance`'s [[Prototype]] to the constructor function's `prototype` property, if the `prototype` is an {{jsxref("Object")}}. Otherwise, `newInstance` stays as a plain object with `Object.prototype` as its [[Prototype]].
 
-    > **Note:** Properties/objects added to the constructor function's `prototype` property are therefore accessible to all instances created from the constructor function.
+   > **Note:** Properties/objects added to the constructor function's `prototype` property are therefore accessible to all instances created from the constructor function.
 
 3. Executes the constructor function with the given arguments, binding `newInstance` as the [`this`](/en-US/docs/Web/JavaScript/Reference/Operators/this) context (i.e. all references to `this` in the constructor function now refer to `newInstance`).
 4. If the constructor function returns a [non-primitive](/en-US/docs/Web/JavaScript/Data_structures#primitive_values), this return value becomes the result of the whole `new` expression. Otherwise, if the constructor function doesn't return anything or returns a primitive, `newInstance` is returned instead. (Normally constructors don't return a value, but they can choose to do so to override the normal object creation process.)
@@ -50,20 +45,20 @@ When a function is called with the **`new`** keyword, the function will be used 
 Creating an object with a user-defined constructor function requires two steps:
 
 1. Define the object type by writing a function that specifies its name and properties.
-    For example, a constructor function to create an object `Foo` might look like this:
+   For example, a constructor function to create an object `Foo` might look like this:
 
-    ```js
-    function Foo(bar1, bar2) {
-      this.bar1 = bar1;
-      this.bar2 = bar2;
-    }
-    ```
+   ```js
+   function Foo(bar1, bar2) {
+     this.bar1 = bar1;
+     this.bar2 = bar2;
+   }
+   ```
 
 2. Create an instance of the object with `new`.
 
-    ```js
-    const myFoo = new Foo('Bar 1', 2021);
-    ```
+   ```js
+   const myFoo = new Foo("Bar 1", 2021);
+   ```
 
 > **Note:** An object can have a property that is itself another object. See the examples below.
 
@@ -76,18 +71,18 @@ function Car() {}
 const car1 = new Car();
 const car2 = new Car();
 
-console.log(car1.color);    // undefined
+console.log(car1.color); // undefined
 
-Car.prototype.color = 'original color';
-console.log(car1.color);    // 'original color'
+Car.prototype.color = "original color";
+console.log(car1.color); // 'original color'
 
-car1.color = 'black';
-console.log(car1.color);    // 'black'
+car1.color = "black";
+console.log(car1.color); // 'black'
 
 console.log(Object.getPrototypeOf(car1).color); // 'original color'
 console.log(Object.getPrototypeOf(car2).color); // 'original color'
-console.log(car1.color);   // 'black'
-console.log(car2.color);   // 'original color'
+console.log(car1.color); // 'black'
+console.log(car2.color); // 'original color'
 ```
 
 > **Note:** While the constructor function can be invoked like any regular function (i.e. without the `new` operator),
@@ -139,7 +134,7 @@ function Car(make, model, year) {
 Now you can create an object called `myCar` as follows:
 
 ```js
-const myCar = new Car('Eagle', 'Talon TSi', 1993);
+const myCar = new Car("Eagle", "Talon TSi", 1993);
 ```
 
 This statement creates `myCar` and assigns it the specified values for its
@@ -150,7 +145,7 @@ You can create any number of `car` objects by calls to `new`. For
 example:
 
 ```js
-const kensCar = new Car('Nissan', '300ZX', 1992);
+const kensCar = new Car("Nissan", "300ZX", 1992);
 ```
 
 ### Object property that is itself another object
@@ -168,8 +163,8 @@ function Person(name, age, sex) {
 And then instantiate two new `Person` objects as follows:
 
 ```js
-const rand = new Person('Rand McNally', 33, 'M');
-const ken = new Person('Ken Jones', 39, 'M');
+const rand = new Person("Rand McNally", 33, "M");
+const ken = new Person("Ken Jones", 39, "M");
 ```
 
 Then you can rewrite the definition of `Car` to include an
@@ -187,8 +182,8 @@ function Car(make, model, year, owner) {
 To instantiate the new objects, you then use the following:
 
 ```js
-const car1 = new Car('Eagle', 'Talon TSi', 1993, rand);
-const car2 = new Car('Nissan', '300ZX', 1992, ken);
+const car1 = new Car("Eagle", "Talon TSi", 1993, rand);
+const car2 = new Car("Nissan", "300ZX", 1992, ken);
 ```
 
 Instead of passing a literal string or integer value when creating the new objects, the
@@ -197,7 +192,7 @@ parameters for the owners. To find out the name of the owner of `car2`, you
 can access the following property:
 
 ```js
-car2.owner.name
+car2.owner.name;
 ```
 
 ### Using `new` with classes

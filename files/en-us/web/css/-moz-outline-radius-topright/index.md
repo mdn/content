@@ -1,15 +1,10 @@
 ---
-title: '-moz-outline-radius-topright'
+title: "-moz-outline-radius-topright"
 slug: Web/CSS/-moz-outline-radius-topright
-tags:
-  - CSS
-  - CSS Property
-  - NeedsCompatTable
-  - NeedsContent
-  - Non-standard
-  - Reference
-  - recipe:css-property
-  - Deprecated
+page-type: css-property
+status:
+  - deprecated
+  - non-standard
 browser-compat: css.properties.-moz-outline-radius-topright
 ---
 

@@ -2,12 +2,6 @@
 title: Worker()
 slug: Web/API/Worker/Worker
 page-type: web-api-constructor
-tags:
-  - API
-  - Constructor
-  - Reference
-  - Web Workers
-  - Worker
 browser-compat: api.Worker.Worker
 ---
 
@@ -19,7 +13,7 @@ The **`Worker()`** constructor creates a {{domxref("Worker")}} object that execu
 
 ## Syntax
 
-```js
+```js-nolint
 new Worker(aURL)
 new Worker(aURL, options)
 ```
@@ -45,7 +39,7 @@ new Worker(aURL, options)
   - : Thrown if the document is not allowed to start workers, e.g. if the URL has an invalid syntax or if the same-origin policy is violated.
 - `NetworkError` {{domxref("DOMException")}}
   - : Thrown if the MIME type of the worker script is incorrect. It _should_ always be `text/javascript`
-    (for historical reasons [other JavaScript MIME types](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types#javascript_types) may be accepted).
+    (for historical reasons [other JavaScript MIME types](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types#legacy_javascript_mime_types) may be accepted).
 - `SyntaxError` {{domxref("DOMException")}}
   - : Thrown if _aURL_ cannot be parsed.
 
@@ -54,12 +48,12 @@ new Worker(aURL, options)
 The following code snippet shows creation of a {{domxref("Worker")}} object using the `Worker()` constructor and subsequent usage of the object:
 
 ```js
-const myWorker = new Worker('worker.js');
+const myWorker = new Worker("worker.js");
 
 first.onchange = () => {
   myWorker.postMessage([first.value, second.value]);
-  console.log('Message posted to worker');
-}
+  console.log("Message posted to worker");
+};
 ```
 
 For a full example, see our [Basic dedicated worker example](https://github.com/mdn/dom-examples/tree/main/web-workers/simple-web-worker) ([run dedicated worker](https://mdn.github.io/dom-examples/web-workers/simple-web-worker/)).

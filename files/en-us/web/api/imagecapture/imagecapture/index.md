@@ -2,16 +2,8 @@
 title: ImageCapture() constructor
 slug: Web/API/ImageCapture/ImageCapture
 page-type: web-api-constructor
-tags:
-  - API
-  - Constructor
-  - Experimental
-  - Image
-  - Image Capture
-  - ImageCapture
-  - Media
-  - MediaStream Image Capture API
-  - Reference
+status:
+  - experimental
 browser-compat: api.ImageCapture.ImageCapture
 ---
 
@@ -22,7 +14,7 @@ creates a new {{domxref("ImageCapture")}} object.
 
 ## Syntax
 
-```js
+```js-nolint
 new ImageCapture(videoTrack)
 ```
 
@@ -45,9 +37,10 @@ The following example shows how to use a call to
 {{domxref("MediaStreamTrack")}} needed by the `ImageCapture()` constructor.
 
 ```js
- navigator.mediaDevices.getUserMedia({video: true})
+navigator.mediaDevices
+  .getUserMedia({ video: true })
   .then((mediaStream) => {
-    document.querySelector('video').srcObject = mediaStream
+    document.querySelector("video").srcObject = mediaStream;
     const track = mediaStream.getVideoTracks()[0];
     imageCapture = new ImageCapture(track);
   })

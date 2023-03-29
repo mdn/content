@@ -1,16 +1,6 @@
 ---
 title: Third-party APIs
 slug: Learn/JavaScript/Client-side_web_APIs/Third_party_APIs
-tags:
-  - 3rd party
-  - API
-  - Beginner
-  - CodingScripting
-  - Google Maps
-  - Learn
-  - NYTimes
-  - Third party
-  - youtube
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Client-side_web_APIs/Fetching_data", "Learn/JavaScript/Client-side_web_APIs/Drawing_graphics", "Learn/JavaScript/Client-side_web_APIs")}}
@@ -68,8 +58,12 @@ const audioSource = audioCtx.createMediaElementSource(audioElement);
 Third party APIs, on the other hand, are located on third party servers. To access them from JavaScript you first need to connect to the API functionality and make it available on your page. This typically involves first linking to a JavaScript library available on the server via a {{htmlelement("script")}} element, as seen in our Mapquest example:
 
 ```html
-<script src="https://api.mqcdn.com/sdk/mapquest-js/v1.3.2/mapquest.js" defer></script>
-<link rel="stylesheet" href="https://api.mqcdn.com/sdk/mapquest-js/v1.3.2/mapquest.css"/>
+<script
+  src="https://api.mqcdn.com/sdk/mapquest-js/v1.3.2/mapquest.js"
+  defer></script>
+<link
+  rel="stylesheet"
+  href="https://api.mqcdn.com/sdk/mapquest-js/v1.3.2/mapquest.css" />
 ```
 
 You can then start using the objects available in that library. For example:
@@ -202,42 +196,42 @@ First, you'll need to make a connection between the API and your app. In the cas
 
 1. Find the following line:
 
-    ```js
-    const key = 'INSERT-YOUR-API-KEY-HERE';
-    ```
+   ```js
+   const key = 'INSERT-YOUR-API-KEY-HERE';
+   ```
 
-    Replace the existing API key with the actual API key you got in the previous section.
+   Replace the existing API key with the actual API key you got in the previous section.
 
 2. Add the following line to your JavaScript, below the "`// Event listeners to control the functionality`" comment. This runs a function called `submitSearch()` when the form is submitted (the button is pressed).
 
-    ```js
-    searchForm.addEventListener('submit', submitSearch);
-    ```
+   ```js
+   searchForm.addEventListener('submit', submitSearch);
+   ```
 
 3. Now add the `submitSearch()` and `fetchResults()` function definitions, below the previous line:
 
-    ```js
-    function submitSearch(e) {
-      pageNumber = 0;
-      fetchResults(e);
-    }
+   ```js
+   function submitSearch(e) {
+     pageNumber = 0;
+     fetchResults(e);
+   }
 
-    function fetchResults(e) {
-      // Use preventDefault() to stop the form submitting
-      e.preventDefault();
+   function fetchResults(e) {
+     // Use preventDefault() to stop the form submitting
+     e.preventDefault();
 
-      // Assemble the full URL
-      let url = `${baseURL}?api-key=${key}&page=${pageNumber}&q=${searchTerm.value}&fq=document_type:("article")`;
+     // Assemble the full URL
+     let url = `${baseURL}?api-key=${key}&page=${pageNumber}&q=${searchTerm.value}&fq=document_type:("article")`;
 
-      if (startDate.value !== '') {
-        url = `${url}&begin_date=${startDate.value}`;
-      };
+     if (startDate.value !== '') {
+       url = `${url}&begin_date=${startDate.value}`;
+     };
 
-      if (endDate.value !== '') {
-        url = `${url}&end_date=${endDate.value}`;
-      };
-    }
-    ```
+     if (endDate.value !== '') {
+       url = `${url}&end_date=${endDate.value}`;
+     };
+   }
+   ```
 
 `submitSearch()` sets the page number back to 0 to begin with, then calls `fetchResults()`. This first calls [`preventDefault()`](/en-US/docs/Web/API/Event/preventDefault) on the event object, to stop the form actually submitting (which would break the example). Next, we use some string manipulation to assemble the full URL that we will make the request to. We start off by assembling the parts we deem as mandatory for this demo:
 
@@ -247,7 +241,7 @@ First, you'll need to make a connection between the API and your app. In the cas
 - The search term, which has to be specified in the `q` URL parameter (the value is taken from the value of the `searchTerm` text {{htmlelement("input")}}).
 - The document type to return results for, as specified in an expression passed in via the `fq` URL parameter. In this case, we want to return articles.
 
-Next, we use a couple of [`if ()`](/en-US/docs/Web/JavaScript/Reference/Statements/if...else) statements to check whether the `startDate` and `endDate` `<input>`s have had values filled in on them. If they do, we append their values to the URL, specified in `begin_date` and `end_date` URL parameters respectively.
+Next, we use a couple of [`if ()`](/en-US/docs/Web/JavaScript/Reference/Statements/if...else) statements to check whether the `startDate` and `endDate` elements have had values filled in on them. If they do, we append their values to the URL, specified in `begin_date` and `end_date` URL parameters respectively.
 
 So, a complete URL would end up looking something like this:
 
@@ -336,7 +330,7 @@ There's a lot of code here; let's explain it step by step:
 - The [`while`](/en-US/docs/Web/JavaScript/Reference/Statements/while) loop is a common pattern used to delete all of the contents of a DOM element, in this case, the {{htmlelement("section")}} element. We keep checking to see if the `<section>` has a first child, and if it does, we remove the first child. The loop ends when `<section>` no longer has any children.
 - Next, we set the `articles` variable to equal `json.response.docs` — this is the array holding all the objects that represent the articles returned by the search. This is done purely to make the following code a bit simpler.
 - The first [`if ()`](/en-US/docs/Web/JavaScript/Reference/Statements/if...else) block checks to see if 10 articles are returned (the API returns up to 10 articles at a time.) If so, we display the {{htmlelement("nav")}} that contains the _Previous 10_/_Next 10_ pagination buttons. If fewer than 10 articles are returned, they will all fit on one page, so we don't need to show the pagination buttons. We will wire up the pagination functionality in the next section.
-- The next `if ()` block checks to see if no articles are returned. If so, we don't try to display any — we create a {{htmlelement("p")}} containing the text "No results returned." and insert it into the.`<section>`
+- The next `if ()` block checks to see if no articles are returned. If so, we don't try to display any — we create a {{htmlelement("p")}} containing the text "No results returned." and insert it into the `<section>`.
 - If some articles are returned, we, first of all, create all the elements that we want to use to display each news story, insert the right contents into each one, and then insert them into the DOM at the appropriate places. To work out which properties in the article objects contained the right data to show, we consulted the Article Search API reference (see [NYTimes APIs](https://developer.nytimes.com/apis)). Most of these operations are fairly obvious, but a few are worth calling out:
 
   - We used a [`for...of`](/en-US/docs/Web/JavaScript/Reference/Statements/for...of) loop to go through all the keywords associated with each article, and insert each one inside its own {{htmlelement("span")}}, inside a `<p>`. This was done to make it easy to style each one.
@@ -350,32 +344,32 @@ This allows us to write a simplistic pagination function.
 
 1. Below the existing [`addEventListener()`](/en-US/docs/Web/API/EventTarget/addEventListener) call, add these two new ones, which cause the `nextPage()` and `previousPage()` functions to be invoked when the relevant buttons are clicked:
 
-    ```js
-    nextBtn.addEventListener('click', nextPage);
-    previousBtn.addEventListener('click', previousPage);
-    ```
+   ```js
+   nextBtn.addEventListener('click', nextPage);
+   previousBtn.addEventListener('click', previousPage);
+   ```
 
 2. Below your previous addition, let's define the two functions — add this code now:
 
-    ```js
-    function nextPage(e) {
-      pageNumber++;
-      fetchResults(e);
-    };
+   ```js
+   function nextPage(e) {
+     pageNumber++;
+     fetchResults(e);
+   };
 
-    function previousPage(e) {
-      if (pageNumber > 0) {
-        pageNumber--;
-      } else {
-        return;
-      }
-      fetchResults(e);
-    };
-    ```
+   function previousPage(e) {
+     if (pageNumber > 0) {
+       pageNumber--;
+     } else {
+       return;
+     }
+     fetchResults(e);
+   };
+   ```
 
-    The first function increments the `pageNumber` variable, then run the `fetchResults()` function again to display the next page's results.
+   The first function increments the `pageNumber` variable, then run the `fetchResults()` function again to display the next page's results.
 
-    The second function works nearly exactly the same way in reverse, but we also have to take the extra step of checking that `pageNumber` is not already zero before decrementing it — if the fetch request runs with a minus `page` URL parameter, it could cause errors. If the `pageNumber` is already 0, we [`return`](/en-US/docs/Web/JavaScript/Reference/Statements/return) out of the function — if we are already at the first page, we don't need to load the same results again.
+   The second function works nearly exactly the same way in reverse, but we also have to take the extra step of checking that `pageNumber` is not already zero before decrementing it — if the fetch request runs with a minus `page` URL parameter, it could cause errors. If the `pageNumber` is already 0, we [`return`](/en-US/docs/Web/JavaScript/Reference/Statements/return) out of the function — if we are already at the first page, we don't need to load the same results again.
 
 > **Note:** You can find our [finished NYTimes API example code on GitHub](https://github.com/mdn/learning-area/blob/main/javascript/apis/third-party-apis/nytimes/finished/index.html) (also [see it running live here](https://mdn.github.io/learning-area/javascript/apis/third-party-apis/nytimes/finished/)).
 
@@ -405,13 +399,3 @@ To get it running, you'll need to:
 This article has given you a useful introduction to using third-party APIs to add functionality to your websites.
 
 {{PreviousMenuNext("Learn/JavaScript/Client-side_web_APIs/Fetching_data", "Learn/JavaScript/Client-side_web_APIs/Drawing_graphics", "Learn/JavaScript/Client-side_web_APIs")}}
-
-## In this module
-
-- [Introduction to web APIs](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Introduction)
-- [Manipulating documents](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents)
-- [Fetching data from the server](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data)
-- **Third party APIs**
-- [Drawing graphics](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics)
-- [Video and audio APIs](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Video_and_audio_APIs)
-- [Client-side storage](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Client-side_storage)

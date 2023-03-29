@@ -1,10 +1,7 @@
 ---
 title: label
 slug: Web/JavaScript/Reference/Statements/label
-tags:
-  - JavaScript
-  - Language feature
-  - Statement
+page-type: javascript-statement
 browser-compat: javascript.statements.label
 ---
 
@@ -18,7 +15,7 @@ a statement with an identifier which you can refer to.
 
 ## Syntax
 
-```js
+```js-nolint
 label:
   statement
 ```
@@ -35,7 +32,7 @@ You can use a label to identify a loop, and then use the `break` or
 `continue` statements to indicate whether a program should interrupt the loop
 or continue its execution.
 
-Note that JavaScript has _no_ `goto` statement, you can only use
+Note that JavaScript has _no_ `goto` statement; you can only use
 labels with `break` or `continue`.
 
 In [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode) code, you
@@ -49,10 +46,10 @@ can't use `let` as a label name. It will throw a {{jsxref("SyntaxError")}}
 ```js
 let i, j;
 
-loop1:
-for (i = 0; i < 3; i++) {      //The first for statement is labeled "loop1"
-  loop2:
-  for (j = 0; j < 3; j++) {   //The second for statement is labeled "loop2"
+// The first for statement is labeled "loop1"
+loop1: for (i = 0; i < 3; i++) {
+  // The second for statement is labeled "loop2"
+  loop2: for (j = 0; j < 3; j++) {
     if (i === 1 && j === 1) {
       continue loop1;
     }
@@ -60,16 +57,17 @@ for (i = 0; i < 3; i++) {      //The first for statement is labeled "loop1"
   }
 }
 
-// Output is:
-//   "i = 0, j = 0"
-//   "i = 0, j = 1"
-//   "i = 0, j = 2"
-//   "i = 1, j = 0"
-//   "i = 2, j = 0"
-//   "i = 2, j = 1"
-//   "i = 2, j = 2"
-// Notice how it skips both "i = 1, j = 1" and "i = 1, j = 2"
+// Logs:
+// i = 0, j = 0
+// i = 0, j = 1
+// i = 0, j = 2
+// i = 1, j = 0
+// i = 2, j = 0
+// i = 2, j = 1
+// i = 2, j = 2
 ```
+
+Notice how it skips both "i = 1, j = 1" and "i = 1, j = 2".
 
 ### Using a labeled continue statement
 
@@ -80,8 +78,7 @@ that passes all the tests.
 let itemsPassed = 0;
 let i, j;
 
-top:
-for (i = 0; i < items.length; i++) {
+top: for (i = 0; i < items.length; i++) {
   for (j = 0; j < tests.length; j++) {
     if (!tests[j].pass(items[i])) {
       continue top;
@@ -97,10 +94,10 @@ for (i = 0; i < items.length; i++) {
 ```js
 let i, j;
 
-loop1:
-for (i = 0; i < 3; i++) {      //The first for statement is labeled "loop1"
-  loop2:
-  for (j = 0; j < 3; j++) {   //The second for statement is labeled "loop2"
+// The first for statement is labeled "loop1"
+loop1: for (i = 0; i < 3; i++) {
+  // The second for statement is labeled "loop2"
+  loop2: for (j = 0; j < 3; j++) {
     if (i === 1 && j === 1) {
       break loop1;
     }
@@ -108,13 +105,14 @@ for (i = 0; i < 3; i++) {      //The first for statement is labeled "loop1"
   }
 }
 
-// Output is:
-//   "i = 0, j = 0"
-//   "i = 0, j = 1"
-//   "i = 0, j = 2"
-//   "i = 1, j = 0"
-// Notice the difference with the previous continue example
+// Logs:
+// i = 0, j = 0
+// i = 0, j = 1
+// i = 0, j = 2
+// i = 1, j = 0
 ```
+
+Notice the difference with the previous `continue` example.
 
 ### Using a labeled break statement
 
@@ -125,8 +123,7 @@ items pass all tests.
 let allPass = true;
 let i, j;
 
-top:
-for (i = 0; i < items.length; i++) {
+top: for (i = 0; i < items.length; i++) {
   for (j = 0; j < tests.length; j++) {
     if (!tests[j].pass(items[i])) {
       allPass = false;
@@ -143,11 +140,11 @@ make use of non-loop labels.
 
 ```js
 foo: {
-  console.log('face');
+  console.log("face");
   break foo;
-  console.log('this will not be executed');
+  console.log("this will not be executed");
 }
-console.log('swap');
+console.log("swap");
 
 // this will log:
 
@@ -167,7 +164,7 @@ In [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode) code,
 however, this will throw a {{jsxref("SyntaxError")}}:
 
 ```js example-bad
-'use strict';
+"use strict";
 L: function F() {}
 // SyntaxError: functions cannot be labelled
 ```

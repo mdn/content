@@ -2,13 +2,6 @@
 title: XPathResult.iterateNext()
 slug: Web/API/XPathResult/iterateNext
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM XPath API
-  - Method
-  - Reference
-  - XPath
-  - XPathResult
 browser-compat: api.XPathResult.iterateNext
 ---
 
@@ -20,7 +13,7 @@ next node from it or `null` if there are no more nodes.
 
 ## Syntax
 
-```js
+```js-nolint
 iterateNext()
 ```
 

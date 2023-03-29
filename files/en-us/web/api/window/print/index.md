@@ -2,12 +2,6 @@
 title: Window.print()
 slug: Web/API/Window/print
 page-type: web-api-instance-method
-tags:
-  - API
-  - HTML DOM
-  - Method
-  - Reference
-  - Window
 browser-compat: api.Window.print
 ---
 
@@ -21,7 +15,7 @@ This method will block while the print dialog is open.
 
 ## Syntax
 
-```js
+```js-nolint
 print()
 ```
 

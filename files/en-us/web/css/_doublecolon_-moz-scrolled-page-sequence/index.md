@@ -1,15 +1,9 @@
 ---
-title: '::-moz-scrolled-page-sequence'
+title: "::-moz-scrolled-page-sequence"
 slug: Web/CSS/::-moz-scrolled-page-sequence
-tags:
-  - CSS
-  - CSS:Mozilla Extensions
-  - NeedsContent
-  - NeedsExample
-  - Non-standard
-  - Pseudo-element
-  - Reference
-  - Selector
+page-type: css-pseudo-element
+status:
+  - non-standard
 browser-compat: css.selectors.-moz-scrolled-page-sequence
 ---
 
@@ -19,8 +13,10 @@ The **`::-moz-scrolled-page-sequence`** [CSS](/en-US/docs/Web/CSS) [pseudo-eleme
 
 ## Syntax
 
-```
-::-moz-scrolled-page-sequence
+```css
+::-moz-scrolled-page-sequence {
+  /* ... */
+}
 ```
 
 ## Specifications

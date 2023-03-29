@@ -1,13 +1,7 @@
 ---
 title: cross-fade()
 slug: Web/CSS/cross-fade
-tags:
-  - CSS
-  - CSS Function
-  - CSS-4 Images
-  - Function
-  - Reference
-  - Web
+page-type: css-function
 browser-compat: css.types.image.cross-fade
 ---
 
@@ -122,16 +116,10 @@ When using background images, make sure the contrast in color is great enough th
 
 ```css
 .crossfade {
-    width: 300px;
-    height: 300px;
-    background-image: -webkit-cross-fade(
-        url('br.png'),
-        url('tr.png'),
-        75%);
-    background-image: cross-fade(
-        url('br.png'),
-        url('tr.png'),
-        75%);
+  width: 300px;
+  height: 300px;
+  background-image: -webkit-cross-fade(url("br.png"), url("tr.png"), 75%);
+  background-image: cross-fade(url("br.png"), url("tr.png"), 75%);
 }
 ```
 

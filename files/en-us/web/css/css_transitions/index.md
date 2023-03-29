@@ -1,12 +1,7 @@
 ---
 title: CSS Transitions
 slug: Web/CSS/CSS_Transitions
-tags:
-  - CSS
-  - CSS Transitions
-  - Guide
-  - Overview
-  - Reference
+page-type: css-module
 spec-urls: https://drafts.csswg.org/css-transitions/
 ---
 

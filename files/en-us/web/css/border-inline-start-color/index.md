@@ -1,16 +1,7 @@
 ---
 title: border-inline-start-color
 slug: Web/CSS/border-inline-start-color
-tags:
-  - CSS
-  - CSS Logical Property
-  - CSS Property
-  - Reference
-  - border-inline
-  - border-inline-color
-  - border-inline-start
-  - border-inline-start-color
-  - recipe:css-property
+page-type: css-property
 browser-compat: css.properties.border-inline-start-color
 ---
 
@@ -87,5 +78,6 @@ div {
 
 ## See also
 
+- [CSS Logical Properties and Values](/en-US/docs/Web/CSS/CSS_Logical_Properties)
 - This property maps to one of the physical border properties: {{cssxref("border-top-color")}}, {{cssxref("border-right-color")}}, {{cssxref("border-bottom-color")}}, and {{cssxref("border-left-color")}}
 - {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}}

@@ -2,17 +2,9 @@
 title: Window.requestFileSystem()
 slug: Web/API/Window/requestFileSystem
 page-type: web-api-instance-method
-tags:
-  - API
-  - Deprecated
-  - File
-  - File and Directory Entries API
-  - Method
-  - Non-standard
-  - Reference
-  - Window
-  - filesystem
-  - requestFileSystem
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.Window.requestFileSystem
 ---
 
@@ -27,7 +19,7 @@ use. The returned {{domxref("FileSystem")}} is then available for use with the o
 
 ## Syntax
 
-```js
+```js-nolint
 requestFileSystem(type, size, successCallback)
 requestFileSystem(type, size, successCallback, errorCallback)
 ```

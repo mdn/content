@@ -1,12 +1,7 @@
 ---
 title: border-image-width
 slug: Web/CSS/border-image-width
-tags:
-  - CSS
-  - CSS Borders
-  - CSS Property
-  - Reference
-  - recipe:css-property
+page-type: css-property
 browser-compat: css.properties.border-image-width
 ---
 
@@ -33,10 +28,10 @@ border-image-width: 25%;
 /* <number> value */
 border-image-width: 3;
 
-/* vertical | horizontal */
+/* top and bottom | left and right */
 border-image-width: 2em 3em;
 
-/* top | horizontal | bottom */
+/* top | left and right | bottom */
 border-image-width: 5% 15% 10%;
 
 /* top | right | bottom | left */
@@ -87,10 +82,12 @@ Thus, each circle in the source image is 30 by 30 pixels.
 #### HTML
 
 ```html
-<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
-   eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
-   At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,
-   no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+<p>
+  Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
+  eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
+  voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita
+  kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+</p>
 ```
 
 #### CSS

@@ -2,16 +2,6 @@
 title: ClipboardItem()
 slug: Web/API/ClipboardItem/ClipboardItem
 page-type: web-api-instance-property
-tags:
-  - API
-  - Clipboard
-  - Clipboard API
-  - ClipboardItem
-  - Constructor
-  - Cut
-  - Reference
-  - copy
-  - paste
 browser-compat: api.ClipboardItem.ClipboardItem
 ---
 
@@ -23,7 +13,7 @@ The **`ClipboardItem()`** constructor of the {{domxref("Clipboard API")}} create
 
 ## Syntax
 
-```js
+```js-nolint
 new ClipboardItem(data)
 new ClipboardItem(data, options)
 ```
@@ -49,16 +39,16 @@ The below example requests a png image using the {{domxref("Fetch API")}}, and i
 ```js
 async function writeClipImg() {
   try {
-    const imgURL = '/myimage.png';
+    const imgURL = "/myimage.png";
     const data = await fetch(imgURL);
     const blob = await data.blob();
 
     await navigator.clipboard.write([
       new ClipboardItem({
-        [blob.type]: blob
-      })
+        [blob.type]: blob,
+      }),
     ]);
-    console.log('Fetched image copied.');
+    console.log("Fetched image copied.");
   } catch (err) {
     console.error(err.name, err.message);
   }

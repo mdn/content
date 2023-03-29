@@ -2,12 +2,6 @@
 title: EXT_disjoint_timer_query.endQueryEXT()
 slug: Web/API/EXT_disjoint_timer_query/endQueryEXT
 page-type: webgl-extension-method
-tags:
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGL extension
 browser-compat: api.EXT_disjoint_timer_query.endQueryEXT
 ---
 
@@ -18,7 +12,7 @@ The **`EXT_disjoint_timer_query.endQueryEXT()`** method of the
 
 ## Syntax
 
-```js
+```js-nolint
 endQueryEXT(target)
 ```
 
@@ -35,7 +29,7 @@ None ({{jsxref("undefined")}}).
 ## Examples
 
 ```js
-const ext = gl.getExtension('EXT_disjoint_timer_query');
+const ext = gl.getExtension("EXT_disjoint_timer_query");
 const query = ext.createQueryEXT();
 ext.beginQueryEXT(ext.TIME_ELAPSED_EXT, query);
 

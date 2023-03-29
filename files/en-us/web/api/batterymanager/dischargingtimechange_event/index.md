@@ -1,11 +1,7 @@
 ---
-title: 'BatteryManager: dischargingtimechange event'
+title: "BatteryManager: dischargingtimechange event"
 slug: Web/API/BatteryManager/dischargingtimechange_event
 page-type: web-api-event
-tags:
-  - API
-  - Event
-  - Reference
 browser-compat: api.BatteryManager.dischargingtimechange_event
 ---
 
@@ -17,10 +13,10 @@ The **`dischargingtimechange`** event of the [Battery Status API](/en-US/docs/We
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener('dischargingtimechange', (event) => { });
+```js-nolint
+addEventListener("dischargingtimechange", (event) => { })
 
-ondischargingtimechange = (event) => { };
+ondischargingtimechange = (event) => { }
 ```
 
 ## Event type
@@ -40,11 +36,10 @@ _A generic {{domxref("Event")}}._
 
 ```js
 navigator.getBattery().then((battery) => {
-    battery.ondischargingtimechange = () => {
-        document.querySelector('#level').textContent = battery.level;
-        document.querySelector('#chargingTime').textContent = battery.chargingTime;
-    }
-
+  battery.ondischargingtimechange = () => {
+    document.querySelector("#level").textContent = battery.level;
+    document.querySelector("#chargingTime").textContent = battery.chargingTime;
+  };
 });
 ```
 

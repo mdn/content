@@ -1,12 +1,7 @@
 ---
 title: CSS Animations tips and tricks
 slug: Web/CSS/CSS_Animations/Tips
-tags:
-  - CSS
-  - CSS Animations
-  - Example
-  - Guide
-  - Reference
+page-type: guide
 ---
 
 {{CSSRef}}
@@ -24,8 +19,7 @@ Here's one way to do it that we feel is stable and reliable enough to suggest to
 First, let's define the HTML for a {{HTMLElement("div")}} we wish to animate and a button that will play (or replay) the animation.
 
 ```html
-<div class="box">
-</div>
+<div class="box"></div>
 
 <div class="runButton">Click me to run the animation</div>
 ```
@@ -52,8 +46,12 @@ Now we'll define the animation itself using CSS. Some CSS that's not important (
 
 ```css
 @keyframes colorchange {
-  0% { background: yellow }
-  100% { background: blue }
+  0% {
+    background: yellow;
+  }
+  100% {
+    background: blue;
+  }
 }
 
 .box {
@@ -142,15 +140,15 @@ The following demo shows how you'd achieve the aforementioned JavaScript techniq
 ```
 
 ```js
-const watchme = document.getElementById('watchme');
+const watchme = document.getElementById("watchme");
 
-watchme.className = 'slidein'
+watchme.className = "slidein";
 const listener = (e) => {
-  watchme.className = 'slidein stopped'
-}
-watchme.addEventListener('click', () =>
-  watchme.addEventListener('animationiteration', listener, false)
-)
+  watchme.className = "slidein stopped";
+};
+watchme.addEventListener("click", () =>
+  watchme.addEventListener("animationiteration", listener, false)
+);
 ```
 
 Demo <https://jsfiddle.net/morenoh149/5ty5a4oy/>

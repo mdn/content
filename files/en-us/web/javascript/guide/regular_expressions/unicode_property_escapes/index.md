@@ -1,28 +1,22 @@
 ---
 title: Unicode property escapes
 slug: Web/JavaScript/Guide/Regular_Expressions/Unicode_Property_Escapes
-tags:
-  - Guide
-  - JavaScript
-  - Reference
-  - Regular Expressions
-  - regex
-  - unicode property escapes
+page-type: guide
 ---
 
 {{jsSidebar("JavaScript Guide")}}
 
 **Unicode property escapes** [Regular Expressions](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions) allows for matching characters based on their Unicode properties. A character is described by several properties which are either binary ("boolean-like") or non-binary. For instance, unicode property escapes can be used to match emojis, punctuations, letters (even letters from specific languages or scripts), etc.
 
-{{EmbedInteractiveExample("pages/js/regexp-unicode-property-escapes.html", "taller")}}
-
 > **Note:** For Unicode property escapes to work, a regular expression must use [the `u` flag](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions#advanced_searching_with_flags) which indicates a string must be considered as a series of Unicode code points. See also [`RegExp.prototype.unicode`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode).
 
 > **Note:** Some Unicode properties encompasses many more characters than some [character classes](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Character_Classes) (such as `\w` which matches only latin letters, `a` to `z`) but the latter is better supported among browsers (as of January 2020).
 
+{{EmbedInteractiveExample("pages/js/regexp-unicode-property-escapes.html", "taller")}}
+
 ## Syntax
 
-```js
+```js-nolint
 // Non-binary values
 \p{UnicodePropertyValue}
 \p{UnicodePropertyName=UnicodePropertyValue}
@@ -90,8 +84,8 @@ mixedCharacters.match(/\p{Script=Latin}/u); // a
 // Using a short alias for the script
 mixedCharacters.match(/\p{Script=Greek}/u); // ε
 
-// Using the short name Sc for the Script property
-mixedCharacters.match(/\p{Sc=Cyrillic}/u); // Л
+// Using the short name sc for the Script property
+mixedCharacters.match(/\p{sc=Cyrillic}/u); // Л
 ```
 
 For more details, please refer to [the Unicode specification](https://unicode.org/reports/tr24/#Script) and the [Scripts table in the ECMAScript specification](https://tc39.es/ecma262/multipage/text-processing.html#table-unicode-script-values).

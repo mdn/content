@@ -2,12 +2,6 @@
 title: WebGLRenderingContext.frontFace()
 slug: Web/API/WebGLRenderingContext/frontFace
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.frontFace
 ---
 
@@ -18,7 +12,7 @@ front- or back-facing by setting a winding orientation.
 
 ## Syntax
 
-```js
+```js-nolint
 frontFace(mode)
 ```
 

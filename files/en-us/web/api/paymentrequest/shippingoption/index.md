@@ -2,17 +2,9 @@
 title: PaymentRequest.shippingOption
 slug: Web/API/PaymentRequest/shippingOption
 page-type: web-api-instance-property
-tags:
-  - API
-  - Payment Request
-  - Payment Request API
-  - PaymentRequest
-  - Property
-  - Reference
-  - Secure context
-  - shippingOption
-  - Deprecated
-  - Non-standard
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.PaymentRequest.shippingOption
 ---
 
@@ -27,7 +19,7 @@ options are provided.
 This attribute is only populated if the constructor is called with the
 `requestShipping` flag set to `true`. If
 `requestShipping` was `false` (or missing),
- `shippingOption` returns `null`, even the developer provides
+`shippingOption` returns `null`, even the developer provides
 a selected a shipping option.
 
 ## Value
@@ -36,7 +28,7 @@ a selected a shipping option.
 
 In the example below, the {{domxref('PaymentRequest.shippingaddresschange_event', 'shippingaddresschange')}} and
 the {{domxref('PaymentRequest.shippingoptionchange_event', 'shippingoptionchange')}} events are dispatched. In
-each calls to `updateDetails()`  are made, one using a promise, and the other
+each calls to `updateDetails()` are made, one using a promise, and the other
 with a plain JS object. This demonstrates synchronous and asynchronous updates to a
 payment sheet.
 

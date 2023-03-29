@@ -2,14 +2,6 @@
 title: XRJointSpace
 slug: Web/API/XRJointSpace
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Reference
-  - WebXR
-  - XR
-  - AR
-  - VR
 browser-compat: api.XRJointSpace
 ---
 
@@ -19,7 +11,7 @@ The **`XRJointSpace`** interface is an {{domxref("XRSpace")}} and represents the
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 - {{domxref("XRJointSpace.jointName")}} {{ReadOnlyInline}}
   - : The name of the joint that is tracked. See {{domxref("XRHand")}} for possible hand joint names.

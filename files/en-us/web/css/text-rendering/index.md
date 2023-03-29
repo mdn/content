@@ -1,18 +1,7 @@
 ---
 title: text-rendering
 slug: Web/CSS/text-rendering
-tags:
-  - CSS
-  - CSS Property
-  - Legibility
-  - Ligatures
-  - Precision
-  - Reference
-  - SVG
-  - Text
-  - Text Features
-  - Text Rendering
-  - recipe:css-property
+page-type: css-property
 browser-compat: css.properties.text-rendering
 ---
 
@@ -85,15 +74,19 @@ This demonstrates how `optimizeLegibility` is used by browsers automatically whe
 #### CSS
 
 ```css
-.small { font: 19.9px "Constantia", "Times New Roman", "Georgia", "Palatino", serif; }
-.big   { font: 20px "Constantia", "Times New Roman", "Georgia", "Palatino", serif; }
+.small {
+  font: 19.9px "Constantia", "Times New Roman", "Georgia", "Palatino", serif;
+}
+.big {
+  font: 20px "Constantia", "Times New Roman", "Georgia", "Palatino", serif;
+}
 ```
 
 #### Result
 
 {{ EmbedLiveSample('Automatic_application_of_optimizeLegibility') }}
 
-### optimizeSpeed vs optimizeLegibility
+### optimizeSpeed vs. optimizeLegibility
 
 This example shows the difference between the appearance of `optimizeSpeed` and `optimizeLegibility` (in your browser; other browsers may vary).
 
@@ -107,10 +100,16 @@ This example shows the difference between the appearance of `optimizeSpeed` and 
 #### CSS
 
 ```css
-p { font: 1.5em "Constantia", "Times New Roman", "Georgia", "Palatino", serif }
+p {
+  font: 1.5em "Constantia", "Times New Roman", "Georgia", "Palatino", serif;
+}
 
-.speed       { text-rendering: optimizeSpeed; }
-.legibility  { text-rendering: optimizeLegibility; }
+.speed {
+  text-rendering: optimizeSpeed;
+}
+.legibility {
+  text-rendering: optimizeLegibility;
+}
 ```
 
 #### Result

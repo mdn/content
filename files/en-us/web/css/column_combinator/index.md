@@ -1,13 +1,9 @@
 ---
 title: Column combinator
 slug: Web/CSS/Column_combinator
-tags:
-  - CSS
-  - Experimental
-  - Reference
-  - Selector
-  - Selectors
-  - Tables
+page-type: css-combinator
+status:
+  - experimental
 browser-compat: css.selectors.column
 ---
 
@@ -17,7 +13,7 @@ The **column combinator** (`||`) is placed between two CSS selectors. It matches
 
 ```css
 /* Table cells that belong to the "selected" column */
-col.selected || td {
+col.selected||td {
   background: gray;
 }
 ```
@@ -25,7 +21,7 @@ col.selected || td {
 ## Syntax
 
 ```css
-column-selector || cell-selector {
+column-selector||cell-selector {
   /* style properties */
 }
 ```
@@ -37,15 +33,16 @@ column-selector || cell-selector {
 ```html
 <table border="1">
   <colgroup>
-    <col span="2"/>
-    <col class="selected"/>
+    <col span="2" />
+    <col class="selected" />
   </colgroup>
   <tbody>
     <tr>
-      <td>A
-      <td>B
-      <td>C
+      <td>A</td>
+      <td>B</td>
+      <td>C</td>
     </tr>
+
     <tr>
       <td colspan="2">D</td>
       <td>E</td>
@@ -61,7 +58,7 @@ column-selector || cell-selector {
 ### CSS
 
 ```css
-col.selected || td {
+col.selected||td {
   background: gray;
   color: white;
   font-weight: bold;

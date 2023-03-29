@@ -2,12 +2,6 @@
 title: WebGLRenderingContext.lineWidth()
 slug: Web/API/WebGLRenderingContext/lineWidth
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.lineWidth
 ---
 
@@ -27,7 +21,7 @@ lines.
 
 ## Syntax
 
-```js
+```js-nolint
 lineWidth(width)
 ```
 

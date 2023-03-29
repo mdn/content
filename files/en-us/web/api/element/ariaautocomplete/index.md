@@ -2,14 +2,6 @@
 title: Element.ariaAutoComplete
 slug: Web/API/Element/ariaAutoComplete
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - ariaAutoComplete
-  - AriaAttributes
-  - AriaMixin
-  - Element
 browser-compat: api.Element.ariaAutoComplete
 ---
 
@@ -37,7 +29,14 @@ In this example, the `aria-autocomplete` attribute on the element with an ID of 
 ```html
 <div class="animals-combobox">
   <label for="animal">Animal</label>
-  <input id="animal" type="text" role="combobox" aria-autocomplete="inline" aria-controls="animals-listbox" aria-expanded="false" aria-haspopup="listbox">
+  <input
+    id="animal"
+    type="text"
+    role="combobox"
+    aria-autocomplete="inline"
+    aria-controls="animals-listbox"
+    aria-expanded="false"
+    aria-haspopup="listbox" />
   <ul id="animals-listbox" role="listbox" aria-label="Animals">
     <li id="animal-cat" role="option">Cat</li>
     <li id="animal-dog" role="option">Dog</li>
@@ -46,7 +45,7 @@ In this example, the `aria-autocomplete` attribute on the element with an ID of 
 ```
 
 ```js
-let el = document.getElementById('animal');
+let el = document.getElementById("animal");
 console.log(el.ariaAutoComplete); // inline
 el.ariaAutoComplete = "list";
 console.log(el.ariaAutoComplete); // list

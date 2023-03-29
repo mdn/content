@@ -1,15 +1,7 @@
 ---
 title: find.removeHighlighting()
 slug: Mozilla/Add-ons/WebExtensions/API/find/removeHighlighting
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Reference
-  - WebExtensions
-  - find
-  - removeHighlighting
+page-type: webextension-api-function
 browser-compat: webextensions.api.find.removeHighlighting
 ---
 
@@ -19,7 +11,7 @@ Remove any highlighting of a previous search that was applied by a previous call
 
 ## Syntax
 
-```js
+```js-nolint
 browser.find.removeHighlighting()
 ```
 

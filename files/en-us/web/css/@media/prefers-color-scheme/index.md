@@ -1,21 +1,23 @@
 ---
 title: prefers-color-scheme
 slug: Web/CSS/@media/prefers-color-scheme
-tags:
-  - '@media'
-  - CSS
-  - Reference
-  - Web
-  - media feature
-  - prefers-color-scheme
+page-type: css-media-feature
 browser-compat: css.at-rules.media.prefers-color-scheme
 ---
 
-{{QuickLinksWithSubpages("/en-US/docs/Web/CSS/@media/")}}
+{{CSSRef}}
 
-The **`prefers-color-scheme`** [CSS](/en-US/docs/Web/CSS) [media feature](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#media_features) is used to detect if the user has requested a light or dark color theme.
+The **`prefers-color-scheme`** [CSS](/en-US/docs/Web/CSS) [media feature](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#targeting_media_features) is used to detect if a user has requested light or dark color themes.
+A user indicates their preference through an operating system setting (e.g. light or dark mode) or a user agent setting.
 
-The user might indicate this preference through an operating system setting (e.g. light or dark mode) or a user agent setting.
+## Embedded elements
+
+For SVG and iframes, `prefers-color-scheme` lets you set a CSS style for the SVG or iframe based on the [`color-scheme`](/en-US/docs/Web/CSS/color-scheme) of the parent element in the web page.
+SVGs must be used embedded (i.e., `<img src="circle.svg" alt="circle" />`) as opposed to [inlined in HTML](/en-US/docs/Web/SVG/Tutorial/SVG_In_HTML_Introduction#basic_example).
+An example of using `prefers-color-scheme` in SVGs can be found in the [Color scheme inheritance](#color_scheme_inheritance) section.
+
+Using `prefers-color-scheme` is allowed in [cross-origin](/en-US/docs/Web/Security/Same-origin_policy#cross-origin_network_access) `<svg>` and `<iframe>` elements. Cross-origin elements are elements retrieved from a different host than the page that is referencing them.
+To learn more about SVGs, see the [SVG documentation](/en-US/docs/Web/SVG) and for more information about iframes, see the [iframe documentation](/en-US/docs/Web/HTML/Element/iframe).
 
 ## Syntax
 
@@ -26,48 +28,120 @@ The user might indicate this preference through an operating system setting (e.g
 
 ## Examples
 
-The elements below have an initial color theme. They can be further themed according to the user's color scheme preference.
+### Detecting a dark or light theme
 
-### HTML
+A common usage is to use a light color scheme by default, and then use `prefers-color-scheme: dark` to override the colors to a darker variant. It is also possible to do it the other way around.
+
+This example shows both options: Theme A uses light colors, but can be overridden to dark colors. Theme B uses dark colors, but can be overridden to light colors. In the end, if the browser supports `prefers-color-scheme`, both themes will be light or dark.
+
+#### HTML
 
 ```html
-<div class="day">Day (initial)</div>
-<div class="day light-scheme">Day (changes in light scheme)</div>
-<div class="day dark-scheme">Day (changes in dark scheme)</div> <br>
+<div class="box theme-a">Theme A (initial)</div>
+<div class="box theme-a adaptive">Theme A (changed if dark preferred)</div>
+<br />
 
-<div class="night">Night (initial)</div>
-<div class="night light-scheme">Night (changes in light scheme)</div>
-<div class="night dark-scheme">Night (changes in dark scheme)</div>
+<div class="box theme-b">Theme B (initial)</div>
+<div class="box theme-b adaptive">Theme B (changed if light preferred)</div>
 ```
 
-### CSS
+#### CSS
 
-```css
-.day   { background: #eee; color: black; }
-.night { background: #333; color: white; }
-
-@media (prefers-color-scheme: dark) {
-  .day.dark-scheme   { background:  #333; color: white; }
-  .night.dark-scheme { background: black; color:  #ddd; }
-}
-
-@media (prefers-color-scheme: light) {
-  .day.light-scheme   { background: white; color:  #555; }
-  .night.light-scheme { background:  #eee; color: black; }
-}
-
-.day, .night {
+```css hidden
+div.box {
   display: inline-block;
   padding: 1em;
-  width: 7em;
+  margin: 6px;
+  outline: 2px solid #000;
+  width: 12em;
   height: 2em;
   vertical-align: middle;
 }
 ```
 
-### Result
+Theme A (brown) uses a light color scheme by default, but will switch to a dark scheme based on the media query:
 
-{{EmbedLiveSample("Examples")}}
+```css
+.theme-a {
+  background: #dca;
+  color: #731;
+}
+@media (prefers-color-scheme: dark) {
+  .theme-a.adaptive {
+    background: #753;
+    color: #dcb;
+    outline: 5px dashed #000;
+  }
+}
+```
+
+Theme B (blue) uses a dark color scheme by default, but will switch to a light scheme based on the media query:
+
+```css
+.theme-b {
+  background: #447;
+  color: #bbd;
+}
+@media (prefers-color-scheme: light) {
+  .theme-b.adaptive {
+    background: #bcd;
+    color: #334;
+    outline: 5px dotted #000;
+  }
+}
+```
+
+#### Result
+
+The left boxes shows Theme A and Theme B as they would appear without the `prefers-color-scheme` media query. The right boxes show the same themes, but one of them will be changed to a darker or lighter variant based on the user's active color scheme. The outline of one box will be dashed or dotted if it was changed based on your browser or operating systems settings.
+
+{{EmbedLiveSample("Detecting_a_dark_or_light_theme")}}
+
+### Color scheme inheritance
+
+The following example shows how to use `prefers-color-scheme` with the [`color-scheme` property](/en-US/docs/Web/CSS/color-scheme) inherited from a parent element.
+A script is used to set the source of the `<img>` elements and their `alt` attributes. This would normally be done in HTML as `<img src="circle.svg" alt="circle" />`.
+
+You should see three circles, with one drawn in a different color.
+The first circle inherits the `color-scheme` from the OS and can be toggled using the system OS's theme switcher.
+
+The second and third circles inherit the `color-scheme` from the embedding element; the `@media` query allows setting styles of the SVG content based on the parent element's `color-scheme`.
+In this case, the parent element with a `color-scheme` CSS property is a `<div>`.
+
+```html
+<div>
+  <img />
+</div>
+
+<div style="color-scheme: light">
+  <img />
+</div>
+<div style="color-scheme: dark">
+  <img />
+</div>
+
+<!-- Embed an SVG for all <img> elements -->
+<script>
+  for (let img of document.querySelectorAll("img")) {
+    img.alt = "circle";
+    img.src =
+      "data:image/svg+xml;base64," +
+      btoa(`
+      <svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+        <style>
+          :root { color: blue }
+          @media (prefers-color-scheme: dark) {
+            :root { color: purple }
+          }
+        </style>
+        <circle fill="currentColor" cx="16" cy="16" r="16"/>
+      </svg>
+    `);
+  }
+</script>
+```
+
+{{EmbedLiveSample("Color_scheme_inheritance")}}
 
 ## Specifications
 
@@ -79,6 +153,7 @@ The elements below have an initial color theme. They can be further themed accor
 
 ## See also
 
+- {{cssxref("color-scheme")}} CSS property
 - [Simulate prefers-color-scheme in Firefox](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_and_edit_css/index.html#view-media-rules-for-prefers-color-scheme) (Firefox Page Inspector > Examine and edit CSS)
 - [Video tutorial: Coding a Dark Mode for your Website](https://www.youtube.com/watch?v=jmepqJ5UbuM)
 - [Redesigning your product and website for dark mode](https://stuffandnonsense.co.uk/blog/redesigning-your-product-and-website-for-dark-mode)

@@ -2,13 +2,8 @@
 title: Document.anchors
 slug: Web/API/Document/anchors
 page-type: web-api-instance-property
-tags:
-  - API
-  - Deprecated
-  - Document
-  - HTML DOM
-  - Property
-  - Reference
+status:
+  - deprecated
 browser-compat: api.Document.anchors
 ---
 
@@ -43,7 +38,7 @@ on the page:
         const toc = document.getElementById("toc");
         for (const anchor of document.anchors) {
           const li = document.createElement("li");
-          const newAnchor = document.createElement('a');
+          const newAnchor = document.createElement("a");
           newAnchor.href = "#" + anchor.name;
           newAnchor.textContent = anchor.text;
           li.appendChild(newAnchor);

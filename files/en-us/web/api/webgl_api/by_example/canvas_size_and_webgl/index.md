@@ -2,12 +2,6 @@
 title: Canvas size and WebGL
 slug: Web/API/WebGL_API/By_example/Canvas_size_and_WebGL
 page-type: guide
-tags:
-  - Beginner
-  - Example
-  - Learn
-  - Tutorial
-  - WebGL
 ---
 
 {{PreviousNext("Learn/WebGL/By_example/Basic_scissoring","Learn/WebGL/By_example/Boilerplate_1")}}
@@ -28,45 +22,49 @@ The effect is clearly visible when using {{domxref("WebGLRenderingContext.scisso
 
 ```html
 <p>Compare the two canvases.</p>
-<canvas>Your browser does not seem to support
-    HTML canvas.</canvas>
-<canvas>Your browser does not seem to support
-    HTML canvas.</canvas>
+<canvas>Your browser does not seem to support HTML canvas.</canvas>
+<canvas>Your browser does not seem to support HTML canvas.</canvas>
 ```
 
 ```css
 body {
-  text-align : center;
+  text-align: center;
 }
 canvas {
-  display : inline-block;
-  width : 120px;
-  height : 80px;
-  margin : auto;
-  padding : 0;
-  border : none;
-  background-color : black;
+  display: inline-block;
+  width: 120px;
+  height: 80px;
+  margin: auto;
+  padding: 0;
+  border: none;
+  background-color: black;
 }
 ```
 
 ```js
-window.addEventListener("load", () => {
-  const [ firstCanvas , secondCanvas ] = document.getElementsByTagName("canvas");
-  firstCanvas.width = firstCanvas.clientWidth;
-  firstCanvas.height = firstCanvas.clientHeight;
-  [firstCanvas, secondCanvas].forEach((canvas) => {
-    const gl = canvas.getContext("webgl") || canvas.getContext("experimental-webgl");
-    if (!gl) {
-      document.querySelector("p").textContent = "Failed. Your browser or device may not support WebGL.";
-      return;
-    }
-    gl.viewport(0, 0, gl.drawingBufferWidth, gl.drawingBufferHeight);
-    gl.enable(gl.SCISSOR_TEST);
-    gl.scissor(30, 10, 60, 60);
-    gl.clearColor(1.0, 1.0, 0.0, 1.0);
-    gl.clear(gl.COLOR_BUFFER_BIT);
-  });
-}, false);
+window.addEventListener(
+  "load",
+  () => {
+    const [firstCanvas, secondCanvas] = document.getElementsByTagName("canvas");
+    firstCanvas.width = firstCanvas.clientWidth;
+    firstCanvas.height = firstCanvas.clientHeight;
+    [firstCanvas, secondCanvas].forEach((canvas) => {
+      const gl =
+        canvas.getContext("webgl") || canvas.getContext("experimental-webgl");
+      if (!gl) {
+        document.querySelector("p").textContent =
+          "Failed. Your browser or device may not support WebGL.";
+        return;
+      }
+      gl.viewport(0, 0, gl.drawingBufferWidth, gl.drawingBufferHeight);
+      gl.enable(gl.SCISSOR_TEST);
+      gl.scissor(30, 10, 60, 60);
+      gl.clearColor(1.0, 1.0, 0.0, 1.0);
+      gl.clear(gl.COLOR_BUFFER_BIT);
+    });
+  },
+  false
+);
 ```
 
 The source code of this example is also available on [GitHub](https://github.com/idofilin/webgl-by-example/tree/master/canvas-size-and-webgl).

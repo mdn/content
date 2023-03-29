@@ -2,14 +2,6 @@
 title: Cache.keys()
 slug: Web/API/Cache/keys
 page-type: web-api-instance-method
-tags:
-  - API
-  - Cache
-  - Method
-  - Reference
-  - Service Workers
-  - ServiceWorker
-  - keys
 browser-compat: api.Cache.keys
 ---
 
@@ -26,7 +18,7 @@ The requests are returned in the same order that they were inserted.
 
 ## Syntax
 
-```js
+```js-nolint
 keys()
 keys(request)
 keys(request, options)
@@ -72,13 +64,13 @@ objects.
 ## Examples
 
 ```js
-caches.open('v1').then((cache) => {
+caches.open("v1").then((cache) => {
   cache.keys().then((keys) => {
     keys.forEach((request, index, array) => {
       cache.delete(request);
     });
   });
-})
+});
 ```
 
 ## Specifications

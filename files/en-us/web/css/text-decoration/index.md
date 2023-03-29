@@ -1,12 +1,7 @@
 ---
 title: text-decoration
 slug: Web/CSS/text-decoration
-tags:
-  - CSS
-  - CSS Property
-  - CSS Text Decoration
-  - Reference
-  - recipe:css-shorthand-property
+page-type: css-shorthand-property
 browser-compat: css.properties.text-decoration
 ---
 
@@ -25,7 +20,7 @@ This property is a shorthand for the following CSS properties:
 - [`text-decoration-color`](/en-US/docs/Web/CSS/text-decoration-color)
 - [`text-decoration-line`](/en-US/docs/Web/CSS/text-decoration-line)
 - [`text-decoration-style`](/en-US/docs/Web/CSS/text-decoration-style)
-- [`text-decoration-thickness`](/en-US/docs/Web/CSS/text-decoration-thickness) {{Non-standard_Inline}}
+- [`text-decoration-thickness`](/en-US/docs/Web/CSS/text-decoration-thickness)
 
 ## Syntax
 
@@ -101,14 +96,18 @@ The `text-decoration` property is specified as one or more space-separated value
 <p class="under">This text has a line underneath it.</p>
 <p class="over">This text has a line over it.</p>
 <p class="line">This text has a line going through it.</p>
-<p>This <a class="plain" href="#">link will not be underlined</a>,
-    as links generally are by default. Be careful when removing
-    the text decoration on anchors since users often depend on
-    the underline to denote hyperlinks.</p>
+<p>
+  This <a class="plain" href="#">link will not be underlined</a>, as links
+  generally are by default. Be careful when removing the text decoration on
+  anchors since users often depend on the underline to denote hyperlinks.
+</p>
 <p class="underover">This text has lines above <em>and</em> below it.</p>
-<p class="thick">This text has a really thick purple underline in supporting browsers.</p>
-<p class="blink">This text might blink for you,
-    depending on the browser you use.</p>
+<p class="thick">
+  This text has a really thick purple underline in supporting browsers.
+</p>
+<p class="blink">
+  This text might blink for you, depending on the browser you use.
+</p>
 ```
 
 {{EmbedLiveSample('Examples','auto','320')}}

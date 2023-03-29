@@ -2,12 +2,6 @@
 title: CSSCounterStyleRule.prefix
 slug: Web/API/CSSCounterStyleRule/prefix
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - prefix
-  - CSSCounterStyleRule
 browser-compat: api.CSSCounterStyleRule.prefix
 ---
 
@@ -27,7 +21,7 @@ The following example shows a {{cssxref("@counter-style")}} rule. In JavaScript,
 @counter-style chapters {
   system: numeric;
   symbols: "0" "1" "2" "3" "4" "5" "6" "7" "8" "9";
-  prefix: 'Chapter ';
+  prefix: "Chapter ";
 }
 ```
 

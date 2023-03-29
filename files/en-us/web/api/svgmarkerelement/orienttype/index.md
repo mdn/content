@@ -2,12 +2,6 @@
 title: SVGMarkerElement.orientType
 slug: Web/API/SVGMarkerElement/orientType
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - orientType
-  - SVGMarkerElement
 browser-compat: api.SVGMarkerElement.orientType
 ---
 
@@ -35,9 +29,14 @@ The `orientType` property returns an {{domxref("SVGAnimatedEnumeration")}} objec
 ```html
 <svg id="svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <marker id="arrow" viewBox="0 0 10 10" refX="5" refY="5"
-        markerWidth="6" markerHeight="6"
-        orient=".63deg">
+    <marker
+      id="arrow"
+      viewBox="0 0 10 10"
+      refX="5"
+      refY="5"
+      markerWidth="6"
+      markerHeight="6"
+      orient=".63deg">
       <path d="M 0 0 L 10 5 L 0 10 z" />
     </marker>
   </defs>

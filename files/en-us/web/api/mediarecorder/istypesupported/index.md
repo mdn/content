@@ -2,17 +2,6 @@
 title: MediaRecorder.isTypeSupported()
 slug: Web/API/MediaRecorder/isTypeSupported
 page-type: web-api-static-method
-tags:
-  - API
-  - Audio
-  - Media
-  - Media Capture
-  - Media Recorder API
-  - MediaRecorder
-  - Method
-  - Reference
-  - Video
-  - canRecordMimeType
 browser-compat: api.MediaRecorder.isTypeSupported
 ---
 
@@ -25,7 +14,7 @@ should be able to successfully record.
 
 ## Syntax
 
-```js
+```js-nolint
 isTypeSupported(mimeType)
 ```
 
@@ -56,7 +45,11 @@ const types = [
 ];
 
 for (const type of types) {
-  console.log(`Is ${type} supported? ${MediaRecorder.isTypeSupported(type) ? "Maybe!" : "Nope :("}`);
+  console.log(
+    `Is ${type} supported? ${
+      MediaRecorder.isTypeSupported(type) ? "Maybe!" : "Nope :("
+    }`
+  );
 }
 ```
 
@@ -73,7 +66,7 @@ for (const type of types) {
 - [MediaStream Recording API](/en-US/docs/Web/API/MediaStream_Recording_API)
 - [Using the MediaStream Recording API](/en-US/docs/Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recording_API)
 - [Guide to media types and formats on the web](/en-US/docs/Web/Media/Formats)
-- [The "codecs" parameter in common media types](/en-US/docs/Web/Media/Formats/codecs_parameter)
+- [Codecs in common media types](/en-US/docs/Web/Media/Formats/codecs_parameter)
 - {{domxref("MediaStreamTrack")}}
 - {{domxref("MediaStream")}}
 - {{domxref("MediaCapabilities")}}

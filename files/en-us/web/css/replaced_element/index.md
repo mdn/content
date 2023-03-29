@@ -1,14 +1,7 @@
 ---
 title: Replaced elements
 slug: Web/CSS/Replaced_element
-tags:
-  - CSS
-  - Guide
-  - Layout
-  - Reference
-  - css layout
-  - rendering
-  - replaced element
+page-type: guide
 ---
 
 {{CSSRef}}
@@ -58,6 +51,7 @@ Certain CSS properties can be used to specify how the object contained within th
 ## See also
 
 - [HTML Spec](https://html.spec.whatwg.org/multipage/rendering.html#replaced-elements)
+- {{glossary("void element", "Void elements")}}
 - CSS key concepts:
   - [CSS syntax](/en-US/docs/Web/CSS/Syntax)
   - [At-rules](/en-US/docs/Web/CSS/At-rule)

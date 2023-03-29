@@ -1,19 +1,11 @@
 ---
 title: Client-Server Overview
 slug: Learn/Server-side/First_steps/Client-Server_overview
-tags:
-  - Beginner
-  - CodingScripting
-  - Guide
-  - Intro
-  - Learn
-  - Server
-  - Server-side programming
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/First_steps/Introduction", "Learn/Server-side/First_steps/Web_frameworks", "Learn/Server-side/First_steps")}}
 
-Now that you know the purpose and potential benefits of server-side programming we're going to examine in detail what happens when a server receives a "dynamic request" from a browser. As most website server-side code handles requests and responses in similar ways, this will help you understand what you need to do when writing most of your own code.
+Now that you know the purpose and potential benefits of server-side programming, we're going to examine in detail what happens when a server receives a "dynamic request" from a browser. As most website server-side code handles requests and responses in similar ways, this will help you understand what you need to do when writing most of your own code.
 
 <table>
   <tbody>
@@ -37,7 +29,7 @@ There is no real code in the discussion because we haven't yet chosen a web fram
 
 ## Web servers and HTTP (a primer)
 
-Web browsers communicate with [web servers](/en-US/docs/Learn/Common_questions/What_is_a_web_server) using the **H**yper**T**ext **T**ransfer **P**rotocol ([HTTP](/en-US/docs/Web/HTTP)). When you click a link on a web page, submit a form, or run a search, the browser sends an _HTTP Request_ to the server.
+Web browsers communicate with [web servers](/en-US/docs/Learn/Common_questions/Web_mechanics/What_is_a_web_server) using the **H**yper**T**ext **T**ransfer **P**rotocol ([HTTP](/en-US/docs/Web/HTTP)). When you click a link on a web page, submit a form, or run a search, the browser sends an _HTTP Request_ to the server.
 
 This request includes:
 
@@ -59,7 +51,7 @@ This request includes:
 
 Web servers wait for client request messages, process them when they arrive, and reply to the web browser with an HTTP Response message. The response contains an [HTTP Response status code](/en-US/docs/Web/HTTP/Status) indicating whether or not the request succeeded (e.g. "`200 OK`" for success, "`404 Not Found`" if the resource cannot be found, "`403 Forbidden`" if the user isn't authorized to see the resource, etc.). The body of a successful response to a `GET` request would contain the requested resource.
 
-When an HTML page is returned it is rendered by the web browser. As part of processing the browser may discover links to other resources (e.g. an HTML page usually references JavaScript and CSS pages), and will send separate HTTP Requests to download these files.
+When an HTML page is returned it is rendered by the web browser. As part of processing, the browser may discover links to other resources (e.g. an HTML page usually references JavaScript and CSS files), and will send separate HTTP Requests to download these files.
 
 Both static and dynamic websites (discussed in the following sections) use exactly the same communication protocol/patterns.
 
@@ -67,7 +59,7 @@ Both static and dynamic websites (discussed in the following sections) use exact
 
 You can make a simple `GET` request by clicking on a link or searching on a site (like a search engine homepage). For example, the HTTP request that is sent when you perform a search on MDN for the term "client-server overview" will look a lot like the text shown below (it will not be identical because parts of the message depend on your browser/setup).
 
-> **Note:** The format of HTTP messages is defined in a "web standard" ([RFC7230](https://www.rfc-editor.org/rfc/rfc7230.txt)). You don't need to know this level of detail, but at least now you know where this all came from!
+> **Note:** The format of HTTP messages is defined in a "web standard" ([RFC9110](https://httpwg.org/specs/rfc9110.html#messages)). You don't need to know this level of detail, but at least now you know where this all came from!
 
 #### The request
 
@@ -296,7 +288,7 @@ def junior(request):
     return render(request, 'best/index.html', context)
 ```
 
-After the `junior()` function gets the list of junior teams, it calls the `render()` function, passing the original `HttpRequest`, an HTML template, and a "context" object defining the information to be included in the template. The  `render()` function is a convenience function that generates HTML using a context and an HTML template, and returns it in an `HttpResponse` object.
+After the `junior()` function gets the list of junior teams, it calls the `render()` function, passing the original `HttpRequest`, an HTML template, and a "context" object defining the information to be included in the template. The `render()` function is a convenience function that generates HTML using a context and an HTML template, and returns it in an `HttpResponse` object.
 
 Obviously web frameworks can help you with a lot of other tasks. We discuss a lot more benefits and some popular web framework choices in the next article.
 
@@ -307,9 +299,3 @@ At this point you should have a good overview of the operations that server-side
 In a following module we'll help you choose the best Web Framework for your first site.
 
 {{PreviousMenuNext("Learn/Server-side/First_steps/Introduction", "Learn/Server-side/First_steps/Web_frameworks", "Learn/Server-side/First_steps")}}
-
-## In this module
-
-- [Introduction to the server side](/en-US/docs/Learn/Server-side/First_steps/Introduction)
-- [Server-side web frameworks](/en-US/docs/Learn/Server-side/First_steps/Web_frameworks)
-- [Website security](/en-US/docs/Learn/Server-side/First_steps/Website_security)

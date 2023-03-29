@@ -2,13 +2,6 @@
 title: LockManager.query()
 slug: Web/API/LockManager/query
 page-type: web-api-instance-method
-tags:
-  - API
-  - LockManager
-  - Method
-  - Reference
-  - Web Locks API
-  - query()
 browser-compat: api.LockManager.query
 ---
 
@@ -18,7 +11,7 @@ The **`query()`** method of the {{domxref("LockManager")}} interface returns a {
 
 ## Syntax
 
-```js
+```js-nolint
 query()
 ```
 

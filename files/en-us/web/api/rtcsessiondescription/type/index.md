@@ -2,13 +2,6 @@
 title: RTCSessionDescription.type
 slug: Web/API/RTCSessionDescription/type
 page-type: web-api-instance-property
-tags:
-  - Property
-  - RTCSessionDescription
-  - Reference
-  - SDP
-  - Type
-  - WebRTC
 browser-compat: api.RTCSessionDescription.type
 ---
 
@@ -19,9 +12,9 @@ string value which describes the description's type.
 
 ## Syntax
 
-```js
-const value = sessionDescription.type;
-sessionDescription.type = value;
+```js-nolint
+const value = sessionDescription.type
+sessionDescription.type = value
 ```
 
 ### Value

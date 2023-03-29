@@ -2,14 +2,6 @@
 title: History.back()
 slug: Web/API/History/back
 page-type: web-api-instance-method
-tags:
-  - API
-  - HTML DOM
-  - History
-  - History API
-  - Method
-  - Reference
-  - Web
 browser-compat: api.History.back
 ---
 
@@ -27,7 +19,7 @@ This method is {{glossary("asynchronous")}}. Add a listener for the
 
 ## Syntax
 
-```js
+```js-nolint
 back()
 ```
 
@@ -53,7 +45,7 @@ the session history.
 ### JavaScript
 
 ```js
-document.getElementById('go-back').addEventListener('click', () => {
+document.getElementById("go-back").addEventListener("click", () => {
   history.back();
 });
 ```

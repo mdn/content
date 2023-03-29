@@ -2,12 +2,8 @@
 title: BackgroundFetchRecord
 slug: Web/API/BackgroundFetchRecord
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Reference
-  - BackgroundFetchRecord
-  - Experimental
+status:
+  - experimental
 browser-compat: api.BackgroundFetchRecord
 ---
 
@@ -19,7 +15,7 @@ A `BackgroundFetchRecord` is created by the {{domxref("BackgroundFetchManager.fe
 
 There will be one `BackgroundFetchRecord` for each resource requested by `fetch()`.
 
-## Properties
+## Instance properties
 
 - {{domxref("BackgroundFetchRecord.request","request")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns a {{domxref("Request")}}.
@@ -31,9 +27,9 @@ There will be one `BackgroundFetchRecord` for each resource requested by `fetch(
 In this example an individual `BackgroundFetchRecord` is returned using {{domxref("BackgroundFetchManager.fetch()","BackgroundFetchManager.fetch()")}}. The {{domxref("BackgroundFetchRecord.request")}} and {{domxref("BackgroundFetchRecord.responseReady")}} are returned and logged to the console.
 
 ```js
-bgFetch.match('/ep-5.mp3').then(async (record) => {
+bgFetch.match("/ep-5.mp3").then(async (record) => {
   if (!record) {
-    console.log('No record found');
+    console.log("No record found");
     return;
   }
 

@@ -1,12 +1,7 @@
 ---
 title: border-bottom-style
 slug: Web/CSS/border-bottom-style
-tags:
-  - CSS
-  - CSS Borders
-  - CSS Property
-  - Reference
-  - recipe:css-property
+page-type: css-property
 browser-compat: css.properties.border-bottom-style
 ---
 
@@ -84,23 +79,44 @@ The `border-bottom-style` property is specified as a single keyword chosen from 
 /* Define look of the table */
 table {
   border-width: 3px;
-  background-color: #52E385;
+  background-color: #52e385;
 }
-tr, td {
+tr,
+td {
   padding: 3px;
 }
 
 /* border-bottom-style example classes */
-.b1 {border-bottom-style: none;}
-.b2 {border-bottom-style: hidden;}
-.b3 {border-bottom-style: dotted;}
-.b4 {border-bottom-style: dashed;}
-.b5 {border-bottom-style: solid;}
-.b6 {border-bottom-style: double;}
-.b7 {border-bottom-style: groove;}
-.b8 {border-bottom-style: ridge;}
-.b9 {border-bottom-style: inset;}
-.b10 {border-bottom-style: outset;}
+.b1 {
+  border-bottom-style: none;
+}
+.b2 {
+  border-bottom-style: hidden;
+}
+.b3 {
+  border-bottom-style: dotted;
+}
+.b4 {
+  border-bottom-style: dashed;
+}
+.b5 {
+  border-bottom-style: solid;
+}
+.b6 {
+  border-bottom-style: double;
+}
+.b7 {
+  border-bottom-style: groove;
+}
+.b8 {
+  border-bottom-style: ridge;
+}
+.b9 {
+  border-bottom-style: inset;
+}
+.b10 {
+  border-bottom-style: outset;
+}
 ```
 
 #### Result

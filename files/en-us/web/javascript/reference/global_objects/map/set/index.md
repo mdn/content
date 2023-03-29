@@ -1,13 +1,7 @@
 ---
 title: Map.prototype.set()
 slug: Web/JavaScript/Reference/Global_Objects/Map/set
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Map
-  - Method
-  - Prototype
-  - Reference
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.Map.set
 ---
 
@@ -19,16 +13,16 @@ The **`set()`** method adds or updates an entry in a `Map` object with a specifi
 
 ## Syntax
 
-```js
+```js-nolint
 set(key, value)
 ```
 
 ### Parameters
 
 - `key`
-  - : The key of the element to add to the `Map` object. The key may be any [JavaScript type](/en-US/docs/Web/JavaScript/Data_structures#javascript_types) (any [primitive value](/en-US/docs/Web/JavaScript/Data_structures#primitive_values) or any type of [JavaScript object](/en-US/docs/Web/JavaScript/Data_structures#objects)).
+  - : The key of the element to add to the `Map` object. The key may be any [JavaScript type](/en-US/docs/Web/JavaScript/Data_structures) (any [primitive value](/en-US/docs/Web/JavaScript/Data_structures#primitive_values) or any type of [JavaScript object](/en-US/docs/Web/JavaScript/Data_structures#objects)).
 - `value`
-  - : The value of the element to add to the `Map` object. The value may be any [JavaScript type](/en-US/docs/Web/JavaScript/Data_structures#javascript_types) (any [primitive value](/en-US/docs/Web/JavaScript/Data_structures#primitive_values) or any type of [JavaScript object](/en-US/docs/Web/JavaScript/Data_structures#objects)).
+  - : The value of the element to add to the `Map` object. The value may be any [JavaScript type](/en-US/docs/Web/JavaScript/Data_structures) (any [primitive value](/en-US/docs/Web/JavaScript/Data_structures#primitive_values) or any type of [JavaScript object](/en-US/docs/Web/JavaScript/Data_structures#objects)).
 
 ### Return value
 

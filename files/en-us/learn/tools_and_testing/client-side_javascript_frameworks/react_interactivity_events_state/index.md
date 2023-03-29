@@ -1,17 +1,7 @@
 ---
-title: 'React interactivity: Events and state'
+title: "React interactivity: Events and state"
 slug: >-
   Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_events_state
-tags:
-  - Beginner
-  - Frameworks
-  - JavaScript
-  - Learn
-  - React
-  - client-side
-  - events
-  - interactivity
-  - state
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_components","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_filtering_conditional_rendering", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
@@ -49,7 +39,7 @@ With our component plan worked out, it's now time to start updating our app from
 
 If you've only written vanilla JavaScript before now, you might be used to having a separate JavaScript file, where you query for some DOM nodes and attach listeners to them. For example:
 
-```js
+```jsx
 const btn = document.querySelector('button');
 
 btn.addEventListener('click', () => {
@@ -59,7 +49,7 @@ btn.addEventListener('click', () => {
 
 In React, we write event handlers directly on the elements in our JSX, like this:
 
-```js
+```jsx
 <button
   type="button"
   onClick={() => alert("hi!")}
@@ -83,7 +73,7 @@ Let's apply this to our app, starting in the `Form.js` component.
 
 At the top of the `Form()` component function, create a function named `handleSubmit()`. This function should [prevent the default behavior of the `submit` event](/en-US/docs/Learn/JavaScript/Building_blocks/Events#preventing_default_behavior). After that, it should trigger an `alert()`, which can say whatever you'd like. It should end up looking something like this:
 
-```js
+```jsx
 function handleSubmit(e) {
   e.preventDefault();
   alert('Hello, world!');
@@ -92,7 +82,7 @@ function handleSubmit(e) {
 
 To use this function, add an `onSubmit` attribute to the [`<form>`](/en-US/docs/Web/HTML/Element/form) element, and set its value to the `handleSubmit` function:
 
-```js
+```jsx
 <form onSubmit={handleSubmit}>
 ```
 
@@ -108,7 +98,7 @@ We want our `handleSubmit()` function to ultimately help us create a new task, s
 
 Inside the top of our `App()` component function, create a function named `addTask()` which has a single parameter of `name`:
 
-```js
+```jsx
 function addTask(name) {
   alert(name);
 }
@@ -116,13 +106,13 @@ function addTask(name) {
 
 Next, we'll pass `addTask()` into `<Form />` as a prop. The prop can have whatever name you want, but pick a name you'll understand later. Something like `addTask` works, because it matches the name of the function as well as what the function will do. Your `<Form />` component call should be updated as follows:
 
-```js
+```jsx
 <Form addTask={addTask} />
 ```
 
 Finally, you can use this prop inside the `handleSubmit()` function in your `<Form />` component! Update it as follows:
 
-```js
+```jsx
 function handleSubmit(e) {
   e.preventDefault();
   props.addTask("Say hello!");
@@ -137,13 +127,13 @@ Clicking on the "Add" button in your browser will prove that the `addTask()` cal
 
 So far, we've used props to pass data through our components and this has served us just fine. Now that we're dealing with user input and data updates, however, we need something more.
 
-For one thing, props come from the parent of a component. Our `<Form />` will not be inheriting a new name for our task; our `<input />`  element lives directly inside of `<Form />`, so `<Form/>` will be directly responsible for creating that new name. We can't ask `<Form />` to spontaneously create its own props, but we _can_ ask it to track some of its own data for us. Data such as this, which a component itself owns, is called **state**. State is another powerful tool for React because components not only _own_ state, but can _update_ it later. It's not possible to update the props a component receives; only to read them.
+For one thing, props come from the parent of a component. Our `<Form />` will not be inheriting a new name for our task; our `<input />` element lives directly inside of `<Form />`, so `<Form/>` will be directly responsible for creating that new name. We can't ask `<Form />` to spontaneously create its own props, but we _can_ ask it to track some of its own data for us. Data such as this, which a component itself owns, is called **state**. State is another powerful tool for React because components not only _own_ state, but can _update_ it later. It's not possible to update the props a component receives; only to read them.
 
 React provides a variety of special functions that allow us to provide new capabilities to components, like state. These functions are called **hooks**, and the `useState` hook, as its name implies, is precisely the one we need in order to give our component some state.
 
 To use a React hook, we need to import it from the React module. In `Form.js`, change your very first line so that it reads like this:
 
-```js
+```jsx
 import React, { useState } from "react";
 ```
 
@@ -155,7 +145,7 @@ This is a lot to take in at once, so let's try it out. We're going to make ourse
 
 Write the following above your `handleSubmit()` function, inside `Form()`:
 
-```js
+```jsx
 const [name, setName] = useState('Use hooks!');
 ```
 
@@ -169,7 +159,7 @@ What's going on in this line of code?
 
 You can see the `name` state in action right away. Add a `value` attribute to the form's input, and set its value to `name`. Your browser will render "Use hooks!" inside the input.
 
-```js
+```jsx
 <input
   type="text"
   id="new-todo-input"
@@ -182,7 +172,7 @@ You can see the `name` state in action right away. Add a `value` attribute to th
 
 Change "Use hooks!" to an empty string once you're done; this is what we want for our initial state.
 
-```js
+```jsx
 const [name, setName] = useState('');
 ```
 
@@ -190,7 +180,7 @@ const [name, setName] = useState('');
 
 Before we can change the value of `name`, we need to capture a user's input as they type. For this, we can listen to the `onChange` event. Let's write a `handleChange()` function, and listen for it on the `<input />` tag.
 
-```js
+```jsx
 // near the top of the `Form` component
 function handleChange(e) {
   console.log("Typing!");
@@ -214,7 +204,7 @@ To read the contents of the input field as they change, you can access the input
 
 You can `console.log()` this value to see it in your browser's console.
 
-```js
+```jsx
 function handleChange(e) {
   console.log(e.target.value);
 }
@@ -224,7 +214,7 @@ function handleChange(e) {
 
 Logging isn't enough — we want to actually store the updated state of the name as the input value changes! Change the `console.log()` to `setName()`, as shown below:
 
-```js
+```jsx
 function handleChange(e) {
   setName(e.target.value);
 }
@@ -232,7 +222,7 @@ function handleChange(e) {
 
 Now we need to change our `handleSubmit()` function so that it calls `props.addTask` with name as an argument — remember our callback prop? This will serve to send the task back to the `App` component, so we can add it to our list of tasks at some later date. As a matter of good practice, you should clear the input after your form submits, so we'll call `setName()` again with an empty string to do so:
 
-```js
+```jsx
 function handleSubmit(e) {
   e.preventDefault();
   props.addTask(name);
@@ -244,7 +234,7 @@ At last, you can type something into the input field in your browser and click _
 
 Your `Form.js` file should now read like this:
 
-```js
+```jsx
 import React, { useState } from "react";
 
 function Form(props) {
@@ -295,19 +285,19 @@ Now that we've practiced with events, callback props, and hooks we're ready to w
 
 Import `useState` into `App.js`, so that we can store our tasks in state — update your `React` import line to the following:
 
-```js
+```jsx
 import React, { useState } from "react";
 ```
 
-We want to pass `props.tasks` into the `useState()` hook – this will preserve its initial state. Add the following right at the top of your App() function definition:
+We want to pass `props.tasks` into the `useState()` hook – this will preserve its initial state. Add the following right at the top of your `App()` function definition:
 
-```js
+```jsx
 const [tasks, setTasks] = useState(props.tasks);
 ```
 
 Now, we can change our `taskList` mapping so that it is the result of mapping `tasks`, instead of `props.tasks`. Your `taskList` constant declaration should now look like so:
 
-```js
+```jsx
 const taskList = tasks.map((task) => (
   <Todo
     id={task.id}
@@ -328,7 +318,7 @@ We then need to make a new array with this new task added to it and then update 
 
 Putting that all together, your `addTask()` function should read like so:
 
-```js
+```jsx
 function addTask(name) {
   const newTask = { id: "id", name, completed: false };
   setTasks([...tasks, newTask]);
@@ -339,7 +329,7 @@ Now you can use the browser to add a task to our data! Type anything into the fo
 
 **However, we have another problem**: our `addTask()` function is giving each task the same `id`. This is bad for accessibility, and makes it impossible for React to tell future tasks apart with the `key` prop. In fact, React will give you a warning in your DevTools console — "Warning: Encountered two children with the same key…"
 
-We need to fix this. Making unique identifiers is a hard problem – one for which the JavaScript community has written some helpful libraries. We'll use [nanoid](https://github.com/ai/nanoid) because it's tiny, and it works.
+We need to fix this. Making unique identifiers is a hard problem – one for which the JavaScript community has written some helpful libraries. We'll use [nanoid](https://github.com/ai/nanoid) because it's tiny and it works.
 
 Make sure you're in the root directory of your application and run the following terminal command:
 
@@ -347,17 +337,17 @@ Make sure you're in the root directory of your application and run the following
 npm install nanoid
 ```
 
-> **Note:** If you're using yarn, you'll need the following instead: `yarn add nanoid`
+> **Note:** If you're using yarn, you'll need the following instead: `yarn add nanoid`.
 
 Now we can import `nanoid` into the top of `App.js` so we can use it to create unique IDs for our new tasks. First of all, include the following import line at the top of `App.js`:
 
-```js
+```jsx
 import { nanoid } from "nanoid";
 ```
 
-Now let's update `addTask()` so that each task ID becomes a prefix todo- plus a unique string generated by nanoid. Update your `newTask` constant declaration to this:
+Now let's update `addTask()` so that each task ID becomes a prefix `todo-` plus a unique string generated by nanoid. Update your `newTask` constant declaration to this:
 
-```js
+```jsx
 const newTask = { id: `todo-${nanoid()}`, name, completed: false };
 ```
 
@@ -369,20 +359,20 @@ Now that we can add new tasks, you may notice a problem: our heading reads 3 tas
 
 Add this inside your `App()` definition, before the return statement:
 
-```js
+```jsx
 const headingText = `${taskList.length} tasks remaining`;
 ```
 
-Hrm. This is almost right, except that if our list ever contains a single task, the heading will still use the word "tasks". We can make this a variable, too. Update the code you just added as follows:
+This is almost right, except that if our list ever contains a single task, the heading will still use the word "tasks". We can make this a variable, too. Update the code you just added as follows:
 
-```js
+```jsx
 const tasksNoun = taskList.length !== 1 ? 'tasks' : 'task';
 const headingText = `${taskList.length} ${tasksNoun} remaining`;
 ```
 
 Now you can replace the list heading's text content with the `headingText` variable. Update your `<h2>` like so:
 
-```js
+```jsx
 <h2 id="list-heading">{headingText}</h2>
 ```
 
@@ -398,7 +388,7 @@ We'll start by writing a `toggleTaskCompleted()` function in our `App()` compone
 
 Add this just above your `taskList` constant declaration:
 
-```js
+```jsx
 function toggleTaskCompleted(id) {
   console.log(tasks[0])
 }
@@ -406,7 +396,7 @@ function toggleTaskCompleted(id) {
 
 Next, we'll add `toggleTaskCompleted` to the props of each `<Todo />` component rendered inside our `taskList`; update it like so:
 
-```js
+```jsx
 const taskList = tasks.map((task) => (
   <Todo
       id={task.id}
@@ -420,7 +410,7 @@ const taskList = tasks.map((task) => (
 
 Next, go over to your `Todo.js` component and add an `onChange` handler to your `<input />` element, which should use an anonymous function to call `props.toggleTaskCompleted()` with a parameter of `props.id`. The `<input />` should now look like this:
 
-```js
+```jsx
 <input
   id={props.id}
   type="checkbox"
@@ -443,7 +433,7 @@ Let's revisit our `toggleTaskCompleted()` function in `App.js`. We want it to ch
 
 Update your `toggleTaskCompleted()` function to the following:
 
-```js
+```jsx
 function toggleTaskCompleted(id) {
   const updatedTasks = tasks.map((task) => {
     // if this task has the same ID as the edited task
@@ -464,13 +454,13 @@ Then we call `setTasks()` with this new array in order to update our state.
 
 ## Deleting a task
 
-Deleting a task will follow a similar pattern to toggling its completed state: We need to define a function for updating our state, then pass that function into `<Todo />` as a prop and call it when the right event happens.
+Deleting a task will follow a similar pattern to toggling its completed state: we need to define a function for updating our state, then pass that function into `<Todo />` as a prop and call it when the right event happens.
 
 ### The `deleteTask` callback prop
 
 Here we'll start by writing a `deleteTask()` function in your `App` component. Like `toggleTaskCompleted()`, this function will take an `id` parameter, and we will log that `id` to the console to start with. Add the following below `toggleTaskCompleted()`:
 
-```js
+```jsx
 function deleteTask(id) {
   console.log(id)
 }
@@ -478,7 +468,7 @@ function deleteTask(id) {
 
 Next, add another callback prop to our array of `<Todo />` components:
 
-```js
+```jsx
 const taskList = tasks.map((task) => (
   <Todo
     id={task.id}
@@ -493,9 +483,9 @@ const taskList = tasks.map((task) => (
 
 In `Todo.js`, we want to call `props.deleteTask()` when the "Delete" button is pressed. `deleteTask()` needs to know the ID of the task that called it, so it can delete the correct task from the state.
 
-Update the "Delete" button inside Todo.js, like so:
+Update the "Delete" button inside `Todo.js`, like so:
 
-```js
+```jsx
 <button
   type="button"
   className="btn btn__danger"
@@ -511,11 +501,11 @@ Now when you click on any of the "Delete" buttons in the app, your browser conso
 
 Now that we know `deleteTask()` is invoked correctly, we can call our `setTasks()` hook in `deleteTask()` to actually delete that task from the app's state as well as visually in the app UI. Since `setTasks()` expects an array as an argument, we should provide it with a new array that copies the existing tasks, _excluding_ the task whose ID matches the one passed into `deleteTask()`.
 
-This is a perfect opportunity to use [`Array.prototype.filter()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter). We can test each task, and exclude a task from the new array if its `id` prop matches the `id` parameter passed into `deleteTask()`.
+This is a perfect opportunity to use [`Array.prototype.filter()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter). We can test each task, and exclude a task from the new array if its `id` prop matches the `id` argument passed into `deleteTask()`.
 
 Update the `deleteTask()` function inside your `App.js` file as follows:
 
-```js
+```jsx
 function deleteTask(id) {
   const remainingTasks = tasks.filter((task) => id !== task.id);
   setTasks(remainingTasks);
@@ -529,58 +519,3 @@ Try your app out again. Now you should be able to delete a task from your app!
 That's enough for one article. Here we've given you the lowdown on how React deals with events and handles state, and implemented functionality to add tasks, delete tasks, and toggle tasks as completed. We are nearly there. In the next article we'll implement functionality to edit existing tasks and filter the list of tasks between all, completed, and incomplete tasks. We'll look at conditional UI rendering along the way.
 
 {{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_components","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_filtering_conditional_rendering", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
-
-## In this module
-
-- [Introduction to client-side frameworks](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Introduction)
-- [Framework main features](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features)
-- React
-
-  - [Getting started with React](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started)
-  - [Beginning our React todo list](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning)
-  - [Componentizing our React app](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_components)
-  - [React interactivity: Events and state](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_events_state)
-  - [React interactivity: Editing, filtering, conditional rendering](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_filtering_conditional_rendering)
-  - [Accessibility in React](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_accessibility)
-  - [React resources](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_resources)
-
-- Ember
-
-  - [Getting started with Ember](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_getting_started)
-  - [Ember app structure and componentization](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_structure_componentization)
-  - [Ember interactivity: Events, classes and state](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_interactivity_events_state)
-  - [Ember Interactivity: Footer functionality, conditional rendering](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_conditional_footer)
-  - [Routing in Ember](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_routing)
-  - [Ember resources and troubleshooting](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_resources)
-
-- Vue
-
-  - [Getting started with Vue](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_getting_started)
-  - [Creating our first Vue component](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_first_component)
-  - [Rendering a list of Vue components](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_rendering_lists)
-  - [Adding a new todo form: Vue events, methods, and models](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_methods_events_models)
-  - [Styling Vue components with CSS](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_styling)
-  - [Using Vue computed properties](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_computed_properties)
-  - [Vue conditional rendering: editing existing todos](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_conditional_rendering)
-  - [Focus management with Vue refs](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_refs_focus_management)
-  - [Vue resources](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_resources)
-
-- Svelte
-
-  - [Getting started with Svelte](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_getting_started)
-  - [Starting our Svelte Todo list app](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_Todo_list_beginning)
-  - [Dynamic behavior in Svelte: working with variables and props](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_variables_props)
-  - [Componentizing our Svelte app](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_components)
-  - [Advanced Svelte: Reactivity, lifecycle, accessibility](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_reactivity_lifecycle_accessibility)
-  - [Working with Svelte stores](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_stores)
-  - [TypeScript support in Svelte](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_TypeScript)
-  - [Deployment and next steps](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_deployment_next)
-
-- Angular
-
-  - [Getting started with Angular](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_getting_started)
-  - [Beginning our Angular todo list app](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_todo_list_beginning)
-  - [Styling our Angular app](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_styling)
-  - [Creating an item component](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_item_component)
-  - [Filtering our to-do items](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_filtering)
-  - [Building Angular applications and further resources](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_building)

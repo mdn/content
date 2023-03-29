@@ -1,16 +1,6 @@
 ---
 title: Getting started with CSS
 slug: Learn/CSS/First_steps/Getting_started
-tags:
-  - Beginner
-  - CSS
-  - Classes
-  - Elements
-  - Example
-  - Learn
-  - Selectors
-  - Syntax
-  - state
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/First_steps/What_is_CSS", "Learn/CSS/First_steps/How_CSS_is_structured", "Learn/CSS/First_steps")}}
@@ -51,30 +41,32 @@ In this article, we will take a simple HTML document and apply CSS to it, learni
 Our starting point is an HTML document. You can copy the code from below if you want to work on your own computer. Save the code below as `index.html` in a folder on your machine.
 
 ```html
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="utf-8">
+  <head>
+    <meta charset="utf-8" />
     <title>Getting started with CSS</title>
-</head>
+  </head>
 
-<body>
-
+  <body>
     <h1>I am a level one heading</h1>
 
-    <p>This is a paragraph of text. In the text is a <span>span element</span>
-and also a <a href="https://example.com">link</a>.</p>
+    <p>
+      This is a paragraph of text. In the text is a
+      <span>span element</span> and also a
+      <a href="https://example.com">link</a>.
+    </p>
 
-    <p>This is the second paragraph. It contains an <em>emphasized</em> element.</p>
+    <p>
+      This is the second paragraph. It contains an <em>emphasized</em> element.
+    </p>
 
     <ul>
-        <li>Item <span>one</span></li>
-        <li>Item two</li>
-        <li>Item <em>three</em></li>
+      <li>Item <span>one</span></li>
+      <li>Item two</li>
+      <li>Item <em>three</em></li>
     </ul>
-
-</body>
-
+  </body>
 </html>
 ```
 
@@ -89,7 +81,7 @@ Create a file in the same folder as your HTML document and save it as `styles.cs
 To link `styles.css` to `index.html`, add the following line somewhere inside the {{htmlelement("head")}} of the HTML document:
 
 ```html
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="styles.css" />
 ```
 
 This {{htmlelement("link")}} element tells the browser that we have a stylesheet, using the `rel` attribute, and the location of that stylesheet as the value of the `href` attribute. You can test that the CSS works by adding a rule to `styles.css`. Using your code editor, add the following to your CSS file:
@@ -117,8 +109,9 @@ p {
 You can target multiple selectors at the same time by separating the selectors with a comma. If you want all paragraphs and all list items to be green, your rule would look like this:
 
 ```css
-p, li {
-    color: green;
+p,
+li {
+  color: green;
 }
 ```
 
@@ -146,28 +139,28 @@ Looking at that page you will discover that in addition to removing the list bul
 
 ## Adding a class
 
-So far, we have styled elements based on their HTML element names. This works as long as you want all of the elements of that type in your document to look the same. Most of the time that isn't the case and so you will need to find a way to select a subset of the elements without changing the others. The most common way to do this is to add a class to your HTML element and target that class.
+So far, we have styled elements based on their HTML element names. This works as long as you want all of the elements of that type in your document to look the same. To select a subset of the elements without changing the others, you can add a class to your HTML element and target that class in your CSS.
 
-In your HTML document, add a [class attribute](/en-US/docs/Web/HTML/Global_attributes/class) to the second list item. Your list will now look like this:
+1. In your HTML document, add a [class attribute](/en-US/docs/Web/HTML/Global_attributes/class) to the second list item. Your list will now look like this:
 
-```html
-<ul>
-  <li>Item one</li>
-  <li class="special">Item two</li>
-  <li>Item <em>three</em></li>
-</ul>
-```
+    ```html
+    <ul>
+      <li>Item one</li>
+      <li class="special">Item two</li>
+      <li>Item <em>three</em></li>
+    </ul>
+    ```
 
-In your CSS, you can target the class of `special` by creating a selector that starts with a full stop character. Add the following to your CSS file:
+2. In your CSS, you can target the class of `special` by creating a selector that starts with a full stop character. Add the following to your CSS file:
 
-```css
-.special {
-  color: orange;
-  font-weight: bold;
-}
-```
+    ```css
+    .special {
+      color: orange;
+      font-weight: bold;
+    }
+    ```
 
-Save and refresh to see what the result is.
+3. Save and refresh to see what the result is.
 
 You can apply the class of `special` to any element on your page that you want to have the same look as this list item. For example, you might want the `<span>` in the paragraph to also be orange and bold. Try adding a `class` of `special` to it, then reload your page and see what happens.
 
@@ -262,10 +255,12 @@ It is worth noting that you can combine multiple selectors and combinators toget
 
 ```css
 /* selects any <span> that is inside a <p>, which is inside an <article>  */
-article p span { }
+article p span {
+}
 
 /* selects any <p> that comes directly after a <ul>, which comes directly after an <h1>  */
-h1 + ul + p { }
+h1 + ul + p {
+}
 ```
 
 You can combine multiple types together, too. Try adding the following into your code:
@@ -291,11 +286,3 @@ In this article, we have taken a look at a number of ways in which you can style
 In the next lesson, we'll be taking a look at [how CSS is structured](/en-US/docs/Learn/CSS/First_steps/How_CSS_is_structured).
 
 {{PreviousMenuNext("Learn/CSS/First_steps/What_is_CSS", "Learn/CSS/First_steps/How_CSS_is_structured", "Learn/CSS/First_steps")}}
-
-## In this module
-
-- [What is CSS?](/en-US/docs/Learn/CSS/First_steps/What_is_CSS)
-- [Getting started with CSS](/en-US/docs/Learn/CSS/First_steps/Getting_started)
-- [How CSS is structured](/en-US/docs/Learn/CSS/First_steps/How_CSS_is_structured)
-- [How CSS works](/en-US/docs/Learn/CSS/First_steps/How_CSS_works)
-- [Styling a biography page](/en-US/docs/Learn/CSS/First_steps/Styling_a_biography_page)

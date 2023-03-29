@@ -2,12 +2,6 @@
 title: HTMLTableRowElement.rowIndex
 slug: Web/API/HTMLTableRowElement/rowIndex
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTML DOM
-  - NeedsSpecTable
-  - Property
-  - Reference
 browser-compat: api.HTMLTableRowElement.rowIndex
 ---
 
@@ -35,15 +29,30 @@ This example uses JavaScript to label all the row numbers in a table.
 ```html
 <table>
   <thead>
-    <tr><th>Item</th>        <th>Price</th></tr>
+    <tr>
+      <th>Item</th>
+      <th>Price</th>
+    </tr>
   </thead>
   <tbody>
-    <tr><td>Bananas</td>     <td>$2</td></tr>
-    <tr><td>Oranges</td>     <td>$8</td></tr>
-    <tr><td>Top Sirloin</td> <td>$20</td></tr>
+    <tr>
+      <td>Bananas</td>
+      <td>$2</td>
+    </tr>
+    <tr>
+      <td>Oranges</td>
+      <td>$8</td>
+    </tr>
+    <tr>
+      <td>Top Sirloin</td>
+      <td>$20</td>
+    </tr>
   </tbody>
   <tfoot>
-    <tr><td>Total</td>       <td>$30</td></tr>
+    <tr>
+      <td>Total</td>
+      <td>$30</td>
+    </tr>
   </tfoot>
 </table>
 ```
@@ -51,7 +60,7 @@ This example uses JavaScript to label all the row numbers in a table.
 ### JavaScript
 
 ```js
-let rows = document.querySelectorAll('tr');
+let rows = document.querySelectorAll("tr");
 
 rows.forEach((row) => {
   let z = document.createElement("td");

@@ -2,17 +2,6 @@
 title: MediaSource.clearLiveSeekableRange()
 slug: Web/API/MediaSource/clearLiveSeekableRange
 page-type: web-api-instance-method
-tags:
-  - API
-  - Audio
-  - Extensions
-  - Media
-  - MediaSource
-  - MediaSource Extensions
-  - Method
-  - Reference
-  - Video
-  - clearLiveSeekableRange()
 browser-compat: api.MediaSource.clearLiveSeekableRange
 ---
 
@@ -24,7 +13,7 @@ to {{domxref("MediaSource.setLiveSeekableRange()","setLiveSeekableRange()")}}.
 
 ## Syntax
 
-```js
+```js-nolint
 clearLiveSeekableRange()
 ```
 

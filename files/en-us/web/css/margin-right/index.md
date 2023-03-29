@@ -1,11 +1,7 @@
 ---
 title: margin-right
 slug: Web/CSS/margin-right
-tags:
-  - CSS
-  - CSS Property
-  - Reference
-  - recipe:css-property
+page-type: css-property
 browser-compat: css.properties.margin-right
 ---
 
@@ -21,9 +17,9 @@ The vertical margins of two adjacent boxes may fuse. This is called [_margin col
 
 ```css
 /* <length> values */
-margin-right: 20px;  /* An absolute length */
-margin-right: 1em;   /* relative to the text size */
-margin-right: 5%;    /* relative to the nearest block container's width */
+margin-right: 20px; /* An absolute length */
+margin-right: 1em; /* relative to the text size */
+margin-right: 5%; /* relative to the nearest block container's width */
 
 /* Keyword values */
 margin-right: auto;
@@ -152,9 +148,15 @@ The `margin-right` property is specified as the keyword `auto`, or a `<length>`,
 ### Setting right margin using pixels and percentages
 
 ```css
-.content { margin-right: 5%; }
-.sidebox { margin-right: 10px; }
-.logo    { margin-right: -5px; }
+.content {
+  margin-right: 5%;
+}
+.sidebox {
+  margin-right: 10px;
+}
+.logo {
+  margin-right: -5px;
+}
 ```
 
 ## Specifications

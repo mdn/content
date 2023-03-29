@@ -2,9 +2,6 @@
 title: Guidelines for styling CSS code examples
 slug: MDN/Writing_guidelines/Writing_style_guide/Code_style_guide/CSS
 page-type: mdn-writing-guide
-tags:
-  - meta
-  - writing-guide
 ---
 
 {{MDNSidebar}}
@@ -141,18 +138,19 @@ In a stylesheet that contains [media query](/en-US/docs/Web/CSS/Media_Queries/Us
 ## Selectors
 
 - Don't use ID selectors because they are:
+
   - less flexible; you can't add more if you discover you need more than one.
   - harder to override because they have higher specificity than classes.
 
   ```css example-good
   .editorial-summary {
-    ...
+    /* ... */
   }
   ```
 
   ```css example-bad
   #editorial-summary {
-    ...
+    /* ... */
   }
   ```
 
@@ -171,7 +169,7 @@ In a stylesheet that contains [media query](/en-US/docs/Web/CSS/Media_Queries/Us
 
   Not this: <!--I thought this is the preferred style-->
 
-  ```css example-bad
+  ```css-nolint example-bad
   h1, h2, h3 {
     font-family: sans-serif;
     text-align: center;
@@ -194,7 +192,7 @@ There are a variety of CSS writing styles you can use, but we prefer the expande
 In addition, keep these specifics in mind:
 
 - Include a space between the selector(s) and the opening curly brace.
-- Always include a semi-colon at the end of the last declaration, even though it isn't strictly necessary.
+- Always include a semicolon at the end of the last declaration, even though it isn't strictly necessary.
 - Put the closing curly brace on a new line.
 - In each declaration, put a space after the separating colon, but not before.
 - Use two spaces for code indentation.
@@ -207,7 +205,7 @@ p {
 }
 ```
 
-```css example-bad
+```css-nolint example-bad
 p { color: white; background-color: black; padding: 1rem; }
 ```
 
@@ -221,4 +219,4 @@ border: 0;
 
 ## See also
 
-[CSS reference index](/en-US/docs/Web/CSS/Reference#index) - browse through our CSS property reference pages to check out some good, concise, meaningful CSS snippets. Our interactive examples in the "Try it" section are generally written to follow the  guidelines described on this page.
+[CSS reference index](/en-US/docs/Web/CSS/Reference#index) - browse through our CSS property reference pages to check out some good, concise, meaningful CSS snippets. Our interactive examples in the "Try it" section are generally written to follow the guidelines described on this page.

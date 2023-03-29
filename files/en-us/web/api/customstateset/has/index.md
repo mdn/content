@@ -2,13 +2,8 @@
 title: CustomStateSet.has()
 slug: Web/API/CustomStateSet/has
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - has
-  - CustomStateSet
-  - Experimental
+status:
+  - experimental
 browser-compat: api.CustomStateSet.has
 ---
 
@@ -18,7 +13,7 @@ The **`has()`** method of the {{domxref("CustomStateSet")}} interface returns a 
 
 ## Syntax
 
-```js
+```js-nolint
 has(value)
 ```
 

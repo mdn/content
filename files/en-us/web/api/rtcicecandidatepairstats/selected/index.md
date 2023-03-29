@@ -11,8 +11,8 @@ The _non-standard_, Firefox-specific {{domxref("RTCIceCandidatePairStats")}} pro
 
 ## Syntax
 
-```js
-isSelected = icpStats.selected;
+```js-nolint
+icpStats.selected
 ```
 
 ### Value

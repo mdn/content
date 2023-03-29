@@ -13,7 +13,7 @@ browser-assigned access key (if any); otherwise it returns an empty string.
 
 ## Syntax
 
-```js
+```js-nolint
 label = element.accessKeyLabel
 ```
 
@@ -22,14 +22,14 @@ label = element.accessKeyLabel
 ### JavaScript
 
 ```js
-const btn = document.getElementById('btn1');
+const btn = document.getElementById("btn1");
 const shortcutLabel = btn.accessKeyLabel || btn.accessKey;
 btn.title += ` [${shortcutLabel.toUpperCase()}]`;
 
 btn.onclick = () => {
-  const feedback = document.createElement('output');
-  feedback.textContent = 'Pressed!';
-  btn.insertAdjacentElement('afterend', feedback);
+  const feedback = document.createElement("output");
+  feedback.textContent = "Pressed!";
+  btn.insertAdjacentElement("afterend", feedback);
 };
 ```
 

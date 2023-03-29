@@ -1,12 +1,7 @@
 ---
 title: mask-image
 slug: Web/CSS/mask-image
-tags:
-  - CSS
-  - CSS Masking
-  - CSS Property
-  - Reference
-  - recipe:css-property
+page-type: css-property
 browser-compat: css.properties.mask-image
 ---
 
@@ -23,11 +18,11 @@ mask-image: none;
 mask-image: url(masks.svg#mask1);
 
 /* <image> values */
-mask-image: linear-gradient(rgba(0, 0, 0, 1.0), transparent);
+mask-image: linear-gradient(rgba(0, 0, 0, 1), transparent);
 mask-image: image(url(mask.png), skyblue);
 
 /* Multiple values */
-mask-image: image(url(mask.png), skyblue), linear-gradient(rgba(0, 0, 0, 1.0), transparent);
+mask-image: image(url(mask.png), skyblue), linear-gradient(rgba(0, 0, 0, 1), transparent);
 
 /* Global values */
 mask-image: inherit;

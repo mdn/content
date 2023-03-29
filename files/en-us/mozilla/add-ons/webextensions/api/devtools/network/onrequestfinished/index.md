@@ -1,15 +1,7 @@
 ---
 title: devtools.network.onRequestFinished
 slug: Mozilla/Add-ons/WebExtensions/API/devtools/network/onRequestFinished
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Reference
-  - Event
-  - WebExtensions
-  - devtools.network
-  - onRequestFinished
+page-type: webextension-api-event
 browser-compat: webextensions.api.devtools.network.onRequestFinished
 ---
 
@@ -23,7 +15,7 @@ Note that although your extension can add a listener at any time, it will only s
 
 ## Syntax
 
-```js
+```js-nolint
 browser.devtools.network.onRequestFinished.addListener(listener)
 browser.devtools.network.onRequestFinished.removeListener(listener)
 browser.devtools.network.onRequestFinished.hasListener(listener)

@@ -1,15 +1,7 @@
 ---
 title: browserSettings.newTabPosition
 slug: Mozilla/Add-ons/WebExtensions/API/browserSettings/newTabPosition
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Property
-  - Reference
-  - WebExtensions
-  - browserSettings
-  - newTabPosition
+page-type: webextension-api-property
 browser-compat: webextensions.api.browserSettings.newTabPosition
 ---
 
@@ -33,7 +25,9 @@ This code sets the value to "afterCurrent" and then logs the new value:
 
 ```js
 async function setAfterCurrent() {
-  let result = await browser.browserSettings.newTabPosition.set({value: "afterCurrent"});
+  let result = await browser.browserSettings.newTabPosition.set({
+    value: "afterCurrent",
+  });
   console.log(`Result: ${result}`);
   let newValue = await browser.browserSettings.newTabPosition.get({});
   console.log(`New value: ${newValue.value}`);

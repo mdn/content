@@ -1,20 +1,15 @@
 ---
-title: '::target-text'
+title: "::target-text"
 slug: Web/CSS/::target-text
-tags:
-  - '::target-text'
-  - CSS
-  - Pseudo-element
-  - Reference
-  - Selector
-  - Web
-  - Experimental
+page-type: css-pseudo-element
+status:
+  - experimental
 browser-compat: css.selectors.target-text
 ---
 
 {{CSSRef}}{{SeeCompatTable}}
 
-The **`::target-text`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) represents the text that has been scrolled to if the browser supports scroll-to-text fragments. It allows authors to choose how to highlight that section of text.
+The **`::target-text`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) represents the text that has been scrolled to if the browser supports [text fragments](/en-US/docs/Web/Text_fragments). It allows authors to choose how to highlight that section of text.
 
 ```css
 ::target-text {
@@ -24,13 +19,15 @@ The **`::target-text`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/
 
 ## Syntax
 
-```
-::target-text
+```css
+::target-text {
+  /* ... */
+}
 ```
 
 ## Examples
 
-### Highlighting scroll-to-text
+### Highlighting text fragments
 
 ```css
 ::target-text {
@@ -51,4 +48,4 @@ To see this CSS in action follow the link to [scroll-to-text demo](https://mdn.g
 
 ## See also
 
-- [Text fragments](https://web.dev/text-fragments/)
+- [Text fragments](/en-US/docs/Web/Text_fragments)

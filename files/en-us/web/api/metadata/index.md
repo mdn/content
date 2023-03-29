@@ -2,16 +2,9 @@
 title: Metadata
 slug: Web/API/Metadata
 page-type: web-api-interface
-tags:
-  - API
-  - File and Directory Entries API
-  - Files
-  - Interface
-  - Non-standard
-  - Offline
-  - Reference
-  - metadata
-  - Experimental
+status:
+  - experimental
+  - non-standard
 browser-compat: api.Metadata
 ---
 
@@ -21,7 +14,7 @@ The **`Metadata`** interface contains information about a file system entry. Thi
 
 > **Note:** This interface isn't available through the global scope; instead, you obtain a `Metadata` object describing a {{domxref("FileSystemEntry")}} using the method {{domxref("FileSystemEntry.getMetadata()")}}.
 
-## Properties
+## Instance properties
 
 - {{domxref("Metadata.modificationTime", "modificationTime")}} {{ReadOnlyInline}} {{Experimental_Inline}} {{Non-standard_Inline}}
   - : A {{jsxref("Date")}} object indicating the date and time the entry was modified.

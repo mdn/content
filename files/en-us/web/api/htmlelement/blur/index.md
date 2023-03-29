@@ -2,12 +2,6 @@
 title: HTMLElement.blur()
 slug: Web/API/HTMLElement/blur
 page-type: web-api-instance-method
-tags:
-  - API
-  - HTML DOM
-  - HTMLElement
-  - Method
-  - Reference
 browser-compat: api.HTMLElement.blur
 ---
 
@@ -17,8 +11,8 @@ The **`HTMLElement.blur()`** method removes keyboard focus from the current elem
 
 ## Syntax
 
-```js
-blur();
+```js-nolint
+blur()
 ```
 
 ### Parameters

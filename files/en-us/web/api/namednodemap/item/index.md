@@ -2,9 +2,6 @@
 title: NamedNodeMap.item()
 slug: Web/API/NamedNodeMap/item
 page-type: web-api-instance-method
-tags:
-  - Method
-  - Reference
 browser-compat: api.NamedNodeMap.item
 ---
 
@@ -18,9 +15,9 @@ returns the item in the map matching the index.
 
 ## Syntax
 
-```js
-item(index);
-[index];
+```js-nolint
+item(index)
+[index]
 ```
 
 ### Parameters

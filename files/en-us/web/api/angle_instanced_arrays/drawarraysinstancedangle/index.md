@@ -2,13 +2,6 @@
 title: ANGLE_instanced_arrays.drawArraysInstancedANGLE()
 slug: Web/API/ANGLE_instanced_arrays/drawArraysInstancedANGLE
 page-type: web-api-instance-method
-tags:
-  - ANGLE_instanced_arrays
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGL extension
 browser-compat: api.ANGLE_instanced_arrays.drawArraysInstancedANGLE
 ---
 
@@ -20,7 +13,7 @@ The **`ANGLE_instanced_arrays.drawArraysInstancedANGLE()`** method of the [WebGL
 
 ## Syntax
 
-```js
+```js-nolint
 drawArraysInstancedANGLE(mode, first, count, primcount)
 ```
 
@@ -58,7 +51,7 @@ None ({{jsxref("undefined")}}).
 ## Examples
 
 ```js
-const ext = gl.getExtension('ANGLE_instanced_arrays');
+const ext = gl.getExtension("ANGLE_instanced_arrays");
 ext.drawArraysInstancedANGLE(gl.POINTS, 0, 8, 4);
 ```
 

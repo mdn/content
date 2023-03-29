@@ -2,15 +2,8 @@
 title: FederatedCredential()
 slug: Web/API/FederatedCredential/FederatedCredential
 page-type: web-api-constructor
-tags:
-  - API
-  - Constructor
-  - Credential Management API
-  - FederatedCredential
-  - NeedsExample
-  - Reference
-  - credential management
-  - Experimental
+status:
+  - experimental
 browser-compat: api.FederatedCredential.FederatedCredential
 ---
 
@@ -23,7 +16,7 @@ received from the `init` object for global {{domxref('fetch()')}}.
 
 ## Syntax
 
-```js
+```js-nolint
 new FederatedCredential(init)
 ```
 

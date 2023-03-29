@@ -2,12 +2,6 @@
 title: Headers.set()
 slug: Web/API/Headers/set
 page-type: web-api-instance-method
-tags:
-  - API
-  - Fetch
-  - Method
-  - Reference
-  - set
 browser-compat: api.Headers.set
 ---
 
@@ -23,13 +17,12 @@ overwrites the existing value with the new one, whereas {{domxref("Headers.appen
 appends the new value to the end of the set of values.
 
 For security reasons, some headers can only be controller by the user agent. These
-headers include the {{Glossary("Forbidden_header_name", "forbidden header names", 1)}}
-and {{Glossary("Forbidden_response_header_name", "forbidden response header names",
-  1)}}.
+headers include the {{Glossary("Forbidden_header_name", "forbidden header names")}}
+and {{Glossary("Forbidden_response_header_name", "forbidden response header names")}}.
 
 ## Syntax
 
-```js
+```js-nolint
 set(name, value)
 ```
 
@@ -57,8 +50,8 @@ You could add a header to this using {{domxref("Headers.append")}}, then set a n
 value for this header using `set()`:
 
 ```js
-myHeaders.append('Content-Type', 'image/jpeg');
-myHeaders.set('Content-Type', 'text/html');
+myHeaders.append("Content-Type", "image/jpeg");
+myHeaders.set("Content-Type", "text/html");
 ```
 
 If the specified header does not already exist, `set()` will create it and
@@ -67,9 +60,9 @@ does accept multiple values, `set()` will overwrite the existing value with
 the new one:
 
 ```js
-myHeaders.set('Accept-Encoding', 'deflate');
-myHeaders.set('Accept-Encoding', 'gzip');
-myHeaders.get('Accept-Encoding'); // Returns 'gzip'
+myHeaders.set("Accept-Encoding", "deflate");
+myHeaders.set("Accept-Encoding", "gzip");
+myHeaders.get("Accept-Encoding"); // Returns 'gzip'
 ```
 
 You'd need {{domxref("Headers.append")}} to append the new value onto the values, not

@@ -1,20 +1,7 @@
 ---
 title: color
 slug: Web/CSS/color
-tags:
-  - CSS
-  - CSS Colors
-  - CSS Property
-  - CSS Text
-  - HTML Colors
-  - HTML Styles
-  - Layout
-  - Reference
-  - Styling HTML
-  - Styling text
-  - Web
-  - color
-  - recipe:css-property
+page-type: css-property
 browser-compat: css.properties.color
 ---
 
@@ -49,7 +36,7 @@ color: rgb(34, 12, 64, 0.6);
 color: rgba(34, 12, 64, 0.6);
 color: rgb(34 12 64 / 0.6);
 color: rgba(34 12 64 / 0.3);
-color: rgb(34.0 12 64 / 60%);
+color: rgb(34 12 64 / 60%);
 color: rgba(34.6 12 64 / 30%);
 
 /* <hsl()> values */
@@ -57,7 +44,7 @@ color: hsl(30, 100%, 50%, 0.6);
 color: hsla(30, 100%, 50%, 0.6);
 color: hsl(30 100% 50% / 0.6);
 color: hsla(30 100% 50% / 0.6);
-color: hsl(30.0 100% 50% / 60%);
+color: hsl(30 100% 50% / 60%);
 color: hsla(30.2 100% 50% / 60%);
 
 /* <hwb()> values */
@@ -65,7 +52,7 @@ color: hwb(90 10% 10%);
 color: hwb(90 10% 10% / 0.5);
 color: hwb(90deg 10% 10%);
 color: hwb(1.5708rad 60% 0%);
-color: hwb(.25turn 0% 40% / 50%);
+color: hwb(0.25turn 0% 40% / 50%);
 
 /* Global values */
 color: inherit;
@@ -83,6 +70,8 @@ Note that the value must be a uniform {{cssxref("color")}}. It can't be a {{cssx
 
 - {{cssxref("&lt;color&gt;")}}
   - : Sets the color of the textual and decorative parts of the element.
+- [`currentcolor`](/en-US/docs/Web/CSS/color_value#currentcolor_keyword)
+  - : Sets the color to the element's `color` property value. However, if set as the value of `color`, `currentcolor` is treated as `inherit`.
 
 ## Accessibility concerns
 
@@ -109,17 +98,35 @@ Color contrast ratio is determined by comparing the luminosity of the text and b
 The following are all ways to make a paragraph's text red:
 
 ```css
-p { color: red; }
-p { color: #f00; }
-p { color: #ff0000; }
-p { color: rgb(255,0,0); }
-p { color: rgb(100%, 0%, 0%); }
-p { color: hsl(0, 100%, 50%); }
+p {
+  color: red;
+}
+p {
+  color: #f00;
+}
+p {
+  color: #ff0000;
+}
+p {
+  color: rgb(255, 0, 0);
+}
+p {
+  color: rgb(100%, 0%, 0%);
+}
+p {
+  color: hsl(0, 100%, 50%);
+}
 
 /* 50% translucent */
-p { color: #ff000080; }
-p { color: rgba(255, 0, 0, 0.5); }
-p { color: hsla(0, 100%, 50%, 0.5); }
+p {
+  color: #ff000080;
+}
+p {
+  color: rgba(255, 0, 0, 0.5);
+}
+p {
+  color: hsla(0, 100%, 50%, 0.5);
+}
 ```
 
 ## Specifications

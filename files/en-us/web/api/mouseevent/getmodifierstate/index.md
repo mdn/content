@@ -2,14 +2,6 @@
 title: MouseEvent.getModifierState()
 slug: Web/API/MouseEvent/getModifierState
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - DOM Events
-  - Method
-  - MouseEvent
-  - Reference
-  - getModifierState
 browser-compat: api.MouseEvent.getModifierState
 ---
 
@@ -21,7 +13,7 @@ See {{domxref("KeyboardEvent.getModifierState","KeyboardEvent.getModifierState()
 
 ## Syntax
 
-```js
+```js-nolint
 getModifierState(key)
 ```
 

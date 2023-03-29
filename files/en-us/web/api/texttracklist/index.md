@@ -2,17 +2,6 @@
 title: TextTrackList
 slug: Web/API/TextTrackList
 page-type: web-api-interface
-tags:
-  - API
-  - HTML DOM
-  - HTMLMediaElement
-  - Interface
-  - Media
-  - Reference
-  - TextTrackList
-  - Track List
-  - Tracks
-  - list
 browser-compat: api.TextTrackList
 ---
 
@@ -30,14 +19,14 @@ For a given {{domxref('HTMLMediaElement')}} object _media_, the individual track
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _This interface also inherits properties from its parent interface, {{domxref("EventTarget")}}._
 
 - {{domxref("TextTrackList.length", "length")}} {{ReadOnlyInline}}
   - : The number of tracks in the list.
 
-## Methods
+## Instance methods
 
 _This interface also inherits methods from its parent interface, {{domxref("EventTarget")}}._
 

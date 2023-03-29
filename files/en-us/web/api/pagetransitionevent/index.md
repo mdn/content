@@ -2,11 +2,6 @@
 title: PageTransitionEvent
 slug: Web/API/PageTransitionEvent
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - PageTransitionEvent
-  - Reference
 browser-compat: api.PageTransitionEvent
 ---
 
@@ -16,7 +11,12 @@ The **`PageTransitionEvent`** event object is available inside handler functions
 
 {{InheritanceDiagram}}
 
-## Properties
+## Constructor
+
+- {{domxref("PageTransitionEvent.PageTransitionEvent", "PageTransitionEvent()")}}
+  - : Creates a new `PageTransitionEvent` object.
+
+## Instance properties
 
 _This interface also inherits properties from its parent, {{domxref("Event")}}._
 
@@ -30,15 +30,14 @@ _This interface also inherits properties from its parent, {{domxref("Event")}}._
 ```html
 <!DOCTYPE html>
 <html lang="en-US">
-<body>
-</body>
+  <body></body>
 </html>
 ```
 
 ### JavaScript
 
 ```js
-window.addEventListener('pageshow', (event) => {
+window.addEventListener("pageshow", (event) => {
   if (event.persisted) {
     alert("The page was cached by the browser");
   } else {
@@ -57,5 +56,5 @@ window.addEventListener('pageshow', (event) => {
 
 ## See also
 
-- [`pageshow` event](/en-US/docs/Web/API/Window/pageshow_event)
-- [`pagehide` event](/en-US/docs/Web/API/Window/pagehide_event)
+- [`pageshow`](/en-US/docs/Web/API/Window/pageshow_event) event
+- [`pagehide`](/en-US/docs/Web/API/Window/pagehide_event) event

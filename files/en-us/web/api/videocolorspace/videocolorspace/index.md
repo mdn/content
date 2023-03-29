@@ -2,12 +2,8 @@
 title: VideoColorSpace()
 slug: Web/API/VideoColorSpace/VideoColorSpace
 page-type: web-api-constructor
-tags:
-  - API
-  - Constructor
-  - Reference
-  - VideoColorSpace
-  - Experimental
+status:
+  - experimental
 browser-compat: api.VideoColorSpace.VideoColorSpace
 ---
 
@@ -17,17 +13,17 @@ The **`VideoColorSpace()`** constructor creates a new {{domxref("VideoColorSpace
 
 ## Syntax
 
-```js
+```js-nolint
 new VideoColorSpace()
-new VideoColorSpace(init)
+new VideoColorSpace(options)
 ```
 
 ### Parameters
 
 All values default to `null` when they are not present.
 
-- `init` {{optional_inline}}
-  - : A dictionary object containing the following:
+- `options` {{optional_inline}}
+  - : An object containing the following:
     - `primaries` {{optional_inline}}
       - : One of the following strings:
         - `"bt709"`
@@ -52,12 +48,12 @@ All values default to `null` when they are not present.
 The following example creates a new `VideoColorSpace` object with {{domxref("VideoColorSpace.primaries")}} set to `"bt709"`, and {{domxref("VideoColorSpace.primaries")}} set to `true`.
 
 ```js
-let options = {
+const options = {
   primaries: "bt709",
-  fullRange: true
-}
+  fullRange: true,
+};
 
-let colorSpace = new VideoColorSpace(options);
+const colorSpace = new VideoColorSpace(options);
 console.log(colorSpace);
 ```
 

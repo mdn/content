@@ -18,8 +18,8 @@ transit.
 
 ## Syntax
 
-```js
-const fecPacketsReceived = rtcInboundRtpStreamStats.fecPacketsReceived;
+```js-nolint
+const fecPacketsReceived = rtcInboundRtpStreamStats.fecPacketsReceived
 ```
 
 ### Value

@@ -1,14 +1,7 @@
 ---
 title: TypedArray.prototype.sort()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/sort
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Prototype
-  - TypedArray
-  - TypedArrays
-  - Polyfill
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.TypedArray.sort
 ---
 
@@ -24,7 +17,7 @@ numerically instead of as strings. _TypedArray_ is one of the
 
 ## Syntax
 
-```js
+```js-nolint
 // Functionless
 sort()
 

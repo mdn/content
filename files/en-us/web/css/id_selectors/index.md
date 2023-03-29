@@ -1,11 +1,7 @@
 ---
 title: ID selectors
 slug: Web/CSS/ID_selectors
-tags:
-  - CSS
-  - Reference
-  - Selector
-  - Selectors
+page-type: css-selector
 browser-compat: css.selectors.id
 ---
 

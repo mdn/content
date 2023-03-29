@@ -1,8 +1,6 @@
 ---
-title: Basic Example
+title: Basic example
 slug: Web/XSLT/XSLT_JS_interface_in_Gecko/Basic_Example
-tags:
-  - XSLT
 ---
 
 ## Basic Example
@@ -44,7 +42,7 @@ The basic example will load an XML file and apply a XSL transformation on it. Th
           <xsl:value-of select="/myNS:Article/myNS:Title"/>
         </title>
 
-        <style type="text/css">
+        <style>
           .myBox {margin:10px 155px 0 50px; border: 1px dotted #639ACE; padding:0 5px 0 5px;}
         </style>
 
@@ -105,7 +103,6 @@ let myDOM;
 let xmlDoc;
 
 function Init() {
-
   // Load the xslt file, example1.xsl
   let myXMLHTTPRequest = new XMLHttpRequest();
   myXMLHTTPRequest.open("GET", "example1.xsl", false);

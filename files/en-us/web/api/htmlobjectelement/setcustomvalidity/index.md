@@ -2,14 +2,6 @@
 title: HTMLObjectElement.setCustomValidity()
 slug: Web/API/HTMLObjectElement/setCustomValidity
 page-type: web-api-instance-method
-tags:
-  - API
-  - HTML DOM
-  - HTMLObjectElement
-  - Method
-  - NeedsExample
-  - Reference
-  - setCustomValidity()
 browser-compat: api.HTMLObjectElement.setCustomValidity
 ---
 
@@ -21,7 +13,7 @@ element.
 
 ## Syntax
 
-```js
+```js-nolint
 setCustomValidity(errorMessage)
 ```
 
@@ -51,13 +43,13 @@ function validate(inputID) {
   const validityState = input.validity;
 
   if (validityState.valueMissing) {
-    input.setCustomValidity('You gotta fill this out, yo!');
+    input.setCustomValidity("You gotta fill this out, yo!");
   } else if (validityState.rangeUnderflow) {
-    input.setCustomValidity('We need a higher number!');
+    input.setCustomValidity("We need a higher number!");
   } else if (validityState.rangeOverflow) {
-    input.setCustomValidity('Thats too high!');
+    input.setCustomValidity("Thats too high!");
   } else {
-    input.setCustomValidity('');
+    input.setCustomValidity("");
   }
 
   input.reportValidity();

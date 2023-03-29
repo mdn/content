@@ -2,11 +2,6 @@
 title: HTMLFormElement.reportValidity()
 slug: Web/API/HTMLFormElement/reportValidity
 page-type: web-api-instance-method
-tags:
-  - HTML
-  - HTMLFormElement
-  - Method
-  - Reference
 browser-compat: api.HTMLFormElement.reportValidity
 ---
 
@@ -20,8 +15,8 @@ each invalid child and validation problems are reported to the user.
 
 ## Syntax
 
-```js
-HTMLFormElement.reportValidity()
+```js-nolint
+reportValidity()
 ```
 
 ### Return value
@@ -31,9 +26,13 @@ HTMLFormElement.reportValidity()
 ## Example
 
 ```js
-document.forms['myform'].addEventListener('submit', () => {
-  document.forms['myform'].reportValidity();
-}, false);
+document.forms["myform"].addEventListener(
+  "submit",
+  () => {
+    document.forms["myform"].reportValidity();
+  },
+  false
+);
 ```
 
 ## Specifications

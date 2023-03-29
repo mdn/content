@@ -1,12 +1,7 @@
 ---
 title: top
 slug: Web/CSS/top
-tags:
-  - CSS
-  - CSS Positioning
-  - CSS Property
-  - Reference
-  - recipe:css-property
+page-type: css-property
 browser-compat: css.properties.top
 ---
 

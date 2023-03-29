@@ -2,9 +2,6 @@
 title: CharacterData.deleteData()
 slug: Web/API/CharacterData/deleteData
 page-type: web-api-instance-method
-tags:
-  - Method
-  - Reference
 browser-compat: api.CharacterData.deleteData
 ---
 
@@ -15,7 +12,7 @@ removes all or part of the data from this `CharacterData` node.
 
 ## Syntax
 
-```js
+```js-nolint
 characterData.deleteData(offset, count)
 ```
 

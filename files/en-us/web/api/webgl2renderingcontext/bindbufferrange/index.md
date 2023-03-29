@@ -2,12 +2,6 @@
 title: WebGL2RenderingContext.bindBufferRange()
 slug: Web/API/WebGL2RenderingContext/bindBufferRange
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGL2
 browser-compat: api.WebGL2RenderingContext.bindBufferRange
 ---
 
@@ -20,7 +14,7 @@ the [WebGL 2 API](/en-US/docs/Web/API/WebGL_API) binds a range of a given
 
 ## Syntax
 
-```js
+```js-nolint
 bindBufferRange(target, index, buffer, offset, size)
 ```
 

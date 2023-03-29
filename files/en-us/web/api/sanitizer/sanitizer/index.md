@@ -2,12 +2,8 @@
 title: Sanitizer()
 slug: Web/API/Sanitizer/Sanitizer
 page-type: web-api-constructor
-tags:
-  - Sanitizer
-  - Constructor
-  - HTML Sanitizer API
-  - sanitize
-  - Experimental
+status:
+  - experimental
 browser-compat: api.Sanitizer.Sanitizer
 ---
 
@@ -20,7 +16,7 @@ The constructor `config` option can be used to customize the sanitizer behavior.
 
 ## Syntax
 
-```js
+```js-nolint
 new Sanitizer()
 new Sanitizer(config)
 ```
@@ -75,7 +71,7 @@ This example shows the result of sanitizing a string with disallowed `script` el
 
 ```js
 const unsanitized = "abc <script>alert(1)<" + "/script> def";
-const sanitized =  new Sanitizer().sanitizeFor("div", unsanitized);
+const sanitized = new Sanitizer().sanitizeFor("div", unsanitized);
 // Result (innerHTML of 'sanitized'): script will be removed: "abc alert(1) def"
 ```
 

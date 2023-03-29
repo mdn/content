@@ -1,19 +1,21 @@
 ---
 title: TypedArray.name
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/name
-tags:
-  - JavaScript
-  - Property
-  - TypedArray
-  - TypedArrays
+page-type: javascript-static-data-property
 browser-compat: javascript.builtins.TypedArray.name
 ---
 
 {{JSRef}}
 
-The **`TypedArray.name`** property represents a string value of the typed array constructor name.
+The **`TypedArray.name`** static data property represents a string value of the typed array constructor name.
 
-{{EmbedInteractiveExample("pages/js/typedarray-name.html","shorter")}}{{js_property_attributes(0,0,0)}}
+{{EmbedInteractiveExample("pages/js/typedarray-name.html","shorter")}}
+
+## Value
+
+A string whose value depends on the type of `TypedArray`.
+
+{{js_property_attributes(0, 0, 0)}}
 
 ## Description
 
@@ -28,17 +30,17 @@ The **`TypedArray.name`** property represents a string value of the typed array 
 ### Using name
 
 ```js
-Int8Array.name;         // "Int8Array"
-Uint8Array.name;        // "Uint8Array"
+Int8Array.name; // "Int8Array"
+Uint8Array.name; // "Uint8Array"
 Uint8ClampedArray.name; // "Uint8ClampedArray"
-Int16Array.name;        // "Int16Array"
-Uint16Array.name;       // "Uint16Array"
-Int32Array.name;        // "Int32Array"
-Uint32Array.name;       // "Uint32Array"
-Float32Array.name;      // "Float32Array"
-Float64Array.name;      // "Float64Array"
-BigInt64Array.name;     // "BigInt64Array"
-BigUint64Array.name;    // "BigUint64Array"
+Int16Array.name; // "Int16Array"
+Uint16Array.name; // "Uint16Array"
+Int32Array.name; // "Int32Array"
+Uint32Array.name; // "Uint32Array"
+Float32Array.name; // "Float32Array"
+Float64Array.name; // "Float64Array"
+BigInt64Array.name; // "BigInt64Array"
+BigUint64Array.name; // "BigUint64Array"
 ```
 
 ## Specifications

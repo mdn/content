@@ -2,9 +2,6 @@
 title: DOMTokenList.add()
 slug: Web/API/DOMTokenList/add
 page-type: web-api-instance-method
-tags:
-  - Method
-  - Reference
 browser-compat: api.DOMTokenList.add
 ---
 
@@ -14,9 +11,9 @@ The **`add()`** method of the {{domxref("DOMTokenList")}} interface adds the giv
 
 ## Syntax
 
-```js
-add(token0);
-add(token0, token1);
+```js-nolint
+add(token0)
+add(token0, token1)
 add(token0, token1, /* … ,*/ tokenN)
 ```
 

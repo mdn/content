@@ -1,12 +1,6 @@
 ---
 title: Beginner's guide to media queries
 slug: Learn/CSS/CSS_layout/Media_queries
-tags:
-  - Beginner
-  - CSS
-  - Layout
-  - Learn
-  - media query
 ---
 
 {{learnsidebar}}{{PreviousMenuNext("Learn/CSS/CSS_layout/Responsive_Design", "Learn/CSS/CSS_layout/Legacy_Layout_Methods", "Learn/CSS/CSS_layout")}}
@@ -65,9 +59,9 @@ The following media query will only set the body to 12pt if the page is printed.
 
 ```css
 @media print {
-    body {
-        font-size: 12pt;
-    }
+  body {
+    font-size: 12pt;
+  }
 }
 ```
 
@@ -89,9 +83,9 @@ These features are used to create layouts that respond to different screen sizes
 
 ```css
 @media screen and (width: 600px) {
-    body {
-        color: red;
-    }
+  body {
+    color: red;
+  }
 }
 ```
 
@@ -101,9 +95,9 @@ The `width` (and `height`) media features can be used as ranges, and therefore b
 
 ```css
 @media screen and (max-width: 600px) {
-    body {
-        color: blue;
-    }
+  body {
+    color: blue;
+  }
 }
 ```
 
@@ -111,7 +105,7 @@ The `width` (and `height`) media features can be used as ranges, and therefore b
 
 In practice, using minimum or maximum values is much more useful for responsive design so you will rarely see `width` or `height` used alone.
 
-There are a number of other media features that you can test for, although some of the newer features introduced in Level 4 and 5 of the media queries specification have limited browser support. Each feature is documented on MDN along with browser support information, and you can find a full list at [Using Media Queries: Media Features](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#media_features).
+There are many other media features that you can test for, although some of the newer features introduced in Levels 4 and 5 of the media queries specification have limited browser support. Each feature is documented on MDN along with browser support information, and you can find a complete list at [Using Media Queries: Syntax](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#syntax).
 
 #### Orientation
 
@@ -119,9 +113,9 @@ One well-supported media feature is `orientation`, which allows us to test for p
 
 ```css
 @media (orientation: landscape) {
-    body {
-        color: rebeccapurple;
-    }
+  body {
+    color: rebeccapurple;
+  }
 }
 ```
 
@@ -135,9 +129,9 @@ As part of the Level 4 specification, the `hover` media feature was introduced. 
 
 ```css
 @media (hover: hover) {
-    body {
-        color: rebeccapurple;
-    }
+  body {
+    color: rebeccapurple;
+  }
 }
 ```
 
@@ -159,9 +153,9 @@ To combine media features you can use `and` in much the same way as we have used
 
 ```css
 @media screen and (min-width: 600px) and (orientation: landscape) {
-    body {
-        color: blue;
-    }
+  body {
+    color: blue;
+  }
 }
 ```
 
@@ -173,9 +167,9 @@ If you have a set of queries, any of which could match, then you can comma separ
 
 ```css
 @media screen and (min-width: 600px), screen and (orientation: landscape) {
-    body {
-        color: blue;
-    }
+  body {
+    color: blue;
+  }
 }
 ```
 
@@ -187,9 +181,9 @@ You can negate an entire media query by using the `not` operator. This reverses 
 
 ```css
 @media not all and (orientation: landscape) {
-    body {
-        color: blue;
-    }
+  body {
+    color: blue;
+  }
 }
 ```
 
@@ -219,54 +213,54 @@ Our starting point is an HTML document with some CSS applied to add background c
 
 ```css
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-    width: 90%;
-    margin: 2em auto;
-    font: 1em/1.3 Arial, Helvetica, sans-serif;
+  width: 90%;
+  margin: 2em auto;
+  font: 1em/1.3 Arial, Helvetica, sans-serif;
 }
 
 a:link,
 a:visited {
-    color: #333;
+  color: #333;
 }
 
 nav ul,
 aside ul {
-    list-style: none;
-    padding: 0;
+  list-style: none;
+  padding: 0;
 }
 
 nav a:link,
 nav a:visited {
-    background-color: rgba(207, 232, 220, 0.2);
-    border: 2px solid rgb(79, 185, 227);
-    text-decoration: none;
-    display: block;
-    padding: 10px;
-    color: #333;
-    font-weight: bold;
+  background-color: rgba(207, 232, 220, 0.2);
+  border: 2px solid rgb(79, 185, 227);
+  text-decoration: none;
+  display: block;
+  padding: 10px;
+  color: #333;
+  font-weight: bold;
 }
 
 nav a:hover {
-    background-color: rgba(207, 232, 220, 0.7);
+  background-color: rgba(207, 232, 220, 0.7);
 }
 
 .related {
-    background-color: rgba(79, 185, 227, 0.3);
-    border: 1px solid rgb(79, 185, 227);
-    padding: 10px;
+  background-color: rgba(79, 185, 227, 0.3);
+  border: 1px solid rgb(79, 185, 227);
+  padding: 10px;
 }
 
 .sidebar {
-    background-color: rgba(207, 232, 220, 0.5);
-    padding: 10px;
+  background-color: rgba(207, 232, 220, 0.5);
+  padding: 10px;
 }
 
 article {
-    margin-bottom: 1em;
+  margin-bottom: 1em;
 }
 ```
 
@@ -274,45 +268,39 @@ We've made no layout changes, however the source of the document is ordered in a
 
 ```html
 <body>
-    <div class="wrapper">
-      <header>
-        <nav>
-          <ul>
-            <li><a href="">About</a></li>
-            <li><a href="">Contact</a></li>
-            <li><a href="">Meet the team</a></li>
-            <li><a href="">Blog</a></li>
-          </ul>
-        </nav>
-      </header>
-      <main>
-        <article>
-          <div class="content">
-            <h1>Veggies!</h1>
-            <p>
-              …
-            </p>
-          </div>
-          <aside class="related">
-            <p>
-              …
-            </p>
-          </aside>
-        </article>
-
-        <aside class="sidebar">
-          <h2>External vegetable-based links</h2>
-          <ul>
-            <li>
-              …
-            </li>
-          </ul>
+  <div class="wrapper">
+    <header>
+      <nav>
+        <ul>
+          <li><a href="">About</a></li>
+          <li><a href="">Contact</a></li>
+          <li><a href="">Meet the team</a></li>
+          <li><a href="">Blog</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <article>
+        <div class="content">
+          <h1>Veggies!</h1>
+          <p>…</p>
+        </div>
+        <aside class="related">
+          <p>…</p>
         </aside>
-      </main>
+      </article>
 
-      <footer><p>&copy;2019</p></footer>
-    </div>
-  </body>
+      <aside class="sidebar">
+        <h2>External vegetable-based links</h2>
+        <ul>
+          <li>…</li>
+        </ul>
+      </aside>
+    </main>
+
+    <footer><p>&copy;2019</p></footer>
+  </div>
+</body>
 ```
 
 This simple layout also works well on mobile. If we view the layout in Responsive Design Mode in DevTools we can see that it works pretty well as a straightforward mobile view of the site.
@@ -327,19 +315,19 @@ From this point, start to drag the Responsive Design Mode view wider until you c
 
 ```css
 @media screen and (min-width: 40em) {
-    article {
-        display: grid;
-        grid-template-columns: 3fr 1fr;
-        column-gap: 20px;
-    }
+  article {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    column-gap: 20px;
+  }
 
-    nav ul {
-        display: flex;
-    }
+  nav ul {
+    display: flex;
+  }
 
-    nav li {
-        flex: 1;
-    }
+  nav li {
+    flex: 1;
+  }
 }
 ```
 
@@ -353,20 +341,20 @@ Let's continue to expand the width until we feel there is enough room for the si
 
 ```css
 @media screen and (min-width: 70em) {
-    main {
-        display: grid;
-        grid-template-columns: 3fr 1fr;
-        column-gap: 20px;
-    }
+  main {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    column-gap: 20px;
+  }
 
-    article {
-        margin-bottom: 0;
-    }
+  article {
+    margin-bottom: 0;
+  }
 
-    footer {
-        border-top: 1px solid #ccc;
-        margin-top: 2em;
-    }
+  footer {
+    border-top: 1px solid #ccc;
+    margin-top: 2em;
+  }
 }
 ```
 
@@ -379,7 +367,7 @@ If you look at the final example at different widths you can see how the design 
 If you look at the HTML source in the above example, you'll see the following element included in the head of the document:
 
 ```html
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="viewport" content="width=device-width,initial-scale=1" />
 ```
 
 This is the [viewport meta tag](/en-US/docs/Web/HTML/Viewport_meta_tag) — it exists as a way to control how mobile browsers render content. This is needed because by default, most mobile browsers lie about their viewport width. Non-responsive sites commonly look really bad when rendered in a narrow viewport, so mobile browsers usually render the site with a viewport width wider than the real device width by default (usually 980 pixels), and then shrink the rendered result so that it fits in the display.
@@ -398,42 +386,42 @@ This could be achieved using the following:
 
 ```html
 <ul class="grid">
-    <li>
-        <h2>Card 1</h2>
-        <p>…</p>
-    </li>
-    <li>
-        <h2>Card 2</h2>
-        <p>…</p>
-    </li>
-    <li>
-        <h2>Card 3</h2>
-        <p>…</p>
-    </li>
-    <li>
-        <h2>Card 4</h2>
-        <p>…</p>
-    </li>
-    <li>
-        <h2>Card 5</h2>
-        <p>…</p>
-    </li>
+  <li>
+    <h2>Card 1</h2>
+    <p>…</p>
+  </li>
+  <li>
+    <h2>Card 2</h2>
+    <p>…</p>
+  </li>
+  <li>
+    <h2>Card 3</h2>
+    <p>…</p>
+  </li>
+  <li>
+    <h2>Card 4</h2>
+    <p>…</p>
+  </li>
+  <li>
+    <h2>Card 5</h2>
+    <p>…</p>
+  </li>
 </ul>
 ```
 
 ```css
 .grid {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: grid;
-    gap: 20px;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
 }
 
 .grid li {
-    border: 1px solid #666;
-    padding: 10px;
+  border: 1px solid #666;
+  padding: 10px;
 }
 ```
 
@@ -454,18 +442,3 @@ You could use the starting point that we have created to test out more media que
 You could also experiment with adding different components and seeing whether the addition of a media query, or using a layout method like flexbox or grid is the most appropriate way to make the components responsive. Very often there is no right or wrong way — you should experiment and see which works best for your design and content.
 
 {{PreviousMenuNext("Learn/CSS/CSS_layout/Responsive_Design", "Learn/CSS/CSS_layout/Legacy_Layout_Methods", "Learn/CSS/CSS_layout")}}
-
-## In this module
-
-- [Introduction to CSS layout](/en-US/docs/Learn/CSS/CSS_layout/Introduction)
-- [Normal flow](/en-US/docs/Learn/CSS/CSS_layout/Normal_Flow)
-- [Flexbox](/en-US/docs/Learn/CSS/CSS_layout/Flexbox)
-- [Grid](/en-US/docs/Learn/CSS/CSS_layout/Grids)
-- [Floats](/en-US/docs/Learn/CSS/CSS_layout/Floats)
-- [Positioning](/en-US/docs/Learn/CSS/CSS_layout/Positioning)
-- [Multiple-column layout](/en-US/docs/Learn/CSS/CSS_layout/Multiple-column_Layout)
-- [Responsive design](/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design)
-- [Beginner's guide to media queries](/en-US/docs/Learn/CSS/CSS_layout/Media_queries)
-- [Legacy layout methods](/en-US/docs/Learn/CSS/CSS_layout/Legacy_Layout_Methods)
-- [Supporting older browsers](/en-US/docs/Learn/CSS/CSS_layout/Supporting_Older_Browsers)
-- [Fundamental layout comprehension](/en-US/docs/Learn/CSS/CSS_layout/Fundamental_Layout_Comprehension)

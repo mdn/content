@@ -2,12 +2,6 @@
 title: Document.head
 slug: Web/API/Document/head
 page-type: web-api-instance-property
-tags:
-  - API
-  - Document
-  - HTML DOM
-  - Property
-  - Reference
 browser-compat: api.Document.head
 ---
 
@@ -24,7 +18,7 @@ An {{domxref("HTMLHeadElement")}}.
 ## Examples
 
 ```html
-<!doctype html>
+<!DOCTYPE html>
 <head id="my-document-head">
   <title>Example: using document.head</title>
 </head>

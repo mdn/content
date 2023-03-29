@@ -1,15 +1,7 @@
 ---
 title: theme.getCurrent()
 slug: Mozilla/Add-ons/WebExtensions/API/theme/getCurrent
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Reference
-  - Theme
-  - WebExtensions
-  - getCurrent
+page-type: webextension-api-function
 browser-compat: webextensions.api.theme.getCurrent
 ---
 
@@ -21,7 +13,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ## Syntax
 
-```js
+```js-nolint
 let getting = browser.theme.getCurrent(
   windowId    // integer
 )

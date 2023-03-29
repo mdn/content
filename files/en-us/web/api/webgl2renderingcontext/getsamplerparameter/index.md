@@ -2,12 +2,6 @@
 title: WebGL2RenderingContext.getSamplerParameter()
 slug: Web/API/WebGL2RenderingContext/getSamplerParameter
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGL2
 browser-compat: api.WebGL2RenderingContext.getSamplerParameter
 ---
 
@@ -19,7 +13,7 @@ information of a {{domxref("WebGLSampler")}} object.
 
 ## Syntax
 
-```js
+```js-nolint
 getSamplerParameter(sampler, pname)
 ```
 

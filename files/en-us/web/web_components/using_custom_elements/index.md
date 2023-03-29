@@ -1,14 +1,6 @@
 ---
 title: Using custom elements
 slug: Web/Web_Components/Using_custom_elements
-tags:
-  - Classes
-  - Guide
-  - HTML
-  - Web Components
-  - autonomous
-  - custom elements
-  - customized
 ---
 
 {{DefaultAPISidebar("Web Components")}}
@@ -25,13 +17,18 @@ To register a custom element on the page, you use the {{domxref("CustomElementRe
 - A [class](/en-US/docs/Web/JavaScript/Reference/Classes) object that defines the behavior of the element.
 - {{optional_inline}} An options object containing an `extends` property, which specifies the built-in element your element inherits from, if any (only relevant to customized built-in elements; see the definition below).
 
-So for example, we can define a custom [word-count element](https://mdn.github.io/web-components-examples/word-count-web-component/) like this:
+There are two types of custom elements:
+
+- **Autonomous custom elements** are standalone — they don't inherit from standard HTML elements. You use these on a page by literally writing them out as an HTML element. For example `<popup-info>`, or `document.createElement("popup-info")`.
+- **Customized built-in elements** inherit from basic HTML elements. To create one of these, you have to specify which element they extend (as implied in the examples above), and they are used by writing out the basic element but specifying the name of the custom element in the [`is`](/en-US/docs/Web/HTML/Global_attributes/is) attribute (or property). For example `<p is="word-count">`, or `document.createElement("p", { is: "word-count" })`.
+
+So for example, we can define a **customized built-in** [word-count element](https://mdn.github.io/web-components-examples/word-count-web-component/) like this:
 
 ```js
-customElements.define('word-count', WordCount, { extends: 'p' });
+customElements.define("word-count", WordCount, { extends: "p" });
 ```
 
-The element is called `word-count`, its class object is `WordCount`, and it extends the {{htmlelement("p")}} element.
+The element is called `word-count`, its class object is `WordCount`, and it extends the {{htmlelement("p")}} element and, as such, it can only be constructed by setting the `is` attribute in the extended element. For example: `<p is="word-count">`, or `document.createElement("p", { is: "word-count" })`.
 
 A custom element's class object is written using the `class` syntax. For example, `WordCount` is structured like so:
 
@@ -46,14 +43,11 @@ class WordCount extends HTMLParagraphElement {
 }
 ```
 
+> **Note:** Find the [full JavaScript source](https://github.com/mdn/web-components-examples/blob/main/word-count-web-component/main.js) here.
+
 This is just a simple example, but there is more you can do here. It is possible to define specific lifecycle callbacks inside the class, which run at specific points in the element's lifecycle. For example, `connectedCallback` is invoked each time the custom element is appended into a document-connected element, while `attributeChangedCallback` is invoked when one of the custom element's attributes is added, removed, or changed.
 
 You'll learn more about these in the [Using the lifecycle callbacks](#using_the_lifecycle_callbacks) section below.
-
-There are two types of custom elements:
-
-- **Autonomous custom elements** are standalone — they don't inherit from standard HTML elements. You use these on a page by literally writing them out as an HTML element. For example `<popup-info>`, or `document.createElement("popup-info")`.
-- **Customized built-in elements** inherit from basic HTML elements. To create one of these, you have to specify which element they extend (as implied in the examples above), and they are used by writing out the basic element but specifying the name of the custom element in the [`is`](/en-US/docs/Web/HTML/Global_attributes/is) attribute (or property). For example `<p is="word-count">`, or `document.createElement("p", { is: "word-count" })`.
 
 ## Working through some simple examples
 
@@ -82,42 +76,51 @@ Inside the method connectedCallback, we define all the functionality the element
 
 ```js
 // Create a shadow root
-this.attachShadow({mode: 'open'}); // sets and returns 'this.shadowRoot'
+this.attachShadow({ mode: "open" }); // sets and returns 'this.shadowRoot'
 
 // Create (nested) span elements
-const wrapper = document.createElement('span');
-wrapper.setAttribute('class','wrapper');
-const icon = wrapper.appendChild(document.createElement('span'));
-icon.setAttribute('class','icon');
-icon.setAttribute('tabindex', 0);
+const wrapper = document.createElement("span");
+wrapper.setAttribute("class", "wrapper");
+const icon = wrapper.appendChild(document.createElement("span"));
+icon.setAttribute("class", "icon");
+icon.setAttribute("tabindex", 0);
 // Insert icon from defined attribute or default icon
-const img = icon.appendChild(document.createElement('img'));
-img.src = this.hasAttribute('img') ? this.getAttribute('img') : 'img/default.png';
+const img = icon.appendChild(document.createElement("img"));
+img.src = this.hasAttribute("img")
+  ? this.getAttribute("img")
+  : "img/default.png";
+// Always include descriptive text when adding an image
+img.alt = this.hasAttribute("alt")
+  ? this.getAttribute("alt")
+  : "";
 
-const info = wrapper.appendChild(document.createElement('span'));
-info.setAttribute('class','info');
+const info = wrapper.appendChild(document.createElement("span"));
+info.setAttribute("class", "info");
 // Take attribute content and put it inside the info span
-info.textContent = this.getAttribute('data-text');
+info.textContent = this.getAttribute("data-text");
 
 // Create some CSS to apply to the shadow DOM
-const style = document.createElement('style');
-style.textContent = '.wrapper {' +
-// CSS truncated for brevity
+const style = document.createElement("style");
+style.textContent = `.wrapper {
+  /* CSS truncated for brevity */
+}`;
 
 // attach the created elements to the shadow DOM
-this.shadowRoot.append(style,wrapper);
+this.shadowRoot.append(style, wrapper);
 ```
 
 Finally, we register our custom element on the `CustomElementRegistry` using the `define()` method we mentioned earlier — in the parameters we specify the element name, and then the class name that defines its functionality:
 
 ```js
-customElements.define('popup-info', PopUpInfo);
+customElements.define("popup-info", PopUpInfo);
 ```
 
 It is now available to use on our page. Over in our HTML, we use it like so:
 
 ```html
-<popup-info img="img/alt.png" data-text="Your card validation code (CVC)
+<popup-info
+  img="img/alt.png"
+  data-text="Your card validation code (CVC)
   is an extra security feature — it is the last 3 or 4 numbers on the
   back of your card."></popup-info>
 ```
@@ -132,9 +135,9 @@ For example, take a look at this code from our [popup-info-box-external-styleshe
 
 ```js
 // Apply external styles to the shadow DOM
-const linkElem = document.createElement('link');
-linkElem.setAttribute('rel', 'stylesheet');
-linkElem.setAttribute('href', 'style.css');
+const linkElem = document.createElement("link");
+linkElem.setAttribute("rel", "stylesheet");
+linkElem.setAttribute("href", "style.css");
 
 // Attach the created element to the shadow DOM
 shadow.appendChild(linkElem);
@@ -166,16 +169,14 @@ We will not explain the element functionality in any detail here, but you can di
 Next, we register the element using the `define()` method as before, except that this time it also includes an options object that details what element our custom element inherits from:
 
 ```js
-customElements.define('expanding-list', ExpandingList, { extends: "ul" });
+customElements.define("expanding-list", ExpandingList, { extends: "ul" });
 ```
 
 Using the built-in element in a web document also looks somewhat different:
 
 ```html
 <ul is="expanding-list">
-
-  ...
-
+  …
 </ul>
 ```
 
@@ -204,10 +205,10 @@ Let's look at an example of these in use. The code below is taken from the [life
 The class constructor is really simple — here we attach a shadow DOM to the element, then attach empty {{htmlelement("div")}} and {{htmlelement("style")}} elements to the shadow root:
 
 ```js
-const shadow = this.attachShadow({mode: 'open'});
+const shadow = this.attachShadow({ mode: "open" });
 
-const div = document.createElement('div');
-const style = document.createElement('style');
+const div = document.createElement("div");
+const style = document.createElement("style");
 shadow.appendChild(style);
 shadow.appendChild(div);
 ```
@@ -217,11 +218,11 @@ The key function in this example is `updateStyle()` — this takes an element, g
 ```js
 function updateStyle(elem) {
   const shadow = elem.shadowRoot;
-  shadow.querySelector('style').textContent = `
+  shadow.querySelector("style").textContent = `
     div {
-      width: ${elem.getAttribute('l')}px;
-      height: ${elem.getAttribute('l')}px;
-      background-color: ${elem.getAttribute('c')};
+      width: ${elem.getAttribute("l")}px;
+      height: ${elem.getAttribute("l")}px;
+      background-color: ${elem.getAttribute("c")};
     }
   `;
 }
@@ -257,7 +258,7 @@ attributeChangedCallback(name, oldValue, newValue) {
 }
 ```
 
-Note that to get the `attributeChangedCallback()` callback to fire when an attribute changes, you have to observe the attributes. This is done by specifying a `static get observedAttributes()` method inside custom element class - this should `return`  an array containing the names of the attributes you want to observe:
+Note that to get the `attributeChangedCallback()` callback to fire when an attribute changes, you have to observe the attributes. This is done by specifying a `static get observedAttributes()` method inside custom element class - this should `return` an array containing the names of the attributes you want to observe:
 
 ```js
 static get observedAttributes() { return ['c', 'l']; }

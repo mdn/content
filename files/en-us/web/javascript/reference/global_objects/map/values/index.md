@@ -1,13 +1,7 @@
 ---
 title: Map.prototype.values()
 slug: Web/JavaScript/Reference/Global_Objects/Map/values
-tags:
-  - ECMAScript 2015
-  - Iterator
-  - JavaScript
-  - Map
-  - Method
-  - Prototype
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.Map.values
 ---
 
@@ -22,7 +16,7 @@ order.
 
 ## Syntax
 
-```js
+```js-nolint
 values()
 ```
 

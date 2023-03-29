@@ -2,25 +2,6 @@
 title: XRReferenceSpaceEvent.referenceSpace
 slug: Web/API/XRReferenceSpaceEvent/referenceSpace
 page-type: web-api-instance-property
-tags:
-  - API
-  - AR
-  - Mixed
-  - Reality
-  - Reference
-  - Reference Space
-  - VR
-  - Virtual
-  - WebXR
-  - WebXR API
-  - WebXR Device API
-  - XR
-  - XRReferenceSpaceEvent
-  - augmented
-  - events
-  - referenceSpace
-  - source
-  - Property
 browser-compat: api.XRReferenceSpaceEvent.referenceSpace
 ---
 

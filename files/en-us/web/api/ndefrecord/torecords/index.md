@@ -2,15 +2,12 @@
 title: NDEFRecord.toRecords()
 slug: Web/API/NDEFRecord/toRecords
 page-type: web-api-instance-method
-tags:
-  - NDEF
-  - Reference
-  - Web NFC
-  - Experimental
+status:
+  - experimental
 browser-compat: api.NDEFRecord.toRecords
 ---
 
-{{SecureContext_Header}}{{SeeCompatTable}}{{APIRef}}
+{{SecureContext_Header}}{{SeeCompatTable}}{{APIRef("Web NFC API")}}
 
 The **`toRecords()`**
 method of the {{DOMxRef("NDEFRecord")}} interface converts
@@ -21,8 +18,8 @@ as smart poster and external type records.
 
 ## Syntax
 
-```js
-NDEFRecord.toRecords()
+```js-nolint
+toRecords()
 ```
 
 ### Parameters

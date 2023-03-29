@@ -1,12 +1,6 @@
 ---
 title: Compiling an Existing C Module to WebAssembly
 slug: WebAssembly/existing_C_to_wasm
-tags:
-  - C++
-  - Compiling
-  - Emscripten
-  - WebAssembly
-  - wasm
 ---
 
 {{WebAssemblySidebar}}
@@ -62,7 +56,7 @@ Now you only need some HTML and JavaScript to load your new module:
 
 And you will see the correct version number in the [output](https://googlechrome.github.io/samples/webassembly/version.html):
 
-![  Screenshot of the DevTools console showing the correct version number.](version.png)
+![Screenshot of the DevTools console showing the correct version number.](version.png)
 
 > **Note:** libwebp returns the current version a.b.c as a hexadecimal number 0xabc. For example, v0.6.1 is encoded as 0x000601 = 1537.
 
@@ -70,7 +64,7 @@ And you will see the correct version number in the [output](https://googlechrome
 
 Getting the encoder's version number is great, but encoding an actual image would be more impressive. How do we do that?
 
-The first question you need to answer is: how do I get the image into wasm? Looking at the [encoding API of libwebp](https://developers.google.com/speed/webp/docs/api#simple_encoding_api), you'll find that it expects an array of bytes in RGB, RGBA, BGR or BGRA. Luckily, the Canvas API has {{domxref("CanvasRenderingContext2D.getImageData")}} — that gives you an {{jsxref("Uint8ClampedArray")}} containing the image data in RGBA:
+The first question you need to answer is: how do I get the image into wasm? Looking at the [encoding API of libwebp](https://developers.google.com/speed/webp/docs/api#simple_encoding_api), you'll find that it expects an array of bytes in RGB, RGBA, BGR or BGRA. Luckily, the Canvas API has {{domxref("CanvasRenderingContext2D.getImageData")}} — that gives you a {{jsxref("Uint8ClampedArray")}} containing the image data in RGBA:
 
 ```js
 async function loadImage(src) {
@@ -189,6 +183,7 @@ const blob = new Blob([result], { type: "image/webp" });
 const blobURL = URL.createObjectURL(blob);
 const img = document.createElement("img");
 img.src = blobURL;
+img.alt = "a useful description";
 document.body.appendChild(img);
 ```
 

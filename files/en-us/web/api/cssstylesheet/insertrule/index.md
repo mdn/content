@@ -2,12 +2,6 @@
 title: CSSStyleSheet.insertRule()
 slug: Web/API/CSSStyleSheet/insertRule
 page-type: web-api-instance-method
-tags:
-  - API
-  - CSSOM
-  - CSSStyleSheet
-  - Method
-  - Reference
 browser-compat: api.CSSStyleSheet.insertRule
 ---
 
@@ -23,7 +17,7 @@ method inserts a new [CSS rule](/en-US/docs/Web/API/CSSRule) into the [current s
 
 ## Syntax
 
-```js
+```js-nolint
 insertRule(rule)
 insertRule(rule, index)
 ```
@@ -71,7 +65,7 @@ The newly inserted rule's index within the stylesheet's rule-list.
 This snippet pushes a new rule onto the top of my stylesheet.
 
 ```js
-myStyle.insertRule('#blanc { color: white }', 0);
+myStyle.insertRule("#blanc { color: white }", 0);
 ```
 
 ### Function to add a stylesheet rule
@@ -96,8 +90,8 @@ addStylesheetRules([
   ]
 ]);
 */
-function addStylesheetRules (rules) {
-  const styleEl = document.createElement('style');
+function addStylesheetRules(rules) {
+  const styleEl = document.createElement("style");
 
   // Append <style> element to <head>
   document.head.appendChild(styleEl);
@@ -107,9 +101,9 @@ function addStylesheetRules (rules) {
 
   for (let i = 0; i < rules.length; i++) {
     let j = 1,
-        rule = rules[i],
-        selector = rule[0],
-        propStr = '';
+      rule = rules[i],
+      selector = rule[0],
+      propStr = "";
     // If the second argument of a rule is an array of arrays, correct our variables.
     if (Array.isArray(rule[1][0])) {
       rule = rule[1];
@@ -118,11 +112,14 @@ function addStylesheetRules (rules) {
 
     for (let pl = rule.length; j < pl; j++) {
       const prop = rule[j];
-      propStr += `${prop[0]}: ${prop[1]}${prop[2] ? ' !important' : ''};\n`;
+      propStr += `${prop[0]}: ${prop[1]}${prop[2] ? " !important" : ""};\n`;
     }
 
     // Insert CSS Rule
-    styleSheet.insertRule(`${selector}{${propStr}}`, styleSheet.cssRules.length);
+    styleSheet.insertRule(
+      `${selector}{${propStr}}`,
+      styleSheet.cssRules.length
+    );
   }
 }
 ```
@@ -134,19 +131,6 @@ function addStylesheetRules (rules) {
 ## Browser compatibility
 
 {{Compat}}
-
-### Legacy browser support
-
-To support Internet Explorer 8 and below, use:
-`addRule(selector, rule [, index]);`. Example:
-`addRule('pre', 'font: 14px verdana'); // add rule at end`
-
-Also note the non-standard
-[`removeRule()`](https://www.quirksmode.org/dom/w3c_css.html#change)
-and
-[`.rules`](https://www.quirksmode.org/dom/w3c_css.html#access)
-instead of {{domxref("CSSStyleSheet.deleteRule","deleteRule()")}} and
-{{domxref("CSSStyleSheet",".cssRules")}}, respectively.
 
 ## See also
 

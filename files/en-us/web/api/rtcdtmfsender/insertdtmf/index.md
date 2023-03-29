@@ -2,18 +2,6 @@
 title: RTCDTMFSender.insertDTMF()
 slug: Web/API/RTCDTMFSender/insertDTMF
 page-type: web-api-instance-method
-tags:
-  - API
-  - DTMF
-  - Media
-  - Method
-  - RTCDTMFSender
-  - Reference
-  - Telephony
-  - Touch-tone
-  - WebRTC
-  - WebRTC API
-  - insertDTMF
 browser-compat: api.RTCDTMFSender.insertDTMF
 ---
 
@@ -35,7 +23,7 @@ Since `insertDTMF()` replaces the tone buffer, in order to add to the DTMF tones
 
 ## Syntax
 
-```js
+```js-nolint
 insertDTMF(tones)
 insertDTMF(tones, duration)
 insertDTMF(tones, duration, interToneGap)

@@ -1,14 +1,7 @@
 ---
 title: management.onUninstalled()
 slug: Mozilla/Add-ons/WebExtensions/API/management/onUninstalled
-tags:
-  - API
-  - Add-ons
-  - Event
-  - Reference
-  - WebExtensions
-  - management
-  - onUninstalled
+page-type: webextension-api-event
 browser-compat: webextensions.api.management.onUninstalled
 ---
 
@@ -20,7 +13,7 @@ This API requires the "management" [API permission](/en-US/docs/Mozilla/Add-ons/
 
 ## Syntax
 
-```js
+```js-nolint
 browser.management.onUninstalled.addListener(listener)
 browser.management.onUninstalled.removeListener(listener)
 browser.management.onUninstalled.hasListener(listener)
@@ -63,8 +56,6 @@ browser.management.onUninstalled.addListener((info) => {
 {{WebExtExamples}}
 
 > **Note:** This API is based on Chromium's [`chrome.management`](https://developer.chrome.com/docs/extensions/reference/management/#event-onUninstalled) API. This documentation is derived from [`management.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/management.json) in the Chromium code.
->
-> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

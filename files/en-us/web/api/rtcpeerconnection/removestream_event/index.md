@@ -1,22 +1,10 @@
 ---
-title: 'RTCPeerConnection: removestream event'
+title: "RTCPeerConnection: removestream event"
 slug: Web/API/RTCPeerConnection/removestream_event
 page-type: web-api-event
-tags:
-  - API
-  - Event
-  - Managing Streams
-  - Media
-  - MediaStream
-  - RTCPeerConnection
-  - Reference
-  - Removing Streams
-  - Streams
-  - WebRTC
-  - WebRTC API
-  - removeStream
-  - Deprecated
-  - Non-standard
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.RTCPeerConnection.removestream_event
 ---
 
@@ -36,9 +24,9 @@ This event is not cancelable and does not bubble.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('removestream', (event) => { });
+addEventListener("removestream", (event) => {});
 
-onremovestream = (event) => { };
+onremovestream = (event) => {};
 ```
 
 ## Event type

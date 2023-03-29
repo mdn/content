@@ -1,14 +1,10 @@
 ---
 title: box-pack
 slug: Web/CSS/box-pack
-tags:
-  - CSS
-  - CSS Property
-  - Non-standard
-  - Reference
-  - box-pack
-  - recipe:css-property
-  - Deprecated
+page-type: css-property
+status:
+  - deprecated
+  - non-standard
 browser-compat: css.properties.box-pack
 ---
 
@@ -117,8 +113,8 @@ div.example {
   -webkit-box-align: center; /* WebKit */
 
   /* Pack children to the bottom of this box */
-  -moz-box-pack: end;             /* Mozilla */
-  -webkit-box-pack: end;          /* WebKit */
+  -moz-box-pack: end; /* Mozilla */
+  -webkit-box-pack: end; /* WebKit */
 }
 
 div.example p {

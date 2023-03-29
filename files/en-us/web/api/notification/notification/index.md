@@ -2,13 +2,6 @@
 title: Notification()
 slug: Web/API/Notification/Notification
 page-type: web-api-constructor
-tags:
-  - API
-  - Constructor
-  - Notification
-  - Notifications
-  - Notifications API
-  - Reference
 browser-compat: api.Notification.Notification
 ---
 
@@ -19,7 +12,7 @@ The **`Notification()`** constructor creates a new
 
 ## Syntax
 
-```js
+```js-nolint
 new Notification(title)
 new Notification(title, options)
 ```
@@ -74,17 +67,18 @@ new Notification(title, options)
         active until the user clicks or dismisses it, rather than closing automatically.
         The default value is `false`.
     - `actions`
+
       - : An array of actions to display in the notification. Each element in the array is an object with the following members:
 
-        - `action`:  A string identifying a user action to be displayed on the notification.
-        - `title`:  A string containing action text to be shown to the user.
-        - `icon`:  A string containing the URL of an icon to display with the action.
+        - `action`: A string identifying a user action to be displayed on the notification.
+        - `title`: A string containing action text to be shown to the user.
+        - `icon`: A string containing the URL of an icon to display with the action.
 
         Appropriate responses are built using `event.action` within the
         {{domxref("ServiceWorkerGlobalScope.notificationclick_event", "notificationclick")}} event.
 
     - `silent`
-      - :  A boolean value specifying whether the
+      - : A boolean value specifying whether the
         notification is silent (no sounds or vibrations issued), regardless of the device
         settings. The default is `false`, which means it won't be silent.
 
@@ -119,13 +113,7 @@ Starting in Chrome 49, notifications don't work in incognito mode.
 Chrome for Android will throw a {{jsxref("TypeError")}} when calling the
 `Notification` constructor. It only supports creating
 notifications from a service worker. See the
-[Chromium issue tracker](https://bugs.chromium.org/p/chromium/issues/detail?id=481856) for more details.
-
-### Internet Explorer notes
-
-Version 38.14352 and higher of MS Edge Notification API is supported. [Wikipedia - MS Edge](https://en.wikipedia.org/wiki/Microsoft_Edge#Release_history)
-
-IE 11 and lower isn't supported.
+[Chromium issue tracker](https://crbug.com/481856) for more details.
 
 ## See also
 

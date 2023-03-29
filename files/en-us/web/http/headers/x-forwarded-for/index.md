@@ -1,13 +1,8 @@
 ---
 title: X-Forwarded-For
 slug: Web/HTTP/Headers/X-Forwarded-For
-tags:
-  - HTTP
-  - HTTP Header
-  - Non-standard
-  - Reference
-  - Request header
-  - header
+status:
+  - non-standard
 ---
 
 {{HTTPSidebar}}
@@ -101,7 +96,7 @@ X-Forwarded-For: 203.0.113.195,2001:db8:85a3:8d3:1319:8a2e:370:7348,150.172.238.
 Improper parsing of the `X-Forwarded-For` header can result in spoofed values being used
 for security-related purposes, resulting in the negative consequences mentioned above.
 
-There may be multiple `X-Forwarded-For` headers present in a request (per [RFC 2616](https://datatracker.ietf.org/doc/html/rfc2616#section-4.2)). The IP addresses in
+There may be multiple `X-Forwarded-For` headers present in a request. The IP addresses in
 these headers must be treated as a single list, starting with the first IP address of the
 first header and continuing to the last IP address of the last header. There are two ways
 of making this single list:
@@ -128,14 +123,14 @@ When choosing the first _trustworthy_ `X-Forwarded-For` client IP address, addit
 configuration is required. There are two common methods:
 
 - **Trusted proxy count**: The count of reverse proxies between the internet and the
-   server is configured. The `X-Forwarded-For` IP list is searched from the rightmost by
-   that count minus one. (For example, if there is only one reverse proxy, that proxy will
-   add the client's IP address, so the rightmost address should be used. If there are
-   three reverse proxies, the last two IP addresses will be internal.)
+  server is configured. The `X-Forwarded-For` IP list is searched from the rightmost by
+  that count minus one. (For example, if there is only one reverse proxy, that proxy will
+  add the client's IP address, so the rightmost address should be used. If there are
+  three reverse proxies, the last two IP addresses will be internal.)
 - **Trusted proxy list**: The IPs or IP ranges of the trusted reverse proxies are
-   configured. The `X-Forwarded-For` IP list is searched from the rightmost, skipping all
-   addresses that are on the trusted proxy list. The first non-matching address is the
-   target address.
+  configured. The `X-Forwarded-For` IP list is searched from the rightmost, skipping all
+  addresses that are on the trusted proxy list. The first non-matching address is the
+  target address.
 
 The first trustworthy `X-Forwarded-For` IP address may belong to an untrusted intermediate
 proxy rather than the actual client computer, but it is the only IP suitable for security

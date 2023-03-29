@@ -2,13 +2,6 @@
 title: URLSearchParams.values()
 slug: Web/API/URLSearchParams/values
 page-type: web-api-instance-method
-tags:
-  - API
-  - Iterator
-  - Method
-  - Reference
-  - URL API
-  - URLSearchParams
 browser-compat: api.URLSearchParams.values
 ---
 
@@ -23,7 +16,7 @@ objects.
 
 ## Syntax
 
-```js
+```js-nolint
 values()
 ```
 

@@ -1,15 +1,7 @@
 ---
 title: privacy.network
 slug: Mozilla/Add-ons/WebExtensions/API/privacy/network
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Network
-  - Privacy
-  - Property
-  - Reference
-  - WebExtensions
+page-type: webextension-api-property
 browser-compat: webextensions.api.privacy.network
 ---
 
@@ -43,6 +35,11 @@ Default values for these properties tend to vary across browsers.
     - `"always"`: HTTPS-Only mode is on.
     - `"never"`: HTTPS-Only mode is off.
     - `"private_browsing"`: HTTPS-Only mode is on in private browsing windows only.
+
+- `globalPrivacyControl`
+
+  - : this setting allows your extension to determine if a user has enabled
+    [Global Privacy Control](/en-US/docs/Web/API/Navigator/globalPrivacyControl). This property is read-only on all platforms. Its underlying value is a boolean where `true` indicates that the browser sends Global Privacy Control signals and `false` indicates the browser does not send the signals.
 
 ## Browser compatibility
 
@@ -83,8 +80,6 @@ browser.browserAction.onClicked.addListener(() => {
 {{WebExtExamples}}
 
 > **Note:** This API is based on Chromium's [`chrome.privacy`](https://developer.chrome.com/docs/extensions/reference/privacy/) API. This documentation is derived from [`privacy.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/privacy.json) in the Chromium code.
->
-> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

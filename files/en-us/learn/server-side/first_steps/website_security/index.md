@@ -1,16 +1,6 @@
 ---
 title: Website security
 slug: Learn/Server-side/First_steps/Website_security
-tags:
-  - Beginner
-  - CodingScripting
-  - Guide
-  - Intro
-  - Learn
-  - Security
-  - Server-side programming
-  - Web security
-  - Website Security
 ---
 
 {{LearnSidebar}}{{PreviousMenu("Learn/Server-side/First_steps/Web_frameworks", "Learn/Server-side/First_steps")}}
@@ -80,7 +70,7 @@ This vulnerability is present if user input that is passed to an underlying SQL 
 statement = "SELECT * FROM users WHERE name = '" + userName + "';"
 ```
 
-If the user specifies a real name, the statement will work as intended. However, a malicious user could completely change the behavior of this SQL statement to the new statement in the following example, by specifying the text in bold for the `userName`.
+If the user specifies a real name, the statement will work as intended. However, a malicious user could completely change the behavior of this SQL statement to the new statement in the following example, by specifying `a';DROP TABLE users; SELECT * FROM userinfo WHERE 't' = 't` for the `userName`.
 
 ```sql
 SELECT * FROM users WHERE name = 'a';DROP TABLE users; SELECT * FROM userinfo WHERE 't' = 't';
@@ -106,15 +96,15 @@ Web frameworks will often take care of the character escaping for you. Django, f
 
 CSRF attacks allow a malicious user to execute actions using the credentials of another user without that user's knowledge or consent.
 
-This type of attack is best explained by example. John is a malicious user who knows that a particular site allows logged-in users to send money to a specified account using an HTTP `POST` request that includes the account name and an amount of money. John constructs a form that includes his bank details and an amount of money as hidden fields, and emails it to other site users (with the _Submit_ button disguised as a link to a "get rich quick" site).
+This type of attack is best explained by example. Josh is a malicious user who knows that a particular site allows logged-in users to send money to a specified account using an HTTP `POST` request that includes the account name and an amount of money. Josh constructs a form that includes his bank details and an amount of money as hidden fields, and emails it to other site users (with the _Submit_ button disguised as a link to a "get rich quick" site).
 
 If a user clicks the submit button, an HTTP `POST` request will be sent to the server containing the transaction details and any client-side cookies that the browser associated with the site (adding associated site cookies to requests is normal browser behavior). The server will check the cookies, and use them to determine whether or not the user is logged in and has permission to make the transaction.
 
-The result is that any user who clicks the _Submit_ button while they are logged in to the trading site will make the transaction. John gets rich.
+The result is that any user who clicks the _Submit_ button while they are logged in to the trading site will make the transaction. Josh gets rich.
 
-> **Note:** The trick here is that John doesn't need to have access to the user's cookies (or access credentials). The browser of the user stores this information and automatically includes it in all requests to the associated server.
+> **Note:** The trick here is that Josh doesn't need to have access to the user's cookies (or access credentials). The browser of the user stores this information and automatically includes it in all requests to the associated server.
 
-One way to prevent this type of attack is for the server to require that `POST` requests include a user-specific site-generated secret. The secret would be supplied by the server when sending the web form used to make transfers. This approach prevents John from creating his own form, because he would have to know the secret that the server is providing for the user. Even if he found out the secret and created a form for a particular user, he would no longer be able to use that same form to attack every user.
+One way to prevent this type of attack is for the server to require that `POST` requests include a user-specific site-generated secret. The secret would be supplied by the server when sending the web form used to make transfers. This approach prevents Josh from creating his own form, because he would have to know the secret that the server is providing for the user. Even if he found out the secret and created a form for a particular user, he would no longer be able to use that same form to attack every user.
 
 Web frameworks often include such CSRF prevention mechanisms.
 
@@ -139,7 +129,7 @@ Almost all of the security exploits in the previous sections are successful when
 A number of other concrete steps you can take are:
 
 - Use more effective password management. Encourage strong passwords. Consider two-factor authentication for your site, so that in addition to a password the user must enter another authentication code (usually one that is delivered via some physical hardware that only the user will have, such as a code in an SMS sent to their phone).
-- Configure your web server to use [HTTPS](/en-US/docs/Glossary/https) and [HTTP Strict Transport Security](/en-US/docs/Web/HTTP/Headers/Strict-Transport-Security) (HSTS). HTTPS encrypts data sent between your client and server. This ensures that login credentials, cookies, `POST` requests data and header information are not easily available to attackers.
+- Configure your web server to use [HTTPS](/en-US/docs/Glossary/HTTPS) and [HTTP Strict Transport Security](/en-US/docs/Web/HTTP/Headers/Strict-Transport-Security) (HSTS). HTTPS encrypts data sent between your client and server. This ensures that login credentials, cookies, `POST` requests data and header information are not easily available to attackers.
 - Keep track of the most popular threats (the [current OWASP list is here](https://owasp.org/www-project-top-ten/)) and address the most common vulnerabilities first.
 - Use [vulnerability scanning tools](https://owasp.org/www-community/Vulnerability_Scanning_Tools) to perform automated security testing on your site. Later on, your very successful website may also find bugs by offering a bug bounty [like Mozilla does here](https://www.mozilla.org/en-US/security/bug-bounty/faq-webapp/).
 - Only store and display data that you need. For example, if your users must store sensitive information like credit card details, only display enough of the card number that it can be identified by the user, and not enough that it can be copied by an attacker and used on another site. The most common pattern at this time is to only display the last 4 digits of a credit card number.
@@ -153,9 +143,3 @@ This article has explained the concept of web security and some of the more comm
 With this article, you've come to the end of [this module](/en-US/docs/Learn/Server-side/First_steps), covering your first steps in server-side website programming. We hope you've enjoyed learning these fundamental concepts, and you're now ready to select a Web Framework and start programming.
 
 {{PreviousMenu("Learn/Server-side/First_steps/Web_frameworks", "Learn/Server-side/First_steps")}}
-
-## In this module
-
-- [Introduction to the server side](/en-US/docs/Learn/Server-side/First_steps/Introduction)
-- [Client-Server overview](/en-US/docs/Learn/Server-side/First_steps/Client-Server_overview)
-- [Server-side web frameworks](/en-US/docs/Learn/Server-side/First_steps/Web_frameworks)

@@ -2,11 +2,6 @@
 title: BroadcastChannel.name
 slug: Web/API/BroadcastChannel/name
 page-type: web-api-instance-property
-tags:
-  - Broadcast Channel API
-  - Property
-  - Read-only
-  - Reference
 browser-compat: api.BroadcastChannel.name
 ---
 
@@ -24,7 +19,7 @@ A string.
 
 ```js
 // Connect to a channel
-const bc = new BroadcastChannel('test_channel');
+const bc = new BroadcastChannel("test_channel");
 
 // More operations (like postMessage, …)
 

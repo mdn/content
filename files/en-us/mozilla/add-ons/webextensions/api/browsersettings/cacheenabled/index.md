@@ -1,15 +1,7 @@
 ---
 title: browserSettings.cacheEnabled
 slug: Mozilla/Add-ons/WebExtensions/API/browserSettings/cacheEnabled
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Property
-  - Reference
-  - WebExtensions
-  - browserSettings
-  - cacheEnabled
+page-type: webextension-api-property
 browser-compat: webextensions.api.browserSettings.cacheEnabled
 ---
 
@@ -33,8 +25,7 @@ function logResult(result) {
   console.log(`Current level of control: ${result.levelOfControl}`);
 }
 
-browser.browserSettings.cacheEnabled.get({}).
-  then(logResult);
+browser.browserSettings.cacheEnabled.get({}).then(logResult);
 ```
 
 Disabling the browser cache:
@@ -44,8 +35,7 @@ function logResult(result) {
   console.log(`Setting was modified: ${result}`);
 }
 
-browser.browserSettings.cacheEnabled.set({value: false}).
-  then(logResult);
+browser.browserSettings.cacheEnabled.set({ value: false }).then(logResult);
 ```
 
 {{WebExtExamples}}

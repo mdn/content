@@ -2,13 +2,8 @@
 title: ImageTrackList.selectedTrack
 slug: Web/API/ImageTrackList/selectedTrack
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - selectedTrack
-  - ImageTrackList
-  - Experimental
+status:
+  - experimental
 browser-compat: api.ImageTrackList.selectedTrack
 ---
 

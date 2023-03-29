@@ -2,16 +2,6 @@
 title: KeyboardEvent.code
 slug: Web/API/KeyboardEvent/code
 page-type: web-api-instance-property
-tags:
-  - API
-  - Code
-  - DOM
-  - DOM Events
-  - KeyboardEvent
-  - Property
-  - Read-only
-  - Reference
-  - UI Events
 browser-compat: api.KeyboardEvent.code
 ---
 
@@ -38,10 +28,11 @@ The code values for Windows, Linux, and macOS are list on the [KeyboardEvent: co
 #### HTML
 
 ```html
-<p>Press keys on the keyboard to see what the KeyboardEvent's key and code
-   values are for each one.</p>
-<div id="output" tabindex="0">
-</div>
+<p>
+  Press keys on the keyboard to see what the KeyboardEvent's key and code values
+  are for each one.
+</p>
+<div id="output" tabindex="0"></div>
 ```
 
 #### CSS
@@ -61,12 +52,16 @@ The code values for Windows, Linux, and macOS are list on the [KeyboardEvent: co
 #### JavaScript
 
 ```js
-window.addEventListener("keydown", (event) => {
-  const p = document.createElement("p");
-  p.textContent = `KeyboardEvent: key='${event.key}' | code='${event.code}'`;
-  document.getElementById("output").appendChild(p);
-  window.scrollTo(0, document.body.scrollHeight);
-}, true);
+window.addEventListener(
+  "keydown",
+  (event) => {
+    const p = document.createElement("p");
+    p.textContent = `KeyboardEvent: key='${event.key}' | code='${event.code}'`;
+    document.getElementById("output").appendChild(p);
+    window.scrollTo(0, document.body.scrollHeight);
+  },
+  true
+);
 ```
 
 #### Try it out
@@ -83,8 +78,12 @@ This example establishes an event listener for {{domxref("Element/keydown_event"
 
 ```html
 <p>Use the WASD (ZQSD on AZERTY) keys to move and steer.</p>
-<svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="world" tabindex="0">
-  <polygon id="spaceship" points="15,0 0,30 30,30"/>
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  version="1.1"
+  class="world"
+  tabindex="0">
+  <polygon id="spaceship" points="15,0 0,30 30,30" />
 </svg>
 ```
 
@@ -110,17 +109,17 @@ This example establishes an event listener for {{domxref("Element/keydown_event"
 
 #### JavaScript
 
-The first section of the JavaScript code establishes some variables we'll be using. `shipSize` contains the size of the ship the player is moving around, for convenience. `position` is used to track the position of the ship within the play field. `moveRate` and `turnRate` are the number of pixels forward and backward each keystroke moves the ship and how many degrees of rotation the left and right steering controls apply per keystroke. angle is the current amount of rotation applied to the ship, in degrees; it starts at 0° (pointing straight up). Finally, `spaceship` is set to refer to the element with the ID `"spaceship"`, which is the SVG polygon representing the ship the player controls.
+The first section of the JavaScript code establishes some variables we'll be using. `shipSize` contains the size of the ship the player is moving around, for convenience. `position` is used to track the position of the ship within the play field. `moveRate` is the number of pixels each keystroke moves the ship forward and backward, and `turnRate` is how many degrees of rotation the left and right steering controls apply per keystroke. `angle` is the current amount of rotation applied to the ship in degrees; it starts at 0° (pointing straight up). Finally, `spaceship` is set to refer to the element with the ID `"spaceship"`, which is the SVG polygon representing the ship the player controls.
 
 ```js
 let shipSize = {
   width: 30,
-  height: 30
+  height: 30,
 };
 
 let position = {
   x: 200,
-  y: 200
+  y: 200,
 };
 
 let moveRate = 9;
@@ -135,9 +134,9 @@ Next comes the function `updatePosition()`. This function takes as input the dis
 
 ```js
 function updatePosition(offset) {
-  let rad = angle * (Math.PI/180);
-  position.x += (Math.sin(rad) * offset);
-  position.y -= (Math.cos(rad) * offset);
+  let rad = angle * (Math.PI / 180);
+  position.x += Math.sin(rad) * offset;
+  position.y -= Math.cos(rad) * offset;
 
   if (position.x < 0) {
     position.x = 399;
@@ -157,8 +156,8 @@ The `refresh()` function handles applying the rotation and position by using an 
 
 ```js
 function refresh() {
-  let x = position.x - (shipSize.width/2);
-  let y = position.y - (shipSize.height/2);
+  let x = position.x - shipSize.width / 2;
+  let y = position.y - shipSize.height / 2;
   let transform = `translate(${x} ${y}) rotate(${angle} 15 15) `;
 
   spaceship.setAttribute("transform", transform);
@@ -169,43 +168,46 @@ refresh();
 Finally, the `addEventListener()` method is used to start listening for {{domxref("Element/keydown_event", "keydown")}} events, acting on each key by updating the ship position and rotation angle, then calling `refresh()` to draw the ship at its new position and angle.
 
 ```js
-window.addEventListener("keydown", (event) => {
-  if (event.defaultPrevented) {
-    return; // Do nothing if event already handled
-  }
+window.addEventListener(
+  "keydown",
+  (event) => {
+    if (event.defaultPrevented) {
+      return; // Do nothing if event already handled
+    }
 
-  switch(event.code) {
-    case "KeyS":
-    case "ArrowDown":
-      // Handle "back"
-      updatePosition(-moveRate);
-      break;
-    case "KeyW":
-    case "ArrowUp":
-      // Handle "forward"
-      updatePosition(moveRate);
-      break;
-    case "KeyA":
-    case "ArrowLeft":
-      // Handle "turn left"
-      angle -= turnRate;
-      break;
-    case "KeyD":
-    case "ArrowRight":
-      // Handle "turn right"
-      angle += turnRate;
-      break;
-  }
+    switch (event.code) {
+      case "KeyS":
+      case "ArrowDown":
+        // Handle "back"
+        updatePosition(-moveRate);
+        break;
+      case "KeyW":
+      case "ArrowUp":
+        // Handle "forward"
+        updatePosition(moveRate);
+        break;
+      case "KeyA":
+      case "ArrowLeft":
+        // Handle "turn left"
+        angle -= turnRate;
+        break;
+      case "KeyD":
+      case "ArrowRight":
+        // Handle "turn right"
+        angle += turnRate;
+        break;
+    }
 
-  refresh();
+    refresh();
 
-  if (event.code !== "Tab")
-  {
-    // Consume the event so it doesn't get handled twice,
-    // as long as the user isn't trying to move focus away
-    event.preventDefault();
-  }
-}, true);
+    if (event.code !== "Tab") {
+      // Consume the event so it doesn't get handled twice,
+      // as long as the user isn't trying to move focus away
+      event.preventDefault();
+    }
+  },
+  true
+);
 ```
 
 #### Try it out

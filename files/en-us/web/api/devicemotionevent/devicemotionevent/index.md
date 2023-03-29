@@ -2,15 +2,6 @@
 title: DeviceMotionEvent()
 slug: Web/API/DeviceMotionEvent/DeviceMotionEvent
 page-type: web-api-constructor
-tags:
-  - API
-  - Constructor
-  - Device Orientation
-  - Device Orientation API
-  - Mobile
-  - Motion
-  - Orientation
-  - Reference
 browser-compat: api.DeviceMotionEvent.DeviceMotionEvent
 ---
 
@@ -20,7 +11,7 @@ The **`DeviceMotionEvent()`** constructor creates a new {{DOMxRef("DeviceMotionE
 
 ## Syntax
 
-```js
+```js-nolint
 new DeviceMotionEvent(type)
 new DeviceMotionEvent(type, options)
 ```

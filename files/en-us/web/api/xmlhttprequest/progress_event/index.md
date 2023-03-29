@@ -1,15 +1,7 @@
 ---
-title: 'XMLHttpRequest: progress event'
+title: "XMLHttpRequest: progress event"
 slug: Web/API/XMLHttpRequest/progress_event
 page-type: web-api-event
-tags:
-  - API
-  - Event
-  - ProgressEvent
-  - Reference
-  - Web
-  - XMLHttpRequest
-  - progress
 browser-compat: api.XMLHttpRequest.progress_event
 ---
 
@@ -52,9 +44,21 @@ _In addition to the properties listed below, properties from the parent interfac
 
 ```html
 <div class="controls">
-    <input class="xhr success" type="button" name="xhr" value="Click to start XHR (success)" />
-    <input class="xhr error" type="button" name="xhr" value="Click to start XHR (error)" />
-    <input class="xhr abort" type="button" name="xhr" value="Click to start XHR (abort)" />
+  <input
+    class="xhr success"
+    type="button"
+    name="xhr"
+    value="Click to start XHR (success)" />
+  <input
+    class="xhr error"
+    type="button"
+    name="xhr"
+    value="Click to start XHR (error)" />
+  <input
+    class="xhr abort"
+    type="button"
+    name="xhr"
+    value="Click to start XHR (abort)" />
 </div>
 
 <textarea readonly class="event-log"></textarea>
@@ -62,16 +66,16 @@ _In addition to the properties listed below, properties from the parent interfac
 
 ```css hidden
 .event-log {
-    width: 25rem;
-    height: 4rem;
-    border: 1px solid black;
-    margin: .5rem;
-    padding: .2rem;
+  width: 25rem;
+  height: 4rem;
+  border: 1px solid black;
+  margin: 0.5rem;
+  padding: 0.2rem;
 }
 
 input {
-    width: 11rem;
-    margin: .5rem;
+  width: 11rem;
+  margin: 0.5rem;
 }
 ```
 

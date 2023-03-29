@@ -2,14 +2,6 @@
 title: Document.title
 slug: Web/API/Document/title
 page-type: web-api-instance-property
-tags:
-  - API
-  - Command API
-  - Document
-  - HTML DOM
-  - NeedsSpecTable
-  - Property
-  - Reference
 browser-compat: api.Document.title
 ---
 
@@ -37,19 +29,17 @@ document).
 ```html
 <!DOCTYPE html>
 <html lang="en-US">
-<head>
-  <meta charset="UTF-8">
-  <title>Hello World!</title>
-</head>
-<body>
-
-  <script>
-    alert(document.title); // displays "Hello World!"
-    document.title = "Goodbye World!";
-    alert(document.title); // displays "Goodbye World!"
-  </script>
-
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Hello World!</title>
+  </head>
+  <body>
+    <script>
+      alert(document.title); // displays "Hello World!"
+      document.title = "Goodbye World!";
+      alert(document.title); // displays "Goodbye World!"
+    </script>
+  </body>
 </html>
 ```
 

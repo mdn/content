@@ -2,15 +2,6 @@
 title: PushSubscription.getKey()
 slug: Web/API/PushSubscription/getKey
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Push
-  - Push API
-  - PushSubscription
-  - Reference
-  - Service Workers
-  - getKey
 browser-compat: api.PushSubscription.getKey
 ---
 
@@ -22,7 +13,7 @@ be sent to a server and used in encrypting push message data.
 
 ## Syntax
 
-```js
+```js-nolint
 getKey(name)
 ```
 
@@ -31,11 +22,11 @@ getKey(name)
 - `name`
 
   - : A string representing the encryption method used to generate a
-    client key.  The value can be:
+    client key. The value can be:
 
     - `p256dh`
       - : An [Elliptic curve Diffie–Hellman](https://en.wikipedia.org/wiki/Elliptic_curve_Diffie%E2%80%93Hellman) public key on the P-256 curve (that is, the NIST
-        secp256r1 elliptic curve).  The resulting key is an uncompressed point in ANSI
+        secp256r1 elliptic curve). The resulting key is an uncompressed point in ANSI
         X9.62 format.
     - `auth`
       - : An authentication secret, as described in [Message Encryption for Web Push](https://datatracker.ietf.org/doc/html/draft-ietf-webpush-encryption-08).
@@ -54,7 +45,7 @@ reg.pushManager.getSubscription().then((subscription) => {
   subBtn.disabled = false;
 
   if (!subscription) {
-    console.log('Not yet subscribed to Push')
+    console.log("Not yet subscribed to Push");
     // We aren't subscribed to push, so set UI
     // to allow the user to enable push
     return;
@@ -62,14 +53,14 @@ reg.pushManager.getSubscription().then((subscription) => {
 
   // Set your UI to show they have subscribed for
   // push messages
-  subBtn.textContent = 'Unsubscribe from Push Messaging';
+  subBtn.textContent = "Unsubscribe from Push Messaging";
   isPushEnabled = true;
 
   // initialize status, which includes setting UI elements for subscribed status
   // and updating Subscribers list via push
   const endpoint = subscription.endpoint;
-  const key = subscription.getKey('p256dh');
-  const auth = subscription.getKey('auth');
+  const key = subscription.getKey("p256dh");
+  const auth = subscription.getKey("auth");
 
   // ...
 });

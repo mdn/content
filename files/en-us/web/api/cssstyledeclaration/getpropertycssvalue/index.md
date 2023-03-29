@@ -2,12 +2,8 @@
 title: CSSStyleDeclaration.getPropertyCSSValue()
 slug: Web/API/CSSStyleDeclaration/getPropertyCSSValue
 page-type: web-api-instance-method
-tags:
-  - API
-  - CSSOM
-  - Method
-  - Deprecated
-  - Reference
+status:
+  - deprecated
 browser-compat: api.CSSStyleDeclaration.getPropertyCSSValue
 ---
 
@@ -28,7 +24,7 @@ shorthand property.
 
 ## Syntax
 
-```js
+```js-nolint
 getPropertyCSSValue(property)
 ```
 
@@ -48,7 +44,7 @@ the `color` CSS property:
 
 ```js
 const style = window.getComputedStyle(elem, null);
-const rgbObj = style.getPropertyCSSValue('color').getRGBColorValue();
+const rgbObj = style.getPropertyCSSValue("color").getRGBColorValue();
 ```
 
 ## Specifications

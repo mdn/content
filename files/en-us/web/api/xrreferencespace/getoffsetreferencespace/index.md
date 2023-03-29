@@ -2,27 +2,6 @@
 title: XRReferenceSpace.getOffsetReferenceSpace()
 slug: Web/API/XRReferenceSpace/getOffsetReferenceSpace
 page-type: web-api-instance-method
-tags:
-  - API
-  - AR
-  - Mixed
-  - Orientation
-  - Position
-  - Reality
-  - Reference
-  - Rotate
-  - VR
-  - Virtual
-  - WebXR
-  - WebXR API
-  - WebXR Device API
-  - XR
-  - XRReferenceSpace
-  - augmented
-  - getOffsetReferenceSpace
-  - move
-  - movement
-  - Method
 browser-compat: api.XRReferenceSpace.getOffsetReferenceSpace
 ---
 
@@ -49,7 +28,7 @@ use this method to let the user use their mouse to pitch and yaw their viewing a
 
 ## Syntax
 
-```js
+```js-nolint
 getOffsetReferenceSpace(originOffset)
 ```
 

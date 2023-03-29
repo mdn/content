@@ -2,13 +2,6 @@
 title: HTMLMediaElement.pause()
 slug: Web/API/HTMLMediaElement/pause
 page-type: web-api-instance-method
-tags:
-  - API
-  - Audio
-  - HTMLMediaElement
-  - Method
-  - Reference
-  - Video
 browser-compat: api.HTMLMediaElement.pause
 ---
 
@@ -19,7 +12,7 @@ of the media, if the media is already in a paused state this method will have no
 
 ## Syntax
 
-```js
+```js-nolint
 pause()
 ```
 

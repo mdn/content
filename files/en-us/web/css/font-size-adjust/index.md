@@ -1,12 +1,7 @@
 ---
 title: font-size-adjust
 slug: Web/CSS/font-size-adjust
-tags:
-  - CSS
-  - CSS Fonts
-  - CSS Property
-  - Reference
-  - recipe:css-property
+page-type: css-property
 browser-compat: css.properties.font-size-adjust
 ---
 
@@ -88,9 +83,17 @@ It is really specifying that the lowercase letters of the font should be `7px` h
 #### HTML
 
 ```html
-<p class="times">This text uses the Times font (10px), which is hard to read in small sizes.</p>
-<p class="verdana">This text uses the Verdana font (10px), which has relatively large lowercase letters.</p>
-<p class="adjtimes">This is the 10px Times, but now adjusted to the same aspect ratio as the Verdana.</p>
+<p class="times">
+  This text uses the Times font (10px), which is hard to read in small sizes.
+</p>
+<p class="verdana">
+  This text uses the Verdana font (10px), which has relatively large lowercase
+  letters.
+</p>
+<p class="adjtimes">
+  This is the 10px Times, but now adjusted to the same aspect ratio as the
+  Verdana.
+</p>
 ```
 
 #### CSS

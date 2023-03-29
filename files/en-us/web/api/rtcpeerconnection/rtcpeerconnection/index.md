@@ -2,12 +2,6 @@
 title: RTCPeerConnection()
 slug: Web/API/RTCPeerConnection/RTCPeerConnection
 page-type: web-api-constructor
-tags:
-  - API
-  - Constructor
-  - RTCPeerConnection
-  - Reference
-  - WebRTC
 browser-compat: api.RTCPeerConnection.RTCPeerConnection
 ---
 
@@ -19,7 +13,7 @@ a connection between the local device and a remote peer.
 
 ## Syntax
 
-```js
+```js-nolint
 new RTCPeerConnection()
 new RTCPeerConnection(configuration)
 ```
@@ -27,6 +21,7 @@ new RTCPeerConnection(configuration)
 ### Parameters
 
 - `configuration` {{optional_inline}}
+
   - : An object providing options to configure the new connection:
 
     - `bundlePolicy` {{optional_inline}}

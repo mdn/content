@@ -1,9 +1,6 @@
 ---
 title: Techniques for game development
 slug: Games/Techniques
-tags:
-  - Games
-  - Guide
 ---
 
 {{GamesSidebar}}
@@ -16,8 +13,6 @@ This page lists essential core techniques for anyone wanting to develop games us
   - : How to make sure your game starts up quickly, smoothly, and without appearing to lock up the user's browser or device.
 - [Using WebRTC peer-to-peer data channels](/en-US/docs/Games/Techniques/WebRTC_data_channels)
   - : In addition to providing support for audio and video communication, WebRTC lets you set up peer-to-peer data channels to exchange text or binary data actively between your players. This article explains what this can do for you, and shows how to use libraries that make this easy.
-- [Efficient animation for web games](/en-US/docs/Games/Techniques/Efficient_animation_for_web_games)
-  - : This article covers techniques and advice for creating efficient animation for web games, with a slant towards supporting lower end devices such as mobile phones. We touch on CSS transitions and CSS animations, and JavaScript loops involving {{ domxref("window.requestAnimationFrame") }}.
 - [Audio for Web Games](/en-US/docs/Games/Techniques/Audio_for_Web_Games)
   - : Audio is an important part of any game — it adds feedback and atmosphere. Web-based audio is maturing fast, but there are still many browser differences to negotiate. This article provides a detailed guide to implementing audio for web games, looking at what works currently across as wide a range of platforms as possible.
 - [2D collision detection](/en-US/docs/Games/Techniques/2D_collision_detection)

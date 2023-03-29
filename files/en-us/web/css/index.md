@@ -1,18 +1,7 @@
 ---
-title: 'CSS: Cascading Style Sheets'
+title: "CSS: Cascading Style Sheets"
 slug: Web/CSS
-tags:
-  - CSS
-  - Cascading Style Sheets
-  - Design
-  - Guide
-  - Landing
-  - Layout
-  - Reference
-  - Style Sheets
-  - Styles
-  - Stylesheets
-  - l10n:priority
+page-type: landing-page
 ---
 
 {{CSSRef}}
@@ -91,7 +80,7 @@ The [CSS layout cookbook](/en-US/docs/Web/CSS/Layout_cookbook) aims to bring tog
 
 ## Meta bugs
 
-- Firefox: {{bug(1323667)}}
+- Firefox: [Firefox bug 1323667](https://bugzil.la/1323667)
 
 ## See also
 

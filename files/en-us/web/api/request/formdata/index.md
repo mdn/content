@@ -2,13 +2,6 @@
 title: Request.formData()
 slug: Web/API/Request/formData
 page-type: web-api-instance-method
-tags:
-  - API
-  - Fetch
-  - Fetch API
-  - FormData
-  - Method
-  - Reference
 browser-compat: api.Request.formData
 ---
 
@@ -19,7 +12,7 @@ reads the request body and returns it as a promise that resolves with a {{domxre
 
 ## Syntax
 
-```js
+```js-nolint
 formData()
 ```
 
@@ -37,12 +30,12 @@ A {{jsxref("Promise")}} that resolves with a {{domxref("FormData")}} object.
 const formData = new FormData();
 const fileField = document.querySelector('input[type="file"]');
 
-formData.append('username', 'abc123');
-formData.append('avatar', fileField.files[0]);
+formData.append("username", "abc123");
+formData.append("avatar", fileField.files[0]);
 
-const request = new Request('/myEndpoint', {
-  method: 'POST',
-  body: formData
+const request = new Request("/myEndpoint", {
+  method: "POST",
+  body: formData,
 });
 
 request.formData().then((data) => {

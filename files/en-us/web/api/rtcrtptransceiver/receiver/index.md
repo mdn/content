@@ -2,21 +2,12 @@
 title: RTCRtpTransceiver.receiver
 slug: Web/API/RTCRtpTransceiver/receiver
 page-type: web-api-instance-property
-tags:
-  - API
-  - Media
-  - Property
-  - RTCRtpTransceiver
-  - RTP
-  - Reference
-  - WebRTC
-  - receiver
 browser-compat: api.RTCRtpTransceiver.receiver
 ---
 
 {{APIRef("WebRTC")}}
 
-The read-only  **`receiver`** property
+The read-only **`receiver`** property
 of WebRTC's {{domxref("RTCRtpTransceiver")}} interface indicates the
 {{domxref("RTCRtpReceiver")}} responsible for receiving and decoding incoming media
 data for the transceiver's stream.

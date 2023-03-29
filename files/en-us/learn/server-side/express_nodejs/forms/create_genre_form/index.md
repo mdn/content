@@ -1,12 +1,6 @@
 ---
 title: Create genre form
 slug: Learn/Server-side/Express_Nodejs/forms/Create_genre_form
-tags:
-  - Express
-  - Forms
-  - Node
-  - part 6
-  - server-side
 ---
 
 This sub article shows how we define our page to create `Genre` objects (this is a good place to start because the `Genre` has only one field, its `name`, and no dependencies). Like any other pages, we need to set up routes, controllers, and views.
@@ -101,12 +95,9 @@ The first method in the array defines a body validator (`body()`) that validates
 ```js
 [
   // Validate that the name field is not empty.
-  body('name', 'Genre name required')
-    .trim()
-    .isLength({ min: 1 })
-    .escape(),
+  body("name", "Genre name required").trim().isLength({ min: 1 }).escape(),
   // …
-]
+];
 ```
 
 After specifying the validators we create a middleware function to extract any validation errors. We use `isEmpty()` to check whether there are any errors in the validation result. If there are then we render the form again, passing in our sanitized genre object and the array of error messages (`errors.array()`).
@@ -196,7 +187,7 @@ block content
 
 Much of this template will be familiar from our previous tutorials. First, we extend the **layout.pug** base template and override the `block` named '**content**'. We then have a heading with the `title` we passed in from the controller (via the `render()` method).
 
-Next, we have the pug code for our HTML form that uses the `POST` `method` to send the data to the server, and because the `action` is an empty string, will send the data to the same URL as the page.
+Next, we have the pug code for our HTML form that uses `method="POST"` to send the data to the server, and because the `action` is an empty string, will send the data to the same URL as the page.
 
 The form defines a single required field of type "text" called "name". The default _value_ of the field depends on whether the `genre` variable is defined. If called from the `GET` route it will be empty as this is a new form. If called from a `POST` route it will contain the (invalid) value originally entered by the user.
 

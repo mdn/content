@@ -2,16 +2,6 @@
 title: RTCStats
 slug: Web/API/RTCStats
 page-type: web-api-interface
-tags:
-  - API
-  - Dictionary
-  - RTCStats
-  - Reference
-  - Report
-  - Statistics
-  - Stats
-  - WebRTC
-  - rtc
 spec-urls: https://w3c.github.io/webrtc-stats/#dom-rtcstats
 ---
 
@@ -21,7 +11,7 @@ The **`RTCStats`** dictionary is the basic statistics object used by WebRTC's st
 
 Specific classes of statistic are defined as dictionaries based on `RTCStats`. For example, statistics about a received {{Glossary("RTP")}} stream are represented by {{domxref("RTCReceivedRtpStreamStats")}}.
 
-## Properties
+## Instance properties
 
 - {{domxref("RTCStats.id", "id")}}
   - : A string which uniquely identifies the object which was inspected to produce this object based on `RTCStats`.

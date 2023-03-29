@@ -1,14 +1,7 @@
 ---
 title: Using CSS counters
 slug: Web/CSS/CSS_Counter_Styles/Using_CSS_counters
-tags:
-  - Advanced
-  - CSS
-  - CSS Counter Styles
-  - Guide
-  - Layout
-  - Reference
-  - Web
+page-type: guide
 spec-urls: https://drafts.csswg.org/css-lists/#auto-numbering
 ---
 
@@ -70,8 +63,8 @@ For example, the following declaration uses `counter()` to prefix each `h3` head
 
 ```css
 h3::before {
-  counter-increment: section;                 /* Increment the value of section counter by 1 */
-  content: "Section " counter(section) ": ";  /* Display counter value in default style (decimal) */
+  counter-increment: section; /* Increment the value of section counter by 1 */
+  content: "Section " counter(section) ": "; /* Display counter value in default style (decimal) */
 }
 ```
 
@@ -106,7 +99,7 @@ For example, you might use this to lay out sections as shown:
 The {{cssxref("counter", "counter()")}} function has two forms: `counter(<counter-name>)` and `counter(<counter-name>, <counter-style>)`.
 The generated text is the value of the innermost counter of the given name in scope at the pseudo-element.
 
-The {{cssxref("counters", "counters()")}} function also has two forms: `counters(<counter-name>, <separator>)` and  `counters(<counter-name>, <separator>, <counter-style>)`.
+The {{cssxref("counters", "counters()")}} function also has two forms: `counters(<counter-name>, <separator>)` and `counters(<counter-name>, <separator>, <counter-style>)`.
 The generated text is the value of all counters with the given name in scope at the given pseudo-element, from outermost to innermost, separated by the specified string (`<separator>`).
 
 The counter is rendered in the specified `<counter-style>` for both methods (`decimal` by default).
@@ -155,14 +148,14 @@ This example adds "Section \[the value of the counter]:" to the beginning of eac
 
 ```css
 body {
-  counter-reset: section;                      /* Set a counter named 'section', and its initial value is 0. */
+  counter-reset: section; /* Set a counter named 'section', and its initial value is 0. */
 }
 
 h3::before {
-  counter-increment: section;                  /* Increment the value of section counter by 1 */
-  content: "Section " counter(section) ": ";   /* Display the word 'Section ', the value of
-                                                  section counter, and a colon before the content
-                                                  of each h3 */
+  counter-increment: section; /* Increment the value of section counter by 1 */
+  content: "Section " counter(section) ": "; /* Display the word 'Section ', the value of
+                                                section counter, and a colon before the content
+                                                of each h3 */
 }
 ```
 
@@ -189,14 +182,16 @@ If your browser supports the `reversed()` function notation, the result will loo
 
 ```css
 body {
-  counter-reset: reversed(section);           /* Set a counter named 'section', and its initial value is 0. */
+  counter-reset: reversed(
+    section
+  ); /* Set a counter named 'section', and its initial value is 0. */
 }
 
 h3::before {
-  counter-increment: section -1;              /* Decrement the value of section counter by 1 */
-  content: "Section " counter(section) ": ";  /* Display the word 'Section ', the value of
-                                                 section counter, and a colon before the content
-                                                 of each h3 */
+  counter-increment: section -1; /* Decrement the value of section counter by 1 */
+  content: "Section " counter(section) ": "; /* Display the word 'Section ', the value of
+                                                section counter, and a colon before the content
+                                                of each h3 */
 }
 ```
 
@@ -254,24 +249,24 @@ Using the {{cssxref("counters", "counters()")}} function, separating text can be
 
 ```css
 ol {
-  counter-reset: section;                /* Creates a new instance of the
-                                            section counter with each ol
-                                            element */
+  counter-reset: section; /* Creates a new instance of the
+                             section counter with each ol
+                             element */
   list-style-type: none;
 }
 
 li::before {
-  counter-increment: section;            /* Increments only this instance
+  counter-increment: section; /* Increments only this instance
                                             of the section counter */
-  content: counters(section, ".") " ";   /* Combines the values of all instances
-                                            of the section counter, separated
-                                            by a period */
+  content: counters(section, ".") " "; /* Combines the values of all instances
+                                          of the section counter, separated
+                                          by a period */
 }
 ```
 
 #### HTML
 
-```html
+```html-nolint
 <ol>
   <li>item</li>          <!-- 1     -->
   <li>item               <!-- 2     -->

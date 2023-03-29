@@ -2,9 +2,6 @@
 title: Event.stopImmediatePropagation()
 slug: Web/API/Event/stopImmediatePropagation
 page-type: web-api-instance-method
-tags:
-  - Method
-  - Reference
 browser-compat: api.Event.stopImmediatePropagation
 ---
 
@@ -20,8 +17,8 @@ is invoked during one such call, no remaining listeners will be called.
 
 ## Syntax
 
-```js
-event.stopImmediatePropagation();
+```js-nolint
+event.stopImmediatePropagation()
 ```
 
 ## Specifications

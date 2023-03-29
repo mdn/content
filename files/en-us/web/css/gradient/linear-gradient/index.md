@@ -1,16 +1,7 @@
 ---
 title: linear-gradient()
 slug: Web/CSS/gradient/linear-gradient
-tags:
-  - CSS
-  - CSS Function
-  - CSS Images
-  - Function
-  - Graphics
-  - Layout
-  - Reference
-  - Web
-  - gradient
+page-type: css-function
 browser-compat: css.types.image.gradient.linear-gradient
 ---
 
@@ -40,7 +31,7 @@ linear-gradient(0deg, blue, green 40%, red);
    starting red, getting to the midpoint color
    10% of the way across the length of the gradient,
    taking the rest of the 90% of the length to change to blue */
-linear-gradient(.25turn, red 10%, blue);
+linear-gradient(.25turn, red, 10%, blue);
 
 /* Multi-position color stop: A gradient tilted 45 degrees,
    with a red bottom-left half and a blue top-right half,
@@ -171,8 +162,14 @@ body {
 
 ```css
 body {
-  background: linear-gradient(to right,
-     red 20%, orange 20% 40%, yellow 40% 60%, green 60% 80%, blue 80%);
+  background: linear-gradient(
+    to right,
+    red 20%,
+    orange 20% 40%,
+    yellow 40% 60%,
+    green 60% 80%,
+    blue 80%
+  );
 }
 ```
 

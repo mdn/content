@@ -2,10 +2,13 @@
 title: PaymentRequestEvent.instrumentKey
 slug: Web/API/PaymentRequestEvent/instrumentKey
 page-type: web-api-instance-property
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.PaymentRequestEvent.instrumentKey
 ---
 
-{{APIRef("Payment Request API")}}{{deprecated_header}}{{non-standard_header}}
+{{APIRef("Payment Handler API")}}{{deprecated_header}}{{non-standard_header}}
 
 The **`instrumentKey`** read-only property of the
 {{domxref("PaymentRequestEvent")}} interface returns a

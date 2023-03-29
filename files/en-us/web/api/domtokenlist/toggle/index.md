@@ -2,9 +2,6 @@
 title: DOMTokenList.toggle()
 slug: Web/API/DOMTokenList/toggle
 page-type: web-api-instance-method
-tags:
-  - Method
-  - Reference
 browser-compat: api.DOMTokenList.toggle
 ---
 
@@ -16,9 +13,9 @@ If the token doesn't exist it's added and the function returns `true`.
 
 ## Syntax
 
-```js
-toggle(token);
-toggle(token, force);
+```js-nolint
+toggle(token)
+toggle(token, force)
 ```
 
 ### Parameters
@@ -27,8 +24,8 @@ toggle(token, force);
   - : A string representing the token you want to toggle.
 - `force` {{optional_inline}}
   - : If included, turns the toggle into a one way-only operation.
-     If set to `false`, then `token` will _only_ be removed, but not added.
-     If set to `true`, then `token` will _only_ be added, but not removed.
+    If set to `false`, then `token` will _only_ be removed, but not added.
+    If set to `true`, then `token` will _only_ be added, but not removed.
 
 ### Return value
 
@@ -56,10 +53,12 @@ Now the JavaScript:
 const span = document.querySelector("span");
 const classes = span.classList;
 
-span.addEventListener('click', () => {
+span.addEventListener("click", () => {
   const result = classes.toggle("c");
-  span.textContent = `'c' ${result ? "added" : "removed"}; classList is now "${classes}".`;
-})
+  span.textContent = `'c' ${
+    result ? "added" : "removed"
+  }; classList is now "${classes}".`;
+});
 ```
 
 The output looks like this and it will change each time you click on the text:

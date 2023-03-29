@@ -1,13 +1,6 @@
 ---
 title: JavaScript basics
 slug: Learn/Getting_started_with_the_web/JavaScript_basics
-tags:
-  - Beginner
-  - CodingScripting
-  - JavaScript
-  - Learn
-  - Web
-  - l10n:priority
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Getting_started_with_the_web/CSS_basics", "Learn/Getting_started_with_the_web/Publishing_your_website", "Learn/Getting_started_with_the_web")}}
@@ -33,7 +26,7 @@ It's outside the scope of this article—as a light introduction to JavaScript�
 
 The section below introduces some aspects of the core language and offers an opportunity to play with a few browser API features too. Have fun!
 
-## A _Hello world!_ example
+## A "Hello world!" example
 
 JavaScript is one of the most popular modern web technologies! As your JavaScript skills grow, your websites will enter a new dimension of power and creativity.
 
@@ -44,17 +37,17 @@ However, getting comfortable with JavaScript is more challenging than getting co
 1. Go to your test site and create a new folder named `scripts`. Within the scripts folder, create a new text document called `main.js`, and save it.
 2. In your `index.html` file, enter this code on a new line, just before the closing `</body>` tag:
 
-    ```html
-    <script src="scripts/main.js"></script>
-    ```
+   ```html
+   <script src="scripts/main.js"></script>
+   ```
 
 3. This is doing the same job as the {{htmlelement("link")}} element for CSS. It applies the JavaScript to the page, so it can have an effect on the HTML (along with the CSS, and anything else on the page).
 4. Add this code to the `main.js` file:
 
-    ```js
-    const myHeading = document.querySelector('h1');
-    myHeading.textContent = 'Hello world!';
-    ```
+   ```js
+   const myHeading = document.querySelector("h1");
+   myHeading.textContent = "Hello world!";
+   ```
 
 5. Make sure the HTML and JavaScript files are saved. Then load `index.html` in your browser. You should see something like this:
 
@@ -76,7 +69,7 @@ Following that, the code set the value of the `myHeading` variable's {{domxref("
 
 To give you a better understanding of how JavaScript works, let's explain some of the core features of the language. It's worth noting that these features are common to all programming languages. If you master these fundamentals, you have a head start on coding in other languages too!
 
-> **Warning:** In this article, try entering the example code lines into your JavaScript console to see what happens. For more details on JavaScript consoles, see [Discover browser developer tools](/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools).
+> **Warning:** In this article, try entering the example code lines into your JavaScript console to see what happens. For more details on JavaScript consoles, see [Discover browser developer tools](/en-US/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools).
 
 ### Variables
 
@@ -95,13 +88,13 @@ JavaScript is case sensitive. This means `myVariable` is not the same as `myvari
 After declaring a variable, you can give it a value:
 
 ```js
-myVariable = 'Bob';
+myVariable = "Bob";
 ```
 
 Also, you can do both these operations on the same line:
 
 ```js
-let myVariable = 'Bob';
+let myVariable = "Bob";
 ```
 
 You retrieve the value by calling the variable name:
@@ -113,8 +106,8 @@ myVariable;
 After assigning a value to a variable, you can change it later in the code:
 
 ```js
-let myVariable = 'Bob';
-myVariable = 'Steve';
+let myVariable = "Bob";
+myVariable = "Steve";
 ```
 
 Note that variables may hold values that have different [data types](/en-US/docs/Web/JavaScript/Data_structures):
@@ -132,9 +125,9 @@ Note that variables may hold values that have different [data types](/en-US/docs
       <th scope="row">{{Glossary("String")}}</th>
       <td>
         This is a sequence of text known as a string. To signify that the value
-        is a string, enclose it in single quote marks.
+        is a string, enclose it in single or double quote marks.
       </td>
-      <td><code>let myVariable = 'Bob';</code></td>
+      <td><code>let myVariable = 'Bob';</code> or <br/><code>let myVariable = "Bob";</code></td>
     </tr>
     <tr>
       <th scope="row">{{Glossary("Number")}}</th>
@@ -282,11 +275,11 @@ There are a lot more operators to explore, but this is enough for now. See [Expr
 Conditionals are code structures used to test if an expression returns true or not. A very common form of conditionals is the `if...else` statement. For example:
 
 ```js
-let iceCream = 'chocolate';
-if (iceCream === 'chocolate') {
-  alert('Yay, I love chocolate ice cream!');
+let iceCream = "chocolate";
+if (iceCream === "chocolate") {
+  alert("Yay, I love chocolate ice cream!");
 } else {
-  alert('Awwww, but chocolate is my favorite…');
+  alert("Awwww, but chocolate is my favorite…");
 }
 ```
 
@@ -297,11 +290,11 @@ The expression inside the `if ()` is the test. This uses the strict equality ope
 {{Glossary("Function", "Functions")}} are a way of packaging functionality that you wish to reuse. It's possible to define a body of code as a function that executes when you call the function name in your code. This is a good alternative to repeatedly writing the same code. You have already seen some uses of functions. For example:
 
 ```js
-let myVariable = document.querySelector('h1');
+let myVariable = document.querySelector("h1");
 ```
 
 ```js
-alert('hello!');
+alert("hello!");
 ```
 
 These functions, `document.querySelector` and `alert`, are built into the browser.
@@ -313,7 +306,7 @@ For example, the `alert()` function makes a pop-up box appear inside the browser
 You can also define your own functions. In the next example, we create a simple function which takes two numbers as arguments and multiplies them:
 
 ```js
-function multiply(num1,num2) {
+function multiply(num1, num2) {
   let result = num1 * num2;
   return result;
 }
@@ -334,37 +327,20 @@ multiply(0.5, 3);
 Real interactivity on a website requires event handlers. These are code structures that listen for activity in the browser, and run code in response. The most obvious example is handling the [click event](/en-US/docs/Web/API/Element/click_event), which is fired by the browser when you click on something with your mouse. To demonstrate this, enter the following into your console, then click on the current webpage:
 
 ```js
-document.querySelector('html').addEventListener('click', function () {
-  alert('Ouch! Stop poking me!');
+document.querySelector("html").addEventListener("click", function () {
+  alert("Ouch! Stop poking me!");
 });
 ```
 
-There are many ways to attach an event handler to an element. Here we select the {{htmlelement("html")}} element. We then call its [`addEventListener()`](/en-US/docs/Web/API/EventTarget/addEventListener) function, passing in the name of the event to listen to (`'click'`) and a function to run when the event happens.
+There are a number of ways to attach an event handler to an element.
+Here we select the {{htmlelement("html")}} element. We then call its [`addEventListener()`](/en-US/docs/Web/API/EventTarget/addEventListener) function, passing in the name of the event to listen to (`'click'`) and a function to run when the event happens.
 
-Note that
-
-```js
-document.querySelector('html').addEventListener('click', function () {
-  alert('Ouch! Stop poking me!');
-});
-```
-
-is equivalent to
+The function we just passed to `addEventListener()` here is called an _anonymous function_, because it doesn't have a name. There's an alternative way of writing anonymous functions, which we call an _arrow function_.
+An arrow function uses `() =>` instead of `function ()`:
 
 ```js
-let myHTML = document.querySelector('html');
-myHTML.addEventListener('click', function () {
-  alert('Ouch! Stop poking me!');
-});
-```
-
-It's just shorter.
-
-The functions we just passed to `addEventListener()` here are called _anonymous functions_, because they don't have a name. There's an alternative way of writing anonymous functions, which we call an _arrow function_. An arrow function uses `() =>` instead of `function ()`:
-
-```js
-document.querySelector('html').addEventListener('click', () => {
-  alert('Ouch! Stop poking me!');
+document.querySelector("html").addEventListener("click", () => {
+  alert("Ouch! Stop poking me!");
 });
 ```
 
@@ -383,28 +359,28 @@ In this section, you will learn how to use JavaScript and DOM API features to al
 3. Rename the image _firefox2.png_.
 4. Add the following JavaScript code to your `main.js` file.
 
-    ```js
-    const myImage = document.querySelector('img');
+   ```js
+   const myImage = document.querySelector("img");
 
-    myImage.onclick = () => {
-      const mySrc = myImage.getAttribute('src');
-      if (mySrc === 'images/firefox-icon.png') {
-        myImage.setAttribute('src','images/firefox2.png');
-      } else {
-        myImage.setAttribute('src','images/firefox-icon.png');
-      }
-    }
-    ```
+   myImage.onclick = () => {
+     const mySrc = myImage.getAttribute("src");
+     if (mySrc === "images/firefox-icon.png") {
+       myImage.setAttribute("src", "images/firefox2.png");
+     } else {
+       myImage.setAttribute("src", "images/firefox-icon.png");
+     }
+   };
+   ```
 
 5. Save all files and load `index.html` in the browser. Now when you click the image, it should change to the other one.
 
-This is what happened. You stored a reference to your {{htmlelement("img")}} element in the `myImage` variable. Next, you made this variable's `onclick` event handler property equal to a function with no name (an "anonymous" function). So every time this element is clicked:
+This is what happened. You stored a reference to your {{htmlelement("img")}} element in `myImage`. Next, you made its `onclick` event handler property equal to a function with no name (an "anonymous" function). So every time this element is clicked:
 
 1. The code retrieves the value of the image's `src` attribute.
 2. The code uses a conditional to check if the `src` value is equal to the path of the original image:
 
-    1. If it is, the code changes the `src` value to the path of the second image, forcing the other image to be loaded inside the {{htmlelement("img")}} element.
-    2. If it isn't (meaning it must already have changed), the `src` value swaps back to the original image path, to the original state.
+   1. If it is, the code changes the `src` value to the path of the second image, forcing the other image to be loaded inside the {{htmlelement("img")}} element.
+   2. If it isn't (meaning it must already have changed), the `src` value swaps back to the original image path, to the original state.
 
 ### Adding a personalized welcome message
 
@@ -412,49 +388,49 @@ Next, let's change the page title to a personalized welcome message when the use
 
 1. In `index.html`, add the following line just before the {{htmlelement("script")}} element:
 
-    ```html
-    <button>Change user</button>
-    ```
+   ```html
+   <button>Change user</button>
+   ```
 
 2. In `main.js`, place the following code at the bottom of the file, exactly as it is written. This takes references to the new button and the heading, storing each inside variables:
 
-    ```js
-    let myButton = document.querySelector('button');
-    let myHeading = document.querySelector('h1');
-    ```
+   ```js
+   let myButton = document.querySelector("button");
+   let myHeading = document.querySelector("h1");
+   ```
 
 3. Add the following function to set the personalized greeting. This won't do anything yet, but this will change soon.
 
-    ```js
-    function setUserName() {
-      const myName = prompt('Please enter your name.');
-      localStorage.setItem('name', myName);
-      myHeading.textContent = `Mozilla is cool, ${myName}`;
-    }
-    ```
+   ```js
+   function setUserName() {
+     const myName = prompt("Please enter your name.");
+     localStorage.setItem("name", myName);
+     myHeading.textContent = `Mozilla is cool, ${myName}`;
+   }
+   ```
 
-    The `setUserName()` function contains a [`prompt()`](/en-US/docs/Web/API/Window/prompt) function, which displays a dialog box, similar to `alert()`. This `prompt()` function does more than `alert()`, asking the user to enter data, and storing it in a variable after the user clicks _OK._ In this case, we are asking the user to enter a name. Next, the code calls on an API `localStorage`, which allows us to store data in the browser and retrieve it later. We use localStorage's `setItem()` function to create and store a data item called `'name'`, setting its value to the `myName` variable which contains the user's entry for the name. Finally, we set the `textContent` of the heading to a string, plus the user's newly stored name.
+   The `setUserName()` function contains a [`prompt()`](/en-US/docs/Web/API/Window/prompt) function, which displays a dialog box, similar to `alert()`. This `prompt()` function does more than `alert()`, asking the user to enter data, and storing it in a variable after the user clicks _OK._ In this case, we are asking the user to enter a name. Next, the code calls on an API `localStorage`, which allows us to store data in the browser and retrieve it later. We use localStorage's `setItem()` function to create and store a data item called `'name'`, setting its value to the `myName` variable which contains the user's entry for the name. Finally, we set the `textContent` of the heading to a string, plus the user's newly stored name.
 
 4. Add the following condition block. We could call this initialization code, as it structures the app when it first loads.
 
-    ```js
-    if (!localStorage.getItem('name')) {
-      setUserName();
-    } else {
-      const storedName = localStorage.getItem('name');
-      myHeading.textContent = `Mozilla is cool, ${storedName}`;
-    }
-    ```
+   ```js
+   if (!localStorage.getItem("name")) {
+     setUserName();
+   } else {
+     const storedName = localStorage.getItem("name");
+     myHeading.textContent = `Mozilla is cool, ${storedName}`;
+   }
+   ```
 
-    This first line of this block uses the negation operator (logical NOT, represented by the `!`) to check whether the `name` data exists. If not, the `setUserName()` function runs to create it. If it exists (that is, the user set a user name during a previous visit), we retrieve the stored name using `getItem()` and set the `textContent` of the heading to a string, plus the user's name, as we did inside `setUserName()`.
+   This first line of this block uses the negation operator (logical NOT, represented by the `!`) to check whether the `name` data exists. If not, the `setUserName()` function runs to create it. If it exists (that is, the user set a user name during a previous visit), we retrieve the stored name using `getItem()` and set the `textContent` of the heading to a string, plus the user's name, as we did inside `setUserName()`.
 
 5. Put this `onclick` event handler (below) on the button. When clicked, `setUserName()` runs. This allows the user to enter a different name by pressing the button.
 
-    ```js
-    myButton.onclick = () => {
-      setUserName();
-    }
-    ```
+   ```js
+   myButton.onclick = () => {
+     setUserName();
+   };
+   ```
 
 ### A user name of null?
 
@@ -466,11 +442,11 @@ To avoid these problems, you could check that the user hasn't entered a blank na
 
 ```js
 function setUserName() {
-  const myName = prompt('Please enter your name.');
+  const myName = prompt("Please enter your name.");
   if (!myName) {
     setUserName();
   } else {
-    localStorage.setItem('name', myName);
+    localStorage.setItem("name", myName);
     myHeading.textContent = `Mozilla is cool, ${myName}`;
   }
 }
@@ -496,14 +472,3 @@ We have just scratched the surface of JavaScript. If you enjoyed playing, and wi
   - : This is an excellent resource for aspiring web developers! Learn JavaScript in an interactive environment, with short lessons and interactive tests, guided by an automated assessment. The first 40 lessons are free. The complete course is available for a small one-time payment.
 
 {{PreviousMenuNext("Learn/Getting_started_with_the_web/CSS_basics", "Learn/Getting_started_with_the_web/Publishing_your_website", "Learn/Getting_started_with_the_web")}}
-
-## In this module
-
-- [Installing basic software](/en-US/docs/Learn/Getting_started_with_the_web/Installing_basic_software)
-- [What will your website look like?](/en-US/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like)
-- [Dealing with files](/en-US/docs/Learn/Getting_started_with_the_web/Dealing_with_files)
-- [HTML basics](/en-US/docs/Learn/Getting_started_with_the_web/HTML_basics)
-- [CSS basics](/en-US/docs/Learn/Getting_started_with_the_web/CSS_basics)
-- [JavaScript basics](/en-US/docs/Learn/Getting_started_with_the_web/JavaScript_basics)
-- [Publishing your website](/en-US/docs/Learn/Getting_started_with_the_web/Publishing_your_website)
-- [How the web works](/en-US/docs/Learn/Getting_started_with_the_web/How_the_Web_works)

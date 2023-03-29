@@ -2,13 +2,6 @@
 title: TimeRanges.end()
 slug: Web/API/TimeRanges/end
 page-type: web-api-instance-method
-tags:
-  - API
-  - HTML DOM
-  - Media
-  - Method
-  - Reference
-  - TimeRanges
 browser-compat: api.TimeRanges.end
 ---
 
@@ -18,7 +11,7 @@ The **`end()`** method of the {{domxref("TimeRanges")}} interface returns the ti
 
 ## Syntax
 
-```js
+```js-nolint
 end(index)
 ```
 

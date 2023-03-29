@@ -1,17 +1,9 @@
 ---
 title: runtime.onBrowserUpdateAvailable
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/onBrowserUpdateAvailable
-tags:
-  - API
-  - Add-ons
-  - Deprecated
-  - Event
-  - Extensions
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - onBrowserUpdateAvailable
-  - runtime
+page-type: webextension-api-event
+status:
+  - deprecated
 browser-compat: webextensions.api.runtime.onBrowserUpdateAvailable
 ---
 
@@ -21,7 +13,7 @@ Fired when an update for the browser is available, but it isn't installed immedi
 
 ## Syntax
 
-```js
+```js-nolint
 browser.runtime.onBrowserUpdateAvailable.addListener(listener)
 browser.runtime.onBrowserUpdateAvailable.removeListener(listener)
 browser.runtime.onBrowserUpdateAvailable.hasListener(listener)
@@ -62,8 +54,6 @@ browser.runtime.onBrowserUpdateAvailable.addListener(handleBrowserUpdateAvailabl
 {{WebExtExamples}}
 
 > **Note:** This API is based on Chromium's [`chrome.runtime`](https://developer.chrome.com/docs/extensions/reference/runtime/#event-onBrowserUpdateAvailable) API. This documentation is derived from [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) in the Chromium code.
->
-> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

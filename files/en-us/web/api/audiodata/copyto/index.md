@@ -2,13 +2,8 @@
 title: AudioData.copyTo()
 slug: Web/API/AudioData/copyTo
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - copyTo
-  - AudioData
-  - Experimental
+status:
+  - experimental
 browser-compat: api.AudioData.copyTo
 ---
 
@@ -18,7 +13,7 @@ The **`copyTo()`** method of the {{domxref("AudioData")}} interface copies a pla
 
 ## Syntax
 
-```js
+```js-nolint
 copyTo(destination, options)
 ```
 
@@ -42,7 +37,7 @@ Undefined.
 ### Exceptions
 
 - `InvalidStateError` {{domxref("DOMException")}}
-  - : Thrown if the `AudioData` object has been {{Glossary("Transferable Objects","transferred")}}.
+  - : Thrown if the `AudioData` object has been [transferred](/en-US/docs/Web/API/Web_Workers_API/Transferable_objects).
 - {{jsxref("RangeError")}}
   - : Thrown if one of the following conditions is met:
     - The length of the sample is longer than the destination length.
@@ -54,7 +49,7 @@ Undefined.
 The following example copies the plane at index `1` to a destination buffer.
 
 ```js
-AudioData.copyTo(AudioBuffer, {planeIndex: 1});
+AudioData.copyTo(AudioBuffer, { planeIndex: 1 });
 ```
 
 ## Specifications

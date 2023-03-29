@@ -2,12 +2,6 @@
 title: Managing screen orientation
 slug: Web/API/CSS_Object_Model/Managing_screen_orientation
 page-type: guide
-tags:
-  - API
-  - Advanced
-  - CSSOM View
-  - Guide
-  - Screen Orientation
 ---
 
 {{DefaultAPISidebar("Screen Orientation API")}}{{SeeCompatTable}}
@@ -31,7 +25,12 @@ Let's have an example with the following HTML code
   <li>C</li>
 </ul>
 
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis lacinia nisi nec sem viverra vitae fringilla nulla ultricies. In ac est dolor, quis tincidunt leo. Cras commodo quam non tortor consectetur eget rutrum dolor ultricies. Ut interdum tristique dapibus. Nullam quis malesuada est.</p>
+<p>
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis lacinia nisi nec
+  sem viverra vitae fringilla nulla ultricies. In ac est dolor, quis tincidunt
+  leo. Cras commodo quam non tortor consectetur eget rutrum dolor ultricies. Ut
+  interdum tristique dapibus. Nullam quis malesuada est.
+</p>
 ```
 
 CSS relies on the orientation media query to handle specific styles based on the screen orientation
@@ -39,8 +38,9 @@ CSS relies on the orientation media query to handle specific styles based on the
 ```css
 /* First let's define some common styles */
 
-html, body {
-  width : 100%;
+html,
+body {
+  width: 100%;
   height: 100%;
 }
 
@@ -52,17 +52,17 @@ body {
 }
 
 p {
-  font   : 1em sans-serif;
-  margin : 0;
-  padding: .5em;
+  font: 1em sans-serif;
+  margin: 0;
+  padding: 0.5em;
 }
 
 ul {
   list-style: none;
 
-  font   : 1em monospace;
-  margin : 0;
-  padding: .5em;
+  font: 1em monospace;
+  margin: 0;
+  padding: 0.5em;
 
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -72,7 +72,7 @@ ul {
 
 li {
   display: inline-block;
-  margin : 0;
+  margin: 0;
   padding: 0.5em;
   background: white;
 }
@@ -103,7 +103,7 @@ Once we have some common styles we can start defining a special case for the ori
   }
 
   li + li {
-    margin-top: .5em;
+    margin-top: 0.5em;
   }
 }
 ```
@@ -158,7 +158,7 @@ Any web application can lock the screen to suits its own needs. The screen is lo
 The {{domxref("ScreenOrientation.lock()", "screen.orientation.lock()")}} method accepts one of the following values to define the kind of lock to apply: `any`, `natural`. `portrait-primary`, `portrait-secondary`, `landscape-primary`, `landscape-secondary`, `portrait`, and `landscape`:
 
 ```js
-{{domxref("ScreenOrientation.lock()", "screen.orientation.lock()")}} ;
+screen.orientation.lock();
 ```
 
 It returns a [promise](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that resolves after the lock succeeds.
@@ -173,4 +173,3 @@ It returns a [promise](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promi
 - {{domxref("ScreenOrientation")}}
 - {{DOMxRef("Screen.orientationchange_event", "orientationchange")}} event
 - [The orientation media query](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#orientation)
-- [A short introduction to media queries in Firefox 3.5](https://hacks.mozilla.org/2009/06/media-queries/)

@@ -2,12 +2,6 @@
 title: SVGStyleElement
 slug: Web/API/SVGStyleElement
 page-type: web-api-interface
-tags:
-  - API
-  - NeedsExample
-  - Reference
-  - SVG
-  - SVG DOM
 browser-compat: api.SVGStyleElement
 ---
 
@@ -17,7 +11,7 @@ The **`SVGStyleElement`** interface corresponds to the SVG {{SVGElement("style")
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _This interface also inherits properties from its parent interface, {{domxref("SVGElement")}}._
 
@@ -34,12 +28,13 @@ _This interface also inherits properties from its parent interface, {{domxref("S
   - : A string corresponding to the [`title`](/en-US/docs/Web/SVG/Element/style#title) attribute of the given element.
 
 - {{domxref("SVGStyleElement.sheet")}} {{ReadOnlyInline}}
+
   - : Returns the {{domxref("CSSStyleSheet")}} object associated with the given element, or `null` if there is none.
 
 - {{domxref("SVGStyleElement.disabled")}}
   - : A boolean value indicating whether or not the associated stylesheet is disabled.
 
-## Methods
+## Instance methods
 
 _This interface doesn't implement any specific methods, but inherits methods from its parent interface, {{domxref("SVGElement")}}._
 
@@ -54,8 +49,10 @@ To dynamically create an SVG style element (`SVGStyleElement`), you need to use 
 Given the following SVG element:
 
 ```html
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <circle cx="50" cy="50" r="25" />
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink">
+  <circle cx="50" cy="50" r="25" />
 </svg>
 ```
 
@@ -66,8 +63,8 @@ You can create an SVG style element as shown:
 const svg = document.querySelector("svg");
 
 // Create the `style` element in the SVG namespace
-const style = document.createElementNS('http://www.w3.org/2000/svg', 'style');
-const node = document.createTextNode('circle { fill: red; }');
+const style = document.createElementNS("http://www.w3.org/2000/svg", "style");
+const node = document.createTextNode("circle { fill: red; }");
 style.appendChild(node);
 
 // Append the style element to the SVG element
@@ -82,7 +79,9 @@ These include: {{domxref("Document.getElementsByTagName()")}}, {{domxref("Docume
 For example, consider the HTML below that defines an SVG file with a style element.
 
 ```html
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink">
   <style id="circle_style_id">
     circle {
       fill: gold;
@@ -125,7 +124,9 @@ The HTML contains an SVG definition for a [`<circle>`](/en-US/docs/Web/SVG/Eleme
 ```html
 <button>Disable</button>
 <textarea id="log" rows="6" cols="90"></textarea>
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink">
   <style id="circle_style_id" media="all and (min-width: 600px)">
     circle {
       fill: gold;
@@ -154,14 +155,14 @@ This is called after initialization, whenever the frame resizes, and if the butt
 
 ```js
 // Get logging text area
-const log = document.getElementById("log")
+const log = document.getElementById("log");
 
 function setLogText() {
   //Log current values of properties
   log.value = `style.media: ${style.media} (frame width: ${window.innerWidth})\n`; // 'all' by default
   log.value += `style.title: ${style.title}\n`; // no default value
-  log.value += `style.disabled: ${style.disabled}\n`;  // 'false' by default
-  log.value += `style.type: ${style.type}\n`;  // deprecated (do not use)
+  log.value += `style.disabled: ${style.disabled}\n`; // 'false' by default
+  log.value += `style.type: ${style.type}\n`; // deprecated (do not use)
   log.value += `style.sheet.rules[0].cssText: ${style.sheet.rules[0].cssText}\n`;
 }
 
@@ -169,8 +170,8 @@ function setLogText() {
 setLogText();
 
 // Log when the frame resizes
-addEventListener('resize', () => {
-    setLogText();
+addEventListener("resize", () => {
+  setLogText();
 });
 ```
 
@@ -179,15 +180,15 @@ When the button is clicked the {{domxref("SVGStyleElement.disabled","disabled")}
 This also updates the log and the button text.
 
 ```js
-const button = document.querySelector('button');
+const button = document.querySelector("button");
 
-button.addEventListener('click', () => {
-   style.disabled = !style.disabled;
-   button.textContent = style.disabled ? 'Enable' : 'Disable';
+button.addEventListener("click", () => {
+  style.disabled = !style.disabled;
+  button.textContent = style.disabled ? "Enable" : "Disable";
 
-   // Log after button presses
-   setLogText();
-   });
+  // Log after button presses
+  setLogText();
+});
 ```
 
 ### Result

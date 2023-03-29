@@ -2,29 +2,18 @@
 title: USBDevice.isochronousTransferIn()
 slug: Web/API/USBDevice/isochronousTransferIn
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - USB
-  - USBDevice
-  - WebUSB
-  - WebUSB API
-  - isochronousTransferIn
-  - Experimental
+status:
+  - experimental
 browser-compat: api.USBDevice.isochronousTransferIn
 ---
 
 {{APIRef("WebUSB API")}}{{SeeCompatTable}}
 
-The **`isochronousTransferIn()`** method of the
-{{domxref("USBDevice")}} interface returns a {{jsxref("promise")}} that resolves with a
-{{domxref("USBIsochronousInTransferResult")}} when time sensitive information has been
-transmitted received from the USB device.
+The **`isochronousTransferIn()`** method of the {{domxref("USBDevice")}} interface returns a {{jsxref("Promise")}} that resolves with a {{domxref("USBIsochronousInTransferResult")}} when time sensitive information has been transmitted to (received by) the USB device.
 
 ## Syntax
 
-```js
+```js-nolint
 isochronousTransferIn(endpointNumber, packetLengths)
 ```
 
@@ -37,8 +26,7 @@ isochronousTransferIn(endpointNumber, packetLengths)
 
 ### Return value
 
-A {{jsxref("promise")}} that resolves with a
-{{domxref("USBIsochronousInTransferResult")}}
+A {{jsxref("Promise")}} that resolves with a {{domxref("USBIsochronousInTransferResult")}}.
 
 ## Specifications
 

@@ -2,12 +2,6 @@
 title: Element.getAttributeNS()
 slug: Web/API/Element/getAttributeNS
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - Element
-  - Method
-  - Reference
 browser-compat: api.Element.getAttributeNS
 ---
 
@@ -21,7 +15,7 @@ details.
 
 ## Syntax
 
-```js
+```js-nolint
 getAttributeNS(namespace, name)
 ```
 
@@ -69,25 +63,33 @@ namespaces are not supported.
 ```html
 <!DOCTYPE html>
 <html lang="en-US">
-<head>
-  <meta charset="UTF-8">
-  <title>getAttributeNS() test page</title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <title>getAttributeNS() test page</title>
+  </head>
+  <body>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      xmlns:test="http://www.example.com/2014/test"
+      width="40"
+      height="40">
+      <circle
+        id="target"
+        cx="12"
+        cy="12"
+        r="10"
+        stroke="#444"
+        stroke-width="2"
+        fill="none"
+        test:foo="Foo value" />
+    </svg>
 
-<svg xmlns="http://www.w3.org/2000/svg"
-    xmlns:test="http://www.example.com/2014/test" width="40" height="40">
-  <circle id="target" cx="12" cy="12" r="10" stroke="#444" stroke-width="2"
-      fill="none" test:foo="Foo value"/>
-</svg>
-
-<script>
-  const ns = 'http://www.example.com/2014/test';
-  const circle = document.getElementById('target');
-  console.log(`Attribute value: ${circle.getAttribute('test:foo')}`);
-</script>
-
-</body>
+    <script>
+      const ns = "http://www.example.com/2014/test";
+      const circle = document.getElementById("target");
+      console.log(`Attribute value: ${circle.getAttribute("test:foo")}`);
+    </script>
+  </body>
 </html>
 ```
 

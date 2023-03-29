@@ -2,12 +2,6 @@
 title: Blob()
 slug: Web/API/Blob/Blob
 page-type: web-api-constructor
-tags:
-  - API
-  - Blob
-  - Constructor
-  - File API
-  - Reference
 browser-compat: api.Blob.Blob
 ---
 
@@ -19,7 +13,7 @@ of the values given in the parameter `array`.
 
 ## Syntax
 
-```js
+```js-nolint
 new Blob(array)
 new Blob(array, options)
 ```
@@ -27,6 +21,7 @@ new Blob(array, options)
 ### Parameters
 
 - `array`
+
   - : An [iterable](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterable_protocol)
     object such as an {{jsxref("Array")}}, having {{jsxref("ArrayBuffer")}}s,
     {{jsxref("TypedArray")}}s, {{jsxref("DataView")}}s, {{domxref("Blob")}}s, strings,
@@ -52,7 +47,7 @@ A new {{domxref("Blob")}} object containing the specified data.
 
 ```js
 const array = ['<q id="a"><span id="b">hey!</span></q>']; // an array consisting of a single string
-const blob = new Blob(array, {type : 'text/html'}); // the blob
+const blob = new Blob(array, { type: "text/html" }); // the blob
 ```
 
 ## Specifications

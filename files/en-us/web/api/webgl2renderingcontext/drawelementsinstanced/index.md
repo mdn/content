@@ -2,12 +2,6 @@
 title: WebGL2RenderingContext.drawElementsInstanced()
 slug: Web/API/WebGL2RenderingContext/drawElementsInstanced
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGL2
 browser-compat: api.WebGL2RenderingContext.drawElementsInstanced
 ---
 
@@ -19,13 +13,12 @@ array data like the {{domxref("WebGLRenderingContext.drawElements()",
   "gl.drawElements()")}} method. In addition, it can execute multiple instances of a set
 of elements.
 
-> **Note:** When using {{domxref("WebGLRenderingContext", "WebGL 1", "",
-    1)}}, the {{domxref("ANGLE_instanced_arrays")}} extension can provide this method,
+> **Note:** When using {{domxref("WebGLRenderingContext", "WebGL 1", "", 1)}}, the {{domxref("ANGLE_instanced_arrays")}} extension can provide this method,
 > too.
 
 ## Syntax
 
-```js
+```js-nolint
 drawElementsInstanced(mode, count, type, offset, instanceCount)
 ```
 

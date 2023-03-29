@@ -2,16 +2,6 @@
 title: Animation.play()
 slug: Web/API/Animation/play
 page-type: web-api-instance-method
-tags:
-  - API
-  - Animation
-  - Interface
-  - Method
-  - Reference
-  - Web Animations
-  - play
-  - waapi
-  - web animations api
 browser-compat: api.Animation.play
 ---
 
@@ -21,7 +11,7 @@ The **`play()`** method of the [Web Animations API](/en-US/docs/Web/API/Web_Anim
 
 ## Syntax
 
-```js
+```js-nolint
 play()
 ```
 
@@ -39,29 +29,28 @@ In the [Growing/Shrinking Alice Game](https://codepen.io/rachelnabors/pen/PNYGZQ
 
 ```js
 // The cake has its own animation:
-const nommingCake = document.getElementById('eat-me_sprite').animate(
-[
-  { transform: 'translateY(0)' },
-  { transform: 'translateY(-80%)' }
-], {
-  fill: 'forwards',
-  easing: 'steps(4, end)',
-  duration: aliceChange.effect.timing.duration / 2
-});
+const nommingCake = document
+  .getElementById("eat-me_sprite")
+  .animate(
+    [{ transform: "translateY(0)" }, { transform: "translateY(-80%)" }],
+    {
+      fill: "forwards",
+      easing: "steps(4, end)",
+      duration: aliceChange.effect.timing.duration / 2,
+    }
+  );
 
 // Pause the cake's animation so it doesn't play immediately.
 nommingCake.pause();
 
 // This function will play when ever a user clicks or taps
 const growAlice = () => {
-
   // Play Alice's animation.
   aliceChange.play();
 
   // Play the cake's animation.
   nommingCake.play();
-
-}
+};
 
 // When a user holds their mouse down or taps, call growAlice to make all the animations play.
 cake.addEventListener("mousedown", growAlice, false);

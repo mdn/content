@@ -1,16 +1,7 @@
 ---
 title: alarms.clear()
 slug: Mozilla/Add-ons/WebExtensions/API/alarms/clear
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - alarms
-  - clear
+page-type: webextension-api-function
 browser-compat: webextensions.api.alarms.clear
 ---
 
@@ -22,7 +13,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ## Syntax
 
-```js
+```js-nolint
 let clearAlarm = browser.alarms.clear(
   name                       // string
 )
@@ -41,7 +32,7 @@ A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that 
 
 ```js
 function onCleared(wasCleared) {
-  console.log(wasCleared);  // true/false
+  console.log(wasCleared); // true/false
 }
 
 let clearAlarm = browser.alarms.clear("my-periodic-alarm");
@@ -55,5 +46,3 @@ clearAlarm.then(onCleared);
 {{Compat}}
 
 > **Note:** This API is based on Chromium's [`chrome.alarms`](https://developer.chrome.com/docs/extensions/reference/alarms/) API.
->
-> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.

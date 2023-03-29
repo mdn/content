@@ -1,15 +1,7 @@
 ---
 title: Array.prototype.at()
 slug: Web/JavaScript/Reference/Global_Objects/Array/at
-tags:
-  - Array
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - polyfill
-  - at
-  - Polyfill
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.Array.at
 ---
 
@@ -17,24 +9,30 @@ browser-compat: javascript.builtins.Array.at
 
 The **`at()`** method takes an integer value and returns the item at that index, allowing for positive and negative integers. Negative integers count back from the last item in the array.
 
-This is not to suggest there is anything wrong with using the square bracket notation. For example `array[0]` would return the first item. However instead of using {{jsxref('Array.prototype.length','array.length')}} for latter items; e.g. `array[array.length-1]` for the last item, you can call `array.at(-1)`. [(See the examples below)](#examples)
-
 {{EmbedInteractiveExample("pages/js/array-at.html")}}
 
 ## Syntax
 
-```js
+```js-nolint
 at(index)
 ```
 
 ### Parameters
 
 - `index`
-  - : The index (position) of the array element to be returned. Supports relative indexing from the end of the array when passed a negative index; i.e. if a negative number is used, the element returned will be found by counting back from the end of the array.
+  - : Zero-based index of the array element to be returned, [converted to an integer](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#integer_conversion). Negative index counts back from the end of the array — if `index < 0`, `index + array.length` is accessed.
 
 ### Return value
 
-The element in the array matching the given index. Returns {{jsxref('undefined')}} if the given index can not be found.
+The element in the array matching the given index. Always returns {{jsxref('undefined')}} if `index < -array.length` or `index >= array.length` without attempting to access the corresponding property.
+
+## Description
+
+The `at()` method is equivalent to the bracket notation when `index` is non-negative. For example, `array[0]` and `array.at(0)` both return the first item. However, when counting elements from the end of the array, you cannot use `array[-1]` like you may in Python or R, because all values inside the square brackets are treated literally as string properties, so you will end up reading `array["-1"]`, which is just a normal string property instead of an array index.
+
+The usual practice is to access {{jsxref("Array/length", "length")}} and calculate the index from that — for example, `array[array.length - 1]`. The `at()` method allows relative indexing, so this can be shortened to `array.at(-1)`.
+
+The `at()` method is [generic](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#generic_array_methods). It only expects the `this` value to have a `length` property and integer-keyed properties.
 
 ## Examples
 
@@ -44,7 +42,7 @@ The following example provides a function which returns the last element found i
 
 ```js
 // Our array with items
-const cart = ['apple', 'banana', 'pear'];
+const cart = ["apple", "banana", "pear"];
 
 // A function which returns the last item of a given array
 function returnLast(arr) {
@@ -53,12 +51,12 @@ function returnLast(arr) {
 
 // Get the last item of our array 'cart'
 const item1 = returnLast(cart);
-console.log(item1); // Logs: 'pear'
+console.log(item1); // 'pear'
 
 // Add an item to our 'cart' array
-cart.push('orange');
+cart.push("orange");
 const item2 = returnLast(cart);
-console.log(item2); // Logs: 'orange'
+console.log(item2); // 'orange'
 ```
 
 ### Comparing methods
@@ -67,19 +65,32 @@ This example compares different ways to select the penultimate (last but one) it
 
 ```js
 // Our array with items
-const colors = ['red', 'green', 'blue'];
+const colors = ["red", "green", "blue"];
 
 // Using length property
-const lengthWay = colors[colors.length-2];
-console.log(lengthWay); // Logs: 'green'
+const lengthWay = colors[colors.length - 2];
+console.log(lengthWay); // 'green'
 
 // Using slice() method. Note an array is returned
 const sliceWay = colors.slice(-2, -1);
-console.log(sliceWay[0]); // Logs: 'green'
+console.log(sliceWay[0]); // 'green'
 
 // Using at() method
 const atWay = colors.at(-2);
-console.log(atWay); // Logs: 'green'
+console.log(atWay); // 'green'
+```
+
+### Calling at() on non-array objects
+
+The `at()` method reads the `length` property of `this` and calculates the index to access.
+
+```js
+const arrayLike = {
+  length: 2,
+  0: "a",
+  1: "b",
+};
+console.log(Array.prototype.at.call(arrayLike, -1)); // "b"
 ```
 
 ## Specifications
@@ -97,3 +108,4 @@ console.log(atWay); // Logs: 'green'
 - {{jsxref("Array.prototype.find()")}} – return a value based on a given test.
 - {{jsxref("Array.prototype.includes()")}} – test whether a value exists in the array.
 - {{jsxref("Array.prototype.indexOf()")}} – return the index of a given element.
+- [Indexed Collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections)

@@ -1,17 +1,10 @@
 ---
 title: fit-content()
 slug: Web/CSS/fit-content_function
-tags:
-  - CSS
-  - CSS Function
-  - CSS Grid
-  - Function
-  - Layout
-  - Reference
-  - Web
+page-type: css-function
 browser-compat:
-  - css.properties.width.fit-content_function
   - css.properties.grid-template-columns.fit-content
+  - css.properties.width.fit-content_function
 ---
 
 {{CSSRef}}
@@ -61,8 +54,8 @@ fit-content(40%)
 <div id="container">
   <div>Item as wide as the content.</div>
   <div>
-    Item with more text in it. Because the contents of it are
-    wider than the maximum width, it is clamped at 300 pixels.
+    Item with more text in it. Because the contents of it are wider than the
+    maximum width, it is clamped at 300 pixels.
   </div>
   <div>Flexible item</div>
 </div>

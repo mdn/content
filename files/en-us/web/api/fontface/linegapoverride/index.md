@@ -2,18 +2,13 @@
 title: FontFace.lineGapOverride
 slug: Web/API/FontFace/lineGapOverride
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - lineGapOverride
-  - FontFace
 browser-compat: api.FontFace.lineGapOverride
 ---
 
 {{APIRef("CSS Font Loading API")}}
 
-The **`lineGapOverride`** property of the {{domxref("FontFace")}} interface returns and sets the value of the {{cssxref("@font-face/line-gap-override")}} descriptor. The possible values are `normal`, indicating that the metric used should be obtained from the font file, or a percentage.
+The **`lineGapOverride`** property of the {{domxref("FontFace")}} interface returns and sets the value of the {{cssxref("@font-face/line-gap-override")}} descriptor.
+The possible values are `normal`, indicating that the metric used should be obtained from the font file, or a percentage.
 
 ## Value
 

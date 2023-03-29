@@ -2,13 +2,6 @@
 title: TouchEvent()
 slug: Web/API/TouchEvent/TouchEvent
 page-type: web-api-constructor
-tags:
-  - API
-  - Constructor
-  - DOM
-  - Reference
-  - events
-  - touch
 browser-compat: api.TouchEvent.TouchEvent
 ---
 
@@ -21,7 +14,7 @@ The **`TouchEvent()`** constructor creates a new {{domxref("TouchEvent")}} objec
 
 ## Syntax
 
-```js
+```js-nolint
 new TouchEvent(type)
 new TouchEvent(type, options)
 ```

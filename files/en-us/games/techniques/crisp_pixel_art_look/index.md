@@ -1,16 +1,6 @@
 ---
 title: Crisp pixel art look with image-rendering
 slug: Games/Techniques/Crisp_pixel_art_look
-tags:
-  - 2D
-  - 3D
-  - CSS
-  - Canvas
-  - Games
-  - JavaScript
-  - WebGL
-  - image-rendering
-  - pixel
 ---
 
 {{GamesSidebar}}
@@ -64,7 +54,7 @@ Let's have a look at an example. The original image we want to upscale looks lik
 Here's some HTML to create a simple canvas:
 
 ```html
-<canvas id="game" width="128" height="128"></canvas>
+<canvas id="game" width="128" height="128">A cat</canvas>
 ```
 
 CSS to size the canvas and render a crisp image:
@@ -73,9 +63,6 @@ CSS to size the canvas and render a crisp image:
 canvas {
   width: 512px;
   height: 512px;
-  image-rendering: -moz-crisp-edges;
-  image-rendering: -webkit-crisp-edges;
-  image-rendering: pixelated;
   image-rendering: crisp-edges;
 }
 ```
@@ -99,4 +86,4 @@ This code used together produces the following result:
 
 {{ EmbedLiveSample('An_example', '100%', 520) }}
 
-> **Note:** You can check out the [original code on GitHub](https://github.com/belen-albeza/retro-canvas) ([and a live example](https://belen-albeza.github.io/retro-canvas/).)
+> **Note:** Canvas content is not accessible to screen readers. Include descriptive text as the value of the [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label) attribute directly on the canvas element itself or include fallback content placed within the opening and closing canvas tag. Canvas content is not part of the DOM, but nested fallback content is.

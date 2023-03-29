@@ -2,11 +2,6 @@
 title: HTMLAnchorElement.toString()
 slug: Web/API/HTMLAnchorElement/toString
 page-type: web-api-instance-method
-tags:
-  - API
-  - HTMLAnchorElement
-  - Method
-  - Stringifier
 browser-compat: api.HTMLAnchorElement.toString
 ---
 
@@ -18,7 +13,7 @@ version of {{domxref("HTMLAnchorElement.href")}}.
 
 ## Syntax
 
-```js
+```js-nolint
 toString()
 ```
 

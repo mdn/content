@@ -2,12 +2,6 @@
 title: CanvasRenderingContext2D.setTransform()
 slug: Web/API/CanvasRenderingContext2D/setTransform
 page-type: web-api-instance-method
-tags:
-  - API
-  - Canvas
-  - CanvasRenderingContext2D
-  - Method
-  - Reference
 browser-compat: api.CanvasRenderingContext2D.setTransform
 ---
 
@@ -19,13 +13,12 @@ method of the Canvas 2D API resets (overrides) the current transformation to the
 identity matrix, and then invokes a transformation described by the arguments of this
 method. This lets you scale, rotate, translate (move), and skew the context.
 
-> **Note:** See also the {{domxref("CanvasRenderingContext2D.transform()",
-    "transform()")}} method; instead of overriding the current transform matrix, it
+> **Note:** See also the {{domxref("CanvasRenderingContext2D.transform()", "transform()")}} method; instead of overriding the current transform matrix, it
 > multiplies it with a given one.
 
 ## Syntax
 
-```js
+```js-nolint
 setTransform(a, b, c, d, e, f)
 setTransform(matrix)
 ```
@@ -43,6 +36,8 @@ The transformation matrix is described by: <math><semantics><mrow><mo>[</mo>
 </mtd></mtr></mtable><mo>]</mo>
 </mrow><annotation encoding="TeX">\left[ \begin{array}{ccc} a &#x26; c &#x26; e \\ b &#x26; d
 &#x26; f \\ 0 &#x26; 0 &#x26; 1 \end{array} \right]</annotation></semantics></math>
+
+This transformation matrix gets multiplied on the left of a column vector representing each point being drawn on the canvas, to produce the final coordinate used on the canvas.
 
 ### Parameters
 
@@ -87,10 +82,10 @@ This example skews a rectangle both vertically (`.2`) and horizontally
 #### JavaScript
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 
-ctx.setTransform(1, .2, .8, 1, 0, 0);
+ctx.setTransform(1, 0.2, 0.8, 1, 0, 0);
 ctx.fillRect(0, 0, 100, 100);
 ```
 
@@ -112,7 +107,9 @@ type), and draw a circle on it.
 #### HTML
 
 ```html
+<!-- First canvas (ctx1) -->
 <canvas width="240"></canvas>
+<!-- Second canvas (ctx2) -->
 <canvas width="240"></canvas>
 ```
 
@@ -127,11 +124,11 @@ canvas {
 #### JavaScript
 
 ```js
-const canvases = document.querySelectorAll('canvas');
-const ctx1 = canvases[0].getContext('2d');
-const ctx2 = canvases[1].getContext('2d');
+const canvases = document.querySelectorAll("canvas");
+const ctx1 = canvases[0].getContext("2d");
+const ctx2 = canvases[1].getContext("2d");
 
-ctx1.setTransform(1, .2, .8, 1, 0, 0);
+ctx1.setTransform(1, 0.2, 0.8, 1, 0, 0);
 ctx1.fillRect(25, 25, 50, 50);
 
 let storedTransform = ctx1.getTransform();

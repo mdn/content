@@ -1,16 +1,7 @@
 ---
 title: repeating-radial-gradient()
 slug: Web/CSS/gradient/repeating-radial-gradient
-tags:
-  - CSS
-  - CSS Function
-  - CSS Images
-  - Function
-  - Gradients
-  - Graphics
-  - Layout
-  - Reference
-  - Web
+page-type: css-function
 browser-compat: css.types.image.gradient.repeating-radial-gradient
 ---
 
@@ -84,7 +75,12 @@ repeating-radial-gradient(farthest-corner at 20% 20%, red 0, green, red 20%);
 
 ```css
 .radial-gradient {
-  background: repeating-radial-gradient(black, black 5px, white 5px, white 10px);
+  background: repeating-radial-gradient(
+    black,
+    black 5px,
+    white 5px,
+    white 10px
+  );
 }
 ```
 
@@ -105,10 +101,18 @@ repeating-radial-gradient(farthest-corner at 20% 20%, red 0, green, red 20%);
 
 ```css
 .radial-gradient {
-  background: repeating-radial-gradient(ellipse farthest-corner at 20% 20%,
-      red, black 5%, blue 5%, green 10%);
-  background: repeating-radial-gradient(ellipse farthest-corner at 20% 20%,
-      red 0 5%, green 5% 10%);
+  background: repeating-radial-gradient(
+    ellipse farthest-corner at 20% 20%,
+    red,
+    black 5%,
+    blue 5%,
+    green 10%
+  );
+  background: repeating-radial-gradient(
+    ellipse farthest-corner at 20% 20%,
+    red 0 5%,
+    green 5% 10%
+  );
 }
 ```
 

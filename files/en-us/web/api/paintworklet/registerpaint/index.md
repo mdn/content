@@ -2,17 +2,6 @@
 title: PaintWorkletGlobalScope.registerPaint()
 slug: Web/API/PaintWorklet/registerPaint
 page-type: web-api-instance-method
-tags:
-  - API
-  - CSS
-  - CSS Paint API
-  - Houdini
-  - Painting
-  - Method
-  - Reference
-  - Worklet
-  - paintWorklet
-  - registerPaint
 browser-compat: api.PaintWorkletGlobalScope.registerPaint
 ---
 
@@ -25,7 +14,7 @@ image where a CSS property expects a file.
 
 ## Syntax
 
-```js
+```js-nolint
 registerPaint(name, classRef)
 ```
 
@@ -61,10 +50,10 @@ of PaintWorklet, at {{domxref('Worklet.addModule()')}}.
 class CheckerboardPainter {
   paint(ctx, geom, properties) {
     // Use `ctx` as if it was a normal canvas
-    const colors = ['red', 'green', 'blue'];
+    const colors = ["red", "green", "blue"];
     const size = 32;
-    for (let y = 0; y < (geom.height / size); y++) {
-      for (let x = 0; x < (geom.width / size); x++) {
+    for (let y = 0; y < geom.height / size; y++) {
+      for (let x = 0; x < geom.width / size; x++) {
         const color = colors[(x + y) % colors.length];
         ctx.beginPath();
         ctx.fillStyle = color;
@@ -76,7 +65,7 @@ class CheckerboardPainter {
 }
 
 // Register our class under a specific name
-registerPaint('checkerboard', CheckerboardPainter);
+registerPaint("checkerboard", CheckerboardPainter);
 ```
 
 The first step in using a paintworklet is defining the paint worklet using the
@@ -85,16 +74,16 @@ the `CSS.paintWorklet.addModule()` method:
 
 ```html
 <script>
-   CSS.paintWorklet.addModule('checkboardWorklet.js');
+  CSS.paintWorklet.addModule("checkboardWorklet.js");
 </script>
 ```
 
-You can then use the `{{cssxref('paint()', 'paint()')}}` CSS function in your
+You can then use the `{{cssxref('image/paint', 'paint()')}}` CSS function in your
 CSS anywhere an `{{cssxref('&lt;image&gt;')}}` value is valid.
 
 ```css
 li {
-   background-image: paint(checkerboard);
+  background-image: paint(checkerboard);
 }
 ```
 

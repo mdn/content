@@ -2,13 +2,6 @@
 title: SVGAnimatedInteger
 slug: Web/API/SVGAnimatedInteger
 page-type: web-api-interface
-tags:
-  - API
-  - NeedsBrowserCompatibility
-  - NeedsExample
-  - Reference
-  - SVG
-  - SVG DOM
 browser-compat: api.SVGAnimatedInteger
 ---
 
@@ -51,7 +44,7 @@ The `SVGAnimatedInteger` interface is used for attributes of basic type [\<integ
   </tbody>
 </table>
 
-## Properties
+## Instance properties
 
 <table class="no-markdown">
   <thead>
@@ -82,7 +75,7 @@ The `SVGAnimatedInteger` interface is used for attributes of basic type [\<integ
   </tbody>
 </table>
 
-## Methods
+## Instance methods
 
 The `SVGAnimatedInteger` interface do not provide any specific methods.
 

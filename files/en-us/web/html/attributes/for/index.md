@@ -1,12 +1,7 @@
 ---
 title: 'HTML attribute: for'
 slug: Web/HTML/Attributes/for
-tags:
-  - Attribute
-  - Attributes
-  - HTML
-  - for
-  - Reference
+page-type: html-attribute
 browser-compat:
   - html.elements.label.for
   - html.elements.output.for
@@ -21,15 +16,14 @@ The **`for`** attribute is an allowed attribute for {{htmlelement("label")}} and
 When used as an attribute of `<label>`, the `for` attribute has a value which is the `id` of the form element it relates to.
 
 ```html
-<label for="username">Your name</label>
-<input type="text" id="username">
+<label for="username">Your name</label> <input type="text" id="username" />
 ```
 
 When used as an attribute of `<output>`, the `for` attribute has a value which is a space separated list of the `id` values of the elements which are used to create the output.
 
 ```html
-<input type="range" id="b" name="b" value="50"> +
-<input type="number" id="a" name="a" value="10"> =
+<input type="range" id="b" name="b" value="50" /> +
+<input type="number" id="a" name="a" value="10" /> =
 <output name="result" for="a b">60</output>
 ```
 

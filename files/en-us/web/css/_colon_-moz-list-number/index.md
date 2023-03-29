@@ -1,14 +1,9 @@
 ---
-title: '::-moz-list-number'
+title: "::-moz-list-number"
 slug: Web/CSS/:-moz-list-number
-tags:
-  - CSS
-  - CSS:Mozilla Extensions
-  - NeedsCompatTable
-  - Non-standard
-  - Pseudo-element
-  - Reference
-  - Selector
+page-type: css-pseudo-class
+status:
+  - non-standard
 ---
 
 {{CSSRef}}{{Non-standard_header}}
@@ -18,7 +13,9 @@ The **`::-moz-list-number`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/
 ## Syntax
 
 ```css
-li::-moz-list-number
+li::-moz-list-number {
+  /* ... */
+}
 ```
 
 ## Examples

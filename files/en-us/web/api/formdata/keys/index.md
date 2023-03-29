@@ -2,13 +2,6 @@
 title: FormData.keys()
 slug: Web/API/FormData/keys
 page-type: web-api-instance-method
-tags:
-  - API
-  - FormData
-  - Iterator
-  - Method
-  - Reference
-  - XMLHttpRequest
 browser-compat: api.FormData.keys
 ---
 
@@ -20,7 +13,7 @@ The **`FormData.keys()`** method returns an [iterator](/en-US/docs/Web/JavaScrip
 
 ## Syntax
 
-```js
+```js-nolint
 keys()
 ```
 
@@ -36,8 +29,8 @@ An [`iterator`](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols) of {{d
 
 ```js
 const formData = new FormData();
-formData.append('key1', 'value1');
-formData.append('key2', 'value2');
+formData.append("key1", "value1");
+formData.append("key2", "value2");
 
 // Display the keys
 for (const key of formData.keys()) {

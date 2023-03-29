@@ -2,14 +2,6 @@
 title: Element.removeAttribute()
 slug: Web/API/Element/removeAttribute
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - Element
-  - Method
-  - Reference
-  - remove
-  - removeAttribute
 browser-compat: api.Element.removeAttribute
 ---
 
@@ -21,7 +13,7 @@ specified name from the element.
 
 ## Syntax
 
-```js
+```js-nolint
 removeAttribute(attrName)
 ```
 

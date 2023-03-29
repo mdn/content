@@ -1,9 +1,7 @@
 ---
 title: by
 slug: Web/SVG/Attribute/by
-tags:
-  - SVG
-  - SVG Attribute
+page-type: svg-attribute
 browser-compat: svg.elements.animateTransform.by
 ---
 
@@ -16,14 +14,15 @@ The starting value for the attribute is either indicated by specifying it as val
 You can use this attribute with the following SVG elements:
 
 - {{SVGElement("animate")}}
-- {{SVGElement("animateColor")}}
 - {{SVGElement("animateMotion")}}
 - {{SVGElement("animateTransform")}}
 
 ## Example
 
 ```css hidden
-html, body, svg {
+html,
+body,
+svg {
   height: 100%;
 }
 ```
@@ -31,7 +30,7 @@ html, body, svg {
 ```html
 <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
   <rect x="10" y="10" width="100" height="100">
-    <animate attributeName="width" fill="freeze" by="50" dur="3s"/>
+    <animate attributeName="width" fill="freeze" by="50" dur="3s" />
   </rect>
 </svg>
 ```

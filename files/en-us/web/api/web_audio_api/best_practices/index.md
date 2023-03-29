@@ -2,11 +2,6 @@
 title: Web Audio API best practices
 slug: Web/API/Web_Audio_API/Best_practices
 page-type: guide
-tags:
-  - Audio
-  - Best practices
-  - Guide
-  - Web Audio API
 ---
 
 {{DefaultAPISidebar("Web Audio API")}}
@@ -23,7 +18,7 @@ Media elements have streaming support out of the box. The audio will start playi
 
 You will, however, have more control if you use a buffer node. You have to request the file and wait for it to load ([this section of our advanced article](/en-US/docs/Web/API/Web_Audio_API/Advanced_techniques#Dial_up_%E2%80%94_loading_a_sound_sample) shows a good way to do it), but then you have access to the data directly, which means more precision, and more precise manipulation.
 
-If you're looking to work with audio from the user's camera or microphone you can access it via the [Media Stream API](/en-US/docs/Web/API/Media_Streams_API) and the {{domxref("MediaStreamAudioSourceNode")}} interface. This is good for WebRTC and situations where you might want to record or possibly analyze audio.
+If you're looking to work with audio from the user's camera or microphone you can access it via the [Media Capture and Streams API](/en-US/docs/Web/API/Media_Capture_and_Streams_API) and the {{domxref("MediaStreamAudioSourceNode")}} interface. This is good for WebRTC and situations where you might want to record or possibly analyze audio.
 
 The last way is to generate your own sound, which can be done with either an {{domxref("OscillatorNode")}} or by creating a buffer and populating it with your own data. Check out the [tutorial here for creating your own instrument](/en-US/docs/Web/API/Web_Audio_API/Advanced_techniques) for information on creating sounds with oscillators and buffers.
 
@@ -52,25 +47,33 @@ When you create an audio context (either offline or online) it is created with a
 When working with an {{domxref("AudioContext")}}, if you create the audio context from inside a `click` event the state should automatically be set to `running`. Here is a simple example of creating the context from inside a `click` event:
 
 ```js
-const button = document.querySelector('button');
-button.addEventListener('click', () => {
-  const audioCtx = new AudioContext();
-  // Do something with the audio context
-}, false);
+const button = document.querySelector("button");
+button.addEventListener(
+  "click",
+  () => {
+    const audioCtx = new AudioContext();
+    // Do something with the audio context
+  },
+  false
+);
 ```
 
 If however, you create the context outside of a user gesture, its state will be set to `suspended` and it will need to be started after user interaction. We can use the same click event example here, test for the state of the context and start it, if it is suspended, using the [`resume()`](/en-US/docs/Web/API/AudioContext/resume) method.
 
 ```js
 const audioCtx = new AudioContext();
-const button = document.querySelector('button');
+const button = document.querySelector("button");
 
-button.addEventListener('click', () => {
-  // check if context is in suspended state (autoplay policy)
-  if (audioCtx.state === 'suspended') {
-    audioCtx.resume();
-  }
-}, false);
+button.addEventListener(
+  "click",
+  () => {
+    // check if context is in suspended state (autoplay policy)
+    if (audioCtx.state === "suspended") {
+      audioCtx.resume();
+    }
+  },
+  false
+);
 ```
 
 You might instead be working with an {{domxref("OfflineAudioContext")}}, in which case you can resume the suspended audio context with the [`startRendering()`](/en-US/docs/Web/API/OfflineAudioContext/startRendering) method.

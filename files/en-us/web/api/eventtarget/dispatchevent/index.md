@@ -2,9 +2,6 @@
 title: EventTarget.dispatchEvent()
 slug: Web/API/EventTarget/dispatchEvent
 page-type: web-api-instance-method
-tags:
-  - Method
-  - Reference
 browser-compat: api.EventTarget.dispatchEvent
 ---
 
@@ -27,7 +24,7 @@ handlers are called and return before `dispatchEvent()` returns.
 
 ## Syntax
 
-```js
+```js-nolint
 dispatchEvent(event)
 ```
 

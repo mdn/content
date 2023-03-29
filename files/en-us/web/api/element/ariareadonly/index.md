@@ -2,14 +2,6 @@
 title: Element.ariaReadOnly
 slug: Web/API/Element/ariaReadOnly
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - ariaReadOnly
-  - AriaAttributes
-  - AriaMixin
-  - Element
 browser-compat: api.Element.ariaReadOnly
 ---
 
@@ -34,14 +26,19 @@ In this example the `aria-readonly` attribute on the element with an ID of `txtB
 
 ```html
 <div id="txtboxMultilineLabel">Enter the tags for the article</div>
-<div role="textbox" id="txtBoxInput" contenteditable="true" aria-multiline="true"
-  aria-labelledby="txtboxMultilineLabel" aria-readonly="true"></div>
+<div
+  role="textbox"
+  id="txtBoxInput"
+  contenteditable="true"
+  aria-multiline="true"
+  aria-labelledby="txtboxMultilineLabel"
+  aria-readonly="true"></div>
 ```
 
 ```js
-let el = document.getElementById('txtBoxInput');
+let el = document.getElementById("txtBoxInput");
 console.log(el.ariaReadOnly); // "true"
-el.ariaReadOnly = "false"
+el.ariaReadOnly = "false";
 console.log(el.ariaReadOnly); // "false"
 ```
 

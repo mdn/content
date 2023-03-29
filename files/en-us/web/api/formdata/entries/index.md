@@ -2,13 +2,6 @@
 title: FormData.entries()
 slug: Web/API/FormData/entries
 page-type: web-api-instance-method
-tags:
-  - API
-  - FormData
-  - Iterator
-  - Method
-  - Reference
-  - XMLHttpRequest
 browser-compat: api.FormData.entries
 ---
 
@@ -20,7 +13,7 @@ The **`FormData.entries()`** method returns an [iterator](/en-US/docs/Web/JavaSc
 
 ## Syntax
 
-```js
+```js-nolint
 entries()
 ```
 
@@ -35,8 +28,8 @@ An [iterator](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols) of {{dom
 ## Examples
 
 ```js
-formData.append('key1', 'value1');
-formData.append('key2', 'value2');
+formData.append("key1", "value1");
+formData.append("key2", "value2");
 
 // Display the key/value pairs
 for (const pair of formData.entries()) {

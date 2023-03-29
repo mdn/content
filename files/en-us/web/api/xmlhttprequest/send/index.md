@@ -2,18 +2,6 @@
 title: XMLHttpRequest.send()
 slug: Web/API/XMLHttpRequest/send
 page-type: web-api-instance-method
-tags:
-  - AJAX
-  - API
-  - HTTP request
-  - Method
-  - NeedsContent
-  - NeedsExample
-  - Reference
-  - XHR
-  - XHR Request
-  - XMLHttpRequest
-  - send
 browser-compat: api.XMLHttpRequest.send
 ---
 
@@ -38,7 +26,7 @@ If no {{HTTPHeader("Accept")}} header has been set using the
 
 ## Syntax
 
-```js
+```js-nolint
 send()
 send(body)
 ```
@@ -50,7 +38,7 @@ send(body)
   - : A body of data to be sent in the XHR request. This can be:
 
     - A {{domxref("Document")}}, in which case it is serialized before being sent.
-    - An `XMLHttpRequestBodyInit`, which [per the Fetch spec](https://fetch.spec.whatwg.org/#typedefdef-xmlhttprequestbodyinit) can be a {{domxref("Blob")}}, n {{jsxref("ArrayBuffer")}}, a {{jsxref("TypedArray")}}, a {{jsxref("DataView")}}, a {{domxref("FormData")}}, a {{domxref("URLSearchParams")}}, or a string literal or object.
+    - An `XMLHttpRequestBodyInit`, which [per the Fetch spec](https://fetch.spec.whatwg.org/#typedefdef-xmlhttprequestbodyinit) can be a {{domxref("Blob")}}, an {{jsxref("ArrayBuffer")}}, a {{jsxref("TypedArray")}}, a {{jsxref("DataView")}}, a {{domxref("FormData")}}, a {{domxref("URLSearchParams")}}, or a string literal or object.
     - `null`
 
     If no value is specified for the body, a default value of `null` is used.

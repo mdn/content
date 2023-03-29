@@ -1,14 +1,9 @@
 ---
 title: offset-position
 slug: Web/CSS/offset-position
-tags:
-  - CSS
-  - CSS Motion Path
-  - CSS Property
-  - Experimental
-  - Property
-  - offset-position
-  - recipe:css-property
+page-type: css-property
+status:
+  - experimental
 browser-compat: css.properties.offset-position
 ---
 
@@ -74,7 +69,7 @@ offset-position: unset;
 
 ```css
 #motion-demo {
-  offset-path: path('M20,20 C20,100 200,0 200,100');
+  offset-path: path("M20,20 C20,100 200,0 200,100");
   offset-position: left top;
   animation: move 3000ms infinite alternate ease-in-out;
   width: 40px;

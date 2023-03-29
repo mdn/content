@@ -1,11 +1,7 @@
 ---
 title: CSS values and units
 slug: Web/CSS/CSS_Values_and_Units
-tags:
-  - CSS
-  - Guide
-  - Reference
-  - values and units
+page-type: guide
 spec-urls:
   - https://drafts.csswg.org/css-values/
   - https://drafts.csswg.org/css-color/
@@ -50,7 +46,7 @@ In comparison, a data type that is a {{cssxref("&lt;string&gt;")}}, such as a st
 
 ```css
 .item::after {
-    content: "This is my content.";
+  content: "This is my content.";
 }
 ```
 
@@ -70,19 +66,22 @@ Such values are used without quotes:
 
 ```css
 .box {
-    float: left;
+  float: left;
 }
 ```
 
 ### CSS-wide values
 
-In addition to the pre-defined keywords that are part of the specification for a property, all CSS properties accept the CSS-wide property values {{cssxref("initial")}}, {{cssxref("inherit")}}, and {{cssxref("unset")}}, which explicitly specify defaulting behaviors.
+In addition to the pre-defined keywords that are part of the specification for a property, all CSS properties accept the CSS-wide property values {{cssxref("initial")}}, {{cssxref("inherit")}}, {{cssxref("unset")}}, and {{cssxref("revert")}}, which explicitly specify defaulting behaviors.
 
-The `initial` keyword represents the value specified as the property's initial value. The `inherit` keyword represents the computed value of the property on the element's parent, provided it is inherited.
-
-The `unset` keyword acts as either `inherit` or `initial`, depending on whether the property is inherited or not.
-
-A fourth value of {{cssxref("revert")}} was added in the Cascade Level 4 specification, but it does not currently have good browser support.
+- {{cssxref("initial")}}
+  - : Represents the value specified as the property's initial value.
+- {{cssxref("inherit")}}
+  - : Represents the computed value of the property on the element's parent, provided it is inherited.
+- {{cssxref("unset")}}
+  - : Acts as either `inherit` or `initial`, depending on whether the property is inherited or not.
+- {{cssxref("revert")}}
+  - : Resets the property to its inherited value if it inherits from its parent or to the default value established by the user agent's stylesheet (or by user styles, if any exist).
 
 ### URLs
 
@@ -98,7 +97,7 @@ A {{cssxref("url","url()")}} type uses functional notation, which accepts a `<st
 }
 ```
 
-The parameter for `url()` can be either quoted or unquoted. If unquoted, it is parsed as a `<url-token>`, which has extra requirements including the escaping of certain characters. See {{cssxref("url","url()")}}  for more information.
+The parameter for `url()` can be either quoted or unquoted. If unquoted, it is parsed as a `<url-token>`, which has extra requirements including the escaping of certain characters. See {{cssxref("url","url()")}} for more information.
 
 ## Numeric data types
 
@@ -117,7 +116,7 @@ A {{cssxref("&lt;number&gt;")}} represents a real number, which may or may not h
 
 ### Dimensions
 
-A {{cssxref("&lt;dimension&gt;")}} is a `<number>` with a unit attached to it, for example `45deg`, `100ms`, or `10px`. The attached unit identifier is case insensitive. There is never a space or any other characters between a the number and the unit identifier: i.e. `1 cm` is not valid.
+A {{cssxref("&lt;dimension&gt;")}} is a `<number>` with a unit attached to it, for example `45deg`, `100ms`, or `10px`. The attached unit identifier is case insensitive. There is never a space or any other characters between the number and the unit identifier: i.e. `1 cm` is not valid.
 
 CSS uses dimensions to specify:
 
@@ -134,7 +133,8 @@ These are all covered in subsections below.
 
 Where a distance unit, also known as a length, is allowed as a value for a property, this is described as the {{cssxref("&lt;length&gt;")}} type. There are two types of lengths in CSS: relative and absolute.
 
-Relative length units specify a length in relation to something else. For example, `em` is relative to the font size on the element and `vh` is relative to the viewport height.
+Relative length units specify a length in relation to something else.
+For example, `em` is relative to the font size on the element and `vh` is relative to the viewport height.
 
 | Unit   | Relative to                                                                                                                            |
 | ------ | -------------------------------------------------------------------------------------------------------------------------------------- |
@@ -153,6 +153,18 @@ Relative length units specify a length in relation to something else. For exampl
 | `vmin` | 1% of viewport's smaller dimension.                                                                                                    |
 | `vmax` | 1% of viewport's larger dimension.                                                                                                     |
 
+Container query length units specify a length relative to the dimensions of a [query container](/en-US/docs/Web/CSS/CSS_Container_Queries).
+For example, `cqw` is relative to the width of the query container and `cqh` is relative to the height of the query container.
+
+| Unit    | Relative to                           |
+| ------- | ------------------------------------- |
+| `cqw`   | 1% of a query container's width       |
+| `cqh`   | 1% of a query container's height      |
+| `cqi`   | 1% of a query container's inline size |
+| `cqb`   | 1% of a query container's block size  |
+| `cqmin` | The smaller value of `cqi` or `cqb`   |
+| `cqmax` | The larger value of `cqi` or `cqb`    |
+
 Absolute length units are fixed to a physical length: either an inch or a centimeter. Many of these units are therefore more useful when the output is a fixed size media, such as print. For example, `mm` is a physical millimeter, 1/10th of a centimeter.
 
 | Unit | Name                | Equivalent to       |
@@ -161,7 +173,7 @@ Absolute length units are fixed to a physical length: either an inch or a centim
 | `mm` | Millimeters         | 1mm = 1/10th of 1cm |
 | `Q`  | Quarter-millimeters | 1Q = 1/40th of 1cm  |
 | `in` | Inches              | 1in = 2.54cm = 96px |
-| `pc` | Picas               | 1pc = 1/6th of 1in |
+| `pc` | Picas               | 1pc = 1/6th of 1in  |
 | `pt` | Points              | 1pt = 1/72th of 1in |
 | `px` | Pixels              | 1px = 1/96th of 1in |
 
@@ -202,9 +214,9 @@ Frequency values are represented by the type {{cssxref("&lt;frequency&gt;")}}. I
 
 Flex units are represented by the type {{cssxref("&lt;flex&gt;")}}. It accepts the following value.
 
-| Unit  | Name      | Description                                          |
-| ----- | --------- | ---------------------------------------------------- |
-| `fr`  | Flex      | Represents a flexible length within a grid container |
+| Unit | Name | Description                                          |
+| ---- | ---- | ---------------------------------------------------- |
+| `fr` | Flex | Represents a flexible length within a grid container |
 
 #### Resolution units
 
@@ -280,3 +292,4 @@ Some legacy functional notations such as `rgba()` use commas, but generally comm
 
 - [CSS Basic Data Types](/en-US/docs/Web/CSS/CSS_Types)
 - [Introduction to CSS: Values and Units](/en-US/docs/Learn/CSS/Building_blocks/Values_and_units)
+- [Trigonometric functions in CSS](https://web.dev/css-trig-functions/)

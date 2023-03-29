@@ -2,14 +2,6 @@
 title: IDBObjectStore.get()
 slug: Web/API/IDBObjectStore/get
 page-type: web-api-instance-method
-tags:
-  - API
-  - Database
-  - IDBObjectStore
-  - IndexedDB
-  - Method
-  - Reference
-  - Storage
 browser-compat: api.IDBObjectStore.get
 ---
 
@@ -31,7 +23,7 @@ request object.
 
 ## Syntax
 
-```js
+```js-nolint
 get(key)
 ```
 
@@ -42,8 +34,9 @@ get(key)
 
 ### Return value
 
-An {{domxref("IDBRequest")}} object on which subsequent events related to this
-operation are fired.
+An {{domxref("IDBRequest")}} object on which subsequent events related to this operation are fired.
+
+If the operation is successful, the value of the request's {{domxref("IDBRequest.result", "result")}} property is the value of the first record matching the given key or key range.
 
 ### Exceptions
 
@@ -62,15 +55,15 @@ In the following code snippet, we open a read/write transaction on our database 
 one specific record from object store using `get()` — a sample record with
 the key "Walk dog". Once this data object is retrieved, you could then update it using
 normal JavaScript, then put it back into the database using a
-{{domxref("IDBObjectStore.put")}} operation. For a full working example, see our [To-do Notifications](https://github.com/mdn/to-do-notifications/) app
-([view example live](https://mdn.github.io/to-do-notifications/).)
+{{domxref("IDBObjectStore.put")}} operation. For a full working example, see our [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) app
+([view example live](https://mdn.github.io/dom-examples/to-do-notifications/)).
 
 ```js
 // Let us open our database
 const DBOpenRequest = window.indexedDB.open("toDoList", 4);
 
 DBOpenRequest.onsuccess = (event) => {
-  note.innerHTML += '<li>Database initialized.</li>';
+  note.innerHTML += "<li>Database initialized.</li>";
 
   // store the result of opening the database in the db variable.
   // This is used a lot below
@@ -86,7 +79,7 @@ function getData() {
 
   // report on the success of the transaction completing, when everything is done
   transaction.oncomplete = (event) => {
-    note.innerHTML += '<li>Transaction completed.</li>';
+    note.innerHTML += "<li>Transaction completed.</li>";
   };
 
   transaction.onerror = (event) => {
@@ -101,12 +94,11 @@ function getData() {
 
   objectStoreRequest.onsuccess = (event) => {
     // report the success of our request
-    note.innerHTML += '<li>Request successful.</li>';
+    note.innerHTML += "<li>Request successful.</li>";
 
     const myRecord = objectStoreRequest.result;
   };
-
-};
+}
 ```
 
 ## Specifications
@@ -125,4 +117,4 @@ function getData() {
 - Setting a range of keys: {{domxref("IDBKeyRange")}}
 - Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}
 - Using cursors: {{domxref("IDBCursor")}}
-- Reference example: [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](https://mdn.github.io/to-do-notifications/).)
+- Reference example: [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([View the example live](https://mdn.github.io/dom-examples/to-do-notifications/)).

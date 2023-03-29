@@ -2,12 +2,6 @@
 title: DocumentType.after()
 slug: Web/API/DocumentType/after
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - Method
-  - Node
-  - Reference
 browser-compat: api.DocumentType.after
 ---
 
@@ -20,7 +14,7 @@ Strings are inserted as equivalent {{domxref("Text")}} nodes.
 
 ## Syntax
 
-```js
+```js-nolint
 after(param1)
 after(param1, param2)
 after(param1, param2, /* … ,*/ paramN)
@@ -46,7 +40,7 @@ None ({{jsxref("undefined")}}).
 let docType = document.implementation.createDocumentType("html", "", "");
 let myDoc = document.implementation.createDocument("", "", docType);
 
-docType.after(document.createElement('html'));
+docType.after(document.createElement("html"));
 
 myDoc.childNodes;
 // NodeList [<!DOCTYPE html>, <html>]

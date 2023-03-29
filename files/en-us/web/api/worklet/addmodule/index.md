@@ -2,17 +2,6 @@
 title: Worklet.addModule()
 slug: Web/API/Worklet/addModule
 page-type: web-api-instance-method
-tags:
-  - API
-  - Background
-  - Houdini
-  - Method
-  - Multiprocessor
-  - Processes
-  - Reference
-  - Tasks
-  - Worklets
-  - addModule
 browser-compat: api.Worklet.addModule
 ---
 
@@ -24,7 +13,7 @@ adds it to the current `Worklet`.
 
 ## Syntax
 
-```js
+```js-nolint
 addModule(moduleURL)
 addModule(moduleURL, options)
 ```
@@ -67,24 +56,26 @@ following errors to the rejection handler.
 ```js
 const audioCtx = new AudioContext();
 const audioWorklet = audioCtx.audioWorklet;
-audioWorklet.addModule('modules/bypassFilter.js', {
-  credentials: 'omit',
+audioWorklet.addModule("modules/bypassFilter.js", {
+  credentials: "omit",
 });
 ```
 
 ### PaintWorklet example
 
 ```js
-CSS.paintWorklet.addModule('https://mdn.github.io/houdini-examples/cssPaint/intro/worklets/hilite.js');
+CSS.paintWorklet.addModule(
+  "https://mdn.github.io/houdini-examples/cssPaint/intro/worklets/hilite.js"
+);
 ```
 
-Once a {{domxref('paintWorklet')}} is included, the CSS {{cssxref('image/paint()')}} function
+Once a {{domxref('paintWorklet')}} is included, the CSS {{cssxref("image/paint", "paint()")}} function
 can be used to include the image created by the worklet:
 
 ```css
 @supports (background-image: paint(id)) {
   h1 {
-      background-image: paint(hollowHighlights, filled, 3px);
+    background-image: paint(hollowHighlights, filled, 3px);
   }
 }
 ```

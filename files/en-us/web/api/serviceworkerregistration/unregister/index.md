@@ -2,13 +2,6 @@
 title: ServiceWorkerRegistration.unregister()
 slug: Web/API/ServiceWorkerRegistration/unregister
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - Service Workers
-  - ServiceWorkerRegistration
-  - unregister
 browser-compat: api.ServiceWorkerRegistration.unregister
 ---
 
@@ -27,7 +20,7 @@ unregistered.
 
 ## Syntax
 
-```js
+```js-nolint
 unregister()
 ```
 

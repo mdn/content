@@ -2,9 +2,6 @@
 title: CharacterData.before()
 slug: Web/API/CharacterData/before
 page-type: web-api-instance-method
-tags:
-  - Method
-  - Reference
 browser-compat: api.CharacterData.before
 ---
 
@@ -18,7 +15,7 @@ Strings are inserted as {{domxref("Text")}} nodes; the string is being passed as
 
 ## Syntax
 
-```js
+```js-nolint
 before(...nodes)
 ```
 

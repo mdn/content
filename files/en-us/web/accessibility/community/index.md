@@ -1,9 +1,11 @@
 ---
 title: Community
 slug: Web/Accessibility/Community
-tags:
-  - Accessibility
 ---
+
+<section id="Quick_links">
+  {{ListSubpagesForSidebar("Web/Accessibility", 1)}}
+</section>
 
 This document provides links to mailing lists, newsgroups, forums, and other communities related to Accessibility.
 

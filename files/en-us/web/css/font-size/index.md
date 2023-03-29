@@ -1,12 +1,7 @@
 ---
 title: font-size
 slug: Web/CSS/font-size
-tags:
-  - CSS
-  - CSS Fonts
-  - CSS Property
-  - Reference
-  - recipe:css-property
+page-type: css-property
 browser-compat: css.properties.font-size
 ---
 
@@ -74,7 +69,7 @@ The `font-size` property is specified in one of the following ways:
 > **Note:** To maximize accessibility, it is generally best to use values that are relative to the user's default font size.
 
 - `math` {{Experimental_Inline}}
-    Special [mathematical scaling rules](https://w3c.github.io/mathml-core/#the-math-script-level-property) must be applied when determining the computed value of the `font-size` property.
+  Special [mathematical scaling rules](https://w3c.github.io/mathml-core/#the-math-script-level-property) must be applied when determining the computed value of the `font-size` property.
 
 ## Description
 

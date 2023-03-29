@@ -1,12 +1,7 @@
 ---
 title: Date.prototype.getDay()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getDay
-tags:
-  - Date
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.Date.getDay
 ---
 
@@ -20,7 +15,7 @@ Sunday. For the day of the month, see {{jsxref("Date.prototype.getDate()")}}.
 
 ## Syntax
 
-```js
+```js-nolint
 getDay()
 ```
 
@@ -38,7 +33,7 @@ value of the [`Date`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date) 
 Monday.
 
 ```js
-const xmas95 = new Date('December 25, 1995 23:15:30');
+const xmas95 = new Date("December 25, 1995 23:15:30");
 const weekday = xmas95.getDay();
 
 console.log(weekday); // 1
@@ -50,10 +45,10 @@ console.log(weekday); // 1
 > made easier:
 >
 > ```js
-> const options = { weekday: 'long'};
-> console.log(new Intl.DateTimeFormat('en-US', options).format(Xmas95));
+> const options = { weekday: "long" };
+> console.log(new Intl.DateTimeFormat("en-US", options).format(Xmas95));
 > // Monday
-> console.log(new Intl.DateTimeFormat('de-DE', options).format(Xmas95));
+> console.log(new Intl.DateTimeFormat("de-DE", options).format(Xmas95));
 > // Montag
 > ```
 

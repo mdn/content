@@ -1,12 +1,7 @@
 ---
 title: Date.prototype.getUTCDate()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getUTCDate
-tags:
-  - Date
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.Date.getUTCDate
 ---
 
@@ -19,7 +14,7 @@ The **`getUTCDate()`** method returns the day of the month (from
 
 ## Syntax
 
-```js
+```js-nolint
 getUTCDate()
 ```
 

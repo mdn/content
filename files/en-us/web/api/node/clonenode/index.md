@@ -2,9 +2,6 @@
 title: Node.cloneNode()
 slug: Web/API/Node/cloneNode
 page-type: web-api-instance-method
-tags:
-  - Method
-  - Reference
 browser-compat: api.Node.cloneNode
 ---
 
@@ -34,9 +31,9 @@ To clone a node to insert into a _different_ document, use
 
 ## Syntax
 
-```js
-cloneNode();
-cloneNode(deep);
+```js-nolint
+cloneNode()
+cloneNode(deep)
 ```
 
 ### Parameters
@@ -50,7 +47,7 @@ cloneNode(deep);
     If `false`, only the node will be cloned.
     The subtree, including any text that the node contains, is not cloned.
 
-    Note that `deep` has no effect on empty elements,
+    Note that `deep` has no effect on {{glossary("void element", "void elements")}},
     such as the {{HTMLElement("img")}} and {{HTMLElement("input")}} elements.
 
 ### Return value
@@ -63,8 +60,8 @@ using {{domxref("Node.appendChild()")}} or a similar method.
 ## Example
 
 ```js
-let p = document.getElementById("para1")
-let p_prime = p.cloneNode(true)
+let p = document.getElementById("para1");
+let p_prime = p.cloneNode(true);
 ```
 
 ## Specifications

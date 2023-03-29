@@ -1,13 +1,9 @@
 ---
-title: ':-moz-last-node'
+title: ":-moz-last-node"
 slug: Web/CSS/:-moz-last-node
-tags:
-  - CSS
-  - CSS:Mozilla Extensions
-  - NeedsCompatTable
-  - Non-standard
-  - Pseudo-class
-  - Selector
+page-type: css-pseudo-class
+status:
+  - non-standard
 ---
 
 {{Non-standard_header}}{{CSSRef}}
@@ -19,7 +15,9 @@ The **`:-moz-last-node`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/
 ## Syntax
 
 ```css
-:-moz-last-node
+:-moz-last-node {
+  /* ... */
+}
 ```
 
 ## Examples

@@ -1,24 +1,11 @@
 ---
 title: '<address>: The Contact Address element'
 slug: Web/HTML/Element/address
-tags:
-  - Address
-  - Author
-  - Contact
-  - Contact Information
-  - Element
-  - Email
-  - Email Address
-  - HTML
-  - HTML sections
-  - HTML:Flow content
-  - HTML:Palpable Content
-  - Reference
-  - Web
+page-type: html-element
 browser-compat: html.elements.address
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 The **`<address>`** [HTML](/en-US/docs/Web/HTML) element indicates that the enclosed HTML provides contact information for a person or people, or for an organization.
 
@@ -28,16 +15,52 @@ The contact information provided by an `<address>` element's contents can take w
 
 `<address>` can be used in a variety of contexts, such as providing a business's contact information in the page header, or indicating the author of an article by including an `<address>` element within the {{HTMLElement("article")}}.
 
+## Attributes
+
+This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
+
+## Usage notes
+
+- The `<address>` element can only be used to represent the contact information for its nearest {{HTMLElement("article")}} or {{HTMLElement("body")}} element ancestor.
+- This element should not contain more information than the contact information, like a publication date (which belongs in a {{HTMLElement("time")}} element).
+- Typically an `<address>` element can be placed inside the {{HTMLElement("footer")}} element of the current section, if any.
+
+## Examples
+
+This example demonstrates the use of `<address>` to demarcate the contact information for an article's author.
+
+```html
+<address>
+  You can contact author at
+  <a href="http://www.somedomain.com/contact"> www.somedomain.com</a>.<br />
+  If you see any bugs, please
+  <a href="mailto:webmaster@somedomain.com"> contact webmaster</a>.<br />
+  You may also want to visit us:<br />
+  Mozilla Foundation<br />
+  331 E Evelyn Ave<br />
+  Mountain View, CA 94041<br />
+  USA
+</address>
+```
+
+### Result
+
+{{EmbedLiveSample("Examples", "300", "200")}}
+
+Although it renders text with the same default styling as the {{HTMLElement("i")}} or {{HTMLElement("em")}} elements, it is more appropriate to use `<address>` when dealing with contact information, as it conveys additional semantic information.
+
+## Technical summary
+
 <table class="properties">
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories"
+        <a href="/en-US/docs/Web/HTML/Content_categories"
           >Content categories</a
         >
       </th>
       <td>
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
           >Flow content</a
         >, palpable content.
       </td>
@@ -45,13 +68,13 @@ The contact information provided by an `<address>` element's contents can take w
     <tr>
       <th scope="row">Permitted content</th>
       <td>
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
           >Flow content</a
         >, but with no nested <code>&#x3C;address></code> element, no heading
-        content ({{HTMLElement("hgroup")}}, {{HTMLElement("h1")}},
-        {{HTMLElement("h2")}}, {{HTMLElement("h3")}},
-        {{HTMLElement("h4")}}, {{HTMLElement("h5")}},
-        {{HTMLElement("h6")}}), no sectioning content
+        content ({{HTMLElement("hgroup")}}, {{HTMLElement("Heading_Elements", "h1")}},
+        {{HTMLElement("Heading_Elements", "h2")}}, {{HTMLElement("Heading_Elements", "h3")}},
+        {{HTMLElement("Heading_Elements", "h4")}}, {{HTMLElement("Heading_Elements", "h5")}},
+        {{HTMLElement("Heading_Elements", "h6")}}), no sectioning content
         ({{HTMLElement("article")}}, {{HTMLElement("aside")}},
         {{HTMLElement("section")}}, {{HTMLElement("nav")}}), and
         no {{HTMLElement("header")}} or {{HTMLElement("footer")}}
@@ -66,7 +89,7 @@ The contact information provided by an `<address>` element's contents can take w
       <th scope="row">Permitted parents</th>
       <td>
         Any element that accepts
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
           >flow content</a
         >, but always excluding <code>&#x3C;address></code> elements (according
         to the logical principle of symmetry, if
@@ -99,40 +122,6 @@ The contact information provided by an `<address>` element's contents can take w
   </tbody>
 </table>
 
-## Attributes
-
-This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
-
-## Usage notes
-
-- The `<address>` element can only be used to represent the contact information for its nearest {{HTMLElement("article")}} or {{HTMLElement("body")}} element ancestor.
-- This element should not contain more information than the contact information, like a publication date (which belongs in a {{HTMLElement("time")}} element).
-- Typically an `<address>` element can be placed inside the {{HTMLElement("footer")}} element of the current section, if any.
-
-## Examples
-
-This example demonstrates the use of `<address>` to demarcate the contact information for an article's author.
-
-```html
-  <address>
-    You can contact author at <a href="http://www.somedomain.com/contact">
-    www.somedomain.com</a>.<br>
-    If you see any bugs, please <a href="mailto:webmaster@somedomain.com">
-    contact webmaster</a>.<br>
-    You may also want to visit us:<br>
-    Mozilla Foundation<br>
-    331 E Evelyn Ave<br>
-    Mountain View, CA 94041<br>
-    USA
-  </address>
-```
-
-### Result
-
-{{EmbedLiveSample("Examples", "300", "200")}}
-
-Although it renders text with the same default styling as the {{HTMLElement("i")}} or {{HTMLElement("em")}} elements, it is more appropriate to use `<address>` when dealing with contact information, as it conveys additional semantic information.
-
 ## Specifications
 
 {{Specifications}}
@@ -143,5 +132,5 @@ Although it renders text with the same default styling as the {{HTMLElement("i")
 
 ## See also
 
-- Others section-related elements: {{HTMLElement("body")}}, {{HTMLElement("nav")}}, {{HTMLElement("article")}}, {{HTMLElement("aside")}}, {{HTMLElement("h1")}}, {{HTMLElement("h2")}}, {{HTMLElement("h3")}}, {{HTMLElement("h4")}}, {{HTMLElement("h5")}}, {{HTMLElement("h6")}}, {{HTMLElement("hgroup")}}, {{HTMLElement("footer")}}, {{HTMLElement("section")}}, {{HTMLElement("header")}};
+- Others section-related elements: {{HTMLElement("body")}}, {{HTMLElement("nav")}}, {{HTMLElement("article")}}, {{HTMLElement("aside")}}, {{HTMLElement("Heading_Elements", "h1")}}, {{HTMLElement("Heading_Elements", "h2")}}, {{HTMLElement("Heading_Elements", "h3")}}, {{HTMLElement("Heading_Elements", "h4")}}, {{HTMLElement("Heading_Elements", "h5")}}, {{HTMLElement("Heading_Elements", "h6")}}, {{HTMLElement("hgroup")}}, {{HTMLElement("footer")}}, {{HTMLElement("section")}}, {{HTMLElement("header")}};
 - [Sections and outlines of an HTML document](/en-US/docs/Web/HTML/Element/Heading_Elements).

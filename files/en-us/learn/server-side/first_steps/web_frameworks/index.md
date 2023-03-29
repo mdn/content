@@ -1,15 +1,6 @@
 ---
 title: Server-side web frameworks
 slug: Learn/Server-side/First_steps/Web_frameworks
-tags:
-  - Beginner
-  - CodingScripting
-  - Guide
-  - Intro
-  - Learn
-  - Server
-  - Server-side programming
-  - Web frameworks
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/First_steps/Client-Server_overview", "Learn/Server-side/First_steps/Website_security", "Learn/Server-side/First_steps")}}
@@ -187,7 +178,7 @@ Some of the factors that may affect your decision are:
 - **Productivity:** Productivity is a measure of how quickly you can create new features once you are familiar with the framework, and includes both the effort to write and maintain code (since you can't write new features while old ones are broken). Many of the factors affecting productivity are similar to those for "Effort to learn" — e.g. documentation, community, programming experience, etc. — other factors include:
 
   - _Framework purpose/origin_: Some web frameworks were initially created to solve certain types of problems, and remain _better_ at creating web apps with similar constraints. For example, Django was created to support development of a newspaper website, so it's good for blogs and other sites that involve publishing things. By contrast, Flask is a much lighter-weight framework and is great for creating web apps running on embedded devices.
-  - _Opinionated vs unopinionated_: An opinionated framework is one in which there are recommended "best" ways to solve a particular problem. Opinionated frameworks tend to be more productive when you're trying to solve common problems, because they lead you in the right direction, however they are sometimes less flexible.
+  - _Opinionated vs. unopinionated_: An opinionated framework is one in which there are recommended "best" ways to solve a particular problem. Opinionated frameworks tend to be more productive when you're trying to solve common problems, because they lead you in the right direction, however they are sometimes less flexible.
   - _Batteries included vs. get it yourself_: Some web frameworks include tools/libraries that address every problem their developers can think "by default", while more lightweight frameworks expect web developers to pick and choose solution to problems from separate libraries (Django is an example of the former, while Flask is an example of a very light-weight framework). Frameworks that include everything are often easier to get started with because you already have everything you need, and the chances are that it is well integrated and well documented. However if a smaller framework has everything you (will ever) need then it can run in more constrained environments and will have a smaller and easier subset of things to learn.
   - _Whether or not the framework encourages good development practices_: For example, a framework that encourages a [Model-View-Controller](/en-US/docs/Glossary/MVC) architecture to separate code into logical functions will result in more maintainable code than one that has no expectations on developers. Similarly, framework design can have a large impact on how easy it is to test and re-use code.
 
@@ -204,15 +195,15 @@ If you're an absolute beginner at programming then you'll probably choose your f
 >
 > 1. Navigate to the main sites (linked above)
 >
->     - Click on the Documentation menu links (named things like "Documentation, Guide, API Reference, Getting Started", etc.).
->     - Can you see topics showing how to set up URL routing, templates, and databases/models?
->     - Are the documents clear?
+>    - Click on the Documentation menu links (named things like "Documentation, Guide, API Reference, Getting Started", etc.).
+>    - Can you see topics showing how to set up URL routing, templates, and databases/models?
+>    - Are the documents clear?
 >
 > 2. Navigate to mailing lists for each site (accessible from Community links).
 >
->     - How many questions have been posted in the last few days
->     - How many have responses?
->     - Do they have an active community?
+>    - How many questions have been posted in the last few days
+>    - How many have responses?
+>    - Do they have an active community?
 
 ## A few good web frameworks?
 
@@ -329,10 +320,3 @@ This article has shown that web frameworks can make it easier to develop and mai
 For the next article in this module we'll change direction slightly and consider web security.
 
 {{PreviousMenuNext("Learn/Server-side/First_steps/Client-Server_overview", "Learn/Server-side/First_steps/Website_security", "Learn/Server-side/First_steps")}}
-
-## In this module
-
-- [Introduction to the server side](/en-US/docs/Learn/Server-side/First_steps/Introduction)
-- [Client-Server overview](/en-US/docs/Learn/Server-side/First_steps/Client-Server_overview)
-- [Server-side web frameworks](/en-US/docs/Learn/Server-side/First_steps/Web_frameworks)
-- [Website security](/en-US/docs/Learn/Server-side/First_steps/Website_security)

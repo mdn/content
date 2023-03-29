@@ -2,14 +2,6 @@
 title: AudioWorkletGlobalScope.registerProcessor()
 slug: Web/API/AudioWorkletGlobalScope/registerProcessor
 page-type: web-api-instance-method
-tags:
-  - API
-  - Audio
-  - AudioWorkletGlobalScope
-  - AudioWorkletProcessor
-  - Method
-  - Reference
-  - Web Audio API
 browser-compat: api.AudioWorkletGlobalScope.registerProcessor
 ---
 
@@ -21,7 +13,7 @@ from {{domxref("AudioWorkletProcessor")}} interface under a specified _name_.
 
 ## Syntax
 
-```js
+```js-nolint
 registerProcessor(name, processorCtor)
 ```
 
@@ -71,12 +63,12 @@ Note that this should be done in a separate file.
 ```js
 // test-processor.js
 class TestProcessor extends AudioWorkletProcessor {
-  process (inputs, outputs, parameters) {
-    return true
+  process(inputs, outputs, parameters) {
+    return true;
   }
 }
 
-registerProcessor('test-processor', TestProcessor)
+registerProcessor("test-processor", TestProcessor);
 ```
 
 Next, in our main script file we'll load the processor, create an instance of
@@ -84,10 +76,10 @@ Next, in our main script file we'll load the processor, create an instance of
 `registerProcessor` — and connect it to an audio graph.
 
 ```js
-const audioContext = new AudioContext()
-await audioContext.audioWorklet.addModule('test-processor.js')
-const node = new AudioWorkletNode(audioContext, 'test-processor')
-node.connect(audioContext.destination)
+const audioContext = new AudioContext();
+await audioContext.audioWorklet.addModule("test-processor.js");
+const node = new AudioWorkletNode(audioContext, "test-processor");
+node.connect(audioContext.destination);
 ```
 
 ## Specifications

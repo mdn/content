@@ -2,15 +2,6 @@
 title: PaymentResponse.complete()
 slug: Web/API/PaymentResponse/complete
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Payment Request
-  - Payment Request API
-  - PaymentResponse
-  - Reference
-  - Secure context
-  - complete
 browser-compat: api.PaymentResponse.complete
 ---
 
@@ -27,7 +18,7 @@ the payment request and the {{jsxref("Promise")}} returned by the
 
 ## Syntax
 
-```js
+```js-nolint
 complete()
 complete(result)
 ```
@@ -81,25 +72,30 @@ calls `complete()` with an answer appropriate to the status in the response.
 //   sake of brevity.
 const payment = new PaymentRequest(supportedInstruments, details, options);
 
-payment.show().then((paymentResponse) => {
-  const fetchOptions = {
-    method: 'POST',
-    credentials: include,
-    body: JSON.stringify(paymentResponse)
-  };
-  const serverPaymentRequest = new Request('secure/payment/endpoint');
-  fetch(serverPaymentRequest, fetchOptions).then((response) => {
-    if (response.status < 400) {
-      paymentResponse.complete("success");
-    } else {
-      paymentResponse.complete("fail");
+payment
+  .show()
+  .then((paymentResponse) => {
+    const fetchOptions = {
+      method: "POST",
+      credentials: include,
+      body: JSON.stringify(paymentResponse),
     };
-  }).catch((reason) => {
-    paymentResponse.complete("fail");
+    const serverPaymentRequest = new Request("secure/payment/endpoint");
+    fetch(serverPaymentRequest, fetchOptions)
+      .then((response) => {
+        if (response.status < 400) {
+          paymentResponse.complete("success");
+        } else {
+          paymentResponse.complete("fail");
+        }
+      })
+      .catch((reason) => {
+        paymentResponse.complete("fail");
+      });
+  })
+  .catch((err) => {
+    console.error("Uh oh, something bad happened", err.message);
   });
-}).catch((err) => {
-  console.error("Uh oh, something bad happened", err.message);
-});
 ```
 
 ## Specifications

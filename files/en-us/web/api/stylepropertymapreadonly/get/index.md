@@ -2,18 +2,10 @@
 title: StylePropertyMapReadOnly.get()
 slug: Web/API/StylePropertyMapReadOnly/get
 page-type: web-api-instance-method
-tags:
-  - API
-  - CSS Typed Object Model API
-  - Experimental
-  - Houdini
-  - Method
-  - Reference
-  - get()
 browser-compat: api.StylePropertyMapReadOnly.get
 ---
 
-{{APIRef("CSS Typed Object Model API")}}{{SeeCompatTable}}
+{{APIRef("CSS Typed Object Model API")}}
 
 The **`get()`** method of the
 {{domxref("StylePropertyMapReadOnly")}} interface returns a {{domxref("CSSStyleValue")}}
@@ -21,7 +13,7 @@ object for the first value of the specified property.
 
 ## Syntax
 
-```js
+```js-nolint
 get(property)
 ```
 
@@ -42,7 +34,7 @@ JavaScript:
 
 ```html
 <p>
-   <a href="https://example.com">Link</a>
+  <a href="https://example.com">Link</a>
 </p>
 <dl id="results"></dl>
 ```
@@ -54,8 +46,8 @@ p {
   font-weight: bold;
 }
 a {
-   --color: red;
-   color: var(--color);
+  --color: red;
+  color: var(--color);
 }
 ```
 
@@ -67,26 +59,26 @@ those values.
 
 ```js
 // get the element
-const myElement = document.querySelector('a');
+const myElement = document.querySelector("a");
 
 // Retrieve all computed styles with computedStyleMap()
 const styleMap = myElement.computedStyleMap();
 
 // get the <dl> we'll be populating
-const stylesList = document.querySelector('#results');
+const stylesList = document.querySelector("#results");
 
 // array of properties we're interested in
-const ofInterest = ['font-weight', 'border-left-color', 'color', '--color'];
+const ofInterest = ["font-weight", "border-left-color", "color", "--color"];
 
 // iterate over our properties of interest
 for (const property of ofInterest) {
   // properties
-  const cssProperty = document.createElement('dt');
+  const cssProperty = document.createElement("dt");
   cssProperty.innerText = property;
   stylesList.appendChild(cssProperty);
 
   // values
-  const cssValue = document.createElement('dd');
+  const cssValue = document.createElement("dd");
   // use get() to find the value
   cssValue.innerText = styleMap.get(property);
   stylesList.appendChild(cssValue);

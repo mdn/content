@@ -2,16 +2,6 @@
 title: Window.innerWidth
 slug: Web/API/Window/innerWidth
 page-type: web-api-instance-property
-tags:
-  - API
-  - CSSOM View
-  - HTML DOM
-  - Layout
-  - Property
-  - Reference
-  - Window
-  - innerWidth
-  - width
 browser-compat: api.Window.innerWidth
 ---
 
@@ -76,12 +66,13 @@ console.log(top.innerWidth);
 const heightOutput = document.querySelector("#height");
 const widthOutput = document.querySelector("#width");
 
-function resizeListener() {
+function updateSize() {
   heightOutput.textContent = window.innerHeight;
   widthOutput.textContent = window.innerWidth;
 }
 
-window.addEventListener("resize", resizeListener);
+updateSize();
+window.addEventListener("resize", updateSize);
 ```
 
 ### Result

@@ -1,12 +1,7 @@
 ---
 title: CSS Ruby Layout
 slug: Web/CSS/CSS_Ruby
-tags:
-  - CSS
-  - CSS Ruby
-  - Guide
-  - Overview
-  - Reference
+page-type: css-module
 spec-urls: https://drafts.csswg.org/css-ruby/
 ---
 

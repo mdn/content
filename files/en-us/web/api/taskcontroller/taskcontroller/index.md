@@ -2,11 +2,6 @@
 title: TaskController()
 slug: Web/API/TaskController/TaskController
 page-type: web-api-constructor
-tags:
-  - API
-  - Constructor
-  - Reference
-  - TaskController
 browser-compat: api.TaskController.TaskController
 ---
 
@@ -18,14 +13,15 @@ If no priority is set, the signal priority defaults to [`user-visible`](/en-US/d
 
 ## Syntax
 
-```js
+```js-nolint
 new TaskController()
-new TaskController(init)
+new TaskController(options)
 ```
 
 ### Parameters
 
-- `init` {{optional_inline}}
+- `options` {{optional_inline}}
+
   - : An object with the following properties:
 
     - `priority` {{optional_inline}}
@@ -43,7 +39,7 @@ const controller = new TaskController();
 To construct a task controller that has a specific signal priority, pass the `priority` as a property of the optional argument.
 
 ```js
-controller2 = new TaskController({priority: 'user-blocking'});
+controller2 = new TaskController({ priority: "user-blocking" });
 ```
 
 ## Specifications

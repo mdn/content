@@ -1,13 +1,7 @@
 ---
 title: Type selectors
 slug: Web/CSS/Type_selectors
-tags:
-  - CSS
-  - HTML
-  - Node
-  - Reference
-  - Selector
-  - Selectors
+page-type: css-selector
 browser-compat: css.selectors.type
 ---
 
@@ -62,7 +56,9 @@ In this example the selector will only match `<h1>` elements in the example name
 
 ```css
 @namespace example url(http://www.example.com);
-example|h1 { color: blue }
+example|h1 {
+  color: blue;
+}
 ```
 
 ## Specifications

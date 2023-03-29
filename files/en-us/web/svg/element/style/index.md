@@ -1,10 +1,7 @@
 ---
 title: <style>
 slug: Web/SVG/Element/style
-tags:
-  - Element
-  - Reference
-  - SVG
+page-type: svg-element
 browser-compat: svg.elements.style
 ---
 
@@ -17,7 +14,11 @@ The SVG **`<style>`** element allows style sheets to be embedded directly within
 ## Example
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html

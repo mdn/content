@@ -1,20 +1,13 @@
 ---
 title: '<source>: The Media or Image Source element'
 slug: Web/HTML/Element/source
-tags:
-  - Element
-  - HTML
-  - HTML embedded content
-  - Media
-  - Reference
-  - Web
-  - Web Performance
+page-type: html-element
 browser-compat: html.elements.source
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
-The **`<source>`** [HTML](/en-US/docs/Web/HTML) element specifies multiple media resources for the {{HTMLElement("picture")}}, the {{HTMLElement("audio")}} element, or the {{HTMLElement("video")}} element. It is an empty element, meaning that it has no content and does not have a closing tag. It is commonly used to offer the same media content in multiple file formats in order to provide compatibility with a broad range of browsers given their differing support for [image file formats](/en-US/docs/Web/Media/Formats/Image_types) and [media file formats](/en-US/docs/Web/Media/Formats).
+The **`<source>`** [HTML](/en-US/docs/Web/HTML) element specifies multiple media resources for the {{HTMLElement("picture")}}, the {{HTMLElement("audio")}} element, or the {{HTMLElement("video")}} element. It is a {{glossary("void element")}}, meaning that it has no content and does not have a closing tag. It is commonly used to offer the same media content in multiple file formats in order to provide compatibility with a broad range of browsers given their differing support for [image file formats](/en-US/docs/Web/Media/Formats/Image_types) and [media file formats](/en-US/docs/Web/Media/Formats).
 
 {{EmbedInteractiveExample("pages/tabbed/source.html", "tabbed-standard")}}
 
@@ -22,7 +15,7 @@ The **`<source>`** [HTML](/en-US/docs/Web/HTML) element specifies multiple media
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories"
+        <a href="/en-US/docs/Web/HTML/Content_categories"
           >Content categories</a
         >
       </th>
@@ -30,19 +23,19 @@ The **`<source>`** [HTML](/en-US/docs/Web/HTML) element specifies multiple media
     </tr>
     <tr>
       <th scope="row">Permitted content</th>
-      <td>None, it is an {{Glossary("empty element")}}.</td>
+      <td>None; it is a {{Glossary("void element")}}.</td>
     </tr>
     <tr>
       <th scope="row">Tag omission</th>
       <td>It must have a start tag, but must not have an end tag.</td>
     </tr>
     <tr>
-      <th scope="row"><dfn>Permitted parents</dfn></th>
+      <th scope="row">Permitted parents</th>
       <td>
         <div>
           A media element—{{HTMLElement("audio")}} or
-          {{HTMLelement("video")}}—and it must be placed before any
-          <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+          {{HTMLElement("video")}}—and it must be placed before any
+          <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
             >flow content</a
           >
           or {{HTMLElement("track")}} element.
@@ -76,15 +69,18 @@ The **`<source>`** [HTML](/en-US/docs/Web/HTML) element specifies multiple media
 
 This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 
-- {{htmlattrdef("type")}}
-  - : The [MIME media type of the resource](/en-US/docs/Web/Media/Formats/Image_types), optionally with a [`codecs` parameter](/en-US/docs/Web/Media/Formats/codecs_parameter).
+- `type`
 
-- {{htmlattrdef("src")}}
+  - : The [MIME media type of the image](/en-US/docs/Web/Media/Formats/Image_types) or [other media type](/en-US/docs/Web/Media/Formats/Containers), optionally with a [`codecs` parameter](/en-US/docs/Web/Media/Formats/codecs_parameter).
+
+- `src`
+
   - : Required if the `source` element's parent is an {{HTMLElement("audio")}} and {{HTMLElement("video")}} element, but not allowed if the `source` element's parent is a {{HTMLElement("picture")}} element.
 
     Address of the media resource.
 
-- {{htmlattrdef("srcset")}}
+- `srcset`
+
   - : Required if the `source` element's parent is a {{HTMLElement("picture")}} element, but not allowed if the `source` element's parent is an {{HTMLElement("audio")}} or {{HTMLElement("video")}} element.
 
     A list of one or more strings, separated by commas, indicating a set of possible images represented by the source for the browser to use. Each string is composed of:
@@ -93,24 +89,28 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
     2. A width descriptor, which consists of a string containing a positive integer directly followed by `"w"`, such as `300w`. The default value, if missing, is the infinity.
     3. A pixel density descriptor, that is a positive floating number directly followed by `"x"`. The default value, if missing, is `1x`.
 
-    Each string in the list must have at least a width descriptor or a pixel density descriptor to be valid. Among the list, there must be only one string containing the same tuple of width descriptor and pixel density descriptor. The browser chooses the most adequate image to display at a given point of time. If width descriptors are used, the `sizes` attribute must also be present, or the `srcset` value will be ignored.
+    Each string in the list must have at least a width descriptor or a pixel density descriptor to be valid. The two types of descriptors should not be mixed together and only one should be used consistently throughout the list. Among the list, the value of each descriptor must be unique. The browser chooses the most adequate image to display at a given point of time. If the `sizes` attribute is present, then a width descriptor must be specified for each string. If the browser does not support `srcset`, then `src` will be used for the default source.
 
-- {{htmlattrdef("sizes")}}
+- `sizes`
+
   - : Allowed if the `source` element's parent is a {{HTMLElement("picture")}} element, but not allowed if the `source` element's parent is an {{HTMLElement("audio")}} or {{HTMLElement("video")}} element.
 
-    A list of source sizes that describes the final rendered width of the image represented by the source. Each source size consists of a comma-separated list of media condition-length pairs. This information is used by the browser to determine, before laying the page out, which image defined in {{htmlattrxref("srcset", "source")}} to use. Please note that `sizes` will have its effect only if width dimension descriptors are provided with `srcset` instead of pixel ratio values (200w instead of 2x for example).
+    A list of source sizes that describes the final rendered width of the image represented by the source. Each source size consists of a comma-separated list of media condition-length pairs. Before laying the page out, the browser uses this information to determine which image is defined in [`srcset`](#srcset) to use. Please note that `sizes` will have its effect only if width dimension descriptors are provided with `srcset` instead of pixel ratio values (200w instead of 2x for example).
 
-- {{htmlattrdef("media")}}
+- `media`
+
   - : Allowed if the `source` element's parent is a {{HTMLElement("picture")}} element, but not allowed if the `source` element's parent is an {{HTMLElement("audio")}} or {{HTMLElement("video")}} element.
 
     [Media query](/en-US/docs/Web/CSS/Media_Queries) of the resource's intended media.
 
-- {{htmlattrdef("height")}}
+- `height`
+
   - : Allowed if the `source` element's parent is a {{HTMLElement("picture")}} element, but not allowed if the `source` element's parent is an {{HTMLElement("audio")}} or {{HTMLElement("video")}} element.
 
     The intrinsic height of the image, in pixels. Must be an integer without a unit.
 
-- {{htmlattrdef("width")}}
+- `width`
+
   - : Allowed if the `source` element's parent is a {{HTMLElement("picture")}} element, but not allowed if the `source` element's parent is an {{HTMLElement("audio")}} or {{HTMLElement("video")}} element.
 
     The intrinsic width of the image in pixels. Must be an integer without a unit.
@@ -121,7 +121,7 @@ When used in the context of a `<picture>` element, the browser will fall back to
 
 ## Usage notes
 
-The `<source>` element is an **empty element (or void element)**, which means that it not only has no content but also has no closing tag. That is, you _never_ use "`</source>`" in your HTML.
+The `<source>` element is a **{{glossary("void element")}}**, which means that it not only has no content but also has no closing tag. That is, you _never_ use "`</source>`" in your HTML.
 
 For information about image formats supported by web browsers and guidance on selecting appropriate formats to use, see our [Image file type and format guide](/en-US/docs/Web/Media/Formats/Image_types) on the web. For details on the video and audio media types you can use, see the [Guide to media types formats used on the web](/en-US/docs/Web/Media/Formats).
 
@@ -133,9 +133,9 @@ This example demonstrates how to offer a video in Ogg format for users whose bro
 
 ```html
 <video controls>
-  <source src="foo.webm" type="video/webm">
-  <source src="foo.ogg" type="video/ogg">
-  <source src="foo.mov" type="video/quicktime">
+  <source src="foo.webm" type="video/webm" />
+  <source src="foo.ogg" type="video/ogg" />
+  <source src="foo.mov" type="video/quicktime" />
   I'm sorry; your browser doesn't support HTML video.
 </video>
 ```
@@ -144,17 +144,31 @@ For more examples, the learning area article [Video and audio content](/en-US/do
 
 ### Picture example
 
-In this example, two `<source>` elements are included within the {{HTMLElement("picture")}}, providing versions of an image to use when the available space exceeds certain widths. If the available width is less than the smaller of these widths, the user agent will fall back to the image given by the {{HTMLElement("img")}} element.
+In this example, two `<source>` elements are included within the {{HTMLElement("picture")}}, providing versions of an image to use when the available space exceeds certain widths. If the available width is less than the smallest of these widths, the user agent will fall back to the image given by the {{HTMLElement("img")}} element.
 
 ```html
 <picture>
-   <source srcset="mdn-logo-wide.png" media="(min-width: 800px)">
-   <source srcset="mdn-logo-medium.png" media="(min-width: 600px)">
-   <img src="mdn-logo-narrow.png" alt="MDN Web Docs">
+  <source srcset="mdn-logo-wide.png" media="(min-width: 800px)" />
+  <source srcset="mdn-logo-medium.png" media="(min-width: 600px)" />
+  <img src="mdn-logo-narrow.png" alt="MDN Web Docs" />
 </picture>
 ```
 
 With the `<picture>` element, you must always include an `<img>` with a fallback image, with an `alt` attribute to ensure accessibility (unless the image is an irrelevant background decorative image).
+
+### Picture with height & width attributes example
+
+In this example, three `<source>` elements with `height` and `width` attributes are included in a {{HTMLElement("picture")}} element.
+A [media query](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries) allows the browser to select an image to display with the `height` and `width` attributes based on the [viewport](/en-US/docs/Glossary/Viewport) size.
+
+```html
+<picture>
+  <source srcset="landscape.png" media="(min-width: 1000px)" width="1000" height="400">
+  <source srcset="square.png" media="(min-width: 800px)" width="800" height="800">
+  <source srcset="portrait.png" media="(min-width: 600px)" width="600" height="800">
+  <img src="fallback.png" alt="Image used when the browser does not support the sources" width="500" height="400">
+</picture>
+```
 
 ## Specifications
 

@@ -1,15 +1,7 @@
 ---
 title: pkcs11.installModule()
 slug: Mozilla/Add-ons/WebExtensions/API/pkcs11/installModule
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Reference
-  - WebExtensions
-  - installModule
-  - pkcs11
+page-type: webextension-api-function
 browser-compat: webextensions.api.pkcs11.installModule
 ---
 
@@ -21,7 +13,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ## Syntax
 
-```js
+```js-nolint
 let installing = browser.pkcs11.installModule(
   name,              // string
   flags              // integer

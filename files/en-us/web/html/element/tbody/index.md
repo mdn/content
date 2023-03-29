@@ -1,32 +1,23 @@
 ---
-title: '<tbody>: The Table Body element'
+title: "<tbody>: The Table Body element"
 slug: Web/HTML/Element/tbody
-tags:
-  - Element
-  - HTML
-  - HTML tabular data
-  - Reference
-  - Table Body
-  - Table Contents
-  - Tables
-  - Web
-  - tbody
+page-type: html-element
 browser-compat: html.elements.tbody
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 The **`<tbody>`** [HTML](/en-US/docs/Web/HTML) element encapsulates a set of table rows ({{HTMLElement("tr")}} elements), indicating that they comprise the body of the table ({{HTMLElement("table")}}).
 
 {{EmbedInteractiveExample("pages/tabbed/tbody.html","tabbed-taller")}}
 
-The `<tbody>` element, along with its cousins {{HTMLElement("thead")}} and {{HTMLElement("tfoot")}}, provide useful semantic information that can be used when rendering for either screen or printer as well as for {{Glossary("accessibility")}} purposes.
+The `<tbody>` element, along with its related {{HTMLElement("thead")}} and {{HTMLElement("tfoot")}} elements, provide useful semantic information that can be used when rendering for either screen or printer.
 
 <table class="properties">
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories"
+        <a href="/en-US/docs/Web/HTML/Content_categories"
           >Content categories</a
         >
       </th>
@@ -39,14 +30,15 @@ The `<tbody>` element, along with its cousins {{HTMLElement("thead")}} and {{HTM
     <tr>
       <th scope="row">Tag omission</th>
       <td>
-        The <code>&#x3C;tbody></code> element is not a required child element for a parent {{ HTMLElement("table") }} element to graphically render. However, it must be present, if the parent {{ HTMLElement("table") }} element has a {{HTMLElement("thead")}}, a {{HTMLElement("tfoot")}} or another {{HTMLElement("tbody")}} element as a child. If the <code>&#x3C;tbody></code> element starts with a {{HTMLElement("tbody")}} element, and is not following a non-closed <code>&#x3C;tbody></code> element, its opening tag can be omitted.
+        A <code>&lt;tbody&gt;</code> element's start tag can be omitted if the first thing inside the <code>&lt;tbody&gt;</code> element is a {{HTMLElement("tr")}} element, and if the element is not immediately preceded by a <code>&lt;tbody&gt;</code>, {{HTMLElement("thead")}}, or {{HTMLElement("tfoot")}} element whose end tag has been omitted. (It can't be omitted if the element is empty.)
+        A <code>&lt;tbody&gt;</code> element's end tag can be omitted if the <code>&lt;tbody&gt;</code> element is immediately followed by a <code>&lt;tbody&gt;</code> or {{HTMLElement("tfoot")}} element, or if there is no more content in the parent element.
       </td>
     </tr>
     <tr>
       <th scope="row">Permitted parents</th>
       <td>
         Within the required parent {{ HTMLElement("table") }} element,
-        the <code>&#x3C;tbody></code> element can be added after a
+        the <code>&lt;tbody&gt;</code> element can be added after a
         {{ HTMLElement("caption") }},
         {{HTMLElement("colgroup") }}, and a
         {{ HTMLElement("thead") }} element.
@@ -79,15 +71,15 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
 ### Deprecated attributes
 
-- {{ htmlattrdef("align") }} {{deprecated_inline}}
+- `align` {{deprecated_inline}}
 
-  - : This enumerated attribute specifies how horizontal alignment of each cell content will be handled. Possible values are:
+  - : This [enumerated](/en-US/docs/Glossary/Enumerated) attribute specifies how horizontal alignment of each cell content will be handled. Possible values are:
 
     - `left`, aligning the content to the left of the cell
     - `center`, centering the content in the cell
     - `right`, aligning the content to the right of the cell
     - `justify`, inserting spaces into the textual content so that the content is justified in the cell
-    - `char`, aligning the textual content on a special character with a minimal offset, defined by the {{ htmlattrxref("char", "tbody") }} and {{ htmlattrxref("charoff", "tbody") }} attributes.
+    - `char`, aligning the textual content on a special character with a minimal offset, defined by the [`char`](#char) and [`charoff`](#charoff) attributes.
 
     If this attribute is not set, the `left` value is assumed.
 
@@ -95,17 +87,17 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
     > **Note:** The equivalent `text-align` property for the `align="char"` is not implemented in any browsers yet. See the [`text-align`'s browser compatibility section](/en-US/docs/Web/CSS/text-align#browser_compatibility) for the `<string>` value.
 
-- {{htmlattrdef("bgcolor")}} {{Deprecated_inline}}
+- `bgcolor` {{Deprecated_inline}}
 
-  - : The background color of the table. It is a [6-digit hexadecimal RGB code](/en-US/docs/Web/CSS/color_value#rgb_colors), prefixed by a '`#`'. One of the predefined [color keywords](/en-US/docs/Web/CSS/color_value#color_keywords) can also be used.
+  - : The background color of the table. It is a [6-digit hexadecimal RGB code](/en-US/docs/Web/CSS/hex-color), prefixed by a '`#`'. One of the predefined [color keywords](/en-US/docs/Web/CSS/named-color) can also be used.
 
     As this attribute is deprecated, use the CSS {{cssxref("background-color")}} property instead.
 
-- {{ htmlattrdef("char") }} {{deprecated_inline}}
-  - : This attribute is used to set the character to align the cells in a column on. Typical values for this include a period (`.`) when attempting to align numbers or monetary values. If {{htmlattrxref("align", "tbody")}} is not set to `char`, this attribute is ignored.
-- {{ htmlattrdef("charoff") }} {{deprecated_inline}}
+- `char` {{deprecated_inline}}
+  - : This attribute is used to set the character to align the cells in a column on. Typical values for this include a period (`.`) when attempting to align numbers or monetary values. If [`align`](#align) is not set to `char`, this attribute is ignored.
+- `charoff` {{deprecated_inline}}
   - : This attribute is used to indicate the number of characters to offset the column data from the alignment characters specified by the `char` attribute.
-- {{ htmlattrdef("valign") }} {{deprecated_inline}}
+- `valign` {{deprecated_inline}}
 
   - : This attribute specifies the vertical alignment of the text within each row of cells of the table header. Possible values for this attribute are:
 
@@ -118,23 +110,23 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
 ## Usage notes
 
-- If the table includes a {{HTMLElement("thead")}} block (to semantically identify header rows), the `<tbody>` block _must_ come after it.
-- If you use `<tbody>`, you can't also have table rows ({{HTMLElement("tr")}} elements) which are direct children of the {{HTMLElement("table")}} but not included inside the `<tbody>`. All non-header and non-footer rows must be inside the `<tbody>` if one is used.
-- When printing a document, the `<thead>` and {{htmlelement("tfoot")}} elements specify information that may be the same—or at least very similar—on every page of a multi-page table, while the `<tbody>` element's contents generally will differ from page to page.
+- If the table includes a {{HTMLElement("thead")}} block (to semantically identify a row of column headers), the `<tbody>` block _must_ come after it.
+- If {{HTMLElement("tr")}} elements are specified outside an existing `<tbody>` element, as direct children of the {{HTMLElement("table")}}, these elements will be encapsulated by a separate `<tbody>` element generated by the browser.
+- When printing a document, the `<thead>` and {{htmlelement("tfoot")}} elements specify information that may be the same—or at least very similar—on every page of a multipage table, while the `<tbody>` element's contents generally will differ from page to page.
 - When a table is presented in a screen context (such as a window) which is not large enough to display the entire table, the {{Glossary("user agent")}} may let the user scroll the contents of the `<thead>`, `<tbody>`, `<tfoot>`, and {{HTMLElement("caption")}} blocks separately from one another for the same parent table.
-- You _may_ use more than one `<tbody>` per table as long as they are all consecutive. This lets you divide the rows in large tables into sections, each of which may be separately formatted if so desired.
+- You _may_ use more than one `<tbody>` per table as long as they are all consecutive. This lets you divide the rows in large tables into sections, each of which may be separately formatted if so desired. If not marked up to be consecutive elements, browsers will correct this author error, ensuring any `<thead>` and `<tfoot>` elements are rendered as the first and last elements of the table, respectively.
 
 ## Examples
 
-Below are some examples showing the use of the `<tbody>` element. For more examples of this tag in use, see the examples for {{ HTMLElement("table", "", "#Examples") }}.
+Below are some examples showing the use of the `<tbody>` element. For more examples of this element, see the examples for {{ HTMLElement("table", "", "#Examples") }}.
 
 ### Basic example
 
-In this relatively simple example, we create a table listing information about a group of students with a {{HTMLElement("thead")}} and a {{HTMLElement("tbody")}}, with a number of rows in the body.
+In this relatively simple example, we create a table containing information about a group of students with a {{HTMLElement("thead")}} and a {{HTMLElement("tbody")}}, with a number of rows in the body.
 
 #### HTML
 
-The table's HTML is shown here. Note that all of the body cells including information about students are contained within a single `<tbody>` element.
+The table's HTML is shown here. Note that all the body cells including information about students are contained within a single `<tbody>` element.
 
 ```html
 <table>
@@ -180,7 +172,8 @@ table {
 First, the table's overall style attributes are set, configuring the thickness, style, and color of the table's exterior borders and using {{cssxref("border-collapse")}} to ensure that the border lines are shared among adjacent cells rather than each having its own borders with space in between. {{cssxref("font")}} is used to establish an initial font for the table.
 
 ```css
-th, td {
+th,
+td {
   border: 1px solid #bbb;
   padding: 2px 8px 0;
   text-align: left;
@@ -197,7 +190,7 @@ thead > tr > th {
 }
 ```
 
-Finally, header cells contained within the {{HTMLElement("thead")}} block are given additional styling. They use a darker {{cssxref("background-color")}}, a larger font size, and a thicker, darker bottom border than the other cell borders.
+Finally, header cells contained within the {{HTMLElement("thead")}} element are given additional styling. They use a darker {{cssxref("background-color")}}, a larger font size, and a thicker, darker bottom border than the other cell borders.
 
 #### Result
 
@@ -207,7 +200,7 @@ The resulting table looks like this:
 
 ### Multiple bodies
 
-You can create multiple sections within a table by using multiple `<tbody>` elements. Each may potentially have its own header row or rows; however, _there can be only one {{HTMLElement("thead")}} per table!_ Because of that, you need to use a {{HTMLElement("tr")}} filled with {{HTMLElement("th")}} elements to create headers within each `<tbody>`. Let's see how that's done.
+You can create row groupings within a table by using multiple `<tbody>` elements. Each may potentially have its own header row or rows; however, _there can be only one {{HTMLElement("thead")}} per table!_ Because of that, you need to use a {{HTMLElement("tr")}} filled with {{HTMLElement("th")}} elements to create headers within each `<tbody>`. Let's see how that's done.
 
 Let's take the previous example, add some more students to the list, and update the table so that instead of listing each student's major on every row, the students are grouped by major, with heading rows for each major.
 
@@ -271,7 +264,7 @@ The revised HTML looks like this:
 </table>
 ```
 
-Notice that each major is placed in a separate `<tbody>` block, the first row of which contains a single {{HTMLElement("th")}} element with a {{htmlattrxref("colspan", "th")}} attribute that spans the entire width of the table. That heading lists the name of the major contained within the `<tbody>`.
+Notice that each major is placed in a separate `<tbody>` block, the first row of which contains a single {{HTMLElement("th")}} element with a [`colspan`](#colspan) attribute that spans the entire width of the table. That heading lists the name of the major contained within the `<tbody>`.
 
 Then each remaining row in each major's `<tbody>` consists of two cells: the first for the student's ID and the second for their name.
 
@@ -284,7 +277,8 @@ table {
   font: 16px "Lucida Grande", "Helvetica", "Arial", sans-serif;
 }
 
-th, td {
+th,
+td {
   border: 1px solid #bbb;
   padding: 2px 8px 0;
   text-align: left;

@@ -2,16 +2,8 @@
 title: KeyboardLayoutMap.has()
 slug: Web/API/KeyboardLayoutMap/has
 page-type: web-api-instance-method
-tags:
-  - API
-  - Experimental
-  - Keyboard API
-  - Keyboard Map
-  - KeyboardLayoutMap
-  - Method
-  - Reference
-  - has()
-  - keyboard
+status:
+  - experimental
 browser-compat: api.KeyboardLayoutMap.has
 ---
 
@@ -26,7 +18,7 @@ the [UI Events KeyboardEvent code Values](https://www.w3.org/TR/uievents-code/#k
 
 ## Syntax
 
-```js
+```js-nolint
 has(key)
 ```
 

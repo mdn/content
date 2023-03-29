@@ -2,11 +2,6 @@
 title: Touch()
 slug: Web/API/Touch/Touch
 page-type: web-api-constructor
-tags:
-  - API
-  - Constructor
-  - Reference
-  - touch
 browser-compat: api.Touch.Touch
 ---
 
@@ -16,7 +11,7 @@ The **`Touch()`** constructor creates a new {{domxref("Touch")}} object.
 
 ## Syntax
 
-```js
+```js-nolint
 new Touch(options)
 ```
 

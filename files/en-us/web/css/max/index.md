@@ -1,16 +1,7 @@
 ---
 title: max()
 slug: Web/CSS/max
-tags:
-  - CSS
-  - CSS Function
-  - Calculate
-  - Compute
-  - Function
-  - Layout
-  - Reference
-  - Web
-  - max
+page-type: css-function
 browser-compat: css.types.max
 ---
 
@@ -62,7 +53,9 @@ The font-size will at minimum be 2rems, or twice the default size of font for th
 
 ```html
 <h1>This text is always legible, but doesn't change size</h1>
-<h1 class="responsive">This text is always legible, and is responsive, to a point</h1>
+<h1 class="responsive">
+  This text is always legible, and is responsive, to a point
+</h1>
 ```
 
 {{EmbedLiveSample("Setting_a_minimum_size_for_a_font", "100%", "300")}}

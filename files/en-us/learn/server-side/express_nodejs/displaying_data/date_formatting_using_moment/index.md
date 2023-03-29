@@ -1,12 +1,6 @@
 ---
 title: Date formatting using luxon
 slug: Learn/Server-side/Express_Nodejs/Displaying_data/Date_formatting_using_moment
-tags:
-  - Express
-  - Node
-  - displaying data
-  - part 5
-  - server-side
 ---
 
 The default rendering of dates from our models is very ugly: _Tue Oct 06 2020 15:49:58 GMT+1100 (AUS Eastern Daylight Time)_. In this section we'll show how you can update the _BookInstance List_ page from the previous section to present the `due_date` field in a more friendly format: Oct 6th, 2020.
@@ -30,16 +24,14 @@ npm install luxon
 1. Open **./models/bookinstance.js**.
 2. At the top of the page, import _luxon_.
 
-    ```js
-    const { DateTime } = require("luxon");
-    ```
+   ```js
+   const { DateTime } = require("luxon");
+   ```
 
 Add the virtual property `due_back_formatted` just after the URL property.
 
 ```js
-BookInstanceSchema
-.virtual('due_back_formatted')
-.get(function () {
+BookInstanceSchema.virtual("due_back_formatted").get(function () {
   return DateTime.fromJSDate(this.due_back).toLocaleString(DateTime.DATE_MED);
 });
 ```

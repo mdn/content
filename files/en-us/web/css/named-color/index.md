@@ -1,11 +1,8 @@
 ---
 title: <named-color>
 slug: Web/CSS/named-color
-tags:
-  - Reference
-  - CSS Data Type
-  - color
-browser-compat: css.types.color.color_keywords
+page-type: css-type
+browser-compat: css.types.color.named-color
 ---
 
 {{CSSRef}}
@@ -896,7 +893,7 @@ Though many keywords have been adapted from [X11](https://en.wikipedia.org/wiki/
   padding: 20px;
 }
 
-#container>div {
+#container > div {
   height: 100px;
   width: 100px;
   margin: 3px;

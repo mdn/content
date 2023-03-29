@@ -1,13 +1,7 @@
 ---
 title: Map.prototype.entries()
 slug: Web/JavaScript/Reference/Global_Objects/Map/entries
-tags:
-  - ECMAScript 2015
-  - Iterator
-  - JavaScript
-  - Map
-  - Method
-  - Prototype
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.Map.entries
 ---
 
@@ -24,7 +18,7 @@ is used, it returns a function that, when invoked, returns this iterator itself.
 
 ## Syntax
 
-```js
+```js-nolint
 entries()
 ```
 

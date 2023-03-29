@@ -2,16 +2,10 @@
 title: FileSystemHandle.isSameEntry()
 slug: Web/API/FileSystemHandle/isSameEntry
 page-type: web-api-instance-method
-tags:
-  - Directory
-  - File
-  - File System Access API
-  - FileSystemHandle
-  - Method
 browser-compat: api.FileSystemHandle.isSameEntry
 ---
 
-{{securecontext_header}}{{DefaultAPISidebar("File System Access API")}}
+{{securecontext_header}}{{APIRef("File System Access API")}}
 
 The **`isSameEntry()`** method of the
 {{domxref("FileSystemHandle")}} interface compares two {{domxref("FileSystemHandle",
@@ -19,7 +13,7 @@ The **`isSameEntry()`** method of the
 
 ## Syntax
 
-```js
+```js-nolint
 isSameEntry(fileSystemHandle)
 ```
 
@@ -44,8 +38,7 @@ new array with any matching entries removed.
 
 ```js
 function removeMatches(fileEntry, entriesArr) {
-
-  let newArr = entriesArr.filter((entry) => !fileEntry.isSameEntry(entry))
+  let newArr = entriesArr.filter((entry) => !fileEntry.isSameEntry(entry));
 
   return newArr;
 }

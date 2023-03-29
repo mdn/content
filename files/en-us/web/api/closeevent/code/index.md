@@ -2,11 +2,6 @@
 title: CloseEvent.code
 slug: Web/API/CloseEvent/code
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - closeEvent
 browser-compat: api.CloseEvent.code
 ---
 
@@ -16,7 +11,7 @@ The **`code`** read-only property of the {{domxref("CloseEvent")}} interface ret
 
 ## Value
 
-An integer [WebSocket connection close code](https://www.rfc-editor.org/rfc/rfc6455.html#section-7.1.5) in the range `1000`-`4999`, indicating the reason the server gave for closing the connection.
+An integer [WebSocket connection close code](https://www.rfc-editor.org/rfc/rfc6455.html#section-7.1.5) in the range `1000` - `4999`, indicating the reason the server gave for closing the connection.
 
 <table class="no-markdown">
   <thead>
@@ -180,7 +175,7 @@ An integer [WebSocket connection close code](https://www.rfc-editor.org/rfc/rfc6
       <td><code>4000</code>–<code>4999</code></td>
       <td></td>
       <td>
-         For private use, and thus can't be registered. Such codes can be used by prior agreements between WebSocket applications.  The interpretation of these codes is undefined by the WebSocket protocol.
+         For private use, and thus can't be registered. Such codes can be used by prior agreements between WebSocket applications. The interpretation of these codes is undefined by the WebSocket protocol.
       </td>
     </tr>
   </tbody>

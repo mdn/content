@@ -1,15 +1,7 @@
 ---
-title: '::cue-region'
+title: "::cue-region"
 slug: Web/CSS/::cue-region
-tags:
-  - '::cue-region'
-  - CSS
-  - Media
-  - Pseudo-element
-  - Reference
-  - Selector
-  - Web Video Text Tracks
-  - WebVTT
+page-type: css-pseudo-element
 browser-compat: css.selectors.cue-region
 ---
 
@@ -28,8 +20,10 @@ The properties are applied to the entire set of cues as if they were a single un
 
 ## Syntax
 
-```
-::cue-region | ::cue-region( <selector> )
+```css-nolint
+::cue-region | ::cue-region(<selector>) {
+  /* ... */
+}
 ```
 
 ## Permitted properties

@@ -1,14 +1,6 @@
 ---
-title: 'Element: transitionstart event'
+title: "Element: transitionstart event"
 slug: Web/API/Element/transitionstart_event
-tags:
-  - CSS Transitions
-  - Event
-  - HTML DOM
-  - Element
-  - Reference
-  - TransitionEvent
-  - transitionstart
 browser-compat: api.Element.transitionstart_event
 page-type: web-api-event
 ---
@@ -24,9 +16,9 @@ This event is not cancelable.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('transitionstart', (event) => {});
+addEventListener("transitionstart", (event) => {});
 
-ontransitionstart = (event) => { };
+ontransitionstart = (event) => {};
 ```
 
 ## Event type
@@ -51,8 +43,8 @@ _Also inherits properties from its parent {{domxref("Event")}}_.
 This code adds a listener to the `transitionstart` event:
 
 ```js
-element.addEventListener('transitionstart', () => {
-  console.log('Started transitioning');
+element.addEventListener("transitionstart", () => {
+  console.log("Started transitioning");
 });
 ```
 
@@ -60,7 +52,7 @@ The same, but using the `ontransitionstart` property instead of `addEventListene
 
 ```js
 element.ontransitionstart = () => {
-  console.log('Started transitioning');
+  console.log("Started transitioning");
 };
 ```
 
@@ -77,7 +69,7 @@ In the following example, we have a simple {{htmlelement("div")}} element, style
 .transition {
   width: 100px;
   height: 100px;
-  background: rgba(255,0,0,1);
+  background: rgba(255, 0, 0, 1);
   transition-property: transform, background;
   transition-duration: 2s;
   transition-delay: 1s;
@@ -85,26 +77,26 @@ In the following example, we have a simple {{htmlelement("div")}} element, style
 
 .transition:hover {
   transform: rotate(90deg);
-  background: rgba(255,0,0,0);
+  background: rgba(255, 0, 0, 0);
 }
 ```
 
 To this, we'll add some JavaScript to indicate where the {{domxref("Element/transitionstart_event", "transitionstart")}} and {{domxref("Element/transitionrun_event", "transitionrun")}} events fire.
 
 ```js
-const transition = document.querySelector('.transition');
-const message = document.querySelector('.message');
+const transition = document.querySelector(".transition");
+const message = document.querySelector(".message");
 
-transition.addEventListener('transitionrun', () => {
-  message.textContent = 'transitionrun fired';
+transition.addEventListener("transitionrun", () => {
+  message.textContent = "transitionrun fired";
 });
 
-transition.addEventListener('transitionstart', () => {
-  message.textContent = 'transitionstart fired';
+transition.addEventListener("transitionstart", () => {
+  message.textContent = "transitionstart fired";
 });
 
-transition.addEventListener('transitionend', () => {
-  message.textContent = 'transitionend fired';
+transition.addEventListener("transitionend", () => {
+  message.textContent = "transitionend fired";
 });
 ```
 

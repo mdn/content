@@ -1,13 +1,7 @@
 ---
 title: Working with the Tabs API
 slug: Mozilla/Add-ons/WebExtensions/Working_with_the_Tabs_API
-tags:
-  - Add-ons
-  - Beginner
-  - Extensions
-  - How-to
-  - WebExtensions
-  - tabs
+page-type: guide
 ---
 
 {{AddonSidebar}}
@@ -98,7 +92,7 @@ To see how {{WebExtAPIRef("tabs.query()")}} and {{WebExtAPIRef("tabs.Tab")}} are
     <!DOCTYPE html>
     <html lang="en">
       <head>
-        <meta charset="utf-8">
+        <meta charset="utf-8" />
         <link rel="stylesheet" href="tabs.css" />
       </head>
 
@@ -111,7 +105,7 @@ To see how {{WebExtAPIRef("tabs.query()")}} and {{WebExtAPIRef("tabs.Tab")}} are
           <a href="#" id="tabs-move-beginning">
             Move active tab to the beginning of the window
           </a>
-          <br>
+          <br />
 
           <!-- Define the other menu items -->
 
@@ -155,10 +149,10 @@ Now, `listTabs()` is ready to create the content for the popup.
 
 To start with:
 
-1. Grab the `tabs-list` `div`.
+1. Grab the `<div id="tabs-list">` element.
 2. Create a document fragment (into which the list will be built).
 3. Set counters.
-4. Clear the content of the `tabs-list` `div`.
+4. Clear the content of the `<div id="tabs-list">` element.
 
 ```js
 function listTabs() {
@@ -195,7 +189,7 @@ for (const tab of tabs) {
 }
 ```
 
-Finally, the document fragment is written to the `tabs-list` `div`:
+Finally, the document fragment is written to the `<div id="tabs-list">` element:
 
 ```js
     tabsList.appendChild(currentTabs);
@@ -277,15 +271,15 @@ But first, here is a demonstration of the feature in action:
     <a href="#" id="tabs-move-beginning">
       Move active tab to the beginning of the window
     </a>
-    <br>
+    <br />
     <a href="#" id="tabs-move-end">Move active tab to the end of the window</a>
-    <br>
+    <br />
 
     <div class="panel-section-separator"></div>
 
-    <a href="#" id="tabs-duplicate">Duplicate active tab</a><br>
-    <a href="#" id="tabs-reload">Reload active tab</a><br>
-    <a href="#" id="tabs-alertinfo">Alert active tab info</a><br>
+    <a href="#" id="tabs-duplicate">Duplicate active tab</a><br />
+    <a href="#" id="tabs-reload">Reload active tab</a><br />
+    <a href="#" id="tabs-alertinfo">Alert active tab info</a><br />
     ```
 
 - tabs.js

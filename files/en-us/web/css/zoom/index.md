@@ -1,12 +1,9 @@
 ---
 title: zoom
 slug: Web/CSS/zoom
-tags:
-  - CSS
-  - CSS Property
-  - Non-standard
-  - Reference
-  - recipe:css-property
+page-type: css-property
+status:
+  - non-standard
 browser-compat: css.properties.zoom
 ---
 
@@ -14,7 +11,7 @@ browser-compat: css.properties.zoom
 
 The non-standard **`zoom`** [CSS](/en-US/docs/Web/CSS) property can be used to control the magnification level of an element. {{cssxref("transform-function/scale", "transform: scale()")}} should be used instead of this property, if possible. However, unlike CSS Transforms, `zoom` affects the layout size of the element.
 
-## Syntax  
+## Syntax
 
 ```css
 /* Keyword values */
@@ -143,7 +140,7 @@ div#c {
 
 ## Specifications
 
-Not part of any standard. This property originated in Internet Explorer. Apple has [a description in the Safari CSS Reference](https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariCSSRef/Articles/StandardCSSProperties.html#//apple_ref/doc/uid/TP30001266-SW15). Rossen Atanassov of Microsoft has [an unofficial draft specification proposal on GitHub](https://cdn.jsdelivr.net/gh/atanassov/css-zoom@master/Overview.html).
+Not part of any standard. Apple has [a description in the Safari CSS Reference](https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariCSSRef/Articles/StandardCSSProperties.html#//apple_ref/doc/uid/TP30001266-SW15). Rossen Atanassov of Microsoft has [an unofficial draft specification proposal on GitHub](https://github.com/atanassov/css-zoom).
 
 ## Browser compatibility
 
@@ -152,5 +149,4 @@ Not part of any standard. This property originated in Internet Explorer. Apple h
 ## See also
 
 - [`zoom` entry in CSS-Tricks' CSS Almanac](https://css-tricks.com/almanac/properties/z/zoom/)
-- The `zoom` viewport descriptor used with [`@viewport`](/en-US/docs/Web/CSS/@viewport)
-- [Bug 390936: Implement Internet Explorer `zoom` property for CSS](https://bugzilla.mozilla.org/show_bug.cgi?id=390936) on the Firefox issue tracker Bugzilla
+- [Bug 390936: Implement Internet Explorer `zoom` property for CSS](https://bugzil.la/390936) on the Firefox issue tracker Bugzilla

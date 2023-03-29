@@ -2,14 +2,6 @@
 title: MediaKeySession.load()
 slug: Web/API/MediaKeySession/load
 page-type: web-api-instance-method
-tags:
-  - API
-  - EncryptedMediaExtensions
-  - MediaKeySession
-  - Method
-  - NeedsExample
-  - Reference
-  - load
 browser-compat: api.MediaKeySession.load
 ---
 
@@ -20,7 +12,7 @@ resolves to a boolean value after loading data for a specified session object.
 
 ## Syntax
 
-```js
+```js-nolint
 load(sessionId)
 ```
 

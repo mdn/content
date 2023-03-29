@@ -2,16 +2,8 @@
 title: XREquirectLayer.radius
 slug: Web/API/XREquirectLayer/radius
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - VR
-  - WebXR
-  - WebXR API
-  - WebXR Device API
-  - XR
-  - Experimental
+status:
+  - experimental
 browser-compat: api.XREquirectLayer.radius
 ---
 

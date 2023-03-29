@@ -2,12 +2,6 @@
 title: EXT_disjoint_timer_query.deleteQueryEXT()
 slug: Web/API/EXT_disjoint_timer_query/deleteQueryEXT
 page-type: webgl-extension-method
-tags:
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGL extension
 browser-compat: api.EXT_disjoint_timer_query.deleteQueryEXT
 ---
 
@@ -19,7 +13,7 @@ the [WebGL API](/en-US/docs/Web/API/WebGL_API) deletes a given
 
 ## Syntax
 
-```js
+```js-nolint
 deleteQueryEXT(query)
 ```
 
@@ -35,7 +29,7 @@ None ({{jsxref("undefined")}}).
 ## Examples
 
 ```js
-const ext = gl.getExtension('EXT_disjoint_timer_query');
+const ext = gl.getExtension("EXT_disjoint_timer_query");
 const query = ext.createQueryEXT();
 
 // …

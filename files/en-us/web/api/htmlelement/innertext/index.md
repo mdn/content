@@ -2,12 +2,6 @@
 title: HTMLElement.innerText
 slug: Web/API/HTMLElement/innerText
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTML DOM
-  - HTMLElement
-  - Property
-  - Reference
 browser-compat: api.HTMLElement.innerText
 ---
 
@@ -27,6 +21,9 @@ A string representing the rendered text content of an element.
 
 If the element itself is not [being rendered](https://html.spec.whatwg.org/multipage/rendering.html#being-rendered) (for example, is detached from the document or is hidden from view), the returned value is the same as the {{domxref("Node.textContent")}} property.
 
+> **Warning:** Setting `innerText` on a node removes _all_ of the node's children
+> and replaces them with a single text node with the given string value.
+
 ## Examples
 
 This example compares `innerText` with {{domxref("Node.textContent")}}.
@@ -45,7 +42,11 @@ Note how `innerText` is aware of things like {{htmlElement("br")}} elements, and
       text-transform: uppercase;
     }
   </style>
-  <span id="text">Take a look at<br />how this text<br />is interpreted below.</span>
+  <span id="text">
+    Take a look at<br />
+    how this text<br />
+    is interpreted below.
+  </span>
   <span style="display:none">HIDDEN TEXT</span>
 </p>
 <h3>Result of textContent:</h3>

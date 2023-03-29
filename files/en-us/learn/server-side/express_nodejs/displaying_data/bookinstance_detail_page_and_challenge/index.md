@@ -2,12 +2,6 @@
 title: BookInstance detail page and challenge
 slug: >-
   Learn/Server-side/Express_Nodejs/Displaying_data/BookInstance_detail_page_and_challenge
-tags:
-  - Express
-  - Node
-  - displaying data
-  - part 5
-  - server-side
 ---
 
 ## BookInstance detail page
@@ -23,18 +17,19 @@ Find the exported `bookinstance_detail()` controller method and replace it with 
 // Display detail page for a specific BookInstance.
 exports.bookinstance_detail = (req, res, next) => {
   BookInstance.findById(req.params.id)
-    .populate('book')
+    .populate("book")
     .exec((err, bookinstance) => {
       if (err) {
         return next(err);
       }
-      if (bookinstance == null) { // No results.
-        const err = new Error('Book copy not found');
+      if (bookinstance == null) {
+        // No results.
+        const err = new Error("Book copy not found");
         err.status = 404;
         return next(err);
       }
       // Successful, so render.
-      res.render('bookinstance_detail', {
+      res.render("bookinstance_detail", {
         title: `Copy: ${bookinstance.book.title}`,
         bookinstance,
       });

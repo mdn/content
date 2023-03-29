@@ -1,12 +1,7 @@
 ---
 title: Date.prototype.setFullYear()
 slug: Web/JavaScript/Reference/Global_Objects/Date/setFullYear
-tags:
-  - Date
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.Date.setFullYear
 ---
 
@@ -19,7 +14,7 @@ specified date according to local time. Returns new timestamp.
 
 ## Syntax
 
-```js
+```js-nolint
 setFullYear(yearValue)
 setFullYear(yearValue, monthValue)
 setFullYear(yearValue, monthValue, dateValue)

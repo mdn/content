@@ -2,16 +2,6 @@
 title: ServiceWorkerContainer
 slug: Web/API/ServiceWorkerContainer
 page-type: web-api-interface
-tags:
-  - API
-  - Draft
-  - Interface
-  - Offline
-  - Reference
-  - Service Workers
-  - Service worker API
-  - ServiceWorkerContainer
-  - Workers
 browser-compat: api.ServiceWorkerContainer
 ---
 
@@ -23,7 +13,7 @@ Most importantly, it exposes the {{domxref("ServiceWorkerContainer.register", "S
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 - {{domxref("ServiceWorkerContainer.controller")}} {{ReadOnlyInline}}
   - : Returns a {{domxref("ServiceWorker")}} object if its state is `activating` or `activated` (the same object returned by {{domxref("ServiceWorkerRegistration.active")}}). This property returns `null` during a force-refresh request (_Shift_ + refresh) or if there is no active worker.
@@ -39,7 +29,7 @@ Most importantly, it exposes the {{domxref("ServiceWorkerContainer.register", "S
 - [`message`](/en-US/docs/Web/API/ServiceWorkerContainer/message_event)
   - : Occurs when incoming messages are received by the {{domxref("ServiceWorkerContainer")}} object (e.g. via a {{domxref("MessagePort.postMessage()")}} call).
 
-## Methods
+## Instance methods
 
 - {{domxref("ServiceWorkerContainer.register", "ServiceWorkerContainer.register()")}}
   - : Creates or updates a {{domxref("ServiceWorkerRegistration")}} for the given `scriptURL`.

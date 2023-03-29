@@ -1,15 +1,7 @@
 ---
 title: sessions.setTabValue()
 slug: Mozilla/Add-ons/WebExtensions/API/sessions/setTabValue
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Reference
-  - WebExtensions
-  - sessions
-  - setTabValue
+page-type: webextension-api-function
 browser-compat: webextensions.api.sessions.setTabValue
 ---
 
@@ -23,7 +15,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ## Syntax
 
-```js
+```js-nolint
 let storing = browser.sessions.setTabValue(
   tabId,    // integer
   key,      // string

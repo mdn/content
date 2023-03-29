@@ -1,9 +1,7 @@
 ---
 title: preserveAspectRatio
 slug: Web/SVG/Attribute/preserveAspectRatio
-tags:
-  - SVG
-  - SVG Attribute
+page-type: svg-attribute
 spec-urls:
   - https://drafts.fxtf.org/filter-effects/#element-attrdef-feimage-preserveaspectratio
   - https://svgwg.org/svg2-draft/coords.html#PreserveAspectRatioAttribute
@@ -18,37 +16,58 @@ Because the aspect ratio of an SVG image is defined by the {{SVGAttr('viewBox')}
 ## Example
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
 <svg viewBox="-1 -1 162 92" xmlns="http://www.w3.org/2000/svg">
   <defs>
-     <path id="smiley" d="M50,10 A40,40,1,1,1,50,90 A40,40,1,1,1,50,10 M30,40 Q36,35,42,40 M58,40 Q64,35,70,40 M30,60 Q50,75,70,60 Q50,75,30,60" />
+    <path
+      id="smiley"
+      d="M50,10 A40,40,1,1,1,50,90 A40,40,1,1,1,50,10 M30,40 Q36,35,42,40 M58,40 Q64,35,70,40 M30,60 Q50,75,70,60 Q50,75,30,60" />
   </defs>
 
   <!-- (width>height) meet -->
   <rect x="0" y="0" width="20" height="10">
     <title>xMidYMid meet</title>
   </rect>
-  <svg viewBox="0 0 100 100" width="20" height="10"
-       preserveAspectRatio="xMidYMid meet" x="0" y="0">
+  <svg
+    viewBox="0 0 100 100"
+    width="20"
+    height="10"
+    preserveAspectRatio="xMidYMid meet"
+    x="0"
+    y="0">
     <use href="#smiley" />
   </svg>
 
   <rect x="25" y="0" width="20" height="10">
     <title>xMinYMid meet</title>
   </rect>
-  <svg viewBox="0 0 100 100" width="20" height="10"
-       preserveAspectRatio="xMinYMid meet" x="25" y="0">
+  <svg
+    viewBox="0 0 100 100"
+    width="20"
+    height="10"
+    preserveAspectRatio="xMinYMid meet"
+    x="25"
+    y="0">
     <use href="#smiley" />
   </svg>
 
   <rect x="50" y="0" width="20" height="10">
     <title>xMaxYMid meet</title>
   </rect>
-  <svg viewBox="0 0 100 100" width="20" height="10"
-       preserveAspectRatio="xMaxYMid meet" x="50" y="0">
+  <svg
+    viewBox="0 0 100 100"
+    width="20"
+    height="10"
+    preserveAspectRatio="xMaxYMid meet"
+    x="50"
+    y="0">
     <use href="#smiley" />
   </svg>
 
@@ -56,24 +75,39 @@ html,body,svg { height:100% }
   <rect x="0" y="15" width="20" height="10">
     <title>xMidYMin slice</title>
   </rect>
-  <svg viewBox="0 0 100 100" width="20" height="10"
-       preserveAspectRatio="xMidYMin slice" x="0" y="15">
+  <svg
+    viewBox="0 0 100 100"
+    width="20"
+    height="10"
+    preserveAspectRatio="xMidYMin slice"
+    x="0"
+    y="15">
     <use href="#smiley" />
   </svg>
 
   <rect x="25" y="15" width="20" height="10">
     <title>xMidYMid slice</title>
   </rect>
-  <svg viewBox="0 0 100 100" width="20" height="10"
-       preserveAspectRatio="xMidYMid slice" x="25" y="15">
+  <svg
+    viewBox="0 0 100 100"
+    width="20"
+    height="10"
+    preserveAspectRatio="xMidYMid slice"
+    x="25"
+    y="15">
     <use href="#smiley" />
   </svg>
 
   <rect x="50" y="15" width="20" height="10">
     <title>xMidYMax slice</title>
   </rect>
-  <svg viewBox="0 0 100 100" width="20" height="10"
-       preserveAspectRatio="xMidYMax slice" x="50" y="15">
+  <svg
+    viewBox="0 0 100 100"
+    width="20"
+    height="10"
+    preserveAspectRatio="xMidYMax slice"
+    x="50"
+    y="15">
     <use href="#smiley" />
   </svg>
 
@@ -81,24 +115,39 @@ html,body,svg { height:100% }
   <rect x="75" y="0" width="10" height="25">
     <title>xMidYMin meet</title>
   </rect>
-  <svg viewBox="0 0 100 100" width="10" height="25"
-       preserveAspectRatio="xMidYMin meet" x="75" y="0">
+  <svg
+    viewBox="0 0 100 100"
+    width="10"
+    height="25"
+    preserveAspectRatio="xMidYMin meet"
+    x="75"
+    y="0">
     <use href="#smiley" />
   </svg>
 
   <rect x="90" y="0" width="10" height="25">
     <title>xMidYMid meet</title>
   </rect>
-  <svg viewBox="0 0 100 100" width="10" height="25"
-       preserveAspectRatio="xMidYMid meet" x="90" y="0">
+  <svg
+    viewBox="0 0 100 100"
+    width="10"
+    height="25"
+    preserveAspectRatio="xMidYMid meet"
+    x="90"
+    y="0">
     <use href="#smiley" />
   </svg>
 
   <rect x="105" y="0" width="10" height="25">
     <title>xMidYMax meet</title>
   </rect>
-  <svg viewBox="0 0 100 100" width="10" height="25"
-       preserveAspectRatio="xMidYMax meet" x="105" y="0">
+  <svg
+    viewBox="0 0 100 100"
+    width="10"
+    height="25"
+    preserveAspectRatio="xMidYMax meet"
+    x="105"
+    y="0">
     <use href="#smiley" />
   </svg>
 
@@ -106,24 +155,39 @@ html,body,svg { height:100% }
   <rect x="120" y="0" width="10" height="25">
     <title>xMinYMid slice</title>
   </rect>
-  <svg viewBox="0 0 100 100" width="10" height="25"
-       preserveAspectRatio="xMinYMid slice" x="120" y="0">
+  <svg
+    viewBox="0 0 100 100"
+    width="10"
+    height="25"
+    preserveAspectRatio="xMinYMid slice"
+    x="120"
+    y="0">
     <use href="#smiley" />
   </svg>
 
   <rect x="135" y="0" width="10" height="25">
     <title>xMidYMid slice</title>
   </rect>
-  <svg viewBox="0 0 100 100" width="10" height="25"
-       preserveAspectRatio="xMidYMid slice" x="135" y="0">
+  <svg
+    viewBox="0 0 100 100"
+    width="10"
+    height="25"
+    preserveAspectRatio="xMidYMid slice"
+    x="135"
+    y="0">
     <use href="#smiley" />
   </svg>
 
   <rect x="150" y="0" width="10" height="25">
     <title>xMaxYMid slice</title>
   </rect>
-  <svg viewBox="0 0 100 100" width="10" height="25"
-       preserveAspectRatio="xMaxYMid slice" x="150" y="0">
+  <svg
+    viewBox="0 0 100 100"
+    width="10"
+    height="25"
+    preserveAspectRatio="xMaxYMid slice"
+    x="150"
+    y="0">
     <use href="#smiley" />
   </svg>
 
@@ -131,8 +195,13 @@ html,body,svg { height:100% }
   <rect x="0" y="30" width="160" height="60">
     <title>none</title>
   </rect>
-  <svg viewBox="0 0 100 100" width="160" height="60"
-       preserveAspectRatio="none" x="0" y="30">
+  <svg
+    viewBox="0 0 100 100"
+    width="160"
+    height="60"
+    preserveAspectRatio="none"
+    x="0"
+    y="30">
     <use href="#smiley" />
   </svg>
 </svg>
@@ -148,7 +217,8 @@ path {
   pointer-events: none;
 }
 
-rect:hover, rect:active {
+rect:hover,
+rect:active {
   outline: 1px solid red;
 }
 ```
@@ -164,6 +234,7 @@ preserveAspectRatio="<align> [<meetOrSlice>]"
 Its value is made of one or two keywords: A required alignment value and an optional "meet or slice" reference as described below:
 
 - Alignment value
+
   - : The alignment value indicates whether to force uniform scaling and, if so, the alignment method to use in case the aspect ratio of the {{ SVGAttr("viewBox") }} doesn't match the aspect ratio of the viewport. The alignment value must be one of the following keywords:
 
     - **none**
@@ -195,7 +266,9 @@ Its value is made of one or two keywords: A required alignment value and an opti
     - **xMaxYMax** - Force uniform scaling.
       Align the `<min-x>+<width>` of the element's {{ SVGAttr("viewBox") }} with the maximum X value of the viewport.
       Align the `<min-y>+<height>` of the element's {{ SVGAttr("viewBox") }} with the maximum Y value of the viewport.
+
 - Meet or slice reference
+
   - : The meet or slice reference is optional and, if provided, must be one of the following keywords:
 
     - **meet** (_the default_) - Scale the graphic such that:
@@ -205,6 +278,7 @@ Its value is made of one or two keywords: A required alignment value and an opti
       - the {{ SVGAttr("viewBox") }} is scaled up as much as possible, while still meeting the other criteria
 
       In this case, if the aspect ratio of the graphic does not match the viewport, some of the viewport will extend beyond the bounds of the {{ SVGAttr("viewBox") }} (i.e., the area into which the {{ SVGAttr("viewBox") }} will draw will be smaller than the viewport).
+
     - **slice** - Scale the graphic such that:
 
       - aspect ratio is preserved

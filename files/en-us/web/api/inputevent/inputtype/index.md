@@ -2,16 +2,6 @@
 title: InputEvent.inputType
 slug: Web/API/InputEvent/inputType
 page-type: web-api-instance-property
-tags:
-  - API
-  - DOM
-  - DOM Events
-  - Input
-  - InputEvent
-  - Property
-  - Reference
-  - events
-  - inputType
 browser-compat: api.InputEvent.inputType
 ---
 
@@ -36,10 +26,15 @@ This example logs the `inputType` for [input events](/en-US/docs/Web/API/HTMLEle
 ### HTML
 
 ```html
-<p id="log">Input type: </p>
-<div contenteditable="true" style="margin: 20px;padding: 20px;border:2px dashed red;">
-  <p>Some sample text. Try inserting line breaks, or deleting text in different ways, or pasting different content in.</p>
-  <hr>
+<p id="log">Input type:</p>
+<div
+  contenteditable="true"
+  style="margin: 20px;padding: 20px;border:2px dashed red;">
+  <p>
+    Some sample text. Try inserting line breaks, or deleting text in different
+    ways, or pasting different content in.
+  </p>
+  <hr />
   <ul>
     <li>A sample</li>
     <li>bulleted</li>
@@ -52,9 +47,9 @@ This example logs the `inputType` for [input events](/en-US/docs/Web/API/HTMLEle
 ### JavaScript
 
 ```js
-const log = document.getElementById('log');
-const editable = document.querySelector('div[contenteditable]');
-editable.addEventListener('input', logInputType);
+const log = document.getElementById("log");
+const editable = document.querySelector("div[contenteditable]");
+editable.addEventListener("input", logInputType);
 
 function logInputType(event) {
   log.textContent = `Input type: ${event.inputType}`;

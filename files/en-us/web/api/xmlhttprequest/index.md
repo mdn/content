@@ -2,16 +2,6 @@
 title: XMLHttpRequest
 slug: Web/API/XMLHttpRequest
 page-type: web-api-interface
-tags:
-  - AJAX
-  - API
-  - Communication
-  - HTTP
-  - Interface
-  - Reference
-  - Web
-  - XHR
-  - XMLHttpRequest
 browser-compat: api.XMLHttpRequest
 ---
 
@@ -34,7 +24,7 @@ If your communication needs to involve receiving event data or message data from
 - {{domxref("XMLHttpRequest.XMLHttpRequest", "XMLHttpRequest()")}}
   - : The constructor initializes an `XMLHttpRequest`. It must be called before any other method calls.
 
-## Properties
+## Instance properties
 
 _This interface also inherits properties of {{domxref("XMLHttpRequestEventTarget")}} and of {{domxref("EventTarget")}}._
 
@@ -53,6 +43,7 @@ _This interface also inherits properties of {{domxref("XMLHttpRequestEventTarget
 - {{domxref("XMLHttpRequest.status")}} {{ReadOnlyInline}}
   - : Returns the [HTTP response status code](/en-US/docs/Web/HTTP/Status) of the request.
 - {{domxref("XMLHttpRequest.statusText")}} {{ReadOnlyInline}}
+
   - : Returns a string containing the response string returned by the HTTP server. Unlike {{domxref("XMLHttpRequest.status")}}, this includes the entire text of the response message ("`OK`", for example).
 
     > **Note:** According to the HTTP/2 specification {{RFC(7540, "Response Pseudo-Header Fields", "8.1.2.4")}}, HTTP/2 does not define a way to carry the version or reason phrase that is included in an HTTP/1.1 status line.
@@ -75,7 +66,7 @@ _This interface also inherits properties of {{domxref("XMLHttpRequestEventTarget
 - {{domxref("XMLHttpRequest.mozBackgroundRequest")}}
   - : A boolean. It indicates whether or not the object represents a background service request.
 
-## Methods
+## Instance methods
 
 - {{domxref("XMLHttpRequest.abort()")}}
   - : Aborts the request if it has already been sent.
@@ -138,4 +129,3 @@ _This interface also inherits properties of {{domxref("XMLHttpRequestEventTarget
   - [Fetch API](/en-US/docs/Web/API/Fetch_API)
 
 - [New Tricks in XMLHttpRequest2 (2011)](https://web.dev/xhr2/)
-- Feature-Policy directive {{httpheader("Feature-Policy/sync-xhr", "sync-xhr")}}

@@ -1,17 +1,12 @@
 ---
 title: URI
 slug: Glossary/URI
-tags:
-  - Glossary
-  - HTTP
-  - Search
-  - URI
-  - URL
+page-type: glossary-definition
 ---
 
 A **URI** _(Uniform Resource Identifier)_ is a string that refers to a resource.
 
-The most common are {{Glossary("URL","URL")}}s, which identify the resource by giving its location on the Web. {{Glossary("URN","URN")}}s, by contrast, refer to a resource by a name, in a given namespace, such as the ISBN of a book.
+The most common are {{Glossary("URL","URLs")}}, which identify the resource by giving its location on the Web. {{Glossary("URN","URNs")}}, by contrast, refer to a resource by a name, in a given namespace, such as the ISBN of a book.
 
 ## See also
 

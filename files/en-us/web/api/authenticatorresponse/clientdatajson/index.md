@@ -2,13 +2,6 @@
 title: AuthenticatorResponse.clientDataJSON
 slug: Web/API/AuthenticatorResponse/clientDataJSON
 page-type: web-api-instance-property
-tags:
-  - API
-  - AuthenticatorResponse
-  - Property
-  - Reference
-  - Web Authentication API
-  - WebAuthn
 browser-compat: api.AuthenticatorResponse.clientDataJSON
 ---
 
@@ -27,7 +20,7 @@ child objects of `AuthenticatorResponse`, specifically
 
 An {{jsxref("ArrayBuffer")}}.
 
-## Properties
+## Instance properties
 
 After the `clientDataJSON` object is converted from an
 `ArrayBuffer` to a JavaScript object, it will have the following properties:
@@ -38,9 +31,9 @@ After the `clientDataJSON` object is converted from an
 - `challenge`
   - : The [base64url](/en-US/docs/Glossary/Base64)
     encoded version of the cryptographic challenge sent from the relying party's server.
-    The original value is passed via
-    {{domxref("PublicKeyCredentialRequestOptions.challenge")}} or
-    {{domxref("PublicKeyCredentialCreationOptions.challenge")}}.
+    The original value are passed as the `challenge` option in
+    {{domxref("CredentialsContainer.get()")}} or
+    {{domxref("CredentialsContainer.create()")}}.
 - `origin`
   - : The fully qualified origin of the requester which has been given by the
     client/browser to the authenticator. We should expect the _relying party's
@@ -63,16 +56,16 @@ After the `clientDataJSON` object is converted from an
 
 ```js
 function arrayBufferToStr(buf) {
-    return String.fromCharCode.apply(null, new Uint8Array(buf));
+  return String.fromCharCode.apply(null, new Uint8Array(buf));
 }
 
 // pk is a PublicKeyCredential that is the result of a create() or get() Promise
 const clientDataStr = arrayBufferToStr(pk.clientDataJSON);
 const clientDataObj = JSON.parse(clientDataStr);
 
-console.log(clientDataObj.type);      // "webauthn.create" or "webauthn.get"
+console.log(clientDataObj.type); // "webauthn.create" or "webauthn.get"
 console.log(clientDataObj.challenge); // base64 encoded String containing the original challenge
-console.log(clientDataObj.origin);    // the window.origin
+console.log(clientDataObj.origin); // the window.origin
 ```
 
 ## Specifications

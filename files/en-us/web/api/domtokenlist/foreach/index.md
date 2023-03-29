@@ -2,9 +2,6 @@
 title: DOMTokenList.forEach()
 slug: Web/API/DOMTokenList/forEach
 page-type: web-api-instance-method
-tags:
-  - Method
-  - Reference
 browser-compat: api.DOMTokenList.forEach
 ---
 
@@ -16,9 +13,9 @@ insertion order.
 
 ## Syntax
 
-```js
-forEach(callback);
-forEach(callback, thisArg);
+```js-nolint
+forEach(callback)
+forEach(callback, thisArg)
 ```
 
 ### Parameters
@@ -62,12 +59,9 @@ const pre = document.querySelector("pre");
 const classes = pre.classList;
 const iterator = classes.values();
 
-classes.forEach(
-  function (value, key, listObj) {
-    pre.textContent += `(${value} ${key})/${this}\n`;
-  },
-  "arg"
-);
+classes.forEach(function (value, key, listObj) {
+  pre.textContent += `(${value} ${key})/${this}\n`;
+}, "arg");
 ```
 
 ### Result

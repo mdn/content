@@ -2,13 +2,8 @@
 title: Document.clear()
 slug: Web/API/Document/clear
 page-type: web-api-instance-method
-tags:
-  - API
-  - Deprecated
-  - Document
-  - HTML DOM
-  - Method
-  - Reference
+status:
+  - deprecated
 browser-compat: api.Document.clear
 ---
 
@@ -18,7 +13,7 @@ The **`Document.clear()`** method does nothing, but doesn't raise any error.
 
 ## Syntax
 
-```js
+```js-nolint
 clear()
 ```
 

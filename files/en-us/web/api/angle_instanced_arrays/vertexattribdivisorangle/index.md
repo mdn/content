@@ -2,13 +2,6 @@
 title: ANGLE_instanced_arrays.vertexAttribDivisorANGLE()
 slug: Web/API/ANGLE_instanced_arrays/vertexAttribDivisorANGLE
 page-type: web-api-instance-method
-tags:
-  - ANGLE_instanced_arrays
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGL extension
 browser-compat: api.ANGLE_instanced_arrays.vertexAttribDivisorANGLE
 ---
 
@@ -20,7 +13,7 @@ The **ANGLE_instanced_arrays.vertexAttribDivisorANGLE()** method of the [WebGL A
 
 ## Syntax
 
-```js
+```js-nolint
 vertexAttribDivisorANGLE(index, divisor)
 ```
 
@@ -38,7 +31,7 @@ None ({{jsxref("undefined")}}).
 ## Examples
 
 ```js
-const ext = gl.getExtension('ANGLE_instanced_arrays');
+const ext = gl.getExtension("ANGLE_instanced_arrays");
 ext.vertexAttribDivisorANGLE(0, 2);
 ```
 

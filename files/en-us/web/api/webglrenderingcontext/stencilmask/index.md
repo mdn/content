@@ -2,12 +2,6 @@
 title: WebGLRenderingContext.stencilMask()
 slug: Web/API/WebGLRenderingContext/stencilMask
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.stencilMask
 ---
 
@@ -21,7 +15,7 @@ back stencil writemasks to different values.
 
 ## Syntax
 
-```js
+```js-nolint
 stencilMask(mask)
 ```
 

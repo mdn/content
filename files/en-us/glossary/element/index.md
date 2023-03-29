@@ -1,10 +1,7 @@
 ---
 title: Element
 slug: Glossary/Element
-tags:
-  - CodingScripting
-  - Glossary
-  - HTML
+page-type: glossary-definition
 ---
 
 An **element** is a part of a webpage. In {{glossary("XML")}} and {{glossary("HTML")}}, an element may contain a data item or a chunk of text or an image, or perhaps nothing. A typical element includes an opening tag with some {{glossary("attribute", "attributes")}}, enclosed text content, and a closing tag.

@@ -1,13 +1,7 @@
 ---
 title: <time>
 slug: Web/CSS/time
-tags:
-  - CSS
-  - CSS Data Type
-  - Data Type
-  - Layout
-  - Reference
-  - Web
+page-type: css-type
 browser-compat: css.types.time
 ---
 
@@ -35,12 +29,12 @@ The `<time>` data type consists of a {{cssxref("&lt;number&gt;")}} followed by o
 ### Valid times
 
 ```plain example-good
-    12s         Positive integer
-    -456ms      Negative integer
-    4.3ms       Non-integer
-    14mS        The unit is case-insensitive, although capital letters are not recommended.
-    +0s         Zero with a leading + and a unit
-    -0ms        Zero with a leading - and a unit
+12s         Positive integer
+-456ms      Negative integer
+4.3ms       Non-integer
+14mS        The unit is case-insensitive, although capital letters are not recommended.
++0s         Zero with a leading + and a unit
+-0ms        Zero with a leading - and a unit
 ```
 
 ### Invalid times

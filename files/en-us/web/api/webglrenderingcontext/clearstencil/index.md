@@ -2,12 +2,6 @@
 title: WebGLRenderingContext.clearStencil()
 slug: Web/API/WebGLRenderingContext/clearStencil
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.clearStencil
 ---
 
@@ -21,7 +15,7 @@ This specifies what stencil value to use when calling the
 
 ## Syntax
 
-```js
+```js-nolint
 clearStencil(s)
 ```
 

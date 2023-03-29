@@ -2,9 +2,6 @@
 title: CharacterData.appendData()
 slug: Web/API/CharacterData/appendData
 page-type: web-api-instance-method
-tags:
-  - Method
-  - Reference
 browser-compat: api.CharacterData.appendData
 ---
 
@@ -15,8 +12,8 @@ adds the provided data to the end of the node's current data.
 
 ## Syntax
 
-```js
-appendData(data);
+```js-nolint
+appendData(data)
 ```
 
 ### Parameters

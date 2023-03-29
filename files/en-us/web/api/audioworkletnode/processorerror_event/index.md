@@ -1,16 +1,7 @@
 ---
-title: 'AudioWorkletNode: processorerror event'
+title: "AudioWorkletNode: processorerror event"
 slug: Web/API/AudioWorkletNode/processorerror_event
 page-type: web-api-event
-tags:
-  - API
-  - Audio
-  - AudioWorkletNode
-  - AudioWorkletProcessor
-  - Event
-  - Reference
-  - Web Audio API
-  - onprocessorerror
 browser-compat: api.AudioWorkletNode.processorerror_event
 ---
 
@@ -24,8 +15,8 @@ Once an exception is thrown, the processor (and thus the node) will output silen
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener('processorerror', (event) => { })
+```js-nolint
+addEventListener("processorerror", (event) => { })
 
 onprocessorerror = (event) => { }
 ```
@@ -40,7 +31,7 @@ To be informed when the processor throws an exception, you can add a handler to 
 
 ```js
 whiteNoiseNode.addEventListener("processorerror", (event) => {
-  console.error('There was an error!');
+  console.error("There was an error!");
 });
 ```
 
@@ -48,8 +39,8 @@ Alternatively, you can use the `onprocessorerror` event handler property to esta
 
 ```js
 whiteNoiseNode.onprocessorerror = (event) => {
- console.error('There was an error!');
-}
+  console.error("There was an error!");
+};
 ```
 
 ## Specifications

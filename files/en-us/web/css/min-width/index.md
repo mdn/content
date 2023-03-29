@@ -1,18 +1,7 @@
 ---
 title: min-width
 slug: Web/CSS/min-width
-tags:
-  - CSS
-  - CSS Property
-  - Horizontal
-  - Layout
-  - Minimum
-  - Reference
-  - dimensions
-  - min-width
-  - recipe:css-property
-  - size
-  - width
+page-type: css-property
 browser-compat: css.properties.min-width
 ---
 
@@ -74,9 +63,13 @@ min-width: unset;
 ### Setting minimum element width
 
 ```css
-table { min-width: 75%; }
+table {
+  min-width: 75%;
+}
 
-form { min-width: 0; }
+form {
+  min-width: 0;
+}
 ```
 
 ## Specifications

@@ -1,12 +1,7 @@
 ---
 title: Date.prototype.setHours()
 slug: Web/JavaScript/Reference/Global_Objects/Date/setHours
-tags:
-  - Date
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.Date.setHours
 ---
 
@@ -20,7 +15,7 @@ according to local time, and returns the number of milliseconds since January 1,
 
 ## Syntax
 
-```js
+```js-nolint
 setHours(hoursValue)
 setHours(hoursValue, minutesValue)
 setHours(hoursValue, minutesValue, secondsValue)

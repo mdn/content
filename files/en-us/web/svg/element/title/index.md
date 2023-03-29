@@ -1,11 +1,7 @@
 ---
 title: <title> — the SVG accessible name element
 slug: Web/SVG/Element/title
-tags:
-  - Element
-  - Reference
-  - SVG
-  - SVG Descriptive
+page-type: svg-element
 browser-compat: svg.elements.title
 ---
 
@@ -20,7 +16,11 @@ Text in a `<title>` element is not rendered as part of the graphic, but browsers
 ## Example
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html

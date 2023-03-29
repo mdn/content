@@ -1,10 +1,7 @@
 ---
 title: Site
 slug: Glossary/Site
-tags:
-  - Glossary
-  - Security
-  - WebMechanics
+page-type: glossary-definition
 ---
 
 Informally, a _site_ is a website, which is a collection of web pages, served from the same domain, and maintained by a single organization.
@@ -41,6 +38,6 @@ These are the same site, or different sites if the scheme is considered:
 
 ## See also
 
-- [What is a URL](/en-US/docs/Learn/Common_questions/What_is_a_URL)
+- [What is a URL](/en-US/docs/Learn/Common_questions/Web_mechanics/What_is_a_URL)
 - {{Glossary("Origin")}}
 - [Same-origin policy](/en-US/docs/Web/Security/Same-origin_policy)

@@ -1,15 +1,7 @@
 ---
 title: browsingData.removeLocalStorage()
 slug: Mozilla/Add-ons/WebExtensions/API/browsingData/removeLocalStorage
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Reference
-  - WebExtensions
-  - browsingData
-  - removeLocalStorage
+page-type: webextension-api-function
 browser-compat: webextensions.api.browsingData.removeLocalStorage
 ---
 
@@ -26,7 +18,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ## Syntax
 
-```js
+```js-nolint
 let removing = browser.browsingData.removeLocalStorage(
   removalOptions            // RemovalOptions object
 )
@@ -54,8 +46,7 @@ function onError(error) {
   console.error(error);
 }
 
-browser.browsingData.removeLocalStorage({}).
-then(onRemoved, onError);
+browser.browsingData.removeLocalStorage({}).then(onRemoved, onError);
 ```
 
 ## Browser compatibility

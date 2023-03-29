@@ -1,19 +1,6 @@
 ---
 title: Building up a basic demo with the PlayCanvas engine
 slug: Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_PlayCanvas/engine
-tags:
-  - 3D
-  - Animation
-  - Beginner
-  - Canvas
-  - Games
-  - PlayCanvas
-  - Tutorial
-  - WebGL
-  - camera
-  - engine
-  - lighting
-  - rendering
 ---
 
 {{GamesSidebar}}
@@ -158,7 +145,7 @@ boxMaterial.update();
 box.model.model.meshInstances[0].material = boxMaterial;
 ```
 
-By diffusing the light on the object we can give it it's own color — we'll choose a nice familiar blue.
+By diffusing the light on the object, we can give it its own color — we'll choose a nice familiar blue.
 
 > **Note:** In PlayCanvas, the color channel values are provided as floats in the range `0-1`, instead of integers of `0-255` as you might be used to using on the Web.
 

@@ -1,14 +1,7 @@
 ---
 title: unicode-range
 slug: Web/CSS/@font-face/unicode-range
-tags:
-  - At-rule descriptor
-  - CSS
-  - CSS Fonts
-  - CSS Property
-  - Layout
-  - Reference
-  - Web
+page-type: css-at-rule-descriptor
 browser-compat: css.at-rules.font-face.unicode-range
 ---
 
@@ -20,10 +13,10 @@ The **`unicode-range`** CSS descriptor sets the specific range of characters to 
 
 ```css
 /* <unicode-range> values */
-unicode-range: U+26;               /* single codepoint */
+unicode-range: U+26; /* single codepoint */
 unicode-range: U+0-7F;
-unicode-range: U+0025-00FF;        /* codepoint range */
-unicode-range: U+4??;              /* wildcard range */
+unicode-range: U+0025-00FF; /* codepoint range */
+unicode-range: U+4??; /* wildcard range */
 unicode-range: U+0025-00FF, U+4??; /* multiple values */
 ```
 
@@ -46,9 +39,7 @@ The purpose of this descriptor is to allow the font resources to be segmented so
 
 ## Formal syntax
 
-```
-<unicode-range>#
-```
+{{csssyntax}}
 
 ## Examples
 
@@ -68,8 +59,8 @@ In the CSS we are in effect defining a completely separate {{cssxref("@font-face
 
 ```css
 @font-face {
-  font-family: 'Ampersand';
-  src: local('Times New Roman');
+  font-family: "Ampersand";
+  src: local("Times New Roman");
   unicode-range: U+26;
 }
 
@@ -98,7 +89,6 @@ div {
 - {{cssxref("@font-face/font-stretch", "font-stretch")}}
 - {{cssxref("@font-face/font-style", "font-style")}}
 - {{cssxref("@font-face/font-weight", "font-weight")}}
-- {{cssxref("@font-face/font-variant", "font-variant")}}
 - {{cssxref("font-feature-settings", "font-feature-settings")}}
 - {{cssxref("@font-face/font-variation-settings", "font-variation-settings")}}
 - {{cssxref("@font-face/src", "src")}}

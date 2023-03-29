@@ -2,12 +2,6 @@
 title: FormData.has()
 slug: Web/API/FormData/has
 page-type: web-api-instance-method
-tags:
-  - API
-  - FormData
-  - Method
-  - Reference
-  - XMLHttpRequest
 browser-compat: api.FormData.has
 ---
 
@@ -19,7 +13,7 @@ The **`has()`** method of the {{domxref("FormData")}} interface returns whether 
 
 ## Syntax
 
-```js
+```js-nolint
 has(name)
 ```
 
@@ -37,9 +31,9 @@ has(name)
 The following snippet shows the results of testing for the existence of `username` in a `FormData` object, before and after appending a `username` value to it with {{domxref("FormData.append", "append()")}}:
 
 ```js
-formData.has('username'); // Returns false
-formData.append('username', 'Chris');
-formData.has('username'); // Returns true
+formData.has("username"); // Returns false
+formData.append("username", "Chris");
+formData.has("username"); // Returns true
 ```
 
 ## Specifications

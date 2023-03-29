@@ -2,13 +2,8 @@
 title: ScriptProcessorNode
 slug: Web/API/ScriptProcessorNode
 page-type: web-api-interface
-tags:
-  - API
-  - Deprecated
-  - Interface
-  - Reference
-  - ScriptProcessorNode
-  - Web Audio API
+status:
+  - deprecated
 browser-compat: api.ScriptProcessorNode
 ---
 
@@ -53,14 +48,14 @@ If the buffer size is not defined, which is recommended, the browser will pick o
   </tbody>
 </table>
 
-## Properties
+## Instance properties
 
 _Inherits properties from its parent, {{domxref("AudioNode")}}_.
 
 - {{domxref("ScriptProcessorNode.bufferSize")}} {{ReadOnlyInline}} {{Deprecated_Inline}}
-  - : Returns an integer representing both the input and output buffer size. Its value can be a power of 2 value in the range `256`–`16384`.
+  - : Returns an integer representing both the input and output buffer size. Its value can be a power of 2 value in the range `256` – `16384`.
 
-## Methods
+## Instance methods
 
 _No specific methods; inherits methods from its parent, {{domxref("AudioNode")}}_.
 

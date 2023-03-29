@@ -2,12 +2,6 @@
 title: RTCIceServer.username
 slug: Web/API/RTCIceServer/username
 page-type: web-api-instance-property
-tags:
-  - Property
-  - RTCIceServer
-  - Reference
-  - WebRTC
-  - username
 browser-compat: api.RTCIceServer.username
 ---
 
@@ -22,7 +16,7 @@ property is a string which specifies the username to use when authenticating wit
 
 ## Syntax
 
-```js
+```js-nolint
 const iceServer = {
   // ...
   username: someUsername,
@@ -45,11 +39,11 @@ creative password "turnpassword".
 myPeerConnection = new RTCPeerConnection({
   iceServers: [
     {
-      urls: "turn:turnserver.example.org",  // A TURN server
+      urls: "turn:turnserver.example.org", // A TURN server
       username: "webrtc",
-      credential: "turnpassword"
-    }
-  ]
+      credential: "turnpassword",
+    },
+  ],
 });
 ```
 

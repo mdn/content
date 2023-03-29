@@ -2,13 +2,8 @@
 title: AudioDecoder.decode()
 slug: Web/API/AudioDecoder/decode
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - decode
-  - AudioDecoder
-  - Experimental
+status:
+  - experimental
 browser-compat: api.AudioDecoder.decode
 ---
 
@@ -18,7 +13,7 @@ The **`decode()`** method of the {{domxref("AudioDecoder")}} interface enqueues 
 
 ## Syntax
 
-```js
+```js-nolint
 decode(chunk)
 ```
 

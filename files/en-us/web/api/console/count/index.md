@@ -2,14 +2,6 @@
 title: console.count()
 slug: Web/API/console/count
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - Debugging
-  - Method
-  - Reference
-  - Web Development
-  - web console
 browser-compat: api.console.count
 ---
 
@@ -22,7 +14,7 @@ this particular call to `count()` has been called.
 
 ## Syntax
 
-```js
+```js-nolint
 count()
 count(label)
 ```

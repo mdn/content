@@ -1,13 +1,7 @@
 ---
 title: additive-symbols
 slug: Web/CSS/@counter-style/additive-symbols
-tags:
-  - '@counter-style'
-  - At-rule descriptor
-  - CSS
-  - CSS Counter Styles
-  - CSS Descriptor
-  - Reference
+page-type: css-at-rule-descriptor
 browser-compat: css.at-rules.counter-style.additive-symbols
 ---
 
@@ -31,11 +25,7 @@ When the `system` descriptor is `cyclic`, `numeric`, `alphabetic`, `symbolic`, o
 
 ## Formal syntax
 
-```
-[ <integer [0,∞]> && <symbol> ]#
-
-<symbol> = <string> | <image> | <custom-ident>
-```
+{{csssyntax}}
 
 ## Examples
 

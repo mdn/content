@@ -1,10 +1,7 @@
 ---
 title: Glyph
 slug: Glossary/Glyph
-tags:
-  - Glossary
-  - SVG
-  - typography
+page-type: glossary-definition
 ---
 
 A **glyph** is a term used in typography for the visual representation of one or more {{Glossary("character", "characters")}}.

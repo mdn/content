@@ -2,12 +2,6 @@
 title: TransformStreamDefaultController.terminate()
 slug: Web/API/TransformStreamDefaultController/terminate
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - terminate
-  - TransformStreamDefaultController
 browser-compat: api.TransformStreamDefaultController.terminate
 ---
 
@@ -17,7 +11,7 @@ The **`terminate()`** method of the {{domxref("TransformStreamDefaultController"
 
 ## Syntax
 
-```js
+```js-nolint
 terminate()
 ```
 

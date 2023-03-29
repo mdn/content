@@ -1,13 +1,7 @@
 ---
-title: 'ARIA: directory role'
+title: "ARIA: directory role"
 slug: Web/Accessibility/ARIA/Roles/directory_role
-tags:
-  - Accessibility
-  - ARIA
-  - roles
-  - Reference
-  - ARIA roles
-  - document structure role
+status:
   - deprecated
 spec-urls: https://w3c.github.io/aria/#directory
 ---
@@ -37,6 +31,6 @@ Use the [`list`](/en-US/docs/Web/Accessibility/ARIA/Roles/list_role) role instea
 
 1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
 
-    {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
+   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
 
 </section>

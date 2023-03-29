@@ -1,18 +1,11 @@
 ---
 title: '<del>: The Deleted Text element'
 slug: Web/HTML/Element/del
-tags:
-  - Deleted Text
-  - Element
-  - HTML
-  - HTML edits
-  - Reference
-  - Web
-  - del
+page-type: html-element
 browser-compat: html.elements.del
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 The **`<del>`** [HTML](/en-US/docs/Web/HTML) element represents a range of text that has been deleted from a document. This can be used when rendering "track changes" or source code diff information, for example. The {{HTMLElement("ins")}} element can be used for the opposite purpose: to indicate text that has been added to the document.
 
@@ -24,15 +17,15 @@ This element is often (but need not be) rendered by applying a strike-through st
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories"
+        <a href="/en-US/docs/Web/HTML/Content_categories"
           >Content categories</a
         >
       </th>
       <td>
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content"
           >Phrasing content</a
         >,
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
           >flow content</a
         >.
       </td>
@@ -41,7 +34,7 @@ This element is often (but need not be) rendered by applying a strike-through st
       <th scope="row">Permitted content</th>
       <td>
         <a
-          href="/en-US/docs/Web/Guide/HTML/Content_categories#transparent_content_model"
+          href="/en-US/docs/Web/HTML/Content_categories#transparent_content_model"
           >Transparent</a
         >.
       </td>
@@ -54,7 +47,7 @@ This element is often (but need not be) rendered by applying a strike-through st
       <th scope="row">Permitted parents</th>
       <td>
         Any element that accepts
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content"
           >phrasing content</a
         >.
       </td>
@@ -82,16 +75,15 @@ This element is often (but need not be) rendered by applying a strike-through st
 
 This element's attributes include the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 
-- {{htmlattrdef("cite")}}
+- `cite`
   - : A URI for a resource that explains the change (for example, meeting minutes).
-- {{htmlattrdef("datetime")}}
-  - : This attribute indicates the time and date of the change and must be a valid date string with an optional time. If the value cannot be parsed as a date with an optional time string, the element does not have an associated time stamp. For the format of the string without a time, see [Date strings](/en-US/docs/Web/HTML/Date_and_time_formats#date_strings). The format of the string if it includes both date and time is covered in [Local date and time strings](/en-US/docs/Web/HTML/Date_and_time_formats#local_date_and_time_strings).
+- `datetime`
+  - : This attribute indicates the time and date of the change and must be a valid date string with an optional time. If the value cannot be parsed as a date with an optional time string, the element does not have an associated timestamp. For the format of the string without a time, see [Date strings](/en-US/docs/Web/HTML/Date_and_time_formats#date_strings). The format of the string if it includes both date and time is covered in [Local date and time strings](/en-US/docs/Web/HTML/Date_and_time_formats#local_date_and_time_strings).
 
 ## Examples
 
 ```html
-<p><del>This text has been deleted</del>,
-here is the rest of the paragraph.</p>
+<p><del>This text has been deleted</del>, here is the rest of the paragraph.</p>
 <del><p>This paragraph has been deleted.</p></del>
 ```
 

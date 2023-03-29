@@ -2,13 +2,8 @@
 title: StorageEvent.initStorageEvent()
 slug: Web/API/StorageEvent/initStorageEvent
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Deprecated
-  - Reference
-  - StorageEvent
-  - Web Storage API
+status:
+  - deprecated
 browser-compat: api.StorageEvent.initStorageEvent
 ---
 
@@ -19,7 +14,7 @@ value of a {{ domxref("StorageEvent") }}.
 
 ## Syntax
 
-```js
+```js-nolint
 initStorageEvent(type)
 initStorageEvent(type, canBubble)
 initStorageEvent(type, canBubble, cancelable)

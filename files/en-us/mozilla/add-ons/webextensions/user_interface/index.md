@@ -1,10 +1,7 @@
 ---
 title: User interface
 slug: Mozilla/Add-ons/WebExtensions/user_interface
-tags:
-  - Landing
-  - User Interface
-  - WebExtensions
+page-type: guide
 ---
 
 {{AddonSidebar}}

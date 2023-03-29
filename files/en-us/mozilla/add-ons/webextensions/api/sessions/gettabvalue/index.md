@@ -1,15 +1,7 @@
 ---
 title: sessions.getTabValue()
 slug: Mozilla/Add-ons/WebExtensions/API/sessions/getTabValue
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Reference
-  - WebExtensions
-  - getTabValue
-  - sessions
+page-type: webextension-api-function
 browser-compat: webextensions.api.sessions.getTabValue
 ---
 
@@ -23,7 +15,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ## Syntax
 
-```js
+```js-nolint
 let retrieving = browser.sessions.getTabValue(
   tabId,    // integer
   key       // string

@@ -1,13 +1,6 @@
 ---
-title: 'aria-description'
+title: aria-description
 slug: Web/Accessibility/ARIA/Attributes/aria-description
-tags:
-  - Accessibility
-  - ARIA
-  - ARIA attribute
-  - ARIA property
-  - aria-description
-  - Reference
 spec-urls: https://w3c.github.io/aria/#aria-description
 ---
 
@@ -20,12 +13,12 @@ The global `aria-description` attribute defines a string value that describes or
 The global `aria-description` attribute provides a mechanism for the developer to describe or annotate the current element providing greater context for assistive technology users.
 
 ```html
-<div role="application" aria-label="calendar"
-     aria-description="Game schedule for the Boston Red Sox 2021 Season">
-    <h1>Red Sox 2021</h1>
-    <div role="grid">
-      …
-    </div>
+<div
+  role="application"
+  aria-label="calendar"
+  aria-description="Game schedule for the Boston Red Sox 2021 Season">
+  <h1>Red Sox 2021</h1>
+  <div role="grid">…</div>
 </div>
 ```
 
@@ -58,5 +51,13 @@ Used in **ALL** roles.
 ## See Also
 
 - [HTML `title` attribute](/en-US/docs/Web/HTML/Global_attributes/title)
-- [`aria-describedby`](../aria-describedby)
+- [`aria-describedby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-describedby)
 - [`aria-details`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-details)
+
+<section id="Quick_links">
+
+1. [**WAI-ARIA states and properties**](/en-US/docs/Web/Accessibility/ARIA/Attributes)
+
+   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Attributes")}}
+
+</section>

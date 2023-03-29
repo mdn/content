@@ -2,14 +2,8 @@
 title: Navigator.setAppBadge()
 slug: Web/API/Navigator/setAppBadge
 page-type: web-api-instance-method
-tags:
-  - API
-  - Badging API
-  - Method
-  - Reference
-  - setAppBadge
-  - Navigator
-  - Experimental
+status:
+  - experimental
 browser-compat: api.Navigator.setAppBadge
 ---
 
@@ -19,7 +13,7 @@ The **`setAppBadge()`** method of the {{domxref("Navigator")}} interface sets a 
 
 ## Syntax
 
-```js
+```js-nolint
 setAppBadge()
 setAppBadge(contents)
 ```
@@ -27,7 +21,7 @@ setAppBadge(contents)
 ### Parameters
 
 - `contents` {{optional_inline}}
-  - : A {{jsxref("number")}} which will be used as the value of the badge. If `contents` is `0` then the badge will be set to `nothing`, indicating a cleared badge.
+  - : A {{jsxref("number")}} which will be used as the value of the badge. If `contents` is `0` then a badge not containing a count will be displayed.
 
 ### Return value
 

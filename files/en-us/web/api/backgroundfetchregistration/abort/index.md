@@ -2,13 +2,8 @@
 title: BackgroundFetchRegistration.abort()
 slug: Web/API/BackgroundFetchRegistration/abort
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - abort
-  - BackgroundFetchRegistration
-  - Experimental
+status:
+  - experimental
 browser-compat: api.BackgroundFetchRegistration.abort
 ---
 
@@ -18,7 +13,7 @@ The **`abort()`** method of the {{domxref("BackgroundFetchRegistration")}} inter
 
 ## Syntax
 
-```js
+```js-nolint
 abort()
 ```
 

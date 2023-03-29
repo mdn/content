@@ -2,14 +2,8 @@
 title: XRWebGLBinding.getSubImage()
 slug: Web/API/XRWebGLBinding/getSubImage
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - AR
-  - XR
-  - WebXR
-  - Experimental
+status:
+  - experimental
 browser-compat: api.XRWebGLBinding.getSubImage
 ---
 
@@ -19,7 +13,7 @@ The **`getSubImage()`** method of the {{domxref("XRWebGLBinding")}} interface re
 
 ## Syntax
 
-```js
+```js-nolint
 getSubImage(layer, frame)
 getSubImage(layer, frame, eye)
 ```
@@ -38,7 +32,7 @@ getSubImage(layer, frame, eye)
       - : The view represents the viewer's right eye.
     - `none`
       - : The view describes a monoscopic view, or the view otherwise doesn't represent a particular eye's point-of-view.
-    Defaults to `none`.
+        Defaults to `none`.
 
 ### Return value
 

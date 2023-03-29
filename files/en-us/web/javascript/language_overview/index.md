@@ -1,15 +1,12 @@
 ---
 title: JavaScript language overview
 slug: Web/JavaScript/Language_Overview
-tags:
-  - Guide
-  - Intermediate
-  - JavaScript
+page-type: guide
 ---
 
 {{jsSidebar}}
 
-JavaScript is a multi-paradigm, dynamic language with types and operators, standard built-in objects, and methods. Its syntax is based on the Java and C languages — many structures from those languages apply to JavaScript as well. JavaScript supports object-oriented programming with object prototypes and classes. It also supports functional programming since functions can be easily created via expressions and passed around like any other object.
+JavaScript is a multi-paradigm, dynamic language with types and operators, standard built-in objects, and methods. Its syntax is based on the Java and C languages — many structures from those languages apply to JavaScript as well. JavaScript supports object-oriented programming with [object prototypes](/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain) and classes. It also supports functional programming since functions are [first-class](/en-US/docs/Glossary/First-class_Function) that can be easily created via expressions and passed around like any other object.
 
 This page serves as a quick overview of various JavaScript language features, written for readers with background in other languages, such as C or Java.
 
@@ -91,7 +88,7 @@ Number values also include {{jsxref("NaN")}} (short for "Not a Number") and {{js
 
 ### Strings
 
-Strings in JavaScript are sequences of [Unicode characters](/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#unicode). This should be welcome news to anyone who has had to deal with internationalization. More accurately, they are [UTF-16 encoded](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#utf-16_characters_unicode_codepoints_and_grapheme_clusters).
+Strings in JavaScript are sequences of Unicode characters. This should be welcome news to anyone who has had to deal with internationalization. More accurately, they are [UTF-16 encoded](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#utf-16_characters_unicode_codepoints_and_grapheme_clusters).
 
 ```js
 console.log("Hello, world");
@@ -221,7 +218,7 @@ x = x + 5;
 
 You can use `++` and `--` to increment and decrement respectively. These can be used as a prefix or postfix operators.
 
-The [`+` operator](/en-US/docs/Web/JavaScript/Reference/Operators#addition) also does string concatenation:
+The [`+` operator](/en-US/docs/Web/JavaScript/Reference/Operators/Addition) also does string concatenation:
 
 ```js
 "hello" + " world"; // "hello world"
@@ -562,7 +559,7 @@ avg(2, 3, 4, 5); // 3.5
 
 In the above code, the variable `args` holds all the values that were passed into the function.
 
-The rest parameter will store all arguments _after_ where it's declared, but not before. i.e. `function avg(firstValue, ...args)` will store the first value passed into the function in the `firstValue` variable and the remaining arguments in `args`.
+The rest parameter will store all arguments _after_ where it's declared, but not before. In other words, `function avg(firstValue, ...args)` will store the first value passed into the function in the `firstValue` variable and the remaining arguments in `args`.
 
 If a function accepts a list of arguments and you already hold an array, you can use the [spread syntax](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax) in the function call to _spread_ the array as a list of elements. For instance: `avg(...numbers)`.
 
@@ -718,11 +715,11 @@ class Person {
   }
 }
 
-const p = new Person("John");
+const p = new Person("Maria");
 console.log(p.sayHello());
 ```
 
-JavaScript classes are just functions that must be instantiated with the [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new) operator. Every time a class is instantiated, it returns an object containing the methods and properties that the class specified. Classes don't enforce any code organization — for example, you can have functions returning classes, or you can have multiple classes per file. Here's an example of how ad-hoc the creation of a class can be: it's just an expression returned from an arrow function. This pattern is called a [mixin](/en-US/docs/Web/JavaScript/Reference/Classes#mix-ins).
+JavaScript classes are just functions that must be instantiated with the [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new) operator. Every time a class is instantiated, it returns an object containing the methods and properties that the class specified. Classes don't enforce any code organization — for example, you can have functions returning classes, or you can have multiple classes per file. Here's an example of how ad hoc the creation of a class can be: it's just an expression returned from an arrow function. This pattern is called a [mixin](/en-US/docs/Web/JavaScript/Reference/Classes/extends#mix-ins).
 
 ```js
 const withAuthentication = (cls) =>
@@ -761,7 +758,7 @@ fs.readFile(filename, (err, content) => {
     throw err;
   }
   console.log(content);
-}));
+});
 // Code here will be executed while the file is waiting to be read
 
 // Promise-based
@@ -769,9 +766,10 @@ fs.readFile(filename)
   .then((content) => {
     // What to do when the file is read
     console.log(content);
-  }).catch((err) => {
+  })
+  .catch((err) => {
     throw err;
-  }));
+  });
 // Code here will be executed while the file is waiting to be read
 
 // Async/await
@@ -785,7 +783,7 @@ The core language doesn't specify any asynchronous programming features, but it'
 
 If you have an async value, it's not possible to get its value synchronously. For example, if you have a promise, you can only access the eventual result via the [`then()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/then) method. Similarly, [`await`](/en-US/docs/Web/JavaScript/Reference/Operators/await) can only be used in an async context, which is usually an async function or a module. Promises are _never blocking_ — only the logic depending on the promise's result will be deferred; everything else continues to execute in the meantime. If you are a functional programmer, you may recognize promises as [monads](<https://en.wikipedia.org/wiki/Monad_(functional_programming)>) which can be mapped with `then()` (however, they are not _proper_ monads because they auto-flatten; i.e. you can't have a `Promise<Promise<T>>`).
 
-In fact, the single-threaded model has made Node.js a popular choice for server-side programming due to its non-blocking IO, making handling a large number of database or file-system requests very performant. However, CPU-bound (computationally intensive) tasks that's pure JavaScript will still block the main thread. To achieve real paralleling, you may need to use [workers](/en-US/docs/Web/API/Web_Workers_API/Using_web_workers).
+In fact, the single-threaded model has made Node.js a popular choice for server-side programming due to its non-blocking IO, making handling a large number of database or file-system requests very performant. However, CPU-bound (computationally intensive) tasks that are pure JavaScript will still block the main thread. To achieve real paralleling, you may need to use [workers](/en-US/docs/Web/API/Web_Workers_API/Using_web_workers).
 
 To learn more about asynchronous programming, you can read about [using promises](/en-US/docs/Web/JavaScript/Guide/Using_promises) or follow the [asynchronous JavaScript](/en-US/docs/Learn/JavaScript/Asynchronous) tutorial.
 

@@ -1,23 +1,19 @@
 ---
 title: Math.abs()
 slug: Web/JavaScript/Reference/Global_Objects/Math/abs
-tags:
-  - JavaScript
-  - Math
-  - Method
-  - Reference
+page-type: javascript-static-method
 browser-compat: javascript.builtins.Math.abs
 ---
 
 {{JSRef}}
 
-The **`Math.abs()`** function returns the absolute value of a number.
+The **`Math.abs()`** static method returns the absolute value of a number.
 
 {{EmbedInteractiveExample("pages/js/math-abs.html")}}
 
 ## Syntax
 
-```js
+```js-nolint
 Math.abs(x)
 ```
 
@@ -28,7 +24,7 @@ Math.abs(x)
 
 ### Return value
 
-The absolute value of `x`. If `x` is negative (including `-0`), returns `-x`. Otherwise, returns `x`.
+The absolute value of `x`. If `x` is negative (including `-0`), returns `-x`. Otherwise, returns `x`. The result is therefore always a positive number or `0`.
 
 ## Description
 
@@ -49,7 +45,7 @@ Math.abs(Infinity); // Infinity
 
 ### Coercion of parameter
 
-`Math.abs()` coerces its parameter to a number. Non-coercible values will become `NaN`, making `Math.abs()` also return `NaN`.
+`Math.abs()` [coerces its parameter to a number](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#number_coercion). Non-coercible values will become `NaN`, making `Math.abs()` also return `NaN`.
 
 ```js
 Math.abs("-1"); // 1

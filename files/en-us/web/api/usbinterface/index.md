@@ -2,15 +2,8 @@
 title: USBInterface
 slug: Web/API/USBInterface
 page-type: web-api-interface
-tags:
-  - API
-  - Experimental
-  - Interface
-  - NeedsExample
-  - Reference
-  - USBInterface
-  - WebUSB
-  - WebUSB API
+status:
+  - experimental
 browser-compat: api.USBInterface
 ---
 
@@ -23,7 +16,7 @@ The `USBInterface` interface of the [WebUSB API](/en-US/docs/Web/API/WebUSB_API)
 - {{domxref("USBInterface.USBInterface", "USBInterface()")}} {{Experimental_Inline}}
   - : Creates a new `USBInterface` object which will be populated with information about the interface on the provided `USBConfiguration` with the given interface number.
 
-## Properties
+## Instance properties
 
 - {{domxref("USBInterface.interfaceNumber")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns the interface number of this interface. This is equal to the `bInterfaceNumber` field of the interface descriptor defining this interface.

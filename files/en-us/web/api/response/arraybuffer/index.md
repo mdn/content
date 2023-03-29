@@ -2,13 +2,6 @@
 title: Response.arrayBuffer()
 slug: Web/API/Response/arrayBuffer
 page-type: web-api-instance-method
-tags:
-  - API
-  - ArrayBuffer
-  - Fetch
-  - Method
-  - Reference
-  - Response
 browser-compat: api.Response.arrayBuffer
 ---
 
@@ -20,7 +13,7 @@ that resolves with an {{jsxref("ArrayBuffer")}}.
 
 ## Syntax
 
-```js
+```js-nolint
 arrayBuffer()
 ```
 
@@ -62,7 +55,7 @@ when it is already playing (this would cause an error.)
 function getData() {
   const audioCtx = new AudioContext();
 
-  return fetch('viper.ogg')
+  return fetch("viper.ogg")
     .then((response) => {
       if (!response.ok) {
         throw new Error(`HTTP error, status = ${response.status}`);
@@ -76,16 +69,16 @@ function getData() {
       source.connect(audioCtx.destination);
       return source;
     });
-};
+}
 
 // wire up buttons to stop and play audio
 
 play.onclick = () => {
   getData().then((source) => {
     source.start(0);
-    play.setAttribute('disabled', 'disabled');
+    play.setAttribute("disabled", "disabled");
   });
-}
+};
 ```
 
 ### Reading files
@@ -101,7 +94,7 @@ function readFile(file) {
 ```
 
 ```html
-<input type="file" onchange="readFile(this.files[0])">
+<input type="file" onchange="readFile(this.files[0])" />
 ```
 
 ## Specifications

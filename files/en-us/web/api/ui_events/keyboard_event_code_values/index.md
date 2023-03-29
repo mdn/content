@@ -1,5 +1,5 @@
 ---
-title: 'Code values for keyboard events'
+title: "Code values for keyboard events"
 slug: Web/API/UI_Events/Keyboard_event_code_values
 page-type: guide
 ---
@@ -1423,7 +1423,7 @@ In the cells,
       <td><code>"VolumeUp"</code> (⚠️ Not the same on Chromium)</td>
       <td>
         <code>"AudioVolumeUp" </code>(was <code>"VolumeUp"</code> prior to Chromium
-        1)  (⚠️ Not the same on Gecko)
+        1) (⚠️ Not the same on Gecko)
       </td>
     </tr>
     <tr>

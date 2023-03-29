@@ -1,25 +1,19 @@
 ---
 title: Math.clz32()
 slug: Web/JavaScript/Reference/Global_Objects/Math/clz32
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Math
-  - Method
-  - Reference
-  - Polyfill
+page-type: javascript-static-method
 browser-compat: javascript.builtins.Math.clz32
 ---
 
 {{JSRef}}
 
-The **`Math.clz32()`** function returns the number of leading zero bits in the 32-bit binary representation of a number.
+The **`Math.clz32()`** static method returns the number of leading zero bits in the 32-bit binary representation of a number.
 
 {{EmbedInteractiveExample("pages/js/math-clz32.html")}}
 
 ## Syntax
 
-```js
+```js-nolint
 Math.clz32(x)
 ```
 
@@ -60,7 +54,7 @@ Math.clz32(3.5);         // 30
 
 ### Implementing Count Leading Ones and beyond
 
-At present, there is no `Math.clon` for "Count Leading Ones" (named "clon", not "clo", because "clo" and "clz" are too similar especially for non-English-speaking people). However, a `clon` function can easily be created by inverting the bits of a number and passing the result to `Math.clz32`. Doing this will work because the inverse of 1 is 0 and vice-versa. Thus, inverting the bits will inverse the measured quantity of 0's (from `Math.clz32`), thereby making `Math.clz32` count the number of ones instead of counting the number of zeros.
+At present, there is no `Math.clon` for "Count Leading Ones" (named "clon", not "clo", because "clo" and "clz" are too similar especially for non-English-speaking people). However, a `clon` function can easily be created by inverting the bits of a number and passing the result to `Math.clz32`. Doing this will work because the inverse of 1 is 0 and vice versa. Thus, inverting the bits will inverse the measured quantity of 0's (from `Math.clz32`), thereby making `Math.clz32` count the number of ones instead of counting the number of zeros.
 
 Consider the following 32-bit word:
 

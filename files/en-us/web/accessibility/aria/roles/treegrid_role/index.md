@@ -1,15 +1,6 @@
 ---
-title: 'ARIA: treegrid role'
+title: "ARIA: treegrid role"
 slug: Web/Accessibility/ARIA/Roles/treegrid_role
-tags:
-  - Accessibility
-  - ARIA
-  - roles
-  - Reference
-  - ARIA roles
-  - Treegrid role
-  - composite widget role
-  - treegrid
 spec-urls:
   - https://w3c.github.io/aria/#treegrid
   - https://w3c.github.io/aria-practices/#treegrid
@@ -52,7 +43,7 @@ The element with the role of `treegrid` must have an accessible name. If an appr
 
 If the content includes a caption or description for the `treegrid`, include [`aria-describedby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-describedby) on the `treegrid` element with the attribute value being the `id` of the element containing the description.
 
-If the `treegrid` container itself receives focus, the value of its [`aria-activedescendant`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-activedescendant) property should reference the {{HTMLattrxref('id')}} of the selected `row`, `columnheader`, `rowheader` or `gridcell`, unless roving tabindex is used to manage focus between those roles, in which case `aria-activedescendant` should not be used.
+If the `treegrid` container itself receives focus, the value of its [`aria-activedescendant`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-activedescendant) property should reference the [`id`](/en-US/docs/Web/HTML/Global_attributes#id) of the selected `row`, `columnheader`, `rowheader` or `gridcell`, unless roving tabindex is used to manage focus between those roles, in which case `aria-activedescendant` should not be used.
 
 If the `treegrid` is disabled, make that disabled state visually apparent, programmatically enforced, and include the [`aria-disabled`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-disabled) attribute on the `treegrid` itself to inform assistive technologies of its disabled state.
 
@@ -66,9 +57,9 @@ If the `treegrid` has an attached [`menu`](/en-US/docs/Web/Accessibility/ARIA/Ro
 
 ### Read-only treegrids
 
-By default, treegrids are assumed to be editable. If a tree grid is not editable, use the [`aria-readonly`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-readonly) attribute to inform assistive technologies the `treegrid` is readonly. The attribute value, when set on the element with the `treegrid` role, propagates down to all  `columnheader`, `rowheader`, and `gridcell` elements. That global value can be overridden for individual `gridcell` elements by including `aria-readonly` on individual tree grid element descendants.
+By default, treegrids are assumed to be editable. If a tree grid is not editable, use the [`aria-readonly`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-readonly) attribute to inform assistive technologies the `treegrid` is readonly. The attribute value, when set on the element with the `treegrid` role, propagates down to all `columnheader`, `rowheader`, and `gridcell` elements. That global value can be overridden for individual `gridcell` elements by including `aria-readonly` on individual tree grid element descendants.
 
-Like all ARIA attributes, adding `aria-readonly` only informs assistive technologies that the content is or is not editable, but it does nothing to enable or disable interactivity. That must be done with HTML's global {{HTMLattrxref('contenteditable')}} attribute or with JavaScript.
+Like all ARIA attributes, adding `aria-readonly` only informs assistive technologies that the content is or is not editable, but it does nothing to enable or disable interactivity. That must be done with HTML's global [`contenteditable`](/en-US/docs/Web/HTML/Global_attributes#contenteditable) attribute or with JavaScript.
 
 ### Associated WAI-ARIA roles, states, and properties
 
@@ -110,7 +101,7 @@ The following keyboard interactions need to be supported when an element in the 
 - <kbd>Up Arrow</kbd>
   - : If focus is on a row, moves focus one row up. If focus is on the first row, focus does not move. If focus is on a cell, moves focus one cell up. If focus is on the top cell in the column, focus does not move.
 - <kbd>Page Down</kbd>
-  - : If focus is on a row or cell, moves focus down a predetermined number of rows or cells. Usually, it moves down the equivalent of the height of the treegrid, scrolling so the bottom row in the currently visible set of rows becomes one of the first visible rows. If focus is in the last row , focus does not move.
+  - : If focus is on a row or cell, moves focus down a predetermined number of rows or cells. Usually, it moves down the equivalent of the height of the treegrid, scrolling so the bottom row in the currently visible set of rows becomes one of the first visible rows. If focus is in the last row, focus does not move.
 - <kbd>Page Up</kbd>
   - : If focus is on a row or cell, moves focus up an predetermined number of rows. Usually, it moves up the equivalent of the height of the treegrid, scrolling so the top row in the currently visible set of rows becomes one of the last visible rows. If focus is in the first row, focus does not move.
 - <kbd>Home</kbd> <kbd>Control + Home</kbd>
@@ -165,6 +156,6 @@ It is important for all cells to be able to receive or contain keyboard focus be
 
 1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
 
-    {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
+   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
 
 </section>

@@ -1,16 +1,6 @@
 ---
 title: Mobile first
 slug: Web/Progressive_web_apps/Responsive/Mobile_first
-tags:
-  - Apps
-  - CSS
-  - Development
-  - HTML
-  - Java
-  - JavaScript
-  - Mobile
-  - Mobile Development
-  - Mobile first
 ---
 
 This article provides a guide to implementing a website layout that follows the principle of **mobile first**. This means creating a layout where the default configuration is for narrow screen/mobile devices, and layout features for wider viewports are then layered on top of that default.
@@ -189,7 +179,7 @@ The above layout is fine for narrower layouts, but it doesn't work very well whe
   }
 
   nav li a {
-    border-right: 1px solid #AD66D5;
+    border-right: 1px solid #ad66d5;
     border-bottom: none;
     display: inline-block;
     padding: 0 5px;
@@ -211,7 +201,11 @@ The above layout is fine for narrower layouts, but it doesn't work very well whe
     width: 600px;
     height: inherit;
     margin: 0 auto;
-    background: url(../img/firefox-os.png) bottom left no-repeat, linear-gradient(to bottom, #fff, #eee);
+    background: url(../img/firefox-os.png) bottom left no-repeat, linear-gradient(
+        to bottom,
+        #fff,
+        #eee
+      );
   }
 
   .main > p {
@@ -246,8 +240,8 @@ I put Modernizr inside my `js/lib` directory, then included it by putting the fo
 With Modernizr in place, we can now use the following JS block to test whether media queries are supported, and if not, to load in [respond.js](https://github.com/scottjehl/Respond), Scott Jehl's `matchMedia` and media query polyfill.
 
 ```js
-if (!Modernizr.mq('only all')) {
-  require('respond');
+if (!Modernizr.mq("only all")) {
+  require("respond");
 }
 ```
 
@@ -255,7 +249,7 @@ if (!Modernizr.mq('only all')) {
 
 ```js
 if (window.matchMedia("(min-width: 481px)").matches) {
-  require('three');
+  require("three");
 }
 ```
 
@@ -265,7 +259,7 @@ We can, therefore, save the bandwidth for browsers that don't need it.
 
 Back to Modernizr! The reason why it is so useful is that it provides a mechanism to selectively serve both CSS and JavaScript. Modernizr stores the results of all its feature tests as classes on the HTML element. For example, the Modernizr in our example app is testing for multiple background image and rgba support. When they are not supported, the `<html>` tag looks like this:
 
-```html
+```html-nolint
 <html class="js no-rgba no-multiplebgs">
 ```
 
@@ -283,7 +277,7 @@ When these are present, we can serve alternative styling rules to provide sensib
 
 This is not hugely pretty, but it does make the main content area more readable on browsers that don't support either or both of these features.
 
-Modernizr also puts its feature detect results in a JavaScript `Modenizr` object too, so that you can run JavaScript code selectively depending on feature support. For example, you could do this:
+Modernizr also puts its feature detect results in a JavaScript `Modernizr` object too, so that you can run JavaScript code selectively depending on feature support. For example, you could do this:
 
 ```js
 if (Modernizr.rgba) {

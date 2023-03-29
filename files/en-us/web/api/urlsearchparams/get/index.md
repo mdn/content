@@ -2,12 +2,6 @@
 title: URLSearchParams.get()
 slug: Web/API/URLSearchParams/get
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - URL API
-  - URLSearchParams
-  - get
 browser-compat: api.URLSearchParams.get
 ---
 
@@ -20,7 +14,7 @@ interface returns the first value associated to the given search parameter.
 
 ## Syntax
 
-```js
+```js-nolint
 get(name)
 ```
 

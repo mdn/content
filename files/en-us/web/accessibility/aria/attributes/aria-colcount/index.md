@@ -1,12 +1,6 @@
 ---
 title: aria-colcount
 slug: Web/Accessibility/ARIA/Attributes/aria-colcount
-tags:
-  - Accessibility
-  - ARIA
-  - ARIA attribute
-  - ARIA property
-  - aria-colcount
 spec-urls: https://w3c.github.io/aria/#aria-colcount
 ---
 
@@ -44,7 +38,7 @@ The following example shows a grid with 6 columns, of which columns 1, 2, 5, and
 </div>
 ```
 
-The first rule of ARIA use is "if you can use a native feature with the semantics and behavior you require already built in, instead of repurposing an element and **adding** an ARIA role, state or property to make it accessible, then do so." If we employ native HTML semantics with {{HTMLElement('table')}}, {{HTMLElement('th')}}, {{HTMLElement('td')}}, etc., the  `aria-colcount` attribute is still necessary, but the mark up is not as verbose. When using semantic table header elements and not all columns are in the DOM, the `aria-colcount` must still be used, but the `aria-colindex` attribute only needs to be defined once per column in the column header {{HTMLElement('th')}}.
+The first rule of ARIA use is "if you can use a native feature with the semantics and behavior you require already built in, instead of repurposing an element and **adding** an ARIA role, state or property to make it accessible, then do so." If we employ native HTML semantics with {{HTMLElement('table')}}, {{HTMLElement('th')}}, {{HTMLElement('td')}}, etc., the `aria-colcount` attribute is still necessary, but the mark up is not as verbose. When using semantic table header elements and not all columns are in the DOM, the `aria-colcount` must still be used, but the `aria-colindex` attribute only needs to be defined once per column in the column header {{HTMLElement('th')}}.
 
 ```html
 <table aria-colcount="6">
@@ -91,3 +85,11 @@ Inherits into roles:
 ## See Also
 
 - [`aria-colindex`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-colindex)
+
+<section id="Quick_links">
+
+1. [**WAI-ARIA states and properties**](/en-US/docs/Web/Accessibility/ARIA/Attributes)
+
+   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Attributes")}}
+
+</section>

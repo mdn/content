@@ -2,20 +2,6 @@
 title: ShadowRoot.getAnimations()
 slug: Web/API/ShadowRoot/getAnimations
 page-type: web-api-instance-method
-tags:
-  - API
-  - Animation
-  - CSS
-  - CSS Animations
-  - CSS Transitions
-  - ShadowRoot
-  - Method
-  - Reference
-  - Transitions
-  - Web Animations
-  - getAnimations
-  - waapi
-  - web animations api
 browser-compat: api.ShadowRoot.getAnimations
 ---
 
@@ -27,7 +13,7 @@ target elements are descendants of the shadow tree. This array includes [CSS Ani
 
 ## Syntax
 
-```js
+```js-nolint
 getAnimations()
 ```
 
@@ -47,7 +33,7 @@ The following code snippet will slow down all animations in a shadow tree by hal
 {{domxref("Animation.playbackRate")}}.
 
 ```js
-let customElem = document.querySelector('my-shadow-dom-element');
+let customElem = document.querySelector("my-shadow-dom-element");
 let shadow = customElem.shadowRoot;
 shadow.getAnimations().forEach((animation) => {
   animation.playbackRate *= 0.5;

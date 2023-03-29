@@ -1,12 +1,7 @@
 ---
 title: mask-repeat
 slug: Web/CSS/mask-repeat
-tags:
-  - CSS
-  - CSS Masking
-  - CSS Property
-  - Reference
-  - recipe:css-property
+page-type: css-property
 browser-compat: css.properties.mask-repeat
 ---
 
@@ -154,7 +149,7 @@ You can specify a different `<repeat-style>` for each mask image, separated by c
 
 ```css
 .examplethree {
-  mask-image: url('mask1.png'), url('mask2.png');
+  mask-image: url("mask1.png"), url("mask2.png");
   mask-repeat: repeat-x, repeat-y;
 }
 ```

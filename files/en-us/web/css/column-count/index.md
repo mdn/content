@@ -1,15 +1,7 @@
 ---
 title: column-count
 slug: Web/CSS/column-count
-tags:
-  - CSS
-  - CSS Multi-column Layout
-  - CSS Property
-  - Layout
-  - Reference
-  - column-count
-  - columns
-  - recipe:css-property
+page-type: css-property
 browser-compat: css.properties.column-count
 ---
 
@@ -59,9 +51,8 @@ column-count: unset;
 
 ```html
 <p class="content-box">
-  This is a bunch of text split into three columns
-  using the CSS `column-count` property. The text
-  is equally distributed over the columns.
+  This is a bunch of text split into three columns using the CSS `column-count`
+  property. The text is equally distributed over the columns.
 </p>
 ```
 

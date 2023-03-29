@@ -1,13 +1,7 @@
 ---
 title: mask-type
 slug: Web/CSS/mask-type
-tags:
-  - CSS
-  - CSS Masking
-  - CSS Property
-  - Reference
-  - SVG
-  - recipe:css-property
+page-type: css-property
 browser-compat: css.properties.mask-type
 ---
 
@@ -57,13 +51,21 @@ The `mask-type` property is specified as one of the keyword values listed below.
 
 ```html
 <div class="redsquare"></div>
-<svg version="1.1" xmlns="http://www.w3.org/2000/svg"
-    xmlns:xlink="http://www.w3.org/1999/xlink" width="0" height="0">
+<svg
+  version="1.1"
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="0"
+  height="0">
   <defs>
-    <mask id="m" maskContentUnits="objectBoundingBox"
-      style="mask-type:alpha">
-      <rect x=".1" y=".1" width=".8" height=".8"
-          fill="red" fill-opacity="0.7"/>
+    <mask id="m" maskContentUnits="objectBoundingBox" style="mask-type:alpha">
+      <rect
+        x=".1"
+        y=".1"
+        width=".8"
+        height=".8"
+        fill="red"
+        fill-opacity="0.7" />
     </mask>
   </defs>
 </svg>
@@ -91,13 +93,24 @@ The `mask-type` property is specified as one of the keyword values listed below.
 
 ```html
 <div class="redsquare"></div>
-<svg version="1.1" xmlns="http://www.w3.org/2000/svg"
-    xmlns:xlink="http://www.w3.org/1999/xlink" width="0" height="0">
+<svg
+  version="1.1"
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="0"
+  height="0">
   <defs>
-    <mask id="m" maskContentUnits="objectBoundingBox"
+    <mask
+      id="m"
+      maskContentUnits="objectBoundingBox"
       style="mask-type:luminance">
-      <rect x=".1" y=".1" width=".8" height=".8"
-          fill="red" fill-opacity="0.7"/>
+      <rect
+        x=".1"
+        y=".1"
+        width=".8"
+        height=".8"
+        fill="red"
+        fill-opacity="0.7" />
     </mask>
   </defs>
 </svg>

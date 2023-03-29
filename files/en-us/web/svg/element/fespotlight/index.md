@@ -1,13 +1,7 @@
 ---
 title: <feSpotLight>
 slug: Web/SVG/Element/feSpotLight
-tags:
-  - Element
-  - NeedsBrowserCompatibility
-  - NeedsMobileBrowserCompatibility
-  - Reference
-  - SVG
-  - SVG Filter
+page-type: svg-element
 browser-compat: svg.elements.feSpotLight
 ---
 
@@ -46,21 +40,38 @@ This element implements the {{domxref("SVGFESpotLightElement")}} interface.
 ### HTML Content
 
 ```html
-<svg width="200" height="200" xmlns="http://www.w3.org/2000/svg"
-    xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg
+  width="200"
+  height="200"
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink">
   <defs>
     <filter id="spotlight">
-      <feSpecularLighting result="spotlight" specularConstant="1.5"
-          specularExponent="4" lighting-color="#FFF">
+      <feSpecularLighting
+        result="spotlight"
+        specularConstant="1.5"
+        specularExponent="4"
+        lighting-color="#FFF">
         <feSpotLight x="600" y="600" z="400" limitingConeAngle="5.5" />
       </feSpecularLighting>
-      <feComposite in="SourceGraphic" in2="spotlight" operator="out"
-          k1="0" k2="1" k3="1" k4="0"/>
+      <feComposite
+        in="SourceGraphic"
+        in2="spotlight"
+        operator="out"
+        k1="0"
+        k2="1"
+        k3="1"
+        k4="0" />
     </filter>
   </defs>
 
-  <image xlink:href="mdn_logo_only_color.png" x="10%" y="10%"
-      width="80%" height="80%" style="filter:url(#spotlight);"/>
+  <image
+    xlink:href="mdn_logo_only_color.png"
+    x="10%"
+    y="10%"
+    width="80%"
+    height="80%"
+    style="filter:url(#spotlight);" />
 </svg>
 ```
 

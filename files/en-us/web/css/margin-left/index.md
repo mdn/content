@@ -1,12 +1,7 @@
 ---
 title: margin-left
 slug: Web/CSS/margin-left
-tags:
-  - CSS
-  - CSS Property
-  - Layout
-  - Reference
-  - recipe:css-property
+page-type: css-property
 browser-compat: css.properties.margin-left
 ---
 
@@ -24,9 +19,9 @@ In the rare cases where width is overconstrained (i.e., when all of `width`, `ma
 
 ```css
 /* <length> values */
-margin-left: 10px;  /* An absolute length */
-margin-left: 1em;   /* relative to the text size */
-margin-left: 5%;    /* relative to the nearest block container's width */
+margin-left: 10px; /* An absolute length */
+margin-left: 1em; /* relative to the text size */
+margin-left: 5%; /* relative to the nearest block container's width */
 
 /* Keyword values */
 margin-left: auto;
@@ -155,9 +150,15 @@ The `margin-left` property is specified as the keyword `auto`, or a `<length>`, 
 ### Setting left margin using pixels and percentages
 
 ```css
-.content { margin-left: 5%; }
-.sidebox { margin-left: 10px; }
-.logo    { margin-left: -5px; }
+.content {
+  margin-left: 5%;
+}
+.sidebox {
+  margin-left: 10px;
+}
+.logo {
+  margin-left: -5px;
+}
 ```
 
 ## Specifications

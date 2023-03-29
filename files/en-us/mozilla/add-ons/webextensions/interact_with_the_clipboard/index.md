@@ -1,17 +1,7 @@
 ---
 title: Interact with the clipboard
 slug: Mozilla/Add-ons/WebExtensions/Interact_with_the_clipboard
-tags:
-  - Add-ons
-  - Clip
-  - Clipboard
-  - Cut
-  - Editing
-  - Extensions
-  - Text
-  - WebExtensions
-  - copy
-  - paste
+page-type: guide
 browser-compat:
   - api.Clipboard
   - webextensions.api.clipboard
@@ -74,8 +64,7 @@ The `"cut"` and `"copy"` commands of the {{domxref("Document.execCommand", "docu
 For example, suppose you've got a popup that includes the following HTML:
 
 ```html
-<input id="input" type="text"/>
-<button id="copy">Copy</button>
+<input id="input" type="text" /> <button id="copy">Copy</button>
 ```
 
 To make the `"copy"` button copy the contents of the {{HTMLElement("input")}} element, you can use code like this:
@@ -152,8 +141,7 @@ To use {{domxref("Document.execCommand()","document.execCommand(&#34;paste&#34;)
 Consider HTML that includes something like this:
 
 ```html
-<textarea id="output"></textarea>
-<button id="paste">Paste</button>
+<textarea id="output"></textarea> <button id="paste">Paste</button>
 ```
 
 To set the content of the {{HTMLElement("textarea")}} element with the ID `"output"` from the clipboard when the user clicks the `"paste"` {{HTMLElement("button")}}, you can use code like this:
@@ -171,7 +159,7 @@ document.querySelector("#paste").addEventListener("click", paste);
 
 ### Browser-specific considerations
 
-Firefox supports the `"clipboardRead"` [permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) from version 54 but only supports pasting into elements in [content editable mode](/en-US/docs/Web/Guide/HTML/Editable_content), which for content scripts only works with a {{HTMLElement("textarea")}}. For background scripts, any element can be set to content editable mode.
+Firefox supports the `"clipboardRead"` [permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) from version 54 but only supports pasting into elements in [content editable mode](/en-US/docs/Web/HTML/Global_attributes/contenteditable), which for content scripts only works with a {{HTMLElement("textarea")}}. For background scripts, any element can be set to content editable mode.
 
 ## Browser compatibility
 
@@ -181,5 +169,4 @@ Firefox supports the `"clipboardRead"` [permission](/en-US/docs/Mozilla/Add-ons/
 
 - [Clipboard API](/en-US/docs/Web/API/Clipboard_API)
 - [Permissions API](/en-US/docs/Web/API/Permissions_API)
-- [Making content editable](/en-US/docs/Web/Guide/HTML/Editable_content)
-- {{htmlattrxref("contenteditable")}}
+- [Make content editable](/en-US/docs/Web/HTML/Global_attributes#contenteditable)

@@ -2,14 +2,6 @@
 title: Clients.claim()
 slug: Web/API/Clients/claim
 page-type: web-api-instance-method
-tags:
-  - API
-  - Clients
-  - Method
-  - Reference
-  - Service Workers
-  - ServiceWorker
-  - claim
 browser-compat: api.Clients.claim
 ---
 
@@ -25,7 +17,7 @@ regularly over the network, or possibly via a different service worker.
 
 ## Syntax
 
-```js
+```js-nolint
 claim()
 ```
 
@@ -42,7 +34,7 @@ A {{jsxref("Promise")}} that resolves to `undefined`.
 The following example uses `claim()` inside service worker's "`activate`" event listener so that clients loaded in the same scope do not need to be reloaded before their fetches will go through this service worker.
 
 ```js
-self.addEventListener('activate', (event) => {
+self.addEventListener("activate", (event) => {
   event.waitUntil(clients.claim());
 });
 ```

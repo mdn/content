@@ -1,13 +1,6 @@
 ---
 title: aria-busy
 slug: Web/Accessibility/ARIA/Attributes/aria-busy
-tags:
-  - Accessibility
-  - ARIA
-  - ARIA attribute
-  - aria-busy
-  - aria live regions
-  - aria state
 spec-urls:
   - https://w3c.github.io/aria/#aria-busy
   - https://w3c.github.io/aria-practices/#feed
@@ -50,13 +43,18 @@ If changes to a rendered widget would create a state where the widget is missing
   - : The [`ariaBusy`](/en-US/docs/Web/API/Element/ariaBusy) property, part of the {{domxref("ARIAMixin")}} interface, reflects the value of the `aria-busy` attribute, which indicates whether an element is being modified.
 
 ```html
-<div id="clock" role="timer" aria-live="polite" aria-atomic="true" aria-busy="false"></div>
+<div
+  id="clock"
+  role="timer"
+  aria-live="polite"
+  aria-atomic="true"
+  aria-busy="false"></div>
 ```
 
 ```js
-let el = document.getElementById('clock');
+const el = document.getElementById("clock");
 console.log(el.ariaBusy); // false
-el.ariaBusy = "true"
+el.ariaBusy = "true";
 console.log(el.ariaBusy); // true
 ```
 
@@ -79,6 +77,6 @@ Used in **ALL** roles
 
 1. [**WAI-ARIA states and properties**](/en-US/docs/Web/Accessibility/ARIA/Attributes)
 
-    {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Attributes")}}
+   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Attributes")}}
 
 </section>

@@ -1,17 +1,10 @@
 ---
 title: Block formatting context
 slug: Web/Guide/CSS/Block_formatting_context
-tags:
-  - CSS
-  - Guide
-  - NeedsBeginnerUpdate
-  - NeedsExample
-  - Reference
-  - Web
 spec-urls: https://drafts.csswg.org/css-display/#block-formatting-context
 ---
 
-{{ CSSRef }}
+{{CSSRef}}
 
 A **block formatting context** (BFC) is a part of a visual CSS rendering of a web page. It's the region in which the layout of block boxes occurs and in which floats interact with other elements.
 
@@ -30,7 +23,7 @@ A block formatting context is created by at least one of the following:
 - Flex items (direct children of the element with {{ cssxref("display") }}`: flex` or `inline-flex`) if they are neither [flex](/en-US/docs/Glossary/Flex_Container) nor [grid](/en-US/docs/Glossary/Grid_Container) nor [table](/en-US/docs/Web/CSS/CSS_Table) containers themselves.
 - Grid items (direct children of the element with {{ cssxref("display") }}`: grid` or `inline-grid`) if they are neither [flex](/en-US/docs/Glossary/Flex_Container) nor [grid](/en-US/docs/Glossary/Grid_Container) nor [table](/en-US/docs/Web/CSS/CSS_Table) containers themselves.
 - Multicol containers (elements where {{ cssxref("column-count") }} or {{ cssxref("column-width") }} isn't `auto`, including elements with `column-count: 1`).
-- {{ cssxref("column-span") }}`: all` should always create a new formatting context, even when the `column-span: all` element isn't contained by a multicol container ([Spec change](https://github.com/w3c/csswg-drafts/commit/a8634b96900279916bd6c505fda88dda71d8ec51), [Chrome bug](https://bugs.chromium.org/p/chromium/issues/detail?id=709362)).
+- {{ cssxref("column-span") }}`: all` should always create a new formatting context, even when the `column-span: all` element isn't contained by a multicol container ([Spec change](https://github.com/w3c/csswg-drafts/commit/a8634b96900279916bd6c505fda88dda71d8ec51), [Chrome bug](https://crbug.com/709362)).
 
 Formatting contexts affect layout, but typically, we create a new block formatting context for the positioning and clearing floats rather than changing the layout, because an element that establishes a new block formatting context will:
 
@@ -68,22 +61,22 @@ The value name of `flow-root` makes sense when you understand you are creating s
 
 ```html
 <section>
-    <div class="box">
-        <div class="float">I am a floated box!</div>
-        <p>I am content inside the container.</p>
-    </div>
+  <div class="box">
+    <div class="float">I am a floated box!</div>
+    <p>I am content inside the container.</p>
+  </div>
 </section>
 <section>
-    <div class="box" style="overflow:auto">
-        <div class="float">I am a floated box!</div>
-        <p>I am content inside the <code>overflow:auto</code> container.</p>
-    </div>
+  <div class="box" style="overflow:auto">
+    <div class="float">I am a floated box!</div>
+    <p>I am content inside the <code>overflow:auto</code> container.</p>
+  </div>
 </section>
 <section>
-    <div class="box" style="display:flow-root">
-        <div class="float">I am a floated box!</div>
-        <p>I am content inside the <code>display:flow-root</code> container.</p>
-    </div>
+  <div class="box" style="display:flow-root">
+    <div class="float">I am a floated box!</div>
+    <p>I am content inside the <code>display:flow-root</code> container.</p>
+  </div>
 </section>
 ```
 
@@ -91,23 +84,23 @@ The value name of `flow-root` makes sense when you understand you are creating s
 
 ```css
 section {
-    height:150px;
+  height: 150px;
 }
 .box {
-    background-color: rgb(224, 206, 247);
-    border: 5px solid rebeccapurple;
+  background-color: rgb(224, 206, 247);
+  border: 5px solid rebeccapurple;
 }
 .box[style] {
-    background-color: aliceblue;
-    border: 5px solid steelblue;
+  background-color: aliceblue;
+  border: 5px solid steelblue;
 }
 .float {
-    float: left;
-    width: 200px;
-    height: 100px;
-    background-color: rgba(255, 255, 255, .5);
-    border:1px solid black;
-    padding: 10px;
+  float: left;
+  width: 200px;
+  height: 100px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border: 1px solid black;
+  padding: 10px;
 }
 ```
 
@@ -126,7 +119,9 @@ In the following example, we are using `display:flow-root` and floats to impleme
 </section>
 <section>
   <div class="float">Try to resize this outer float</div>
-  <div class="box" style="display:flow-root"><p><code>display:flow-root</code></p></div>
+  <div class="box" style="display:flow-root">
+    <p><code>display:flow-root</code></p>
+  </div>
 </section>
 ```
 
@@ -134,26 +129,26 @@ In the following example, we are using `display:flow-root` and floats to impleme
 
 ```css
 section {
-    height:150px;
+  height: 150px;
 }
 .box {
-    background-color: rgb(224, 206, 247);
-    border: 5px solid rebeccapurple;
+  background-color: rgb(224, 206, 247);
+  border: 5px solid rebeccapurple;
 }
 .box[style] {
-    background-color: aliceblue;
-    border: 5px solid steelblue;
+  background-color: aliceblue;
+  border: 5px solid steelblue;
 }
 .float {
-    float: left;
-    overflow: hidden; /* required by resize:both */
-    resize: both;
-    margin-right:25px;
-    width: 200px;
-    height: 100px;
-    background-color: rgba(255, 255, 255, .75);
-    border: 1px solid black;
-    padding: 10px;
+  float: left;
+  overflow: hidden; /* required by resize:both */
+  resize: both;
+  margin-right: 25px;
+  width: 200px;
+  height: 100px;
+  background-color: rgba(255, 255, 255, 0.75);
+  border: 1px solid black;
+  padding: 10px;
 }
 ```
 
@@ -163,23 +158,22 @@ Rather than inline-blocks with width:\<percentage>, in this case we don't have t
 
 Note that flexbox is a more efficient way to implement multi-column layout in modern CSS.
 
-### Margin collapsing
+### Prevent margin collapsing
 
-Creating a new BFC to avoid the [margin collapsing](/en-US/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing) between two neighbor div:
+You can create a new BFC to avoid [margin collapsing](/en-US/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing) between two neighbor elements.
 
-#### HTML
+#### Margin collapsing example
+
+In this example we have two adjacent {{HTMLElement("div")}} elements, which each have a vertical margin of `10px`. Because of margin collapsing, the vertical gap between them is 10 pixels, not the 20 we might expect.
 
 ```html
 <div class="blue"></div>
-<div class="red-outer">
-  <div class="red-inner">red inner</div>
-</div>
+<div class="red"></div>
 ```
 
-#### CSS
-
 ```css
-.blue, .red-inner {
+.blue,
+.red {
   height: 50px;
   margin: 10px 0;
 }
@@ -188,13 +182,46 @@ Creating a new BFC to avoid the [margin collapsing](/en-US/docs/Web/CSS/CSS_Box_
   background: blue;
 }
 
-.red-outer {
-  overflow: hidden;
+.red {
   background: red;
 }
 ```
 
-{{EmbedLiveSample("Margin_collapsing", 120, 170)}}
+{{EmbedLiveSample("Margin collapsing example", 120, 170)}}
+
+#### Preventing margin collapsing
+
+In this example we wrap the second `<div>` in an outer one, to create a new BFC and prevent margin collapsing.
+
+```html
+<div class="blue"></div>
+<div class="outer">
+  <div class="red"></div>
+</div>
+```
+
+```css
+.blue,
+.red {
+  height: 50px;
+  margin: 10px 0;
+}
+
+.blue {
+  background: blue;
+}
+
+.red {
+  background: red;
+}
+
+.outer {
+  overflow: hidden;
+  background: transparent;
+}
+```
+
+{{EmbedLiveSample("Preventing margin collapsing", 120, 170)}}
 
 ## Specifications
 

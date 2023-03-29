@@ -1,10 +1,6 @@
 ---
 title: regexp:test()
 slug: Web/EXSLT/regexp/test
-tags:
-  - EXSLT
-  - NeedsSpecTable
-  - Reference
 ---
 
 {{XSLTRef}}{{QuickLinksWithSubpages("/en-US/docs/Web/EXSLT")}}
@@ -13,7 +9,7 @@ tags:
 
 ## Syntax
 
-```js
+```js-nolint
 regexp:test(testString, regExpString[, flagsString])
 ```
 

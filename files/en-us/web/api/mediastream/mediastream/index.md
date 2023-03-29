@@ -2,20 +2,6 @@
 title: MediaStream()
 slug: Web/API/MediaStream/MediaStream
 page-type: web-api-constructor
-tags:
-  - API
-  - Audio
-  - Constructor
-  - Media
-  - Media Capture and Streams
-  - Media Capture and Streams API
-  - MediaStream
-  - Reference
-  - Streams
-  - Tracks
-  - Video
-  - WebRTC
-  - streaming
 browser-compat: api.MediaStream.MediaStream
 ---
 
@@ -28,7 +14,7 @@ Otherwise, the stream has no tracks.
 
 ## Syntax
 
-```js
+```js-nolint
 new MediaStream()
 new MediaStream(stream)
 new MediaStream(tracks)

@@ -1,14 +1,7 @@
 ---
 title: webRequest.StreamFilter.write()
 slug: Mozilla/Add-ons/WebExtensions/API/webRequest/StreamFilter/write
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Reference
-  - StreamFilter.write()
-  - WebExtensions
-  - webRequest
+page-type: webextension-api-function
 browser-compat: webextensions.api.webRequest.StreamFilter.write
 ---
 
@@ -20,7 +13,7 @@ You can only call this function after the {{WebExtAPIRef("webRequest.StreamFilte
 
 ## Syntax
 
-```js
+```js-nolint
 filter.write(
   data    // ArrayBuffer or Uint8Array
 )

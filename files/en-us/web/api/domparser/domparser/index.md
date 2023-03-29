@@ -2,12 +2,6 @@
 title: DOMParser()
 slug: Web/API/DOMParser/DOMParser
 page-type: web-api-constructor
-tags:
-  - API
-  - Constructor
-  - DOM Parsing
-  - Parsing
-  - Reference
 browser-compat: api.DOMParser.DOMParser
 ---
 
@@ -17,7 +11,7 @@ The **`DOMParser()`** constructor creates a new [`DOMParser`](/en-US/docs/Web/AP
 
 ## Syntax
 
-```js
+```js-nolint
 new DOMParser()
 ```
 

@@ -2,12 +2,6 @@
 title: FocusEvent()
 slug: Web/API/FocusEvent/FocusEvent
 page-type: web-api-constructor
-tags:
-  - API
-  - Constructor
-  - Event
-  - FocusEvent
-  - Reference
 browser-compat: api.FocusEvent.FocusEvent
 ---
 
@@ -20,7 +14,7 @@ set to the other target.
 
 ## Syntax
 
-```js
+```js-nolint
 new FocusEvent(type)
 new FocusEvent(type, options)
 ```

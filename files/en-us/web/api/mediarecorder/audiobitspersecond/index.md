@@ -2,13 +2,6 @@
 title: MediaRecorder.audioBitsPerSecond
 slug: Web/API/MediaRecorder/audioBitsPerSecond
 page-type: web-api-instance-property
-tags:
-  - API
-  - Audio
-  - Media Recorder API
-  - MediaRecorder
-  - Property
-  - Reference
 browser-compat: api.MediaRecorder.audioBitsPerSecond
 ---
 

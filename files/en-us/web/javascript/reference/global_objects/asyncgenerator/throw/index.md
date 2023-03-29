@@ -1,13 +1,7 @@
 ---
 title: AsyncGenerator.prototype.throw()
 slug: Web/JavaScript/Reference/Global_Objects/AsyncGenerator/throw
-tags:
-  - ECMAScript 2018
-  - AsyncGenerator
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.AsyncGenerator.throw
 ---
 
@@ -17,7 +11,7 @@ The **`throw()`** method of an async generator acts as if a `throw` statement is
 
 ## Syntax
 
-```js
+```js-nolint
 asyncGeneratorObject.throw(exception)
 ```
 

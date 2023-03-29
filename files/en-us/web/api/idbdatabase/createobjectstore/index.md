@@ -2,14 +2,6 @@
 title: IDBDatabase.createObjectStore()
 slug: Web/API/IDBDatabase/createObjectStore
 page-type: web-api-instance-method
-tags:
-  - API
-  - Database
-  - IDBDatabase
-  - IndexedDB
-  - Method
-  - Reference
-  - Storage
 browser-compat: api.IDBDatabase.createObjectStore
 ---
 
@@ -30,7 +22,7 @@ transaction.
 
 ## Syntax
 
-```js
+```js-nolint
 createObjectStore(name)
 createObjectStore(name, options)
 ```
@@ -65,18 +57,18 @@ one of the following types:
 
 - `InvalidStateError` {{domxref("DOMException")}}
   - : Thrown if the method was not called from a
-        `versionchange` transaction callback.
+    `versionchange` transaction callback.
 - `TransactionInactiveError` {{domxref("DOMException")}}
   - : Thrown if a request is made on a source database that does not exist
-        (for example, when the database has been deleted or removed). In Firefox previous to version 41,
-        an `InvalidStateError` was raised in this case as well, which
-        was misleading; this has now been fixed (see {{Bug("1176165")}}).
+    (for example, when the database has been deleted or removed). In Firefox previous to version 41,
+    an `InvalidStateError` was raised in this case as well, which
+    was misleading; this has now been fixed (see [Webkit bug 1176165](https://bugzil.la/1176165)).
 - `ConstraintError` {{domxref("DOMException")}}
   - : Thrown if an object store with the given name (based on a case-sensitive comparison)
-        already exists in the connected database.
+    already exists in the connected database.
 - `InvalidAccessError` {{domxref("DOMException")}}
   - : Thrown if `autoIncrement` is set to true and `keyPath` is
-        either an empty string or an array containing an empty string.
+    either an empty string or an array containing an empty string.
 
 ## Examples
 
@@ -98,7 +90,9 @@ request.onupgradeneeded = (event) => {
 
   // Create an objectStore for this database
 
-  const objectStore = db.createObjectStore("toDoList", { keyPath: "taskTitle" });
+  const objectStore = db.createObjectStore("toDoList", {
+    keyPath: "taskTitle",
+  });
 
   // define what data items the objectStore will contain
 
@@ -130,4 +124,4 @@ request.onupgradeneeded = (event) => {
 - Setting a range of keys: {{domxref("IDBKeyRange")}}
 - Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}
 - Using cursors: {{domxref("IDBCursor")}}
-- Reference example: [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](https://mdn.github.io/to-do-notifications/).)
+- Reference example: [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([View the example live](https://mdn.github.io/dom-examples/to-do-notifications/)).

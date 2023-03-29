@@ -2,12 +2,8 @@
 title: CSSPrimitiveValue.getStringValue()
 slug: Web/API/CSSPrimitiveValue/getStringValue
 page-type: web-api-instance-method
-tags:
-  - API
-  - CSSPrimitiveValue
-  - Method
-  - getStringValue
-  - Deprecated
+status:
+  - deprecated
 browser-compat: api.CSSPrimitiveValue.getStringValue
 ---
 
@@ -27,7 +23,7 @@ value doesn't contain a string value, a {{domxref("DOMException")}} is raised.
 
 ## Syntax
 
-```js
+```js-nolint
 getStringValue()
 ```
 

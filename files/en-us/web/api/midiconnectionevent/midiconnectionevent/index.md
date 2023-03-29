@@ -2,11 +2,6 @@
 title: MIDIConnectionEvent()
 slug: Web/API/MIDIConnectionEvent/MIDIConnectionEvent
 page-type: web-api-constructor
-tags:
-  - API
-  - Constructor
-  - Reference
-  - MIDIConnectionEvent
 browser-compat: api.MIDIConnectionEvent.MIDIConnectionEvent
 ---
 
@@ -16,7 +11,7 @@ The **`MIDIConnectionEvent()`** constructor creates a new {{domxref("MIDIConnect
 
 ## Syntax
 
-```js
+```js-nolint
 new MIDIConnectionEvent(type)
 new MIDIConnectionEvent(type, midiConnectionEventInit)
 ```

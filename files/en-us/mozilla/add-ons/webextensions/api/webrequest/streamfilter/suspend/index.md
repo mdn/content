@@ -1,14 +1,7 @@
 ---
 title: webRequest.StreamFilter.suspend()
 slug: Mozilla/Add-ons/WebExtensions/API/webRequest/StreamFilter/suspend
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Reference
-  - StreamFilter.suspend()
-  - WebExtensions
-  - webRequest
+page-type: webextension-api-function
 browser-compat: webextensions.api.webRequest.StreamFilter.suspend
 ---
 
@@ -20,7 +13,7 @@ You can't call this function until after the {{WebExtAPIRef("webRequest.StreamFi
 
 ## Syntax
 
-```js
+```js-nolint
 filter.suspend()
 ```
 

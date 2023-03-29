@@ -1,16 +1,7 @@
 ---
 title: border-inline-start-width
 slug: Web/CSS/border-inline-start-width
-tags:
-  - CSS
-  - CSS Logical Property
-  - CSS Property
-  - Reference
-  - border-inline
-  - border-inline-start
-  - border-inline-start-width
-  - border-inline-width
-  - recipe:css-property
+page-type: css-property
 browser-compat: css.properties.border-inline-start-width
 ---
 
@@ -88,5 +79,6 @@ div {
 
 ## See also
 
+- [CSS Logical Properties and Values](/en-US/docs/Web/CSS/CSS_Logical_Properties)
 - This property maps to one of the physical border properties: {{cssxref("border-top-width")}}, {{cssxref("border-right-width")}}, {{cssxref("border-bottom-width")}}, and {{cssxref("border-left-width")}}
 - {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}}

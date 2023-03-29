@@ -1,11 +1,7 @@
 ---
-title: Regular expression syntax cheatsheet
+title: Regular expression syntax cheat sheet
 slug: Web/JavaScript/Guide/Regular_Expressions/Cheatsheet
-tags:
-  - Cheatsheet
-  - Guide
-  - JavaScript
-  - RegExp
+page-type: guide
 ---
 
 {{jsSidebar("JavaScript Guide")}}
@@ -289,7 +285,7 @@ This page provides an overall cheat sheet of all the capabilities of `RegExp` sy
           unescaped character equivalents in regular expressions. However, in
           regular expressions with the
           <a
-            href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions#advanced_searching_with_flags_2"
+            href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions#advanced_searching_with_flags"
             >unicode flag</a
           >, these will cause an <em>invalid identity escape</em> error. This is
           done to ensure backward compatibility with existing code that uses new

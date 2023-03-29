@@ -2,28 +2,18 @@
 title: PerformanceTiming
 slug: Web/API/PerformanceTiming
 page-type: web-api-interface
-tags:
-  - API
-  - Backwards compatibility
-  - Deprecated
-  - Interface
-  - Navigation Timing
-  - Navigation Timing API
-  - Optimization
-  - Performance
-  - Reference
-  - Timing
-  - legacy
+status:
+  - deprecated
 browser-compat: api.PerformanceTiming
 ---
 
-{{APIRef("Navigation Timing")}}{{Deprecated_Header}}
+{{APIRef("Performance API")}}{{Deprecated_Header}}
 
 > **Warning:** This interface is deprecated in the [Navigation Timing Level 2 specification](https://w3c.github.io/navigation-timing/#obsolete). Please use the {{domxref("PerformanceNavigationTiming")}} interface instead.
 
 The **`PerformanceTiming`** interface is a legacy interface kept for backwards compatibility and contains properties that offer performance timing information for various events which occur during the loading and use of the current page. You get a `PerformanceTiming` object describing your page using the {{domxref("Performance.timing", "window.performance.timing")}} property.
 
-## Properties
+## Instance properties
 
 _The `PerformanceTiming` interface doesn't inherit any properties._
 
@@ -76,11 +66,11 @@ These properties are listed in the order in which they occur during the navigati
 - {{domxref("PerformanceTiming.loadEventEnd")}} {{ReadOnlyInline}} {{Deprecated_Inline}}
   - : When the {{domxref("Window/load_event", "load")}} event handler terminated, that is when the load event is completed. If this event has not yet been sent, or is not yet completed, it returns `0.`
 
-## Methods
+## Instance methods
 
 _The `PerformanceTiming`_ _interface doesn't inherit any methods._
 
-- {{Deprecated_Inline}} {{domxref("PerformanceTiming.toJSON()")}}
+- {{domxref("PerformanceTiming.toJSON()")}} {{Deprecated_Inline}}
   - : Returns a [JSON object](/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON) representing this `PerformanceTiming` object.
 
 ## Specifications
@@ -95,3 +85,4 @@ Use the {{domxref("PerformanceNavigationTiming")}} interface instead.
 ## See also
 
 - The {{domxref("Performance.timing")}} property that creates such an object.
+- {{domxref("PerformanceNavigationTiming")}} (part of Navigation Timing Level 2) that has superseded this API.

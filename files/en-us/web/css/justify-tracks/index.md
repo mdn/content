@@ -1,14 +1,9 @@
 ---
 title: justify-tracks
 slug: Web/CSS/justify-tracks
-tags:
-  - CSS
-  - Experimental
-  - CSS Property
-  - Reference
-  - grid
-  - justify-tracks
-  - masonry
+page-type: css-property
+status:
+  - experimental
 browser-compat: css.properties.justify-tracks
 ---
 
@@ -23,7 +18,7 @@ The **`justify-tracks`** CSS property sets the alignment in the masonry axis for
 justify-tracks: start;
 justify-tracks: space-between;
 justify-tracks: center;
-justify-tracks: start,center,end;
+justify-tracks: start, center, end;
 
 /* Global values */
 justify-tracks: inherit;

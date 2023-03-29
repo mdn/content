@@ -1,10 +1,6 @@
 ---
 title: set:leading()
 slug: Web/EXSLT/set/leading
-tags:
-  - EXSLT
-  - NeedsSpecTable
-  - Reference
 ---
 
 {{XSLTRef}}{{QuickLinksWithSubpages("/en-US/docs/Web/EXSLT")}}
@@ -13,7 +9,7 @@ tags:
 
 ## Syntax
 
-```js
+```js-nolint
 set:leading(nodeSet1, nodeSet2)
 ```
 

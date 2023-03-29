@@ -2,22 +2,19 @@
 title: WindowControlsOverlayGeometryChangeEvent()
 slug: Web/API/WindowControlsOverlayGeometryChangeEvent/WindowControlsOverlayGeometryChangeEvent
 page-type: web-api-constructor
-tags:
-  - API
-  - Constructor
-  - DOM Events
-  - WindowControlsOverlayGeometryChangeEvent
+status:
+  - experimental
 browser-compat: api.WindowControlsOverlayGeometryChangeEvent.WindowControlsOverlayGeometryChangeEvent
 ---
 
-{{APIRef("Window Controls Overlay API")}}
+{{APIRef("Window Controls Overlay API")}}{{SeeCompatTable}}
 
 The **`WindowControlsOverlayGeometryChangeEvent()`** constructor returns a newly created
 {{domxref("WindowControlsOverlayGeometryChangeEvent")}}, representing the current geometry of a desktop Progressive Web App's title bar area.
 
 ## Syntax
 
-```js
+```js-nolint
 new WindowControlsOverlayGeometryChangeEvent(type, options)
 ```
 

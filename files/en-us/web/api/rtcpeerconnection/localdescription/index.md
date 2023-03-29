@@ -2,13 +2,6 @@
 title: RTCPeerConnection.localDescription
 slug: Web/API/RTCPeerConnection/localDescription
 page-type: web-api-instance-property
-tags:
-  - Property
-  - RTCPeerConnection
-  - Read-only
-  - Reference
-  - WebRTC
-  - localDescription
 browser-compat: api.RTCPeerConnection.localDescription
 ---
 
@@ -19,13 +12,13 @@ If it has not yet been set, this is `null`.
 
 ## Syntax
 
-```js
-const sessionDescription = peerConnection.localDescription;
+```js-nolint
+const sessionDescription = peerConnection.localDescription
 ```
 
 On a more fundamental level, the returned value is the value of {{domxref("RTCPeerConnection.pendingLocalDescription")}} if that property isn't `null`;
 otherwise, the value of {{domxref("RTCPeerConnection.currentLocalDescription")}} is returned.
-See {{SectionOnPage("/en-US/docs/Web/API/WebRTC_API/Connectivity", "Pending and current descriptions")}} for details on this algorithm and why it's used.
+See [Pending and current descriptions](/en-US/docs/Web/API/WebRTC_API/Connectivity#pending_and_current_descriptions) in the WebRTC Connectivity page for details on this algorithm and why it's used.
 
 ## Example
 
@@ -37,8 +30,7 @@ const pc = new RTCPeerConnection();
 const sd = pc.localDescription;
 if (sd) {
   alert(`Local session: type='${sd.type}'; sdp description='${sd.sdp}'`);
-}
-else {
+} else {
   alert("No local session yet.");
 }
 ```

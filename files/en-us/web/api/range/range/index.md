@@ -2,13 +2,6 @@
 title: Range()
 slug: Web/API/Range/Range
 page-type: web-api-constructor
-tags:
-  - API
-  - Constructor
-  - DOM
-  - DOM Reference
-  - Range
-  - Reference
 browser-compat: api.Range.Range
 ---
 
@@ -20,7 +13,7 @@ object.
 
 ## Syntax
 
-```js
+```js-nolint
 new Range()
 ```
 
@@ -47,7 +40,7 @@ set its beginning and end positions using the {{domxref("Range.setStartBefore()"
 ### JavaScript
 
 ```js
-const paragraphs = document.querySelectorAll('p');
+const paragraphs = document.querySelectorAll("p");
 
 // Create new range
 const range = new Range();

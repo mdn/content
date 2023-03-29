@@ -2,9 +2,6 @@
 title: NamedNodeMap.getNamedItemNS()
 slug: Web/API/NamedNodeMap/getNamedItemNS
 page-type: web-api-instance-method
-tags:
-  - Method
-  - Reference
 browser-compat: api.NamedNodeMap.getNamedItemNS
 ---
 
@@ -14,8 +11,8 @@ The **`getNamedItemNS()`** method of the {{domxref("NamedNodeMap")}} interface r
 
 ## Syntax
 
-```js
-getNamedItemNS(namespace, localName);
+```js-nolint
+getNamedItemNS(namespace, localName)
 ```
 
 ### Parameters

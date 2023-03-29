@@ -2,14 +2,6 @@
 title: Element.prepend()
 slug: Web/API/Element/prepend
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - Method
-  - Node
-  - Element
-  - Reference
-  - prepend
 browser-compat: api.Element.prepend
 ---
 
@@ -22,7 +14,7 @@ equivalent {{domxref("Text")}} nodes.
 
 ## Syntax
 
-```js
+```js-nolint
 prepend(param1)
 prepend(param1, param2)
 prepend(param1, param2, /* … ,*/ paramN)
@@ -84,7 +76,7 @@ See {{jsxref("Symbol.unscopables")}} for more information.
 ```js
 let div = document.createElement("div");
 
-with(div) {
+with (div) {
   prepend("foo");
 }
 // ReferenceError: prepend is not defined

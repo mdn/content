@@ -2,12 +2,6 @@
 title: ExtendableMessageEvent()
 slug: Web/API/ExtendableMessageEvent/ExtendableMessageEvent
 page-type: web-api-constructor
-tags:
-  - API
-  - Constructor
-  - ExtendableMessageEvent
-  - Reference
-  - Service Workers
 browser-compat: api.ExtendableMessageEvent.ExtendableMessageEvent
 ---
 
@@ -17,7 +11,7 @@ The **`ExtendableMessageEvent()`** constructor creates a new {{domxref("Extendab
 
 ## Syntax
 
-```js
+```js-nolint
 new ExtendableMessageEvent(type)
 new ExtendableMessageEvent(type, options)
 ```
@@ -26,7 +20,7 @@ new ExtendableMessageEvent(type, options)
 
 - `type`
   - : A string with the name of the event.
-    It is case-sensitive and browsers set it to  `messageerror` or `message`.
+    It is case-sensitive and browsers set it to `messageerror` or `message`.
 - `options` {{optional_inline}}
   - : An object that, _in addition of the properties defined in {{domxref("ExtendableEvent/ExtendableEvent", "ExtendableEvent()")}}_, can have the following properties:
     - `data` {{optional_inline}}
@@ -50,11 +44,13 @@ A new {{domxref("ExtendableMessageEvent")}} object.
 ## Examples
 
 ```js
-const options = { data : 'hello message',
-                  source : MessagePortReference,
-                  ports : MessagePortListReference };
+const options = {
+  data: "hello message",
+  source: MessagePortReference,
+  ports: MessagePortListReference,
+};
 
-const myEME = new ExtendableMessageEvent('message', init);
+const myEME = new ExtendableMessageEvent("message", init);
 ```
 
 ## Specifications

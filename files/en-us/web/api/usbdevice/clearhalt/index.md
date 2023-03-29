@@ -2,16 +2,8 @@
 title: USBDevice.clearHalt()
 slug: Web/API/USBDevice/clearHalt
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - USB
-  - USBDevice
-  - WebUSB
-  - WebUSB API
-  - clearHalt
-  - Experimental
+status:
+  - experimental
 browser-compat: api.USBDevice.clearHalt
 ---
 
@@ -25,7 +17,7 @@ terminology) to clear that condition. See the for details.
 
 ## Syntax
 
-```js
+```js-nolint
 clearHalt(direction, endpointNumber)
 ```
 
@@ -60,9 +52,9 @@ while (true) {
     console.log(`Channel 5: ${result.data.getUint16(4)}`);
   }
 
-  if (result.status === 'stall') {
-    console.warn('Endpoint stalled. Clearing.');
-    await device.clearHalt('in', 1);
+  if (result.status === "stall") {
+    console.warn("Endpoint stalled. Clearing.");
+    await device.clearHalt("in", 1);
   }
 }
 ```

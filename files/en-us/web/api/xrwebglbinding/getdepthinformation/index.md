@@ -2,14 +2,8 @@
 title: XRWebGLBinding.getDepthInformation()
 slug: Web/API/XRWebGLBinding/getDepthInformation
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - AR
-  - XR
-  - WebXR
-  - Experimental
+status:
+  - experimental
 browser-compat: api.XRWebGLBinding.getDepthInformation
 ---
 
@@ -19,7 +13,7 @@ The **`getDepthInformation()`** method of the {{domxref("XRWebGLBinding")}} inte
 
 ## Syntax
 
-```js
+```js-nolint
 getDepthInformation(view)
 ```
 

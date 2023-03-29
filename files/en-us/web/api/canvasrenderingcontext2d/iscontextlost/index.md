@@ -2,13 +2,8 @@
 title: CanvasRenderingContext2D.isContextLost()
 slug: Web/API/CanvasRenderingContext2D/isContextLost
 page-type: web-api-instance-method
-tags:
-  - API
-  - Canvas
-  - CanvasRenderingContext2D
-  - Method
-  - Reference
-  - Experimental
+status:
+  - experimental
 browser-compat: api.CanvasRenderingContext2D.isContextLost
 ---
 
@@ -17,13 +12,13 @@ browser-compat: api.CanvasRenderingContext2D.isContextLost
 The **`CanvasRenderingContext2D.isContextLost()`** method of the Canvas 2D API returns `true` if the rendering context is lost (and has not yet been reset).
 This might occur due to driver crashes, running out of memory, and so on.
 
-If the user agent detects that the canvas backing storage is lost it will fire the  [`contextlost` event](/en-US/docs/Web/API/HTMLCanvasElement/contextlost_event) at the associated [`HTMLCanvasElement`](/en-US/docs/Web/API/HTMLCanvasElement).
+If the user agent detects that the canvas backing storage is lost it will fire the [`contextlost` event](/en-US/docs/Web/API/HTMLCanvasElement/contextlost_event) at the associated [`HTMLCanvasElement`](/en-US/docs/Web/API/HTMLCanvasElement).
 If this event is not cancelled it will attempt to reset the backing storage to the default state (this is equivalent to calling {{domxref("CanvasRenderingContext2D.reset()")}}).
 On success it will fire the [`contextrestored` event](/en-US/docs/Web/API/HTMLCanvasElement/contextrestored_event), indicating that the context is ready to reinitialize and redraw.
 
 ## Syntax
 
-```js
+```js-nolint
 isContextLost()
 ```
 
@@ -38,10 +33,10 @@ None.
 ### Examples
 
 ```js
-const ctx = canvas.getContext('2d');
+const ctx = canvas.getContext("2d");
 
 if (ctx.isContextLost()) {
-  console.log("Context is lost")
+  console.log("Context is lost");
 }
 ```
 

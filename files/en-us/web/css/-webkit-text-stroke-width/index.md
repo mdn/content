@@ -1,12 +1,7 @@
 ---
-title: '-webkit-text-stroke-width'
+title: "-webkit-text-stroke-width"
 slug: Web/CSS/-webkit-text-stroke-width
-tags:
-  - CSS
-  - CSS Property
-  - Reference
-  - WebKit
-  - recipe:css-property
+page-type: css-property
 browser-compat: css.properties.-webkit-text-stroke-width
 ---
 

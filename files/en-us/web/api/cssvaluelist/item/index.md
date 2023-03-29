@@ -2,13 +2,8 @@
 title: CSSValueList.item()
 slug: Web/API/CSSValueList/item
 page-type: web-api-instance-method
-tags:
-  - API
-  - CSSValueList
-  - Method
-  - Reference
-  - item
-  - Deprecated
+status:
+  - deprecated
 browser-compat: api.CSSValueList.item
 ---
 
@@ -31,7 +26,7 @@ this method returns `null`.
 
 ## Syntax
 
-```js
+```js-nolint
 item(index)
 ```
 

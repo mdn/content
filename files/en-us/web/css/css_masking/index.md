@@ -1,12 +1,7 @@
 ---
 title: CSS Masking
 slug: Web/CSS/CSS_Masking
-tags:
-  - CSS
-  - CSS Masking
-  - Guide
-  - Overview
-  - Reference
+page-type: css-module
 spec-urls: https://drafts.fxtf.org/css-masking/
 ---
 

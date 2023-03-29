@@ -1,9 +1,7 @@
 ---
 title: font-family
 slug: Web/SVG/Attribute/font-family
-tags:
-  - SVG
-  - SVG Attribute
+page-type: svg-attribute
 browser-compat: svg.attributes.presentation.font-family
 ---
 
@@ -24,7 +22,9 @@ You can use this attribute with the following SVG elements:
 ## Example
 
 ```css hidden
-html, body, svg {
+html,
+body,
+svg {
   height: 100%;
 }
 ```

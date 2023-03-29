@@ -1,10 +1,6 @@
 ---
 title: choose
 slug: Web/XPath/Functions/choose
-tags:
-  - Function
-  - XPath
-  - XSLT
 ---
 
 {{ XsltRef() }}
@@ -16,7 +12,7 @@ The `choose` function returns one of the specified objects based on a boolean pa
 ### Syntax
 
 ```
-choose( boolean , object1, object2 )
+choose( boolean, object1, object2 )
 ```
 
 ### Arguments

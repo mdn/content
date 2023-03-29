@@ -1,9 +1,7 @@
 ---
 title: Information contained in a WebIDL file
-slug: MDN/Writing_guidelines/Howto/Write_an_API_reference/Information_contained_in_a_WebIDL_file
-tags:
-  - meta
-  - writing-guide
+slug: >-
+  MDN/Writing_guidelines/Howto/Write_an_API_reference/Information_contained_in_a_WebIDL_file
 ---
 
 {{MDNSidebar}}
@@ -359,7 +357,7 @@ DOMString canPlayType(DOMString type);
 
 The return value type is indicated first inside the parentheses — in the above case the value is an object of type `DOMString`. if followed by a question mark (`'?'`), a value of `null` can be returned too, and the documentation must explain _when_ this may happen. If no question mark is present, like here, the return value can't be `null`.
 
-The keyword `void` means that there is no return value. It is not a return value type. If the WebIDL entry reads `void`, the _Return value_ section in the docs should contain only a simple _None_.
+The keyword `void` means that there is no return value. It is not a return value type. If the WebIDL entry reads `void`, the _Return value_ section in the docs should contain only a simple "None.".
 
 ### Throwing exceptions
 
@@ -459,7 +457,7 @@ The iterator will iterate over values of type _valueType_, with keys of type _ke
 - `entries()` that returns an [`iterator`](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols) on the indexes (of type _keyType_). E.g. {{domxref('FormData.entries()')}}
 - `values()` that returns an [`iterator`](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols) on the values. E.g. {{domxref('FormData.values()')}}
 - `keys()` that returns an [`iterator`](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols) on the keys. E.g. {{domxref('FormData.keys()')}}
-- Once {{bug(1216751)}} lands, `forEach()`.
+- Once [Firefox bug 1216751](https://bugzil.la/1216751) lands, `forEach()`.
 
 Such an iterator allows to use the syntax `for (const p in object)` as a shorthand of `for (const p in object.entries())`. We add a sentence about it in the interface description. E.g. {{domxref('FormData')}}.
 

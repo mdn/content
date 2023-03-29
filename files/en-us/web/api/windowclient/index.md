@@ -2,14 +2,6 @@
 title: WindowClient
 slug: Web/API/WindowClient
 page-type: web-api-interface
-tags:
-  - API
-  - Client
-  - Interface
-  - Reference
-  - Service Workers
-  - ServiceWorker
-  - WindowClient
 browser-compat: api.WindowClient
 ---
 
@@ -19,7 +11,7 @@ The `WindowClient` interface of the [ServiceWorker API](/en-US/docs/Web/API/Serv
 
 {{InheritanceDiagram}}
 
-## Methods
+## Instance methods
 
 _`WindowClient` inherits methods from its parent interface, {{domxref("Client")}}._
 
@@ -28,7 +20,7 @@ _`WindowClient` inherits methods from its parent interface, {{domxref("Client")}
 - {{domxref("WindowClient.navigate()")}}
   - : Loads a specified URL into a controlled client page.
 
-## Properties
+## Instance properties
 
 _`WindowClient` inherits properties from its parent interface, {{domxref("Client")}}._
 

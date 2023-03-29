@@ -2,19 +2,6 @@
 title: RTCOutboundRtpStreamStats
 slug: Web/API/RTCOutboundRtpStreamStats
 page-type: web-api-interface
-tags:
-  - API
-  - Dictionary
-  - Outbound
-  - RTCOutboundRtpStreamStats
-  - RTCRtpSender
-  - RTP
-  - Reference
-  - Statistics
-  - Stats
-  - WebRTC
-  - WebRTC API
-  - stream
 browser-compat: api.RTCOutboundRtpStreamStats
 ---
 
@@ -22,7 +9,7 @@ browser-compat: api.RTCOutboundRtpStreamStats
 
 The **`RTCOutboundRtpStreamStats`** dictionary is the {{domxref("RTCStats")}}-based object which provides metrics and statistics related to an outbound {{Glossary("RTP")}} stream being sent by an {{domxref("RTCRtpSender")}}.
 
-## Properties
+## Instance properties
 
 _The `RTCOutboundRtpStreamStats` dictionary includes the following properties in addition to those it inherits from {{domxref("RTCSentRtpStreamStats")}}, {{domxref("RTCRtpStreamStats")}}, and {{domxref("RTCStats")}}._
 

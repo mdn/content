@@ -1,12 +1,7 @@
 ---
 title: columns
 slug: Web/CSS/columns
-tags:
-  - CSS
-  - CSS Multi-column Layout
-  - CSS Property
-  - Reference
-  - recipe:css-shorthand-property
+page-type: css-shorthand-property
 browser-compat: css.properties.columns
 ---
 
@@ -71,9 +66,8 @@ The `columns` property may be specified as one or two of the values listed below
 
 ```html
 <p class="content-box">
-  This is a bunch of text split into three columns
-  using the CSS `columns` property. The text
-  is equally distributed over the columns.
+  This is a bunch of text split into three columns using the CSS `columns`
+  property. The text is equally distributed over the columns.
 </p>
 ```
 

@@ -2,10 +2,6 @@
 title: BatteryManager.charging
 slug: Web/API/BatteryManager/charging
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
 browser-compat: api.BatteryManager.charging
 ---
 
@@ -31,9 +27,9 @@ A boolean.
 
 ```js
 navigator.getBattery().then((battery) => {
-    const charging = battery.charging;
+  const charging = battery.charging;
 
-    document.querySelector('#charging').textContent = charging ;
+  document.querySelector("#charging").textContent = charging;
 });
 ```
 

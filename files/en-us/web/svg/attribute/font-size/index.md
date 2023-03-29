@@ -1,9 +1,7 @@
 ---
 title: font-size
 slug: Web/SVG/Attribute/font-size
-tags:
-  - SVG
-  - SVG Attribute
+page-type: svg-attribute
 browser-compat: svg.attributes.presentation.font-size
 ---
 
@@ -24,7 +22,9 @@ You can use this attribute with the following SVG elements:
 ## Example
 
 ```css hidden
-html, body, svg {
+html,
+body,
+svg {
   height: 100%;
 }
 ```

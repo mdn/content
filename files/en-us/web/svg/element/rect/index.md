@@ -1,11 +1,7 @@
 ---
 title: <rect>
 slug: Web/SVG/Element/rect
-tags:
-  - Element
-  - Reference
-  - SVG
-  - SVG Graphics
+page-type: svg-element
 browser-compat: svg.elements.rect
 ---
 
@@ -16,7 +12,11 @@ The **`<rect>`** element is a [basic SVG shape](/en-US/docs/Web/SVG/Tutorial/Bas
 ## Example
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html

@@ -1,15 +1,7 @@
 ---
-title: ':picture-in-picture'
+title: ":picture-in-picture"
 slug: Web/CSS/:picture-in-picture
-tags:
-  - CSS
-  - Picture-in-Picture
-  - Picture-in-Picture API
-  - Pseudo-class
-  - Reference
-  - Selector
-  - Video
-  - pip
+page-type: css-pseudo-class
 browser-compat: css.selectors.picture-in-picture
 ---
 
@@ -19,8 +11,10 @@ The **`:picture-in-picture`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/d
 
 ## Syntax
 
-```
-:picture-in-picture
+```css
+:picture-in-picture {
+  /* ... */
+}
 ```
 
 ## Usage notes
@@ -38,8 +32,10 @@ The page's HTML looks like this:
 ```html
 <h1>MDN Web Docs Demo: :picture-in-picture pseudo-class</h1>
 
-<p>This demo uses the <code>:picture-in-picture</code> pseudo-class to automatically
-  change the style of a video entirely using CSS.</p>
+<p>
+  This demo uses the <code>:picture-in-picture</code> pseudo-class to
+  automatically change the style of a video entirely using CSS.
+</p>
 
 <video id="pip-video"></video>
 ```

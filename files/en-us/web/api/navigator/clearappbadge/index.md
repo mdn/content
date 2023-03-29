@@ -2,14 +2,8 @@
 title: Navigator.clearAppBadge()
 slug: Web/API/Navigator/clearAppBadge
 page-type: web-api-instance-method
-tags:
-  - API
-  - Badging API
-  - Method
-  - Reference
-  - clearAppBadge
-  - Navigator
-  - Experimental
+status:
+  - experimental
 browser-compat: api.Navigator.clearAppBadge
 ---
 
@@ -19,7 +13,7 @@ The **`clearAppBadge()`** method of the {{domxref("Navigator")}} interface clear
 
 ## Syntax
 
-```js
+```js-nolint
 clearAppBadge()
 ```
 
@@ -41,7 +35,7 @@ A {{jsxref("Promise")}} that resolves with {{jsxref("undefined")}}.
 Once all messages in an application have been read, call `clearAppBadge()` to clear the badge and remove the notification.
 
 ```js
-navigator.clearAppBadge()
+navigator.clearAppBadge();
 ```
 
 ## Specifications

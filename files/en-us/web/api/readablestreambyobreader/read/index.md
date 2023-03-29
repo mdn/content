@@ -2,13 +2,6 @@
 title: ReadableStreamBYOBReader.read()
 slug: Web/API/ReadableStreamBYOBReader/read
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - ReadableStreamBYOBReader
-  - Reference
-  - Streams
-  - read
 browser-compat: api.ReadableStreamBYOBReader.read
 ---
 
@@ -33,7 +26,7 @@ The value is set `true` if the stream is closed or cancelled, and `false` otherw
 
 ## Syntax
 
-```js
+```js-nolint
 read(view)
 ```
 
@@ -105,11 +98,12 @@ function readStream(reader) {
 
   while (offset < buffer.byteLength) {
     // read() returns a promise that fulfills when a value has been received
-    reader.read(new Uint8Array(buffer, offset, buffer.byteLength - offset))
+    reader
+      .read(new Uint8Array(buffer, offset, buffer.byteLength - offset))
       .then(function processBytes({ done, value }) {
         // Result objects contain two properties:
         // done  - true if the stream has already given all its data.
-        // value - some data. Always undefined when done is true.
+        // value - some data. 'undefined' if the reader is canceled.
 
         if (done) {
           // There is no more data in the stream
@@ -122,7 +116,9 @@ function readStream(reader) {
 
         // Read some more, and call this function again
         // Note that here we create a new view over the original buffer.
-        return reader.read(new Uint8Array(buffer, offset, buffer.byteLength - offset)).then(processBytes);
+        return reader
+          .read(new Uint8Array(buffer, offset, buffer.byteLength - offset))
+          .then(processBytes);
       });
   }
 }

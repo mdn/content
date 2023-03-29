@@ -1,10 +1,6 @@
 ---
 title: PATCH
 slug: Web/HTTP/Methods/PATCH
-tags:
-  - HTTP
-  - Reference
-  - Request method
 spec-urls: https://www.rfc-editor.org/rfc/rfc5789
 ---
 
@@ -32,7 +28,7 @@ Another (implicit) indication that `PATCH` is allowed, is the presence of the {{
     </tr>
     <tr>
       <th scope="row">Successful response has body</th>
-      <td>Yes</td>
+      <td>May</td>
     </tr>
     <tr>
       <th scope="row">{{Glossary("Safe/HTTP", "Safe")}}</th>
@@ -77,7 +73,7 @@ Content-Length: 100
 
 ### Response
 
-A successful response is indicated by any [2xx](https://datatracker.ietf.org/doc/html/rfc7231#section-6.3) status code.
+A successful response is indicated by any [2xx](https://httpwg.org/specs/rfc9110.html#status.2xx) status code.
 
 In the example below a {{HTTPStatus("204")}} response code is used, because the response does not carry a payload body. A {{HTTPStatus("200")}} response could have contained a payload body.
 

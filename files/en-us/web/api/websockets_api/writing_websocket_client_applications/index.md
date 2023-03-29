@@ -2,15 +2,6 @@
 title: Writing WebSocket client applications
 slug: Web/API/WebSockets_API/Writing_WebSocket_client_applications
 page-type: guide
-tags:
-  - Client
-  - Example
-  - Guide
-  - Networking
-  - Web Sockets API
-  - WebSocket
-  - WebSocket API
-  - WebSockets
 ---
 
 {{APIRef("Websockets API")}}
@@ -55,7 +46,10 @@ This simple example creates a new WebSocket, connecting to the server at `wss://
 A custom protocol of "protocolOne" is named in the request for the socket in this example, though this can be omitted.
 
 ```js
-const exampleSocket = new WebSocket("wss://www.example.com/socketserver", "protocolOne");
+const exampleSocket = new WebSocket(
+  "wss://www.example.com/socketserver",
+  "protocolOne"
+);
 ```
 
 On return, {{domxref("WebSocket.readyState", "exampleSocket.readyState")}} is `CONNECTING`. The `readyState` will become `OPEN` once
@@ -64,7 +58,10 @@ the connection is ready to transfer data.
 If you want to open a connection and are flexible about the protocols you support, you can specify an array of protocols:
 
 ```js
-const exampleSocket = new WebSocket("wss://www.example.com/socketserver", ["protocolOne", "protocolTwo"]);
+const exampleSocket = new WebSocket("wss://www.example.com/socketserver", [
+  "protocolOne",
+  "protocolTwo",
+]);
 ```
 
 Once the connection is established (that is, `readyState` is `OPEN`), {{domxref("WebSocket.protocol", "exampleSocket.protocol")}} will tell you which protocol the server selected.
@@ -104,8 +101,8 @@ function sendText() {
   const msg = {
     type: "message",
     text: document.getElementById("text").value,
-    id:   clientID,
-    date: Date.now()
+    id: clientID,
+    date: Date.now(),
   };
 
   // Send the msg object as a JSON-formatted string.
@@ -127,7 +124,7 @@ like this:
 ```js
 exampleSocket.onmessage = (event) => {
   console.log(event.data);
-}
+};
 ```
 
 ### Receiving and interpreting JSON objects
@@ -193,5 +190,5 @@ If this value isn't 0, there's pending data still, so you may wish to wait befor
 
 ## Security considerations
 
-WebSockets should not be used in a mixed content environment; that is, you shouldn't open a non-secure WebSocket connection from a page loaded using HTTPS or vice-versa.
+WebSockets should not be used in a mixed content environment; that is, you shouldn't open a non-secure WebSocket connection from a page loaded using HTTPS or vice versa.
 Most browsers now only allow secure WebSocket connections, and no longer support using them in insecure contexts.

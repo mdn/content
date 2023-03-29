@@ -1,16 +1,7 @@
 ---
 title: revert
 slug: Web/CSS/revert
-tags:
-  - CSS
-  - CSS Cascade
-  - CSS Value
-  - Cascade
-  - Keyword
-  - Layout
-  - Reference
-  - Style
-  - revert
+page-type: css-keyword
 browser-compat: css.types.global_keywords.revert
 ---
 
@@ -36,11 +27,11 @@ Revert will not affect rules applied to children of an element you reset (but wi
 
 ## Examples
 
-### Revert vs unset
+### Revert vs. unset
 
 Although `revert` and `unset` are similar, they differ for some properties for some elements.
 
-So in the below example, we set custom [`font-weight`](/en-US/docs/Web/CSS/font-weight#formal_definition), but then try to `revert` and `unset` it inline in the HTML document. The `revert` keyword will revert the text to bold because that is the default value for headers in most browsers. The `unset` keyword will keep the text normal because that is the initial value for the `font-weight` property.
+So in the below example, we set custom [`font-weight`](/en-US/docs/Web/CSS/font-weight#formal_definition), but then try to `revert` and `unset` it inline in the HTML document. The `revert` keyword will revert the text to bold because that is the default value for headers in most browsers. The `unset` keyword will keep the text normal because, as an inherited property, the `font-weight` would then inherit its value from the body.
 
 #### HTML
 
@@ -77,9 +68,7 @@ Reverting all values is useful in a situation where you've made several style ch
 ```html
 <h3>This will have custom styles</h3>
 <p>Just some text</p>
-<h3 style="all: revert">
-  This should be reverted to browser/user defaults.
-</h3>
+<h3 style="all: revert">This should be reverted to browser/user defaults.</h3>
 <p>Just some text</p>
 ```
 
@@ -119,9 +108,15 @@ Reverting effectively removes the value for the element you select with some rul
 #### CSS
 
 ```css
-section { color: darkgreen }
-p { color: red }
-section.with-revert { color: revert }
+section {
+  color: darkgreen;
+}
+p {
+  color: red;
+}
+section.with-revert {
+  color: revert;
+}
 ```
 
 Notice how paragraph still has a red color even though a color property for the section was reverted. Also note that both the header and plain text node are black. This is exactly the same as if `section { color: darkgreen }` would not exist for the second section.

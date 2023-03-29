@@ -2,12 +2,8 @@
 title: CSSPrimitiveValue.getRectValue()
 slug: Web/API/CSSPrimitiveValue/getRectValue
 page-type: web-api-instance-method
-tags:
-  - API
-  - CSSPrimitiveValue
-  - Method
-  - getRectValue
-  - Deprecated
+status:
+  - deprecated
 browser-compat: api.CSSPrimitiveValue.getRectValue
 ---
 
@@ -29,7 +25,7 @@ Modification to the corresponding style property can be achieved using the
 
 ## Syntax
 
-```js
+```js-nolint
 getRectValue()
 ```
 

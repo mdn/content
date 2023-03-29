@@ -1,15 +1,7 @@
 ---
 title: TypedArray.prototype.find()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/find
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - TypedArray
-  - TypedArrays
-  - Polyfill
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.TypedArray.find
 ---
 
@@ -27,7 +19,7 @@ the **index** of a found element in the typed array instead of its value.
 
 ## Syntax
 
-```js
+```js-nolint
 // Arrow function
 find((element) => { /* ... */ } )
 find((element, index) => { /* ... */ } )

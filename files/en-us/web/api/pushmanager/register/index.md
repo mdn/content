@@ -2,12 +2,8 @@
 title: PushManager.register()
 slug: Web/API/PushManager/register
 page-type: web-api-instance-method
-tags:
-  - API
-  - Deprecated
-  - Method
-  - Reference
-  - Simple Push API
+status:
+  - deprecated
 browser-compat: api.PushManager.register
 ---
 
@@ -20,7 +16,7 @@ a new endpoint for notifications.
 
 ## Syntax
 
-```js
+```js-nolint
 register()
 ```
 
@@ -46,11 +42,11 @@ const req = navigator.push.register();
 req.onsuccess = (e) => {
   const endpoint = req.result;
   console.log(`New endpoint: ${endpoint}`);
-}
+};
 
 req.onerror = (e) => {
   console.error(`Error getting a new endpoint: ${e.error}`);
-}
+};
 ```
 
 ## Specifications

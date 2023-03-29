@@ -2,12 +2,6 @@
 title: Headers.append()
 slug: Web/API/Headers/append
 page-type: web-api-instance-method
-tags:
-  - API
-  - Append
-  - Fetch
-  - Method
-  - Reference
 browser-compat: api.Headers.append
 ---
 
@@ -23,13 +17,12 @@ that if the specified header already exists and accepts multiple values,
 `append()` will append the new value onto the end of the set of values.
 
 For security reasons, some headers can only be controlled by the user agent. These
-headers include the {{Glossary("Forbidden_header_name", "forbidden header names", 1)}}
-and {{Glossary("Forbidden_response_header_name", "forbidden response header names",
-  1)}}.
+headers include the {{Glossary("Forbidden_header_name", "forbidden header names")}}
+and {{Glossary("Forbidden_response_header_name", "forbidden response header names")}}.
 
 ## Syntax
 
-```js
+```js-nolint
 append(name, value)
 ```
 
@@ -55,8 +48,8 @@ const myHeaders = new Headers(); // Currently empty
 You could add a header to this using `append()`:
 
 ```js
-myHeaders.append('Content-Type', 'image/jpeg');
-myHeaders.get('Content-Type'); // Returns 'image/jpeg'
+myHeaders.append("Content-Type", "image/jpeg");
+myHeaders.get("Content-Type"); // Returns 'image/jpeg'
 ```
 
 If the specified header already exists, `append()` will change its value to
@@ -64,9 +57,9 @@ the specified value. If the specified header already exists and accepts multiple
 `append()` will append the new value to the end of the value set:
 
 ```js
-myHeaders.append('Accept-Encoding', 'deflate');
-myHeaders.append('Accept-Encoding', 'gzip');
-myHeaders.get('Accept-Encoding'); // Returns 'deflate, gzip'
+myHeaders.append("Accept-Encoding", "deflate");
+myHeaders.append("Accept-Encoding", "gzip");
+myHeaders.get("Accept-Encoding"); // Returns 'deflate, gzip'
 ```
 
 To overwrite the old value with a new one, use {{domxref("Headers.set")}}.

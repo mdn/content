@@ -2,17 +2,10 @@
 title: FileSystemDirectoryHandle.values()
 slug: Web/API/FileSystemDirectoryHandle/values
 page-type: web-api-instance-method
-tags:
-  - Directory
-  - File
-  - File System Access API
-  - FileSystemDirectoryHandle
-  - Iterable
-  - Method
 browser-compat: api.FileSystemDirectoryHandle.values
 ---
 
-{{securecontext_header}}{{DefaultAPISidebar("File System Access API")}}
+{{securecontext_header}}{{APIRef("File System Access API")}}
 
 The **`values()`** method of the
 {{domxref("FileSystemDirectoryHandle")}} interface returns a new _array iterator_
@@ -21,8 +14,8 @@ object.
 
 ## Syntax
 
-```js
-FileSystemDirectoryHandle.values();
+```js-nolint
+values()
 ```
 
 ### Parameters

@@ -2,13 +2,9 @@
 title: HTMLShadowElement
 slug: Web/API/HTMLShadowElement
 page-type: web-api-interface
-tags:
-  - API
-  - HTML DOM
-  - Interface
-  - Reference
-  - Deprecated
-  - Non-standard
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.HTMLShadowElement
 ---
 
@@ -18,11 +14,11 @@ The **`HTMLShadowElement`** interface represents a {{HTMLElement("shadow")}} HTM
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _This interface inherits the properties of {{domxref("HTMLElement")}}._
 
-## Methods
+## Instance methods
 
 _This interface inherits the methods of {{domxref("HTMLElement")}}._
 

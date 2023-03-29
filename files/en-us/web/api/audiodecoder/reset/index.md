@@ -2,13 +2,8 @@
 title: AudioDecoder.reset()
 slug: Web/API/AudioDecoder/reset
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - reset
-  - AudioDecoder
-  - Experimental
+status:
+  - experimental
 browser-compat: api.AudioDecoder.reset
 ---
 
@@ -18,7 +13,7 @@ The **`reset()`** method of the {{domxref("AudioDecoder")}} interface resets all
 
 ## Syntax
 
-```js
+```js-nolint
 reset()
 ```
 

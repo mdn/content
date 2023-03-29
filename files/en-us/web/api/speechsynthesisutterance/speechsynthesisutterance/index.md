@@ -2,14 +2,6 @@
 title: SpeechSynthesisUtterance()
 slug: Web/API/SpeechSynthesisUtterance/SpeechSynthesisUtterance
 page-type: web-api-constructor
-tags:
-  - API
-  - Constructor
-  - Reference
-  - SpeechSynthesisUtterance
-  - Web Speech API
-  - speech
-  - synthesis
 browser-compat: api.SpeechSynthesisUtterance.SpeechSynthesisUtterance
 ---
 
@@ -19,7 +11,7 @@ The `SpeechSynthesisUtterance()` constructor of the {{domxref("SpeechSynthesisUt
 
 ## Syntax
 
-```js
+```js-nolint
 new SpeechSynthesisUtterance(text)
 ```
 
@@ -35,9 +27,9 @@ The following snippet is excerpted from our [Speech synthesizer demo](https://gi
 ```js
 const synth = window.speechSynthesis;
 
-const inputForm = document.querySelector('form');
-const inputTxt = document.querySelector('input');
-const voiceSelect = document.querySelector('select');
+const inputForm = document.querySelector("form");
+const inputTxt = document.querySelector("input");
+const voiceSelect = document.querySelector("select");
 
 const voices = synth.getVoices();
 
@@ -47,15 +39,16 @@ inputForm.onsubmit = (event) => {
   event.preventDefault();
 
   const utterThis = new SpeechSynthesisUtterance(inputTxt.value);
-  const selectedOption = voiceSelect.selectedOptions[0].getAttribute('data-name');
-  for (i = 0; i < voices.length ; i++) {
+  const selectedOption =
+    voiceSelect.selectedOptions[0].getAttribute("data-name");
+  for (let i = 0; i < voices.length; i++) {
     if (voices[i].name === selectedOption) {
       utterThis.voice = voices[i];
     }
   }
   synth.speak(utterThis);
   inputTxt.blur();
-}
+};
 ```
 
 ## Specifications

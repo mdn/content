@@ -1,13 +1,6 @@
 ---
-title: 'ARIA: scrollbar role'
+title: "ARIA: scrollbar role"
 slug: Web/Accessibility/ARIA/Roles/scrollbar_role
-tags:
-  - Accessibility
-  - ARIA
-  - roles
-  - Reference
-  - ARIA roles
-  - scrollbar
 spec-urls: https://w3c.github.io/aria/#scrollbar
 ---
 
@@ -35,7 +28,7 @@ Because native scroll bar styling has historically been limited, you may come ac
 
 An element with the `scrollbar` role is a graphical object that controls the scrolling of content within a viewing area; it is the ARIA role which indicates an element is a scroll bar. The HTML element that is most similar is the `range` {{HTMLElement('input')}} type, [`<input type="range">`](/en-US/docs/Web/HTML/Element/input/range).
 
-The `scrollbar` element has two required attributes: [`aria-controls`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-controls) and [`aria-valuenow`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-valuenow). The `aria-controls` attribute references the {{HTMLattrxref('id')}} of the scrollable area it controls. The `aria-valuenow` property defines the current value of the scrollbar.
+The `scrollbar` element has two required attributes: [`aria-controls`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-controls) and [`aria-valuenow`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-valuenow). The `aria-controls` attribute references the [`id`](/en-US/docs/Web/HTML/Global_attributes#id) of the scrollable area it controls. The `aria-valuenow` property defines the current value of the scrollbar.
 
 While the `aria-valuenow` is always required, the [`aria-valuemin`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-valuemin) and [`aria-valuemax`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-valuemax) properties only need to be set for the scrollbar role when the `scrollbar`'s minimum value is not 0 or the maximum value is not 100. The value of `aria-valuenow` must always be between the minimum and maximum inclusive values, or between `0` and `100` inclusive if the minimum and maximum values default to `0` and `100` respectively. `aria-valuenow` communicates how close the viewport is to the bottom of the document. Think of it like a progress bar, where the start of the document is the minimum value and the end of the document is the maximum value.
 
@@ -51,9 +44,9 @@ Keyboard scrolling must also be supported. When focus is within the viewport con
 
 JavaScript must be used to translate the `scrollbar` action into scrolling commands, providing the user with feedback by:
 
-  1. Visually updating the `scrollbar` element,
-  2. Scrolling the viewport's content, and
-  3. Updating the [`aria-valuenow`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-valuenow) property value.
+1. Visually updating the `scrollbar` element,
+2. Scrolling the viewport's content, and
+3. Updating the [`aria-valuenow`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-valuenow) property value.
 
 The default orientation of the `scrollbar` role is vertical. Including [`aria-orientation="vertical"`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-orientation), in this case, is optional. The orientation represents the orientation of the scrollbar and the scrolling effect on the viewing area controlled by the scrollbar. If the scrolling is left to right or right to left and not top to bottom, include `aria-orientation="horizontal"` on the element with the `scrollbar` role.
 
@@ -94,7 +87,7 @@ From the assistive technology user's perspective, the heading does not exist sin
 - [`aria-valuemax`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-valuemax)
   - : Set to a decimal value representing the maximum value, and greater than `aria-valuemin`. If not present, the default value is `100`.
 - [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby)
-  - : When not using a native form control and therefore not able to associate the scrollbar with a {{HTMLElement('label')}}, if visible text is available that can provide the required accessible name, set to the {{HTMLattrxref('id')}} of an element containing text serving as a label. Otherwise, use `aria-label`.
+  - : When not using a native form control and therefore not able to associate the scrollbar with a {{HTMLElement('label')}}, if visible text is available that can provide the required accessible name, set to the [`id`](/en-US/docs/Web/HTML/Global_attributes#id) of an element containing text serving as a label. Otherwise, use `aria-label`.
 - [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label)
   - : If no {{htmlelement('label')}} can be used, and no visible text is present that can be referenced by `aria-labelledby`, provides the string value that labels the `scrollbar` element providing the required accessible name.
 - [`aria-orientation`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-orientation)
@@ -110,9 +103,9 @@ From the assistive technology user's perspective, the heading does not exist sin
   - : With horizontal scrolling, the content in the viewport moves left the width of one character with the thumb moving left across the scroll bar slider proportionally, until the left edge of the content abuts the left end of the viewport and the thumb is aligned on the left end of the scrollbar.
 - <kbd>Right Arrow</kbd>
   - : With horizontal scrolling, the content in the viewport moves right the width of one character with the thumb moving right across the scroll bar slider proportionally, until the right edge of the content abuts the right end of the viewport and the thumb is aligned on the right end of the scrollbar.
-- <kbd>Page Up</kbd>  and <kbd>Shift + Space</kbd>
+- <kbd>Page Up</kbd> and <kbd>Shift + Space</kbd>
   - : The content in the viewport moves up the height of one viewport with the thumb moving up the scroll bar slider proportionally, until the top of the content and scrollbar are reached.
-- <kbd>Page Down</kbd> and  <kbd>Space</kbd>
+- <kbd>Page Down</kbd> and <kbd>Space</kbd>
   - : The content in the viewport moves down the height of one viewport with the thumb moving down the scroll bar slider proportionally, until the bottom of the content and scrollbar are reached.the bottom or top of the content is in view.
 
 ## Examples
@@ -143,7 +136,7 @@ CSS could have been used to ensure the overflowing value of PI had a native scro
 ```html
 <h3 id="PI">Pi</h3>
 <p class="pi" tabindex="0" aria-labelledby="PI">
-3.1415926535897932384626433832795028841971693993751058209749445923078164062862089986280348253421170679
+  3.1415926535897932384626433832795028841971693993751058209749445923078164062862089986280348253421170679
 </p>
 ```
 
@@ -177,6 +170,6 @@ The above CSS means a native scroll bar will appear when the user interacts with
 
 1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
 
-    {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
+   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
 
 </section>

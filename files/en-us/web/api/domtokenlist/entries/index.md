@@ -2,9 +2,6 @@
 title: DOMTokenList.entries()
 slug: Web/API/DOMTokenList/entries
 page-type: web-api-instance-method
-tags:
-  - Method
-  - Reference
 browser-compat: api.DOMTokenList.entries
 ---
 
@@ -17,8 +14,8 @@ to go through all key/value pairs contained in this object. The values are
 
 ## Syntax
 
-```js
-entries();
+```js-nolint
+entries()
 ```
 
 ### Return value

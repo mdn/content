@@ -1,18 +1,6 @@
 ---
 title: How CSS is structured
 slug: Learn/CSS/First_steps/How_CSS_is_structured
-tags:
-  - Beginner
-  - CSS
-  - HTML
-  - Learn
-  - Selectors
-  - Structure
-  - comments
-  - properties
-  - shorthand
-  - values
-  - whitespace
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/First_steps/Getting_started", "Learn/CSS/First_steps/How_CSS_works", "Learn/CSS/First_steps")}}
@@ -62,9 +50,9 @@ You reference an external CSS stylesheet from an HTML `<link>` element:
 <!DOCTYPE html>
 <html lang="en-GB">
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>My CSS experiment</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <h1>Hello World!</h1>
@@ -91,13 +79,13 @@ The `href` attribute of the {{htmlelement("link")}} element needs to reference a
 
 ```html
 <!-- Inside a subdirectory called styles inside the current directory -->
-<link rel="stylesheet" href="styles/style.css">
+<link rel="stylesheet" href="styles/style.css" />
 
 <!-- Inside a subdirectory called general, which is in a subdirectory called styles, inside the current directory -->
-<link rel="stylesheet" href="styles/general/style.css">
+<link rel="stylesheet" href="styles/general/style.css" />
 
 <!-- Go up one directory level, then inside a subdirectory called styles -->
-<link rel="stylesheet" href="../styles/style.css">
+<link rel="stylesheet" href="../styles/style.css" />
 ```
 
 ### Internal stylesheet
@@ -110,7 +98,7 @@ The HTML for an internal stylesheet might look like this:
 <!DOCTYPE html>
 <html lang="en-GB">
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>My CSS experiment</title>
     <style>
       h1 {
@@ -143,11 +131,13 @@ Inline styles are CSS declarations that affect a single HTML element, contained 
 <!DOCTYPE html>
 <html lang="en-GB">
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>My CSS experiment</title>
   </head>
   <body>
-    <h1 style="color: blue;background-color: yellow;border: 1px solid black;">Hello World!</h1>
+    <h1 style="color: blue;background-color: yellow;border: 1px solid black;">
+      Hello World!
+    </h1>
     <p style="color:red;">This is my first CSS example</p>
   </body>
 </html>
@@ -167,14 +157,13 @@ For the exercise that follows, create a folder on your computer. You can name th
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
     <title>My CSS experiments</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-
     <p>Create your test HTML here</p>
-
   </body>
 </html>
 ```
@@ -350,14 +339,14 @@ The output from the above code looks like this:
 
 - **{{cssxref("transform")}}**
 - **{{cssxref("background-image")}}, in particular gradient values**
-- **{{cssxref("color")}}, in particular rgb/rgba/hsl/hsla values**
+- **{{cssxref("color")}}, in particular rgb and hsl values**
 
 ## @rules
 
 CSS [@rules](/en-US/docs/Web/CSS/At-rule) (pronounced "at-rules") provide instruction for what CSS should perform or how it should behave. Some @rules are simple with just a keyword and a value. For example, `@import` imports a stylesheet into another CSS stylesheet:
 
 ```css
-@import 'styles2.css';
+@import "styles2.css";
 ```
 
 One common @rule that you are likely to encounter is `@media`, which is used to create [media queries](/en-US/docs/Web/CSS/Media_Queries). Media queries use conditional logic for applying CSS styling.
@@ -449,11 +438,13 @@ body {
   }
 }
 
-h1 {font-size: 1.5em;}
+h1 {
+  font-size: 1.5em;
+}
 
-/* Handle specific elements nested in the DOM  */
-/* -------------------------------------------------------------------------------------------- */
-div p, #id:first-line {
+/* Handle specific elements nested in the DOM */
+div p,
+#id:first-line {
   background-color: red;
   border-radius: 3px;
 }
@@ -524,9 +515,9 @@ div p + p {
 
 The next example shows the equivalent CSS in a more compressed format. Although the two examples work the same, the one below is more difficult to read.
 
-```css
+```css-nolint
 body {font: 1em/150% Helvetica, Arial, sans-serif; padding: 1em; margin: 0 auto; max-width: 33em;}
-@media (min-width: 70em) { body {font-size: 130%;} }
+@media (min-width: 70em) { body { font-size: 130%;}}
 
 h1 {font-size: 1.5em;}
 
@@ -564,11 +555,3 @@ You should always make sure to separate distinct values from one another by at l
 At this point, you should have a better idea about how CSS is structured. It's also useful to understand how the browser uses HTML and CSS to display a webpage. The next article, [How CSS works](/en-US/docs/Learn/CSS/First_steps/How_CSS_works), explains the process.
 
 {{PreviousMenuNext("Learn/CSS/First_steps/Getting_started", "Learn/CSS/First_steps/How_CSS_works", "Learn/CSS/First_steps")}}
-
-## In this module
-
-- [What is CSS?](/en-US/docs/Learn/CSS/First_steps/What_is_CSS)
-- [Getting started with CSS](/en-US/docs/Learn/CSS/First_steps/Getting_started)
-- [How CSS is structured](/en-US/docs/Learn/CSS/First_steps/How_CSS_is_structured)
-- [How CSS works](/en-US/docs/Learn/CSS/First_steps/How_CSS_works)
-- [Styling a biography page](/en-US/docs/Learn/CSS/First_steps/Styling_a_biography_page)

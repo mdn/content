@@ -2,13 +2,6 @@
 title: CSS numeric factory functions
 slug: Web/API/CSS/factory_functions
 page-type: web-api-static-method
-tags:
-  - API
-  - CSS
-  - CSS API
-  - Houdini
-  - Reference
-  - factory function
 browser-compat: api.CSS
 ---
 
@@ -24,53 +17,53 @@ functions create new numeric values less verbosely than using the
 
 ## Syntax
 
-```js
-CSS.number(number);
-CSS.percent(number);
+```js-nolint
+CSS.number(number)
+CSS.percent(number)
 
 // <length>
-CSS.em(number);
-CSS.ex(number);
-CSS.ch(number);
-CSS.ic(number);
-CSS.rem(number);
-CSS.lh(number);
-CSS.rlh(number);
-CSS.vw(number);
-CSS.vh(number);
-CSS.vi(number);
-CSS.vb(number);
-CSS.vmin(number);
-CSS.vmax(number);
-CSS.cm(number);
-CSS.mm(number);
-CSS.Q(number);
-CSS.in(number);
-CSS.pt(number);
-CSS.pc(number);
-CSS.px(number);
+CSS.em(number)
+CSS.ex(number)
+CSS.ch(number)
+CSS.ic(number)
+CSS.rem(number)
+CSS.lh(number)
+CSS.rlh(number)
+CSS.vw(number)
+CSS.vh(number)
+CSS.vi(number)
+CSS.vb(number)
+CSS.vmin(number)
+CSS.vmax(number)
+CSS.cm(number)
+CSS.mm(number)
+CSS.Q(number)
+CSS.in(number)
+CSS.pt(number)
+CSS.pc(number)
+CSS.px(number)
 
 // <angle>
-CSS.deg(number);
-CSS.grad(number);
-CSS.rad(number);
-CSS.turn(number);
+CSS.deg(number)
+CSS.grad(number)
+CSS.rad(number)
+CSS.turn(number)
 
 // <time>
-CSS.s(number);
-CSS.ms(number);
+CSS.s(number)
+CSS.ms(number)
 
 // <frequency>
-CSS.Hz(number);
-CSS.kHz(number);
+CSS.Hz(number)
+CSS.kHz(number)
 
 // <resolution>
-CSS.dpi(number);
-CSS.dpcm(number);
-CSS.dppx(number);
+CSS.dpi(number)
+CSS.dpcm(number)
+CSS.dppx(number)
 
 // <flex>
-CSS.fr(number);
+CSS.fr(number)
 ```
 
 ## Examples
@@ -81,17 +74,17 @@ We use the `CSS.vmax()` numeric factory function to create a
 ```js
 const height = CSS.vmax(50);
 
-console.log(height);       // CSSUnitValue {value: 50, unit: "vmax"}
+console.log(height); // CSSUnitValue {value: 50, unit: "vmax"}
 console.log(height.value); // 50
-console.log(height.unit);  // vmax
+console.log(height.unit); // vmax
 ```
 
 In this example, we set the margin on our element using the `CSS.px()`
 factory function:
 
 ```js
-myElement.attributeStyleMap.set('margin', CSS.px(40));
-const currentMargin = myElement.attributeStyleMap.get('margin');
+myElement.attributeStyleMap.set("margin", CSS.px(40));
+const currentMargin = myElement.attributeStyleMap.get("margin");
 console.log(currentMargin.value, currentMargin.unit); // 40, 'px'
 ```
 

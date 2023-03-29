@@ -1,10 +1,9 @@
 ---
 title: version
 slug: Web/SVG/Attribute/version
-tags:
-  - Deprecated
-  - SVG
-  - SVG Attribute
+page-type: svg-attribute
+status:
+  - deprecated
 browser-compat: svg.elements.svg.version
 ---
 
@@ -20,7 +19,7 @@ You can use this attribute with the following SVG elements:
 
 ```html
 <svg version="1.1" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-  <rect x="10" y="10" width="80" height="80"/>
+  <rect x="10" y="10" width="80" height="80" />
 </svg>
 ```
 

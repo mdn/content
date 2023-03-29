@@ -2,16 +2,6 @@
 title: AudioParam.setValueCurveAtTime()
 slug: Web/API/AudioParam/setValueCurveAtTime
 page-type: web-api-instance-method
-tags:
-  - API
-  - Audio
-  - AudioParam
-  - Method
-  - Reference
-  - Web
-  - Web Audio
-  - Web Audio API
-  - setValueCurveAtTime
 browser-compat: api.AudioParam.setValueCurveAtTime
 ---
 
@@ -29,7 +19,7 @@ values, which are scaled to fit into the given interval starting at
 
 ## Syntax
 
-```js
+```js-nolint
 setValueCurveAtTime(values, startTime, duration)
 ```
 
@@ -84,9 +74,9 @@ change the gain value between the values contained in the waveArray array:
 const audioCtx = new AudioContext();
 
 // set basic variables for example
-const myAudio = document.querySelector('audio');
+const myAudio = document.querySelector("audio");
 
-const valueCurve = document.querySelector('.value-curve');
+const valueCurve = document.querySelector(".value-curve");
 
 // Create a MediaElementAudioSourceNode
 // Feed the HTMLMediaElement into it
@@ -117,7 +107,7 @@ waveArray[8] = 0.5;
 
 valueCurve.onclick = () => {
   gainNode.gain.setValueCurveAtTime(waveArray, audioCtx.currentTime, 2);
-}
+};
 ```
 
 ## Specifications

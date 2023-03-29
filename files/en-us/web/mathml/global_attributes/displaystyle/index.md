@@ -1,14 +1,10 @@
 ---
 title: displaystyle
 slug: Web/MathML/Global_attributes/displaystyle
-tags:
-  - Global attributes
-  - MathML
-  - Reference
 browser-compat: mathml.global_attributes.displaystyle
 ---
 
-{{MathMLRef("Global_attributes")}}
+{{MathMLRef}}
 
 The **`displaystyle`** [global attribute](/en-US/docs/Web/MathML/Global_attributes) is a boolean setting the [math-style](/en-US/docs/Web/CSS/math-style) of a MathML element.
 
@@ -31,9 +27,9 @@ In this example, an [munder](/en-US/docs/Web/MathML/Element/munder) element is u
 
 ## Syntax
 
-```html
-<math displaystyle="true">
-<math displaystyle="false">
+```html-nolint
+<math displaystyle="true"></math>
+<math displaystyle="false"></math>
 ```
 
 ### Values

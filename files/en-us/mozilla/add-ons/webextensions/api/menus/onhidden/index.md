@@ -1,15 +1,7 @@
 ---
 title: menus.onHidden
 slug: Mozilla/Add-ons/WebExtensions/API/menus/onHidden
-tags:
-  - API
-  - Add-ons
-  - Event
-  - Extensions
-  - Reference
-  - WebExtensions
-  - menus
-  - onHidden
+page-type: webextension-api-event
 browser-compat: webextensions.api.menus.onHidden
 ---
 
@@ -25,7 +17,7 @@ Firefox makes this event available via the `contextMenus` namespace as well as t
 
 ## Syntax
 
-```js
+```js-nolint
 browser.menus.onHidden.addListener(listener)
 browser.menus.onHidden.removeListener(listener)
 browser.menus.onHidden.hasListener(listener)

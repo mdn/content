@@ -1,12 +1,7 @@
 ---
 title: text-combine-upright
 slug: Web/CSS/text-combine-upright
-tags:
-  - CSS
-  - CSS Property
-  - CSS Writing Modes
-  - Reference
-  - recipe:css-property
+page-type: css-property
 browser-compat: css.properties.text-combine-upright
 ---
 
@@ -14,7 +9,7 @@ browser-compat: css.properties.text-combine-upright
 
 The **`text-combine-upright`** [CSS](/en-US/docs/Web/CSS) property sets the combination of characters into the space of a single character. If the combined text is wider than 1em, the user agent must fit the contents within 1em. The resulting composition is treated as a single upright glyph for layout and decoration. This property only has an effect in vertical writing modes.
 
-This is used to produce an effect that is known as tate-chū-yoko (縦中横) in Japanese, or as 直書橫向 in Chinese.
+This is used to produce an effect that is known as tate-chū-yoko <q lang="ja">縦中横</q> in Japanese, or as <q lang="zh-Hant">橫向文字</q> in Chinese.
 
 {{EmbedInteractiveExample("pages/css/text-combine-upright.html")}}
 
@@ -26,8 +21,8 @@ text-combine-upright: none;
 text-combine-upright: all;
 
 /* Digits values */
-text-combine-upright: digits;     /* fits 2 consecutive digits horizontally inside vertical text */
-text-combine-upright: digits 4;   /* fits up to 4 consecutive digits horizontally inside vertical text */
+text-combine-upright: digits; /* fits 2 consecutive digits horizontally inside vertical text */
+text-combine-upright: digits 4; /* fits up to 4 consecutive digits horizontally inside vertical text */
 
 /* Global values */
 text-combine-upright: inherit;
@@ -87,16 +82,24 @@ The all value requires markup around every piece of horizontal text, but it is c
 #### HTML
 
 ```html
-<p lang="zh-Hant">民國<span class="num">105</span
->年<span class="num">4</span
->月<span class="num">29</span>日</p>
+<p lang="zh-Hant">
+  民國<span class="num">105</span>年<span class="num">4</span>月<span
+    class="num"
+    >29</span
+  >日
+</p>
 ```
 
 #### CSS
 
 ```css
-html { writing-mode: vertical-rl; font: 24px serif }
-.num { text-combine-upright: all }
+html {
+  writing-mode: vertical-rl;
+  font: 24px serif;
+}
+.num {
+  text-combine-upright: all;
+}
 ```
 
 #### Results

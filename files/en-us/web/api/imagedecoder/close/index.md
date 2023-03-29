@@ -2,13 +2,8 @@
 title: ImageDecoder.close()
 slug: Web/API/ImageDecoder/close
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - close
-  - ImageDecoder
-  - Experimental
+status:
+  - experimental
 browser-compat: api.ImageDecoder.close
 ---
 
@@ -18,7 +13,7 @@ The **`close()`** method of the {{domxref("ImageDecoder")}} interface ends all p
 
 ## Syntax
 
-```js
+```js-nolint
 close()
 ```
 

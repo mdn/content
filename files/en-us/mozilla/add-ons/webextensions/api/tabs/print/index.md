@@ -1,15 +1,7 @@
 ---
 title: tabs.print()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/print
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Reference
-  - WebExtensions
-  - print
-  - tabs
+page-type: webextension-api-function
 browser-compat: webextensions.api.tabs.print
 ---
 
@@ -19,7 +11,7 @@ Call this function to print the contents of the active tab. If this function is 
 
 ## Syntax
 
-```js
+```js-nolint
 browser.tabs.print()
 ```
 

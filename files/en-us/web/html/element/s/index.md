@@ -1,17 +1,11 @@
 ---
 title: '<s>: The Strikethrough element'
 slug: Web/HTML/Element/s
-tags:
-  - Element
-  - HTML
-  - HTML text-level semantics
-  - Reference
-  - Web
-  - text-decoration
+page-type: html-element
 browser-compat: html.elements.s
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 The **`<s>`** [HTML](/en-US/docs/Web/HTML) element renders text with a strikethrough, or a line through it. Use the `<s>` element to represent things that are no longer relevant or no longer accurate. However, `<s>` is not appropriate when indicating document edits; for that, use the {{HTMLElement("del")}} and {{HTMLElement("ins")}} elements, as appropriate.
 
@@ -21,15 +15,15 @@ The **`<s>`** [HTML](/en-US/docs/Web/HTML) element renders text with a strikethr
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories"
+        <a href="/en-US/docs/Web/HTML/Content_categories"
           >Content categories</a
         >
       </th>
       <td>
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content"
           >Phrasing content</a
         >,
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
           >flow content</a
         >.
       </td>
@@ -37,7 +31,7 @@ The **`<s>`** [HTML](/en-US/docs/Web/HTML) element renders text with a strikethr
     <tr>
       <th scope="row">Permitted content</th>
       <td>
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content"
           >Phrasing content</a
         >.
       </td>
@@ -50,7 +44,7 @@ The **`<s>`** [HTML](/en-US/docs/Web/HTML) element renders text with a strikethr
       <th scope="row">Permitted parents</th>
       <td>
         Any element that accepts
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content"
           >phrasing content</a
         >.
       </td>
@@ -80,10 +74,15 @@ This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_a
 
 ## Examples
 
+```css
+.sold-out {
+  text-decoration: line-through;
+}
+```
+
 ```html
-<s>Today's Special: Salmon</s> SOLD OUT<br>
-<span style="text-decoration:line-through;">Today's Special:
-  Salmon</span> SOLD OUT
+<s>Today's Special: Salmon</s> SOLD OUT<br />
+<span class="sold-out">Today's Special: Salmon</span> SOLD OUT
 ```
 
 {{EmbedLiveSample("Examples")}}
@@ -128,6 +127,6 @@ Some people who use screen readers deliberately disable announcing content that 
 
 ## See also
 
-- The {{HTMLElement("strike")}} element, alter ego of the {{HTMLElement("s")}} element is obsolete and should not be used on Web sites any more.
+- The {{HTMLElement("strike")}} element, alter ego of the {{HTMLElement("s")}} element is obsolete and should not be used on websites anymore.
 - The {{HTMLElement("del")}} element is to be used instead if the data has been _deleted_.
 - The CSS {{cssxref("text-decoration-line")}} property is to be used to achieve the former visual aspect of the {{HTMLElement("s")}} element.

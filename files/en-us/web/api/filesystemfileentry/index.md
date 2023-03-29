@@ -2,14 +2,6 @@
 title: FileSystemFileEntry
 slug: Web/API/FileSystemFileEntry
 page-type: web-api-interface
-tags:
-  - API
-  - File and Directory Entries API
-  - FileEntry
-  - Files
-  - Interface
-  - Offline
-  - Reference
 browser-compat: api.FileSystemFileEntry
 ---
 
@@ -19,11 +11,11 @@ The **`FileSystemFileEntry`** interface of the [File and Directory Entries API](
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _Inherits the properties of its parent interface, {{domxref("FileSystemEntry")}}, but has no properties unique to this interface._
 
-## Methods
+## Instance methods
 
 - {{domxref("FileSystemFileEntry.file", "file()")}}
   - : Creates a new {{domxref("File")}} object which can be used to read the file.

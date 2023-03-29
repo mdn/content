@@ -2,15 +2,6 @@
 title: Client.frameType
 slug: Web/API/Client/frameType
 page-type: web-api-instance-property
-tags:
-  - API
-  - Client
-  - NeedsExample
-  - Property
-  - Reference
-  - Service Workers
-  - ServiceWorker
-  - frameType
 browser-compat: api.Client.frameType
 ---
 
@@ -21,12 +12,6 @@ The **`frameType`** read-only property of the {{domxref("Client")}} interface in
 ## Value
 
 One of these four strings: `"auxiliary"`, `"top-level"`, `"nested"`, or `"none"`.
-
-## Examples
-
-```js
-TBD
-```
 
 ## Specifications
 

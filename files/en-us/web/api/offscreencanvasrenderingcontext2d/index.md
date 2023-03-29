@@ -2,13 +2,6 @@
 title: OffscreenCanvasRenderingContext2D
 slug: Web/API/OffscreenCanvasRenderingContext2D
 page-type: web-api-interface
-tags:
-  - API
-  - Canvas
-  - OffscreenCanvasRenderingContext2D
-  - Games
-  - Graphics
-  - Reference
 browser-compat: api.OffscreenCanvasRenderingContext2D
 ---
 
@@ -69,7 +62,7 @@ _The following properties and methods are inherited from {{domxref("CanvasRender
 
 ### Context
 
-- {{domxref("CanvasRenderingContext2D.isContextLost()")}}
+- {{domxref("CanvasRenderingContext2D.isContextLost()")}} {{Experimental_Inline}}
   - : Returns `true` if the rendering context was lost.
 
 ### Drawing rectangles
@@ -91,7 +84,7 @@ The following methods and properties control drawing text. See also the {{domxre
   - : Draws (strokes) a given text at the given (x, y) position.
 - {{domxref("CanvasRenderingContext2D.measureText()")}}
   - : Returns a {{domxref("TextMetrics")}} object.
-- {{domxref("CanvasRenderingContext2D.textRendering")}}
+- {{domxref("CanvasRenderingContext2D.textRendering")}} {{Experimental_Inline}}
   - : Text rendering. Possible values: `auto` (default), `optimizeSpeed`, `optimizeLegibility`,
 
 ### Line styles
@@ -125,7 +118,7 @@ The following properties control how text is laid out.
   - : Baseline alignment setting. Possible values: `top`, `hanging`, `middle`, `alphabetic` (default), `ideographic`, `bottom`.
 - {{domxref("CanvasRenderingContext2D.direction")}}
   - : Directionality. Possible values: `ltr`, `rtl`, `inherit` (default).
-- {{domxref("CanvasRenderingContext2D.letterSpacing")}}
+- {{domxref("CanvasRenderingContext2D.letterSpacing")}} {{Experimental_Inline}}
   - : Letter spacing. Default: `0px`.
 - {{domxref("CanvasRenderingContext2D.fontKerning")}}
   - : Font kerning. Possible values: `auto` (default), `normal`, `none`.
@@ -213,7 +206,7 @@ The following methods can be used to manipulate paths of objects.
 
 Objects in the `CanvasRenderingContext2D` rendering context have a current transformation matrix and methods to manipulate it. The transformation matrix is applied when creating the current default path, painting text, shapes and {{domxref("Path2D")}} objects. The methods listed below remain for historical and compatibility reasons as {{domxref("DOMMatrix")}} objects are used in most parts of the API nowadays and will be used in the future instead.
 
-- {{domxref("CanvasRenderingContext2D.getTransform()")}} {{Experimental_Inline}}
+- {{domxref("CanvasRenderingContext2D.getTransform()")}}
   - : Retrieves the current transformation matrix being applied to the context.
 - {{domxref("CanvasRenderingContext2D.rotate()")}}
   - : Adds a rotation to the transformation matrix. The angle argument represents a clockwise rotation angle and is expressed in radians.
@@ -270,7 +263,7 @@ The `CanvasRenderingContext2D` rendering context contains a variety of drawing s
   - : A read-only reference to an `OffscreenCanvas` object.
 - {{domxref("CanvasRenderingContext2D.getContextAttributes()")}}
   - : Returns an object containing the actual context attributes. Context attributes can be requested with {{domxref("HTMLCanvasElement.getContext()")}}.
-- {{domxref("CanvasRenderingContext2D.reset()")}}
+- {{domxref("CanvasRenderingContext2D.reset()")}} {{Experimental_Inline}}
   - : Resets the current drawing style state to the default values.
 
 ### Filters

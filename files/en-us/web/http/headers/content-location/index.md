@@ -1,10 +1,6 @@
 ---
 title: Content-Location
 slug: Web/HTTP/Headers/Content-Location
-tags:
-  - HTTP
-  - Reference
-  - header
 browser-compat: http.headers.Content-Location
 ---
 
@@ -43,8 +39,8 @@ Content-Location: <url>
 ## Directives
 
 - \<url>
-  - : A [relative](/en-US/docs/Learn/Common_questions/What_is_a_URL#examples_of_relative_urls)
-    (to the request URL) or [absolute](/en-US/docs/Learn/Common_questions/What_is_a_URL#examples_of_absolute_urls)
+  - : A [relative](/en-US/docs/Learn/Common_questions/Web_mechanics/What_is_a_URL#examples_of_relative_urls)
+    (to the request URL) or [absolute](/en-US/docs/Learn/Common_questions/Web_mechanics/What_is_a_URL#examples_of_absolute_urls)
     URL.
 
 ## Examples
@@ -87,7 +83,7 @@ Content-Type: text/markdown
 I made this through `example.com`'s API. I hope it worked.
 ```
 
-The site returns the published post in the response body. The server specifies  _where_ the new post is with the `Content-Location` header, indicating that this location refers to the content (the body) of this response:
+The site returns the published post in the response body. The server specifies _where_ the new post is with the `Content-Location` header, indicating that this location refers to the content (the body) of this response:
 
 ```http
 HTTP/1.1 201 Created
@@ -108,14 +104,16 @@ money to another user of a site.
 ```html
 <form action="/send-payment" method="post">
   <p>
-    <label>Who do you want to send the money to?
-      <input type="text" name="recipient">
+    <label
+      >Who do you want to send the money to?
+      <input type="text" name="recipient" />
     </label>
   </p>
 
   <p>
-    <label>How much?
-      <input type="number" name="amount">
+    <label
+      >How much?
+      <input type="number" name="amount" />
     </label>
   </p>
 

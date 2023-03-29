@@ -2,22 +2,8 @@
 title: CSSStyleSheet.addRule()
 slug: Web/API/CSSStyleSheet/addRule
 page-type: web-api-instance-method
-tags:
-  - API
-  - CSS
-  - CSSOM
-  - CSSOM API
-  - CSSStyleSheet
-  - Layout
-  - Method
-  - Object Model
-  - Reference
-  - Style
-  - StyleSheet
-  - addRule
-  - legacy
-  - rules
-  - Deprecated
+status:
+  - deprecated
 browser-compat: api.CSSStyleSheet.addRule
 ---
 
@@ -30,7 +16,7 @@ stylesheet. You should avoid using this method, and should instead use the more 
 
 ## Syntax
 
-```js
+```js-nolint
 addRule(selector, styleBlock, index)
 ```
 

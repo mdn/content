@@ -2,15 +2,6 @@
 title: SpeechSynthesisUtterance.rate
 slug: Web/API/SpeechSynthesisUtterance/rate
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - SpeechSynthesisUtterance
-  - Web Speech API
-  - rate
-  - speech
-  - synthesis
 browser-compat: api.SpeechSynthesisUtterance.rate
 ---
 
@@ -42,7 +33,7 @@ In this example we can adjust the playback rate using the slider, then play the 
 
 <div id="rate-control">
   <label for="rate">Rate:</label>
-  <input type="range" min="0.5" max="2" value="1" step="0.1" id="rate">
+  <input type="range" min="0.5" max="2" value="1" step="0.1" id="rate" />
 </div>
 
 <button id="play">Play</button>
@@ -68,23 +59,23 @@ body {
 ```js
 const synth = window.speechSynthesis;
 
-const text = document.querySelector('#text');
-const play = document.querySelector('#play');
-const rate = document.querySelector('#rate');
+const text = document.querySelector("#text");
+const play = document.querySelector("#play");
+const rate = document.querySelector("#rate");
 
 function speak() {
   if (synth.speaking) {
     synth.cancel();
   }
   const utterThis = new SpeechSynthesisUtterance(text.textContent);
-  utterThis.addEventListener('error', () => {
-    console.error('SpeechSynthesisUtterance error');
+  utterThis.addEventListener("error", () => {
+    console.error("SpeechSynthesisUtterance error");
   });
   utterThis.rate = rate.value;
   synth.speak(utterThis);
 }
 
-play.addEventListener('click', speak);
+play.addEventListener("click", speak);
 ```
 
 #### Output

@@ -1,14 +1,7 @@
 ---
 title: text-underline-offset
 slug: Web/CSS/text-underline-offset
-tags:
-  - CSS
-  - CSS Text Decoration
-  - CSS Property
-  - Reference
-  - recipe:css-property
-  - text-decoration
-  - text-underline-offset
+page-type: css-property
 browser-compat: css.properties.text-underline-offset
 ---
 
@@ -66,8 +59,10 @@ The `text-underline-offset` property is specified as a single value from the lis
 
 ```html
 <p class="oneline">Here's some text with an offset wavy red underline!</p>
-<br>
-<p class="twolines">This text has lines both above and below it. Only the bottom one is offset.</p>
+<br />
+<p class="twolines">
+  This text has lines both above and below it. Only the bottom one is offset.
+</p>
 ```
 
 ```css

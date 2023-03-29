@@ -2,18 +2,10 @@
 title: ReportingObserver.observe()
 slug: Web/API/ReportingObserver/observe
 page-type: web-api-instance-method
-tags:
-  - API
-  - Experimental
-  - Method
-  - Reference
-  - Reporting API
-  - ReportingObserver
-  - observe
 browser-compat: api.ReportingObserver.observe
 ---
 
-{{APIRef("Reporting API")}}{{SeeCompatTable}}
+{{APIRef("Reporting API")}}
 
 The **`observe()`** method of the
 {{domxref("ReportingObserver")}} interface instructs a reporting observer to start
@@ -21,7 +13,7 @@ collecting reports in its report queue.
 
 ## Syntax
 
-```js
+```js-nolint
 observe()
 ```
 
@@ -37,15 +29,15 @@ None ({{jsxref("undefined")}}).
 
 ```js
 const options = {
-  types: ['deprecation'],
-  buffered: true
-}
+  types: ["deprecation"],
+  buffered: true,
+};
 
 const observer = new ReportingObserver((reports, observer) => {
   reportBtn.onclick = () => displayReports(reports);
 }, options);
 
-observer.observe()
+observer.observe();
 ```
 
 ## Specifications

@@ -2,12 +2,6 @@
 title: CSSKeyframesRule
 slug: Web/API/CSSKeyframesRule
 page-type: web-api-interface
-tags:
-  - API
-  - CSS Animations
-  - CSSOM
-  - Interface
-  - Reference
 browser-compat: api.CSSKeyframesRule
 ---
 
@@ -17,7 +11,7 @@ The **`CSSKeyframesRule`** interface describes an object representing a complete
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _Inherits properties from its ancestor {{domxref("CSSRule")}}._
 
@@ -26,7 +20,7 @@ _Inherits properties from its ancestor {{domxref("CSSRule")}}._
 - {{domxref("CSSKeyframesRule.cssRules")}} {{ReadOnlyInline}}
   - : Returns a {{domxref("CSSRuleList")}} of the keyframes in the list.
 
-## Methods
+## Instance methods
 
 _Inherits methods from its ancestor {{domxref("CSSRule")}}._
 
@@ -40,7 +34,7 @@ _Inherits methods from its ancestor {{domxref("CSSRule")}}._
 ## Example
 
 The CSS includes a keyframes at-rule. This will be the first {{domxref("CSSRule")}} returned by `document.styleSheets[0].cssRules`.
-`myRules[0]` returns a {{domxref("CSSKeyframesRule")}} object.
+`myRules[0]` returns a `CSSKeyframesRule` object.
 
 ```css
 @keyframes slidein {

@@ -2,13 +2,8 @@
 title: CanvasRenderingContext2D.textRendering
 slug: Web/API/CanvasRenderingContext2D/textRendering
 page-type: web-api-instance-property
-tags:
-  - API
-  - Canvas
-  - CanvasRenderingContext2D
-  - Property
-  - Reference
-  - Experimental
+status:
+  - experimental
 browser-compat: api.CanvasRenderingContext2D.textRendering
 ---
 
@@ -20,7 +15,7 @@ The values correspond to the SVG [`text-rendering`](/en-US/docs/Web/SVG/Attribut
 
 ## Value
 
-A  text-rendering hint to the browser engine.
+A text-rendering hint to the browser engine.
 This one of:
 
 - `auto`
@@ -53,23 +48,23 @@ The value is also displayed for each case by reading the property.
 ### JavaScript
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
-ctx.font = '20px serif';
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
+ctx.font = "20px serif";
 
 // Default (auto)
 ctx.fillText(`Hello world (default: ${ctx.textRendering})`, 5, 20);
 
 // Text rendering: optimizeSpeed
-ctx.textRendering = 'optimizeSpeed';
+ctx.textRendering = "optimizeSpeed";
 ctx.fillText(`Hello world (${ctx.textRendering})`, 5, 50);
 
 // Text rendering: optimizeLegibility
-ctx.textRendering = 'optimizeLegibility';
+ctx.textRendering = "optimizeLegibility";
 ctx.fillText(`Hello world (${ctx.textRendering})`, 5, 80);
 
 // Text rendering: geometricPrecision
-ctx.textRendering = 'geometricPrecision';
+ctx.textRendering = "geometricPrecision";
 ctx.fillText(`Hello world (${ctx.textRendering})`, 5, 110);
 ```
 

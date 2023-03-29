@@ -1,24 +1,20 @@
 ---
 title: Atomics.store()
 slug: Web/JavaScript/Reference/Global_Objects/Atomics/store
-tags:
-  - Atomics
-  - JavaScript
-  - Method
-  - Shared Memory
+page-type: javascript-static-method
 browser-compat: javascript.builtins.Atomics.store
 ---
 
 {{JSRef}}
 
-The static **`Atomics.store()`**
+The **`Atomics.store()`** static
 method stores a given value at the given position in the array and returns that value.
 
 {{EmbedInteractiveExample("pages/js/atomics-store.html")}}
 
 ## Syntax
 
-```js
+```js-nolint
 Atomics.store(typedArray, index, value)
 ```
 

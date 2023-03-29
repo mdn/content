@@ -1,12 +1,9 @@
 ---
 title: <altGlyph>
 slug: Web/SVG/Element/altGlyph
-tags:
-  - Deprecated
-  - Element
-  - Reference
-  - SVG
-  - SVG Text Content
+page-type: svg-element
+status:
+  - deprecated
 browser-compat: svg.elements.altGlyph
 ---
 
@@ -42,6 +39,7 @@ The **`<altGlyph>`** SVG element allows sophisticated selection of the glyphs us
   - : The format of the given font.
     _Value type_: **\<string**[**>**](/en-US/docs/Web/SVG/Content_type#percentage) ; _Default value_: _none_; _Animatable_: **no**
 - {{SVGAttr("xlink:href")}}
+
   - : An [\<iri>](/en-US/docs/Web/SVG/Content_type#iri) reference either to a {{SVGElement("glyph")}} element in an SVG document or to an {{SVGElement("altGlyphDef")}} element.
 
     If the reference is to a {{SVGElement("glyph")}} element and that glyph is available, then that glyph is rendered instead of the character(s) that are inside of the {{SVGElement("altGlyph")}} element.

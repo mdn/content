@@ -2,12 +2,6 @@
 title: RTCPeerConnectionIceEvent()
 slug: Web/API/RTCPeerConnectionIceEvent/RTCPeerConnectionIceEvent
 page-type: web-api-constructor
-tags:
-  - API
-  - Constructor
-  - RTCPeerConnectionIceEvent
-  - Reference
-  - WebRTC
 browser-compat: api.RTCPeerConnectionIceEvent.RTCPeerConnectionIceEvent
 ---
 
@@ -18,7 +12,7 @@ The **`RTCPeerConnectionIceEvent()`** constructor creates a new
 
 ## Syntax
 
-```js
+```js-nolint
 new RTCPeerConnectionIceEvent(type, options)
 ```
 

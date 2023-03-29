@@ -1,14 +1,7 @@
 ---
 title: devtools.panels.ExtensionPanel
 slug: Mozilla/Add-ons/WebExtensions/API/devtools/panels/ExtensionPanel
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Type
-  - Reference
-  - WebExtensions
-  - devtools.panels
+page-type: webextension-api-type
 browser-compat: webextensions.api.devtools.panels.ExtensionPanel
 ---
 
@@ -55,8 +48,6 @@ browser.devtools.panels.create(
 {{WebExtExamples}}
 
 > **Note:** This API is based on Chromium's [`chrome.devtools.panels`](https://developer.chrome.com/docs/extensions/reference/devtools_panels/) API.
->
-> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

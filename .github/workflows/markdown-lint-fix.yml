@@ -7,6 +7,7 @@ on:
 
 jobs:
   fix:
+    if: github.repository == 'mdn/content'
     runs-on: ubuntu-latest
 
     steps:
@@ -15,16 +16,16 @@ jobs:
       - name: Setup Node.js environment
         uses: actions/setup-node@v3
         with:
-          node-version: "16"
+          node-version-file: ".nvmrc"
           cache: yarn
 
       - name: Install all yarn packages
-        run: |
-          yarn --frozen-lockfile
+        env:
+          HUSKY: 0
+        run: yarn --frozen-lockfile
 
       - name: Lint markdown files
-        run: |
-          yarn lint:md
+        run: yarn fix:md
 
       - name: Create PR with only fixable issues
         if: success()
@@ -36,6 +37,7 @@ jobs:
           author: mdn-bot <108879845+mdn-bot@users.noreply.github.com>
           body: |
             All issues auto-fixed
+          token: ${{ secrets.AUTOMERGE_TOKEN }}
 
       - name: Create PR with notice on unfixed issues
         if: failure()
@@ -47,4 +49,5 @@ jobs:
           author: mdn-bot <108879845+mdn-bot@users.noreply.github.com>
           body: |
             Auto-fix was run, but additional issues found.
-            Please review the run log: https://github.com/mdn/content/actions/runs/${GITHUB_RUN_ID}?check_suite_focus=true#step:5:1
+            Please review the run log: https://github.com/mdn/content/actions/runs/${{ github.run_id }}
+          token: ${{ secrets.AUTOMERGE_TOKEN }}

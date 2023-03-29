@@ -11,9 +11,9 @@ The `readAsDataURL()` method of the {{DOMxRef("FileReaderSync")}} interface allo
 
 ## Syntax
 
-```js
-readAsDataURL(File);
-readAsDataURL(Blob);
+```js-nolint
+readAsDataURL(File)
+readAsDataURL(Blob)
 ```
 
 ### Parameters

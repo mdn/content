@@ -2,13 +2,8 @@
 title: HIDDevice.open()
 slug: Web/API/HIDDevice/open
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - open
-  - HIDDevice
-  - Experimental
+status:
+  - experimental
 browser-compat: api.HIDDevice.open
 ---
 
@@ -20,7 +15,7 @@ The **`open()`** method of the {{domxref("HIDDevice")}} interface requests that 
 
 ## Syntax
 
-```js
+```js-nolint
 open()
 ```
 

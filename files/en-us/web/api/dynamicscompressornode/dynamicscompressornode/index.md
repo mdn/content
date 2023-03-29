@@ -2,12 +2,6 @@
 title: DynamicsCompressorNode()
 slug: Web/API/DynamicsCompressorNode/DynamicsCompressorNode
 page-type: web-api-constructor
-tags:
-  - Audio
-  - Constructor
-  - DynamicsCompressorNode
-  - Media
-  - Web Audio API
 browser-compat: api.DynamicsCompressorNode.DynamicsCompressorNode
 ---
 
@@ -21,7 +15,7 @@ multiple sounds are played and multiplexed together at once.
 
 ## Syntax
 
-```js
+```js-nolint
 new DynamicsCompressorNode(context, options)
 ```
 

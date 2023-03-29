@@ -2,12 +2,6 @@
 title: WebGL2RenderingContext.getTransformFeedbackVarying()
 slug: Web/API/WebGL2RenderingContext/getTransformFeedbackVarying
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGL2
 browser-compat: api.WebGL2RenderingContext.getTransformFeedbackVarying
 ---
 
@@ -19,7 +13,7 @@ information about varying variables from {{domxref("WebGLTransformFeedback")}} b
 
 ## Syntax
 
-```js
+```js-nolint
 getTransformFeedbackVarying(program, index)
 ```
 

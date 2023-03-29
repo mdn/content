@@ -1,13 +1,9 @@
 ---
 title: Web Audio playbackRate explained
 slug: Web/Guide/Audio_and_video_delivery/WebAudio_playbackRate_explained
-tags:
-  - Apps
-  - Audio
-  - Media
-  - Video
-  - playbackRate
 ---
+
+{{QuickLinksWithSubPages("/en-US/docs/Web/Guide/Audio_and_video_delivery")}}
 
 The `playbackRate` property of the {{ htmlelement("audio") }} and {{ htmlelement("video") }} elements allows us to change the speed, or rate, at which a piece of web audio or video is playing. This article explains `playbackRate` in detail.
 
@@ -16,8 +12,8 @@ The `playbackRate` property of the {{ htmlelement("audio") }} and {{ htmlelement
 Let's starting by looking at a brief example of `playbackRate` usage:
 
 ```js
-const audio = document.createElement('audio');
-audio.setAttribute('src','audiofile.mp3');
+const audio = document.createElement("audio");
+audio.setAttribute("src", "audiofile.mp3");
 audio.playbackRate = 0.5;
 ```
 
@@ -29,12 +25,16 @@ Let's create a {{ htmlelement("video") }} element first, and set up video and pl
 
 ```html
 <video id="myVideo" controls>
-  <source src="http://jplayer.org/video/m4v/Big_Buck_Bunny_Trailer.m4v" type='video/mp4' />
-  <source src="http://jplayer.org/video/webm/Big_Buck_Bunny_Trailer.webm" type='video/webm' />
+  <source
+    src="http://jplayer.org/video/m4v/Big_Buck_Bunny_Trailer.m4v"
+    type="video/mp4" />
+  <source
+    src="http://jplayer.org/video/webm/Big_Buck_Bunny_Trailer.webm"
+    type="video/webm" />
 </video>
 
 <form>
-  <input id="pbr" type="range" value="1" min="0.5" max="4" step="0.1" >
+  <input id="pbr" type="range" value="1" min="0.5" max="4" step="0.1" />
   <p>Playback Rate <span id="currentPbr">1</span></p>
 </form>
 ```
@@ -47,11 +47,14 @@ window.onload = () => {
   const p = document.getElementById("pbr");
   const c = document.getElementById("currentPbr");
 
-  p.addEventListener('input', () => {
-    c.innerHTML = p.value;
-    v.playbackRate = p.value;
-  }, false);
-
+  p.addEventListener(
+    "input",
+    () => {
+      c.innerHTML = p.value;
+      v.playbackRate = p.value;
+    },
+    false
+  );
 };
 ```
 

@@ -2,12 +2,6 @@
 title: FormData.delete()
 slug: Web/API/FormData/delete
 page-type: web-api-instance-method
-tags:
-  - API
-  - FormData
-  - Method
-  - Reference
-  - XMLHttpRequest
 browser-compat: api.FormData.delete
 ---
 
@@ -19,7 +13,7 @@ The **`delete()`** method of the {{domxref("FormData")}} interface deletes a key
 
 ## Syntax
 
-```js
+```js-nolint
 delete(name)
 ```
 
@@ -37,7 +31,7 @@ None ({{jsxref("undefined")}}).
 You can delete a key and its values using `delete()`:
 
 ```js
-formData.delete('username');
+formData.delete("username");
 ```
 
 ## Specifications

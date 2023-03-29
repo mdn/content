@@ -2,13 +2,6 @@
 title: AudioNode.channelInterpretation
 slug: Web/API/AudioNode/channelInterpretation
 page-type: web-api-instance-property
-tags:
-  - API
-  - AudioNode
-  - Property
-  - Reference
-  - Web Audio API
-  - channelInterpretation
 browser-compat: api.AudioNode.channelInterpretation
 ---
 
@@ -40,7 +33,7 @@ const gainNode = audioCtx.createGain();
 oscillator.connect(gainNode);
 gainNode.connect(audioCtx.destination);
 
-oscillator.channelInterpretation = 'discrete';
+oscillator.channelInterpretation = "discrete";
 ```
 
 ## Specifications

@@ -1,58 +1,17 @@
 ---
 title: <input type="button">
 slug: Web/HTML/Element/input/button
-tags:
-  - Element
-  - Forms
-  - HTML
-  - HTML forms
-  - Input
-  - Input Element
-  - Input Type
-  - Reference
-  - button
+page-type: html-element
 browser-compat: html.elements.input.type_button
 ---
 
-{{HTMLRef("Input_types")}}
+{{HTMLSidebar}}
 
 {{HTMLElement("input")}} elements of type **`button`** are rendered as simple push buttons, which can be programmed to control custom functionality anywhere on a webpage as required when assigned an event handler function (typically for the {{domxref("Element/click_event", "click")}} event).
 
 {{EmbedInteractiveExample("pages/tabbed/input-button.html", "tabbed-shorter")}}
 
 > **Note:** While `<input>` elements of type `button` are still perfectly valid HTML, the newer {{HTMLElement("button")}} element is now the favored way to create buttons. Given that a {{HTMLElement("button")}}'s label text is inserted between the opening and closing tags, you can include HTML in the label, even images.
-
-<table class="properties">
-  <tbody>
-    <tr>
-      <td><strong><a href="#value">Value</a></strong></td>
-      <td>A string used as the button's label</td>
-    </tr>
-    <tr>
-      <td><strong>Events</strong></td>
-      <td>{{domxref("Element/click_event", "click")}}</td>
-    </tr>
-    <tr>
-      <td><strong>Supported common attributes</strong></td>
-      <td>
-        {{htmlattrxref("type", "input")}} and
-        {{htmlattrxref("value", "input")}}
-      </td>
-    </tr>
-    <tr>
-      <td><strong>IDL attributes</strong></td>
-      <td><code>value</code></td>
-    </tr>
-    <tr>
-      <td><strong>DOM interface</strong></td>
-      <td><p>{{domxref("HTMLInputElement")}}</p></td>
-    </tr>
-    <tr>
-      <td><strong>Methods</strong></td>
-      <td>None</td>
-    </tr>
-  </tbody>
-</table>
 
 ## Value
 
@@ -61,7 +20,7 @@ browser-compat: html.elements.input.type_button
 An `<input type="button">` elements' [`value`](/en-US/docs/Web/HTML/Element/input#value) attribute contains a string that is used as the button's label.
 
 ```html
-<input type="button" value="Click Me">
+<input type="button" value="Click Me" />
 ```
 
 {{EmbedLiveSample("Button_with_a_value", 650, 30)}}
@@ -71,7 +30,7 @@ An `<input type="button">` elements' [`value`](/en-US/docs/Web/HTML/Element/inpu
 If you don't specify a `value`, you get an empty button:
 
 ```html
-<input type="button">
+<input type="button" />
 ```
 
 {{EmbedLiveSample("Button_without_a_value", 650, 30)}}
@@ -86,7 +45,7 @@ We'll begin by creating a simple button with a {{domxref("Element/click_event", 
 
 ```html
 <form>
-  <input type="button" value="Start machine">
+  <input type="button" value="Start machine" />
 </form>
 <p>The machine is stopped.</p>
 ```
@@ -120,7 +79,7 @@ In this example, <kbd>s</kbd> is specified as the access key (you'll need to pre
 
 ```html
 <form>
-  <input type="button" value="Start machine" accesskey="s">
+  <input type="button" value="Start machine" accesskey="s" />
 </form>
 <p>The machine is stopped.</p>
 ```
@@ -151,7 +110,7 @@ function updateButton() {
 To disable a button, specify the [`disabled`](/en-US/docs/Web/HTML/Attributes/disabled) global attribute on it, like so:
 
 ```html
-<input type="button" value="Disable me" disabled>
+<input type="button" value="Disable me" disabled />
 ```
 
 #### Setting the disabled attribute
@@ -159,7 +118,7 @@ To disable a button, specify the [`disabled`](/en-US/docs/Web/HTML/Attributes/di
 You can enable and disable buttons at run time by setting `disabled` to `true` or `false`. In this example our button starts off enabled, but if you press it, it is disabled using `button.disabled = true`. A {{domxref("setTimeout()")}} function is then used to reset the button back to its enabled state after two seconds.
 
 ```html
-<input type="button" value="Enabled">
+<input type="button" value="Enabled" />
 ```
 
 ```js
@@ -188,9 +147,9 @@ The example below shows this in action. This is very similar to the previous exa
 ```html
 <fieldset>
   <legend>Button group</legend>
-  <input type="button" value="Button 1">
-  <input type="button" value="Button 2">
-  <input type="button" value="Button 3">
+  <input type="button" value="Button 1" />
+  <input type="button" value="Button 2" />
+  <input type="button" value="Button 3" />
 </fieldset>
 ```
 
@@ -210,7 +169,7 @@ function disableButton() {
 
 {{EmbedLiveSample("Inheriting_the_disabled_state", 650, 100)}}
 
-> **Note:** Firefox will, unlike other browsers, by default, [persist the dynamic disabled state](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing) of a {{HTMLElement("button")}} across page loads. Use the {{htmlattrxref("autocomplete","button")}} attribute to control this feature.
+> **Note:** Firefox will, unlike other browsers, by default, [persist the dynamic disabled state](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing) of a {{HTMLElement("button")}} across page loads. Use the [`autocomplete`](/en-US/docs/Web/HTML/Element/button#autocomplete) attribute to control this feature.
 
 ## Validation
 
@@ -222,9 +181,14 @@ The below example shows a very simple drawing app created using a {{htmlelement(
 
 ```html
 <div class="toolbar">
-  <input type="color" aria-label="select pen color">
-  <input type="range" min="2" max="50" value="30" aria-label="select pen size"><span class="output">30</span>
-  <input type="button" value="Clear canvas">
+  <input type="color" aria-label="select pen color" />
+  <input
+    type="range"
+    min="2"
+    max="50"
+    value="30"
+    aria-label="select pen size" /><span class="output">30</span>
+  <input type="button" value="Clear canvas" />
 </div>
 
 <canvas class="myCanvas">
@@ -246,7 +210,8 @@ body {
   padding: 5px;
 }
 
-input[type="color"], input[type="button"] {
+input[type="color"],
+input[type="button"] {
   width: 90%;
   margin: 0 auto;
   display: block;
@@ -326,6 +291,44 @@ draw();
 ```
 
 {{EmbedLiveSample("Examples", '100%', 600)}}
+
+## Technical summary
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <td><strong><a href="#value">Value</a></strong></td>
+      <td>A string used as the button's label</td>
+    </tr>
+    <tr>
+      <td><strong>Events</strong></td>
+      <td>{{domxref("Element/click_event", "click")}}</td>
+    </tr>
+    <tr>
+      <td><strong>Supported common attributes</strong></td>
+      <td>
+        <a href="/en-US/docs/Web/HTML/Element/input#type"><code>type</code></a> and
+        <a href="/en-US/docs/Web/HTML/Element/input#value"><code>value</code></a>
+      </td>
+    </tr>
+    <tr>
+      <td><strong>IDL attributes</strong></td>
+      <td><code>value</code></td>
+    </tr>
+    <tr>
+      <td><strong>DOM interface</strong></td>
+      <td><p>{{domxref("HTMLInputElement")}}</p></td>
+    </tr>
+    <tr>
+      <td><strong>Methods</strong></td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <td><strong>Implicit ARIA Role</strong></td>
+      <td><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/button_role"><code>button</code></a></td>
+    </tr>
+  </tbody>
+</table>
 
 ## Specifications
 

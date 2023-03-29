@@ -1,15 +1,6 @@
 ---
-title: 'ARIA: slider role'
+title: "ARIA: slider role"
 slug: Web/Accessibility/ARIA/Roles/slider_role
-tags:
-  - Accessibility
-  - ARIA
-  - roles
-  - Reference
-  - ARIA roles
-  - widget role
-  - widget
-  - slider role
 spec-urls: https://w3c.github.io/aria/#slider
 ---
 
@@ -52,13 +43,13 @@ When `aria-valuetext` is an important feature for a slider, consider using {{HTM
 
 An accessible name is **required**. If the range's role is applied to an HTML {{HTMLElement('input')}} element (or `<meter>` or `<progress>` element), the accessible name can come from the associated {{HTMLElement('label')}}. Otherwise use [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) if a visible label is present or [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label) if a visible label is not present.
 
-When not using the HTML {{HTMLElement('input')}} element to create your slider, include the {{htmlattrxref('tabindex')}} attribute to make the slider focusable. Of the three range types, only `slider` is user-interactive, and so is the only one that requires being able to receive focus. Focus should be placed on the slider thumb.
+When not using the HTML {{HTMLElement('input')}} element to create your slider, include the [`tabindex`](/en-US/docs/Web/HTML/Global_attributes#tabindex) attribute to make the slider focusable. Of the three range types, only `slider` is user-interactive, and so is the only one that requires being able to receive focus. Focus should be placed on the slider thumb.
 
 Sliders have an implicit [`aria-orientation`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-orientation) value of `horizontal`. This attribute is not supported with `meter` or `progressbar`.
 
 ### User interactions
 
-Unlike the read-only `meter` and `progressbar` roles, a `slider` is an input, accepting user interaction. In addition to including the {{htmlattrxref('tabindex')}} attribute to enable slider focus, keyboard and pointer device support must be implemented.
+Unlike the read-only `meter` and `progressbar` roles, a `slider` is an input, accepting user interaction. In addition to including the [`tabindex`](/en-US/docs/Web/HTML/Global_attributes#tabindex) attribute to enable slider focus, keyboard and pointer device support must be implemented.
 
 The slider represents the range of possible values. The position of the slider thumb along the slider represents the current value. User actions that must be supported include changing the value by dragging the thumb or clicking the slider for pointing devices and using directional keys such as arrow keys for the keyboard users. See [keyboard interactions](#keyboard_interactions) below.
 
@@ -115,19 +106,20 @@ In the example below, we create a vertical thermometer with which the user can s
 
 ```html
 <div>
-  <div id="temperatureLabel">
-    Temperature
-  </div>
+  <div id="temperatureLabel">Temperature</div>
   <div id="temperatureValue">20°C</div>
   <div id="temperatureSlider">
-    <div id="temperatureSliderThumb"
-       role="slider" aria-labelledby="temperatureLabel"
-       aria-orientation="vertical"
-       tabindex="0"
-       aria-valuemin="15.0" aria-valuemax="25.0"
-       aria-valuenow="20.0" aria-valuetext="20 degrees Celsius"
-       style="top: calc((25 - 20)*2rem - 0.5rem)">
-    </div>
+    <div
+      id="temperatureSliderThumb"
+      role="slider"
+      aria-labelledby="temperatureLabel"
+      aria-orientation="vertical"
+      tabindex="0"
+      aria-valuemin="15.0"
+      aria-valuemax="25.0"
+      aria-valuenow="20.0"
+      aria-valuetext="20 degrees Celsius"
+      style="top: calc((25 - 20)*2rem - 0.5rem)"></div>
   </div>
 </div>
 ```
@@ -152,18 +144,21 @@ The position of the thumb is the maximum value minus the current value times the
 }
 ```
 
-For this example to work, we have to write a script to handle all keyboard and pointer events, including event listeners for `pointermove`, `pointerup`, `focus`, `blur`, and `keydown`, and provide styles for the default state and when the thumb and slider receive focus. The position of the thumb, the `aria-valuenow` and `aria-valuetext` values, and the inner text of the element with the {{HTMLattrxref('id')}} "temperatureValue" need to be updated every time <kbd>ArrowLeft</kbd>, <kbd>ArrowDown</kbd>, <kbd>ArrowRight</kbd>, <kbd>ArrowUp</kbd>, <kbd>Home</kbd>, <kbd>End</kbd>, and, optionally, <kbd>PageDown</kbd> and <kbd>PageUp</kbd> keys are released and when the user drags the thumb or otherwise clicks on the temperature slider.
+For this example to work, we have to write a script to handle all keyboard and pointer events, including event listeners for `pointermove`, `pointerup`, `focus`, `blur`, and `keydown`, and provide styles for the default state and when the thumb and slider receive focus. The position of the thumb, the `aria-valuenow` and `aria-valuetext` values, and the inner text of the element with the [`id`](/en-US/docs/Web/HTML/Global_attributes#id) "temperatureValue" need to be updated every time <kbd>ArrowLeft</kbd>, <kbd>ArrowDown</kbd>, <kbd>ArrowRight</kbd>, <kbd>ArrowUp</kbd>, <kbd>Home</kbd>, <kbd>End</kbd>, and, optionally, <kbd>PageDown</kbd> and <kbd>PageUp</kbd> keys are released and when the user drags the thumb or otherwise clicks on the temperature slider.
 
 Using semantic HTML, this could have been written as:
 
 ```html
-<label for="temperature">
-    Temperature
-</label>
+<label for="temperature"> Temperature </label>
 <output id="temperatureValue">20°C</output>
-<input type="range" id="temperatureSlider"
-  min="15" max="25" step="0.1"
-  value="20" aria-valuetext="20 degrees celsius"
+<input
+  type="range"
+  id="temperatureSlider"
+  min="15"
+  max="25"
+  step="0.1"
+  value="20"
+  aria-valuetext="20 degrees celsius"
   style="transform: rotate(-90deg);" />
 ```
 
@@ -173,14 +168,14 @@ There are a few ways to make a range input vertical. In this example, we used [C
 
 ## Keyboard interactions
 
-| Key(s) | Action |
-| ---- | ---- |
-| Right and Up arrows | Increase the selected value by one step |
-| Left and Down arrows | Decrease the selected value by one step|
-| Page Up | (Optional) increase the value by a set amount greater than one step |
-| Page Down | (Optional) decrease the value by a set amount greater than one step |
-| Home | Set the slider to the minimum value. |
-| End | Set the slider to the maximum value. |
+| Key(s)               | Action                                                              |
+| -------------------- | ------------------------------------------------------------------- |
+| Right and Up arrows  | Increase the selected value by one step                             |
+| Left and Down arrows | Decrease the selected value by one step                             |
+| Page Up              | (Optional) increase the value by a set amount greater than one step |
+| Page Down            | (Optional) decrease the value by a set amount greater than one step |
+| Home                 | Set the slider to the minimum value.                                |
+| End                  | Set the slider to the maximum value.                                |
 
 For the optional <kbd>Page Up</kbd> and <kbd>Page Down</kbd> keys, the change in slider value should be by an amount larger than the step changes made by up and down arrows.
 
@@ -218,6 +213,6 @@ It is recommended to use a native {{HTMLElement("input")}} of type `range`, [`<i
 
 1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
 
-    {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
+   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
 
 </section>

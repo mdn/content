@@ -2,12 +2,6 @@
 title: FileList.item()
 slug: Web/API/FileList/item
 page-type: web-api-instance-method
-tags:
-  - API
-  - File API
-  - Files
-  - Method
-  - Reference
 browser-compat: api.FileList.item
 ---
 
@@ -17,7 +11,7 @@ The **`item()`** method of the {{domxref("FileList")}} API returns a {{domxref("
 
 ## Syntax
 
-```js
+```js-nolint
 item(index)
 ```
 
@@ -39,7 +33,7 @@ In this example, we use `item()` to select the first item in the `FileList`.
 #### HTML
 
 ```html
-<input type="file">
+<input type="file" />
 <div class="output"></div>
 ```
 
@@ -47,7 +41,7 @@ In this example, we use `item()` to select the first item in the `FileList`.
 
 ```js
 const fileInput = document.querySelector("input[type=file]");
-const output = document.querySelector('.output');
+const output = document.querySelector(".output");
 
 fileInput.addEventListener("change", () => {
   const fileList = fileInput.files;

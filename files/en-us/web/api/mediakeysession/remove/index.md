@@ -2,14 +2,6 @@
 title: MediaKeySession.remove()
 slug: Web/API/MediaKeySession/remove
 page-type: web-api-instance-method
-tags:
-  - API
-  - EncryptedMediaExtensions
-  - MediaKeySession
-  - Method
-  - NeedsExample
-  - Reference
-  - remove
 browser-compat: api.MediaKeySession.remove
 ---
 
@@ -19,7 +11,7 @@ The `MediaKeySession.remove()` method returns a {{jsxref('Promise')}} after remo
 
 ## Syntax
 
-```js
+```js-nolint
 remove()
 ```
 

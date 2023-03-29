@@ -1,13 +1,9 @@
 ---
-title: ':-moz-focusring'
+title: ":-moz-focusring"
 slug: Web/CSS/:-moz-focusring
-tags:
-  - CSS
-  - CSS:Mozilla Extensions
-  - Non-standard
-  - Pseudo-class
-  - Reference
-  - Selector
+page-type: css-pseudo-class
+status:
+  - non-standard
 browser-compat: css.selectors.-moz-focusring
 ---
 
@@ -26,7 +22,9 @@ The working group previously [intended to add this feature to CSS Selectors 4 or
 ## Syntax
 
 ```css
-:-moz-focusring
+:-moz-focusring {
+  /* ... */
+}
 ```
 
 ## Example
@@ -65,4 +63,4 @@ Not part of any standard.
 ## See also
 
 - {{cssxref(":focus-visible")}}
-- {{bug("418521")}}
+- [Firefox bug 418521](https://bugzil.la/418521)

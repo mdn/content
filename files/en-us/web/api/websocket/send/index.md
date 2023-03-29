@@ -2,12 +2,6 @@
 title: WebSocket.send()
 slug: Web/API/WebSocket/send
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - Web API
-  - WebSocket
 browser-compat: api.WebSocket.send
 ---
 
@@ -22,7 +16,7 @@ The browser will throw an exception if you call `send()` when the connection is 
 
 ## Syntax
 
-```js
+```js-nolint
 send(data)
 ```
 
@@ -55,7 +49,7 @@ None ({{jsxref("undefined")}}).
 
 ### Exceptions
 
-- `InvalidStateError`  {{domxref("DOMException")}}
+- `InvalidStateError` {{domxref("DOMException")}}
   - : Thrown if {{domxref("WebSocket/readyState", "WebSocket.readyState")}} is `CONNECTING`.
 
 ## Specifications

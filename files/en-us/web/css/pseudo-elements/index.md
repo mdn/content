@@ -1,13 +1,7 @@
 ---
 title: Pseudo-elements
 slug: Web/CSS/Pseudo-elements
-tags:
-  - CSS
-  - Guide
-  - Overview
-  - Pseudo-element
-  - Reference
-  - Selectors
+page-type: landing-page
 spec-urls: https://www.w3.org/TR/CSS22/selector.html#pseudo-element-selectors
 ---
 
@@ -43,12 +37,12 @@ Pseudo-elements defined by a set of CSS specifications include the following:
 
 A
 
-- {{CSSxRef("::after", "::after (:after)")}}
+- {{CSSxRef("::after")}}
 
 B
 
 - {{CSSxRef("::backdrop")}}
-- {{CSSxRef("::before", "::before (:before)")}}
+- {{CSSxRef("::before")}}
 
 C
 
@@ -57,8 +51,8 @@ C
 
 F
 
-- {{CSSxRef("::first-letter", "::first-letter (:first-letter)")}}
-- {{CSSxRef("::first-line", "::first-line (:first-line)")}}
+- {{CSSxRef("::first-letter")}}
+- {{CSSxRef("::first-line")}}
 - {{CSSxRef("::file-selector-button")}}
 
 G
@@ -96,15 +90,6 @@ T
       <th>Browser</th>
       <th>Lowest Version</th>
       <th>Support of</th>
-    </tr>
-    <tr>
-      <td rowspan="2">Internet Explorer</td>
-      <td>8.0</td>
-      <td><code>:pseudo-element</code></td>
-    </tr>
-    <tr>
-      <td>9.0</td>
-      <td><code>:pseudo-element ::pseudo-element</code></td>
     </tr>
     <tr>
       <td rowspan="2">Firefox (Gecko)</td>

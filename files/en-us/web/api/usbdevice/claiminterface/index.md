@@ -2,16 +2,8 @@
 title: USBDevice.claimInterface()
 slug: Web/API/USBDevice/claimInterface
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - USB
-  - USBDevice
-  - WebUSB
-  - WebUSB API
-  - claimInterface
-  - Experimental
+status:
+  - experimental
 browser-compat: api.USBDevice.claimInterface
 ---
 
@@ -23,7 +15,7 @@ the requested interface is claimed for exclusive access.
 
 ## Syntax
 
-```js
+```js-nolint
 claimInterface(interfaceNumber)
 ```
 
@@ -45,8 +37,7 @@ to a USB device.
 ```js
 async function connectDevice(usbDevice) {
   await usbDevice.open();
-  if (usbDevice.configuration === null)
-    await usbDevice.selectConfiguration(1);
+  if (usbDevice.configuration === null) await usbDevice.selectConfiguration(1);
   await usbDevice.claimInterface(0);
 }
 ```

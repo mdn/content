@@ -2,14 +2,6 @@
 title: Background Tasks API
 slug: Web/API/Background_Tasks_API
 page-type: web-api-overview
-tags:
-  - API
-  - Background Tasks API
-  - Guide
-  - IdleDeadline
-  - Overview
-  - cancelIdleCallback
-  - requestIdleCallback
 browser-compat: api.Window.requestIdleCallback
 ---
 
@@ -68,7 +60,8 @@ In order to be oriented about what we're trying to accomplish, let's have a look
   <button class="button" id="startButton">Start</button>
 
   <div class="label counter">
-    Task <span id="currentTaskNumber">0</span> of <span id="totalTaskCount">0</span>
+    Task <span id="currentTaskNumber">0</span> of
+    <span id="totalTaskCount">0</span>
   </div>
 </div>
 
@@ -89,7 +82,7 @@ body {
 #logBox {
   margin-top: 16px;
   width: 400px;
-  height:500px;
+  height: 500px;
   border-radius: 6px;
   border: 1px solid black;
   box-shadow: 4px 4px 2px black;
@@ -200,22 +193,26 @@ Finally, we set up a couple of variables for other items:
 - `statusRefreshScheduled` is used to track whether or not we've already scheduled an update of the status display box for the upcoming frame, so that we only do it once per frame
 
 ```js hidden
-requestIdleCallback = requestIdleCallback || ((handler) => {
-  const startTime = Date.now();
+requestIdleCallback =
+  requestIdleCallback ||
+  ((handler) => {
+    const startTime = Date.now();
 
-  return setTimeout(() => {
-    handler({
-      didTimeout: false,
-      timeRemaining() {
-        return Math.max(0, 50.0 - (Date.now() - startTime));
-      }
-    });
-  }, 1);
-});
+    return setTimeout(() => {
+      handler({
+        didTimeout: false,
+        timeRemaining() {
+          return Math.max(0, 50.0 - (Date.now() - startTime));
+        },
+      });
+    }, 1);
+  });
 
-cancelIdleCallback = cancelIdleCallback || ((id) => {
-  clearTimeout(id);
-});
+cancelIdleCallback =
+  cancelIdleCallback ||
+  ((id) => {
+    clearTimeout(id);
+  });
 ```
 
 #### Managing the task queue
@@ -230,7 +227,7 @@ First, we need a function that enqueues tasks for future execution. That functio
 function enqueueTask(taskHandler, taskData) {
   taskList.push({
     handler: taskHandler,
-    data: taskData
+    data: taskData,
   });
 
   totalTaskCount++;
@@ -258,7 +255,10 @@ Our idle callback handler, `runTaskQueue()`, gets called when the browser determ
 
 ```js
 function runTaskQueue(deadline) {
-  while ((deadline.timeRemaining() > 0 || deadline.didTimeout) && taskList.length) {
+  while (
+    (deadline.timeRemaining() > 0 || deadline.didTimeout) &&
+    taskList.length
+  ) {
     const task = taskList.shift();
     currentTaskNumber++;
 
@@ -267,7 +267,7 @@ function runTaskQueue(deadline) {
   }
 
   if (taskList.length) {
-    taskHandle = requestIdleCallback(runTaskQueue, { timeout: 1000} );
+    taskHandle = requestIdleCallback(runTaskQueue, { timeout: 1000 });
   } else {
     taskHandle = 0;
   }
@@ -295,9 +295,9 @@ DOM changes are scheduled by calling the `scheduleStatusRefresh()` function.
 
 ```js
 function scheduleStatusRefresh() {
-    if (!statusRefreshScheduled) {
-      requestAnimationFrame(updateDisplay);
-      statusRefreshScheduled = true;
+  if (!statusRefreshScheduled) {
+    requestAnimationFrame(updateDisplay);
+    statusRefreshScheduled = true;
   }
 }
 ```
@@ -310,7 +310,8 @@ The `updateDisplay()` function is responsible for drawing the contents of the pr
 
 ```js
 function updateDisplay() {
-  const scrolledToEnd = logElem.scrollHeight - logElem.clientHeight <= logElem.scrollTop + 1;
+  const scrolledToEnd =
+    logElem.scrollHeight - logElem.clientHeight <= logElem.scrollTop + 1;
 
   if (totalTaskCount) {
     if (progressBarElem.max !== totalTaskCount) {
@@ -374,14 +375,14 @@ Now that we've got the task management and display maintenance code done, we can
 
 #### The task handler
 
-The function we'll be using as our task handler—that is, the function that will be used as the value of the task object's `handler` property—is `logTaskHandler`(). It's a simple function that outputs a bunch of stuff to the log for each task. In your own application, you'd replace this code with whatever task it is you wish to perform during idle time. Just remember that anything you want to do that changes the DOM needs to be handled through {{domxref("Window.requestAnimationFrame", "requestAnimationFrame()")}}.
+The function we'll be using as our task handler—that is, the function that will be used as the value of the task object's `handler` property—is `logTaskHandler()`. It's a simple function that outputs a bunch of stuff to the log for each task. In your own application, you'd replace this code with whatever task it is you wish to perform during idle time. Just remember that anything you want to do that changes the DOM needs to be handled through {{domxref("Window.requestAnimationFrame", "requestAnimationFrame()")}}.
 
 ```js
 function logTaskHandler(data) {
   log(`Running task #${currentTaskNumber}`);
 
-  for (i=0; i<data.count; i+=1) {
-    log(`${(i+1).toString()}. ${data.text}`);
+  for (let i = 0; i < data.count; i += 1) {
+    log(`${(i + 1).toString()}. ${data.text}`);
   }
 }
 ```
@@ -406,17 +407,19 @@ function decodeTechnoStuff() {
 
   const n = getRandomIntInclusive(100, 200);
 
-  for (let i=0; i<n; i++) {
+  for (let i = 0; i < n; i++) {
     const taskData = {
       count: getRandomIntInclusive(75, 150),
-      text: `This text is from task number ${i + 1} of ${n}`
+      text: `This text is from task number ${i + 1} of ${n}`,
     };
 
     enqueueTask(logTaskHandler, taskData);
   }
 }
 
-document.getElementById("startButton").addEventListener("click", decodeTechnoStuff, false);
+document
+  .getElementById("startButton")
+  .addEventListener("click", decodeTechnoStuff, false);
 ```
 
 `decodeTechnoStuff()` starts by zeroing the values of totalTaskCount (the number of tasks added to the queue so far) and currentTaskNumber (the task currently being run), and then calls `updateDisplay()` to reset the display to its "nothing's happened yet" state.

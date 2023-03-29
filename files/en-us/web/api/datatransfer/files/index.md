@@ -2,12 +2,6 @@
 title: DataTransfer.files
 slug: Web/API/DataTransfer/files
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTML DOM
-  - Property
-  - Reference
-  - drag and drop
 browser-compat: api.DataTransfer.files
 ---
 
@@ -17,7 +11,7 @@ The **`files`** property of [`DataTransfer`](/en-US/docs/Web/API/DataTransfer) o
 
 This feature can be used to drag files from a user's desktop to the browser.
 
-> **Note:** The `files` property of [`DataTransfer`](/en-US/docs/Web/API/DataTransfer) objects can only be accessed from within the `drop` event. For all other events, the `files` property will be empty — because its underlying data store will be in a [protected mode](<https://html.spec.whatwg.org/multipage/dnd.html#the-drag-data-store>).
+> **Note:** The `files` property of [`DataTransfer`](/en-US/docs/Web/API/DataTransfer) objects can only be accessed from within the `drop` event. For all other events, the `files` property will be empty — because its underlying data store will be in a [protected mode](https://html.spec.whatwg.org/multipage/dnd.html#the-drag-data-store).
 
 ## Value
 

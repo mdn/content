@@ -1,13 +1,6 @@
 ---
-title: 'ARIA: button role'
+title: "ARIA: button role"
 slug: Web/Accessibility/ARIA/Roles/button_role
-tags:
-  - ARIA
-  - ARIA Role
-  - ARIA button
-  - Accessibility
-  - Button Role
-  - Reference
 spec-urls:
   - https://w3c.github.io/aria/#button
   - https://w3c.github.io/aria-practices/#button
@@ -64,7 +57,7 @@ From the assistive technology user's perspective, the heading does not exist sin
 ### Associated ARIA roles, states, and properties
 
 - [`aria-pressed`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-pressed)
-  - : The `aria-pressed`  attribute defines the button as a toggle button. The value describes the state of the button. The values include `aria-pressed="false"` when a button is not currently pressed, `aria-pressed="true"` to indicate a button is currently pressed, and `aria-pressed="mixed"` if the button is considered to be partially pressed. If the attribute is omitted or set to its default value of `aria-pressed="undefined"`, the element does not support being pressed.
+  - : The `aria-pressed` attribute defines the button as a toggle button. The value describes the state of the button. The values include `aria-pressed="false"` when a button is not currently pressed, `aria-pressed="true"` to indicate a button is currently pressed, and `aria-pressed="mixed"` if the button is considered to be partially pressed. If the attribute is omitted or set to its default value of `aria-pressed="undefined"`, the element does not support being pressed.
 - [`aria-expanded`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-expanded)
   - : If the button controls a grouping of other elements, the `aria-expanded` state indicates whether the controlled grouping is currently expanded or collapsed. If the button has `aria-expanded="false"` set, the grouping is not currently expanded; If the button has `aria-expanded="true"` set, it is currently expanded; if the button has `aria-expanded="undefined"` set or the attribute is omitted, it is not expandable.
 
@@ -101,7 +94,7 @@ Buttons can be operated by mouse, touch, and keyboard users. For native HTML `<b
 - `onclick`
   - : Handles the event raised when the button is activated using a mouse click or touch event.
 - `onKeyDown`
-  - : Handles the event raised when the button is activated using the Enter or Space key on the keyboard. (Note not the [deprecated onKeyPress](/en-US/docs/Web/API/Document/keypress_event))
+  - : Handles the event raised when the button is activated using the Enter or Space key on the keyboard. (Note not the [deprecated onKeyPress](/en-US/docs/Web/API/Element/keypress_event))
 
 ## Examples
 
@@ -116,11 +109,17 @@ Try the example by adding a name to the text box. The button will cause the name
 #### HTML
 
 ```html
-    <h1>ARIA Button Example</h1>
-    <ul id="nameList"></ul>
-    <label for="newName">Enter your Name: </label>
-    <input type="text" id="newName">
-    <span role="button" tabindex="0" onclick="handleCommand(event)" onKeyDown="handleCommand(event)">Add Name</span>
+<h1>ARIA Button Example</h1>
+<ul id="nameList"></ul>
+<label for="newName">Enter your Name: </label>
+<input type="text" id="newName" />
+<span
+  role="button"
+  tabindex="0"
+  onclick="handleCommand(event)"
+  onKeyDown="handleCommand(event)"
+  >Add Name</span
+>
 ```
 
 #### CSS
@@ -135,11 +134,11 @@ Try the example by adding a name to the text box. The button will cause the name
 [role="button"]:hover,
 [role="button"]:focus,
 [role="button"]:active {
-   background-color: white;
-   color: navy;
+  background-color: white;
+  color: navy;
 }
 ul {
-    list-style: none;
+  list-style: none;
 }
 ```
 
@@ -147,29 +146,33 @@ ul {
 
 ```js
 function handleCommand(event) {
-    // Handles both mouse clicks and keyboard
-    // activate with Enter or Space
+  // Handles both mouse clicks and keyboard
+  // activate with Enter or Space
 
-    // Keypresses other then Enter and Space should not trigger a command
-    if (event instanceof KeyboardEvent && event.key !== 'Enter' && event.key !== ' ') {
-        return;
-    }
+  // Keypresses other then Enter and Space should not trigger a command
+  if (
+    event instanceof KeyboardEvent &&
+    event.key !== "Enter" &&
+    event.key !== " "
+  ) {
+    return;
+  }
 
-    // Get the new name value from the input element
-    let newNameInput = document.getElementById('newName');
-    let name = newNameInput.value;
-    newNameInput.value = ''; // clear the text field
-    newNameInput.focus();  // give the text field focus to enable entering and additional name.
+  // Get the new name value from the input element
+  const newNameInput = document.getElementById("newName");
+  const name = newNameInput.value;
+  newNameInput.value = ""; // clear the text field
+  newNameInput.focus(); // give the text field focus to enable entering and additional name.
 
-    // Don't add blank entries to the list.
-    if (name.length > 0) {
-        listItem = document.createElement('li');
-        listItem.appendChild(document.createTextNode(name));
+  // Don't add blank entries to the list.
+  if (name.length > 0) {
+    const listItem = document.createElement("li");
+    listItem.appendChild(document.createTextNode(name));
 
-        // Add the new name to the list.
-        let list = document.getElementById('nameList');
-        list.appendChild(listItem);
-    }
+    // Add the new name to the list.
+    const list = document.getElementById("nameList");
+    list.appendChild(listItem);
+  }
 }
 ```
 
@@ -182,17 +185,25 @@ In this snippet a {{HTMLElement("span")}} element is converted to a toggle butto
 #### HTML
 
 ```html
-<button type="button" onclick="handleBtnClick(event)" onKeyDown="handleBtnKeyDown(event)">
+<button
+  type="button"
+  onclick="handleBtnClick(event)"
+  onKeyDown="handleBtnKeyDown(event)">
   Mute Audio
 </button>
 
-<span role="button" tabindex="0"
- aria-pressed="false" onclick="handleBtnClick(event)"
- onKeyDown="handleBtnKeyDown(event)">
+<span
+  role="button"
+  tabindex="0"
+  aria-pressed="false"
+  onclick="handleBtnClick(event)"
+  onKeyDown="handleBtnKeyDown(event)">
   Mute Audio
 </span>
 
-<audio id="audio" src="https://soundbible.com/mp3/Tyrannosaurus%20Rex%20Roar-SoundBible.com-807702404.mp3">
+<audio
+  id="audio"
+  src="https://soundbible.com/mp3/Tyrannosaurus%20Rex%20Roar-SoundBible.com-807702404.mp3">
   Your browser does not support the `audio` element.
 </audio>
 ```
@@ -202,14 +213,14 @@ In this snippet a {{HTMLElement("span")}} element is converted to a toggle butto
 ```css
 button,
 [role="button"] {
-    padding: 3px;
-    border: 2px solid transparent;
+  padding: 3px;
+  border: 2px solid transparent;
 }
 
 button:active,
 button:focus,
 [role="button"][aria-pressed="true"] {
-    border: 2px solid #000;
+  border: 2px solid #000;
 }
 ```
 
@@ -222,7 +233,8 @@ function handleBtnClick(event) {
 
 function handleBtnKeyDown(event) {
   // Check to see if space or enter were pressed
-  if (event.key === " " || event.key === "Enter" || event.key === "Spacebar") { // "Spacebar" for IE11 support
+  // "Spacebar" for IE11 support
+  if (event.key === " " || event.key === "Enter" || event.key === "Spacebar") {
     // Prevent the default action to stop scrolling when space is pressed
     event.preventDefault();
     toggleButton(event.target);
@@ -230,7 +242,7 @@ function handleBtnKeyDown(event) {
 }
 
 function toggleButton(element) {
-  const audio = document.getElementById('audio');
+  const audio = document.getElementById("audio");
 
   // Check to see if the button is pressed
   const pressed = element.getAttribute("aria-pressed") === "true";
@@ -240,9 +252,9 @@ function toggleButton(element) {
 
   // Toggle the play state of the audio file
   if (pressed) {
-     audio.pause();
+    audio.pause();
   } else {
-     audio.play();
+    audio.play();
   }
 }
 ```
@@ -285,6 +297,6 @@ If a link performs the action of a button, giving the element `role="button"` he
 
 1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
 
-    {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
+   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
 
 </section>

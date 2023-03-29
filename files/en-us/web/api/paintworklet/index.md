@@ -2,16 +2,6 @@
 title: PaintWorklet
 slug: Web/API/PaintWorklet
 page-type: web-api-interface
-tags:
-  - API
-  - CSS
-  - CSS Paint API
-  - Houdini
-  - Interface
-  - Painting
-  - Reference
-  - Worklet
-  - paintWorklet
 browser-compat: api.PaintWorkletGlobalScope
 ---
 
@@ -21,12 +11,12 @@ The **`PaintWorklet`** interface of the {{domxref('CSS Painting API','','',' ')}
 
 ## Privacy concerns
 
-To avoid leaking visited links, this feature is currently disabled in Chrome-based browsers for {{HTMLElement("a")}} elements with an {{HTMLAttrXref("href", "a")}} attribute, and for children of such elements. For details, see the following:
+To avoid leaking visited links, this feature is currently disabled in Chrome-based browsers for {{HTMLElement("a")}} elements with an [`href`](/en-US/docs/Web/HTML/Element/a#href) attribute, and for children of such elements. For details, see the following:
 
 - The CSS Painting API [Privacy Considerations section](https://drafts.css-houdini.org/css-paint-api/#privacy-considerations)
 - The CSS Painting API spec issue ["CSS Paint API leaks browsing history"](https://github.com/w3c/css-houdini-drafts/issues/791)
 
-## Properties
+## Instance properties
 
 - {{domxref('PaintWorklet.devicePixelRatio')}}
   - : Returns the current device's ratio of physical pixels to logical pixels.
@@ -35,7 +25,7 @@ To avoid leaking visited links, this feature is currently disabled in Chrome-bas
 
 None.
 
-## Methods
+## Instance methods
 
 _This interface inherits methods from {{domxref('Worklet')}}._
 
@@ -56,10 +46,10 @@ The following shows an example worklet module. This should be in a separate js f
 class CheckerboardPainter {
   paint(ctx, geom, properties) {
     // Use `ctx` as if it was a normal canvas
-    const colors = ['red', 'green', 'blue'];
+    const colors = ["red", "green", "blue"];
     const size = 32;
-    for (let y = 0; y < (geom.height / size); y++) {
-      for (let x = 0; x < (geom.width / size); x++) {
+    for (let y = 0; y < geom.height / size; y++) {
+      for (let x = 0; x < geom.width / size; x++) {
         const color = colors[(x + y) % colors.length];
         ctx.beginPath();
         ctx.fillStyle = color;
@@ -71,7 +61,7 @@ class CheckerboardPainter {
 }
 
 // Register our class under a specific name
-registerPaint('checkerboard', CheckerboardPainter);
+registerPaint("checkerboard", CheckerboardPainter);
 ```
 
 ### Load a PaintWorklet
@@ -79,8 +69,8 @@ registerPaint('checkerboard', CheckerboardPainter);
 The following example demonstrates loading the above worklet from its js file and does so by feature detection.
 
 ```js
-if ('paintWorklet' in CSS) {
-  CSS.paintWorklet.addModule('checkerboard.js');
+if ("paintWorklet" in CSS) {
+  CSS.paintWorklet.addModule("checkerboard.js");
 }
 ```
 

@@ -2,13 +2,6 @@
 title: Geolocation
 slug: Web/API/Geolocation
 page-type: web-api-interface
-tags:
-  - API
-  - Advanced
-  - Geolocation API
-  - Interface
-  - Reference
-  - Secure context
 browser-compat: api.Geolocation
 ---
 
@@ -20,11 +13,11 @@ An object with this interface is obtained using the {{domxref("navigator.geoloca
 
 > **Note:** For security reasons, when a web page tries to access location information, the user is notified and asked to grant permission. Be aware that each browser has its own policies and methods for requesting this permission.
 
-## Properties
+## Instance properties
 
 _The `Geolocation` interface neither implements, nor inherits any property._
 
-## Methods
+## Instance methods
 
 _The `Geolocation` interface doesn't inherit any method._
 

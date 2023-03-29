@@ -2,15 +2,6 @@
 title: AnimationPlaybackEvent()
 slug: Web/API/AnimationPlaybackEvent/AnimationPlaybackEvent
 page-type: web-api-constructor
-tags:
-  - API
-  - Animation
-  - AnimationPlaybackEvent
-  - AnimationPlaybackEvent()
-  - Constructor
-  - Reference
-  - waapi
-  - web animations api
 browser-compat: api.AnimationPlaybackEvent.AnimationPlaybackEvent
 ---
 
@@ -20,7 +11,7 @@ The **`AnimationPlaybackEvent()`** constructor of the [Web Animations API](/en-U
 
 ## Syntax
 
-```js
+```js-nolint
 new AnimationPlaybackEvent(type)
 new AnimationPlaybackEvent(type, options)
 ```

@@ -1,19 +1,9 @@
 ---
 title: Structural overview of progressive web apps
 slug: Web/Progressive_web_apps/Structural_overview
-tags:
-  - Applications
-  - Apps
-  - Guide
-  - Layout
-  - Overview
-  - PWAs
-  - Progressive web apps
-  - Structure
-  - Web
-  - Webapps
-  - contents
 ---
+
+{{QuickLinksWithSubpages("/en-US/docs/Web/Progressive_web_apps/")}}
 
 While progressive web apps (PWAs) can do anything any web content can do, they need to have a particular structure and include specific components in order to be recognized as a web app that can be used both on the web and installed and run as a local application. In this structural overview, we'll look at the features that make up a standard web application, as well as some design patterns you can follow when building your PWA.
 
@@ -24,7 +14,7 @@ There are two main, different approaches to rendering a website — on the serve
 - **Server-side rendering** (**SSR**) means a website is rendered on the server, so it offers quicker first load, but navigating between pages requires downloading new HTML content. It works great across browsers, but it suffers in terms of time navigating between pages and therefore general perceived performance — loading a page requires a new round trip to the server.
 - **Client-side rendering** (**CSR**) allows the website to be updated in the browser almost instantly when navigating to different pages, but requires more of an initial download hit and extra rendering on the client at the beginning. The website is slower on an initial visit, but can be faster to navigate.
 
-The best results tend to come when you use both client-side and server-side rendering; you can render a web site on the server, cache its contents, and then update the rendering on the client side as needed. The first page load is quick because of the SSR, and the navigation between pages is smooth because the client can re-render the page with only the parts that have changed.
+The best results tend to come when you use both client-side and server-side rendering; you can render a website on the server, cache its contents, and then update the rendering on the client side as needed. The first page load is quick because of the SSR, and the navigation between pages is smooth because the client can re-render the page with only the parts that have changed.
 
 PWAs can be built using any approach you like, but some will work better than the others. The most popular approach is the **app shell** concept, which mixes SSR and CSR in exactly the way described above, and in addition follows the "offline first" methodology which we will explain in detail in upcoming articles and use in our example application. There is also a new approach involving the [Streams API](/en-US/docs/Web/API/Streams_API), which we'll mention briefly.
 
@@ -38,7 +28,7 @@ We can control what is requested from the server and what is retrieved from the 
 
 ### Benefits of the app shell pattern
 
-This architecture allows a web site to benefit the most from all the PWA features — it caches the app shell and manages the dynamic content in a way that greatly improves the performance. In addition to the basic shell, you can add other features such as [add to home screen](/en-US/docs/Web/Progressive_web_apps/Add_to_home_screen) or [push notifications](/en-US/docs/Web/API/Push_API), safe in the knowledge that the app will still work OK if they are not supported by the user's browser — this is the beauty of progressive enhancement.
+This architecture allows a website to benefit the most from all the PWA features — it caches the app shell and manages the dynamic content in a way that greatly improves the performance. In addition to the basic shell, you can add other features such as [add to home screen](/en-US/docs/Web/Progressive_web_apps/Add_to_home_screen) or [push notifications](/en-US/docs/Web/API/Push_API), safe in the knowledge that the app will still work OK if they are not supported by the user's browser — this is the beauty of progressive enhancement.
 
 The website feels like a native app with instant interaction and solid performance while keeping all the benefits of the web.
 
@@ -48,7 +38,7 @@ It's important to remember the PWA advantages and keep them in mind when designi
 
 - Linkable: Even though it behaves like a native app, it is still a website — you can click on the links within the page and send a URL to someone if you want to share it.
 - Progressive: Start with the "good, old basic website" and progressively add new features while remembering to detect if they are available in the browser and gracefully handle any errors that crop up if support is not available. For example, an offline mode with the help of service workers is just an extra trait that makes the website experience better, but it's still perfectly usable without it.
-- Responsive: Responsive web design also applies to progressive web apps, as both are mainly for mobile devices. There are so many varied devices with browsers — it's important to prepare your website so it works on different screen sizes, viewports or pixel densities, using technologies like the [viewport meta tag](/en-US/docs/Mozilla/Mobile/Viewport_meta_tag), [CSS media queries](/en-US/docs/Web/CSS/Media_Queries), [Flexbox](/en-US/docs/Learn/CSS/CSS_layout/Flexbox), and [CSS Grid](/en-US/docs/Web/CSS/CSS_Grid_Layout).
+- Responsive: Responsive web design also applies to progressive web apps, as both are mainly for mobile devices. There are so many varied devices with browsers — it's important to prepare your website so it works on different screen sizes, viewports or pixel densities, using technologies like the [viewport meta tag](/en-US/docs/Web/HTML/Viewport_meta_tag), [CSS media queries](/en-US/docs/Web/CSS/Media_Queries), [Flexbox](/en-US/docs/Learn/CSS/CSS_layout/Flexbox), and [CSS Grid](/en-US/docs/Web/CSS/CSS_Grid_Layout).
 
 ## Another approach: Streams
 
@@ -64,7 +54,7 @@ For working examples and more information, see the [Streams API documentation](/
 
 ## Structure of a sample application
 
-The js13kPWA web site's structure is quite simple. It consists of a single HTML file (index.html), with basic CSS styling provided in style.css. Also included are a few images, scripts, and fonts. The file and folder hierarchy looks like this:
+The js13kPWA website's structure is quite simple. It consists of a single HTML file (index.html), with basic CSS styling provided in style.css. Also included are a few images, scripts, and fonts. The file and folder hierarchy looks like this:
 
 - `app.js`
 - `data/`
@@ -92,46 +82,59 @@ The HTML in the file `index.html` creates the structure of the app. The parts th
 ```html
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>js13kGames A-Frame entries</title>
-  <meta name="description" content="A list of A-Frame entries submitted to the js13kGames 2017 competition, used as an example for the MDN articles about Progressive Web Apps.">
-  <meta name="author" content="end3r">
-  <meta name="theme-color" content="#B12A34">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta property="og:image" content="icons/icon-512.png">
-  <link rel="icon" href="favicon.ico">
-  <link rel="stylesheet" href="style.css">
-  <link rel="manifest" href="js13kpwa.webmanifest">
-  <script src="data/games.js" defer></script>
-  <script src="app.js" defer></script>
-</head>
-<body>
-<header>
-  <p><a class="logo" href="http://js13kgames.com"><img src="img/js13kgames.png" alt="js13kGames"></a></p>
-</header>
-<main>
-  <h1>js13kGames A-Frame entries</h1>
-  <p class="description">List of games submitted to the <a href="http://js13kgames.com/aframe">
-    A-Frame category</a> in the <a href="http://2017.js13kgames.com">js13kGames 2017</a>
-    competition. You can <a href="https://github.com/mdn/pwa-examples/blob/master/js13kpwa">
-    fork js13kPWA on GitHub</a> to check its source code.</p>
-  <button id="notifications">Request dummy notifications</button>
-  <section id="content">
-    // Content inserted in here
-  </section>
-</main>
-<footer>
-  <p>© js13kGames 2012-2018, created and maintained by <a href="http://end3r.com">
-    Andrzej Mazur</a> from <a href="http://enclavegames.com">Enclave Games</a>.</p>
-</footer>
-</body>
+  <head>
+    <meta charset="utf-8" />
+    <title>js13kGames A-Frame entries</title>
+    <meta
+      name="description"
+      content="A list of A-Frame entries submitted to the js13kGames 2017 competition, used as an example for the MDN articles about Progressive Web Apps." />
+    <meta name="author" content="end3r" />
+    <meta name="theme-color" content="#B12A34" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta property="og:image" content="icons/icon-512.png" />
+    <link rel="icon" href="favicon.ico" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="manifest" href="js13kpwa.webmanifest" />
+    <script src="data/games.js" defer></script>
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <p>
+        <a class="logo" href="http://js13kgames.com">
+          <img src="img/js13kgames.png" alt="js13kGames" />
+        </a>
+      </p>
+    </header>
+    <main>
+      <h1>js13kGames A-Frame entries</h1>
+      <p class="description">
+        List of games submitted to the
+        <a href="http://js13kgames.com/aframe"> A-Frame category</a> in the
+        <a href="http://2017.js13kgames.com">js13kGames 2017</a> competition.
+        You can
+        <a href="https://github.com/mdn/pwa-examples/blob/master/js13kpwa">
+          fork js13kPWA on GitHub</a
+        >
+        to check its source code.
+      </p>
+      <button id="notifications">Request dummy notifications</button>
+      <section id="content">// Content inserted in here</section>
+    </main>
+    <footer>
+      <p>
+        © js13kGames 2012-2018, created and maintained by
+        <a href="http://end3r.com"> Andrzej Mazur</a> from
+        <a href="http://enclavegames.com">Enclave Games</a>.
+      </p>
+    </footer>
+  </body>
 </html>
 ```
 
 The {{HTMLElement("head")}} section contains basic information about the app, including its title, description, and the needed references to its CSS file, web manifest, the main application JavaScript file (`app.js`, in which the app is initialized) as well as an additional JavaScript code file. The {{HTMLElement("body")}} is split into the {{HTMLElement("header")}} (which displays an image) and the body of the app, which is found inside a {{HTMLElement("main")}} element. The app displays its title, a description, and then a place for the app content to be shown (a {{HTMLElement("section")}} element with the ID `content`. Below the content is a {{HTMLElement("footer")}}, which provides a copyright notice and assorted links.
 
-The app's only job is to list all the [A-Frame](https://aframe.io/) entries from the js13kGames 2017 competition. As you can see it is a very ordinary, one page website. Its only point is to have something simple we can use to examine the implementation of its actual PWA features.
+The app's only job is to list all the [A-Frame](https://aframe.io/) entries from the js13kGames 2017 competition. As you can see it is a very ordinary, one-page website. Its only point is to have something simple we can use to examine the implementation of its actual PWA features.
 
 ### The CSS
 
@@ -155,19 +158,20 @@ const template = `<article>
   <li><span>More:</span> <a href='http://js13kgames.com/entries/SLUG'>js13kgames.com/entries/SLUG</a></li>
   </ul>
 </article>`;
-let content = '';
+let content = "";
 for (let i = 0; i < games.length; i++) {
-  let entry = template.replace(/POS/g, (i + 1))
+  let entry = template
+    .replace(/POS/g, i + 1)
     .replace(/SLUG/g, games[i].slug)
     .replace(/NAME/g, games[i].name)
     .replace(/AUTHOR/g, games[i].author)
     .replace(/TWITTER/g, games[i].twitter)
     .replace(/WEBSITE/g, games[i].website)
     .replace(/GITHUB/g, games[i].github);
-  entry = entry.replace('<a href=\'http:///\'></a>', '-');
+  entry = entry.replace("<a href='http:///'></a>", "-");
   content += entry;
 }
-document.getElementById('content').innerHTML = content;
+document.getElementById("content").innerHTML = content;
 ```
 
 Then it registers a [service worker](/en-US/docs/Web/API/Service_Worker_API):
@@ -181,13 +185,13 @@ if ("serviceWorker" in navigator) {
 After that, the app adds a handler for clicks on a button whose ID is `notifications`; this handler requests permission to send notifications to the user, then generates and sends a random notification.
 
 ```js
-const button = document.getElementById('notifications');
-button.addEventListener('click', () => {
-    Notification.requestPermission().then((result) => {
-        if (result === 'granted') {
-            randomNotification();
-        }
-    });
+const button = document.getElementById("notifications");
+button.addEventListener("click", () => {
+  Notification.requestPermission().then((result) => {
+    if (result === "granted") {
+      randomNotification();
+    }
+  });
 });
 ```
 
@@ -219,30 +223,30 @@ self.importScripts("data/games.js");
 Then it creates a list of all the files that the service worker needs to cache. This list includes both app shell and content files:
 
 ```js
-const cacheName = 'js13kPWA-v1';
+const cacheName = "js13kPWA-v1";
 const appShellFiles = [
-    '/pwa-examples/js13kpwa/',
-    '/pwa-examples/js13kpwa/index.html',
-    '/pwa-examples/js13kpwa/app.js',
-    '/pwa-examples/js13kpwa/style.css',
-    '/pwa-examples/js13kpwa/fonts/graduate.eot',
-    '/pwa-examples/js13kpwa/fonts/graduate.ttf',
-    '/pwa-examples/js13kpwa/fonts/graduate.woff',
-    '/pwa-examples/js13kpwa/favicon.ico',
-    '/pwa-examples/js13kpwa/img/js13kgames.png',
-    '/pwa-examples/js13kpwa/img/bg.png',
-    '/pwa-examples/js13kpwa/icons/icon-32.png',
-    '/pwa-examples/js13kpwa/icons/icon-64.png',
-    '/pwa-examples/js13kpwa/icons/icon-96.png',
-    '/pwa-examples/js13kpwa/icons/icon-128.png',
-    '/pwa-examples/js13kpwa/icons/icon-168.png',
-    '/pwa-examples/js13kpwa/icons/icon-192.png',
-    '/pwa-examples/js13kpwa/icons/icon-256.png',
-    '/pwa-examples/js13kpwa/icons/icon-512.png',
+  "/pwa-examples/js13kpwa/",
+  "/pwa-examples/js13kpwa/index.html",
+  "/pwa-examples/js13kpwa/app.js",
+  "/pwa-examples/js13kpwa/style.css",
+  "/pwa-examples/js13kpwa/fonts/graduate.eot",
+  "/pwa-examples/js13kpwa/fonts/graduate.ttf",
+  "/pwa-examples/js13kpwa/fonts/graduate.woff",
+  "/pwa-examples/js13kpwa/favicon.ico",
+  "/pwa-examples/js13kpwa/img/js13kgames.png",
+  "/pwa-examples/js13kpwa/img/bg.png",
+  "/pwa-examples/js13kpwa/icons/icon-32.png",
+  "/pwa-examples/js13kpwa/icons/icon-64.png",
+  "/pwa-examples/js13kpwa/icons/icon-96.png",
+  "/pwa-examples/js13kpwa/icons/icon-128.png",
+  "/pwa-examples/js13kpwa/icons/icon-168.png",
+  "/pwa-examples/js13kpwa/icons/icon-192.png",
+  "/pwa-examples/js13kpwa/icons/icon-256.png",
+  "/pwa-examples/js13kpwa/icons/icon-512.png",
 ];
 const gamesImages = [];
 for (let i = 0; i < games.length; i++) {
-    gamesImages.push(`data/img/${games[i].slug}.jpg`);
+  gamesImages.push(`data/img/${games[i].slug}.jpg`);
 }
 const contentToCache = appShellFiles.concat(gamesImages);
 ```
@@ -250,30 +254,36 @@ const contentToCache = appShellFiles.concat(gamesImages);
 With the file list prepared, it's time to install the service worker itself. The service worker will actually handle caching all the listed files.
 
 ```js
-self.addEventListener('install', (e) => {
-  console.log('[Service Worker] Install');
-  e.waitUntil((async () => {
-    const cache = await caches.open(cacheName);
-    console.log('[Service Worker] Caching all: app shell and content');
-    await cache.addAll(contentToCache);
-  })());
+self.addEventListener("install", (e) => {
+  console.log("[Service Worker] Install");
+  e.waitUntil(
+    (async () => {
+      const cache = await caches.open(cacheName);
+      console.log("[Service Worker] Caching all: app shell and content");
+      await cache.addAll(contentToCache);
+    })()
+  );
 });
 ```
 
 With that done, we implement the service worker's [fetch event](/en-US/docs/Web/API/FetchEvent) handler; its job is to return the contents of the specified file, either from the cache or by loading it over the network (caching it upon doing so):
 
 ```js
-self.addEventListener('fetch', (e) => {
-  e.respondWith((async () => {
-    const r = await caches.match(e.request);
-    console.log(`[Service Worker] Fetching resource: ${e.request.url}`);
-    if (r) { return r; }
-    const response = await fetch(e.request);
-    const cache = await caches.open(cacheName);
-    console.log(`[Service Worker] Caching new resource: ${e.request.url}`);
-    cache.put(e.request, response.clone());
-    return response;
-  })());
+self.addEventListener("fetch", (e) => {
+  e.respondWith(
+    (async () => {
+      const r = await caches.match(e.request);
+      console.log(`[Service Worker] Fetching resource: ${e.request.url}`);
+      if (r) {
+        return r;
+      }
+      const response = await fetch(e.request);
+      const cache = await caches.open(cacheName);
+      console.log(`[Service Worker] Caching new resource: ${e.request.url}`);
+      cache.put(e.request, response.clone());
+      return response;
+    })()
+  );
 });
 ```
 
@@ -284,30 +294,30 @@ The games data for this app example is provided in a JavaScript source file call
 ```js
 const games = [
   {
-    slug: 'lost-in-cyberspace',
-    name: 'Lost in Cyberspace',
-    author: 'Zosia and Bartek',
-    twitter: 'bartaz',
-    website: '',
-    github: 'github.com/bartaz/lost-in-cyberspace'
+    slug: "lost-in-cyberspace",
+    name: "Lost in Cyberspace",
+    author: "Zosia and Bartek",
+    twitter: "bartaz",
+    website: "",
+    github: "github.com/bartaz/lost-in-cyberspace",
   },
   {
-    slug: 'vernissage',
-    name: 'Vernissage',
-    author: 'Platane',
-    twitter: 'platane_',
-    website: 'github.com/Platane',
-    github: 'github.com/Platane/js13k-2017'
+    slug: "vernissage",
+    name: "Vernissage",
+    author: "Platane",
+    twitter: "platane_",
+    website: "github.com/Platane",
+    github: "github.com/Platane/js13k-2017",
   },
   // ...
   {
-    slug: 'emma-3d',
-    name: 'Emma-3D',
-    author: 'Prateek Roushan',
-    twitter: '',
-    website: '',
-    github: 'github.com/coderprateek/Emma-3D'
-  }
+    slug: "emma-3d",
+    name: "Emma-3D",
+    author: "Prateek Roushan",
+    twitter: "",
+    website: "",
+    github: "github.com/coderprateek/Emma-3D",
+  },
 ];
 ```
 

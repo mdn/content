@@ -2,19 +2,6 @@
 title: The HTML DOM API
 slug: Web/API/HTML_DOM_API
 page-type: web-api-overview
-tags:
-  - API
-  - Beginner
-  - DOM
-  - Documents
-  - Elements
-  - HTML DOM
-  - HTML DOM API
-  - Nodes
-  - Overview
-  - Web
-  - Windows
-  - hierarchy
 browser-compat: api.HTMLElement
 ---
 
@@ -82,7 +69,8 @@ These element-specific interfaces make up the majority of the HTML DOM API, and 
 
 ## HTML DOM target audience
 
-The features exposed by the HTML DOM are among the most commonly-used APIs in the web developer's arsenal. All but the most simple web applications will use some features of the HTML DOM.
+The features exposed by the HTML DOM are among the most commonly-used APIs in a web developer's toolkit.
+All but the most simple web applications will use some features of the HTML DOM.
 
 ## HTML DOM API interfaces
 
@@ -232,7 +220,7 @@ The media interfaces provide HTML access to the contents of the media elements: 
 
 ### Drag and drop interfaces
 
-These interfaces are used by the {{DOMxRef("HTML_Drag_and_Drop_API", "", "", "1")}} to represent individual draggable (or dragged) items, groups of dragged or draggable items, and to handle the drag and drop process.
+These interfaces are used by the [HTML Drag and Drop API](/en-US/docs/Web/API/HTML_Drag_and_Drop_API) to represent individual draggable (or dragged) items, groups of dragged or draggable items, and to handle the drag and drop process.
 
 - {{DOMxRef("DataTransfer")}}
 - {{DOMxRef("DataTransferItem")}}
@@ -274,14 +262,14 @@ Several interfaces are technically defined in the HTML specification while actua
 
 #### Web storage interfaces
 
-The {{DOMxRef("Web_Storage_API", "", "", "1")}} provides the ability for websites to store data either temporarily or permanently on the user's device for later re-use.
+The {{DOMxRef("Web_Storage_API", "Web Storage API", "", "1")}} provides the ability for websites to store data either temporarily or permanently on the user's device for later re-use.
 
 - {{DOMxRef("Storage")}}
 - {{DOMxRef("StorageEvent")}}
 
 #### Web Workers interfaces
 
-These interfaces are used by the {{DOMxRef("Web_Workers_API", "", "", "1")}} both to establish the ability for workers to interact with an app and its content, but also to support messaging between windows or apps.
+These interfaces are used by the {{DOMxRef("Web_Workers_API", "Web Workers API", "", "1")}} both to establish the ability for workers to interact with an app and its content, but also to support messaging between windows or apps.
 
 - {{DOMxRef("BroadcastChannel")}}
 - {{DOMxRef("DedicatedWorkerGlobalScope")}}
@@ -297,7 +285,7 @@ These interfaces are used by the {{DOMxRef("Web_Workers_API", "", "", "1")}} bot
 
 #### WebSocket interfaces
 
-These interfaces, defined by the HTML specification, are used by the {{DOMxRef("WebSockets_API", "", "", "1")}}.
+These interfaces, defined by the HTML specification, are used by the {{DOMxRef("WebSockets_API", "WebSockets API", "", "1")}}.
 
 - {{DOMxRef("CloseEvent")}}
 - {{DOMxRef("WebSocket")}}
@@ -316,7 +304,7 @@ In this example, an {{HTMLElement("input")}} element's {{domxref("HTMLElement/in
 
 ```js
 const nameField = document.getElementById("userName");
-const sendButton = document.getElementById("sendButton")
+const sendButton = document.getElementById("sendButton");
 
 sendButton.disabled = true;
 // [note: this is disabled since it causes this article to always load with this example focused and scrolled into view]
@@ -334,7 +322,7 @@ nameField.addEventListener("input", (event) => {
 });
 ```
 
-This code uses the {{domxref("Document")}} interface's {{domxref("Document.getElementById", "getElementById()")}} method to get the DOM object representing the {{HTMLElement("input")}} elements whose IDs are `userName` and `sendButton`.  With these, we can access the properties and methods that provide information about and grant control over these elements.
+This code uses the {{domxref("Document")}} interface's {{domxref("Document.getElementById", "getElementById()")}} method to get the DOM object representing the {{HTMLElement("input")}} elements whose IDs are `userName` and `sendButton`. With these, we can access the properties and methods that provide information about and grant control over these elements.
 
 The {{domxref("HTMLInputElement")}} object for the "Send" button's {{domxref("HTMLInputElement.disabled", "disabled")}} property is set to `true`, which disables the "Send" button so it can't be clicked. In addition, the user name input field is made the active focus by calling the {{domxref("HTMLElement/focus", "focus()")}} method it inherits from {{domxref("HTMLElement")}}.
 
@@ -351,13 +339,13 @@ The HTML for the form looks like this:
 <form action="" method="get">
   <p>
     <label for="userName" required>Your name:</label>
-    <input type="text" id="userName"> (*)
+    <input type="text" id="userName" /> (*)
   </p>
   <p>
     <label for="email">Email:</label>
-    <input type="email" id="userEmail">
+    <input type="email" id="userEmail" />
   </p>
-  <input type="submit" value="Send" id="sendButton">
+  <input type="submit" value="Send" id="sendButton" />
 </form>
 ```
 

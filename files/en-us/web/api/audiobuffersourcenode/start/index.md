@@ -2,16 +2,6 @@
 title: AudioBufferSourceNode.start()
 slug: Web/API/AudioBufferSourceNode/start
 page-type: web-api-instance-method
-tags:
-  - API
-  - Audio
-  - AudioBufferSourceNode
-  - Media
-  - Method
-  - Reference
-  - Web Audio API
-  - sound
-  - start
 browser-compat: api.AudioBufferSourceNode.start
 ---
 
@@ -23,7 +13,7 @@ to begin playback immediately.
 
 ## Syntax
 
-```js
+```js-nolint
 start(when)
 start(when, offset)
 start(when, offset, duration)
@@ -81,7 +71,7 @@ The following more complex example will, 1 second from now, start playing 10 sec
 worth of sound starting 3 seconds into the audio buffer.
 
 ```js
-source.start(audioCtx.currentTime + 1,3,10);
+source.start(audioCtx.currentTime + 1, 3, 10);
 ```
 
 > **Note:** For a more complete example showing `start()` in use, check out our {{domxref("BaseAudioContext/decodeAudioData", "AudioContext.decodeAudioData()")}} example. You can also [run the code example live](https://mdn.github.io/webaudio-examples/decode-audio-data/), or [view the source](https://github.com/mdn/webaudio-examples/tree/master/decode-audio-data).

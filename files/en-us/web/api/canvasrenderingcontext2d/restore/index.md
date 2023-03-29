@@ -2,12 +2,6 @@
 title: CanvasRenderingContext2D.restore()
 slug: Web/API/CanvasRenderingContext2D/restore
 page-type: web-api-instance-method
-tags:
-  - API
-  - Canvas
-  - CanvasRenderingContext2D
-  - Method
-  - Reference
 browser-compat: api.CanvasRenderingContext2D.restore
 ---
 
@@ -23,7 +17,7 @@ For more information about the [drawing state](/en-US/docs/Web/API/CanvasRenderi
 
 ## Syntax
 
-```js
+```js-nolint
 restore()
 ```
 
@@ -39,9 +33,9 @@ None ({{jsxref("undefined")}}).
 
 ### Restoring a saved state
 
-This example uses the `save()` method to save the default state and
+This example uses the `save()` method to save the current state and
 `restore()` to restore it later, so that you are able to draw a rect with the
-default state later.
+current state later.
 
 #### HTML
 
@@ -52,16 +46,16 @@ default state later.
 #### JavaScript
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 
-// Save the default state
+// Save the current state
 ctx.save();
 
-ctx.fillStyle = 'green';
+ctx.fillStyle = "green";
 ctx.fillRect(10, 10, 100, 100);
 
-// Restore the default state
+// Restore to the state saved by the most recent call to save()
 ctx.restore();
 
 ctx.fillRect(150, 40, 100, 100);

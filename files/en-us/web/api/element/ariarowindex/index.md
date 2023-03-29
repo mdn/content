@@ -2,14 +2,6 @@
 title: Element.ariaRowIndex
 slug: Web/API/Element/ariaRowIndex
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - ariaRowIndex
-  - AriaAttributes
-  - AriaMixin
-  - Element
 browser-compat: api.Element.ariaRowIndex
 ---
 
@@ -26,12 +18,31 @@ A string which contains an integer.
 In this example the `aria-rowindex` attribute on the element with an ID of `role-heading` is set to "1". Using `ariaRowIndex` we update the value to "2".
 
 ```html
-<table id="semantic-table" role="table" aria-label="Semantic Elements" aria-describedby="semantic_elements_table_desc" aria-rowcount="100">
-  <caption id="semantic_elements_table_desc">Semantic Elements to use instead of ARIA's roles</caption>
+<table
+  id="semantic-table"
+  role="table"
+  aria-label="Semantic Elements"
+  aria-describedby="semantic_elements_table_desc"
+  aria-rowcount="100">
+  <caption id="semantic_elements_table_desc">
+    Semantic Elements to use instead of ARIA's roles
+  </caption>
   <thead role="rowgroup">
     <tr role="row">
-      <th role="columnheader" id="role-heading" aria-sort="none" aria-rowindex="1">ARIA Role</th>
-      <th role="columnheader" id="element-heading" aria-sort="none" aria-rowindex="1">Semantic Element</th>
+      <th
+        role="columnheader"
+        id="role-heading"
+        aria-sort="none"
+        aria-rowindex="1">
+        ARIA Role
+      </th>
+      <th
+        role="columnheader"
+        id="element-heading"
+        aria-sort="none"
+        aria-rowindex="1">
+        Semantic Element
+      </th>
     </tr>
   </thead>
   <tbody role="rowgroup">
@@ -56,9 +67,9 @@ In this example the `aria-rowindex` attribute on the element with an ID of `role
 ```
 
 ```js
-let el = document.getElementById('role-heading');
+let el = document.getElementById("role-heading");
 console.log(el.ariaRowIndex); // 1
-el.ariaRowIndex = "2"
+el.ariaRowIndex = "2";
 console.log(el.ariaRowIndex); // 2
 ```
 

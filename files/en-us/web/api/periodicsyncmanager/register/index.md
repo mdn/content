@@ -2,15 +2,8 @@
 title: PeriodicSyncManager.register()
 slug: Web/API/PeriodicSyncManager/register
 page-type: web-api-instance-method
-tags:
-  - Background Sync
-  - Method
-  - Offline
-  - PWA
-  - PeriodicSyncManager
-  - Service Worker
-  - Web Periodic Background Synchronization API
-  - Experimental
+status:
+  - experimental
 browser-compat: api.PeriodicSyncManager.register
 ---
 
@@ -23,7 +16,7 @@ resolves when the registration completes.
 
 ## Syntax
 
-```js
+```js-nolint
 register(tag, options)
 ```
 
@@ -61,11 +54,11 @@ interval of one day from a browsing context:
 async function registerPeriodicNewsCheck() {
   const registration = await navigator.serviceWorker.ready;
   try {
-    await registration.periodicSync.register('fetch-news', {
+    await registration.periodicSync.register("fetch-news", {
       minInterval: 24 * 60 * 60 * 1000,
     });
   } catch {
-    console.log('Periodic Sync could not be registered!');
+    console.log("Periodic Sync could not be registered!");
   }
 }
 ```

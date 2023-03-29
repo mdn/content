@@ -1,11 +1,7 @@
 ---
 title: Signature (functions)
 slug: Glossary/Signature/Function
-tags:
-  - CodingScripting
-  - Glossary
-  - Java
-  - JavaScript
+page-type: glossary-definition
 ---
 
 A **function signature** (or _type_ signature, or _method_ signature) defines input and output of {{Glossary("Function", "functions")}} or {{Glossary("Method", "methods")}}.
@@ -44,7 +40,7 @@ public static void main(String[] args)
 - The `static` keyword indicates that this method is a class method as opposed to being an instance method.
 - The `void` keyword indicates that this method has no return value.
 - The name of the method is `main`.
-- The method accepts one parameter of type String Array. It is named `args.`
+- The method accepts one parameter of type String Array. It is named `args`.
 
 ## See also
 

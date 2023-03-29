@@ -2,18 +2,10 @@
 title: CSSKeywordValue()
 slug: Web/API/CSSKeywordValue/CSSKeywordValue
 page-type: web-api-constructor
-tags:
-  - API
-  - CSS Typed Object Model API
-  - CSSKeywordValue
-  - Constructor
-  - Experimental
-  - Houdini
-  - Reference
 browser-compat: api.CSSKeywordValue.CSSKeywordValue
 ---
 
-{{APIRef("CSS Typed Object Model API")}}{{SeeCompatTable}}
+{{APIRef("CSS Typed Object Model API")}}
 
 The **`CSSKeywordValue()`** constructor
 creates a new {{domxref("CSSKeywordValue")}} object which represents CSS keywords and
@@ -21,7 +13,7 @@ other identifiers.
 
 ## Syntax
 
-```js
+```js-nolint
 new CSSKeywordValue(val)
 ```
 
@@ -49,15 +41,18 @@ to `style="display: initial"` if viewed in the [developer tools inspector](https
 ```
 
 ```html hidden
-<div id="myElement">Check the developer tools to see the log in the console and to inspect the style attribute on this div.</div>
+<div id="myElement">
+  Check the developer tools to see the log in the console and to inspect the
+  style attribute on this div.
+</div>
 ```
 
 ```js
-const keyword = new CSSKeywordValue('initial');
-const myElement = document.getElementById('myElement').attributeStyleMap;
-myElement.set('display', keyword);
+const keyword = new CSSKeywordValue("initial");
+const myElement = document.getElementById("myElement").attributeStyleMap;
+myElement.set("display", keyword);
 
-console.log(myElement.get('display').value);  // 'initial'
+console.log(myElement.get("display").value); // 'initial'
 console.dir(keyword);
 ```
 

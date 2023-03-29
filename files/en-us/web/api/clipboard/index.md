@@ -2,18 +2,6 @@
 title: Clipboard
 slug: Web/API/Clipboard
 page-type: web-api-interface
-tags:
-  - API
-  - Clip
-  - Clipboard
-  - Clipboard API
-  - Cut
-  - Editing
-  - Interface
-  - Pasteboard
-  - Reference
-  - copy
-  - paste
 browser-compat: api.Clipboard
 ---
 
@@ -31,7 +19,7 @@ Calls to the methods of the `Clipboard` object will not succeed if the user hasn
 
 All of the Clipboard API methods operate asynchronously; they return a {{jsxref("Promise")}} which is resolved once the clipboard access has been completed. The promise is rejected if clipboard access is denied.
 
-## Methods
+## Instance methods
 
 _`Clipboard` is based on the {{domxref("EventTarget")}} interface, and includes its methods._
 

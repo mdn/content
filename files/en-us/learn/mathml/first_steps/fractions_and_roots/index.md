@@ -1,10 +1,6 @@
 ---
 title: MathML fractions and roots
 slug: Learn/MathML/First_steps/Fractions_and_roots
-tags:
-  - Beginner
-  - MathML
-  - Landing
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/MathML/First_steps/Text_containers", "Learn/MathML/First_steps/Scripts", "Learn/MathML/First_steps")}}
@@ -216,7 +212,7 @@ function verifyOption(checkbox) {
     }
   }
   const finished = checkboxes.every(
-    (checkbox) => !!checkbox.checked === !!checkbox.dataset.highlight,
+    (checkbox) => !!checkbox.checked === !!checkbox.dataset.highlight
   );
   status.textContent = finished
     ? "Congratulations, you checked all the correct answers!"
@@ -236,10 +232,9 @@ checkboxes.forEach((checkbox) => {
 As previously seen, the overbar of the `<msqrt>` and `<mroot>` elements stretches horizontally to cover their content. But actually the root symbol √ also stretches to be as tall as their content.
 
 ```html hidden
- <link
-   rel="stylesheet"
-   href="https://fred-wang.github.io/MathFonts/LatinModern/mathfonts.css"
-  />
+<link
+  rel="stylesheet"
+  href="https://fred-wang.github.io/MathFonts/LatinModern/mathfonts.css" />
 ```
 
 ```html
@@ -265,10 +260,9 @@ As previously seen, the overbar of the `<msqrt>` and `<mroot>` elements stretche
 Some mathematical concepts are sometimes written using fraction-like notations such [binomial coefficients](https://en.wikipedia.org/wiki/Combination) or [Legendre symbols](https://en.wikipedia.org/wiki/Legendre_symbol). It is appropriate to use an `<mfrac>` element to markup such notations. For fraction-like notations that don't draw a horizontal bar, attach a `linethickness="0"` attribute to the `<mfrac>` element:
 
 ```html hidden
- <link
-   rel="stylesheet"
-   href="https://fred-wang.github.io/MathFonts/LatinModern/mathfonts.css"
-  />
+<link
+  rel="stylesheet"
+  href="https://fred-wang.github.io/MathFonts/LatinModern/mathfonts.css" />
 ```
 
 ```html

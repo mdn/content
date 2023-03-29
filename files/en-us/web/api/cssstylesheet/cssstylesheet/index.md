@@ -2,11 +2,6 @@
 title: CSSStyleSheet()
 slug: Web/API/CSSStyleSheet/CSSStyleSheet
 page-type: web-api-constructor
-tags:
-  - API
-  - Constructor
-  - Reference
-  - CSSStyleSheet
 browser-compat: api.CSSStyleSheet.CSSStyleSheet
 ---
 
@@ -21,7 +16,7 @@ A constructed stylesheet can be shared between a document and its shadow DOM sub
 
 ## Syntax
 
-```js
+```js-nolint
 new CSSStyleSheet()
 new CSSStyleSheet(options)
 ```
@@ -57,15 +52,15 @@ The code below shows the sheet being constructed and then {{domxref("CSSStyleShe
 // Create an empty "constructed" stylesheet
 const sheet = new CSSStyleSheet();
 // Apply a rule to the sheet
-sheet.replaceSync('a { color: red; }');
+sheet.replaceSync("a { color: red; }");
 ```
 
 We then create a {{domxref("ShadowRoot")}} and pass the sheet object to the {{domxref("ShadowRoot.adoptedStyleSheets")}} property inside an array.
 
 ```js
 // Create an element in the document and then create a shadow root:
-const node = document.createElement('div');
-const shadow = node.attachShadow({ mode: 'open' });
+const node = document.createElement("div");
+const shadow = node.attachShadow({ mode: "open" });
 
 //Adopt the sheet into the shadow DOM
 shadow.adoptedStyleSheets = [sheet];

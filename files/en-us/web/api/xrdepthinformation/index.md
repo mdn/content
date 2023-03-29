@@ -2,15 +2,8 @@
 title: XRDepthInformation
 slug: Web/API/XRDepthInformation
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Reference
-  - WebXR
-  - XR
-  - AR
-  - VR
-  - Experimental
+status:
+  - experimental
 browser-compat: api.XRDepthInformation
 ---
 
@@ -27,7 +20,7 @@ This interface is the parent of:
 
 You will usually interact with these child interfaces. However, `XRDepthInformation` provides some useful properties that are inherited:
 
-## Properties
+## Instance properties
 
 - {{domxref("XRDepthInformation.height")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Contains the height of the depth buffer (number of rows).
@@ -38,7 +31,7 @@ You will usually interact with these child interfaces. However, `XRDepthInformat
 - {{domxref("XRDepthInformation.width")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Contains the width of the depth buffer (number of columns).
 
-## Methods
+## Instance methods
 
 None.
 

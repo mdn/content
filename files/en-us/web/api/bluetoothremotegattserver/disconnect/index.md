@@ -2,15 +2,8 @@
 title: BluetoothRemoteGATTServer.disconnect()
 slug: Web/API/BluetoothRemoteGATTServer/disconnect
 page-type: web-api-instance-method
-tags:
-  - API
-  - Bluetooth
-  - BluetoothRemoteGATTServer
-  - Experimental
-  - Method
-  - Reference
-  - Web Bluetooth API
-  - disconnect()
+status:
+  - experimental
 browser-compat: api.BluetoothRemoteGATTServer.disconnect
 ---
 
@@ -21,7 +14,7 @@ the script execution environment to disconnect from `this.device`.
 
 ## Syntax
 
-```js
+```js-nolint
 disconnect()
 ```
 

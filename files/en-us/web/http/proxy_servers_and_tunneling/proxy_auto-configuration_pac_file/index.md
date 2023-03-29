@@ -1,11 +1,6 @@
 ---
 title: Proxy Auto-Configuration (PAC) file
 slug: Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_PAC_file
-tags:
-  - Necko
-  - Networking
-  - PAC
-  - Proxy
 ---
 
 {{HTTPSidebar}}
@@ -127,7 +122,7 @@ These functions can be used in building the PAC file:
 
 #### Syntax
 
-```js
+```js-nolint
 isPlainHostName(host)
 ```
 
@@ -143,15 +138,15 @@ True if and only if there is no domain name in the hostname (no dots).
 #### Examples
 
 ```js
-isPlainHostName("www.mozilla.org") // false
-isPlainHostName("www") // true
+isPlainHostName("www.mozilla.org"); // false
+isPlainHostName("www"); // true
 ```
 
 ### `dnsDomainIs()`
 
 #### Syntax
 
-```js
+```js-nolint
 dnsDomainIs(host, domain)
 ```
 
@@ -168,7 +163,7 @@ Returns true if and only if the domain of hostname matches.
 
 #### Examples
 
-```js
+```js-nolint
 dnsDomainIs("www.mozilla.org", ".mozilla.org") // true
 dnsDomainIs("www", ".mozilla.org") // false
 ```
@@ -177,7 +172,7 @@ dnsDomainIs("www", ".mozilla.org") // false
 
 #### Syntax
 
-```js
+```js-nolint
 localHostOrDomainIs(host, hostdom)
 ```
 
@@ -194,10 +189,10 @@ Is true if the hostname matches _exactly_ the specified hostname, or if there is
 
 #### Examples
 
-```js
-localHostOrDomainIs("www.mozilla.org", "www.mozilla.org")  // true (exact match)
-localHostOrDomainIs("www", "www.mozilla.org")              // true (hostname match, domain not specified)
-localHostOrDomainIs("www.google.com", "www.mozilla.org")   // false (domain name mismatch)
+```js-nolint
+localHostOrDomainIs("www.mozilla.org", "www.mozilla.org") // true (exact match)
+localHostOrDomainIs("www", "www.mozilla.org") // true (hostname match, domain not specified)
+localHostOrDomainIs("www.google.com", "www.mozilla.org") // false (domain name mismatch)
 localHostOrDomainIs("home.mozilla.org", "www.mozilla.org") // false (hostname mismatch)
 ```
 
@@ -205,7 +200,7 @@ localHostOrDomainIs("home.mozilla.org", "www.mozilla.org") // false (hostname mi
 
 #### Syntax
 
-```js
+```js-nolint
 isResolvable(host)
 ```
 
@@ -218,7 +213,7 @@ Tries to resolve the hostname. Returns true if succeeds.
 
 #### Examples
 
-```js
+```js-nolint
 isResolvable("www.mozilla.org") // true
 ```
 
@@ -226,7 +221,7 @@ isResolvable("www.mozilla.org") // true
 
 #### Syntax
 
-```js
+```js-nolint
 isInNet(host, pattern, mask)
 ```
 
@@ -257,7 +252,7 @@ function FindProxyForURL(url, host) {
 
 ### dnsResolve()
 
-```js
+```js-nolint
 dnsResolve(host)
 ```
 
@@ -278,7 +273,7 @@ dnsResolve("www.mozilla.org"); // returns the string "104.16.41.2"
 
 #### Syntax
 
-```js
+```js-nolint
 convert_addr(ipaddr)
 ```
 
@@ -299,7 +294,7 @@ convert_addr("104.16.41.2"); // returns the decimal number 1745889538
 
 #### Syntax
 
-```js
+```js-nolint
 myIpAddress()
 ```
 
@@ -315,7 +310,7 @@ Returns the server IP address of the machine Firefox is running on, as a string 
 
 #### Example
 
-```js
+```js-nolint
 myIpAddress() //returns the string "127.0.1.1" if you were running Firefox on that localhost
 ```
 
@@ -323,7 +318,7 @@ myIpAddress() //returns the string "127.0.1.1" if you were running Firefox on th
 
 #### Syntax
 
-```js
+```js-nolint
 dnsDomainLevels(host)
 ```
 
@@ -336,9 +331,9 @@ Returns the number (integer) of DNS domain levels (number of dots) in the hostna
 
 #### Examples
 
-```js
-dnsDomainLevels("www");             // 0
-dnsDomainLevels("mozilla.org");     // 1
+```js-nolint
+dnsDomainLevels("www") // 0
+dnsDomainLevels("mozilla.org") // 1
 dnsDomainLevels("www.mozilla.org"); // 2
 ```
 
@@ -346,7 +341,7 @@ dnsDomainLevels("www.mozilla.org"); // 2
 
 #### Syntax
 
-```js
+```js-nolint
 shExpMatch(str, shexp)
 ```
 
@@ -376,7 +371,7 @@ shExpMatch("http://home.netscape.com/people/montulli/index.html", "*/ari/*"); //
 
 #### Syntax
 
-```js
+```js-nolint
 weekdayRange(wd1, wd2, [gmt])
 ```
 
@@ -402,12 +397,12 @@ If both **wd1** and **wd1** are defined, the condition is true if the current we
 
 #### Examples
 
-```js
-weekdayRange("MON", "FRI");        // returns true Monday through Friday (local timezone)
-weekdayRange("MON", "FRI", "GMT"); // returns true Monday through Friday (GMT timezone)
-weekdayRange("SAT");               // returns true on Saturdays local time
-weekdayRange("SAT", "GMT");        // returns true on Saturdays GMT time
-weekdayRange("FRI", "MON");        // returns true Friday and Monday only (note, order does matter!)
+```js-nolint
+weekdayRange("MON", "FRI") // returns true Monday through Friday (local timezone)
+weekdayRange("MON", "FRI", "GMT") // returns true Monday through Friday (GMT timezone)
+weekdayRange("SAT") // returns true on Saturdays local time
+weekdayRange("SAT", "GMT") // returns true on Saturdays GMT time
+weekdayRange("FRI", "MON") // returns true Friday and Monday only (note, the order does matter!)
 ```
 
 ### dateRange()
@@ -453,11 +448,11 @@ If only a single value is specified (from each category: day, month, year), the 
 
 #### Examples
 
-```js
-dateRange(1);            // returns true on the first day of each month, local timezone
-dateRange(1, "GMT")      // returns true on the first day of each month, GMT timezone
-dateRange(1, 15);        // returns true on the first half of each month
-dateRange(24, "DEC");    // returns true on 24th of December each year
+```js-nolint
+dateRange(1) // returns true on the first day of each month, local timezone
+dateRange(1, "GMT") // returns true on the first day of each month, GMT timezone
+dateRange(1, 15) // returns true on the first half of each month
+dateRange(24, "DEC");// returns true on 24th of December each year
 dateRange("JAN", "MAR"); // returns true on the first quarter of the year
 
 dateRange(1, "JUN", 15, "AUG");
@@ -482,7 +477,7 @@ dateRange(1995, 1997);
 
 #### Syntax
 
-```js
+```js-nolint
 // The full range of expansions is analogous to dateRange.
 timeRange(<hour1>, <min1>, <sec1>, <hour2>, <min2>, <sec2>, [gmt])
 ```
@@ -506,20 +501,20 @@ If only a single value is specified (from each category: hour, minute, second), 
 
 #### Examples
 
-```js
-timerange(12);                // returns true from noon to 1pm
-timerange(12, 13);            // returns true from noon to 1pm
-timerange(12, "GMT");         // returns true from noon to 1pm, in GMT timezone
-timerange(9, 17);             // returns true from 9am to 5pm
-timerange(8, 30, 17, 0);      // returns true from 8:30am to 5:00pm
-timerange(0, 0, 0, 0, 0, 30); // returns true between midnight and 30 seconds past midnight
+```js-nolint
+timerange(12); // returns true from noon to 1pm
+timerange(12, 13) // returns true from noon to 1pm
+timerange(12, "GMT") // returns true from noon to 1pm, in the GMT timezone
+timerange(9, 17) // returns true from 9am to 5pm
+timerange(8, 30, 17, 0) // returns true from 8:30am to 5:00pm
+timerange(0, 0, 0, 0, 0, 30) // returns true between midnight and 30 seconds past midnight
 ```
 
 ### alert()
 
 #### Syntax
 
-```js
+```js-nolint
 alert(message)
 ```
 
@@ -532,9 +527,9 @@ Logs the message in the browser console.
 
 #### Examples
 
-```js
-alert(`${host} = ${dnsResolve(host)}`);            // logs the host name and its IP address
-alert("Error: shouldn't reach this clause.");      // log a simple message
+```js-nolint
+alert(`${host} = ${dnsResolve(host)}`) // logs the host name and its IP address
+alert("Error: shouldn't reach this clause.") // log a simple message
 ```
 
 ## Example 1
@@ -712,4 +707,4 @@ Proxy auto-config was introduced into Netscape Navigator 2.0 in the late 1990s, 
 
 The most "original" implementation of PAC and its JavaScript libraries is, therefore, `nsProxyAutoConfig.js` found in early versions of Firefox. These utilities are found in many other open-source systems including [Chromium](https://source.chromium.org/chromium/chromium/src/+/main:services/proxy_resolver/pac_js_library.h). Firefox later integrated the file into [`ProxyAutoConfig.cpp`](https://searchfox.org/mozilla-central/source/netwerk/base/ProxyAutoConfig.cpp) as a C++ string literal. To extract it into its own file, it suffices to copy the chunk into JavaScript with a `console.log` directive to print it.
 
-Microsoft in general made its own implementation. There used to be [some problems with their libraries](https://en.wikipedia.org/wiki/Proxy_auto-config#Old_Microsoft_problems), but most are resolved by now. They have defined [some new "Ex" suffixed functions](https://docs.microsoft.com/windows/win32/winhttp/ipv6-extensions-to-navigator-auto-config-file-format) around the address handling parts to support IPv6. The feature is supported by Chromium, but not yet by Firefox ([bugzilla #558253](https://bugzilla.mozilla.org/show_bug.cgi?id=558253)).
+Microsoft in general made its own implementation. There used to be [some problems with their libraries](https://en.wikipedia.org/wiki/Proxy_auto-config#Old_Microsoft_problems), but most are resolved by now. They have defined [some new "Ex" suffixed functions](https://docs.microsoft.com/windows/win32/winhttp/ipv6-extensions-to-navigator-auto-config-file-format) around the address handling parts to support IPv6. The feature is supported by Chromium, but not yet by Firefox ([bugzilla #558253](https://bugzil.la/558253)).

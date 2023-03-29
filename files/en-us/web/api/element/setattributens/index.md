@@ -2,12 +2,6 @@
 title: Element.setAttributeNS()
 slug: Web/API/Element/setAttributeNS
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - Element
-  - Method
-  - Reference
 browser-compat: api.Element.setAttributeNS
 ---
 
@@ -18,7 +12,7 @@ with the given namespace and name.
 
 ## Syntax
 
-```js
+```js-nolint
 setAttributeNS(namespace, name, value)
 ```
 
@@ -36,8 +30,12 @@ None ({{jsxref("undefined")}}).
 ## Examples
 
 ```js
-let d = document.getElementById('d1');
-d.setAttributeNS('http://www.mozilla.org/ns/specialspace', 'spec:align', 'center');
+let d = document.getElementById("d1");
+d.setAttributeNS(
+  "http://www.mozilla.org/ns/specialspace",
+  "spec:align",
+  "center"
+);
 ```
 
 ## Notes

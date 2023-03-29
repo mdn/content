@@ -1,10 +1,7 @@
 ---
 title: lang
 slug: Web/HTML/Global_attributes/lang
-tags:
-  - Global attributes
-  - HTML
-  - Reference
+page-type: html-attribute
 browser-compat: html.global_attributes.lang
 ---
 
@@ -18,7 +15,7 @@ The **`lang`** [global attribute](/en-US/docs/Web/HTML/Global_attributes) helps 
 
 If the attribute value is the _empty string_ (`lang=""`), the language is set to _unknown_; if the language tag is not valid according to BCP47, it is set to _invalid_.
 
-Even if the **lang** attribute is set, it may not be taken into account, as the [**xml:lang**](/en-US/docs/Web/HTML/Global_attributes#attr-xml:lang) attribute has priority.
+Even if the **lang** attribute is set, it may not be taken into account, as the [**xml:lang**](/en-US/docs/Web/HTML/Global_attributes#lang) attribute has priority.
 
 For the CSS pseudo-class {{cssxref(":lang")}}, two invalid language names are different if their names are different. So while `:lang(es)` matches both `lang="es-ES"` and `lang="es-419"`, `:lang(xyzzy)` would _not_ match `lang="xyzzy-Zorp!"`.
 
@@ -51,10 +48,21 @@ For example, the language menu on this site (MDN) includes a **`lang`** attribut
 
 ```html
 <div class="dropdown-container language-menu">
-  <button id="header-language-menu" type="button" class="dropdown-menu-label" aria-haspopup="true" aria-owns="language-menu" aria-label="Current language is English. Choose your preferred language.">English
+  <button
+    id="header-language-menu"
+    type="button"
+    class="dropdown-menu-label"
+    aria-haspopup="true"
+    aria-owns="language-menu"
+    aria-label="Current language is English. Choose your preferred language.">
+    English
     <span class="dropdown-arrow-down" aria-hidden="true">▼</span>
   </button>
-  <ul id="language-menu" class="dropdown-menu-items right show" aria-expanded="true" role="menu">
+  <ul
+    id="language-menu"
+    class="dropdown-menu-items right show"
+    aria-expanded="true"
+    role="menu">
     <li lang="ca" role="menuitem">
       <a href="/ca/docs/Web/HTML/Global_attributes/lang" title="Catalan">
         <bdi>Català</bdi>
@@ -86,7 +94,9 @@ For example, the language menu on this site (MDN) includes a **`lang`** attribut
       </a>
     </li>
     <li lang="pt-BR" role="menuitem">
-      <a href="/pt-BR/docs/Web/HTML/Global_attributes/lang" title="Portuguese (Brazilian)">
+      <a
+        href="/pt-BR/docs/Web/HTML/Global_attributes/lang"
+        title="Portuguese (Brazilian)">
         <bdi>Português (do&nbsp;Brasil)</bdi>
       </a>
     </li>
@@ -96,17 +106,26 @@ For example, the language menu on this site (MDN) includes a **`lang`** attribut
       </a>
     </li>
     <li lang="uk" role="menuitem">
-      <a href="/uk/docs/Web/HTML/%D0%97%D0%B0%D0%B3%D0%B0%D0%BB%D1%8C%D0%BD%D1%96_%D0%B0%D1%82%D1%80%D0%B8%D0%B1%D1%83%D1%82%D0%B8/lang" title="Ukrainian">
+      <a
+        href="/uk/docs/Web/HTML/%D0%97%D0%B0%D0%B3%D0%B0%D0%BB%D1%8C%D0%BD%D1%96_%D0%B0%D1%82%D1%80%D0%B8%D0%B1%D1%83%D1%82%D0%B8/lang"
+        title="Ukrainian">
         <bdi>Українська</bdi>
       </a>
     </li>
-    <li lang="zh-CN" role="menuitem">
-      <a href="/zh-CN/docs/Web/HTML/Global_attributes/lang" title="Chinese (Simplified)">
+    <li lang="zh-Hans" role="menuitem">
+      <a
+        href="/zh-CN/docs/Web/HTML/Global_attributes/lang"
+        title="Chinese (Simplified)">
         <bdi>中文 (简体)</bdi>
       </a>
     </li>
     <li>
-      <a href="/en-US/docs/Web/HTML/Global_attributes/lang$locales" rel="nofollow" id="translations-add">Add a translation</a>
+      <a
+        href="/en-US/docs/Web/HTML/Global_attributes/lang$locales"
+        rel="nofollow"
+        id="translations-add">
+        Add a translation
+      </a>
     </li>
   </ul>
 </div>
@@ -124,4 +143,4 @@ For example, the language menu on this site (MDN) includes a **`lang`** attribut
 
 - All [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 - [`Content-Language` HTTP Header](/en-US/docs/Web/HTTP/Headers/Content-Language)
-- HTML {{htmlattrxref("translate")}} attribute
+- HTML [`translate`](/en-US/docs/Web/HTML/Global_attributes#translate) attribute

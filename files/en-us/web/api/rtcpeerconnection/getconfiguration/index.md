@@ -2,12 +2,6 @@
 title: RTCPeerConnection.getConfiguration()
 slug: Web/API/RTCPeerConnection/getConfiguration
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - WebRTC
-  - getConfiguration
 browser-compat: api.RTCPeerConnection.getConfiguration
 ---
 
@@ -26,7 +20,7 @@ identity information.
 
 ## Syntax
 
-```js
+```js-nolint
 getConfiguration()
 ```
 
@@ -47,11 +41,11 @@ one in use.
 let configuration = myPeerConnection.getConfiguration();
 
 if (configuration.certificates?.length === 0) {
-   RTCPeerConnection.generateCertificate({
-      name: 'RSASSA-PKCS1-v1_5',
-      hash: 'SHA-256',
-      modulusLength: 2048,
-      publicExponent: new Uint8Array([1, 0, 1])
+  RTCPeerConnection.generateCertificate({
+    name: "RSASSA-PKCS1-v1_5",
+    hash: "SHA-256",
+    modulusLength: 2048,
+    publicExponent: new Uint8Array([1, 0, 1]),
   }).then((cert) => {
     configuration.certificates = [cert];
     myPeerConnection.setConfiguration(configuration);

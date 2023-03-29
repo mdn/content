@@ -2,13 +2,6 @@
 title: SubtleCrypto.generateKey()
 slug: Web/API/SubtleCrypto/generateKey
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - SubtleCrypto
-  - Web Crypto API
-  - generateKey
 browser-compat: api.SubtleCrypto.generateKey
 ---
 
@@ -20,13 +13,14 @@ or key pair (for public-key algorithms).
 
 ## Syntax
 
-```js
+```js-nolint
 generateKey(algorithm, extractable, keyUsages)
 ```
 
 ### Parameters
 
 - `algorithm`
+
   - : An object defining the type of key to generate and providing extra algorithm-specific parameters.
 
     - For [RSASSA-PKCS1-v1_5](/en-US/docs/Web/API/SubtleCrypto/sign#rsassa-pkcs1-v1_5), [RSA-PSS](/en-US/docs/Web/API/SubtleCrypto/sign#rsa-pss),
@@ -39,6 +33,7 @@ generateKey(algorithm, extractable, keyUsages)
     - For [AES-CTR](/en-US/docs/Web/API/SubtleCrypto/encrypt#aes-ctr), [AES-CBC](/en-US/docs/Web/API/SubtleCrypto/encrypt#aes-cbc),
       [AES-GCM](/en-US/docs/Web/API/SubtleCrypto/encrypt#aes-gcm), or [AES-KW](/en-US/docs/Web/API/SubtleCrypto/wrapKey#aes-kw):
       pass an [`AesKeyGenParams`](/en-US/docs/Web/API/AesKeyGenParams) object.
+
 - `extractable`
   - : A boolean value indicating whether it
     will be possible to export the key using {{domxref("SubtleCrypto.exportKey()")}} or
@@ -58,8 +53,8 @@ generateKey(algorithm, extractable, keyUsages)
 ### Return value
 
 A {{jsxref("Promise")}} that fulfills with a
-  {{domxref("CryptoKey")}} (for symmetric algorithms) or a {{domxref("CryptoKeyPair")}}
-  (for public-key algorithms).
+{{domxref("CryptoKey")}} (for symmetric algorithms) or a {{domxref("CryptoKeyPair")}}
+(for public-key algorithms).
 
 ### Exceptions
 
@@ -87,7 +82,7 @@ let keyPair = await window.crypto.subtle.generateKey(
     name: "RSA-OAEP",
     modulusLength: 4096,
     publicExponent: new Uint8Array([1, 0, 1]),
-    hash: "SHA-256"
+    hash: "SHA-256",
   },
   true,
   ["encrypt", "decrypt"]
@@ -103,7 +98,7 @@ This code generates an ECDSA signing key pair.
 let keyPair = await window.crypto.subtle.generateKey(
   {
     name: "ECDSA",
-    namedCurve: "P-384"
+    namedCurve: "P-384",
   },
   true,
   ["sign", "verify"]
@@ -119,7 +114,7 @@ This code generates an HMAC signing key.
 let key = await window.crypto.subtle.generateKey(
   {
     name: "HMAC",
-    hash: {name: "SHA-512"}
+    hash: { name: "SHA-512" },
   },
   true,
   ["sign", "verify"]
@@ -135,7 +130,7 @@ This code generates an AES-GCM encryption key.
 let key = await window.crypto.subtle.generateKey(
   {
     name: "AES-GCM",
-    length: 256
+    length: 256,
   },
   true,
   ["encrypt", "decrypt"]
@@ -153,4 +148,4 @@ let key = await window.crypto.subtle.generateKey(
 ## See also
 
 - [Cryptographic key length recommendations](https://www.keylength.com/).
-- [NIST Transitioning the Use of Cryptographic Algorithms and Key Lengths](https://csrc.nist.gov/publications/detail/sp/800-131a/rev-1/archive/2015-11-06).
+- [NIST Transitioning the Use of Cryptographic Algorithms and Key Lengths](https://csrc.nist.gov/publications/detail/sp/800-131a/rev-2/final).

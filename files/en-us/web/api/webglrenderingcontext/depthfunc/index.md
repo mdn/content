@@ -2,12 +2,6 @@
 title: WebGLRenderingContext.depthFunc()
 slug: Web/API/WebGLRenderingContext/depthFunc
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.depthFunc
 ---
 
@@ -18,7 +12,7 @@ incoming pixel depth to the current depth buffer value.
 
 ## Syntax
 
-```js
+```js-nolint
 depthFunc(func)
 ```
 

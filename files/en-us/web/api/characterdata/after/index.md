@@ -2,9 +2,6 @@
 title: CharacterData.after()
 slug: Web/API/CharacterData/after
 page-type: web-api-instance-method
-tags:
-  - Method
-  - Reference
 browser-compat: api.CharacterData.after
 ---
 
@@ -18,7 +15,7 @@ Strings are inserted as {{domxref("Text")}} nodes; the string is being passed as
 
 ## Syntax
 
-```js
+```js-nolint
 after(...nodes)
 ```
 

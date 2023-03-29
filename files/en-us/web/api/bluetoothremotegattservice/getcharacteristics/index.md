@@ -2,15 +2,8 @@
 title: BluetoothRemoteGATTService.getCharacteristics()
 slug: Web/API/BluetoothRemoteGATTService/getCharacteristics
 page-type: web-api-instance-method
-tags:
-  - API
-  - Bluetooth
-  - BluetoothRemoteGATTService
-  - Experimental
-  - Method
-  - Reference
-  - Web Bluetooth API
-  - getCharacteristics()
+status:
+  - experimental
 browser-compat: api.BluetoothRemoteGATTService.getCharacteristics
 ---
 
@@ -22,7 +15,7 @@ instances for a given universally unique identifier (UUID).
 
 ## Syntax
 
-```js
+```js-nolint
 getCharacteristics(characteristics)
 ```
 

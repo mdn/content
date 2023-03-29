@@ -1,12 +1,6 @@
 ---
 title: Configuring servers for Ogg media
 slug: Web/HTTP/Configuring_servers_for_Ogg_media
-tags:
-  - Audio
-  - HTTP
-  - Media
-  - Ogg
-  - Video
 ---
 
 {{HTTPSidebar}}
@@ -53,13 +47,13 @@ By default, [`ffmpeg2theora`](http://v2v.cc/~j/ffmpeg2theora/) uses one key fram
 
 The HTML {{HTMLElement("audio")}} and {{HTMLElement("video")}} elements provide the `preload` attribute, which tells the browser to attempt to download the entire media when the page loads. Without `preload`, the browser only downloads enough of the media to display the first video frame, and to determine the media's duration.
 
-`preload` is off by default, so if getting to video is the point of your web page, your users may appreciate it if you include `preload` in your video elements. using `preload="metadata"` will preload the media file's metadata and possibly the first few frames of video. Setting `payload` to `auto` tells the browser to automatically begin downloading the media as soon as the page is loaded, under the assumption that the user will play it.
+`preload` is off by default, so if getting to video is the point of your web page, your users may appreciate it if you include `preload` in your video elements. Using `preload="metadata"` will preload the media file's metadata and possibly the first few frames of video. Setting `payload` to `auto` tells the browser to automatically begin downloading the media as soon as the page is loaded, under the assumption that the user will play it.
 
 ## Configuration for older Firefox versions
 
 ### Serve X-Content-Duration headers
 
-> **Note:** As of [Firefox 41](/en-US/docs/Mozilla/Firefox/Releases/41), the `X-Content-Duration` header is no longer supported. See {{Bug(1160695)}} for more details.
+> **Note:** As of [Firefox 41](/en-US/docs/Mozilla/Firefox/Releases/41), the `X-Content-Duration` header is no longer supported. See [Webkit bug 1160695](https://bugzil.la/1160695) for more details.
 
 The Ogg format doesn't encapsulate the duration of media, so for the progress bar on the video controls to display the duration of the video, Gecko needs to determine the length of the media using other means.
 
@@ -116,4 +110,4 @@ It's important to note that it appears that `oggz-info` makes a read pass of the
 
 - [Guide to media types and formats on the web](/en-US/docs/Web/Media/Formats)
 - [Video and audio content](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)
-- [The "codecs" parameter in common media types](/en-US/docs/Web/Media/Formats/codecs_parameter)
+- [Codecs in common media types](/en-US/docs/Web/Media/Formats/codecs_parameter)

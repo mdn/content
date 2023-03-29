@@ -2,13 +2,6 @@
 title: MediaStreamAudioSourceNode()
 slug: Web/API/MediaStreamAudioSourceNode/MediaStreamAudioSourceNode
 page-type: web-api-constructor
-tags:
-  - API
-  - Audio
-  - Constructor
-  - MediaStreamAudioSourceNode
-  - Reference
-  - Web Audio API
 browser-compat: api.MediaStreamAudioSourceNode.MediaStreamAudioSourceNode
 ---
 
@@ -25,7 +18,7 @@ the first audio track of a given {{domxref("MediaStream")}} as its source.
 
 ## Syntax
 
-```js
+```js-nolint
 new MediaStreamAudioSourceNode(context, options)
 ```
 
@@ -64,23 +57,27 @@ const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
 // getUserMedia block - grab stream
 // put it into a MediaStreamAudioSourceNode
 if (navigator.mediaDevices.getUserMedia) {
-   navigator.mediaDevices.getUserMedia (
+  navigator.mediaDevices
+    .getUserMedia(
       // constraints: audio and video for this app
       {
-         audio: true,
-         video: false
-      }).then((stream) => {
-        const options = {
-          mediaStream : stream
-        }
+        audio: true,
+        video: false,
+      }
+    )
+    .then((stream) => {
+      const options = {
+        mediaStream: stream,
+      };
 
-        const source = new MediaStreamAudioSourceNode(audioCtx, options);
-        source.connect(audioCtx.destination);
-      }).catch((err) => {
-       console.error(`The following gUM error occurred: ${err}`);
-      });
+      const source = new MediaStreamAudioSourceNode(audioCtx, options);
+      source.connect(audioCtx.destination);
+    })
+    .catch((err) => {
+      console.error(`The following gUM error occurred: ${err}`);
+    });
 } else {
-  console.log('new getUserMedia not supported on your browser!');
+  console.log("new getUserMedia not supported on your browser!");
 }
 ```
 

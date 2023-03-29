@@ -2,13 +2,8 @@
 title: AudioEncoder.close()
 slug: Web/API/AudioEncoder/close
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - close
-  - AudioEncoder
-  - Experimental
+status:
+  - experimental
 browser-compat: api.AudioEncoder.close
 ---
 
@@ -18,7 +13,7 @@ The **`close()`** method of the {{domxref("AudioEncoder")}} interface ends all p
 
 ## Syntax
 
-```js
+```js-nolint
 close()
 ```
 

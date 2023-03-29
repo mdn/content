@@ -1,13 +1,9 @@
 ---
 title: line-height-step
 slug: Web/CSS/line-height-step
-tags:
-  - CSS
-  - CSS Fonts
-  - CSS Property
-  - Reference
-  - recipe:css-property
-  - Experimental
+page-type: css-property
+status:
+  - experimental
 browser-compat: css.properties.line-height-step
 ---
 

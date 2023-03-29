@@ -2,14 +2,6 @@
 title: Element.ariaRoleDescription
 slug: Web/API/Element/ariaRoleDescription
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - ariaRoleDescription
-  - AriaAttributes
-  - AriaMixin
-  - Element
 browser-compat: api.Element.ariaRoleDescription
 ---
 
@@ -26,13 +18,18 @@ A string.
 In this example the `aria-roledescription` attribute on the element with an ID of `myApplication` has been set. Using `ariaRoleDescription` we can update the value.
 
 ```html
-<div id="myApplication" role="application" aria-roledescription="a description of this widget">…</div>
+<div
+  id="myApplication"
+  role="application"
+  aria-roledescription="a description of this widget">
+  …
+</div>
 ```
 
 ```js
-let el = document.getElementById('myApplication');
+let el = document.getElementById("myApplication");
 console.log(el.ariaRoleDescription); // "a description of this widget"
-el.ariaRoleDescription = "an updated description of this widget"
+el.ariaRoleDescription = "an updated description of this widget";
 console.log(el.ariaRoleDescription); // "an updated description of this widget"
 ```
 

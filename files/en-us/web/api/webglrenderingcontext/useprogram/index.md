@@ -2,12 +2,6 @@
 title: WebGLRenderingContext.useProgram()
 slug: Web/API/WebGLRenderingContext/useProgram
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.useProgram
 ---
 
@@ -18,7 +12,7 @@ The **`WebGLRenderingContext.useProgram()`** method of the [WebGL API](/en-US/do
 
 ## Syntax
 
-```js
+```js-nolint
 useProgram(program)
 ```
 

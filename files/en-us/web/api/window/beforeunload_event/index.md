@@ -1,11 +1,7 @@
 ---
-title: 'Window: beforeunload event'
+title: "Window: beforeunload event"
 slug: Web/API/Window/beforeunload_event
 page-type: web-api-event
-tags:
-  - Event
-  - Reference
-  - Window
 browser-compat: api.Window.beforeunload_event
 ---
 
@@ -17,8 +13,6 @@ This event enables a web page to trigger a confirmation dialog asking the user i
 
 According to the specification, to show the confirmation dialog an event handler should call {{domxref("Event.preventDefault()", "preventDefault()")}} on the event.
 
-To combat unwanted pop-ups, browsers may not display prompts created in `beforeunload` event handlers unless the page has been interacted with, or may even not display them at all.
-
 The HTML specification states that calls to {{domxref("window.alert()")}}, {{domxref("window.confirm()")}}, and {{domxref("window.prompt()")}} methods may be ignored during this event. See the [HTML specification](https://html.spec.whatwg.org/multipage/timers-and-user-prompts.html#user-prompts) for more details.
 
 ## Syntax
@@ -26,8 +20,8 @@ The HTML specification states that calls to {{domxref("window.alert()")}}, {{dom
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('beforeunload', (event) => { });
-onbeforeunload = (event) => { };
+addEventListener("beforeunload", (event) => {});
+onbeforeunload = (event) => {};
 ```
 
 ## Event type
@@ -41,6 +35,10 @@ In addition to the `Window` interface, the event handler property `onbeforeunloa
 - {{domxref("HTMLBodyElement")}}
 - {{domxref("HTMLFrameSetElement")}}
 - {{domxref("SVGSVGElement")}}
+
+## Security
+
+[Transient user activation](/en-US/docs/Web/Security/User_activation) is required. The user has to interact with the page or a UI element in order for this feature to work.
 
 ## Usage notes
 
@@ -67,16 +65,18 @@ In this example a page listens for changes to a [text `input`](/en-US/docs/Web/H
 ```js
 const beforeUnloadListener = (event) => {
   event.preventDefault();
-  return event.returnValue = "Are you sure you want to exit?";
+  return (event.returnValue = "");
 };
 
 const nameInput = document.querySelector("#name");
 
 nameInput.addEventListener("input", (event) => {
   if (event.target.value !== "") {
-    addEventListener("beforeunload", beforeUnloadListener, {capture: true});
+    addEventListener("beforeunload", beforeUnloadListener, { capture: true });
   } else {
-    removeEventListener("beforeunload", beforeUnloadListener, {capture: true});
+    removeEventListener("beforeunload", beforeUnloadListener, {
+      capture: true,
+    });
   }
 });
 ```
@@ -99,17 +99,13 @@ by all browsers.
 When this event returns (or sets the `returnValue` property to) a value
 other than `null` or `undefined`, the user will be prompted to
 confirm the page unload. In older browsers, the return value of the event is displayed
-in this dialog. Starting with Firefox 44, Chrome 51, Opera 38, and Safari 9.1, a generic
-string not under the control of the webpage will be shown instead of the returned
+in this dialog. Since Firefox 44, Chrome 51, Opera 38, and Safari 9.1, a generic
+string not under the control of the webpage is shown instead of the returned
 string. For example:
 
 - Firefox displays the string, "This page is asking you to confirm that you want to
-  leave - data you have entered may not be saved." (see {{bug("588292")}}).
-- Chrome displays the string, "Do you want to leave this site? Changes you made may
-  not be saved." (see [Chrome Platform Status](https://chromestatus.com/feature/5349061406228480)).
-
-Internet Explorer does not respect the `null` return value and will display
-this to users as "null" text. You have to use `undefined` to skip the prompt.
+  leave - data you have entered may not be saved." (see [Firefox bug 588292](https://bugzil.la/588292)).
+- Chrome displays the string, "Do you want to leave the site? Changes you made may not be saved." (see [Chrome Platform Status](https://chromestatus.com/feature/5349061406228480)).
 
 In some browsers, calls to {{domxref("window.alert()")}},
 {{domxref("window.confirm()")}}, and {{domxref("window.prompt()")}} may be ignored

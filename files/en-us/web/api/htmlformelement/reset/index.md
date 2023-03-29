@@ -2,14 +2,6 @@
 title: HTMLFormElement.reset()
 slug: Web/API/HTMLFormElement/reset
 page-type: web-api-instance-method
-tags:
-  - API
-  - HTML DOM
-  - HTMLFormElement
-  - Method
-  - NeedsMarkupWork
-  - NeedsSpecTable
-  - Reference
 browser-compat: api.HTMLFormElement.reset
 ---
 
@@ -30,7 +22,7 @@ whatever value the {{domxref("Element.setAttribute", "setAttribute()")}} call se
 
 ## Syntax
 
-```js
+```js-nolint
 reset()
 ```
 
@@ -45,7 +37,7 @@ None ({{jsxref("undefined")}}).
 ## Examples
 
 ```js
-document.getElementById('myform').reset();
+document.getElementById("myform").reset();
 ```
 
 ## Specifications

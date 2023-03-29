@@ -1,11 +1,7 @@
 ---
 title: Box alignment in Multi-column Layout
 slug: Web/CSS/CSS_Box_Alignment/Box_Alignment_in_Multi-column_Layout
-tags:
-  - CSS
-  - Guide
-  - box alignment
-  - multi-column
+page-type: guide
 ---
 
 {{CSSRef}}
@@ -14,7 +10,7 @@ The [Box Alignment](/en-US/docs/Web/CSS/CSS_Box_Alignment) Specification details
 
 In multi-column layout the alignment container is the content box of the multicol container. The alignment subject is the column box. The properties which apply to multi-column layouts are detailed below.
 
-> **Note:** Multi-column Layout predates the Box Alignment specification. and the properties listed here, while specified for Multicol, may not be supported in browsers.
+> **Note:** Multi-column Layout predates the Box Alignment specification. And the properties listed here, while specified for Multicol, may not be supported in browsers.
 
 ## align-content and justify-content
 

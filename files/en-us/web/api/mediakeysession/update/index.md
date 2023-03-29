@@ -2,14 +2,6 @@
 title: MediaKeySession.update()
 slug: Web/API/MediaKeySession/update
 page-type: web-api-instance-method
-tags:
-  - API
-  - EncryptedMediaExtensions
-  - MediaKeySession
-  - Method
-  - NeedsExample
-  - Reference
-  - Update
 browser-compat: api.MediaKeySession.update
 ---
 
@@ -20,7 +12,7 @@ CDM, and then returns a {{jsxref('Promise')}} .
 
 ## Syntax
 
-```js
+```js-nolint
 update(response)
 ```
 

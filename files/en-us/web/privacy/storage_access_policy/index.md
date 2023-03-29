@@ -1,11 +1,9 @@
 ---
-title: 'Storage access policy: Block cookies from trackers'
+title: "Storage access policy: Block cookies from trackers"
 slug: Web/Privacy/Storage_Access_Policy
-tags:
-  - Privacy
-  - storage access policy
-  - tracking protection
 ---
+
+{{QuicklinksWithSubPages("Web/Privacy")}}
 
 Firefox includes a new storage access policy that blocks cookies and other site data from third-party tracking resources. This policy is designed as an alternative to the older cookie policies, which have been available in Firefox for many years. This policy protects against cross-site tracking while minimizing the site breakage associated with traditional cookie blocking. This article explains how the policy works and how you can test it.
 
@@ -72,7 +70,7 @@ Browser caches:
 Network connections:
 
 - [TLS sessions](https://wiki.mozilla.org/Security/Server_Side_TLS#Session_Resumption) will not be resumed using a session ticket when an HTTPS connection is made to an embedded third-party resource that is classified as a tracker.
-- [HTTP connection reuse](/en-US/docs/Web/HTTP/Connection_management_in_HTTP_1.x#persistent_connections) by domains classified as trackers is limited to requests that occur under the same top-level origin. For example, a request for content from tracker.example on news.example will not reuse an HTTP connection with a request for content from tracker.example on shopping.example or with requests that occur when tracker.example is visited directly (i.e., as a first party).
+- [HTTP connection reuse](/en-US/docs/Web/HTTP/Connection_management_in_HTTP_1.x#persistent_connections) by domains classified as trackers is limited to requests that occur under the same top-level origin. For example, a request for content from `tracker.example` on `news.example` will not reuse an HTTP connection with a request for content from `tracker.example` on `shopping.example` or with requests that occur when `tracker.example` is visited directly (i.e., as a first party).
 
 HTTP Referrers
 
@@ -83,7 +81,7 @@ HTTP Referrers
 1. This policy does not currently restrict third-party storage access for resources that are not classified as tracking resources. We may choose to apply additional restrictions to third-party storage access in the future.
 2. The restrictions applied by the policy will not prevent third-party scripts classified as tracking resources from accessing storage in the main context of the page. These scripts can continue to use storage scoped to the top-level origin.
 3. Origins classified as trackers will have access to their own storage when they are loaded in a first-party context.
-4. Cross-origin resources loaded from the same eTLD+1 as the top-level context will still have access to their storage.
+4. Cross-origin resources loaded from the same {{Glossary("eTLD", "eTLD+1")}} as the top-level context will still have access to their storage.
 5. Origins normally classified as trackers will [not be blocked if the top-level page origin is determined to be from the same organization as them](https://github.com/mozilla-services/shavar-prod-lists#entity-list).
 
 ## Storage access grants
@@ -169,7 +167,7 @@ A social content provider that is classified as a tracker will not have access t
 - For social login, the user may have to click a login button on the first party.
 - For social like or share buttons, the user will have to first interact with the button in a logged-out state. Once they do, many social content providers will prompt them to log in.
 
-After these interactions, the provider will receive third-party storage access if they prompt the user in a way that is captured by the storage access activation heuristics described above. These providers should consider switching to explicitly request storage access through the Storage Access API as soon as possible. An [initial implementation of this API](https://bugzilla.mozilla.org/show_bug.cgi?id=1469714) is currently available in Nightly.
+After these interactions, the provider will receive third-party storage access if they prompt the user in a way that is captured by the storage access activation heuristics described above. These providers should consider switching to explicitly request storage access through the Storage Access API as soon as possible. An [initial implementation of this API](https://bugzil.la/1469714) is currently available in Nightly.
 
 ### I use third-party pixels and other tools to measure the effectiveness of my ad campaigns. Will I still be able to measure the conversion rate of my ads?
 

@@ -2,12 +2,6 @@
 title: DOMException()
 slug: Web/API/DOMException/DOMException
 page-type: web-api-constructor
-tags:
-  - API
-  - Constructor
-  - DOMException
-  - Reference
-  - Polyfill
 browser-compat: api.DOMException.DOMException
 ---
 
@@ -18,7 +12,7 @@ The **`DOMException()`** constructor returns a
 
 ## Syntax
 
-```js
+```js-nolint
 new DOMException()
 new DOMException(message)
 new DOMException(message, name)
@@ -51,15 +45,15 @@ In this example, pressing the button causes a custom `DOMException` to be thrown
 ### JavaScript
 
 ```js
-const button = document.querySelector('button');
+const button = document.querySelector("button");
 
 button.onclick = () => {
-    try {
-        throw new DOMException("Custom DOM Exception Triggered.");
-    } catch (error) {
-        document.querySelector("#output").textContent = `Error: ${error.message}`;
-    }
-}
+  try {
+    throw new DOMException("Custom DOM Exception Triggered.");
+  } catch (error) {
+    document.querySelector("#output").textContent = `Error: ${error.message}`;
+  }
+};
 ```
 
 ### Result

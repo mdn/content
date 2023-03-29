@@ -2,17 +2,10 @@
 title: ReportingObserver.disconnect()
 slug: Web/API/ReportingObserver/disconnect
 page-type: web-api-instance-method
-tags:
-  - API
-  - Experimental
-  - Method
-  - Reference
-  - Reporting API
-  - ReportingObserver
 browser-compat: api.ReportingObserver.disconnect
 ---
 
-{{APIRef("Reporting API")}}{{SeeCompatTable}}
+{{APIRef("Reporting API")}}
 
 The **`disconnect()`** method of the
 {{domxref("ReportingObserver")}} interface stops a reporting observer that had
@@ -26,7 +19,7 @@ callback will return any reports. The associated observer will no longer be acti
 
 ## Syntax
 
-```js
+```js-nolint
 disconnect()
 ```
 
@@ -42,19 +35,19 @@ None ({{jsxref("undefined")}}).
 
 ```js
 const options = {
-  types: ['deprecation'],
-  buffered: true
-}
+  types: ["deprecation"],
+  buffered: true,
+};
 
 const observer = new ReportingObserver((reports, observer) => {
   reportBtn.onclick = () => displayReports(reports);
 }, options);
 
-observer.observe()
+observer.observe();
 
 // ...
 
-observer.disconnect()
+observer.disconnect();
 ```
 
 ## Specifications

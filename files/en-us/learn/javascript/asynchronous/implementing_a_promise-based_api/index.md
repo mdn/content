@@ -1,9 +1,6 @@
 ---
 title: How to implement a promise-based API
 slug: Learn/JavaScript/Asynchronous/Implementing_a_promise-based_API
-tags:
-  - JavaScript
-  - Learn
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Asynchronous/Promises", "Learn/JavaScript/Asynchronous/Introducing_workers", "Learn/JavaScript/Asynchronous")}}
@@ -45,7 +42,7 @@ In the example below, we call `setTimeout()` with a callback function and a dela
 
 ```css hidden
 div {
-  margin: .5rem 0;
+  margin: 0.5rem 0;
 }
 ```
 
@@ -100,12 +97,12 @@ This part should be quite familiar from the last article. We can call `alarm()`,
 ```html hidden
 <div>
   <label for="name">Name:</label>
-  <input type="text" id="name" name="name" size="4" value = "Matilda">
+  <input type="text" id="name" name="name" size="4" value="Matilda" />
 </div>
 
 <div>
   <label for="delay">Delay:</label>
-  <input type="text" id="delay" name="delay" size="4" value = "1000">
+  <input type="text" id="delay" name="delay" size="4" value="1000" />
 </div>
 
 <button id="set-alarm">Set alarm</button>
@@ -117,8 +114,9 @@ button {
   display: block;
 }
 
-div, button {
-  margin: .5rem 0;
+div,
+button {
+  margin: 0.5rem 0;
 }
 ```
 
@@ -157,12 +155,12 @@ Since `alarm()` returns a `Promise`, we can do everything with it that we could 
 ```html hidden
 <div>
   <label for="name">Name:</label>
-  <input type="text" id="name" name="name" size="4" value = "Matilda">
+  <input type="text" id="name" name="name" size="4" value="Matilda" />
 </div>
 
 <div>
   <label for="delay">Delay:</label>
-  <input type="text" id="delay" name="delay" size="4" value = "1000">
+  <input type="text" id="delay" name="delay" size="4" value="1000" />
 </div>
 
 <button id="set-alarm">Set alarm</button>
@@ -174,8 +172,9 @@ button {
   display: block;
 }
 
-div, button {
-  margin: .5rem 0;
+div,
+button {
+  margin: 0.5rem 0;
 }
 ```
 
@@ -215,11 +214,3 @@ button.addEventListener('click', async () => {
 - [Using promises](/en-US/docs/Web/JavaScript/Guide/Using_promises)
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Asynchronous/Promises", "Learn/JavaScript/Asynchronous/Introducing_workers", "Learn/JavaScript/Asynchronous")}}
-
-## In this module
-
-- [Introducing asynchronous JavaScript](/en-US/docs/Learn/JavaScript/Asynchronous/Introducing)
-- [How to use promises](/en-US/docs/Learn/JavaScript/Asynchronous/Promises)
-- **Implementing a promise-based API**
-- [Introducing workers](/en-US/docs/Learn/JavaScript/Asynchronous/Introducing_workers)
-- [Assessment: sequencing animations](/en-US/docs/Learn/JavaScript/Asynchronous/Sequencing_animations)

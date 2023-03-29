@@ -2,12 +2,8 @@
 title: Badging API
 slug: Web/API/Badging_API
 page-type: web-api-overview
-tags:
-  - API
-  - Overview
-  - Reference
-  - Badging API
-  - Experimental
+status:
+  - experimental
 browser-compat: api.Navigator.setAppBadge
 ---
 
@@ -78,19 +74,19 @@ None.
 To set a notification badge on the current document with no value:
 
 ```js
-navigator.setClientBadge()
+navigator.setClientBadge();
 ```
 
 To clear a notification badge on the current document:
 
 ```js
-navigator.clearClientBadge()
+navigator.clearClientBadge();
 ```
 
 To set a notification badge on the current app with a value of 12:
 
 ```js
-navigator.setAppBadge(12)
+navigator.setAppBadge(12);
 ```
 
 ## Specifications

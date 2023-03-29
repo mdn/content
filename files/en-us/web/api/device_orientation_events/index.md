@@ -2,13 +2,6 @@
 title: Device orientation events
 slug: Web/API/Device_orientation_events
 page-type: web-api-overview
-tags:
-  - API
-  - Events
-  - Landing
-  - Overview
-  - Reference
-  - Device orientation events
 browser-compat:
   - api.Window.deviceorientation_event
   - api.Window.devicemotion_event

@@ -1,10 +1,7 @@
 ---
 title: Resolved value
 slug: Web/CSS/resolved_value
-tags:
-  - CSS
-  - Guide
-  - Reference
+page-type: guide
 spec-urls: https://drafts.csswg.org/cssom/#resolved-values
 ---
 

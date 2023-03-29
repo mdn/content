@@ -2,12 +2,6 @@
 title: Blob.size
 slug: Web/API/Blob/size
 page-type: web-api-instance-property
-tags:
-  - API
-  - Blob
-  - File API
-  - Property
-  - Reference
 browser-compat: api.Blob.size
 ---
 
@@ -30,7 +24,7 @@ lengths in bytes.
 ### HTML
 
 ```html
-<input type="file" id="input" multiple>
+<input type="file" id="input" multiple />
 <output id="output">Choose files…</output>
 ```
 
@@ -44,11 +38,11 @@ output {
 ### JavaScript
 
 ```js
-const input = document.getElementById('input');
-const output = document.getElementById('output');
+const input = document.getElementById("input");
+const output = document.getElementById("output");
 
-input.addEventListener('change', (event) => {
-  output.innerText = '';
+input.addEventListener("change", (event) => {
+  output.innerText = "";
 
   for (const file of event.target.files) {
     output.innerText += `${file.name} has a size of ${file.size} bytes.\n`;

@@ -2,12 +2,8 @@
 title: EncodedAudioChunk
 slug: Web/API/EncodedAudioChunk
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Reference
-  - EncodedAudioChunk
-  - Experimental
+status:
+  - experimental
 browser-compat: api.EncodedAudioChunk
 ---
 
@@ -20,7 +16,7 @@ The **`EncodedAudioChunk`** interface of the {{domxref('WebCodecs API','','',' '
 - {{domxref("EncodedAudioChunk.EncodedAudioChunk", "EncodedAudioChunk()")}} {{Experimental_Inline}}
   - : Creates a new `EncodedAudioChunk` object.
 
-## Properties
+## Instance properties
 
 - {{domxref("EncodedAudioChunk.type")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns a string indicating whether this chunk of data is a key chunk.
@@ -31,7 +27,7 @@ The **`EncodedAudioChunk`** interface of the {{domxref('WebCodecs API','','',' '
 - {{domxref("EncodedAudioChunk.byteLength")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns an integer representing the length of the audio in bytes.
 
-## Methods
+## Instance methods
 
 - {{domxref("EncodedAudioChunk.copyTo()")}} {{Experimental_Inline}}
   - : Copies the encoded audio data.

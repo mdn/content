@@ -1,13 +1,7 @@
 ---
 title: inset
 slug: Web/CSS/inset
-tags:
-  - CSS
-  - CSS Logical Property
-  - CSS Property
-  - Property
-  - Reference
-  - recipe:css-property
+page-type: css-shorthand-property
 browser-compat: css.properties.inset
 ---
 

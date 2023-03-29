@@ -2,12 +2,6 @@
 title: Range.getBoundingClientRect()
 slug: Web/API/Range/getBoundingClientRect
 page-type: web-api-instance-method
-tags:
-  - API
-  - CSSOM View
-  - Method
-  - Range
-  - Reference
 browser-compat: api.Range.getBoundingClientRect
 ---
 
@@ -23,7 +17,7 @@ details on the returned value.
 
 ## Syntax
 
-```js
+```js-nolint
 getBoundingClientRect()
 ```
 
@@ -41,7 +35,12 @@ None ({{jsxref("undefined")}}).
 
 ```html
 <div id="highlight"></div>
-<p>This example positions a "highlight" rectangle behind the contents of a range. The range's content <em>starts here</em> and continues on until it <em>ends here</em>. The bounding client rectangle contains everything selected in the range.</p>
+<p>
+  This example positions a "highlight" rectangle behind the contents of a range.
+  The range's content <em>starts here</em> and continues on until it
+  <em>ends here</em>. The bounding client rectangle contains everything selected
+  in the range.
+</p>
 ```
 
 ### CSS
@@ -62,11 +61,11 @@ p {
 
 ```js
 const range = document.createRange();
-range.setStartBefore(document.getElementsByTagName('em').item(0));
-range.setEndAfter(document.getElementsByTagName('em').item(1));
+range.setStartBefore(document.getElementsByTagName("em").item(0));
+range.setEndAfter(document.getElementsByTagName("em").item(1));
 
 const clientRect = range.getBoundingClientRect();
-const highlight = document.getElementById('highlight');
+const highlight = document.getElementById("highlight");
 highlight.style.left = `${clientRect.x}px`;
 highlight.style.top = `${clientRect.y}px`;
 highlight.style.width = `${clientRect.width}px`;

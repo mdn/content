@@ -2,13 +2,6 @@
 title: ReadableStreamBYOBRequest.respondWithNewView()
 slug: Web/API/ReadableStreamBYOBRequest/respondWithNewView
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - ReadableStreamBYOBRequest
-  - Reference
-  - Streams
-  - respondWithNewView
 browser-compat: api.ReadableStreamBYOBRequest.respondWithNewView
 ---
 
@@ -24,13 +17,14 @@ For example, the source may transfer the BYOB view to a separate worker thread, 
 
 ## Syntax
 
-```js
+```js-nolint
 respondWithNewView(view)
 ```
 
 ### Parameters
 
 - `view`
+
   - : A {{domxref("ArrayBufferView")}} that the consumer of the associated readable byte stream should write to instead of {{domxref("ReadableStreamBYOBRequest.view")}}.
 
     This must be a view onto the same backing memory region as {{domxref("ReadableStreamBYOBRequest.view")}} and occupy the same or less memory.
@@ -43,6 +37,7 @@ None ({{jsxref("undefined")}}).
 ### Exceptions
 
 - {{jsxref("TypeError")}}
+
   - : Thrown if the source object is not a `ReadableStreamBYOBRequest`, or there is no associated controller, or the associated internal array buffer is non-existent or detached.
     It may also be thrown if the `view` is zero-length when there is an active reader, or non-zero when called on a closed stream.
 
@@ -59,7 +54,9 @@ For example, we might define the view and respond as shown below:
 ```js
 const v = controller.byobRequest.view;
 bytesRead = socket.readInto(v.buffer, v.byteOffset, v.byteLength);
-byobRequest.respondWithNewView(byobRequest.view.subarray(v.byteOffset, bytesRead));
+byobRequest.respondWithNewView(
+  byobRequest.view.subarray(v.byteOffset, bytesRead)
+);
 ```
 
 ## Specifications

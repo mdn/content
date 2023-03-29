@@ -2,23 +2,6 @@
 title: XRInputSource.profiles
 slug: Web/API/XRInputSource/profiles
 page-type: web-api-instance-property
-tags:
-  - API
-  - AR
-  - Configuration
-  - Input
-  - Property
-  - Read-only
-  - Reference
-  - VR
-  - Virtual
-  - WebXR
-  - WebXR API
-  - WebXR Device API
-  - XR
-  - XRInputSource
-  - augmented
-  - profile
 browser-compat: api.XRInputSource.profiles
 ---
 

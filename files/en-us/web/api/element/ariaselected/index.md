@@ -2,14 +2,6 @@
 title: Element.ariaSelected
 slug: Web/API/Element/ariaSelected
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - ariaSelected
-  - AriaAttributes
-  - AriaMixin
-  - Element
 browser-compat: api.Element.ariaSelected
 ---
 
@@ -33,11 +25,13 @@ A string with one of the following values:
 In this example the `aria-selected` attribute on the element with an ID of `tab-id` is set to "true". Using `ariaSelected` we update the value to "false".
 
 ```html
-<button role="tab" aria-selected="true" aria-controls="tabpanel-id" id="tab-id">Tab label</button>
+<button role="tab" aria-selected="true" aria-controls="tabpanel-id" id="tab-id">
+  Tab label
+</button>
 ```
 
 ```js
-let el = document.getElementById('tab-id');
+let el = document.getElementById("tab-id");
 console.log(el.ariaSelected); // true
 el.ariaSelected = "false";
 console.log(el.ariaSelected); // false

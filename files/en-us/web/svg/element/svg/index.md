@@ -1,12 +1,7 @@
 ---
 title: <svg>
 slug: Web/SVG/Element/svg
-tags:
-  - Element
-  - Reference
-  - SVG
-  - SVG Container
-  - Web
+page-type: svg-element
 browser-compat: svg.elements.svg
 ---
 
@@ -19,11 +14,19 @@ The `svg` element is a container that defines a new coordinate system and [viewp
 ## Example
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
-<svg viewBox="0 0 300 100" xmlns="http://www.w3.org/2000/svg" stroke="red" fill="grey">
+<svg
+  viewBox="0 0 300 100"
+  xmlns="http://www.w3.org/2000/svg"
+  stroke="red"
+  fill="grey">
   <circle cx="50" cy="50" r="40" />
   <circle cx="150" cy="50" r="4" />
 
@@ -33,7 +36,7 @@ html,body,svg { height:100% }
 </svg>
 ```
 
-{{EmbedLiveSample('Example', 150, '100%')}}
+{{EmbedLiveSample('Example', 300, 100)}}
 
 ## Attributes
 

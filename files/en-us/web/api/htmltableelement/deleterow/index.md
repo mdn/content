@@ -2,13 +2,6 @@
 title: HTMLTableElement.deleteRow()
 slug: Web/API/HTMLTableElement/deleteRow
 page-type: web-api-instance-method
-tags:
-  - API
-  - HTML DOM
-  - HTMLTableElement
-  - Method
-  - NeedsSpecTable
-  - Reference
 browser-compat: api.HTMLTableElement.deleteRow
 ---
 
@@ -19,7 +12,7 @@ specific row ({{HtmlElement("tr")}}) from a given {{HtmlElement("table")}}.
 
 ## Syntax
 
-```js
+```js-nolint
 deleteRow(index)
 ```
 
@@ -47,16 +40,28 @@ This example uses JavaScript to delete a table's second row.
 
 ```html
 <table>
-  <tr><td>Cell 1.1</td><td>Cell 1.2</td><td>Cell 1.3</td></tr>
-  <tr><td>Cell 2.1</td><td>Cell 2.2</td><td>Cell 2.3</td></tr>
-  <tr><td>Cell 3.1</td><td>Cell 3.2</td><td>Cell 3.3</td></tr>
+  <tr>
+    <td>Cell 1.1</td>
+    <td>Cell 1.2</td>
+    <td>Cell 1.3</td>
+  </tr>
+  <tr>
+    <td>Cell 2.1</td>
+    <td>Cell 2.2</td>
+    <td>Cell 2.3</td>
+  </tr>
+  <tr>
+    <td>Cell 3.1</td>
+    <td>Cell 3.2</td>
+    <td>Cell 3.3</td>
+  </tr>
 </table>
 ```
 
 ### JavaScript
 
 ```js
-let table = document.querySelector('table');
+let table = document.querySelector("table");
 
 // Delete second row
 table.deleteRow(1);

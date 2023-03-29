@@ -2,13 +2,8 @@
 title: BackgroundFetchUpdateUIEvent.updateUI()
 slug: Web/API/BackgroundFetchUpdateUIEvent/updateUI
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - updateUI
-  - BackgroundFetchUpdateUIEvent
-  - Experimental
+status:
+  - experimental
 browser-compat: api.BackgroundFetchUpdateUIEvent.updateUI
 ---
 
@@ -20,7 +15,7 @@ This method may only be run once, to notify the user on a failed or a successful
 
 ## Syntax
 
-```js
+```js-nolint
 updateUI(options)
 ```
 
@@ -63,11 +58,14 @@ A {{jsxref("Promise")}}.
 The following example demonstrates updating the UI with a title and image icon on a successful fetch.
 
 ```js
-addEventListener('backgroundfetchsuccess', (event) => {
-  event.updateUI({ title: 'Episode 5 ready to listen!', icon: {
-    src: "path/to/success.ico",
-    sizes: "16x16 32x32 64x64",
-  }});
+addEventListener("backgroundfetchsuccess", (event) => {
+  event.updateUI({
+    title: "Episode 5 ready to listen!",
+    icon: {
+      src: "path/to/success.ico",
+      sizes: "16x16 32x32 64x64",
+    },
+  });
 });
 ```
 

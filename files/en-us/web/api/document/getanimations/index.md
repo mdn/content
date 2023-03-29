@@ -2,20 +2,6 @@
 title: Document.getAnimations()
 slug: Web/API/Document/getAnimations
 page-type: web-api-instance-method
-tags:
-  - API
-  - Animation
-  - CSS
-  - CSS Animations
-  - CSS Transitions
-  - Document
-  - Method
-  - Reference
-  - Transitions
-  - Web Animations
-  - getAnimations
-  - waapi
-  - web animations api
 browser-compat: api.Document.getAnimations
 ---
 
@@ -27,7 +13,7 @@ target elements are descendants of the document. This array includes [CSS Animat
 
 ## Syntax
 
-```js
+```js-nolint
 getAnimations()
 ```
 

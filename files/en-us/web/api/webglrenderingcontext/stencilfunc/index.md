@@ -2,12 +2,6 @@
 title: WebGLRenderingContext.stencilFunc()
 slug: Web/API/WebGLRenderingContext/stencilFunc
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.stencilFunc
 ---
 
@@ -21,7 +15,7 @@ multipass rendering to achieve special effects.
 
 ## Syntax
 
-```js
+```js-nolint
 stencilFunc(func, ref, mask)
 ```
 

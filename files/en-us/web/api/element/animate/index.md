@@ -2,13 +2,6 @@
 title: Element.animate()
 slug: Web/API/Element/animate
 page-type: web-api-instance-method
-tags:
-  - API
-  - Animation
-  - Element
-  - Method
-  - Reference
-  - Web Animations
 browser-compat: api.Element.animate
 ---
 
@@ -24,7 +17,7 @@ object instance.
 
 ## Syntax
 
-```js
+```js-nolint
 animate(keyframes, options)
 ```
 
@@ -41,6 +34,8 @@ animate(keyframes, options)
     - `id` {{optional_inline}}
       - : A property unique to `animate()`: a string
         with which to reference the animation.
+    - `timeline` {{optional_inline}}
+      - : A property unique to `animate()`: the {{domxref("AnimationTimeline")}} to associate with the animation. Defaults to {{domxref("Document.timeline")}}.
 
 ### Return value
 
@@ -55,13 +50,14 @@ In this example we use the `animate()` method to rotate and scale an element.
 #### HTML
 
 ```html
-<div class="newspaper">Spinning newspaper<br>causes dizziness</div>
+<div class="newspaper">Spinning newspaper<br />causes dizziness</div>
 ```
 
 #### CSS
 
 ```css
-html, body {
+html,
+body {
   height: 100%;
 }
 
@@ -73,7 +69,7 @@ body {
 }
 
 .newspaper {
-  padding: .5rem;
+  padding: 0.5rem;
   text-transform: uppercase;
   text-align: center;
   background-color: white;
@@ -85,18 +81,18 @@ body {
 
 ```js
 const newspaperSpinning = [
-  { transform: 'rotate(0) scale(1)' },
-  { transform: 'rotate(360deg) scale(0)' }
+  { transform: "rotate(0) scale(1)" },
+  { transform: "rotate(360deg) scale(0)" },
 ];
 
 const newspaperTiming = {
   duration: 2000,
   iterations: 1,
-}
+};
 
 const newspaper = document.querySelector(".newspaper");
 
-newspaper.addEventListener('click', () => {
+newspaper.addEventListener("click", () => {
   newspaper.animate(newspaperSpinning, newspaperTiming);
 });
 ```
@@ -113,15 +109,18 @@ In the demo [Down the Rabbit Hole (with the Web Animation API)](https://codepen.
 objects passed as keyframes and also the timing options block.
 
 ```js
-document.getElementById("tunnel").animate([
-  // keyframes
-  { transform: 'translateY(0px)' },
-  { transform: 'translateY(-300px)' }
-], {
-  // timing options
-  duration: 1000,
-  iterations: Infinity
-});
+document.getElementById("tunnel").animate(
+  [
+    // keyframes
+    { transform: "translateY(0px)" },
+    { transform: "translateY(-300px)" },
+  ],
+  {
+    // timing options
+    duration: 1000,
+    iterations: Infinity,
+  }
+);
 ```
 
 ### Implicit to/from keyframes
@@ -131,9 +130,7 @@ animation only (i.e. a single keyframe), and the browser will infer the other en
 animation if it is able to. For example, consider [this simple animation](https://mdn.github.io/dom-examples/web-animations-api/implicit-keyframes.html) — the Keyframe object looks like so:
 
 ```js
-let rotate360 = [
-  { transform: 'rotate(360deg)' }
-];
+let rotate360 = [{ transform: "rotate(360deg)" }];
 ```
 
 We have only specified the end state of the animation, and the beginning state is

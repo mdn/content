@@ -2,13 +2,6 @@
 title: AudioBuffer.numberOfChannels
 slug: Web/API/AudioBuffer/numberOfChannels
 page-type: web-api-instance-property
-tags:
-  - API
-  - AudioBuffer
-  - Property
-  - Reference
-  - Web Audio API
-  - numberOfChannels
 browser-compat: api.AudioBuffer.numberOfChannels
 ---
 
@@ -47,7 +40,7 @@ button.onclick = () => {
   }
 
   console.log(myArrayBuffer.numberOfChannels);
-}
+};
 ```
 
 ## Specifications

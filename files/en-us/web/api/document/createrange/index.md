@@ -2,14 +2,6 @@
 title: Document.createRange()
 slug: Web/API/Document/createRange
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - DOM Reference
-  - Document
-  - DocumentRange.createRange
-  - Method
-  - Range
 browser-compat: api.Document.createRange
 ---
 
@@ -20,7 +12,7 @@ The **`Document.createRange()`** method returns a new
 
 ## Syntax
 
-```js
+```js-nolint
 createRange()
 ```
 

@@ -2,11 +2,6 @@
 title: WEBGL_debug_shaders
 slug: Web/API/WEBGL_debug_shaders
 page-type: webgl-extension
-tags:
-  - API
-  - Reference
-  - WebGL
-  - WebGL extension
 browser-compat: api.WEBGL_debug_shaders
 ---
 
@@ -22,7 +17,7 @@ WebGL extensions are available using the {{domxref("WebGLRenderingContext.getExt
 >
 > This extension is available to both, {{domxref("WebGLRenderingContext", "WebGL1", "", 1)}} and {{domxref("WebGL2RenderingContext", "WebGL2", "", 1)}} contexts.
 
-## Methods
+## Instance methods
 
 - {{domxref("WEBGL_debug_shaders.getTranslatedShaderSource()")}}
   - : Returns the translated shader source.

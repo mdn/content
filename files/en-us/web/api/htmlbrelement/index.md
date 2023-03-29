@@ -2,11 +2,6 @@
 title: HTMLBRElement
 slug: Web/API/HTMLBRElement
 page-type: web-api-interface
-tags:
-  - API
-  - HTML DOM
-  - Interface
-  - Reference
 browser-compat: api.HTMLBRElement
 ---
 
@@ -16,14 +11,14 @@ The **`HTMLBRElement`** interface represents an HTML line break element ({{htmle
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 
 - {{domxref("HTMLBRElement.clear")}} {{deprecated_inline}}
   - : A string indicating the flow of text around floating objects.
 
-## Methods
+## Instance methods
 
 _No specific method; inherits methods from its parent, {{domxref("HTMLElement")}}_.
 

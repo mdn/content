@@ -1,10 +1,7 @@
 ---
 title: amplitude
 slug: Web/SVG/Attribute/amplitude
-tags:
-  - NeedsCompatTable
-  - SVG
-  - SVG Attribute
+page-type: svg-attribute
 spec-urls: https://drafts.fxtf.org/filter-effects/#element-attrdef-fecomponenttransfer-amplitude
 ---
 

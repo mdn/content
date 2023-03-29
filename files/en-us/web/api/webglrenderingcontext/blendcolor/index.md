@@ -2,12 +2,6 @@
 title: WebGLRenderingContext.blendColor()
 slug: Web/API/WebGLRenderingContext/blendColor
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.blendColor
 ---
 
@@ -18,7 +12,7 @@ destination blending factors.
 
 ## Syntax
 
-```js
+```js-nolint
 blendColor(red, green, blue, alpha)
 ```
 

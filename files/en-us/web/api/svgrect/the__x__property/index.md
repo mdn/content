@@ -33,7 +33,7 @@ The [x](https://svgwg.org/svg2-draft/geometry.html#XProperty) property describes
     <tr>
       <td>Applies to</td>
       <td>
-        {{ SVGElement("mask") }} , '<a
+        {{ SVGElement("mask") }}, '<a
           href="https://svgwg.org/svg2-draft/struct.html#SVGElement"
           >svg</a
         >', '<a href="https://svgwg.org/svg2-draft/shapes.html#RectElement"

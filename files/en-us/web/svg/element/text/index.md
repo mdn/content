@@ -1,11 +1,7 @@
 ---
 title: <text>
 slug: Web/SVG/Element/text
-tags:
-  - Element
-  - Reference
-  - SVG
-  - SVG Text Content
+page-type: svg-element
 browser-compat: svg.elements.text
 ---
 
@@ -18,18 +14,29 @@ If text is included in SVG not inside of a `<text>` element, it is not rendered.
 ## Example
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
 <svg viewBox="0 0 240 80" xmlns="http://www.w3.org/2000/svg">
   <style>
-    .small { font: italic 13px sans-serif; }
-    .heavy { font: bold 30px sans-serif; }
+    .small {
+      font: italic 13px sans-serif;
+    }
+    .heavy {
+      font: bold 30px sans-serif;
+    }
 
     /* Note that the color of the text is set with the    *
      * fill property, the color property is for HTML only */
-    .Rrrrr { font: italic 40px serif; fill: red; }
+    .Rrrrr {
+      font: italic 40px serif;
+      fill: red;
+    }
   </style>
 
   <text x="20" y="35" class="small">My</text>

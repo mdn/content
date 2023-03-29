@@ -1,15 +1,7 @@
 ---
 title: sessions.getWindowValue()
 slug: Mozilla/Add-ons/WebExtensions/API/sessions/getWindowValue
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Reference
-  - WebExtensions
-  - getWindowValue
-  - sessions
+page-type: webextension-api-function
 browser-compat: webextensions.api.sessions.getWindowValue
 ---
 
@@ -23,7 +15,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ## Syntax
 
-```js
+```js-nolint
 let retrieving = browser.sessions.getWindowValue(
   windowId,    // integer
   key          // string

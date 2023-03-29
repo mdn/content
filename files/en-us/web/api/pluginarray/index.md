@@ -2,13 +2,8 @@
 title: PluginArray
 slug: Web/API/PluginArray
 page-type: web-api-interface
-tags:
-  - API
-  - Add-ons
-  - DOM
-  - NeedsContent
-  - Plugins
-  - Deprecated
+status:
+  - deprecated
 browser-compat: api.PluginArray
 ---
 
@@ -18,12 +13,12 @@ The `PluginArray` interface is used to store a list of {{DOMxRef("Plugin")}} obj
 
 > **Note:** Own properties of `PluginArray` objects are no longer enumerable in the latest browser versions.
 
-## Properties
+## Instance properties
 
 - {{DOMxRef("PluginArray.length")}} {{ReadOnlyInline}} {{Deprecated_Inline}}
   - : The number of plugins in the array.
 
-## Methods
+## Instance methods
 
 - {{DOMxRef("PluginArray.item")}} {{Deprecated_Inline}}
   - : Returns the {{DOMxRef("Plugin")}} at the specified index into the array.
@@ -39,12 +34,13 @@ The following example function returns the version of the Shockwave Flash plugin
 ```js
 const pluginsLength = navigator.plugins.length;
 
-document.body.innerHTML = `${pluginsLength} Plugin(s)<br>`
-  + `<table id="pluginTable"><thead>`
-  + `<tr><th>Name</th><th>Filename</th><th>description</th><th>version</th></tr>`
-  + `</thead><tbody></tbody></table>`;
+document.body.innerHTML =
+  `${pluginsLength} Plugin(s)<br>` +
+  `<table id="pluginTable"><thead>` +
+  `<tr><th>Name</th><th>Filename</th><th>description</th><th>version</th></tr>` +
+  `</thead><tbody></tbody></table>`;
 
-const table = document.getElementById('pluginTable');
+const table = document.getElementById("pluginTable");
 
 for (let i = 0; i < pluginsLength; i++) {
   let newRow = table.insertRow();
@@ -62,7 +58,7 @@ const pluginsLength = navigator.plugins.length;
 
 document.write(
   `${pluginsLength.toString()} Plugin(s)<br>` +
-  `Name | Filename | description<br>`
+    `Name | Filename | description<br>`
 );
 
 for (let i = 0; i < pluginsLength; i++) {

@@ -2,11 +2,6 @@
 title: WebOTP API
 slug: Web/API/WebOTP_API
 page-type: web-api-overview
-tags:
-  - API
-  - WebOTP
-  - Overview
-  - Reference
 spec-urls: https://wicg.github.io/web-otp/
 ---
 
@@ -32,30 +27,33 @@ In this example, when an SMS message arrives, and the user grants permission, an
 [Try the demo using a phone here](https://glitch.com/edit/#!/web-otp?path=views%2Findex.html%3A55%3A8).
 
 ```html
-<input type="text" autocomplete="one-time-code" inputmode="numeric">
+<input type="text" autocomplete="one-time-code" inputmode="numeric" />
 ```
 
 ```js
-if ('OTPCredential' in window) {
-  window.addEventListener('DOMContentLoaded', (e) => {
+if ("OTPCredential" in window) {
+  window.addEventListener("DOMContentLoaded", (e) => {
     const input = document.querySelector('input[autocomplete="one-time-code"]');
     if (!input) return;
     const ac = new AbortController();
-    const form = input.closest('form');
+    const form = input.closest("form");
     if (form) {
-      form.addEventListener('submit', (e) => {
+      form.addEventListener("submit", (e) => {
         ac.abort();
       });
     }
-    navigator.credentials.get({
-      otp: { transport:['sms'] },
-      signal: ac.signal
-    }).then((otp) => {
-      input.value = otp.code;
-      if (form) form.submit();
-    }).catch((err) => {
-      console.error(err);
-    });
+    navigator.credentials
+      .get({
+        otp: { transport: ["sms"] },
+        signal: ac.signal,
+      })
+      .then((otp) => {
+        input.value = otp.code;
+        if (form) form.submit();
+      })
+      .catch((err) => {
+        console.error(err);
+      });
   });
 }
 ```

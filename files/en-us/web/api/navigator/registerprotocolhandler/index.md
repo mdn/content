@@ -2,14 +2,6 @@
 title: Navigator.registerProtocolHandler()
 slug: Web/API/Navigator/registerProtocolHandler
 page-type: web-api-instance-method
-tags:
-  - API
-  - HTML DOM
-  - Method
-  - Navigator
-  - Reference
-  - Web-Based Protocol Handlers
-  - registerProtocolHandler
 browser-compat: api.Navigator.registerProtocolHandler
 ---
 
@@ -21,7 +13,7 @@ For example, this API lets webmail sites open `mailto:` URLs, or VoIP sites open
 
 ## Syntax
 
-```js
+```js-nolint
 registerProtocolHandler(scheme, url)
 registerProtocolHandler(scheme, url, title)
 ```
@@ -58,6 +50,7 @@ None ({{jsxref("undefined")}}).
 ### Exceptions
 
 - `SecurityError` {{domxref("DOMException")}}
+
   - : The user agent blocked the registration.
     This might happen if:
 
@@ -115,9 +108,11 @@ Otherwise, the scheme must be one of the following:
 If your site is `burgers.example.com`, you can register a protocol handler for it to handle `web+burger:` links, like so:
 
 ```js
-navigator.registerProtocolHandler("web+burger",
-                                  "https://burgers.example.com/?burger=%s",
-                                  "Burger handler"); // last title arg included for compatibility
+navigator.registerProtocolHandler(
+  "web+burger",
+  "https://burgers.example.com/?burger=%s",
+  "Burger handler"
+); // last title arg included for compatibility
 ```
 
 This creates a handler that lets `web+burger:` links send the user to your site, inserting the accessed burger URL into the `%s` placeholder.

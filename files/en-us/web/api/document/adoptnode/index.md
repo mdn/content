@@ -2,15 +2,6 @@
 title: Document.adoptNode()
 slug: Web/API/Document/adoptNode
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - DOM Reference
-  - Method
-  - NeedsExample
-  - NeedsSpecTable
-  - NeedsUpdate
-  - Reference
 browser-compat: api.Document.adoptNode
 ---
 
@@ -24,7 +15,7 @@ current document. The node can then be inserted into the current document.
 
 ## Syntax
 
-```js
+```js-nolint
 adoptNode(externalNode)
 ```
 
@@ -47,9 +38,9 @@ After calling this method, `importedNode` and
 ## Examples
 
 ```js
-const iframe = document.querySelector('iframe');
-const iframeImages = iframe.contentDocument.querySelectorAll('img');
-const newParent = document.getElementById('images');
+const iframe = document.querySelector("iframe");
+const iframeImages = iframe.contentDocument.querySelectorAll("img");
+const newParent = document.getElementById("images");
 
 iframeImages.forEach((imgEl) => {
   newParent.appendChild(document.adoptNode(imgEl));

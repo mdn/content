@@ -2,9 +2,6 @@
 title: EventTarget.removeEventListener()
 slug: Web/API/EventTarget/removeEventListener
 page-type: web-api-instance-method
-tags:
-  - Method
-  - Reference
 browser-compat: api.EventTarget.removeEventListener
 ---
 
@@ -28,10 +25,10 @@ Event listeners can also be removed by passing an {{domxref("AbortSignal")}} to 
 
 ## Syntax
 
-```js
-removeEventListener(type, listener);
-removeEventListener(type, listener, options);
-removeEventListener(type, listener, useCapture);
+```js-nolint
+removeEventListener(type, listener)
+removeEventListener(type, listener, options)
+removeEventListener(type, listener, useCapture)
 ```
 
 ### Parameters
@@ -42,11 +39,12 @@ removeEventListener(type, listener, useCapture);
   - : The [event listener](/en-US/docs/Web/API/EventTarget/addEventListener#the_event_listener_callback) function of the event handler to remove from the
     event target.
 - `options` {{optional_inline}}
+
   - : An options object that specifies characteristics about the event listener.
 
     The available options are:
 
-    - `capture`:  A boolean value that specifies whether the [event listener](/en-US/docs/Web/API/EventTarget/addEventListener#the_event_listener_callback) to be removed is registered as a capturing listener or not. If this parameter is absent, the default value `false` is assumed.
+    - `capture`: A boolean value that specifies whether the [event listener](/en-US/docs/Web/API/EventTarget/addEventListener#the_event_listener_callback) to be removed is registered as a capturing listener or not. If this parameter is absent, the default value `false` is assumed.
 
 - `useCapture` {{optional_inline}}
   - : A boolean value that specifies whether the [event listener](/en-US/docs/Web/API/EventTarget/addEventListener#the_event_listener_callback) to be removed is registered as a
@@ -80,8 +78,8 @@ element.addEventListener("mousedown", handleMouseDown, true);
 Now consider each of these two calls to `removeEventListener()`:
 
 ```js
-element.removeEventListener("mousedown", handleMouseDown, false);     // Fails
-element.removeEventListener("mousedown", handleMouseDown, true);      // Succeeds
+element.removeEventListener("mousedown", handleMouseDown, false); // Fails
+element.removeEventListener("mousedown", handleMouseDown, true); // Succeeds
 ```
 
 The first call fails because the value of `useCapture` doesn't match. The
@@ -104,12 +102,12 @@ them in which `capture` or `useCapture` is
 Only the `capture` setting matters to `removeEventListener()`.
 
 ```js
-element.removeEventListener("mousedown", handleMouseDown, { passive: true });     // Succeeds
-element.removeEventListener("mousedown", handleMouseDown, { capture: false });    // Succeeds
-element.removeEventListener("mousedown", handleMouseDown, { capture: true });     // Fails
-element.removeEventListener("mousedown", handleMouseDown, { passive: false });    // Succeeds
-element.removeEventListener("mousedown", handleMouseDown, false);                 // Succeeds
-element.removeEventListener("mousedown", handleMouseDown, true);                  // Fails
+element.removeEventListener("mousedown", handleMouseDown, { passive: true }); // Succeeds
+element.removeEventListener("mousedown", handleMouseDown, { capture: false }); // Succeeds
+element.removeEventListener("mousedown", handleMouseDown, { capture: true }); // Fails
+element.removeEventListener("mousedown", handleMouseDown, { passive: false }); // Succeeds
+element.removeEventListener("mousedown", handleMouseDown, false); // Succeeds
+element.removeEventListener("mousedown", handleMouseDown, true); // Fails
 ```
 
 It's worth noting that some browser releases have been inconsistent on this, and unless
@@ -123,27 +121,21 @@ This example shows how to add a `mouseover`-based event listener that
 removes a `click`-based event listener.
 
 ```js
-const body = document.querySelector('body')
-const clickTarget = document.getElementById('click-target')
-const mouseOverTarget = document.getElementById('mouse-over-target')
+const body = document.querySelector("body");
+const clickTarget = document.getElementById("click-target");
+const mouseOverTarget = document.getElementById("mouse-over-target");
 
 let toggle = false;
 function makeBackgroundYellow() {
-  body.style.backgroundColor = toggle ? 'white' : 'yellow';
+  body.style.backgroundColor = toggle ? "white" : "yellow";
 
   toggle = !toggle;
 }
 
-clickTarget.addEventListener('click',
-  makeBackgroundYellow,
-  false
-);
+clickTarget.addEventListener("click", makeBackgroundYellow, false);
 
-mouseOverTarget.addEventListener('mouseover', () => {
-  clickTarget.removeEventListener('click',
-    makeBackgroundYellow,
-    false
-  );
+mouseOverTarget.addEventListener("mouseover", () => {
+  clickTarget.removeEventListener("click", makeBackgroundYellow, false);
 });
 ```
 

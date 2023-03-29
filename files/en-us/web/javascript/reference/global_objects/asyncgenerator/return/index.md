@@ -1,13 +1,7 @@
 ---
 title: AsyncGenerator.prototype.return()
 slug: Web/JavaScript/Reference/Global_Objects/AsyncGenerator/return
-tags:
-  - ECMAScript 2018
-  - AsyncGenerator
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.AsyncGenerator.return
 ---
 
@@ -17,7 +11,7 @@ The **`return()`** method of an async generator acts as if a `return` statement 
 
 ## Syntax
 
-```js
+```js-nolint
 asyncGeneratorObject.return(value)
 ```
 

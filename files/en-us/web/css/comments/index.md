@@ -1,10 +1,7 @@
 ---
 title: Comments
 slug: Web/CSS/Comments
-tags:
-  - CSS
-  - Guide
-  - Reference
+page-type: guide
 ---
 
 {{CSSRef}}

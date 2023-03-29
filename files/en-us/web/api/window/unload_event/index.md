@@ -1,12 +1,7 @@
 ---
-title: 'Window: unload event'
+title: "Window: unload event"
 slug: Web/API/Window/unload_event
 page-type: web-api-event
-tags:
-  - Event
-  - Reference
-  - Window
-  - events
 browser-compat: api.Window.unload_event
 ---
 
@@ -35,8 +30,8 @@ Please note that the unload event also follows the document tree: parent frame u
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('unload', (event) => { });
-onunload = (event) => { };
+addEventListener("unload", (event) => {});
+onunload = (event) => {};
 ```
 
 ## Event type
@@ -74,15 +69,15 @@ See the [Page Lifecycle API](https://developer.chrome.com/blog/page-lifecycle-ap
 ```html
 <!DOCTYPE html>
 <html lang="en-US">
-   <head>
-     <meta charset="UTF-8">
-     <title>Parent Frame</title>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Parent Frame</title>
     <script>
-      window.addEventListener('beforeunload', (event) => {
-        console.log('I am the 1st one.');
+      window.addEventListener("beforeunload", (event) => {
+        console.log("I am the 1st one.");
       });
-      window.addEventListener('unload', (event) => {
-        console.log('I am the 3rd one.');
+      window.addEventListener("unload", (event) => {
+        console.log("I am the 3rd one.");
       });
     </script>
   </head>
@@ -97,20 +92,20 @@ Below, the content of `child-frame.html`:
 ```html
 <!DOCTYPE html>
 <html lang="en-US">
-   <head>
-     <meta charset="UTF-8">
-     <title>Child Frame</title>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Child Frame</title>
     <script>
-      window.addEventListener('beforeunload', (event) => {
-        console.log('I am the 2nd one.');
+      window.addEventListener("beforeunload", (event) => {
+        console.log("I am the 2nd one.");
       });
-      window.addEventListener('unload', (event) => {
-        console.log('I am the 4th and last one…');
+      window.addEventListener("unload", (event) => {
+        console.log("I am the 4th and last one…");
       });
     </script>
   </head>
   <body>
-      ☻
+    ☻
   </body>
 </html>
 ```

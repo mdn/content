@@ -1,11 +1,7 @@
 ---
-title: 'SyntaxError: missing ] after element list'
+title: "SyntaxError: missing ] after element list"
 slug: Web/JavaScript/Reference/Errors/Missing_bracket_after_list
-tags:
-  - Error
-  - Errors
-  - JavaScript
-  - SyntaxError
+page-type: javascript-error
 ---
 
 {{jsSidebar("Errors")}}
@@ -38,12 +34,12 @@ closing bracket (`]`) or a comma (`,`) missing.
 const list = [1, 2,
 
 const instruments = [
-  'Ukulele',
-  'Guitar',
-  'Piano'
+  "Ukulele",
+  "Guitar",
+  "Piano",
 };
 
-const data = [{ foo: 'bar' } { bar: 'foo' }];
+const data = [{ foo: "bar" } { bar: "foo" }];
 ```
 
 Correct would be:
@@ -51,13 +47,9 @@ Correct would be:
 ```js example-good
 const list = [1, 2];
 
-const instruments = [
- 'Ukulele',
- 'Guitar',
- 'Piano'
-];
+const instruments = ["Ukulele", "Guitar", "Piano"];
 
-const data = [{ foo: 'bar' }, { bar: 'foo' }];
+const data = [{ foo: "bar" }, { bar: "foo" }];
 ```
 
 ## See also

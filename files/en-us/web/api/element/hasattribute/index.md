@@ -2,12 +2,6 @@
 title: Element.hasAttribute()
 slug: Web/API/Element/hasAttribute
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - Element
-  - Method
-  - Reference
 browser-compat: api.Element.hasAttribute
 ---
 
@@ -19,7 +13,7 @@ specified attribute or not.
 
 ## Syntax
 
-```js
+```js-nolint
 hasAttribute(name)
 ```
 
@@ -37,7 +31,7 @@ A boolean.
 ```js
 const foo = document.getElementById("foo");
 if (foo.hasAttribute("bar")) {
-    // do something
+  // do something
 }
 ```
 

@@ -2,13 +2,6 @@
 title: Animation.persist()
 slug: Web/API/Animation/persist
 page-type: web-api-instance-method
-tags:
-  - API
-  - Animation
-  - Method
-  - Reference
-  - persist
-  - web animations api
 browser-compat: api.Animation.persist
 ---
 
@@ -18,7 +11,7 @@ The `persist()` method of the [Web Animations API](/en-US/docs/Web/API/Web_Anima
 
 ## Syntax
 
-```js
+```js-nolint
 persist()
 ```
 
@@ -35,19 +28,21 @@ None ({{jsxref("undefined")}}).
 In our simple [replace indefinite animations demo](https://mdn.github.io/dom-examples/web-animations-api/replace-indefinite-animations.html), you can see the following code:
 
 ```js
-const divElem = document.querySelector('div');
+const divElem = document.querySelector("div");
 
-document.body.addEventListener('mousemove', (evt) => {
+document.body.addEventListener("mousemove", (evt) => {
   const anim = divElem.animate(
     { transform: `translate(${evt.clientX}px, ${evt.clientY}px)` },
-    { duration: 500, fill: 'forwards' }
+    { duration: 500, fill: "forwards" }
   );
 
   anim.commitStyles();
 
   //anim.persist()
 
-  anim.onremove = (event) => { console.log('Animation removed');}
+  anim.onremove = (event) => {
+    console.log("Animation removed");
+  };
 
   console.log(anim.replaceState);
 });

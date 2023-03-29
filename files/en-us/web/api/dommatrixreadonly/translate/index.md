@@ -2,9 +2,6 @@
 title: DOMMatrixReadOnly.translate()
 slug: Web/API/DOMMatrixReadOnly/translate
 page-type: web-api-instance-method
-tags:
-  - Method
-  - Reference
 browser-compat: api.DOMMatrixReadOnly.translate
 ---
 
@@ -15,9 +12,9 @@ creates a new matrix being the result of the original matrix with a translation 
 
 ## Syntax
 
-```js
-DOMMatrix.translate(translateX, translateY);
-DOMMatrix.translate(translateX, translateY, translateZ);
+```js-nolint
+DOMMatrix.translate(translateX, translateY)
+DOMMatrix.translate(translateX, translateY, translateZ)
 ```
 
 ### Parameters
@@ -59,12 +56,13 @@ applied to the blue square as a `transform`. The red square is left in place.
 ```js
 const matrix = new DOMMatrixReadOnly().translate(25, 25);
 
-document.querySelector('#transformed').setAttribute('transform', matrix.toString());
+document
+  .querySelector("#transformed")
+  .setAttribute("transform", matrix.toString());
 ```
 
 {{ EmbedLiveSample('Examples', '250', '250',
-  'screen_shot_2019-02-19_at_11.20.40.png',
-  'Web/API/DOMMatrixReadOnly/translate') }}
+  'screen_shot_2019-02-19_at_11.20.40.png') }}
 
 ## Specifications
 

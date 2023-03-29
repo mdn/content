@@ -1,16 +1,7 @@
 ---
 title: notifications.onShown
 slug: Mozilla/Add-ons/WebExtensions/API/notifications/onShown
-tags:
-  - API
-  - Add-ons
-  - Event
-  - Extensions
-  - Notifications
-  - Reference
-  - WebExtensions
-  - events
-  - onShown
+page-type: webextension-api-event
 browser-compat: webextensions.api.notifications.onShown
 ---
 
@@ -20,7 +11,7 @@ Fired immediately after a notification has been shown.
 
 ## Syntax
 
-```js
+```js-nolint
 browser.notifications.onShown.addListener(listener)
 browser.notifications.onShown.removeListener(listener)
 browser.notifications.onShown.hasListener(listener)

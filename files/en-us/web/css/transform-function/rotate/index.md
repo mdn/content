@@ -1,12 +1,7 @@
 ---
 title: rotate()
 slug: Web/CSS/transform-function/rotate
-tags:
-  - CSS
-  - CSS Function
-  - CSS Transforms
-  - Function
-  - Reference
+page-type: css-function
 browser-compat: css.types.transform-function.rotate
 ---
 
@@ -36,8 +31,8 @@ rotate(a)
 
 - _a_
   - : Is an {{ cssxref("&lt;angle&gt;") }} representing the angle of the rotation. The direction of rotation depends on the writing direction.
-      In a left-to-right context, a positive angle denotes a clockwise rotation, a negative angle a counter-clockwise one. In a right-to-left context,
-      a positive angle denotes a counter-clockwise rotation, a negative angle a clockwise one.
+    In a left-to-right context, a positive angle denotes a clockwise rotation, a negative angle a counter-clockwise one. In a right-to-left context,
+    a positive angle denotes a counter-clockwise rotation, a negative angle a clockwise one.
 
 <table class="standard-table">
   <thead>
@@ -293,6 +288,7 @@ div {
 
 ## See also
 
-- {{cssxref("transform")}}
+- {{cssxref("transform")}} property
+- {{cssxref("rotate")}} property
 - {{cssxref("&lt;transform-function&gt;")}}
 - [`rotate3d()`](/en-US/docs/Web/CSS/transform-function/rotate3d)

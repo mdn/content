@@ -2,13 +2,6 @@
 title: WorkerGlobalScope.importScripts()
 slug: Web/API/WorkerGlobalScope/importScripts
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - Web Workers
-  - WorkerGlobalScope
-  - importScripts
 browser-compat: api.WorkerGlobalScope.importScripts
 ---
 
@@ -18,7 +11,7 @@ The **`importScripts()`** method of the {{domxref("WorkerGlobalScope")}} interfa
 
 ## Syntax
 
-```js
+```js-nolint
 importScripts(path0)
 importScripts(path0, path1)
 importScripts(path0, path1, /* … ,*/ pathN)
@@ -42,7 +35,7 @@ None ({{jsxref("undefined")}}).
 If you had some functionality written in a separate script called `foo.js` that you wanted to use inside worker.js, you could import it using the following line:
 
 ```js
-importScripts('foo.js');
+importScripts("foo.js");
 ```
 
 `importScripts()` and `self.importScripts()` are effectively equivalent — both represent `importScripts()` being called from inside the worker's inner scope.

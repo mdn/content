@@ -2,16 +2,6 @@
 title: RTCPeerConnection.getSenders()
 slug: Web/API/RTCPeerConnection/getSenders
 page-type: web-api-instance-method
-tags:
-  - Media
-  - Method
-  - RTCPeerConnection
-  - RTCRtpSender
-  - RTP
-  - Reference
-  - WebRTC
-  - WebRTC API
-  - getSenders
 browser-compat: api.RTCPeerConnection.getSenders
 ---
 
@@ -26,8 +16,8 @@ track's data.
 
 ## Syntax
 
-```js
-const senders = rtcPeerConnection.getSenders();
+```js-nolint
+getSenders()
 ```
 
 ### Return value

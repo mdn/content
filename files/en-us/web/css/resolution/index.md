@@ -1,13 +1,7 @@
 ---
 title: <resolution>
 slug: Web/CSS/resolution
-tags:
-  - CSS
-  - CSS Data Type
-  - Data Type
-  - Layout
-  - Reference
-  - Web
+page-type: css-type
 browser-compat: css.types.resolution
 ---
 
@@ -39,7 +33,9 @@ The `<resolution>` data type consists of a strictly positive {{cssxref("&lt;numb
 ### Use in a media query
 
 ```css
-@media print and (min-resolution: 300dpi) { /* … */ }
+@media print and (min-resolution: 300dpi) {
+  /* … */
+}
 ```
 
 ### Valid resolutions

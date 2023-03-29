@@ -2,18 +2,6 @@
 title: HTMLImageElement.sizes
 slug: Web/API/HTMLImageElement/sizes
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTML
-  - HTML DOM
-  - HTMLImageElement
-  - Property
-  - Reference
-  - Responsive Design
-  - Responsive Images
-  - size
-  - sizes
-  - width
 browser-compat: api.HTMLImageElement.sizes
 ---
 
@@ -43,7 +31,7 @@ Each source size descriptor consists of a media condition as defined by the medi
 queries standard. Because a source size descriptor is used to specify the width to use
 for the image during layout of the page, the media condition is typically (but not
 necessarily) based entirely on width information. See
-{{SectionOnPage("/en-US/docs/Web/CSS/Media_Queries/Using_media_queries", "Syntax")}} for
+[Using media queries, Syntax](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#syntax) for
 details on how to construct a media condition.
 
 ### Source size values
@@ -63,7 +51,7 @@ unit, which lets you specify the width as a percentage of the viewport width
 
 ### Selecting an image to fit window width
 
-In this example, a blog-like layout is created, displaying some text and an image which
+In this example, a blog-like layout is created, displaying some text and an image
 for which three size points are specified, depending on the width of the window. Three
 versions of the image are also available, with their widths specified. The browser takes
 all of this information and selects an image and width that best meets the specified
@@ -82,19 +70,25 @@ and 50em.
 <article>
   <h1>An amazing headline</h1>
   <div class="test"></div>
-  <p>This is even more amazing content text. It's really spectacular.
-     And fascinating. Oh, it's also clever and witty. Award-winning
-     stuff, I'm sure.</p>
-  <img src="new-york-skyline-wide.jpg"
-       srcset="new-york-skyline-wide.jpg 3724w,
-               new-york-skyline-4by3.jpg 1961w,
-               new-york-skyline-tall.jpg 1060w"
-       sizes="((min-width: 50em) and (max-width: 60em)) 50em,
+  <p>
+    This is even more amazing content text. It's really spectacular. And
+    fascinating. Oh, it's also clever and witty. Award-winning stuff, I'm sure.
+  </p>
+  <img
+    src="new-york-skyline-wide.jpg"
+    srcset="
+      new-york-skyline-wide.jpg 3724w,
+      new-york-skyline-4by3.jpg 1961w,
+      new-york-skyline-tall.jpg 1060w
+    "
+    sizes="((min-width: 50em) and (max-width: 60em)) 50em,
               ((min-width: 30em) and (max-width: 50em)) 30em,
               (max-width: 30em) 20em"
-       alt="The New York City skyline on a beautiful day, with the One World Trade Center building in the middle.">
-  <p>Then there's even more amazing stuff to say down here. Can you
-     believe it? I sure can't.</p>
+    alt="The New York City skyline on a beautiful day, with the One World Trade Center building in the middle." />
+  <p>
+    Then there's even more amazing stuff to say down here. Can you believe it? I
+    sure can't.
+  </p>
 
   <button id="break40">Last Width: 40em</button>
   <button id="break50">Last Width: 50em</button>
@@ -108,7 +102,7 @@ article {
   margin: 1em;
   max-width: 60em;
   min-width: 20em;
-  border: 4em solid #880E4F;
+  border: 4em solid #880e4f;
   border-radius: 7em;
   padding: 1.5em;
   font: 16px "Open Sans", Verdana, Arial, Helvetica, sans-serif;
@@ -135,11 +129,15 @@ const image = document.querySelector("article img");
 const break40 = document.getElementById("break40");
 const break50 = document.getElementById("break50");
 
-break40.addEventListener("click",
-    () => image.sizes = image.sizes.replace(/50em,/, "40em,"));
+break40.addEventListener(
+  "click",
+  () => (image.sizes = image.sizes.replace(/50em,/, "40em,"))
+);
 
-break50.addEventListener("click",
-    () => image.sizes = image.sizes.replace(/40em,/, "50em,"));
+break50.addEventListener(
+  "click",
+  () => (image.sizes = image.sizes.replace(/40em,/, "50em,"))
+);
 ```
 
 #### Result

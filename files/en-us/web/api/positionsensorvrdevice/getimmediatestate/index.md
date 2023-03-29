@@ -2,16 +2,9 @@
 title: PositionSensorVRDevice.getImmediateState()
 slug: Web/API/PositionSensorVRDevice/getImmediateState
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Deprecated
-  - PositionSensorVRDevice
-  - Reference
-  - VR
-  - Virtual Reality
-  - WebVR
-  - Non-standard
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.PositionSensorVRDevice.getImmediateState
 ---
 
@@ -23,7 +16,7 @@ For most standard uses, you'll probably want to use {{domxref("PositionSensorVRD
 
 ## Syntax
 
-```js
+```js-nolint
 getImmediateState()
 ```
 
@@ -43,18 +36,23 @@ The following demo uses the WebVR API to update the view of a simple {{domxref("
 function setView() {
   const posState = gPositionSensor.getImmediateState();
   if (posState.hasPosition) {
-    posPara.textContent = `Position: x${roundToTwo(posState.position.x)} y${roundToTwo(posState.position.y)} z${roundToTwo(posState.position.z)}`;
+    posPara.textContent = `Position: x${roundToTwo(
+      posState.position.x
+    )} y${roundToTwo(posState.position.y)} z${roundToTwo(posState.position.z)}`;
     xPos = -posState.position.x * WIDTH * 2;
     yPos = posState.position.y * HEIGHT * 2;
     zPos = -posState.position.z > 0.01 ? -posState.position.z : 0.01;
   }
 
   if (posState.hasOrientation) {
-    orientPara.textContent = `Orientation: x${roundToTwo(posState.orientation.x)} y${roundToTwo(posState.orientation.y)} z${roundToTwo(posState.orientation.z)}`;
+    orientPara.textContent = `Orientation: x${roundToTwo(
+      posState.orientation.x
+    )} y${roundToTwo(posState.orientation.y)} z${roundToTwo(
+      posState.orientation.z
+    )}`;
     xOrient = posState.orientation.x * WIDTH;
     yOrient = -posState.orientation.y * HEIGHT * 2;
     zOrient = posState.orientation.z * 180;
-
   }
 }
 ```

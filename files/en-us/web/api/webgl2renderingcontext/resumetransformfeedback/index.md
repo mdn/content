@@ -2,12 +2,6 @@
 title: WebGL2RenderingContext.resumeTransformFeedback()
 slug: Web/API/WebGL2RenderingContext/resumeTransformFeedback
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGL2
 browser-compat: api.WebGL2RenderingContext.resumeTransformFeedback
 ---
 
@@ -19,7 +13,7 @@ transform feedback operation.
 
 ## Syntax
 
-```js
+```js-nolint
 resumeTransformFeedback()
 ```
 

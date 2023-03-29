@@ -2,15 +2,8 @@
 title: PeriodicSyncEvent()
 slug: Web/API/PeriodicSyncEvent/PeriodicSyncEvent
 page-type: web-api-constructor
-tags:
-  - Constructor
-  - Offline
-  - PWA
-  - PeriodicSyncEvent
-  - Experimental
-  - Service Worker
-  - Web Periodic Background Synchronization API
-  - periodic sync
+status:
+  - experimental
 browser-compat: api.PeriodicSyncEvent.PeriodicSyncEvent
 ---
 
@@ -23,7 +16,7 @@ used. The browser creates these objects itself and provides them to
 
 ## Syntax
 
-```js
+```js-nolint
 new PeriodicSyncEvent(type, options)
 ```
 
@@ -47,7 +40,7 @@ This example constructs a new {{domxref('PeriodicSyncEvent')}} with the relevant
 associated tag.
 
 ```js
-const psEvent = new ExtendableEvent('periodicsync', {tag : 'unique-tag'});
+const psEvent = new ExtendableEvent("periodicsync", { tag: "unique-tag" });
 ```
 
 ## Specifications

@@ -2,11 +2,6 @@
 title: ProgressEvent()
 slug: Web/API/ProgressEvent/ProgressEvent
 page-type: web-api-constructor
-tags:
-  - API
-  - Constructor
-  - DOM Events
-  - ProgressEvent
 browser-compat: api.ProgressEvent.ProgressEvent
 ---
 
@@ -16,7 +11,7 @@ The **`ProgressEvent()`** constructor returns a new {{domxref("ProgressEvent")}}
 
 ## Syntax
 
-```js
+```js-nolint
 new ProgressEvent(type)
 new ProgressEvent(type, options)
 ```

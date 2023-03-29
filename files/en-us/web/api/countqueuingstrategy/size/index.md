@@ -2,13 +2,6 @@
 title: CountQueuingStrategy.size()
 slug: Web/API/CountQueuingStrategy/size
 page-type: web-api-instance-method
-tags:
-  - API
-  - CountQueuingStrategy
-  - Method
-  - Reference
-  - Streams
-  - size
 browser-compat: api.CountQueuingStrategy.size
 ---
 
@@ -20,7 +13,7 @@ total queue size is a count of the number of chunks in the queue.
 
 ## Syntax
 
-```js
+```js-nolint
 size()
 ```
 
@@ -37,18 +30,21 @@ None.
 ```js
 const queuingStrategy = new CountQueuingStrategy({ highWaterMark: 1 });
 
-const writableStream = new WritableStream({
-  // Implement the sink
-  write(chunk) {
-    // …
+const writableStream = new WritableStream(
+  {
+    // Implement the sink
+    write(chunk) {
+      // …
+    },
+    close() {
+      // …
+    },
+    abort(err) {
+      console.log("Sink error:", err);
+    },
   },
-  close() {
-    // …
-  },
-  abort(err) {
-    console.log("Sink error:", err);
-  }
-}, queuingStrategy);
+  queuingStrategy
+);
 
 const size = queuingStrategy.size();
 ```

@@ -2,16 +2,7 @@
 title: devtools.panels.ExtensionSidebarPane.onHidden
 slug: >-
   Mozilla/Add-ons/WebExtensions/API/devtools/panels/ExtensionSidebarPane/onHidden
-tags:
-  - API
-  - Add-ons
-  - ExtensionSidebarPane
-  - Extensions
-  - Event
-  - Reference
-  - WebExtensions
-  - devtools.panels
-  - onHidden
+page-type: webextension-api-event
 browser-compat: webextensions.api.devtools.panels.ExtensionSidebarPane.onHidden
 ---
 
@@ -21,7 +12,7 @@ Called when the sidebar pane becomes hidden, as a result of the user switching a
 
 ## Syntax
 
-```js
+```js-nolint
 browser.devtools.panels.onHidden.addListener(listener)
 browser.devtools.panels.onHidden.removeListener(listener)
 browser.devtools.panels.onHidden.hasListener(listener)

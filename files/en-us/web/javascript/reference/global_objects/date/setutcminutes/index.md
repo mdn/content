@@ -1,12 +1,7 @@
 ---
 title: Date.prototype.setUTCMinutes()
 slug: Web/JavaScript/Reference/Global_Objects/Date/setUTCMinutes
-tags:
-  - Date
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.Date.setUTCMinutes
 ---
 
@@ -19,7 +14,7 @@ specified date according to universal time.
 
 ## Syntax
 
-```js
+```js-nolint
 setUTCMinutes(minutesValue)
 setUTCMinutes(minutesValue, secondsValue)
 setUTCMinutes(minutesValue, secondsValue, msValue)

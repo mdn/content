@@ -2,12 +2,8 @@
 title: Document.releaseCapture()
 slug: Web/API/Document/releaseCapture
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - Method
-  - Reference
-  - Non-standard
+status:
+  - non-standard
 browser-compat: api.Document.releaseCapture
 ---
 
@@ -21,7 +17,7 @@ Enabling mouse capture on an element is done by calling {{domxref("element.setCa
 
 ## Syntax
 
-```js
+```js-nolint
 releaseCapture()
 ```
 
@@ -40,7 +36,7 @@ See the [example](/en-US/docs/Web/API/Element/setCapture#example) for
 
 ## Specifications
 
-Based on Internet Explorer's implementation.
+Not part of any specification.
 
 ## Browser compatibility
 

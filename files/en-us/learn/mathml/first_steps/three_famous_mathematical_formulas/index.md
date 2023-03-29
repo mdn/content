@@ -1,10 +1,6 @@
 ---
 title: Three famous mathematical formulas
 slug: Learn/MathML/First_steps/Three_famous_mathematical_formulas
-tags:
-  - Beginner
-  - MathML
-  - Landing
 ---
 
 {{LearnSidebar}}{{PreviousMenu("Learn/MathML/First_steps/Tables", "Learn/MathML/First_steps")}}
@@ -102,8 +98,7 @@ To get this assessment started, you can rely on our usual HTML template. By defa
     <title>Three famous mathematical formulas</title>
     <link
       rel="stylesheet"
-      href="https://fred-wang.github.io/MathFonts/LatinModern/mathfonts.css"
-    />
+      href="https://fred-wang.github.io/MathFonts/LatinModern/mathfonts.css" />
   </head>
   <body class="htmlmathparagraph">
     <p>

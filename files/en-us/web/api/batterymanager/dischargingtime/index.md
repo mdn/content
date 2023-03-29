@@ -2,10 +2,6 @@
 title: BatteryManager.dischargingTime
 slug: Web/API/BatteryManager/dischargingTime
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
 browser-compat: api.BatteryManager.dischargingTime
 ---
 
@@ -39,7 +35,9 @@ A number.
 navigator.getBattery().then((battery) => {
   const time = battery.dischargingTime;
 
-  document.querySelector('#dischargingTime').textContent = `Remaining time to fully discharge the battery: ${time}`;
+  document.querySelector(
+    "#dischargingTime"
+  ).textContent = `Remaining time to fully discharge the battery: ${time}`;
 });
 ```
 

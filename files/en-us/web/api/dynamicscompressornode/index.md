@@ -2,14 +2,6 @@
 title: DynamicsCompressorNode
 slug: Web/API/DynamicsCompressorNode
 page-type: web-api-interface
-tags:
-  - API
-  - Audio
-  - DynamicsCompressorNode
-  - Interface
-  - Media
-  - Reference
-  - Web Audio API
 browser-compat: api.DynamicsCompressorNode
 ---
 
@@ -49,7 +41,7 @@ The `DynamicsCompressorNode` interface provides a compression effect, which lowe
 - {{domxref("DynamicsCompressorNode.DynamicsCompressorNode", "DynamicsCompressorNode()")}}
   - : Creates a new instance of an `DynamicsCompressorNode` object.
 
-## Properties
+## Instance properties
 
 _Inherits properties from its parent, {{domxref("AudioNode")}}_.
 
@@ -66,7 +58,7 @@ _Inherits properties from its parent, {{domxref("AudioNode")}}_.
 - {{domxref("DynamicsCompressorNode.release")}} {{ReadOnlyInline}}
   - : A [k-rate](/en-US/docs/Web/API/AudioParam#k-rate) {{domxref("AudioParam")}} representing the amount of time, in seconds, required to increase the gain by 10 dB.
 
-## Methods
+## Instance methods
 
 _No specific methods; inherits methods from its parent, {{domxref("AudioNode")}}_.
 

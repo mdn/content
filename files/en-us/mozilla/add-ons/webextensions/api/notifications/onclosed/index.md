@@ -1,16 +1,7 @@
 ---
 title: notifications.onClosed
 slug: Mozilla/Add-ons/WebExtensions/API/notifications/onClosed
-tags:
-  - API
-  - Add-ons
-  - Event
-  - Extensions
-  - Non-standard
-  - Notifications
-  - Reference
-  - WebExtensions
-  - onClosed
+page-type: webextension-api-event
 browser-compat: webextensions.api.notifications.onClosed
 ---
 
@@ -20,7 +11,7 @@ Fired when a notification is closed, either by the system or by the user.
 
 ## Syntax
 
-```js
+```js-nolint
 browser.notifications.onClosed.addListener(listener)
 browser.notifications.onClosed.removeListener(listener)
 browser.notifications.onClosed.hasListener(listener)
@@ -65,5 +56,3 @@ browser.notifications.onClosed.addListener((notificationId) => {
 {{WebExtExamples}}
 
 > **Note:** This API is based on Chromium's [`chrome.notifications`](https://developer.chrome.com/docs/extensions/reference/notifications/) API.
->
-> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.

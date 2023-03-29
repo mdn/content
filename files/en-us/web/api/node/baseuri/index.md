@@ -2,10 +2,6 @@
 title: Node.baseURI
 slug: Web/API/Node/baseURI
 page-type: web-api-instance-property
-tags:
-  - Node
-  - Property
-  - Read-only
 browser-compat: api.Node.baseURI
 ---
 
@@ -45,7 +41,7 @@ const output = document.querySelector("output");
 output.value = output.baseURI;
 ```
 
-{{EmbedLiveSample("Without <base>", "100%", 40)}}
+{{EmbedLiveSample("Without_base", "100%", 40)}}
 
 ### With \<base>
 
@@ -59,7 +55,7 @@ const output = document.querySelector("output");
 output.value = output.baseURI;
 ```
 
-{{EmbedLiveSample("With <base>", "100%", 40)}}
+{{EmbedLiveSample("With_base", "100%", 40)}}
 
 ## Specifications
 

@@ -2,12 +2,8 @@
 title: CSSPrimitiveValue.getRGBColorValue()
 slug: Web/API/CSSPrimitiveValue/getRGBColorValue
 page-type: web-api-instance-method
-tags:
-  - API
-  - CSSPrimitiveValue
-  - Method
-  - getRGBColorValue
-  - Deprecated
+status:
+  - deprecated
 browser-compat: api.CSSPrimitiveValue.getRGBColorValue
 ---
 
@@ -29,7 +25,7 @@ Modification to the corresponding style property can be achieved using the
 
 ## Syntax
 
-```js
+```js-nolint
 getRGBColorValue()
 ```
 

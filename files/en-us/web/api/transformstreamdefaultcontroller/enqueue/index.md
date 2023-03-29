@@ -2,12 +2,6 @@
 title: TransformStreamDefaultController.enqueue()
 slug: Web/API/TransformStreamDefaultController/enqueue
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - enqueue
-  - TransformStreamDefaultController
 browser-compat: api.TransformStreamDefaultController.enqueue
 ---
 
@@ -19,7 +13,7 @@ For more information on readable streams and chunks see [Using Readable Streams]
 
 ## Syntax
 
-```js
+```js-nolint
 enqueue(chunk)
 ```
 

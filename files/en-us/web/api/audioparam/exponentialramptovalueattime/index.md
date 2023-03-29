@@ -2,13 +2,6 @@
 title: AudioParam.exponentialRampToValueAtTime()
 slug: Web/API/AudioParam/exponentialRampToValueAtTime
 page-type: web-api-instance-method
-tags:
-  - API
-  - AudioParam
-  - Method
-  - Reference
-  - Web Audio API
-  - exponentialRampToValueAtTime
 browser-compat: api.AudioParam.exponentialRampToValueAtTime
 ---
 
@@ -27,7 +20,7 @@ _previous_ event, follows an exponential ramp to the new value given in the
 
 ## Syntax
 
-```js
+```js-nolint
 exponentialRampToValueAtTime(value, endTime)
 ```
 
@@ -56,10 +49,10 @@ useful for fade in/fade out effects:
 const audioCtx = new AudioContext();
 
 // set basic variables for example
-const myAudio = document.querySelector('audio');
+const myAudio = document.querySelector("audio");
 
-const expRampPlus = document.querySelector('.exp-ramp-plus');
-const expRampMinus = document.querySelector('.exp-ramp-minus');
+const expRampPlus = document.querySelector(".exp-ramp-plus");
+const expRampMinus = document.querySelector(".exp-ramp-minus");
 
 // Create a MediaElementAudioSourceNode
 // Feed the HTMLMediaElement into it
@@ -77,11 +70,11 @@ gainNode.connect(audioCtx.destination);
 // set buttons to do something onclick
 expRampPlus.onclick = () => {
   gainNode.gain.exponentialRampToValueAtTime(1.0, audioCtx.currentTime + 2);
-}
+};
 
 expRampMinus.onclick = () => {
   gainNode.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + 2);
-}
+};
 ```
 
 > **Note:** A value of 0.01 was used for the value to ramp down to in the

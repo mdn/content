@@ -1,9 +1,7 @@
 ---
 title: <defs>
 slug: Web/SVG/Element/defs
-tags:
-  - SVG
-  - SVG Container
+page-type: svg-element
 browser-compat: svg.elements.defs
 ---
 
@@ -16,7 +14,11 @@ Graphical objects can be referenced from anywhere, however, defining these objec
 ## Example
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html

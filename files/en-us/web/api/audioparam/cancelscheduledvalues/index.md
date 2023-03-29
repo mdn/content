@@ -2,13 +2,6 @@
 title: AudioParam.cancelScheduledValues()
 slug: Web/API/AudioParam/cancelScheduledValues
 page-type: web-api-instance-method
-tags:
-  - API
-  - AudioParam
-  - Method
-  - Reference
-  - Web Audio API
-  - cancelScheduledValues
 browser-compat: api.AudioParam.cancelScheduledValues
 ---
 
@@ -19,7 +12,7 @@ Interface cancels all scheduled future changes to the `AudioParam`.
 
 ## Syntax
 
-```js
+```js-nolint
 cancelScheduledValues(startTime)
 ```
 

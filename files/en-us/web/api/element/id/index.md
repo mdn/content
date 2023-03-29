@@ -2,12 +2,6 @@
 title: Element.id
 slug: Web/API/Element/id
 page-type: web-api-instance-property
-tags:
-  - API
-  - DOM
-  - Element
-  - Property
-  - Reference
 browser-compat: api.Element.id
 ---
 

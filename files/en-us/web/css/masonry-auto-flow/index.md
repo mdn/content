@@ -1,14 +1,9 @@
 ---
 title: masonry-auto-flow
 slug: Web/CSS/masonry-auto-flow
-tags:
-  - CSS
-  - Experimental
-  - CSS Property
-  - Reference
-  - grid
-  - masonry
-  - masonry-auto-flow
+page-type: css-property
+status:
+  - experimental
 browser-compat: css.properties.masonry-auto-flow
 ---
 
@@ -93,7 +88,7 @@ This property may take one of two forms:
 
 #item1 {
   background-color: lime;
-  height: 2em
+  height: 2em;
 }
 
 #item2 {
@@ -117,7 +112,7 @@ This property may take one of two forms:
 ```
 
 ```js
-const selectElem = document.querySelector('select');
+const selectElem = document.querySelector("select");
 
 function changeMasonryFlow() {
   const grid = document.getElementById("grid");
@@ -127,7 +122,7 @@ function changeMasonryFlow() {
   grid.style.masonryAutoFlow = masonryAutoFlow;
 }
 
-selectElem.addEventListener('change', changeMasonryFlow);
+selectElem.addEventListener("change", changeMasonryFlow);
 ```
 
 #### Result

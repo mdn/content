@@ -2,17 +2,6 @@
 title: ResizeObserverEntry.target
 slug: Web/API/ResizeObserverEntry/target
 page-type: web-api-instance-property
-tags:
-  - API
-  - Bounding Box
-  - Property
-  - Reference
-  - Resize Observer API
-  - ResizeObserver
-  - ResizeObserverEntry
-  - content box
-  - observers
-  - target
 browser-compat: api.ResizeObserverEntry.target
 ---
 
@@ -40,20 +29,27 @@ size.
 To grab a reference to the observed element so we can update its
 {{cssxref("border-radius")}} value after each change, we make use of the
 `target` property of each entry —
- `entry.target.style.borderRadius`.
+`entry.target.style.borderRadius`.
 
 ```js
 const resizeObserver = new ResizeObserver((entries) => {
   for (const entry of entries) {
     if (entry.contentBoxSize) {
-      entry.target.style.borderRadius = `${Math.min(100, (entry.contentBoxSize.inlineSize / 10) + (entry.contentBoxSize.blockSize / 10))}px`;
+      entry.target.style.borderRadius = `${Math.min(
+        100,
+        entry.contentBoxSize.inlineSize / 10 +
+          entry.contentBoxSize.blockSize / 10
+      )}px`;
     } else {
-      entry.target.style.borderRadius = `${Math.min(100, (entry.contentRect.width / 10) + (entry.contentRect.height / 10))}px`;
+      entry.target.style.borderRadius = `${Math.min(
+        100,
+        entry.contentRect.width / 10 + entry.contentRect.height / 10
+      )}px`;
     }
   }
 });
 
-resizeObserver.observe(document.querySelector('div'));
+resizeObserver.observe(document.querySelector("div"));
 ```
 
 ## Specifications

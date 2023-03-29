@@ -2,13 +2,6 @@
 title: MediaKeyStatusMap.keys()
 slug: Web/API/MediaKeyStatusMap/keys
 page-type: web-api-instance-method
-tags:
-  - API
-  - EncryptedMediaExtensions
-  - MediaKeyStatusMap
-  - Method
-  - Reference
-  - keys()
 browser-compat: api.MediaKeyStatusMap.keys
 ---
 
@@ -20,7 +13,7 @@ keys for each element in the status map, in insertion order.
 
 ## Syntax
 
-```js
+```js-nolint
 keys()
 ```
 

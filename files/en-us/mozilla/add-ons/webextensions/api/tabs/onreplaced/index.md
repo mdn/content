@@ -1,16 +1,7 @@
 ---
 title: tabs.onReplaced
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/onReplaced
-tags:
-  - API
-  - Add-ons
-  - Event
-  - Extensions
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - onReplaced
-  - tabs
+page-type: webextension-api-event
 browser-compat: webextensions.api.tabs.onReplaced
 ---
 
@@ -22,7 +13,7 @@ This event may not be relevant for or supported by browsers other than Chrome.
 
 ## Syntax
 
-```js
+```js-nolint
 browser.tabs.onReplaced.addListener(listener)
 browser.tabs.onReplaced.removeListener(listener)
 browser.tabs.onReplaced.hasListener(listener)
@@ -70,8 +61,6 @@ browser.tabs.onReplaced.addListener(handleReplaced);
 {{Compat}}
 
 > **Note:** This API is based on Chromium's [`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/tabs/#event-onReplaced) API. This documentation is derived from [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) in the Chromium code.
->
-> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

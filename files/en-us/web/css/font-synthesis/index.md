@@ -1,12 +1,7 @@
 ---
 title: font-synthesis
 slug: Web/CSS/font-synthesis
-tags:
-  - CSS
-  - CSS Fonts
-  - CSS Property
-  - Reference
-  - recipe:css-property
+page-type: css-property
 browser-compat: css.properties.font-synthesis
 ---
 
@@ -64,7 +59,7 @@ Most standard Western fonts include italic and bold variants, and some fonts inc
 
 ```html
 <em class="syn">Synthesize me! 站直。</em>
-<br/>
+<br />
 <em class="no-syn">Don't synthesize me! 站直。</em>
 ```
 

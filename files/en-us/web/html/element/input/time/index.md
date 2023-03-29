@@ -1,22 +1,11 @@
 ---
 title: <input type="time">
 slug: Web/HTML/Element/input/time
-tags:
-  - Element
-  - Forms
-  - HTML
-  - HTML Input Types
-  - HTML forms
-  - HTML input
-  - Input
-  - Input Element
-  - Input Type
-  - Reference
-  - Time
+page-type: html-element
 browser-compat: html.elements.input.type_time
 ---
 
-{{HTMLRef("Input_types")}}
+{{HTMLSidebar}}
 
 {{htmlelement("input")}} elements of type **`time`** create input fields designed to let the user easily enter a time (hours and minutes, and optionally seconds).
 
@@ -50,69 +39,24 @@ The Edge `time` control is somewhat more elaborate, opening up an hour and minut
 
 ![24-hour Edge time input](edge-time.png) 24-hour
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <td><strong><a href="#value">Value</a></strong></td>
-      <td>A string representing a time, or empty.</td>
-    </tr>
-    <tr>
-      <td><strong>Events</strong></td>
-      <td>
-        {{domxref("HTMLElement/change_event", "change")}} and
-        {{domxref("HTMLElement/input_event", "input")}}
-      </td>
-    </tr>
-    <tr>
-      <td><strong>Supported common attributes</strong></td>
-      <td>
-        {{htmlattrxref("autocomplete", "input")}},
-        {{htmlattrxref("list", "input")}},
-        {{htmlattrxref("readonly", "input")}}, and
-        {{htmlattrxref("step", "input")}}
-      </td>
-    </tr>
-    <tr>
-      <td><strong>IDL attributes</strong></td>
-      <td>
-        <code>value</code>, <code>valueAsDate</code>,
-        <code>valueAsNumber</code>, and <code>list</code>.
-      </td>
-    </tr>
-    <tr>
-      <td><strong>DOM interface</strong></td>
-      <td><p>{{domxref("HTMLInputElement")}}</p></td>
-    </tr>
-    <tr>
-      <td><strong>Methods</strong></td>
-      <td>
-        {{domxref("HTMLInputElement.select", "select()")}},
-        {{domxref("HTMLInputElement.stepDown", "stepDown()")}},
-        and
-        {{domxref("HTMLInputElement.stepUp", "stepUp()")}}.
-      </td>
-    </tr>
-  </tbody>
-</table>
-
 ## Value
 
 A string containing the value of the time entered into the input.
 
 ### Setting the value attribute
 
-You can set a default value for the input by including a valid time in the {{htmlattrxref("value", "input")}} attribute when creating the `<input>` element, like so:
+You can set a default value for the input by including a valid time in the [`value`](/en-US/docs/Web/HTML/Element/input#value) attribute when creating the `<input>` element, like so:
 
 ```html
 <label for="appt-time">Choose an appointment time: </label>
-<input id="appt-time" type="time" name="appt-time" value="13:30">
+<input id="appt-time" type="time" name="appt-time" value="13:30" />
 ```
 
 {{ EmbedLiveSample('Setting_the_value_attribute', 600, 60) }}
 
 ### Setting the value using JavaScript
 
-You can also get and set the date value in JavaScript using the {{domxref("HTMLInputElement")}} `value` property, for example:
+You can also get and set the time value in JavaScript using the {{domxref("HTMLInputElement")}} `value` property, for example:
 
 ```js
 const timeControl = document.querySelector('input[type="time"]');
@@ -121,7 +65,7 @@ timeControl.value = '15:30';
 
 ### Time value format
 
-The `value` of the `time` input is always in 24-hour format that includes leading zeros: `hh:mm`, regardless of the input format, which is likely to be selected based on the user's locale (or by the user agent). If the time includes seconds (see [Using the step attribute](#using_the_step_attribute)), the format is always `hh:mm:ss`. You can learn more about the format of the time value used by this input type in {{SectionOnPage("/en-US/docs/Web/HTML/Date_and_time_formats", "Time strings")}}.
+The `value` of the `time` input is always in 24-hour format that includes leading zeros: `hh:mm`, regardless of the input format, which is likely to be selected based on the user's locale (or by the user agent). If the time includes seconds (see [Using the step attribute](#using_the_step_attribute)), the format is always `hh:mm:ss`. You can learn more about the format of the time value used by this input type in [Time strings](/en-US/docs/Web/HTML/Date_and_time_formats#time_strings).
 
 In this example, you can see the time input's value by entering a time and seeing how it changes afterward.
 
@@ -130,10 +74,10 @@ First, a look at the HTML. This is simple enough, with the label and input as we
 ```html
 <form>
   <label for="startTime">Start time: </label>
-  <input type="time" id="startTime">
+  <input type="time" id="startTime" />
   <p>
-    Value of the <code>time</code> input: <code>
-            "<span id="value">n/a</span>"</code>.
+    Value of the <code>time</code> input:
+    <code> "<span id="value">n/a</span>"</code>.
   </p>
 </form>
 ```
@@ -161,7 +105,7 @@ In addition to the attributes common to all {{HTMLElement("input")}} elements, `
 
 ### list
 
-The values of the list attribute is the {{domxref("Element.id", "id")}} of a {{HTMLElement("datalist")}} element located in the same document. The {{HTMLElement("datalist")}} provides a list of predefined values to suggest to the user for this input. Any values in the list that are not compatible with the {{htmlattrxref("type", "input")}} are not included in the suggested options. The values provided are suggestions, not requirements: users can select from this predefined list or provide a different value.
+The values of the list attribute is the {{domxref("Element.id", "id")}} of a {{HTMLElement("datalist")}} element located in the same document. The {{HTMLElement("datalist")}} provides a list of predefined values to suggest to the user for this input. Any values in the list that are not compatible with the [`type`](/en-US/docs/Web/HTML/Element/input#type) are not included in the suggested options. The values provided are suggestions, not requirements: users can select from this predefined list or provide a different value.
 
 ### max
 
@@ -179,7 +123,7 @@ A Boolean attribute which, if present, means this field cannot be edited by the 
 
 ### step
 
-The `step` attribute is a number that specifies the granularity that the value must adhere to, or the special value `any`, which is described below. Only values which are equal to the basis for stepping ([`min`](#min) if specified, {{htmlattrxref("value", "input")}} otherwise, and an appropriate default value if neither of those is provided) are valid.
+The `step` attribute is a number that specifies the granularity that the value must adhere to, or the special value `any`, which is described below. Only values which are equal to the basis for stepping ([`min`](#min) if specified, [`value`](/en-US/docs/Web/HTML/Element/input#value) otherwise, and an appropriate default value if neither of those is provided) are valid.
 
 A string value of `any` means that no stepping is implied, and any value is allowed (barring other constraints, such as [`min`](#min) and [`max`](#max)).
 
@@ -198,7 +142,7 @@ The simplest use of `<input type="time">` involves a basic `<input>` and {{htmle
 ```html
 <form>
   <label for="appt-time">Choose an appointment time: </label>
-  <input id="appt-time" type="time" name="appt-time">
+  <input id="appt-time" type="time" name="appt-time" />
 </form>
 ```
 
@@ -206,11 +150,11 @@ The simplest use of `<input type="time">` involves a basic `<input>` and {{htmle
 
 ### Controlling input size
 
-`<input type="time">` doesn't support form sizing attributes such as {{htmlattrxref("size", "input")}}, since times are always about the same number of characters long. You'll have to resort to [CSS](/en-US/docs/Web/CSS) for sizing needs.
+`<input type="time">` doesn't support form sizing attributes such as [`size`](/en-US/docs/Web/HTML/Element/input#size), since times are always about the same number of characters long. You'll have to resort to [CSS](/en-US/docs/Web/CSS) for sizing needs.
 
 ### Using the step attribute
 
-You can use the {{htmlattrxref("step", "input")}} attribute to vary the amount of time jumped whenever the time is incremented or decremented (for example, so the time moves by 10 minutes at a time when clicking the little arrow widgets).
+You can use the [`step`](/en-US/docs/Web/HTML/Element/input#step) attribute to vary the amount of time jumped whenever the time is incremented or decremented (for example, so the time moves by 10 minutes at a time when clicking the little arrow widgets).
 
 > **Note:** This property has some strange effects across browsers, so is not completely reliable.
 
@@ -219,7 +163,7 @@ It takes an integer value that equates to the number of seconds you want to incr
 ```html
 <form>
   <label for="appt-time">Choose an appointment time: </label>
-  <input id="appt-time" type="time" name="appt-time" step="2">
+  <input id="appt-time" type="time" name="appt-time" step="2" />
 </form>
 ```
 
@@ -239,20 +183,21 @@ By default, `<input type="time">` does not apply any validation to entered value
 
 ### Setting maximum and minimum times
 
-You can use the {{htmlattrxref("min", "input")}} and {{htmlattrxref("max", "input")}} attributes to restrict the valid times that can be chosen by the user. In the following example we are setting a minimum time of `12:00` and a maximum time of `18:00`:
+You can use the [`min`](/en-US/docs/Web/HTML/Element/input#min) and [`max`](/en-US/docs/Web/HTML/Element/input#max) attributes to restrict the valid times that can be chosen by the user. In the following example we are setting a minimum time of `12:00` and a maximum time of `18:00`:
 
 ```html
 <form>
-  <label for="appt-time">Choose an appointment time (opening hours 12:00 to 18:00): </label>
-  <input id="appt-time" type="time" name="appt-time"
-         min="12:00" max="18:00">
+  <label for="appt-time">
+    Choose an appointment time (opening hours 12:00 to 18:00):
+  </label>
+  <input id="appt-time" type="time" name="appt-time" min="12:00" max="18:00" />
   <span class="validity"></span>
 </form>
 ```
 
 {{ EmbedLiveSample('Setting_maximum_and_minimum_times', 600, 40) }}
 
-Here's the CSS used in the above example. Here we make use of the {{cssxref(":valid")}} and {{cssxref(":invalid")}} CSS properties to style the input based on whether or not the current value is valid. We had to put the icons on a {{htmlelement("span")}} next to the input, not on the input itself, because in Chrome the generated content is placed inside the form control, and can't be styled or shown effectively.
+Here's the CSS used in the above example. Here we make use of the {{cssxref(":valid")}} and {{cssxref(":invalid")}} CSS properties to style the input based on whether the current value is valid. We had to put the icons on a {{htmlelement("span")}} next to the input, not on the input itself, because in Chrome the generated content is placed inside the form control, and can't be styled or shown effectively.
 
 ```css
 div {
@@ -288,7 +233,7 @@ The result here is that:
 
 #### Making min and max cross midnight
 
-By setting a {{htmlattrxref("min", "input")}} attribute greater than the {{htmlattrxref("max", "input")}} attribute, the valid time range will wrap around midnight to produce a valid time range which crosses midnight. This functionality is not supported by any other input types. While this feature is [in the HTML spec](https://html.spec.whatwg.org/multipage/input.html#has-a-reversed-range), it is not yet universally supported. Chrome-based browsers support it starting in version 82 and Firefox added it in version 76. Safari as of version 14.1 does not support this. Be prepared for this situation to arise:
+By setting a [`min`](/en-US/docs/Web/HTML/Element/input#min) attribute greater than the [`max`](/en-US/docs/Web/HTML/Element/input#max) attribute, the valid time range will wrap around midnight to produce a valid time range which crosses midnight. This functionality is not supported by any other input types. While this feature is [in the HTML spec](https://html.spec.whatwg.org/multipage/input.html#has-a-reversed-range), it is not yet universally supported. Chrome-based browsers support it starting in version 82 and Firefox added it in version 76. Safari as of version 14.1 does not support this. Be prepared for this situation to arise:
 
 ```js
 const input = document.createElement('input');
@@ -306,20 +251,27 @@ if (input.validity.valid && input.type === 'time') {
 
 ### Making times required
 
-In addition, you can use the {{htmlattrxref("required", "input")}} attribute to make filling in the time mandatory. As a result, supporting browsers will display an error if you try to submit a time that is outside the set bounds, or an empty time field.
+In addition, you can use the [`required`](/en-US/docs/Web/HTML/Element/input#required) attribute to make filling in the time mandatory. As a result, supporting browsers will display an error if you try to submit a time that is outside the set bounds, or an empty time field.
 
 Let's look at an example; here we've set minimum and maximum times, and also made the field required:
 
 ```html
 <form>
   <div>
-    <label for="appt-time">Choose an appointment time (opening hours 12:00 to 18:00): </label>
-    <input id="appt-time" type="time" name="appt-time"
-           min="12:00" max="18:00" required>
+    <label for="appt-time">
+      Choose an appointment time (opening hours 12:00 to 18:00):
+    </label>
+    <input
+      id="appt-time"
+      type="time"
+      name="appt-time"
+      min="12:00"
+      max="18:00"
+      required />
     <span class="validity"></span>
   </div>
   <div>
-      <input type="submit" value="Submit form">
+    <input type="submit" value="Submit form" />
   </div>
 </form>
 ```
@@ -334,7 +286,7 @@ If you try to submit the form with an incomplete time (or with a time outside th
 
 As mentioned, older versions of Safari and a few other, less common, browsers don't support time inputs natively. In general, otherwise, support is good — especially on mobile platforms, which tend to have very nice user interfaces for specifying a time value. For example, the `time` picker on Chrome for Android looks like this:
 
-![Phone screen showing modal dialog with 10:21 as a header. the 10 is fully opaque. The 21 is not. the main area has a circle with the numbers 1 - 12 in a ring, and the number 13 -24 on an inner ring. The number 10 is highlighted with a blue circle. The buttons at the bottom are clear, cancel, and set.](chrome-android-time.png)
+![Phone screen showing modal dialog with 10:21 as a header. The 10 is fully opaque. The 21 is not. The main area has a circle with the numbers 1 - 12 in a ring, and the number 13 -24 on an inner ring. The number 10 is highlighted with a blue circle. The buttons at the bottom are clear, cancel, and set.](chrome-android-time.png)
 
 Browsers that don't support time inputs gracefully degrade to a text input, but this creates problems both in terms of consistency of user interface (the presented control will be different), and data handling.
 
@@ -346,19 +298,26 @@ The second problem is the more serious; as mentioned previously, `time` inputs' 
 - `3 o'clock in the afternoon`
 - etc.
 
-One way around this is to put a {{htmlattrxref("pattern", "input")}} attribute on your `time` input. Even though the `time` input doesn't use it, the `text` input fallback will. For example, try viewing the following demo in a browser that doesn't support time inputs:
+One way around this is to put a [`pattern`](/en-US/docs/Web/HTML/Element/input#pattern) attribute on your `time` input. Even though the `time` input doesn't use it, the `text` input fallback will. For example, try viewing the following demo in a browser that doesn't support time inputs:
 
 ```html
 <form>
   <div>
-    <label for="appt-time">Choose an appointment time (opening hours 12:00 to 18:00): </label>
-    <input id="appt-time" type="time" name="appt-time"
-           min="12:00" max="18:00" required
-           pattern="[0-9]{2}:[0-9]{2}">
+    <label for="appt-time">
+      Choose an appointment time (opening hours 12:00 to 18:00):
+    </label>
+    <input
+      id="appt-time"
+      type="time"
+      name="appt-time"
+      min="12:00"
+      max="18:00"
+      required
+      pattern="[0-9]{2}:[0-9]{2}" />
     <span class="validity"></span>
   </div>
   <div>
-      <input type="submit" value="Submit form">
+    <input type="submit" value="Submit form" />
   </div>
 </form>
 ```
@@ -409,23 +368,30 @@ The HTML looks like so:
 ```html
 <form>
   <div class="nativeTimePicker">
-    <label for="appt-time">Choose an appointment time (opening hours 12:00 to 18:00): </label>
-      <input id="appt-time" type="time" name="appt-time"
-             min="12:00" max="18:00" required>
-      <span class="validity"></span>
-    </div>
-  <p class="fallbackLabel">Choose an appointment time (opening hours 12:00 to 18:00):</p>
+    <label for="appt-time">
+      Choose an appointment time (opening hours 12:00 to 18:00):
+    </label>
+    <input
+      id="appt-time"
+      type="time"
+      name="appt-time"
+      min="12:00"
+      max="18:00"
+      required />
+    <span class="validity"></span>
+  </div>
+  <p class="fallbackLabel">
+    Choose an appointment time (opening hours 12:00 to 18:00):
+  </p>
   <div class="fallbackTimePicker">
     <div>
       <span>
         <label for="hour">Hour:</label>
-        <select id="hour" name="hour">
-        </select>
+        <select id="hour" name="hour"></select>
       </span>
       <span>
         <label for="minute">Minute:</label>
-        <select id="minute" name="minute">
-        </select>
+        <select id="minute" name="minute"></select>
       </span>
     </div>
   </div>
@@ -476,7 +442,7 @@ const minuteSelect = document.querySelector('#minute');
 fallbackPicker.style.display = 'none';
 fallbackLabel.style.display = 'none';
 
-// Test whether a new date input falls back to a text input or not
+// Test whether a new time input falls back to a text input or not
 const test = document.createElement('input');
 
 try {
@@ -526,6 +492,57 @@ function populateMinutes() {
  hourSelect.onchange = setMinutesToZero;
  minuteSelect.onchange = setMinutesToZero;
 ```
+
+## Technical Summary
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <td><strong><a href="#value">Value</a></strong></td>
+      <td>A string representing a time, or empty.</td>
+    </tr>
+    <tr>
+      <td><strong>Events</strong></td>
+      <td>
+        {{domxref("HTMLElement/change_event", "change")}} and
+        {{domxref("HTMLElement/input_event", "input")}}
+      </td>
+    </tr>
+    <tr>
+      <td><strong>Supported common attributes</strong></td>
+      <td>
+        <a href="/en-US/docs/Web/HTML/Element/input#autocomplete"><code>autocomplete</code></a>,
+        <a href="/en-US/docs/Web/HTML/Element/input#list"><code>list</code></a>,
+        <a href="/en-US/docs/Web/HTML/Element/input#readonly"><code>readonly</code></a>, and
+        <a href="/en-US/docs/Web/HTML/Element/input#step"><code>step</code></a>
+      </td>
+    </tr>
+    <tr>
+      <td><strong>IDL attributes</strong></td>
+      <td>
+        <code>value</code>, <code>valueAsDate</code>,
+        <code>valueAsNumber</code>, and <code>list</code>.
+      </td>
+    </tr>
+    <tr>
+      <td><strong>DOM interface</strong></td>
+      <td><p>{{domxref("HTMLInputElement")}}</p></td>
+    </tr>
+    <tr>
+      <td><strong>Methods</strong></td>
+      <td>
+        {{domxref("HTMLInputElement.select", "select()")}},
+        {{domxref("HTMLInputElement.stepDown", "stepDown()")}},
+        and
+        {{domxref("HTMLInputElement.stepUp", "stepUp()")}}.
+      </td>
+    </tr>
+     <tr>
+      <td><strong>Implicit ARIA Role</strong></td>
+      <td><a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"><code>no corresponding role</code></a></td>
+    </tr>
+  </tbody>
+</table>
 
 ## Specifications
 

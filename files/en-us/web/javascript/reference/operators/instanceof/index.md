@@ -1,26 +1,19 @@
 ---
 title: instanceof
 slug: Web/JavaScript/Reference/Operators/instanceof
-tags:
-  - JavaScript
-  - Language feature
-  - Object
-  - Operator
-  - Prototype
-  - Relational Operators
-  - instanceof
+page-type: javascript-operator
 browser-compat: javascript.operators.instanceof
 ---
 
 {{jsSidebar("Operators")}}
 
-The **`instanceof` operator** tests to see if the `prototype` property of a constructor appears anywhere in the prototype chain of an object. The return value is a boolean value. Its behavior can be customized with [`Symbol.hasInstance`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/hasInstance).
+The **`instanceof`** operator tests to see if the `prototype` property of a constructor appears anywhere in the prototype chain of an object. The return value is a boolean value. Its behavior can be customized with [`Symbol.hasInstance`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/hasInstance).
 
 {{EmbedInteractiveExample("pages/js/expressions-instanceof.html")}}
 
 ## Syntax
 
-```js
+```js-nolint
 object instanceof constructor
 ```
 
@@ -38,7 +31,7 @@ object instanceof constructor
 
 ## Description
 
-The `instanceof` operator tests the presence of `constructor.prototype` in `object`'s prototype chain. This usually means `object` was constructed with `constructor`.
+The `instanceof` operator tests the presence of `constructor.prototype` in `object`'s prototype chain. This usually (though [not always](#overriding_the_behavior_of_instanceof)) means `object` was constructed with `constructor`.
 
 ```js
 // defining constructors
@@ -94,6 +87,16 @@ o2 instanceof A;
 o2 instanceof B;
 ```
 
+For [bound functions](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/bind), `instanceof` looks up for the `prototype` property on the target function, since bound functions don't have `prototype`.
+
+```js
+class Base {}
+const BoundBase = Base.bind(null, 1, 2);
+console.log(new Base() instanceof BoundBase); // true
+```
+
+### instanceof and @@hasInstance
+
 If `constructor` has a [`Symbol.hasInstance`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/hasInstance) method, the method will be called in priority, with `object` as its only argument and `constructor` as `this`.
 
 ```js
@@ -109,14 +112,6 @@ class Forgeable {
 
 const obj = { [Forgeable.isInstanceFlag]: true };
 console.log(obj instanceof Forgeable); // true
-```
-
-For [bound functions](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/bind), `instanceof` looks up for the `prototype` property on the target function, since bound functions don't have `prototype`.
-
-```js
-class Base {}
-const BoundBase = Base.bind(null, 1, 2);
-console.log(new Base() instanceof BoundBase); // true
 ```
 
 ### instanceof and multiple realms
@@ -224,6 +219,72 @@ if (!mycar instanceof Car) {
 ```
 
 This will always be `false`. (`!mycar` will be evaluated before `instanceof`, so you always try to know if a boolean is an instance of `Car`).
+
+### Overriding the behavior of instanceof
+
+A common pitfall of using `instanceof` is believing that, if `x instanceof C`, then `x` was created using `C` as constructor. This is not true, because `x` could be directly assigned with `C.prototype` as its prototype. In this case, if your code reads [private fields](/en-US/docs/Web/JavaScript/Reference/Classes/Private_class_fields) of `C` from `x`, it would still fail:
+
+```js
+class C {
+  #value = "foo";
+  static getValue(x) {
+    return x.#value;
+  }
+}
+
+const x = { __proto__: C.prototype };
+
+if (x instanceof C) {
+  console.log(C.getValue(x)); // TypeError: Cannot read private member #value from an object whose class did not declare it
+}
+```
+
+To avoid this, you can override the behavior of `instanceof` by adding a `Symbol.hasInstance` method to `C`, so that it does a branded check with [`in`](/en-US/docs/Web/JavaScript/Reference/Operators/in):
+
+```js
+class C {
+  #value = "foo";
+
+  static [Symbol.hasInstance](x) {
+    return #value in x;
+  }
+
+  static getValue(x) {
+    return x.#value;
+  }
+}
+
+const x = { __proto__: C.prototype };
+
+if (x instanceof C) {
+  // Doesn't run, because x is not a C
+  console.log(C.getValue(x));
+}
+```
+
+Note that you may want to limit this behavior to the current class; otherwise, it could lead to false positives for subclasses:
+
+```js
+class D extends C {}
+console.log(new C() instanceof D); // true; because D inherits @@hasInstance from C
+```
+
+You could do this by checking that `this` is the current constructor:
+
+```js
+class C {
+  #value = "foo";
+
+  static [Symbol.hasInstance](x) {
+    return this === C && #value in x;
+  }
+}
+
+class D extends C {}
+console.log(new C() instanceof D); // false
+console.log(new C() instanceof C); // true
+console.log({ __proto__: C.prototype } instanceof C); // false
+```
 
 ## Specifications
 

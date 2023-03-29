@@ -1,12 +1,7 @@
 ---
 title: Number.prototype.valueOf()
 slug: Web/JavaScript/Reference/Global_Objects/Number/valueOf
-tags:
-  - JavaScript
-  - Method
-  - Number
-  - Prototype
-  - Reference
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.Number.valueOf
 ---
 
@@ -19,7 +14,7 @@ of a {{jsxref("Number")}} object.
 
 ## Syntax
 
-```js
+```js-nolint
 valueOf()
 ```
 

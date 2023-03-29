@@ -2,9 +2,6 @@
 title: CharacterData.replaceData()
 slug: Web/API/CharacterData/replaceData
 page-type: web-api-instance-method
-tags:
-  - Method
-  - Reference
 browser-compat: api.CharacterData.replaceData
 ---
 
@@ -14,7 +11,7 @@ The **`replaceData()`** method of the {{domxref("CharacterData")}} interface rem
 
 ## Syntax
 
-```js
+```js-nolint
 characterData.replaceData(offset, count, data)
 ```
 

@@ -1,12 +1,6 @@
 ---
 title: Progressive loading
 slug: Web/Progressive_web_apps/Loading
-tags:
-  - Loading
-  - PWAs
-  - Progressive web apps
-  - js13kGames
-  - progressive
 ---
 
 {{PreviousMenu("Web/Progressive_web_apps/Re-engageable_Notifications_Push", "Web/Progressive_web_apps")}}
@@ -50,11 +44,11 @@ document.getElementById("open-search").addEventListener("click", async () => {
 
 Once the user clicks on the button, the async click handler is called. The function waits till the module is loaded, then calls the `loadAutoComplete()` function exported from that module. The `search.js` module is therefore only downloaded, parsed, and executed when the interaction happens.
 
-We can also split css files and add media types to them:
+We can also split CSS files and add media types to them:
 
 ```html
-<link rel="stylesheet" href="style.css">
-<link rel="stylesheet" href="print.css" media="print">
+<link rel="stylesheet" href="style.css" />
+<link rel="stylesheet" href="print.css" media="print" />
 ```
 
 This will tell the browser to load them only when the condition is met.
@@ -72,7 +66,7 @@ This can be optimized. First of all, you should use tools or services similar to
 Instead of having all the screenshots of games referenced in `<img>` element `src` attributes, which will force the browser to download them automatically, we can do it selectively via JavaScript. The js13kPWA app uses a placeholder image instead, which is small and lightweight, while the final paths to target images are stored in `data-src` attributes:
 
 ```html
-<img src="data/img/placeholder.png" data-src="data/img/SLUG.jpg" alt="NAME">
+<img src="data/img/placeholder.png" data-src="data/img/SLUG.jpg" alt="NAME" />
 ```
 
 Those images will be loaded via JavaScript _after_ the site finishes building the HTML structure. The placeholder image is scaled the same way the original images are, so it will take up the same space and not cause the layout to repaint as the images load.
@@ -82,11 +76,11 @@ Those images will be loaded via JavaScript _after_ the site finishes building th
 The `app.js` file processes the `data-src` attributes like so:
 
 ```js
-let imagesToLoad = document.querySelectorAll('img[data-src]');
+let imagesToLoad = document.querySelectorAll("img[data-src]");
 const loadImages = (image) => {
-  image.setAttribute('src', image.getAttribute('data-src'));
+  image.setAttribute("src", image.getAttribute("data-src"));
   image.onload = () => {
-    image.removeAttribute('data-src');
+    image.removeAttribute("data-src");
   };
 };
 ```
@@ -124,14 +118,18 @@ This will remove the blur effect within half a second, which looks good enough f
 
 The image loading mechanism discussed in the above section works OK — it loads the images after rendering the HTML structure, and applies a nice transition effect in the process. The problem is that it still loads _all_ the images at once, even though the user will only see the first two or three upon page load.
 
-This problem can be solved by loading the images only when needed: this is called _lazy loading_. [Lazy loading](https://developer.mozilla.org/en-US/docs/Web/Performance/Lazy_loading) is a technique to load images only when they appear in the viewport. There are several ways to tell the browser to lazy load images.
+This problem can be solved by loading the images only when needed: this is called _lazy loading_. [Lazy loading](/en-US/docs/Web/Performance/Lazy_loading) is a technique to load images only when they appear in the viewport. There are several ways to tell the browser to lazy load images.
 
 ### The loading attribute on \<img>
 
-The easiest way to tell the browser to load lazily doesn't involve JavaScript. You add the [`loading`](/en-US/docs/Web/HTML/Element/img#attr-loading) attribute to an {{HTMLElement("img")}} element with the value `lazy`, and the browser will know to load this image only when needed.
+The easiest way to tell the browser to load lazily doesn't involve JavaScript. You add the [`loading`](/en-US/docs/Web/HTML/Element/img#loading) attribute to an {{HTMLElement("img")}} element with the value `lazy`, and the browser will know to load this image only when needed.
 
 ```html
-<img src="data/img/placeholder.png" data-src="data/img/SLUG.jpg" alt="NAME" loading="lazy">
+<img
+  src="data/img/placeholder.png"
+  data-src="data/img/SLUG.jpg"
+  alt="NAME"
+  loading="lazy" />
 ```
 
 ### Intersection Observer
@@ -141,7 +139,7 @@ This is a progressive enhancement to the previously working example — [Interse
 Here's what the relevant code looks like:
 
 ```js
-if ('IntersectionObserver' in window) {
+if ("IntersectionObserver" in window) {
   const observer = new IntersectionObserver((items, observer) => {
     items.forEach((item) => {
       if (item.isIntersecting) {
@@ -174,7 +172,7 @@ We could rewrite the loading process to load not only the images, but the comple
 
 ## Conclusion
 
-Less files to load initially, smaller files split into modules, use of placeholders, and loading more content on demand — this will help achieve faster initial load times, which brings benefits to the app creator and offers a smoother experience to the user.
+Fewer files to load initially, smaller files split into modules, use of placeholders, and loading more content on demand — this will help achieve faster initial load times, which brings benefits to the app creator and offers a smoother experience to the user.
 
 Remember about the progressive enhancement approach — offer a usable product no matter the device or platform, but be sure to enrich the experience to those using modern browsers.
 

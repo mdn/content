@@ -1,15 +1,6 @@
 ---
-title: 'ARIA: switch role'
+title: "ARIA: switch role"
 slug: Web/Accessibility/ARIA/Roles/switch_role
-tags:
-  - ARIA
-  - ARIA Role
-  - Accessibility
-  - On/Off
-  - Reference
-  - Switch
-  - a11y
-  - toggle
 spec-urls:
   - https://w3c.github.io/aria/#switch
   - https://w3c.github.io/html-aria/#index-aria-switch
@@ -20,10 +11,14 @@ The ARIA **`switch`** role is functionally identical to the [checkbox](/en-US/do
 This example creates a widget and assigns the ARIA `switch` role to it.
 
 ```html
-<button type="button" role="switch" aria-checked="true"
-    id="speakerPower" class="switch">
-    <span aria-hidden="true">off</span>
-    <span aria-hidden="true">on</span>
+<button
+  type="button"
+  role="switch"
+  aria-checked="true"
+  id="speakerPower"
+  class="switch">
+  <span aria-hidden="true">off</span>
+  <span aria-hidden="true">on</span>
 </button>
 <label for="speakerPower" class="switch">Speaker power</label>
 ```
@@ -99,8 +94,7 @@ This simple example just creates a widget and assigns the ARIA `switch` role to 
 The HTML is fairly simple here. The switch is implemented as a {{HTMLElement("button")}} element which is initially checked courtesy of its `aria-checked` attribute being set to `"true"`. The switch has two child elements containing the "off" and "on" labels and is followed by a {{HTMLElement("label")}} identifying the switch.
 
 ```html
-<button role="switch" aria-checked="true"
-      id="speakerPower" class="switch">
+<button role="switch" aria-checked="true" id="speakerPower" class="switch">
   <span>off</span>
   <span>on</span>
 </button>
@@ -112,17 +106,17 @@ The HTML is fairly simple here. The switch is implemented as a {{HTMLElement("bu
 This JavaScript code defines and applies a function to handle click events on switch widgets. The function changes the `aria-checked` attribute from `true` to `false`, or vice versa.
 
 ```js
-document.querySelectorAll(".switch").forEach(function(theSwitch) {
+document.querySelectorAll(".switch").forEach((theSwitch) => {
   theSwitch.addEventListener("click", handleClickEvent, false);
 });
 
 function handleClickEvent(evt) {
-  let el = evt.target;
+  const el = evt.target;
 
   if (el.getAttribute("aria-checked") === "true") {
-      el.setAttribute("aria-checked", "false");
+    el.setAttribute("aria-checked", "false");
   } else {
-      el.setAttribute("aria-checked", "true");
+    el.setAttribute("aria-checked", "true");
   }
 }
 ```
@@ -192,6 +186,6 @@ The result looks like this:
 
 1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
 
-    {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
+   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
 
 </section>

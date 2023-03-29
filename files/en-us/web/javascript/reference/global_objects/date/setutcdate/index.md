@@ -1,12 +1,7 @@
 ---
 title: Date.prototype.setUTCDate()
 slug: Web/JavaScript/Reference/Global_Objects/Date/setUTCDate
-tags:
-  - Date
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.Date.setUTCDate
 ---
 
@@ -20,7 +15,7 @@ To instead change the day of the month for a given {{jsxref("Date")}} instance b
 
 ## Syntax
 
-```js
+```js-nolint
 setUTCDate(dayValue)
 ```
 

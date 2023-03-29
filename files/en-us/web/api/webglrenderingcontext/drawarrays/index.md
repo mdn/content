@@ -2,12 +2,6 @@
 title: WebGLRenderingContext.drawArrays()
 slug: Web/API/WebGLRenderingContext/drawArrays
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.drawArrays
 ---
 
@@ -17,7 +11,7 @@ The **`WebGLRenderingContext.drawArrays()`** method of the [WebGL API](/en-US/do
 
 ## Syntax
 
-```js
+```js-nolint
 drawArrays(mode, first, count)
 ```
 

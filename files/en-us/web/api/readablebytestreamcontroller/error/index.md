@@ -2,13 +2,6 @@
 title: ReadableByteStreamController.error()
 slug: Web/API/ReadableByteStreamController/error
 page-type: web-api-instance-method
-tags:
-  - API
-  - Error
-  - Method
-  - ReadableByteStreamController
-  - Reference
-  - Streams
 browser-compat: api.ReadableByteStreamController.error
 ---
 
@@ -21,7 +14,7 @@ It can also be called from elsewhere to trigger a stream error, for example if a
 
 ## Syntax
 
-```js
+```js-nolint
 error(errorObject)
 ```
 

@@ -2,24 +2,6 @@
 title: XRRigidTransform
 slug: Web/API/XRRigidTransform
 page-type: web-api-interface
-tags:
-  - API
-  - AR
-  - Interface
-  - Reality
-  - Reference
-  - Reference Space
-  - VR
-  - Virtual
-  - WebXR
-  - WebXR API
-  - WebXR Device API
-  - XR
-  - XRReferenceSpace
-  - XRRigidTransform
-  - augmented
-  - space
-  - transform
 browser-compat: api.XRRigidTransform
 ---
 
@@ -41,7 +23,7 @@ Using `XRRigidTransform` in these places rather than bare arrays that provide th
 - {{domxref("XRRigidTransform.XRRigidTransform", "new XRRigidTransform()")}}
   - : Creates a new `XRRigidTransform` object which represents a transform that applies a specified position and/or orientation.
 
-## Properties
+## Instance properties
 
 - {{DOMxRef("XRRigidTransform.position")}} {{ReadOnlyInline}}
   - : A {{DOMxRef("DOMPointReadOnly")}} specifying a 3-dimensional point, expressed in meters, describing the translation component of the transform. The {{DOMxRef("DOMPointReadonly.w", "w")}} property is always `1.0`.

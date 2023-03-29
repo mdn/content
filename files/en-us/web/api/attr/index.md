@@ -2,9 +2,6 @@
 title: Attr
 slug: Web/API/Attr
 page-type: web-api-interface
-tags:
-  - Interface
-  - Reference
 browser-compat: api.Attr
 ---
 
@@ -19,14 +16,14 @@ The core idea of an object of type `Attr` is the association between a _name_ an
 The name is deemed _local_ when it ignores the eventual namespace prefix and deemed _qualified_ when it includes the prefix of the namespace, if any, separated from the local name by a colon (`:`). We have three cases: an attribute outside of a namespace, an attribute inside a namespace without a prefix defined, an attribute inside a namespace with a prefix:
 
 | Attribute | Namespace name | Namespace prefix | Attribute local name | Attribute qualified name |
-|-----------|----------------|------------------|----------------------|--------------------------|
+| --------- | -------------- | ---------------- | -------------------- | ------------------------ |
 | `myAttr`  | _none_         | _none_           | `myAttr`             | `myAttr`                 |
 | `myAttr`  | `mynamespace`  | _none_           | `myAttr`             | `myAttr`                 |
 | `myAttr`  | `mynamespace`  | `myns`           | `myAttr`             | `myns:myAttr`            |
 
 > **Note:** This interface represents only attributes present in the tree representation of the {{domxref("Element")}}, being a SVG, an HTML or a MathML element. It doesn't represent the _property_ of an interface associated with such element, such as {{domxref("HTMLTableElement")}} for a {{HTMLElement("table")}} element. (See {{Glossary("Attribute", "this article")}} for more information about attributes and how they are _reflected_ into properties.)
 
-## Properties
+## Instance properties
 
 _This interface also inherits the properties of its parent interfaces, {{domxref("Node")}} and {{domxref("EventTarget")}}._
 
@@ -45,7 +42,7 @@ _This interface also inherits the properties of its parent interfaces, {{domxref
 - {{domxref("Attr.value", "value")}}
   - : The attribute's value, a string that can be set and get using this property.
 
-## Methods
+## Instance methods
 
 _This interface has no specific methods, but inherits the methods of its parent interfaces, {{domxref("Node")}} and {{domxref("EventTarget")}}._
 

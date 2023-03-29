@@ -2,20 +2,6 @@
 title: WebGLRenderingContext.enableVertexAttribArray()
 slug: Web/API/WebGLRenderingContext/enableVertexAttribArray
 page-type: web-api-instance-method
-tags:
-  - 3D
-  - API
-  - Attribute Array
-  - Graphics
-  - Method
-  - Reference
-  - Vertex Attributes
-  - WebGL
-  - WebGL API
-  - WebGLRenderingContext
-  - enableVertexAttribArray
-  - vertex
-  - vertex shader
 browser-compat: api.WebGLRenderingContext.enableVertexAttribArray
 ---
 
@@ -26,8 +12,7 @@ The {{domxref("WebGLRenderingContext")}} method
 attribute array at the specified index into the list of attribute arrays.
 
 > **Note:** You can disable the attribute array by calling
-> {{domxref("WebGLRenderingContext.disableVertexAttribArray",
-    "disableVertexAttribArray()")}}.
+> {{domxref("WebGLRenderingContext.disableVertexAttribArray", "disableVertexAttribArray()")}}.
 
 In WebGL, values that apply to a specific vertex are stored in [attributes](/en-US/docs/Web/API/WebGL_API/Data#attributes). These are only
 available to the JavaScript code and the vertex shader. Attributes are referenced by an
@@ -45,7 +30,7 @@ access the attribute, including {{domxref("WebGLRenderingContext.vertexAttribPoi
 
 ## Syntax
 
-```js
+```js-nolint
 enableVertexAttribArray(index)
 ```
 
@@ -80,12 +65,17 @@ vertex buffer into the vertex shader function.
 ```js
 gl.bindBuffer(gl.ARRAY_BUFFER, vertexBuffer);
 
-aVertexPosition =
-    gl.getAttribLocation(shaderProgram, "aVertexPosition");
+aVertexPosition = gl.getAttribLocation(shaderProgram, "aVertexPosition");
 
 gl.enableVertexAttribArray(aVertexPosition);
-gl.vertexAttribPointer(aVertexPosition, vertexNumComponents,
-      gl.FLOAT, false, 0, 0);
+gl.vertexAttribPointer(
+  aVertexPosition,
+  vertexNumComponents,
+  gl.FLOAT,
+  false,
+  0,
+  0
+);
 
 gl.drawArrays(gl.TRIANGLES, 0, vertexCount);
 ```

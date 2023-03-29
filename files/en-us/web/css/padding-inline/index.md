@@ -1,10 +1,7 @@
 ---
 title: padding-inline
 slug: Web/CSS/padding-inline
-tags:
-  - CSS
-  - CSS Property
-  - recipe:css-shorthand-property
+page-type: css-shorthand-property
 browser-compat: css.properties.padding-inline
 ---
 
@@ -25,8 +22,8 @@ This property is a shorthand for the following CSS properties:
 
 ```css
 /* <length> values */
-padding-inline: 10px 20px;  /* An absolute length */
-padding-inline: 1em 2em;   /* relative to the text size */
+padding-inline: 10px 20px; /* An absolute length */
+padding-inline: 1em 2em; /* relative to the text size */
 padding-inline: 10px; /* sets both start and end values */
 
 /* <percentage> values */
@@ -102,5 +99,6 @@ div {
 
 ## See also
 
+- [CSS Logical Properties and Values](/en-US/docs/Web/CSS/CSS_Logical_Properties)
 - The mapped physical properties: {{cssxref("padding-top")}}, {{cssxref("padding-right")}}, {{cssxref("padding-bottom")}}, and {{cssxref("padding-left")}}
 - {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}}

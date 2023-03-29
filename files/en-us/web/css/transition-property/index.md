@@ -1,12 +1,7 @@
 ---
 title: transition-property
 slug: Web/CSS/transition-property
-tags:
-  - CSS
-  - CSS Property
-  - CSS Transitions
-  - Reference
-  - recipe:css-property
+page-type: css-property
 browser-compat: css.properties.transition-property
 ---
 

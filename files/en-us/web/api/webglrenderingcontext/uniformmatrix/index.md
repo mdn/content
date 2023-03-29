@@ -2,20 +2,6 @@
 title: WebGLRenderingContext.uniformMatrix[234]fv()
 slug: Web/API/WebGLRenderingContext/uniformMatrix
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - Uniform Variables
-  - Uniforms
-  - WebGL
-  - WebGL API
-  - WebGLRenderingContext
-  - matrices
-  - matrix
-  - uniformMatrix2fv
-  - uniformMatrix3fv
-  - uniformMatrix4fv
 browser-compat: api.WebGLRenderingContext.uniformMatrix2fv
 ---
 
@@ -32,7 +18,7 @@ expected to have 4, 9 or 16 floats.
 
 ## Syntax
 
-```js
+```js-nolint
 uniformMatrix2fv(location, transpose, value)
 uniformMatrix3fv(location, transpose, value)
 uniformMatrix4fv(location, transpose, value)
@@ -58,7 +44,7 @@ None ({{jsxref("undefined")}}).
 ## Examples
 
 ```js
-gl.uniformMatrix2fv(loc, false, [2,1, 2,2]);
+gl.uniformMatrix2fv(loc, false, [2, 1, 2, 2]);
 ```
 
 ## Specifications

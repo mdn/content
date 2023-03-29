@@ -1,14 +1,6 @@
 ---
-title: 'Element: animationstart event'
+title: "Element: animationstart event"
 slug: Web/API/Element/animationstart_event
-tags:
-  - API
-  - Animation
-  - AnimationEvent
-  - CSS Animations
-  - Event
-  - Element
-  - Reference
 browser-compat: api.Element.animationstart_event
 page-type: web-api-event
 ---
@@ -22,9 +14,9 @@ The **`animationstart`** event is fired when a [CSS Animation](/en-US/docs/Web/C
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('animationstart', (event) => {});
+addEventListener("animationstart", (event) => {});
 
-onanimationstart = (event) => { };
+onanimationstart = (event) => {};
 ```
 
 ## Event type
@@ -49,20 +41,20 @@ _Also inherits properties from its parent {{domxref("Event")}}_.
 This listens for the `animationstart` event and logs a message when it is fired:
 
 ```js
-const animated = document.querySelector('.animated');
+const animated = document.querySelector(".animated");
 
-animated.addEventListener('animationstart', () => {
-  console.log('Animation started');
+animated.addEventListener("animationstart", () => {
+  console.log("Animation started");
 });
 ```
 
 The same, but using `onanimationstart`:
 
 ```js
-const animated = document.querySelector('.animated');
+const animated = document.querySelector(".animated");
 
 animated.onanimationstart = () => {
-  console.log('Animation started');
+  console.log("Animation started");
 };
 ```
 
@@ -72,11 +64,11 @@ animated.onanimationstart = () => {
 
 ```html
 <div class="animation-example">
-    <div class="container">
-        <p class="animation">You chose a cold night to visit our planet.</p>
-    </div>
-    <button class="activate" type="button">Activate animation</button>
-    <div class="event-log"></div>
+  <div class="container">
+    <p class="animation">You chose a cold night to visit our planet.</p>
+  </div>
+  <button class="activate" type="button">Activate animation</button>
+  <div class="event-log"></div>
 </div>
 ```
 
@@ -114,36 +106,42 @@ animated.onanimationstart = () => {
 #### JavaScript
 
 ```js
-const animation = document.querySelector('p.animation');
-const animationEventLog = document.querySelector('.animation-example>.event-log');
-const applyAnimation = document.querySelector('.animation-example>button.activate');
+const animation = document.querySelector("p.animation");
+const animationEventLog = document.querySelector(
+  ".animation-example>.event-log"
+);
+const applyAnimation = document.querySelector(
+  ".animation-example>button.activate"
+);
 let iterationCount = 0;
 
-animation.addEventListener('animationstart', () => {
+animation.addEventListener("animationstart", () => {
   animationEventLog.textContent = `${animationEventLog.textContent}'animation started' `;
 });
 
-animation.addEventListener('animationiteration', () => {
+animation.addEventListener("animationiteration", () => {
   iterationCount++;
   animationEventLog.textContent = `${animationEventLog.textContent}'animation iterations: ${iterationCount}' `;
 });
 
-animation.addEventListener('animationend', () => {
+animation.addEventListener("animationend", () => {
   animationEventLog.textContent = `${animationEventLog.textContent}'animation ended'`;
-  animation.classList.remove('active');
+  animation.classList.remove("active");
   applyAnimation.textContent = "Activate animation";
 });
 
-animation.addEventListener('animationcancel', () => {
+animation.addEventListener("animationcancel", () => {
   animationEventLog.textContent = `${animationEventLog.textContent}'animation canceled'`;
 });
 
-applyAnimation.addEventListener('click', () => {
-  animation.classList.toggle('active');
-  animationEventLog.textContent = '';
+applyAnimation.addEventListener("click", () => {
+  animation.classList.toggle("active");
+  animationEventLog.textContent = "";
   iterationCount = 0;
-  const active = animation.classList.contains('active');
-  applyAnimation.textContent = active ? "Cancel animation" : "Activate animation";
+  const active = animation.classList.contains("active");
+  applyAnimation.textContent = active
+    ? "Cancel animation"
+    : "Activate animation";
 });
 ```
 

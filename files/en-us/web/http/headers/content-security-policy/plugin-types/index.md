@@ -1,17 +1,9 @@
 ---
-title: 'CSP: plugin-types'
+title: "CSP: plugin-types"
 slug: Web/HTTP/Headers/Content-Security-Policy/plugin-types
-tags:
-  - CSP
-  - Content-Security-Policy
-  - Directive
-  - HTTP
-  - Java
-  - Plugin
-  - Plugins
-  - Security
-  - Deprecated
-  - Non-standard
+status:
+  - deprecated
+  - non-standard
 browser-compat: http.headers.Content-Security-Policy.plugin-types
 ---
 
@@ -68,7 +60,7 @@ To disallow all plugins, the {{CSP("object-src")}} directive should be set to
 is only used if you are allowing plugins with `object-src` at all.
 
 ```html
-<meta http-equiv="Content-Security-Policy" content="object-src 'none'">
+<meta http-equiv="Content-Security-Policy" content="object-src 'none'" />
 ```
 
 ### Allowing Java applets

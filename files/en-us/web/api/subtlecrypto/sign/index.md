@@ -2,13 +2,6 @@
 title: SubtleCrypto.sign()
 slug: Web/API/SubtleCrypto/sign
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - SubtleCrypto
-  - Web Crypto API
-  - sign
 browser-compat: api.SubtleCrypto.sign
 ---
 
@@ -26,7 +19,7 @@ signature.
 
 ## Syntax
 
-```js
+```js-nolint
 sign(algorithm, key, data)
 ```
 
@@ -49,7 +42,7 @@ sign(algorithm, key, data)
 ### Return value
 
 A {{jsxref("Promise")}} that fulfills with an
-  {{jsxref("ArrayBuffer")}} containing the signature.
+{{jsxref("ArrayBuffer")}} containing the signature.
 
 ### Exceptions
 
@@ -199,7 +192,7 @@ let encoded = getMessageEncoding();
 let signature = await window.crypto.subtle.sign(
   {
     name: "ECDSA",
-    hash: {name: "SHA-384"},
+    hash: { name: "SHA-384" },
   },
   privateKey,
   encoded
@@ -225,11 +218,7 @@ function getMessageEncoding() {
 }
 
 let encoded = getMessageEncoding();
-let signature = await window.crypto.subtle.sign(
-  "HMAC",
-  key,
-  encoded
-);
+let signature = await window.crypto.subtle.sign("HMAC", key, encoded);
 ```
 
 ## Specifications

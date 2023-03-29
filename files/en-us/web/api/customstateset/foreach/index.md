@@ -2,13 +2,8 @@
 title: CustomStateSet.forEach()
 slug: Web/API/CustomStateSet/forEach
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - forEach
-  - CustomStateSet
-  - Experimental
+status:
+  - experimental
 browser-compat: api.CustomStateSet.forEach
 ---
 
@@ -18,7 +13,7 @@ The **`forEach()`** method of the {{domxref("CustomStateSet")}} interface execut
 
 ## Syntax
 
-```js
+```js-nolint
 forEach(callbackFn)
 forEach(callbackFn, thisArg)
 ```

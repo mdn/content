@@ -1,14 +1,8 @@
 ---
 title: Sec-CH-UA-Platform-Version
 slug: Web/HTTP/Headers/Sec-CH-UA-Platform-Version
-tags:
-  - Sec-CH-UA-Platform-Version
-  - Client hint
-  - HTTP
-  - HTTP Header
-  - Reference
-  - Request header
-  - Experimental
+status:
+  - experimental
 browser-compat: http.headers.Sec-CH-UA-Platform-Version
 ---
 
@@ -41,10 +35,11 @@ Sec-CH-UA-Platform-Version: <version>
 ### Directives
 
 - `<version>`
-  - : The version string typically contains the operating system version in a string, consisting of dot-separated major, minor and patch version numbers.
-     For example, `"11.0.0"`
 
-     The version string on Linux is always empty.
+  - : The version string typically contains the operating system version in a string, consisting of dot-separated major, minor and patch version numbers.
+    For example, `"11.0.0"`
+
+    The version string on Linux is always empty.
 
 ## Examples
 

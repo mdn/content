@@ -1,10 +1,7 @@
 ---
 title: <script>
 slug: Web/SVG/Element/script
-tags:
-  - Element
-  - Reference
-  - SVG
+page-type: svg-element
 browser-compat: svg.elements.script
 ---
 
@@ -12,27 +9,37 @@ browser-compat: svg.elements.script
 
 The SVG `script` element allows to add scripts to an SVG document.
 
-> **Note:** While SVG's `script` element is equivalent to the HTML {{HTMLElement('script')}} element, it has some discrepancies, like it uses the {{SVGAttr('href')}} attribute instead of {{htmlattrxref('src','script')}} and it doesn't support ECMAScript modules so far (See browser compatibility below for details)
+> **Note:** While SVG's `script` element is equivalent to the HTML {{HTMLElement('script')}} element, it has some discrepancies, like it uses the {{SVGAttr('href')}} attribute instead of [`src`](/en-US/docs/Web/HTML/Element/script#src) and it doesn't support ECMAScript modules so far (See browser compatibility below for details)
 
 ## Example
 
-```html
-<svg viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg">
+```html-nolint
+Click the circle to change colors.
+<svg viewBox="0 0 10 10" height="120px" width="120px" xmlns="http://www.w3.org/2000/svg">
   <script>
-  // <![CDATA[
-  window.addEventListener('DOMContentLoaded', () => {
-    function getColor () {
-      const R = Math.round(Math.random() * 255).toString(16).padStart(2,'0')
-      const G = Math.round(Math.random() * 255).toString(16).padStart(2,'0')
-      const B = Math.round(Math.random() * 255).toString(16).padStart(2,'0')
-      return `#${R}${G}${B}`
-    }
+    // <![CDATA[
+    window.addEventListener("DOMContentLoaded", () => {
+      function getColor() {
+        const R = Math.round(Math.random() * 255)
+          .toString(16)
+          .padStart(2, "0");
 
-    document.querySelector('circle').addEventListener('click', (e) => {
-      e.target.style.fill = getColor()
-    })
-  })
-  // ]]>
+        const G = Math.round(Math.random() * 255)
+          .toString(16)
+          .padStart(2, "0");
+
+        const B = Math.round(Math.random() * 255)
+          .toString(16)
+          .padStart(2, "0");
+
+        return `#${R}${G}${B}`;
+      }
+
+      document.querySelector("circle").addEventListener("click", (e) => {
+        e.target.style.fill = getColor();
+      });
+    });
+    // ]]>
   </script>
 
   <circle cx="5" cy="5" r="4" />
@@ -43,7 +50,7 @@ The SVG `script` element allows to add scripts to an SVG document.
 
 ## Attributes
 
-- {{htmlattrxref("crossorigin", "script")}}
+- [`crossorigin`](/en-US/docs/Web/HTML/Element/script#crossorigin)
   - : This attribute defines [CORS settings](/en-US/docs/Web/HTML/Attributes/crossorigin) as define for the HTML {{HTMLElement('script')}} element.
     _Value type_: [**\<string>**](/en-US/docs/Web/SVG/Content_type#string); _Default value_: `?`; _Animatable_: **yes**
 - {{SVGAttr("href")}}

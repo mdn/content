@@ -1,14 +1,7 @@
 ---
 title: TypedArray.prototype.map()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/map
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Prototype
-  - TypedArray
-  - TypedArrays
-  - Polyfill
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.TypedArray.map
 ---
 
@@ -16,7 +9,7 @@ browser-compat: javascript.builtins.TypedArray.map
 
 The **`map()`** method creates a new typed array with the
 results of calling a provided function on every element in this typed array. This method
-has the same algorithm as {{jsxref("Array.prototype.map()")}}_._
+has the same algorithm as {{jsxref("Array.prototype.map()")}}.
 _TypedArray_ is one of the
 [typed array types](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#typedarray_objects) here.
 
@@ -24,7 +17,7 @@ _TypedArray_ is one of the
 
 ## Syntax
 
-```js
+```js-nolint
 // Arrow function
 map((currentValue) => { /* ... */ } )
 map((currentValue, index) => { /* ... */ } )

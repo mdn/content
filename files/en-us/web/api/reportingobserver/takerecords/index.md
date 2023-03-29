@@ -2,17 +2,10 @@
 title: ReportingObserver.takeRecords()
 slug: Web/API/ReportingObserver/takeRecords
 page-type: web-api-instance-method
-tags:
-  - API
-  - Experimental
-  - Method
-  - Reference
-  - Reporting API
-  - ReportingObserver
 browser-compat: api.ReportingObserver.takeRecords
 ---
 
-{{APIRef("Reporting API")}}{{SeeCompatTable}}
+{{APIRef("Reporting API")}}
 
 The **`takeRecords()`** method of the
 {{domxref("ReportingObserver")}} interface returns the current list of reports contained
@@ -20,7 +13,7 @@ in the observer's report queue, and empties the queue.
 
 ## Syntax
 
-```js
+```js-nolint
 takeRecords()
 ```
 
@@ -36,15 +29,15 @@ An array of {{domxref("Report")}} objects.
 
 ```js
 const options = {
-  types: ['deprecation'],
-  buffered: true
-}
+  types: ["deprecation"],
+  buffered: true,
+};
 
 const observer = new ReportingObserver((reports, observer) => {
   reportBtn.onclick = () => displayReports(reports);
 }, options);
 
-observer.observe()
+observer.observe();
 
 // …
 

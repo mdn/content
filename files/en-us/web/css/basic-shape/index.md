@@ -1,12 +1,7 @@
 ---
 title: <basic-shape>
 slug: Web/CSS/basic-shape
-tags:
-  - CSS
-  - CSS Data Type
-  - CSS Shapes
-  - Data Type
-  - Reference
+page-type: css-type
 browser-compat: css.types.basic-shape
 ---
 
@@ -145,18 +140,45 @@ div {
   width: 300px;
   height: 300px;
   background: repeating-linear-gradient(red, orange 50px);
-  clip-path: polygon(50% 0%, 60% 40%, 100% 50%, 60% 60%, 50% 100%, 40% 60%, 0% 50%, 40% 40%);
+  clip-path: polygon(
+    50% 0%,
+    60% 40%,
+    100% 50%,
+    60% 60%,
+    50% 100%,
+    40% 60%,
+    0% 50%,
+    40% 40%
+  );
   animation: 4s poly infinite alternate ease-in-out;
   margin: 10px auto;
 }
 
 @keyframes poly {
   from {
-    clip-path: polygon(50% 0%, 60% 40%, 100% 50%, 60% 60%, 50% 100%, 40% 60%, 0% 50%, 40% 40%);
+    clip-path: polygon(
+      50% 0%,
+      60% 40%,
+      100% 50%,
+      60% 60%,
+      50% 100%,
+      40% 60%,
+      0% 50%,
+      40% 40%
+    );
   }
 
   to {
-    clip-path: polygon(50% 30%, 100% 0%, 70% 50%, 100% 100%, 50% 70%, 0% 100%, 30% 50%, 0% 0%);
+    clip-path: polygon(
+      50% 30%,
+      100% 0%,
+      70% 50%,
+      100% 100%,
+      50% 70%,
+      0% 100%,
+      30% 50%,
+      0% 0%
+    );
   }
 }
 ```

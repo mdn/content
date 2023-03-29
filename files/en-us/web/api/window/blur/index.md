@@ -2,11 +2,6 @@
 title: Window.blur()
 slug: Web/API/Window/blur
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - Gecko
-  - Method
 browser-compat: api.Window.blur
 ---
 
@@ -16,7 +11,7 @@ Shifts focus away from the window.
 
 ## Syntax
 
-```js
+```js-nolint
 blur()
 ```
 

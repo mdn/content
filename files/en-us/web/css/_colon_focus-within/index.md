@@ -1,15 +1,7 @@
 ---
-title: ':focus-within'
+title: ":focus-within"
 slug: Web/CSS/:focus-within
-tags:
-  - ':focus'
-  - ':focus-within'
-  - CSS
-  - Layout
-  - Pseudo-class
-  - Reference
-  - Selector
-  - Web
+page-type: css-pseudo-class
 browser-compat: css.selectors.focus-within
 ---
 
@@ -23,8 +15,10 @@ This selector is useful, to take a common example, for highlighting an entire {{
 
 ## Syntax
 
-```
-:focus-within
+```css
+:focus-within {
+  /* ... */
+}
 ```
 
 ## Examples
@@ -38,10 +32,10 @@ In this example, the form will receive special coloring styles when either text 
 
 <form>
   <label for="given_name">Given Name:</label>
-  <input id="given_name" type="text">
-  <br>
+  <input id="given_name" type="text" />
+  <br />
   <label for="family_name">Family Name:</label>
-  <input id="family_name" type="text">
+  <input id="family_name" type="text" />
 </form>
 ```
 

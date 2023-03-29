@@ -2,13 +2,8 @@
 title: CookieStoreManager.getSubscriptions()
 slug: Web/API/CookieStoreManager/getSubscriptions
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - getSubscriptions
-  - CookieStoreManager
-  - Experimental
+status:
+  - experimental
 browser-compat: api.CookieStoreManager.getSubscriptions
 ---
 
@@ -18,7 +13,7 @@ The **`getSubscriptions()`** method of the {{domxref("CookieStoreManager")}} int
 
 ## Syntax
 
-```js
+```js-nolint
 getSubscriptions()
 ```
 

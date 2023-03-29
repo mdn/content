@@ -2,12 +2,6 @@
 title: CryptoKeyPair
 slug: Web/API/CryptoKeyPair
 page-type: web-api-interface
-tags:
-  - API
-  - CryptoKeyPair
-  - Dictionary
-  - Reference
-  - Web Crypto API
 spec-urls: https://w3c.github.io/webcrypto/#keypair
 ---
 
@@ -19,7 +13,7 @@ A `CryptoKeyPair` object can be obtained using {{domxref("SubtleCrypto.generateK
 
 It contains two properties, which are both [`CryptoKey`](/en-US/docs/Web/API/CryptoKey) objects: a `privateKey` property containing the private key and a `publicKey` property containing the public key.
 
-## Properties
+## Instance properties
 
 - `CryptoKeyPair.privateKey`
   - : A [`CryptoKey`](/en-US/docs/Web/API/CryptoKey) object representing the private key. For encryption and decryption algorithms, this key is used to decrypt. For signing and verification algorithms it is used to sign.

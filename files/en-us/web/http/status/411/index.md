@@ -1,12 +1,6 @@
 ---
 title: 411 Length Required
 slug: Web/HTTP/Status/411
-tags:
-  - Client error
-  - HTTP
-  - HTTP Status Code
-  - Reference
-  - Status code
 spec-urls: https://httpwg.org/specs/rfc9110.html#status.411
 ---
 
@@ -24,7 +18,7 @@ that the server refuses to accept the request without a defined
 
 ## Status
 
-```
+```http
 411 Length Required
 ```
 

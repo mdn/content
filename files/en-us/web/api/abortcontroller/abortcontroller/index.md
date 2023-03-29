@@ -2,12 +2,6 @@
 title: AbortController()
 slug: Web/API/AbortController/AbortController
 page-type: web-api-constructor
-tags:
-  - API
-  - AbortController
-  - Constructor
-  - Fetch
-  - Reference
 browser-compat: api.AbortController.AbortController
 ---
 
@@ -17,7 +11,7 @@ The **`AbortController()`** constructor creates a new {{domxref("AbortController
 
 ## Syntax
 
-```js
+```js-nolint
 new AbortController()
 ```
 
@@ -37,21 +31,21 @@ When the [fetch request](/en-US/docs/Web/API/fetch) is initiated, we pass in the
 const controller = new AbortController();
 const signal = controller.signal;
 
-const url = 'video.mp4';
-const downloadBtn = document.querySelector('.download');
-const abortBtn = document.querySelector('.abort');
+const url = "video.mp4";
+const downloadBtn = document.querySelector(".download");
+const abortBtn = document.querySelector(".abort");
 
-downloadBtn.addEventListener('click', fetchVideo);
+downloadBtn.addEventListener("click", fetchVideo);
 
-abortBtn.addEventListener('click', () => {
+abortBtn.addEventListener("click", () => {
   controller.abort();
-  console.log('Download aborted');
+  console.log("Download aborted");
 });
 
 function fetchVideo() {
   fetch(url, { signal })
     .then((response) => {
-      console.log('Download complete', response);
+      console.log("Download complete", response);
     })
     .catch((err) => {
       console.error(`Download error: ${err.message}`);

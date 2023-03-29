@@ -2,12 +2,8 @@
 title: Element.setHTML()
 slug: Web/API/Element/setHTML
 page-type: web-api-instance-method
-tags:
-  - HTML Sanitizer API
-  - Method
-  - Element.setHTML
-  - setHTML
-  - Experimental
+status:
+  - experimental
 browser-compat: api.Element.setHTML
 ---
 
@@ -24,7 +20,7 @@ The sanitizer configuration may be customized using {{domxref("Sanitizer.Sanitiz
 
 ## Syntax
 
-```js
+```js-nolint
 setHTML(input, options)
 ```
 
@@ -33,11 +29,12 @@ setHTML(input, options)
 - `input`
   - : A string defining HTML to be sanitized.
 - `options` {{optional_inline}}
-  - : A options object with the following optional parameters:
+
+  - : An options object with the following optional parameters:
 
     - `sanitizer`
       - : A {{domxref("Sanitizer")}} object which defines what elements of the input will be sanitized.
-         If not specified, the default {{domxref("Sanitizer")}} object is used.
+        If not specified, the default {{domxref("Sanitizer")}} object is used.
 
 ### Return value
 
@@ -52,11 +49,13 @@ None.
 The code below demonstrates how to sanitize a string of HTML and insert it into the `Element` with an id of `target`.
 
 ```js
-const unsanitized_string = "abc <script>alert(1)<" + "/script> def";  // Unsanitized string of HTML
-const sanitizer1 = new Sanitizer();  // Default sanitizer;
+const unsanitized_string = "abc <script>alert(1)<" + "/script> def"; // Unsanitized string of HTML
+const sanitizer1 = new Sanitizer(); // Default sanitizer;
 
 // Get the Element with id "target" and set it with the sanitized string.
-document.getElementById("target").setHTML(unsanitized_string, {sanitizer: sanitizer1});
+document
+  .getElementById("target")
+  .setHTML(unsanitized_string, { sanitizer: sanitizer1 });
 
 // Result (as a string): "abc  def"
 ```

@@ -1,21 +1,7 @@
 ---
-title: 'Element: error event'
+title: "Element: error event"
 slug: Web/API/Element/error_event
 page-type: web-api-event
-tags:
-  - Audio
-  - DOM
-  - Element
-  - Error Handling
-  - Errors
-  - Event
-  - Media
-  - Reference
-  - UI
-  - UI Events
-  - UIEvent
-  - Video
-  - Web
 browser-compat: api.Element.error_event
 ---
 
@@ -30,9 +16,9 @@ This event is not cancelable and does not bubble.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('error', (event) => {});
+addEventListener("error", (event) => {});
 
-onerror = (event) => { };
+onerror = (event) => {};
 ```
 
 ## Event type
@@ -55,7 +41,12 @@ The event object is a {{domxref("UIEvent")}} instance if it was generated from a
 
 <div class="event-log">
   <label for="eventLog">Event log:</label>
-  <textarea readonly class="event-log-contents" rows="8" cols="30" id="eventLog"></textarea>
+  <textarea
+    readonly
+    class="event-log-contents"
+    rows="8"
+    cols="30"
+    id="eventLog"></textarea>
 </div>
 ```
 
@@ -80,13 +71,14 @@ body {
   resize: none;
 }
 
-label, button {
+label,
+button {
   display: block;
 }
 
 button {
   height: 2rem;
-  margin: .5rem;
+  margin: 0.5rem;
 }
 
 img {
@@ -98,17 +90,17 @@ img {
 #### JavaScript
 
 ```js
-const log = document.querySelector('.event-log-contents');
+const log = document.querySelector(".event-log-contents");
 
-const badImg = document.querySelector('.bad-img');
-badImg.addEventListener('error', (event) => {
-    log.textContent += `${event.type}: Loading image\n`;
-    console.log(event)
+const badImg = document.querySelector(".bad-img");
+badImg.addEventListener("error", (event) => {
+  log.textContent += `${event.type}: Loading image\n`;
+  console.log(event);
 });
 
-const imgError = document.querySelector('#img-error');
-imgError.addEventListener('click', () => {
-    badImg.setAttribute('src', 'i-dont-exist');
+const imgError = document.querySelector("#img-error");
+imgError.addEventListener("click", () => {
+  badImg.setAttribute("src", "i-dont-exist");
 });
 ```
 

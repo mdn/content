@@ -2,23 +2,6 @@
 title: RTCOutboundRtpStreamStats.sliCount
 slug: Web/API/RTCOutboundRtpStreamStats/sliCount
 page-type: web-api-instance-property
-tags:
-  - API
-  - Corruption
-  - Errors
-  - Property
-  - RTCOutboundRtpStreamStats
-  - RTP
-  - Reference
-  - SLI
-  - Slice Loss
-  - Statistics
-  - Stats
-  - Video
-  - WebRTC
-  - WebRTC API
-  - sliCount
-  - stream
 browser-compat: api.RTCOutboundRtpStreamStats.sliCount
 ---
 

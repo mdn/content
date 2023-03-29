@@ -1,11 +1,7 @@
 ---
 title: JavaScript technologies overview
 slug: Web/JavaScript/JavaScript_technologies_overview
-tags:
-  - Beginner
-  - DOM
-  - Guide
-  - JavaScript
+page-type: guide
 ---
 
 {{JsSidebar("Introductory")}}
@@ -37,7 +33,7 @@ Among other things, ECMAScript defines:
 
 ECMAScript editions are approved and published as a standard by the ECMA General Assembly on a yearly basis. All development is public on the [Ecma TC39 GitHub organization](https://github.com/tc39), which hosts proposals, the official specification text, and meeting notes.
 
-Before the 6th edition of ECMAScript (known as ES6), specifications were published once several years, and are commonly referred by their major version numbers — ES3, ES5, etc. After ES6, the specification is named by the publishing year — ES2017, ES2018, etc. ES6 is synonymous with ES2015. _ESNext_ is a dynamic name that refers to whatever the next version is at the time of writing. ESNext features are more correctly called proposals, because, by definition, the specification has not been finalized yet.
+Before the 6th edition of ECMAScript (known as ES6), specifications were published once every several years, and are commonly referred by their major version numbers — ES3, ES5, etc. After ES6, the specification is named by the publishing year — ES2017, ES2018, etc. ES6 is synonymous with ES2015. _ESNext_ is a dynamic name that refers to whatever the next version is at the time of writing. ESNext features are more correctly called proposals, because, by definition, the specification has not been finalized yet.
 
 The current committee-approved snapshot of ECMA-262 can be found in [PDF form](https://www.ecma-international.org/publications/files/ECMA-ST/ECMA-262.pdf) and [HTML form](https://262.ecma-international.org/13.0/). ECMA-262 and ECMA-402 are continuously maintained and kept up to date by the specification editors; the TC39 website hosts the latest, up-to-date [ECMA-262](https://tc39.es/ecma262/) and [ECMA-402](https://tc39.es/ecma402/) versions.
 
@@ -98,6 +94,33 @@ Looking for the [`Document`](/en-US/docs/Web/API/Document) object, [`Window`](/e
 
 Non-browser environments (like Node.js) often do not have DOM APIs — because they don't interact with a document — but they still usually implement many web APIs, such as [`fetch()`](/en-US/docs/Web/API/fetch) and [`setTimeout()`](/en-US/docs/Web/API/setTimeout).
 
+## JavaScript implementations
+
+There are three main JavaScript implementations used in browser environments and beyond:
+
+- Mozilla's [SpiderMonkey](https://spidermonkey.dev/), used in Firefox. This was the first _ever_ JavaScript engine, created by Brendan Eich at Netscape.
+- Google's [V8](https://v8.dev/), used in Google Chrome, Opera, Edge, [Node.js](https://nodejs.org), [Deno](https://deno.land/), [Electron](https://www.electronjs.org/), and more.
+- Apple's [JavaScriptCore](https://trac.webkit.org/wiki/JavaScriptCore) (also known as SquirrelFish/Nitro), used in WebKit browsers such as Apple Safari, and [Bun](https://bun.sh/).
+
+Besides the above implementations, there are other popular JavaScript engines such as:
+
+- [Carakan](https://dev.opera.com/blog/carakan-faq/), used in earlier versions of Opera.
+- Microsoft's [Chakra](<https://en.wikipedia.org/wiki/Chakra_(JScript_engine)>) engine, used in Internet Explorer (although the language it implements is formally called "JScript" to avoid trademark issues). Earlier versions of Edge used a new JavaScript engine, confusingly also called [Chakra](<https://en.wikipedia.org/wiki/Chakra_(JavaScript_engine)>).
+- [LibJS](https://libjs.dev/), used in the browser implementation of [SerenityOS](https://serenityos.org/).
+- Mozilla's [Rhino](<https://en.wikipedia.org/wiki/Rhino_(JavaScript_engine)>) engine, a JavaScript implementation written in Java, created primarily by Norris Boyd (also at Netscape).
+
+There are some engines specifically tailored for non-browser purposes:
+
+- [Engine262](https://engine262.js.org/), a JavaScript engine written in JavaScript. It is created for JavaScript developers to explore new language features and find bugs in the specification.
+- [Moddable XS](https://www.moddable.com/), used in embedded systems such as IoT.
+- [QuickJS](https://bellard.org/quickjs/), a small and embeddable JavaScript engine.
+- Meta's [Hermes](https://hermesengine.dev/) engine, an engine optimized for [React Native](https://reactnative.dev/docs/hermes).
+- Oracle's [GraalJS](https://www.graalvm.org/), a high performance implementation built on the GraalVM by Oracle Labs.
+
+JavaScript engines expose a public API which application developers can use to integrate JavaScript into their software. By far, the most common host environment for JavaScript is web browsers. Web browsers typically use the public API to create **host objects** responsible for reflecting the [DOM](https://dom.spec.whatwg.org/) into JavaScript.
+
+Another common application for JavaScript is as a (Web) server-side scripting language. A JavaScript web server exposes host objects representing a HTTP request and response objects, which can then be manipulated by a JavaScript program to dynamically generate web pages. [Node.js](https://nodejs.org) is a popular example of this.
+
 ## Shells
 
 A JavaScript shell allows you to quickly test snippets of JavaScript code without having to reload a web page. They are extremely useful for developing and debugging code.
@@ -107,7 +130,6 @@ A JavaScript shell allows you to quickly test snippets of JavaScript code withou
 The following JavaScript shells are stand-alone environments, like Perl or Python.
 
 - [Node.js](https://nodejs.org/) - Node.js is a platform for easily building fast, scalable network applications.
-- [GraalJS](https://www.graalvm.org/) - A high performance implementation of the JavaScript programming language. Built on the GraalVM by Oracle Labs.
 - [ShellJS](https://github.com/shelljs/shelljs) - Portable Unix shell commands for Node.js.
 
 ### Browser-based JavaScript shells
@@ -117,3 +139,28 @@ The following JavaScript shells run code through the browser's JavaScript engine
 - Firefox has a [built-in JavaScript console](https://firefox-source-docs.mozilla.org/devtools-user/web_console/the_command_line_interpreter/index.html), which support multi-line editing.
 - [Babel REPL](https://babeljs.io/repl) - A browser-based [REPL](https://en.wikipedia.org/wiki/REPL) for experimenting with future JavaScript.
 - [TypeScript playground](https://www.typescriptlang.org/play) — A browser-based playground for experimenting both new JavaScript features (via the tsc compiler) and TypeScript syntax.
+
+## Tools & resources
+
+Helpful tools for writing and debugging your JavaScript code.
+
+- [Firefox Developer Tools](https://firefox-source-docs.mozilla.org/devtools-user/index.html)
+  - : [Web Console](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html), [JavaScript Profiler](https://firefox-source-docs.mozilla.org/devtools-user/performance/index.html), [Debugger](https://firefox-source-docs.mozilla.org/devtools-user/debugger/index.html), and more.
+- [Learn JavaScript](https://learnjavascript.online/)
+  - : An excellent resource for aspiring web developers — Learn JavaScript in an interactive environment, with short lessons and interactive tests, guided by automated assessment. The first 40 lessons are free, and the complete course is available for a small one-time payment.
+- [TogetherJS](https://togetherjs.com/)
+  - : Collaboration made easy. By adding TogetherJS to your site, your users can help each other out on a website in real-time!
+- [Stack Overflow](https://stackoverflow.com/questions/tagged/javascript)
+  - : Stack Overflow questions tagged with "JavaScript".
+- [JSFiddle](https://jsfiddle.net/)
+  - : Edit JavaScript, CSS, and HTML and get live results. Use external resources and collaborate with your team online.
+- [Plunker](https://plnkr.co/)
+  - : Plunker is an online community for creating, collaborating on, and sharing your web development ideas. Edit your JavaScript, CSS, and HTML files and get live results and file structure.
+- [JSBin](https://jsbin.com/)
+  - : JS Bin is an open-source collaborative web development debugging tool.
+- [Codepen](https://codepen.io/)
+  - : Codepen is another collaborative web development tool used as a live result playground.
+- [StackBlitz](https://stackblitz.com/)
+  - : StackBlitz is another online playground/debugging tool, which can host and deploy full-stack applications using React, Angular, etc.
+- [RunJS](https://runjs.app/)
+  - : RunJS is a desktop playground/scratchpad tool, which provides live results and access to both Node and Browser APIs.

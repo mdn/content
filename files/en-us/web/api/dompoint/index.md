@@ -2,18 +2,6 @@
 title: DOMPoint
 slug: Web/API/DOMPoint
 page-type: web-api-interface
-tags:
-  - API
-  - Coordinate
-  - Coordinates
-  - DOM
-  - DOMPoint
-  - Geometry
-  - Geometry Interfaces
-  - Interface
-  - Point
-  - Reference
-  - VR
 browser-compat: api.DOMPoint
 ---
 
@@ -30,18 +18,9 @@ In general, a positive `x` component represents a position to the right of the o
 - {{domxref("DOMPoint.DOMPoint","DOMPoint()")}}
   - : Creates and returns a new `DOMPoint` object given the values of zero or more of its coordinate components and optionally the `w` perspective value. You can also use an existing `DOMPoint` or `DOMPointReadOnly` or an object to create a new point by calling the {{domxref("DOMPoint.fromPoint()")}} static method.
 
-## Methods
+## Instance properties
 
-_`DOMPoint` inherits methods from its parent, {{domxref("DOMPointReadOnly")}}._
-
-## Static methods
-
-- {{domxref("DOMPoint.fromPoint()", "DOMPoint.fromPoint()")}}
-  - : Creates a new mutable `DOMPoint` object given an existing point (or an object containing matching properties) which provides the values for its properties.
-
-## Properties
-
-_`DOMPoint` inherits properties from its parent, {{domxref("DOMPointReadOnly")}}._
+_`DOMPoint` may also inherit properties from its parent, {{domxref("DOMPointReadOnly")}}._
 
 - {{domxref("DOMPoint.x")}}
   - : The `x` coordinate of the `DOMPoint`.
@@ -51,6 +30,17 @@ _`DOMPoint` inherits properties from its parent, {{domxref("DOMPointReadOnly")}}
   - : The `z` coordinate of the `DOMPoint`.
 - {{domxref("DOMPoint.w")}}
   - : The perspective value of the `DOMPoint`.
+
+## Instance methods
+
+_`DOMPoint` inherits instance methods from its parent, {{domxref("DOMPointReadOnly")}}._
+
+## Static methods
+
+_`DOMPoint` may also inherit static methods from its parent, {{domxref("DOMPointReadOnly")}}._
+
+- {{domxref("DOMPoint.fromPoint()", "DOMPoint.fromPoint()")}}
+  - : Creates a new mutable `DOMPoint` object given an existing point (or an object containing matching properties) which provides the values for its properties.
 
 ## Examples
 
@@ -64,9 +54,17 @@ function onXRFrame(time, xrFrame) {
     let position = viewerPose.transform.position;
     let orientation = viewerPose.transform.orientation;
 
-    console.log(`XR Viewer Position: {x: ${roundToTwo(position.x)}, y: ${roundToTwo(position.y)}, z: ${roundToTwo(position.z)}`);
+    console.log(
+      `XR Viewer Position: {x: ${roundToTwo(position.x)}, y: ${roundToTwo(
+        position.y
+      )}, z: ${roundToTwo(position.z)}`
+    );
 
-    console.log(`XR Viewer Orientation: {x: ${roundToTwo(orientation.x)}, y: ${roundToTwo(orientation.y)}, z: ${roundToTwo(orientation.z)}, w: ${roundToTwo(orientation.w)}`);
+    console.log(
+      `XR Viewer Orientation: {x: ${roundToTwo(orientation.x)}, y: ${roundToTwo(
+        orientation.y
+      )}, z: ${roundToTwo(orientation.z)}, w: ${roundToTwo(orientation.w)}`
+    );
   }
 }
 ```

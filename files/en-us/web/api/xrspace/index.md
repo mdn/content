@@ -2,17 +2,6 @@
 title: XRSpace
 slug: Web/API/XRSpace
 page-type: web-api-interface
-tags:
-  - API
-  - AR
-  - Augmented Realty
-  - Interface
-  - Reference
-  - VR
-  - Virtual Reality
-  - WebXR
-  - WebXR Device API
-  - XRSpace
 browser-compat: api.XRSpace
 ---
 
@@ -37,11 +26,11 @@ Below is a list of interfaces based on the `XRSpace` interface.
 - {{domxref("XRJointSpace")}}
   - : Represents the space of an {{domxref("XRHand")}} joint.
 
-## Properties
+## Instance properties
 
 _The `XRSpace` interface defines no properties of its own; however, it does inherit the properties of its parent interface, {{domxref("EventTarget")}}._
 
-## Methods
+## Instance methods
 
 _The `XRSpace` interface provides no methods of its own. However, it inherits the methods of {{domxref("EventTarget")}}, its parent interface._
 

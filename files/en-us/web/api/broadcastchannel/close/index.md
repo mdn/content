@@ -2,10 +2,6 @@
 title: BroadcastChannel.close()
 slug: Web/API/BroadcastChannel/close
 page-type: web-api-instance-method
-tags:
-  - Broadcast Channel API
-  - Method
-  - Reference
 browser-compat: api.BroadcastChannel.close
 ---
 
@@ -21,15 +17,15 @@ that this channel is not needed anymore.
 
 ## Syntax
 
-```js
-channel.close();
+```js-nolint
+channel.close()
 ```
 
 ## Example
 
 ```js
 // Connect to a channel
-const bc = new BroadcastChannel('test_channel');
+const bc = new BroadcastChannel("test_channel");
 
 // More operations (like postMessage, …)
 

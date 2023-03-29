@@ -2,13 +2,6 @@
 title: FormData.values()
 slug: Web/API/FormData/values
 page-type: web-api-instance-method
-tags:
-  - API
-  - FormData
-  - Iterator
-  - Method
-  - Reference
-  - XMLHttpRequest
 browser-compat: api.FormData.values
 ---
 
@@ -20,7 +13,7 @@ The **`FormData.values()`** method returns an [iterator](/en-US/docs/Web/JavaScr
 
 ## Syntax
 
-```js
+```js-nolint
 values()
 ```
 
@@ -36,8 +29,8 @@ An [`iterator`](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols) of {{d
 
 ```js
 const formData = new FormData();
-formData.append('key1', 'value1');
-formData.append('key2', 'value2');
+formData.append("key1", "value1");
+formData.append("key2", "value2");
 
 // Display the values
 for (const value of formData.values()) {

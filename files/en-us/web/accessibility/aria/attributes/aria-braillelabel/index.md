@@ -1,12 +1,6 @@
 ---
-title: 'aria-braillelabel'
+title: aria-braillelabel
 slug: Web/Accessibility/ARIA/Attributes/aria-braillelabel
-tags:
-  - Accessibility
-  - ARIA
-  - ARIA attribute
-  - ARIA property
-  - aria-braillelabel
 spec-urls: https://w3c.github.io/aria/#aria-braillelabel
 ---
 
@@ -33,11 +27,11 @@ Using only the accessible name, e.g., from content or via `aria-label` is almost
 
 ```html
 <button aria-braillelabel="***">
-  <img alt="3 out of 5 stars" src="three_stars.png">
+  <img alt="3 out of 5 stars" src="three_stars.png" />
 </button>
 ```
 
-A braille display may display "btn \**\*" in Braille rather than the more verbose "btn gra 3 out of 5 stars".
+A braille display may display "btn \*\*\*" in Braille rather than the more verbose "btn gra 3 out of 5 stars".
 
 ## Values
 
@@ -61,6 +55,6 @@ Used in **ALL** roles.
 
 1. [**WAI-ARIA states and properties**](/en-US/docs/Web/Accessibility/ARIA/Attributes)
 
-    {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Attributes")}}
+   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Attributes")}}
 
 </section>

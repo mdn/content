@@ -2,16 +2,6 @@
 title: RTCRtpSender.dtmf
 slug: Web/API/RTCRtpSender/dtmf
 page-type: web-api-instance-property
-tags:
-  - DTMF
-  - Media
-  - NeedsExample
-  - Property
-  - RTCRtpSender
-  - Read-only
-  - Reference
-  - WebRTC
-  - WebRTC API
 browser-compat: api.RTCRtpSender.dtmf
 ---
 
@@ -20,7 +10,7 @@ browser-compat: api.RTCRtpSender.dtmf
 The read-only **`dtmf`** property on the
 **{{domxref("RTCRtpSender")}}** interface returns a
 {{domxref("RTCDTMFSender")}} object which can be used to send {{Glossary("DTMF")}} tones
-over the {{domxref("RTCPeerConnection")}} . See [Using DTMF](/en-US/docs/Web/API/WebRTC_API/Using_DTMF) for details on how to
+over the {{domxref("RTCPeerConnection")}}. See [Using DTMF](/en-US/docs/Web/API/WebRTC_API/Using_DTMF) for details on how to
 make use of the returned `RTCDTMFSender` object.
 
 ## Value

@@ -1,9 +1,7 @@
 ---
 title: dy
 slug: Web/SVG/Attribute/dy
-tags:
-  - SVG
-  - SVG Attribute
+page-type: svg-attribute
 spec-urls:
   - https://drafts.fxtf.org/filter-effects/#element-attrdef-fedropshadow-dy
   - https://drafts.fxtf.org/filter-effects/#element-attrdef-feoffset-dy
@@ -27,15 +25,19 @@ You can use this attribute with the following SVG elements:
 ## Example
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
 <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
   <!-- Lines materialized the position of the glyphs -->
-  <line x1="10%" x2="10%"  y1="0"   y2="100%" />
-  <line x1="0"   x2="100%" y1="30%" y2="30%"  />
-  <line x1="0"   x2="100%" y1="80%" y2="80%"  />
+  <line x1="10%" x2="10%" y1="0" y2="100%" />
+  <line x1="0" x2="100%" y1="30%" y2="30%" />
+  <line x1="0" x2="100%" y1="80%" y2="80%" />
 
   <!-- Some reference text -->
   <text x="10%" y="30%" fill="grey">SVG</text>
@@ -48,7 +50,7 @@ html,body,svg { height:100% }
 ```css
 line {
   stroke: red;
-  stroke-width: .5px;
+  stroke-width: 0.5px;
   stroke-dasharray: 3px;
 }
 ```
@@ -193,7 +195,11 @@ If there are multiple values, `dy` defines a shift along the y-axis for each ind
 ### Example
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
@@ -210,8 +216,8 @@ html,body,svg { height:100% }
   <line x1="90" x2="90" y1="0" y2="100%" />
 
   <!-- Behaviors change based on the number of values in the attributes -->
-  <text dy="20"      x="10" y="30">SVG</text>
-  <text dy="0 10"    x="50" y="30">SVG</text>
+  <text dy="20" x="10" y="30">SVG</text>
+  <text dy="0 10" x="50" y="30">SVG</text>
   <text dy="0 10 20" x="90" y="30">SVG</text>
 </svg>
 ```
@@ -219,7 +225,7 @@ html,body,svg { height:100% }
 ```css
 line {
   stroke: red;
-  stroke-width: .5px;
+  stroke-width: 0.5px;
   stroke-dasharray: 3px;
 }
 ```

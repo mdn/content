@@ -1,19 +1,13 @@
 ---
 title: WAI-ARIA Roles
 slug: Web/Accessibility/ARIA/Roles
-tags:
-  - ARIA
-  - ARIA Roles
-  - Accessibility
-  - Reference
-  - Roles
 ---
 
 ARIA roles provide semantic meaning to content, allowing screen readers and other tools to present and support interaction with object in a way that is consistent with user expectations of that type of object. <abbr>ARIA</abbr> roles can be used to describe elements that don't natively exist in HTML or exist but don't yet have full browser support.
 
 By default, many semantic elements in HTML have a role; for example, `<input type="radio">` has the "radio" role. Non-semantic elements in HTML do not have a role; `<div>` and `<span>` without added semantics return `null`. The `role` attribute can provide semantics.
 
-ARIA roles are added to HTML elements using `role="role type"`, where _role type_ is the name of a role in the ARIA specification.  Some roles require the inclusion of associated ARIA states or properties; others are only valid in association with other roles.
+ARIA roles are added to HTML elements using `role="role type"`, where _role type_ is the name of a role in the ARIA specification. Some roles require the inclusion of associated ARIA states or properties; others are only valid in association with other roles.
 
 For example, `<ul role="tabpanel">` will be announced as a 'tab panel' by screen readers. However, if the tab panel doesn't have nested tabs, the element with the tabpanel role is not in fact a tab panel and accessibility has actually been negatively impacted.
 
@@ -40,16 +34,16 @@ For most document structure roles, semantic HTML equivalent elements are availab
 - [article](/en-US/docs/Web/Accessibility/ARIA/Roles/article_role) (use {{HTMLElement('article')}})
 - [cell](/en-US/docs/Web/Accessibility/ARIA/Roles/cell_role) (use {{HTMLElement('td')}})
 - [columnheader](/en-US/docs/Web/Accessibility/ARIA/Roles/columnheader_role) (use `{{HTMLElement('th', '&lt;th scope="col">')}}`)
-- [definition](/en-US/docs/Web/Accessibility/ARIA/Roles/definition_role) (use {{HTMLElement('dfn')}}
+- [definition](/en-US/docs/Web/Accessibility/ARIA/Roles/definition_role) (use {{HTMLElement('dfn')}})
 - [directory](/en-US/docs/Web/Accessibility/ARIA/Roles/directory_role)
 - [document](/en-US/docs/Web/Accessibility/ARIA/Roles/document_role)
 - [figure](/en-US/docs/Web/Accessibility/ARIA/Roles/figure_role) (use {{HTMLElement('figure')}} instead)
 - [group](/en-US/docs/Web/Accessibility/ARIA/Roles/group_role)
-- [heading](/en-US/docs/Web/Accessibility/ARIA/Roles/heading_role) (use {{HTMLElement('h1')}} thru {{HTMLElement('h6')}})
+- [heading](/en-US/docs/Web/Accessibility/ARIA/Roles/heading_role) (use {{HTMLElement("Heading_Elements", "h1")}} thru {{HTMLElement("Heading_Elements", "h6")}})
 - [img](/en-US/docs/Web/Accessibility/ARIA/Roles/img_role) (use {{HTMLElement('img')}} or {{HTMLElement('picture')}} instead)
 - [list](/en-US/docs/Web/Accessibility/ARIA/Roles/list_role) (use either {{HTMLElement('ul')}} or {{HTMLElement('ol')}} instead)
 - [listitem](/en-US/docs/Web/Accessibility/ARIA/Roles/listitem_role) (use {{HTMLElement('li')}} instead)
-- [meter](/en-US/docs/Web/Accessibility/ARIA/Roles/meter_role)  (use {{HTMLElement('meter')}} instead)
+- [meter](/en-US/docs/Web/Accessibility/ARIA/Roles/meter_role) (use {{HTMLElement('meter')}} instead)
 - [row](/en-US/docs/Web/Accessibility/ARIA/Roles/row_role) (use the {{HTMLElement('tr')}} with {{HTMLElement('table')}})
 - [rowgroup](/en-US/docs/Web/Accessibility/ARIA/Roles/rowgroup_role) (use {{HTMLElement('thead')}}, {{HTMLElement('tfoot')}} and {{HTMLElement('tbody')}})
 - [rowheader](/en-US/docs/Web/Accessibility/ARIA/Roles/rowheader_role) (use `{{HTMLElement('th','&lt;th scope="row">')}}`)
@@ -57,7 +51,22 @@ For most document structure roles, semantic HTML equivalent elements are availab
 - [table](/en-US/docs/Web/Accessibility/ARIA/Roles/table_role) (use {{HTMLElement('table')}})
 - [term](/en-US/docs/Web/Accessibility/ARIA/Roles/term_role) (use {{HTMLElement('dfn')}})
 
-These and [`associationlist`](/en-US/docs/Web/Accessibility/ARIA/Roles/structural_roles), [`associationlistitemkey`](/en-US/docs/Web/Accessibility/ARIA/Roles/structural_roles), [`associationlistitemvalue`](/en-US/docs/Web/Accessibility/ARIA/Roles/structural_roles), [`blockquote`](/en-US/docs/Web/Accessibility/ARIA/Roles/structural_roles), [`caption`](/en-US/docs/Web/Accessibility/ARIA/Roles/structural_roles), [`code`](/en-US/docs/Web/Accessibility/ARIA/Roles/structural_roles), [`deletion`](/en-US/docs/Web/Accessibility/ARIA/Roles/structural_roles), [`emphasis`](/en-US/docs/Web/Accessibility/ARIA/Roles/structural_roles), [`insertion`](/en-US/docs/Web/Accessibility/ARIA/Roles/structural_roles), [`paragraph`](/en-US/docs/Web/Accessibility/ARIA/Roles/structural_roles), [`strong`](/en-US/docs/Web/Accessibility/ARIA/Roles/structural_roles), [`subscript`](/en-US/docs/Web/Accessibility/ARIA/Roles/structural_roles), [`superscript`](/en-US/docs/Web/Accessibility/ARIA/Roles/structural_roles), and [`time`](/en-US/docs/Web/Accessibility/ARIA/Roles/structural_roles) are included for completeness, but in most cases are rarely, if ever, useful.
+These are included for completeness, but in most cases are rarely, if ever, useful:
+
+- [`associationlist`](/en-US/docs/Web/Accessibility/ARIA/Roles/structural_roles)
+- [`associationlistitemkey`](/en-US/docs/Web/Accessibility/ARIA/Roles/structural_roles)
+- [`associationlistitemvalue`](/en-US/docs/Web/Accessibility/ARIA/Roles/structural_roles)
+- [`blockquote`](/en-US/docs/Web/Accessibility/ARIA/Roles/structural_roles)
+- [`caption`](/en-US/docs/Web/Accessibility/ARIA/Roles/structural_roles)
+- [`code`](/en-US/docs/Web/Accessibility/ARIA/Roles/structural_roles)
+- [`deletion`](/en-US/docs/Web/Accessibility/ARIA/Roles/structural_roles)
+- [`emphasis`](/en-US/docs/Web/Accessibility/ARIA/Roles/structural_roles)
+- [`insertion`](/en-US/docs/Web/Accessibility/ARIA/Roles/structural_roles)
+- [`paragraph`](/en-US/docs/Web/Accessibility/ARIA/Roles/structural_roles)
+- [`strong`](/en-US/docs/Web/Accessibility/ARIA/Roles/structural_roles)
+- [`subscript`](/en-US/docs/Web/Accessibility/ARIA/Roles/structural_roles)
+- [`superscript`](/en-US/docs/Web/Accessibility/ARIA/Roles/structural_roles)
+- [`time`](/en-US/docs/Web/Accessibility/ARIA/Roles/structural_roles)
 
 ### 2. Widget roles
 
@@ -143,6 +152,6 @@ The following are the reference pages covering the WAI-ARIA roles discussed on <
 
 1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
 
-    {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
+   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
 
 </section>

@@ -1,11 +1,7 @@
 ---
 title: Child combinator
 slug: Web/CSS/Child_combinator
-tags:
-  - CSS
-  - Reference
-  - Selector
-  - Selectors
+page-type: css-combinator
 browser-compat: css.selectors.child
 ---
 
@@ -46,7 +42,8 @@ div > span {
 
 ```html
 <div>
-  <span>Span #1, in the div.
+  <span>
+    Span #1, in the div.
     <span>Span #2, in the span that's in the div.</span>
   </span>
 </div>

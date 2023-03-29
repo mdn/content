@@ -1,6 +1,7 @@
 ---
-title: ':nth-col'
+title: ":nth-col()"
 slug: Web/CSS/:nth-col
+page-type: css-pseudo-class
 browser-compat: css.selectors.nth-col
 ---
 
@@ -17,12 +18,14 @@ The **`:nth-col()`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/C
 
 ## Syntax
 
-The `nth-col` pseudo-class is specified with a single argument, which represents the pattern for matching elements.
+The `nth-col()` pseudo-class is specified with a single argument, which represents the pattern for matching elements. It uses `:nth-col(An+B)` syntax.
 
 See {{Cssxref(":nth-child")}} for a more detailed explanation of its syntax.
 
-```
-:nth-col
+```css
+:nth-col(An + B) {
+  /* ... */
+}
 ```
 
 ## Examples
@@ -40,7 +43,7 @@ See {{Cssxref(":nth-child")}} for a more detailed explanation of its syntax.
     <td>four</td>
   </tr>
   <tr>
-  <td>one</td>
+    <td>one</td>
     <td>two</td>
     <td>three</td>
     <td>four</td>
@@ -53,11 +56,11 @@ See {{Cssxref(":nth-child")}} for a more detailed explanation of its syntax.
 ```css
 td {
   border: 1px solid #ccc;
-  padding: .2em;
+  padding: 0.2em;
 }
 
 /* Odd columns */
-:nth-col(2n+1) {
+:nth-col(2n + 1) {
   background-color: pink;
 }
 ```

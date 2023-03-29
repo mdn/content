@@ -2,14 +2,6 @@
 title: XPathEvaluator.evaluate()
 slug: Web/API/XPathEvaluator/evaluate
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - DOM XPath API
-  - Method
-  - Reference
-  - XPath
-  - XPathEvaluator
 browser-compat: api.XPathEvaluator.evaluate
 ---
 
@@ -21,7 +13,7 @@ executes an XPath expression on the given node or document and returns an
 
 ## Syntax
 
-```js
+```js-nolint
 evaluate(expression, contextNode)
 evaluate(expression, contextNode, resolver)
 evaluate(expression, contextNode, resolver, type)

@@ -2,23 +2,6 @@
 title: MutationObserver.disconnect()
 slug: Web/API/MutationObserver/disconnect
 page-type: web-api-instance-method
-tags:
-  - API
-  - Changes
-  - DOM
-  - DOM Changes
-  - DOM Reference
-  - DOM Tree
-  - Disconnect
-  - Method
-  - Mutation Observer
-  - Mutation Observer API
-  - MutationObserver
-  - Observing
-  - Reference
-  - Watching
-  - mutation
-  - stop
 browser-compat: api.MutationObserver.disconnect
 ---
 
@@ -33,7 +16,7 @@ The observer can be reused by calling its
 
 ## Syntax
 
-```js
+```js-nolint
 disconnect()
 ```
 
@@ -66,8 +49,8 @@ possible reuse.
 const targetNode = document.querySelector("#someElement");
 const observerOptions = {
   childList: true,
-  attributes: true
-}
+  attributes: true,
+};
 
 const observer = new MutationObserver(callback);
 observer.observe(targetNode, observerOptions);

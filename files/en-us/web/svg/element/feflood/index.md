@@ -1,10 +1,7 @@
 ---
 title: <feFlood>
 slug: Web/SVG/Element/feFlood
-tags:
-  - Element
-  - SVG
-  - SVG Filter
+page-type: svg-element
 browser-compat: svg.elements.feFlood
 ---
 
@@ -43,12 +40,17 @@ This element implements the {{domxref("SVGFEFloodElement")}} interface.
 <svg xmlns="http://www.w3.org/2000/svg" width="200" height="200">
   <defs>
     <filter id="floodFilter" filterUnits="userSpaceOnUse">
-      <feFlood x="50" y="50" width="100" height="100"
-          flood-color="green" flood-opacity="0.5"/>
+      <feFlood
+        x="50"
+        y="50"
+        width="100"
+        height="100"
+        flood-color="green"
+        flood-opacity="0.5" />
     </filter>
   </defs>
 
-  <use style="filter: url(#floodFilter);"/>
+  <use style="filter: url(#floodFilter);" />
 </svg>
 ```
 
@@ -68,7 +70,6 @@ This element implements the {{domxref("SVGFEFloodElement")}} interface.
 
 - {{SVGElement("filter")}}
 - {{SVGElement("animate")}}
-- {{SVGElement("animateColor")}}
 - {{SVGElement("set")}}
 - {{SVGElement("feBlend")}}
 - {{SVGElement("feColorMatrix")}}

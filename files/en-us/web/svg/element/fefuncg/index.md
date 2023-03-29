@@ -1,12 +1,7 @@
 ---
 title: <feFuncG>
 slug: Web/SVG/Element/feFuncG
-tags:
-  - Element
-  - NeedsExample
-  - Reference
-  - SVG
-  - SVG Filter
+page-type: svg-element
 browser-compat: svg.elements.feFuncG
 ---
 
@@ -27,7 +22,7 @@ The **`<feFuncG>`** [SVG](/en-US/docs/Web/SVG) filter primitive defines the tran
 
 ### Specific attributes
 
-_None._
+None.
 
 ## DOM Interface
 

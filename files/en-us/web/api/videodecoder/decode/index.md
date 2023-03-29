@@ -2,23 +2,16 @@
 title: VideoDecoder.decode()
 slug: Web/API/VideoDecoder/decode
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - decode
-  - VideoDecoder
-  - Experimental
 browser-compat: api.VideoDecoder.decode
 ---
 
-{{APIRef("WebCodecs API")}}{{SecureContext_Header}}{{SeeCompatTable}}
+{{APIRef("WebCodecs API")}}{{SecureContext_Header}}
 
 The **`decode()`** method of the {{domxref("VideoDecoder")}} interface enqueues a control message to decode a given chunk of video.
 
 ## Syntax
 
-```js
+```js-nolint
 decode(chunk)
 ```
 

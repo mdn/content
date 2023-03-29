@@ -2,12 +2,6 @@
 title: TrustedHTML.toString()
 slug: Web/API/TrustedHTML/toString
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - toString
-  - TrustedHTML
 browser-compat: api.TrustedHTML.toString
 ---
 
@@ -17,7 +11,7 @@ The **`toString()`** method of the {{domxref("TrustedHTML")}} interface returns 
 
 ## Syntax
 
-```js
+```js-nolint
 toString()
 ```
 
@@ -35,7 +29,7 @@ The constant `escaped` is an object created via the Trusted Types policy escapeH
 
 ```js
 const escapeHTMLPolicy = trustedTypes.createPolicy("myEscapePolicy", {
-  createHTML: (string) => string.replace(/>/g, "<")
+  createHTML: (string) => string.replace(/>/g, "<"),
 });
 
 const escaped = escapeHTMLPolicy.createHTML("<img src=x onerror=alert(1)>");

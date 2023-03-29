@@ -2,14 +2,6 @@
 title: TransitionEvent()
 slug: Web/API/TransitionEvent/TransitionEvent
 page-type: web-api-constructor
-tags:
-  - API
-  - CSS
-  - CSS Transitions
-  - CSSOM
-  - Constructor
-  - Reference
-  - TransitionEvent
 browser-compat: api.TransitionEvent.TransitionEvent
 ---
 
@@ -19,7 +11,7 @@ The **`TransitionEvent()`** constructor returns a new {{domxref("TransitionEvent
 
 ## Syntax
 
-```js
+```js-nolint
 new TransitionEvent(type)
 new TransitionEvent(type, options)
 ```

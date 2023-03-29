@@ -1,13 +1,7 @@
 ---
-title: ':lang()'
+title: ":lang()"
 slug: Web/CSS/:lang
-tags:
-  - CSS
-  - Layout
-  - Pseudo-class
-  - Reference
-  - Selector
-  - Web
+page-type: css-pseudo-class
 browser-compat: css.selectors.lang
 ---
 
@@ -17,14 +11,16 @@ The **`:lang()`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/
 
 {{EmbedInteractiveExample("pages/tabbed/pseudo-class-function-lang.html", "tabbed-shorter")}}
 
-> **Note:** In HTML, the language is determined by a combination of the {{htmlattrxref("lang")}} attribute, the {{HTMLElement("meta")}} element, and possibly by information from the protocol (such as HTTP headers). For other document types there may be other document methods for determining the language.
+> **Note:** In HTML, the language is determined by a combination of the [`lang`](/en-US/docs/Web/HTML/Global_attributes#lang) attribute, the {{HTMLElement("meta")}} element, and possibly by information from the protocol (such as HTTP headers). For other document types there may be other document methods for determining the language.
 
 ## Syntax
 
 ### Formal syntax
 
-```
-:lang( <language-code> )
+```css-nolint
+:lang(<language-code>) {
+  /* ... */
+}
 ```
 
 ### Parameter
@@ -39,17 +35,29 @@ In this example, the `:lang()` pseudo-class is used to match the parents of quot
 ### HTML
 
 ```html
-<div lang="en"><q>This English quote has a <q>nested</q> quote inside.</q></div>
-<div lang="fr"><q>This French quote has a <q>nested</q> quote inside.</q></div>
-<div lang="de"><q>This German quote has a <q>nested</q> quote inside.</q></div>
+<div lang="en">
+  <q>This English quote has a <q>nested</q> quote inside.</q>
+</div>
+<div lang="fr">
+  <q>This French quote has a <q>nested</q> quote inside.</q>
+</div>
+<div lang="de">
+  <q>This German quote has a <q>nested</q> quote inside.</q>
+</div>
 ```
 
 ### CSS
 
 ```css
-:lang(en) > q { quotes: '\201C' '\201D' '\2018' '\2019'; }
-:lang(fr) > q { quotes: '« ' ' »'; }
-:lang(de) > q { quotes: '»' '«' '\2039' '\203A'; }
+:lang(en) > q {
+  quotes: "\201C""\201D""\2018""\2019";
+}
+:lang(fr) > q {
+  quotes: "« " " »";
+}
+:lang(de) > q {
+  quotes: "»" "«" "\2039""\203A";
+}
 ```
 
 ### Result
@@ -67,6 +75,6 @@ In this example, the `:lang()` pseudo-class is used to match the parents of quot
 ## See also
 
 - Language-related pseudo-classes: {{cssxref(":lang")}}, {{cssxref(":dir")}}
-- HTML {{htmlattrxref("lang")}} attribute
-- HTML {{htmlattrxref("translate")}} attribute
+- HTML [`lang`](/en-US/docs/Web/HTML/Global_attributes#lang) attribute
+- HTML [`translate`](/en-US/docs/Web/HTML/Global_attributes#translate) attribute
 - {{RFC(5646, "Tags for Identifying Languages (also known as BCP 47)")}}

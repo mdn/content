@@ -1,10 +1,7 @@
 ---
 title: Actual value
 slug: Web/CSS/actual_value
-tags:
-  - CSS
-  - Guide
-  - Reference
+page-type: guide
 spec-urls: https://www.w3.org/TR/CSS22/cascade.html#actual-value
 ---
 

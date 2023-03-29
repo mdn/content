@@ -2,11 +2,6 @@
 title: CSSStyleDeclaration.getPropertyValue()
 slug: Web/API/CSSStyleDeclaration/getPropertyValue
 page-type: web-api-instance-method
-tags:
-  - API
-  - CSSOM
-  - Method
-  - Reference
 browser-compat: api.CSSStyleDeclaration.getPropertyValue
 ---
 
@@ -17,7 +12,7 @@ string containing the value of a specified CSS property.
 
 ## Syntax
 
-```js
+```js-nolint
 getPropertyValue(property)
 ```
 
@@ -37,7 +32,7 @@ a CSS selector rule:
 
 ```js
 const declaration = document.styleSheets[0].cssRules[0].style;
-const value = declaration.getPropertyValue('margin'); // "1px 2px"
+const value = declaration.getPropertyValue("margin"); // "1px 2px"
 ```
 
 ## Specifications

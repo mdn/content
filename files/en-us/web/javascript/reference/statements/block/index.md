@@ -1,11 +1,7 @@
 ---
 title: block
 slug: Web/JavaScript/Reference/Statements/block
-tags:
-  - JavaScript
-  - Language feature
-  - Reference
-  - Statement
+page-type: javascript-statement
 browser-compat: javascript.statements.block
 ---
 
@@ -17,7 +13,7 @@ A **block statement** is used to group zero or more statements. The block is del
 
 ## Syntax
 
-```js
+```js-nolint
 {
   StatementList
 }

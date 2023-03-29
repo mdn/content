@@ -1,16 +1,7 @@
 ---
 title: initial
 slug: Web/CSS/initial
-tags:
-  - CSS
-  - CSS Cascade
-  - CSS Value
-  - Default state
-  - Initial state
-  - Keyword
-  - Layout
-  - Reference
-  - initial
+page-type: css-keyword
 browser-compat: css.types.global_keywords.initial
 ---
 

@@ -2,12 +2,6 @@
 title: Using the Gamepad API
 slug: Web/API/Gamepad_API/Using_the_Gamepad_API
 page-type: guide
-tags:
-  - API
-  - Advanced
-  - Gamepad API
-  - Games
-  - Guide
 browser-compat: api.Gamepad
 ---
 
@@ -21,15 +15,19 @@ The [Gamepad API](/en-US/docs/Web/API/Gamepad_API) introduces new events on the 
 
 When a new gamepad is connected to the computer, the focused page first receives a {{ domxref("Window/gamepadconnected_event", "gamepadconnected") }} event. If a gamepad is already connected when the page loaded, the {{ domxref("Window/gamepadconnected_event", "gamepadconnected") }} event is dispatched to the focused page when the user presses a button or moves an axis.
 
-> **Note:** In Firefox, gamepads are only exposed to a page when the user interacts with one with the page visible. This helps prevent gamepads being used for fingerprinting the user. Once one gamepad has been interacted with, other gamepads that are connected will automatically be visible.
+> **Note:** In Firefox, gamepads are only exposed to a page when the user interacts with one with the page visible. This helps prevent gamepads from being used for [fingerprinting](/en-US/docs/Glossary/Fingerprinting) the user. Once one gamepad has been interacted with, other gamepads that are connected will automatically be visible.
 
 You can use {{domxref("Window/gamepadconnected_event", "gamepadconnected")}} like this:
 
 ```js
 window.addEventListener("gamepadconnected", (e) => {
-  console.log("Gamepad connected at index %d: %s. %d buttons, %d axes.",
-    e.gamepad.index, e.gamepad.id,
-    e.gamepad.buttons.length, e.gamepad.axes.length);
+  console.log(
+    "Gamepad connected at index %d: %s. %d buttons, %d axes.",
+    e.gamepad.index,
+    e.gamepad.id,
+    e.gamepad.buttons.length,
+    e.gamepad.axes.length
+  );
 });
 ```
 
@@ -41,8 +39,11 @@ When a gamepad is disconnected, and if a page has previously received data for t
 
 ```js
 window.addEventListener("gamepaddisconnected", (e) => {
-  console.log("Gamepad disconnected from index %d: %s",
-    e.gamepad.index, e.gamepad.id);
+  console.log(
+    "Gamepad disconnected from index %d: %s",
+    e.gamepad.index,
+    e.gamepad.id
+  );
 });
 ```
 
@@ -63,8 +64,20 @@ function gamepadHandler(event, connecting) {
   }
 }
 
-window.addEventListener("gamepadconnected", (e) => { gamepadHandler(e, true); }, false);
-window.addEventListener("gamepaddisconnected", (e) => { gamepadHandler(e, false); }, false);
+window.addEventListener(
+  "gamepadconnected",
+  (e) => {
+    gamepadHandler(e, true);
+  },
+  false
+);
+window.addEventListener(
+  "gamepaddisconnected",
+  (e) => {
+    gamepadHandler(e, false);
+  },
+  false
+);
 ```
 
 This previous example also demonstrates how the `gamepad` property can be held after the event has completed — a technique we will use for device state querying later.
@@ -80,9 +93,13 @@ The {{domxref("Navigator.getGamepads()")}} method returns an array of all device
 ```js
 window.addEventListener("gamepadconnected", (e) => {
   const gp = navigator.getGamepads()[e.gamepad.index];
-  console.log("Gamepad connected at index %d: %s. %d buttons, %d axes.",
-    gp.index, gp.id,
-    gp.buttons.length, gp.axes.length);
+  console.log(
+    "Gamepad connected at index %d: %s. %d buttons, %d axes.",
+    gp.index,
+    gp.id,
+    gp.buttons.length,
+    gp.axes.length
+  );
 });
 ```
 
@@ -142,7 +159,7 @@ Chrome does things differently here. Instead of constantly storing the gamepad's
 ```js
 let interval;
 
-if (!('ongamepadconnected' in window)) {
+if (!("ongamepadconnected" in window)) {
   // No gamepad events available, poll instead.
   interval = setInterval(pollGamepads, 500);
 }
@@ -305,8 +322,8 @@ function scangamepads() {
     ? "none"
     : "block";
   for (const gamepad of gamepads) {
-    // gamepad is null if disconnected during the session
     if (gamepad) {
+      // Can be null if disconnected during the session
       if (gamepad.index in controllers) {
         controllers[gamepad.index] = gamepad;
       } else {

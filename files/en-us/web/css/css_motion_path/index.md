@@ -1,13 +1,7 @@
 ---
 title: CSS Motion Path
 slug: Web/CSS/CSS_Motion_Path
-tags:
-  - CSS
-  - CSS Motion Path
-  - Guide
-  - Motion Path
-  - Overview
-  - Reference
+page-type: css-module
 browser-compat: css.properties.offset-path
 ---
 
@@ -25,7 +19,7 @@ The idea is that when you want to animate an element moving along a path, you pr
 
 ```css
 #motion-demo {
-  offset-path: path('M20,20 C20,100 200,0 200,100');
+  offset-path: path("M20,20 C20,100 200,0 200,100");
   animation: move 3000ms infinite alternate ease-in-out;
   width: 40px;
   height: 40px;

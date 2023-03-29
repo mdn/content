@@ -1,9 +1,7 @@
 ---
 title: fill
 slug: Web/SVG/Attribute/fill
-tags:
-  - SVG
-  - SVG Attribute
+page-type: svg-attribute
 browser-compat: svg.attributes.presentation.fill
 ---
 
@@ -25,12 +23,16 @@ You can use this attribute with the following SVG elements:
 - {{SVGElement('tref')}}
 - {{SVGElement('tspan')}}
 
-For animation, these elements are using this attribute: {{SVGElement('animate')}}, {{SVGElement('animateColor')}}, {{SVGElement('animateMotion')}}, {{SVGElement('animateTransform')}}, and {{SVGElement('set')}}.
+For animation, these elements are using this attribute: {{SVGElement('animate')}}, {{SVGElement('animateMotion')}}, {{SVGElement('animateTransform')}}, and {{SVGElement('set')}}.
 
 ## Example
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
@@ -41,7 +43,7 @@ html,body,svg { height:100% }
   <!-- Fill circle with a gradient -->
   <defs>
     <radialGradient id="myGradient">
-      <stop offset="0%"   stop-color="pink" />
+      <stop offset="0%" stop-color="pink" />
       <stop offset="100%" stop-color="black" />
     </radialGradient>
   </defs>
@@ -53,10 +55,13 @@ html,body,svg { height:100% }
   which is a circle with a radius of 40.
   -->
   <circle cx="250" cy="50" r="20">
-    <animate attributeType="XML"
-             attributeName="r"
-             from="0" to="40" dur="5s"
-             fill="freeze" />
+    <animate
+      attributeType="XML"
+      attributeName="r"
+      from="0"
+      to="40"
+      dur="5s"
+      fill="freeze" />
   </circle>
 </svg>
 ```
@@ -95,34 +100,6 @@ For {{SVGElement('altGlyph')}}, `fill` is a presentation attribute that defines 
 ## animate
 
 For {{SVGElement('animate')}}, `fill` defines the final state of the animation.
-
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Value</th>
-      <td>
-        <code>freeze</code> (<em>Keep the state of the last animation frame</em
-        >) | <code>remove</code> (<em
-          >Keep the state of the first animation frame</em
-        >)
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Default value</th>
-      <td><code>remove</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Animatable</th>
-      <td>No</td>
-    </tr>
-  </tbody>
-</table>
-
-## animateColor
-
-> **Warning:** As of SVG Animation 2 {{SVGElement('animateColor')}} is deprecated and shouldn't be used. Use {{SVGElement('animate')}} instead.
-
-For {{SVGElement('animateColor')}}, `fill` defines the final state of the animation.
 
 <table class="properties">
   <tbody>

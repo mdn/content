@@ -2,16 +2,7 @@
 title: onSelectionChanged
 slug: >-
   Mozilla/Add-ons/WebExtensions/API/devtools/panels/ElementsPanel/onSelectionChanged
-tags:
-  - API
-  - Add-ons
-  - DevTools
-  - Event
-  - Extensions
-  - Reference
-  - WebExtensions
-  - devtools.panels
-  - devtools.panelsElementsPanel
+page-type: webextension-api-event
 browser-compat: webextensions.api.devtools.panels.ElementsPanel.onSelectionChanged
 ---
 
@@ -21,7 +12,7 @@ Fires when the user selects a different page element for inspection with the bro
 
 ## Syntax
 
-```js
+```js-nolint
 browser.devtools.panels.elements.onSelectionChanged.addListener(listener)
 browser.devtools.panels.elements.onSelectionChanged.removeListener(listener)
 browser.devtools.panels.elements.onSelectionChanged.hasListener(listener)

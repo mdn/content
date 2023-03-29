@@ -1,17 +1,13 @@
 ---
-title: '-webkit-device-pixel-ratio'
+title: "-webkit-device-pixel-ratio"
 slug: Web/CSS/@media/-webkit-device-pixel-ratio
-tags:
-  - '@media'
-  - CSS
-  - WebKit
-  - media feature
+page-type: css-media-feature
 browser-compat: css.at-rules.media.-webkit-device-pixel-ratio
 ---
 
 {{CSSRef}}
 
-The **`-webkit-device-pixel-ratio`** is a non-standard Boolean [CSS](/en-US/docs/Web/CSS) [media feature](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#media_features) which is an alternative to the standard [`resolution`](/en-US/docs/Web/CSS/@media/resolution) media feature.
+The **`-webkit-device-pixel-ratio`** is a non-standard Boolean [CSS](/en-US/docs/Web/CSS) [media feature](/en-US/docs/Web/CSS/@media#media_features) which is an alternative to the standard [`resolution`](/en-US/docs/Web/CSS/@media/resolution) media feature.
 
 > **Note:** If possible, use the [`resolution`](/en-US/docs/Web/CSS/@media/resolution) media feature query instead, which is a standard media feature. While this prefixed media feature is a WebKit feature, other browser engines may support it. See [browser compatibility](#browser-compatibility) below.
 
@@ -28,14 +24,22 @@ The `-webkit-device-pixel-ratio` feature is specified as a {{cssxref("&lt;number
 
 ```css
 /* A unit of "dppx" is implied: */
-@media (-webkit-min-device-pixel-ratio: 2) { /* … */ }
+@media (-webkit-min-device-pixel-ratio: 2) {
+  /* … */
+}
 /* It is equivalent to: */
-@media (min-resolution: 2dppx) { /* … */ }
+@media (min-resolution: 2dppx) {
+  /* … */
+}
 
 /* Similarly: */
-@media (-webkit-max-device-pixel-ratio: 2) { /* … */ }
+@media (-webkit-max-device-pixel-ratio: 2) {
+  /* … */
+}
 /* It is equivalent to: */
-@media (max-resolution: 2dppx) { /* … */ }
+@media (max-resolution: 2dppx) {
+  /* … */
+}
 ```
 
 ## Examples

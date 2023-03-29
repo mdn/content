@@ -1,13 +1,7 @@
 ---
-title: ':first-child'
+title: ":first-child"
 slug: Web/CSS/:first-child
-tags:
-  - CSS
-  - Layout
-  - Pseudo-class
-  - Reference
-  - Selector
-  - Web
+page-type: css-pseudo-class
 browser-compat: css.selectors.first-child
 ---
 
@@ -19,8 +13,10 @@ The **`:first-child`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web
 
 ## Syntax
 
-```
-:first-child
+```css
+:first-child {
+  /* ... */
+}
 ```
 
 ## Examples
@@ -63,7 +59,8 @@ p:first-child {
 <ul>
   <li>Item 1</li>
   <li>Item 2</li>
-  <li>Item 3
+  <li>
+    Item 3
     <ul>
       <li>Item 3.1</li>
       <li>Item 3.2</li>

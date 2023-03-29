@@ -1,22 +1,6 @@
 ---
 title: Functions — reusable blocks of code
 slug: Learn/JavaScript/Building_blocks/Functions
-tags:
-  - API
-  - Article
-  - Beginner
-  - Browser
-  - CodingScripting
-  - Custom
-  - Functions
-  - Guide
-  - JavaScript
-  - Learn
-  - Method
-  - anonymous
-  - invoke
-  - l10n:priority
-  - parameters
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Building_blocks/Looping_code","Learn/JavaScript/Building_blocks/Build_your_own_function", "Learn/JavaScript/Building_blocks")}}
@@ -47,7 +31,7 @@ Another essential concept in coding is **functions**, which allow you to store a
 
 In JavaScript, you'll find functions everywhere. In fact, we've been using functions all the way through the course so far; we've just not been talking about them very much. Now is the time, however, for us to start talking about functions explicitly, and really exploring their syntax.
 
-Pretty much anytime you make use of a JavaScript structure that features a pair of parentheses — `()` — and you're **not** using a common built-in language structure like a [for loop](/en-US/docs/Learn/JavaScript/Building_blocks/Looping_code#the_standard_for_loop), [while or do...while loop](/en-US/docs/Learn/JavaScript/Building_blocks/Looping_code#while_and_do_..._while), or [if...else statement](/en-US/docs/Learn/JavaScript/Building_blocks/conditionals#if_..._else_statements), you are making use of a function.
+Pretty much anytime you make use of a JavaScript structure that features a pair of parentheses — `()` — and you're **not** using a common built-in language structure like a [for loop](/en-US/docs/Learn/JavaScript/Building_blocks/Looping_code#the_standard_for_loop), [while or do...while loop](/en-US/docs/Learn/JavaScript/Building_blocks/Looping_code#while_and_do_..._while), or [if...else statement](/en-US/docs/Learn/JavaScript/Building_blocks/conditionals#if...else_statements), you are making use of a function.
 
 ## Built-in browser functions
 
@@ -293,7 +277,7 @@ Here's a complete working example of the "keydown" example we discussed above:
 The HTML:
 
 ```html
-<input id="textBox" type="text"></input>
+<input id="textBox" type="text">
 <div id="output"></div>
 ```
 
@@ -308,7 +292,7 @@ textBox.addEventListener('keydown', (event) => output.textContent = `You pressed
 
 ```css hidden
 div {
-  margin: .5rem 0;
+  margin: 0.5rem 0;
 }
 ```
 
@@ -371,89 +355,89 @@ Let's look at a real example to demonstrate scoping.
 2. Open the example up in a browser and in your text editor.
 3. Open the JavaScript console in your browser developer tools. In the JavaScript console, enter the following command:
 
-    ```js
-    output(x);
-    ```
+   ```js
+   output(x);
+   ```
 
-    You should see the value of variable `x` printed to the browser viewport.
+   You should see the value of variable `x` printed to the browser viewport.
 
 4. Now try entering the following in your console
 
-    ```js
-    output(y);
-    output(z);
-    ```
+   ```js
+   output(y);
+   output(z);
+   ```
 
-    Both of these should throw an error into the console along the lines of "[ReferenceError: y is not defined](/en-US/docs/Web/JavaScript/Reference/Errors/Not_defined)". Why is that? Because of function scope — `y` and `z` are locked inside the `a()` and `b()` functions, so `output()` can't access them when called from the global scope.
+   Both of these should throw an error into the console along the lines of "[ReferenceError: y is not defined](/en-US/docs/Web/JavaScript/Reference/Errors/Not_defined)". Why is that? Because of function scope — `y` and `z` are locked inside the `a()` and `b()` functions, so `output()` can't access them when called from the global scope.
 
 5. However, what about when it's called from inside another function? Try editing `a()` and `b()` so they look like this:
 
-    ```js
-    function a() {
-      const y = 2;
-      output(y);
-    }
+   ```js
+   function a() {
+     const y = 2;
+     output(y);
+   }
 
-    function b() {
-      const z = 3;
-      output(z);
-    }
-    ```
+   function b() {
+     const z = 3;
+     output(z);
+   }
+   ```
 
-    Save the code and reload it in your browser, then try calling the `a()` and `b()` functions from the JavaScript console:
+   Save the code and reload it in your browser, then try calling the `a()` and `b()` functions from the JavaScript console:
 
-    ```js
-    a();
-    b();
-    ```
+   ```js
+   a();
+   b();
+   ```
 
-    You should see the `y` and `z` values printed in the browser viewport. This works fine, as the `output()` function is being called inside the other functions — in the same scope as the variables it is printing are defined in, in each case. `output()` itself is available from anywhere, as it is defined in the global scope.
+   You should see the `y` and `z` values printed in the browser viewport. This works fine, as the `output()` function is being called inside the other functions — in the same scope as the variables it is printing are defined in, in each case. `output()` itself is available from anywhere, as it is defined in the global scope.
 
 6. Now try updating your code like this:
 
-    ```js
-    function a() {
-      const y = 2;
-      output(x);
-    }
+   ```js
+   function a() {
+     const y = 2;
+     output(x);
+   }
 
-    function b() {
-      const z = 3;
-      output(x);
-    }
-    ```
+   function b() {
+     const z = 3;
+     output(x);
+   }
+   ```
 
 7. Save and reload again, and try this again in your JavaScript console:
 
-    ```js
-    a();
-    b();
-    ```
+   ```js
+   a();
+   b();
+   ```
 
-    Both the `a()` and `b()` call should print the value of x to the browser viewport. These work fine because even though the `output()` calls are not in the same scope as `x` is defined in, `x` is a global variable so is available inside all code, everywhere.
+   Both the `a()` and `b()` call should print the value of x to the browser viewport. These work fine because even though the `output()` calls are not in the same scope as `x` is defined in, `x` is a global variable so is available inside all code, everywhere.
 
 8. Finally, try updating your code like this:
 
-    ```js
-    function a() {
-      const y = 2;
-      output(z);
-    }
+   ```js
+   function a() {
+     const y = 2;
+     output(z);
+   }
 
-    function b() {
-      const z = 3;
-      output(y);
-    }
-    ```
+   function b() {
+     const z = 3;
+     output(y);
+   }
+   ```
 
 9. Save and reload again, and try this again in your JavaScript console:
 
-    ```js
-    a();
-    b();
-    ```
+   ```js
+   a();
+   b();
+   ```
 
-    This time the `a()` and `b()` calls will throw that annoying [ReferenceError: _variable name_ is not defined](/en-US/docs/Web/JavaScript/Reference/Errors/Not_defined) error into the console — this is because the `output()` calls and the variables they are trying to print are not in the same function scopes — the variables are effectively invisible to those function calls.
+   This time the `a()` and `b()` calls will throw that annoying [ReferenceError: _variable name_ is not defined](/en-US/docs/Web/JavaScript/Reference/Errors/Not_defined) error into the console — this is because the `output()` calls and the variables they are trying to print are not in the same function scopes — the variables are effectively invisible to those function calls.
 
 > **Note:** The same scoping rules do not apply to loop (e.g. `for() { }`) and conditional blocks (e.g. `if () { }`) — they look very similar, but they are not the same thing! Take care not to get these confused.
 
@@ -474,13 +458,3 @@ This article has explored the fundamental concepts behind functions, paving the 
 - [Default parameters](/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters), [Arrow functions](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions) — advanced concept references
 
 {{PreviousMenuNext("Learn/JavaScript/Building_blocks/Looping_code","Learn/JavaScript/Building_blocks/Build_your_own_function", "Learn/JavaScript/Building_blocks")}}
-
-## In this module
-
-- [Making decisions in your code — conditionals](/en-US/docs/Learn/JavaScript/Building_blocks/conditionals)
-- [Looping code](/en-US/docs/Learn/JavaScript/Building_blocks/Looping_code)
-- **Functions — reusable blocks of code**
-- [Build your own function](/en-US/docs/Learn/JavaScript/Building_blocks/Build_your_own_function)
-- [Function return values](/en-US/docs/Learn/JavaScript/Building_blocks/Return_values)
-- [Introduction to events](/en-US/docs/Learn/JavaScript/Building_blocks/Events)
-- [Image gallery](/en-US/docs/Learn/JavaScript/Building_blocks/Image_gallery)

@@ -2,26 +2,8 @@
 title: XRWebGLLayer()
 slug: Web/API/XRWebGLLayer/XRWebGLLayer
 page-type: web-api-constructor
-tags:
-  - API
-  - AR
-  - Constructor
-  - Context
-  - Create
-  - Initialize
-  - Layer
-  - Reality
-  - Reference
-  - VR
-  - Virtual
-  - WebXR
-  - WebXR API
-  - WebXR Device API
-  - XR
-  - XRWebGLLayer
-  - augmented
-  - new
-  - Experimental
+status:
+  - experimental
 browser-compat: api.XRWebGLLayer.XRWebGLLayer
 ---
 
@@ -33,9 +15,9 @@ WebXR device and the WebGL graphics layer used to render the 3D scene.
 
 ## Syntax
 
-```js
+```js-nolint
 new XRWebGLLayer(session, context)
-new XRWebGLLayer(session, context, layerInit)
+new XRWebGLLayer(session, context, options)
 ```
 
 ### Parameters
@@ -47,7 +29,7 @@ new XRWebGLLayer(session, context, layerInit)
   - : A {{domxref("WebGLRenderingContext")}} or {{domxref("WebGL2RenderingContext")}}
     identifying the WebGL drawing context to use for rendering the scene for the specified
     WebXR session.
-- `layerInit` {{optional_inline}}
+- `options` {{optional_inline}}
 
   - : An object providing configuration options for the new `XRWebGLLayer`. The available options
     are:
@@ -55,7 +37,7 @@ new XRWebGLLayer(session, context, layerInit)
     - `alpha`
       - : The frame buffer's color buffer will be established with an alpha channel if the `alpha` Boolean property is `true`. Otherwise, the color buffer will not have an alpha channel. The default value is `true`.
     - `antialias`
-      - : A Boolean value which is `true` if anti-aliasing is to be used when rendering in the context; otherwise `false`. The browser selects the anti-aliasing method to use; there is no support for requesting a specific mode yet.  The default value is `true`.
+      - : A Boolean value which is `true` if anti-aliasing is to be used when rendering in the context; otherwise `false`. The browser selects the anti-aliasing method to use; there is no support for requesting a specific mode yet. The default value is `true`.
     - `depth`
       - : A Boolean value which, if `true`, requests that the new layer have a depth buffer; otherwise, no depth layer is allocated. The default is `true`.
     - `framebufferScaleFactor`

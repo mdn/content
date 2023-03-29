@@ -2,12 +2,8 @@
 title: MimeType
 slug: Web/API/MimeType
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Plugins
-  - Reference
-  - Deprecated
+status:
+  - deprecated
 browser-compat: api.MimeType
 ---
 
@@ -15,7 +11,7 @@ browser-compat: api.MimeType
 
 The **`MimeType`** interface provides contains information about a MIME type associated with a particular plugin. {{domxref("Navigator.mimeTypes")}} returns an array of this object.
 
-## Properties
+## Instance properties
 
 - {{domxref("MimeType.type")}} {{Deprecated_Inline}}
   - : Returns the MIME type of the associated plugin.

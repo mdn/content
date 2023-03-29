@@ -2,12 +2,6 @@
 title: MediaKeyMessageEvent()
 slug: Web/API/MediaKeyMessageEvent/MediaKeyMessageEvent
 page-type: web-api-constructor
-tags:
-  - API
-  - Constructor
-  - EncryptedMediaExtensions
-  - MediaKeyMessageEvent
-  - Reference
 browser-compat: api.MediaKeyMessageEvent.MediaKeyMessageEvent
 ---
 
@@ -17,7 +11,7 @@ The **`MediaKeyMessageEvent`** constructor creates a new {{domxref("MediaKeyMess
 
 ## Syntax
 
-```js
+```js-nolint
 new MediaKeyMessageEvent(type)
 new MediaKeyMessageEvent(type, options)
 ```

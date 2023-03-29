@@ -1,14 +1,10 @@
 ---
 title: box-flex
 slug: Web/CSS/box-flex
-tags:
-  - CSS
-  - CSS Property
-  - Non-standard
-  - Reference
-  - box-flex
-  - recipe:css-property
-  - Deprecated
+page-type: css-property
+status:
+  - deprecated
+  - non-standard
 browser-compat: css.properties.box-flex
 ---
 
@@ -79,7 +75,7 @@ box-flex =
 <!DOCTYPE html>
 <html lang="en-US">
   <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
     <title>-moz-box-flex example</title>
     <style>
       div.example {
@@ -89,13 +85,13 @@ box-flex =
         width: 100%;
       }
       div.example > p:nth-child(1) {
-        -moz-box-flex: 1;       /* Mozilla */
-        -webkit-box-flex: 1;    /* WebKit */
+        -moz-box-flex: 1; /* Mozilla */
+        -webkit-box-flex: 1; /* WebKit */
         border: 1px solid black;
       }
       div.example > p:nth-child(2) {
-        -moz-box-flex: 0;       /* Mozilla */
-        -webkit-box-flex: 0;    /* WebKit */
+        -moz-box-flex: 0; /* Mozilla */
+        -webkit-box-flex: 0; /* WebKit */
         border: 1px solid black;
       }
     </style>
