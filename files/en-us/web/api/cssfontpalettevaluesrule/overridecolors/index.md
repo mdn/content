@@ -15,7 +15,7 @@ A string containing a comma-separated list of color index and color pair
 
 ## Examples
 
-### Read the overriden colors
+### Read the overridden color
 
 This example first defines a few at-rules, among them two {{cssxref("@font-palette-values")}}. As these rules live in the last stylesheet added to the document, the palette will be the second {{domxref("CSSRule")}} returned by the last stylesheet in the document (`document.styleSheets[document.styleSheets.length-1].cssRules`).
 
@@ -69,22 +69,22 @@ const hat = document.querySelector(".colored-hat");
 const rules = document.styleSheets[document.styleSheets.length - 1].cssRules;
 const greenFontPaletteValuesRule = rules[3];
 const blueFontPaletteValuesRule = rules[2];
-log.textContent = `Overriden colors: ${blueFontPaletteValuesRule.overrideColors}`;
+log.textContent = `Overridden colors: ${blueFontPaletteValuesRule.overrideColors}`;
 
 button.addEventListener("click", (event) => {
   if (hat.style.fontPalette !== "--green") {
     hat.style.fontPalette = "--green";
-    log.textContent = `Overriden colors: ${greenFontPaletteValuesRule.overrideColors}`;
+    log.textContent = `Overridden colors: ${greenFontPaletteValuesRule.overrideColors}`;
   } else {
     hat.style.fontPalette = "--blue";
-    log.textContent = `Overriden colors: ${blueFontPaletteValuesRule.overrideColors}`;
+    log.textContent = `Overridden colors: ${blueFontPaletteValuesRule.overrideColors}`;
   }
 });
 ```
 
 #### Result
 
-{{EmbedLiveSample("Read the overriden colors", "100", "125")}}
+{{EmbedLiveSample("Read the overridden colors", "100", "125")}}
 
 ## Specifications
 
