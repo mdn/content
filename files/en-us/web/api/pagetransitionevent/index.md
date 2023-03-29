@@ -11,6 +11,11 @@ The **`PageTransitionEvent`** event object is available inside handler functions
 
 {{InheritanceDiagram}}
 
+## Constructor
+
+- {{domxref("PageTransitionEvent.PageTransitionEvent", "PageTransitionEvent()")}}
+  - : Creates a new `PageTransitionEvent` object.
+
 ## Instance properties
 
 _This interface also inherits properties from its parent, {{domxref("Event")}}._
@@ -51,5 +56,5 @@ window.addEventListener("pageshow", (event) => {
 
 ## See also
 
-- [`pageshow` event](/en-US/docs/Web/API/Window/pageshow_event)
-- [`pagehide` event](/en-US/docs/Web/API/Window/pagehide_event)
+- [`pageshow`](/en-US/docs/Web/API/Window/pageshow_event) event
+- [`pagehide`](/en-US/docs/Web/API/Window/pagehide_event) event
