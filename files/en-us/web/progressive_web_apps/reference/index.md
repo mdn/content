@@ -4,7 +4,7 @@ slug: Web/Progressive_web_apps/Reference
 page-type: landing-page
 ---
 
-This reference describes the [web app manifests](/en-US/docs/Web/Manifest) members, [Service Worker APIs](/en-US/docs/Web/API/Service_Worker_API), and other web APIs that [Progressive Web Apps](/en-US/docs/Web/Progressive_web_apps) (PWAs) can use to offer a great user experience.
+This reference describes the [web app manifest](/en-US/docs/Web/Manifest) members, [Service Worker APIs](/en-US/docs/Web/API/Service_Worker_API), and other web APIs that [Progressive Web Apps](/en-US/docs/Web/Progressive_web_apps) (PWAs) can use to offer a great user experience.
 
 ## Web app manifest members
 
