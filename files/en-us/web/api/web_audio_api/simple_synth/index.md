@@ -575,13 +575,16 @@ function changeVolume(event) {
 
 This sets the value of the main gain node's `gain` {{domxref("AudioParam")}} to the slider's new value.
 
-```js hidden
+
+Add basic keyboard support:
+```js
 const synthKeys = document.querySelectorAll(".key");
-function keyNote(down) {
-  const synthKey = "zxcvbnm,./asdfghjkl;'qwertyuiop[]\\1234567890-=!@#$%^&*()_+".indexOf(event.key);
+function keyNote(event) {
+  // 52 key elements. US HP vs Dutch MacBook keyboards conflict on location of: `\±
+  const synthKey = ['ControlLeft', 'AltLeft', 'Space', 'ShiftLeft', 'KeyZ', 'KeyX', 'KeyC', 'KeyV', 'KeyB', 'KeyN', 'KeyM', 'Comma', 'Period', 'Slash', 'ShiftRight', 'KeyA', 'KeyS', 'KeyD', 'KeyF', 'KeyG', 'KeyH', 'KeyJ', 'KeyK', 'KeyL', 'Semicolon', 'Quote', 'Tab', 'KeyQ', 'KeyW', 'KeyE', 'KeyR', 'KeyT', 'KeyY', 'KeyU', 'KeyI', 'KeyO', 'KeyP', 'BracketLeft', 'BracketRight', 'Digit1', 'Digit2', 'Digit3', 'Digit4', 'Digit5', 'Digit6', 'Digit7', 'Digit8', 'Digit9', 'Digit0', 'Minus', 'Equal', 'Backspace'].indexOf(event.code);
   const elKey = synthKeys[synthKey];
   if (elKey) {
-    if (down) {
+    if (event.type === "keydown") {
       elKey.tabIndex = -1;
       elKey.focus();
       elKey.classList.add("active");
@@ -592,8 +595,8 @@ function keyNote(down) {
     }
   }
 }
-addEventListener("keydown", () => keyNote(1));
-addEventListener("keyup", () => keyNote(0));
+addEventListener("keydown", keyNote);
+addEventListener("keyup", keyNote);
 ```
 
 ### Result
