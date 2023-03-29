@@ -101,7 +101,7 @@ The following APIs can be used by a service worker to perform tasks in the backg
 - [Web Periodic Background Synchronization API](/en-US/docs/Web/API/Web_Periodic_Background_Synchronization_API)
   - : A way to register tasks to be run in a service worker at periodic intervals with network connectivity.
 - [Background Fetch API](/en-US/docs/Web/API/Background_Fetch_API)
-  - : A method for a service worker to manage downloads that may take a significant amount of time such as video or audio files.
+  - : A method for a service worker to manage downloads that may take a significant amount of time, such as video or audio files.
 
 ## Other web APIs
 
