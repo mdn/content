@@ -16,7 +16,8 @@ The **`ByteLengthQueuingStrategy`** interface of the [Streams API](/en-US/docs/W
 
 ## Instance properties
 
-None.
+- {{domxref("ByteLengthQueuingStrategy.highWaterMark")}} {{ReadOnlyInline}}
+  - : The total number of bytes that can be contained in the internal queue before [backpressure](/en-US/docs/Web/API/Streams_API/Concepts#backpressure) is applied.
 
 ## Instance methods
 
@@ -26,7 +27,7 @@ None.
 ## Examples
 
 ```js
-const queueingStrategy = new ByteLengthQueuingStrategy({ highWaterMark: 1 });
+const queueingStrategy = new ByteLengthQueuingStrategy({ highWaterMark: 1024 });
 
 const readableStream = new ReadableStream(
   {
@@ -53,3 +54,7 @@ const size = queueingStrategy.size(chunk);
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{domxref("ByteLengthQueuingStrategy.ByteLengthQueuingStrategy", "ByteLengthQueuingStrategy()")}} constructor

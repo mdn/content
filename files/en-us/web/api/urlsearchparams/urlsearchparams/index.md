@@ -38,27 +38,30 @@ various inputs.
 
 ```js
 // Retrieve params via url.search, passed into ctor
-const url = new URL('https://example.com?foo=1&bar=2');
+const url = new URL("https://example.com?foo=1&bar=2");
 const params1 = new URLSearchParams(url.search);
 
 // Get the URLSearchParams object directly from a URL object
-const params1a = url.searchParams
+const params1a = url.searchParams;
 
 // Pass in a string literal
 const params2 = new URLSearchParams("foo=1&bar=2");
 const params2a = new URLSearchParams("?foo=1&bar=2");
 
 // Pass in a sequence of pairs
-const params3 = new URLSearchParams([["foo", "1"], ["bar", "2"]]);
+const params3 = new URLSearchParams([
+  ["foo", "1"],
+  ["bar", "2"],
+]);
 
 // Pass in a record
-const params4 = new URLSearchParams({"foo": "1", "bar": "2"});
+const params4 = new URLSearchParams({ foo: "1", bar: "2" });
 ```
 
 This example shows how to build a new URL with an object of search parameters from an existing URL that has search parameters.
 
 ```js
-const url = new URL('https://example.com/?a=hello&b=world');
+const url = new URL("https://example.com/?a=hello&b=world");
 
 console.log(url.href);
 // https://example.com/?a=hello&b=world
@@ -67,14 +70,14 @@ console.log(url.origin);
 // https://example.com
 
 const add_params = {
-    c: 'a',
-    d: new String(2),
-    e: false.toString(),
-}
+  c: "a",
+  d: new String(2),
+  e: false.toString(),
+};
 
 const new_params = new URLSearchParams([
-    ...Array.from(url.searchParams.entries()), // [["a","hello"],["b","world"]]
-    ...Object.entries(add_params), // [["c","a"],["d","2"],["e","false"]]
+  ...Array.from(url.searchParams.entries()), // [["a","hello"],["b","world"]]
+  ...Object.entries(add_params), // [["c","a"],["d","2"],["e","false"]]
 ]).toString();
 console.log(new_params);
 // a=hello&b=world&c=a&d=2&e=false

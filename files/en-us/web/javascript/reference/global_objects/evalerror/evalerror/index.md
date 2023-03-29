@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.EvalError.EvalError
 
 {{JSRef}}
 
-The **`EvalError()`** constructor creates a new {{jsxref("EvalError")}} instance.
+The **`EvalError()`** constructor creates {{jsxref("EvalError")}} objects.
 
 ## Syntax
 

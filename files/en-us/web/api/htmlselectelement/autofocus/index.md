@@ -7,7 +7,7 @@ browser-compat: api.HTMLSelectElement.autofocus
 
 {{ APIRef("HTML DOM") }}
 
-The **`HTMLSelectElement.autofocus`** property has a value of either `true` or `false` that reflects the {{htmlattrxref("autofocus", "select")}} HTML
+The **`HTMLSelectElement.autofocus`** property has a value of either `true` or `false` that reflects the [`autofocus`](/en-US/docs/Web/HTML/Element/select#autofocus) HTML
 attribute, which indicates whether the associated {{HTMLElement("select")}} element
 will get input focus when the page loads, unless the user overrides it.
 
@@ -39,7 +39,7 @@ A boolean value.
 
 ```js
 // Check if the autofocus attribute on the <select>
-const hasAutofocus = document.getElementById('mySelect').autofocus;
+const hasAutofocus = document.getElementById("mySelect").autofocus;
 ```
 
 ## Specifications

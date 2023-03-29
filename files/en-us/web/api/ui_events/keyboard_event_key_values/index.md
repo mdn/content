@@ -308,13 +308,13 @@ _Modifiers_ are special keys which are used to generate special characters or ca
   </tbody>
 </table>
 
-\[1] In Firefox, the <kbd>Windows</kbd> key is reported as `"OS"` instead of as `"Meta"`. This will be changed in Firefox per {{bug(1232918)}}. Until that's fixed, these keys are returned as `"OS"` by Firefox: `VK_LWIN` (0x5B) and `VK_RWIN` (0x5C) on Windows, and `GDK_KEY_Super_L` (0xFFEB), `GDK_KEY_Super_R` (0xFFEC), `GDK_KEY_Hyper_L` (0xFFED), and `GDK_KEY_Hyper_R` (0xFFEE) on Linux.
+\[1] In Firefox, the <kbd>Windows</kbd> key is reported as `"OS"` instead of as `"Meta"`. This will be changed in Firefox per [Firefox bug 1232918](https://bugzil.la/1232918). Until that's fixed, these keys are returned as `"OS"` by Firefox: `VK_LWIN` (0x5B) and `VK_RWIN` (0x5C) on Windows, and `GDK_KEY_Super_L` (0xFFEB), `GDK_KEY_Super_R` (0xFFEC), `GDK_KEY_Hyper_L` (0xFFED), and `GDK_KEY_Hyper_R` (0xFFEE) on Linux.
 
 \[2] Firefox did not add support for the <kbd>Symbol</kbd> key until Firefox 37.
 
 \[3] Firefox generates the key value `"OS`" for the <kbd>Super</kbd> and <kbd>Hyper</kbd> keys, instead of `"Super"` and `"Hyper"`.
 
-\[4] Chrome 67 and Firefox 63 now correctly interpret the right <kbd>Alt</kbd> key for keyboard layouts which map that key to <kbd>AltGr</kbd>. See Firefox bug {{bug(900750)}} and [Chrome bug 25503](https://bugs.chromium.org/p/chromium/issues/detail?id=25503) for further details.
+\[4] Chrome 67 and Firefox 63 now correctly interpret the right <kbd>Alt</kbd> key for keyboard layouts which map that key to <kbd>AltGr</kbd>. See Firefox bug [Firefox bug 900750](https://bugzil.la/900750) and [Chrome bug 25503](https://crbug.com/25503) for further details.
 
 ## Whitespace keys
 
@@ -881,7 +881,7 @@ _Modifiers_ are special keys which are used to generate special characters or ca
   </tbody>
 </table>
 
-\[1] In Google Chrome 52, the <kbd>Cancel</kbd> key incorrectly returns the key code `"Pause"`. This is fixed in Chrome 53. (See [Chrome bug 612749](https://bugs.chromium.org/p/chromium/issues/detail?id=612749) for details.)
+\[1] In Google Chrome 52, the <kbd>Cancel</kbd> key incorrectly returns the key code `"Pause"`. This is fixed in Chrome 53. (See [Chrome bug 612749](https://crbug.com/612749) for details.)
 
 \[2] In Firefox 36 and earlier, the <kbd>Esc</kbd> key returns `"Esc"` instead of `"Escape"`.
 
@@ -4370,9 +4370,9 @@ Some keyboards offer special keys for launching or switching to certain common a
 
 \[1] Legacy Edge and Firefox (36 and earlier) use `"SelectMedia"` instead of `"LaunchMediaPlayer"`. Firefox 37 through Firefox 48 use `"MediaSelect"`. Firefox 49 has been updated to match the latest specification, and to return `"LaunchMediaPlayer"`.
 
-\[2] Google Chrome 57 and earlier returned `"LaunchMyComputer"` instead of `"LaunchApplication1"`. See [Chrome Bug 612743](https://bugs.chromium.org/p/chromium/issues/detail?id=612743) for more information.
+\[2] Google Chrome 57 and earlier returned `"LaunchMyComputer"` instead of `"LaunchApplication1"`. See [Chrome Bug 612743](https://crbug.com/612743) for more information.
 
-\[3] Google Chrome 57 and earlier returned `"LaunchCalculator"` instead of `"LaunchApplication2"`. See [Chrome Bug 612743](https://bugs.chromium.org/p/chromium/issues/detail?id=612743) for more information.
+\[3] Google Chrome 57 and earlier returned `"LaunchCalculator"` instead of `"LaunchApplication2"`. See [Chrome Bug 612743](https://crbug.com/612743) for more information.
 
 \[4] Prior to Firefox 37, Firefox returned the key code `"LaunchApplication1"` instead of "`LaunchWebBrowser"` for the Web browser key.
 

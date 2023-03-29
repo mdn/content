@@ -2,16 +2,6 @@
 title: menus.update()
 slug: Mozilla/Add-ons/WebExtensions/API/menus/update
 page-type: webextension-api-function
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - Update
-  - WebExtensions
-  - contextMenus
 browser-compat: webextensions.api.menus.update
 ---
 

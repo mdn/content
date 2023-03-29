@@ -23,7 +23,7 @@ if no {{HTMLElement("source")}} element is provided.
 ## Examples
 
 ```js
-const obj = document.createElement('video');
+const obj = document.createElement("video");
 console.log(obj.currentSrc); // ""
 ```
 
@@ -37,4 +37,4 @@ console.log(obj.currentSrc); // ""
 
 ## See also
 
-- The interface defining it, {{domxref("HTMLMediaElement")}}.
+- {{domxref("HTMLMediaElement")}}: Interface used to define the `HTMLMediaElement.currentSrc` property

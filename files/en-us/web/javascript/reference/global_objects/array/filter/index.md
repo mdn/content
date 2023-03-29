@@ -135,7 +135,7 @@ console.log("Filtered Array\n", arrByID);
 // Filtered Array
 // [{ id: 15 }, { id: -1 }, { id: 3 }, { id: 12.2 }]
 
-console.log("Number of Invalid Entries = ", invalidEntries);
+console.log("Number of Invalid Entries =", invalidEntries);
 // Number of Invalid Entries = 5
 ```
 

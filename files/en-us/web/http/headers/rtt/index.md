@@ -1,14 +1,8 @@
 ---
 title: RTT
 slug: Web/HTTP/Headers/RTT
-tags:
-  - RTT
-  - Client hints
-  - HTTP
-  - HTTP Header
-  - Request header
-  - Client hints
-  - Experimental
+status:
+  - experimental
 browser-compat: http.headers.rtt
 ---
 
@@ -32,7 +26,7 @@ The **`RTT`** [Client hint](/en-US/docs/Web/HTTP/Client_hints) request header fi
   </tbody>
 </table>
 
-The RTT value is rounded to the nearest 25 milliseconds to prevent fingerprinting; There are many other mechanisms an attacker might use to obtain similar round-trip information.
+The RTT value is rounded to the nearest 25 milliseconds to prevent [fingerprinting](/en-US/docs/Glossary/Fingerprinting). There are many other mechanisms an attacker might use to obtain similar round-trip information.
 
 The hint allows a server to choose what information is sent based on the network responsiveness/latency. For example, it might choose to send fewer resources.
 

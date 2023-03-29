@@ -18,7 +18,7 @@ not muted.
 ## Examples
 
 ```js
-const obj = document.createElement('video');
+const obj = document.createElement("video");
 console.log(obj.muted); // false
 ```
 
@@ -32,6 +32,6 @@ console.log(obj.muted); // false
 
 ## See also
 
-- The interface defining it, {{domxref("HTMLMediaElement")}}.
+- {{domxref("HTMLMediaElement")}}: Interface used to define the `HTMLMediaElement.muted` property
 - {{domxref("HTMLMediaElement.defaultMuted")}}
 - {{domxref("HTMLMediaElement.volume")}}

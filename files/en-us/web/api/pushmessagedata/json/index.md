@@ -26,7 +26,7 @@ The result of parsing push event data as JSON. This could be anything that can b
 ## Examples
 
 ```js
-self.addEventListener('push', (event) => {
+self.addEventListener("push", (event) => {
   const myData = event.data.json();
 
   // do something with your data

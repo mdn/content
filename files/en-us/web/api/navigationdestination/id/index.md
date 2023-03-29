@@ -21,7 +21,7 @@ A string representing the `id` of the destination {{domxref("NavigationHistoryEn
 ## Examples
 
 ```js
-navigation.addEventListener('navigate', (event) => {
+navigation.addEventListener("navigate", (event) => {
   console.log(event.destination.id);
 });
 ```

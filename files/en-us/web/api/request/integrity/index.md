@@ -20,7 +20,7 @@ If an integrity has not been specified, the property returns `''`.
 In the following snippet, we create a new request using the {{domxref("Request.Request", "Request()")}} constructor (for an image file in the same directory as the script), then save the request `integrity` value in a variable:
 
 ```js
-const myRequest = new Request('flowers.jpg');
+const myRequest = new Request("flowers.jpg");
 const myIntegrity = myRequest.integrity;
 ```
 

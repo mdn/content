@@ -2,12 +2,10 @@
 title: CSSKeywordValue()
 slug: Web/API/CSSKeywordValue/CSSKeywordValue
 page-type: web-api-constructor
-status:
-  - experimental
 browser-compat: api.CSSKeywordValue.CSSKeywordValue
 ---
 
-{{APIRef("CSS Typed Object Model API")}}{{SeeCompatTable}}
+{{APIRef("CSS Typed Object Model API")}}
 
 The **`CSSKeywordValue()`** constructor
 creates a new {{domxref("CSSKeywordValue")}} object which represents CSS keywords and

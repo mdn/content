@@ -79,20 +79,6 @@ Most macros will also take a second argument allowing you to change the display 
     </tr>
     <tr>
       <td>
-        <a href="https://github.com/mdn/yari/tree/main/kumascript/macros/htmlattrxref.ejs"
-          >HTMLAttrxRef</a>
-      </td>
-      <td>
-        <a href="/en-US/docs/Web/HTML/Global_attributes">HTML global attribute description</a>
-        if you only specify the attribute name.<br />Attribute associated with a specific HTML element if you specify an attribute name and an element name.
-      </td>
-      <td>
-        <code>\{{HTMLAttrxRef("lang")}} </code>links to the global attribute description {{HTMLAttrxRef("lang")}}.<br />
-        <code>\{{HTMLAttrxRef("type","input")}}</code> result in a link to the {{htmlattrxref("type","input")}} attribute (on the {{HTMLElement("input")}} element).
-      </td>
-    </tr>
-    <tr>
-      <td>
         <a href="https://github.com/mdn/yari/tree/main/kumascript/macros/jsxref.ejs">JSxRef</a>
       </td>
       <td>
@@ -160,15 +146,6 @@ Most macros will also take a second argument allowing you to change the display 
     </tr>
   </tbody>
 </table>
-
-### Linking to bugs
-
-- Bugs
-
-  - [`bug`](https://github.com/mdn/yari/blob/main/kumascript/macros/bug.ejs) allows you to link to a bug on bugzilla.mozilla.org easily using this syntax: `\{{Bug(123456)}}`.
-    This gives you: {{Bug(123456)}}.
-  - [`WebkitBug`](https://github.com/mdn/yari/blob/main/kumascript/macros/WebkitBug.ejs) inserts a link to a bug in the WebKit bug database.
-    For example, `\{{WebkitBug(31277)}}` inserts {{WebkitBug(31277)}}.
 
 ### Navigation aids for multi-page guides
 

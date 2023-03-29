@@ -24,7 +24,7 @@ A `PaymentCurrencyAmount` object. This object contains the following properties:
 ## Examples
 
 ```js
-self.addEventListener('paymentrequest', e => {
+self.addEventListener("paymentrequest", (e) => {
   console.log(e.total);
 });
 ```

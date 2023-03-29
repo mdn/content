@@ -21,7 +21,7 @@ pixels tall. Thus, the `width` property is `200`.
 
 ```js
 let imageData = new ImageData(200, 100);
-console.log(imageData.width);  // 200
+console.log(imageData.width); // 200
 ```
 
 ## Specifications

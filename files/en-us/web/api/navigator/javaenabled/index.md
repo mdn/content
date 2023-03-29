@@ -29,7 +29,7 @@ The boolean value `false`.
 
 ```js
 if (window.navigator.javaEnabled()) {
-    // code will never be executed; the condition is always false
+  // code will never be executed; the condition is always false
 }
 ```
 

@@ -251,7 +251,7 @@ The following changes were made to the {{domxref("CanvasRenderingContext2D")}} i
 - Obtaining boundary rectangles for ranges
   - : The {{domxref("Range")}} object now has {{domxref("range.getClientRects()")}} and {{domxref("range.getBoundingClientRect()")}} methods.
 - Capturing mouse events on arbitrary elements
-  - : Support for the Internet Explorer-originated `setCapture()` and `releaseCapture()` APIs has been added. See {{bug(503943)}}.
+  - : Support for the Internet Explorer-originated `setCapture()` and `releaseCapture()` APIs has been added. See [Firefox bug 503943](https://bugzil.la/503943).
 - [Manipulating the browser history](/en-US/docs/Web/API/History_API)
   - : The existing document history object, available through the {{domxref("window.history")}} object, now supports the new HTML5 `pushState()` and `replaceState()` methods.
 - [Animations using MozBeforePaint](/en-US/docs/DOM/Animations_using_MozBeforePaint)
@@ -271,7 +271,7 @@ Several HTML elements have had their DOM interfaces changed to the ones required
 
 #### Miscellaneous DOM changes
 
-- The wrapping of a {{HTMLElement("textarea")}} element can now be controlled via the DOM, via the `wrap` DOM attribute. {{bug(41464)}}
+- The wrapping of a {{HTMLElement("textarea")}} element can now be controlled via the DOM, via the `wrap` DOM attribute. [Firefox bug 41464](https://bugzil.la/41464)
 - {{HTMLElement("script")}} elements created using {{domxref("document.createElement()")}} and inserted into a document now behave according to the HTML5 specification by default. Scripts with the `src` attribute execute as soon as available (without maintaining ordering) and scripts without the `src` attribute execute synchronously. To make script-inserted scripts that have the `src` attribute execute in the insertion order, set `.async=false` on them.
 - DOM {{domxref("file")}} objects now offer a `url` property.
 - [FormData](/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest#using_formdata_objects) support for XMLHttpRequest.
@@ -279,13 +279,13 @@ Several HTML elements have had their DOM interfaces changed to the ones required
 - The {{domxref("document.currentScript")}} property lets you determine which {{HTMLElement("script")}} element's script is currently executing. The new {{domxref("element.onbeforescriptexecute")}} and {{domxref("element.onafterscriptexecute")}} events are fired before and after a script element executes.
 - Added the `mozSourceNode` property to the [`DragTransfer`](/en-US/docs/Web/API/DataTransfer) object.
 - Added the [`selection.modify()`](/en-US/docs/Web/API/Selection/modify) method to the {{domxref("Selection")}} object; this lets you easily alter the current text selection or cursor position in a browser window.
-- Support for the `window.directories` object and the `directories` feature for {{domxref("window.open")}}, which are not supported in any other browser, has been removed. Use `personalbar` instead. {{Bug(474058)}}
+- Support for the `window.directories` object and the `directories` feature for {{domxref("window.open")}}, which are not supported in any other browser, has been removed. Use `personalbar` instead. [Webkit bug 474058](https://bugzil.la/474058)
 - The {{domxref("event.mozInputSource")}} property has been added to DOM user interface events; this non-standard property lets you determine the type of device that generated an event.
 - The {{domxref("document.onreadystatechange")}} event has been implemented.
 - The {{domxref("document.createElement")}} method no longer accepts `<` and `>` around the tag name in quirks mode.
 - The {{domxref("element.setCapture()")}} and {{domxref("document.releaseCapture()")}} methods have been added, allowing elements to continue tracking mouse events even while the mouse is outside their normal tracking area after a `mousedown` event has occurred.
 - The `window.mozPaintCount` property has been added; it lets you determine how many times a document has been painted. This can be useful when testing performance of your web application.
-- The language token has been removed from {{domxref("window.navigator.appVersion")}} and {{domxref("window.navigator.userAgent")}}. Use {{domxref("window.navigator.language")}} or the [Accept-Language header](/en-US/docs/Web/HTTP/Content_negotiation) instead. {{Bug(572656)}}
+- The language token has been removed from {{domxref("window.navigator.appVersion")}} and {{domxref("window.navigator.userAgent")}}. Use {{domxref("window.navigator.language")}} or the [Accept-Language header](/en-US/docs/Web/HTTP/Content_negotiation) instead. [Webkit bug 572656](https://bugzil.la/572656)
 - The [XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest) object now exposes the response as a JavaScript typed array as well as a string, using the Gecko-specific `mozResponseArrayBuffer` property.
 - [Mouse events](/en-US/docs/Web/API/MouseEvent) now include a `mozPressure` property indicating the amount of pressure on supported pressure-sensitive input devices.
 - The {{domxref("URL/createObjectURL", "window.URL.createObjectURL()")}} and {{domxref("URL/revokeObjectURL", "window.URL.revokeObjectURL()")}} methods let you create object URLs which reference local files.
@@ -307,7 +307,7 @@ Several HTML elements have had their DOM interfaces changed to the ones required
 - [The X-FRAME-OPTIONS response header](/en-US/docs/Web/HTTP/Headers/X-Frame-Options)
   - : The X-FRAME-OPTIONS HTTP response header introduced in Internet Explorer 8 is now supported by Firefox. This allows sites to indicate whether or not their pages can be used in frames, and if so, whether or not to restrict that to the same origin.
 - [User Agent string](/en-US/docs/Web/HTTP/Headers/User-Agent/Firefox) changes
-  - : As a means to reduce the amount of data and entropy sent out in HTTP requests (see {{bug("572650")}}), the crypto strength and language tokens have been removed from the user agent string.
+  - : As a means to reduce the amount of data and entropy sent out in HTTP requests (see [Firefox bug 572650](https://bugzil.la/572650)), the crypto strength and language tokens have been removed from the user agent string.
 
 ### JavaScript
 
@@ -459,7 +459,7 @@ In addition to the specific changes referenced below, it's important to note tha
 - The `nsIContentView` and `nsIContentViewManager` interfaces have been added for Firefox Mobile. It represents a scrollable content view whose contents are actually drawn by a separate process.
 - The `nsIDiskCacheStreamInternal` interface has been added.
 - The `nsIExternalURLHandlerService` interface has been added.
-- The `nsISyncJPAKE` interface has been added. See {{bug("601645")}}.
+- The `nsISyncJPAKE` interface has been added. See [Firefox bug 601645](https://bugzil.la/601645).
 - The `nsIINIParserWriter` interface was added in Gecko 1.9.2.4 to support writing to INI files.
 
 ### Memory management
@@ -487,7 +487,7 @@ In addition to the specific changes referenced below, it's important to note tha
 - [Bootstrapped extensions](/en-US/docs/Extensions/Bootstrapped_extensions)
   - : You can now create extensions that can be installed, uninstalled, and upgraded (or downgraded) without requiring a browser restart.
 - Default plugin removed
-  - : The default plugin has been removed. The application plugins folder has also been removed by default, however support for installing plugins via this folder still exists. See {{bug("533891")}}.
+  - : The default plugin has been removed. The application plugins folder has also been removed by default, however support for installing plugins via this folder still exists. See [Firefox bug 533891](https://bugzil.la/533891).
 - Extension Manager replaced by Addon Manager
   - : `nsIExtensionManager` has been replaced by [AddonManager](/en-US/docs/Addons/Add-on_Manager/AddonManager).
 - Child HWNDs no longer used

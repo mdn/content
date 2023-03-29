@@ -2,16 +2,6 @@
 title: storage.StorageArea.onChanged
 slug: Mozilla/Add-ons/WebExtensions/API/storage/StorageArea/onChanged
 page-type: webextension-api-event
-tags:
-  - API
-  - Add-ons
-  - Event
-  - Extensions
-  - Non-standard
-  - Reference
-  - Storage
-  - WebExtensions
-  - onChanged
 browser-compat: webextensions.api.storage.StorageArea.onChanged
 ---
 

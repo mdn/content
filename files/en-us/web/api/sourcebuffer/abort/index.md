@@ -43,7 +43,7 @@ to stop the current append (or whatever) operation occurring on a sourcebuffer, 
 immediately start performing operations on it again. For example, consider this code:
 
 ```js
-sourceBuffer.addEventListener('updateend', (ev) => {
+sourceBuffer.addEventListener("updateend", (ev) => {
   // ...
 });
 

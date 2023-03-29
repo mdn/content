@@ -2,15 +2,6 @@
 title: commands.update()
 slug: Mozilla/Add-ons/WebExtensions/API/commands/update
 page-type: webextension-api-function
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Reference
-  - Update
-  - WebExtensions
-  - commands
 browser-compat: webextensions.api.commands.update
 ---
 

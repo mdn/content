@@ -18,8 +18,8 @@ A reference to the {{domxref("History")}} object.
 ## Examples
 
 ```js
-history.back();     // equivalent to clicking back button
-history.go(-1);     // equivalent to history.back();
+history.back(); // equivalent to clicking back button
+history.go(-1); // equivalent to history.back();
 ```
 
 ## Notes

@@ -1,16 +1,6 @@
 ---
 title: "CSP: frame-src"
 slug: Web/HTTP/Headers/Content-Security-Policy/frame-src
-tags:
-  - CSP
-  - Content-Security-Policy
-  - Directive
-  - Frame
-  - HTTP
-  - Reference
-  - Security
-  - frame-src
-  - source
 browser-compat: http.headers.Content-Security-Policy.frame-src
 ---
 

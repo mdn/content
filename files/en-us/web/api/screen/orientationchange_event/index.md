@@ -1,5 +1,5 @@
 ---
-title: 'Screen: orientationchange event'
+title: "Screen: orientationchange event"
 slug: Web/API/Screen/orientationchange_event
 page-type: web-api-event
 status:
@@ -17,9 +17,9 @@ The `orientationchange` event fires when the device's orientation has changed.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('orientationchange', (event) => { });
+addEventListener("orientationchange", (event) => {});
 
-onorientationchange = (event) => { };
+onorientationchange = (event) => {};
 ```
 
 ## Event type

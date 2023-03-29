@@ -17,7 +17,7 @@ Play with the various sliders to apply filter effects to the image below:
 
 {{EmbedGHLiveSample("css-examples/modules/filters.html", '100%', 420)}}
 
-To see the code for this filter effects sample, [view the source on Github](https://github.com/mdn/content/blob/main/files/en-us/web/css/css_filter_effects/index.md).
+To see the code for this filter effects sample, [view the source on Github](https://github.com/mdn/css-examples/blob/main/modules/filters.html).
 
 ### Properties
 

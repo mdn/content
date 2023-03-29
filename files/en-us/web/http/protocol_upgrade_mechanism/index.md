@@ -1,15 +1,6 @@
 ---
 title: Protocol upgrade mechanism
 slug: Web/HTTP/Protocol_upgrade_mechanism
-tags:
-  - Guide
-  - HTTP
-  - HTTP/2
-  - Networking
-  - Protocols
-  - Upgrade
-  - WebSocket
-  - WebSockets
 ---
 
 {{HTTPSidebar}}

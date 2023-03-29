@@ -18,11 +18,11 @@ A {{domxref("TextTrackCueList")}} object.
 In the following example two cues are added to a video text track using `addCue()`. The value of `cues` is printed to the console. The returned {{domxref("TextTrackCueList")}} object contains the two cues.
 
 ```js
-let video = document.querySelector('video');
+let video = document.querySelector("video");
 let track = video.addTextTrack("captions", "Captions", "en");
 track.mode = "showing";
-track.addCue(new VTTCue(0, 0.9, 'Hildy!'));
-track.addCue(new VTTCue(1, 1.4, 'How are you?'));
+track.addCue(new VTTCue(0, 0.9, "Hildy!"));
+track.addCue(new VTTCue(1, 1.4, "How are you?"));
 console.log(track.cues);
 ```
 

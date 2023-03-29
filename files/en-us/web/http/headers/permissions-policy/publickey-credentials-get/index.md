@@ -1,13 +1,8 @@
 ---
 title: "Permissions-Policy: publickey-credentials-get"
 slug: Web/HTTP/Headers/Permissions-Policy/publickey-credentials-get
-tags:
-  - Directive
-  - Permissions-Policy
-  - HTTP
-  - publickey-credentials-get
-  - Reference
-  - Experimental
+status:
+  - experimental
 browser-compat: http.headers.Permissions-Policy.publickey-credentials-get
 ---
 

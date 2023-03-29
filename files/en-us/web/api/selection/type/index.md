@@ -35,7 +35,7 @@ text, or a range has been selected.
 let selection;
 
 document.onselectionchange = () => {
-  console.log('New selection made');
+  console.log("New selection made");
   selection = document.getSelection();
   console.log(selection.type);
 };

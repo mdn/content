@@ -1,5 +1,5 @@
 ---
-title: 'Window: offline event'
+title: "Window: offline event"
 slug: Web/API/Window/offline_event
 page-type: web-api-event
 browser-compat: api.Window.offline_event
@@ -14,8 +14,8 @@ The **`offline`** event of the {{domxref("Window")}} interface is fired when the
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('offline', (event) => { });
-onoffline = (event) => { };
+addEventListener("offline", (event) => {});
+onoffline = (event) => {};
 ```
 
 ## Event type
@@ -34,8 +34,8 @@ In addition to the `Window` interface, the event handler property `onoffline` is
 
 ```js
 // addEventListener version
-window.addEventListener('offline', (event) => {
-    console.log("The network connection has been lost.");
+window.addEventListener("offline", (event) => {
+  console.log("The network connection has been lost.");
 });
 
 // onoffline version

@@ -11,9 +11,9 @@ The **`reduceRight()`** method applies a function against an
 accumulator and each value of the array (from right-to-left) to reduce it to a single
 value.
 
-{{EmbedInteractiveExample("pages/js/array-reduce-right.html","shorter")}}
-
 See also {{jsxref("Array.prototype.reduce()")}} for left-to-right.
+
+{{EmbedInteractiveExample("pages/js/array-reduce-right.html","shorter")}}
 
 ## Syntax
 
