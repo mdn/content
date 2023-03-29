@@ -5,13 +5,13 @@ slug: Web/Progressive_web_apps/Installing
 
 {{QuickLinksWithSubpages("/en-US/docs/Web/Progressive_web_apps/")}}
 
-Browsers have always enabled saving shortcuts to websites, known as "bookmarking." Some operating systems (OS) have enhanced bookmarking capabilities, enabling saving bookmarks to the home screen with an icon launching the site in the OS's default browser. These are just links to websites.
+Browsers have always enabled saving shortcuts to websites, known as "bookmarking." These are just links to websites.
 
-With [Progressive Web Applications (PWAs)](/en-us/docs/web/progressive_web_apps), web apps can be installed on a user's device, on most devices fully integrating into the operating systems like native applications. They can also be uninstalled.
+Some operating systems (OS) have enhanced bookmarking capabilities, enabling saving bookmarks to the home screen with an icon launching the site in the OS's default browser. For many websites, this is also just a link to the site. If the site is a [Progressive Web Applications (PWA)](/en-us/docs/web/progressive_web_apps), saving to home screen installs the PWA on the user's device, fully integrating it into the operating systems like native applications on most devices. Just like PWAs can be installed, they can also be uninstalled.
 
 This guide covers how to install and uninstall PWAs. A separate [guide on making PWAs installable](/en-US/docs/Web/Progressive_web_apps/guides/making_pwas_installable) covers how to make web apps installable.
 
-We'll first cover the precursors — bookmarking add adding links to websites on a device's home screen
+We'll first cover the precursors — saving links to websites.
 
 ### Bookmarking websites
 
@@ -19,11 +19,17 @@ All browsers have add-to-favorites bookmark functionality. A bookmark, or favori
 
 All browsers enable users to view and manage their bookmarks, including renaming and deleting favorites. By default, the bookmark's display includes the text content of the bookmarked page's {{HTMLElement("title")}} element along with an icon consisting of the site's [favicon](/en-US/docs/Glossary/Favicon).
 
+Browsers enable saving, editing, moving, deleting, and otherwise managing bookmarks. The UI for bookmark management menus differ by browser.
+
 ### Add to home screen
 
-Smartphones, starting with the iPhone in 2007, added "save to home screen" functionality. This feature is similar to bookmarks, but instead of adding the favicon and title of the page to the bookmarks menu — a browser feature — favoriting in this manner [adds an icon](/en-US/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML#adding_custom_icons_to_your_site) to the OS's home screen.
+Smartphones, starting with the iPhone in 2007, added "save to home screen" functionality. For regular (non-PWA) websites feature is similar to bookmarks, but instead of adding the favicon and title of the page to the bookmarks menu — a browser feature — favoriting in this manner [adds an icon](/en-US/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML#adding_custom_icons_to_your_site) to the OS's home screen. Adding a non-PWA site to the home screen does not install the website on the device. Rather, it adds the developer-defined icon to the home screen, that, when clicked, opens the bookmarked link in the default browser.
 
-On iOS, adding a site to the home screen does not install the website on the device. Rather, it adds the developer-defined icon to the home screen, that, when clicked, opens the bookmarked link in the default browser. Removing the icon from the home screen removes the bookmark.
+![iPhone add to home screen, install prompt, icon, and delete functionality.](iphone_pwa.jpg)
+
+Deleting the icon from the home screen removes the bookmark.
+
+If the site being added to the home screen is a PWA, the PWA will be installed on the device.
 
 ## Installing and uninstalling PWAs
 
@@ -33,7 +39,11 @@ Depending on the PWA, device, and features of the operating system and browser, 
 
 ### Installing PWAs
 
-The UI for installing a PWA from the web varies from one browser to another, and from one platform to another. For example, a browser might include an "Install" icon in the URL bar when the user navigates to the page:
+The UI for installing a PWA from the web varies from one browser to another, and from one platform to another.
+
+As mentioned above, "Add to homes creen" installs PWAs on device/OS combinations that provide that user interface.
+
+For example, a browser might include an "Install" icon in the URL bar when the user navigates to the page:
 
 ![PWA install prompt in URL bar](pwa-install.png)
 
