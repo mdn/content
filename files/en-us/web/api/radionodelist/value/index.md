@@ -2,11 +2,6 @@
 title: RadioNodeList.value
 slug: Web/API/RadioNodeList/value
 page-type: web-api-instance-property
-tags:
-  - HTML DOM
-  - Property
-  - RadioNodeList
-  - Reference
 browser-compat: api.RadioNodeList.value
 ---
 
@@ -47,10 +42,10 @@ radioNodeList.value = string
 const form = document.forms[0];
 
 // Get the form's radio buttons
-const radios = form.elements['color'];
+const radios = form.elements["color"];
 
 // Choose the "red" option
-radios.value = 'red';
+radios.value = "red";
 ```
 
 ### Result

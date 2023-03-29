@@ -2,12 +2,6 @@
 title: GamepadButton.pressed
 slug: Web/API/GamepadButton/pressed
 page-type: web-api-instance-property
-tags:
-  - API
-  - Gamepad API
-  - Games
-  - Property
-  - Reference
 browser-compat: api.GamepadButton.pressed
 ---
 

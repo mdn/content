@@ -2,14 +2,6 @@
 title: Navigator
 slug: Web/API/Navigator
 page-type: web-api-interface
-tags:
-  - API
-  - DOM
-  - Interface
-  - Navigator
-  - Reference
-  - Web
-  - Web Performance
 browser-compat: api.Navigator
 ---
 
@@ -73,7 +65,7 @@ _Doesn't inherit any properties._
   - : Returns a {{domxref("ServiceWorkerContainer")}} object, which provides access to registration, removal, upgrade, and communication with the {{domxref("ServiceWorker")}} objects for the [associated document](https://html.spec.whatwg.org/multipage/browsers.html#concept-document-window).
 - {{domxref("Navigator.storage")}} {{ReadOnlyInline}}
   - : Returns the singleton {{domxref('StorageManager')}} object used for managing persistence permissions and estimating available storage on a site-by-site/app-by-app basis.
-- {{domxref("Navigator.userActivation")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref("Navigator.userActivation")}} {{ReadOnlyInline}}
   - : Returns a {{domxref("UserActivation")}} object containing information about the current window's user activation state.
 - {{domxref("Navigator.userAgent")}} {{ReadOnlyInline}}
   - : Returns the user agent string for the current browser.
@@ -100,7 +92,7 @@ _Doesn't inherit any properties._
   - : Returns an empty string. In Netscape 4.7x, returns "US & CA domestic policy" or "Export policy".
 - {{domxref("Navigator.standalone")}} {{Non-standard_Inline}}
   - : Returns a boolean indicating whether the browser is running in standalone mode. Available on Apple's iOS Safari only.
-- {{domxref("Navigator.wakeLock")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref("Navigator.wakeLock")}} {{ReadOnlyInline}}
   - : Returns a {{domxref("WakeLock")}} interface you can use to request screen wake locks and prevent screen from dimming, turning off, or showing a screen saver.
 
 ### Deprecated properties
@@ -140,6 +132,8 @@ _Doesn't inherit any method._
   - : Returns `true` if a call to `Navigator.share()` would succeed.
 - {{domxref("Navigator.clearAppBadge()")}} {{Experimental_Inline}}
   - : Clears a badge on the current app's icon and returns a {{jsxref("Promise")}} that resolves with {{jsxref("undefined")}}.
+- {{domxref("Navigator.getAutoplayPolicy()")}} {{Experimental_Inline}}
+  - : Returns a value indicating whether the specified media element, audio context, or media feature "type" is allowed to autoplay.
 - {{domxref("Navigator.getBattery()")}}
   - : Returns a promise that resolves with a {{domxref("BatteryManager")}} object that returns information about the battery charging status.
 - {{domxref("Navigator.registerProtocolHandler()")}}

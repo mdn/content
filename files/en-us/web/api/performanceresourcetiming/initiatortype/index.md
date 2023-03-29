@@ -2,11 +2,6 @@
 title: PerformanceResourceTiming.initiatorType
 slug: Web/API/PerformanceResourceTiming/initiatorType
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - Web Performance
 browser-compat: api.PerformanceResourceTiming.initiatorType
 ---
 

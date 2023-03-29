@@ -2,12 +2,6 @@
 title: WorkerLocation.toString()
 slug: Web/API/WorkerLocation/toString
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Stringifier
-  - Reference
-  - WorkerLocation
 browser-compat: api.WorkerLocation.toString
 ---
 

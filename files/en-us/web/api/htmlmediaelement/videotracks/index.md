@@ -2,18 +2,6 @@
 title: HTMLMediaElement.videoTracks
 slug: Web/API/HTMLMediaElement/videoTracks
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTML DOM
-  - HTMLMediaElement
-  - Media
-  - Property
-  - Reference
-  - Tracks
-  - Video
-  - Video Tracks
-  - Web
-  - videoTracks
 browser-compat: api.HTMLMediaElement.videoTracks
 ---
 
@@ -49,6 +37,6 @@ information about the track.
 
 ## See also
 
-- The interface defining it, {{DOMxRef("HTMLMediaElement")}}.
+- {{domxref("HTMLMediaElement")}}: Interface used to define the `HTMLMediaElement.videoTracks` property
 - {{HTMLElement("video")}}
-- {{DOMxRef("VideoTrack")}} and {{DOMxRef("VideoTrackList")}}
+- {{DOMxRef("VideoTrack")}}, {{DOMxRef("VideoTrackList")}}

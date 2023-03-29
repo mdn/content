@@ -2,25 +2,21 @@
 title: scroll-timeline-axis
 slug: Web/CSS/scroll-timeline-axis
 page-type: css-property
-tags:
-  - CSS
-  - CSS Animations
-  - CSS Property
-  - Reference
-  - recipe:css-property
-  - Experimental
+status:
+  - experimental
 browser-compat: css.properties.scroll-timeline-axis
 ---
 
 {{CSSRef}}{{SeeCompatTable}}
 
-The **`scroll-timeline-axis`** [CSS](/en-US/docs/Web/CSS) property can be used to specify the scrollbar that will be used to provide the timeline for a scroll-timeline animation.
+The **`scroll-timeline-axis`** [CSS](/en-US/docs/Web/CSS) property is used to specify the scrollbar direction that will be used to provide the timeline for a scroll-driven animation.
 
-A scroll-timeline animation is one in which the animation progress is determined by a scrollbar position rather than time, or some other dimension.
-The [`scroll-timeline-name`](/en-US/docs/Web/CSS/scroll-timeline-axis) property defines a name that can be used to identify an element as the source of a scroll-timeline; the `scroll-timeline-axis` is used to indicate whether the horizontal or vertical scrollbar in that element provides the timeline.
-Note that if the element does not display a scrollbar in the axis dimension, then no timeline will be created.
+In a scroll-timeline animation, the animation progress is determined by a scrollbar position rather than time or some other dimension.
+The [`scroll-timeline-name`](/en-US/docs/Web/CSS/scroll-timeline-name) property defines a name that can be used to identify an element as the source of a scroll-timeline; the `scroll-timeline-axis` defines the direction of the scrollbar in the container that will provide the timeline.
 
-The `scroll-timeline-axis` (and `scroll-timeline-name`) property can also be set using the [`scroll-timeline`](/en-US/docs/Web/CSS/scroll-timeline-name) shorthand property.
+> **Note:** If the element does not overflow its container in the axis dimension or if the overflow is hidden or clipped, no timeline will be created.
+
+The `scroll-timeline-axis` (and `scroll-timeline-name`) property can also be set using the [`scroll-timeline`](/en-US/docs/Web/CSS/scroll-timeline) shorthand property.
 
 ## Syntax
 
@@ -33,20 +29,20 @@ scroll-timeline-axis: horizontal;
 
 ### Values
 
-Allowed values for the scrollbar axis are:
+Allowed values for the `scroll-timeline-axis` are:
 
 - `block`
-  - : (Default) Scrollbar in the block axis of the scroll container.
+  - : Represents the scrollbar in the block axis of the scroll container. This is the default value.
     The block axis is the direction perpendicular to the flow of text within a line.
-    For horizontal writing modes, such as standard English, this is the same as `vertical`, while for vertical writing modes it is the same as `horizontal`.
+    For horizontal writing modes, such as standard English, this is the same as `vertical`, while for vertical writing modes, it is the same as `horizontal`.
 - `inline`
-  - : Scrollbar in the inline axis of the scroll container.
+  - : Represents the scrollbar in the inline axis of the scroll container.
     The inline axis is the direction parallel to the flow of text in a line.
-    For horizontal writing modes this is the same as the `horizontal` axis, while for vertical writing modes this is the same as `vertical`.
+    For horizontal writing modes, this is the same as the `horizontal` axis, while for vertical writing modes, this is the same as `vertical`.
 - `vertical`
-  - : Scrollbar in the vertical axis of the scroll container.
+  - : Represents the scrollbar in the vertical axis of the scroll container.
 - `horizontal`
-  - : Scrollbar in the horizontal axis of the scroll container.
+  - : Represents the scrollbar in the horizontal axis of the scroll container.
 
 ## Formal definition
 
@@ -58,11 +54,13 @@ Allowed values for the scrollbar axis are:
 
 ## Examples
 
-In this example, a scroll timeline named `squareTimeline` is defined using the `scroll-timeline-name` property on the element with the id `container`, and then this name is applied to the animation on the `#square` element using `animation-timeline: squareTimeline`.
+### Defining the axis of the scroll timeline
 
-To demonstrate the effect of `scroll-timeline-axis`, the horizontal (non-default) scrollbar is used in this example to control the rotation of the square.
+In this example, a scroll timeline named `squareTimeline` is defined using the `scroll-timeline-name` property on the element with the ID `container`, and then this name is applied to the animation on the `#square` element using `animation-timeline: squareTimeline`.
 
-### HTML
+To demonstrate the effect of `scroll-timeline-axis`, a `horizontal` (non-default) scrollbar is used in this example to drive the rotation of the square.
+
+#### HTML
 
 The HTML for the example is shown below.
 
@@ -73,12 +71,12 @@ The HTML for the example is shown below.
 </div>
 ```
 
-### CSS
+#### CSS
 
 The CSS for the container sets it as the source of a scroll timeline named `squareTimeline` using the `scroll-timeline-name` property.
-We then set `scroll-timeline-axis: horizontal;` so that the _horizontal scrollbar_ position will determine the animation timeline.
+The scroll axis is set by `scroll-timeline-axis: horizontal;` so that the _horizontal scrollbar_ position will determine the animation timeline.
 
-The height and width of the container are set to 200px and we also set the container to create scrollbars if it overflows (below we will use CSS on the "stretcher" element to ensure that it does overflow).
+The height and width of the container are set to `200px`. The container is also set to create scrollbars if it overflows (the CSS `height` and `width` rules on the `stretcher` element below make the content overflow its container).
 
 ```css
 #container {
@@ -90,8 +88,7 @@ The height and width of the container are set to 200px and we also set the conta
 }
 ```
 
-The CSS below defines a square that rotates in alternate directions according to the timeline provided by the `animation-timeline` property, which is set to the `squareTimeline` timeline named above.
-The position is set as absolute, so the element rotates in place.
+The CSS below defines a square that rotates according to the timeline provided by the `animation-timeline` property, which is set to the `squareTimeline` timeline named above.
 
 ```css
 #square {
@@ -100,39 +97,37 @@ The position is set as absolute, so the element rotates in place.
   height: 100px;
   margin-top: 100px;
   animation-name: rotateAnimation;
-  animation-duration: 3s;
-  animation-direction: alternate;
+  animation-duration: 1ms;
   animation-timeline: squareTimeline;
-
   position: absolute;
   bottom: 50px;
+}
+
+#stretcher {
+  height: 200px;
+  width: 200px;
+  background: #dedede;
 }
 
 @keyframes rotateAnimation {
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
 }
 ```
 
-The "stretcher" CSS simply sets the block height and width large enough to force the container element to overflow and create scroll bars.
-Without this element there would be no scrollbar, and hence no scroll timeline to associate with the animation timeline.
+The `stretcher` CSS rule sets the block height and width to values large enough to create content that overflows the container element, thereby creating scroll bars.
+Without this element, the content would not overflow the container, there would be no scrollbar, and hence no scroll timeline to associate with the animation timeline.
 
-```css
-#stretcher {
-  height: 300px;
-  width: 1200px
-}
-```
+#### Result
 
-### Result
+Scroll the horizontal bar at the bottom to see the square animate as you scroll.
 
-Scroll the horizontal bar at the bottom to see the animation.
-
-{{EmbedLiveSample("Setting a scroll timeline", "100%", "200px")}}
+{{EmbedLiveSample("Defining_the_axis_of_the_scroll_timeline", "100%", "200px")}}
 
 ## Specifications
 
@@ -144,6 +139,6 @@ Scroll the horizontal bar at the bottom to see the animation.
 
 ## See also
 
-- [`scroll-timeline-name`](/en-US/docs/Web/CSS/scroll-timeline-axis)
-- [`scroll-timeline`](/en-US/docs/Web/CSS/scroll-timeline)
-- [`animation-timeline`](/en-US/docs/Web/CSS/animation-timeline)
+- [`animation-timeline`](/en-US/docs/Web/CSS/animation-timeline) property
+- [`scroll-timeline`](/en-US/docs/Web/CSS/scroll-timeline) shorthand property
+- [`scroll-timeline-name`](/en-US/docs/Web/CSS/scroll-timeline-name) property

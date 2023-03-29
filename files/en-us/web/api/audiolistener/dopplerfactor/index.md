@@ -2,18 +2,8 @@
 title: AudioListener.dopplerFactor
 slug: Web/API/AudioListener/dopplerFactor
 page-type: web-api-instance-property
-tags:
-  - API
-  - Audio
-  - AudioListener
-  - Deprecated
-  - Doppler
-  - Doppler Effect
-  - Property
-  - Reference
-  - Web Audio API
-  - dopplerFactor
-  - effects
+status:
+  - deprecated
 browser-compat: api.AudioListener.dopplerFactor
 ---
 

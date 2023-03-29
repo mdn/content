@@ -2,12 +2,6 @@
 title: Compositing and clipping
 slug: Web/API/Canvas_API/Tutorial/Compositing
 page-type: guide
-tags:
-  - Canvas
-  - Graphics
-  - HTML
-  - Intermediate
-  - Tutorial
 ---
 
 {{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Transformations", "Web/API/Canvas_API/Tutorial/Basic_animations")}}

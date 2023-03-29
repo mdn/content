@@ -2,18 +2,6 @@
 title: MediaTrackSettings.height
 slug: Web/API/MediaTrackSettings/height
 page-type: web-api-instance-property
-tags:
-  - API
-  - Media
-  - Media Capture and Streams API
-  - Media Streams API
-  - MediaTrackSettings
-  - Property
-  - Reference
-  - Settings
-  - Video
-  - WebRTC
-  - height
 browser-compat: api.MediaTrackSettings.height
 ---
 

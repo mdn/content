@@ -2,11 +2,6 @@
 title: HTMLIFrameElement
 slug: Web/API/HTMLIFrameElement
 page-type: web-api-interface
-tags:
-  - API
-  - HTML DOM
-  - Interface
-  - Reference
 browser-compat: api.HTMLIFrameElement
 ---
 
@@ -31,9 +26,11 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}_.
 - {{domxref("HTMLIFrameElement.contentDocument")}} {{ReadOnlyInline}}
   - : Returns a {{domxref("Document")}}, the active document in the inline frame's nested browsing context.
 - {{domxref("HTMLIFrameElement.contentWindow")}} {{ReadOnlyInline}}
+
   - : Returns a {{glossary("WindowProxy")}}, the window proxy for the nested browsing context.
 
 - {{domxref("HTMLIFrameElement.credentialless")}} {{Experimental_Inline}}
+
   - : A boolean value indicating whether the `<iframe>` is credentialless, meaning that its content is loaded in a new, ephemeral context. This context does not have access to the parent context's shared storage and credentials. In return, the {{httpheader("Cross-Origin-Embedder-Policy")}} (COEP) embedding rules can be lifted, so documents with COEP set can embed third-party documents that do not. See [IFrame credentialless](/en-US/docs/Web/Security/IFrame_credentialless) for a deeper explanation.
 
 - {{domxref("HTMLIFrameElement.csp")}} {{Experimental_Inline}}
@@ -41,7 +38,7 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}_.
 - {{domxref("HTMLIFrameElement.frameBorder")}} {{Deprecated_Inline}}
   - : A string that indicates whether to create borders between frames.
 - {{domxref("HTMLIFrameElement.height")}}
-  - : A string that reflects the {{htmlattrxref("height", "iframe")}} HTML attribute, indicating the height of the frame.
+  - : A string that reflects the [`height`](/en-US/docs/Web/HTML/Element/iframe#height) HTML attribute, indicating the height of the frame.
 - {{domxref("HTMLIFrameElement.longDesc")}} {{Deprecated_Inline}}
   - : A string that contains the URI of a long description of the frame.
 - {{domxref("HTMLIFrameElement.marginHeight")}} {{Deprecated_Inline}}
@@ -49,21 +46,21 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}_.
 - {{domxref("HTMLIFrameElement.marginWidth")}} {{Deprecated_Inline}}
   - : A string being the width of the frame margin.
 - {{domxref("HTMLIFrameElement.name")}}
-  - : A string that reflects the {{htmlattrxref("name", "iframe")}} HTML attribute, containing a name by which to refer to the frame.
+  - : A string that reflects the [`name`](/en-US/docs/Web/HTML/Element/iframe#name) HTML attribute, containing a name by which to refer to the frame.
 - {{domxref("HTMLIFrameElement.featurePolicy")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns the {{domxref("FeaturePolicy")}} interface which provides a simple API for introspecting the [Permissions Policies](/en-US/docs/Web/HTTP/Permissions_Policy) applied to a specific document.
 - {{domxref("HTMLIFrameElement.referrerPolicy")}}
-  - : A string that reflects the {{htmlattrxref("referrerPolicy", "iframe")}} HTML attribute indicating which referrer to use when fetching the linked resource.
+  - : A string that reflects the [`referrerPolicy`](/en-US/docs/Web/HTML/Element/iframe#referrerpolicy) HTML attribute indicating which referrer to use when fetching the linked resource.
 - {{domxref("HTMLIFrameElement.sandbox")}}
-  - : A {{domxref("DOMTokenList")}} that reflects the {{htmlattrxref("sandbox", "iframe")}} HTML attribute, indicating extra restrictions on the behavior of the nested content.
+  - : A {{domxref("DOMTokenList")}} that reflects the [`sandbox`](/en-US/docs/Web/HTML/Element/iframe#sandbox) HTML attribute, indicating extra restrictions on the behavior of the nested content.
 - {{domxref("HTMLIFrameElement.scrolling")}} {{Deprecated_Inline}}
   - : A string that indicates whether the browser should provide scrollbars for the frame.
 - {{domxref("HTMLIFrameElement.src")}}
-  - : A string that reflects the {{htmlattrxref("src", "iframe")}} HTML attribute, containing the address of the content to be embedded. Note that programmatically removing an `<iframe>`'s src attribute (e.g. via {{domxref("Element.removeAttribute()")}}) causes `about:blank` to be loaded in the frame in Firefox (from version 65), Chromium-based browsers, and Safari/iOS.
+  - : A string that reflects the [`src`](/en-US/docs/Web/HTML/Element/iframe#src) HTML attribute, containing the address of the content to be embedded. Note that programmatically removing an `<iframe>`'s src attribute (e.g. via {{domxref("Element.removeAttribute()")}}) causes `about:blank` to be loaded in the frame in Firefox (from version 65), Chromium-based browsers, and Safari/iOS.
 - {{domxref("HTMLIFrameElement.srcdoc")}}
   - : A string that represents the content to display in the frame.
 - {{domxref("HTMLIFrameElement.width")}}
-  - : A string that reflects the {{htmlattrxref("width", "iframe")}} HTML attribute, indicating the width of the frame.
+  - : A string that reflects the [`width`](/en-US/docs/Web/HTML/Element/iframe#width) HTML attribute, indicating the width of the frame.
 
 ## Instance methods
 

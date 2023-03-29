@@ -2,12 +2,6 @@
 title: Functions
 slug: Web/JavaScript/Guide/Functions
 page-type: guide
-tags:
-  - Beginner
-  - Functions
-  - Guide
-  - JavaScript
-  - "l10n:priority"
 ---
 
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Loops_and_iteration", "Web/JavaScript/Guide/Expressions_and_Operators")}}
@@ -218,7 +212,7 @@ console.log(square(5)); // 25
 Function hoisting only works with function _declarations_ — not with function _expressions_. The code below will not work.
 
 ```js example-bad
-console.log(square); // ReferenceError: Cannot access 'square' before initialization
+console.log(square(5)); // ReferenceError: Cannot access 'square' before initialization
 const square = function (n) {
   return n * n;
 };

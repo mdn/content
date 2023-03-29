@@ -2,10 +2,6 @@
 title: Semantics
 slug: Glossary/Semantics
 page-type: glossary-definition
-tags:
-  - CodingScripting
-  - HTML
-  - semantics
 ---
 
 In programming, **Semantics** refers to the _meaning_ of a piece of code — for example "what effect does running that line of JavaScript have?", or "what purpose or role does that HTML element have" (rather than "what does it look like?".)
@@ -20,13 +16,13 @@ In CSS, consider styling a list with `li` elements representing different types 
 
 ## Semantics in HTML
 
-In HTML, for example, the {{htmlelement("h1")}} element is a semantic element, which gives the text it wraps around the role (or meaning) of "a top level heading on your page."
+In HTML, for example, the {{htmlelement("Heading_Elements", "h1")}} element is a semantic element, which gives the text it wraps around the role (or meaning) of "a top level heading on your page."
 
 ```html
 <h1>This is a top level heading</h1>
 ```
 
-By default, most browser's [user agent stylesheet](/en-US/docs/Web/CSS/Cascade#user-agent_stylesheets) will style an {{htmlelement("h1")}} with a large font size to make it _look_ like a heading (although you could style it to look like anything you wanted).
+By default, most browser's [user agent stylesheet](/en-US/docs/Web/CSS/Cascade#user-agent_stylesheets) will style an {{htmlelement("Heading_Elements", "h1")}} with a large font size to make it _look_ like a heading (although you could style it to look like anything you wanted).
 
 On the other hand, you could make any element _look_ like a top level heading. Consider the following:
 
@@ -57,6 +53,7 @@ These are _some_ of the roughly 100 semantic [elements](/en-US/docs/Web/HTML/Ele
 - {{htmlelement("details")}}
 - {{htmlelement("figcaption")}}
 - {{htmlelement("figure")}}
+- {{htmlelement("form")}}
 - {{htmlelement("footer")}}
 - {{htmlelement("header")}}
 - {{htmlelement("main")}}
@@ -83,6 +80,7 @@ These are _some_ of the roughly 100 semantic [elements](/en-US/docs/Web/HTML/Ele
   - {{htmlelement("figcaption")}}
   - {{htmlelement("figure")}}
   - {{htmlelement("footer")}}
+  - {{htmlelement("form")}}
   - {{htmlelement("header")}}
   - {{htmlelement("main")}}
   - {{htmlelement("mark")}}

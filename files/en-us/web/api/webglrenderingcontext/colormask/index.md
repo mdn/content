@@ -2,12 +2,6 @@
 title: WebGLRenderingContext.colorMask()
 slug: Web/API/WebGLRenderingContext/colorMask
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.colorMask
 ---
 

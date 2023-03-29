@@ -2,17 +2,12 @@
 title: Array() constructor
 slug: Web/JavaScript/Reference/Global_Objects/Array/Array
 page-type: javascript-constructor
-tags:
-  - Array
-  - Constructor
-  - JavaScript
-  - Reference
 browser-compat: javascript.builtins.Array.Array
 ---
 
 {{JSRef}}
 
-The **`Array()`** constructor is used to create {{jsxref("Array")}} objects.
+The **`Array()`** constructor creates {{jsxref("Array")}} objects.
 
 ## Syntax
 

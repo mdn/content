@@ -2,12 +2,6 @@
 title: Date.prototype.getTime()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getTime
 page-type: javascript-instance-method
-tags:
-  - Date
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
 browser-compat: javascript.builtins.Date.getTime
 ---
 
@@ -34,7 +28,7 @@ the given date.
 
 ## Description
 
-To offer protection against timing attacks and fingerprinting, the precision of
+To offer protection against timing attacks and [fingerprinting](/en-US/docs/Glossary/Fingerprinting), the precision of
 `new Date().getTime()` might get rounded depending on browser settings. In
 Firefox, the `privacy.reduceTimerPrecision` preference is enabled by default
 and defaults to 20µs in Firefox 59; in 60 it will be 2ms.

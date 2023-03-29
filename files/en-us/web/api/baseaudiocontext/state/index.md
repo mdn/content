@@ -2,15 +2,6 @@
 title: BaseAudioContext.state
 slug: Web/API/BaseAudioContext/state
 page-type: web-api-instance-property
-tags:
-  - API
-  - Audio
-  - AudioContext
-  - BaseAudioContext
-  - Property
-  - Reference
-  - Web Audio API
-  - state
 browser-compat: api.BaseAudioContext.state
 ---
 

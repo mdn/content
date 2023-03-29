@@ -3,20 +3,12 @@ title: Intl.RelativeTimeFormat() constructor
 slug: >-
   Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/RelativeTimeFormat
 page-type: javascript-constructor
-tags:
-  - Constructor
-  - Internationalization
-  - Intl
-  - JavaScript
-  - Localization
-  - Reference
-  - RelativeTimeFormat
 browser-compat: javascript.builtins.Intl.RelativeTimeFormat.RelativeTimeFormat
 ---
 
 {{JSRef}}
 
-The **`Intl.RelativeTimeFormat()`** constructor creates {{jsxref("Intl/RelativeTimeFormat", "Intl.RelativeTimeFormat")}} objects.
+The **`Intl.RelativeTimeFormat()`** constructor creates {{jsxref("Intl.RelativeTimeFormat")}} objects.
 
 ## Syntax
 

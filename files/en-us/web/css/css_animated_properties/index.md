@@ -2,12 +2,6 @@
 title: Animatable CSS properties
 slug: Web/CSS/CSS_animated_properties
 page-type: landing-page
-tags:
-  - CSS
-  - CSS Animations
-  - CSS Transitions
-  - Guide
-  - Reference
 ---
 
 {{CSSRef}}

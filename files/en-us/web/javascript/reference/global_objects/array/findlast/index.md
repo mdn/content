@@ -2,14 +2,6 @@
 title: Array.prototype.findLast()
 slug: Web/JavaScript/Reference/Global_Objects/Array/findLast
 page-type: javascript-instance-method
-tags:
-  - Array
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - findLast
-  - Polyfill
 browser-compat: javascript.builtins.Array.findLast
 ---
 
@@ -17,8 +9,6 @@ browser-compat: javascript.builtins.Array.findLast
 
 The **`findLast()`** method iterates the array in reverse order and returns the value of the first element that satisfies the provided testing function.
 If no elements satisfy the testing function, {{jsxref("undefined")}} is returned.
-
-{{EmbedInteractiveExample("pages/js/array-findlast.html","shorter")}}
 
 If you need to find:
 
@@ -29,6 +19,8 @@ If you need to find:
 - whether a value _exists_ in an array, use {{jsxref("Array/includes", "includes()")}}.
   Again, it checks each element for equality with the value instead of using a testing function.
 - if any element satisfies the provided testing function, use {{jsxref("Array/some", "some()")}}.
+
+{{EmbedInteractiveExample("pages/js/array-findlast.html","shorter")}}
 
 ## Syntax
 

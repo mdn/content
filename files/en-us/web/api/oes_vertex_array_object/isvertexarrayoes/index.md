@@ -2,13 +2,6 @@
 title: OES_vertex_array_object.isVertexArrayOES()
 slug: Web/API/OES_vertex_array_object/isVertexArrayOES
 page-type: webgl-extension-method
-tags:
-  - API
-  - Method
-  - Reference
-  - VAO
-  - WebGL
-  - WebGL extension
 browser-compat: api.OES_vertex_array_object.isVertexArrayOES
 ---
 
@@ -38,7 +31,7 @@ A {{domxref("WebGL_API.Types")}} indicating whether the given object is a
 ## Examples
 
 ```js
-const ext = gl.getExtension('OES_vertex_array_object');
+const ext = gl.getExtension("OES_vertex_array_object");
 const vao = ext.createVertexArrayOES();
 ext.bindVertexArrayOES(vao);
 

@@ -1,13 +1,7 @@
 ---
-title: 'SVGElement: load event'
+title: "SVGElement: load event"
 slug: Web/API/SVGElement/load_event
 page-type: web-api-event
-tags:
-  - API
-  - Reference
-  - SVGElement
-  - events
-  - load
 browser-compat: api.SVGElement.load_event
 ---
 
@@ -22,9 +16,9 @@ This event is not cancelable and does not bubble.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('load', (event) => {});
+addEventListener("load", (event) => {});
 
-onload = (event) => { };
+onload = (event) => {};
 ```
 
 ## Event type
@@ -34,9 +28,9 @@ A generic {{domxref("Event")}}.
 ## Examples
 
 ```js
-svgElem.addEventListener('load', () => {
-  console.log('SVG loaded.');
-})
+svgElem.addEventListener("load", () => {
+  console.log("SVG loaded.");
+});
 ```
 
 ## Specifications

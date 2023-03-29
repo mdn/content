@@ -2,13 +2,8 @@
 title: AudioDecoder.flush()
 slug: Web/API/AudioDecoder/flush
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - flush
-  - AudioDecoder
-  - Experimental
+status:
+  - experimental
 browser-compat: api.AudioDecoder.flush
 ---
 
@@ -42,7 +37,7 @@ If an error occurs, the promise will resolve with one of the following exception
 The following example flushes the `AudioDecoder`.
 
 ```js
-AudioDecoder.flush();
+await audioDecoder.flush();
 ```
 
 ## Specifications

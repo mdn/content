@@ -2,13 +2,6 @@
 title: Function.prototype.bind()
 slug: Web/JavaScript/Reference/Global_Objects/Function/bind
 page-type: javascript-instance-method
-tags:
-  - ECMAScript 2015
-  - ECMAScript 5
-  - Function
-  - JavaScript
-  - Method
-  - Polyfill
 browser-compat: javascript.builtins.Function.bind
 ---
 

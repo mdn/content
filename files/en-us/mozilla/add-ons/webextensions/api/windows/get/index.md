@@ -1,16 +1,7 @@
 ---
 title: windows.get()
 slug: Mozilla/Add-ons/WebExtensions/API/windows/get
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - Windows
-  - get
+page-type: webextension-api-function
 browser-compat: webextensions.api.windows.get
 ---
 

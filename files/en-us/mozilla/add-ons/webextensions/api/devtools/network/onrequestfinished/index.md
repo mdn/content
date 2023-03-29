@@ -1,15 +1,7 @@
 ---
 title: devtools.network.onRequestFinished
 slug: Mozilla/Add-ons/WebExtensions/API/devtools/network/onRequestFinished
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Reference
-  - Event
-  - WebExtensions
-  - devtools.network
-  - onRequestFinished
+page-type: webextension-api-event
 browser-compat: webextensions.api.devtools.network.onRequestFinished
 ---
 

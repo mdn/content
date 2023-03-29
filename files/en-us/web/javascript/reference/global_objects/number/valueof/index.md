@@ -2,12 +2,6 @@
 title: Number.prototype.valueOf()
 slug: Web/JavaScript/Reference/Global_Objects/Number/valueOf
 page-type: javascript-instance-method
-tags:
-  - JavaScript
-  - Method
-  - Number
-  - Prototype
-  - Reference
 browser-compat: javascript.builtins.Number.valueOf
 ---
 

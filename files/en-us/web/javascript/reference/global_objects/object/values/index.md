@@ -2,12 +2,6 @@
 title: Object.values()
 slug: Web/JavaScript/Reference/Global_Objects/Object/values
 page-type: javascript-static-method
-tags:
-  - JavaScript
-  - Method
-  - Object
-  - Reference
-  - Polyfill
 browser-compat: javascript.builtins.Object.values
 ---
 
@@ -34,7 +28,7 @@ An array containing the given object's own enumerable string-keyed property valu
 
 ## Description
 
-`Object.values()` returns an array whose elements are strings corresponding to the enumerable string-keyed property values found directly upon `object`. This is the same as iterating with a {{jsxref("Statements/for...in", "for...in")}} loop, except that a `for...in` loop enumerates properties in the prototype chain as well. The order of the array returned by `Object.values()` is the same as that provided by a {{jsxref("Statements/for...in", "for...in")}} loop.
+`Object.values()` returns an array whose elements are values of enumerable string-keyed properties found directly upon `object`. This is the same as iterating with a {{jsxref("Statements/for...in", "for...in")}} loop, except that a `for...in` loop enumerates properties in the prototype chain as well. The order of the array returned by `Object.values()` is the same as that provided by a {{jsxref("Statements/for...in", "for...in")}} loop.
 
 If you need the property keys, use {{jsxref("Object.keys()")}} instead. If you need both the property keys and values, use {{jsxref("Object.entries()")}} instead.
 

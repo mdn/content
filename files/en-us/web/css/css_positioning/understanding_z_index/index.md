@@ -2,13 +2,6 @@
 title: Understanding CSS z-index
 slug: Web/CSS/CSS_Positioning/Understanding_z_index
 page-type: guide
-tags:
-  - Advanced
-  - CSS
-  - Guide
-  - Reference
-  - Understanding_CSS_z-index
-  - z-index
 ---
 
 {{CSSRef}}

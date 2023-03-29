@@ -2,13 +2,6 @@
 title: GeolocationPositionError.code
 slug: Web/API/GeolocationPositionError/code
 page-type: web-api-instance-property
-tags:
-  - API
-  - Code
-  - Geolocation API
-  - GeolocationPositionError
-  - Property
-  - Secure context
 browser-compat: api.GeolocationPositionError.code
 ---
 

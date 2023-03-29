@@ -2,13 +2,8 @@
 title: URLPattern.hostname
 slug: Web/API/URLPattern/hostname
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - URLPattern
-  - URL Pattern API
-  - Experimental
+status:
+  - experimental
 browser-compat: api.URLPattern.hostname
 ---
 
@@ -32,7 +27,7 @@ The below example creates a {{domxref("URLPattern")}} object with
 is a direct subdomain of `example.org`.
 
 ```js
-const pattern = new URLPattern('https://*.example.org');
+const pattern = new URLPattern("https://*.example.org");
 console.log(pattern.hostname); // '*.example.org'
 ```
 

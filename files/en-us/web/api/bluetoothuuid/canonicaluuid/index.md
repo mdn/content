@@ -2,13 +2,8 @@
 title: BluetoothUUID.canonicalUUID()
 slug: Web/API/BluetoothUUID/canonicalUUID
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - Experimental
-  - canonicalUUID()
-  - BluetoothUUID
+status:
+  - experimental
 browser-compat: api.BluetoothUUID.canonicalUUID
 ---
 

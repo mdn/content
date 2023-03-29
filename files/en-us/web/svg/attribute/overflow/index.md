@@ -2,9 +2,6 @@
 title: overflow
 slug: Web/SVG/Attribute/overflow
 page-type: svg-attribute
-tags:
-  - SVG
-  - SVG Attribute
 browser-compat: svg.attributes.presentation.overflow
 ---
 

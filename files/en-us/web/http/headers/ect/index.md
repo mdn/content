@@ -1,14 +1,8 @@
 ---
 title: ECT
 slug: Web/HTTP/Headers/ECT
-tags:
-  - ect
-  - Client hints
-  - HTTP
-  - HTTP Header
-  - Request header
-  - Client hints
-  - Experimental
+status:
+  - experimental
 browser-compat: http.headers.ect
 ---
 

@@ -2,13 +2,8 @@
 title: ImageTrack.repetitionCount
 slug: Web/API/ImageTrack/repetitionCount
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - repetitionCount
-  - ImageTrack
-  - Experimental
+status:
+  - experimental
 browser-compat: api.ImageTrack.repetitionCount
 ---
 

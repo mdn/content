@@ -2,13 +2,6 @@
 title: KeyboardEvent.isComposing
 slug: Web/API/KeyboardEvent/isComposing
 page-type: web-api-instance-property
-tags:
-  - API
-  - DOM
-  - KeyboardEvent
-  - Property
-  - Read-only
-  - Reference
 browser-compat: api.KeyboardEvent.isComposing
 ---
 

@@ -1,15 +1,7 @@
 ---
 title: webNavigation
 slug: Mozilla/Add-ons/WebExtensions/API/webNavigation
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Interface
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - webNavigation
+page-type: webextension-api
 browser-compat: webextensions.api.webNavigation
 ---
 

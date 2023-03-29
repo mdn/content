@@ -1,14 +1,9 @@
 ---
 title: ":user-valid (:-moz-ui-valid)"
-slug: web/css/:user-valid
+slug: Web/CSS/:user-valid
 page-type: css-pseudo-class
-tags:
-  - CSS
-  - CSS Selectors
-  - Pseudo-class
-  - Reference
-  - Selector
-  - Experimental
+status:
+  - experimental
 browser-compat: css.selectors.user-valid
 ---
 
@@ -29,8 +24,10 @@ The result is that if the control was valid when the user started interacting wi
 
 ## Syntax
 
-```
-:user-valid
+```css
+:user-valid {
+  /* ... */
+}
 ```
 
 ## Examples

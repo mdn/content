@@ -2,23 +2,6 @@
 title: MediaStreamAudioSourceNode
 slug: Web/API/MediaStreamAudioSourceNode
 page-type: web-api-interface
-tags:
-  - API
-  - Audio
-  - AudioNode
-  - Interface
-  - Media
-  - MediaStream
-  - MediaStreamAudioSourceNode
-  - MediaStreamTrack
-  - Reference
-  - Web
-  - Web Audio API
-  - WebRTC
-  - getusermedia
-  - sound
-  - stream
-  - track
 browser-compat: api.MediaStreamAudioSourceNode
 ---
 

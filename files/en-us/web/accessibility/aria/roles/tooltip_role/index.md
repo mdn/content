@@ -1,14 +1,6 @@
 ---
 title: "ARIA: tooltip role"
 slug: Web/Accessibility/ARIA/Roles/tooltip_role
-tags:
-  - Accessibility
-  - ARIA
-  - roles
-  - Reference
-  - ARIA roles
-  - document structure role
-  - Tooltip role
 spec-urls:
   - https://w3c.github.io/aria/#tooltip
   - https://w3c.github.io/aria-practices/#tooltip

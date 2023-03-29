@@ -1,13 +1,6 @@
 ---
 title: aria-setsize
 slug: Web/Accessibility/ARIA/Attributes/aria-setsize
-tags:
-  - Accessibility
-  - ARIA
-  - ARIA attribute
-  - ARIA property
-  - aria-setsize
-  - Reference
 spec-urls: https://w3c.github.io/aria/#aria-setsize
 ---
 

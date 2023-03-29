@@ -2,18 +2,12 @@
 title: Proxy() constructor
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy
 page-type: javascript-constructor
-tags:
-  - Constructor
-  - JavaScript
-  - Proxy
-  - Reference
 browser-compat: javascript.builtins.Proxy.Proxy
 ---
 
 {{JSRef}}
 
-The **`Proxy()`** constructor is used to create
-{{jsxref("Proxy")}} objects.
+The **`Proxy()`** constructor creates {{jsxref("Proxy")}} objects.
 
 ## Syntax
 

@@ -2,10 +2,6 @@
 title: Shapes from images
 slug: Web/CSS/CSS_Shapes/Shapes_From_Images
 page-type: guide
-tags:
-  - CSS
-  - CSS Shapes
-  - Guide
 ---
 
 {{CSSRef}}

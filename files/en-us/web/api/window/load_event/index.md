@@ -2,12 +2,6 @@
 title: "Window: load event"
 slug: Web/API/Window/load_event
 page-type: web-api-event
-tags:
-  - Event
-  - HTML DOM
-  - Reference
-  - Window
-  - load
 browser-compat: api.Window.load_event
 ---
 

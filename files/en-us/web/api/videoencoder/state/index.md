@@ -2,17 +2,10 @@
 title: VideoEncoder.state
 slug: Web/API/VideoEncoder/state
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - state
-  - VideoEncoder
-  - Experimental
 browser-compat: api.VideoEncoder.state
 ---
 
-{{APIRef("WebCodecs API")}}{{SecureContext_Header}}{{SeeCompatTable}}
+{{APIRef("WebCodecs API")}}{{SecureContext_Header}}
 
 The **`state`** read-only property of the {{domxref("VideoEncoder")}} interface returns the current state of the underlying codec.
 

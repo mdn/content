@@ -2,13 +2,6 @@
 title: Symbol.asyncIterator
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/asyncIterator
 page-type: javascript-static-data-property
-tags:
-  - ECMAScript 2018
-  - JavaScript
-  - Property
-  - Reference
-  - Symbol
-  - asynchronous
 browser-compat: javascript.builtins.Symbol.asyncIterator
 ---
 
@@ -16,7 +9,7 @@ browser-compat: javascript.builtins.Symbol.asyncIterator
 
 The **`Symbol.asyncIterator`** static data property represents the well-known symbol specifying the method that returns the [async iterator](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_async_iterator_and_async_iterable_protocols) for an object. If this property is set on an object, it is an async iterable and can be used in a [`for await...of`](/en-US/docs/Web/JavaScript/Reference/Statements/for-await...of) loop.
 
-{{EmbedInteractiveExample("pages/js/symbol-asynciterator.html")}}
+{{EmbedInteractiveExample("pages/js/symbol-asynciterator.html", "taller")}}
 
 ## Value
 
@@ -58,7 +51,7 @@ When creating an API, remember that async iterables are designed to represent so
 
 ### Built-in async iterables
 
-There are currently no built-in JavaScript objects that have the `[Symbol.asyncIterator]` key set by default. However, WHATWG Streams are set to be the first built-in object to be async iterable, with `[Symbol.asyncIterator]` recently landing in the spec.
+[`ReadableStream`](/en-US/docs/Web/API/ReadableStream) is the only built-in JavaScript object that has the `Symbol.asyncIterator` method set by default at the time of writing.
 
 ## Specifications
 

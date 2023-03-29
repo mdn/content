@@ -2,12 +2,6 @@
 title: translate3d()
 slug: Web/CSS/transform-function/translate3d
 page-type: css-function
-tags:
-  - CSS
-  - CSS Function
-  - CSS Transforms
-  - Function
-  - Reference
 browser-compat: css.types.transform-function.translate3d
 ---
 

@@ -2,9 +2,6 @@
 title: CSS property page template
 slug: MDN/Writing_guidelines/Page_structures/Page_types/CSS_property_page_template
 page-type: mdn-writing-guide
-tags:
-  - meta
-  - writing-guide
 browser-compat: css.properties.NameOfTheProperty
 ---
 
@@ -24,13 +21,10 @@ browser-compat: css.properties.NameOfTheProperty
 > title: NameOfTheProperty
 > slug: Web/CSS/NameOfTheProperty
 > page-type: css-property OR css-shorthand-property
-> tags:
->   - CSS
->   - Reference
->   - CSS Property
->   - NameOfTheProperty
->   - Experimental
->   - Deprecated
+> status:
+>   - experimental
+>   - deprecated
+>   - non-standard
 > browser-compat: css.properties.NameOfTheProperty
 > ---
 > ```
@@ -42,17 +36,9 @@ browser-compat: css.properties.NameOfTheProperty
 >   - : The `slug` value is the end of the URL path after `https://developer.mozilla.org/en-US/docs/`. This will be formatted like `Web/CSS/NameOfTheProperty`.
 >     For example, the [`background-color`](/en-US/docs/Web/CSS/background-color) property slug is `Web/CSS/background-color`.
 > - **page-type**
->   - : The `page-type` key for CSS properties is `css-shorthand-property` for shorthand properties; otherwise it is `css-property`. For example, the `page-type` value for the [animation](/en-US/docs/Web/CSS/animation) property is `css-shorthand-property` but for the the [animation-delay](/en-US/docs/Web/CSS/animation-delay) property, it is `css-property`.
-> - **tags**
->
->   - : Always include the following tags: **CSS**, **Reference**, **CSS Property**, _NameOfTheProperty_ (e.g., **background-color**).
->
->     Include the following tags as appropriate:
->
->     - Category of property: **Layout**, **Graphics**, **CSS Background**, **CSS Colors**, or other tags as appropriate
->     - Technology status: [**Experimental**](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#experimental)) or [**Deprecated**](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#deprecated_and_obsolete))
->     - Others: Any other terms related to the technology that people might search for
->
+>   - : The `page-type` key for CSS properties is `css-shorthand-property` for shorthand properties; otherwise it is `css-property`. For example, the `page-type` value for the [animation](/en-US/docs/Web/CSS/animation) property is `css-shorthand-property` but for the [animation-delay](/en-US/docs/Web/CSS/animation-delay) property, it is `css-property`.
+> - **status**
+>   - : Include (appropriate) technology status keys: [**experimental**](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#experimental), [**deprecated**](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#deprecated), **non-standard** (if not on a standards track).
 > - **browser-compat**
 >
 >   - : Replace the placeholder value <code>css.properties.NameOfTheProperty</code> with the query string for the property in the [Browser compat data repo](https://github.com/mdn/browser-compat-data).
@@ -67,7 +53,7 @@ browser-compat: css.properties.NameOfTheProperty
 > - `\{{SeeCompatTable}}` — this generates a **This is an experimental technology** banner that indicates the technology is [experimental](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#experimental).
 >   If the technology you are documenting is not experimental, you can remove this.
 >   If it is experimental, and the technology is hidden behind a pref in Firefox, you should also fill in an entry for it in the [Experimental features in Firefox](/en-US/docs/Mozilla/Firefox/Experimental_features) page.
-> - `\{{Deprecated_Header}}` — this generates a **Deprecated** banner that indicates that use of the technology is [discouraged](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#deprecated_and_obsolete).
+> - `\{{Deprecated_Header}}` — this generates a **Deprecated** banner that indicates that use of the technology is [discouraged](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#deprecated).
 >   If it isn't, then you can remove the macro call.
 > - `\{{CSSRef}}` — this must be present on every CSS property page. It generates a suitable CSS sidebar, depending on what tags are included on the page.
 >   Remember to remove the `\{{MDNSidebar}}` macro when you copy this page.
@@ -189,7 +175,7 @@ _Remember to remove the backticks and backslash to use this macro._
 
 ## See also
 
-Include guides relating to the current property or a list of other properties here.
+Include links to reference pages and guides related to the current property. For more guidelines, see the [See also section](/en-US/docs/MDN/Writing_guidelines/Writing_style_guide#see_also_section) in the _Writing style guide_.
 
 - link1
 - link2

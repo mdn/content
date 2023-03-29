@@ -1,14 +1,6 @@
 ---
 title: WebDriver
 slug: Web/WebDriver
-tags:
-  - Automation
-  - Index
-  - Landing
-  - Reference
-  - Testing
-  - Web
-  - WebDriver
 ---
 
 {{QuickLinksWithSubpages}}

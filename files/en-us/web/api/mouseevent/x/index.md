@@ -2,11 +2,6 @@
 title: MouseEvent.x
 slug: Web/API/MouseEvent/x
 page-type: web-api-instance-property
-tags:
-  - API
-  - DOM
-  - Property
-  - Reference
 browser-compat: api.MouseEvent.x
 ---
 
