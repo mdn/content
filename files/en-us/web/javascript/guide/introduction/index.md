@@ -75,8 +75,6 @@ The JavaScript documentation describes aspects of the language that are appropri
 
 To get started with JavaScript, all you need is a modern web browser. Recent versions of [Firefox](https://www.mozilla.org/en-CA/firefox/new/), [Chrome](https://www.google.com/chrome/index.html), [Microsoft Edge](https://www.microsoft.com/en-us/edge), and [Safari](https://www.apple.com/safari/) all support the features discussed in this guide.
 
-### The JavaScript Console
-
 A very useful tool for exploring JavaScript is the JavaScript Console (sometimes called the Web Console, or just the console): this is a tool which enables you to enter JavaScript and run it in the current page.
 
 The screenshots here show the [Firefox Web Console](https://firefox-source-docs.mozilla.org/devtools-user/web_console/), but all modern browsers ship with a console that works in a similar way.
@@ -101,7 +99,7 @@ The console works the exact same way as `eval`: the last expression entered is r
 console.log(eval("3 + 5"));
 ```
 
-### Multi-line input in the Console
+### Multi-line input in the console
 
 By default, if you press <kbd>Return</kbd> after entering a line of code, then the string you typed is executed. To enter multi-line input:
 
@@ -109,7 +107,7 @@ By default, if you press <kbd>Return</kbd> after entering a line of code, then t
 - If you hold down <kbd>Shift</kbd> while pressing <kbd>Return</kbd>, then the console will treat this as a line break, and let you type another line.
 - In Firefox only, you can activate [multi-line input mode](https://firefox-source-docs.mozilla.org/devtools-user/web_console/the_command_line_interpreter/index.html#multi-line-mode), in which you can enter multiple lines in a mini-editor, then run the whole thing when you are ready.
 
-To get started with writing JavaScript, open the Firefox Web Console in multi-line mode, and write your first "Hello world" JavaScript code:
+To get started with writing JavaScript, open the console, copy the following code, and paste it in at the prompt:
 
 ```js
 (function () {
@@ -124,7 +122,7 @@ To get started with writing JavaScript, open the Firefox Web Console in multi-li
 })();
 ```
 
-Press <kbd>Cmd</kbd>+<kbd>Enter</kbd> or <kbd>Ctrl</kbd>+<kbd>Enter</kbd> (or click the **Run** button) to watch it unfold in your browser!
+Press <kbd>Return</kbd> to watch it unfold in your browser!
 
 ## What's next
 
