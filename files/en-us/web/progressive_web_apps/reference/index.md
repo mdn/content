@@ -62,7 +62,7 @@ The following manifest members can be used to more deeply integrate your PWA in 
 ### Other
 
 - [`scope`](/en-US/docs/Web/Manifest/scope)
-  - : The navigation scope of this web application, which restricts what web pages can be viewed while the manifest is applied.
+  - : The navigation scope of this web application, which defines the content viewed with the manifest applied versus out-of-scope normal web page content.
 - [`related_applications`](/en-US/docs/Web/Manifest/related_applications)
   - : Alternative applications that provide similar or equivalent functionality to this app. Developers can specify that these alternative applications are preferred by using the `prefer_related_applications` member.
 - [`prefer_related_applications`](/en-US/docs/Web/Manifest/prefer_related_applications)
