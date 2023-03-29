@@ -7,7 +7,7 @@ browser-compat: api.HashChangeEvent.HashChangeEvent
 
 {{APIRef("HTML DOM")}}
 
-The **`HashChangeEvent()`** constructor creates a new {{domxref("HashChangeEvent")}} object, that is used by the {{domxref("Window/hashchange_event", "hashchange")}} event fired at the {{domxref("hashchange")}} when the fragment of the URL change.
+The **`HashChangeEvent()`** constructor creates a new {{domxref("HashChangeEvent")}} object, that is used by the {{domxref("Window/hashchange_event", "hashchange")}} event fired at the {{domxref("window")}} object when the fragment of the URL change.
 
 > **Note:** A web developer doesn't typically need to call this constructor, as the browser creates these objects itself when firing {{domxref("Window/hashchange_event", "hashchange")}} events.
 
