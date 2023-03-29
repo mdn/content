@@ -55,7 +55,7 @@ Once installed, the PWA will behave like other applications that are installed o
 
 ![PWA icon in the doc on MacOS](dock.jpg)
 
-On most desktop browsers, the install prompt is in the URL bar. On mobile, the install prompt is generally found in the pop menu of browser options. No matter the browser or OS, the installation needs to be confirmed.
+On most desktop browsers, the install prompt is in the URL bar. On mobile, the install prompt is generally found in the menu of browser options. No matter the browser or OS, the installation needs to be confirmed.
 
 ![PWA installation on Chrome for Android, with confirmation, home screen icon, and offline experience.](android_pwa.jpg)
 
