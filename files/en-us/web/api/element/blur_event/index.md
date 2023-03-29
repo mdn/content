@@ -11,7 +11,7 @@ The **`blur`** event fires when an element has lost focus. The event does not bu
 
 An element will lose focus if another element is selected.
 An element will also lose focus if a style that does not allow focus is applied, such as `hidden`, or if the element is removed from the document — in both of these cases focus moves to the `body` element (viewport).
-Note however that `blur` is not fired when a focused element is is removed from the document.
+Note however that `blur` is not fired when a focused element is removed from the document.
 
 <!-- Prior to FF110 elements did not lose focus if the style changed to hidden (say) -->
 
