@@ -40,7 +40,7 @@ The following manifest members are used to control the appearance of your app:
 - [`start_url`](/en-US/docs/Web/Manifest/start_url)
   - : The preferred URL that should be loaded when the user launches the web application.
 - [`screenshots`](/en-US/docs/Web/Manifest/screenshots)
-  - : Screenshots intended to showcase the application in PWA stores.
+  - : The URLs and descriptors for the screenshots used to showcase the application in PWA stores.
 - [`orientation`](/en-US/docs/Web/Manifest/orientation)
   - : The default orientation for the app's top-level {{Glossary("Browsing context", "browsing contexts")}}.
 
