@@ -7,7 +7,7 @@ browser-compat: css.properties.overflow
 
 {{CSSRef}}
 
-The **`overflow`** [CSS](/en-US/docs/Web/CSS) [shorthand property](/en-US/docs/Web/CSS/Shorthand_properties) sets the desired behavior for an element's overflow — i.e. when an element's content is too big to fit in its [block formatting context](/en-US/docs/Web/Guide/CSS/Block_formatting_context) — in both directions.
+The **`overflow`** [CSS](/en-US/docs/Web/CSS) [shorthand property](/en-US/docs/Web/CSS/Shorthand_properties) sets the desired behavior when content does not fit (overflows) in the parent element box in the horizontal and/or vertical direction.
 
 {{EmbedInteractiveExample("pages/css/overflow.html")}}
 
@@ -37,22 +37,25 @@ overflow: revert-layer;
 overflow: unset;
 ```
 
-The `overflow` property is specified as one or two keywords chosen from the list of values below. If two keywords are specified, the first applies to `overflow-x` and the second to `overflow-y`. Otherwise, both `overflow-x` and `overflow-y` are set to the same value.
+The `overflow` property is specified as one or two keywords chosen from the list of options below. If only one keyword is specified, both `overflow-x` and `overflow-y` are set to the same value. If two keywords are specified, the first value applies to `overflow-x` and the second one applies to `overflow-y`, always in that order.
 
 ### Values
 
 - `visible`
-  - : Content is not clipped and may be rendered outside the padding box.
+  - : Overflow content is not clipped and may be visible outside content's padding box. This is the default value. In this case, the element is not a {{glossary("scroll container")}}.
 - `hidden`
-  - : Content is clipped if necessary to fit the padding box. No scrollbars are provided, and no support for allowing the user to scroll (such as by dragging or using a scroll wheel) is allowed. The content _can_ be scrolled programmatically (for example, by setting the value of a property such as {{domxref("Element.scrollLeft", "scrollLeft")}} or the {{domxref("Element.scrollTo", "scrollTo()")}} method), so the element is still a scroll container.
+  - : Overflow content is clipped at the content's padding box. Overflow content outside the clipped region is not visible. User agents do not add a scroll bar and also do not allow users to view the content outside the clipped region by actions such as dragging on a touch screen or using the scroll wheel on a mouse. The content _can_ still be scrolled programmatically though (for example, by setting the value of the {{domxref("Element.scrollLeft", "scrollLeft")}} property or the {{domxref("Element.scrollTo", "scrollTo()")}} method), in which case, the element box is a {{glossary("scroll container")}}.
 - `clip`
-  - : Similar to `hidden`, the content is clipped to the element's padding box. The difference between `clip` and `hidden` is that the `clip` keyword also forbids all scrolling, including programmatic scrolling. The box is not a scroll container, and does not start a new formatting context. If you wish to start a new formatting context, you can use {{cssxref("display", "display: flow-root", "#flow-root")}} to do so.
+  - : Overflow content is clipped, as with `hidden`, but at the element's _overflow clip edge_ (defined using the [`overflow-clip-margin`](/en-US/docs/Web/CSS/overflow-clip-margin) property). Similar to `hidden`, overflow content outside the clipped region is not visible with the `clip` keyword, and user agents do not add a scroll bar. However, unlike `hidden`, the `clip` keyword does not allow adding support for scrolling programmatically. Therefore, with `overflow: clip`, an element box is never a {{glossary("scroll container")}}.
+
+> **Note:** `overflow: clip` prevents a new [formatting context](/en-US/docs/Web/Guide/CSS/Block_formatting_context). If you want the element box to also establish a formatting context, use `overflow: clip` along with {{cssxref("display", "display: flow-root", "#flow-root")}}.
+
 - `scroll`
-  - : Content is clipped if necessary to fit the padding box. Browsers always display scrollbars whether or not any content is actually clipped, preventing scrollbars from appearing or disappearing as content changes. Printers may still print overflowing content.
+  - : Overflow content is clipped at the content's padding box, as with `hidden`. Unlike `hidden`, overflow content can be scrolled into view in the {{glossary("Scrollport", "scrollport")}} (the element box is a {{glossary("scroll container")}}). User agents always display scroll bars in both horizontal and vertical directions, whether or not any content is overflowing or clipped. The use of this keyword, therefore, can prevent scroll bars from appearing and disappearing as content changes. Printers may still print overflowing content.
 - `auto`
-  - : Depends on the {{Glossary("user agent")}}. If content fits inside the padding box, it looks the same as `visible`, but still establishes a new block formatting context. Desktop browsers provide scrollbars if content overflows.
-- `overlay` {{deprecated_inline}}
-  - : Behaves the same as `auto`, but with the scrollbars drawn on top of content instead of taking up space.
+  - : Overflow content is clipped at the content's padding box, as with `hidden`, and overflow content can be scrolled into view, as with `scroll`. User agents display scroll bars _only if_ the content is overflowing and hide scroll bars by default. If content fits inside the padding box, it looks the same as `visible` but still establishes a new [block formatting context](/en-US/docs/Web/Guide/CSS/Block_formatting_context).
+
+> **Note:** The keyword `overlay` is a legacy value alias for `auto` and behaves the same as `auto`.
 
 #### Mozilla extensions
 
@@ -69,15 +72,14 @@ As of Firefox 63, `-moz-scrollbars-none`, `-moz-scrollbars-horizontal`, and `-mo
 
 ## Description
 
-Overflow options include clipping, showing scrollbars, or displaying the content flowing out of its container into the surrounding area.
+Overflow options include hiding overflowing content, showing scroll bars to view overflow content, or displaying the content flowing out of an element box into the surrounding area.
 
-Specifying a value other than `visible` (the default) or `clip` creates a new [block formatting context](/en-US/docs/Web/Guide/CSS/Block_formatting_context). This is necessary for technical reasons — if a float intersected with the scrolling element it would forcibly rewrap the content after each scroll step, leading to a slow scrolling experience.
+The following nuances should be kept in mind while using the various keywords for `overflow`:
 
-In order for `overflow` to have an effect, the block-level container must have either a set height (`height` or `max-height`) or `white-space` set to `nowrap`.
-
-Setting one axis to `visible` (the default) while setting the other to a _different_ value results in `visible` behaving as `auto`.
-
-The JavaScript {{domxref("Element.scrollTop")}} property may be used to scroll an HTML element even when `overflow` is set to `hidden`.
+- Specifying a value other than `visible` (the default) or `clip` for `overflow` creates a new [block formatting context](/en-US/docs/Web/Guide/CSS/Block_formatting_context). This is necessary for technical reasons; if a float intersects with a scrolling element, it would forcibly rewrap the content after each scroll step, leading to a slow scrolling experience.
+- For an `overflow` setting to create the desired effect, the block-level element must have either a set height (`height` or `max-height`) or `white-space` set to `nowrap`.
+- Setting one axis to `visible` (the default) while setting the other to a _different_ value results in `visible` behaving as `auto`.
+- The JavaScript {{domxref("Element.scrollTop")}} property may be used to scroll an HTML element even when `overflow` is set to `hidden`.
 
 ## Formal definition
 
@@ -89,7 +91,7 @@ The JavaScript {{domxref("Element.scrollTop")}} property may be used to scroll a
 
 ## Examples
 
-### Setting different overflow values for text
+### Demonstrating results of various overflow keywords
 
 #### HTML
 
@@ -105,6 +107,14 @@ The JavaScript {{domxref("Element.scrollTop")}} property may be used to scroll a
 <div>
   <code>hidden</code>
   <p class="hidden">
+    Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+    doloremque laudantium.
+  </p>
+</div>
+
+<div>
+  <code>clip</code>
+  <p class="clip">
     Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
     doloremque laudantium.
   </p>
@@ -132,7 +142,8 @@ The JavaScript {{domxref("Element.scrollTop")}} property may be used to scroll a
 ```css
 body {
   display: flex;
-  justify-content: space-around;
+  flex-wrap: wrap;
+  justify-content: start;
 }
 
 div {
@@ -144,6 +155,7 @@ p {
   width: 8em;
   height: 5em;
   border: dotted;
+  margin-top: 0.3em;
 }
 
 p.visible {
@@ -152,6 +164,11 @@ p.visible {
 
 p.hidden {
   overflow: hidden;
+}
+
+p.clip {
+  overflow: clip;
+  overflow-clip-margin: 1em;
 }
 
 p.scroll {
@@ -165,15 +182,13 @@ p.auto {
 
 #### Result
 
-{{EmbedLiveSample("Setting_different_overflow_values_for_text", "600", "250")}}
+{{EmbedLiveSample("Demonstrating results of various overflow keywords", "600", "400")}}
 
-### Accessibility Concerns
+## Accessibility concerns
 
 A scrolling content area cannot be scrolled by a keyboard-only user, with the exception of users on Firefox (which makes the container keyboard focusable by default).
 
-As a developer, to allow non-Firefox keyboard-only users to scroll the container you will need to give it a [`tabindex`](/en-US/docs/Web/HTML/Global_attributes/tabindex) using `tabindex="0"`. Unfortunately, when a screen reader encounters this tab-stop, they will have no context for what it is and their screen reader will likely announce the entirety of its contents. Giving it an appropriate [WAI-ARIA role](/en-US/docs/Web/Accessibility/ARIA/Roles) (`role="region"`, for example) and an accessible name (via [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label) or [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby)) can mitigate this.
-
-- [Keyboard-Only Scrolling Areas](https://adrianroselli.com/2022/06/keyboard-only-scrolling-areas.html)
+As a developer, to allow non-Firefox keyboard-only users to scroll the container, you will need to give it a [`tabindex`](/en-US/docs/Web/HTML/Global_attributes/tabindex) using `tabindex="0"`. Unfortunately, when a screen reader encounters this tab-stop, they will have no context for what it is and their screen reader will likely announce the entirety of its contents. Giving it an appropriate [WAI-ARIA role](/en-US/docs/Web/Accessibility/ARIA/Roles) (`role="region"`, for example) and an accessible name (via [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label) or [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby)) can mitigate this.
 
 ## Specifications
 
@@ -185,5 +200,8 @@ As a developer, to allow non-Firefox keyboard-only users to scroll the container
 
 ## See also
 
-- Related CSS properties: {{cssxref("text-overflow")}}, {{cssxref("white-space")}}, {{Cssxref("overflow-x")}}, {{Cssxref("overflow-y")}}, {{Cssxref("overflow-inline")}}, {{Cssxref("overflow-block")}}, {{Cssxref("clip")}}, {{Cssxref("display")}}
-- [CSS Overflow](/en-US/docs/Web/CSS/CSS_Overflow) and [Debug scrollable overflow](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/debug_scrollable_overflow/index.html)
+- {{Cssxref("overflow-x")}}, {{Cssxref("overflow-y")}}
+- {{Cssxref("overflow-block")}}, {{Cssxref("overflow-clip-margin")}}, {{Cssxref("overflow-inline")}}
+- {{Cssxref("clip")}}, {{Cssxref("display")}}, {{cssxref("text-overflow")}}, {{cssxref("white-space")}}
+- [CSS overflow](/en-US/docs/Web/CSS/CSS_Overflow)
+- [Keyboard-only scrolling areas](https://adrianroselli.com/2022/06/keyboard-only-scrolling-areas.html) on adrianroselli.com (November 28, 2022)

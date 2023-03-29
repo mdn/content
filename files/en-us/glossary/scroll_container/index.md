@@ -4,17 +4,8 @@ slug: Glossary/Scroll_container
 page-type: glossary-definition
 ---
 
-A **scroll container** is created by applying `overflow: scroll` to a container, or `overflow: auto` when there is enough content to cause overflow.
+A **scroll container** is an element box with scroll bars. When the content of an element box overflows its bounding box, users can use scroll bars to scroll through the clipped content that is otherwise hidden from view.
 
-The scroll container allows the user to scroll through parts of the overflow region that would otherwise be clipped and hidden from view. The visible part of the scroll container is referred to as the {{glossary("Scrollport", "scrollport")}}.
+A user agent adds scroll bars when the {{cssxref("overflow")}} property is set to `scroll` or `auto`.
 
-## See also
-
-- [MDN Web Docs Glossary](/en-US/docs/Glossary):
-
-  - {{glossary("Scroll container")}}
-  - {{glossary("Scrollport")}}
-
-- Related CSS Properties:
-
-  - {{cssxref("overflow")}}
+The visible part of a scroll container is called the {{glossary("Scrollport", "scrollport")}}.

@@ -4,15 +4,6 @@ slug: Glossary/Scrollport
 page-type: glossary-definition
 ---
 
-The **scrollport** is the visual viewport of a {{glossary("Scroll container", "scroll container")}} in a document. A scroll container is created by applying `overflow: scroll` to a container, or `overflow: auto` when there is enough content to cause overflow. The scrollport coincides with the padding box of that container and represents the content that can be seen as the box is scrolled.
+A **scrollport** is the visual viewport of a {{glossary("Scroll container", "scroll container")}} and represents the area in which the scrollable overflow content can be viewed. A scrollport coincides with the padding box of the scroll container element.
 
-## See also
-
-- [MDN Web Docs Glossary](/en-US/docs/Glossary):
-
-  - {{glossary("Scroll container")}}
-  - {{glossary("Scrollport")}}
-
-- Related CSS Properties:
-
-  - {{cssxref("overflow")}}
+A scroll container allows overflow content to be viewed by scrolling. You can create a scroll container by specifying the {{cssxref("overflow")}} property of an element box as `scroll` or `auto`.

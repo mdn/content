@@ -7,7 +7,7 @@ browser-compat: css.properties.overflow-y
 
 {{CSSRef}}
 
-The **`overflow-y`** [CSS](/en-US/docs/Web/CSS) property sets what shows when content overflows a block-level element's top and bottom edges. This may be nothing, a scroll bar, or the overflow content.
+The **`overflow-y`** [CSS](/en-US/docs/Web/CSS) property sets what shows when content overflows a block-level element's top and bottom edges. This may be nothing, a scroll bar, or the overflow content. It is one of the constituent properties of the shorthand [`overflow`](/en-US/docs/Web/CSS/overflow) property.
 
 {{EmbedInteractiveExample("pages/css/overflow-y.html")}}
 
