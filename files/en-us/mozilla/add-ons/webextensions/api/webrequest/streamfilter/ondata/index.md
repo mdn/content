@@ -207,7 +207,7 @@ function listener(details) {
     const doc = parser.parseFromString(str, blob.type);
     const nodes = doc.querySelectorAll("title, h1");
     for (const node of nodes) {
-      node.innerText = node.innerText.replace("Example", "WebExtension $&");
+      node.innerText = node.innerText.replaceAll("Example", "WebExtension $&");
     }
     filter.write(encoder.encode(doc.documentElement.outerHTML));
     filter.close();
