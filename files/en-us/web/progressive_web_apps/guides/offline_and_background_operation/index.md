@@ -366,7 +366,7 @@ async function registerPeriodicSync() {
 
 ## Push
 
-The [Push API](/en-US/docs/Web/API/Push_API) enables a PWA to receive messages pushed from the server, whether the app is running or not. When the message is received by the device, the app's service worker is started and handles the message, and a [notification](/en-US/docs/Web/API/Notifications_API) is shown to the user (the specification allows for "silent push" in which no notification is shown, but no browsers support this).
+The [Push API](/en-US/docs/Web/API/Push_API) enables a PWA to receive messages pushed from the server, whether the app is running or not. When the message is received by the device, the app's service worker is started and handles the message, and a [notification](/en-US/docs/Web/API/Notifications_API) is shown to the user. The specification allows for "silent push" in which no notification is shown, but no browsers support this, because of privacy concerns (for example, that push could then be used to track a user's location).
 
 Displaying a notification to the user distracts them from whatever they were doing and has the potential to be very annoying, so use push messages with care. In general, they are suitable for situations in which you need to alert the user about something, and can't wait until the next time they open your app.
 
@@ -443,4 +443,5 @@ In this section we'll outline these steps. Several of these APIs require explici
 - [Introducing Background Sync](https://developer.chrome.com/blog/background-sync/) on web.dev (September 22, 2017)
 - [Introducing Background Fetch](https://developer.chrome.com/blog/background-fetch/) on web.dev (July 28, 2022)
 - [The Periodic Background Sync API](https://developer.chrome.com/articles/periodic-background-sync/) on web.dev (August 18, 2020)
+- [Notifications](https://web.dev/notifications/) on web.dev
 - [PWA with offline streaming](https://web.dev/pwa-with-offline-streaming/) on web.dev (July 5, 2021)
