@@ -18,46 +18,24 @@ See also {{jsxref("Array.prototype.reduce()")}} for left-to-right.
 ## Syntax
 
 ```js-nolint
-// Arrow function
-reduceRight((accumulator, currentValue) => { /* … */ })
-reduceRight((accumulator, currentValue, index) => { /* … */ })
-reduceRight((accumulator, currentValue, index, array) => { /* … */ })
-reduceRight((accumulator, currentValue, index, array) => { /* … */ }, initialValue)
-
-// Callback function
 reduceRight(callbackFn)
 reduceRight(callbackFn, initialValue)
-
-// Callback reducer function
-reduceRight(function (accumulator, currentValue) { /* … */ })
-reduceRight(function (accumulator, currentValue, index) { /* … */ })
-reduceRight(function (accumulator, currentValue, index, array) { /* … */ })
-reduceRight(function (accumulator, currentValue, index, array) { /* … */ }, initialValue)
 ```
 
 ### Parameters
 
 - `callbackFn`
-
-  - : A function to execute for each element in the array. Its return value becomes the value of the `accumulator` parameter on the next invocation of `callbackFn`. For the last invocation, the return value becomes the return value of `reduce()`.
-
-    The function is called with the following arguments:
-
+  - : A function to execute for each element in the array. Its return value becomes the value of the `accumulator` parameter on the next invocation of `callbackFn`. For the last invocation, the return value becomes the return value of `reduceRight()`. The function is called with the following arguments:
     - `accumulator`
-      - : The value previously returned in the last invocation of the callback, or
-        `initialValue`, if supplied. (See below.)
+      - : The value previously returned in the last invocation of the callback, or `initialValue`, if supplied. (See below.)
     - `currentValue`
       - : The current element being processed in the array.
     - `index`
       - : The index of the current element being processed in the array.
     - `array`
       - : The array `reduceRight()` was called upon.
-
 - `initialValue` {{optional_inline}}
-  - : Value to use as accumulator to the first call of the
-    `callbackFn`. If no initial value is supplied, the last element in
-    the array will be used and skipped. Calling reduce or reduceRight on an empty array
-    without an initial value creates a `TypeError`.
+  - : Value to use as accumulator to the first call of the `callbackFn`. If no initial value is supplied, the last element in the array will be used and skipped. Calling `reduceRight()` on an empty array without an initial value creates a `TypeError`.
 
 ### Return value
 

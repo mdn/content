@@ -17,42 +17,22 @@ See also the {{jsxref("TypedArray.findLastIndex()", "findLastIndex()")}} method,
 ## Syntax
 
 ```js-nolint
-// Arrow function
-findLast((element) => { /* ... */ } )
-findLast((element, index) => { /* ... */ } )
-findLast((element, index, array) => { /* ... */ } )
-
-// Callback function
 findLast(callbackFn)
 findLast(callbackFn, thisArg)
-
-// Inline callback function
-findLast(function(element) { /* ... */ })
-findLast(function(element, index) { /* ... */ })
-findLast(function(element, index, array){ /* ... */ })
-findLast(function(element, index, array) { /* ... */ }, thisArg)
 ```
 
 ### Parameters
 
 - `callbackFn`
-
-  - : A function used to test elements in the typed array.
-
-    The function is called with the following arguments:
-
+  - : A function to execute for each element in the typed array. It should return a [truthy](/en-US/docs/Glossary/Truthy) value to indicate a matching element has been found, and a [falsy](/en-US/docs/Glossary/Falsy) value otherwise. The function is called with the following arguments:
     - `element`
-      - : The current element in the typed array.
+      - : The current element being processed in the typed array.
     - `index`
-      - : The index (position) of the current element in the typed array.
+      - : The index of the current element being processed in the typed array.
     - `array`
-      - : The typed array that `findLast()` was called on.
-
-    The callback must return a [truthy](/en-US/docs/Glossary/Truthy) value to indicate an appropriate element has been found.
-    The value of this element is returned by `findLast()`.
-
+      - : The typed array `findLast()` was called upon.
 - `thisArg` {{optional_inline}}
-  - : Object to use as {{jsxref("Operators/this", "this")}} when executing `callbackFn`.
+  - : A value to use as `this` when executing `callbackFn`. See [iterative methods](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#iterative_methods).
 
 ### Return value
 
