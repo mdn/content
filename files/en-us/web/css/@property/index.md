@@ -63,6 +63,42 @@ window.CSS.registerProperty({
 });
 ```
 
+Using [CSS](/en-US/docs/Web/CSS) {{cssxref('@property')}} [at-rule](/en-US/docs/Web/CSS/At-rule):
+
+```css
+@property --colorPrimary {
+  syntax: '<color>';
+  initial-value: magenta;
+  inherits: false;
+}
+h1 {
+   color: var(--colorPrimary); /* font color is magenta */
+}
+h2 {
+  --colorPrimary: yellow;
+   color: var(--colorPrimary); /* font color is  yellow */
+}
+h3 {
+   color: var(--colorPrimary); /* font color is magenta */
+}
+
+h4 {
+  --colorPrimary: 291;
+   color: var(--colorPrimary); /* falls back to  font color:magenta as colorPrimary value of 291 is invalid */
+}
+```
+
+Using [HTML]
+
+```html
+
+<h1>Heading 1</h1>
+<h2>Heading 2</h2>
+<h3>Heading 3</h3>
+<h3>Heading 4</h3>
+
+```
+
 ## Formal syntax
 
 {{csssyntax}}
