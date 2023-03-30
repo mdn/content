@@ -370,6 +370,8 @@ The [Push API](/en-US/docs/Web/API/Push_API) enables a PWA to receive messages p
 
 Displaying a notification to the user distracts them from whatever they were doing and has the potential to be very annoying, so use push messages with care. In general, they are suitable for situations in which you need to alert the user about something, and can't wait until the next time they open your app.
 
+A common use case for push notifications is chat apps: when the user receives a message from one of their contacts, it is delivered as a push message and the app shows a notification.
+
 Push messages are not sent directly from the app server to the device. Instead, your app server sends messages to a push service, from which the device can retrieve them and deliver them to the app.
 
 This also means that messages from your server to the push service need to be {{Glossary("Encryption", "encrypted")}} (so the push service can't read them) and {{Glossary("Signature/Security", "signed")}} (so the push service knows that the messages are really from your server, and not from someone impersonating your server).
