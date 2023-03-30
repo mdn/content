@@ -16,37 +16,20 @@ every element in the calling array.
 ## Syntax
 
 ```js-nolint
-// Arrow function
-map((element) => { /* … */ })
-map((element, index) => { /* … */ })
-map((element, index, array) => { /* … */ })
-
-// Callback function
 map(callbackFn)
 map(callbackFn, thisArg)
-
-// Inline callback function
-map(function (element) { /* … */ })
-map(function (element, index) { /* … */ })
-map(function (element, index, array) { /* … */ })
-map(function (element, index, array) { /* … */ }, thisArg)
 ```
 
 ### Parameters
 
 - `callbackFn`
-
-  - : A function to execute for each element in the array. Its return value is added as a single element in the new array.
-
-    The function is called with the following arguments:
-
+  - : A function to execute for each element in the array. Its return value is added as a single element in the new array. The function is called with the following arguments:
     - `element`
       - : The current element being processed in the array.
     - `index`
       - : The index of the current element being processed in the array.
     - `array`
       - : The array `map()` was called upon.
-
 - `thisArg` {{optional_inline}}
   - : A value to use as `this` when executing `callbackFn`. See [iterative methods](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#iterative_methods).
 
