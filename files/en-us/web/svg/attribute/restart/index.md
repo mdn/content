@@ -12,7 +12,6 @@ The **`restart`** attribute specifies whether or not an animation can restart.
 You can use this attribute with the following SVG elements:
 
 - {{SVGElement("animate")}}
-- {{SVGElement("animateColor")}}
 - {{SVGElement("animateMotion")}}
 - {{SVGElement("animateTransform")}}
 - {{SVGElement("set")}}
@@ -95,7 +94,7 @@ document.getElementById("restart").addEventListener("click", (evt) => {
 - `whenNotActive`
   - : This value indicates that the animation can only be restarted when it is not active (i.e. after the active end). Attempts to restart the animation during its active duration are ignored.
 - `never`
-  - : This value indicates that the animation cannot be restarted for the time the document is loaded.
+  - : This value indicates that the animation cannot be restarted.
 
 ## Specifications
 

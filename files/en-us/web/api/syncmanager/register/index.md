@@ -9,57 +9,42 @@ browser-compat: api.SyncManager.register
 
 {{APIRef("Service Workers API")}}{{SeeCompatTable}}
 
-The **`SyncManager.register`** method of the
-{{domxref("SyncManager")}} interface returns a {{jsxref("Promise")}} that resolves to a
-{{domxref("SyncRegistration")}} instance.
+The **`SyncManager.register`** method of the {{domxref("SyncManager")}} interface registers a synchronization event, triggering a {{domxref("ServiceWorkerGlobalScope.sync_event", "sync")}} event inside the associated service worker as soon as network connectivity is available.
 
 ## Syntax
 
 ```js-nolint
-register()
-register(options)
+register(tag)
 ```
 
 ### Parameters
 
-- `options` {{optional_inline}}
+- `tag`
 
-  - : An object that sets options for an instance of {{domxref("SyncRegistration")}}. The
-    available options are:
-
-    - `allowOnBattery`
-      - : A boolean that determines whether synchronization
-        is allowed when the user agent is on a battery-powered device. The default
-        is `true`.
-    - `id`
-      - : The unique identifier of the specified
-        {{domxref("SyncRegistration")}} object.
-    - `idleRequired`
-      - : A boolean that determines whether synchronization is
-        allowed when the user agent's device is idle. The default is `false`.
-    - `maxDelay`
-      - : The maximum delay in milliseconds before the next
-        `sync` event (or the first `sync` event if it is periodic).
-        The default is `0`, meaning there is no maximum delay.
-    - `minDelay`
-      - : The minimum delay in milliseconds before the
-        next `sync` event (or the first sync event if it is periodic). The
-        default is `0`.
-    - `minPeriod`
-      - : The minimum time
-        in milliseconds between periodic sync events. The default is `0`,
-        meaning events are not periodic.
-    - `minRequiredNetwork`
-      - : The network condition under which background
-        synchronization will occur. Valid values are `'network-any'`,
-        `'network-offline'`, `'network-online'`,
-        `'network-non-mobile'`. The default value is
-        `'network-online'`.
+  - : An identifier for this synchronization event. This will be the value of the `tag` property of the {{domxref("SyncEvent")}} that gets passed into the service worker's {{domxref("ServiceWorkerGlobalScope.sync_event", "sync")}} event handler.
 
 ### Return value
 
-A {{jsxref("Promise")}} that resolves to an instance of
-{{domxref("SyncRegistration")}}.
+A {{jsxref("Promise")}} that resolves to {{jsxref("undefined")}}.
+
+### Examples
+
+The following asynchronous function registers a background sync from a browsing context:
+
+```js
+async function syncMessagesLater() {
+  const registration = await navigator.serviceWorker.ready;
+  try {
+    await registration.sync.register("sync-messages");
+  } catch {
+    console.log("Background Sync could not be registered!");
+  }
+}
+```
+
+## Specifications
+
+{{Specifications}}
 
 ## Browser compatibility
 

@@ -146,7 +146,7 @@ app.get(/.*fish$/, function (req, res) {
 
 ### Route parameters
 
-Route parameters are _named URL segments_ used to capture values at specific positions in the URL. The named segments are prefixed with a colon and then the name (e.g. `/:your_parameter_name/`. The captured values are stored in the `req.params` object using the parameter names as keys (e.g. `req.params.your_parameter_name`).
+Route parameters are _named URL segments_ used to capture values at specific positions in the URL. The named segments are prefixed with a colon and then the name (E.g., `/:your_parameter_name/`). The captured values are stored in the `req.params` object using the parameter names as keys (E.g., `req.params.your_parameter_name`).
 
 So for example, consider a URL encoded to contain information about users and books: `http://localhost:3000/users/34/books/8989`. We can extract this information as shown below, with the `userId` and `bookId` path parameters:
 

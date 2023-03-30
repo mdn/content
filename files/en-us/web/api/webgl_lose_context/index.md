@@ -25,14 +25,14 @@ WebGL extensions are available using the {{domxref("WebGLRenderingContext.getExt
 With this extension, you can simulate the [`webglcontextlost`](/en-US/docs/Web/API/HTMLCanvasElement/webglcontextlost_event) and [`webglcontextrestored`](/en-US/docs/Web/API/HTMLCanvasElement/webglcontextrestored_event) events:
 
 ```js
-const canvas = document.getElementById('canvas');
-const gl = canvas.getContext('webgl');
+const canvas = document.getElementById("canvas");
+const gl = canvas.getContext("webgl");
 
-canvas.addEventListener('webglcontextlost', (event) => {
+canvas.addEventListener("webglcontextlost", (event) => {
   console.log(event);
 });
 
-gl.getExtension('WEBGL_lose_context').loseContext();
+gl.getExtension("WEBGL_lose_context").loseContext();
 
 // WebGLContextEvent event with type "webglcontextlost" is logged.
 ```

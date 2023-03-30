@@ -5,7 +5,7 @@ page-type: web-api-instance-method
 browser-compat: api.AnimationEffect.updateTiming
 ---
 
-{{ APIRef("Web Animations API") }}
+{{ APIRef("Web Animations") }}
 
 The `updateTiming()` method of the {{domxref("AnimationEffect")}} interface updates the specified timing properties for an animation effect.
 

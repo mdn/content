@@ -31,11 +31,11 @@ This example shows how **`released`**'s value changes within a
 {{domxref("WakeLockSentinel")}}'s life cycle.
 
 ```js
-const sentinel = await navigator.wakeLock.request('screen');
-console.log(sentinel.released);  // Logs "false"
+const sentinel = await navigator.wakeLock.request("screen");
+console.log(sentinel.released); // Logs "false"
 
 sentinel.onrelease = () => {
-  console.log(sentinel.released);  // Logs "true"
+  console.log(sentinel.released); // Logs "true"
 };
 
 await sentinel.release();

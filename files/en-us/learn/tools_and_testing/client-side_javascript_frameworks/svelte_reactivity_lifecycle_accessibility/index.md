@@ -714,7 +714,7 @@ That's not what we want — we want the _Edit_ button to receive focus only when
 
 6. Go back and try your app again. At this point, every time the _Edit_ button is added to the DOM, the `focusEditButton` action is executed, but it will only give focus to the button if the `editButtonPressed` flag is `true`.
 
-> **Note:** We have barely scratched the surface of actions here. Actions can also have reactive parameters, and Svelte lets us detect when any of those parameters change. So we can add functionality that integrates nicely with the Svelte reactive system. Have a look at the relevant Svelte School article for a more [detailed introduction to actions](https://svelte.school/tutorials/introduction-to-actions). Actions are also very useful for seamlessly [integrating with third-party libraries](https://svelte.school/tutorials/external-libraries-in-svelte-and-sapper-using-actions).
+> **Note:** We have barely scratched the surface of actions here. Actions can also have reactive parameters, and Svelte lets us detect when any of those parameters change. So we can add functionality that integrates nicely with the Svelte reactive system. For a more detailed introduction to actions, consider checking out the [Svelte Interactive tutorial](https://svelte.dev/tutorial/actions) or the [Svelte documentation](https://svelte.dev/docs#template-syntax-element-directives-use-action).
 
 ## Component binding: exposing component methods and variables using the `bind:this={component}` directive
 

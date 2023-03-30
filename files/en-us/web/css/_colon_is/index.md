@@ -189,6 +189,14 @@ some-element:is(::before, ::after) {
 }
 ```
 
+or this:
+
+```css example-bad
+:is(some-element::before, some-element::after) {
+  display: block;
+}
+```
+
 instead do:
 
 ```css example-good

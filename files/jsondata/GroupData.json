@@ -282,9 +282,15 @@
         "CSSImportRule",
         "CSSKeyframeRule",
         "CSSKeyframesRule",
+        "CSSImportRule",
+        "CSSLayerBlockRule",
+        "CSSLayerStatementRule",
         "CSSMediaRule",
         "CSSNamespaceRule",
         "CSSPageRule",
+        "CSSFontFeatureValuesRule",
+        "CSSFontPaletteValuesRule",
+        "CSSPropertyRule",
         "CSSRule",
         "CSSRuleList",
         "CSSStyleDeclaration",
@@ -409,6 +415,7 @@
     "Encrypted Media Extensions": {
       "overview": ["Encrypted Media Extensions API"],
       "interfaces": [
+        "MediaEncryptedEvent",
         "MediaKeyMessageEvent",
         "MediaKeys",
         "MediaKeySession",
@@ -426,6 +433,13 @@
       "overview": ["EyeDropper API"],
       "interfaces": ["EyeDropper"],
       "methods": [],
+      "properties": [],
+      "events": []
+    },
+    "FedCM API": {
+      "overview": ["FedCM API"],
+      "interfaces": ["IdentityCredential"],
+      "methods": ["CredentialsContainer.get()"],
       "properties": [],
       "events": []
     },
@@ -546,10 +560,10 @@
     "History API": {
       "overview": ["History API"],
       "guides": ["/docs/Web/API/History_API/Working_with_the_History_API"],
-      "interfaces": ["History"],
+      "interfaces": ["History", "PopStateEvent"],
       "methods": [],
       "properties": [],
-      "events": []
+      "events": ["Window: popstate"]
     },
     "HTML DOM": {
       "overview": ["HTML DOM API"],
@@ -636,12 +650,12 @@
         "PageTransitionEvent",
         "Plugin",
         "PluginArray",
-        "PopStateEvent",
         "PromiseRejectionEvent",
         "RadioNodeList",
         "UserActivation",
         "ValidityState",
-        "Window"
+        "Window",
+        "WorkletGlobalScope"
       ],
       "methods": [],
       "properties": [],
@@ -696,7 +710,6 @@
         "Window: online",
         "Window: pagehide",
         "Window: pageshow",
-        "Window: popstate",
         "Window: rejectionhandled",
         "Window: storage",
         "Window: unload",
@@ -802,13 +815,6 @@
       "interfaces": ["LaunchParams", "LaunchQueue"],
       "methods": [],
       "properties": ["Window.launchQueue"],
-      "events": []
-    },
-    "Layout Instability API": {
-      "overview": ["Layout Instability API"],
-      "interfaces: ": ["LayoutShift", "LayoutShiftAttribution"],
-      "methods": [],
-      "properties": [],
       "events": []
     },
     "Local Font Access API": {
@@ -985,6 +991,8 @@
       "interfaces": [
         "EventCounts",
         "LargestContentfulPaint",
+        "LayoutShift",
+        "LayoutShiftAttribution",
         "Performance",
         "PerformanceEntry",
         "PerformanceElementTiming",
@@ -1252,6 +1260,9 @@
     },
     "Storage": {
       "overview": ["Storage API"],
+      "guides": [
+        "/docs/Web/API/Storage_API/Storage_quotas_and_eviction_criteria"
+      ],
       "interfaces": ["StorageManager"],
       "methods": [],
       "properties": ["Navigator.storage", "WorkerNavigator.storage"],
@@ -1903,6 +1914,7 @@
       "guides": [
         "/docs/Web/API/WebRTC_API/Protocols",
         "/docs/Web/API/WebRTC_API/Connectivity",
+        "/docs/Web/API/WebRTC_API/Perfect_negotiation",
         "/docs/Web/API/WebRTC_API/Session_lifetime",
         "/docs/Web/API/WebRTC_API/Signaling_and_video_calling",
         "/docs/Web/API/WebRTC_API/Using_data_channels",
@@ -2251,6 +2263,9 @@
       "methods": [],
       "properties": [],
       "events": []
+    },
+    "XSLT": {
+      "interfaces": ["XSLTProcessor"]
     }
   }
 ]

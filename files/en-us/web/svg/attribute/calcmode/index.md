@@ -14,7 +14,6 @@ The default mode is `linear`, however if the attribute does not support linear i
 You can use this attribute with the following SVG elements:
 
 - {{SVGElement("animate")}}
-- {{SVGElement("animateColor")}}
 - {{SVGElement("animateMotion")}}
 - {{SVGElement("animateTransform")}}
 

@@ -7,7 +7,7 @@ browser-compat: html.elements.th
 
 {{HTMLSidebar}}
 
-The **`<th>`** [HTML](/en-US/docs/Web/HTML) element defines a cell as header of a group of table cells. The exact nature of this group is defined by the {{htmlattrxref("scope", "th")}} and {{htmlattrxref("headers", "th")}} attributes.
+The **`<th>`** [HTML](/en-US/docs/Web/HTML) element defines a cell as the header of a group of table cells. The exact nature of this group is defined by the [`scope`](#scope) and [`headers`](#headers) attributes.
 
 {{EmbedInteractiveExample("pages/tabbed/th.html","tabbed-taller")}}
 
@@ -44,20 +44,20 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
     - `center`: The content is centered in the cell.
     - `right`: The content is aligned to the right of the cell.
     - `justify` (with text only): The content is stretched out inside the cell so that it covers its entire width.
-    - `char` (with text only): The content is aligned to a character inside the `<th>` element with minimal offset. This character is defined by the {{htmlattrxref("char", "th")}} and {{htmlattrxref("charoff", "th")}} attributes.
+    - `char` (with text only): The content is aligned to a character inside the `<th>` element with minimal offset. This character is defined by the [`char`](#char) and [`charoff`](#charoff) attributes.
 
     The default value when this attribute is not specified is `left`.
 
     > **Note:** Do not use this attribute as it is obsolete in the latest standard.
     >
     > - To achieve the same effect as the `left`, `center`, `right` or `justify` values, apply the CSS {{cssxref("text-align")}} property to the element.
-    > - To achieve the same effect as the `char` value, give the {{cssxref("text-align")}} property the same value you would use for the {{htmlattrxref("char", "th")}}.
+    > - To achieve the same effect as the `char` value, give the {{cssxref("text-align")}} property the same value you would use for the [`char`](#char).
 
 - `axis` {{deprecated_inline}}
 
   - : This attribute contains a list of space-separated strings. Each string is the `id` of a group of cells that this header applies to.
 
-    > **Note:** Do not use this attribute as it is obsolete in the latest standard: use the {{htmlattrxref("scope", "th")}} attribute instead.
+    > **Note:** Do not use this attribute as it is obsolete in the latest standard: use the [`scope`](#scope) attribute instead.
 
 - `bgcolor` {{Deprecated_Inline}}
 
@@ -65,7 +65,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
 - `char` {{deprecated_inline}}
 
-  - : The content in the cell element is aligned to a character. Typical values include a period (.) to align numbers or monetary values. If {{htmlattrxref("align", "th")}} is not set to `char`, this attribute is ignored.
+  - : The content in the cell element is aligned to a character. Typical values include a period (.) to align numbers or monetary values. If [`align`](#align) is not set to `char`, this attribute is ignored.
 
     > **Note:** Do not use this attribute as it is obsolete in the latest standard. To achieve the same effect, you can specify the character as the first value of the {{cssxref("text-align")}} property.
 

@@ -38,7 +38,7 @@ For tasks that don't occur within the top-level page and for figuring out which 
 
 ## Instance properties
 
-This interface extends the following {{domxref("PerformanceEntry")}} properties for event timing performance entry types by qualifying them as follows:
+This interface extends the following {{domxref("PerformanceEntry")}} properties for long task timing performance entry types by qualifying them as follows:
 
 - {{domxref("PerformanceEntry.duration")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns a {{domxref("DOMHighResTimeStamp")}} representing the elapsed time between the start and end of the task, with a 1ms granularity.

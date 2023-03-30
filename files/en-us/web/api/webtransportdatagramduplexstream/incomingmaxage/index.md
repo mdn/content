@@ -20,7 +20,7 @@ A number, or `null` if no maximum age has been set.
 ## Examples
 
 ```js
-const url = 'https://example.com:4999/wt';
+const url = "https://example.com:4999/wt";
 
 async function initTransport(url) {
   // Initialize transport connection

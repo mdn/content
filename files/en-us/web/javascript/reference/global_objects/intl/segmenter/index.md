@@ -21,6 +21,15 @@ The **`Intl.Segmenter`** object enables locale-sensitive text segmentation, enab
 - [`Intl.Segmenter.supportedLocalesOf()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/supportedLocalesOf)
   - : Returns an array containing those of the provided locales that are supported without having to fall back to the runtime's default locale.
 
+## Instance properties
+
+These properties are defined on `Intl.Segmenter.prototype` and shared by all `Intl.Segmenter` instances.
+
+- {{jsxref("Object/constructor", "Intl.Segmenter.prototype.constructor")}}
+  - : The constructor function that created the instance object. For `Intl.Segmenter` instances, the initial value is the {{jsxref("Intl/Segmenter/Segmenter", "Intl.Segmenter")}} constructor.
+- `Intl.Segmenter.prototype[@@toStringTag]`
+  - : The initial value of the [`@@toStringTag`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) property is the string `"Intl.Segmenter"`. This property is used in {{jsxref("Object.prototype.toString()")}}.
+
 ## Instance methods
 
 - [`Intl.Segmenter.prototype.resolvedOptions()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/resolvedOptions)

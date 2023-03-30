@@ -25,7 +25,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
     - `center`, centering the content in the cell
     - `right`, aligning the content to the right of the cell
     - `justify`, inserting spaces into the textual content so that the content is justified in the cell
-    - `char`, aligning the textual content on a special character with a minimal offset, defined by the {{htmlattrxref("char", "thead")}} and {{htmlattrxref("charoff", "thead")}} attributes.
+    - `char`, aligning the textual content on a special character with a minimal offset, defined by the [`char`](#char) and [`charoff`](#charoff) attributes.
 
     If this attribute is not set, the `left` value is assumed.
 
@@ -41,7 +41,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
 - `char` {{deprecated_inline}}
 
-  - : This attribute is used to set the character to align the cells in a column on. Typical values for this include a period (.) when attempting to align numbers or monetary values. If {{htmlattrxref("align", "thead")}} is not set to `char`, this attribute is ignored.
+  - : This attribute is used to set the character to align the cells in a column on. Typical values for this include a period (.) when attempting to align numbers or monetary values. If [`align`](#align) is not set to `char`, this attribute is ignored.
 
     > **Note:** Do not use this attribute as it is obsolete (and not supported) in the latest standard.
 

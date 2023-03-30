@@ -81,7 +81,7 @@ HTTP Referrers
 1. This policy does not currently restrict third-party storage access for resources that are not classified as tracking resources. We may choose to apply additional restrictions to third-party storage access in the future.
 2. The restrictions applied by the policy will not prevent third-party scripts classified as tracking resources from accessing storage in the main context of the page. These scripts can continue to use storage scoped to the top-level origin.
 3. Origins classified as trackers will have access to their own storage when they are loaded in a first-party context.
-4. Cross-origin resources loaded from the same eTLD+1 as the top-level context will still have access to their storage.
+4. Cross-origin resources loaded from the same {{Glossary("eTLD", "eTLD+1")}} as the top-level context will still have access to their storage.
 5. Origins normally classified as trackers will [not be blocked if the top-level page origin is determined to be from the same organization as them](https://github.com/mozilla-services/shavar-prod-lists#entity-list).
 
 ## Storage access grants

@@ -73,6 +73,8 @@ div {
 }
 ```
 
+#### Result
+
 {{EmbedLiveSample("Setting_block_start_offset", 140, 140)}}
 
 ## Specifications

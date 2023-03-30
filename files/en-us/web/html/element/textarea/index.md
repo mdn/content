@@ -31,7 +31,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
     - `off`: The user must explicitly enter a value into this field for every use, or the document provides its own auto-completion method; the browser does not automatically complete the entry.
     - `on`: The browser can automatically complete the value based on values that the user has entered during previous uses.
 
-    If the `autocomplete` attribute is not specified on a `<textarea>` element, then the browser uses the `autocomplete` attribute value of the `<textarea>` element's form owner. The form owner is either the {{HTMLElement("form")}} element that this `<textarea>` element is a descendant of or the form element whose `id` is specified by the `form` attribute of the input element. For more information, see the {{htmlattrxref("autocomplete", "form")}} attribute in {{HTMLElement("form")}}.
+    If the `autocomplete` attribute is not specified on a `<textarea>` element, then the browser uses the `autocomplete` attribute value of the `<textarea>` element's form owner. The form owner is either the {{HTMLElement("form")}} element that this `<textarea>` element is a descendant of or the form element whose `id` is specified by the `form` attribute of the input element. For more information, see the [`autocomplete`](/en-US/docs/Web/HTML/Element/form#autocomplete) attribute in {{HTMLElement("form")}}.
 
 - `autocorrect` {{non-standard_inline}}
 
@@ -80,7 +80,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
   - : Indicates how the control should wrap the value for form submission. Possible values are:
 
-    - `hard`: The browser automatically inserts line breaks (CR+LF) so that each line is no longer than the width of the control; the [`cols`](#attr-cols) attribute must be specified for this to take effect
+    - `hard`: The browser automatically inserts line breaks (CR+LF) so that each line is no longer than the width of the control; the [`cols`](#cols) attribute must be specified for this to take effect
     - `soft`: The browser ensures that all line breaks in the entered value are a `CR+LF` pair, but no additional line breaks are added to the value.
     - `off` {{non-standard_inline}}: Like `soft` but changes appearance to `white-space: pre` so line segments exceeding `cols` are not wrapped and the `<textarea>` becomes horizontally scrollable.
 

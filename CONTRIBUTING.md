@@ -220,7 +220,7 @@ There are a few things to keep in mind:
 - Documents must be written in Markdown.
 - A document is represented by an `index.md` file.
 - If you're creating a new CSS document for a property called `foo`, create a new folder `files/en-us/web/css/foo/` and put the Markdown file in this folder (`files/en-us/web/css/foo/index.md`).
-- A document's `index.md` file must start with front-matter that defines the `title`, `slug`, and optional [`tags`][].
+- A document's `index.md` file must start with front-matter that defines the `title`, `slug`, and, most of the time, `page-type`.
   You might find it helpful to refer to the front-matter within a similar document's `index.md`.
 
 ### Moving documents
@@ -400,7 +400,6 @@ There are some important rules of etiquette to remember that will help during th
 When contributing to the content you agree to license your contributions
 according to [our license](LICENSE.md).
 
-[`tags`]: https://developer.mozilla.org/en-US/docs/MDN/Writing_guidelines/Howto/Tag
 [contribute page]: https://developer.mozilla.org/en-US/docs/MDN/Contribute
 [getting started with mdn web docs]: https://developer.mozilla.org/en-US/docs/MDN/Community/Contributing/Getting_started
 [getting ready to contribute]: https://developer.mozilla.org/en-US/docs/MDN/Community/Contributing/Getting_started#getting_ready_to_contribute
