@@ -74,6 +74,8 @@ If the selected locale identifier had a Unicode extension sequence, that extensi
   - : Constructor for objects that enable language-sensitive date and time formatting.
 - {{jsxref("Global_Objects/Intl/DisplayNames/DisplayNames", "Intl.DisplayNames()")}}
   - : Constructor for objects that enable the consistent translation of language, region and script display names.
+- {{jsxref("Global_Objects/Intl/DurationFormat/DurationFormat", "Intl.DurationFormat()")}}
+  - : Constructor for objects that enable locale-sensitive duration formatting.
 - {{jsxref("Global_Objects/Intl/ListFormat/ListFormat", "Intl.ListFormat()")}}
   - : Constructor for objects that enable language-sensitive list formatting.
 - {{jsxref("Global_Objects/Intl/Locale/Locale", "Intl.Locale()")}}
@@ -132,11 +134,13 @@ log("de-DE"); // 24.5.2012 26.254,39
 
   - {{jsxref("Intl/Collator", "Intl.Collator()")}}
   - {{jsxref("Intl/DateTimeFormat", "Intl.DateTimeFormat()")}}
+  - {{jsxref("Intl/DisplayNames", "Intl.DisplayNames()")}}
+  - {{jsxref("Intl/DurationFormat", "Intl.DurationFormat()")}}
   - {{jsxref("Intl/ListFormat", "Intl.ListFormat()")}}
+  - {{jsxref("Intl/Locale", "Intl.Locale()")}}
   - {{jsxref("Intl/NumberFormat", "Intl.NumberFormat()")}}
   - {{jsxref("Intl/PluralRules", "Intl.PluralRules()")}}
   - {{jsxref("Intl/RelativeTimeFormat", "Intl.RelativeTimeFormat()")}}
-  - {{jsxref("Intl/Locale", "Intl.Locale()")}}
   - {{jsxref("Intl/Segmenter", "Intl.Segmenter()")}}
 
 - Methods
