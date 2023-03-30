@@ -7,7 +7,7 @@ browser-compat: api.VideoEncoder
 
 {{APIRef("WebCodecs API")}}
 
-The **`VideoEncoder`** interface of the {{domxref('WebCodecs API', '', '', 1)}} converts video frames (represented by {{domxref("VideoFrame")}}) into compressed data chunks (reoresented by {{domxref("EncodedVideoChunk")}}).
+The **`VideoEncoder`** interface of the {{domxref('WebCodecs API', '', '', 1)}} encodes {{domxref("VideoFrame")}} objects into {{domxref("EncodedVideoChunk")}}s.
 
 {{InheritanceDiagram}}
 
@@ -46,7 +46,7 @@ _Inherits methods from its parent, {{DOMxRef("EventTarget")}}._
 - {{domxref("VideoEncoder.flush()")}}
   - : Returns a promise that resolves once all pending encodes have been completed.
 - {{domxref("VideoEncoder.reset()")}}
-  - : Cancells all pending encodes and callbacks, frees all underlying resources. 
+  - : Cancells all pending encodes and callbacks, frees all underlying resources.
 - {{domxref("VideoEncoder.close()")}}
   - : Ends all pending work and releases system resources.
 

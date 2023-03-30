@@ -8,9 +8,9 @@ browser-compat: api.VideoEncoder.reset
 {{APIRef("WebCodecs API")}}{{SecureContext_Header}}
 
 The **`reset()`** method of the {{domxref("VideoEncoder")}} interface cancels all pending encodes and callbacks, frees all underlying resources and sets the `state` to "unconfigured".
-After calling `reset()`, `configure()` must be called before resuming `encode()` calls.
+After calling {{domxref("VideoEncoder.reset()", "reset()")}}, {{domxref("VideoEncoder.configure()", "configure()")}} must be called before resuming {{domxref("VideoEncoder.encode()", "encode()")}} calls.
 
-> **Note:** To avoid discarding frames queued via `encode()`, `flush()` should be called and completed before calling `reset()`.
+> **Note:** To avoid discarding frames queued via {{domxref("VideoEncoder.encode()", "encode()")}}, {{domxref("VideoEncoder.flush()", "flush()")}} should be called and completed before calling {{domxref("VideoEncoder.reset()", "reset()")}}.
 
 ## Syntax
 
@@ -25,6 +25,11 @@ None.
 ### Return value
 
 None ({{jsxref("undefined")}}).
+
+### Exceptions
+
+- `InvalidStateError` {{domxref("DOMException")}}
+  - : Thrown if the {{domxref("VideoEncoder.state","state")}} is "closed".
 
 ## Examples
 
