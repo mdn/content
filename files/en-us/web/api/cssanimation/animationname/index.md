@@ -5,7 +5,7 @@ page-type: web-api-instance-property
 browser-compat: api.CSSAnimation.animationName
 ---
 
-{{APIRef("Web Animations API")}}
+{{APIRef("Web Animations")}}
 
 The **`animationName`** property of the
 {{domxref("CSSAnimation")}} interface returns the {{CSSXref("animation-name")}}. This
