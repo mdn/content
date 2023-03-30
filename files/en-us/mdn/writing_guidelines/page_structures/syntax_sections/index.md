@@ -121,37 +121,24 @@ match(request, options);
 
 ##### Callback syntax blocks
 
-For methods with a callback function, the syntax for arrow functions, functions, and inline functions is shown:
+For methods accepting a callback function, show the callback as a parameter, not as an arrow function or `function` expression.
 
 ```js
-// Arrow function
-filter((currentValue) => {
-  /* … */
-});
-filter((currentValue, index) => {
-  /* … */
-});
-filter((currentValue, index, array) => {
-  /* … */
-});
-
-// Callback function
 filter(callbackFn);
 filter(callbackFn, thisArg);
+```
 
-// Inline callback function
-filter(function (currentValue) {
-  /* … */
-});
-filter(function (currentValue, index) {
-  /* … */
-});
-filter(function (currentValue, index, array) {
-  /* … */
-});
-filter(function (currentValue, index, array) {
-  /* … */
-}, thisArg);
+Then, in the "Parameters" section, list the callback function's parameters and what it's expected to return.
+
+```md
+- `callbackFn`
+  - : A function to execute for each element in the array. It should return a [truthy](/en-US/docs/Glossary/Truthy) value to keep the element in the resulting array, and a [falsy](/en-US/docs/Glossary/Falsy) value otherwise. The function is called with the following arguments:
+    - `element`
+      - : The current element being processed in the array.
+    - `index`
+      - : The index of the current element being processed in the array.
+    - `array`
+      - : The array `filter()` was called upon.
 ```
 
 ##### Syntax for arbitrary number of parameters

@@ -27,7 +27,7 @@ the `username` part. This pattern matches only if the username part of the URL
 is `admin`.
 
 ```js
-const pattern = new URLPattern({ username: 'admin' });
+const pattern = new URLPattern({ username: "admin" });
 console.log(pattern.username); // 'admin'
 ```
 

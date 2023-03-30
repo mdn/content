@@ -11,8 +11,6 @@ The **`for await...of`** statement creates a loop iterating over [async iterable
 
 {{EmbedInteractiveExample("pages/js/statement-forawaitof.html", "taller")}}
 
-> **Note:** `for await...of` doesn't work with async iterators that are not async iterables.
-
 ## Syntax
 
 ```js-nolint

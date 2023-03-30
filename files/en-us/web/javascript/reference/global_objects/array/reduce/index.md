@@ -23,37 +23,14 @@ The reducer walks through the array element-by-element, at each step adding the 
 ## Syntax
 
 ```js-nolint
-// Arrow function
-reduce((accumulator, currentValue) => { /* … */ })
-reduce((accumulator, currentValue, currentIndex) => { /* … */ })
-reduce((accumulator, currentValue, currentIndex, array) => { /* … */ })
-
-reduce((accumulator, currentValue) => { /* … */ }, initialValue)
-reduce((accumulator, currentValue, currentIndex) => { /* … */ }, initialValue)
-reduce((accumulator, currentValue, currentIndex, array) => { /* … */ }, initialValue)
-
-// Callback function
 reduce(callbackFn)
 reduce(callbackFn, initialValue)
-
-// Inline callback function
-reduce(function (accumulator, currentValue) { /* … */ })
-reduce(function (accumulator, currentValue, currentIndex) { /* … */ })
-reduce(function (accumulator, currentValue, currentIndex, array) { /* … */ })
-
-reduce(function (accumulator, currentValue) { /* … */ }, initialValue)
-reduce(function (accumulator, currentValue, currentIndex) { /* … */ }, initialValue)
-reduce(function (accumulator, currentValue, currentIndex, array) { /* … */ }, initialValue)
 ```
 
 ### Parameters
 
 - `callbackFn`
-
-  - : A function to execute for each element in the array. Its return value becomes the value of the `accumulator` parameter on the next invocation of `callbackFn`. For the last invocation, the return value becomes the return value of `reduce()`.
-
-    The function is called with the following arguments:
-
+  - : A function to execute for each element in the array. Its return value becomes the value of the `accumulator` parameter on the next invocation of `callbackFn`. For the last invocation, the return value becomes the return value of `reduce()`. The function is called with the following arguments:
     - `accumulator`
       - : The value resulting from the previous call to `callbackFn`. On first call, `initialValue` if specified, otherwise the value of `array[0]`.
     - `currentValue`
@@ -62,7 +39,6 @@ reduce(function (accumulator, currentValue, currentIndex, array) { /* … */ }, 
       - : The index position of `currentValue` in the array. On first call, `0` if `initialValue` was specified, otherwise `1`.
     - `array`
       - : The array `reduce()` was called upon.
-
 - `initialValue` {{optional_inline}}
   - : A value to which `accumulator` is initialized the first time the callback is called.
     If `initialValue` is specified, `callbackFn` starts executing with the first value in the array as `currentValue`.

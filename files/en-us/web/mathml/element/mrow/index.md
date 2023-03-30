@@ -1,11 +1,6 @@
 ---
 title: <mrow>
 slug: Web/MathML/Element/mrow
-tags:
-  - MathML
-  - MathML Reference
-  - MathML:Element
-  - MathML:General Layout Schemata
 browser-compat: mathml.elements.mrow
 ---
 

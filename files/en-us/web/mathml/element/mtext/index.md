@@ -1,11 +1,6 @@
 ---
 title: <mtext>
 slug: Web/MathML/Element/mtext
-tags:
-  - MathML
-  - MathML Reference
-  - MathML:Element
-  - MathML:Token Elements
 browser-compat: mathml.elements.mtext
 ---
 

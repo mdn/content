@@ -26,6 +26,10 @@ A string. The value depends on the subclass of the `PerformanceEntry` object as 
       <td>Always returns an empty string.</td>
     </tr>
     <tr>
+      <td>{{domxref('LayoutShift')}}</td>
+      <td>Always returns <code>"layout-shift"</code>.</td>
+    </tr>
+    <tr>
       <td>{{domxref('PerformanceElementTiming')}}</td>
       <td>One of the following strings:
         <ul>
@@ -122,8 +126,8 @@ debugMarks.forEach((entry) => {
 // PerformanceObserver version
 // Log all marks named "debug-marks" when they happen
 function perfObserver(list, observer) {
-  list.getEntriesByName("debug-mark", "mark").forEach((entry) =>  {
-     console.log(`${entry.name}'s startTime: ${entry.startTime}`);
+  list.getEntriesByName("debug-mark", "mark").forEach((entry) => {
+    console.log(`${entry.name}'s startTime: ${entry.startTime}`);
   });
 }
 const observer = new PerformanceObserver(perfObserver);

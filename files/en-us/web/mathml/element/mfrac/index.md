@@ -1,11 +1,6 @@
 ---
 title: <mfrac>
 slug: Web/MathML/Element/mfrac
-tags:
-  - MathML
-  - MathML Reference
-  - MathML:Element
-  - MathML:General Layout Schemata
 browser-compat: mathml.elements.mfrac
 ---
 

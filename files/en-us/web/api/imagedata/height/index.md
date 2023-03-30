@@ -21,7 +21,7 @@ pixels tall. Thus, the `height` property is `100`.
 
 ```js
 let imageData = new ImageData(200, 100);
-console.log(imageData.height);  // 100
+console.log(imageData.height); // 100
 ```
 
 ## Specifications

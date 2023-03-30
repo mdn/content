@@ -5,7 +5,6 @@ page-type: web-api-interface
 status:
   - deprecated
   - non-standard
-browser-compat: api.HTMLMenuItemElement
 ---
 
 {{APIRef("HTML DOM")}}{{Deprecated_Header}}{{Non-standard_Header}}
@@ -20,7 +19,7 @@ This feature is not part of any current specification. It is no longer on track 
 
 ## Browser compatibility
 
-{{Compat}}
+No longer supported in any browser. Firefox, the only browser that supported this element, removed support in 85.
 
 ## See also
 

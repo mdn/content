@@ -20,10 +20,10 @@ Start with this {{HTMLElement("canvas")}} element:
 You can get a {{domxref("TextMetrics")}} object using the following code:
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 
-let text = ctx.measureText('foo'); // TextMetrics object
+let text = ctx.measureText("foo"); // TextMetrics object
 text.width; // 16;
 ```
 

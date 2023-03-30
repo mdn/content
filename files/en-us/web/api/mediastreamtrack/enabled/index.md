@@ -58,7 +58,7 @@ pauseButton.onclick = (evt) => {
 
   pauseButton.innerHTML = newState ? "&#x25B6;&#xFE0F;" : "&#x23F8;&#xFE0F;";
   myAudioTrack.enabled = newState;
-}
+};
 ```
 
 This creates a variable, `newState`, which is the opposite of the current

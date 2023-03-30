@@ -9,8 +9,6 @@ browser-compat: api.Navigator.getAutoplayPolicy
 
 {{APIRef("HTML DOM")}}{{SeeCompatTable}}
 
-{{SeeCompatTable}}
-
 The **`getAutoplayPolicy()`** method of the _Autoplay Policy Detection API_ provides information about whether [autoplay](/en-US/docs/Web/Media/Autoplay_guide) of media elements and audio contexts is allowed, disallowed, or only allowed if the audio is muted.
 
 Applications can use this information to provide an appropriate user experience.
@@ -82,7 +80,7 @@ Once the user has interacted with the page/site, on some browsers individual ite
 ## Description
 
 "Autoplay" refers to any feature that causes content to begin to play without the user specifically requesting that playback begin.
-This includes the `autoplay` attribute in the HTML [`<video>`](/en-US/docs/Web/HTML/Element/video#attr-autoplay) and [`<audio>`](/en-US/docs/Web/HTML/Element/audio#attr-autoplay) elements, and using JavaScript code to start playback without any user interaction.
+This includes the `autoplay` attribute in the HTML [`<video>`](/en-US/docs/Web/HTML/Element/video#autoplay) and [`<audio>`](/en-US/docs/Web/HTML/Element/audio#autoplay) elements, and using JavaScript code to start playback without any user interaction.
 
 User agents commonly block autoplay, or only allow inaudible content to autoplay, because unexpected sounds when a page first loads can result in a jarring and unpleasant user experience.
 The mechanisms used to determine whether content can autoplay or not, or only play for inaudible content, differ between user agents.
@@ -194,7 +192,8 @@ const log = document.getElementById("reportResult");
 const video = document.getElementById("bunny_vid");
 
 if (!navigator.getAutoplayPolicy) {
-  log.textContent = "navigator.getAutoplayPolicy() not supported. It may or may not autoplay, depending on the browser!";
+  log.textContent =
+    "navigator.getAutoplayPolicy() not supported. It may or may not autoplay, depending on the browser!";
 } else {
   log.textContent = `Autoplay policy for media elements is ${navigator.getAutoplayPolicy(
     "mediaelement"
@@ -264,7 +263,8 @@ const log = document.getElementById("reportResult");
 const video = document.getElementById("bunny_vid");
 
 if (!navigator.getAutoplayPolicy) {
-  log.textContent = "navigator.getAutoplayPolicy() not supported. It may or may not autoplay, depending on the browser!";
+  log.textContent =
+    "navigator.getAutoplayPolicy() not supported. It may or may not autoplay, depending on the browser!";
 } else {
   // Here we pass in the HTMLVideoElement to check
   log.textContent = `navigator.getAutoplayPolicy(video) == ${navigator.getAutoplayPolicy(

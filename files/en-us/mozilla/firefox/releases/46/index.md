@@ -48,7 +48,7 @@ Highlights:
 - The experimental [ECMAScript Shared Memory API](https://web.archive.org/web/20220124015148/https://tc39.es/ecmascript_sharedmem/shmem.html) has been implemented. See the {{jsxref("SharedArrayBuffer")}} and {{jsxref("Atomics")}} objects. To use this experimental API set `javascript.options.shared_memory` to `true` in about:config.
 - Redeclaration of [`let`](/en-US/docs/Web/JavaScript/Reference/Statements/let) and [`const`](/en-US/docs/Web/JavaScript/Reference/Statements/const) variables now throws a {{jsxref("SyntaxError")}} instead of a {{jsxref("TypeError")}} as per the ECMAScript specification ([Firefox bug 1198833](https://bugzil.la/1198833)).
 - In [Strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode), setting properties on {{Glossary("primitive")}} values will now throw a {{jsxref("TypeError")}} ([Firefox bug 603201](https://bugzil.la/603201)).
-- The non-standard {{jsxref("WeakMap.prototype.clear()")}} and {{jsxref("WeakSet.prototype.clear()")}} methods have been removed ([Firefox bug 1101817](https://bugzil.la/1101817)).
+- The non-standard `WeakMap.prototype.clear()` and `WeakSet.prototype.clear()` methods have been removed ([Firefox bug 1101817](https://bugzil.la/1101817)).
 - The non-standard, static `RegExp.multiline` property is now deprecated ([Firefox bug 1220457](https://bugzil.la/1220457)).
 - Built-in accessor function names now have a "get" or "set" prefix ([Firefox bug 1180290](https://bugzil.la/1180290), [Firefox bug 1235656](https://bugzil.la/1235656)).
 - {{jsxref("Operators/Array_comprehensions", "JS1.7/JS1.8 (legacy) array comprehensions", "#Differences_to_the_older_JS1.7JS1.8_comprehensions", 1)}} and {{jsxref("Operators/Generator_comprehensions", "JS1.7/JS1.8 (legacy) generator comprehensions", "#Differences_to_the_older_JS1.7JS1.8_comprehensions", 1)}} have been removed ([Firefox bug 1220564](https://bugzil.la/1220564)).
@@ -59,7 +59,7 @@ Highlights:
 
 - The deprecated {{domxref("Window.showModalDialog()")}} method is no more available when Firefox runs in multi-process mode (e10s) ([Firefox bug 1234700](https://bugzil.la/1234700)).
 - Added support for {{domxref("Document.elementsFromPoint()")}} ([Firefox bug 1164427](https://bugzil.la/1164427)).
-- When a non-existent option of a {{HTMLElement("select")}} element is programmatically selected, instead of being incorrectly left unchanged, the {{htmlattrxref("selectedIndex", "select")}} value is now set to `-1`, the {{htmlattrxref("selectedOptions", "select")}} to an empty {{domxref("HTMLCollection")}}, and {{htmlattrxref("value", "select")}} to an empty string ([Firefox bug 1203668](https://bugzil.la/1203668)).
+- When a non-existent option of a {{HTMLElement("select")}} element is programmatically selected, instead of being incorrectly left unchanged, the [`selectedIndex`](/en-US/docs/Web/HTML/Element/select#selectedIndex) value is now set to `-1`, the [`selectedOptions`](/en-US/docs/Web/HTML/Element/select#selectedOptions) to an empty {{domxref("HTMLCollection")}}, and [`value`](/en-US/docs/Web/HTML/Element/select#value) to an empty string ([Firefox bug 1203668](https://bugzil.la/1203668)).
 
 #### Canvas
 

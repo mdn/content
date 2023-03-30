@@ -27,7 +27,7 @@ attribute.
 ## Examples
 
 ```js
-const obj = document.createElement('video');
+const obj = document.createElement("video");
 console.log(obj.src); // ""
 ```
 
@@ -41,4 +41,4 @@ console.log(obj.src); // ""
 
 ## See also
 
-- The interface defining it, {{domxref("HTMLMediaElement")}}.
+- {{domxref("HTMLMediaElement")}}: Interface used to define the `HTMLMediaElement.src` property

@@ -18,7 +18,7 @@ In HTML, apart from the default behavior for images, links, and selections, no o
 
 To make other HTML elements draggable, three things must be done:
 
-1. Set the {{htmlattrxref("draggable")}} attribute to `"true"` on the element that you wish to make draggable.
+1. Set the [`draggable`](/en-US/docs/Web/HTML/Global_attributes#draggable) attribute to `"true"` on the element that you wish to make draggable.
 2. Add a listener for the {{domxref("HTMLElement/dragstart_event", "dragstart")}} event.
 3. [Set the drag data](/en-US/docs/Web/API/DataTransfer/setData) in the above listener.
 
@@ -36,9 +36,9 @@ draggableElement.addEventListener("dragstart", (event) =>
 );
 ```
 
-The `{{htmlattrxref("draggable")}}` attribute is set to `"true"`, so this element becomes draggable. If this attribute were omitted or set to `"false"`, the element would not be dragged, and instead the text would be selected.
+The `[`draggable`](/en-US/docs/Web/HTML/Global_attributes#draggable)` attribute is set to `"true"`, so this element becomes draggable. If this attribute were omitted or set to `"false"`, the element would not be dragged, and instead the text would be selected.
 
-The `{{htmlattrxref("draggable")}}` attribute may be used on any element, including images and links. However, for these last two, the default value is `true`, so you would only use the `{{htmlattrxref("draggable")}}` attribute with a value of `false` to disable dragging of these elements.
+The `[`draggable`](/en-US/docs/Web/HTML/Global_attributes#draggable)` attribute may be used on any element, including images and links. However, for these last two, the default value is `true`, so you would only use the `[`draggable`](/en-US/docs/Web/HTML/Global_attributes#draggable)` attribute with a value of `false` to disable dragging of these elements.
 
 > **Note:** When an element is made draggable, text or other elements within it can no longer be selected in the normal way by clicking and dragging with the mouse. Instead, the user must hold down the <kbd>Alt</kbd> key to select text with the mouse, or use the keyboard.
 

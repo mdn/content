@@ -2,10 +2,8 @@
 title: v-hanging
 slug: Web/SVG/Attribute/v-hanging
 page-type: svg-attribute
-tags:
-  - Deprecated
-  - SVG
-  - SVG Attribute
+status:
+  - deprecated
 browser-compat: svg.elements.font-face.v-hanging
 ---
 

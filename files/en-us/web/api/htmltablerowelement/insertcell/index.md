@@ -85,12 +85,12 @@ function addRow(tableID) {
   let newCell = newRow.insertCell(0);
 
   // Append a text node to the cell
-  let newText = document.createTextNode('New bottom row');
+  let newText = document.createTextNode("New bottom row");
   newCell.appendChild(newText);
 }
 
 // Call addRow() with the table's ID
-addRow('my-table');
+addRow("my-table");
 ```
 
 ### Result

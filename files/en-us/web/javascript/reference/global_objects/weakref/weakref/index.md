@@ -7,21 +7,29 @@ browser-compat: javascript.builtins.WeakRef.WeakRef
 
 {{JSRef}}
 
-The **`WeakRef`** constructor creates a {{jsxref("WeakRef")}}
-object referring to a given target object.
+The **`WeakRef()`** constructor creates {{jsxref("WeakRef")}} objects.
 
 ## Syntax
 
 ```js-nolint
-new WeakRef(targetObject)
+new WeakRef(target)
 ```
 
 > **Note:** `WeakRef()` can only be constructed with [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Attempting to call it without `new` throws a {{jsxref("TypeError")}}.
 
 ### Parameters
 
-- `targetObject`
-  - : The target object the WeakRef should refer to (also called the _referent_).
+- `target`
+  - : The target value the WeakRef should refer to (also called the _referent_). Must be an object or a [non-registered symbol](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol#shared_symbols_in_the_global_symbol_registry).
+
+### Return value
+
+A new `WeakRef` object referring to the given target value.
+
+### Exceptions
+
+- {{jsxref("TypeError")}}
+  - : Thrown if `target` is not an object or a [non-registered symbol](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol#shared_symbols_in_the_global_symbol_registry).
 
 ## Examples
 

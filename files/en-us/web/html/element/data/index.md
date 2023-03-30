@@ -72,7 +72,7 @@ The **`<data>`** [HTML](/en-US/docs/Web/HTML) element links a given piece of con
 
 This element's attributes include the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 
-- {{htmlattrdef("value")}}
+- `value`
   - : This attribute specifies the machine-readable translation of the content of the element.
 
 ## Examples
@@ -87,6 +87,10 @@ The following example displays product names but also associates each name with 
   <li><data value="400">Mega Jumbo Ketchup</data></li>
 </ul>
 ```
+
+### Result
+
+{{EmbedLiveSample('Examples')}}
 
 ## Specifications
 

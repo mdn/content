@@ -14,7 +14,7 @@ After a feature is enabled by default in a release build, it is no longer consid
 
 Experimental features can be enabled or disabled using the [Firefox Configuration Editor](https://support.mozilla.org/en-US/kb/about-config-editor-firefox) (enter `about:config` in the Firefox address bar) by modifying the associated _preference_ listed below.
 
-> **Note:** For editors - when adding features to these tables, please try to include a link to the relevant bug or bugs using the [`bug`](https://github.com/mdn/yari/blob/main/kumascript/macros/bug.ejs) macro: `\{{bug(<em>bug-number</em>)}}`.
+> **Note:** For editors - when adding features to these tables, please try to include a link to the relevant bug or bugs using `[Firefox bug <number>](https://bugzil.la/<number>)`.
 
 ## HTML
 
@@ -470,11 +470,11 @@ The {{cssxref("fit-content_function", "fit-content()")}} function as it applies 
   </tbody>
 </table>
 
-### Scroll-linked animations
+### Scroll-driven animations
 
-A scroll-linked animation is one in which the animation depends on the scroll position of a scrollbar instead of time, or some other dimension.
-The {{cssxref('scroll-timeline-name')}} and {{cssxref('scroll-timeline-axis')}} properties (and {{cssxref('scroll-timeline')}} shorthand property) allow you to specify that a particular scrollbar in a particular named container can be used as the source for a scroll-linked animation.
-The scroll timeline can then be associated with an [animation](/en-US/docs/Web/CSS/CSS_Animations) by setting the {{cssxref('animation-timeline')}} property to the name value that was set in `scroll-timeline-name`.
+Earlier called "scroll-linked animations", a scroll-driven animation depends on the scroll position of a scrollbar instead of time or some other dimension.
+The {{cssxref('scroll-timeline-name')}} and {{cssxref('scroll-timeline-axis')}} properties (and the {{cssxref('scroll-timeline')}} shorthand property) allow you to specify that a particular scrollbar in a particular named container can be used as the source for a scroll-driven animation.
+The scroll timeline can then be associated with an [animation](/en-US/docs/Web/CSS/CSS_Animations) by setting the {{cssxref('animation-timeline')}} property to the name value defined using `scroll-timeline-name`.
 
 You can alternatively use the [`scroll()`](/en-US/docs/Web/CSS/animation-timeline/scroll) functional notation with {{cssxref('animation-timeline')}} to indicate that a scrollbar axis in an ancestor element will be used for the timeline.
 For more information, see [Firefox bug 1676791](https://bugzil.la/1676791), [Firefox bug 1754897](https://bugzil.la/1754897), and [Firefox bug 1737918](https://bugzil.la/1737918).
@@ -511,6 +511,46 @@ For more information, see [Firefox bug 1676791](https://bugzil.la/1676791), [Fir
     <tr>
       <th>Preference name</th>
       <td colspan="2"><code>layout.css.scroll-linked-animations.enabled</code></td>
+    </tr>
+  </tbody>
+</table>
+
+When using the {{cssxref('scroll-timeline')}} shorthand property, the order of the property values must be {{cssxref('scroll-timeline-name')}} followed by {{cssxref('scroll-timeline-axis')}}. The longhand and shorthand properties are now available behind the preference `layout.css.scroll-driven-animations.enabled`. For more information, see [Firefox bug 1807685](https://bugzil.la/1807685), [Firefox bug 1804573](https://bugzil.la/1804573), and [Firefox bug 1809005
+](https://bugzil.la/1809005
+).
+
+<table>
+  <thead>
+    <tr>
+      <th>Release channel</th>
+      <th>Version added</th>
+      <th>Enabled by default?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Nightly</th>
+      <td>110</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Developer Edition</th>
+      <td>110</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Beta</th>
+      <td>110</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Release</th>
+      <td>110</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Preference name</th>
+      <td colspan="2"><code>layout.css.scroll-driven-animations.enabled</code></td>
     </tr>
   </tbody>
 </table>
@@ -845,6 +885,46 @@ The `groupBy` method should be used when strings can be used to represent elemen
     <tr>
       <th>Preference name</th>
       <td colspan="2">None</td>
+    </tr>
+  </tbody>
+</table>
+
+#### Static module import in workers
+
+[Workers](/en-US/docs/Web/API/Web_Workers_API) can now [`import`](/en-US/docs/Web/JavaScript/Reference/Statements/import) [JavaScript modules](/en-US/docs/Web/JavaScript/Guide/Modules) ([Firefox bug 1247687](https://bugzil.la/1247687)).
+
+<table>
+  <thead>
+    <tr>
+      <th>Release channel</th>
+      <th>Version removed</th>
+      <th>Enabled by default?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Nightly</th>
+      <td>111</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th>Developer Edition</th>
+      <td>111</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Beta</th>
+      <td>111</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Release</th>
+      <td>111</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Preference name</th>
+      <td colspan="2"><code>dom.workers.modules.enabled</code></td>
     </tr>
   </tbody>
 </table>
@@ -1402,7 +1482,7 @@ Enabling this feature adds the {{domxref("HTMLMediaElement.audioTracks")}} and {
 
 #### ClipboardItem
 
-The {{domxref('ClipboardItem')}} interface of the {{domxref('Clipboard API')}} is now supported and {{domxref('Clipboard.write()')}} accepts a sequence of {{domxref('ClipboardItem','clipboard items')}} instead of the previously implemented {{domxref('DataTransfer','dataTransfer object')}}. It is available behind the pref `dom.events.asyncClipboard.clipboardItem` which was previously `dom.events.asyncClipboard.dataTransfer`. See {{bug('1619947')}} for more details.
+The {{domxref('ClipboardItem')}} interface of the {{domxref('Clipboard API')}} is now supported and {{domxref('Clipboard.write()')}} accepts a sequence of {{domxref('ClipboardItem','clipboard items')}} instead of the previously implemented {{domxref('DataTransfer','dataTransfer object')}}. It is available behind the pref `dom.events.asyncClipboard.clipboardItem` which was previously `dom.events.asyncClipboard.dataTransfer`. See [Firefox bug 1619947](https://bugzil.la/1619947) for more details.
 
 <table>
   <thead>
@@ -1482,7 +1562,7 @@ The [Clipboard.read()](/en-US/docs/Web/API/Clipboard/read) method of the {{domxr
 
 #### HTML Sanitizer API
 
-The {{domxref('HTML Sanitizer API')}} allow developers to take untrusted strings of HTML and sanitize them for safe insertion into a document's DOM. Default elements within each configuration property (those to be sanitized) are still under consideration. Due to this the config parameter has not been implemented (see {{domxref('Sanitizer.sanitizer()', 'the constructor')}} for more information). See {{bug('1673309')}} for more details.
+The {{domxref('HTML Sanitizer API')}} allow developers to take untrusted strings of HTML and sanitize them for safe insertion into a document's DOM. Default elements within each configuration property (those to be sanitized) are still under consideration. Due to this the config parameter has not been implemented (see {{domxref('Sanitizer.sanitizer()', 'the constructor')}} for more information). See [Firefox bug 1673309](https://bugzil.la/1673309) for more details.
 
 <table>
   <thead>
@@ -1516,49 +1596,6 @@ The {{domxref('HTML Sanitizer API')}} allow developers to take untrusted strings
     <tr>
       <th>Preference name</th>
       <td colspan="2"><code>dom.security.sanitizer.enabled</code></td>
-    </tr>
-  </tbody>
-</table>
-
-#### Navigator method: getAutoplayPolicy()
-
-The {{domxref("navigator.getAutoplayPolicy()")}} method returns a string value indicating how the browser handles requests to automatically play media for either media elements or audio contexts.
-The possible values are: `allowed` (autoplay is currently permitted), `allowed-muted` (autoplay is allowed but only with no—or muted—audio), and `disallowed` (autoplay is not allowed at this time).
-The value can change over time for all items of a particular type, or for a particular item, depending on what the user is doing, their preferences, and the state of the browser in general.
-See [Firefox bug 1773551](https://bugzil.la/1773551) for more details.
-
-<table>
-  <thead>
-    <tr>
-      <th>Release channel</th>
-      <th>Version added</th>
-      <th>Enabled by default?</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>Nightly</th>
-      <td>110</td>
-      <td>Yes</td>
-    </tr>
-    <tr>
-      <th>Developer Edition</th>
-      <td>110</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Beta</th>
-      <td>110</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Release</th>
-      <td>110</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Preference name</th>
-      <td colspan="2"><code>dom.media.autoplay-policy-detection.enabled</code></td>
     </tr>
   </tbody>
 </table>
@@ -2046,6 +2083,91 @@ The [`Clear-Site-Data`](/en-US/docs/Web/HTTP/Headers/Clear-Site-Data) HTTP respo
       <td colspan="2">
         <code>privacy.clearsitedata.cache.enabled</code>
       </td>
+    </tr>
+  </tbody>
+</table>
+
+## HTTP
+
+### SameSite=Lax by default
+
+[`SameSite` cookies](/en-US/docs/Web/HTTP/Headers/Set-Cookie/SameSite#lax) have a default value of [`Lax`](/en-US/docs/Web/HTTP/Headers/Set-Cookie/SameSite#lax).
+With this setting, cookies are only sent when a user is navigating to the origin site, not for cross-site subrequests to load images or frames into a third party site and so on.
+For more details see [Firefox bug 1617609](https://bugzil.la/1617609).
+
+<table>
+  <thead>
+    <tr>
+      <th>Release channel</th>
+      <th>Version added</th>
+      <th>Enabled by default?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Nightly</th>
+      <td>69</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Developer Edition</th>
+      <td>69</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Beta</th>
+      <td>69</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Release</th>
+      <td>69</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Preference name</th>
+      <td colspan="2"><code>network.cookie.sameSite.laxByDefault</code></td>
+    </tr>
+  </tbody>
+</table>
+
+### HTTP Status 103
+
+The [`103 Early Hints`](/en-US/docs/Web/HTTP/Status/103) HTTP [information response](/en-US/docs/Web/HTTP/Status#information_responses) status code may be sent by a server to allow a user agent to start preloading resources while the server is still preparing the full response.
+For more details see [Firefox bug 1813035](https://bugzil.la/1813035).
+
+<table>
+  <thead>
+    <tr>
+      <th>Release channel</th>
+      <th>Version added</th>
+      <th>Enabled by default?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Nightly</th>
+      <td>111</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th>Developer Edition</th>
+      <td>111</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th>Beta</th>
+      <td>111</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th>Release</th>
+      <td>102</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Preference name</th>
+      <td colspan="2"><code>network.early-hints.enabled</code> and <code>network.early-hints.preconnect.enabled</code></td>
     </tr>
   </tbody>
 </table>

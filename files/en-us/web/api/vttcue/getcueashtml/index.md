@@ -28,11 +28,11 @@ A {{domxref("DocumentFragment")}} .
 In the following example a new {{domxref("VTTCue")}} is created. The value as a document fragment is then printed to the console.
 
 ```js
-let video = document.querySelector('video');
+let video = document.querySelector("video");
 let track = video.addTextTrack("captions", "Captions", "en");
 track.mode = "showing";
 
-let cue1 = new VTTCue(0, 0.9, 'Hildy!');
+let cue1 = new VTTCue(0, 0.9, "Hildy!");
 console.log(cue1.getCueAsHTML());
 
 track.addCue(cue1);

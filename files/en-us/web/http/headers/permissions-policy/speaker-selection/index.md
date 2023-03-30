@@ -1,13 +1,8 @@
 ---
 title: "Permissions-Policy: speaker-selection"
 slug: Web/HTTP/Headers/Permissions-Policy/speaker-selection
-tags:
-  - Permissions Policy
-  - Permissions-Policy
-  - HTTP
-  - header
-  - microphone
-  - Experimental
+status:
+  - experimental
 browser-compat: http.headers.Permissions-Policy.speaker-selection
 ---
 

@@ -36,7 +36,7 @@ greater than 400 pixels, the window is scrolled back to the beginning.
 
 ```js
 if (window.scrollX > 400) {
-  window.scroll(0,0);
+  window.scroll(0, 0);
 }
 ```
 

@@ -1,5 +1,5 @@
 ---
-title: 'PaymentResponse: payerdetailchange event'
+title: "PaymentResponse: payerdetailchange event"
 slug: Web/API/PaymentResponse/payerdetailchange_event
 page-type: web-api-event
 status:
@@ -21,9 +21,9 @@ This event is not cancelable and does not bubble.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('payerdetailchange', async (event) => { });
+addEventListener("payerdetailchange", async (event) => {});
 
-onpayerdetailchange = async (event) => { };
+onpayerdetailchange = async (event) => {};
 ```
 
 ## Event type

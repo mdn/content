@@ -101,9 +101,7 @@ document
   .setAttribute("transform", scaledMatrixWithOrigin.toString());
 ```
 
-{{ EmbedLiveSample('Examples', '250', '250',
-  'screen_shot_2019-02-18_at_13.23.31.png',
-  'Web/API/DOMMatrixReadOnly/scale') }}
+{{ EmbedLiveSample('Examples', '250', '250', 'screen_shot_2019-02-18_at_13.23.31.png') }}
 
 ## Specifications
 

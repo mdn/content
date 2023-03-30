@@ -2,14 +2,6 @@
 title: captivePortal
 slug: Mozilla/Add-ons/WebExtensions/API/captivePortal
 page-type: webextension-api
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - captivePortal
 browser-compat: webextensions.api.captivePortal
 ---
 

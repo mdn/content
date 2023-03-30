@@ -2,12 +2,10 @@
 title: VideoFrame.allocationSize()
 slug: Web/API/VideoFrame/allocationSize
 page-type: web-api-instance-method
-status:
-  - experimental
 browser-compat: api.VideoFrame.allocationSize
 ---
 
-{{APIRef("Web Codecs API")}}{{SeeCompatTable}}
+{{APIRef("Web Codecs API")}}
 
 The **`allocationSize()`** method of the {{domxref("VideoFrame")}} interface returns the number of bytes required to hold the video as filtered by options passed into the method.
 
@@ -45,12 +43,12 @@ In the following example the `allocationSize` is returned for the rectangle at t
 
 ```js
 const videoRect = {
-  x:0,
-  y:0,
-  width:800,
-  height:600
-}
-let size = VideoFrame.allocationSize({rect: videoRect})
+  x: 0,
+  y: 0,
+  width: 800,
+  height: 600,
+};
+let size = VideoFrame.allocationSize({ rect: videoRect });
 ```
 
 ## Specifications

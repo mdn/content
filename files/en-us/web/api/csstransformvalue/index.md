@@ -2,12 +2,10 @@
 title: CSSTransformValue
 slug: Web/API/CSSTransformValue
 page-type: web-api-interface
-status:
-  - experimental
 browser-compat: api.CSSTransformValue
 ---
 
-{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
+{{APIRef("CSS Typed OM")}}
 
 The **`CSSTransformValue`** interface of the {{domxref('CSS_Object_Model#css_typed_object_model','','',' ')}} represents `transform-list` values as used by the CSS {{CSSxref('transform')}} property.
 
@@ -28,29 +26,29 @@ Below is a list of interfaces based on the `CSSTransformValue` interface.
 
 ## Constructor
 
-- {{domxref("CSSTransformValue.CSSTransformValue", "CSSTransformValue()")}} {{Experimental_Inline}}
+- {{domxref("CSSTransformValue.CSSTransformValue", "CSSTransformValue()")}}
   - : Creates a new `CSSTransformValue` object.
 
 ## Instance properties
 
-- {{domxref("CSSTransformValue.length")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref("CSSTransformValue.length")}} {{ReadOnlyInline}}
   - : Returns how many transform components are contained within the `CSSTransformValue`.
-- {{domxref("CSSTransformValue.is2D")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref("CSSTransformValue.is2D")}} {{ReadOnlyInline}}
   - : Returns a boolean indicating whether the transform is 2D or 3D.
 
 ## Instance methods
 
 _Inherits methods from its ancestor {{domxref('CSSStyleValue')}}._
 
-- {{domxref("CSSTransformValue.toMatrix()")}} {{Experimental_Inline}}
+- {{domxref("CSSTransformValue.toMatrix()")}}
   - : Returns a new {{domxref('DOMMatrix')}} object.
-- {{domxref('CSSUnparsedValue.entries()')}} {{Experimental_Inline}}
+- {{domxref('CSSUnparsedValue.entries()')}}
   - : Returns an array of a given object's own enumerable property `[key, value]` pairs in the same order as that provided by a {{jsxref("Statements/for...in", "for...in")}} loop (the difference being that a for-in loop enumerates properties in the prototype chain as well).
-- {{domxref('CSSUnparsedValue.forEach()')}} {{Experimental_Inline}}
+- {{domxref('CSSUnparsedValue.forEach()')}}
   - : Executes a provided function once for each element of the `CSSTransformValue` object.
-- {{domxref('CSSUnparsedValue.keys()')}} {{Experimental_Inline}}
+- {{domxref('CSSUnparsedValue.keys()')}}
   - : Returns a new _array iterator_ object that contains the keys for each index in the `CSSTransformValue` object.
-- {{domxref('CSSUnparsedValue.values()')}} {{Experimental_Inline}}
+- {{domxref('CSSUnparsedValue.values()')}}
   - : Returns a new _array iterator_ object that contains the values for each index in the `CSSTransformValue` object.
 
 ## Examples

@@ -25,8 +25,8 @@ The code is taken from the ["SVGAElement example code"](/en-US/docs/Web/API/SVGA
 
 ```js
 // ...
-const linkRef = document.querySelector('a');
-linkRef.target ='_blank';
+const linkRef = document.querySelector("a");
+linkRef.target = "_blank";
 // ...
 ```
 

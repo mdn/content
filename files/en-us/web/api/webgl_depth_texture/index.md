@@ -37,9 +37,19 @@ This extension extends {{domxref("WebGLRenderingContext.framebufferTexture2D()")
 ## Examples
 
 ```js
-const ext = gl.getExtension('WEBGL_depth_texture');
+const ext = gl.getExtension("WEBGL_depth_texture");
 
-gl.texImage2D(gl.TEXTURE_2D, 0, gl.DEPTH_COMPONENT, 512, 512, 0, gl.DEPTH_COMPONENT, gl.UNSIGNED_SHORT, null);
+gl.texImage2D(
+  gl.TEXTURE_2D,
+  0,
+  gl.DEPTH_COMPONENT,
+  512,
+  512,
+  0,
+  gl.DEPTH_COMPONENT,
+  gl.UNSIGNED_SHORT,
+  null
+);
 ```
 
 ## Specifications

@@ -20,10 +20,9 @@ An {{domxref('Ink')}} object.
 ```js
 async function inkInit() {
   const ink = navigator.ink;
-  let presenter = await ink.requestPresenter({presentationArea: canvas});
+  let presenter = await ink.requestPresenter({ presentationArea: canvas });
 
   //...
-
 }
 ```
 

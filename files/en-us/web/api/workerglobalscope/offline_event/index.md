@@ -1,5 +1,5 @@
 ---
-title: 'WorkerGlobalScope: offline event'
+title: "WorkerGlobalScope: offline event"
 slug: Web/API/WorkerGlobalScope/offline_event
 page-type: web-api-instance-event
 browser-compat: api.WorkerGlobalScope.offline_event
@@ -14,9 +14,9 @@ The **`offline`** event of the {{domxref("WorkerGlobalScope")}} fires when the d
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('offline', (event) => { });
+addEventListener("offline", (event) => {});
 
-onoffline = (event) => { };
+onoffline = (event) => {};
 ```
 
 ## Event type
@@ -29,15 +29,15 @@ The following code snippet shows an `onoffline` handler set inside a worker:
 
 ```js
 self.onoffline = () => {
-  console.log('Your worker is now offline');
-}
+  console.log("Your worker is now offline");
+};
 ```
 
 The same snippet, but using `addEventListener()`:
 
 ```js
-self.addEventListener('offline', () => {
-  console.log('Your worker is now offline');
+self.addEventListener("offline", () => {
+  console.log("Your worker is now offline");
 });
 ```
 

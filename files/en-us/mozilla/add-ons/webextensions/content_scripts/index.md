@@ -2,8 +2,6 @@
 title: Content scripts
 slug: Mozilla/Add-ons/WebExtensions/Content_scripts
 page-type: guide
-tags:
-  - WebExtensions
 ---
 
 {{AddonSidebar}}

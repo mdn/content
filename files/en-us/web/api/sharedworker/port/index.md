@@ -24,7 +24,7 @@ using the `SharedWorker.port` property — the port is started using its
 `start()` method:
 
 ```js
-const myWorker = new SharedWorker('worker.js');
+const myWorker = new SharedWorker("worker.js");
 myWorker.port.start();
 ```
 

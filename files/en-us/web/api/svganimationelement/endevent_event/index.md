@@ -18,9 +18,9 @@ This event is not cancelable and does not bubble.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('endEvent', (event) => { });
+addEventListener("endEvent", (event) => {});
 
-onend = (event) => { };
+onend = (event) => {};
 ```
 
 ## Event type
@@ -65,37 +65,37 @@ ul {
 ```
 
 ```js
-let svgElem = document.querySelector('svg');
-let animateElem = document.querySelector('animateMotion');
-let list = document.querySelector('ul');
-let btn = document.querySelector('button');
+let svgElem = document.querySelector("svg");
+let animateElem = document.querySelector("animateMotion");
+let list = document.querySelector("ul");
+let btn = document.querySelector("button");
 
-animateElem.addEventListener('beginEvent', () => {
-  let listItem = document.createElement('li');
-  listItem.textContent = 'beginEvent fired';
+animateElem.addEventListener("beginEvent", () => {
+  let listItem = document.createElement("li");
+  listItem.textContent = "beginEvent fired";
   list.appendChild(listItem);
-})
+});
 
-animateElem.addEventListener('endEvent', () => {
-  let listItem = document.createElement('li');
-  listItem.textContent = 'endEvent fired';
+animateElem.addEventListener("endEvent", () => {
+  let listItem = document.createElement("li");
+  listItem.textContent = "endEvent fired";
   list.appendChild(listItem);
-})
+});
 
-animateElem.addEventListener('repeatEvent', (e) => {
-  let listItem = document.createElement('li');
-  let msg = 'repeatEvent fired';
+animateElem.addEventListener("repeatEvent", (e) => {
+  let listItem = document.createElement("li");
+  let msg = "repeatEvent fired";
   if (e.detail) {
     msg += `; repeat number: ${e.detail}`;
   }
   listItem.textContent = msg;
   list.appendChild(listItem);
-})
+});
 
-btn.addEventListener('click', () => {
+btn.addEventListener("click", () => {
   btn.disabled = true;
-  animateElem.setAttribute('repeatCount', '1');
-})
+  animateElem.setAttribute("repeatCount", "1");
+});
 ```
 
 {{EmbedLiveSample('Animated_circle', '100%', '300')}}
@@ -106,8 +106,8 @@ Note that you can also create an event listener for the `end` event using the `o
 
 ```js
 animateElem.onend = () => {
-  console.log('endEvent fired');
-}
+  console.log("endEvent fired");
+};
 ```
 
 ## Specifications

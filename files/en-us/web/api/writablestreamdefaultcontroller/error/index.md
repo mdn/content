@@ -45,7 +45,7 @@ const writableStream = new WritableStream({
     // do stuff with controller
 
     // error stream if necessary
-    controller.error('My error is broken');
+    controller.error("My error is broken");
   },
   write(chunk, controller) {
     // ...
@@ -55,7 +55,7 @@ const writableStream = new WritableStream({
   },
   abort(err) {
     // ...
-  }
+  },
 });
 ```
 

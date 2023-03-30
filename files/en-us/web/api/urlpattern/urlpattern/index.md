@@ -38,7 +38,7 @@ new URLPattern(input, baseURL, options)
     - `search`
     - `hash`
     - `baseURL`
-    > **Note:** Omitted parts of the object will be treated as wildcards (`*`).
+      > **Note:** Omitted parts of the object will be treated as wildcards (`*`).
 - `baseURL` {{Optional_Inline}}
   - : A string representing the base URL to use in cases where
     `input` is a relative pattern. If not specified, it defaults to `undefined`.
@@ -60,25 +60,22 @@ new URLPattern(input, baseURL, options)
 ### Matching a pathname
 
 ```js
-let pattern1 = new URLPattern('https://example.com/books/:id')
+let pattern1 = new URLPattern("https://example.com/books/:id");
 
 // same as
-let pattern2 = new URLPattern(
-  '/books/:id',
-  'https://example.com',
-);
+let pattern2 = new URLPattern("/books/:id", "https://example.com");
 
 // or
 let pattern3 = new URLPattern({
-  protocol: 'https',
-  hostname: 'example.com',
-  pathname: '/books/:id',
+  protocol: "https",
+  hostname: "example.com",
+  pathname: "/books/:id",
 });
 
 // or
 let pattern4 = new URLPattern({
-  pathname: '/books/:id',
-  baseURL: 'https://example.com',
+  pathname: "/books/:id",
+  baseURL: "https://example.com",
 });
 ```
 
@@ -86,8 +83,8 @@ let pattern4 = new URLPattern({
 
 ```js
 let pattern = new URLPattern({
-  protocol: 'http{s}?',
-  hostname: ':subdomain.example.com',
+  protocol: "http{s}?",
+  hostname: ":subdomain.example.com",
 });
 ```
 
@@ -95,14 +92,14 @@ let pattern = new URLPattern({
 
 ```js
 let pattern = new URLPattern({
-  protocol: 'http{s}?',
-  username: ':username',
-  password: ':password',
-  hostname: ':subdomain.example.com',
-  port: ':port(80|443)',
-  pathname: '/:path',
-  search: '*',
-  hash: '*',
+  protocol: "http{s}?",
+  username: ":username",
+  password: ":password",
+  hostname: ":subdomain.example.com",
+  port: ":port(80|443)",
+  pathname: "/:path",
+  search: "*",
+  hash: "*",
 });
 ```
 
@@ -110,18 +107,20 @@ let pattern = new URLPattern({
 
 ```js
 // Case-sensitive matching by default
-const pattern = new URLPattern('https://events.com/2022/feb/*');
-console.log(pattern.test('https://events.com/2022/feb/xc44rsz')); // true
-console.log(pattern.test('https://events.com/2022/Feb/xc44rsz')); // false
+const pattern = new URLPattern("https://example.com/2022/feb/*");
+console.log(pattern.test("https://example.com/2022/feb/xc44rsz")); // true
+console.log(pattern.test("https://example.com/2022/Feb/xc44rsz")); // false
 ```
 
 Setting the `ignoreCase` option to `true` in the constructor switches all matching operations to case-insensitive for the given pattern:
 
 ```js
 // Case-insensitive matching
-const pattern = new URLPattern('https://events.com/2022/feb/*', { ignoreCase : true });
-console.log(pattern.test('https://events.com/2022/feb/xc44rsz')); // true
-console.log(pattern.test('https://events.com/2022/Feb/xc44rsz')); // true
+const pattern = new URLPattern("https://example.com/2022/feb/*", {
+  ignoreCase: true,
+});
+console.log(pattern.test("https://example.com/2022/feb/xc44rsz")); // true
+console.log(pattern.test("https://example.com/2022/Feb/xc44rsz")); // true
 ```
 
 ## Usage notes

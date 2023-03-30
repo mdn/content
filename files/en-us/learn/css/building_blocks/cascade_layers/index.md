@@ -45,7 +45,7 @@ The C in CSS stands for "Cascading". It is the method by which styles cascade to
 3. **Origin:** Within each of the two importance buckets, sort rules by author, user, or user-agent origin.
 4. **Layers:** Within each of the six origin importance bucket, sort by cascade layer. The layer order for normal declarations is from first layer created to last, followed by unlayered normal styles. This order is inverted for important styles, with unlayered important styles having the lowest precedence.
 5. **Specificity:** For competing styles in the origin layer with precedence, sort declarations by [specificity](/en-US/docs/Web/CSS/Specificity).
-6. **Proximity:** When two selectors in the origin layer with precedence have the same specificity, the property value from the last declared selector with the highest specificity wins.
+6. **Order of appearance:** When two selectors in the origin layer with precedence have the same specificity, the property value from the last declared selector with the highest specificity wins.
 
 For each step, only the declarations "still in the running" move on to "compete" in the next step. If only one declaration is in the running, it "wins", and the subsequent steps are moot.
 
@@ -76,7 +76,7 @@ The "competing" selector in the user-agent stylesheet at the time of this writin
 
 Origin precedence always wins over selector specificity. If an element property is styled with a normal style declaration in multiple origins, the author style sheet will always override the redundant normal properties declared in a user or user-agent stylesheet. If the style is important, the user-agent stylesheet will always win over author and user styles. Cascade origin precedence ensures specificity conflicts between origins never happen.
 
-One last thing to note before moving on: order of appearance, or _proximity_, becomes relevant only when competing declarations in the origin of precedence have the same specificity.
+One last thing to note before moving on: order of appearance becomes relevant only when competing declarations in the origin of precedence have the same specificity.
 
 ## Overview of cascade layers
 

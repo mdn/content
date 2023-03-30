@@ -1,10 +1,6 @@
 ---
 title: GET
 slug: Web/HTTP/Methods/GET
-tags:
-  - HTTP
-  - Reference
-  - Request method
 browser-compat: http.methods.GET
 ---
 

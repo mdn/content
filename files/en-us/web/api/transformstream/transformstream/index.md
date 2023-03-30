@@ -81,11 +81,11 @@ function appendToDOMStream(el) {
   return new WritableStream({
     write(chunk) {
       el.append(chunk);
-    }
+    },
   });
 }
 
-fetch('./lorem-ipsum.txt').then((response) =>
+fetch("./lorem-ipsum.txt").then((response) =>
   response.body
     .pipeThrough(new TextDecoderStream())
     .pipeThrough(upperCaseStream())
@@ -98,7 +98,9 @@ fetch('./lorem-ipsum.txt').then((response) =>
 If no `transformer` argument is supplied then the result will be an identity transform stream which forwards all chunks written to the writable side to the readable side with no changes. In the following example an identity transform stream is used to add buffering to a pipe.
 
 ```js
-const writableStrategy = new ByteLengthQueuingStrategy({ highWaterMark: 1024 * 1024 });
+const writableStrategy = new ByteLengthQueuingStrategy({
+  highWaterMark: 1024 * 1024,
+});
 readableStream
   .pipeThrough(new TransformStream(undefined, writableStrategy))
   .pipeTo(writableStream);

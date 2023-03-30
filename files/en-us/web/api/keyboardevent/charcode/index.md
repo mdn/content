@@ -34,11 +34,13 @@ A number that represents the Unicode value of the character key that was pressed
 ### JavaScript
 
 ```js
-const input = document.querySelector('input');
-const log = document.querySelector('#log');
+const input = document.querySelector("input");
+const log = document.querySelector("#log");
 
-input.addEventListener('keypress', (e) => {
-  log.innerText = `Key pressed: ${String.fromCharCode(e.charCode)}\ncharCode: ${e.charCode}`;
+input.addEventListener("keypress", (e) => {
+  log.innerText = `Key pressed: ${String.fromCharCode(e.charCode)}\ncharCode: ${
+    e.charCode
+  }`;
 });
 ```
 

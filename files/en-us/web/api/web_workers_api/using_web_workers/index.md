@@ -46,7 +46,7 @@ if (window.Worker) {
 Creating a new worker is simple. All you need to do is call the {{domxref("Worker.Worker", "Worker()")}} constructor, specifying the URI of a script to execute in the worker thread ([main.js](https://github.com/mdn/dom-examples/blob/main/web-workers/simple-web-worker/main.js)):
 
 ```js
-const myWorker = new Worker('worker.js');
+const myWorker = new Worker("worker.js");
 ```
 
 ### Sending messages to and from a dedicated worker
@@ -56,13 +56,13 @@ The magic of workers happens via the {{domxref("Worker.postMessage", "postMessag
 ```js
 first.onchange = () => {
   myWorker.postMessage([first.value, second.value]);
-  console.log('Message posted to worker');
-}
+  console.log("Message posted to worker");
+};
 
 second.onchange = () => {
   myWorker.postMessage([first.value, second.value]);
-  console.log('Message posted to worker');
-}
+  console.log("Message posted to worker");
+};
 ```
 
 So here we have two {{htmlelement("input")}} elements represented by the variables `first` and `second`; when the value of either is changed, `myWorker.postMessage([first.value,second.value])` is used to send the value inside both to the worker, as an array. You can send pretty much anything you like in the message.
@@ -71,11 +71,11 @@ In the worker, we can respond when the message is received by writing an event h
 
 ```js
 onmessage = (e) => {
-  console.log('Message received from main script');
+  console.log("Message received from main script");
   const workerResult = `Result: ${e.data[0] * e.data[1]}`;
-  console.log('Posting message back to main script');
+  console.log("Posting message back to main script");
   postMessage(workerResult);
-}
+};
 ```
 
 The `onmessage` handler allows us to run some code whenever a message is received, with the message itself being available in the `message` event's `data` attribute. Here we multiply together the two numbers then use `postMessage()` again, to post the result back to the main thread.
@@ -85,8 +85,8 @@ Back in the main thread, we use `onmessage` again, to respond to the message sen
 ```js
 myWorker.onmessage = (e) => {
   result.textContent = e.data;
-  console.log('Message received from worker');
-}
+  console.log("Message received from worker");
+};
 ```
 
 Here we grab the message event data and set it as the `textContent` of the result paragraph, so the user can see the result of the calculation.
@@ -129,10 +129,12 @@ Workers may spawn more workers if they wish. So-called sub-workers must be hoste
 Worker threads have access to a global function, `importScripts()`, which lets them import scripts. It accepts zero or more URIs as parameters to resources to import; all the following examples are valid:
 
 ```js
-importScripts();                         /* imports nothing */
-importScripts('foo.js');                 /* imports just "foo.js" */
-importScripts('foo.js', 'bar.js');       /* imports two scripts */
-importScripts('//example.com/hello.js'); /* You can import scripts from other origins */
+importScripts(); /* imports nothing */
+importScripts("foo.js"); /* imports just "foo.js" */
+importScripts("foo.js", "bar.js"); /* imports two scripts */
+importScripts(
+  "//example.com/hello.js"
+); /* You can import scripts from other origins */
 ```
 
 The browser loads each listed script and executes it. Any global objects from each script may then be used by the worker. If the script can't be loaded, `NETWORK_ERROR` is thrown, and subsequent code will not be executed. Previously executed code (including code deferred using {{domxref("setTimeout()")}}) will still be functional though. Function declarations **after** the `importScripts()` method are also kept, since these are always evaluated before the rest of the code.
@@ -154,7 +156,7 @@ Here we'll concentrate on the differences between dedicated and shared workers. 
 Spawning a new shared worker is pretty much the same as with a dedicated worker, but with a different constructor name (see [index.html](https://github.com/mdn/dom-examples/tree/main/web-workers/simple-shared-worker/index.html) and [index2.html](https://github.com/mdn/dom-examples/tree/main/web-workers/simple-shared-worker/index2.html)) — each one has to spin up the worker using code like the following:
 
 ```js
-const myWorker = new SharedWorker('worker.js');
+const myWorker = new SharedWorker("worker.js");
 ```
 
 One big difference is that with a shared worker you have to communicate via a `port` object — an explicit port is opened that the scripts can use to communicate with the worker (this is done implicitly in the case of dedicated workers).
@@ -170,8 +172,8 @@ Now messages can be sent to the worker as before, but the `postMessage()` method
 ```js
 squareNumber.onchange = () => {
   myWorker.port.postMessage([squareNumber.value, squareNumber.value]);
-  console.log('Message posted to worker');
-}
+  console.log("Message posted to worker");
+};
 ```
 
 Now, on to the worker. There is a bit more complexity here as well ([worker.js](https://github.com/mdn/dom-examples/tree/main/web-workers/simple-shared-worker/worker.js)):
@@ -183,8 +185,8 @@ onconnect = (e) => {
   port.onmessage = (e) => {
     const workerResult = `Result: ${e.data[0] * e.data[1]}`;
     port.postMessage(workerResult);
-  }
-}
+  };
+};
 ```
 
 First, we use an `onconnect` handler to fire code when a connection to the port happens (i.e. when the `onmessage` event handler in the parent thread is set up, or when the `start()` method is explicitly called in the parent thread).
@@ -198,8 +200,8 @@ Finally, back in the main script, we deal with the message (again, you'll see si
 ```js
 myWorker.port.onmessage = (e) => {
   result2.textContent = e.data;
-  console.log('Message received from worker');
-}
+  console.log("Message received from worker");
+};
 ```
 
 When a message comes back through the port from the worker, we insert the calculation result inside the appropriate result paragraph.
@@ -248,13 +250,13 @@ console.log(typeof example2); // boolean
 console.log(typeof emulateMessage(example2)); // boolean
 
 // test #3
-const example3 = new String('Hello World');
+const example3 = new String("Hello World");
 console.log(typeof example3); // object
 console.log(typeof emulateMessage(example3)); // string
 
 // test #4
 const example4 = {
-  name: 'Carina Anand',
+  name: "Carina Anand",
   age: 43,
 };
 console.log(typeof example4); // object
@@ -265,7 +267,7 @@ function Animal(type, age) {
   this.type = type;
   this.age = age;
 }
-const example5 = new Animal('Cat', 3);
+const example5 = new Animal("Cat", 3);
 alert(example5.constructor); // Animal
 alert(emulateMessage(example5).constructor); // Object
 ```
@@ -275,13 +277,13 @@ A value that is cloned and not shared is called _message_. As you will probably 
 **example.html**: (the main page):
 
 ```js
-const myWorker = new Worker('my_task.js');
+const myWorker = new Worker("my_task.js");
 
 myWorker.onmessage = (event) => {
   console.log(`Worker said : ${event.data}`);
 };
 
-myWorker.postMessage('ali');
+myWorker.postMessage("ali");
 ```
 
 **my_task.js** (the worker):
@@ -312,15 +314,17 @@ function QueryableWorker(url, defaultListener, onError) {
 
   this.defaultListener = defaultListener ?? (() => {});
 
-  if (onError) { worker.onerror = onError; }
+  if (onError) {
+    worker.onerror = onError;
+  }
 
   this.postMessage = (message) => {
     worker.postMessage(message);
-  }
+  };
 
   this.terminate = () => {
     worker.terminate();
-  }
+  };
 }
 ```
 
@@ -329,11 +333,11 @@ Then we add the methods of adding/removing listeners:
 ```js
 this.addListeners = (name, listener) => {
   listeners[name] = listener;
-}
+};
 
 this.removeListeners = (name) => {
   delete listeners[name];
-}
+};
 ```
 
 Here we let the worker handle two simple operations for illustration: getting the difference of two numbers and making an alert after three seconds. In order to achieve that we first implement a `sendQuery` method which queries if the worker actually has the corresponding methods to do what we want.
@@ -343,13 +347,15 @@ Here we let the worker handle two simple operations for illustration: getting th
 // Then we can pass in the arguments that the method needs.
 this.sendQuery = (queryMethod, ...queryMethodArguments) => {
   if (!queryMethod) {
-    throw new TypeError('QueryableWorker.sendQuery takes at least one argument');
+    throw new TypeError(
+      "QueryableWorker.sendQuery takes at least one argument"
+    );
   }
   worker.postMessage({
     queryMethod,
     queryMethodArguments,
   });
-}
+};
 ```
 
 We finish QueryableWorker with the `onmessage` method. If the worker has the corresponding methods we queried, it should return the name of the corresponding listener and the arguments it needs, we just need to find it in `listeners`.:
@@ -358,14 +364,17 @@ We finish QueryableWorker with the `onmessage` method. If the worker has the cor
 worker.onmessage = (event) => {
   if (
     event.data instanceof Object &&
-    Object.hasOwn(event.data, 'queryMethodListener') &&
-    Object.hasOwn(event.data, 'queryMethodArguments')
+    Object.hasOwn(event.data, "queryMethodListener") &&
+    Object.hasOwn(event.data, "queryMethodArguments")
   ) {
-    listeners[event.data.queryMethodListener].apply(instance, event.data.queryMethodArguments);
+    listeners[event.data.queryMethodListener].apply(
+      instance,
+      event.data.queryMethodArguments
+    );
   } else {
     this.defaultListener.call(instance, event.data);
   }
-}
+};
 ```
 
 Now onto the worker. First we need to have the methods to handle the two simple operations:
@@ -373,18 +382,18 @@ Now onto the worker. First we need to have the methods to handle the two simple 
 ```js
 const queryableFunctions = {
   getDifference(a, b) {
-    reply('printStuff', a - b);
+    reply("printStuff", a - b);
   },
   waitSomeTime() {
     setTimeout(() => {
-      reply('doAlert', 3, 'seconds');
+      reply("doAlert", 3, "seconds");
     }, 3000);
-  }
-}
+  },
+};
 
 function reply(queryMethodListener, ...queryMethodArguments) {
   if (!queryMethodListener) {
-    throw new TypeError('reply - takes at least one argument');
+    throw new TypeError("reply - takes at least one argument");
   }
   postMessage({
     queryMethodListener,
@@ -404,15 +413,17 @@ And the `onmessage` method is now trivial:
 onmessage = (event) => {
   if (
     event.data instanceof Object &&
-    Object.hasOwn(event.data, 'queryMethod') &&
-    Object.hasOwn(event.data, 'queryMethodArguments')
+    Object.hasOwn(event.data, "queryMethod") &&
+    Object.hasOwn(event.data, "queryMethodArguments")
   ) {
-    queryableFunctions[event.data.queryMethod]
-      .apply(self, event.data.queryMethodArguments);
+    queryableFunctions[event.data.queryMethod].apply(
+      self,
+      event.data.queryMethodArguments
+    );
   } else {
     defaultReply(event.data);
   }
-}
+};
 ```
 
 Here are the full implementation:
@@ -537,13 +548,15 @@ Here are the full implementation:
 const queryableFunctions = {
   // example #1: get the difference between two numbers:
   getDifference(minuend, subtrahend) {
-    reply('printStuff', minuend - subtrahend);
+    reply("printStuff", minuend - subtrahend);
   },
 
   // example #2: wait three seconds
   waitSomeTime() {
-    setTimeout(() => { reply('doAlert', 3, 'seconds'); }, 3000);
-  }
+    setTimeout(() => {
+      reply("doAlert", 3, "seconds");
+    }, 3000);
+  },
 };
 
 // system functions
@@ -555,7 +568,7 @@ function defaultReply(message) {
 
 function reply(queryMethodListener, ...queryMethodArguments) {
   if (!queryMethodListener) {
-    throw new TypeError('reply - not enough arguments');
+    throw new TypeError("reply - not enough arguments");
   }
   postMessage({
     queryMethodListener,
@@ -566,10 +579,13 @@ function reply(queryMethodListener, ...queryMethodArguments) {
 onmessage = (event) => {
   if (
     event.data instanceof Object &&
-    Object.hasOwn(event.data, 'queryMethod') &&
-    Object.hasOwn(event.data, 'queryMethodArguments')
+    Object.hasOwn(event.data, "queryMethod") &&
+    Object.hasOwn(event.data, "queryMethodArguments")
   ) {
-    queryableFunctions[event.data.queryMethod].apply(self, event.data.queryMethodArguments);
+    queryableFunctions[event.data.queryMethod].apply(
+      self,
+      event.data.queryMethodArguments
+    );
   } else {
     defaultReply(event.data);
   }
@@ -627,11 +643,13 @@ There is not an "official" way to embed the code of a worker within a web page, 
       // This script WILL be parsed by JS engines because its MIME type is text/javascript.
 
       // In the past blob builder existed, but now we use Blob
-      const blob = new Blob(Array.prototype.map.call(
-        document.querySelectorAll("script[type='text\/js-worker']"),
-        (script) => script.textContent,
-        { type: 'text/javascript' }
-      ));
+      const blob = new Blob(
+        Array.prototype.map.call(
+          document.querySelectorAll("script[type='text\/js-worker']"),
+          (script) => script.textContent,
+          { type: "text/javascript" }
+        )
+      );
 
       // Creating a new document.worker property containing all our "text/js-worker" scripts.
       document.worker = new Worker(window.URL.createObjectURL(blob));
@@ -641,7 +659,9 @@ There is not an "official" way to embed the code of a worker within a web page, 
       };
 
       // Start the worker.
-      window.onload = () => { document.worker.postMessage(''); };
+      window.onload = () => {
+        document.worker.postMessage("");
+      };
     </script>
   </head>
   <body>
@@ -656,8 +676,8 @@ It is also worth noting that you can also convert a function into a Blob, then g
 
 ```js
 function fn2workerURL(fn) {
-  const blob = new Blob([`(${fn.toString()})()`], { type: 'text/javascript' })
-  return URL.createObjectURL(blob)
+  const blob = new Blob([`(${fn.toString()})()`], { type: "text/javascript" });
+  return URL.createObjectURL(blob);
 }
 ```
 
@@ -677,12 +697,12 @@ The following JavaScript code is stored in the "fibonacci.js" file referenced by
 self.onmessage = (e) => {
   const userNum = Number(e.data);
   fibonacci(userNum);
-}
+};
 
-function fibonacci(num){
+function fibonacci(num) {
   let a = 1;
   let b = 0;
-  while (num >= 0){
+  while (num >= 0) {
     [a, b] = [a + b, a];
     num--;
   }

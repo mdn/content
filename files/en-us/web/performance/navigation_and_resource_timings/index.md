@@ -17,7 +17,7 @@ The performance timing API provided read only times, in milliseconds(ms), descri
 
 ![Navigation Timing event metrics](screen_shot_2019-05-03_at_1.06.27_pm.png)
 
-With the metrics above, and a bit of math, we can calculate many important metrics like [time to first byte](/en-US/docs/Glossary/time_to_first_byte), page load time, dns lookup, and whether the connection is secure.
+With the metrics above, and a bit of math, we can calculate many important metrics like [time to first byte](/en-US/docs/Glossary/Time_to_first_byte), page load time, dns lookup, and whether the connection is secure.
 
 To help measure the time it takes to complete all the steps, the Performance Timing API provides read only measurements of navigation timings. To view and capture our app's timing we enter:
 
@@ -302,7 +302,7 @@ const ssl = time.requestStart - time.secureConnectionStart;
 
 ### Time to first byte
 
-[Time to First Byte](/en-US/docs/Glossary/time_to_first_byte) is the time between the `navigationStart` (start of the navigation) and `responseStart`, (when the first byte of response data is received) available in the `performanceTiming` API:
+[Time to First Byte](/en-US/docs/Glossary/Time_to_first_byte) is the time between the `navigationStart` (start of the navigation) and `responseStart`, (when the first byte of response data is received) available in the `performanceTiming` API:
 
 ```js
 const ttfb = time.responseStart - time.navigationStart;
