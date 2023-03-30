@@ -10,7 +10,7 @@ browser-compat: api.VideoEncoder.reset
 The **`reset()`** method of the {{domxref("VideoEncoder")}} interface cancels all pending encodes and callbacks, frees all underlying resources and sets the `state` to "unconfigured".
 After calling `reset()`, `configure()` must be called before resuming `encode()` calls.
 
-**Note**: To avoid discarding frames queued via `encode()`, `flush()` should be called and completed before calling `reset()`.
+> **Note:** To avoid discarding frames queued via `encode()`, `flush()` should be called and completed before calling `reset()`.
 
 ## Syntax
 
