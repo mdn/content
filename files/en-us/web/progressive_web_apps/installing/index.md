@@ -1,5 +1,5 @@
 ---
-title: Installing and uninstalling bookmarks and PWAs
+title: Installing and uninstalling web apps
 slug: Web/Progressive_web_apps/Installing
 ---
 
