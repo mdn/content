@@ -88,7 +88,7 @@ In the above example, the rules in `headings.css` and `links.css` stylesheets ca
 @import "style.css" layer;
 ```
 
-This is an example of creating two separate anonymous cascade layers and importing the linked rules into each one separately. A cascade layer declared without a name is an anonymous cascade layer. Anonymous cascade layers are finalized when created: they do not provide any means for re-arranging or adding styles and they cannot be referenced from outside.
+This is an example of creating two separate unnamed cascade layers and importing the linked rules into each one separately. A cascade layer declared without a name is an unnamed cascade layer. Unnamed cascade layers are finalized when created: they do not provide any means for re-arranging or adding styles and they cannot be referenced from outside.
 
 ## Specifications
 
