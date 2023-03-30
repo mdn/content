@@ -7,28 +7,24 @@ browser-compat: javascript.builtins.Intl.DurationFormat.resolvedOptions
 
 {{JSRef}} {{SeeCompatTable}}
 
-The **`Intl.DurationFormat.prototype.resolvedOptions()`** method returns a new object with properties reflecting the locale and date and time formatting options computed during initialization of this {{jsxref("Intl.DurationFormat")}} object.
+The **`resolvedOptions()`** method of {{jsxref("Intl.DurationFormat")}} instances returns a new object with properties reflecting the locale and date and time formatting options computed during initialization of this {{jsxref("Intl.DurationFormat")}} object.
 
 ## Syntax
 
-```js
-resolvedOptions();
+```js-nolint
+resolvedOptions()
 ```
 
 ### Return value
 
-A new object with properties reflecting the locale and date and time formatting options
-computed during the initialization of the given {{jsxref("Intl.DateTimeFormat")}} object.
+A new object with properties reflecting the locale and date and time formatting options computed during the initialization of the given {{jsxref("Intl.DateTimeFormat")}} object.
 
 ## Description
 
 The resulting object has the following properties:
 
 - `locale`
-  - : The [BCP 47 language tag](https://datatracker.ietf.org/doc/html/rfc5646) for the locale used. If any Unicode extension
-    values were requested in the input BCP 47 language tag that led to this locale,
-    the key-value pairs that were requested and are supported for this locale are
-    included in `locale`.
+  - : The [BCP 47 language tag](https://datatracker.ietf.org/doc/html/rfc5646) for the locale used. If any Unicode extension values were requested in the input BCP 47 language tag that led to this locale, the key-value pairs that were requested and are supported for this locale are included in `locale`.
 - `style`
   - : One of the strings `"long"`, `"short"`, `"narrow"`, or `"digital"` identifying the duration formatting style used.
 - `years`
@@ -81,7 +77,7 @@ The resulting object has the following properties:
 ### Using the resolvedOptions method
 
 ```js
-const duration = new Intl.DurationFormat('en');
+const duration = new Intl.DurationFormat("en");
 const usedOptions = duration.resolvedOptions();
 
 usedOptions.locale; // "en"
@@ -103,4 +99,4 @@ usedOptions.style; // "long"
 
 - {{jsxref("Intl.DurationFormat")}}
 - {{jsxref("Intl.supportedValuesOf()")}}
-- {{jsxref("Global_Objects/Intl", "Intl")}}
+- {{jsxref("Intl")}}

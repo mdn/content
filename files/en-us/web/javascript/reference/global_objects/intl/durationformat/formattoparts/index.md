@@ -7,18 +7,22 @@ browser-compat: javascript.builtins.Intl.DurationFormat.formatToParts
 
 {{JSRef}} {{SeeCompatTable}}
 
-The **`Intl.DurationFormat.prototype.formatToParts()`** method allows locale-aware formatting of strings produced by {{jsxref("Intl.DurationFormat")}} formatters.
+The **`formatToParts()`** method of {{jsxref("Intl.DurationFormat")}} instances allows locale-aware formatting of strings produced by {{jsxref("Intl.DurationFormat")}} formatters.
 
 ## Syntax
 
-```js
+```js-nolint
 formatToParts(duration)
 ```
 
 ### Parameters
 
 - `duration` {{optional_inline}}
-  - : The duration to be formatted.
+  - : The duration object to be formatted. It should include some or all of the following properties: `"months"`, `"weeks"`, `"days"`, `"hours"`, `"minutes"`, `"seconds"`, `"milliseconds"`, `"microseconds"`, `"nanoseconds"`.
+
+### Return value
+
+An {{jsxref("Array")}} of objects containing the formatted duration in parts.
 
 ## Description
 
@@ -26,14 +30,14 @@ The `formatToParts()` method is useful for custom formatting of duration objects
 
 ```js
 [
- { type: "integer", value: "7", unit: "hour" },
- { type: "literal", value: " ", unit: "hour" },
- { type: "unit", value: "hr", unit: "hour" },
- { type: "literal", value: ", " },
- { type: "integer", value: "8", unit: "minute" },
- { type: "literal", value: " ", unit: "minute" },
- { type: "unit", value: "min", unit: "minute" }
-]
+  { type: "integer", value: "7", unit: "hour" },
+  { type: "literal", value: " ", unit: "hour" },
+  { type: "unit", value: "hr", unit: "hour" },
+  { type: "literal", value: ", " },
+  { type: "integer", value: "8", unit: "minute" },
+  { type: "literal", value: " ", unit: "minute" },
+  { type: "unit", value: "min", unit: "minute" },
+];
 ```
 
 ## Examples
@@ -50,7 +54,7 @@ const duration = {
   nanoseconds: 789,
 };
 
-new Intl.DurationFormat('en', { style : 'long' }).formatToParts(duration);
+new Intl.DurationFormat("en", { style: "long" }).formatToParts(duration);
 
 // Returned value:
 [
@@ -77,7 +81,7 @@ new Intl.DurationFormat('en', { style : 'long' }).formatToParts(duration);
   { type: "integer", value: "789", unit: "nanosecond" },
   { type: "literal", value: " ", unit: "nanosecond" },
   { type: "unit", value: "nanoseconds", unit: "nanosecond" },
-]
+];
 ```
 
 ## Specifications
@@ -92,4 +96,4 @@ new Intl.DurationFormat('en', { style : 'long' }).formatToParts(duration);
 
 - {{jsxref("Intl.DurationFormat")}}
 - {{jsxref("Intl.supportedValuesOf()")}}
-- {{jsxref("Global_Objects/Intl", "Intl")}}
+- {{jsxref("Intl")}}

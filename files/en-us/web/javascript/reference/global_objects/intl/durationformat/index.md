@@ -14,6 +14,15 @@ The **`Intl.DurationFormat`** object enables language-sensitive duration formatt
 - {{jsxref("Intl/DurationFormat/DurationFormat", "Intl.DurationFormat()")}}
   - : Creates a new `Intl.DurationFormat` object.
 
+## Instance properties
+
+These properties are defined on `Intl.DurationFormat.prototype` and shared by all `Intl.DurationFormat` instances.
+
+- {{jsxref("Object/constructor", "Intl.DurationFormat.prototype.constructor")}}
+  - : The constructor function that created the instance object. For `Intl.DurationFormat` instances, the initial value is the {{jsxref("Intl/DurationFormat/DurationFormat", "Intl.DurationFormat")}} constructor.
+- `Intl.DurationFormat.prototype[@@toStringTag]`
+  - : The initial value of the [`@@toStringTag`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) property is the string `"Intl.DurationFormat"`. This property is used in {{jsxref("Object.prototype.toString()")}}.
+
 ## Instance methods
 
 - {{jsxref("Intl/DurationFormat/format", "Intl.DurationFormat.prototype.format()")}}
@@ -25,9 +34,9 @@ The **`Intl.DurationFormat`** object enables language-sensitive duration formatt
 
 ## Examples
 
-### Using DurationFormat
+### Using Intl.DurationFormat
 
-In basic use without specifying a locale, `DurationFormat` uses the default locale and default options.
+The examples below show how to use the `Intl.DurationFormat` object to format a duration object with various locales and styles.
 
 ```js
 const duration = {
@@ -36,17 +45,17 @@ const duration = {
   seconds: 40,
 };
 
-// Example using style set to `long` and locale `fr-FR`
+// With style set to "long" and locale "fr-FR"
 new Intl.DurationFormat("fr-FR", { style: "long" }).format(duration);
-// → '1 heure, 46 minutes et 40 secondes'
+// "1 heure, 46 minutes et 40 secondes"
 
-// Example using style set to `short`  and locale `en`
+// With style set to "short" and locale "en"
 new Intl.DurationFormat("en", { style: "short" }).format(duration);
-// → '1 hr, 46 min and 40 sec'
+// "1 hr, 46 min and 40 sec"
 
-// Example using style set to `short`  and locale `pt`
+// With style set to "short" and locale "pt"
 new Intl.DurationFormat("pt", { style: "narrow" }).format(duration);
-// → 1h 46min 40s
+// "1h 46min 40s"
 ```
 
 ## Specifications
