@@ -58,46 +58,73 @@ Other dependencies, such as database drivers, template engines, authentication e
 
 ## Installing Node
 
-In order to use _Express_ you will first have to install _Nodejs_ and the [Node Package Manager (npm)](https://docs.npmjs.com/) on your operating system. The following sections explain the easiest way to install the Long Term Supported (LTS) version of Nodejs on Ubuntu Linux 20.04, macOS, and Windows 10.
+In order to use _Express_ you will have to install _Nodejs_ and the [Node Package Manager (npm)](https://docs.npmjs.com/) on your operating system.
+To make this easier we'll first install a node version manager, and then we'll use it to install the latest Long Term Supported (LTS) versions of node and npm.
 
-> **Note:** The sections below show the easiest way to install _Node_ and _npm_ on our target OS platforms. If you're using another OS or just want to see some of the other approaches for the current platforms then see [Installing Node.js via package manager](https://nodejs.org/en/download/package-manager/) (nodejs.org).
+> **Note:** You can also install nodejs and npm with installers provide on <https://nodejs.org/en/> (select the button to download the LTS build that is "Recommended for most users"), or you can [install using the package manager for your OS](https://nodejs.org/en/download/package-manager/) (nodejs.org).
+> We highly recommend using a node version manager as these make it easier to install, upgrade, and switch between any particular version of node and npm.
 
-### macOS and Windows
+### Windows
 
-Installing _Node_ and _npm_ on Windows and macOS is straightforward because you can just use the provided installer:
+There are a number of node version managers for Windows.
+Here we use [nvm-windows](https://github.com/coreybutler/nvm-windows), which is highly respected among node developers.
 
-1. Download the required installer:
+Install the latest version using your installer of choice from the [nvm-windows/releases](https://github.com/coreybutler/nvm-windows/releases) page.
+After `nvm-windows` has installed, open a command prompt (or PowerShell) and enter the following command to download the most recent LTS version of nodejs and npm:
 
-   1. Go to <https://nodejs.org/en/>
-   2. Select the button to download the LTS build that is "Recommended for most users".
-
-2. Install Node by double-clicking on the downloaded file and following the installation prompts.
-
-### Ubuntu 20.04
-
-The easiest way to install the most recent LTS version of Node is to use the [package manager](https://nodejs.org/en/download/package-manager/#debian-and-ubuntu-based-linux-distributions) to get it from the Ubuntu _binary distributions_ repository. This can be done by running the following two commands on your terminal:
-
-```bash
-curl -sL https://deb.nodesource.com/setup_lts.x | sudo -E bash -
-sudo apt-get install -y nodejs
+```
+nvm install lts
 ```
 
-> **Warning:** Don't install directly from the normal Ubuntu repositories because they contain very old versions of node.
+At time of writing the LTS version of nodejs is 18.15.0.
+You can set this as the _current version_ to use with the command below:
+
+```
+nvm use 18.15.0
+```
+
+> **Note** If you get "Access Denied" warnings, you will need to run this command in a prompt with administration permissions.
+
+Use the command `nvm --help` to find out other command line options, such as listing all available node versions, and all downloaded NVM versions.
+
+### Ubuntu and macOS
+
+There are a number of node version managers for Ubuntu and macOS.
+[nvm](https://github.com/nvm-sh/nvm) is one of the more popular, and is the original version on which `nvm-windows` is based.
+See [nvm > Install & Update Script](https://github.com/nvm-sh/nvm#install--update-script) for the terminal instructions to install the latest version of nvm.
+
+After `nvm` has installed, open a terminal enter the following command to download the most recent LTS version of nodejs and npm:
+
+```
+nvm install --lts
+```
+
+At the time of writing, the LTS version of nodejs is 18.15.0.
+The command `nvm list` shows the downloaded set of version and the current version.
+You can set a particular version as the _current version_ with the command below (the same as for `npm-windows`)
+
+```
+nvm use 18.15.0
+```
+
+Use the command `nvm --help` to find out other command line options.
+These are often similar but not exactly the same as offered by `npm-windows`.
 
 ### Testing your Nodejs and npm installation
 
-The easiest way to test that node is installed is to run the "version" command in your terminal/command prompt and check that a version string is returned:
+Once you have set `nvm` to use a particular node version, you can test the installation.
+A good way to do this is to use the "version" command in your terminal/command prompt and check that the expected version string is returned:
 
 ```bash
 > node -v
-v16.17.1
+v18.15.0
 ```
 
 The _Nodejs_ package manager _npm_ should also have been installed, and can be tested in the same way:
 
 ```bash
 > npm -v
-8.19.2
+9.3.1
 ```
 
 As a slightly more exciting test let's create a very basic "pure node" server that prints out "Hello World" in the browser when you visit the correct URL in your browser:
@@ -139,7 +166,8 @@ As a slightly more exciting test let's create a very basic "pure node" server th
 
 ## Using npm
 
-Next to _Node_ itself, [npm](https://docs.npmjs.com/) is the most important tool for working with _Node_ applications. npm is used to fetch any packages (JavaScript libraries) that an application needs for development, testing, and/or production, and may also be used to run tests and tools used in the development process.
+Next to _Node_ itself, [npm](https://docs.npmjs.com/) is the most important tool for working with _Node_ applications.
+`npm` is used to fetch any packages (JavaScript libraries) that an application needs for development, testing, and/or production, and may also be used to run tests and tools used in the development process.
 
 > **Note:** From Node's perspective, _Express_ is just another package that you need to install using npm and then require in your own code.
 

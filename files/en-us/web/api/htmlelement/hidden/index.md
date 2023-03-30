@@ -24,7 +24,7 @@ For details on the usage of this attribute, see the page for the [`hidden`](/en-
 
 ## Examples
 
-Here's an example where a hidden block is used to contain a thank you message that is
+Here's an example where a hidden block is used to contain a 'thank you' message that is
 displayed after a user agrees to an unusual request.
 
 ### HTML
@@ -97,5 +97,5 @@ document.getElementById("okButton").addEventListener(
 
 ## See also
 
-- {{htmlattrxref("hidden")}} attribute
+- [hidden](/en-US/docs/Web/HTML/Global_attributes#hidden) attribute
 - {{cssxref("display")}}

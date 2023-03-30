@@ -79,8 +79,7 @@ condimentum sapien non felis cursus blandit. Integer
 euismod lectus a ipsum pellentesque lacinia.</p>
 `;
 
-document.getElementById("frame").contentDocument
-        .body.innerHTML = contentHTML;
+document.getElementById("frame").contentDocument.body.innerHTML = contentHTML;
 ```
 
 In this example, an {{HTMLElement("iframe")}} is created and filled with content, then

@@ -14,10 +14,6 @@ browser-compat: html.manifest.display_override
       <th scope="row">Type</th>
       <td><code>Array</code></td>
     </tr>
-    <tr>
-      <th scope="row">Mandatory</th>
-      <td>No</td>
-    </tr>
   </tbody>
 </table>
 

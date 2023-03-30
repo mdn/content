@@ -7,7 +7,7 @@ browser-compat: css.selectors.part
 
 {{CSSRef}}
 
-The **`::part`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) represents any element within a [shadow tree](/en-US/docs/Web/Web_Components/Using_shadow_DOM) that has a matching {{HTMLAttrxRef("part")}} attribute.
+The **`::part`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) represents any element within a [shadow tree](/en-US/docs/Web/Web_Components/Using_shadow_DOM) that has a matching [`part`](/en-US/docs/Web/HTML/Global_attributes#part) attribute.
 
 ```css
 custom-element::part(foo) {
@@ -106,6 +106,6 @@ globalThis.customElements.define(
 
 ## See also
 
-- The {{HTMLAttrxRef("part")}} attribute - Used to define parts which can be selected by the `::part()` selector
-- The {{HTMLAttrxRef("exportparts")}} attribute - Used to transitively export shadow parts from a nested shadow tree into a containing light tree.
+- The [`part`](/en-US/docs/Web/HTML/Global_attributes#part) attribute - Used to define parts which can be selected by the `::part()` selector
+- The [`exportparts`](/en-US/docs/Web/HTML/Global_attributes#exportparts) attribute - Used to transitively export shadow parts from a nested shadow tree into a containing light tree.
 - [Explainer: CSS Shadow ::part and ::theme](https://github.com/fergald/docs/blob/master/explainers/css-shadow-parts-1.md)

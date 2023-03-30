@@ -8,7 +8,7 @@ browser-compat: javascript.builtins.FinalizationRegistry.FinalizationRegistry
 
 {{JSRef}}
 
-The **`FinalizationRegistry`** constructor creates a {{jsxref("FinalizationRegistry")}} object that uses the given callback.
+The **`FinalizationRegistry()`** constructor creates {{jsxref("FinalizationRegistry")}} objects.
 
 ## Syntax
 

@@ -50,9 +50,18 @@ None ({{jsxref("undefined")}}).
 ## Examples
 
 ```js
-gl.blitFramebuffer(0, 0, canvas.width, canvas.height,
-                   0, 0, canvas.width, canvas.height,
-                   gl.COLOR_BUFFER_BIT, gl.NEAREST);
+gl.blitFramebuffer(
+  0,
+  0,
+  canvas.width,
+  canvas.height,
+  0,
+  0,
+  canvas.width,
+  canvas.height,
+  gl.COLOR_BUFFER_BIT,
+  gl.NEAREST
+);
 ```
 
 ## Specifications

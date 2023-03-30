@@ -7,13 +7,9 @@ browser-compat: javascript.builtins.Intl.NumberFormat.NumberFormat
 
 {{JSRef}}
 
-The **`Intl.NumberFormat()`** constructor creates
-{{jsxref("Intl/NumberFormat", "Intl.NumberFormat")}} objects that enable language-sensitive
-number formatting.
+The **`Intl.NumberFormat()`** constructor creates {{jsxref("Intl.NumberFormat")}} objects.
 
 {{EmbedInteractiveExample("pages/js/intl-numberformat.html")}}
-
-<!-- The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone https://github.com/mdn/interactive-examples and send us a pull request. -->
 
 ## Syntax
 

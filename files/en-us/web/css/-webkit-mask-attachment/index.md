@@ -24,6 +24,8 @@ If a {{CSSxRef("mask-image")}} is specified, `-webkit-mask-attachment` determine
 /* Global values */
 -webkit-mask-attachment: inherit;
 -webkit-mask-attachment: initial;
+-webkit-mask-attachment: revert;
+-webkit-mask-attachment: revert-layer;
 -webkit-mask-attachment: unset;
 ```
 

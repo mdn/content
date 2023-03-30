@@ -35,11 +35,11 @@ getIndexedParameter(target, index)
     - `gl.UNIFORM_BUFFER_START`: Returns a {{domxref("WebGL_API/Types", "GLintptr")}}.
 
      When using the {{domxref("OES_draw_buffers_indexed")}} WebGL 2 extension, the following values are available additionally:
-    - `gl.BLEND_EQUATION_RGB`: Returns the RBG blend equation for the draw buffer at `index`.
+    - `gl.BLEND_EQUATION_RGB`: Returns the RGB blend equation for the draw buffer at `index`.
     - `gl.BLEND_EQUATION_ALPHA`: Returns the alpha blend equation for the draw buffer at `index`.
-    - `gl.BLEND_SRC_RGB`: Returns the source RBG blend function for the draw buffer at `index`.
+    - `gl.BLEND_SRC_RGB`: Returns the source RGB blend function for the draw buffer at `index`.
     - `gl.BLEND_SRC_ALPHA`: Returns the source alpha blend function for the draw buffer at `index`.
-    - `gl.BLEND_DST_RGB`: Returns the destination RBG blend function for the draw buffer at `index`.
+    - `gl.BLEND_DST_RGB`: Returns the destination RGB blend function for the draw buffer at `index`.
     - `gl.BLEND_DST_ALPHA`: Returns the destination alpha blend function for the draw buffer at `index`.
     - `gl.COLOR_WRITEMASK`: Returns an array containing color components are enabled for the draw buffer at `index`.
 

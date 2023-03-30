@@ -30,6 +30,8 @@ When applied to anchor elements, the truncating can happen in the middle of the 
 /* Global values */
 -webkit-line-clamp: inherit;
 -webkit-line-clamp: initial;
+-webkit-line-clamp: revert;
+-webkit-line-clamp: revert-layer;
 -webkit-line-clamp: unset;
 ```
 

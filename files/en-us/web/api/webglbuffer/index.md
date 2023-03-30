@@ -25,8 +25,8 @@ The `WebGLBuffer` object does not define any methods or properties of its own an
 ### Creating a buffer
 
 ```js
-const canvas = document.getElementById('canvas');
-const gl = canvas.getContext('webgl');
+const canvas = document.getElementById("canvas");
+const gl = canvas.getContext("webgl");
 const buffer = gl.createBuffer();
 ```
 

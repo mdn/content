@@ -40,7 +40,7 @@ Highlights:
 ### HTML
 
 - Support for [`<meta name="referrer">`](/en-US/docs/Web/HTML/Element/meta) has been added ([Firefox bug 704320](https://bugzil.la/704320)).
-- In Firefox, {{HTMLElement("input")}} filters specified in the {{htmlattrxref("accept", "input")}} attribute will always be selected by default, unless there is an unknown value, that is an unknown mime type or badly formatted value in the {{htmlattrxref("accept", "input")}} attribute. Previously specified filters were only selected by default for `image/*`, `video/*` and `audio/*` values ([Firefox bug 826185](https://bugzil.la/826185)).
+- In Firefox, {{HTMLElement("input")}} filters specified in the [`accept`](/en-US/docs/Web/HTML/Element/input#accept) attribute will always be selected by default, unless there is an unknown value, that is an unknown mime type or badly formatted value in the [`accept`](/en-US/docs/Web/HTML/Element/input#accept) attribute. Previously specified filters were only selected by default for `image/*`, `video/*` and `audio/*` values ([Firefox bug 826185](https://bugzil.la/826185)).
 
 ### JavaScript
 
@@ -64,8 +64,8 @@ Highlights:
   - `const a = 1; a = 2;` now also throws a {{jsxref("SyntaxError")}} ("invalid assignment to const a").
 
 - The ES2016 method {{jsxref("Array.prototype.includes")}} has been implemented, but for now, it is only enabled in Nightly builds ([Firefox bug 1069063](https://bugzil.la/1069063)).
-- The [`delete`](/en-US/docs/Web/JavaScript/Reference/Operators/delete) operator now triggers the "[temporal dead zone](/en-US/docs/Web/JavaScript/Reference/Statements/let#temporal_dead_zone_and_errors_with_let)" when using with [`let`](/en-US/docs/Web/JavaScript/Reference/Statements/let) and [`const`](/en-US/docs/Web/JavaScript/Reference/Statements/const) ([Firefox bug 1074571](https://bugzil.la/1074571)).
-- The non-standard [`let` blocks and `let` expressions](/en-US/docs/Web/JavaScript/Reference/Statements/let#non-standard_let_extensions) are deprecated and will now log a warning in the console. Do not use them anymore, they will be removed in the future.
+- The [`delete`](/en-US/docs/Web/JavaScript/Reference/Operators/delete) operator now triggers the "[temporal dead zone](/en-US/docs/Web/JavaScript/Reference/Statements/let#temporal_dead_zone_tdz)" when using with [`let`](/en-US/docs/Web/JavaScript/Reference/Statements/let) and [`const`](/en-US/docs/Web/JavaScript/Reference/Statements/const) ([Firefox bug 1074571](https://bugzil.la/1074571)).
+- The non-standard [`let` blocks and `let` expressions](/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features#statements_2) are deprecated and will now log a warning in the console. Do not use them anymore, they will be removed in the future.
 - [WeakMap](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakMap) constructor now handles optional iterable argument ([Firefox bug 1092537](https://bugzil.la/1092537)).
 
 ### Interfaces/APIs/DOM
@@ -148,7 +148,7 @@ New constants have been added to `nsIContentPolicy` to allow Gecko internals and
 - `TYPE_FETCH`
   - : Indicates a content load request initiated by the {{domxref("fetch()")}} method.
 - `TYPE_IMAGESET`
-  - : Indicates a request to load an {{HTMLElement("img")}} (with the {{htmlattrxref("srcset", "img")}} attribute or {{HTMLElement("picture")}} element.
+  - : Indicates a request to load an {{HTMLElement("img")}} (with the [`srcset`](/en-US/docs/Web/HTML/Element/img#srcset) attribute or {{HTMLElement("picture")}} element.
 
 ### XUL
 

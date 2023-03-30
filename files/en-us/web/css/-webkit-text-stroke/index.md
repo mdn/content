@@ -17,9 +17,13 @@ text-stroke: 4px navy;
 /* Global values */
 -webkit-text-stroke: inherit;
 -webkit-text-stroke: initial;
+-webkit-text-stroke: revert;
+-webkit-text-stroke: revert-layer;
 -webkit-text-stroke: unset;
 text-stroke: inherit;
 text-stroke: initial;
+text-stroke: revert;
+text-stroke: revert-layer;
 text-stroke: unset;
 ```
 

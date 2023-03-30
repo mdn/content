@@ -9,7 +9,7 @@ browser-compat: api.HTMLImageElement.referrerPolicy
 
 The
 **`HTMLImageElement.referrerPolicy`**
-property reflects the HTML {{htmlattrxref("referrerpolicy","img")}} attribute of the
+property reflects the HTML [`referrerpolicy`](/en-US/docs/Web/HTML/Element/img#referrerpolicy) attribute of the
 {{HTMLElement("img")}} element defining which referrer is sent when fetching the
 resource.
 
