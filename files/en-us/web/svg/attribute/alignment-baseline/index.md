@@ -1,9 +1,7 @@
 ---
 title: alignment-baseline
 slug: Web/SVG/Attribute/alignment-baseline
-tags:
-  - SVG
-  - SVG Attribute
+page-type: svg-attribute
 browser-compat: svg.attributes.presentation.alignment-baseline
 ---
 

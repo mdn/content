@@ -1,12 +1,7 @@
 ---
 title: <feSpecularLighting>
 slug: Web/SVG/Element/feSpecularLighting
-tags:
-  - Element
-  - NeedsBrowserCompatibility
-  - NeedsMobileBrowserCompatibility
-  - SVG
-  - SVG Filter
+page-type: svg-element
 browser-compat: svg.elements.feSpecularLighting
 ---
 

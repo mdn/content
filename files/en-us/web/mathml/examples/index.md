@@ -1,12 +1,9 @@
 ---
 title: Examples
 slug: Web/MathML/Examples
-tags:
-  - Beginner
-  - Example
-  - Guide
-  - MathML
 ---
+
+{{MathMLRef}}
 
 Below you'll find some examples you can look at to help you to understand how to use MathML.
 

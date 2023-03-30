@@ -1,16 +1,10 @@
 ---
 title: SVG and CSS
 slug: Web/SVG/Tutorial/SVG_and_CSS
-tags:
-  - CSS
-  - CSS:Getting_Started
-  - Example
-  - Guide
-  - Intermediate
-  - NeedsUpdate
-  - SVG
-  - Web
+page-type: guide
 ---
+
+{{SVGRef}}
 
 {{ PreviousNext("Web/SVG/Tutorial/Tools_for_SVG") }}
 

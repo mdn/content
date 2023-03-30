@@ -2,10 +2,6 @@
 title: Box-shadow generator
 slug: Web/CSS/CSS_Backgrounds_and_Borders/Box-shadow_generator
 page-type: guide
-tags:
-  - CSS
-  - Tools
-  - box-shadow
 ---
 
 {{CSSRef}}
@@ -33,3 +29,10 @@ To add another shadow, click "+" again. Now any values you set will apply to thi
 You can add {{cssxref("::before")}} and {{cssxref("::after")}} pseudo-elements to the element, and give them box shadows as well. To switch between the element and its pseudo-elements, use the buttons along the top labeled "element", ":before", and ":after".
 
 The box at the bottom-right contains the CSS for the element and any `before::` or `::after` pseudo-elements.
+
+## See also
+
+- [Border-image generator](/en-US/docs/Web/CSS/CSS_Backgrounds_and_Borders/Border-image_generator)
+  - : This interactive tool lets you visually create border images (the {{cssxref("border-image")}} property).
+- [Border-radius generator](/en-US/docs/Web/CSS/CSS_Backgrounds_and_Borders/Border-radius_generator)
+  - : This interactive tool lets you visually create rounded corners (the {{cssxref("border-radius")}} property).

@@ -1,18 +1,19 @@
 ---
-title: Function.prototype.prototype
+title: "Function: prototype"
 slug: Web/JavaScript/Reference/Global_Objects/Function/prototype
-tags:
-  - Function
-  - JavaScript
-  - Property
+page-type: javascript-instance-data-property
 spec-urls: https://tc39.es/ecma262/multipage/fundamental-objects.html#sec-function-instances-prototype
 ---
 
 {{JSRef}}
 
-A {{jsxref("Function")}} object's **`prototype`** property is used when the function is used as a constructor with the [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new) operator. It will become the new object's prototype.
+The **`prototype`** data property of a {{jsxref("Function")}} instance is used when the function is used as a constructor with the [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new) operator. It will become the new object's prototype.
 
 > **Note:** Not all {{jsxref("Function")}} objects have the `prototype` property — see [description](#description).
+
+## Value
+
+An object.
 
 {{js_property_attributes(1, 0, 0)}}
 

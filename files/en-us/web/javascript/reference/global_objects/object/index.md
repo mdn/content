@@ -1,10 +1,7 @@
 ---
 title: Object
 slug: Web/JavaScript/Reference/Global_Objects/Object
-tags:
-  - Class
-  - JavaScript
-  - Object
+page-type: javascript-class
 browser-compat: javascript.builtins.Object
 ---
 
@@ -38,8 +35,8 @@ const obj = {
   // you are receiving the object from external input
   propertyIsEnumerable() {
     return false;
-  }
-}
+  },
+};
 
 obj.propertyIsEnumerable("foo"); // false; unexpected result
 Object.prototype.propertyIsEnumerable.call(obj, "foo"); // true; expected result
@@ -150,6 +147,8 @@ JavaScript also has built-in APIs that produce `null`-prototype objects, especia
 - [`import.meta`](/en-US/docs/Web/JavaScript/Reference/Operators/import.meta)
 - Module namespace objects, obtained through [`import * as ns from "module";`](/en-US/docs/Web/JavaScript/Reference/Statements/import#namespace_import) or [`import()`](/en-US/docs/Web/JavaScript/Reference/Operators/import)
 
+The term "`null`-prototype object" often also includes any object without `Object.prototype` in its prototype chain. Such objects can be created with [`extends null`](/en-US/docs/Web/JavaScript/Reference/Classes/extends#extending_null) when using classes.
+
 ### Object coercion
 
 Many built-in operations that expect objects first coerce their arguments to objects. [The operation](https://tc39.es/ecma262/#sec-toobject) can be summarized as follows:
@@ -222,8 +221,10 @@ Unlike [conversion to primitives](/en-US/docs/Web/JavaScript/Data_structures#pri
 
 ## Instance properties
 
+These properties are defined on `Object.prototype` and shared by all `Object` instances.
+
 - {{jsxref("Object.prototype.constructor")}}
-  - : Specifies the function that creates an object's prototype.
+  - : The constructor function that created the instance object. For plain `Object` instances, the initial value is the {{jsxref("Object/Object", "Object")}} constructor. Instances of other constructors each inherit the `constructor` property from their respective `Constructor.prototype` object.
 - [`Object.prototype.__proto__`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/proto) {{Deprecated_Inline}}
   - : Points to the object which was used as prototype when the object was instantiated.
 
@@ -288,8 +289,8 @@ const current = Object.prototype.valueOf;
 // Since my property "-prop-value" is cross-cutting and isn't always
 // on the same prototype chain, I want to modify Object.prototype:
 Object.prototype.valueOf = function (...args) {
-  if (Object.hasOwn(this, '-prop-value')) {
-    return this['-prop-value'];
+  if (Object.hasOwn(this, "-prop-value")) {
+    return this["-prop-value"];
   } else {
     // It doesn't look like one of my objects, so let's fall back on
     // the default behavior by reproducing the current behavior as best we can.
@@ -297,7 +298,7 @@ Object.prototype.valueOf = function (...args) {
     // Even though valueOf() doesn't take arguments, some other hook may.
     return current.apply(this, args);
   }
-}
+};
 ```
 
 > **Warning:** Modifying the `prototype` property of any built-in constructor is considered a bad practice and risks forward compatibility.

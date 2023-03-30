@@ -1,17 +1,13 @@
 ---
 title: while
 slug: Web/JavaScript/Reference/Statements/while
-tags:
-  - JavaScript
-  - Language feature
-  - Statement
-  - while
+page-type: javascript-statement
 browser-compat: javascript.statements.while
 ---
 
 {{jsSidebar("Statements")}}
 
-The **while statement** creates a loop that executes a specified statement
+The **`while`** statement creates a loop that executes a specified statement
 as long as the test condition evaluates to true. The condition is evaluated before
 executing the statement.
 
@@ -71,11 +67,8 @@ In some cases, it can make sense to use an assignment as a condition — but whe
 
 Consider the following example, which iterates over a document's comments, logging them to the console.
 
-```js example-bad
-const iterator = document.createNodeIterator(
-  document,
-  NodeFilter.SHOW_COMMENT,
-);
+```js-nolint example-bad
+const iterator = document.createNodeIterator(document, NodeFilter.SHOW_COMMENT);
 let currentNode;
 while (currentNode = iterator.nextNode()) {
   console.log(currentNode.textContent.trim());
@@ -109,8 +102,7 @@ Therefore, in cases like that one, some [IDEs](https://en.wikipedia.org/wiki/Int
 But there's a best-practice way to avoid that warning: Make the code more-explicitly indicate it intends the condition to be whether the value of the `currentNode = iterator.nextNode()` assignment is truthy. And you do that minimally by putting additional parentheses as a [grouping operator](/en-US/docs/Web/JavaScript/Reference/Operators/Grouping) around the assignment:
 
 ```js
-const iterator = document.createNodeIterator(
-  document, NodeFilter.SHOW_COMMENT);
+const iterator = document.createNodeIterator(document, NodeFilter.SHOW_COMMENT);
 let currentNode;
 while ((currentNode = iterator.nextNode())) {
   console.log(currentNode.textContent.trim());
@@ -120,8 +112,7 @@ while ((currentNode = iterator.nextNode())) {
 But the real best practice is to go a step further and make the code even more clear — by adding a comparison operator to turn the condition into an explicit comparison:
 
 ```js example-good
-const iterator = document.createNodeIterator(
-  document, NodeFilter.SHOW_COMMENT);
+const iterator = document.createNodeIterator(document, NodeFilter.SHOW_COMMENT);
 let currentNode;
 while ((currentNode = iterator.nextNode()) !== null) {
   console.log(currentNode.textContent.trim());

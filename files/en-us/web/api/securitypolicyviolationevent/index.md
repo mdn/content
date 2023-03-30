@@ -2,14 +2,6 @@
 title: SecurityPolicyViolationEvent
 slug: Web/API/SecurityPolicyViolationEvent
 page-type: web-api-interface
-tags:
-  - API
-  - CSP
-  - HTTP
-  - Interface
-  - Reference
-  - Security
-  - SecurityPolicyViolationEvent
 browser-compat: api.SecurityPolicyViolationEvent
 ---
 
@@ -41,11 +33,11 @@ The **`SecurityPolicyViolationEvent`** interface inherits from {{domxref("Event"
 - {{domxref("SecurityPolicyViolationEvent.originalPolicy")}} {{ReadOnlyInline}}
   - : A string containing the policy whose enforcement uncovered the violation.
 - {{domxref("SecurityPolicyViolationEvent.referrer")}} {{ReadOnlyInline}}
-  - : A string representing the referrer of the resources whose policy was violated. This will be a URL or `null`.
+  - : A string representing the URL for the referrer of the resources whose policy was violated, or `null`.
 - {{domxref("SecurityPolicyViolationEvent.sample")}} {{ReadOnlyInline}}
   - : A string representing a sample of the resource that caused the violation, usually the first 40 characters. This will only be populated if the resource is an inline script, event handler, or style — external resources causing a violation will not generate a sample.
 - {{domxref("SecurityPolicyViolationEvent.sourceFile")}} {{ReadOnlyInline}}
-  - : A string representing the URI of the document or worker in which the violation was found.
+  - : If the violation occurred as a result of a script, this will be the URL of the script; otherwise, it will be `null`. Both `columnNumber` and `lineNumber` should have non-null values if this property is not `null`.
 - {{domxref("SecurityPolicyViolationEvent.statusCode")}} {{ReadOnlyInline}}
   - : A number representing the HTTP status code of the document or worker in which the violation occurred.
 - {{domxref("SecurityPolicyViolationEvent.violatedDirective")}} {{ReadOnlyInline}}

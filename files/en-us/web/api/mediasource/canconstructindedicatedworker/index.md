@@ -2,19 +2,12 @@
 title: MediaSource.canConstructInDedicatedWorker
 slug: Web/API/MediaSource/canConstructInDedicatedWorker
 page-type: web-api-static-property
-tags:
-  - API
-  - canConstructInDedicatedWorker
-  - Experimental
-  - Media Source Extensions
-  - MediaSource
-  - Property
-  - Static Property
-  - Reference
+status:
+  - experimental
 browser-compat: api.MediaSource.canConstructInDedicatedWorker
 ---
 
-{{APIRef("Media Source Extensions")}}{{seecompattable}}
+{{APIRef("Media Source Extensions")}}{{SeeCompatTable}}
 
 The **`canConstructInDedicatedWorker`** static property of the {{domxref("MediaSource")}} interface returns `true` if `MediaSource` worker support is implemented, providing a low-latency feature detection mechanism.
 
@@ -27,7 +20,7 @@ A boolean. Returns `true` if `MediaSource` worker support is implemented, or `fa
 ## Examples
 
 ```js
-if(MediaSource.canConstructInDedicatedWorker) {
+if (MediaSource.canConstructInDedicatedWorker) {
   // MSE is available in workers; let's do this
 }
 ```

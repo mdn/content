@@ -1,10 +1,6 @@
 ---
 title: Solve common problems in your JavaScript code
 slug: Learn/JavaScript/Howto
-tags:
-  - Beginner
-  - JavaScript
-  - Learn
 ---
 
 {{LearnSidebar}}
@@ -140,7 +136,7 @@ const myObject = {
 ### Debugging JavaScript
 
 - [What are the basic types of error?](/en-US/docs/Learn/JavaScript/First_steps/What_went_wrong#types_of_error)
-- [What are browser developer tools, and how do you access them?](/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools)
+- [What are browser developer tools, and how do you access them?](/en-US/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools)
 - [How do you log a value to the JavaScript console?](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/JavaScript#the_console_api)
 - [How do you use breakpoints and other JavaScript debugging features?](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/JavaScript#using_the_javascript_debugger)
 
@@ -149,8 +145,8 @@ For more information on JavaScript debugging, see [Handling common JavaScript pr
 ### Making decisions in code
 
 - [How do you execute different blocks of code, depending on a variable's value or other condition?](/en-US/docs/Learn/JavaScript/Building_blocks/conditionals)
-- [How do you use if ...else statements?](/en-US/docs/Learn/JavaScript/Building_blocks/conditionals#if_..._else_statements)
-- [How do you nest one decision block inside another?](/en-US/docs/Learn/JavaScript/Building_blocks/conditionals#nesting_if_..._else)
+- [How do you use if ...else statements?](/en-US/docs/Learn/JavaScript/Building_blocks/conditionals#if...else_statements)
+- [How do you nest one decision block inside another?](/en-US/docs/Learn/JavaScript/Building_blocks/conditionals#nesting_if...else)
 - [How do you use AND, OR, and NOT operators in JavaScript?](/en-US/docs/Learn/JavaScript/Building_blocks/conditionals#logical_operators_and_or_and_not)
 - [How do you conveniently handle a large number of choices for one condition?](/en-US/docs/Learn/JavaScript/Building_blocks/conditionals#switch_statements)
 - [How do you use a ternary operator to make a quick choice between two options based on a true or false test?](/en-US/docs/Learn/JavaScript/Building_blocks/conditionals#ternary_operator)

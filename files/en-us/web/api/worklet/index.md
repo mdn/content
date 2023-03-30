@@ -2,12 +2,6 @@
 title: Worklet
 slug: Web/API/Worklet
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Reference
-  - Worklet
-  - Worklets
 browser-compat: api.Worklet
 ---
 

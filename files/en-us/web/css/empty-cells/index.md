@@ -2,12 +2,6 @@
 title: empty-cells
 slug: Web/CSS/empty-cells
 page-type: css-property
-tags:
-  - CSS
-  - CSS Property
-  - CSS Tables
-  - Reference
-  - recipe:css-property
 browser-compat: css.properties.empty-cells
 ---
 

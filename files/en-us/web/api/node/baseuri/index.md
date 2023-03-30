@@ -2,10 +2,6 @@
 title: Node.baseURI
 slug: Web/API/Node/baseURI
 page-type: web-api-instance-property
-tags:
-  - Node
-  - Property
-  - Read-only
 browser-compat: api.Node.baseURI
 ---
 

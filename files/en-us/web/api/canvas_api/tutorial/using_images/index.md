@@ -2,15 +2,9 @@
 title: Using images
 slug: Web/API/Canvas_API/Tutorial/Using_images
 page-type: guide
-tags:
-  - Advanced
-  - Canvas
-  - Graphics
-  - HTML
-  - Tutorial
 ---
 
-{{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Drawing_text", "Web/API/Canvas_API/Tutorial/Transformations" )}}
+{{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Drawing_text", "Web/API/Canvas_API/Tutorial/Transformations" )}}
 
 Until now we have created our own [shapes](/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes) and [applied styles](/en-US/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors) to them. One of the more exciting features of {{HTMLElement("canvas")}} is the ability to use images. These can be used to do dynamic photo compositing or as backdrops of graphs, for sprites in games, and so forth. External images can be used in any format supported by the browser, such as PNG, GIF, or JPEG. You can even use the image produced by other canvas elements on the same page as the source!
 
@@ -52,7 +46,7 @@ We can obtain a reference to images on the same page as the canvas by using one 
 
 ### Using images from other domains
 
-Using the {{htmlattrxref("crossorigin", "img")}} attribute of an {{HTMLElement("img")}} element (reflected by the {{domxref("HTMLImageElement.crossOrigin")}} property), you can request permission to load an image from another domain for use in your call to `drawImage()`. If the hosting domain permits cross-domain access to the image, the image can be used in your canvas without tainting it; otherwise using the image will [taint the canvas](/en-US/docs/Web/HTML/CORS_enabled_image#what_is_a_.22tainted.22_canvas.3f).
+Using the [`crossorigin`](/en-US/docs/Web/HTML/Element/img#crossorigin) attribute of an {{HTMLElement("img")}} element (reflected by the {{domxref("HTMLImageElement.crossOrigin")}} property), you can request permission to load an image from another domain for use in your call to `drawImage()`. If the hosting domain permits cross-domain access to the image, the image can be used in your canvas without tainting it; otherwise using the image will [taint the canvas](/en-US/docs/Web/HTML/CORS_enabled_image#what_is_a_.22tainted.22_canvas.3f).
 
 ### Using other canvas elements
 
@@ -65,8 +59,8 @@ One of the more practical uses of this would be to use a second canvas element a
 Another option is to create new {{domxref("HTMLImageElement")}} objects in our script. To do this, you can use the convenient `Image()` constructor:
 
 ```js
-const img = new Image();   // Create new img element
-img.src = 'myImage.png'; // Set source path
+const img = new Image(); // Create new img element
+img.src = "myImage.png"; // Set source path
 ```
 
 When this script gets executed, the image starts loading.
@@ -74,11 +68,15 @@ When this script gets executed, the image starts loading.
 If you try to call `drawImage()` before the image has finished loading, it won't do anything (or, in older browsers, may even throw an exception). So you need to be sure to use the load event so you don't try this before the image has loaded:
 
 ```js
-const img = new Image();   // Create new img element
-img.addEventListener('load', () => {
-  // execute drawImage statements here
-}, false);
-img.src = 'myImage.png'; // Set source path
+const img = new Image(); // Create new img element
+img.addEventListener(
+  "load",
+  () => {
+    // execute drawImage statements here
+  },
+  false
+);
+img.src = "myImage.png"; // Set source path
 ```
 
 If you're only using one external image this can be a good approach, but once you need to track more than one we need to resort to something more clever. It's beyond the scope of this tutorial to look at image pre-loading tactics, but you should keep that in mind.
@@ -88,8 +86,9 @@ If you're only using one external image this can be a good approach, but once yo
 Another possible way to include images is via the [data: URL](/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URLs). Data URLs allow you to completely define an image as a Base64 encoded string of characters directly in your code.
 
 ```js
-const img = new Image();   // Create new img element
-img.src = 'data:image/gif;base64,R0lGODlhCwALAIAAAAAA3pn/ZiH5BAEAAAEALAAAAAALAAsAAAIUhA+hkcuO4lmNVindo7qyrIXiGBYAOw==';
+const img = new Image(); // Create new img element
+img.src =
+  "data:image/gif;base64,R0lGODlhCwALAIAAAAAA3pn/ZiH5BAEAAAEALAAAAAALAAsAAAIUhA+hkcuO4lmNVindo7qyrIXiGBYAOw==";
 ```
 
 One advantage of data URLs is that the resulting image is available immediately without another round trip to the server. Another potential advantage is that it is also possible to encapsulate in one file all of your [CSS](/en-US/docs/Web/CSS), [JavaScript](/en-US/docs/Web/JavaScript), [HTML](/en-US/docs/Web/HTML), and images, making it more portable to other locations.
@@ -102,11 +101,11 @@ You can also use frames from a video being presented by a {{HTMLElement("video")
 
 ```js
 function getMyVideo() {
-  const canvas = document.getElementById('canvas');
+  const canvas = document.getElementById("canvas");
   if (canvas.getContext) {
-    const ctx = canvas.getContext('2d');
+    const ctx = canvas.getContext("2d");
 
-    return document.getElementById('myvideo');
+    return document.getElementById("myvideo");
   }
 }
 ```
@@ -136,7 +135,7 @@ In the following example, we will use an external image as the backdrop for a sm
 
 ```js
 function draw() {
-  const ctx = document.getElementById('canvas').getContext('2d');
+  const ctx = document.getElementById("canvas").getContext("2d");
   const img = new Image();
   img.onload = () => {
     ctx.drawImage(img, 0, 0);
@@ -147,7 +146,7 @@ function draw() {
     ctx.lineTo(170, 15);
     ctx.stroke();
   };
-  img.src = 'backdrop.png';
+  img.src = "backdrop.png";
 }
 ```
 
@@ -178,7 +177,7 @@ In this example, we'll use an image as a wallpaper and repeat it several times o
 
 ```js
 function draw() {
-  const ctx = document.getElementById('canvas').getContext('2d');
+  const ctx = document.getElementById("canvas").getContext("2d");
   const img = new Image();
   img.onload = () => {
     for (let i = 0; i < 4; i++) {
@@ -187,7 +186,7 @@ function draw() {
       }
     }
   };
-  img.src = 'rhino.jpg';
+  img.src = "rhino.jpg";
 }
 ```
 
@@ -228,15 +227,24 @@ In this example, we'll use the same rhino as in the previous example, but we'll 
 
 ```js
 function draw() {
-  const canvas = document.getElementById('canvas');
-  const ctx = canvas.getContext('2d');
+  const canvas = document.getElementById("canvas");
+  const ctx = canvas.getContext("2d");
 
   // Draw slice
-  ctx.drawImage(document.getElementById('source'),
-                33, 71, 104, 124, 21, 20, 87, 104);
+  ctx.drawImage(
+    document.getElementById("source"),
+    33,
+    71,
+    104,
+    124,
+    21,
+    20,
+    87,
+    104
+  );
 
   // Draw frame
-  ctx.drawImage(document.getElementById('frame'), 0, 0);
+  ctx.drawImage(document.getElementById("frame"), 0, 0);
 }
 ```
 
@@ -304,9 +312,7 @@ function draw() {
   // Loop through all images
   for (const image of document.images) {
     // Don't add a canvas for the frame image
-    if (image.getAttribute('id') !== 'frame') {
-
-
+    if (image.getAttribute("id") !== "frame") {
       // Create canvas element
       const canvas = document.createElement("canvas");
       canvas.setAttribute("width", 132);

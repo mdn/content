@@ -2,12 +2,6 @@
 title: SVGFEDropShadowElement
 slug: Web/API/SVGFEDropShadowElement
 page-type: web-api-interface
-tags:
-  - API
-  - NeedsExample
-  - Reference
-  - SVG
-  - SVG DOM
 browser-compat: api.SVGFEDropShadowElement
 ---
 

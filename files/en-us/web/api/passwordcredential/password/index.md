@@ -2,15 +2,8 @@
 title: PasswordCredential.password
 slug: Web/API/PasswordCredential/password
 page-type: web-api-instance-property
-tags:
-  - API
-  - Credential Management API
-  - NeedsExample
-  - PasswordCredential
-  - Property
-  - Reference
-  - credential management
-  - Experimental
+status:
+  - experimental
 browser-compat: api.PasswordCredential.password
 ---
 

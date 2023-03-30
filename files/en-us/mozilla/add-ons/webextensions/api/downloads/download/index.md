@@ -1,16 +1,7 @@
 ---
 title: downloads.download()
 slug: Mozilla/Add-ons/WebExtensions/API/downloads/download
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - download
-  - downloads
+page-type: webextension-api-function
 browser-compat: webextensions.api.downloads.download
 ---
 
@@ -85,7 +76,7 @@ If you use [URL.createObjectURL()](/en-US/docs/Web/API/URL/createObjectURL) to d
 
 ## Examples
 
-The following snippet attempts to download an example file, also specifying a filename and location to save it in, and the `uniquify` `conflictAction` option.
+The following snippet attempts to download an example file, also specifying a filename and location to save it in, and `uniquify` as the value of the `conflictAction` option.
 
 ```js
 function onStartedDownload(id) {

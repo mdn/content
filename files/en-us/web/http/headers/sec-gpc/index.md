@@ -1,13 +1,9 @@
 ---
 title: Sec-GPC
 slug: Web/HTTP/Headers/Sec-GPC
-tags:
-  - GPC
-  - HTTP
-  - Reference
-  - header
-  - Experimental
-  - Non-standard
+status:
+  - experimental
+  - non-standard
 browser-compat: http.headers.Sec-GPC
 ---
 

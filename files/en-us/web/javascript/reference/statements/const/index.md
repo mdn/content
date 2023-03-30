@@ -1,19 +1,13 @@
 ---
 title: const
 slug: Web/JavaScript/Reference/Statements/const
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Language feature
-  - Reference
-  - Statement
-  - constants
+page-type: javascript-statement
 browser-compat: javascript.statements.const
 ---
 
 {{jsSidebar("Statements")}}
 
-Constants are block-scoped, much like variables declared using the
+The **`const`** declaration creates block-scoped constants, much like variables declared using the
 [`let`](/en-US/docs/Web/JavaScript/Reference/Statements/let)
 keyword. The value of a constant can't be changed through reassignment (i.e. by using the [assignment operator](/en-US/docs/Web/JavaScript/Reference/Operators/Assignment)), and it can't be redeclared (i.e. through a [variable declaration](/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#declarations)). However, if a constant is an [object](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object) or [array](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) its properties or items can be updated or removed.
 
@@ -22,7 +16,9 @@ keyword. The value of a constant can't be changed through reassignment (i.e. by 
 ## Syntax
 
 ```js-nolint
-const name1 = value1 [, name2 = value2 [, ... [, nameN = valueN]]]
+const name1 = value1;
+const name1 = value1, name2 = value2;
+const name1 = value1, name2 = value2, /* …, */ nameN = valueN;
 ```
 
 - `nameN`
@@ -57,6 +53,8 @@ All the considerations about the
 apply to both {{jsxref("Statements/let", "let")}} and `const`. For this reason, `const` declarations are commonly regarded as [non-hoisted](/en-US/docs/Glossary/Hoisting).
 
 A constant cannot share its name with a function or a variable in the same scope.
+
+If you're experimenting in a REPL, such as the Firefox web console (**Tools** > **Web Developer** > **Web Console**), and you run two `const` declarations with the same name in two separate inputs, you may get a syntax error due to re-declaration. See further discussion of this issue in [Firefox bug 1580891](https://bugzil.la/1580891). The Chrome console allows `const` re-declarations between different REPL inputs.
 
 Unlike `var`, `const` begins [_declarations_, not _statements_](/en-US/docs/Web/JavaScript/Reference/Statements#difference_between_statements_and_declarations). That means you cannot use a lone `const` declaration as the body of a block (which makes sense, since there's no way to access the variable).
 

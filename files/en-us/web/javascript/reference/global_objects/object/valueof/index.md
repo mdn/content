@@ -1,11 +1,7 @@
 ---
 title: Object.prototype.valueOf()
 slug: Web/JavaScript/Reference/Global_Objects/Object/valueOf
-tags:
-  - JavaScript
-  - Method
-  - Object
-  - Prototype
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.Object.valueOf
 ---
 

@@ -2,15 +2,6 @@
 title: Using bounded reference spaces
 slug: Web/API/WebXR_Device_API/Bounded_reference_spaces
 page-type: guide
-tags:
-  - 3D
-  - Graphics
-  - Guide
-  - Reference Space
-  - WebXR
-  - WebXR Device API
-  - XRBoundedReferenceSpace
-  - space
 ---
 
 {{DefaultAPISidebar("WebXR Device API")}}
@@ -21,7 +12,7 @@ There are many uses for bounded reference spaces, including projects such as vir
 
 ## Introduction
 
-A bounded reference space is one which represents an XR environment in which the user is able to move around physically in the real world while being tracked by the XR hardware, with their movements being then transposed into the simulation. The boundaries established by the bounded reference space, then, represent the edges of the safely passable, tracked space in the user's real world environment that are available for their movement while in the simulation.
+A bounded reference space is one which represents an XR environment in which the user is able to move around physically in the real world while being tracked by the XR hardware, with their movements being then transposed into the simulation. The boundaries established by the bounded reference space, then, represent the edges of the safely passable, tracked space in the user's real-world environment that are available for their movement while in the simulation.
 
 ### Requirements
 
@@ -73,13 +64,15 @@ Before actually attempting to create a bounded reference space, you need to crea
 ```js
 async function onActivateXRButton(event) {
   if (!xrSession) {
-    navigator.xr.requestSession("immersive-vr", {
-      requiredFeatures: ["local-floor"],
-      optionalFeatures: ["bounded-floor"]
-    }).then((session) => {
-      xrSession = session;
-      startSessionAnimation();
-    });
+    navigator.xr
+      .requestSession("immersive-vr", {
+        requiredFeatures: ["local-floor"],
+        optionalFeatures: ["bounded-floor"],
+      })
+      .then((session) => {
+        xrSession = session;
+        startSessionAnimation();
+      });
   }
 }
 ```
@@ -103,19 +96,21 @@ function onSessionStarted(session) {
   xrSession = session;
 
   spaceType = "bounded-floor";
-  xrSession.requestReferenceSpace(spaceType)
-  .then(onRefSpaceCreated)
-  .catch(() => {
-    spaceType = "local-floor";
-    xrSession.requestReferenceSpace(spaceType)
+  xrSession
+    .requestReferenceSpace(spaceType)
     .then(onRefSpaceCreated)
-    .catch(handleError);
-  });
+    .catch(() => {
+      spaceType = "local-floor";
+      xrSession
+        .requestReferenceSpace(spaceType)
+        .then(onRefSpaceCreated)
+        .catch(handleError);
+    });
 }
 
 function onRefSpaceCreated(refSpace) {
   xrSession.updateRenderState({
-    baseLayer: new XRWebGLLayer(xrSession, gl)
+    baseLayer: new XRWebGLLayer(xrSession, gl),
   });
 
   // Now set up matrices, create a secondary reference space to
@@ -142,13 +137,14 @@ This would change the `onRefSpaceCreated()` method from the above snippet to:
 ```js
 function onRefSpaceCreated(refSpace) {
   xrSession.updateRenderState({
-    baseLayer: new XRWebGLLayer(xrSession, gl)
+    baseLayer: new XRWebGLLayer(xrSession, gl),
   });
 
   let startPosition = vec3.fromValues(0, 1.5, 0);
   const startOrientation = vec3.fromValues(0, 0, 1.0);
   xrReferenceSpace = xrReferenceSpace.getOffsetReferenceSpace(
-          new XRRigidTransform(startPosition, startOrientation));
+    new XRRigidTransform(startPosition, startOrientation)
+  );
 
   xrSession.requestAnimationFrame(onDrawFrame);
 }

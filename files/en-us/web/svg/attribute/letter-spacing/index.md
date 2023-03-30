@@ -1,9 +1,7 @@
 ---
 title: letter-spacing
 slug: Web/SVG/Attribute/letter-spacing
-tags:
-  - SVG
-  - SVG Attribute
+page-type: svg-attribute
 browser-compat: svg.attributes.presentation.letter-spacing
 ---
 

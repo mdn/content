@@ -1,12 +1,7 @@
 ---
 title: JSON
 slug: Web/JavaScript/Reference/Global_Objects/JSON
-tags:
-  - JSON
-  - JavaScript
-  - Namespace
-  - Object
-  - Reference
+page-type: javascript-namespace
 browser-compat: javascript.builtins.JSON
 ---
 

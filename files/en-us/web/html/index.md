@@ -1,11 +1,7 @@
 ---
-title: 'HTML: HyperText Markup Language'
+title: "HTML: HyperText Markup Language"
 slug: Web/HTML
-tags:
-  - HTML
-  - Landing
-  - Web
-  - "l10n:priority"
+page-type: landing-page
 ---
 
 {{HTMLSidebar}}
@@ -56,16 +52,16 @@ Our [HTML Learning Area](/en-US/docs/Learn/HTML) features multiple modules that 
 ## Advanced topics
 
 - [CORS enabled image](/en-US/docs/Web/HTML/CORS_enabled_image)
-  - : The {{htmlattrxref("crossorigin", "img")}} attribute, in combination with an appropriate {{glossary("CORS")}} header, allows images defined by the {{HTMLElement("img")}} element to be loaded from foreign origins and used in a {{HTMLElement("canvas")}} element as if they were being loaded from the current origin.
+  - : The [`crossorigin`](/en-US/docs/Web/HTML/Element/img#crossorigin) attribute, in combination with an appropriate {{glossary("CORS")}} header, allows images defined by the {{HTMLElement("img")}} element to be loaded from foreign origins and used in a {{HTMLElement("canvas")}} element as if they were being loaded from the current origin.
 - [CORS settings attributes](/en-US/docs/Web/HTML/Attributes/crossorigin)
   - : Some HTML elements that provide support for [CORS](/en-US/docs/Web/HTTP/CORS), such as {{HTMLElement("img")}} or {{HTMLElement("video")}}, have a `crossorigin` attribute (`crossOrigin` property), which lets you configure the CORS requests for the element's fetched data.
-- [Preloading content with rel="preload"](/en-US/docs/Web/HTML/Link_types/preload)
-  - : The `preload` value of the {{htmlelement("link")}} element's {{htmlattrxref("rel", "link")}} attribute allows you to write declarative fetch requests in your HTML {{htmlelement("head")}}, specifying resources that your pages will need very soon after loading, which you therefore want to start preloading early in the lifecycle of a page load, before the browser's main rendering machinery kicks in. This ensures that they are made available earlier and are less likely to block the page's first render, leading to performance improvements. This article provides a basic guide to how `preload` works.
+- [Preloading content with rel="preload"](/en-US/docs/Web/HTML/Attributes/rel/preload)
+  - : The `preload` value of the {{htmlelement("link")}} element's [`rel`](/en-US/docs/Web/HTML/Element/link#rel) attribute allows you to write declarative fetch requests in your HTML {{htmlelement("head")}}, specifying resources that your pages will need very soon after loading, which you therefore want to start preloading early in the lifecycle of a page load, before the browser's main rendering machinery kicks in. This ensures that they are made available earlier and are less likely to block the page's first render, leading to performance improvements. This article provides a basic guide to how `preload` works.
 
 ## Reference
 
 - [HTML reference](/en-US/docs/Web/HTML/Reference)
-  - : HTML consists of **elements**, each of which may be modified by some number of **attributes**. HTML documents are connected to each other with [links](/en-US/docs/Web/HTML/Link_types).
+  - : HTML consists of **elements**, each of which may be modified by some number of **attributes**. HTML documents are connected to each other with **links**.
 - [HTML element reference](/en-US/docs/Web/HTML/Element)
   - : Browse a list of all {{glossary("HTML")}} {{glossary("Element", "elements")}}.
 - [HTML attribute reference](/en-US/docs/Web/HTML/Attributes)
@@ -74,12 +70,10 @@ Our [HTML Learning Area](/en-US/docs/Learn/HTML) features multiple modules that 
   - : Global attributes may be specified on all [HTML elements](/en-US/docs/Web/HTML/Element), _even those not specified in the standard_. This means that any non-standard elements must still permit these attributes, even though those elements make the document HTML5-noncompliant.
 - [Inline elements](/en-US/docs/Web/HTML/Inline_elements) and [block-level elements](/en-US/docs/Web/HTML/Block-level_elements)
   - : HTML elements are usually "inline" or "block-level" elements. An inline element occupies only the space bounded by the tags that define it. A block-level element occupies the entire space of its parent element (container), thereby creating a "block".
-- [Link types](/en-US/docs/Web/HTML/Link_types)
-  - : In HTML, various link types can be used to establish and define the relationship between two documents. Link elements that types can be set on include {{HTMLElement("a")}}, {{HTMLElement("area")}} and {{HTMLElement("link")}}.
 - [Guide to media types and formats on the web](/en-US/docs/Web/Media/Formats)
   - : The {{HTMLElement("audio")}} and {{HTMLElement("video")}} elements allow you to play audio and video media natively within your content without the need for external software support.
-- [HTML content categories](/en-US/docs/Web/Guide/HTML/Content_categories)
-  - : HTML is comprised of several kinds of content, each of which is allowed to be used in certain contexts and is disallowed in others. Similarly, each has a set of other content categories they can contain and elements that can or can't be used in them. This is a guide to these categories.
+- [HTML content categories](/en-US/docs/Web/HTML/Content_categories)
+  - : HTML is comprised of several kinds of content, each of which is allowed to be used in certain contexts and is disallowed in others. Similarly, each context has a set of other content categories it can contain and elements that can or can't be used in them. This is a guide to these categories.
 - [Quirks mode and standards mode](/en-US/docs/Web/HTML/Quirks_Mode_and_Standards_Mode)
   - : Historical information on quirks mode and standards mode.
 

@@ -2,9 +2,6 @@
 title: Live examples
 slug: MDN/Writing_guidelines/Page_structures/Live_samples
 page-type: mdn-writing-guide
-tags:
-  - meta
-  - writing-guide
 ---
 
 {{MDNSidebar}}
@@ -31,7 +28,7 @@ The resulting frame (or page) is sandboxed, secure, and technically may do anyth
 
 > **Note:** You **must** use the macro for presenting the live sample's output.
 
-Each {{HTMLElement("pre")}} block containing code for the sample has a class on it that indicates whether it's HTML, CSS, or JavaScript code; these are "brush: html", "brush: css", and "brush: js". These classes must be on the corresponding blocks of code.
+Each [code block](/en-US/docs/MDN/Writing_guidelines/Howto/Markdown_in_MDN#example_code_blocks) containing code for the sample has a language identifier on it that indicates whether it's HTML, CSS, or JavaScript code; these are "html", "css", and "js". These classes must be on the corresponding blocks of code.
 
 The live sample system has lots of options available, and we'll try to break things down to look at them a bit at a time.
 
@@ -87,17 +84,17 @@ One common use case is to take existing code snippets already shown on MDN and t
 
 The first step is to either add code snippets or ensure that existing ones are ready to be used as live samples, in terms of the content and in terms of their markup. The code snippets, taken together, must comprise a complete, runnable example. For example, if the existing snippet shows only CSS, you might need to add a snippet of HTML for the CSS to operate on.
 
-Each piece of code must be in a {{HTMLElement("pre")}} block, with a separate block for each language, properly marked as to which language it is. Most of the time, this has already been done, but it's always worth double-checking to be sure each piece of code is configured with the correct syntax. This is done with a class on the `<pre>` element of `brush:language-type`, where _language-type_ is the type of language the block contains, e.g. `html`, `css`, or `js`.
+Each piece of code must be in a code block, with a separate block for each language, properly marked as to which language it is. Most of the time, this has already been done, but it's always worth double-checking to be sure each piece of code is configured with the correct syntax. This is done with a language identifier on the code block of `language-type`, where _language-type_ is the type of language the block contains, e.g. `html`, `css`, or `js`.
 
 > **Note:** You may have more than one block for each language; they are all concatenated together. This lets you have a chunk of code, followed by an explanation of how it works, then another chunk, and so forth. This makes it even easier to produce tutorials and the like that utilize live samples interspersed with explanatory text.
 
-So make sure the {{HTMLElement("pre")}} blocks for your HTML, CSS, and/or JavaScript code are each configured correctly for that language's syntax highlighting, and you're good to go.
+So make sure the code blocks for your HTML, CSS, and/or JavaScript code are each configured correctly for that language's syntax highlighting, and you're good to go.
 
 ## Live sample demo
 
 This section is the result of using the live sample template button to create not only the main heading ("Live sample demo"), but also subheadings for our HTML, CSS, and JavaScript content. You're not limited to one block of each; in addition, they don't even need to be in any particular order. Mix and match!
 
-You may choose to delete any of these you wish; if you don't need any script, just delete that heading and its {{HTMLElement("pre")}} block. You can also delete the heading for a code block ("HTML", "CSS", or "JavaScript"), since these are not used by the live sample macro.
+You may choose to delete any of these you wish; if you don't need any script, just delete that heading and its code block. You can also delete the heading for a code block ("HTML", "CSS", or "JavaScript"), since these are not used by the live sample macro.
 
 Now that the template has been inserted, we can put in some code, and even some explanatory text.
 

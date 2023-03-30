@@ -1,12 +1,10 @@
 ---
 title: Fills and Strokes
 slug: Web/SVG/Tutorial/Fills_and_Strokes
-tags:
-  - Beginner
-  - NeedLiveSamples
-  - SVG
-  - SVG:Tutorial
+page-type: guide
 ---
+
+{{SVGRef}}
 
 {{ PreviousNext("Web/SVG/Tutorial/Paths", "Web/SVG/Tutorial/Gradients") }}
 
@@ -31,7 +29,7 @@ In addition, you can specify the opacity of either the `fill` or `stroke` separa
 
 In addition to its color properties, there are a few other attributes available to control the way a stroke is drawn on a line.
 
-![](svg_stroke_linecap_example.png)
+![The stroke-linecap attribute changes the look of these stroke's ends: square adds a square cap, round provides a rounded cap, and butt removes capping](svg_stroke_linecap_example.png)
 
 ```xml
 <?xml version="1.0" standalone="no"?>
@@ -54,7 +52,7 @@ There are three possible values for `stroke-linecap`:
 
 Use `stroke-linejoin` to control how the joint between two line segments is drawn.
 
-![](svg_stroke_linejoin_example.png)
+![The stroke-linejoin attribute changes the look at the point where two lines join, with miter created an angled join, round rounding the corner, and bevel creating a beveled edge, flattening the corner .](svg_stroke_linejoin_example.png)
 
 ```xml
 <?xml version="1.0" standalone="no"?>
@@ -74,7 +72,7 @@ Each of these polylines has two segments. The joint where the two meet is contro
 
 Finally, you can also use dashed line types on a stroke by specifying the `stroke-dasharray` attribute.
 
-![](svg_stroke_dasharray_example.png)
+![Two custom dashed lines, one with evenly spaced dashes and the other using a long-dash short dash using a stroke-dasharray attribute value.](svg_stroke_dasharray_example.png)
 
 ```xml
 <?xml version="1.0" standalone="no"?>
@@ -86,9 +84,7 @@ Finally, you can also use dashed line types on a stroke by specifying the `strok
 </svg>
 ```
 
-The `stroke-dasharray` attribute takes a series of comma-separated numbers as its argument.
-
-> **Note:** Unlike {{SVGElement("path")}} elements, these numbers **must** be comma-separated (whitespace is ignored).
+The `stroke-dasharray` attribute can take a series of comma and/or whitespace separated numbers as its argument.
 
 The first number specifies a distance for the filled area, and the second a distance for the unfilled area. So in the above example, the second path fills 5 pixel units, with 5 blank units until the next dash of 5 units. You can specify more numbers if you would like a more complicated dash pattern. The first example specifies three numbers, in which case the renderer loops the numbers twice to create an even pattern. So the first path renders 5 filled, 10 empty, 5 filled, and then loops back to create 5 empty, 10 filled, 5 empty. The pattern then repeats.
 

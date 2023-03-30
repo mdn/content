@@ -1,11 +1,6 @@
 ---
 title: Invalid argument
 slug: Web/WebDriver/Errors/InvalidArgument
-tags:
-  - Error
-  - Reference
-  - WebDriver
-  - invalid argument
 ---
 
 {{QuickLinksWithSubpages("/en-US/docs/Web/WebDriver/Errors")}}
@@ -31,7 +26,7 @@ except exceptions.InvalidArgumentException as e:
 
 Output:
 
-```
+```plain
 InvalidArgumentException: Expected -100 to be >= 0
 ```
 

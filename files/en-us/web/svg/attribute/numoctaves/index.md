@@ -1,10 +1,7 @@
 ---
 title: numOctaves
 slug: Web/SVG/Attribute/numOctaves
-tags:
-  - Filters
-  - SVG
-  - SVG Attribute
+page-type: svg-attribute
 browser-compat: svg.elements.feTurbulence.numOctaves
 ---
 

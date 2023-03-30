@@ -1,11 +1,8 @@
 ---
 title: prefer_related_applications
 slug: Web/Manifest/prefer_related_applications
-tags:
-  - Manifest
-  - Web
-  - prefer_related_applications
-  - Experimental
+status:
+  - experimental
 browser-compat: html.manifest.prefer_related_applications
 ---
 

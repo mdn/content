@@ -2,12 +2,6 @@
 title: contain-intrinsic-size
 slug: Web/CSS/contain-intrinsic-size
 page-type: css-shorthand-property
-tags:
-  - CSS
-  - CSS Property
-  - Reference
-  - contain-intrinsic-size
-  - recipe:css-shorthand-property
 browser-compat: css.properties.contain-intrinsic-size
 ---
 
@@ -149,26 +143,26 @@ The HTML defines two buttons, a container element that is subject to containment
 
 ```html
 <p>
-<label for="contain_intrinsic_size_selector">contain-intrinsic-size:</label>
-<select id="contain_intrinsic_size_selector">
-  <option>none</option>
-  <option>40px 130px</option>
-  <option>auto 40px auto 130px</option>
-</select>;<br/>
+  <label for="contain_intrinsic_size_selector">contain-intrinsic-size:</label>
+  <select id="contain_intrinsic_size_selector">
+    <option>none</option>
+    <option>40px 130px</option>
+    <option>auto 40px auto 130px</option></select
+  >;<br />
 
-<label for="contain_selector">contain:</label>
-<select id="contain_selector">
-  <option>none</option>
-  <option>size</option>
-  <option>strict</option>
-</select>;<br/>
+  <label for="contain_selector">contain:</label>
+  <select id="contain_selector">
+    <option>none</option>
+    <option>size</option>
+    <option>strict</option></select
+  >;<br />
 
-<label for="content_visibility_selector">content-visibility:</label>
-<select id="content_visibility_selector">
-  <option>visible</option>
-  <option>auto</option>
-  <option>hidden</option>
-</select>;
+  <label for="content_visibility_selector">content-visibility:</label>
+  <select id="content_visibility_selector">
+    <option>visible</option>
+    <option>auto</option>
+    <option>hidden</option></select
+  >;
 </p>
 
 <div id="contained_element">

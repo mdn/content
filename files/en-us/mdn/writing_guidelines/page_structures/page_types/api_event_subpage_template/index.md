@@ -2,9 +2,6 @@
 title: API event subpage template
 slug: MDN/Writing_guidelines/Page_structures/Page_types/API_event_subpage_template
 page-type: mdn-writing-guide
-tags:
-  - meta
-  - writing-guide
 browser-compat: path.to.feature.NameOfTheEvent_event
 ---
 
@@ -24,13 +21,10 @@ browser-compat: path.to.feature.NameOfTheEvent_event
 > title: "NameOfTheParentInterface: NameOfTheEvent event"
 > slug: Web/API/NameOfTheParentInterface/NameOfTheEventHandler_event
 > page-type: web-api-event
-> tags:
->   - NameOfTheEvent
->   - API
->   - Event
->   - Reference
->   - Experimental
->   - Non-standard
+> status:
+>   - experimental
+>   - deprecated
+>   - non-standard
 > browser-compat: path.to.feature.NameOfTheEvent_event
 > ---
 > ```
@@ -44,17 +38,8 @@ browser-compat: path.to.feature.NameOfTheEvent_event
 >     This will be formatted like `Web/API/NameOfTheParentInterface/NameOfTheEventHandler_event`.
 > - **page-type**
 >   - : The `page-type` key for Web/API events is always `web-api-event`.
-> - **tags**
->
->   - : Always include the following tags: **API**, **Reference**, **Event**, the _name of the event_, the name of the _parent interface_ (e.g. **Window**).
->
->     Include the following tags as appropriate:
->
->     - Technology status: **Experimental** (if the technology is [experimental](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#experimental)), **Deprecated** (if it is [deprecated](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#deprecated_and_obsolete)), **Non-standard** if it isn't on a standards track.
->     - Special requirements: **Secure context** (if it is available in a secure context only)
->     - Any other tags that represent terms people might search for related to the technology.
->       For example on WebVR interface pages we include **VR** and **Virtual reality**.
->
+> - **status**
+>   - : Include (appropriate) technology status keys: [**experimental**](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#experimental), [**deprecated**](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#deprecated), **non-standard** (if not on a standards track).
 > - **browser-compat**
 >
 >   - : Replace the placeholder value `path.to.feature.NameOfTheEvent_event` with the query string for the event in the [Browser compat data repo](https://github.com/mdn/browser-compat-data).
@@ -73,7 +58,7 @@ browser-compat: path.to.feature.NameOfTheEvent_event
 > - `\{{SeeCompatTable}}` — this generates a **This is an experimental technology** banner that indicates the technology is [experimental](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#experimental).
 >   If the technology you are documenting is not experimental, you should remove this.
 >   If it is experimental, and the technology is hidden behind a pref in Firefox, you should also fill in an entry for it in the [Experimental features in Firefox](/en-US/docs/Mozilla/Firefox/Experimental_features) page.
-> - `\{{Deprecated_Header}}` — this generates a **Deprecated** banner that indicates that use of the technology is [discouraged](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#deprecated_and_obsolete).
+> - `\{{Deprecated_Header}}` — this generates a **Deprecated** banner that indicates that use of the technology is [discouraged](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#deprecated).
 >   If it isn't, then you can remove the macro call.
 > - `\{{SecureContext_Header}}` — this generates a **Secure context** banner that indicates the technology is only available in a [secure context](/en-US/docs/Web/Security/Secure_Contexts).
 >   If it isn't, then you can remove the macro call.
@@ -89,7 +74,7 @@ browser-compat: path.to.feature.NameOfTheEvent_event
 > **Parent object link**
 >
 > Add a link to this new page from its parent object's _Events_ section.
-> For example [Element: wheel event](/en-US/docs/Web/API/Element/wheel_event) is linked from [`Element` > Events](/en-US/docs/Web/API/Element#events).
+> For example [Element: wheel event](/en-US/docs/Web/API/Element/wheel_event) is linked from [`Element` Events](/en-US/docs/Web/API/Element#events).
 >
 > If the parent object does not have an _Events_ section, then add one.
 > If this is a new "class" of event, then you should add link to this section of the parent from the [Event reference](/en-US/docs/Web/Events).
@@ -194,6 +179,7 @@ See our guide on how to add [code examples](/en-US/docs/MDN/Writing_guidelines/P
 
 ## See also
 
-- Include list of
-- other links related to
-- this API that might be useful
+Include links to reference pages and guides related to the current API. For more guidelines, see the [See also section](/en-US/docs/MDN/Writing_guidelines/Writing_style_guide#see_also_section) in the _Writing style guide_.
+
+- link1
+- link2

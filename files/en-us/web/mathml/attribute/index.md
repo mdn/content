@@ -1,9 +1,6 @@
 ---
-title: MathML attribute reference
+title: Attributes
 slug: Web/MathML/Attribute
-tags:
-  - MathML
-  - MathML Reference
 ---
 
 {{MathMLRef}}

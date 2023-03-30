@@ -2,12 +2,6 @@
 title: HTMLMediaElement.crossOrigin
 slug: Web/API/HTMLMediaElement/crossOrigin
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTML DOM
-  - HTMLMediaElement
-  - Property
-  - Web
 browser-compat: api.HTMLMediaElement.crossOrigin
 ---
 
@@ -25,4 +19,4 @@ The **`HTMLMediaElement.crossOrigin`** property is the CORS setting for this med
 
 ## See also
 
-- The interface defining it, {{domxref("HTMLMediaElement")}}.
+- {{domxref("HTMLMediaElement")}}: Interface used to define the `HTMLMediaElement.crossOrigin` property

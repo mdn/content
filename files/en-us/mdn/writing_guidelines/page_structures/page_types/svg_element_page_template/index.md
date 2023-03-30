@@ -2,9 +2,6 @@
 title: SVG element page template
 slug: MDN/Writing_guidelines/Page_structures/Page_types/SVG_element_page_template
 page-type: mdn-writing-guide
-tags:
-  - meta
-  - writing-guide
 browser-compat: path.to.feature.NameOfTheElement
 ---
 
@@ -23,14 +20,11 @@ browser-compat: path.to.feature.NameOfTheElement
 > ---
 > title: <NameOfTheElement>
 > slug: Web/SVG/Element/NameOfTheElement
-> tags:
->   - NameOfTheElement
->   - SVG
->   - Element
->   - Reference
->   - Experimental
->   - Deprecated
->   - Non-standard
+> page-type: svg-element
+> status:
+>   - experimental
+>   - deprecated
+>   - non-standard
 > browser-compat: svg.elements.NameOfTheElement
 > ---
 > ```
@@ -42,16 +36,10 @@ browser-compat: path.to.feature.NameOfTheElement
 > - **slug**
 >   - : The end of the URL path after `https://developer.mozilla.org/en-US/docs/`).
 >     This will be formatted like `Web/SVG/Element/NameOfTheElement`.
-> - **tags**
->
->   - : Always include the following tags: **SVG**, **Reference**, **Element**, the _NameOfTheElement_ (e.g. **g**).
->
->     Include the following tags as appropriate:
->
->     - Relevant category: **SVG Container**, **SVG Animation**, **SVG Light Source**, **SVG Text Content**, **SVG Font**.
->     - Technology status: **Experimental** (if the technology is [experimental](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#experimental)), **Deprecated** (if it is [deprecated](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#deprecated_and_obsolete)), **Non-standard** (if it isn't on a standards track).
->     - Any other tags that represent possible search terms for the element.
->
+> - **page-type**
+>   - : Always `svg-element`.
+> - **status**
+>   - : Include (appropriate) technology status keys: [**experimental**](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#experimental), [**deprecated**](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#deprecated), **non-standard** (if not on a standards track).
 > - **browser-compat**
 >
 >   - : Replace the placeholder value `svg.elements.NameOfTheElement` with the query string for the element in the [Browser compat data repo](https://github.com/mdn/browser-compat-data).
@@ -70,7 +58,7 @@ browser-compat: path.to.feature.NameOfTheElement
 > - `\{{SeeCompatTable}}` — this generates a **This is an experimental technology** banner that indicates the technology is [experimental](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#experimental).
 >   If the technology you are documenting is not experimental, you should remove this.
 >   If it is experimental, and the technology is hidden behind a pref in Firefox, you should also fill in an entry for it in the [Experimental features in Firefox](/en-US/docs/Mozilla/Firefox/Experimental_features) page.
-> - `\{{Deprecated_Header}}` — this generates a **Deprecated** banner that indicates that use of the technology is [discouraged](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#deprecated_and_obsolete).
+> - `\{{Deprecated_Header}}` — this generates a **Deprecated** banner that indicates that use of the technology is [discouraged](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#deprecated).
 >   If it isn't, then you can remove the macro call.
 > - `\{{SecureContext_Header}}` — this generates a **Secure context** banner that indicates the technology is only available in a [secure context](/en-US/docs/Web/Security/Secure_Contexts).
 >   If it isn't, then you can remove the macro call.
@@ -161,6 +149,7 @@ See our guide on how to add [code examples](/en-US/docs/MDN/Writing_guidelines/P
 
 ## See also
 
-- Include list of
-- other links related to
-- this Element that might be useful
+Include links to reference pages and guides related to the current element. For more guidelines, see the [See also section](/en-US/docs/MDN/Writing_guidelines/Writing_style_guide#see_also_section) in the _Writing style guide_.
+
+- link1
+- link2

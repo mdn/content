@@ -2,16 +2,6 @@
 title: revert
 slug: Web/CSS/revert
 page-type: css-keyword
-tags:
-  - CSS
-  - CSS Cascade
-  - CSS Value
-  - Cascade
-  - Keyword
-  - Layout
-  - Reference
-  - Style
-  - revert
 browser-compat: css.types.global_keywords.revert
 ---
 
@@ -37,11 +27,11 @@ Revert will not affect rules applied to children of an element you reset (but wi
 
 ## Examples
 
-### Revert vs unset
+### Revert vs. unset
 
 Although `revert` and `unset` are similar, they differ for some properties for some elements.
 
-So in the below example, we set custom [`font-weight`](/en-US/docs/Web/CSS/font-weight#formal_definition), but then try to `revert` and `unset` it inline in the HTML document. The `revert` keyword will revert the text to bold because that is the default value for headers in most browsers. The `unset` keyword will keep the text normal because that is the initial value for the `font-weight` property.
+So in the below example, we set custom [`font-weight`](/en-US/docs/Web/CSS/font-weight#formal_definition), but then try to `revert` and `unset` it inline in the HTML document. The `revert` keyword will revert the text to bold because that is the default value for headers in most browsers. The `unset` keyword will keep the text normal because, as an inherited property, the `font-weight` would then inherit its value from the body.
 
 #### HTML
 

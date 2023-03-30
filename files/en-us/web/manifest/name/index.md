@@ -1,10 +1,6 @@
 ---
 title: name
 slug: Web/Manifest/name
-tags:
-  - Manifest
-  - Web
-  - name
 browser-compat: html.manifest.name
 ---
 

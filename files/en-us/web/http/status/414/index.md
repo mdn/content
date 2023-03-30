@@ -1,11 +1,6 @@
 ---
 title: 414 URI Too Long
 slug: Web/HTTP/Status/414
-tags:
-  - Client error
-  - HTTP
-  - Reference
-  - Status code
 spec-urls: https://httpwg.org/specs/rfc9110.html#status.414
 ---
 
@@ -25,7 +20,7 @@ There are a few rare conditions when this might occur:
 
 ## Status
 
-```
+```http
 414 URI Too Long
 ```
 

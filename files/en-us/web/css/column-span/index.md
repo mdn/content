@@ -2,12 +2,6 @@
 title: column-span
 slug: Web/CSS/column-span
 page-type: css-property
-tags:
-  - CSS
-  - CSS Multi-column Layout
-  - CSS Property
-  - Reference
-  - recipe:css-property
 browser-compat: css.properties.column-span
 ---
 

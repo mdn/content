@@ -1,9 +1,7 @@
 ---
 title: fx
 slug: Web/SVG/Attribute/fx
-tags:
-  - SVG
-  - SVG Attribute
+page-type: svg-attribute
 browser-compat: svg.elements.radialGradient.fx
 ---
 

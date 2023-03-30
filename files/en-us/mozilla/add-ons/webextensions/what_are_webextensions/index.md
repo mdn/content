@@ -1,9 +1,7 @@
 ---
 title: What are extensions?
 slug: Mozilla/Add-ons/WebExtensions/What_are_WebExtensions
-tags:
-  - Extensions
-  - WebExtensions
+page-type: guide
 ---
 
 {{AddonSidebar}}
@@ -26,7 +24,7 @@ Examples: [MyWeb New Tab](https://chrome.google.com/webstore/detail/myweb-new-ta
 
 **Add or remove content from web pages**: You might want to help users block intrusive ads from web pages, provide access to a travel guide whenever a country or city is mentioned in a web page, or reformat page content to offer a consistent reading experience. With the ability to access and update both a page's HTML and CSS, extensions can help users see the web the way they want to.
 
-![ublock origin add-on example with blocked tracker statistics](ublock_origin_add_on.png)
+![uBlock origin add-on example with blocked tracker statistics](ublock_origin_add_on.png)
 
 Examples: [uBlock Origin](https://addons.mozilla.org/en-US/firefox/addon/ublock-origin/), [Reader](https://addons.mozilla.org/en-US/firefox/addon/reader/), and [Toolbox for Google Play Store™](https://addons.mozilla.org/en-US/firefox/addon/toolbox-google-play-store/).
 

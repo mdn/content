@@ -1,10 +1,10 @@
 ---
 title: Example
 slug: Web/SVG/Namespaces_Crash_Course/Example
-tags:
-  - SVG
-  - XML
+page-type: guide
 ---
+
+{{SVGRef}}
 
 In this example, we use [XHTML](/en-US/docs/Glossary/XHTML), [SVG](/en-US/docs/Web/SVG), [JavaScript](/en-US/docs/Web/JavaScript), and the [DOM](/en-US/docs/Web/API/Document_Object_Model) to animate a swarm of "motes". These motes are governed by two simple principles. First, each mote tries to move towards the mouse cursor, and second each mote tries to move away from the average mote position. Combined, we get this very natural-looking behavior.
 

@@ -2,12 +2,6 @@
 title: CanvasRenderingContext2D.isPointInPath()
 slug: Web/API/CanvasRenderingContext2D/isPointInPath
 page-type: web-api-instance-method
-tags:
-  - API
-  - Canvas
-  - CanvasRenderingContext2D
-  - Method
-  - Reference
 browser-compat: api.CanvasRenderingContext2D.isPointInPath
 ---
 
@@ -73,9 +67,9 @@ the current path.
 #### JavaScript
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
-const result = document.getElementById('result');
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
+const result = document.getElementById("result");
 
 ctx.rect(10, 10, 100, 100);
 ctx.fill();
@@ -100,20 +94,20 @@ Whenever you move the mouse, this example checks whether the cursor is in a circ
 #### JavaScript
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 
 // Create circle
 const circle = new Path2D();
 circle.arc(150, 75, 50, 0, 2 * Math.PI);
-ctx.fillStyle = 'red';
+ctx.fillStyle = "red";
 ctx.fill(circle);
 
 // Listen for mouse moves
-canvas.addEventListener('mousemove', (event) => {
+canvas.addEventListener("mousemove", (event) => {
   // Check whether point is inside circle
   const isPointInPath = ctx.isPointInPath(circle, event.offsetX, event.offsetY);
-  ctx.fillStyle = isPointInPath ? 'green' : 'red';
+  ctx.fillStyle = isPointInPath ? "green" : "red";
 
   // Draw circle
   ctx.clearRect(0, 0, canvas.width, canvas.height);

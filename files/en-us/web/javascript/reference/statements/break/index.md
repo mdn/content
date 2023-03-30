@@ -1,17 +1,13 @@
 ---
 title: break
 slug: Web/JavaScript/Reference/Statements/break
-tags:
-  - JavaScript
-  - Language feature
-  - Reference
-  - Statement
+page-type: javascript-statement
 browser-compat: javascript.statements.break
 ---
 
 {{jsSidebar("Statements")}}
 
-The **`break` statement** terminates the current loop,
+The **`break`** statement terminates the current loop,
 {{jsxref("Statements/switch", "switch")}}, or {{jsxref("Statements/label", "label", "", 1)}}
 statement and transfers program control to the statement following the terminated
 statement.

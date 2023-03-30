@@ -2,13 +2,6 @@
 title: ReadableByteStreamController.error()
 slug: Web/API/ReadableByteStreamController/error
 page-type: web-api-instance-method
-tags:
-  - API
-  - Error
-  - Method
-  - ReadableByteStreamController
-  - Reference
-  - Streams
 browser-compat: api.ReadableByteStreamController.error
 ---
 

@@ -1,9 +1,7 @@
 ---
 title: Modem
 slug: Glossary/Modem
-tags:
-  - Infrastructure
-  - Navigation
+page-type: glossary-definition
 ---
 
 A modem ("**modulator-demodulator**") is a device that converts digital information to analog signals and vice versa, for sending data through networks.

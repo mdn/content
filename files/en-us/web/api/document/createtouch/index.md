@@ -2,16 +2,9 @@
 title: Document.createTouch()
 slug: Web/API/Document/createTouch
 page-type: web-api-instance-method
-tags:
-  - API
-  - Deprecated
-  - HTML DOM
-  - Method
-  - Mobile
-  - Reference
-  - createTouch
-  - touch
-  - Non-standard
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.Document.createTouch
 ---
 

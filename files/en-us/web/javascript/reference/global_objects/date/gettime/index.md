@@ -1,19 +1,13 @@
 ---
 title: Date.prototype.getTime()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getTime
-tags:
-  - Date
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.Date.getTime
 ---
 
 {{JSRef}}
 
-The **`getTime()`** method returns the number of milliseconds
-since the [ECMAScript epoch](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#the_ecmascript_epoch_and_timestamps).
+The **`getTime()`** method returns the number of milliseconds since the [epoch](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#the_ecmascript_epoch_and_timestamps), which is defined as the midnight at the beginning of January 1, 1970, UTC.
 
 You can use this method to help assign a date and time to another {{jsxref("Date")}}
 object. This method is functionally equivalent to the {{jsxref("Date/valueof",
@@ -34,7 +28,7 @@ the given date.
 
 ## Description
 
-To offer protection against timing attacks and fingerprinting, the precision of
+To offer protection against timing attacks and [fingerprinting](/en-US/docs/Glossary/Fingerprinting), the precision of
 `new Date().getTime()` might get rounded depending on browser settings. In
 Firefox, the `privacy.reduceTimerPrecision` preference is enabled by default
 and defaults to 20µs in Firefox 59; in 60 it will be 2ms.

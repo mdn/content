@@ -2,11 +2,6 @@
 title: DOMImplementation
 slug: Web/API/DOMImplementation
 page-type: web-api-interface
-tags:
-  - API
-  - DOM
-  - Interface
-  - Reference
 browser-compat: api.DOMImplementation
 ---
 

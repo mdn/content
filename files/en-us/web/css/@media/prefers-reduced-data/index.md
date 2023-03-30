@@ -2,13 +2,8 @@
 title: prefers-reduced-data
 slug: Web/CSS/@media/prefers-reduced-data
 page-type: css-media-feature
-tags:
-  - "@media"
-  - CSS
-  - Media Queries
-  - Reference
-  - media feature
-  - Experimental
+status:
+  - experimental
 browser-compat: css.at-rules.media.prefers-reduced-data
 ---
 
@@ -16,7 +11,7 @@ browser-compat: css.at-rules.media.prefers-reduced-data
 
 > **Note:** This feature is not supported by any user agent and its specifics are subject to change.
 
-The **`prefers-reduced-data`** [CSS](/en-US/docs/Web/CSS) [media feature](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#media_features) is used to detect if the user has requested the web content that consumes less internet traffic.
+The **`prefers-reduced-data`** [CSS](/en-US/docs/Web/CSS) [media feature](/en-US/docs/Web/CSS/@media#media_features) is used to detect if the user has requested the web content that consumes less internet traffic.
 
 ## Syntax
 

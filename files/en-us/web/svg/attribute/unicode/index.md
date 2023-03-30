@@ -1,10 +1,9 @@
 ---
 title: unicode
 slug: Web/SVG/Attribute/unicode
-tags:
-  - Deprecated
-  - SVG
-  - SVG Attribute
+page-type: svg-attribute
+status:
+  - deprecated
 browser-compat: svg.elements.glyph.unicode
 ---
 

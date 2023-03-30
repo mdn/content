@@ -1,15 +1,6 @@
 ---
 title: Extra lives
 slug: Games/Tutorials/2D_breakout_game_Phaser/Extra_lives
-tags:
-  - 2D
-  - Beginner
-  - Canvas
-  - Games
-  - JavaScript
-  - Phaser
-  - Tutorial
-  - lives
 ---
 
 {{GamesSidebar}}
@@ -89,7 +80,7 @@ This way changing the font in one variable will apply the changes to every place
 
 ## The lives handling code
 
-To implement lives in our game, let's first change the ball's function bound to the `onOutOfBounds` event. Instead of executing an anonymous function and showing the alert right away :
+To implement lives in our game, let's first change the ball's function bound to the `onOutOfBounds` event. Instead of executing an anonymous function and showing the alert right away:
 
 ```js
 ball.events.onOutOfBounds.add(() => {

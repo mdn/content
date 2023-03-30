@@ -2,8 +2,6 @@
 title: Using files from web applications
 slug: Web/API/File_API/Using_files_from_web_applications
 page-type: guide
-tags:
-  - File API
 ---
 
 {{APIRef("File API")}}
@@ -25,7 +23,7 @@ The `multiple` attribute on the `input` element allows the user to select multip
 Accessing the first selected file using a classical DOM selector:
 
 ```js
-const selectedFile = document.getElementById('input').files[0];
+const selectedFile = document.getElementById("input").files[0];
 ```
 
 ### Accessing selected file(s) on a change event
@@ -48,16 +46,7 @@ The {{DOMxRef("FileList")}} object provided by the DOM lists all of the files se
 const numFiles = fileList.length;
 ```
 
-Individual {{DOMxRef("File")}} objects can be retrieved by accessing the list as an array:
-
-```js
-for (let i = 0, numFiles = fileList.length; i < numFiles; i++) {
-  const file = fileList[i];
-  // …
-}
-```
-
-This loop iterates over all the files in the file list.
+Individual {{DOMxRef("File")}} objects can be retrieved by accessing the list as an array.
 
 There are three attributes provided by the {{DOMxRef("File")}} object that contain useful information about the file.
 
@@ -127,7 +116,8 @@ The following example shows a possible use of the `size` property:
                   units[exponent]
                 } (${numberOfBytes} bytes)`;
 
-          document.getElementById("fileNum").textContent = uploadInput.files.length;
+          document.getElementById("fileNum").textContent =
+            uploadInput.files.length;
           document.getElementById("fileSize").textContent = output;
         },
         false
@@ -159,14 +149,18 @@ The code that handles the `click` event can look like this:
 const fileSelect = document.getElementById("fileSelect");
 const fileElem = document.getElementById("fileElem");
 
-fileSelect.addEventListener("click", (e) => {
-  if (fileElem) {
-    fileElem.click();
-  }
-}, false);
+fileSelect.addEventListener(
+  "click",
+  (e) => {
+    if (fileElem) {
+      fileElem.click();
+    }
+  },
+  false
+);
 ```
 
-You can style the new button for opening the file picker as you wish.
+You can style the {{HTMLElement("button")}} however you wish.
 
 ## Using a label element to trigger a hidden file input element
 
@@ -258,7 +252,9 @@ function handleFiles(files) {
   for (let i = 0; i < files.length; i++) {
     const file = files[i];
 
-    if (!file.type.startsWith('image/')){ continue }
+    if (!file.type.startsWith("image/")) {
+      continue;
+    }
 
     const img = document.createElement("img");
     img.classList.add("obj");
@@ -266,7 +262,9 @@ function handleFiles(files) {
     preview.appendChild(img); // Assuming that "preview" is the div output where the content will be displayed.
 
     const reader = new FileReader();
-    reader.onload = (e) => { img.src = e.target.result; };
+    reader.onload = (e) => {
+      img.src = e.target.result;
+    };
     reader.readAsDataURL(file);
   }
 }
@@ -319,15 +317,19 @@ The `handleFiles()` method follows:
 
 ```js
 const fileSelect = document.getElementById("fileSelect"),
-    fileElem = document.getElementById("fileElem"),
-    fileList = document.getElementById("fileList");
+  fileElem = document.getElementById("fileElem"),
+  fileList = document.getElementById("fileList");
 
-fileSelect.addEventListener("click", (e) => {
-  if (fileElem) {
-    fileElem.click();
-  }
-  e.preventDefault(); // prevent navigation to "#"
-}, false);
+fileSelect.addEventListener(
+  "click",
+  (e) => {
+    if (fileElem) {
+      fileElem.click();
+    }
+    e.preventDefault(); // prevent navigation to "#"
+  },
+  false
+);
 
 fileElem.addEventListener("change", handleFiles, false);
 
@@ -347,7 +349,7 @@ function handleFiles() {
       img.height = 60;
       img.onload = () => {
         URL.revokeObjectURL(img.src);
-      }
+      };
       li.appendChild(img);
       const info = document.createElement("span");
       info.innerHTML = `${this.files[i].name}: ${this.files[i].size} bytes`;
@@ -408,20 +410,31 @@ function FileUpload(img, file) {
   this.xhr = xhr;
 
   const self = this;
-  this.xhr.upload.addEventListener("progress", (e) => {
-        if (e.lengthComputable) {
-          const percentage = Math.round((e.loaded * 100) / e.total);
-          self.ctrl.update(percentage);
-        }
-      }, false);
+  this.xhr.upload.addEventListener(
+    "progress",
+    (e) => {
+      if (e.lengthComputable) {
+        const percentage = Math.round((e.loaded * 100) / e.total);
+        self.ctrl.update(percentage);
+      }
+    },
+    false
+  );
 
-  xhr.upload.addEventListener("load", (e) => {
-          self.ctrl.update(100);
-          const canvas = self.ctrl.ctx.canvas;
-          canvas.parentNode.removeChild(canvas);
-      }, false);
-  xhr.open("POST", "http://demos.hacks.mozilla.org/paul/demos/resources/webservices/devnull.php");
-  xhr.overrideMimeType('text/plain; charset=x-user-defined-binary');
+  xhr.upload.addEventListener(
+    "load",
+    (e) => {
+      self.ctrl.update(100);
+      const canvas = self.ctrl.ctx.canvas;
+      canvas.parentNode.removeChild(canvas);
+    },
+    false
+  );
+  xhr.open(
+    "POST",
+    "http://demos.hacks.mozilla.org/paul/demos/resources/webservices/devnull.php"
+  );
+  xhr.overrideMimeType("text/plain; charset=x-user-defined-binary");
   reader.onload = (evt) => {
     xhr.send(evt.target.result);
   };
@@ -431,19 +444,24 @@ function FileUpload(img, file) {
 function createThrobber(img) {
   const throbberWidth = 64;
   const throbberHeight = 6;
-  const throbber = document.createElement('canvas');
-  throbber.classList.add('upload-progress');
-  throbber.setAttribute('width', throbberWidth);
-  throbber.setAttribute('height', throbberHeight);
+  const throbber = document.createElement("canvas");
+  throbber.classList.add("upload-progress");
+  throbber.setAttribute("width", throbberWidth);
+  throbber.setAttribute("height", throbberHeight);
   img.parentNode.appendChild(throbber);
-  throbber.ctx = throbber.getContext('2d');
-  throbber.ctx.fillStyle = 'orange';
+  throbber.ctx = throbber.getContext("2d");
+  throbber.ctx.fillStyle = "orange";
   throbber.update = (percent) => {
-    throbber.ctx.fillRect(0, 0, throbberWidth * percent / 100, throbberHeight);
+    throbber.ctx.fillRect(
+      0,
+      0,
+      (throbberWidth * percent) / 100,
+      throbberHeight
+    );
     if (percent === 100) {
-      throbber.ctx.fillStyle = 'green';
+      throbber.ctx.fillStyle = "green";
     }
-  }
+  };
   throbber.update(0);
   return throbber;
 }
@@ -534,8 +552,8 @@ And here is the change of the `src` attribute:
 
 ```js
 const obj_url = URL.createObjectURL(blob);
-const iframe = document.getElementById('viewer');
-iframe.setAttribute('src', obj_url);
+const iframe = document.getElementById("viewer");
+iframe.setAttribute("src", obj_url);
 URL.revokeObjectURL(obj_url);
 ```
 
@@ -544,7 +562,7 @@ URL.revokeObjectURL(obj_url);
 You can manipulate files of other formats the same way. Here is how to preview uploaded video:
 
 ```js
-const video = document.getElementById('video');
+const video = document.getElementById("video");
 const obj_url = URL.createObjectURL(blob);
 video.src = obj_url;
 video.play();

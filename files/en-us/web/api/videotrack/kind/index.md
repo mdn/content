@@ -2,18 +2,6 @@
 title: VideoTrack.kind
 slug: Web/API/VideoTrack/kind
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTML DOM
-  - Media
-  - Property
-  - Read-only
-  - Reference
-  - Video
-  - Video Track
-  - VideoTrack
-  - id
-  - track
 browser-compat: api.VideoTrack.kind
 ---
 

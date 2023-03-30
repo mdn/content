@@ -2,12 +2,6 @@
 title: WebGL2RenderingContext.texStorage2D()
 slug: Web/API/WebGL2RenderingContext/texStorage2D
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGL2
 browser-compat: api.WebGL2RenderingContext.texStorage2D
 ---
 

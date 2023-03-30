@@ -1,11 +1,7 @@
 ---
 title: Popups
 slug: Mozilla/Add-ons/WebExtensions/user_interface/Popups
-tags:
-  - UI
-  - User Interface
-  - WebExtensions
-  - popup
+page-type: guide
 ---
 
 {{AddonSidebar}}
@@ -46,7 +42,7 @@ You can debug a popup's markup and JavaScript using the Add-on Debugger, but you
 
 Popups resize automatically to fit their content. The algorithm for this may differ from one browser to another.
 
-In Firefox, the size is calculated just before the popup is shown, and at most 10 times per second after DOM mutations. For strict mode documents, the size is calculated based on the layout size of the [`<body>`](/en-US/docs/Web/HTML/Element/body) element. For quirks mode, it's the [`<html>`](/en-US/docs/Web/HTML/Element/html) element. Firefox calculates the preferred width of the contents of that element, reflows it to that width, and then resizes so there's no vertical scrolling. It will grow to a size of **800x600 pixels** at most if that fits on the user's screen. (Prior to Firefox 60 [it was only 680px](https://bugzilla.mozilla.org/show_bug.cgi?id=1434177).) If the user [moves the extension's button to the menu](https://support.mozilla.org/en-US/kb/customize-firefox-controls-buttons-and-toolbars#w_customize-the-menu-or-the-toolbar) or it appears in the toolbar overflow, then the popup appears inside the menu's panel and is given a fixed width.
+In Firefox, the size is calculated just before the popup is shown, and at most 10 times per second after DOM mutations. For strict mode documents, the size is calculated based on the layout size of the [`<body>`](/en-US/docs/Web/HTML/Element/body) element. For quirks mode, it's the [`<html>`](/en-US/docs/Web/HTML/Element/html) element. Firefox calculates the preferred width of the contents of that element, reflows it to that width, and then resizes so there's no vertical scrolling. It will grow to a size of **800x600 pixels** at most if that fits on the user's screen. (Prior to Firefox 60 [it was only 680px](https://bugzil.la/1434177).) If the user [moves the extension's button to the menu](https://support.mozilla.org/en-US/kb/customize-firefox-controls-buttons-and-toolbars#w_customize-the-menu-or-the-toolbar) or it appears in the toolbar overflow, then the popup appears inside the menu's panel and is given a fixed width.
 
 When setting the popup `width` in CSS, you should set the it in the [`<body>`](/en-US/docs/Web/HTML/Element/body) and not in the `:root`.
 
@@ -54,7 +50,7 @@ In Firefox Android 57, the popup is shown as a normal page in a new tab.
 
 ## Popup design
 
-For details on how to design your popup's web page to match the style of Firefox, see the [Photon Design System](https://design.firefox.com/photon/index.html) documentation.
+For details on how to design your popup's web page to match the style of Firefox, see the [Acorn Design System](https://acorn.firefox.com/latest/acorn.html) documentation.
 
 ## Examples
 

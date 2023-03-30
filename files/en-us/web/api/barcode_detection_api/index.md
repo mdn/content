@@ -2,14 +2,8 @@
 title: Barcode Detection API
 slug: Web/API/Barcode_Detection_API
 page-type: web-api-overview
-tags:
-  - API
-  - Landing
-  - Overview
-  - barcode
-  - barcode detection
-  - shape detection
-  - Experimental
+status:
+  - experimental
 browser-compat: api.BarcodeDetector
 ---
 
@@ -277,7 +271,7 @@ This example uses the `detect()` method to detect the barcodes within the given 
 barcodeDetector
   .detect(imageEl)
   .then((barcodes) => {
-    barcodes.forEach((barcode) => console.log(barcode.rawData));
+    barcodes.forEach((barcode) => console.log(barcode.rawValue));
   })
   .catch((err) => {
     console.log(err);

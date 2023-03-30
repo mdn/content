@@ -1,11 +1,6 @@
 ---
 title: 202 Accepted
 slug: Web/HTTP/Status/202
-tags:
-  - HTTP
-  - Reference
-  - Status code
-  - Success response
 spec-urls: https://httpwg.org/specs/rfc9110.html#status.202
 ---
 
@@ -23,7 +18,7 @@ for cases where another process or server handles the request, or for batch proc
 
 ## Status
 
-```
+```http
 202 Accepted
 ```
 

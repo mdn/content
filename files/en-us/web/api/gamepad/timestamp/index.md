@@ -2,14 +2,6 @@
 title: Gamepad.timestamp
 slug: Web/API/Gamepad/timestamp
 page-type: web-api-instance-property
-tags:
-  - API
-  - Gamepad API
-  - Games
-  - NeedsBetterSpecLink
-  - NeedsMarkupWork
-  - Property
-  - Reference
 browser-compat: api.Gamepad.timestamp
 ---
 

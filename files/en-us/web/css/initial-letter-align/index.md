@@ -2,18 +2,8 @@
 title: initial-letter-align
 slug: Web/CSS/initial-letter-align
 page-type: css-property
-tags:
-  - Align
-  - CSS
-  - CSS Inline
-  - CSS Property
-  - Experimental
-  - Graphics
-  - Layout
-  - NeedsL
-  - Reference
-  - Web
-  - recipe:css-property
+status:
+  - experimental
 browser-compat: css.properties.initial-letter-align
 ---
 
@@ -107,6 +97,8 @@ One of the keyword values listed below.
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
 
 - {{cssxref("initial-letter")}}
 - [Drop caps in CSS](https://www.oddbird.net/2017/01/03/initial-letter/)

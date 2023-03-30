@@ -1,11 +1,7 @@
 ---
 title: Array.prototype.toString()
 slug: Web/JavaScript/Reference/Global_Objects/Array/toString
-tags:
-  - Array
-  - JavaScript
-  - Method
-  - Prototype
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.Array.toString
 ---
 
@@ -45,7 +41,7 @@ JavaScript calls the `toString` method automatically when an array is to be repr
 ### Using toString()
 
 ```js
-const array1 = [1, 2, 'a', '1a'];
+const array1 = [1, 2, "a", "1a"];
 
 console.log(array1.toString()); // "1,2,a,1a"
 ```

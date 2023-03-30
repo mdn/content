@@ -1,10 +1,9 @@
 ---
 title: Mobile-friendliness
 slug: Web/Guide/Mobile/Mobile-friendliness
-tags:
-  - Mobile
-  - Web Development
 ---
+
+{{QuickLinksWithSubPages("/en-US/docs/Web/Guide/Mobile")}}
 
 ## What is Mobile Friendliness?
 

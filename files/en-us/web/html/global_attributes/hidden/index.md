@@ -1,10 +1,7 @@
 ---
 title: hidden
 slug: Web/HTML/Global_attributes/hidden
-tags:
-  - Global attributes
-  - HTML
-  - Reference
+page-type: html-attribute
 browser-compat: html.global_attributes.hidden
 ---
 
@@ -150,7 +147,7 @@ Note that although the content of the element is hidden, the element still has a
 
 Clicking the "Go to hidden content" button navigates to the hidden until found element. The `beforematch` event fires, the text content is updated, and the element content is displayed.
 
-To run the example again, click "Reload".
+To run the example again, click "Reset".
 
 {{EmbedLiveSample("Using until-found", "", 400)}}
 
@@ -166,5 +163,5 @@ To run the example again, click "Reload".
 
 - {{DOMxRef("HTMLElement.hidden")}}
 - All [global attributes](/en-US/docs/Web/HTML/Global_attributes)
-- [`aria-hidden` attribute](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-hidden)
-- The [`beforematch](/en-US/docs/Web/API/Element/beforematch_event) event
+- The [`aria-hidden`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-hidden) attribute
+- The [`beforematch`](/en-US/docs/Web/API/Element/beforematch_event) event

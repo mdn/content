@@ -1,13 +1,7 @@
 ---
 title: RegExp.prototype.exec()
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/exec
-tags:
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - RegExp
-  - Regular Expressions
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.RegExp.exec
 ---
 
@@ -26,7 +20,7 @@ exec(str)
 ### Parameters
 
 - `str`
-  - : The string against which to match the regular expression.
+  - : The string against which to match the regular expression. All values are [coerced to strings](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#string_coercion), so omitting it or passing `undefined` causes `exec()` to search for the string `"undefined"`, which is rarely what you want.
 
 ### Return value
 

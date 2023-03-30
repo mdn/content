@@ -1,9 +1,7 @@
 ---
 title: systemLanguage
 slug: Web/SVG/Attribute/systemLanguage
-tags:
-  - SVG
-  - SVG Attribute
+page-type: svg-attribute
 browser-compat: svg.attributes.conditional_processing.systemLanguage
 ---
 
@@ -16,7 +14,6 @@ You can use this attribute with the following SVG elements:
 - {{SVGElement("a")}}
 - {{SVGElement("altGlyph")}}
 - {{SVGElement("animate")}}
-- {{SVGElement("animateColor")}}
 - {{SVGElement("animateMotion")}}
 - {{SVGElement("animateTransform")}}
 - {{SVGElement("audio")}}

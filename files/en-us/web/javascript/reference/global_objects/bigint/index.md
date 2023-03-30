@@ -1,11 +1,7 @@
 ---
 title: BigInt
 slug: Web/JavaScript/Reference/Global_Objects/BigInt
-tags:
-  - BigInt
-  - Class
-  - JavaScript
-  - Reference
+page-type: javascript-class
 browser-compat: javascript.builtins.BigInt
 ---
 
@@ -160,6 +156,11 @@ const o = Object(0n)
 o === o                    // true
 ```
 
+Because coercing between Number values and BigInt values can lead to loss of precision, the following are recommended:
+
+- Only use a BigInt value when values greater than 2<sup>53</sup> are reasonably expected.
+- Don't coerce between BigInt values and Number values.
+
 ### Conditionals
 
 A BigInt value follows the same conversion rules as Numbers when:
@@ -198,6 +199,57 @@ Boolean(12n)
 // true
 ```
 
+### Cryptography
+
+The operations supported on BigInt values are not constant-time and are thus open to [timing attacks](https://en.wikipedia.org/wiki/Timing_attack). JavaScript BigInts therefore could be dangerous for use in cryptography without mitigating factors. As a very generic example, an attacker could measure the time difference between `101n ** 65537n` and `17n ** 9999n`, and deduce the magnitude of secrets, such as private keys, based on the time elapsed. If you still have to use BigInts, take a look at the [Timing attack FAQ](https://timing.attacks.cr.yp.to/programming.html) for general advice regarding the issue.
+
+### Use within JSON
+
+Using [`JSON.stringify()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify) with any BigInt value will raise a `TypeError`, as BigInt values aren't serialized in JSON by default. However, `JSON.stringify()` specifically leaves a backdoor for BigInt values: it would try to call the BigInt's `toJSON()` method. (It doesn't do so for any other primitive values.) Therefore, you can implement your own `toJSON()` method (which is one of the few cases where patching built-in objects is not explicitly discouraged):
+
+```js
+BigInt.prototype.toJSON = function () {
+  return this.toString();
+};
+```
+
+Instead of throwing, `JSON.stringify()` now produces a string like this:
+
+```js
+console.log(JSON.stringify({ a: 1n }));
+// {"a":"1"}
+```
+
+If you do not wish to patch `BigInt.prototype`, you can use the [`replacer`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify#the_replacer_parameter) parameter of `JSON.stringify` to serialize BigInt values:
+
+```js
+const replacer = (key, value) =>
+  typeof value === "bigint" ? value.toString() : value;
+
+const data = {
+  number: 1,
+  big: 18014398509481982n,
+};
+const stringified = JSON.stringify(data, replacer);
+
+console.log(stringified);
+// {"number":1,"big":"18014398509481982"}
+```
+
+If you have JSON data containing values you know will be large integers, you can use the [`reviver`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse#using_the_reviver_parameter) parameter of `JSON.parse` to handle them:
+
+```js
+const reviver = (key, value) => key === "big" ? BigInt(value) : value;
+
+const payload = '{"number":1,"big":"18014398509481982"}';
+const parsed = JSON.parse(payload, reviver);
+
+console.log(parsed);
+// { number: 1, big: 18014398509481982n }
+```
+
+> **Note:** While it's possible to make the replacer of `JSON.stringify()` generic and properly serialize BigInt values for all objects, the reviver of `JSON.parse()` must be specific to the payload shape you expect, because the serialization is _lossy_: it's not possible to distinguish between a string that represents a BigInt and a normal string.
+
 ### BigInt coercion
 
 Many built-in operations that expect BigInts first coerce their arguments to BigInts. [The operation](https://tc39.es/ecma262/#sec-tobigint) can be summarized as follows:
@@ -228,6 +280,10 @@ Note that built-in operations expecting BigInts often truncate the BigInt to a f
 
 ## Instance properties
 
+These properties are defined on `BigInt.prototype` and shared by all `BigInt` instances.
+
+- {{jsxref("Object/constructor", "BigInt.prototype.constructor")}}
+  - : The constructor function that created the instance object. For `BigInt` instances, the initial value is the {{jsxref("BigInt/BigInt", "BigInt")}} constructor.
 - `BigInt.prototype[@@toStringTag]`
   - : The initial value of the [`@@toStringTag`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) property is the string `"BigInt"`. This property is used in {{jsxref("Object.prototype.toString()")}}. However, because `BigInt` also has its own [`toString()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt/toString) method, this property is not used unless you call [`Object.prototype.toString.call()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/call) with a BigInt as `thisArg`.
 
@@ -239,63 +295,6 @@ Note that built-in operations expecting BigInts often truncate the BigInt to a f
   - : Returns a string representing this BigInt value in the specified radix (base). Overrides the [`Object.prototype.toString()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/toString) method.
 - [`BigInt.prototype.valueOf()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt/valueOf)
   - : Returns this BigInt value. Overrides the [`Object.prototype.valueOf()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/valueOf) method.
-
-## Usage recommendations
-
-### Coercion
-
-Because coercing between Number values and BigInt values can lead to loss of precision, the following are recommended:
-
-- Only use a BigInt value when values greater than 2^53 are reasonably expected.
-- Don't coerce between BigInt values and Number values.
-
-### Cryptography
-
-The operations supported on BigInt values are not constant-time and are thus open to [timing attacks](https://en.wikipedia.org/wiki/Timing_attack). JavaScript BigInts therefore could be dangerous for use in cryptography without mitigating factors. As a very generic example, an attacker could measure the time difference between `101n ** 65537n` and `17n ** 9999n`, and deduce the magnitude of secrets, such as private keys, based on the time elapsed. If you still have to use BigInts, take a look at the [Timing attack FAQ](https://timing.attacks.cr.yp.to/programming.html) for general advice regarding the issue.
-
-### Use within JSON
-
-Using [`JSON.stringify()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify) with any BigInt value will raise a `TypeError`, as BigInt values aren't serialized in JSON by default. However, `JSON.stringify()` specifically leaves a backdoor for BigInt values: it would try to call the BigInt's `toJSON()` method. (It doesn't do so for any other primitive values.) Therefore, you can implement your own `toJSON()` method (which is one of the few cases where patching built-in objects is not explicitly discouraged):
-
-```js
-BigInt.prototype.toJSON = function () {
-  return this.toString();
-};
-```
-
-Instead of throwing, `JSON.stringify()` now produces a string like this:
-
-```js
-console.log(JSON.stringify({ a: 1n }));
-// {"a":"1"}
-```
-
-If you do not wish to patch `BigInt.prototype`, you can use the [`replacer`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify#the_replacer_parameter) parameter of `JSON.stringify` to serialize BigInt values:
-
-```js
-const replacer = (key, value) => key === "big" ? value.toString() : value;
-
-const data = {
-  number: 1,
-  big: 18014398509481982n,
-};
-const stringified = JSON.stringify(data, replacer);
-
-console.log(stringified);
-// {"number":1,"big":"18014398509481982"}
-```
-
-If you have JSON data containing values you know will be large integers, you can use the [`reviver`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse#using_the_reviver_parameter) parameter of `JSON.parse` to handle them:
-
-```js
-const reviver = (key, value) => key === "big" ? BigInt(value) : value;
-
-const payload = '{"number":1,"big":"18014398509481982"}';
-const parsed = JSON.parse(payload, reviver);
-
-console.log(parsed);
-// { number: 1, big: 18014398509481982n }
-```
 
 ## Examples
 

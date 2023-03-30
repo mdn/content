@@ -1,13 +1,9 @@
 ---
 title: <altGlyphDef>
 slug: Web/SVG/Element/altGlyphDef
-tags:
-  - Deprecated
-  - Element
-  - NeedsExample
-  - Reference
-  - SVG
-  - SVG Text Content
+page-type: svg-element
+status:
+  - deprecated
 browser-compat: svg.elements.altGlyphDef
 ---
 

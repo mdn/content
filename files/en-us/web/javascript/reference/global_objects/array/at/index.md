@@ -1,15 +1,7 @@
 ---
 title: Array.prototype.at()
 slug: Web/JavaScript/Reference/Global_Objects/Array/at
-tags:
-  - Array
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - polyfill
-  - at
-  - Polyfill
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.Array.at
 ---
 
@@ -50,7 +42,7 @@ The following example provides a function which returns the last element found i
 
 ```js
 // Our array with items
-const cart = ['apple', 'banana', 'pear'];
+const cart = ["apple", "banana", "pear"];
 
 // A function which returns the last item of a given array
 function returnLast(arr) {
@@ -62,7 +54,7 @@ const item1 = returnLast(cart);
 console.log(item1); // 'pear'
 
 // Add an item to our 'cart' array
-cart.push('orange');
+cart.push("orange");
 const item2 = returnLast(cart);
 console.log(item2); // 'orange'
 ```
@@ -73,10 +65,10 @@ This example compares different ways to select the penultimate (last but one) it
 
 ```js
 // Our array with items
-const colors = ['red', 'green', 'blue'];
+const colors = ["red", "green", "blue"];
 
 // Using length property
-const lengthWay = colors[colors.length-2];
+const lengthWay = colors[colors.length - 2];
 console.log(lengthWay); // 'green'
 
 // Using slice() method. Note an array is returned
@@ -116,3 +108,4 @@ console.log(Array.prototype.at.call(arrayLike, -1)); // "b"
 - {{jsxref("Array.prototype.find()")}} – return a value based on a given test.
 - {{jsxref("Array.prototype.includes()")}} – test whether a value exists in the array.
 - {{jsxref("Array.prototype.indexOf()")}} – return the index of a given element.
+- [Indexed Collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections)

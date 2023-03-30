@@ -1,40 +1,17 @@
 ---
 title: escape()
 slug: Web/JavaScript/Reference/Global_Objects/escape
-tags:
-  - Deprecated
-  - JavaScript
-  - Method
-  - Polyfill
+page-type: javascript-function
+status:
+  - deprecated
 browser-compat: javascript.builtins.escape
 ---
 
 {{jsSidebar("Objects")}}{{Deprecated_Header}}
 
-> **Warning:** Although `escape()` is not
-> strictly deprecated (as in "removed from the Web standards"), it is defined in
-> [Annex B](https://tc39.es/ecma262/#sec-additional-ecmascript-features-for-web-browsers)
-> of the ECMA-262 standard, whose introduction states:
->
-> > … All of the language features and behaviors specified in this annex have
-> > one or more undesirable characteristics and in the absence of legacy usage would be
-> > removed from this specification. …
-> > … Programmers should not use or assume the existence of these features and behaviors
-> > when writing new ECMAScript code. …
+> **Note:** `escape()` is a non-standard function implemented by browsers and was only standardized for cross-engine compatibility. It is not required to be implemented by all JavaScript engines and may not work everywhere. Use {{jsxref("encodeURIComponent()")}} or {{jsxref("encodeURI()")}} if possible.
 
-The **`escape()`** function computes a
-new string in which certain characters have been replaced by a hexadecimal escape
-sequence.
-
-> **Note:** This function was used mostly for URL queries (the part of a
-> URL following `?`)—_not_ for escaping ordinary String literals,
-> which use the format `\xHH`. (`HH` are
-> two hexadecimal digits, and the form `\xHH\xHH` is
-> used for higher-plane Unicode characters.)
->
-> Escaped characters in String literals can be expanded by replacing the
-> `\x` with `%`, then using the `decodeURIComponent()`
-> function.
+The **`escape()`** function computes a new string in which certain characters have been replaced by hexadecimal escape sequences.
 
 ## Syntax
 
@@ -53,17 +30,15 @@ A new string in which certain characters have been escaped.
 
 ## Description
 
-The `escape` function is a property of the _global object_. Special
-characters are encoded with the exception of: `@*_+-./`
+`escape()` is a function property of the global object.
 
-The hexadecimal form for characters, whose code unit value is `0xFF` or
-less, is a two-digit escape sequence: `%xx`. For characters with a
-greater code unit, the four-digit format `%uxxxx`
-is used.
+The `escape()` function replaces all characters with escape sequences, with the exception of ASCII word characters (A–Z, a–z, 0–9, _) and `@*_+-./`. Characters are escaped by UTF-16 code units. If the code unit's value is less than 256, it is represented by a two-digit hexadecimal number in the format `%XX`, left-padded with 0 if necessary. Otherwise, it is represented by a four-digit hexadecimal number in the format `%uXXXX`, left-padded with 0 if necessary.
+
+> **Note:** This function was used mostly for [URL encoding](https://en.wikipedia.org/wiki/URL_encoding) and is partly based on the escape format in {{rfc(1738)}}. The escape format is _not_ an [escape sequence](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#escape_sequences) in string literals. You can replace `%XX` with `\xXX` and `%uXXXX` with `\uXXXX` to get a string containing actual string-literal escape sequences.
 
 ## Examples
 
-### Using escape
+### Using escape()
 
 ```js
 escape("abc123"); // "abc123"

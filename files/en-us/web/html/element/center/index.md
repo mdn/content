@@ -1,16 +1,9 @@
 ---
 title: '<center>: The Centered Text element'
 slug: Web/HTML/Element/center
-tags:
-  - Element
-  - HTML
-  - Deprecated
-  - Reference
-  - Text
-  - Text Alignment
-  - Web
-  - alignment
-  - center
+page-type: html-element
+status:
+  - deprecated
 browser-compat: html.elements.center
 ---
 
@@ -54,6 +47,8 @@ This element implements the {{domxref("HTMLElement")}} interface.
 ## Note
 
 Applying {{Cssxref("text-align")}}`:center` to a {{HTMLElement("div")}} or {{HTMLElement("p")}} element centers the _contents_ of those elements while leaving their overall dimensions unchanged.
+
+<!-- ## Technical summary -->
 
 ## Specifications
 

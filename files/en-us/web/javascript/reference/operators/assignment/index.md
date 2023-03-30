@@ -1,18 +1,13 @@
 ---
 title: Assignment (=)
 slug: Web/JavaScript/Reference/Operators/Assignment
-tags:
-  - Assignment operator
-  - JavaScript
-  - Language feature
-  - Operator
-  - Reference
+page-type: javascript-operator
 browser-compat: javascript.operators.assignment
 ---
 
 {{jsSidebar("Operators")}}
 
-The simple assignment operator (`=`) is used to assign a value to a
+The **assignment (`=`)** operator is used to assign a value to a
 variable. The assignment operation evaluates to the assigned value. Chaining the
 assignment operator is possible in order to assign a single value to multiple variables.
 
@@ -35,6 +30,17 @@ let z = 25;
 
 x = y; // x is 10
 x = y = z; // x, y and z are all 25
+```
+
+### Value of assignment expressions
+
+The assignment expression itself evaluates to the value of the right-hand side, so you can log the value and assign to a variable at the same time.
+
+```js
+let x;
+console.log(x); // undefined
+console.log(x = 2); // 2
+console.log(x); // 2
 ```
 
 ## Specifications

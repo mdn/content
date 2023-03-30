@@ -2,20 +2,6 @@
 title: WebGLRenderingContext
 slug: Web/API/WebGLRenderingContext
 page-type: web-api-interface
-tags:
-  - 2D
-  - 3D
-  - API
-  - Canvas
-  - Context
-  - Drawing
-  - GL
-  - Graphics
-  - Interface
-  - Reference
-  - WebGL
-  - WebGLRenderingContext
-  - rendering
 browser-compat: api.WebGLRenderingContext
 ---
 
@@ -26,8 +12,8 @@ The **`WebGLRenderingContext`** interface provides an interface to the OpenGL ES
 To get an access to a WebGL context for 2D and/or 3D graphics rendering, call {{domxref("HTMLCanvasElement.getContext()", "getContext()")}} on a `<canvas>` element, supplying "webgl" as the argument:
 
 ```js
-const canvas = document.getElementById('myCanvas');
-const gl = canvas.getContext('webgl');
+const canvas = document.getElementById("myCanvas");
+const gl = canvas.getContext("webgl");
 ```
 
 Once you have the WebGL rendering context for a canvas, you can render within it. The [WebGL tutorial](/en-US/docs/Web/API/WebGL_API/Tutorial) has more information, examples, and resources on how to get started with WebGL.
@@ -278,7 +264,8 @@ The following properties and methods provide general information and functionali
   - : Returns information about a vertex attribute at a given position.
 - {{domxref("WebGLRenderingContext.getVertexAttribOffset()")}}
   - : Returns the address of a given vertex attribute.
-- {{domxref("WebGLRenderingContext.uniform()", "WebGLRenderingContext.uniform[1234][fi][v]()")}}
+  <!-- markdownlint-disable MD052 -- text in code block is misidentified as image -->
+- [`WebGLRenderingContext.uniform[1234][fi][v]()`](/en-US/docs/Web/API/WebGLRenderingContext/uniform)
   - : Specifies a value for a uniform variable.
 - {{domxref("WebGLRenderingContext.uniformMatrix()", "WebGLRenderingContext.uniformMatrix[234]fv()")}}
   - : Specifies a matrix value for a uniform variable.
@@ -302,7 +289,7 @@ The following properties and methods provide general information and functionali
 
 ## Color spaces
 
-- {{domxref("WebGLRenderingContext.drawingBufferColorSpace")}} {{Experimental_Inline}}
+- {{domxref("WebGLRenderingContext.drawingBufferColorSpace")}}
   - : Specifies the color space of the WebGL drawing buffer.
 - {{domxref("WebGLRenderingContext.unpackColorSpace")}} {{Experimental_Inline}}
   - : Specifies the color space to convert to when importing textures.

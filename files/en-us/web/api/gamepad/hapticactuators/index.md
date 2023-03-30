@@ -2,14 +2,8 @@
 title: Gamepad.hapticActuators
 slug: Web/API/Gamepad/hapticActuators
 page-type: web-api-instance-property
-tags:
-  - API
-  - Experimental
-  - Gamepad
-  - Gamepad API
-  - Property
-  - Reference
-  - hapticActuators
+status:
+  - experimental
 browser-compat: api.Gamepad.hapticActuators
 ---
 

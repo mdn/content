@@ -1,8 +1,7 @@
 ---
 title: WebDAV
 slug: Glossary/WebDAV
-tags:
-  - Infrastructure
+page-type: glossary-definition
 ---
 
 **WebDAV** (_Web Distributed Authoring and Versioning_) is an {{Glossary("HTTP")}} Extension that lets web developers update their content remotely from a client.

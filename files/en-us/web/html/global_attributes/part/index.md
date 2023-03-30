@@ -1,11 +1,7 @@
 ---
 title: part
 slug: Web/HTML/Global_attributes/part
-tags:
-  - Global attributes
-  - HTML
-  - Reference
-  - part
+page-type: html-attribute
 browser-compat: html.global_attributes.part
 ---
 
