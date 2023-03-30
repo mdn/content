@@ -10,8 +10,8 @@ browser-compat: api.DOMTokenList.item
 The **`item()`** method of the {{domxref("DOMTokenList")}} interface returns an item in the list,
 determined by its position in the list, its index.
 
-> **Note:** This method is equivalent as the operator `[]`.
-> So `aList.item(i)` is the same as `aList[i]`, like the [operator[]](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#accessing_array_elements) of an {{jsxref("Array")}}.
+> **Note:** This method is equivalent as the [bracket notation](/en-US/docs/Web/JavaScript/Reference/Operators/Property_accessors#bracket_notation).
+> So `aList.item(i)` is the same as `aList[i]`.
 
 ## Syntax
 

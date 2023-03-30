@@ -7,7 +7,7 @@ browser-compat: css.at-rules.media.monochrome
 
 {{CSSRef}}
 
-The **`monochrome`** [CSS](/en-US/docs/Web/CSS) [media feature](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#media_features) can be used to test the number of bits per pixel in the monochrome frame buffer of the output device.
+The **`monochrome`** [CSS](/en-US/docs/Web/CSS) [media feature](/en-US/docs/Web/CSS/@media#media_features) can be used to test the number of bits per pixel in the monochrome frame buffer of the output device.
 
 ## Syntax
 

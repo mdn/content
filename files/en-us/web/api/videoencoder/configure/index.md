@@ -20,7 +20,7 @@ configure(config)
 - `config`
   - : A dictionary object containing the following members:
     - `codec`
-      - : A string containing a [valid codec string](https://www.w3.org/TR/webcodecs-codec-registry/#audio-codec-registry).
+      - : A string containing a [valid codec string](https://www.w3.org/TR/webcodecs-codec-registry/#audio-codec-registry). See ["codecs" parameter](/en-US/docs/Web/Media/Formats/codecs_parameter#codec_options_by_container) for details on codec string construction.
     - `width` {{optional_inline}}
       - : An integer representing the width of each output {{domxref("EncodedVideoChunk")}} in pixels, before any ratio adjustments.
     - `height` {{optional_inline}}

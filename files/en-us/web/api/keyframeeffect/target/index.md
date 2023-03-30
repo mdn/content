@@ -11,11 +11,11 @@ The **`target`** property of a {{domxref("KeyframeEffect")}} interface represent
 
 ## Value
 
-An {{domxref("Element")}}, {{domxref("CSSPseudoElement")}}, or `null`.
+An {{domxref("Element")}} or `null`.
 
 ## Examples
 
-In the [Follow the White Rabbit example](https://codepen.io/rachelnabors/pen/eJyWzm/?editors=0010), `whiteRabbit` sets the **`target`** element to be animated:
+In the [Follow the White Rabbit example](https://codepen.io/rachelnabors/pen/eJyWzm/?editors=0010), `whiteRabbit` sets the `target` element to be animated:
 
 ```js
 const whiteRabbit = document.getElementById("rabbit");

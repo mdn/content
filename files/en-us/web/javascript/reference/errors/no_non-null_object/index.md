@@ -53,9 +53,9 @@ A valid property descriptor object might look like this:
 Object.defineProperty({}, "key", { value: "foo", writable: false });
 ```
 
-### WeakMap and WeakSet objects require object keys
+### WeakMap and WeakSet objects require object or symbol keys
 
-{{jsxref("WeakMap")}} and {{jsxref("WeakSet")}} objects store object keys. You can't
+{{jsxref("WeakMap")}} and {{jsxref("WeakSet")}} objects store object or symbol keys. You can't
 use other types as keys.
 
 ```js example-bad

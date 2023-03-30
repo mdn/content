@@ -283,11 +283,14 @@
         "CSSKeyframeRule",
         "CSSKeyframesRule",
         "CSSImportRule",
-        "CSSLayoutBlockRule",
-        "CSSLayoutStatementRule",
+        "CSSLayerBlockRule",
+        "CSSLayerStatementRule",
         "CSSMediaRule",
         "CSSNamespaceRule",
         "CSSPageRule",
+        "CSSFontFeatureValuesRule",
+        "CSSFontPaletteValuesRule",
+        "CSSPropertyRule",
         "CSSRule",
         "CSSRuleList",
         "CSSStyleDeclaration",
@@ -433,6 +436,13 @@
       "properties": [],
       "events": []
     },
+    "FedCM API": {
+      "overview": ["FedCM API"],
+      "interfaces": ["IdentityCredential"],
+      "methods": ["CredentialsContainer.get()"],
+      "properties": [],
+      "events": []
+    },
     "Fetch API": {
       "overview": ["Fetch API"],
       "guides": [
@@ -550,10 +560,10 @@
     "History API": {
       "overview": ["History API"],
       "guides": ["/docs/Web/API/History_API/Working_with_the_History_API"],
-      "interfaces": ["History"],
+      "interfaces": ["History", "PopStateEvent"],
       "methods": [],
       "properties": [],
-      "events": []
+      "events": ["Window: popstate"]
     },
     "HTML DOM": {
       "overview": ["HTML DOM API"],
@@ -640,7 +650,6 @@
         "PageTransitionEvent",
         "Plugin",
         "PluginArray",
-        "PopStateEvent",
         "PromiseRejectionEvent",
         "RadioNodeList",
         "UserActivation",
@@ -701,7 +710,6 @@
         "Window: online",
         "Window: pagehide",
         "Window: pageshow",
-        "Window: popstate",
         "Window: rejectionhandled",
         "Window: storage",
         "Window: unload",
@@ -1252,6 +1260,9 @@
     },
     "Storage": {
       "overview": ["Storage API"],
+      "guides": [
+        "/docs/Web/API/Storage_API/Storage_quotas_and_eviction_criteria"
+      ],
       "interfaces": ["StorageManager"],
       "methods": [],
       "properties": ["Navigator.storage", "WorkerNavigator.storage"],
@@ -2252,6 +2263,9 @@
       "methods": [],
       "properties": [],
       "events": []
+    },
+    "XSLT": {
+      "interfaces": ["XSLTProcessor"]
     }
   }
 ]

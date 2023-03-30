@@ -7,8 +7,7 @@ browser-compat: javascript.builtins.SyntaxError.SyntaxError
 
 {{JSRef}}
 
-The **`SyntaxError`** constructor creates a new error object
-that represents an error when trying to interpret syntactically invalid code.
+The **`SyntaxError()`** constructor creates {{jsxref("SyntaxError")}} objects.
 
 ## Syntax
 

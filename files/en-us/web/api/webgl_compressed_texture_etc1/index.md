@@ -25,12 +25,20 @@ The compressed texture format is exposed by a constant and can be used with the 
 ## Examples
 
 ```js
-const ext = gl.getExtension('WEBGL_compressed_texture_etc1');
+const ext = gl.getExtension("WEBGL_compressed_texture_etc1");
 
 const texture = gl.createTexture();
 gl.bindTexture(gl.TEXTURE_2D, texture);
 
-gl.compressedTexImage2D(gl.TEXTURE_2D, 0, ext.COMPRESSED_RGB_ETC1_WEBGL, 512, 512, 0, textureData);
+gl.compressedTexImage2D(
+  gl.TEXTURE_2D,
+  0,
+  ext.COMPRESSED_RGB_ETC1_WEBGL,
+  512,
+  512,
+  0,
+  textureData
+);
 ```
 
 ## Specifications

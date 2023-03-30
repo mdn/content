@@ -8,6 +8,7 @@ browser-compat: api.AudioProcessingEvent.inputBuffer
 ---
 
 {{APIRef}}{{Deprecated_header}}
+
 The **`inputBuffer`** read-only property of the {{domxref("AudioProcessingEvent")}} interface represents the input buffer of an audio processing event.
 
 The input buffer is represented by an {{domxref("AudioBuffer")}} object, which contains a collection of audio channels, each of which is an array of floating-point values representing the audio signal waveform encoded as a series of amplitudes. The number of channels and the length of each channel are determined by the channel count and buffer size properties of the `AudioBuffer`.

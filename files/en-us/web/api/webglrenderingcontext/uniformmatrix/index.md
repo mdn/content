@@ -44,7 +44,7 @@ None ({{jsxref("undefined")}}).
 ## Examples
 
 ```js
-gl.uniformMatrix2fv(loc, false, [2,1, 2,2]);
+gl.uniformMatrix2fv(loc, false, [2, 1, 2, 2]);
 ```
 
 ## Specifications
