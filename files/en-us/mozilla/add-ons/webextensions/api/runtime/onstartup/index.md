@@ -10,7 +10,7 @@ browser-compat: webextensions.api.runtime.onStartup
 Fired when a profile that has this extension installed first starts up. This event is not fired when a private browsing (incognito) profile is started, even if this extension is operating in 'split' incognito mode.
 
 > **Note:**
-> When using an event page, the extension must add a listener to `runtime.onStartup` on the event page for the event page to be executed at least once per browser session.
+> When using an event page or background service worker, the extension must add a listener to `runtime.onStartup` on the event page for the event page to be executed at least once per browser session.
 
 ## Syntax
 
