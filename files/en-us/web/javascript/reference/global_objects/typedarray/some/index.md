@@ -24,7 +24,7 @@ some(callbackFn, thisArg)
 ### Parameters
 
 - `callbackFn`
-  - : A function to execute for each element in the typed array. It should return a [truthy](/en-US/docs/Glossary/Truthy) to indicate the element passes the test, and a falsy value otherwise. The function is called with the following arguments:
+  - : A function to execute for each element in the typed array. It should return a [truthy](/en-US/docs/Glossary/Truthy) value to indicate the element passes the test, and a [falsy](/en-US/docs/Glossary/Falsy) value otherwise. The function is called with the following arguments:
     - `element`
       - : The current element being processed in the typed array.
     - `index`

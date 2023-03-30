@@ -132,7 +132,7 @@ Then, in the "Parameters" section, list the callback function's parameters and w
 
 ```md
 - `callbackFn`
-  - : A function to execute for each element in the array. It should return a [truthy](/en-US/docs/Glossary/Truthy) to keep the element in the resulting array, and a falsy value otherwise. The function is called with the following arguments:
+  - : A function to execute for each element in the array. It should return a [truthy](/en-US/docs/Glossary/Truthy) value to keep the element in the resulting array, and a [falsy](/en-US/docs/Glossary/Falsy) value otherwise. The function is called with the following arguments:
     - `element`
       - : The current element being processed in the array.
     - `index`
