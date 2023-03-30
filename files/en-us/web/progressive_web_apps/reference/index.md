@@ -9,37 +9,40 @@ This reference describes the [web app manifest](/en-US/docs/Web/Manifest) member
 
 ## Web app manifest members
 
-### Identification
+### Required for installation
 
-The following manifest members are used to name and describe your PWA:
+The following manifest members are required for browsers to consider a web app installable:
 
 - [`name`](/en-US/docs/Web/Manifest/name)
   - : The name of the web application as it is usually displayed to the user.
+- [`icons`](/en-US/docs/Web/Manifest/icons)
+  - : Image files that can serve as application icons for different contexts.
+- [`start_url`](/en-US/docs/Web/Manifest/start_url)
+  - : The preferred URL that should be loaded when the user launches the web application.
+- [`display`](/en-US/docs/Web/Manifest/display) or [`display_override`](/en-US/docs/Web/Manifest/display_override)
+  - : The developers' preferred display modes for the browser UI.
+
+All other members listed below are optional but can help greatly improve the user experience of a PWA.
+
+### Identification
+
+The following manifest members are useful to more extensively describe your PWA:
+
 - [`short_name`](/en-US/docs/Web/Manifest/short_name)
   - : The name of the web application displayed to the user if there is not enough space to display the `name` member.
 - [`description`](/en-US/docs/Web/Manifest/description)
   - : An explanation of what the application does.
-- [`id`](/en-US/docs/Web/Manifest/id)
-  - : A unique identifier for the web application.
 - [`categories`](/en-US/docs/Web/Manifest/categories)
-  - : Names of categories the application belongs to.
+  - : Names of categories the application belongs to, which can be used by PWA app stores.
 
 ### Appearance
 
-The following manifest members are used to control the appearance of your app:
+The following manifest members are used to further customize the appearance of your app:
 
-- [`icons`](/en-US/docs/Web/Manifest/icons)
-  - : Image files that can serve as application icons for different contexts.
 - [`background_color`](/en-US/docs/Web/Manifest/background_color)
   - : The placeholder background color for the application page to display before its stylesheet is loaded.
 - [`theme_color`](/en-US/docs/Web/Manifest/theme_color)
   - : The default theme color for the application, which sometimes affects how the operating system displays the app.
-- [`display`](/en-US/docs/Web/Manifest/display)
-  - : The developers' preferred display mode for the browser UI.
-- [`display_override`](/en-US/docs/Web/Manifest/display_override)
-  - : A sequence of display mode fallbacks for the `display` member.
-- [`start_url`](/en-US/docs/Web/Manifest/start_url)
-  - : The preferred URL that should be loaded when the user launches the web application.
 - [`screenshots`](/en-US/docs/Web/Manifest/screenshots)
   - : The URLs and descriptors for the screenshots used to showcase the application in PWA stores.
 - [`orientation`](/en-US/docs/Web/Manifest/orientation)
@@ -68,8 +71,6 @@ The following manifest members can be used to more deeply integrate your PWA in 
   - : Alternative device-native applications that provide similar or equivalent functionality to this app. Used in conjunction with the `prefer_related_applications` member if the alternative applications should be preferred over the PWA.
 - [`prefer_related_applications`](/en-US/docs/Web/Manifest/prefer_related_applications)
   - : Whether the applications listed in the `related_applications` member should be preferred over this app.
-- [`serviceworker`](/en-US/docs/Web/Manifest/serviceworker)
-  - : The service worker to use to run a web-based payment app on a merchant website.
 
 ## Service Worker APIs
 
