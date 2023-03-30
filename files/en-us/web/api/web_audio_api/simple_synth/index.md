@@ -129,7 +129,8 @@ On the right side of the settings bar, we place a label and a {{HTMLElement("sel
   background-color: #eef;
 }
 
-.key:active {
+.key:active,
+.active {
   background-color: #000;
   color: #fff;
 }
@@ -574,6 +575,37 @@ function changeVolume(event) {
 ```
 
 This sets the value of the main gain node's `gain` {{domxref("AudioParam")}} to the slider's new value.
+
+#### Keyboard support
+
+The code below adds [`keydown`](/en-US/docs/Web/API/Element/keydown_event) and [`keyup`](/en-US/docs/Web/API/Element/keyup_event) event listeners to handle keyboard input. The `keydown` event handler calls `notePressed()` to start playing the note corresponding to the key that was pressed, and the `keyup` event handler calls `noteReleased()` to stop playing the note corresponding to the key that was released.
+
+```js-nolint
+const synthKeys = document.querySelectorAll(".key");
+const keyCodes = [
+  "ControlLeft", "AltLeft", "Space",
+  "ShiftLeft", "KeyZ", "KeyX", "KeyC", "KeyV", "KeyB", "KeyN", "KeyM", "Comma", "Period", "Slash", "ShiftRight",
+  "KeyA", "KeyS", "KeyD", "KeyF", "KeyG", "KeyH", "KeyJ", "KeyK", "KeyL", "Semicolon", "Quote",
+  "Tab", "KeyQ", "KeyW", "KeyE", "KeyR", "KeyT", "KeyY", "KeyU", "KeyI", "KeyO", "KeyP", "BracketLeft", "BracketRight",
+  "Digit1", "Digit2", "Digit3", "Digit4", "Digit5", "Digit6", "Digit7", "Digit8", "Digit9", "Digit0", "Minus", "Equal", "Backspace",
+];
+function keyNote(event) {
+  const elKey = synthKeys[keyCodes.indexOf(event.code)];
+  if (elKey) {
+    if (event.type === "keydown") {
+      elKey.tabIndex = -1;
+      elKey.focus();
+      elKey.classList.add("active");
+      notePressed({ buttons: 1, target: elKey });
+    } else {
+      elKey.classList.remove("active");
+      noteReleased({ buttons: 1, target: elKey });
+    }
+  }
+}
+addEventListener("keydown", keyNote);
+addEventListener("keyup", keyNote);
+```
 
 ### Result
 

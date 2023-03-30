@@ -4,9 +4,9 @@
 build/
 /files/en-us/_githistory.json
 
-# A full pass on all Markdown files is being performed, the following folders
-# still need a full pass:
-/files/en-us/mozilla/**/*.md
+# A full pass on all Markdown files is being performed.
+# The following folders still need a full pass:
+/files/en-us/mozilla/add-ons/**/*.md
 /files/en-us/web/html/**/*.md
 /files/en-us/web/javascript/**/*.md
 /files/en-us/web/svg/**/*.md

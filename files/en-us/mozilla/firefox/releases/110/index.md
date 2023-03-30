@@ -42,6 +42,11 @@ No notable changes.
 
 - {{domxref("CSSContainerRule")}} is supported, allowing JavaScript to access the name and query used in an {{cssxref("@container")}} at-rule definition ([Firefox bug 1787173](https://bugzil.la/1787173)).
 
+- Elements now lose focus if a style is applied that makes them ineligible to hold focus, such as `hidden`, and the [`blur` event](/en-US/docs/Web/API/Element/blur_event) is fired.
+  Focus then moves to the viewport.
+  Previously focus would remain with the element.
+  (See [Firefox bug 1810077](https://bugzil.la/1810077) for more details.)
+
 ### WebDriver conformance (WebDriver BiDi, Marionette)
 
 #### WebDriver BiDi

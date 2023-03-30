@@ -28,7 +28,7 @@ configure(config)
     - `numberOfChannels`
       - : An integer representing the number of audio channels.
     - `description` {{optional_inline}}
-      - : Aa {{jsxref("ArrayBuffer")}}, a {{jsxref("TypedArray")}}, or a {{jsxref("DataView")}} containing a sequence of codec specific bytes, commonly known as extradata.
+      - : An {{jsxref("ArrayBuffer")}}, a {{jsxref("TypedArray")}}, or a {{jsxref("DataView")}} containing a sequence of codec specific bytes, commonly known as extradata.
 
 > **Note:** The registrations in the [WebCodecs Codec Registry](https://www.w3.org/TR/webcodecs-codec-registry/#audio-codec-registry) link to a specification detailing whether and how to populate the optional `description` member.
 
@@ -47,10 +47,10 @@ None ({{jsxref("undefined")}}).
 
 ## Examples
 
-The following example configures the `AudioDecoder` with the `opus` codec.
+The following example configures the `audioDecoder` with the `opus` codec.
 
 ```js
-AudioDecoder.configure({
+audioDecoder.configure({
   codec: "opus",
   sampleRate: 44100,
   numberOfChannels: 2,

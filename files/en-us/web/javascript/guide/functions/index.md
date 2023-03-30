@@ -212,7 +212,7 @@ console.log(square(5)); // 25
 Function hoisting only works with function _declarations_ — not with function _expressions_. The code below will not work.
 
 ```js example-bad
-console.log(square); // ReferenceError: Cannot access 'square' before initialization
+console.log(square(5)); // ReferenceError: Cannot access 'square' before initialization
 const square = function (n) {
   return n * n;
 };

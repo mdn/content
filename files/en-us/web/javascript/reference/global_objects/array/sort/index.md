@@ -17,29 +17,21 @@ implementation.
 ## Syntax
 
 ```js-nolint
-// Functionless
 sort()
-
-// Arrow function
-sort((a, b) => { /* … */ } )
-
-// Compare function
 sort(compareFn)
-
-// Inline compare function
-sort(function compareFn(a, b) { /* … */ })
 ```
 
 ### Parameters
 
 - `compareFn` {{optional_inline}}
-
-  - : Specifies a function that defines the sort order. If omitted, the array elements are converted to strings, then sorted according to each character's Unicode code point value.
+  - : A function that defines the sort order. The return value should be a number whose positivity indicates the relative order of the two elements. The function is called with the following arguments:
 
     - `a`
-      - : The first element for comparison.
+      - : The first element for comparison. Will never be `undefined`.
     - `b`
-      - : The second element for comparison.
+      - : The second element for comparison. Will never be `undefined`.
+
+    If omitted, the array elements are converted to strings, then sorted according to each character's Unicode code point value.
 
 ### Return value
 

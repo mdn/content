@@ -7,7 +7,10 @@ browser-compat: webextensions.api.runtime.onStartup
 
 {{AddonSidebar()}}
 
-Fired when a profile that has this extension installed first starts up. This event is not fired when a private browsing/incognito profile is started, even if this extension is operating in 'split' incognito mode.
+Fired when a profile that has this extension installed first starts up. This event is not fired when a private browsing (incognito) profile is started, even if this extension is operating in 'split' incognito mode.
+
+> **Note:**
+> When using an event page or background service worker, the extension must add a listener to `runtime.onStartup` on the event page for the event page to be executed at least once per browser session.
 
 ## Syntax
 
@@ -33,11 +36,7 @@ All events have three functions:
 The only parameter is `listener`, used for any of the above functions.
 
 - `listener`
-  - : A function that will be called when this event occurs.
-
-## Browser compatibility
-
-{{Compat}}
+  - : A function that is called when this event occurs.
 
 ## Examples
 
@@ -54,6 +53,10 @@ browser.runtime.onStartup.addListener(handleStartup);
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}
 
 > **Note:** This API is based on Chromium's [`chrome.runtime`](https://developer.chrome.com/docs/extensions/reference/runtime/#event-onStartup) API. This documentation is derived from [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) in the Chromium code.
 

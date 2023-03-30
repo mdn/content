@@ -16,19 +16,24 @@ The **`then()`** method of a {{jsxref("Promise")}} object takes up to two argume
 ```js-nolint
 then(onFulfilled)
 then(onFulfilled, onRejected)
-
-then(
-  (value) => { /* fulfillment handler */ },
-  (reason) => { /* rejection handler */ },
-)
 ```
 
 ### Parameters
 
 - `onFulfilled` {{optional_inline}}
-  - : A {{jsxref("Function")}} asynchronously called if the `Promise` is fulfilled. This function has one parameter, the _fulfillment value_. If it is not a function, it is internally replaced with an _identity_ function (`(x) => x`) which simply passes the fulfillment value forward.
+  - : A function to asynchronously execute when this promise becomes fulfilled. Its return value becomes the fulfillment value of the promise returned by `then()`. The function is called with the following arguments:
+
+    - `value`
+      - : The value that the promise was fulfilled with.
+
+    If it is not a function, it is internally replaced with an _identity_ function (`(x) => x`) which simply passes the fulfillment value forward.
 - `onRejected` {{optional_inline}}
-  - : A {{jsxref("Function")}} asynchronously called if the `Promise` is rejected. This function has one parameter, the _rejection reason_. If it is not a function, it is internally replaced with a _thrower_ function (`(x) => { throw x; }`) which throws the rejection reason it received.
+  - : A function to asynchronously execute when this promise becomes rejected. Its return value becomes the fulfillment value of the promise returned by `catch()`. The function is called with the following arguments:
+
+    - `reason`
+      - : The value that the promise was rejected with.
+
+    If it is not a function, it is internally replaced with a _thrower_ function (`(x) => { throw x; }`) which throws the rejection reason it received.
 
 ### Return value
 

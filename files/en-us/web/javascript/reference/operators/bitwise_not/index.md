@@ -43,7 +43,7 @@ Before: 11100110111110100000000000000110000000000001
 After:              10100000000000000110000000000001
 ```
 
-For BigInts, there's no truncation. onceptually, understand positive BigInts as having an infinite number of leading `0` bits, and negative BigInts having an infinite number of leading `1` bits.
+For BigInts, there's no truncation. Conceptually, understand positive BigInts as having an infinite number of leading `0` bits, and negative BigInts having an infinite number of leading `1` bits.
 
 Bitwise NOTing any 32-bit integer `x` yields `-(x + 1)`. For example, `~-5` yields `4`.
 

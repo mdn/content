@@ -20,37 +20,20 @@ If the object is invariant, you might instead represent it using a string, and g
 ## Syntax
 
 ```js-nolint
-// Arrow function
-groupToMap((element) => { /* … */ })
-groupToMap((element, index) => { /* … */ })
-groupToMap((element, index, array) => { /* … */ })
-
-// Callback function
 groupToMap(callbackFn)
 groupToMap(callbackFn, thisArg)
-
-// Inline callback function
-groupToMap(function (element) { /* … */ })
-groupToMap(function (element, index) { /* … */ })
-groupToMap(function (element, index, array) { /* … */ })
-groupToMap(function (element, index, array) { /* … */ }, thisArg)
 ```
 
 ### Parameters
 
 - `callbackFn`
-
-  - : A function to execute for each element in the array. It should return a value ({{Glossary("object")}} or {{Glossary("primitive")}}) indicating the group of the current element.
-
-    The function is called with the following arguments:
-
+  - : A function to execute for each element in the array. It should return a value ({{Glossary("object")}} or {{Glossary("primitive")}}) indicating the group of the current element. The function is called with the following arguments:
     - `element`
       - : The current element being processed in the array.
     - `index`
       - : The index of the current element being processed in the array.
     - `array`
       - : The array `groupToMap()` was called upon.
-
 - `thisArg` {{optional_inline}}
   - : A value to use as `this` when executing `callbackFn`. See [iterative methods](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#iterative_methods).
 
