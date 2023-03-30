@@ -1,4 +1,4 @@
----
+https://www.meeraqssam.blogspot.com---
 title: JSON
 slug: Glossary/JSON
 page-type: glossary-definition
