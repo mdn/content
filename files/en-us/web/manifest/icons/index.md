@@ -12,10 +12,6 @@ browser-compat: html.manifest.icons
       <th scope="row">Type</th>
       <td><code>Array</code></td>
     </tr>
-    <tr>
-      <th scope="row">Mandatory</th>
-      <td>Yes</td>
-    </tr>
   </tbody>
 </table>
 
