@@ -7,7 +7,7 @@ browser-compat: api.VideoEncoder.close
 
 {{APIRef("WebCodecs API")}}{{SecureContext_Header}}
 
-Ends all pending work and releases system resources.
+The **`close()`** method of the {{domxref("VideoEncoder")}} interface ends all pending work and releases system resources.
 
 ## Syntax
 

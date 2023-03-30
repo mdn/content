@@ -7,9 +7,7 @@ browser-compat: api.VideoEncoder
 
 {{APIRef("WebCodecs API")}}
 
-The **`VideoEncoder`** interface of the {{domxref('WebCodecs API','','','true')}} 
-converts video frames (represented by {{domxref("VideoFrame")}}) into compressed data chunks
-(reoresented by {{domxref("EncodedVideoChunk")}}).
+The **`VideoEncoder`** interface of the {{domxref('WebCodecs API', '', '', 1)}} converts video frames (represented by {{domxref("VideoFrame")}}) into compressed data chunks (reoresented by {{domxref("EncodedVideoChunk")}}).
 
 {{InheritanceDiagram}}
 

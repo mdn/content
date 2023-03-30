@@ -7,7 +7,7 @@ browser-compat: api.VideoEncoder.flush
 
 {{APIRef("WebCodecs API")}}{{SecureContext_Header}}
 
-Forces all pending encodes to complete as soon as possible.
+The **`flush()`** method of the {{domxref("VideoEncoder")}} interface forces all pending encodes to complete as soon as possible.
 
 ## Syntax
 
