@@ -43,7 +43,7 @@ No changes
   The API provides access to information describing the position of the {{Glossary("visual viewport")}} relative to the document, as well as to the window's content area.
   It also provides events that allow changes to the viewport to be monitored. ([Firefox bug 1551302](https://bugzil.la/1551302)).
 - The [Gamepad API](/en-US/docs/Web/API/Gamepad_API) is now protected by {{httpheader('Feature-Policy/gamepad','Feature-Policy: gamepad')}}.
-  If disallowed by the [feature policy](/en-US/docs/Web/HTTP/Feature_Policy), calls to {{domxref('Navigator.getGamepads()')}} will throw a `SecurityError` {{domxref('DOMException')}},
+  If disallowed by the [Permission Policy](/en-US/docs/Web/HTTP/Permissions_Policy), calls to {{domxref('Navigator.getGamepads()')}} will throw a `SecurityError` {{domxref('DOMException')}},
   and the {{domxref("Window.gamepadconnected_event", "gamepadconnected")}} and {{domxref("Window.gamepaddisconnected_event", "gamepaddisconnected")}} events will not fire.
   The default `allowlist` is `*`; this default will be updated to `self` in a future release, in order to match the specification. ([Firefox bug 1704005](https://bugzil.la/1704005)).
 - `Window.clientInformation` has been added as an alias for {{domxref("Window.navigator")}}, in order to match recent specification updates and improve compatibility with other major browsers ([Firefox bug 1717072](https://bugzil.la/1717072)).

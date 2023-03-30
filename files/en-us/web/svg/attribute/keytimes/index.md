@@ -14,7 +14,6 @@ Each time in the list corresponds to a value in the {{SVGAttr("values")}} attrib
 You can use this attribute with the following SVG elements:
 
 - {{SVGElement("animate")}}
-- {{SVGElement("animateColor")}}
 - {{SVGElement("animateMotion")}}
 - {{SVGElement("animateTransform")}}
 

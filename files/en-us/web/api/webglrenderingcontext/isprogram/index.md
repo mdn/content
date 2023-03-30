@@ -30,8 +30,8 @@ A {{domxref("WebGL_API/Types", "GLboolean")}} indicating whether or not the prog
 ### Checking a program
 
 ```js
-const canvas = document.getElementById('canvas');
-const gl = canvas.getContext('webgl');
+const canvas = document.getElementById("canvas");
+const gl = canvas.getContext("webgl");
 const program = gl.createProgram();
 
 // …

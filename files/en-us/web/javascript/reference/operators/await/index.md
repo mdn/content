@@ -343,5 +343,5 @@ However, there's a little performance penalty coming with `return await` because
 
 - {{jsxref("Statements/async_function", "async function")}}
 - [`async function` expression](/en-US/docs/Web/JavaScript/Reference/Operators/async_function)
-- {{jsxref("AsyncFunction")}} object
-- [Top level await](https://v8.dev/features/top-level-await) on v8.dev
+- {{jsxref("AsyncFunction")}}
+- [Top-level await](https://v8.dev/features/top-level-await) on v8.dev (October 8, 2019)

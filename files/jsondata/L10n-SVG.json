@@ -7,7 +7,8 @@
     "ko": "애니메이션 추가 속성",
     "pt-BR": "Atributos de animação adicionais",
     "ru": "Атрибуты добавления анимации",
-    "zh-CN": "动画累加属性"
+    "zh-CN": "动画累加属性",
+    "zh-TW": "動畫累加屬性"
   },
   "animationAttributeTargetAttributes": {
     "en-US": "Animation attribute target attributes",
@@ -17,7 +18,8 @@
     "ko": "애니메이션 속성 대상 속성",
     "pt-BR": "Atributos de destino do atributo da animação",
     "ru": "Атрибуты задания анимации",
-    "zh-CN": "动画属性目标属性"
+    "zh-CN": "动画属性目标属性",
+    "zh-TW": "動畫屬性目標屬性"
   },
   "animationElement": {
     "en-US": "Animation element",
@@ -60,7 +62,8 @@
     "ko": "애니메이션 타이밍 속성",
     "pt-BR": "Atributos de cronometragem da animação",
     "ru": "Временные атрибуты анимации",
-    "zh-CN": "动画定时属性"
+    "zh-CN": "动画定时属性",
+    "zh-TW": "動畫計時屬性"
   },
   "animationValueAttributes": {
     "en-US": "Animation value attributes",
@@ -102,7 +105,8 @@
     "ja": "任意の数の説明的要素、 {{SVGElement(\"script\")}} および 2 から 4 個の {{SVGElement(\"stop\")}} 要素。",
     "ko": "임의의 개수의 설명 요소, {{SVGElement(\"script\")}}, 그리고 2개에서 4개의 {{SVGElement(\"stop\")}} 요소.",
     "pt-BR": "Qualquer número de elementos descritivos, elementos {{SVGElement(\"script\")}} e de dois a quatro elementos {{SVGElement(\"stop\")}}.",
-    "zh-CN": "任意数量的描述性元素、{{SVGElement(\"script\")}} 和 2 到 4 个 {{SVGElement(\"stop\")}} 元素。"
+    "zh-CN": "任意数量的描述性元素、{{SVGElement(\"script\")}} 和 2 到 4 个 {{SVGElement(\"stop\")}} 元素。",
+    "zh-TW": "任意數量的描述性元素、{{SVGElement(\"script\")}} 和 2 到 4 個 {{SVGElement(\"stop\")}} 元素。"
   },
   "anyNumberOfElementsWithMeshgradientElement": {
     "en-US": "Any number of animation elements, descriptive elements, {{SVGElement(\"mask\")}}, {{SVGElement(\"clipPath\")}}, {{SVGElement(\"marker\")}}, {{SVGElement(\"script\")}}, and {{SVGElement(\"style\")}} elements, along with zero or one {{SVGElement(\"meshgradient\")}} element.",
@@ -111,7 +115,8 @@
     "ja": "任意の数のアニメーション要素、説明的要素、 {{SVGElement(\"mask\")}}, {{SVGElement(\"clipPath\")}}, {{SVGElement(\"marker\")}}, {{SVGElement(\"script\")}}, {{SVGElement(\"style\")}} の各要素と 0 個または 1 個の {{SVGElement(\"meshgradient\")}} 要素。",
     "ko": "임의의 개수의 애니메이션 요소, 설명 요소, {{SVGElement(\"mask\")}}, {{SVGElement(\"clipPath\")}}, {{SVGElement(\"marker\")}}, {{SVGElement(\"script\")}}, 그리고 {{SVGElement(\"style\")}} 요소, 그리고 0개 또는 1개의 {{SVGElement(\"meshgradient\")}} 요소.",
     "pt-BR": "Qualquer número de elementos de animação, elementos descritivos, elementos {{SVGElement(\"mask\")}}, {{SVGElement(\"clipPath\")}}, {{SVGElement(\"marker\")}}, {{SVGElement(\"script\")}}, e {{SVGElement(\"style\")}}, juntamente com zero ou um elemento {{SVGElement(\"meshgradient\")}}.",
-    "zh-CN": "任意数量的动画元素、描述性元素、{{SVGElement(\"mask\")}}、{{SVGElement(\"clipPath\")}}、{{SVGElement(\"marker\")}}、{{SVGElement(\"script\")}}、{{SVGElement(\"style\")}} 元素，以及 0 到 1 个 {{SVGElement(\"meshgradient\")}} 元素。"
+    "zh-CN": "任意数量的动画元素、描述性元素、{{SVGElement(\"mask\")}}、{{SVGElement(\"clipPath\")}}、{{SVGElement(\"marker\")}}、{{SVGElement(\"script\")}}、{{SVGElement(\"style\")}} 元素，以及 0 到 1 个 {{SVGElement(\"meshgradient\")}} 元素。",
+    "zh-TW": "任意數量的動畫元素、描述性元素、{{SVGElement(\"mask\")}}、{{SVGElement(\"clipPath\")}}、{{SVGElement(\"marker\")}}、{{SVGElement(\"script\")}}、{{SVGElement(\"style\")}} 元素，以及 0 到 1 個 {{SVGElement(\"meshgradient\")}} 元素。"
   },
   "ariaAttributes": {
     "en-US": "ARIA attributes",
@@ -131,7 +136,8 @@
     "ko": "기본 모양 요소",
     "pt-BR": "Elemento básico de forma",
     "ru": "Базовые фигуры",
-    "zh-CN": "基本元素"
+    "zh-CN": "基本形状元素",
+    "zh-TW": "基本形狀元素"
   },
   "categories": {
     "en-US": "Categories",
@@ -174,7 +180,8 @@
     "ko": "컨테이너 요소",
     "pt-BR": "Elemento recipiente",
     "ru": "Контейнеры",
-    "zh-CN": "容器元素"
+    "zh-CN": "容器元素",
+    "zh-TW": "容器元素"
   },
   "coreAttributes": {
     "en-US": "Core attributes",
@@ -195,7 +202,8 @@
     "ko": "설명 요소",
     "pt-BR": "Elemento descritivo",
     "ru": "Элемент описания",
-    "zh-CN": "描述性元素"
+    "zh-CN": "描述性元素",
+    "zh-TW": "描述性元素"
   },
   "descriptiveElements": {
     "en-US": "Descriptive elements",
@@ -205,7 +213,8 @@
     "ko": "설명 요소",
     "pt-BR": "Elementos descritivos",
     "ru": "Элементы описания",
-    "zh-CN": "描述性元素"
+    "zh-CN": "描述性元素",
+    "zh-TW": "描述性元素"
   },
   "documentEventAttributes": {
     "en-US": "Document event attributes",
@@ -237,7 +246,8 @@
     "ko": "필터 속성",
     "pt-BR": "Filtros de atributos",
     "ru": "Атрибуты фильтров",
-    "zh-CN": "滤镜属性"
+    "zh-CN": "滤镜属性",
+    "zh-TW": "濾鏡属性"
   },
   "filterPrimitiveElement": {
     "en-US": "Filter primitive element",
@@ -247,7 +257,8 @@
     "ko": "필터 원시 요소",
     "pt-BR": "Elemento de filtro primitivo",
     "ru": "Примитивный фильтр",
-    "zh-CN": "滤镜元素"
+    "zh-CN": "滤镜元素",
+    "zh-TW": "濾鏡元素"
   },
   "filterPrimitiveElements": {
     "en-US": "Filter primitive elements",
@@ -257,7 +268,8 @@
     "ko": "필터 원시 요소",
     "pt-BR": "Elementos de filtro primitivo",
     "ru": "Примитивные фильтры",
-    "zh-CN": "滤镜元素"
+    "zh-CN": "滤镜元素",
+    "zh-TW": "濾鏡元素"
   },
   "fontElement": {
     "en-US": "Font element",
@@ -310,7 +322,8 @@
     "ko": "그래픽 이벤트 속성",
     "pt-BR": "Atributos de eventos gráficos",
     "ru": "Атрибуты графических событий",
-    "zh-CN": "图形事件属性"
+    "zh-CN": "图形事件属性",
+    "zh-TW": "圖形事件屬性"
   },
   "graphicsElement": {
     "en-US": "Graphics element",
@@ -320,7 +333,8 @@
     "ko": "그래픽 요소",
     "pt-BR": "Elemento gráfico",
     "ru": "Графические элементы",
-    "zh-CN": "图形元素"
+    "zh-CN": "图形元素",
+    "zh-TW": "圖形元素"
   },
   "graphicsReferencingElement": {
     "en-US": "Graphics referencing element",
@@ -330,7 +344,8 @@
     "ko": "그래픽 참조 요소",
     "pt-BR": "Elemento gráfico referenciado",
     "ru": "Элементы отсылки к графике",
-    "zh-CN": "图形引用元素"
+    "zh-CN": "图形引用元素",
+    "zh-TW": "圖形參照元素"
   },
   "info_in_preview_not_available": {
     "en-US": "SVG info in preview not available",
@@ -339,7 +354,8 @@
     "ja": "SVG info はプレビューでは利用できません",
     "ko": "미리보기에서 SVG 정보를 사용할 수 없습니다",
     "pt-BR": "Informação de pré-visualização de SVG não disponível",
-    "zh-CN": "SVG 信息在预览中不可用"
+    "zh-CN": "SVG 信息在预览中不可用",
+    "zh-TW": "SVG 資訊在預覽中不可用"
   },
   "lightSourceElement": {
     "en-US": "Light source element",
@@ -359,7 +375,8 @@
     "ja": "非描画要素",
     "ko": "렌더링되지 않는 요소",
     "pt-BR": "Elemento nunca renderizado",
-    "zh-CN": "非渲染元素"
+    "zh-CN": "非渲染元素",
+    "zh-TW": "非渲染元素"
   },
   "noCategory": {
     "en-US": "None",
@@ -379,7 +396,8 @@
     "ja": "ペイントサーバー要素",
     "ko": "페인트 서버 요소",
     "pt-BR": "Elemento de servidor de pintura",
-    "zh-CN": "绘制服务器元素"
+    "zh-CN": "绘制服务器元素",
+    "zh-TW": "繪製伺服器元素"
   },
   "permittedContent": {
     "en-US": "Permitted content",
@@ -389,7 +407,8 @@
     "ko": "허용된 콘텐츠",
     "pt-BR": "Conteúdo permitido",
     "ru": "Разрешённый контент",
-    "zh-CN": "允许的内容"
+    "zh-CN": "允许的内容",
+    "zh-TW": "允許的內容"
   },
   "presentationAttributes": {
     "en-US": "Presentation attributes",
@@ -399,7 +418,8 @@
     "ko": "표현 속성",
     "pt-BR": "Atributos de apresentação",
     "ru": "Атрибуты показа",
-    "zh-CN": "外观属性"
+    "zh-CN": "表现属性",
+    "zh-TW": "表現屬性"
   },
   "renderableElement": {
     "en-US": "Renderable element",
@@ -408,7 +428,8 @@
     "ja": "描画可能要素",
     "ko": "렌더링 가능한 요소",
     "pt-BR": "Elemento renderizável",
-    "zh-CN": "可渲染元素"
+    "zh-CN": "可渲染元素",
+    "zh-TW": "彩現元素"
   },
   "shapeElement": {
     "en-US": "Shape element",
@@ -418,7 +439,8 @@
     "ko": "모양 요소",
     "pt-BR": "Elemento de forma",
     "ru": "Фигура",
-    "zh-CN": "形状元素"
+    "zh-CN": "形状元素",
+    "zh-TW": "形狀元素"
   },
   "shapeElements": {
     "en-US": "Shape elements",
@@ -428,7 +450,8 @@
     "ko": "모양 요소",
     "pt-BR": "Elementos de forma",
     "ru": "Фигуры",
-    "zh-CN": "形状元素"
+    "zh-CN": "形状元素",
+    "zh-TW": "形狀元素"
   },
   "structuralElement": {
     "en-US": "Structural element",
@@ -513,7 +536,8 @@
     "ko": "전송 함수 속성",
     "pt-BR": "Atributos de função de transferência",
     "ru": "Функция передачи атрибутов",
-    "zh-CN": "变换函数属性"
+    "zh-CN": "变换函数属性",
+    "zh-TW": "遞移函式屬性"
   },
   "xLinkAttributes": {
     "en-US": "XLink attributes",

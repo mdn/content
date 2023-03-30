@@ -78,7 +78,17 @@ None ({{jsxref("undefined")}}).
 ## Examples
 
 ```js
-gl.compressedTexSubImage3D(gl.TEXTURE_3D, 0, 0, 0, 512, 512, 512, gl.COMPRESSED_R11_EAC, textureData);
+gl.compressedTexSubImage3D(
+  gl.TEXTURE_3D,
+  0,
+  0,
+  0,
+  512,
+  512,
+  512,
+  gl.COMPRESSED_R11_EAC,
+  textureData
+);
 ```
 
 ## Specifications

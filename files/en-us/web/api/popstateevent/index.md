@@ -5,7 +5,7 @@ page-type: web-api-interface
 browser-compat: api.PopStateEvent
 ---
 
-{{APIRef("HTML DOM")}}
+{{APIRef("History API")}}
 
 **`PopStateEvent`** is an interface for the [`popstate`](/en-US/docs/Web/API/Window/popstate_event) event.
 

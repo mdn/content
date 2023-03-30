@@ -62,7 +62,7 @@ class MyAudioProcessor extends AudioWorkletProcessor {
     // …
     return true;
   }
-};
+}
 
 registerProcessor("my-audio-processor", MyAudioProcessor);
 ```

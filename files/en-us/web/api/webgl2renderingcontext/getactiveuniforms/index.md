@@ -59,8 +59,16 @@ Depends on which information is requested using the `pname` parameter.
 ## Examples
 
 ```js
-const uniformIndices = gl.getUniformIndices(program, ['UBORed', 'UBOGreen', 'UBOBlue']);
-const uniformOffsets = gl.getActiveUniforms(program, uniformIndices, gl.UNIFORM_OFFSET);
+const uniformIndices = gl.getUniformIndices(program, [
+  "UBORed",
+  "UBOGreen",
+  "UBOBlue",
+]);
+const uniformOffsets = gl.getActiveUniforms(
+  program,
+  uniformIndices,
+  gl.UNIFORM_OFFSET
+);
 ```
 
 ## Specifications

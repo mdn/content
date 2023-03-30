@@ -14,7 +14,7 @@ For example, video or audio editors, and video conferencing.
 
 Many Web APIs use media codecs internally.
 For example, the {{domxref("Web Audio API")}}, and the {{domxref("WebRTC API")}}.
-However these APIs do not allow developers to work with individual frames of a video stream and unmuxed chunks of encoded audio or video.
+However these APIs do not allow developers to work with individual frames of a video stream and unmixed chunks of encoded audio or video.
 
 Web developers have typically used WebAssembly in order to get around this limitation,
 and to work with media codecs in the browser.
@@ -23,6 +23,10 @@ reducing performance and power efficiency, and adding additional development ove
 
 The WebCodecs API provides access to codecs that are already in the browser.
 It gives access to raw video frames, chunks of audio data, image decoders, audio and video encoders and decoders.
+
+Note: There is currently no API for demuxing media containers. Developers working with containerized media will need to implement their own
+or use third party libraries. E.g., [MP4Box.js](https://github.com/gpac/mp4box.js/) or [jswebm](https://github.com/jscodec/jswebm) can be
+used to demux audio and video data into {{domxref("EncodedAudioChunk")}} and {{domxref("EncodedVideoChunk")}} objects respectively.
 
 ## Interfaces
 
@@ -62,23 +66,25 @@ const track = stream.getVideoTracks()[0];
 const media_processor = new MediaStreamTrackProcessor(track);
 const reader = media_processor.readable.getReader();
 while (true) {
-    const result = await reader.read();
-    if (result.done)
-      break;
-    let frame = result.value;
-    if (encoder.encodeQueueSize > 2) {
-      // Too many frames in flight, encoder is overwhelmed
-      // let's drop this frame.
-      frame.close();
-    } else {
-      frame_counter++;
-      const insert_keyframe = frame_counter % 150 === 0;
-      encoder.encode(frame, { keyFrame: insert_keyframe });
-      frame.close();
-    }
+  const result = await reader.read();
+  if (result.done) break;
+  let frame = result.value;
+  if (encoder.encodeQueueSize > 2) {
+    // Too many frames in flight, encoder is overwhelmed
+    // let's drop this frame.
+    frame.close();
+  } else {
+    frame_counter++;
+    const insert_keyframe = frame_counter % 150 === 0;
+    encoder.encode(frame, { keyFrame: insert_keyframe });
+    frame.close();
+  }
 }
 ```
 
 ## See also
 
 - [Video processing with WebCodecs](https://web.dev/webcodecs/)
+- [WebCodecs API Samples](https://w3c.github.io/webcodecs/samples/)
+- [Real-Time Video Processing with WebCodecs and Streams: Processing Pipelines](https://webrtchacks.com/real-time-video-processing-with-webcodecs-and-streams-processing-pipelines-part-1/)
+- [Video Frame Processing on the Web – WebAssembly, WebGPU, WebGL, WebCodecs, WebNN, and WebTransport](https://webrtchacks.com/video-frame-processing-on-the-web-webassembly-webgpu-webgl-webcodecs-webnn-and-webtransport/)

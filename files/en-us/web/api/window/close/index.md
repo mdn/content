@@ -46,7 +46,7 @@ opened by calling {{domxref("window.open()")}}.
 let openedWindow;
 
 function openWindow() {
-  openedWindow = window.open('moreinfo.htm');
+  openedWindow = window.open("moreinfo.htm");
 }
 
 function closeOpenedWindow() {

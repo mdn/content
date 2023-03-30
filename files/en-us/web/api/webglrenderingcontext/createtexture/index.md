@@ -32,8 +32,8 @@ See also the [WebGL tutorial](/en-US/docs/Web/API/WebGL_API/Tutorial) on [Using 
 ### Creating a texture
 
 ```js
-const canvas = document.getElementById('canvas');
-const gl = canvas.getContext('webgl');
+const canvas = document.getElementById("canvas");
+const gl = canvas.getContext("webgl");
 const texture = gl.createTexture();
 ```
 
