@@ -84,7 +84,7 @@ function reader(file, callback) {
 }
 
 document.querySelector("#image").addEventListener("change", (evt) => {
-   // No files, do nothing.
+  // No files, do nothing.
   if (!evt.target.files) {
     return;
   }
@@ -94,7 +94,7 @@ document.querySelector("#image").addEventListener("change", (evt) => {
 });
 ```
 
-Given the anynchronous nature of {{domxref("FileReader")}}, you could use a Promise-based approach. Here's an example for a [file input](/en-US/docs/Web/HTML/Element/input/file) with attribute `multiple` that returns a {{jsxref("Promise")}}.
+Given the asynchronous nature of {{domxref("FileReader")}}, you could use a Promise-based approach. Here's an example for a [file input](/en-US/docs/Web/HTML/Element/input/file) with attribute `multiple` that returns a {{jsxref("Promise")}}.
 
 ```js
 // Given this HTMLInputElement:
@@ -108,11 +108,11 @@ const reader = (file) =>
     fr.readAsDataURL(file);
   });
 
-const logImagesData = async (fileList) => {
+async function logImagesData(fileList) {
   let fileResults = [];
+  const frPromises = fileList.map(reader);
 
   try {
-    const frPromises = [...fileList].map(reader);
     fileResults = await Promise.all(frPromises);
   } catch (err) {
     // In this specific case, Promise.all() might be preferred
@@ -126,7 +126,7 @@ const logImagesData = async (fileList) => {
   fileResults.forEach((fr) => {
     console.log(fr.result); // Base64 `data:image/...` String result.
   });
-};
+}
 
 // HTMLInputElement type="file" Event handler:
 document.querySelector("#images").addEventListener("change", (evt) => {
