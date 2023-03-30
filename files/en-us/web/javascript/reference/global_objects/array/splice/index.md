@@ -29,6 +29,7 @@ splice(start, deleteCount, item1, item2, itemN)
     - Negative index counts back from the end of the array — if `start < 0`, `start + array.length` is used.
     - If `start < -array.length`, `0` is used.
     - If `start >= array.length`, no element will be deleted, but the method will behave as an adding function, adding as many elements as provided.
+    - If `start` is omitted (and `splice()` is called with no arguments), nothing is deleted. This is different from passing `undefined`, which is converted to `0`.
 
 - `deleteCount` {{optional_inline}}
 
