@@ -119,6 +119,10 @@ To give an icon button an accessible name, put text in the `<button>` element th
 </button>
 ```
 
+##### Result
+
+{{EmbedLiveSample('Icon buttons')}}
+
 If you want to visually hide the button's text, an accessible way to do so is to use [a combination of CSS properties](https://gomakethings.com/hidden-content-for-better-a11y/#hiding-the-link) to remove it visually from the screen, but keep it parsable by assistive technology.
 
 However, it is worth noting that leaving the button text visually apparent can aid people who may not be familiar with the icon's meaning or understand the button's purpose. This is especially relevant for people who are not technologically sophisticated, or who may have different cultural interpretations for the icon the button uses.
