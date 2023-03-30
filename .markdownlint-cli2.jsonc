@@ -198,7 +198,7 @@
         {
           "name": "localhost-links",
           "message": "Don't use localhost for links",
-          "searchPattern": "/\\]\\(https:\\/\\/localhost:\\d+\\//g",
+          "searchPattern": "/\\]\\(https?:\\/\\/localhost:\\d+\\//g",
           "replace": "](/",
           "skipCode": true
         }
