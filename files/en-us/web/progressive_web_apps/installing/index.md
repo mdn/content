@@ -7,7 +7,7 @@ slug: Web/Progressive_web_apps/Installing
 
 Browsers have always enabled saving shortcuts to websites, known as "bookmarking." These are just links to websites.
 
-Some operating systems (OS) have enhanced bookmarking capabilities, enabling saving bookmarks to the home screen with an icon launching the site in the OS's default browser. For many websites, this is also just a link to the site. If the site is a [Progressive Web Applications (PWA)](/en-us/docs/web/progressive_web_apps), saving to home screen installs the PWA on the user's device, fully integrating it into the operating systems like native applications on most devices. Just like PWAs can be installed, they can also be uninstalled.
+Some operating systems (OS) have enhanced bookmarking capabilities, enabling saving bookmarks to common places, such as the home screen or taskbar, with an icon launching the site in the OS's default browser. For many websites, this is also just a link to the site. If the site is a [Progressive Web Applications (PWA)](/en-us/docs/web/progressive_web_apps), saving to home screen installs the PWA on the user's device, fully integrating it into the operating systems like native applications on most devices. Just like PWAs can be installed, they can also be uninstalled.
 
 This guide covers how to install and uninstall PWAs. A separate [guide on making PWAs installable](/en-US/docs/Web/Progressive_web_apps/guides/making_pwas_installable) covers how to make web apps installable.
 
@@ -23,7 +23,7 @@ Browsers enable saving, editing, moving, deleting, and otherwise managing bookma
 
 ### Add to home screen
 
-Smartphones, starting with the iPhone in 2007, added "save to home screen" functionality. For regular (non-PWA) websites feature is similar to bookmarks, but instead of adding the favicon and title of the page to the bookmarks menu — a browser feature — favoriting in this manner [adds an icon](/en-US/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML#adding_custom_icons_to_your_site) to the OS's home screen. Adding a non-PWA site to the home screen does not install the website on the device. Rather, it adds the developer-defined icon to the home screen, that, when clicked, opens the bookmarked link in the default browser.
+Smartphones, starting with the iPhone in 2007, added "save to home screen" functionality. For regular (non-PWA) websites, this feature is similar to bookmarks, but instead of adding the favicon and title of the page to the bookmarks menu — a browser feature — favoriting in this manner [adds an icon](/en-US/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML#adding_custom_icons_to_your_site) to the OS's home screen. Adding a non-PWA site to the home screen does not install the website on the device. Rather, it adds the developer-defined icon to the home screen, that, when clicked, opens the bookmarked link in the default browser.
 
 ![iPhone add to home screen, install prompt, icon, and delete functionality.](iphone_pwa.jpg)
 
@@ -33,9 +33,9 @@ If the site being added to the home screen is a PWA, the PWA will be installed o
 
 ## Installing and uninstalling PWAs
 
-While installing a PWA only takes a couple of clicks, depending on the web application features, the result of installing a PWA usually goes well beyond creating a link to a page on the Internet; installing a PWA actually installs the web application on the user's device.
+While installing a PWA only takes a couple of clicks, depending on the web application features, the result of installing a PWA usually goes well beyond creating a link to a page on the Internet; installing a PWA more deeply integrates the web application on the user's device.
 
-Depending on the PWA, device, and features of the operating system and browser, installing a PWA may mean installing an essentially fully featured application with operating system integration. This also means uninstalling a PWA, which also only requires a couple of clicks, does more than just removing the PWA's icon.
+Depending on the PWA, device, and features of the operating system and browser, installing a PWA may enable native-like features, such as giving the app its own standalone window or registering it as a file handler. This also means uninstalling a PWA, which also only requires a couple of clicks, does more than just removing the PWA's icon.
 
 ### Installing PWAs
 
@@ -51,7 +51,7 @@ When the user selects the icon, the browser displays a prompt asking if they wan
 
 ![PWA installation confirmation prompt](installconfirm.jpg)
 
-Once installed, the PWA will behave like other applications that are installed on the OS. For example, on MacOS, the icon will appear in the doc, with the same "Keep in dock" options as other applications:
+Once installed, the PWA will behave like other applications that are installed on the OS. For example, on macOS, the icon will appear in the dock, and will have the same icon options as other applications:
 
 ![PWA icon in the doc on MacOS](dock.jpg)
 
@@ -59,7 +59,7 @@ On most desktop browsers, the install prompt is in the URL bar. On mobile, the i
 
 ![PWA installation on Chrome for Android, with confirmation, home screen icon, and offline experience.](android_pwa.jpg)
 
-Once installed, clicking on the application icon opens the PWA, even when the user is offline, just as happens with other installed applications on the device.
+Once installed, the PWA behaves just like other installed applications: clicking on the application icon opens the PWA, even when the user is offline.
 
 Installation is supported on all modern desktop and mobile devices. Whether the PWA can be installed by the browser on the operating system differs by browser/operating system combination. Most browsers support installing PWAs on all operating systems—Chrome OS, MacOS, Windows, Android, Linux, etc.—directly or when an extension is installed.
 
