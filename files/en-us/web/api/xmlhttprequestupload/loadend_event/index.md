@@ -9,7 +9,7 @@ browser-compat: api.XMLHttpRequestUpload.loadend_event
 
 The **`loadend`** event is fired when a request has completed, whether successfully (after {{domxref("XMLHttpRequestUpload/load_event", "load")}}) or unsuccessfully (after {{domxref("XMLHttpRequestUpload/abort_event", "abort")}} or {{domxref("XMLHttpRequestUpload/error_event", "error")}}).
 
-The `loadend` event is also sent when the request has been interrupted (by a {{domxref("XMLHttpRequestUpload/timeout", "timeout")}}, an {{domxref("XMLHttpRequestUpload/abort", "abort")}}, or an {{domxref("XMLHttpRequestUpload/error", "error")}}). In such cases, both the `loaded` and `total` value of the event will be 0.
+The `loadend` event is also sent when the request has been interrupted (by a {{domxref("XMLHttpRequestUpload/timeout_event", "timeout")}}, an {{domxref("XMLHttpRequestUpload/abort_event", "abort")}}, or an {{domxref("XMLHttpRequestUpload/error_event", "error")}}). In such cases, both the `loaded` and `total` value of the event will be 0.
 
 ## Syntax
 
