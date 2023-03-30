@@ -38,7 +38,6 @@ The following events are made available to {{domxref("XMLHttpRequestUpload")}}:
 - {{domxref("XMLHttpRequestUpload/loadend_event", "loadend")}}
 - {{domxref("XMLHttpRequestUpload/loadstart_event", "loadstart")}}
 - {{domxref("XMLHttpRequestUpload/progress_event", "progress")}}
-- {{domxref("XMLHttpRequest/readystatechange_event", "readystatechange")}}
 - {{domxref("XMLHttpRequestUpload/timeout_event", "timeout")}}
 
 ## Specifications

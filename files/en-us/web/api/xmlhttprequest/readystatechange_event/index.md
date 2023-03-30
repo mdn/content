@@ -56,7 +56,3 @@ xhr.send();
 ## Browser compatibility
 
 {{Compat}}
-
-## See also
-
-- {{domxref("XMLHttpRequestUpload")}}
