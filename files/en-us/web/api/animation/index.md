@@ -79,7 +79,7 @@ Animations are removed when all of the following are true:
 - The animation is finished. (Note that because of the `fill` it will still be in effect.)
 - The animation's timeline is monotonically increasing. (This is always true for {{domxref("DocumentTimeline")}}; other timelines such as {{cssxref("scroll-timeline")}} can run backwards.)
 - The animation is not being controlled by declarative markup such as CSS.
-- Every styling effect of the animation's {{domxref("AnimationEffect")}} is being overridden by another animation that also satisfies all the condtions above. (Typically, when two animations would set the same style property of the same element, the one created last overrides the other.)
+- Every styling effect of the animation's {{domxref("AnimationEffect")}} is being overridden by another animation that also satisfies all the conditions above. (Typically, when two animations would set the same style property of the same element, the one created last overrides the other.)
 
 The first four conditions ensure that, absent intervention by javascript code, the animation's effect will never change or end. The last condition ensures that the animation will never actually affect the style of any element; it has been entirely replaced.
 
