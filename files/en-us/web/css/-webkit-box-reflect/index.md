@@ -27,6 +27,8 @@ The **`-webkit-box-reflect`** [CSS](/en-US/docs/Web/CSS) property lets you refle
 /* Global values */
 -webkit-box-reflect: inherit;
 -webkit-box-reflect: initial;
+-webkit-box-reflect: revert;
+-webkit-box-reflect: revert-layer;
 -webkit-box-reflect: unset;
 ```
 

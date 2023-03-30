@@ -31,6 +31,8 @@ The `-webkit-mask-position-y` CSS property sets the initial vertical position of
 /* Global values */
 -webkit-mask-position-y: inherit;
 -webkit-mask-position-y: initial;
+-webkit-mask-position-y: revert;
+-webkit-mask-position-y: revert-layer;
 -webkit-mask-position-y: unset;
 ```
 
