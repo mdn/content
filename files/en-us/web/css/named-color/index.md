@@ -420,7 +420,7 @@ In addition to these 16 colors, about 150 other colors have a keyword associated
     </tr>
     <tr>
       <td><code>grey</code></td>
-      <td><code>#808080</code></td> (synonym of <code>gray</code>)
+      <td><code>#808080</code> (synonym of <code>gray</code>)</td>
       <td style="background: grey"></td>
     </tr>
     <tr>
