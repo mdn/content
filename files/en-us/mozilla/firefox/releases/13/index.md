@@ -1,9 +1,6 @@
 ---
 title: Firefox 13 for developers
 slug: Mozilla/Firefox/Releases/13
-tags:
-  - Firefox
-  - Gecko
 ---
 
 {{FirefoxSidebar}}
@@ -14,16 +11,16 @@ Firefox 13 was shipped on June 5, 2012. This page summarizes the changes in Fire
 
 ### HTML
 
-- Tables' {{htmlattrxref("cellspacing", "table")}} attributes are now parsed the same outside quirks mode as they are in quirks mode. That is, if a value is specified as a percentage, it's treated as a number of pixels instead, since percentage values are not actually permitted according to the specification.
+- Tables' [`cellspacing`](/en-US/docs/Web/HTML/Element/table#cellspacing) attributes are now parsed the same outside quirks mode as they are in quirks mode. That is, if a value is specified as a percentage, it's treated as a number of pixels instead, since percentage values are not actually permitted according to the specification.
 - The {{htmlelement("wbr")}} element has seen its bidirectional behavior fixed. It now behaves like the Unicode `U+200B ZERO-WIDTH SPACE` and therefore doesn't affect bi-directionality of its parent element anymore.
 - The {{Cssxref(":invalid")}} pseudo-class can now be applied to the {{htmlelement("form")}} element.
 
 ### CSS
 
 - The `turn` {{cssxref("&lt;angle&gt;")}} unit is now supported (to be used with CSS functions like `rotate()`).
-- Support for 3-to-4 value syntax of the {{cssxref("background-position")}} has been added. You can offset a background image from any corner by writing like "`right 10px bottom 20px`". See {{bug("522607")}}
+- Support for 3-to-4 value syntax of the {{cssxref("background-position")}} has been added. You can offset a background image from any corner by writing like "`right 10px bottom 20px`". See [Firefox bug 522607](https://bugzil.la/522607)
 - Support for the 2-value syntax of the CSS {{cssxref("background-repeat")}} has been added.
-- Support for {{cssxref("border-radius","-moz-border-radius*")}} and {{cssxref("box-shadow","-moz-box-shadow")}} has been removed. Authors should use unprefixed `border-radius` or `box-shadow` instead. See {{bug("693510")}}
+- Support for {{cssxref("border-radius","-moz-border-radius*")}} and {{cssxref("box-shadow","-moz-box-shadow")}} has been removed. Authors should use unprefixed `border-radius` or `box-shadow` instead. See [Firefox bug 693510](https://bugzil.la/693510)
 - The {{cssxref("column-fill")}} property has been implemented (prefixed).
 
 ### JavaScript
@@ -53,7 +50,7 @@ Firefox 13 was shipped on June 5, 2012. This page summarizes the changes in Fire
 
 ### SVG
 
-- The {{domxref("SVGStringList")}} DOM interface is now indexable like [`Array`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) (see {{bug("722071")}}).
+- The {{domxref("SVGStringList")}} DOM interface is now indexable like [`Array`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) (see [Firefox bug 722071](https://bugzil.la/722071)).
 
 ### WebGL
 
@@ -61,7 +58,7 @@ Firefox 13 was shipped on June 5, 2012. This page summarizes the changes in Fire
 
 ### MathML
 
-- Support for the `width` attribute on {{MathMLElement("mtable")}} elements has been added ({{bug("722880")}}).
+- Support for the `width` attribute on {{MathMLElement("mtable")}} elements has been added ([Firefox bug 722880](https://bugzil.la/722880)).
 - [MathJax fonts](https://docs.mathjax.org/en/latest/output/fonts.html) are now used as the default fonts for mathematical text. See [Fonts for Mozilla's MathML engine](/en-US/docs/Mozilla_MathML_Project/Fonts) for more information.
 
 ### Network
@@ -108,8 +105,8 @@ Starting in Firefox 13, Firefox for Windows requires at least Windows XP Service
 ### Interfaces
 
 - The `nsIScreen` interface now supports controlling rotation through the new `rotation` attribute.
-- The `nsIPrefBranch2` interface has been merged into `nsIPrefBranch` ({{bug("718255")}}).
-- The new message manager wakeup service, implemented by `nsIMessageWakeupService`, has been implemented. See {{bug(591052)}}.
+- The `nsIPrefBranch2` interface has been merged into `nsIPrefBranch` ([Firefox bug 718255](https://bugzil.la/718255)).
+- The new message manager wake-up service, implemented by `nsIMessageWakeupService`, has been implemented. See [Firefox bug 591052](https://bugzil.la/591052).
 - The aliases `MozOpacity`, `MozOutline`, `MozOutlineStyle`, `MozOutlineWidth`, `MozOutlineOffset`, and `MozOutlineColor`, all of which were removed in previous versions of Gecko, have been removed from `nsIDOMCSS2Properties`, which should have been done with the aliases were initially removed.
 - The `nsINavHistoryQueryOptions` attribute `excludeItemIfParentHasAnnotation` has been removed, along with the corresponding query operation. It existed to support livemarks, which no longer exist.
 

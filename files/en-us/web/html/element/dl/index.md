@@ -1,16 +1,7 @@
 ---
 title: '<dl>: The Description List element'
 slug: Web/HTML/Element/dl
-tags:
-  - Definition List
-  - Description list
-  - Element
-  - HTML
-  - HTML grouping content
-  - HTML:Flow content
-  - HTML:Palpable Content
-  - Reference
-  - Web
+page-type: html-element
 browser-compat: html.elements.dl
 ---
 
@@ -24,12 +15,12 @@ The **`<dl>`** [HTML](/en-US/docs/Web/HTML) element represents a description lis
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories"
+        <a href="/en-US/docs/Web/HTML/Content_categories"
           >Content categories</a
         >
       </th>
       <td>
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
           >Flow content</a
         >, and if the <code>&#x3C;dl></code> element's children include one
         name-value group, palpable content.
@@ -59,7 +50,7 @@ The **`<dl>`** [HTML](/en-US/docs/Web/HTML) element represents a description lis
       <th scope="row">Permitted parents</th>
       <td>
         Any element that accepts
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
           >flow content</a
         >.
       </td>
@@ -75,12 +66,12 @@ The **`<dl>`** [HTML](/en-US/docs/Web/HTML) element represents a description lis
     <tr>
       <th scope="row">Permitted ARIA roles</th>
       <td>
-        {{ARIARole("group")}},
+        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/group_role"><code>group</code></a>,
         <code
           ><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/List_role"
             >list</a
           ></code
-        >, {{ARIARole("none")}}, {{ARIARole("presentation")}}
+        >, <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/none_role"><code>none</code></a>, <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/presentation_role"><code>presentation</code></a>
       </td>
     </tr>
     <tr>

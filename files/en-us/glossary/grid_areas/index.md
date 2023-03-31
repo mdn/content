@@ -1,10 +1,7 @@
 ---
 title: Grid Areas
 slug: Glossary/Grid_Areas
-tags:
-  - CSS
-  - CSS Grids
-  - Reference
+page-type: glossary-definition
 ---
 
 A **grid area** is one or more {{glossary("grid cell", "grid cells")}} that make up a rectangular area on the grid. Grid areas are created when you place an item using [line-based placement](/en-US/docs/Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid) or when defining areas using [named grid areas](/en-US/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas).

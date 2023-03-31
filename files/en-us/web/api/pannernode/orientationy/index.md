@@ -2,13 +2,6 @@
 title: PannerNode.orientationY
 slug: Web/API/PannerNode/orientationY
 page-type: web-api-instance-property
-tags:
-  - API
-  - PannerNode
-  - Property
-  - Reference
-  - Web Audio API
-  - orientationY
 browser-compat: api.PannerNode.orientationY
 ---
 

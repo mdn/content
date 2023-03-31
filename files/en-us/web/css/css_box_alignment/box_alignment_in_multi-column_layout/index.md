@@ -2,11 +2,6 @@
 title: Box alignment in Multi-column Layout
 slug: Web/CSS/CSS_Box_Alignment/Box_Alignment_in_Multi-column_Layout
 page-type: guide
-tags:
-  - CSS
-  - Guide
-  - box alignment
-  - multi-column
 ---
 
 {{CSSRef}}

@@ -1,11 +1,6 @@
 ---
 title: <mtr>
 slug: Web/MathML/Element/mtr
-tags:
-  - MathML
-  - MathML Reference
-  - MathML:Element
-  - MathML:Tabular Math
 browser-compat: mathml.elements.mtr
 ---
 

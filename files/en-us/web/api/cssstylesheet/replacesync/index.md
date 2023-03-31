@@ -2,12 +2,6 @@
 title: CSSStyleSheet.replaceSync()
 slug: Web/API/CSSStyleSheet/replaceSync
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - replaceSync
-  - CSSStyleSheet
 browser-compat: api.CSSStyleSheet.replaceSync
 ---
 
@@ -47,7 +41,7 @@ In the following example a new stylesheet is created and two CSS rules are added
 ```js
 const stylesheet = new CSSStyleSheet();
 
-stylesheet.replaceSync('body { font-size: 1.4em; } p { color: red; }');
+stylesheet.replaceSync("body { font-size: 1.4em; } p { color: red; }");
 ```
 
 ## Specifications

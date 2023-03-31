@@ -2,13 +2,8 @@
 title: InterventionReportBody.toJSON()
 slug: Web/API/InterventionReportBody/toJSON
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - Experimental
-  - toJSON
-  - InterventionReportBody
+status:
+  - experimental
 browser-compat: api.InterventionReportBody.toJSON
 ---
 
@@ -36,9 +31,9 @@ In this example we create a new {{domxref("ReportingObserver")}} to observe inte
 
 ```js
 const options = {
-  types: ['intervention'],
-  buffered: true
-}
+  types: ["intervention"],
+  buffered: true,
+};
 
 const observer = new ReportingObserver((reports, observer) => {
   const firstReport = reports[0];

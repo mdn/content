@@ -1,8 +1,7 @@
 ---
 title: Robots.txt
 slug: Glossary/Robots.txt
-tags:
-  - Infrastructure
+page-type: glossary-definition
 ---
 
 Robots.txt is a file which is usually placed in the root of any website. It decides whether {{Glossary("crawler", "crawlers")}} are permitted or forbidden access to the web site.
@@ -13,5 +12,5 @@ For example, the site admin can forbid crawlers to visit a certain folder (and a
 
 - [Robots.txt](https://en.wikipedia.org/wiki/Robots.txt) on Wikipedia
 - <https://developers.google.com/search/reference/robots_txt>
-- Standard specification draft: [https://datatracker.ietf.org/doc/html/draft-rep-wg-topic](https://datatracker.ietf.org/doc/html/draft-rep-wg-topic-00)
+- Standard specification: [RFC9309](https://www.rfc-editor.org/rfc/rfc9309.html)
 - <https://www.robotstxt.org/>

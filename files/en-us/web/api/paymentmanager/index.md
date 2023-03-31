@@ -2,13 +2,8 @@
 title: PaymentManager
 slug: Web/API/PaymentManager
 page-type: web-api-interface
-tags:
-  - API
-  - Experimental
-  - Interface
-  - Landing
-  - PaymentManager
-  - Reference
+status:
+  - experimental
 browser-compat: api.PaymentManager
 ---
 
@@ -27,24 +22,23 @@ It is accessed via the {{domxref("ServiceWorkerRegistration.paymentManager")}} p
 
 ## Instance methods
 
-- {{domxref("PaymentManager.enableDelegations", "enableDelegations()")}} {{Experimental_Inline}}
+- {{domxref("PaymentManager.enableDelegations", "enableDelegations()")}} {{Experimental_Inline}} {{Non-standard_Inline}}
   - : Delegates responsibility for providing various parts of the required payment information to the payment app rather than collecting it from the browser (for example, via autofill).
 
 ## Examples
 
 ```js
-navigator.serviceWorker.register("serviceworker.js")
-  .then(registration => {
-    registration.paymentManager.userHint = "Card number should be 16 digits";
+navigator.serviceWorker.register("serviceworker.js").then((registration) => {
+  registration.paymentManager.userHint = "Card number should be 16 digits";
 
-    registration.paymentManager.enableDelegations(['shippingAddress', 'payerName']) 
-      .then(() => {
-          // ...
-      });
+  registration.paymentManager
+    .enableDelegations(["shippingAddress", "payerName"])
+    .then(() => {
+      // ...
+    });
 
-    // ...
-
-  });
+  // ...
+});
 ```
 
 ## Specifications

@@ -1,16 +1,7 @@
 ---
 title: browserAction.getPopup()
 slug: Mozilla/Add-ons/WebExtensions/API/browserAction/getPopup
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - browserAction
-  - getPopup
+page-type: webextension-api-function
 browser-compat: webextensions.api.browserAction.getPopup
 ---
 

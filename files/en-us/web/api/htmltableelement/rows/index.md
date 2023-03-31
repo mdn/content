@@ -2,17 +2,6 @@
 title: HTMLTableElement.rows
 slug: Web/API/HTMLTableElement/rows
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTML DOM
-  - HTMLTableElement
-  - NeedsBrowserCompatibility
-  - NeedsSpecTable
-  - Property
-  - Read-only
-  - Reference
-  - Table Rows
-  - rows
 browser-compat: api.HTMLTableElement.rows
 ---
 
@@ -39,7 +28,7 @@ without having to manually search for them.
 ```js
 myrows = mytable.rows;
 firstRow = mytable.rows[0];
-lastRow = mytable.rows.item(mytable.rows.length-1);
+lastRow = mytable.rows.item(mytable.rows.length - 1);
 ```
 
 This demonstrates how you can use both array syntax (line 2) and the

@@ -2,14 +2,8 @@
 title: "HTMLTextAreaElement: selectionchange event"
 slug: Web/API/HTMLTextAreaElement/selectionchange_event
 page-type: web-api-event
-tags:
-  - API
-  - Event
-  - Reference
-  - Selection
-  - Selection API
-  - selectionchange
-  - Experimental
+status:
+  - experimental
 browser-compat: api.HTMLTextAreaElement.selectionchange_event
 ---
 
@@ -29,9 +23,9 @@ It is also possible to add a listener on the global `onselectionchange` event ha
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('selectionchange', (event) => {});
+addEventListener("selectionchange", (event) => {});
 
-onselectionchange = (event) => { };
+onselectionchange = (event) => {};
 ```
 
 ## Event type

@@ -2,14 +2,6 @@
 title: Navigator.getBattery()
 slug: Web/API/Navigator/getBattery
 page-type: web-api-instance-method
-tags:
-  - API
-  - Battery API
-  - Device API
-  - Method
-  - Navigator
-  - Reference
-  - getBattery
 browser-compat: api.Navigator.getBattery
 ---
 
@@ -63,7 +55,7 @@ let batteryIsCharging = false;
 navigator.getBattery().then((battery) => {
   batteryIsCharging = battery.charging;
 
-  battery.addEventListener('chargingchange', () => {
+  battery.addEventListener("chargingchange", () => {
     batteryIsCharging = battery.charging;
   });
 });

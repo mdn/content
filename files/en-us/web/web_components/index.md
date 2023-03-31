@@ -1,19 +1,6 @@
 ---
 title: Web Components
 slug: Web/Web_Components
-tags:
-  - Components
-  - HTML Imports
-  - JavaScript
-  - Landing
-  - Overview
-  - Template
-  - Web Article
-  - Web Components
-  - Web Development
-  - custom elements
-  - shadow dom
-  - slot
 browser-compat:
   - html.elements.template
   - api.ShadowRoot
@@ -78,7 +65,7 @@ The basic approach for implementing a web component generally looks something li
 
   - : Pseudo-classes relating specifically to custom elements:
 
-    - {{cssxref(":defined")}}: Matches any element that is defined, including built in elements and custom elements defined with `CustomElementRegistry.define()`).
+    - {{cssxref(":defined")}}: Matches any element that is defined, including built in elements and custom elements defined with `CustomElementRegistry.define()`.
     - {{cssxref(":host")}}: Selects the shadow host of the [shadow DOM](/en-US/docs/Web/Web_Components/Using_shadow_DOM) containing the CSS it is used inside.
     - {{cssxref(":host", ":host()")}}: Selects the shadow host of the [shadow DOM](/en-US/docs/Web/Web_Components/Using_shadow_DOM) containing the CSS it is used inside (so you can select a custom element from inside its shadow DOM) — but only if the selector given as the function's parameter matches the shadow host.
     - {{cssxref(":host-context", ":host-context()")}}: Selects the shadow host of the [shadow DOM](/en-US/docs/Web/Web_Components/Using_shadow_DOM) containing the CSS it is used inside (so you can select a custom element from inside its shadow DOM) — but only if the selector given as the function's parameter matches the shadow host's ancestor(s) in the place it sits inside the DOM hierarchy.
@@ -87,7 +74,7 @@ The basic approach for implementing a web component generally looks something li
 
   - : Pseudo-elements relating specifically to custom elements:
 
-    - {{cssxref("::part")}}: Represents any element within a [shadow tree](/en-US/docs/Web/Web_Components/Using_shadow_DOM) that has a matching {{HTMLAttrxRef("part")}} attribute.
+    - {{cssxref("::part")}}: Represents any element within a [shadow tree](/en-US/docs/Web/Web_Components/Using_shadow_DOM) that has a matching [`part`](/en-US/docs/Web/HTML/Global_attributes#part) attribute.
 
 ### Shadow DOM
 

@@ -2,13 +2,6 @@
 title: PermissionStatus
 slug: Web/API/PermissionStatus
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - PermissionStatus
-  - Permissions
-  - Permissions API
-  - Reference
 browser-compat: api.PermissionStatus
 ---
 
@@ -35,12 +28,16 @@ The **`PermissionStatus`** interface of the [Permissions API](/en-US/docs/Web/AP
 ## Example
 
 ```js
-navigator.permissions.query({ name: 'geolocation' }).then((permissionStatus) => {
-  console.log(`geolocation permission status is ${permissionStatus.state}`);
-  permissionStatus.onchange = () => {
-    console.log(`geolocation permission status has changed to ${permissionStatus.state}`);
-  };
-});
+navigator.permissions
+  .query({ name: "geolocation" })
+  .then((permissionStatus) => {
+    console.log(`geolocation permission status is ${permissionStatus.state}`);
+    permissionStatus.onchange = () => {
+      console.log(
+        `geolocation permission status has changed to ${permissionStatus.state}`
+      );
+    };
+  });
 ```
 
 ## Specifications

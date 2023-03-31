@@ -2,13 +2,6 @@
 title: Document.location
 slug: Web/API/Document/location
 page-type: web-api-instance-property
-tags:
-  - API
-  - Document
-  - HTML DOM
-  - Property
-  - Read-only
-  - Reference
 browser-compat: api.Document.location
 ---
 

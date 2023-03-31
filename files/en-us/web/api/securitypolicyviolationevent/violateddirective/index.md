@@ -2,15 +2,6 @@
 title: SecurityPolicyViolationEvent.violatedDirective
 slug: Web/API/SecurityPolicyViolationEvent/violatedDirective
 page-type: web-api-instance-property
-tags:
-  - API
-  - CSP
-  - HTTP
-  - Property
-  - Reference
-  - Security
-  - SecurityPolicyViolationEvent
-  - violatedDirective
 browser-compat: api.SecurityPolicyViolationEvent.violatedDirective
 ---
 

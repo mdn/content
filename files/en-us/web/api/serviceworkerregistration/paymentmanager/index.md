@@ -2,15 +2,12 @@
 title: ServiceWorkerRegistration.paymentManager
 slug: Web/API/ServiceWorkerRegistration/paymentManager
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - PaymentManager
-  - Reference
+status:
+  - experimental
 browser-compat: api.ServiceWorkerRegistration.paymentManager
 ---
 
-{{APIRef("Payment Handler API")}}
+{{APIRef("Payment Handler API")}}{{SeeCompatTable}}
 
 The **`paymentManager`** property of the
 {{domxref("ServiceWorkerRegistration")}} interface returns a payment app's {{domxref("PaymentManager")}} instance, which is used to manage various payment app functionality.
@@ -22,18 +19,17 @@ A {{domxref("PaymentManager")}} object instance.
 ## Examples
 
 ```js
-navigator.serviceWorker.register("serviceworker.js")
-  .then(registration => {
-    registration.paymentManager.userHint = "Card number should be 16 digits";
+navigator.serviceWorker.register("serviceworker.js").then((registration) => {
+  registration.paymentManager.userHint = "Card number should be 16 digits";
 
-    registration.paymentManager.enableDelegations(['shippingAddress', 'payerName']) 
-      .then(() => {
-          // ...
-      });
+  registration.paymentManager
+    .enableDelegations(["shippingAddress", "payerName"])
+    .then(() => {
+      // ...
+    });
 
-    // ...
-
-  });
+  // ...
+});
 ```
 
 - {{domxref("PaymentManager.userHint")}} is used to provide a hint for the browser to display along with the payment app's name and icon in the Payment Handler UI.

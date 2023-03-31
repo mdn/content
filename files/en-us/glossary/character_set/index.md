@@ -1,9 +1,7 @@
 ---
 title: Character set
 slug: Glossary/Character_set
-tags:
-  - character encoding
-  - character set
+page-type: glossary-definition
 ---
 
 A **character set** is an encoding system to let computers know how to recognize {{Glossary("Character")}}, including letters, numbers, punctuation marks, and whitespace.

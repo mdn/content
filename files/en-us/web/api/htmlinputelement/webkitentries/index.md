@@ -2,14 +2,6 @@
 title: HTMLInputElement.webkitEntries
 slug: Web/API/HTMLInputElement/webkitEntries
 page-type: web-api-instance-property
-tags:
-  - API
-  - File and Directory Entries API
-  - Files
-  - HTML DOM
-  - HTMLInputElement
-  - Property
-  - webkitEntries
 browser-compat: api.HTMLInputElement.webkitEntries
 ---
 

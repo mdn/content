@@ -2,16 +2,6 @@
 title: env()
 slug: Web/CSS/env
 page-type: css-function
-tags:
-  - CSS
-  - CSS Function
-  - CSS Variables
-  - Draft
-  - Function
-  - Reference
-  - Variables
-  - env
-  - env()
 browser-compat: css.properties.custom-property.env
 ---
 

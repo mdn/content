@@ -2,16 +2,8 @@
 title: USBDevice.forget()
 slug: Web/API/USBDevice/forget
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - USB
-  - USBDevice
-  - WebUSB
-  - WebUSB API
-  - forget
-  - Experimental
+status:
+  - experimental
 browser-compat: api.USBDevice.forget
 ---
 

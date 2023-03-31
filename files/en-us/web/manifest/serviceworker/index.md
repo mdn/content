@@ -1,25 +1,19 @@
 ---
 title: serviceworker
 slug: Web/Manifest/serviceworker
-tags:
-  - serviceworker
-  - Manifest
-  - Web
-  - Experimental
+status:
+  - experimental
+  - non-standard
 browser-compat: html.manifest.serviceworker
 ---
 
-{{QuickLinksWithSubpages("/en-US/docs/Web/Manifest")}}{{SeeCompatTable}}
+{{QuickLinksWithSubpages("/en-US/docs/Web/Manifest")}}{{SeeCompatTable}}{{Non-standard_header}}
 
 <table class="properties">
   <tbody>
     <tr>
       <th scope="row">Type</th>
       <td><code>Object</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Mandatory</th>
-      <td>No</td>
     </tr>
   </tbody>
 </table>

@@ -1,9 +1,7 @@
 ---
 title: Number
 slug: Glossary/Number
-tags:
-  - CodingScripting
-  - JavaScript
+page-type: glossary-definition
 ---
 
 In {{Glossary("JavaScript")}}, **Number** is a numeric data type in the [double-precision 64-bit floating point format (IEEE 754)](https://en.wikipedia.org/wiki/Double_precision_floating-point_format). In other programming languages different numeric types exist; for example, Integers, Floats, Doubles, or Bignums.

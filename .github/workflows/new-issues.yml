@@ -14,3 +14,4 @@ jobs:
         uses: andymckay/labeler@master
         with:
           add-labels: "needs triage"
+          ignore-if-assigned: true

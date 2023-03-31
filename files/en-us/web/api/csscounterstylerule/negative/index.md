@@ -2,12 +2,6 @@
 title: CSSCounterStyleRule.negative
 slug: Web/API/CSSCounterStyleRule/negative
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - negative
-  - CSSCounterStyleRule
 browser-compat: api.CSSCounterStyleRule.negative
 ---
 

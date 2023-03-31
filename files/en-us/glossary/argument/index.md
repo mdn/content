@@ -1,9 +1,7 @@
 ---
 title: Argument
 slug: Glossary/Argument
-tags:
-  - CodingScripting
-  - JavaScript
+page-type: glossary-definition
 ---
 
 An **argument** is a {{glossary("value")}} ({{Glossary("primitive")}} or {{Glossary("object")}}) passed as input to a {{Glossary("function")}}.

@@ -2,14 +2,8 @@
 title: WebTransportDatagramDuplexStream.maxDatagramSize
 slug: Web/API/WebTransportDatagramDuplexStream/maxDatagramSize
 page-type: web-api-instance-property
-tags:
-  - API
-  - Experimental
-  - maxDatagramSize
-  - Property
-  - Reference
-  - WebTransport
-  - WebTransport API
+status:
+  - experimental
 browser-compat: api.WebTransportDatagramDuplexStream.maxDatagramSize
 ---
 
@@ -26,7 +20,7 @@ A number.
 ## Examples
 
 ```js
-const url = 'https://example.com:4999/wt';
+const url = "https://example.com:4999/wt";
 
 async function initTransport(url) {
   // Initialize transport connection

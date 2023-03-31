@@ -1,10 +1,7 @@
 ---
 title: XML
 slug: Glossary/XML
-tags:
-  - CodingScripting
-  - XML
-  - "l10n:priority"
+page-type: glossary-definition
 ---
 
 eXtensible Markup Language (XML) is a generic markup language specified by the W3C. The information technology (IT) industry uses many languages based on XML as data-description languages.

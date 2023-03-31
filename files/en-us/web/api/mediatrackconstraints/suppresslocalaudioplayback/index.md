@@ -2,17 +2,8 @@
 title: MediaTrackConstraints.suppressLocalAudioPlayback
 slug: Web/API/MediaTrackConstraints/suppressLocalAudioPlayback
 page-type: web-api-instance-property
-tags:
-  - API
-  - Audio
-  - Experimental
-  - Media
-  - Media Capture and Streams API
-  - Media Streams API
-  - MediaTrackConstraints
-  - Property
-  - Web
-  - suppressLocalAudioPlayback
+status:
+  - experimental
 browser-compat: api.MediaTrackConstraints.suppressLocalAudioPlayback
 ---
 
@@ -40,10 +31,12 @@ result in an error.
 ## Examples
 
 ```js
-let isLocalAudioSuppressed = displayStream.getVideoTracks()[0].getSettings().suppressLocalAudioPlayback;
+let isLocalAudioSuppressed = displayStream
+  .getVideoTracks()[0]
+  .getSettings().suppressLocalAudioPlayback;
 ```
 
-See [Example: Constraint exerciser](/en-US/docs/Web/API/Media_Capture_and_Streams_API/Constraints#example_constraint_exerciser) for an example that allows you to play with media track constraints.
+The [Constraint exerciser](/en-US/docs/Web/API/Media_Capture_and_Streams_API/Constraints#example_constraint_exerciser) example shows how to use media track constraints.
 
 ## Specifications
 

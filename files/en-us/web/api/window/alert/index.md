@@ -2,13 +2,6 @@
 title: Window.alert()
 slug: Web/API/Window/alert
 page-type: web-api-instance-method
-tags:
-  - API
-  - HTML DOM
-  - Method
-  - Reference
-  - Window
-  - alert
 browser-compat: api.Window.alert
 ---
 

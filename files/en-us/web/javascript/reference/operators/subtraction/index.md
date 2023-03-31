@@ -2,18 +2,12 @@
 title: Subtraction (-)
 slug: Web/JavaScript/Reference/Operators/Subtraction
 page-type: javascript-operator
-tags:
-  - JavaScript
-  - Language feature
-  - Operator
-  - Reference
 browser-compat: javascript.operators.subtraction
 ---
 
 {{jsSidebar("Operators")}}
 
-The **subtraction (`-`)** operator subtracts the two operands, producing their
-difference.
+The **subtraction (`-`)** operator subtracts the two operands, producing their difference.
 
 {{EmbedInteractiveExample("pages/js/expressions-subtraction.html")}}
 
@@ -25,7 +19,7 @@ x - y
 
 ## Description
 
-The subtraction operator [converts both operands to numeric values](/en-US/docs/Web/JavaScript/Data_structures#numeric_coercion) and carries out either number subtraction or [BigInt](/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt) subtraction, depending on the two operands' types. If the types don't match, a {{jsxref("TypeError")}} is thrown.
+The `*` operator is overloaded for two types of operands: number and [BigInt](/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt). It first [coerces both operands to numeric values](/en-US/docs/Web/JavaScript/Data_structures#numeric_coercion) and tests the types of them. It performs BigInt subtraction if both operands becomes BigInts; otherwise, it performs number subtraction. A {{jsxref("TypeError")}} is thrown if one operand becomes a BigInt but the other becomes a number.
 
 ## Examples
 

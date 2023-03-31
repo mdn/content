@@ -1,10 +1,7 @@
 ---
 title: Public-key cryptography
 slug: Glossary/Public-key_cryptography
-tags:
-  - Cryptography
-  - Public-key cryptography
-  - Security
+page-type: glossary-definition
 ---
 
 Public-key cryptography — or _asymmetric cryptography_ — is a cryptographic system in which keys come in pairs. The transformation performed by one of the keys can only be undone with the other key. One key (the _private key_) is kept secret while the other is made public.

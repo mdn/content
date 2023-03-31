@@ -2,11 +2,6 @@
 title: extends
 slug: Web/JavaScript/Reference/Classes/extends
 page-type: javascript-language-feature
-tags:
-  - Classes
-  - ECMAScript 2015
-  - JavaScript
-  - Language feature
 browser-compat: javascript.classes.extends
 ---
 
@@ -63,11 +58,11 @@ console.log(Object.getPrototypeOf(new ParentClass()));
 
 `extends` sets the prototype for both `ChildClass` and `ChildClass.prototype`.
 
-|                         | Prototype of `ChildClass` | Prototype of `ChildClass.prototype` |
-| ----------------------- | ------------------------- | ----------------------------------- |
-| `extends` clause absent | `Function.prototype`      | `Object.prototype`                  |
-| `extends null`          | `Function.prototype`      | `null`                              |
-| `extends ParentClass`   | `ParentClass`             | `ParentClass.prototype`             |
+|                                   | Prototype of `ChildClass` | Prototype of `ChildClass.prototype` |
+| --------------------------------- | ------------------------- | ----------------------------------- |
+| `extends` clause absent           | `Function.prototype`      | `Object.prototype`                  |
+| [`extends null`](#extending_null) | `Function.prototype`      | `null`                              |
+| `extends ParentClass`             | `ParentClass`             | `ParentClass.prototype`             |
 
 ```js
 class ParentClass {}
@@ -140,6 +135,42 @@ However, the above expectations take non-trivial efforts to implement properly.
 
 These problems are not unique to built-in classes. For your own classes, you will likely have to make the same decisions. However, for built-in classes, optimizability and security are a much bigger concern. New built-in methods always construct the base class and call as few custom methods as possible. If you want to subclass built-ins while achieving the above expectations, you need to override all methods that have the default behavior baked into them. Any addition of new methods on the base class may also break the semantics of your subclass because they are inherited by default. Therefore, a better way to extend built-ins is to use [_composition_](#avoiding_inheritance).
 
+### Extending null
+
+`extends null` was designed to allow easy creation of [objects that do not inherit from `Object.prototype`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object#null-prototype_objects). However, due to unsettled decisions about whether `super()` should be called within the constructor, it's not possible to construct such a class in practice using any constructor implementation that doesn't return an object. [The TC39 committee is working on re-enabling this feature](https://github.com/tc39/ecma262/pull/1321).
+
+```js
+new (class extends null {})();
+// TypeError: Super constructor null of anonymous class is not a constructor
+
+new (class extends null {
+  constructor() {}
+})();
+// ReferenceError: Must call super constructor in derived class before accessing 'this' or returning from derived constructor
+
+new (class extends null {
+  constructor() {
+    super();
+  }
+})();
+// TypeError: Super constructor null of anonymous class is not a constructor
+```
+
+Instead, you need to explicitly return an instance from the constructor.
+
+```js
+class NullClass extends null {
+  constructor() {
+    // Using new.target allows derived classes to
+    // have the correct prototype chain
+    return Object.create(new.target.prototype);
+  }
+}
+
+const proto = Object.getPrototypeOf;
+console.log(proto(proto(new NullClass()))); // null
+```
+
 ## Examples
 
 ### Using extends
@@ -154,7 +185,7 @@ class Square extends Polygon {
     super(length, length);
     // Note: In derived classes, super() must be called before you
     // can use 'this'. Leaving this out will cause a reference error.
-    this.name = 'Square';
+    this.name = "Square";
   }
 
   get area() {
@@ -171,7 +202,7 @@ Classes cannot extend regular (non-constructible) objects. If you want to inheri
 const Animal = {
   speak() {
     console.log(`${this.name} makes a noise.`);
-  }
+  },
 };
 
 class Dog {
@@ -193,7 +224,7 @@ This example extends the built-in {{jsxref("Date")}} object. This example is ext
 ```js
 class MyDate extends Date {
   getFormattedDate() {
-    const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+    const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
     return `${this.getDate()}-${months[this.getMonth()]}-${this.getFullYear()}`;
   }
 }
@@ -217,7 +248,7 @@ const a = new MyArray(1, 2, 3);
 const mapped = a.map((x) => x * x);
 
 console.log(mapped instanceof MyArray); // false
-console.log(mapped instanceof Array);   // true
+console.log(mapped instanceof Array); // true
 ```
 
 This behavior is implemented by many built-in copying methods. For caveats of this feature, see the [subclassing built-ins](#subclassing_built-ins) discussion.
@@ -229,13 +260,15 @@ Abstract subclasses or _mix-ins_ are templates for classes. A class can only hav
 A function with a superclass as input and a subclass extending that superclass as output can be used to implement mix-ins:
 
 ```js
-const calculatorMixin = (Base) => class extends Base {
-  calc() {}
-};
+const calculatorMixin = (Base) =>
+  class extends Base {
+    calc() {}
+  };
 
-const randomizerMixin = (Base) => class extends Base {
-  randomize() {}
-};
+const randomizerMixin = (Base) =>
+  class extends Base {
+    randomize() {}
+  };
 ```
 
 A class that uses these mix-ins can then be written like this:

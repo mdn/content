@@ -2,13 +2,6 @@
 title: Checking when a deadline is due
 slug: Web/API/IndexedDB_API/Checking_when_a_deadline_is_due
 page-type: guide
-tags:
-  - Apps
-  - Date
-  - Example
-  - Guide
-  - IndexedDB
-  - deadline
 ---
 
 {{DefaultAPISidebar("IndexedDB")}}
@@ -123,11 +116,11 @@ function checkDeadlines() {
 First we grab the current date and time by creating a blank `Date` object. Easy huh? It's about to get a bit more complex.
 
 ```js
-  const minuteCheck  = now.getMinutes();
-  const hourCheck    = now.getHours();
-  const dayCheck     = now.getDate();
-  const monthCheck   = now.getMonth();
-  const yearCheck    = now.getFullYear();
+const minuteCheck = now.getMinutes();
+const hourCheck = now.getHours();
+const dayCheck = now.getDate();
+const monthCheck = now.getMonth();
+const yearCheck = now.getFullYear();
 ```
 
 The `Date` object has a number of methods to extract various parts of the date and time inside it. Here we fetch the current minutes (gives an easy numerical value), hours (gives an easy numerical value), day of the month (`getDate()` is needed for this, as `getDay()` returns the day of the week, 1-7), month (returns a number from 0-11, see below), and year (`getFullYear()` is needed; `getYear()` is deprecated, and returns a weird value that is not much use to anyone!)
@@ -145,40 +138,39 @@ The `Date` object has a number of methods to extract various parts of the date a
 Next we create another IndexedDB `objectStore`, and use the `openCursor()` method to open a cursor, which is basically a way in IndexedDB to iterate through all the items in the store. We then loop through all the items in the cursor for as long as there is a valid item left in the cursor.
 
 ```js
-      switch (cursor.value.month) {
-        case "January":
-          monthNumber = 0;
-          break;
-        case "February":
-          monthNumber = 1;
-          break;
+switch (cursor.value.month) {
+  case "January":
+    monthNumber = 0;
+    break;
+  case "February":
+    monthNumber = 1;
+    break;
 
-        // other lines removed from listing for brevity
+  // other lines removed from listing for brevity
 
-        case "December":
-          monthNumber = 11;
-          break;
-        default:
-          alert('Incorrect month entered in database.');
-      }
+  case "December":
+    monthNumber = 11;
+    break;
+  default:
+    alert("Incorrect month entered in database.");
+}
 ```
 
 The first thing we do is convert the month names we have stored in the database into a month number that JavaScript will understand. As we saw before, the JavaScript `Date` object creates month values as a number between 0 and 11.
 
 ```js
-      if (
-        Number(cursor.value.hours) === hourCheck &&
-        Number(cursor.value.minutes) === minuteCheck &&
-        Number(cursor.value.day) === dayCheck &&
-        monthNumber === monthCheck &&
-        cursor.value.year === yearCheck &&
-        notified === "no"
-      ) {
-
-        // If the numbers all do match, run the createNotification()
-        // function to create a system notification
-        createNotification(cursor.value.taskTitle);
-      }
+if (
+  Number(cursor.value.hours) === hourCheck &&
+  Number(cursor.value.minutes) === minuteCheck &&
+  Number(cursor.value.day) === dayCheck &&
+  monthNumber === monthCheck &&
+  cursor.value.year === yearCheck &&
+  notified === "no"
+) {
+  // If the numbers all do match, run the createNotification()
+  // function to create a system notification
+  createNotification(cursor.value.taskTitle);
+}
 ```
 
 With the current time and date segments that we want to check against the IndexedDB stored values all assembled, it is time to perform the checks. We want all the values to match before we show the user some kind of notification to tell them their deadline is up.

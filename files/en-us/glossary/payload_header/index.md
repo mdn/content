@@ -1,10 +1,7 @@
 ---
 title: Payload header
 slug: Glossary/Payload_header
-tags:
-  - Payload header
-  - Headers
-  - WebMechanics
+page-type: glossary-definition
 ---
 
 A **payload header** is an {{Glossary("HTTP_header", "HTTP header")}} that describes the payload information related to safe transport and reconstruction of the original resource {{Glossary("Representation header", "representation")}}, from one or more messages. This includes information like the length of the message payload, which part of the resource is carried in this payload (for a multi-part message), any encoding applied for transport, message integrity checks, etc.

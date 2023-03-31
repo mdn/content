@@ -2,15 +2,6 @@
 title: Visual Viewport API
 slug: Web/API/Visual_Viewport_API
 page-type: web-api-overview
-tags:
-  - API
-  - Layout
-  - Overview
-  - Reference
-  - layout viewport
-  - viewport
-  - visual
-  - visual viewport
 browser-compat: api.VisualViewport
 ---
 
@@ -51,24 +42,27 @@ function viewportHandler(event) {
 
   requestAnimationFrame(() => {
     pendingUpdate = false;
-    const layoutViewport = document.getElementById('layoutViewport');
+    const layoutViewport = document.getElementById("layoutViewport");
 
     // Since the bar is position: fixed we need to offset it by the
     // visual viewport's offset from the layout viewport origin.
     const viewport = event.target;
     const offsetLeft = viewport.offsetLeft;
-    const offsetTop = viewport.height
-                - layoutViewport.getBoundingClientRect().height
-                + viewport.offsetTop;
+    const offsetTop =
+      viewport.height -
+      layoutViewport.getBoundingClientRect().height +
+      viewport.offsetTop;
 
     // You could also do this by setting style.left and style.top if you
     // use width: 100% instead.
-    bottomBar.style.transform = `translate(${offsetLeft}px, ${offsetTop}px) scale(${1 / viewport.scale})`;
+    bottomBar.style.transform = `translate(${offsetLeft}px, ${offsetTop}px) scale(${
+      1 / viewport.scale
+    })`;
   });
 }
 
-window.visualViewport.addEventListener('scroll', viewportHandler);
-window.visualViewport.addEventListener('resize', viewportHandler);
+window.visualViewport.addEventListener("scroll", viewportHandler);
+window.visualViewport.addEventListener("resize", viewportHandler);
 ```
 
 ## Specifications

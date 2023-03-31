@@ -1,10 +1,6 @@
 ---
 title: set:intersection()
 slug: Web/EXSLT/set/intersection
-tags:
-  - EXSLT
-  - NeedsSpecTable
-  - Reference
 ---
 
 {{XSLTRef}}{{QuickLinksWithSubpages("/en-US/docs/Web/EXSLT")}}

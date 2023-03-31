@@ -2,22 +2,12 @@
 title: Template literals (Template strings)
 slug: Web/JavaScript/Reference/Template_literals
 page-type: javascript-language-feature
-tags:
-  - ECMAScript 2015
-  - Guide
-  - JavaScript
-  - React
-  - String
-  - Template Strings
-  - Template literals
-  - Template string
-  - strings
 browser-compat: javascript.grammar.template_literals
 ---
 
 {{JsSidebar("More")}}
 
-Template literals are literals delimited with backtick (`` ` ``) characters, allowing for [multi-line strings](#multi-line_strings), [string interpolation](#string_interpolation) with embedded expressions, and special constructs called [tagged templates](#tagged_templates).
+**Template literals** are literals delimited with backtick (`` ` ``) characters, allowing for [multi-line strings](#multi-line_strings), [string interpolation](#string_interpolation) with embedded expressions, and special constructs called [tagged templates](#tagged_templates).
 
 Template literals are sometimes informally called _template strings_, because they are used most commonly for [string interpolation](#string_interpolation) (to create strings by doing substitution of placeholders). However, a tagged template literal may not result in a string; it can be used with a custom [tag function](#tagged_templates) to perform whatever operations you want on the different parts of the template literal.
 

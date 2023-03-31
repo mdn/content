@@ -2,16 +2,9 @@
 title: Screen.top
 slug: Web/API/Screen/top
 page-type: web-api-instance-property
-tags:
-  - API
-  - API:Microsoft Extensions
-  - API:Mozilla Extensions
-  - API:WebKit Extensions
-  - DOM
-  - Non-standard
-  - Property
-  - Window
-  - Deprecated
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.Screen.top
 ---
 

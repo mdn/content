@@ -1,9 +1,6 @@
 ---
 title: The MDN Web Docs project
 slug: MDN
-tags:
-  - Landing
-  - MDN Meta
 ---
 
 {{MDNSidebar}}
@@ -12,9 +9,9 @@ tags:
 
 This is the landing page for the MDN Web Docs project itself. Here you'll find guides on how the site works, how we do our documentation, the guidelines and conventions we adhere to, and how you can help.
 
-We invite everyone to help! MDN Web Docs is an open-source project and accepts contributions. There are many different tasks you can help with, from the simple (proof-reading and correcting typos) to the complex (writing API documentation).
+We invite everyone to help! MDN Web Docs is an open-source project and accepts contributions. There are many different tasks you can help with, from the simple (proofreading and correcting typos) to the complex (writing API documentation).
 
-To find out how to help, visit our [Getting started](/en-US/docs/MDN/Community/Contributing/Getting_started) page. If you want to talk to us and ask questions, join the discussion on the [MDN Web Docs chat room](https://chat.mozilla.org/#/room/#mdn:mozilla.org) on [Matrix](https://wiki.mozilla.org/Matrix).
+To find out how to help, visit our [Getting started](/en-US/docs/MDN/Community/Contributing/Getting_started) page. If you want to talk to us and ask questions, join the discussion on the [MDN Web Docs chat rooms](/en-US/docs/MDN/Community/Communication_channels#chat_rooms).
 
 - [Community guidelines](/en-US/docs/MDN/Community)
 

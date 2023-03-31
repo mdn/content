@@ -2,14 +2,6 @@
 title: Shorthand properties
 slug: Web/CSS/Shorthand_properties
 page-type: guide
-tags:
-  - CSS
-  - Guide
-  - Layout
-  - Reference
-  - Shorthand Properties
-  - properties
-  - shorthand
 ---
 
 {{CSSRef}}
@@ -103,7 +95,7 @@ line-height: 1.2;
 font-family: Arial, sans-serif;
 ```
 
-This 5 statements can be shortened to the following:
+These 5 statements can be shortened to the following:
 
 ```css
 font: italic bold 0.8em/1.2 Arial, sans-serif;

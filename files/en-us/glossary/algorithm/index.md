@@ -1,8 +1,7 @@
 ---
 title: Algorithm
 slug: Glossary/Algorithm
-tags:
-  - CodingScripting
+page-type: glossary-definition
 ---
 
 An algorithm is a self-contained series of instructions to perform a function.

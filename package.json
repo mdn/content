@@ -4,8 +4,9 @@
   "private": true,
   "license": "SEE LICENSE IN LICENSE.md",
   "engines": {
-    "node": "^16.0.0 || >=18.0.0"
+    "node": ">=18.0.0"
   },
+  "type": "module",
   "scripts": {
     "build": "env-cmd --silent cross-env CONTENT_ROOT=files BUILD_OUT_ROOT=build yari-build",
     "content": "env-cmd --silent cross-env CONTENT_ROOT=files yari-tool",
@@ -23,13 +24,13 @@
     "up-to-date-check": "node scripts/up-to-date-check.js"
   },
   "dependencies": {
-    "@mdn/yari": "1.32.10",
+    "@mdn/yari": "2.13.0",
     "cross-env": "7.0.3",
     "env-cmd": "10.1.0",
     "husky": "8.0.3",
-    "lint-staged": "13.1.0",
+    "lint-staged": "13.2.0",
     "markdownlint-cli2": "0.6.0",
-    "markdownlint-rule-search-replace": "1.0.8",
-    "prettier": "2.8.2"
+    "markdownlint-rule-search-replace": "1.0.9",
+    "prettier": "2.8.7"
   }
 }

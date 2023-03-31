@@ -1,16 +1,7 @@
 ---
 title: tabs.reload()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/reload
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - reload
-  - tabs
+page-type: webextension-api-function
 browser-compat: webextensions.api.tabs.reload
 ---
 

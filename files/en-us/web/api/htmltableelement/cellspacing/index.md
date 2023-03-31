@@ -2,15 +2,8 @@
 title: HTMLTableElement.cellSpacing
 slug: Web/API/HTMLTableElement/cellSpacing
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTML DOM
-  - HTMLTableElement
-  - NeedsSpecTable
-  - Property
-  - Reference
-  - cellSpacing
-  - Deprecated
+status:
+  - deprecated
 browser-compat: api.HTMLTableElement.cellSpacing
 ---
 
@@ -33,7 +26,7 @@ A string which is either a number of pixels (such as
 This example sets cell spacing for a given table to 10 pixels.
 
 ```js
-const t = document.getElementById('TableA');
+const t = document.getElementById("TableA");
 t.cellSpacing = "10";
 ```
 

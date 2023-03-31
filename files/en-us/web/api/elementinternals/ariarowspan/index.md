@@ -2,14 +2,6 @@
 title: ElementInternals.ariaRowSpan
 slug: Web/API/ElementInternals/ariaRowSpan
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - ariaRowSpan
-  - AriaAttributes
-  - AriaMixin
-  - ElementInternals
 browser-compat: api.ElementInternals.ariaRowSpan
 ---
 

@@ -2,18 +2,8 @@
 title: 'XRSystem: devicechange event'
 slug: Web/API/XRSystem/devicechange_event
 page-type: web-api-event
-tags:
-  - API
-  - AR
-  - Augmented Reality
-  - Reference
-  - Virtual Reality
-  - WebXR
-  - WebXR Device API
-  - XR
-  - XRSystem
-  - devicechange
-  - Experimental
+status:
+  - experimental
 browser-compat: api.XRSystem.devicechange_event
 ---
 

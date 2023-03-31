@@ -1,12 +1,6 @@
 ---
 title: 101 Switching Protocols
 slug: Web/HTTP/Status/101
-tags:
-  - HTTP
-  - HTTP Status Code
-  - Informational
-  - Reference
-  - WebSockets
 spec-urls: https://httpwg.org/specs/rfc9110.html#status.101
 ---
 

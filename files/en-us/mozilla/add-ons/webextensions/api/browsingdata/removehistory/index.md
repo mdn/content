@@ -1,15 +1,7 @@
 ---
 title: browsingData.removeHistory()
 slug: Mozilla/Add-ons/WebExtensions/API/browsingData/removeHistory
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Reference
-  - WebExtensions
-  - browsingData
-  - removeHistory
+page-type: webextension-api-function
 browser-compat: webextensions.api.browsingData.removeHistory
 ---
 

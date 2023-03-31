@@ -2,14 +2,6 @@
 title: Navigator.serviceWorker
 slug: Web/API/Navigator/serviceWorker
 page-type: web-api-instance-property
-tags:
-  - API
-  - Navigator
-  - Property
-  - Reference
-  - Service Workers
-  - Service worker API
-  - ServiceWorker
 browser-compat: api.Navigator.serviceWorker
 ---
 
@@ -30,7 +22,7 @@ The feature may not be available in private mode.
 This code checks if the browser supports service workers.
 
 ```js
-if ('serviceWorker' in navigator) {
+if ("serviceWorker" in navigator) {
   // Supported!
 }
 ```

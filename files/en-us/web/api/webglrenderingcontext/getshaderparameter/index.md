@@ -2,12 +2,6 @@
 title: WebGLRenderingContext.getShaderParameter()
 slug: Web/API/WebGLRenderingContext/getShaderParameter
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.getShaderParameter
 ---
 

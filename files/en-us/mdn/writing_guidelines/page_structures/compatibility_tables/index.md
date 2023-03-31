@@ -2,9 +2,6 @@
 title: Compatibility tables and the browser compatibility data repository (BCD)
 slug: MDN/Writing_guidelines/Page_structures/Compatibility_tables
 page-type: mdn-writing-guide
-tags:
-  - meta
-  - writing-guide
 browser-compat: api.AbortController
 ---
 
@@ -34,10 +31,9 @@ For example, {{domxref("AbortController")}} would be added as shown below:
 ---
 title: AbortController
 slug: Web/API/AbortController
-…
+page-type: web-api-interface
 browser-compat: api.AbortController
 ---
-
 ```
 
 The compatibility and specification tables corresponding to the key are then automatically rendered in place of the `\{{Compat}}` and `\{{Specifications}}` macros in the source.
@@ -48,7 +44,7 @@ If multiple compatibility/specification tables are required on the same page, yo
 ---
 title: Channel Messaging API
 slug: Web/API/Channel_Messaging_API
-# …
+page-type: web-api-overview
 browser-compat:
   - api.MessageChannel
   - api.MessagePort

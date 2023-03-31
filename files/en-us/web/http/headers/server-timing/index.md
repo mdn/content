@@ -1,11 +1,6 @@
 ---
 title: Server-Timing
 slug: Web/HTTP/Headers/Server-Timing
-tags:
-  - HTTP
-  - Performance
-  - Reference
-  - header
 browser-compat: http.headers.Server-Timing
 ---
 

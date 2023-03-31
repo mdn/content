@@ -2,13 +2,6 @@
 title: Window.self
 slug: Web/API/Window/self
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTML DOM
-  - Property
-  - Read-only
-  - Reference
-  - Window
 browser-compat: api.Window.self
 ---
 
@@ -26,7 +19,7 @@ Uses of `window.self` like the following could just as well be replaced by `wind
 
 ```js
 if (window.parent.frames[0] !== window.self) {
-    // this window is not the first frame in the list
+  // this window is not the first frame in the list
 }
 ```
 

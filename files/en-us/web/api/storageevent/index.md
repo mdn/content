@@ -2,12 +2,6 @@
 title: StorageEvent
 slug: Web/API/StorageEvent
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Reference
-  - StorageEvent
-  - Web Storage API
 browser-compat: api.StorageEvent
 ---
 

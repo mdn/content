@@ -1,10 +1,7 @@
 ---
 title: Time to interactive
 slug: Glossary/Time_to_interactive
-tags:
-  - Performance
-  - Reference
-  - Web Performance
+page-type: glossary-definition
 ---
 
 **Time to Interactive** (TTI) is a non-standardized web performance 'progress' metric defined as the point in time when the last [Long Task](/en-US/docs/Web/API/PerformanceLongTaskTiming) finished and was followed by 5 seconds of network and main thread inactivity.

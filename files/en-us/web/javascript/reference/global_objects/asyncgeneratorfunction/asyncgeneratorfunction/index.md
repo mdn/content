@@ -2,19 +2,12 @@
 title: AsyncGeneratorFunction() constructor
 slug: Web/JavaScript/Reference/Global_Objects/AsyncGeneratorFunction/AsyncGeneratorFunction
 page-type: javascript-constructor
-tags:
-  - Constructor
-  - ECMAScript 2018
-  - AsyncGeneratorFunction
-  - Iterator
-  - JavaScript
-  - Reference
 browser-compat: javascript.builtins.AsyncGeneratorFunction.AsyncGeneratorFunction
 ---
 
 {{JSRef}}
 
-The **`AsyncGeneratorFunction()`** constructor creates a new {{jsxref("AsyncGeneratorFunction")}} object. In JavaScript, every [async generator function](/en-US/docs/Web/JavaScript/Reference/Statements/async_function*) is actually an `AsyncGeneratorFunction` object.
+The **`AsyncGeneratorFunction()`** constructor creates {{jsxref("AsyncGeneratorFunction")}} objects.
 
 Note that `AsyncGeneratorFunction` is not a global object. It could be obtained by evaluating the following code.
 

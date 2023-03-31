@@ -2,14 +2,6 @@
 title: Notification.body
 slug: Web/API/Notification/body
 page-type: web-api-instance-property
-tags:
-  - API
-  - BODY
-  - Notification
-  - Notifications
-  - Notifications API
-  - Property
-  - Reference
 browser-compat: api.Notification.body
 ---
 
@@ -29,9 +21,9 @@ A string.
 ```js
 function spawnNotification(theBody, theIcon, theTitle) {
   const options = {
-      body: theBody,
-      icon: theIcon
-  }
+    body: theBody,
+    icon: theIcon,
+  };
   const n = new Notification(theTitle, options);
 
   console.log(n.body);

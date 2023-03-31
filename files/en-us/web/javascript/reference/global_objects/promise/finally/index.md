@@ -2,14 +2,6 @@
 title: Promise.prototype.finally()
 slug: Web/JavaScript/Reference/Global_Objects/Promise/finally
 page-type: javascript-instance-method
-tags:
-  - JavaScript
-  - Method
-  - Promises
-  - Prototype
-  - Reference
-  - finally
-  - Polyfill
 browser-compat: javascript.builtins.Promise.finally
 ---
 
@@ -25,16 +17,12 @@ This lets you avoid duplicating code in both the promise's {{jsxref("Promise/the
 
 ```js-nolint
 finally(onFinally)
-
-finally(() => {
-  // Code that will run after promise is settled (fulfilled or rejected)
-})
 ```
 
 ### Parameters
 
 - `onFinally`
-  - : A {{jsxref("Function")}} called when the `Promise` is settled. This handler receives no parameters.
+  - : A function to asynchronously execute when this promise becomes settled. Its return value is ignored unless the returned value is a rejected promise. The function is called with no arguments.
 
 ### Return value
 

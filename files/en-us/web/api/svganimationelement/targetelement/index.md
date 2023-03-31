@@ -2,14 +2,6 @@
 title: SVGAnimationElement.targetElement
 slug: Web/API/SVGAnimationElement/targetElement
 page-type: web-api-instance-property
-tags:
-  - API
-  - DOM
-  - NeedsExample
-  - Property
-  - Reference
-  - SVG
-  - SVG DOM
 browser-compat: api.SVGAnimationElement.targetElement
 ---
 

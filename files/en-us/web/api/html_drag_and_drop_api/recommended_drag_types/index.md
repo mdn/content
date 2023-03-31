@@ -2,9 +2,6 @@
 title: Recommended Drag Types
 slug: Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types
 page-type: guide
-tags:
-  - Guide
-  - drag and drop
 ---
 
 {{DefaultAPISidebar("HTML Drag and Drop API")}}
@@ -89,7 +86,7 @@ The latest spec dictates that {{domxref("DataTransfer.types")}} should return a 
 As a result, the [contains](/en-US/docs/Web/API/Node/contains) method no longer works; the [includes](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/includes) method should be used instead to check if a specific type of data is provided, using code like the following:
 
 ```js
-if ([...event.dataTransfer.types].includes('text/html')) {
+if ([...event.dataTransfer.types].includes("text/html")) {
   // Do something
 }
 ```
@@ -133,49 +130,73 @@ You may want to add a file to an existing drag event session, and you may also w
 
 currentEvent.dataTransfer.setData("text/x-moz-url", URL);
 currentEvent.dataTransfer.setData("application/x-moz-file-promise-url", URL);
-currentEvent.dataTransfer.setData("application/x-moz-file-promise-dest-filename", leafName);
+currentEvent.dataTransfer.setData(
+  "application/x-moz-file-promise-dest-filename",
+  leafName
+);
 
-function dataProvider(){}
+function dataProvider() {}
 
 dataProvider.prototype = {
   QueryInterface(iid) {
-    if (iid.equals(Components.interfaces.nsIFlavorDataProvider)
-                  || iid.equals(Components.interfaces.nsISupports))
+    if (
+      iid.equals(Components.interfaces.nsIFlavorDataProvider) ||
+      iid.equals(Components.interfaces.nsISupports)
+    )
       return this;
     throw Components.results.NS_NOINTERFACE;
   },
   getFlavorData(aTransferable, aFlavor, aData, aDataLen) {
-    if (aFlavor === 'application/x-moz-file-promise') {
+    if (aFlavor === "application/x-moz-file-promise") {
+      const urlPrimitive = {};
+      const dataSize = {};
 
-       const urlPrimitive = {};
-       const dataSize = {};
+      aTransferable.getTransferData(
+        "application/x-moz-file-promise-url",
+        urlPrimitive,
+        dataSize
+      );
+      const url = urlPrimitive.value.QueryInterface(
+        Components.interfaces.nsISupportsString
+      ).data;
+      console.log(`URL file original is = ${url}`);
 
-       aTransferable.getTransferData('application/x-moz-file-promise-url', urlPrimitive, dataSize);
-       const url = urlPrimitive.value.QueryInterface(Components.interfaces.nsISupportsString).data;
-       console.log(`URL file original is = ${url}`);
+      const namePrimitive = {};
+      aTransferable.getTransferData(
+        "application/x-moz-file-promise-dest-filename",
+        namePrimitive,
+        dataSize
+      );
+      const name = namePrimitive.value.QueryInterface(
+        Components.interfaces.nsISupportsString
+      ).data;
 
-       const namePrimitive = {};
-       aTransferable.getTransferData('application/x-moz-file-promise-dest-filename', namePrimitive, dataSize);
-       const name = namePrimitive.value.QueryInterface(Components.interfaces.nsISupportsString).data;
+      console.log(`target filename is = ${name}`);
 
-       console.log(`target filename is = ${name}`);
+      const dirPrimitive = {};
+      aTransferable.getTransferData(
+        "application/x-moz-file-promise-dir",
+        dirPrimitive,
+        dataSize
+      );
+      const dir = dirPrimitive.value.QueryInterface(
+        Components.interfaces.nsILocalFile
+      );
 
-       const dirPrimitive = {};
-       aTransferable.getTransferData('application/x-moz-file-promise-dir', dirPrimitive, dataSize);
-       const dir = dirPrimitive.value.QueryInterface(Components.interfaces.nsILocalFile);
+      console.log(`target folder is = ${dir.path}`);
 
-       console.log(`target folder is = ${dir.path}`);
+      const file = Cc["@mozilla.org/file/local;1"].createInstance(
+        Components.interfaces.nsILocalFile
+      );
+      file.initWithPath(dir.path);
+      file.appendRelativePath(name);
 
-       const file = Cc['@mozilla.org/file/local;1'].createInstance(Components.interfaces.nsILocalFile);
-       file.initWithPath(dir.path);
-       file.appendRelativePath(name);
+      console.log(`output final path is = ${file.path}`);
 
-       console.log(`output final path is = ${file.path}`);
-
-       // now you can write or copy the file yourself…
+      // now you can write or copy the file yourself…
     }
-  }
-}
+  },
+};
 ```
 
 ## See also

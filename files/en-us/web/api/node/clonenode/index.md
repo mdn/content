@@ -2,9 +2,6 @@
 title: Node.cloneNode()
 slug: Web/API/Node/cloneNode
 page-type: web-api-instance-method
-tags:
-  - Method
-  - Reference
 browser-compat: api.Node.cloneNode
 ---
 
@@ -63,8 +60,8 @@ using {{domxref("Node.appendChild()")}} or a similar method.
 ## Example
 
 ```js
-let p = document.getElementById("para1")
-let p_prime = p.cloneNode(true)
+let p = document.getElementById("para1");
+let p_prime = p.cloneNode(true);
 ```
 
 ## Specifications

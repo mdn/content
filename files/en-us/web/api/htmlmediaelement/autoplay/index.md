@@ -2,24 +2,13 @@
 title: HTMLMediaElement.autoplay
 slug: Web/API/HTMLMediaElement/autoplay
 page-type: web-api-instance-property
-tags:
-  - API
-  - Audio
-  - HTML DOM
-  - HTMLMediaElement
-  - Media
-  - NeedsExample
-  - Property
-  - Video
-  - Web
-  - autoplay
 browser-compat: api.HTMLMediaElement.autoplay
 ---
 
 {{APIRef("HTML DOM")}}
 
 The **`HTMLMediaElement.autoplay`**
-property reflects the {{htmlattrxref("autoplay", "video")}} HTML attribute, indicating
+property reflects the [`autoplay`](/en-US/docs/Web/HTML/Element/video#autoplay) HTML attribute, indicating
 whether playback should automatically begin as soon as enough media is available to do
 so without interruption.
 
@@ -60,7 +49,7 @@ interruption.
 ```js
 // Disable autoplay (recommended)
 // false is the default value
-document.querySelector('#video').autoplay = false;
+document.querySelector("#video").autoplay = false;
 ```
 
 ## Specifications
@@ -73,5 +62,5 @@ document.querySelector('#video').autoplay = false;
 
 ## See also
 
-- The interface defining it, {{domxref("HTMLMediaElement")}}.
-- The {{HTMLElement("audio")}} and {{HTMLElement("video")}} elements
+- {{domxref("HTMLMediaElement")}}: Interface used to define the `HTMLMediaElement.autoplay` property
+- {{HTMLElement("audio")}}, {{HTMLElement("video")}}

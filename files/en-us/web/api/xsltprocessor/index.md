@@ -2,13 +2,6 @@
 title: XSLTProcessor
 slug: Web/API/XSLTProcessor
 page-type: web-api-interface
-tags:
-  - API
-  - DOM
-  - DOM Reference
-  - Reference
-  - XSLT
-  - Interface
 browser-compat: api.XSLTProcessor
 ---
 
@@ -27,42 +20,24 @@ transformation to documents.
 ## Instance methods
 
 - {{domxref("XSLTProcessor.importStylesheet()")}}
-  - : Imports the XSLT stylesheet. If the given node is a document node, you can pass in a
-    full XSL Transform or a [literal result element transform](https://www.w3.org/TR/xslt/#result-element-stylesheet); otherwise,
-    it must be an `<xsl:stylesheet>` or `<xsl:transform>` element.
+  - : Imports the XSLT stylesheet.
+  If the given node is a document node, you can pass in a full XSL Transform or a [literal result element transform](https://www.w3.org/TR/xslt/#result-element-stylesheet);
+    otherwise, it must be an `<xsl:stylesheet>` or `<xsl:transform>` element.
 - {{domxref("XSLTProcessor.transformToFragment()")}}
-  - : Transforms the node source by applying the stylesheet imported using the
-    {{domxref("XSLTProcessor.importStylesheet()")}} function. The owner document of the
-    resulting document fragment is the owner node.
+  - : Transforms the node source by applying the XSLT stylesheet imported using the {{domxref("XSLTProcessor.importStylesheet()")}} function.
+    The owner document of the resulting document fragment is the owner node.
 - {{domxref("XSLTProcessor.transformToDocument()")}}
-
-  - : Transforms the node source applying the stylesheet given importing using the
-    {{domxref("XSLTProcessor.importStylesheet()")}} function.
-
-    The resultant object depends on the [output method](https://www.w3.org/TR/xslt/#output) of the stylesheet:
-
-    | Output method | Result type                                                                                            |
-    | ------------- | ------------------------------------------------------------------------------------------------------ |
-    | `html`        | {{domxref("HTMLDocument")}}                                                                            |
-    | `xml`         | {{domxref("XMLDocument")}}                                                                             |
-    | `text`        | {{domxref("XMLDocument")}} with a single root element `<transformiix:result>` with the text as a child |
-
+  - : Transforms the node source applying the XSLT stylesheet given importing using the {{domxref("XSLTProcessor.importStylesheet()")}} function.
 - {{domxref("XSLTProcessor.setParameter()")}}
-  - : Sets a parameter in the XSLT stylesheet that was imported. (Sets the value of an
-    `<xsl:param>`.) A null value for `namespaceURI` is treated
-    the same as an empty string.
+  - : Sets a parameter (`<xsl:param>`) value in the XSLT stylesheet that was imported.
 - {{domxref("XSLTProcessor.getParameter()")}}
-  - : Gets the value of a parameter from the XSLT stylesheet. A null value for
-    `namespaceURI` is treated the same as an empty string.
+  - : Gets the value of a parameter from the XSLT stylesheet.
 - {{domxref("XSLTProcessor.removeParameter()")}}
-  - : Removes the parameter if it was previously set. This will make the
-    `XSLTProcessor` use the default value for the parameter as specified in the
-    stylesheet. A null value for `namespaceURI` is treated the same as an empty
-    string.
+  - : Removes the parameter if it was previously set.
+    This will make the `XSLTProcessor` use the default value for the parameter as specified in the XSLT stylesheet.
 - {{domxref("XSLTProcessor.clearParameters()")}}
-  - : Removes all set parameters from the `XSLTProcessor`. The
-    `XSLTProcessor` will then use the defaults specified in the XSLT
-    stylesheet.
+  - : Removes all set parameters from the `XSLTProcessor`.
+    The `XSLTProcessor` will then use the default values specified in the XSLT stylesheet.
 - {{domxref("XSLTProcessor.reset()")}}
   - : Removes all parameters and stylesheets from the `XSLTProcessor`.
 

@@ -3,18 +3,6 @@ title: Controlling ratios of flex items along the main axis
 slug: >-
   Web/CSS/CSS_Flexible_Box_Layout/Controlling_Ratios_of_Flex_Items_Along_the_Main_Ax
 page-type: guide
-tags:
-  - Basis
-  - CSS
-  - Flex
-  - Guide
-  - flexbox
-  - free space
-  - grow
-  - max-content
-  - min-content
-  - shrink
-  - space
 ---
 
 {{CSSRef}}
@@ -47,7 +35,7 @@ There are a few concepts worth digging into before looking at how the flex prope
 
 In order to work out how much space there is available to lay out flex items, the browser needs to know how big the item is to start with. How is this worked out for items that don't have a width or a height applied using an absolute length unit?
 
-There is a concept in CSS of {{CSSxRef('width','min-content','#min-content')}} and {{CSSxRef('width','max-content','#max-content')}} — these keywords are [defined in the CSS Intrinsic and Extrinsic Sizing Specification](https://drafts.csswg.org/css-sizing-3/#width-height-keywords), and can be used in place of a [length unit](/en-US/docs/Web/CSS/length).
+There is a concept in CSS of {{CSSxRef('min-content')}} and {{CSSxRef('max-content')}}; these keywords can be used in place of a [length unit](/en-US/docs/Web/CSS/length).
 
 In the live example below for instance I have two paragraph elements that contain a string of text. The first paragraph has a width of `min-content`. You should be able to see that the text has taken all of the soft wrapping opportunities available to it, becoming as small as it can be without overflowing. This then, is the `min-content` size of that string. Essentially, the longest word in the string is dictating the size.
 
@@ -75,7 +63,7 @@ In the following examples I am working with {{CSSxRef("flex-direction")}} set to
 
 The {{CSSxRef("flex-basis")}} property specifies the initial size of the flex item before any space distribution happens. The initial value for this property is `auto`. If `flex-basis` is set to `auto` then to work out the initial size of the item the browser first checks if the main size of the item has an absolute size set. This would be the case if you had given your item a width of 200 pixels. In that case `200px` would be the `flex-basis` for this item.
 
-If your item is instead auto-sized, then `auto` resolves to the size of its content. At this point your knowledge of `min-` and `max-content` sizing becomes useful, as flexbox will take the `min-content` size of the item as the `flex-basis`. The following live example can help to demonstrate this.
+If your item is instead auto-sized, then `auto` resolves to the size of its content. At this point your knowledge of `min-` and `max-content` sizing becomes useful, as flexbox will take the `max-content` size of the item as the `flex-basis`. The following live example can help to demonstrate this.
 
 In this example I have created a series of inflexible boxes, with both `flex-grow` and `flex-shrink` set to `0`. Here we can see how the first item — which has an explicit width of 150 pixels set as the main size — takes a `flex-basis` of `150px`, whereas the other two items have no width and so are sized according to their content width.
 

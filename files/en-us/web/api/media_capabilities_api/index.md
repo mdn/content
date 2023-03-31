@@ -2,11 +2,6 @@
 title: Media Capabilities API
 slug: Web/API/Media_Capabilities_API
 page-type: web-api-overview
-tags:
-  - API
-  - Media Capabilities
-  - Overview
-  - Reference
 browser-compat: api.MediaCapabilities
 ---
 
@@ -21,24 +16,28 @@ The **Media Capabilities API** allows developers to determine decoding and encod
 This example defines an audio configuration then checks to see if the user agent supports decoding that media configuration, and whether it will perform well in terms of smoothness and power efficiency.
 
 ```js
-if ('mediaCapabilities' in navigator) {
+if ("mediaCapabilities" in navigator) {
   const audioFileConfiguration = {
-    type : 'file',
-    audio : {
-        contentType: "audio/mp3",
-        channels: 2,
-        bitrate: 132700,
-        samplerate: 5200
-    }
+    type: "file",
+    audio: {
+      contentType: "audio/mp3",
+      channels: 2,
+      bitrate: 132700,
+      samplerate: 5200,
+    },
   };
 
-  navigator.mediaCapabilities.decodingInfo(audioFileConfiguration).then((result) => {
-    console.log(`This configuration is ${result.supported ? '' : 'not '}supported,`);
-    console.log(`${result.smooth ? '' : 'not '}smooth, and`);
-    console.log(`${result.powerEfficient ? '' : 'not '}power efficient.`);
+  navigator.mediaCapabilities
+    .decodingInfo(audioFileConfiguration)
+    .then((result) => {
+      console.log(
+        `This configuration is ${result.supported ? "" : "not "}supported,`
+      );
+      console.log(`${result.smooth ? "" : "not "}smooth, and`);
+      console.log(`${result.powerEfficient ? "" : "not "}power efficient.`);
     })
     .catch(() => {
-      console.log(`decodingInfo error: ${contentType}`)
+      console.log(`decodingInfo error: ${contentType}`);
     });
 }
 ```

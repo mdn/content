@@ -2,13 +2,8 @@
 title: URLPattern.pathname
 slug: Web/API/URLPattern/pathname
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - URLPattern
-  - URL Pattern API
-  - Experimental
+status:
+  - experimental
 browser-compat: api.URLPattern.pathname
 ---
 
@@ -32,7 +27,7 @@ The below example creates a {{domxref("URLPattern")}} object with
 with `/books/`, followed by an integer.
 
 ```js
-const pattern = new URLPattern({ pathname: '/books/:id(\\d)' });
+const pattern = new URLPattern({ pathname: "/books/:id(\\d)" });
 console.log(pattern.pathname); // '/books/:id(\\d)'
 ```
 

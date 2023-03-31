@@ -1,26 +1,6 @@
 ---
 title: Web video codec guide
 slug: Web/Media/Formats/Video_codecs
-tags:
-  - AV1
-  - Codecs
-  - Encoder
-  - Encoding
-  - Guide
-  - H.264
-  - MPEG
-  - Media
-  - Theora
-  - VP8
-  - VP9
-  - Video
-  - compression
-  - data
-  - decoding
-  - h.263
-  - h.265
-  - mp4
-  - streaming
 ---
 
 {{QuickLinksWithSubpages("/en-US/docs/Web/Media")}}
@@ -1083,7 +1063,7 @@ HEVC is a proprietary format and is covered by a number of patents. Licensing is
             </tr>
             <tr>
               <th scope="row">HEVC / H.265 support</th>
-              <td>No</td>
+              <td>107</td>
               <td>18</td>
               <td>No</td>
               <td>11</td>
@@ -1093,7 +1073,7 @@ HEVC is a proprietary format and is covered by a number of patents. Licensing is
           </tbody>
         </table>
         <p>
-          Internet Explorer and Edge only supports HEVC on devices with a
+          Internet Explorer, Chrome, and Edge only supports HEVC on devices with a
           hardware codec.
         </p>
         <p>Mozilla will not support HEVC while it is encumbered by patents.</p>

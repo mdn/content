@@ -1,11 +1,6 @@
 ---
 title: Unknown error
 slug: Web/WebDriver/Errors/UnknownError
-tags:
-  - Error
-  - Reference
-  - Unknown error
-  - WebDriver
 ---
 
 {{QuickLinksWithSubpages("/en-US/docs/Web/WebDriver/Errors")}}
