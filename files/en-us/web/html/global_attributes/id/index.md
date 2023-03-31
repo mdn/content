@@ -24,7 +24,7 @@ Similarly, an `id` starting with a digit (E.g., `1234-322-678`) or a hyphen foll
 - CSS [ID selectors](/en-US/docs/Web/CSS/ID_selectors) accept any CSS identifier. If the `id` starts with a digit or one hyphen immediately followed by a digit, the hyphen and digit must be escaped in CSS. For example, while `id="544-383-3388"` and `id="-3Pi"` are valid in HTML, the `id` selectors must be escaped. The element with these `id` values can be targeted in CSS with `#\35 44-383-3388` and `#\2D \33 pi`.
 - Any valid HTML `id` value is valid as an attribute selector in CSS and JavaScript. The selectors `[id="544-383-3388"]` and `[id="-3Pi"]` are valid.
 - {{domxref("Document.querySelector()")}} and similar methods will not find them unless you escape them (See this [page](https://codepen.io/estelle/pen/jOvzbgb) for an example.)
-- Such an `id` will not be a valid JavaScript identifier: `myvar.1234` will not work, while `myvar._1234` would. This may be problematic.
+- Such an `id` will not be valid JavaScript identifiers, as [elements with IDs may become global properties](https://stackoverflow.com/questions/3434278/do-dom-tree-elements-with-ids-become-global-properties): `1234.doSomething()` will not work, whereas `_1234.doSomething()` will. This may be problematic.
 
 ## Specifications
 
