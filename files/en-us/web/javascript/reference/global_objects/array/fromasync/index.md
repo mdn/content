@@ -3,9 +3,11 @@ title: Array.fromAsync()
 slug: Web/JavaScript/Reference/Global_Objects/Array/fromAsync
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Array.fromAsync
+status:
+  - experimental
 ---
 
-{{JSRef}}
+{{JSRef}} {{SeeCompatTable}}
 
 The **`Array.fromAsync()`** static method creates a new, shallow-copied `Array` instance from an [async iterable](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_async_iterator_and_async_iterable_protocols), [iterable](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterable_protocol), or [array-like](/en-US/docs/Web/JavaScript/Guide/Indexed_collections#working_with_array-like_objects) object.
 
@@ -22,7 +24,7 @@ Array.fromAsync(arrayLike, mapFn, thisArg)
 - `arrayLike`
   - : An async iterable, iterable, or array-like object to convert to an array.
 - `mapFn` {{optional_inline}}
-  - : A function to call on every element of the array. If provided, every value to be added to the array is first passed through this function, and `mapFn`'s return value, after being [awaited](/en-US/docs/Web/JavaScript/Reference/Operators/await), is added to the array instead. The function is called with the following arguments:
+  - : A function to call on every element of the array. If provided, every value to be added to the array is first passed through this function, and `mapFn`'s return value is added to the array instead (after being [awaited](/en-US/docs/Web/JavaScript/Reference/Operators/await)). The function is called with the following arguments:
     - `element`
       - : The current element being processed in the array. Because all elements are first [awaited](/en-US/docs/Web/JavaScript/Reference/Operators/await), this value will never be a [thenable](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise#thenables).
     - `index`
@@ -123,7 +125,8 @@ Array.fromAsync(
     delayedValue(3),
   ],
   (element) => delayedValue(element * 2),
-).then((array) => console.log(array)); // [2, 4, 6]
+).then((array) => console.log(array));
+// [2, 4, 6]
 ```
 
 ### Comparison with Promise.all()
