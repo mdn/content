@@ -11,6 +11,11 @@ The **`SpeechSynthesisEvent`** interface of the [Web Speech API](/en-US/docs/Web
 
 {{InheritanceDiagram}}
 
+## Constructor
+
+- {{domxref("SpeechSynthesisEvent.SpeechSynthesisEvent", "SpeechSynthesisEvent()")}}
+  - : Creates a new `SpeechSynthesisEvent`.
+
 ## Instance properties
 
 _The {{domxref("SpeechSynthesisEvent")}} interface also inherits properties from its parent interface, {{domxref("Event")}}._

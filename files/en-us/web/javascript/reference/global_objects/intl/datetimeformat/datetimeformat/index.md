@@ -7,13 +7,9 @@ browser-compat: javascript.builtins.Intl.DateTimeFormat.DateTimeFormat
 
 {{JSRef}}
 
-The **`Intl.DateTimeFormat()`** constructor creates
-{{jsxref("Intl/DateTimeFormat", "Intl.DateTimeFormat")}} objects that enable
-language-sensitive date and time formatting.
+The **`Intl.DateTimeFormat()`** constructor creates {{jsxref("Intl.DateTimeFormat")}} objects.
 
 {{EmbedInteractiveExample("pages/js/intl-datetimeformat.html", "taller")}}
-
-<!-- The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone https://github.com/mdn/interactive-examples and send us a pull request. -->
 
 ## Syntax
 

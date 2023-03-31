@@ -11,7 +11,7 @@ The **`contextmenu`** event fires when the user attempts to open a context menu.
 
 In the latter case, the context menu is displayed at the bottom left of the focused element, unless the element is a tree, in which case the context menu is displayed at the bottom left of the current row.
 
-Any right-click event that is not disabled (by calling the event's {{domxref("Event.preventDefault", "preventDefault()")}} method) will result in a `contextmenu` event being fired at the targeted element.
+Any right-click event that is not disabled (by calling the click event's {{domxref("Event.preventDefault", "preventDefault()")}} method) will result in a `contextmenu` event being fired at the targeted element. One exception to this is that in Firefox, if the user holds down the <kbd>Shift</kbd> key while right-clicking, then the context menu will be shown without a `contextmenu` event being fired.
 
 ## Syntax
 
@@ -86,16 +86,20 @@ _This interface also inherits properties of its parents, {{domxref("UIEvent")}} 
 
 ## Examples
 
+### Canceling the `contextmenu` event
+
 In this example, the default action of the `contextmenu` event is canceled using `preventDefault()` when the `contextmenu` event is fired at the first paragraph. As a result, the first paragraph will do nothing when right-clicked, while the second paragraph will show the standard context menu offered by your browser.
 
-### HTML
+Note that in Firefox, if you hold down the <kbd>Shift</kbd> key while right-clicking, then the context menu is shown without the `contextmenu` event being fired, so canceling the event does not stop the context menu from being shown.
+
+#### HTML
 
 ```html
 <p id="noContextMenu">The context menu has been disabled on this paragraph.</p>
 <p>But it has not been disabled on this one.</p>
 ```
 
-### JavaScript
+#### JavaScript
 
 ```js
 const noContext = document.getElementById("noContextMenu");
@@ -105,9 +109,9 @@ noContext.addEventListener("contextmenu", (e) => {
 });
 ```
 
-### Result
+#### Result
 
-{{EmbedLiveSample("Examples")}}
+{{EmbedLiveSample("Canceling the contextmenu event")}}
 
 ## Specifications
 

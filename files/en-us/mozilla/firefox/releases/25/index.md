@@ -39,7 +39,7 @@ slug: Mozilla/Firefox/Releases/25
 - New mathematical methods have been implemented on [`Math`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math): `Math.log10()`, `Math.log2()`, `Math.log1p()`, `Math.expm1()`, `Math.cosh()`, `Math.sinh()`, `Math.tanh()`, `Math.acosh()`, `Math.asinh()`, `Math.atanh()`, `Math.trunc()`, `Math.sign()` and `Math.cbrt()` ([Firefox bug 717379](https://bugzil.la/717379)).
 - Support for binary and octal integer literals has been added: `0b10101010`, `0B1010`, `0o777`, `0O237` are now valid ([Firefox bug 894026](https://bugzil.la/894026)).
 - The machine epsilon constant, that is the smallest representable number that added to 1 will not be 1, is now available as {{jsxref("Global_Objects/Number/EPSILON", "Number.EPSILON")}} ([Firefox bug 885798](https://bugzil.la/885798)).
-- [Typed arrays](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray) have been updated to [no longer search in the prototype chain for indexed properties](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#indexed_property_access) ([Firefox bug 829896](https://bugzil.la/829896)).
+- [Typed arrays](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray) have been updated to [no longer search in the prototype chain for indexed properties](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#property_access) ([Firefox bug 829896](https://bugzil.la/829896)).
 
 ### Interfaces/APIs/DOM
 

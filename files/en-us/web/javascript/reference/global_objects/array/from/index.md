@@ -15,20 +15,8 @@ The **`Array.from()`** static method creates a new, shallow-copied `Array` insta
 
 ```js-nolint
 Array.from(arrayLike)
-
-// Arrow function
-Array.from(arrayLike, (element) => { /* … */ })
-Array.from(arrayLike, (element, index) => { /* … */ })
-
-// Mapping function
 Array.from(arrayLike, mapFn)
 Array.from(arrayLike, mapFn, thisArg)
-
-// Inline mapping function
-Array.from(arrayLike, function (element) { /* … */ })
-Array.from(arrayLike, function (element, index) { /* … */ })
-Array.from(arrayLike, function (element) { /* … */ }, thisArg)
-Array.from(arrayLike, function (element, index) { /* … */ }, thisArg)
 ```
 
 ### Parameters
@@ -36,16 +24,11 @@ Array.from(arrayLike, function (element, index) { /* … */ }, thisArg)
 - `arrayLike`
   - : An iterable or array-like object to convert to an array.
 - `mapFn` {{Optional_inline}}
-
-  - : Map function to call on every element of the array. If provided, every value to be added to the array is first passed through this function, and `mapFn`'s return value is added to the array instead.
-
-    The function is called with the following arguments:
-
+  - : A function to call on every element of the array. If provided, every value to be added to the array is first passed through this function, and `mapFn`'s return value is added to the array instead. The function is called with the following arguments:
     - `element`
       - : The current element being processed in the array.
     - `index`
       - : The index of the current element being processed in the array.
-
 - `thisArg` {{Optional_inline}}
   - : Value to use as `this` when executing `mapFn`.
 
