@@ -27,7 +27,7 @@ It gives access to raw video frames, chunks of audio data, image decoders, audio
 ### Processing Model
 
 The WebCodecs API uses an asynchronous [processing model](https://w3c.github.io/webcodecs/#codec-processing-model-section). Each instance
-of an encoder or decoder maintains an internal, independent processing queue. When queueing substantial amount of work, it's important to
+of an encoder or decoder maintains an internal, independent processing queue. When queueing a substantial amount of work, it's important to
 keep this model in mind.
 
 Methods named `configure()`, `encode()`, `decode()`, and `flush()` operate asynchronously by appending control messages
