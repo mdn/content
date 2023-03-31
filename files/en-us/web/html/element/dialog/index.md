@@ -75,7 +75,7 @@ This example opens a modal dialog when the "Show the dialog" button is activated
     </p>
     <div>
       <button value="cancel" formmethod="dialog">Cancel</button>
-      <button id="confirmBtn" value="default">Sumbit</button>
+      <button id="confirmBtn" value="default">Submit</button>
     </div>
   </form>
 </dialog>
@@ -102,12 +102,13 @@ showButton.addEventListener('click', () => {
 selectEl.addEventListener('change', (e) => {
   confirmBtn.value = selectEl.value;
 });
-// "Confirm" button of form triggers "close" on dialog because of [method="dialog"]
+
+// "Confirm" button triggers "close" on dialog because of [method="dialog"]
 favDialog.addEventListener('close', () => {
   outputBox.value = favDialog.returnValue ? `ReturnValue: ${favDialog.returnValue}.` : "No return value";
 });
 confirmBtn.addEventListener('click', (event) => {
-    event.preventDefault(); /* we don't want to submit this fake form */
+    event.preventDefault(); // We don't want to submit this fake form
     favDialog.close();
 });
 ```
@@ -117,10 +118,8 @@ confirmBtn.addEventListener('click', (event) => {
 {{EmbedLiveSample("Advanced_example", "100%", 300)}}
 
 This modal dialog can be closed three ways. For keyboard users, modal dialogs can be closed with the <kbd>Esc</kbd> key. In this example, the "Cancel" button closes the dialog via the `dialog` form method and the "Submit" closes the dialog via the {{domxref("HTMLDialogElement.close()")}} method.
-  
-The "Cancel" button includes a [`formmethod="dialog"`](/en-US/docs/Web/HTML/Element/input/submit#formmethod), which overrides the {{HTMLElement("form")}}'s default `get` [`method`](/en-US/docs/Web/HTML/Element/form#method). When a form's method is [`dialog`](#usage_notes), the state of the form is saved, not submitted, and the dialog gets closed. 
-  
-Without an `action`, submitting the form via the default `get` method causes a page reload. We use JavaScript to prevent the submission and close the dialog with the {{domxref("event.preventDefault()")}} and {{domxref("HTMLDialogElement.close()")}} methods, respectively. 
+The "Cancel" button includes a [`formmethod="dialog"`](/en-US/docs/Web/HTML/Element/input/submit#formmethod), which overrides the {{HTMLElement("form")}}'s default {{HTTPMethod("GET")}} [`method`](/en-US/docs/Web/HTML/Element/form#method). When a form's method is [`dialog`](#usage_notes), the state of the form is saved, not submitted, and the dialog gets closed.
+Without an `action`, submitting the form via the default {{HTMLMethod("GET")}} method causes a page to reload. We use JavaScript to prevent the submission and close the dialog with the {{domxref("event.preventDefault()")}} and {{domxref("HTMLDialogElement.close()")}} methods, respectively.
 
 It is important to provide a closing mechanism within every `dialog` element. The <kbd>Esc</kbd> key does not close non-modal dialogs by default, nor can one assume that a user will even have access to a physical keyboard (e.g., someone using a touch screen device without access to a keyboard).
 
