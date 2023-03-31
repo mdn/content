@@ -1,14 +1,9 @@
 ---
 title: Date.prototype.setYear()
 slug: Web/JavaScript/Reference/Global_Objects/Date/setYear
-tags:
-  - Date
-  - Deprecated
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - Polyfill
+page-type: javascript-instance-method
+status:
+  - deprecated
 browser-compat: javascript.builtins.Date.setYear
 ---
 

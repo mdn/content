@@ -1,14 +1,7 @@
 ---
 title: TypedArray.prototype.filter()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/filter
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Prototype
-  - TypedArray
-  - TypedArrays
-  - Polyfill
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.TypedArray.filter
 ---
 
@@ -24,33 +17,22 @@ the [typed array types](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Type
 ## Syntax
 
 ```js-nolint
-// Arrow function
-filter((element) => { /* ... */ } )
-filter((element, index) => { /* ... */ } )
-filter((element, index, array) => { /* ... */ } )
-
-// Callback function
 filter(callbackFn)
 filter(callbackFn, thisArg)
-
-// Inline callback function
-filter(function(element) { /* ... */ })
-filter(function(element, index) { /* ... */ })
-filter(function(element, index, array){ /* ... */ })
-filter(function(element, index, array) { /* ... */ }, thisArg)
 ```
 
 ### Parameters
 
 - `callbackFn`
-
-  - : Function to test each element of the typed array.
-
-    The function is called with the following arguments: `(element, index, array)`.
-    Return `true` to keep the element, `false` otherwise.
-
+  - : A function to execute for each element in the typed array. It should return a [truthy](/en-US/docs/Glossary/Truthy) value to keep the element in the resulting typed array, and a [falsy](/en-US/docs/Glossary/Falsy) value otherwise. The function is called with the following arguments:
+    - `element`
+      - : The current element being processed in the typed array.
+    - `index`
+      - : The index of the current element being processed in the typed array.
+    - `array`
+      - : The typed array `filter()` was called upon.
 - `thisArg` {{optional_inline}}
-  - : Value to use as `this` when executing `callbackFn`.
+  - : A value to use as `this` when executing `callbackFn`. See [iterative methods](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#iterative_methods).
 
 ### Return value
 

@@ -1,15 +1,7 @@
 ---
 title: scripting.getRegisteredContentScripts()
 slug: Mozilla/Add-ons/WebExtensions/API/scripting/getRegisteredContentScripts
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Reference
-  - WebExtensions
-  - getRegisteredContentScripts
-  - scripting
+page-type: webextension-api-function
 browser-compat: webextensions.api.scripting.getRegisteredContentScripts
 ---
 
@@ -77,5 +69,3 @@ console.log(scripts.map((script) => script.id)); // ["script-2"]
 {{Compat}}
 
 > **Note:** This API is based on Chromium's [`chrome.scripting`](https://developer.chrome.com/docs/extensions/reference/scripting/#method-getRegisteredContentScripts) API.
->
-> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.

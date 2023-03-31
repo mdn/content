@@ -2,19 +2,10 @@
 title: SpeechRecognitionEvent
 slug: Web/API/SpeechRecognitionEvent
 page-type: web-api-interface
-tags:
-  - API
-  - Experimental
-  - Interface
-  - Reference
-  - SpeechRecognitionEvent
-  - Web Speech API
-  - recognition
-  - speech
 browser-compat: api.SpeechRecognitionEvent
 ---
 
-{{APIRef("Web Speech API")}}{{SeeCompatTable}}
+{{APIRef("Web Speech API")}}
 
 The **`SpeechRecognitionEvent`** interface of the [Web Speech API](/en-US/docs/Web/API/Web_Speech_API) represents the event object for the {{domxref("SpeechRecognition.result_event", "result")}} and {{domxref("SpeechRecognition.nomatch_event", "nomatch")}} events, and contains all the data associated with an interim or final speech recognition result.
 
@@ -51,7 +42,7 @@ recognition.onresult = (event) => {
   const color = event.results[0][0].transcript;
   diagnostic.textContent = `Result received: ${color}.`;
   bg.style.backgroundColor = color;
-}
+};
 ```
 
 ## Specifications

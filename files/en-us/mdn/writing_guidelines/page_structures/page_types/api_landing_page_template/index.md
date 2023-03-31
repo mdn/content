@@ -2,9 +2,6 @@
 title: API landing page template
 slug: MDN/Writing_guidelines/Page_structures/Page_types/API_landing_page_template
 page-type: mdn-writing-guide
-tags:
-  - meta
-  - writing-guide
 ---
 
 {{MDNSidebar}}
@@ -23,14 +20,10 @@ tags:
 > title: NameOfTheAPI API
 > slug: Web/API/NameOfTheAPI_API
 > page-type: web-api-overview
-> tags:
->   - API
->   - NameOfTheAPI API
->   - Reference
->   - Landing
->   - Experimental
->   - Deprecated
->   - Non-standard
+> status:
+>   - experimental
+>   - deprecated
+>   - non-standard
 > ---
 > ```
 >
@@ -44,16 +37,8 @@ tags:
 >     For example, the [WebXR Device API](/en-US/docs/Web/API/WebVR_API)'s slug is `Web/API/WebXR_Device_API`.
 > - **page-type**
 >   - : The `page-type` key for Web/API landing pages is always `web-api-overview`.
-> - **tags**
->
->   - : Always include the following tags: **API**, **Reference**, **Landing**, the _name of the API_ (e.g. **WebXR Device API**).
->
->     Include the following tags as appropriate:
->
->     - Technology status: **Experimental** (if the technology is [experimental](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#experimental)), **Deprecated** (if it is [deprecated](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#deprecated_and_obsolete)), **Non-standard** if it isn't on a standards track.
->     - Special requirements: **Secure context** (if it is available in a secure context only)
->     - Any other tags that represent terms people might search for related to the technology.
->       For example on WebVR interface pages we include **VR** and **Virtual reality**.
+> - **status**
+>   - : Include (appropriate) technology status keys: [**experimental**](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#experimental), [**deprecated**](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#deprecated), **non-standard** (if not on a standards track).
 >
 > ---
 >
@@ -65,7 +50,7 @@ tags:
 > - `\{{SeeCompatTable}}` — this generates a **This is an experimental technology** banner that indicates the technology is [experimental](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#experimental).
 >   If the technology you are documenting is not experimental, you should remove this.
 >   If it is experimental, and the technology is hidden behind a pref in Firefox, you should also fill in an entry for it in the [Experimental features in Firefox](/en-US/docs/Mozilla/Firefox/Experimental_features) page.
-> - `\{{Deprecated_Header}}` — this generates a **Deprecated** banner that indicates that use of the technology is [discouraged](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#deprecated_and_obsolete).
+> - `\{{Deprecated_Header}}` — this generates a **Deprecated** banner that indicates that use of the technology is [discouraged](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#deprecated).
 >   If it isn't, then you can remove the macro call.
 > - `\{{SecureContext_Header}}` — this generates a **Secure context** banner that indicates the technology is only available in a [secure context](/en-US/docs/Web/Security/Secure_Contexts).
 >   If it isn't, then you can remove the macro call.
@@ -189,6 +174,7 @@ See our guide on how to add [code examples](/en-US/docs/MDN/Writing_guidelines/P
 
 ## See also
 
-- Include list of
-- other links related to
-- this API that might be useful
+Include links to reference pages and guides related to the current API. For more guidelines, see the [See also section](/en-US/docs/MDN/Writing_guidelines/Writing_style_guide#see_also_section) in the _Writing style guide_.
+
+- link1
+- link2

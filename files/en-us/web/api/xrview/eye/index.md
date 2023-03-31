@@ -2,23 +2,8 @@
 title: XRView.eye
 slug: Web/API/XRView/eye
 page-type: web-api-instance-property
-tags:
-  - API
-  - AR
-  - Eye
-  - Property
-  - Read-only
-  - Reality
-  - Reference
-  - VR
-  - Virtual
-  - WebXR
-  - WebXR API
-  - WebXR Device API
-  - XR
-  - XRView
-  - augmented
-  - Experimental
+status:
+  - experimental
 browser-compat: api.XRView.eye
 ---
 

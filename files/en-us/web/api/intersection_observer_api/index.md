@@ -2,16 +2,6 @@
 title: Intersection Observer API
 slug: Web/API/Intersection_Observer_API
 page-type: web-api-overview
-tags:
-  - API
-  - Clipping
-  - Intersection
-  - Intersection Observer API
-  - IntersectionObserver
-  - Overview
-  - Performance
-  - Reference
-  - Web
 browser-compat: api.IntersectionObserver
 ---
 
@@ -53,10 +43,10 @@ Create the intersection observer by calling its constructor and passing it a cal
 
 ```js
 let options = {
-  root: document.querySelector('#scrollArea'),
-  rootMargin: '0px',
-  threshold: 1.0
-}
+  root: document.querySelector("#scrollArea"),
+  rootMargin: "0px",
+  threshold: 1.0,
+};
 
 let observer = new IntersectionObserver(callback, options);
 ```
@@ -79,7 +69,7 @@ The `options` object passed into the {{domxref("IntersectionObserver.Intersectio
 Once you have created the observer, you need to give it a target element to watch:
 
 ```js
-let target = document.querySelector('#listItem');
+let target = document.querySelector("#listItem");
 observer.observe(target);
 
 // the callback we setup for the observer will be executed now for the first time
@@ -246,7 +236,7 @@ startup = () => {
   let observerOptions = {
     root: null,
     rootMargin: "0px",
-    threshold: []
+    threshold: [],
   };
 
   // An array of threshold sets for each of the boxes. The
@@ -258,17 +248,19 @@ startup = () => {
     [],
     [0.5],
     [0.0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0],
-    [0, 0.25, 0.5, 0.75, 1.0]
+    [0, 0.25, 0.5, 0.75, 1.0],
   ];
 
-  for (let i=0; i<=1.0; i+= 0.01) {
+  for (let i = 0; i <= 1.0; i += 0.01) {
     thresholdSets[0].push(i);
   }
 
   // Add each box, creating a new observer for each
 
-  for (let i=0; i<4; i++) {
-    let template = document.querySelector("#boxTemplate").content.cloneNode(true);
+  for (let i = 0; i < 4; i++) {
+    let template = document
+      .querySelector("#boxTemplate")
+      .content.cloneNode(true);
     let boxID = `box${i + 1}`;
     template.querySelector(".sampleBox").id = boxID;
     wrapper.appendChild(document.importNode(template, true));
@@ -276,15 +268,19 @@ startup = () => {
     // Set up the observer for this box
 
     observerOptions.threshold = thresholdSets[i];
-    observers[i] = new IntersectionObserver(intersectionCallback, observerOptions);
+    observers[i] = new IntersectionObserver(
+      intersectionCallback,
+      observerOptions
+    );
     observers[i].observe(document.querySelector(`#${boxID}`));
   }
 
   // Scroll to the starting position
 
-  document.scrollingElement.scrollTop = wrapper.firstElementChild.getBoundingClientRect().top + window.scrollY;
+  document.scrollingElement.scrollTop =
+    wrapper.firstElementChild.getBoundingClientRect().top + window.scrollY;
   document.scrollingElement.scrollLeft = 750;
-}
+};
 
 intersectionCallback = (entries) => {
   entries.forEach((entry) => {
@@ -296,7 +292,7 @@ intersectionCallback = (entries) => {
     box.querySelector(".bottomLeft").innerHTML = visiblePct;
     box.querySelector(".bottomRight").innerHTML = visiblePct;
   });
-}
+};
 
 startup();
 ```
@@ -333,7 +329,7 @@ const intersectionCallback = (entries) => {
       }
     }
   });
-}
+};
 ```
 
 ## Interfaces
@@ -406,11 +402,15 @@ let increasingColor = "rgba(40, 40, 190, ratio)";
 let decreasingColor = "rgba(190, 40, 40, ratio)";
 
 // Set things up
-window.addEventListener("load", (event) => {
-  boxElement = document.querySelector("#box");
+window.addEventListener(
+  "load",
+  (event) => {
+    boxElement = document.querySelector("#box");
 
-  createObserver();
-}, false);
+    createObserver();
+  },
+  false
+);
 ```
 
 The constants and variables we set up here are:
@@ -437,7 +437,7 @@ function createObserver() {
   let options = {
     root: null,
     rootMargin: "0px",
-    threshold: buildThresholdList()
+    threshold: buildThresholdList(),
   };
 
   observer = new IntersectionObserver(handleIntersect, options);
@@ -462,8 +462,8 @@ function buildThresholdList() {
   let thresholds = [];
   let numSteps = 20;
 
-  for (let i=1.0; i<=numSteps; i++) {
-    let ratio = i/numSteps;
+  for (let i = 1.0; i <= numSteps; i++) {
+    let ratio = i / numSteps;
     thresholds.push(ratio);
   }
 
@@ -555,9 +555,15 @@ When the browser detects that the target element (in our case, the one with the 
 function handleIntersect(entries, observer) {
   entries.forEach((entry) => {
     if (entry.intersectionRatio > prevRatio) {
-      entry.target.style.backgroundColor = increasingColor.replace("ratio", entry.intersectionRatio);
+      entry.target.style.backgroundColor = increasingColor.replace(
+        "ratio",
+        entry.intersectionRatio
+      );
     } else {
-      entry.target.style.backgroundColor = decreasingColor.replace("ratio", entry.intersectionRatio);
+      entry.target.style.backgroundColor = decreasingColor.replace(
+        "ratio",
+        entry.intersectionRatio
+      );
     }
 
     prevRatio = entry.intersectionRatio;

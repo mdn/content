@@ -2,17 +2,6 @@
 title: MediaTrackSupportedConstraints.facingMode
 slug: Web/API/MediaTrackSupportedConstraints/facingMode
 page-type: web-api-instance-property
-tags:
-  - API
-  - Constraints
-  - Media
-  - Media Capture and Streams API
-  - Media Streams API
-  - MediaTrackSupportedConstraints
-  - Property
-  - Web
-  - WebRTC
-  - facingMode
 browser-compat: api.MediaTrackSupportedConstraints.facingMode
 ---
 

@@ -1,13 +1,7 @@
 ---
 title: devtools.network.getHAR()
 slug: Mozilla/Add-ons/WebExtensions/API/devtools/network/getHAR
-tags:
-  - Add-ons
-  - Extensions
-  - Method
-  - WebExtensions
-  - devtools.network
-  - getHAR
+page-type: webextension-api-function
 browser-compat: webextensions.api.devtools.network.getHAR
 ---
 
@@ -29,7 +23,7 @@ None.
 
 ### Return value
 
-A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with a object containing the HAR log for the current tab. For details of what the log object contains, refer to the [HAR specification](http://www.softwareishard.com/blog/har-12-spec/#log).
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with an object containing the HAR log for the current tab. For details of what the log object contains, refer to the [HAR specification](http://www.softwareishard.com/blog/har-12-spec/#log).
 
 ## Browser compatibility
 

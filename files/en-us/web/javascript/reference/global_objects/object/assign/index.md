@@ -1,19 +1,13 @@
 ---
 title: Object.assign()
 slug: Web/JavaScript/Reference/Global_Objects/Object/assign
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Object
-  - Reference
-  - Polyfill
+page-type: javascript-static-method
 browser-compat: javascript.builtins.Object.assign
 ---
 
 {{JSRef}}
 
-The **`Object.assign()`** method
+The **`Object.assign()`** static method
 copies all {{jsxref("Object/propertyIsEnumerable", "enumerable", "", 1)}}
 {{jsxref("Object/hasOwn", "own properties", "", 1)}} from one or more
 _source objects_ to a _target object_. It returns the modified target
@@ -117,7 +111,7 @@ const o3 = { c: 3 };
 
 const obj = Object.assign(o1, o2, o3);
 console.log(obj); // { a: 1, b: 2, c: 3 }
-console.log(o1);  // { a: 1, b: 2, c: 3 }, target object itself is changed.
+console.log(o1); // { a: 1, b: 2, c: 3 }, target object itself is changed.
 ```
 
 ### Merging objects with same properties
@@ -138,7 +132,7 @@ the parameters order.
 
 ```js
 const o1 = { a: 1 };
-const o2 = { [Symbol('foo')]: 2 };
+const o2 = { [Symbol("foo")]: 2 };
 
 const obj = Object.assign({}, o1, o2);
 console.log(obj); // { a : 1, [Symbol("foo")]: 2 } (cf. bug 1207182 on Firefox)
@@ -148,15 +142,19 @@ Object.getOwnPropertySymbols(obj); // [Symbol(foo)]
 ### Properties on the prototype chain and non-enumerable properties cannot be copied
 
 ```js
-const obj = Object.create({ foo: 1 }, { // foo is on obj's prototype chain.
-  bar: {
-    value: 2  // bar is a non-enumerable property.
+const obj = Object.create(
+  // foo is on obj's prototype chain.
+  { foo: 1 },
+  {
+    bar: {
+      value: 2, // bar is a non-enumerable property.
+    },
+    baz: {
+      value: 3,
+      enumerable: true, // baz is an own enumerable property.
+    },
   },
-  baz: {
-    value: 3,
-    enumerable: true  // baz is an own enumerable property.
-  }
-});
+);
 
 const copy = Object.assign({}, obj);
 console.log(copy); // { baz: 3 }
@@ -165,10 +163,10 @@ console.log(copy); // { baz: 3 }
 ### Primitives will be wrapped to objects
 
 ```js
-const v1 = 'abc';
+const v1 = "abc";
 const v2 = true;
 const v3 = 10;
-const v4 = Symbol('foo');
+const v4 = Symbol("foo");
 
 const obj = Object.assign({}, v1, null, v2, undefined, v3, v4);
 // Primitives will be wrapped, null and undefined will be ignored.
@@ -179,20 +177,20 @@ console.log(obj); // { "0": "a", "1": "b", "2": "c" }
 ### Exceptions will interrupt the ongoing copying task
 
 ```js
-const target = Object.defineProperty({}, 'foo', {
+const target = Object.defineProperty({}, "foo", {
   value: 1,
-  writable: false
+  writable: false,
 }); // target.foo is a read-only property
 
 Object.assign(target, { bar: 2 }, { foo2: 3, foo: 3, foo3: 3 }, { baz: 4 });
 // TypeError: "foo" is read-only
 // The Exception is thrown when assigning target.foo
 
-console.log(target.bar);  // 2, the first source was copied successfully.
+console.log(target.bar); // 2, the first source was copied successfully.
 console.log(target.foo2); // 3, the first property of the second source was copied successfully.
-console.log(target.foo);  // 1, exception is thrown here.
+console.log(target.foo); // 1, exception is thrown here.
 console.log(target.foo3); // undefined, assign method has finished, foo3 will not be copied.
-console.log(target.baz);  // undefined, the third source will not be copied either.
+console.log(target.baz); // undefined, the third source will not be copied either.
 ```
 
 ### Copying accessors
@@ -202,7 +200,7 @@ const obj = {
   foo: 1,
   get bar() {
     return 2;
-  }
+  },
 };
 
 let copy = Object.assign({}, obj);

@@ -2,114 +2,104 @@
 title: CSS Container Queries
 slug: Web/CSS/CSS_Container_Queries
 page-type: guide
-tags:
-  - CSS
-  - CSS Containment
-  - CSS Container Queries
-  - Guide
-  - Paint
-  - Responsive Design
 ---
 
 {{CSSRef}}
 
-[CSS containment](/en-US/docs/Web/CSS/CSS_Containment) provides a way to isolate parts of a page and declare to the browser these parts are independent from the rest of the page in terms of styles and layout.
+Container queries enable you to apply styles to an element based on the size of the element's container. If, for example, a container has less space available in the surrounding context, you can hide certain elements or use smaller fonts.
+Container queries are an alternative to [media queries](/en-US/docs/Web/CSS/Media_Queries), which apply styles to elements based on viewport size or other device characteristics.
 
-If you are creating [a responsive design](/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design), you often use [media queries](/en-US/docs/Web/CSS/Media_Queries) to change the page layout based on the size of the {{Glossary("viewport")}}.
-It's common to group HTML elements into reusable components that have a specific layout depending on the available space in a page.
-The available space might not only depend on the size of the viewport, but also on the context where a component appears.
-
-![A webpage with a card component demonstrating the difference between media and container queries.](container-query-diagram.png)
-
-Container queries allow us to look at a container size and apply styles to the contents based on the size of their container rather than the viewport or other device characteristics.
-If the container has less space in the surrounding context, we can hide certain elements or use smaller fonts, for example.
-The illustration below shows how the same card component can be displayed with multiple layouts using container queries:
-
-![A webpage with three card components displayed in different layouts depending on their container's size.](container-query-examples.png)
+![A media query based on the viewport's width, which is the full width of the browser, and a container query based on the width of a container context, which is the width of the container element.](container-query.svg)
 
 ## Using container queries
 
-To use container queries, you need to declare a **containment context** on an element so that the browser knows we might want to query the dimensions of this container later.
-To do this, you use the {{Cssxref("container-type")}} property a value of `size`, `inline-size`, or `block-size`.
+To use container queries, you need to declare a **containment context** on an element so that the browser knows you might want to query the dimensions of this container later.
+To do this, use the {{Cssxref("container-type")}} property with a value of `size`, `inline-size`, or `normal`.
+
 These values have the following effects:
 
-- `size`: the query will be based on the width and height of the container.
-- `inline-size`: the query will be based on the width of the container.
-- `block-size`: the query will be based on the height of the container.
+- `size`
+  - : The query will be based on the [inline and block](/en-US/docs/Web/CSS/CSS_Logical_Properties/Basic_concepts#block_and_inline_dimensions) dimensions of the container.
+    Applies layout, style, and size containment to the container.
+- `inline-size`
+  - : The query will be based on the [inline](/en-US/docs/Web/CSS/CSS_Logical_Properties/Basic_concepts#block_and_inline_dimensions) dimensions of the container.
+    Applies layout, style, and inline-size containment to the element.
+- `normal`
+  - : The element is not a query container for any container size queries, but remains a query container for container style queries.
 
-Take the following HTML as an example which is a card component with an image, a title, and some text:
+Consider the following example of a card component for a blog post with a title and some text:
 
 ```html
-<div class="container">
+<div class="post">
   <div class="card">
-    <img src="image.png" alt="An awesome picture of a cat" />
     <h2>Card title</h2>
     <p>Card content</p>
   </div>
 </div>
 ```
 
-We can create a containment context on the container `<div>` using the `container-type` property:
+You can create a containment context using the `container-type` property:
 
 ```css
-.container {
+.post {
   container-type: inline-size;
 }
 ```
 
-Once a containment context is created, we can use the {{cssxref("@container")}} at-rule to write the container query.
-The query in the following example will look for the nearest containment context and apply styles to the child elements of the container.
-Specifically, we are using a larger font size for the card title if the container is wider than `700px`.
+Next, use the {{cssxref("@container")}} at-rule to define a container query.
+The query in the following example will apply styles to elements based on the size of the nearest ancestor with a containment context.
+Specifically, this query will apply a larger font size for the card title if the container is wider than `700px`:
 
 ```css
 /* Default heading styles for the card title */
-.card h1 {
+.card h2 {
   font-size: 1em;
 }
 
-/* Container query applied if the container is larger than 700px */
+/* If the container is larger than 700px */
 @container (min-width: 700px) {
-  .card h1 {
+  .card h2 {
     font-size: 2em;
   }
 }
 ```
 
-If other areas of the page are also containment contexts, we can use the same component in those areas and it will respond to the relevant containment context.
-This makes reusable components a lot more flexible without needing to know specifically where they will be used each time.
+Using container queries, the card can be reused in multiple areas of a page without needing to know specifically where it will be placed each time.
+If the container with the card is narrower than `700px`, the font of the card title will be small, and if the card is in a container that's wider than `700px`, the font of the card title will be bigger.
 
 For more information on the syntax of container queries, see the {{cssxref("@container")}} page.
 
 ### Naming containment contexts
 
-In the previous section, we used a query that matched the nearest containment context.
-It's possible to give a containment context a name using the {{Cssxref("container-name")}} property to target a specific containment context.
+In the previous section, a container query applied styles based on the nearest ancestor with a containment context.
+It's possible to give a containment context a name using the {{Cssxref("container-name")}} property. Once named, the name can be used in a `@container` query so as to target a specific container.
 The following example creates a containment context with the name `sidebar`:
 
 ```css
-.container {
+.post {
   container-type: inline-size;
   container-name: sidebar;
 }
 ```
 
-We can then target this containment context using the `@container` at-rule:
+You can then target this containment context using the `@container` at-rule:
 
 ```css
 @container sidebar (min-width: 700px) {
   .card {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
+    font-size: 2em;
   }
 }
 ```
+
+More information on naming containment contexts is available on the {{cssxref("container-name")}} page.
 
 ### Shorthand container syntax
 
 The shorthand way of declaring a containment context is to use the `container` property:
 
 ```css
-.container {
+.post {
   container: sidebar / inline-size;
 }
 ```
@@ -135,7 +125,7 @@ The following example uses the `cqi` unit to set the font size of a heading base
 
 ```css
 @container (min-width: 700px) {
-  .card h1 {
+  .card h2 {
     font-size: max(1.5em, 1.23em + 2cqi);
   }
 }
@@ -155,7 +145,7 @@ The following example uses a {{cssxref("grid-template-columns")}} declaration to
 }
 ```
 
-If we want to use a single-column layout for devices with a smaller viewport, we can use a media query to change the grid template:
+If you want to use a single-column layout for devices with a smaller viewport, you can use a media query to change the grid template:
 
 ```css
 @media (max-width: 700px) {
@@ -173,5 +163,6 @@ If we want to use a single-column layout for devices with a smaller viewport, we
 - CSS {{Cssxref("container")}} shorthand property
 - CSS {{Cssxref("container-name")}} property
 - CSS {{cssxref("content-visibility")}} property
+- [Say Hello to CSS Container Queries](https://ishadeed.com/article/say-hello-to-css-container-queries/) by Ahmad Shadeed
 - [Container Queries: a Quick Start Guide](https://www.oddbird.net/2021/04/05/containerqueries/)
 - [Collection of Container Queries articles](https://github.com/sturobson/Awesome-Container-Queries)

@@ -1,20 +1,6 @@
 ---
-title: 'Media type and format guide: image, audio, and video content'
+title: "Media type and format guide: image, audio, and video content"
 slug: Web/Media/Formats
-tags:
-  - API
-  - Audio
-  - Codecs
-  - Containers
-  - File Types
-  - Files
-  - Filetypes
-  - Landing
-  - Media
-  - Types
-  - Video
-  - Web
-  - formats
 ---
 
 {{QuickLinksWithSubpages("/en-US/docs/Web/Media")}}
@@ -38,7 +24,7 @@ This guide provides an overview of the media file types, {{Glossary("codec", "co
   - : A guide to the audio codecs allowed for by the common media containers, as well as by the major browsers. Includes benefits, limitations, key specifications and capabilities, and use cases. It also covers each browser's support for using the codec in given containers.
 - [Web video codec guide](/en-US/docs/Web/Media/Formats/Video_codecs)
   - : This article provides basic information about the video codecs supported by the major browsers, as well as some that are not commonly supported but that you might still run into. It also covers codec capabilities, benefits, limitations, and browser support levels and restrictions.
-- [The "codecs" parameter in common media types](/en-US/docs/Web/Media/Formats/codecs_parameter)
+- [Codecs in common media types](/en-US/docs/Web/Media/Formats/codecs_parameter)
   - : When specifying the MIME type describing a media format, you can provide details using the `codecs` parameter as part of the type string. This guide describes the format and possible values of the `codecs` parameter for the common media types.
 - [Codecs used by WebRTC](/en-US/docs/Web/Media/Formats/WebRTC_codecs)
   - : [WebRTC](/en-US/docs/Web/API/WebRTC_API) doesn't use a container, but instead streams the encoded media itself from peer to peer using {{domxref("MediaStreamTrack")}} objects to represent each audio or video track. This guide discusses the codecs commonly used with WebRTC.

@@ -1,12 +1,7 @@
 ---
 title: '<p>: The Paragraph element'
 slug: Web/HTML/Element/p
-tags:
-  - Element
-  - HTML
-  - HTML grouping content
-  - Reference
-  - Web
+page-type: html-element
 browser-compat: html.elements.p
 ---
 
@@ -22,12 +17,12 @@ Paragraphs are [block-level elements](/en-US/docs/Web/HTML/Block-level_elements)
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories"
+        <a href="/en-US/docs/Web/HTML/Content_categories"
           >Content categories</a
         >
       </th>
       <td>
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
           >Flow content</a
         >, palpable content.
       </td>
@@ -35,7 +30,7 @@ Paragraphs are [block-level elements](/en-US/docs/Web/HTML/Block-level_elements)
     <tr>
       <th scope="row">Permitted content</th>
       <td>
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content"
           >Phrasing content</a
         >.
       </td>
@@ -50,9 +45,9 @@ Paragraphs are [block-level elements](/en-US/docs/Web/HTML/Block-level_elements)
         {{HTMLElement("blockquote")}}, {{HTMLElement("div")}},
         {{HTMLElement("dl")}}, {{HTMLElement("fieldset")}},
         {{HTMLElement("footer")}}, {{HTMLElement("form")}},
-        {{HTMLElement("h1")}}, {{HTMLElement("h2")}},
-        {{HTMLElement("h3")}}, {{HTMLElement("h4")}},
-        {{HTMLElement("h5")}}, {{HTMLElement("h6")}},
+        {{HTMLElement("Heading_Elements", "h1")}}, {{HTMLElement("Heading_Elements", "h2")}},
+        {{HTMLElement("Heading_Elements", "h3")}}, {{HTMLElement("Heading_Elements", "h4")}},
+        {{HTMLElement("Heading_Elements", "h5")}}, {{HTMLElement("Heading_Elements", "h6")}},
         {{HTMLElement("header")}}, {{HTMLElement("hr")}},
         {{HTMLElement("menu")}}, {{HTMLElement("nav")}},
         {{HTMLElement("ol")}}, {{HTMLElement("pre")}},
@@ -66,7 +61,7 @@ Paragraphs are [block-level elements](/en-US/docs/Web/HTML/Block-level_elements)
       <th scope="row">Permitted parents</th>
       <td>
         Any element that accepts
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
           >flow content</a
         >.
       </td>
@@ -74,8 +69,8 @@ Paragraphs are [block-level elements](/en-US/docs/Web/HTML/Block-level_elements)
     <tr>
       <th scope="row">Implicit ARIA role</th>
       <td>
-        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
-          >No corresponding role</a
+        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/structural_roles"
+          >paragraph</a
         >
       </td>
     </tr>

@@ -1,10 +1,7 @@
 ---
 title: WebM
-slug: Glossary/webm
-tags:
-  - Composing
-  - Infrastructure
-  - WebM
+slug: Glossary/WebM
+page-type: glossary-definition
 ---
 
 **WebM** is royalty-free and is an open web video format natively supported in Mozilla Firefox.

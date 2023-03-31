@@ -1,11 +1,6 @@
 ---
 title: 401 Unauthorized
 slug: Web/HTTP/Status/401
-tags:
-  - Client error
-  - HTTP
-  - Reference
-  - Status code
 browser-compat: http.status.401
 ---
 
@@ -22,7 +17,7 @@ status code, user authentication can allow access to the resource.
 
 ## Status
 
-```
+```http
 401 Unauthorized
 ```
 

@@ -1,9 +1,6 @@
 ---
 title: The history of MDN
 slug: MDN/At_ten/History_of_MDN
-tags:
-  - History
-  - MDN Meta
 ---
 
 {{MDNSidebar}}
@@ -17,7 +14,7 @@ In this talk from 2015, several contributors of the MDN project look at the past
 </pre><pre class="brush: css hidden">body{margin-top:8px;}
 </pre></div>
 
-{{ EmbedLiveSample('audio', '100%', '70px', '', '', 'no-buttons') }}
+{{ EmbedLiveSample('audio', '100%', '70px') }}
 
 ![The Berlin Office](11073502_781006205281080_8135317797319228200_o-600x400.jpg)
 
@@ -67,7 +64,7 @@ In August 2008, the Mozilla Developer Center switched to [MindTouch DekiWiki](ht
 
 Time: _0:26:08 - 0:31:50_ and _0:43:52 - 0:51:35_
 
-[Kuma](https://github.com/mdn/kuma), forked from [Kitsune](https://github.com/mozilla/kitsune) in early 2011 and launched on August 3, 2012, is a Mozilla-built wiki platform based on Django with its own [KumaScript](/en-US/docs/MDN/Tools/KumaScript) macro system which uses Node.js.
+[Kuma](https://github.com/mdn/kuma), forked from [Kitsune](https://github.com/mozilla/kitsune) in early 2011 and launched on August 3, 2012, is a Mozilla-built wiki platform based on Django with its own [KumaScript](https://github.com/mdn/yari/tree/main/docs/kumascript) macro system which uses Node.js.
 
 With the code living on GitHub, the community started to contribute to MDN's CMS as well. From now on, hacking on MDN includes both writing documentation and Kuma coding.
 
@@ -93,7 +90,7 @@ Different browser vendors have joined every once in a while to help shape this p
 
 Time: _0:36:55 - 0:43:52_
 
-Localization is a big part of the Mozilla community; it is a component of almost every project and product. Using Kuma, MDN is also very localizable and suited for the needs of [our l10n community](/en-US/docs/MDN/Contribute/Localize). The W3C specifications and other resources describing the Web's functionality have no direct goals, and have communities that provide specs in multiple languages. Especially for beginners, MDN is the first step to explore web technologies, so it's our aim to be there for everyone. MDN has a broad audience and aims to include not only native English speakers. It is appreciated all around the globe.
+Localization is a big part of the Mozilla community; it is a component of almost every project and product. Using Kuma, MDN is also very localizable and suited for the needs of [our l10n community](/en-US/docs/MDN/Community/Contributing/Translated_content). The W3C specifications and other resources describing the Web's functionality have no direct goals, and have communities that provide specs in multiple languages. Especially for beginners, MDN is the first step to explore web technologies, so it's our aim to be there for everyone. MDN has a broad audience and aims to include not only native English speakers. It is appreciated all around the globe.
 
 ### Learning Area
 

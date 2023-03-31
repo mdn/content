@@ -2,12 +2,6 @@
 title: position
 slug: Web/CSS/position
 page-type: css-property
-tags:
-  - CSS
-  - CSS Positioning
-  - CSS Property
-  - Reference
-  - recipe:css-property
 browser-compat: css.properties.position
 ---
 
@@ -46,7 +40,7 @@ position: unset;
 
 - `absolute`
 
-  - : The element is removed from the normal document flow, and no space is created for the element in the page layout. It is positioned relative to its closest positioned ancestor, if any; otherwise, it is placed relative to the initial [containing block](/en-US/docs/Web/CSS/Containing_block). Its final position is determined by the values of `top`, `right`, `bottom`, and `left`.
+  - : The element is removed from the normal document flow, and no space is created for the element in the page layout. It is positioned relative to its closest [positioned](#types_of_positioning) ancestor, if any; otherwise, it is placed relative to the initial [containing block](/en-US/docs/Web/CSS/Containing_block). Its final position is determined by the values of `top`, `right`, `bottom`, and `left`.
 
     This value creates a new [stacking context](/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context) when the value of `z-index` is not `auto`. The margins of absolutely positioned boxes do not [collapse](/en-US/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing) with other margins.
 

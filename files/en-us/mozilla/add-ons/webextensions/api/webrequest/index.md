@@ -1,15 +1,7 @@
 ---
 title: webRequest
 slug: Mozilla/Add-ons/WebExtensions/API/webRequest
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Interface
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - webRequest
+page-type: webextension-api
 browser-compat: webextensions.api.webRequest
 ---
 
@@ -19,7 +11,7 @@ Add event listeners for the various stages of making an HTTP request, which incl
 
 Each event is fired at a particular stage of the request. The typical sequence of events is like this:
 
-![](webrequest-flow.png)
+![Order of requests is onBeforeRequest, onBeforeSendHeader, onSendHeaders, onHeadersReceived, onResponseStarted, and onCompleted. The onHeadersReceived can cause an onBeforeRedirect and an onAuthRequired. Events caused by onHeadersReceived start at the beginning onBeforeRequest. Events caused by onAuthRequired start at onBeforeSendHeader.](webrequest-flow.png)
 
 {{WebExtAPIRef("webRequest.onErrorOccurred", "onErrorOccurred")}} can fire at any time during the request. Also, note that sometimes the sequence of events may differ from this. For example, in Firefox, on an [HSTS](/en-US/docs/Web/HTTP/Headers/Strict-Transport-Security) upgrade, the `onBeforeRedirect` event is triggered immediately after `onBeforeRequest`. `onErrorOccurred` is also fired if [Firefox Tracking Protection](https://support.mozilla.org/en-US/kb/enhanced-tracking-protection-firefox-desktop) blocks a request.
 
@@ -149,8 +141,6 @@ To do this, you must have the `"webRequestBlocking"` API permission as well as t
 {{WebExtExamples("h2")}}
 
 > **Note:** This API is based on Chromium's [`chrome.webRequest`](https://developer.chrome.com/docs/extensions/reference/webRequest/) API. This documentation is derived from [`web_request.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/web_request.json) in the Chromium code.
->
-> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

@@ -2,18 +2,34 @@
 title: PerformanceLongTaskTiming.attribution
 slug: Web/API/PerformanceLongTaskTiming/attribution
 page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.PerformanceLongTaskTiming.attribution
 ---
 
 {{SeeCompatTable}}{{APIRef("Performance API")}}
 
-The **`attribution`** readonly property of the
-{{domxref("PerformanceLongTaskTiming")}} interface returns a sequence of
-{{domxref('TaskAttributionTiming')}} instances.
+The **`attribution`** readonly property of the {{domxref("PerformanceLongTaskTiming")}} interface returns an array of {{domxref('TaskAttributionTiming')}} objects.
 
 ## Value
 
-A sequence of {{domxref('TaskAttributionTiming')}} instances.
+An {{jsxref("Array")}} of {{domxref('TaskAttributionTiming')}} objects.
+
+## Examples
+
+### Logging attributions for long tasks
+
+```js
+const observer = new PerformanceObserver((list) => {
+  list.getEntries().forEach((entry) => {
+    entry.attribution.forEach((attributionEntry) => {
+      console.log(attributionEntry);
+    });
+  });
+});
+
+observer.observe({ type: "longtask", buffered: true });
+```
 
 ## Specifications
 
@@ -22,3 +38,7 @@ A sequence of {{domxref('TaskAttributionTiming')}} instances.
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{domxref('TaskAttributionTiming')}}

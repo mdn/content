@@ -1,11 +1,9 @@
 ---
 title: with
 slug: Web/JavaScript/Reference/Statements/with
-tags:
-  - Deprecated
-  - JavaScript
-  - Language feature
-  - Statement
+page-type: javascript-statement
+status:
+  - deprecated
 browser-compat: javascript.statements.with
 ---
 
@@ -13,7 +11,7 @@ browser-compat: javascript.statements.with
 
 > **Note:** Use of the `with` statement is not recommended, as it may be the source of confusing bugs and compatibility issues, makes optimization impossible, and is forbidden in [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode). The recommended alternative is to assign the object whose properties you want to access to a temporary variable.
 
-The **`with` statement** extends the scope chain for a statement.
+The **`with`** statement extends the scope chain for a statement.
 
 ## Syntax
 
@@ -144,7 +142,7 @@ const namespace = new Proxy(
     get(target, key) {
       return key;
     },
-  }
+  },
 );
 
 with (namespace) {

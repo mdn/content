@@ -1,10 +1,7 @@
 ---
 title: <feOffset>
 slug: Web/SVG/Element/feOffset
-tags:
-  - Element
-  - SVG
-  - SVG Filter
+page-type: svg-element
 browser-compat: svg.elements.feOffset
 ---
 

@@ -1,15 +1,7 @@
 ---
 title: privacy.network
 slug: Mozilla/Add-ons/WebExtensions/API/privacy/network
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Network
-  - Privacy
-  - Property
-  - Reference
-  - WebExtensions
+page-type: webextension-api-property
 browser-compat: webextensions.api.privacy.network
 ---
 
@@ -88,8 +80,6 @@ browser.browserAction.onClicked.addListener(() => {
 {{WebExtExamples}}
 
 > **Note:** This API is based on Chromium's [`chrome.privacy`](https://developer.chrome.com/docs/extensions/reference/privacy/) API. This documentation is derived from [`privacy.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/privacy.json) in the Chromium code.
->
-> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

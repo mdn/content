@@ -2,14 +2,6 @@
 title: Using the Notifications API
 slug: Web/API/Notifications_API/Using_the_Notifications_API
 page-type: guide
-tags:
-  - API
-  - Advanced
-  - Guide
-  - Notifications
-  - Notifications API
-  - Push
-  - Tutorial
 browser-compat: api.Notification
 ---
 
@@ -27,7 +19,7 @@ The system notification system will vary of course by platform and browser, but 
 
 One of the most obvious use cases for web notifications is a web-based mail or IRC application that needs to notify the user when a new message is received, even if the user is doing something else with another application. Many examples of this now exist, such as [Slack](https://slack.com/).
 
-We've written a real world example — a to-do list app — to give more of an idea of how web notifications can be used. It stores data locally using [IndexedDB](/en-US/docs/Web/API/IndexedDB_API) and notifies users when tasks are due using system notifications. [Download the To-do list code](https://github.com/mdn/dom-examples/tree/main/to-do-notifications), or [view the app running live](https://mdn.github.io/dom-examples/to-do-notifications/).
+We've written a real-world example — a to-do list app — to give more of an idea of how web notifications can be used. It stores data locally using [IndexedDB](/en-US/docs/Web/API/IndexedDB_API) and notifies users when tasks are due using system notifications. [Download the To-do list code](https://github.com/mdn/dom-examples/tree/main/to-do-notifications), or [view the app running live](https://mdn.github.io/dom-examples/to-do-notifications/).
 
 ## Requesting permission
 
@@ -82,11 +74,11 @@ function askNotificationPermission() {
   function handlePermission(permission) {
     // set the button to shown or hidden, depending on what the user answers
     notificationBtn.style.display =
-      Notification.permission === 'granted' ? 'none' : 'block';
+      Notification.permission === "granted" ? "none" : "block";
   }
 
   // Let's check if the browser supports notifications
-  if (!('Notification' in window)) {
+  if (!("Notification" in window)) {
     console.log("This browser does not support notifications.");
   } else if (checkNotificationPromise()) {
     Notification.requestPermission().then((permission) => {
@@ -104,7 +96,7 @@ Looking at the second main block first, you'll see that we first check to see if
 
 To avoid duplicating code, we have stored a few bits of housekeeping code inside the `handlePermission()` function, which is the first main block inside this snippet. Inside here we explicitly set the `Notification.permission` value (some old versions of Chrome failed to do this automatically), and show or hide the button depending on what the user chose in the permission dialog. We don't want to show it if permission has already been granted, but if the user chose to deny permission, we want to give them the chance to change their mind later on.
 
-> **Note:** Before version 37, Chrome doesn't let you call {{domxref("Notification.requestPermission()")}} in the `load` event handler (see [issue 274284](https://bugs.chromium.org/p/chromium/issues/detail?id=274284)).
+> **Note:** Before version 37, Chrome doesn't let you call {{domxref("Notification.requestPermission()")}} in the `load` event handler (see [issue 274284](https://crbug.com/274284)).
 
 ### Feature-detecting the requestPermission() promise
 
@@ -131,9 +123,9 @@ Creating a notification is easy; just use the {{domxref("Notification")}} constr
 For example, in the to-do-list example we use the following snippet to create a notification when required (found inside the `createNotification()` function):
 
 ```js
-const img = '/to-do-notifications/img/icon-128.png';
+const img = "/to-do-notifications/img/icon-128.png";
 const text = `HEY! Your task "${title}" is now overdue.`;
-const notification = new Notification('To do list', { body: text, icon: img });
+const notification = new Notification("To do list", { body: text, icon: img });
 ```
 
 ## Closing notifications
@@ -141,9 +133,9 @@ const notification = new Notification('To do list', { body: text, icon: img });
 Use {{domxref("Notification.close","close()")}} to remove a notification that is no longer relevant to the user (e.g. the user already read the notification on the webpage, in the case of a messaging app, or the following song is already playing in a music app to notifies upon song changes). Most modern browsers dismiss notifications automatically after a few moments (around four seconds) but this isn't something you should generally be concerned about as it's up to the user and user agent. The dismissal may also happen at the operating system level and users should remain in control of this. Old versions of Chrome didn't remove notifications automatically so you can do so after a {{domxref("setTimeout()")}} only for those legacy versions in order to not remove notifications from notification trays on other browsers.
 
 ```js
-const n = new Notification('My Great Song');
-document.addEventListener('visibilitychange', () => {
-  if (document.visibilityState === 'visible') {
+const n = new Notification("My Great Song");
+document.addEventListener("visibilitychange", () => {
+  if (document.visibilityState === "visible") {
     // The tab has become visible so clear the now-stale Notification.
     n.close();
   }
@@ -186,19 +178,19 @@ Assume the following basic HTML:
 It's possible to handle multiple notifications this way:
 
 ```js
-window.addEventListener('load', () => {
-  const button = document.querySelector('button');
+window.addEventListener("load", () => {
+  const button = document.querySelector("button");
 
   if (window.self !== window.top) {
     // Ensure that if our document is in a frame, we get the user
     // to first open it in its own tab or window. Otherwise, it
     // won't be able to request permission to send notifications.
     button.textContent = "View live result of the example code above";
-    button.addEventListener('click', () => window.open(location.href));
+    button.addEventListener("click", () => window.open(location.href));
     return;
   }
 
-  button.addEventListener('click', () => {
+  button.addEventListener("click", () => {
     if (Notification?.permission === "granted") {
       // If the user agreed to get notified
       // Let's try to send ten notifications
@@ -206,11 +198,11 @@ window.addEventListener('load', () => {
       // Using an interval cause some browsers (including Firefox) are blocking notifications if there are too much in a certain time.
       const interval = setInterval(() => {
         // Thanks to the tag, we should only see the "Hi! 9" notification
-        const n = new Notification(`Hi! ${i}`, {tag: 'soManyNotification'});
+        const n = new Notification(`Hi! ${i}`, { tag: "soManyNotification" });
         if (i === 9) {
-          i++;
           clearInterval(interval);
         }
+        i++;
       }, 200);
     } else if (Notification && Notification.permission !== "denied") {
       // If the user hasn't told if they want to be notified or not
@@ -223,11 +215,13 @@ window.addEventListener('load', () => {
           // Using an interval cause some browsers (including Firefox) are blocking notifications if there are too much in a certain time.
           const interval = setInterval(() => {
             // Thanks to the tag, we should only see the "Hi! 9" notification
-            const n = new Notification(`Hi! ${i}`, {tag: 'soManyNotification'});
+            const n = new Notification(`Hi! ${i}`, {
+              tag: "soManyNotification",
+            });
             if (i === 9) {
-              i++;
               clearInterval(interval);
             }
+            i++;
           }, 200);
         } else {
           // Otherwise, we can fallback to a regular modal alert

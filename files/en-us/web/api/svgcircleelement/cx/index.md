@@ -2,13 +2,6 @@
 title: SVGCircleElement.cx
 slug: Web/API/SVGCircleElement/cx
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - SVG
-  - SVGCircleElement
-  - cx
 browser-compat: api.SVGCircleElement.cx
 ---
 
@@ -39,7 +32,7 @@ An {{domxref("SVGAnimatedLength")}} representing the x-coordinate of the circle'
 ### JavaScript
 
 ```js
-const circle = document.getElementById('circle');
+const circle = document.getElementById("circle");
 console.log(circle.cx);
 ```
 

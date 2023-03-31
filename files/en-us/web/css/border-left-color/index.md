@@ -2,12 +2,6 @@
 title: border-left-color
 slug: Web/CSS/border-left-color
 page-type: css-property
-tags:
-  - CSS
-  - CSS Borders
-  - CSS Property
-  - Reference
-  - recipe:css-property
 browser-compat: css.properties.border-left-color
 ---
 
@@ -23,8 +17,8 @@ The **`border-left-color`** CSS property sets the color of an element's left [bo
 /* <color> values */
 border-left-color: red;
 border-left-color: #ffbb00;
-border-left-color: rgb(255, 0, 0);
-border-left-color: hsla(100%, 50%, 25%, 0.75);
+border-left-color: rgb(255 0 0);
+border-left-color: hsl(100deg 50% 25% / 0.75);
 border-left-color: currentcolor;
 border-left-color: transparent;
 
@@ -97,3 +91,4 @@ The `border-left-color` property is specified as a single value.
 - The border-related CSS shorthand properties: {{Cssxref("border")}}, {{Cssxref("border-left")}}, and {{Cssxref("border-color")}}.
 - The color-related CSS properties for the other borders: {{Cssxref("border-right-color")}}, {{Cssxref("border-bottom-color")}}, and {{Cssxref("border-top-color")}}.
 - The other border-related CSS properties applying to the same border: {{cssxref("border-left-style")}} and {{cssxref("border-left-width")}}.
+- The default [`currentcolor`](/en-US/docs/Web/CSS/color_value#currentcolor_keyword) color value.

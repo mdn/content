@@ -123,28 +123,6 @@
       ],
       "interfaces": ["SVGAnimateElement"]
     },
-    "animateColor": {
-      "categories": ["basicShapeElement", "graphicsElement", "shapeElement"],
-      "content": {
-        "description": "anyNumberOfElementsAnyOrder",
-        "elements": ["descriptiveElements"]
-      },
-      "attributes": [
-        "conditionalProcessingAttributes",
-        "coreAttributes",
-        "animationEventAttributes",
-        "xLinkAttributes",
-        "animationAttributeTargetAttributes",
-        "animationTimingAttributes",
-        "animationValueAttributes",
-        "animationAdditionAttributes",
-        "'externalResourcesRequired'",
-        "'by'",
-        "'from'",
-        "'to'"
-      ],
-      "interfaces": ["SVGAnimateColorElement"]
-    },
     "animateMotion": {
       "categories": ["animationElement"],
       "content": {
@@ -463,7 +441,8 @@
       "content": {
         "description": {
           "en-US": "Any number of <a href=\"/en-US/SVG/Element#descriptive\">descriptive elements</a> and exactly one <a href=\"/en-US/SVG/Element#lightsource\">light source element</a>, in any order.",
-          "zh-CN": "\u4efb\u610f\u6570\u91cf\u7684<a href=\"/zh-CN/SVG/Element#descriptive\">\u63cf\u8ff0\u6027\u5143\u7d20</a>\u4ee5\u53ca\u4e0d\u591a\u4e0d\u5c11\u4e00\u4e2a<a href=\"/en-US/SVG/Element#lightsource\">\u5149\u6e90\u5143\u7d20</a>\uff0c\u987a\u5e8f\u4e0d\u9650\u3002"
+          "zh-CN": "\u4efb\u610f\u6570\u91cf\u7684<a href=\"/zh-CN/SVG/Element#descriptive\">\u63cf\u8ff0\u6027\u5143\u7d20</a>\u4ee5\u53ca\u4e0d\u591a\u4e0d\u5c11\u4e00\u4e2a<a href=\"/en-US/SVG/Element#lightsource\">\u5149\u6e90\u5143\u7d20</a>\uff0c\u987a\u5e8f\u4e0d\u9650\u3002",
+          "pt-BR": "Qualquer número de <a href=\"/pt-BR/SVG/Element#descriptive\">elementos descritivos</a> e exatamente um <a href=\"/pt-BR/SVG/Element#lightsource\">elemento de fonte de luz</a>, em qualquer ordem."
         }
       },
       "attributes": [
@@ -531,7 +510,7 @@
       "categories": ["filterPrimitiveElement"],
       "content": {
         "description": "anyNumberOfElementsAnyOrder",
-        "elements": ["&lt;animate&gt;", "&lt;animateColor&gt;", "&lt;set&gt;"]
+        "elements": ["&lt;animate&gt;", "&lt;set&gt;"]
       },
       "attributes": [
         "coreAttributes",
@@ -694,7 +673,8 @@
       "content": {
         "description": {
           "en-US": "Exactly one\u00a0<a href=\"/en-US/SVG/Element#lightsource\">light source element</a>\u00a0first and any number of <a href=\"/en-US/SVG/Element#descriptive\">descriptive elements</a>\u00a0in any order.",
-          "zh-CN": "\u6709\u4e14\u53ea\u6709\u4e00\u4e2a<a href=\"/zh-CN/SVG/Element#lightsource\">\u5149\u6e90\u5143\u7d20</a>\u5728\u5148\uff0c\u4efb\u610f\u6570\u91cf\u7684<a href=\"/zh-CN/SVG/Element#descriptive\">\u63cf\u8ff0\u6027\u5143\u7d20</a>\u987a\u5e8f\u4e0d\u9650\u3002"
+          "zh-CN": "\u6709\u4e14\u53ea\u6709\u4e00\u4e2a<a href=\"/zh-CN/SVG/Element#lightsource\">\u5149\u6e90\u5143\u7d20</a>\u5728\u5148\uff0c\u4efb\u610f\u6570\u91cf\u7684<a href=\"/zh-CN/SVG/Element#descriptive\">\u63cf\u8ff0\u6027\u5143\u7d20</a>\u987a\u5e8f\u4e0d\u9650\u3002",
+          "pt-BR": "Exatamente um primeiro\u00a0<a href=\"/pt-BR/SVG/Element#lightsource\">elemento de fonte de luz</a>\u00a0e qualquer número de <a href=\"/pt-BR/SVG/Element#descriptive\">elementos descritivos</a>\u00a0em qualquer ordem."
         }
       },
       "attributes": [
@@ -827,7 +807,8 @@
       "categories": ["fontElement"],
       "content": {
         "description": {
-          "en-US": "Any number of <a href=\"/en-US/SVG/Element#descriptive\">descriptive elements</a>\u00a0\u00bb and at most one <a href=\"/en-US/docs/Web/SVG/Element/font-face\" title=\"The font-face element corresponds to the CSS @font-face declaration. It defines a font's outer properties.\"><code>&lt;font-face&gt;</code></a> element, in any order."
+          "en-US": "Any number of <a href=\"/en-US/SVG/Element#descriptive\">descriptive elements</a>\u00a0\u00bb and at most one <a href=\"/en-US/docs/Web/SVG/Element/font-face\" title=\"The font-face element corresponds to the CSS @font-face declaration. It defines a font's outer properties.\"><code>&lt;font-face&gt;</code></a> element, in any order.",
+          "pt-BR": "Qualquer número de <a href=\"/pt-BR/SVG/Element#descriptive\">elementos descritivos</a>\u00a0\u00bb e pelo menos um <a href=\"/pt-BR/docs/Web/SVG/Element/font-face\" title=\"O elemento font-face element corresponde à declaração CSS @font-face. Ele define as propriedades externas da fonte.\"><code>&lt;font-face&gt;</code></a>, em qualquer ordem."
         }
       },
       "attributes": [
@@ -889,7 +870,8 @@
       "content": {
         "description": {
           "en-US": "One or more of the following elements, in any order:",
-          "zh-CN": "\u4e00\u4e2a\u6216\u591a\u4e2a\u4e0b\u5217\u5143\u7d20\uff0c\u987a\u5e8f\u4e0d\u9650\uff1a"
+          "zh-CN": "\u4e00\u4e2a\u6216\u591a\u4e2a\u4e0b\u5217\u5143\u7d20\uff0c\u987a\u5e8f\u4e0d\u9650\uff1a",
+          "pt-BR": "Um ou mais dos seguintes elementos, em qualquer ordem:"
         },
         "elements": ["&lt;font-face-name&gt;", "&lt;font-face-uri&gt;"]
       },
@@ -1530,7 +1512,7 @@
       "categories": ["gradientElement"],
       "content": {
         "description": "anyNumberOfElementsAnyOrder",
-        "elements": ["&lt;animate&gt;", "&lt;animateColor&gt;", "&lt;set&gt;"]
+        "elements": ["&lt;animate&gt;", "&lt;set&gt;"]
       },
       "attributes": [
         "coreAttributes",
@@ -1716,7 +1698,6 @@
           "&lt;a&gt;",
           "&lt;altGlyph&gt;",
           "&lt;animate&gt;",
-          "&lt;animateColor&gt;",
           "&lt;set&gt;",
           "&lt;tref&gt;",
           "&lt;tspan&gt;"
@@ -1750,12 +1731,7 @@
       "categories": ["textContentElement", "textContentChildElement"],
       "content": {
         "description": "anyNumberOfElementsAnyOrder",
-        "elements": [
-          "descriptiveElements",
-          "&lt;animate&gt;",
-          "&lt;animateColor&gt;",
-          "&lt;set&gt;"
-        ]
+        "elements": ["descriptiveElements", "&lt;animate&gt;", "&lt;set&gt;"]
       },
       "attributes": [
         "conditionalProcessingAttributes",
@@ -1779,7 +1755,6 @@
           "&lt;a&gt;",
           "&lt;altGlyph&gt;",
           "&lt;animate&gt;",
-          "&lt;animateColor&gt;",
           "&lt;set&gt;",
           "&lt;tref&gt;",
           "&lt;tspan&gt;"

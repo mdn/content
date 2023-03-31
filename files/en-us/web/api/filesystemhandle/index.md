@@ -2,14 +2,6 @@
 title: FileSystemHandle
 slug: Web/API/FileSystemHandle
 page-type: web-api-interface
-tags:
-  - Directories
-  - File System Access API
-  - FileSystemHandle
-  - Files
-  - Interface
-  - handle
-  - working with files
 browser-compat: api.FileSystemHandle
 ---
 
@@ -39,6 +31,8 @@ Below is a list of interfaces based on the FileSystemHandle interface.
   - : Compares two {{domxref("FileSystemHandle", "handles")}} to see if the associated entries (either a file or directory) match.
 - {{domxref('FileSystemHandle.queryPermission()', 'queryPermission()')}} {{Experimental_Inline}}
   - : Queries the current permission state of the current handle.
+- {{domxref('FileSystemHandle.remove', 'remove()')}} {{Experimental_Inline}} {{Non-standard_Inline}}
+  - : Requests removal of the entry represented by the handle from the underlying file system.
 - {{domxref('FileSystemHandle.requestPermission', 'requestPermission()')}} {{Experimental_Inline}}
   - : Requests read or readwrite permissions for the file handle.
 
@@ -56,12 +50,11 @@ async function getFile() {
   // open file picker
   [fileHandle] = await window.showOpenFilePicker();
 
-  if (fileHandle.kind === 'file') {
+  if (fileHandle.kind === "file") {
     // run file code
-  } else if (fileHandle.kind === 'directory') {
+  } else if (fileHandle.kind === "directory") {
     // run directory code
   }
-
 }
 ```
 
@@ -76,16 +69,16 @@ The following asynchronous function returns true if user has granted read or rea
 async function verifyPermission(fileHandle, withWrite) {
   const opts = {};
   if (withWrite) {
-    opts.mode = 'readwrite';
+    opts.mode = "readwrite";
   }
 
   // Check if we already have permission, if so, return true.
-  if (await fileHandle.queryPermission(opts) === 'granted') {
+  if ((await fileHandle.queryPermission(opts)) === "granted") {
     return true;
   }
 
   // Request permission to the file, if the user grants permission, return true.
-  if (await fileHandle.requestPermission(opts) === 'granted') {
+  if ((await fileHandle.requestPermission(opts)) === "granted") {
     return true;
   }
 
@@ -100,7 +93,6 @@ The following function compares a single entry with an array of entries, and ret
 
 ```js
 function removeMatches(fileEntry, entriesArr) {
-
   const newArr = entriesArr.filter((entry) => !fileEntry.isSameEntry(entry));
 
   return newArr;

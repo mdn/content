@@ -1,11 +1,6 @@
 ---
 title: 412 Precondition Failed
 slug: Web/HTTP/Status/412
-tags:
-  - Error
-  - HTTP
-  - Reference
-  - Status code
 browser-compat: http.status.412
 ---
 
@@ -22,7 +17,7 @@ cannot be made and this error response is sent back.
 
 ## Status
 
-```
+```http
 412 Precondition Failed
 ```
 

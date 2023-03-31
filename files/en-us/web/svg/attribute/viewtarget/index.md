@@ -1,10 +1,9 @@
 ---
 title: viewTarget
 slug: Web/SVG/Attribute/viewTarget
-tags:
-  - SVG
-  - SVG Attribute
-  - Deprecated
+page-type: svg-attribute
+status:
+  - deprecated
 browser-compat: svg.elements.view.viewTarget
 ---
 

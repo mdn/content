@@ -1,10 +1,6 @@
 ---
 title: 418 I'm a teapot
 slug: Web/HTTP/Status/418
-tags:
-  - HTTP
-  - HTTP Status Code
-  - Reference
 browser-compat: http.status.418
 ---
 
@@ -16,7 +12,7 @@ Some websites use this response for requests they do not wish to handle, such as
 
 ## Status
 
-```
+```http
 418 I'm a teapot
 ```
 

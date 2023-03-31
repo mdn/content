@@ -2,25 +2,8 @@
 title: XRWebGLLayer.getViewport()
 slug: Web/API/XRWebGLLayer/getViewport
 page-type: web-api-instance-method
-tags:
-  - API
-  - AR
-  - Layer
-  - Method
-  - Reality
-  - Reference
-  - VR
-  - Virtual
-  - WebGL
-  - WebXR
-  - WebXR API
-  - WebXR Device API
-  - XR
-  - XRWebGLLayer
-  - augmented
-  - getViewport
-  - viewport
-  - Experimental
+status:
+  - experimental
 browser-compat: api.XRWebGLLayer.getViewport
 ---
 
@@ -110,4 +93,3 @@ function drawFrame(time, frame) {
 ## See also
 
 - [WebXR Device API](/en-US/docs/Web/API/WebXR_Device_API)
-- {{domxref("WebGLLayerInit")}}

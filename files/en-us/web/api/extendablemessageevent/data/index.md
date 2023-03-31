@@ -2,13 +2,6 @@
 title: ExtendableMessageEvent.data
 slug: Web/API/ExtendableMessageEvent/data
 page-type: web-api-instance-property
-tags:
-  - API
-  - ExtendableMessageEvent
-  - Property
-  - Reference
-  - Service Workers
-  - data
 browser-compat: api.ExtendableMessageEvent.data
 ---
 
@@ -32,12 +25,12 @@ object of `onmessage` will be a `ExtendableMessageEvent`.
 ```js
 let port;
 
-self.addEventListener('push', (e) => {
+self.addEventListener("push", (e) => {
   const obj = e.data.json();
 
-  if (obj.action === 'subscribe' || obj.action === 'unsubscribe') {
+  if (obj.action === "subscribe" || obj.action === "unsubscribe") {
     port.postMessage(obj);
-  } else if (obj.action === 'init' || obj.action === 'chatMsg') {
+  } else if (obj.action === "init" || obj.action === "chatMsg") {
     port.postMessage(obj);
   }
 });
@@ -45,7 +38,7 @@ self.addEventListener('push', (e) => {
 self.onmessage = (e) => {
   console.log(e.data);
   port = e.ports[0];
-}
+};
 ```
 
 ## Specifications

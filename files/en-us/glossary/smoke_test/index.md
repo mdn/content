@@ -1,11 +1,7 @@
 ---
 title: Smoke Test
 slug: Glossary/Smoke_Test
-tags:
-  - Composing
-  - Intro
-  - QA
-  - Testing
+page-type: glossary-definition
 ---
 
 A smoke test consists of functional or unit tests of critical software functionality. Smoke testing comes before further, in-depth testing.

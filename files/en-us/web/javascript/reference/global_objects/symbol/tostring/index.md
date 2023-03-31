@@ -1,12 +1,7 @@
 ---
 title: Symbol.prototype.toString()
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/toString
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Prototype
-  - Symbol
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.Symbol.toString
 ---
 

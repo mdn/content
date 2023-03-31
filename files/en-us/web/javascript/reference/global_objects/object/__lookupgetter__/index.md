@@ -1,13 +1,9 @@
 ---
 title: Object.prototype.__lookupGetter__()
 slug: Web/JavaScript/Reference/Global_Objects/Object/__lookupGetter__
-tags:
-  - Deprecated
-  - JavaScript
-  - Method
-  - Object
-  - Prototype
-  - Polyfill
+page-type: javascript-instance-method
+status:
+  - deprecated
 browser-compat: javascript.builtins.Object.lookupGetter
 ---
 

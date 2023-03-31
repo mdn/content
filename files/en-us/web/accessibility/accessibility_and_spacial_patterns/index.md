@@ -1,11 +1,6 @@
 ---
 title: Accessibility and Spacial Patterns
 slug: Web/Accessibility/Accessibility_and_Spacial_Patterns
-tags:
-  - Accessibility
-  - Braille
-  - patterns
-  - photosensitive seizure
 ---
 
 <section id="Quick_links">

@@ -2,12 +2,6 @@
 title: DOMTokenList.replace()
 slug: Web/API/DOMTokenList/replace
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - Document
-  - Method
-  - Reference
 browser-compat: api.DOMTokenList.replace
 ---
 
@@ -57,7 +51,7 @@ const classes = span.classList;
 
 const result = classes.replace("c", "z");
 
-span.textContent = result ? classes : 'token not replaced successfully';
+span.textContent = result ? classes : "token not replaced successfully";
 ```
 
 The output looks like this:

@@ -1,13 +1,7 @@
 ---
 title: Generator.prototype.next()
 slug: Web/JavaScript/Reference/Global_Objects/Generator/next
-tags:
-  - ECMAScript 2015
-  - Generator
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.Generator.next
 ---
 
@@ -102,12 +96,10 @@ function* gen() {
 }
 
 const g = gen();
-g.next(1);
+g.next(1); // Returns { value: undefined, done: false }
 // No log at this step: the first value sent through `next` is lost
-// "{ value: null, done: false }"
-g.next(2);
-// 2
-// "{ value: null, done: false }"
+g.next(2); // Returns { value: undefined, done: false }
+// Logs 2
 ```
 
 ## Specifications

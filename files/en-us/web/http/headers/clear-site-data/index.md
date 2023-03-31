@@ -1,12 +1,6 @@
 ---
 title: Clear-Site-Data
 slug: Web/HTTP/Headers/Clear-Site-Data
-tags:
-  - HTTP
-  - HTTP Header
-  - Reference
-  - Response Header
-  - header
 browser-compat: http.headers.Clear-Site-Data
 ---
 

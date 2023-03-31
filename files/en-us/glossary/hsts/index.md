@@ -1,9 +1,7 @@
 ---
 title: HSTS
 slug: Glossary/HSTS
-tags:
-  - HTTP
-  - Security
+page-type: glossary-definition
 ---
 
 **HTTP Strict Transport Security** lets a web site inform the browser that it should never load the site using HTTP and should automatically convert all attempts to access the site using HTTP to HTTPS requests instead. It consists in one HTTP header, {{HTTPHeader("Strict-Transport-Security")}}, sent by the server with the resource.

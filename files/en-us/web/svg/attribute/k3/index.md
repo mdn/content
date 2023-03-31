@@ -1,10 +1,7 @@
 ---
 title: k3
 slug: Web/SVG/Attribute/k3
-tags:
-  - Filters
-  - SVG
-  - SVG Attribute
+page-type: svg-attribute
 browser-compat: svg.elements.feComposite.k3
 ---
 

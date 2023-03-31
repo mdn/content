@@ -2,18 +2,8 @@
 title: PerformanceNavigation
 slug: Web/API/PerformanceNavigation
 page-type: web-api-interface
-tags:
-  - API
-  - Backwards compatibility
-  - Deprecated
-  - Interface
-  - Navigation Timing
-  - Navigation Timing API
-  - Performance
-  - PerformanceNavigation
-  - Reference
-  - Timing
-  - legacy
+status:
+  - deprecated
 browser-compat: api.PerformanceNavigation
 ---
 
@@ -50,8 +40,8 @@ _The `PerformanceNavigation` interface doesn't inherit any properties._
 
 _The `Performance` interface doesn't inherit any methods._
 
-- {{deprecated_inline}} {{domxref("PerformanceNavigation.toJSON()")}}
-  - : A jsonizer returning a JSON object representing the `PerformanceNavigation` object.
+- {{domxref("PerformanceNavigation.toJSON()")}} {{deprecated_inline}}
+  - : A {{Glossary("Serialization","serializer")}} returning a JSON object representing the `PerformanceNavigation` object.
 
 ## Specifications
 
@@ -65,4 +55,4 @@ Use the {{domxref("PerformanceNavigationTiming")}} interface instead.
 ## See also
 
 - The {{domxref("Performance")}} that allows access to an object of this type.
-- {{domxref("PerformanceNavigationTiming")}} (part of Navigation Timing Level 2) {{experimental_inline}}
+- {{domxref("PerformanceNavigationTiming")}} (part of Navigation Timing Level 2) that has superseded this API.

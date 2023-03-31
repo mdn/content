@@ -1,26 +1,6 @@
 ---
 title: Web video codec guide
 slug: Web/Media/Formats/Video_codecs
-tags:
-  - AV1
-  - Codecs
-  - Encoder
-  - Encoding
-  - Guide
-  - H.264
-  - MPEG
-  - Media
-  - Theora
-  - VP8
-  - VP9
-  - Video
-  - compression
-  - data
-  - decoding
-  - h.263
-  - h.265
-  - mp4
-  - streaming
 ---
 
 {{QuickLinksWithSubpages("/en-US/docs/Web/Media")}}
@@ -366,7 +346,7 @@ Aliasing is a general term for anything that upon being reconstructed from the e
       </td>
       <td>
         <a href="stroboscopic-effect.gif"
-          ><img alt="" src="stroboscopic-effect.gif"
+          ><img alt="Turning wheel due to aliasing causing a wagon wheel effect." src="stroboscopic-effect.gif"
         /></a>
       </td>
     </tr>
@@ -438,7 +418,7 @@ Compression of video generally works by comparing two frames and recording the d
   <tbody>
     <tr>
       <td><img alt="Original frame of video" src="motion-comp-orig.jpg" /></td>
-      <td><img alt="" src="motion-comp-diff.jpg" /></td>
+      <td><img alt="Differences between the first frame and the following frame." src="motion-comp-diff.jpg" /></td>
       <td>
         <img
           alt="Differences between the frames after shifting two pixels right"
@@ -1083,7 +1063,7 @@ HEVC is a proprietary format and is covered by a number of patents. Licensing is
             </tr>
             <tr>
               <th scope="row">HEVC / H.265 support</th>
-              <td>No</td>
+              <td>107</td>
               <td>18</td>
               <td>No</td>
               <td>11</td>
@@ -1093,7 +1073,7 @@ HEVC is a proprietary format and is covered by a number of patents. Licensing is
           </tbody>
         </table>
         <p>
-          Internet Explorer and Edge only supports HEVC on devices with a
+          Internet Explorer, Chrome, and Edge only supports HEVC on devices with a
           hardware codec.
         </p>
         <p>Mozilla will not support HEVC while it is encumbered by patents.</p>

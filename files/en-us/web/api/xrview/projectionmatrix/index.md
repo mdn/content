@@ -2,24 +2,8 @@
 title: XRView.projectionMatrix
 slug: Web/API/XRView/projectionMatrix
 page-type: web-api-instance-property
-tags:
-  - API
-  - AR
-  - Property
-  - Read-only
-  - Reality
-  - Reference
-  - VR
-  - Virtual
-  - WebXR
-  - WebXR API
-  - WebXR DeviceAPI
-  - XR
-  - XRView
-  - augmented
-  - perspective
-  - projectionMatrix
-  - Experimental
+status:
+  - experimental
 browser-compat: api.XRView.projectionMatrix
 ---
 

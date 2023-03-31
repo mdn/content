@@ -2,11 +2,6 @@
 title: HTMLAnchorElement
 slug: Web/API/HTMLAnchorElement
 page-type: web-api-interface
-tags:
-  - API
-  - HTML DOM
-  - Interface
-  - Reference
 browser-compat: api.HTMLAnchorElement
 ---
 
@@ -31,9 +26,9 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 - {{domxref("HTMLAnchorElement.hostname")}}
   - : A string representing the hostname in the referenced URL.
 - {{domxref("HTMLAnchorElement.href")}}
-  - : A string that is the result of parsing the {{htmlattrxref("href", "a")}} HTML attribute relative to the document, containing a valid URL of a linked resource.
+  - : A string that is the result of parsing the [`href`](/en-US/docs/Web/HTML/Element/a#href) HTML attribute relative to the document, containing a valid URL of a linked resource.
 - {{domxref("HTMLAnchorElement.hreflang")}}
-  - : A string that reflects the {{htmlattrxref("hreflang", "a")}} HTML attribute, indicating the language of the linked resource.
+  - : A string that reflects the [`hreflang`](/en-US/docs/Web/HTML/Element/a#hreflang) HTML attribute, indicating the language of the linked resource.
 - {{domxref("HTMLAnchorElement.origin")}} {{ReadOnlyInline}}
   - : Returns a string containing the origin of the URL, that is its scheme, its domain and its port.
 - {{domxref("HTMLAnchorElement.password")}}
@@ -45,21 +40,21 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 - {{domxref("HTMLAnchorElement.protocol")}}
   - : A string representing the protocol component, including trailing colon ('`:`'), of the referenced URL.
 - {{domxref("HTMLAnchorElement.referrerPolicy")}}
-  - : A string that reflects the {{htmlattrxref("referrerpolicy", "a")}} HTML attribute indicating which referrer to use.
+  - : A string that reflects the [`referrerpolicy`](/en-US/docs/Web/HTML/Element/a#referrerpolicy) HTML attribute indicating which referrer to use.
 - {{domxref("HTMLAnchorElement.rel")}}
-  - : A string that reflects the {{htmlattrxref("rel", "a")}} HTML attribute, specifying the relationship of the target object to the linked object.
+  - : A string that reflects the [`rel`](/en-US/docs/Web/HTML/Element/a#rel) HTML attribute, specifying the relationship of the target object to the linked object.
 - {{domxref("HTMLAnchorElement.relList")}} {{ReadOnlyInline}}
-  - : Returns a {{domxref("DOMTokenList")}} that reflects the {{htmlattrxref("rel", "a")}} HTML attribute, as a list of tokens.
+  - : Returns a {{domxref("DOMTokenList")}} that reflects the [`rel`](/en-US/docs/Web/HTML/Element/a#rel) HTML attribute, as a list of tokens.
 - {{domxref("HTMLAnchorElement.search")}}
   - : A string representing the search element, including leading question mark ('`?`'), if any, of the referenced URL.
 - {{domxref("HTMLElement.tabIndex")}}
   - : A `long` containing the position of the element in the tabbing navigation order for the current document.
 - {{domxref("HTMLAnchorElement.target")}}
-  - : A string that reflects the {{htmlattrxref("target", "a")}} HTML attribute, indicating where to display the linked resource.
+  - : A string that reflects the [`target`](/en-US/docs/Web/HTML/Element/a#target) HTML attribute, indicating where to display the linked resource.
 - {{domxref("HTMLAnchorElement.text")}}
   - : A string being a synonym for the {{domxref("Node.textContent")}} property.
 - {{domxref("HTMLAnchorElement.type")}}
-  - : A string that reflects the {{htmlattrxref("type", "a")}} HTML attribute, indicating the MIME type of the linked resource.
+  - : A string that reflects the [`type`](/en-US/docs/Web/HTML/Element/a#type) HTML attribute, indicating the MIME type of the linked resource.
 - {{domxref("HTMLAnchorElement.username")}}
   - : A string containing the username specified before the domain name.
 
@@ -73,7 +68,7 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}._
   - : A string representing the anchor name.
 - {{domxref("HTMLAnchorElement.rev")}} {{deprecated_inline}}
 
-  - : A string representing that the {{htmlattrxref("rev", "a")}} HTML attribute, specifying the relationship of the link object to the target object.
+  - : A string representing that the [`rev`](/en-US/docs/Web/HTML/Element/a#rev) HTML attribute, specifying the relationship of the link object to the target object.
 
     > **Note:** Currently the W3C HTML 5.2 spec states that `rev` is no longer obsolete, whereas the WHATWG living standard still has it labeled obsolete. Until this discrepancy is resolved, you should still assume it is obsolete.
 

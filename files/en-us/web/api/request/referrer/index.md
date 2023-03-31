@@ -2,13 +2,6 @@
 title: Request.referrer
 slug: Web/API/Request/referrer
 page-type: web-api-instance-property
-tags:
-  - API
-  - Fetch
-  - Property
-  - Reference
-  - referrer
-  - request
 browser-compat: api.Request.referrer
 ---
 
@@ -32,7 +25,7 @@ In the following snippet, we create a new request using the
 the script), then save the request referrer in a variable:
 
 ```js
-const myRequest = new Request('flowers.jpg');
+const myRequest = new Request("flowers.jpg");
 const myReferrer = myRequest.referrer; // returns "about:client" by default
 ```
 

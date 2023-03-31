@@ -1,14 +1,7 @@
 ---
 title: menus.overrideContext()
 slug: Mozilla/Add-ons/WebExtensions/API/menus/overrideContext
-tags:
-  - API
-  - Add-ons
-  - Create
-  - Extensions
-  - Method
-  - WebExtensions
-  - contextMenus
+page-type: webextension-api-function
 browser-compat: webextensions.api.menus.overrideContext
 ---
 
@@ -45,7 +38,7 @@ browser.menus.overrideContext(
 
 ## Examples
 
-Open the tab context menu on your custom UI, in this case :
+Open the tab context menu on your custom UI, in this case:
 
 ```js
 document.addEventListener(

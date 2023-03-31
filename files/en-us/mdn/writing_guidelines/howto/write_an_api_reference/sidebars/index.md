@@ -1,9 +1,6 @@
 ---
 title: API reference sidebars
 slug: MDN/Writing_guidelines/Howto/Write_an_API_reference/Sidebars
-tags:
-  - meta
-  - writing-guide
 ---
 
 {{MDNSidebar}}
@@ -97,8 +94,10 @@ These are all technically optional, but it is strongly encouraged that instead o
    As an example, the following object:
 
    ```json
-   { "url":   "/docs/Web/API/Detecting_device_orientation",
-   "title": "Detecting device orientation" }
+   {
+     "url": "/docs/Web/API/Detecting_device_orientation",
+     "title": "Detecting device orientation"
+   }
    ```
 
    Creates a link with the title "Detecting device orientation", which points to [https://developer.mozilla.org/en-US/docs/Web/API/Device_orientation_events/Detecting_device_orientation](/en-US/docs/Web/API/Device_orientation_events/Detecting_device_orientation).

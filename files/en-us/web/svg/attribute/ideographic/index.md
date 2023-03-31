@@ -1,10 +1,9 @@
 ---
 title: ideographic
 slug: Web/SVG/Attribute/ideographic
-tags:
-  - Deprecated
-  - SVG
-  - SVG Attribute
+page-type: svg-attribute
+status:
+  - deprecated
 browser-compat: svg.elements.font-face.ideographic
 ---
 

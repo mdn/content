@@ -1,11 +1,9 @@
 ---
 title: ascent
 slug: Web/SVG/Attribute/ascent
-tags:
-  - Deprecated
-  - NeedsExample
-  - SVG
-  - SVG Attribute
+page-type: svg-attribute
+status:
+  - deprecated
 browser-compat: svg.elements.font-face.ascent
 ---
 

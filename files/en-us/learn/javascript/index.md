@@ -1,20 +1,11 @@
 ---
 title: JavaScript — Dynamic client-side scripting
 slug: Learn/JavaScript
-tags:
-  - Beginner
-  - CodingScripting
-  - JavaScript
-  - JavaScripting beginner
-  - Landing
-  - Module
-  - Topic
-  - "l10n:priority"
 ---
 
 {{LearnSidebar}}
 
-{{Glossary("JavaScript")}} is a programming language that allows you to implement complex things on web pages. Every time a web page does more than just sit there and display static information for you to look at—displaying timely content updates, interactive maps, animated 2D/3D graphics, scrolling video jukeboxes, or more—you can bet that JavaScript is probably involved.
+{{Glossary("JavaScript")}} is a programming language that allows you to implement complex functionalities on web pages. Every time a web page does more than just sit there and display static information for you to look at—displaying timely content updates, interactive maps, animated 2D/3D graphics, scrolling video jukeboxes, or more—you can bet that JavaScript is probably involved.
 
 > **Callout:**
 >
@@ -67,7 +58,7 @@ This topic contains the following modules, in a suggested order for working thro
 
 ## Solving common JavaScript problems
 
-[Use JavaScript to solve common problems](/en-US/docs/Learn/JavaScript/Howto) provides links to sections of content explaining how to use JavaScript to solve very common problems when creating a webpage.
+[Solve common problems in your JavaScript code](/en-US/docs/Learn/JavaScript/Howto) provides a little advice on how to avoid common beginner JavaScript programming mistakes, along with many helpful links to topics that show how to solve common JavaScript programming problems.
 
 ## See also
 

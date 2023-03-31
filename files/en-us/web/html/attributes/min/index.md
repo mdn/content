@@ -1,13 +1,7 @@
 ---
-title: 'HTML attribute: min'
+title: "HTML attribute: min"
 slug: Web/HTML/Attributes/min
-tags:
-  - Attribute
-  - Attributes
-  - Constraint validation
-  - HTML
-  - min
-  - Reference
+page-type: html-attribute
 browser-compat:
   - html.elements.input.min
   - html.elements.meter.min
@@ -15,7 +9,7 @@ browser-compat:
 
 {{HTMLSidebar}}
 
-The **`min`** attribute defines the minimum value that is acceptable and valid for the input containing the attribute. If the [`value`](/en-US/docs/Web/HTML/Element/input#value) of the element is less than this, the element fails [constraint validation](/en-US/docs/Web/Guide/HTML/Constraint_validation). This value must be less than or equal to the value of the `max` attribute.
+The **`min`** attribute defines the minimum value that is acceptable and valid for the input containing the attribute. If the [`value`](/en-US/docs/Web/HTML/Element/input#value) of the element is less than this, the element fails [validation](/en-US/docs/Learn/Forms/Form_validation). This value must be less than or equal to the value of the `max` attribute.
 
 Some input types have a default minimum. If the input has no default minimum and a value is specified for `min` that can't be converted to a valid number (or no minimum value is set), the input has no minimum value.
 
@@ -33,7 +27,7 @@ It is valid for the input types including: {{HTMLElement("input/date", "date")}}
   <thead>
     <tr>
       <th>Input type</th>
-      <th>Example</th>
+      <th>Syntax</th>
       <th>Example</th>
     </tr>
   </thead>
@@ -86,7 +80,7 @@ It is valid for the input types including: {{HTMLElement("input/date", "date")}}
 
 > **Note:** When the data entered by the user doesn't adhere to the min value set, the value is considered invalid in constraint validation and will match the {{cssxref(':invalid')}} and {{cssxref(':out-of-range')}} pseudo-classes.
 
-See [Client-side validation](/en-US/docs/Web/Guide/HTML/Constraint_validation) and {{domxref("ValidityState.rangeUnderflow", "rangeUnderflow")}} for more information.
+See [Client-side validation](/en-US/docs/Web/HTML/Constraint_validation) and {{domxref("ValidityState.rangeUnderflow", "rangeUnderflow")}} for more information.
 
 For the {{htmlelement('meter')}} element, the `min` attribute defines the lower numeric bound of the measured range. This must be less than the minimum value ([`max`](/en-US/docs/Web/HTML/Attributes/max) attribute), if specified. In both cases, if omitted, the value defaults to 1.
 
@@ -158,8 +152,8 @@ Provide instructions to help users understand how to complete the form and use i
 - [`step`](/en-US/docs/Web/HTML/Attributes/step)
 - [`max`](/en-US/docs/Web/HTML/Attributes/max)
 - other meter attributes: [`low`](/en-US/docs/Web/HTML/Attributes/low), [`high`](/en-US/docs/Web/HTML/Attributes/high), [`optimum`](/en-US/docs/Web/HTML/Attributes/optimum)
-- [Constraint validation](/en-US/docs/Web/Guide/HTML/Constraint_validation)
-- [Constraint validation API](/en-US/docs/Web/API/Constraint_validation)
+- [Constraint validation](/en-US/docs/Web/HTML/Constraint_validation)
+- [Form validation](/en-US/docs/Learn/Forms/Form_validation)
 - {{domxref('validityState.rangeUnderflow')}}
 - {{cssxref(':out-of-range')}}
 - {{htmlelement('input')}}

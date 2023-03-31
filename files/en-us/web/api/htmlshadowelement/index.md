@@ -2,13 +2,9 @@
 title: HTMLShadowElement
 slug: Web/API/HTMLShadowElement
 page-type: web-api-interface
-tags:
-  - API
-  - HTML DOM
-  - Interface
-  - Reference
-  - Deprecated
-  - Non-standard
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.HTMLShadowElement
 ---
 

@@ -1,15 +1,7 @@
 ---
 title: devtools.panels.onThemeChanged
 slug: Mozilla/Add-ons/WebExtensions/API/devtools/panels/onThemeChanged
-tags:
-  - API
-  - Add-ons
-  - DevTools
-  - Reference
-  - Event
-  - WebExtensions
-  - devtools.panels
-  - onThemeChanged
+page-type: webextension-api-event
 browser-compat: webextensions.api.devtools.panels.onThemeChanged
 ---
 
@@ -60,5 +52,3 @@ browser.devtools.panels.onThemeChanged.addListener((newThemeName) => {
 {{WebExtExamples}}
 
 > **Note:** This API is based on Chromium's [`chrome.devtools.panels`](https://developer.chrome.com/docs/extensions/reference/devtools_panels/) API.
->
-> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.

@@ -2,15 +2,8 @@
 title: XRFrame.trackedAnchors
 slug: Web/API/XRFrame/trackedAnchors
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - AR
-  - VR
-  - XR
-  - WebXR
-  - Experimental
+status:
+  - experimental
 browser-compat: api.XRFrame.trackedAnchors
 ---
 

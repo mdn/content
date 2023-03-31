@@ -2,13 +2,8 @@
 title: BackgroundFetchRegistration.match()
 slug: Web/API/BackgroundFetchRegistration/match
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - match
-  - BackgroundFetchRegistration
-  - Experimental
+status:
+  - experimental
 browser-compat: api.BackgroundFetchRegistration.match
 ---
 

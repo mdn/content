@@ -1,13 +1,7 @@
 ---
 title: Set.prototype.entries()
 slug: Web/JavaScript/Reference/Global_Objects/Set/entries
-tags:
-  - ECMAScript 2015
-  - Iterator
-  - JavaScript
-  - Method
-  - Prototype
-  - set
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.Set.entries
 ---
 

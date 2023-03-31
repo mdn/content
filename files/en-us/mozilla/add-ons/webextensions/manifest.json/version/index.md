@@ -1,10 +1,7 @@
 ---
 title: version
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/version
-tags:
-  - Add-ons
-  - Extensions
-  - WebExtensions
+page-type: webextension-manifest-key
 browser-compat: webextensions.manifest.version
 ---
 

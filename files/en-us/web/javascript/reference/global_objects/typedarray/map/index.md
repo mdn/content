@@ -1,14 +1,7 @@
 ---
 title: TypedArray.prototype.map()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/map
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Prototype
-  - TypedArray
-  - TypedArrays
-  - Polyfill
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.TypedArray.map
 ---
 
@@ -25,39 +18,22 @@ _TypedArray_ is one of the
 ## Syntax
 
 ```js-nolint
-// Arrow function
-map((currentValue) => { /* ... */ } )
-map((currentValue, index) => { /* ... */ } )
-map((currentValue, index, array) => { /* ... */ } )
-
-// Callback function
 map(callbackFn)
 map(callbackFn, thisArg)
-
-// Inline callback function
-map(function(currentValue) { /* ... */ })
-map(function(currentValue, index) { /* ... */ })
-map(function(currentValue, index, array){ /* ... */ })
-map(function(currentValue, index, array) { /* ... */ }, thisArg)
 ```
 
 ### Parameters
 
 - `callbackFn`
-
-  - : A callback function that produces an element of the new typed array.
-
-    The function is called with the following arguments:
-
-    - `currentValue`
+  - : A function to execute for each element in the typed array. Its return value is added as a single element in the new typed array. The function is called with the following arguments:
+    - `element`
       - : The current element being processed in the typed array.
     - `index`
       - : The index of the current element being processed in the typed array.
     - `array`
       - : The typed array `map()` was called upon.
-
 - `thisArg` {{optional_inline}}
-  - : Value to use as `this` when executing `callbackFn`.
+  - : A value to use as `this` when executing `callbackFn`. See [iterative methods](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#iterative_methods).
 
 ### Return value
 

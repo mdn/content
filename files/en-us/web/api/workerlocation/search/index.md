@@ -2,12 +2,6 @@
 title: WorkerLocation.search
 slug: Web/API/WorkerLocation/search
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Read-only
-  - Reference
-  - WorkerLocation
 browser-compat: api.WorkerLocation.search
 ---
 

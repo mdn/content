@@ -1,12 +1,7 @@
 ---
-title: Symbol.prototype[@@toPrimitive]
+title: Symbol.prototype[@@toPrimitive]()
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/@@toPrimitive
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Prototype
-  - Symbol
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.Symbol.@@toPrimitive
 ---
 

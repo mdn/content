@@ -1,11 +1,8 @@
 ---
 title: screenshots
 slug: Web/Manifest/screenshots
-tags:
-  - Manifest
-  - Screenshots
-  - Web
-  - Experimental
+status:
+  - experimental
 browser-compat: html.manifest.screenshots
 ---
 
@@ -16,10 +13,6 @@ browser-compat: html.manifest.screenshots
     <tr>
       <th scope="row">Type</th>
       <td><code>Object</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Mandatory</th>
-      <td>No</td>
     </tr>
   </tbody>
 </table>
@@ -52,7 +45,7 @@ The `label` member is a string that serves as an accessible name for the screens
 The `platform` member is also a string that can define the distribution platform for which the specific screenshots should apply to. If not
 defined, user agents can use the screenshot's aspect ratio for displaying.
 
-The `platform` member can be set to one of the following _general purpose_ values :
+The `platform` member can be set to one of the following _general purpose_ values:
 
 - `wide` : for screenshots applicable to wide screens only (e.g., status boards).
 - `narrow` : for narrow screenshots (e.g., mobile devices, wearables).

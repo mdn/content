@@ -2,16 +2,6 @@
 title: SourceBuffer.mode
 slug: Web/API/SourceBuffer/mode
 page-type: web-api-instance-property
-tags:
-  - API
-  - Audio
-  - MSE
-  - Media Source Extensions
-  - Property
-  - Reference
-  - SourceBuffer
-  - Video
-  - mode
 browser-compat: api.SourceBuffer.mode
 ---
 
@@ -72,8 +62,8 @@ in which media segments are appended.
 
 ```js
 const curMode = sourceBuffer.mode;
-if (curMode === 'segments') {
-  sourceBuffer.mode = 'sequence';
+if (curMode === "segments") {
+  sourceBuffer.mode = "sequence";
 }
 ```
 

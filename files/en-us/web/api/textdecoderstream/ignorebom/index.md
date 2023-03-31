@@ -2,13 +2,6 @@
 title: TextDecoderStream.ignoreBOM
 slug: Web/API/TextDecoderStream/ignoreBOM
 page-type: web-api-instance-property
-tags:
-  - API
-  - Encoding API
-  - Property
-  - Reference
-  - ignoreBOM
-  - TextDecoderStream
 browser-compat: api.TextDecoderStream.ignoreBOM
 ---
 

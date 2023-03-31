@@ -1,19 +1,15 @@
 ---
 title: Int8Array
 slug: Web/JavaScript/Reference/Global_Objects/Int8Array
-tags:
-  - Class
-  - Int8Array
-  - JavaScript
-  - TypedArray
-  - TypedArrays
-  - Polyfill
+page-type: javascript-class
 browser-compat: javascript.builtins.Int8Array
 ---
 
 {{JSRef}}
 
 The **`Int8Array`** typed array represents an array of twos-complement 8-bit signed integers. The contents are initialized to `0`. Once established, you can reference elements in the array using the object's methods, or using standard array index syntax (that is, using bracket notation).
+
+`Int8Array` is a subclass of the hidden {{jsxref("TypedArray")}} class.
 
 ## Constructor
 
@@ -37,8 +33,12 @@ _Inherits static methods from its parent {{jsxref("TypedArray")}}_.
 
 _Also inherits instance properties from its parent {{jsxref("TypedArray")}}_.
 
+These properties are defined on `Int8Array.prototype` and shared by all `Int8Array` instances.
+
 - {{jsxref("TypedArray.BYTES_PER_ELEMENT", "Int8Array.prototype.BYTES_PER_ELEMENT")}}
   - : Returns a number value of the element size. `1` in the case of a `Int8Array`.
+- {{jsxref("Object/constructor", "Int8Array.prototype.constructor")}}
+  - : The constructor function that created the instance object. For `Int8Array` instances, the initial value is the {{jsxref("Int8Array/Int8Array", "Int8Array")}} constructor.
 
 ## Instance methods
 

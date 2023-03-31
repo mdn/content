@@ -2,16 +2,8 @@
 title: 'XRCubeLayer: redraw event'
 slug: Web/API/XRCubeLayer/redraw_event
 page-type: web-api-event
-tags:
-  - API
-  - Event
-  - Reference
-  - VR
-  - WebXR
-  - WebXR API
-  - WebXR Device API
-  - XR
-  - Experimental
+status:
+  - experimental
 browser-compat: api.XRCubeLayer.redraw_event
 ---
 

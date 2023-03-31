@@ -1,11 +1,7 @@
 ---
 title: Object.prototype.propertyIsEnumerable()
 slug: Web/JavaScript/Reference/Global_Objects/Object/propertyIsEnumerable
-tags:
-  - JavaScript
-  - Method
-  - Object
-  - Prototype
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.Object.propertyIsEnumerable
 ---
 

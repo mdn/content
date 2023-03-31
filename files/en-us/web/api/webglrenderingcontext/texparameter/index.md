@@ -2,13 +2,6 @@
 title: WebGLRenderingContext.texParameter[fi]()
 slug: Web/API/WebGLRenderingContext/texParameter
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - Textures
-  - WebGL
-  - WebGLRenderingContext
 browser-compat:
   - api.WebGLRenderingContext.texParameterf
   - api.WebGLRenderingContext.texParameteri

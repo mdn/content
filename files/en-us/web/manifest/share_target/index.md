@@ -1,11 +1,8 @@
 ---
 title: share_target
 slug: Web/Manifest/share_target
-tags:
-  - Manifest
-  - Web
-  - share_target
-  - Experimental
+status:
+  - experimental
 browser-compat: html.manifest.share_target
 ---
 
@@ -17,16 +14,12 @@ browser-compat: html.manifest.share_target
       <th scope="row">Type</th>
       <td><code>Object</code></td>
     </tr>
-    <tr>
-      <th scope="row">Mandatory</th>
-      <td>No</td>
-    </tr>
   </tbody>
 </table>
 
 The `share_target` manifest member allows installed {{Glossary("Progressive Web Apps")}} (PWAs) to be registered as a share target in the system's share dialog.
 
-Once registered and installed, a PWA that uses the Web Share Target API acts as a content sharing target, along with typical system share targets like e-mail, messengers, and other native apps that can receive shared content.
+Once registered and installed, a PWA that uses the Web Share Target API acts as a content sharing target, along with typical system share targets like email, messengers, and other native apps that can receive shared content.
 
 > **Note:** If you want to share data using the Web Share API, see [Web Share API](/en-US/docs/Web/API/Web_Share_API) and [`navigator.share()`](/en-US/docs/Web/API/Navigator/share).
 

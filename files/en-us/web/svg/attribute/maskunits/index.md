@@ -1,9 +1,7 @@
 ---
 title: maskUnits
 slug: Web/SVG/Attribute/maskUnits
-tags:
-  - SVG
-  - SVG Attribute
+page-type: svg-attribute
 browser-compat: svg.elements.mask.maskUnits
 ---
 

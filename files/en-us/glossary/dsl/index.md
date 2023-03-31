@@ -1,8 +1,7 @@
 ---
 title: DSL
 slug: Glossary/DSL
-tags:
-  - Disambiguation
+page-type: glossary-disambiguation
 ---
 
 The term **DSL** can have several meanings depending on the context. It may refer to:

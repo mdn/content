@@ -1,9 +1,7 @@
 ---
 title: Regular expression
 slug: Glossary/Regular_expression
-tags:
-  - CodingScripting
-  - Regular Expression
+page-type: glossary-definition
 ---
 
 **Regular expressions** (or _regex_) are rules that govern which sequences of characters come up in a search.

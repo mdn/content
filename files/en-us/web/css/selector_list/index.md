@@ -2,11 +2,6 @@
 title: Selector list
 slug: Web/CSS/Selector_list
 page-type: css-combinator
-tags:
-  - CSS
-  - Selector
-  - Selector Lists
-  - Selectors
 browser-compat: css.selectors.list
 ---
 
@@ -50,7 +45,7 @@ When applying the same styles to elements matching different criteria, grouping 
 
 This example shows grouping selectors in a single line using a comma-separated list.
 
-```css
+```css-nolint
 h1, h2, h3, h4, h5, h6 {
   font-family: helvetica;
 }
@@ -71,7 +66,7 @@ h1 + p {
 
 ## Valid and invalid selector lists
 
-An invalid selector represents, and therefore matches, nothing. When a selector list contains an invalid selector, the entire style block is ignored, except for functional pseudo-classes that accept forgiving selector lists.
+An invalid selector represents, and therefore matches, nothing. When a selector list contains an invalid selector, the entire style block is ignored, except for the {{CSSxRef(":is", ":is()")}} and {{CSSxRef(":where", ":where()")}} pseudo-classes that accept [forgiving selector lists](#forgiving-selector-list).
 
 ### Invalid selector list
 
@@ -92,7 +87,9 @@ h3 {
 ```
 
 ```css
-h1, h2:invalid-pseudo, h3 {
+h1,
+h2:invalid-pseudo,
+h3 {
   font-family: sans-serif;
 }
 ```
@@ -101,7 +98,7 @@ They are not equivalent. In the first rule set, styles will be applied on the `h
 
 ### Forgiving selector list
 
-A way to remedy the [invalid selector list](#invalid_selector_list) problem is to use the {{CSSxRef(":is", ":is()")}} or the {{CSSxRef(":where", ":where()")}} pseudo-class, which accept a forgiving selector list. Each selector in a forgiving selector list is parsed individually. So any invalid selectors in the list are ignored and the valid ones that are valid are used.
+A way to remedy the [invalid selector list](#invalid_selector_list) problem is to use the {{CSSxRef(":is", ":is()")}} or the {{CSSxRef(":where", ":where()")}} pseudo-class, which accept a forgiving selector list. Each selector in a forgiving selector list is parsed individually. So any invalid selectors in the list are ignored and the valid ones are used.
 
 Carrying on from the previous example, the following two CSS rule sets are now equivalent:
 
@@ -125,17 +122,17 @@ h3 {
 
 The difference between the two is that the specificity of `:is()` is its most specific argument, whereas the `:where()` selector and the forgiving selector list parameter do not add any specificity weight.
 
-### Forgiving relative selector list
+### Relative selector list
 
-A forgiving relative selector list is similar to the [forgiving selector list](#forgiving_selector_list); it just parses the list components as [relative selectors](/en-US/docs/Web/CSS/CSS_Selectors#relative_selector), which begin with an explicit or implied combinator.
+A relative selector list is a comma-separated selector list parsed as [relative selectors](/en-US/docs/Web/CSS/CSS_Selectors#relative_selector), which begin with an explicit or implied combinator.
 
 ```css
-h2:has(+ p, > ul::after, + ul.red) {
+h2:has(+ p, + ul.red) {
   font-style: italic;
 }
 ```
 
-In the above, an `h2` that is immediately followed by a `<p>` or a `<ul class="red">`, will be italic. While pseudo-elements are not valid in the [`:has()`](/en-US/docs/Web/CSS/:has) forgiving relative selector list parameter, because the list is forgiving, it doesn't "break" the selector.
+In the above example, the italic style will be applied to any `h2` heading that is immediately followed by `<p>` or `<ul class="red">`. Note that pseudo-elements and the `:has()` selector are not valid within the [`:has()`](/en-US/docs/Web/CSS/:has) relative selector list.
 
 ## Specifications
 
@@ -147,5 +144,7 @@ In the above, an `h2` that is immediately followed by a `<p>` or a `<ul class="r
 
 ## See also
 
-- The [`:is()`](/en-US/docs/Web/CSS/:is), [`:where()`](/en-US/docs/Web/CSS/:where), [`:not()`](/en-US/docs/Web/CSS/:not), and [`:has()`](/en-US/docs/Web/CSS/:has) pseudo-classes accept forgiving selector lists.
+- The [`:is()`](/en-US/docs/Web/CSS/:is) and [`:where()`](/en-US/docs/Web/CSS/:where) pseudo-classes accept forgiving selector lists.
+- The [`:not()`](/en-US/docs/Web/CSS/:not) pseudo-class accepts a regular selector list
+- The [`:has()`](/en-US/docs/Web/CSS/:has) pseudo-class accepts a relative selector list.
 - [CSS selectors](/en-US/docs/Web/CSS/CSS_Selectors)

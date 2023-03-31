@@ -1,18 +1,13 @@
 ---
 title: Standard metadata names
 slug: Web/HTML/Element/meta/name
-tags:
-  - Attribute
-  - HTML
-  - HTML document metadata
-  - Reference
-  - metadata
+page-type: html-attribute
 browser-compat: html.elements.meta.name
 ---
 
 {{HTMLSidebar}}
 
-The {{htmlelement("meta")}} element can be used to provide document metadata in terms of name-value pairs, with the {{htmlattrxref("name", "meta")}} attribute giving the metadata name, and the {{htmlattrxref("content", "meta")}} attribute giving the value.
+The {{htmlelement("meta")}} element can be used to provide document metadata in terms of name-value pairs, with the [`name`](/en-US/docs/Web/HTML/Element/meta#name) attribute giving the metadata name, and the [`content`](/en-US/docs/Web/HTML/Element/meta#content) attribute giving the value.
 
 ### Standard metadata names defined in the HTML specification
 
@@ -105,7 +100,7 @@ The HTML specification defines the following set of standard metadata names:
 
   The browser will use this information in tandem with the user's browser or device settings to determine what colors to use for everything from background and foregrounds to form controls and scrollbars. The primary use for `<meta name="color-scheme">` is to indicate compatibility with—and order of preference for—light and dark color modes.
 
-  The value of the {{htmlattrxref("content", "meta")}} property for `color-scheme` may be one of the following:
+  The value of the [`content`](/en-US/docs/Web/HTML/Element/meta#content) property for `color-scheme` may be one of the following:
 
   - `normal`
     - : The document is unaware of color schemes and should be rendered using the default color palette.
@@ -244,11 +239,13 @@ The [WHATWG Wiki MetaExtensions page](https://wiki.whatwg.org/wiki/MetaExtension
 
   > **Note:**
   >
-  > - Only cooperative robots follow these rules. Do not expect to prevent e-mail harvesters with them.
+  > - Only cooperative robots follow these rules. Do not expect to prevent email harvesters with them.
   > - The robot still needs to access the page in order to read these rules. To prevent bandwidth consumption, use a _{{Glossary("robots.txt")}}_ file.
   > - If you want to remove a page, `noindex` will work, but only after the robot visits the page again. Ensure that the `robots.txt` file is not preventing revisits.
   > - Some values are mutually exclusive, like `index` and `noindex`, or `follow` and `nofollow`. In these cases the robot's behavior is undefined and may vary between them.
   > - Some crawler robots, like Google, Yahoo and Bing, support the same values for the HTTP header `X-Robots-Tag`; this allows non-HTML documents like images to use these rules.
+
+<!-- ## Technical summary -->
 
 ## Specifications
 

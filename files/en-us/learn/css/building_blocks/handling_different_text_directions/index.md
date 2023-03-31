@@ -1,12 +1,6 @@
 ---
 title: Handling different text directions
 slug: Learn/CSS/Building_blocks/Handling_different_text_directions
-tags:
-  - Beginner
-  - CSS
-  - Learn
-  - logical properties
-  - writing modes
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Backgrounds_and_borders", "Learn/CSS/Building_blocks/Overflowing_content", "Learn/CSS/Building_blocks")}}
@@ -110,7 +104,7 @@ You can see a comparison between physical and logical properties below.
 
 **If you change the writing mode of the boxes by switching the `writing-mode` property on `.box` to `vertical-rl`, you will see how the physical properties stay tied to their physical direction, whereas the logical properties switch with the writing mode.**
 
-**You can also see that the {{htmlelement("h2")}} has a black `border-bottom`. Can you work out how to make that bottom border always go below the text in both writing modes?**
+**You can also see that the {{htmlelement("Heading_Elements", "h2")}} has a black `border-bottom`. Can you work out how to make that bottom border always go below the text in both writing modes?**
 
 {{EmbedGHLiveSample("css-examples/learn/writing-modes/logical-mbp.html", '100%', 1300)}}
 
@@ -132,7 +126,7 @@ Here we are also using logical margin values to ensure the margin is in the corr
 
 ### Should you use physical or logical properties?
 
-The logical properties and values are newer than their physical equivalents, and therefore have only recently been implemented in browsers. You can check any property page on MDN to see how far back the browser support goes. If you are not using multiple writing modes then for now you might prefer to use the physical versions. However, ultimately we expect that people will transition to the logical versions for most things, as they make a lot of sense once you start also dealing with layout methods such as flexbox and grid.
+The logical properties and values are newer than their physical equivalents, and therefore have only recently been implemented in browsers. You can check any property page on MDN to see how far back the browser support goes. If you are not using multiple writing modes, then for now you might prefer to use the physical versions. However, ultimately we expect that people will transition to the logical versions for most things, as they make a lot of sense once you also start dealing with layout methods such as flexbox and grid.
 
 ## Test your skills!
 
@@ -145,27 +139,3 @@ The concepts explained in this lesson are becoming increasingly important in CSS
 In the next article, we'll take a good look at [overflow](/en-US/docs/Learn/CSS/Building_blocks/Overflowing_content) in CSS.
 
 {{PreviousMenuNext("Learn/CSS/Building_blocks/Backgrounds_and_borders", "Learn/CSS/Building_blocks/Overflowing_content", "Learn/CSS/Building_blocks")}}
-
-## In this module
-
-- [Cascade and inheritance](/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
-- [CSS selectors](/en-US/docs/Learn/CSS/Building_blocks/Selectors)
-
-  - [Type, class, and ID selectors](/en-US/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors)
-  - [Attribute selectors](/en-US/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors)
-  - [Pseudo-classes and pseudo-elements](/en-US/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements)
-  - [Combinators](/en-US/docs/Learn/CSS/Building_blocks/Selectors/Combinators)
-
-- [The box model](/en-US/docs/Learn/CSS/Building_blocks/The_box_model)
-- [Backgrounds and borders](/en-US/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)
-- [Handling different text directions](/en-US/docs/Learn/CSS/Building_blocks/Handling_different_text_directions)
-- [Overflowing content](/en-US/docs/Learn/CSS/Building_blocks/Overflowing_content)
-- [Values and units](/en-US/docs/Learn/CSS/Building_blocks/Values_and_units)
-- [Sizing items in CSS](/en-US/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS)
-- [Images, media, and form elements](/en-US/docs/Learn/CSS/Building_blocks/Images_media_form_elements)
-- [Styling tables](/en-US/docs/Learn/CSS/Building_blocks/Styling_tables)
-- [Debugging CSS](/en-US/docs/Learn/CSS/Building_blocks/Debugging_CSS)
-- [Organizing your CSS](/en-US/docs/Learn/CSS/Building_blocks/Organizing)
-- [Fundamental CSS comprehension](/en-US/docs/Learn/CSS/Building_blocks/Fundamental_CSS_comprehension)
-- [Creating fancy letterheaded paper](/en-US/docs/Learn/CSS/Building_blocks/Creating_fancy_letterheaded_paper)
-- [A cool-looking box](/en-US/docs/Learn/CSS/Building_blocks/A_cool_looking_box)

@@ -1,9 +1,7 @@
 ---
 title: fr
 slug: Web/SVG/Attribute/fr
-tags:
-  - SVG
-  - SVG Attribute
+page-type: svg-attribute
 browser-compat: svg.elements.radialGradient.fr
 ---
 

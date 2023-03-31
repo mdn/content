@@ -2,17 +2,8 @@
 title: XRProjectionLayer.textureArrayLength
 slug: Web/API/XRProjectionLayer/textureArrayLength
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - VR
-  - WebXR
-  - WebXR API
-  - WebXR Device API
-  - XR
-  - NeedsExample
-  - Experimental
+status:
+  - experimental
 browser-compat: api.XRProjectionLayer.textureArrayLength
 ---
 

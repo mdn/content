@@ -1,13 +1,9 @@
 ---
 title: Web Audio playbackRate explained
 slug: Web/Guide/Audio_and_video_delivery/WebAudio_playbackRate_explained
-tags:
-  - Apps
-  - Audio
-  - Media
-  - Video
-  - playbackRate
 ---
+
+{{QuickLinksWithSubPages("/en-US/docs/Web/Guide/Audio_and_video_delivery")}}
 
 The `playbackRate` property of the {{ htmlelement("audio") }} and {{ htmlelement("video") }} elements allows us to change the speed, or rate, at which a piece of web audio or video is playing. This article explains `playbackRate` in detail.
 
@@ -16,8 +12,8 @@ The `playbackRate` property of the {{ htmlelement("audio") }} and {{ htmlelement
 Let's starting by looking at a brief example of `playbackRate` usage:
 
 ```js
-const audio = document.createElement('audio');
-audio.setAttribute('src','audiofile.mp3');
+const audio = document.createElement("audio");
+audio.setAttribute("src", "audiofile.mp3");
 audio.playbackRate = 0.5;
 ```
 
@@ -51,11 +47,14 @@ window.onload = () => {
   const p = document.getElementById("pbr");
   const c = document.getElementById("currentPbr");
 
-  p.addEventListener('input', () => {
-    c.innerHTML = p.value;
-    v.playbackRate = p.value;
-  }, false);
-
+  p.addEventListener(
+    "input",
+    () => {
+      c.innerHTML = p.value;
+      v.playbackRate = p.value;
+    },
+    false
+  );
 };
 ```
 

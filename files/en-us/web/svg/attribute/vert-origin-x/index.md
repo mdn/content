@@ -1,10 +1,9 @@
 ---
 title: vert-origin-x
 slug: Web/SVG/Attribute/vert-origin-x
-tags:
-  - Deprecated
-  - SVG
-  - SVG Attribute
+page-type: svg-attribute
+status:
+  - deprecated
 browser-compat: svg.elements.font.vert-origin-x
 ---
 

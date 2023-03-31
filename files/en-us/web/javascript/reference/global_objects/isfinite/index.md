@@ -1,12 +1,7 @@
 ---
 title: isFinite()
 slug: Web/JavaScript/Reference/Global_Objects/isFinite
-tags:
-  - Functions
-  - JavaScript
-  - Method
-  - Reference
-  - inFinite
+page-type: javascript-function
 browser-compat: javascript.builtins.isFinite
 ---
 

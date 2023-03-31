@@ -1,9 +1,7 @@
 ---
 title: spreadMethod
 slug: Web/SVG/Attribute/spreadMethod
-tags:
-  - SVG
-  - SVG Attribute
+page-type: svg-attribute
 browser-compat: svg.elements.linearGradient.spreadMethod
 ---
 

@@ -1,17 +1,13 @@
 ---
 title: Strict equality (===)
 slug: Web/JavaScript/Reference/Operators/Strict_equality
-tags:
-  - JavaScript
-  - Language feature
-  - Operator
-  - Reference
+page-type: javascript-operator
 browser-compat: javascript.operators.strict_equality
 ---
 
 {{jsSidebar("Operators")}}
 
-The strict equality operator (`===`) checks whether its two operands are
+The **strict equality (`===`)** operator checks whether its two operands are
 equal, returning a Boolean result. Unlike the [equality](/en-US/docs/Web/JavaScript/Reference/Operators/Equality) operator,
 the strict equality operator always considers operands of different types to be
 different.
@@ -68,6 +64,7 @@ null === null; // true
 "3" === 3; // false
 true === 1; // false
 null === undefined; // false
+3 === new Number(3); // false
 ```
 
 ### Comparing objects

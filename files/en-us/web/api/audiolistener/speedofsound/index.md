@@ -2,14 +2,8 @@
 title: AudioListener.speedOfSound
 slug: Web/API/AudioListener/speedOfSound
 page-type: web-api-instance-property
-tags:
-  - API
-  - AudioListener
-  - Deprecated
-  - Property
-  - Reference
-  - Web Audio API
-  - speedOfSound
+status:
+  - deprecated
 browser-compat: api.AudioListener.speedOfSound
 ---
 

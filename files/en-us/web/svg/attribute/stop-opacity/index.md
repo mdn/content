@@ -1,10 +1,7 @@
 ---
 title: stop-opacity
 slug: Web/SVG/Attribute/stop-opacity
-tags:
-  - NeedsExample
-  - SVG
-  - SVG Attribute
+page-type: svg-attribute
 browser-compat: svg.elements.stop.stop-opacity
 ---
 

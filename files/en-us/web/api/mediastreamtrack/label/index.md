@@ -2,14 +2,6 @@
 title: MediaStreamTrack.label
 slug: Web/API/MediaStreamTrack/label
 page-type: web-api-instance-property
-tags:
-  - Media Capture and Streams
-  - MediaStreamTrack
-  - NeedsExample
-  - Property
-  - Read-only
-  - Reference
-  - WebRTC
 browser-compat: api.MediaStreamTrack.label
 ---
 

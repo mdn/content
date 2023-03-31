@@ -2,14 +2,6 @@
 title: IndexedDB API
 slug: Web/API/IndexedDB_API
 page-type: web-api-overview
-tags:
-  - API
-  - Advanced
-  - Database
-  - IndexedDB
-  - Landing
-  - Reference
-  - Storage
 spec-urls: https://w3c.github.io/IndexedDB/
 ---
 
@@ -37,7 +29,7 @@ Operations performed using IndexedDB are done asynchronously, so as not to block
 
 ### Storage limits and eviction criteria
 
-There are a number of web technologies that store data of one kind or another on the client side (i.e. on your local disk). IndexedDB is most commonly talked about. The process by which the browser works out how much space to allocate to web data storage and what to delete when that limit is reached is not simple, and differs between browsers. [Browser storage limits and eviction criteria](/en-US/docs/Web/API/IndexedDB_API/Browser_storage_limits_and_eviction_criteria) attempts to explain how this works, at least in the case of Firefox.
+There are a number of web technologies that store data of one kind or another on the client side (i.e. on your local disk). IndexedDB is most commonly talked about. The process by which the browser works out how much space to allocate to web data storage and what to delete when that limit is reached is not simple, and differs between browsers. [Browser storage quotas and eviction criteria](/en-US/docs/Web/API/Storage_API/Storage_quotas_and_eviction_criteria) attempts to explain how this works, at least in the case of Firefox.
 
 ## Interfaces
 
@@ -69,7 +61,7 @@ To get access to a database, call [`open()`](/en-US/docs/Web/API/IDBFactory/open
 - {{domxref("IDBKeyRange")}}
   - : Defines a key range that can be used to retrieve data from a database in a certain range.
 - {{domxref("IDBLocaleAwareKeyRange")}} {{Non-standard_inline}}
-  - : Defines a key range that can be used to retrieve data from a database in a certain range, sorted according to the rules of the locale specified for a certain index (see [`createIndex()`'s optionalParameters](/en-US/docs/Web/API/IDBObjectStore/createIndex#parameters).). This interface isn't part of the 2.0 specification.
+  - : Defines a key range that can be used to retrieve data from a database in a certain range, sorted according to the rules of the locale specified for a certain index (see the [`options`](/en-US/docs/Web/API/IDBObjectStore/createIndex#options) parameter to [`IDBObjectStore.createIndex()`](/en-US/docs/Web/API/IDBObjectStore/createIndex).) This interface isn't part of the 2.0 specification.
 
 ### Custom event interfaces
 

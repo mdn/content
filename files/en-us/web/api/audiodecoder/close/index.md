@@ -2,13 +2,8 @@
 title: AudioDecoder.close()
 slug: Web/API/AudioDecoder/close
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - close
-  - AudioDecoder
-  - Experimental
+status:
+  - experimental
 browser-compat: api.AudioDecoder.close
 ---
 

@@ -1,19 +1,13 @@
 ---
 title: Intl.supportedValuesOf()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/supportedValuesOf
-tags:
-  - Internationalization
-  - Intl
-  - JavaScript
-  - Method
-  - Reference
-  - supportedValuesOf
+page-type: javascript-static-method
 browser-compat: javascript.builtins.Intl.supportedValuesOf
 ---
 
 {{JSRef}}
 
-The **`Intl.supportedValuesOf()`** method returns an array containing the supported calendar, collation, currency, numbering systems, or unit values supported by the implementation.
+The **`Intl.supportedValuesOf()`** static method returns an array containing the supported calendar, collation, currency, numbering systems, or unit values supported by the implementation.
 
 Duplicates are omitted and the array is sorted in ascending alphabetic order (or more precisely, using {{jsxref("Array/sort", "Array.prototype.sort()")}} with an `undefined` compare function)
 
@@ -21,8 +15,6 @@ The method can be used to feature-test whether values are supported in a particu
 It can also be used to build UIs that allow users to select their preferred localized values, for example when the UI is created from WebGL or server-side.
 
 {{EmbedInteractiveExample("pages/js/intl-supportedvaluesof.html", "taller")}}
-
-<!-- The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone https://github.com/mdn/interactive-examples and send us a pull request. -->
 
 ## Syntax
 
@@ -52,7 +44,7 @@ A sorted array of unique string values indicating the values supported by the im
 You can check that the method is supported by comparing to `undefined`:
 
 ```js
-if (typeof Intl.supportedValuesOf !== 'undefined') {
+if (typeof Intl.supportedValuesOf !== "undefined") {
   // method is supported
 }
 ```
@@ -74,7 +66,7 @@ The other values are all obtained in the same way:
 
 ```js
 Intl.supportedValuesOf("collation").forEach((collation) => {
-  // "big5han", "compat", "dict", "emoji", etc.
+  // "compat", "dict", "emoji", etc.
 });
 
 Intl.supportedValuesOf("currency").forEach((currency) => {

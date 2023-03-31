@@ -2,9 +2,6 @@
 title: Commonly-used macros
 slug: MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros
 page-type: mdn-writing-guide
-tags:
-  - meta
-  - writing-guide
 ---
 
 {{MDNSidebar}}
@@ -82,20 +79,6 @@ Most macros will also take a second argument allowing you to change the display 
     </tr>
     <tr>
       <td>
-        <a href="https://github.com/mdn/yari/tree/main/kumascript/macros/htmlattrxref.ejs"
-          >HTMLAttrxRef</a>
-      </td>
-      <td>
-        <a href="/en-US/docs/Web/HTML/Global_attributes">HTML global attribute description</a>
-        if you only specify the attribute name.<br />Attribute associated with a specific HTML element if you specify an attribute name and an element name.
-      </td>
-      <td>
-        <code>\{{HTMLAttrxRef("lang")}} </code>links to the global attribute description {{HTMLAttrxRef("lang")}}.<br />
-        <code>\{{HTMLAttrxRef("type","input")}}</code> result in a link to the {{htmlattrxref("type","input")}} attribute (on the {{HTMLElement("input")}} element).
-      </td>
-    </tr>
-    <tr>
-      <td>
         <a href="https://github.com/mdn/yari/tree/main/kumascript/macros/jsxref.ejs">JSxRef</a>
       </td>
       <td>
@@ -164,15 +147,6 @@ Most macros will also take a second argument allowing you to change the display 
   </tbody>
 </table>
 
-### Linking to bugs
-
-- Bugs
-
-  - [`bug`](https://github.com/mdn/yari/blob/main/kumascript/macros/bug.ejs) allows you to link to a bug on bugzilla.mozilla.org easily using this syntax: `\{{Bug(123456)}}`.
-    This gives you: {{Bug(123456)}}.
-  - [`WebkitBug`](https://github.com/mdn/yari/blob/main/kumascript/macros/WebkitBug.ejs) inserts a link to a bug in the WebKit bug database.
-    For example, `\{{WebkitBug(31277)}}` inserts {{WebkitBug(31277)}}.
-
 ### Navigation aids for multi-page guides
 
 [`Previous`](https://github.com/mdn/yari/blob/main/kumascript/macros/Previous.ejs), [`Next`](https://github.com/mdn/yari/blob/main/kumascript/macros/Next.ejs), and [`PreviousNext`](https://github.com/mdn/yari/blob/main/kumascript/macros/PreviousNext.ejs) provide navigation controls for articles which are part of sequences.
@@ -231,6 +205,7 @@ Example:
 #### Experimental
 
 [`experimental_inline`](https://github.com/mdn/yari/blob/main/kumascript/macros/experimental_inline.ejs) inserts an in-line mark indicating the API is not widely implemented and may change in the future.
+For more information on the definition **experimental**, see the [Experimental, deprecated, and obsolete](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete) documentation.
 
 ##### Syntax
 
@@ -245,6 +220,7 @@ Example:
 #### Deprecated
 
 [`deprecated_inline`](https://github.com/mdn/yari/blob/main/kumascript/macros/Deprecated_Inline.ejs) inserts an in-line deprecated mark ({{Deprecated_Inline}}) to discourage the use of an API that is officially deprecated (or has been removed).
+For more information on the definition **deprecated**, see the [Experimental, deprecated, and obsolete](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete) documentation.
 
 ##### Syntax
 

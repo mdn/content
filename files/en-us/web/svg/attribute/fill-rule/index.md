@@ -1,9 +1,7 @@
 ---
 title: fill-rule
 slug: Web/SVG/Attribute/fill-rule
-tags:
-  - SVG
-  - SVG Attribute
+page-type: svg-attribute
 browser-compat: svg.attributes.presentation.fill-rule
 ---
 

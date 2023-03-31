@@ -1,15 +1,9 @@
 ---
 title: Setting up adaptive streaming media sources
 slug: Web/Guide/Audio_and_video_delivery/Setting_up_adaptive_streaming_media_sources
-tags:
-  - Audio
-  - HLS
-  - HTML
-  - HTTP Live Streaming
-  - MPEG-DASH
-  - Video
-  - adaptive streaming
 ---
+
+{{QuickLinksWithSubPages("/en-US/docs/Web/Guide/Audio_and_video_delivery")}}
 
 Let's say you want to set up an adaptive streaming media source on a server, to be consumed inside an HTML media element. How would you do that? This article explains how, looking at two of the most common formats: MPEG-DASH and HLS (HTTP Live Streaming.)
 
@@ -32,7 +26,7 @@ MPEG-DASH is an adaptive bitrate streaming technique that enables streaming of m
 
 A media presentation description (MPD) file is used to hold the information on the various streams and the bandwidths they are associated with. In your video source (src) attribute you point to the MPD instead of to the media file as you would with non-adaptive media.
 
-The MPD file tells the browser where the various pieces of media are located, it also includes meta data such as mimeType and codecs and there are other details such as byte-ranges in there too - it is an XML document and in many cases will be generated for you.
+The MPD file tells the browser where the various pieces of media are located, it also includes metadata such as mimeType and codecs and there are other details such as byte-ranges in there too - it is an XML document and in many cases will be generated for you.
 
 There are a few profiles we can use. We're going to take a look at Ondemand profile for Video On Demand (VOD) and the LIVE profile.
 
@@ -186,7 +180,7 @@ The playlist or `.mpd` file contains XML that explicitly lists where all the var
   </MPD>
 ```
 
-The MPD file tells the browser where the various pieces of media are located, it also includes meta data such as mimeType and codecs and there are other details such as byte-ranges in there too. Generally these files will be generated for you.
+The MPD file tells the browser where the various pieces of media are located, it also includes metadata such as mimeType and codecs and there are other details such as byte-ranges in there too. Generally these files will be generated for you.
 
 > **Note:** You can also split out your audio and video streams into separate files, which can then be prioritized and served separately depending on bandwidth.
 
@@ -220,13 +214,13 @@ Media is usually encoded as MPEG-4 (H.264 video and AAC audio) and packaged into
 There are a number of useful tools available for HLS encoding
 
 - The Stream Segmenter — provided by Apple for Mac platforms — takes a media stream from a local network and splits media into equally sized media files together with an index file.
-- Apple also provides a File Segmenter for Mac — which takes a suitably encoded file, splits it up and produces a index file, in a similar fashion to the Stream Segmenter.
+- Apple also provides a File Segmenter for Mac — which takes a suitably encoded file, splits it up and produces an index file, in a similar fashion to the Stream Segmenter.
 
 > **Note:** You can find more details about these tools at [Using HTTP Live Streaming](https://developer.apple.com/library/archive/documentation/NetworkingInternet/Conceptual/StreamingMediaGuide/UsingHTTPLiveStreaming/UsingHTTPLiveStreaming.html).
 
 ### Index Files (Playlists)
 
-The HLS Index File (much like MPEG-DASH's `.mpd` file) contains the information on where all the media segments reside, as well as other meta data such as bandwidth application. Apple uses the `.m3u8` format (an extension of its `.m3u` playlist format) for index files — see below for an example:
+The HLS Index File (much like MPEG-DASH's `.mpd` file) contains the information on where all the media segments reside, as well as other metadata such as bandwidth application. Apple uses the `.m3u8` format (an extension of its `.m3u` playlist format) for index files — see below for an example:
 
 ```
 #EXT-X-VERSION:3

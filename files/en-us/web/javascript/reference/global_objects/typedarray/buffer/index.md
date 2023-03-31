@@ -1,12 +1,7 @@
 ---
 title: TypedArray.prototype.buffer
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/buffer
-tags:
-  - JavaScript
-  - Property
-  - Prototype
-  - TypedArray
-  - TypedArrays
+page-type: javascript-instance-accessor-property
 browser-compat: javascript.builtins.TypedArray.buffer
 ---
 

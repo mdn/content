@@ -1,12 +1,7 @@
 ---
 title: Array.prototype.shift()
 slug: Web/JavaScript/Reference/Global_Objects/Array/shift
-tags:
-  - Array
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.Array.shift
 ---
 
@@ -48,17 +43,17 @@ The following code displays the `myFish` array before and after removing its
 first element. It also displays the removed element:
 
 ```js
-const myFish = ['angel', 'clown', 'mandarin', 'surgeon'];
+const myFish = ["angel", "clown", "mandarin", "surgeon"];
 
-console.log('myFish before:', JSON.stringify(myFish));
+console.log("myFish before:", JSON.stringify(myFish));
 // myFish before: ['angel', 'clown', 'mandarin', 'surgeon']
 
 const shifted = myFish.shift();
 
-console.log('myFish after:', myFish);
+console.log("myFish after:", myFish);
 // myFish after: ['clown', 'mandarin', 'surgeon']
 
-console.log('Removed this element:', shifted);
+console.log("Removed this element:", shifted);
 // Removed this element: angel
 ```
 
@@ -70,7 +65,7 @@ example every iteration will remove the next element from an array, until it is 
 ```js
 const names = ["Andrew", "Tyrone", "Paul", "Maria", "Gayatri"];
 
-while (typeof (i = names.shift()) !== 'undefined') {
+while (typeof (i = names.shift()) !== "undefined") {
   console.log(i);
 }
 // Andrew, Tyrone, Paul, Maria, Gayatri

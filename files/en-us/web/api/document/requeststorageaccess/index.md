@@ -2,14 +2,6 @@
 title: Document.requestStorageAccess()
 slug: Web/API/Document/requestStorageAccess
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - Document
-  - Method
-  - Reference
-  - Storage Access API
-  - requestStorageAccess
 browser-compat: api.Document.requestStorageAccess
 ---
 
@@ -42,8 +34,12 @@ When the promise gets resolved, the resolve handler will run as if a user gestur
 
 ```js
 document.requestStorageAccess().then(
-  () => { console.log('access granted') },
-  () => { console.log('access denied') }
+  () => {
+    console.log("access granted");
+  },
+  () => {
+    console.log("access denied");
+  }
 );
 ```
 
@@ -55,7 +51,7 @@ Access to cross-site cookies is granted to iframes based on a number of prerequi
 2. The document or the top-level document must not have a null origin.
 3. The document's window must be a [secure context](/en-US/docs/Web/Security/Secure_Contexts).
 4. If the document is sandboxed, it must have the `allow-storage-access-by-user-activation` token.
-5. The document must pass additional browser-specific checks. Examples: allow lists, block lists, on-device classification, user settings, anti-[clickjacking](/en-US/docs/Glossary/Clickjacking) heuristics, or prompting the user for explicit permission.
+5. The document must pass additional browser-specific checks. Examples: allowlists, blocklists, on-device classification, user settings, anti-[clickjacking](/en-US/docs/Glossary/Clickjacking) heuristics, or prompting the user for explicit permission.
 
 ## Specifications
 

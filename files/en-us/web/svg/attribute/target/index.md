@@ -1,9 +1,7 @@
 ---
 title: target
 slug: Web/SVG/Attribute/target
-tags:
-  - SVG
-  - SVG Attribute
+page-type: svg-attribute
 browser-compat: svg.elements.a.target
 ---
 

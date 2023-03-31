@@ -1,10 +1,9 @@
 ---
 title: enable-background
 slug: Web/SVG/Attribute/enable-background
-tags:
-  - Deprecated
-  - SVG
-  - SVG Attribute
+page-type: svg-attribute
+status:
+  - deprecated
 browser-compat: svg.attributes.presentation.enable-background
 ---
 

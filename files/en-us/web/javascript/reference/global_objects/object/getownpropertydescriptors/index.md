@@ -1,17 +1,13 @@
 ---
 title: Object.getOwnPropertyDescriptors()
 slug: Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyDescriptors
-tags:
-  - JavaScript
-  - Method
-  - Object
-  - Polyfill
+page-type: javascript-static-method
 browser-compat: javascript.builtins.Object.getOwnPropertyDescriptors
 ---
 
 {{JSRef}}
 
-The **`Object.getOwnPropertyDescriptors()`** method returns all
+The **`Object.getOwnPropertyDescriptors()`** static method returns all
 own property descriptors of a given object.
 
 {{EmbedInteractiveExample("pages/js/object-getownpropertydescriptors.html")}}
@@ -71,7 +67,7 @@ properties from a source object to a target object, you are able to use this met
 ```js
 Object.create(
   Object.getPrototypeOf(obj),
-  Object.getOwnPropertyDescriptors(obj)
+  Object.getOwnPropertyDescriptors(obj),
 );
 ```
 
@@ -88,12 +84,9 @@ superclass.prototype = {
   // Define the superclass constructor, methods, and properties here
 };
 function subclass() {}
-subclass.prototype = Object.create(
-  superclass.prototype,
-  {
-    // Define the subclass constructor, methods, and properties here
-  }
-);
+subclass.prototype = Object.create(superclass.prototype, {
+  // Define the subclass constructor, methods, and properties here
+});
 ```
 
 ## Specifications

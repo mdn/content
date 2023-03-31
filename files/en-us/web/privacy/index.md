@@ -1,19 +1,6 @@
 ---
 title: Privacy, permissions, and information security
 slug: Web/Privacy
-tags:
-  - Feature Policy
-  - Information
-  - Permissions
-  - Personalize
-  - Privacy
-  - Protection
-  - Web
-  - allow
-  - allowlist
-  - data
-  - permission
-  - personal
 ---
 
 {{QuicklinksWithSubPages}}
@@ -97,25 +84,6 @@ There are several web technologies and features at play to manage privacy and se
       </td>
     </tr>
     <tr>
-      <td><a href="/en-US/docs/Web/HTTP/Feature_Policy">Feature Policy</a></td>
-      <td>
-        Lets web developers selectively enable, disable, and modify the behavior
-        of certain features and APIs both for a document and for subdocuments
-        loaded in {{HTMLElement("iframe")}}s
-      </td>
-    </tr>
-    <tr>
-      <td>
-        {{HTMLElement("iframe")}}'s {{htmlattrxref("allow", "iframe")}}
-        attribute
-      </td>
-      <td>
-        Technically part of Feature Policy, the <code>allow</code> attribute on
-        an <code>&#x3C;iframe></code> specifies which web features the document
-        in the frame should be allowed to access
-      </td>
-    </tr>
-    <tr>
       <td>
         <a href="/en-US/docs/Web/HTTP/Headers/Strict-Transport-Security">HTTP Strict Transport Security</a> (HSTS)
       </td>
@@ -137,7 +105,15 @@ There are several web technologies and features at play to manage privacy and se
       <td><a href="/en-US/docs/Web/API/Permissions_API">Permissions API</a></td>
       <td>
         Provides a way to determine the status of permissions for the current
-        browser context
+        browser context.
+      </td>
+    </tr>
+    <tr>
+      <td><a href="/en-US/docs/Web/HTTP/Permissions_Policy">Permissions Policy</a></td>
+      <td>
+        Lets web servers selectively enable or disable features and APIs, both for a document and for subdocuments
+        loaded in {{HTMLElement("iframe")}}s via the {{HTTPHeader("Permissions-Policy")}} HTTP header.
+        The <a href="/en-US/docs/Web/HTML/Element/iframe#allow"><code>allow</code></a> attribute can be used to set Permissions Policies on individual {{HTMLElement("iframe")}}s.
       </td>
     </tr>
     <tr>
@@ -148,14 +124,12 @@ There are several web technologies and features at play to manage privacy and se
       <td>
         TLS provides security and privacy by encrypting data during transport
         over the network. This is the technology behind the
-        <a href="/en-US/docs/Glossary/https">HTTPS</a> (HyperText Transport
+        <a href="/en-US/docs/Glossary/HTTPS">HTTPS</a> (HyperText Transport
         Protocol Secured) protocol
       </td>
     </tr>
   </tbody>
 </table>
-
-Not all of these are generally directly used within code; notably, the [Permissions API](/en-US/docs/Web/API/Permissions_API), [Feature Policy](/en-US/docs/Web/HTTP/Feature_Policy), and the {{htmlattrxref("allow", "iframe")}} attribute on {{HTMLElement("iframe")}} elements are primary tools directly used by code to help secure a site and its content.
 
 ## Keeping personal data safe
 
@@ -173,7 +147,7 @@ While specifications for these technologies either state or recommend tactics fo
 
 <!-- allow attribute, feature policy, and permissions api stuff -->
 
-A specific user experience issue that often arises is a document that's loaded with permission to access a resource and the document contains an {{HTMLElement("iframe")}} with the {{htmlattrxref("allow", "iframe")}} attribute to delegate that permission to the contents of the frame. In this case, it's possible for the user to wind up being prompted repeatedly for that same resource, first by the main page, then by the document in the frame.
+A specific user experience issue that often arises is a document that's loaded with permission to access a resource and the document contains an {{HTMLElement("iframe")}} with the [`allow`](/en-US/docs/Web/HTML/Element/iframe#allow) attribute to delegate that permission to the contents of the frame. In this case, it's possible for the user to wind up being prompted repeatedly for that same resource, first by the main page, then by the document in the frame.
 
 Browsers may choose to provide ways around this. For example, in Firefox 73, the user permission requests were revised so that when an `<iframe>` uses the `allow` keyword to delegate permission to the embedded document, the browser asks the user to grant the parent document permission to use the resource, and that permission is then shared with the embedded content that requested the resource, to begin with.
 
@@ -183,4 +157,5 @@ Browsers may choose to provide ways around this. For example, in Firefox 73, the
 
 - [Web security](/en-US/docs/Web/Security)
 - [Permissions API](/en-US/docs/Web/API/Permissions_API)
-- [Using Feature Policy](/en-US/docs/Web/HTTP/Feature_Policy/Using_Feature_Policy) and the HTTP {{HTTPHeader("feature-policy")}} header
+- [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy)
+- [The Privacy Sandbox](https://developer.chrome.com/docs/privacy-sandbox/)

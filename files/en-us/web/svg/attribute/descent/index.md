@@ -1,10 +1,9 @@
 ---
 title: descent
 slug: Web/SVG/Attribute/descent
-tags:
-  - Deprecated
-  - SVG
-  - SVG Attribute
+page-type: svg-attribute
+status:
+  - deprecated
 browser-compat: svg.elements.font-face.descent
 ---
 

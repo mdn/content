@@ -1,13 +1,7 @@
 ---
 title: Array.from()
 slug: Web/JavaScript/Reference/Global_Objects/Array/from
-tags:
-  - Array
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Reference
-  - Polyfill
+page-type: javascript-static-method
 browser-compat: javascript.builtins.Array.from
 ---
 
@@ -21,20 +15,8 @@ The **`Array.from()`** static method creates a new, shallow-copied `Array` insta
 
 ```js-nolint
 Array.from(arrayLike)
-
-// Arrow function
-Array.from(arrayLike, (element) => { /* … */ })
-Array.from(arrayLike, (element, index) => { /* … */ })
-
-// Mapping function
 Array.from(arrayLike, mapFn)
 Array.from(arrayLike, mapFn, thisArg)
-
-// Inline mapping function
-Array.from(arrayLike, function (element) { /* … */ })
-Array.from(arrayLike, function (element, index) { /* … */ })
-Array.from(arrayLike, function (element) { /* … */ }, thisArg)
-Array.from(arrayLike, function (element, index) { /* … */ }, thisArg)
 ```
 
 ### Parameters
@@ -42,15 +24,11 @@ Array.from(arrayLike, function (element, index) { /* … */ }, thisArg)
 - `arrayLike`
   - : An iterable or array-like object to convert to an array.
 - `mapFn` {{Optional_inline}}
-  - : Map function to call on every element of the array. If provided, every value to be added to the array is first passed through this function, and `mapFn`'s return value is added to the array instead.
-
-    The function is called with the following arguments:
-
+  - : A function to call on every element of the array. If provided, every value to be added to the array is first passed through this function, and `mapFn`'s return value is added to the array instead. The function is called with the following arguments:
     - `element`
       - : The current element being processed in the array.
     - `index`
       - : The index of the current element being processed in the array.
-
 - `thisArg` {{Optional_inline}}
   - : Value to use as `this` when executing `mapFn`.
 
@@ -78,14 +56,14 @@ The `Array.from()` method is a generic factory method. For example, if a subclas
 ### Array from a String
 
 ```js
-Array.from('foo');
+Array.from("foo");
 // [ "f", "o", "o" ]
 ```
 
 ### Array from a Set
 
 ```js
-const set = new Set(['foo', 'bar', 'baz', 'foo']);
+const set = new Set(["foo", "bar", "baz", "foo"]);
 Array.from(set);
 // [ "foo", "bar", "baz" ]
 ```
@@ -93,11 +71,18 @@ Array.from(set);
 ### Array from a Map
 
 ```js
-const map = new Map([[1, 2], [2, 4], [4, 8]]);
+const map = new Map([
+  [1, 2],
+  [2, 4],
+  [4, 8],
+]);
 Array.from(map);
 // [[1, 2], [2, 4], [4, 8]]
 
-const mapper = new Map([['1', 'a'], ['2', 'b']]);
+const mapper = new Map([
+  ["1", "a"],
+  ["2", "b"],
+]);
 Array.from(mapper.values());
 // ['a', 'b'];
 
@@ -109,9 +94,9 @@ Array.from(mapper.keys());
 
 ```js
 // Create an array based on a property of DOM Elements
-const images = document.querySelectorAll('img');
+const images = document.querySelectorAll("img");
 const sources = Array.from(images, (image) => image.src);
-const insecureSources = sources.filter((link) => link.startsWith('http://'));
+const insecureSources = sources.filter((link) => link.startsWith("http://"));
 ```
 
 ### Array from an Array-like object (arguments)
@@ -137,7 +122,7 @@ Array.from([1, 2, 3], (x) => x + x);
 // Generate a sequence of numbers
 // Since the array is initialized with `undefined` on each position,
 // the value of `v` below will be `undefined`
-Array.from({length: 5}, (v, i) => i);
+Array.from({ length: 5 }, (v, i) => i);
 // [0, 1, 2, 3, 4]
 ```
 
@@ -145,7 +130,8 @@ Array.from({length: 5}, (v, i) => i);
 
 ```js
 // Sequence generator function (commonly referred to as "range", e.g. Clojure, PHP, etc.)
-const range = (start, stop, step) => Array.from({ length: (stop - start) / step + 1}, (_, i) => start + (i * step));
+const range = (start, stop, step) =>
+  Array.from({ length: (stop - start) / step + 1 }, (_, i) => start + i * step);
 
 // Generate numbers range 0..4
 range(0, 4, 1);
@@ -156,7 +142,9 @@ range(1, 10, 2);
 // [1, 3, 5, 7, 9]
 
 // Generate the alphabet using Array.from making use of it being ordered as a sequence
-range('A'.charCodeAt(0), 'Z'.charCodeAt(0), 1).map((x) => String.fromCharCode(x));
+range("A".charCodeAt(0), "Z".charCodeAt(0), 1).map((x) =>
+  String.fromCharCode(x),
+);
 // ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
 ```
 

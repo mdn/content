@@ -2,17 +2,9 @@
 title: VREyeParameters.renderWidth
 slug: Web/API/VREyeParameters/renderWidth
 page-type: web-api-instance-property
-tags:
-  - API
-  - Deprecated
-  - Property
-  - Reference
-  - VR
-  - VREyeParameters
-  - Virtual Reality
-  - WebVR
-  - renderWidth
-  - Non-standard
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.VREyeParameters.renderWidth
 ---
 

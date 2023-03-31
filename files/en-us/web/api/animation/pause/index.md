@@ -2,14 +2,6 @@
 title: Animation.pause()
 slug: Web/API/Animation/pause
 page-type: web-api-instance-method
-tags:
-  - Animation
-  - Method
-  - Reference
-  - Web Animations
-  - pause
-  - waapi
-  - web animations api
 browser-compat: api.Animation.pause
 ---
 
@@ -57,7 +49,7 @@ const nommingCake = document
 nommingCake.pause();
 ```
 
-Additionally, when resetting :
+Additionally, when resetting:
 
 ```js
 // An all-purpose function to pause the animations on Alice, the cupcake, and the bottle that reads "drink me."

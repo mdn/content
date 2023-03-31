@@ -2,12 +2,6 @@
 title: SVGPointList.removeItem()
 slug: Web/API/SVGPointList/removeItem
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - removeItem
-  - SVGPointList
 browser-compat: api.SVGPointList.removeItem
 ---
 

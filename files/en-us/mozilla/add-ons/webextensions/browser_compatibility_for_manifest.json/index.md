@@ -1,10 +1,7 @@
 ---
 title: Browser compatibility for manifest.json
 slug: Mozilla/Add-ons/WebExtensions/Browser_compatibility_for_manifest.json
-tags:
-  - Add-ons
-  - WebExtensions
-  - manifest.json
+page-type: guide
 browser-compat: webextensions.manifest
 ---
 
@@ -13,8 +10,6 @@ browser-compat: webextensions.manifest
 {{Compat}}
 
 > **Note:**
->
-> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
 ## See also
 

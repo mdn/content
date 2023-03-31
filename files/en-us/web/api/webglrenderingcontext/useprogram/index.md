@@ -2,12 +2,6 @@
 title: WebGLRenderingContext.useProgram()
 slug: Web/API/WebGLRenderingContext/useProgram
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.useProgram
 ---
 

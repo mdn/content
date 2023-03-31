@@ -2,12 +2,6 @@
 title: TransitionEvent
 slug: Web/API/TransitionEvent
 page-type: web-api-interface
-tags:
-  - API
-  - CSS
-  - CSS Transitions
-  - CSSOM
-  - Reference
 browser-compat: api.TransitionEvent
 ---
 
@@ -47,9 +41,6 @@ _Also inherits properties from its parent {{domxref("Event")}}_.
 ## Instance methods
 
 _Also inherits methods from its parent {{domxref("Event")}}_.
-
-- {{domxref("TransitionEvent.initTransitionEvent()")}} {{non-standard_inline}} {{deprecated_inline}}
-  - : Initializes a `TransitionEvent` created using the deprecated {{domxref("Document.createEvent()", "Document.createEvent('TransitionEvent')")}} method.
 
 ## Specifications
 

@@ -1,16 +1,7 @@
 ---
 title: "<tbody>: The Table Body element"
 slug: Web/HTML/Element/tbody
-tags:
-  - Element
-  - HTML
-  - HTML tabular data
-  - Reference
-  - Table Body
-  - Table Contents
-  - Tables
-  - Web
-  - tbody
+page-type: html-element
 browser-compat: html.elements.tbody
 ---
 
@@ -26,7 +17,7 @@ The `<tbody>` element, along with its related {{HTMLElement("thead")}} and {{HTM
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories"
+        <a href="/en-US/docs/Web/HTML/Content_categories"
           >Content categories</a
         >
       </th>
@@ -80,7 +71,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
 ### Deprecated attributes
 
-- {{ htmlattrdef("align") }} {{deprecated_inline}}
+- `align` {{deprecated_inline}}
 
   - : This [enumerated](/en-US/docs/Glossary/Enumerated) attribute specifies how horizontal alignment of each cell content will be handled. Possible values are:
 
@@ -88,7 +79,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
     - `center`, centering the content in the cell
     - `right`, aligning the content to the right of the cell
     - `justify`, inserting spaces into the textual content so that the content is justified in the cell
-    - `char`, aligning the textual content on a special character with a minimal offset, defined by the {{ htmlattrxref("char", "tbody") }} and {{ htmlattrxref("charoff", "tbody") }} attributes.
+    - `char`, aligning the textual content on a special character with a minimal offset, defined by the [`char`](#char) and [`charoff`](#charoff) attributes.
 
     If this attribute is not set, the `left` value is assumed.
 
@@ -96,17 +87,17 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
     > **Note:** The equivalent `text-align` property for the `align="char"` is not implemented in any browsers yet. See the [`text-align`'s browser compatibility section](/en-US/docs/Web/CSS/text-align#browser_compatibility) for the `<string>` value.
 
-- {{htmlattrdef("bgcolor")}} {{Deprecated_inline}}
+- `bgcolor` {{Deprecated_inline}}
 
-  - : The background color of the table. It is a [6-digit hexadecimal RGB code](/en-US/docs/Web/CSS/color_value#rgb_colors), prefixed by a '`#`'. One of the predefined [color keywords](/en-US/docs/Web/CSS/color_value#color_keywords) can also be used.
+  - : The background color of the table. It is a [6-digit hexadecimal RGB code](/en-US/docs/Web/CSS/hex-color), prefixed by a '`#`'. One of the predefined [color keywords](/en-US/docs/Web/CSS/named-color) can also be used.
 
     As this attribute is deprecated, use the CSS {{cssxref("background-color")}} property instead.
 
-- {{ htmlattrdef("char") }} {{deprecated_inline}}
-  - : This attribute is used to set the character to align the cells in a column on. Typical values for this include a period (`.`) when attempting to align numbers or monetary values. If {{htmlattrxref("align", "tbody")}} is not set to `char`, this attribute is ignored.
-- {{ htmlattrdef("charoff") }} {{deprecated_inline}}
+- `char` {{deprecated_inline}}
+  - : This attribute is used to set the character to align the cells in a column on. Typical values for this include a period (`.`) when attempting to align numbers or monetary values. If [`align`](#align) is not set to `char`, this attribute is ignored.
+- `charoff` {{deprecated_inline}}
   - : This attribute is used to indicate the number of characters to offset the column data from the alignment characters specified by the `char` attribute.
-- {{ htmlattrdef("valign") }} {{deprecated_inline}}
+- `valign` {{deprecated_inline}}
 
   - : This attribute specifies the vertical alignment of the text within each row of cells of the table header. Possible values for this attribute are:
 
@@ -273,7 +264,7 @@ The revised HTML looks like this:
 </table>
 ```
 
-Notice that each major is placed in a separate `<tbody>` block, the first row of which contains a single {{HTMLElement("th")}} element with a {{htmlattrxref("colspan", "th")}} attribute that spans the entire width of the table. That heading lists the name of the major contained within the `<tbody>`.
+Notice that each major is placed in a separate `<tbody>` block, the first row of which contains a single {{HTMLElement("th")}} element with a [`colspan`](#colspan) attribute that spans the entire width of the table. That heading lists the name of the major contained within the `<tbody>`.
 
 Then each remaining row in each major's `<tbody>` consists of two cells: the first for the student's ID and the second for their name.
 

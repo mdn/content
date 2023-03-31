@@ -1,9 +1,7 @@
 ---
 title: width
 slug: Web/SVG/Attribute/width
-tags:
-  - SVG
-  - SVG Attribute
+page-type: svg-attribute
 spec-urls:
   - https://drafts.fxtf.org/filter-effects/#element-attrdef-filter-width
   - https://drafts.fxtf.org/filter-effects/#element-attrdef-filter-primitive-width

@@ -1,15 +1,9 @@
 ---
 title: Adding captions and subtitles to HTML video
-slug: >-
-  Web/Guide/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video
-tags:
-  - HTML
-  - Media
-  - WebVTT
-  - captions
-  - subtitles
-  - track
+slug: Web/Guide/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video
 ---
+
+{{QuickLinksWithSubPages("/en-US/docs/Web/Guide/Audio_and_video_delivery")}}
 
 In other articles we looked at how to [build a cross browser video player](/en-US/docs/Web/Guide/Audio_and_video_delivery/cross_browser_video_player) using the {{ domxref("HTMLMediaElement") }} and {{ domxref("Window.fullScreen") }} APIs, and also at how to [style the player](/en-US/docs/Web/Guide/Audio_and_video_delivery/Video_player_styling_basics). This article will take the same player and show how to add captions and subtitles to it, using {{ domxref("WebVTT_API","the WebVTT format") }} and the {{ htmlelement("track") }} element.
 
@@ -39,7 +33,7 @@ HTML allows us to specify subtitles for a video using the {{ htmlelement("track"
 
 The files that contain the actual subtitle data are simple text files that follow a specified format, in this case the [Web Video Text Tracks](/en-US/docs/Web/API/WebVTT_API) (WebVTT) format. The [WebVTT specification](https://w3c.github.io/webvtt/) is still being worked on, but major parts of it are stable so we can use it today.
 
-Video providers (such as the [Blender Foundation](https://www.blender.org/about/foundation/)) provide captions and subtitles in a text format with their videos, but they're usually in the SubRip Text (SRT) format. These can be easily converted to WebVTT using an online converter such as [srt2vtt](https://atelier.u-sub.net/srt2vtt/).
+Video providers (such as the [Blender Foundation](https://www.blender.org/about/foundation/)) provide captions and subtitles in a text format with their videos, but they're usually in the SubRip Text (SRT) format. These can be easily converted to WebVTT using an online converter.
 
 ## Modifications to the HTML and CSS
 
@@ -133,14 +127,14 @@ Browsers do vary as to what they support, so we will be attempting to bring a mo
 As with all the other buttons, one of the first things we need to do is store a handle to the subtitles' button:
 
 ```js
-const subtitles = document.getElementById('subtitles');
+const subtitles = document.getElementById("subtitles");
 ```
 
 We also initially turn off all subtitles, in case the browser turns any of them on by default:
 
 ```js
 for (let i = 0; i < video.textTracks.length; i++) {
-  video.textTracks[i].mode = 'hidden';
+  video.textTracks[i].mode = "hidden";
 }
 ```
 
@@ -160,16 +154,16 @@ All we need to do is to go through the video's `textTracks`, reading their prope
 let subtitlesMenu;
 if (video.textTracks) {
   const df = document.createDocumentFragment();
-  const subtitlesMenu = df.appendChild(document.createElement('ul'));
-  subtitlesMenu.className = 'subtitles-menu';
-  subtitlesMenu.appendChild(createMenuItem('subtitles-off', '', 'Off'));
+  const subtitlesMenu = df.appendChild(document.createElement("ul"));
+  subtitlesMenu.className = "subtitles-menu";
+  subtitlesMenu.appendChild(createMenuItem("subtitles-off", "", "Off"));
   for (let i = 0; i < video.textTracks.length; i++) {
     subtitlesMenu.appendChild(
       createMenuItem(
         `subtitles-${video.textTracks[i].language}`,
         video.textTracks[i].language,
-        video.textTracks[i].label,
-      ),
+        video.textTracks[i].label
+      )
     );
   }
   videoContainer.appendChild(subtitlesMenu);
@@ -183,32 +177,32 @@ The creation of each list item and button is done by the `createMenuItem()` func
 ```js
 const subtitleMenuButtons = [];
 function createMenuItem(id, lang, label) {
-  const listItem = document.createElement('li');
-  const button = listItem.appendChild(document.createElement('button'));
-  button.setAttribute('id', id);
-  button.className = 'subtitles-button';
-  if (lang.length > 0) button.setAttribute('lang', lang);
+  const listItem = document.createElement("li");
+  const button = listItem.appendChild(document.createElement("button"));
+  button.setAttribute("id", id);
+  button.className = "subtitles-button";
+  if (lang.length > 0) button.setAttribute("lang", lang);
   button.value = label;
-  button.setAttribute('data-state', 'inactive');
+  button.setAttribute("data-state", "inactive");
   button.appendChild(document.createTextNode(label));
-  button.addEventListener('click', (e) => {
+  button.addEventListener("click", (e) => {
     // Set all buttons to inactive
     subtitleMenuButtons.forEach((button) => {
-      button.setAttribute('data-state', 'inactive');
+      button.setAttribute("data-state", "inactive");
     });
 
     // Find the language to activate
-    const lang = button.getAttribute('lang');
+    const lang = button.getAttribute("lang");
     for (let i = 0; i < video.textTracks.length; i++) {
       // For the 'subtitles-off' button, the first condition will never match so all will subtitles be turned off
       if (video.textTracks[i].language === lang) {
-        video.textTracks[i].mode = 'showing';
-        button.setAttribute('data-state', 'active');
+        video.textTracks[i].mode = "showing";
+        button.setAttribute("data-state", "active");
       } else {
-        video.textTracks[i].mode = 'hidden';
+        video.textTracks[i].mode = "hidden";
       }
     }
-    subtitlesMenu.style.display = 'none';
+    subtitlesMenu.style.display = "none";
   });
   subtitleMenuButtons.push(button);
   return listItem;
@@ -222,10 +216,10 @@ Once the menu is built, it is then inserted into the DOM at the bottom of the vi
 Initially the menu is hidden by default, so an event listener needs to be added to our subtitles button to toggle it:
 
 ```js
-subtitles.addEventListener('click', (e) => {
+subtitles.addEventListener("click", (e) => {
   if (subtitlesMenu) {
     subtitlesMenu.style.display =
-      subtitlesMenu.style.display === 'block' ? 'none' : 'block';
+      subtitlesMenu.style.display === "block" ? "none" : "block";
   }
 });
 ```
@@ -310,15 +304,9 @@ Then this specific 'voice' will be stylable like so:
 
 [Browser support for WebVTT and the `<track>` element](https://caniuse.com/webvtt) is fairly good, although some browsers differ slightly in their implementation.
 
-### Internet Explorer
-
-Internet Explorer 10+ subtitles are enabled by default, and the default controls contain a button and a menu that offers the same functionality as the menu we just built. The `default` attribute is also supported.
-
-> **Note:** IE will completely ignore WebVTT files unless you define the MIME type. This can easily be done by adding an `.htaccess` file to an appropriate directory that contains `AddType text/vtt .vtt`.
-
 ### Safari
 
-Safari 6.1+ has similar support to Internet Explorer 10+, displaying a menu with the different available options, with the addition of an "Auto" option, which allows the browser to choose.
+In Safari 6.1+, subtitles are enabled by default, and the default controls contain a button and a menu that offers the same functionality as the menu we just built, along with an "Auto" option which allows the browser to choose. The `default` attribute is also supported.
 
 ### Chrome and Opera
 

@@ -1,20 +1,21 @@
 ---
 title: Symbol.hasInstance
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/hasInstance
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Property
-  - Reference
-  - Symbol
+page-type: javascript-static-data-property
 browser-compat: javascript.builtins.Symbol.hasInstance
 ---
 
 {{JSRef}}
 
-The **`Symbol.hasInstance`** well-known symbol is used to determine if a constructor object recognizes an object as its instance. The {{jsxref("Operators/instanceof", "instanceof")}} operator's behavior can be customized by this symbol.
+The **`Symbol.hasInstance`** static data property represents the well-known symbol specifying the method used to determine if a constructor object recognizes an object as its instance. The {{jsxref("Operators/instanceof", "instanceof")}} operator's behavior can be customized by this symbol.
 
-{{EmbedInteractiveExample("pages/js/symbol-hasinstance.html")}}{{js_property_attributes(0,0,0)}}
+{{EmbedInteractiveExample("pages/js/symbol-hasinstance.html")}}
+
+## Value
+
+The well-known symbol `@@hasInstance`.
+
+{{js_property_attributes(0, 0, 0)}}
 
 ## Examples
 

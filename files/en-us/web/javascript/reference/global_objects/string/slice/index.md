@@ -1,12 +1,7 @@
 ---
 title: String.prototype.slice()
 slug: Web/JavaScript/Reference/Global_Objects/String/slice
-tags:
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - String
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.String.slice
 ---
 

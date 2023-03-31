@@ -1,13 +1,7 @@
 ---
 title: Array.prototype.reduceRight()
 slug: Web/JavaScript/Reference/Global_Objects/Array/reduceRight
-tags:
-  - Array
-  - ECMAScript 5
-  - JavaScript
-  - Method
-  - Prototype
-  - Polyfill
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.Array.reduceRight
 ---
 
@@ -17,53 +11,31 @@ The **`reduceRight()`** method applies a function against an
 accumulator and each value of the array (from right-to-left) to reduce it to a single
 value.
 
-{{EmbedInteractiveExample("pages/js/array-reduce-right.html","shorter")}}
-
 See also {{jsxref("Array.prototype.reduce()")}} for left-to-right.
+
+{{EmbedInteractiveExample("pages/js/array-reduce-right.html","shorter")}}
 
 ## Syntax
 
 ```js-nolint
-// Arrow function
-reduceRight((accumulator, currentValue) => { /* … */ })
-reduceRight((accumulator, currentValue, index) => { /* … */ })
-reduceRight((accumulator, currentValue, index, array) => { /* … */ })
-reduceRight((accumulator, currentValue, index, array) => { /* … */ }, initialValue)
-
-// Callback function
 reduceRight(callbackFn)
 reduceRight(callbackFn, initialValue)
-
-// Callback reducer function
-reduceRight(function (accumulator, currentValue) { /* … */ })
-reduceRight(function (accumulator, currentValue, index) { /* … */ })
-reduceRight(function (accumulator, currentValue, index, array) { /* … */ })
-reduceRight(function (accumulator, currentValue, index, array) { /* … */ }, initialValue)
 ```
 
 ### Parameters
 
 - `callbackFn`
-
-  - : A function to execute for each element in the array. Its return value becomes the value of the `accumulator` parameter on the next invocation of `callbackFn`. For the last invocation, the return value becomes the return value of `reduce()`.
-
-    The function is called with the following arguments:
-
+  - : A function to execute for each element in the array. Its return value becomes the value of the `accumulator` parameter on the next invocation of `callbackFn`. For the last invocation, the return value becomes the return value of `reduceRight()`. The function is called with the following arguments:
     - `accumulator`
-      - : The value previously returned in the last invocation of the callback, or
-        `initialValue`, if supplied. (See below.)
+      - : The value previously returned in the last invocation of the callback, or `initialValue`, if supplied. (See below.)
     - `currentValue`
       - : The current element being processed in the array.
     - `index`
       - : The index of the current element being processed in the array.
     - `array`
       - : The array `reduceRight()` was called upon.
-
 - `initialValue` {{optional_inline}}
-  - : Value to use as accumulator to the first call of the
-    `callbackFn`. If no initial value is supplied, the last element in
-    the array will be used and skipped. Calling reduce or reduceRight on an empty array
-    without an initial value creates a `TypeError`.
+  - : Value to use as accumulator to the first call of the `callbackFn`. If no initial value is supplied, the last element in the array will be used and skipped. Calling `reduceRight()` on an empty array without an initial value creates a `TypeError`.
 
 ### Return value
 
@@ -143,7 +115,7 @@ Here we reduce the same array using the same algorithm, but with an `initialValu
 ```js
 [0, 1, 2, 3, 4].reduceRight(
   (accumulator, currentValue, index, array) => accumulator + currentValue,
-  10
+  10,
 );
 ```
 
@@ -179,11 +151,15 @@ const flattened = arrays.reduceRight((a, b) => a.concat(b), []);
 ### Run a list of asynchronous functions with callbacks in series each passing their results to the next
 
 ```js
-const waterfall = (...functions) => (callback, ...args) =>
-  functions.reduceRight(
-    (composition, fn) => (...results) => fn(composition, ...results),
-    callback,
-  )(...args);
+const waterfall =
+  (...functions) =>
+  (callback, ...args) =>
+    functions.reduceRight(
+      (composition, fn) =>
+        (...results) =>
+          fn(composition, ...results),
+      callback,
+    )(...args);
 
 const randInt = (max) => Math.floor(Math.random() * max);
 
@@ -207,7 +183,7 @@ const div4 = (callback, x) => {
 };
 
 const computation = waterfall(add5, mult3, sub2, split, add, div4);
-computation(console.log, 5) // Logs 14
+computation(console.log, 5); // Logs 14
 
 // same as:
 

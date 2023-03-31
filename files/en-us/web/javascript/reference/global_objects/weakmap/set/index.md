@@ -1,12 +1,7 @@
 ---
 title: WeakMap.prototype.set()
 slug: Web/JavaScript/Reference/Global_Objects/WeakMap/set
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Prototype
-  - WeakMap
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.WeakMap.set
 ---
 
@@ -26,15 +21,18 @@ set(key, value)
 ### Parameters
 
 - `key`
-  - : Required. Must be `object`. The key of the element to add to the
-    `WeakMap` object.
+  - : Must be either an object or a [non-registered symbol](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol#shared_symbols_in_the_global_symbol_registry). The key of the entry to add to the `WeakMap` object.
 - `value`
-  - : Required. Any value. The value of the element to add to the `WeakMap`
-    object.
+  - : Any value representing the value of the entry to add to the `WeakMap` object.
 
 ### Return value
 
 The `WeakMap` object.
+
+### Exceptions
+
+- {{jsxref("TypeError")}}
+  - : Thrown if `key` is not an object or a [non-registered symbol](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol#shared_symbols_in_the_global_symbol_registry).
 
 ## Examples
 
@@ -49,6 +47,11 @@ wm.set(obj, "foo").set(window, "bar"); // chainable
 
 // Update an element in the WeakMap
 wm.set(obj, "baz");
+
+// Using a non-registered symbol as key
+const sym = Symbol("foo");
+wm.set(sym, "baz");
+wm.set(Symbol.iterator, "qux");
 ```
 
 ## Specifications

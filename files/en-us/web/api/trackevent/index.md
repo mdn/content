@@ -2,15 +2,6 @@
 title: TrackEvent
 slug: Web/API/TrackEvent
 page-type: web-api-interface
-tags:
-  - API
-  - Audio
-  - HTML DOM
-  - Interface
-  - Media
-  - Reference
-  - TrackEvent
-  - Video
 browser-compat: api.TrackEvent
 ---
 
@@ -63,15 +54,15 @@ function handleTrackEvent(event) {
 
   if (event.target instanceof VideoTrackList) {
     trackKind = "video";
-  } else if (event.target instanceof(AudioTrackList)) {
+  } else if (event.target instanceof AudioTrackList) {
     trackKind = "audio";
-  } else if (event.target instanceof(TextTrackList)) {
+  } else if (event.target instanceof TextTrackList) {
     trackKind = "text";
   } else {
     trackKind = "unknown";
   }
 
-  switch(event.type) {
+  switch (event.type) {
     case "addtrack":
       console.log(`Added a ${trackKind} track`);
       break;

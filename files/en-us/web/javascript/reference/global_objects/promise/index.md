@@ -1,14 +1,7 @@
 ---
 title: Promise
 slug: Web/JavaScript/Reference/Global_Objects/Promise
-tags:
-  - Class
-  - ECMAScript 2015
-  - JavaScript
-  - Promise
-  - Reference
-  - promise.all
-  - Polyfill
+page-type: javascript-class
 browser-compat: javascript.builtins.Promise
 ---
 
@@ -42,7 +35,7 @@ new Promise((resolveOuter) => {
   resolveOuter(
     new Promise((resolveInner) => {
       setTimeout(resolveInner, 1000);
-    })
+    }),
   );
 });
 ```
@@ -102,7 +95,7 @@ myPromise
 
 The termination condition of a promise determines the "settled" state of the next promise in the chain. A "fulfilled" state indicates a successful completion of the promise, while a "rejected" state indicates a lack of success. The return value of each fulfilled promise in the chain is passed along to the next `.then()`, while the reason for rejection is passed along to the next rejection-handler function in the chain.
 
-The promises of a chain are nested like Russian dolls, but get popped like the top of a stack. The first promise in the chain is most deeply nested and is the first to pop.
+The promises of a chain are nested in one another, but get popped like the top of a stack. The first promise in the chain is most deeply nested and is the first to pop.
 
 ```plain
 (promise D, (promise C, (promise B, (promise A) ) ) )
@@ -125,8 +118,8 @@ const promiseC = promiseA.then(handleFulfilled2, handleRejected2);
 An action can be assigned to an already "settled" promise. In that case, the action (if appropriate) will be performed at the first asynchronous opportunity. Note that promises are guaranteed to be asynchronous. Therefore, an action for an already "settled" promise will occur only after the stack has cleared and a clock-tick has passed. The effect is much like that of `setTimeout(action,10)`.
 
 ```js
-const promiseA = new Promise((resolutionFunc, rejectionFunc) => {
-  resolutionFunc(777);
+const promiseA = new Promise((resolve, reject) => {
+  resolve(777);
 });
 // At this point, "promiseA" is already settled.
 promiseA.then((val) => console.log("asynchronous logging has val:", val));
@@ -216,6 +209,10 @@ Note that JavaScript is [single-threaded](/en-US/docs/Glossary/Thread) by nature
 
 ## Instance properties
 
+These properties are defined on `Promise.prototype` and shared by all `Promise` instances.
+
+- {{jsxref("Object/constructor", "Promise.prototype.constructor")}}
+  - : The constructor function that created the instance object. For `Promise` instances, the initial value is the {{jsxref("Promise/Promise", "Promise")}} constructor.
 - `Promise.prototype[@@toStringTag]`
   - : The initial value of the [`@@toStringTag`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) property is the string `"Promise"`. This property is used in {{jsxref("Object.prototype.toString()")}}.
 
@@ -257,7 +254,7 @@ This example shows diverse techniques for using Promise capabilities and diverse
 
 The example function `tetheredGetNumber()` shows that a promise generator will utilize `reject()` while setting up an asynchronous call, or within the call-back, or both. The function `promiseGetWord()` illustrates how an API function might generate and return a promise in a self-contained manner.
 
-Note that the function `troubleWithGetNumber()` ends with a `throw`. That is forced because a promise chain goes through all the `.then()` promises, even after an error, and without the `throw`, the error would seem "fixed". This is a hassle, and for this reason, it is common to omit `rejectionFunc` throughout the chain of `.then()` promises, and just have a single `rejectionFunc` in the final `catch()`.
+Note that the function `troubleWithGetNumber()` ends with a `throw`. That is forced because a promise chain goes through all the `.then()` promises, even after an error, and without the `throw`, the error would seem "fixed". This is a hassle, and for this reason, it is common to omit `onRejected` throughout the chain of `.then()` promises, and just have a single `onRejected` in the final `catch()`.
 
 This code can be run under NodeJS. Comprehension is enhanced by seeing the errors actually occur. To force more errors, change the `threshold` values.
 
@@ -351,7 +348,7 @@ function testPromise() {
     // to resolve or reject the promise
     log.insertAdjacentHTML(
       "beforeend",
-      `${thisPromiseCount}) Promise constructor<br>`
+      `${thisPromiseCount}) Promise constructor<br>`,
     );
     // This is only an example to create asynchronism
     setTimeout(() => {
@@ -446,7 +443,7 @@ If we change this so that the `<iframe>` in the document is listening to post me
       // this code will only run in browsers that track the incumbent settings object
       console.log(event);
     },
-    false
+    false,
   );
 </script>
 ```
