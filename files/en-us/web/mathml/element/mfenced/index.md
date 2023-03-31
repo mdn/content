@@ -68,7 +68,7 @@ Rendering in your browser:
 
 ## Specifications
 
-The `<mfenced>` element is not defined in any browser-oriented specification but you can find a description in [MathML 4](https://w3c.github.io/mathml/#presm_mfenced).
+The `<mfenced>` element is not defined in any browser-oriented specification but you can find a description in [MathML 4](https://www.w3.org/TR/mathml4/#presm_mfenced).
 
 ## Browser compatibility
 
