@@ -59,7 +59,7 @@ To use Vue in an existing site, you can drop one of the following [`<script>`](/
 - Development Script (not optimized, but includes console warnings which is great for development.)
 
   ```html
-  <script src="https://cdn.jsdelivr.net/npm/vue@3.2.45/index.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vue@3.2.45"></script>
   ```
 
 - Production Script (Optimized version, minimal console warnings. It is recommended that you specify a version number when including Vue on your site so that any framework updates do not break your live site without you knowing.)
