@@ -7,17 +7,17 @@ browser-compat: api.VideoEncoder.VideoEncoder
 
 {{APIRef("WebCodecs API")}}{{SecureContext_Header}}
 
-The **`VideoEncoder()`** constructor creates a new {{domxref("VideoEncoder")}} object with the provided `callbacks.output` callback assigned as the output callback, the provided `callbacks.error` callback as the error callback, and the {{domxref("VideoEncoder.state")}} set to `"unconfigured"`.
+The **`VideoEncoder()`** constructor creates a new {{domxref("VideoEncoder")}} object with the provided `options.output` callback assigned as the output callback, the provided `options.error` callback as the error callback, and the {{domxref("VideoEncoder.state")}} set to `"unconfigured"`.
 
 ## Syntax
 
 ```js-nolint
-new VideoEncoder(callbacks)
+new VideoEncoder(options)
 ```
 
 ### Parameters
 
-- `callbacks`
+- `options`
   - : An object containing two required callbacks.
     - `output`
       - : A callback which takes an {{domxref("EncodedVideoChunk")}} object as the first argument, and an optional metadata object as the second. The metadata object has three members:
