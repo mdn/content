@@ -7,7 +7,7 @@ slug: Web/Progressive_web_apps/Installing
 
 This guide covers how users can install and uninstall PWAs on their devices. If you want to learn about making a web app installable as a PWA, see [Making PWAs installable](/en-US/docs/Web/Progressive_web_apps/guides/making_pwas_installable) instead.
 
-## History of web app installation 
+## History of web app installation
 
 Browsers have always enabled saving shortcuts to websites, known as "bookmarking." These are just links to websites.
 
