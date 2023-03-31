@@ -27,7 +27,7 @@ Vary: Cookie, Accept-Encoding
 X-Backend-Server: developer2.webapp.scl3.mozilla.com
 X-Cache-Info: not cacheable; meta data too large
 X-kuma-revision: 1085259
-x-frame-options: DENY
+x-frame-options: ALLOW
 ```
 
 ## See also
