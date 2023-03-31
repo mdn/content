@@ -27,7 +27,7 @@ color: transparent;
 
 ### Value
 
-Named colors consists of standard colors, and of the `transparent` keyword.
+Named colors consists of standard colors, the `transparent` and [`currentcolor`](/en-US/docs/Web/CSS/color_value#currentcolor_keyword) keywords.
 
 #### Standard colors
 
