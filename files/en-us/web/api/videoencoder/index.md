@@ -46,7 +46,7 @@ _Inherits methods from its parent, {{DOMxRef("EventTarget")}}._
 - {{domxref("VideoEncoder.flush()")}}
   - : Returns a promise that resolves once all pending encodes have been completed.
 - {{domxref("VideoEncoder.reset()")}}
-  - : Cancels all pending encodes and callbacks, and releases all underlying resources.
+  - : Cancels all pending encodes and callbacks.
 - {{domxref("VideoEncoder.close()")}}
   - : Ends all pending work and releases system resources.
 
