@@ -17,7 +17,7 @@ An `id`'s value must not contain {{glossary("whitespace")}} (spaces, tabs etc.).
 
 Technically, the value for an `id` attribute may contain any character, except {{glossary("whitespace")}} characters. However, to avoid inadvertent errors, only {{glossary("ASCII")}} letters, digits, `'_'`, and `'-'` should be used and the value for an `id` attribute should start with a letter.
 
-For example, `.` has a special meaning in CSS (it acts as a [class selector](/en-US/docs/Web/CSS/Class_selectors)). Unless you are careful to escape it in the CSS, it won't be recognized as part of the value of an `id` attribute. It is easy to forget to do this, resulting in bugs in your code that could be hard to detect.
+For example, `.` has a special meaning in CSS (it acts as a [class selector](/en-US/docs/Web/CSS/Class_selectors)). While valid, unless you are careful to escape it when used as part of a CSS selector, including as part of a [`querySelector()`](/en-US/docs/Web/API/Document/querySelector) or  [`querySelectorAll()`](/en-US/docs/Web/API/Document/querySelectorAll) parameter, it won't be recognized as part of the value of an `id` attribute. It is easy to forget to do this, resulting in bugs in your code that could be hard to detect.
 
 Similarly, an `id` comprised only of digits (E.g., `1234`), or starting with a digit (E.g., `1234-322-678`) or an hyphen (E.g., `-123`), though valid and working well in HTML, may lead to problems when used in CSS, JavaScript and Web APIs:
 
