@@ -19,7 +19,7 @@ Technically, the value for an `id` attribute may contain any character, except {
 
 For example, `.` has a special meaning in CSS (it acts as a [class selector](/en-US/docs/Web/CSS/Class_selectors)). While valid, unless you are careful to escape it when used as part of a CSS selector, including as part of a [`querySelector()`](/en-US/docs/Web/API/Document/querySelector) or  [`querySelectorAll()`](/en-US/docs/Web/API/Document/querySelectorAll) parameter, it won't be recognized as part of the value of an `id` attribute. It is easy to forget to do this, resulting in bugs in your code that could be hard to detect.
 
-Similarly, an `id` comprised only of digits (E.g., `1234`), or starting with a digit (E.g., `1234-322-678`) or an hyphen (E.g., `-123`), though valid and working well in HTML, may lead to problems when used in CSS, JavaScript and Web APIs:
+Similarly, an `id` starting with a digit (E.g., `1234-322-678`) or a hyphen followed by a digit (E.g., `-123`), though valid in HTML, may lead to problems when used in CSS, JavaScript, and Web APIs:
 
 - CSS selector can only take a CSS identifier, excludint `id` starting with a digit, two hyphens, or one hyphen immediatly followed by a digit: `#544-383-3388` is an invalid selector in CSS and won't work
 - {{domxref("Document.querySelector()")}} and similar methods will not find it (This [page](http://calixe.fr/global_id.html) document the problem).
