@@ -22,8 +22,6 @@ _Also inherits static properties from its parent {{jsxref("TypedArray")}}_.
 
 - {{jsxref("TypedArray.BYTES_PER_ELEMENT", "Float64Array.BYTES_PER_ELEMENT")}}
   - : Returns a number value of the element size. `8` in the case of `Float64Array`.
-- {{jsxref("TypedArray.name", "Float64Array.name")}}
-  - : Returns the string value of the constructor name. `"Float64Array"` in the case of `Float64Array`.
 
 ## Static methods
 

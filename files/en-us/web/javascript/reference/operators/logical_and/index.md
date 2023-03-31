@@ -16,7 +16,7 @@ More generally, the operator returns the value of the first {{Glossary("falsy")}
 ## Syntax
 
 ```js-nolint
-expr1 && expr2
+x && y
 ```
 
 ## Description

@@ -12,7 +12,7 @@ The **`error`** property of the
 
 ## Value
 
-A string containing an error code. Possible codes are:
+A string containing the error reason. Possible values are:
 
 - `canceled`
   - : A {{domxref("SpeechSynthesis.cancel")}} method call caused the
@@ -50,6 +50,8 @@ A string containing an error code. Possible codes are:
   - : The content of the {{domxref("SpeechSynthesisUtterance.rate")}},
     {{domxref("SpeechSynthesisUtterance.pitch")}} or
     {{domxref("SpeechSynthesisUtterance.volume")}} property was not valid.
+- `not-allowed`
+  - : The operation's start was not allowed.
 
 ## Examples
 

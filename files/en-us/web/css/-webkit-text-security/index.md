@@ -18,6 +18,13 @@ browser-compat: css.properties.-webkit-text-security
 -webkit-text-security: disc;
 -webkit-text-security: square;
 -webkit-text-security: none;
+
+/* Global values */
+-webkit-text-security: inherit;
+-webkit-text-security: initial;
+-webkit-text-security: revert;
+-webkit-text-security: revert-layer;
+-webkit-text-security: unset;
 ```
 
 ## Formal definition

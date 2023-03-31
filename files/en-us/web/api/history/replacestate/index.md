@@ -13,18 +13,20 @@ URL passed in the method parameters. This method is particularly useful
 when you want to update the state object or URL of the current history entry in response
 to some user action.
 
+This method is {{glossary("asynchronous")}}. Add a listener for the {{domxref("Window/popstate_event", "popstate")}} event in order to determine when the navigation has completed. The `state` parameter will be available in it.
+
 ## Syntax
 
 ```js-nolint
-replaceState(stateObj, unused)
-replaceState(stateObj, unused, url)
+replaceState(state, unused)
+replaceState(state, unused, url)
 ```
 
 ### Parameters
 
-- `stateObj`
-  - : The state object is a JavaScript object which is associated with the history entry
-    passed to the `replaceState` method. The state object can be
+- `state`
+  - : An object which is associated with the history entry
+    passed to the `replaceState()` method. The state object can be
     `null`.
 - `unused`
   - : This parameter exists for historical reasons, and cannot be omitted; passing the empty string is traditional, and safe against future changes to the method.

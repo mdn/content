@@ -29,7 +29,10 @@ function listener(details) {
     let str = decoder.decode(event.data, { stream: true });
     // Just change any instance of Example in the HTTP response
     // to WebExtension Example.
-    str = str.replaceAll(/Example/g, "WebExtension Example");
+    // Note that this will maybe not work as expected because the ending of the str can also 
+    // be "<h1>Examp" (because it is not the full response). So, it is better
+    // to get the full response first and then doing the replace.
+    str = str.replaceAll("Example", "WebExtension Example");
     filter.write(encoder.encode(str));
     // Doing filter.disconnect(); here would make us process only
     // the first chunk, and let the rest through unchanged. Note
@@ -72,7 +75,7 @@ function listener(details) {
         str += decoder.decode(data[i], { stream });
       }
     }
-    str = str.replaceAll(/Example/g, "WebExtension $&");
+    str = str.replaceAll("Example", "WebExtension $&");
     filter.write(encoder.encode(str));
     filter.close();
   };
@@ -105,7 +108,7 @@ function listener(details) {
     }
     str += decoder.decode(); // end-of-stream
 
-    str = str.replaceAll(/Example/g, "WebExtension $&");
+    str = str.replaceAll("Example", "WebExtension $&");
     filter.write(encoder.encode(str));
     filter.close();
   };
@@ -135,7 +138,7 @@ function listener(details) {
     data.push(decoder.decode());
 
     let str = data.join("");
-    str = str.replaceAll(/Example/g, "WebExtension $&");
+    str = str.replaceAll("Example", "WebExtension $&");
     filter.write(encoder.encode(str));
     filter.close();
   };
@@ -163,7 +166,7 @@ function listener(details) {
   filter.onstop = async (event) => {
     const blob = new Blob(data, { type: "text/html" });
     let str = await blob.text();
-    str = str.replaceAll(/Example/g, "WebExtension $&");
+    str = str.replaceAll("Example", "WebExtension $&");
     filter.write(encoder.encode(str));
     filter.close();
   };
@@ -195,7 +198,7 @@ function listener(details) {
     const doc = parser.parseFromString(str, blob.type);
     const nodes = doc.querySelectorAll("title, h1");
     for (const node of nodes) {
-      node.innerText = node.innerText.replaceAll(/Example/g, "WebExtension $&");
+      node.innerText = node.innerText.replaceAll("Example", "WebExtension $&");
     }
     filter.write(encoder.encode(doc.documentElement.outerHTML));
     filter.close();
@@ -234,7 +237,7 @@ function listener(details) {
       writeOffset += buffer.length;
     }
     let str = decoder.decode(combinedArray);
-    str = str.replaceAll(/Example/g, "WebExtension $&");
+    str = str.replaceAll("Example", "WebExtension $&");
     filter.write(encoder.encode(str));
     filter.close();
   };
@@ -264,7 +267,7 @@ function listener(details) {
     const blob = new Blob(data, { type: "text/html" });
     const buffer = await blob.arrayBuffer();
     let str = decoder.decode(buffer);
-    str = str.replaceAll(/Example/g, "WebExtension $&");
+    str = str.replaceAll("Example", "WebExtension $&");
     filter.write(encoder.encode(str));
     filter.close();
   };
@@ -296,7 +299,7 @@ function listener(details) {
   };
 
   filter.onstop = (event) => {
-    str = str.replaceAll(/Example/g, "WebExtension $&");
+    str = str.replaceAll("Example", "WebExtension $&");
     filter.write(encoder.encode(str));
     filter.close();
   };

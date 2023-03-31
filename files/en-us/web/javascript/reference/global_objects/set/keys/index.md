@@ -21,6 +21,25 @@ keys()
 A new iterator object containing the values for each element in the given
 `Set`, in insertion order.
 
+## Examples
+
+### Using keys()
+
+The `keys()` method is exactly equivalent to the {{jsxref("Set/values", "values()")}} method.
+
+```js
+const mySet = new Set();
+mySet.add("foo");
+mySet.add("bar");
+mySet.add("baz");
+
+const setIter = mySet.keys();
+
+console.log(setIter.next().value); // "foo"
+console.log(setIter.next().value); // "bar"
+console.log(setIter.next().value); // "baz"
+```
+
 ## Specifications
 
 {{Specifications}}

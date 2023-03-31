@@ -56,7 +56,7 @@ Taking care of the selectors and rulesets provided in the CSS resource file:
   - Give the main card container a fixed width/height, solid background color, border, and border-radius (rounded corners!), amongst other things.
   - Give the header a background gradient that goes from darker to lighter, plus rounded corners that fit in with the rounded corners set on the main card container.
   - Give the footer a background gradient that goes from lighter to darker, plus rounded corners that fit in with the rounded corners set on the main card container.
-  - Float the image to the right so that it sticks to the right-hand side of the main business card contents, and give it a max-height of 100% (a clever trick that ensures that it will grow/shrink to stay the same height as its parent container, regardless of what height it becomes.)
+  - [Float](/en-US/docs/Learn/CSS/CSS_layout/Floats) the image to the right so that it sticks to the right-hand side of the main business card contents, and give it a max-height of 100% (a clever trick that ensures that it will grow/shrink to stay the same height as its parent container, regardless of what height it becomes.)
 
 - Beware! There are two errors in the provided rulesets. Using any technique that you know, track these down and fix them before moving on.
 
