@@ -238,9 +238,9 @@ In addition to these 16 colors, about 150 other colors have a keyword associated
     </tr>
     <tr>
       <td>
-        <code>cyan</code><br />(synonym of <code>aqua</code>)
+        <code>cyan</code><br />
       </td>
-      <td><code>#00ffff</code></td>
+      <td><code>#00ffff</code> (synonym of <code>aqua</code>)</td>
       <td style="background: cyan"></td>
     </tr>
     <tr>
@@ -565,9 +565,9 @@ In addition to these 16 colors, about 150 other colors have a keyword associated
     </tr>
     <tr>
       <td>
-        <code>magenta</code><br />(synonym of <code>fuchsia</code>)
+        <code>magenta</code><br />
       </td>
-      <td><code>#ff00ff</code></td>
+      <td><code>#ff00ff</code> (synonym of <code>fuchsia</code>)</td>
       <td style="background: magenta"></td>
     </tr>
     <tr>
