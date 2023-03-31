@@ -29,7 +29,7 @@ None ({{jsxref("undefined")}}).
 ### Exceptions
 
 - `InvalidStateError` {{domxref("DOMException")}}
-  - : Thrown if the {{domxref("VideoEncoder.state","state")}} is "closed".
+  - : Thrown if the {{domxref("VideoEncoder.state","state")}} is `"closed"`.
 
 ## Examples
 
