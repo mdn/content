@@ -57,19 +57,6 @@ The `overflow` property is specified as one or two keywords chosen from the list
 
 > **Note:** The keyword `overlay` is a legacy value alias for `auto` and behaves the same as `auto`.
 
-#### Mozilla extensions
-
-- `-moz-scrollbars-none` {{deprecated_inline}}
-  - : Use `overflow: hidden` instead.
-- `-moz-scrollbars-horizontal` {{deprecated_inline}}
-  - : Use `{{Cssxref("overflow-x")}}: scroll` and `{{Cssxref("overflow-y")}}: hidden`, or `overflow: scroll hidden` instead.
-- `-moz-scrollbars-vertical` {{deprecated_inline}}
-  - : Use `{{Cssxref("overflow-x")}}: hidden` and `{{Cssxref("overflow-y")}}: scroll`, or `overflow: hidden scroll` instead.
-- `-moz-hidden-unscrollable` {{deprecated_inline}}
-  - : Use `overflow: clip` instead.
-
-As of Firefox 63, `-moz-scrollbars-none`, `-moz-scrollbars-horizontal`, and `-moz-scrollbars-vertical` are behind a feature preference setting. In about:config, set `layout.css.overflow.moz-scrollbars.enabled` to `true`.
-
 ## Description
 
 Overflow options include hiding overflowing content, showing scroll bars to view overflow content, or displaying the content flowing out of an element box into the surrounding area.
