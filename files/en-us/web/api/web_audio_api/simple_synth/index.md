@@ -602,6 +602,7 @@ function keyNote(event) {
       elKey.classList.remove("active");
       noteReleased({ buttons: 1, target: elKey });
     }
+    event.preventDefault();
   }
 }
 addEventListener("keydown", keyNote);
