@@ -14,7 +14,8 @@ Container queries are an alternative to [media queries](/en-US/docs/Web/CSS/Medi
 ## Using container queries
 
 To use container queries, you need to declare a **containment context** on an element so that the browser knows you might want to query the dimensions of this container later.
-To do this, use the {{Cssxref("container-type")}} property a value of `size`, `inline-size`, or `normal`.
+To do this, use the {{Cssxref("container-type")}} property with a value of `size`, `inline-size`, or `normal`.
+
 These values have the following effects:
 
 - `size`

@@ -61,7 +61,9 @@ A new `SecurityPolicyViolationEvent` object.
 ## Examples
 
 ```js
-let SPVEvt = new SecurityPolicyViolationEvent('foo', { /* ... */ });
+let SPVEvt = new SecurityPolicyViolationEvent("foo", {
+  /* ... */
+});
 ```
 
 ## Specifications

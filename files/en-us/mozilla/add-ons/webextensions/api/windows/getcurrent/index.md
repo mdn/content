@@ -2,16 +2,6 @@
 title: windows.getCurrent()
 slug: Mozilla/Add-ons/WebExtensions/API/windows/getCurrent
 page-type: webextension-api-function
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - Windows
-  - getCurrent
 browser-compat: webextensions.api.windows.getCurrent
 ---
 

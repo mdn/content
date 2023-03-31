@@ -1,14 +1,6 @@
 ---
 title: OpenSearch description format
 slug: Web/OpenSearch
-tags:
-  - Add-ons
-  - Guide
-  - OpenSearch
-  - Search
-  - Search plugins
-  - Web
-  - Web Standards
 ---
 
 {{AddonSidebar}}

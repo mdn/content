@@ -1,11 +1,8 @@
 ---
 title: launch_handler
 slug: Web/Manifest/launch_handler
-tags:
-  - Manifest
-  - Web
-  - launch_handler
-  - Experimental
+status:
+  - experimental
 browser-compat: html.manifest.launch_handler
 ---
 
@@ -16,10 +13,6 @@ browser-compat: html.manifest.launch_handler
     <tr>
       <th scope="row">Type</th>
       <td><code>Object</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Mandatory</th>
-      <td>No</td>
     </tr>
   </tbody>
 </table>
@@ -45,11 +38,11 @@ The `launch_handler` member defines values that control the launch of a web appl
         <dt><code>auto</code></dt>
         <dd>The user agent decides what context makes sense for the platform to load the app in. For example, <code>navigate-existing</code> might make more sense on mobile, where single app instances are commonplace, whereas <code>navigate-new</code> might make more sense in a desktop context. This is the default value used if all the provided values are invalid.</dd>
         <dt><code>focus-existing</code></dt>
-        <dd>If the app is already loaded in a web app client, it is brought into focus but not navigated to the launch target URL. Instead, the target URL is made available via {{domxref("Window.launchQueue")}} to allow custom launch navigation handling to be implemented. If the app is not already loaded in a web app client, <code>navigate-new</code> behavior is used instead.</dd>
+        <dd>If the app is already loaded in a web app client, it is brought into focus but not navigated to the launch target URL. The target URL is made available via {{domxref("Window.launchQueue")}} to allow custom launch navigation handling to be implemented. If the app is not already loaded in a web app client, <code>navigate-new</code> behavior is used instead.</dd>
         <dt><code>navigate-existing</code></dt>
-        <dd>If the app is already loaded in a web app client, it is brought into focus and navigated to the specified launch target URL. If the app is not already loaded in a web app client, <code>navigate-new</code> behavior is used instead.</dd>
+        <dd>If the app is already loaded in a web app client, it is brought into focus and navigated to the specified launch target URL. The target URL is made available via {{domxref("Window.launchQueue")}} to allow additional custom launch navigation handling to be implemented. If the app is not already loaded in a web app client, <code>navigate-new</code> behavior is used instead.</dd>
         <dt><code>navigate-new</code></dt>
-        <dd>The app is loaded inside a new web app client.</dd>
+        <dd>The app is loaded inside a new web app client. The target URL is made available via {{domxref("Window.launchQueue")}} to allow additional custom launch navigation handling to be implemented.</dd>
       </dl>
       </td>
     </tr>

@@ -1,14 +1,6 @@
 ---
 title: Content-Length
 slug: Web/HTTP/Headers/Content-Length
-tags:
-  - Content-Length
-  - HTTP
-  - HTTP header
-  - Request header
-  - Response header
-  - Reference
-  - Payload header
 browser-compat: http.headers.Content-Length
 ---
 

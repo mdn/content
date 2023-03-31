@@ -2,17 +2,6 @@
 title: StorageArea.getBytesInUse()
 slug: Mozilla/Add-ons/WebExtensions/API/storage/StorageArea/getBytesInUse
 page-type: webextension-api-function
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - Storage
-  - StorageArea
-  - WebExtensions
-  - getBytesInUse
 browser-compat: webextensions.api.storage.StorageArea.getBytesInUse
 ---
 

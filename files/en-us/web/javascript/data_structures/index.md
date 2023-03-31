@@ -213,7 +213,7 @@ You could implement `Map`s and `Set`s yourself. However, since objects cannot be
 
 Usually, to bind data to a DOM node, one could set properties directly on the object, or use `data-*` attributes. This has the downside that the data is available to any script running in the same context. `Map`s and `WeakMap`s make it easy to _privately_ bind data to an object.
 
-`WeakMap` and `WeakSet` only allow object keys, and the keys are allowed to be garbage collected even when they remain in the collection. They are specifically used for [memory usage optimization](/en-US/docs/Web/JavaScript/Memory_Management#data_structures_aiding_memory_management).
+`WeakMap` and `WeakSet` only allow garbage-collectable values as keys, which are either objects or [non-registered symbols](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol#shared_symbols_in_the_global_symbol_registry), and the keys may be collected even when they remain in the collection. They are specifically used for [memory usage optimization](/en-US/docs/Web/JavaScript/Memory_Management#data_structures_aiding_memory_management).
 
 ### Structured data: JSON
 
@@ -243,13 +243,13 @@ The `[@@toPrimitive]()` method, if present, must return a primitive — returnin
 console.log({} + []); // "[object Object]"
 ```
 
-Neither `{}` nor `[]` has a `[@@toPrimitive]()` method. Both `{}` and `[]` inherit `valueOf()` from {{jsxref("Object.prototype.valueOf")}}, which returns the object itself. Since the return value is an object, it is ignored. Therefore, `toString()` is called instead. [`{}.toString()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/toString) returns `"[object Object]"`, while [`[].toString()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/toString) returns `""`, so the result is their concatenation: `"[object Object]"`.
+Neither `{}` nor `[]` have a `[@@toPrimitive]()` method. Both `{}` and `[]` inherit `valueOf()` from {{jsxref("Object.prototype.valueOf")}}, which returns the object itself. Since the return value is an object, it is ignored. Therefore, `toString()` is called instead. [`{}.toString()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/toString) returns `"[object Object]"`, while [`[].toString()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/toString) returns `""`, so the result is their concatenation: `"[object Object]"`.
 
 The `[@@toPrimitive]()` method always takes precedence when doing conversion to any primitive type. Primitive conversion generally behaves like number conversion, because `valueOf()` is called in priority; however, objects with custom `[@@toPrimitive]()` methods can choose to return any primitive. {{jsxref("Date")}} and {{jsxref("Symbol")}} objects are the only built-in objects that override the `[@@toPrimitive]()` method. [`Date.prototype[@@toPrimitive]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/@@toPrimitive) treats the `"default"` hint as if it's `"string"`, while [`Symbol.prototype[@@toPrimitive]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/@@toPrimitive) ignores the hint and always returns a symbol.
 
 ### Numeric coercion
 
-There are two numeric types: [number](#number_type) and [BigInt](#bigint_type). Sometimes the language specifically expects a number or a BigInt (such as {{jsxref("Array.prototype.slice()")}}, where the index must be a number); other times, it may tolerate either and perform different operations depending on the operand's type. For strict coercion processes that do not allow implicit conversion from the other type, see [number coercion](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#number_coercion) and [BigInt coercion](/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt#bigint_coercion).
+There are two numeric types: [Number](#number_type) and [BigInt](#bigint_type). Sometimes the language specifically expects a number or a BigInt (such as {{jsxref("Array.prototype.slice()")}}, where the index must be a number); other times, it may tolerate either and perform different operations depending on the operand's type. For strict coercion processes that do not allow implicit conversion from the other type, see [number coercion](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#number_coercion) and [BigInt coercion](/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt#bigint_coercion).
 
 Numeric coercion is nearly the same as [number coercion](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#number_coercion), except that BigInts are returned as-is instead of causing a {{jsxref("TypeError")}}. Numeric coercion is used by all arithmetic operators, since they are overloaded for both numbers and BigInts. The only exception is [unary plus](/en-US/docs/Web/JavaScript/Reference/Operators/Unary_plus), which always does number coercion.
 

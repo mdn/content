@@ -83,7 +83,7 @@ In the following snippet, we create a new request using the
 directory as the script), then save the request's destination:
 
 ```js
-const myRequest = new Request('flowers.jpg');
+const myRequest = new Request("flowers.jpg");
 const myDestination = myRequest.destination; // returns the empty string by default
 ```
 

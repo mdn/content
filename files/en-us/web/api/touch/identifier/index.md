@@ -19,13 +19,19 @@ A `long` that represents the unique ID of the {{ domxref("Touch") }} object.
 ## Examples
 
 ```js
-someElement.addEventListener('touchmove', (e) => {
-// Iterate through the list of touch points that changed
-// since the last event and print each touch point's identifier.
-  for (let i = 0; i < e.changedTouches.length; i++) {
-    console.log(`changedTouches[${i}].identifier = ${e.changedTouches[i].identifier}`);
-  }
-}, false);
+someElement.addEventListener(
+  "touchmove",
+  (e) => {
+    // Iterate through the list of touch points that changed
+    // since the last event and print each touch point's identifier.
+    for (let i = 0; i < e.changedTouches.length; i++) {
+      console.log(
+        `changedTouches[${i}].identifier = ${e.changedTouches[i].identifier}`
+      );
+    }
+  },
+  false
+);
 ```
 
 ## Specifications

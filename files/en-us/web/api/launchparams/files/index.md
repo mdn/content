@@ -7,7 +7,7 @@ status:
 browser-compat: api.LaunchParams.files
 ---
 
-{{APIRef()}}{{SeeCompatTable}}
+{{APIRef("Launch Handler API")}}{{SeeCompatTable}}
 
 The **`files`** read-only property of the {{domxref("LaunchParams")}} interface returns an array of {{domxref("FileSystemHandle")}} objects representing any files passed along with the launch navigation via the [`POST`](/en-US/docs/Web/HTTP/Methods/POST) method.
 

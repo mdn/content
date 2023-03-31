@@ -5,6 +5,7 @@ page-type: guide
 ---
 
 {{DefaultAPISidebar("History API")}}
+
 The {{DOMxRef("History.pushState","pushState()")}} and {{DOMxRef("History.replaceState","replaceState()")}} methods add and modify history entries, respectively. These methods work in conjunction with the {{domxref("Window/popstate_event", "popstate")}} event.
 
 ## Adding and modifying history entries
@@ -16,7 +17,7 @@ Using {{DOMxRef("History.pushState","pushState()")}} changes the referrer that g
 Suppose `https://mozilla.org/foo.html` executes the following JavaScript:
 
 ```js
-let stateObj = {
+const stateObj = {
   foo: "bar",
 };
 
@@ -67,7 +68,9 @@ In other documents, it creates an element with a `null` namespace URI.
 Suppose `https://mozilla.org/foo.html` executes the following JavaScript:
 
 ```js
-let stateObj = { foo: "bar" };
+const stateObj = {
+  foo: "bar",
+};
 history.pushState(stateObj, "page 2", "bar.html");
 ```
 
@@ -96,11 +99,11 @@ When your page loads, it might have a non-null state object. This can happen, fo
 You can read the state of the current history entry without waiting for a `popstate` event using the {{DOMxRef("History.state","history.state")}} property like this:
 
 ```js
-let currentState = history.state;
+const currentState = history.state;
 ```
 
 ## See also
 
 - [History API](/en-US/docs/Web/API/History_API)
-- [Ajax navigation example](/en-US/docs/Web/API/History_API/Example)
-- {{ domxref("window.history") }}
+- [History navigation example](/en-US/docs/Web/API/History_API/Example)
+- {{domxref("window.history", "history")}} global object

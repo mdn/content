@@ -11,16 +11,16 @@ Firefox 18 was released on January 8, 2013. This article lists key changes that 
 
 ### HTML
 
-- The {{htmlattrxref("reversed","ol")}} attribute of the {{HTMLElement("ol")}} element is now supported ([Firefox bug 601912](https://bugzil.la/601912)).
-- The {{htmlattrxref("crossorigin","link")}} attribute of the {{HTMLElement("link")}} element is now supported ([Firefox bug 786564](https://bugzil.la/786564)).
-- The {{htmlattrxref("allowfullscreen", "iframe")}} attribute of the {{HTMLElement("iframe")}} has been implemented and it's prefixed predecessor {{htmlattrxref("mozallowfullscreen", "iframe")}} is now deprecated.
+- The [`reversed`](/en-US/docs/Web/HTML/Element/ol#reversed) attribute of the {{HTMLElement("ol")}} element is now supported ([Firefox bug 601912](https://bugzil.la/601912)).
+- The [`crossorigin`](/en-US/docs/Web/HTML/Element/link#crossorigin) attribute of the {{HTMLElement("link")}} element is now supported ([Firefox bug 786564](https://bugzil.la/786564)).
+- The [`allowfullscreen`](/en-US/docs/Web/HTML/Element/iframe#allowfullscreen) attribute of the {{HTMLElement("iframe")}} has been implemented and it's prefixed predecessor [`mozallowfullscreen`](/en-US/docs/Web/HTML/Element/iframe#mozallowfullscreen) is now deprecated.
 
 ### CSS
 
 - The {{cssxref("min-width")}} and {{cssxref("min-height")}} now uses the `auto` keyword as _initial value_ (This has an effect only on flex items as it resolves to `0`, the previous initial value, for other items). ([Firefox bug 763689](https://bugzil.la/763689))
 - The cascade has been updated: now author `!important` rules override [CSS animations](/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations). ([Firefox bug 783714](https://bugzil.la/783714))
 - The {{cssxref("background")}} shorthand property now recognizes CSS3 {{cssxref("background-size")}} property specified inside. ([Firefox bug 570326](https://bugzil.la/570326))
-- Initial support for the CSS Flexbox Module has been landed. It is disabled by default but can be enabled by setting `layout.css.flexbox.enabled` to true. ({{bug('666041')}})
+- Initial support for the CSS Flexbox Module has been landed. It is disabled by default but can be enabled by setting `layout.css.flexbox.enabled` to true ([Firefox bug 666041](https://bugzil.la/666041)).
 
 ### DOM/APIs
 

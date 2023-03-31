@@ -57,7 +57,7 @@ Firefox 15 shipped on August 28, 2012. This article lists key changes that are u
 
 - Mathematical operators can now use downloadable fonts specified with {{cssxref("@font-face")}}. This makes the [MathML-fonts add-on](https://addons.mozilla.org/en-US/firefox/addon/mathml-fonts/) work with stretchy operators too.
 - The `selection` attribute of the {{MathMLElement("maction")}} is now only taken into account with the `toggle` actiontype.
-- [Deprecated namedspace binding](https://www.w3.org/TR/MathML3/chapter3.html#id.3.3.4.2.1) has been removed ({{bug('673759')}}).
+- [Deprecated namedspace binding](https://www.w3.org/TR/MathML3/chapter3.html#id.3.3.4.2.1) has been removed ([Firefox bug 673759](https://bugzil.la/673759)).
 - Supported syntax for [Length](/en-US/docs/Web/MathML/Attribute/Values) and {{MathMLElement("mpadded")}} values have been made closer to the one specified in MathML3 spec.
 - New MathML mirrorable operators for Arabic math have been added to the operator dictionary ([Firefox bug 757125](https://bugzil.la/757125)).
 

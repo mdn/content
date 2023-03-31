@@ -179,7 +179,7 @@ signalingChannel.onmessage = (receivedString) => {
   } else {
     // handle other things you might be signaling, like sdp
   }
-}
+};
 ```
 
 The last candidate to be signaled this way by the remote peer will be a special
@@ -187,7 +187,7 @@ candidate denoting end-of-candidates. Out of interest, end-of-candidates may be
 manually indicated as follows:
 
 ```js
-pc.addIceCandidate({candidate:''});
+pc.addIceCandidate({ candidate: "" });
 ```
 
 However, in most cases you won't need to look for this explicitly, since the events

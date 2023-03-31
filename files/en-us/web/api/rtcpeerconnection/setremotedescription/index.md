@@ -55,9 +55,7 @@ myPeerConnection
 to be:
 
 ```js
-myPeerConnection
-  .setRemoteDescription(description)
-  .then(() => createMyStream());
+myPeerConnection.setRemoteDescription(description).then(() => createMyStream());
 ```
 
 Using

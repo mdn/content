@@ -66,7 +66,7 @@ The list of locales specified by the `locales` argument, after Unicode extension
 
 If the selected locale identifier had a Unicode extension sequence, that extension is now used to customize the constructed object or the behavior of the function. Each constructor or function supports only a subset of the keys defined for the Unicode extension, and the supported values often depend on the locale identifier. For example, the `"co"` key (collation) is only supported by {{jsxref("Intl.Collator")}}, and its `"phonebk"` value is only supported for German.
 
-## Constructor properties
+## Static properties
 
 - {{jsxref("Global_Objects/Intl/Collator/Collator", "Intl.Collator()")}}
   - : Constructor for collators, which are objects that enable language-sensitive string comparison.
@@ -74,6 +74,8 @@ If the selected locale identifier had a Unicode extension sequence, that extensi
   - : Constructor for objects that enable language-sensitive date and time formatting.
 - {{jsxref("Global_Objects/Intl/DisplayNames/DisplayNames", "Intl.DisplayNames()")}}
   - : Constructor for objects that enable the consistent translation of language, region and script display names.
+- {{jsxref("Global_Objects/Intl/DurationFormat/DurationFormat", "Intl.DurationFormat()")}}
+  - : Constructor for objects that enable locale-sensitive duration formatting.
 - {{jsxref("Global_Objects/Intl/ListFormat/ListFormat", "Intl.ListFormat()")}}
   - : Constructor for objects that enable language-sensitive list formatting.
 - {{jsxref("Global_Objects/Intl/Locale/Locale", "Intl.Locale()")}}
@@ -132,11 +134,13 @@ log("de-DE"); // 24.5.2012 26.254,39
 
   - {{jsxref("Intl/Collator", "Intl.Collator()")}}
   - {{jsxref("Intl/DateTimeFormat", "Intl.DateTimeFormat()")}}
+  - {{jsxref("Intl/DisplayNames", "Intl.DisplayNames()")}}
+  - {{jsxref("Intl/DurationFormat", "Intl.DurationFormat()")}}
   - {{jsxref("Intl/ListFormat", "Intl.ListFormat()")}}
+  - {{jsxref("Intl/Locale", "Intl.Locale()")}}
   - {{jsxref("Intl/NumberFormat", "Intl.NumberFormat()")}}
   - {{jsxref("Intl/PluralRules", "Intl.PluralRules()")}}
   - {{jsxref("Intl/RelativeTimeFormat", "Intl.RelativeTimeFormat()")}}
-  - {{jsxref("Intl/Locale", "Intl.Locale()")}}
   - {{jsxref("Intl/Segmenter", "Intl.Segmenter()")}}
 
 - Methods

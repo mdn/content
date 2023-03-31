@@ -56,7 +56,9 @@ const relIP = candidate.relatedAddress;
 const relPort = candidate.relatedPort;
 
 if (relIP && relPort) {
-  console.log(`Candidate type '${type}' — contact address: ${ip} ${port}, related address: ${relIP} ${relPort}`);
+  console.log(
+    `Candidate type '${type}' — contact address: ${ip} ${port}, related address: ${relIP} ${relPort}`
+  );
 } else {
   console.log(`Host candidate address is ${ip} ${port}`);
 }

@@ -17,21 +17,21 @@ A command can either be defined explicitly, with a textual label and optional ic
 
 This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes); in particular `title` can be used to describe the command, or provide usage hints.
 
-- {{HTMLAttrDef("checked")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
+- `checked` {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : Boolean attribute which indicates whether the command is selected. May only be used when the `type` attribute is `checkbox` or `radio`.
-- {{HTMLAttrDef("command")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
+- `command` {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : Specifies the ID of a separate element, indicating a command to be invoked indirectly. May not be used within a menu item that also includes the attributes `checked`, `disabled`, `icon`, `label`, `radiogroup` or `type`.
-- {{HTMLAttrDef("default")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
+- `default` {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : This Boolean attribute indicates use of the same command as the menu's subject element (such as a `button` or `input`).
-- {{HTMLAttrDef("disabled")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
+- `disabled` {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : Boolean attribute which indicates that the command is not available in the current state. Note that `disabled` is distinct from `hidden`; the `disabled` attribute is appropriate in any context where a change in circumstances might render the command relevant.
-- {{HTMLAttrDef("icon")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
+- `icon` {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : Image URL, used to provide a picture to represent the command.
-- {{HTMLAttrDef("label")}}
+- `label`
   - : The name of the command as shown to the user. Required when a `command` attribute is not present.
-- {{HTMLAttrDef("radiogroup")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
+- `radiogroup` {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : This attribute specifies the name of a group of commands to be toggled as radio buttons when selected. May only be used where the `type` attribute is `radio`.
-- {{HTMLAttrDef("type")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
+- `type` {{Deprecated_Inline}} {{Non-standard_Inline}}
 
   - : This attribute indicates the kind of command, and can be one of three values.
 

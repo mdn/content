@@ -34,11 +34,11 @@ None ({{jsxref("undefined")}}).
 ## Examples
 
 ```js
-let url = new URL('https://example.com?foo=1&bar=2');
+let url = new URL("https://example.com?foo=1&bar=2");
 let params = new URLSearchParams(url.search);
 
 // Add a third parameter.
-params.set('baz', 3);
+params.set("baz", 3);
 params.toString(); // "foo=1&bar=2&baz=3"
 ```
 

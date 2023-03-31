@@ -1,12 +1,6 @@
 ---
 title: Cross-Origin-Embedder-Policy
 slug: Web/HTTP/Headers/Cross-Origin-Embedder-Policy
-tags:
-  - HTTP
-  - HTTP Header
-  - Reference
-  - Response Header
-  - header
 browser-compat: http.headers.Cross-Origin-Embedder-Policy
 ---
 

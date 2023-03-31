@@ -35,7 +35,7 @@ Highlights:
 
 ### JavaScript
 
-- The "[temporal dead zone](/en-US/docs/Web/JavaScript/Reference/Statements/let#temporal_dead_zone_and_errors_with_let)" for [`let`](/en-US/docs/Web/JavaScript/Reference/Statements/let) declarations has been implemented. In conformance with ES2015 `let` semantics, the following situations now throw errors. See also this [newsgroup announcement](https://groups.google.com/forum/#!topic/mozilla.dev.platform/tezdW299Zds) and [Firefox bug 1001090](https://bugzil.la/1001090).
+- The "[temporal dead zone](/en-US/docs/Web/JavaScript/Reference/Statements/let#temporal_dead_zone_tdz)" for [`let`](/en-US/docs/Web/JavaScript/Reference/Statements/let) declarations has been implemented. In conformance with ES2015 `let` semantics, the following situations now throw errors. See also this [newsgroup announcement](https://groups.google.com/forum/#!topic/mozilla.dev.platform/tezdW299Zds) and [Firefox bug 1001090](https://bugzil.la/1001090).
 
   - Redeclaring existing variables or arguments using `let` within the same scope in function bodies is now a syntax error.
   - Using a variable declared using `let` in function bodies before the declaration is reached and evaluated is now a runtime error.
@@ -87,7 +87,7 @@ _No change._
 
 ## Network & Security
 
-- HTTP/2 has been implemented and activated, with AEAD ciphers only ([Firefox bug 1027720](https://bugzil.la/1027720)) and ({{bug('1047594')}}).
+- HTTP/2 has been implemented and activated, with AEAD ciphers only ([Firefox bug 1027720](https://bugzil.la/1027720) and [Firefox bug 1047594](https://bugzil.la/1047594)).
 - The HTTP/2 `alt-svc` header is now supported ([Firefox bug 1003448](https://bugzil.la/1003448)).
 - The Public Key Pinning Extension for HTTP (HPKP) has been implemented ([Firefox bug 787133](https://bugzil.la/787133)).
 - The [CSP](/en-US/docs/Web/HTTP/CSP) 1.1 `base-uri` [directive](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy) is now supported ([Firefox bug 1045897](https://bugzil.la/1045897)).

@@ -36,15 +36,15 @@ The code below first shows a stylesheet being constructed, and then {{domxref("C
 // Create an empty "constructed" stylesheet
 const sheet = new CSSStyleSheet();
 // Apply a rule to the sheet
-sheet.replaceSync('a { color: red; }');
+sheet.replaceSync("a { color: red; }");
 ```
 
 We then create a {{domxref("ShadowRoot")}} and pass the sheet object to `adoptedStyleSheets` inside an array.
 
 ```js
 // Create an element in the document and then create a shadow root:
-const node = document.createElement('div');
-const shadow = node.attachShadow({ mode: 'open' });
+const node = document.createElement("div");
+const shadow = node.attachShadow({ mode: "open" });
 
 //Adopt the sheet into the shadow DOM
 shadow.adoptedStyleSheets = [sheet];
@@ -54,8 +54,8 @@ We can still modify the stylesheets after they have been added to the array.
 Below we append a new rule to the same sheet using {{domxref("CSSStyleSheet.insertRule()")}}.
 
 ```js
- sheet.insertRule("* { background-color: blue; }");
- // The document will now have blue background.
+sheet.insertRule("* { background-color: blue; }");
+// The document will now have blue background.
 ```
 
 ### Append a new stylesheet
@@ -65,7 +65,7 @@ This is demonstrated for our shadow root object below using spread-syntax:
 
 ```js
 const extraSheet = new CSSStyleSheet();
-extraSheet.replaceSync('p { color: green; }');
+extraSheet.replaceSync("p { color: green; }");
 
 // Combine the existing sheets and new one
 shadow.adoptedStyleSheets = [...document.adoptedStyleSheets, extraSheet];

@@ -182,7 +182,7 @@ container.appendChild(secondClone);
           >script-supporting elements</a
         >. Also allowed as a child of a {{HTMLElement("colgroup")}}
         element that does <em>not</em> have a
-        {{htmlattrxref("span", "colgroup")}} attribute.
+        <a href="/en-US/docs/Web/HTML/Element/colgroup#span"><code>span</code></a> attribute.
       </td>
     </tr>
     <tr>

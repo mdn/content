@@ -69,5 +69,6 @@ specification is no longer being worked on.
 ## See also
 
 - [Polyfill of `setImmediate` in `core-js`](https://github.com/zloirock/core-js#setimmediate)
-- {{DOMxRef("Window.clearImmediate()")}}
 - [Microsoft `setImmediate` API Demo](https://jphpsf.github.io/setImmediate-shim-demo/)
+- {{DOMxRef("Window.clearImmediate()")}}
+- {{DOMxRef("Window.requestIdleCallback()")}}

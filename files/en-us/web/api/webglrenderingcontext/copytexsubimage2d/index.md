@@ -63,7 +63,7 @@ None ({{jsxref("undefined")}}).
 ## Examples
 
 ```js
-gl.copyTexSubImage2D(gl.TEXTURE_2D, 0, 0,0, 0, 0, 16, 16);
+gl.copyTexSubImage2D(gl.TEXTURE_2D, 0, 0, 0, 0, 0, 16, 16);
 ```
 
 ## Specifications

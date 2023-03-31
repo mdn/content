@@ -68,9 +68,9 @@ const dc = pc.createDataChannel("BackChannel");
 
 function sendMessage(msg) {
   const obj = {
-    "message": msg,
-    "timestamp": new Date()
-  }
+    message: msg,
+    timestamp: new Date(),
+  };
   dc.send(JSON.stringify(obj));
 }
 ```

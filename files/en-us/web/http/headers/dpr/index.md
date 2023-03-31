@@ -1,14 +1,9 @@
 ---
 title: DPR
 slug: Web/HTTP/Headers/DPR
-tags:
-  - DPR
-  - Client hints
-  - HTTP
-  - HTTP Header
-  - Request header
-  - Deprecated
-  - Non-standard
+status:
+  - deprecated
+  - non-standard
 browser-compat: http.headers.DPR
 ---
 
@@ -91,4 +86,4 @@ Content-DPR: 2.0
   - {{HTTPHeader("Width")}}
 
 - {{HTTPHeader("Accept-CH")}}
-- [HTTP Caching > Varying responses](/en-US/docs/Web/HTTP/Caching#varying_responses) and {{HTTPHeader("Vary")}}
+- [HTTP Caching > Vary](/en-US/docs/Web/HTTP/Caching#vary) and {{HTTPHeader("Vary")}}

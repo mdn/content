@@ -2,12 +2,10 @@
 title: CSSMathProduct.values
 slug: Web/API/CSSMathProduct/values
 page-type: web-api-instance-property
-status:
-  - experimental
 browser-compat: api.CSSMathProduct.values
 ---
 
-{{APIRef("CSS Typed Object Model API")}}{{SeeCompatTable}}
+{{APIRef("CSS Typed Object Model API")}}
 
 The **`CSSMathProduct.values`** read-only
 property of the {{domxref("CSSMathProduct")}} interface returns a

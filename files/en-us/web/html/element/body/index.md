@@ -152,7 +152,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
   - : Color of text for visited hypertext links.
     **Do not use this attribute! Use the CSS {{cssxref("color")}} property in conjunction with the {{cssxref(":visited")}} pseudo-class instead.**
 
-## Example
+## Examples
 
 ```html
 <html lang="en">
@@ -160,10 +160,14 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
     <title>Document title</title>
   </head>
   <body>
-    <p>This is a paragraph</p>
+    <p>The <code>&lt;body&gt;</code> HTML element represents the content of an HTML document. There can be only one <code>&lt;body&gt;</code> element in a document.</p>
   </body>
 </html>
 ```
+
+### Result
+
+{{EmbedLiveSample('Example')}}
 
 ## Specifications
 

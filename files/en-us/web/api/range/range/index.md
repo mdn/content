@@ -40,7 +40,7 @@ set its beginning and end positions using the {{domxref("Range.setStartBefore()"
 ### JavaScript
 
 ```js
-const paragraphs = document.querySelectorAll('p');
+const paragraphs = document.querySelectorAll("p");
 
 // Create new range
 const range = new Range();

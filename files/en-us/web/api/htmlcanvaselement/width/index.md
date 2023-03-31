@@ -8,7 +8,7 @@ browser-compat: api.HTMLCanvasElement.width
 {{APIRef("Canvas API")}}
 
 The **`HTMLCanvasElement.width`** property is a
-positive `integer` reflecting the {{htmlattrxref("width", "canvas")}} HTML
+positive `integer` reflecting the [`width`](/en-US/docs/Web/HTML/Element/canvas#width) HTML
 attribute of the {{HTMLElement("canvas")}} element interpreted in CSS pixels. When the
 attribute is not specified, or if it is set to an invalid value, like a negative, the
 default value of `300` is used.
@@ -45,6 +45,5 @@ console.log(canvas.width); // 300
 
 ## See also
 
-- The interface defining it, {{domxref("HTMLCanvasElement")}}.
-- The other property controlling the size of the canvas,
-  {{domxref("HTMLCanvasElement.height")}}.
+- {{domxref("HTMLCanvasElement")}}: Interface used to define the `HTMLCanvasElement.width` property
+- {{domxref("HTMLCanvasElement.height")}}: Other property used to control the size of the canvas

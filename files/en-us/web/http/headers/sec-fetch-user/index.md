@@ -1,13 +1,6 @@
 ---
 title: Sec-Fetch-User
 slug: Web/HTTP/Headers/Sec-Fetch-User
-tags:
-  - Sec-Fetch-User
-  - Fetch metadata request headers
-  - HTTP
-  - HTTP Header
-  - Reference
-  - Request header
 browser-compat: http.headers.Sec-Fetch-User
 ---
 

@@ -1,10 +1,6 @@
 ---
 title: Digest
 slug: Web/HTTP/Headers/Digest
-tags:
-  - HTTP
-  - HTTP Header
-  - Digest
 browser-compat: http.headers.Digest
 ---
 

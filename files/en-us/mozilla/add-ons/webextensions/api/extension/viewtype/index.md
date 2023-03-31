@@ -2,16 +2,6 @@
 title: extension.ViewType
 slug: Mozilla/Add-ons/WebExtensions/API/extension/ViewType
 page-type: webextension-api-type
-tags:
-  - API
-  - Add-ons
-  - Extension
-  - Extensions
-  - Non-standard
-  - Reference
-  - Type
-  - ViewType
-  - WebExtensions
 browser-compat: webextensions.api.extension.ViewType
 ---
 

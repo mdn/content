@@ -1,5 +1,5 @@
 ---
-title: 'Window: devicemotion event'
+title: "Window: devicemotion event"
 slug: Web/API/Window/devicemotion_event
 page-type: web-api-event
 browser-compat: api.Window.devicemotion_event
@@ -16,9 +16,9 @@ This event is not cancelable and does not bubble.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('devicemotion', (event) => { });
+addEventListener("devicemotion", (event) => {});
 
-ondevicemotion = (event) => { };
+ondevicemotion = (event) => {};
 ```
 
 ## Event type
@@ -42,12 +42,11 @@ A {{domxref("DeviceMotionEvent")}}. Inherits from {{domxref("Event")}}.
 
 ```js
 function handleMotionEvent(event) {
+  const x = event.accelerationIncludingGravity.x;
+  const y = event.accelerationIncludingGravity.y;
+  const z = event.accelerationIncludingGravity.z;
 
-    const x = event.accelerationIncludingGravity.x;
-    const y = event.accelerationIncludingGravity.y;
-    const z = event.accelerationIncludingGravity.z;
-
-    // Do something awesome.
+  // Do something awesome.
 }
 
 window.addEventListener("devicemotion", handleMotionEvent, true);

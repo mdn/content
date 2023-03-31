@@ -3,12 +3,11 @@ title: Gamepad.vibrationActuator
 slug: Web/API/Gamepad/vibrationActuator
 page-type: web-api-instance-property
 status:
-  - experimental
   - non-standard
 browser-compat: api.Gamepad.vibrationActuator
 ---
 
-{{APIRef("Gamepad")}}{{SeeCompatTable}}{{Non-standard_Header}}
+{{APIRef("Gamepad")}}{{Non-standard_Header}}
 
 The **`vibrationActuator`** read-only property of the {{domxref("Gamepad")}} interface returns a {{domxref("GamepadHapticActuator")}} object, which represents haptic feedback hardware available on the controller.
 

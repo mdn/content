@@ -45,7 +45,7 @@ let bestCandidate = {
   candidate: "",
   sdpMid: null,
   sdpMLineIndex: null,
-  priority: 0
+  priority: 0,
 };
 
 function handleCandidate(candidateString) {

@@ -92,7 +92,15 @@ const firsts = new Int32Array(/* … */);
 const counts = new Int32Array(/* … */);
 const instanceCounts = new Int32Array(/* … */);
 ext.multiDrawArraysInstancedWEBGL(
-   gl.TRIANGLES, firsts, 0, counts, 0, instanceCounts, 0, firsts.length);
+  gl.TRIANGLES,
+  firsts,
+  0,
+  counts,
+  0,
+  instanceCounts,
+  0,
+  firsts.length
+);
 ```
 
 ## Specifications
