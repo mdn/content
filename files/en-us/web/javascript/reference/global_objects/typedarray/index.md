@@ -173,8 +173,6 @@ All `TypedArray` subclasses also have the following static properties:
 
 - {{jsxref("TypedArray.BYTES_PER_ELEMENT")}}
   - : Returns a number value of the element size for the different `TypedArray` objects.
-- {{jsxref("TypedArray.name")}}
-  - : Returns the string value of the constructor [name](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/name) (e.g., `"Int8Array"`).
 
 ## Static methods
 
@@ -200,7 +198,7 @@ These properties are defined on `TypedArray.prototype` and shared by all `TypedA
 - {{jsxref("TypedArray.prototype.length")}}
   - : Returns the number of elements held in the typed array.
 - `TypedArray.prototype[@@toStringTag]`
-  - : The initial value of the [`TypedArray.prototype[@@toStringTag]`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) property is a getter that returns the same string as the typed array's [name](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/name). It returns `undefined` if the `this` value is not one of the typed array subclasses. This property is used in {{jsxref("Object.prototype.toString()")}}. However, because `TypedArray` also has its own [`toString()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/toString) method, this property is not used unless you call [`Object.prototype.toString.call()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/call) with a typed array as `thisArg`.
+  - : The initial value of the [`TypedArray.prototype[@@toStringTag]`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) property is a getter that returns the same string as the typed array constructor's name. It returns `undefined` if the `this` value is not one of the typed array subclasses. This property is used in {{jsxref("Object.prototype.toString()")}}. However, because `TypedArray` also has its own [`toString()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/toString) method, this property is not used unless you call [`Object.prototype.toString.call()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/call) with a typed array as `thisArg`.
 
 All `TypedArray` subclasses also have the following instance properties:
 
