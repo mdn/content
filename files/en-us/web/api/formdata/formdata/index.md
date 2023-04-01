@@ -24,7 +24,7 @@ new FormData(form, submitter)
 - `form` {{optional_inline}}
   - : An HTML {{HTMLElement("form")}} element — when specified, the {{domxref("FormData")}} object will be populated with the `form`'s current keys/values using the name property of each element for the keys and their submitted value for the values. It will also encode file input content.
 - `submitter` {{optional_inline}}
-  - : A {{Glossary("submit button")}} that is a member of the `form`. If the `submitter` has a `name` attribute or is an `{{HtmlElement('input/image', '&lt;input type="image"&gt;')}}`, its data [will be included](/en-US/docs/Glossary/Submit_button#Form_data_entries) in the {{domxref("FormData")}} object (e.g. `btnName=btnValue`).
+  - : A {{Glossary("submit button")}} that is a member of the `form`. If the `submitter` has a `name` attribute or is an `{{HtmlElement('input/image', '&lt;input type="image"&gt;')}}`, its data [will be included](/en-US/docs/Glossary/Submit_button#form_data_entries) in the {{domxref("FormData")}} object (e.g. `btnName=btnValue`).
 
 ### Exceptions
 
