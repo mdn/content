@@ -75,8 +75,8 @@ const controller = new AbortController();
 const signal = controller.signal;
 const url = "video.mp4";
 
-const downloadBtn = document.querySelector(".download");
-const abortBtn = document.querySelector(".abort");
+const downloadBtn = document.querySelector("#download");
+const abortBtn = document.querySelector("#abort");
 
 downloadBtn.addEventListener("click", async () => {
   try {
