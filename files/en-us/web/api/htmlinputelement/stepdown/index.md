@@ -27,8 +27,8 @@ including {{HTMLElement("input/date", "date")}}, {{HTMLElement("input/month", "m
   "number")}}, and {{HTMLElement("input/range", "range")}}.
 
 Given `<input id="myTime" type="time" max="17:00" step="900" value="17:00">`,
-invoking `myTime.step(3)` will change the value to 16:15, decrementing the
-time by `3 * 900`, or 45 minutes. `myTime.step()`, with no
+invoking `myTime.stepDown(3)` will change the value to 16:15, decrementing the
+time by `3 * 900`, or 45 minutes. `myTime.stepDown()`, with no
 parameter, would have resulted in `16:45`, as `n` defaults to
 `1`.
 
