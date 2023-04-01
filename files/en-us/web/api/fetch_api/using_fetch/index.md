@@ -200,10 +200,9 @@ const photos = document.querySelector('input[type="file"][multiple]');
 const formData = new FormData();
 
 formData.append("title", "My Vegas Vacation");
-let i = 0;
-for (const photo of photos.files) {
+
+for (const [i, photo] of photos.files.entries()) {
   formData.append(`photos_${i}`, photo);
-  i++;
 }
 
 uploadMultiple(formData);
