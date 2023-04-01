@@ -68,7 +68,7 @@ The constructor takes a `url` parameter, and an optional `base` parameter to use
 ```js
 const url = new URL("../cats", "http://www.example.com/dogs");
 console.log(url.hostname); // "www.example.com"
-console.log(url.pathname); // "/cats"
+console.log(url.pathname); // "/dogs"
 ```
 
 URL properties can be set to construct the URL:
