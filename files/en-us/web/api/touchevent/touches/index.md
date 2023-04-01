@@ -15,6 +15,13 @@ target element was at {{domxref("Element/touchstart_event", "touchstart")}} time
 You can think of it as how many separate fingers are able to be identified as touching
 the screen.
 
+One thing to note that the touches in `TouchEvent.touches[i]` doesn't neccessarily gives you i-th index of the array.Merely,the array is not ordered predictably and it depends upon implementation. A      developer cannot just **assume** a specific order,like the
+i-th element in the array being the i-th touch that happened,and the order in which touches
+happen is independent of the order of the list.To determine the latter,developers should rely
+on the the `touch` object IDs.
+
+
+
 ## Value
 
 A {{ domxref("TouchList") }} listing all the {{ domxref("Touch") }} objects for touch points that are still in contact with the touch surface, regardless of whether or not they've changed or what their target element was at `touchstart`
