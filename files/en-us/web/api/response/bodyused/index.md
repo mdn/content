@@ -32,7 +32,7 @@ When the user clicks "Use response", we check whether the response has been used
 <button id="reset">Reset</button>
 <br />
 <img id="my-image" src="" />
-<pre id="output"></pre>
+<pre id="log"></pre>
 ```
 
 #### JavaScript
@@ -41,7 +41,7 @@ When the user clicks "Use response", we check whether the response has been used
 const useResponse = document.querySelector("#use");
 const reset = document.querySelector("#reset");
 const myImage = document.querySelector("#my-image");
-const output = document.querySelector("#output");
+const log = document.querySelector("#log");
 
 const responsePromise = fetch(
   "https://upload.wikimedia.org/wikipedia/commons/7/77/Delete_key1.jpg"
@@ -50,7 +50,7 @@ const responsePromise = fetch(
 useResponse.addEventListener("click", async () => {
   const response = await responsePromise;
   if (response.bodyUsed) {
-    output.textContent = "Body has already been used!";
+    log.textContent = "Body has already been used!";
   } else {
     const result = await response.blob();
     const objectURL = URL.createObjectURL(result);
