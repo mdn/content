@@ -282,7 +282,6 @@
         "CSSImportRule",
         "CSSKeyframeRule",
         "CSSKeyframesRule",
-        "CSSImportRule",
         "CSSLayerBlockRule",
         "CSSLayerStatementRule",
         "CSSMediaRule",
