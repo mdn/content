@@ -477,7 +477,7 @@ if (window.fetch) {
 
 The `fetch` specification differs from `jQuery.ajax()` in the following significant ways:
 
-- The Promise returned from `fetch()` **won't reject on HTTP error status** even if the response is an HTTP 404 or 500. Instead, as soon as the server responds with headers, the Promise will resolve normally (with the {{domxref("Response/ok", "ok")}} property of the response set to false if the response isn't in the range 200–299), and it will only reject on network failure or if anything prevented the request from completing.
+- The promise returned from `fetch()` won't reject on HTTP errors even if the response is an HTTP 404 or 500. Instead, as soon as the server responds with headers, the promise will resolve (with the {{domxref("Response/ok", "ok")}} property of the response set to `false` if the response isn't in the range 200–299). The promise will only reject on network failure or if anything prevented the request from completing.
 - Unless `fetch()` is called with the [`credentials`](/en-US/docs/Web/API/fetch#credentials) option set to `include`, `fetch()`:
   - won't send cookies in cross-origin requests
   - won't set any cookies sent back in cross-origin responses
