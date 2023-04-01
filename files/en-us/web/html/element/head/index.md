@@ -18,7 +18,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 - `profile` {{deprecated_inline}} {{Non-standard_Inline}}
   - : The {{glossary("URI")}}s of one or more metadata profiles, separated by {{Glossary("whitespace", "white space")}}.
 
-## Example
+## Examples
 
 ```html
 <!DOCTYPE html>
