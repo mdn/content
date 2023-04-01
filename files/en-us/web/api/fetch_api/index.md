@@ -13,9 +13,7 @@ The Fetch API provides an interface for fetching resources (including across the
 
 ## Concepts and usage
 
-Fetch provides a definition of {{DOMxRef("Request")}} and {{DOMxRef("Response")}} objects (and other things involved with network requests). This will allow them to be used wherever they are needed in the future, whether it's for service workers, Cache API, and other similar things that handle or modify requests and responses, or any kind of use case that might require you to generate your responses programmatically.
-
-It also defines related concepts such as CORS and the HTTP Origin header semantics, supplanting their separate definitions elsewhere.
+The Fetch API uses {{DOMxRef("Request")}} and {{DOMxRef("Response")}} objects (and other things involved with network requests), as well as related concepts such as CORS and the HTTP Origin header semantics.
 
 For making a request and fetching a resource, use the {{DOMxRef("fetch()")}} method. It is a global method in both {{DOMxRef("Window")}} and {{DOMxRef("WorkerGlobalScope", "Worker")}} contexts. This makes it available in pretty much any context you might want to fetch resources in.
 
