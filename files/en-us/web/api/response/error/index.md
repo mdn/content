@@ -5,7 +5,7 @@ page-type: web-api-static-method
 browser-compat: api.Response.error
 ---
 
-{{APIRef("Fetch")}}
+{{APIRef("Fetch API")}}
 
 The **`error()`** method of the {{domxref("Response")}} interface returns a new `Response` object associated with a network error.
 

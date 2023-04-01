@@ -9,7 +9,7 @@ browser-compat: api.Window.requestAnimationFrame
 
 The **`window.requestAnimationFrame()`** method tells the
 browser that you wish to perform an animation and requests that the browser calls a
-specified function to update an animation before the next repaint. The method takes a
+specified function to update an animation right before the next repaint. The method takes a
 callback as an argument to be invoked before the repaint.
 
 > **Note:** Your callback routine must itself call

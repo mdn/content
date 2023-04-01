@@ -5,7 +5,7 @@ page-type: web-api-instance-property
 browser-compat: api.Request.bodyUsed
 ---
 
-{{APIRef("Fetch")}}
+{{APIRef("Fetch API")}}
 
 The read-only **`bodyUsed`** property of the
 {{domxref("Request")}} interface is a boolean value that indicates
