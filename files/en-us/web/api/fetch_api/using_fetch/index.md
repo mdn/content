@@ -201,7 +201,7 @@ const formData = new FormData();
 
 formData.append("title", "My Vegas Vacation");
 
-for (const [i, photo] of photos.files.entries()) {
+for (const [i, photo] of Array.from(photos.files).entries()) {
   formData.append(`photos_${i}`, photo);
 }
 
