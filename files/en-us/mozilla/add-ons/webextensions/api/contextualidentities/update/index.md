@@ -2,15 +2,6 @@
 title: contextualIdentities.update()
 slug: Mozilla/Add-ons/WebExtensions/API/contextualIdentities/update
 page-type: webextension-api-function
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Reference
-  - Update
-  - WebExtensions
-  - contextualIdentities
 browser-compat: webextensions.api.contextualIdentities.update
 ---
 

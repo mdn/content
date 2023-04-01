@@ -68,14 +68,14 @@ selection.
 const pickerOpts = {
   types: [
     {
-      description: 'Images',
+      description: "Images",
       accept: {
-        'image/*': ['.png', '.gif', '.jpeg', '.jpg']
-      }
+        "image/*": [".png", ".gif", ".jpeg", ".jpg"],
+      },
     },
   ],
   excludeAcceptAllOption: true,
-  multiple: false
+  multiple: false,
 };
 ```
 

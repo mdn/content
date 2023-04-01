@@ -249,7 +249,7 @@ Next, we create an HTML structure like the following, inserting it into our clip
 </article>
 ```
 
-After that, we create a combined {{domxref("Blob")}} out of the recorded audio chunks, and create an object URL pointing to it, using `window.URL.createObjectURL(blob)`. We then set the value of the {{HTMLElement("audio")}} element's {{htmlattrxref("src", "audio")}} attribute to the object URL, so that when the play button is pressed on the audio player, it will play the `Blob`.
+After that, we create a combined {{domxref("Blob")}} out of the recorded audio chunks, and create an object URL pointing to it, using `window.URL.createObjectURL(blob)`. We then set the value of the {{HTMLElement("audio")}} element's [`src`](/en-US/docs/Web/HTML/Element/audio#src) attribute to the object URL, so that when the play button is pressed on the audio player, it will play the `Blob`.
 
 Finally, we set an `onclick` handler on the delete button to be a function that deletes the whole clip HTML structure.
 

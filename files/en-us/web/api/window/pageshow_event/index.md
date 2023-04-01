@@ -23,8 +23,8 @@ This includes:
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('pageshow', (event) => { });
-onpageshow = (event) => { };
+addEventListener("pageshow", (event) => {});
+onpageshow = (event) => {};
 ```
 
 ## Event type

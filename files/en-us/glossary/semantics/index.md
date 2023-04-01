@@ -53,6 +53,7 @@ These are _some_ of the roughly 100 semantic [elements](/en-US/docs/Web/HTML/Ele
 - {{htmlelement("details")}}
 - {{htmlelement("figcaption")}}
 - {{htmlelement("figure")}}
+- {{htmlelement("form")}}
 - {{htmlelement("footer")}}
 - {{htmlelement("header")}}
 - {{htmlelement("main")}}
@@ -79,6 +80,7 @@ These are _some_ of the roughly 100 semantic [elements](/en-US/docs/Web/HTML/Ele
   - {{htmlelement("figcaption")}}
   - {{htmlelement("figure")}}
   - {{htmlelement("footer")}}
+  - {{htmlelement("form")}}
   - {{htmlelement("header")}}
   - {{htmlelement("main")}}
   - {{htmlelement("mark")}}

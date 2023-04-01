@@ -14,10 +14,6 @@ browser-compat: html.manifest.share_target
       <th scope="row">Type</th>
       <td><code>Object</code></td>
     </tr>
-    <tr>
-      <th scope="row">Mandatory</th>
-      <td>No</td>
-    </tr>
   </tbody>
 </table>
 

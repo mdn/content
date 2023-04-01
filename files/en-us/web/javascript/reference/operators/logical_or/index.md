@@ -19,13 +19,13 @@ non-Boolean value.
 ## Syntax
 
 ```js-nolint
-expr1 || expr2
+x || y
 ```
 
 ## Description
 
-If `expr1` can be converted to `true`, returns
-`expr1`; else, returns `expr2`.
+If `x` can be converted to `true`, returns
+`x`; else, returns `y`.
 
 If a value can be converted to `true`, the value is so-called
 {{Glossary("truthy")}}. If a value can be converted to `false`, the value is

@@ -80,4 +80,4 @@ Width: 1920
   - {{HTTPHeader("Viewport-Width")}}
 
 - {{HTTPHeader("Accept-CH")}}
-- [HTTP Caching > Varying responses](/en-US/docs/Web/HTTP/Caching#varying_responses) and {{HTTPHeader("Vary")}}
+- [HTTP Caching > Vary](/en-US/docs/Web/HTTP/Caching#vary) and {{HTTPHeader("Vary")}}

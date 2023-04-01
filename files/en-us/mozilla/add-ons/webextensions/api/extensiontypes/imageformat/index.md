@@ -2,16 +2,6 @@
 title: extensionTypes.ImageFormat
 slug: Mozilla/Add-ons/WebExtensions/API/extensionTypes/ImageFormat
 page-type: webextension-api-type
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - ImageFormat
-  - Non-standard
-  - Reference
-  - Type
-  - WebExtensions
-  - extensionTypes
 browser-compat: webextensions.api.extensionTypes.ImageFormat
 ---
 

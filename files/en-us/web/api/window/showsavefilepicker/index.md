@@ -65,10 +65,12 @@ The following function shows a file picker, with text files highlighted for sele
 ```js
 async function getNewFileHandle() {
   const opts = {
-    types: [{
-      description: 'Text file',
-      accept: {'text/plain': ['.txt']},
-    }],
+    types: [
+      {
+        description: "Text file",
+        accept: { "text/plain": [".txt"] },
+      },
+    ],
   };
   return await window.showSaveFilePicker(opts);
 }

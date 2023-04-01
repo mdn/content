@@ -21,6 +21,7 @@ If you are not sure what to do, you are always welcome to [ask for help](/en-US/
 The links in this section lead to detailed guides explaining how to do a particular contribution task that we are most interested in getting community help with, either because they are a critical function, and/or because they have a large backlog associated with them. Please consider helping out with these tasks before you consider contributing in other ways.
 
 <table class="standard-table">
+  <caption>Contribution Categories</caption>
   <thead>
     <tr>
       <th scope="col">Tasks</th>

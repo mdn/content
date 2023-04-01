@@ -7,14 +7,7 @@ browser-compat: javascript.builtins.Symbol.Symbol
 
 {{JSRef}}
 
-The `Symbol()` constructor returns a value of type **symbol**,
-but is incomplete as a constructor because it does not support the syntax
-"`new Symbol()`" and it is not intended to be subclassed. It may be used as
-the value of an
-[`extends`](/en-US/docs/Web/JavaScript/Reference/Classes/extends)
-clause of a `class` definition but a
-[`super`](/en-US/docs/Web/JavaScript/Reference/Operators/super)
-call to it will cause an exception.
+The **`Symbol()`** function returns primitive values of type Symbol.
 
 {{EmbedInteractiveExample("pages/js/symbol-constructor.html", "taller")}}
 

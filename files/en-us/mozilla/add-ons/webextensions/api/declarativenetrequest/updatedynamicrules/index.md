@@ -1,15 +1,7 @@
 ---
 title: declarativeNetRequest.updateDynamicRules
 slug: Mozilla/Add-ons/WebExtensions/API/declarativeNetRequest/updateDynamicRules
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Reference
-  - WebExtensions
-  - Method
-  - declarativeNetRequest
-  - updateDynamicRules
+page-type: webextension-api-function
 browser-compat: webextensions.api.declarativeNetRequest.updateDynamicRules
 ---
 

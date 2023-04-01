@@ -2,9 +2,9 @@
 title: Specification deviations
 slug: Web/SVG/Specification_Deviations
 page-type: guide
-tags:
-  - SVG
 ---
+
+{{SVGRef}}
 
 There are a few places where we have consciously decided to make [Gecko](/en-US/Gecko) deviate from or extend the SVG specification. This page lists those deviations/extensions and our reasoning for them.
 

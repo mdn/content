@@ -2,16 +2,6 @@
 title: tabs.MutedInfo
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/MutedInfo
 page-type: webextension-api-type
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - MutedInfo
-  - Non-standard
-  - Reference
-  - Type
-  - WebExtensions
-  - tabs
 browser-compat: webextensions.api.tabs.MutedInfo
 ---
 

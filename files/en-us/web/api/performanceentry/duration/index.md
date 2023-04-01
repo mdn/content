@@ -32,6 +32,7 @@ For the following entry types, `duration` is not applicable, and in this case th
 
 - `element`
 - `largest-contentful-paint`
+- `layout-shift`
 - `mark`
 - `paint`
 - `taskattribution`

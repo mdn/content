@@ -3,15 +3,6 @@ title: devtools.panels.ElementsPanel.setExpression()
 slug: >-
   Mozilla/Add-ons/WebExtensions/API/devtools/panels/ExtensionSidebarPane/setExpression
 page-type: webextension-api-function
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Reference
-  - WebExtensions
-  - devtools.panels
-  - setExpression
 browser-compat: webextensions.api.devtools.panels.ExtensionSidebarPane.setExpression
 ---
 

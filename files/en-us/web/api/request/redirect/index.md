@@ -5,7 +5,7 @@ page-type: web-api-instance-property
 browser-compat: api.Request.redirect
 ---
 
-{{APIRef("Fetch")}}
+{{APIRef("Fetch API")}}
 
 The **`redirect`** read-only property of the {{domxref("Request")}} interface contains the mode for how redirects are handled.
 

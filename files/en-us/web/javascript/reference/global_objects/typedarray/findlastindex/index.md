@@ -17,42 +17,22 @@ See also the {{jsxref("TypedArray.findLast()", "findLast()")}} method, which ret
 ## Syntax
 
 ```js-nolint
-// Arrow function
-findLastIndex((element) => { /* ... */ } )
-findLastIndex((element, index) => { /* ... */ } )
-findLastIndex((element, index, array) => { /* ... */ } )
-
-// Callback function
 findLastIndex(callbackFn)
 findLastIndex(callbackFn, thisArg)
-
-// Inline callback function
-findLastIndex(function(element) { /* ... */ })
-findLastIndex(function(element, index) { /* ... */ })
-findLastIndex(function(element, index, array){ /* ... */ })
-findLastIndex(function(element, index, array) { /* ... */ }, thisArg)
 ```
 
 ### Parameters
 
 - `callbackFn`
-
-  - : A function used to test elements in the typed array.
-
-    The function is called with the following arguments:
-
+  - : A function to execute for each element in the typed array. It should return a [truthy](/en-US/docs/Glossary/Truthy) value to indicate a matching element has been found, and a [falsy](/en-US/docs/Glossary/Falsy) value otherwise. The function is called with the following arguments:
     - `element`
-      - : The current element in the typed array.
+      - : The current element being processed in the typed array.
     - `index`
-      - : The index (position) of the current element in the typed array.
+      - : The index of the current element being processed in the typed array.
     - `array`
-      - : The typed array that `findLastIndex()` was called on.
-
-    The callback must return a [truthy](/en-US/docs/Glossary/Truthy) value to indicate an appropriate element has been found.
-    The index of this element is returned by `findLastIndex()`.
-
+      - : The typed array `findLastIndex()` was called upon.
 - `thisArg` {{optional_inline}}
-  - : Object to use as {{jsxref("Operators/this", "this")}} when executing `callbackFn`.
+  - : A value to use as `this` when executing `callbackFn`. See [iterative methods](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#iterative_methods).
 
 ### Return value
 

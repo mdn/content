@@ -2,16 +2,6 @@
 title: extension.isAllowedIncognitoAccess()
 slug: Mozilla/Add-ons/WebExtensions/API/extension/isAllowedIncognitoAccess
 page-type: webextension-api-function
-tags:
-  - API
-  - Add-ons
-  - Extension
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - isAllowedIncognitoAccess
 browser-compat: webextensions.api.extension.isAllowedIncognitoAccess
 ---
 

@@ -40,7 +40,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 - `type`
   - : The [content type](/en-US/docs/Glossary/MIME_type) of the resource specified by **data**. At least one of **data** and **type** must be defined.
 - `usemap`
-  - : A hash-name reference to a {{HTMLElement("map")}} element; that is a '#' followed by the value of a {{htmlattrxref("name", "map")}} of a map element.
+  - : A hash-name reference to a {{HTMLElement("map")}} element; that is a '#' followed by the value of a [`name`](/en-US/docs/Web/HTML/Element/map#name) of a map element.
 - `width`
   - : The width of the display resource, in [CSS pixels](https://drafts.csswg.org/css-values/#px). — (Absolute values only. [NO percentages](https://html.spec.whatwg.org/multipage/embedded-content.html#dimension-attributes))
 
@@ -70,7 +70,7 @@ Note that a `type` field is normally specified, but is not needed for YouTube vi
         <a href="/en-US/docs/Web/HTML/Content_categories#flow_content">Flow content</a>;
         <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content">phrasing content</a>;
         <a href="/en-US/docs/Web/HTML/Content_categories#embedded_content">embedded content</a>, palpable content; if the element has a
-        {{htmlattrxref("usemap","object")}} attribute, <a href="/en-US/docs/Web/HTML/Content_categories#interactive_content">interactive content</a>;
+        <a href="/en-US/docs/Web/HTML/Element/object#usemap"><code>usemap</code></a> attribute, <a href="/en-US/docs/Web/HTML/Content_categories#interactive_content">interactive content</a>;
         <a href="/en-US/docs/Web/HTML/Content_categories#form_listed">listed</a>,
         <a href="/en-US/docs/Web/HTML/Content_categories#form_submittable">submittable</a>
         <a href="/en-US/docs/Web/HTML/Content_categories#form-associated_content">form-associated</a> element.

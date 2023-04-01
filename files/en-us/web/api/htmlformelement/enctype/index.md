@@ -15,7 +15,7 @@ to submit the form to the server. Possible values are:
   element(s) to upload file data.
 - `text/plain`: Ambiguous format, human-readable content not reliably interpretable by computer.
 
-This value can be overridden by a {{htmlattrxref("formenctype", "button")}} attribute
+This value can be overridden by a [`formenctype`](/en-US/docs/Web/HTML/Element/button#formenctype) attribute
 on a {{HTMLElement("button")}} or {{HTMLElement("input")}} element.
 
 ## Value

@@ -2,11 +2,6 @@
 title: <textPath>
 slug: Web/SVG/Element/textPath
 page-type: svg-element
-tags:
-  - Element
-  - Reference
-  - SVG
-  - SVG Text Content
 browser-compat: svg.elements.textPath
 ---
 

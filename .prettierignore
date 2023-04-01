@@ -7,7 +7,7 @@ build/
 # A full pass on all Markdown files is being performed.
 # The following folders still need a full pass:
 /files/en-us/learn/**/*.md
-/files/en-us/mozilla/**/*.md
+/files/en-us/mozilla/add-ons/**/*.md
 /files/en-us/web/html/**/*.md
 /files/en-us/web/javascript/**/*.md
 /files/en-us/web/svg/**/*.md
@@ -16,4 +16,4 @@ build/
 # The /web/api folder is so large, it has been divided into multiple parts
 /files/en-us/web/api/**/*.md
 # Alphabetically 'allow' this range incrementally
-!/files/en-us/web/api/[a-v]*/**/*.md
+!/files/en-us/web/api/[a-w]*/**/*.md

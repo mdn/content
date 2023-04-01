@@ -14,7 +14,7 @@ The **logical OR assignment (`x ||= y`)** operator only assigns if `x` is {{Glos
 ## Syntax
 
 ```js-nolint
-expr1 ||= expr2
+x ||= y
 ```
 
 ## Description

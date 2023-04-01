@@ -199,7 +199,7 @@ The following methods can be used to manipulate paths of objects.
   - : Reports whether or not the specified point is contained in the current path.
 - {{domxref("CanvasRenderingContext2D.isPointInStroke()")}}
   - : Reports whether or not the specified point is inside the area contained by the stroking of a path.
-- {{domxref("CanvasRenderingContext2D.roundRect()")}} {{Experimental_Inline}}
+- {{domxref("CanvasRenderingContext2D.roundRect()")}}
   - : Addition to CanvasPath that allows users to render rectangles with rounded corners.
 
 ### Transformations

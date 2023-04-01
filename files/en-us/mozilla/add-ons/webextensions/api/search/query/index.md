@@ -1,14 +1,6 @@
 ---
 title: search.query()
 slug: Mozilla/Add-ons/WebExtensions/API/search/query
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Reference
-  - Search
-  - Search Engines
-  - WebExtensions
 browser-compat: webextensions.api.search.query
 ---
 

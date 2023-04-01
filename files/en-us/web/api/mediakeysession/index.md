@@ -7,7 +7,7 @@ browser-compat: api.MediaKeySession
 
 {{APIRef("EncryptedMediaExtensions")}}
 
-The **`MediaKeySession`** interface of the [EncryptedMediaExtensions API](/en-US/docs/Web/API/Encrypted_Media_Extensions_API) represents a context for message exchange with a content decryption module (CDM).
+The **`MediaKeySession`** interface of the [Encrypted Media Extensions API](/en-US/docs/Web/API/Encrypted_Media_Extensions_API) represents a context for message exchange with a content decryption module (CDM).
 
 {{InheritanceDiagram}}
 

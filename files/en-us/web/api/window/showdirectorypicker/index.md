@@ -38,7 +38,7 @@ showDirectoryPicker()
 
 ### Return value
 
-A {{domxref('FileSystemDirectoryHandle')}}.
+A {{jsxref("Promise")}} whose fulfillment handler receives a {{domxref('FileSystemDirectoryHandle')}} object.
 
 ### Exceptions
 

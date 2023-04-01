@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.GeneratorFunction.GeneratorFunction
 
 {{JSRef}}
 
-The **`GeneratorFunction()`** constructor creates a new {{jsxref("GeneratorFunction")}} object. In JavaScript, every [generator function](/en-US/docs/Web/JavaScript/Reference/Statements/function*) is actually a `GeneratorFunction` object.
+The **`GeneratorFunction()`** constructor creates {{jsxref("GeneratorFunction")}} objects.
 
 Note that `GeneratorFunction` is _not_ a global object. It can be obtained with the following code:
 
