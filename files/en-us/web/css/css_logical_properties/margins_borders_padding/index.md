@@ -150,4 +150,4 @@ The specification has flow-relative equivalents for the {{cssxref("border-radius
 
 The specification makes a suggestion for the four-value shorthands such as the `margin` property, however the final decision on how this should be indicated is as yet unresolved, and is discussed in [this issue](https://github.com/w3c/csswg-drafts/issues/1282).
 
-Using any four-value shorthand such as margin, padding, or border will currently use the physical versions, so if following the flow of the document is important, use the longhand properties for the time being.
+Using any four-value shorthand such as `margin`, `padding`, or `border` will currently use the physical versions, so if following the flow of the document is important, use the longhand properties for the time being.
