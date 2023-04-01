@@ -8,7 +8,7 @@ page-type: guide
 
 The [Fetch API](/en-US/docs/Web/API/Fetch_API) provides a JavaScript interface for accessing and manipulating parts of the [protocol](/en-US/docs/Glossary/Protocol), such as requests and responses. It also provides a global {{domxref("fetch()")}} method that provides an easy, logical way to fetch resources asynchronously across the network.
 
-This kind of functionality was previously achieved using {{domxref("XMLHttpRequest")}}. Fetch provides a better alternative that can be easily used by other technologies such as [service workers](/en-US/docs/Web/API/Service_Worker_API). Fetch also provides a single logical place to define other HTTP-related concepts such as [CORS](/en-US/docs/Web/HTTP/CORS) and extensions to HTTP.
+Unlike {{domxref("XMLHttpRequest")}} that is a callback-based API, Fetch is promise-based and provides a better alternative that can be easily used in [service workers](/en-US/docs/Web/API/Service_Worker_API). Fetch also integrates advanced HTTP concepts such as [CORS](/en-US/docs/Web/HTTP/CORS) and other extensions to HTTP.
 
 A basic fetch request looks like this:
 
