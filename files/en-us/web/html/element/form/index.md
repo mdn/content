@@ -117,6 +117,10 @@ The following attributes control behavior during form submission.
 </form>
 ```
 
+### Result
+
+{{EmbedLiveSample('Examples')}}
+
 ## Technical summary
 
 <table class="properties">
