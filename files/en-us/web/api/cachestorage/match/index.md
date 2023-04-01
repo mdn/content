@@ -2,15 +2,6 @@
 title: CacheStorage.match()
 slug: Web/API/CacheStorage/match
 page-type: web-api-instance-method
-tags:
-  - API
-  - CacheStorage
-  - Method
-  - Reference
-  - Service Workers
-  - Service worker API
-  - ServiceWorker
-  - match
 browser-compat: api.CacheStorage.match
 ---
 

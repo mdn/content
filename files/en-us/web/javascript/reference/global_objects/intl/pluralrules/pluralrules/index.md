@@ -2,21 +2,12 @@
 title: Intl.PluralRules() constructor
 slug: Web/JavaScript/Reference/Global_Objects/Intl/PluralRules/PluralRules
 page-type: javascript-constructor
-tags:
-  - Constructor
-  - Internationalization
-  - Intl
-  - JavaScript
-  - Localization
-  - PluralRules
-  - Reference
 browser-compat: javascript.builtins.Intl.PluralRules.PluralRules
 ---
 
 {{JSRef}}
 
-The **`Intl.PluralRules()`** constructor creates
-{{jsxref("Intl/PluralRules", "Intl.PluralRules")}} objects.
+The **`Intl.PluralRules()`** constructor creates {{jsxref("Intl.PluralRules")}} objects.
 
 ## Syntax
 

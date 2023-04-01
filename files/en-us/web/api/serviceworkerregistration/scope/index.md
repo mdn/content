@@ -2,13 +2,6 @@
 title: ServiceWorkerRegistration.scope
 slug: Web/API/ServiceWorkerRegistration/scope
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - Service Workers
-  - ServiceWorkerRegistration
-  - scope
 browser-compat: api.ServiceWorkerRegistration.scope
 ---
 

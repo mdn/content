@@ -2,14 +2,6 @@
 title: src
 slug: Web/CSS/@font-face/src
 page-type: css-at-rule-descriptor
-tags:
-  - "@font-face"
-  - At-rule descriptor
-  - CSS
-  - CSS Descriptor
-  - CSS Fonts
-  - CSS Property
-  - Reference
 browser-compat: css.at-rules.font-face.src
 ---
 
@@ -30,7 +22,7 @@ src: url(path/to/svgFont.svg#example); /* Fragment identifying font */
 src: local(font); /* Unquoted name */
 src: local(some font); /* Name containing space */
 src: local("font"); /* Quoted name */
-src: local("some font"); /* Single-quoted name containing a space */
+src: local("some font"); /* Quoted name containing a space */
 
 /* <tech(<font-tech>)> values */
 src: url(path/to/fontCOLRv1.otf) tech(color-COLRv1);

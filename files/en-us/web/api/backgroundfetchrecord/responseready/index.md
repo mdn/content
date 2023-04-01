@@ -2,13 +2,8 @@
 title: BackgroundFetchRecord.responseReady
 slug: Web/API/BackgroundFetchRecord/responseReady
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - responseReady
-  - BackgroundFetchRecord
-  - Experimental
+status:
+  - experimental
 browser-compat: api.BackgroundFetchRecord.responseReady
 ---
 

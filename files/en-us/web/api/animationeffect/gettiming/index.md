@@ -2,18 +2,10 @@
 title: AnimationEffect.getTiming()
 slug: Web/API/AnimationEffect/getTiming
 page-type: web-api-instance-method
-tags:
-  - API
-  - Animation
-  - Method
-  - Reference
-  - Timing
-  - waapi
-  - web animations api
 browser-compat: api.AnimationEffect.getTiming
 ---
 
-{{ APIRef("Web Animations API") }}
+{{ APIRef("Web Animations") }}
 
 The `AnimationEffect.getTiming()` method of the {{domxref("AnimationEffect")}} interface returns an object containing the timing properties for the Animation Effect.
 

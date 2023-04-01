@@ -2,19 +2,10 @@
 title: CSSNumericValue.add()
 slug: Web/API/CSSNumericValue/add
 page-type: web-api-instance-method
-tags:
-  - API
-  - CSS Typed Object Model API
-  - CSSNumericValue
-  - Experimental
-  - Houdini
-  - Method
-  - Reference
-  - add()
 browser-compat: api.CSSNumericValue.add
 ---
 
-{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
+{{APIRef("CSS Typed OM")}}
 
 The **`add()`** method of the
 {{domxref("CSSNumericValue")}} interface adds a supplied number to the

@@ -2,10 +2,6 @@
 title: MDN Web Docs Localization
 slug: MDN/Community/Contributing/Translated_content
 page-type: mdn-community-guide
-tags:
-  - meta
-  - community-guidelines
-  - governance
 ---
 
 {{MDNSidebar}}

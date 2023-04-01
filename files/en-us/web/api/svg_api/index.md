@@ -2,13 +2,6 @@
 title: SVG API
 slug: Web/API/SVG_API
 page-type: web-api-overview
-tags:
-  - API
-  - SVG
-  - Guide
-  - Overview
-  - Reference
-  - Web
 spec-urls: https://svgwg.org/svg2-draft/
 ---
 

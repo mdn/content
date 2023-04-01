@@ -2,13 +2,6 @@
 title: PannerNode.panningModel
 slug: Web/API/PannerNode/panningModel
 page-type: web-api-instance-property
-tags:
-  - API
-  - PannerNode
-  - Property
-  - Reference
-  - Web Audio API
-  - panningModel
 browser-compat: api.PannerNode.panningModel
 ---
 
@@ -27,7 +20,7 @@ An enum — see [`PanningModelType`](https://webaudio.github.io/web-audio-api/#i
 
 ## Examples
 
-See [`BaseAudioContext.createPanner()`](/en-US/docs/Web/API/BaseAudioContext/createPanner#example) for example code.
+See [`BaseAudioContext.createPanner()`](/en-US/docs/Web/API/BaseAudioContext/createPanner#examples) for example code.
 
 ## Specifications
 

@@ -1,12 +1,7 @@
 ---
-title: 'WorkerGlobalScope: languagechange event'
+title: "WorkerGlobalScope: languagechange event"
 slug: Web/API/WorkerGlobalScope/languagechange_event
 page-type: web-api-instance-event
-tags:
-  - API
-  - Event
-  - Reference
-  - WorkerGlobalScope
 browser-compat: api.WorkerGlobalScope.languagechange_event
 ---
 
@@ -21,9 +16,9 @@ This event is not cancelable and does not bubble.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('languagechange', (event) => { });
+addEventListener("languagechange", (event) => {});
 
-onlanguagechange = (event) => { };
+onlanguagechange = (event) => {};
 ```
 
 ## Event type
@@ -35,8 +30,8 @@ A generic {{domxref("Event")}}.
 You can use the `languagechange` event in an {{domxref("EventTarget/addEventListener", "addEventListener")}} method:
 
 ```js
-worker.addEventListener('languagechange', () => {
-  console.log('languagechange event detected!');
+worker.addEventListener("languagechange", () => {
+  console.log("languagechange event detected!");
 });
 ```
 
@@ -44,7 +39,7 @@ Or use the `onlanguagechange` event handler property:
 
 ```js
 worker.onlanguagechange = (event) => {
-  console.log('languagechange event detected!');
+  console.log("languagechange event detected!");
 };
 ```
 

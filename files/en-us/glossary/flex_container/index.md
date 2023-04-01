@@ -2,10 +2,6 @@
 title: Flex Container
 slug: Glossary/Flex_Container
 page-type: glossary-definition
-tags:
-  - CSS
-  - flex container
-  - flexbox
 ---
 
 A {{glossary("flexbox")}} layout is defined using the `flex` or `inline-flex` values of the `display` property on the parent item. This element then becomes a **flex container**, and each one of its children becomes a {{glossary("flex item")}}.

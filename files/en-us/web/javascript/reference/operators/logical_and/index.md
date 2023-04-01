@@ -2,12 +2,6 @@
 title: Logical AND (&&)
 slug: Web/JavaScript/Reference/Operators/Logical_AND
 page-type: javascript-operator
-tags:
-  - JavaScript
-  - Language feature
-  - Logical Operator
-  - Operator
-  - Reference
 browser-compat: javascript.operators.logical_and
 ---
 
@@ -22,7 +16,7 @@ More generally, the operator returns the value of the first {{Glossary("falsy")}
 ## Syntax
 
 ```js-nolint
-expr1 && expr2
+x && y
 ```
 
 ## Description

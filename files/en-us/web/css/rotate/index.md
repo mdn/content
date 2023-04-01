@@ -2,15 +2,6 @@
 title: rotate
 slug: Web/CSS/rotate
 page-type: css-property
-tags:
-  - CSS
-  - CSS Property
-  - Reference
-  - Rotate
-  - Transforms
-  - angle
-  - recipe:css-property
-  - rotation
 browser-compat: css.properties.rotate
 ---
 

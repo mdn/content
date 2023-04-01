@@ -2,16 +2,8 @@
 title: initial-letter
 slug: Web/CSS/initial-letter
 page-type: css-property
-tags:
-  - CSS
-  - CSS Inline
-  - CSS Property
-  - Experimental
-  - Graphics
-  - Layout
-  - Reference
-  - Web
-  - recipe:css-property
+status:
+  - experimental
 browser-compat: css.properties.initial-letter
 ---
 
@@ -100,6 +92,8 @@ The keyword value `normal`, or a `<number>` optionally followed by an `<integer>
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
 
 - {{cssxref("initial-letter-align")}}
 - [Drop caps in CSS](https://www.oddbird.net/2017/01/03/initial-letter/)

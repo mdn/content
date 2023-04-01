@@ -3,14 +3,6 @@ title: Intl.RelativeTimeFormat.supportedLocalesOf()
 slug: >-
   Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/supportedLocalesOf
 page-type: javascript-static-method
-tags:
-  - Internationalization
-  - Intl
-  - JavaScript
-  - Localization
-  - Method
-  - Reference
-  - RelativeTimeFormat
 browser-compat: javascript.builtins.Intl.RelativeTimeFormat.supportedLocalesOf
 ---
 
@@ -19,8 +11,6 @@ browser-compat: javascript.builtins.Intl.RelativeTimeFormat.supportedLocalesOf
 The **`Intl.RelativeTimeFormat.supportedLocalesOf()`** static method returns an array containing those of the provided locales that are supported in date and time formatting without having to fall back to the runtime's default locale.
 
 {{EmbedInteractiveExample("pages/js/intl-relativetimeformat-prototype-supportedlocalesof.html","shorter")}}
-
-<!-- The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone https://github.com/mdn/interactive-examples and send us a pull request. -->
 
 ## Syntax
 

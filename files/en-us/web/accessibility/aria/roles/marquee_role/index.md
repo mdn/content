@@ -1,15 +1,6 @@
 ---
 title: "ARIA: marquee role"
 slug: Web/Accessibility/ARIA/Roles/marquee_role
-tags:
-  - Accessibility
-  - ARIA
-  - roles
-  - Reference
-  - ARIA roles
-  - marquee
-  - ARIA marquee
-  - marquee role
 spec-urls: https://w3c.github.io/aria/#marquee
 ---
 

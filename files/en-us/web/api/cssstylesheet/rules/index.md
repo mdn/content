@@ -2,21 +2,8 @@
 title: CSSStyleSheet.rules
 slug: Web/API/CSSStyleSheet/rules
 page-type: web-api-instance-property
-tags:
-  - API
-  - CSS
-  - CSSOM
-  - CSSOM API
-  - CSSStyleSheet
-  - Layout
-  - Object Model
-  - Property
-  - Read-only
-  - Reference
-  - Style
-  - StyleSheet
-  - legacy
-  - Deprecated
+status:
+  - deprecated
 browser-compat: api.CSSStyleSheet.rules
 ---
 

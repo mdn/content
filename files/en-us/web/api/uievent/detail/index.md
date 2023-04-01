@@ -2,12 +2,6 @@
 title: UIEvent.detail
 slug: Web/API/UIEvent/detail
 page-type: web-api-instance-property
-tags:
-  - API
-  - DOM
-  - Property
-  - Read-only
-  - Reference
 browser-compat: api.UIEvent.detail
 ---
 

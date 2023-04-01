@@ -2,17 +2,6 @@
 title: StorageManager.estimate()
 slug: Web/API/StorageManager/estimate
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Quota
-  - Reference
-  - Secure context
-  - Storage
-  - Storage API
-  - StorageManager
-  - Usage
-  - estimate
 browser-compat: api.StorageManager.estimate
 ---
 
@@ -68,8 +57,10 @@ In this example, we obtain the usage estimates and present the percentage of sto
 
 ```js
 navigator.storage.estimate().then((estimate) => {
-  document.getElementById("percent").value =
-      (estimate.usage / estimate.quota * 100).toFixed(2);
+  document.getElementById("percent").value = (
+    (estimate.usage / estimate.quota) *
+    100
+  ).toFixed(2);
 });
 ```
 

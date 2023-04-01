@@ -2,15 +2,9 @@
 title: Managing screen orientation
 slug: Web/API/CSS_Object_Model/Managing_screen_orientation
 page-type: guide
-tags:
-  - API
-  - Advanced
-  - CSSOM View
-  - Guide
-  - Screen Orientation
 ---
 
-{{DefaultAPISidebar("Screen Orientation API")}}{{SeeCompatTable}}
+{{DefaultAPISidebar("Screen Orientation API")}}
 
 The term _screen orientation_ refers to whether a browser [viewport](/en-US/docs/Glossary/Viewport) is in landscape mode (that is, the width of the viewport is greater than its height), or else in portrait mode (the height of the viewport is greater than its width)
 

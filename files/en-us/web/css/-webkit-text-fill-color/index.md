@@ -2,11 +2,6 @@
 title: "-webkit-text-fill-color"
 slug: Web/CSS/-webkit-text-fill-color
 page-type: css-property
-tags:
-  - CSS
-  - CSS Property
-  - Reference
-  - recipe:css-property
 browser-compat: css.properties.-webkit-text-fill-color
 ---
 
@@ -20,11 +15,13 @@ The **`-webkit-text-fill-color`** CSS property specifies the fill [color](/en-US
 /* <color> values */
 -webkit-text-fill-color: red;
 -webkit-text-fill-color: #000000;
--webkit-text-fill-color: rgb(100, 200, 0);
+-webkit-text-fill-color: rgb(100 200 0);
 
 /* Global values */
 -webkit-text-fill-color: inherit;
 -webkit-text-fill-color: initial;
+-webkit-text-fill-color: revert;
+-webkit-text-fill-color: revert-layer;
 -webkit-text-fill-color: unset;
 ```
 

@@ -2,19 +2,10 @@
 title: CSSNumericValue.mul()
 slug: Web/API/CSSNumericValue/mul
 page-type: web-api-instance-method
-tags:
-  - API
-  - CSS Typed Object Model API
-  - CSSNumericValue
-  - Experimental
-  - Houdini
-  - Method
-  - Reference
-  - mul()
 browser-compat: api.CSSNumericValue.mul
 ---
 
-{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
+{{APIRef("CSS Typed OM")}}
 
 The **`mul()`** method of the
 {{domxref("CSSNumericValue")}} interface multiplies the `CSSNumericValue` by

@@ -2,11 +2,6 @@
 title: Using CSS transitions
 slug: Web/CSS/CSS_Transitions/Using_CSS_transitions
 page-type: guide
-tags:
-  - Advanced
-  - CSS
-  - CSS Transitions
-  - Guide
 spec-urls: https://drafts.csswg.org/css-transitions/
 ---
 
@@ -76,7 +71,7 @@ This example performs a four-second font size transition with a two-second delay
 <body>
   <p>
     The box below combines transitions for: width, height, background-color,
-    transform. Hover over the box to see these properties animated.
+    rotate. Hover over the box to see these properties animated.
   </p>
   <div class="box">Sample</div>
 </body>
@@ -92,7 +87,7 @@ This example performs a four-second font size transition with a two-second delay
   width: 100px;
   height: 100px;
   background-color: #0000ff;
-  transition: width 2s, height 2s, background-color 2s, transform 2s;
+  transition: width 2s, height 2s, background-color 2s, rotate 2s;
 }
 
 .box:hover {
@@ -239,7 +234,7 @@ With CSS you can make it smooth without any extra effort. Add a transition to th
 
 ### Detecting the start and completion of a transition
 
-You can use the {{domxref("HTMLElement/transitionend_event", "transitionend")}} event to detect that an animation has finished running. This is a {{domxref("TransitionEvent")}} object, which has two added properties beyond a typical {{domxref("Event")}} object:
+You can use the {{domxref("Element/transitionend_event", "transitionend")}} event to detect that an animation has finished running. This is a {{domxref("TransitionEvent")}} object, which has two added properties beyond a typical {{domxref("Event")}} object:
 
 - `propertyName`
   - : A string indicating the name of the CSS property whose transition completed.
@@ -252,7 +247,7 @@ As usual, you can use the {{domxref("EventTarget.addEventListener", "addEventLis
 el.addEventListener("transitionend", updateTransition, true);
 ```
 
-You detect the beginning of a transition using {{domxref("HTMLElement/transitionrun_event", "transitionrun")}} (fires before any delay) and {{domxref("HTMLElement/transitionstart_event", "transitionstart")}} (fires after any delay), in the same kind of fashion:
+You detect the beginning of a transition using {{domxref("Element/transitionrun_event", "transitionrun")}} (fires before any delay) and {{domxref("Element/transitionstart_event", "transitionstart")}} (fires after any delay), in the same kind of fashion:
 
 ```js
 el.addEventListener("transitionrun", signalStart, true);
@@ -267,5 +262,5 @@ el.addEventListener("transitionstart", signalStart, true);
 
 ## See also
 
-- The {{domxref("TransitionEvent")}} interface and the {{domxref("HTMLElement/transitionend_event", "transitionend")}} event
+- The {{domxref("TransitionEvent")}} interface and the {{domxref("Element/transitionend_event", "transitionend")}} event
 - [Using CSS animations](/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations)

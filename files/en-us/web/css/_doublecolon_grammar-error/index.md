@@ -2,12 +2,8 @@
 title: "::grammar-error"
 slug: Web/CSS/::grammar-error
 page-type: css-pseudo-element
-tags:
-  - CSS
-  - Experimental
-  - Pseudo-element
-  - Reference
-  - Selector
+status:
+  - experimental
 browser-compat: css.selectors.grammar-error
 ---
 

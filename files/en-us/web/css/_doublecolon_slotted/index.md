@@ -2,14 +2,6 @@
 title: "::slotted()"
 slug: Web/CSS/::slotted
 page-type: css-pseudo-element
-tags:
-  - "::slotted"
-  - CSS
-  - Layout
-  - Pseudo-element
-  - Reference
-  - Selector
-  - Web
 browser-compat: css.selectors.slotted
 ---
 

@@ -2,12 +2,6 @@
 title: Array.of()
 slug: Web/JavaScript/Reference/Global_Objects/Array/of
 page-type: javascript-static-method
-tags:
-  - Array
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Polyfill
 browser-compat: javascript.builtins.Array.of
 ---
 
@@ -96,5 +90,3 @@ console.log(Array.of.call({}, 1)); // [ 1 ]
 - [`Array()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Array)
 - {{jsxref("Array.from()")}}
 - {{jsxref("TypedArray.of()")}}
-- [`Array.of()` & `Array.from()` proposal](https://gist.github.com/rwaldron/1074126)
-- [`Array.of()` polyfill](https://gist.github.com/rwaldron/3186576)

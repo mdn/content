@@ -2,14 +2,6 @@
 title: Intl.NumberFormat
 slug: Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat
 page-type: javascript-class
-tags:
-  - Class
-  - Internationalization
-  - Intl
-  - JavaScript
-  - Localization
-  - NumberFormat
-  - Reference
 browser-compat: javascript.builtins.Intl.NumberFormat
 ---
 
@@ -28,6 +20,15 @@ The **`Intl.NumberFormat`** object enables language-sensitive number formatting.
 
 - {{jsxref("Intl/NumberFormat/supportedLocalesOf", "Intl.NumberFormat.supportedLocalesOf()")}}
   - : Returns an array containing those of the provided locales that are supported without having to fall back to the runtime's default locale.
+
+## Instance properties
+
+These properties are defined on `Intl.NumberFormat.prototype` and shared by all `Intl.NumberFormat` instances.
+
+- {{jsxref("Object/constructor", "Intl.NumberFormat.prototype.constructor")}}
+  - : The constructor function that created the instance object. For `Intl.NumberFormat` instances, the initial value is the {{jsxref("Intl/NumberFormat/NumberFormat", "Intl.NumberFormat")}} constructor.
+- `Intl.NumberFormat.prototype[@@toStringTag]`
+  - : The initial value of the [`@@toStringTag`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) property is the string `"Intl.NumberFormat"`. This property is used in {{jsxref("Object.prototype.toString()")}}.
 
 ## Instance methods
 

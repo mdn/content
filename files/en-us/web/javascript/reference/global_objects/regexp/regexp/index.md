@@ -2,18 +2,12 @@
 title: RegExp() constructor
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/RegExp
 page-type: javascript-constructor
-tags:
-  - Constructor
-  - JavaScript
-  - Reference
-  - RegExp
-  - Polyfill
 browser-compat: javascript.builtins.RegExp.RegExp
 ---
 
 {{JSRef}}
 
-The **`RegExp`** constructor creates a regular expression object for matching text with a pattern.
+The **`RegExp()`** constructor creates {{jsxref("RegExp")}} objects.
 
 For an introduction to regular expressions, read the [Regular Expressions chapter](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions) in the [JavaScript Guide](/en-US/docs/Web/JavaScript/Guide).
 

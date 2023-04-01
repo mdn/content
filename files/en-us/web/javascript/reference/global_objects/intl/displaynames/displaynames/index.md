@@ -2,26 +2,14 @@
 title: Intl.DisplayNames() constructor
 slug: Web/JavaScript/Reference/Global_Objects/Intl/DisplayNames/DisplayNames
 page-type: javascript-constructor
-tags:
-  - Constructor
-  - DisplayNames
-  - Internationalization
-  - Intl
-  - JavaScript
-  - Localization
-  - Reference
 browser-compat: javascript.builtins.Intl.DisplayNames.DisplayNames
 ---
 
 {{JSRef}}
 
-The **`Intl.DisplayNames()`** constructor creates
-{{jsxref("Intl/DisplayNames", "Intl.DisplayNames")}} objects that enable the consistent
-translation of language, region and script display names.
+The **`Intl.DisplayNames()`** constructor creates {{jsxref("Intl.DisplayNames")}} objects.
 
 {{EmbedInteractiveExample("pages/js/intl-displaynames.html")}}
-
-<!-- The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone https://github.com/mdn/interactive-examples and send us a pull request. -->
 
 ## Syntax
 

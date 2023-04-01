@@ -2,13 +2,6 @@
 title: SubtleCrypto.encrypt()
 slug: Web/API/SubtleCrypto/encrypt
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - SubtleCrypto
-  - Web Crypto API
-  - encrypt
 browser-compat: api.SubtleCrypto.encrypt
 ---
 

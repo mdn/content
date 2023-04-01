@@ -2,14 +2,6 @@
 title: Window.statusbar
 slug: Web/API/Window/statusbar
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTML DOM
-  - NeedsExample
-  - NeedsMarkupWork
-  - Property
-  - Reference
-  - Window
 browser-compat: api.Window.statusbar
 ---
 

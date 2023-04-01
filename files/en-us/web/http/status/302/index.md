@@ -1,11 +1,6 @@
 ---
 title: 302 Found
 slug: Web/HTTP/Status/302
-tags:
-  - HTTP
-  - HTTP Status Code
-  - Reference
-  - redirects
 browser-compat: http.status.302
 ---
 

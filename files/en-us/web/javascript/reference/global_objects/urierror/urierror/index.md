@@ -2,18 +2,12 @@
 title: URIError() constructor
 slug: Web/JavaScript/Reference/Global_Objects/URIError/URIError
 page-type: javascript-constructor
-tags:
-  - Constructor
-  - JavaScript
-  - Reference
-  - URIError
 browser-compat: javascript.builtins.URIError.URIError
 ---
 
 {{JSRef}}
 
-The **`URIError()`** constructor creates an error when a global
-URI handling function was used in a wrong way.
+The **`URIError()`** constructor creates {{jsxref("URIError")}} objects.
 
 ## Syntax
 

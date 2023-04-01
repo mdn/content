@@ -2,14 +2,6 @@
 title: Cache.keys()
 slug: Web/API/Cache/keys
 page-type: web-api-instance-method
-tags:
-  - API
-  - Cache
-  - Method
-  - Reference
-  - Service Workers
-  - ServiceWorker
-  - keys
 browser-compat: api.Cache.keys
 ---
 

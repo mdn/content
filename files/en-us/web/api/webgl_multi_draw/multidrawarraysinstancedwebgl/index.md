@@ -2,11 +2,6 @@
 title: WEBGL_multi_draw.multiDrawArraysInstancedWEBGL()
 slug: Web/API/WEBGL_multi_draw/multiDrawArraysInstancedWEBGL
 page-type: webgl-extension-method
-tags:
-  - Method
-  - Reference
-  - WebGL
-  - WebGL extension
 browser-compat: api.WEBGL_multi_draw.multiDrawArraysInstancedWEBGL
 ---
 
@@ -97,7 +92,15 @@ const firsts = new Int32Array(/* … */);
 const counts = new Int32Array(/* … */);
 const instanceCounts = new Int32Array(/* … */);
 ext.multiDrawArraysInstancedWEBGL(
-   gl.TRIANGLES, firsts, 0, counts, 0, instanceCounts, 0, firsts.length);
+  gl.TRIANGLES,
+  firsts,
+  0,
+  counts,
+  0,
+  instanceCounts,
+  0,
+  firsts.length
+);
 ```
 
 ## Specifications

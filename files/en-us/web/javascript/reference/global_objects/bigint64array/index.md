@@ -2,20 +2,14 @@
 title: BigInt64Array
 slug: Web/JavaScript/Reference/Global_Objects/BigInt64Array
 page-type: javascript-class
-tags:
-  - BigInt
-  - BigInt64Array
-  - Class
-  - JavaScript
-  - Reference
-  - TypedArray
-  - TypedArrays
 browser-compat: javascript.builtins.BigInt64Array
 ---
 
 {{JSRef}}
 
 The **`BigInt64Array`** typed array represents an array of 64-bit signed integers in the platform byte order. If control over byte order is needed, use {{jsxref("DataView")}} instead. The contents are initialized to `0n`. Once established, you can reference elements in the array using the object's methods, or by using standard array index syntax (that is, using bracket notation).
+
+`BigInt64Array` is a subclass of the hidden {{jsxref("TypedArray")}} class.
 
 ## Constructor
 
@@ -28,8 +22,6 @@ _Also inherits static properties from its parent {{jsxref("TypedArray")}}_.
 
 - {{jsxref("TypedArray.BYTES_PER_ELEMENT", "BigInt64Array.BYTES_PER_ELEMENT")}}
   - : Returns a number value of the element size. `8` in the case of `BigInt64Array`.
-- {{jsxref("TypedArray.name", "BigInt64Array.name")}}
-  - : Returns the string value of the constructor name. `"BigInt64Array"` in the case of `BigInt64Array`.
 
 ## Static methods
 
@@ -39,8 +31,12 @@ _Inherits static methods from its parent {{jsxref("TypedArray")}}_.
 
 _Also inherits instance properties from its parent {{jsxref("TypedArray")}}_.
 
+These properties are defined on `BigInt64Array.prototype` and shared by all `BigInt64Array` instances.
+
 - {{jsxref("TypedArray.BYTES_PER_ELEMENT", "BigInt64Array.prototype.BYTES_PER_ELEMENT")}}
   - : Returns a number value of the element size. `8` in the case of a `BigInt64Array`.
+- {{jsxref("Object/constructor", "BigInt64Array.prototype.constructor")}}
+  - : The constructor function that created the instance object. For `BigInt64Array` instances, the initial value is the {{jsxref("BigInt64Array/BigInt64Array", "BigInt64Array")}} constructor.
 
 ## Instance methods
 

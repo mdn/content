@@ -2,14 +2,8 @@
 title: WebTransport.incomingBidirectionalStreams
 slug: Web/API/WebTransport/incomingBidirectionalStreams
 page-type: web-api-instance-property
-tags:
-  - API
-  - Experimental
-  - incomingBidirectionalStreams
-  - Property
-  - Reference
-  - WebTransport
-  - WebTransport API
+status:
+  - experimental
 browser-compat: api.WebTransport.incomingBidirectionalStreams
 ---
 
@@ -34,7 +28,7 @@ async function receiveBidirectional() {
   const bds = transport.incomingBidirectionalStreams;
   const reader = bds.getReader();
   while (true) {
-    const {done, value} = await reader.read();
+    const { done, value } = await reader.read();
     if (done) {
       break;
     }
@@ -47,7 +41,7 @@ async function receiveBidirectional() {
 async function readData(readable) {
   const reader = readable.getReader();
   while (true) {
-    const {value, done} = await reader.read();
+    const { value, done } = await reader.read();
     if (done) {
       break;
     }

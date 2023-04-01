@@ -2,12 +2,6 @@
 title: DataView.prototype.setFloat32()
 slug: Web/JavaScript/Reference/Global_Objects/DataView/setFloat32
 page-type: javascript-instance-method
-tags:
-  - DataView
-  - JavaScript
-  - Method
-  - Prototype
-  - TypedArrays
 browser-compat: javascript.builtins.DataView.setFloat32
 ---
 
@@ -31,8 +25,8 @@ setFloat32(byteOffset, value, littleEndian)
   - : The offset, in byte, from the start of the view where to store the data.
 - `value`
   - : The value to set.
-- `littleEndian`
-  - : {{optional_inline}} Indicates whether the 32-bit float is stored in
+- `littleEndian` {{optional_inline}}
+  - : Indicates whether the 32-bit float is stored in
     {{Glossary("Endianness", "little- or big-endian")}} format. If `false` or
     `undefined`, a big-endian value is written.
 

@@ -2,17 +2,13 @@
 title: HighlightRegistry.clear()
 slug: Web/API/HighlightRegistry/clear
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - CSS Custom Highlight API
-  - Reference
-  - clear
+status:
+  - experimental
 browser-compat: api.HighlightRegistry.clear
 spec-urls: https://tc39.es/ecma262/multipage/keyed-collections.html#sec-map.prototype.clear
 ---
 
-{{APIRef("CSS Custom Highlight API")}}
+{{APIRef("CSS Custom Highlight API")}}{{SeeCompatTable}}
 
 The **`clear()`** method of the {{domxref("HighlightRegistry")}} interface removes all the {{domxref("Highlight")}} objects registered in the `HighlightRegistry`.
 
@@ -36,8 +32,8 @@ The code snippet below registers two highlight objects in the registry and then 
 const customHighlight1 = new Highlight(range1, range2);
 const customHighlight2 = new Highlight(range3, range4, range5);
 
-CSS.highlights.set('custom-highlight-1', customHighlight1);
-CSS.highlights.set('custom-highlight-2', customHighlight2);
+CSS.highlights.set("custom-highlight-1", customHighlight1);
+CSS.highlights.set("custom-highlight-2", customHighlight2);
 
 console.log(CSS.highlights.size); // 2
 

@@ -2,20 +2,6 @@
 title: '<title>: The Document Title element'
 slug: Web/HTML/Element/title
 page-type: html-element
-tags:
-  - Element
-  - HTML
-  - HTML document metadata
-  - HTML:Metadata content
-  - Page Name
-  - Page Title
-  - Reference
-  - Tab Name
-  - Tab Title
-  - Title
-  - Web
-  - Window Name
-  - Window Title
 browser-compat: html.elements.title
 ---
 
@@ -31,12 +17,12 @@ The **`<title>`** [HTML](/en-US/docs/Web/HTML) element defines the document's ti
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories"
+        <a href="/en-US/docs/Web/HTML/Content_categories"
           >Content categories</a
         >
       </th>
       <td>
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#metadata_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#metadata_content"
           >Metadata content</a
         >.
       </td>
@@ -140,3 +126,7 @@ If a form submission contains errors and the submission re-renders the current p
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- SVG [`<title>`](/en-US/docs/Web/SVG/Element/title) element

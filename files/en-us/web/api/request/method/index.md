@@ -2,12 +2,6 @@
 title: Request.method
 slug: Web/API/Request/method
 page-type: web-api-instance-property
-tags:
-  - API
-  - Fetch
-  - Property
-  - Reference
-  - request
 browser-compat: api.Request.method
 ---
 
@@ -28,7 +22,7 @@ In the following snippet, we create a new request using the
 the script), then save the method of the request in a variable:
 
 ```js
-const myRequest = new Request('flowers.jpg');
+const myRequest = new Request("flowers.jpg");
 const myMethod = myRequest.method; // GET
 ```
 

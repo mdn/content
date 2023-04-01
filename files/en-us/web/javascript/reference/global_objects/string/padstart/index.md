@@ -2,15 +2,6 @@
 title: String.prototype.padStart()
 slug: Web/JavaScript/Reference/Global_Objects/String/padStart
 page-type: javascript-instance-method
-tags:
-  - Advanced
-  - Intermediate
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - String
-  - Polyfill
 browser-compat: javascript.builtins.String.padStart
 ---
 
@@ -34,7 +25,7 @@ padStart(targetLength, padString)
 
 - `targetLength`
   - : The length of the resulting string once the current `str` has
-    been padded. If the value is less than `str.length`, then
+    been padded. If the value is less than or equal to `str.length`, then
     `str` is returned as-is.
 - `padString` {{optional_inline}}
   - : The string to pad the current `str` with. If

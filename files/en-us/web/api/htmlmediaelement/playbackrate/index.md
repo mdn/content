@@ -2,11 +2,6 @@
 title: HTMLMediaElement.playbackRate
 slug: Web/API/HTMLMediaElement/playbackRate
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTML DOM
-  - HTMLMediaElement
-  - Property
 browser-compat: api.HTMLMediaElement.playbackRate
 ---
 
@@ -27,7 +22,7 @@ A [`double`](https://en.wikipedia.org/wiki/Double-precision_floating-point_forma
 ## Examples
 
 ```js
-const obj = document.createElement('video');
+const obj = document.createElement("video");
 console.log(obj.playbackRate); // Expected Output: 1
 ```
 
@@ -41,4 +36,4 @@ console.log(obj.playbackRate); // Expected Output: 1
 
 ## See also
 
-- The interface defining it, {{domxref("HTMLMediaElement")}}.
+- {{domxref("HTMLMediaElement")}}: Interface used to define the `HTMLMediaElement.playbackRate` property

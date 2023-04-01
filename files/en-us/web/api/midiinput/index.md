@@ -2,14 +2,6 @@
 title: MIDIInput
 slug: Web/API/MIDIInput
 page-type: web-api-interface
-tags:
-  - API
-  - Draft
-  - Interface
-  - MIDIInput
-  - NeedsExample
-  - Reference
-  - Web MIDI API
 browser-compat: api.MIDIInput
 ---
 
@@ -41,8 +33,8 @@ inputs.forEach((input) => {
   console.log(input.name); /* inherited property from MIDIPort */
   input.onmidimessage = (message) => {
     console.log(message.data);
-  }
-})
+  };
+});
 ```
 
 ## Specifications

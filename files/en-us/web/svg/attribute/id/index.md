@@ -2,9 +2,6 @@
 title: id
 slug: Web/SVG/Attribute/id
 page-type: svg-attribute
-tags:
-  - SVG
-  - SVG Attribute
 browser-compat: svg.attributes.core.id
 ---
 

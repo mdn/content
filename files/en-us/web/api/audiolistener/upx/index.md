@@ -2,14 +2,6 @@
 title: AudioListener.upX
 slug: Web/API/AudioListener/upX
 page-type: web-api-instance-property
-tags:
-  - API
-  - Audio
-  - AudioListener
-  - Property
-  - Reference
-  - Web Audio API
-  - upX
 browser-compat: api.AudioListener.upX
 ---
 
@@ -25,7 +17,7 @@ An {{domxref("AudioParam")}}. Its default value is 0, and it can range between p
 
 ## Examples
 
-For more detailed example code see [`BaseAudioContext.createPanner()`](/en-US/docs/Web/API/BaseAudioContext/createPanner#example).
+For more detailed example code see [`BaseAudioContext.createPanner()`](/en-US/docs/Web/API/BaseAudioContext/createPanner#examples).
 
 ## Specifications
 

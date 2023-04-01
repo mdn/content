@@ -1,23 +1,6 @@
 ---
 title: Autoplay guide for media and Web Audio APIs
 slug: Web/Media/Autoplay_guide
-tags:
-  - API
-  - Audio
-  - Draft
-  - Guide
-  - HTML
-  - JavaScript
-  - Media
-  - Muting
-  - Playback
-  - Video
-  - Web
-  - Web Audio API
-  - autoplay
-  - mute
-  - muted
-  - play
 ---
 
 {{QuickLinksWithSubpages("/en-US/docs/Web/Media")}}
@@ -71,7 +54,7 @@ Now that we've covered what autoplay is and what can prevent autoplay from being
 
 ### The autoplay attribute
 
-The simplest way to automatically play content is to add the {{htmlattrxref("autoplay", "audio")}} attribute to your {{HTMLElement("audio")}} or {{HTMLElement("video")}} element, which sets the {{domxref("HTMLMediaElement.autoplay", "autoplay")}} property on the element to `true`.
+The simplest way to automatically play content is to add the [`autoplay`](/en-US/docs/Web/HTML/Element/audio#autoplay) attribute to your {{HTMLElement("audio")}} or {{HTMLElement("video")}} element, which sets the {{domxref("HTMLMediaElement.autoplay", "autoplay")}} property on the element to `true`.
 When `autoplay` is `true`, the media will automatically begin to play as soon as possible after the following have occurred:
 
 - The page is allowed to use autoplay functionality
@@ -92,12 +75,12 @@ An {{HTMLElement("audio")}} element using the `autoplay` attribute might look li
 
 If autoplay is important for your application, you may need to customize behavior based on whether or not autoplay is allowed, disallowed, or only supported for inaudible content.
 For example, if your application needs to autoplay a video and you know that the page only allows the autoplay of inaudible content, you can either mute it or supply a video with no audio track.
-Similarly, if you know that autoplay is not allowed at all, you might provide a default image for the video (using the [`poster`](/en-US/docs/Web/HTML/Element/video#attr-poster) attribute), or choose to defer loading the video until it is requested.
+Similarly, if you know that autoplay is not allowed at all, you might provide a default image for the video (using the [`poster`](/en-US/docs/Web/HTML/Element/video#poster) attribute), or choose to defer loading the video until it is requested.
 
 The [`Navigator.getAutoplayPolicy()`](/en-US/docs/Web/API/Navigator/getAutoplayPolicy) method can be used to check the autoplay policy for a type of media feature (i.e. all media elements, or all audio contexts) in a document, or to check whether a specific media element or audio context can autoplay.
 
 The example below shows how you pass the `mediaelement` string to get the autoplay policy for all media elements in the document (pass `audiocontext` to get the policy for audio contexts).
-The code assumes `video` is an `HTMLVideoElement` media element using the [`<video>`](/en-US/docs/Web/HTML/Element/video#attr-autoplay) tag or [`HTMLVideoElement`](/en-US/docs/Web/API/HTMLVideoElement), and that it is configured to autoplay with audio by default.
+The code assumes `video` is an `HTMLVideoElement` media element using the [`<video>`](/en-US/docs/Web/HTML/Element/video#autoplay) tag or [`HTMLVideoElement`](/en-US/docs/Web/API/HTMLVideoElement), and that it is configured to autoplay with audio by default.
 If autoplay is only allowed for inaudible content, we mute the audio; if autoplay is disallowed, we make sure that a placeholder image is displayed for the video.
 
 ```js
@@ -145,7 +128,7 @@ Consider this HTML for a media element:
 <video src="myvideo.mp4" id="video" autoplay></video>
 ```
 
-Here we have a {{HTMLElement("video")}} element whose {{htmlattrxref("autoplay", "video")}} attribute is set and with a {{domxref("HTMLMediaElement.play_event", "play")}} event handler set up; the event is handled by a function called `handleFirstPlay()`, which receives as input the `play` event.
+Here we have a {{HTMLElement("video")}} element whose [`autoplay`](/en-US/docs/Web/HTML/Element/video#autoplay) attribute is set and with a {{domxref("HTMLMediaElement.play_event", "play")}} event handler set up; the event is handled by a function called `handleFirstPlay()`, which receives as input the `play` event.
 
 `handleFirstPlay()` looks like this:
 
@@ -244,9 +227,9 @@ In addition to the browser-side management and control over autoplay functionali
 
 You can also specify an empty allowlist (`()`) to disable autoplay entirely, `*` to allow autoplay from all domains, or one or more specific origins from which media can be automatically played. These origins are separated by space characters.
 
-> **Note:** The specified Permissions Policy applies to the document and every {{HTMLElement("iframe")}} nested within it, unless those frames include an {{htmlattrxref("allow", "iframe")}}, which sets a new Permissions Policy for that frame and all frames nested within it.
+> **Note:** The specified Permissions Policy applies to the document and every {{HTMLElement("iframe")}} nested within it, unless those frames include an [`allow`](/en-US/docs/Web/HTML/Element/iframe#allow), which sets a new Permissions Policy for that frame and all frames nested within it.
 
-When using the {{htmlattrxref("allow", "iframe")}} attribute on an `<iframe>` to specify a Permissions Policy for that frame and its nested frames, you can also specify the value `'src'` to allow autoplay of media only from the same domain as that specified by the frame's {{htmlattrxref("src", "iframe")}} attribute.
+When using the [`allow`](/en-US/docs/Web/HTML/Element/iframe#allow) attribute on an `<iframe>` to specify a Permissions Policy for that frame and its nested frames, you can also specify the value `'src'` to allow autoplay of media only from the same domain as that specified by the frame's [`src`](/en-US/docs/Web/HTML/Element/iframe#src) attribute.
 
 ### Example: Allowing autoplay only from the document's domain
 
@@ -326,7 +309,7 @@ A common use case for autoplay is to automatically begin to play a video clip th
   muted></video>
 ```
 
-This video element is configured to include the user controls (typically play/pause, scrubbing through the video's timeline, volume control, and muting); also, since the {{htmlattrxref("muted", "video")}} attribute is included, and the {{htmlattrxref("playsinline", "video")}} attribute that is required for autoplay in Safari, the video will autoplay but with the audio muted. The user has the option, however, of re-enabling the audio by clicking on the unmute button in the controls.
+This video element is configured to include the user controls (typically play/pause, scrubbing through the video's timeline, volume control, and muting); also, since the [`muted`](/en-US/docs/Web/HTML/Element/video#muted) attribute is included, and the [`playsinline`](/en-US/docs/Web/HTML/Element/video#playsinline) attribute that is required for autoplay in Safari, the video will autoplay but with the audio muted. The user has the option, however, of re-enabling the audio by clicking on the unmute button in the controls.
 
 ## Browser configuration options
 
@@ -341,7 +324,10 @@ Browsers may have preferences that control the way autoplay works, or how autopl
 - `media.autoplay.allow-muted`
   - : A Boolean preference which if `true` (the default) allows audio media which is currently muted to be automatically played. If this has been changed to `false`, media with an audio track will not be permitted to play even if muted.
 - `media.autoplay.block-webaudio`
-  - : A Boolean preference which indicates whether to apply autoplay blocking to the [Web Audio API](/en-US/docs/Web/API/Web_Audio_API). The default is `false`, except on Nightly where it is `true`.
+  - : A Boolean preference that indicates whether to apply autoplay blocking to the [Web Audio API](/en-US/docs/Web/API/Web_Audio_API).
+    If `false`, web audio is always allowed to autoplay.
+    If `true`, audio contexts are only able to play on pages once there has been {{Glossary("Sticky activation")}}.
+    The default is set to `true`.
 - `media.autoplay.default`
   - : An integer preference which specifies whether per-domain configuration for autoplay support by default is allowed (`0`), blocked (`1`), or prompt-on-use (`2`). The default value is `0`.
 - `media.autoplay.enabled.user-gestures-needed` (Nightly builds only)

@@ -2,11 +2,6 @@
 title: Document.exitPointerLock()
 slug: Web/API/Document/exitPointerLock
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - mouse lock
 browser-compat: api.Document.exitPointerLock
 ---
 

@@ -2,13 +2,6 @@
 title: AudioParam.setValueAtTime()
 slug: Web/API/AudioParam/setValueAtTime
 page-type: web-api-instance-method
-tags:
-  - API
-  - AudioParam
-  - Method
-  - Reference
-  - Web Audio API
-  - setValueAtTime
 browser-compat: api.AudioParam.setValueAtTime
 ---
 

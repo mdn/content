@@ -2,19 +2,10 @@
 title: CSSUnparsedValue()
 slug: Web/API/CSSUnparsedValue/CSSUnparsedValue
 page-type: web-api-constructor
-tags:
-  - API
-  - CSS Typed Object Model API
-  - CSSUnparsedValue
-  - Constructor
-  - Experimental
-  - Houdini
-  - NeedsExample
-  - Reference
 browser-compat: api.CSSUnparsedValue.CSSUnparsedValue
 ---
 
-{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
+{{APIRef("CSS Typed OM")}}
 
 The **`CSSUnparsedValue()`** constructor
 creates a new {{domxref("CSSUnparsedValue")}} object which represents property values

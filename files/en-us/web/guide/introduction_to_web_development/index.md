@@ -1,14 +1,6 @@
 ---
 title: Introduction to Web development
 slug: Web/Guide/Introduction_to_Web_development
-tags:
-  - Beginner
-  - CSS
-  - CodingScripting
-  - Development
-  - HTML
-  - JavaScript
-  - Web
 ---
 
 <section id="Quick_links">

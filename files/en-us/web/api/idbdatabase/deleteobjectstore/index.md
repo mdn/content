@@ -2,14 +2,6 @@
 title: IDBDatabase.deleteObjectStore()
 slug: Web/API/IDBDatabase/deleteObjectStore
 page-type: web-api-instance-method
-tags:
-  - API
-  - Database
-  - IDBDatabase
-  - IndexedDB
-  - Method
-  - Reference
-  - Storage
 browser-compat: api.IDBDatabase.deleteObjectStore
 ---
 
