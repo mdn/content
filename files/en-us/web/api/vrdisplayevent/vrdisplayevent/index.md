@@ -2,16 +2,9 @@
 title: VRDisplayEvent()
 slug: Web/API/VRDisplayEvent/VRDisplayEvent
 page-type: web-api-constructor
-tags:
-  - API
-  - Constructor
-  - Deprecated
-  - Reference
-  - VR
-  - VRDisplayEvent
-  - Virtual Reality
-  - WebVR
-  - Non-standard
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.VRDisplayEvent.VRDisplayEvent
 ---
 
@@ -47,9 +40,9 @@ A new {{domxref("VRDisplayEvent")}} object.
 ## Examples
 
 ```js
-const myEventObject = new VRDisplayEvent('custom', {
+const myEventObject = new VRDisplayEvent("custom", {
   display: vrDisplay,
-  reason: 'Custom reason'
+  reason: "Custom reason",
 });
 ```
 

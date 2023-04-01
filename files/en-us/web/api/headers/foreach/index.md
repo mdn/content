@@ -2,16 +2,10 @@
 title: Headers.forEach()
 slug: Web/API/Headers/forEach
 page-type: web-api-instance-method
-tags:
-  - API
-  - Fetch API
-  - Headers
-  - Method
-  - Reference
 browser-compat: api.Headers.forEach
 ---
 
-{{APIRef}}
+{{APIRef("Fetch API")}}
 
 The **`Headers.forEach()`** method executes a callback function once per each key/value pair in the [`Headers`](/en-US/docs/Web/API/Headers) object.
 
@@ -65,7 +59,7 @@ myHeaders.append("compression", "gzip");
 // Display the key/value pairs
 myHeaders.forEach((value, key) => {
   console.log(`${key} ==> ${value}`);
-})
+});
 ```
 
 The result is:

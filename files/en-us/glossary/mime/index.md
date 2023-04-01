@@ -1,10 +1,7 @@
 ---
-title: mime
-slug: Glossary/mime
-tags:
-  - Beginner
-  - Infrastructure
-  - MIME
+title: MIME
+slug: Glossary/MIME
+page-type: glossary-definition
 ---
 
 **MIME** "Multipurpose internet mail extensions" is a standard to describe documents in other forms beside ASCII text, e.g. audio, video and images.

@@ -2,13 +2,6 @@
 title: Worker.terminate()
 slug: Web/API/Worker/terminate
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - Web Workers
-  - Worker
-  - terminate
 browser-compat: api.Worker.terminate
 ---
 
@@ -35,7 +28,7 @@ None ({{jsxref("undefined")}}).
 The following code snippet shows creation of a {{domxref("Worker")}} object using the {{domxref("Worker.Worker", "Worker()")}} constructor, which is then immediately terminated.
 
 ```js
-const myWorker = new Worker('worker.js');
+const myWorker = new Worker("worker.js");
 
 myWorker.terminate();
 ```

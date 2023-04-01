@@ -1,16 +1,7 @@
 ---
 title: browserAction.enable()
 slug: Mozilla/Add-ons/WebExtensions/API/browserAction/enable
-tags:
-  - API
-  - Add-ons
-  - Enable
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - browserAction
+page-type: webextension-api-function
 browser-compat: webextensions.api.browserAction.enable
 ---
 

@@ -2,18 +2,12 @@
 title: Symbol.isConcatSpreadable
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/isConcatSpreadable
 page-type: javascript-static-data-property
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Property
-  - Symbol
-  - Polyfill
 browser-compat: javascript.builtins.Symbol.isConcatSpreadable
 ---
 
 {{JSRef}}
 
-The **`Symbol.isConcatSpreadable`** well-known symbol is used to configure if an object should be flattened to its array elements when using the {{jsxref("Array.prototype.concat()")}} method.
+The **`Symbol.isConcatSpreadable`** static data property represents the well-known symbol used to configure if an object should be flattened to its array elements when using the {{jsxref("Array.prototype.concat()")}} method.
 
 {{EmbedInteractiveExample("pages/js/symbol-isconcatspreadable.html")}}
 

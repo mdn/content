@@ -1,16 +1,7 @@
 ---
 title: extension.getExtensionTabs()
 slug: Mozilla/Add-ons/WebExtensions/API/extension/getExtensionTabs
-tags:
-  - API
-  - Add-ons
-  - Extension
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - getExtensionTabs
+page-type: webextension-api-function
 browser-compat: webextensions.api.extension.getExtensionTabs
 ---
 

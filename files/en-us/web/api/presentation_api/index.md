@@ -2,12 +2,8 @@
 title: Presentation API
 slug: Web/API/Presentation_API
 page-type: web-api-overview
-tags:
-  - API
-  - Experimental
-  - NeedsContent
-  - Presentation API
-  - Reference
+status:
+  - experimental
 browser-compat: api.Presentation
 ---
 
@@ -236,8 +232,8 @@ In `presentation.html`:
 
 ```js
 const addConnection = (connection) => {
-  window.onmessage = (message) => {
-    if (message.data === "Say hello") window.send("hello");
+  connection.onmessage = (message) => {
+    if (message.data === "Say hello") connection.send("hello");
   };
 };
 

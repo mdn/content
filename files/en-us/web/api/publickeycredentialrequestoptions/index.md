@@ -2,14 +2,7 @@
 title: PublicKeyCredentialRequestOptions
 slug: Web/API/PublicKeyCredentialRequestOptions
 page-type: web-api-interface
-tags:
-  - API
-  - Dictionary
-  - PublicKeyCredentialRequestOptions
-  - Reference
-  - Web Authentication API
-  - WebAuthn
-browser-compat: api.PublicKeyCredentialRequestOptions
+spec-urls: https://w3c.github.io/webauthn/#dictdef-publickeycredentialrequestoptions
 ---
 
 {{APIRef("Web Authentication API")}}{{securecontext_header}}
@@ -39,46 +32,46 @@ None.
 
 ```js
 const options = {
-  challenge: new Uint8Array([/* bytes sent from the server */]),
-  rpId: "example.com", /* will only work if the current domain
-                         is something like foo.example.com */
+  challenge: new Uint8Array([
+    /* bytes sent from the server */
+  ]),
+  rpId: "example.com" /* will only work if the current domain
+                         is something like foo.example.com */,
   userVerification: "preferred",
-  timeout: 60000,     // Wait for a minute
+  timeout: 60000, // Wait for a minute
   allowCredentials: [
     {
       transports: "usb",
       type: "public-key",
-      id: new Uint8Array(26) // actually provided by the server
+      id: new Uint8Array(26), // actually provided by the server
     },
     {
       transports: "internal",
       type: "public-key",
-      id: new Uint8Array(26) // actually provided by the server
-    }
+      id: new Uint8Array(26), // actually provided by the server
+    },
   ],
   extensions: {
-    uvm: true,  // RP wants to know how the user was verified
+    uvm: true, // RP wants to know how the user was verified
     loc: false,
-    txAuthSimple: "Could you please verify yourself?"
-  }
+    txAuthSimple: "Could you please verify yourself?",
+  },
 };
 
-navigator.credentials.get({ "publicKey": options })
-    .then((credentialInfoAssertion) => {
+navigator.credentials
+  .get({ publicKey: options })
+  .then((credentialInfoAssertion) => {
     // send assertion response back to the server
     // to proceed with the control of the credential
-}).catch((err) => {
-     console.error(err);
-});
+  })
+  .catch((err) => {
+    console.error(err);
+  });
 ```
 
 ## Specifications
 
 {{Specifications}}
-
-## Browser compatibility
-
-{{Compat}}
 
 ## See also
 

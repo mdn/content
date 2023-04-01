@@ -1,16 +1,7 @@
 ---
 title: extension.onRequestExternal
 slug: Mozilla/Add-ons/WebExtensions/API/extension/onRequestExternal
-tags:
-  - API
-  - Add-ons
-  - Event
-  - Extension
-  - Extensions
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - onRequestExternal
+page-type: webextension-api-event
 browser-compat: webextensions.api.extension.onRequestExternal
 ---
 

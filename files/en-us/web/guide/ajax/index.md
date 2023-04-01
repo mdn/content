@@ -1,13 +1,6 @@
 ---
 title: Ajax
 slug: Web/Guide/AJAX
-tags:
-  - AJAX
-  - DOM
-  - JSON
-  - JavaScript
-  - References
-  - XMLHttpRequest
 ---
 
 <section id="Quick_links">
@@ -24,8 +17,6 @@ tags:
   </ol>
 </section>
 
-## Getting Started
-
 **Asynchronous JavaScript and XML**, or [**Ajax**](https://www.semanticscholar.org/paper/Ajax%3A-A-New-Approach-to-Web-Applications-Garrett/c440ae765ff19ddd3deda24a92ac39cef9570f1e?p2df), is not a technology in itself, but rather an approach to using a number of existing technologies together, including [HTML](/en-US/docs/Web/HTML) or [XHTML](/en-US/docs/Glossary/XHTML), [CSS](/en-US/docs/Web/CSS), [JavaScript](/en-US/docs/Web/JavaScript), [DOM](/en-US/docs/Web/API/Document_Object_Model), [XML](/en-US/docs/Web/XML), [XSLT](/en-US/docs/Web/XSLT), and most importantly the {{domxref("XMLHttpRequest")}} object.
 When these technologies are combined in the Ajax model, web applications are able to make quick, incremental updates to the user interface without reloading the entire browser page. This makes the application faster and more responsive to user actions.
 
@@ -36,9 +27,7 @@ Although X in Ajax stands for XML, {{glossary("JSON")}} is preferred because it 
 - [Getting Started](/en-US/docs/Web/Guide/AJAX/Getting_Started)
   - : This article guides you through the Ajax basics and gives you two simple hands-on examples to get you started.
 - [Using the `XMLHttpRequest` API](/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)
-
   - : The {{domxref("XMLHttpRequest")}} API is the core of Ajax. This article will explain how to use some Ajax techniques, like:
-
     - [Analyzing and manipulating the response of the server](/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest#handling_responses)
     - [Monitoring the progress of a request](/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest#monitoring_progress)
     - [Submitting forms and upload binary files](/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest#submitting_forms_and_uploading_files) – in _pure_ Ajax, or using {{domxref("FormData")}} objects
@@ -50,7 +39,7 @@ Although X in Ajax stands for XML, {{glossary("JSON")}} is preferred because it 
 - [XML](/en-US/docs/Web/XML)
   - : The **Extensible Markup Language (XML)** is a W3C-recommended general-purpose markup language for creating special-purpose markup languages. It is a simplified subset of SGML, capable of describing many kinds of data. Its primary purpose is to facilitate the sharing of data across different systems, particularly systems connected via the Internet.
 - [Parsing and serializing XML](/en-US/docs/Web/Guide/Parsing_and_serializing_XML)
-  - : How to parse an XML document from a string, a file or via JavaScript and how to serialize XML documents to strings, JavaScript Object trees (JXON) or files.
+  - : How to parse an XML document from a string, a file or via JavaScript and how to serialize XML documents to strings or files.
 - [XPath](/en-US/docs/Web/XPath)
   - : XPath stands for **X**ML **Path** Language, it uses a non-XML syntax that provides a flexible way of addressing (pointing to) different parts of an [XML](/en-US/docs/Web/XML) document. As well as this, it can also be used to test addressed nodes within a document to determine whether they match a pattern or not.
 - {{domxref("FileReader")}} API

@@ -1,5 +1,5 @@
 ---
-title: ":nth-last-col"
+title: ":nth-last-col()"
 slug: Web/CSS/:nth-last-col
 page-type: css-pseudo-class
 browser-compat: css.selectors.nth-last-col
@@ -18,12 +18,14 @@ The **`:nth-last-col()`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/
 
 ## Syntax
 
-The `nth-last-col` pseudo-class is specified with a single argument, which represents the pattern for matching elements.
+The `nth-last-col()` pseudo-class is specified with a single argument, which represents the pattern for matching elements. It uses `:nth-last-col(An+B)` syntax.
 
 See {{Cssxref(":nth-child")}} for a more detailed explanation of its syntax.
 
-```
-:nth-last-col
+```css
+:nth-last-col(An + B) {
+  /* ... */
+}
 ```
 
 ## Examples

@@ -2,16 +2,8 @@
 title: USBDevice.controlTransferOut()
 slug: Web/API/USBDevice/controlTransferOut
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - USB
-  - USBDevice
-  - WebUSB
-  - WebUSB API
-  - controlTransferOut
-  - Experimental
+status:
+  - experimental
 browser-compat: api.USBDevice.controlTransferOut
 ---
 

@@ -2,13 +2,6 @@
 title: EventSource.url
 slug: Web/API/EventSource/url
 page-type: web-api-instance-property
-tags:
-  - API
-  - EventSource
-  - Property
-  - Reference
-  - Server-sent events
-  - URL
 browser-compat: api.EventSource.url
 ---
 
@@ -25,7 +18,7 @@ A string representing the URL of the source.
 ## Examples
 
 ```js
-const evtSource = new EventSource('sse.php');
+const evtSource = new EventSource("sse.php");
 console.log(evtSource.url);
 ```
 

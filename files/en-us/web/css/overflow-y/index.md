@@ -2,12 +2,6 @@
 title: overflow-y
 slug: Web/CSS/overflow-y
 page-type: css-property
-tags:
-  - CSS
-  - CSS Box Model
-  - CSS Property
-  - Reference
-  - recipe:css-property
 browser-compat: css.properties.overflow-y
 ---
 
@@ -103,8 +97,8 @@ If {{cssxref("overflow-x")}} is `hidden`, `scroll` or `auto` and this property i
   </li>
 
   <li>
-    <code>overflow-y:auto</code> — on most browser, equivalent to
-    <code>scroll</code>
+    <code>overflow-y:auto</code> — equivalent to <code>scroll</code>
+    on most browsers
     <div id="div4">
       Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
       tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim

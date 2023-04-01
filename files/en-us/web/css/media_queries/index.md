@@ -2,13 +2,6 @@
 title: Media queries
 slug: Web/CSS/Media_Queries
 page-type: css-module
-tags:
-  - CSS
-  - Guide
-  - Media Queries
-  - Overview
-  - Reference
-  - Responsive Design
 spec-urls:
   - https://drafts.csswg.org/mediaqueries/
   - https://drafts.csswg.org/css-conditional/
@@ -32,9 +25,9 @@ When designing reusable HTML components, you may also use [container queries](/e
 
 In [HTML](/en-US/docs/Web/HTML), media queries can be applied to various elements:
 
-- In the {{HTMLElement("link")}} element's {{htmlattrxref("media", "link")}} attribute, they define the media to which a linked resource (typically CSS) should be applied.
-- In the {{HTMLElement("source")}} element's {{htmlattrxref("media", "source")}} attribute, they define the media to which that source should be applied. (This is only valid inside {{HTMLElement("picture")}} elements.)
-- In the {{HTMLElement("style")}} element's {{htmlattrxref("media", "style")}} attribute, they define the media to which the style should be applied.
+- In the {{HTMLElement("link")}} element's [`media`](/en-US/docs/Web/HTML/Element/link#media) attribute, they define the media to which a linked resource (typically CSS) should be applied.
+- In the {{HTMLElement("source")}} element's [`media`](/en-US/docs/Web/HTML/Element/source#media) attribute, they define the media to which that source should be applied. (This is only valid inside {{HTMLElement("picture")}} elements.)
+- In the {{HTMLElement("style")}} element's [`media`](/en-US/docs/Web/HTML/Element/style#media) attribute, they define the media to which the style should be applied.
 
 ### Media queries in JavaScript
 

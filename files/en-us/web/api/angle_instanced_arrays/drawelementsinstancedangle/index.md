@@ -2,13 +2,6 @@
 title: ANGLE_instanced_arrays.drawElementsInstancedANGLE()
 slug: Web/API/ANGLE_instanced_arrays/drawElementsInstancedANGLE
 page-type: web-api-instance-method
-tags:
-  - ANGLE_instanced_arrays
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGL extension
 browser-compat: api.ANGLE_instanced_arrays.drawElementsInstancedANGLE
 ---
 

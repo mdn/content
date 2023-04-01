@@ -2,12 +2,6 @@
 title: CSSCounterStyleRule.prefix
 slug: Web/API/CSSCounterStyleRule/prefix
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - prefix
-  - CSSCounterStyleRule
 browser-compat: api.CSSCounterStyleRule.prefix
 ---
 

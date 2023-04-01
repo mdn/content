@@ -2,24 +2,6 @@
 title: RTCRtpStreamStats.pliCount
 slug: Web/API/RTCRtpStreamStats/pliCount
 page-type: web-api-instance-property
-tags:
-  - API
-  - Data Loss
-  - Media
-  - PLI
-  - Packet Loss
-  - Packet Loss Indication
-  - Property
-  - RTCRtpStreamStats
-  - RTP
-  - Reference
-  - Statistics
-  - Stats
-  - Streams
-  - WebRTC
-  - WebRTC API
-  - pliCount
-  - rtc
 browser-compat: api.RTCRtpStreamStats.pliCount
 ---
 

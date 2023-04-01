@@ -2,18 +2,6 @@
 title: PaymentMethodChangeEvent.methodName
 slug: Web/API/PaymentMethodChangeEvent/methodName
 page-type: web-api-instance-property
-tags:
-  - API
-  - Commerce
-  - Payment Handler
-  - Payment Method
-  - Payment Request
-  - Payment Request API
-  - PaymentMethodChangeEvent
-  - Property
-  - Reference
-  - methodName
-  - payment
 browser-compat: api.PaymentMethodChangeEvent.methodName
 ---
 
@@ -30,8 +18,7 @@ within the payment handler are described by the `PaymentMethodChangeEvent`.
 A string which uniquely identifies the currently-selected payment
 handler. This may be a string chosen from the list of standardized payment method
 identifiers, or a URL used by the payment processing service. See
-{{SectionOnPage("/en-US/docs/Web/API/Payment_Request_API", "Payment method
-  identifiers")}} for more information.
+[Payment method identifiers](/en-US/docs/Web/API/Payment_Request_API#payment_method_identifiers) for more information.
 
 The default value is the empty string, `""`.
 

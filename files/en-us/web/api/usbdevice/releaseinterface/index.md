@@ -2,16 +2,8 @@
 title: USBDevice.releaseInterface()
 slug: Web/API/USBDevice/releaseInterface
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - USB
-  - USBDevice
-  - WebUSB
-  - WebUSB API
-  - releaseInterface
-  - Experimental
+status:
+  - experimental
 browser-compat: api.USBDevice.releaseInterface
 ---
 

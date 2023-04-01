@@ -1,15 +1,7 @@
 ---
 title: omnibox.OnInputEnteredDisposition
 slug: Mozilla/Add-ons/WebExtensions/API/omnibox/OnInputEnteredDisposition
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - OnInputEnteredDisposition
-  - Reference
-  - Type
-  - WebExtensions
-  - omnibox
+page-type: webextension-api-type
 browser-compat: webextensions.api.omnibox.OnInputEnteredDisposition
 ---
 

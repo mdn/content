@@ -1,12 +1,9 @@
 ---
 title: <strike>
 slug: Web/HTML/Element/strike
-tags:
-  - Element
-  - HTML
-  - Deprecated
-  - Reference
-  - Web
+page-type: html-element
+status:
+  - deprecated
 browser-compat: html.elements.strike
 ---
 
@@ -31,7 +28,7 @@ The result of this code is:
 
 {{EmbedLiveSample("Example")}}
 
-## Technical Summary
+## Technical summary
 
 <table class="properties">
   <tbody>

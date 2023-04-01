@@ -2,12 +2,8 @@
 title: AudioDecoder.AudioDecoder()
 slug: Web/API/AudioDecoder/AudioDecoder
 page-type: web-api-constructor
-tags:
-  - API
-  - Constructor
-  - Reference
-  - AudioDecoder
-  - Experimental
+status:
+  - experimental
 browser-compat: api.AudioDecoder.AudioDecoder
 ---
 

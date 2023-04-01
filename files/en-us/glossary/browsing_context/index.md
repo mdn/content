@@ -1,7 +1,7 @@
 ---
 title: Browsing context
 slug: Glossary/Browsing_context
-tags:
+page-type: glossary-definition
 ---
 
 A **browsing context** is an environment in which a browser displays a {{domxref("Document")}}. In modern browsers, it usually is a _tab_, but can be a _window_ or even only parts of a page, like a _frame_ or an _iframe_.

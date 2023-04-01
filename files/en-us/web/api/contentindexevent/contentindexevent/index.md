@@ -2,16 +2,8 @@
 title: ContentIndexEvent()
 slug: Web/API/ContentIndexEvent/ContentIndexEvent
 page-type: web-api-constructor
-tags:
-  - Constructor
-  - Content
-  - Content Index API
-  - Index
-  - PWA
-  - content index
-  - content indexing
-  - events
-  - Experimental
+status:
+  - experimental
 browser-compat: api.ContentIndexEvent.ContentIndexEvent
 ---
 

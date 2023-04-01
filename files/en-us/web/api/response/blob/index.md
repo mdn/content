@@ -2,17 +2,10 @@
 title: Response.blob()
 slug: Web/API/Response/blob
 page-type: web-api-instance-method
-tags:
-  - API
-  - Blob
-  - Fetch
-  - Method
-  - Reference
-  - Response
 browser-compat: api.Response.blob
 ---
 
-{{APIRef("Fetch")}}
+{{APIRef("Fetch API")}}
 
 The **`blob()`** method of the {{domxref("Response")}} interface takes
 a {{domxref("Response")}} stream and reads it to completion. It returns a promise that
@@ -48,9 +41,9 @@ out of the response using `blob()`, put it into an object URL using
 {{htmlelement("img")}} element to display the image.
 
 ```js
-const myImage = document.querySelector('img');
+const myImage = document.querySelector("img");
 
-const myRequest = new Request('flowers.jpg');
+const myRequest = new Request("flowers.jpg");
 
 fetch(myRequest)
   .then((response) => response.blob())

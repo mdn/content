@@ -1,13 +1,7 @@
 ---
 title: XHTML
 slug: Glossary/XHTML
-tags:
-  - CodingScripting
-  - XHTML
-  - HTML
-  - Web Development
-  - Web Standards
-  - XML
+page-type: glossary-definition
 ---
 
 **XHTML** is a term that was historically used to describe [HTML](/en-US/docs/Web/HTML) documents written to conform with {{Glossary("XML")}} syntax rules.

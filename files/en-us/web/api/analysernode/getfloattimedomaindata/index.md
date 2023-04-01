@@ -2,12 +2,6 @@
 title: AnalyserNode.getFloatTimeDomainData()
 slug: Web/API/AnalyserNode/getFloatTimeDomainData
 page-type: web-api-instance-method
-tags:
-  - API
-  - AnalyserNode
-  - Method
-  - Reference
-  - Web Audio API
 browser-compat: api.AnalyserNode.getFloatTimeDomainData
 ---
 

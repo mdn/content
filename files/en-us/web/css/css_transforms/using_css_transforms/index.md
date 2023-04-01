@@ -2,18 +2,6 @@
 title: Using CSS transforms
 slug: Web/CSS/CSS_Transforms/Using_CSS_transforms
 page-type: guide
-tags:
-  - 3D
-  - Advanced
-  - CSS
-  - CSS Transforms
-  - Graphics
-  - Guide
-  - Rotate
-  - Scale
-  - Scaling
-  - perspective
-  - rotation
 ---
 
 {{CSSRef}}
@@ -22,7 +10,7 @@ By modifying the coordinate space, **CSS transforms** change the shape and posit
 
 CSS transforms are implemented using a set of CSS properties that let you apply affine linear transformations to HTML elements. These transformations include rotation, skewing, scaling, and translation both in the plane and in the 3D space.
 
-> **Warning:** Only elements positioned by the [box model](/en-US/docs/Web/CSS/CSS_Box_Model) can be `transform`ed. An element is positioned by the box model if it has `display: block`.
+> **Warning:** Only transformable elements can be `transform`ed; that is, all elements whose layout is governed by the CSS [box model](/en-US/docs/Web/CSS/CSS_Box_Model) except for: [non-replaced inline boxes](/en-US/docs/Web/CSS/Visual_formatting_model#inline-level_elements_and_inline_boxes), [table-column boxes](/en-US/docs/Web/HTML/Element/col), and [table-column-group boxes](/en-US/docs/Web/HTML/Element/colgroup).
 
 ## CSS transforms properties
 
@@ -59,7 +47,7 @@ Here is the MDN logo, skewed by 10 degrees and translated by 150 pixels on the X
 
 ```html
 <img
-  style="transform: skewx(10deg) translatex(150px);
+  style="transform: skewX(10deg) translateX(150px);
             transform-origin: bottom left;"
   src="logo.png"
   alt="MDN logo" />

@@ -2,17 +2,12 @@
 title: Atomics.or()
 slug: Web/JavaScript/Reference/Global_Objects/Atomics/or
 page-type: javascript-static-method
-tags:
-  - Atomics
-  - JavaScript
-  - Method
-  - Shared Memory
 browser-compat: javascript.builtins.Atomics.or
 ---
 
 {{JSRef}}
 
-The static **`Atomics.or()`**
+The **`Atomics.or()`** static
 method computes a bitwise OR with a given value at a given position in the array, and
 returns the old value at that position. This atomic operation guarantees that no other
 write happens until the modified value is written back.

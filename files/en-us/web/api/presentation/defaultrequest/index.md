@@ -2,13 +2,8 @@
 title: Presentation.defaultRequest
 slug: Web/API/Presentation/defaultRequest
 page-type: web-api-instance-property
-tags:
-  - API
-  - Presentation
-  - Property
-  - Reference
-  - Web
-  - Experimental
+status:
+  - experimental
 browser-compat: api.Presentation.defaultRequest
 ---
 

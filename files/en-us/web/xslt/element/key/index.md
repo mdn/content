@@ -1,11 +1,6 @@
 ---
 title: <xsl:key>
 slug: Web/XSLT/Element/key
-tags:
-  - Element
-  - Key
-  - Reference
-  - XSLT
 ---
 
 {{ XsltRef() }}

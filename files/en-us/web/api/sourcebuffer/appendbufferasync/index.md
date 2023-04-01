@@ -2,19 +2,9 @@
 title: SourceBuffer.appendBufferAsync()
 slug: Web/API/SourceBuffer/appendBufferAsync
 page-type: web-api-instance-method
-tags:
-  - API
-  - Audio
-  - MSE
-  - Media
-  - Media Source Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - SourceBuffer
-  - Video
-  - appendBufferAsync
-  - Experimental
+status:
+  - experimental
+  - non-standard
 browser-compat: api.SourceBuffer.appendBufferAsync
 ---
 
@@ -52,7 +42,7 @@ parameters `buffer`, an {{jsxref("ArrayBuffer")}}, a {{jsxref("TypedArray")}}, o
 ```js
 async function fillSourceBuffer(buffer, msBuffer) {
   try {
-    while(true) {
+    while (true) {
       await msBuffer.appendBufferAsync(buffer);
     }
   } catch (e) {

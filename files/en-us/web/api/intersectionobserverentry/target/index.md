@@ -2,15 +2,6 @@
 title: IntersectionObserverEntry.target
 slug: Web/API/IntersectionObserverEntry/target
 page-type: web-api-instance-property
-tags:
-  - API
-  - Element
-  - Intersection Observer
-  - Intersection Observer API
-  - IntersectionObserver
-  - Property
-  - Reference
-  - target
 browser-compat: api.IntersectionObserverEntry.target
 ---
 
@@ -42,8 +33,7 @@ function intersectionCallback(entries) {
 ```
 
 To see a more concrete example, take a look at
-{{SectionOnPage("/en-US/docs/Web/API/Intersection_Observer_API/Timing_element_visibility",
-  "Handling intersection changes")}}.
+[Handling intersection changes](/en-US/docs/Web/API/Intersection_Observer_API/Timing_element_visibility#handling_intersection_changes).
 
 ## Specifications
 

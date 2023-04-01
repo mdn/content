@@ -1,5 +1,5 @@
 ---
-title: 'Window: gamepaddisconnected event'
+title: "Window: gamepaddisconnected event"
 slug: Web/API/Window/gamepaddisconnected_event
 page-type: web-api-event
 browser-compat: api.Window.gamepaddisconnected_event
@@ -18,8 +18,8 @@ This event is not cancelable and does not bubble.
 To be informed when a gamepad is disconnected, you can add a handler to the window using {{domxref("EventTarget.addEventListener", "addEventListener()")}}, like this:
 
 ```js
-window.addEventListener('gamepaddisconnected', (event) => {
-    console.log('Lost connection with the gamepad.');
+window.addEventListener("gamepaddisconnected", (event) => {
+  console.log("Lost connection with the gamepad.");
 });
 ```
 
@@ -27,7 +27,7 @@ Alternatively, you can use the `window.ongamepaddisconnected` event handler prop
 
 ```js
 window.ongamepaddisconnected = (event) => {
-    console.log('Lost connection with the gamepad.');
+  console.log("Lost connection with the gamepad.");
 };
 ```
 

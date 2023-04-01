@@ -2,18 +2,12 @@
 title: PaymentRequestEvent
 slug: Web/API/PaymentRequestEvent
 page-type: web-api-interface
-tags:
-  - API
-  - Experimental
-  - Interface
-  - Payment Request API
-  - PaymentRequestEvent
-  - Reference
-  - payment
+status:
+  - experimental
 browser-compat: api.PaymentRequestEvent
 ---
 
-{{SeeCompatTable}}{{APIRef("Payment Request API")}}
+{{SeeCompatTable}}{{APIRef("Payment Handler API")}}
 
 The **`PaymentRequestEvent`** interface of the [Payment Request API](/en-US/docs/Web/API/Payment_Request_API) is the object passed to a payment handler when a {{domxref("PaymentRequest")}} is made.
 
@@ -22,7 +16,7 @@ The **`PaymentRequestEvent`** interface of the [Payment Request API](/en-US/docs
 ## Constructor
 
 - {{domxref("PaymentRequestEvent.PaymentRequestEvent","PaymentRequestEvent()")}} {{Experimental_Inline}}
-  - : Creates a new `PaymentRequestEvent` object.
+  - : Creates a new `PaymentRequestEvent` object instance.
 
 ## Instance properties
 
@@ -48,6 +42,34 @@ The **`PaymentRequestEvent`** interface of the [Payment Request API](/en-US/docs
 - {{domxref("PaymentRequestEvent.respondWith","respondWith()")}} {{Experimental_Inline}}
   - : Prevents the default event handling and allows you to provide a {{jsxref("Promise")}} for a {{domxref("PaymentResponse")}} object yourself.
 
+## Examples
+
+When the {{domxref("PaymentRequest.show()")}} method is invoked, a {{domxref("ServiceWorkerGlobalScope.paymentrequest_event", "paymentrequest")}} event is fired on the service worker of the payment app. This event is listened for inside the payment app's service worker to begin the next stage of the payment process.
+
+```js
+let payment_request_event;
+let resolver;
+let client;
+
+// `self` is the global object in service worker
+self.addEventListener("paymentrequest", async (e) => {
+  if (payment_request_event) {
+    // If there's an ongoing payment transaction, reject it.
+    resolver.reject();
+  }
+  // Preserve the event for future use
+  payment_request_event = e;
+
+  // ...
+});
+```
+
+When a `paymentrequest` event is received, the payment app can open a payment handler window by calling {{domxref("PaymentRequestEvent.openWindow()")}}. The payment handler window will present the customers with a payment app interface where they can authenticate, choose shipping address and options, and authorize the payment.
+
+When the payment has been handled, {{domxref("PaymentRequestEvent.respondWith()")}} is used to pass the payment result back to the merchant website.
+
+See [Receive a payment request event from the merchant](https://web.dev/orchestrating-payment-transactions/#receive-payment-request-event) for more details of this stage.
+
 ## Specifications
 
 {{Specifications}}
@@ -55,3 +77,11 @@ The **`PaymentRequestEvent`** interface of the [Payment Request API](/en-US/docs
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- [Web-based payment apps overview](https://web.dev/web-based-payment-apps-overview/)
+- [Setting up a payment method](https://web.dev/setting-up-a-payment-method/)
+- [Life of a payment transaction](https://web.dev/life-of-a-payment-transaction/)
+- [Using the Payment Request API](/en-US/docs/Web/API/Payment_Request_API/Using_the_Payment_Request_API)
+- [Payment processing concepts](/en-US/docs/Web/API/Payment_Request_API/Concepts)

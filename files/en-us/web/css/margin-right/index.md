@@ -2,11 +2,6 @@
 title: margin-right
 slug: Web/CSS/margin-right
 page-type: css-property
-tags:
-  - CSS
-  - CSS Property
-  - Reference
-  - recipe:css-property
 browser-compat: css.properties.margin-right
 ---
 
@@ -22,9 +17,9 @@ The vertical margins of two adjacent boxes may fuse. This is called [_margin col
 
 ```css
 /* <length> values */
-margin-right: 20px;  /* An absolute length */
-margin-right: 1em;   /* relative to the text size */
-margin-right: 5%;    /* relative to the nearest block container's width */
+margin-right: 20px; /* An absolute length */
+margin-right: 1em; /* relative to the text size */
+margin-right: 5%; /* relative to the nearest block container's width */
 
 /* Keyword values */
 margin-right: auto;

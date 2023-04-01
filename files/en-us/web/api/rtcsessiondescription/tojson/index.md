@@ -2,12 +2,6 @@
 title: RTCSessionDescription.toJSON()
 slug: Web/API/RTCSessionDescription/toJSON
 page-type: web-api-instance-method
-tags:
-  - Method
-  - RTCSessionDescription
-  - Reference
-  - Serializer
-  - WebRTC
 browser-compat: api.RTCSessionDescription.toJSON
 ---
 

@@ -2,11 +2,6 @@
 title: TextMetrics
 slug: Web/API/TextMetrics
 page-type: web-api-interface
-tags:
-  - API
-  - Canvas
-  - Reference
-  - TextMetrics
 browser-compat: api.TextMetrics
 ---
 
@@ -56,16 +51,24 @@ This example demonstrates the baselines the `TextMetrics` object holds. The defa
 #### JavaScript
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 
-const baselinesAboveAlphabetic = ['fontBoundingBoxAscent', 'actualBoundingBoxAscent',
-                   'emHeightAscent', 'hangingBaseline'];
-const baselinesBelowAlphabetic = ['ideographicBaseline', 'emHeightDescent',
-                   'actualBoundingBoxDescent', 'fontBoundingBoxDescent'];
+const baselinesAboveAlphabetic = [
+  "fontBoundingBoxAscent",
+  "actualBoundingBoxAscent",
+  "emHeightAscent",
+  "hangingBaseline",
+];
+const baselinesBelowAlphabetic = [
+  "ideographicBaseline",
+  "emHeightDescent",
+  "actualBoundingBoxDescent",
+  "fontBoundingBoxDescent",
+];
 const baselines = [...baselinesAboveAlphabetic, ...baselinesBelowAlphabetic];
-ctx.font = '25px serif';
-ctx.strokeStyle = 'red';
+ctx.font = "25px serif";
+ctx.strokeStyle = "red";
 
 baselines.forEach((baseline, index) => {
   const text = `Abcdefghijklmnop (${baseline})`;
@@ -80,7 +83,6 @@ baselines.forEach((baseline, index) => {
   ctx.moveTo(0, lineY);
   ctx.lineTo(550, lineY);
   ctx.stroke();
-
 });
 ```
 
@@ -95,16 +97,18 @@ When measuring the x-direction of a piece of text, the sum of `actualBoundingBox
 It can therefore be useful to use the sum of `actualBoundingBoxLeft` and `actualBoundingBoxRight` as a more accurate way to get the absolute text width:
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
-const text = 'Abcdefghijklmnop';
-ctx.font = 'italic 50px serif';
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
+const text = "Abcdefghijklmnop";
+ctx.font = "italic 50px serif";
 const textMetrics = ctx.measureText(text);
 
 console.log(textMetrics.width);
 // 459.8833312988281
 
-console.log(textMetrics.actualBoundingBoxRight + textMetrics.actualBoundingBoxLeft);
+console.log(
+  textMetrics.actualBoundingBoxRight + textMetrics.actualBoundingBoxLeft
+);
 // 462.8833333333333
 ```
 

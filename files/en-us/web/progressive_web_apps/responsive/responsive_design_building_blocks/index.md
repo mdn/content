@@ -1,12 +1,6 @@
 ---
 title: The building blocks of responsive design
 slug: Web/Progressive_web_apps/Responsive/responsive_design_building_blocks
-tags:
-  - Apps
-  - CSS
-  - HTML
-  - Mobile
-  - Responsive Design
 ---
 
 In this article we will discuss the main essential components of responsive design, with some links to further information where necessary.
@@ -343,7 +337,7 @@ There is a way to override this mobile rendering behavior — viewport, which is
 <meta name="viewport" content="width=480" />
 ```
 
-This causes our browser to render our mobile app layout properly — `width=480` tells the browser _"render this markup at 480 pixels wide"_, hence the media queries kick in appropriately. There are many more options available in the viewport meta tag, which you can read about in [Using the viewport meta tag to control layout on mobile browsers](/en-US/docs/Mozilla/Mobile/Viewport_meta_tag).
+This causes our browser to render our mobile app layout properly — `width=480` tells the browser _"render this markup at 480 pixels wide"_, hence the media queries kick in appropriately. There are many more options available in the [viewport meta tag](/en-US/docs/Web/HTML/Viewport_meta_tag).
 
 ## Responsive images/video
 
@@ -439,7 +433,7 @@ This all sounds good. But those solutions are definitely not ready for productio
 
 For some image requirements (not photographs, but icons and user interface elements are a good fit), a good solution is to use vector graphics. Because vector images are calculated based on mathematical algorithms rather than containing separate data on every pixel in the image, they tend to be smaller in file size, and are infinitely scalable when zoomed or viewed on high resolution devices (at least, in theory). Some ideas follow, which also help to keep the number of HTTP requests down — another key factor in mobile app performance:
 
-- You should try to use [CSS](/en-US/docs/Web/CSS/) features to programmatically generate graphical effects where possible, rather than relying on image files. These include rounded corners, gradients, and drop shadows. These scale as the resolution changes or the browser zooms.
+- You should try to use [CSS](/en-US/docs/Web/CSS\) features to programmatically generate graphical effects where possible, rather than relying on image files. These include rounded corners, gradients, and drop shadows. These scale as the resolution changes or the browser zooms.
 - You could also try using [SVG](/en-US/docs/Web/SVG) to create interface elements. SVG produces vector graphics and is supported well across modern browsers, with polyfills available for older browser support.
 - Using [Web fonts](/en-US/docs/Web/CSS/@font-face) for displaying icons is an effective technique for keeping file size and HTTP requests down, and this is supported well across modern and older browsers.
 

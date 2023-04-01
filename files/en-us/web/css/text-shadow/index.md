@@ -2,18 +2,6 @@
 title: text-shadow
 slug: Web/CSS/text-shadow
 page-type: css-property
-tags:
-  - CSS
-  - CSS Property
-  - CSS Styles
-  - CSS Text Decoration
-  - HTML Colors
-  - HTML Styles
-  - Reference
-  - Styles
-  - Styling HTML
-  - color
-  - recipe:css-property
 browser-compat: css.properties.text-shadow
 ---
 

@@ -2,9 +2,6 @@
 title: Code examples
 slug: MDN/Writing_guidelines/Page_structures/Code_examples
 page-type: mdn-writing-guide
-tags:
-  - meta
-  - writing-guide
 ---
 
 {{MDNSidebar}}
@@ -88,9 +85,12 @@ If you write a live sample in the "Examples" section, provide a descriptive H3 h
 - CSS
 - JavaScript
 - Result
-  Write the code blocks in the respective subsections listed above.
-  In the **Result** subsection, add the call to the [`EmbedLiveSample` macro](/en-US/docs/MDN/Writing_guidelines/Page_structures/Live_samples#live_sample_macros). Preferably, include some more prose in this subsection to describe the result.
-  If you're not using a particular language type (for example, if you are not using JavaScript) or if you are hiding it, then you should omit the corresponding heading.
+
+Write the code blocks in the respective subsections listed above.
+
+In the **Result** subsection, add the call to the [`EmbedLiveSample` macro](/en-US/docs/MDN/Writing_guidelines/Page_structures/Live_samples#live_sample_macros). Preferably, include some more prose in this subsection to describe the result.
+
+If you're not using a particular language type (for example, if you are not using JavaScript) or if you are hiding it, then you should omit the corresponding heading.
 
 For example:
 
@@ -128,7 +128,7 @@ Only the `<p>` element with `class="fancy"` will get styled `red`.
 
 Sometimes you just want to display the static code block that is pertinent to the example rendered within a page. However you still need HTML, CSS and JavaScript to render such an example.
 
-To achieve this you can hide any code blocks which are note relevant with the `hidden` class.
+To achieve this you can hide any code blocks that are not relevant with the `hidden` class. If you do this, omit the `### HTML/CSS/JavaScript` headings for the hidden code blocks.
 
 Using the example above but hiding the HTML code would look like this:
 
@@ -138,8 +138,6 @@ Using the example above but hiding the HTML code would look like this:
 ### Styling a paragraph
 
 In this example, we're using CSS to style paragraphs that have the `fancy` class set.
-
-#### HTML
 
 ```html hidden
 <p>I'm not fancy.</p>
@@ -161,6 +159,34 @@ p.fancy {
 
 Only the `<p>` element with `class="fancy"` will get styled `red`.
 ````
+
+### Live example demo
+
+### Styling a paragraph
+
+In this example, we're using CSS to style paragraphs that have the `fancy` class set.
+
+#### HTML
+
+```html
+<p>I'm not fancy.</p>
+
+<p class="fancy">But I am!</p>
+```
+
+#### CSS
+
+```css
+p.fancy {
+  color: red;
+}
+```
+
+#### Result
+
+\{{EmbedLiveSample("Styling a paragraph")}}
+
+Only the `<p>` element with `class="fancy"` will get styled `red`.
 
 ## GitHub live samples
 
@@ -186,5 +212,5 @@ This looks like so when rendered:
 
 ### Tips for using GitHub live samples
 
-- You obviously need to get a suitable code sample onto the [MDN GitHub organization](https://github.com/mdn/) first. This needs to be done using Git. If you are not familiar with Git, check out our [How do I use GitHub Pages?](/en-US/docs/Learn/Common_questions/Using_Github_pages) article, and [Preparing to add the data](/en-US/docs/MDN/Writing_guidelines/Page_structures/Compatibility_tables#preparing_to_add_the_data) for more advanced uses.
+- You obviously need to get a suitable code sample onto the [MDN GitHub organization](https://github.com/mdn/) first. This needs to be done using Git. If you are not familiar with Git, check out our [How do I use GitHub Pages?](/en-US/docs/Learn/Common_questions/Tools_and_setup/Using_Github_pages) article, and [Preparing to add the data](/en-US/docs/MDN/Writing_guidelines/Page_structures/Compatibility_tables) for more advanced uses.
 - Your code sample needs to be suitable to show what you are trying to demonstrate — it should contain one simple example that does one thing well, should have no offensive content in it, and should follow the MDN [Code sample guidelines](/en-US/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide).

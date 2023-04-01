@@ -1,11 +1,7 @@
 ---
 title: ICE
 slug: Glossary/ICE
-tags:
-  - CodingScripting
-  - Networking
-  - Protocols
-  - WebRTC
+page-type: glossary-definition
 ---
 
 **ICE** (_Interactive Connectivity Establishment_) is a framework used by {{glossary("WebRTC")}} (among other technologies) for connecting two peers, regardless of network topology (usually for audio and video chat). This protocol lets two peers find and establish a connection with one another even though they may both be using Network Address Translator ({{glossary("NAT")}}) to share a global IP address with other devices on their respective local networks.

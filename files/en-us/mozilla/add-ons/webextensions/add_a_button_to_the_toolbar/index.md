@@ -1,8 +1,7 @@
 ---
 title: Add a button to the toolbar
 slug: Mozilla/Add-ons/WebExtensions/Add_a_button_to_the_toolbar
-tags:
-  - WebExtensions
+page-type: guide
 ---
 
 {{AddonSidebar}}

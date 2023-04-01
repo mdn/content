@@ -2,14 +2,6 @@
 title: MediaStream.clone()
 slug: Web/API/MediaStream/clone
 page-type: web-api-instance-method
-tags:
-  - API
-  - Media Capture and Streams
-  - Media Stream API
-  - MediaStream
-  - Method
-  - Reference
-  - clone
 browser-compat: api.MediaStream.clone
 ---
 

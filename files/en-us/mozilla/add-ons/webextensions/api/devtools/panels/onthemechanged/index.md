@@ -1,15 +1,7 @@
 ---
 title: devtools.panels.onThemeChanged
 slug: Mozilla/Add-ons/WebExtensions/API/devtools/panels/onThemeChanged
-tags:
-  - API
-  - Add-ons
-  - DevTools
-  - Reference
-  - Event
-  - WebExtensions
-  - devtools.panels
-  - onThemeChanged
+page-type: webextension-api-event
 browser-compat: webextensions.api.devtools.panels.onThemeChanged
 ---
 

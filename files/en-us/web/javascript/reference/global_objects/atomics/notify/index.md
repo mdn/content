@@ -2,17 +2,12 @@
 title: Atomics.notify()
 slug: Web/JavaScript/Reference/Global_Objects/Atomics/notify
 page-type: javascript-static-method
-tags:
-  - Atomics
-  - JavaScript
-  - Method
-  - Shared Memory
 browser-compat: javascript.builtins.Atomics.notify
 ---
 
 {{JSRef}}
 
-The static **`Atomics.notify()`**
+The **`Atomics.notify()`** static
 method notifies up some agents that are sleeping in the wait queue.
 
 > **Note:** This operation works with a shared {{jsxref("Int32Array")}}

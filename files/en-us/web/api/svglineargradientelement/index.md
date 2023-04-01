@@ -2,12 +2,6 @@
 title: SVGLinearGradientElement
 slug: Web/API/SVGLinearGradientElement
 page-type: web-api-interface
-tags:
-  - API
-  - NeedsExample
-  - Reference
-  - SVG
-  - SVG DOM
 browser-compat: api.SVGLinearGradientElement
 ---
 

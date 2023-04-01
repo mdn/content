@@ -2,18 +2,6 @@
 title: JavaScript reference
 slug: Web/JavaScript/Reference
 page-type: landing-page
-tags:
-  - Code
-  - ECMAScript
-  - ECMAScript6
-  - ES6
-  - JS
-  - JavaScript
-  - Landing page
-  - Reference
-  - es
-  - "l10n:priority"
-  - programming
 ---
 
 {{JsSidebar}}
@@ -183,6 +171,7 @@ If you are new to JavaScript, start with the [guide](/en-US/docs/Web/JavaScript/
 
 - {{jsxref("Statements/Empty", "Empty", "", 1)}}
 - {{jsxref("Statements/block", "Block", "", 1)}}
+- {{jsxref("Statements/Expression_statement", "Expression statement", "", 1)}}
 - {{jsxref("Statements/debugger", "debugger")}}
 - {{jsxref("Statements/export", "export")}}
 - {{jsxref("Statements/import", "import")}}

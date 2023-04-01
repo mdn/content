@@ -1,11 +1,7 @@
 ---
-title: 'SyntaxError: invalid BigInt syntax'
+title: "SyntaxError: invalid BigInt syntax"
 slug: Web/JavaScript/Reference/Errors/Invalid_BigInt_syntax
-tags:
-  - Error
-  - Errors
-  - JavaScript
-  - SyntaxError
+page-type: javascript-error
 ---
 
 {{jsSidebar("Errors")}}

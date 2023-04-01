@@ -2,22 +2,6 @@
 title: MediaDevices
 slug: Web/API/MediaDevices
 page-type: web-api-interface
-tags:
-  - API
-  - Audio
-  - Conference
-  - Devices
-  - Interface
-  - Media
-  - Media Capture and Streams API
-  - Media Streams API
-  - MediaDevices
-  - Reference
-  - Screen Capture
-  - Screen Capture API
-  - Sharing
-  - Video
-  - WebRTC
 browser-compat: api.MediaDevices
 ---
 
@@ -38,7 +22,7 @@ _Inherits methods from its parent interface, {{domxref("EventTarget")}}._
 - {{ domxref("MediaDevices.enumerateDevices", "enumerateDevices()") }}
   - : Obtains an array of information about the media input and output devices available on the system.
 - {{domxref("MediaDevices.getSupportedConstraints", "getSupportedConstraints()")}}
-  - : Returns an object conforming to {{domxref("MediaTrackSupportedConstraints")}} indicating which constrainable properties are supported on the {{domxref("MediaStreamTrack")}} interface. See {{SectionOnPage("/en-US/docs/Web/API/Media_Capture_and_Streams_API", "Capabilities and constraints")}} to learn more about constraints and how to use them.
+  - : Returns an object conforming to {{domxref("MediaTrackSupportedConstraints")}} indicating which constrainable properties are supported on the {{domxref("MediaStreamTrack")}} interface. See [Media Streams API](/en-US/docs/Web/API/Media_Capture_and_Streams_API/Constraints) to learn more about constraints and how to use them.
 - {{domxref("MediaDevices.getDisplayMedia", "getDisplayMedia()")}}
   - : Prompts the user to select a display or portion of a display (such as a window) to capture as a {{domxref("MediaStream")}} for sharing or recording purposes. Returns a promise that resolves to a `MediaStream`.
 - {{ domxref("MediaDevices.getUserMedia", "getUserMedia()") }}
@@ -55,32 +39,31 @@ _Inherits methods from its parent interface, {{domxref("EventTarget")}}._
 
 ```js
 // Put variables in global scope to make them available to the browser console.
-const video = document.querySelector('video');
+const video = document.querySelector("video");
 const constraints = {
   audio: false,
-  video: true
+  video: true,
 };
 
-navigator.mediaDevices.getUserMedia(constraints)
+navigator.mediaDevices
+  .getUserMedia(constraints)
   .then((stream) => {
     const videoTracks = stream.getVideoTracks();
-    console.log('Got stream with constraints:', constraints);
+    console.log("Got stream with constraints:", constraints);
     console.log(`Using video device: ${videoTracks[0].label}`);
     stream.onremovetrack = () => {
-      console.log('Stream ended');
+      console.log("Stream ended");
     };
     video.srcObject = stream;
   })
   .catch((error) => {
-    if (error.name === 'ConstraintNotSatisfiedError') {
+    if (error.name === "ConstraintNotSatisfiedError") {
       console.error(
         `The resolution ${constraints.video.width.exact}x${constraints.video.height.exact} px is not supported by your device.`
       );
-    } else if (error.name === 'PermissionDeniedError') {
+    } else if (error.name === "PermissionDeniedError") {
       console.error(
-        'Permissions have not been granted to use your camera and ' +
-          'microphone, you need to allow the page access to your devices in ' +
-          'order for the demo to work.'
+        "You need to grant this page permission to access your camera and microphone."
       );
     } else {
       console.error(`getUserMedia error: ${error.name}`, error);

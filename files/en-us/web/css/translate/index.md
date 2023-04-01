@@ -2,18 +2,14 @@
 title: translate
 slug: Web/CSS/translate
 page-type: css-property
-tags:
-  - CSS
-  - CSS Property
-  - Reference
-  - Transforms
-  - recipe:css-property
 browser-compat: css.properties.translate
 ---
 
 {{CSSRef}}
 
 The **`translate`** [CSS](/en-US/docs/Web/CSS) property allows you to specify translation transforms individually and independently of the {{CSSxRef("transform")}} property. This maps better to typical user interface usage, and saves having to remember the exact order of transform functions to specify in the `transform` value.
+
+{{EmbedInteractiveExample("pages/css/translate.html")}}
 
 ## Syntax
 
@@ -61,51 +57,53 @@ translate: unset;
 
 ## Examples
 
-### HTML
+### Translating an element on hover
+
+This example shows how to use the `translate` property to move an element in three axes.
+The first box is moved along the X axis and the second box is moved along the X and Y axes.
+The third box is moved along the X, Y and Z axes and has the appearance of moving toward the viewer because of the addition of {{cssxref('perspective')}} to the parent element.
+
+#### HTML
 
 ```html
-<div>
-  <p class="translate">Translation</p>
+<div class="wrapper">
+  <div id="box1">translate X</div>
+  <div id="box2">translate X,Y</div>
+  <div id="box3">translate X,Y,Z</div>
 </div>
 ```
 
-### CSS
+#### CSS
 
 ```css
-* {
-  box-sizing: border-box;
+.wrapper {
+  perspective: 100px;
+  display: inline-flex;
+  gap: 1em;
 }
-
-html {
-  font-family: sans-serif;
-}
-
-div {
-  width: 150px;
-  margin: 0 auto;
-}
-
-p {
-  padding: 10px 5px;
-  border: 3px solid black;
-  border-radius: 20px;
-  width: 150px;
-  font-size: 1.2rem;
+.wrapper > div {
+  width: 7em;
+  line-height: 7em;
   text-align: center;
+  transition: 0.5s ease-in-out;
+  border: 3px dotted;
+}
+#box1:hover {
+  translate: 20px;
 }
 
-.translate {
-  transition: translate 1s;
+#box2:hover {
+  translate: 20px 20px;
 }
 
-div:hover .translate {
-  translate: 200px 50px;
+#box3:hover {
+  translate: 5px 5px 30px;
 }
 ```
 
-### Result
+#### Result
 
-{{EmbedLiveSample('Examples')}}
+{{EmbedLiveSample("Translating_an_element_on_hover", "100%", 175)}}
 
 ## Specifications
 

@@ -1,10 +1,7 @@
 ---
 title: Encryption
 slug: Glossary/Encryption
-tags:
-  - Cryptography
-  - Privacy
-  - Security
+page-type: glossary-definition
 ---
 
 In {{glossary("cryptography")}}, **encryption** is the conversion of {{glossary("plaintext")}} into a coded text or {{glossary("ciphertext")}}. A ciphertext is intended to be unreadable by unauthorized readers.

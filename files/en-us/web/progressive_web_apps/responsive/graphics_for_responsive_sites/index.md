@@ -1,15 +1,9 @@
 ---
 title: Graphic design for responsive sites
 slug: Web/Progressive_web_apps/Responsive/Graphics_for_responsive_sites
-tags:
-  - CSS
-  - Graphics
-  - JavaScript
-  - SVG
-  - WebGL
 ---
 
-In 1996, many people involved in building the Web would have laughed at you if you had told them that less than 20 years in the future we would be developing web sites that worked well on mobile phones, tablets, TVs, even cars and home lighting. But today it is very much a reality. This article provides a high level discussion aimed at helping you to choose the best option for your graphical needs.
+In 1996, many people involved in building the Web would have laughed at you if you had told them that less than 20 years in the future we would be developing websites that worked well on mobile phones, tablets, TVs, even cars and home lighting. But today it is very much a reality. This article provides a high level discussion aimed at helping you to choose the best option for your graphical needs.
 
 Textual content is not a problem, as text boxes are innately responsive, but the picture starts to get ugly when you start including graphics and complex layouts on your pages — especially when those graphics and layouts need to adapt to different displays! This is why we have included an entire docs section covering each of these topics (the one you are currently in, and [app layout](/en-US/docs/Web/Apps/app_layout).)
 
@@ -21,7 +15,7 @@ In general, you will use mostly the same graphical assets for different layouts 
 
 [CSS media queries](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries) allow us to serve different CSS rules dependent on viewport dimensions, and you should consider using [mobile first media queries](https://www.peachpit.com/articles/article.aspx?p=1960918) where possible. This means that the default layout before any media queries are encountered in the CSS is the small screen/mobile layout, not the wide screen/desktop layout. So when the page is loaded on a mobile device, the mobile will only download the mobile assets, and not the desktop resource assets.
 
-While the pixel size of an image resource doesn't change, there are a few ways to make [HTML `<img>`s](/en-US/docs/Web/HTML/Element/img)responsive. Setting `max-width: 100%` on an image allows the image to render at its normal size when space allows, without causing pixelation, while ensuring the image never exceeds the width of its parent container. Different image files can be served depending on viewport size using the [`srcset`](/en-US/docs/Web/HTML/Element/img#attr-srcset) and [`sizes`](/en-US/docs/Web/HTML/Element/img#attr-sizes) attributes. The {{HTMLElement('picture')}} element can contain multiple {{HTMLElement('source')}} elements and one `<img>` element to offer alternative versions of an image for different display/device scenarios. Always make sure your images include alternative text by including an [`alt`](/en-US/docs/Web/HTML/Element/img#attr-alt) attribute.
+While the pixel size of an image resource doesn't change, there are a few ways to make [HTML `<img>`s](/en-US/docs/Web/HTML/Element/img)responsive. Setting `max-width: 100%` on an image allows the image to render at its normal size when space allows, without causing pixelation, while ensuring the image never exceeds the width of its parent container. Different image files can be served depending on viewport size using the [`srcset`](/en-US/docs/Web/HTML/Element/img#srcset) and [`sizes`](/en-US/docs/Web/HTML/Element/img#sizes) attributes. The {{HTMLElement('picture')}} element can contain multiple {{HTMLElement('source')}} elements and one `<img>` element to offer alternative versions of an image for different display/device scenarios. Always make sure your images include alternative text by including an [`alt`](/en-US/docs/Web/HTML/Element/img#alt) attribute.
 
 ## Coping with different resolutions
 
@@ -43,7 +37,7 @@ If your images need to feature some level of interactivity, such as links, other
 - JavaScript
   - : [JavaScript](/en-US/docs/Web/JavaScript) has functions that enable developers to create effects based on interactions. It is very powerful when combined with other technologies, although its complexity is a barrier for non-developers.
 - SVG
-  - : [SVG](/en-US/docs/Web/SVG), just like [HTML](/en-US/docs/Web/HTML)/[CSS](/en-US/docs/Web/CSS/), can be manipulated with CSS and via JavaScript. So adding interactivity is not difficult. You can also add links directly into SVG and can create animations using [SMIL](/en-US/docs/Web/SVG/SVG_animation_with_SMIL) (Synchronized Multimedia Integration Language).
+  - : [SVG](/en-US/docs/Web/SVG), just like [HTML](/en-US/docs/Web/HTML)/[CSS](/en-US/docs/Web/CSS\), can be manipulated with CSS and via JavaScript. So adding interactivity is not difficult. You can also add links directly into SVG and can create animations using [SMIL](/en-US/docs/Web/SVG/SVG_animation_with_SMIL) (Synchronized Multimedia Integration Language).
 - WebGL/Canvas
 
   - : You can create a canvas to draw interactive graphics on using the HTML {{HTMLElement('canvas')}} element, then use the Canvas API to create shapes, lines, import image files, create text, do compositing operations, and much more. Standard JavaScript can then be used to animate the image output, etc. You can create 2D imagery using the regular 2D canvas context, or 3D imagery using the more nascent [WebGL API](/en-US/docs/Web/API/WebGL_API).

@@ -1,16 +1,7 @@
 ---
 title: tabs.duplicate()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/duplicate
-tags:
-  - API
-  - Add-ons
-  - Duplicate
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - tabs
+page-type: webextension-api-function
 browser-compat: webextensions.api.tabs.duplicate
 ---
 

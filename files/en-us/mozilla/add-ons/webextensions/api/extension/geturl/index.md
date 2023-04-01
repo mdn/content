@@ -1,17 +1,9 @@
 ---
 title: extension.getURL()
 slug: Mozilla/Add-ons/WebExtensions/API/extension/getURL
-tags:
-  - API
-  - Add-ons
-  - Deprecated
-  - Extension
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - getURL
+page-type: webextension-api-function
+status:
+  - deprecated
 browser-compat: webextensions.api.extension.getURL
 ---
 

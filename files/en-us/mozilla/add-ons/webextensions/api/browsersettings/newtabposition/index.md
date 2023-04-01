@@ -1,15 +1,7 @@
 ---
 title: browserSettings.newTabPosition
 slug: Mozilla/Add-ons/WebExtensions/API/browserSettings/newTabPosition
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Property
-  - Reference
-  - WebExtensions
-  - browserSettings
-  - newTabPosition
+page-type: webextension-api-property
 browser-compat: webextensions.api.browserSettings.newTabPosition
 ---
 

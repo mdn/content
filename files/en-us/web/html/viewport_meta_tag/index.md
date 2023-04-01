@@ -1,11 +1,7 @@
 ---
 title: Viewport meta tag
 slug: Web/HTML/Viewport_meta_tag
-tags:
-  - Layout
-  - Responsiveness
-  - Mobile
-  - viewport
+page-type: guide
 spec-urls: https://drafts.csswg.org/css-viewport/#viewport-meta
 ---
 

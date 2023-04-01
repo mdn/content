@@ -2,10 +2,6 @@
 title: At-rules
 slug: Web/CSS/At-rule
 page-type: guide
-tags:
-  - CSS
-  - Guide
-  - Reference
 spec-urls:
   - https://drafts.csswg.org/css-conditional-3/
   - https://compat.spec.whatwg.org/#css-at-rules
@@ -68,10 +64,13 @@ Since each conditional group may also contain nested statements, there may be an
 ## Index
 
 - {{cssxref("@charset")}}
+- {{cssxref("@color-profile")}}
+- {{cssxref("@container")}}
 - {{cssxref("@counter-style")}}
 - {{cssxref("@document")}} {{deprecated_inline}}
 - {{cssxref("@font-face")}}
 - {{cssxref("@font-feature-values")}}
+- {{cssxref("@font-palette-values")}}
 - {{cssxref("@import")}}
 - {{cssxref("@keyframes")}}
 - {{cssxref("@layer")}}

@@ -2,17 +2,6 @@
 title: Testing media queries programmatically
 slug: Web/CSS/Media_Queries/Testing_media_queries
 page-type: guide
-tags:
-  - Advanced
-  - CSS
-  - DOM
-  - Guide
-  - JavaScript
-  - Media Queries
-  - MediaQueryList
-  - Responsive Design
-  - Web
-  - matchMedia
 browser-compat: api.MediaQueryList
 ---
 
@@ -59,7 +48,7 @@ function handleOrientationChange(mql) {
 handleOrientationChange(mediaQueryList);
 
 // Add the callback function as a listener to the query list.
-mediaQueryList.addEventListener('change', handleOrientationChange);
+mediaQueryList.addEventListener("change", handleOrientationChange);
 ```
 
 This code creates the orientation-testing media query list, then adds an event listener to it. After defining the listener, we also call the listener directly. This makes our listener perform adjustments based on the current device orientation; otherwise, our code might assume the device is in portrait mode at startup, even if it's actually in landscape mode.
@@ -76,16 +65,14 @@ function handleOrientationChange(evt) {
 }
 ```
 
-Above, we define the parameter as `evt` — an event object. This makes sense because [newer implementations of `MediaQueryList`](/en-US/docs/Web/API/MediaQueryList#browser_compatibility) handle event listeners in a standard way. They no longer use the unusual {{domxref("MediaQueryListListener")}} mechanism, but a standard event listener setup, passing an [event object](/en-US/docs/Web/API/Event) of type {{domxref("MediaQueryListEvent")}} as the argument to the callback function.
-
-This event object also includes the {{domxref("MediaQueryListEvent.media","media")}} and {{domxref("MediaQueryListEvent.matches","matches")}} properties, so you can query these features of the `MediaQueryList` by directly accessing it, or accessing the event object.
+Above, we define the parameter as `evt` — an event object of type {{domxref("MediaQueryListEvent")}} that also includes the {{domxref("MediaQueryListEvent.media","media")}} and {{domxref("MediaQueryListEvent.matches","matches")}} properties, so you can query these features of the `MediaQueryList` by directly accessing it, or accessing the event object.
 
 ## Ending query notifications
 
 To stop receiving notifications about changes to the value of your media query, call {{domxref("EventTarget.removeEventListener", "removeEventListener()")}} on the `MediaQueryList`, passing it the name of the previously-defined callback function:
 
 ```js
-mediaQueryList.removeEventListener('change', handleOrientationChange);
+mediaQueryList.removeEventListener("change", handleOrientationChange);
 ```
 
 ## Browser compatibility

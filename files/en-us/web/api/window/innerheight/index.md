@@ -2,18 +2,6 @@
 title: Window.innerHeight
 slug: Web/API/Window/innerHeight
 page-type: web-api-instance-property
-tags:
-  - API
-  - CSSOM
-  - CSSOM View
-  - HTML DOM
-  - NeedsInteractiveExample
-  - Property
-  - Reference
-  - View
-  - Window
-  - height
-  - innerHeight
 browser-compat: api.Window.innerHeight
 ---
 
@@ -73,7 +61,7 @@ To get the outer height of a window, i.e. the height of the whole browser window
 The following figure shows the difference between `outerHeight` and
 `innerHeight`.
 
-![innerHeight vs outerHeight illustration](firefoxinnervsouterheight2.png)
+![innerHeight vs. outerHeight illustration](firefoxinnervsouterheight2.png)
 
 ## Demo
 

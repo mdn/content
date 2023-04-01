@@ -2,16 +2,8 @@
 title: HTMLTableElement.frame
 slug: Web/API/HTMLTableElement/frame
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTML DOM
-  - HTMLTableElement
-  - NeedsBrowserCompatibility
-  - NeedsSpecTable
-  - Property
-  - Reference
-  - Tables
-  - Deprecated
+status:
+  - deprecated
 browser-compat: api.HTMLTableElement.frame
 ---
 
@@ -48,8 +40,8 @@ One of the following:
 
 ```js
 // Set the frame of TableA to 'border'
-const t = document.getElementById('TableA');
-t.frame  = "border";
+const t = document.getElementById("TableA");
+t.frame = "border";
 t.border = "2px";
 ```
 

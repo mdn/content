@@ -2,16 +2,6 @@
 title: calc()
 slug: Web/CSS/calc
 page-type: css-function
-tags:
-  - CSS
-  - CSS Function
-  - Calculate
-  - Compute
-  - Function
-  - Layout
-  - Reference
-  - Web
-  - calc
 browser-compat: css.types.calc
 ---
 
@@ -81,9 +71,6 @@ When **`calc()`** is used where an {{cssxref("&lt;integer&gt;")}} is expected, t
 ```
 
 This will give `.modal` a final `z-index` value of 2.
-
-> **Note:** The Chrome browser currently won't accept some values returned by **`calc()`** when an integer is expected.
-> This includes any division, even if it results in an integer, i.e. `z-index: calc(4 / 2);` will not be accepted.
 
 ## Examples
 

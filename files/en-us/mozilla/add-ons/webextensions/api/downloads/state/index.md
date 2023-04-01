@@ -1,16 +1,7 @@
 ---
 title: downloads.State
 slug: Mozilla/Add-ons/WebExtensions/API/downloads/State
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Non-standard
-  - Reference
-  - Type
-  - WebExtensions
-  - downloads
-  - state
+page-type: webextension-api-type
 browser-compat: webextensions.api.downloads.State
 ---
 

@@ -2,22 +2,6 @@
 title: XRViewerPose
 slug: Web/API/XRViewerPose
 page-type: web-api-interface
-tags:
-  - 3D
-  - API
-  - AR
-  - Graphics
-  - Mixed Reality
-  - Overview
-  - Reality
-  - Reference
-  - VR
-  - Virtual
-  - WebXR
-  - WebXR API
-  - WebXR Device API
-  - XR
-  - augmented
 browser-compat: api.XRViewerPose
 ---
 
@@ -79,8 +63,8 @@ if (pose) {
 Passing each `view` to {{domxref("XRWebGLLayer.getViewport", "getViewport()")}} returns the WebGL viewport to apply in order to cause the rendered
 output to be positioned correctly in the framebuffer for rendering to the corresponding eye on the output device.
 
-This code is derived from {{SectionOnPage("/en-US/docs/Web/API/WebXR_Device_API/Movement_and_motion", "Drawing a
-  frame")}}. You can see more context and see much more on that page.
+This code is derived from [Drawing a frame](/en-US/docs/Web/API/WebXR_Device_API/Movement_and_motion#drawing_a_frame) in our "Movement and motion" WebXR example.
+You can see more context and see much more on that page.
 
 ## Specifications
 

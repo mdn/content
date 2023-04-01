@@ -2,12 +2,6 @@
 title: CSS Overflow
 slug: Web/CSS/CSS_Overflow
 page-type: css-module
-tags:
-  - CSS
-  - Guide
-  - overflow
-  - scrollbars
-  - scrolling
 spec-urls: https://drafts.csswg.org/css-overflow/#propdef-overflow
 ---
 

@@ -1,11 +1,6 @@
 ---
 title: SameSite cookies
 slug: Web/HTTP/Headers/Set-Cookie/SameSite
-tags:
-  - Cookies
-  - HTTP
-  - Reference
-  - samesite
 browser-compat: http.headers.Set-Cookie.SameSite
 ---
 

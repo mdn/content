@@ -2,10 +2,6 @@
 title: Proposing new content or features
 slug: MDN/Community/Issues/Content_suggestions_feature_proposals
 page-type: mdn-community-guide
-tags:
-  - meta
-  - community-guidelines
-  - governance
 ---
 
 {{MDNSidebar}}

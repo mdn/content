@@ -2,12 +2,6 @@
 title: CSS selectors
 slug: Web/CSS/CSS_Selectors
 page-type: landing-page
-tags:
-  - CSS
-  - Guide
-  - Overview
-  - Reference
-  - Selectors
 spec-urls: https://drafts.csswg.org/selectors/
 ---
 
@@ -101,7 +95,7 @@ CSS selectors can be grouped into the following categories based on the type of 
 
     **Syntax:** `A + B`
 
-    **Example:** `h2 + p` will match the first {{HTMLElement("p")}} element that _immediately_ follows an {{HTMLElement("h2")}} element.
+    **Example:** `h2 + p` will match the first {{HTMLElement("p")}} element that _immediately_ follows an {{HTMLElement("Heading_Elements", "h2")}} element.
 
 - [Column combinator](/en-US/docs/Web/CSS/Column_combinator) {{Experimental_Inline}}
 
@@ -149,9 +143,9 @@ The term 'selector' can refer to one of the following:
 
 - Relative selector
 
-  - : A selector that represents an element relative to one or more [anchor elements](/en-US/docs/Web/HTML/Element/a) preceded by a combinator. Relative selectors that don't begin with an explicit [combinator](#combinators) have an implied [descendant combinator](/en-US/docs/Web/CSS/Descendant_combinator).
+  - : A selector representing an element relative to one or more anchor elements preceded by a combinator. Relative selectors that don't begin with an explicit [combinator](#combinators) have an implied [descendant combinator](/en-US/docs/Web/CSS/Descendant_combinator).
 
-    **Examples:** `+ div#topic > #reference {...}`, `> .icon {...}`
+    **Examples:** `+ div#topic > #reference {...}`, `> .icon {...}`, `dt:has(+ img) ~ dd {...}`
 
 - [Selector list](/en-US/docs/Web/CSS/Selector_list)
 

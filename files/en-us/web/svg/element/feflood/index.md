@@ -2,10 +2,6 @@
 title: <feFlood>
 slug: Web/SVG/Element/feFlood
 page-type: svg-element
-tags:
-  - Element
-  - SVG
-  - SVG Filter
 browser-compat: svg.elements.feFlood
 ---
 
@@ -74,7 +70,6 @@ This element implements the {{domxref("SVGFEFloodElement")}} interface.
 
 - {{SVGElement("filter")}}
 - {{SVGElement("animate")}}
-- {{SVGElement("animateColor")}}
 - {{SVGElement("set")}}
 - {{SVGElement("feBlend")}}
 - {{SVGElement("feColorMatrix")}}

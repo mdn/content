@@ -2,16 +2,6 @@
 title: revert
 slug: Web/CSS/revert
 page-type: css-keyword
-tags:
-  - CSS
-  - CSS Cascade
-  - CSS Value
-  - Cascade
-  - Keyword
-  - Layout
-  - Reference
-  - Style
-  - revert
 browser-compat: css.types.global_keywords.revert
 ---
 
@@ -37,7 +27,7 @@ Revert will not affect rules applied to children of an element you reset (but wi
 
 ## Examples
 
-### Revert vs unset
+### Revert vs. unset
 
 Although `revert` and `unset` are similar, they differ for some properties for some elements.
 

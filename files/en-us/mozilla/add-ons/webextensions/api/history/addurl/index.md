@@ -1,16 +1,7 @@
 ---
 title: history.addUrl()
 slug: Mozilla/Add-ons/WebExtensions/API/history/addUrl
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - History
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - addUrl
+page-type: webextension-api-function
 browser-compat: webextensions.api.history.addUrl
 ---
 

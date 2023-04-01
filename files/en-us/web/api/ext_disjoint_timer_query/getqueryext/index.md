@@ -2,12 +2,6 @@
 title: EXT_disjoint_timer_query.getQueryEXT()
 slug: Web/API/EXT_disjoint_timer_query/getQueryEXT
 page-type: webgl-extension-method
-tags:
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGL extension
 browser-compat: api.EXT_disjoint_timer_query.getQueryEXT
 ---
 
@@ -46,12 +40,11 @@ Depends on `pname`:
 ## Examples
 
 ```js
-const ext = gl.getExtension('EXT_disjoint_timer_query');
+const ext = gl.getExtension("EXT_disjoint_timer_query");
 const startQuery = ext.createQueryEXT();
 ext.queryCounterEXT(startQuery, ext.TIMESTAMP_EXT);
 
-const currentQuery = ext.getQueryEXT(ext.TIMESTAMP_EXT,
-                                   ext.CURRENT_QUERY_EXT);
+const currentQuery = ext.getQueryEXT(ext.TIMESTAMP_EXT, ext.CURRENT_QUERY_EXT);
 ```
 
 ## Specifications

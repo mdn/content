@@ -2,19 +2,6 @@
 title: max-block-size
 slug: Web/CSS/max-block-size
 page-type: css-property
-tags:
-  - CSS
-  - CSS Logical Property
-  - CSS Property
-  - Layout
-  - Maximum Height
-  - Maximum Width
-  - Reference
-  - height
-  - max-block-size
-  - recipe:css-property
-  - size
-  - width
 browser-compat: css.properties.max-block-size
 ---
 
@@ -26,7 +13,7 @@ The other dimension's maximum length is specified using the {{cssxref("max-inlin
 
 This is useful because the `max-width` is always used for horizontal sizes and `max-height` is always used for vertical sizes, and if you need to set lengths based on the size of your text content, you need to be able to do so with the writing direction in mind.
 
-Any time you would normally use `max-height` or `max-width`, you should instead use `max-block-size` to set the maximum "height" of the content (even though this may not be a vertical value) and `max-inline-size` to set the maximum "width" of the content (although this may instead be vertical rather than horizontal). See the {{SectionOnPage("/en-US/docs/Web/CSS/writing-mode", "Example")}}, which shows the different writing modes in action.
+Any time you would normally use `max-height` or `max-width`, you should instead use `max-block-size` to set the maximum "height" of the content (even though this may not be a vertical value) and `max-inline-size` to set the maximum "width" of the content (although this may instead be vertical rather than horizontal). See [`writing-mode` examples](/en-US/docs/Web/CSS/writing-mode#examples), which show the different writing modes in action.
 
 {{EmbedInteractiveExample("pages/css/max-block-size.html")}}
 

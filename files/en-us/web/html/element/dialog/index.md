@@ -1,14 +1,7 @@
 ---
 title: '<dialog>: The Dialog element'
 slug: Web/HTML/Element/dialog
-tags:
-  - Dialog
-  - Element
-  - HTML
-  - HTML interactive elements
-  - Reference
-  - Web
-  - polyfill
+page-type: html-element
 browser-compat: html.elements.dialog
 ---
 
@@ -22,7 +15,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
 > **Warning:** The `tabindex` attribute must not be used on the `<dialog>` element.
 
-- {{htmlattrdef("open")}}
+- `open`
   - : Indicates that the dialog is active and can be interacted with. When the `open` attribute is not set, the dialog _shouldn't_ be shown to the user.
     It is recommended to use the `.show()` or `.showModal()` methods to render dialogs, rather than the `open` attribute. If a `<dialog>` is opened using the `open` attribute, it will be non-modal.
 
@@ -55,6 +48,8 @@ The following will render a non-modal, or modal-less, dialog. The "OK" button al
   </form>
 </dialog>
 ```
+
+#### Result
 
 {{EmbedLiveSample("Simple_example", "100%", 200)}}
 
@@ -101,7 +96,7 @@ const outputBox = document.querySelector('output');
 const selectEl = favDialog.querySelector('select');
 const confirmBtn = favDialog.querySelector('#confirmBtn');
 
-// "Update details" button opens the <dialog> modally
+// "Show the dialog" button opens the <dialog> modally
 showButton.addEventListener('click', () => {
     favDialog.showModal();
 });
@@ -129,12 +124,12 @@ It is important to provide a mechanism to close a dialog within the `dialog` ele
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories"
+        <a href="/en-US/docs/Web/HTML/Content_categories"
           >Content categories</a
         >
       </th>
       <td>
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
           >Flow content</a
         >,
         <a href="/en-US/docs/Web/HTML/Element/Heading_Elements#sectioning_roots"
@@ -145,7 +140,7 @@ It is important to provide a mechanism to close a dialog within the `dialog` ele
     <tr>
       <th scope="row">Permitted content</th>
       <td>
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
           >Flow content</a
         >
       </td>
@@ -158,7 +153,7 @@ It is important to provide a mechanism to close a dialog within the `dialog` ele
       <th scope="row">Permitted parents</th>
       <td>
         Any element that accepts
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
           >flow content</a
         >
       </td>
@@ -173,7 +168,7 @@ It is important to provide a mechanism to close a dialog within the `dialog` ele
     </tr>
     <tr>
       <th scope="row">Permitted ARIA roles</th>
-      <td>{{ARIARole("alertdialog")}}</td>
+      <td><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/alertdialog_role"><code>alertdialog</code></a></td>
     </tr>
     <tr>
       <th scope="row">DOM interface</th>

@@ -1,17 +1,9 @@
 ---
 title: tabs.getSelected()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/getSelected
-tags:
-  - API
-  - Add-ons
-  - Deprecated
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - getSelected
-  - tabs
+page-type: webextension-api-function
+status:
+  - deprecated
 browser-compat: webextensions.api.tabs.getSelected
 ---
 

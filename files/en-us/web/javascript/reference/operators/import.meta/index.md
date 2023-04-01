@@ -2,14 +2,6 @@
 title: import.meta
 slug: Web/JavaScript/Reference/Operators/import.meta
 page-type: javascript-language-feature
-tags:
-  - JavaScript
-  - Language feature
-  - Modules
-  - Reference
-  - Operator
-  - import
-  - import.meta
 browser-compat: javascript.operators.import_meta
 ---
 
@@ -25,10 +17,12 @@ import.meta
 
 ### Value
 
-The `import.meta` object is created by the host environment, as an extensible [`null`-prototype](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object#null-prototype_objects) object where all properties are writable, configurable, and enumerable. The spec doesn't specify any properties to be defined on it, but hosts usually implement the following property:
+The `import.meta` object is created by the host environment, as an extensible [`null`-prototype](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object#null-prototype_objects) object where all properties are writable, configurable, and enumerable. The spec doesn't specify any properties to be defined on it, but hosts usually implement the following properties:
 
 - `url`
   - : The full URL to the module, includes query parameters and/or hash (following the `?` or `#`). In browsers, this is either the URL from which the script was obtained (for external scripts), or the URL of the containing document (for inline scripts). In Node.js, this is the file path (including the `file://` protocol).
+- [`resolve`](/en-US/docs/Web/JavaScript/Reference/Operators/import.meta/resolve)
+  - : Resolves a module specifier to a URL using the current module's URL as base.
 
 ## Description
 
@@ -87,7 +81,7 @@ After (ES modules):
 import fs from "node:fs/promises";
 import { fileURLToPath } from "node:url";
 
-const filePath = fileURLToPath(new URL('./someFile.txt', import.meta.url));
+const filePath = fileURLToPath(new URL("./someFile.txt", import.meta.url));
 fs.readFile(filePath, "utf8").then(console.log);
 ```
 
