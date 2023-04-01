@@ -68,7 +68,7 @@ Note that `mode: "no-cors"` only allows a limited set of headers in the request:
 
 ## Aborting a fetch
 
-To abort incomplete `fetch()`, and even `XMLHttpRequest`, operations, use the {{DOMxRef("AbortController")}} and {{DOMxRef("AbortSignal")}} interfaces.
+To abort incomplete `fetch()` operations, use the {{DOMxRef("AbortController")}} and {{DOMxRef("AbortSignal")}} interfaces.
 
 ```js
 const controller = new AbortController();
