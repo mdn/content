@@ -5,7 +5,7 @@ page-type: web-api-instance-property
 browser-compat: api.Response.body
 ---
 
-{{APIRef("Fetch")}}
+{{APIRef("Fetch API")}}
 
 The **`body`** read-only property of the {{domxref("Response")}} interface is a {{domxref("ReadableStream")}} of the body contents.
 
