@@ -76,7 +76,7 @@ h1 {
 }
 h2 {
   --colorPrimary: yellow;
-   color: var(--colorPrimary); /* font color is  yellow */
+  color: var(--colorPrimary); /* font color is  yellow */
 }
 h3 {
   --colorPrimary: 291;
