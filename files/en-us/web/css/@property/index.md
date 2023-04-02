@@ -86,11 +86,11 @@ h1 {
 }
 h2 {
   --colorPrimary: red;
-  color: var(--colorPrimary); /* Font color is now red */
+  color: var(--colorPrimary); /* font color is now red */
 }
 h3 {
   --colorPrimary: 777;
-  color: var(--colorPrimary); /*CSS Selector value falls back to default font color:magenta as colorPrimary value of 777 is invalid */
+  color: var(--colorPrimary); /*Due to fallback behaviour of the @property tag, CSS Selector value for the font color falls back to magenta as colorPrimary value of 777 is invalid */
 }
 ```
 
