@@ -65,31 +65,33 @@ window.CSS.registerProperty({
 
 Using [CSS](/en-US/docs/Web/CSS) {{cssxref('@property')}} [at-rule](/en-US/docs/Web/CSS/At-rule):
 
+### Normal and Fallback working example for @property CSS tag
+
+Here we try to show as to how CSS is applied in default condition using @property tag and how fallback happens to default case in case the value of @property tag is invalid.
+
+```html
+<h1>Heading 1</h1>
+<h2>Heading 2</h2>
+<h3>Heading 3</h3>
+```
+
 ```css
 @property --colorPrimary {
   syntax: '<color>';
   initial-value: magenta;
   inherits: false;
 }
-
 h1 {
-  color: var(--colorPrimary); /* font color is magenta */
+  color: var(--colorPrimary); /* Default font color is magenta */
 }
 h2 {
-  --colorPrimary: yellow;
-   color: var(--colorPrimary); /* font color is  yellow */
+  --colorPrimary: red;
+  color: var(--colorPrimary); /* Font color is now red */
 }
 h3 {
-  --colorPrimary: 291;
-   color: var(--colorPrimary); /* falls back to font color:magenta as colorPrimary: 291 is invalid */
+  --colorPrimary: 777;
+  color: var(--colorPrimary); /*CSS Selector value falls back to default font color:magenta as colorPrimary value of 777 is invalid */
 }
-```
-
-Using [HTML]
-```html
-<h1>Heading 1</h1>
-<h2>Heading 2</h2>
-<h3>Heading 3</h3>
 ```
 
 ## Formal syntax
