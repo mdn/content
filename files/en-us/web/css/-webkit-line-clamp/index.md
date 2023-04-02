@@ -35,6 +35,8 @@ When applied to anchor elements, the truncating can happen in the middle of the 
 -webkit-line-clamp: unset;
 ```
 
+### Values
+
 - `none`
   - : This value specifies that the content won't be clamped.
 - {{cssxref("integer")}}
