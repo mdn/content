@@ -159,6 +159,7 @@ filter(function (currentValue, index, array) {
 For methods that accept an arbitrary number of parameters, the syntax block is written like this:
 
 ```js
+unshift();
 unshift(element0);
 unshift(element0, element1);
 unshift(element0, element1, /* … ,*/ elementN);

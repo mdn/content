@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Array.push
 
 {{JSRef}}
 
-The **`push()`** method adds zero or more elements to the end of
+The **`push()`** method adds the specified elements to the end of
 an array and returns the new length of the array.
 
 {{EmbedInteractiveExample("pages/js/array-push.html")}}
@@ -39,8 +39,6 @@ The `push()` method appends values to an array.
 The `push()` method is a mutating method. It changes the length and the content of `this`. In case you want the value of `this` to be the same, but return a new array with elements appended to the end, you can use [`arr.concat([element0, element1, /* ... ,*/ elementN])`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/concat) instead. Notice that the elements are wrapped in an extra array — otherwise, if the element is an array itself, it would be spread instead of pushed as a single element due to the behavior of `concat()`.
 
 The `push()` method is [generic](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#generic_array_methods). It only expects the `this` value to have a `length` property and integer-keyed properties. Although strings are also array-like, this method is not suitable to be applied on them, as strings are immutable.
-
-If there would be more than 2<sup>53</sup> - 1 elements after `push()` completes, a TypeError exception is thrown.
 
 ## Examples
 

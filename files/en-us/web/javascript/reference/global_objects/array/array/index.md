@@ -12,11 +12,15 @@ The **`Array()`** constructor is used to create {{jsxref("Array")}} objects.
 ## Syntax
 
 ```js-nolint
+new Array()
+new Array(element0OrLength)
+new Array(element0, element1)
 new Array(element0, element1, /* … ,*/ elementN)
-new Array(arrayLength)
 
+Array()
+Array(element0OrLength)
+Array(element0, element1)
 Array(element0, element1, /* … ,*/ elementN)
-Array(arrayLength)
 ```
 
 > **Note:** `Array()` can be called with or without [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Both create a new `Array` instance.
