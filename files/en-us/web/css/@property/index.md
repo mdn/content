@@ -72,15 +72,15 @@ Using [CSS](/en-US/docs/Web/CSS) {{cssxref('@property')}} [at-rule](/en-US/docs/
   inherits: false;
 }
 h1 {
-   color: var(--colorPrimary); /* font color is magenta */
+  color: var(--colorPrimary); /* font color is magenta */
 }
 h2 {
   --colorPrimary: yellow;
-  color: var(--colorPrimary); /* font color is  yellow */
+   color: var(--colorPrimary); /* font color is  yellow */
 }
 h3 {
   --colorPrimary: 291;
-   color: var(--colorPrimary); /* falls back to  font color:magenta as colorPrimary: 291 is invalid */
+   color: var(--colorPrimary); /* falls back to font color:magenta as colorPrimary: 291 is invalid */
 }
 ```
 
