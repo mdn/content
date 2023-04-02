@@ -71,6 +71,7 @@ Using [CSS](/en-US/docs/Web/CSS) {{cssxref('@property')}} [at-rule](/en-US/docs/
   initial-value: magenta;
   inherits: false;
 }
+
 h1 {
   color: var(--colorPrimary); /* font color is magenta */
 }
