@@ -45,7 +45,7 @@ Array(arrayLength)
 ### Exceptions
 
 - {{jsxref("RangeError")}}
-  - : Thrown if there's only one argument (`arrayLength`) that is an integer with a value not between 0 and 2<sup>32</sup> - 1 (inclusive).
+  - : Thrown if there's only one argument (`arrayLength`) that is a number, but its value is not an integer or not between 0 and 2<sup>32</sup> - 1 (inclusive).
 
 ## Examples
 
@@ -71,8 +71,7 @@ slots.
 const arrayEmpty = new Array(2);
 
 console.log(arrayEmpty.length); // 2
-console.log(arrayEmpty[0]); // undefined
-                            // undefined displayed, but actually an empty slot
+console.log(arrayEmpty[0]); // undefined; actually, it is an empty slot
 console.log(0 in arrayEmpty); // false
 console.log(1 in arrayEmpty); // false
 ```
@@ -81,9 +80,7 @@ console.log(1 in arrayEmpty); // false
 const arrayOfOne = new Array("2"); // Not the number 2 but the string "2"
 
 console.log(arrayOfOne.length); // 1
-console.log(arrayOfOne[0]); // "2" or 2 depending on where it is run
-                            // However, the actual value is the string "2" 
-console.log(arrayOfOne[0] === "2"); // true
+console.log(arrayOfOne[0]); // "2"
 ```
 
 ### Array constructor with multiple parameters
