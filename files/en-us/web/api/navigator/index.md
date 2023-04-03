@@ -130,7 +130,7 @@ _Doesn't inherit any method._
 
 - {{domxref("Navigator.canShare()")}}
   - : Returns `true` if a call to `Navigator.share()` would succeed.
-- {{domxref("Navigator.clearAppBadge()")}} {{Experimental_Inline}}
+- {{domxref("Navigator.clearAppBadge()")}}
   - : Clears a badge on the current app's icon and returns a {{jsxref("Promise")}} that resolves with {{jsxref("undefined")}}.
 - {{domxref("Navigator.getAutoplayPolicy()")}} {{Experimental_Inline}}
   - : Returns a value indicating whether the specified media element, audio context, or media feature "type" is allowed to autoplay.
@@ -146,7 +146,7 @@ _Doesn't inherit any method._
   - : Returns a {{jsxref('Promise')}} representing a request for access to MIDI devices on the user's system.
 - {{domxref("Navigator.sendBeacon()")}}
   - : Used to asynchronously transfer a small amount of data using {{Glossary("HTTP")}} from the User Agent to a web server.
-- {{domxref("Navigator.setAppBadge()")}} {{Experimental_Inline}}
+- {{domxref("Navigator.setAppBadge()")}}
   - : Sets a badge on the icon associated with this app and returns a {{jsxref("Promise")}} that resolves with {{jsxref("undefined")}}.
 - {{domxref("Navigator.share()")}}
   - : Invokes the native sharing mechanism of the current platform.

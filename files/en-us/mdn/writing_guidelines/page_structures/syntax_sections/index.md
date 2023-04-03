@@ -146,6 +146,7 @@ Then, in the "Parameters" section, list the callback function's parameters and w
 For methods that accept an arbitrary number of parameters, the syntax block is written like this:
 
 ```js
+unshift();
 unshift(element0);
 unshift(element0, element1);
 unshift(element0, element1, /* … ,*/ elementN);

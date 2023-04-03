@@ -5,7 +5,7 @@ page-type: web-api-instance-property
 browser-compat: api.Request.cache
 ---
 
-{{APIRef("Fetch")}}
+{{APIRef("Fetch API")}}
 
 The **`cache`** read-only property of the {{domxref("Request")}} interface contains the cache mode of the request. It controls how the request will interact with the browser's [HTTP cache](/en-US/docs/Web/HTTP/Caching).
 
