@@ -43,7 +43,7 @@ Depending on the PWA, device, and features of the operating system and browser, 
 
 The UI for installing a PWA from the web varies from one browser to another, and from one platform to another.
 
-The user interface for installing PWAs differs by device and OS combination. The "Add to homes screen" user interface installs the PWA on Safari on iOS. Other browsers, including Chrome for Android, include the app installation command in the browser setting menu. In Chrome and Edge on desktop, the browser includes an "Install" icon in the URL bar when the user navigates to the page:
+The user interface for installing PWAs differs by device and OS combination. The "Add to homes screen" user interface installs the PWA on Safari on iOS. Other browsers, including Chrome for Android, include the app installation command in the browser setting menu. In Chrome and Edge on desktop, when the user navigates to the page, if the page is a PWA and the PWA is not currently installed by the browser, an installation icon will be visible in the URL bar:
 
 ![PWA install prompt in URL bar](pwa-install.png)
 
@@ -69,7 +69,9 @@ Apple is unique when it comes to PWAs: PWAs can be installed on macOS from any b
 
 When an installed PWA is launched, it can be displayed in its own standalone window (without the full browser UI) but it still effectively runs in a browser window, even if the usual browser UI elements, such as the address bar or back button, aren't visible. The application will be found where the OS saves other applications, within a folder specific to the browser.
 
-The browser used to install the PWA will know the PWA is installed, but other browsers will not have access to the installed status. For example, if you install a PWA using MS Edge, Edge will prompt you to open the PWA when you visit the site while Chrome will continue to prompt you to install the application. If you install the PWA using Chrome as well, you will have two copies of the PWA: one instance in "Chrome Apps", a list of Google Apps and installed PWAs at chrome://apps, and a separate instance in [Edge Apps](https://blogs.windows.com/msedgedev/2022/05/18/find-and-manage-your-installed-apps-and-sites/), the list of installed PWAs. Even if both are open, data is not shared between instances installed from different browsers.
+The browser used to install the PWA will know the PWA is installed, but other browsers will not have access to the installed status. For example, if you install a PWA using MS Edge, Edge will prompt you to open the PWA when you visit the site while Chrome will continue to prompt you to install the application. If you install the PWA using Chrome as well, you will have two copies of the PWA: one instance in "Chrome Apps", a list of Google Apps and installed PWAs at `chrome://apps`, and a separate instance in [Edge Apps](https://blogs.windows.com/msedgedev/2022/05/18/find-and-manage-your-installed-apps-and-sites/), the list of installed PWAs viewable at `edge://apps`. 
+
+When multiple instances of a PWA are open, data is not shared between instances installed from different browsers.
 
 ### Uninstalling
 
