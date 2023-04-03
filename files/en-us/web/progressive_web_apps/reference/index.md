@@ -5,72 +5,12 @@ slug: Web/Progressive_web_apps/Reference
 page-type: landing-page
 ---
 
-This reference describes the [web app manifest](/en-US/docs/Web/Manifest) members, [Service Worker APIs](/en-US/docs/Web/API/Service_Worker_API), and other web APIs that [Progressive Web Apps](/en-US/docs/Web/Progressive_web_apps) (PWAs) can use to offer a great user experience.
+This reference describes the technologies, features, and APIs that [Progressive Web Apps](/en-US/docs/Web/Progressive_web_apps) (PWAs) can use to offer a great user experience.
 
-## Web app manifest members
+## Web app manifest
 
-### Required for installation
-
-The following manifest members are required for browsers to consider a web app installable:
-
-- [`name`](/en-US/docs/Web/Manifest/name)
-  - : The name of the web application as it is usually displayed to the user.
-- [`icons`](/en-US/docs/Web/Manifest/icons)
-  - : Image files that can serve as application icons for different contexts.
-- [`start_url`](/en-US/docs/Web/Manifest/start_url)
-  - : The preferred URL that should be loaded when the user launches the web application.
-- [`display`](/en-US/docs/Web/Manifest/display) or [`display_override`](/en-US/docs/Web/Manifest/display_override)
-  - : The developers' preferred display modes for the browser UI.
-
-All other members listed below are optional but can help greatly improve the user experience of a PWA.
-
-### Identification
-
-The following manifest members are useful to more extensively describe your PWA:
-
-- [`short_name`](/en-US/docs/Web/Manifest/short_name)
-  - : The name of the web application displayed to the user if there is not enough space to display the `name` member.
-- [`description`](/en-US/docs/Web/Manifest/description)
-  - : An explanation of what the application does.
-- [`categories`](/en-US/docs/Web/Manifest/categories)
-  - : Names of categories the application belongs to, which can be used by PWA app stores.
-
-### Appearance
-
-The following manifest members are used to further customize the appearance of your app:
-
-- [`background_color`](/en-US/docs/Web/Manifest/background_color)
-  - : The placeholder background color for the application page to display before its stylesheet is loaded.
-- [`theme_color`](/en-US/docs/Web/Manifest/theme_color)
-  - : The default theme color for the application, which sometimes affects how the operating system displays the app.
-- [`screenshots`](/en-US/docs/Web/Manifest/screenshots)
-  - : The URLs and descriptors for the screenshots used to showcase the application in PWA stores.
-- [`orientation`](/en-US/docs/Web/Manifest/orientation)
-  - : The default orientation for the app's top-level {{Glossary("Browsing context", "browsing contexts")}}.
-
-### OS integration
-
-The following manifest members can be used to more deeply integrate your PWA in the operating system it's installed on:
-
-- [`file_handlers`](/en-US/docs/Web/Manifest/file_handlers)
-  - : File types this web app is associated with.
-- [`protocol_handlers`](/en-US/docs/Web/Manifest/protocol_handlers)
-  - : URL protocols this web app handles and the URLs for each protocol.
-- [`share_target`](/en-US/docs/Web/Manifest/share_target)
-  - : Registers the app as a share target, defining the actions and parameters for the OS's share dialog.
-- [`shortcuts`](/en-US/docs/Web/Manifest/shortcuts)
-  - : Links to key tasks or pages within the web app the OS can display when a user engages with the web app's icon.
-- [`launch_handler`](/en-US/docs/Web/Manifest/launch_handler)
-  - : The context in which the app should be loaded when launched or relaunched.
-
-### Other
-
-- [`scope`](/en-US/docs/Web/Manifest/scope)
-  - : The navigation scope of this web application, which defines the content viewed with the manifest applied versus out-of-scope normal web page content.
-- [`related_applications`](/en-US/docs/Web/Manifest/related_applications)
-  - : Alternative device-native applications that provide similar or equivalent functionality to this app. Used in conjunction with the `prefer_related_applications` member if the alternative applications should be preferred over the PWA.
-- [`prefer_related_applications`](/en-US/docs/Web/Manifest/prefer_related_applications)
-  - : Whether the applications listed in the `related_applications` member should be preferred over this app.
+- [Web app manifest members](/en-US/docs/Web/Manifest/)
+  - : Developers can use web app manifest members to describe a PWA, customize its appearance, and more deeply integrate it in the operating system.
 
 ## Service Worker APIs
 
