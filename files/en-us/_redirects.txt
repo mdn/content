@@ -10957,7 +10957,7 @@
 /en-US/docs/Web/Apps/Modern/Responsive/responsive_design_building_blocks	/en-US/docs/Web/Progressive_web_apps/Responsive/responsive_design_building_blocks
 /en-US/docs/Web/Apps/Modern/Safe	/en-US/docs/Web/Progressive_web_apps
 /en-US/docs/Web/Apps/Progressive	/en-US/docs/Web/Progressive_web_apps
-/en-US/docs/Web/Apps/Progressive/Add_to_home_screen	/en-US/docs/Web/Progressive_web_apps/Add_to_home_screen
+/en-US/docs/Web/Apps/Progressive/Add_to_home_screen	/en-US/docs/Web/Progressive_web_apps/Guides/Making_PWAs_installable
 /en-US/docs/Web/Apps/Progressive/Advantages	/en-US/docs/Web/Progressive_web_apps/Tutorials/js13kGames/Introduction#Advantages_of_web_applications
 /en-US/docs/Web/Apps/Progressive/App_structure	/en-US/docs/Web/Progressive_web_apps/Tutorials/js13kGames/App_structure
 /en-US/docs/Web/Apps/Progressive/Discoverable	/en-US/docs/Web/Progressive_web_apps
@@ -12512,6 +12512,7 @@
 /en-US/docs/Web/Performance/business_case_for_performance	/en-US/docs/Learn/Performance/business_case_for_performance
 /en-US/docs/Web/Performance/learn	/en-US/docs/Web/Performance/How_browsers_work
 /en-US/docs/Web/Privacy/Tracking_Protection	/en-US/docs/Web/Privacy/Firefox_tracking_protection
+/en-US/docs/Web/Progressive_web_apps/Add_to_home_screen	/en-US/docs/Web/Progressive_web_apps/Guides/Making_PWAs_installable
 /en-US/docs/Web/Progressive_web_apps/Advantages	/en-US/docs/Web/Progressive_web_apps/Tutorials/js13kGames/Introduction#Advantages_of_web_applications
 /en-US/docs/Web/Progressive_web_apps/App_structure	/en-US/docs/Web/Progressive_web_apps/Tutorials/js13kGames/App_structure
 /en-US/docs/Web/Progressive_web_apps/Developer_guide/Installing	/en-US/docs/Web/Progressive_web_apps/Installing
