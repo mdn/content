@@ -64,7 +64,7 @@ createTexture(descriptor)
 
     - `usage`
 
-      - : The {{glossary("bitwise flags")}} representing the allowed usages for the `GPUTexture`. The possible values can be found in the [`GPUTexture.usage` value table](/en-US/docs/Web/API/GPUTexture/usage#value).
+      - : The {{glossary("Bitwise_flags", "bitwise flags")}} representing the allowed usages for the `GPUTexture`. The possible values are in the [`GPUTexture.usage` value table](/en-US/docs/Web/API/GPUTexture/usage#value).
 
         Note that multiple possible usages can be specified by separating values with pipe symbols, for example:
 
