@@ -120115,10 +120115,6 @@
       "isiahmeadows"
     ]
   },
-  "Web/JavaScript/Reference/Global_Objects/TypedArray/name": {
-    "modified": "2020-10-15T21:29:49.993Z",
-    "contributors": ["wbamberg", "mfuji09", "fscholz", "jameshkramer", "Firzen"]
-  },
   "Web/JavaScript/Reference/Global_Objects/TypedArray/of": {
     "modified": "2020-11-22T08:31:24.316Z",
     "contributors": [

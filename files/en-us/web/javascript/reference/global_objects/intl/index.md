@@ -7,9 +7,11 @@ browser-compat: javascript.builtins.Intl
 
 {{JSRef}}
 
-The **`Intl`** object is the namespace for the ECMAScript Internationalization API, which provides language sensitive string comparison, number formatting, and date and time formatting. The **`Intl`** object provides access to several constructors as well as functionality common to the internationalization constructors and other language sensitive functions.
+The **`Intl`** namespace object contains several constructors as well as functionality common to the internationalization constructors and other language sensitive functions. Collectively, they comprise the ECMAScript Internationalization API, which provides language sensitive string comparison, number formatting, date and time formatting, and more.
 
 ## Description
+
+Unlike most global objects, `Intl` is not a constructor. You cannot use it with the [`new` operator](/en-US/docs/Web/JavaScript/Reference/Operators/new) or invoke the `Intl` object as a function. All properties and methods of `Intl` are static (just like the {{jsxref("Math")}} object).
 
 The internationalization constructors as well as several language sensitive methods of other constructors (listed under [See also](#see_also)) use a common pattern for identifying locales and determining the one they will actually use: they all accept `locales` and `options` arguments, and negotiate the requested locale(s) against the locales they support using an algorithm specified in the `options.localeMatcher` property.
 

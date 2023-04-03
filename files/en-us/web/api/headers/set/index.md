@@ -5,7 +5,7 @@ page-type: web-api-instance-method
 browser-compat: api.Headers.set
 ---
 
-{{APIRef("Fetch")}}
+{{APIRef("Fetch API")}}
 
 The **`set()`** method of the {{domxref("Headers")}} interface
 sets a new value for an existing header inside a `Headers` object, or adds
