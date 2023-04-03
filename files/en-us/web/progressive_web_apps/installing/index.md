@@ -69,7 +69,7 @@ Apple is unique when it comes to PWAs: PWAs can be installed on macOS from any b
 
 When an installed PWA is launched, it can be displayed in its own standalone window (without the full browser UI) but it still effectively runs in a browser window, even if the usual browser UI elements, such as the address bar or back button, aren't visible. The application will be found where the OS saves other applications, within a folder specific to the browser.
 
-The browser used to install the PWA will know the PWA is installed, but other browsers will not have access to the installed status. For example, if you install a PWA using MS Edge, Edge will prompt you to open the PWA when you visit the site while Chrome will continue to prompt you to install the application. If you install the PWA using Chrome as well, you will have two copies of the PWA: one instance in "Chrome Apps" and a separate instance in "Edge Apps". Even if both are open, data is not shared between instances installed from different browsers.
+The browser used to install the PWA will know the PWA is installed, but other browsers will not have access to the installed status. For example, if you install a PWA using MS Edge, Edge will prompt you to open the PWA when you visit the site while Chrome will continue to prompt you to install the application. If you install the PWA using Chrome as well, you will have two copies of the PWA: one instance in "Chrome Apps", a list of Google Apps and installed PWAs at chrome://apps, and a separate instance in [Edge Apps](https://blogs.windows.com/msedgedev/2022/05/18/find-and-manage-your-installed-apps-and-sites/), the list of installed PWAs. Even if both are open, data is not shared between instances installed from different browsers.
 
 ### Uninstalling
 
@@ -87,4 +87,5 @@ Confirm the uninstall. That's it!
 
 ## See also
 
+- [Using PWAs in Chrome: computer and Android](https://support.google.com/chrome/answer/9658361)
 - [Install, manage, or uninstall apps in Microsoft Edge](https://support.microsoft.com/en-us/topic/install-manage-or-uninstall-apps-in-microsoft-edge-0c156575-a94a-45e4-a54f-3a84846f6113)
