@@ -69,6 +69,8 @@ The **`<marquee>`** [HTML](/en-US/docs/Web/HTML) element is used to insert a scr
 </marquee>
 ```
 
+### Result
+
 {{EmbedLiveSample("Examples", 600, 450)}}
 
 ## Technical summary
