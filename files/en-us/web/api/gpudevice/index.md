@@ -33,7 +33,7 @@ _Inherits properties from its parent, {{DOMxRef("EventTarget")}}._
 
 - {{domxref("GPUDevice.lost", "lost")}} {{Experimental_Inline}} {{readonlyinline}}
 
-  - : Contains a {{domxref("Promise")}} that remains pending throughout the device's lifetime and resolves with a {{domxref("GPUDeviceLostInfo")}} object when the device is lost.
+  - : Contains a {{jsxref("Promise")}} that remains pending throughout the device's lifetime and resolves with a {{domxref("GPUDeviceLostInfo")}} object when the device is lost.
 
 - {{domxref("GPUDevice.queue", "queue")}} {{Experimental_Inline}} {{readonlyinline}}
   - : Returns the primary {{domxref("GPUQueue")}} for the device.
