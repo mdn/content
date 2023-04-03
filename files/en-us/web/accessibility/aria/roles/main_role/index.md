@@ -19,7 +19,7 @@ This is the main section of a document that discusses avocados. Subsections of t
 
 ## Description
 
-The `main` role is a navigational [landmark](/en-US/docs/Web/Accessibility/ARIA/Roles#landmark_roles) role identifying the main content of a document. Landmarks can be used by assistive technology such as screen readers to quickly identify and navigate to large sections of the document.
+The `main` role is a navigational [landmark](/en-US/docs/Web/Accessibility/ARIA/Roles#3._landmark_roles) role identifying the main content of a document. Landmarks can be used by assistive technology such as screen readers to quickly identify and navigate to large sections of the document.
 
 By classifying and labeling sections of a page, structural information conveyed visually through layout can be represented programmatically. Screen readers use landmark roles to provide keyboard navigation to important sections of a page. For those navigating via landmark roles, the main role is an alternative for "skip to main content" links.
 
@@ -56,7 +56,7 @@ The {{HTMLElement('main')}} element has a role of `main`. Developers should use 
 
 ### Use only one `main` role per document
 
-The `main` [landmark role](/en-US/docs/Web/Accessibility/ARIA/Roles#landmark_roles) should only be used once per document.
+The `main` [landmark role](/en-US/docs/Web/Accessibility/ARIA/Roles#3._landmark_roles) should only be used once per document.
 
 If a document contains two `main` roles, say updating page content when triggered by JavaScript, the inactive `main` role's presence should be removed from assistive technology via techniques such as toggling the [`hidden` attribute](/en-US/docs/Web/HTML/Global_attributes/hidden).
 

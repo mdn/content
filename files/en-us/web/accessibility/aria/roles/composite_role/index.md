@@ -4,7 +4,7 @@ slug: Web/Accessibility/ARIA/Roles/composite_role
 spec-urls: https://w3c.github.io/aria/#composite
 ---
 
-The `composite` [abstract role](/en-US/docs/Web/Accessibility/ARIA/Roles#abstract_roles) indicates a widget that may contain navigable descendants or owned children.
+The `composite` [abstract role](/en-US/docs/Web/Accessibility/ARIA/Roles#6._abstract_roles) indicates a widget that may contain navigable descendants or owned children.
 
 > **Note:** The `composite` role is an abstract role. It is included here for completeness of documentation. It should not be used by web authors.
 
