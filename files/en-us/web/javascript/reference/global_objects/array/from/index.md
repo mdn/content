@@ -7,7 +7,9 @@ browser-compat: javascript.builtins.Array.from
 
 {{JSRef}}
 
-The **`Array.from()`** static method creates a new, shallow-copied `Array` instance from an iterable or array-like object.
+The **`Array.from()`** static method creates a new, shallow-copied `Array` instance from an [iterable](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterable_protocol) or [array-like](/en-US/docs/Web/JavaScript/Guide/Indexed_collections#working_with_array-like_objects) object.
+
+To convert an [async iterable](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_async_iterator_and_async_iterable_protocols) to an array, use {{jsxref("Array.fromAsync()")}}.
 
 {{EmbedInteractiveExample("pages/js/array-from.html","shorter")}}
 
@@ -187,5 +189,6 @@ console.log(Array.from.call({}, { length: 1, 0: "foo" })); // [ 'foo' ]
 - [Polyfill of `Array.from` in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
 - {{jsxref("Array")}}
 - {{jsxref("Array.of()")}}
+- {{jsxref("Array.fromAsync()")}}
 - {{jsxref("Array.prototype.map()")}}
 - {{jsxref("TypedArray.from()")}}

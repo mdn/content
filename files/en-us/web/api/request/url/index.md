@@ -5,7 +5,7 @@ page-type: web-api-instance-property
 browser-compat: api.Request.url
 ---
 
-{{APIRef("Fetch")}}
+{{APIRef("Fetch API")}}
 
 The **`url`** read-only property of the {{domxref("Request")}}
 interface contains the URL of the request.

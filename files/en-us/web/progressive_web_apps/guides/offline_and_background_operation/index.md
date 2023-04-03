@@ -127,7 +127,7 @@ For much more detail about setting up service workers and using them to add offl
 
 ## Background operation
 
-While offine operation is probably the most common use for service workers, they also enable a PWA to operate even while the main app is closed. This is possible because the service worker is allowed to run while the main app is not running.
+While offline operations are the most common use for service workers, they also enable a PWA to operate even while the main app is closed. This is possible because the service worker can run while the main app is not running.
 
 This doesn't mean service workers run all the time: browsers may stop service workers when they think it is appropriate. For example, if a service worker has been inactive for a while, it will be stopped. However, the browser will restart the service worker when an event has happened that it needs to take care of. This enables a PWA to implement background operations in the following way:
 

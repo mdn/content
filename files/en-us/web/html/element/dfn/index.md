@@ -58,8 +58,6 @@ Since the `<dfn>` element has no `title`, the text contents of the `<dfn>` eleme
 
 #### Result
 
-This looks like this rendered in your browser:
-
 {{EmbedLiveSample("Basic_identification_of_a_term", 650, 120)}}
 
 ### Links to definitions
@@ -100,8 +98,6 @@ Here we see the definition — now with an [`id`](/en-US/docs/Web/HTML/Global_at
 
 #### Result
 
-The resulting content looks like this:
-
 {{EmbedLiveSample("Links_to_definitions", 650, 300)}}
 
 ### Using abbreviations and definitions together
@@ -127,8 +123,6 @@ In some cases, you may wish to use an abbreviation for a term when defining it. 
 Note the `<abbr>` element nested inside the `<dfn>`. The former establishes that the term is an abbreviation ("HST") and specifies the full term ("Hubble Space Telescope") in its `title` attribute. The latter indicates that the abbreviated term represents a term being defined.
 
 #### Result
-
-The output of the above code looks like this:
 
 {{EmbedLiveSample("Using_abbreviations_and_definitions_together", 650, 200)}}
 

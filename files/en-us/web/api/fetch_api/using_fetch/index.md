@@ -2,29 +2,22 @@
 title: Using the Fetch API
 slug: Web/API/Fetch_API/Using_Fetch
 page-type: guide
-browser-compat: api.fetch
 ---
 
 {{DefaultAPISidebar("Fetch API")}}
 
 The [Fetch API](/en-US/docs/Web/API/Fetch_API) provides a JavaScript interface for accessing and manipulating parts of the [protocol](/en-US/docs/Glossary/Protocol), such as requests and responses. It also provides a global {{domxref("fetch()")}} method that provides an easy, logical way to fetch resources asynchronously across the network.
 
-This kind of functionality was previously achieved using {{domxref("XMLHttpRequest")}}. Fetch provides a better alternative that can be easily used by other technologies such as {{domxref("Service_Worker_API", "Service Workers")}}. Fetch also provides a single logical place to define other HTTP-related concepts such as [CORS](/en-US/docs/Web/HTTP/CORS) and extensions to HTTP.
+Unlike {{domxref("XMLHttpRequest")}} that is a callback-based API, Fetch is promise-based and provides a better alternative that can be easily used in [service workers](/en-US/docs/Web/API/Service_Worker_API). Fetch also integrates advanced HTTP concepts such as [CORS](/en-US/docs/Web/HTTP/CORS) and other extensions to HTTP.
 
-The `fetch` specification differs from `jQuery.ajax()` in the following significant ways:
-
-- The Promise returned from `fetch()` **won't reject on HTTP error status** even if the response is an HTTP 404 or 500. Instead, as soon as the server responds with headers, the Promise will resolve normally (with the {{domxref("Response/ok", "ok")}} property of the response set to false if the response isn't in the range 200–299), and it will only reject on network failure or if anything prevented the request from completing.
-- Unless `fetch()` is called with the [`credentials`](/en-US/docs/Web/API/fetch#credentials) option set to `include`, `fetch()`:
-  - won't send cookies in cross-origin requests
-  - won't set any cookies sent back in cross-origin responses
-  - As of August 2018, the default credentials policy changed to same-origin. Firefox was also modified in version 61.0b13)
-
-A basic fetch request is really simple to set up. Have a look at the following code:
+A basic fetch request looks like this:
 
 ```js
-fetch("http://example.com/movies.json")
-  .then((response) => response.json())
-  .then((data) => console.log(data));
+async function logJSONData() {
+  const response = await fetch("http://example.com/movies.json");
+  const jsonData = await response.json();
+  console.log(data);
+}
 ```
 
 Here we are fetching a JSON file across the network and printing it to the console. The simplest use of `fetch()` takes one argument — the path to the resource you want to fetch — and does not directly return the JSON response body but instead returns a promise that resolves with a {{domxref("Response")}} object.
@@ -73,6 +66,33 @@ Note that `mode: "no-cors"` only allows a limited set of headers in the request:
 - `Content-Language`
 - `Content-Type` with a value of `application/x-www-form-urlencoded`, `multipart/form-data`, or `text/plain`
 
+## Aborting a fetch
+
+To abort incomplete `fetch()` operations, use the {{DOMxRef("AbortController")}} and {{DOMxRef("AbortSignal")}} interfaces.
+
+```js
+const controller = new AbortController();
+const signal = controller.signal;
+const url = "video.mp4";
+
+const downloadBtn = document.querySelector("#download");
+const abortBtn = document.querySelector("#abort");
+
+downloadBtn.addEventListener("click", async () => {
+  try {
+    const response = await fetch(url, { signal });
+    console.log("Download complete", response);
+  } catch (error) {
+    console.error(`Download error: ${error.message}`);
+  }
+});
+
+abortBtn.addEventListener("click", () => {
+  controller.abort();
+  console.log("Download aborted");
+});
+```
+
 ## Sending a request with credentials included
 
 To cause browsers to send a request with credentials included on both same-origin and cross-origin calls, add `credentials: 'include'` to the `init` object you pass to the `fetch()` method.
@@ -110,22 +130,25 @@ fetch("https://example.com", {
 Use {{domxref("fetch()")}} to POST JSON-encoded data.
 
 ```js
-const data = { username: "example" };
+async function postJSON(data) {
+  try {
+    const response = await fetch("https://example.com/profile", {
+      method: "POST", // or 'PUT'
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+    });
 
-fetch("https://example.com/profile", {
-  method: "POST", // or 'PUT'
-  headers: {
-    "Content-Type": "application/json",
-  },
-  body: JSON.stringify(data),
-})
-  .then((response) => response.json())
-  .then((data) => {
-    console.log("Success:", data);
-  })
-  .catch((error) => {
+    const result = await response.json();
+    console.log("Success:", result);
+  } catch (error) {
     console.error("Error:", error);
-  });
+  }
+}
+
+const data = { username: "example" };
+postJSON(data);
 ```
 
 ## Uploading a file
@@ -133,23 +156,26 @@ fetch("https://example.com/profile", {
 Files can be uploaded using an HTML `<input type="file" />` input element, {{domxref("FormData.FormData","FormData()")}} and {{domxref("fetch()")}}.
 
 ```js
+async function upload(formData) {
+  try {
+    const response = await fetch("https://example.com/profile/avatar", {
+      method: "PUT",
+      body: formData,
+    });
+    const result = await response.json();
+    console.log("Success:", result);
+  } catch (error) {
+    console.error("Error:", error);
+  }
+}
+
 const formData = new FormData();
 const fileField = document.querySelector('input[type="file"]');
 
 formData.append("username", "abc123");
 formData.append("avatar", fileField.files[0]);
 
-fetch("https://example.com/profile/avatar", {
-  method: "PUT",
-  body: formData,
-})
-  .then((response) => response.json())
-  .then((result) => {
-    console.log("Success:", result);
-  })
-  .catch((error) => {
-    console.error("Error:", error);
-  });
+upload(formData);
 ```
 
 ## Uploading multiple files
@@ -157,27 +183,29 @@ fetch("https://example.com/profile/avatar", {
 Files can be uploaded using an HTML `<input type="file" multiple />` input element, {{domxref("FormData.FormData","FormData()")}} and {{domxref("fetch()")}}.
 
 ```js
-const formData = new FormData();
-const photos = document.querySelector('input[type="file"][multiple]');
-
-formData.append("title", "My Vegas Vacation");
-let i = 0;
-for (const photo of photos.files) {
-  formData.append(`photos_${i}`, photo);
-  i++;
+async function uploadMultiple(formData) {
+  try {
+    const response = await fetch("https://example.com/posts", {
+      method: "POST",
+      body: formData,
+    });
+    const result = await response.json();
+    console.log("Success:", result);
+  } catch (error) {
+    console.error("Error:", error);
+  }
 }
 
-fetch("https://example.com/posts", {
-  method: "POST",
-  body: formData,
-})
-  .then((response) => response.json())
-  .then((result) => {
-    console.log("Success:", result);
-  })
-  .catch((error) => {
-    console.error("Error:", error);
-  });
+const photos = document.querySelector('input[type="file"][multiple]');
+const formData = new FormData();
+
+formData.append("title", "My Vegas Vacation");
+
+for (const [i, photo] of Array.from(photos.files).entries()) {
+  formData.append(`photos_${i}`, photo);
+}
+
+uploadMultiple(formData);
 ```
 
 ## Processing a text file line by line
@@ -230,19 +258,18 @@ run();
 A {{domxref("fetch()")}} promise will reject with a {{jsxref("TypeError")}} when a network error is encountered or CORS is misconfigured on the server-side, although this usually means permission issues or similar — a 404 does not constitute a network error, for example. An accurate check for a successful `fetch()` would include checking that the promise resolved, then checking that the {{domxref("Response.ok")}} property has a value of true. The code would look something like this:
 
 ```js
-fetch("flowers.jpg")
-  .then((response) => {
+async function fetchImage() {
+  try {
+    const response = await fetch("flowers.jpg");
     if (!response.ok) {
       throw new Error("Network response was not OK");
     }
-    return response.blob();
-  })
-  .then((myBlob) => {
+    const myBlob = await response.blob();
     myImage.src = URL.createObjectURL(myBlob);
-  })
-  .catch((error) => {
+  } catch (error) {
     console.error("There has been a problem with your fetch operation:", error);
-  });
+  }
+}
 ```
 
 ## Supplying your own request object
@@ -250,6 +277,19 @@ fetch("flowers.jpg")
 Instead of passing a path to the resource you want to request into the `fetch()` call, you can create a request object using the {{domxref("Request.Request","Request()")}} constructor, and pass that in as a `fetch()` method argument:
 
 ```js
+async function fetchImage(request) {
+  try {
+    const response = await fetch(request);
+    if (!response.ok) {
+      throw new Error("Network response was not OK");
+    }
+    const myBlob = await response.blob();
+    myImage.src = URL.createObjectURL(myBlob);
+  } catch (error) {
+    console.error("Error:", error);
+  }
+}
+
 const myHeaders = new Headers();
 
 const myRequest = new Request("flowers.jpg", {
@@ -259,11 +299,7 @@ const myRequest = new Request("flowers.jpg", {
   cache: "default",
 });
 
-fetch(myRequest)
-  .then((response) => response.blob())
-  .then((myBlob) => {
-    myImage.src = URL.createObjectURL(myBlob);
-  });
+fetchImage(myRequest);
 ```
 
 `Request()` accepts exactly the same parameters as the `fetch()` method. You can even pass in an existing request object to create a copy of it:
@@ -331,18 +367,19 @@ try {
 A good use case for headers is checking whether the content type is correct before you process it further. For example:
 
 ```js
-fetch(myRequest)
-  .then((response) => {
+async function fetchJSON(request) {
+  try {
+    const response = await fetch(request);
     const contentType = response.headers.get("content-type");
     if (!contentType || !contentType.includes("application/json")) {
       throw new TypeError("Oops, we haven't got JSON!");
     }
-    return response.json();
-  })
-  .then((data) => {
-    /* process your data further */
-  })
-  .catch((error) => console.error(error));
+    const jsonData = await response.json();
+    // process your data further
+  } catch (error) {
+    console.error("Error:", error);
+  }
+}
 ```
 
 ### Guard
@@ -435,13 +472,15 @@ if (window.fetch) {
 }
 ```
 
-## Specifications
+## Differences from `jQuery.ajax()`
 
-{{Specifications}}
+The `fetch` specification differs from `jQuery.ajax()` in the following significant ways:
 
-## Browser compatibility
-
-{{Compat}}
+- The promise returned from `fetch()` won't reject on HTTP errors even if the response is an HTTP 404 or 500. Instead, as soon as the server responds with headers, the promise will resolve (with the {{domxref("Response/ok", "ok")}} property of the response set to `false` if the response isn't in the range 200–299). The promise will only reject on network failure or if anything prevented the request from completing.
+- Unless `fetch()` is called with the [`credentials`](/en-US/docs/Web/API/fetch#credentials) option set to `include`, `fetch()`:
+  - won't send cookies in cross-origin requests
+  - won't set any cookies sent back in cross-origin responses
+  - As of August 2018, the default credentials policy changed to same-origin.
 
 ## See also
 

@@ -259,7 +259,9 @@ f("a", "b"); // 'a+b'
 ## Static methods
 
 - {{jsxref("Array.from()")}}
-  - : Creates a new `Array` instance from an array-like object or iterable object.
+  - : Creates a new `Array` instance from an iterable or array-like object.
+- {{jsxref("Array.fromAsync()")}} {{experimental_inline}}
+  - : Creates a new `Array` instance from an async iterable, iterable, or array-like object.
 - {{jsxref("Array.isArray()")}}
   - : Returns `true` if the argument is an array, or `false` otherwise.
 - {{jsxref("Array.of()")}}

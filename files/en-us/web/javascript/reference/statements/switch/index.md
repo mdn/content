@@ -16,22 +16,14 @@ The **`switch`** statement evaluates an [expression](/en-US/docs/Web/JavaScript/
 ```js-nolint
 switch (expression) {
   case value1:
-    //Statements executed when the
-    //result of expression matches value1
-    [break;]
+    statements
   case value2:
-    //Statements executed when the
-    //result of expression matches value2
-    [break;]
-  ...
+    statements
+  // …
   case valueN:
-    //Statements executed when the
-    //result of expression matches valueN
-    [break;]
-  [default:
-    //Statements executed when none of
-    //the values match the value of the expression
-    [break;]]
+    statements
+  default:
+    statements
 }
 ```
 
@@ -85,7 +77,7 @@ switch (foo) {
 // Logs 0 and 1
 ```
 
-You can use other control-flow statements to replace `break`, such as a [`return`](/en-US/docs/Web/JavaScript/Reference/Statements/return) statement.
+In the appropriate context, other control-flow statements also have the effect of breaking out of the `switch` statement. For example, if the `switch` statement is contained in a function, then a [`return`](/en-US/docs/Web/JavaScript/Reference/Statements/return) statement terminates the execution of the function body and therefore the `switch` statement. If the `switch` statement is contained in a loop, then a [`continue`](/en-US/docs/Web/JavaScript/Reference/Statements/break) statement stops the `switch` statement and jumps to the next iteration of the loop.
 
 ### Lexical scoping
 
