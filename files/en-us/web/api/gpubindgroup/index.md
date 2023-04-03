@@ -26,7 +26,7 @@ A `GPUBindGroup` object instance is created using the {{domxref("GPUDevice.creat
 
 ### Basic example
 
-Our [basic compute demo](https://webgpu-basic-compute.glitch.me/) shows an example of creating a bind group layout and then using that as a template when creating a bind group.
+Our [basic compute demo](https://mdn.github.io/dom-examples/webgpu-compute-demo/) shows an example of creating a bind group layout and then using that as a template when creating a bind group.
 
 ```js
 // ...
