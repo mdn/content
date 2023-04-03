@@ -53,7 +53,7 @@ The following criteria must be met when calling **`beginComputePass()`**, otherw
 
 ## Examples
 
-In our [basic compute demo](https://webgpu-basic-compute.glitch.me/), several commands are recorded via a {{domxref("GPUCommandEncoder")}}. Most of these commands originate from the {{domxref("GPUComputePassEncoder")}} created via `beginComputePass()`.
+In our [basic compute demo](https://mdn.github.io/dom-examples/webgpu-compute-demo/), several commands are recorded via a {{domxref("GPUCommandEncoder")}}. Most of these commands originate from the {{domxref("GPUComputePassEncoder")}} created via `beginComputePass()`.
 
 ```js
 // ...

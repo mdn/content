@@ -33,7 +33,7 @@ A device's primary queue is accessed via the {{domxref("GPUDevice.queue")}} prop
 
 ## Examples
 
-In our [basic render demo](https://webgpu-basic-render.glitch.me/), we define some vertex data in a {{jsxref("Float32Array")}} that we'll use to draw a triangle:
+In our [basic render demo](https://mdn.github.io/dom-examples/webgpu-render-demo/), we define some vertex data in a {{jsxref("Float32Array")}} that we'll use to draw a triangle:
 
 ```js
 const vertices = new Float32Array([

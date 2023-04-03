@@ -37,7 +37,7 @@ The following criteria must be met when calling **`submit()`**, otherwise a {{do
 
 ## Examples
 
-In our [basic render demo](https://webgpu-basic-render.glitch.me/), a number of commands are recorded via a {{domxref("GPUCommandEncoder")}}:
+In our [basic render demo](https://mdn.github.io/dom-examples/webgpu-render-demo/), a number of commands are recorded via a {{domxref("GPUCommandEncoder")}}:
 
 ```js
 // ...

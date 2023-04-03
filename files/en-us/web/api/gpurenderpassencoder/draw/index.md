@@ -38,7 +38,7 @@ None ({{jsxref("Undefined")}}).
 
 ## Examples
 
-In our [basic render demo](https://webgpu-basic-render.glitch.me/), several commands are recorded via a {{domxref("GPUCommandEncoder")}}. Most of these commands originate from the `GPURenderPassEncoder` created via {{domxref("GPUCommandEncoder.beginRenderPass()")}}. `draw()` is used to specify that three vertices should be drawn to create our triangle.
+In our [basic render demo](https://mdn.github.io/dom-examples/webgpu-render-demo/), several commands are recorded via a {{domxref("GPUCommandEncoder")}}. Most of these commands originate from the `GPURenderPassEncoder` created via {{domxref("GPUCommandEncoder.beginRenderPass()")}}. `draw()` is used to specify that three vertices should be drawn to create our triangle.
 
 ```js
 // ...

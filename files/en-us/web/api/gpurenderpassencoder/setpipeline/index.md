@@ -36,7 +36,7 @@ The following criteria must be met when calling **`setPipeline()`**, otherwise a
 
 ## Examples
 
-In our [basic render demo](https://webgpu-basic-render.glitch.me/), several commands are recorded via a {{domxref("GPUCommandEncoder")}}. Most of these commands originate from the `GPURenderPassEncoder` created via {{domxref("GPUCommandEncoder.beginRenderPass()")}}. `setPipeline()` is called in an appropriate place to set the render pipeline.
+In our [basic render demo](https://mdn.github.io/dom-examples/webgpu-render-demo/), several commands are recorded via a {{domxref("GPUCommandEncoder")}}. Most of these commands originate from the `GPURenderPassEncoder` created via {{domxref("GPUCommandEncoder.beginRenderPass()")}}. `setPipeline()` is called in an appropriate place to set the render pipeline.
 
 ```js
 // ...
