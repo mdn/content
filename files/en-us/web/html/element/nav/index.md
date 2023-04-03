@@ -120,6 +120,10 @@ The semantics of the `nav` element is that of providing links. However a `nav` e
 </nav>
 ```
 
+### Result
+
+{{EmbedLiveSample('Examples')}}
+
 ## Specifications
 
 {{Specifications}}
