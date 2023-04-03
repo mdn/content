@@ -33,7 +33,7 @@ createRenderPipeline(descriptor)
         - A {{domxref("GPUPipelineLayout")}} object, created using {{domxref("GPUDevice.createPipelineLayout()")}}, which allows the GPU to figure out how to run the pipeline most efficiently ahead of time.
         - A string of `"auto"`, which causes the pipeline to generate an implicit bind group layout based on any bindings defined in the shader code. If `"auto"` is used, the generated bind group layouts may only be used with the current pipeline.
     - `multisample` {{optional_inline}}
-      - : An object (see [`multisample` object structure](/en-US/docs/Web/API/GPUDevice/createRenderPipeline#multisample_object_structure)) describing how the pipeline interacts with a render pass's multisampled attachments.
+      - : An object (see [`multisample` object structure](#multisample_object_structure)) describing how the pipeline interacts with a render pass's multisampled attachments.
     - `primitive` {{optional_inline}}
       - : An object (see [`primitive` object structure](/en-US/docs/Web/API/GPUDevice/createRenderPipeline#primitive_object_structure)) describing how a pipeline constructs and rasterizes primitives from its vertex inputs.
     - `vertex`
