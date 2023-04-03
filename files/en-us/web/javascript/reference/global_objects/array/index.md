@@ -220,6 +220,8 @@ console.log(Array.prototype.join.call(arrayLike, "+")); // 'a+b'
 
 The `length` property is [converted to an integer](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#integer_conversion) and then clamped to the range between 0 and 2<sup>53</sup> - 1. `NaN` becomes `0`, so even when `length` is not present or is `undefined`, it behaves as if it has value `0`.
 
+The language avoids setting `length` to an [unsafe integer](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/MAX_SAFE_INTEGER). All built-in methods will throw a {{jsxref("TypeError")}} if `length` will be set to a number greater than 2<sup>53</sup> - 1. However, because the {{jsxref("Array/length", "length")}} property of arrays throws an error if it's set to greater than 2<sup>32</sup>, the safe integer threshold is usually not reached unless the method is called on a non-array object.
+
 ```js
 Array.prototype.flat.call({}); // []
 ```

@@ -17,6 +17,8 @@ This article provides information about the changes in Firefox 112 that affect d
 
 ### CSS
 
+- The `overlay` keyword value for the {{cssxref("overflow")}} property is now supported as a legacy alias of the keyword value `auto` ([Firefox bug 1817189](https://bugzil.la/1817189)).
+
 #### Removals
 
 ### JavaScript
