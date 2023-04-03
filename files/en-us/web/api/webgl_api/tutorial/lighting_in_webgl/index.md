@@ -145,7 +145,7 @@ Now that all the data the shaders need is available to them, we need to update t
 
 ### The vertex shader
 
-The first thing to do i,s update the vertex shader so it generates a shading value for each vertex based on the ambient lighting as well as the directional lighting.
+The first thing to do is update the vertex shader so it generates a shading value for each vertex based on the ambient lighting as well as the directional lighting.
 
 > **Note:** Update the `vsSource` declaration in your `main()` function like this:
 
