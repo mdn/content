@@ -73,7 +73,7 @@ The browser used to install the PWA will know the PWA is installed, but other br
 
 ### Uninstalling
 
-When you tap the web app's icon on the home screen, it opens up in the browser environment that installed the PWA, generally without the browser's UI around it, though that depends on the way the developer configured the web app manifest. Similarly, the method used to uninstall the PWA depends on the browser that was used to install it.
+When you tap the web app's icon on the home screen, it opens up in the browser environment that installed the PWA, generally without the browser's UI around it, though that depends on the way the developer configured the [web app manifest](/en-US/docs/Web/Manifest). Similarly, the method used to uninstall the PWA depends on the browser that was used to install it.
 
 On many mobile operating systems, PWAs appear in the "Add or remove programs" control panel. Uninstalling a PWA is accomplished in the same way as uninstalling other applications.
 
