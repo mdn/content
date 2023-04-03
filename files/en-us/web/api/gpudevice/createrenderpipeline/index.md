@@ -23,7 +23,7 @@ createRenderPipeline(descriptor)
 - `descriptor`
   - : An object containing the following properties:
     - `depthStencil` {{optional_inline}}
-      - : An object (see [`depthStencil` object structure](/en-US/docs/Web/API/GPUDevice/createRenderPipeline#depthstencil_object_structure)) describing depth-stencil properties including testing, operations, and bias.
+      - : An object (see [`depthStencil` object structure](#depthstencil_object_structure)) describing depth-stencil properties including testing, operations, and bias.
     - `fragment` {{optional_inline}}
       - : An object (see [`fragment` object structure](#fragment_object_structure)) describing the fragment shader entry point of the pipeline and its output colors. If no fragment shader entry point is defined, the pipeline will not produce any color attachment outputs, but it still performs rasterization and produces depth values based on the vertex position output. Depth testing and stencil operations can still be used.
     - `label` {{optional_inline}}
