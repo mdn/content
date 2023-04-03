@@ -7,7 +7,7 @@ browser-compat: api.AnalyserNode.getFloatFrequencyData
 
 {{ APIRef("Web Audio API") }}
 
-The **`getFloatFrequencyData()`** method of the {{domxref("AnalyserNode")}} Interface copies the current frequency data into a {{jsxref("Float32Array")}} array passed into it.
+The **`getFloatFrequencyData()`** method of the {{domxref("AnalyserNode")}} Interface copies the current frequency data into a {{jsxref("Float32Array")}} (the time-domain data is encoded in f32 format with the amplitude of samples in [-1:1]) array passed into it.
 
 Each item in the array represents the decibel value for a specific frequency. The frequencies are spread linearly from 0 to 1/2 of the sample rate. For example, for a `48000` Hz sample rate, the last item of the array will represent the decibel value for `24000` Hz.
 
