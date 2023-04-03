@@ -105,5 +105,5 @@ h2 {
 
 ## See also
 
-- [Inline elements](/en-US/docs/Web/HTML/Inline_elements)
+- [Inline elements](/en-US/docs/Glossary/inline-level)
 - {{domxref("HTMLSpanElement")}}

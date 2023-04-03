@@ -104,5 +104,5 @@ In this guide, we have looked at how elements display in normal flow, as block a
 
 - [CSS Basic Box Model](/en-US/docs/Web/CSS/CSS_Box_Model)
 - _[Normal Flow](/en-US/docs/Learn/CSS/CSS_layout/Normal_Flow)_ - Learn Layout
-- [Inline elements](/en-US/docs/Web/HTML/Inline_elements)
-- [Block-level elements](/en-US/docs/Web/HTML/Block-level_elements)
+- [Inline elements](/en-US/docs/Glossary/inline-level)
+- [Block-level elements](/en-US/docs/Glossary/block-level)
