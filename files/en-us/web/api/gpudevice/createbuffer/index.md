@@ -36,7 +36,7 @@ createBuffer(descriptor)
       - : A number representing the size of the buffer, in bytes.
     - `usage`
 
-      - : The {{glossary("bitwise flags")}} representing the allowed usages for the `GPUBuffer`. The possible values can be found in the [`GPUBuffer.usage` value table](/en-US/docs/Web/API/GPUBuffer/usage#value).
+      - : The {{glossary("Bitwise flags", "bitwise flags")}} representing the allowed usages for the `GPUBuffer`. The possible values are in the [`GPUBuffer.usage` value table](/en-US/docs/Web/API/GPUBuffer/usage#value).
 
         Note that multiple possible usages can be specified by separating values with pipe symbols, for example:
 
