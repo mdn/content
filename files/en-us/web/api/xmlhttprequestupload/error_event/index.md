@@ -40,7 +40,7 @@ _In addition to the properties listed below, properties from the parent interfac
 
 ### Using the `error` event
 
-You can use the `error` event to detect a problem with the upload. For a complete code example that uploads a file and displays a progress bar, see the main {{domxref("XMLHttpRequestUpload)}} page.
+You can use the `error` event to detect a problem with the upload. For a complete code example that uploads a file and displays a progress bar, see the main {{domxref("XMLHttpRequestUpload")}} page.
 
 ```js
 // In case of an error we hide the progress bar

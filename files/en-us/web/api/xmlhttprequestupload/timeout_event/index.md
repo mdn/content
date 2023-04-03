@@ -40,7 +40,7 @@ _In addition to the properties listed below, properties from the parent interfac
 
 ### Using the `timeout` event
 
-You can use the `timeout` event to detect an upload that stopped because of it was too slow. For a complete code example that uploads a file and displays a progress bar, see the main {{domxref("XMLHttpRequestUpload)}} page.
+You can use the `timeout` event to detect an upload that stopped because of it was too slow. For a complete code example that uploads a file and displays a progress bar, see the main {{domxref("XMLHttpRequestUpload")}} page.
 
 The timeout is set on the {{domxref("XMTLHttpRequest")}} object using the {{domxref("XMLHttpRequest.timeout")}} property.
 

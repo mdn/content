@@ -40,7 +40,7 @@ _In addition to the properties listed below, properties from the parent interfac
 
 ## Using the `loadstart` event
 
-You can use the `loadstart` event to detect the beginning of an upload For a complete code example that uploads a file and displays a progress bar, see the main {{domxref("XMLHttpRequestUpload)}} page.
+You can use the `loadstart` event to detect the beginning of an upload For a complete code example that uploads a file and displays a progress bar, see the main {{domxref("XMLHttpRequestUpload")}} page.
 
 ```js
 // When the upload starts, we display the progress bar

@@ -42,7 +42,7 @@ _In addition to the properties listed below, properties from the parent interfac
 
 ## Using the `loadend` event
 
-You can use the `loadend` event to detect the (successfully or not) termination of an upload. For a complete code example that uploads a file and displays a progress bar, see the main {{domxref("XMLHttpRequestUpload)}} page.
+You can use the `loadend` event to detect the (successfully or not) termination of an upload. For a complete code example that uploads a file and displays a progress bar, see the main {{domxref("XMLHttpRequestUpload")}} page.
 
 ```js
 // When the upload is finished, we hide the progress bar.
