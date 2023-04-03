@@ -103,7 +103,7 @@ The `depthStencil` object can contain the following properties:
 
 > **Note:** `depthStencilAttachment` values are specified during {{domxref("GPUCommandEncoder.beginRenderPass()")}} calls, when the {{domxref("GPURenderPipeline")}} is actually used to perform a render pass.
 
-### fragment object structure
+### `fragment` object structure
 
 The `fragment` object contains an array of objects, each of which can contain the following properties:
 
