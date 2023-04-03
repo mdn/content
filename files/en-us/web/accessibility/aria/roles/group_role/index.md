@@ -18,7 +18,7 @@ When used in the context of a [`listbox`](/en-US/docs/Web/Accessibility/ARIA/Rol
 
 `Group` elements may be nested.
 
-The `group` role should not be used for major perceivable sections of a page. If a section is significant enough that it should be included in the page's table of contents, use the `region` role or a standard [landmark role](/en-US/docs/Web/Accessibility/ARIA/Roles#landmark_roles).
+The `group` role should not be used for major perceivable sections of a page. If a section is significant enough that it should be included in the page's table of contents, use the `region` role or a standard [landmark role](/en-US/docs/Web/Accessibility/ARIA/Roles#3._landmark_roles).
 
 When the role is added to an element, the browser will send out an accessible group event to assistive technology products, which can then notify the user about it.
 

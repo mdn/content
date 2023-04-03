@@ -57,10 +57,10 @@ At this point, let's go through some more simple examples to show you how custom
 
 Let's have a look at an example of an autonomous custom element — [`<popup-info-box>`](https://github.com/mdn/web-components-examples/tree/main/popup-info-box-web-component) (see a [live example](https://mdn.github.io/web-components-examples/popup-info-box-web-component/)). This takes an image icon and a text string, and embeds the icon into the page. When the icon is focused, it displays the text in a pop up information box to provide further in-context information.
 
-To begin with, the JavaScript file defines a class called `PopUpInfo`, which extends the generic {{domxref("HTMLElement")}} class.
+To begin with, the JavaScript file defines a class called `PopupInfo`, which extends the generic {{domxref("HTMLElement")}} class.
 
 ```js
-class PopUpInfo extends HTMLElement {
+class PopupInfo extends HTMLElement {
   constructor() {
     // Always call super first in constructor
     super();
@@ -112,7 +112,7 @@ this.shadowRoot.append(style, wrapper);
 Finally, we register our custom element on the `CustomElementRegistry` using the `define()` method we mentioned earlier — in the parameters we specify the element name, and then the class name that defines its functionality:
 
 ```js
-customElements.define("popup-info", PopUpInfo);
+customElements.define("popup-info", PopupInfo);
 ```
 
 It is now available to use on our page. Over in our HTML, we use it like so:
