@@ -645,7 +645,7 @@ In this case the nested grid has no relationship to the parent. As you can see i
 
 In the working draft of the Level 2 Grid specification there is a feature called _subgrid_, which would let us create nested grids that use the track definition of the parent grid.
 
-> **Note:** This feature shipped in Firefox 71, which is currently the only browser to implement subgrid.
+> **Note:** This feature shipped in Firefox 71 and Safari 16, which are currently the only 2 browsers to implement subgrid.
 
 In the current specification, we would edit the above nested grid example to change the track definition of `grid-template-columns: repeat(3, 1fr)`, to `grid-template-columns: subgrid`. The nested grid will then use the parent grid tracks to layout items.
 
