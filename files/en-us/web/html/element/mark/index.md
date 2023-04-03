@@ -41,7 +41,7 @@ In this first example, a `<mark>` element is used to mark some text within a quo
 </blockquote>
 ```
 
-The resulting output looks like this:
+#### Result
 
 {{EmbedLiveSample("Marking_text_of_interest", 650, 130)}}
 
@@ -65,7 +65,7 @@ This example demonstrates using `<mark>` to mark search results within a passage
 
 To help distinguish the use of `<mark>` for search results from other potential usage, this example applies the custom class `"match"` to each match.
 
-The results look like this:
+#### Result
 
 {{EmbedLiveSample("Identifying_context-sensitive_passages", 650, 130)}}
 
