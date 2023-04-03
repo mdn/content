@@ -271,7 +271,7 @@ The `primitive` object can contain the following properties:
 
 > **Note:** `frontFace` and `cullMode` have no effect on `"point-list"`, `"line-list"`, or `"line-strip"` topologies.
 
-### vertex object structure
+### `vertex` object structure
 
 The `vertex` object can contain the following properties:
 
