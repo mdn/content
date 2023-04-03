@@ -347,7 +347,7 @@ The following criteria must be met when calling **`createRenderPipeline()`**, ot
 
 ### Basic example
 
-Our [basic render demo](https://webgpu-basic-render.glitch.me/) provides a simple example of the construction of a valid render pipeline descriptor object, which is then used to create a {{domxref("GPURenderPipeline")}} via a `createRenderPipeline()` call.
+Our [basic render demo](https://mdn.github.io/dom-examples/webgpu-render-demo/) provides a simple example of the construction of a valid render pipeline descriptor object, which is then used to create a {{domxref("GPURenderPipeline")}} via a `createRenderPipeline()` call.
 
 ```js
 // ...

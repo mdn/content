@@ -32,7 +32,7 @@ A {{domxref("GPUCommandEncoder")}} object instance.
 
 ## Examples
 
-In our [basic render demo](https://webgpu-basic-render.glitch.me/), several commands are recorded via a {{domxref("GPUCommandEncoder")}} created via `createCommandEncoder()`:
+In our [basic render demo](https://mdn.github.io/dom-examples/webgpu-render-demo/), several commands are recorded via a {{domxref("GPUCommandEncoder")}} created via `createCommandEncoder()`:
 
 ```js
 // ...

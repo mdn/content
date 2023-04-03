@@ -61,7 +61,7 @@ The following criteria must be met when calling **`createBuffer()`**, otherwise 
 
 ## Examples
 
-In our [basic compute demo](https://webgpu-basic-compute.glitch.me/), we create an output buffer to read GPU calculations to, and a staging buffer to be mapped for JavaScript access.
+In our [basic compute demo](https://mdn.github.io/dom-examples/webgpu-compute-demo/), we create an output buffer to read GPU calculations to, and a staging buffer to be mapped for JavaScript access.
 
 ```js
 const output = device.createBuffer({

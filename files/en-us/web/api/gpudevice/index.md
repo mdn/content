@@ -143,8 +143,8 @@ async function init() {
 
 See the individual member pages listed above and the following demo sites for a lot more examples of `GPUDevice` usage:
 
-- [Basic compute demo](https://webgpu-basic-compute.glitch.me/)
-- [Basic render demo](https://webgpu-basic-render.glitch.me/)
+- [Basic compute demo](https://mdn.github.io/dom-examples/webgpu-compute-demo/)
+- [Basic render demo](https://mdn.github.io/dom-examples/webgpu-render-demo/)
 - [WebGPU samples](https://webgpu.github.io/webgpu-samples/)
 
 ## Specifications

@@ -80,7 +80,7 @@ The following criteria must be met when calling **`createComputePipeline()`**, o
 
 ### Basic example
 
-Our [basic compute demo](https://webgpu-basic-compute.glitch.me/) shows a process of:
+Our [basic compute demo](https://mdn.github.io/dom-examples/webgpu-compute-demo/) shows a process of:
 
 - Creating a bind group layout with {{domxref("GPUDevice.createBindGroupLayout()")}}.
 - Feeding the `bindGroupLayout` into {{domxref("GPUDevice.createPipelineLayout()")}} to create a {{domxref("GPUPipelineLayout")}}.

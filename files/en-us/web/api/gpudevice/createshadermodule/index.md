@@ -48,7 +48,7 @@ A {{domxref("GPUShaderModule")}} object instance.
 
 ## Examples
 
-In our [basic render demo](https://webgpu-basic-render.glitch.me/), our shader module is created using the following code:
+In our [basic render demo](https://mdn.github.io/dom-examples/webgpu-render-demo/), our shader module is created using the following code:
 
 ```js
 const shaders = `

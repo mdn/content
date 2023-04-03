@@ -103,7 +103,7 @@ In the sections below, we will examine a basic render pipeline demo, to allow yo
 
 ## Basic render pipeline
 
-In our [basic render demo](https://webgpu-basic-render.glitch.me/) we give a `<canvas>` element a solid blue background and draw a triangle onto it.
+In our [basic render demo](https://mdn.github.io/dom-examples/webgpu-render-demo/) we give a `<canvas>` element a solid blue background and draw a triangle onto it.
 
 ### Create shader modules
 
@@ -312,7 +312,7 @@ device.queue.submit([commandEncoder.finish()]);
 
 ## Basic compute pipeline
 
-In our [basic compute demo](https://webgpu-basic-compute.glitch.me/), we get the GPU to calculate some values, store them in an output buffer, copy the data across to a staging buffer, then map that staging buffer so that the data can be read out to JavaScript and logged to the console.
+In our [basic compute demo](https://mdn.github.io/dom-examples/webgpu-compute-demo/), we get the GPU to calculate some values, store them in an output buffer, copy the data across to a staging buffer, then map that staging buffer so that the data can be read out to JavaScript and logged to the console.
 
 The app follows a similar structure to the basic rendering demo. We create a {{domxref("GPUDevice")}} reference in the same way as before, and encapsulate our shader code into a {{domxref("GPUShaderModule")}} via a {{domxref("GPUDevice.createShaderModule()")}} call. The difference here is that our shader code only has one shader stage, a `@compute` stage:
 
@@ -585,8 +585,8 @@ You can find more information about WebGPU error handling in the explainer — s
 
 ## Examples
 
-- [Basic compute demo](https://webgpu-basic-compute.glitch.me/)
-- [Basic render demo](https://webgpu-basic-render.glitch.me/)
+- [Basic compute demo](https://mdn.github.io/dom-examples/webgpu-compute-demo/)
+- [Basic render demo](https://mdn.github.io/dom-examples/webgpu-render-demo/)
 - [WebGPU samples](https://webgpu.github.io/webgpu-samples/)
 
 ## Specifications
