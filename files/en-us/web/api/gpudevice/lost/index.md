@@ -10,7 +10,7 @@ browser-compat: api.GPUDevice.lost
 {{APIRef("WebGPU API")}}{{SeeCompatTable}}
 
 The **`lost`** read-only property of the
-{{domxref("GPUDevice")}} interface contains a {{domxref("Promise")}} that remains pending throughout the device's lifetime and resolves with a {{domxref("GPUDeviceLostInfo")}} object when the device is lost.
+{{domxref("GPUDevice")}} interface contains a {{jsxref("Promise")}} that remains pending throughout the device's lifetime and resolves with a {{domxref("GPUDeviceLostInfo")}} object when the device is lost.
 
 {{domxref("GPUAdapter.requestDevice()")}} will never return `null`, and it will reject only if the request is invalid, i.e. it exceeds the capabilities of the {{domxref("GPUAdapter")}}. If a valid device request can't be fulfilled for some reason however it may resolve to a device that has already been lost. Additionally, devices can be lost at any time after creation for a variety of reasons (such as browser resource management or driver updates), so it's a good idea to always handle lost devices gracefully.
 
