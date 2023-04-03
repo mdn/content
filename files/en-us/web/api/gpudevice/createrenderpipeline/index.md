@@ -35,7 +35,7 @@ createRenderPipeline(descriptor)
     - `multisample` {{optional_inline}}
       - : An object (see [`multisample` object structure](#multisample_object_structure)) describing how the pipeline interacts with a render pass's multisampled attachments.
     - `primitive` {{optional_inline}}
-      - : An object (see [`primitive` object structure](/en-US/docs/Web/API/GPUDevice/createRenderPipeline#primitive_object_structure)) describing how a pipeline constructs and rasterizes primitives from its vertex inputs.
+      - : An object (see [`primitive` object structure](#primitive_object_structure)) describing how a pipeline constructs and rasterizes primitives from its vertex inputs.
     - `vertex`
       - : An object (see [`vertex` object structure](/en-US/docs/Web/API/GPUDevice/createRenderPipeline#vertex_object_structure)) describing the vertex shader entry point of the pipeline and its input buffer layouts.
 
