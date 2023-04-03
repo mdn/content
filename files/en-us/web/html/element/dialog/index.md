@@ -49,6 +49,8 @@ The following will render a non-modal, or modal-less, dialog. The "OK" button al
 </dialog>
 ```
 
+#### Result
+
 {{EmbedLiveSample("Simple_example", "100%", 200)}}
 
 Because this dialog was opened via the `open` attribute, it is non-modal. In this example, when the dialog is dismissed, no method is provided to re-open it. Opening dialogs via {{domxref("HTMLDialogElement.show()")}} is preferred over the toggling of the boolean `open` attribute.

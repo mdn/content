@@ -39,7 +39,7 @@ In JavaScript source text, \<ZWNJ> and \<ZWJ> are treated as [identifier](#ident
 
 > **Note:** Of those [characters with the "White_Space" property but are not in the "Space_Separator" general category](https://util.unicode.org/UnicodeJsps/list-unicodeset.jsp?a=%5Cp%7BWhite_Space%7D%26%5CP%7BGeneral_Category%3DSpace_Separator%7D), U+0009, U+000B, and U+000C are still treated as white space in JavaScript; U+0085 NEXT LINE has no special role; others become the set of [line terminators](#line_terminators).
 
-> **Note:** Changes to the Unicode standard used by the JavaScript engine may affect programs' behavior. For example, ES2016 upgraded the reference Unicode standard from 5.1 to 8.0.0, which caused U+180E MONGOLIAN VOWEL SEPARATOR to be moved from the "Space_Separator" category to the "Format (Cf)" category, and made it a non-whitespace. Subsequently, the result of [`"\u180E".trim().length`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/Trim) changed from `0` to `1`.
+> **Note:** Changes to the Unicode standard used by the JavaScript engine may affect programs' behavior. For example, ES2016 upgraded the reference Unicode standard from 5.1 to 8.0.0, which caused U+180E MONGOLIAN VOWEL SEPARATOR to be moved from the "Space_Separator" category to the "Format (Cf)" category, and made it a non-whitespace. Subsequently, the result of [`"\u180E".trim().length`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/trim) changed from `0` to `1`.
 
 ## Line terminators
 

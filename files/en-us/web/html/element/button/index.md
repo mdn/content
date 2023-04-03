@@ -92,7 +92,7 @@ If your buttons are not for submitting form data to a server, be sure to set the
 
 While `<button type="button">` has no default behavior, event handlers can be scripted to trigger behaviors. An activated button can perform programmable actions using [JavaScript](/en-US/docs/Learn/JavaScript), such as removing an item from a list.
 
-## Example
+## Examples
 
 ```html
 <button name="button">Press me</button>
@@ -108,7 +108,7 @@ Buttons that only show an icon to represent do not have an _accessible name_. Ac
 
 To give an icon button an accessible name, put text in the `<button>` element that concisely describes the button's functionality.
 
-#### Example
+#### Examples
 
 ```html
 <button name="favorite">
@@ -118,6 +118,10 @@ To give an icon button an accessible name, put text in the `<button>` element th
   Add to favorites
 </button>
 ```
+
+##### Result
+
+{{EmbedLiveSample('Icon buttons')}}
 
 If you want to visually hide the button's text, an accessible way to do so is to use [a combination of CSS properties](https://gomakethings.com/hidden-content-for-better-a11y/#hiding-the-link) to remove it visually from the screen, but keep it parsable by assistive technology.
 
