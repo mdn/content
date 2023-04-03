@@ -693,7 +693,7 @@ Let's get started with a TestingBot Trial.
 
 #### The basics: Manual tests
 
-The [TestingBot dashboard](https://app.saucelabs.com/dashboard/manual) lists the various options you can choose from. For now, make sure you are on the _Live Web Testing_ tab.
+The [TestingBot dashboard](https://testingbot.com/members) lists the various options you can choose from. For now, make sure you are on the _Live Web Testing_ tab.
 
 1. Enter the URL of the page you want to test.
 2. Choose the browser/OS combination you want to test by selecting the combination in the grid.

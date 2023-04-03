@@ -184,7 +184,7 @@ class Student : extends Person
     properties
        year
     constructor
-        Student(name, year)
+       Student(name, year)
     methods
        introduceSelf()
        canStudyArchery() { return this.year > 1 }

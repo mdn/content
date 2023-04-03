@@ -5,7 +5,7 @@ page-type: web-api-instance-property
 browser-compat: api.Response.headers
 ---
 
-{{APIRef("Fetch")}}
+{{APIRef("Fetch API")}}
 
 The **`headers`** read-only property of the
 {{domxref("Response")}} interface contains the {{domxref("Headers")}} object associated

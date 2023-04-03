@@ -5,7 +5,7 @@ page-type: web-api-instance-method
 browser-compat: api.Headers.delete
 ---
 
-{{APIRef("Fetch")}}
+{{APIRef("Fetch API")}}
 
 The **`delete()`** method of the {{domxref("Headers")}}
 interface deletes a header from the current `Headers` object.

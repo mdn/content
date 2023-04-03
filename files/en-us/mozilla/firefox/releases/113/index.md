@@ -55,6 +55,8 @@ This article provides information about the changes in Firefox 113 that affect d
 
 ## Changes for add-on developers
 
+- When an extension registers multiple listeners for the same event, all the event listeners are called when the event page wakes up, instead of only the first one ([Firefox bug 1798655](https://bugzil.la/1798655)).
+
 ### Removals
 
 ### Other
