@@ -32,10 +32,10 @@ In the following cases, the browser does not populate `window.opener`, but
 leaves it [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null):
 
 - The opener can be omitted by specifying
-  `[`rel`](/en-US/docs/Web/HTML/Element/a#rel)=noopener` on a link, or passing
+  [`rel=noopener`](/en-US/docs/Web/HTML/Attributes/rel#noopener) on a link, or passing
   `noopener` in the {{domxref("Window.open", "windowFeatures")}} parameter.
 - Windows opened because of links with a [`target`](/en-US/docs/Web/HTML/Element/a#target) of `_blank` don't get an `opener`, unless explicitly
-  requested with `[`rel`](/en-US/docs/Web/HTML/Element/a#rel)=opener`.
+  requested with [`rel=opener`](/en-US/docs/Web/HTML/Attributes/rel#opener).
 - Having a {{HTTPHeader("Cross-Origin-Opener-Policy")}} header with a value of
   `same-origin` prevents setting `opener`. Since the new window is
   loaded in a different browsing context, it won't have a reference to the opening

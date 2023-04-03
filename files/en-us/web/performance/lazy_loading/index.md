@@ -24,7 +24,8 @@ Lazy loading can be applied to multiple resources and through multiple strategie
 
 ### General
 
-**Code splitting**
+#### Code splitting
+
 JavaScript, CSS and HTML can be split into smaller chunks. This enables sending the minimal code required to provide value upfront, improving page-load times. The rest can be loaded on demand.
 
 - Entry point splitting: separates code by entry point(s) in the app
@@ -32,7 +33,8 @@ JavaScript, CSS and HTML can be split into smaller chunks. This enables sending 
 
 ### JavaScript
 
-**Script type module**
+#### Script type module
+
 Any script tag with `type="module"` is treated as a [JavaScript module](/en-US/docs/Web/JavaScript/Guide/Modules) and is deferred by default.
 
 ### CSS
@@ -59,7 +61,8 @@ See also: [Element Link](/en-US/docs/Web/HTML/Element/link).
 
 Very often, webpages contain many images that contribute to data-usage and how fast a page can load. Most of those images are off-screen ([non-critical](/en-US/docs/Web/Performance/Critical_rendering_path)), requiring a user interaction, like scrolling, in order to view them.
 
-**Loading attribute**
+#### Loading attribute
+
 The [`loading`](/en-US/docs/Web/HTML/Element/img#loading) attribute on an {{HTMLElement("img")}} element (or the [`loading`](/en-US/docs/Web/HTML/Element/iframe#loading) attribute on an {{HTMLElement("iframe")}}) can be used to instruct the browser to defer loading of images/iframes that are off-screen until the user scrolls near them.
 
 ```html
@@ -71,14 +74,17 @@ The `load` event fires when the eagerly-loaded content has all been loaded; at t
 
 You can determine if a given image has finished loading by examining the value of its Boolean {{domxref("HTMLImageElement.complete", "complete")}} property.
 
-**Polyfill**
+#### Polyfill
+
 Include this polyfill to provide support for older and currently incompatible browsers:
 [loading-attribute-polyfill](https://github.com/mfranzke/loading-attribute-polyfill).
 
-**Intersection Observer API**
+#### Intersection Observer API
+
 [Intersection Observers](/en-US/docs/Web/API/IntersectionObserver) allow the user to know when an observed element enters or exits the browser's viewport.
 
-**Event handlers**
+#### Event handlers
+
 When browser compatibility is crucial, there are a few options:
 
 - [polyfill intersection observer](https://github.com/w3c/IntersectionObserver)

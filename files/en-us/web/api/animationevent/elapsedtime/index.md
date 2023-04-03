@@ -5,7 +5,7 @@ page-type: web-api-instance-property
 browser-compat: api.AnimationEvent.elapsedTime
 ---
 
-{{APIRef("Web Animations API")}}
+{{APIRef("Web Animations")}}
 
 The **`AnimationEvent.elapsedTime`** read-only property is a
 `float` giving the amount of time the animation has been running, in seconds,

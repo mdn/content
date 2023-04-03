@@ -37,7 +37,7 @@ If an error occurs, the promise will resolve with one of the following exception
 The following example flushes the `AudioDecoder`.
 
 ```js
-AudioDecoder.flush();
+await audioDecoder.flush();
 ```
 
 ## Specifications

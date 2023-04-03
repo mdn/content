@@ -47,7 +47,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
 - `height`
   - : The height of the frame in CSS pixels. Default is `150`.
-- `loading` {{experimental_inline}}
+- `loading`
 
   - : Indicates how the browser should load the iframe:
 

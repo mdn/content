@@ -14,7 +14,7 @@ The **logical AND assignment (`x &&= y`)** operator only assigns if `x` is {{Glo
 ## Syntax
 
 ```js-nolint
-expr1 &&= expr2
+x &&= y
 ```
 
 ## Description

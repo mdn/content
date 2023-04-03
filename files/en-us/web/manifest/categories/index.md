@@ -14,10 +14,6 @@ browser-compat: html.manifest.categories
       <th scope="row">Type</th>
       <td><code>Array</code> of <code>String</code>s</td>
     </tr>
-    <tr>
-      <th scope="row">Mandatory</th>
-      <td>No</td>
-    </tr>
   </tbody>
 </table>
 

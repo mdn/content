@@ -5,7 +5,7 @@ page-type: web-api-instance-method
 browser-compat: api.Headers.entries
 ---
 
-{{APIRef}}
+{{APIRef("Fetch API")}}
 
 The **`Headers.entries()`** method returns an
 {{jsxref("Iteration_protocols",'iterator')}} allowing to go through all key/value pairs

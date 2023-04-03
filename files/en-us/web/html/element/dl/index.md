@@ -101,6 +101,8 @@ This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_a
 </dl>
 ```
 
+#### Result
+
 {{EmbedLiveSample("Single_term_and_description")}}
 
 ### Multiple terms, single description
@@ -118,6 +120,8 @@ This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_a
   <!-- Other terms and descriptions -->
 </dl>
 ```
+
+#### Result
 
 {{EmbedLiveSample("Multiple_terms_single_description")}}
 
@@ -138,6 +142,8 @@ This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_a
   <!-- Other terms and descriptions -->
 </dl>
 ```
+
+#### Result
 
 {{EmbedLiveSample("Single_term_multiple_descriptions")}}
 
@@ -161,6 +167,10 @@ Description lists are useful for displaying metadata as a list of key-value pair
   <dd>Green</dd>
 </dl>
 ```
+
+#### Result
+
+{{EmbedLiveSample('Metadata')}}
 
 Tip: It can be handy to define a key-value separator in the CSS, such as:
 
@@ -194,6 +204,10 @@ dt::after {
   </div>
 </dl>
 ```
+
+#### Result
+
+{{EmbedLiveSample('Wrapping name-value groups in `div` elements')}}
 
 ## Notes
 

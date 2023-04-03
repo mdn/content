@@ -14,37 +14,20 @@ The **`flatMap()`** method returns a new array formed by applying a given callba
 ## Syntax
 
 ```js-nolint
-// Arrow function
-flatMap((element) => { /* … */ })
-flatMap((element, index) => { /* … */ })
-flatMap((element, index, array) => { /* … */ })
-
-// Callback function
 flatMap(callbackFn)
 flatMap(callbackFn, thisArg)
-
-// Inline callback function
-flatMap(function (element) { /* … */ })
-flatMap(function (element, index) { /* … */ })
-flatMap(function (element, index, array) { /* … */ })
-flatMap(function (element, index, array) { /* … */ }, thisArg)
 ```
 
 ### Parameters
 
 - `callbackFn`
-
-  - : A function to execute for each element in the array. It should return an array containing new elements of the new array, or a single non-array value to be added to the new array.
-
-    The function is called with the following arguments:
-
+  - : A function to execute for each element in the array. It should return an array containing new elements of the new array, or a single non-array value to be added to the new array. The function is called with the following arguments:
     - `element`
       - : The current element being processed in the array.
     - `index`
       - : The index of the current element being processed in the array.
     - `array`
       - : The array `flatMap()` was called upon.
-
 - `thisArg` {{optional_inline}}
   - : A value to use as `this` when executing `callbackFn`. See [iterative methods](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#iterative_methods).
 

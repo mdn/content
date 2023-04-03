@@ -5,7 +5,7 @@ page-type: web-api-constructor
 browser-compat: api.Response.Response
 ---
 
-{{APIRef("Fetch")}}
+{{APIRef("Fetch API")}}
 
 The **`Response()`** constructor creates a new {{domxref("Response")}} object.
 

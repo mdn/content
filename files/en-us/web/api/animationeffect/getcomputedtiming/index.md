@@ -5,7 +5,7 @@ page-type: web-api-instance-method
 browser-compat: api.AnimationEffect.getComputedTiming
 ---
 
-{{ APIRef("Web Animations API") }}
+{{ APIRef("Web Animations") }}
 
 The `getComputedTiming()` method of the {{domxref("AnimationEffect")}} interface returns the calculated timing properties for this animation effect.
 
