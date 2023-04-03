@@ -39,7 +39,7 @@ createRenderPipeline(descriptor)
     - `vertex`
       - : An object (see [`vertex` object structure](#vertex_object_structure)) describing the vertex shader entry point of the pipeline and its input buffer layouts.
 
-### depthStencil object structure
+### `depthStencil` object structure
 
 The `depthStencil` object can contain the following properties:
 
