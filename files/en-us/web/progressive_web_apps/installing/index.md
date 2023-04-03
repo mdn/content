@@ -77,9 +77,9 @@ When multiple instances of a PWA are open, data is not shared between instances 
 
 When you tap the web app's icon on the home screen, it opens up in the browser environment that installed the PWA, generally without the browser's UI around it, though that depends on the way the developer configured the [web app manifest](/en-US/docs/Web/Manifest). Similarly, the method used to uninstall the PWA depends on the browser that was used to install it.
 
-On many mobile operating systems, PWAs appear in the "Add or remove programs" control panel. Uninstalling a PWA is accomplished in the same way as uninstalling other applications.
+On most mobile operating systems, uninstalling a PWA is accomplished in the same way as uninstalling other applications. On some mobile operating systems, PWAs appear in the "Add or remove programs" control panel, and can be uninstalled there. On iOS, PWAs installed from Safari are listed and searchable from the "App Library" screen, but are not listed along with other installed applications under Settings. On iOS, removing the icon from the home screen deletes the PWA.
 
-In most desktop operating systems, To uninstall a PWA, open the PWA. In the top right corner of the opened app, there will be an icon that must be expanded to see more tools. Depending on the browser used to install the PWA, there will either be a link to uninstall the PWA, or a settings link that opens a browser settings page with an uninstall link. Either click on the `Uninstall <app name>` in the drop-down menu, if there, or navigate to the app settings in a browser tab and click uninstall.
+In most desktop operating systems, To uninstall a PWA, open the PWA. In the top right corner of the opened app, there will be an icon that must be expanded to see more tools. Depending on the browser used to install the PWA, there will either be a link to uninstall the PWA, or a settings link that opens a browser settings page with an uninstall link. Either click on the uninstall option in the drop-down menu, if there, or navigate to the app settings in a browser tab and click uninstall.
 
 ![App settings in MS Edge with an uninstall link](remove.jpg)
 
