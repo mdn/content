@@ -1,9 +1,9 @@
 ---
 title: Structural overview of progressive web apps
-slug: Web/Progressive_web_apps/Structural_overview
+slug: Web/Progressive_web_apps/Guides/Structural_overview
 ---
 
-{{QuickLinksWithSubpages("/en-US/docs/Web/Progressive_web_apps/")}}
+{{PWASidebar}}
 
 While progressive web apps (PWAs) can do anything any web content can do, they need to have a particular structure and include specific components in order to be recognized as a web app that can be used both on the web and installed and run as a local application. In this structural overview, we'll look at the features that make up a standard web application, as well as some design patterns you can follow when building your PWA.
 
