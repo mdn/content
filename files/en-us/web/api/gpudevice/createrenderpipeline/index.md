@@ -205,7 +205,7 @@ The `fragment` object contains an array of objects, each of which can contain th
         writeMask: GPUFlagsConstant.RED | GPUFlagsConstant.ALPHA;
         ```
 
-### multisample object structure
+### `multisample` object structure
 
 The `multisample` object can contain the following properties:
 
