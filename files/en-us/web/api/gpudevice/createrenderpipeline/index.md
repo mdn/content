@@ -222,7 +222,7 @@ The `multisample` object can contain the following properties:
 
 > **Note:** `colorAttachment` and `depthStencilAttachment` values are specified during {{domxref("GPUCommandEncoder.beginRenderPass()")}} calls, when the {{domxref("GPURenderPipeline")}} is actually used to perform a render pass.
 
-### primitive object structure
+### `primitive` object structure
 
 The `primitive` object can contain the following properties:
 
