@@ -341,6 +341,137 @@ In the second list, all the items with `class="noted"` that are in the first 3 i
 
 {{EmbedLiveSample('of_selector_syntax_vs_selector_nth-child', 550, 210)}}
 
+### Using of selector to fix striped tables
+
+blah
+
+#### HTML
+
+```html hidden
+<div class="wrapper"></div>
+```
+
+```html
+<table class="broken">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Age</th>
+      <th>Country</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Deangelo</td>
+      <td>23</td>
+      <td>Madagascar</td>
+    </tr>
+    <tr>
+      <td>Hannah</td>
+      <td>48</td>
+      <td>Japan</td>
+    </tr>
+    <tr hidden>
+      <td>Kimberly</td>
+      <td>36</td>
+      <td>Mexico</td>
+    </tr>
+    <tr>
+      <td>Jayla</td>
+      <td>27</td>
+      <td>Morocco</td>
+    </tr>
+    <tr>
+      <td>Ben</td>
+      <td>55</td>
+      <td>Finland</td>
+    </tr>
+    <tr>
+      <td>Ricardo</td>
+      <td>66</td>
+      <td>Brazil</td>
+    </tr>
+  </tbody>
+</table>
+<table class="fixed">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Age</th>
+      <th>Country</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Deangelo</td>
+      <td>23</td>
+      <td>Madagascar</td>
+    </tr>
+    <tr>
+      <td>Hannah</td>
+      <td>48</td>
+      <td>Japan</td>
+    </tr>
+    <tr hidden>
+      <td>Kimberly</td>
+      <td>36</td>
+      <td>Mexico</td>
+    </tr>
+    <tr>
+      <td>Jayla</td>
+      <td>27</td>
+      <td>Morocco</td>
+    </tr>
+    <tr>
+      <td>Ben</td>
+      <td>55</td>
+      <td>Finland</td>
+    </tr>
+    <tr>
+      <td>Ricardo</td>
+      <td>66</td>
+      <td>Brazil</td>
+    </tr>
+  </tbody>
+</table>
+```
+
+```html hidden
+</div>
+```
+
+#### CSS
+
+```css hidden
+.wrapper {
+  display: flex;
+  justify-content: space-around;
+}
+td {
+  padding: 0.125rem 0.5rem;
+}
+```
+
+```css
+.broken > tbody > tr:nth-child(even) {
+  background-color: silver;
+}
+```
+
+```css
+.fixed > tbody > tr:nth-child(even of :not([hidden])) {
+  background-color: silver;
+}
+```
+
+#### Result
+
+In the first table this is just using `:nth-child(even)` the third row has the `hidden` attribute applied to it. So in this instance the 3rd row is not visible and the 2nd & 4th rows are counted as even, which technically they are but visually they are not.
+
+In the second table the _of syntax_ is used to target only the `tr`s that are **not** hidden using `:nth-child(even of :not(hidden))`.
+
+{{EmbedLiveSample('Using_of_selector_to_fix_striped_tables', 550, 180)}}
+
 ## Specifications
 
 {{Specifications}}
