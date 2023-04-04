@@ -1,6 +1,6 @@
 ---
 title: Regular expression syntax cheat sheet
-slug: Web/JavaScript/Guide/Regular_Expressions/Cheatsheet
+slug: Web/JavaScript/Guide/Regular_expressions/Cheatsheet
 page-type: guide
 ---
 

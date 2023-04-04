@@ -1,6 +1,6 @@
 ---
 title: Unicode property escapes
-slug: Web/JavaScript/Guide/Regular_Expressions/Unicode_Property_Escapes
+slug: Web/JavaScript/Guide/Regular_expressions/Unicode_property_escapes
 page-type: guide
 ---
 

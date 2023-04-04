@@ -1,6 +1,6 @@
 ---
 title: Using classes
-slug: Web/JavaScript/Guide/Using_Classes
+slug: Web/JavaScript/Guide/Using_classes
 page-type: guide
 ---
 

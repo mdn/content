@@ -1,6 +1,6 @@
 ---
 title: Character classes
-slug: Web/JavaScript/Guide/Regular_Expressions/Character_Classes
+slug: Web/JavaScript/Guide/Regular_expressions/Character_classes
 page-type: guide
 ---
 

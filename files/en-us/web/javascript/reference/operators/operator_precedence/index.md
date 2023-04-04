@@ -1,6 +1,6 @@
 ---
 title: Operator precedence
-slug: Web/JavaScript/Reference/Operators/Operator_Precedence
+slug: Web/JavaScript/Reference/Operators/Operator_precedence
 page-type: guide
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: Expressions and operators
-slug: Web/JavaScript/Guide/Expressions_and_Operators
+slug: Web/JavaScript/Guide/Expressions_and_operators
 page-type: guide
 ---
 

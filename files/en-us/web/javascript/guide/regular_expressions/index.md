@@ -1,6 +1,6 @@
 ---
 title: Regular expressions
-slug: Web/JavaScript/Guide/Regular_Expressions
+slug: Web/JavaScript/Guide/Regular_expressions
 page-type: guide
 ---
 

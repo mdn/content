@@ -1,6 +1,6 @@
 ---
 title: Comma operator (,)
-slug: Web/JavaScript/Reference/Operators/Comma_Operator
+slug: Web/JavaScript/Reference/Operators/Comma_operator
 page-type: javascript-operator
 browser-compat: javascript.operators.comma
 ---

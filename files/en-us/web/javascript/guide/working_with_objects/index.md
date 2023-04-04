@@ -1,6 +1,6 @@
 ---
 title: Working with objects
-slug: Web/JavaScript/Guide/Working_with_Objects
+slug: Web/JavaScript/Guide/Working_with_objects
 page-type: guide
 ---
 

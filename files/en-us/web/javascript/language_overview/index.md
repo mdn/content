@@ -1,6 +1,6 @@
 ---
 title: JavaScript language overview
-slug: Web/JavaScript/Language_Overview
+slug: Web/JavaScript/Language_overview
 page-type: guide
 ---
 
@@ -264,7 +264,7 @@ Or for caching values (when falsy values are invalid):
 const name = cachedName || (cachedName = getName());
 ```
 
-For a comprehensive list of operators, see the [guide page](/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators) or [reference section](/en-US/docs/Web/JavaScript/Reference/Operators). You may be especially interested in the [operator precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence).
+For a comprehensive list of operators, see the [guide page](/en-US/docs/Web/JavaScript/Guide/Expressions_and_operators) or [reference section](/en-US/docs/Web/JavaScript/Reference/Operators). You may be especially interested in the [operator precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence).
 
 ## Grammar
 
