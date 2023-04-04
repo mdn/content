@@ -28,16 +28,11 @@ The API defines {{domxref('PaintWorklet')}}, a {{domxref('worklet')}} that can b
 - {{domxref('PaintWorklet')}}
   - : Programmatically generates an image where a CSS property expects a file. Access this interface through [`CSS.paintWorklet`](/en-US/docs/Web/API/CSS/paintWorklet).
 - {{domxref('PaintWorkletGlobalScope')}}
-  - : The global execution context of the `paintWorklet`.
+  - : The global execution context of the paint worklet.
 - {{domxref('PaintRenderingContext2D')}}
-  - : Implements a subset of the [CanvasRenderingContext2D API](/en-US/docs/Web/API/CanvasRenderingContext2D). It has an output bitmap that is the size of the object it is rendering to.
+  - : Implements a subset of the [`CanvasRenderingContext2D`](/en-US/docs/Web/API/CanvasRenderingContext2D) API. It has an output bitmap that is the size of the object it is rendering to.
 - {{domxref('PaintSize')}}
   - : Returns the read-only values of the output bitmap's width and height.
-
-## Dictionaries
-
-- {{domxref('PaintRenderingContext2DSettings')}}
-  - : A dictionary providing a subset of [CanvasRenderingContext2D](/en-US/docs/Web/API/CanvasRenderingContext2D) settings.
 
 ## Examples
 
