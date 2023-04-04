@@ -32,7 +32,7 @@ This technique is often used by sites that let you download executables, to ensu
 3. Run `sha256sum /path/to/the/file` in the terminal to generate your own code. If you are using a Mac you may have to [install it separately](https://unix.stackexchange.com/questions/426837/no-sha256sum-in-macos).
 4. Compare the two strings - they should match unless the file has been compromised.
 
-![Examples of SHA256 from the download for the software "Blender". These look like 32 hexadecimal numbers followed by a file name like "blender.zip"](blender-sha256-example.png)
+![Examples of SHA256 from the download for the software "Blender". These look like 64 hexadecimal digits followed by a file name like "blender.zip"](blender-sha256-example.png)
 
 The [`digest()`](/en-US/docs/Web/API/SubtleCrypto/digest) method of SubtleCrypto is useful for this. To generate a checksum of a file you can do it like so:
 
@@ -98,7 +98,7 @@ async function hashTheseFiles(e) {
 At this point you may be thinking to yourself "_I can use this on my own website, so when users go to download a file we can ensure the hashes match to reassure the user their download is secure_". Unfortunately this has two issues that immediate spring to mind:
 
 - Executable downloads should **always** be done over HTTPS. This prevents intermediate parties from performing attacks like this so it would be redundant.
-- If the attacker is able to replace the download file on the original server, then they can also simply replace the code which invokes the SubtleCrypto interface to bypass it and just state that everything is fine. Probably something sneaky like replacing [strict equality](/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness#strict_equality_using_), which can be a pain to spot in your own code:
+- If the attacker is able to replace the download file on the original server, then they can also simply replace the code which invokes the SubtleCrypto interface to bypass it and just state that everything is fine. Probably something sneaky like replacing [strict equality](/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness#strict_equality_using), which can be a pain to spot in your own code:
 
   ```diff
   --- if (checksum === correctCheckSum) return true;

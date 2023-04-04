@@ -57,7 +57,7 @@ Below are examples to clarify the syntax.
 
 ### Named import
 
-Given a value named `myExport` which has been exported from the module `my-module` either implicitly as `export * from 'another.js'`) or explicitly using the {{JSxRef("Statements/export", "export")}} statement, this inserts `myExport` into the current scope.
+Given a value named `myExport` which has been exported from the module `my-module` either implicitly as `export * from "another.js"` or explicitly using the {{jsxref("Statements/export", "export")}} statement, this inserts `myExport` into the current scope.
 
 ```js
 import { myExport } from "/modules/my-module.js";

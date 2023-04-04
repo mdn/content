@@ -37,6 +37,8 @@ This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_a
 </figure>
 ```
 
+#### Result
+
 {{EmbedLiveSample("Images", "100%", 375)}}
 
 ### Code snippets
@@ -59,6 +61,8 @@ function NavigatorExample() {
 </figure>
 ```
 
+#### Result
+
 {{EmbedLiveSample("Code_snippets", "100%", 250)}}
 
 ### Quotations
@@ -73,7 +77,9 @@ function NavigatorExample() {
 </figure>
 ```
 
-{{EmbedLiveSample("Quotations")}}
+#### Result
+
+{{EmbedLiveSample('Quotations')}}
 
 ### Poems
 
@@ -90,6 +96,8 @@ function NavigatorExample() {
   <figcaption><cite>Venus and Adonis</cite>, by William Shakespeare</figcaption>
 </figure>
 ```
+
+#### Result
 
 {{EmbedLiveSample("Poems", "100%", 250)}}
 

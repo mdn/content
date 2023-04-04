@@ -5,7 +5,7 @@ page-type: web-api-instance-method
 browser-compat: api.AnimationEffect.getTiming
 ---
 
-{{ APIRef("Web Animations API") }}
+{{ APIRef("Web Animations") }}
 
 The `AnimationEffect.getTiming()` method of the {{domxref("AnimationEffect")}} interface returns an object containing the timing properties for the Animation Effect.
 

@@ -22,8 +22,6 @@ _Also inherits static properties from its parent {{jsxref("TypedArray")}}_.
 
 - {{jsxref("TypedArray.BYTES_PER_ELEMENT", "BigUint64Array.BYTES_PER_ELEMENT")}}
   - : Returns a number value of the element size. `8` in the case of `BigUint64Array`.
-- {{jsxref("TypedArray.name", "BigUint64Array.name")}}
-  - : Returns the string value of the constructor name. `"BigUint64Array"` in the case of `BigUint64Array`.
 
 ## Static methods
 

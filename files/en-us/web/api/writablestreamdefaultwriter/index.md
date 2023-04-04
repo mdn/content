@@ -41,33 +41,26 @@ The following example shows the creation of a `WritableStream` with a custom sin
 ```js
 const list = document.querySelector("ul");
 
-function sendMessage(message, writableStream) {
+async function sendMessage(message, writableStream) {
   // defaultWriter is of type WritableStreamDefaultWriter
   const defaultWriter = writableStream.getWriter();
   const encoder = new TextEncoder();
-  const encoded = encoder.encode(message, { stream: true });
-  encoded.forEach((chunk) => {
-    defaultWriter.ready
-      .then(() => defaultWriter.write(chunk))
-      .then(() => {
-        console.log("Chunk written to sink.");
-      })
-      .catch((err) => {
-        console.log("Chunk error:", err);
-      });
-  });
-  // Call ready again to ensure that all chunks are written
-  //   before closing the writer.
-  defaultWriter.ready
-    .then(() => {
-      defaultWriter.close();
-    })
-    .then(() => {
-      console.log("All chunks written");
-    })
-    .catch((err) => {
-      console.log("Stream error:", err);
-    });
+  const encoded = encoder.encode(message);
+
+  try {
+    for (const chunk of encoded) {
+      await defaultWriter.ready;
+      await defaultWriter.write(chunk);
+      console.log("Chunk written to sink.");
+    }
+    // Call ready again to ensure that all chunks are written
+    // before closing the writer.
+    await defaultWriter.ready;
+    await defaultWriter.close();
+    console.log("All chunks written");
+  } catch (err) {
+    console.log("Error:", err);
+  }
 }
 
 const decoder = new TextDecoder("utf-8");

@@ -18,7 +18,7 @@ The HyperText Transfer Protocol (HTTP) **`451 Unavailable For Legal Reasons`** c
 
 This example response is taken from the IETF RFC (see below) and contains a reference to [Monty Python's Life of Brian](https://en.wikipedia.org/wiki/Monty_Python's_Life_of_Brian).
 
-> **Note:** the {{HTTPHeader("Link")}} header might also contain a `rel="blocked-by"` relation identifying the entity and implementing blockage, not any other entity mandating it.
+> **Note:** the {{HTTPHeader("Link")}} header might also contain a `rel="blocked-by"` relation identifying the entity implementing the blockage, not any other entity mandating it.
 
 Any attempt to identify the entity ultimately responsible for the resource being unavailable belongs in the response body, not in the `rel="blocked-by"` link. This includes the name of the person or organization that made a legal demand resulting in the content's removal.
 

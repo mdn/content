@@ -23,6 +23,7 @@ The following events are made available to {{domxref("XMLHttpRequest")}}:
 - {{domxref("XMLHttpRequest/loadend_event", "loadend")}}
 - {{domxref("XMLHttpRequest/loadstart_event", "loadstart")}}
 - {{domxref("XMLHttpRequest/progress_event", "progress")}}
+- {{domxref("XMLHttpRequest/readystatechange_event", "readystatechange")}}
 - {{domxref("XMLHttpRequest/timeout_event", "timeout")}}
 
 ## Inheritance for `XMLHttpRequestUpload`
