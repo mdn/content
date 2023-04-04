@@ -347,8 +347,8 @@ blah
 
 #### HTML
 
-```html hidden
-<div class="wrapper"></div>
+```html-nolint hidden
+<div class="wrapper">
 ```
 
 ```html
