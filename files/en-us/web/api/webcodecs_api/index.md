@@ -31,8 +31,8 @@ of an encoder or decoder maintains an internal, independent processing queue. Wh
 keep this model in mind.
 
 Methods named `configure()`, `encode()`, `decode()`, and `flush()` operate asynchronously by appending control messages
-to the end the queue. While methods named `reset()` and `close()` synchronously abort all pending work and purge the
-processing queue. After `reset()` more work may be queued following a call to `configure()`, but `close()` is a permanent operation.
+to the end the queue, while methods named `reset()` and `close()` synchronously abort all pending work and purge the
+processing queue. After `reset()`, more work may be queued following a call to `configure()`, but `close()` is a permanent operation.
 
 Methods named `flush()` can be used to wait for the completion of all work that was pending at the time `flush()` was called. However, it
 should generally only be called once all desired work is queued. It is not intended to force progress at regular intervals. Calling it
