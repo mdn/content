@@ -1,13 +1,15 @@
 ---
-title: PaintWorklet
-slug: Web/API/PaintWorklet
+title: PaintWorkletGLobalScope
+slug: Web/API/PaintWorkletGlobalScope
 page-type: web-api-interface
+status:
+  - Experimental
 browser-compat: api.PaintWorkletGlobalScope
 ---
 
-{{APIRef("CSS Painting API")}}
+{{APIRef("CSS Painting API")}}{{SeeCompatTable}}
 
-The **`PaintWorklet`** interface of the {{domxref('CSS Painting API','','',' ')}} programmatically generates an image where a CSS property expects a file. Access this interface through {{DOMxRef("CSS.paintWorklet")}}.
+The **`PaintWorkletGLobalScope`** interface of the [CSS Painting API](/en-US/docs/Web/API/CSS_Painting_API) represents the global object available inside a paint {{domxref("Worklet")}}.
 
 ## Privacy concerns
 
@@ -18,33 +20,38 @@ To avoid leaking visited links, this feature is currently disabled in Chrome-bas
 
 ## Instance properties
 
-- {{domxref('PaintWorklet.devicePixelRatio')}}
+_This interface inherits methods from {{domxref('WorkletGlobalScope')}}._
+
+- {{domxref('PaintWorkletGlobalScope.devicePixelRatio')}}
   - : Returns the current device's ratio of physical pixels to logical pixels.
-
-### Event handlers
-
-None.
 
 ## Instance methods
 
-_This interface inherits methods from {{domxref('Worklet')}}._
+_This interface inherits methods from {{domxref('WorkletGlobalScope')}}._
 
-- {{domxref('PaintWorklet.registerPaint()')}}
-  - : Registers a class programmatically generate an image where a CSS property expects a file.
-- {{domxref('Worklet.addModule', 'PaintWorklet.addModule()')}}
-  - : The [`addModule()`](/en-US/docs/Web/API/Worklet/addModule) method, inherited from the _{{domxref('Worklet')}}_ interface loads the module in the given JavaScript file and adds it to the current PaintWorklet.
+- {{domxref('PaintWorkletGlobalScope.registerPaint()')}}
+  - : Registers a class to programmatically generate an image where a CSS property expects a file.
+
+### Event
+
+None.
 
 ## Examples
 
-The following three examples go together to show creating, loading, and using a `PaintWorklet`.
+The following three examples go together to show creating, loading, and using a paint `Worklet`.
 
-### Create a PaintWorklet
+### Create a paint worklet
 
-The following shows an example worklet module. This should be in a separate js file. Note that `registerPaint()` is called without a reference to `PaintWorklet`.
+The following shows an example worklet module. This should be in a separate js file. Note that `registerPaint()` is called without a reference to a paint `Worklet`.
 
 ```js
 class CheckerboardPainter {
   paint(ctx, geom, properties) {
+    // The global object here is a PaintWorkletGlobalScope
+    // Methods and properties can be accessed directly
+    // as global features or prefixed using self
+    const dpr = self.devicePixelRatio;
+
     // Use `ctx` as if it was a normal canvas
     const colors = ["red", "green", "blue"];
     const size = 32;
@@ -64,7 +71,7 @@ class CheckerboardPainter {
 registerPaint("checkerboard", CheckerboardPainter);
 ```
 
-### Load a PaintWorklet
+### Load a paint worklet
 
 The following example demonstrates loading the above worklet from its js file and does so by feature detection.
 
@@ -74,9 +81,9 @@ if ("paintWorklet" in CSS) {
 }
 ```
 
-### Use a PaintWorklet
+### Use a paint worklet
 
-This example shows how to use a `PaintWorklet` in a stylesheet, including the simplest way to provide a fallback if `PaintWorklet` isn't supported.
+This example shows how to use a paint `Worklet` in a stylesheet, including the simplest way to provide a fallback if `CSS.paintWorklet` isn't supported.
 
 ```html
 <style>

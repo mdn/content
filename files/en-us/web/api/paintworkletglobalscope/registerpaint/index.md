@@ -1,15 +1,16 @@
 ---
 title: PaintWorkletGlobalScope.registerPaint()
-slug: Web/API/PaintWorklet/registerPaint
+slug: Web/API/PaintWorkletGlobalScope/registerPaint
 page-type: web-api-instance-method
+status:
+  - Experimental
 browser-compat: api.PaintWorkletGlobalScope.registerPaint
 ---
 
-{{APIRef("CSS Painting API")}}
+{{APIRef("CSS Painting API")}}{{SeeCompatTable}}
 
-The
-**`PaintWorkletGlobalScope.registerPaint()`** method of the
-{{domxref("PaintWorklet")}} interface registers a class programmatically generate an
+The **`registerPaint()`** method of the
+{{domxref("PaintWorkletGlobalScope")}} interface registers a class to programmatically generate an
 image where a CSS property expects a file.
 
 ## Syntax

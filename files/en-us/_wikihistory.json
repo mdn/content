@@ -51123,7 +51123,7 @@
       "ernestd"
     ]
   },
-  "Web/API/PaintWorklet": {
+  "Web/API/PaintWorkletGlobalScope": {
     "modified": "2020-10-15T22:17:26.607Z",
     "contributors": [
       "nakhodkiin",
@@ -51134,11 +51134,11 @@
       "jpmedley"
     ]
   },
-  "Web/API/PaintWorklet/devicePixelRatio": {
+  "Web/API/PaintWorkletGlobalScope/devicePixelRatio": {
     "modified": "2020-12-10T11:15:36.190Z",
     "contributors": ["bershanskiy", "estelle", "Puddingsan"]
   },
-  "Web/API/PaintWorklet/registerPaint": {
+  "Web/API/PaintWorkletGlobalScope/registerPaint": {
     "modified": "2020-12-10T11:13:09.249Z",
     "contributors": ["bershanskiy", "kspk", "estelle", "1valdis", "jpmedley"]
   },

@@ -1,13 +1,15 @@
 ---
 title: PaintWorkletGlobalScope.devicePixelRatio
-slug: Web/API/PaintWorklet/devicePixelRatio
+slug: Web/API/PaintWorkletGlobalScope/devicePixelRatio
 page-type: web-api-instance-property
+status:
+  - Experimental
 browser-compat: api.PaintWorkletGlobalScope.devicePixelRatio
 ---
 
-{{APIRef("CSS Painting API")}}
+{{APIRef("CSS Painting API")}}{{SeeCompatTable}}
 
-The **`PaintWorkletGlobalScope.devicePixelRatio`** read-only property of the {{domxref("PaintWorklet")}} interface returns the current device's ratio of physical pixels to logical pixels.
+The read-only **`devicePixelRatio`** read-only property of the {{domxref("PaintWorkletGlobalScope")}} interface returns the current device's ratio of physical pixels to logical pixels.
 
 ## Value
 
@@ -23,7 +25,6 @@ A double-precision integer.
 
 ## See also
 
-- [PaintWorklet](/en-US/docs/Web/API/PaintWorklet)
 - [CSS.paintWorklet](/en-US/docs/Web/API/CSS/paintWorklet)
 - [Worklet](/en-US/docs/Web/API/Worklet)
 - [CSS Painting API](/en-US/docs/Web/API/CSS_Painting_API)
