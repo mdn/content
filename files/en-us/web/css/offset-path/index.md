@@ -17,19 +17,19 @@ The **`offset-path`** [CSS](/en-US/docs/Web/CSS) property specifies a motion pat
 /* Default */
 offset-path: none;
 
-/* Function values */
+/* Line segment */
 offset-path: ray(45deg closest-side contain);
 
 /* URL */
 offset-path: url(#path);
 
-/* Shapes */
+/* Shape */
 offset-path: circle(50% at 25% 25%);
 offset-path: inset(50% 50% 50% 50%);
 offset-path: polygon(30% 0%, 70% 0%, 100% 50%, 30% 100%, 0% 70%, 0% 30%);
 offset-path: path("M 0,200 Q 200,200 260,80 Q 290,20 400,0 Q 300,100 400,200");
 
-/* Geometry Boxes */
+/* Geometry box */
 offset-path: margin-box;
 offset-path: stroke-box;
 
@@ -43,17 +43,12 @@ offset-path: unset;
 
 ### Values
 
-- `ray()`
-  - : Taking up to three values, defines a path that is a line segment starting from the position of the box and proceeds in the direction defined by the specified angle similar to the CSS gradient angle where `0deg` is up, with positive angles increasing in the clockwise direction, with the size value being similar to the CSS radial gradient size values from `closest-side` to `farthest-corner`, and the keyterm `contain`.
+- {{cssxref("ray","ray()")}}
+  - : Defines a path that is a line segment starting from the position of the box and proceeds in the direction defined by the specified angle. This value accepts up to three parameters – an angle similar to the CSS gradient angle, where `0deg` is up and positive angles increase in the clockwise direction, a size value similar to the CSS radial gradient size values, and the keyword `contain`.
 - `url()`
   - : References the ID of an SVG shape — `circle`, `ellipse`, `line`, `path`, `polygon`, `polyline`, or `rect` — using the shape's geometry as the path.
 - `<basic-shape>`
-
-  - : Specifies a [CSS shape](/en-US/docs/Web/CSS/CSS_Shapes/Basic_Shapes) including `circle()`, `ellipse()`, `inset()`, `polygon()`, or `path()`.
-
-    - {{cssxref("path","path()")}}
-      - : A path string defined with SVG coordinate syntax.
-
+  - : Specifies a [CSS shape](/en-US/docs/Web/CSS/CSS_Shapes/Basic_Shapes) by using one of the shape functions such as [`circle()`](/en-US/docs/Web/CSS/basic-shape/circle), [`ellipse()`](/en-US/docs/Web/CSS/basic-shape/ellipse), [`inset()`](/en-US/docs/Web/CSS/basic-shape/inset), [`polygon()`](/en-US/docs/Web/CSS/basic-shape/polygon), or {{cssxref("path","path()")}}.
 - `none`
   - : Specifies no motion path at all.
 

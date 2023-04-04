@@ -7,33 +7,42 @@ browser-compat: css.types.ray
 
 {{CSSRef}}
 
-The **`path()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) accepts an SVG path string, and is used in [CSS Shapes](/en-US/docs/Web/CSS/CSS_Shapes) and CSS Motion Path to enable a shape to be drawn.
+The **`ray()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) defines a line segment that starts from a position of an element and proceeds in the direction defined by the specified angle.
 
-{{EmbedInteractiveExample("pages/css/function-path.html")}}
+{{EmbedInteractiveExample("pages/css/function-ray.html")}}
 
 ## Syntax
 
-When used in {{cssxref("offset-path")}} or {{SVGAttr("d")}}:
-
 ```css
-path(<string>)
-```
+/* property: ray(expression) */
+/* all parameters specified */
+offset-path: ray(0deg closest-corner contain);
 
-When used in {{cssxref("clip-path")}}:
+/* two parameters specified, order does not matter */
+offset-path: ray(contain 200deg);
 
-```css
-path([<'fill-rule'>,]?<string>)
+/* only one parameter specified */
+offset-path: ray(45deg);
 ```
 
 ### Parameters
 
-- `<'fill-rule'>`
+- `<angle>`
   - : The filling rule for the interior of the path.
     Possible values are `nonzero` or `evenodd`.
     The default value is `nonzero`.
     See [fill-rule](/en-US/docs/Web/SVG/Attribute/fill-rule) for more details.
-- `<string>`
+- `<ray-size>`
   - : The string is a [data string](/en-US/docs/Web/SVG/Attribute/d) for defining an [SVG path](/en-US/docs/Web/SVG/Element/path).
+- `contain`
+  - :
+
+## Formal syntax
+
+{{CSSSyntax}}
+
+<!-- ray() = ray( <angle> && <ray-size>? && contain? )
+<ray-size> = closest-side | closest-corner | farthest-side | farthest-corner | sides -->
 
 ## Examples
 
