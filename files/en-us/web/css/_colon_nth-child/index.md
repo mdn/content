@@ -160,6 +160,163 @@ div em {
 
 {{EmbedLiveSample('Detailed_example', 550, 550)}}
 
+### of selector syntax
+
+Blah blah
+
+#### HTML
+
+```html
+<ul>
+  <li class="noted">Deangelo</li>
+  <li>Hannah</li>
+  <li class="noted">Kimberly</li>
+  <li>Jayla</li>
+  <li>Ben</li>
+  <li>Ricardo</li>
+  <li class="noted">Milton</li>
+  <li>Sienna</li>
+  <li>Arthur</li>
+  <li class="noted">Lexi</li>
+  <li>Aylin</li>
+  <li>Leo</li>
+  <li>Leyla</li>
+  <li class="noted">Bruce</li>
+  <li>Corbin</li>
+  <li>Veronica</li>
+  <li class="noted">Mathew</li>
+  <li>Tiana</li>
+  <li>Tanya</li>
+  <li class="noted">Marlene</li>
+</ul>
+```
+
+#### CSS
+
+```css
+ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  font-size: 1.2rem;
+  padding-left: 0;
+}
+
+li {
+  margin: 0.125rem;
+  padding: 0.25rem;
+  border: 1px solid tomato;
+}
+
+.noted {
+  border-bottom: 5px solid tomato;
+}
+```
+
+```css
+li:nth-child(even of .noted) {
+  background-color: tomato;
+  border-bottom-color: seagreen;
+}
+```
+
+#### Result
+
+{{EmbedLiveSample('of_selector_syntax', 550, 120)}}
+
+### of selector syntax vs selector nth-child
+
+Blah blah
+
+#### HTML
+
+```html
+<ul class="one">
+  <li class="noted">Deangelo</li>
+  <li>Hannah</li>
+  <li class="noted">Kimberly</li>
+  <li>Jayla</li>
+  <li>Ben</li>
+  <li>Ricardo</li>
+  <li class="noted">Milton</li>
+  <li>Sienna</li>
+  <li>Arthur</li>
+  <li class="noted">Lexi</li>
+  <li>Aylin</li>
+  <li>Leo</li>
+  <li>Leyla</li>
+  <li class="noted">Bruce</li>
+  <li>Corbin</li>
+  <li>Veronica</li>
+  <li class="noted">Mathew</li>
+  <li>Tiana</li>
+  <li>Tanya</li>
+  <li class="noted">Marlene</li>
+</ul>
+<ul class="two">
+  <li class="noted">Deangelo</li>
+  <li>Hannah</li>
+  <li class="noted">Kimberly</li>
+  <li>Jayla</li>
+  <li>Ben</li>
+  <li>Ricardo</li>
+  <li class="noted">Milton</li>
+  <li>Sienna</li>
+  <li>Arthur</li>
+  <li class="noted">Lexi</li>
+  <li>Aylin</li>
+  <li>Leo</li>
+  <li>Leyla</li>
+  <li class="noted">Bruce</li>
+  <li>Corbin</li>
+  <li>Veronica</li>
+  <li class="noted">Mathew</li>
+  <li>Tiana</li>
+  <li>Tanya</li>
+  <li class="noted">Marlene</li>
+</ul>
+```
+
+#### CSS
+
+```css
+ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  font-size: 1.2rem;
+  padding-left: 0;
+}
+
+li {
+  margin: 0.125rem;
+  padding: 0.25rem;
+  border: 1px solid tomato;
+}
+
+.noted {
+  border-bottom: 5px solid tomato;
+}
+```
+
+```css
+ul.one > li:nth-child(-n + 3 of li.noted) {
+  background-color: tomato;
+  border-bottom-color: seagreen;
+}
+```
+
+```css
+ul.two > li.noted:nth-child(-n + 3) {
+  background-color: tomato;
+  border-bottom-color: seagreen;
+}
+```
+
+#### Result
+
+{{EmbedLiveSample('of_selector_syntax_vs_selector_nth-child', 550, 210)}}
+
 ## Specifications
 
 {{Specifications}}
