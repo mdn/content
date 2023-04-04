@@ -15,7 +15,7 @@ These technologies allow the app to be launched directly from the device's home 
 
 To make the web site installable, it needs the following things in place:
 
-- A web manifest, with the [correct fields filled in](/en-US/docs/Web/Progressive_web_apps/Add_to_home_screen#manifest)
+- A web manifest, with the [correct fields filled in](/en-US/docs/Web/Progressive_web_apps/Guides/Making_PWAs_installable#the_web_app_manifest)
 - The web site to be served from a secure (HTTPS) domain
 - An icon to represent the app on the device
 - A [service worker](/en-US/docs/Web/API/Service_Worker_API) registered, to allow the app to work offline (this is required only by Chrome for Android currently)
@@ -109,8 +109,6 @@ The icon and the theme and background colors are used to create this screen.
 ## Summary
 
 In this article, we learned about how we can make PWAs installable with a properly-configured web manifest, and how the user can then install the PWA with the "add to home screen" feature of their browser.
-
-For more information on a2hs, be sure to read our [Add to Home screen guide](/en-US/docs/Web/Progressive_web_apps/Add_to_home_screen). Browser support is currently limited to Firefox for Android 58+, Mobile Chrome and Android Webview 31+, and Opera for Android 32+, but this should improve in the near future.
 
 Now let's move to the last piece of the PWA puzzle: using push notifications to share announcements with the user, and to help the user re-engage with your app.
 

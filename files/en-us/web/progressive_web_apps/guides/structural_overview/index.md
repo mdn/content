@@ -28,7 +28,7 @@ We can control what is requested from the server and what is retrieved from the 
 
 ### Benefits of the app shell pattern
 
-This architecture allows a website to benefit the most from all the PWA features — it caches the app shell and manages the dynamic content in a way that greatly improves the performance. In addition to the basic shell, you can add other features such as [add to home screen](/en-US/docs/Web/Progressive_web_apps/Add_to_home_screen) or [push notifications](/en-US/docs/Web/API/Push_API), safe in the knowledge that the app will still work OK if they are not supported by the user's browser — this is the beauty of progressive enhancement.
+This architecture allows a website to benefit the most from all the PWA features — it caches the app shell and manages the dynamic content in a way that greatly improves the performance. In addition to the basic shell, you can add other features such as [push notifications](/en-US/docs/Web/API/Push_API), safe in the knowledge that the app will still work OK if they are not supported by the user's browser — this is the beauty of progressive enhancement.
 
 The website feels like a native app with instant interaction and solid performance while keeping all the benefits of the web.
 

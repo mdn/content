@@ -109,7 +109,7 @@ As mentioned before, PWAs don't depend on a single API, but rather using various
 
 The key ingredient required for PWAs is [service worker](/en-US/docs/Web/API/Service_Worker_API) support. Thankfully service workers are [now supported on all major browsers](https://jakearchibald.github.io/isserviceworkerready/) on desktop and mobile.
 
-Other features such as [Web App Manifest](/en-US/docs/Web/Manifest), [Push](/en-US/docs/Web/API/Push_API) [Notifications](/en-US/docs/Web/API/Notifications_API), and [Add to Home Screen](/en-US/docs/Web/Progressive_web_apps/Add_to_home_screen) functionality have wide support too. Currently, Safari has limited support for Web App Manifest and Add to Home Screen and no support for web push notifications. However, other major browsers support all these features.
+Other features such as [Web App Manifest](/en-US/docs/Web/Manifest) and [Push](/en-US/docs/Web/API/Push_API) [Notifications](/en-US/docs/Web/API/Notifications_API) functionality have wide support too. Currently, Safari has limited support for Web App Manifest and Add to Home Screen and no support for web push notifications. However, other major browsers support all these features.
 
 Above all you should follow the progressive enhancement rule: use technologies that enhance the appearance and utility of your app when they're available, but still offer the basic functionality of your app when those features are unavailable. Presenting a trusted website with a good performance is a consequence of using these enhancements; this in turn means building web apps which follow better practices. This way everybody will be able to use the app, but those with modern browsers will benefit from PWA features even more.
 
