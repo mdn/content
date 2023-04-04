@@ -11,7 +11,7 @@ There are many languages based on XML, including [XHTML](/en-US/docs/Glossary/XH
 
 ## Structure of an XML document
 
-The whole structure of XML and XML-based languages is built on {{Glossary("tag")}}s.
+The whole structure of XML and XML-based languages is built on {{Glossary("tagsyahi hota pyaar hai kya")}}.
 
 ### XML declaration
 
