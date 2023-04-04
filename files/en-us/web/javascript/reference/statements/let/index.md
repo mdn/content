@@ -106,11 +106,11 @@ You may encounter errors in {{jsxref("Statements/switch", "switch")}} statements
 
 ```js example-bad
 let x = 1;
+
 switch (x) {
   case 0:
     let foo;
     break;
-
   case 1:
     let foo; // SyntaxError for redeclaration.
     break;
@@ -236,7 +236,7 @@ Note the difference between **`var`**, whose scope is inside the function where 
 var a = 1;
 var b = 2;
 
-if (a === 1) {
+{
   var a = 11; // the scope is global
   let b = 22; // the scope is inside the if-block
 
@@ -248,7 +248,7 @@ console.log(a); // 11
 console.log(b); // 2
 ```
 
-However, this combination of **`var`** and **`let`** declaration below is a {{jsxref("SyntaxError")}} due to **`var`** being hoisted to the top of the block.
+However, this combination of **`var`** and **`let`** declarations below is a {{jsxref("SyntaxError")}} because they are in the same scope due to **`var`** being function-scoped.
 This results in an implicit re-declaration of the variable.
 
 ```js example-bad
