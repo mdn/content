@@ -41,9 +41,25 @@ A [legacy syntax](/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_f
 
 ### Deleted, added, or modified properties
 
-If a property is modified in one iteration and then visited at a later time, its value in the loop is its value at that later time. A property that is deleted before it has been visited will not be visited later. Properties added to the object over which iteration is occurring may either be visited or omitted from iteration.
+`for...in` visits property keys in the following fashion:
 
-In general, it is best not to add, modify, or remove properties from the object during iteration, other than the property currently being visited. There is no guarantee whether an added property will be visited, whether a modified property (other than the current one) will be visited before or after it is modified, or whether a deleted property will be visited before it is deleted.
+1. It first gets all own string keys of the current object, in a fashion very similar to {{jsxref("Object.getOwnPropertyNames()")}}.
+2. For each key, if no string with the same value has ever been visited, the [property descriptor is retrieved](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Reflect/getOwnPropertyDescriptor) and the property is only visited if it is enumerable. However, this property string will be marked as visited even if it's not enumerable.
+3. Then, the current object is replaced with its prototype, and the process is repeated.
+
+This means:
+
+- Any property added to the currently visited object during iteration will not be visited, because all own properties of the current object have already been saved beforehand.
+- If multiple objects in the prototype chain have a property with the same name, only the first one will be considered, and it is only visited if it's enumerable. If it is non-enumerable, no other properties with the same name further up the prototype chain will be visited, even if they are enumerable.
+
+In general, it is best not to add, modify, or remove properties from the object during iteration, other than the property currently being visited. The spec explicitly allows the implementation to not follow the algorithm above in one of the following cases:
+
+- The object's prototype chain is modified during iteration.
+- A property is deleted from the object or its prototype chain during iteration.
+- A property is added to the object's prototype chain during iteration.
+- A property's enumerability is changed during iteration.
+
+In these cases, implementations may behave differently from what you may expect, or even from each other.
 
 ### Array iteration and for...in
 
@@ -104,6 +120,102 @@ for (const prop in obj) {
 
 // Logs:
 // "obj.color = red"
+```
+
+### Concurrent modification
+
+> **Warning:** You should not write code like this yourself. It is only included here to illustrate the behavior of `for...in` in some corner cases.
+
+Properties added to the current object during iteration are never visited:
+
+```js
+const obj = { a: 1, b: 2 };
+
+for (const prop in obj) {
+  console.log(`obj.${prop} = ${obj[prop]}`);
+  obj.c = 3;
+}
+
+// Logs:
+// obj.a = 1
+// obj.b = 2
+```
+
+Shadowed properties are only visited once:
+
+```js
+const proto = { a: 1 };
+const obj = { __proto__: proto, a: 2 };
+
+for (const prop in obj) {
+  console.log(`obj.${prop} = ${obj[prop]}`);
+}
+
+// Logs:
+// obj.a = 2
+
+Object.defineProperty(obj, "a", { enumerable: false });
+
+for (const prop in obj) {
+  console.log(`obj.${prop} = ${obj[prop]}`);
+}
+// Logs nothing, because the first "a" property visited is non-enumerable.
+```
+
+In addition, consider the following cases, where the behavior is unspecified, and implementations tend to diverge from the specified algorithm:
+
+Changing the prototype during iteration:
+
+```js
+const obj = { a: 1, b: 2 };
+
+for (const prop in obj) {
+  console.log(`obj.${prop} = ${obj[prop]}`);
+  Object.setPrototypeOf(obj, { c: 3 });
+}
+```
+
+Deleting a property during iteration:
+
+```js
+const obj = { a: 1, b: 2, c: 3 };
+
+// Deleting a property before it is visited
+for (const prop in obj) {
+  console.log(`obj.${prop} = ${obj[prop]}`);
+  delete obj.c;
+}
+
+const obj2 = { a: 1, b: 2, c: 3 };
+
+// Deleting a property after it is visited
+for (const prop in obj2) {
+  console.log(`obj2.${prop} = ${obj2[prop]}`);
+  delete obj2.a;
+}
+```
+
+Enumerable properties added to the prototype during iteration:
+
+```js
+const proto = {};
+const obj = { __proto__: proto, a: 1, b: 2 };
+
+for (const prop in obj) {
+  console.log(`obj.${prop} = ${obj[prop]}`);
+  proto.c = 3;
+}
+```
+
+Changing the enumerability of a property during iteration:
+
+```js
+const obj = { a: 1, b: 2, c: 3 };
+
+for (const prop in obj) {
+  console.log(`obj.${prop} = ${obj[prop]}`);
+  Object.defineProperty(obj, "c", { enumerable: false });
+}
 ```
 
 ## Specifications
