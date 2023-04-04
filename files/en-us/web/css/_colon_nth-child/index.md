@@ -162,7 +162,7 @@ div em {
 
 ### of selector syntax
 
-Blah blah
+In this example there is an unordered list of names, some of them have been marked as **noted** using `class="noted"`. These have been highlighted with a thick bottom border.
 
 #### HTML
 
@@ -217,6 +217,8 @@ li {
 }
 ```
 
+In the following CSS we are targeting the **even** list items that are marked with `class="noted"`.
+
 ```css
 li:nth-child(even of .noted) {
   background-color: tomato;
@@ -226,11 +228,15 @@ li:nth-child(even of .noted) {
 
 #### Result
 
+Here you can see that items 1, 3, 7, 10, 14, 17 and 20 have a thick bottom border as they have `class="noted"`.
+
+Items 3, 10 and 17 have a solid background as they are the even list items with `class="noted"`.
+
 {{EmbedLiveSample('of_selector_syntax', 550, 120)}}
 
 ### of selector syntax vs selector nth-child
 
-Blah blah
+In this example there are two unordered list of names, the first to shows the effect of `li:nth-child(-n + 3 of .noted)` and the second to shows the effect of `li.noted:nth-child(-n + 3)`.
 
 #### HTML
 
@@ -307,12 +313,16 @@ li {
 }
 ```
 
+The first case highlights the first list items with `class="noted"`.
+
 ```css
-ul.one > li:nth-child(-n + 3 of li.noted) {
+ul.one > li:nth-child(-n + 3 of .noted) {
   background-color: tomato;
   border-bottom-color: seagreen;
 }
 ```
+
+The second case highlights the items with `class="noted"` if they are within the first 3 items in the list.
 
 ```css
 ul.two > li.noted:nth-child(-n + 3) {
@@ -322,6 +332,12 @@ ul.two > li.noted:nth-child(-n + 3) {
 ```
 
 #### Result
+
+In both of the lists we can see that all the list items with `class="noted"` have a thick bottom border.
+
+In the first list, the first 3 items with `class="noted"` are highlighted.
+
+In the second list, all the items with `class="noted"` that are in the first 3 items are highlighted.
 
 {{EmbedLiveSample('of_selector_syntax_vs_selector_nth-child', 550, 210)}}
 
