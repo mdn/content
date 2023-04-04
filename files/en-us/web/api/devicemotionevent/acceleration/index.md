@@ -20,14 +20,19 @@ the gravity force, in contrast to {{DOMxRef("DeviceMotionEvent.accelerationInclu
 ## Value
 
 The `acceleration` property is an object providing information about
-acceleration on three axis. Each axis is represented with its own property:
+acceleration on three axis. There are a couple of things that we need to make sure we understand before we can start using these events: which end is up, and what are the axes we're going to use?
+The easiest way to answer the first question is to take your device and put it on flat, level surface in its "resting" position, the position it will be most stable in. For a mobile phone, that's probably on the table, with the screen facing up and the the bottom of the phone closest to you. For a laptop, that's probably on a deck with its screen open facing you, and the keyboard in line with the surface.
 
 - `x`
-  - : Represents the acceleration upon the x axis which is the west to east axis
+  - : The x-axis runs side-to-side across the mobile phone screen or the laptop keyboard and is positive toward the right side.
 - `y`
-  - : Represents the acceleration upon the y axis which is the south to north axis
+  - : The y-axis runs front-to-back across the mobile phone screen or the laptop keyboard and is positive as it moves away from you.
 - `z`
-  - : Represents the acceleration upon the z axis which is the down to up axis
+  - : The z-axis comes straight up out of the mobile phone screen or the laptop keyboard and is positive as it moves up.
+
+>**Note:** The rotation data uses Euler angles to represent the difference between the device in its normal position and its current position. With the HTML5 device orientation events, the data is returned as the number of degrees different from normal. An easier way to think about it is how much the device is tilted side-to-side, usually referred to as beta, how much it is tilted front-to-back, known as gamma, and how much it is rotated around the z-axis, known as alpha.
+
+>**Note:** For a mobile device such as a phone or tablet, the device coordinate frame is defined relative to the screen in its standard orientation, typically portrait. This means that slide-out elements such as keyboards are not deployed, and swiveling elements such as displays are folded to their default position. If the orientation of the screen changes when the device is rotated or a slide-out keyboard is deployed, this does not affect the orientation of the coordinate frame relative to the device.
 
 ## Specifications
 
