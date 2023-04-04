@@ -111564,17 +111564,6 @@
       "Maian"
     ]
   },
-  "Web/JavaScript/Reference/Global_Objects/Function/displayName": {
-    "modified": "2020-10-15T21:26:38.403Z",
-    "contributors": [
-      "fscholz",
-      "mfluehr",
-      "minstrel1977",
-      "georgeawg",
-      "Mingun",
-      "toothbrush"
-    ]
-  },
   "Web/JavaScript/Reference/Global_Objects/Function/length": {
     "modified": "2020-11-06T15:22:52.677Z",
     "contributors": [

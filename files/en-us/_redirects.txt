@@ -12273,7 +12273,6 @@
 /en-US/docs/Web/JavaScript/Reference/Global_Objects/Error/prototype	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error
 /en-US/docs/Web/JavaScript/Reference/Global_Objects/Error/toSource	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error/toString
 /en-US/docs/Web/JavaScript/Reference/Global_Objects/EvalError/prototype	/en-US/docs/Web/JavaScript/Reference/Global_Objects/EvalError
-/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/Function.displayName	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/displayName
 /en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/constructor	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function
 /en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/toSource	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/toString
 /en-US/docs/Web/JavaScript/Reference/Global_Objects/GeneratorFunction/prototype	/en-US/docs/Web/JavaScript/Reference/Global_Objects/GeneratorFunction
