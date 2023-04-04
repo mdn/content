@@ -30,7 +30,7 @@ _This interface inherits methods from {{domxref('WorkletGlobalScope')}}._
 _This interface inherits methods from {{domxref('WorkletGlobalScope')}}._
 
 - {{domxref('PaintWorkletGlobalScope.registerPaint()')}}
-  - : Registers a class programmatically generate an image where a CSS property expects a file.
+  - : Registers a class to programmatically generate an image where a CSS property expects a file.
 
 ### Event
 
