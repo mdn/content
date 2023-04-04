@@ -9,22 +9,14 @@ browser-compat: api.Document.applets
 
 {{APIRef("DOM")}} {{Deprecated_Header}}
 
-The **`applets`** property of the {{domxref("Document")}}
-interface returns a list of the applets within a document.
+The **`applets`** property of the {{domxref("Document")}} returns an empty {{domxref("HTMLCollection")}}. This property is kept only for compatibility reasons; in older versions of browsers, it returned a list of the applets within a document.
 
-> **Note:** The {{htmlelement("applet")}} element was removed in [Gecko 56](https://bugzil.la/1279218) and [Chrome in late 2015](https://crbug.com/470301). Since then, calling `document.applets` in those browsers always
-> returns an empty {{domxref("HTMLCollection")}}. Removal is being considered in [WebKit](https://webkit.org/b/157926).
+> **Note:** Support for the {{htmlelement("applet")}} element has been removed by all browsers. Therefore, calling `document.applets` always
+> returns an empty collection.
 
 ## Value
 
-An {{domxref("HTMLCollection")}}.
-
-## Examples
-
-```js
-// When you know the second applet is the one you want
-my_java_app = document.applets[1];
-```
+An empty {{domxref("HTMLCollection")}}.
 
 ## Specifications
 
