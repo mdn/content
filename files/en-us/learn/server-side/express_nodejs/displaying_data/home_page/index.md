@@ -52,7 +52,6 @@ exports.index = (req, res, next) => {
 Replace all the code above with the following code fragment.
 The first thing this does is import (`require()`) all the models.
 We need to do this because we'll be using them to get our counts of documents.
-It then imports the _async_ module (which we discussed previously in [Asynchronous flow control using async](/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data/flow_control_using_async)).
 
 ```js
 const Book = require("../models/book");
