@@ -242,6 +242,9 @@ const obj4 = {
 
 ## See also
 
+- [Working with objects](/en-US/docs/Web/JavaScript/Guide/Working_with_Objects)
+- [Functions](/en-US/docs/Web/JavaScript/Reference/Functions)
 - [`get`](/en-US/docs/Web/JavaScript/Reference/Functions/get)
 - [`set`](/en-US/docs/Web/JavaScript/Reference/Functions/set)
-- [Lexical grammar](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar)
+- [Object initializer](/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer)
+- {{jsxref("Statements/class", "class")}}

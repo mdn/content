@@ -226,4 +226,4 @@ export { A as B, C as D, E as F, };
 
 ## See also
 
-- Initial ECMAScript proposal: [trailing function commas](https://github.com/tc39/proposal-trailing-function-commas) by Jeff Morrison
+- [Grammar and types](/en-US/docs/Web/JavaScript/Guide/Grammar_and_types)

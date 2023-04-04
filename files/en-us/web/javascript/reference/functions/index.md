@@ -374,16 +374,8 @@ Note that in the `if` test, a reference to `noFunc` is used — there are no bra
 
 ## See also
 
-- [`function` declaration](/en-US/docs/Web/JavaScript/Reference/Statements/function)
+- [Functions guide](/en-US/docs/Web/JavaScript/Guide/Functions)
+- [Classes](/en-US/docs/Web/JavaScript/Reference/Classes)
+- {{jsxref("Statements/function", "function")}}
 - [`function` expression](/en-US/docs/Web/JavaScript/Reference/Operators/function)
-- [`function*` declaration](/en-US/docs/Web/JavaScript/Reference/Statements/function*)
-- [`function*` expressions](/en-US/docs/Web/JavaScript/Reference/Operators/function*)
 - {{jsxref("Function")}}
-- {{jsxref("GeneratorFunction")}}
-- [Arrow functions](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions)
-- [Rest parameters](/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters)
-- [Default parameters](/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters)
-- [Method definitions](/en-US/docs/Web/JavaScript/Reference/Functions/Method_definitions)
-- [getter](/en-US/docs/Web/JavaScript/Reference/Functions/get)
-- [setter](/en-US/docs/Web/JavaScript/Reference/Functions/set)
-- [The `arguments` object](/en-US/docs/Web/JavaScript/Reference/Functions/arguments)

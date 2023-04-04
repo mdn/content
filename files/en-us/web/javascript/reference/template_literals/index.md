@@ -354,8 +354,8 @@ const bad = `bad escape sequence: \unicode`;
 
 ## See also
 
+- [Text formatting](/en-US/docs/Web/JavaScript/Guide/Text_formatting)
 - {{jsxref("String")}}
 - {{jsxref("String.raw()")}}
 - [Lexical grammar](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar)
-- [Template-like strings in ES3 compatible syntax](https://gist.github.com/WebReflection/8f227532143e63649804)
-- ["ES6 in Depth: Template strings" on hacks.mozilla.org](https://hacks.mozilla.org/2015/05/es6-in-depth-template-strings-2/)
+- [ES6 in Depth: Template strings](https://hacks.mozilla.org/2015/05/es6-in-depth-template-strings-2/) on hacks.mozilla.org (May 14, 2015)

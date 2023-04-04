@@ -370,7 +370,9 @@ PrivateConstructor.create(); // PrivateConstructor {}
 ## See also
 
 - [Using classes](/en-US/docs/Web/JavaScript/Guide/Using_Classes)
+- [Classes](/en-US/docs/Web/JavaScript/Reference/Classes)
 - [Public class fields](/en-US/docs/Web/JavaScript/Reference/Classes/Public_class_fields)
+- {{jsxref("Statements/class", "class")}}
 - [Private Syntax FAQ](https://github.com/tc39/proposal-class-fields/blob/main/PRIVATE_SYNTAX_FAQ.md)
-- [The Semantics of All JS Class Elements](https://rfrn.org/~shu/2018/05/02/the-semantics-of-all-js-class-elements.html)
-- [Public and private class fields](https://v8.dev/features/class-fields) article at the v8.dev site
+- [The semantics of all JS class elements](https://rfrn.org/~shu/2018/05/02/the-semantics-of-all-js-class-elements.html) by Shu-yu Guo (May 2, 2018)
+- [Public and private class fields](https://v8.dev/features/class-fields) on v8.dev (December 13, 2018)
