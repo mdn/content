@@ -30,7 +30,7 @@ _This interface has no specific method, but inherits the methods of {{domxref("X
   - : Fired when the request encountered an error.
     Also available via the `onerror` event handler property.
 - {{domxref("XMLHttpRequestUpload/load_event", "load")}}
-  - : Fired when an `XMLHttpRequest` transaction completes successfully.
+  - : Fired when a request transaction completes successfully.
     Also available via the `onload` event handler property.
 - {{domxref("XMLHttpRequestUpload/loadend_event", "loadend")}}
   - : Fired when a request has completed, whether successfully (after {{domxref("XMLHttpRequest/load_event", "load")}}) or unsuccessfully (after {{domxref("XMLHttpRequestUpload/abort_event", "abort")}} or {{domxref("XMLHttpRequest/error_event", "error")}}).
