@@ -13,10 +13,10 @@ The **`<label>`** [HTML](/en-US/docs/Web/HTML) element represents a caption for 
 
 Associating a `<label>` with a form control, such as {{htmlelement("input")}} or {{htmlelement("textarea")}} offers some major advantages:
 
-- The label text is not only visually associated with its corresponding text input; it is programmatically associated with it too. This means that, for example, a screen reader will read out the label when the user is focused on the form input, making it easier for an assistive technology user to understand what data should be entered.
+- The label text is not only visually associated with its corresponding text input; it is programmatically associated with it, too. This means that, for example, a screen reader will read out the label when the user is focused on the form input, making it easier for an assistive technology user to understand what data should be entered.
 - When a user clicks or touches/taps a label, the browser passes the focus to its associated input (the resulting event is also raised for the input). That increased hit area for focusing the input provides an advantage to anyone trying to activate it — including those using a touch-screen device.
 
-To explicitly associate a `<label>` element with an `<input>` element, you first need to add the `id` attribute to the `<input>` element. Next, you add the `for` attribute to the `<label>` element, where the value of `for` is the same as the `id` in the `<input>` element.
+To explicitly associate a `<label>` element with an `<input>` element, you first need to add the `id` attribute to the `<input>` element. Next, add the `for` attribute to the `<label>` element, where the value of `for` is the same as the `id` in the `<input>` element.
 
 Alternatively, you can nest the `<input>` directly inside the `<label>`, in which case the `for` and `id` attributes are not needed because the association is implicit:
 
@@ -27,7 +27,7 @@ Alternatively, you can nest the `<input>` directly inside the `<label>`, in whic
 </label>
 ```
 
-The form control that a label is labeling is called the _labeled control_ of the label element. Multiple labels can be associated with the same form control:
+The form control of a label is called the _labeled control_. Multiple labels can be associated with the same form control:
 
 ```html
 <label for="username">Enter your username:</label>
@@ -39,7 +39,7 @@ Elements that can be associated with a `<label>` element include {{HTMLElement('
 
 ## Attributes
 
-This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
+This element inherits the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 
 - `for`
 
@@ -80,7 +80,7 @@ There are no special styling considerations for `<label>` elements — structura
 
 ### Interactive content
 
-Don't place interactive elements such as {{HTMLElement("a", "anchors")}} or {{HTMLElement("button", "buttons")}} inside a `label`. Doing so makes it difficult for people to activate the form input associated with the `label`.
+Do not place interactive elements such as {{HTMLElement("a", "anchors")}} or {{HTMLElement("button", "buttons")}} inside a `label`. Doing so makes it difficult to activate the form input associated with the `label`.
 
 #### Don't
 
@@ -129,7 +129,7 @@ If a [form](/en-US/docs/Web/HTML/Element/form), or a section of a form needs a t
 
 ### Buttons
 
-An {{HTMLElement("input")}} element with a `type="button"` declaration and a valid `value` attribute does not need a label associated with it. Doing so may actually interfere with how assistive technology parses the button input. The same applies for the {{HTMLElement("button")}} element.
+An {{HTMLElement("input")}} element with a `type="button"` declaration and a valid `value` attribute does not need a label associated with it. Doing so may actually interfere with how assistive technology parses the button input. The same applies to the {{HTMLElement("button")}} element.
 
 ## Technical summary
 
