@@ -137,14 +137,14 @@ Note that, in the `element:nth-child()` syntax, the child count includes childre
 #### CSS
 
 ```css
-html {
+* {
   font-family: sans-serif;
 }
 
 span,
 div em {
   padding: 5px;
-  border: 1px solid green;
+  border: 1px solid tomato;
   display: inline-block;
   margin-bottom: 3px;
 }
@@ -152,7 +152,7 @@ div em {
 .first span:nth-child(2n + 1),
 .second span:nth-child(2n + 1),
 .third span:nth-of-type(2n + 1) {
-  background-color: lime;
+  background-color: tomato;
 }
 ```
 
@@ -194,6 +194,10 @@ Blah blah
 #### CSS
 
 ```css
+* {
+  font-family: sans-serif;
+}
+
 ul {
   display: flex;
   flex-wrap: wrap;
@@ -280,6 +284,10 @@ Blah blah
 #### CSS
 
 ```css
+* {
+  font-family: sans-serif;
+}
+
 ul {
   display: flex;
   flex-wrap: wrap;
