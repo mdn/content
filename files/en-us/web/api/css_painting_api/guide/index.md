@@ -9,7 +9,7 @@ The [CSS Paint API](/en-US/docs/Web/API/CSS_Painting_API) is designed to enable 
 
 To programmatically create an image used by a CSS stylesheet we need to work through a few steps:
 
-1. Define a paint worklet using the [`registerPaint()`](/en-US/docs/Web/API/PaintWorklet/registerPaint) function
+1. Define a paint worklet using the [`registerPaint()`](/en-US/docs/Web/API/PaintWorkletGlob/registerPaint) function
 2. Register the worklet
 3. Include the `{{cssxref("image/paint","paint()")}}` CSS function
 
@@ -21,7 +21,7 @@ To elaborate over these steps, we're going to start by creating a half-highlight
 
 ## CSS paint worklet
 
-In an external script file, we employ the [`registerPaint()`](/en-US/docs/Web/API/PaintWorklet/registerPaint) function to name our [CSS Paint worklet](/en-US/docs/Web/API/PaintWorklet). It takes two parameters. The first is the name we give the worklet — this is the name we will use in our CSS as the parameter of the `paint()` function when we want to apply this styling to an element. The second parameter is the class that does all the magic, defining the context options and what to paint to the two-dimensional canvas that will be our image.
+In an external script file, we employ the [`registerPaint()`](/en-US/docs/Web/API/PaintWorkletGlobalScope/registerPaint) function to name our [CSS Paint worklet](/en-US/docs/Web/API/tWorklet). It takes two parameters. The first is the name we give the worklet — this is the name we will use in our CSS as the parameter of the `paint()` function when we want to apply this styling to an element. The second parameter is the class that does all the magic, defining the context options and what to paint to the two-dimensional canvas that will be our image.
 
 ```js
 registerPaint(
