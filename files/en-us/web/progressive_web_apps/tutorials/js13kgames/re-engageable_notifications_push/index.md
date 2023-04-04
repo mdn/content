@@ -3,7 +3,9 @@ title: How to make PWAs re-engageable using Notifications and Push
 slug: Web/Progressive_web_apps/Tutorials/js13kGames/Re-engageable_Notifications_Push
 ---
 
-{{PreviousMenuNext("Web/Apps/Progressive/Installable_PWAs", "Web/Apps/Progressive/Loading", "Web/Apps/Progressive")}}
+{{PreviousMenuNext("Web/Progressive_web_apps/Tutorials/js13kGames/Installable_PWAs", "Web/Progressive_web_apps/Tutorials/js13kGames/Loading", "Web/Progressive_web_apps/Tutorials/js13kGames")}}
+
+{{PWASidebar}}
 
 Having the ability to cache the contents of an app to work offline is a great feature. Allowing the user to install the web app on their home screen is even better. But instead of relying only on user actions, we can do more, using push messages and notifications to automatically re-engage and deliver new content whenever it is available.
 
@@ -271,6 +273,4 @@ All it does is add a listener for the {{domxref("ServiceWorkerGlobalScope.push_e
 Feel free to explore the rest of the examples in the [Service Worker Cookbook](https://github.com/mdn/serviceworker-cookbook) if you want to know how they are handled.
 There's a big collection of working examples showing general use, but also web push, caching strategies, performance, working offline, and more.
 
-{{PreviousMenuNext("Web/Apps/Progressive/Installable_PWAs", "Web/Apps/Progressive/Loading", "Web/Apps/Progressive")}}
-
-{{QuickLinksWithSubpages("/en-US/docs/Web/Progressive_web_apps/")}}
+{{PreviousMenuNext("Web/Progressive_web_apps/Tutorials/js13kGames/Installable_PWAs", "Web/Progressive_web_apps/Tutorials/js13kGames/Loading", "Web/Progressive_web_apps/Tutorials/js13kGames")}}

@@ -3,7 +3,9 @@ title: Progressive web app structure
 slug: Web/Progressive_web_apps/Tutorials/js13kGames/App_structure
 ---
 
-{{PreviousMenuNext("Web/Progressive_web_apps/Introduction", "Web/Progressive_web_apps/Offline_Service_workers", "Web/Progressive_web_apps")}}
+{{PreviousMenuNext("Web/Progressive_web_apps/Tutorials/js13kGames/Introduction", "Web/Progressive_web_apps/Tutorials/js13kGames/Offline_Service_workers", "Web/Progressive_web_apps/Tutorials/js13kGames")}}
+
+{{PWASidebar}}
 
 Now that we know the theory behind PWAs, let's look at the recommended structure of an actual app. We will start with analyzing the [js13kPWA](https://mdn.github.io/pwa-examples/js13kpwa/) application, why it is built that way, and what benefits it brings.
 
@@ -310,6 +312,4 @@ Every entry has its own image in the data/img folder. This is our content, loade
 
 In the next article we will look in more detail at how the app shell and the content are cached for offline use with the help from the service worker.
 
-{{PreviousMenuNext("Web/Progressive_web_apps/Introduction", "Web/Progressive_web_apps/Offline_Service_workers", "Web/Progressive_web_apps")}}
-
-{{QuickLinksWithSubpages("/en-US/docs/Web/Progressive_web_apps/")}}
+{{PreviousMenuNext("Web/Progressive_web_apps/Tutorials/js13kGames/Introduction", "Web/Progressive_web_apps/Tutorials/js13kGames/Offline_Service_workers", "Web/Progressive_web_apps/Tutorials/js13kGames")}}
