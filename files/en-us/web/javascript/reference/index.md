@@ -105,6 +105,8 @@ If you are new to JavaScript, start with the [guide](/en-US/docs/Web/JavaScript/
 
 ### Control abstraction objects
 
+- {{JSxRef("Iterator")}}
+- {{JSxRef("AsyncIterator")}}
 - {{JSxRef("Promise")}}
 - {{JSxRef("GeneratorFunction")}}
 - {{JSxRef("AsyncGeneratorFunction")}}

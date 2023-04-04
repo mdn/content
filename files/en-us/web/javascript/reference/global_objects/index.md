@@ -129,6 +129,8 @@ These objects interact with the garbage collection mechanism.
 
 Control abstractions can help to structure code, especially async code (without using deeply nested callbacks, for example).
 
+- {{JSxRef("Iterator")}}
+- {{JSxRef("AsyncIterator")}}
 - {{JSxRef("Promise")}}
 - {{JSxRef("GeneratorFunction")}}
 - {{JSxRef("AsyncGeneratorFunction")}}
