@@ -737,9 +737,7 @@ In addition to these 16 colors, about 150 other colors have a keyword associated
     </tr>
     <tr>
       <td>
-        <a href="https://codepen.io/trezy/post/honoring-a-great-man"
-          ><code>rebeccapurple</code></a
-        >
+        <code>rebeccapurple</code>
       </td>
       <td><code>#663399</code></td>
       <td style="background: rebeccapurple"></td>
