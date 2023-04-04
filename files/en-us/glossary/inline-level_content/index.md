@@ -1,6 +1,6 @@
 ---
-title: inline-level
-slug: Glossary/inline-level
+title: Inline-level content
+slug: Glossary/Inline-level_content
 page-type: glossary-definition
 ---
 
@@ -10,7 +10,7 @@ In inline layout, a mixed stream of text and inline boxes are laid out by fragme
 
 ![inline layout](inline_layout.png)
 
-> **Note:** HTML (**HyperText Markup Language**) elements historically were categorized as either "block-level" elements or "inline-level" elements. Since this is a presentational characteristic it is nowadays specified by CSS.
+> **Note:** HTML (_HyperText Markup Language_) elements historically were categorized as either "block-level" elements or "inline-level" elements. Since this is a presentational characteristic it is nowadays specified by CSS.
 
 ## Examples
 
@@ -40,6 +40,6 @@ body {
 
 ## See also
 
-- [block-level](/en-US/docs/Glossary/block-level)
+- [Block-level content](/en-US/docs/Glossary/Block-level_content)
 - [Inline formatting context](/en-US/docs/Web/CSS/Inline_formatting_context)
 - {{cssxref("display")}}

@@ -1,6 +1,6 @@
 ---
-title: block-level
-slug: Glossary/block-level
+title: Block-level content
+slug: Glossary/Block-level_content
 page-type: glossary-definition
 ---
 
@@ -9,7 +9,7 @@ In CSS, content that participates in block layout is called block-level content.
 In a block layout, boxes are laid out one after the other, vertically, beginning at the top of a containing block. Each box's left outer edge touches the left edge of the containing block (for right-to-left formatting, right edges touch).\
 A block-level element always starts on a new line. And it occupies the entire horizontal space of its parent element (container), and vertical space equal to the height of its contents, thereby creating a "block".
 
-> **Note:** HTML (**HyperText Markup Language**) elements historically were categorized as either "block-level" elements or "inline-level" elements. Since this is a presentational characteristic it is nowadays specified by CSS.
+> **Note:** HTML (_HyperText Markup Language_) elements historically were categorized as either "block-level" elements or "inline-level" elements. Since this is a presentational characteristic it is nowadays specified by CSS.
 
 ## Examples
 
@@ -18,10 +18,10 @@ In this example two paragraph({{HTMLElement("p")}}) elements are put in a {{HTML
 ```html
 <div>
   <p>
-    This paragraph is a block-level element; its background has been colored to
-    display the paragraph's parent element.
+    This the first paragraph. The background color of these paragraphs have been
+    colored to distinguish them from their parent element.
   </p>
-  <p>This is a second paragraph.</p>
+  <p>This is the second paragraph.</p>
 </div>
 ```
 
@@ -37,6 +37,6 @@ p {
 
 ## See also
 
-- [inline-level](/en-US/docs/Glossary/inline-level)
+- [Inline-level content](/en-US/docs/Glossary/Inline-level_content)
 - [Block formatting context](/en-US/docs/Web/Guide/CSS/Block_formatting_context)
 - {{cssxref("display")}}
