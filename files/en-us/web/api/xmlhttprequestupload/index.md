@@ -144,7 +144,7 @@ addEventListener("DOMContentLoaded", () => {
       abortButton.disabled = false;
     });
 
-    // Each time a progress event is received we update the bar
+    // Each time a progress event is received, we update the bar
     xhr.upload.addEventListener("progress", (event) => {
       progressBar.value = event.loaded;
       log.textContent = `Uploading (${(
