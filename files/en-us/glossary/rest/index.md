@@ -1,4 +1,4 @@
----
+https://www.meeraqssam.blogspot.com---
 title: REST
 slug: Glossary/REST
 page-type: glossary-definition
@@ -16,3 +16,4 @@ HTTP APIs in general are sometimes colloquially referred to as RESTful APIs, RES
 - [restcookbook.com](https://restcookbook.com/)
 - [REST](https://en.wikipedia.org/wiki/Representational_state_transfer) on Wikipedia
 - [REST Architecture](https://www.service-architecture.com/articles/web-services/representational-state-transfer-rest.html)
+https://www.meeraqssam.blogspot.com/?m=1
