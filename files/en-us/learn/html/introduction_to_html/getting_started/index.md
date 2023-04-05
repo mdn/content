@@ -212,7 +212,7 @@ The following is an example of the _wrong_ way to do nesting:
 
 The **tags have to open and close in a way that they are inside or outside one another**. With the kind of overlap in the example above, the browser has to guess at your intent. This kind of guessing can result in unexpected results.
 
-### Element content categgories
+### Element content categories
 
 Most [HTML](/en-US/docs/Web/HTML) elements are a member of one or more **content categories** — these categories group elements that share common characteristics. This is a loose grouping (it doesn't actually create a relationship among elements of these categories), but they help define and describe the categories' shared behavior and their associated rules, especially when you come upon their intricate details. It's also possible for elements to not be a member of _any_ of these categories.
 
@@ -222,7 +222,7 @@ There are three types of content categories:
 - Form-related content categories, which describe rules common to form-related elements.
 - Specific content categories, which describe rare categories shared only by a few elements, sometimes only in a specific context.
 
-For more info refer [Content categories](/en-US/docs/Web/HTML/Content_categories) page.
+For more information refer to [Content categories](/en-US/docs/Web/HTML/Content_categories) page.
 
 ### Void elements
 
