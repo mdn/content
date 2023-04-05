@@ -71,7 +71,6 @@ This article provides information about the changes in Firefox 112 that affect d
 - Fixed an issue happening on response wrapped in`value` field ([Firefox bug 1819029](https://bugzil.la/1819029)).
 - Fixed an issue where `WebDriver:ElementClear` was emitting an extra `change` event for content editable elements ([Firefox bug 1744925](https://bugzil.la/1744925)).
 
-
 ## Changes for add-on developers
 
 - The properties `usedDelegatedCredentials`, `usedEch`, `usedOcsp`, and `usedPrivateDns` have been added to {{WebExtAPIRef("webRequest.SecurityInfo")}}. These properties provide information about the security of the connection used for a web request ([Firefox bug 1804460](https://bugzil.la/1804460)).
