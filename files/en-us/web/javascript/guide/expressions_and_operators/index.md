@@ -24,7 +24,7 @@ As the examples above also illustrate, all complex expressions are joined by _op
 - [BigInt operators](#bigint_operators)
 - [String operators](#string_operators)
 - [Conditional (ternary) operator](#conditional_ternary_operator)
-- [Comma operator](#Comma_operator)
+- [Comma operator](#comma_operator)
 - [Unary operators](#unary_operators)
 - [Relational operators](#relational_operators)
 
