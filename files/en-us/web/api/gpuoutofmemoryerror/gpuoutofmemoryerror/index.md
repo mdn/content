@@ -27,7 +27,7 @@ new GPUOutOfMemoryError(message)
 
 A developer would not manually use the constructor to create a `GPUOutOfMemoryError` object. The user agent uses this constructor to create an appropriate object when an out-of-memory error is surfaced by {{domxref("GPUDevice.popErrorScope")}} or the {{domxref("GPUDevice.uncapturederror_event", "uncapturederror")}} event.
 
-See the main [`GPUOutOfMemoryError`](/en-US/docs/Web/API/GPUValidationError#examples) page for a specific example involving a `GPUOutOfMemoryError` object instance.
+See the main [`GPUOutOfMemoryError`](/en-US/docs/Web/API/GPUOutOfMemoryError#examples) page for a specific example involving a `GPUOutOfMemoryError` object instance.
 
 ## Specifications
 

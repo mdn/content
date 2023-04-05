@@ -9,7 +9,7 @@ browser-compat: api.GPUDeviceLostInfo
 
 {{APIRef("WebGPU API")}}{{SeeCompatTable}}
 
-The **`GPUDeviceLostInfo`** interface of the {{domxref("WebGPU API", "WebGPU API", "", "nocode")}} represents the object returned when the {{domxref("GPUDevice.lost")}} {{domxref("Promise")}} resolves. This provides information as to why a device has been lost.
+The **`GPUDeviceLostInfo`** interface of the {{domxref("WebGPU API", "WebGPU API", "", "nocode")}} represents the object returned when the {{domxref("GPUDevice.lost")}} {{jsxref("Promise")}} resolves. This provides information as to why a device has been lost.
 
 See the {{domxref("GPUDevice.lost")}} page for more information about "lost" state.
 
