@@ -20,7 +20,7 @@ the gravity force, in contrast to {{DOMxRef("DeviceMotionEvent.accelerationInclu
 ## Value
 
 The `acceleration` property is an object providing information about
-acceleration on three axis. There are a couple of things that we need to make sure we understand before we can start using these events: which end is up, and what are the axes we're going to use?
+acceleration on three axes. There are a couple of things that we need to make sure we understand before we can start using these events: which end is up, and what are the axes we're going to use?
 The easiest way to answer the first question is to take your device and put it on flat, level surface in its "resting" position, the position it will be most stable in. For a mobile phone, that's probably on the table, with the screen facing up and the the bottom of the phone closest to you. For a laptop, that's probably on a deck with its screen open facing you, and the keyboard in line with the surface.
 
 - `x`
