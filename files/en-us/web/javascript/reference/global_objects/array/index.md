@@ -28,7 +28,7 @@ Array elements are object properties in the same way that `toString` is a proper
 console.log(arr.0); // a syntax error
 ```
 
-JavaScript syntax requires properties beginning with a digit to be accessed using [bracket notation](/en-US/docs/Web/JavaScript/Guide/Working_with_Objects#objects_and_properties) instead of [dot notation](/en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors). It's also possible to quote the array indices (e.g., `years['2']` instead of `years[2]`), although usually not necessary.
+JavaScript syntax requires properties beginning with a digit to be accessed using [bracket notation](/en-US/docs/Web/JavaScript/Guide/Working_with_objects#objects_and_properties) instead of [dot notation](/en-US/docs/Web/JavaScript/Reference/Operators/Property_accessors). It's also possible to quote the array indices (e.g., `years['2']` instead of `years[2]`), although usually not necessary.
 
 The `2` in `years[2]` is coerced into a string by the JavaScript engine through an implicit `toString` conversion. As a result, `'2'` and `'02'` would refer to two different slots on the `years` object, and the following example could be `true`:
 
@@ -292,7 +292,7 @@ These properties are own properties of each `Array` instance.
 - {{jsxref("Array.prototype.copyWithin()")}}
   - : Copies a sequence of array elements within an array.
 - {{jsxref("Array.prototype.entries()")}}
-  - : Returns a new [_array iterator_](/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators) object that contains the key/value pairs for each index in an array.
+  - : Returns a new [_array iterator_](/en-US/docs/Web/JavaScript/Guide/Iterators_and_generators) object that contains the key/value pairs for each index in an array.
 - {{jsxref("Array.prototype.every()")}}
   - : Returns `true` if every element in the calling array satisfies the testing function.
 - {{jsxref("Array.prototype.fill()")}}
@@ -324,7 +324,7 @@ These properties are own properties of each `Array` instance.
 - {{jsxref("Array.prototype.join()")}}
   - : Joins all elements of an array into a string.
 - {{jsxref("Array.prototype.keys()")}}
-  - : Returns a new [_array iterator_](/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators) that contains the keys for each index in the calling array.
+  - : Returns a new [_array iterator_](/en-US/docs/Web/JavaScript/Guide/Iterators_and_generators) that contains the keys for each index in the calling array.
 - {{jsxref("Array.prototype.lastIndexOf()")}}
   - : Returns the last (greatest) index at which a given element can be found in the calling array, or `-1` if none is found.
 - {{jsxref("Array.prototype.map()")}}
@@ -356,7 +356,7 @@ These properties are own properties of each `Array` instance.
 - {{jsxref("Array.prototype.unshift()")}}
   - : Adds one or more elements to the front of an array, and returns the new `length` of the array.
 - {{jsxref("Array.prototype.values()")}}
-  - : Returns a new [_array iterator_](/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators) object that contains the values for each index in the array.
+  - : Returns a new [_array iterator_](/en-US/docs/Web/JavaScript/Guide/Iterators_and_generators) object that contains the values for each index in the array.
 - [`Array.prototype[@@iterator]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/@@iterator)
   - : An alias for the [`values()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/values) method by default.
 
@@ -821,7 +821,7 @@ For more information about the result of a match, see the {{jsxref("RegExp.proto
 
 - From the JavaScript Guide:
 
-  - [Accessing properties](/en-US/docs/Web/JavaScript/Guide/Working_with_Objects#accessing_properties)
+  - [Accessing properties](/en-US/docs/Web/JavaScript/Guide/Working_with_objects#accessing_properties)
   - [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections)
 
 - [Typed Arrays](/en-US/docs/Web/JavaScript/Typed_arrays)

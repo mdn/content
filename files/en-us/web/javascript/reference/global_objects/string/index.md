@@ -15,7 +15,7 @@ sequence of characters.
 Strings are useful for holding data that can be represented in text form. Some of the
 most-used operations on strings are to check their {{jsxref("String/length",
   "length")}}, to build and concatenate them using the
-[+ and += string operators](/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#string_operators),
+[+ and += string operators](/en-US/docs/Web/JavaScript/Guide/Expressions_and_operators#string_operators),
 checking for the existence or location of substrings with the
 {{jsxref("String.prototype.indexOf()", "indexOf()")}} method, or extracting substrings
 with the {{jsxref("String.prototype.substring()", "substring()")}} method.

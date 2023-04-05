@@ -264,7 +264,7 @@ Or for caching values (when falsy values are invalid):
 const name = cachedName || (cachedName = getName());
 ```
 
-For a comprehensive list of operators, see the [guide page](/en-US/docs/Web/JavaScript/Guide/Expressions_and_operators) or [reference section](/en-US/docs/Web/JavaScript/Reference/Operators). You may be especially interested in the [operator precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence).
+For a comprehensive list of operators, see the [guide page](/en-US/docs/Web/JavaScript/Guide/Expressions_and_operators) or [reference section](/en-US/docs/Web/JavaScript/Reference/Operators). You may be especially interested in the [operator precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_precedence).
 
 ## Grammar
 
@@ -413,7 +413,7 @@ const obj = {
 };
 ```
 
-Object properties can be [accessed](/en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors) using dot (`.`) or brackets (`[]`). When using the dot notation, the key must be a valid [identifier](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#identifiers). Brackets, on the other hand, allow indexing the object with a dynamic key value.
+Object properties can be [accessed](/en-US/docs/Web/JavaScript/Reference/Operators/Property_accessors) using dot (`.`) or brackets (`[]`). When using the dot notation, the key must be a valid [identifier](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#identifiers). Brackets, on the other hand, allow indexing the object with a dynamic key value.
 
 ```js
 // Dot notation
@@ -736,7 +736,7 @@ class Admin extends withAuthentication(Person) {
 
 Static properties are created by prepending `static`. Private properties are created by prepending a hash `#` (not `private`). The hash is an integral part of the property name. (Think about `#` as `_` in Python.) Unlike most other languages, there's absolutely no way to read a private property outside the class body — not even in derived classes.
 
-For a detailed guide on various class features, you can read the [guide page](/en-US/docs/Web/JavaScript/Guide/Using_Classes).
+For a detailed guide on various class features, you can read the [guide page](/en-US/docs/Web/JavaScript/Guide/Using_classes).
 
 ## Asynchronous programming
 
@@ -824,5 +824,5 @@ There are some essential parts of the language that we have omitted due to space
 
 - [Inheritance and the prototype chain](/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)
 - [Closures](/en-US/docs/Web/JavaScript/Closures)
-- [Regular expressions](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions)
-- [Iteration](/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators)
+- [Regular expressions](/en-US/docs/Web/JavaScript/Guide/Regular_expressions)
+- [Iteration](/en-US/docs/Web/JavaScript/Guide/Iterators_and_generators)

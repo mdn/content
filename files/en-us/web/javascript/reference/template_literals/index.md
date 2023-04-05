@@ -163,7 +163,7 @@ console.log(output);
 // That Mike is a youngster.
 ```
 
-The tag does not have to be a plain identifier. You can use any expression with [precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence#table) greater than 16, which includes [property access](/en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors), function call, [new expression](/en-US/docs/Web/JavaScript/Reference/Operators/new), or even another tagged template literal.
+The tag does not have to be a plain identifier. You can use any expression with [precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_precedence#table) greater than 16, which includes [property access](/en-US/docs/Web/JavaScript/Reference/Operators/Property_accessors), function call, [new expression](/en-US/docs/Web/JavaScript/Reference/Operators/new), or even another tagged template literal.
 
 ```js
 console.log`Hello`; // [ 'Hello' ]

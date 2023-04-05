@@ -46,7 +46,7 @@ In JavaScript source text, \<ZWNJ> and \<ZWJ> are treated as [identifier](#ident
 
 In addition to [white space](#white_space) characters, line terminator characters are used to improve the readability of the source text. However, in some cases, line terminators can influence the execution of JavaScript code as there are a few places where they are forbidden. Line terminators also affect the process of [automatic semicolon insertion](#automatic_semicolon_insertion).
 
-Outside the context of lexical grammar, white space and line terminators are often conflated. For example, {{jsxref("String.prototype.trim()")}} removes all white space and line terminators from the beginning and end of a string. The `\s` [character class escape](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Character_Classes) in regular expressions matches all white space and line terminators.
+Outside the context of lexical grammar, white space and line terminators are often conflated. For example, {{jsxref("String.prototype.trim()")}} removes all white space and line terminators from the beginning and end of a string. The `\s` [character class escape](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Character_classes) in regular expressions matches all white space and line terminators.
 
 Only the following Unicode code points are treated as line terminators in ECMAScript, other line breaking characters are treated as white space (for example, Next Line, NEL, U+0085 is considered as white space).
 
@@ -624,7 +624,7 @@ const a = 1(1).toString();
 const b = 1[1, 2, 3].forEach(console.log);
 ```
 
-This happens to be valid syntax. `1[1, 2, 3]` is a [property accessor](/en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors) with a [comma](/en-US/docs/Web/JavaScript/Reference/Operators/Comma_Operator)-joined expression. Therefore, you would get errors like "1 is not a function" and "Cannot read properties of undefined (reading 'forEach')" when running the code.
+This happens to be valid syntax. `1[1, 2, 3]` is a [property accessor](/en-US/docs/Web/JavaScript/Reference/Operators/Property_accessors) with a [comma](/en-US/docs/Web/JavaScript/Reference/Operators/Comma_operator)-joined expression. Therefore, you would get errors like "1 is not a function" and "Cannot read properties of undefined (reading 'forEach')" when running the code.
 
 Within classes, class fields and generator methods can be a pitfall as well.
 
