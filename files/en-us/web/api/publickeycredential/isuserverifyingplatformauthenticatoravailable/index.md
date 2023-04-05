@@ -7,8 +7,8 @@ browser-compat: api.PublicKeyCredential.isUserVerifyingPlatformAuthenticatorAvai
 
 {{APIRef("Web Authentication API")}}{{securecontext_header}}
 
-**`isUserVerifyingPlatformAuthenticatorAvailable()`** is a
-static method of the {{domxref("PublicKeyCredential")}} interface that returns a
+The **`isUserVerifyingPlatformAuthenticatorAvailable()`**
+static method of the {{domxref("PublicKeyCredential")}} interface returns a
 {{jsxref("Promise")}} which resolves to `true` if a user-verifying platform
 authenticator is available.
 
@@ -37,9 +37,6 @@ None.
 
 A {{jsxref("Promise")}} which resolves to a boolean value indicating whether or
 a not a user-verifying platform authenticator is available.
-
-> **Note:** This is a static method which is directly called on the
-> {{domxref("PublicKeyCredential")}} interface and not on an instance.
 
 > **Note:** In earlier versions of the specification, the boolean also
 > conveyed the consent of the user to disclose such an authenticator existed.

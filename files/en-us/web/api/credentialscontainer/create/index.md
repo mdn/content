@@ -12,6 +12,8 @@ The **`create()`** method of the
 resolves with a new {{domxref("Credential")}} instance based on the provided options, or
 `null` if no `Credential` object can be created.
 
+> **Note:** Usage of this feature may be blocked by a {{HTTPHeader("Permissions-Policy/publickey-credentials-create","publickey-credentials-create")}} [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy) set on your server.
+
 > **Note:** This method is restricted to top-level contexts. Calls to it within an
 > `<iframe>` element will resolve without effect.
 
@@ -95,9 +97,16 @@ create(options)
 
 ### Return value
 
-A {{jsxref("Promise")}} that resolves with a {{domxref("Credential")}} instance, such
-as {{domxref("PasswordCredential")}}, {{domxref("FederatedCredential")}},
-or {{domxref("PublicKeyCredential")}}.
+A {{jsxref("Promise")}} that resolves with a {{domxref("Credential")}} instance that matches the provided parameters. Note that if the `create()` call includes
+
+- the `federated` option, the promise fulfills with a {{domxref("FederatedCredential")}} instance.
+- the `password` option, the promise fulfills with a {{domxref("PasswordCredential")}} instance.
+- the `publicKey` option, the promise fulfills with a {{domxref("PublicKeyCredential")}} instance (see the [Web Authentication API](/en-US/docs/Web/API/Web_Authentication_API) for more details).
+
+### Exceptions
+
+- `SecurityError` {{domxref("DOMException")}}
+  - : Use of this feature was blocked by a {{HTTPHeader("Permissions-Policy/publickey-credentials-create","publickey-credentials-create")}} [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy).
 
 ## Specifications
 

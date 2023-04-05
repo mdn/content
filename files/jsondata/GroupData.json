@@ -1654,13 +1654,15 @@
         "/docs/Web/API/Web_Authentication_API/Attestation_and_Assertion"
       ],
       "interfaces": [
-        "CredentialsContainer",
         "PublicKeyCredential",
         "AuthenticatorResponse",
         "AuthenticatorAttestationResponse",
         "AuthenticatorAssertionResponse"
       ],
-      "methods": [],
+      "methods": [
+        "CredentialsContainer.create()",
+        "CredentialsContainer.get()"
+      ],
       "properties": [],
       "events": [],
       "dictionaries": [
