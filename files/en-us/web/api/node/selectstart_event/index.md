@@ -35,7 +35,7 @@ document.addEventListener("selectstart", () => {
 
 // onselectstart version
 document.onselectstart = () => {
-  console.log("Selection changed.");
+  console.log("Selection started.");
 };
 ```
 

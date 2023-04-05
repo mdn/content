@@ -5,7 +5,7 @@ page-type: web-api-instance-method
 browser-compat: api.Response.clone
 ---
 
-{{APIRef("Fetch")}}
+{{APIRef("Fetch API")}}
 
 The **`clone()`** method of the {{domxref("Response")}} interface creates a clone of a response object, identical in every way, but stored in a different variable.
 

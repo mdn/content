@@ -144,7 +144,7 @@ as well as custom color spaces, defined via the [`@color-profile`](/en-US/docs/W
 
 ## Interpolation
 
-In animations and [gradients](/en-US/docs/Web/CSS/CSS_Images/Using_CSS_gradients), `<color>` values are {{Glossary("interpolation", "interpolated")}} on each of their red, green, and blue components. By default, animation occurs in an RGBA color space, with interpolation's speed being determined by the [timing function](/en-US/docs/Web/CSS/easing-function) in transitions and animations. To prevent unexpected colors from appearing, consider using [`color-mix()`](/en-us/Web/CSS/color_value/color-mix) functional notation.
+In animations and [gradients](/en-US/docs/Web/CSS/CSS_Images/Using_CSS_gradients), `<color>` values are {{Glossary("interpolation", "interpolated")}} on each of their red, green, and blue components. By default, animation occurs in an RGBA color space, with interpolation's speed being determined by the [timing function](/en-US/docs/Web/CSS/easing-function) in transitions and animations. To prevent unexpected colors from appearing, consider using [`color-mix()`](/en-US/docs/Web/CSS/color_value/color-mix) functional notation.
 
 Interpolating the {{cssxref("&lt;hue&gt;")}} of two colors in functions that accept a hue angle is also possible and is described in more detail in the [`color-mix()`](/en-US/docs/Web/CSS/color_value/color-mix) functional notation documentation.
 

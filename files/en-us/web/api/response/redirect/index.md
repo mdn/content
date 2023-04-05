@@ -5,7 +5,7 @@ page-type: web-api-static-method
 browser-compat: api.Response.redirect
 ---
 
-{{APIRef("Fetch")}}
+{{APIRef("Fetch API")}}
 
 The **`redirect()`** method of the {{domxref("Response")}} interface returns a `Response` resulting in a redirect to the specified URL.
 

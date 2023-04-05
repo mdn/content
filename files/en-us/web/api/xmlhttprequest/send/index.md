@@ -81,7 +81,7 @@ xhr.send(null);
 const xhr = new XMLHttpRequest();
 xhr.open("POST", '/server', true);
 
-//Send the proper header information along with the request
+// Send the proper header information along with the request
 xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
 
 xhr.onreadystatechange = () => { // Call a function when the state changes.

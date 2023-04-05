@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.String.match
 
 {{JSRef}}
 
-The **`match()`** method retrieves the result of matching a string against a [regular expression](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions).
+The **`match()`** method retrieves the result of matching a string against a [regular expression](/en-US/docs/Web/JavaScript/Guide/Regular_expressions).
 
 {{EmbedInteractiveExample("pages/js/string-match.html", "shorter")}}
 
@@ -83,7 +83,7 @@ console.log(matches);
 // ['A', 'B', 'C', 'D', 'E', 'a', 'b', 'c', 'd', 'e']
 ```
 
-> **Note:** See also {{jsxref("String.prototype.matchAll()")}} and [Advanced searching with flags](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions#advanced_searching_with_flags).
+> **Note:** See also {{jsxref("String.prototype.matchAll()")}} and [Advanced searching with flags](/en-US/docs/Web/JavaScript/Guide/Regular_expressions#advanced_searching_with_flags).
 
 ### Using named capturing groups
 

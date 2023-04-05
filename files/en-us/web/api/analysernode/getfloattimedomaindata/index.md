@@ -7,7 +7,7 @@ browser-compat: api.AnalyserNode.getFloatTimeDomainData
 
 {{ APIRef("Web Audio API") }}
 
-The **`getFloatTimeDomainData()`** method of the {{ domxref("AnalyserNode") }} Interface copies the current waveform, or time-domain, data into a {{jsxref("Float32Array")}} array passed into it.
+The **`getFloatTimeDomainData()`** method of the {{ domxref("AnalyserNode") }} Interface copies the current waveform, or time-domain, data into a {{jsxref("Float32Array")}} array passed into it. Each array value is a _sample_, the magnitude of the signal at a particular time.
 
 ## Syntax
 

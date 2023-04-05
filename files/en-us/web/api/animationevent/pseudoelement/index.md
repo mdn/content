@@ -5,7 +5,7 @@ page-type: web-api-instance-property
 browser-compat: api.AnimationEvent.pseudoElement
 ---
 
-{{APIRef("Web Animations API")}}
+{{APIRef("Web Animations")}}
 
 ## Summary
 

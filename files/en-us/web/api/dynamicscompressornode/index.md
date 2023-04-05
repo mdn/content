@@ -64,7 +64,7 @@ _No specific methods; inherits methods from its parent, {{domxref("AudioNode")}}
 
 ## Example
 
-See [`BaseAudioContext.createDynamicsCompressor()`](/en-US/docs/Web/API/BaseAudioContext/createDynamicsCompressor#example) example code.
+See [`BaseAudioContext.createDynamicsCompressor()`](/en-US/docs/Web/API/BaseAudioContext/createDynamicsCompressor#examples) example code.
 
 ## Specifications
 

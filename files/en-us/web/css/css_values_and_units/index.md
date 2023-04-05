@@ -72,7 +72,7 @@ Such values are used without quotes:
 
 ### CSS-wide values
 
-In addition to the pre-defined keywords that are part of the specification for a property, all CSS properties accept the CSS-wide property values {{cssxref("initial")}}, {{cssxref("inherit")}}, {{cssxref("unset")}}, and {{cssxref("revert")}}, which explicitly specify defaulting behaviors.
+In addition to the pre-defined keywords that are part of the specification for a property, all CSS properties accept the CSS-wide property values {{cssxref("initial")}}, {{cssxref("inherit")}}, {{cssxref("unset")}}, {{cssxref("revert")}}, and {{cssxref("revert-layer")}}, which explicitly specify defaulting behaviors.
 
 - {{cssxref("initial")}}
   - : Represents the value specified as the property's initial value.
@@ -82,6 +82,8 @@ In addition to the pre-defined keywords that are part of the specification for a
   - : Acts as either `inherit` or `initial`, depending on whether the property is inherited or not.
 - {{cssxref("revert")}}
   - : Resets the property to its inherited value if it inherits from its parent or to the default value established by the user agent's stylesheet (or by user styles, if any exist).
+- {{cssxref("revert-layer")}}
+  - : Rolls back the value of a property in a [cascade layer](/en-US/docs/Web/CSS/@layer) to the value of the property in a CSS rule matching the element in a previous cascade layer. The value of the property with this keyword is recalculated as if no rules were specified on the target element in the current cascade layer.
 
 ### URLs
 

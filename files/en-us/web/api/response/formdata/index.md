@@ -5,7 +5,7 @@ page-type: web-api-instance-method
 browser-compat: api.Response.formData
 ---
 
-{{APIRef("Fetch")}}
+{{APIRef("Fetch API")}}
 
 The **`formData()`** method of the {{domxref("Response")}} interface
 takes a {{domxref("Response")}} stream and reads it to completion. It returns a promise
