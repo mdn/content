@@ -53,7 +53,7 @@ Intl.Collator(locales, options)
         - `phonetic` (Lingala)
         - `pinyin` (Chinese)
         - `reformed` (formerly Swedish; do not specify explicitly as this was the old name for the default for Swedish)
-        - `searchjl` (Korean; not for sorting; for search matching such that syllable-initial consonants are matched and vowels and possible syllable-final consonants are ignored)
+        - `searchjl` (Korean; this is not for sorting, but for search matching such that syllable-initial consonants are matched and vowels and possible syllable-final consonants are ignored)
         - `stroke` (Chinese)
         - `trad`
         - `unihan` (Chinese, Japanese, and Korean; not available in Chrome or Edge)
