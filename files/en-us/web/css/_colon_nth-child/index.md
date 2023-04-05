@@ -42,6 +42,22 @@ Note that, in the `element:nth-child()` syntax, the child count includes childre
 
     It can be read as the `An+B`-th element of a list. The `A` and `B` must both have {{cssxref("&lt;integer&gt;")}} values.
 
+### The `of <selector>` syntax
+
+By passing a selector argument, we can select the **nth** element that matches that selector. For example, the following selector matches the first three _important_ list items, assigned with `class="important"`.
+
+```css
+:nth-child(-n+3 of li.important) ;
+```
+
+> **Note:** This is different from moving the selector outside of the function, like:
+
+```css
+li.important: nth-child(-n + 3);
+```
+
+This selector instead just selects only the _important_ list items if they happen to be in the first three children.
+
 ## Examples
 
 ### Example selectors
