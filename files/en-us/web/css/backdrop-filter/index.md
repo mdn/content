@@ -64,37 +64,37 @@ backdrop-filter: unset;
 
 ```css
 .box {
-  background-color: rgba(255, 255, 255, 0.3);
-  border-radius: 5px;
-  font-family: sans-serif;
-  text-align: center;
-  line-height: 1;
-  -webkit-backdrop-filter: blur(10px);
+  background-color: rgb(255 255 255 / 0.3);
   backdrop-filter: blur(10px);
-  max-width: 50%;
-  max-height: 50%;
-  padding: 20px 40px;
 }
 
+body {
+  background-image: url("anemones.jpg");
+}
+```
+
+```css hidden
 html,
 body {
   height: 100%;
   width: 100%;
 }
 
-body {
-  background-image: url("anemones.jpg"), linear-gradient(rgb(219, 166, 166), rgb(0, 0, 172));
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
 .container {
+  background-size: cover;
   align-items: center;
   display: flex;
   justify-content: center;
   height: 100%;
   width: 100%;
+}
+.box {
+  border-radius: 5px;
+  font-family: sans-serif;
+  text-align: center;
+  max-width: 50%;
+  max-height: 50%;
+  padding: 20px 40px;
 }
 ```
 
@@ -122,4 +122,7 @@ body {
 
 ## See also
 
-- {{cssxref("filter")}}
+- [CSS filter effects](/en-us/docs/Web/CSS/filter_effects/) module
+- The CSS {{CSSxRef("&lt;filter-function&gt;")}}s, including {{CSSxRef("filter-function/blur", "blur()")}}, {{CSSxRef("filter-function/brightness", "brightness()")}}, {{CSSxRef("filter-function/contrast", "contrast()")}}, {{CSSxRef("filter-function/drop-shadow", "drop-shadow()")}}, {{CSSxRef("filter-function/grayscale", "grayscale()")}}, {{CSSxRef("filter-function/hue-rotate", "hue-rotate()")}}, {{CSSxRef("filter-function/invert", "invert()")}}, {{CSSxRef("filter-function/opacity", "opacity()")}}, {{CSSxRef("filter-function/saturate", "saturate()")}}, and {{CSSxRef("filter-function/sepia", "sepia()")}}
+- The {{cssxref("filter")}} property
+- CSS [compositing and blending](/en-US/docs/Web/CSS/Compositing_and_Blending) module, including the CSS {{cssxref("background-blend-mode")}} and {{cssxref("mix-blend-mode")}} properties.
