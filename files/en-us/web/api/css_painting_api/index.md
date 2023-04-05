@@ -2,10 +2,12 @@
 title: CSS Painting API
 slug: Web/API/CSS_Painting_API
 page-type: web-api-overview
+status:
+  - experimental
 browser-compat: api.PaintWorkletGlobalScope
 ---
 
-{{DefaultAPISidebar("CSS Painting API")}}
+{{DefaultAPISidebar("CSS Painting API")}}{{SeeCompatTable}}
 
 The CSS Painting API — part of the [CSS Houdini](/en-US/docs/Web/Guide/Houdini) umbrella of APIs — allows developers to write JavaScript functions that can draw directly into an element's background, border, or content.
 
