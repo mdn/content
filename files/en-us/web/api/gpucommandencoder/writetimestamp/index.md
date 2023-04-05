@@ -29,7 +29,7 @@ writeTimestamp(querySet, queryIndex)
 
 ### Return value
 
-None ({{domxref("Undefined")}}).
+None ({{jsxref("Undefined")}}).
 
 ### Validation
 
