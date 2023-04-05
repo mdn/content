@@ -15,7 +15,7 @@ property expects a file.
 
 ## Value
 
-The {{DOMxRef('PaintWorklet')}} object.
+The associated {{DOMxRef('Worklet')}} object.
 
 ## Examples
 

@@ -26,29 +26,29 @@ The following events can be triggered on an upload object and used to monitor th
   </thead>
   <tbody>
     <tr>
-      <td>{{domxref("XMLHttpRequest/loadstart_event", "loadstart")}}</td>
+      <td>{{domxref("XMLHttpRequestUpload/loadstart_event", "loadstart")}}</td>
       <td>The upload has begun.</td>
     </tr>
     <tr>
-      <td>{{domxref("XMLHttpRequest/progress_event", "progress")}}</td>
+      <td>{{domxref("XMLHttpRequestUpload/progress_event", "progress")}}</td>
       <td>
         Periodically delivered to indicate the amount of progress made so far.
       </td>
     </tr>
     <tr>
-      <td>{{domxref("XMLHttpRequest/abort_event", "abort")}}</td>
+      <td>{{domxref("XMLHttpRequestUpload/abort_event", "abort")}}</td>
       <td>The upload operation was aborted.</td>
     </tr>
     <tr>
-      <td>{{domxref("XMLHttpRequest/error_event", "error")}}</td>
+      <td>{{domxref("XMLHttpRequestUpload/error_event", "error")}}</td>
       <td>The upload failed due to an error.</td>
     </tr>
     <tr>
-      <td>{{domxref("XMLHttpRequest/load_event", "load")}}</td>
+      <td>{{domxref("XMLHttpRequestUpload/load_event", "load")}}</td>
       <td>The upload completed successfully.</td>
     </tr>
     <tr>
-      <td>{{domxref("XMLHttpRequest/timeout_event", "timeout")}}</td>
+      <td>{{domxref("XMLHttpRequestUpload/timeout_event", "timeout")}}</td>
       <td>
         The upload timed out because a reply did not arrive within the time
         interval specified by the
@@ -56,7 +56,7 @@ The following events can be triggered on an upload object and used to monitor th
       </td>
     </tr>
     <tr>
-      <td>{{domxref("XMLHttpRequest/loadend_event", "loadend")}}</td>
+      <td>{{domxref("XMLHttpRequestUpload/loadend_event", "loadend")}}</td>
       <td>
         The upload finished. This event does not differentiate between success
         or failure, and is sent at the end of the upload regardless of the
@@ -79,4 +79,4 @@ The following events can be triggered on an upload object and used to monitor th
 ## See also
 
 - [Using XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)
-- [File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API)
+- {{domxref("XMLHttpRequestUpload")}}

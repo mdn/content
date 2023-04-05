@@ -77,7 +77,7 @@ Note that `encodeURI()` by itself _cannot_ form proper HTTP {{HTTPMethod("GET")}
 
 ### Encoding a lone high surrogate throws
 
-An {{jsxref("URIError")}} will be thrown if one attempts to encode a surrogate which is not part of a high-low pair. For example:
+A {{jsxref("URIError")}} will be thrown if one attempts to encode a surrogate which is not part of a high-low pair. For example:
 
 ```js
 // High-low pair OK
@@ -89,6 +89,8 @@ encodeURI("\uD800");
 // Lone low surrogate throws "URIError: malformed URI sequence"
 encodeURI("\uDFFF");
 ```
+
+You can use {{jsxref("String.prototype.toWellFormed()")}}, which replaces lone surrogates with the Unicode replacement character (U+FFFD), to avoid this error. You can also use {{jsxref("String.prototype.isWellFormed()")}} to check if a string contains lone surrogates before passing it to `encodeURI()`.
 
 ### Encoding for RFC3986
 

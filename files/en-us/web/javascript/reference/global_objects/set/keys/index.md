@@ -18,8 +18,7 @@ keys()
 
 ### Return value
 
-A new iterator object containing the values for each element in the given
-`Set`, in insertion order.
+A new [iterable iterator object](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator).
 
 ## Examples
 
