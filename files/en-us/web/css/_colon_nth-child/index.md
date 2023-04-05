@@ -351,87 +351,31 @@ blah
 <div class="wrapper">
 ```
 
-```html
+```html-nolint
 <table class="broken">
   <thead>
-    <tr>
-      <th>Name</th>
-      <th>Age</th>
-      <th>Country</th>
-    </tr>
+    <tr><th>Name</th><th>Age</th><th>Country</th></tr>
   </thead>
   <tbody>
-    <tr>
-      <td>Deangelo</td>
-      <td>23</td>
-      <td>Madagascar</td>
-    </tr>
-    <tr>
-      <td>Hannah</td>
-      <td>48</td>
-      <td>Japan</td>
-    </tr>
-    <tr hidden>
-      <td>Kimberly</td>
-      <td>36</td>
-      <td>Mexico</td>
-    </tr>
-    <tr>
-      <td>Jayla</td>
-      <td>27</td>
-      <td>Morocco</td>
-    </tr>
-    <tr>
-      <td>Ben</td>
-      <td>55</td>
-      <td>Finland</td>
-    </tr>
-    <tr>
-      <td>Ricardo</td>
-      <td>66</td>
-      <td>Brazil</td>
-    </tr>
+    <tr><td>Deangelo</td><td>23</td><td>Madagascar</td></tr>
+    <tr><td>Hannah</td><td>48</td><td>Japan</td></tr>
+    <tr hidden><td>Kimberly</td><td>36</td><td>Mexico</td></tr>
+    <tr><td>Jayla</td><td>27</td><td>Morocco</td></tr>
+    <tr><td>Ben</td><td>55</td><td>Finland</td></tr>
+    <tr><td>Ricardo</td><td>66</td><td>Brazil</td></tr>
   </tbody>
 </table>
 <table class="fixed">
   <thead>
-    <tr>
-      <th>Name</th>
-      <th>Age</th>
-      <th>Country</th>
-    </tr>
+    <tr><th>Name</th><th>Age</th><th>Country</th></tr>
   </thead>
   <tbody>
-    <tr>
-      <td>Deangelo</td>
-      <td>23</td>
-      <td>Madagascar</td>
-    </tr>
-    <tr>
-      <td>Hannah</td>
-      <td>48</td>
-      <td>Japan</td>
-    </tr>
-    <tr hidden>
-      <td>Kimberly</td>
-      <td>36</td>
-      <td>Mexico</td>
-    </tr>
-    <tr>
-      <td>Jayla</td>
-      <td>27</td>
-      <td>Morocco</td>
-    </tr>
-    <tr>
-      <td>Ben</td>
-      <td>55</td>
-      <td>Finland</td>
-    </tr>
-    <tr>
-      <td>Ricardo</td>
-      <td>66</td>
-      <td>Brazil</td>
-    </tr>
+    <tr><td>Deangelo</td><td>23</td><td>Madagascar</td></tr>
+    <tr><td>Hannah</td><td>48</td><td>Japan</td></tr>
+    <tr hidden><td>Kimberly</td><td>36</td><td>Mexico</td></tr>
+    <tr><td>Jayla</td><td>27</td><td>Morocco</td></tr>
+    <tr><td>Ben</td><td>55</td><td>Finland</td></tr>
+    <tr><td>Ricardo</td><td>66</td><td>Brazil</td></tr>
   </tbody>
 </table>
 ```
