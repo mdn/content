@@ -3,7 +3,6 @@ title: PaintWorkletGLobalScope
 slug: Web/API/PaintWorkletGlobalScope
 page-type: web-api-interface
 status:
-  - Experimental
   - experimental
 browser-compat: api.PaintWorkletGlobalScope
 ---
