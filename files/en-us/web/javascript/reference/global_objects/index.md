@@ -12,7 +12,7 @@ The term "global objects" (or standard built-in objects) here is not to be confu
 
 The **global object** itself can be accessed using the {{JSxRef("Operators/this", "this")}} operator in the global scope. In fact, the global scope **consists of** the properties of the global object, including inherited properties, if any.
 
-Other objects in the global scope are either [created by the user script](/en-US/docs/Web/JavaScript/Guide/Working_with_Objects#creating_new_objects) or provided by the host application. The host objects available in browser contexts are documented in the [API reference](/en-US/docs/Web/API).
+Other objects in the global scope are either [created by the user script](/en-US/docs/Web/JavaScript/Guide/Working_with_objects#creating_new_objects) or provided by the host application. The host objects available in browser contexts are documented in the [API reference](/en-US/docs/Web/API).
 
 For more information about the distinction between the [DOM](/en-US/docs/Web/API/Document_Object_Model) and core [JavaScript](/en-US/docs/Web/JavaScript), see [JavaScript technologies overview](/en-US/docs/Web/JavaScript/JavaScript_technologies_overview).
 

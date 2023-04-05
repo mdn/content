@@ -45,5 +45,5 @@ b &= 2n; // 0n
 
 ## See also
 
-- [Assignment operators in the JS guide](/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#assignment_operators)
+- [Assignment operators in the JS guide](/en-US/docs/Web/JavaScript/Guide/Expressions_and_operators#assignment_operators)
 - [Bitwise AND operator](/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_AND)

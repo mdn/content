@@ -148,7 +148,7 @@ We've now got the two different template structures — "edit" and "view" — de
 
 ## Conditional rendering
 
-In JSX, we can use a condition to change what is rendered by the browser. To write a condition in JSX, we can use a [ternary operator](/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator).
+In JSX, we can use a condition to change what is rendered by the browser. To write a condition in JSX, we can use a [ternary operator](/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_operator).
 
 In the case of our `<Todo />` component, our condition is "Is this task being edited?" Change the `return` statement inside `Todo()` so that it reads like so:
 

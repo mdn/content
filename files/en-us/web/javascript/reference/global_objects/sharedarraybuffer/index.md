@@ -97,9 +97,9 @@ These properties are defined on `SharedArrayBuffer.prototype` and shared by all 
 
 - {{jsxref("SharedArrayBuffer.prototype.byteLength")}}
   - : The size, in bytes, of the array. This is established when the array is constructed and can only be changed using the {{jsxref("SharedArrayBuffer.prototype.grow()")}} method if the `SharedArrayBuffer` is growable.
-- {{jsxref("SharedArrayBuffer.prototype.maxByteLength")}} {{experimental_inline}}
+- {{jsxref("SharedArrayBuffer.prototype.maxByteLength")}}
   - : The read-only maximum length, in bytes, that the `SharedArrayBuffer` can be grown to. This is established when the array is constructed and cannot be changed.
-- {{jsxref("SharedArrayBuffer.prototype.growable")}} {{experimental_inline}}
+- {{jsxref("SharedArrayBuffer.prototype.growable")}}
   - : Read-only. Returns `true` if the `SharedArrayBuffer` can be grown, or `false` if not.
 - {{jsxref("Object/constructor", "SharedArrayBuffer.prototype.constructor")}}
   - : The constructor function that created the instance object. For `SharedArrayBuffer` instances, the initial value is the {{jsxref("SharedArrayBuffer/SharedArrayBuffer", "SharedArrayBuffer")}} constructor.
@@ -110,7 +110,7 @@ These properties are defined on `SharedArrayBuffer.prototype` and shared by all 
 
 - {{jsxref("SharedArrayBuffer.prototype.slice()")}}
   - : Returns a new `SharedArrayBuffer` whose contents are a copy of this `SharedArrayBuffer`'s bytes from `begin`, inclusive, up to `end`, exclusive. If either `begin` or `end` is negative, it refers to an index from the end of the array, as opposed to from the beginning.
-- {{jsxref("SharedArrayBuffer.prototype.grow()")}} {{experimental_inline}}
+- {{jsxref("SharedArrayBuffer.prototype.grow()")}}
   - : Grows the `SharedArrayBuffer` to the specified size, in bytes.
 
 ## Examples

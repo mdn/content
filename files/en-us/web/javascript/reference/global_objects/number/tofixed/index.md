@@ -79,7 +79,7 @@ numObj.toFixed(6); // '12345.678900'; additional zeros
 
 ### Using toFixed() with negative numbers
 
-Because member access has higher [precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence) than unary minus, you need to group the negative number expression to get a string.
+Because member access has higher [precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_precedence) than unary minus, you need to group the negative number expression to get a string.
 
 ```js
 -2.34.toFixed(1); // -2.3, a number

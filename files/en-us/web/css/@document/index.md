@@ -34,7 +34,7 @@ An `@document` rule can specify one or more matching functions. If any of the fu
 - `media-document()`
   - : Matches the media according to the string in parameter, one of `video`, `image`, `plugin` or `all`.
 - `regexp()` {{Deprecated_Inline}} {{Non-standard_Inline}}
-  - : Matches if the document URL is matched by the [regular expression](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions) provided. The expression must match the entire URL.
+  - : Matches if the document URL is matched by the [regular expression](/en-US/docs/Web/JavaScript/Guide/Regular_expressions) provided. The expression must match the entire URL.
 
 The values provided to the `url()`, `url-prefix()`, `domain()`, and `media-document()` functions can be optionally enclosed by single or double quotes. The values provided to the `regexp()` function _must_ be enclosed in quotes.
 
