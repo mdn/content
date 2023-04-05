@@ -24,7 +24,7 @@ regexp[Symbol.matchAll](str)
 
 ### Return value
 
-An [iterable iterator](/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators) (which is not restartable) of matches. Each match is an array with the same shape as the return value of {{jsxref("RegExp.prototype.exec()")}}.
+An [iterable iterator object](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator) (which is not restartable) of matches. Each match is an array with the same shape as the return value of {{jsxref("RegExp.prototype.exec()")}}.
 
 ## Description
 
@@ -86,7 +86,7 @@ console.log(Array.from(result, (x) => x[0]));
 
 Subclasses of {{jsxref("RegExp")}} can override the `[@@matchAll]()` method to modify the default behavior.
 
-For example, to return an {{jsxref("Array")}} instead of an [iterator](/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators):
+For example, to return an {{jsxref("Array")}} instead of an [iterator](/en-US/docs/Web/JavaScript/Guide/Iterators_and_generators):
 
 ```js
 class MyRegExp extends RegExp {

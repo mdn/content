@@ -1,6 +1,6 @@
 ---
 title: The event loop
-slug: Web/JavaScript/EventLoop
+slug: Web/JavaScript/Event_loop
 page-type: guide
 ---
 

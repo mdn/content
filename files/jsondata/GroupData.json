@@ -233,7 +233,6 @@
       "overview": ["CSS Painting API"],
       "guides": ["/docs/Web/API/CSS_Painting_API/Guide"],
       "interfaces": [
-        "PaintWorklet",
         "PaintWorkletGlobalScope",
         "PaintRenderingContext2D",
         "PaintSize"

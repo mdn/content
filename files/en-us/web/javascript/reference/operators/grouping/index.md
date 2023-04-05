@@ -20,11 +20,11 @@ The **grouping `( )`** operator controls the precedence of evaluation in express
 ### Parameters
 
 - `expression`
-  - : Any [expression](/en-US/docs/Web/JavaScript/Reference/Operators) to be evaluated, including [comma-joined](/en-US/docs/Web/JavaScript/Reference/Operators/Comma_Operator) expressions.
+  - : Any [expression](/en-US/docs/Web/JavaScript/Reference/Operators) to be evaluated, including [comma-joined](/en-US/docs/Web/JavaScript/Reference/Operators/Comma_operator) expressions.
 
 ## Description
 
-The grouping operator consists of a pair of parentheses around an expression that groups the contents. The operator overrides the normal [operator precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence), so that operators with lower precedence (as low as the [comma](/en-US/docs/Web/JavaScript/Reference/Operators/Comma_Operator) operator) can be evaluated before an operator with higher precedence.
+The grouping operator consists of a pair of parentheses around an expression that groups the contents. The operator overrides the normal [operator precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_precedence), so that operators with lower precedence (as low as the [comma](/en-US/docs/Web/JavaScript/Reference/Operators/Comma_operator) operator) can be evaluated before an operator with higher precedence.
 
 ## Examples
 
@@ -56,7 +56,7 @@ Notice in these examples that the order in which the _operators_ evaluate has ch
 a() * (b() + c());
 ```
 
-The function `a` will be called before the function `b`, which will be called before the function `c`. For more on operator precedence, see its [reference page](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence).
+The function `a` will be called before the function `b`, which will be called before the function `c`. For more on operator precedence, see its [reference page](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_precedence).
 
 ### Using the grouping operator to eliminate parsing ambiguity
 
@@ -84,7 +84,7 @@ In an [arrow function](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_func
 const f = () => ({ a: 1 });
 ```
 
-If a property is accessed on a number literal, the [property accessor](/en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors) dot `.` may be ambiguous with a decimal point, unless the number already has a decimal point. You can wrap integer literals in parentheses to eliminate this ambiguity.
+If a property is accessed on a number literal, the [property accessor](/en-US/docs/Web/JavaScript/Reference/Operators/Property_accessors) dot `.` may be ambiguous with a decimal point, unless the number already has a decimal point. You can wrap integer literals in parentheses to eliminate this ambiguity.
 
 ```js
 (1).toString(); // "1"
@@ -145,6 +145,6 @@ For more advice on working with ASI, see its [reference section](/en-US/docs/Web
 
 ## See also
 
-- [Operator precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence)
+- [Operator precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_precedence)
 - {{jsxref("Operators/delete", "delete")}}
 - {{jsxref("Operators/typeof", "typeof")}}

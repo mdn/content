@@ -1,6 +1,6 @@
 ---
 title: Memory management
-slug: Web/JavaScript/Memory_Management
+slug: Web/JavaScript/Memory_management
 page-type: guide
 ---
 

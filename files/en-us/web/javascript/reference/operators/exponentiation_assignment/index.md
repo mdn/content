@@ -45,5 +45,5 @@ foo **= 2n; // 9n
 
 ## See also
 
-- [Assignment operators in the JS guide](/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#assignment_operators)
+- [Assignment operators in the JS guide](/en-US/docs/Web/JavaScript/Guide/Expressions_and_operators#assignment_operators)
 - [Exponentiation operator](/en-US/docs/Web/JavaScript/Reference/Operators/Exponentiation)

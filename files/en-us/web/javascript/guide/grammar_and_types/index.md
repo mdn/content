@@ -528,7 +528,7 @@ const obj = {
 
 ### RegExp literals
 
-A regex literal (which is defined in detail [later](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions)) is a pattern enclosed between slashes. The following is an example of a regex literal.
+A regex literal (which is defined in detail [later](/en-US/docs/Web/JavaScript/Guide/Regular_expressions)) is a pattern enclosed between slashes. The following is an example of a regex literal.
 
 ```js
 const re = /ab+c/;
@@ -705,7 +705,7 @@ This chapter focuses on basic syntax for declarations and types. To learn more a
 - [Control flow and error handling](/en-US/docs/Web/JavaScript/Guide/Control_flow_and_error_handling)
 - [Loops and iteration](/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration)
 - [Functions](/en-US/docs/Web/JavaScript/Guide/Functions)
-- [Expressions and operators](/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators)
+- [Expressions and operators](/en-US/docs/Web/JavaScript/Guide/Expressions_and_operators)
 
 In the next chapter, we will have a look at control flow constructs and error handling.
 
