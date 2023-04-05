@@ -362,7 +362,7 @@ We included that first line for two reasons: first, so you could easily edit the
 
 To summarize:
 
-- The order of layers is the order in which the layers are created.
+- The order of precedence of layers is the order in which the layers are created.
 - Once created, there is no way to change the layer order.
 - Layer precedence for normal styles is the order in which the layers are created.
 - Unlayered normal styles have precedence over normal layered styles.
