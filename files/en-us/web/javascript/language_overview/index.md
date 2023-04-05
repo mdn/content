@@ -740,7 +740,7 @@ For a detailed guide on various class features, you can read the [guide page](/e
 
 ## Asynchronous programming
 
-JavaScript is single-threaded by nature. There's no [paralleling](https://en.wikipedia.org/wiki/Parallel_computing); only [concurrency](https://en.wikipedia.org/wiki/Concurrent_computing). Asynchronous programming is powered by an [event loop](/en-US/docs/Web/JavaScript/EventLoop), which allows a set of tasks to be queued and polled for completion.
+JavaScript is single-threaded by nature. There's no [paralleling](https://en.wikipedia.org/wiki/Parallel_computing); only [concurrency](https://en.wikipedia.org/wiki/Concurrent_computing). Asynchronous programming is powered by an [event loop](/en-US/docs/Web/JavaScript/Event_loop), which allows a set of tasks to be queued and polled for completion.
 
 There are three idiomatic ways to write asynchronous code in JavaScript:
 

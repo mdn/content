@@ -77,7 +77,7 @@ Head over to our [Learning Area JavaScript topic](/en-US/docs/Learn/JavaScript) 
   - : JavaScript typed arrays provide a mechanism for accessing raw binary data.
 - [Memory Management](/en-US/docs/Web/JavaScript/Memory_management)
   - : Memory life cycle and garbage collection in JavaScript.
-- [Concurrency model and Event Loop](/en-US/docs/Web/JavaScript/EventLoop)
+- [Concurrency model and Event Loop](/en-US/docs/Web/JavaScript/Event_loop)
   - : JavaScript has a concurrency model based on an "event loop".
 
 ## Reference

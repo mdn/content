@@ -104004,7 +104004,7 @@
       "Waldo"
     ]
   },
-  "Web/JavaScript/EventLoop": {
+  "Web/JavaScript/Event_loop": {
     "modified": "2020-03-12T19:37:56.273Z",
     "contributors": [
       "fscholz",

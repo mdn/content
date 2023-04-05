@@ -4070,7 +4070,7 @@
 /en-US/docs/JavaScript/Guide/About	/en-US/docs/Web/JavaScript/Guide/Introduction
 /en-US/docs/JavaScript/Guide/Closures	/en-US/docs/Web/JavaScript/Closures
 /en-US/docs/JavaScript/Guide/Details_of_the_Object_Model	/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain
-/en-US/docs/JavaScript/Guide/EventLoop	/en-US/docs/Web/JavaScript/EventLoop
+/en-US/docs/JavaScript/Guide/EventLoop	/en-US/docs/Web/JavaScript/Event_loop
 /en-US/docs/JavaScript/Guide/Expressions_and_Operators	/en-US/docs/Web/JavaScript/Guide/Expressions_and_operators
 /en-US/docs/JavaScript/Guide/Functions	/en-US/docs/Web/JavaScript/Guide/Functions
 /en-US/docs/JavaScript/Guide/Inheritance_Revisited	/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain
@@ -12112,13 +12112,14 @@
 /en-US/docs/Web/JavaScript/Base64_encoding_and_decoding	/en-US/docs/Glossary/Base64
 /en-US/docs/Web/JavaScript/DedicatedWorkerGlobalScope	/en-US/docs/Web/API/DedicatedWorkerGlobalScope
 /en-US/docs/Web/JavaScript/Equality_comparisons_and_when_to_use_them	/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness
+/en-US/docs/Web/JavaScript/EventLoop	/en-US/docs/Web/JavaScript/Event_loop
 /en-US/docs/Web/JavaScript/Getting_Started	/en-US/docs/Learn/Getting_started_with_the_web/JavaScript_basics
 /en-US/docs/Web/JavaScript/Glossary	/en-US/docs/Glossary
 /en-US/docs/Web/JavaScript/Guide/About	/en-US/docs/Web/JavaScript/Guide/Introduction
 /en-US/docs/Web/JavaScript/Guide/Closures	/en-US/docs/Web/JavaScript/Closures
 /en-US/docs/Web/JavaScript/Guide/Details_of_the_Object_Model	/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain
 /en-US/docs/Web/JavaScript/Guide/Equality_comparisons_and_when_to_use_them	/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness
-/en-US/docs/Web/JavaScript/Guide/EventLoop	/en-US/docs/Web/JavaScript/EventLoop
+/en-US/docs/Web/JavaScript/Guide/EventLoop	/en-US/docs/Web/JavaScript/Event_loop
 /en-US/docs/Web/JavaScript/Guide/Inheritance_Revisited	/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain
 /en-US/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain	/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain
 /en-US/docs/Web/JavaScript/Guide/JavaScript_Overview	/en-US/docs/Web/JavaScript/Guide/Introduction
