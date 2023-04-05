@@ -57,7 +57,7 @@ const stagingBuffer = device.createBuffer({
 Later on, once the `stagingBuffer` contains the results of the GPU computation, a combination of `GPUBuffer` methods are used to read the data back to JavaScript so that it can then be logged to the console:
 
 - {{domxref("GPUBuffer.mapAsync()")}} is used to map the `GPUBuffer` for reading.
-- {{domxref("GPUBuffer.getMappedRange()")}} is used to return an {{domxref("ArrayBuffer")}} containing the `GPUBuffer`'s contents.
+- {{domxref("GPUBuffer.getMappedRange()")}} is used to return an {{jsxref("ArrayBuffer")}} containing the `GPUBuffer`'s contents.
 - {{domxref("GPUBuffer.unmap()")}} is used to unmap the `GPUBuffer` again, once we have read the content into JavaScript as needed.
 
 ```js
