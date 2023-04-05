@@ -28,7 +28,7 @@ None.
 
 ### Return value
 
-None ({{domxref("Undefined")}}).
+None ({{jsxref("Undefined")}}).
 
 ### Validation
 

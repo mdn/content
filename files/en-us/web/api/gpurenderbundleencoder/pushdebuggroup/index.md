@@ -29,7 +29,7 @@ pushDebugGroup(groupLabel)
 
 ### Return value
 
-None ({{domxref("Undefined")}}).
+None ({{jsxref("Undefined")}}).
 
 ## Examples
 

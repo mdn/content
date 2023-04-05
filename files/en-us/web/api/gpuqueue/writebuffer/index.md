@@ -29,9 +29,9 @@ writeBuffer(buffer, bufferOffset, data, dataOffset, size)
 - `data`
   - : An object representing the data source to write into the {{domxref("GPUBuffer")}}. This can be an {{jsxref("ArrayBuffer")}}, {{jsxref("TypedArray")}}, or {{jsxref("DataView")}}.
 - `dataOffset` {{optional_inline}}
-  - : A number representing the offset to start writing the data from inside the data source. This value is a number of elements if `data` is a {{domxref("TypedArray")}}, and a number of bytes if not. If omitted, `dataOffset` defaults to 0.
+  - : A number representing the offset to start writing the data from inside the data source. This value is a number of elements if `data` is a {{jsxref("TypedArray")}}, and a number of bytes if not. If omitted, `dataOffset` defaults to 0.
 - `size` {{optional_inline}}
-  - : A number representing the size of the content to write from `data` to `buffer`. This value is a number of elements if `data` is a {{domxref("TypedArray")}}, and a number of bytes if not. If omitted, `size` will be equal to the overall size of `data`, minus `dataOffset`.
+  - : A number representing the size of the content to write from `data` to `buffer`. This value is a number of elements if `data` is a {{jsxref("TypedArray")}}, and a number of bytes if not. If omitted, `size` will be equal to the overall size of `data`, minus `dataOffset`.
 
 ### Return value
 

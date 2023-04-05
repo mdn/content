@@ -94,7 +94,7 @@ copyBufferToTexture(source, destination, copySize)
 
 ### Return value
 
-None ({{domxref("Undefined")}}).
+None ({{jsxref("Undefined")}}).
 
 ### Validation
 

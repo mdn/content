@@ -25,9 +25,9 @@ beginRenderPass(descriptor)
   - : An object containing the following properties:
 
     - `colorAttachments`
-      - : An array of objects (see [Color attachment object structure](/en-US/docs/Web/API/GPUCommandEncoder/beginRenderPass#color_attachment_object_structure)) defining the color attachments that will be output to when executing this render pass.
+      - : An array of objects (see [Color attachment object structure](#color_attachment_object_structure)) defining the color attachments that will be output to when executing this render pass.
     - `depthStencilAttachment` {{optional_inline}}
-      - : An object (see [Depth/stencil attachment object structure](/en-US/docs/Web/API/GPUCommandEncoder/beginRenderPass#depthstencil_attachment_object_structure)) defining the depth/stencil attachment that will be output to and tested against when executing this render pass.
+      - : An object (see [Depth/stencil attachment object structure](#depthstencil_attachment_object_structure)) defining the depth/stencil attachment that will be output to and tested against when executing this render pass.
     - `label` {{optional_inline}}
       - : A string providing a label that can be used to identify the object, for example in {{domxref("GPUError")}} messages or console warnings.
     - `maxDrawCount` {{optional_inline}}

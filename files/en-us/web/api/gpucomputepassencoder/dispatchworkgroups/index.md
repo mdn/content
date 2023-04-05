@@ -29,7 +29,7 @@ dispatchWorkgroups(workgroupCountX, workgroupCountY, workgroupCountZ)
 - `workgroupCountZ` {{optional_inline}}
   - : The Z dimension of the grid of workgroups to dispatch. If omitted, `workgroupCountZ` defaults to 1.
 
-> **Note:** The X, Y, and Z dimension values passed to `dispatchWorkgroups()` and {{domxref("GPUCommandEncoder.dispatchWorkgroupsIndirect()")}} are the number of workgroups to dispatch for each dimension, not the number of shader invocations to perform across each dimension. This matches the behavior of modern native GPU APIs, but differs from the behavior of OpenCL. This means that if a {{domxref("GPUShaderModule")}} defines an entry point with `@workgroup_size(4, 4)`, and work is dispatched to it with the call `passEncoder.dispatchWorkgroups(8, 8);`, the entry point will be invoked 1024 times total — Dispatching a 4 x 4 workgroup 8 times along both the X and Y axes. `4 * 4 * 8 * 8 = 1024`.
+> **Note:** The X, Y, and Z dimension values passed to `dispatchWorkgroups()` and {{domxref("GPUComputePassEncoder.dispatchWorkgroupsIndirect()")}} are the number of workgroups to dispatch for each dimension, not the number of shader invocations to perform across each dimension. This matches the behavior of modern native GPU APIs, but differs from the behavior of OpenCL. This means that if a {{domxref("GPUShaderModule")}} defines an entry point with `@workgroup_size(4, 4)`, and work is dispatched to it with the call `passEncoder.dispatchWorkgroups(8, 8);`, the entry point will be invoked 1024 times total — Dispatching a 4 x 4 workgroup 8 times along both the X and Y axes. `4 * 4 * 8 * 8 = 1024`.
 
 ### Return value
 

@@ -33,7 +33,7 @@ resolveQuerySet(querySet, firstQuery, queryCount, destination, destinationOffset
 
 ### Return value
 
-None ({{domxref("Undefined")}}).
+None ({{jsxref("Undefined")}}).
 
 ### Validation
 

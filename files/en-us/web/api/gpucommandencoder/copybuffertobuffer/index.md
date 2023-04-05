@@ -33,7 +33,7 @@ copyBufferToBuffer(source, sourceOffset, destination, destinationOffset, size)
 
 ### Return value
 
-None ({{domxref("Undefined")}}).
+None ({{jsxref("Undefined")}}).
 
 ### Validation
 

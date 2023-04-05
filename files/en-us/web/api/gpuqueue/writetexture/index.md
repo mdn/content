@@ -117,7 +117,7 @@ function createSolidColorTexture(r, g, b, a) {
 }
 ```
 
-This can be used to define standard textures for use in mterial libraries:
+This can be used to define standard textures for use in material libraries:
 
 ```js
 const opaqueWhiteTexture = createSolidColorTexture(1, 1, 1, 1);

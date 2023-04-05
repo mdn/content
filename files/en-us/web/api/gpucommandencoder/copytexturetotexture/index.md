@@ -21,9 +21,9 @@ copyTextureToTexture(source, destination, copySize)
 ### Parameters
 
 - `source`
-  - : An object (see [Copy texture object structure](/en-US/docs/Web/API/GPUCommandEncoder/copyTextureToTexture#copy_texture_object_structure)) defining the texture to copy the data from. Combined with `copySize`, this defines the region of the source texture subresource.
+  - : An object (see [Copy texture object structure](#copy_texture_object_structure)) defining the texture to copy the data from. Combined with `copySize`, this defines the region of the source texture subresource.
 - `destination`
-  - : An object (see [Copy texture object structure](/en-US/docs/Web/API/GPUCommandEncoder/copyTextureToTexture#copy_texture_object_structure)) defining the texture to write the data to. Combined with `copySize`, this defines the region of the destination texture subresource.
+  - : An object (see [Copy texture object structure](#copy_texture_object_structure)) defining the texture to write the data to. Combined with `copySize`, this defines the region of the destination texture subresource.
 - `copySize`
 
   - : An object or array specifying the width, height, and depth/array layer count of the copied data. The width value must always be specified, while the height and depth/array layer count values are optional and will default to 1 if omitted.
@@ -88,7 +88,7 @@ A copy texture object has the following structure:
 
 ### Return value
 
-None ({{domxref("Undefined")}}).
+None ({{jsxref("Undefined")}}).
 
 ### Validation
 
