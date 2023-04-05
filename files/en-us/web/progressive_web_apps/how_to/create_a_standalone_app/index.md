@@ -3,6 +3,8 @@ title: Create a standalone app
 slug: Web/Progressive_web_apps/How_to/Create_a_standalone_app
 ---
 
+{{PWASidebar}}
+
 [Progressive Web Apps](/en-US/docs/Web/Progressive_web_apps) (PWAs) that are installed on a user's device can define how they appear when the user launches them. They can choose to be displayed in a web browser, just like websites, or have their own dedicated windows similar to how OS-native applications work.
 
 Users tend to have specific expectations of how installed applications behave on their devices. One of these expectations is that applications have their own dedicated windows.
