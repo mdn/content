@@ -23,7 +23,7 @@ ReferenceError: reference to undefined property "x" (Firefox)
 ## What went wrong?
 
 The script attempted to access an object property which doesn't exist. There are two
-ways to access properties; see the [property accessors](/en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors) reference page to learn more about them.
+ways to access properties; see the [property accessors](/en-US/docs/Web/JavaScript/Reference/Operators/Property_accessors) reference page to learn more about them.
 
 ## Examples
 
@@ -61,4 +61,4 @@ if (Object.hasOwn(foo, "bar")) {
 
 ## See also
 
-- [Property accessors](/en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors)
+- [Property accessors](/en-US/docs/Web/JavaScript/Reference/Operators/Property_accessors)

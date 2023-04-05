@@ -150,5 +150,9 @@ const instance2 = new DerivedWithConstructor(); // Logs 1
 
 ## See also
 
-- [The Semantics of All JS Class Elements](https://rfrn.org/~shu/2018/05/02/the-semantics-of-all-js-class-elements.html)
-- [Public and private class fields](https://v8.dev/features/class-fields) article at the v8.dev site
+- [Using classes](/en-US/docs/Web/JavaScript/Guide/Using_Classes)
+- [Classes](/en-US/docs/Web/JavaScript/Reference/Classes)
+- [Private class features](/en-US/docs/Web/JavaScript/Reference/Classes/Private_class_fields)
+- {{jsxref("Statements/class", "class")}}
+- [The semantics of all JS class elements](https://rfrn.org/~shu/2018/05/02/the-semantics-of-all-js-class-elements.html) by Shu-yu Guo (May 2, 2018)
+- [Public and private class fields](https://v8.dev/features/class-fields) on v8.dev (December 13, 2018)
