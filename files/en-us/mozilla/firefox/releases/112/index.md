@@ -69,7 +69,7 @@ This article provides information about the changes in Firefox 112 that affect d
 #### Marionette
 
 - Fixed an issue happening on response wrapped in`value` field ([Firefox bug 1819029](https://bugzil.la/1819029)).
--  Fixed an issue where `WebDriver:ElementClear` was emitting an extra `change` event for content editable elements ([Firefox bug 1744925](https://bugzil.la/1744925)).
+- Fixed an issue where `WebDriver:ElementClear` was emitting an extra `change` event for content editable elements ([Firefox bug 1744925](https://bugzil.la/1744925)).
 
 
 ## Changes for add-on developers
