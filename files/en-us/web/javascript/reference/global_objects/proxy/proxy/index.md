@@ -38,7 +38,7 @@ An empty handler will create a proxy that behaves, in almost all respects, exact
 the target. By defining any of a set group of functions on the `handler`
 object, you can customize specific aspects of the proxy's behavior. For example, by
 defining `get()` you can provide a customized version of the target's
-[property accessor](/en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors).
+[property accessor](/en-US/docs/Web/JavaScript/Reference/Operators/Property_accessors).
 
 ### Handler functions
 

@@ -242,4 +242,7 @@ preFilledObject({ z: 2 }); // 2
 
 ## See also
 
-- [Original proposal at ecmascript.org](https://web.archive.org/web/20161222115423/http://wiki.ecmascript.org/doku.php?id=harmony:parameter_default_values)
+- [Functions guide](/en-US/docs/Web/JavaScript/Guide/Functions)
+- [Functions](/en-US/docs/Web/JavaScript/Reference/Functions)
+- [Rest parameters](/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters)
+- [Nullish coalescing operator (`??`)](/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing)

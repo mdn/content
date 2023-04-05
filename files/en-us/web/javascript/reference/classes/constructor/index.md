@@ -278,9 +278,9 @@ console.log(newInstance.name); // Rectangle
 
 ## See also
 
+- [Using classes](/en-US/docs/Web/JavaScript/Guide/Using_Classes)
+- [Classes](/en-US/docs/Web/JavaScript/Reference/Classes)
+- [Static initialization blocks](/en-US/docs/Web/JavaScript/Reference/Classes/Static_initialization_blocks)
+- {{jsxref("Statements/class", "class")}}
 - {{jsxref("Operators/super", "super()")}}
-- [`class` declaration](/en-US/docs/Web/JavaScript/Reference/Statements/class)
-- [`class` expression](/en-US/docs/Web/JavaScript/Reference/Operators/class)
-- {{jsxref("Classes")}}
-- [`Object.prototype.constructor`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/constructor)
-- [Static initialization block](/en-US/docs/Web/JavaScript/Reference/Classes/Static_initialization_blocks)
+- {{jsxref("Object.prototype.constructor")}}

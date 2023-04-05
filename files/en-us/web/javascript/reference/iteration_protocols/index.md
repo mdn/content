@@ -2,6 +2,7 @@
 title: Iteration protocols
 slug: Web/JavaScript/Reference/Iteration_protocols
 page-type: guide
+spec-urls: https://tc39.es/ecma262/multipage/control-abstraction-objects.html#sec-iteration
 ---
 
 {{jsSidebar("More")}}
@@ -428,7 +429,13 @@ console.log([...someString]); // ["bye"]
 console.log(`${someString}`); // "hi"
 ```
 
+## Specifications
+
+{{Specifications}}
+
 ## See also
 
-- [`function*` declaration](/en-US/docs/Web/JavaScript/Reference/Statements/function*)
-- [Iteration in the ECMAScript specification](https://tc39.es/ecma262/#sec-iteration)
+- [Iterators and generators](/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators)
+- {{jsxref("Statements/function*", "function*")}}
+- {{jsxref("Symbol.iterator")}}
+- {{jsxref("Iterator")}}
