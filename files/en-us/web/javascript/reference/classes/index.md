@@ -319,7 +319,7 @@ eat(); // global object (in non-strict mode)
 
 ## See also
 
-- [Using classes](/en-US/docs/Web/JavaScript/Guide/Using_Classes)
+- [Using classes](/en-US/docs/Web/JavaScript/Guide/Using_classes)
 - [`class`](/en-US/docs/Web/JavaScript/Reference/Statements/class)
 - [`class` expression](/en-US/docs/Web/JavaScript/Reference/Operators/class)
 - [Functions](/en-US/docs/Web/JavaScript/Reference/Functions)
