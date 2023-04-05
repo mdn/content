@@ -319,11 +319,8 @@ eat(); // global object (in non-strict mode)
 
 ## See also
 
-- {{jsxref("Functions", "Functions", "", "true")}}
-- {{jsxref("Statements/class", "class declaration", "", "true")}}
-- {{jsxref("Operators/class", "class expression", "", "true")}}
-- {{jsxref("Classes/Public_class_fields", "Public class fields", "", "true")}}
-- {{jsxref("Classes/Private_class_fields", "Private class features", "", "true")}}
-- {{jsxref("Operators/super", "super")}}
-- [Blog post: "ES6 In Depth: Classes"](https://hacks.mozilla.org/2015/07/es6-in-depth-classes/)
-- [Fields and public/private class properties proposal (stage 3)](https://github.com/tc39/proposal-class-fields)
+- [Using classes](/en-US/docs/Web/JavaScript/Guide/Using_Classes)
+- [`class`](/en-US/docs/Web/JavaScript/Reference/Statements/class)
+- [`class` expression](/en-US/docs/Web/JavaScript/Reference/Operators/class)
+- [Functions](/en-US/docs/Web/JavaScript/Reference/Functions)
+- [ES6 In Depth: Classes](https://hacks.mozilla.org/2015/07/es6-in-depth-classes/) on hacks.mozilla.org (July 22, 2015)

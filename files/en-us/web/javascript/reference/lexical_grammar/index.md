@@ -3,6 +3,7 @@ title: Lexical grammar
 slug: Web/JavaScript/Reference/Lexical_grammar
 page-type: guide
 browser-compat: javascript.grammar
+spec-urls: https://tc39.es/ecma262/multipage/ecmascript-language-lexical-grammar.html
 ---
 
 {{JsSidebar("More")}}
@@ -776,16 +777,16 @@ There are the following rules-of-thumb for dealing with ASI, if you want to enfo
   }
   ```
 
+## Specifications
+
+{{Specifications}}
+
 ## Browser compatibility
 
 {{Compat}}
 
 ## See also
 
-- [Lexical grammar in the ECMAScript specification](https://tc39.es/ecma262/#sec-ecmascript-language-lexical-grammar)
-- [Jeff Walden: Binary and octal numbers](https://whereswalden.com/2013/08/12/micro-feature-from-es6-now-in-firefox-aurora-and-nightly-binary-and-octal-numbers/)
-- [Mathias Bynens: JavaScript character escape sequences](https://mathiasbynens.be/notes/javascript-escapes)
-- [Boolean](/en-US/docs/Web/JavaScript/Data_structures#boolean_type)
-- [Number](/en-US/docs/Web/JavaScript/Data_structures#number_type)
-- [string](/en-US/docs/Web/JavaScript/Data_structures#string_type)
-- {{jsxref("RegExp")}}
+- [Grammar and types](/en-US/docs/Web/JavaScript/Guide/Grammar_and_types)
+- [Micro-feature from ES6, now in Firefox Aurora and Nightly: binary and octal numbers](https://whereswalden.com/2013/08/12/micro-feature-from-es6-now-in-firefox-aurora-and-nightly-binary-and-octal-numbers/) by Jeff Walden (August 12, 2013)
+- [JavaScript character escape sequences](https://mathiasbynens.be/notes/javascript-escapes) by Mathias Bynens (December 21, 2011)

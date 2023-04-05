@@ -151,8 +151,9 @@ In both cases the approach is less elegant, and does not grant access to private
 
 ## See also
 
-- [Class static initialization blocks](https://v8.dev/features/class-static-initializer-blocks) (v8.dev blog)
-- [ES2022 feature: class static initialization blocks](https://2ality.com/2021/09/class-static-block.html) (2ality.com blog)
+- [Using classes](/en-US/docs/Web/JavaScript/Guide/Using_Classes)
 - [Classes](/en-US/docs/Web/JavaScript/Reference/Classes)
-- {{jsxref("Operators/super", "super()")}}
-- [Object.prototype.constructor](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/constructor)
+- {{jsxref("Classes/static", "static")}}
+- {{jsxref("Statements/class", "class")}}
+- [Class static initialization blocks](https://v8.dev/features/class-static-initializer-blocks) on v8.dev (March 30, 2021)
+- [ES2022 feature: class static initialization blocks](https://2ality.com/2021/09/class-static-block.html) on 2ality.com (September 1, 2021)
