@@ -230,7 +230,7 @@ class Square extends Polygon {
 
 ### Calling super in a constructor bound to a different prototype
 
-`super()` calls the constructor that's the prototype of the current class. If you change the prototype of the current class itself, `super()` will call the constructor of the new prototype. Changing the prototype of the current class's `prototype` property doesn't affect which constructor `super()` calls.
+`super()` calls the constructor that's the prototype of the current class. If you change the prototype of the current class itself, `super()` will call the constructor that's the new prototype. Changing the prototype of the current class's `prototype` property doesn't affect which constructor `super()` calls.
 
 ```js
 class Polygon {
