@@ -104004,7 +104004,7 @@
       "Waldo"
     ]
   },
-  "Web/JavaScript/EventLoop": {
+  "Web/JavaScript/Event_loop": {
     "modified": "2020-03-12T19:37:56.273Z",
     "contributors": [
       "fscholz",
@@ -104190,7 +104190,7 @@
       "JesseW"
     ]
   },
-  "Web/JavaScript/Guide/Expressions_and_Operators": {
+  "Web/JavaScript/Guide/Expressions_and_operators": {
     "modified": "2020-11-19T11:36:18.318Z",
     "contributors": [
       "chioio",
@@ -104618,7 +104618,7 @@
       "felipe901"
     ]
   },
-  "Web/JavaScript/Guide/Iterators_and_Generators": {
+  "Web/JavaScript/Guide/Iterators_and_generators": {
     "modified": "2020-07-11T14:26:44.793Z",
     "contributors": [
       "jtojnar",
@@ -104822,7 +104822,7 @@
       "4of92000"
     ]
   },
-  "Web/JavaScript/Guide/Regular_Expressions": {
+  "Web/JavaScript/Guide/Regular_expressions": {
     "modified": "2020-12-11T19:01:32.325Z",
     "contributors": [
       "peterbe",
@@ -104959,7 +104959,7 @@
       "JesseW"
     ]
   },
-  "Web/JavaScript/Guide/Regular_Expressions/Assertions": {
+  "Web/JavaScript/Guide/Regular_expressions/Assertions": {
     "modified": "2020-05-10T09:11:26.155Z",
     "contributors": [
       "naviji",
@@ -104978,7 +104978,7 @@
       "jpmedley"
     ]
   },
-  "Web/JavaScript/Guide/Regular_Expressions/Character_Classes": {
+  "Web/JavaScript/Guide/Regular_expressions/Character_classes": {
     "modified": "2020-11-09T04:47:38.886Z",
     "contributors": [
       "sideshowbarker",
@@ -104993,7 +104993,7 @@
       "jpmedley"
     ]
   },
-  "Web/JavaScript/Guide/Regular_Expressions/Cheatsheet": {
+  "Web/JavaScript/Guide/Regular_expressions/Cheatsheet": {
     "modified": "2020-08-02T01:08:30.777Z",
     "contributors": [
       "jhanschoo",
@@ -105005,7 +105005,7 @@
       "SphinxKnight"
     ]
   },
-  "Web/JavaScript/Guide/Regular_Expressions/Groups_and_Backreferences": {
+  "Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences": {
     "modified": "2020-07-18T10:38:09.718Z",
     "contributors": [
       "ItaHeld90",
@@ -105019,7 +105019,7 @@
       "jpmedley"
     ]
   },
-  "Web/JavaScript/Guide/Regular_Expressions/Quantifiers": {
+  "Web/JavaScript/Guide/Regular_expressions/Quantifiers": {
     "modified": "2020-08-02T01:08:23.400Z",
     "contributors": [
       "jhanschoo",
@@ -105033,7 +105033,7 @@
       "jpmedley"
     ]
   },
-  "Web/JavaScript/Guide/Regular_Expressions/Unicode_Property_Escapes": {
+  "Web/JavaScript/Guide/Regular_expressions/Unicode_property_escapes": {
     "modified": "2020-07-12T19:11:35.411Z",
     "contributors": [
       "JNa0",
@@ -105130,7 +105130,7 @@
       "stephenlcurtis"
     ]
   },
-  "Web/JavaScript/Guide/Working_with_Objects": {
+  "Web/JavaScript/Guide/Working_with_objects": {
     "modified": "2020-08-11T06:11:14.347Z",
     "contributors": [
       "xfq",
@@ -105365,7 +105365,7 @@
       "Ms2ger"
     ]
   },
-  "Web/JavaScript/Memory_Management": {
+  "Web/JavaScript/Memory_management": {
     "modified": "2020-03-12T19:35:21.425Z",
     "contributors": [
       "fscholz",
@@ -106096,7 +106096,7 @@
       "clarkbdubya"
     ]
   },
-  "Web/JavaScript/Reference/Errors/Strict_Non_Simple_Params": {
+  "Web/JavaScript/Reference/Errors/Strict_non_simple_params": {
     "modified": "2020-04-15T11:09:10.798Z",
     "contributors": ["fscholz", "PatrickKettner", "nmve", "nbp", "arai"]
   },
@@ -121270,7 +121270,7 @@
     "modified": "2020-10-15T22:30:39.754Z",
     "contributors": ["xgqfrms", "fscholz"]
   },
-  "Web/JavaScript/Reference/Operators/Comma_Operator": {
+  "Web/JavaScript/Reference/Operators/Comma_operator": {
     "modified": "2020-10-15T21:08:33.775Z",
     "contributors": [
       "fscholz",
@@ -121301,7 +121301,7 @@
       "Dria"
     ]
   },
-  "Web/JavaScript/Reference/Operators/Conditional_Operator": {
+  "Web/JavaScript/Reference/Operators/Conditional_operator": {
     "modified": "2020-10-15T21:04:34.369Z",
     "contributors": [
       "mfuji09",
@@ -121603,7 +121603,7 @@
       "tschneidereit"
     ]
   },
-  "Web/JavaScript/Reference/Operators/Operator_Precedence": {
+  "Web/JavaScript/Reference/Operators/Operator_precedence": {
     "modified": "2020-11-30T19:13:57.538Z",
     "contributors": [
       "saxan",
@@ -121703,7 +121703,7 @@
       "Sheppy"
     ]
   },
-  "Web/JavaScript/Reference/Operators/Property_Accessors": {
+  "Web/JavaScript/Reference/Operators/Property_accessors": {
     "modified": "2020-10-15T21:10:29.687Z",
     "contributors": [
       "fscholz",

@@ -1,6 +1,6 @@
 ---
 title: Expressions and operators
-slug: Web/JavaScript/Guide/Expressions_and_Operators
+slug: Web/JavaScript/Guide/Expressions_and_operators
 page-type: guide
 ---
 
@@ -24,7 +24,7 @@ As the examples above also illustrate, all complex expressions are joined by _op
 - [BigInt operators](#bigint_operators)
 - [String operators](#string_operators)
 - [Conditional (ternary) operator](#conditional_ternary_operator)
-- [Comma operator](#comma_operator)
+- [Comma operator](#Comma_operator)
 - [Unary operators](#unary_operators)
 - [Relational operators](#relational_operators)
 
@@ -37,7 +37,7 @@ const x = 1 + 2 * 3;
 const y = 2 * 3 + 1;
 ```
 
-Despite `*` and `+` coming in different orders, both expressions would result in `7` because `*` has precedence over `+`, so the `*`-joined expression will always be evaluated first. You can override operator precedence by using parentheses (which creates a [grouped expression](#grouping_operator) — the basic expression). To see a complete table of operator precedence as well as various caveats, see the [Operator Precedence Reference](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence#table) page.
+Despite `*` and `+` coming in different orders, both expressions would result in `7` because `*` has precedence over `+`, so the `*`-joined expression will always be evaluated first. You can override operator precedence by using parentheses (which creates a [grouped expression](#grouping_operator) — the basic expression). To see a complete table of operator precedence as well as various caveats, see the [Operator Precedence Reference](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_precedence#table) page.
 
 JavaScript has both _binary_ and _unary_ operators, and one special ternary operator, the conditional operator.
 A binary operator requires two operands, one before the operator and one after the operator:
@@ -86,7 +86,7 @@ There are also compound assignment operators that are shorthand for the operatio
 
 ### Assigning to properties
 
-If an expression evaluates to an [object](/en-US/docs/Web/JavaScript/Guide/Working_with_Objects), then the left-hand side of an assignment expression may make assignments to properties of that expression.
+If an expression evaluates to an [object](/en-US/docs/Web/JavaScript/Guide/Working_with_objects), then the left-hand side of an assignment expression may make assignments to properties of that expression.
 For example:
 
 ```js
@@ -102,7 +102,7 @@ console.log(obj[key]); // Prints 5.
 console.log(obj); // Prints { x: 3, y: 5 }.
 ```
 
-For more information about objects, read [Working with Objects](/en-US/docs/Web/JavaScript/Guide/Working_with_Objects).
+For more information about objects, read [Working with Objects](/en-US/docs/Web/JavaScript/Guide/Working_with_objects).
 
 If an expression does not evaluate to an object, then assignments to properties of that expression do not assign:
 
@@ -278,7 +278,7 @@ However, it evaluates from left to right:
 
 `x[f()] = g()` also evaluates from left to right.
 (This example assumes that `x` is already assigned to some object.
-For more information about objects, read [Working with Objects](/en-US/docs/Web/JavaScript/Guide/Working_with_Objects).)
+For more information about objects, read [Working with Objects](/en-US/docs/Web/JavaScript/Guide/Working_with_objects).)
 
 1. The assignment expression `x[f()] = g()` starts to evaluate.
    1. The `x[f()]` property access on this assignment's left-hand
@@ -293,7 +293,7 @@ For more information about objects, read [Working with Objects](/en-US/docs/Web/
    3. Then the function call `g()` prints "G!" to the console and
       then evaluates to the number `3`.
    4. That `3` is now assigned to `x[2]`.
-      (This step will succeed only if `x` is assigned to an [object](/en-US/docs/Web/JavaScript/Guide/Working_with_Objects).)
+      (This step will succeed only if `x` is assigned to an [object](/en-US/docs/Web/JavaScript/Guide/Working_with_objects).)
 2. The assignment expression `x[f()] = g()` has now finished evaluating;
    its result is the new value of `x[2]` – which happens to be `3`.
    `x[2]` is now assigned to `3`,
@@ -319,7 +319,7 @@ However, it only actually declares the variable `z`.
 ## Comparison operators
 
 A comparison operator compares its operands and returns a logical value based on whether the comparison is true.
-The operands can be numerical, string, logical, or [object](/en-US/docs/Web/JavaScript/Guide/Working_with_Objects) values.
+The operands can be numerical, string, logical, or [object](/en-US/docs/Web/JavaScript/Guide/Working_with_objects) values.
 Strings are compared based on standard lexicographical ordering, using Unicode values.
 In most cases, if the two operands are not of the same type, JavaScript attempts to convert them to an appropriate type for the comparison.
 This behavior generally results in comparing the operands numerically.
@@ -825,7 +825,7 @@ mystring += "bet"; // evaluates to "alphabet" and assigns this value to mystring
 
 ## Conditional (ternary) operator
 
-The [conditional operator](/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator)
+The [conditional operator](/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_operator)
 is the only JavaScript operator that takes three operands.
 The operator can have one of two values based on a condition.
 The syntax is:
@@ -849,7 +849,7 @@ This statement assigns the value "adult" to the variable `status` if
 
 ## Comma operator
 
-The [comma operator](/en-US/docs/Web/JavaScript/Reference/Operators/Comma_Operator) (`,`)
+The [comma operator](/en-US/docs/Web/JavaScript/Reference/Operators/Comma_operator) (`,`)
 evaluates both of its operands and returns the value of the last operand.
 This operator is primarily used inside a `for` loop, to allow multiple variables to be updated each time through the loop.
 It is regarded bad style to use it elsewhere, when it is not necessary.

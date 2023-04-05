@@ -131,7 +131,7 @@ typeof func; // "function"
 
 ### Need for parentheses in syntax
 
-The `typeof` operator has higher [precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence) than binary operators like addition (`+`). Therefore, parentheses are needed to evaluate the type of an addition result.
+The `typeof` operator has higher [precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_precedence) than binary operators like addition (`+`). Therefore, parentheses are needed to evaluate the type of an addition result.
 
 ```js
 // Parentheses can be used for determining the data type of expressions.

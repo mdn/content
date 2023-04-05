@@ -90,7 +90,7 @@ funcWithDefault3(); // undefined; 0
 
 This is the same behavior exhibited by all [strict-mode functions](/en-US/docs/Web/JavaScript/Reference/Strict_mode#making_eval_and_arguments_simpler), regardless of the type of parameters they are passed. That is, assigning new values to parameters in the body of the function never affects the `arguments` object, nor will assigning new values to the `arguments` indices affect the value of parameters, even when the function only has simple parameters.
 
-> **Note:** You cannot write a `"use strict";` directive in the body of a function definition that accepts rest, default, or destructured parameters. Doing so will throw [a syntax error](/en-US/docs/Web/JavaScript/Reference/Errors/Strict_Non_Simple_Params).
+> **Note:** You cannot write a `"use strict";` directive in the body of a function definition that accepts rest, default, or destructured parameters. Doing so will throw [a syntax error](/en-US/docs/Web/JavaScript/Reference/Errors/Strict_non_simple_params).
 
 ### arguments is an array-like object
 
