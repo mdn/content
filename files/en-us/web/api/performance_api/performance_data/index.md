@@ -114,25 +114,27 @@ The `PerformanceObserver` option is preferred because:
 
 ## Managing buffer sizes
 
-There is a buffer limit for performance entries per document. It ensures that the browser doesn't consume indefinite memory when holding performance data. Especially when your website or application fetches a lot of resources (e.g. when using polling), you might need to look into the limits for the buffers:
+There is a buffer limit for performance entries per document per session. It ensures that the browser doesn't consume indefinite memory when holding performance data. Especially when your website or application fetches a lot of resources (e.g. when using polling), you might need to look into the limits for the buffers:
 
-| {{domxref("PerformanceEntry.entryType", "entryType")}} identifier | Interface                                  | Maximum buffer size         |
-| ----------------------------------------------------------------- | ------------------------------------------ | --------------------------- |
-| `"mark"`                                                          | {{domxref("PerformanceMark")}}             | Infinite                    |
-| `"measure"`                                                       | {{domxref("PerformanceMeasure")}}          | Infinite                    |
-| `"navigation"`                                                    | {{domxref("PerformanceNavigationTiming")}} | Infinite                    |
-| `"resource"`                                                      | {{domxref("PerformanceResourceTiming")}}   | 250 (adjustable, see below) |
-| `"longtask"`                                                      | {{domxref("PerformanceLongTaskTiming")}}   | 200                         |
-| `"paint"`                                                         | {{domxref("PerformancePaintTiming")}}      | 2                           |
-| `"element"`                                                       | {{domxref("PerformanceElementTiming")}}    | 150                         |
-| `"event"`                                                         | {{domxref("PerformanceEventTiming")}}      | 150                         |
-| `"first-input"`                                                   | {{domxref("PerformanceEventTiming")}}      | 1                           |
-| `"layout-shift"`                                                  | {{domxref("LayoutShift")}}                 | 150                         |
-| `"largest-contentful-paint"`                                      | {{domxref("LargestContentfulPaint")}}      | 150                         |
+| {{domxref("PerformanceEntry.entryType", "entryType")}} identifier | Interface                                  | Maximum number of buffer entries |
+| ----------------------------------------------------------------- | ------------------------------------------ | -------------------------------- |
+| `"mark"`                                                          | {{domxref("PerformanceMark")}}             | Infinite                         |
+| `"measure"`                                                       | {{domxref("PerformanceMeasure")}}          | Infinite                         |
+| `"navigation"`                                                    | {{domxref("PerformanceNavigationTiming")}} | Infinite                         |
+| `"resource"`                                                      | {{domxref("PerformanceResourceTiming")}}   | 250 (adjustable, see below)      |
+| `"longtask"`                                                      | {{domxref("PerformanceLongTaskTiming")}}   | 200                              |
+| `"paint"`                                                         | {{domxref("PerformancePaintTiming")}}      | 2 (there won't be more)          |
+| `"element"`                                                       | {{domxref("PerformanceElementTiming")}}    | 150                              |
+| `"event"`                                                         | {{domxref("PerformanceEventTiming")}}      | 150                              |
+| `"first-input"`                                                   | {{domxref("PerformanceEventTiming")}}      | 1 (there won't be more)          |
+| `"layout-shift"`                                                  | {{domxref("LayoutShift")}}                 | 150                              |
+| `"largest-contentful-paint"`                                      | {{domxref("LargestContentfulPaint")}}      | 150                              |
 
 Table 1. Buffer sizes ([source](https://w3c.github.io/timing-entrytypes-registry/#registry)).
 
 For `"resource"` entry types, see [Managing resource buffer sizes](/en-US/docs/Web/API/Performance_API/Resource_timing#managing_resource_buffer_sizes) for how to set a different buffer size.
+
+For `"first-input"` and `"paint"`, the limitation is inherent in the metric's definition. There won't be more entries than one (or two).
 
 The [performance observer callback](/en-US/docs/Web/API/PerformanceObserver/PerformanceObserver) contains an optional `droppedEntriesCount` parameter that tells you how many entries were lost because the buffer storage was full.
 
