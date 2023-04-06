@@ -1,5 +1,6 @@
 ---
-title: Element.setAttributeNS()
+title: "Element: setAttributeNS() method"
+short-title: setAttributeNS()
 slug: Web/API/Element/setAttributeNS
 page-type: web-api-instance-method
 browser-compat: api.Element.setAttributeNS

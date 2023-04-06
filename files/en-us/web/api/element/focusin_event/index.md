@@ -1,5 +1,6 @@
 ---
 title: "Element: focusin event"
+short-title: focusin
 slug: Web/API/Element/focusin_event
 page-type: web-api-event
 browser-compat: api.Element.focusin_event

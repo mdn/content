@@ -1,5 +1,6 @@
 ---
-title: Element.scrollHeight
+title: "Element: scrollHeight property"
+short-title: scrollHeight
 slug: Web/API/Element/scrollHeight
 page-type: web-api-instance-property
 browser-compat: api.Element.scrollHeight

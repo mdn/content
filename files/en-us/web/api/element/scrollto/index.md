@@ -1,5 +1,6 @@
 ---
-title: Element.scrollTo()
+title: "Element: scrollTo() method"
+short-title: scrollTo()
 slug: Web/API/Element/scrollTo
 page-type: web-api-instance-method
 browser-compat: api.Element.scrollTo

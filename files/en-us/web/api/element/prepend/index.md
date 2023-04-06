@@ -1,5 +1,6 @@
 ---
-title: Element.prepend()
+title: "Element: prepend() method"
+short-title: prepend()
 slug: Web/API/Element/prepend
 page-type: web-api-instance-method
 browser-compat: api.Element.prepend
