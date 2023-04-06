@@ -1,5 +1,6 @@
 ---
-title: AbsoluteOrientationSensor()
+title: "AbsoluteOrientationSensor: AbsoluteOrientationSensor() constructor"
+short-title: AbsoluteOrientationSensor()
 slug: Web/API/AbsoluteOrientationSensor/AbsoluteOrientationSensor
 page-type: web-api-constructor
 browser-compat: api.AbsoluteOrientationSensor.AbsoluteOrientationSensor

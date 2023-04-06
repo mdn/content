@@ -76,4 +76,4 @@ asyncGen.throw(new Error('Something went wrong'))    // Error: Something went wr
 ## See also
 
 - {{jsxref("Statements/async_function*", "async function*")}}
-- [Iterators and generators](/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators)
+- [Iterators and generators](/en-US/docs/Web/JavaScript/Guide/Iterators_and_generators)

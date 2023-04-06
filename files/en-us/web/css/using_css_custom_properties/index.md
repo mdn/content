@@ -12,6 +12,8 @@ Complex websites have very large amounts of CSS, often with a lot of repeated va
 
 Custom properties are subject to the cascade and inherit their value from their parent.
 
+> **Note:** Variables do not work inside media queries and container queries. The {{cssxref("var", "var()")}} function can be used in place of any part of a value in any property on an element. The {{cssxref("var", "var()")}} function cannot be used as property names, selectors, or anything else besides property values. So, we can't use it in a media query or container query.
+
 ## Basic usage
 
 Declaring a custom property is done using a custom property name that begins with a double hyphen (`--`), and a property value that can be any valid CSS value. Like any other property, this is written inside a ruleset, like so:

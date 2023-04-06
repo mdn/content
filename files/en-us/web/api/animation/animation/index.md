@@ -1,5 +1,6 @@
 ---
-title: Animation()
+title: "Animation: Animation() constructor"
+short-title: Animation()
 slug: Web/API/Animation/Animation
 page-type: web-api-constructor
 browser-compat: api.Animation.Animation

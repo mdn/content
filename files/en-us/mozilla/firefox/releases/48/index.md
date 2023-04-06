@@ -76,7 +76,7 @@ slug: Mozilla/Firefox/Releases/48
 
 - The deprecated [old Proxy API](/en-US/docs/Archive/Web/Old_Proxy_API) (`Proxy.create` and `Proxy.createFunction()`) has been removed. Use the standard {{jsxref("Proxy")}} object instead ([Firefox bug 892903](https://bugzil.la/892903)).
 - The `String.prototype.contains()` method has been removed (it was deprecated since version 40). Use the {{jsxref("String.prototype.includes()")}} method instead ([Firefox bug 1103588](https://bugzil.la/1103588)).
-- The non-standard `RegExp.multiline` property (not {{jsxref("RegExp.prototype.multiline")}}) has been removed. Use the standard [m flag](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions#advanced_searching_with_flags) instead ([Firefox bug 1219757](https://bugzil.la/1219757)).
+- The non-standard `RegExp.multiline` property (not {{jsxref("RegExp.prototype.multiline")}}) has been removed. Use the standard [m flag](/en-US/docs/Web/JavaScript/Guide/Regular_expressions#advanced_searching_with_flags) instead ([Firefox bug 1219757](https://bugzil.la/1219757)).
 - The [`Object.prototype.__defineGetter__()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__) and [`Object.prototype.__defineSetter__()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineSetter__) methods can no longer be called at the global scope without any object. ([Firefox bug 1253016](https://bugzil.la/1253016)).
 
 ### Interfaces/APIs/DOM

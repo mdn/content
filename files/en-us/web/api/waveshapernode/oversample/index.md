@@ -25,7 +25,7 @@ One of `'none'`, `'2x'`, or `'4x'`.
 
 ## Examples
 
-See [`BaseAudioContext.createWaveShaper()`](/en-US/docs/Web/API/BaseAudioContext/createWaveShaper#example) for example code.
+See [`BaseAudioContext.createWaveShaper()`](/en-US/docs/Web/API/BaseAudioContext/createWaveShaper#examples) for example code.
 
 ## Specifications
 

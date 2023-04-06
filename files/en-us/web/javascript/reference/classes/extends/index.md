@@ -108,6 +108,7 @@ console.log(new ParentClass()); // ParentClass {}
 
 class ChildClass extends ParentClass {
   constructor() {
+    super();
     return 1;
   }
 }
@@ -342,7 +343,8 @@ In this case, the `ReadOnlyMap` class is not a subclass of `Map`, but it still i
 
 ## See also
 
+- [Using classes](/en-US/docs/Web/JavaScript/Guide/Using_classes)
 - [Classes](/en-US/docs/Web/JavaScript/Reference/Classes)
-- [`constructor`](/en-US/docs/Web/JavaScript/Reference/Classes/constructor)
-- [`super`](/en-US/docs/Web/JavaScript/Reference/Operators/super)
-- [Anurag Majumdar - Super & Extends in JavaScript](https://medium.com/beginners-guide-to-mobile-web-development/super-and-extends-in-javascript-es6-understanding-the-tough-parts-6120372d3420)
+- {{jsxref("Classes/constructor", "constructor")}}
+- {{jsxref("Statements/class", "class")}}
+- {{jsxref("Operators/super", "super")}}

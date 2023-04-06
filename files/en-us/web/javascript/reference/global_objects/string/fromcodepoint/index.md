@@ -31,8 +31,8 @@ A string created by using the specified sequence of code points.
 
 ### Exceptions
 
-- A {{jsxref("Errors/Not_a_codepoint", "RangeError")}} is thrown if an invalid Unicode
-  code point is given (e.g. `"RangeError: NaN is not a valid code point"`).
+- {{jsxref("RangeError")}}
+  - : Thrown if an invalid Unicode code point is given.
 
 ## Description
 

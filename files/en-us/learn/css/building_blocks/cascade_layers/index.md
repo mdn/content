@@ -338,7 +338,7 @@ Inline styles are declared using the [`style` attribute](/en-US/docs/Web/HTML/Gl
 
 Animating styles have higher precedence than all normal styles, including inline normal styles.
 
-Important styles—property values that include the `!important` flag—take precedence over any styles previously mentioned on our list. They are sorted in reverse order of normal styles. Any important styles declared outside of a layer have less precedence than those declared within a layer. Important styles found within layers are also sorted in order of layer creation. For important styles, the last created layer has the lowest precedence, and the first created layer has the highest precedence among declared. layers.
+Important styles, that is, property values that include the `!important` flag, take precedence over any styles previously mentioned in our list. They are sorted in reverse order of normal styles. Any important styles declared outside of a layer have less precedence than those declared within a layer. Important styles found within layers are also sorted in order of layer creation. For important styles, the last created layer has the lowest precedence, and the first created layer has the highest precedence among declared layers.
 
 Inline important styles again have higher precedence than important styles declared elsewhere.
 
@@ -362,11 +362,11 @@ We included that first line for two reasons: first, so you could easily edit the
 
 To summarize:
 
-- The order of layers is the order in which the layers are created.
+- The order of precedence of layers is the order in which the layers are created.
 - Once created, there is no way to change the layer order.
-- Layer precedence or normal styles is the order in which the layers are created.
+- Layer precedence for normal styles is the order in which the layers are created.
 - Unlayered normal styles have precedence over normal layered styles.
-- Layer precedence or important styles is reversed, with earlier created layers having precedence.
+- Layer precedence for important styles is reversed, with earlier created layers having precedence.
 - All layered important styles have precedence over unlayered important (and normal) styles.
 - Normal inline styles take precedence over all normal styles, layered or not.
 - Important inline styles take precedence over all other styles, with the exception of styles being transitioned.

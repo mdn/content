@@ -1,5 +1,6 @@
 ---
-title: AnimationEvent.animationName
+title: "AnimationEvent: animationName property"
+short-title: animationName
 slug: Web/API/AnimationEvent/animationName
 page-type: web-api-instance-property
 browser-compat: api.AnimationEvent.animationName

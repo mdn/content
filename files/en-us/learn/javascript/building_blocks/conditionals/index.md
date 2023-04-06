@@ -359,7 +359,7 @@ function setWeather() {
 
 ## Ternary operator
 
-There is one final bit of syntax we want to introduce you to before we get you to play with some examples. The [ternary or conditional operator](/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator) is a small bit of syntax that tests a condition and returns one value/expression if it is `true`, and another if it is `false` — this can be useful in some situations, and can take up a lot less code than an `if...else` block if you have two choices that are chosen between via a `true`/`false` condition. The pseudocode looks like this:
+There is one final bit of syntax we want to introduce you to before we get you to play with some examples. The [ternary or conditional operator](/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_operator) is a small bit of syntax that tests a condition and returns one value/expression if it is `true`, and another if it is `false` — this can be useful in some situations, and can take up a lot less code than an `if...else` block if you have two choices that are chosen between via a `true`/`false` condition. The pseudocode looks like this:
 
 ```
 condition ? run this code : run this code instead
@@ -846,6 +846,6 @@ And that's all you really need to know about conditional structures in JavaScrip
 - [Comparison operators](/en-US/docs/Learn/JavaScript/First_steps/Math#comparison_operators)
 - [Conditional statements in detail](/en-US/docs/Web/JavaScript/Guide/Control_flow_and_error_handling#conditional_statements)
 - [if...else reference](/en-US/docs/Web/JavaScript/Reference/Statements/if...else)
-- [Conditional (ternary) operator reference](/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator)
+- [Conditional (ternary) operator reference](/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_operator)
 
 {{NextMenu("Learn/JavaScript/Building_blocks/Looping_code", "Learn/JavaScript/Building_blocks")}}
