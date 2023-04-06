@@ -1,5 +1,5 @@
 ---
-title: "Image: Image() constructor"
+title: "HTMLImageElement: Image() constructor"
 short-title: Image()
 slug: Web/API/HTMLImageElement/Image
 page-type: web-api-constructor
