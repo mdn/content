@@ -3,6 +3,8 @@ title: Making PWAs installable
 slug: Web/Progressive_web_apps/Guides/Making_PWAs_installable
 ---
 
+{{PWASidebar}}
+
 One of the defining aspects of a PWA is that it can be installed on the device, and then appears to users as a platform-specific app, a permanent feature of their device which they can launch directly from the operating system like any other app.
 
 We can summarize this as follows:

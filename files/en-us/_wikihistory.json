@@ -125022,102 +125022,13 @@
       "stephaniehobson"
     ]
   },
-  "Web/Progressive_web_apps/Add_to_home_screen": {
-    "modified": "2020-06-25T08:39:36.844Z",
-    "contributors": [
-      "atjn",
-      "SphinxKnight",
-      "kittiphophum18",
-      "alfred_chao95",
-      "mfuji09",
-      "9999472",
-      "chrisdavidmills",
-      "HolgerJeromin",
-      "Sheppy",
-      "jamesdhurd",
-      "andreasbovens"
-    ]
-  },
-  "Web/Progressive_web_apps/App_structure": {
-    "modified": "2020-08-24T13:46:24.412Z",
-    "contributors": [
-      "Audaciter",
-      "mfuji09",
-      "chrisdavidmills",
-      "jncraton",
-      "end3r",
-      "jswisher"
-    ]
-  },
-  "Web/Progressive_web_apps/Installable_PWAs": {
-    "modified": "2020-08-25T10:28:50.283Z",
-    "contributors": [
-      "timvisee",
-      "Sheppy",
-      "poum",
-      "chrisdavidmills",
-      "ExE-Boss",
-      "end3r",
-      "jswisher"
-    ]
+  "Web/Progressive_web_apps/Guides/Structural_overview": {
+    "modified": "2020-06-11T10:44:58.956Z",
+    "contributors": ["Sheppy"]
   },
   "Web/Progressive_web_apps/Installing": {
     "modified": "2020-04-02T10:35:45.217Z",
     "contributors": ["Sheppy"]
-  },
-  "Web/Progressive_web_apps/Introduction": {
-    "modified": "2020-08-27T10:15:43.037Z",
-    "contributors": [
-      "ramataboee",
-      "Sheppy",
-      "jamesnuanez",
-      "matthevv1",
-      "Akagutz",
-      "mfuji09",
-      "brainlessdeveloper",
-      "chrisdavidmills",
-      "Hrushikesh27",
-      "poshaughnessy",
-      "end3r",
-      "jswisher",
-      "alfredmyers"
-    ]
-  },
-  "Web/Progressive_web_apps/Loading": {
-    "modified": "2019-11-04T15:23:53.603Z",
-    "contributors": [
-      "mfuji09",
-      "mayeedwin",
-      "chrisdavidmills",
-      "thomasweld",
-      "end3r"
-    ]
-  },
-  "Web/Progressive_web_apps/Offline_Service_workers": {
-    "modified": "2020-11-12T13:26:33.019Z",
-    "contributors": [
-      "Rumyra",
-      "Audaciter",
-      "mfuji09",
-      "chrisdavidmills",
-      "mayeedwin",
-      "gitgrimbo",
-      "oats",
-      "jasper-ballantyne",
-      "end3r",
-      "jswisher"
-    ]
-  },
-  "Web/Progressive_web_apps/Re-engageable_Notifications_Push": {
-    "modified": "2020-05-31T18:37:44.745Z",
-    "contributors": [
-      "chrisdavidmills",
-      "mfuji09",
-      "hiraku",
-      "slacktracer",
-      "end3r",
-      "jswisher"
-    ]
   },
   "Web/Progressive_web_apps/Responsive/Graphics_for_responsive_sites": {
     "modified": "2019-03-18T20:52:26.499Z",
@@ -125164,9 +125075,82 @@
       "tregagnon"
     ]
   },
-  "Web/Progressive_web_apps/Structural_overview": {
-    "modified": "2020-06-11T10:44:58.956Z",
-    "contributors": ["Sheppy"]
+  "Web/Progressive_web_apps/Tutorials/js13kGames/App_structure": {
+    "modified": "2020-08-24T13:46:24.412Z",
+    "contributors": [
+      "Audaciter",
+      "mfuji09",
+      "chrisdavidmills",
+      "jncraton",
+      "end3r",
+      "jswisher"
+    ]
+  },
+  "Web/Progressive_web_apps/Tutorials/js13kGames/Installable_PWAs": {
+    "modified": "2020-08-25T10:28:50.283Z",
+    "contributors": [
+      "timvisee",
+      "Sheppy",
+      "poum",
+      "chrisdavidmills",
+      "ExE-Boss",
+      "end3r",
+      "jswisher"
+    ]
+  },
+  "Web/Progressive_web_apps/Tutorials/js13kGames/Introduction": {
+    "modified": "2020-08-27T10:15:43.037Z",
+    "contributors": [
+      "ramataboee",
+      "Sheppy",
+      "jamesnuanez",
+      "matthevv1",
+      "Akagutz",
+      "mfuji09",
+      "brainlessdeveloper",
+      "chrisdavidmills",
+      "Hrushikesh27",
+      "poshaughnessy",
+      "end3r",
+      "jswisher",
+      "alfredmyers"
+    ]
+  },
+  "Web/Progressive_web_apps/Tutorials/js13kGames/Loading": {
+    "modified": "2019-11-04T15:23:53.603Z",
+    "contributors": [
+      "mfuji09",
+      "mayeedwin",
+      "chrisdavidmills",
+      "thomasweld",
+      "end3r"
+    ]
+  },
+  "Web/Progressive_web_apps/Tutorials/js13kGames/Offline_Service_workers": {
+    "modified": "2020-11-12T13:26:33.019Z",
+    "contributors": [
+      "Rumyra",
+      "Audaciter",
+      "mfuji09",
+      "chrisdavidmills",
+      "mayeedwin",
+      "gitgrimbo",
+      "oats",
+      "jasper-ballantyne",
+      "end3r",
+      "jswisher"
+    ]
+  },
+  "Web/Progressive_web_apps/Tutorials/js13kGames/Re-engageable_Notifications_Push": {
+    "modified": "2020-05-31T18:37:44.745Z",
+    "contributors": [
+      "chrisdavidmills",
+      "mfuji09",
+      "hiraku",
+      "slacktracer",
+      "end3r",
+      "jswisher"
+    ]
   },
   "Web/SVG": {
     "modified": "2020-06-30T16:21:34.804Z",

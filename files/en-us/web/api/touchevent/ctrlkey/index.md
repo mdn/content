@@ -17,7 +17,7 @@ A boolean value that is `true` if the <kbd>control</kbd> key is enabled for this
 
 ## Examples
 
-The [TouchEvent.altKey example](/en-US/docs/Web/API/TouchEvent/altKey#example) includes an example of this property's usage.
+The [TouchEvent.altKey example](/en-US/docs/Web/API/TouchEvent/altKey#examples) includes an example of this property's usage.
 
 ## Specifications
 
