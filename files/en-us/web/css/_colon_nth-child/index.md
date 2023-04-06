@@ -11,7 +11,7 @@ The **`:nth-child()`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web
 
 {{EmbedInteractiveExample("pages/tabbed/pseudo-class-nth-child.html", "tabbed-shorter")}}
 
-Note that, in the `element:nth-child()` syntax, the child count includes children of any element type; but it is considered a match only if the element _at that child position_ is of the specified element type.
+> **Note:** In the `element:nth-child()` syntax, the child count includes children of any element type; but it is considered a match only if the element _at that child position_ is of the specified element type.
 
 ## Syntax
 
@@ -44,7 +44,7 @@ Note that, in the `element:nth-child()` syntax, the child count includes childre
 
 ### The `of <selector>` syntax
 
-By passing a selector argument, we can select the **nth** element that matches that selector. For example, the following selector matches the first three _important_ list items, assigned with `class="important"`.
+By passing a selector argument, we can select the **nth** element that matches that selector. For example, the following selector matches the first three _important_ list items, which are assigned with `class="important"`.
 
 ```css
 :nth-child(-n+3 of li.important) ;
@@ -176,7 +176,7 @@ div em {
 
 {{EmbedLiveSample('Detailed_example', 550, 550)}}
 
-### of selector syntax
+### of selector syntax example
 
 In this example there is an unordered list of names, some of them have been marked as **noted** using `class="noted"`. These have been highlighted with a thick bottom border.
 
@@ -248,7 +248,7 @@ Here you can see that items 1, 3, 7, 10, 14, 17 and 20 have a thick bottom borde
 
 Items 3, 10 and 17 have a solid background as they are the even list items with `class="noted"`.
 
-{{EmbedLiveSample('of_selector_syntax', 550, 120)}}
+{{EmbedLiveSample('of_selector_syntax_example', 550, 120)}}
 
 ### of selector syntax vs selector nth-child
 
