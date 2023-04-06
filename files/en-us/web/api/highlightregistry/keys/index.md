@@ -1,5 +1,6 @@
 ---
-title: HighlightRegistry.keys()
+title: "HighlightRegistry: keys() method"
+short-title: keys()
 slug: Web/API/HighlightRegistry/keys
 page-type: web-api-instance-method
 status:

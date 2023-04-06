@@ -1,5 +1,6 @@
 ---
-title: HTMLImageElement.align
+title: "HTMLImageElement: align property"
+short-title: align
 slug: Web/API/HTMLImageElement/align
 page-type: web-api-instance-property
 status:

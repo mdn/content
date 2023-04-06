@@ -1,5 +1,6 @@
 ---
-title: HTMLFormElement.action
+title: "HTMLFormElement: action property"
+short-title: action
 slug: Web/API/HTMLFormElement/action
 page-type: web-api-instance-property
 browser-compat: api.HTMLFormElement.action

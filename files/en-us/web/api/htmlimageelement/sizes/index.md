@@ -1,5 +1,6 @@
 ---
-title: HTMLImageElement.sizes
+title: "HTMLImageElement: sizes property"
+short-title: sizes
 slug: Web/API/HTMLImageElement/sizes
 page-type: web-api-instance-property
 browser-compat: api.HTMLImageElement.sizes

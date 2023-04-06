@@ -1,5 +1,6 @@
 ---
-title: HTMLInputElement.files
+title: "HTMLInputElement: files property"
+short-title: files
 slug: Web/API/HTMLInputElement/files
 page-type: web-api-instance-property
 browser-compat: api.HTMLInputElement.files
