@@ -100,7 +100,7 @@ Combined with the corresponding `mouseleave` (which is fired at the element when
 
 ## Examples
 
-The [`mouseover`](/en-US/docs/Web/API/Element/mouseover_event#example) documentation has an example illustrating the difference between `mouseover` and `mouseenter`.
+The [`mouseover`](/en-US/docs/Web/API/Element/mouseover_event#examples) documentation has an example illustrating the difference between `mouseover` and `mouseenter`.
 
 ### mouseenter
 

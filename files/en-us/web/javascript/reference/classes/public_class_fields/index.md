@@ -150,7 +150,7 @@ const instance2 = new DerivedWithConstructor(); // Logs 1
 
 ## See also
 
-- [Using classes](/en-US/docs/Web/JavaScript/Guide/Using_Classes)
+- [Using classes](/en-US/docs/Web/JavaScript/Guide/Using_classes)
 - [Classes](/en-US/docs/Web/JavaScript/Reference/Classes)
 - [Private class features](/en-US/docs/Web/JavaScript/Reference/Classes/Private_class_fields)
 - {{jsxref("Statements/class", "class")}}

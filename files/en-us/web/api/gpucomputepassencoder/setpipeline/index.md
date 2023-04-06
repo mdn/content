@@ -29,7 +29,7 @@ None ({{jsxref("Undefined")}}).
 
 ## Examples
 
-In our [basic compute demo](https://mdn.github.io/dom-examples/webgpu-compute-demo/), several commands are recorded via a {{domxref("GPUCommandEncoder")}}. Most of these commands originate from the {{domxref("GPUComputePassEncoder")}} created via `beginComputePass()`. The `setPipeeline()` call is used as appropriate to set the pipeline to use for this pass.
+In our [basic compute demo](https://mdn.github.io/dom-examples/webgpu-compute-demo/), several commands are recorded via a {{domxref("GPUCommandEncoder")}}. Most of these commands originate from the {{domxref("GPUComputePassEncoder")}} created via `beginComputePass()`. The `setPipeline()` call is used as appropriate to set the pipeline to use for this pass.
 
 ```js
 const BUFFER_SIZE = 1000;

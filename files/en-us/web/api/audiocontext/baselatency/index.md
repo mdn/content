@@ -1,5 +1,6 @@
 ---
-title: AudioContext.baseLatency
+title: "AudioContext: baseLatency property"
+short-title: baseLatency
 slug: Web/API/AudioContext/baseLatency
 page-type: web-api-instance-property
 browser-compat: api.AudioContext.baseLatency

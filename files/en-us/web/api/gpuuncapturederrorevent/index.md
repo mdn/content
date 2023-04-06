@@ -24,7 +24,7 @@ Known error cases should be handled using {{domxref("GPUDevice.pushErrorScope", 
 
 _Inherits properties from its parent, {{domxref("Event")}}._
 
-- {{domxref("GPUUncapturedErrorEvent.error", "error")}} {{Experimental_Inline}} {{readonlyinline}}
+- {{domxref("GPUUncapturedErrorEvent.error", "error")}} {{Experimental_Inline}} {{ReadOnlyInline}}
   - : A {{domxref("GPUError")}} object instance providing access to the details of the error.
 
 ## Examples

@@ -1,5 +1,6 @@
 ---
-title: AudioListener.upY
+title: "AudioListener: upY property"
+short-title: upY
 slug: Web/API/AudioListener/upY
 page-type: web-api-instance-property
 browser-compat: api.AudioListener.upY

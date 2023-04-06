@@ -1,5 +1,6 @@
 ---
-title: AudioWorkletGlobalScope.sampleRate
+title: "AudioWorkletGlobalScope: sampleRate property"
+short-title: sampleRate
 slug: Web/API/AudioWorkletGlobalScope/sampleRate
 page-type: web-api-instance-property
 browser-compat: api.AudioWorkletGlobalScope.sampleRate
