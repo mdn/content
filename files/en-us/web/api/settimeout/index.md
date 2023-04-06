@@ -434,7 +434,7 @@ function clearMessage() {
 
 {{EmbedLiveSample('Setting_and_clearing_timeouts')}}
 
-See also the [`clearTimeout()` example](/en-US/docs/Web/API/clearTimeout#example).
+See also the [`clearTimeout()` example](/en-US/docs/Web/API/clearTimeout#examples).
 
 ## Specifications
 

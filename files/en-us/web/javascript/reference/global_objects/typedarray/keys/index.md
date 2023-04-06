@@ -7,8 +7,7 @@ browser-compat: javascript.builtins.TypedArray.keys
 
 {{JSRef}}
 
-The **`keys()`** method returns a new _array iterator_ object
-that contains the keys for each index in the array.
+The **`keys()`** method returns a new _[array iterator](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator)_ object that contains the keys for each index in the array.
 
 {{EmbedInteractiveExample("pages/js/typedarray-keys.html")}}
 
@@ -20,7 +19,7 @@ keys()
 
 ### Return value
 
-A new _array iterator_ object.
+A new [iterable iterator object](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator).
 
 ## Examples
 

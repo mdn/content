@@ -1,5 +1,6 @@
 ---
-title: AnalyserNode.getByteTimeDomainData()
+title: "AnalyserNode: getByteTimeDomainData() method"
+short-title: getByteTimeDomainData()
 slug: Web/API/AnalyserNode/getByteTimeDomainData
 page-type: web-api-instance-method
 browser-compat: api.AnalyserNode.getByteTimeDomainData

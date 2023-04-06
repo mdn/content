@@ -9,6 +9,8 @@ browser-compat: javascript.builtins.Generator
 
 The **`Generator`** object is returned by a {{JSxRef("Statements/function*", "generator function", "", 1)}} and it conforms to both the [iterable protocol](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterable_protocol) and the [iterator protocol](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterator_protocol).
 
+`Generator` is a subclass of the hidden {{jsxref("Iterator")}} class.
+
 {{EmbedInteractiveExample("pages/js/expressions-functionasteriskexpression.html", "taller")}}
 
 ## Constructor
@@ -29,6 +31,8 @@ console.log(gen.next().value); // 2
 console.log(gen.next().value); // 3
 ```
 
+In fact, there's no JavaScript entity that corresponds to the `Generator` constructor. There's only a hidden object which is the prototype object shared by all objects created by generator functions. This object is often stylized as `Generator.prototype` to make it look like a class, but it should be more appropriately called [`GeneratorFunction.prototype.prototype`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/GeneratorFunction), because `GeneratorFunction` is an actual JavaScript entity.
+
 ## Instance properties
 
 These properties are defined on `Generator.prototype` and shared by all `Generator` instances.
@@ -43,6 +47,8 @@ These properties are defined on `Generator.prototype` and shared by all `Generat
   - : The initial value of the [`@@toStringTag`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) property is the string `"Generator"`. This property is used in {{jsxref("Object.prototype.toString()")}}.
 
 ## Instance methods
+
+_Also inherits instance methods from its parent {{jsxref("Iterator")}}_.
 
 - {{JSxRef("Generator.prototype.next()")}}
   - : Returns a value yielded by the {{JSxRef("Operators/yield", "yield")}} expression.

@@ -30,9 +30,9 @@ A string representing the given number using fixed-point notation.
 ### Exceptions
 
 - {{jsxref("RangeError")}}
-  - : If `digits` is smaller than `0`, larger than `100`, or is `NaN`.
+  - : Thrown if `digits` is not between `1` and `100` (inclusive).
 - {{jsxref("TypeError")}}
-  - : If this method is invoked on an object that is not a {{jsxref("Number")}}.
+  - : Thrown if this method is invoked on an object that is not a {{jsxref("Number")}}.
 
 ## Description
 
@@ -79,7 +79,7 @@ numObj.toFixed(6); // '12345.678900'; additional zeros
 
 ### Using toFixed() with negative numbers
 
-Because member access has higher [precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence) than unary minus, you need to group the negative number expression to get a string.
+Because member access has higher [precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_precedence) than unary minus, you need to group the negative number expression to get a string.
 
 ```js
 -2.34.toFixed(1); // -2.3, a number

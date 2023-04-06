@@ -1,5 +1,6 @@
 ---
-title: AudioParam.setTargetAtTime()
+title: "AudioParam: setTargetAtTime() method"
+short-title: setTargetAtTime()
 slug: Web/API/AudioParam/setTargetAtTime
 page-type: web-api-instance-method
 browser-compat: api.AudioParam.setTargetAtTime

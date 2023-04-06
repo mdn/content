@@ -41,7 +41,7 @@ None ({{jsxref("undefined")}}).
 
 ## Examples
 
-See [`DataTransferItem.webkitGetAsEntry()`](/en-US/docs/Web/API/DataTransferItem/webkitGetAsEntry#example) for example code that uses this method.
+See [`DataTransferItem.webkitGetAsEntry()`](/en-US/docs/Web/API/DataTransferItem/webkitGetAsEntry#examples) for example code that uses this method.
 
 ## Specifications
 

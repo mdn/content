@@ -31,7 +31,7 @@ None ({{jsxref("undefined")}}).
 
 ## Examples
 
-See the [example](/en-US/docs/Web/API/Element/setCapture#example) for
+See the [example](/en-US/docs/Web/API/Element/setCapture#examples) for
 {{domxref("element.setCapture()")}}.
 
 ## Specifications
