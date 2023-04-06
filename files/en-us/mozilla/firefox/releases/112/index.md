@@ -63,7 +63,7 @@ This article provides information about the changes in Firefox 112 that affect d
 
 - Implemented the `browsingContext.print` command, which allows clients to request a rendered PDF document of the browsing context, represented as a Base64-encoded string. See [Firefox bug 1806810](https://bugzil.la/1806810) for more details.
 - Implemented `script.addPreloadScript` and `script.removePreloadScript` commands, which let test clients inject a functionality that's guaranteed to be available for any content scripts that are subsequently loaded, and before any later scripts that WebDriver injects into the context. See [Firefox bug 1806420](https://bugzil.la/1806420) and [Firefox bug 1806465](https://bugzil.la/1806465) for more details.
-- `Element` and `ShadowRoot` references as stored in the node cache can now be used n both Marionette and WebDriver BiDi by their exact same unique reference. See [Firefox bug 1770733](https://bugzil.la/1770733) for more details.
+- `Element` and `ShadowRoot` references as stored in the node cache can now be used in both Marionette and WebDriver BiDi by their exact same unique reference. See [Firefox bug 1770733](https://bugzil.la/1770733) for more details.
 - Removed `isRedirect` from the network events base parameters ([Firefox bug 1819875](https://bugzil.la/1819875)).
 
 #### Marionette
