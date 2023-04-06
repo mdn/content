@@ -1,7 +1,7 @@
 ---
 title: Functions
 slug: Web/JavaScript/Reference/Functions
-page-type: landing-page
+page-type: guide
 browser-compat: javascript.functions
 ---
 

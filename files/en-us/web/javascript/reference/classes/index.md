@@ -1,7 +1,7 @@
 ---
 title: Classes
 slug: Web/JavaScript/Reference/Classes
-page-type: landing-page
+page-type: guide
 browser-compat: javascript.classes
 ---
 
