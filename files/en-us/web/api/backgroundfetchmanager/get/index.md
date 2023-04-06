@@ -20,7 +20,7 @@ get(id)
 ### Parameters
 
 - `id`
-  - : the ID of a {{domxref("backgroundFetchRegistration")}} defined by calling {{domxref("BackgroundFetchRegistration.fetch","fetch()")}}.
+  - : the ID of a {{domxref("backgroundFetchRegistration")}} defined by calling {{domxref("BackgroundFetchRegistrationManager.fetch","fetch()")}}.
 
 ### Return value
 
