@@ -1,5 +1,6 @@
 ---
-title: GPUBuffer.mapState
+title: "GPUBuffer: mapState property"
+short-title: mapState
 slug: Web/API/GPUBuffer/mapState
 page-type: web-api-instance-property
 status:

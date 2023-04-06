@@ -1,5 +1,6 @@
 ---
-title: GPURenderPassEncoder.pushDebugGroup()
+title: "GPURenderPassEncoder: pushDebugGroup() method"
+short-title: pushDebugGroup()
 slug: Web/API/GPURenderPassEncoder/pushDebugGroup
 page-type: web-api-instance-method
 status:

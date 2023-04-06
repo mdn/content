@@ -1,5 +1,6 @@
 ---
-title: GPUPipelineError.reason
+title: "GPUPipelineError: reason property"
+short-title: reason
 slug: Web/API/GPUPipelineError/reason
 page-type: web-api-instance-property
 status:

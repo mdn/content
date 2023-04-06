@@ -1,5 +1,6 @@
 ---
-title: GPURenderBundleEncoder.setIndexBuffer()
+title: "GPURenderBundleEncoder: setIndexBuffer() method"
+short-title: setIndexBuffer()
 slug: Web/API/GPURenderBundleEncoder/setIndexBuffer
 page-type: web-api-instance-method
 status:

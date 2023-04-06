@@ -1,5 +1,6 @@
 ---
-title: GPUDevice.popErrorScope()
+title: "GPUDevice: popErrorScope() method"
+short-title: popErrorScope()
 slug: Web/API/GPUDevice/popErrorScope
 page-type: web-api-instance-method
 status:

@@ -1,5 +1,6 @@
 ---
-title: GPUComputePassEncoder.popDebugGroup()
+title: "GPUComputePassEncoder: popDebugGroup() method"
+short-title: popDebugGroup()
 slug: Web/API/GPUComputePassEncoder/popDebugGroup
 page-type: web-api-instance-method
 status:

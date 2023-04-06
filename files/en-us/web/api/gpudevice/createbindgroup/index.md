@@ -1,5 +1,6 @@
 ---
-title: GPUDevice.createBindGroup()
+title: "GPUDevice: createBindGroup() method"
+short-title: createBindGroup()
 slug: Web/API/GPUDevice/createBindGroup
 page-type: web-api-instance-method
 status:

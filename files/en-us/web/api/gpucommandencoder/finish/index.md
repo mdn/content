@@ -1,5 +1,6 @@
 ---
-title: GPUCommandEncoder.finish()
+title: "GPUCommandEncoder: finish() method"
+short-title: finish()
 slug: Web/API/GPUCommandEncoder/finish
 page-type: web-api-instance-method
 status:

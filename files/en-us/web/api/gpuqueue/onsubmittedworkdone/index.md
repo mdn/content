@@ -1,5 +1,6 @@
 ---
-title: GPUQueue.onSubmittedWorkDone()
+title: "GPUQueue: onSubmittedWorkDone() method"
+short-title: onSubmittedWorkDone()
 slug: Web/API/GPUQueue/onSubmittedWorkDone
 page-type: web-api-instance-method
 status:

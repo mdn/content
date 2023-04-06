@@ -1,5 +1,6 @@
 ---
-title: GPUQuerySet.count
+title: "GPUQuerySet: count property"
+short-title: count
 slug: Web/API/GPUQuerySet/count
 page-type: web-api-instance-property
 status:

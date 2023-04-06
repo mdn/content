@@ -1,5 +1,6 @@
 ---
-title: Headers.get()
+title: "Headers: get() method"
+short-title: get()
 slug: Web/API/Headers/get
 page-type: web-api-instance-method
 browser-compat: api.Headers.get

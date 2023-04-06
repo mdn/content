@@ -1,5 +1,6 @@
 ---
-title: GPUTextureView.label
+title: "GPUTextureView: label property"
+short-title: label
 slug: Web/API/GPUTextureView/label
 page-type: web-api-instance-property
 status:

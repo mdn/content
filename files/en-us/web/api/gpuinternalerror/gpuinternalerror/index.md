@@ -1,5 +1,6 @@
 ---
-title: GPUInternalError()
+title: "GPUInternalError: GPUInternalError() constructor"
+short-title: GPUInternalError()
 slug: Web/API/GPUInternalError/GPUInternalError
 page-type: web-api-constructor
 status:

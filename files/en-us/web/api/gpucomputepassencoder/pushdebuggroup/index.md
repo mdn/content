@@ -1,5 +1,6 @@
 ---
-title: GPUComputePassEncoder.pushDebugGroup()
+title: "GPUComputePassEncoder: pushDebugGroup() method"
+short-title: pushDebugGroup()
 slug: Web/API/GPUComputePassEncoder/pushDebugGroup
 page-type: web-api-instance-method
 status:
