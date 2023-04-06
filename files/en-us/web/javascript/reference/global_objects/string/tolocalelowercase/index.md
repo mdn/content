@@ -31,10 +31,10 @@ locale-specific case mappings.
 
 ### Exceptions
 
-- A {{jsxref("RangeError")}} ("invalid language tag: xx_yy") is thrown if a
-  `locale` argument isn't a valid language tag.
-- A {{jsxref("TypeError")}} ("invalid element in locales argument") is thrown if an
-  array element isn't of type string.
+- {{jsxref("RangeError")}}
+  - : Thrown if a `locale` argument isn't a valid language tag.
+- {{jsxref("TypeError")}}
+  - : Thrown if an array element isn't of type string.
 
 ## Description
 
