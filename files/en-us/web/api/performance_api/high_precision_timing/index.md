@@ -67,8 +67,8 @@ To offer protection against timing attacks and [fingerprinting](/en-US/docs/Glos
 - Resolution in isolated contexts: 5 microseconds
 - Resolution in non-isolated contexts: 100 microseconds
 
-To apply cross-origin isolation to your site, use the {{HTTPHeader("Cross-Origin-Opener-Policy")}} and
-{{HTTPHeader("Cross-Origin-Embedder-Policy")}} headers:
+To apply cross-origin isolation to your site, use the {{HTTPHeader("Cross-Origin-Opener-Policy")}} (COOP) and
+{{HTTPHeader("Cross-Origin-Embedder-Policy")}} (COEP) headers:
 
 ```http
 Cross-Origin-Opener-Policy: same-origin
@@ -76,7 +76,7 @@ Cross-Origin-Embedder-Policy: require-corp
 ```
 
 These headers ensure a top-level document does not share a browsing context group with
-cross-origin documents. COOP process-isolates your document and potential attackers
+cross-origin documents. {{HTTPHeader("Cross-Origin-Opener-Policy")}} process-isolates your document and potential attackers
 can't access to your global object if they were opening it in a popup, preventing a set
 of cross-origin attacks dubbed [XS-Leaks](https://github.com/xsleaks/xsleaks).
 
