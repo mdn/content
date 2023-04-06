@@ -1,5 +1,6 @@
 ---
-title: CSS.paintWorklet (Static property)
+title: "CSS: paintWorklet (Static property) static property"
+short-title: paintWorklet (Static property)
 slug: Web/API/CSS/paintWorklet
 page-type: web-api-static-property
 status:

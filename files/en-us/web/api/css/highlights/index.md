@@ -1,5 +1,6 @@
 ---
-title: CSS.highlights
+title: "CSS: highlights static property"
+short-title: highlights
 slug: Web/API/CSS/highlights
 page-type: web-api-static-property
 status:

@@ -1,5 +1,6 @@
 ---
-title: CookieChangeEvent.deleted
+title: "CookieChangeEvent: deleted property"
+short-title: deleted
 slug: Web/API/CookieChangeEvent/deleted
 page-type: web-api-instance-property
 status:
