@@ -108,6 +108,7 @@ console.log(new ParentClass()); // ParentClass {}
 
 class ChildClass extends ParentClass {
   constructor() {
+    super();
     return 1;
   }
 }
