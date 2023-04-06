@@ -9,6 +9,10 @@ browser-compat: webextensions.api.windows
 
 Interact with browser windows. You can use this API to get information about open windows and to open, modify, and close windows. You can also listen for window open, close, and activate events.
 
+>**Note**if you need to access the page's variables and functions, the process gets a little tricky.
+The variables and functions available in the page context, say in the window object, are not accessible to the content scripts since they tend to run in a special JavaScript environment. They have access to only the DOM of the page but not the variables and functions.To access a page's variables and functions, we inject scripts by appending them to the DOM. This makes the browser assume that it is run in the context of the web page. This in turn provides the injected script access to the local variables and functions.
+Since Chrome extensions are event-driven because of their architecture, once the injected scripts have access to the page's variables and functions, they can pass it to the content script.
+
 ## Types
 
 - {{WebExtAPIRef("windows.WindowType")}}
