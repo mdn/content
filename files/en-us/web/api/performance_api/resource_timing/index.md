@@ -6,11 +6,11 @@ page-type: web-api-overview
 
 {{DefaultAPISidebar("Performance API")}}
 
-Resource Timing is part of the Performance API and enables retrieving and analyzing detailed network timing data for the loading of an application's resources. An application can use the timing metrics to determine, for example, the length of time it takes to load a specific resource, such as a {{domxref("Fetch")}} request, an image, or a script.
+Resource Timing is part of the Performance API and enables retrieving and analyzing detailed network timing data for the loading of an application's resources. An application can use the timing metrics to determine, for example, the length of time it takes to load a specific resource (such as an image or a script) either implicitly as part of page load or explicitly from JavaScript, for example using the {{domxref("fetch()")}} API.
 
-All resources on a document will be represented by a {{domxref("PerformanceResourceTiming")}} entry (extending the {{domxref("PerformanceEntry")}} interface) with the {{domxref("PerformanceEntry.entryType","entryType")}} of `"resource"`.
+Every resource on a document will be represented by a {{domxref("PerformanceResourceTiming")}} entry (extending the {{domxref("PerformanceEntry")}} interface) with the {{domxref("PerformanceEntry.entryType","entryType")}} of `"resource"`.
 
-For each `PerformanceResourceTiming` entry, a _resource loading timeline_ with {{domxref("DOMHighResTimeStamp","high-resolution timestamps", "", 1)}} for network events such as redirect start and end times, DNS lookup start and end times, request start, response start and end times, etc. will be recorded. Besides the timestamps, other properties that provide information about the resource are included as well, such the size of the fetched resource, or the type of resource that initiated the fetch.
+For each `PerformanceResourceTiming` entry, a _resource loading timeline_ will be recorded, with {{domxref("DOMHighResTimeStamp","high-resolution timestamps", "", 1)}} for network events such as redirect start and end times, DNS lookup start and end times, request start, response start and end times, and so on. Besides the timestamps, other properties that provide information about the resource are included as well, such the size of the fetched resource, or the type of resource that initiated the fetch.
 
 ## Resource loading timestamps
 
@@ -21,11 +21,11 @@ An application can get timestamps for the various stages used to load a resource
 
 1. {{domxref("PerformanceEntry.startTime","startTime")}}: timestamp immediately before the resource loading process begins.
 2. {{domxref("PerformanceResourceTiming.redirectStart","redirectStart")}}: timestamp of the fetch which initiates the redirect.
-3. {{domxref("PerformanceResourceTiming.redirectEnd","redirectEnd")}}: timestamp immediately after receiving the last byte of the response of the last redirect.
+3. {{domxref("PerformanceResourceTiming.redirectEnd","redirectEnd")}}: timestamp immediately after receiving the last byte of the response to the last redirect.
 4. {{domxref('PerformanceResourceTiming.workerStart','workerStart')}}: if in worker context, timestamp when the worker was started.
 5. {{domxref("PerformanceResourceTiming.fetchStart","fetchStart")}}: timestamp immediately before the browser starts to fetch the resource.
 6. {{domxref("PerformanceResourceTiming.domainLookupStart","domainLookupStart")}}: timestamp immediately before the browser starts the domain name lookup for the resource.
-7. {{domxref("PerformanceResourceTiming.domainLookupEnd","domainLookupEnd")}}: timestamp immediately after the browser finishes the domain-name lookup for the resource.
+7. {{domxref("PerformanceResourceTiming.domainLookupEnd","domainLookupEnd")}}: timestamp immediately after the browser finishes the domain name lookup for the resource.
 8. {{domxref('PerformanceResourceTiming.connectStart','connectStart')}}: timestamp immediately before the user agent starts establishing the connection to the server to retrieve the resource.
 9. {{domxref('PerformanceResourceTiming.secureConnectionStart','secureConnectionStart')}}: If the resource is loaded via a secure connection, timestamp immediately before the browser starts the handshake process to secure the current connection.
 10. {{domxref('PerformanceResourceTiming.connectEnd','connectEnd')}}: timestamp immediately after the browser finishes establishing the connection to the server to retrieve the resource.
@@ -41,7 +41,7 @@ The {{domxref('PerformanceResourceTiming.encodedBodySize','encodedBodySize')}} p
 
 ## Other properties
 
-The {{domxref("PerformanceResourceTiming")}} interface provides [additional resources information](/en-US/docs/Web/API/PerformanceResourceTiming#additional_resource_information), consult the reference docs for the full list of properties.
+The {{domxref("PerformanceResourceTiming")}} interface provides [additional resources information](/en-US/docs/Web/API/PerformanceResourceTiming#additional_resource_information). Consult the reference docs for the full list of properties.
 
 ## Typical resource timing metrics
 
@@ -78,7 +78,7 @@ observer.observe({ type: "resource", buffered: true });
 
 When {{Glossary("CORS")}} is in effect, many of the timing properties' values are returned as zero unless the server's access policy permits these values to be shared. This requires the server providing the resource to send the {{httpheader("Timing-Allow-Origin")}} HTTP response header with a value specifying the origin or origins which are allowed to get the restricted timestamp values.
 
-The properties which are returned as 0 by default when loading a resource from a domain other than the one of the web page itself: `redirectStart`, `redirectEnd`, `domainLookupStart`, `domainLookupEnd`, `connectStart`, `connectEnd`, `secureConnectionStart`, `requestStart`, and `responseStart`.
+The properties which are returned as 0 by default when loading a resource from an origin other than the one of the web page itself: `redirectStart`, `redirectEnd`, `domainLookupStart`, `domainLookupEnd`, `connectStart`, `connectEnd`, `secureConnectionStart`, `requestStart`, and `responseStart`.
 
 For example, to allow `https://developer.mozilla.org` to see resource timing information, the cross-origin resource should send:
 

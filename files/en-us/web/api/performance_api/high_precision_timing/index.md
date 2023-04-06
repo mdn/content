@@ -12,7 +12,7 @@ This page provides an overview about how high precision time works within the Pe
 
 ## `DOMHighResTimeStamp`
 
-High precision timing is achieved by using the {{domxref("DOMHighResTimeStamp")}} type for time values. The unit is milliseconds and should be accurate to 5 µs (microseconds). However, if the browser is unable to provide a time value accurate to 5 microseconds, the browser can represent the value as a time in milliseconds accurate to a millisecond. This might occur because of hardware/software constraints, or security an privacy reasons. For more information, see the section on [reduced precision](#reduced_precision) below.
+High precision timing is achieved by using the {{domxref("DOMHighResTimeStamp")}} type for time values. The unit is milliseconds and should be accurate to 5 µs (microseconds). However, if the browser is unable to provide a time value accurate to 5 microseconds, the browser can represent the value as a time in milliseconds accurate to a millisecond. This might occur because of hardware/software constraints, or security and privacy reasons. For more information, see the section on [reduced precision](#reduced_precision) below.
 
 All timestamps in the Performance API use the {{domxref("DOMHighResTimeStamp")}} type. Previously, the Performance API (and other Web APIs) used the `EpochTimeStamp` type (previously known as `DOMTimeStamp`). These types are now discouraged.
 
@@ -67,7 +67,7 @@ To offer protection against timing attacks and [fingerprinting](/en-US/docs/Glos
 - Resolution in isolated contexts: 5 microseconds
 - Resolution in non-isolated contexts: 100 microseconds
 
-Cross-origin isolate your site using the {{HTTPHeader("Cross-Origin-Opener-Policy")}} and
+To apply cross-origin isolation to your site, use the {{HTTPHeader("Cross-Origin-Opener-Policy")}} and
 {{HTTPHeader("Cross-Origin-Embedder-Policy")}} headers:
 
 ```http

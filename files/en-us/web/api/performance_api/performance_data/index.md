@@ -6,7 +6,7 @@ page-type: guide
 
 {{DefaultAPISidebar("Performance API")}}
 
-The Performance API measures and exposes performance data that can be collected as performance metrics of your web application. It provides methods to observe aspects of application performance of browser features and Web APIs. It doesn't provide performance data analysis, visualizations, or stochastic evaluation. However, the Performance API is integrated well with developer tools in browsers and its data is often sent to analytics end points and libraries to record performance metrics which help you to evaluate the data as needed and find performance bottlenecks affecting your users.
+The Performance API measures and exposes performance data that can be collected as performance metrics for your web application. It provides methods to observe aspects of application performance. It doesn't provide performance data analysis, or visualizations. However, the Performance API is integrated well with developer tools in browsers and its data is often sent to analytics end points and libraries to record performance metrics which help you to evaluate the data to find performance bottlenecks affecting your users.
 
 This page provides an overview about what sorts of Performance API data exists, how it is collected, and how it can be accessed.
 
@@ -110,7 +110,7 @@ The `PerformanceObserver` option is preferred because:
 
 - The `getEntries*` methods will always return all relevant entries since the start of the timeline, so if you call it twice, you will see the same entries again and will need to filter out entries that you've seen before.
 - Observer notifications are delivered asynchronously, so the browser can dispatch them during idle time to minimize their performance impact.
-- Not all entry types work with the `getEntries*` methods. For `"element"`, `"event"`, `"largest-contentful-paint"`, `"layout-shift"`, and `"longtask"` you have to use performance observers to access them.
+- Not all entry types work with the `getEntries*` methods. For some you have to use performance observers to access them.
 
 ## Managing buffer sizes
 
@@ -134,7 +134,7 @@ Table 1. Buffer sizes ([source](https://w3c.github.io/timing-entrytypes-registry
 
 For `"resource"` entry types, see [Managing resource buffer sizes](/en-US/docs/Web/API/Performance_API/Resource_timing#managing_resource_buffer_sizes) for how to set a different buffer size.
 
-The [performance observer callback](/en-US/docs/Web/API/PerformanceObserver/PerformanceObserver) contains an optional `droppedEntriesCount` parameter that informs you about the amount of lost entries due to the buffer storage being full.
+The [performance observer callback](/en-US/docs/Web/API/PerformanceObserver/PerformanceObserver) contains an optional `droppedEntriesCount` parameter that tells you how many entries were lost because the buffer storage was full.
 
 ```js
 function perfObserver(list, observer, droppedEntriesCount) {
@@ -143,7 +143,7 @@ function perfObserver(list, observer, droppedEntriesCount) {
   });
   if (droppedEntriesCount > 0) {
     console.warn(
-      `${droppedEntriesCount} entries got dropped due to the buffer being full.`
+      `${droppedEntriesCount} entries were dropped because the buffer was full.`
     );
   }
 }
@@ -181,7 +181,7 @@ This would log a JSON object like so:
 }
 ```
 
-To get a JSON string, you can use [`JSON.stringify(entry)`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify) with any `PerformanceEntry` object directly; it will call the entry's `toJSON()` method automatically.
+To get a string representation of the entry, you can use [`JSON.stringify(entry)`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify) with any `PerformanceEntry` object directly; it will call the entry's `toJSON()` method automatically.
 
 ## See also
 

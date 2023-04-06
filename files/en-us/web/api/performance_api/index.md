@@ -85,7 +85,7 @@ The following guides help you to understand key concepts of the Performance API 
 - [Performance data](/en-US/docs/Web/API/Performance_API/Performance_data): Collecting, accessing, and working with performance data.
 - [High precision timing](/en-US/docs/Web/API/Performance_API/High_precision_timing): Measuring with high precision time and monotonic clocks.
 - [Resource timing](/en-US/docs/Web/API/Performance_API/Resource_timing): Measuring network timing for fetched resources, such as images, CSS, and JavaScript.
-- [Navigation timing](/en-US/docs/Web/API/Performance_API/navigation_timing): Measuring timing navigation of a document.
+- [Navigation timing](/en-US/docs/Web/API/Performance_API/Navigation_timing): Measuring navigation timing of a document.
 - [User timing](/en-US/docs/Web/API/Performance_API/User_timing): Measuring and recording performance data custom to your application.
 - Server timing
 - Paint timing
