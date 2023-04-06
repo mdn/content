@@ -22,7 +22,7 @@ An application can get timestamps for the various stages used to load a resource
 1. {{domxref("PerformanceEntry.startTime","startTime")}}: timestamp immediately before the resource loading process begins.
 2. {{domxref("PerformanceResourceTiming.redirectStart","redirectStart")}}: timestamp of the fetch which initiates the redirect.
 3. {{domxref("PerformanceResourceTiming.redirectEnd","redirectEnd")}}: timestamp immediately after receiving the last byte of the response to the last redirect.
-4. {{domxref('PerformanceResourceTiming.workerStart','workerStart')}}: if in worker context, timestamp when the worker was started.
+4. {{domxref('PerformanceResourceTiming.workerStart','workerStart')}}: timestamp immediately before starting the Service Worker thread.
 5. {{domxref("PerformanceResourceTiming.fetchStart","fetchStart")}}: timestamp immediately before the browser starts to fetch the resource.
 6. {{domxref("PerformanceResourceTiming.domainLookupStart","domainLookupStart")}}: timestamp immediately before the browser starts the domain name lookup for the resource.
 7. {{domxref("PerformanceResourceTiming.domainLookupEnd","domainLookupEnd")}}: timestamp immediately after the browser finishes the domain name lookup for the resource.
