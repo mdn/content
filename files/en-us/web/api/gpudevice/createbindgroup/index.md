@@ -28,7 +28,7 @@ createBindGroup(descriptor)
           - : A number representing a unique identifier for this resource binding, which matches the `binding` value of a corresponding {{domxref("GPUBindGroupLayout")}} entry. In addition, it corresponds to a [`@binding`](https://gpuweb.github.io/gpuweb/wgsl/#attribute-binding) attribute in the shader code contained in the {{domxref("GPUShaderModule")}} used in a related pipeline.
         - `resource`
           - : The resource to bind. This can be one of the following:
-            - `GPUBufferBinding` (which wraps a {{domxref("GPUBuffer")}}; see [GPUBufferBinding objects](/en-US/docs/Web/API/GPUDevice/createBindGroup#gpubufferbinding_objects) for a definition)
+            - `GPUBufferBinding` (which wraps a {{domxref("GPUBuffer")}}; see [GPUBufferBinding objects](#gpubufferbinding_objects) for a definition)
             - {{domxref("GPUExternalTexture")}}
             - {{domxref("GPUSampler")}}
             - {{domxref("GPUTextureView")}}

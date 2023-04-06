@@ -23,7 +23,7 @@ createBindGroupLayout(descriptor)
 - `descriptor`
   - : An object containing the following properties:
     - `entries`
-      - : An array of [entry objects](/en-US/docs/Web/API/GPUDevice/createBindGroupLayout#entry_objects), each one of which describes a single shader resource binding to be included in the {{domxref("GPUBindGroupLayout")}}. Each entry will correspond to an entry defined in a {{domxref("GPUBindGroup")}} (created via a {{domxref("Device.createBindGroup()")}} call) that uses this {{domxref("GPUBindGroupLayout")}} object as a template.
+      - : An array of [entry objects](#entry_objects), each one of which describes a single shader resource binding to be included in the {{domxref("GPUBindGroupLayout")}}. Each entry will correspond to an entry defined in a {{domxref("GPUBindGroup")}} (created via a {{domxref("GPUDevice.createBindGroup()")}} call) that uses this {{domxref("GPUBindGroupLayout")}} object as a template.
     - `label` {{optional_inline}}
       - : A string providing a label that can be used to identify the object, for example in {{domxref("GPUError")}} messages or console warnings.
 
