@@ -13,7 +13,7 @@ The **`return()`** method of a generator acts as if a `return` statement is inse
 
 <!-- We don't usually add the "generatorObject" subject for methods. However, it is necessary here, because "return" is a keyword, so otherwise it's invalid syntax. -->
 
-```js
+```js-nolint
 generatorObject.return(value)
 ```
 

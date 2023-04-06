@@ -58,7 +58,7 @@ _No specific method; inherits methods from its parent, {{domxref("AudioNode")}}_
 
 ## Example
 
-See [`BaseAudioContext.createStereoPanner()`](/en-US/docs/Web/API/BaseAudioContext/createStereoPanner#example) for example code.
+See [`BaseAudioContext.createStereoPanner()`](/en-US/docs/Web/API/BaseAudioContext/createStereoPanner#examples) for example code.
 
 ## Specifications
 

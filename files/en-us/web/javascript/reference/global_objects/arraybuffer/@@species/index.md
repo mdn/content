@@ -13,7 +13,7 @@ The **`ArrayBuffer[@@species]`** static accessor property returns the constructo
 
 ## Syntax
 
-```js
+```js-nolint
 ArrayBuffer[Symbol.species]
 ```
 

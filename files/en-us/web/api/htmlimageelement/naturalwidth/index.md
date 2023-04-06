@@ -39,7 +39,7 @@ information, `naturalWidth` returns 0.
 
 ## Examples
 
-See [`HTMLImageElement.naturalHeight`](/en-US/docs/Web/API/HTMLImageElement/naturalHeight#example) for example code that displays an image in both its natural "density-adjusted" size, and in its rendered size as altered by the page's CSS and other factors.
+See [`HTMLImageElement.naturalHeight`](/en-US/docs/Web/API/HTMLImageElement/naturalHeight#examples) for example code that displays an image in both its natural "density-adjusted" size, and in its rendered size as altered by the page's CSS and other factors.
 
 ## Specifications
 
