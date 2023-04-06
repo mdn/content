@@ -29,7 +29,7 @@ Date.now(); // 1678889977578
 Performance.now(); // 233936
 ```
 
-For measuring performance, calculating precise frame rates (FPS), animation loops, etc., use monotonically increasing high resolution time instead of JavaScript timestamps.
+For measuring performance, calculating precise frame rates (FPS), animation loops, etc., use monotonically increasing high resolution time available with {{domxref("Performance.now()")}} instead of JavaScript'a {{jsxref("Date.now()")}}.
 
 To summarize:
 
