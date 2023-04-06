@@ -1,5 +1,6 @@
 ---
-title: FileReader.readAsBinaryString()
+title: "FileReader: readAsBinaryString() method"
+short-title: readAsBinaryString()
 slug: Web/API/FileReader/readAsBinaryString
 page-type: web-api-instance-method
 browser-compat: api.FileReader.readAsBinaryString

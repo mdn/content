@@ -1,5 +1,6 @@
 ---
-title: Gamepad.axes
+title: "Gamepad: axes property"
+short-title: axes
 slug: Web/API/Gamepad/axes
 page-type: web-api-instance-property
 browser-compat: api.Gamepad.axes

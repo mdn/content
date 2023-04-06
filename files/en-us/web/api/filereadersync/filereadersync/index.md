@@ -1,5 +1,6 @@
 ---
-title: FileReaderSync()
+title: "FileReaderSync: FileReaderSync() constructor"
+short-title: FileReaderSync()
 slug: Web/API/FileReaderSync/FileReaderSync
 page-type: web-api-constructor
 browser-compat: api.FileReaderSync.FileReaderSync

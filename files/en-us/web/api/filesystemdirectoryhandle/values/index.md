@@ -1,5 +1,6 @@
 ---
-title: FileSystemDirectoryHandle.values()
+title: "FileSystemDirectoryHandle: values() method"
+short-title: values()
 slug: Web/API/FileSystemDirectoryHandle/values
 page-type: web-api-instance-method
 browser-compat: api.FileSystemDirectoryHandle.values
