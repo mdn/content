@@ -61,7 +61,7 @@ This article provides information about the changes in Firefox 112 that affect d
 
 #### WebDriver BiDi
 
-- Implemented `browsingContext.print` as PDF command. See [Firefox bug 1806810](https://bugzil.la/1806810) for more details
+- Implemented the `browsingContext.print` command, which allows clients to request a rendered PDF document of the browsing context, represented as a Base64-encoded string. See [Firefox bug 1806810](https://bugzil.la/1806810) for more details.
 - Implemented `script.addPreloadScript` and `script.removePreloadScript` commands. See [Firefox bug 1806420](https://bugzil.la/1806420) and [Firefox bug 1806465](https://bugzil.la/1806465) for more details
 - Element and ShadowRoot references (NodeCache) now have the same `sharedId` in both Marionette and WebDriver BiDi, making it possible to use them in both protocol ([Firefox bug 1770733](https://bugzil.la/1770733)).
 - Removed `isRedirect` from the network events base parameters ([Firefox bug 1819875](https://bugzil.la/1819875)).
