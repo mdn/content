@@ -239,7 +239,6 @@ There are some techniques designed to recreate cookies after they're deleted. Th
 - {{HTTPHeader("Cookie")}}
 - {{domxref("Document.cookie")}}
 - {{domxref("Navigator.cookieEnabled")}}
-- [SameSite cookies](/en-US/docs/Web/HTTP/Headers/Set-Cookie/SameSite)
 - [Inspecting cookies using the Storage Inspector](https://firefox-source-docs.mozilla.org/devtools-user/storage_inspector/index.html)
 - [Cookie specification: RFC 6265](https://datatracker.ietf.org/doc/html/rfc6265)
 - [HTTP cookie on Wikipedia](https://en.wikipedia.org/wiki/HTTP_cookie)
