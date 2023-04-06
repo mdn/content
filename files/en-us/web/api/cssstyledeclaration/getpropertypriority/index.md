@@ -1,5 +1,6 @@
 ---
-title: CSSStyleDeclaration.getPropertyPriority()
+title: "CSSStyleDeclaration: getPropertyPriority() method"
+short-title: getPropertyPriority()
 slug: Web/API/CSSStyleDeclaration/getPropertyPriority
 page-type: web-api-instance-method
 browser-compat: api.CSSStyleDeclaration.getPropertyPriority

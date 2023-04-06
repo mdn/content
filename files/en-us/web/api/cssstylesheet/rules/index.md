@@ -1,5 +1,6 @@
 ---
-title: CSSStyleSheet.rules
+title: "CSSStyleSheet: rules property"
+short-title: rules
 slug: Web/API/CSSStyleSheet/rules
 page-type: web-api-instance-property
 status:

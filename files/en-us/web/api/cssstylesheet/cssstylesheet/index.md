@@ -1,5 +1,6 @@
 ---
-title: CSSStyleSheet()
+title: "CSSStyleSheet: CSSStyleSheet() constructor"
+short-title: CSSStyleSheet()
 slug: Web/API/CSSStyleSheet/CSSStyleSheet
 page-type: web-api-constructor
 browser-compat: api.CSSStyleSheet.CSSStyleSheet

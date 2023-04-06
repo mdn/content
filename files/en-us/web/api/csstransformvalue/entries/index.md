@@ -1,5 +1,6 @@
 ---
-title: CSSTransformValue.entries()
+title: "CSSTransformValue: entries() method"
+short-title: entries()
 slug: Web/API/CSSTransformValue/entries
 page-type: web-api-instance-method
 browser-compat: api.CSSTransformValue.entries
