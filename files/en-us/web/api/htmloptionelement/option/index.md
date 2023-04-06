@@ -1,5 +1,5 @@
 ---
-title: "Option: Option() constructor"
+title: "HTMLOptionElement: Option() constructor"
 short-title: Option()
 slug: Web/API/HTMLOptionElement/Option
 page-type: web-api-constructor
