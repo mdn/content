@@ -358,7 +358,7 @@ Note that cookies set in CORS responses are subject to normal third-party cookie
 
 Cookie in the request (line 10) may also be suppressed in normal third-party cookie policies. The enforced cookie policy may therefore nullify the capability described in this chapter, effectively preventing you from making credentialed requests whatsoever.
 
-Cookie policy around the [SameSite](/en-US/docs/Web/HTTP/Headers/Set-Cookie/SameSite) attribute would apply.
+Cookie policy around the [SameSite](/en-US/docs/Web/HTTP/Headers/Set-Cookie#samesitesamesite-value) attribute would apply.
 
 ## The HTTP response headers
 

@@ -12086,6 +12086,7 @@
 /en-US/docs/Web/HTTP/Headers/Public-Key-Pins	/en-US/docs/Web/HTTP/Headers/Expect-CT
 /en-US/docs/Web/HTTP/Headers/Public-Key-Pins-Report-Only	/en-US/docs/Web/HTTP/Headers/Expect-CT
 /en-US/docs/Web/HTTP/Headers/Ranges	/en-US/docs/Web/HTTP/Headers/Range
+/en-US/docs/Web/HTTP/Headers/Set-Cookie/SameSite	/en-US/docs/Web/HTTP/Headers/Set-Cookie#samesitesamesite-value
 /en-US/docs/Web/HTTP/Headers/Set-Cookie2	/en-US/docs/Web/HTTP/Headers/Set-Cookie
 /en-US/docs/Web/HTTP/History_of_HTTP_versions	/en-US/docs/Web/HTTP/Basics_of_HTTP/Evolution_of_HTTP
 /en-US/docs/Web/HTTP/Index	/en-US/docs/Web/HTTP
