@@ -799,6 +799,47 @@ See ([Firefox bug 1461589](https://bugzil.la/1461589)) for more details.
   </tbody>
 </table>
 
+### :nth-child of &lt;selector&gt; syntax
+
+The CSS [`:nth-child of <selector>` syntax](/en-US/docs/Web/CSS/:nth-child#the_of_selector_syntax) allows you to target a group of children based upon the `An+B` rule that also match a defined selector.
+See ([Firefox bug 1819711](https://bugzil.la/1819711)) for more details.
+
+<table>
+  <thead>
+    <tr>
+      <th>Release channel</th>
+      <th>Version added</th>
+      <th>Enabled by default?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Nightly</th>
+      <td>112</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th>Developer Edition</th>
+      <td>112</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Beta</th>
+      <td>112</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Release</th>
+      <td>112</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Preference name</th>
+      <td colspan="2">None</td>
+    </tr>
+  </tbody>
+</table>
+
 ## SVG
 
 ### SVGPathSeg APIs
