@@ -66,7 +66,7 @@ The following interfaces inherit from `PerformanceEntry`:
 
 ## Accessing data
 
-You can access performance entries in one of two ways. The preferred way is to use the {{domxref("PerformanceObserver")}} interface, which is constructed with a callback function to be called when particular performance entries are recorded. You then call its {{domxref("PerformanceObserver.observe", "observe")}} method, passing in the types to observe:
+You can access performance entries in one of two ways. The preferred way is to use the {{domxref("PerformanceObserver")}} interface, which is constructed with a callback function to be called when particular performance entries are recorded. You then call its {{domxref("PerformanceObserver.observe", "observe")}} method, passing in the types to observe and using the `buffered` option to retrieve entries that occurred before observation.
 
 ```js
 function logEventDuration(entries) {
