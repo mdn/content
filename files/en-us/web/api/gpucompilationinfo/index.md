@@ -17,7 +17,7 @@ The **`GPUCompilationInfo`** interface of the {{domxref("WebGPU API", "WebGPU AP
 
 ## Instance properties
 
-- {{domxref("GPUCompilationInfo.messages", "messages")}} {{Experimental_Inline}} {{readonlyinline}}
+- {{domxref("GPUCompilationInfo.messages", "messages")}} {{Experimental_Inline}} {{ReadOnlyInline}}
   - : An array of {{domxref("GPUCompilationMessage")}} objects, each one containing the details of an individual shader compilation message. Messages can be informational, warnings, or errors.
 
 ## Examples
