@@ -1,5 +1,6 @@
 ---
-title: AudioProcessingEvent.outputBuffer
+title: "AudioProcessingEvent: outputBuffer property"
+short-title: outputBuffer
 slug: Web/API/AudioProcessingEvent/outputBuffer
 page-type: web-api-instance-property
 status:

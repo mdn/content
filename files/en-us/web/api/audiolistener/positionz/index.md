@@ -1,5 +1,6 @@
 ---
-title: AudioListener.positionZ
+title: "AudioListener: positionZ property"
+short-title: positionZ
 slug: Web/API/AudioListener/positionZ
 page-type: web-api-instance-property
 browser-compat: api.AudioListener.positionZ

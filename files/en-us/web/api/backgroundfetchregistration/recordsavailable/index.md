@@ -1,5 +1,6 @@
 ---
-title: BackgroundFetchRegistration.recordsAvailable
+title: "BackgroundFetchRegistration: recordsAvailable property"
+short-title: recordsAvailable
 slug: Web/API/BackgroundFetchRegistration/recordsAvailable
 page-type: web-api-instance-property
 status:

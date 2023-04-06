@@ -1,5 +1,6 @@
 ---
-title: AnalyserNode.fftSize
+title: "AnalyserNode: fftSize property"
+short-title: fftSize
 slug: Web/API/AnalyserNode/fftSize
 page-type: web-api-instance-property
 browser-compat: api.AnalyserNode.fftSize

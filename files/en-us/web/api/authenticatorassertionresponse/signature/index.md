@@ -1,5 +1,6 @@
 ---
-title: AuthenticatorAssertionResponse.signature
+title: "AuthenticatorAssertionResponse: signature property"
+short-title: signature
 slug: Web/API/AuthenticatorAssertionResponse/signature
 page-type: web-api-instance-property
 browser-compat: api.AuthenticatorAssertionResponse.signature

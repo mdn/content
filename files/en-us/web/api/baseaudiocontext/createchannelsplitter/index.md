@@ -1,5 +1,6 @@
 ---
-title: BaseAudioContext.createChannelSplitter()
+title: "BaseAudioContext: createChannelSplitter() method"
+short-title: createChannelSplitter()
 slug: Web/API/BaseAudioContext/createChannelSplitter
 page-type: web-api-instance-method
 browser-compat: api.BaseAudioContext.createChannelSplitter
