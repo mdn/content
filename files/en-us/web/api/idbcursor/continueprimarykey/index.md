@@ -1,5 +1,6 @@
 ---
-title: IDBCursor.continuePrimaryKey()
+title: "IDBCursor: continuePrimaryKey() method"
+short-title: continuePrimaryKey()
 slug: Web/API/IDBCursor/continuePrimaryKey
 page-type: web-api-instance-method
 browser-compat: api.IDBCursor.continuePrimaryKey

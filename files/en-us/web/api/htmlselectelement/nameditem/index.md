@@ -1,5 +1,6 @@
 ---
-title: HTMLSelectElement.namedItem()
+title: "HTMLSelectElement: namedItem() method"
+short-title: namedItem()
 slug: Web/API/HTMLSelectElement/namedItem
 page-type: web-api-instance-method
 browser-compat: api.HTMLSelectElement.namedItem

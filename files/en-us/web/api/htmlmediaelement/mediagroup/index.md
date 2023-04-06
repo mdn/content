@@ -1,5 +1,6 @@
 ---
-title: HTMLMediaElement.mediaGroup
+title: "HTMLMediaElement: mediaGroup property"
+short-title: mediaGroup
 slug: Web/API/HTMLMediaElement/mediaGroup
 page-type: web-api-instance-property
 status:

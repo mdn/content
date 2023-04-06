@@ -1,5 +1,6 @@
 ---
-title: IDBIndex.isAutoLocale
+title: "IDBIndex: isAutoLocale property"
+short-title: isAutoLocale
 slug: Web/API/IDBIndex/isAutoLocale
 page-type: web-api-instance-property
 status:

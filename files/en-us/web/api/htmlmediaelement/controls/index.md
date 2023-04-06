@@ -1,5 +1,6 @@
 ---
-title: HTMLMediaElement.controls
+title: "HTMLMediaElement: controls property"
+short-title: controls
 slug: Web/API/HTMLMediaElement/controls
 page-type: web-api-instance-property
 browser-compat: api.HTMLMediaElement.controls

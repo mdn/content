@@ -1,5 +1,6 @@
 ---
-title: HTMLTableElement.bgColor
+title: "HTMLTableElement: bgColor property"
+short-title: bgColor
 slug: Web/API/HTMLTableElement/bgColor
 page-type: web-api-instance-property
 status:

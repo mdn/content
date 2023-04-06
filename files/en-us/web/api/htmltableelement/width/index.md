@@ -1,5 +1,6 @@
 ---
-title: HTMLTableElement.width
+title: "HTMLTableElement: width property"
+short-title: width
 slug: Web/API/HTMLTableElement/width
 page-type: web-api-instance-property
 status:

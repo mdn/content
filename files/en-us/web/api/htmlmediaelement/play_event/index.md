@@ -1,5 +1,6 @@
 ---
 title: "HTMLMediaElement: play event"
+short-title: play
 slug: Web/API/HTMLMediaElement/play_event
 page-type: web-api-event
 browser-compat: api.HTMLMediaElement.play_event

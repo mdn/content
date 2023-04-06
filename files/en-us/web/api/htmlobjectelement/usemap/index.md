@@ -1,5 +1,6 @@
 ---
-title: HTMLObjectElement.useMap
+title: "HTMLObjectElement: useMap property"
+short-title: useMap
 slug: Web/API/HTMLObjectElement/useMap
 page-type: web-api-instance-property
 browser-compat: api.HTMLObjectElement.useMap
