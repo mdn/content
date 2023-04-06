@@ -1,5 +1,6 @@
 ---
-title: BeforeInstallPromptEvent.prompt()
+title: "BeforeInstallPromptEvent: prompt() method"
+short-title: prompt()
 slug: Web/API/BeforeInstallPromptEvent/prompt
 page-type: web-api-instance-method
 status:

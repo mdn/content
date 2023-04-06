@@ -1,5 +1,6 @@
 ---
-title: CanvasRenderingContext2D.strokeRect()
+title: "CanvasRenderingContext2D: strokeRect() method"
+short-title: strokeRect()
 slug: Web/API/CanvasRenderingContext2D/strokeRect
 page-type: web-api-instance-method
 browser-compat: api.CanvasRenderingContext2D.strokeRect
