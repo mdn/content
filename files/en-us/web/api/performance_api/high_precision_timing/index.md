@@ -46,7 +46,7 @@ The Performance API uses the {{domxref("Performance.timeOrigin")}} property to d
 
 In Window contexts, this time origin is the time when navigation has started. In {{domxref("Worker")}} and {{domxref("ServiceWorker")}} contexts, the time origin is the time when the worker is run.
 
-The `performance.now()` method used to be relative to [`performance.timing.navigationStart`](/en-US/docs/Web/API/PerformanceTiming/navigationStart) property from the Navigation Timing specification. However, this changed and `performance.now()` is now relative to {{domxref("Performance.timeOrigin")}} which avoids clock change risks when comparing timestamps across webpages.
+In the previous version of the specification (Level 1), the `performance.now()` method used to be relative to [`performance.timing.navigationStart`](/en-US/docs/Web/API/PerformanceTiming/navigationStart) property from the Navigation Timing specification. However, this changed in a later version of the specification (Level 2) and `performance.now()` is now relative to {{domxref("Performance.timeOrigin")}} which avoids clock change risks when comparing timestamps across webpages.
 
 ```js
 // Level 1 (clock change risks)
