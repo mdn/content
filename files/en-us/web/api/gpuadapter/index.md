@@ -17,11 +17,11 @@ A `GPUAdapter` object is requested using the {{domxref("GPU.requestAdapter()")}}
 
 ## Instance properties
 
-- {{domxref("GPUAdapter.features", "features")}} {{Experimental_Inline}} {{readonlyinline}}
+- {{domxref("GPUAdapter.features", "features")}} {{Experimental_Inline}} {{ReadOnlyInline}}
   - : A {{domxref("GPUSupportedFeatures")}} object that describes additional functionality supported by the adapter.
-- {{domxref("GPUAdapter.isFallbackAdapter", "isFallbackAdapter")}} {{Experimental_Inline}} {{readonlyinline}}
+- {{domxref("GPUAdapter.isFallbackAdapter", "isFallbackAdapter")}} {{Experimental_Inline}} {{ReadOnlyInline}}
   - : A boolean value. Returns `true` if the adapter is a [fallback adapter](/en-US/docs/Web/API/GPU/requestAdapter#fallback_adapters), and `false` if not.
-- {{domxref("GPUAdapter.limits", "limits")}} {{Experimental_Inline}} {{readonlyinline}}
+- {{domxref("GPUAdapter.limits", "limits")}} {{Experimental_Inline}} {{ReadOnlyInline}}
   - : A {{domxref("GPUSupportedLimits")}} object that describes the limits supported by the adapter.
 
 ## Instance methods
@@ -36,18 +36,17 @@ A `GPUAdapter` object is requested using the {{domxref("GPU.requestAdapter()")}}
 ```js
 async function init() {
   if (!navigator.gpu) {
-    throw Error('WebGPU not supported.');
+    throw Error("WebGPU not supported.");
   }
 
   const adapter = await navigator.gpu.requestAdapter();
   if (!adapter) {
-    throw Error('Couldn\'t request WebGPU adapter.');
+    throw Error("Couldn't request WebGPU adapter.");
   }
 
   const device = await adapter.requestDevice();
 
   //...
-
 }
 ```
 

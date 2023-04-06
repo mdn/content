@@ -35,7 +35,7 @@ createTexture(descriptor)
         `dimension` defaults to `"2d"` if the value is omitted.
 
     - `format`
-      - : An emumerated value specifying the format of the texture. See the [Texture formats](https://gpuweb.github.io/gpuweb/#enumdef-gputextureformat) section of the specification for all the possible values.
+      - : An enumerated value specifying the format of the texture. See the [Texture formats](https://gpuweb.github.io/gpuweb/#enumdef-gputextureformat) section of the specification for all the possible values.
     - `label` {{optional_inline}}
       - : A string providing a label that can be used to identify the object, for example in {{domxref("GPUError")}} messages or console warnings.
     - `mipLevelCount` {{optional_inline}}
@@ -73,7 +73,7 @@ createTexture(descriptor)
         ```
 
     - `viewFormats` {{optional_inline}}
-      - : An array of enumerated values specifying other [texture formats](https://gpuweb.github.io/gpuweb/#enumdef-gputextureformat) permitted when calling {{domxref("GPUTexture.createView()")}} on this texture, in addition to the texture format specificed in its `format` value.
+      - : An array of enumerated values specifying other [texture formats](https://gpuweb.github.io/gpuweb/#enumdef-gputextureformat) permitted when calling {{domxref("GPUTexture.createView()")}} on this texture, in addition to the texture format specified in its `format` value.
 
 ### Return value
 
@@ -105,7 +105,7 @@ The following criteria must be met when calling **`createTexture()`**, otherwise
   - `mipLevelCount` is equal to 1.
   - The `size` depth/array layer count value is equal to 1.
   - `usage` includes the `GPUTextureUsage.RENDER_ATTACHMENT` flag.
-  - `usage` does not include the `GPUTextureUsage.STOREAGE_BINDING` flag.
+  - `usage` does not include the `GPUTextureUsage.STORAGE_BINDING` flag.
   - The specified format supports multi-sampling.
 - The `mipLevelCount` value is less than or equal to the [maximum miplevel count](https://gpuweb.github.io/gpuweb/#abstract-opdef-maximum-miplevel-count).
 - The formats specified in `format` and `viewFormats` are [compatible](https://gpuweb.github.io/gpuweb/#texture-view-format-compatible) with one another.

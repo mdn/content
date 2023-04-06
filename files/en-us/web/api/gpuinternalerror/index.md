@@ -26,7 +26,7 @@ Internal errors occur when something happens in the WebGPU implementation that w
 
 The `message` property is inherited from its parent, {{domxref("GPUError")}}:
 
-- {{domxref("GPUError.message", "message")}} {{Experimental_Inline}} {{readonlyinline}}
+- {{domxref("GPUError.message", "message")}} {{Experimental_Inline}} {{ReadOnlyInline}}
   - : A string providing a human-readable message that explains why the error ocurred.
 
 ## Examples
@@ -44,7 +44,7 @@ device.popErrorScope().then((error) => {
   if (error) {
     // error is a GPUInternalError object instance
     module = null;
-    console.error(`An error occured while creating shader: ${error.message}`);
+    console.error(`An error occurred while creating shader: ${error.message}`);
   }
 });
 ```

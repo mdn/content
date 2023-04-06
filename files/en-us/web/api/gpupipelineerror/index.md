@@ -22,7 +22,7 @@ The **`GPUPipelineError`** interface of the {{domxref("WebGPU API", "WebGPU API"
 
 _Inherits properties from its parent, {{domxref("DOMException")}}._
 
-- {{domxref("GPUPipelineError.reason", "reason")}} {{Experimental_Inline}} {{readonlyinline}}
+- {{domxref("GPUPipelineError.reason", "reason")}} {{Experimental_Inline}} {{ReadOnlyInline}}
   - : An enumerated value that defines the reason the pipeline creation failed in a machine-readable way.
 
 ## Examples
