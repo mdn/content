@@ -1,5 +1,6 @@
 ---
-title: Document.getAnimations()
+title: "Document: getAnimations() method"
+short-title: getAnimations()
 slug: Web/API/Document/getAnimations
 page-type: web-api-instance-method
 browser-compat: api.Document.getAnimations

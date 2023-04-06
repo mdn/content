@@ -1,5 +1,6 @@
 ---
-title: Document.createAttributeNS()
+title: "Document: createAttributeNS() method"
+short-title: createAttributeNS()
 slug: Web/API/Document/createAttributeNS
 page-type: web-api-instance-method
 browser-compat: api.Document.createAttributeNS

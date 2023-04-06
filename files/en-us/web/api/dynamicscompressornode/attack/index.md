@@ -1,5 +1,6 @@
 ---
-title: DynamicsCompressorNode.attack
+title: "DynamicsCompressorNode: attack property"
+short-title: attack
 slug: Web/API/DynamicsCompressorNode/attack
 page-type: web-api-instance-property
 browser-compat: api.DynamicsCompressorNode.attack

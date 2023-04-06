@@ -1,5 +1,6 @@
 ---
-title: DocumentFragment.lastElementChild
+title: "DocumentFragment: lastElementChild property"
+short-title: lastElementChild
 slug: Web/API/DocumentFragment/lastElementChild
 page-type: web-api-instance-property
 browser-compat: api.DocumentFragment.lastElementChild

@@ -1,5 +1,6 @@
 ---
-title: Document.alinkColor
+title: "Document: alinkColor property"
+short-title: alinkColor
 slug: Web/API/Document/alinkColor
 page-type: web-api-instance-property
 status:
