@@ -1,6 +1,6 @@
 ---
-title: "AudioEncoder.AudioEncoder: AudioEncoder.AudioEncoder() constructor"
-short-title: AudioEncoder.AudioEncoder()
+title: "AudioEncoder: AudioEncoder() constructor"
+short-title: AudioEncoder()
 slug: Web/API/AudioEncoder/AudioEncoder
 page-type: web-api-constructor
 status:
