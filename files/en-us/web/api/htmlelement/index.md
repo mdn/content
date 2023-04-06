@@ -43,6 +43,8 @@ _Inherits properties from its parent, {{DOMxRef("Element")}}._
     As a setter, it replaces the content inside the selected element, converting any line breaks into {{HTMLElement("br")}} elements.
 - {{DOMxRef("HTMLElement.inputMode")}}
   - : A string value reflecting the value of the element's [`inputmode`](/en-US/docs/Web/HTML/Global_attributes/inputmode) attribute.
+- {{DOMxRef("HTMLElement.popover")}}
+  - : A string value reflecting the value of the element's [`popover`](/en-US/docs/Web/HTML/Global_attributes/popover) attribute.
 - {{DOMxRef("HTMLElement.lang")}}
   - : A string representing the language of an element's attributes, text, and element contents.
 - {{DOMxRef("HTMLElement.noModule")}}
@@ -88,6 +90,12 @@ _Inherits methods from its parent, {{DOMxRef("Element")}}._
   - : Sends a mouse click event to the element.
 - {{DOMxRef("HTMLElement.focus()")}}
   - : Makes the element the current keyboard focus.
+- {{DOMxRef("HTMLElement.hidePopover()")}}
+  - : Hides the element, if it has a valid {{DOMxRef("HTMLElement.popover")}} value.
+- {{DOMxRef("HTMLElement.showPopover()")}}
+  - : Shows the element, promoting it to the top layer, if it has a valid {{DOMxRef("HTMLElement.popover")}} value.
+- {{DOMxRef("HTMLElement.togglePopover()")}}
+  - : Hides or shows the element, if it has a valid {{DOMxRef("HTMLElement.popover")}} value.
 
 ## Events
 
@@ -101,6 +109,10 @@ Listen to these events using `addEventListener()` or by assigning an event liste
   - : Fired when the user initiates a paste action through the browser's user interface.
 - {{domxref("HTMLInputElement/invalid_event", "invalid")}}
   - : Fired when an element does not satisfy its constraints during constraint validation.
+- {{DOMxRef("HTMLElement.beforetoggle", "beforetoggle")}}
+  - : Fired when the element is a popover, before it is hidden or shown.
+- {{DOMxRef("HTMLElement.toggle", "toggle")}}
+  - : Fired when the element is a popover, just after it is hidden or shown.
 
 ### Animation events
 
