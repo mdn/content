@@ -1,5 +1,6 @@
 ---
-title: AudioContext.createMediaStreamDestination()
+title: "AudioContext: createMediaStreamDestination() method"
+short-title: createMediaStreamDestination()
 slug: Web/API/AudioContext/createMediaStreamDestination
 page-type: web-api-instance-method
 browser-compat: api.AudioContext.createMediaStreamDestination

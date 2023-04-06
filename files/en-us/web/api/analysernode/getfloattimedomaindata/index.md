@@ -1,5 +1,6 @@
 ---
-title: AnalyserNode.getFloatTimeDomainData()
+title: "AnalyserNode: getFloatTimeDomainData() method"
+short-title: getFloatTimeDomainData()
 slug: Web/API/AnalyserNode/getFloatTimeDomainData
 page-type: web-api-instance-method
 browser-compat: api.AnalyserNode.getFloatTimeDomainData

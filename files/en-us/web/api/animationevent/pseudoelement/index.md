@@ -1,5 +1,6 @@
 ---
-title: AnimationEvent.pseudoElement
+title: "AnimationEvent: pseudoElement property"
+short-title: pseudoElement
 slug: Web/API/AnimationEvent/pseudoElement
 page-type: web-api-instance-property
 browser-compat: api.AnimationEvent.pseudoElement

@@ -1,5 +1,6 @@
 ---
-title: AudioContext()
+title: "AudioContext: AudioContext() constructor"
+short-title: AudioContext()
 slug: Web/API/AudioContext/AudioContext
 page-type: web-api-constructor
 browser-compat: api.AudioContext.AudioContext
