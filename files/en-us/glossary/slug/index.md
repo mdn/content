@@ -10,4 +10,4 @@ It may also just be the final component when a new document is created under a p
 
 ## See also
 
-- [Choosing titles and slugs](/en-US/docs/MDN/Guidelines/Writing_style_guide#slugs)
+- [Choosing titles and slugs](/en-US/docs/MDN/Writing_guidelines/Writing_style_guide#slugs)
