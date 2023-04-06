@@ -13,7 +13,7 @@ The **`throw()`** method of a generator acts as if a `throw` statement is insert
 
 <!-- We don't usually add the "generatorObject" subject for methods. However, it is necessary here, because "throw" is a keyword, so otherwise it's invalid syntax. -->
 
-```js
+```js-nolint
 generatorObject.throw(exception)
 ```
 
