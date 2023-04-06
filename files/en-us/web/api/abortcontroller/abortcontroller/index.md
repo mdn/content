@@ -1,5 +1,6 @@
 ---
-title: AbortController()
+title: "AbortController: AbortController() constructor"
+short-title: AbortController()
 slug: Web/API/AbortController/AbortController
 page-type: web-api-constructor
 browser-compat: api.AbortController.AbortController

@@ -1,5 +1,6 @@
 ---
-title: AbstractRange.collapsed
+title: "AbstractRange: collapsed property"
+short-title: collapsed
 slug: Web/API/AbstractRange/collapsed
 page-type: web-api-instance-property
 browser-compat: api.AbstractRange.collapsed

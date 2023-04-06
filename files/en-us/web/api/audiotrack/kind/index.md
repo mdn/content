@@ -1,5 +1,6 @@
 ---
-title: AudioTrack.kind
+title: "AudioTrack: kind property"
+short-title: kind
 slug: Web/API/AudioTrack/kind
 page-type: web-api-instance-property
 browser-compat: api.AudioTrack.kind

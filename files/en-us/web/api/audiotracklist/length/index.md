@@ -1,5 +1,6 @@
 ---
-title: AudioTrackList.length
+title: "AudioTrackList: length property"
+short-title: length
 slug: Web/API/AudioTrackList/length
 page-type: web-api-instance-property
 browser-compat: api.AudioTrackList.length

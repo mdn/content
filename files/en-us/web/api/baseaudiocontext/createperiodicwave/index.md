@@ -1,5 +1,6 @@
 ---
-title: BaseAudioContext.createPeriodicWave()
+title: "BaseAudioContext: createPeriodicWave() method"
+short-title: createPeriodicWave()
 slug: Web/API/BaseAudioContext/createPeriodicWave
 page-type: web-api-instance-method
 browser-compat: api.BaseAudioContext.createPeriodicWave

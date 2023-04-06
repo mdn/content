@@ -1,5 +1,6 @@
 ---
-title: Animation.effect
+title: "Animation: effect property"
+short-title: effect
 slug: Web/API/Animation/effect
 page-type: web-api-instance-property
 browser-compat: api.Animation.effect

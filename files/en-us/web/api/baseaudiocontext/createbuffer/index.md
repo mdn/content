@@ -1,5 +1,6 @@
 ---
-title: BaseAudioContext.createBuffer()
+title: "BaseAudioContext: createBuffer() method"
+short-title: createBuffer()
 slug: Web/API/BaseAudioContext/createBuffer
 page-type: web-api-instance-method
 browser-compat: api.BaseAudioContext.createBuffer
