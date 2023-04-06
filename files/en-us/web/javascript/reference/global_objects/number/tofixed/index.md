@@ -30,9 +30,9 @@ A string representing the given number using fixed-point notation.
 ### Exceptions
 
 - {{jsxref("RangeError")}}
-  - : If `digits` is smaller than `0`, larger than `100`, or is `NaN`.
+  - : Thrown if `digits` is not between `1` and `100` (inclusive).
 - {{jsxref("TypeError")}}
-  - : If this method is invoked on an object that is not a {{jsxref("Number")}}.
+  - : Thrown if this method is invoked on an object that is not a {{jsxref("Number")}}.
 
 ## Description
 
