@@ -12,21 +12,13 @@ This page provides an overview about what sorts of Performance API data exists, 
 
 ## Collecting data
 
-The Performance APIs help you to collect [high-precision performance timings](/en-US/docs/Web/API/Performance_API/High_precision_timing). We can differentiate between two kinds of performance metrics that are collected:
+Most of the metrics exposed by the Performance API are automatically collected by the browser, and you don't have to tell it to collect them: you just have to retrieve them.
 
-1. **Browser metrics** collected by the browser to records various aspects of its performance, such as:
+For some metrics you do have to tell the browser what to measure:
 
-   - How long event handlers take to run (Event Timing).
-   - How long it takes the browser to fetch resources such as images, videos, fonts, and scripts (Resource Timing).
-   - Which paint operations take a long time to execute (Paint Timing).
-
-2. **Custom metrics** collected as decided by the developer to measure specific performance aspects custom to your web site or application, such as:
-
-   - How long a specific function in the code takes to run (User Timing).
-   - How long the server takes to perform a certain task (Server Timing).
-   - How long rendering of critical elements on a page tool (Element Timing).
-
-While collecting browser metrics can happen automatically mostly, you have to implement the recording of custom metrics yourself.
+- the [Element Timing](/en-US/docs/Web/API/Performance_API/Element_timing) metric measures the time it takes to load and render certain DOM elements. This metric is opt-in: to ask the browser to include metrics for a particular element you must add the `elementtiming` attribute to it.
+- the [User Timing](/en-US/docs/Web/API/Performance_API/User_timing) metric enables you to measure the time between arbitrary points in your program, that might map to application-defined operations (such as logging in a user). To collect these metrics you need to add Performance API calls at the relevant points.
+- the [Server Timing](/en-US/docs/Web/API/Performance_API/Server_timing) metric enables you to measure the time taken for application-defined server-side operations. To collect these metrics your server must send the `Server-Timing` HTTP header.
 
 ## Performance data structure
 
