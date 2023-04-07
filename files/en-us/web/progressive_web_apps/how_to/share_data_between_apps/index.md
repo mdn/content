@@ -21,7 +21,7 @@ To make it possible for users to share data with other apps from your PWA, use t
 
 To share data, use the {{domxref("navigator.share()")}} method in response to a user action, such as a button click. You can also use the {{domxref("navigator.canShare()")}} method to first validate whether the data you intend to share is, indeed, shareable from the browser that's running your app, and on the current operating system.
 
-### Sharing simple text data
+### Sharing text data
 
 The following example demonstrates how to share a link when a button in the app is clicked:
 
