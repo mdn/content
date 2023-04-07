@@ -1,5 +1,5 @@
 ---
-title: "performance: toJSON() method"
+title: "Performance: toJSON() method"
 short-title: toJSON()
 slug: Web/API/Performance/toJSON
 page-type: web-api-instance-method

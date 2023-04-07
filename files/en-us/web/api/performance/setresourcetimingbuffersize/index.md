@@ -1,5 +1,5 @@
 ---
-title: "performance: setResourceTimingBufferSize() method"
+title: "Performance: setResourceTimingBufferSize() method"
 short-title: setResourceTimingBufferSize()
 slug: Web/API/Performance/setResourceTimingBufferSize
 page-type: web-api-instance-method

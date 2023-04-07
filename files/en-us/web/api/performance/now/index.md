@@ -1,5 +1,5 @@
 ---
-title: "performance: now() method"
+title: "Performance: now() method"
 short-title: now()
 slug: Web/API/Performance/now
 page-type: web-api-instance-method

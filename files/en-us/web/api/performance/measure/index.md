@@ -1,5 +1,5 @@
 ---
-title: "performance: measure() method"
+title: "Performance: measure() method"
 short-title: measure()
 slug: Web/API/Performance/measure
 page-type: web-api-instance-method

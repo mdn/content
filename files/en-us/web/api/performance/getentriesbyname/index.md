@@ -1,5 +1,5 @@
 ---
-title: "performance: getEntriesByName() method"
+title: "Performance: getEntriesByName() method"
 short-title: getEntriesByName()
 slug: Web/API/Performance/getEntriesByName
 page-type: web-api-instance-method
