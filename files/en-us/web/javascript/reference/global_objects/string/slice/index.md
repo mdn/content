@@ -24,7 +24,7 @@ slice(indexStart, indexEnd)
 - `indexStart`
   - : The index of the first character to include in the returned substring.
 - `indexEnd` {{optional_inline}}
-  - : The index of the first character to exclude from the returned substring.
+  - : The index of the last character to exclude from the returned substring.
 
 ### Return value
 
