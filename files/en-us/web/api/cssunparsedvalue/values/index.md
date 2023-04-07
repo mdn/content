@@ -1,5 +1,6 @@
 ---
-title: CSSUnparsedValue.values()
+title: "CSSUnparsedValue: values() method"
+short-title: values()
 slug: Web/API/CSSUnparsedValue/values
 page-type: web-api-instance-method
 browser-compat: api.CSSUnparsedValue.values

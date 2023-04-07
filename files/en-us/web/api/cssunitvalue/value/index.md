@@ -1,5 +1,6 @@
 ---
-title: CSSUnitValue.value
+title: "CSSUnitValue: value property"
+short-title: value
 slug: Web/API/CSSUnitValue/value
 page-type: web-api-instance-property
 browser-compat: api.CSSUnitValue.value

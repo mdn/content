@@ -1,5 +1,6 @@
 ---
-title: DedicatedWorkerGlobalScope.postMessage()
+title: "DedicatedWorkerGlobalScope: postMessage() method"
+short-title: postMessage()
 slug: Web/API/DedicatedWorkerGlobalScope/postMessage
 page-type: web-api-instance-method
 browser-compat: api.DedicatedWorkerGlobalScope.postMessage

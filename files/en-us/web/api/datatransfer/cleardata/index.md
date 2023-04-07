@@ -1,5 +1,6 @@
 ---
-title: DataTransfer.clearData()
+title: "DataTransfer: clearData() method"
+short-title: clearData()
 slug: Web/API/DataTransfer/clearData
 page-type: web-api-instance-method
 browser-compat: api.DataTransfer.clearData
