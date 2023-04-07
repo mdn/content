@@ -1,5 +1,6 @@
 ---
-title: RTCIceCandidate.candidate
+title: "RTCIceCandidate: candidate property"
+short-title: candidate
 slug: Web/API/RTCIceCandidate/candidate
 page-type: web-api-instance-property
 browser-compat: api.RTCIceCandidate.candidate

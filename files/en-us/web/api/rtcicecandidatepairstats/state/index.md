@@ -1,5 +1,6 @@
 ---
-title: RTCIceCandidatePairStats.state
+title: "RTCIceCandidatePairStats: state property"
+short-title: state
 slug: Web/API/RTCIceCandidatePairStats/state
 page-type: web-api-instance-property
 browser-compat: api.RTCIceCandidatePairStats.state

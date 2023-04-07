@@ -1,5 +1,6 @@
 ---
-title: Request.mode
+title: "Request: mode property"
+short-title: mode
 slug: Web/API/Request/mode
 page-type: web-api-instance-property
 browser-compat: api.Request.mode

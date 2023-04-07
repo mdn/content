@@ -1,5 +1,6 @@
 ---
-title: ReadableStreamDefaultController.enqueue()
+title: "ReadableStreamDefaultController: enqueue() method"
+short-title: enqueue()
 slug: Web/API/ReadableStreamDefaultController/enqueue
 page-type: web-api-instance-method
 browser-compat: api.ReadableStreamDefaultController.enqueue

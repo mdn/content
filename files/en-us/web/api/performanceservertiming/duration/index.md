@@ -1,5 +1,6 @@
 ---
-title: PerformanceServerTiming.duration
+title: "PerformanceServerTiming: duration property"
+short-title: duration
 slug: Web/API/PerformanceServerTiming/duration
 page-type: web-api-instance-property
 browser-compat: api.PerformanceServerTiming.duration

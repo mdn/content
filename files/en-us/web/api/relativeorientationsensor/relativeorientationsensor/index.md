@@ -1,5 +1,6 @@
 ---
-title: RelativeOrientationSensor()
+title: "RelativeOrientationSensor: RelativeOrientationSensor() constructor"
+short-title: RelativeOrientationSensor()
 slug: Web/API/RelativeOrientationSensor/RelativeOrientationSensor
 page-type: web-api-constructor
 browser-compat: api.RelativeOrientationSensor.RelativeOrientationSensor

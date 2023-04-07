@@ -1,5 +1,6 @@
 ---
-title: Request.blob()
+title: "Request: blob() method"
+short-title: blob()
 slug: Web/API/Request/blob
 page-type: web-api-instance-method
 browser-compat: api.Request.blob

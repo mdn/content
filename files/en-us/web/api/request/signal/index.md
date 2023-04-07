@@ -1,5 +1,6 @@
 ---
-title: Request.signal
+title: "Request: signal property"
+short-title: signal
 slug: Web/API/Request/signal
 page-type: web-api-instance-property
 browser-compat: api.Request.signal

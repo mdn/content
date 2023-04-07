@@ -1,5 +1,6 @@
 ---
-title: PerformanceEntry.startTime
+title: "PerformanceEntry: startTime property"
+short-title: startTime
 slug: Web/API/PerformanceEntry/startTime
 page-type: web-api-instance-property
 browser-compat: api.PerformanceEntry.startTime

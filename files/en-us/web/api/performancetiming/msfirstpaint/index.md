@@ -1,5 +1,6 @@
 ---
-title: PerformanceTiming.msFirstPaint
+title: "PerformanceTiming: msFirstPaint property"
+short-title: msFirstPaint
 slug: Web/API/PerformanceTiming/MsFirstPaint
 page-type: web-api-instance-property
 status:
