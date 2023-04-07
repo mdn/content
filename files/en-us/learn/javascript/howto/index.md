@@ -102,7 +102,7 @@ const myObject = {
 - [How do you initialize a variable with a value?](/en-US/docs/Learn/JavaScript/First_steps/Variables#initializing_a_variable)
 - [How do you update a variable's value?](/en-US/docs/Learn/JavaScript/First_steps/Variables#updating_a_variable) (also see [Assignment operators](/en-US/docs/Learn/JavaScript/First_steps/Math#assignment_operators))
 - [What data types can values have in JavaScript?](/en-US/docs/Learn/JavaScript/First_steps/Variables#variable_types)
-- [What does 'loosely typed' mean?](/en-US/docs/Learn/JavaScript/First_steps/Variables#loose_typing)
+- [What does 'loosely typed' mean?](/en-US/docs/Learn/JavaScript/First_steps/Variables#dynamic_typing)
 
 ### Math
 
@@ -115,22 +115,23 @@ const myObject = {
 ### Strings
 
 - [How do you create a string in JavaScript?](/en-US/docs/Learn/JavaScript/First_steps/Strings#creating_a_string)
-- [Do you have to use single quotes or double quotes?](/en-US/docs/Learn/JavaScript/First_steps/Strings#single_quotes_versus_double_quotes)
+- [Do you have to use single quotes or double quotes?](/en-US/docs/Learn/JavaScript/First_steps/Strings#Single_quotes_vs._double_quotes)
 - [How do you escape characters in strings?](/en-US/docs/Learn/JavaScript/First_steps/Strings#escaping_characters_in_a_string)
 - [How do you join strings together?](/en-US/docs/Learn/JavaScript/First_steps/Strings#concatenating_strings)
-- [Can you join strings and numbers together?](/en-US/docs/Learn/JavaScript/First_steps/Strings#numbers_versus_strings)
+- [Can you join strings and numbers together?](/en-US/docs/Learn/JavaScript/First_steps/Strings#numbers_vs._strings)
 - [How do you find the length of a string?](/en-US/docs/Learn/JavaScript/First_steps/Useful_string_methods#finding_the_length_of_a_string)
 - [How do you find what character is at a certain position in a string?](/en-US/docs/Learn/JavaScript/First_steps/Useful_string_methods#retrieving_a_specific_string_character)
-- [How do you find and extract a specific substring from a string?](/en-US/docs/Learn/JavaScript/First_steps/Useful_string_methods#finding_a_substring_inside_a_string_and_extracting_it)
+- [How do you find and extract a specific substring from a string?](/en-US/docs/Learn/JavaScript/First_steps/Useful_string_methods#extracting_a_substring_from_a_string)
 - [How do you change the case of a string?](/en-US/docs/Learn/JavaScript/First_steps/Useful_string_methods#changing_case)
 - [How do you replace one specific substring with another?](/en-US/docs/Learn/JavaScript/First_steps/Useful_string_methods#updating_parts_of_a_string)
 
 ### Arrays
 
-- [How do you create an array?](/en-US/docs/Learn/JavaScript/First_steps/Arrays#creating_an_array)
+- [How do you create an array?](/en-US/docs/Learn/JavaScript/First_steps/Arrays#creating_arrays)
 - [How do you access and modify the items in an array?](/en-US/docs/Learn/JavaScript/First_steps/Arrays#accessing_and_modifying_array_items) (this includes multidimensional arrays)
 - [How do you find the length of an array?](/en-US/docs/Learn/JavaScript/First_steps/Arrays#finding_the_length_of_an_array)
-- [How do you add and remove array items?](/en-US/docs/Learn/JavaScript/First_steps/Arrays#adding_and_removing_array_items)
+- [How do you add items to an array?](/en-US/docs/Learn/JavaScript/First_steps/Arrays#adding_items)
+- [How do you remove items from an array?](/en-US/docs/Learn/JavaScript/First_steps/Arrays#removing_items)
 - [How do you split a string into array items, or join array items into a string?](/en-US/docs/Learn/JavaScript/First_steps/Arrays#converting_between_strings_and_arrays)
 
 ### Debugging JavaScript

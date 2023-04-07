@@ -14,7 +14,7 @@ MDN Web Docs needs your help! We have a large number of typos to fix, examples t
 
 There are multiple avenues you can take to contribute to MDN depending on your skill set and interests. Along with each task we provide a short description and an approximate time that each type of task typically takes.
 
-If you are not sure what to do, you are always welcome to [ask for help](/en-US/docs/MDN/Community/Contributing/Getting_started#step_4_ask_for_help).
+If you are not sure what to do, you are always welcome to [ask for help](/en-US/docs/MDN/Community/Communication_channels).
 
 ### Primary contribution types
 
