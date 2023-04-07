@@ -1,5 +1,6 @@
 ---
-title: GPUQueue.writeBuffer()
+title: "GPUQueue: writeBuffer() method"
+short-title: writeBuffer()
 slug: Web/API/GPUQueue/writeBuffer
 page-type: web-api-instance-method
 status:

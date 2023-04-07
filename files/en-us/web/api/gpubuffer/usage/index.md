@@ -1,5 +1,6 @@
 ---
-title: GPUBuffer.usage
+title: "GPUBuffer: usage property"
+short-title: usage
 slug: Web/API/GPUBuffer/usage
 page-type: web-api-instance-property
 status:

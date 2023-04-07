@@ -1,5 +1,6 @@
 ---
-title: GamepadHapticActuator.playEffect()
+title: "GamepadHapticActuator: playEffect() method"
+short-title: playEffect()
 slug: Web/API/GamepadHapticActuator/playEffect
 page-type: web-api-instance-method
 status:

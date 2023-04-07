@@ -1,5 +1,6 @@
 ---
-title: GPURenderPassEncoder.setStencilReference()
+title: "GPURenderPassEncoder: setStencilReference() method"
+short-title: setStencilReference()
 slug: Web/API/GPURenderPassEncoder/setStencilReference
 page-type: web-api-instance-method
 status:

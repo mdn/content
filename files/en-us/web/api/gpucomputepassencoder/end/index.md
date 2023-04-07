@@ -1,5 +1,6 @@
 ---
-title: GPUComputePassEncoder.end()
+title: "GPUComputePassEncoder: end() method"
+short-title: end()
 slug: Web/API/GPUComputePassEncoder/end
 page-type: web-api-instance-method
 status:

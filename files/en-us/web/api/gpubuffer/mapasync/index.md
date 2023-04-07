@@ -1,5 +1,6 @@
 ---
-title: GPUBuffer.mapAsync()
+title: "GPUBuffer: mapAsync() method"
+short-title: mapAsync()
 slug: Web/API/GPUBuffer/mapAsync
 page-type: web-api-instance-method
 status:

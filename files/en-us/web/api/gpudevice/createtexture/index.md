@@ -1,5 +1,6 @@
 ---
-title: GPUDevice.createTexture()
+title: "GPUDevice: createTexture() method"
+short-title: createTexture()
 slug: Web/API/GPUDevice/createTexture
 page-type: web-api-instance-method
 status:

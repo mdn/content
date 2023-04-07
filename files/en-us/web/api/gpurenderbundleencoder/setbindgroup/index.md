@@ -1,5 +1,6 @@
 ---
-title: GPURenderBundleEncoder.setBindGroup()
+title: "GPURenderBundleEncoder: setBindGroup() method"
+short-title: setBindGroup()
 slug: Web/API/GPURenderBundleEncoder/setBindGroup
 page-type: web-api-instance-method
 status:

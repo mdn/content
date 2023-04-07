@@ -1,5 +1,6 @@
 ---
-title: GPURenderPipeline.getBindGroupLayout()
+title: "GPURenderPipeline: getBindGroupLayout() method"
+short-title: getBindGroupLayout()
 slug: Web/API/GPURenderPipeline/getBindGroupLayout
 page-type: web-api-instance-method
 status:
