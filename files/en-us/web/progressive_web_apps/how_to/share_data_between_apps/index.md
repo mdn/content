@@ -50,7 +50,7 @@ While sharing simple text information is well supported, sharing files doesn't w
 
 It's a good practice to call this method before displaying a button used to share files in your application.
 
-In the following code example, a file sharing button is hidden if file sharing isn't supported, an event listener is attached and used to share a file otherwise:
+In the following code example, a file sharing button is hidden if file sharing isn't supported; otherwise, an event listener is attached and used to share a file:
 
 ```js
 const button = document.querySelector("#share");
