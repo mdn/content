@@ -1,5 +1,6 @@
 ---
-title: Notification.timestamp
+title: "Notification: timestamp property"
+short-title: timestamp
 slug: Web/API/Notification/timestamp
 page-type: web-api-instance-property
 status:

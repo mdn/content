@@ -1,5 +1,6 @@
 ---
-title: performance.measure()
+title: "performance: measure() method"
+short-title: measure()
 slug: Web/API/Performance/measure
 page-type: web-api-instance-method
 browser-compat: api.Performance.measure

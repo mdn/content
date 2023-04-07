@@ -1,5 +1,6 @@
 ---
-title: performance.now()
+title: "performance: now() method"
+short-title: now()
 slug: Web/API/Performance/now
 page-type: web-api-instance-method
 browser-compat: api.Performance.now

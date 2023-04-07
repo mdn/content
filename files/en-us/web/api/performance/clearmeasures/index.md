@@ -1,5 +1,6 @@
 ---
-title: performance.clearMeasures()
+title: "performance: clearMeasures() method"
+short-title: clearMeasures()
 slug: Web/API/Performance/clearMeasures
 page-type: web-api-instance-method
 browser-compat: api.Performance.clearMeasures

@@ -1,5 +1,6 @@
 ---
-title: PaymentManager.userHint
+title: "PaymentManager: userHint property"
+short-title: userHint
 slug: Web/API/PaymentManager/userHint
 page-type: web-api-instance-property
 status:
