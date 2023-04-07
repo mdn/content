@@ -53,10 +53,10 @@ The {{domxref("RTCRtpTransceiver")}} object which will be used to exchange the m
 - {{jsxref("RangeError")}}
   - : Thrown if any of the `sendEncodings` encodings have a {{domxref("RTCRtpEncodingParameters.maxFramerate", "maxFramerate")}} value less than 0.0, or a {{domxref("RTCRtpEncodingParameters.scaleResolutionDownBy", "scaleResolutionDownBy")}} value of less than 1.0.
 
-- {{jsxref("InvalidStateError")}}
+- `InvalidStateError` {{domxref("DOMException")}}
   - : Thrown if the the method is called when the associated connection is closed.
 
-- {{jsxref("InvalidAccessError")}}
+- `InvalidAccessError` {{domxref("DOMException")}}
   - : Thrown if the `sendEncodings` argument is used, and contains a read-only parameter other than `rid`.
 
 ## Specifications
