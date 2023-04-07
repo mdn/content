@@ -1,5 +1,6 @@
 ---
-title: MutationEvent.relatedNode
+title: "MutationEvent: relatedNode property"
+short-title: relatedNode
 slug: Web/API/MutationEvent/relatedNode
 page-type: web-api-instance-property
 status:

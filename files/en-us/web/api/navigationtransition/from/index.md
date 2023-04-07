@@ -1,5 +1,6 @@
 ---
-title: NavigationTransition.from
+title: "NavigationTransition: from property"
+short-title: from
 slug: Web/API/NavigationTransition/from
 page-type: web-api-instance-property
 status:

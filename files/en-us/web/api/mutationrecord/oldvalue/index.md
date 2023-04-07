@@ -1,5 +1,6 @@
 ---
-title: MutationRecord.oldValue
+title: "MutationRecord: oldValue property"
+short-title: oldValue
 slug: Web/API/MutationRecord/oldValue
 page-type: web-api-instance-property
 browser-compat: api.MutationRecord.oldValue

@@ -1,5 +1,6 @@
 ---
-title: NavigateEvent.intercept()
+title: "NavigateEvent: intercept() method"
+short-title: intercept()
 slug: Web/API/NavigateEvent/intercept
 page-type: web-api-instance-method
 status:
