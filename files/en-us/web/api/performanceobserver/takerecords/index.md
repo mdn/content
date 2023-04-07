@@ -1,5 +1,6 @@
 ---
-title: PerformanceObserver.takeRecords()
+title: "PerformanceObserver: takeRecords() method"
+short-title: takeRecords()
 slug: Web/API/PerformanceObserver/takeRecords
 page-type: web-api-instance-method
 browser-compat: api.PerformanceObserver.takeRecords

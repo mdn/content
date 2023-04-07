@@ -1,5 +1,6 @@
 ---
-title: Request.integrity
+title: "Request: integrity property"
+short-title: integrity
 slug: Web/API/Request/integrity
 page-type: web-api-instance-property
 browser-compat: api.Request.integrity

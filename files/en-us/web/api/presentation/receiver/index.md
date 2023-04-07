@@ -1,5 +1,6 @@
 ---
-title: Presentation.receiver
+title: "Presentation: receiver property"
+short-title: receiver
 slug: Web/API/Presentation/receiver
 page-type: web-api-instance-property
 status:

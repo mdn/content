@@ -1,5 +1,6 @@
 ---
-title: PerformanceResourceTiming.responseStatus
+title: "PerformanceResourceTiming: responseStatus property"
+short-title: responseStatus
 slug: Web/API/PerformanceResourceTiming/responseStatus
 page-type: web-api-instance-property
 status:

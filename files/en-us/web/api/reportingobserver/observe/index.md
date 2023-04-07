@@ -1,5 +1,6 @@
 ---
-title: ReportingObserver.observe()
+title: "ReportingObserver: observe() method"
+short-title: observe()
 slug: Web/API/ReportingObserver/observe
 page-type: web-api-instance-method
 browser-compat: api.ReportingObserver.observe

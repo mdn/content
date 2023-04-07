@@ -1,5 +1,6 @@
 ---
-title: RTCDataChannel.readyState
+title: "RTCDataChannel: readyState property"
+short-title: readyState
 slug: Web/API/RTCDataChannel/readyState
 page-type: web-api-instance-property
 browser-compat: api.RTCDataChannel.readyState

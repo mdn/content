@@ -1,5 +1,6 @@
 ---
-title: RTCDataChannel.reliable
+title: "RTCDataChannel: reliable property"
+short-title: reliable
 slug: Web/API/RTCDataChannel/reliable
 page-type: web-api-instance-property
 status:

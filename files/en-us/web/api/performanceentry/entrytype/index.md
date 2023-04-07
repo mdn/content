@@ -1,5 +1,6 @@
 ---
-title: PerformanceEntry.entryType
+title: "PerformanceEntry: entryType property"
+short-title: entryType
 slug: Web/API/PerformanceEntry/entryType
 page-type: web-api-instance-property
 browser-compat: api.PerformanceEntry.entryType
