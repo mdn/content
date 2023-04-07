@@ -1,5 +1,6 @@
 ---
-title: HTMLScriptElement.supports()
+title: "HTMLScriptElement: supports() static method"
+short-title: supports()
 slug: Web/API/HTMLScriptElement/supports
 page-type: web-api-static-method
 browser-compat: api.HTMLScriptElement.supports

@@ -1,5 +1,6 @@
 ---
-title: IDBIndex.keyPath
+title: "IDBIndex: keyPath property"
+short-title: keyPath
 slug: Web/API/IDBIndex/keyPath
 page-type: web-api-instance-property
 browser-compat: api.IDBIndex.keyPath

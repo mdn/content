@@ -1,5 +1,6 @@
 ---
 title: "HTMLMediaElement: error event"
+short-title: error
 slug: Web/API/HTMLMediaElement/error_event
 page-type: web-api-event
 browser-compat: api.HTMLMediaElement.error_event

@@ -1,5 +1,6 @@
 ---
-title: HTMLTableRowElement.rowIndex
+title: "HTMLTableRowElement: rowIndex property"
+short-title: rowIndex
 slug: Web/API/HTMLTableRowElement/rowIndex
 page-type: web-api-instance-property
 browser-compat: api.HTMLTableRowElement.rowIndex

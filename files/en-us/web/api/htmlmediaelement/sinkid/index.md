@@ -1,5 +1,6 @@
 ---
-title: HTMLMediaElement.sinkId
+title: "HTMLMediaElement: sinkId property"
+short-title: sinkId
 slug: Web/API/HTMLMediaElement/sinkId
 page-type: web-api-instance-property
 status:

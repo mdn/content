@@ -1,5 +1,6 @@
 ---
 title: "HTMLMediaElement: durationchange event"
+short-title: durationchange
 slug: Web/API/HTMLMediaElement/durationchange_event
 page-type: web-api-event
 browser-compat: api.HTMLMediaElement.durationchange_event

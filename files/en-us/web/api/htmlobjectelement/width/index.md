@@ -1,5 +1,6 @@
 ---
-title: HTMLObjectElement.width
+title: "HTMLObjectElement: width property"
+short-title: width
 slug: Web/API/HTMLObjectElement/width
 page-type: web-api-instance-property
 browser-compat: api.HTMLObjectElement.width

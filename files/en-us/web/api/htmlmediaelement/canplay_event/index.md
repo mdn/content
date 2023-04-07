@@ -1,5 +1,6 @@
 ---
 title: "HTMLMediaElement: canplay event"
+short-title: canplay
 slug: Web/API/HTMLMediaElement/canplay_event
 page-type: web-api-event
 browser-compat: api.HTMLMediaElement.canplay_event

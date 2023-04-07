@@ -1,5 +1,6 @@
 ---
-title: HTMLTableElement.deleteTHead()
+title: "HTMLTableElement: deleteTHead() method"
+short-title: deleteTHead()
 slug: Web/API/HTMLTableElement/deleteTHead
 page-type: web-api-instance-method
 browser-compat: api.HTMLTableElement.deleteTHead

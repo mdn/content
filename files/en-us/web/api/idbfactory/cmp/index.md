@@ -1,5 +1,6 @@
 ---
-title: IDBFactory.cmp()
+title: "IDBFactory: cmp() method"
+short-title: cmp()
 slug: Web/API/IDBFactory/cmp
 page-type: web-api-instance-method
 browser-compat: api.IDBFactory.cmp

@@ -1,5 +1,6 @@
 ---
-title: HTMLObjectElement.setCustomValidity()
+title: "HTMLObjectElement: setCustomValidity() method"
+short-title: setCustomValidity()
 slug: Web/API/HTMLObjectElement/setCustomValidity
 page-type: web-api-instance-method
 browser-compat: api.HTMLObjectElement.setCustomValidity

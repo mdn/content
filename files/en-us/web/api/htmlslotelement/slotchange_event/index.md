@@ -1,5 +1,6 @@
 ---
 title: "HTMLSlotElement: slotchange event"
+short-title: slotchange
 slug: Web/API/HTMLSlotElement/slotchange_event
 page-type: web-api-event
 browser-compat: api.HTMLSlotElement.slotchange_event

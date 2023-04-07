@@ -1,5 +1,6 @@
 ---
-title: HTMLMediaElement.paused
+title: "HTMLMediaElement: paused property"
+short-title: paused
 slug: Web/API/HTMLMediaElement/paused
 page-type: web-api-instance-property
 browser-compat: api.HTMLMediaElement.paused

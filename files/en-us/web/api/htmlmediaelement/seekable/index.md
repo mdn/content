@@ -1,5 +1,6 @@
 ---
-title: HTMLMediaElement.seekable
+title: "HTMLMediaElement: seekable property"
+short-title: seekable
 slug: Web/API/HTMLMediaElement/seekable
 page-type: web-api-instance-property
 browser-compat: api.HTMLMediaElement.seekable

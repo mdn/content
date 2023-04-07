@@ -1,5 +1,6 @@
 ---
-title: HTMLTableElement.createCaption()
+title: "HTMLTableElement: createCaption() method"
+short-title: createCaption()
 slug: Web/API/HTMLTableElement/createCaption
 page-type: web-api-instance-method
 browser-compat: api.HTMLTableElement.createCaption

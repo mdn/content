@@ -1,5 +1,6 @@
 ---
-title: HTMLMetaElement.content
+title: "HTMLMetaElement: content property"
+short-title: content
 slug: Web/API/HTMLMetaElement/content
 page-type: web-api-instance-property
 browser-compat: api.HTMLMetaElement.content
