@@ -1,5 +1,6 @@
 ---
-title: IDBKeyRange.upperBound()
+title: "IDBKeyRange: upperBound() static method"
+short-title: upperBound()
 slug: Web/API/IDBKeyRange/upperBound
 page-type: web-api-static-method
 browser-compat: api.IDBKeyRange.upperBound

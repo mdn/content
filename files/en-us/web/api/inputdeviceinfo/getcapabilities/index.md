@@ -1,5 +1,6 @@
 ---
-title: InputDeviceInfo.getCapabilities()
+title: "InputDeviceInfo: getCapabilities() method"
+short-title: getCapabilities()
 slug: Web/API/InputDeviceInfo/getCapabilities
 page-type: web-api-instance-method
 browser-compat: api.InputDeviceInfo.getCapabilities

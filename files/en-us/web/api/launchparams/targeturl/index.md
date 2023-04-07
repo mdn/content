@@ -1,5 +1,6 @@
 ---
-title: LaunchParams.targetURL
+title: "LaunchParams: targetURL property"
+short-title: targetURL
 slug: Web/API/LaunchParams/targetURL
 page-type: web-api-instance-property
 status:

@@ -1,5 +1,6 @@
 ---
-title: ImageDecoder.isTypeSupported()
+title: "ImageDecoder: isTypeSupported() static method"
+short-title: isTypeSupported()
 slug: Web/API/ImageDecoder/isTypeSupported
 page-type: web-api-static-method
 status:

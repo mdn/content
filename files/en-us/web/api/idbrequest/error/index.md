@@ -1,5 +1,6 @@
 ---
-title: IDBRequest.error
+title: "IDBRequest: error property"
+short-title: error
 slug: Web/API/IDBRequest/error
 page-type: web-api-instance-property
 browser-compat: api.IDBRequest.error

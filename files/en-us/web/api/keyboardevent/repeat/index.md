@@ -1,5 +1,6 @@
 ---
-title: KeyboardEvent.repeat
+title: "KeyboardEvent: repeat property"
+short-title: repeat
 slug: Web/API/KeyboardEvent/repeat
 page-type: web-api-instance-property
 browser-compat: api.KeyboardEvent.repeat

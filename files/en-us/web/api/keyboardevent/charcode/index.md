@@ -1,5 +1,6 @@
 ---
-title: KeyboardEvent.charCode
+title: "KeyboardEvent: charCode property"
+short-title: charCode
 slug: Web/API/KeyboardEvent/charCode
 page-type: web-api-instance-property
 status:
