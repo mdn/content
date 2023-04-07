@@ -1,5 +1,6 @@
 ---
-title: PictureInPictureEvent()
+title: "PictureInPictureEvent: PictureInPictureEvent() constructor"
+short-title: PictureInPictureEvent()
 slug: Web/API/PictureInPictureEvent/PictureInPictureEvent
 page-type: web-api-constructor
 browser-compat: api.PictureInPictureEvent.PictureInPictureEvent

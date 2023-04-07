@@ -1,5 +1,6 @@
 ---
-title: ReadableStreamBYOBRequest.respondWithNewView()
+title: "ReadableStreamBYOBRequest: respondWithNewView() method"
+short-title: respondWithNewView()
 slug: Web/API/ReadableStreamBYOBRequest/respondWithNewView
 page-type: web-api-instance-method
 browser-compat: api.ReadableStreamBYOBRequest.respondWithNewView

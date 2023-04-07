@@ -1,5 +1,6 @@
 ---
-title: Range.cloneContents()
+title: "Range: cloneContents() method"
+short-title: cloneContents()
 slug: Web/API/Range/cloneContents
 page-type: web-api-instance-method
 browser-compat: api.Range.cloneContents

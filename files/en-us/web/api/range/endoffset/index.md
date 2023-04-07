@@ -1,5 +1,6 @@
 ---
-title: Range.endOffset
+title: "Range: endOffset property"
+short-title: endOffset
 slug: Web/API/Range/endOffset
 page-type: web-api-instance-property
 browser-compat: api.Range.endOffset

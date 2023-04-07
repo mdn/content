@@ -1,5 +1,6 @@
 ---
-title: PublicKeyCredential.isUserVerifyingPlatformAuthenticatorAvailable()
+title: "PublicKeyCredential: isUserVerifyingPlatformAuthenticatorAvailable() static method"
+short-title: isUserVerifyingPlatformAuthenticatorAvailable()
 slug: Web/API/PublicKeyCredential/isUserVerifyingPlatformAuthenticatorAvailable
 page-type: web-api-static-method
 browser-compat: api.PublicKeyCredential.isUserVerifyingPlatformAuthenticatorAvailable
