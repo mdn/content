@@ -1,5 +1,6 @@
 ---
-title: NavigatorUAData.mobile
+title: "NavigatorUAData: mobile property"
+short-title: mobile
 slug: Web/API/NavigatorUAData/mobile
 page-type: web-api-instance-property
 status:

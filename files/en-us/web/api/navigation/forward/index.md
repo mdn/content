@@ -1,5 +1,6 @@
 ---
-title: Navigation.forward()
+title: "Navigation: forward() method"
+short-title: forward()
 slug: Web/API/Navigation/forward
 page-type: web-api-instance-method
 status:

@@ -1,5 +1,6 @@
 ---
-title: Navigation.navigate()
+title: "Navigation: navigate() method"
+short-title: navigate()
 slug: Web/API/Navigation/navigate
 page-type: web-api-instance-method
 status:

@@ -1,5 +1,6 @@
 ---
-title: Navigation.currentEntry
+title: "Navigation: currentEntry property"
+short-title: currentEntry
 slug: Web/API/Navigation/currentEntry
 page-type: web-api-instance-property
 status:

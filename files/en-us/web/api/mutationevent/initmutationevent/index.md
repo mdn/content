@@ -1,5 +1,6 @@
 ---
-title: MutationEvent.initMutationEvent()
+title: "MutationEvent: initMutationEvent() method"
+short-title: initMutationEvent()
 slug: Web/API/MutationEvent/initMutationEvent
 page-type: web-api-instance-method
 status:
