@@ -1,5 +1,6 @@
 ---
-title: FileSystemHandle.kind
+title: "FileSystemHandle: kind property"
+short-title: kind
 slug: Web/API/FileSystemHandle/kind
 page-type: web-api-instance-property
 browser-compat: api.FileSystemHandle.kind

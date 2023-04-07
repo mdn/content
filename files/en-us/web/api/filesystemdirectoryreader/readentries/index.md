@@ -1,5 +1,6 @@
 ---
-title: FileSystemDirectoryReader.readEntries()
+title: "FileSystemDirectoryReader: readEntries() method"
+short-title: readEntries()
 slug: Web/API/FileSystemDirectoryReader/readEntries
 page-type: web-api-instance-method
 browser-compat: api.FileSystemDirectoryReader.readEntries

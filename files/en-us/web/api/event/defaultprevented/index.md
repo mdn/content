@@ -1,5 +1,6 @@
 ---
-title: Event.defaultPrevented
+title: "Event: defaultPrevented property"
+short-title: defaultPrevented
 slug: Web/API/Event/defaultPrevented
 page-type: web-api-instance-property
 browser-compat: api.Event.defaultPrevented

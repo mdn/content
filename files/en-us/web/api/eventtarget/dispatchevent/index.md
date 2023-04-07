@@ -1,5 +1,6 @@
 ---
-title: EventTarget.dispatchEvent()
+title: "EventTarget: dispatchEvent() method"
+short-title: dispatchEvent()
 slug: Web/API/EventTarget/dispatchEvent
 page-type: web-api-instance-method
 browser-compat: api.EventTarget.dispatchEvent

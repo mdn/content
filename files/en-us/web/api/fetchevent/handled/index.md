@@ -1,5 +1,6 @@
 ---
-title: FetchEvent.handled
+title: "FetchEvent: handled property"
+short-title: handled
 slug: Web/API/FetchEvent/handled
 page-type: web-api-instance-property
 browser-compat: api.FetchEvent.handled

@@ -1,5 +1,6 @@
 ---
-title: FileReaderSync.readAsArrayBuffer()
+title: "FileReaderSync: readAsArrayBuffer() method"
+short-title: readAsArrayBuffer()
 slug: Web/API/FileReaderSync/readAsArrayBuffer
 page-type: web-api-instance-method
 browser-compat: api.FileReaderSync.readAsArrayBuffer
