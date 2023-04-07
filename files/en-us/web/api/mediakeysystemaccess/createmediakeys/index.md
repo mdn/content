@@ -1,5 +1,6 @@
 ---
-title: MediaKeySystemAccess.createMediaKeys()
+title: "MediaKeySystemAccess: createMediaKeys() method"
+short-title: createMediaKeys()
 slug: Web/API/MediaKeySystemAccess/createMediaKeys
 page-type: web-api-instance-method
 browser-compat: api.MediaKeySystemAccess.createMediaKeys

@@ -1,5 +1,6 @@
 ---
-title: MediaStream.active
+title: "MediaStream: active property"
+short-title: active
 slug: Web/API/MediaStream/active
 page-type: web-api-instance-property
 browser-compat: api.MediaStream.active

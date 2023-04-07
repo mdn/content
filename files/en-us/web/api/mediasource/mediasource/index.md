@@ -1,5 +1,6 @@
 ---
-title: MediaSource()
+title: "MediaSource: MediaSource() constructor"
+short-title: MediaSource()
 slug: Web/API/MediaSource/MediaSource
 page-type: web-api-constructor
 browser-compat: api.MediaSource.MediaSource

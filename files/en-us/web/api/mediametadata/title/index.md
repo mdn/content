@@ -1,5 +1,6 @@
 ---
-title: MediaMetadata.title
+title: "MediaMetadata: title property"
+short-title: title
 slug: Web/API/MediaMetadata/title
 page-type: web-api-instance-property
 browser-compat: api.MediaMetadata.title

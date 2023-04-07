@@ -1,5 +1,6 @@
 ---
-title: MediaKeyStatusMap.has()
+title: "MediaKeyStatusMap: has() method"
+short-title: has()
 slug: Web/API/MediaKeyStatusMap/has
 page-type: web-api-instance-method
 browser-compat: api.MediaKeyStatusMap.has

@@ -1,5 +1,6 @@
 ---
-title: MediaTrackSupportedConstraints.logicalSurface
+title: "MediaTrackSupportedConstraints: logicalSurface property"
+short-title: logicalSurface
 slug: Web/API/MediaTrackSupportedConstraints/logicalSurface
 page-type: web-api-instance-property
 browser-compat: api.MediaTrackSupportedConstraints.logicalSurface

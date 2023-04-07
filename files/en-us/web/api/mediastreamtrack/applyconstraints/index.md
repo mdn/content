@@ -1,5 +1,6 @@
 ---
-title: MediaStreamTrack.applyConstraints()
+title: "MediaStreamTrack: applyConstraints() method"
+short-title: applyConstraints()
 slug: Web/API/MediaStreamTrack/applyConstraints
 page-type: web-api-instance-method
 browser-compat: api.MediaStreamTrack.applyConstraints
