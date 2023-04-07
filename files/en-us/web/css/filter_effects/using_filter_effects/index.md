@@ -80,11 +80,11 @@ img {
 
 ### Applying repeated filters
 
-As filters are applied in sequential order, we are not limited to using a filter only once. In this Manadala example, four drop shadows are applied to a line-drawn SVG. The original, with the filter removed with `filter: none` is included for comparison.
+As filters are applied in sequential order, we are not limited to using a filter only once. In the first Manadala example, four drop shadows are applied to a line-drawn SVG. The second example, the same SVG with the filter removed with `filter: none`, is included for comparison.
 
 ```html
-<img role="img" alt="Mandala" src="mandala.svg" />
-<img role="img" alt="Mandala" src="mandala.svg" />
+<img src="mandala.svg" alt="Colorful mandala" role="img" />
+<img src="mandala.svg" alt="Plain mandala" role="img" />
 ```
 
 ```css hidden
