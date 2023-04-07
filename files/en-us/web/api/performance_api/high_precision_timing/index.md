@@ -22,14 +22,14 @@ JavaScript defines {{jsxref("Date.now()")}} as the number of milliseconds elapse
 
 JavaScript `Date` times are subject to system clock skew or adjustments. This means that the value of time may not always be monotonically increasing. The main purpose of `Date` objects is to display time and date information to the user and so many operating systems run a daemon which regularly synchronizes time. It might be that the clock is tweaked a few milliseconds several times per hour.
 
-The `performance.now()` method (and all other `DOMHighResTimeStamp` values) provide monotonically increasing time values, never decrease and aren't subject to clock adjustments.
+The `performance.now()` method (and all other `DOMHighResTimeStamp` values) provide monotonically increasing time values and aren't subject to clock adjustments. This means that it is guaranteed `DOMHighResTimeStamp` values will be at least equal to, if not greater than, the last time you accessed it.
 
 ```js
 Date.now(); // 1678889977578
 Performance.now(); // 233936
 ```
 
-For measuring performance, calculating precise frame rates (FPS), animation loops, etc., use monotonically increasing high resolution time available with {{domxref("Performance.now()")}} instead of JavaScript'a {{jsxref("Date.now()")}}.
+For measuring performance, calculating precise frame rates (FPS), animation loops, etc., use monotonically increasing high resolution time available with {{domxref("Performance.now()")}} instead of JavaScript's {{jsxref("Date.now()")}}.
 
 To summarize:
 
