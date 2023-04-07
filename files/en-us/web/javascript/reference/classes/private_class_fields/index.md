@@ -123,7 +123,7 @@ class SubClass extends ClassWithPrivateField {
   }
 }
 
-new SubClass(); // In some dev tools, it shows SubClass {#privateField: 42, #subPrivateField: 23}
+new SubClass(); // In some dev tools, it shows SubClass {#privateField: 42, #subPrivateField: 23}
 ```
 
 > **Note:** `#privateField` from the `ClassWithPrivateField` base class is private to `ClassWithPrivateField` and is not accessible from the derived `Subclass`.
