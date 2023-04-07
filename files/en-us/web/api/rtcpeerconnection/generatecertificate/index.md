@@ -1,5 +1,6 @@
 ---
-title: RTCPeerConnection.generateCertificate() static function
+title: "RTCPeerConnection: generateCertificate() static function static method"
+short-title: generateCertificate() static function
 slug: Web/API/RTCPeerConnection/generateCertificate
 page-type: web-api-static-method
 browser-compat: api.RTCPeerConnection.generateCertificate

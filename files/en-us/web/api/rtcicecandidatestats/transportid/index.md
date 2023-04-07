@@ -1,5 +1,6 @@
 ---
-title: RTCIceCandidateStats.transportId
+title: "RTCIceCandidateStats: transportId property"
+short-title: transportId
 slug: Web/API/RTCIceCandidateStats/transportId
 page-type: web-api-instance-property
 browser-compat: api.RTCIceCandidateStats.transportId

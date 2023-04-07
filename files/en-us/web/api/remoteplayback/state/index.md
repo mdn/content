@@ -1,5 +1,6 @@
 ---
-title: RemotePlayback.state
+title: "RemotePlayback: state property"
+short-title: state
 slug: Web/API/RemotePlayback/state
 page-type: web-api-instance-property
 browser-compat: api.RemotePlayback.state

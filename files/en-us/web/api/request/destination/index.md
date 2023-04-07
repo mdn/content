@@ -1,5 +1,6 @@
 ---
-title: Request.destination
+title: "Request: destination property"
+short-title: destination
 slug: Web/API/Request/destination
 page-type: web-api-instance-property
 browser-compat: api.Request.destination

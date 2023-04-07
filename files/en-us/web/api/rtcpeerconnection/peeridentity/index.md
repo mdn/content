@@ -1,5 +1,6 @@
 ---
-title: RTCPeerConnection.peerIdentity
+title: "RTCPeerConnection: peerIdentity property"
+short-title: peerIdentity
 slug: Web/API/RTCPeerConnection/peerIdentity
 page-type: web-api-instance-property
 browser-compat: api.RTCPeerConnection.peerIdentity

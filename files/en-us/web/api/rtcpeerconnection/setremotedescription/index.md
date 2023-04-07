@@ -1,5 +1,6 @@
 ---
-title: RTCPeerConnection.setRemoteDescription()
+title: "RTCPeerConnection: setRemoteDescription() method"
+short-title: setRemoteDescription()
 slug: Web/API/RTCPeerConnection/setRemoteDescription
 page-type: web-api-instance-method
 browser-compat: api.RTCPeerConnection.setRemoteDescription

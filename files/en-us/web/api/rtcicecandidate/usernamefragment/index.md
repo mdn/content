@@ -1,5 +1,6 @@
 ---
-title: RTCIceCandidate.usernameFragment
+title: "RTCIceCandidate: usernameFragment property"
+short-title: usernameFragment
 slug: Web/API/RTCIceCandidate/usernameFragment
 page-type: web-api-instance-property
 browser-compat: api.RTCIceCandidate.usernameFragment
