@@ -48,7 +48,7 @@ urlpatterns = [
 ]
 ```
 
-As discussed in the previous tutorial the URL must already have matched `/catalog`, so the view will actually be called for the URL: `/catalog/books/`.
+As discussed in the previous tutorial the URL must already have matched `/catalog`, so the view will actually be called for the URL: `books/`.
 
 The view function has a different format than before — that's because this view will actually be implemented as a class. We will be inheriting from an existing generic view function that already does most of what we want this view function to do, rather than writing our own from scratch.
 
