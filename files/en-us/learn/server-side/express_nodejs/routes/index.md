@@ -189,7 +189,7 @@ router.get("/about", function (req, res, err) {
 
 The previous section shows how Express expects route functions to return errors.
 The framework is designed for using with asynchronous functions that take callback functions that return an error and a result when the operation completes, and not [Promise](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)-based APIs that might throw an exception.
-That's a problem because later on we will be making database queries in our route functions that may throw exceptions.
+That's a problem because later on we will be making Mongoose database queries that may throw exceptions in our route functions.
 
 In order for the framework to properly handle exceptions, they must be caught, and then forwarded as errors in the normal way.
 

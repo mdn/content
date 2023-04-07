@@ -36,20 +36,20 @@ At the end of this article, you should have a good end-to-end understanding of h
 
 ## Displaying library data tutorial subarticles
 
-The following subarticles go through the process of adding the different features required for us to display the required website pages. You need to read and work through each one of these in turn, before moving on to the next one.
+The following subarticles go through the process of adding the different features required for us to display the required website pages.
+You need to read and work through each one of these in turn, before moving on to the next one.
 
-1. [Handling_exceptions in asynchronous routes](/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Handling_exceptions_in_asynchronous_routes)
-2. [Template primer](/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Template_primer)
-3. [The LocalLibrary base template](/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data/LocalLibrary_base_template)
-4. [Home page](/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Home_page)
-5. [Book list page](/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Book_list_page)
-6. [BookInstance list page](/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data/BookInstance_list_page)
-7. [Date formatting using luxon](/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Date_formatting_using_moment)
-8. [Author list page and Genre list page challenge](/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Author_list_page)
-9. [Genre detail page](/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Genre_detail_page)
-10. [Book detail page](/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Book_detail_page)
-11. [Author detail page](/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Author_detail_page)
-12. [BookInstance detail page and challenge](/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data/BookInstance_detail_page_and_challenge)
+1. [Template primer](/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Template_primer)
+2. [The LocalLibrary base template](/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data/LocalLibrary_base_template)
+3. [Home page](/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Home_page)
+4. [Book list page](/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Book_list_page)
+5. [BookInstance list page](/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data/BookInstance_list_page)
+6. [Date formatting using luxon](/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Date_formatting_using_moment)
+7. [Author list page and Genre list page challenge](/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Author_list_page)
+8. [Genre detail page](/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Genre_detail_page)
+9. [Book detail page](/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Book_detail_page)
+10. [Author detail page](/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Author_detail_page)
+11. [BookInstance detail page and challenge](/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data/BookInstance_detail_page_and_challenge)
 
 ## Summary
 
