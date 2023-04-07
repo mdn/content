@@ -125,7 +125,7 @@ Here is a web app manifest example using the `share_target` member:
 
 When your app is selected by the user to handle an other apps' shared content, it is launched and the shared content is passed to it similar to how {{htmlelement("form")}} elements are submitted.
 
-In the above code example, when the ChattyBox app is selected as a target, it is launched with an HTTP [`GET`](/en-US/docs/Web/HTTP/Methods/GET) request on the `/share-handler` URL with the shared data passed as request parameters named `description` and `link`.
+In the above code example, when the ChattyBox app is selected as a target, it is launched with an HTTP [`GET`](/en-US/docs/Web/HTTP/Methods/GET) request on the `/share-handler` URL, with the shared data passed as request parameters named `description` and `link`.
 
 The `GET` request will look like this: `/shared-handler?description=...&link=...`.
 
