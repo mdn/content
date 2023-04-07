@@ -1,5 +1,6 @@
 ---
-title: SourceBuffer.updating
+title: "SourceBuffer: updating property"
+short-title: updating
 slug: Web/API/SourceBuffer/updating
 page-type: web-api-instance-property
 browser-compat: api.SourceBuffer.updating

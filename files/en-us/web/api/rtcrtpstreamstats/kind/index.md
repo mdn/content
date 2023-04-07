@@ -1,5 +1,6 @@
 ---
-title: RTCRtpStreamStats.kind
+title: "RTCRtpStreamStats: kind property"
+short-title: kind
 slug: Web/API/RTCRtpStreamStats/kind
 page-type: web-api-instance-property
 browser-compat: api.RTCRtpStreamStats.kind

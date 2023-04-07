@@ -1,5 +1,6 @@
 ---
-title: SecurityPolicyViolationEvent.documentURI
+title: "SecurityPolicyViolationEvent: documentURI property"
+short-title: documentURI
 slug: Web/API/SecurityPolicyViolationEvent/documentURI
 page-type: web-api-instance-property
 browser-compat: api.SecurityPolicyViolationEvent.documentURI

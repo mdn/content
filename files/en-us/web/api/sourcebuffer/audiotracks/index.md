@@ -1,5 +1,6 @@
 ---
-title: SourceBuffer.audioTracks
+title: "SourceBuffer: audioTracks property"
+short-title: audioTracks
 slug: Web/API/SourceBuffer/audioTracks
 page-type: web-api-instance-property
 browser-compat: api.SourceBuffer.audioTracks

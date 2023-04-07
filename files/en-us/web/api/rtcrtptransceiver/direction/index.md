@@ -1,5 +1,6 @@
 ---
-title: RTCRtpTransceiver.direction
+title: "RTCRtpTransceiver: direction property"
+short-title: direction
 slug: Web/API/RTCRtpTransceiver/direction
 page-type: web-api-instance-property
 browser-compat: api.RTCRtpTransceiver.direction

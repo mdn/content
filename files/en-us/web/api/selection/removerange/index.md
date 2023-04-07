@@ -1,5 +1,6 @@
 ---
-title: Selection.removeRange()
+title: "Selection: removeRange() method"
+short-title: removeRange()
 slug: Web/API/Selection/removeRange
 page-type: web-api-instance-method
 browser-compat: api.Selection.removeRange

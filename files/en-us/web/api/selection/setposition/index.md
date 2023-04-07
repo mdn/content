@@ -1,5 +1,6 @@
 ---
-title: Selection.setPosition()
+title: "Selection: setPosition() method"
+short-title: setPosition()
 slug: Web/API/Selection/setPosition
 page-type: web-api-instance-method
 browser-compat: api.Selection.setPosition

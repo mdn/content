@@ -1,5 +1,6 @@
 ---
-title: SpeechRecognition.abort()
+title: "SpeechRecognition: abort() method"
+short-title: abort()
 slug: Web/API/SpeechRecognition/abort
 page-type: web-api-instance-method
 browser-compat: api.SpeechRecognition.abort

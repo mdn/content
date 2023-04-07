@@ -1,5 +1,6 @@
 ---
-title: RTCRtpTransceiver.setCodecPreferences()
+title: "RTCRtpTransceiver: setCodecPreferences() method"
+short-title: setCodecPreferences()
 slug: Web/API/RTCRtpTransceiver/setCodecPreferences
 page-type: web-api-instance-method
 browser-compat: api.RTCRtpTransceiver.setCodecPreferences
