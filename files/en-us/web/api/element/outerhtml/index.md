@@ -85,9 +85,8 @@ console.log(container.firstElementChild.nodeName); // logs "P"
 
 ## Notes
 
-If the element has no parent element, setting its `outerHTML` property will
-not change it or its descendants. Many browsers will also throw an exception. For
-example:
+If the element has no parent node, setting its `outerHTML` property will not change it
+or its descendants. For example:
 
 ```js
 const div = document.createElement("div");
