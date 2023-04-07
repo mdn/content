@@ -1,5 +1,6 @@
 ---
-title: HTMLFormElement.acceptCharset
+title: "HTMLFormElement: acceptCharset property"
+short-title: acceptCharset
 slug: Web/API/HTMLFormElement/acceptCharset
 page-type: web-api-instance-property
 browser-compat: api.HTMLFormElement.acceptCharset

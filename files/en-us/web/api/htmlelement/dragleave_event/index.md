@@ -1,5 +1,6 @@
 ---
 title: "HTMLElement: dragleave event"
+short-title: dragleave
 slug: Web/API/HTMLElement/dragleave_event
 page-type: web-api-event
 browser-compat: api.HTMLElement.dragleave_event

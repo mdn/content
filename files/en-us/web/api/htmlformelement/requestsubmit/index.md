@@ -1,5 +1,6 @@
 ---
-title: HTMLFormElement.requestSubmit()
+title: "HTMLFormElement: requestSubmit() method"
+short-title: requestSubmit()
 slug: Web/API/HTMLFormElement/requestSubmit
 page-type: web-api-instance-method
 browser-compat: api.HTMLFormElement.requestSubmit

@@ -1,5 +1,6 @@
 ---
-title: History.replaceState()
+title: "History: replaceState() method"
+short-title: replaceState()
 slug: Web/API/History/replaceState
 page-type: web-api-instance-method
 browser-compat: api.History.replaceState

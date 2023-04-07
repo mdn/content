@@ -1,5 +1,6 @@
 ---
 title: "HTMLFormElement: formdata event"
+short-title: formdata
 slug: Web/API/HTMLFormElement/formdata_event
 page-type: web-api-event
 browser-compat: api.HTMLFormElement.formdata_event

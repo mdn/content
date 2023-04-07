@@ -1,5 +1,6 @@
 ---
-title: HIDDevice.productName
+title: "HIDDevice: productName property"
+short-title: productName
 slug: Web/API/HIDDevice/productName
 page-type: web-api-instance-property
 status:

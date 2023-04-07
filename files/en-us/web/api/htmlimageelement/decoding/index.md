@@ -1,5 +1,6 @@
 ---
-title: HTMLImageElement.decoding
+title: "HTMLImageElement: decoding property"
+short-title: decoding
 slug: Web/API/HTMLImageElement/decoding
 page-type: web-api-instance-property
 browser-compat: api.HTMLImageElement.decoding
