@@ -195,11 +195,24 @@ const helmet = require("helmet");
 // Create the Express application object
 var app = express();
 
-app.use(helmet());
+// Add helmet to the middleware chain.
+// Set CSP headers to allow our Bootstrap and Jquery to be served
+app.use(
+  helmet.contentSecurityPolicy({
+    directives: {
+      "script-src": ["'self'", "code.jquery.com", "cdn.jsdelivr.net"],
+    },
+  })
+);
+
 // …
 ```
 
-> **Note:** The command above adds a _subset_ of the available headers (these make sense for most sites). You can add/disable specific headers as needed by following the [instructions for using helmet here](https://www.npmjs.com/package/helmet).
+We normally might have just inserted `app.use(helmet());` to add the _subset_ of the security-related headers that make sense for most sites.
+However in the [LocalLibrary base template](/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data/LocalLibrary_base_template) we include some bootstrap and jQuery scripts.
+These violate the helmet's _default_ [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/CSP), which does not allow loading of cross-site scripts.
+To allow these scripts to be loaded we modify the helmet configuration so that it sets CSP directives to allow script loading from the indicated domains.
+For your own server you can add/disable specific headers as needed by following the [instructions for using helmet here](https://www.npmjs.com/package/helmet).
 
 ### Add rate limiting to the API routes
 
