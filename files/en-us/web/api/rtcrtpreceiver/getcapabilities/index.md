@@ -1,6 +1,6 @@
 ---
-title: "RTCRtpReceiver: getCapabilities() static function static method"
-short-title: getCapabilities() static function
+title: "RTCRtpReceiver: getCapabilities() static method"
+short-title: getCapabilities()
 slug: Web/API/RTCRtpReceiver/getCapabilities
 page-type: web-api-static-method
 browser-compat: api.RTCRtpReceiver.getCapabilities
