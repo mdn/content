@@ -1,5 +1,6 @@
 ---
-title: ContentIndex.delete()
+title: "ContentIndex: delete() method"
+short-title: delete()
 slug: Web/API/ContentIndex/delete
 page-type: web-api-instance-method
 status:

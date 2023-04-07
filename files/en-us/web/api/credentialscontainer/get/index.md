@@ -1,5 +1,6 @@
 ---
-title: CredentialsContainer.get()
+title: "CredentialsContainer: get() method"
+short-title: get()
 slug: Web/API/CredentialsContainer/get
 page-type: web-api-instance-method
 browser-compat: api.CredentialsContainer.get

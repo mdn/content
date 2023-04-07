@@ -1,5 +1,6 @@
 ---
-title: console.groupCollapsed()
+title: "console: groupCollapsed() method"
+short-title: groupCollapsed()
 slug: Web/API/console/groupCollapsed
 page-type: web-api-instance-method
 browser-compat: api.console.groupCollapsed

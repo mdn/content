@@ -1,5 +1,6 @@
 ---
-title: CookieChangeEvent.changed
+title: "CookieChangeEvent: changed property"
+short-title: changed
 slug: Web/API/CookieChangeEvent/changed
 page-type: web-api-instance-property
 status:

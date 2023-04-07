@@ -1,5 +1,6 @@
 ---
-title: CSSMathProduct.values
+title: "CSSMathProduct: values property"
+short-title: values
 slug: Web/API/CSSMathProduct/values
 page-type: web-api-instance-property
 browser-compat: api.CSSMathProduct.values

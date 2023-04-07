@@ -1,5 +1,6 @@
 ---
-title: CSSNumericValue.parse()
+title: "CSSNumericValue: parse() static method"
+short-title: parse()
 slug: Web/API/CSSNumericValue/parse
 page-type: web-api-static-method
 browser-compat: api.CSSNumericValue.parse

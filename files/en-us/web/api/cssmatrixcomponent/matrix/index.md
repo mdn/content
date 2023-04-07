@@ -1,5 +1,6 @@
 ---
-title: CSSMatrixComponent.matrix
+title: "CSSMatrixComponent: matrix property"
+short-title: matrix
 slug: Web/API/CSSMatrixComponent/matrix
 page-type: web-api-instance-property
 browser-compat: api.CSSMatrixComponent.matrix
