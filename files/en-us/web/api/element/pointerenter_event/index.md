@@ -1,5 +1,6 @@
 ---
 title: "Element: pointerenter event"
+short-title: pointerenter
 slug: Web/API/Element/pointerenter_event
 browser-compat: api.Element.pointerenter_event
 page-type: web-api-event

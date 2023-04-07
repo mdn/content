@@ -1,5 +1,6 @@
 ---
-title: Element.ariaPosInSet
+title: "Element: ariaPosInSet property"
+short-title: ariaPosInSet
 slug: Web/API/Element/ariaPosInSet
 page-type: web-api-instance-property
 browser-compat: api.Element.ariaPosInSet

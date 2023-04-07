@@ -1,5 +1,6 @@
 ---
-title: Element.outerHTML
+title: "Element: outerHTML property"
+short-title: outerHTML
 slug: Web/API/Element/outerHTML
 page-type: web-api-instance-property
 browser-compat: api.Element.outerHTML

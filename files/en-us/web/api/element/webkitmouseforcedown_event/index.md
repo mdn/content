@@ -1,5 +1,6 @@
 ---
 title: "Element: webkitmouseforcedown event"
+short-title: webkitmouseforcedown
 slug: Web/API/Element/webkitmouseforcedown_event
 page-type: web-api-event
 status:

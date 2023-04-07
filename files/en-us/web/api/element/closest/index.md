@@ -1,5 +1,6 @@
 ---
-title: Element.closest()
+title: "Element: closest() method"
+short-title: closest()
 slug: Web/API/Element/closest
 page-type: web-api-instance-method
 browser-compat: api.Element.closest

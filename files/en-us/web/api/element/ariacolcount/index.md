@@ -1,5 +1,6 @@
 ---
-title: Element.ariaColCount
+title: "Element: ariaColCount property"
+short-title: ariaColCount
 slug: Web/API/Element/ariaColCount
 page-type: web-api-instance-property
 browser-compat: api.Element.ariaColCount
