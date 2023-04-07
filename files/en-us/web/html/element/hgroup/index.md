@@ -41,6 +41,10 @@ The `<hgroup>` itself has no impact on the document outline of a web page. Rathe
 </body>
 ```
 
+### Result
+
+{{EmbedLiveSample('Examples')}}
+
 ## Accessibility concerns
 
 The `<hgroup>` presently has no strong accessibility semantics. The content of the element (a heading and optional paragraphs) is what is exposed by browser accessibility APIs.
