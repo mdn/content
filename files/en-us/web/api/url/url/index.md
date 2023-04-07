@@ -1,5 +1,6 @@
 ---
-title: URL()
+title: "URL: URL() constructor"
+short-title: URL()
 slug: Web/API/URL/URL
 page-type: web-api-constructor
 browser-compat: api.URL.URL

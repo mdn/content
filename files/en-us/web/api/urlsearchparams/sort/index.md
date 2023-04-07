@@ -1,5 +1,6 @@
 ---
-title: URLSearchParams.sort()
+title: "URLSearchParams: sort() method"
+short-title: sort()
 slug: Web/API/URLSearchParams/sort
 page-type: web-api-instance-method
 browser-compat: api.URLSearchParams.sort

@@ -1,5 +1,6 @@
 ---
-title: URL.password
+title: "URL: password property"
+short-title: password
 slug: Web/API/URL/password
 page-type: web-api-instance-property
 browser-compat: api.URL.password

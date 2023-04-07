@@ -1,5 +1,6 @@
 ---
-title: TouchEvent.shiftKey
+title: "TouchEvent: shiftKey property"
+short-title: shiftKey
 slug: Web/API/TouchEvent/shiftKey
 page-type: web-api-instance-property
 browser-compat: api.TouchEvent.shiftKey

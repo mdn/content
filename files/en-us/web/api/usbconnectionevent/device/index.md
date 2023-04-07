@@ -1,5 +1,6 @@
 ---
-title: USBConnectionEvent.device
+title: "USBConnectionEvent: device property"
+short-title: device
 slug: Web/API/USBConnectionEvent/device
 page-type: web-api-instance-property
 status:
