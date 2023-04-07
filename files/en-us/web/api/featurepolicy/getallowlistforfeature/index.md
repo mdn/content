@@ -27,7 +27,7 @@ A specific feature name must be specified.
 
 ### Return value
 
-An [allowlist](/en-US/docs/Web/HTTP/Permissions_Policy/#allowlists) for the
+An [allowlist](/en-US/docs/Web/HTTP/Permissions_Policy#allowlists) for the
 specified feature.
 
 ## Errors
