@@ -1,5 +1,6 @@
 ---
-title: Document.adoptedStyleSheets
+title: "Document: adoptedStyleSheets property"
+short-title: adoptedStyleSheets
 slug: Web/API/Document/adoptedStyleSheets
 page-type: web-api-instance-property
 browser-compat: api.Document.adoptedStyleSheets

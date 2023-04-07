@@ -1,5 +1,6 @@
 ---
-title: DOMMatrixReadOnly.translate()
+title: "DOMMatrixReadOnly: translate() method"
+short-title: translate()
 slug: Web/API/DOMMatrixReadOnly/translate
 page-type: web-api-instance-method
 browser-compat: api.DOMMatrixReadOnly.translate

@@ -1,5 +1,6 @@
 ---
-title: Document.featurePolicy
+title: "Document: featurePolicy property"
+short-title: featurePolicy
 slug: Web/API/Document/featurePolicy
 page-type: web-api-instance-property
 status:

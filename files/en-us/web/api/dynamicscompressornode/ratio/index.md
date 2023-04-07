@@ -1,5 +1,6 @@
 ---
-title: DynamicsCompressorNode.ratio
+title: "DynamicsCompressorNode: ratio property"
+short-title: ratio
 slug: Web/API/DynamicsCompressorNode/ratio
 page-type: web-api-instance-property
 browser-compat: api.DynamicsCompressorNode.ratio

@@ -1,5 +1,6 @@
 ---
-title: Document.enableStyleSheetsForSet()
+title: "Document: enableStyleSheetsForSet() method"
+short-title: enableStyleSheetsForSet()
 slug: Web/API/Document/enableStyleSheetsForSet
 page-type: web-api-instance-method
 status:

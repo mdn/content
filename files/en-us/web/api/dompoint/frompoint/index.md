@@ -1,5 +1,6 @@
 ---
-title: DOMPoint.fromPoint()
+title: "DOMPoint: fromPoint() static method"
+short-title: fromPoint()
 slug: Web/API/DOMPoint/fromPoint
 page-type: web-api-static-method
 browser-compat: api.DOMPoint.fromPoint

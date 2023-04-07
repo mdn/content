@@ -1,5 +1,6 @@
 ---
-title: DOMTokenList.add()
+title: "DOMTokenList: add() method"
+short-title: add()
 slug: Web/API/DOMTokenList/add
 page-type: web-api-instance-method
 browser-compat: api.DOMTokenList.add
