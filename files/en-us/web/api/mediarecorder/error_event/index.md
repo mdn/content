@@ -1,5 +1,6 @@
 ---
 title: "MediaRecorder: error event"
+short-title: error
 slug: Web/API/MediaRecorder/error_event
 page-type: web-api-event
 browser-compat: api.MediaRecorder.error_event

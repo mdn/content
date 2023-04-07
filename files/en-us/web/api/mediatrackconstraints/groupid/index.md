@@ -1,5 +1,6 @@
 ---
-title: MediaTrackConstraints.groupId
+title: "MediaTrackConstraints: groupId property"
+short-title: groupId
 slug: Web/API/MediaTrackConstraints/groupId
 page-type: web-api-instance-property
 browser-compat: api.MediaTrackConstraints.groupId

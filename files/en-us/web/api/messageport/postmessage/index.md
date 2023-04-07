@@ -1,5 +1,6 @@
 ---
-title: MessagePort.postMessage()
+title: "MessagePort: postMessage() method"
+short-title: postMessage()
 slug: Web/API/MessagePort/postMessage
 page-type: web-api-instance-method
 browser-compat: api.MessagePort.postMessage

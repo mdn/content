@@ -1,5 +1,6 @@
 ---
-title: MediaStreamTrackEvent()
+title: "MediaStreamTrackEvent: MediaStreamTrackEvent() constructor"
+short-title: MediaStreamTrackEvent()
 slug: Web/API/MediaStreamTrackEvent/MediaStreamTrackEvent
 page-type: web-api-constructor
 browser-compat: api.MediaStreamTrackEvent.MediaStreamTrackEvent

@@ -1,5 +1,6 @@
 ---
-title: MediaStream.getAudioTracks()
+title: "MediaStream: getAudioTracks() method"
+short-title: getAudioTracks()
 slug: Web/API/MediaStream/getAudioTracks
 page-type: web-api-instance-method
 browser-compat: api.MediaStream.getAudioTracks
