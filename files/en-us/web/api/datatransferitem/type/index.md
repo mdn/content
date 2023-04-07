@@ -63,4 +63,4 @@ function drop_handler(ev) {
 ## See also
 
 - {{domxref("DataTransfer.types()")}}
-- [Incomplete list of MIME types](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types)
+- [List of common MIME types](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types)
