@@ -1,5 +1,6 @@
 ---
-title: Range.setEnd()
+title: "Range: setEnd() method"
+short-title: setEnd()
 slug: Web/API/Range/setEnd
 page-type: web-api-instance-method
 browser-compat: api.Range.setEnd

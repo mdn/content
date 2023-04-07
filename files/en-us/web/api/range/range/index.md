@@ -1,5 +1,6 @@
 ---
-title: Range()
+title: "Range: Range() constructor"
+short-title: Range()
 slug: Web/API/Range/Range
 page-type: web-api-constructor
 browser-compat: api.Range.Range

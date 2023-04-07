@@ -1,5 +1,6 @@
 ---
-title: PerformanceEntry.duration
+title: "PerformanceEntry: duration property"
+short-title: duration
 slug: Web/API/PerformanceEntry/duration
 page-type: web-api-instance-property
 browser-compat: api.PerformanceEntry.duration

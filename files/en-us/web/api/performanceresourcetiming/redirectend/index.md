@@ -1,5 +1,6 @@
 ---
-title: PerformanceResourceTiming.redirectEnd
+title: "PerformanceResourceTiming: redirectEnd property"
+short-title: redirectEnd
 slug: Web/API/PerformanceResourceTiming/redirectEnd
 page-type: web-api-instance-property
 browser-compat: api.PerformanceResourceTiming.redirectEnd

@@ -1,5 +1,6 @@
 ---
-title: PerformanceTiming.toJSON()
+title: "PerformanceTiming: toJSON() method"
+short-title: toJSON()
 slug: Web/API/PerformanceTiming/toJSON
 page-type: web-api-instance-method
 status:
