@@ -1,5 +1,6 @@
 ---
 title: "Notification: show event"
+short-title: show
 slug: Web/API/Notification/show_event
 page-type: web-api-event
 browser-compat: api.Notification.show_event

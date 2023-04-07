@@ -1,5 +1,6 @@
 ---
-title: Node.firstChild
+title: "Node: firstChild property"
+short-title: firstChild
 slug: Web/API/Node/firstChild
 page-type: web-api-instance-property
 browser-compat: api.Node.firstChild

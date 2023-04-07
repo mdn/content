@@ -1,5 +1,6 @@
 ---
-title: NodeIterator.nextNode()
+title: "NodeIterator: nextNode() method"
+short-title: nextNode()
 slug: Web/API/NodeIterator/nextNode
 page-type: web-api-instance-method
 browser-compat: api.NodeIterator.nextNode

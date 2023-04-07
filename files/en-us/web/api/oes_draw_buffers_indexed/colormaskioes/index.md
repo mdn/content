@@ -1,8 +1,9 @@
 ---
-title: OES_draw_buffers_indexed.colorMaskiOES()
+title: "OES_draw_buffers_indexed: colorMaskiOES() method"
+short-title: colorMaskiOES()
 slug: Web/API/OES_draw_buffers_indexed/colorMaskiOES
 page-type: web-api-instance-method
-browser-compat: api.OES_draw_buffers_indexed.colorMaskiOES 
+browser-compat: api.OES_draw_buffers_indexed.colorMaskiOES
 ---
 
 {{APIRef("WebGL")}}

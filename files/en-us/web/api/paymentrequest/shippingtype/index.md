@@ -1,5 +1,6 @@
 ---
-title: PaymentRequest.shippingType
+title: "PaymentRequest: shippingType property"
+short-title: shippingType
 slug: Web/API/PaymentRequest/shippingType
 page-type: web-api-instance-property
 status:

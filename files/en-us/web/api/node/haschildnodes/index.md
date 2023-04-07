@@ -1,5 +1,6 @@
 ---
-title: Node.hasChildNodes()
+title: "Node: hasChildNodes() method"
+short-title: hasChildNodes()
 slug: Web/API/Node/hasChildNodes
 page-type: web-api-instance-method
 browser-compat: api.Node.hasChildNodes

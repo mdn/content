@@ -1,5 +1,6 @@
 ---
-title: OverconstrainedError.constraint
+title: "OverconstrainedError: constraint property"
+short-title: constraint
 slug: Web/API/OverconstrainedError/constraint
 page-type: web-api-instance-property
 browser-compat: api.OverconstrainedError.constraint

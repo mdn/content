@@ -1,5 +1,6 @@
 ---
-title: Node.getRootNode()
+title: "Node: getRootNode() method"
+short-title: getRootNode()
 slug: Web/API/Node/getRootNode
 page-type: web-api-instance-method
 browser-compat: api.Node.getRootNode
