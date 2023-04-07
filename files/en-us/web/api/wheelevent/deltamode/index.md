@@ -1,5 +1,6 @@
 ---
-title: WheelEvent.deltaMode
+title: "WheelEvent: deltaMode property"
+short-title: deltaMode
 slug: Web/API/WheelEvent/deltaMode
 page-type: web-api-instance-property
 browser-compat: api.WheelEvent.deltaMode

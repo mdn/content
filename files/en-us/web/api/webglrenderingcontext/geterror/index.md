@@ -1,5 +1,6 @@
 ---
-title: WebGLRenderingContext.getError()
+title: "WebGLRenderingContext: getError() method"
+short-title: getError()
 slug: Web/API/WebGLRenderingContext/getError
 page-type: web-api-instance-method
 browser-compat: api.WebGLRenderingContext.getError

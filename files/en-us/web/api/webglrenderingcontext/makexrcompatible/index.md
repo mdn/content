@@ -1,5 +1,6 @@
 ---
-title: WebGLRenderingContext.makeXRCompatible()
+title: "WebGLRenderingContext: makeXRCompatible() method"
+short-title: makeXRCompatible()
 slug: Web/API/WebGLRenderingContext/makeXRCompatible
 page-type: web-api-instance-method
 browser-compat: api.WebGLRenderingContext.makeXRCompatible

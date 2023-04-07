@@ -1,5 +1,6 @@
 ---
-title: WebTransportDatagramDuplexStream.incomingHighWaterMark
+title: "WebTransportDatagramDuplexStream: incomingHighWaterMark property"
+short-title: incomingHighWaterMark
 slug: Web/API/WebTransportDatagramDuplexStream/incomingHighWaterMark
 page-type: web-api-instance-property
 status:

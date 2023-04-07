@@ -1,5 +1,6 @@
 ---
-title: WebGLRenderingContext.generateMipmap()
+title: "WebGLRenderingContext: generateMipmap() method"
+short-title: generateMipmap()
 slug: Web/API/WebGLRenderingContext/generateMipmap
 page-type: web-api-instance-method
 browser-compat: api.WebGLRenderingContext.generateMipmap

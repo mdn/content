@@ -1,5 +1,6 @@
 ---
-title: WebSocket.protocol
+title: "WebSocket: protocol property"
+short-title: protocol
 slug: Web/API/WebSocket/protocol
 page-type: web-api-instance-property
 browser-compat: api.WebSocket.protocol

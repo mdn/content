@@ -1,5 +1,6 @@
 ---
-title: WebGLRenderingContext.unpackColorSpace
+title: "WebGLRenderingContext: unpackColorSpace property"
+short-title: unpackColorSpace
 slug: Web/API/WebGLRenderingContext/unpackColorSpace
 page-type: web-api-instance-property
 status:
