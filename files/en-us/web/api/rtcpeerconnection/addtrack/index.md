@@ -1,5 +1,6 @@
 ---
-title: RTCPeerConnection.addTrack()
+title: "RTCPeerConnection: addTrack() method"
+short-title: addTrack()
 slug: Web/API/RTCPeerConnection/addTrack
 page-type: web-api-instance-method
 browser-compat: api.RTCPeerConnection.addTrack

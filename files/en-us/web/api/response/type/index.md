@@ -1,5 +1,6 @@
 ---
-title: Response.type
+title: "Response: type property"
+short-title: type
 slug: Web/API/Response/type
 page-type: web-api-instance-property
 browser-compat: api.Response.type

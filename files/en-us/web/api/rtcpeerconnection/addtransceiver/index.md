@@ -1,5 +1,6 @@
 ---
-title: RTCPeerConnection.addTransceiver()
+title: "RTCPeerConnection: addTransceiver() method"
+short-title: addTransceiver()
 slug: Web/API/RTCPeerConnection/addTransceiver
 page-type: web-api-instance-method
 browser-compat: api.RTCPeerConnection.addTransceiver
@@ -51,9 +52,11 @@ The {{domxref("RTCRtpTransceiver")}} object which will be used to exchange the m
     If the `sendEncodings` argument is used, this error may also be thrown if there is a badly formatted `rid` member, some but not all encodings contain a `rid` member, or different encodings have the same `rid` value.
 
 - {{jsxref("RangeError")}}
+
   - : Thrown if any of the `sendEncodings` encodings have a {{domxref("RTCRtpEncodingParameters.maxFramerate", "maxFramerate")}} value less than 0.0, or a {{domxref("RTCRtpEncodingParameters.scaleResolutionDownBy", "scaleResolutionDownBy")}} value of less than 1.0.
 
 - `InvalidStateError` {{domxref("DOMException")}}
+
   - : Thrown if the the method is called when the associated connection is closed.
 
 - `InvalidAccessError` {{domxref("DOMException")}}

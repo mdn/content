@@ -1,5 +1,6 @@
 ---
-title: Response.clone()
+title: "Response: clone() method"
+short-title: clone()
 slug: Web/API/Response/clone
 page-type: web-api-instance-method
 browser-compat: api.Response.clone

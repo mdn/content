@@ -1,5 +1,6 @@
 ---
-title: RemotePlayback.watchAvailability()
+title: "RemotePlayback: watchAvailability() method"
+short-title: watchAvailability()
 slug: Web/API/RemotePlayback/watchAvailability
 page-type: web-api-instance-method
 browser-compat: api.RemotePlayback.watchAvailability

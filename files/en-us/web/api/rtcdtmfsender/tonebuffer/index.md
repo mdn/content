@@ -1,5 +1,6 @@
 ---
-title: RTCDTMFSender.toneBuffer
+title: "RTCDTMFSender: toneBuffer property"
+short-title: toneBuffer
 slug: Web/API/RTCDTMFSender/toneBuffer
 page-type: web-api-instance-property
 browser-compat: api.RTCDTMFSender.toneBuffer

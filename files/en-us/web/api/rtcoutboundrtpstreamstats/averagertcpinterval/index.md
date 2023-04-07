@@ -1,5 +1,6 @@
 ---
-title: RTCOutboundRtpStreamStats.averageRtcpInterval
+title: "RTCOutboundRtpStreamStats: averageRtcpInterval property"
+short-title: averageRtcpInterval
 slug: Web/API/RTCOutboundRtpStreamStats/averageRtcpInterval
 page-type: web-api-instance-property
 browser-compat: api.RTCOutboundRtpStreamStats.averageRtcpInterval

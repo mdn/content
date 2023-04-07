@@ -1,5 +1,6 @@
 ---
-title: Request.text()
+title: "Request: text() method"
+short-title: text()
 slug: Web/API/Request/text
 page-type: web-api-instance-method
 browser-compat: api.Request.text

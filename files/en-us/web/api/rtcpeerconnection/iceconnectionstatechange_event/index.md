@@ -1,5 +1,6 @@
 ---
 title: "RTCPeerConnection: iceconnectionstatechange event"
+short-title: iceconnectionstatechange
 slug: Web/API/RTCPeerConnection/iceconnectionstatechange_event
 page-type: web-api-event
 browser-compat: api.RTCPeerConnection.iceconnectionstatechange_event
