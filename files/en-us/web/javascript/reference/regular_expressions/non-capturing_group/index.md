@@ -101,7 +101,7 @@ parseTitle('name="foo"'); // 'foo'
 
 ## See also
 
-- [Regex guide: Groups and backreferences](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Backreferences)
-- [Regex reference](/en-US/docs/Web/JavaScript/Reference/Regular_expressions)
+- [Groups and backreferences](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences)
+- [Regular expressions reference](/en-US/docs/Web/JavaScript/Reference/Regular_expressions)
 - [Capturing group: `(...)`](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Capturing_group)
 - [Named capturing group: `(?<name>...)`](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Named_capturing_group)

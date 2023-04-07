@@ -58,7 +58,7 @@ Alternatives are always attempted left-to-right, regardless of the direction of 
 
 ## See also
 
-- [Regex guide: Character classes](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Character_Classes)
-- [Regex reference](/en-US/docs/Web/JavaScript/Reference/Regular_expressions)
+- [Character classes](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Character_classes)
+- [Regular expressions reference](/en-US/docs/Web/JavaScript/Reference/Regular_expressions)
 - [Quantifier: `*`, `+`, `?`, `{n}`, `{n,}`, `{n,m}`](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Quantifier)
 - [Character class: `[...]`, `[^...]`](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Character_class)

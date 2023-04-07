@@ -65,8 +65,8 @@ hasThanks("Thanksgiving is around the corner."); // false
 
 ## See also
 
-- [Regex guide: Assertions](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Assertions)
-- [Regex reference](/en-US/docs/Web/JavaScript/Reference/Regular_expressions)
+- [Assertions](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Assertions)
+- [Regular expressions reference](/en-US/docs/Web/JavaScript/Reference/Regular_expressions)
 - [Input boundary assertion: `^`, `$`](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Input_boundary_assertion)
 - [Lookahead assertion: `(?=...)`, `(?!...)`](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Lookahead_assertion)
 - [Lookbehind assertion: `(?<=...)`, `(?<!...)`](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Lookbehind_assertion)

@@ -67,8 +67,8 @@ A similar effect can be achieved by [capturing](/en-US/docs/Web/JavaScript/Refer
 
 ## See also
 
-- [Regex guide: Assertions](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Assertions)
-- [Regex reference](/en-US/docs/Web/JavaScript/Reference/Regular_expressions)
+- [Assertions](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Assertions)
+- [Regular expressions reference](/en-US/docs/Web/JavaScript/Reference/Regular_expressions)
 - [Input boundary assertion: `^`, `$`](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Input_boundary_assertion)
 - [Word boundary assertion: `\b`, `\B`](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Word_boundary_assertion)
 - [Lookahead assertion: `(?=...)`, `(?!...)`](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Lookahead_assertion)

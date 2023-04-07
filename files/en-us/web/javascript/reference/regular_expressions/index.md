@@ -9,7 +9,7 @@ browser-compat: javascript.regular_expressions
 
 A **regular expression** (_regex_ for short) allow developers to match strings against a pattern, extract submatch information, or simply test if the string conforms to that pattern. Regular expressions are used in many programming languages, and JavaScript's syntax is inspired by [Perl](https://www.perl.org/).
 
-You are encouraged to read the [regular expressions guide](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions) to get an overview of the available regex syntaxes and how they work.
+You are encouraged to read the [regular expressions guide](/en-US/docs/Web/JavaScript/Guide/Regular_expressions) to get an overview of the available regex syntaxes and how they work.
 
 ## Description
 
