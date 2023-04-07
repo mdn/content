@@ -1,5 +1,5 @@
 ---
-title: "performance: mark() method"
+title: "Performance: mark() method"
 short-title: mark()
 slug: Web/API/Performance/mark
 page-type: web-api-instance-method
