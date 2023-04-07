@@ -26,7 +26,7 @@ The `import.meta` object is created by the host environment, as an extensible [`
 
 ## Description
 
-The `import.meta` syntax consists of the keyword `import`, a dot, and the identifier `meta`. Because `import` is a [reserved word](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#reserved_words), not an identifier, this is not a [property accessor](/en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors), but a special expression syntax.
+The `import.meta` syntax consists of the keyword `import`, a dot, and the identifier `meta`. Because `import` is a [reserved word](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#reserved_words), not an identifier, this is not a [property accessor](/en-US/docs/Web/JavaScript/Reference/Operators/Property_accessors), but a special expression syntax.
 
 The `import.meta` meta-property is available in JavaScript modules; using `import.meta` outside of a module (including [direct `eval()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval#direct_and_indirect_eval) within a module) is a syntax error.
 

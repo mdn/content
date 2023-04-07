@@ -1,5 +1,6 @@
 ---
 title: "Element: gotpointercapture event"
+short-title: gotpointercapture
 slug: Web/API/Element/gotpointercapture_event
 browser-compat: api.Element.gotpointercapture_event
 page-type: web-api-event

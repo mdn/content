@@ -21,13 +21,11 @@ delete(value)
 ### Parameters
 
 - `value`
-  - : Required. The object remove from the `WeakSet` object.
+  - : The value to remove from the `WeakSet` object.
 
 ### Return value
 
-`true` if an element in the `WeakSet` object has been removed
-successfully. `false` if the `value` is not found in
-the `WeakSet` or if the `value` is not an object.
+`true` if an element in the `WeakSet` object has been removed successfully. `false` if the `value` is not found in the `WeakSet`. Always returns `false` if `value` is not an object or a [non-registered symbol](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol#shared_symbols_in_the_global_symbol_registry).
 
 ## Examples
 

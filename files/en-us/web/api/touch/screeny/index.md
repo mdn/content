@@ -17,7 +17,7 @@ A number.
 
 ## Examples
 
-The [Touch.screenX example](/en-US/docs/Web/API/Touch/screenX#example) includes an example of this property's usage.
+The [Touch.screenX example](/en-US/docs/Web/API/Touch/screenX#examples) includes an example of this property's usage.
 
 ## Specifications
 

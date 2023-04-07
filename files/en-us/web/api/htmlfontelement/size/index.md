@@ -1,5 +1,6 @@
 ---
-title: HTMLFontElement.size
+title: "HTMLFontElement: size property"
+short-title: size
 slug: Web/API/HTMLFontElement/size
 page-type: web-api-instance-property
 status:

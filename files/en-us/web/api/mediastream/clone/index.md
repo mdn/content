@@ -1,5 +1,6 @@
 ---
-title: MediaStream.clone()
+title: "MediaStream: clone() method"
+short-title: clone()
 slug: Web/API/MediaStream/clone
 page-type: web-api-instance-method
 browser-compat: api.MediaStream.clone

@@ -45,6 +45,8 @@ For more detailed examples, see the {{htmlelement("ol")}} and {{htmlelement("ul"
 </ol>
 ```
 
+#### Result
+
 {{EmbedLiveSample("Ordered_list")}}
 
 ### Ordered list with a custom value
@@ -57,6 +59,8 @@ For more detailed examples, see the {{htmlelement("ol")}} and {{htmlelement("ul"
 </ol>
 ```
 
+#### Result
+
 {{EmbedLiveSample("Ordered_list_with_a_custom_value")}}
 
 ### Unordered list
@@ -68,6 +72,8 @@ For more detailed examples, see the {{htmlelement("ol")}} and {{htmlelement("ul"
   <li>third item</li>
 </ul>
 ```
+
+#### Result
 
 {{EmbedLiveSample("Unordered_list")}}
 

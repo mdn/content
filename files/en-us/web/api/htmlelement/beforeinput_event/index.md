@@ -1,5 +1,6 @@
 ---
 title: "HTMLElement: beforeinput event"
+short-title: beforeinput
 slug: Web/API/HTMLElement/beforeinput_event
 page-type: web-api-event
 browser-compat: api.HTMLElement.beforeinput_event

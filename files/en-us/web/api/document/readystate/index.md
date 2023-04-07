@@ -1,5 +1,6 @@
 ---
-title: Document.readyState
+title: "Document: readyState property"
+short-title: readyState
 slug: Web/API/Document/readyState
 page-type: web-api-instance-property
 browser-compat: api.Document.readyState

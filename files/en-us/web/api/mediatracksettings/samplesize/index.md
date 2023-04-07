@@ -1,5 +1,6 @@
 ---
-title: MediaTrackSettings.sampleSize
+title: "MediaTrackSettings: sampleSize property"
+short-title: sampleSize
 slug: Web/API/MediaTrackSettings/sampleSize
 page-type: web-api-instance-property
 browser-compat: api.MediaTrackSettings.sampleSize

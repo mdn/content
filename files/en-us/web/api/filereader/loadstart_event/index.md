@@ -1,5 +1,6 @@
 ---
 title: "FileReader: loadstart event"
+short-title: loadstart
 slug: Web/API/FileReader/loadstart_event
 page-type: web-api-event
 browser-compat: api.FileReader.loadstart_event

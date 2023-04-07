@@ -54,7 +54,7 @@ Async functions can contain zero or more {{jsxref("Operators/await", "await")}} 
 
 > **Note:** The purpose of `async`/`await` is to simplify the syntax
 > necessary to consume promise-based APIs. The behavior
-> of `async`/`await` is similar to combining [generators](/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators) and
+> of `async`/`await` is similar to combining [generators](/en-US/docs/Web/JavaScript/Guide/Iterators_and_generators) and
 > promises.
 
 Async functions always return a promise. If the return value of an async function is

@@ -1,5 +1,6 @@
 ---
-title: OfflineAudioContext.suspend()
+title: "OfflineAudioContext: suspend() method"
+short-title: suspend()
 slug: Web/API/OfflineAudioContext/suspend
 page-type: web-api-instance-method
 browser-compat: api.OfflineAudioContext.suspend

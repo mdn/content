@@ -1,5 +1,6 @@
 ---
-title: DataTransferItem.getAsFileSystemHandle()
+title: "DataTransferItem: getAsFileSystemHandle() method"
+short-title: getAsFileSystemHandle()
 slug: Web/API/DataTransferItem/getAsFileSystemHandle
 page-type: web-api-instance-method
 status:

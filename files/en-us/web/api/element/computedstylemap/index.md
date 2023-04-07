@@ -1,5 +1,6 @@
 ---
-title: Element.computedStyleMap()
+title: "Element: computedStyleMap() method"
+short-title: computedStyleMap()
 slug: Web/API/Element/computedStyleMap
 page-type: web-api-instance-method
 browser-compat: api.Element.computedStyleMap

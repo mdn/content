@@ -1,5 +1,6 @@
 ---
-title: Navigator.contacts
+title: "Navigator: contacts property"
+short-title: contacts
 slug: Web/API/Navigator/contacts
 page-type: web-api-instance-property
 status:

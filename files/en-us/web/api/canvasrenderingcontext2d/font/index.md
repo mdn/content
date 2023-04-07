@@ -1,5 +1,6 @@
 ---
-title: CanvasRenderingContext2D.font
+title: "CanvasRenderingContext2D: font property"
+short-title: font
 slug: Web/API/CanvasRenderingContext2D/font
 page-type: web-api-instance-property
 browser-compat: api.CanvasRenderingContext2D.font

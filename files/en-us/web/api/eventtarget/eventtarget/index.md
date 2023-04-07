@@ -1,5 +1,6 @@
 ---
-title: EventTarget()
+title: "EventTarget: EventTarget() constructor"
+short-title: EventTarget()
 slug: Web/API/EventTarget/EventTarget
 page-type: web-api-constructor
 browser-compat: api.EventTarget.EventTarget

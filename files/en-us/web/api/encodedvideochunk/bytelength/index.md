@@ -1,5 +1,6 @@
 ---
-title: EncodedVideoChunk.byteLength
+title: "EncodedVideoChunk: byteLength property"
+short-title: byteLength
 slug: Web/API/EncodedVideoChunk/byteLength
 page-type: web-api-instance-property
 browser-compat: api.EncodedVideoChunk.byteLength

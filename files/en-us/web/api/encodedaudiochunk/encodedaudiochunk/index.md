@@ -1,5 +1,6 @@
 ---
-title: EncodedAudioChunk()
+title: "EncodedAudioChunk: EncodedAudioChunk() constructor"
+short-title: EncodedAudioChunk()
 slug: Web/API/EncodedAudioChunk/EncodedAudioChunk
 page-type: web-api-constructor
 status:

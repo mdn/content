@@ -1,5 +1,6 @@
 ---
-title: CSSValueList.length
+title: "CSSValueList: length property"
+short-title: length
 slug: Web/API/CSSValueList/length
 page-type: web-api-instance-property
 status:

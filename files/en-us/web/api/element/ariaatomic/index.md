@@ -1,5 +1,6 @@
 ---
-title: Element.ariaAtomic
+title: "Element: ariaAtomic property"
+short-title: ariaAtomic
 slug: Web/API/Element/ariaAtomic
 page-type: web-api-instance-property
 browser-compat: api.Element.ariaAtomic

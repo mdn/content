@@ -2,13 +2,9 @@
 title: Federated Credential Management API (FedCM)
 slug: Web/API/FedCM_API
 page-type: web-api-overview
-tags:
-  - API
-  - Experimental
-  - Overview
-  - Reference
-browser-compat:
-  - api.IdentityCredential
+status:
+  - experimental
+browser-compat: api.IdentityCredential
 ---
 
 {{SeeCompatTable}}{{DefaultAPISidebar("FedCM API")}}
@@ -28,7 +24,7 @@ Affected identity federation use cases that rely on third-party cookies:
 - Personalized buttons: The display of personalized sign in information on a {{htmlelement("button")}} in the RP origin is implemented as an IdP `<iframe>` that requires third party cookies.
 - Session Refresh without top-level navigation or popups.
 
-FedCM aims to work around this problem, providing a dedicated machanism for federated identity flows on the web, and enabling supporting browsers to provide special UI elements on RPs, allowing users to choose an IdP account to use for sign-in.
+FedCM aims to work around this problem, providing a dedicated mechanism for federated identity flows on the web, and enabling supporting browsers to provide special UI elements on RPs, allowing users to choose an IdP account to use for sign-in.
 
 There are two sides to using the FedCM API — IdP integration with FedCM, and RP sign-in using the JavaScript API.
 
@@ -53,7 +49,7 @@ For example, if the IdP endpoints are served under `https://accounts.idp.example
 }
 ```
 
-The `provider_urls` member should contain an array of URLs pointing to valid IdP config files that can be used by RPs to inteact with the IdP. The array length is current limited to one.
+The `provider_urls` member should contain an array of URLs pointing to valid IdP config files that can be used by RPs to interact with the IdP. The array length is current limited to one.
 
 ### Provide a config file
 
@@ -88,7 +84,7 @@ The properties are as follows:
 - `id_assertion_endpoint`
   - : The URL for the ID assertion endpoint, which when sent valid user credentials should respond with a validation token that the RP can use to validate the authentication.
 - `branding` {{optional_inline}}
-  - : Contains branding information that will be used in the browser-supplied sign-in UI to customize its appearence as desired by the IdP.
+  - : Contains branding information that will be used in the browser-supplied sign-in UI to customize its appearance as desired by the IdP.
 
 #### The accounts list endpoint
 

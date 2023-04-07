@@ -1,5 +1,6 @@
 ---
-title: Element.requestFullscreen()
+title: "Element: requestFullscreen() method"
+short-title: requestFullscreen()
 slug: Web/API/Element/requestFullscreen
 page-type: web-api-instance-method
 browser-compat: api.Element.requestFullscreen

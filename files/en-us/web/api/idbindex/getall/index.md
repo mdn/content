@@ -1,5 +1,6 @@
 ---
-title: IDBIndex.getAll()
+title: "IDBIndex: getAll() method"
+short-title: getAll()
 slug: Web/API/IDBIndex/getAll
 page-type: web-api-instance-method
 browser-compat: api.IDBIndex.getAll

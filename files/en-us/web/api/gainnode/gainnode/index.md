@@ -1,5 +1,6 @@
 ---
-title: GainNode()
+title: "GainNode: GainNode() constructor"
+short-title: GainNode()
 slug: Web/API/GainNode/GainNode
 page-type: web-api-constructor
 browser-compat: api.GainNode.GainNode

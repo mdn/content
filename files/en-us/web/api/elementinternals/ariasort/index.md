@@ -1,5 +1,6 @@
 ---
-title: ElementInternals.ariaSort
+title: "ElementInternals: ariaSort property"
+short-title: ariaSort
 slug: Web/API/ElementInternals/ariaSort
 page-type: web-api-instance-property
 browser-compat: api.ElementInternals.ariaSort

@@ -70,11 +70,6 @@ Date: <day-name>, <day> <month> <year> <hour>:<minute>:<second> GMT
 Date: Wed, 21 Oct 2015 07:28:00 GMT
 ```
 
-```js
-new Date().toUTCString();
-// "Mon, 09 Mar 2020 08:13:24 GMT"
-```
-
 ## Specifications
 
 {{Specifications}}

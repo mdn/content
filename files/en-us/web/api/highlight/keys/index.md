@@ -1,5 +1,6 @@
 ---
-title: Highlight.keys()
+title: "Highlight: keys() method"
+short-title: keys()
 slug: Web/API/Highlight/keys
 page-type: web-api-instance-method
 status:

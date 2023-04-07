@@ -1,5 +1,6 @@
 ---
-title: NavigateEvent.canIntercept
+title: "NavigateEvent: canIntercept property"
+short-title: canIntercept
 slug: Web/API/NavigateEvent/canIntercept
 page-type: web-api-instance-property
 status:

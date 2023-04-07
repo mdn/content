@@ -17,19 +17,8 @@ from an array-like or iterable object. This method is nearly the same as
 ## Syntax
 
 ```js-nolint
-// Arrow function
-TypedArray.from(arrayLike, (element) => { /* ... */ } )
-TypedArray.from(arrayLike, (element, index) => { /* ... */ } )
-
-// Mapping function
 TypedArray.from(arrayLike, mapFn)
 TypedArray.from(arrayLike, mapFn, thisArg)
-
-// Inline mapping function
-TypedArray.from(arrayLike, function mapFn(element) { /* ... */ })
-TypedArray.from(arrayLike, function mapFn(element, index) { /* ... */ })
-TypedArray.from(arrayLike, function mapFn(element) { /* ... */ }, thisArg)
-TypedArray.from(arrayLike, function mapFn(element, index) { /* ... */ }, thisArg)
 ```
 
 Where `TypedArray` is one of:
@@ -49,9 +38,13 @@ Where `TypedArray` is one of:
 ### Parameters
 
 - `arrayLike`
-  - : An array-like or iterable object to convert to a typed array.
+  - : An iterable or array-like object to convert to a typed array.
 - `mapFn` {{optional_inline}}
-  - : Map function to call on every element of the typed array.
+  - : A function to call on every element of the typed array. If provided, every value to be added to the array is first passed through this function, and `mapFn`'s return value is added to the typed array instead. The function is called with the following arguments:
+    - `element`
+      - : The current element being processed in the typed array.
+    - `index`
+      - : The index of the current element being processed in the typed array.
 - `thisArg` {{optional_inline}}
   - : Value to use as `this` when executing `mapFn`.
 

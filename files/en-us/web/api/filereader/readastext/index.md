@@ -1,5 +1,6 @@
 ---
-title: FileReader.readAsText()
+title: "FileReader: readAsText() method"
+short-title: readAsText()
 slug: Web/API/FileReader/readAsText
 page-type: web-api-instance-method
 browser-compat: api.FileReader.readAsText

@@ -1,5 +1,6 @@
 ---
-title: BaseAudioContext.createScriptProcessor()
+title: "BaseAudioContext: createScriptProcessor() method"
+short-title: createScriptProcessor()
 slug: Web/API/BaseAudioContext/createScriptProcessor
 page-type: web-api-instance-method
 status:

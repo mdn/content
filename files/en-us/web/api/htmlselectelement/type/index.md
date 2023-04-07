@@ -1,5 +1,6 @@
 ---
-title: HTMLSelectElement.type
+title: "HTMLSelectElement: type property"
+short-title: type
 slug: Web/API/HTMLSelectElement/type
 page-type: web-api-instance-property
 browser-compat: api.HTMLSelectElement.type

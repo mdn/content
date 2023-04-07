@@ -1,5 +1,6 @@
 ---
-title: HTMLObjectElement.contentDocument
+title: "HTMLObjectElement: contentDocument property"
+short-title: contentDocument
 slug: Web/API/HTMLObjectElement/contentDocument
 page-type: web-api-instance-property
 browser-compat: api.HTMLObjectElement.contentDocument

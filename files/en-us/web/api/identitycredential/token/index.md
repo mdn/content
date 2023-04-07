@@ -1,14 +1,10 @@
 ---
-title: IdentityCredential.token
+title: "IdentityCredential: token property"
+short-title: token
 slug: Web/API/IdentityCredential/token
 page-type: web-api-instance-property
-tags:
-  - API
-  - Experimental
-  - Property
-  - Read-only
-  - Reference
-  - token
+status:
+  - experimental
 browser-compat: api.IdentityCredential.token
 ---
 

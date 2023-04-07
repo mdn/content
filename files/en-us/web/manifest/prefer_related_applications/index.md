@@ -14,10 +14,6 @@ browser-compat: html.manifest.prefer_related_applications
       <th scope="row">Type</th>
       <td><code>Boolean</code></td>
     </tr>
-    <tr>
-      <th scope="row">Mandatory</th>
-      <td>No</td>
-    </tr>
   </tbody>
 </table>
 

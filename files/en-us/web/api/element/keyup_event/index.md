@@ -1,5 +1,6 @@
 ---
 title: "Element: keyup event"
+short-title: keyup
 slug: Web/API/Element/keyup_event
 page-type: web-api-event
 browser-compat: api.Element.keyup_event

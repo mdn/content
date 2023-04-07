@@ -1,5 +1,6 @@
 ---
-title: CSSNumericValue.div()
+title: "CSSNumericValue: div() method"
+short-title: div()
 slug: Web/API/CSSNumericValue/div
 page-type: web-api-instance-method
 browser-compat: api.CSSNumericValue.div

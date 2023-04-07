@@ -1,5 +1,6 @@
 ---
-title: HTMLTableElement.deleteCaption()
+title: "HTMLTableElement: deleteCaption() method"
+short-title: deleteCaption()
 slug: Web/API/HTMLTableElement/deleteCaption
 page-type: web-api-instance-method
 browser-compat: api.HTMLTableElement.deleteCaption

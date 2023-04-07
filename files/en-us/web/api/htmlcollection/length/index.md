@@ -1,5 +1,6 @@
 ---
-title: HTMLCollection.length
+title: "HTMLCollection: length property"
+short-title: length
 slug: Web/API/HTMLCollection/length
 page-type: web-api-instance-property
 browser-compat: api.HTMLCollection.length

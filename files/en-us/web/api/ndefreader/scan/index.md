@@ -1,5 +1,6 @@
 ---
-title: NDEFReader.scan()
+title: "NDEFReader: scan() method"
+short-title: scan()
 slug: Web/API/NDEFReader/scan
 page-type: web-api-instance-method
 status:

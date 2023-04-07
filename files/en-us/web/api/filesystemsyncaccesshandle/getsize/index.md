@@ -1,5 +1,6 @@
 ---
-title: FileSystemSyncAccessHandle.getSize()
+title: "FileSystemSyncAccessHandle: getSize() method"
+short-title: getSize()
 slug: Web/API/FileSystemSyncAccessHandle/getSize
 page-type: web-api-instance-method
 browser-compat: api.FileSystemSyncAccessHandle.getSize

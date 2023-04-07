@@ -1,5 +1,6 @@
 ---
-title: PannerNode.coneOuterAngle
+title: "PannerNode: coneOuterAngle property"
+short-title: coneOuterAngle
 slug: Web/API/PannerNode/coneOuterAngle
 page-type: web-api-instance-property
 browser-compat: api.PannerNode.coneOuterAngle

@@ -1,8 +1,9 @@
 ---
-title: MediaList.deleteMedium()
+title: "MediaList: deleteMedium() method"
+short-title: deleteMedium()
 slug: Web/API/MediaList/deleteMedium
 page-type: web-api-instance-method
-browser-compat: api.MediaList.deleteMedium 
+browser-compat: api.MediaList.deleteMedium
 ---
 
 {{APIRef("CSSOM")}}

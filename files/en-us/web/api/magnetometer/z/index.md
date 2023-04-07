@@ -1,5 +1,6 @@
 ---
-title: Magnetometer.z
+title: "Magnetometer: z property"
+short-title: z
 slug: Web/API/Magnetometer/z
 page-type: web-api-instance-property
 status:

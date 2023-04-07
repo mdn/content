@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Map.@@iterator
 
 {{JSRef}}
 
-The **`@@iterator`** method of a `Map` object implements the [iterable protocol](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols) and allows maps to be consumed by most syntaxes expecting iterables, such as the [spread syntax](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax) and [`for...of`](/en-US/docs/Web/JavaScript/Reference/Statements/for...of) loops. It returns an iterator that yields the key-value pairs of the map.
+The **`[@@iterator]()`** method of a `Map` object implements the [iterable protocol](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols) and allows maps to be consumed by most syntaxes expecting iterables, such as the [spread syntax](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax) and [`for...of`](/en-US/docs/Web/JavaScript/Reference/Statements/for...of) loops. It returns a [map iterator object](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator) that yields the key-value pairs of the map.
 
 The initial value of this property is the same function object as the initial value of the {{jsxref("Map.prototype.entries")}} property.
 
@@ -21,7 +21,7 @@ map[Symbol.iterator]()
 
 ### Return value
 
-The same return value as {{jsxref("Map.prototype.entries()")}}: a new iterable iterator object that yields the key-value pairs of the map.
+The same return value as {{jsxref("Map.prototype.entries()")}}: a new [iterable iterator object](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator) that yields the key-value pairs of the map.
 
 ## Examples
 

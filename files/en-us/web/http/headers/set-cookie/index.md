@@ -130,25 +130,26 @@ Set-Cookie: <cookie-name>=<cookie-value>; Domain=<domain-value>; Secure; HttpOnl
 
     - `Strict`
 
-      - : means that the browser sends the cookie only for same-site requests, that is, requests originating from the same site that set the cookie.
+      - : Means that the browser sends the cookie only for same-site requests, that is, requests originating from the same site that set the cookie.
         If a request originates from a different domain or scheme (even with the same domain), no cookies with the `SameSite=Strict` attribute are sent.
 
     - `Lax`
 
-      - : means that the cookie is not sent on cross-site requests, such as on requests to load images or frames, but is sent when a user is navigating to the origin site from an external site (for example, when following a link).
+      - : Means that the cookie is not sent on cross-site requests, such as on requests to load images or frames, but is sent when a user is navigating to the origin site from an external site (for example, when following a link).
         This is the default behavior if the `SameSite` attribute is not specified.
 
     - `None`
-      - : means that the browser sends the cookie with both cross-site and same-site requests.
-        The `Secure` attribute must also be set when setting this value, like so `SameSite=None; Secure`
 
-    > **Note:** Standards related to the [SameSite Cookies](/en-US/docs/Web/HTTP/Headers/Set-Cookie/SameSite) recently changed, such that:
-    >
-    > 1. The cookie-sending behavior if `SameSite` is not specified is `SameSite=Lax`. Previously, cookies were sent for all requests by default.
-    > 2. Cookies with `SameSite=None` must now also specify the `Secure` attribute (in other words, they require a secure context).
-    > 3. Cookies from the same domain are no longer considered to be from the same site if sent using a different scheme (`http:` or `https:`).
-    >
-    > See the [Browser compatibility](/en-US/docs/Web/HTTP/Headers/Set-Cookie/SameSite#browser_compatibility) table for information about specific browser implementation (rows: "`SameSite`: Defaults to `Lax`", "`SameSite`: Secure context required", and "`SameSite`: URL scheme-aware ("schemeful")").
+      - : means that the browser sends the cookie with both cross-site and same-site requests.
+        The `Secure` attribute must also be set when setting this value, like so `SameSite=None; Secure`. If `Secure` is missing an error will be logged:
+
+        ```
+        Cookie "myCookie" rejected because it has the "SameSite=None" attribute but is missing the "secure" attribute.
+
+        This Set-Cookie was blocked because it had the "SameSite=None" attribute but did not have the "Secure" attribute, which is required in order to use "SameSite=None".
+        ```
+
+        > **Note:** A [`Secure`](#secure) cookie is only sent to the server with an encrypted request over the HTTPS protocol. Note that insecure sites (`http:`) can't set cookies with the `Secure` directive, and therefore can't use `SameSite=None`.
 
 - `Secure` {{optional_inline}}
 
@@ -246,4 +247,4 @@ Set-Cookie: __Host-example=34d8g; SameSite=None; Secure; Path=/; Partitioned;
 - [HTTP cookies](/en-US/docs/Web/HTTP/Cookies)
 - {{HTTPHeader("Cookie")}}
 - {{domxref("Document.cookie")}}
-- [SameSite cookies](/en-US/docs/Web/HTTP/Headers/Set-Cookie/SameSite)
+- [Samesite cookies explained](https://web.dev/samesite-cookies-explained/) (web.dev blog)

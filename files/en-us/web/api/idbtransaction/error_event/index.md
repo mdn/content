@@ -1,5 +1,6 @@
 ---
 title: "IDBTransaction: error event"
+short-title: error
 slug: Web/API/IDBTransaction/error_event
 page-type: web-api-event
 browser-compat: api.IDBTransaction.error_event

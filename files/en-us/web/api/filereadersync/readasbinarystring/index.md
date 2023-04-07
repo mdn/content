@@ -1,5 +1,6 @@
 ---
-title: FileReaderSync.readAsBinaryString()
+title: "FileReaderSync: readAsBinaryString() method"
+short-title: readAsBinaryString()
 slug: Web/API/FileReaderSync/readAsBinaryString
 page-type: web-api-instance-method
 status:

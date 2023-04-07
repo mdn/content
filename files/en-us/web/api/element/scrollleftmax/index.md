@@ -1,5 +1,6 @@
 ---
-title: Element.scrollLeftMax
+title: "Element: scrollLeftMax property"
+short-title: scrollLeftMax
 slug: Web/API/Element/scrollLeftMax
 page-type: web-api-instance-property
 status:

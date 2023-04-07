@@ -1,5 +1,6 @@
 ---
-title: HTMLImageElement.vspace
+title: "HTMLImageElement: vspace property"
+short-title: vspace
 slug: Web/API/HTMLImageElement/vspace
 page-type: web-api-instance-property
 status:

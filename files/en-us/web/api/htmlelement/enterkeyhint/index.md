@@ -1,5 +1,6 @@
 ---
-title: HTMLElement.enterKeyHint
+title: "HTMLElement: enterKeyHint property"
+short-title: enterKeyHint
 slug: Web/API/HTMLElement/enterKeyHint
 page-type: web-api-instance-property
 browser-compat: api.HTMLElement.enterKeyHint

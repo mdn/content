@@ -1,5 +1,6 @@
 ---
-title: Ink.requestPresenter()
+title: "Ink: requestPresenter() method"
+short-title: requestPresenter()
 slug: Web/API/Ink/requestPresenter
 page-type: web-api-instance-method
 status:

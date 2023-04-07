@@ -1,5 +1,6 @@
 ---
-title: MediaError.code
+title: "MediaError: code property"
+short-title: code
 slug: Web/API/MediaError/code
 page-type: web-api-instance-property
 browser-compat: api.MediaError.code
@@ -87,4 +88,4 @@ obj.src = "https://example.com/blahblah.mp4";
 
 ## See also
 
-- The interface defining it, {{domxref("MediaError")}}.
+- {{domxref("MediaError")}}: Interface used to define the `MediaError.code` property
