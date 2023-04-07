@@ -6,7 +6,7 @@ page-type: web-api-overview
 
 {{DefaultAPISidebar("Performance API")}}
 
-Navigation Timing is part of the Performance API and enables measuring the navigation of a document. For example, you can determine how much time it takes to load or unload a document, or log the time it took when the {{Glossary("DOM")}} construction has finished and interaction with the DOM is possible.
+Navigation Timing is part of the Performance API and provides metrics associated with navigating from one page to another. For example, you can determine how much time it takes to load or unload a document, or log the time it took until {{Glossary("DOM")}} construction has finished and interaction with the DOM is possible.
 
 Only the current document is included, so usually there is only one {{domxref("PerformanceNavigationTiming")}} object to observe. It extends the {{domxref("PerformanceEntry")}} interface with the {{domxref("PerformanceEntry.entryType","entryType")}} of `"navigation"` and also inherits from {{domxref("PerformanceResourceTiming")}}, so all of the timestamps from the process of fetching the document are available as well.
 
@@ -22,12 +22,12 @@ The document navigation timestamps (in addition to those from [Resource Timing](
 1. {{domxref("PerformanceEntry.startTime","startTime")}}: Always 0.
 2. {{domxref("PerformanceNavigationTiming.unloadEventStart","unloadEventStart")}}: (if there is a previous document) the timestamp immediately before the current document's [`unload`](/en-US/docs/Web/API/Window/unload_event) event handler starts.
 3. {{domxref("PerformanceNavigationTiming.unloadEventEnd","unloadEventEnd")}}: (if there is a previous document) the timestamp immediately after the current document's [`unload`](/en-US/docs/Web/API/Window/unload_event) event handler completes.
-4. {{domxref("PerformanceNavigationTiming.domInteractive","domInteractive")}}: timestamp when DOM construction is finished and interaction to it from JavaScript is possible.
+4. {{domxref("PerformanceNavigationTiming.domInteractive","domInteractive")}}: timestamp when DOM construction is finished and interaction with it from JavaScript is possible.
 5. {{domxref("PerformanceNavigationTiming.domContentLoadedEventStart","domContentLoadedEventStart")}}: timestamp immediately before the current document's [`DOMContentLoaded`](/en-US/docs/Web/API/Document/DOMContentLoaded_event) event handler starts.
 6. {{domxref("PerformanceNavigationTiming.domContentLoadedEventEnd","domContentLoadedEventEnd")}}: timestamp immediately after the current document's [`DOMContentLoaded`](/en-US/docs/Web/API/Document/DOMContentLoaded_event) event handler completes.
 7. {{domxref("PerformanceNavigationTiming.domComplete","domComplete")}}: timestamp when the document and all sub-resources have finished loading.
 8. {{domxref("PerformanceNavigationTiming.loadEventStart","loadEventStart")}}: timestamp immediately before the current document's [`load`](/en-US/docs/Web/API/Window/load_event) event handler starts.
-9. {{domxref("PerformanceNavigationTiming.loadEventStart","loadEventStart")}}: timestamp immediately after the current document's [`load`](/en-US/docs/Web/API/Window/load_event) event handler completes.
+9. {{domxref("PerformanceNavigationTiming.loadEventEnd","loadEventEnd")}}: timestamp immediately after the current document's [`load`](/en-US/docs/Web/API/Window/load_event) event handler completes.
 
 ## Other properties
 
@@ -37,7 +37,7 @@ The {{domxref("PerformanceNavigationTiming")}} interface provides additional pro
 
 The `domContentLoadedEventEnd` and `domContentLoadedEventStart` timestamps can be used to measure how long it takes process the [`DOMContentLoaded`](/en-US/docs/Web/API/Document/DOMContentLoaded_event) event handler.
 
-Example using a {{domxref("PerformanceObserver")}}, which notifies of new `navigation` performance entries as they are recorded in the browser's performance timeline. Use the `buffered` option to access entries from before the observer creation.
+This example uses a {{domxref("PerformanceObserver")}}, which notifies the caller about new `navigation` performance entries as they are recorded in the browser's performance timeline. The example uses the `buffered` option to access entries that were recorded before the observer was created.
 
 ```js
 const observer = new PerformanceObserver((list) => {
