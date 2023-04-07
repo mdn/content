@@ -11,7 +11,7 @@ browser-compat: api.CSS.paintWorklet
 {{APIRef("CSSOM")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The static, read-only **`paintWorklet`** property of the {{DOMxRef("CSS")}} interface provides access to the
-{{DOMxRef("PaintWorklet")}}, which programmatically generates an image where a CSS
+paint [worklet](/en-US/docs/Web/API/Worklet), which programmatically generates an image where a CSS
 property expects a file.
 
 ## Value
@@ -20,7 +20,7 @@ The associated {{DOMxRef('Worklet')}} object.
 
 ## Examples
 
-The following example demonstrates loading a {{DOMxRef('PaintWorklet')}} from its js
+The following example demonstrates loading a paint [worklet](/en-US/docs/Web/API/Worklet) from its js
 file and does so by feature detection.
 
 ```js
