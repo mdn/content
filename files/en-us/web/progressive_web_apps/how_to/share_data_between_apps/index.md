@@ -90,7 +90,7 @@ See [the Sharing files example](/en-US/docs/Web/API/Navigator/share#sharing_file
 
 ## Handling shared data from other apps
 
-To register your PWA as a target of other app's shared data, use the [Web Share Target API](https://developer.chrome.com/en/articles/web-share-target/) and, in particular, the [`share_target`](/en-US/docs/Web/Manifest/share_target) web app manifest member.
+To register your PWA as a target of other apps' shared data, use the [Web Share Target API](https://developer.chrome.com/en/articles/web-share-target/) and, in particular, the [`share_target`](/en-US/docs/Web/Manifest/share_target) web app manifest member.
 
 The `share_target` manifest member allows an installed PWA to be registered, at the operating system level, as a potential target for content shared by other apps. This means that when a user shares some data that's compatible with your PWA, from another app, the operating system will list your PWA alongside other typical share targets like email or messaging apps.
 
