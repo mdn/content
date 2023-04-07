@@ -115,7 +115,7 @@ const myObject = {
 ### Strings
 
 - [How do you create a string in JavaScript?](/en-US/docs/Learn/JavaScript/First_steps/Strings#creating_a_string)
-- [Do you have to use single quotes or double quotes?](/en-US/docs/Learn/JavaScript/First_steps/Strings#Single_quotes_vs._double_quotes)
+- [Do you have to use single quotes or double quotes?](/en-US/docs/Learn/JavaScript/First_steps/Strings#single_quotes_vs._double_quotes)
 - [How do you escape characters in strings?](/en-US/docs/Learn/JavaScript/First_steps/Strings#escaping_characters_in_a_string)
 - [How do you join strings together?](/en-US/docs/Learn/JavaScript/First_steps/Strings#concatenating_strings)
 - [Can you join strings and numbers together?](/en-US/docs/Learn/JavaScript/First_steps/Strings#numbers_vs._strings)
