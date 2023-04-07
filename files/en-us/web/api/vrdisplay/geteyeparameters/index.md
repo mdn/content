@@ -1,5 +1,6 @@
 ---
-title: VRDisplay.getEyeParameters()
+title: "VRDisplay: getEyeParameters() method"
+short-title: getEyeParameters()
 slug: Web/API/VRDisplay/getEyeParameters
 page-type: web-api-instance-method
 status:
