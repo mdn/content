@@ -1,5 +1,6 @@
 ---
-title: RTCIceTransport.getSelectedCandidatePair()
+title: "RTCIceTransport: getSelectedCandidatePair() method"
+short-title: getSelectedCandidatePair()
 slug: Web/API/RTCIceTransport/getSelectedCandidatePair
 page-type: web-api-instance-method
 browser-compat: api.RTCIceTransport.getSelectedCandidatePair

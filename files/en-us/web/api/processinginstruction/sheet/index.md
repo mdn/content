@@ -1,5 +1,6 @@
 ---
-title: ProcessingInstruction.sheet
+title: "ProcessingInstruction: sheet property"
+short-title: sheet
 slug: Web/API/ProcessingInstruction/sheet
 page-type: web-api-instance-property
 browser-compat: api.ProcessingInstruction.sheet

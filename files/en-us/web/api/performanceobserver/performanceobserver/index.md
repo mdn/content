@@ -1,5 +1,6 @@
 ---
-title: PerformanceObserver()
+title: "PerformanceObserver: PerformanceObserver() constructor"
+short-title: PerformanceObserver()
 slug: Web/API/PerformanceObserver/PerformanceObserver
 page-type: web-api-constructor
 browser-compat: api.PerformanceObserver.PerformanceObserver

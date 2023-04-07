@@ -1,5 +1,6 @@
 ---
-title: Range.setEndAfter()
+title: "Range: setEndAfter() method"
+short-title: setEndAfter()
 slug: Web/API/Range/setEndAfter
 page-type: web-api-instance-method
 browser-compat: api.Range.setEndAfter

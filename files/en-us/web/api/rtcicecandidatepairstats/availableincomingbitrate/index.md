@@ -1,5 +1,6 @@
 ---
-title: RTCIceCandidatePairStats.availableIncomingBitrate
+title: "RTCIceCandidatePairStats: availableIncomingBitrate property"
+short-title: availableIncomingBitrate
 slug: Web/API/RTCIceCandidatePairStats/availableIncomingBitrate
 page-type: web-api-instance-property
 browser-compat: api.RTCIceCandidatePairStats.availableIncomingBitrate

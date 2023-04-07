@@ -1,5 +1,6 @@
 ---
-title: RTCDataChannel.bufferedAmountLowThreshold
+title: "RTCDataChannel: bufferedAmountLowThreshold property"
+short-title: bufferedAmountLowThreshold
 slug: Web/API/RTCDataChannel/bufferedAmountLowThreshold
 page-type: web-api-instance-property
 browser-compat: api.RTCDataChannel.bufferedAmountLowThreshold

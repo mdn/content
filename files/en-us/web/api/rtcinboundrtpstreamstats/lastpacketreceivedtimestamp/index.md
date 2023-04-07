@@ -1,5 +1,6 @@
 ---
-title: RTCInboundRtpStreamStats.lastPacketReceivedTimestamp
+title: "RTCInboundRtpStreamStats: lastPacketReceivedTimestamp property"
+short-title: lastPacketReceivedTimestamp
 slug: Web/API/RTCInboundRtpStreamStats/lastPacketReceivedTimestamp
 page-type: web-api-instance-property
 browser-compat: api.RTCInboundRtpStreamStats.lastPacketReceivedTimestamp

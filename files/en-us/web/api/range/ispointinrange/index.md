@@ -1,5 +1,6 @@
 ---
-title: Range.isPointInRange()
+title: "Range: isPointInRange() method"
+short-title: isPointInRange()
 slug: Web/API/Range/isPointInRange
 page-type: web-api-instance-method
 browser-compat: api.Range.isPointInRange

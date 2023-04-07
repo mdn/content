@@ -1,5 +1,6 @@
 ---
-title: RTCDTMFSender.insertDTMF()
+title: "RTCDTMFSender: insertDTMF() method"
+short-title: insertDTMF()
 slug: Web/API/RTCDTMFSender/insertDTMF
 page-type: web-api-instance-method
 browser-compat: api.RTCDTMFSender.insertDTMF

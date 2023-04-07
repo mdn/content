@@ -1,5 +1,6 @@
 ---
-title: RTCIceServers.urls
+title: "RTCIceServers: urls property"
+short-title: urls
 slug: Web/API/RTCIceServer/urls
 page-type: web-api-instance-property
 browser-compat: api.RTCIceServer.urls

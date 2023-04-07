@@ -1,5 +1,6 @@
 ---
-title: PushSubscriptionOptions.applicationServerKey
+title: "PushSubscriptionOptions: applicationServerKey property"
+short-title: applicationServerKey
 slug: Web/API/PushSubscriptionOptions/applicationServerKey
 page-type: web-api-instance-property
 browser-compat: api.PushSubscriptionOptions.applicationServerKey

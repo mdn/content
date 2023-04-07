@@ -1,5 +1,6 @@
 ---
-title: Response.blob()
+title: "Response: blob() method"
+short-title: blob()
 slug: Web/API/Response/blob
 page-type: web-api-instance-method
 browser-compat: api.Response.blob
