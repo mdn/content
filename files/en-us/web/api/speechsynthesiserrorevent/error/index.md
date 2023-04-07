@@ -1,5 +1,6 @@
 ---
-title: SpeechSynthesisErrorEvent.error
+title: "SpeechSynthesisErrorEvent: error property"
+short-title: error
 slug: Web/API/SpeechSynthesisErrorEvent/error
 page-type: web-api-instance-property
 browser-compat: api.SpeechSynthesisErrorEvent.error

@@ -1,5 +1,6 @@
 ---
-title: SVGAltGlyphElement.glyphRef
+title: "SVGAltGlyphElement: glyphRef property"
+short-title: glyphRef
 slug: Web/API/SVGAltGlyphElement/glyphRef
 page-type: web-api-instance-property
 status:

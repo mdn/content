@@ -1,5 +1,6 @@
 ---
-title: StylePropertyMapReadOnly.forEach()
+title: "StylePropertyMapReadOnly: forEach() method"
+short-title: forEach()
 slug: Web/API/StylePropertyMapReadOnly/forEach
 page-type: web-api-instance-method
 browser-compat: api.StylePropertyMapReadOnly.forEach

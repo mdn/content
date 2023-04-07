@@ -1,5 +1,6 @@
 ---
-title: StylePropertyMap.delete()
+title: "StylePropertyMap: delete() method"
+short-title: delete()
 slug: Web/API/StylePropertyMap/delete
 page-type: web-api-instance-method
 browser-compat: api.StylePropertyMap.delete
