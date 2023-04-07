@@ -1,5 +1,6 @@
 ---
-title: ChannelSplitterNode()
+title: "ChannelSplitterNode: ChannelSplitterNode() constructor"
+short-title: ChannelSplitterNode()
 slug: Web/API/ChannelSplitterNode/ChannelSplitterNode
 page-type: web-api-constructor
 browser-compat: api.ChannelSplitterNode.ChannelSplitterNode

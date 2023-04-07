@@ -1,5 +1,6 @@
 ---
-title: CanvasRenderingContext2D.clip()
+title: "CanvasRenderingContext2D: clip() method"
+short-title: clip()
 slug: Web/API/CanvasRenderingContext2D/clip
 page-type: web-api-instance-method
 browser-compat: api.CanvasRenderingContext2D.clip

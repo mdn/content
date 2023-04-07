@@ -1,5 +1,6 @@
 ---
-title: Blob.type
+title: "Blob: type property"
+short-title: type
 slug: Web/API/Blob/type
 page-type: web-api-instance-property
 browser-compat: api.Blob.type

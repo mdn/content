@@ -1,5 +1,6 @@
 ---
-title: CanvasRenderingContext2D.setTransform()
+title: "CanvasRenderingContext2D: setTransform() method"
+short-title: setTransform()
 slug: Web/API/CanvasRenderingContext2D/setTransform
 page-type: web-api-instance-method
 browser-compat: api.CanvasRenderingContext2D.setTransform
