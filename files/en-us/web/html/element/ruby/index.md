@@ -101,7 +101,6 @@ This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_a
 
 {{EmbedLiveSample('Example 1: Word')}}
 
-
 ## Specifications
 
 {{Specifications}}
