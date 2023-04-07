@@ -26,7 +26,7 @@ grayscale(amount)
 ### Parameters
 
 - `amount`
-  - : The amount of the conversion, specified as a {{cssxref("&lt;number&gt;")}} or a {{cssxref("&lt;percentage&gt;")}}. A value of `100%` is completely grayscale, while a value of `0%` leaves the input unchanged. Values between `0%` and `100%` are linear multipliers on the effect. Default value when omitted is `1`. The initial value for {{Glossary("interpolation")}} is `0`.
+  - : The amount of the conversion, specified as a {{cssxref("&lt;number&gt;")}} or a {{cssxref("&lt;percentage&gt;")}}. A value of `100%` is completely grayscale, while a value of `0%` leaves the input unchanged. Values between `0%` and `100%` are linear multipliers on the effect. Default value when omitted is `0`. The initial value for {{Glossary("interpolation")}} is `0`.
 
 ## Examples
 
