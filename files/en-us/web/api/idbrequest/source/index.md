@@ -1,5 +1,6 @@
 ---
-title: IDBRequest.source
+title: "IDBRequest: source property"
+short-title: source
 slug: Web/API/IDBRequest/source
 page-type: web-api-instance-property
 browser-compat: api.IDBRequest.source

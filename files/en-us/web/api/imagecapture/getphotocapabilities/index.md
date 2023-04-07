@@ -1,5 +1,6 @@
 ---
-title: ImageCapture.getPhotoCapabilities()
+title: "ImageCapture: getPhotoCapabilities() method"
+short-title: getPhotoCapabilities()
 slug: Web/API/ImageCapture/getPhotoCapabilities
 page-type: web-api-instance-method
 status:

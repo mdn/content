@@ -1,5 +1,6 @@
 ---
-title: Keyboard.getLayoutMap()
+title: "Keyboard: getLayoutMap() method"
+short-title: getLayoutMap()
 slug: Web/API/Keyboard/getLayoutMap
 page-type: web-api-instance-method
 status:

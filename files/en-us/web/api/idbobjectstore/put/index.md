@@ -1,5 +1,6 @@
 ---
-title: IDBObjectStore.put()
+title: "IDBObjectStore: put() method"
+short-title: put()
 slug: Web/API/IDBObjectStore/put
 page-type: web-api-instance-method
 browser-compat: api.IDBObjectStore.put

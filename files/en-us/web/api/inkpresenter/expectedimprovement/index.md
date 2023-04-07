@@ -1,5 +1,6 @@
 ---
-title: InkPresenter.expectedImprovement
+title: "InkPresenter: expectedImprovement property"
+short-title: expectedImprovement
 slug: Web/API/InkPresenter/expectedImprovement
 page-type: web-api-instance-property
 status:

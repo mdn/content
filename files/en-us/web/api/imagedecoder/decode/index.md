@@ -1,5 +1,6 @@
 ---
-title: ImageDecoder.decode()
+title: "ImageDecoder: decode() method"
+short-title: decode()
 slug: Web/API/ImageDecoder/decode
 page-type: web-api-instance-method
 status:
