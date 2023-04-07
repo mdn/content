@@ -96,7 +96,7 @@ The `share_target` manifest member allows an installed PWA to be registered, at 
 
 The information you provide with the `share_target` member, in your manifest file, defines which data your app can be a target for, and how the operating system should launch your app when the user selects it as the target.
 
-### Handling simple text data
+### Handling text data
 
 Here is a web app manifest example using the `share_target` member:
 
