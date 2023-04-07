@@ -14,7 +14,7 @@ The **`element`** read-only property of the {{domxref("PerformanceElementTiming"
 
 ## Value
 
-An {{domxref("Element")}} or {{jsxref("null")}} if the element is a [shadow DOM](/en-US/docs/Web/Web_Components/Using_shadow_DOM) element.
+An {{domxref("Element")}}, or [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) if the element is a [shadow DOM](/en-US/docs/Web/Web_Components/Using_shadow_DOM) element.
 
 ## Examples
 
