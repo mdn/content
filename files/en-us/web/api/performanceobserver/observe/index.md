@@ -1,5 +1,6 @@
 ---
-title: PerformanceObserver.observe()
+title: "PerformanceObserver: observe() method"
+short-title: observe()
 slug: Web/API/PerformanceObserver/observe
 page-type: web-api-instance-method
 browser-compat: api.PerformanceObserver.observe

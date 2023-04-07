@@ -1,5 +1,6 @@
 ---
-title: PerformanceTiming.connectStart
+title: "PerformanceTiming: connectStart property"
+short-title: connectStart
 slug: Web/API/PerformanceTiming/connectStart
 page-type: web-api-instance-property
 status:

@@ -1,5 +1,6 @@
 ---
-title: PushManager.permissionState()
+title: "PushManager: permissionState() method"
+short-title: permissionState()
 slug: Web/API/PushManager/permissionState
 page-type: web-api-instance-method
 browser-compat: api.PushManager.permissionState
