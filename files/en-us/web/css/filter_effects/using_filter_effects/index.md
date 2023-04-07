@@ -8,7 +8,7 @@ page-type: guide
 
 Have you ever hovered over a black-and-white or sepia image and the full-color image came into view instantly? Have you ever encountered a background image with a small blurred-out section that makes the text on top more legible? These manipulations used to require image editing software, time, and http requests. [CSS filter effects](/en-US/docs/Web/CSS/Filter_Effects) enable applying these visual effects live, without PhotoShop and without extra HTTP requests. The only software required is the user's browser. And, unlike with pre-set image effects, CSS filter effects are responsive and animateable.
 
-The CSS filter effects module defines the {{cssxref("&lt;filter-function&gt;")}} data type which provides 10 different graphical effects, like blur or color shifting, that can alter the appearance of an element as well as the ability to reference an SVG filter with a filter of your own creation. The CSS {{cssxref("filter")}} and {{cssxref("backdrop-filter")}} properties are used to apply these filters, impacting the rendering of text, images, backgrounds, and borders, or any element on which these properties are applied.
+The CSS filter effects module defines the {{cssxref("&lt;filter-function&gt;")}} data type which provides graphical effects, like blur or color shifting, that can alter the appearance of an element as well as the ability to reference an SVG filter with a filter of your own creation. The CSS {{cssxref("filter")}} and {{cssxref("backdrop-filter")}} properties are used to apply these filters, impacting the rendering of text, images, backgrounds, and borders, or any element on which these properties are applied.
 
 ## Properties and Values
 
@@ -16,9 +16,9 @@ There are two filter properties defined in the CSS filter effects module enable 
 
 ### Filter effect properties
 
-With the `filter` property, the effects are applied to the element on which the `filter` property is defined.
+With the {{cssxref("filter")}} property, the effects are applied to the element on which the `filter` property is defined.
 
-With the `backdrop-filter` property, the graphical effects are applied to the area behind the element, or the element's "backdrop". The `backdrop-filter` property is often used to make foreground content more legible when the larger area upon which it is located would otherwise not provide enough contrast.
+With the {{cssxref("backdrop-filter")}} property, the graphical effects are applied to the area behind the element, or the element's "backdrop". The `backdrop-filter` property is often used to make foreground content more legible when the larger area upon which it is located would otherwise not provide enough contrast.
 
 ### Filter functions
 
