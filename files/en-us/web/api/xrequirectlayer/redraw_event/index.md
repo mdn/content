@@ -1,5 +1,5 @@
 ---
-title: "'XREquirectLayer: redraw event'"
+title: "XREquirectLayer: redraw event"
 short-title: redraw
 slug: Web/API/XREquirectLayer/redraw_event
 page-type: web-api-event
