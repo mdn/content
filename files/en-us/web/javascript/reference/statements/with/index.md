@@ -125,7 +125,7 @@ const r = 10;
 
 ### Avoiding the with statement by using an IIFE
 
-If you're producing an expression that must reuse a long-named reference multiple times, and your goal is to eliminate that lengthy name within your expression, you may prefer to provide the long-named reference as an argument to an [IIFE](/en-US/docs/Glossary/IIFE).
+If you're producing an expression that must reuse a long-named reference multiple times, and your goal is to eliminate that lengthy name within your expression, you can wrap the expression in an [IIFE](/en-US/docs/Glossary/IIFE) and provide the long name as an argument.
 
 ```js
 const objectHavingAnEspeciallyLengthyName = { foo: true, bar: false };
