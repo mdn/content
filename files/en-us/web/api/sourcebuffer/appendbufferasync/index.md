@@ -1,5 +1,6 @@
 ---
-title: SourceBuffer.appendBufferAsync()
+title: "SourceBuffer: appendBufferAsync() method"
+short-title: appendBufferAsync()
 slug: Web/API/SourceBuffer/appendBufferAsync
 page-type: web-api-instance-method
 status:

@@ -1,5 +1,6 @@
 ---
-title: ServiceWorkerRegistration.paymentManager
+title: "ServiceWorkerRegistration: paymentManager property"
+short-title: paymentManager
 slug: Web/API/ServiceWorkerRegistration/paymentManager
 page-type: web-api-instance-property
 status:

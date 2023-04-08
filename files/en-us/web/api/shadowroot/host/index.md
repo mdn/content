@@ -1,5 +1,6 @@
 ---
-title: ShadowRoot.host
+title: "ShadowRoot: host property"
+short-title: host
 slug: Web/API/ShadowRoot/host
 page-type: web-api-instance-property
 browser-compat: api.ShadowRoot.host

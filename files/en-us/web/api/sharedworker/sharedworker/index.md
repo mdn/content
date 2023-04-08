@@ -1,5 +1,6 @@
 ---
-title: SharedWorker()
+title: "SharedWorker: SharedWorker() constructor"
+short-title: SharedWorker()
 slug: Web/API/SharedWorker/SharedWorker
 page-type: web-api-constructor
 browser-compat: api.SharedWorker.SharedWorker

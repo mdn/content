@@ -1,5 +1,6 @@
 ---
-title: ShadowRoot.delegatesFocus
+title: "ShadowRoot: delegatesFocus property"
+short-title: delegatesFocus
 slug: Web/API/ShadowRoot/delegatesFocus
 page-type: web-api-instance-property
 browser-compat: api.ShadowRoot.delegatesFocus
