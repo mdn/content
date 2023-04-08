@@ -1,5 +1,6 @@
 ---
-title: XRMediaBinding.createQuadLayer()
+title: "XRMediaBinding: createQuadLayer() method"
+short-title: createQuadLayer()
 slug: Web/API/XRMediaBinding/createQuadLayer
 page-type: web-api-instance-method
 status:

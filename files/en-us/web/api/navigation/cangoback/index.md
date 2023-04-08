@@ -1,5 +1,6 @@
 ---
-title: Navigation.canGoBack
+title: "Navigation: canGoBack property"
+short-title: canGoBack
 slug: Web/API/Navigation/canGoBack
 page-type: web-api-instance-property
 status:

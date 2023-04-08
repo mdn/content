@@ -1,5 +1,6 @@
 ---
-title: Blob()
+title: "Blob: Blob() constructor"
+short-title: Blob()
 slug: Web/API/Blob/Blob
 page-type: web-api-constructor
 browser-compat: api.Blob.Blob

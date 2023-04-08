@@ -1,5 +1,6 @@
 ---
-title: ValidityState.rangeUnderflow
+title: "ValidityState: rangeUnderflow property"
+short-title: rangeUnderflow
 slug: Web/API/ValidityState/rangeUnderflow
 page-type: web-api-instance-property
 browser-compat: api.ValidityState.rangeUnderflow

@@ -1,5 +1,6 @@
 ---
-title: MouseEvent.layerY
+title: "MouseEvent: layerY property"
+short-title: layerY
 slug: Web/API/MouseEvent/layerY
 page-type: web-api-instance-property
 status:

@@ -1,5 +1,6 @@
 ---
-title: FileSystemWritableFileStream.seek()
+title: "FileSystemWritableFileStream: seek() method"
+short-title: seek()
 slug: Web/API/FileSystemWritableFileStream/seek
 page-type: web-api-instance-method
 browser-compat: api.FileSystemWritableFileStream.seek

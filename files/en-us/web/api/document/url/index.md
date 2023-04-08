@@ -1,5 +1,6 @@
 ---
-title: Document.URL
+title: "Document: URL property"
+short-title: URL
 slug: Web/API/Document/URL
 page-type: web-api-instance-property
 browser-compat: api.Document.URL

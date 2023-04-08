@@ -1,5 +1,6 @@
 ---
-title: CSSMathValue.operator
+title: "CSSMathValue: operator property"
+short-title: operator
 slug: Web/API/CSSMathValue/operator
 page-type: web-api-instance-property
 browser-compat: api.CSSMathValue.operator

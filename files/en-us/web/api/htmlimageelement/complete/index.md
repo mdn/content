@@ -1,5 +1,6 @@
 ---
-title: HTMLImageElement.complete
+title: "HTMLImageElement: complete property"
+short-title: complete
 slug: Web/API/HTMLImageElement/complete
 page-type: web-api-instance-property
 browser-compat: api.HTMLImageElement.complete

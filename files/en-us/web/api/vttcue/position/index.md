@@ -1,5 +1,6 @@
 ---
-title: VTTCue.position
+title: "VTTCue: position property"
+short-title: position
 slug: Web/API/VTTCue/position
 page-type: web-api-instance-property
 browser-compat: api.VTTCue.position

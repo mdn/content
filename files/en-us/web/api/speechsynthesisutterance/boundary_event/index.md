@@ -1,5 +1,6 @@
 ---
 title: "SpeechSynthesisUtterance: boundary event"
+short-title: boundary
 slug: Web/API/SpeechSynthesisUtterance/boundary_event
 page-type: web-api-event
 browser-compat: api.SpeechSynthesisUtterance.boundary_event

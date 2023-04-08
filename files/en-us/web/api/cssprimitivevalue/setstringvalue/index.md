@@ -1,5 +1,6 @@
 ---
-title: CSSPrimitiveValue.setStringValue()
+title: "CSSPrimitiveValue: setStringValue() method"
+short-title: setStringValue()
 slug: Web/API/CSSPrimitiveValue/setStringValue
 page-type: web-api-instance-method
 status:

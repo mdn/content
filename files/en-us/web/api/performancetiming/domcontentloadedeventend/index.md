@@ -1,5 +1,6 @@
 ---
-title: PerformanceTiming.domContentLoadedEventEnd
+title: "PerformanceTiming: domContentLoadedEventEnd property"
+short-title: domContentLoadedEventEnd
 slug: Web/API/PerformanceTiming/domContentLoadedEventEnd
 page-type: web-api-instance-property
 status:

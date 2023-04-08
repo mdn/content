@@ -1,5 +1,6 @@
 ---
-title: SyncEvent()
+title: "SyncEvent: SyncEvent() constructor"
+short-title: SyncEvent()
 slug: Web/API/SyncEvent/SyncEvent
 page-type: web-api-constructor
 status:

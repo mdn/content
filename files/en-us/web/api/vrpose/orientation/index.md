@@ -1,5 +1,6 @@
 ---
-title: VRPose.orientation
+title: "VRPose: orientation property"
+short-title: orientation
 slug: Web/API/VRPose/orientation
 page-type: web-api-instance-property
 status:

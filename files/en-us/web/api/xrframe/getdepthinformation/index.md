@@ -1,5 +1,6 @@
 ---
-title: XRFrame.getDepthInformation()
+title: "XRFrame: getDepthInformation() method"
+short-title: getDepthInformation()
 slug: Web/API/XRFrame/getDepthInformation
 page-type: web-api-instance-method
 status:

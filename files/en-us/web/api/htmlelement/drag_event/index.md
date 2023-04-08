@@ -1,5 +1,6 @@
 ---
 title: "HTMLElement: drag event"
+short-title: drag
 slug: Web/API/HTMLElement/drag_event
 page-type: web-api-event
 browser-compat: api.HTMLElement.drag_event

@@ -1,5 +1,6 @@
 ---
 title: "SpeechRecognition: result event"
+short-title: result
 slug: Web/API/SpeechRecognition/result_event
 page-type: web-api-event
 browser-compat: api.SpeechRecognition.result_event

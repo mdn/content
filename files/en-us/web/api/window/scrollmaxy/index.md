@@ -1,5 +1,6 @@
 ---
-title: Window.scrollMaxY
+title: "Window: scrollMaxY property"
+short-title: scrollMaxY
 slug: Web/API/Window/scrollMaxY
 page-type: web-api-instance-property
 status:

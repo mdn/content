@@ -1,5 +1,6 @@
 ---
-title: Document.exitPictureInPicture()
+title: "Document: exitPictureInPicture() method"
+short-title: exitPictureInPicture()
 slug: Web/API/Document/exitPictureInPicture
 page-type: web-api-instance-method
 browser-compat: api.Document.exitPictureInPicture

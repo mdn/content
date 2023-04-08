@@ -1,5 +1,6 @@
 ---
-title: Range.selectNode()
+title: "Range: selectNode() method"
+short-title: selectNode()
 slug: Web/API/Range/selectNode
 page-type: web-api-instance-method
 browser-compat: api.Range.selectNode

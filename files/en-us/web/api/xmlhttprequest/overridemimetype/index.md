@@ -1,5 +1,6 @@
 ---
-title: XMLHttpRequest.overrideMimeType()
+title: "XMLHttpRequest: overrideMimeType() method"
+short-title: overrideMimeType()
 slug: Web/API/XMLHttpRequest/overrideMimeType
 page-type: web-api-instance-method
 browser-compat: api.XMLHttpRequest.overrideMimeType

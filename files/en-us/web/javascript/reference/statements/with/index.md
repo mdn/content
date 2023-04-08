@@ -123,6 +123,18 @@ const r = 10;
 }
 ```
 
+### Avoiding the with statement by using an IIFE
+
+If you're producing an expression that must reuse a long-named reference multiple times, and your goal is to eliminate that lengthy name within your expression, you can wrap the expression in an [IIFE](/en-US/docs/Glossary/IIFE) and provide the long name as an argument.
+
+```js
+const objectHavingAnEspeciallyLengthyName = { foo: true, bar: false };
+
+if ((o => o.foo && !o.bar)(objectHavingAnEspeciallyLengthyName)) {
+  // This branch runs.
+}
+```
+
 ### Creating dynamic namespaces using the with statement and a proxy
 
 `with` will transform every variable lookup to a property lookup, while [Proxies](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy) allow trapping every property lookup call. You can create a dynamic namespace by combining them.

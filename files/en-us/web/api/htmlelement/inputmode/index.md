@@ -1,5 +1,6 @@
 ---
-title: HTMLElement.inputMode
+title: "HTMLElement: inputMode property"
+short-title: inputMode
 slug: Web/API/HTMLElement/inputMode
 page-type: web-api-instance-property
 browser-compat: api.HTMLElement.inputMode

@@ -1,5 +1,6 @@
 ---
-title: NodeList.length
+title: "NodeList: length property"
+short-title: length
 slug: Web/API/NodeList/length
 page-type: web-api-instance-property
 browser-compat: api.NodeList.length

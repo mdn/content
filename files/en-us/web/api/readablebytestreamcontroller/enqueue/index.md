@@ -1,5 +1,6 @@
 ---
-title: ReadableByteStreamController.enqueue()
+title: "ReadableByteStreamController: enqueue() method"
+short-title: enqueue()
 slug: Web/API/ReadableByteStreamController/enqueue
 page-type: web-api-instance-method
 browser-compat: api.ReadableByteStreamController.enqueue

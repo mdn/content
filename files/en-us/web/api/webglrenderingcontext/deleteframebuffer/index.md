@@ -1,5 +1,6 @@
 ---
-title: WebGLRenderingContext.deleteFramebuffer()
+title: "WebGLRenderingContext: deleteFramebuffer() method"
+short-title: deleteFramebuffer()
 slug: Web/API/WebGLRenderingContext/deleteFramebuffer
 page-type: web-api-instance-method
 browser-compat: api.WebGLRenderingContext.deleteFramebuffer

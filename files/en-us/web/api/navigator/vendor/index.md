@@ -1,5 +1,6 @@
 ---
-title: Navigator.vendor
+title: "Navigator: vendor property"
+short-title: vendor
 slug: Web/API/Navigator/vendor
 page-type: web-api-instance-property
 status:

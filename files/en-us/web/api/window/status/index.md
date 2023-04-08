@@ -1,5 +1,6 @@
 ---
-title: Window.status
+title: "Window: status property"
+short-title: status
 slug: Web/API/Window/status
 page-type: web-api-instance-property
 status:

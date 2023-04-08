@@ -1,5 +1,6 @@
 ---
-title: PerformanceEventTiming.target
+title: "PerformanceEventTiming: target property"
+short-title: target
 slug: Web/API/PerformanceEventTiming/target
 page-type: web-api-instance-property
 browser-compat: api.PerformanceEventTiming.target

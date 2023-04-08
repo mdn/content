@@ -1,5 +1,6 @@
 ---
-title: ContactsManager.select()
+title: "ContactsManager: select() method"
+short-title: select()
 slug: Web/API/ContactsManager/select
 page-type: web-api-instance-method
 status:

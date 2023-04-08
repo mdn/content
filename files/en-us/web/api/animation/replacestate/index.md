@@ -1,5 +1,6 @@
 ---
-title: Animation.replaceState
+title: "Animation: replaceState property"
+short-title: replaceState
 slug: Web/API/Animation/replaceState
 page-type: web-api-instance-property
 browser-compat: api.Animation.replaceState

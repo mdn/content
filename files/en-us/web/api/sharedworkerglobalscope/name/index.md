@@ -1,5 +1,6 @@
 ---
-title: SharedWorkerGlobalScope.name
+title: "SharedWorkerGlobalScope: name property"
+short-title: name
 slug: Web/API/SharedWorkerGlobalScope/name
 page-type: web-api-instance-property
 browser-compat: api.SharedWorkerGlobalScope.name

@@ -1,5 +1,6 @@
 ---
-title: Navigator.connection
+title: "Navigator: connection property"
+short-title: connection
 slug: Web/API/Navigator/connection
 page-type: web-api-instance-property
 status:

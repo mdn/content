@@ -1,5 +1,6 @@
 ---
-title: MediaTrackSupportedConstraints.deviceId
+title: "MediaTrackSupportedConstraints: deviceId property"
+short-title: deviceId
 slug: Web/API/MediaTrackSupportedConstraints/deviceId
 page-type: web-api-instance-property
 browser-compat: api.MediaTrackSupportedConstraints.deviceId

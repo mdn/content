@@ -1,5 +1,6 @@
 ---
-title: HTMLLinkElement.rel
+title: "HTMLLinkElement: rel property"
+short-title: rel
 slug: Web/API/HTMLLinkElement/rel
 page-type: web-api-instance-property
 browser-compat: api.HTMLLinkElement.rel

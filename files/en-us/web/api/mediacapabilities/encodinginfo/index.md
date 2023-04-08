@@ -1,5 +1,6 @@
 ---
-title: MediaCapabilities.encodingInfo()
+title: "MediaCapabilities: encodingInfo() method"
+short-title: encodingInfo()
 slug: Web/API/MediaCapabilities/encodingInfo
 page-type: web-api-instance-method
 browser-compat: api.MediaCapabilities.encodingInfo
@@ -28,8 +29,10 @@ encodingInfo(configuration)
 
         - `record`
           - : Represents a configuration for recording of media, e.g. using {{domxref("MediaRecorder")}}.
-        - `transmission`
-          - : Represents a configuration meant to be transmitted over electronic means (e.g. using {{domxref("RTCPeerConnection")}}).
+        - `webrtc`
+          - : Represents a configuration meant to be transmitted over electronic means (e.g. using {{domxref("RTCPeerConnection")}}). **Note:** Firefox uses `transmission` for this type, and `webrtc` does not work.
+        - `transmission` {{non-standard_inline}}
+          - : The synonym of `webrtc` to be used in Firefox.
 
     - `video`
 

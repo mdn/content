@@ -1,5 +1,6 @@
 ---
-title: Notification.data
+title: "Notification: data property"
+short-title: data
 slug: Web/API/Notification/data
 page-type: web-api-instance-property
 browser-compat: api.Notification.data

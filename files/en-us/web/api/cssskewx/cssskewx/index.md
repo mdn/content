@@ -1,5 +1,6 @@
 ---
-title: CSSSkewX()
+title: "CSSSkewX: CSSSkewX() constructor"
+short-title: CSSSkewX()
 slug: Web/API/CSSSkewX/CSSSkewX
 page-type: web-api-constructor
 browser-compat: api.CSSSkewX.CSSSkewX

@@ -1,5 +1,6 @@
 ---
-title: MediaRecorder.requestData()
+title: "MediaRecorder: requestData() method"
+short-title: requestData()
 slug: Web/API/MediaRecorder/requestData
 page-type: web-api-instance-method
 browser-compat: api.MediaRecorder.requestData

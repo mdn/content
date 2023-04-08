@@ -1,5 +1,6 @@
 ---
 title: "PermissionStatus: change event"
+short-title: change
 slug: Web/API/PermissionStatus/change_event
 page-type: web-api-event
 browser-compat: api.PermissionStatus.change_event

@@ -1,5 +1,6 @@
 ---
-title: HighlightRegistry.clear()
+title: "HighlightRegistry: clear() method"
+short-title: clear()
 slug: Web/API/HighlightRegistry/clear
 page-type: web-api-instance-method
 status:

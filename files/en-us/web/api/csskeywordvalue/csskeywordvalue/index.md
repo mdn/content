@@ -1,5 +1,6 @@
 ---
-title: CSSKeywordValue()
+title: "CSSKeywordValue: CSSKeywordValue() constructor"
+short-title: CSSKeywordValue()
 slug: Web/API/CSSKeywordValue/CSSKeywordValue
 page-type: web-api-constructor
 browser-compat: api.CSSKeywordValue.CSSKeywordValue

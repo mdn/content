@@ -1,5 +1,6 @@
 ---
 title: "Element: dblclick event"
+short-title: dblclick
 slug: Web/API/Element/dblclick_event
 page-type: web-api-event
 browser-compat: api.Element.dblclick_event

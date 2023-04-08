@@ -1,5 +1,6 @@
 ---
-title: IntersectionObserverEntry.target
+title: "IntersectionObserverEntry: target property"
+short-title: target
 slug: Web/API/IntersectionObserverEntry/target
 page-type: web-api-instance-property
 browser-compat: api.IntersectionObserverEntry.target

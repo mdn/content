@@ -65,6 +65,8 @@ There are no special styling considerations for `<label>` elements — structura
 <label>Click me <input type="text" /></label>
 ```
 
+#### Result
+
 {{EmbedLiveSample('Simple_label_example', '200', '50', '')}}
 
 ### Defining an explicit label with the "for" attribute
@@ -73,6 +75,8 @@ There are no special styling considerations for `<label>` elements — structura
 <label for="username">Click me to focus on the input field</label>
 <input type="text" id="username" />
 ```
+
+#### Result
 
 {{EmbedLiveSample('Using_the_for_attribute', '200', '50', '')}}
 

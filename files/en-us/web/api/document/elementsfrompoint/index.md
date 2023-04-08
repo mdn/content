@@ -1,5 +1,6 @@
 ---
-title: Document.elementsFromPoint()
+title: "Document: elementsFromPoint() method"
+short-title: elementsFromPoint()
 slug: Web/API/Document/elementsFromPoint
 page-type: web-api-instance-method
 browser-compat: api.Document.elementsFromPoint

@@ -1,5 +1,6 @@
 ---
-title: Range.setStart()
+title: "Range: setStart() method"
+short-title: setStart()
 slug: Web/API/Range/setStart
 page-type: web-api-instance-method
 browser-compat: api.Range.setStart

@@ -1,5 +1,6 @@
 ---
-title: ImageDecoder.type
+title: "ImageDecoder: type property"
+short-title: type
 slug: Web/API/ImageDecoder/type
 page-type: web-api-instance-property
 status:

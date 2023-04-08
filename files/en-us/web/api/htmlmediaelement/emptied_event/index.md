@@ -1,5 +1,6 @@
 ---
 title: "HTMLMediaElement: emptied event"
+short-title: emptied
 slug: Web/API/HTMLMediaElement/emptied_event
 page-type: web-api-event
 browser-compat: api.HTMLMediaElement.emptied_event

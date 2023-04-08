@@ -1,5 +1,6 @@
 ---
-title: RTCRtpSender.replaceTrack()
+title: "RTCRtpSender: replaceTrack() method"
+short-title: replaceTrack()
 slug: Web/API/RTCRtpSender/replaceTrack
 page-type: web-api-instance-method
 browser-compat: api.RTCRtpSender.replaceTrack

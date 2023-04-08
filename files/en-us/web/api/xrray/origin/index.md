@@ -1,5 +1,6 @@
 ---
-title: XRRay.origin
+title: "XRRay: origin property"
+short-title: origin
 slug: Web/API/XRRay/origin
 page-type: web-api-instance-property
 status:

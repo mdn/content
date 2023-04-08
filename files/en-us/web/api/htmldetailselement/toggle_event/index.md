@@ -1,5 +1,6 @@
 ---
 title: "HTMLDetailsElement: toggle event"
+short-title: toggle
 slug: Web/API/HTMLDetailsElement/toggle_event
 page-type: web-api-event
 browser-compat: api.HTMLDetailsElement.toggle_event

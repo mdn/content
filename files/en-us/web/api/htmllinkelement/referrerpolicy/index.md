@@ -1,5 +1,6 @@
 ---
-title: HTMLLinkElement.referrerPolicy
+title: "HTMLLinkElement: referrerPolicy property"
+short-title: referrerPolicy
 slug: Web/API/HTMLLinkElement/referrerPolicy
 page-type: web-api-instance-property
 browser-compat: api.HTMLLinkElement.referrerPolicy

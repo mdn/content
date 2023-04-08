@@ -1,5 +1,6 @@
 ---
-title: PaymentAddress.country
+title: "PaymentAddress: country property"
+short-title: country
 slug: Web/API/PaymentAddress/country
 page-type: web-api-instance-property
 status:

@@ -1,5 +1,6 @@
 ---
-title: WebTransportDatagramDuplexStream.maxDatagramSize
+title: "WebTransportDatagramDuplexStream: maxDatagramSize property"
+short-title: maxDatagramSize
 slug: Web/API/WebTransportDatagramDuplexStream/maxDatagramSize
 page-type: web-api-instance-property
 status:

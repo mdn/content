@@ -176,47 +176,49 @@ Unlike [conversion to primitives](/en-US/docs/Web/JavaScript/Data_structures#pri
 
 ## Static methods
 
-- {{jsxref("Object.assign","Object.assign()")}}
+- {{jsxref("Object.assign()")}}
   - : Copies the values of all enumerable own properties from one or more source objects to a target object.
-- {{jsxref("Object.create","Object.create()")}}
+- {{jsxref("Object.create()")}}
   - : Creates a new object with the specified prototype object and properties.
-- {{jsxref("Object.defineProperty","Object.defineProperty()")}}
-  - : Adds the named property described by a given descriptor to an object.
-- {{jsxref("Object.defineProperties","Object.defineProperties()")}}
+- {{jsxref("Object.defineProperties()")}}
   - : Adds the named properties described by the given descriptors to an object.
-- {{jsxref("Object.entries","Object.entries()")}}
+- {{jsxref("Object.defineProperty()")}}
+  - : Adds the named property described by a given descriptor to an object.
+- {{jsxref("Object.entries()")}}
   - : Returns an array containing all of the `[key, value]` pairs of a given object's **own** enumerable string properties.
-- {{jsxref("Object.freeze","Object.freeze()")}}
+- {{jsxref("Object.freeze()")}}
   - : Freezes an object. Other code cannot delete or change its properties.
-- {{jsxref("Object.fromEntries","Object.fromEntries()")}}
+- {{jsxref("Object.fromEntries()")}}
   - : Returns a new object from an iterable of `[key, value]` pairs. (This is the reverse of {{jsxref("Object.entries")}}).
-- {{jsxref("Object.getOwnPropertyDescriptor","Object.getOwnPropertyDescriptor()")}}
+- {{jsxref("Object.getOwnPropertyDescriptor()")}}
   - : Returns a property descriptor for a named property on an object.
-- {{jsxref("Object.getOwnPropertyDescriptors","Object.getOwnPropertyDescriptors()")}}
+- {{jsxref("Object.getOwnPropertyDescriptors()")}}
   - : Returns an object containing all own property descriptors for an object.
-- {{jsxref("Object.getOwnPropertyNames","Object.getOwnPropertyNames()")}}
+- {{jsxref("Object.getOwnPropertyNames()")}}
   - : Returns an array containing the names of all of the given object's **own** enumerable and non-enumerable properties.
-- {{jsxref("Object.getOwnPropertySymbols","Object.getOwnPropertySymbols()")}}
+- {{jsxref("Object.getOwnPropertySymbols()")}}
   - : Returns an array of all symbol properties found directly upon a given object.
-- {{jsxref("Object.getPrototypeOf","Object.getPrototypeOf()")}}
+- {{jsxref("Object.getPrototypeOf()")}}
   - : Returns the prototype (internal `[[Prototype]]` property) of the specified object.
-- {{jsxref("Object.is","Object.is()")}}
+- {{jsxref("Object.hasOwn()")}}
+  - : Returns `true` if the specified object has the indicated property as its _own_ property, or `false` if the property is inherited or does not exist.
+- {{jsxref("Object.is()")}}
   - : Compares if two values are the same value. Equates all `NaN` values (which differs from both `IsLooselyEqual` used by [`==`](/en-US/docs/Web/JavaScript/Reference/Operators/Equality) and `IsStrictlyEqual` used by [`===`](/en-US/docs/Web/JavaScript/Reference/Operators/Strict_equality)).
-- {{jsxref("Object.isExtensible","Object.isExtensible()")}}
+- {{jsxref("Object.isExtensible()")}}
   - : Determines if extending of an object is allowed.
-- {{jsxref("Object.isFrozen","Object.isFrozen()")}}
+- {{jsxref("Object.isFrozen()")}}
   - : Determines if an object was frozen.
-- {{jsxref("Object.isSealed","Object.isSealed()")}}
+- {{jsxref("Object.isSealed()")}}
   - : Determines if an object is sealed.
-- {{jsxref("Object.keys","Object.keys()")}}
+- {{jsxref("Object.keys()")}}
   - : Returns an array containing the names of all of the given object's **own** enumerable string properties.
-- {{jsxref("Object.preventExtensions","Object.preventExtensions()")}}
+- {{jsxref("Object.preventExtensions()")}}
   - : Prevents any extensions of an object.
-- {{jsxref("Object.seal","Object.seal()")}}
+- {{jsxref("Object.seal()")}}
   - : Prevents other code from deleting properties of an object.
-- {{jsxref("Object.setPrototypeOf","Object.setPrototypeOf()")}}
+- {{jsxref("Object.setPrototypeOf()")}}
   - : Sets the object's prototype (its internal `[[Prototype]]` property).
-- {{jsxref("Object.values","Object.values()")}}
+- {{jsxref("Object.values()")}}
   - : Returns an array containing the values that correspond to all of a given object's **own** enumerable string properties.
 
 ## Instance properties

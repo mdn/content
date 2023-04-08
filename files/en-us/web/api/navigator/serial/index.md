@@ -1,5 +1,6 @@
 ---
-title: Navigator.serial
+title: "Navigator: serial property"
+short-title: serial
 slug: Web/API/Navigator/serial
 page-type: web-api-instance-property
 status:

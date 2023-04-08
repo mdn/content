@@ -1,5 +1,6 @@
 ---
-title: FeaturePolicy.allowsFeature()
+title: "FeaturePolicy: allowsFeature() method"
+short-title: allowsFeature()
 slug: Web/API/FeaturePolicy/allowsFeature
 page-type: web-api-instance-method
 status:

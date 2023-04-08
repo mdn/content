@@ -1,5 +1,6 @@
 ---
-title: HTMLMediaElement.volume
+title: "HTMLMediaElement: volume property"
+short-title: volume
 slug: Web/API/HTMLMediaElement/volume
 page-type: web-api-instance-property
 browser-compat: api.HTMLMediaElement.volume

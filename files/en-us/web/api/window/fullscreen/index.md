@@ -1,5 +1,6 @@
 ---
-title: Window.fullScreen
+title: "Window: fullScreen property"
+short-title: fullScreen
 slug: Web/API/Window/fullScreen
 page-type: web-api-instance-property
 status:

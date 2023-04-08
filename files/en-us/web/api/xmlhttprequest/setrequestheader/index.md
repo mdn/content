@@ -1,5 +1,6 @@
 ---
-title: XMLHttpRequest.setRequestHeader()
+title: "XMLHttpRequest: setRequestHeader() method"
+short-title: setRequestHeader()
 slug: Web/API/XMLHttpRequest/setRequestHeader
 page-type: web-api-instance-method
 browser-compat: api.XMLHttpRequest.setRequestHeader

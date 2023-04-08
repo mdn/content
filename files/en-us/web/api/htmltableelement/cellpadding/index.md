@@ -1,5 +1,6 @@
 ---
-title: HTMLTableElement.cellPadding
+title: "HTMLTableElement: cellPadding property"
+short-title: cellPadding
 slug: Web/API/HTMLTableElement/cellPadding
 page-type: web-api-instance-property
 status:

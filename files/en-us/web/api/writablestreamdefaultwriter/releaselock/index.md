@@ -1,5 +1,6 @@
 ---
-title: WritableStreamDefaultWriter.releaseLock()
+title: "WritableStreamDefaultWriter: releaseLock() method"
+short-title: releaseLock()
 slug: Web/API/WritableStreamDefaultWriter/releaseLock
 page-type: web-api-instance-method
 browser-compat: api.WritableStreamDefaultWriter.releaseLock

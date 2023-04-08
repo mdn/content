@@ -1,5 +1,6 @@
 ---
-title: IDBRequest.transaction
+title: "IDBRequest: transaction property"
+short-title: transaction
 slug: Web/API/IDBRequest/transaction
 page-type: web-api-instance-property
 browser-compat: api.IDBRequest.transaction

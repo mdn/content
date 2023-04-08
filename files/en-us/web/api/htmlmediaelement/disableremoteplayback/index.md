@@ -1,5 +1,6 @@
 ---
-title: HTMLMediaElement.disableRemotePlayback
+title: "HTMLMediaElement: disableRemotePlayback property"
+short-title: disableRemotePlayback
 slug: Web/API/HTMLMediaElement/disableRemotePlayback
 page-type: web-api-instance-property
 browser-compat: api.HTMLMediaElement.disableRemotePlayback

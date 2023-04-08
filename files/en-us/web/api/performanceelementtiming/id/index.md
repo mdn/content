@@ -1,5 +1,6 @@
 ---
-title: PerformanceElementTiming.id
+title: "PerformanceElementTiming: id property"
+short-title: id
 slug: Web/API/PerformanceElementTiming/id
 page-type: web-api-instance-property
 status:

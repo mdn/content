@@ -1,5 +1,6 @@
 ---
 title: "Element: mousewheel event"
+short-title: mousewheel
 slug: Web/API/Element/mousewheel_event
 page-type: web-api-event
 status:

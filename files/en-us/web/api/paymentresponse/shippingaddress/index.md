@@ -1,5 +1,6 @@
 ---
-title: PaymentResponse.shippingAddress
+title: "PaymentResponse: shippingAddress property"
+short-title: shippingAddress
 slug: Web/API/PaymentResponse/shippingAddress
 page-type: web-api-instance-property
 status:

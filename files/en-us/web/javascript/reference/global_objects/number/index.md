@@ -136,8 +136,6 @@ When `Number` is called as a constructor (with `new`), it creates a {{jsxref("Nu
   - : Special value representing negative infinity. Returned on overflow.
 - {{jsxref("Number.POSITIVE_INFINITY")}}
   - : Special value representing infinity. Returned on overflow.
-- {{jsxref("Number", "Number.prototype")}}
-  - : Allows the addition of properties to the `Number` object.
 
 ## Static methods
 

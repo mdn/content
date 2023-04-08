@@ -1,5 +1,6 @@
 ---
-title: ReadableStreamDefaultController.enqueue()
+title: "ReadableStreamDefaultController: enqueue() method"
+short-title: enqueue()
 slug: Web/API/ReadableStreamDefaultController/enqueue
 page-type: web-api-instance-method
 browser-compat: api.ReadableStreamDefaultController.enqueue
@@ -45,6 +46,7 @@ When a button is pressed, the generation is stopped, the stream is closed using
 which reads the data back out of the stream.
 
 ```js
+let interval;
 const stream = new ReadableStream({
   start(controller) {
     interval = setInterval(() => {

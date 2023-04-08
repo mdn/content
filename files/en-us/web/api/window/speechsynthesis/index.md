@@ -1,5 +1,6 @@
 ---
-title: Window.speechSynthesis
+title: "Window: speechSynthesis property"
+short-title: speechSynthesis
 slug: Web/API/Window/speechSynthesis
 page-type: web-api-instance-property
 browser-compat: api.Window.speechSynthesis

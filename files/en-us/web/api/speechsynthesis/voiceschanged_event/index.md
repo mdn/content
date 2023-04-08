@@ -1,5 +1,6 @@
 ---
 title: "SpeechSynthesis: voiceschanged event"
+short-title: voiceschanged
 slug: Web/API/SpeechSynthesis/voiceschanged_event
 page-type: web-api-event
 browser-compat: api.SpeechSynthesis.voiceschanged_event

@@ -1,5 +1,6 @@
 ---
-title: WebGLRenderingContext.getRenderbufferParameter()
+title: "WebGLRenderingContext: getRenderbufferParameter() method"
+short-title: getRenderbufferParameter()
 slug: Web/API/WebGLRenderingContext/getRenderbufferParameter
 page-type: web-api-instance-method
 browser-compat: api.WebGLRenderingContext.getRenderbufferParameter

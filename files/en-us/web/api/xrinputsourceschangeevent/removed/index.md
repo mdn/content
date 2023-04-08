@@ -1,5 +1,6 @@
 ---
-title: XRInputSourcesChangeEvent.removed
+title: "XRInputSourcesChangeEvent: removed property"
+short-title: removed
 slug: Web/API/XRInputSourcesChangeEvent/removed
 page-type: web-api-instance-property
 browser-compat: api.XRInputSourcesChangeEvent.removed

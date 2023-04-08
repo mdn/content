@@ -1,5 +1,6 @@
 ---
-title: DOMRect.fromRect()
+title: "DOMRect: fromRect() static method"
+short-title: fromRect()
 slug: Web/API/DOMRect/fromRect
 page-type: web-api-static-method
 browser-compat: api.DOMRect.fromRect

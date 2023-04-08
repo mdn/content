@@ -1,5 +1,6 @@
 ---
 title: "Element: animationiteration event"
+short-title: animationiteration
 slug: Web/API/Element/animationiteration_event
 browser-compat: api.Element.animationiteration_event
 page-type: web-api-event

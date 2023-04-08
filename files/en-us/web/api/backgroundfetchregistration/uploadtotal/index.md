@@ -1,5 +1,6 @@
 ---
-title: BackgroundFetchRegistration.uploadTotal
+title: "BackgroundFetchRegistration: uploadTotal property"
+short-title: uploadTotal
 slug: Web/API/BackgroundFetchRegistration/uploadTotal
 page-type: web-api-instance-property
 status:

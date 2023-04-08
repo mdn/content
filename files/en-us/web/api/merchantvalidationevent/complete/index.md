@@ -1,5 +1,6 @@
 ---
-title: MerchantValidationEvent.complete()
+title: "MerchantValidationEvent: complete() method"
+short-title: complete()
 slug: Web/API/MerchantValidationEvent/complete
 page-type: web-api-instance-method
 status:

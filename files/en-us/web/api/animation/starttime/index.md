@@ -1,5 +1,6 @@
 ---
-title: Animation.startTime
+title: "Animation: startTime property"
+short-title: startTime
 slug: Web/API/Animation/startTime
 page-type: web-api-instance-property
 browser-compat: api.Animation.startTime

@@ -1,5 +1,6 @@
 ---
-title: SubtleCrypto.verify()
+title: "SubtleCrypto: verify() method"
+short-title: verify()
 slug: Web/API/SubtleCrypto/verify
 page-type: web-api-instance-method
 browser-compat: api.SubtleCrypto.verify

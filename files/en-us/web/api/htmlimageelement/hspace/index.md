@@ -1,5 +1,6 @@
 ---
-title: HTMLImageElement.hspace
+title: "HTMLImageElement: hspace property"
+short-title: hspace
 slug: Web/API/HTMLImageElement/hspace
 page-type: web-api-instance-property
 status:

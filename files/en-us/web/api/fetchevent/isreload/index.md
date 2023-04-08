@@ -1,5 +1,6 @@
 ---
-title: FetchEvent.isReload
+title: "FetchEvent: isReload property"
+short-title: isReload
 slug: Web/API/FetchEvent/isReload
 page-type: web-api-instance-property
 status:

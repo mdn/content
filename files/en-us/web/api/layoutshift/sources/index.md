@@ -1,5 +1,6 @@
 ---
-title: LayoutShift.sources
+title: "LayoutShift: sources property"
+short-title: sources
 slug: Web/API/LayoutShift/sources
 page-type: web-api-instance-property
 browser-compat: api.LayoutShift.sources

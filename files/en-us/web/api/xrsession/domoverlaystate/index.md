@@ -1,5 +1,6 @@
 ---
-title: XRSession.domOverlayState
+title: "XRSession: domOverlayState property"
+short-title: domOverlayState
 slug: Web/API/XRSession/domOverlayState
 page-type: web-api-instance-property
 status:

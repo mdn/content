@@ -1,5 +1,6 @@
 ---
-title: FileSystemDirectoryEntry.createReader()
+title: "FileSystemDirectoryEntry: createReader() method"
+short-title: createReader()
 slug: Web/API/FileSystemDirectoryEntry/createReader
 page-type: web-api-instance-method
 browser-compat: api.FileSystemDirectoryEntry.createReader

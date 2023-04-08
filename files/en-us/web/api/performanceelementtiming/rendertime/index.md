@@ -1,5 +1,6 @@
 ---
-title: PerformanceElementTiming.renderTime
+title: "PerformanceElementTiming: renderTime property"
+short-title: renderTime
 slug: Web/API/PerformanceElementTiming/renderTime
 page-type: web-api-instance-property
 status:

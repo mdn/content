@@ -1,5 +1,6 @@
 ---
-title: MutationEvent.newValue
+title: "MutationEvent: newValue property"
+short-title: newValue
 slug: Web/API/MutationEvent/newValue
 page-type: web-api-instance-property
 status:

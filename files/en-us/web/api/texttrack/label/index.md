@@ -1,5 +1,6 @@
 ---
-title: TextTrack.label
+title: "TextTrack: label property"
+short-title: label
 slug: Web/API/TextTrack/label
 page-type: web-api-instance-property
 browser-compat: api.TextTrack.label

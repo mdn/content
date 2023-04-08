@@ -1,5 +1,6 @@
 ---
-title: Window.screenTop
+title: "Window: screenTop property"
+short-title: screenTop
 slug: Web/API/Window/screenTop
 page-type: web-api-instance-property
 browser-compat: api.Window.screenTop

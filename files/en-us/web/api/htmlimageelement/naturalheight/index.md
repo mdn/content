@@ -1,5 +1,6 @@
 ---
-title: HTMLImageElement.naturalHeight
+title: "HTMLImageElement: naturalHeight property"
+short-title: naturalHeight
 slug: Web/API/HTMLImageElement/naturalHeight
 page-type: web-api-instance-property
 browser-compat: api.HTMLImageElement.naturalHeight

@@ -1,5 +1,6 @@
 ---
-title: OscillatorNode.frequency
+title: "OscillatorNode: frequency property"
+short-title: frequency
 slug: Web/API/OscillatorNode/frequency
 page-type: web-api-instance-property
 browser-compat: api.OscillatorNode.frequency

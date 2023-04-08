@@ -1,5 +1,6 @@
 ---
-title: VideoPlaybackQuality.totalFrameDelay
+title: "VideoPlaybackQuality: totalFrameDelay property"
+short-title: totalFrameDelay
 slug: Web/API/VideoPlaybackQuality/totalFrameDelay
 page-type: web-api-instance-property
 status:

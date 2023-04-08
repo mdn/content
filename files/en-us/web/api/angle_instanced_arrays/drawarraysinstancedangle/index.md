@@ -1,5 +1,6 @@
 ---
-title: ANGLE_instanced_arrays.drawArraysInstancedANGLE()
+title: "ANGLE_instanced_arrays: drawArraysInstancedANGLE() method"
+short-title: drawArraysInstancedANGLE()
 slug: Web/API/ANGLE_instanced_arrays/drawArraysInstancedANGLE
 page-type: web-api-instance-method
 browser-compat: api.ANGLE_instanced_arrays.drawArraysInstancedANGLE

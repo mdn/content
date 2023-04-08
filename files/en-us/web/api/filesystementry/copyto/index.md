@@ -1,5 +1,6 @@
 ---
-title: FileSystemEntry.copyTo()
+title: "FileSystemEntry: copyTo() method"
+short-title: copyTo()
 slug: Web/API/FileSystemEntry/copyTo
 page-type: web-api-instance-method
 status:

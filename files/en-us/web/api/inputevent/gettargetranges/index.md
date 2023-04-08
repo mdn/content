@@ -1,5 +1,6 @@
 ---
-title: InputEvent.getTargetRanges()
+title: "InputEvent: getTargetRanges() method"
+short-title: getTargetRanges()
 slug: Web/API/InputEvent/getTargetRanges
 page-type: web-api-instance-method
 browser-compat: api.InputEvent.getTargetRanges

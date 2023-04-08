@@ -1,5 +1,6 @@
 ---
-title: WebGLRenderingContext.sampleCoverage()
+title: "WebGLRenderingContext: sampleCoverage() method"
+short-title: sampleCoverage()
 slug: Web/API/WebGLRenderingContext/sampleCoverage
 page-type: web-api-instance-method
 browser-compat: api.WebGLRenderingContext.sampleCoverage

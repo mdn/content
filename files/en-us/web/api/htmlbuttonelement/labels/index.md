@@ -1,5 +1,6 @@
 ---
-title: HTMLButtonElement.labels
+title: "HTMLButtonElement: labels property"
+short-title: labels
 slug: Web/API/HTMLButtonElement/labels
 page-type: web-api-instance-property
 browser-compat: api.HTMLButtonElement.labels

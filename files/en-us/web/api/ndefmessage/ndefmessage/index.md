@@ -1,5 +1,6 @@
 ---
-title: NDEFMessage()
+title: "NDEFMessage: NDEFMessage() constructor"
+short-title: NDEFMessage()
 slug: Web/API/NDEFMessage/NDEFMessage
 page-type: web-api-constructor
 status:

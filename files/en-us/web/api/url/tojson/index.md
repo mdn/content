@@ -1,5 +1,6 @@
 ---
-title: URL.toJSON()
+title: "URL: toJSON() method"
+short-title: toJSON()
 slug: Web/API/URL/toJSON
 page-type: web-api-instance-method
 browser-compat: api.URL.toJSON

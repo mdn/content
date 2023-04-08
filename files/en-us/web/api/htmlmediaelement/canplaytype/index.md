@@ -1,5 +1,6 @@
 ---
-title: HTMLMediaElement.canPlayType()
+title: "HTMLMediaElement: canPlayType() method"
+short-title: canPlayType()
 slug: Web/API/HTMLMediaElement/canPlayType
 page-type: web-api-instance-method
 browser-compat: api.HTMLMediaElement.canPlayType

@@ -1,5 +1,6 @@
 ---
-title: NavigationHistoryEntry.getState()
+title: "NavigationHistoryEntry: getState() method"
+short-title: getState()
 slug: Web/API/NavigationHistoryEntry/getState
 page-type: web-api-instance-method
 status:

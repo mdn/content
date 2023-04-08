@@ -1,5 +1,6 @@
 ---
-title: HTMLObjectElement.contentWindow
+title: "HTMLObjectElement: contentWindow property"
+short-title: contentWindow
 slug: Web/API/HTMLObjectElement/contentWindow
 page-type: web-api-instance-property
 browser-compat: api.HTMLObjectElement.contentWindow

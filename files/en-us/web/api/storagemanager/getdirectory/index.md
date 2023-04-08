@@ -1,5 +1,6 @@
 ---
-title: StorageManager.getDirectory()
+title: "StorageManager: getDirectory() method"
+short-title: getDirectory()
 slug: Web/API/StorageManager/getDirectory
 page-type: web-api-instance-method
 browser-compat: api.StorageManager.getDirectory

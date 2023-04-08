@@ -1,5 +1,6 @@
 ---
-title: Selection.collapse()
+title: "Selection: collapse() method"
+short-title: collapse()
 slug: Web/API/Selection/collapse
 page-type: web-api-instance-method
 browser-compat: api.Selection.collapse
