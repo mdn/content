@@ -1993,7 +1993,7 @@
 /en-US/docs/DOM/event.view	/en-US/docs/Web/API/UIEvent/view
 /en-US/docs/DOM/event.which	/en-US/docs/Web/API/UIEvent/which
 /en-US/docs/DOM/event/AnimationEvent	/en-US/docs/Web/API/AnimationEvent
-/en-US/docs/DOM/event/Comparison_of_Event_Targets	/en-US/docs/Web/API/Event/Comparison_of_Event_Targets
+/en-US/docs/DOM/event/Comparison_of_Event_Targets	/en-US/docs/Learn/JavaScript/Building_blocks/Events
 /en-US/docs/DOM/form.acceptCharset	/en-US/docs/Web/API/HTMLFormElement/acceptCharset
 /en-US/docs/DOM/form.action	/en-US/docs/Web/API/HTMLFormElement/action
 /en-US/docs/DOM/form.elements	/en-US/docs/Web/API/HTMLFormElement/elements
@@ -2478,7 +2478,7 @@
 /en-US/docs/DOM:event.type	/en-US/docs/Web/API/Event/type
 /en-US/docs/DOM:event.view	/en-US/docs/Web/API/UIEvent/view
 /en-US/docs/DOM:event.which	/en-US/docs/Web/API/UIEvent/which
-/en-US/docs/DOM:event:Comparison_of_Event_Targets	/en-US/docs/Web/API/Event/Comparison_of_Event_Targets
+/en-US/docs/DOM:event:Comparison_of_Event_Targets	/en-US/docs/Learn/JavaScript/Building_blocks/Events
 /en-US/docs/DOM:form.acceptCharset	/en-US/docs/Web/API/HTMLFormElement/acceptCharset
 /en-US/docs/DOM:form.action	/en-US/docs/Web/API/HTMLFormElement/action
 /en-US/docs/DOM:form.elements	/en-US/docs/Web/API/HTMLFormElement/elements
@@ -8113,6 +8113,7 @@
 /en-US/docs/Web/API/Event.Event	/en-US/docs/Web/API/Event/Event
 /en-US/docs/Web/API/Event.initEvent()	/en-US/docs/Web/API/Event/initEvent
 /en-US/docs/Web/API/Event/AnimationEvent	/en-US/docs/Web/API/AnimationEvent
+/en-US/docs/Web/API/Event/Comparison_of_Event_Targets	/en-US/docs/Learn/JavaScript/Building_blocks/Events
 /en-US/docs/Web/API/Event/CustomEvent	/en-US/docs/Web/API/CustomEvent
 /en-US/docs/Web/API/Event/UIEvent	/en-US/docs/Web/API/UIEvent
 /en-US/docs/Web/API/Event/UIEvent/KeyEvent	/en-US/docs/Web/API/KeyboardEvent
