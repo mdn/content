@@ -239,8 +239,7 @@ class ClassWithPrivateMethod {
 }
 
 const instance = new ClassWithPrivateMethod();
-console.log(instance.getPrivateMessage());
-// hello world
+console.log(instance.getPrivateMessage()); // hello world
 ```
 
 Private instance methods may be generator, async, or async generator functions. Private getters and setters are also possible, and follow the same syntax requirements as their public [getter](/en-US/docs/Web/JavaScript/Reference/Functions/get) and [setter](/en-US/docs/Web/JavaScript/Reference/Functions/set) counterparts.
@@ -250,7 +249,7 @@ class ClassWithPrivateAccessor {
   #message;
 
   get #decoratedMessage() {
-    return `🎬${this.#message}🛑`;
+    return `<${this.#message}>`;
   }
   set #decoratedMessage(msg) {
     this.#message = msg;
@@ -262,8 +261,7 @@ class ClassWithPrivateAccessor {
   }
 }
 
-new ClassWithPrivateAccessor();
-// 🎬hello world🛑
+new ClassWithPrivateAccessor(); // <hello world>
 ```
 
 Unlike public methods, private methods are not accessible on `Class.prototype`.
@@ -299,10 +297,8 @@ class ClassWithPrivateStaticMethod {
   }
 }
 
-console.log(ClassWithPrivateStaticMethod.publicStaticMethod1() === 42);
-// true
-console.log(ClassWithPrivateStaticMethod.publicStaticMethod2() === 42);
-// true
+console.log(ClassWithPrivateStaticMethod.publicStaticMethod1() === 42); // true
+console.log(ClassWithPrivateStaticMethod.publicStaticMethod2() === 42); // true
 ```
 
 Private static methods may be generator, async, and async generator functions.
@@ -324,11 +320,8 @@ class Base {
 
 class Derived extends Base {}
 
-console.log(Derived.publicStaticMethod1());
-// 42
-console.log(Derived.publicStaticMethod2());
-// TypeError: Cannot read private member #privateStaticMethod
-// from an object whose class did not declare it
+console.log(Derived.publicStaticMethod1()); // 42
+console.log(Derived.publicStaticMethod2()); // TypeError: Cannot read private member #privateStaticMethod from an object whose class did not declare it
 ```
 
 ### Simulating private constructors
