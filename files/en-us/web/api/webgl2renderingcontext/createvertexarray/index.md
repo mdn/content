@@ -1,5 +1,6 @@
 ---
-title: WebGL2RenderingContext.createVertexArray()
+title: "WebGL2RenderingContext: createVertexArray() method"
+short-title: createVertexArray()
 slug: Web/API/WebGL2RenderingContext/createVertexArray
 page-type: web-api-instance-method
 browser-compat: api.WebGL2RenderingContext.createVertexArray

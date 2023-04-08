@@ -1,5 +1,6 @@
 ---
-title: ViewTransition.ready
+title: "ViewTransition: ready property"
+short-title: ready
 slug: Web/API/ViewTransition/ready
 page-type: web-api-instance-property
 status: experimental

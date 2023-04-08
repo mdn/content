@@ -1,5 +1,6 @@
 ---
-title: VideoColorSpace.primaries
+title: "VideoColorSpace: primaries property"
+short-title: primaries
 slug: Web/API/VideoColorSpace/primaries
 page-type: web-api-instance-property
 browser-compat: api.VideoColorSpace.primaries

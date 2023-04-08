@@ -1,5 +1,6 @@
 ---
-title: VREyeParameters.minimumFieldOfView
+title: "VREyeParameters: minimumFieldOfView property"
+short-title: minimumFieldOfView
 slug: Web/API/VREyeParameters/minimumFieldOfView
 page-type: web-api-instance-property
 status:

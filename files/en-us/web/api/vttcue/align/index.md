@@ -1,5 +1,6 @@
 ---
-title: VTTCue.align
+title: "VTTCue: align property"
+short-title: align
 slug: Web/API/VTTCue/align
 page-type: web-api-instance-property
 browser-compat: api.VTTCue.align
