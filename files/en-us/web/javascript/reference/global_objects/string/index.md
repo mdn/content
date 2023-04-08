@@ -361,6 +361,8 @@ These properties are own properties of each `String` instance.
 - {{jsxref("String.prototype.startsWith()")}}
   - : Determines whether the calling string begins with the characters of string
     `searchString`.
+- {{jsxref("String.prototype.substr()")}} {{deprecated_inline}}
+  - : Returns a portion of the string, starting at the specified index and extending for a given number of characters afterwards.
 - {{jsxref("String.prototype.substring()")}}
   - : Returns a new string containing characters of the calling string from (or between)
     the specified index (or indices).
