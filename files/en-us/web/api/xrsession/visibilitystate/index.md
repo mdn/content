@@ -1,5 +1,6 @@
 ---
-title: XRSession.visibilityState
+title: "XRSession: visibilityState property"
+short-title: visibilityState
 slug: Web/API/XRSession/visibilityState
 page-type: web-api-instance-property
 status:

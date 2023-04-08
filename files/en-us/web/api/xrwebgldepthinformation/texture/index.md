@@ -1,5 +1,6 @@
 ---
-title: XRWebGLDepthInformation.texture
+title: "XRWebGLDepthInformation: texture property"
+short-title: texture
 slug: Web/API/XRWebGLDepthInformation/texture
 page-type: web-api-instance-property
 status:

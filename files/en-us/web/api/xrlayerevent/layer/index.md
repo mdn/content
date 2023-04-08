@@ -1,5 +1,6 @@
 ---
-title: XRLayerEvent.layer
+title: "XRLayerEvent: layer property"
+short-title: layer
 slug: Web/API/XRLayerEvent/layer
 page-type: web-api-instance-property
 status:
