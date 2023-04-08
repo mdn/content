@@ -1,5 +1,6 @@
 ---
-title: WebTransport.close()
+title: "WebTransport: close() method"
+short-title: close()
 slug: Web/API/WebTransport/close
 page-type: web-api-instance-method
 status:

@@ -1,5 +1,6 @@
 ---
-title: WebGLRenderingContext.getSupportedExtensions()
+title: "WebGLRenderingContext: getSupportedExtensions() method"
+short-title: getSupportedExtensions()
 slug: Web/API/WebGLRenderingContext/getSupportedExtensions
 page-type: web-api-instance-method
 browser-compat: api.WebGLRenderingContext.getSupportedExtensions

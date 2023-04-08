@@ -1,5 +1,6 @@
 ---
-title: WebGLRenderingContext.getActiveUniform()
+title: "WebGLRenderingContext: getActiveUniform() method"
+short-title: getActiveUniform()
 slug: Web/API/WebGLRenderingContext/getActiveUniform
 page-type: web-api-instance-method
 browser-compat: api.WebGLRenderingContext.getActiveUniform

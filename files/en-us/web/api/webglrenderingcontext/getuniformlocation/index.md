@@ -1,5 +1,6 @@
 ---
-title: WebGLRenderingContext.getUniformLocation()
+title: "WebGLRenderingContext: getUniformLocation() method"
+short-title: getUniformLocation()
 slug: Web/API/WebGLRenderingContext/getUniformLocation
 page-type: web-api-instance-method
 browser-compat: api.WebGLRenderingContext.getUniformLocation
