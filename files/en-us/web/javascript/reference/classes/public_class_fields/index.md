@@ -31,7 +31,7 @@ This page introduces public instance fields in detail.
 
 - For public static fields, see [`static`](/en-US/docs/Web/JavaScript/Reference/Classes/static).
 - For private fields, see [private class features](/en-US/docs/Web/JavaScript/Reference/Classes/Private_class_fields).
-- For public methods, see [methods definitions](/en-US/docs/Web/JavaScript/Reference/Functions/Method_definitions).
+- For public methods, see [method definitions](/en-US/docs/Web/JavaScript/Reference/Functions/Method_definitions).
 - For public accessors, see [getter](/en-US/docs/Web/JavaScript/Reference/Functions/get) and [setter](/en-US/docs/Web/JavaScript/Reference/Functions/set).
 
 Public instance fields exist on every created instance of a class. By declaring a public field, you can ensure the field is always present, and the class definition is more self-documenting.
@@ -60,6 +60,7 @@ In the field initializer, [`this`](/en-US/docs/Web/JavaScript/Reference/Operator
 class Base {
   baseField = "base field";
   anotherBaseField = this.baseField;
+
   baseMethod() {
     return "base method output";
   }
@@ -71,9 +72,7 @@ class Derived extends Base {
 
 const base = new Base();
 const sub = new Derived();
-
 console.log(base.anotherBaseField); // "base field"
-
 console.log(sub.subField); // "base method output"
 ```
 
@@ -100,6 +99,7 @@ class Base {
 
 class Derived extends Base {
   field = 1;
+
   constructor() {
     super();
     console.log("Derived constructor:", this.field);
@@ -183,6 +183,7 @@ However, even declaring an empty class field is beneficial, because it indicates
 class Person {
   name;
   age;
+
   constructor(name, age) {
     this.name = name;
     this.age = age;
@@ -196,6 +197,7 @@ The code above seems repetitive, but consider the case where `this` is dynamical
 class Person {
   name;
   age;
+
   constructor(properties) {
     Object.assign(this, properties);
   }
@@ -208,6 +210,7 @@ Because initializers are evaluated after the base class has executed, you can ac
 class Person {
   name;
   age;
+
   constructor(name, age) {
     this.name = name;
     this.age = age;
