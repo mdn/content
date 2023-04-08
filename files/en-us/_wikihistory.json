@@ -67045,24 +67045,6 @@
     "modified": "2020-01-26T11:16:36.044Z",
     "contributors": ["alattalatta", "Zearin_Galaurum", "tjcrowder", "Sheppy"]
   },
-  "Web/API/Window/content": {
-    "modified": "2019-03-23T23:49:49.182Z",
-    "contributors": [
-      "chrisdavidmills",
-      "phistuck",
-      "fscholz",
-      "teoli",
-      "kscarfone",
-      "Sheppy",
-      "killerog",
-      "pellaeon",
-      "Mgjbot",
-      "Ptak82",
-      "BenoitL",
-      "Nickolay",
-      "RobG"
-    ]
-  },
   "Web/API/Window/copy_event": {
     "modified": "2020-10-15T22:16:13.286Z",
     "contributors": ["mfuji09", "wbamberg"]
