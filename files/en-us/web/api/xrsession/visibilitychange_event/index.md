@@ -1,5 +1,5 @@
 ---
-title: "'XRSession: visibilitychange event'"
+title: "XRSession: visibilitychange event"
 short-title: visibilitychange
 slug: Web/API/XRSession/visibilitychange_event
 page-type: web-api-event

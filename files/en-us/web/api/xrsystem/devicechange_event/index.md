@@ -1,5 +1,5 @@
 ---
-title: "'XRSystem: devicechange event'"
+title: "XRSystem: devicechange event"
 short-title: devicechange
 slug: Web/API/XRSystem/devicechange_event
 page-type: web-api-event
