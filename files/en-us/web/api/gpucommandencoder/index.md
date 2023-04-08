@@ -2,6 +2,8 @@
 title: GPUCommandEncoder
 slug: Web/API/GPUCommandEncoder
 page-type: web-api-interface
+status:
+  - experimental
 browser-compat: api.GPUCommandEncoder
 ---
 

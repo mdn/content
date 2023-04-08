@@ -2,6 +2,8 @@
 title: GPUComputePassEncoder
 slug: Web/API/GPUComputePassEncoder
 page-type: web-api-interface
+status:
+  - experimental
 browser-compat: api.GPUComputePassEncoder
 ---
 
