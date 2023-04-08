@@ -148,9 +148,7 @@ class Stamper extends class {
 }
 
 const obj = {};
-new Stamper(obj);
-// `Stamper` calls `Base`, which returns `obj`, so `obj` is
-// now the `this` value. `Stamper` then defines `#stamp` on `obj`
+new Stamper(obj); // Stamper calls Base, which returns obj, so obj is now the this value; Stamper then defines #stamp on obj
 
 console.log(obj); // In some dev tools, it shows {#stamp: 42}
 console.log(Stamper.getStamp(obj)); // 42
