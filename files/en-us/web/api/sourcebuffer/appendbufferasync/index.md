@@ -26,8 +26,7 @@ appendBufferAsync(source)
 ### Parameters
 
 - `source`
-  - : Either an {{domxref("ArrayBufferView")}}, a {{jsxref("TypedArray")}} or a {{jsxref("DataView")}} object that contains the media segment data you want to add to
-    the `SourceBuffer`.
+  - : Either an {{jsxref("ArrayBuffer")}}, a {{jsxref("TypedArray")}} or a {{jsxref("DataView")}} object that contains the media segment data you want to add to the `SourceBuffer`.
 
 ### Return value
 
