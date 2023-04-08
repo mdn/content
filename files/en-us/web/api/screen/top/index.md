@@ -1,5 +1,6 @@
 ---
-title: Screen.top
+title: "Screen: top property"
+short-title: top
 slug: Web/API/Screen/top
 page-type: web-api-instance-property
 status:

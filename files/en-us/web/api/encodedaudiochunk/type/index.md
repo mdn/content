@@ -1,5 +1,6 @@
 ---
-title: EncodedAudioChunk.type
+title: "EncodedAudioChunk: type property"
+short-title: type
 slug: Web/API/EncodedAudioChunk/type
 page-type: web-api-instance-property
 status:

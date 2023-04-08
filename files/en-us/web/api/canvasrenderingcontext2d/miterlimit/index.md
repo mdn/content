@@ -1,5 +1,6 @@
 ---
-title: CanvasRenderingContext2D.miterLimit
+title: "CanvasRenderingContext2D: miterLimit property"
+short-title: miterLimit
 slug: Web/API/CanvasRenderingContext2D/miterLimit
 page-type: web-api-instance-property
 browser-compat: api.CanvasRenderingContext2D.miterLimit

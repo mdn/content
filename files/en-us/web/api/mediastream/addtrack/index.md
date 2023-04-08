@@ -1,5 +1,6 @@
 ---
-title: MediaStream.addTrack()
+title: "MediaStream: addTrack() method"
+short-title: addTrack()
 slug: Web/API/MediaStream/addTrack
 page-type: web-api-instance-method
 browser-compat: api.MediaStream.addTrack

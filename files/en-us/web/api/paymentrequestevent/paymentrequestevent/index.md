@@ -1,5 +1,6 @@
 ---
-title: PaymentRequestEvent()
+title: "PaymentRequestEvent: PaymentRequestEvent() constructor"
+short-title: PaymentRequestEvent()
 slug: Web/API/PaymentRequestEvent/PaymentRequestEvent
 page-type: web-api-constructor
 status:

@@ -1,5 +1,6 @@
 ---
-title: CharacterData.data
+title: "CharacterData: data property"
+short-title: data
 slug: Web/API/CharacterData/data
 page-type: web-api-instance-property
 browser-compat: api.CharacterData.data

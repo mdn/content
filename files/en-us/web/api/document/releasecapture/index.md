@@ -1,5 +1,6 @@
 ---
-title: Document.releaseCapture()
+title: "Document: releaseCapture() method"
+short-title: releaseCapture()
 slug: Web/API/Document/releaseCapture
 page-type: web-api-instance-method
 status:

@@ -1,22 +1,20 @@
 ---
-title: Using the User Timing API
-slug: Web/API/User_Timing_API/Using_the_User_Timing_API
+title: User timing
+slug: Web/API/Performance_API/User_timing
 page-type: guide
 ---
 
 {{DefaultAPISidebar("Performance API")}}
 
-The **User Timing API** allows you to measure the performance of applications using [high-precision timestamps](/en-US/docs/Web/API/DOMHighResTimeStamp) that are part of the browser's performance timeline.
+User Timing is part of the Performance API and allows you to measure the performance of applications using [high-precision timestamps](/en-US/docs/Web/API/DOMHighResTimeStamp) that are part of the browser's performance timeline.
 There are two types of timing performance entries:
 
 - {{domxref("PerformanceMark")}} entries are marks that you can name and add at any location in an application.
 - {{domxref("PerformanceMeasure")}} entries are time measurements between two marks.
 
-This document explains how to work with the mark and measure performance entry types. If you are already familiar with the API, see the [User Timing API](/en-US/docs/Web/API/User_Timing_API) overview page, or consult the reference pages.
-
 ## What is User Timing?
 
-The browser provides certain information (called _performance entries_) to the browser's performance timeline for you. This includes, for example, entries provided by the [Resource Timing API](/en-US/docs/Web/API/Resource_Timing_API) that determine the time it takes to fetch a resource like an image.
+The browser provides certain information (called _performance entries_) to the browser's performance timeline for you. This includes, for example, entries provided by the [Resource Timing API](/en-US/docs/Web/API/Performance_API/Resource_timing) that determine the time it takes to fetch a resource like an image.
 
 The browser, however, can not determine what is going on in your application. For example, when a user clicks a button or performs a specific task within your application, there is no high-precision performance measurement. The User Timing API is an extension to the browser's performance timeline and helps you to measure and record performance data that is custom to your application.
 
@@ -102,7 +100,7 @@ const observer = new PerformanceObserver(perfObserver);
 observer.observe({ entryTypes: ["measure", "mark"] });
 ```
 
-For more information, see {{domxref("PerformanceObserver")}} and [Using Performance Timeline](/en-US/docs/Web/API/Performance_Timeline/Using_Performance_Timeline).
+For more information, see {{domxref("PerformanceObserver")}}.
 
 ## Retrieving markers and measures
 
@@ -174,7 +172,6 @@ performance.clearMeasures("myMeasure");
 
 ## See also
 
-- [User Timing API overview](/en-US/docs/Web/API/User_Timing_API)
 - {{domxref("Performance")}}
 - {{domxref("PerformanceMark")}}
 - {{domxref("PerformanceMeasure")}}

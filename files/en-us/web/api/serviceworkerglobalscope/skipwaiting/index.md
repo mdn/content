@@ -1,5 +1,6 @@
 ---
-title: ServiceWorkerGlobalScope.skipWaiting()
+title: "ServiceWorkerGlobalScope: skipWaiting() method"
+short-title: skipWaiting()
 slug: Web/API/ServiceWorkerGlobalScope/skipWaiting
 page-type: web-api-instance-method
 browser-compat: api.ServiceWorkerGlobalScope.skipWaiting

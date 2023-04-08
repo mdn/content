@@ -1,5 +1,6 @@
 ---
-title: RTCDataChannel.send()
+title: "RTCDataChannel: send() method"
+short-title: send()
 slug: Web/API/RTCDataChannel/send
 page-type: web-api-instance-method
 browser-compat: api.RTCDataChannel.send

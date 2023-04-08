@@ -1,5 +1,6 @@
 ---
 title: "Element: mouseout event"
+short-title: mouseout
 slug: Web/API/Element/mouseout_event
 page-type: web-api-event
 browser-compat: api.Element.mouseout_event

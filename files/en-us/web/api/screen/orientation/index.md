@@ -1,5 +1,6 @@
 ---
-title: Screen.orientation
+title: "Screen: orientation property"
+short-title: orientation
 slug: Web/API/Screen/orientation
 page-type: web-api-instance-property
 browser-compat: api.Screen.orientation

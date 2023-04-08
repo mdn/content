@@ -1,5 +1,6 @@
 ---
-title: GPUCommandEncoder.resolveQuerySet()
+title: "GPUCommandEncoder: resolveQuerySet() method"
+short-title: resolveQuerySet()
 slug: Web/API/GPUCommandEncoder/resolveQuerySet
 page-type: web-api-instance-method
 status:

@@ -1,5 +1,6 @@
 ---
-title: CanvasRenderingContext2D.arcTo()
+title: "CanvasRenderingContext2D: arcTo() method"
+short-title: arcTo()
 slug: Web/API/CanvasRenderingContext2D/arcTo
 page-type: web-api-instance-method
 browser-compat: api.CanvasRenderingContext2D.arcTo

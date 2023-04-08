@@ -38,6 +38,10 @@ This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_a
 </header>
 ```
 
+#### Result
+
+{{EmbedLiveSample('Page Header')}}
+
 ### Article Header
 
 ```html
@@ -55,6 +59,10 @@ This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_a
   <p><a href="https://example.com/the-planet-earth/">Continue reading…</a></p>
 </article>
 ```
+
+#### Result
+
+{{EmbedLiveSample('Article Header')}}
 
 ## Accessibility
 

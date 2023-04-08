@@ -1,5 +1,6 @@
 ---
-title: Notification.icon
+title: "Notification: icon property"
+short-title: icon
 slug: Web/API/Notification/icon
 page-type: web-api-instance-property
 browser-compat: api.Notification.icon

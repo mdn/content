@@ -1,5 +1,6 @@
 ---
-title: VideoColorSpace.toJSON()
+title: "VideoColorSpace: toJSON() method"
+short-title: toJSON()
 slug: Web/API/VideoColorSpace/toJSON
 page-type: web-api-instance-method
 browser-compat: api.VideoColorSpace.toJSON

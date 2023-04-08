@@ -1,5 +1,6 @@
 ---
-title: RTCInboundRtpStreamStats.perDscpPacketsReceived
+title: "RTCInboundRtpStreamStats: perDscpPacketsReceived property"
+short-title: perDscpPacketsReceived
 slug: Web/API/RTCInboundRtpStreamStats/perDscpPacketsReceived
 page-type: web-api-instance-property
 browser-compat: api.RTCInboundRtpStreamStats.perDscpPacketsReceived

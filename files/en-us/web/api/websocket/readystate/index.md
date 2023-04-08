@@ -1,5 +1,6 @@
 ---
-title: WebSocket.readyState
+title: "WebSocket: readyState property"
+short-title: readyState
 slug: Web/API/WebSocket/readyState
 page-type: web-api-instance-property
 browser-compat: api.WebSocket.readyState

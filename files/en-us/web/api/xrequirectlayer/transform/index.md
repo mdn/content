@@ -1,5 +1,6 @@
 ---
-title: XREquirectLayer.transform
+title: "XREquirectLayer: transform property"
+short-title: transform
 slug: Web/API/XREquirectLayer/transform
 page-type: web-api-instance-property
 status:

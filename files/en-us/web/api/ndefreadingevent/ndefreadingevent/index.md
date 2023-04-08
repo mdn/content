@@ -1,5 +1,6 @@
 ---
-title: NDEFReadingEvent()
+title: "NDEFReadingEvent: NDEFReadingEvent() constructor"
+short-title: NDEFReadingEvent()
 slug: Web/API/NDEFReadingEvent/NDEFReadingEvent
 page-type: web-api-constructor
 status:

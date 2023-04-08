@@ -1,5 +1,6 @@
 ---
-title: WebTransport.datagrams
+title: "WebTransport: datagrams property"
+short-title: datagrams
 slug: Web/API/WebTransport/datagrams
 page-type: web-api-instance-property
 status:

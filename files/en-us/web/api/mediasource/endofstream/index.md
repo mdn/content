@@ -1,5 +1,6 @@
 ---
-title: MediaSource.endOfStream()
+title: "MediaSource: endOfStream() method"
+short-title: endOfStream()
 slug: Web/API/MediaSource/endOfStream
 page-type: web-api-instance-method
 browser-compat: api.MediaSource.endOfStream

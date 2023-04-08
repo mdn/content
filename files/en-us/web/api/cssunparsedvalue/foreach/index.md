@@ -1,5 +1,6 @@
 ---
-title: CSSUnparsedValue.forEach()
+title: "CSSUnparsedValue: forEach() method"
+short-title: forEach()
 slug: Web/API/CSSUnparsedValue/forEach
 page-type: web-api-instance-method
 browser-compat: api.CSSUnparsedValue.forEach

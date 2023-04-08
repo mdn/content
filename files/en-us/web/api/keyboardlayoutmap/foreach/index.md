@@ -1,5 +1,6 @@
 ---
-title: KeyboardLayoutMap.forEach()
+title: "KeyboardLayoutMap: forEach() method"
+short-title: forEach()
 slug: Web/API/KeyboardLayoutMap/forEach
 page-type: web-api-instance-method
 status:

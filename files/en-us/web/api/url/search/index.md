@@ -1,5 +1,6 @@
 ---
-title: URL.search
+title: "URL: search property"
+short-title: search
 slug: Web/API/URL/search
 page-type: web-api-instance-property
 browser-compat: api.URL.search

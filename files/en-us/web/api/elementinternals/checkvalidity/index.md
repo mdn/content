@@ -1,5 +1,6 @@
 ---
-title: ElementInternals.checkValidity()
+title: "ElementInternals: checkValidity() method"
+short-title: checkValidity()
 slug: Web/API/ElementInternals/checkValidity
 page-type: web-api-instance-method
 browser-compat: api.ElementInternals.checkValidity

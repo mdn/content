@@ -1,5 +1,6 @@
 ---
-title: WebGL2RenderingContext.drawBuffers()
+title: "WebGL2RenderingContext: drawBuffers() method"
+short-title: drawBuffers()
 slug: Web/API/WebGL2RenderingContext/drawBuffers
 page-type: web-api-instance-method
 browser-compat: api.WebGL2RenderingContext.drawBuffers

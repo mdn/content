@@ -1,5 +1,6 @@
 ---
-title: RTCDataChannel.label
+title: "RTCDataChannel: label property"
+short-title: label
 slug: Web/API/RTCDataChannel/label
 page-type: web-api-instance-property
 browser-compat: api.RTCDataChannel.label

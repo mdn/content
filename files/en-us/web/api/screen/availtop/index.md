@@ -1,5 +1,6 @@
 ---
-title: Screen.availTop
+title: "Screen: availTop property"
+short-title: availTop
 slug: Web/API/Screen/availTop
 page-type: web-api-instance-property
 status:

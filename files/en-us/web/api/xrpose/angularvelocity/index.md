@@ -1,5 +1,6 @@
 ---
-title: XRPose.angularVelocity
+title: "XRPose: angularVelocity property"
+short-title: angularVelocity
 slug: Web/API/XRPose/angularVelocity
 page-type: web-api-instance-property
 browser-compat: api.XRPose.angularVelocity

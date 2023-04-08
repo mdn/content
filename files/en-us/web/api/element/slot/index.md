@@ -1,5 +1,6 @@
 ---
-title: Element.slot
+title: "Element: slot property"
+short-title: slot
 slug: Web/API/Element/slot
 page-type: web-api-instance-property
 browser-compat: api.Element.slot

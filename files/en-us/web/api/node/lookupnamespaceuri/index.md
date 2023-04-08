@@ -1,5 +1,6 @@
 ---
-title: Node.lookupNamespaceURI()
+title: "Node: lookupNamespaceURI() method"
+short-title: lookupNamespaceURI()
 slug: Web/API/Node/lookupNamespaceURI
 page-type: web-api-instance-method
 browser-compat: api.Node.lookupNamespaceURI

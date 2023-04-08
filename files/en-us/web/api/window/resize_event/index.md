@@ -1,5 +1,6 @@
 ---
 title: "Window: resize event"
+short-title: resize
 slug: Web/API/Window/resize_event
 page-type: web-api-event
 browser-compat: api.Window.resize_event

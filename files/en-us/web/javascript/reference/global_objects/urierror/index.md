@@ -15,7 +15,7 @@ The **`URIError`** object represents an error when a global URI handling functio
 
 ## Constructor
 
-- {{jsxref("Global_Objects/URIError/URIError", "URIError()")}}
+- {{jsxref("URIError/URIError", "URIError()")}}
   - : Creates a new `URIError` object.
 
 ## Instance properties

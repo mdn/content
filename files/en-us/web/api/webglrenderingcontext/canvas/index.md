@@ -1,5 +1,6 @@
 ---
-title: WebGLRenderingContext.canvas
+title: "WebGLRenderingContext: canvas property"
+short-title: canvas
 slug: Web/API/WebGLRenderingContext/canvas
 page-type: web-api-instance-property
 browser-compat: api.WebGLRenderingContext.canvas

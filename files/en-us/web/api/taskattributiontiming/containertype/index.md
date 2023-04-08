@@ -1,5 +1,6 @@
 ---
-title: TaskAttributionTiming.containerType
+title: "TaskAttributionTiming: containerType property"
+short-title: containerType
 slug: Web/API/TaskAttributionTiming/containerType
 page-type: web-api-instance-property
 status:

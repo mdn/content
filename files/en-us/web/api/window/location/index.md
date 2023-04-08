@@ -1,5 +1,6 @@
 ---
-title: Window.location
+title: "Window: location property"
+short-title: location
 slug: Web/API/Window/location
 page-type: web-api-instance-property
 browser-compat: api.Window.location

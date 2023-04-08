@@ -1,5 +1,6 @@
 ---
-title: SVGStyleElement.type
+title: "SVGStyleElement: type property"
+short-title: type
 slug: Web/API/SVGStyleElement/type
 page-type: web-api-instance-property
 status:

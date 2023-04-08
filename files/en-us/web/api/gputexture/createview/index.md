@@ -1,5 +1,6 @@
 ---
-title: GPUTexture.createView()
+title: "GPUTexture: createView() method"
+short-title: createView()
 slug: Web/API/GPUTexture/createView
 page-type: web-api-instance-method
 status:

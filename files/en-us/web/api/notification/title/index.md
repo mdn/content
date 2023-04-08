@@ -1,5 +1,6 @@
 ---
-title: Notification.title
+title: "Notification: title property"
+short-title: title
 slug: Web/API/Notification/title
 page-type: web-api-instance-property
 browser-compat: api.Notification.title

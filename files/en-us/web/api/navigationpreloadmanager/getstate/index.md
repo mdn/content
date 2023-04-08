@@ -1,5 +1,6 @@
 ---
-title: NavigationPreloadManager.getState()
+title: "NavigationPreloadManager: getState() method"
+short-title: getState()
 slug: Web/API/NavigationPreloadManager/getState
 page-type: web-api-instance-method
 browser-compat: api.NavigationPreloadManager.getState

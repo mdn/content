@@ -1,5 +1,6 @@
 ---
-title: MediaRecorder.isTypeSupported()
+title: "MediaRecorder: isTypeSupported() static method"
+short-title: isTypeSupported()
 slug: Web/API/MediaRecorder/isTypeSupported
 page-type: web-api-static-method
 browser-compat: api.MediaRecorder.isTypeSupported

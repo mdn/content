@@ -1,5 +1,6 @@
 ---
-title: Gamepad.id
+title: "Gamepad: id property"
+short-title: id
 slug: Web/API/Gamepad/id
 page-type: web-api-instance-property
 browser-compat: api.Gamepad.id

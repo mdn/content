@@ -1,5 +1,6 @@
 ---
-title: SpeechSynthesisUtterance.text
+title: "SpeechSynthesisUtterance: text property"
+short-title: text
 slug: Web/API/SpeechSynthesisUtterance/text
 page-type: web-api-instance-property
 browser-compat: api.SpeechSynthesisUtterance.text

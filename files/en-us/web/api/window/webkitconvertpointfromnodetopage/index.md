@@ -1,5 +1,6 @@
 ---
-title: Window.convertPointFromNodeToPage()
+title: "Window: convertPointFromNodeToPage() method"
+short-title: convertPointFromNodeToPage()
 slug: Web/API/Window/webkitConvertPointFromNodeToPage
 page-type: web-api-instance-method
 status:

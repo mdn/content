@@ -1,5 +1,6 @@
 ---
-title: DataTransferItem.getAsString()
+title: "DataTransferItem: getAsString() method"
+short-title: getAsString()
 slug: Web/API/DataTransferItem/getAsString
 page-type: web-api-instance-method
 browser-compat: api.DataTransferItem.getAsString

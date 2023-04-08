@@ -1,5 +1,6 @@
 ---
-title: SVGMaskElement.y
+title: "SVGMaskElement: y property"
+short-title: y
 slug: Web/API/SVGMaskElement/y
 page-type: web-api-instance-property
 browser-compat: api.SVGMaskElement.y

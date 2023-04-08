@@ -1,5 +1,6 @@
 ---
-title: IDBKeyRange.lowerBound()
+title: "IDBKeyRange: lowerBound() static method"
+short-title: lowerBound()
 slug: Web/API/IDBKeyRange/lowerBound
 page-type: web-api-static-method
 browser-compat: api.IDBKeyRange.lowerBound

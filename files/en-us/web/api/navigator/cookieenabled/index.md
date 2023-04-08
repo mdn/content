@@ -1,5 +1,6 @@
 ---
-title: Navigator.cookieEnabled
+title: "Navigator: cookieEnabled property"
+short-title: cookieEnabled
 slug: Web/API/Navigator/cookieEnabled
 page-type: web-api-instance-property
 browser-compat: api.Navigator.cookieEnabled

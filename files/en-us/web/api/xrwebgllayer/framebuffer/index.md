@@ -1,5 +1,6 @@
 ---
-title: XRWebGLLayer.framebuffer
+title: "XRWebGLLayer: framebuffer property"
+short-title: framebuffer
 slug: Web/API/XRWebGLLayer/framebuffer
 page-type: web-api-instance-property
 status:

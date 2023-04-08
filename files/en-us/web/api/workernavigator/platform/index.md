@@ -1,5 +1,6 @@
 ---
-title: WorkerNavigator.platform
+title: "WorkerNavigator: platform property"
+short-title: platform
 slug: Web/API/WorkerNavigator/platform
 page-type: web-api-instance-property
 status:

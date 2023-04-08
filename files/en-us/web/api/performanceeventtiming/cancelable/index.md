@@ -1,5 +1,6 @@
 ---
-title: PerformanceEventTiming.cancelable
+title: "PerformanceEventTiming: cancelable property"
+short-title: cancelable
 slug: Web/API/PerformanceEventTiming/cancelable
 page-type: web-api-instance-property
 browser-compat: api.PerformanceEventTiming.cancelable

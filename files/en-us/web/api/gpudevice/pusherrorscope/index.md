@@ -1,5 +1,6 @@
 ---
-title: GPUDevice.pushErrorScope()
+title: "GPUDevice: pushErrorScope() method"
+short-title: pushErrorScope()
 slug: Web/API/GPUDevice/pushErrorScope
 page-type: web-api-instance-method
 status:

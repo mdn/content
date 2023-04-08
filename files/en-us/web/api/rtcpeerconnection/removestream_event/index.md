@@ -1,5 +1,6 @@
 ---
 title: "RTCPeerConnection: removestream event"
+short-title: removestream
 slug: Web/API/RTCPeerConnection/removestream_event
 page-type: web-api-event
 status:

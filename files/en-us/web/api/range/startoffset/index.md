@@ -1,5 +1,6 @@
 ---
-title: Range.startOffset
+title: "Range: startOffset property"
+short-title: startOffset
 slug: Web/API/Range/startOffset
 page-type: web-api-instance-property
 browser-compat: api.Range.startOffset

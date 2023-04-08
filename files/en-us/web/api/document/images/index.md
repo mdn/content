@@ -1,5 +1,6 @@
 ---
-title: Document.images
+title: "Document: images property"
+short-title: images
 slug: Web/API/Document/images
 page-type: web-api-instance-property
 browser-compat: api.Document.images

@@ -1,5 +1,6 @@
 ---
-title: ExtendableCookieChangeEvent.changed
+title: "ExtendableCookieChangeEvent: changed property"
+short-title: changed
 slug: Web/API/ExtendableCookieChangeEvent/changed
 page-type: web-api-instance-property
 browser-compat: api.ExtendableCookieChangeEvent.changed

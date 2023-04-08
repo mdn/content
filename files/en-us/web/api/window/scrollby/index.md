@@ -1,5 +1,6 @@
 ---
-title: Window.scrollBy()
+title: "Window: scrollBy() method"
+short-title: scrollBy()
 slug: Web/API/Window/scrollBy
 page-type: web-api-instance-method
 browser-compat: api.Window.scrollBy

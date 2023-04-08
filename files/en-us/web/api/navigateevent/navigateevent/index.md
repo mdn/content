@@ -1,5 +1,6 @@
 ---
-title: NavigateEvent()
+title: "NavigateEvent: NavigateEvent() constructor"
+short-title: NavigateEvent()
 slug: Web/API/NavigateEvent/NavigateEvent
 page-type: web-api-constructor
 status:

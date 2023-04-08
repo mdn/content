@@ -1,5 +1,6 @@
 ---
-title: ScriptProcessorNode.bufferSize
+title: "ScriptProcessorNode: bufferSize property"
+short-title: bufferSize
 slug: Web/API/ScriptProcessorNode/bufferSize
 page-type: web-api-instance-property
 status:

@@ -1,5 +1,6 @@
 ---
 title: "Element: touchcancel event"
+short-title: touchcancel
 slug: Web/API/Element/touchcancel_event
 page-type: web-api-event
 browser-compat: api.Element.touchcancel_event

@@ -15,7 +15,7 @@ otherwise null.
 
 ## Value
 
-A {{domxref('WindowProxy')}}.
+A {{domxref('Window')}}, or `null` if there are none.
 
 ## Specifications
 

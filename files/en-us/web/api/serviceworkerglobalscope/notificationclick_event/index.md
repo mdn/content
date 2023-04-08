@@ -1,5 +1,6 @@
 ---
 title: "ServiceWorkerGlobalScope: notificationclick event"
+short-title: notificationclick
 slug: Web/API/ServiceWorkerGlobalScope/notificationclick_event
 page-type: web-api-event
 browser-compat: api.ServiceWorkerGlobalScope.notificationclick_event

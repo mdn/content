@@ -1,5 +1,6 @@
 ---
-title: GPUComputePipeline.label
+title: "GPUComputePipeline: label property"
+short-title: label
 slug: Web/API/GPUComputePipeline/label
 page-type: web-api-instance-property
 status:

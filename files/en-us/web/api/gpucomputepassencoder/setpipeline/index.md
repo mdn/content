@@ -1,5 +1,6 @@
 ---
-title: GPUComputePassEncoder.setPipeline()
+title: "GPUComputePassEncoder: setPipeline() method"
+short-title: setPipeline()
 slug: Web/API/GPUComputePassEncoder/setPipeline
 page-type: web-api-instance-method
 status:

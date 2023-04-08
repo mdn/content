@@ -1,5 +1,6 @@
 ---
-title: GPUCanvasContext.unconfigure()
+title: "GPUCanvasContext: unconfigure() method"
+short-title: unconfigure()
 slug: Web/API/GPUCanvasContext/unconfigure
 page-type: web-api-instance-method
 status:

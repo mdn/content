@@ -1,5 +1,6 @@
 ---
-title: VideoFrame.displayWidth
+title: "VideoFrame: displayWidth property"
+short-title: displayWidth
 slug: Web/API/VideoFrame/displayWidth
 page-type: web-api-instance-property
 browser-compat: api.VideoFrame.displayWidth

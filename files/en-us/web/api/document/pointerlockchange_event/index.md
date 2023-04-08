@@ -1,5 +1,6 @@
 ---
 title: "Document: pointerlockchange event"
+short-title: pointerlockchange
 slug: Web/API/Document/pointerlockchange_event
 page-type: web-api-event
 browser-compat: api.Document.pointerlockchange_event

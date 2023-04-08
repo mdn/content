@@ -1,5 +1,6 @@
 ---
-title: GPUPipelineLayout.label
+title: "GPUPipelineLayout: label property"
+short-title: label
 slug: Web/API/GPUPipelineLayout/label
 page-type: web-api-instance-property
 status:

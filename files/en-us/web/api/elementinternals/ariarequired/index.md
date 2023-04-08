@@ -1,5 +1,6 @@
 ---
-title: ElementInternals.ariaRequired
+title: "ElementInternals: ariaRequired property"
+short-title: ariaRequired
 slug: Web/API/ElementInternals/ariaRequired
 page-type: web-api-instance-property
 browser-compat: api.ElementInternals.ariaRequired

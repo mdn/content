@@ -1,5 +1,6 @@
 ---
-title: UserActivation.hasBeenActive
+title: "UserActivation: hasBeenActive property"
+short-title: hasBeenActive
 slug: Web/API/UserActivation/hasBeenActive
 page-type: web-api-instance-property
 browser-compat: api.UserActivation.hasBeenActive

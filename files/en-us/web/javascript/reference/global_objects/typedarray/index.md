@@ -166,7 +166,7 @@ All `TypeArray` subclass constructors operate in the same way. They would all th
 
 These properties are defined on the `TypedArray` constructor object and are thus shared by all `TypedArray` subclass constructors.
 
-- {{jsxref("TypedArray.@@species", "get TypedArray[@@species]")}}
+- {{jsxref("TypedArray/@@species", "TypedArray[@@species]")}}
   - : The constructor function used to create derived objects.
 
 All `TypedArray` subclasses also have the following static properties:
@@ -259,13 +259,13 @@ These methods are defined on the `TypedArray` prototype object and are thus shar
   - : Sorts the elements of an array in place and returns the array. See also {{jsxref("Array.prototype.sort()")}}.
 - {{jsxref("TypedArray.prototype.subarray()")}}
   - : Returns a new `TypedArray` from the given start and end element index.
-- {{jsxref("TypedArray.prototype.values()")}}
-  - : Returns a new _array iterator_ object that contains the values for each index in the array. See also {{jsxref("Array.prototype.values()")}}.
 - {{jsxref("TypedArray.prototype.toLocaleString()")}}
   - : Returns a localized string representing the array and its elements. See also {{jsxref("Array.prototype.toLocaleString()")}}.
 - {{jsxref("TypedArray.prototype.toString()")}}
   - : Returns a string representing the array and its elements. See also {{jsxref("Array.prototype.toString()")}}.
-- {{jsxref("TypedArray.prototype.@@iterator()", "TypedArray.prototype[@@iterator]()")}}
+- {{jsxref("TypedArray.prototype.values()")}}
+  - : Returns a new _array iterator_ object that contains the values for each index in the array. See also {{jsxref("Array.prototype.values()")}}.
+- [`TypedArray.prototype[@@iterator]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/@@iterator)
   - : Returns a new _array iterator_ object that contains the values for each index in the array.
 
 ## Examples

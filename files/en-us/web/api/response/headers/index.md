@@ -1,5 +1,6 @@
 ---
-title: Response.headers
+title: "Response: headers property"
+short-title: headers
 slug: Web/API/Response/headers
 page-type: web-api-instance-property
 browser-compat: api.Response.headers

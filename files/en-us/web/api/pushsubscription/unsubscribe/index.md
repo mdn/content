@@ -1,5 +1,6 @@
 ---
-title: PushSubscription.unsubscribe()
+title: "PushSubscription: unsubscribe() method"
+short-title: unsubscribe()
 slug: Web/API/PushSubscription/unsubscribe
 page-type: web-api-instance-method
 browser-compat: api.PushSubscription.unsubscribe

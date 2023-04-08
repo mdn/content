@@ -1,5 +1,6 @@
 ---
-title: PointerEvent.pressure
+title: "PointerEvent: pressure property"
+short-title: pressure
 slug: Web/API/PointerEvent/pressure
 page-type: web-api-instance-property
 browser-compat: api.PointerEvent.pressure

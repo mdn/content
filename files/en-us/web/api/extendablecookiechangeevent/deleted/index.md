@@ -1,5 +1,6 @@
 ---
-title: ExtendableCookieChangeEvent.deleted
+title: "ExtendableCookieChangeEvent: deleted property"
+short-title: deleted
 slug: Web/API/ExtendableCookieChangeEvent/deleted
 page-type: web-api-instance-property
 browser-compat: api.ExtendableCookieChangeEvent.deleted

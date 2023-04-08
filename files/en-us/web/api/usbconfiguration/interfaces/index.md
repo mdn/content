@@ -1,5 +1,6 @@
 ---
-title: USBConfiguration.interfaces
+title: "USBConfiguration: interfaces property"
+short-title: interfaces
 slug: Web/API/USBConfiguration/interfaces
 page-type: web-api-instance-property
 status:

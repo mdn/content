@@ -1,5 +1,6 @@
 ---
-title: VideoEncoder.configure()
+title: "VideoEncoder: configure() method"
+short-title: configure()
 slug: Web/API/VideoEncoder/configure
 page-type: web-api-instance-method
 browser-compat: api.VideoEncoder.configure

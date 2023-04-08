@@ -1,5 +1,6 @@
 ---
-title: WebGLRenderingContext.vertexAttrib[1234]f[v]()
+title: "WebGLRenderingContext: vertexAttrib[1234]f[v]() method"
+short-title: vertexAttrib[1234]f[v]()
 slug: Web/API/WebGLRenderingContext/vertexAttrib
 page-type: web-api-instance-method
 browser-compat: api.WebGLRenderingContext.vertexAttrib1f

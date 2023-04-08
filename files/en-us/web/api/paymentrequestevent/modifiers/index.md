@@ -1,5 +1,6 @@
 ---
-title: PaymentRequestEvent.modifiers
+title: "PaymentRequestEvent: modifiers property"
+short-title: modifiers
 slug: Web/API/PaymentRequestEvent/modifiers
 page-type: web-api-instance-property
 status:

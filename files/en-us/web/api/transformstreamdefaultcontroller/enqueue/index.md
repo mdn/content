@@ -1,5 +1,6 @@
 ---
-title: TransformStreamDefaultController.enqueue()
+title: "TransformStreamDefaultController: enqueue() method"
+short-title: enqueue()
 slug: Web/API/TransformStreamDefaultController/enqueue
 page-type: web-api-instance-method
 browser-compat: api.TransformStreamDefaultController.enqueue

@@ -1,5 +1,6 @@
 ---
-title: VRDisplay.stageParameters
+title: "VRDisplay: stageParameters property"
+short-title: stageParameters
 slug: Web/API/VRDisplay/stageParameters
 page-type: web-api-instance-property
 status:

@@ -1,5 +1,6 @@
 ---
-title: RTCDTMFToneChangeEvent()
+title: "RTCDTMFToneChangeEvent: RTCDTMFToneChangeEvent() constructor"
+short-title: RTCDTMFToneChangeEvent()
 slug: Web/API/RTCDTMFToneChangeEvent/RTCDTMFToneChangeEvent
 page-type: web-api-constructor
 browser-compat: api.RTCDTMFToneChangeEvent.RTCDTMFToneChangeEvent

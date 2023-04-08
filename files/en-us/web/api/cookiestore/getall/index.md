@@ -1,5 +1,6 @@
 ---
-title: CookieStore.getAll()
+title: "CookieStore: getAll() method"
+short-title: getAll()
 slug: Web/API/CookieStore/getAll
 page-type: web-api-instance-method
 status:

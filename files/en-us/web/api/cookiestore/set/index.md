@@ -1,5 +1,6 @@
 ---
-title: CookieStore.set()
+title: "CookieStore: set() method"
+short-title: set()
 slug: Web/API/CookieStore/set
 page-type: web-api-instance-method
 status:

@@ -1,5 +1,6 @@
 ---
-title: VideoEncoder.reset()
+title: "VideoEncoder: reset() method"
+short-title: reset()
 slug: Web/API/VideoEncoder/reset
 page-type: web-api-instance-method
 browser-compat: api.VideoEncoder.reset

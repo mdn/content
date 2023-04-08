@@ -1,5 +1,6 @@
 ---
-title: Storage.key()
+title: "Storage: key() method"
+short-title: key()
 slug: Web/API/Storage/key
 page-type: web-api-instance-method
 browser-compat: api.Storage.key

@@ -98,7 +98,7 @@ Truthy values are even more unlikely to be loosely equal to `true`. All values a
 
 ## Constructor
 
-- {{jsxref("Global_Objects/Boolean/Boolean", "Boolean()")}}
+- {{jsxref("Boolean/Boolean", "Boolean()")}}
   - : Creates a new `Boolean` object.
 
 ## Instance properties

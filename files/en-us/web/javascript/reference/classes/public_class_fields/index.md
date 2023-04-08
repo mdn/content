@@ -113,6 +113,23 @@ const instance = new Derived();
 console.log(instance.field); // 2
 ```
 
+Fields are added one-by-one. Field initializers can refer to field values above it, but not below it.
+
+```js
+class C {
+  a = 1;
+  b = this.c;
+  c = this.a + 1;
+  d = this.c + 1;
+}
+
+const instance = new C();
+console.log(instance.d); // 3
+console.log(instance.b); // undefined
+```
+
+> **Note:** This is more important with [private fields](/en-US/docs/Web/JavaScript/Reference/Classes/Private_class_fields), because accessing a non-existent private field throws an error, even if the private field is declared below.s
+
 Because class fields are added using the [`[[DefineOwnProperty]]`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/defineProperty) semantic (which is essentially {{jsxref("Object.defineProperty()")}}), field declarations in derived classes do not invoke setters in the base class. This behavior differs from using `this.field = …` in the constructor.
 
 ```js
@@ -139,6 +156,70 @@ const instance2 = new DerivedWithConstructor(); // Logs 1
 ```
 
 > **Note:** Before the class fields specification was finalized with the `[[DefineOwnProperty]]` semantic, most transpilers, including [Babel](https://babeljs.io/) and [tsc](https://www.typescriptlang.org/), transformed class fields to the `DerivedWithConstructor` form, which has caused subtle bugs after class fields were standardized.
+
+## Examples
+
+### Using class fields
+
+Class fields cannot depend on arguments of the constructor, so field initializers usually evaluate to the same value for each instance (unless the same expression can evaluate to different values each time, such as {{jsxref("Date.now()")}} or object initializers).
+
+```js example-bad
+class Person {
+  name = nameArg; // nameArg is out of scope of the constructor
+  constructor(nameArg) {}
+}
+```
+
+```js example-good
+class Person {
+  // All instances of Person will have the same name
+  name = "Dragomir";
+}
+```
+
+However, even declaring an empty class field is beneficial, because it indicates the existence of the field, which allows type checkers as well as human readers to statically analyze the shape of the class.
+
+```js
+class Person {
+  name;
+  age;
+  constructor(name, age) {
+    this.name = name;
+    this.age = age;
+  }
+}
+```
+
+The code above seems repetitive, but consider the case where `this` is dynamically mutated: the explicit field declaration makes it clear which fields will definitely be present on the instance.
+
+```js
+class Person {
+  name;
+  age;
+  constructor(properties) {
+    Object.assign(this, properties);
+  }
+}
+```
+
+Because initializers are evaluated after the base class has executed, you can access properties created by the base class constructor.
+
+```js
+class Person {
+  name;
+  age;
+  constructor(name, age) {
+    this.name = name;
+    this.age = age;
+  }
+}
+
+class Professor extends Person {
+  name = `Professor ${this.name}`;
+}
+
+console.log(new Professor("Radev", 54).name); // "Professor Radev"
+```
 
 ## Specifications
 

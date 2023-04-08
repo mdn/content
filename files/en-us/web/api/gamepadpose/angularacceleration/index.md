@@ -1,5 +1,6 @@
 ---
-title: GamepadPose.angularAcceleration
+title: "GamepadPose: angularAcceleration property"
+short-title: angularAcceleration
 slug: Web/API/GamepadPose/angularAcceleration
 page-type: web-api-instance-property
 status:

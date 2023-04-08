@@ -1,5 +1,6 @@
 ---
-title: Clipboard.write()
+title: "Clipboard: write() method"
+short-title: write()
 slug: Web/API/Clipboard/write
 page-type: web-api-instance-method
 browser-compat: api.Clipboard.write

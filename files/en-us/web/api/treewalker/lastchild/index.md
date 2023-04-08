@@ -1,5 +1,6 @@
 ---
-title: TreeWalker.lastChild()
+title: "TreeWalker: lastChild() method"
+short-title: lastChild()
 slug: Web/API/TreeWalker/lastChild
 page-type: web-api-instance-method
 browser-compat: api.TreeWalker.lastChild

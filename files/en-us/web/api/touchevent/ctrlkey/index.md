@@ -1,5 +1,6 @@
 ---
-title: TouchEvent.ctrlKey
+title: "TouchEvent: ctrlKey property"
+short-title: ctrlKey
 slug: Web/API/TouchEvent/ctrlKey
 page-type: web-api-instance-property
 browser-compat: api.TouchEvent.ctrlKey

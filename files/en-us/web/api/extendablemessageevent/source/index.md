@@ -1,5 +1,6 @@
 ---
-title: ExtendableMessageEvent.source
+title: "ExtendableMessageEvent: source property"
+short-title: source
 slug: Web/API/ExtendableMessageEvent/source
 page-type: web-api-instance-property
 browser-compat: api.ExtendableMessageEvent.source

@@ -1,5 +1,6 @@
 ---
-title: CharacterData.nextElementSibling
+title: "CharacterData: nextElementSibling property"
+short-title: nextElementSibling
 slug: Web/API/CharacterData/nextElementSibling
 page-type: web-api-instance-property
 browser-compat: api.CharacterData.nextElementSibling

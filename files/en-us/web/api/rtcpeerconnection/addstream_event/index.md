@@ -1,5 +1,6 @@
 ---
 title: "RTCPeerConnection: addstream event"
+short-title: addstream
 slug: Web/API/RTCPeerConnection/addstream_event
 page-type: web-api-event
 status:

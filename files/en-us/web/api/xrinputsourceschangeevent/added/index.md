@@ -1,5 +1,6 @@
 ---
-title: XRInputSourcesChangeEvent.added
+title: "XRInputSourcesChangeEvent: added property"
+short-title: added
 slug: Web/API/XRInputSourcesChangeEvent/added
 page-type: web-api-instance-property
 browser-compat: api.XRInputSourcesChangeEvent.added

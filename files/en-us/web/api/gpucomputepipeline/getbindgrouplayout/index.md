@@ -1,5 +1,6 @@
 ---
-title: GPUComputePipeline.getBindGroupLayout()
+title: "GPUComputePipeline: getBindGroupLayout() method"
+short-title: getBindGroupLayout()
 slug: Web/API/GPUComputePipeline/getBindGroupLayout
 page-type: web-api-instance-method
 status:

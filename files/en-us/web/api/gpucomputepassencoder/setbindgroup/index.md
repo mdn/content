@@ -1,5 +1,6 @@
 ---
-title: GPUComputePassEncoder.setBindGroup()
+title: "GPUComputePassEncoder: setBindGroup() method"
+short-title: setBindGroup()
 slug: Web/API/GPUComputePassEncoder/setBindGroup
 page-type: web-api-instance-method
 status:

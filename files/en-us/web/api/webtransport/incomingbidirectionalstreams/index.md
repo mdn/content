@@ -1,5 +1,6 @@
 ---
-title: WebTransport.incomingBidirectionalStreams
+title: "WebTransport: incomingBidirectionalStreams property"
+short-title: incomingBidirectionalStreams
 slug: Web/API/WebTransport/incomingBidirectionalStreams
 page-type: web-api-instance-property
 status:

@@ -1,5 +1,6 @@
 ---
-title: CustomEvent.detail
+title: "CustomEvent: detail property"
+short-title: detail
 slug: Web/API/CustomEvent/detail
 page-type: web-api-instance-property
 browser-compat: api.CustomEvent.detail

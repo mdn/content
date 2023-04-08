@@ -1,5 +1,6 @@
 ---
 title: "Element: mouseleave event"
+short-title: mouseleave
 slug: Web/API/Element/mouseleave_event
 page-type: web-api-event
 browser-compat: api.Element.mouseleave_event

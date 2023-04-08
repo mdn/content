@@ -1,5 +1,6 @@
 ---
-title: Document.startViewTransition()
+title: "Document: startViewTransition() method"
+short-title: startViewTransition()
 slug: Web/API/Document/startViewTransition
 page-type: web-api-instance-method
 status: experimental

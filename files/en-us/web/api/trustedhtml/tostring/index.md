@@ -1,5 +1,6 @@
 ---
-title: TrustedHTML.toString()
+title: "TrustedHTML: toString() method"
+short-title: toString()
 slug: Web/API/TrustedHTML/toString
 page-type: web-api-instance-method
 browser-compat: api.TrustedHTML.toString

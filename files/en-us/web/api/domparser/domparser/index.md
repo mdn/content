@@ -1,5 +1,6 @@
 ---
-title: DOMParser()
+title: "DOMParser: DOMParser() constructor"
+short-title: DOMParser()
 slug: Web/API/DOMParser/DOMParser
 page-type: web-api-constructor
 browser-compat: api.DOMParser.DOMParser

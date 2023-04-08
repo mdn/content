@@ -1,5 +1,6 @@
 ---
-title: SpeechRecognition.maxAlternatives
+title: "SpeechRecognition: maxAlternatives property"
+short-title: maxAlternatives
 slug: Web/API/SpeechRecognition/maxAlternatives
 page-type: web-api-instance-property
 browser-compat: api.SpeechRecognition.maxAlternatives

@@ -1,5 +1,6 @@
 ---
-title: DynamicsCompressorNode.threshold
+title: "DynamicsCompressorNode: threshold property"
+short-title: threshold
 slug: Web/API/DynamicsCompressorNode/threshold
 page-type: web-api-instance-property
 browser-compat: api.DynamicsCompressorNode.threshold

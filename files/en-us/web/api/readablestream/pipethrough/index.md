@@ -1,5 +1,6 @@
 ---
-title: ReadableStream.pipeThrough()
+title: "ReadableStream: pipeThrough() method"
+short-title: pipeThrough()
 slug: Web/API/ReadableStream/pipeThrough
 page-type: web-api-instance-method
 browser-compat: api.ReadableStream.pipeThrough

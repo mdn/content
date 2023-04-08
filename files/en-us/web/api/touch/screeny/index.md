@@ -1,5 +1,6 @@
 ---
-title: Touch.screenY
+title: "Touch: screenY property"
+short-title: screenY
 slug: Web/API/Touch/screenY
 page-type: web-api-instance-property
 browser-compat: api.Touch.screenY

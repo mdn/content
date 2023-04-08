@@ -1,5 +1,6 @@
 ---
-title: Range.getBoundingClientRect()
+title: "Range: getBoundingClientRect() method"
+short-title: getBoundingClientRect()
 slug: Web/API/Range/getBoundingClientRect
 page-type: web-api-instance-method
 browser-compat: api.Range.getBoundingClientRect

@@ -1,5 +1,6 @@
 ---
-title: SpeechGrammarList.length
+title: "SpeechGrammarList: length property"
+short-title: length
 slug: Web/API/SpeechGrammarList/length
 page-type: web-api-instance-property
 status:

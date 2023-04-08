@@ -1,5 +1,6 @@
 ---
-title: WEBGL_compressed_texture_etc
+title: WEBGL_compressed_texture_etc extension
+short-title: WEBGL_compressed_texture_etc
 slug: Web/API/WEBGL_compressed_texture_etc
 page-type: webgl-extension
 browser-compat: api.WEBGL_compressed_texture_etc

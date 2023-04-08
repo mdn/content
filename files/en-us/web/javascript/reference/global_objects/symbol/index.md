@@ -74,7 +74,7 @@ The method {{jsxref("Object.getOwnPropertySymbols()")}} returns an array of Symb
 
 ## Constructor
 
-- [`Symbol()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/Symbol)
+- {{jsxref("Symbol/Symbol", "Symbol()")}}
   - : Creates a new `Symbol` object. It is not a constructor in the traditional sense, because it can only be called as a function, instead of being constructed with `new Symbol()`.
 
 ## Static properties
@@ -97,10 +97,10 @@ The static properties are all well-known Symbols. In these Symbols' descriptions
   - : A method that replaces matched substrings of a string. Used by {{jsxref("String.prototype.replace()")}}.
 - {{jsxref("Symbol.search")}}
   - : A method that returns the index within a string that matches the regular expression. Used by {{jsxref("String.prototype.search()")}}.
-- {{jsxref("Symbol.split")}}
-  - : A method that splits a string at the indices that match a regular expression. Used by {{jsxref("String.prototype.split()")}}.
 - {{jsxref("Symbol.species")}}
   - : A constructor function that is used to create derived objects.
+- {{jsxref("Symbol.split")}}
+  - : A method that splits a string at the indices that match a regular expression. Used by {{jsxref("String.prototype.split()")}}.
 - {{jsxref("Symbol.toPrimitive")}}
   - : A method converting an object to a primitive value.
 - {{jsxref("Symbol.toStringTag")}}
@@ -110,9 +110,9 @@ The static properties are all well-known Symbols. In these Symbols' descriptions
 
 ## Static methods
 
-- {{jsxref("Symbol.for()", "Symbol.for(key)")}}
+- {{jsxref("Symbol.for()")}}
   - : Searches for existing Symbols with the given `key` and returns it if found. Otherwise a new Symbol gets created in the global Symbol registry with `key`.
-- {{jsxref("Symbol.keyFor", "Symbol.keyFor(sym)")}}
+- {{jsxref("Symbol.keyFor()")}}
   - : Retrieves a shared Symbol key from the global Symbol registry for the given Symbol.
 
 ## Instance properties
@@ -132,7 +132,7 @@ These properties are defined on `Symbol.prototype` and shared by all `Symbol` in
   - : Returns a string containing the description of the Symbol. Overrides the {{jsxref("Object.prototype.toString()")}} method.
 - {{jsxref("Symbol.prototype.valueOf()")}}
   - : Returns the Symbol. Overrides the {{jsxref("Object.prototype.valueOf()")}} method.
-- {{jsxref("Symbol.prototype.@@toPrimitive()", "Symbol.prototype[@@toPrimitive]()")}}
+- [`Symbol.prototype[@@toPrimitive]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/@@toPrimitive)
   - : Returns the Symbol.
 
 ## Examples

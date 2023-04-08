@@ -1,5 +1,6 @@
 ---
-title: GPUCommandEncoder.copyBufferToTexture()
+title: "GPUCommandEncoder: copyBufferToTexture() method"
+short-title: copyBufferToTexture()
 slug: Web/API/GPUCommandEncoder/copyBufferToTexture
 page-type: web-api-instance-method
 status:

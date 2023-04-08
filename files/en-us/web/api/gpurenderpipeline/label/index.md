@@ -1,5 +1,6 @@
 ---
-title: GPURenderPipeline.label
+title: "GPURenderPipeline: label property"
+short-title: label
 slug: Web/API/GPURenderPipeline/label
 page-type: web-api-instance-property
 status:

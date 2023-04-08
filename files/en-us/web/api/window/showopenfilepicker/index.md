@@ -1,5 +1,6 @@
 ---
-title: Window.showOpenFilePicker()
+title: "Window: showOpenFilePicker() method"
+short-title: showOpenFilePicker()
 slug: Web/API/Window/showOpenFilePicker
 page-type: web-api-instance-method
 status:
