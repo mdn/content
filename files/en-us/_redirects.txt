@@ -2100,7 +2100,7 @@
 /en-US/docs/DOM/window.close	/en-US/docs/Web/API/Window/close
 /en-US/docs/DOM/window.closed	/en-US/docs/Web/API/Window/closed
 /en-US/docs/DOM/window.confirm	/en-US/docs/Web/API/Window/confirm
-/en-US/docs/DOM/window.content	/en-US/docs/Web/API/Window/content
+/en-US/docs/DOM/window.content	/en-US/docs/Web/API/Window
 /en-US/docs/DOM/window.crypto	/en-US/docs/Web/API/crypto_property
 /en-US/docs/DOM/window.crypto.getRandomValues	/en-US/docs/Web/API/Crypto/getRandomValues
 /en-US/docs/DOM/window.defaultStatus	/en-US/docs/Web/API/Window/defaultStatus
@@ -2563,7 +2563,7 @@
 /en-US/docs/DOM:window.close	/en-US/docs/Web/API/Window/close
 /en-US/docs/DOM:window.closed	/en-US/docs/Web/API/Window/closed
 /en-US/docs/DOM:window.confirm	/en-US/docs/Web/API/Window/confirm
-/en-US/docs/DOM:window.content	/en-US/docs/Web/API/Window/content
+/en-US/docs/DOM:window.content	/en-US/docs/Web/API/Window
 /en-US/docs/DOM:window.crypto	/en-US/docs/Web/API/crypto_property
 /en-US/docs/DOM:window.defaultStatus	/en-US/docs/Web/API/Window/defaultStatus
 /en-US/docs/DOM:window.document	/en-US/docs/Web/API/Window/document
@@ -3279,7 +3279,7 @@
 /en-US/docs/Document_Object_Model_(DOM)/window.close	/en-US/docs/Web/API/Window/close
 /en-US/docs/Document_Object_Model_(DOM)/window.closed	/en-US/docs/Web/API/Window/closed
 /en-US/docs/Document_Object_Model_(DOM)/window.confirm	/en-US/docs/Web/API/Window/confirm
-/en-US/docs/Document_Object_Model_(DOM)/window.content	/en-US/docs/Web/API/Window/content
+/en-US/docs/Document_Object_Model_(DOM)/window.content	/en-US/docs/Web/API/Window
 /en-US/docs/Document_Object_Model_(DOM)/window.crypto	/en-US/docs/Web/API/crypto_property
 /en-US/docs/Document_Object_Model_(DOM)/window.crypto.getRandomValues	/en-US/docs/Web/API/Crypto/getRandomValues
 /en-US/docs/Document_Object_Model_(DOM)/window.defaultStatus	/en-US/docs/Web/API/Window/defaultStatus
@@ -10046,6 +10046,7 @@
 /en-US/docs/Web/API/Window/caches	/en-US/docs/Web/API/caches
 /en-US/docs/Web/API/Window/clearInterval	/en-US/docs/Web/API/clearInterval
 /en-US/docs/Web/API/Window/clearTimeout	/en-US/docs/Web/API/clearTimeout
+/en-US/docs/Web/API/Window/content	/en-US/docs/Web/API/Window
 /en-US/docs/Web/API/Window/convertPointFromNodeToPage	/en-US/docs/Web/API/Window/webkitConvertPointFromNodeToPage
 /en-US/docs/Web/API/Window/convertPointFromPageToNode	/en-US/docs/Web/API/Window/webkitConvertPointFromPageToNode
 /en-US/docs/Web/API/Window/crypto	/en-US/docs/Web/API/crypto_property
@@ -10651,7 +10652,7 @@
 /en-US/docs/Web/API/window.close	/en-US/docs/Web/API/Window/close
 /en-US/docs/Web/API/window.closed	/en-US/docs/Web/API/Window/closed
 /en-US/docs/Web/API/window.confirm	/en-US/docs/Web/API/Window/confirm
-/en-US/docs/Web/API/window.content	/en-US/docs/Web/API/Window/content
+/en-US/docs/Web/API/window.content	/en-US/docs/Web/API/Window
 /en-US/docs/Web/API/window.crypto	/en-US/docs/Web/API/crypto_property
 /en-US/docs/Web/API/window.crypto.getRandomValues	/en-US/docs/Web/API/Crypto/getRandomValues
 /en-US/docs/Web/API/window.defaultStatus	/en-US/docs/Web/API/Window/defaultStatus
