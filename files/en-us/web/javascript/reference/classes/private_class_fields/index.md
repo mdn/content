@@ -142,6 +142,7 @@ class Stamper extends class {
   // This declaration will "stamp" the private field onto the object
   // returned by the base class constructor
   #stamp = 42;
+
   static getStamp(obj) {
     return obj.#stamp;
   }
@@ -165,58 +166,61 @@ Private static fields are added to the class constructor at class evaluation tim
 
 ```js
 class ClassWithPrivateStaticField {
-  static #PRIVATE_STATIC_FIELD;
+  static #PRIVATE_STATIC_FIELD = 42;
 
-  static publicStaticMethod() {
-    ClassWithPrivateStaticField.#PRIVATE_STATIC_FIELD = 42;
+  static publicStaticMethod1() {
     return ClassWithPrivateStaticField.#PRIVATE_STATIC_FIELD;
   }
 
+  static publicStaticMethod2() {
+    return this.#PRIVATE_STATIC_FIELD;
+  }
+
   publicInstanceMethod() {
-    ClassWithPrivateStaticField.#PRIVATE_STATIC_FIELD = 42;
     return ClassWithPrivateStaticField.#PRIVATE_STATIC_FIELD;
   }
 }
 
-console.log(ClassWithPrivateStaticField.publicStaticMethod()); // 42
+console.log(ClassWithPrivateStaticField.publicStaticMethod1()); // 42
+console.log(ClassWithPrivateStaticField.publicStaticMethod2()); // 42
 console.log(new ClassWithPrivateStaticField().publicInstanceMethod()); // 42
 ```
 
-There is a restriction on private static fields: Only the class which defines the private static field can access the field. This can lead to unexpected behavior when using [`this`](/en-US/docs/Web/JavaScript/Reference/Operators/this). In the following example, `this` refers to the `SubClass` class (not the `BaseClassWithPrivateStaticField` class) when we try to call `SubClass.basePublicStaticMethod()`, and so causes a `TypeError`.
+There is a restriction on private static fields: only the class which defines the private static field can access the field. This can lead to unexpected behavior when using [`this`](/en-US/docs/Web/JavaScript/Reference/Operators/this). In the following example, `this` refers to the `SubClass` class (not the `ClassWithPrivateStaticField` class) when we try to call `SubClass.publicStaticMethod()`, and so causes a `TypeError`.
 
 ```js
-class BaseClassWithPrivateStaticField {
-  static #PRIVATE_STATIC_FIELD;
+class ClassWithPrivateStaticField {
+  static #PRIVATE_STATIC_FIELD = 42;
 
-  static basePublicStaticMethod() {
+  static publicStaticMethod() {
     return this.#PRIVATE_STATIC_FIELD;
   }
 }
 
-class SubClass extends BaseClassWithPrivateStaticField {}
+class SubClass extends ClassWithPrivateStaticField {}
 
-SubClass.basePublicStaticMethod(); // TypeError: Cannot read private member #PRIVATE_STATIC_FIELD from an object whose class did not declare it
+SubClass.publicStaticMethod(); // TypeError: Cannot read private member #PRIVATE_STATIC_FIELD from an object whose class did not declare it
 ```
 
 This is the same if you call the method with `super`, because [`super` methods are not called with the super class as `this`](/en-US/docs/Web/JavaScript/Reference/Operators/super#calling_methods_from_super).
 
 ```js
-class BaseClassWithPrivateStaticField {
-  static #PRIVATE_STATIC_FIELD;
+class ClassWithPrivateStaticField {
+  static #PRIVATE_STATIC_FIELD = 42;
 
-  static basePublicStaticMethod() {
+  static publicStaticMethod() {
     // When invoked through super, `this` still refers to Subclass
     return this.#PRIVATE_STATIC_FIELD;
   }
 }
 
-class SubClass extends BaseClassWithPrivateStaticField {
-  static callSuperBaseMethod() {
-    return super.basePublicStaticMethod();
+class SubClass extends ClassWithPrivateStaticField {
+  static callSuperMethod() {
+    return super.publicStaticMethod();
   }
 }
 
-SubClass.callSuperBaseMethod(); // TypeError: Cannot read private member #PRIVATE_STATIC_FIELD from an object whose class did not declare it
+SubClass.callSuperMethod(); // TypeError: Cannot read private member #PRIVATE_STATIC_FIELD from an object whose class did not declare it
 ```
 
 You are advised to always access static private fields through the class name, not through `this`, so inheritance doesn't break the method.
@@ -252,6 +256,7 @@ class ClassWithPrivateAccessor {
   get #decoratedMessage() {
     return `🎬${this.#message}🛑`;
   }
+
   set #decoratedMessage(msg) {
     this.#message = msg;
   }
@@ -271,6 +276,7 @@ Unlike public methods, private methods are not accessible on `Class.prototype`.
 ```js
 class C {
   #method() {}
+
   static getMethod(x) {
     return x.#method;
   }
@@ -282,7 +288,7 @@ console.log(C.getMethod(C.prototype)); // Object must be an instance of class C
 
 #### Private static methods
 
-Like their public equivalent, private static methods are called on the class itself, not instances of the class. Like private static fields, they are only accessible from inside the class declaration.
+Private static methods are added to the class constructor at class evaluation time. Like their public counterparts, private static methods are only accessible on the class itself or on the `this` context of static methods, but not on the `this` context of instance methods.
 
 ```js
 class ClassWithPrivateStaticMethod {
@@ -297,38 +303,35 @@ class ClassWithPrivateStaticMethod {
   static publicStaticMethod2() {
     return this.#privateStaticMethod();
   }
+  
+  publicInstanceMethod() {
+    return ClassWithPrivateStaticMethod.#privateStaticMethod();
+  }
 }
 
-console.log(ClassWithPrivateStaticMethod.publicStaticMethod1() === 42);
-// true
-console.log(ClassWithPrivateStaticMethod.publicStaticMethod2() === 42);
-// true
+console.log(ClassWithPrivateStaticMethod.publicStaticMethod1()); // 42
+console.log(ClassWithPrivateStaticMethod.publicStaticMethod2()); // 42
+console.log(new ClassWithPrivateStaticMethod().publicInstanceMethod()); // 42
 ```
 
 Private static methods may be generator, async, and async generator functions.
 
-The same restriction previously mentioned for private static fields holds for private static methods, and similarly can lead to unexpected behavior when using `this`. In the following example, when we try to call `Derived.publicStaticMethod2()`, `this` refers to the `Derived` class (not the `Base` class) and so causes a `TypeError`.
+The same restriction previously mentioned for private static fields holds for private static methods, and similarly can lead to unexpected behavior when using `this`. In the following example, when we try to call `Subclass.publicStaticMethod()`, `this` refers to the `Subclass` class (not the `ClassWithPrivateStaticMethod` class) and so causes a `TypeError`.
 
 ```js
-class Base {
+class ClassWithPrivateStaticMethod {
   static #privateStaticMethod() {
     return 42;
   }
-  static publicStaticMethod1() {
-    return Base.#privateStaticMethod();
-  }
-  static publicStaticMethod2() {
+
+  static publicStaticMethod() {
     return this.#privateStaticMethod();
   }
 }
 
-class Derived extends Base {}
+class Subclass extends ClassWithPrivateStaticMethod {}
 
-console.log(Derived.publicStaticMethod1());
-// 42
-console.log(Derived.publicStaticMethod2());
-// TypeError: Cannot read private member #privateStaticMethod
-// from an object whose class did not declare it
+console.log(Subclass.publicStaticMethod()); // TypeError: Cannot read private member #privateStaticMethod from an object whose class did not declare it
 ```
 
 ### Simulating private constructors
