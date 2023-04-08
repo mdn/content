@@ -303,7 +303,7 @@ class ClassWithPrivateStaticMethod {
   static publicStaticMethod2() {
     return this.#privateStaticMethod();
   }
-  
+
   publicInstanceMethod() {
     return ClassWithPrivateStaticMethod.#privateStaticMethod();
   }
