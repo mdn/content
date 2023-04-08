@@ -1,5 +1,6 @@
 ---
 title: "Window: popstate event"
+short-title: popstate
 slug: Web/API/Window/popstate_event
 page-type: web-api-event
 browser-compat: api.Window.popstate_event

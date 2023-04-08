@@ -1,5 +1,6 @@
 ---
-title: WorkerNavigator.serial
+title: "WorkerNavigator: serial property"
+short-title: serial
 slug: Web/API/WorkerNavigator/serial
 page-type: web-api-instance-property
 status:

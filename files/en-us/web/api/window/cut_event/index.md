@@ -1,5 +1,6 @@
 ---
 title: "Window: cut event"
+short-title: cut
 slug: Web/API/Window/cut_event
 page-type: web-api-event
 browser-compat: api.Element.cut_event

@@ -1,5 +1,6 @@
 ---
-title: WritableStream()
+title: "WritableStream: WritableStream() constructor"
+short-title: WritableStream()
 slug: Web/API/WritableStream/WritableStream
 page-type: web-api-constructor
 browser-compat: api.WritableStream.WritableStream
