@@ -1,5 +1,6 @@
 ---
-title: TextTrack.kind
+title: "TextTrack: kind property"
+short-title: kind
 slug: Web/API/TextTrack/kind
 page-type: web-api-instance-property
 browser-compat: api.TextTrack.kind

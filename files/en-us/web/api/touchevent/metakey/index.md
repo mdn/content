@@ -1,5 +1,6 @@
 ---
-title: TouchEvent.metaKey
+title: "TouchEvent: metaKey property"
+short-title: metaKey
 slug: Web/API/TouchEvent/metaKey
 page-type: web-api-instance-property
 browser-compat: api.TouchEvent.metaKey

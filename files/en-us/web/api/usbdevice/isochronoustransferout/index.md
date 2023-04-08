@@ -1,5 +1,6 @@
 ---
-title: USBDevice.isochronousTransferOut()
+title: "USBDevice: isochronousTransferOut() method"
+short-title: isochronousTransferOut()
 slug: Web/API/USBDevice/isochronousTransferOut
 page-type: web-api-instance-method
 status:

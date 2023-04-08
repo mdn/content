@@ -1,5 +1,6 @@
 ---
-title: URLPattern.protocol
+title: "URLPattern: protocol property"
+short-title: protocol
 slug: Web/API/URLPattern/protocol
 page-type: web-api-instance-property
 status:

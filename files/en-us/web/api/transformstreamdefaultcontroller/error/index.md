@@ -1,5 +1,6 @@
 ---
-title: TransformStreamDefaultController.error()
+title: "TransformStreamDefaultController: error() method"
+short-title: error()
 slug: Web/API/TransformStreamDefaultController/error
 page-type: web-api-instance-method
 browser-compat: api.TransformStreamDefaultController.error

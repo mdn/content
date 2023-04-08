@@ -1,5 +1,6 @@
 ---
-title: TreeWalker.root
+title: "TreeWalker: root property"
+short-title: root
 slug: Web/API/TreeWalker/root
 page-type: web-api-instance-property
 browser-compat: api.TreeWalker.root

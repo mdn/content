@@ -1,5 +1,6 @@
 ---
-title: TransitionEvent.elapsedTime
+title: "TransitionEvent: elapsedTime property"
+short-title: elapsedTime
 slug: Web/API/TransitionEvent/elapsedTime
 page-type: web-api-instance-property
 browser-compat: api.TransitionEvent.elapsedTime

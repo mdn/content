@@ -1,5 +1,6 @@
 ---
-title: TreeWalker.currentNode
+title: "TreeWalker: currentNode property"
+short-title: currentNode
 slug: Web/API/TreeWalker/currentNode
 page-type: web-api-instance-property
 browser-compat: api.TreeWalker.currentNode

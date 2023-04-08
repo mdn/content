@@ -1,5 +1,6 @@
 ---
-title: TrustedHTML.toJSON()
+title: "TrustedHTML: toJSON() method"
+short-title: toJSON()
 slug: Web/API/TrustedHTML/toJSON
 page-type: web-api-instance-method
 browser-compat: api.TrustedHTML.toJSON
