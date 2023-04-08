@@ -255,14 +255,14 @@ f("a", "b"); // 'a+b'
 
 ## Static properties
 
-- {{jsxref("Array/@@species", "get Array[@@species]")}}
+- {{jsxref("Array/@@species", "Array[@@species]")}}
   - : Returns the `Array` constructor.
 
 ## Static methods
 
 - {{jsxref("Array.from()")}}
   - : Creates a new `Array` instance from an iterable or array-like object.
-- {{jsxref("Array.fromAsync()")}} {{experimental_inline}}
+- {{jsxref("Array.fromAsync()")}} {{Experimental_Inline}}
   - : Creates a new `Array` instance from an async iterable, iterable, or array-like object.
 - {{jsxref("Array.isArray()")}}
   - : Returns `true` if the argument is an array, or `false` otherwise.
