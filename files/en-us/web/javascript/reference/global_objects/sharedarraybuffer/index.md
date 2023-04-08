@@ -91,6 +91,11 @@ For security reasons, `SharedArrayBuffer`s cannot be reduced in size, only grown
 - [`SharedArrayBuffer()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer/SharedArrayBuffer)
   - : Creates a new `SharedArrayBuffer` object.
 
+## Static properties
+
+- {{jsxref("SharedArrayBuffer/@@species", "SharedArrayBuffer[@@species]")}}
+  - : Returns the constructor used to construct return values from `SharedArrayBuffer` methods.
+
 ## Instance properties
 
 These properties are defined on `SharedArrayBuffer.prototype` and shared by all `SharedArrayBuffer` instances.
