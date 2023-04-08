@@ -239,7 +239,7 @@ For example, **\<something>**, will capture the marked pattern and pass the valu
 
 In this case we use `'<int:pk>'` to capture the book id, which must be a specially formatted string and pass it to the view as a parameter named `pk` (short for primary key). This is the id that is being used to store the book uniquely in the database, as defined in the Book Model.
 
-> **Note:** As discussed previously, our matched URL is actually `catalog/book/<digits>` (because we are in the **catalog** application, `/catalog/` is assumed).
+> **Note:** As discussed previously, our matched URL is actually `book/<digits>` (because we are in the **catalog** application, `/catalog/` is assumed).
 
 > **Warning:** The generic class-based detail view _expects_ to be passed a parameter named **pk**. If you're writing your own function view you can use whatever parameter name you like, or indeed pass the information in an unnamed argument.
 
