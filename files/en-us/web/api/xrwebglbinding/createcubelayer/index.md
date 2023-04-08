@@ -1,5 +1,6 @@
 ---
-title: XRWebGLBinding.createCubeLayer()
+title: "XRWebGLBinding: createCubeLayer() method"
+short-title: createCubeLayer()
 slug: Web/API/XRWebGLBinding/createCubeLayer
 page-type: web-api-instance-method
 status:

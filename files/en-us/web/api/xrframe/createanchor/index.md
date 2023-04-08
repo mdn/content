@@ -1,5 +1,6 @@
 ---
-title: XRFrame.createAnchor()
+title: "XRFrame: createAnchor() method"
+short-title: createAnchor()
 slug: Web/API/XRFrame/createAnchor
 page-type: web-api-instance-method
 status:
