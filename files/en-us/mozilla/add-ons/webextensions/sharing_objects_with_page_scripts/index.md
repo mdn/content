@@ -215,14 +215,14 @@ window.wrappedJSObject.objB = objB;              // automatically unwraps when p
 window.eval(`
   console.log(objA instanceof Object);           // false
   console.log(objB instanceof Object);           // true
-  
+
   try {
     console.log(objA.foo);
   } catch (error) {
     console.log(error);                       // Error: permisson denied
   }
-  
-  try { 
+ 
+  try {
     objA.baz = "baz";
   } catch (error) {
     console.log(error);                       // Error: permission denied
