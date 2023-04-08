@@ -374,7 +374,7 @@ These properties are own properties of each `String` instance.
     For most languages, this will return the same as
     {{jsxref("String.prototype.toLowerCase()", "toLowerCase()")}}.
 
-- {{jsxref("String.prototype.toLocaleUpperCase()"}}
+- {{jsxref("String.prototype.toLocaleUpperCase()")}}
 
   - : The characters within a string are converted to uppercase while respecting the
     current locale.
