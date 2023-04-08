@@ -1,5 +1,6 @@
 ---
-title: Window.find()
+title: "Window: find() method"
+short-title: find()
 slug: Web/API/Window/find
 page-type: web-api-instance-method
 status:

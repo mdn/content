@@ -1,5 +1,6 @@
 ---
-title: Window.name
+title: "Window: name property"
+short-title: name
 slug: Web/API/Window/name
 page-type: web-api-instance-property
 browser-compat: api.Window.name

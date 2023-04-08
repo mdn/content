@@ -1,5 +1,6 @@
 ---
-title: 'XMLHttpRequestUpload: timeout event'
+title: "XMLHttpRequestUpload: timeout event"
+short-title: timeout
 slug: Web/API/XMLHttpRequestUpload/timeout_event
 page-type: web-api-event
 browser-compat: api.XMLHttpRequestUpload.timeout_event

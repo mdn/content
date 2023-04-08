@@ -1,5 +1,6 @@
 ---
-title: WorkerNavigator.appCodeName
+title: "WorkerNavigator: appCodeName property"
+short-title: appCodeName
 slug: Web/API/WorkerNavigator/appCodeName
 page-type: web-api-instance-property
 status:

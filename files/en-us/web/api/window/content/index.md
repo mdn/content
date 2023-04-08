@@ -1,5 +1,6 @@
 ---
-title: Window.content
+title: "Window: content property"
+short-title: content
 slug: Web/API/Window/content
 page-type: web-api-instance-property
 ---

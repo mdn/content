@@ -1,5 +1,6 @@
 ---
-title: WorkerGlobalScope.importScripts()
+title: "WorkerGlobalScope: importScripts() method"
+short-title: importScripts()
 slug: Web/API/WorkerGlobalScope/importScripts
 page-type: web-api-instance-method
 browser-compat: api.WorkerGlobalScope.importScripts
