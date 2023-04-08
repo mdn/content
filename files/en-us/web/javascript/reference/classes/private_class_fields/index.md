@@ -168,12 +168,8 @@ Private static fields are added to the class constructor at class evaluation tim
 class ClassWithPrivateStaticField {
   static #PRIVATE_STATIC_FIELD = 42;
 
-  static publicStaticMethod1() {
+  static publicStaticMethod() {
     return ClassWithPrivateStaticField.#PRIVATE_STATIC_FIELD;
-  }
-
-  static publicStaticMethod2() {
-    return this.#PRIVATE_STATIC_FIELD;
   }
 
   publicInstanceMethod() {
@@ -181,8 +177,7 @@ class ClassWithPrivateStaticField {
   }
 }
 
-console.log(ClassWithPrivateStaticField.publicStaticMethod1()); // 42
-console.log(ClassWithPrivateStaticField.publicStaticMethod2()); // 42
+console.log(ClassWithPrivateStaticField.publicStaticMethod()); // 42
 console.log(new ClassWithPrivateStaticField().publicInstanceMethod()); // 42
 ```
 
@@ -296,12 +291,8 @@ class ClassWithPrivateStaticMethod {
     return 42;
   }
 
-  static publicStaticMethod1() {
+  static publicStaticMethod() {
     return ClassWithPrivateStaticMethod.#privateStaticMethod();
-  }
-
-  static publicStaticMethod2() {
-    return this.#privateStaticMethod();
   }
 
   publicInstanceMethod() {
@@ -309,8 +300,7 @@ class ClassWithPrivateStaticMethod {
   }
 }
 
-console.log(ClassWithPrivateStaticMethod.publicStaticMethod1()); // 42
-console.log(ClassWithPrivateStaticMethod.publicStaticMethod2()); // 42
+console.log(ClassWithPrivateStaticMethod.publicStaticMethod()); // 42
 console.log(new ClassWithPrivateStaticMethod().publicInstanceMethod()); // 42
 ```
 
