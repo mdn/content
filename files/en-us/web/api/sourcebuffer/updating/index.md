@@ -10,8 +10,7 @@ browser-compat: api.SourceBuffer.updating
 
 The **`updating`** read-only property of the
 {{domxref("SourceBuffer")}} interface indicates whether the `SourceBuffer` is
-currently being updated — i.e. whether an {{domxref("SourceBuffer.appendBuffer()")}},
-{{domxref("SourceBuffer.appendStream()")}}, or {{domxref("SourceBuffer.remove()")}}
+currently being updated — i.e. whether an {{domxref("SourceBuffer.appendBuffer()")}} or {{domxref("SourceBuffer.remove()")}}
 operation is currently in progress.
 
 ## Value
