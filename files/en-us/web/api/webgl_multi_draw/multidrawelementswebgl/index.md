@@ -1,5 +1,6 @@
 ---
-title: WEBGL_multi_draw.multiDrawElementsWEBGL()
+title: "WEBGL_multi_draw: multiDrawElementsWEBGL() method"
+short-title: multiDrawElementsWEBGL()
 slug: Web/API/WEBGL_multi_draw/multiDrawElementsWEBGL
 page-type: webgl-extension-method
 browser-compat: api.WEBGL_multi_draw.multiDrawElementsWEBGL

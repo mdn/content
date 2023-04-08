@@ -1,5 +1,6 @@
 ---
-title: WEBGL_draw_buffers.drawBuffersWEBGL()
+title: "WEBGL_draw_buffers: drawBuffersWEBGL() method"
+short-title: drawBuffersWEBGL()
 slug: Web/API/WEBGL_draw_buffers/drawBuffersWEBGL
 page-type: webgl-extension-method
 browser-compat: api.WEBGL_draw_buffers.drawBuffersWEBGL

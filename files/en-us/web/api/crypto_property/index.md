@@ -1,5 +1,6 @@
 ---
-title: self.crypto
+title: self.crypto global property
+short-title: self.crypto
 slug: Web/API/crypto_property
 page-type: web-api-global-property
 browser-compat: api.crypto

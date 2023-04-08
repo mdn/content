@@ -1,5 +1,6 @@
 ---
-title: WEBGL_lose_context.loseContext()
+title: "WEBGL_lose_context: loseContext() method"
+short-title: loseContext()
 slug: Web/API/WEBGL_lose_context/loseContext
 page-type: webgl-extension-method
 browser-compat: api.WEBGL_lose_context.loseContext

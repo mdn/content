@@ -1,5 +1,6 @@
 ---
-title: OES_vertex_array_object.createVertexArrayOES()
+title: "OES_vertex_array_object: createVertexArrayOES() method"
+short-title: createVertexArrayOES()
 slug: Web/API/OES_vertex_array_object/createVertexArrayOES
 page-type: webgl-extension-method
 browser-compat: api.OES_vertex_array_object.createVertexArrayOES
