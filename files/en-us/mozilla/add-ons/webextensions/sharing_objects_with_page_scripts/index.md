@@ -219,7 +219,7 @@ window.eval(`
   try {
     console.log(objA.foo);
   } catch (error) {
-    console.log(error);                       // Error: permisson denied
+    console.log(error);                       // Error: permission denied
   }
  
   try {
