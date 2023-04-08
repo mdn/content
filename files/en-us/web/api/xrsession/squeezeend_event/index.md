@@ -1,5 +1,5 @@
 ---
-title: "'XRSession: squeezeend event'"
+title: "XRSession: squeezeend event"
 short-title: squeezeend
 slug: Web/API/XRSession/squeezeend_event
 page-type: web-api-event
