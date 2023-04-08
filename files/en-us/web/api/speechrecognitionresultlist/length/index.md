@@ -1,5 +1,6 @@
 ---
-title: SpeechRecognitionResultList.length
+title: "SpeechRecognitionResultList: length property"
+short-title: length
 slug: Web/API/SpeechRecognitionResultList/length
 page-type: web-api-instance-property
 browser-compat: api.SpeechRecognitionResultList.length

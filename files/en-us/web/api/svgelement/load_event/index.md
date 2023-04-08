@@ -1,5 +1,6 @@
 ---
 title: "SVGElement: load event"
+short-title: load
 slug: Web/API/SVGElement/load_event
 page-type: web-api-event
 browser-compat: api.SVGElement.load_event

@@ -1,5 +1,6 @@
 ---
-title: SpeechSynthesisVoice.default
+title: "SpeechSynthesisVoice: default property"
+short-title: default
 slug: Web/API/SpeechSynthesisVoice/default
 page-type: web-api-instance-property
 browser-compat: api.SpeechSynthesisVoice.default

@@ -1,5 +1,6 @@
 ---
-title: SVGMaskElement.maskUnits
+title: "SVGMaskElement: maskUnits property"
+short-title: maskUnits
 slug: Web/API/SVGMaskElement/maskUnits
 page-type: web-api-instance-property
 browser-compat: api.SVGMaskElement.maskUnits
