@@ -13,7 +13,7 @@ The **`AggregateError`** object represents an error when several errors need to 
 
 ## Constructor
 
-- {{jsxref("Global_Objects/AggregateError/AggregateError", "AggregateError()")}}
+- {{jsxref("AggregateError/AggregateError", "AggregateError()")}}
   - : Creates a new `AggregateError` object.
 
 ## Instance properties
