@@ -93,7 +93,7 @@ Origins for which persistent storage has been granted can store up to 50% of the
 For example, if the device has a 500 GiB hard drive, Firefox will allow an origin to store up to:
 
 - In best-effort mode: 10 GiB of data, which is the eTLD+1 group limit.
-- In persistent modeL: 250 GiB, which is 50% of the total disk size.
+- In persistent mode: 250 GiB, which is 50% of the total disk size.
 
 Note that it might not actually be possible for the origin to reach its quota because it is calculated based on the hard drive **total** size, not the currently available disk space. This is done for security reasons, to avoid {{Glossary("fingerprinting")}}.
 
