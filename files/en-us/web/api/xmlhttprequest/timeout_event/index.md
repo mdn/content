@@ -1,5 +1,5 @@
 ---
-title: "'XMLHttpRequest: timeout event'"
+title: "XMLHttpRequest: timeout event"
 short-title: timeout
 slug: Web/API/XMLHttpRequest/timeout_event
 page-type: web-api-event
