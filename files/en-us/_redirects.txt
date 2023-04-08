@@ -29,9 +29,9 @@
 /en-US/docs/API/Mouse_Lock_API	/en-US/docs/Web/API/Pointer_Lock_API
 /en-US/docs/API/PageVisibility/Page_Visibility_API	/en-US/docs/Web/API/Page_Visibility_API
 /en-US/docs/API/Pointer_Lock_API	/en-US/docs/Web/API/Pointer_Lock_API
-/en-US/docs/API/navigationTiming	/en-US/docs/Web/API/Navigation_timing_API
-/en-US/docs/API/navigationTiming/Using_Navigation_Timing	/en-US/docs/Web/API/Navigation_timing_API/Using_Navigation_Timing
-/en-US/docs/API/window.performance/navigationTiming	/en-US/docs/Web/API/Navigation_timing_API
+/en-US/docs/API/navigationTiming	/en-US/docs/Web/API/Performance_API/Navigation_timing
+/en-US/docs/API/navigationTiming/Using_Navigation_Timing	/en-US/docs/Web/API/Performance_API/Navigation_timing
+/en-US/docs/API/window.performance/navigationTiming	/en-US/docs/Web/API/Performance_API/Navigation_timing
 /en-US/docs/ARIA	/en-US/docs/Web/Accessibility/ARIA
 /en-US/docs/ARIA/ARIA_Guides	/en-US/docs/Web/Accessibility/ARIA/ARIA_Guides
 /en-US/docs/ARIA/ARIA_Live_Regions	/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions
@@ -6360,8 +6360,8 @@
 /en-US/docs/NSS_reference/NSS_tools_:_certutil	https://firefox-source-docs.mozilla.org/security/nss/index.html
 /en-US/docs/NaN	/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN
 /en-US/docs/Namespaces_in_IMSC	/en-US/docs/Related/IMSC/Namespaces
-/en-US/docs/Navigation_timing	/en-US/docs/Web/API/Navigation_timing_API
-/en-US/docs/Navigation_timing/Using_Navigation_Timing	/en-US/docs/Web/API/Navigation_timing_API/Using_Navigation_Timing
+/en-US/docs/Navigation_timing	/en-US/docs/Web/API/Performance_API/Navigation_timing
+/en-US/docs/Navigation_timing/Using_Navigation_Timing	/en-US/docs/Web/API/Performance_API/Navigation_timing
 /en-US/docs/Navigator.geolocation	/en-US/docs/Web/API/Navigator/geolocation
 /en-US/docs/Navigator.mediaDevices	/en-US/docs/Web/API/Navigator/mediaDevices
 /en-US/docs/Navigator.onLine	/en-US/docs/Web/API/Navigator/onLine
@@ -6468,7 +6468,7 @@
 /en-US/docs/Related/IMSC/Using_imscJS_as_polyfill	/en-US/docs/Related/IMSC/Using_the_imscJS_polyfill
 /en-US/docs/Related/Process_for_selection	/en-US/docs/MDN/Writing_guidelines/What_we_write/Criteria_for_inclusion
 /en-US/docs/Related/Project_guidelines	/en-US/docs/MDN/Writing_guidelines/What_we_write/Criteria_for_inclusion
-/en-US/docs/Resource_Timing_API	/en-US/docs/Web/API/Resource_Timing_API
+/en-US/docs/Resource_Timing_API	/en-US/docs/Web/API/Performance_API/Resource_timing
 /en-US/docs/SGML	/en-US/docs/Glossary/SGML
 /en-US/docs/SMTP	/en-US/docs/Glossary/SMTP
 /en-US/docs/SVG	/en-US/docs/Web/SVG
@@ -9005,6 +9005,8 @@
 /en-US/docs/Web/API/NDEFWriter/write	/en-US/docs/Web/API/NDEFReader/write
 /en-US/docs/Web/API/NamedNodeMap/NamedNodeMap.getNamedItem	/en-US/docs/Web/API/NamedNodeMap/getNamedItem
 /en-US/docs/Web/API/Navigation.connection	/en-US/docs/Web/API/Navigator/connection
+/en-US/docs/Web/API/Navigation_timing_API	/en-US/docs/Web/API/Performance_API/Navigation_timing
+/en-US/docs/Web/API/Navigation_timing_API/Using_Navigation_Timing	/en-US/docs/Web/API/Performance_API/Navigation_timing
 /en-US/docs/Web/API/Navigator.appCodeName	/en-US/docs/Web/API/Navigator/appCodeName
 /en-US/docs/Web/API/Navigator.appName	/en-US/docs/Web/API/Navigator/appName
 /en-US/docs/Web/API/Navigator.appVersion	/en-US/docs/Web/API/Navigator/appVersion
@@ -9293,6 +9295,8 @@
 /en-US/docs/Web/API/PerformanceTiming.secureConnectionStart	/en-US/docs/Web/API/PerformanceTiming/secureConnectionStart
 /en-US/docs/Web/API/PerformanceTiming.unloadEventEnd	/en-US/docs/Web/API/PerformanceTiming/unloadEventEnd
 /en-US/docs/Web/API/PerformanceTiming.unloadEventStart	/en-US/docs/Web/API/PerformanceTiming/unloadEventStart
+/en-US/docs/Web/API/Performance_API/Navigation_timing/Using_Navigation_Timing	/en-US/docs/Web/API/Performance_API/Navigation_timing
+/en-US/docs/Web/API/Performance_API/Resource_Timing/Using_the_Resource_Timing_API	/en-US/docs/Web/API/Performance_API/Resource_timing
 /en-US/docs/Web/API/PeriodicSyncManager/getTags()	/en-US/docs/Web/API/PeriodicSyncManager/getTags
 /en-US/docs/Web/API/PeriodicSyncManager/register()	/en-US/docs/Web/API/PeriodicSyncManager/register
 /en-US/docs/Web/API/PeriodicSyncManager/unregister()	/en-US/docs/Web/API/PeriodicSyncManager/unregister
@@ -9510,7 +9514,9 @@
 /en-US/docs/Web/API/ReportingObserverOptions	/en-US/docs/Web/API/ReportingObserver
 /en-US/docs/Web/API/Request/context	/en-US/docs/Web/API/Request/destination
 /en-US/docs/Web/API/RequestDestination	/en-US/docs/Web/API/Request/destination
-/en-US/docs/Web/API/Resource_Timing	/en-US/docs/Web/API/Resource_Timing_API
+/en-US/docs/Web/API/Resource_Timing	/en-US/docs/Web/API/Performance_API/Resource_timing
+/en-US/docs/Web/API/Resource_Timing_API	/en-US/docs/Web/API/Performance_API/Resource_timing
+/en-US/docs/Web/API/Resource_Timing_API/Using_the_Resource_Timing_API	/en-US/docs/Web/API/Performance_API/Resource_timing
 /en-US/docs/Web/API/Response/Response.headers	/en-US/docs/Web/API/Response/headers
 /en-US/docs/Web/API/Response/Response.ok	/en-US/docs/Web/API/Response/ok
 /en-US/docs/Web/API/RotationRate	/en-US/docs/Web/API/DeviceMotionEvent/rotationRate
@@ -9844,6 +9850,8 @@
 /en-US/docs/Web/API/Uint8Array	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array
 /en-US/docs/Web/API/Uint8ClampedArray	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8ClampedArray
 /en-US/docs/Web/API/UserProximityEvent/near	/en-US/docs/Web/API/UserProximityEvent
+/en-US/docs/Web/API/User_Timing_API	/en-US/docs/Web/API/Performance_API/User_timing
+/en-US/docs/Web/API/User_Timing_API/Using_the_User_Timing_API	/en-US/docs/Web/API/Performance_API/User_timing
 /en-US/docs/Web/API/VRDevice	/en-US/docs/Web/API/VRDisplay
 /en-US/docs/Web/API/VRDevice/deviceId	/en-US/docs/Web/API/VRDisplay/displayId
 /en-US/docs/Web/API/VRDevice/deviceName	/en-US/docs/Web/API/VRDisplay/displayName

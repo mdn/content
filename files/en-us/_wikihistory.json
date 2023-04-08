@@ -47960,40 +47960,6 @@
     "modified": "2020-10-15T21:55:37.484Z",
     "contributors": ["Wind1808", "jpmedley", "ExE-Boss", "ankush_sk"]
   },
-  "Web/API/Navigation_timing_API": {
-    "modified": "2020-10-15T21:05:50.381Z",
-    "contributors": [
-      "Zearin_Galaurum",
-      "estelle",
-      "fscholz",
-      "chrisdavidmills",
-      "dulong",
-      "Sheppy",
-      "erikadoyle",
-      "carl.bennett",
-      "paul.irish",
-      "larsjohnsen",
-      "colin-dumitru",
-      "teoli",
-      "mbonaci",
-      "Sebastianz",
-      "neilpquinn",
-      "steveworkman",
-      "Agamemnus",
-      "miketayl_r",
-      "MattBrubeck",
-      "Psz",
-      "jrmuizel",
-      "adoublebarrel",
-      "Midnightaz",
-      "ernestd",
-      "grendel"
-    ]
-  },
-  "Web/API/Navigation_timing_API/Using_Navigation_Timing": {
-    "modified": "2019-03-24T00:11:05.752Z",
-    "contributors": ["Sheppy", "teoli", "ernestd"]
-  },
   "Web/API/Navigator": {
     "modified": "2020-10-15T21:24:40.151Z",
     "contributors": [
@@ -52916,24 +52882,55 @@
       "AFBarstow"
     ]
   },
-  "Web/API/Performance_API/Using_the_Performance_API": {
-    "modified": "2019-06-05T00:32:03.628Z",
-    "contributors": ["cij11", "rolfedh", "AFBarstow"]
+  "Web/API/Performance_API/Navigation_timing": {
+    "modified": "2020-10-15T21:05:50.381Z",
+    "contributors": [
+      "Zearin_Galaurum",
+      "estelle",
+      "fscholz",
+      "chrisdavidmills",
+      "dulong",
+      "Sheppy",
+      "erikadoyle",
+      "carl.bennett",
+      "paul.irish",
+      "larsjohnsen",
+      "colin-dumitru",
+      "teoli",
+      "mbonaci",
+      "Sebastianz",
+      "neilpquinn",
+      "steveworkman",
+      "Agamemnus",
+      "miketayl_r",
+      "MattBrubeck",
+      "Psz",
+      "jrmuizel",
+      "adoublebarrel",
+      "Midnightaz",
+      "ernestd",
+      "grendel"
+    ]
   },
-  "Web/API/Performance_Timeline": {
-    "modified": "2020-12-13T21:24:22.449Z",
+  "Web/API/Performance_API/Resource_Timing": {
+    "modified": "2020-12-14T00:05:06.909Z",
     "contributors": [
       "hamishwillee",
-      "jamesdhurd",
-      "bassettsj",
-      "teoli",
+      "levy9527",
+      "jochakovsky",
+      "robatron",
+      "chrisdavidmills",
+      "AdamTReineke",
+      "studdugie",
+      "Sheppy",
+      "adamsanderson",
       "rolfedh",
       "AFBarstow"
     ]
   },
-  "Web/API/Performance_Timeline/Using_Performance_Timeline": {
-    "modified": "2019-01-16T21:51:18.606Z",
-    "contributors": ["PushpitaPikuDey", "rolfedh", "AFBarstow"]
+  "Web/API/Performance_API/User_timing": {
+    "modified": "2019-03-23T22:41:29.273Z",
+    "contributors": ["fscholz", "stephaniehobson", "AFBarstow"]
   },
   "Web/API/PeriodicSyncEvent": {
     "modified": "2020-10-15T21:34:44.669Z",
@@ -56564,39 +56561,6 @@
       "BenWeigt",
       "chrisdavidmills",
       "Sheppy"
-    ]
-  },
-  "Web/API/Resource_Timing_API": {
-    "modified": "2020-12-14T00:05:06.909Z",
-    "contributors": [
-      "hamishwillee",
-      "levy9527",
-      "jochakovsky",
-      "robatron",
-      "chrisdavidmills",
-      "AdamTReineke",
-      "studdugie",
-      "Sheppy",
-      "adamsanderson",
-      "rolfedh",
-      "AFBarstow"
-    ]
-  },
-  "Web/API/Resource_Timing_API/Using_the_Resource_Timing_API": {
-    "modified": "2020-06-26T14:37:48.453Z",
-    "contributors": [
-      "tilgovi",
-      "jt3k",
-      "robatron",
-      "vkaravir",
-      "shaunwallace",
-      "mortenhauberg",
-      "chrisdavidmills",
-      "Sheppy",
-      "fscholz",
-      "zhangsanshi",
-      "rolfedh",
-      "AFBarstow"
     ]
   },
   "Web/API/Response": {
@@ -62974,22 +62938,6 @@
       "Jeremie",
       "jswisher"
     ]
-  },
-  "Web/API/User_Timing_API": {
-    "modified": "2020-10-09T08:34:10.885Z",
-    "contributors": [
-      "sideshowbarker",
-      "eljawara79",
-      "gibcorcoran",
-      "rufus2021",
-      "andersnorgaard",
-      "AFBarstow",
-      "stephaniehobson"
-    ]
-  },
-  "Web/API/User_Timing_API/Using_the_User_Timing_API": {
-    "modified": "2019-03-23T22:41:29.273Z",
-    "contributors": ["fscholz", "stephaniehobson", "AFBarstow"]
   },
   "Web/API/VRDisplay": {
     "modified": "2020-10-15T21:35:37.557Z",

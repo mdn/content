@@ -6,7 +6,7 @@ browser-compat: http.headers.Timing-Allow-Origin
 
 {{HTTPSidebar}}
 
-The **`Timing-Allow-Origin`** response header specifies origins that are allowed to see values of attributes retrieved via features of the [Resource Timing API](/en-US/docs/Web/API/Resource_Timing_API), which would otherwise be reported as zero due to cross-origin restrictions.
+The **`Timing-Allow-Origin`** response header specifies origins that are allowed to see values of attributes retrieved via features of the [Resource Timing API](/en-US/docs/Web/API/Performance_API/Resource_timing), which would otherwise be reported as zero due to cross-origin restrictions.
 
 <table class="properties">
   <tbody>
@@ -59,6 +59,5 @@ Timing-Allow-Origin: https://developer.mozilla.org
 
 ## See also
 
-- [Resource Timing API](/en-US/docs/Web/API/Resource_Timing_API)
-- [Using the Resource Timing API](/en-US/docs/Web/API/Resource_Timing_API/Using_the_Resource_Timing_API)
+- [Resource Timing API](/en-US/docs/Web/API/Performance_API/Resource_timing)
 - {{HTTPHeader("Vary")}}
