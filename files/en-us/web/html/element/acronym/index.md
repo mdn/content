@@ -32,7 +32,7 @@ This element implements the {{domxref('HTMLElement')}} interface.
 </p>
 ```
 
-### Rsult
+### Result
 
 {{EmbedLiveSample('Examples')}}
 
