@@ -76,8 +76,8 @@ Another simple shape for collision detection is between two circles. This algori
 ```js
 Crafty.init(200, 200);
 
-const dim1 = { x: 5, y: 5 };
-const dim2 = { x: 20, y: 20 };
+const dim1 = { x: 20, y: 20 };
+const dim2 = { x: 40, y: 40 };
 
 Crafty.c("Circle", {
   circle(radius, color) {
@@ -95,8 +95,8 @@ Crafty.c("Circle", {
     ctx.fillStyle = this.color;
     ctx.beginPath();
     ctx.arc(
-      this.x + this.radius,
-      this.y + this.radius,
+      this.x,
+      this.y,
       this.radius,
       0,
       Math.PI * 2
