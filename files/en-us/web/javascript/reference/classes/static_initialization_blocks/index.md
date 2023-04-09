@@ -12,7 +12,7 @@ browser-compat: javascript.classes.static_initialization_blocks
 Static blocks allow statements to be evaluated during initialization, which allows initializations that (for example) include `try...catch` or set multiple fields from a single value.
 
 Initialization is performed in the context of the current class declaration, with privileged access to private state.
-This means that static blocks can also be used to share information between classes with instance private fields and other classes or functions declared in the same scope (analogous to "friend" classes in C++).
+This means that static blocks can also be used to share information between classes with private instance fields and other classes or functions declared in the same scope (analogous to "friend" classes in C++).
 
 {{EmbedInteractiveExample("pages/js/classes-static-initialization.html")}}
 
@@ -40,6 +40,7 @@ var y = "Outer y";
 
 class A {
   static field = "Inner y";
+
   static {
     var y = this.field;
   }
@@ -50,10 +51,10 @@ console.log(y); // 'Outer y'
 ```
 
 The `this` inside a static block refers to the constructor object of the class.
-`super.<property>` can be used to access properties of a super class.
+`super.<property>` can be used to access static properties of a super class.
 Note however that it is a syntax error to call {{jsxref("Operators/super", "super()")}} in a class static initialization block, or to attempt to access arguments of the class constructor function.
 
-The scope of the static block is nested _within_ the lexical scope of the class body, and can access the private instance variables of the class.
+The scope of the static block is nested _within_ the lexical scope of the class body, and can access the private instance fields of the class.
 
 A static initialization block may not have decorators (the class itself may).
 
@@ -66,22 +67,22 @@ The output shows that the blocks and fields are evaluated in execution order.
 
 ```js
 class MyClass {
-  static field1 = console.log("field1 called");
+  static field1 = console.log("static field1");
+
   static {
-    console.log("Class static block #1 called");
+    console.log("static block1");
   }
-  static field2 = console.log("field2 called");
+
+  static field2 = console.log("static field2");
+
   static {
-    console.log("Class static block #2 called");
+    console.log("static block2");
   }
 }
-
-/*
-> "field1 called"
-> "Class static block #1 called"
-> "field2 called"
-> "Class static block #2 called"
-*/
+// 'static field1'
+// 'static block1'
+// 'static field2'
+// 'static block2'
 ```
 
 Note that any static initialization of a super class is performed first, before that of its sub classes.
@@ -93,53 +94,57 @@ This code shows how to access a public static field.
 
 ```js
 class A {
-  static field = "A static field";
+  static field = "static field";
+
   static {
     console.log(this.field);
   }
 }
+// 'static field'
 ```
 
-The [`super.property`](/en-US/docs/Web/JavaScript/Reference/Operators/super) can be used inside a `static` block to reference properties of a super class.
-This includes static properties, as shown below:
+The [`super.<property>`](/en-US/docs/Web/JavaScript/Reference/Operators/super) can be used inside a `static` block to reference static properties of a super class.
 
 ```js
 class A {
-  static fieldA = "A.fieldA";
+  static field = "static field";
 }
+
 class B extends A {
   static {
-    console.log(super.fieldA);
-    // 'A.fieldA'
+    console.log(super.field);
   }
 }
+// 'static field'
 ```
 
-### Access to private fields
+### Access to private properties
 
-This example below shows how access can be granted to the private object of a class from an object outside the class (example from the [v8.dev blog](https://v8.dev/features/class-static-initializer-blocks#access-to-private-fields)):
+This example below shows how access can be granted to a private instance field of a class from an object outside the class (example from the [v8.dev blog](https://v8.dev/features/class-static-initializer-blocks#access-to-private-fields)):
 
 ```js
 let getDPrivateField;
 
 class D {
   #privateField;
+
   constructor(v) {
     this.#privateField = v;
   }
+
   static {
     getDPrivateField = (d) => d.#privateField;
   }
 }
 
-console.log(getDPrivateField(new D("private"))); // private
+console.log(getDPrivateField(new D("private"))); // 'private'
 ```
 
 ### Workarounds
 
 Prior to ES13 more complex static initialization might be achieved by using a static method that is called after the other properties to perform static initialization, or having a method that is external to the class that performs initialization tasks.
 
-In both cases the approach is less elegant, and does not grant access to private methods in the class.
+In both cases the approach is less elegant, and does not grant access to private properties in the class.
 
 ## Specifications
 
