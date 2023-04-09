@@ -337,7 +337,7 @@ This example specifies which audio track to embed using the `src` attribute on a
 
 ### Result
 
-{{EmbedLiveSample('')}}
+{{EmbedLiveSample('<audio> element with <source> element')}}
 
 ### \<audio> with multiple \<source> elements
 
@@ -353,7 +353,7 @@ This example includes multiple `<source>` elements. The browser tries to load th
 
 ### Result
 
-{{EmbedLiveSample('')}}
+{{EmbedLiveSample('<audio> with multiple <source> elements')}}
 
 ## Accessibility concerns
 
