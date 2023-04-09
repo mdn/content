@@ -277,7 +277,7 @@ class C {
 }
 
 console.log(C.getMethod(new C())); // [Function: #method]
-console.log(C.getMethod(C.prototype)); // TypeError: Receiver must be an instance of class C at C.getMethod
+console.log(C.getMethod(C.prototype)); // TypeError: Receiver must be an instance of class C
 ```
 
 #### Private static methods
