@@ -238,8 +238,7 @@ class ClassWithPrivateMethod {
 }
 
 const instance = new ClassWithPrivateMethod();
-console.log(instance.getPrivateMessage());
-// hello world
+console.log(instance.getPrivateMessage()); // hello world
 ```
 
 Private instance methods may be generator, async, or async generator functions. Private getters and setters are also possible, and follow the same syntax requirements as their public [getter](/en-US/docs/Web/JavaScript/Reference/Functions/get) and [setter](/en-US/docs/Web/JavaScript/Reference/Functions/set) counterparts.
@@ -249,7 +248,7 @@ class ClassWithPrivateAccessor {
   #message;
 
   get #decoratedMessage() {
-    return `🎬${this.#message}🛑`;
+    return `<${this.#message}>`;
   }
 
   set #decoratedMessage(msg) {
@@ -262,8 +261,7 @@ class ClassWithPrivateAccessor {
   }
 }
 
-new ClassWithPrivateAccessor();
-// 🎬hello world🛑
+new ClassWithPrivateAccessor(); // <hello world>
 ```
 
 Unlike public methods, private methods are not accessible on `Class.prototype`.
