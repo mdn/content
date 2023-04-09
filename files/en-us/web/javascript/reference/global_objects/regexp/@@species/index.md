@@ -1,5 +1,5 @@
 ---
-title: get RegExp[@@species]
+title: RegExp[@@species]
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/@@species
 page-type: javascript-static-accessor-property
 browser-compat: javascript.builtins.RegExp.@@species
