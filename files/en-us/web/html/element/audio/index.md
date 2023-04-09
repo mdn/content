@@ -246,6 +246,10 @@ Browsers don't all support the same [file types](/en-US/docs/Web/Media/Formats/C
 </audio>
 ```
 
+### Result
+
+{{EmbedLiveSample('Usage notes')}}
+
 We offer a substantive and thorough [guide to media file types](/en-US/docs/Web/Media/Formats) and the [audio codecs that can be used within them](/en-US/docs/Web/Media/Formats/Audio_codecs). Also available is [a guide to the codecs supported for video](/en-US/docs/Web/Media/Formats/Video_codecs).
 
 Other usage notes:
@@ -314,6 +318,10 @@ The following example shows simple usage of the `<audio>` element to play an OGG
 </audio>
 ```
 
+### Result
+
+{{EmbedLiveSample('Examples')}}
+
 For details on when autoplay works, how to get permission to use autoplay, and how and when it's appropriate to use autoplay, see our [autoplay guide](/en-US/docs/Web/Media/Autoplay_guide).
 
 ### \<audio> element with \<source> element
@@ -327,6 +335,10 @@ This example specifies which audio track to embed using the `src` attribute on a
 </audio>
 ```
 
+### Result
+
+{{EmbedLiveSample('')}}
+
 ### \<audio> with multiple \<source> elements
 
 This example includes multiple `<source>` elements. The browser tries to load the first source element (Opus) if it is able to play it; if not it falls back to the second (Vorbis) and finally back to MP3:
@@ -338,6 +350,10 @@ This example includes multiple `<source>` elements. The browser tries to load th
   <source src="foo.mp3" type="audio/mpeg" />
 </audio>
 ```
+
+### Result
+
+{{EmbedLiveSample('')}}
 
 ## Accessibility concerns
 
