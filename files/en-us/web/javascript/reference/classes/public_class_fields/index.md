@@ -60,7 +60,6 @@ In the field initializer, [`this`](/en-US/docs/Web/JavaScript/Reference/Operator
 class Base {
   baseField = "base field";
   anotherBaseField = this.baseField;
-
   baseMethod() {
     return "base method output";
   }
@@ -72,7 +71,9 @@ class Derived extends Base {
 
 const base = new Base();
 const sub = new Derived();
+
 console.log(base.anotherBaseField); // "base field"
+
 console.log(sub.subField); // "base method output"
 ```
 
@@ -99,7 +100,6 @@ class Base {
 
 class Derived extends Base {
   field = 1;
-
   constructor() {
     super();
     console.log("Derived constructor:", this.field);
@@ -183,7 +183,6 @@ However, even declaring an empty class field is beneficial, because it indicates
 class Person {
   name;
   age;
-
   constructor(name, age) {
     this.name = name;
     this.age = age;
@@ -197,7 +196,6 @@ The code above seems repetitive, but consider the case where `this` is dynamical
 class Person {
   name;
   age;
-
   constructor(properties) {
     Object.assign(this, properties);
   }
@@ -210,7 +208,6 @@ Because initializers are evaluated after the base class has executed, you can ac
 class Person {
   name;
   age;
-
   constructor(name, age) {
     this.name = name;
     this.age = age;
