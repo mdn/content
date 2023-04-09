@@ -9,7 +9,7 @@ browser-compat: javascript.builtins.Array.@@species
 
 The **`Array[@@species]`** static accessor property returns the constructor used to construct return values from array methods.
 
-> **Warning:** The existence of `@@species` allows execution of arbitrary code and may create security vulnerabilities. It also makes certain optimizations much harder. Engine implementers are [investigating whether to remove this feature](https://github.com/tc39/proposal-rm-builtin-subclassing). Avoid relying on it if possible.
+> **Warning:** The existence of `@@species` allows execution of arbitrary code and may create security vulnerabilities. It also makes certain optimizations much harder. Engine implementers are [investigating whether to remove this feature](https://github.com/tc39/proposal-rm-builtin-subclassing). Avoid relying on it if possible. Modern array methods, such as {{jsxref("Array/toReversed", "toReversed()")}}, do not use `@@species` and always return a new `Array` base class instance.
 
 ## Syntax
 
