@@ -1,0 +1,480 @@
+{
+  "sections": {
+    "collage-1": {
+      "type": "collage",
+      "blocks": {
+        "image": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/image_2FFSZW01135_2FFSZW01135_P_XS_NUB_2Fda0b8efdd5bcf84ba34f18909ca31993.jpg",
+            "link": "shopify:\/\/collections\/jewelry-accessories"
+          }
+        },
+        "a9276d76-893b-49fb-aded-d4ba7bd98a4d": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Capture_fb.jpg",
+          
+          }
+        }
+      },
+      "block_order": [
+        "image",
+        "a9276d76-893b-49fb-aded-d4ba7bd98a4d"
+      ],
+      "settings": {
+        "heading": "",
+        "heading_size": "h2",
+        "desktop_layout": "right",
+        "mobile_layout": "column",
+        "card_styles": "product-card-wrapper",
+        "color_scheme": "background-1",
+        "padding_top": 0,
+        "padding_bottom": 20
+      }
+    },
+    "b5667a1c-0c94-498d-b1c7-6608f5c5900d": {
+      "type": "multicolumn",
+      "blocks": {
+        "template--18268226486565__b5667a1c-0c94-498d-b1c7-6608f5c5900d-1679401003b98af5c6-0": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/credit-card_1_1_-02.png",
+            "title": "Free Shipping",
+            "text": "<p>On all orders over $75.00<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "template--18268226486565__b5667a1c-0c94-498d-b1c7-6608f5c5900d-1679401003b98af5c6-1": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/credit-card_1_1_-04.png",
+            "title": "Free Returns",
+            "text": "<p>within a period of 30 Days<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "template--18268226486565__b5667a1c-0c94-498d-b1c7-6608f5c5900d-1679401003b98af5c6-2": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/credit-card_1_1_-01.png",
+            "title": "Support 24\/7",
+            "text": "<p>Contact us 24 hours a day<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "8587402e-8ae5-4b25-84d7-5eeae520e8b8": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/credit-card_1_1_-03.png",
+            "title": "100% Payment Secure",
+            "text": "<p>Contact us 24 hours a day<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--18268226486565__b5667a1c-0c94-498d-b1c7-6608f5c5900d-1679401003b98af5c6-0",
+        "template--18268226486565__b5667a1c-0c94-498d-b1c7-6608f5c5900d-1679401003b98af5c6-1",
+        "template--18268226486565__b5667a1c-0c94-498d-b1c7-6608f5c5900d-1679401003b98af5c6-2",
+        "8587402e-8ae5-4b25-84d7-5eeae520e8b8"
+      ],
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "image_width": "third",
+        "image_ratio": "adapt",
+        "columns_desktop": 4,
+        "enable_desktop_slider": false,
+        "column_alignment": "left",
+        "background_style": "none",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "background-1",
+        "columns_mobile": "2",
+        "swipe_on_mobile": true,
+        "padding_top": 36,
+        "padding_bottom": 32
+      }
+    },
+    "8d647863-4d2f-41d4-8910-a0f263011f06": {
+      "type": "rich-text",
+      "blocks": {
+        "template--18268226486565__8d647863-4d2f-41d4-8910-a0f263011f06-1679403604708e945f-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "",
+            "spinner_text": "<p>Plush Fashion Shop Plus Fashion Shop <\/p>",
+            "brand_logo": "shopify:\/\/shop_images\/PF_favicon-02.png",
+            "heading_size": "h1"
+          }
+        },
+        "template--18268226486565__8d647863-4d2f-41d4-8910-a0f263011f06-1679403604708e945f-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Is a leading clothing shop based online for women & men apparel, shoes, and more. There is nothing we like better than seeing the smiles of happy customers, and we strive to go above and beyond to make that happen. With a variety of services available, we’re always here to meet your needs.<\/p>"
+          }
+        },
+        "template--18268226486565__8d647863-4d2f-41d4-8910-a0f263011f06-1679403604708e945f-2": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "template--18268226486565__8d647863-4d2f-41d4-8910-a0f263011f06-1679403604708e945f-0",
+        "template--18268226486565__8d647863-4d2f-41d4-8910-a0f263011f06-1679403604708e945f-1",
+        "template--18268226486565__8d647863-4d2f-41d4-8910-a0f263011f06-1679403604708e945f-2"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "b6e842ec-f30a-4e45-aeba-602cc8e3f528": {
+      "type": "collection-list",
+      "blocks": {
+        "template--18268226486565__b6e842ec-f30a-4e45-aeba-602cc8e3f528-16793794670b9fcd5e-0": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "jewelry-accessories"
+          }
+        },
+        "template--18268226486565__b6e842ec-f30a-4e45-aeba-602cc8e3f528-16793794670b9fcd5e-1": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "plush-fashions-mens-apparel"
+          }
+        },
+        "template--18268226486565__b6e842ec-f30a-4e45-aeba-602cc8e3f528-16793794670b9fcd5e-2": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "mens-fashion-shoes-and-boots"
+          }
+        },
+        "c7f5917b-ee30-421c-884a-566e99422b85": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "plush-fashions-womens-apparel-get-quote-now"
+          }
+        },
+        "e2076e9f-742d-47cc-a771-1a6178f626b9": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "plush-fashions-shoes-and-boots-for-women"
+          }
+        }
+      },
+      "block_order": [
+        "template--18268226486565__b6e842ec-f30a-4e45-aeba-602cc8e3f528-16793794670b9fcd5e-0",
+        "template--18268226486565__b6e842ec-f30a-4e45-aeba-602cc8e3f528-16793794670b9fcd5e-1",
+        "template--18268226486565__b6e842ec-f30a-4e45-aeba-602cc8e3f528-16793794670b9fcd5e-2",
+        "c7f5917b-ee30-421c-884a-566e99422b85",
+        "e2076e9f-742d-47cc-a771-1a6178f626b9"
+      ],
+      "settings": {
+        "title": "Shop By Collections",
+        "heading_size": "h1",
+        "image_ratio": "square",
+        "columns_desktop": 4,
+        "enable_desktop_slider": true,
+        "full_width": true,
+        "color_scheme": "background-1",
+        "show_view_all": false,
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "padding_top": 24,
+        "padding_bottom": 24
+      }
+    },
+    "f47e36f2-95d6-4832-975e-7b74b812a14f": {
+      "type": "dual-image-with-text",
+      "blocks": {
+        "template--18268226486565__f47e36f2-95d6-4832-975e-7b74b812a14f-167938320642df4b8f-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "Elevate Your Look With Fashionable Jewelry.",
+            "heading_size": "h1"
+          }
+        },
+        "template--18268226486565__f47e36f2-95d6-4832-975e-7b74b812a14f-167938320642df4b8f-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Discover our curated collection of modern and stunning jewelry and add sparkle to your Lifestyle.<\/p>",
+            "text_style": "body"
+          }
+        },
+        "template--18268226486565__f47e36f2-95d6-4832-975e-7b74b812a14f-167938320642df4b8f-2": {
+          "type": "button",
+          "settings": {
+            "button_label": "Shop Now",
+            "button_link": "shopify:\/\/collections\/jewelry-accessories"
+          }
+        }
+      },
+      "block_order": [
+        "template--18268226486565__f47e36f2-95d6-4832-975e-7b74b812a14f-167938320642df4b8f-0",
+        "template--18268226486565__f47e36f2-95d6-4832-975e-7b74b812a14f-167938320642df4b8f-1",
+        "template--18268226486565__f47e36f2-95d6-4832-975e-7b74b812a14f-167938320642df4b8f-2"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/jewelery-banner-big.jpg",
+        "mask_image": "shopify:\/\/shop_images\/jewelery-banner-small.jpg",
+        "animation_effect_type": "none",
+        "animation_duration": "",
+        "height": "large",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "background-2",
+        "mobile_content_alignment": "left",
+        "padding_top": 24,
+        "padding_bottom": 20
+      }
+    },
+    "featured-collection": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Featured Products",
+        "heading_size": "h1",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "plush-fashions-womens-apparel-get-quote-now",
+        "products_to_show": 11,
+        "columns_desktop": 4,
+        "full_width": true,
+        "show_view_all": false,
+        "view_all_style": "solid",
+        "enable_desktop_slider": true,
+        "color_scheme": "background-1",
+        "image_ratio": "square",
+        "show_secondary_image": true,
+        "show_vendor": true,
+        "show_rating": false,
+        "enable_quick_add": true,
+        "columns_mobile": "2",
+        "swipe_on_mobile": true,
+        "padding_top": 16,
+        "padding_bottom": 48
+      }
+    },
+    "b3371739-08a1-45b1-949e-89fe85158bc8": {
+      "type": "image-banner",
+      "blocks": {
+        "template--18268226486565__b3371739-08a1-45b1-949e-89fe85158bc8-1679379588c8629f9e-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "Step In Style Everywhere.",
+            "heading_size": "h1"
+          }
+        },
+        "template--18268226486565__b3371739-08a1-45b1-949e-89fe85158bc8-1679379588c8629f9e-1": {
+          "type": "text",
+          "settings": {
+            "text": "Find your perfect fit and style with our diverse footwear collection.",
+            "text_style": "body"
+          }
+        },
+        "template--18268226486565__b3371739-08a1-45b1-949e-89fe85158bc8-1679379588c8629f9e-2": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Shop Women",
+            "button_link_1": "shopify:\/\/collections\/plush-fashions-shoes-and-boots-for-women",
+            "button_style_secondary_1": false,
+            "button_label_2": "Shop Men",
+            "button_link_2": "shopify:\/\/collections\/mens-fashion-shoes-and-boots",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "template--18268226486565__b3371739-08a1-45b1-949e-89fe85158bc8-1679379588c8629f9e-0",
+        "template--18268226486565__b3371739-08a1-45b1-949e-89fe85158bc8-1679379588c8629f9e-1",
+        "template--18268226486565__b3371739-08a1-45b1-949e-89fe85158bc8-1679379588c8629f9e-2"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/mid-banner-1.jpg",
+        "image_2": "shopify:\/\/shop_images\/mid-banner-shoes.jpg",
+        "image_overlay_opacity": 30,
+        "image_height": "small",
+        "desktop_content_position": "middle-center",
+        "show_text_box": false,
+        "desktop_content_alignment": "center",
+        "color_scheme": "background-2",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": true
+      }
+    },
+    "68b13d9f-d7a3-47b9-b015-977cdf859401": {
+      "type": "image-with-text-image",
+      "blocks": {
+        "template--18268226486565__68b13d9f-d7a3-47b9-b015-977cdf859401-16793995118d8884b9-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "Lingerie Collection",
+            "heading_size": "h1"
+          }
+        },
+        "template--18268226486565__68b13d9f-d7a3-47b9-b015-977cdf859401-16793995118d8884b9-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Experience comfort and confidence like never before with a curated lingerie collection.<\/p>",
+            "text_style": "body"
+          }
+        },
+        "template--18268226486565__68b13d9f-d7a3-47b9-b015-977cdf859401-16793995118d8884b9-2": {
+          "type": "button",
+          "settings": {
+            "button_label": "Shop Now",
+            "button_link": "shopify:\/\/collections\/plush-fashions-mens-apparel"
+          }
+        },
+        "79441d59-9a01-48f8-9d3f-854e397fc280": {
+          "type": "image",
+          "settings": {
+            "content_image": "shopify:\/\/shop_images\/image_text_image2.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "template--18268226486565__68b13d9f-d7a3-47b9-b015-977cdf859401-16793995118d8884b9-0",
+        "template--18268226486565__68b13d9f-d7a3-47b9-b015-977cdf859401-16793995118d8884b9-1",
+        "template--18268226486565__68b13d9f-d7a3-47b9-b015-977cdf859401-16793995118d8884b9-2",
+        "79441d59-9a01-48f8-9d3f-854e397fc280"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/image_text_image1.jpg",
+        "height": "medium",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "center",
+        "content_layout": "no-overlap",
+        "color_scheme": "background-1",
+        "mobile_content_alignment": "left",
+        "padding_top": 60,
+        "padding_bottom": 24
+      }
+    },
+    "216e2c18-cf54-4360-b283-27c883c1a96b": {
+      "type": "testimonial-section",
+      "blocks": {
+        "template--18268226486565__216e2c18-cf54-4360-b283-27c883c1a96b-1679381808411bb798-0": {
+          "type": "column",
+          "settings": {
+            "svg": "<svg width=\"34\" height=\"32\" viewbox=\"0 0 34 32\" fill=\"none\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\">\n<path d=\"M17.2292 0L21.1555 12.0838H33.8611L23.582 19.552L27.5083 31.6358L17.2292 24.1676L6.95014 31.6358L10.8764 19.552L0.597324 12.0838H13.303L17.2292 0Z\" fill=\"#EFA940\"><\/path>\n<\/svg>",
+            "enable_star": true,
+            "title": "",
+            "text": "<p>\"Rico's is the perfect blend of price selection and service. I will never buy my suits, sport jackets, and accessories anywhere else.\"<\/p>",
+            "Author_name": "Bob Hudocks, New York"
+          }
+        },
+        "template--18268226486565__216e2c18-cf54-4360-b283-27c883c1a96b-1679381808411bb798-1": {
+          "type": "column",
+          "settings": {
+            "svg": "<svg width=\"34\" height=\"32\" viewbox=\"0 0 34 32\" fill=\"none\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\">\n<path d=\"M17.2292 0L21.1555 12.0838H33.8611L23.582 19.552L27.5083 31.6358L17.2292 24.1676L6.95014 31.6358L10.8764 19.552L0.597324 12.0838H13.303L17.2292 0Z\" fill=\"#EFA940\"><\/path>\n<\/svg>",
+            "enable_star": true,
+            "title": "",
+            "text": "<p>\"I have not gone no other place for women's dresses's their passion for you looking your best is what it is about.\"<\/p>",
+            "Author_name": "Vivian Orient, New York"
+          }
+        },
+        "template--18268226486565__216e2c18-cf54-4360-b283-27c883c1a96b-1679381808411bb798-2": {
+          "type": "column",
+          "settings": {
+            "svg": "<svg width=\"34\" height=\"32\" viewbox=\"0 0 34 32\" fill=\"none\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\">\n<path d=\"M17.2292 0L21.1555 12.0838H33.8611L23.582 19.552L27.5083 31.6358L17.2292 24.1676L6.95014 31.6358L10.8764 19.552L0.597324 12.0838H13.303L17.2292 0Z\" fill=\"#EFA940\"><\/path>\n<\/svg>",
+            "enable_star": true,
+            "title": "",
+            "text": "<p>\"I've always received exceptional service at Plush Fashion Store and<br\/>wouldn't go anywhere else for fine clothes for my boyfriend.\"<\/p>",
+            "Author_name": "Angela Teathers, Boston MA"
+          }
+        },
+        "872e519d-4512-402e-bd97-05c34efd9bb8": {
+          "type": "column",
+          "disabled": true,
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Testimonial_img.png",
+            "svg": "<svg width=\"34\" height=\"32\" viewbox=\"0 0 34 32\" fill=\"none\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\">\n<path d=\"M17.2292 0L21.1555 12.0838H33.8611L23.582 19.552L27.5083 31.6358L17.2292 24.1676L6.95014 31.6358L10.8764 19.552L0.597324 12.0838H13.303L17.2292 0Z\" fill=\"#EFA940\"><\/path>\n<\/svg>",
+            "enable_star": true,
+            "title": "",
+            "text": "<p>Lorem ipsum dolor sit amet consectetur. Imperdiet sed tellus proin et. In neque bibendum scelerisque.<\/p>",
+            "Author_name": "Lyla Dixon"
+          }
+        },
+        "571e15c8-843e-4e23-a34a-282c3c7f9b41": {
+          "type": "column",
+          "disabled": true,
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Testimonial_img.png",
+            "svg": "<svg width=\"34\" height=\"32\" viewbox=\"0 0 34 32\" fill=\"none\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\">\n<path d=\"M17.2292 0L21.1555 12.0838H33.8611L23.582 19.552L27.5083 31.6358L17.2292 24.1676L6.95014 31.6358L10.8764 19.552L0.597324 12.0838H13.303L17.2292 0Z\" fill=\"#EFA940\"><\/path>\n<\/svg>",
+            "enable_star": true,
+            "title": "",
+            "text": "<p>Lorem ipsum dolor sit amet consectetur. Imperdiet sed tellus proin et. In neque bibendum scelerisque.<\/p>",
+            "Author_name": "Lyla Dixon"
+          }
+        }
+      },
+      "block_order": [
+        "template--18268226486565__216e2c18-cf54-4360-b283-27c883c1a96b-1679381808411bb798-0",
+        "template--18268226486565__216e2c18-cf54-4360-b283-27c883c1a96b-1679381808411bb798-1",
+        "template--18268226486565__216e2c18-cf54-4360-b283-27c883c1a96b-1679381808411bb798-2",
+        "872e519d-4512-402e-bd97-05c34efd9bb8",
+        "571e15c8-843e-4e23-a34a-282c3c7f9b41"
+      ],
+      "settings": {
+        "testimonial_types": "3",
+        "title": "What Customers are Saying",
+        "titleCOlor": "",
+        "bg_color": "rgba(0,0,0,0)",
+        "arrow_bg_color": "#121212",
+        "arrow_svg_color": "#ffffff",
+        "arrow_border_radius": 4,
+        "heading_size": "h1",
+        "arrow_type": "angle",
+        "image_width": "full",
+        "image_ratio": "circle",
+        "column_alignment": "left",
+        "background_style": "primary",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "background-1",
+        "block_bg": "#ffffff",
+        "text_color": "#121212",
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "collage-1",
+    "b5667a1c-0c94-498d-b1c7-6608f5c5900d",
+    "8d647863-4d2f-41d4-8910-a0f263011f06",
+    "b6e842ec-f30a-4e45-aeba-602cc8e3f528",
+    "f47e36f2-95d6-4832-975e-7b74b812a14f",
+    "featured-collection",
+    "b3371739-08a1-45b1-949e-89fe85158bc8",
+    "68b13d9f-d7a3-47b9-b015-977cdf859401",
+    "216e2c18-cf54-4360-b283-27c883c1a96b"
+  ]
+}
