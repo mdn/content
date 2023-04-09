@@ -95,8 +95,8 @@ Crafty.c("Circle", {
     ctx.fillStyle = this.color;
     ctx.beginPath();
     ctx.arc(
-      this.x,
-      this.y,
+      this.x + this.radius,
+      this.y + this.radius,
       this.radius,
       0,
       Math.PI * 2
@@ -104,6 +104,10 @@ Crafty.c("Circle", {
     ctx.closePath();
     ctx.fill();
     ctx.restore();
+  },
+  
+  get center() {
+    return { x: this.x + this.radius, y: this.y + this.radius };
   },
 });
 
@@ -115,8 +119,8 @@ const circle2 = Crafty.e("2D, Canvas, Circle, Fourway")
   .circle(20, "blue");
 
 circle2.bind("EnterFrame", function () {
-  const dx = circle1.x - circle2.x;
-  const dy = circle1.y - circle2.y;
+  const dx = circle1.center.x - circle2.center.x;
+  const dy = circle1.center.y - circle2.center.y;
   const distance = Math.sqrt(dx * dx + dy * dy);
 
   const colliding = distance < circle1.radius + circle2.radius;
