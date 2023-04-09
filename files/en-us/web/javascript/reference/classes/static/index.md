@@ -151,7 +151,7 @@ StaticMethodCall.anotherStaticMethod();
 
 ### Accessing static properties from instance methods
 
-Static properties are not directly accessible from instance methods through the {{JSxRef("Operators/this", "this")}} keyword. They are accessible through the class name or `this.constructor`.
+Static properties are not directly accessible from instance methods through the `this` keyword. They are accessible through the class name or `this.constructor`.
 
 ```js
 class StaticMethodCall {
