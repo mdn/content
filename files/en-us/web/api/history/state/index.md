@@ -1,5 +1,6 @@
 ---
-title: History.state
+title: "History: state property"
+short-title: state
 slug: Web/API/History/state
 page-type: web-api-instance-property
 browser-compat: api.History.state

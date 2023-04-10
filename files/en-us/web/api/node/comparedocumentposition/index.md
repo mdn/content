@@ -1,5 +1,6 @@
 ---
-title: Node.compareDocumentPosition()
+title: "Node: compareDocumentPosition() method"
+short-title: compareDocumentPosition()
 slug: Web/API/Node/compareDocumentPosition
 page-type: web-api-instance-method
 browser-compat: api.Node.compareDocumentPosition

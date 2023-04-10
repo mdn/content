@@ -1,5 +1,6 @@
 ---
-title: NavigateEvent.downloadRequest
+title: "NavigateEvent: downloadRequest property"
+short-title: downloadRequest
 slug: Web/API/NavigateEvent/downloadRequest
 page-type: web-api-instance-property
 status:

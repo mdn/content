@@ -1,5 +1,6 @@
 ---
-title: MouseEvent.mozInputSource
+title: "MouseEvent: mozInputSource property"
+short-title: mozInputSource
 slug: Web/API/MouseEvent/mozInputSource
 page-type: web-api-instance-property
 status:

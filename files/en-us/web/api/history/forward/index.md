@@ -1,5 +1,6 @@
 ---
-title: History.forward()
+title: "History: forward() method"
+short-title: forward()
 slug: Web/API/History/forward
 page-type: web-api-instance-method
 browser-compat: api.History.forward

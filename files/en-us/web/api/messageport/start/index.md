@@ -1,5 +1,6 @@
 ---
-title: MessagePort.start()
+title: "MessagePort: start() method"
+short-title: start()
 slug: Web/API/MessagePort/start
 page-type: web-api-instance-method
 browser-compat: api.MessagePort.start

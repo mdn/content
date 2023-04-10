@@ -1,5 +1,6 @@
 ---
-title: BluetoothUUID.getDescriptor()
+title: "BluetoothUUID: getDescriptor() method"
+short-title: getDescriptor()
 slug: Web/API/BluetoothUUID/getDescriptor
 page-type: web-api-instance-method
 status:

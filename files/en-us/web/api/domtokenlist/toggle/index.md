@@ -1,5 +1,6 @@
 ---
-title: DOMTokenList.toggle()
+title: "DOMTokenList: toggle() method"
+short-title: toggle()
 slug: Web/API/DOMTokenList/toggle
 page-type: web-api-instance-method
 browser-compat: api.DOMTokenList.toggle

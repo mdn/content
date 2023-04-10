@@ -1,5 +1,6 @@
 ---
-title: Notification.requireInteraction
+title: "Notification: requireInteraction property"
+short-title: requireInteraction
 slug: Web/API/Notification/requireInteraction
 page-type: web-api-instance-property
 status:

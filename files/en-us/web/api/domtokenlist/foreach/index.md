@@ -1,5 +1,6 @@
 ---
-title: DOMTokenList.forEach()
+title: "DOMTokenList: forEach() method"
+short-title: forEach()
 slug: Web/API/DOMTokenList/forEach
 page-type: web-api-instance-method
 browser-compat: api.DOMTokenList.forEach

@@ -1,5 +1,6 @@
 ---
-title: ReadableStreamDefaultController.error()
+title: "ReadableStreamDefaultController: error() method"
+short-title: error()
 slug: Web/API/ReadableStreamDefaultController/error
 page-type: web-api-instance-method
 browser-compat: api.ReadableStreamDefaultController.error

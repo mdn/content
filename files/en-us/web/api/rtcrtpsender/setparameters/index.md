@@ -1,5 +1,6 @@
 ---
-title: RTCRtpSender.setParameters()
+title: "RTCRtpSender: setParameters() method"
+short-title: setParameters()
 slug: Web/API/RTCRtpSender/setParameters
 page-type: web-api-instance-method
 browser-compat: api.RTCRtpSender.setParameters

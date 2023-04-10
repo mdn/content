@@ -1,5 +1,6 @@
 ---
-title: WebGLRenderingContext.getUniform()
+title: "WebGLRenderingContext: getUniform() method"
+short-title: getUniform()
 slug: Web/API/WebGLRenderingContext/getUniform
 page-type: web-api-instance-method
 browser-compat: api.WebGLRenderingContext.getUniform

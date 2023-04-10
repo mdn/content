@@ -1,5 +1,6 @@
 ---
-title: RTCIceCandidate.foundation
+title: "RTCIceCandidate: foundation property"
+short-title: foundation
 slug: Web/API/RTCIceCandidate/foundation
 page-type: web-api-instance-property
 browser-compat: api.RTCIceCandidate.foundation

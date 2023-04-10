@@ -1,5 +1,6 @@
 ---
-title: VTTCue.line
+title: "VTTCue: line property"
+short-title: line
 slug: Web/API/VTTCue/line
 page-type: web-api-instance-property
 browser-compat: api.VTTCue.line

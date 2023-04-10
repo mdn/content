@@ -1,5 +1,6 @@
 ---
-title: HTMLInputElement.disabled
+title: "HTMLInputElement: disabled property"
+short-title: disabled
 slug: Web/API/HTMLInputElement/disabled
 page-type: web-api-instance-property
 browser-compat: api.HTMLInputElement.disabled

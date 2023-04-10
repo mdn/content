@@ -1,5 +1,6 @@
 ---
-title: AudioData.copyTo()
+title: "AudioData: copyTo() method"
+short-title: copyTo()
 slug: Web/API/AudioData/copyTo
 page-type: web-api-instance-method
 status:

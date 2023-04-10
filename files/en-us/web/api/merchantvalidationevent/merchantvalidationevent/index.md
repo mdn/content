@@ -1,5 +1,6 @@
 ---
-title: MerchantValidationEvent()
+title: "MerchantValidationEvent: MerchantValidationEvent() constructor"
+short-title: MerchantValidationEvent()
 slug: Web/API/MerchantValidationEvent/MerchantValidationEvent
 page-type: web-api-constructor
 status:

@@ -1,5 +1,6 @@
 ---
-title: Navigator.gpu
+title: "Navigator: gpu property"
+short-title: gpu
 slug: Web/API/Navigator/gpu
 page-type: web-api-instance-property
 status:

@@ -1,5 +1,6 @@
 ---
-title: Headers.delete()
+title: "Headers: delete() method"
+short-title: delete()
 slug: Web/API/Headers/delete
 page-type: web-api-instance-method
 browser-compat: api.Headers.delete

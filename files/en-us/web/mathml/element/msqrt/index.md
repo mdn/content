@@ -1,6 +1,7 @@
 ---
 title: <msqrt>
 slug: Web/MathML/Element/msqrt
+page-type: mathml-element
 browser-compat: mathml.elements.msqrt
 ---
 

@@ -1,5 +1,6 @@
 ---
-title: Node.appendChild()
+title: "Node: appendChild() method"
+short-title: appendChild()
 slug: Web/API/Node/appendChild
 page-type: web-api-instance-method
 browser-compat: api.Node.appendChild

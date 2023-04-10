@@ -1,5 +1,6 @@
 ---
-title: ExtendableMessageEvent()
+title: "ExtendableMessageEvent: ExtendableMessageEvent() constructor"
+short-title: ExtendableMessageEvent()
 slug: Web/API/ExtendableMessageEvent/ExtendableMessageEvent
 page-type: web-api-constructor
 browser-compat: api.ExtendableMessageEvent.ExtendableMessageEvent

@@ -1,5 +1,6 @@
 ---
-title: VideoFrame.displayHeight
+title: "VideoFrame: displayHeight property"
+short-title: displayHeight
 slug: Web/API/VideoFrame/displayHeight
 page-type: web-api-instance-property
 browser-compat: api.VideoFrame.displayHeight

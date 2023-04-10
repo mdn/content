@@ -1,5 +1,6 @@
 ---
-title: TrackEvent.track
+title: "TrackEvent: track property"
+short-title: track
 slug: Web/API/TrackEvent/track
 page-type: web-api-instance-property
 browser-compat: api.TrackEvent.track

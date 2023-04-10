@@ -1,5 +1,6 @@
 ---
-title: MediaStreamTrackEvent.track
+title: "MediaStreamTrackEvent: track property"
+short-title: track
 slug: Web/API/MediaStreamTrackEvent/track
 page-type: web-api-instance-property
 browser-compat: api.MediaStreamTrackEvent.track

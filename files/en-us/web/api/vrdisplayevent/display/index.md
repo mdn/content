@@ -1,5 +1,6 @@
 ---
-title: VRDisplayEvent.display
+title: "VRDisplayEvent: display property"
+short-title: display
 slug: Web/API/VRDisplayEvent/display
 page-type: web-api-instance-property
 status:

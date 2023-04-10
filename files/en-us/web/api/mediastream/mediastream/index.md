@@ -1,5 +1,6 @@
 ---
-title: MediaStream()
+title: "MediaStream: MediaStream() constructor"
+short-title: MediaStream()
 slug: Web/API/MediaStream/MediaStream
 page-type: web-api-constructor
 browser-compat: api.MediaStream.MediaStream

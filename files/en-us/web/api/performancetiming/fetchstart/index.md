@@ -1,5 +1,6 @@
 ---
-title: PerformanceTiming.fetchStart
+title: "PerformanceTiming: fetchStart property"
+short-title: fetchStart
 slug: Web/API/PerformanceTiming/fetchStart
 page-type: web-api-instance-property
 status:

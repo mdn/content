@@ -1,5 +1,6 @@
 ---
-title: Notification.lang
+title: "Notification: lang property"
+short-title: lang
 slug: Web/API/Notification/lang
 page-type: web-api-instance-property
 browser-compat: api.Notification.lang

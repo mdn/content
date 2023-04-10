@@ -1,5 +1,6 @@
 ---
-title: AnalyserNode.getFloatFrequencyData()
+title: "AnalyserNode: getFloatFrequencyData() method"
+short-title: getFloatFrequencyData()
 slug: Web/API/AnalyserNode/getFloatFrequencyData
 page-type: web-api-instance-method
 browser-compat: api.AnalyserNode.getFloatFrequencyData

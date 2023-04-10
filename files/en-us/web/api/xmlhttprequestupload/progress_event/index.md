@@ -1,5 +1,6 @@
 ---
 title: "XMLHttpRequestUpload: progress event"
+short-title: progress
 slug: Web/API/XMLHttpRequestUpload/progress_event
 page-type: web-api-event
 browser-compat: api.XMLHttpRequestUpload.progress_event

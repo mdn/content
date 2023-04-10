@@ -1,5 +1,6 @@
 ---
-title: XRRenderState.inlineVerticalFieldOfView
+title: "XRRenderState: inlineVerticalFieldOfView property"
+short-title: inlineVerticalFieldOfView
 slug: Web/API/XRRenderState/inlineVerticalFieldOfView
 page-type: web-api-instance-property
 status:

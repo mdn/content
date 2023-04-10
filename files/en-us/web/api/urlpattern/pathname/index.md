@@ -1,5 +1,6 @@
 ---
-title: URLPattern.pathname
+title: "URLPattern: pathname property"
+short-title: pathname
 slug: Web/API/URLPattern/pathname
 page-type: web-api-instance-property
 status:

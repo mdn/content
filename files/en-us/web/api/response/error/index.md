@@ -1,5 +1,6 @@
 ---
-title: Response.error()
+title: "Response: error() static method"
+short-title: error()
 slug: Web/API/Response/error
 page-type: web-api-static-method
 browser-compat: api.Response.error

@@ -158,7 +158,7 @@ div {
 
 - **[Tracking multiple touch points at a time](/en-US/docs/Web/API/Touch_events#example)**
   - : This example tracks multiple touch points at a time, allowing the user to draw in a `{{htmlelement("canvas")}}` with more than one finger at a time. It will only work on a browser that supports touch events.
-- **[Simple pointer lock demo](/en-US/docs/Web/API/Pointer_Lock_API#example)**
+- **[Simple pointer lock demo](/en-US/docs/Web/API/Pointer_Lock_API#examples)**
   - : We've written a simple pointer lock demo to show you how to use it to set up a simple control system. The demo uses JavaScript to draw a ball inside a `{{htmlelement("canvas")}}` element. When you click the canvas, pointer lock is then used to remove the mouse pointer and allow you to move the ball directly using the mouse.
 
 ## Tutorials

@@ -1,5 +1,6 @@
 ---
-title: PerformanceEventTiming.interactionId
+title: "PerformanceEventTiming: interactionId property"
+short-title: interactionId
 slug: Web/API/PerformanceEventTiming/interactionId
 page-type: web-api-instance-property
 status:

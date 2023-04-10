@@ -1,5 +1,6 @@
 ---
-title: Event.eventPhase
+title: "Event: eventPhase property"
+short-title: eventPhase
 slug: Web/API/Event/eventPhase
 page-type: web-api-instance-property
 browser-compat: api.Event.eventPhase

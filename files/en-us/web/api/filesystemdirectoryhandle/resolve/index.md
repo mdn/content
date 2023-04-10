@@ -1,5 +1,6 @@
 ---
-title: FileSystemDirectoryHandle.resolve()
+title: "FileSystemDirectoryHandle: resolve() method"
+short-title: resolve()
 slug: Web/API/FileSystemDirectoryHandle/resolve
 page-type: web-api-instance-method
 browser-compat: api.FileSystemDirectoryHandle.resolve

@@ -1,5 +1,6 @@
 ---
-title: VideoFrame.close()
+title: "VideoFrame: close() method"
+short-title: close()
 slug: Web/API/VideoFrame/close
 page-type: web-api-instance-method
 browser-compat: api.VideoFrame.close

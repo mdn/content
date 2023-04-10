@@ -1,6 +1,7 @@
 ---
 title: MathML Attribute Values
 slug: Web/MathML/Attribute/Values
+page-type: guide
 browser-compat: mathml.attribute_values
 ---
 

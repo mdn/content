@@ -1,5 +1,6 @@
 ---
-title: Window.frameElement
+title: "Window: frameElement property"
+short-title: frameElement
 slug: Web/API/Window/frameElement
 page-type: web-api-instance-property
 browser-compat: api.Window.frameElement

@@ -1,5 +1,6 @@
 ---
-title: IntersectionObserverEntry.boundingClientRect
+title: "IntersectionObserverEntry: boundingClientRect property"
+short-title: boundingClientRect
 slug: Web/API/IntersectionObserverEntry/boundingClientRect
 page-type: web-api-instance-property
 browser-compat: api.IntersectionObserverEntry.boundingClientRect

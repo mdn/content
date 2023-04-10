@@ -1,5 +1,6 @@
 ---
-title: Element.innerHTML
+title: "Element: innerHTML property"
+short-title: innerHTML
 slug: Web/API/Element/innerHTML
 page-type: web-api-instance-property
 browser-compat: api.Element.innerHTML

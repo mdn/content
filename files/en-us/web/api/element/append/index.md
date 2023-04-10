@@ -1,5 +1,6 @@
 ---
-title: Element.append()
+title: "Element: append() method"
+short-title: append()
 slug: Web/API/Element/append
 page-type: web-api-instance-method
 browser-compat: api.Element.append

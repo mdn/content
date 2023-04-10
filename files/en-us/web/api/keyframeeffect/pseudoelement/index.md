@@ -1,5 +1,6 @@
 ---
-title: KeyframeEffect.pseudoElement
+title: "KeyframeEffect: pseudoElement property"
+short-title: pseudoElement
 slug: Web/API/KeyframeEffect/pseudoElement
 page-type: web-api-instance-property
 browser-compat: api.KeyframeEffect.pseudoElement

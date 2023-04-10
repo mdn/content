@@ -1,5 +1,6 @@
 ---
-title: MessageChannel()
+title: "MessageChannel: MessageChannel() constructor"
+short-title: MessageChannel()
 slug: Web/API/MessageChannel/MessageChannel
 page-type: web-api-constructor
 browser-compat: api.MessageChannel.MessageChannel

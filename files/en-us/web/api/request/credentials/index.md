@@ -1,5 +1,6 @@
 ---
-title: Request.credentials
+title: "Request: credentials property"
+short-title: credentials
 slug: Web/API/Request/credentials
 page-type: web-api-instance-property
 browser-compat: api.Request.credentials

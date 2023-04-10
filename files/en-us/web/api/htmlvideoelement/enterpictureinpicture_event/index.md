@@ -1,5 +1,6 @@
 ---
 title: "HTMLVideoElement: enterpictureinpicture event"
+short-title: enterpictureinpicture
 slug: Web/API/HTMLVideoElement/enterpictureinpicture_event
 page-type: web-api-event
 browser-compat: api.HTMLVideoElement.enterpictureinpicture_event

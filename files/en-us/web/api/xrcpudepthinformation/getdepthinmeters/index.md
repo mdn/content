@@ -1,5 +1,6 @@
 ---
-title: XRCPUDepthInformation.getDepthInMeters()
+title: "XRCPUDepthInformation: getDepthInMeters() method"
+short-title: getDepthInMeters()
 slug: Web/API/XRCPUDepthInformation/getDepthInMeters
 page-type: web-api-instance-method
 status:

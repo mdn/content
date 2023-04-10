@@ -1,5 +1,6 @@
 ---
-title: DOMPointReadOnly.fromPoint()
+title: "DOMPointReadOnly: fromPoint() static method"
+short-title: fromPoint()
 slug: Web/API/DOMPointReadOnly/fromPoint
 page-type: web-api-static-method
 browser-compat: api.DOMPointReadOnly.fromPoint

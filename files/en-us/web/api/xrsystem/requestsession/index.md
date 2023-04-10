@@ -1,5 +1,6 @@
 ---
-title: "XRSystem: requestSession()"
+title: "XRSystem: requestSession() method"
+short-title: requestSession()
 slug: Web/API/XRSystem/requestSession
 page-type: web-api-instance-method
 status:

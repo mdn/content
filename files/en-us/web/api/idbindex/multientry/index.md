@@ -1,5 +1,6 @@
 ---
-title: IDBIndex.multiEntry
+title: "IDBIndex: multiEntry property"
+short-title: multiEntry
 slug: Web/API/IDBIndex/multiEntry
 page-type: web-api-instance-property
 browser-compat: api.IDBIndex.multiEntry

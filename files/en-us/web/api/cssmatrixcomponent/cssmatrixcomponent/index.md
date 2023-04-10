@@ -1,5 +1,6 @@
 ---
-title: CSSMatrixComponent()
+title: "CSSMatrixComponent: CSSMatrixComponent() constructor"
+short-title: CSSMatrixComponent()
 slug: Web/API/CSSMatrixComponent/CSSMatrixComponent
 page-type: web-api-constructor
 browser-compat: api.CSSMatrixComponent.CSSMatrixComponent

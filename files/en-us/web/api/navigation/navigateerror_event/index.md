@@ -1,5 +1,6 @@
 ---
 title: "Navigation: navigateerror event"
+short-title: navigateerror
 slug: Web/API/Navigation/navigateerror_event
 page-type: web-api-event
 status:

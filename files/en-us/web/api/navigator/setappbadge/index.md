@@ -1,5 +1,6 @@
 ---
-title: Navigator.setAppBadge()
+title: "Navigator: setAppBadge() method"
+short-title: setAppBadge()
 slug: Web/API/Navigator/setAppBadge
 page-type: web-api-instance-method
 browser-compat: api.Navigator.setAppBadge

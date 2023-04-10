@@ -1,5 +1,6 @@
 ---
-title: Performance.navigation
+title: "Performance: navigation property"
+short-title: navigation
 slug: Web/API/Performance/navigation
 page-type: web-api-instance-property
 status:

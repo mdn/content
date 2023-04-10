@@ -1,5 +1,6 @@
 ---
-title: CanvasRenderingContext2D.wordSpacing
+title: "CanvasRenderingContext2D: wordSpacing property"
+short-title: wordSpacing
 slug: Web/API/CanvasRenderingContext2D/wordSpacing
 page-type: web-api-instance-property
 status:

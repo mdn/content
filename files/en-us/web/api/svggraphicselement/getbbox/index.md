@@ -1,5 +1,6 @@
 ---
-title: SVGGraphicsElement.getBBox()
+title: "SVGGraphicsElement: getBBox() method"
+short-title: getBBox()
 slug: Web/API/SVGGraphicsElement/getBBox
 page-type: web-api-instance-method
 browser-compat: api.SVGGraphicsElement.getBBox

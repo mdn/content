@@ -1,5 +1,6 @@
 ---
-title: ReadableStreamDefaultReader.read()
+title: "ReadableStreamDefaultReader: read() method"
+short-title: read()
 slug: Web/API/ReadableStreamDefaultReader/read
 page-type: web-api-instance-method
 browser-compat: api.ReadableStreamDefaultReader.read

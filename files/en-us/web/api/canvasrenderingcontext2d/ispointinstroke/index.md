@@ -1,5 +1,6 @@
 ---
-title: CanvasRenderingContext2D.isPointInStroke()
+title: "CanvasRenderingContext2D: isPointInStroke() method"
+short-title: isPointInStroke()
 slug: Web/API/CanvasRenderingContext2D/isPointInStroke
 page-type: web-api-instance-method
 browser-compat: api.CanvasRenderingContext2D.isPointInStroke

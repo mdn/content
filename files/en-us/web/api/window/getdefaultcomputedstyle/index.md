@@ -1,5 +1,6 @@
 ---
-title: Window.getDefaultComputedStyle()
+title: "Window: getDefaultComputedStyle() method"
+short-title: getDefaultComputedStyle()
 slug: Web/API/window/getDefaultComputedStyle
 page-type: web-api-instance-method
 status:

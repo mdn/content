@@ -1,5 +1,6 @@
 ---
-title: GPUDevice.createSampler()
+title: "GPUDevice: createSampler() method"
+short-title: createSampler()
 slug: Web/API/GPUDevice/createSampler
 page-type: web-api-instance-method
 status:

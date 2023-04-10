@@ -1,5 +1,6 @@
 ---
-title: PublicKeyCredential.rawId
+title: "PublicKeyCredential: rawId property"
+short-title: rawId
 slug: Web/API/PublicKeyCredential/rawId
 page-type: web-api-instance-property
 browser-compat: api.PublicKeyCredential.rawId

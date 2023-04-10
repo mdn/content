@@ -1,5 +1,6 @@
 ---
-title: WEBGL_color_buffer_float
+title: WEBGL_color_buffer_float extension
+short-title: WEBGL_color_buffer_float
 slug: Web/API/WEBGL_color_buffer_float
 page-type: webgl-extension
 browser-compat: api.WEBGL_color_buffer_float

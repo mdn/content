@@ -1,5 +1,6 @@
 ---
-title: ServiceWorkerGlobalScope.clients
+title: "ServiceWorkerGlobalScope: clients property"
+short-title: clients
 slug: Web/API/ServiceWorkerGlobalScope/clients
 page-type: web-api-instance-property
 browser-compat: api.ServiceWorkerGlobalScope.clients

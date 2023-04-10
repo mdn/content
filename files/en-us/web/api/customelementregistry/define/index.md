@@ -1,5 +1,6 @@
 ---
-title: CustomElementRegistry.define()
+title: "CustomElementRegistry: define() method"
+short-title: define()
 slug: Web/API/CustomElementRegistry/define
 page-type: web-api-instance-method
 browser-compat: api.CustomElementRegistry.define

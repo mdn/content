@@ -1,5 +1,6 @@
 ---
-title: VRDisplayEvent()
+title: "VRDisplayEvent: VRDisplayEvent() constructor"
+short-title: VRDisplayEvent()
 slug: Web/API/VRDisplayEvent/VRDisplayEvent
 page-type: web-api-constructor
 status:

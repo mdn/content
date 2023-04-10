@@ -1,5 +1,6 @@
 ---
-title: HTMLTableElement.createTHead()
+title: "HTMLTableElement: createTHead() method"
+short-title: createTHead()
 slug: Web/API/HTMLTableElement/createTHead
 page-type: web-api-instance-method
 browser-compat: api.HTMLTableElement.createTHead

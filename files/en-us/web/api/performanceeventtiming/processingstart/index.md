@@ -1,5 +1,6 @@
 ---
-title: PerformanceEventTiming.processingStart
+title: "PerformanceEventTiming: processingStart property"
+short-title: processingStart
 slug: Web/API/PerformanceEventTiming/processingStart
 page-type: web-api-instance-property
 browser-compat: api.PerformanceEventTiming.processingStart

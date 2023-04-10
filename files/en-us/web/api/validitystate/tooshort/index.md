@@ -1,5 +1,6 @@
 ---
-title: ValidityState.tooShort
+title: "ValidityState: tooShort property"
+short-title: tooShort
 slug: Web/API/ValidityState/tooShort
 page-type: web-api-instance-property
 browser-compat: api.ValidityState.tooShort

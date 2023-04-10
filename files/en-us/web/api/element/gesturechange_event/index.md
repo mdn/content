@@ -1,5 +1,6 @@
 ---
 title: "Element: gesturechange event"
+short-title: gesturechange
 slug: Web/API/Element/gesturechange_event
 page-type: web-api-event
 status:

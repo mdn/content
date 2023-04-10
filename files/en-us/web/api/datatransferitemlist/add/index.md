@@ -1,5 +1,6 @@
 ---
-title: DataTransferItemList.add()
+title: "DataTransferItemList: add() method"
+short-title: add()
 slug: Web/API/DataTransferItemList/add
 page-type: web-api-instance-method
 browser-compat: api.DataTransferItemList.add

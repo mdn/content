@@ -1,5 +1,6 @@
 ---
-title: AudioTrack.language
+title: "AudioTrack: language property"
+short-title: language
 slug: Web/API/AudioTrack/language
 page-type: web-api-instance-property
 browser-compat: api.AudioTrack.language

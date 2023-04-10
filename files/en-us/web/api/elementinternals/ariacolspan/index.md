@@ -1,5 +1,6 @@
 ---
-title: ElementInternals.ariaColSpan
+title: "ElementInternals: ariaColSpan property"
+short-title: ariaColSpan
 slug: Web/API/ElementInternals/ariaColSpan
 page-type: web-api-instance-property
 browser-compat: api.ElementInternals.ariaColSpan

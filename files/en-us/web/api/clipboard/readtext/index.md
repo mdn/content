@@ -1,5 +1,6 @@
 ---
-title: Clipboard.readText()
+title: "Clipboard: readText() method"
+short-title: readText()
 slug: Web/API/Clipboard/readText
 page-type: web-api-instance-method
 browser-compat: api.Clipboard.readText

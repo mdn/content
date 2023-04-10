@@ -1,5 +1,6 @@
 ---
-title: PromiseRejectionEvent()
+title: "PromiseRejectionEvent: PromiseRejectionEvent() constructor"
+short-title: PromiseRejectionEvent()
 slug: Web/API/PromiseRejectionEvent/PromiseRejectionEvent
 page-type: web-api-constructor
 browser-compat: api.PromiseRejectionEvent.PromiseRejectionEvent

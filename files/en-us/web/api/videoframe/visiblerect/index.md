@@ -1,5 +1,6 @@
 ---
-title: VideoFrame.visibleRect
+title: "VideoFrame: visibleRect property"
+short-title: visibleRect
 slug: Web/API/VideoFrame/visibleRect
 page-type: web-api-instance-property
 browser-compat: api.VideoFrame.visibleRect

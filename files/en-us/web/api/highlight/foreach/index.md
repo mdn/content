@@ -1,5 +1,6 @@
 ---
-title: Highlight.forEach()
+title: "Highlight: forEach() method"
+short-title: forEach()
 slug: Web/API/Highlight/forEach
 page-type: web-api-instance-method
 status:

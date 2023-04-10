@@ -1,5 +1,6 @@
 ---
-title: Cache.match()
+title: "Cache: match() method"
+short-title: match()
 slug: Web/API/Cache/match
 page-type: web-api-instance-method
 browser-compat: api.Cache.match

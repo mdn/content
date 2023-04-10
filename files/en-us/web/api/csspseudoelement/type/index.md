@@ -1,5 +1,6 @@
 ---
-title: CSSPseudoElement.type
+title: "CSSPseudoElement: type property"
+short-title: type
 slug: Web/API/CSSPseudoElement/type
 page-type: web-api-instance-property
 status:

@@ -1,5 +1,6 @@
 ---
-title: Screen.lockOrientation()
+title: "Screen: lockOrientation() method"
+short-title: lockOrientation()
 slug: Web/API/Screen/lockOrientation
 page-type: web-api-instance-method
 status:

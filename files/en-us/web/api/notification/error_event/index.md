@@ -1,5 +1,6 @@
 ---
 title: "Notification: error event"
+short-title: error
 slug: Web/API/Notification/error_event
 page-type: web-api-event
 browser-compat: api.Notification.error_event

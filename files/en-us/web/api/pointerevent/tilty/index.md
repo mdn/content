@@ -1,5 +1,6 @@
 ---
-title: PointerEvent.tiltY
+title: "PointerEvent: tiltY property"
+short-title: tiltY
 slug: Web/API/PointerEvent/tiltY
 page-type: web-api-instance-property
 browser-compat: api.PointerEvent.tiltY

@@ -1,5 +1,6 @@
 ---
-title: GPUDevice.createQuerySet()
+title: "GPUDevice: createQuerySet() method"
+short-title: createQuerySet()
 slug: Web/API/GPUDevice/createQuerySet
 page-type: web-api-instance-method
 status:
@@ -30,7 +31,7 @@ createQuerySet(descriptor)
       - : A string providing a label that can be used to identify the object, for example in {{domxref("GPUError")}} messages or console warnings.
     - `type`
 
-      - : An emumerated value specifying the type of queries to be managed by the resulting {{domxref("GPUQuerySet")}}. Possible values are:
+      - : An enumerated value specifying the type of queries to be managed by the resulting {{domxref("GPUQuerySet")}}. Possible values are:
 
         - `"occlusion"`
           - : Occlusion queries are available on render passes to query the number of fragment samples that pass all the per-fragment tests for a set of drawing commands (including scissor, sample mask, alpha to coverage, stencil, and depth tests). To run an occlusion query, an appropriate {{domxref("GPUQuerySet")}} must be provided as the value of the `occlusionQuerySet` descriptor property when invoking {{domxref("GPUCommandEncoder.beginRenderPass()")}} to run a render pass.

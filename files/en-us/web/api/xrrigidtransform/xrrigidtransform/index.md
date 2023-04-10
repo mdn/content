@@ -1,5 +1,6 @@
 ---
-title: XRRigidTransform()
+title: "XRRigidTransform: XRRigidTransform() constructor"
+short-title: XRRigidTransform()
 slug: Web/API/XRRigidTransform/XRRigidTransform
 page-type: web-api-constructor
 browser-compat: api.XRRigidTransform.XRRigidTransform

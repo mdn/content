@@ -1,6 +1,7 @@
 ---
 title: MathML
 slug: Web/MathML
+page-type: landing-page
 browser-compat: mathml.elements.math
 ---
 

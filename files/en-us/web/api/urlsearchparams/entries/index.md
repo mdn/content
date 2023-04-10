@@ -1,5 +1,6 @@
 ---
-title: URLSearchParams.entries()
+title: "URLSearchParams: entries() method"
+short-title: entries()
 slug: Web/API/URLSearchParams/entries
 page-type: web-api-instance-method
 browser-compat: api.URLSearchParams.entries

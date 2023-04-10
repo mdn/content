@@ -1,5 +1,6 @@
 ---
-title: URLPattern.username
+title: "URLPattern: username property"
+short-title: username
 slug: Web/API/URLPattern/username
 page-type: web-api-instance-property
 status:

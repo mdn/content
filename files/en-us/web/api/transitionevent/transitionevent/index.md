@@ -1,5 +1,6 @@
 ---
-title: TransitionEvent()
+title: "TransitionEvent: TransitionEvent() constructor"
+short-title: TransitionEvent()
 slug: Web/API/TransitionEvent/TransitionEvent
 page-type: web-api-constructor
 browser-compat: api.TransitionEvent.TransitionEvent

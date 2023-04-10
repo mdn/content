@@ -1,5 +1,6 @@
 ---
 title: "HTMLElement: mscandidatewindowshow event"
+short-title: mscandidatewindowshow
 slug: Web/API/HTMLElement/mscandidatewindowshow_event
 page-type: web-api-event
 status:

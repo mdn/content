@@ -1,5 +1,6 @@
 ---
-title: Window.opener
+title: "Window: opener property"
+short-title: opener
 slug: Web/API/Window/opener
 page-type: web-api-instance-property
 browser-compat: api.Window.opener

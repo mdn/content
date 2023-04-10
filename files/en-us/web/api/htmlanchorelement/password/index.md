@@ -1,5 +1,6 @@
 ---
-title: HTMLAnchorElement.password
+title: "HTMLAnchorElement: password property"
+short-title: password
 slug: Web/API/HTMLAnchorElement/password
 page-type: web-api-instance-property
 browser-compat: api.HTMLAnchorElement.password

@@ -1,5 +1,6 @@
 ---
-title: TreeWalker.previousSibling()
+title: "TreeWalker: previousSibling() method"
+short-title: previousSibling()
 slug: Web/API/TreeWalker/previousSibling
 page-type: web-api-instance-method
 browser-compat: api.TreeWalker.previousSibling

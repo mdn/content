@@ -1,5 +1,6 @@
 ---
-title: WritableStreamDefaultController.signal
+title: "WritableStreamDefaultController: signal property"
+short-title: signal
 slug: Web/API/WritableStreamDefaultController/signal
 page-type: web-api-instance-property
 browser-compat: api.WritableStreamDefaultController.signal

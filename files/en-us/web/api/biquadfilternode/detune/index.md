@@ -1,5 +1,6 @@
 ---
-title: BiquadFilterNode.detune
+title: "BiquadFilterNode: detune property"
+short-title: detune
 slug: Web/API/BiquadFilterNode/detune
 page-type: web-api-instance-property
 browser-compat: api.BiquadFilterNode.detune

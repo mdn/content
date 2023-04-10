@@ -1,5 +1,6 @@
 ---
-title: Element.prefix
+title: "Element: prefix property"
+short-title: prefix
 slug: Web/API/Element/prefix
 page-type: web-api-instance-property
 browser-compat: api.Element.prefix

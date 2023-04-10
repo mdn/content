@@ -1,5 +1,6 @@
 ---
-title: AuthenticatorAssertionResponse.userHandle
+title: "AuthenticatorAssertionResponse: userHandle property"
+short-title: userHandle
 slug: Web/API/AuthenticatorAssertionResponse/userHandle
 page-type: web-api-instance-property
 browser-compat: api.AuthenticatorAssertionResponse.userHandle

@@ -1,5 +1,6 @@
 ---
-title: Permissions.revoke()
+title: "Permissions: revoke() method"
+short-title: revoke()
 slug: Web/API/Permissions/revoke
 page-type: web-api-instance-method
 status:

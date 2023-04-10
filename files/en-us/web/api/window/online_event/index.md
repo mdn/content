@@ -1,5 +1,6 @@
 ---
 title: "Window: online event"
+short-title: online
 slug: Web/API/Window/online_event
 page-type: web-api-event
 browser-compat: api.Window.online_event

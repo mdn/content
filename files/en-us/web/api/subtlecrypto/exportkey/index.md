@@ -1,5 +1,6 @@
 ---
-title: SubtleCrypto.exportKey()
+title: "SubtleCrypto: exportKey() method"
+short-title: exportKey()
 slug: Web/API/SubtleCrypto/exportKey
 page-type: web-api-instance-method
 browser-compat: api.SubtleCrypto.exportKey

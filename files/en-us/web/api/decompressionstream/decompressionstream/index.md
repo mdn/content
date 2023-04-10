@@ -1,5 +1,6 @@
 ---
-title: DecompressionStream()
+title: "DecompressionStream: DecompressionStream() constructor"
+short-title: DecompressionStream()
 slug: Web/API/DecompressionStream/DecompressionStream
 page-type: web-api-constructor
 browser-compat: api.DecompressionStream.DecompressionStream

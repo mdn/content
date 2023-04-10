@@ -1,6 +1,7 @@
 ---
 title: mathbackground
 slug: Web/MathML/Global_attributes/mathbackground
+page-type: mathml-attribute
 status:
   - deprecated
 browser-compat: mathml.global_attributes.mathbackground

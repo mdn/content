@@ -1,5 +1,6 @@
 ---
-title: XRCompositionLayer.destroy()
+title: "XRCompositionLayer: destroy() method"
+short-title: destroy()
 slug: Web/API/XRCompositionLayer/destroy
 page-type: web-api-instance-method
 status:

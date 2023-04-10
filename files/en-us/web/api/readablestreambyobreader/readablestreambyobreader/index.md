@@ -1,5 +1,6 @@
 ---
-title: ReadableStreamBYOBReader()
+title: "ReadableStreamBYOBReader: ReadableStreamBYOBReader() constructor"
+short-title: ReadableStreamBYOBReader()
 slug: Web/API/ReadableStreamBYOBReader/ReadableStreamBYOBReader
 page-type: web-api-constructor
 browser-compat: api.ReadableStreamBYOBReader.ReadableStreamBYOBReader

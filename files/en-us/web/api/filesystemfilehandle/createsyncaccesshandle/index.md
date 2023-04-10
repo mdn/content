@@ -1,5 +1,6 @@
 ---
-title: FileSystemFileHandle.createSyncAccessHandle()
+title: "FileSystemFileHandle: createSyncAccessHandle() method"
+short-title: createSyncAccessHandle()
 slug: Web/API/FileSystemFileHandle/createSyncAccessHandle
 page-type: web-api-instance-method
 browser-compat: api.FileSystemFileHandle.createSyncAccessHandle

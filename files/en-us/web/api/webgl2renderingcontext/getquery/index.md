@@ -1,5 +1,6 @@
 ---
-title: WebGL2RenderingContext.getQuery()
+title: "WebGL2RenderingContext: getQuery() method"
+short-title: getQuery()
 slug: Web/API/WebGL2RenderingContext/getQuery
 page-type: web-api-instance-method
 browser-compat: api.WebGL2RenderingContext.getQuery
