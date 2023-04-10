@@ -5625,7 +5625,7 @@
 /en-US/docs/Manipulating_video_using_canvas	/en-US/docs/Web/API/Canvas_API/Manipulating_video_using_canvas
 /en-US/docs/MathML	/en-US/docs/Web/MathML
 /en-US/docs/MathML/Attributes	/en-US/docs/Web/MathML/Attribute
-/en-US/docs/MathML/Attributes/Values	/en-US/docs/Web/MathML/Attribute/Values
+/en-US/docs/MathML/Attributes/Values	/en-US/docs/Web/MathML/Values
 /en-US/docs/MathML/Element	/en-US/docs/Web/MathML/Element
 /en-US/docs/MathML/Element/maction	/en-US/docs/Web/MathML/Element/maction
 /en-US/docs/MathML/Element/math	/en-US/docs/Web/MathML/Element/math
@@ -12511,6 +12511,7 @@
 /en-US/docs/Web/Manifest/dir	/en-US/docs/Web/Manifest
 /en-US/docs/Web/Manifest/iarc_rating_id	/en-US/docs/Web/Manifest
 /en-US/docs/Web/Manifest/lang	/en-US/docs/Web/Manifest
+/en-US/docs/Web/MathML/Attribute/Values	/en-US/docs/Web/MathML/Values
 /en-US/docs/Web/MathML/Element/annotation	/en-US/docs/Web/MathML/Element/semantics
 /en-US/docs/Web/MathML/Element/annotation-xml	/en-US/docs/Web/MathML/Element/semantics
 /en-US/docs/Web/MathML/Element/menclosed	/en-US/docs/Web/MathML/Element/menclose

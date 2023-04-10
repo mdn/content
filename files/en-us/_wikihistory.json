@@ -124209,10 +124209,6 @@
       "Sheppy"
     ]
   },
-  "Web/MathML/Attribute/Values": {
-    "modified": "2019-10-25T11:46:38.660Z",
-    "contributors": ["fscholz", "maryannetpdx", "Sheppy"]
-  },
   "Web/MathML/Authoring": {
     "modified": "2020-11-28T13:32:39.862Z",
     "contributors": [
@@ -124590,6 +124586,10 @@
       "Paul_Mollomo",
       "ethertank"
     ]
+  },
+  "Web/MathML/Values": {
+    "modified": "2019-10-25T11:46:38.660Z",
+    "contributors": ["fscholz", "maryannetpdx", "Sheppy"]
   },
   "Web/Media": {
     "modified": "2020-05-29T11:42:14.330Z",
