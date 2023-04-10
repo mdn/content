@@ -1011,10 +1011,7 @@
       "overview": ["Web Periodic Background Synchronization API"],
       "interfaces": ["PeriodicSyncEvent", "PeriodicSyncManager"],
       "methods": [],
-      "properties": [
-        "ServiceWorkerRegistration.periodicSync",
-        "ServiceWorkerGlobalScope.onperiodicsync"
-      ],
+      "properties": ["ServiceWorkerRegistration.periodicSync"],
       "events": ["ServiceWorkerGlobalScope: periodicsync"]
     },
     "Permissions API": {
