@@ -54,7 +54,7 @@ To reiterate, each `<section>` should be identified, typically by including a he
 </section>
 ```
 
-#####  Result
+##### Result
 
 {{EmbedLiveSample('After')}}
 
